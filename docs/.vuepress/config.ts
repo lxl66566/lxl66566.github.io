@@ -7,7 +7,7 @@ export default defineUserConfig({
   title: '绝对值_x的博客',
   description: '没什么有价值的内容的，真的！',
   theme: defaultTheme({
-    logo: '/image/logo.jpg',
+    logo: '/images/logo.jpg',
     navbar: [
       {
         text: '编程',
@@ -27,6 +27,12 @@ export default defineUserConfig({
           '/coding/Rust.md',
           '/coding/Python.md',
           '/coding/Cpp.md'
+        ],
+      },
+      {
+        text: '游戏',
+        children: [
+          '/games/csgo_settings.md',
         ],
       },
       {
