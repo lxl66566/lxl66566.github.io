@@ -30,6 +30,13 @@ export default defineUserConfig({
         ],
       },
       {
+        text: '杂项',
+        children: [
+          '/farraginous/recommend_packages.md',
+          '/farraginous/recommend_websites.md',
+        ]
+      },
+      {
         text : '闲聊',
         link : '/gossip.md',
         // children: [
