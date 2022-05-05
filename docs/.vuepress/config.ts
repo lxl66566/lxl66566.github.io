@@ -38,6 +38,7 @@ export default defineUserConfig({
       {
         text: '杂项',
         children: [
+          '/farraginous/my_articles.md',
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
         ]
