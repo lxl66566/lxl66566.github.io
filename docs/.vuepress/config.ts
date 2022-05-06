@@ -24,9 +24,19 @@ export default defineUserConfig({
           // text: 'C++',
           // children: ['/coding/Cpp/Cpp.md'],
           // },
-          '/coding/Rust.md',
-          '/coding/Python.md',
-          '/coding/Cpp.md'
+          {
+            text: '语言',
+            children: [
+              '/coding/Rust.md',
+            ]
+          },
+          {
+            text: '工具',
+            children: [
+              '/coding/Git.md',
+              '/coding/othertools.md',
+          ]
+          },
         ],
       },
       {
@@ -46,11 +56,11 @@ export default defineUserConfig({
       {
         text : '闲聊',
         link : '/gossip.md',
-        // children: [
-        //   '/gossip.md'
-        // ]
-      }
-      // '/bar/README.md',
+      },
+      {
+        text : '随笔',
+        link : '/essay.md',
+      },
     ],
     repo: 'https://github.com/lxl66566',
     repoLabel : 'MyGitHub',
