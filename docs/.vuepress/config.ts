@@ -51,6 +51,7 @@ export default defineUserConfig({
           '/farraginous/my_articles.md',
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
+          '/coding/atri.md',
         ]
       },
       {
