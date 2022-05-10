@@ -5,7 +5,7 @@
 
 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN)
 
-搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/)
+搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/) | [谷歌学术镜像](http://scholar.scqylaw.com/)
 
 搜日常：[wikiHow](https://zh.wikihow.com/%E9%A6%96%E9%A1%B5)
 

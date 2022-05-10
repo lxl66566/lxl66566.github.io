@@ -17,15 +17,15 @@ Android端压缩/解压缩软件。（注：官方也有PC端软件）
 :::
 [官网下载地址](https://www.zarchiver.me/zarchiver-apk/)  [私有下载地址](https://wwp.lanzout.com/i82ku049jz6j)
 ### Fake Location
-虚拟定位软件，有免ROOT版本
+虚拟定位软件，可免ROOT
 
 [官方项目地址](https://github.com/Lerist/FakeLocation)  [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 ### Nekogram X
-Telegram第三方客户端，自带公共代理
+Telegram第三方开源客户端，自带公共代理
 
 [官方项目地址](https://github.com/NekoX-Dev/NekoX)  [私有下载地址](https://wwp.lanzout.com/ivNBf03de47c)
 ### Picacg
-~~年幼的目光.jpg~~（绅士们，我发誓我已经很久没有点开这个软件了！）
+~~年幼的目光.jpg~~ ~~（绅士们，我发誓我已经很久没有点开这个软件了！）~~
 
 [官方下载地址](http://picacgs.com/)  [备用官方地址](http://picacgp.com/)  [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
 ## Windows
