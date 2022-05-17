@@ -29,6 +29,10 @@
 
 [英语听力](http://dict.eudic.net/ting) *（建议直接上[YouTube](http://youtube.com/)*
 
+[日语语法](https://nihongonosensei.net/)
+
+日语百科：[コトバンク](https://kotobank.jp/)
+
 英英词典：[牛津词典](https://www.oxfordlearnersdictionaries.com/)
 
 日日词典：[weblio词典](https://www.weblio.jp/)
