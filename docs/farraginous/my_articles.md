@@ -17,3 +17,8 @@
 连接后执行`adb shell getprop ro.product.cpu.abi`
 
 <img alt="CPU_X" src="/images/gossip/instruction_3.png" width="65%" height="65%"/>
+
+## Win10设置开机自启动
+`win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
+
+但启动文件夹中没有其他软件的自启动控制。若需关闭某些程序的自启动，可以打开任务管理器，选择`启动`进行修改。
