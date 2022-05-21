@@ -81,6 +81,12 @@ git push origin main
 
 你也可以在`push`命令后加入`-u`参数，代表将当前分支设为默认。
 
+#### 删除已连接的远程仓库
+
+```
+git remote remove origin
+```
+
 ### 更改分支
 ```
 git branch -m BranchName

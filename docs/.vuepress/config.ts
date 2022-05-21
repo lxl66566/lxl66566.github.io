@@ -43,7 +43,7 @@ export default defineUserConfig({
         text: '游戏',
         children: [
           '/games/csgo_settings.md',
-          '/games/other_games.md',
+          '/games/Minecraft.md',
         ],
       },
       {
