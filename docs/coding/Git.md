@@ -36,8 +36,8 @@ git commit -m '注释'
 ```
 你可以任意填写对文件的注释。请注意，使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以：
 
-1.分批add，并每次commit不同的注释
-2.一次性add，并每次使用`git commit file1.xxx file2.xxx`命令打包。使用命令后，bash会打开文本编辑器(Vim)，你需要对Vim拥有最基本的了解才能添加注释。
+1. 分批add，并每次commit不同的注释
+2. 一次性add，并每次使用`git commit file1.xxx file2.xxx`命令打包。使用命令后，bash会打开文本编辑器(Vim)，你需要对Vim拥有最基本的了解才能添加注释。
 
 ### 查看仓库文件
 ```
@@ -107,8 +107,9 @@ git rm filename.xxx
 ```
 ### 从仓库内恢复文件
 ```
-git checkout --filename
+git checkout -- filename
 ```
+`--`与`filename`之间有空格。
 ### 更新远程仓库到本地
 ```
 git fetch origin
