@@ -28,6 +28,28 @@ Telegram第三方开源客户端，自带公共代理
 ~~年幼的目光.jpg~~ ~~（绅士们，我发誓我已经很久没有点开这个软件了！）~~
 
 [官方下载地址](http://picacgs.com/)  [备用官方地址](http://picacgp.com/)  [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
+
+### 蓝奏云
+
+比较推荐的云盘。PC上可直接从[网站主页](https://wwa.lanzoui.com/)进入。*（本页所有私链下载文件均保存于蓝奏云）*
+
+优点：
+* 无限存储空间
+* 无限制的下载速度
+* 文件分享机制优秀
+
+缺点：
+* 单文件限制大小100M（且不能通过分包压缩改后缀规避限制；~~*猜测是会读取分包的连接信息并判断*~~）
+* 文件目录管理功能差
+
+APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提示下载。*（也可访问网页版）*
+
+### HiNative
+
+一个可以直接问外国人(语言)问题的app&网站。
+
+[官网](https://zh.hinative.com/)
+
 ## Windows
 ### Parsec
 **极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。
@@ -67,3 +89,7 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 快速搜索
 
 [官网下载地址](https://www.voidtools.com/zh-cn/downloads/)
+### geek
+用于卸载软件。轻量，可清理残留。
+
+[官网下载地址](https://geekuninstaller.com/download) [私链](https://wwp.lanzout.com/icAdmharg2h)

@@ -112,7 +112,7 @@ git checkout -- filename
 `--`与`filename`之间有空格。
 ### 更新远程仓库到本地
 ```
-git fetch origin
+git fetch origin main
 ```
 若还需要从仓库中释放分支：
 ```

@@ -10,6 +10,13 @@ conda create -n Name python=3.9
 ```
 
 `Name`为你需要的环境名称，下同。`Python=3.9`则指定了python的版本。你可改为任意需要的版本。
+#### 迁移环境
+```
+conda create -n Name --clone FromEnvName
+```
+
+`FromEnvName`为需要克隆的环境名称。
+
 #### 查看环境
 ```
 conda info -e

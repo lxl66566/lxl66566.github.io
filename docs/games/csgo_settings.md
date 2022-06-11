@@ -80,8 +80,14 @@ con_filter_text "damage";
 
 在控制台输入：
 ```
-alias +jumpthrow"+jump;-attack"
+alias +jumpthrow"+jump;-attack;-attack2"
 alias -jumpthrow -jump
-bind x +jumpthrow
+bind t +jumpthrow
 ```
-之后拉开投掷物后按`x`即可一键跳投。其中`x`也可更换为其他不冲突的按键。
+之后拉开投掷物后按`t`即可一键跳投。其中`t`也可更换为其他不冲突的按键。
+
+## 清除血迹
+```
+bind f "+lookatweapon;r_cleardecals"
+```
+按`F`检视武器并清除血迹。也可将`r_cleardecals`指令绑定到其他键上。

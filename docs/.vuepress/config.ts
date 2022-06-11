@@ -12,22 +12,11 @@ export default defineUserConfig({
       {
         text: '编程',
         children: [
-          // {
-          // text: 'Rust',
-          // children: ['/coding/Rust/Rust.md'],
-          // },
-          // {
-          // text: 'Python',
-          // children: ['/coding/Python/Python.md'],
-          // },
-          // {
-          // text: 'C++',
-          // children: ['/coding/Cpp/Cpp.md'],
-          // },
           {
             text: '语言',
             children: [
               '/coding/Rust.md',
+              '/coding/Cpp.md',
             ]
           },
           {
@@ -52,7 +41,7 @@ export default defineUserConfig({
           '/farraginous/my_articles.md',
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
-          '/coding/atri.md',
+          '/farraginous/atri.md',
         ]
       },
       {

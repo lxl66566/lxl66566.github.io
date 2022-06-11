@@ -15,9 +15,13 @@
 
 搜电子书：[zlibrary(域名不固定)](https://zh.usa1lib.org/)
 
+## 云存储
+
+[蓝奏云](https://wwa.lanzoui.com/) *([跳转介绍](recommend_packages.md/#蓝奏云))*
+
 ## 新闻
 
-[今日热榜](https://tophub.today/)
+[今日热榜](https://tophub.today/) *(国内热搜榜汇总*
 
 ## 学习
 
@@ -33,7 +37,7 @@
 
 日语百科：[コトバンク](https://kotobank.jp/)
 
-英英词典：[牛津词典](https://www.oxfordlearnersdictionaries.com/)
+英英词典：[牛津词典](https://www.oxfordlearnersdictionaries.com/) | [Merriam Webster](https://www.merriam-webster.com/dictionary/)
 
 日日词典：[weblio词典](https://www.weblio.jp/)
 
