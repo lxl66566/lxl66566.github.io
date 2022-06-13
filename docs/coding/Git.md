@@ -127,5 +127,18 @@ git commit --amend
 ```
 注：需要使用Vim。
 
+## 高级技巧
+### 忽略文件(夹)
+1. 在仓库所在根目录下新建文本文档，输入你需要忽略的文件或文件夹（文件需带有后缀），以回车键隔开。
+2. 保存并重命名为`.gitignore`。
+### 自动化脚本
+1. 新建文本文档，输入你需要的所有指令语句，以回车键隔开。
+2. 保存并将该文本文档后缀改为`.sh`。
+3. 双击运行即可。
+### 将注释设为当前时间
+```
+git commit -m $(date "+%Y%m%d-%H:%M:%S")
+```
+例：注释为`20220613-11:34:59`。可根据个人习惯进行修改。
 
 [^1]:按`i`或`a`进入insert模式，编辑完后按esc进入normal模式，输入`:wq`保存并退出。更多命令请看[这里](https://yianwillis.github.io/vimcdoc/doc/quickref.html#quickref)或者[这里](https://coolshell.cn/articles/5426.html)。
