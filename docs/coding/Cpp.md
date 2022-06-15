@@ -11,6 +11,10 @@ Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用
 ::: tip 注意
 以下内容并不是Qt基础的教程，缺乏目的性和针对性
 :::
+### 唤起最小化的窗口
+```
+show();showNormal();raise();activateWindow();
+```
 ### 关于控件组
 Qt官方提供了QButtonGroup类。该类提供了对QAbstractButton（即记忆化选择按钮）的分组。将按钮添加到QButtonGroup对象中，点击某一按钮时，组中其他按钮会被自动取消toggle（已点击状态）。你也可以为组中每个按钮赋予数字id，通过id对控件进行调用。
 
