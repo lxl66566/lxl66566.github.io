@@ -74,6 +74,8 @@ ECUST在读大学生，热爱编程，更爱摆烂
 ### 社交
 [我的哔哩哔哩账号](https://space.bilibili.com/346365047)
 
+[我的osu账号](https://osu.ppy.sh/users/25751103)
+
 ### 音乐
 
 [我的网易云音乐歌单](https://music.163.com/playlist?id=3098200457&userid=2061039950)

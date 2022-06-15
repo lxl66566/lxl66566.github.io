@@ -93,3 +93,7 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 用于卸载软件。轻量，可清理残留。
 
 [官网下载地址](https://geekuninstaller.com/download) [私链](https://wwp.lanzout.com/icAdmharg2h)
+### Bandizip
+压缩与解压软件，较轻量，界面优秀，支持格式丰富
+
+[官网下载地址](http://www.bandisoft.com/)
