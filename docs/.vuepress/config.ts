@@ -55,6 +55,8 @@ export default defineUserConfig({
     ],
     repo: 'https://github.com/lxl66566',
     repoLabel : 'MyGitHub',
+    editLink: false,
+    contributors: false,
   }),
   plugins: [
     searchPlugin({
@@ -62,9 +64,6 @@ export default defineUserConfig({
         '/': {
           placeholder: '搜索',
         },
-        // '/zh/': {
-        //   placeholder: '搜索',
-        // },
       },
       maxSuggestions: 10,
     }),
