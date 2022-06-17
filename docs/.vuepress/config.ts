@@ -33,6 +33,7 @@ export default defineUserConfig({
         children: [
           '/games/csgo_settings.md',
           '/games/Minecraft.md',
+          '/games/rhythm_games.md',
         ],
       },
       {
