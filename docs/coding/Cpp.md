@@ -43,3 +43,36 @@ Qt提供方便的资源文件引用。在项目中通过`Add New...`新建Qt Res
 Qt拥有人性化的打包服务。复制release输出目录中的exe文件到任意目标目录，打开开始菜单Qt文件夹中的MINGW命令行，进入目标目录后使用`windeployqt xxx.exe`命令即可完成打包。
 
 但是，这样打包出来的程序体积还能**进一步缩小**。运行exe后，全选目录下文件并删除，跳过已被打开的所有文件。这样能够移除不必要的运行库从而大幅降低发布包的大小。
+### JSON处理
+#### 读取
+```
+QFile file("a.json");
+if(!file.open(QIODevice::ReadOnly)){
+    qDebug() << "open file failed.";
+    return;
+}
+QByteArray data(file.readAll());
+file.close();
+QJsonParseError jError;
+QJsonDocument jDoc = QJsonDocument::fromJson(data, &jError);
+if(jError.error != QJsonParseError::NoError){
+    qDebug() << "read json error.";
+    return;
+}
+QJsonObject rootjsonobj = jDoc.object();
+```
+此时`rootjsonobj`即为读入的QJsonObject对象（理解为python中的字典对象）。
+
+通过`rootjsonobj[KEY]`访问得到一个QJsonValue，可以调用`toObject()` `toString()`等函数将之转换为对应类型。
+#### 写入
+```
+QJsonDocument jDoc(rootjsonobj);
+QFile file("b.json");
+if(!file.open(QIODevice::Truncate | QIODevice::WriteOnly)){
+    qDebug() << "write json error.";
+    return;
+}
+QByteArray data(jDoc.toJson());
+file.write(data);
+file.close();
+```

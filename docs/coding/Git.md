@@ -6,7 +6,7 @@ Git is a free and open source distributed version control system designed to han
 
 ## 如何使用
 
-下载安装git后，在任意文件夹右击即可看到Git Bash Here （命令行界面）和 Git GUI Here （图形界面）。本文仅介绍Git Bash用法。
+下载安装git后，在任意目录右击即可看到Git Bash Here （命令行界面）和 Git GUI Here （图形界面）。本文仅介绍Git Bash用法。
 
 当然，git安装时会将自身安装目录添加到环境变量，因此你也可以在cmd或Powershell中使用git命令。
 
