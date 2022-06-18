@@ -47,7 +47,7 @@
 
 [CS自学指南](https://csdiy.wiki/)
 
-算法刷题：[力扣](https://leetcode-cn.com/problemset/all/) [洛谷](https://www.luogu.com.cn/)
+算法刷题：[力扣](https://leetcode-cn.com/problemset/all/) | [洛谷](https://www.luogu.com.cn/)
 
 ## 媒体创作
 
@@ -65,16 +65,37 @@
 
 ### galgame
 
-[极点ACG](https://lspgal.com/)
-
-[GAL图书馆](https://galgame.pw/)
-
-[初音的青葱](https://www.yygal.com/)
+[极点ACG](https://lspgal.com/) | [GAL图书馆](https://galgame.pw/) | [初音的青葱](https://www.yygal.com/)
 
 ### 其他游戏
 
-[我的世界数据包](https://www.planetminecraft.com/data-packs)
+[我的世界数据包](https://www.planetminecraft.com/data-packs) | [你画我猜网页版](https://gartic.io/) | [I wanna](https://delicious-fruit.com/ratings/full.php?q=ALL)
 
-[你画我猜网页版](https://gartic.io/)
+## TG推荐
+由于本人使用telegram的时间不算久，此处群组多为受先行者们所转发传播，在此对他们表示敬意。
 
-[I wanna](https://delicious-fruit.com/ratings/full.php?q=ALL)
+[黑洞资源笔记](https://t.me/tieliu)：分享一些有价值的编程工具及技巧
+
+[竹新社](https://t.me/tnews365)：较为客观的国内外新闻转载，简洁
+
+[中国数字时代](https://t.me/cdtchinesefeed)：转载网评文章，较主观
+
+[双语新闻](https://t.me/shuangyunews_rss)：看新闻学英语，拥有逐段双语对照
+
+[The New York Times](https://t.me/nytimes) | [Disclose.tv](https://t.me/disclosetv)：英文新闻频道，较客观
+
+[美图与沙雕](https://t.me/shadiaotu)：二次元涩涩频道
+
+[NSFW](https://t.me/qingan567)：本子推荐
+
+[奇闻异录 与 沙雕时刻](https://t.me/wtmsd)：涩涩与搞笑
+
+[English Chatting](https://t.me/English_chatting_club)：英语聊天群，消息太多，没啥用
+
+[日本語雑談部屋](https://t.me/onseizatudan)：日语聊天群
+
+[电报时报](https://t.me/times001)：极为主观的新闻频道
+
+[蓝点网](https://t.me/landiansub)：科技新闻
+
+[Iyouport](https://t.me/iyouport)：教你如何保护自己，也附带散播恐慌
