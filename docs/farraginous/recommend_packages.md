@@ -18,6 +18,7 @@ Android端压缩/解压缩软件。（注：官方也有PC端软件）
 [官网下载地址](https://www.zarchiver.me/zarchiver-apk/)  [私有下载地址](https://wwp.lanzout.com/i82ku049jz6j)
 ### Via
 国产浏览器
+
 优点：
 * **小！**
 * 纯净无广告
@@ -29,7 +30,7 @@ Android端压缩/解压缩软件。（注：官方也有PC端软件）
 
 [官网下载地址](https://www.viayoo.com/zh-cn/) | 也可在国内应用商店下载
 ### Fake Location
-虚拟定位软件，可免ROOT
+虚拟定位软件，免ROOT
 
 [官方项目地址](https://github.com/Lerist/FakeLocation)  [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 ### Nekogram X
@@ -70,7 +71,8 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 
 **优点：**
 
-* 全是优点
+* 低延迟
+* 性能占用极低
 
 **缺点：**
 
@@ -104,8 +106,49 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 ### geek
 用于卸载软件。轻量，可清理残留。
 
-[官网下载地址](https://geekuninstaller.com/download) [私链](https://wwp.lanzout.com/icAdmharg2h)
+[官网下载地址](https://geekuninstaller.com/download) | [私链](https://wwp.lanzout.com/icAdmharg2h)
 ### Bandizip
 压缩与解压软件，较轻量，界面优秀，支持格式丰富
 
 [官网下载地址](http://www.bandisoft.com/)
+
+## 浏览器插件
+### 视频速度控制
+控制视频播放速度，0.07x-16.00x。主要适合需要2倍速以上看视频的人群 *（对我来说用处真的很大）*，也可用来快速刷课，练习听力等。
+
+* 使用方法：`A`和`D`可+-0.1x倍速，`S`用来回到1.00x或上一倍速。当然也可用鼠标操作。插件倍速会覆盖视频本身的倍速。
+如需更改热键请在`扩展-扩展选项`中进行操作。
+* 缺点：全局锁死热键，需要用此键原本功能时要临时禁用。
+
+
+[官方项目地址](https://github.com/polywock/globalSpeed) | [私链下载地址](https://wwp.lanzout.com/i9LKF05ht3ni)
+### IDM
+高速多线程下载器。需要浏览器插件配合软件使用。
+
+官方仅有30天试用。若想下载破解版可在B站搜索教程。
+
+[官网](https://www.internetdownloadmanager.com/) | [破解软件私链](https://wwp.lanzout.com/iDBYA06mlxha)
+### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
+快速启用禁用扩展。
+
+### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
+运行脚本。
+
+### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
+强大的`禁止复制`破解插件。比脚本好用。
+
+### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
+广告拦截。
+
+## 浏览器脚本
+::: tip 提示
+请确保已经安装插件[Tampermonkey](#tampermonkey)。
+:::
+### [百度网盘简易下载助手](https://greasyfork.org/zh-CN/scripts/418182)
+百度网盘高速下载脚本，亲测可用，免费。教程里面有。
+
+### [秒传链接提取](https://greasyfork.org/zh-CN/scripts/424574-%E7%A7%92%E4%BC%A0%E9%93%BE%E6%8E%A5%E6%8F%90%E5%8F%96)
+秒传链接，百度网盘分享的一种优秀模式。
+
+### [哔哩哔哩自动连播](https://greasyfork.org/zh-CN/scripts/408516-%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%92%AD)
+跳过bilibili视频末尾的充电鸣谢 *（对B站重度使用者还是很好用的）*
