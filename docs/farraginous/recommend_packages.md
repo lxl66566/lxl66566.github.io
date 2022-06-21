@@ -29,12 +29,22 @@ Android端压缩/解压缩软件。（注：官方也有PC端软件）
 * 视频播放器很拉
 
 [官网下载地址](https://www.viayoo.com/zh-cn/) | 也可在国内应用商店下载
+### MT管理器
+MT管理器是一款强大的文件管理工具和APK逆向修改神器。（[摘自](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。
+
+[官网下载地址](https://bbs.binmt.cc/forum-2-1.html) | [酷安下载地址](https://www.coolapk.com/apk/bin.mt.plus) | [私链](https://wwp.lanzout.com/i9frh06qke0h) | 可在国内应用商店下载
 ### Fake Location
 虚拟定位软件，免ROOT
 
 [官方项目地址](https://github.com/Lerist/FakeLocation)  [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
+### Go安装器
+一键安装Google三件套
+
+[酷安下载地址](https://www.coolapk.com/apk/com.goplaycn.googleinstall) | [私链](https://wwp.lanzout.com/iYyA10686e7c)
 ### Nekogram X
-Telegram第三方开源客户端，自带公共代理
+Telegram第三方开源客户端，自带公共代理 *（约202205以来公共代理常连不上）*
+
+但是在tg第三方内名声不算太好
 
 [官方项目地址](https://github.com/NekoX-Dev/NekoX)  [私有下载地址](https://wwp.lanzout.com/ivNBf03de47c)
 ### Picacg
