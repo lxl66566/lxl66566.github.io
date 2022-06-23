@@ -38,26 +38,16 @@ git commit -m '注释'
 
 1. 分批add，并每次commit不同的注释
 2. 一次性add，并每次使用`sh commit file1.xxx file2.xxx`命令打包。使用命令后，bash会打开文本编辑器(Vim)，你需要对Vim拥有最基本的了解才能添加注释。
-
-### 查看仓库文件
-```sh
-git ls-files
-```
-### 上传
+### 远程仓库
 将你的仓库上传到github等平台。
-#### http
-
-连接远程仓库
+#### 连接远程仓库
+* https:
 ```sh
 git remote add origin https://github.com/yourgithubID/gitRepo.git
 ```
-上传
-```sh
-git push origin main
-```
-#### ssh
+* ssh:
 
-首次使用ssh需要先配置ssh证书。
+1. 配置（首次使用ssh需要先配置ssh证书）
 ```sh
 cd ~            #进入根目录，若已进入请忽略
 ssh-keygen -t rsa -C "youremail@example.com"
@@ -67,15 +57,15 @@ cat ~/.ssh/id_rsa.pub
                 #进入github-Settings-SSH and GPG keys，新建你的ssh key并粘贴内容
 ssh -T git@github.com       #你可输入该命令验证是否成功
 ```
-连接远程仓库
+2. 连接远程仓库
 ```sh
 git remote add origin git@github.com:yourgithubID/gitRepo.git
 ```
-上传
+#### 上传到远程仓库
+请确保已连接远程仓库。
 ```sh
 git push origin main
 ```
-#### 注意
 
 上述代码默认分支名为`main`（github的默认分支名），你可以将`main`替换为任意自己想要的分支。同时用户名`origin`也可自由更改。
 
@@ -87,6 +77,15 @@ git push origin main
 git remote remove origin
 ```
 
+:::tip 提示
+至此，你已经可以完成github等平台的文件上传了。
+
+接下来是一些其他命令
+:::
+### 查看仓库文件
+```sh
+git ls-files
+```
 ### 更改分支
 ```sh
 git branch -m BranchName
@@ -125,7 +124,14 @@ git提供了修改最近一次注释的方法：
 ```sh
 git commit --amend
 ```
-注：需要使用Vim。
+注：需要使用Vim[^1]。
+### 删除远程tag
+如果在github上新建了一个release后，代码又发生了改变，此时release中的source code将不会自动更新。我们可以通过删除原tag再添加tag的方法更新source code。（release信息会被保留，状态更改为draft）
+
+仅删除远程tag：
+```sh
+git push origin :refs/tags/TAGNAME
+```
 
 ## 高级技巧
 ### 忽略文件(夹)

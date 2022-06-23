@@ -125,7 +125,7 @@ clash是开源的、支持Android与PC的客户端。（Android端请前往谷�
 
 #### 一些提示
 
-* 科学上网默认只对浏览器有效。若要全局加速请开启TUN Mode。
+<!-- * 科学上网默认只对浏览器有效。若要全局加速请开启TUN Mode。 -->
 * [这里](https://github.com/BoyceLig/Clash_Chinese_Patch)提供clash的汉化。
 * 在节点界面点击测速图标测试全部节点的连通性
 * 建议设置配置文件自动更新（Profiles->右击配置文件->Settings->Update Interval）
