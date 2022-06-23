@@ -13,15 +13,15 @@
 
 搜案件：[中国裁判文书网](https://wenshu.court.gov.cn/)
 
-搜电子书：[zlibrary(域名不固定)](https://zh.usa1lib.org/)
+搜电子书：[zlibrary（域名不固定）](https://zh.usa1lib.org/)
 
 ## 云存储
 
-[蓝奏云](https://wwa.lanzoui.com/) *([跳转介绍](recommend_packages.md/#蓝奏云))*
+[蓝奏云](https://wwa.lanzoui.com/) *（[跳转介绍](recommend_packages.md/#蓝奏云)）*
 
 ## 新闻
 
-[今日热榜](https://tophub.today/) *(国内热搜榜汇总*
+[今日热榜](https://tophub.today/) *（国内热搜榜汇总*
 
 ## 学习
 
@@ -29,7 +29,7 @@
 
 ### 外语
 
-[英语新闻](https://breakingnewsenglish.com/) *~~(旧闻~~*
+[英语新闻](https://breakingnewsenglish.com/) *~~（旧闻~~*
 
 [英语听力](http://dict.eudic.net/ting) *（建议直接上[YouTube](http://youtube.com/)*
 
