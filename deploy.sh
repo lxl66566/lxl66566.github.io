@@ -15,7 +15,7 @@ cd docs/.vuepress/dist
  
 git init
 git add -A
-git commit -m 'deploy'
+git commit -m 'deploy:'$(date "+%Y%m%d-%H:%M:%S")
  
 # 如果你想要部署到 https://USERNAME.github.io
 git push -f git@github.com:lxl66566/lxl66566.github.io.git main

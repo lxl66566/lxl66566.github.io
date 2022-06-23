@@ -12,7 +12,7 @@ Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用
 以下内容并不是Qt基础的教程，缺乏目的性和针对性
 :::
 ### 唤起最小化的窗口
-```
+```cpp
 show();showNormal();raise();activateWindow();
 ```
 ### 关于控件组
@@ -45,7 +45,7 @@ Qt拥有人性化的打包服务。复制release输出目录中的exe文件到�
 但是，这样打包出来的程序体积还能**进一步缩小**。运行exe后，全选目录下文件并删除，跳过已被打开的所有文件。这样能够移除不必要的运行库从而大幅降低发布包的大小。
 ### JSON处理
 #### 读取
-```
+```cpp
 QFile file("a.json");
 if(!file.open(QIODevice::ReadOnly)){
     qDebug() << "open file failed.";
@@ -65,7 +65,7 @@ QJsonObject rootjsonobj = jDoc.object();
 
 通过`rootjsonobj[KEY]`访问得到一个QJsonValue，可以调用`toObject()` `toString()`等函数将之转换为对应类型。
 #### 写入
-```
+```cpp
 QJsonDocument jDoc(rootjsonobj);
 QFile file("b.json");
 if(!file.open(QIODevice::Truncate | QIODevice::WriteOnly)){

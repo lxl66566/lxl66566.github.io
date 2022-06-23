@@ -1,6 +1,8 @@
 import { defineUserConfig } from 'vuepress'
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
+const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
+// const { shikiPlugin } = require('@vuepress/plugin-shiki')
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -58,6 +60,18 @@ export default defineUserConfig({
     repoLabel : 'MyGitHub',
     editLink: false,
     contributors: false,
+    tip: '提示',
+    warning: '注意',
+    danger: '警告',
+    // sidebar:{
+    //   '/docs/': 'auto',
+    //   '/docs/test/': [
+    //     {
+    //       text: '关于作者',
+    //       children: ['/test/test.md', '/test/gossip.md'],
+    //     },
+    //   ],
+    // },
   }),
   plugins: [
     searchPlugin({
@@ -68,5 +82,12 @@ export default defineUserConfig({
       },
       maxSuggestions: 10,
     }),
+    prismjsPlugin({
+      preloadLanguages:['markdown', 'jsdoc', 'yaml',
+        'rust', 'cpp', 'git','bash','batch']
+    }),
+    // shikiPlugin({
+    //   langs:['rust', 'cpp', 'git-commit','sh','bat']
+    // }),
   ],
 })
