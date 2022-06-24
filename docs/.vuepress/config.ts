@@ -36,6 +36,7 @@ export default defineUserConfig({
           '/games/csgo_settings.md',
           '/games/Minecraft.md',
           '/games/rhythm_games.md',
+          '/games/galgame.md',
         ],
       },
       {

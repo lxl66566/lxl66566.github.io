@@ -88,13 +88,13 @@
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
 
-### 最高成绩
+### 最好成绩
 
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1Bv4y1g7Pp&cid=752826429&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了；16能fc的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
-### 最高成绩
+### 最好成绩
 
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1qY4y1g7rS&cid=747279284&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 ### 共存版

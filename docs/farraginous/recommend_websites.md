@@ -90,9 +90,9 @@
 
 [奇闻异录 与 沙雕时刻](https://t.me/wtmsd)：涩涩与搞笑
 
-[English Chatting](https://t.me/English_chatting_club)：英语聊天群，消息太多，没啥用
+[English Chatting](https://t.me/English_chatting_club)：英语聊天群（消息太多，没啥用
 
-[日本語雑談部屋](https://t.me/onseizatudan)：日语聊天群
+[日本語雑談部屋](https://t.me/onseizatudan) & [日本語雑談部屋(2)](https://t.me/nihongo_practice)：日语聊天群
 
 [电报时报](https://t.me/times001)：极为主观的新闻频道
 
