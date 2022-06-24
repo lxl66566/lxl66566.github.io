@@ -18,9 +18,9 @@ show();showNormal();raise();activateWindow();
 ### 关于控件组
 Qt官方提供了QButtonGroup类。该类提供了对QAbstractButton（即记忆化选择按钮）的分组。将按钮添加到QButtonGroup对象中，点击某一按钮时，组中其他按钮会被自动取消toggle（已点击状态）。你也可以为组中每个按钮赋予数字id，通过id对控件进行调用。
 
-当然，QButtonGroup类的使用范围是具有很大局限性的。若想对不同类型的控件新建分组该怎么做呢？
+当然，QButtonGroup类的使用范围是具有很大局限性的。若想对其他不同类型的控件新建分组该怎么做呢？
 
-答：使用`QVector<QWidget*>`。由于大多数控件都继承自QWidget，因此通过QWidget类型容器对组内控件进行统一操作，例如需要隐藏主窗口内的所有控件，只需
+答：使用`QVector<QWidget*>`。由于部分常用控件(QPushButton,QLable等)继承自QWidget，因此通过QWidget类型容器对组内控件进行统一操作，例如需要隐藏主窗口内的所有控件，只需
 `
 for (auto i = elements.begin();i != elements.end();++i) (*i)->hide();
 `

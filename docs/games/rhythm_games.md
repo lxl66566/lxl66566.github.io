@@ -1,5 +1,5 @@
 # 音游
-到现在我只打过移动端音游。本篇不含任何街机元素。
+至今我只打过移动端音游。本篇不含任何街机元素。
 ## 回忆
 小时候有打过节奏大师，很菜，平常管控也很严，拿不到手机。因此打的时长可以忽略不计。
 
@@ -43,7 +43,7 @@
 我打osu只打mania。曾碰过一下子std，不感兴趣。现在我主要打4k，偶尔也会打打6k，5k打得就更少了。其他key数从来不碰。
 * 为什么打osu最频繁呢？
 
-因为上限最高。
+因为上限最高。 **osu，本是逆天而行。**
 
 
 ### 键盘参数
@@ -87,9 +87,16 @@
 * 关于制谱
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
+
+### 最高成绩
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1Bv4y1g7Pp&cid=752826429&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
+
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了；16能fc的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
+### 最高成绩
 
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1qY4y1g7rS&cid=747279284&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 ### 共存版
 * 2.1.4（2022愚人节）
 
@@ -100,3 +107,7 @@
 
 ### 账号
 本人账号（917042883）0氪，很久没登录了。一直在借别人的号打。
+
+### 最好成绩
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1rF411g7mb&cid=574299849&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
