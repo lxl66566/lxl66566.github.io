@@ -65,7 +65,7 @@
 
 ### galgame
 
-[极点ACG](https://lspgal.com/) | [GAL图书馆](https://galgame.pw/) | [初音的青葱](https://www.yygal.com/)
+[极点ACG（最为推荐）](https://lspgal.com/) | [GAL图书馆](https://galgame.pw/) | [初音的青葱](https://www.yygal.com/)
 
 ### 其他游戏
 

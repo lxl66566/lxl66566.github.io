@@ -121,10 +121,22 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 压缩与解压软件，较轻量，界面优秀，支持格式丰富
 
 [官网下载地址](http://www.bandisoft.com/)
+### Potplayer
+视频播放器。轻量无广告，功能多，支持格式丰富。
+
+[官网下载地址](https://potplayer.daum.net/)
 ### f.lux
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。（一般来说win10自带的夜间模式够用，但是它的权限更高，能在打游戏时也强制护眼。）
 
 [官网下载地址](https://justgetflux.com/) | [私有下载地址](https://wwp.lanzout.com/iqmkq06s0wtg)
+### 图吧工具箱
+集成了电脑及其外接设备测试所需的多数软件。
+
+[官网下载地址](http://www.tbtool.cn/)
+### ContextMenuManager
+开源的右键菜单管理器。高度自定义化。
+
+[官方项目地址](https://github.com/BluePointLilac/ContextMenuManager)
 ## 浏览器插件
 ### 视频速度控制
 控制视频播放速度，0.07x-16.00x。主要适合需要2倍速以上看视频的人群 *（对我来说用处真的很大）*，也可用来快速刷课，练习听力等。
