@@ -99,7 +99,7 @@
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
 ### 调整offset
-由于osu的延迟调整太拉，这里给出一个仿照arc调整的解法。
+由于osu的延迟调整太拉，这里给出一个仿照arc调整的解法。在纯音押打歌后：
 
 late过多，向负方向调整。
 
@@ -110,6 +110,24 @@ early过多，向正方向调整。
 
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了；16能fc的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
+### 数据转移
+同品牌手机可以用自带的换机工具转移。（例：小米换机）
+
+此处给出不同品牌手机的phigros数据转移方法（为[此来源](https://www.taptap.com/topic/13630492)的精简）：
+
+1. 手机端连接好USB调试，打开phigros；电脑端打开adb
+2. 备份：
+```batch
+adb backup -f NAME.ab -noapk -noshared -nosystem com.PigeonGames.Phigros
+```
+`NAME`最好包括游戏名、版本、备份时间等信息。
+
+3. 恢复：
+```batch
+adb restore NAME.ab
+```
+
+[这里](https://wwp.lanzout.com/iiXRW072eyve)是我的用户数据，data充足，AT全解锁，有需要可以自取。
 ### 最好成绩
 
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1qY4y1g7rS&cid=747279284&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
