@@ -22,27 +22,29 @@
 2.在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
 ### 切换后的设置
 由于切换国服后csgo的语音会变成中文，若需要切换回英文语音请：
-```
-进入Steam安装目录下的Steam\steamapps\common\Counter-Strike Global Offensive\csgo文件夹
-删除所有名称带有 audiochinese 的.vpk文件与全部三个名称带有 perfectworld 的.vpk文件
-```
+1. 进入Steam安装目录下的Steam\steamapps\common\Counter-Strike Global Offensive\csgo文件夹
+2. 删除所有名称带有 audiochinese 的.vpk文件与全部三个名称带有 perfectworld 的.vpk文件 *（后者与语音无关，但建议删除）*
 
+:::tip 提示
+若更新后出现**文件缺失提醒**、**素材加载失败**或**语音变回中文**情况，请再次进入目录删除。
+:::
 ## 调整纵横比
 
 游戏默认比例16:9，但调整成4:3有如下好处：
 * 更容易爆头
 * 分辨率更低，提高帧率（性能过剩的话当我没说）
 
-调整纵横比后，还需要将画面拉长以充分适应电脑屏幕。（调整后的玩家头身比例会让你觉得奇怪，需要一段时间的适应）
+调整纵横比后，还需要将画面拉长以充分适应电脑屏幕。但是画面拉长有如下缺点：
+* 调整后的玩家头身比例会让你觉得奇怪，需要一段时间的适应
+* 游戏开始时会改变已打开窗口的纵横比
+* 鼠标的水平移动速率与垂直移动速率将不相等
 
 画面拉长的常规方法是进入NVIDIA控制面板进行设置。此处给出一种非常规的解决方案：
-```
-Win+R 键进入运行
-输入 regedit 打开注册表
-依次点击 HKEY_LOCAL_MACHINE..SYSTEM..ControlSet001..Control..GraphicsDrivers..Configuration 
-（此时每个目录下仅有一个文件夹，一直点到最后）
-在右侧找到 Scaling 并双击，更改数值为3
-```
+
+1. Win+R 键进入运行，输入 regedit 打开注册表
+2. 依次点击 HKEY_LOCAL_MACHINE..SYSTEM..ControlSet001..Control..GraphicsDrivers..Configuration 
+（此时每个目录下仅有一个文件夹，一直点到最后），在右侧找到 Scaling 并双击，更改数值为3
+
 <div style="text-align: center; ">
 <img alt="注册表" src="/images/csgo_settings_4.png"  width="100%" height="100%"/>
 </div>
@@ -61,20 +63,17 @@ Win+R 键进入运行
 ## 显示回合伤害
 每回合结束后在左上角显示本回合伤害数据：
 
-```
-进入Steam安装目录下的Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg文件夹
-新建文本文档，复制粘贴以下代码：
-```
+
+1. 进入Steam安装目录下的Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg文件夹，新建文本文档，复制粘贴以下代码：
 ```
 developer 1;
 con_filter_enable 2;
 con_filter_text_out "player:";
 con_filter_text "damage";
 ```
-```
-保存关闭后重命名为”damage.cfg”
-在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入 +exec damage
-```
+2. 保存关闭后重命名为”damage.cfg”
+3. 在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入 +exec damage
+
 ## 一键跳投
 比起手动跳投，一键跳投拥有更高的精确度。（理论上绝对精确）
 
