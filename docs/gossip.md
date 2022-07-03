@@ -73,9 +73,9 @@
 * 明日方舟
 * 东方（以绀珠传为主）
 #### 现在主要在玩
-* 纯剧情galgame
+* [纯剧情galgame](./games/galgame.md)
 * [以 **OSU!** 为主的音游](games/rhythm_games.md)
-* CS:GO
+* [CS:GO](./games/csgo_settings.md)
 
 ### 性格&生活细节
 
