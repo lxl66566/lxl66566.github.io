@@ -4,15 +4,15 @@
 *（多人则颜值分取最高计算）*
 ## 最高
 |番号|颜值分|剧情分|磁链|
-|:--:|:--:|:--:|:--:|
-|FSDSS-365|10|10.7|magnet:?xt=urn:btih:d43c655cb761cd2fab0a0df093a9c1e663cb6d5f|
-|SNIS-397|8.7|11.5|magnet:?xt=urn:btih:11CAC397D8B472DCADD6DD7F58988D443D511B8C|
-|PPPE-013|10|10|magnet:?xt=urn:btih:484d3db110d9c7d8a47ff1f5e53433db32e58eba|
-|STARS-190|9.8|8.8|magnet:?xt=urn:btih:b8197c436e07951dbe3a329fa7c2e1925cc003b4|
+| :--: | :--: | :--: | :--: |
+|FSDSS-365|10|10.7|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:d43c655cb761cd2fab0a0df093a9c1e663cb6d5f</p></details>|
+|SNIS-397|8.7|11.5|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:11CAC397D8B472DCADD6DD7F58988D443D511B8C</p></details>|
+|PPPE-013|10|10|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:484d3db110d9c7d8a47ff1f5e53433db32e58eba</p></details>|
+|STARS-190|9.8|8.8|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:b8197c436e07951dbe3a329fa7c2e1925cc003b4</p></details>|
 |ABW-087|8|11|
 ## 次之
 |番号|颜值分|剧情分|
-|:--:|:--:|:--:|:--:|
+| :--: | :--: | :--: |
 |WANZ-359|8.5|8.6|
 |dasd-998|8|9|
 |ROYD-082|8.3|8|
