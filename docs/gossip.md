@@ -48,7 +48,7 @@
 
 * **`纯剧情`** gal？
 
-跳转[galgame页面](./games/galgame.md)。
+跳转[galgame页面](./games/galgame.md#作者观点)。
 
 * 说两句。
 
