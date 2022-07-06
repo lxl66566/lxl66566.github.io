@@ -11,8 +11,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vuepress/plugin-register-components": "^2.0.0-beta.48",
     "@vuepress/plugin-search": "^2.0.0-beta.43",
     "@vuepress/plugin-shiki": "^2.0.0-beta.48",
     "vuepress": "^2.0.0-beta.43"
+  },
+  "dependencies": {
+    "dr-vue-echarts": "^1.0.14"
   }
 }
