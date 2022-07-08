@@ -45,12 +45,15 @@ export default defineUserConfig({
       {
         text: '杂项',
         children: [
-          '/farraginous/my_articles.md',
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
           '/farraginous/books.md',
           '/farraginous/atri.md',
         ]
+      },
+      {
+        text : '文章',
+        link : '/my_articles.md',
       },
       {
         text : '闲聊',
