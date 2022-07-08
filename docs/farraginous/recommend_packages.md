@@ -133,12 +133,18 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 集成了电脑及其外接设备测试所需的多数软件。
 
 [官网下载地址](http://www.tbtool.cn/)
+### ADB
+电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。
+
+[官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
 ### ContextMenuManager
 开源的右键菜单管理器。高度自定义化。
 
 [官方项目地址](https://github.com/BluePointLilac/ContextMenuManager)
 ### Anki
 多端开源背词软件，多语言，高自由度，拥有庞大的词库社区。
+
+PS:因为复习机制和没有完全删除的设置，不是很推荐。
 
 [官网下载地址](https://apps.ankiweb.net/)
 ## 浏览器插件

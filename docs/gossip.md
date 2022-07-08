@@ -93,9 +93,7 @@
 * 一旦被吵醒就很难再次入睡，除非特别困。
 * 喜欢吃糖与吃辣。
 
-### 回忆录
-
-[点击跳转](hide/memories.md)
+### [回忆录](hide/memories.md)
 
 ### 社交
 [我的哔哩哔哩账号](https://space.bilibili.com/346365047)
