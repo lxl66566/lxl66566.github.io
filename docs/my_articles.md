@@ -26,19 +26,19 @@
 
 由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似windows端[Tai](../farraginous/recommend_packages.md#tai)的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的app，在此做个横评。~~*（将`自己做个这种软件`写入日程！）*~~
 
-<font color=red>红色字体：此处为较大劣势；</font><font color=blue>蓝色字体：此处有较大优势，推荐；</font>
+<p style="color:red;">红色字体：此处为较大劣势；</p><p style="color:blue;">蓝色字体：此处有较大优势，推荐；</p>
 
-|软件名|大小（使用前/使用后）|准确率|数据可查询|查询区间长|<font color=red>其他缺陷</font>|其他权限|
+|软件名|大小（使用前/使用后）|准确率|数据可查询|查询区间长|<p style="color:red;">其他缺陷</p>|其他权限|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|StayFree|48.88/63.11MB|<font color=red>81%</font>|ALL|<font color=blue>无限</font>|-|<font color=red>无障碍</font>|
-|My Phone Time|15.23/20.65MB|<font color=red>0%</font>|ALL|<font color=blue>无限</font>|-|-|
-|ActionDash|17/43.26MB|100%|ALL?|<font color=red>周</font>|-|-|
-|YourHour|25.74/70.52MB|100%|ALL?|月|<font color=red>不氪金仅能查看5个程序数据</font>|上层显示|
-|App Usage|4.69/28.54MB|<font color=red>0%</font>|ALL?|<font color=red>天</font>|<font color=red>非按天查询仅有概览 无法获取具体应用时长</font>|-|
-|手机使用时间|?/11.73MB|100%?|<font color=red>上个月</font>|月|<font color=red>必需挂着后台才可计时</font>|后台免杀|
-|<font color=blue>Digitox</font>|3.89/20.67MB|100%|ALL|月|-|-|
-|AppBlock|10.87/44.05MB|<font color=red>0%</font>|ALL?|<font color=red>周</font>|<font color=red>不氪金仅能查看3个程序数据</font>|<font color=red>无障碍</font>|
-|<font color=blue>Phone statistic</font>|3.07/14.61MB|100%|当年|<font color=blue>年</font>|-|-|
+|StayFree|48.88/63.11MB|<p style="color:red;">81%</p>|ALL|<p style="color:blue;">无限</p>|-|<p style="color:red;">无障碍</p>|
+|My Phone Time|15.23/20.65MB|<p style="color:red;">0%</p>|ALL|<p style="color:blue;">无限</p>|-|-|
+|ActionDash|17/43.26MB|100%|ALL?|<p style="color:red;">周</p>|-|-|
+|YourHour|25.74/70.52MB|100%|ALL?|月|<p style="color:red;">不氪金仅能查看5个程序数据</p>|上层显示|
+|App Usage|4.69/28.54MB|<p style="color:red;">0%</p>|ALL?|<p style="color:red;">天</p>|<p style="color:red;">非按天查询仅有概览 无法获取具体应用时长</p>|-|
+|手机使用时间|?/11.73MB|100%?|<p style="color:red;">上个月</p>|月|<p style="color:red;">必需挂着后台才可计时</p>|后台免杀|
+|<p style="color:blue;">Digitox</p>|3.89/20.67MB|100%|ALL|月|-|-|
+|AppBlock|10.87/44.05MB|<p style="color:red;">0%</p>|ALL?|<p style="color:red;">周</p>|<p style="color:red;">不氪金仅能查看3个程序数据</p>|<p style="color:red;">无障碍</p>|
+|<p style="color:blue;">Phone statistic</p>|3.07/14.61MB|100%|当年|<p style="color:blue;">年</p>|-|-|
 
 解释：
 * `StayFree`仅有81%准确率：QQ、nekogramX、Via等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到19%）
