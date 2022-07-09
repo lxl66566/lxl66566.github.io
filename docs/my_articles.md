@@ -24,21 +24,33 @@
 ## Android端记录软件使用时长
 我有多喜欢统计时长，从[galgame页面](../games/galgame.md)和[读书页面](../farraginous/books.md)便可略知一二。但是——
 
-由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似windows端[Tai](../farraginous/recommend_packages.md#tai)的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款记录软件时长的app，在此做个横评。*（将`自己做个这种软件`写入日程！）*
+由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似windows端[Tai](../farraginous/recommend_packages.md#tai)的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的app，在此做个横评。~~*（将`自己做个这种软件`写入日程！）*~~
 
-|软件名|大小（使用前/使用后）|权限|可否查看非本周数据|准确率|
-| :-: | :-: | :-: | :-: | :-: |
-|StayFree|48.88/63.11MB|无障碍<br/>应用信息查询|Yes|81%|
-|My Phone Time|15.23/27.86MB|-|-|-|
-|ActionDash|17/43.26MB|-|No|100%|
+<font color=red>红色字体：此处为较大劣势；</font><font color=blue>蓝色字体：此处有较大优势，推荐；</font>
 
-由于`My Phone Time`数据记录从安装后开始，我需要使用一段时间才可给出具体评价。
+|软件名|大小（使用前/使用后）|准确率|数据可查询|查询区间长|<font color=red>其他缺陷</font>|其他权限|
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+|StayFree|48.88/63.11MB|<font color=red>81%</font>|ALL|<font color=blue>无限</font>|-|<font color=red>无障碍</font>|
+|My Phone Time|15.23/20.65MB|<font color=red>0%</font>|ALL|<font color=blue>无限</font>|-|-|
+|ActionDash|17/43.26MB|100%|ALL?|<font color=red>周</font>|-|-|
+|YourHour|25.74/70.52MB|100%|ALL?|月|<font color=red>不氪金仅能查看5个程序数据</font>|上层显示|
+|App Usage|4.69/28.54MB|<font color=red>0%</font>|ALL?|<font color=red>天</font>|<font color=red>非按天查询仅有概览 无法获取具体应用时长</font>|-|
+|手机使用时间|?/11.73MB|100%?|<font color=red>上个月</font>|月|<font color=red>必需挂着后台才可计时</font>|后台免杀|
+|<font color=blue>Digitox</font>|3.89/20.67MB|100%|ALL|月|-|-|
+|AppBlock|10.87/44.05MB|<font color=red>0%</font>|ALL?|<font color=red>周</font>|<font color=red>不氪金仅能查看3个程序数据</font>|<font color=red>无障碍</font>|
+|<font color=blue>Phone statistic</font>|3.07/14.61MB|100%|当年|<font color=blue>年</font>|-|-|
 
-剩下两款都达不到我的需求：
-* `StayFree`记录的不准确，QQ、nekogramX、Via等多个软件的计时数据小于系统计时数据。从严谨性来看，这是极其严重的问题。
-* `ActionDash`则无法查看本周之外的数据，完全违背了该问题的初衷。
+解释：
+* `StayFree`仅有81%准确率：QQ、nekogramX、Via等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到19%）
+* 准确率为0%的软件：在20220709我看了67min小说后，这些软件有的未记录阅读器时长；有的将时长错加到QQ上。它们的准确率由0.8%-10%不等，由于偏差过大，统一算作0%。
+* 除`My Phone Time` `ActionDash`外其他软件均请求`使用情况访问权限`，此处视为默认放行。
+* `Phone statistic`有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期9天前的。
 
-~~说到底还得自己写啊，但是我不会~~
+总结：
+
+推荐同时使用`Digitox`与`Phone statistic`。*（这俩加一起都没某些家伙大*
+
+~~感觉还想自己写啊，但是我不会，这下有生之年了~~
 
 ## Win10设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
