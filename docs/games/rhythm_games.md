@@ -1,5 +1,7 @@
 # 音游
 至今我只打过移动端音游。本篇不含任何街机元素。
+
+快速跳转：[OSU](#osu) | [phigros](#phigros) | [Arcaea](#arcaea)
 ## 回忆
 小时候有打过节奏大师，很菜，平常管控也很严，拿不到手机。因此打的时长可以忽略不计。
 
@@ -11,11 +13,11 @@
 
 我接触（并且持续玩至今）的第二个音游是Arcaea。日记中最早出现`arc`的时间是20201217。开始时很菜，后来才慢慢发现arcaea的魅力。
 
-应该是在2020年下半年沉迷音游的。音游水平突飞猛进。（要是高考成绩也能突飞猛进就好了）高考完后还入坑了プロセカ，大学刚开学入坑了osu，买了平板后下载了lanota，等等。
+应该是在2020年下半年沉迷音游的。音游水平突飞猛进。（要是高考成绩也能突飞猛进就好了）高考完后还入坑了プロセカ，大学刚开学入坑了osu，（大一下）买了平板后下载了lanota，等等。
 ## 总体现况
 我是音押人，这里的音押指的是敲键盘或屏幕时的声音跟音乐声重合；同时也因为小米平板5的屏幕延迟数据稀烂的影响，我玩音游的延迟设置非常怪。我没法快速适应其他音游人的设备，别人也同理。 ~~（我们之间已经隔了一层可悲的厚障壁了）~~ 我接触一个新音游要做的第一件事并不是新手教程而是不断尝试调延迟。
 
-音游调整延迟大多是听重音是否重合，对我来说p用没有。因为重音与触屏没有任何关系，这样的延迟数据根本没出问题！下面也会列举各音游调延迟的人性化程度分数。
+音游调整延迟大多是听重音是否重合，对我来说**p用没有**。因为重音与触屏延迟没有任何关系，我的延迟根本无法调整！下面也会列举各音游调延迟的人性化程度分数，~~包含了我的无尽怨念。~~
 
 本人所有触屏设备音游均关闭打击音效。
 
@@ -24,7 +26,7 @@
 |osu|81|-54-1ms<br/>-57ms(金粉)|30|0|
 |phigros(latest)|10|+100ms|-|1|
 |arcaea|7|70|5|5|
-|KALPA|<1|-148ms|6.5|3|
+|KALPA|<1|-148ms|6.5|5|
 |lanota|<0.5|+12|7.0|0|
 |Dynamix|<0.1|-0.09|1.2|2|
 |Malody|<0.1|?|?|10|
@@ -61,7 +63,7 @@
 |快银轴|20220614-至今|快，触发键程小|触发压力稍大|
 |金粉轴v2|20220624-20220625|触发压力小|触发键程大|
 
-大一用了一整年的地摊货键盘，光轴，咸鱼40的网吧淘汰品。优点是延迟很低，可以随便泡水不会坏。缺点嘛，巨tm吵，舍友震怒；而且克数较高，打得很累。
+大一用了一整年的地摊货键盘，光轴，咸鱼40的网吧淘汰品。延迟很低，可以随便泡水不会坏——但是巨tm吵，舍友震怒；而且触发压力大，打得很累。
 
 放假回家后用过了AJAZZ红轴，手感还行，可惜因为套件模具不喜欢，退掉了。第三次换的是RK红轴，打字舒服但是打osu不行：因为触发键程问题，轻按与重按的触发延迟是不一样的，导致我爆发段和正常段准度总会死一个。
 
@@ -73,23 +75,23 @@
 
 ### 皮肤
 
-大一一整年用的是蓝白钉皮，R Skin v3.1 (diamond) 的改版。可以在我的B站视频里找到。
+大一一整年用的是蓝白钉皮，R Skin v3.1 (diamond) 的改版。可以在我的B站视频里找到。顺带一提，当时也是试了好多皮肤，发现其他皮肤都没什么手感，只有这套拥有超亮击打特效的蓝白钉皮很对我的胃口。
 
 然后地狱时刻（20220612）到了，我下载了一个别人的同名皮肤，并且覆盖掉了原皮肤。这种覆盖是不可逆的，无法恢复。同时我在当时下载皮肤的群里和网上疯狂找原皮肤。找不到了，销声匿迹了，找到的都是R Skin的原版或其他改版。这大概是我最痛苦的一个晚上。
 
-第二天我几乎是死心了，开始了自己融合皮肤的过程，希望能融出像原来那种的蓝白钉皮。因为其他的皮肤我用过了，都没有手感。自己融了一天，也融不出什么手感好的皮肤。
+第二天我几乎是死心了，开始了自己融合皮肤的过程，希望能融出像原来那种的蓝白钉皮。自己融了整整一天，也融不出什么手感好的皮肤。
 
 然后在20220613晚上，放弃自己融的那个，在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了我当前使用的[absolute x v2](https://wwp.lanzout.com/ihINA06l9wdc)。手感还不错，能够足够逼近原来的皮肤了。
 ### 其他推荐
 * 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
 
-由于我在家的房间采光极差，白天跟傍晚的光线差不多，而且我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但它可以免疫这个屏蔽，强制护眼，我还是很推荐的。
+由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但f.lux可以免疫这个屏蔽，强制护眼，我还是觉得很舒服的。（P.S.免疫屏蔽不稳定，从桌面返回osu时经常需要尝试多次）
 
 * 键盘/轴推荐
 
 随便找个你喜欢的可以热插拔的机械键盘，然后把osu键位的轴换成趁手的。这是最经济实惠的办法，没有必要整个键盘都是昂贵的轴。
 
-轴体以线性轴为佳。本人根据经验推荐ttc快银轴。由于对其他轴了解不深，只可给出已经用过的轴的[评价](#键盘参数)以供参考。
+轴体以线性轴为佳。本人根据经验推荐ttc快银轴。由于对其他轴了解不深，只可给出[已用过的轴的评价](#键盘参数)以供参考。
 
 * 谱面下载
 
@@ -109,6 +111,7 @@ late过多，向负方向调整。
 
 early过多，向正方向调整。
 ### 最好成绩
+8th reform Dan 97.04%
 
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1Ja411Q7Kh&cid=769015862&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 
@@ -117,7 +120,7 @@ early过多，向正方向调整。
 ### 调整延迟
 若early过多，则将谱面延时调小。
 :::warning 警告
-不要用 SIGMA IN 来调整延迟！！！
+不要用 SIGMA IN 来调整延迟！
 :::
 ### 数据转移
 同品牌手机可以用自带的换机工具转移。（例：小米换机）
@@ -138,8 +141,10 @@ adb restore NAME.ab
 
 [这里](https://wwp.lanzout.com/iiXRW072eyve)是我的用户数据，data充足，AT全解锁，有需要可以自取。
 ### 最好成绩
+15.9 all perfect
 
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1qY4y1g7rS&cid=747279284&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
+
 ### 共存版
 * 2.1.4（2022愚人节）
 
@@ -155,11 +160,16 @@ adb restore NAME.ab
 此处列出一些我觉得好听的曲子（Favorites的一部分）。（排名按照FTR难度顺序）
 
 <=9: Particle Arts, Alice's Suitcase, Equilibrium, Vindication
+
 9+: 7thSense, Far Away Light, Lost Desire, Sulfur
+
 10: cyanine, GLORY : ROAD, Löschen, Oshama Scramble!, PRAGMATISM, Sheriruth, アリス・リデルに捧ぐ, 妖艶魔女 -trappola bewitching-
+
 10+: #1f1e33, AMAZING MIGHTYYYY!!!!, Cyaegha, Halcyon, ouroboros -twin stroke of the end-, 烈華RESONANCE, Ringed Genesis, Singularity, Tempestissimo, World Vanquisher
+
 11: Aegleseeker, Grievous Lady, 最強STRONGER
 
 ### 最好成绩
+10.1 pure memory
 
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1rF411g7mb&cid=574299849&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
