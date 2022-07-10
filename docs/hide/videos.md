@@ -15,9 +15,10 @@
 ## 次之
 |番号|颜值分|剧情分|
 | :--: | :--: | :--: |
+|[DASD-998](https://www2.javhdporn.net/video/dasd-998c/)|8|9.2|
 |[WANZ-359](https://www2.javhdporn.net/video/WANZ-359c/)|8.5|8.6|
-|[DASD-998](https://www2.javhdporn.net/video/dasd-998c/)|8|9|
 |[ROYD-082](https://www2.javhdporn.net/video/ROYD-082c/)|8.3|8|
+|[MIAA-648](https://www2.javhdporn.net/video/miaa-648/)|7.3|8.9|
 |[HMN-156](https://www2.javhdporn.net/video/hmn-156)|8|7.7|
 |[SSIS-348](https://www2.javhdporn.net/video/SSIS-348c/)|9|6|
 |[ROYD-084](https://www2.javhdporn.net/video/ROYD-084c/)|7.7|7|
@@ -31,7 +32,9 @@
 |[HNDS-075](https://www2.javhdporn.net/video/HNDS-075c/)|5.5|5|
 |[IPX-699](https://www2.javhdporn.net/video/ipx-699)|4|6.1|
 |[HMN-127](https://www2.javhdporn.net/video/HMN-127c/)|5|4|
+|[CAWD-377](https://www2.javhdporn.net/video/cawd-377/)|4.8|4|
 |[ABP-874](https://www2.javhdporn.net/video/ABP-874/)|3.8|5|
+|[ABW-018](https://www2.javhdporn.net/video/abw-018/)|4|4|
 
 *（顺序记录到miaa-604，剩下的逆序改天，我鉴不动辣）*
 
