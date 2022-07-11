@@ -72,7 +72,12 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 一个可以直接问外国人(语言)问题的app&网站。
 
 [官网](https://zh.hinative.com/)
+### Adobe Scan
+扫描文档并转为pdf。免费版就够用了。
 
+与[扫描全能王](https://w103.camscanner.com/)相比有如下优点：小（安装后，扫描全能王 591MB，Adobe Scan 114MB）；无水印。
+
+[谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
 ## Windows
 ### Parsec
 **极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。
