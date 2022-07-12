@@ -27,22 +27,22 @@
 
 由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似windows端[Tai](../farraginous/recommend_packages.md#tai)的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的app，在此做个横评。~~*（将`自己做个这种软件`写入日程！）*~~
 
-<a style="text-decoration:none;color:red;">红色字体：此处为较大劣势；</a><a style="text-decoration:none;color:blue;">蓝色字体：此处有较大优势，推荐；</a>
+<text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。
 
-|软件名|大小（使用前/使用后）|准确率|数据可查询|查询区间长|<a style="text-decoration:none;color:red;">其他缺陷</a>|其他权限|
+|软件名|大小（使用前/后,MB）|准确率|数据可查询|查询区间长|<text style="color:red;">其他缺陷</text>|其他权限|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|StayFree|48.88/63.11MB|<a style="text-decoration:none;color:red;">81%</a>|ALL|<a style="text-decoration:none;color:blue;">无限</a>|-|<a style="text-decoration:none;color:red;">无障碍</a>|
-|My Phone Time|15.23/20.65MB|<a style="text-decoration:none;color:red;">0%</a>|ALL|<a style="text-decoration:none;color:blue;">无限</a>|-|-|
-|ActionDash|17/43.26MB|100%|ALL?|<a style="text-decoration:none;color:red;">周</a>|-|-|
-|YourHour|25.74/70.52MB|100%|ALL?|月|<a style="text-decoration:none;color:red;">不氪金仅能查看5个程序数据</a>|上层显示|
-|App Usage|4.69/28.54MB|<a style="text-decoration:none;color:red;">0%</a>|ALL?|<a style="text-decoration:none;color:red;">天</a>|<a style="text-decoration:none;color:red;">非按天查询仅有概览 无法获取具体应用时长</a>|-|
-|手机使用时间|?/11.73MB|100%?|<a style="text-decoration:none;color:red;">上个月</a>|月|<a style="text-decoration:none;color:red;">必需挂着后台才可计时；广告</a>|后台免杀|
-|<a style="text-decoration:none;color:blue;">Digitox</a>|3.89/20.67MB|100%|ALL|月|-|-|
-|AppBlock|10.87/44.05MB|<a style="text-decoration:none;color:red;">0%</a>|ALL?|<a style="text-decoration:none;color:red;">周</a>|<a style="text-decoration:none;color:red;">不氪金仅能查看3个程序数据</a>|<a style="text-decoration:none;color:red;">无障碍</a>|
-|<a style="text-decoration:none;color:blue;">Phone statistic</a>|3.07/14.61MB|100%|当年|<a style="text-decoration:none;color:blue;">年</a>|-|-|
+|StayFree|48.88/63.11|<text style="color:red;">81%</text>|ALL|<text style="color:blue;">无限</text>|-|<text style="color:red;">无障碍</text>|
+|My Phone Time|15.23/20.65|<text style="color:red;">0%</text>|ALL|<text style="color:blue;">无限</text>|-|-|
+|ActionDash|17/43.26|100%|ALL?|<text style="color:red;">周</text>|-|-|
+|YourHour|25.74/70.52|100%|ALL?|<text style="color:red;">天</text>|-|上层显示|
+|App Usage|4.69/28.54|<text style="color:red;">0%</text>|ALL?|<text style="color:red;">天</text>|<text style="color:red;">非按天查询仅有概览 无法获取具体应用时长</text>|-|
+|手机使用时间|?/11.73|100%?|<text style="color:red;">上个月</text>|月|<text style="color:red;">必需挂着后台才可计时；广告</text>|后台免杀|
+|<text style="color:blue;">Digitox</text>|3.89/20.67|100%|ALL|月|-|-|
+|AppBlock|10.87/44.05|<text style="color:red;">0%</text>|ALL?|<text style="color:red;">周</text>|<text style="color:red;">不氪金仅能查看前3个程序数据</text>|<text style="color:red;">无障碍</text>|
+|<text style="color:blue;">Phone statistic</text>|3.07/14.61|100%|当年|<text style="color:blue;">年</text>|-|-|
 
 解释：
-* `StayFree`仅有81%准确率：QQ、nekogramX、Via等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到19%）
+* `StayFree`仅有81%准确率：QQ、nekogramX、Via等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到19%）（后来发现也有偏大数据）
 * 准确率为0%的软件：在20220709我看了67min小说后，这些软件有的未记录阅读器时长；有的将时长错加到QQ上。它们的准确率由0.8%-10%不等，由于偏差过大，统一算作0%。
 * 除`My Phone Time` `ActionDash`外其他软件均请求`使用情况访问权限`，此处视为默认放行。
 * `Phone statistic`有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期9天前的。
@@ -59,34 +59,34 @@
 
 （后来的测试印证了我的观点：同一软件中使用`Google->标准，地形和卫星地图`出现定位偏移，使用`OpenStreetMap->标准地图`则未出现偏移。）
 
-老规矩，<a style="text-decoration:none;color:red;">红色劣势</a>，<a style="text-decoration:none;color:blue;">蓝色优势</a>。
+老规矩，<text style="color:red;">红色劣势</text>，<text style="color:blue;">蓝色优势</text>。
 
 ### 定位精确的软件
 
-|软件名|大小（安装后）|显示方向?|无需翻墙?|<a style="text-decoration:none;color:red;">其他缺陷</a>|
+|软件名|大小（安装后,MB）|显示方向?|无需翻墙?|其他缺陷|
 | :-: | :-: | :-: | :-: | :-: |
-|GPX Viewer|53.43MB|✔|✖|
-|Gaia GPS|205MB|✔|✔|卫星地图/OpenStreetMap需付费|
-|小步点|211MB|✔|✔|
-|Keep|<a style="text-decoration:none;color:red;">895MB</a>|✖|✔|GPS信号弱|
-|Wikiloc|55.34MB|✔|✖|
-|Guru Maps|119MB|✔|✔|部分地名&街道名为英文|
+|GPX Viewer|53.43|✔|✖|
+|Gaia GPS|205|✔|✔|卫星地图&OpenStreetMap需付费|
+|小步点|211|✔|✔|
+|Keep|<text style="color:red;">895</text>|✖|✔|GPS信号弱|
+|Wikiloc|55.34|✔|✖|
+|Guru Maps|119|✔|✔|部分地名&街道名为英文|
 
 解释：
 * `无需翻墙`一般代表该软件的地图非谷歌地图组件，可直连加载。
 ### 定位偏移的软件
-此栏为**避雷**而设置。毕竟做不到精确的话，自然就没有了评测的必要。
+此栏为**避雷**而设置。毕竟做不到精确的话，自然就没有了使用的必要。
 
-由于定位偏移是地图问题，此处将列出**默认地图存在偏移现象**的软件。
+由于定位偏移是地图问题，此处将列出**所有地图均存在偏移现象**的软件。
 
-|软件名|大小（安装后）|显示方向?|无需翻墙?|其他缺陷|
+|软件名|大小（安装后,MB）|显示方向?|无需翻墙?|其他缺陷|
 | :-: | :-: | :-: | :-: | :-: |
-|Yudo|71.90MB|✖|✖|
-|RouteHistory|53.80MB|✖|✖|
-|越野路线|22.31MB|✔|✖|指南针延迟高|
-|跑步记录|42.06MB|✔|✖|指南针延迟高|
-|我的路线|26.54MB|✔|✖|指南针延迟高|
-|Geo Tracker|56.74MB|✔|✖|
+|Yudo|71.90|✖|✖|
+|RouteHistory|53.80|✖|✖|
+|越野路线|22.31|✔|✖|指南针延迟高|
+|跑步记录|42.06|✔|✖|指南针延迟高|
+|我的路线|26.54|✔|✖|指南针延迟高|
+|Geo Tracker|56.74|✔|✖|
 
 ## Win10设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。

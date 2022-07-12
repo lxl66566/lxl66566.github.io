@@ -17,6 +17,10 @@
     "vuepress": "^2.0.0-beta.43"
   },
   "dependencies": {
-    "dr-vue-echarts": "^1.0.14"
+    "@codeciting/vuepress-plugin-echarts": "^0.2.4",
+    "chart.js": "^3.8.0",
+    "dr-vue-echarts": "^1.0.14",
+    "echarts": "^5.3.3",
+    "vuepress-plugin-chart": "^0.3.0"
   }
 }
