@@ -2,8 +2,9 @@ import { defineUserConfig } from 'vuepress'
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
-// const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
-// const { path } = require('@vuepress/utils')
+const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
+const { path } = require('@vuepress/utils')
+// const vuepressPluginEcharts = require('@codeciting/vuepress-plugin-echarts');
 
 // const { shikiPlugin } = require('@vuepress/plugin-shiki')
 
@@ -97,8 +98,8 @@ export default defineUserConfig({
     // shikiPlugin({
     //   langs:['rust', 'cpp', 'git-commit','sh','bat']
     // }),
-    // registerComponentsPlugin({
-    //   componentsDir: path.resolve(__dirname, './components'),
-    // }),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
+    }),
   ],
 })
