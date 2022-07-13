@@ -22,21 +22,21 @@
 
 |音游名|游玩时长(%)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
-|osu|81|-54-1ms<br/>-57ms(金粉)|30|0|
-|phigros(latest)|10|+100ms|-|1|
-|arcaea|7|70|5|5|
-|KALPA|<1|-148ms|6.5|5|
-|lanota|<0.5|+12|7.0|0|
-|Dynamix|<0.1|-0.09|1.2|2|
-|Malody|<0.1|?|?|10|
-|phigros(2.1.4)|<0.05|+75ms|-|1|
+|osu|81|<text style="color:red;">-55ms<br/>-57ms(金粉)</text>|30|0|
+|phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
+|arcaea|7|<text style="color:blue;">70</text>|5|5|
+|KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
+|lanota|<0.5|<text style="color:blue;">+12</text>|7.0|0|
+|Dynamix|<0.1|<text style="color:red;">-0.12</text>|1.2|2|
+|Malody|<0.1|<text style="color:red;">-164;-4?</text>|10|10|
+|phigros(2.1.4)|<0.05|<text style="color:blue;">+75ms</text>|-|1|
 |phigros(1.6.5)|<0.05|+105ms|-|1|
 |phigros(1.4.1)|<0.04|+120ms|-|1|
-|プロセカ|<0.01|-2|10.7|0|
-<!-- (60HZ)<br/>+95ms(120HZ) -->
+|プロセカ|<0.01|<text style="color:red;">-2</text>|10.7|2|
 
-*（数据截至20220617）*
+*（数据截至20220713）*
 
+注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<text style="color:red;">late过多，向负方向调整，early过多，向正方向调整；</text> <text style="color:blue;">late过多，向正方向调整，early过多，向负方向调整。</text>
 ## OSU
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
@@ -103,12 +103,12 @@
 * 关于制谱
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
-### 调整offset
+<!-- ### 调整offset
 由于osu的延迟调整太拉，这里给出一个仿照arc调整的解法。在纯音押打歌后：
 
 late过多，向负方向调整。 
 
-early过多，向正方向调整。
+early过多，向正方向调整。 -->
 ### 最好成绩
 8th reform Dan 97.04%
 
@@ -116,11 +116,11 @@ early过多，向正方向调整。
 
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了；16能fc的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
-### 调整延迟
+<!-- ### 调整延迟
 若early过多，则将谱面延时调小。
 :::warning 警告
 不要用 SIGMA IN 来调整延迟！
-:::
+::: -->
 ### 数据转移
 同品牌手机可以用自带的换机工具转移。（例：小米换机）
 

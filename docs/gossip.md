@@ -113,13 +113,14 @@
 
 ### 已提上日程 *~~（笑死，开摆~~*
 * 日语N2
+* 英语四六级
 * leetcode
 * CS自学
-* ~~auto-fishing-machine~~
 
 ### 日程库（不急）
 * 理论数学
 * 虚幻引擎
+* ~~auto-fishing-machine~~
 
 ### 有生之年
 * 钢琴
