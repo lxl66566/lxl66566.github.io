@@ -48,7 +48,7 @@ Telegram第三方开源客户端，自带公共代理 *（约202205以来公共�
 
 [官方项目地址](https://github.com/NekoX-Dev/NekoX)  [私有下载地址](https://wwp.lanzout.com/ivNBf03de47c)
 ### Picacg
-~~年幼的目光.jpg~~ ~~（绅士们，我发誓我已经很久没有点开这个软件了！）~~
+~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
 
 [官方下载地址](http://picacgs.com/)  [备用官方地址](http://picacgp.com/)  [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
 
