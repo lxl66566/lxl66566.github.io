@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html  lang="zh-cmn">
+  <title>rhythm games time percentage</title>
+  <body>
+    <div id="container" style="width: 100%; height: 260px;"></div>
+    <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
+    <script>
+      const { Line } = G2Plot;
+      const data = [
+        { "name": "osu" , "时刻": "2022061?", "占比" : 81 },
+        { "name": "osu" , "时刻": "20220717", "占比" : 73 },
+        { "name": "phigros" , "时刻": "2022061?", "占比" : 10 },
+        { "name": "phigros" , "时刻": "20220717", "占比" : 9 },
+        { "name": "arcaea" , "时刻": "2022061?", "占比" : 7 },
+        { "name": "arcaea" , "时刻": "20220717", "占比" : 13 },
+        { "name": "プロセカ" , "时刻": "2022061?", "占比" : 0 },
+        { "name": "プロセカ" , "时刻": "20220717", "占比" : 3 },
+        { "name": "KALPA" , "时刻": "2022061?", "占比" : 1 },
+        { "name": "KALPA" , "时刻": "20220717", "占比" : 0.01 },
+        { "name": "lanota" , "时刻": "2022061?", "占比" : 0.4 },
+        { "name": "lanota" , "时刻": "20220717", "占比" : 0.1 },
+        { "name": "Dynamix" , "时刻": "2022061?", "占比" : 0.04 },
+        { "name": "Dynamix" , "时刻": "20220717", "占比" : 1 },
+        { "name": "Malody" , "时刻": "2022061?", "占比" : 0.01 },
+        { "name": "Malody" , "时刻": "20220717", "占比" : 0.1 }
+      ]
+      const linePlot = new Line('container', {
+        data,
+        xField: '时刻',
+        yField: '占比',
+        seriesField: 'name',
+        legend: {
+          position: 'top',
+        },
+        smooth: true,
+        animation: {
+          appear: {
+            animation: 'wave-in',
+            duration: 5000,
+          },
+        },
+        slider: {
+          start: 0,
+          end: 1,
+        },
+        // area: {
+        //   style: {
+        //     fillOpacity: 0.15,
+        //   },
+        // },
+      });
+
+      linePlot.render();
+    </script>
+  </body>
+</html>

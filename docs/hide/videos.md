@@ -33,11 +33,12 @@
 |[SHKD-996](https://www2.javhdporn.net/video/shkd-996)|6|6|
 |[MIDE-525](https://www2.javhdporn.net/video/mide-525)|6|5.7|
 |[HMN-152](https://www2.javhdporn.net/video/hmn-152c)|3|7.9|
-|[HNDS-075](https://www2.javhdporn.net/video/HNDS-075c/)|5.5|5|
+|[HNDS-075](https://www2.javhdporn.net/video/HNDS-075c/)|5.2|5|
 |[IPX-699](https://www2.javhdporn.net/video/ipx-699)|4|6.1|
 |[HMN-127](https://www2.javhdporn.net/video/HMN-127c/)|5|4|
 |[CAWD-377](https://www2.javhdporn.net/video/cawd-377/)|4.8|4|
 |[ABP-874](https://www2.javhdporn.net/video/ABP-874/)|3.8|5|
+|[MIDE-422](https://www2.javhdporn.net/video/mide-422)|5|3|
 |[ABW-018](https://www2.javhdporn.net/video/abw-018/)|4|4|
 
 *（顺序记录到miaa-604，剩下的逆序改天，我鉴不动辣）*

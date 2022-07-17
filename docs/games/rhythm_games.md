@@ -20,7 +20,7 @@
 
 本人所有触屏设备音游均关闭打击音效。
 
-|音游名|游玩时长(%)|延迟|谱面速度|延迟人性化程度得分|
+|音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
 |osu|81|<text style="color:red;">-55ms<br/>-57ms(金粉)</text>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
@@ -34,9 +34,13 @@
 |phigros(1.4.1)|<0.04|+120ms|-|1|
 |プロセカ|<0.01|<text style="color:red;">-2</text>|10.7|2|
 
-*（数据截至20220713）*
-
 注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<text style="color:red;">late过多，向负方向调整，early过多，向正方向调整；</text> <text style="color:blue;">late过多，向正方向调整，early过多，向负方向调整。</text>
+
+**游玩时长变化情况：**
+
+<iframe frameborder="no" src="/charts/rhythm_games_time_percentage.html" width="100%" height="280"></iframe>
+
+
 ## OSU
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 

@@ -26,8 +26,8 @@ Rust是一门系统编程语言，专注于安全，尤其是并发安全，支�
 在Rust语言中，字符串采用utf-8编码，字符长度不一，因此Rust不提供下标查找字符串的方法。这让字符串的修改需要一点点的技巧。
 
 1. 转换为`Vec<char>`后修改
-C++程序员认为这种方式非常亲切。
-之后若有需要，还可将`Vec<char>`重新转换为字符串。
+
+C++程序员认为这种方式非常亲切。之后若有需要，还可将`Vec<char>`重新转换为字符串。
 ```rust
 let s1:String = String::from("Hello我是绝对值_x");
 let mut a : Vec<char> = s1.chars().collect();
