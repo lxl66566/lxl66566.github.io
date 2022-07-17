@@ -4,12 +4,10 @@ const { searchPlugin } = require('@vuepress/plugin-search')
 const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { path } = require('@vuepress/utils')
-// const vuepressPluginEcharts = require('@codeciting/vuepress-plugin-echarts');
-
-// const { shikiPlugin } = require('@vuepress/plugin-shiki')
 
 export default defineUserConfig({
   lang: 'zh-CN',
+  base: '/',
   title: '绝对值_x的博客',
   description: '没什么有价值的内容的，真的！',
   theme: defaultTheme({
@@ -95,11 +93,8 @@ export default defineUserConfig({
       preloadLanguages:['markdown', 'jsdoc', 'yaml',
         'rust', 'cpp', 'git','bash','batch']
     }),
-    // shikiPlugin({
-    //   langs:['rust', 'cpp', 'git-commit','sh','bat']
-    // }),
     registerComponentsPlugin({
-      componentsDir: path.resolve(__dirname, './components'),
+      componentsDir: path.resolve(__dirname, './components')
     }),
   ],
 })
