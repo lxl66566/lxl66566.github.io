@@ -10,6 +10,9 @@ export default defineUserConfig({
   base: '/',
   title: '绝对值_x的博客',
   description: '没什么有价值的内容的，真的！',
+  head:[
+    ['link', { rel: 'stylesheet', href: '/css/black.css' }]
+  ],
   theme: defaultTheme({
     logo: '/images/logo.jpg',
     navbar: [

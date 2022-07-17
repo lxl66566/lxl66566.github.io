@@ -29,7 +29,7 @@
 
 ### 外语
 
-[英语新闻](https://breakingnewsenglish.com/) *~~（旧闻~~*
+[英语新闻](https://breakingnewsenglish.com/) <span class="heimu" title="你知道的太多了">（旧闻</span>
 
 [英语听力](http://dict.eudic.net/ting) *（建议直接上[YouTube](http://youtube.com/)*
 

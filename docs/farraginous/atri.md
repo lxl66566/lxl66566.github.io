@@ -17,4 +17,4 @@
 
 你也可以在[这里](https://github.com/lxl66566/primary-atri-bot-plugins)得到她的实现上述功能的python源码。
 
-（注：在一段 ~~很长很长很长很长的~~ 时间里，atri在平常时段不会上线。有需要的请联系作者。）~~*（其实就是没钱买云服务器啦！）*~~
+（注：在一段<span class="heimu" title="你知道的太多了">很长很长很长很长的</span>时间里，atri在平常时段不会上线。有需要的请联系作者。）<span class="heimu" title="你知道的太多了">*（其实就是没钱买云服务器啦！）*</span>
