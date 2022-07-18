@@ -19,10 +19,11 @@ heroImage: /image/logo.jpg
 本站点持续更新！
 :::
 ## 使用指南
-* PC端：右上方选择对应板块以查看内容。在左侧分支中快速选择你想看的内容。
-* 手机端：左上角按钮选择板块与分支。
-## 关于博客
-* 使用 [vuepress2](https://v2.vuepress.vuejs.org/zh/) 搭建，默认模版
-* 部署于Github Pages，[项目地址](https://github.com/lxl66566/lxl66566.github.io)
+* PC端：上方选择对应板块以查看内容。在左侧分支中快速选择你想看的内容。
+* 移动端：左上角按钮选择板块。进入对应板块后，点击左上角按钮选择分支，快速选择你想看的内容。
 ## 关于作者
-[前往闲聊](./gossip.md#关于作者)
+* [前往闲聊：关于作者](./gossip.md#关于作者)
+## 关于博客
+* 使用 [vuepress2](https://v2.vuepress.vuejs.org/zh/) 搭建，默认主题，极简风格
+* 部署于Github Pages，[项目地址](https://github.com/lxl66566/lxl66566.github.io)
+* [前往闲聊：vuepress2与博客心得](./gossip.md#vuepress2与博客心得)
