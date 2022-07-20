@@ -15,7 +15,7 @@ heroImage: /image/logo.jpg
 
 本人可怜的技术力，注定了本站的主要功能——闲聊，或者说，展示自我。在此我提前为可能出现的不当言论道歉。
 
-对blog的建议，请在[此界面](https://github.com/lxl66566/lxl66566.github.io/issues)提交Issues. 我很乐意看到大家的反馈。
+对blog的反馈与建议，请在对应页面下评论。我很乐意看到大家的反馈。
 ::: tip 提示
 本站点持续更新！
 :::
