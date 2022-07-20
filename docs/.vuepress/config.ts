@@ -4,6 +4,7 @@ const { searchPlugin } = require('@vuepress/plugin-search')
 const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { path } = require('@vuepress/utils')
+const { commentPlugin } = require("vuepress-plugin-comment2");
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -98,6 +99,12 @@ export default defineUserConfig({
     }),
     registerComponentsPlugin({
       componentsDir: path.resolve(__dirname, './components')
+    }),
+    commentPlugin({
+      repo: "lxl66566/lxl66566.github.io",
+      repoId: "R_kgDOHRyDvA",
+      category: "General",
+      categoryId: "DIC_kwDOHRyDvM4CQSP1",
     }),
   ],
 })
