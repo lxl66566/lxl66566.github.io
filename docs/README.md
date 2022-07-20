@@ -2,6 +2,7 @@
 home: true
 heroImage: /image/logo.jpg
 --- -->
+
 # 绝对值_x的个人主页
 **没什么有价值的内容的，真的！**
 
