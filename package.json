@@ -1,28 +1,31 @@
 {
   "name": "myweb",
   "version": "1.0.0",
-  "description": "|x|'s blog",
+  "description": "",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "deploy": "bash deploy.sh"
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxl66566/lxl66566.github.io.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@vuepress/plugin-register-components": "^2.0.0-beta.48",
-    "@vuepress/plugin-search": "^2.0.0-beta.43",
-    "@vuepress/plugin-shiki": "^2.0.0-beta.48",
-    "vuepress": "^2.0.0-beta.43",
-    "vuepress-plugin-comment2": "^2.0.0-beta.87"
+  "bugs": {
+    "url": "https://github.com/lxl66566/lxl66566.github.io/issues"
   },
-  "dependencies": {
+  "homepage": "https://github.com/lxl66566/lxl66566.github.io#readme",
+  "devDependencies": {
     "@antv/g2plot": "^2.4.20",
-    "@codeciting/vuepress-plugin-echarts": "^0.2.4",
-    "chart.js": "^3.8.0",
-    "dr-vue-echarts": "^1.0.14",
-    "echarts": "^5.3.3",
-    "vuepress-plugin-chart": "^0.3.0"
+    "@vuepress/plugin-register-components": "^2.0.0-beta.49",
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
+    "vuepress": "^2.0.0-beta.49",
+    "vuepress-plugin-comment2": "^2.0.0-beta.87"
   }
 }

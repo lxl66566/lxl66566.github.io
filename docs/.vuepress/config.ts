@@ -1,10 +1,11 @@
-import { defineUserConfig } from 'vuepress'
+const { defineUserConfig } = require("@vuepress/cli");
 const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
 const { path } = require('@vuepress/utils')
 const { commentPlugin } = require("vuepress-plugin-comment2");
+const { commentTheme } = require("./theme");
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -14,7 +15,7 @@ export default defineUserConfig({
   head:[
     ['link', { rel: 'stylesheet', href: '/css/black.css' }]
   ],
-  theme: defaultTheme({
+  theme: commentTheme({
     logo: '/images/logo.jpg',
     navbar: [
       {
@@ -101,10 +102,12 @@ export default defineUserConfig({
       componentsDir: path.resolve(__dirname, './components')
     }),
     commentPlugin({
+      provider: "Giscus",
       repo: "lxl66566/lxl66566.github.io",
       repoId: "R_kgDOHRyDvA",
-      category: "General",
-      categoryId: "DIC_kwDOHRyDvM4CQSP1",
+      category: "Announcements",
+      categoryId: "DIC_kwDOHRyDvM4CQSP0",
+      mapping: 'url',
     }),
   ],
 })
