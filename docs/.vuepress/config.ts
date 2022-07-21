@@ -40,7 +40,7 @@ export default defineUserConfig({
       {
         text: '游戏',
         children: [
-          '/games/csgo_settings.md',
+          '/games/csgo.md',
           '/games/Minecraft.md',
           '/games/rhythm_games.md',
           '/games/galgame.md',
@@ -52,6 +52,7 @@ export default defineUserConfig({
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
           '/farraginous/books.md',
+          '/farraginous/log.md',
           '/farraginous/atri.md',
         ]
       },
@@ -93,6 +94,7 @@ export default defineUserConfig({
         },
       },
       maxSuggestions: 10,
+      isSearchable: (page) => page.path !== '/hide/videos.html',
     }),
     prismjsPlugin({
       preloadLanguages:['markdown', 'jsdoc', 'yaml',
@@ -107,7 +109,7 @@ export default defineUserConfig({
       repoId: "R_kgDOHRyDvA",
       category: "Announcements",
       categoryId: "DIC_kwDOHRyDvM4CQSP0",
-      mapping: 'url',
+      mapping: 'pathname',
     }),
   ],
 })
