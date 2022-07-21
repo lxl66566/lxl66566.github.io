@@ -79,7 +79,7 @@
 #### 现在主要在玩
 * [纯剧情galgame](./games/galgame.md)
 * [以 **OSU!mania 4k** 为主的音游](games/rhythm_games.md)
-* [CS:GO](./games/csgo_settings.md)
+* [CS:GO](./games/csgo.md)
 
 ### 性格&生活细节
 

@@ -44,12 +44,12 @@
 ## OSU
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
-原本大学时看到音游群的同学在玩osu，我也入坑了，想着练练4k可以提高我其他音游的成绩。当时打了一段时间osu默认自带的那几首曲子，后来才知道怎么下载曲子...
+原本大学时看到音游群的同学在玩osu，我也入坑了，想着练练4k可以提高我其他音游的成绩。当时打了好久osu默认自带的那几首曲子，后来才知道怎么下载曲子...
 
-我打osu只打mania。主要打4k，偶尔也会打打6k，5k打得就更少了。其他key数从来不碰。仅碰过一下子std，就算打也只打[McOsu](https://store.steampowered.com/app/607260/McOsu/)的3d模式。
+我打osu只打mania。主要打4k，偶尔也会打打6k，5k打得就更少了。其他key数从来不碰。其他模式仅会碰一下std，就算打也只打[McOsu](https://store.steampowered.com/app/607260/McOsu/)的3d模式。
 * 为什么打osu最频繁呢？
 
-因为上限最高。 **osu，本是逆天而行。**
+因为上限最高。 **osu，本是逆天而行。** <span class="heimu" title="你知道的太多了">虽然Malody同样具有高上限，但是固定key还是习惯敲键盘...</span>
 
 * 其他想说的。
 
@@ -119,7 +119,7 @@ early过多，向正方向调整。 -->
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1Ja411Q7Kh&cid=769015862&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 
 ## phigros
-目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了；16能fc的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
+目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了<span class="heimu" title="你知道的太多了">放屁</span>；16能fc的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
 <!-- ### 调整延迟
 若early过多，则将谱面延时调小。
 :::warning 警告
@@ -130,7 +130,7 @@ early过多，向正方向调整。 -->
 
 此处给出不同品牌手机的phigros数据转移方法（为[此来源](https://www.taptap.com/topic/13630492)的精简）：
 
-1. 手机端连接好USB调试，打开phigros；电脑端打开adb
+1. 手机端连接好USB调试，打开phigros；与电脑端adb连接。
 2. 备份：
 ```batch
 adb backup -f NAME.ab -noapk -noshared -nosystem com.PigeonGames.Phigros
@@ -154,11 +154,11 @@ adb restore NAME.ab
 [下载链接](https://pan.baidu.com/s/1dRuoIVPCCgkbSxCyD-Z-IQ?pwd=2022) | [出处：『Phigors』2022年愚人节共存版Phigros来了！！！](https://www.bilibili.com/video/BV1L44y15713)
 
 ## Arcaea
-目前处于退步期：因好久没打了，比巅峰时，11平均退步20w分，10+平均退步15w分。
+目前处于恢复期：因好久没打了，比巅峰时，11平均退步15w分，10+平均退步8w分。
 
-我在arc打歌基本只打好听的戳xp的曲子，这也导致了我在各曲子上的实力极不均衡。
+我在arc打歌基本只打好听的戳xp的曲子，这也导致了我在各曲子上的实力极度不均衡。
 ### 账号
-本人账号（917042883）0氪，很久没登录了。一直在借别人的号打。*（4.0段位要联网，寄）*
+本人账号（917042883）0氪，很久没登录了。一直在借别人的号离线打。*（4.0段位要联网，寄）*<span class="heimu" title="你知道的太多了">在这里不要脸地向可能存在的大佬借号！</span>
 ### 我的XP
 此处列出一些我觉得好听的曲子（Favorites的一部分）。（排名按照FTR难度顺序）
 
