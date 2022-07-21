@@ -44,6 +44,7 @@ export default defineUserConfig({
           '/games/Minecraft.md',
           '/games/rhythm_games.md',
           '/games/galgame.md',
+          '/games/other_games.md',
         ],
       },
       {
