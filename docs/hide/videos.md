@@ -25,6 +25,7 @@
 |[ROYD-082](https://www2.javhdporn.net/video/ROYD-082c/)|8.3|8|
 |[MIAA-648](https://www2.javhdporn.net/video/miaa-648/)|7.3|8.9|
 |[HMN-156](https://www2.javhdporn.net/video/hmn-156)|8|7.7|
+|[IPX-881](https://www2.javhdporn.net/video/ipx-881)|7.5|8|
 |[SSIS-348](https://www2.javhdporn.net/video/SSIS-348c/)|9|6|
 |[ROYD-084](https://www2.javhdporn.net/video/ROYD-084c/)|7.7|7|
 |[MIAA-604](https://www2.javhdporn.net/video/MIAA-604c/)|7.8|6.5|
