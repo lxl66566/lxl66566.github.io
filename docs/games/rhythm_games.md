@@ -22,7 +22,7 @@
 
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
-|osu|81|<text style="color:red;">-55ms<br/>-57ms(金粉)</text>|30|0|
+|osu|81|<text style="color:red;">-65ms<br/>(-55~-70)</text>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">70</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
