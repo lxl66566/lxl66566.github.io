@@ -34,14 +34,14 @@ tips：加速前需事先选择能通过连接测试的节点
 ### 白嫖机场（推荐）
 [官网](https://bpjc.xyz/) | [邀请链接](https://bpjc.xyz/#/register?code=YnrLNenI)
 
-|月付|￥1.39|
+|月付|￥1.00|
 | :----: | :----: |
-|流量|666G|
+|流量|300G|
 |限速|500Mbps|
 
-*（20220616以来加量加价`1.10`->`1.39`,`500G`->`666G`）*
+*（20220616时：￥1.10 500G；20220703时：￥1.39 666G）*
 
-*（数据截至20220703）*
+*（数据截至20220725）*
 ### 番茄花园
 [官网](https://fqhy.xyz/)
 
@@ -114,9 +114,9 @@ tips：加速前需事先选择能通过连接测试的节点
 
 ### clash（推荐）
 #### 简介
-clash是开源的、支持Android与PC的客户端。（Android端请前往谷歌商店）
+clash是开源的、支持Android与PC的客户端。（Android端请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)）
 #### 下载地址
-[项目地址](https://github.com/Dreamacro/clash) | [PC端官方下载地址](https://github.com/Dreamacro/clash/releases) | [Android端私链](https://wwp.lanzout.com/iL6sD03mi0gf)
+[（内核）项目地址](https://github.com/Dreamacro/clash) | [PC端官方下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases) | [Android端私链](https://wwp.lanzout.com/iL6sD03mi0gf)
 
 #### 优势
 * 流畅的图形界面
