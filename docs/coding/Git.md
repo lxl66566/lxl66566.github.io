@@ -38,6 +38,8 @@ git commit -m '注释'
 
 1. 分批add，并每次commit不同的注释
 2. 一次性add，并每次使用`sh commit file1.xxx file2.xxx`命令打包。使用命令后，bash会打开文本编辑器(Vim)，你需要对Vim拥有最基本的了解才能添加注释。
+
+*（注：ssh密钥生成后首次添加注释可能会出现额外提醒，请根据提醒照做）*
 ### 远程仓库
 将你的仓库上传到github等平台。
 #### 连接远程仓库
@@ -49,12 +51,12 @@ git remote add origin https://github.com/yourgithubID/gitRepo.git
 
 1. 配置（首次使用ssh需要先配置ssh证书）
 ```sh
-cd ~            #进入根目录，若已进入请忽略
+cd ~        # 进入根目录，若已进入请忽略
 ssh-keygen -t rsa -C "youremail@example.com"
-                #然后一路回车
-cat ~/.ssh/id_rsa.pub
-                #复制出现的全部内容
-                #进入github-Settings-SSH and GPG keys，新建你的ssh key并粘贴内容
+            # 然后一路回车
+clip < ~/.ssh/id_rsa.pub
+            # 此时密钥已复制至剪切板
+            # 点击github右上角头像，进入Settings-SSH and GPG keys，新建你的ssh key并粘贴内容，标题可不写
 ssh -T git@github.com       #你可输入该命令验证是否成功
 ```
 2. 连接远程仓库
@@ -146,5 +148,22 @@ git push origin :refs/tags/TAGNAME
 git commit -m $(date "+%Y%m%d-%H:%M:%S")
 ```
 例：注释为`20220613-11:34:59`。可根据个人习惯进行修改。
+
+## 疑难解答
+* ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误。
+>
+> 以下内容摘自[此文](https://segmentfault.com/a/1190000041909858)，可自行前往查看。
+>
+>尝试连接GitHub的443端口。
+> ```sh
+> vim ~/.ssh/config
+> ```
+> 然后在打开的vim编辑器内添加以下内容：
+> ```
+> Host github.com
+>   Hostname ssh.github.com
+>   Port 443
+> ```
+> 此时回到[这里](#连接远程仓库)进行实验。成功连接即解决问题。
 
 [^1]:按`i`或`a`进入insert模式，编辑完后按esc进入normal模式，输入`:wq`保存并退出。更多命令请看[这里](https://yianwillis.github.io/vimcdoc/doc/quickref.html#quickref)或者[这里](https://coolshell.cn/articles/5426.html)。
