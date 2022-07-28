@@ -16,7 +16,7 @@ export default defineUserConfig({
     ['link', { rel: 'stylesheet', href: '/css/black.css' }]
   ],
   theme: commentTheme({
-    logo: '/images/logo.jpg',
+    logo: 'https://github.com/lxl66566/lxl66566.github.io/raw/images/logo.jpg',
     navbar: [
       {
         text: '编程',

@@ -18,9 +18,9 @@
 
 |手段|大小|图片|使用方法|
 | :-: | :-: | :-: | :-: |
-|一个木函（国内应用商店）|7M|![一个木函](/images/my_articles/yigemuhan.jpg)|设备应用-查看设备详细信息|
-|CPU X（谷歌商店）|10M|![CPU X](/images/my_articles/cpux.jpg)|中央处理器|
-|[ADB](../farraginous/recommend_packages.md#adb)（需要电脑）|-|![ADB](/images/my_articles/adb.png)|执行`adb shell getprop ro.product.cpu.abi`|
+|一个木函（国内应用商店）|7M|![一个木函](https://github.com/lxl66566/lxl66566.github.io/raw/images/my_articles/yigemuhan.jpg)|设备应用-查看设备详细信息|
+|CPU X（谷歌商店）|10M|![CPU X](https://github.com/lxl66566/lxl66566.github.io/raw/images/my_articles/cpux.jpg)|中央处理器|
+|[ADB](../farraginous/recommend_packages.md#adb)（需要电脑）|-|![ADB](https://github.com/lxl66566/lxl66566.github.io/raw/images/my_articles/adb.png)|执行`adb shell getprop ro.product.cpu.abi`|
 
 ## Android端记录软件使用时长
 我有多喜欢统计时长，从[galgame页面](../games/galgame.md)和[读书页面](../farraginous/books.md)便可略知一二。但是——

@@ -2,7 +2,7 @@
 :::tip QQ: 2433269451
 :::
 <div style="text-align: center; ">
-<img alt="atri" src="/images/coding/atri.jpg"  width="50%" height="50%"/>
+<img alt="atri" src="https://github.com/lxl66566/lxl66566.github.io/raw/images/coding/atri.jpg"  width="50%" height="50%"/>
 </div>
 
 `atri`是一个QQbot，她可以：

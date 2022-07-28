@@ -2,7 +2,7 @@
 * **本文提供一些csgo的非常规设置方案**
 
 ## 启用控制台
-![控制台](/images/csgo_settings_1.png)
+![控制台](https://github.com/lxl66566/lxl66566.github.io/raw/images/games/csgo_settings_1.png)
 
 控制台是对csgo进行高级操作的基础。现在你可以按`~`键呼出控制台。
 ## 切换国服
@@ -16,7 +16,7 @@
 1.下载安装[完美世界竞技平台](https://pvp.wanmei.com/)软件。之后每次启动csgo时就会让你选择游玩哪个服务器。
 
 <div style="text-align: center; ">
-<img alt="开始界面" src="/images/csgo_settings_2.png"  width="43%" height="43%"/>
+<img alt="开始界面" src="https://github.com/lxl66566/lxl66566.github.io/raw/images/games/csgo_settings_2.png"  width="43%" height="43%"/>
 </div>
 
 2.在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
@@ -46,13 +46,13 @@
 （此时每个目录下仅有一个文件夹，一直点到最后），在右侧找到 Scaling 并双击，更改数值为3
 
 <div style="text-align: center; ">
-<img alt="注册表" src="/images/csgo_settings_4.png"  width="100%" height="100%"/>
+<img alt="注册表" src="https://github.com/lxl66566/lxl66566.github.io/raw/images/games/csgo_settings_4.png"  width="100%" height="100%"/>
 </div>
 
 ::: danger 警告
 对注册表进行直接操作前请务必事先备份！
 
-<img alt="注册表备份" src="/images/csgo_settings_3.png"  width="40%" height="40%"/>
+<img alt="注册表备份" src="https://github.com/lxl66566/lxl66566.github.io/raw/images/games/csgo_settings_3.png"  width="40%" height="40%"/>
 :::
 
 ## 显示FPS

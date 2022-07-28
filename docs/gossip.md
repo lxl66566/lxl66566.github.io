@@ -72,12 +72,12 @@
 
 ### 我的爱好
 #### 以前曾沉迷
-* moSiyuan
+* [moSiyuan](https://lmoliver.github.io/mosiyuan/)<span class="heimu" title="你知道的太多了">沉迷这个也太羞耻了啊啊啊</span>
 * [读书](./farraginous/books.md)
 * 王者荣耀
-* 我的世界（小游戏服:hypixel,Domcer；生存服：秋月之光）
-* 明日方舟
-* 东方（以绀珠传为主）
+* [我的世界](./games/Minecraft.md)（小游戏服:hypixel,Domcer；生存服：秋月之光，cic 1.16.1服）
+* [明日方舟](./games/other_games.md#明日方舟)
+* 东方绀珠传(99%) / 东方永夜抄(1%)
 #### 现在主要在玩
 * [纯剧情galgame](./games/galgame.md)
 * [以 **OSU!mania 4k** 为主的音游](games/rhythm_games.md)
