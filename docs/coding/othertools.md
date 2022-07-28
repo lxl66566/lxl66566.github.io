@@ -50,7 +50,7 @@ call activate.bat
 #### 创建纯净环境
 我们使用[上述指令](#创建环境)创建环境后：
 
-<img alt="anaconda_list" src="https://github.com/lxl66566/lxl66566.github.io/raw/images/coding/anaconda_1.png"  width="65%" height="65%"/>
+<img alt="anaconda_list" src="https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/coding/anaconda_1.png"  width="65%" height="65%"/>
 
 可以看到，conda帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
 
@@ -76,7 +76,7 @@ conda create --name Name --file env.txt
 
 执行结果：
 
-![anaconda_pureenv](https://github.com/lxl66566/lxl66566.github.io/raw/images/coding/anaconda_2.png)
+![anaconda_pureenv](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/coding/anaconda_2.png)
 
 这样，一个纯净环境就创建好了，你可以[安装Pyinstaller](#安装)进行打包前的准备。
 

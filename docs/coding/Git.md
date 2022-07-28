@@ -106,6 +106,8 @@ git rm --cached filename.xxx
 ```sh
 git rm filename.xxx
 ```
+* 删除仓库内**文件夹**：添加`-r`参数。；例如：`git rm -r --cached dirname`
+
 ### 从仓库内恢复文件
 ```sh
 git checkout -- filename
@@ -143,11 +145,15 @@ git push origin :refs/tags/TAGNAME
 1. 新建文本文档，输入你需要的所有指令语句，以回车键隔开。
 2. 保存并将该文本文档后缀改为`.sh`。
 3. 双击运行即可。
+
+::: tip
+脚本执行过程中若报错，将在一闪而过的错误信息后直接关闭。若需禁用自动关闭，请添加`exec /bin/bash`指令至末行。
+:::
 ### 将注释设为当前时间
 ```sh
 git commit -m $(date "+%Y%m%d-%H:%M:%S")
 ```
-例：注释为`20220613-11:34:59`。可根据个人习惯进行修改。
+例：注释为`20220613-11:34:59`。可根据个人习惯修改格式。
 
 ## 疑难解答
 * ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误。

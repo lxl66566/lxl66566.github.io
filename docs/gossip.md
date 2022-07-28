@@ -184,11 +184,20 @@
 
 然后到了搭建之初阶段，由于vuepress1.x仅使用config.js，而2.x改用ts，这导致了我被网上教程（我看的很多是用js的）与官方文档的ts搞得不明所以。（官方文档肯定正确，但是官方说明显然不是面向当时的我的）
 
-后来还有遇到sidebar配置失败问题，更改字体颜色问题，vite编译成功但打包失败的问题，评论插件配置失败问题，好在现在基本上都解决了。对已解决的问题说两句：
+后来在开发过程中还遇到了亿些问题。
 
 **字体颜色问题**：网上教程为使用`<font color="red">`标签，但此标签不受html5支持（并导致了下述vite打包失败问题）。我还尝试了`<p>`标签（但会自动换行）与`<a>`标签（但有下划线和点击效果）。最终选用`<text style="color:red;">`标签，写起来最为简洁，无需添加额外属性。
 
-**vite打包失败问题**：显示的错误信息是关于`@vuepress/core`中的底层问题，无法直接看出问题所在。且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有自定义组件的标签）
+**vite打包失败问题**：显示的错误信息是关于`@vuepress/core`中的底层问题，无法直接看出问题所在。（我想放图但是没有）且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有自定义组件的标签）
 
-目前为止我在开发过程中遇到的最大问题是关于**Vue组件注册失败的问题**。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用iframe引入带组件的html），就暂时不尝试了。（20220720速报：问题已解决，解决方法：重新下载vuepress2包。猜测是旧vuepress2的依赖包出了问题。）
+我在开发过程中遇到的比较大的一个问题是关于**Vue组件注册失败的问题**。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用iframe引入带组件的html），就暂时不尝试了。（20220720速报：问题已解决，解决方法：重新下载vuepress2包。猜测是旧vuepress2的依赖包出了问题。）
 
+**评论插件配置失败问题**：我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比vuepress2文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个theme出来...我哪有那个能耐啊，直接Ctrl+CV了。不过这种东西本应在文档里指明的。。
+
+**图床衍生问题**：由于图片越来越多，博客更新频繁，这样占云端空间大，上传也慢。于是就直接就地开了个images分支当作图床。我一开始直接在`.vuepress/public/images`文件夹里创建仓库上传的，然后也能正常使用，到了发布博客的时候，编译也过了，上传也成功了，结果github告诉我因为一个奇妙的问题构建不成功......此处放一个错误信息：
+
+<div style="text-align: center; ">
+<img alt="错误信息" src="https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/gossip_builderror.png"  width="600">
+</div>
+
+后来经过不断摸索发现是.git文件夹放在public/images文件夹里的原因。现在把images文件夹整个移出去以后就好了。我也是至今还不知道为什么会在如此诡异刁钻的地方出现这种问题。
