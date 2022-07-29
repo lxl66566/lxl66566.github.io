@@ -43,26 +43,31 @@ git commit -m '注释'
 ### 远程仓库
 将你的仓库上传到github等平台。
 #### 连接远程仓库
-* https:
+:::: code-group
+::: code-group-item SSH
+```sh
+git remote add origin git@github.com:yourgithubID/gitRepo.git
+```
+:::
+::: code-group-item HTTPS
 ```sh
 git remote add origin https://github.com/yourgithubID/gitRepo.git
 ```
-* ssh:
-
-1. 配置（首次使用ssh需要先配置ssh证书）
+:::
+::::
+::: tip
+注：首次使用ssh连接需要先配置ssh证书。
 ```sh
 cd ~        # 进入根目录，若已进入请忽略
 ssh-keygen -t rsa -C "youremail@example.com"
             # 然后一路回车
-clip < ~/.ssh/id_rsa.pub
-            # 此时密钥已复制至剪切板
+clip < ~/.ssh/id_rsa.pub    # 复制密钥至剪切板
             # 点击github右上角头像，进入Settings-SSH and GPG keys，新建你的ssh key并粘贴内容，标题可不写
 ssh -T git@github.com       #你可输入该命令验证是否成功
 ```
-2. 连接远程仓库
-```sh
-git remote add origin git@github.com:yourgithubID/gitRepo.git
-```
+:::
+
+若你遇到`ssh: connect to host github.com port 22: Connection refused`错误，可以参考[疑难解答](#疑难解答)。
 #### 上传到远程仓库
 请确保已连接远程仓库。
 ```sh

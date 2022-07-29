@@ -21,7 +21,22 @@
 |一个木函（国内应用商店）|7M|![一个木函](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/my_articles/yigemuhan.jpg)|设备应用-查看设备详细信息|
 |CPU X（谷歌商店）|10M|![CPU X](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/my_articles/cpux.jpg)|中央处理器|
 |[ADB](../farraginous/recommend_packages.md#adb)（需要电脑）|-|![ADB](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/my_articles/adb.png)|执行`adb shell getprop ro.product.cpu.abi`|
+## Windows端记录软件使用时长
+我从20220428开始使用[Tai](./farraginous/recommend_packages.md#tai)记录Windows下的应用时长。直到在20220729了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。在此将比较它俩的一些特性。
 
+此处小小介绍一下`ActivityWatch`。相较于`Tai`，它拥有可视化程度&自由度更高的图表。但我最关心的还是我自己的使用体验。
+
+|软件名|运行时内存|查询区间长|
+| :-: | :-: | :-: |
+|Tai|41.0M|年|
+|ActivityWatch|102.2M|月|
+
+结果很明显。
+1. 我追求简洁与直接性的数据，不需要优秀的界面。
+2. `ActivityWatch`核心采用python编写，高内存占用使我无法很好地接受。
+3. 我对时长记录最大的要求，除了准确性外，就是**查询区间长**了。而`ActivityWatch`的表现无法达到预期。
+
+我仍然选用`Tai`作为我的时长统计软件。
 ## Android端记录软件使用时长
 我有多喜欢统计时长，从[galgame页面](../games/galgame.md)和[读书页面](../farraginous/books.md)便可略知一二。但是——
 
@@ -89,7 +104,7 @@
 |Geo Tracker|56.74|✔|✖|
 
 总结：没有特别满意的。
-## Win10设置开机自启动
+## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
 
 但启动文件夹中没有其他软件的自启动控制。若需关闭某些程序的自启动，可以打开任务管理器，选择`启动`进行修改。
