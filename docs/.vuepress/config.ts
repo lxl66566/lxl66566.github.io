@@ -40,10 +40,10 @@ export default defineUserConfig({
       {
         text: '游戏',
         children: [
-          '/games/csgo.md',
-          '/games/Minecraft.md',
           '/games/rhythm_games.md',
           '/games/galgame.md',
+          '/games/csgo.md',
+          '/games/Minecraft.md',
           '/games/other_games.md',
         ],
       },
@@ -53,8 +53,8 @@ export default defineUserConfig({
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
           '/farraginous/books.md',
-          '/farraginous/log.md',
           '/farraginous/atri.md',
+          '/farraginous/log.md',
         ]
       },
       {

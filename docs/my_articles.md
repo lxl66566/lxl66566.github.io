@@ -36,7 +36,7 @@
 2. `ActivityWatch`核心采用python编写，高内存占用使我无法很好地接受。
 3. 我对时长记录最大的要求，除了准确性外，就是**查询区间长**了。而`ActivityWatch`的表现无法达到预期。
 
-我仍然选用`Tai`作为我的时长统计软件。
+我仍然选用`Tai`作为我的时长统计软件。*（顺带一提，这俩记录的时长有点区别，而我无法分辨哪个是正确的，因为windows没有官方的时长记录工具。）*
 ## Android端记录软件使用时长
 我有多喜欢统计时长，从[galgame页面](../games/galgame.md)和[读书页面](../farraginous/books.md)便可略知一二。但是——
 
@@ -48,12 +48,12 @@
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |StayFree|48.88/63.11|<text style="color:red;">81%</text>|ALL|<text style="color:blue;">无限</text>|-|<text style="color:red;">无障碍</text>|
 |My Phone Time|15.23/20.65|<text style="color:red;">0%</text>|ALL|<text style="color:blue;">无限</text>|-|-|
-|ActionDash|17/43.26|100%|ALL?|<text style="color:red;">周</text>|-|-|
-|YourHour|25.74/70.52|100%|ALL?|<text style="color:red;">天</text>|-|上层显示|
-|App Usage|4.69/28.54|<text style="color:red;">0%</text>|ALL?|<text style="color:red;">天</text>|<text style="color:red;">非按天查询仅有概览 无法获取具体应用时长</text>|-|
+|ActionDash|17/43.26|100%|ALL|<text style="color:red;">周</text>|-|-|
+|YourHour|25.74/70.52|100%|ALL|<text style="color:red;">天</text>|<text style="color:red;">查看具体应用数据需付费</text>|上层显示|
+|App Usage|4.69/28.54|<text style="color:red;">0%</text>|ALL|月|-|-|
 |手机使用时间|?/11.73|100%?|<text style="color:red;">上个月</text>|月|<text style="color:red;">必需挂着后台才可计时；广告</text>|后台免杀|
 |<text style="color:blue;">Digitox</text>|3.89/20.67|100%|ALL|月|-|-|
-|AppBlock|10.87/44.05|<text style="color:red;">0%</text>|ALL?|<text style="color:red;">周</text>|<text style="color:red;">不氪金仅能查看前3个程序数据</text>|<text style="color:red;">无障碍</text>|
+|AppBlock|10.87/44.05|<text style="color:red;">0%</text>|ALL|<text style="color:red;">周</text>|<text style="color:red;">不氪金仅能查看前3个程序数据</text>|<text style="color:red;">无障碍</text>|
 |<text style="color:blue;">Phone statistic</text>|3.07/14.61|100%|当年|<text style="color:blue;">年</text>|-|-|
 
 解释：
