@@ -1,6 +1,6 @@
 # 其他游戏
 ## 明日方舟
-——纪念一下曾经沉迷明日方舟的我。（20201031-20220615）
+* 纪念一下曾经沉迷明日方舟的我。（20201031-20220615）
 
 ![我的明日方舟账号](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/games/arknights.png)
 

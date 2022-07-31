@@ -22,7 +22,7 @@
 
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
-|osu|81|<text style="color:red;">-65ms<br/>(-55~-70)</text>|30|0|
+|osu|81|<text style="color:red;">-63ms<br/>(-55~-70)</text>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">70</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
@@ -42,6 +42,8 @@
 
 
 ## OSU
+<div style="text-align: right;font-weight:bold;font-style: italic;">——空を超えるために、頑張らなくちゃいけないんだよ！</div>
+
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
 原本大学时看到音游群的同学在玩osu，我也入坑了，想着练练4k可以提高我其他音游的成绩。当时打了好久osu默认自带的那几首曲子，后来才知道怎么下载曲子...
@@ -84,7 +86,7 @@
 
 第二天我几乎是死心了，开始了自己融合皮肤的过程，希望能融出像原来那种的蓝白钉皮。自己融了整整一天，也融不出什么手感好的皮肤。
 
-然后在20220613晚上，放弃自己融的那个，在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了我当前使用的[absolute x v2](https://wwp.lanzout.com/ihINA06l9wdc)。手感还不错，能够足够逼近原来的皮肤了。
+然后在20220613晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了[absolute x v2](https://wwp.lanzout.com/ihINA06l9wdc)。（当前改版至[absolute x v4](https://wwp.lanzout.com/i11b308rcghg)）手感还不错，能够足够逼近原来的皮肤了。
 ### 其他推荐
 * 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
 

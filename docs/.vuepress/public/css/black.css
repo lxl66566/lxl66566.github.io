@@ -15,6 +15,11 @@
 .heimu:active .new, .heimu .new:active, .new:active .heimu {
     color: #BA0000 !important;
 }
-  
-  /*阅读更多：https://zh.moegirl.org/MediaWiki:Mobile.css 本文引自萌娘百科(https://zh.moegirl.org)
-   ，文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享 3.0》协议。*/
+.subtitle{
+    text-align: right;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*阅读更多：https://zh.moegirl.org/MediaWiki:Mobile.css 本文引自萌娘百科(https://zh.moegirl.org)
+，文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享 3.0》协议。*/
