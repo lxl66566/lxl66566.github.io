@@ -214,8 +214,11 @@
 > Error:fatal:No url found for submodule path 'images' in .gitmodules<br/>
 > Error:The process '/usr/bin/git' failed with exit code 128<br/>
 
-<!-- <div style="text-align: center; ">
-<img alt="错误信息" src="https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/gossip_builderror.png"  width="600">
-</div> -->
-
 后来经过不断摸索发现是.git文件夹放在public/images文件夹里的原因。现在把images文件夹整个移出去以后就好了。我也是至今还不知道为什么会在如此诡异刁钻的地方出现这种问题。
+
+**编译失败问题**：运行`npm run docs:build`时报错。显示：
+> Error: EPERM: operation not permitted, lstat 'F:\program\myweb\docs\.vuepress\dist\.git\logs\refs\heads\main'
+
+本地预览 *`npm run docs:dev`* 不受影响。
+
+上网搜索，尝试管理员权限，清除缓存，更新npm手段，皆无效。看到有人说是xftp造成的dist文件夹占用问题，不了解。但是既然说是占用，那我就重启试试。于是问题解决。<span class="heimu" title="你知道的太多了">看来这是99%的问题其中之一呢</span>

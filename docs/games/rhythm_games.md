@@ -42,7 +42,7 @@
 
 
 ## OSU
-<div style="text-align: right;font-weight:bold;font-style: italic;">——空を超えるために、頑張らなくちゃいけないんだよ！</div>
+<div class="subtitle">——空を超えるために、頑張らなくちゃいけないんだよ！</div>
 
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
