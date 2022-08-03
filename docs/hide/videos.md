@@ -19,6 +19,7 @@ externalLinkIcon: false
 |[STARS-190](https://www2.javhdporn.net/video/STARS-190/)|9.8|8.8|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:b8197c436e07951dbe3a329fa7c2e1925cc003b4</p></details>|
 |[ABW-087](https://www2.javhdporn.net/video/ABW-087/)|8|11|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:c8478e3aa5a20c599cd48638fb8faa02206a6d65</p></details>|
 |[SNIS-991](https://www2.javhdporn.net/video/snis-991c)|7.2|11|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:1632088697942D97B912E7AAFE3B98A281AE7058</p></details>|
+|[IPX-726](https://www2.javhdporn.net/video/ipx-726)|11|3|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:74ED6ED378FBD3B58224A057BF7B59E1298CB72A</p></details>|
 
 ## 普通
 

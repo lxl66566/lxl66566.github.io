@@ -41,7 +41,7 @@ Github治国有何不可！
 在模仿中重塑自我，在尝试中走出道路。
 ### 2022/06/18
 能早解决的事就不要拖。不要像我这样垂死病中惊坐起发现论文已经过了ddl同时还发现ip不在学校不能免费看知网论文。（前几天一直在 **享 受 假 期** ）
-![绝望影像](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/essay20220619.png)
+![绝望影像](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/essay/20220619.png)
 
 ### 2022/06/13
 历经11天终于回到家了。这11天我的评价是很无聊，甚至不能给我的生命留下什么记忆。

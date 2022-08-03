@@ -222,3 +222,20 @@
 本地预览 *`npm run docs:dev`* 不受影响。
 
 上网搜索，尝试管理员权限，清除缓存，更新npm手段，皆无效。看到有人说是xftp造成的dist文件夹占用问题，不了解。但是既然说是占用，那我就重启试试。于是问题解决。<span class="heimu" title="你知道的太多了">看来这是99%的问题其中之一呢</span>
+
+**图床国内无法解析问题**：我原本使用的github图床图片格式为`https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我clash双端全天候开启，我根本没发现图片无法加载的这个问题，直到20220803我关了梯才发现，原来国内无法正常加载图片，报错：
+> Failed to load resource: net::ERR_NAME_NOT_RESOLVED
+
+一个比较合理的解释是国内dns无法解析`raw.githubusercontent.com`域名。
+
+然后我尝试了其他图床：[SM.MS](https://sm.ms/)，但是：
+1. 这个图床有*容量上限：5GB*和*单张图片上限：5MB*
+2. 原有的每张图都需要手动替换，因为src是随机生成的
+3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放
+4. 在[关于SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/fucksmms.png)<span class="heimu" title="你知道的太多了">这样的图床还是早点死吧！</span>
+
+因此寻找其他解决方案。开始采用CDN加速github图床的方案。cdn的好处：
+* 不改变图片目录结构
+* 替换方便。仅需全局查找替换，点一下鼠标即可。~~（但是对我来说需要把SM.MS图床的链接再换回原链接…）~~
+
+然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下[jsdelivr](https://www.jsdelivr.com/)，不能用。网上搜，大家也都说寄了。再试[statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。

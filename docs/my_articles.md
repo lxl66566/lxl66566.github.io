@@ -18,9 +18,10 @@
 
 |手段|大小|图片|使用方法|
 | :-: | :-: | :-: | :-: |
-|一个木函（国内应用商店）|7M|![一个木函](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/my_articles/yigemuhan.jpg)|设备应用-查看设备详细信息|
-|CPU X（谷歌商店）|10M|![CPU X](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/my_articles/cpux.jpg)|中央处理器|
-|[ADB](../farraginous/recommend_packages.md#adb)（需要电脑）|-|![ADB](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/my_articles/adb.png)|执行`adb shell getprop ro.product.cpu.abi`|
+|一个木函（国内应用商店）|7M|![一个木函](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/my_articles/yigemuhan.jpg)|设备应用-查看设备详细信息|
+|CPU X（谷歌商店）|10M|![CPU X](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/my_articles/cpux.jpg)|中央处理器|
+|[ADB](../farraginous/recommend_packages.md#adb)（需要电脑）|-|![ADB](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/my_articles/adb.png)|执行`adb shell getprop ro.product.cpu.abi`|
+
 ## Windows端记录软件使用时长
 我从20220428开始使用[Tai](./farraginous/recommend_packages.md#tai)记录Windows下的应用时长。直到在20220729了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。在此将比较它俩的一些特性。
 

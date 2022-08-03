@@ -2,7 +2,7 @@
 ## 明日方舟
 * 纪念一下曾经沉迷明日方舟的我。（20201031-20220615）
 
-![我的明日方舟账号](https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/games/arknights.png)
+![我的明日方舟账号](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/games/arknights.png)
 
 全程零氪。大号：共196位干员，其中有38位6星干员，升到满级的有能天使和史尔特尔；32位精二干员，其中22位专三。主线推至8章M8-6,9章9-11。
 小号：94级的精一1级号，此处不展示。
