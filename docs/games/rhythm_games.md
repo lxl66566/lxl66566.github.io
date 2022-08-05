@@ -121,7 +121,9 @@ early过多，向正方向调整。 -->
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1Ja411Q7Kh&cid=769015862&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 
 ## phigros
-目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了<span class="heimu" title="你知道的太多了">放屁</span>；16能fc的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
+目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了<span class="heimu" title="你知道的太多了">放屁</span>；16能ap的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
+
+同时因为电脑端音游（OSU）打得多了，越来越不适应小米平板的极高延迟（100ms），让我更加不想碰它。<span class="heimu" title="你知道的太多了">给不能收歌的我再找个借口</span>
 <!-- ### 调整延迟
 若early过多，则将谱面延时调小。
 :::warning 警告
