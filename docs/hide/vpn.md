@@ -151,7 +151,7 @@ V2ray同样拥有Android与PC客户端。由于我不常用，故不给出教程
 
 #### 下载地址
 
-[项目地址](https://github.com/v2fly/v2ray-core) | [官方下载地址](https://github.com/v2fly/v2ray-core/releases) | [Android端私链（已被封禁）](https://wwp.lanzout.com/iCPkW049jz0d)
+[内核项目地址](https://github.com/v2fly/v2ray-core) | [客户端项目地址](https://github.com/2dust/v2rayN) | [Android端私链（已被封禁）](https://wwp.lanzout.com/iCPkW049jz0d)
 
 ### Matsuri & NekoRay
 开源，选项丰富，安全性好，使用体验一般 *(Matsuri > NekoRay)* 。

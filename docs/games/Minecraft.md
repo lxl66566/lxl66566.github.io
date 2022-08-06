@@ -2,7 +2,7 @@
 
 以前玩hypixel起床战争最多，关服后转向Domcer。但一上大学，我对Minecraft的兴趣消失非常快。大一上还有进校内的cic服（1.16.1版本）沉迷一段时间的生存发展。后来服务器升级到1.18后我就没再加过了。现在仅偶尔和舍友打打数据包小游戏。
 ## 数据包
-[bingo数据包](https://www.mcbbs.net/thread-1269608-1-1.html) | [不要做挑战](https://github.com/KunoSayo/donotdo)
+[bingo数据包](https://www.mcbbs.net/thread-1269608-1-1.html) | [不要做挑战](https://github.com/KunoSayo/donotdo) | [猎人游戏（未测试）](https://www.bilibili.com/video/BV1Ta411M72R) | [我下载的数据包私链](https://wwp.lanzout.com/b00vy0h9c)，密码:boc3 | [数据包网站](../farraginous/recommend_websites.md#其他游戏)
 ## 我的世界bingo速查（1.17.1）
 ### 紫色染料
 红色染料\*1 + 蓝色染料\*1
