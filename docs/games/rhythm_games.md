@@ -34,24 +34,26 @@
 |phigros(1.4.1)|<0.04|+120ms|-|1|
 |プロセカ|<0.01|<text style="color:red;">-2</text>|10.7|2|
 
-注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<text style="color:red;">late过多，向负方向调整，early过多，向正方向调整；</text> <text style="color:blue;">late过多，向正方向调整，early过多，向负方向调整。</text>
+*（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<text style="color:red;">late过多，向负方向调整，early过多，向正方向调整；</text> <text style="color:blue;">late过多，向正方向调整，early过多，向负方向调整。</text>）*
 
 **游玩时长变化情况：**
 
 <iframe frameborder="no" src="/charts/rhythm_games_time_percentage.html" width="100%" height="280"></iframe>
 
-
 ## OSU
 <div class="subtitle">——空を超えるために、頑張らなくちゃいけないんだよ！</div>
+
+* 我的o!m健身按键数 ~~（众所周知osu是健身游戏）~~
+<iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="280"></iframe>
 
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
 原本大学时看到音游群的同学在玩osu，我也入坑了，想着练练4k可以提高我其他音游的成绩。当时打了好久osu默认自带的那几首曲子，后来才知道怎么下载曲子...
 
-我打osu只打mania。主要打4k，偶尔也会打打6k，5k打得就更少了。其他key数从来不碰。其他模式仅会碰一下std，就算打也只打[McOsu](https://store.steampowered.com/app/607260/McOsu/)的3d模式。
+我打osu只打mania。主要打4k，偶尔也会打打6k，5k打得就更少了。其他key数从来不碰。其他模式仅会碰一下std，而且一部分打的是[McOsu](https://store.steampowered.com/app/607260/McOsu/)的3d模式。
 * 为什么打osu最频繁呢？
 
-因为上限最高。 **osu，本是逆天而行。** <span class="heimu" title="你知道的太多了">虽然Malody同样具有高上限，但是固定key还是习惯敲键盘...</span>
+因为上限最高。 **osu，本是逆天而行。** <span class="heimu" title="你知道的太多了">（内卷而行</span> ~~虽然Malody同样具有高上限，但是固定key还是习惯敲键盘…~~<span class="heimu" title="你知道的太多了">明明最早接触的是触屏端 为什么会变成这样呢？</span>
 
 * 其他想说的。
 
@@ -80,7 +82,7 @@
 
 ### 皮肤
 
-大一一整年用的是蓝白钉皮，R Skin v3.1 (diamond) 的改版。可以在我的B站视频里找到。顺带一提，当时也是试了好多皮肤，发现其他皮肤都没什么手感，只有这套拥有超亮击打特效的蓝白钉皮很对我的胃口。
+大一一整年用的是蓝白钉皮，R Skin v3.1 (diamond) 的改版。可以在我的B站视频里找到。顺带一提，当时也是试了好多皮肤，发现其他皮肤都没什么手感，只有这套拥有超亮击打特效的蓝白钉皮很对我的胃口。~~当然，猫猫也很好看！~~
 
 然后地狱时刻（20220612）到了，我下载了一个别人的同名皮肤，并且覆盖掉了原皮肤。这种覆盖是不可逆的，无法恢复。同时我在当时下载皮肤的群里和网上疯狂找原皮肤。找不到了，销声匿迹了，找到的都是R Skin的原版或其他改版。这大概是我最痛苦的一个晚上。
 
@@ -105,6 +107,38 @@
 按照bp列表下载会闪退。只能按ranked时间下载，且不可选择key数。但它已经是我用过的最好用的谱面下载器了。
 
 这里是[4K常规段位单曲列表及链接](https://wwp.lanzout.com/iIUjo02rxm5a)。
+
+* 键数记录
+
+[KeyOverlay](https://github.com/Friedchicken-42/KeyOverlay)，还有一些敲击动画，推荐直播的时候用。（当然我只是单纯拿来记录键数的。。
+
+:::details 这里是我个人的config.ini内容
+```
+[General]
+height=700
+width=100
+keySize=70
+barSpeed=600
+backgroundColor=0,0,0,255
+margin=25
+outlineThickness=5
+fading=yes
+counter=yes
+fps=60
+[Keys]
+key1=S
+key2=D
+key3=Numpad4
+key4=Numpad5
+[Display]
+key3=4
+key4=5
+[Size]
+[Colors]
+key2=83,142,212,255
+key3=83,142,212,255
+```
+:::
 
 * 关于制谱
 
