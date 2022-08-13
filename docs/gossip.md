@@ -50,11 +50,7 @@
 
 * **`纯剧情`** gal？
 
-跳转[galgame页面](./games/galgame.md#作者观点)。
-
-* 说两句。
-
-属于边缘意义上的二次元。较之重度二次元还是有很大差距的，包括有看番不算多，不推vtuber，很少看漫画&本子，不买周边&手办，等等。
+跳转[galgame页面](./hobbies/galgame.md#作者观点)。
 
 ### 生存意义
 <span class="heimu" title="你知道的太多了">活着就是为了________</span>
@@ -71,17 +67,19 @@
 <iframe frameborder="no" src="/charts/sense_persentage_of_my_life.html" width="100%" height="280"></iframe>
 
 ### 我的爱好
+建议前往*兴趣* 版块查看。
 #### 以前曾沉迷
 * [moSiyuan](https://lmoliver.github.io/mosiyuan/)<span class="heimu" title="你知道的太多了">沉迷这个也太羞耻了啊啊啊</span>
-* [读书](./farraginous/books.md)
+* [读书](./hobbies/books.md)
+* [番剧](./hobbies/anime.md)
 * 王者荣耀
-* [我的世界](./games/Minecraft.md)（小游戏服:hypixel,Domcer；生存服：秋月之光，cic 1.16.1服）
-* [明日方舟](./games/other_games.md#明日方舟)
+* [我的世界](./hobbies/Minecraft.md)（小游戏服:hypixel,Domcer；生存服：秋月之光，cic 1.16.1服）
+* [明日方舟](./hobbies/other_games.md#明日方舟)
 * 东方绀珠传(99%) / 东方永夜抄(1%)
 #### 现在主要在玩
-* [纯剧情galgame](./games/galgame.md)
-* [以 **OSU!mania 4k** 为主的音游](games/rhythm_games.md)
-* [CS:GO](./games/csgo.md)
+* [纯剧情galgame](./hobbies/galgame.md)
+* [以 **OSU!mania 4k** 为主的音游](hobbies/rhythm_games.md)
+* [CS:GO](./hobbies/csgo.md)
 
 ### 性格&生活细节
 

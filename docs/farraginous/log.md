@@ -3,12 +3,16 @@
 
 *（注：日常维护指对一系列文档进行无关大局的增删改操作。由于几乎每次提交都会有日常维护，因此本处不记录日常维护的日志。）*
 
+## 2022/08/13
+* 添加[杂项-番剧](../hobbies/anime.md)页面
+* 维护[回忆录#大学（大一后暑假）](../hide/memories.md#大学-大一后暑假)，与其他一堆页面
+* 更改页面逻辑（改`游戏`版块为`兴趣`，并移动`番剧`与`读书`到此）
 ## 2022/08/08
 * 添加[大学（大一后暑假）](../hide/memories.md#大学-大一后暑假)
-* 在[galgame#程序问题](../games/galgame.md#程序问题)反馈bug
+* 在[galgame#程序问题](../hobbies/galgame.md#程序问题)反馈bug
 * 尝试选定其他网页的一个div加入博客中的iframe，失败
 ## 2022/08/07
-* 添加[我的o!m健身按键数](../games/rhythm_games.md#osu)图表并每日维护
+* 添加[我的o!m健身按键数](../hobbies/rhythm_games.md#osu)图表并每日维护
 * 尝试vue组件形式使用g2plot失败
 ## 2022/08/06
 * 维护 [网址汇总#TG推荐](./recommend_websites.md#tg推荐)
@@ -17,15 +21,15 @@
 ## 2022/08/03
 * 修复 图片加载失败问题：使用cdn加速
 ## 2022/07/30
-* 新增 [游戏-galgame#游戏优点](../games/galgame.md#游戏优点)
+* 新增 [游戏-galgame#游戏优点](../hobbies/galgame.md#游戏优点)
 ## 2022/07/29
 * 改为使用图床存放图片(images分支)
-* 新增 [游戏-其他游戏#明日方舟](../games/other_games.md#明日方舟)，[文章#Windows端记录软件使用时长](../my_articles.md#windows端记录软件使用时长)
+* 新增 [游戏-其他游戏#明日方舟](../hobbies/other_games.md#明日方舟)，[文章#Windows端记录软件使用时长](../my_articles.md#windows端记录软件使用时长)
 * 维护 [VuePress2与博客心得](../gossip.md#vuepress2与博客心得)
 ## 2022/07/26
-* 新增 [galgame#吐槽一下](../games/galgame.md#吐槽一下)
+* 新增 [galgame#吐槽一下](../hobbies/galgame.md#吐槽一下)
 ## 2022/07/21
-* 新增 [杂项-博客日志](#博客日志)、[游戏-其他游戏](../games/other_games.md)
+* 新增 [杂项-博客日志](#博客日志)、[游戏-其他游戏](../hobbies/other_games.md)
 * 更改搜索插件配置
 ## 2022/07/20
 * 添加评论插件
@@ -33,12 +37,12 @@
 ## 2022/07/18
 * 新增 [闲聊#VuePress2与博客心得](../gossip.md#vuepress2与博客心得)
 ## 2022/07/17
-* 为 [游戏-音游](../games/rhythm_games.md#总体现况)、[闲聊-生存意义](../gossip.md#生存意义) 添加[g2plot](https://g2plot.antv.vision/zh)图表
+* 为 [游戏-音游](../hobbies/rhythm_games.md#总体现况)、[闲聊-生存意义](../gossip.md#生存意义) 添加[g2plot](https://g2plot.antv.vision/zh)图表
 * 添加黑幕样式并实装
 * 尝试添加vue组件失败
 ## 2022/07/13
 * 尝试添加dr-vue-echarts组件，无法使用
-* 维护 [游戏-音游](../games/rhythm_games.md)
+* 维护 [游戏-音游](../hobbies/rhythm_games.md)
 ## 2022/07/12
 * 新增 [文章-运动轨迹记录软件横评](../my_articles.md#运动轨迹记录软件横评)
 ## 2022/07/09
@@ -49,11 +53,11 @@
 ## 2022/07/03
 * 维护 [随笔](../essay.md)
 ## 2022/07/01
-* 新增 [杂项-读书](./books.md)
+* 新增 [杂项-读书](../hobbies/books.md)
 ## 2022/06/28
-* 新增 [galgame#我的设置](../games/galgame.md#我的设置)
+* 新增 [galgame#我的设置](../hobbies/galgame.md#我的设置)
 ## 2022/06/25
-* 新增 [闲聊#我的爱好](../gossip.md#我的爱好)、[游戏-galgame](../games/galgame.md)
+* 新增 [闲聊#我的爱好](../gossip.md#我的爱好)、[游戏-galgame](../hobbies/galgame.md)
 ## 2022/06/23
 * 添加代码染色插件并实装
 * 维护 [编程-Git](../coding/Git.md)
@@ -61,9 +65,9 @@
 * 新增 [软件汇总#浏览器插件&浏览器脚本](./recommend_packages.md#浏览器插件)
 ## 2022/06/18
 * 新增 [网址汇总#其他游戏&TG推荐](./recommend_websites.md#tg推荐)
-* 维护 [游戏-音游](../games/rhythm_games.md)、[编程-C++](../coding/Cpp.md)、[回忆录](../hide/memories.md)
+* 维护 [游戏-音游](../hobbies/rhythm_games.md)、[编程-C++](../coding/Cpp.md)、[回忆录](../hide/memories.md)
 ## 2022/06/17
-* 新增 [游戏-音游](../games/rhythm_games.md)、[闲聊#QQ有多难用](../gossip.md#qq有多难用)
+* 新增 [游戏-音游](../hobbies/rhythm_games.md)、[闲聊#QQ有多难用](../gossip.md#qq有多难用)
 ## 2022/06/16
 * 取消editLink与contributors
 ## 2022/06/13
@@ -75,7 +79,7 @@
 ## 2022/05/21
 * 新增 [我的文章-Win10设置开机自启动（现：设置开机自启动）](../my_articles.md#设置开机自启动)、[闲聊#日程区](../gossip.md#日程区)
 ## 2022/05/17
-* 新增 [游戏-我的世界](../games/Minecraft.md)
+* 新增 [游戏-我的世界](../hobbies/Minecraft.md)
 ## 2022/05/16
 * 新增 [Rust#字符串修改](../coding/Rust.md#字符串修改)、[关于作者#习惯（现：关于作者#性格&生活细节）](../gossip.md#性格&生活细节)
 ## 2022/05/10
@@ -88,5 +92,5 @@
 * 更新 [主页](../README.md)、[闲聊-关于作者#QA](../gossip.md#qa)
 ## 2022/05/04
 * 发布博客
-* 创建 [主页](../README.md)、[闲聊-关于作者](../gossip.md#关于作者)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、[游戏-csgo游戏配置（现：CS:GO）](../games/csgo.md)
+* 创建 [主页](../README.md)、[闲聊-关于作者](../gossip.md#关于作者)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、[游戏-csgo游戏配置（现：CS:GO）](../hobbies/csgo.md)
 * 添加搜索插件

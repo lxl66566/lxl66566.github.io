@@ -39,7 +39,7 @@
 
 我仍然选用`Tai`作为我的时长统计软件。*（顺带一提，这俩记录的时长有点区别，而我无法分辨哪个是正确的，因为windows没有官方的时长记录工具。）*
 ## Android端记录软件使用时长
-我有多喜欢统计时长，从[galgame页面](../games/galgame.md)和[读书页面](../farraginous/books.md)便可略知一二。但是——
+我有多喜欢统计时长，从[galgame页面](../hobbies/galgame.md)和[读书页面](../hobbies/books.md)便可略知一二。但是——
 
 由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似windows端[Tai](../farraginous/recommend_packages.md#tai)的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的app，在此做个横评。~~*（将`自己做个这种软件`写入日程！）*~~ <span class="heimu" title="你知道的太多了">*笑死，开摆* </span>
 

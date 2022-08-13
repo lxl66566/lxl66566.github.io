@@ -39,21 +39,32 @@ export default defineUserConfig({
         ],
       },
       {
-        text: '游戏',
+        text: '爱好',
         children: [
-          '/games/rhythm_games.md',
-          '/games/galgame.md',
-          '/games/csgo.md',
-          '/games/Minecraft.md',
-          '/games/other_games.md',
-        ],
+          {
+            text: '游戏',
+            children: [
+              '/hobbies/rhythm_games.md',
+              '/hobbies/galgame.md',
+              '/hobbies/csgo.md',
+              '/hobbies/Minecraft.md',
+              '/hobbies/other_games.md',
+            ]
+          },
+          {
+            text: '其他',
+            children: [
+              '/hobbies/books.md',
+              '/hobbies/anime.md',
+            ]
+          }
+        ]
       },
       {
         text: '杂项',
         children: [
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
-          '/farraginous/books.md',
           '/farraginous/atri.md',
           '/farraginous/log.md',
         ]
