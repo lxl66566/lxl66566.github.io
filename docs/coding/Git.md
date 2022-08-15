@@ -159,7 +159,11 @@ git push origin :refs/tags/TAGNAME
 git commit -m $(date "+%Y%m%d-%H:%M:%S")
 ```
 例：注释为`20220613-11:34:59`。可根据个人习惯修改格式。
-
+### 取消目录安全提示
+自己是搞小破玩意的，没必要一直被安全提示烦（笑
+```sh
+git config --global --add safe.directory '*'
+```
 ## 疑难解答
 * ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误。
 >

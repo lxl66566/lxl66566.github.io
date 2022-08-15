@@ -105,6 +105,14 @@
 |Geo Tracker|56.74|✔|✖|
 
 总结：没有特别满意的。
+## 对win11的设置
+由于入手了12500H，即使很不想使用win11，也只能硬上了。以下是我对新电脑win11系统的设置。
+
+1. 移动 *文档、图片、下载* 等文件夹到新分区的D盘。
+2. 还原右键菜单并设置：右击win，打开 *Windows终端（管理员）* ，执行`reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve`，再用[ContextMenuManager](./farraginous/recommend_packages.md#ContextMenuManager)设置。
+3. 关闭系统提示音。
+4. 关闭Windows安全中心。
+
 ## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
 
