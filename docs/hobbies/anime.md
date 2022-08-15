@@ -16,7 +16,7 @@
 |请问您今天要来点兔子吗？<Badge type="tip" text="第一季" vertical="top" />|2021.12.17<br/>2021.12.21|
 |小林家的龙女仆S<Badge type="warning" text="第二季" vertical="top" />|?-<br/>2021.10.09|
 |弹丸论破3 -绝望篇-<Badge type="danger" text="第三季" vertical="top" />|军训龙舟比赛当天-<br/>2021.09.17|
-|超级弹丸论破2.5 <Badge type="tip" text="番外" vertical="top" />|2021.09.19?|
+|超级弹丸论破2.5 狛枝凪斗与世界的破坏者<Badge type="tip" text="番外" vertical="top" />|2021.09.19?|
 |辉夜大小姐想让我告白？ ~ 天才们的恋爱头脑战 ~<Badge type="warning" text="第二季" vertical="top" />|?-<br/>2021.09.14|
 |弹丸论破2（游戏实况）<Badge type="warning" text="第二季" vertical="top" />|2021.08.16-<br/>2021.08.22|
 |弹丸论破<Badge type="tip" text="第一季" vertical="top" />|2021.08.15-<br/>2021.08.16|

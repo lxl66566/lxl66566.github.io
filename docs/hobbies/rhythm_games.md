@@ -22,7 +22,7 @@
 
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
-|osu|81|<text style="color:red;">-63ms<br/>(-55~-70)</text>|30|0|
+|osu|81|<text style="color:red;">xms</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p></text></details>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">70</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
@@ -50,6 +50,8 @@
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="280"></iframe>
 
 :::details 一些解释说明
+00:00后，睡前还在打的键数计入上一天。
+
 20220809+：由于[OSU打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
 :::
 
@@ -146,6 +148,9 @@ key2=83,142,212,255
 key3=83,142,212,255
 ```
 :::
+* 夹带私货
+
+我写的[自动调整mania皮肤水平位置](https://github.com/lxl66566/osu-ColumnStart-adjustor)的脚本。
 
 * 关于制谱
 

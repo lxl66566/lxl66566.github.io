@@ -184,9 +184,11 @@
 
 后来在开发过程中还遇到了亿些问题。
 
-**字体颜色问题**：网上教程为使用`<font color="red">`标签，但此标签不受html5支持（并导致了下述Rendering pages failed问题）。我还尝试了`<p>`标签（但会自动换行）与`<a>`标签（但有下划线和点击效果）。最终选用`<text style="color:red;">`标签，写起来最为简洁，无需添加额外属性。
+### 字体颜色问题
+网上教程为使用`<font color="red">`标签，但此标签不受html5支持（并导致了下述Rendering pages failed问题）。我还尝试了`<p>`标签（但会自动换行）与`<a>`标签（但有下划线和点击效果）。最终选用`<text style="color:red;">`标签，写起来最为简洁，无需添加额外属性。
 
-**Rendering pages failed问题**：显示的错误信息是Vuepress的底层问题，无法直接看出问题所在。且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有自定义组件的标签）*（感谢[oyh同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
+### Rendering pages failed问题
+显示的错误信息是Vuepress的底层问题，无法直接看出问题所在。且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有自定义组件的标签）*（感谢[oyh同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
 
 > TypeError: Invalid value used as weak map key<br/>
 > at WeakMap.set (\<anonymous\>)<br/>
@@ -200,11 +202,14 @@
 > at renderVNode (C:\Users\oyh\vuepress-starter\node_modules\@vue\server-renderer\dist\server-renderer.cjs.prod.js:292:22)<br/>
 > at renderComponentSubTree (C:\Users\oyh\vuepress-starter\node_modules\@vue\server-renderer\dist\server-renderer.cjs.prod.js:256:13)<br/>
 
-我在开发过程中遇到的比较大的一个问题是关于**Vue组件注册失败的问题**。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用iframe引入带组件的html），就暂时不尝试了。（20220720速报：问题已解决，解决方法：重新下载vuepress2包。猜测是旧vuepress2的依赖包出了问题。）
+### Vue组件注册失败的问题
+目前开发过程中遇到的最大的问题。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用iframe引入带组件的html），就暂时不尝试了。（20220720速报：问题已解决，解决方法：重新下载vuepress2包。猜测是旧vuepress2的依赖包出了问题。）
 
-**评论插件配置失败问题**：我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比vuepress2文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个theme出来...我哪有那个能耐啊，直接Ctrl+CV了。不过这种东西本应在文档里指明的。
+### 评论插件配置失败问题
+我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比vuepress2文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个theme出来...我哪有那个能耐啊，直接Ctrl+CV了。不过这种东西本应在文档里指明的。
 
-**图床衍生问题**：由于图片越来越多，博客更新频繁，这样占云端空间大，上传也慢。于是就直接就地开了个images分支当作图床。我一开始直接在`.vuepress/public/images`文件夹里创建仓库上传的，然后也能正常使用，到了发布博客的时候，编译也过了，上传也成功了，结果github告诉我因为一个奇妙的问题构建不成功......此处放出错误信息：
+### 图床衍生问题
+由于图片越来越多，博客更新频繁，这样占云端空间大，上传也慢。于是就直接就地开了个images分支当作图床。我一开始直接在`.vuepress/public/images`文件夹里创建仓库上传的，然后也能正常使用，到了发布博客的时候，编译也过了，上传也成功了，结果github告诉我因为一个奇妙的问题构建不成功......此处放出错误信息：
 
 > Fetching submodules<br/>
 > /usr/bin/git submodule sync --recursive<br/>
@@ -214,14 +219,16 @@
 
 后来经过不断摸索发现是.git文件夹放在public/images文件夹里的原因。现在把images文件夹整个移出去以后就好了。我也是至今还不知道为什么会在如此诡异刁钻的地方出现这种问题。
 
-**编译失败问题**：运行`npm run docs:build`时报错。显示：
+### 编译失败问题
+运行`npm run docs:build`时报错。显示：
 > Error: EPERM: operation not permitted, lstat 'F:\program\myweb\docs\.vuepress\dist\.git\logs\refs\heads\main'
 
 本地预览 *`npm run docs:dev`* 不受影响。
 
 上网搜索，尝试管理员权限，清除缓存，更新npm手段，皆无效。看到有人说是xftp造成的dist文件夹占用问题，不了解。但是既然说是占用，那我就重启试试。于是问题解决。<span class="heimu" title="你知道的太多了">看来这是99%的问题其中之一呢</span>
 
-**图床国内无法解析问题**：我原本使用的github图床图片格式为`https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我clash双端全天候开启，我根本没发现图片无法加载的这个问题，直到20220803我关了梯才发现，原来国内无法正常加载图片，报错：
+### 图床国内无法解析问题
+我原本使用的github图床图片格式为`https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我clash双端全天候开启，我根本没发现图片无法加载的这个问题，直到20220803我关了梯才发现，原来国内无法正常加载图片，报错：
 > Failed to load resource: net::ERR_NAME_NOT_RESOLVED
 
 一个比较合理的解释是国内dns无法解析`raw.githubusercontent.com`域名。
@@ -237,3 +244,16 @@
 * 替换方便。仅需全局查找替换，点一下鼠标即可。~~（但是对我来说需要把SM.MS图床的链接再换回原链接…）~~
 
 然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下[jsdelivr](https://www.jsdelivr.com/)，不能用。网上搜，大家也都说寄了。再试[statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。
+
+### 现实中的问题
+因为[某些原因](./hide/memories.md#大学-大一后暑假)电脑坏了，在等新电脑到的过程中进行了一次最费力的博客更新。（动力：实在是太想bb了）
+
+事件背景：两台台式机（家庭机and鞋盒机），一个屏幕，两条电源线（电脑与屏幕供电），1条vga线。两机相距甚远，网线在家庭机上。鞋盒机没有网卡驱动。家庭机性能太差，打开vscode能卡出屎。
+
+1. 在手机上下载node.js & vscode安装包，用U盘通过a2c转接器拷到鞋盒机并安装。
+2. 不依赖MPV插件，写一个下午博客，并测试编译。
+3. 将屏幕搬去，三条线接到家庭机上，科学上网（期间还忘记了机场密码），下载git，登录github。
+4. 安装并配置git，设置rsa密钥（家庭机的键盘甚至没有insert键），上传仓库。
+5. 将所有物品重新搬回鞋盒机。
+
+然后人就累死了。。。不过好有成就感。
