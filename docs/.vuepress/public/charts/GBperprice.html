@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <title>vpn price–performance ratio</title>
+  <body>
+    <div id="container" style="width: 100%; height: 260px;"></div>
+    <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
+    <script>
+      const { Line } = G2Plot;
+      const data = [
+        { "name": "白嫖机场" , "时刻": "20220616", "GBperRMB" : 500/1.10 },
+        { "name": "白嫖机场" , "时刻": "20220703", "GBperRMB" : 666/1.39 },
+        { "name": "白嫖机场" , "时刻": "20220805", "GBperRMB" : 100/1.02 },
+        { "name": "Simple Cloud" , "时刻": "20220616", "GBperRMB" : 100/8 },
+        { "name": "Simple Cloud" , "时刻": "20220703", "GBperRMB" : 180/12 },
+        { "name": "Simple Cloud" , "时刻": "20220805", "GBperRMB" : 20/3 },
+        { "name": "StarTrip（已跑路）" , "时刻": "20220616", "GBperRMB" : 60/1 },
+        { "name": "StarTrip（已跑路）" , "时刻": "20220703", "GBperRMB" : 60/1 },
+        { "name": "貓貓互聯" , "时刻": "20220703", "GBperRMB" : 200/13 },
+        { "name": "貓貓互聯" , "时刻": "20220805", "GBperRMB" : 200/13 },
+
+      ]
+      const linePlot = new Line('container', {
+        data,
+        xField: '时刻',
+        yField: 'GBperRMB',
+        seriesField: 'name',
+        legend: {
+          position: 'top',
+        },
+        animation: {
+          appear: {
+            animation: 'wave-in',
+            duration: 5000,
+          },
+        },
+        slider: {
+          start: 0,
+          end: 1,
+        },
+        // area: {
+        //   style: {
+        //     fillOpacity: 0.15,
+        //   },
+        // },
+      });
+
+      linePlot.render();
+    </script>
+  </body>
+</html>
