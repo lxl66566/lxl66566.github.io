@@ -258,4 +258,6 @@
 
 然后人就累死了。。。不过好有成就感。
 ### 关于数学插件
-为markdown-it渲染器安装$\LaTeX$插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
+为markdown-it渲染器安装<span v-pre>$\LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
+
+由于`$...$`会被vuepress识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发[weak map key](#rendering-pages-failed问题) bug。
