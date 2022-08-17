@@ -125,4 +125,8 @@ export default defineUserConfig({
       mapping: 'pathname',
     }),
   ],
+  extendsMarkdown: md => {
+    md.use(require('markdown-it-mathjax3'))
+    md.linkify.set({ fuzzyEmail: false })
+  },
 })

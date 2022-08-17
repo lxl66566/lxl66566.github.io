@@ -22,7 +22,7 @@
 
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
-|osu|81|<text style="color:red;">-87ms(-83~-100)</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p></text></details>|30|0|
+|osu|81|<text style="color:red;">-88ms(-83~-100)</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p></text></details>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">70</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
@@ -101,7 +101,7 @@
 ### 其他推荐
 * 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
 
-由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但f.lux可以免疫这个屏蔽，强制护眼，我还是觉得很舒服的。（P.S.免疫屏蔽不稳定，从桌面返回osu时经常需要尝试多次）
+由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但f.lux可以免疫这个屏蔽，强制护眼，我还是觉得很舒服的。（P.S.免疫屏蔽不稳定，从桌面返回osu时经常需要尝试多次；win11能够稳定护眼。）
 
 * 键盘/轴推荐
 

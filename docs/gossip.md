@@ -257,3 +257,5 @@
 5. 将所有物品重新搬回鞋盒机。
 
 然后人就累死了。。。不过好有成就感。
+### 关于数学插件
+为markdown-it渲染器安装$\LaTeX$插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
