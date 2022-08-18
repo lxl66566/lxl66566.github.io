@@ -65,7 +65,9 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥11.00|100G\*12<br/>500G\*12（仅日本节点）|不限|
 
 *（日本节点为联通/移动用，采用Trojan协议，限速未知）*
-### 番茄花园
+### 番茄花园（已跑路）
+<details><summary>archived</summary>
+
 [官网](https://fqhy.xyz/)
 
 拥有免费节点，每日签到可领免费流量
@@ -76,6 +78,8 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥30.00|300G|300Mbps|
 |￥60.00|1300G|500Mbps|
 |￥100.00|6000G|无限制|
+
+</details>
 
 ### Simple Cloud
 [官网](https://spcloud.cc/) | [邀请链接](https://spcloud.cc/#/register?code=97EXi3tX)
@@ -92,6 +96,8 @@ tips：加速前需事先选择能通过连接测试的节点
 | :--: | :--: | :--: |
 |￥15.00|50G|1Gbps|
 ### StarTrip（已跑路）
+<details><summary>archived</summary>
+
 [官网](https://www.startrip.top)
 |月付|￥1.00|无限期（已取消）|￥1.00|
 | :----: | :----: | :----: | :----: |
@@ -99,6 +105,9 @@ tips：加速前需事先选择能通过连接测试的节点
 |限速|50Mbps|限速|无限制|
 
 *（旧版表格）*
+
+</details>
+
 ### 貓貓互聯
 [官网](https://neko.services/) | [邀请链接](https://neko.services/#/register?code=xjZ5356D)
 

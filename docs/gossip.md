@@ -207,6 +207,36 @@
 
 ### 评论插件配置失败问题
 我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比vuepress2文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个theme出来...我哪有那个能耐啊，直接Ctrl+CV了。不过这种东西本应在文档里指明的。
+### 添加黑幕
+在`.vuepress/public`下任选目录，新建`FileName.css`，输入如下代码：
+```css
+.heimu, .heimu a, a .heimu, .heimu a.new {
+    background-color: #404040;
+    color: #404040;
+    text-shadow: none;
+}
+.heimu:hover, .heimu:active,
+.heimu:hover .heimu, .heimu:active .heimu {
+    color: white !important;
+}
+.heimu:hover a, a:hover .heimu,
+.heimu:active a, a:active .heimu {
+    color: lightblue !important;
+}
+.heimu:hover .new, .heimu .new:hover, .new:hover .heimu,
+.heimu:active .new, .heimu .new:active, .new:active .heimu {
+    color: #BA0000 !important;
+}
+```
+在`config.ts`内添加：
+```ts
+export default defineUserConfig({
+    head:[
+        ['link', { rel: 'stylesheet', href: '/styles/head.css' }] //填写你创建的css目录
+    ],
+})
+```
+然后就可以在.md文件中使用黑幕了：`<span class="heimu" title="你知道的太多了">你想说的话</span>` 效果：<span class="heimu" title="你知道的太多了">你想说的话</span>
 
 ### 图床衍生问题
 由于图片越来越多，博客更新频繁，这样占云端空间大，上传也慢。于是就直接就地开了个images分支当作图床。我一开始直接在`.vuepress/public/images`文件夹里创建仓库上传的，然后也能正常使用，到了发布博客的时候，编译也过了，上传也成功了，结果github告诉我因为一个奇妙的问题构建不成功......此处放出错误信息：
@@ -261,3 +291,13 @@
 为markdown-it渲染器安装<span v-pre>$\LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
 
 由于`$...$`会被vuepress识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发[weak map key](#rendering-pages-failed问题) bug。
+### 图片无法比例缩放问题
+实际上，在[之前](#图床国内无法解析问题)已经出现过此问题，当时只会使用绝对大小解决。而这次，当我向图床中添加第一张手机照片时，玄学问题出现了。
+
+我之前一直使用`<img src="..." width="100%" height="100%">`进行图片缩放。当我使用此方法对此图片进行缩放时，图片将不显示，调试显示此图片标签属性为`width="0" height="0"`。只有当`width`与`height`都不含`%`时，图片才能显示。
+
+有以下两个解决方法：
+
+1. 在全局css中新增类`.ClassName img{width: 60% !important; height:auto !important;}`，并在md中以`<div class='ClassName'><img src='...'/></div>`使用。
+2. 在全局css中新增类`.ClassName img{max-width: 60%;}`，并在md中以`<div class="ClassName";"><img src="..."/></div>`使用。
+

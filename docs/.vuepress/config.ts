@@ -13,7 +13,7 @@ export default defineUserConfig({
   title: '绝对值_x的博客',
   description: '没什么有价值的内容的，真的！',
   head:[
-    ['link', { rel: 'stylesheet', href: '/css/black.css' }]
+    ['link', { rel: 'stylesheet', href: '/styles/head.css' }]
   ],
   theme: commentTheme({
     // logo: 'https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/logo.jpg',

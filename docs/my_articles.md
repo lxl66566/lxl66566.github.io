@@ -1,5 +1,10 @@
 # 我的文章
-此处仅包含杂项文章。若需要阅读编程、游戏文章请前往对应版块。若需要阅读隐藏文章请自行探索博客。
+此处仅包含杂项文章。若需要阅读编程、爱好有关文章请前往对应版块。若需要阅读隐藏文章请自行探索博客。
+
+快速跳转：
+
+[[toc]]
+
 ## <span class="heimu" title="你知道的太多了">[科学上网初级](../hide/vpn.md)</span>
 ## 查看手机cpu指令集  
 
@@ -68,6 +73,7 @@
 推荐同时使用`Digitox`与`Phone statistic`。*（这俩加一起都没某些家伙大*
 
 <span class="heimu" title="你知道的太多了">感觉还想自己写啊，但是我不会，这下有生之年了</span>
+
 ## 运动轨迹记录软件横评
 我希望找到一款能够记录运动轨迹的软件，在满足需求前提下越小越好。需求：在地图上绘制运动轨迹，定位精确，最好显示方向（由指南针得到）。
 
@@ -77,7 +83,7 @@
 
 老规矩，<text style="color:red;">红色劣势</text>，<text style="color:blue;">蓝色优势</text>。
 
-### 定位精确的软件
+<h3>定位精确的软件</h3>
 
 |软件名|大小（安装后,MB）|显示方向?|无需翻墙?|其他缺陷|
 | :-: | :-: | :-: | :-: | :-: |
@@ -90,7 +96,9 @@
 
 解释：
 * `无需翻墙`一般代表该软件的地图非谷歌地图组件，可直连加载。
-### 定位偏移的软件
+
+<h3>定位偏移的软件</h3>
+
 此栏为**避雷**而设置。毕竟做不到精确的话，自然就没有了使用的必要。
 
 由于定位偏移是地图问题，此处将列出**所有地图均存在偏移现象**的软件。
@@ -109,9 +117,33 @@
 由于入手了12500H，即使很不想使用win11，也只能硬上了。以下是我对新电脑win11系统的设置。
 
 1. 移动 *文档、图片、下载* 等文件夹到新分区的D盘。
-2. 还原右键菜单并设置：右击win，打开 *Windows终端（管理员）* ，执行`reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve`，再用[ContextMenuManager](./farraginous/recommend_packages.md#ContextMenuManager)设置。
-3. 关闭系统提示音。
-4. 关闭Windows安全中心。
+2. 还原右键菜单并设置：右击win，打开 *Windows终端（管理员）* ，执行`reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](./farraginous/recommend_packages.md#winaero-tweaker)进行设置），再用[ContextMenuManager](./farraginous/recommend_packages.md#ContextMenuManager)调整。
+3. 关闭所有系统提示音。
+4. 关闭Windows安全中心，[参考文章](https://zhuanlan.zhihu.com/p/494923217)：
+    * *Windows安全中心-病毒和威胁防护-管理设置* ，关闭所有开关
+    * 使用组策略编辑器禁用 Windows Defender
+        * `win + r`运行`gpedit.msc`，*计算机配置-管理模板-Windows 组件-关闭Microsoft Defender防病毒* ，选择已启用
+        * 由于我的电脑是家庭版升专业版，没有`gpedit.msc`文件，因此需先添加组策略编辑器。
+        * 在记事本输入以下代码并保存为.bat文件，管理员运行。
+        ```batch
+        pushd "%~dp0"
+        dir /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >gp.txt
+        dir /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>gp.txt
+        for /f %%i in ('findstr /i . gp.txt 2^>nul') do dism /online /norestart /add-package:"%systemroot%\servicing\Packages\%%i"
+        pause
+        ```
+    * 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
+5. 关闭搜索推荐&热门新闻：关闭 *设置-隐私和安全性-搜索权限-更多设置-显示搜索要点* 。（[参考来源](https://www.landiannews.com/archives/95045.html)）
+6. 升级专业版（为接下来的开启Hyper-V做准备）：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级win11专业版并激活。
+7. 开启Hyper-V功能：由于在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项，因此采用网上教程：文本文档输入以下代码：
+```batch
+pushd "%~dp0"
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
+for /f %%i in ('findstr /i . hyper-v.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+del hyper-v.txt
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+```
+保存为.bat文件并管理员运行即可。
 
 ## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。

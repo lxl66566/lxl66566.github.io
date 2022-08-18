@@ -98,6 +98,7 @@
 * 竜姫ぐーたらいふ3
 * 終のステラ
 * フタマタ恋愛 瑠衣＆宮子 ミニアフターストーリー
+* 兽娘育成方案
 
 ## 我的设置
 在游玩过程中逐渐形成了这样一套设置习惯...开新gal之后的首要任务就是设置。以下仅列出部分重要设置。
@@ -129,7 +130,7 @@
 
 |游戏名|问题|
 | :----: | :----: |
-|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/games/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/games/galgame_exe_collapse.jpg)|
+|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_exe_collapse.jpg)|
 |9-nine-新章 & 9-nine-雪色雪花雪余痕|使用オーバーロード跳转分支时，右侧滑动条会被弹出的存档遮挡|
 |冥契的牧神节|<text style="color:red;">存档&删除存档时出现过序号错乱，错误覆盖（仅发生一次）；<br/>auto时按左键停止后会继续向下跳一页；</text><br/>读档后无法查看此位置前的历史记录|
 |鯨神のティアスティラ|在历史对话界面播放语音后，右键退出此界面，语音将自动终止|

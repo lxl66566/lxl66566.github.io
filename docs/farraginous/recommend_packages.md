@@ -162,14 +162,13 @@ PS:因为复习机制和没有完全删除的设置，不是很推荐。
 如需更改热键请在`扩展-扩展选项`中进行操作。
 * 缺点：全局锁死热键，需要用此键原本功能时要临时禁用。
 
-
 [官方项目地址](https://github.com/polywock/globalSpeed) | [私链下载地址](https://wwp.lanzout.com/i9LKF05ht3ni)
 ### IDM
 高速多线程下载器。需要浏览器插件配合软件使用。
 
 官方仅有30天试用。若想下载破解版可在B站搜索教程。
 
-[官网](https://www.internetdownloadmanager.com/) | [破解软件私链](https://wwp.lanzout.com/iDBYA06mlxha)
+[官网](https://www.internetdownloadmanager.com/)
 ### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
 快速启用禁用扩展。
 
@@ -181,6 +180,8 @@ PS:因为复习机制和没有完全删除的设置，不是很推荐。
 
 ### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
 广告拦截。
+### [DARK READER](https://darkreader.org/)
+浏览器强制夜间模式，效果不错。
 
 ## 浏览器脚本
 ::: tip 提示
