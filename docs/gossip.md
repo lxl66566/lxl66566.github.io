@@ -1,4 +1,7 @@
 # 闲聊
+快速跳转：
+[[toc]]
+
 ## 关于作者
 <div class="subtitle">——不要迷失了真实的我。</div>
 
@@ -73,7 +76,7 @@
 * [读书](./hobbies/books.md)
 * [番剧](./hobbies/anime.md)
 * 王者荣耀
-* [我的世界](./hobbies/Minecraft.md)（小游戏服:hypixel,Domcer；生存服：秋月之光，cic 1.16.1服）
+* [我的世界](./hobbies/Minecraft.md)（小游戏服:hypixel,Domcer；生存服：秋月之光，cic 1.16服）
 * [明日方舟](./hobbies/other_games.md#明日方舟)
 * 东方绀珠传(99%) / 东方永夜抄(1%)
 #### 现在主要在玩
@@ -112,9 +115,6 @@
 ## 日程区
 
 有生之年能做到这里的全部，是一个美好的愿望。
-
-### 博客日程
-* 暂无
 
 ### 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
 * 日语N2
@@ -173,22 +173,46 @@
 * 电脑QQ多选界面可选超过100条消息，但是无法转发；转发失败后还会自动取消已勾选。（辛辛苦苦跳着挑出的100条消息全没了）
 * 电脑QQ-分享屏幕，比较严重的bugs，包括鼠标闪烁，边框锁死。无法拖动浮窗，使用体验极差。你可以[点此](https://wwp.lanzout.com/iEYeW0836ged)获取本条问题的视频。
 
-综上所述，QQ做得稀烂。但我无法退坑，毕竟我的好友，我的游戏兴趣群体都在QQ。<text style="color:white;">国产通讯软件里大抵是看不到一点明亮的光的。</text>
+综上所述，QQ做得稀烂。但我无法退坑，毕竟我的好友，我的游戏兴趣群体都在QQ。<text style="color:gray;">国产通讯软件里大抵是看不到一点明亮的光的。</text>
 
+## 生活中遇到的困难
+有关博客写作的问题请跳转[VuePress2与博客心得](#vuepress2与博客心得)。
+### 20220813：更新博客
+因为[某些原因](./hide/memories.md#大学-大一后暑假)电脑坏了，在等新电脑到的过程中进行了一次最费力的博客更新。（动力：实在是太想bb了）
+
+事件背景：两台台式机（家庭机and鞋盒机），一个屏幕，两条电源线（电脑与屏幕供电），1条vga线。两机相距甚远，网线在家庭机上。鞋盒机没有网卡驱动。家庭机性能无法胜任vscode | node.js。
+
+1. 在手机上下载node.js & vscode安装包，用U盘通过a2c转接器拷到鞋盒机并安装。
+2. 不依赖MPV插件，写一个下午博客，并测试编译。
+3. 将屏幕搬去，三条线接到家庭机上，科学上网（期间还忘记了机场密码），下载git，登录github。
+4. 安装并配置git，设置rsa密钥（家庭机的键盘甚至没有insert键），上传仓库。
+5. 将所有物品重新搬回鞋盒机。（毕竟是游戏主力）
+
+然后人就累死了。。。
+### 20220817-18：Hyper-V的各种问题
+* 问题一：在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项。<text style="color:blue;">[已解决](./my_articles.md#对win11的设置)</text>
+* 问题二：在安装系统界面无法使用键盘鼠标。<text style="color:red;font-weight:bold">未解决！</text>
+
+    * ![fuckhyperv](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/fuckhyperv.png)
+
+    尝试：
+    * 使用其他系统iso ：出现`Start PXE over IPv4`，键盘仍然无法使用。
+    * 使用`vmguest.iso`：同上。
+    * 关闭安全启动、关闭网络、其他设置：无效。
 ## VuePress2与博客心得
-建站时我还是个小白，对javascript,typescript,css一窍不通，html也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有一些问题悬而未决。本栏写于20220718，算是对我建站三个半月来的一些总结。
+建站时我还是个小白，对javascript,typescript,css一窍不通，html也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于20220718（之后持续更新），算是对我建站三个半月来的一些总结。
 
-建立博客之初，选择工具阶段，有很多博客工具可供选择，如Hexo,Wordpress,HUGO,docsify等。后来随着慢慢深入接触也了解了Vitepress,mdbook,Gitbook。但我还是选择vuepress。个中缘由嘛，vuepress的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~...
+建立博客之初，选择工具阶段，有很多博客工具可供选择，如Hexo,Wordpress,HUGO,docsify等。后来随着慢慢深入接触也了解了Vitepress,mdbook,Gitbook。但我还是选择vuepress。个中缘由嘛，vuepress的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
 
-然后到了搭建之初阶段，由于vuepress1.x仅使用config.js，而2.x改用ts，这导致了我被网上教程（我看的很多是用js的）与官方文档的ts搞得不明所以。（官方文档肯定正确，但是官方说明显然不是面向当时的我的）
+然后到了搭建之初阶段，由于vuepress1.x仅使用config.js，而2.x改用ts，这导致了我被网上教程（我看的很多是用js的）与官方文档的ts搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
 
-后来在开发过程中还遇到了亿些问题。
+后来在开发过程中还遇到了亿些问题——
 
 ### 字体颜色问题
 网上教程为使用`<font color="red">`标签，但此标签不受html5支持（并导致了下述Rendering pages failed问题）。我还尝试了`<p>`标签（但会自动换行）与`<a>`标签（但有下划线和点击效果）。最终选用`<text style="color:red;">`标签，写起来最为简洁，无需添加额外属性。
 
 ### Rendering pages failed问题
-显示的错误信息是Vuepress的底层问题，无法直接看出问题所在。且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有自定义组件的标签）*（感谢[oyh同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
+显示的错误信息是Vuepress的底层问题，无法直接看出问题所在。且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有：自定义组件的标签，被识别成组件的语法）*（感谢[oyh同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span><span class="heimu" title="你知道的太多了">20220817：我也是笨比</span>
 
 > TypeError: Invalid value used as weak map key<br/>
 > at WeakMap.set (\<anonymous\>)<br/>
@@ -228,7 +252,7 @@
     color: #BA0000 !important;
 }
 ```
-在`config.ts`内添加：
+在`config.ts`内添加全局css：
 ```ts
 export default defineUserConfig({
     head:[
@@ -274,19 +298,6 @@ export default defineUserConfig({
 * 替换方便。仅需全局查找替换，点一下鼠标即可。~~（但是对我来说需要把SM.MS图床的链接再换回原链接…）~~
 
 然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下[jsdelivr](https://www.jsdelivr.com/)，不能用。网上搜，大家也都说寄了。再试[statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。
-
-### 现实中的问题
-因为[某些原因](./hide/memories.md#大学-大一后暑假)电脑坏了，在等新电脑到的过程中进行了一次最费力的博客更新。（动力：实在是太想bb了）
-
-事件背景：两台台式机（家庭机and鞋盒机），一个屏幕，两条电源线（电脑与屏幕供电），1条vga线。两机相距甚远，网线在家庭机上。鞋盒机没有网卡驱动。家庭机性能太差，打开vscode能卡出屎。
-
-1. 在手机上下载node.js & vscode安装包，用U盘通过a2c转接器拷到鞋盒机并安装。
-2. 不依赖MPV插件，写一个下午博客，并测试编译。
-3. 将屏幕搬去，三条线接到家庭机上，科学上网（期间还忘记了机场密码），下载git，登录github。
-4. 安装并配置git，设置rsa密钥（家庭机的键盘甚至没有insert键），上传仓库。
-5. 将所有物品重新搬回鞋盒机。
-
-然后人就累死了。。。不过好有成就感。
 ### 关于数学插件
 为markdown-it渲染器安装<span v-pre>$\LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
 
@@ -300,4 +311,8 @@ export default defineUserConfig({
 
 1. 在全局css中新增类`.ClassName img{width: 60% !important; height:auto !important;}`，并在md中以`<div class='ClassName'><img src='...'/></div>`使用。
 2. 在全局css中新增类`.ClassName img{max-width: 60%;}`，并在md中以`<div class="ClassName";"><img src="..."/></div>`使用。
+### 为单一页面添加css
+<text style="color:red;font-weight:bold">未解决！</text>
+起因：不想全局添加css。[官方说明](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E7%B1%BB)已尝试，无效。（该文档为v1文档，不适用于v2）
 
+最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6)中，style文件类型从.styl改为.scss。有机会的话可以尝试。
