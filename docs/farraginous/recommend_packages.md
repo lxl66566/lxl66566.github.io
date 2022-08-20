@@ -168,7 +168,7 @@ PS:因为复习机制和没有完全删除的设置，不是很推荐。
 
 官方仅有30天试用。若想下载破解版可在B站搜索教程。
 
-[官网](https://www.internetdownloadmanager.com/)
+[官网](https://www.internetdownloadmanager.com/) | [破解](https://www.lanzouw.com/iYFgSw4lede)
 ### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
 快速启用禁用扩展。
 

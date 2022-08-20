@@ -57,7 +57,7 @@
 
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
-原本大学时看到音游群的同学在玩osu，我也入坑了，想着练练4k可以提高我其他音游的成绩。当时打了好久osu默认自带的那几首曲子，后来才知道怎么下载曲子...
+原本大学时看到音游群的同学在玩osu，我也入坑了，想着练练4k可以提高我其他音游的成绩（多指力）。当时打了好久osu默认自带的那几首曲子，后来才知道怎么下载曲子...
 
 我打osu只打mania。主要打4k，偶尔也会打打6k，5k打得就更少了。其他key数从来不碰。其他模式仅会碰一下std，而且一部分打的是[McOsu](https://store.steampowered.com/app/607260/McOsu/)的3d模式。
 * 为什么打osu最频繁呢？
@@ -162,9 +162,11 @@ late过多，向负方向调整。
 
 early过多，向正方向调整。 -->
 ### 最好成绩
-8th reform Dan 97.04%
+9th reform Dan 96.79%
 
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1Ja411Q7Kh&cid=769015862&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
+*推荐[前往bilibili观看](https://www.bilibili.com/video/BV1md4y1P7xb)以获取更高码率 & 帧率*
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1md4y1P7xb&cid=809448483&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了<span class="heimu" title="你知道的太多了">放屁</span>；16能ap的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。

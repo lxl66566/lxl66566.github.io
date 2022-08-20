@@ -311,8 +311,11 @@ export default defineUserConfig({
 
 1. 在全局css中新增类`.ClassName img{width: 60% !important; height:auto !important;}`，并在md中以`<div class='ClassName'><img src='...'/></div>`使用。
 2. 在全局css中新增类`.ClassName img{max-width: 60%;}`，并在md中以`<div class="ClassName";"><img src="..."/></div>`使用。
+
 ### 为单一页面添加css
+
 <text style="color:red;font-weight:bold">未解决！</text>
+
 起因：不想全局添加css。[官方说明](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E7%B1%BB)已尝试，无效。（该文档为v1文档，不适用于v2）
 
 最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6)中，style文件类型从.styl改为.scss。有机会的话可以尝试。
