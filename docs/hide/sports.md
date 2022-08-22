@@ -10,9 +10,13 @@ pageClass: custom-page-class
 
 ## 以距离记
 
+单位：米
+
 <iframe frameborder="no" src="/charts/sports_distance.html" width="100%" height="280"></iframe>
 
 ## 以时间记
+
+单位：分钟
 
 <iframe frameborder="no" src="/charts/sports_time.html" width="100%" height="280"></iframe>
 

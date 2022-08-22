@@ -118,6 +118,18 @@ tips：加速前需事先选择能通过连接测试的节点
 |一次性|流量|限速|
 | :--: | :--: | :--: |
 |￥10.00|64G|未知|
+### 魔戒
+此机场**仅有不限时流量出售**，价格挺便宜的
+[官网](https://www.mojie.link/#/plan) | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z)
+
+|一次性|流量|限速|
+| :--: | :--: | :--: |
+|￥1.00|2G|不限|
+|￥12.00|130G|不限|
+|￥36.00|420G|不限|
+|￥60.00|750G|不限|
+|￥120.00|1660G|不限|
+|￥240.00|3600G|不限|
 
 :::tip 提示
 以下机场因性价比原因不推荐购买；数据已久未更新。
@@ -143,11 +155,11 @@ tips：加速前需事先选择能通过连接测试的节点
 | :--: | :--: | :--: |
 |￥19.90|100G|500Mbps|
 ## 客户端选择
-### clash（推荐）
+### Clash for Windows（推荐）
 #### 简介
-clash是开源的、支持Android与PC的客户端。（Android端请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)）
+*Clash for Windows* 是闭源的PC客户端。相比[开源端](#clash-verge)，*Clash for Windows* 拥有更完善的功能。
 #### 下载地址
-[（内核）项目地址](https://github.com/Dreamacro/clash) | [PC端官方下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases) | [Android端私链](https://wwp.lanzout.com/iL6sD03mi0gf)
+[项目地址](https://github.com/Fndroid/clash_for_windows_pkg) | [PC端下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases) | [私链](https://wwp.lanzout.com/ixncj0a1k28h)
 
 #### 优势
 * 流畅的图形界面
@@ -164,7 +176,10 @@ clash是开源的、支持Android与PC的客户端。（Android端请前往谷�
 * [这里](https://github.com/BoyceLig/Clash_Chinese_Patch)提供clash的汉化。
 * 在节点界面点击测速图标测试全部节点的连通性
 * 建议设置配置文件自动更新（Profiles->右击配置文件->Settings->Update Interval）
-
+### Clash For Android（推荐）
+请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)。[Android端私链](https://wwp.lanzout.com/iL6sD03mi0gf)
+### Clash Verge
+开源Clash客户端。[下载地址](https://github.com/zzzgydi/clash-verge/releases/)
 ### V2ray
 #### 简介
 V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（摘自[此处](https://www.xuebuyuan.com/3296293.html)）
@@ -173,7 +188,7 @@ V2ray同样拥有Android与PC客户端。由于我不常用，故不给出教程
 
 #### 下载地址
 
-[内核项目地址](https://github.com/v2fly/v2ray-core) | [客户端项目地址](https://github.com/2dust/v2rayN) | [Android端私链（已被封禁）](https://wwp.lanzout.com/iCPkW049jz0d)
+[内核项目地址](https://github.com/v2fly/v2ray-core) | [客户端项目地址](https://github.com/2dust/v2rayN)
 
 ### Matsuri & NekoRay
 开源，选项丰富，安全性好，使用体验一般 *(Matsuri > NekoRay)* 。
