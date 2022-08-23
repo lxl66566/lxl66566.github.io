@@ -13,7 +13,9 @@
 * 选择支存档
 
 ## 资源
-[推荐几个网址](../farraginous/recommend_websites.md#galgame)
+下载：[推荐几个网址](../farraginous/recommend_websites.md#galgame)
+
+在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator)。个人认为，比起vnr有以下优点：1. 小，仅44.3MB 2. 开源 3. 社区完善，依托于github；相比之下vnr依赖百度贴吧，资源BT失效，大多使用城通网盘，真让人火大<span class="heimu" title="你知道的太多了">ソラのむかつく顔</span>。
 ## 我已玩完
 排序方式：后玩完→先玩完
 
