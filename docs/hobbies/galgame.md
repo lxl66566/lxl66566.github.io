@@ -13,7 +13,7 @@
 * 选择支存档
 
 ## 资源
-下载：[推荐几个网址](../farraginous/recommend_websites.md#galgame)
+下载：[推荐几个网址](../farraginous/recommend_websites.md#游戏)
 
 在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator)。个人认为，比起vnr有以下优点：1. 小，仅44.3MB 2. 开源 3. 社区完善，依托于github；相比之下vnr依赖百度贴吧，资源BT失效，大多使用城通网盘，真让人火大<span class="heimu" title="你知道的太多了">ソラのむかつく顔</span>。
 ## 我已玩完
@@ -103,6 +103,7 @@
 * フタマタ恋愛 瑠衣＆宮子 ミニアフターストーリー
 * 兽娘育成方案
 * アマエミ
+* アルカナ・アルケミア
 
 ## 我的设置
 在游玩过程中逐渐形成了这样一套设置习惯...开新gal之后的首要任务就是设置。以下仅列出部分重要设置。
