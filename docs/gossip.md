@@ -213,7 +213,7 @@
 网上教程为使用`<font color="red">`标签，但此标签不受html5支持（并导致了下述Rendering pages failed问题）。我还尝试了`<p>`标签（但会自动换行）与`<a>`标签（但有下划线和点击效果）。最终选用`<text style="color:red;">`标签，写起来最为简洁，无需添加额外属性。
 
 ### Rendering pages failed问题
-显示的错误信息是Vuepress的底层问题，无法直接看出问题所在。且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有：自定义组件的标签，被识别成组件的语法）*（感谢[oyh同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span><span class="heimu" title="你知道的太多了">20220817：我也是笨比</span>
+显示的错误信息是Vuepress的底层问题，无法直接看出问题所在。且`docs:dev`本地预览完全不受影响。之后不断比对各处编译，发现是引入未知html标签导致的。（初次为`<font>`标签，之后还有：自定义组件的标签，被识别成组件的语法）*（感谢[oyh同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
 
 > TypeError: Invalid value used as weak map key<br/>
 > at WeakMap.set (\<anonymous\>)<br/>

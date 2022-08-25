@@ -144,6 +144,7 @@ del hyper-v.txt
 Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
 ```
 保存为.bat文件并管理员运行即可。
+8. 更改触摸板功能：三指左右划调节音量。我本人感觉挺方便。
 ## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
 
