@@ -203,7 +203,7 @@
 ## VuePress2与博客心得
 建站时我还是个小白，对javascript,typescript,css一窍不通，html也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于20220718（之后持续更新），算是对我建站三个半月来的一些总结。
 
-建立博客之初，选择工具阶段，有很多博客工具可供选择，如Hexo,Wordpress,HUGO,docsify等。后来随着慢慢深入接触也了解了Vitepress,mdbook,Gitbook。但我还是选择vuepress。个中缘由嘛，vuepress的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
+设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如Hexo,Wordpress,HUGO,docsify等。后来随着慢慢深入接触也了解了Vitepress,mdbook,Gitbook。但我还是选择vuepress。个中缘由嘛，vuepress的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
 
 然后到了搭建之初阶段，由于vuepress1.x仅使用config.js，而2.x改用ts，这导致了我被网上教程（我看的很多是用js的）与官方文档的ts搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
 
@@ -291,7 +291,7 @@ export default defineUserConfig({
 然后我尝试了其他图床：[SM.MS](https://sm.ms/)，但是：
 1. 这个图床有*容量上限：5GB*和*单张图片上限：5MB*
 2. 原有的每张图都需要手动替换，因为src是随机生成的
-3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放
+3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
 4. 在[关于SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/fucksmms.png)<span class="heimu" title="你知道的太多了">这样的图床还是早点死吧！</span>
 
 因此寻找其他解决方案。开始采用CDN加速github图床的方案。cdn的好处：

@@ -65,8 +65,7 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥11.00|100G\*12<br/>500G\*12（仅日本节点）|不限|
 
 *（日本节点为联通/移动用，采用Trojan协议，限速未知）*
-### 番茄花园（已跑路）
-<details><summary>archived</summary>
+### 番茄花园
 
 [官网](https://fqhy.xyz/)
 
@@ -79,10 +78,9 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥60.00|1300G|500Mbps|
 |￥100.00|6000G|无限制|
 
-</details>
-
 ### Simple Cloud
 [官网](https://spcloud.cc/) | [邀请链接](https://spcloud.cc/#/register?code=97EXi3tX)
+* 由于域名污染 官网更换为https://www.spcloud.me .（20220827）
 
 |月付|流量|限速|
 | :--: | :--: | :--: |
