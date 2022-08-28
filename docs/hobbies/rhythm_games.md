@@ -162,11 +162,11 @@ late过多，向负方向调整。
 
 early过多，向正方向调整。 -->
 ### 最好成绩
-9th reform Dan 96.79%
+10th reform Dan 96.40%
 
-*推荐[前往bilibili观看](https://www.bilibili.com/video/BV1md4y1P7xb)以获取更高码率 & 帧率*
+*推荐[前往bilibili观看](https://www.bilibili.com/video/BV1BU4y167na)以获取更高码率 & 帧率*
 
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1md4y1P7xb&cid=809448483&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1BU4y167na&cid=817384811&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
 
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了<span class="heimu" title="你知道的太多了">放屁</span>；16能ap的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
