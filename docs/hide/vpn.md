@@ -29,42 +29,42 @@ tips：加速前需事先选择能通过连接测试的节点
 开启成功率看脸，网速不敌上面两位，同样有强制弹窗广告
 ## 机场选择
 
-此处列出部分机场性价比及其变化情况。数字代表**每1元RMB买到的GB数**<Badge type="tip" text="月付最低合理价格" vertical="top" />。
+此处列出部分机场（套餐月付<=10）性价比及其变化情况。数字代表**每1元RMB买到的GB数**<Badge type="tip" text="月付最低合理价格" vertical="top" />。
 
 <iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280"></iframe>
 
 :::warning
-每一次付费都请告诫自己机场跑路的可能性。
+每一次付费都请告诫自己机场跑路的可能性。同时，性价比越高的机场，节点越不稳定。
 :::
 
-*（以下数据截止于20220806）*
+*（以下数据截止于20220829）*
 ### 白嫖机场（推荐）
-[官网](https://bpjc.xyz/) | [邀请链接](https://bpjc.xyz/#/register?code=YnrLNenI)
+<!-- [官网](https://bpjc.xyz/) | [邀请链接](https://bpjc.xyz/#/register?code=YnrLNenI) -->
 
-[备用官网](https://xn--mesv7f5toqlp.club/) | [备用邀请链接](https://xn--mesv7f5toqlp.club/#/register?code=YnrLNenI)
+[官网](https://xn--mesv7f5toqlp.club/) | [邀请链接](https://xn--mesv7f5toqlp.club/#/register?code=YnrLNenI)
 
-|月付|流量|限速|
+|月付（不含6.1%手续费）|流量|限速|
 | :--: | :--: | :--: |
-|￥1.02|100G|未知|
+|￥1.00|100G|未知|
 
 |年付|流量|限速|
 | :--: | :--: | :--: |
 |￥10.65|500G*12|未知|
 
-*（此前限速为500Mbps）*
+*（均为Torjan协议；此前限速为500Mbps）*
 ### 一元机场
 [官网](https://一元机场.com/) | [邀请链接](https://xn--4gq62f52gdss.com/#/register?code=q0LtU8ps)
 
 |月付|流量|限速|
 | :--: | :--: | :--: |
-|￥4.00|400G<br/>4000G（仅日本节点）|不限|
-|￥6.00|700G<br/>10000G（仅日本节点）|不限|
+|￥4.00|4000G|不限|
+|￥6.00|10000G|不限|
 
 |年付|流量|限速|
 | :--: | :--: | :--: |
-|￥11.00|100G\*12<br/>500G\*12（仅日本节点）|不限|
+|￥11.00|500G\*12|不限|
 
-*（日本节点为联通/移动用，采用Trojan协议，限速未知）*
+*（采用Trojan协议）*
 ### 番茄花园
 
 [官网](https://fqhy.xyz/)
@@ -79,20 +79,15 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥100.00|6000G|无限制|
 
 ### Simple Cloud
-[官网](https://spcloud.cc/) | [邀请链接](https://spcloud.cc/#/register?code=97EXi3tX)
+[官网](https://spcloud.me/) | [邀请链接](https://spcloud.me/#/register?code=97EXi3tX)
 * 由于域名污染 官网更换为https://www.spcloud.me .（20220827）
 
 |月付|流量|限速|
 | :--: | :--: | :--: |
-|￥3.00|20G|1Gbps|
 |￥5.00|50G|1Gbps|
-|￥8.00|100G|1Gbps|
 |￥10.00|150G|1Gbps|
 |￥20.00|350G|1Gbps|
 
-|一次性|流量|限速|
-| :--: | :--: | :--: |
-|￥15.00|50G|1Gbps|
 ### StarTrip（已跑路）
 <details><summary>archived</summary>
 
@@ -112,6 +107,7 @@ tips：加速前需事先选择能通过连接测试的节点
 |月付|流量|限速|
 | :--: | :--: | :--: |
 |￥13.00|200G|未知|
+|￥28.00|500G|未知|
 
 |一次性|流量|限速|
 | :--: | :--: | :--: |
