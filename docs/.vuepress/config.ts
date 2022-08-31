@@ -67,6 +67,7 @@ export default defineUserConfig({
           '/farraginous/recommend_websites.md',
           '/farraginous/atri.md',
           '/farraginous/log.md',
+          '/farraginous/reciter.md',
         ]
       },
       {

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <title>|x|'s reciter</title>
+        <link rel="stylesheet" href="reciter.css">
+    </head>
+    <body>
+        <h2>绝对值_x的背词器</h2>
+        <fieldset style="width: 170px;">
+          <legend>语言</legend>
+          <input type="radio" id="language1" name="language" value="english" checked="checked"><label for="language1">English</label>
+          <input type="radio" id="language2" name="language" value="nihongo"><label for="language2">日本語</label>
+        </fieldset>
+        
+        <fieldset style="width: 250px;display: inline-block;" id="english_urls">
+          <legend>网址</legend>
+          <div>
+            <input type="radio" id="CD" class="language_button" name="urle" checked="checked"><label for="CD">Cambridge Dictionary</label>
+          </div>
+          <div>
+          <input type="radio" id="OLD" class="language_button" name="urle"><label for="OLD">Oxford Learner's Dictionaries</label>
+          </div>
+          <div>
+          <input type="radio" id="MW" class="language_button" name="urle"><label for="MW">Merriam Webster</label>
+          </div>
+        </fieldset>
+
+        <fieldset style="width: 250px;" id="japanese_urls">
+          <legend>网址</legend>
+          <div>
+            <input type="radio" id="weblio" class="language_button" name="urlp" checked="checked"><label for="weblio">Weblio辞書国語辞典</label>
+          </div>
+          <div>
+          <input type="radio" id="goo" class="language_button" name="urlp"><label for="goo">goo辞書</label>
+          </div>
+          <div>
+          <input type="radio" id="HCW" class="language_button" name="urlp"><label for="HCW">広辞苑無料検索</label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label for="wordsnum">个数: </label>
+          <select name="wordsnum" id="wordsnum">
+            <option value="3">3</option>
+            <option value="5" selected="selected">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+
+        <div>
+          <input type="checkbox" id="opendirectly" checked="checked"><label for="opendirectly">是否直接打开网页</label>
+        </div>
+
+        <div>
+          <button type="submit" id="recite">背！</button>
+        </div>
+      <div id="answer">
+
+      </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="reciter.js"></script>
+</html>

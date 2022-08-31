@@ -154,6 +154,10 @@ PS:因为复习机制和没有完全删除的设置，不是很推荐。
 [官网下载地址](https://apps.ankiweb.net/)
 ### [Winaero Tweaker](https://winaero.com/)
 挺不错的windows小工具，集成一些高级功能（特别对我这种**被迫设置win11**的人有点帮助）
+### [EnergyStar](https://github.com/imbushuo/EnergyStar)
+为你的windows笔记本提升续航。
+
+小提示，双击exe文件后，EnergyStar将自动在后台运行，不会跳出提示与弹窗。
 ## 浏览器插件
 ### 视频速度控制
 控制视频播放速度，0.07x-16.00x。主要适合需要2倍速以上看视频的人群 *（对我来说用处真的很大）*，也可用来快速刷课，练习听力等。
