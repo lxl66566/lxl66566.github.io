@@ -318,3 +318,12 @@ export default defineUserConfig({
 起因：不想全局添加css。[官方说明](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E7%B1%BB)已尝试，无效。（该文档为v1文档，不适用于v2）
 
 最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6)中，style文件类型从.styl改为.scss。有机会的话可以尝试。
+### html转vue组件失败问题
+
+<text style="color:red;font-weight:bold">未解决！</text>
+
+用html, js, css 三件套写了一个简陋的[背词器](./farraginous/reciter.md)出来，但是受制于iframe的固定大小，很容易出现超出边框的情况。于是想到了vue组件引入的方法。但是，遇到了~~前所未有~~的麻烦。vue组件单文件（SFC）仅允许一个`<script>`标签的存在。而我的背词器中使用了两个script：jquery库与我自己写的js。
+
+网上的关于SFC的解释非常的含糊其辞。几乎没有实例。
+
+现在无法正常执行js脚本。

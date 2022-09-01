@@ -5,8 +5,11 @@
     word-break: break-word;
     white-space: normal;
     word-wrap:break-word;
-    width: auto;
+    width: fit-content;
 }
 #answer{
     width: fit-content;
+    word-break: break-word;
+    white-space: normal;
+    word-wrap:break-word;
 }

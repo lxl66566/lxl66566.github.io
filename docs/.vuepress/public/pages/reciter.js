@@ -53,9 +53,9 @@ $("#recite").click(function(){
         var tempurl = url.replace(/{}/,word);
         document.getElementById(String(answers)).insertAdjacentHTML('beforeend', 
             '<a href=\"' + tempurl + '\" target=\"_blank\">' + word + '</a>&nbsp;');
-        // if(document.getElementById('opendirectly').value == "on"){
-        //     window.open(tempurl,"_blank");
-        // }
+        if($('#opendirectly').is(':checked')){
+            window.open(tempurl,"_blank");
+        }
         if((i + 1) % 5 == 0){
             answers++;
             document.getElementById('answer').insertAdjacentHTML('beforeend','<div id=\"' + String(answers) + '\" class=\"wordsline\"></div>');
