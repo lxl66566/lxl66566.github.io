@@ -1,3 +1,12 @@
 #japanese_urls{
     display: none;
 }
+.wordsline{
+    word-break: break-word;
+    white-space: normal;
+    word-wrap:break-word;
+    width: auto;
+}
+#answer{
+    width: fit-content;
+}

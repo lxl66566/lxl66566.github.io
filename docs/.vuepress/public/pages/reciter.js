@@ -1,12 +1,14 @@
 var language = "english";
-var urlname = "CD";
-var urlname_ano = "weblio";
+var urlname = {true: "CD" , false : "weblio"}
+var flag = true;
 var data = {};
+var answers = 0;
 const urls={
     "english":{
         "CD" : "https://dictionary.cambridge.org/dictionary/english/{}",
         "OLD" : "https://www.oxfordlearnersdictionaries.com/definition/english/{}",
         "MW" : "https://www.merriam-webster.com/dictionary/{}",
+        "baidu" : "https://fanyi.baidu.com/#en/zh/{}",
     },
     "japanese":{
         "weblio" : "https://www.weblio.jp/content/{}",
@@ -22,32 +24,41 @@ function getword(list)
 {
     return list[random(0,list.length - 1)];
 }
-function swap(a,b){var t = a;a = b;b = t;}
 $('#language1').click(function() {
     $("#english_urls").show();
     $("#japanese_urls").hide();
     language = "english";
-    swap(urlname,urlname_ano);
+    flag = !flag;
 });
 $('#language2').click(function() {
     $("#english_urls").hide();
     $("#japanese_urls").show();
     language = "japanese";
-    swap(urlname,urlname_ano);
+    flag = !flag;
 });
 $('.language_button').click(function(e) {
-    urlname=$(e.target).attr('id');
+    urlname[flag] = $(e.target).attr('id');
 });
 
 $.getJSON("https://cdn.statically.io/gh/lxl66566/wordsreciter/notebook/notebook.json",function(d){
     data = d;
 })
 $("#recite").click(function(){
-    var url = urls[language][urlname];
+    answers++;
+    document.getElementById('answer').insertAdjacentHTML('beforeend','<div id=\"' + String(answers) + '\" class=\"wordsline\"></div>');
+    var url = urls[language][urlname[flag]];
     for (var i=0;i < document.getElementById("wordsnum").value; i++)
     {
         var word = getword(data[language]["default"]);
-        document.getElementById('answer').insertAdjacentHTML('beforeend', 
-            '<a href=\"' + url.replace(/{}/,word) + '\" target=\"_blank\">' + word + '</a>&nbsp;');
+        var tempurl = url.replace(/{}/,word);
+        document.getElementById(String(answers)).insertAdjacentHTML('beforeend', 
+            '<a href=\"' + tempurl + '\" target=\"_blank\">' + word + '</a>&nbsp;');
+        // if(document.getElementById('opendirectly').value == "on"){
+        //     window.open(tempurl,"_blank");
+        // }
+        if((i + 1) % 5 == 0){
+            answers++;
+            document.getElementById('answer').insertAdjacentHTML('beforeend','<div id=\"' + String(answers) + '\" class=\"wordsline\"></div>');
+        }
     }
 });
