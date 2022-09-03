@@ -45,6 +45,8 @@
 
 * [我的osu主页](https://osu.ppy.sh/users/25751103)
 
+##  # 我的记录
+
 * 我的o!m健身按键数 ~~（众所周知osu是健身游戏）~~
 
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="280"></iframe>
@@ -54,6 +56,22 @@
 
 20220809+：由于[OSU打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
 :::
+
+* 叠力变化图
+
+<iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280"></iframe>
+
+* Tech力变化图
+
+<iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280"></iframe>
+
+* 切力变化图
+
+<iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
+
+* 乱力变化图
+
+<iframe frameborder="no" src="/charts/reform_stamina.html" width="100%" height="280"></iframe>
 
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 

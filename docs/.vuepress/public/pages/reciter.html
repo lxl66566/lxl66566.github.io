@@ -2,12 +2,15 @@
 <html lang="zh">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>|x|'s reciter</title>
         <link rel="stylesheet" href="reciter.css">
     </head>
     <body>
+      <div id="to_be_center">
         <h2>绝对值_x的背词器</h2>
-        <fieldset style="width: 170px;">
+        
+        <fieldset id="language_area">
           <legend>语言</legend>
           <input type="radio" id="language1" name="language" value="english" checked="checked"><label for="language1">English</label>
           <input type="radio" id="language2" name="language" value="nihongo"><label for="language2">日本語</label>
@@ -53,16 +56,17 @@
         </div>
 
         <div title="若勾选，请开启“弹出窗口和重定向”权限">
-          <input type="checkbox" id="opendirectly" checked="checked">
+          <input type="checkbox" id="opendirectly">
           <label for="opendirectly">是否直接打开网页</label>
         </div>
 
         <div>
-          <button type="submit" id="recite">背！</button>
+          <button id="recite">背！</button>
         </div>
-      <fieldset id="answer">
+        <fieldset id="answer">
 
-      </fieldset>
+        </fieldset>
+      </div>
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
     <script src="reciter.js"></script>
