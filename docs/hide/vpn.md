@@ -78,6 +78,23 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥60.00|1300G|500Mbps|
 |￥100.00|6000G|无限制|
 
+### GLaDOS
+
+[官方项目](https://github.com/glados-network/GLaDOS) 邀请码：`3SPFS-IABW1-77EJL-PE8NR`
+
+学生免费用360天，每月50G。[说明](https://glados.rocks/console/education)
+
+### XSUS
+[官网](https://xsus.buzz/) | [邀请链接](https://xsus.buzz/index.php#/register?code=jXvUrUka)
+
+|月付|流量|限速|
+| :--: | :--: | :--: |
+|￥8.00|150G|未知|
+
+|一次性|流量|限速|
+| :--: | :--: | :--: |
+|￥20.00|120G|未知|
+
 ### Simple Cloud
 [官网](https://spcloud.me/) | [邀请链接](https://spcloud.me/#/register?code=97EXi3tX)
 * 由于域名污染 官网更换为https://www.spcloud.me .（20220827）
@@ -112,6 +129,7 @@ tips：加速前需事先选择能通过连接测试的节点
 |一次性|流量|限速|
 | :--: | :--: | :--: |
 |￥10.00|64G|未知|
+
 ### 魔戒
 此机场**仅有不限时流量出售**，价格挺便宜的
 [官网](https://www.mojie.link/#/plan) | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z)

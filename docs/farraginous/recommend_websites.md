@@ -1,11 +1,12 @@
 # 网址汇总
 我的收藏夹东西很多，但是太杂太乱，此处仅列出部分。
-## 我的常用网站
+## 我的~~常用~~网站
 （一些不好分类的网站
 
 * [DOWNSUB](https://downsub.com/)：youtube下载字幕。对于讲话型视频，下载字幕观看能节省很多时间。
 * [webtor](https://webtor.io/)：在线解析磁链（并在线播放）。<span class="heimu" title="你知道的太多了">一般作验车用（</span>
 * [蓝奏云](https://wwa.lanzoui.com/) ：云存储 *（[跳转介绍](recommend_packages.md/#蓝奏云)）*
+* [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
 ## 搜索
 * 搜电子书：[zlibrary（域名不固定）](https://zh.usa1lib.org/)
 * 搜二次元：[萌娘百科](https://zh.moegirl.org.cn/Mainpage)
