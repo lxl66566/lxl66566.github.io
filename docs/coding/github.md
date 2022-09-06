@@ -33,7 +33,7 @@ A: 开发者并未发布release.
 * Q: 这么多文件到底要下载哪一个？
 ![下载文件](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/packages.png)
 
-A: 此处我假设会看此条目的都是windows用户。
+A: 此处我假设会看此条目的都是Windows&Android用户。
 1. 排除源码与大小明显不正常的文件（如图中的sha256sum）。
 2. 按照后缀选择，排除后缀**不是**以下格式的：
     * Windows压缩包格式（.7z/.zip/.rar）

@@ -133,9 +133,9 @@
         pause
         ```
     * 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
-5. 关闭搜索推荐&热门新闻：关闭 *设置-隐私和安全性-搜索权限-更多设置-显示搜索要点* 。（[参考来源](https://www.landiannews.com/archives/95045.html)）
-6. 升级专业版（为接下来的开启Hyper-V做准备）：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级win11专业版并激活。
-7. 开启Hyper-V功能：由于在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项，因此采用网上教程：文本文档输入以下代码：
+5. 关闭搜索推荐&热门新闻：关闭 *设置-隐私和安全性-搜索权限-更多设置-显示搜索要点* 。（参考[来源](https://www.landiannews.com/archives/95045.html)
+6. 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级win11专业版并激活。
+7. 开启Hyper-V功能 <Badge type="tip" text="前置条件：6." vertical="top" />：由于在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项，因此采用网上教程：文本文档输入以下代码：
 ```batch
 pushd "%~dp0"
 dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
@@ -144,7 +144,25 @@ del hyper-v.txt
 Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
 ```
 保存为.bat文件并管理员运行即可。
+
 8. 更改触摸板功能：三指左右划调节音量。我本人感觉挺方便。
+9. 安装Win11 Android子系统 <Badge type="tip" text="前置条件：7." vertical="top" />：
+    * *设置-时间和语言-国家和地区* ，选择美国
+    * 打开Microsoft Store （记得关代理），下载Amazon Appstore。系统将自动下载安装Windows Subsystem for Android™️。
+    * 可选项：在*设置-应用和功能* 内找到Windows Subsystem for Android™️，移动到D盘以节省空间。
+    * 别忘了把*国家和地区* 改回去。
+    * 打开安装好的Windows Subsystem for Android™️，点击左侧Developer，打开Developer mode.（意味着在127.0.0.1:58526端口开启调试）
+    * 在这里你可以使用两种方式安装软件：
+        1. [WSA PacMan](https://github.com/alesimula/wsa_pacman)提供了便捷的图形化界面。
+        2. 使用[ADB](./farraginous/recommend_packages.md#adb)，输入`adb connect 127.0.0.1:58526`连接和安装软件。
+    * 关于网络受限问题：在虚拟机的*设置-Network&internet* 中看到网络连接受限。win11发出弹窗警告。
+    解决方法（参考[来源](https://www.shenshanhongye.com/jc/2134.html)）：在adb成功连接后，输入：
+    ```batch
+    adb shell settings put global captive_portal_mode 0
+    adb shell settings put global captive_portal_https_url https://www.google.cn/generate_204
+    adb shell settings put global captive_portal_http_url http://www.google.cn/generate_204
+    ```
+
 ## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
 

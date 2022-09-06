@@ -7,7 +7,7 @@
 #### 2022.09.06
 * 新增[软件汇总#Seal](./recommend_packages.md#seal)
 * 新增[编程-工具-Github](../coding/github.md)页面
-* 维护隐藏页面：灵感 | 愿景
+* 维护隐藏页面：灵感 | 愿景，[文章-对win11的设置](../my_articles.md#对win11的设置)
 #### 2022.09.03
 * 新增[OSU能力变化表](../hobbies/rhythm_games.md#我的记录)
 #### 2022.09.01
