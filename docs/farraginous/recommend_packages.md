@@ -1,5 +1,9 @@
 # 软件汇总
-一些好用软件的推荐&私有下载地址
+一些好用软件的推荐。
+
+:::tip 阅读此页前请注意
+若你还不知道如何使用Github下载文件，请参考[此教程](../coding/github.md)。
+:::
 ## Android
 此条目下**大多数**软件可通过Google Play下载官方的，最新的版本。
 
@@ -78,6 +82,10 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 与[扫描全能王](https://w103.camscanner.com/)相比有如下优点：小（安装后，扫描全能王 591MB，Adobe Scan 114MB）；无水印。
 
 [谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
+### Seal
+开源的视频下载app，Android端的不错的选择。
+
+[项目地址](https://github.com/JunkFood02/Seal)
 ## Windows
 ### Parsec
 **极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。

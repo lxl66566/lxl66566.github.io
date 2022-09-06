@@ -32,6 +32,7 @@ export default defineUserConfig({
           {
             text: '工具',
             children: [
+              '/coding/github.md',
               '/coding/Git.md',
               '/coding/othertools.md',
           ]
