@@ -105,6 +105,8 @@
 ### 社交
 [我的哔哩哔哩账号](https://space.bilibili.com/346365047)
 
+[我的telegram频道](https://t.me/withabsolutex)
+
 [我的osu账号](https://osu.ppy.sh/users/25751103)
 
 ### 音乐

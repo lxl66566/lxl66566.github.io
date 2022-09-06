@@ -154,7 +154,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
     * 打开安装好的Windows Subsystem for Android™️，点击左侧Developer，打开Developer mode.（意味着在127.0.0.1:58526端口开启调试）
     * 在这里你可以使用两种方式安装软件：
         1. [WSA PacMan](https://github.com/alesimula/wsa_pacman)提供了便捷的图形化界面。
-        2. 使用[ADB](./farraginous/recommend_packages.md#adb)，输入`adb connect 127.0.0.1:58526`连接和安装软件。
+        2. 使用[ADB](./farraginous/recommend_packages.md#adb)，输入`adb connect 127.0.0.1:58526`连接,`adb install ...`安装。
     * 关于网络受限问题：在虚拟机的*设置-Network&internet* 中看到网络连接受限。win11发出弹窗警告。
     解决方法（参考[来源](https://www.shenshanhongye.com/jc/2134.html)）：在adb成功连接后，输入：
     ```batch
@@ -162,6 +162,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
     adb shell settings put global captive_portal_https_url https://www.google.cn/generate_204
     adb shell settings put global captive_portal_http_url http://www.google.cn/generate_204
     ```
+    重启wifi即可。
 
 ## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
