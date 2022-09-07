@@ -34,6 +34,7 @@
 * [Adobe全家桶破解](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 * [AI图片放大](https://bigjpg.com/)
 * 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
+* 什么都能消除：[ZMO](https://remover.zmo.ai/)
 * 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/)
 * [片头制作](https://panzoid.com/)
 ## 游戏
