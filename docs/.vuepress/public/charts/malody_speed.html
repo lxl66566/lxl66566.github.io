@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <title>speedmap acc record</title>
+  <body>
+    <div id="container" style="width: 100%; height: 260px;"></div>
+    <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
+    <script>
+      const { Line } = G2Plot;
+      const data = [
+        {'name' : 'ex 1', '时刻' : '20220828' , 'acc' : 93.22 },
+        {'name' : 'ex 1', '时刻' : '20220831' , 'acc' : 90.99 },
+        {'name' : 'ex 1', '时刻' : '20220901' , 'acc' : 91.34 },
+        {'name' : 'ex 2', '时刻' : '20220901' , 'acc' : 89.35 },
+        {'name' : 'ex 1', '时刻' : '20220904' , 'acc' : 91.50 },
+        {'name' : 'ex 2', '时刻' : '20220904' , 'acc' : 90.49 },
+        {'name' : 'reg 8', '时刻' : '20220908' , 'acc' : 97.65 },
+        {'name' : 'reg 9', '时刻' : '20220908' , 'acc' : 92.66 },
+        {'name' : 'reg 10', '时刻' : '20220908' , 'acc' : 93.62 },
+      ]
+      const linePlot = new Line('container', {
+        data,
+        xField: '时刻',
+        yField: 'acc',
+        seriesField: 'name',
+        useDeferredLabel: true,
+        connectNulls : false,
+        yAxis: 
+        {
+            min : 87,
+        },
+        annotations:[
+        {
+          type: 'line',
+          id: 'line',
+          start: ['20220608', '96'],
+          end: ['20220831', '96'],
+          text: {
+            content: 'pass',
+            position: 'left',
+            offsetX: -15,
+            offsetY: 12,
+            style: {
+                textAlign: 'left',
+                fill: 'red',
+            },
+          },
+          style: {
+            stroke: 'red',
+            lineWidth: 1.5,
+            lineDash: [4, 4],
+          },
+        },
+        ],
+        animation: {
+          appear: {
+            animation: 'wave-in',
+            duration: 5000,
+          },
+        },
+        legend: {
+          position: 'top',
+        },
+        slider: {
+          start: 0,
+          end: 1,
+        },
+      });
+
+      linePlot.render();
+    </script>
+  </body>
+</html>

@@ -51,27 +51,31 @@
 
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="280"></iframe>
 
-:::details 对上图的一些解释说明
-00:00后，睡前还在打的键数计入上一天。
-
-20220809+：由于[OSU打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
-:::
-
 * 叠力变化图
 
 <iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280"></iframe>
 
 * Tech力变化图
 
 <iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/malody_tech.html" width="100%" height="280"></iframe>
 
 * 切力变化图
 
 <iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280"></iframe>
 
 * 乱力变化图
 
 <iframe frameborder="no" src="/charts/reform_stamina.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/malody_stream.html" width="100%" height="280"></iframe>
+
+:::details 一些解释说明
+* 上为reform段位，下为malody v3段位
+* 00:00后，睡前还在打的键数计入上一天
+* 健身按键数 20220809+：由于[OSU打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
+:::
 
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 

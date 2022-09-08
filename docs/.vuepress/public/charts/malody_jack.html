@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <title>jackmap acc record</title>
+  <body>
+    <div id="container" style="width: 100%; height: 260px;"></div>
+    <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
+    <script>
+      const { Line } = G2Plot;
+      const data = [
+        {'name' : 'reg 8', '时刻' : '20220821' , 'acc' : 97.04 },
+        {'name' : 'reg 9', '时刻' : '20220821' , 'acc' : 94.84 },
+        {'name' : 'ex 1', '时刻' : '20220821' , 'acc' : 89.05 },
+        {'name' : 'reg 9', '时刻' : '20220827' , 'acc' : 96.06 },
+        {'name' : 'ex 1', '时刻' : '20220828' , 'acc' : 94.60 },
+        {'name' : 'reg 10', '时刻' : '20220829' , 'acc' : 96.41 },
+        {'name' : 'ex 2', '时刻' : '20220829' , 'acc' : 93.30 },
+        {'name' : 'reg 10', '时刻' : '20220831' , 'acc' : 91.37 },
+        {'name' : 'ex 1', '时刻' : '20220831' , 'acc' : 93.93 },
+        {'name' : 'reg 8', '时刻' : '20220901' , 'acc' : 98.82 },
+        {'name' : 'reg 10', '时刻' : '20220901' , 'acc' : 94.55 },
+        {'name' : 'ex 1', '时刻' : '20220901' , 'acc' : 95.93 },
+        {'name' : 'reg 9', '时刻' : '20220902' , 'acc' : 98.01 },
+        {'name' : 'reg 10', '时刻' : '20220904' , 'acc' : 96.96 },
+        {'name' : 'ex 1', '时刻' : '20220904' , 'acc' : 95.91 },
+        {'name' : 'reg 8', '时刻' : '20220907' , 'acc' : 96.98 },
+        {'name' : 'reg 10', '时刻' : '20220908' , 'acc' : 94.35 },
+        {'name' : 'ex 1', '时刻' : '20220908' , 'acc' : 97.19 },
+        {'name' : 'ex 2', '时刻' : '20220908' , 'acc' : 88.03 },
+      ]
+      const linePlot = new Line('container', {
+        data,
+        xField: '时刻',
+        yField: 'acc',
+        seriesField: 'name',
+        useDeferredLabel: true,
+        connectNulls : false,
+        yAxis: 
+        {
+            min : 80,
+        },
+        annotations:[
+        {
+          type: 'line',
+          id: 'line',
+          start: ['20220530', '96'],
+          end: ['20220903', '96'],
+          text: {
+            content: 'pass',
+            position: 'left',
+            offsetX: -15,
+            offsetY: 12,
+            style: {
+                textAlign: 'left',
+                fill: 'red',
+            },
+          },
+          style: {
+            stroke: 'red',
+            lineWidth: 1.5,
+            lineDash: [4, 4],
+          },
+        },
+        ],
+        animation: {
+          appear: {
+            animation: 'wave-in',
+            duration: 5000,
+          },
+        },
+        legend: {
+          position: 'top',
+        },
+        slider: {
+          start: 0,
+          end: 1,
+        },
+      });
+
+      linePlot.render();
+    </script>
+  </body>
+</html>
