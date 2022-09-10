@@ -72,8 +72,8 @@
 <iframe frameborder="no" src="/charts/malody_stream.html" width="100%" height="280"></iframe>
 
 :::details 一些解释说明
-* 上为reform段位，下为malody v3段位
-* 00:00后，睡前还在打的键数计入上一天
+* 上为reform段位，下为malody v3段位；MR等特殊MOD不显示。
+* `00:00后，睡前`还在打的键数计入上一天。
 * 健身按键数 20220809+：由于[OSU打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
 :::
 

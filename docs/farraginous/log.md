@@ -4,6 +4,9 @@
 *（注：此处的维护记录指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2022
 ### .09
+#### 2022.09.08
+* 新增[音游#我的记录](../hobbies/rhythm_games.md#我的记录)四个图表
+* [软件汇总](./recommend_packages.md#软件汇总)新增[Keepass2Android](./recommend_packages.md#Keepass2Android)与[KeePassXC](./recommend_packages.md#KeePassXC)两个密码管理器
 #### 2022.09.06
 * 新增[软件汇总#Seal](./recommend_packages.md#seal)
 * 新增[编程-工具-Github](../coding/github.md)页面
