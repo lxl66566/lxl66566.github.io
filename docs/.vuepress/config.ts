@@ -66,9 +66,10 @@ export default defineUserConfig({
         children: [
           '/farraginous/recommend_packages.md',
           '/farraginous/recommend_websites.md',
+          '/farraginous/college.md',
           '/farraginous/atri.md',
-          '/farraginous/log.md',
           '/farraginous/reciter.md',
+          '/farraginous/log.md',
         ]
       },
       {
