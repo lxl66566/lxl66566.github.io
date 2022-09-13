@@ -118,18 +118,17 @@
 有生之年能做到这里的全部，是一个美好的愿望。
 ### 博客日程
 * Github stars
-* 大一的一些有趣的事
 ### 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
 * 日语N2
 * 英语四六级
 * leetcode
 * CS自学
+* osu reform β pass
 
 ### 日程库（不急）
 * [开发移动应用](./hide/inspiration.md#编程灵感)
 * 理论数学
 * 虚幻引擎
-* ~~auto-fishing-machine~~
 
 ### 有生之年
 * 钢琴

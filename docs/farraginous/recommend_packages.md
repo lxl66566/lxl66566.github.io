@@ -114,12 +114,8 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 可视化磁盘空间占用，方便清理
 
 [下载地址](https://spacesniffer.en.softonic.com/)
-### uTools
-uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88)
-
-*绝对值_x：超推荐！*
-
-[官网下载地址](http://www.u.tools/)
+### [uTools](http://www.u.tools/)
+uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88) 由于逐步开始付费模式，此处可选择使用开源替代品：[PowerToys](https://github.com/microsoft/PowerToys)
 ### steam++
 加速器，主要加速steam商店与github
 
@@ -148,18 +144,14 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 开源多端密码管理器。可与Android端的密码管理器[Keepass2Android](#Keepass2Android)配合使用。
 
 [官方项目地址](https://github.com/keepassxreboot/keepassxc)
-### 图吧工具箱
+### [图吧工具箱](http://www.tbtool.cn/)
 集成了电脑及其外接设备测试所需的多数软件。
-
-[官网下载地址](http://www.tbtool.cn/)
 ### ADB
 电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。
 
 [官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
-### ContextMenuManager
+### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 开源的右键菜单管理器。高度自定义化。
-
-[官方项目地址](https://github.com/BluePointLilac/ContextMenuManager)
 ### Anki
 多端开源背词软件，多语言，高自由度，拥有庞大的词库社区。
 
