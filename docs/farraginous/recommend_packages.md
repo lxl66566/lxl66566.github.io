@@ -56,11 +56,10 @@ Telegram第三方开源客户端，自带公共代理 *（约202205以来公共�
 
 [官方下载地址](http://picacgs.com/)  [备用官方地址](http://picacgp.com/)  [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
 ### Keepass2Android
-开源密码管理器，可配合PC端[KeePassXC](#KeePassXC)使用。
+开源多端密码管理器，可配合PC端KeePassXC使用。
 
-[官方项目地址](https://github.com/PhilippC/keepass2android)
+[Android端官方项目地址](https://github.com/PhilippC/keepass2android) | [PC端官方项目地址](https://github.com/keepassxreboot/keepassxc)
 ### 蓝奏云
-
 比较推荐的云盘。PC上可直接从[网站主页](https://wwa.lanzoui.com/)进入。*（本页所有私链下载文件均保存于蓝奏云）*
 
 优点：
@@ -73,6 +72,8 @@ Telegram第三方开源客户端，自带公共代理 *（约202205以来公共�
 * 文件目录管理功能差
 
 APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提示下载。*（也可访问网页版）*
+
+*（我的建议是：推荐和github配合存储）*
 ### HiNative
 
 一个可以直接问外国人(语言)问题的app&网站。
@@ -140,10 +141,6 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。（一般来说win10自带的夜间模式够用，但是它的权限更高，能在打游戏时也强制护眼。）
 
 [官网下载地址](https://justgetflux.com/) | [私有下载地址](https://wwp.lanzout.com/iqmkq06s0wtg)
-### KeePassXC
-开源多端密码管理器。可与Android端的密码管理器[Keepass2Android](#Keepass2Android)配合使用。
-
-[官方项目地址](https://github.com/keepassxreboot/keepassxc)
 ### [图吧工具箱](http://www.tbtool.cn/)
 集成了电脑及其外接设备测试所需的多数软件。
 ### ADB
