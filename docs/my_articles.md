@@ -5,7 +5,7 @@
 
 [[toc]]
 
-## <span class="heimu" title="你知道的太多了">[科学上网初级](../hide/vpn.md)</span>
+## <span class="heimu" title="你知道的太多了">[初级科学上网](../hide/vpn.md)</span>
 ## 查看手机cpu指令集  
 
 <!-- * 国内应用商店：一个木函（7M）
