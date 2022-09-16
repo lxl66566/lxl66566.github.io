@@ -46,9 +46,9 @@ MT管理器是一款强大的文件管理工具和APK逆向修改神器。（[�
 
 [酷安下载地址](https://www.coolapk.com/apk/com.goplaycn.googleinstall) | [私链](https://wwp.lanzout.com/iYyA10686e7c)
 ### Nekogram X
-Telegram第三方开源客户端，自带公共代理 *（约202205以来公共代理常连不上）*
+Telegram第三方开源客户端，自带公共代理（建议配合校园网使用）
 
-但是在tg第三方内名声不算太好
+~~但是在tg第三方内名声不算好(?~~
 
 [官方项目地址](https://github.com/NekoX-Dev/NekoX)  [私有下载地址](https://wwp.lanzout.com/ivNBf03de47c)
 ### Picacg
