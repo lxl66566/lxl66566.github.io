@@ -21,22 +21,22 @@
 
 *（一般以游戏的所有支线全部推完才算玩完<Badge type="tip" text="可能有例外" vertical="top" />）*
 
-*（时间统计利用[Tai](../farraginous/recommend_packages.md#tai)作出）*
+*（时间统计利用[Tai](../farraginous/recommend_packages.md#tai)作出。由于1.0.0.4版本及之前版本有统计时长错误bug，此处带`*`则表示统计数据不准确，仅供参考）*
 
 *（打分皆为个人主观看法，得分上限不限于10）*
 
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: | :----: |
-|七音学园-旅行部-<Badge type="tip" text="1" vertical="top" />|2h23min|2022.09.18|8|10|9|
-|苍之彼方的四重奏<Badge type="tip" text="1" vertical="top" />|39h50min|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
-|鯨神のティアスティラ|25h47min|2022.06.21-<br/>2022.08.20|4.2|7.5|9.3|
-|9-nine-新章<Badge type="danger" text="5" vertical="top" />|4h43min|2022.07.20-<br/>2022.07.23|5|7|8|
+|七音学园-旅行部-<Badge type="tip" text="1" vertical="top" />|2h23min*|2022.09.18|8|10|9|
+|苍之彼方的四重奏<Badge type="tip" text="1" vertical="top" />|39h50min*|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
+|鯨神のティアスティラ|25h47min*|2022.06.21-<br/>2022.08.20|4.2|7.5|9.3|
+|9-nine-新章<Badge type="danger" text="5" vertical="top" />|4h43min*|2022.07.20-<br/>2022.07.23|5|7|8|
 |星光咖啡馆与死神之蝶|-|2020.10.15-<br/>2022.07.05|5.5|9|9.9|
-|9-nine-雪色雪花雪余痕<Badge type="danger" text="4" vertical="top" />|13h54min|2022.06.08-<br/>2022.07.05|10|6|9|
+|9-nine-雪色雪花雪余痕<Badge type="danger" text="4" vertical="top" />|13h54min*|2022.06.08-<br/>2022.07.05|10|6|9|
 |猫娘乐园 Vol.2 甜蜜猫娘姐妹<Badge type="danger" text="3" vertical="top" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
 |龍姬混~日子<Badge type="tip" text="1" vertical="top" />|-|2022.01.28-<br/>2022.06.28|2|8|5|
-|纸上魔法使|>36h27min|2022.03.22-<br/>2022.06.20|10|7|3|
-|9-nine-春色春恋春熙风<Badge type="danger" text="3" vertical="top" />|11h46min|2022.04.30-<br/>2022.06.07|7|6|8.5|
+|纸上魔法使|>36h27min*|2022.03.22-<br/>2022.06.20|10|7|3|
+|9-nine-春色春恋春熙风<Badge type="danger" text="3" vertical="top" />|11h46min*|2022.04.30-<br/>2022.06.07|7|6|8.5|
 |9-nine-天色天歌天籁音<Badge type="warning" text="2" vertical="top" />|-|2022.04.09-<br/>2022.04.28|7.5|6|8.5|
 |氤氲之白|-|2022.04.19|1|4|2|
 |9-nine-九次九日九重色<Badge type="tip" text="1" vertical="top" />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
@@ -138,7 +138,7 @@
 | :----: | :----: |
 |苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_exe_collapse.jpg)|
 |9-nine-新章 & 9-nine-雪色雪花雪余痕|使用オーバーロード跳转分支时，右侧滑动条会被弹出的存档遮挡|
-|冥契的牧神节|<text style="color:red;">存档&删除存档时出现过序号错乱，错误覆盖（仅发生一次）；<br/>auto时按左键停止后会继续向下跳一页；</text><br/>读档后无法查看此位置前的历史记录|
+|冥契的牧神节|<text style="color:red;">存档&删除存档时出现过序号错乱，错误覆盖（仅发生一次）；<br/>点击auto后按左键停止后会继续向下跳一页；</text><br/>读档后无法查看此位置前的历史记录|
 |鯨神のティアスティラ|在历史对话界面播放语音后，右键退出此界面，语音将自动终止|
 |9-nine-春色春恋春熙风/天色天歌天籁音/九次九日九重色|-|
 |墮落聖處女|<text style="color:red;">语音无法回放</text>|
