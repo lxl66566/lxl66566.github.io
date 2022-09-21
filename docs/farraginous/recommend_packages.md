@@ -55,10 +55,10 @@ Telegram第三方开源客户端，自带公共代理（建议配合校园网使
 ~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
 
 [官方下载地址](http://picacgs.com/)  [备用官方地址](http://picacgp.com/)  [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
-### Keepass2Android
-开源多端密码管理器，可配合PC端KeePassXC使用。
+### Keepass系列
+开源多端密码管理器。其中Keepass2Android是Android端的软件，而KeePassXC则是PC端的。
 
-[Android端官方项目地址](https://github.com/PhilippC/keepass2android) | [PC端官方项目地址](https://github.com/keepassxreboot/keepassxc)
+[Keepass2Android项目地址](https://github.com/PhilippC/keepass2android) | [KeePassXC项目地址](https://github.com/keepassxreboot/keepassxc)
 ### 蓝奏云
 比较推荐的云盘。PC上可直接从[网站主页](https://wwa.lanzoui.com/)进入。*（本页所有私链下载文件均保存于蓝奏云）*
 

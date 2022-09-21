@@ -4,13 +4,15 @@
 *（注：此处的维护记录指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2022
 ### .09
+#### 2022.09.21
+* 新增[C++#在vscode中配置环境](../coding/Cpp.md#在vscode中配置环境)
 #### 2022.09.15
 * 维护[网址汇总](./recommend_websites.md)页面，新增大量条目，更改排版
 #### 2022.09.11
 * 新增[校内专栏](./college.md)页面
 #### 2022.09.08
 * 新增[音游#我的记录](../hobbies/rhythm_games.md#我的记录)四个图表
-* [软件汇总](./recommend_packages.md#软件汇总)新增[Keepass2Android](./recommend_packages.md#Keepass2Android)与[KeePassXC](./recommend_packages.md#KeePassXC)两个密码管理器
+* [软件汇总](./recommend_packages.md#软件汇总)新增Keepass2Android与KeePassXC两个密码管理器（已合并为[Keepass系列](./recommend_packages.md#keepass系列)）
 #### 2022.09.06
 * 新增[软件汇总#Seal](./recommend_packages.md#seal)
 * 新增[编程-工具-Github](../coding/github.md)页面
