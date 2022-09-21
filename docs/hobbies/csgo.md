@@ -1,12 +1,11 @@
 # CS:GO
-* **本文提供一些csgo的非常规设置方案**
-
-## 启用控制台
+## 非常规设置方案
+### 启用控制台
 ![控制台](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/csgo_settings_1.png)
 
 控制台是对csgo进行高级操作的基础。现在你可以按`~`键呼出控制台。
-## 切换国服
-### 如何切换
+### 切换国服
+#### 如何切换
 国服游玩csgo的优点是：
 * 无需加速器，延迟低
 * 匹配国人队友
@@ -20,7 +19,7 @@
 </div>
 
 2.在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
-### 切换后的设置
+#### 切换后的设置
 由于切换国服后csgo的语音会变成中文，若需要切换回英文语音请：
 1. 进入Steam安装目录下的Steam\steamapps\common\Counter-Strike Global Offensive\csgo文件夹
 2. 删除所有名称带有 audiochinese 的.vpk文件与全部三个名称带有 perfectworld 的.vpk文件 *（后者与语音无关，但建议删除）*
@@ -28,7 +27,7 @@
 :::tip 提示
 若更新后出现**文件缺失提醒**、**素材加载失败**或**语音变回中文**情况，请再次进入目录删除。
 :::
-## 调整纵横比
+### 调整纵横比
 
 游戏默认比例16:9，但调整成4:3有如下好处：
 * 更容易爆头
@@ -54,12 +53,12 @@
 <br/><img alt="注册表备份" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/csgo_settings_3.png"  width="40%" height="40%"/>
 :::
 
-## 显示FPS
+### 显示FPS
 在控制台中输入`net_graph 1`
 
 该命令还能显示ping值，丢包率，tick等。
 
-## 显示回合伤害
+### 显示回合伤害
 每回合结束后在左上角显示本回合伤害数据：
 
 
@@ -73,7 +72,7 @@ con_filter_text "damage";
 2. 保存关闭后重命名为”damage.cfg”
 3. 在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入 +exec damage
 
-## 一键跳投
+### 一键跳投
 比起手动跳投，一键跳投拥有更高的精确度。（理论上绝对精确）
 
 在控制台输入：
@@ -84,8 +83,19 @@ bind t +jumpthrow
 ```
 之后拉开投掷物后按`t`即可一键跳投。其中`t`也可更换为其他不冲突的按键。
 
-## 清除血迹
+### 清除血迹
 ```
 bind f "+lookatweapon;r_cleardecals"
 ```
 按`F`检视武器并清除血迹。也可将`r_cleardecals`指令绑定到其他键上。
+## 常用指令
+|用途|指令|
+| :-: | :-: |
+|设置最高金钱|`mp_maxmoney 16000`|
+|设置出生金钱|`mp_startmoney 16000`|
+|设置局时|`mp_roundtime 60`、`mp_roundtime_defuse 60`|
+|设置最大局数|`mp_maxrounds 30`|
+|取消购买空间限制|`mp_buy_anywhere 1`|
+|取消购买时间限制|`mp_buytime 1000`|
+|设置开始时原地冻结时间|`mp_buytime`|
+|设置友伤|`mp_friendlyfire 0/1`|

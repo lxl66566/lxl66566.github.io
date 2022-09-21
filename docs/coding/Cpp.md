@@ -1,7 +1,7 @@
 # C++
 ## 在vscode中配置环境
 1. 下载安装mingw编译器。我使用[chocolatey](https://chocolatey.org/)进行下载安装，好处是无需手动配置环境变量。
-    * 打开管理员下的命令提示符，执行`choco install mingw`，按提示进行安装。安装后，默认位置应为`C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64`。
+    * 打开管理员下的命令提示符，执行`choco install mingw`，按提示进行安装。安装后，默认位置应为`C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64`。（当然，得参考你的chocolatey安装位置）
 2. 在vscode中安装 *C/C++* 扩展。
 3. 在工作区打开一个文件夹，新建一个简单的helloworld.cpp文件（内容请自己写完）。
 4. `Ctrl + Shift + P`打开命令面板，搜索并点击`C/C++: Edit Configurations (UI)` ，将编译器路径改为mingw文件夹下的`/bin/g++.exe`；在*IntelliSense 模式* 下选择`gcc-x64`。此时vscode会自动在工作区创建`.vscode`存放配置。
