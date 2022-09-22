@@ -91,11 +91,15 @@ bind f "+lookatweapon;r_cleardecals"
 ## 常用指令
 |用途|指令|
 | :-: | :-: |
-|设置最高金钱|`mp_maxmoney 16000`|
 |设置出生金钱|`mp_startmoney 16000`|
-|设置局时|`mp_roundtime 60`、`mp_roundtime_defuse 60`|
+|设置最高金钱|`mp_maxmoney 16000`|
+|设置局时|`mp_roundtime 60`<br/>`mp_roundtime_defuse 60`|
 |设置最大局数|`mp_maxrounds 30`|
-|取消购买空间限制|`mp_buy_anywhere 1`|
-|取消购买时间限制|`mp_buytime 1000`|
+|取消购买时空限制|`mp_buytime 99999`<br/>`mp_buy_anywhere 1`|
 |设置开始时原地冻结时间|`mp_buytime`|
 |设置友伤|`mp_friendlyfire 0/1`|
+|设置可加入双方|`mp_humanteam any`|
+|设置时间流速|`host_timescale 20`|
+|无限弹药|`sv_infinite_ammo 1`|
+|显示着弹点|`sv_showimpacts 1`|
+|显示投掷物轨迹|`sv_grenade_trajectory 1`|

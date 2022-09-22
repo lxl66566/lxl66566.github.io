@@ -41,7 +41,7 @@
 |氤氲之白|-|2022.04.19|1|4|2|
 |9-nine-九次九日九重色<Badge type="tip" text="1" vertical="top" />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
 |星空列车与白的旅行|-|2022.03.08-<br/>2022.03.11|10|9|7|
-|仰望夜空星辰 - IF线|-|2022.01.29-<br/>2022.02.06|3|5|3|
+|仰望夜空的星辰 Interstellar Focus<Badge type="danger" text="3" vertical="top" />|-|2022.01.29-<br/>2022.02.06|3|5|3|
 |ATRI -My Dear Moments-|-|2022.01.02-<br/>2022.01.28|9|9|7|
 |龍姬混~日子2<Badge type="warning" text="2" vertical="top" />|-|2021.12.23-<br/>2022.01.27|2|10|5|
 |猫娘乐园 Vol.1 La Soleil 开店了！<Badge type="warning" text="2" vertical="top" />|-|2021.11.26-<br/>2021.12.20|4|9|5|
