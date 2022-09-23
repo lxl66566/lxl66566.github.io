@@ -67,7 +67,7 @@ ssh -T git@github.com       #你可输入该命令验证是否成功
 ```
 :::
 
-若你遇到`ssh: connect to host github.com port 22: Connection refused`错误，可以参考[疑难解答](#疑难解答)。
+若你遇到`ssh: connect to host github.com port 22: Connection refused` / `bash: clip: command not found`错误，可以参考[疑难解答](#疑难解答)。
 #### 上传到远程仓库
 请确保已连接远程仓库。
 ```sh
@@ -180,5 +180,9 @@ git config --global --add safe.directory '*'
 >   Port 443
 > ```
 > 此时回到[这里](#连接远程仓库)进行实验。成功连接即解决问题。
+
+* 复制密钥时遇到`bash: clip: command not found`错误。
+> `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
+> 不过这只是复制一个密钥的事，用不着那么麻烦。执行`cat ~/.ssh/id_rsa.pub`手动复制你的密钥即可。
 
 [^1]:按`i`或`a`进入insert模式，编辑完后按esc进入normal模式，输入`:wq`保存并退出。更多命令请看[这里](https://yianwillis.github.io/vimcdoc/doc/quickref.html#quickref)或者[这里](https://coolshell.cn/articles/5426.html)。
