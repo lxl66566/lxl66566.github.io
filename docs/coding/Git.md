@@ -152,7 +152,7 @@ git push origin :refs/tags/TAGNAME
 3. 双击运行即可。
 
 ::: tip
-脚本执行过程中若报错，将在一闪而过的错误信息后直接关闭。若需禁用自动关闭，请添加`exec /bin/bash`指令至末行。
+脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
 :::
 ### 将注释设为当前时间
 ```sh
@@ -183,6 +183,7 @@ git config --global --add safe.directory '*'
 
 * 复制密钥时遇到`bash: clip: command not found`错误。
 > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
+> 
 > 不过这只是复制一个密钥的事，用不着那么麻烦。执行`cat ~/.ssh/id_rsa.pub`手动复制你的密钥即可。
 
 [^1]:按`i`或`a`进入insert模式，编辑完后按esc进入normal模式，输入`:wq`保存并退出。更多命令请看[这里](https://yianwillis.github.io/vimcdoc/doc/quickref.html#quickref)或者[这里](https://coolshell.cn/articles/5426.html)。
