@@ -79,15 +79,29 @@ con_filter_text "damage";
 ```
 alias +jumpthrow"+jump;-attack;-attack2"
 alias -jumpthrow -jump
-bind t +jumpthrow
+bind "t" "+jumpthrow"
 ```
 之后拉开投掷物后按`t`即可一键跳投。其中`t`也可更换为其他不冲突的按键。
 
 ### 清除血迹
+`bind "shift" "+speed;r_cleardecals"` 或者 `bind f "+lookatweapon;r_cleardecals"`
+### 一键大跳
 ```
-bind f "+lookatweapon;r_cleardecals"
+alias +cjump "+jump; +duck"
+alias -cjump "-jump; -duck"
+bind "mouse5" "+cjump"
 ```
-按`F`检视武器并清除血迹。也可将`r_cleardecals`指令绑定到其他键上。
+### 缩小雷达图
+`cl_radar_scale 0.3`可以使雷达图包含的信息更多。
+### 快速切指定道具
+`bind "6" "use weapon_smokegrenade"`
+* 闪光弹 weapon_flashbang
+* 烟雾弹 weapon_smokegrenade
+* 诱饵弹 weapon_decoy
+* 手雷 weapon_hegrenade
+* 燃烧弹 weapon_incgrenade
+### 静步加快
+`bind "c"+moveup` 仅适用于内格父，开镜的SG 553和AUG。
 ## 常用指令
 |用途|指令|
 | :-: | :-: |
