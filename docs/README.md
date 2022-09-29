@@ -1,7 +1,8 @@
-<!-- ---
-home: true
-heroImage: /image/logo.jpg
---- -->
+---
+# home: true
+# heroImage: /image/logo.jpg
+# sidebar: 'auto'
+---
 
 # 绝对值_x的博客
 
@@ -26,9 +27,9 @@ heroImage: /image/logo.jpg
 
 绿色字体的都是能点的。不妨点点看，说不定就进了~~奇怪的地方~~。右上角搜索，提供按标题关键字搜索服务。
 ## 关于作者
-* 前往[闲聊：关于作者](./gossip.md#关于作者)
+* 前往[闲聊：关于作者](./gossip/author.md)
 ## 关于博客
 * 使用 [vuepress2](https://v2.vuepress.vuejs.org/zh/) 搭建，默认主题，极简风格
 * 部署于Github Pages，[项目地址](https://github.com/lxl66566/lxl66566.github.io)
-* 前往[闲聊：vuepress2与博客心得](./gossip.md#vuepress2与博客心得)
+* 前往[闲聊：vuepress2与博客心得](./gossip/withvuepress2.md)
 * 前往[博客维护日志](./farraginous/log.md)

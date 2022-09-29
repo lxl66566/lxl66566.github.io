@@ -27,6 +27,7 @@ export default defineUserConfig({
             children: [
               '/coding/Rust.md',
               '/coding/Cpp.md',
+              '/coding/csharp.md',
             ]
           },
           {
@@ -74,11 +75,11 @@ export default defineUserConfig({
       },
       {
         text : '文章',
-        link : '/my_articles.md',
+        link : '/articles/',
       },
       {
         text : '闲聊',
-        link : '/gossip.md',
+        link : '/gossip/',
       },
       {
         text : '随笔',
@@ -92,15 +93,52 @@ export default defineUserConfig({
     tip: '提示',
     warning: '注意',
     danger: '警告',
-    // sidebar:{
-    //   '/docs/': 'auto',
-    //   '/docs/test/': [
-    //     {
-    //       text: '关于作者',
-    //       children: ['/test/test.md', '/test/gossip.md'],
-    //     },
-    //   ],
-    // },
+    sidebar:{
+      '/gossip/': [
+        {
+          text : '闲聊',
+          link : '/gossip/',
+          children: ['author.md','schedule.md','hope_of_coding_language.md','fuckqq.md','difficulties.md','withvuepress2.md'],
+        },
+      ],
+      '/articles/': [
+        {
+          text : '我的文章',
+          link : '/articles/',
+          children: ['computer_setting.md','vpn.md','Androi_ISA.md','time_record.md','track_record.md'],
+        },
+      ],
+      '/': [
+        '../README.md',
+        {
+          text : '闲聊',
+          link : '/gossip/',
+          children: ['/gossip/author.md','/gossip/schedule.md','/gossip/hope_of_coding_language.md','/gossip/fuckqq.md',
+          '/gossip/difficulties.md','/gossip/withvuepress2.md'],
+        },
+        {
+          text : '我的文章',
+          link : '/articles/',
+          children: ['/articles/computer_setting.md','/articles/vpn.md','/articles/Androi_ISA.md',
+          '/articles/time_record.md','/articles/track_record.md'],
+        },
+        {
+          text : '编程',
+          children: ['/coding/Rust.md','/coding/Cpp.md','/coding/csharp.md','/coding/github.md','/coding/Git.md','/coding/othertools.md'],
+        },
+        {
+          text : '爱好',
+          children: ['/hobbies/rhythm_games.md','/hobbies/galgame.md','/hobbies/csgo.md','/hobbies/Minecraft.md','/hobbies/books.md',
+          '/hobbies/anime.md','/hobbies/other_games.md',],
+        },
+        {
+          text : '杂项',
+          children: ['/farraginous/recommend_packages.md','/farraginous/recommend_websites.md','/farraginous/college.md',
+          '/farraginous/atri.md','/farraginous/reciter.md','/farraginous/log.md',
+        ],
+        },
+      ],
+    },
   }),
   plugins: [
     searchPlugin({

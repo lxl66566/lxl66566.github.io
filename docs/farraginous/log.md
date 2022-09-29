@@ -1,9 +1,17 @@
+---
+sidebar: 'auto'
+---
 # 博客日志
 ***记录下我跟博客的点点滴滴。*** 本版块于20220721开始记录，更早的提交只能通过github历史版本比对记录，缺漏无可奈何，实属遗憾。~~（因为有时候我改了但会等待大更新才提交）~~ 日后将不间断更新日志。
 
 *（注：此处的维护记录指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2022
 ### .09
+#### 2022.09.29
+* **大更新：重写博客sidebar逻辑**
+* 新增[编程-C#](../coding/csharp.md)页面
+#### 2022.09.28
+* 新增[校内专栏#校内极限生存](./college.md#校内极限生存)
 #### 2022.09.21
 * 新增[C++#在vscode中配置环境](../coding/Cpp.md#在vscode中配置环境)
 * 新增[csgo#常用指令](../hobbies/csgo.md#常用指令)
@@ -21,12 +29,12 @@
 #### 2022.09.03
 * 新增[OSU能力变化表](../hobbies/rhythm_games.md#我的记录)
 #### 2022.09.01
-* [使用vue组件创建背词器失败](../gossip.md#html转vue组件失败问题)
+* [使用vue组件创建背词器失败](../gossip/withvuepress2.md#html转vue组件失败问题)
 ### .08
 #### 2022.08.31
 * 新增[背词器](../farraginous/reciter.md)，功能还未完全实现
 #### 2022.08.29
-* 维护[初级科学上网](../hide/vpn.md)页面
+* 维护[初级科学上网](../articles/vpn.md)页面
 #### 2022.08.28
 * 修正了运动图表错误
 #### 2022.08.27
@@ -37,11 +45,11 @@
 #### 2022.08.22
 * 新增[番剧#我计划看](../hobbies/anime.md#我计划看)
 #### 2022.08.18
-* 新增[闲聊-生活中遇到的困难](../gossip.md#生活中遇到的困难)
+* 新增[闲聊-生活中遇到的困难](../gossip/difficulties.md)
 #### 2022.08.17
-* [安装<span v-pre>$\LaTeX$</span>插件](../gossip.md#关于数学插件)并实装
+* [安装<span v-pre>$\LaTeX$</span>插件](../gossip/withvuepress2.md#关于数学插件)并实装
 #### 2022.08.15
-* 紧急修复：文件损坏导致的`keysnum`与`GBperprice`图表、[初级科学上网](../hide/vpn.md)缺失问题。（同时导致了其他的一系列问题）
+* 紧急修复：文件损坏导致的`keysnum`与`GBperprice`图表、[初级科学上网](../articles/vpn.md)缺失问题。（同时导致了其他的一系列问题）
 * 调整运动图表
 #### 2022.08.14
 * 添加运动页面与图表
@@ -59,7 +67,7 @@
 #### 2022.08.06
 * 维护 [网址汇总#TG推荐](./recommend_websites.md#tg推荐)
 #### 2022.08.05
-* 维护 [初级科学上网](../hide/vpn.md)，添加机场性价比图表
+* 维护 [初级科学上网](..//articles/vpn.md)，添加机场性价比图表
 #### 2022.08.03
 * 修复 图片加载失败问题：使用cdn加速
 ### .07
@@ -68,7 +76,7 @@
 #### 2022.07.29
 * 改为使用图床存放图片(images分支)
 * 新增 [游戏-其他游戏#明日方舟](../hobbies/other_games.md#明日方舟)，[文章#Windows端记录软件使用时长](../my_articles.md#windows端记录软件使用时长)
-* 维护 [VuePress2与博客心得](../gossip.md#vuepress2与博客心得)
+* 维护 [VuePress2与博客心得](../gossip/withvuepress2.md)
 #### 2022.07.26
 * 新增 [galgame#吐槽一下](../hobbies/galgame.md#吐槽一下)
 #### 2022.07.21
@@ -78,9 +86,9 @@
 * 添加评论插件
 * 修复Vue组件注册失败的问题
 #### 2022.07.18
-* 新增 [闲聊#VuePress2与博客心得](../gossip.md#vuepress2与博客心得)
+* 新增 [闲聊#VuePress2与博客心得](../gossip/withvuepress2.md)
 #### 2022.07.17
-* 为 [游戏-音游](../hobbies/rhythm_games.md#总体现况)、[闲聊-生存意义](../gossip.md#生存意义) 添加[g2plot](https://g2plot.antv.vision/zh)图表
+* 为 [游戏-音游](../hobbies/rhythm_games.md#总体现况)、[闲聊-生存意义](../gossip/author.md#生存意义) 添加[g2plot](https://g2plot.antv.vision/zh)图表
 * 添加黑幕样式并实装
 * 尝试添加vue组件失败
 #### 2022.07.13
@@ -101,7 +109,7 @@
 #### 2022.06.28
 * 新增 [galgame#我的设置](../hobbies/galgame.md#我的设置)
 #### 2022.06.25
-* 新增 [闲聊#我的爱好](../gossip.md#我的爱好)、[游戏-galgame](../hobbies/galgame.md)
+* 新增 [闲聊#我的爱好](../gossip/author.md#我的爱好)、[游戏-galgame](../hobbies/galgame.md)
 #### 2022.06.23
 * 添加代码染色插件并实装
 * 维护 [编程-Git](../coding/Git.md)
@@ -111,22 +119,22 @@
 * 新增 [网址汇总#其他游戏&TG推荐](./recommend_websites.md#tg推荐)
 * 维护 [游戏-音游](../hobbies/rhythm_games.md)、[编程-C++](../coding/Cpp.md)、[回忆录](../hide/memories.md)
 #### 2022.06.17
-* 新增 [游戏-音游](../hobbies/rhythm_games.md)、[闲聊#QQ有多难用](../gossip.md#qq有多难用)
+* 新增 [游戏-音游](../hobbies/rhythm_games.md)、[闲聊#QQ有多难用](../gossip/fuckqq.md)
 #### 2022.06.16
 * 取消editLink与contributors
 #### 2022.06.13
 * 新增 [编程-Git#高级技巧](../coding/Git.md#高级技巧)、[闲聊-初级科学上网（现：文章-~）](../my_articles.md#科学上网初级)
 #### 2022.06.11
-* 新增 [编程-C++](../coding/Cpp.md)、[闲聊#回忆录&对编程语言的希望](../gossip.md#对编程语言的希望)
+* 新增 [编程-C++](../coding/Cpp.md)、[闲聊#回忆录&对编程语言的希望](../gossip/hope_of_coding_language.md)
 ### .05
 #### 2022.05.26
-* 新增 [闲聊#灵感&对美好未来社会的愿景](../gossip.md#对美好未来社会的愿景)
+* 新增 [闲聊#灵感&对美好未来社会的愿景](../gossip/)
 #### 2022.05.21
-* 新增 [我的文章-Win10设置开机自启动（现：设置开机自启动）](../my_articles.md#设置开机自启动)、[闲聊#日程区](../gossip.md#日程区)
+* 新增 [我的文章-Win10设置开机自启动（现：设置开机自启动）](../my_articles.md#设置开机自启动)、[闲聊#日程区](../gossip/schedule.md)
 #### 2022.05.17
 * 新增 [游戏-我的世界](../hobbies/Minecraft.md)
 #### 2022.05.16
-* 新增 [Rust#字符串修改](../coding/Rust.md#字符串修改)、[关于作者#习惯（现：关于作者#性格&生活细节）](../gossip.md#性格&生活细节)
+* 新增 [Rust#字符串修改](../coding/Rust.md#字符串修改)、[关于作者#习惯（现：关于作者#性格&生活细节）](../gossip/author.md#性格生活细节)
 #### 2022.05.10
 * 新增 [杂项-atri](./atri.md)
 #### 2022.05.06
@@ -134,8 +142,8 @@
 * 新增 [编程-Git](../coding/Git.md)&[其他工具](../coding/othertools.md)、[随笔](../essay.md)
 #### 2022.05.05
 * 新增 [杂项-我的文章#查看手机cpu指令集（现：文章-~）](../my_articles.md#查看手机cpu指令集)
-* 更新 [主页](../README.md)、[闲聊-关于作者#QA](../gossip.md#qa)
+* 更新 [主页](../README.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
 #### 2022.05.04
 * 发布博客
-* 创建 [主页](../README.md)、[闲聊-关于作者](../gossip.md#关于作者)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、[游戏-csgo游戏配置（现：CS:GO）](../hobbies/csgo.md)
+* 创建 [主页](../README.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、[游戏-csgo游戏配置（现：CS:GO）](../hobbies/csgo.md)
 * 添加搜索插件

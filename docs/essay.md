@@ -1,3 +1,6 @@
+---
+sidebar: 'auto'
+---
 # 随笔
 
 <div class="subtitle">——这里也许是谜语人的处所。也许是闷声者的温巢。</div>

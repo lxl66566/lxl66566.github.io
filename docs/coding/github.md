@@ -1,3 +1,6 @@
+---
+sidebar: 'auto'
+---
 # Github
 [跳转官网](https://github.com/)
 
@@ -9,7 +12,7 @@ Github是全球最大的~~同性交友平台~~ 源代码托管服务平台，拥
 * 首先，github服务器在国外，国内访问速度慢且有几率连接不上。请：
     * 使用校园网访问
     * 使用加速器访问，如[steam++](../farraginous/recommend_packages.md#steam)或[dev-sidecar](https://github.com/docmirror/dev-sidecar)
-    * [科学上网](../hide/vpn.md)
+    * [科学上网](../articles/vpn.md)
     * 更换访问时间段
 
 > 顺带一提，本博客也部署在Github上，所以想在此博客获得更好的阅读体验，请同样采纳上述建议。

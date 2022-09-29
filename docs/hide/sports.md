@@ -1,5 +1,6 @@
 ---
-pageClass: custom-page-class
+pageClass: custom-page-class---
+sidebar: 'auto'
 ---
 
 # 运动

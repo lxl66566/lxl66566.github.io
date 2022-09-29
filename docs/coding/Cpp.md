@@ -1,3 +1,6 @@
+---
+sidebar: 'auto'
+---
 # C++
 ## 在vscode中配置环境
 1. 下载安装mingw编译器。我使用[chocolatey](https://chocolatey.org/)进行下载安装，好处是无需手动配置环境变量。

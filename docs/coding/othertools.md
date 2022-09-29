@@ -1,10 +1,13 @@
+---
+sidebar: 'auto'
+---
 # 其他工具
 ## anaconda
 提供python包管理与虚拟环境。
 
 对我来说则是打包工具。由于pyinstaller的打包会将环境内所有的工具包都整合到一起，因此使用anaconda的虚拟环境隔离出运行所需环境，可以减小打包的体积。
 
-Anaconda体积过于庞大（6G+），因此对于python打包来说，建议仅安装miniconda。
+Anaconda体积过于庞大（6G+），**强烈建议安装miniconda**。<span class="heimu" title="你知道的太多了">Anaconda捆绑祸害了多少编程新人！</span>
 ### 基本命令
 #### 创建环境
 ```batch

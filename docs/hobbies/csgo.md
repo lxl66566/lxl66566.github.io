@@ -1,4 +1,8 @@
+---
+sidebar: 'auto'
+---
 # CS:GO
+CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此需要[时不时戒一段时间](../hide/personal_details.md#强迫自己做的事)。
 ## 非常规设置方案
 ### 启用控制台
 ![控制台](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/csgo_settings_1.png)
