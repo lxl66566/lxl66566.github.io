@@ -127,3 +127,88 @@ export default defineUserConfig({
 网上的关于SFC的解释非常的含糊其辞。几乎没有实例。
 
 现在无法正常执行js脚本。
+## 配置sidebar问题
+由于我一开始对sidebar的机制并不清楚，官方文档的教程也无法满足我的需求，于是就自己慢慢摸了几个小时…**此处只讲述如何*在不同子路径中使用不同的侧边栏* 这一泛用性广但示例少的解决方案。**
+
+首先，sidebar配置结构为`绝对路径:sidebar对象`这样的键值对。一个sidebar对象有：
+* `text`，表示该栏显示的文字
+* `link`，表示点击该栏后跳转的位置
+* `children`，表示该栏下的sidebar对象
+
+当然它也可以是一个路径字符串，其他功能由vuepress2帮你自动生成。
+
+另外，若需要为文件夹做一个向导，应在文件夹内部添加`README.md`主页。指向该主页的路径为文件夹名称。使指定页面覆盖配置，自动生成sidebar需要在该页面顶部添加[sidebar frontmatter](https://v2.vuepress.vuejs.org/zh/reference/default-theme/frontmatter.html#sidebar)。
+
+下面是我的sidebar配置参考。
+```ts
+sidebar:{
+    '/gossip/': [
+    {
+        text : '闲聊',
+        link : '/gossip/',
+        children: ['author.md',...],
+    },
+    ],
+    '/articles/': [
+    {
+        text : '我的文章',
+        link : '/articles/',
+        children: ['computer_setting.md',...],
+    },
+    ],
+    '/': [
+    '../README.md',
+    {
+        text : '闲聊',
+        link : '/gossip/',
+        children: ['/gossip/author.md',...],
+    },
+    {
+        text : '我的文章',
+        link : '/articles/',
+        children: ['/articles/computer_setting.md',...],
+    },
+    {
+        text : '编程',
+        children: ['/coding/Rust.md',...],
+    },
+    {
+        text : '爱好',
+        children: ['/hobbies/rhythm_games.md',...],
+    },
+    {
+        text : '杂项',
+        children: ['/farraginous/recommend_packages.md',...],
+    },
+    ],
+},
+```
+
+17行写的是`'../README.md'`而不是`'/README.md'`，是因为我需要让某些二级页面也能显示主页的侧边栏，为此提供索引。主页已经在顶层目录下，无法向前回退。
+
+### vuepress v1.x的要求
+vuepress1的配置有一点不一样。
+
+v1.x sidebar工作机制为：**从上到下寻找该页面匹配的绝对路径前缀，若匹配则使用该sidebar对象**。这使我需要把多级sidebar放在前而根目录放在最后。还好[v1.x文档对此有警告](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html#%E5%A4%9A%E4%B8%AA%E4%BE%A7%E8%BE%B9%E6%A0%8F)。
+
+团队使用的[vuepress-theme-hope](https://vuepress-theme-hope.github.io/v1/zh/)主题中，sidebar对象有以下字段：
+* `title`：规定显示的文字
+* `link`：表示点击该栏后跳转的位置
+* `prefix`：路径前缀
+* `children`：子对象
+
+一个配置示例为：
+```js
+sidebar: {
+    "/": [
+        "/",
+        {
+            title: "教程系列",
+            link: "/Learning-list/",
+            prefix: "/Learning-list/",
+            collapsable: false,
+            children: ["git/", "OpenGL/", "Linux/", "如何浅层地使用pgp加密.md", ],
+        },
+    ],
+},
+```
