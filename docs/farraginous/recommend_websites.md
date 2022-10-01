@@ -93,4 +93,4 @@ sidebar: 'auto'
 ### vpn
 建议去看[初级科学上网页面](../articles/vpn.md)，你可以在那些机场的官网找到TG群组链接。
 ### 其他
-* [Iyouport](https://t.me/iyouport)：教你如何保护自己，也附带散播恐慌
+* [Iyouport](https://t.me/iyouport)：教你如何保护自己
