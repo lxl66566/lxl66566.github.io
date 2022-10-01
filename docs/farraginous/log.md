@@ -7,6 +7,8 @@ sidebar: 'auto'
 *（注：此处的维护记录指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2022
 ### .09
+#### 2022.09.30
+* 新增[VuePress2与博客心得#配置sidebar问题](../gossip/withvuepress2.md#配置sidebar问题)
 #### 2022.09.29
 * **大更新：重写博客sidebar逻辑**
 * 新增[编程-C#](../coding/csharp.md)页面

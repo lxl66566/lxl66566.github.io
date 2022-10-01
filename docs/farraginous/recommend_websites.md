@@ -5,12 +5,12 @@ sidebar: 'auto'
 我的收藏夹东西很多，但是太杂太乱，此处仅列出部分。
 ## 我的杂类网站
 （一些不好分类的网站
-
 * [DOWNSUB](https://downsub.com/)：youtube下载字幕。对于讲话型视频，下载字幕观看能节省很多时间。
 * [webtor](https://webtor.io/)：在线解析磁链（并在线播放）。<span class="heimu" title="你知道的太多了">一般作验车用（</span>
+* [1paragraph](https://1paragraph.app/)：在线网页EPUB阅读器
+* [desmos](https://www.desmos.com/calculator?lang=zh-CN)：在线画图表（实验作图）
 * [蓝奏云](https://wwa.lanzoui.com/) ：云存储 *（[跳转介绍](recommend_packages.md/#蓝奏云)）*
 * [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
-* [1paragraph](https://1paragraph.app/)：在线网页EPUB阅读器
 ## 合集类
 * [即时工具](https://www.67tool.com/)：致力打造安全、快捷、好用的在线工具箱~
 * [LKs Site](http://lkssite.vip/)：B站up主做的网页推荐站，还没探索完。本站部分内容为此站精简提取而来。
@@ -46,6 +46,7 @@ sidebar: 'auto'
 * [AI图片放大](https://bigjpg.com/)
 * 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
 * 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)
+* [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
 * 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/)
 * [片头制作](https://panzoid.com/)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！

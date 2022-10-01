@@ -54,22 +54,22 @@ sidebar: 'auto'
 
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="280"></iframe>
 
-* 叠力变化图
+* Jackmap变化图
 
 <iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280"></iframe>
 
-* Tech力变化图
+* Techmap变化图
 
 <iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_tech.html" width="100%" height="280"></iframe>
 
-* 切力变化图
+* Speedmap变化图
 
 <iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280"></iframe>
 
-* 乱力变化图
+* Staminamap/Stream变化图
 
 <iframe frameborder="no" src="/charts/reform_stamina.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_stream.html" width="100%" height="280"></iframe>
