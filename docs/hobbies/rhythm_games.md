@@ -146,35 +146,8 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 
 * 键数记录
 
-[KeyOverlay](https://github.com/Friedchicken-42/KeyOverlay)，还有一些敲击动画，推荐直播的时候用。（当然我只是单纯拿来记录键数的。。
+[osu-kps](https://github.com/UnnamedOrange/osu-kps)，具有kps图表与键数记录。当然，它甚至还能在osu的replay中记录键数。
 
-:::details 这里是我个人的config.ini内容
-```
-[General]
-height=700
-width=100
-keySize=70
-barSpeed=600
-backgroundColor=0,0,0,255
-margin=25
-outlineThickness=5
-fading=yes
-counter=yes
-fps=60
-[Keys]
-key1=S
-key2=D
-key3=Numpad4
-key4=Numpad5
-[Display]
-key3=4
-key4=5
-[Size]
-[Colors]
-key2=83,142,212,255
-key3=83,142,212,255
-```
-:::
 * 夹带私货
 
 我写的[自动调整mania皮肤水平位置](https://github.com/lxl66566/osu-ColumnStart-adjustor)的脚本。

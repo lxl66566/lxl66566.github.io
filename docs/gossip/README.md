@@ -2,7 +2,7 @@
 请选择你想进入的闲聊板块。
 1. [关于作者](./author.md)
 2. [作者的日程库](./schedule.md)
-3. <span class="heimu" title="你知道的太多了">[对美好未来社会的愿景](hide/wish.md)</span>
+3. <span class="heimu" title="你知道的太多了">[愿景](../hide/wish.md)</span>
 4. [对编程语言的希望](./hope_of_coding_language.md)
 5. [QQ有多难用](./fuckqq.md)
 6. [生活中遇到的困难](./difficulties.md)
