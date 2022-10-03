@@ -28,6 +28,7 @@ export default defineUserConfig({
               '/coding/Rust.md',
               '/coding/Cpp.md',
               '/coding/csharp.md',
+              '/coding/python.md',
             ]
           },
           {
@@ -35,7 +36,6 @@ export default defineUserConfig({
             children: [
               '/coding/github.md',
               '/coding/Git.md',
-              '/coding/othertools.md',
           ]
           },
         ],
@@ -124,7 +124,7 @@ export default defineUserConfig({
         },
         {
           text : '编程',
-          children: ['/coding/Rust.md','/coding/Cpp.md','/coding/csharp.md','/coding/github.md','/coding/Git.md','/coding/othertools.md'],
+          children: ['/coding/Rust.md','/coding/Cpp.md','/coding/csharp.md','/coding/python.md','/coding/github.md','/coding/Git.md',],
         },
         {
           text : '爱好',

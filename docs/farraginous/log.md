@@ -6,6 +6,9 @@ sidebar: 'auto'
 
 *（注：此处的维护记录指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2022
+### .10
+#### 2022.10.03
+* 新增[编程-Python](../coding/python.md)页面，且整合了原*其他工具* 页面并更改排版。
 ### .09
 #### 2022.09.30
 * 新增[VuePress2与博客心得#配置sidebar问题](../gossip/withvuepress2.md#配置sidebar问题)
@@ -141,7 +144,7 @@ sidebar: 'auto'
 * 新增 [杂项-atri](./atri.md)
 #### 2022.05.06
 * 更改navbar逻辑
-* 新增 [编程-Git](../coding/Git.md)&[其他工具](../coding/othertools.md)、[随笔](../essay.md)
+* 新增 [编程-Git](../coding/Git.md)&*其他工具（已整合为[python](../coding/python.md)页面）*、[随笔](../essay.md)
 #### 2022.05.05
 * 新增 [杂项-我的文章#查看手机cpu指令集（现：文章-~）](../my_articles.md#查看手机cpu指令集)
 * 更新 [主页](../README.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
