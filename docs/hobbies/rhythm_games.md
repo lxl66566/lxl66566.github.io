@@ -210,21 +210,21 @@ adb restore NAME.ab
 
 我在arc打歌基本只打好听的戳xp的曲子，这也导致了我在各曲子上的实力极度不均衡。
 ### 账号
-本人账号（917042883）0氪，很久没登录了。一直在借别人的号离线打。*（4.0段位要联网，寄）*<span class="heimu" title="你知道的太多了">在这里不要脸地向可能存在的大佬借号！</span>
+本人账号（917042883）0氪，很久没登录了。一直在借别人的号打。<span class="heimu" title="你知道的太多了">感谢NitroYlide和Colinxu29</span>
 ### 我的XP
 此处列出一些我觉得好听的曲子（Favorites的一部分）。（排名按照FTR难度顺序）
 
 <=9: Particle Arts, Alice's Suitcase, Equilibrium, Vindication
 
-9+: 7thSense, Far Away Light, Lost Desire, Sulfur
+9+: 7thSense, Defection, Far Away Light, Infinite Strife,, Lost Desire, Sulfur
 
-10: cyanine, GLORY : ROAD, Löschen, Oshama Scramble!, PRAGMATISM, Sheriruth, アリス・リデルに捧ぐ, 妖艶魔女 -trappola bewitching-
+10: cyanine, GLORY : ROAD, Löschen, Oshama Scramble!, Pentiment, PRAGMATISM, Sheriruth, アリス・リデルに捧ぐ, 妖艶魔女 -trappola bewitching-
 
-10+: #1f1e33, AMAZING MIGHTYYYY!!!!, Cyaegha, Halcyon, ouroboros -twin stroke of the end-, 烈華RESONANCE, Ringed Genesis, Singularity, Tempestissimo, World Vanquisher
+10+: #1f1e33, AMAZING MIGHTYYYY!!!!, Cyaegha, Halcyon, ouroboros -twin stroke of the end-, 烈華RESONANCE, Ringed Genesis, Singularity, Stasis, Tempestissimo, Testify, World Vanquisher
 
 11: Aegleseeker, Grievous Lady, 最強STRONGER
 
 ### 最好成绩
-10.1 pure memory
+Sheriruth 10.1 pure memory
 
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1rF411g7mb&cid=574299849&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
