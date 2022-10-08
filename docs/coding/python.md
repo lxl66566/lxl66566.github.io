@@ -5,6 +5,24 @@ sidebar: 'auto'
 和[C++](./Cpp.md)页面一样杂乱，想到什么写什么。
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
+## 从网站获取图片
+```py
+import requests
+from PIL import Image
+from io import BytesIO
+response = requests.get(src)
+image = Image.open(BytesIO(response.content))
+image.show()
+```
+## 多图片转pdf
+```py
+import img2pdf
+temp = [BytesIO(...), BytesIO(...)]
+# temp 也可以是字符串数组，包含本地图片路径
+with open('第二册答案.pdf', "wb") as f:
+    write_content = img2pdf.convert(temp)
+    f.write(write_content)
+```
 ## miniconda
 提供python包管理与虚拟环境。
 
