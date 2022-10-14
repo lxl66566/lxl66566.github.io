@@ -124,17 +124,17 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 
 第二天我几乎是死心了，开始了自己融合皮肤的过程，希望能融出像原来那种的蓝白钉皮。自己融了整整一天，也融不出什么手感好的皮肤。
 
-然后在20220613晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了[absolute x v2](https://wwp.lanzout.com/ihINA06l9wdc)。（当前改版至[absolute x v5](https://wwp.lanzout.com/ivOwH098z2rc)）手感还不错，能够足够逼近原来的皮肤了。
+然后在20220613晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了absolute x v2。（当前改版至[absolute x v5](https://wwp.lanzout.com/ivOwH098z2rc)）手感还不错，能够足够逼近原来的皮肤了。
 ### 其他推荐
 * 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
 
-由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但f.lux可以免疫这个屏蔽，强制护眼，我还是觉得很舒服的。（P.S.免疫屏蔽不稳定，从桌面返回osu时经常需要尝试多次；win11能够稳定护眼。）
+由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但f.lux可以无视这个屏蔽（win10不稳定，win11稳定），强制护眼，我还是觉得很舒服的。
 
 * 键盘/轴推荐
 
-随便找个你喜欢的热插拔的机械键盘，然后把osu键位的轴换成趁手的。这是最经济实惠的办法，没有必要整个键盘都是昂贵的轴。
+随便找个你喜欢的热插拔轴的机械键盘，然后把osu键位的轴换成趁手的。这是最经济实惠的办法，没有必要整个键盘都是昂贵的轴。
 
-轴体以线性轴为佳。本人根据经验推荐ttc快银轴。由于对其他轴了解不深，只可给出[已用过的轴的评价](#键盘参数)以供参考。
+轴体以线性轴为佳。本人[根据经验推荐ttc快银轴](#键盘参数)。
 
 * 谱面下载
 
@@ -180,19 +180,14 @@ early过多，向正方向调整。 -->
 ### 数据转移
 同品牌手机可以用自带的换机工具转移。（例：小米换机）
 
-此处给出不同品牌手机的phigros数据转移方法（为[此来源](https://www.taptap.com/topic/13630492)的精简）：
+此处给出另一应用范围更广的phigros数据转移方法：
 
-1. 手机端连接好USB调试，打开phigros；与电脑端adb连接。
+1. 移动设备打开USB调试并与电脑端连接。
 2. 备份：
-```batch
-adb backup -f NAME.ab -noapk -noshared -nosystem com.PigeonGames.Phigros
-```
+* `adb backup -f NAME.ab -noapk -noshared -nosystem com.PigeonGames.Phigros`
 `NAME`最好包括游戏名、版本、备份时间等信息。
-
 3. 恢复：
-```batch
-adb restore NAME.ab
-```
+* `adb restore NAME.ab`
 
 [这里（Phigros 2.4.1）](https://github.com/lxl66566/my-key-data/releases/tag/backup)是我的用户数据，data充足，AT全解锁，有需要可以自取。
 ### 最好成绩
