@@ -7,3 +7,4 @@
 5. [QQ有多难用](./fuckqq.md)
 6. [生活中遇到的困难](./difficulties.md)
 7. [VuePress2与博客心得](./withvuepress2.md)
+8. [绝对值x是如何看待xxx的？~~一些锐评与想法~~](./consider.md)

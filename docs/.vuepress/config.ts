@@ -98,7 +98,7 @@ export default defineUserConfig({
         {
           text : '闲聊',
           link : '/gossip/',
-          children: ['author.md','schedule.md','hope_of_coding_language.md','fuckqq.md','difficulties.md','withvuepress2.md'],
+          children: ['author.md','schedule.md','hope_of_coding_language.md','fuckqq.md','difficulties.md','withvuepress2.md','consider.md'],
         },
       ],
       '/articles/': [
@@ -114,7 +114,7 @@ export default defineUserConfig({
           text : '闲聊',
           link : '/gossip/',
           children: ['/gossip/author.md','/gossip/schedule.md','/gossip/hope_of_coding_language.md','/gossip/fuckqq.md',
-          '/gossip/difficulties.md','/gossip/withvuepress2.md'],
+          '/gossip/difficulties.md','/gossip/withvuepress2.md','/gossip/consider.md',],
         },
         {
           text : '我的文章',
