@@ -67,6 +67,7 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
+|仰望夜空的星辰|2022.10.18||||+40min|
 |灵感满溢的甜蜜创想|2022.10.04|4|9.5|5|
 |アンレス テルミナリア|
 |魔女的夜宴|2022.02.10|5.7|8.8|9.5|
@@ -144,6 +145,7 @@ sidebar: 'auto'
 
 |游戏名|问题|
 | :----: | :----: |
+|仰望夜空的星辰|<text style="color:red;">文字较长时，自动速度过慢</text>；鼠标左右键均无法解除自动|
 |灵感满溢的甜蜜创想|无法关闭操作的效果语音<text style="color:red;">且会覆盖播放中的语音</text>；backlog界面下滑滚轮无法返回|
 |苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_exe_collapse.jpg)|
 |9-nine-新章 & 9-nine-雪色雪花雪余痕|使用オーバーロード跳转分支时，右侧滑动条会被弹出的存档遮挡|
