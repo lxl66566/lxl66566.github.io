@@ -4,7 +4,8 @@
 2. [作者的日程库](./schedule.md)
 3. <span class="heimu" title="你知道的太多了">[愿景](../hide/wish.md)</span>
 4. [对编程语言的希望](./hope_of_coding_language.md)
-5. [QQ有多难用](./fuckqq.md)
-6. [生活中遇到的困难](./difficulties.md)
-7. [VuePress2与博客心得](./withvuepress2.md)
-8. [绝对值x是如何看待xxx的？~~一些锐评与想法~~](./consider.md)
+5. [对算法比赛/OJ的希望](./hope_of_oj_contest.md)
+6. [QQ有多难用](./fuckqq.md)
+7. [生活中遇到的困难](./difficulties.md)
+8. [VuePress2与博客心得](./withvuepress2.md)
+9. [绝对值x是如何看待xxx的？~~一些锐评与想法~~](./consider.md)

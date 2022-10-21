@@ -23,19 +23,14 @@ Android端压缩/解压缩软件。（注：官方也有PC端软件）
 不要在国内应用商店下载该软件，均鉴定为盗版。
 :::
 [官网下载地址](https://www.zarchiver.me/zarchiver-apk/)  [私有下载地址](https://wwp.lanzout.com/i82ku049jz6j)
-### Via
-国产浏览器
+### m浏览器
+强大的浏览器，满足了我对Android浏览器的大部分幻想。
 
-优点：
-* **小！**
-* 纯净无广告
-* 自定义UA，支持电脑模式，可安装脚本
-* 不屏蔽任何网站
+* 拥有审查元素，查看网页源码，嗅探网页资源的功能。
+* 支持自定义拦截广告，悬浮视频，可调长按倍速的视频播放器。
+* 安装包仅9M。
 
-缺点：
-* 视频播放器很拉
-
-[官网下载地址](https://www.viayoo.com/zh-cn/) | 也可在国内应用商店下载
+[官网下载](http://mbrowser.nr19.cn/) | [私链](https://wwp.lanzout.com/iP7FA0eaqk8j)
 ### MT管理器
 MT管理器是一款强大的文件管理工具和APK逆向修改神器。（[摘自](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。
 
