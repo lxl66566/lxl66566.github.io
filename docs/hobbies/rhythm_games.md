@@ -78,6 +78,7 @@ sidebar: 'auto'
 * 上为reform段位，下为malody v3段位；MR等特殊MOD不显示。
 * `00:00后，睡前`还在打的键数计入上一天。
 * 健身按键数 20220809+：由于[OSU打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
+* 健身按键数 20221022?：由于osu-kps（记录键数的软件）崩溃，导致键数只能取估计值。
 :::
 
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)

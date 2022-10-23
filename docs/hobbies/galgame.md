@@ -16,7 +16,9 @@ sidebar: 'auto'
 * 选择支存档
 
 ## 资源
-下载：[推荐几个网址](../farraginous/recommend_websites.md#游戏) | [ネコパラ专页](https://n0099.net/res/)
+下载：[推荐几个网址](../farraginous/recommend_websites.md#游戏) | [ネコパラ专页](https://n0099.net/res/) | [PULLTOP](https://summer-pockets.top/onedrive02/sharepoint2/PULLTOP(%E6%98%93%E6%8B%89%E7%BD%90%E7%A4%BE)/) | [Yuzusoft](https://summer-pockets.top/onedrive02/sharepoint2/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/) | [ウグイスカグラ](https://summer-pockets.top/onedrive02/sharepoint2/UGUISU%20KAGURA(%E7%BA%B8%E9%AD%94%E7%A4%BE)/)
+
+> 解压密码详见[极点ACG公告](https://lspgal.com/5702/)
 
 在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator)。个人认为，比起vnr有以下优点：1. 小，仅44.3MB 2. 开源 3. 社区完善，依托于github；相比之下vnr依赖百度贴吧，资源BT失效，大多使用城通网盘，真让人火大<span class="heimu" title="你知道的太多了">ソラのむかつく顔</span>。
 ## 我已玩完
