@@ -53,7 +53,7 @@ Anaconda体积过于庞大（6G+），**强烈建议[安装miniconda](https://do
 #### 创建纯净环境
 我们使用[上述指令](#创建环境)创建环境后：
 
-<img alt="anaconda_list" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/anaconda_1.png"  width="65%" height="65%"/>
+<img alt="anaconda_list" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_1.png"  width="65%" height="65%"/>
 
 可以看到，conda帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
 
@@ -70,9 +70,17 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 
 2. 该目录下执行`conda create --name Name --file env.txt`
 
-![anaconda_pureenv](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/anaconda_2.png)
+![anaconda_pureenv](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_2.png)
 
 这样，一个纯净环境就创建好了，你可以[安装Pyinstaller](#安装)进行打包前的准备。
+### 在vscode中启用虚拟环境
+创建虚拟环境并引入依赖后，代码仍会收到vscode的报错：
+
+![set_vscode_environment](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/set_vscode_environment1.png)
+
+解决方法：
+1. `Ctrl + Shift + P`打开命令面板，搜索`Python: Select Interpreter`
+2. 选中你的虚拟环境
 ## Pyinstaller
 ### 安装
 `pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple`
