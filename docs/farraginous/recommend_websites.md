@@ -47,6 +47,7 @@ sidebar: 'auto'
 * 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
 * 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)
 * 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
+* 一键添加字幕，视频处理：[Media.io](https://www.media.io/)
 * 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/)
 * [片头制作](https://panzoid.com/)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！
