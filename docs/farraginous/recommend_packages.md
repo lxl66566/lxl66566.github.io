@@ -132,9 +132,9 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 
 [官网下载地址](http://www.bandisoft.com/)
 ### Potplayer
-视频播放器。轻量无广告，功能多，支持格式丰富。
+视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，导入字幕，视频截屏等<span class="heimu" title="你知道的太多了">本人</span>常用功能。
 
-[官网下载地址](https://potplayer.daum.net/)
+[官网下载地址](https://potplayer.daum.net/?lang=zh_CN)
 ### f.lux
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。（一般来说win10自带的夜间模式够用，但是它的权限更高，能在打游戏时也强制护眼。）
 

@@ -22,6 +22,7 @@ export default defineUserConfig({
       {
         text: '编程',
         children: [
+          '/coding/farraginous.md',
           {
             text: '语言',
             children: [
@@ -98,7 +99,7 @@ export default defineUserConfig({
         {
           text : '闲聊',
           link : '/gossip/',
-          children: ['author.md','schedule.md','hope_of_coding_language.md','fuckqq.md','difficulties.md','withvuepress2.md','consider.md'],
+          children: ['author.md','schedule.md','fuckqq.md','difficulties.md','withvuepress2.md','consider.md','hope.md'],
         },
       ],
       '/articles/': [
@@ -113,8 +114,8 @@ export default defineUserConfig({
         {
           text : '闲聊',
           link : '/gossip/',
-          children: ['/gossip/author.md','/gossip/schedule.md','/gossip/hope_of_coding_language.md','/gossip/fuckqq.md',
-          '/gossip/difficulties.md','/gossip/withvuepress2.md','/gossip/consider.md',],
+          children: ['/gossip/author.md','/gossip/schedule.md','/gossip/fuckqq.md','/gossip/difficulties.md',
+          '/gossip/withvuepress2.md','/gossip/consider.md','/gossip/hope.md',],
         },
         {
           text : '我的文章',
@@ -124,7 +125,8 @@ export default defineUserConfig({
         },
         {
           text : '编程',
-          children: ['/coding/Rust.md','/coding/Cpp.md','/coding/csharp.md','/coding/python.md','/coding/github.md','/coding/Git.md',],
+          children: ['/coding/farraginous.md','/coding/Rust.md','/coding/Cpp.md','/coding/csharp.md','/coding/python.md',
+          '/coding/github.md','/coding/Git.md',],
         },
         {
           text : '爱好',

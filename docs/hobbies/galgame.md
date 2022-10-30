@@ -16,7 +16,8 @@ sidebar: 'auto'
 * 选择支存档
 
 ## 资源
-下载：[推荐几个网址](../farraginous/recommend_websites.md#游戏) | [ネコパラ专页](https://n0099.net/res/) | [PULLTOP](https://summer-pockets.top/onedrive02/sharepoint2/PULLTOP(%E6%98%93%E6%8B%89%E7%BD%90%E7%A4%BE)/) | [Yuzusoft](https://summer-pockets.top/onedrive02/sharepoint2/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/) | [ウグイスカグラ](https://summer-pockets.top/onedrive02/sharepoint2/UGUISU%20KAGURA(%E7%BA%B8%E9%AD%94%E7%A4%BE)/)
+下载：[推荐几个网址](../farraginous/recommend_websites.md#游戏) | [ネコパラ专页](https://n0099.net/res/)
+ <!-- | [PULLTOP](https://summer-pockets.top/onedrive02/sharepoint2/PULLTOP(%E6%98%93%E6%8B%89%E7%BD%90%E7%A4%BE)/) | [Yuzusoft](https://summer-pockets.top/onedrive02/sharepoint2/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/) | [ウグイスカグラ](https://summer-pockets.top/onedrive02/sharepoint2/UGUISU%20KAGURA(%E7%BA%B8%E9%AD%94%E7%A4%BE)/) -->
 
 > 解压密码详见[极点ACG公告](https://lspgal.com/5702/)
 
@@ -72,11 +73,11 @@ sidebar: 'auto'
 |仰望夜空的星辰<Badge type="tip" text="1" vertical="top" />|2022.10.18|9|5|4.5|+40min+30min|
 |灵感满溢的甜蜜创想|2022.10.04|4|9.5|5|+40min|
 |アンレス テルミナリア|
-|魔女的夜宴|2022.02.10|5.7|8.8|9.5|
+|魔女的夜宴|2022.02.10|5.7|7.2|9.5|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
 |NEKOPARA VOL.3|2022.08.20|3.5|9|4|
 |NEKOPARA VOL.4
-|哥哥，早上起床之前都要抱紧我哦！<Badge type="tip" text="1" vertical="top" />|2021.02.14?|3|8.6|5|
+|哥哥，早上起床之前都要抱紧我哦！<Badge type="tip" text="1" vertical="top" />|2021.02.14?|3|8.6|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" vertical="top" />|
 |灰色的果实
 |DDLC *(steam)(暂时不玩)*|2021.11.11|?|3|?|
