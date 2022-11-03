@@ -18,7 +18,7 @@ sidebar: 'auto'
 * 搜电子书：[zlibrary（域名不固定）](https://zh.usa1lib.org/)
 * 搜二次元：[萌娘百科](https://zh.moegirl.org.cn/Mainpage)
 * 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN)
-* 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/) | [谷歌学术镜像](http://scholar.scqylaw.com/)
+* 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/)
 ## 新闻
 建议去[tg频道](#新闻)看新闻。
 * [今日热榜](https://tophub.today/) *（国内热搜榜汇总*
