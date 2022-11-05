@@ -71,6 +71,7 @@ export default defineUserConfig({
           '/farraginous/college.md',
           '/farraginous/atri.md',
           '/farraginous/reciter.md',
+          '/farraginous/learning/',
           '/farraginous/log.md',
         ]
       },
@@ -109,6 +110,13 @@ export default defineUserConfig({
           children: ['computer_setting.md','vpn.md','Androi_ISA.md','time_record.md','track_record.md'],
         },
       ],
+      '/farraginous/learning/':[
+        {
+          text : '学习笔记',
+          link : '/farraginous/learning/',
+          children: ['physics.md',],
+        }
+      ],
       '/': [
         '../README.md',
         {
@@ -136,7 +144,7 @@ export default defineUserConfig({
         {
           text : '杂项',
           children: ['/farraginous/recommend_packages.md','/farraginous/recommend_websites.md','/farraginous/college.md',
-          '/farraginous/atri.md','/farraginous/reciter.md','/farraginous/log.md',
+          '/farraginous/atri.md','/farraginous/reciter.md','/farraginous/learning/','/farraginous/log.md',
         ],
         },
       ],

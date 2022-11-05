@@ -7,10 +7,11 @@
 * 非纯粹意义党
 * 绝对理性
 * 节欲派
+* 激进派
+* 自由主义
 * 旋律党
 * 均衡型幻想
 * 健忘者
-* 超高校级直男
 * 音游人
 * 纯剧情gal
 ### QA
@@ -42,6 +43,10 @@
 * `旋律党`？
 
 喜欢的音乐 *[/听觉艺术]* 需要旋律优美。不接受空有节奏无旋律的曲子、rap&脱口秀、嘈杂的音乐。<span class="heimu" title="你知道的太多了">点名某些音游曲！</span>
+
+* 自由主义？
+
+坚实的版权反对者，主张自由开源；注重结果，主张低限约束。
 
 * `音游人`跟`意义党`是否冲突？
 
@@ -75,10 +80,10 @@
 * [我的世界](../hobbies/Minecraft.md)（小游戏服:hypixel,Domcer；生存服：秋月之光，cic 1.16服）
 * [明日方舟](../hobbies/other_games.md#明日方舟)
 * 东方绀珠传(99%) / 东方永夜抄(1%)
+* [CS:GO](../hobbies/csgo.md)
 ### 现在主要在玩
 * [纯剧情galgame](../hobbies/galgame.md)
 * [以 **OSU!mania 4k** 为主的音游](../hobbies/rhythm_games.md)
-* [CS:GO](../hobbies/csgo.md)
 * 黎明杀机
 
 ~~*终于熬到了上完课，双手激动地放上键盘，OSU!挥洒你的汗水。傍晚，为时5小时的夜生活开始，开始CSGO穿越枪林弹雨。经历大战后，在galgame老婆们的怀里沉沉睡去，这大概也算是一种幸福吧。*~~
@@ -102,12 +107,10 @@
 
 *[关于作者的更详细回答](../hide/personal_details.md)*
 ## 社交
-[我的哔哩哔哩账号](https://space.bilibili.com/346365047)
-
 [我的telegram频道](https://t.me/withabsolutex)
 
+[我的哔哩哔哩账号](https://space.bilibili.com/346365047)
+
 [我的osu账号](https://osu.ppy.sh/users/25751103)
-
 ## 音乐
-
-[我的网易云音乐歌单](https://music.163.com/playlist?id=3098200457&userid=2061039950)
+[我的网易云音乐歌单](https://music.163.com/playlist?id=3098200457&userid=2061039950)，但是平常并不听歌

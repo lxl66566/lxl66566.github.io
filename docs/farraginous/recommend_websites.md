@@ -15,7 +15,8 @@ sidebar: 'auto'
 * [即时工具](https://www.67tool.com/)：致力打造安全、快捷、好用的在线工具箱~
 * [LKs Site](http://lkssite.vip/)：B站up主做的网页推荐站，还没探索完。本站部分内容为此站精简提取而来。
 ## 搜索
-* 搜电子书：[zlibrary（域名不固定）](https://zh.usa1lib.org/)
+* 搜电子书：[~~zlibrary（域名不固定）~~](https://zh.usa1lib.org/)
+> 2022.11.04: 绝对值x悲哀地说：z-library离开了我们。
 * 搜二次元：[萌娘百科](https://zh.moegirl.org.cn/Mainpage)
 * 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN)
 * 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/)
