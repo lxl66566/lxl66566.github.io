@@ -43,12 +43,12 @@ MT管理器是一款强大的文件管理工具和APK逆向修改神器。（[�
 一键安装Google三件套
 
 [酷安下载地址](https://www.coolapk.com/apk/com.goplaycn.googleinstall) | [私链](https://wwp.lanzout.com/iYyA10686e7c)
-### Nekogram X
+### NekoX
 Telegram第三方开源客户端，自带公共代理（建议配合校园网使用）
 
 ~~但是在tg第三方内名声不算好(?~~
 
-[官方项目地址](https://github.com/NekoX-Dev/NekoX)  [私有下载地址](https://wwp.lanzout.com/ivNBf03de47c)
+[官方项目地址](https://github.com/NekoX-Dev/NekoX)  [私有下载地址](https://wwp.lanzout.com/ivUi00fbvmte)
 ### Picacg
 ~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
 
