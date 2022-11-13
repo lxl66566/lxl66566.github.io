@@ -86,20 +86,6 @@ tips：加速前需事先选择能通过连接测试的节点
 学生免费用360天，每月30G。[说明](https://glados.rocks/console/education)
 
 此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。
-### Simple Cloud
-[官网](https://spcloud.me/) | [邀请链接](https://spcloud.me/#/register?code=97EXi3tX)
-
-|月付|流量|限速|
-| :--: | :--: | :--: |
-|￥10.00|100G|1Gbps|
-|￥20.00|250G|1Gbps|
-|￥30.00|450G|1Gbps|
-
-|一次性|流量|限速|
-| :--: | :--: | :--: |
-|￥15.00|50G|未知|
-|￥25.00|100G|未知|
-|￥45.00|200G|未知|
 
 ### StarTrip（已跑路）
 <details><summary>archived</summary>
@@ -115,7 +101,8 @@ tips：加速前需事先选择能通过连接测试的节点
 </details>
 
 ### 貓貓互聯
-[官网](https://neko.services/) | [邀请链接](https://neko.services/#/register?code=xjZ5356D)
+[官网](https://neko.services/)
+ <!-- | [邀请链接](https://neko.services/#/register?code=xjZ5356D) -->
 
 |月付|流量|限速|
 | :--: | :--: | :--: |
@@ -129,7 +116,8 @@ tips：加速前需事先选择能通过连接测试的节点
 
 ### 魔戒
 此机场**仅有不限时流量出售**，价格挺便宜的
-[官网](https://www.mojie.link/#/plan) | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z)
+[官网](https://www.mojie.link/#/plan)
+ <!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
 
 |一次性|流量|限速|
 | :--: | :--: | :--: |
@@ -144,8 +132,39 @@ tips：加速前需事先选择能通过连接测试的节点
 以下机场因性价比原因不推荐购买；数据已久未更新。
 :::
 
+### XFLTD
+[官网](https://xftld.org/)
+
+|月付|流量|限速|
+| :--: | :--: | :--: |
+|￥1.00|17G|不限|
+|￥7.00|150G|不限|
+|￥20.00|500G|不限|
+
+|一次性|流量|限速|
+| :--: | :--: | :--: |
+|￥10.00|120G|不限|
+|￥20.00|250G|不限|
+|￥30.00|390G|不限|
+
+### Simple Cloud
+[官网](https://spcloud.me/) | [邀请链接](https://spcloud.me/#/register?code=97EXi3tX)
+
+|月付|流量|限速|
+| :--: | :--: | :--: |
+|￥10.00|100G|1Gbps|
+|￥20.00|250G|1Gbps|
+|￥30.00|450G|1Gbps|
+
+|一次性|流量|限速|
+| :--: | :--: | :--: |
+|￥15.00|50G|未知|
+|￥25.00|100G|未知|
+|￥45.00|200G|未知|
+
 ### XSUS
-[官网](https://xsus.buzz/) | [邀请链接](https://xsus.buzz/index.php#/register?code=jXvUrUka)
+[官网](https://xsus.buzz/)
+ <!-- | [邀请链接](https://xsus.buzz/index.php#/register?code=jXvUrUka) -->
 
 |月付|流量|限速|
 | :--: | :--: | :--: |
@@ -156,7 +175,8 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥20.00|120G|未知|
 
 ### 墙裂
-[官网](https://my.qianglie.com/) | [邀请链接](https://my.qianglie.com/#/register?code=ItpWJ6fF)
+[官网](https://my.qianglie.com/)
+ <!-- | [邀请链接](https://my.qianglie.com/#/register?code=ItpWJ6fF) -->
 |月付|流量|限速|
 | :--: | :--: | :--: |
 |￥10.99|100G|1000Mbps|
@@ -164,7 +184,8 @@ tips：加速前需事先选择能通过连接测试的节点
 已无法登录。
 
 <details><summary>archived</summary>
-[官网](https://llcool.xyz/) | [邀请链接](https://llcool.xyz/#/register?code=3y4cAFpN)
+[官网](https://llcool.xyz/)
+ <!-- | [邀请链接](https://llcool.xyz/#/register?code=3y4cAFpN) -->
 |月付|流量|限速|
 | :--: | :--: | :--: |
 |￥1.00|1G|1Gbps|
@@ -175,7 +196,8 @@ tips：加速前需事先选择能通过连接测试的节点
 </details>
 
 ### 大哥云
-[官网](https://www.dageyun.net/) | [邀请链接](https://www.dageyun.net/#/register?code=dpY4UdX3)
+[官网](https://www.dageyun.net/)
+ <!-- | [邀请链接](https://www.dageyun.net/#/register?code=dpY4UdX3) -->
 |月付|流量|限速|
 | :--: | :--: | :--: |
 |￥19.90|100G|500Mbps|

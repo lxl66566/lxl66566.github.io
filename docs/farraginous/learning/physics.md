@@ -3,7 +3,12 @@ sidebar: 'auto'
 ---
 # 大学物理
 ## 电磁学
-常量：<span v-pre>$\varepsilon_0 = 8.85\times 10^{12}\ C^2/N\cdot m^2$</span>
+常量：
+
+<span v-pre>$\varepsilon_0 = 8.85\times 10^{12}\ C^2/N\cdot m^2$</span>
+
+真空磁导率：<span v-pre>$\mu_0 = 4\pi\times 10^{-7}\ T\cdot m/A$</span>
+
 ### 场强
 高斯定理：<span v-pre>$\large \phi = \frac{Q} {\varepsilon_0}$</span>
 
@@ -20,6 +25,8 @@ sidebar: 'auto'
 同心球电容器：<span v-pre>$\large C = 4\pi\varepsilon_0\frac{R_AR_B}{R_B-R_A}$</span> （使用电势计算）
 
 同轴柱形电容器：<span v-pre>$\large U_{AB} = \int_{A}^{B} \frac{\lambda}{2\pi\varepsilon_0r}dr = \frac{q}{2\pi\varepsilon_0l}ln\frac{R_B}{R_A}\ , \ C = \frac{q}{U_{AB}}$</span>
+
+电容器能量：<span v-pre>$\large W = \frac{Q^2}{2C} = \frac{1}{2}QU = \frac{1}{2}\varepsilon_0E^2$</span>
 ### 电介质
 相对介电常数：<span v-pre>$\large \varepsilon_r = 1 + \chi_e = \frac{\varepsilon}{\varepsilon_0}$</span>
 
@@ -27,8 +34,12 @@ sidebar: 'auto'
 
 （极化强度矢量定义为单位体积内电偶极矩的矢量和，<span v-pre>$\large\chi_e$</span>为电极化率。）
 
-电位移矢量：<span v-pre>$\large \vec{D} = \varepsilon_0\vec{E} + \vec{P}$</span>
+电位移矢量：<span v-pre>$\large \vec{D} = \varepsilon_0\vec{E} + \vec{P} = \varepsilon_0\varepsilon_r\vec{E}$</span>
 
 介质中的高斯定理：<span v-pre>$\large \iint_{S}\vec{D} \cdot d\vec{S} = \sum_{S内}q$</span> （积分符号应为环路二重积分）
 
 有介质时，仅需把真空中的公式中 <span v-pre>$\large\varepsilon_0$</span> 替换为 <span v-pre>$\large\varepsilon_0\varepsilon_r$</span> 即可。
+### 电流与磁场
+Biot-Savart law: <span v-pre>$\large d\vec{B} = \frac{\mu_0}{4\pi} \frac{Id\vec{l} \times \vec{e_r}}{r^2},\ dB = \frac{\mu_0}{4\pi}\frac{Idlsin\alpha}{r^2}$</span>
+
+电流源受力（安培定律变形）：<span v-pre>$\large d\vec{F} = Id\vec{l}\times \vec{B}$</span>

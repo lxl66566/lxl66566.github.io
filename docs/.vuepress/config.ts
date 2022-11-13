@@ -114,7 +114,7 @@ export default defineUserConfig({
         {
           text : '学习笔记',
           link : '/farraginous/learning/',
-          children: ['physics.md',],
+          children: ['physics.md','complex_functions.md',],
         }
       ],
       '/': [
