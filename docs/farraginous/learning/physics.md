@@ -42,4 +42,14 @@ sidebar: 'auto'
 ### 电流与磁场
 Biot-Savart law: <span v-pre>$\large d\vec{B} = \frac{\mu_0}{4\pi} \frac{Id\vec{l} \times \vec{e_r}}{r^2},\ dB = \frac{\mu_0}{4\pi}\frac{Idlsin\alpha}{r^2}$</span>
 
-电流源受力（安培定律变形）：<span v-pre>$\large d\vec{F} = Id\vec{l}\times \vec{B}$</span>
+电流元受力（安培定律变形）：<span v-pre>$\large d\vec{F} = Id\vec{l}\times \vec{B}$</span>
+
+载流直导线产生的磁场：<span v-pre>$\large B = \begin{cases}\frac{\mu_0I}{4\pi a}(cos \theta_1 - cos\theta_2) & 有限长 \\  B = \frac{\mu_0I}{2\pi a} & 无限长\end{cases}$</span>&nbsp;&nbsp;&nbsp; <span v-pre>$\small a:距离 \ \ \theta:<\vec{I},\vec{r}> \ \ \vec{I}:1 \to 2$</span>
+
+载流圆线圈轴线磁场：<span v-pre>$\large B = \frac{\mu_0IR^2}{2(R^2 + x^2)^{3/2}}$</span>&nbsp;&nbsp;&nbsp;方向由右手定则确定。
+
+密绕螺线管磁场：<span v-pre>$\large B = \begin{cases}\frac{\mu_0nI}{2}(cos\beta_2-cos\beta_1) & 有限长 \\ \mu_0nI & 无限长\end{cases}$</span>&nbsp;&nbsp;&nbsp; <span v-pre>$\small n=N/L:匝密度 \ \ \ \beta:<\vec{B},\vec{r}> \ \ \ \vec{r}指向螺线管表面两端$</span>
+
+Ampère's circuital law: <span v-pre>$\large \oint_{L}\vec{B}\cdot d\vec{l} = \mu_0\sum_{L内}I$</span>
+
+无限长圆柱均匀载流导体磁场：<span v-pre>$\large B = \begin{cases}\frac{\mu_0Ir}{2\pi R^2} & r < R \\ \frac{\mu_0I}{2\pi r} & r > R\end{cases}$</span>
