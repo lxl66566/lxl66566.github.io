@@ -53,3 +53,5 @@ Biot-Savart law: <span v-pre>$\large d\vec{B} = \frac{\mu_0}{4\pi} \frac{Id\vec{
 Ampère's circuital law: <span v-pre>$\large \oint_{L}\vec{B}\cdot d\vec{l} = \mu_0\sum_{L内}I$</span>
 
 无限长圆柱均匀载流导体磁场：<span v-pre>$\large B = \begin{cases}\frac{\mu_0Ir}{2\pi R^2} & r < R \\ \frac{\mu_0I}{2\pi r} & r > R\end{cases}$</span>
+
+磁矩：<span v-pre>$\large \mu_0 = IS$</span> ，S:回路面积，方向：右手定则

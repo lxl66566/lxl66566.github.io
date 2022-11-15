@@ -17,7 +17,7 @@ sidebar: 'auto'
 ## 搜索
 * 搜电子书：[zlibrary](https://z-lib.is/)
 > 2022.11.04: 绝对值x悲哀地说：z-library暂时离开了我们。
-* 搜动漫：[樱花动漫](https://www.yhdmp.live/) | [次元城动漫](https://www.cycdm01.top/)
+* 搜动漫：[樱花动漫](https://www.yhdmp.live/) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/)
 * 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN)
 * 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/)
 ## 新闻

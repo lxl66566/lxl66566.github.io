@@ -5,8 +5,9 @@ sidebar: 'auto'
 和[C++](./Cpp.md)页面一样杂乱，想到什么写什么。
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
-## 从网站获取图片
-```py
+## 图像获取
+### 从网站获取图片
+```python
 import requests
 from PIL import Image
 from io import BytesIO
@@ -14,7 +15,13 @@ response = requests.get(src)
 image = Image.open(BytesIO(response.content))
 image.show()
 ```
-## 多图片转pdf
+### 截屏
+```python
+from PIL import ImageGrab
+img = ImageGrab.grab(bbox=(0, 0, 1920, 1080))   # 注意改为你需要截屏的分辨率
+```
+## 图像处理
+### 多图片转pdf
 ```py
 import img2pdf
 temp = [BytesIO(...), BytesIO(...)]
@@ -23,6 +30,26 @@ with open('第二册答案.pdf', "wb") as f:
     write_content = img2pdf.convert(temp)
     f.write(write_content)
 ```
+### Image对象转为bytes
+有时候需要对图片对象转为字节码以在不同函数间流通。（不统一对象的坏处）
+```python
+import io
+def img2Byte(img:Image) -> bytes:
+    imgByte=io.BytesIO()
+    img.save(imgByte,format='JPEG')
+    byte_res=imgByte.getvalue()
+    return byte_res
+```
+## 高斯模糊
+::: warning
+请不要试图使用 cv2 对 Image 对象进行操作。(fuck cv2)
+:::
+```python
+from PIL import Image,ImageFilter
+img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
+```
+
+使用此内置函数进行高斯模糊将无法改变 sigma 的值。
 ## miniconda
 提供python包管理与虚拟环境。
 
