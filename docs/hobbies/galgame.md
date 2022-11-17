@@ -30,10 +30,12 @@ sidebar: 'auto'
     1. Tai 1.0.0.4 及其之前版本可能出现时长错误统计bug；
     2. Tai **闪退**或未成功获取焦点。（闪退bug极为频繁）
 * 打分皆为个人主观看法，得分上限不限于10.
+* 未标注游戏平台的默认为PC.
 :::
 
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: | :----: |
+|NEKOPARA Vol.3 ネコたちのアロマティゼ<Badge type="danger" text="4" vertical="top" />|8h11min|2022.08.20-<br/>2022.11.17|3.7|9|5|
 |冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|13.5|5|2|
 |墮落聖處女|2h2min+|2022.04.27-<br/>2022.10.01|0|3.7|0|
 |七音学园-旅行部-·箱根篇<Badge type="warning" text="2" vertical="top" />|2h5min|2022.09.22-<br/>2022.09.24|7.8|10|9|
@@ -43,7 +45,7 @@ sidebar: 'auto'
 |9-nine-新章<Badge type="danger" text="5" vertical="top" />|4h43min*|2022.07.20-<br/>2022.07.23|5|7|8|
 |星光咖啡馆与死神之蝶|-|2020.10.15-<br/>2022.07.05|5.5|9|9.9|
 |9-nine-雪色雪花雪余痕<Badge type="danger" text="4" vertical="top" />|13h54min*|2022.06.08-<br/>2022.07.05|10|6|9|
-|猫娘乐园 Vol.2 甜蜜猫娘姐妹<Badge type="danger" text="3" vertical="top" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
+|NEKOPARA Vol.2 姉妹ネコのシュクレ<Badge type="danger" text="3" vertical="top" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
 |龍姬混~日子<Badge type="tip" text="1" vertical="top" />|-|2022.01.28-<br/>2022.06.28|2|8|5|
 |纸上魔法使|>36h27min*|2022.03.22-<br/>2022.06.20|10|7|3|
 |9-nine-春色春恋春熙风<Badge type="danger" text="3" vertical="top" />|11h46min*|2022.04.30-<br/>2022.06.07|7|6|8.5|
@@ -54,13 +56,13 @@ sidebar: 'auto'
 |仰望夜空的星辰 Interstellar Focus<Badge type="danger" text="3" vertical="top" />|-|2022.01.29-<br/>2022.02.06|3|5|3|
 |ATRI -My Dear Moments-|-|2022.01.02-<br/>2022.01.28|9|9|7|
 |龍姬混~日子2<Badge type="warning" text="2" vertical="top" />|-|2021.12.23-<br/>2022.01.27|2|10|5|
-|猫娘乐园 Vol.1 La Soleil 开店了！<Badge type="warning" text="2" vertical="top" />|-|2021.11.26-<br/>2021.12.20|4|9|5|
+|NEKOPARA Vol.1 ソレイユ開店しました！ <Badge type="warning" text="2" vertical="top" />|-|2021.11.26-<br/>2021.12.20|4|9|5|
 |猫神大人与七颗星星|-|2021.11.16-<br/>2021.11.23|8|10|?|
 |CURE GIRL|-|2021.10.10-<br/>2021.11.08|1|4|?|
-|猫娘乐园 Vol.0 水无月猫猫们的日常！*(krkr)* <Badge type="tip" text="1" vertical="top" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
-|真爱の百合は赤く染まる|-|?-<br/>2020.10.21|?|3|?|
-|青空下的加缪|-|?-<br/>2020.10.20|0|5|?|
-|Fox Hime Zero<Badge type="tip" text="1" vertical="top" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
+|NEKOPARA Vol.0 水無月ネコたちの日常！<Badge type="tip" text="1" vertical="top" /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
+|真爱の百合は赤く染まる <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.21|?|3|?|
+|青空下的加缪 <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.20|0|5|?|
+|Fox Hime Zero <Badge type="tip" text="1" vertical="top" /><Badge type="tip" text="app" vertical="bottom" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
 
 *（不排除有缺漏）*
 
@@ -71,36 +73,34 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
+|ISLAND
+|PARQUET|
 |仰望夜空的星辰<Badge type="tip" text="1" vertical="top" />|2022.10.18|9|5|4.5|+40+30+40+15min|
 |灵感满溢的甜蜜创想|2022.10.04|4|10|8|+40min+100min|
 |アンレス テルミナリア|
 |魔女的夜宴|2022.02.10|5.7|7.2|9.5|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
-|NEKOPARA VOL.3|2022.08.20|3.5|9|4|
 |NEKOPARA VOL.4
 |哥哥，早上起床之前都要抱紧我哦！<Badge type="tip" text="1" vertical="top" />|2021.02.14?|3|8.6|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" vertical="top" />|
 |灰色的果实
-|DDLC *(steam)(暂时不玩)*|2021.11.11|?|3|?|
-|千恋万花 *(krkr)*|2021.06.21|6.8|9|?|
-|少女领域 *(krkr)*|<2020.10.29|5|8|8|
-|保健室的老师与沉迷吹泡泡的助手 *(tyranor)*|
+|DDLC <Badge type="tip" text="steam" vertical="bottom" /> *(暂时不玩)*|2021.11.11|?|3|?|
+|千恋万花 <Badge type="warning" text="krkr" vertical="bottom" />|2021.06.21|6.8|9|7.5|
+|少女领域 <Badge type="warning" text="krkr" vertical="bottom" />|<2020.10.29|5|8|8|
+|保健室のセンセーとシャボン玉中毒の助手 <Badge type="danger" text="tyranor" vertical="bottom" />|
 
 ## 我计划玩
 仅列出一小部分。排名不分先后。
 
 * 三色绘恋
 * Riddle Joker
-* PARQUET
 * 近月少女的礼仪
-* ISLAND
 * eden\*
 * 秽翼的尤斯蒂娅
 * 金辉恋曲四重奏
 * 枯れない世界と終わる花
 * 家喵二三事
 * 巧克甜恋
-* 保健室のセンセーとシャボン玉中毒の助手
 * 樱色之云*绯色之恋
 * 恋爱成双
 * 水葬銀貨のイストリア
@@ -159,7 +159,7 @@ sidebar: 'auto'
 |鯨神のティアスティラ|在历史对话界面播放语音后，右键退出此界面，语音将自动终止|
 |墮落聖處女|<text style="color:red;">语音无法回放，无法回跳；</text>设置中，文字表示速度的快慢标反了|
 |纸上魔法使|窗口模式有问题（忘了是啥），被迫用全屏玩|
-|猫娘乐园 Vol.2 甜蜜猫娘姐妹|auto模式句间间隔过长|
+|NEKOPARA Vol.2 姉妹ネコのシュクレ|auto模式句间间隔过长|
 |龍姬混~日子|使用向上滚轮进入历史对话界面后，再向下滚轮无法返回游戏界面|
 |星光咖啡馆与死神之蝶|语音播放时向上滚轮，进入历史对话界面时，语音会中断|
 
