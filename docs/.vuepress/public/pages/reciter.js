@@ -7,8 +7,10 @@ const urls={
     "english":{
         "CD" : "https://dictionary.cambridge.org/dictionary/english/{}",
         "OLD" : "https://www.oxfordlearnersdictionaries.com/definition/english/{}",
+        "OAAD" : "https://www.oxfordlearnersdictionaries.com/definition/american_english/{}",
         "MW" : "https://www.merriam-webster.com/dictionary/{}",
         "baidu" : "https://fanyi.baidu.com/#en/zh/{}",
+        "collins" : "https://www.collinsdictionary.com/dictionary/english/{}",
     },
     "japanese":{
         "weblio" : "https://www.weblio.jp/content/{}",
