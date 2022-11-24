@@ -25,3 +25,12 @@ Harmonic function: <span v-pre>$\large u(x,y) \ is \ harmonic \Leftrightarrow \f
 留数计算：<span v-pre>$\large Res[f(z),z_0] = \begin{cases} 0 & 可去奇点 \\ \lim_{z\to z_0}(z-z_0)f(z) & 一级极点 \\ \frac{P(z_0)}{Q'(z_0)} & 该值存在且不为0;一级极点;f(z) = \frac{P(z)}{Q(z)} \\ \frac{1}{(m-1)!}\lim_{z\to z_0}\frac{d^{m-1}}{dz^{m-1}}[(z-z_0)^{m}f(z)] & m级极点 \\ 洛朗展开 & 本性奇点 \end{cases}$</span>
 
 无穷远点的留数：<span v-pre>$\large Res[f(z),\infty] = -Res[f(\frac{1}{z})\cdot\frac{1}{z^2},0]$</span>
+
+## Fourier transform
+Fourier transform: <span v-pre>$\large F(\omega)=\mathscr{F}(f(t))=\int_{-\infty}^{+\infty}f(t)e^{-i\omega t}dt$</span>
+
+inverse Fourier transform: <span v-pre>$\large f(t)=\mathscr{F}^{-1}(F(\omega))=\frac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{i\omega t}d\omega$</span>
+
+Dirichlet integral: <span v-pre>$\large \int_{0}^{+\infty}\frac{sin\omega}{\omega}d\omega=\frac{\pi}{2}$</span>
+
+筛选性质: <span v-pre>$\large \int_{-\infty}^{+\infty}\delta(t-t_0)f(t)dt=f(t_0) \ \ \ \ \ \ (f(t)在t_0连续)$</span>

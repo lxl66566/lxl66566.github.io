@@ -55,3 +55,7 @@ Ampère's circuital law: <span v-pre>$\large \oint_{L}\vec{B}\cdot d\vec{l} = \m
 无限长圆柱均匀载流导体磁场：<span v-pre>$\large B = \begin{cases}\frac{\mu_0Ir}{2\pi R^2} & r < R \\ \frac{\mu_0I}{2\pi r} & r > R\end{cases}$</span>
 
 磁矩：<span v-pre>$\large \mu_0 = IS$</span> ，S:回路面积，方向：右手定则
+## 光学
+### 干涉
+双缝干涉 第 k 级明文距中心： <span v-pre>$\large x = k\lambda\frac{D}{d}$</span>
+
