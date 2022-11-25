@@ -80,7 +80,7 @@
 * [我的世界](../hobbies/Minecraft.md)（小游戏服:hypixel,Domcer；生存服：秋月之光，cic 1.16服）
 * [明日方舟](../hobbies/other_games.md#明日方舟)
 * 东方绀珠传(99%) / 东方永夜抄(1%)
-* [CS:GO](../hobbies/csgo.md)
+* [CS:GO](../hobbies/other_games.md#csgo)
 ### 现在主要在玩
 * [纯剧情galgame](../hobbies/galgame.md)
 * [以 **OSU!mania 4k** 为主的音游](../hobbies/rhythm_games.md)

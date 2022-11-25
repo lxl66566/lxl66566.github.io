@@ -34,3 +34,6 @@ inverse Fourier transform: <span v-pre>$\large f(t)=\mathscr{F}^{-1}(F(\omega))=
 Dirichlet integral: <span v-pre>$\large \int_{0}^{+\infty}\frac{sin\omega}{\omega}d\omega=\frac{\pi}{2}$</span>
 
 筛选性质: <span v-pre>$\large \int_{-\infty}^{+\infty}\delta(t-t_0)f(t)dt=f(t_0) \ \ \ \ \ \ (f(t)在t_0连续)$</span>
+
+## 卷积
+定义：<span v-pre>$\large f_1(t) * f_2(t) = \int_{-\infty}^{\infty}f_1(\tau)f_2(t-\tau)d\tau$</span>&nbsp;&nbsp;&nbsp;（收敛）

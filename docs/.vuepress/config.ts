@@ -49,7 +49,6 @@ export default defineUserConfig({
             children: [
               '/hobbies/rhythm_games.md',
               '/hobbies/galgame.md',
-              '/hobbies/csgo.md',
               '/hobbies/Minecraft.md',
               '/hobbies/other_games.md',
             ]
@@ -138,7 +137,7 @@ export default defineUserConfig({
         },
         {
           text : '爱好',
-          children: ['/hobbies/rhythm_games.md','/hobbies/galgame.md','/hobbies/csgo.md','/hobbies/Minecraft.md','/hobbies/books.md',
+          children: ['/hobbies/rhythm_games.md','/hobbies/galgame.md','/hobbies/Minecraft.md','/hobbies/books.md',
           '/hobbies/anime.md','/hobbies/other_games.md',],
         },
         {

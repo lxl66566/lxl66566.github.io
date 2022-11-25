@@ -12,7 +12,7 @@ sidebar: 'auto'
 | :--: | :--: |
 |理科生坠入情网，故尝试证明。<Badge type="tip" text="第一季" vertical="top" />|2021.10.31-<br/>烂尾|
 |JOJO的奇妙冒险<Badge type="tip" text="第一季" vertical="top" />|2021.08.12-<br/>烂尾|
-|元龙|2020.07.19-<br/>烂尾|
+|元龙<Badge type="tip" text="第一季" vertical="top" />|2020.07.19-<br/>烂尾|
 |某科学的超电磁炮<Badge type="tip" text="第一季" vertical="top" />|<2020.02.14-<br/>烂尾|
 |赛马娘<Badge type="tip" text="第一季" vertical="top" />|2022.05.15-<br/>2022.06.04|
 |四月是你的谎言|2022.03.04-<br/>2022.03.22|

@@ -7,6 +7,10 @@ sidebar: 'auto'
 *（注：此处的维护记录指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2022
 ### .11
+#### 2022.11.25
+* 移动 *爱好-CSGO* 页面至 [其他游戏#CSGO](../hobbies/other_games.md#csgo)
+* 新增[对xxx的希望#对推荐算法的希望](../gossip/hope.md#对推荐算法的希望)
+* 新增[软件汇总#为什么你们就是不能加个空格呢？](./recommend_packages.md#为什么你们就是不能加个空格呢？)
 #### 2022.11.20
 * [背词器](./reciter.md)英文网址更新
 #### 2022.11.18
@@ -18,7 +22,7 @@ sidebar: 'auto'
 #### 2022.11.13
 * 新增[学习笔记-复变函数与积分变换](./learning/complex_functions.md)
 #### 2022.11.05
-* 新增[杂项-学习笔记](./learning/)与[学习笔记-大学物理](./learning/physics.md)
+* 新增[杂项-学习笔记](./learning/) <-- [大学物理](./learning/physics.md)
 ### .10
 #### 2022.10.28
 * 合并闲聊-...希望的两个页面，并加入[#对聊天软件的希望](../gossip/hope.md#对聊天软件的希望)
@@ -41,7 +45,7 @@ sidebar: 'auto'
 * 新增[校内专栏#校内极限生存](./college.md#校内极限生存)
 #### 2022.09.21
 * 新增[C++#在vscode中配置环境](../coding/Cpp.md#在vscode中配置环境)
-* 新增[csgo#常用指令](../hobbies/csgo.md#常用指令)
+* 新增 csgo#常用指令（现已移动到[其他游戏-csgo#常用指令](../hobbies/other_games.md#常用指令)）
 #### 2022.09.15
 * 维护[网址汇总](./recommend_websites.md)页面，新增大量条目，更改排版
 #### 2022.09.11
@@ -172,5 +176,5 @@ sidebar: 'auto'
 * 更新 [主页](../README.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
 #### 2022.05.04
 * 发布博客
-* 创建 [主页](../README.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、[游戏-csgo游戏配置（现：CS:GO）](../hobbies/csgo.md)
+* 创建 [主页](../README.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、游戏-csgo游戏配置（现已移动到[其他游戏-csgo#常用指令](../hobbies/other_games.md#常用指令)）
 * 添加搜索插件

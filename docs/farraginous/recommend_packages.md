@@ -160,6 +160,7 @@ PS:因为复习机制和没有完全删除的设置，不是很推荐。
 
 小提示，双击exe文件后，EnergyStar将自动在后台运行，不会跳出提示与弹窗。
 ## 浏览器插件
+注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。
 ### 视频速度控制
 控制视频播放速度，0.07x-16.00x。主要适合需要2倍速以上看视频的人群 *（对我来说用处真的很大）*，也可用来快速刷课，练习听力等。
 
@@ -176,17 +177,18 @@ PS:因为复习机制和没有完全删除的设置，不是很推荐。
 [官网](https://www.internetdownloadmanager.com/) | [破解](https://www.lanzouw.com/iYFgSw4lede)
 ### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
 快速启用禁用扩展。
-
 ### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
 运行脚本。
-
 ### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
 强大的`禁止复制`破解插件。比脚本好用。
-
 ### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
 广告拦截。
 ### [DARK READER](https://darkreader.org/)
 浏览器强制夜间模式，效果不错。
+### [为什么你们就是不能加个空格呢？](https://chrome.google.com/webstore/detail/paphcfdffjnbcgkokihcdjliihicmbpd)
+可以自动在网页的字母，符号，数字与汉字间加空格，改善观感。~~很有个性的名字，不是吗？~~
+
+[前往 Github](https://github.com/vinta/pangu.js)
 
 ## 浏览器脚本
 ::: tip 提示
