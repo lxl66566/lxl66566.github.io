@@ -85,7 +85,18 @@ tips：加速前需事先选择能通过连接测试的节点
 
 学生免费用360天，每月30G。[说明](https://glados.rocks/console/education)
 
-此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。
+*此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。*
+
+> 很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。
+
+### 木瓜云
+[官网](https://muguacloud.win/)
+
+|月付|流量|限速|
+| :--: | :--: | :--: |
+|￥7.00|900G|100Mbps|
+|￥10.00|1600G|200Mbps|
+|￥18.00|2800G|200Mbps|
 
 ### StarTrip（已跑路）
 <details><summary>archived</summary>
