@@ -159,6 +159,13 @@ PS:因为复习机制和没有完全删除的设置，不是很推荐。
 为你的windows笔记本提升续航。
 
 小提示，双击exe文件后，EnergyStar将自动在后台运行，不会跳出提示与弹窗。
+### [ffsend]()
+（命令行）快速上传分享你的文件 / 文件夹
+
+使用方法（Windows x64）：
+1. 下载[ffsend-v0.2.74-windows-x64.exe](https://github.com/timvisee/ffsend/releases/download/v0.2.74/ffsend-v0.2.74-windows-x64.exe)
+2. 在下载目录打开**管理员**终端，执行`move .\ffsend-v0.2.74-windows-x64.exe C:\Windows\System32\ffsend.exe`（或手动复制改名
+3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>`下载
 ## 浏览器插件
 注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。
 ### 视频速度控制

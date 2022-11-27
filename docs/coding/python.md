@@ -118,3 +118,6 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 * `-D` 打包为目录文件
 * `-F` 打包为单个exe文件
 * `-w` 运行时不显示命令窗口
+* `-i <icon.ico>` 设置图标
+## Python代码混淆
+[这里](https://pyob.oxyry.com/)是一个网站，可以在线混淆您的 python 代码。

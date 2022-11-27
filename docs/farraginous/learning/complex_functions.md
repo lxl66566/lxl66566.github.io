@@ -26,6 +26,15 @@ Harmonic function: <span v-pre>$\large u(x,y) \ is \ harmonic \Leftrightarrow \f
 
 无穷远点的留数：<span v-pre>$\large Res[f(z),\infty] = -Res[f(\frac{1}{z})\cdot\frac{1}{z^2},0]$</span>
 
+### 解定积分
+
+<span v-pre>$\large \int_{0}^{2\pi}R(cos\theta,sin\theta)d\theta = \oint_{|z|=1}R(\frac{z^2+1}{2z},\frac{z^2-1}{2iz})\frac{1}{iz}dz$</span>
+
+<span v-pre>$\large \int_{-\infty}^{+\infty}\frac{P(z)}{Q(z)}dz = 2\pi i\sum Res[\frac{P(z)}{Q(z)},z_k] \ \ \ z_k$</span> 为上半平面奇点，Q(z) 比 P(z) 高至少两次
+
+<span v-pre>$\large \int_{-\infty}^{+\infty}\frac{P(z)}{Q(z)}e^{i\alpha z}dz = 2\pi i\sum Res[\frac{P(z)}{Q(z)}e^{i\alpha z},z_k] \ \ \ z_k$</span> 为上半平面奇点，Q(z) 比 P(z) 高至少一次，P(x),Q(x) 为有理函数
+
+### [儒歇定理](https://zh.m.wikipedia.org/zh/%E5%84%92%E6%AD%87%E5%AE%9A%E7%90%86)
 ## Fourier transform
 Fourier transform: <span v-pre>$\large F(\omega)=\mathscr{F}(f(t))=\int_{-\infty}^{+\infty}f(t)e^{-i\omega t}dt$</span>
 

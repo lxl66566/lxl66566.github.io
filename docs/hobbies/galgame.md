@@ -26,7 +26,7 @@ sidebar: 'auto'
 ::: details 一些解释说明
 * 排序方式：后完结→先完结
 * *一般以游戏的所有支线全部推完才算完结<Badge type="tip" text="可能有例外" vertical="top" />*
-* 时间统计利用[Tai](../farraginous/recommend_packages.md#tai)作出。`*`表示统计数据有偏差，可能由以下原因引起：
+* 时间统计利用[Tai](../farraginous/recommend_packages.md#tai)作出。`*`表示统计数据有偏差，`<...>`表示偏差较小，可能由以下原因引起：
     1. Tai 1.0.0.4 及其之前版本可能出现时长错误统计bug；
     2. Tai **闪退**或未成功获取焦点。（闪退bug极为频繁）
 * 打分皆为个人主观看法，得分上限不限于10.
@@ -35,20 +35,20 @@ sidebar: 'auto'
 
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: | :----: |
-|NEKOPARA Vol.3 ネコたちのアロマティゼ<Badge type="danger" text="4" vertical="top" />|8h11min|2022.08.20-<br/>2022.11.17|3.7|9|5|
+|NEKOPARA Vol.3 ネコたちのアロマティゼ<Badge type="danger" text="4" vertical="top" />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|5|
 |冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|13.5|5|2|
 |墮落聖處女|2h2min+|2022.04.27-<br/>2022.10.01|0|3.7|0|
-|七音学园-旅行部-·箱根篇<Badge type="warning" text="2" vertical="top" />|2h5min|2022.09.22-<br/>2022.09.24|7.8|10|9|
-|七音学园-旅行部-·伊香保篇<Badge type="tip" text="1" vertical="top" />|2h23min*|2022.09.18|8|10|9|
-|苍之彼方的四重奏<Badge type="tip" text="1" vertical="top" />|39h50min*|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
-|鯨神のティアスティラ|25h47min*|2022.06.21-<br/>2022.08.20|4.2|7.5|9.3|
-|9-nine-新章<Badge type="danger" text="5" vertical="top" />|4h43min*|2022.07.20-<br/>2022.07.23|5|7|8|
+|七音学园-旅行部-·箱根篇<Badge type="warning" text="2" vertical="top" />|<2h5min>|2022.09.22-<br/>2022.09.24|7.8|10|9|
+|七音学园-旅行部-·伊香保篇<Badge type="tip" text="1" vertical="top" />|<2h23min>|2022.09.18|8|10|9|
+|苍之彼方的四重奏<Badge type="tip" text="1" vertical="top" />|<39h50min>|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
+|鯨神のティアスティラ|<25h47min>|2022.06.21-<br/>2022.08.20|4.2|7.5|9.3|
+|9-nine-新章<Badge type="danger" text="5" vertical="top" />|<4h43min>|2022.07.20-<br/>2022.07.23|5|7|8|
 |星光咖啡馆与死神之蝶|-|2020.10.15-<br/>2022.07.05|5.5|9|9.9|
-|9-nine-雪色雪花雪余痕<Badge type="danger" text="4" vertical="top" />|13h54min*|2022.06.08-<br/>2022.07.05|10|6|9|
+|9-nine-雪色雪花雪余痕<Badge type="danger" text="4" vertical="top" />|<13h54min>|2022.06.08-<br/>2022.07.05|10|6|9|
 |NEKOPARA Vol.2 姉妹ネコのシュクレ<Badge type="danger" text="3" vertical="top" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
 |龍姬混~日子<Badge type="tip" text="1" vertical="top" />|-|2022.01.28-<br/>2022.06.28|2|8|5|
-|纸上魔法使|>36h27min*|2022.03.22-<br/>2022.06.20|10|7|3|
-|9-nine-春色春恋春熙风<Badge type="danger" text="3" vertical="top" />|11h46min*|2022.04.30-<br/>2022.06.07|7|6|8.5|
+|纸上魔法使|>36h27min|2022.03.22-<br/>2022.06.20|10|7|3|
+|9-nine-春色春恋春熙风<Badge type="danger" text="3" vertical="top" />|<11h46min>|2022.04.30-<br/>2022.06.07|7|6|8.5|
 |9-nine-天色天歌天籁音<Badge type="warning" text="2" vertical="top" />|-|2022.04.09-<br/>2022.04.28|7.5|6|8.5|
 |氤氲之白|-|2022.04.19|1|4|2|
 |9-nine-九次九日九重色<Badge type="tip" text="1" vertical="top" />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
@@ -76,7 +76,7 @@ sidebar: 'auto'
 |ISLAND
 |PARQUET|
 |仰望夜空的星辰<Badge type="tip" text="1" vertical="top" />|2022.10.18|9|5|4.5|+40+30+40+15min|
-|灵感满溢的甜蜜创想|2022.10.04|4|10|8|+40min+100min|
+|常轨脱离Creative|2022.10.04|4|9.5|8|+40min+100min|
 |アンレス テルミナリア|
 |魔女的夜宴|2022.02.10|5.7|7.2|9.5|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
@@ -131,7 +131,7 @@ sidebar: 'auto'
 * 取消大部分操作的确认提示
 
 ## 我的存档
-呃，从`纸上魔法使`开始，我都会把玩完的、有`有效存档`的galgame存档备份下来，留作纪念。虽然看起来用不上，不过还是留个后手吧。
+呃，从 *纸上魔法使* 开始，我都会把玩完的、有 *有效存档* 的galgame存档备份下来，留作纪念。虽然看起来用不上，不过还是留个后手吧。
 
 [点此下载](https://github.com/lxl66566/my-key-data/releases/tag/Savedata)
 
@@ -152,7 +152,7 @@ sidebar: 'auto'
 |游戏名|问题|
 | :----: | :----: |
 |仰望夜空的星辰|自动模式速度标注反了；鼠标左右键均无法解除自动|
-|灵感满溢的甜蜜创想|<text style="color:red;">恶性bug：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。甚至回档/删档也不行</text>；<!-- 无法关闭操作的效果语音<text style="color:red;">且会覆盖播放中的语音</text>；--> backlog界面下滑滚轮无法返回|
+|灵感满溢的甜蜜创想|<text style="color:red;">恶性bug（民汉版）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决</text>；<!-- 无法关闭操作的效果语音<text style="color:red;">且会覆盖播放中的语音</text>；--> backlog界面下滑滚轮无法返回|
 |苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_exe_collapse.jpg)|
 |9-nine-新章 & 9-nine-雪色雪花雪余痕|使用オーバーロード跳转分支时，右侧滑动条会被弹出的存档遮挡|
 |冥契的牧神节|<text style="color:red;">存档&删除存档时出现过序号错乱，错误覆盖（仅发生一次）；<br/>点击auto后按左键停止后会继续向下跳一页；</text><br/>读档后无法查看此位置前的历史记录|
