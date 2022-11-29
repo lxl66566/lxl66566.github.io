@@ -8,7 +8,7 @@
 自带闭源客户端的免费VPN在安全性方面没有保证，不推荐使用。
 :::
 
-**免费VPN仅应在无其他安全选择的情况下，接触非敏感信息时使用，且有较高信息泄露风险。** 随着审查力度变化，不排除肉身被带走的风险。[血的教训（当然不是我](https://focus.scol.com.cn/shwx/202007/57862317.html)
+**免费VPN仅应在无其他安全选择的情况下，接触非敏感信息时使用，且有较高信息泄露风险。** 随着审查力度变化，不排除更高危险。[血的教训（当然不是我](https://focus.scol.com.cn/shwx/202007/57862317.html)
 
 以下免费推荐均为Android端app，**均可在谷歌商店下载**。
 ### 火箭加速（推荐）
@@ -29,28 +29,24 @@ tips：加速前需事先选择能通过连接测试的节点
 开启成功率看脸，网速不敌上面两位，同样有强制弹窗广告
 ## 机场选择
 
-此处列出部分机场（套餐月付<=10）性价比及其变化情况。数字代表**每1元RMB买到的GB数**<Badge type="tip" text="月付最低合理价格" vertical="top" />。免费机场不包括在图表中。
+此处列出部分优秀机场性价比及其变化情况。数字代表**每1元RMB买到的GB数**<Badge type="tip" text="合理价格" vertical="top" />。免费机场不包括在图表中。
 
 <iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280"></iframe>
 
 :::warning
-每一次付费都请告诫自己机场跑路的可能性。同时，性价比越高的机场，节点越不稳定。
+每一次付费都请告诫自己机场跑路的可能性。同时，**性价比与稳定性不可兼得。**
 :::
 
-*（以下数据截止于20221020）*
-### 白嫖机场
+*（以下数据截止于20221129）*
+### 白嫖机场（推荐）
 <!-- [官网](https://bpjc.xyz/) | [邀请链接](https://bpjc.xyz/#/register?code=YnrLNenI) -->
 <!-- [官网](https://xn--mesv7f5toqlp.club/) | [邀请链接](https://xn--mesv7f5toqlp.club/#/register?code=YnrLNenI) -->
 
 [官网](https://paolu.pics/) | [邀请链接](https://paolu.pics/#/register?code=YnrLNenI)
 
-|月付（不含6.1%手续费）|流量|限速|
+|年付（不含6.1%手续费）|流量|限速|
 | :--: | :--: | :--: |
-|￥5.00|1888G|未知|
-
-|年付|流量|限速|
-| :--: | :--: | :--: |
-|￥10.00|566G*12|未知|
+|￥10.00|666G*12|未知|
 
 *（Torjan + Vmess协议；此前限速为500Mbps）*
 ### 一元机场
@@ -66,9 +62,7 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥11.00|500G\*12|不限|
 
 *（采用Trojan协议）*
-### 番茄花园
-
-[官网](https://fqhy.xyz/)
+### [番茄花园（推荐）](https://fqhy.xyz/)
 
 拥有免费节点，每日签到可领免费流量
 
@@ -79,18 +73,21 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥60.00|1300G|500Mbps|
 |￥100.00|6000G|无限制|
 
-### GLaDOS（推荐）
-
-[官网](https://glados.rocks/) 邀请码：`3SPFS-IABW1-77EJL-PE8NR`
+### [GLaDOS（推荐）](https://glados.rocks/) 邀请码：`3SPFS-IABW1-77EJL-PE8NR`
 
 学生免费用360天，每月30G。[说明](https://glados.rocks/console/education)
 
-*此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。*
+> *此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。*
 
 > 很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。
 
-### 木瓜云
-[官网](https://muguacloud.win/)
+|月付|流量|限速|
+| :--: | :--: | :--: |
+|$1.60|200G|100Mbps|
+|$4.20|500G|200Mbps|
+|$18.00|2000G|200Mbps|
+
+### [木瓜云](https://muguacloud.win/)
 
 |月付|流量|限速|
 | :--: | :--: | :--: |
@@ -111,8 +108,7 @@ tips：加速前需事先选择能通过连接测试的节点
 
 </details>
 
-### 貓貓互聯
-[官网](https://neko.services/)
+### [貓貓互聯](https://neko.services/)
  <!-- | [邀请链接](https://neko.services/#/register?code=xjZ5356D) -->
 
 |月付|流量|限速|
@@ -120,14 +116,13 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥13.00|200G|未知|
 |￥28.00|500G|未知|
 
-|一次性|流量|限速|
+|年付|流量|限速|
 | :--: | :--: | :--: |
 |￥20.00|128G|未知|
 |￥38.00|256G|未知|
 
-### 魔戒
-此机场**仅有不限时流量出售**，价格挺便宜的
-[官网](https://www.mojie.link/#/plan)
+### [魔戒](https://www.mojie.link/#/plan)
+此机场**仅有不限时流量出售**
  <!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
 
 |一次性|流量|限速|
@@ -139,79 +134,14 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥120.00|1660G|不限|
 |￥240.00|3600G|不限|
 
-:::tip 提示
-以下机场因性价比原因不推荐购买；数据已久未更新。
-:::
-
-### XFLTD
-[官网](https://xftld.org/)
-
-|月付|流量|限速|
-| :--: | :--: | :--: |
-|￥1.00|17G|不限|
-|￥7.00|150G|不限|
-|￥20.00|500G|不限|
-
-|一次性|流量|限速|
-| :--: | :--: | :--: |
-|￥10.00|120G|不限|
-|￥20.00|250G|不限|
-|￥30.00|390G|不限|
-
-### Simple Cloud
-[官网](https://spcloud.me/) | [邀请链接](https://spcloud.me/#/register?code=97EXi3tX)
-
-|月付|流量|限速|
-| :--: | :--: | :--: |
-|￥10.00|100G|1Gbps|
-|￥20.00|250G|1Gbps|
-|￥30.00|450G|1Gbps|
-
-|一次性|流量|限速|
-| :--: | :--: | :--: |
-|￥15.00|50G|未知|
-|￥25.00|100G|未知|
-|￥45.00|200G|未知|
-
-### XSUS
-[官网](https://xsus.buzz/)
- <!-- | [邀请链接](https://xsus.buzz/index.php#/register?code=jXvUrUka) -->
-
-|月付|流量|限速|
-| :--: | :--: | :--: |
-|￥8.00|150G|未知|
-
-|一次性|流量|限速|
-| :--: | :--: | :--: |
-|￥20.00|120G|未知|
-
-### 墙裂
-[官网](https://my.qianglie.com/)
- <!-- | [邀请链接](https://my.qianglie.com/#/register?code=ItpWJ6fF) -->
-|月付|流量|限速|
-| :--: | :--: | :--: |
-|￥10.99|100G|1000Mbps|
-### 流量库
-已无法登录。
-
-<details><summary>archived</summary>
-[官网](https://llcool.xyz/)
- <!-- | [邀请链接](https://llcool.xyz/#/register?code=3y4cAFpN) -->
-|月付|流量|限速|
-| :--: | :--: | :--: |
-|￥1.00|1G|1Gbps|
-|￥5.00|32G|1Gbps|
-|￥8.00|64G|1Gbps|
-|￥12.00|128G|1Gbps|
-|￥20.00|256G|1Gbps|
-</details>
-
-### 大哥云
-[官网](https://www.dageyun.net/)
- <!-- | [邀请链接](https://www.dageyun.net/#/register?code=dpY4UdX3) -->
-|月付|流量|限速|
-| :--: | :--: | :--: |
-|￥19.90|100G|500Mbps|
+### 其他
+以下机场因性价比原因不推荐购买
+* [XFLTD](https://xftld.org/)
+* [Simple Cloud](https://www.spcloud.me/index.php#/register?code=97EXi3tX)
+* [XSUS](https://xsus.buzz/)
+* [墙裂](https://my.qianglie.com/)
+* [大哥云](https://www.dageyun.net/)
+* [流量库](https://llcool.xyz/) （已无法登录
 ## 客户端选择
 ### Clash for Windows（推荐）
 #### 简介

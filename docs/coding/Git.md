@@ -149,6 +149,10 @@ git push origin :refs/tags/TAGNAME
 `git reset --hard 版本号`
 
 此版本后的所有 commit log 将被删除。
+### 查看commit详细信息
+`git show --stat [commit]`
+
+`[commit]` 留空则查询最近一次 commit 的信息
 ## 高级技巧
 ### 忽略文件(夹)
 1. 在仓库所在根目录下新建文本文档，输入你需要忽略的文件或文件夹（文件需带有后缀），以回车键隔开。
