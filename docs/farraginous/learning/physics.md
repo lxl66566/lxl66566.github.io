@@ -59,3 +59,8 @@ Ampère's circuital law: <span v-pre>$\large \oint_{L}\vec{B}\cdot d\vec{l} = \m
 ### 干涉
 双缝干涉 第 k 级明文距中心： <span v-pre>$\large x = k\lambda\frac{D}{d}$</span>
 
+叠加光强：<span v-pre>$\large I=4I_0cos^2\frac{\Delta\phi}{2} \ \ \ I_0$</span> 为每个波分别照射的光强。
+
+相位差与光程差：<span v-pre>$\large \Delta\phi=\frac{2\pi\delta}{\lambda}$</span>
+
+增透膜满足干涉相消：<span v-pre>$\large d=\frac{\lambda}{4n}$</span>
