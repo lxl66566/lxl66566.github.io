@@ -108,7 +108,7 @@ bind "mouse5" "+cjump"
 * 手雷 weapon_hegrenade
 * 燃烧弹 weapon_incgrenade
 #### 静步加快
-`bind "c"+moveup` 仅适用于内格父，开镜的SG 553和AUG。
+`bind "c"+moveup` 仅适用于内格夫，开镜的SG 553和AUG。
 ### 常用指令
 |用途|指令|
 | :-: | :-: |

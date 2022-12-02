@@ -34,6 +34,7 @@ sidebar: 'auto'
 * 日日词典：[Weblio辞書国語辞典](https://www.weblio.jp/) | [goo辞書](https://dictionary.goo.ne.jp/) | [広辞苑無料検索](https://sakura-paris.org/dict/)
 * 语言学习站：[languageplayer](https://languageplayer.io/)：提供 Youtube 音视频文献推荐与词典查询。
 * [DeepL翻译器](https://www.deepl.com/translator)：提供高质量的翻译
+* [Grammaly](https://app.grammarly.com/)：英文润色
 * [反向词典](https://wantwords.net/)：可以根据输入的中文/英文给出近义词汇。
 ### 计算机
 * CS自学：[CS自学指南](https://csdiy.wiki/) | [学长的文章](https://honeysuckle-terrier-6c8.notion.site/CS-4b9f59acd3a64bf8916f834d0c7f25ea)
@@ -41,7 +42,8 @@ sidebar: 'auto'
 * [Vim学习](https://coolshell.cn/articles/5426.html)
 ### 数学/理科
 * [WolframAlpha](https://www.wolframalpha.com/)：在线高级计算
-* [desmos](https://www.desmos.com/calculator?lang=zh-CN)：在线画函数图表
+* [在线工具VIP](https://atool.vip/) [拟合](https://atool.vip/fitting/)：在线工具站，本人最常用的是数据拟合
+* [desmos](https://www.desmos.com/calculator?lang=zh-CN)：在线画函数图表（比 matlab 好看），一般需要配合拟合使用
 * [Octave Online](https://octave-online.net/)：在线 Octave 解释器。Octave 基本兼容 MATLAB 语法。
 ## 媒体创作
 * [稿定](https://ps.gaoding.com/#/)：在线PS
@@ -64,6 +66,7 @@ sidebar: 'auto'
 * [我的世界数据包](https://www.planetminecraft.com/data-packs)
 * [Gartic.io](https://gartic.io/)：你画我猜网页版
 * [Delicious Fruit](https://delicious-fruit.com/ratings/full.php?q=ALL)：I wanna 资源
+* [Switch618公益分享](https://www.switch618.com/)：破解游戏下载站
 ## TG推荐
 由于本人使用telegram的时间不算久，此处频道/群组多为受先行者们所转发传播，在此对他们表示敬意。<span class="heimu" title="你知道的太多了">但是现在的我与当时写下这句话的我已经不一样啦kora！</span>
 ### 新闻
