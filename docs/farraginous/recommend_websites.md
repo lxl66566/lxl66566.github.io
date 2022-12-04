@@ -11,6 +11,7 @@ sidebar: 'auto'
 * [1paragraph](https://1paragraph.app/)：在线网页EPUB阅读器
 * [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
 * [音乐解锁 (v1.10.3)](https://demo.unlock-music.dev/)：移除已购音乐的加密保护。**开源，但仓库已被 github 封禁。**
+* [免费盐选](https://mfyx.top/)：免费看知乎盐选
 ## 合集类
 * [即时工具](https://www.67tool.com/)：致力打造安全、快捷、好用的在线工具箱~
 * [LKs Site](http://lkssite.vip/)：B站up主做的网页推荐站。本站小部分内容为此站精简提取而来。

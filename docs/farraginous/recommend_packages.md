@@ -147,25 +147,26 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 [官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 开源的右键菜单管理器。高度自定义化。
-### Anki
+### [Anki](https://apps.ankiweb.net/)
 多端开源背词软件，多语言，高自由度，拥有庞大的词库社区。
 
-PS:因为复习机制和没有完全删除的设置，不是很推荐。
-
-[官网下载地址](https://apps.ankiweb.net/)
+[使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)
 ### [Winaero Tweaker](https://winaero.com/)
 挺不错的windows小工具，集成一些高级功能（特别对我这种**被迫设置win11**的人有点帮助）
 ### [EnergyStar](https://github.com/imbushuo/EnergyStar)
 为你的windows笔记本提升续航。
 
 小提示，双击exe文件后，EnergyStar将自动在后台运行，不会跳出提示与弹窗。
-### [ffsend]()
+### [ffsend](https://github.com/timvisee/ffsend)
+<details><summary>经测试，国内下载速度较慢，不推荐</summary>
 （命令行）快速上传分享你的文件 / 文件夹
 
 使用方法（Windows x64）：
 1. 下载[ffsend-v0.2.74-windows-x64.exe](https://github.com/timvisee/ffsend/releases/download/v0.2.74/ffsend-v0.2.74-windows-x64.exe)
 2. 在下载目录打开**管理员**终端，执行`move .\ffsend-v0.2.74-windows-x64.exe C:\Windows\System32\ffsend.exe`（或手动复制改名
 3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>`下载
+</details>
+
 ## 浏览器插件
 注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。
 ### 视频速度控制
