@@ -62,3 +62,17 @@ A: 此处我假设会看此条目的都是Windows&Android用户。
 在此之前，你需要有一个Github账号，创建一个属于你自己的仓库。
 
 Github只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
+## Github Workflow
+Github 工作流，极为强大。可以理解为一个虚拟机。
+
+使用方法：在项目根目录下，新建 `.github/workflows/<name>.yml`.
+### Trigger
+ex.
+```yml
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 00 * * *'
+```
+定时任务: 使用 cron 表达式。[此处](https://crontab.guru/)可在线计算表达式。
+手动任务：使用 `workflow_dispatch`。强烈建议不要再使用 `on:push` 进行手动运行控制。
