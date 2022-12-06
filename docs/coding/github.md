@@ -63,7 +63,7 @@ A: 此处我假设会看此条目的都是Windows&Android用户。
 
 Github只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
 ## Github Workflow
-Github 工作流，极为强大。可以理解为一个虚拟机。
+Github 工作流，极为强大。可以理解为一个虚拟机。[官方文档](https://docs.github.com/cn/actions/using-workflows/about-workflows)
 
 使用方法：在项目根目录下，新建 `.github/workflows/<name>.yml`.
 ### Trigger
@@ -75,4 +75,5 @@ on:
     - cron: '30 00 * * *'
 ```
 定时任务: 使用 cron 表达式。[此处](https://crontab.guru/)可在线计算表达式。
+> 注意，定时任务时间为中时区（UTC），并且会出现 0-60+ min 的延时，若有精确执行需求请
 手动任务：使用 `workflow_dispatch`。强烈建议不要再使用 `on:push` 进行手动运行控制。

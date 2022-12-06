@@ -16,7 +16,7 @@ sidebar: 'auto'
 * 选择支存档
 
 ## 资源
-下载：[推荐几个网址](../farraginous/recommend_websites.md#游戏) | [ネコパラ专页](https://n0099.net/res/) | [yuzusoft合集](https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/)
+下载：[推荐几个网址](../farraginous/recommend_websites.md#游戏) | [ネコパラ专页](https://n0099.net/res/) | [yuzusoft合集](https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/) | [十二神魔器](https://pan.cangshui.net/) *密码：god* 
 
 > 解压密码详见[极点ACG公告](https://lspgal.com/5702/)
 
@@ -73,6 +73,7 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
+|euphoria|2022.12.06
 |ISLAND
 |PARQUET|
 |仰望夜空的星辰<Badge type="tip" text="1" vertical="top" />|2022.10.18|9|5|4.5|+40+30+40+15min|
