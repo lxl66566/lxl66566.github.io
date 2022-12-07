@@ -64,3 +64,14 @@ Ampère's circuital law: <span v-pre>$\large \oint_{L}\vec{B}\cdot d\vec{l} = \m
 相位差与光程差：<span v-pre>$\large \Delta\phi=\frac{2\pi\delta}{\lambda}$</span>
 
 增透膜满足干涉相消：<span v-pre>$\large d=\frac{\lambda}{4n}$</span>
+
+### 衍射
+单缝衍射公式：<span v-pre>$\large \delta=asin\theta=a\frac{x}{f}=\normalsize \begin{cases}\pm k\lambda & 暗纹 \\ \in -(\lambda,\lambda) & 中央明纹 \\ \pm (2k+1)\frac{\lambda}{2} & 其余明纹\end{cases} \ \ \ k = 1,2,3...$</span>
+
+圆孔衍射 最小分辨角（第一级暗环衍射角）：<span v-pre>$\large sin \theta_R = 1.22\frac{\lambda}{d}$</span>
+
+光栅衍射明纹：<span v-pre>$\large (a+b)sin\theta=\pm k\lambda$</span>
+
+缺级：<span v-pre>$\large k=\frac{a+b}{a}k'$</span>
+
+偏振片光强变化：<span v-pre>$\large I=I_0cos^2\theta$</span> ；自然光通过，光强减半。

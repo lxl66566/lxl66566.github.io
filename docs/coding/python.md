@@ -5,7 +5,7 @@ sidebar: 'auto'
 和[C++](./Cpp.md)页面一样杂乱，想到什么写什么。
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
-## 图像获取
+## 图像获取与处理
 ### 从网站获取图片
 ```python
 import requests
@@ -20,7 +20,6 @@ image.show()
 from PIL import ImageGrab
 img = ImageGrab.grab(bbox=(0, 0, 1920, 1080))   # 注意改为你需要截屏的分辨率
 ```
-## 图像处理
 ### 多图片转pdf
 ```py
 import img2pdf
@@ -53,9 +52,10 @@ img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
 ## miniconda
 提供python包管理与虚拟环境。
 
-对我来说则是打包工具。由于pyinstaller的打包会将环境内所有的工具包都整合到一起，因此使用conda的虚拟环境隔离出运行所需环境，可以减小打包体积。
+由于pyinstaller的打包会将环境内所有的工具包都整合到一起，因此使用conda的虚拟环境隔离出运行所需环境，可以减小打包体积。
 
 Anaconda体积过于庞大（6G+），**强烈建议[安装miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda捆绑祸害了多少编程新人！（包括我）</span>
+
 ### 基本命令
 #### 创建环境
 `conda create -n Name python=3.9`
@@ -121,3 +121,8 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 * `-i <icon.ico>` 设置图标
 ## Python代码混淆
 [这里](https://pyob.oxyry.com/)是一个网站，可以在线混淆您的 python 代码。
+## 一些问题
+### 找不到pip
+某天，莫名其妙，在使用 pip install 命令时，报错，找不到 pip。我觉得很怪。`C:\Python310\Scripts` 路径下也能找得到 pip.exe，环境变量也没改。我在当前路径下打开 cmd ，执行 pip，然而还是不能正常使用。 ~~（忘了报什么错了）~~ 鼓捣了一会儿，试图使用离线安装，提示找不到 wheel.exe.
+
+最终解决方法：在[此页面](https://pypi.org/project/pip/#files)下载`.tar.gz`,解压后在目录下执行 `setup.py build` 即可。
