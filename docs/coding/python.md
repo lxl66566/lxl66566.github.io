@@ -5,7 +5,7 @@ sidebar: 'auto'
 和[C++](./Cpp.md)页面一样杂乱，想到什么写什么。
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
-## 图像获取与处理
+## 图像相关
 ### 从网站获取图片
 ```python
 import requests
@@ -39,7 +39,7 @@ def img2Byte(img:Image) -> bytes:
     byte_res=imgByte.getvalue()
     return byte_res
 ```
-## 高斯模糊
+### 高斯模糊
 ::: warning
 请不要试图使用 cv2 对 Image 对象进行操作。(fuck cv2)
 :::
@@ -121,8 +121,12 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 * `-i <icon.ico>` 设置图标
 ## Python代码混淆
 [这里](https://pyob.oxyry.com/)是一个网站，可以在线混淆您的 python 代码。
+
 ## 一些问题
 ### 找不到pip
-某天，莫名其妙，在使用 pip install 命令时，报错，找不到 pip。我觉得很怪。`C:\Python310\Scripts` 路径下也能找得到 pip.exe，环境变量也没改。我在当前路径下打开 cmd ，执行 pip，然而还是不能正常使用。 ~~（忘了报什么错了）~~ 鼓捣了一会儿，试图使用离线安装，提示找不到 wheel.exe.
+执行 `python -m pip install --upgrade pip` 后报错：
+> ERROR: Could not install packages due to an OSError: [WinError 5] 拒绝访问。: 'c:\\python310\\scripts\\pip.exe'
 
-最终解决方法：在[此页面](https://pypi.org/project/pip/#files)下载`.tar.gz`,解压后在目录下执行 `setup.py build` 即可。
+之后再使用 `pip` 命令时，就会不断报错，找不到 pip。我觉得很怪。`C:\Python310\Scripts` 路径下也能找得到 pip.exe，环境变量也没改。我在当前路径下打开 cmd ，执行 pip，然而还是不能正常使用。 ~~（忘了报什么错了）~~ 鼓捣了一会儿，试图使用离线安装，提示找不到 wheel.exe.
+
+最终解决方法：在[此页面](https://pypi.org/project/pip/#files)下载`.tar.gz`,解压后在目录下执行 `setup.py build` 与 `python -m pip install --upgrade pip --user`。
