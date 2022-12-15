@@ -90,7 +90,7 @@ export default defineUserConfig({
 1. 这个图床有*容量上限：5GB*和*单张图片上限：5MB*
 2. 原有的每张图都需要手动替换，因为src是随机生成的
 3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
-4. 在[关于SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/fucksmms.png)<span class="heimu" title="你知道的太多了">这样的图床还是早点死吧！</span>
+4. 在[关于SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/withvuepress2/fucksmms.png)<span class="heimu" title="你知道的太多了">这样的图床还是早点死吧！</span>
 
 因此寻找其他解决方案。开始采用CDN加速github图床的方案。cdn的好处：
 * 不改变图片目录结构
@@ -212,3 +212,9 @@ sidebar: {
     ],
 },
 ```
+
+### 上传问题
+`git push` 时出现问题:`ssh: connect to host github.com port 22: Connection timed out`。代理无问题，可上Github。
+
+解决方法：
+参考[Github官方解释](https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)

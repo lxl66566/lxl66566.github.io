@@ -99,7 +99,7 @@ export default defineUserConfig({
         {
           text : '闲聊',
           link : '/gossip/',
-          children: ['author.md','schedule.md','fuckqq.md','difficulties.md','withvuepress2.md','consider.md','hope.md'],
+          children: ['author.md','schedule.md','fuckqq.md','difficulties.md','withvuepress2.md','consider.md','hope.md','compare_home_to_college.md'],
         },
       ],
       '/articles/': [

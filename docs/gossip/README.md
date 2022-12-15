@@ -8,3 +8,4 @@
 6. [VuePress2与博客心得](./withvuepress2.md)
 7. [绝对值x是如何看待xxx的？~~一些锐评与想法~~](./consider.md)
 8. [绝对值x对xxx的希望是什么？](./hope.md)
+9. [家与学校生活环境对比（我为什么不愿意回家）](./compare_home_to_college.md)
