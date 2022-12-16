@@ -3,7 +3,7 @@
 
 设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如Hexo,Wordpress,HUGO,docsify等。后来随着慢慢深入接触也了解了Vitepress,mdbook,Gitbook。但我还是选择vuepress。个中缘由嘛，vuepress的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
 
-然后到了搭建之初阶段，由于vuepress1.x仅使用config.js，而2.x改用ts，这导致了我被网上教程（我看的很多是用js的）与官方文档的ts搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
+然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我被网上教程（我看的很多是用js的）与官方文档的 ts 搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
 
 后来在开发过程中还遇到了亿些问题——
 
@@ -26,7 +26,7 @@
 > at renderComponentSubTree (C:\Users\oyh\vuepress-starter\node_modules\@vue\server-renderer\dist\server-renderer.cjs.prod.js:256:13)<br/>
 
 ## Vue组件注册失败的问题
-目前开发过程中遇到的最大的问题。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用iframe引入带组件的html），就暂时不尝试了。（20220720速报：问题已解决，解决方法：重新下载vuepress2包。猜测是旧vuepress2的依赖包出了问题。）
+目前开发过程中遇到的最大的问题。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用iframe引入带组件的html），就暂时不尝试了。（20220720速报：问题已解决，解决方法：重新下载 vuepress2 包。猜测是旧 vuepress2 的依赖包出了问题。）
 
 ## 评论插件配置失败问题
 我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比vuepress2文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个theme出来...我哪有那个能耐啊，直接Ctrl+CV了。不过这种东西本应在文档里指明的。
@@ -108,8 +108,8 @@ export default defineUserConfig({
 
 有以下两个解决方法：
 
-1. 在全局css中新增类`.ClassName img{width: 60% !important; height:auto !important;}`，并在md中以`<div class='ClassName'><img src='...'/></div>`使用。
-2. 在全局css中新增类`.ClassName img{max-width: 60%;}`，并在md中以`<div class="ClassName";"><img src="..."/></div>`使用。
+1. 在全局css中新增选择器`.ClassName img{width: 60% !important; height:auto !important;}`，并在md中以`<div class="ClassName"><img src="..."/></div>`使用。
+2. 在全局css中新增选择器`.ClassName img{max-width: 60%;}`，并在md中以同样方式使用。
 
 ## 为单一页面添加css
 
@@ -122,7 +122,7 @@ export default defineUserConfig({
 
 <text style="color:red;font-weight:bold">未解决！</text>
 
-用html, js, css 三件套写了一个简陋的[背词器](../farraginous/reciter.md)出来，但是受制于iframe的固定大小，很容易出现超出边框的情况。于是想到了vue组件引入的方法。但是，遇到了~~前所未有~~的麻烦。vue组件单文件（SFC）仅允许一个`<script>`标签的存在。而我的背词器中使用了两个script：jquery库与我自己写的js。
+用html, js, css 三件套写了一个简陋的[背词器](../farraginous/reciter.md)出来，但是受制于 iframe 的固定大小，很容易出现超出边框的情况。于是想到了vue组件引入的方法。但是，遇到了~~前所未有~~的麻烦。vue组件单文件（SFC）仅允许一个`<script>`标签的存在。而我的背词器中使用了两个 script：jquery库与我自己写的js。
 
 网上的关于SFC的解释非常的含糊其辞。几乎没有实例。
 

@@ -125,7 +125,7 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 
 第二天我几乎是死心了，开始了自己融合皮肤的过程，希望能融出像原来那种的蓝白钉皮。自己融了整整一天，也融不出什么手感好的皮肤。
 
-然后在20220613晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了absolute x v2。（当前改版至[absolute x v5](https://wwp.lanzout.com/ivOwH098z2rc)）手感还不错，能够足够逼近原来的皮肤了。
+然后在20220613晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了absolute x v2。（当前改版至[absolute x v5](https://wwkh.lanzout.com/i0D1c0iv79gh)）手感还不错，能够足够逼近原来的皮肤了。
 ### 其他推荐
 * 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
 
