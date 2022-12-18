@@ -107,11 +107,11 @@ sidebar: 'auto'
 * 一旦被吵醒就很难再次入睡，除非特别困。
 * 喜欢吃糖与吃辣。
 ## 社交
-[我的telegram频道](https://t.me/withabsolutex)
+telegram 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-%40ab5__x-blue?style=flat-square&logo=telegram" /></a>
 
 [我的哔哩哔哩账号](https://space.bilibili.com/346365047)
 
-[我的osu账号](https://osu.ppy.sh/users/25751103)
+[我的 osu 账号](https://osu.ppy.sh/users/25751103)
 ## 音乐
-[我的网易云音乐歌单](https://music.163.com/playlist?id=3098200457&userid=2061039950)，但是平常并不听歌
+[我的网易云音乐歌单](https://music.163.com/playlist?id=3098200457&userid=2061039950)<span class="heimu" title="你知道的太多了">但是平常较少听歌</span>
 ## *[关于作者的更详细回答](../hide/personal_details.md)*

@@ -10,6 +10,8 @@
 
 <img alt="桌上" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/table.jpg"  width="50%" height="50%"/><img alt="凳子" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/stool.jpg"  width="50%" height="50%"/>
 
+* 解法
+<img alt="新桌面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/new_table.jpg"  width="50%" height="50%"/>
 ## 零食
 * 宿舍：有着一大堆零食，包括但不限于薯片，糖果，其他膨化食品，饮料，麻辣小包食品，锅巴，辣条，方便面。
 * 家里：一眼就很健康的水果。没了。
