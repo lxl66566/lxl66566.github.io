@@ -100,3 +100,14 @@ inverse Laplace transform：<span v-pre>$\large f(t)=\frac{1}{2\pi i}\int_{\beta
 
 > 推论：<span v-pre>$f(z)解析，f'(z_0)\neq 0 \Rightarrow f(z)在z_0处保角$</span>
 
+对应点公式：<span v-pre>$\Large\frac{w-w_1}{w-w_2}:\frac{w_3-w_1}{w_3-w_2}=\frac{z-z_1}{z-z_2}:\frac{z_3-z_1}{z_3-z_2}$</span>&nbsp;&nbsp;&nbsp; 其中∞替换为1
+
+上半平面→上半平面：<span v-pre>$w=\frac{az+b}{cz+d},ad-bc>0$</span>
+
+上半平面→单位圆：<span v-pre>$\large w=e^{i\theta}(\frac{z-\lambda}{z-\bar{\lambda}})$</span>
+
+> 特别的，<span v-pre>$\large w=\frac{z-i}{z+i}$</span>
+
+单位圆→单位圆：<span v-pre>$\large w=e^{i\varphi}(\frac{z-\alpha}{1-\bar{\alpha}z}),\small |\alpha|<1$</span>
+
+带形区域→角形区域：<span v-pre>$w=e^z$</span> , 0&lt;Imz&lt;a(0&lt;a&lt;2pi) → 0&lt;arg w&lt;a

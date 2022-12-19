@@ -1,5 +1,5 @@
 const { defineUserConfig } = require("@vuepress/cli");
-const { defaultTheme } = require('@vuepress/theme-default')
+// const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require('@vuepress/plugin-search')
 const { prismjsPlugin } = require('@vuepress/plugin-prismjs')
 const { registerComponentsPlugin } = require('@vuepress/plugin-register-components')
@@ -10,6 +10,7 @@ const { commentTheme } = require("./theme");
 export default defineUserConfig({
   lang: 'zh-CN',
   base: '/',
+  build: {chunkSizeWarningLimit:1500,},
   title: '绝对值_x的博客',
   description: '没什么有价值的内容的，真的！',
   head:[
