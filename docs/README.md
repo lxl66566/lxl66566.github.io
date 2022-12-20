@@ -3,18 +3,18 @@
 # heroImage: /image/logo.jpg
 ---
 
-# 绝对值_x的博客
+# 绝对值_x 的博客
 
 快速跳转：
 [[toc]]
 ## 写在前面
-2022.04.24晚，睡前突然萌生了写自己的blog的想法。当然，这只是个想法而已。
+2022.04.24 晚，睡前突然萌生了写自己的blog的想法。当然，这只是个想法而已。
 
-但2022.05.03晚我突然间<span class="heimu" title="你知道的太多了">感受到了命运的召唤</span>获得了上手建站的动力。于是，绝对值_x的博客于2022.05.04正式上线。/鼓掌！
+但 2022.05.03 晚 我突然间<span class="heimu" title="你知道的太多了">感受到了命运的召唤</span>获得了上手建站的动力。于是，绝对值_x 的博客于 2022.05.04 正式上线。/鼓掌！
 
 本人可怜的技术力，注定了本站的主要功能——闲聊，或者说，展示自我。在此我提前为可能出现的不当言论道歉。
 
-对blog的反馈与建议，请在对应页面下评论。我很乐意看到大家的反馈。
+对blog的反馈与建议，请在对应页面下评论（或者[私聊我](./gossip/author.md#社交)）。我很乐意看到大家的反馈。
 ::: tip 提示
 本站点持续更新！
 :::
@@ -34,7 +34,8 @@
 ## 关于作者
 * 前往[闲聊：关于作者](./gossip/author.md)
 ## 关于博客
-* 使用 [vuepress2](https://v2.vuepress.vuejs.org/zh/) 搭建，默认主题，极简风格
-* 部署于Github Pages，[项目地址](https://github.com/lxl66566/lxl66566.github.io)
+* 使用 [VuePress2](https://v2.vuepress.vuejs.org/zh/) 搭建，默认主题，极简风格
+* [项目地址](https://github.com/lxl66566/lxl66566.github.io)，Markdown 源码位于 branch *[code](https://github.com/lxl66566/lxl66566.github.io/tree/code)*
+* 部署于 [Github Pages](https://lxl66566.github.io) & [Cloudflare](https://absx.pages.dev)
 * 前往[闲聊：vuepress2与博客心得](./gossip/withvuepress2.md)
 * 前往[博客维护日志](./farraginous/log.md)

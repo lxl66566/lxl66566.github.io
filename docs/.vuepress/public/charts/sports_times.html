@@ -237,6 +237,8 @@
         { "name": "俯卧撑" , "时刻": "20221211", "times" : 10 },
         { "name": "俯卧撑" , "时刻": "20221213", "times" : 15 },
         { "name": "俯卧撑" , "时刻": "20221219", "times" : 13 },
+        { "name": "引体向上" , "时刻": "20221219", "times" : 0 },
+        { "name": "引体向上" , "时刻": "20221220", "times" : 6 + 4 },
       ]
       const { Line } = G2Plot;
       const linePlot = new Line('container', {
@@ -248,12 +250,6 @@
         connectNulls : false,
         legend: {
           position: 'top',
-        },
-        animation: {
-          appear: {
-            animation: 'wave-in',
-            duration: 5000,
-          },
         },
         slider: {
           start: 0,
@@ -270,3 +266,16 @@
     </script>
   </body>
 </html>
+<style>
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #22272e;
+      color: white;
+    }
+  }
+</style>

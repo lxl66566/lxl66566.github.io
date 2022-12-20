@@ -5,10 +5,10 @@ sidebar: 'auto'
 ## CS:GO
 CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此需要[时不时戒一段时间](../hide/personal_details.md#强迫自己做的事)。
 
-另外，我大概已于 2022.11.20 戒掉了 CS:GO。希望各位适度游戏，享受游戏过程。
+* 另外，我已于 2022.11.20 完全戒掉了 CS:GO。希望各位适度游戏，享受游戏过程。
 ### 设置方案
 #### 启用控制台
-![控制台](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/csgo_settings_1.png)
+![控制台](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo_settings_1.png)
 
 控制台是对csgo进行高级操作的基础。现在你可以按`~`键呼出控制台。
 #### 切换国服
@@ -17,12 +17,12 @@ CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此�
 * 无需加速器，延迟低
 * 匹配国人队友
 
-不过切换国服也有缺点，比如防沉迷认证等。请自行决定是否切换。你可以选择以下**一项**：
+不过切换国服也有缺点，比如需要防沉迷认证，无法跟外服联机等。请自行决定是否切换。你可以选择以下**一项**：
 
 1.下载安装[完美世界竞技平台](https://pvp.wanmei.com/)软件。之后每次启动csgo时就会让你选择游玩哪个服务器。
 
 <div style="text-align: center;">
-<img alt="开始界面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/csgo_settings_2.png"  width="43%" height="43%"/>
+<img alt="开始界面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo_settings_2.png"  width="43%" height="43%"/>
 </div>
 
 2.在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
@@ -52,12 +52,12 @@ CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此�
 （此时每个目录下仅有一个文件夹，一直点到最后），在右侧找到 Scaling 并双击，更改数值为3
 
 <div style="text-align: center; ">
-<img alt="注册表" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/csgo_settings_4.png"  width="100%" height="100%"/>
+<img alt="注册表" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo_settings_4.png"  width="100%" height="100%"/>
 </div>
 
 ::: danger 警告
 对注册表进行直接操作前请务必事先备份！
-<br/><img alt="注册表备份" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/csgo_settings_3.png"  width="40%" height="40%"/>
+<br/><img alt="注册表备份" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo_settings_3.png"  width="40%" height="40%"/>
 :::
 
 #### 显示FPS
@@ -108,8 +108,10 @@ bind "mouse5" "+cjump"
 * 手雷 weapon_hegrenade
 * 燃烧弹 weapon_incgrenade
 #### 静步加快
-`bind "c"+moveup` 仅适用于内格夫，开镜的SG 553和AUG。
+`bind "c"+moveup` 按`c`即可快速无声走路。仅适用于内格夫，开镜的SG 553和AUG。
 ### 常用指令
+多用于自定义服务器（创意工坊）。
+
 |用途|指令|
 | :-: | :-: |
 |设置出生金钱|`mp_startmoney 16000`|
@@ -128,7 +130,7 @@ bind "mouse5" "+cjump"
 ## 明日方舟
 * 纪念一下曾经沉迷明日方舟的我。（20201031-20220615）
 
-![我的明日方舟账号](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/arknights.png)
+![我的明日方舟账号](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/arknights.png)
 
 全程零氪。大号：共196位干员，其中有38位6星干员，升到满级的有能天使和史尔特尔；32位精二干员，其中22位专三。主线推至8章M8-6,9章9-11。
 小号：94级的精一1级号，此处不展示。

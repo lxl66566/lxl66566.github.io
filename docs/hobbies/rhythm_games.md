@@ -52,7 +52,7 @@ sidebar: 'auto'
 
 * 我的o!m健身按键数 ~~（众所周知osu是健身游戏）~~
 
-<iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="300"></iframe>
 
 * Jackmap变化图
 
@@ -194,7 +194,7 @@ early过多，向正方向调整。 -->
 ### 最好成绩
 15.9 all perfect
 
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1qY4y1g7rS&cid=747279284&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
+![15.9 all perfect](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/phigros_best.jpg)
 
 ### 共存版
 * 2.1.4（2022愚人节）
@@ -223,4 +223,4 @@ early过多，向正方向调整。 -->
 ### 最好成绩
 Sheriruth 10.1 pure memory
 
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1rF411g7mb&cid=574299849&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
+![Sheriruth 10.1 pure memory](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/arcaea_best.jpg)

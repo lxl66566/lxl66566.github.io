@@ -155,7 +155,7 @@ sidebar: 'auto'
 | :----: | :----: |
 |仰望夜空的星辰|自动模式速度标注反了；鼠标左右键均无法解除自动；<text style="color:red;">未阉割版的汉化无法正常启动</text>|
 |灵感满溢的甜蜜创想|<text style="color:red;">恶性bug（民汉版）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决</text>；<!-- 无法关闭操作的效果语音<text style="color:red;">且会覆盖播放中的语音</text>；--> backlog界面下滑滚轮无法返回|
-|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame_exe_collapse.jpg)|
+|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/galgame_exe_collapse.jpg)|
 |9-nine-新章 & 9-nine-雪色雪花雪余痕|使用オーバーロード跳转分支时，右侧滑动条会被弹出的存档遮挡|
 |冥契的牧神节|<text style="color:red;">存档&删除存档时出现过序号错乱，错误覆盖（仅发生一次）；<br/>点击auto后按左键停止后会继续向下跳一页；</text><br/>读档后无法查看此位置前的历史记录|
 |鯨神のティアスティラ|在历史对话界面播放语音后，右键退出此界面，语音将自动终止|
