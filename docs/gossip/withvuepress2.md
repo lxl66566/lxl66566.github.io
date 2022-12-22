@@ -213,8 +213,49 @@ sidebar: {
 },
 ```
 
-### 上传问题
+## 上传问题
 `git push` 时出现问题:`ssh: connect to host github.com port 22: Connection timed out`。代理无问题，可上Github。
 
 解决方法：
 参考[Github官方解释](https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)
+
+## html传参引入指定js
+目的：复用画图表的 html 文件。尝试：
+1. 给页面中的 iframe html 传参:
+```html
+<iframe src="/charts/animation.html?src=GBperprice"></iframe>
+```
+2. 然后在 html script 中处理参数:
+```js
+function getParams(key) {
+    var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+};
+const addr = "/charts/" + getParams("src") + ".js";
+```
+3. 并引入`addr`参数位置的 .js 文件。
+
+<text style="color:red;font-weight:bold">未解决！</text>
+
+:::: code-group
+::: code-group-item HTML
+```html
+...
+<!-- <script type="text/javascript" src=addr></script> 无效。script 无法使用 JavaScript 变量。 -->
+<script type="module">
+    // import {data} from addr; 报错，其将 addr 识别为 "addr" 而非 String 变量
+    import (addr);  // 无效
+</script>
+...
+```
+:::
+::: code-group-item JS
+```js
+export const data=[...]
+```
+:::
+::::
