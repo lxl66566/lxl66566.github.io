@@ -5,14 +5,18 @@ sidebar: 'auto'
 ## 是什么
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. ——[Git官网](https://git-scm.com/)
 
-说人话：代码管理（包括备份，归档，分支等常用功能）
-
+我的理解：版本控制，可以用来备份，提交，分支与合并。主要用于如 Github 等平台的远程仓库管理。Github 只支持 Git 作为唯一的版本库格式进行托管。
 ## 如何使用
+下载安装 git 后，在任意目录右击即可看到 Git Bash Here （命令行界面）和 Git GUI Here （图形界面）。本文仅介绍 Git Bash 用法。
 
-下载安装git后，在任意目录右击即可看到Git Bash Here （命令行界面）和 Git GUI Here （图形界面）。本文仅介绍Git Bash用法。
+当然，git 安装时会将自身安装目录添加到环境变量，因此你也可以在 cmd 或 Powershell 中使用 git 命令。
 
-当然，git安装时会将自身安装目录添加到环境变量，因此你也可以在cmd或Powershell中使用git命令。
-
+第一次使用 git 前需要配置环境：
+```sh
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+这里建议将 `Your Name` & `your-email@example.com` 设为你的 Github 注册用户名与邮箱。（使 Github 能够统计你的活跃度）
 ## 常用命令
 ### 创建仓库
 ```sh
@@ -153,7 +157,7 @@ git push origin :refs/tags/TAGNAME
 `git show --stat [commit]`
 
 `[commit]` 留空则查询最近一次 commit 的信息
-## 高级技巧
+## 其他技巧
 ### 忽略文件(夹)
 1. 在仓库所在根目录下新建文本文档，输入你需要忽略的文件或文件夹（文件需带有后缀），以回车键隔开。
 2. 保存并重命名为`.gitignore`。
@@ -169,12 +173,24 @@ git push origin :refs/tags/TAGNAME
 ```sh
 git commit -m $(date "+%Y%m%d-%H:%M:%S")
 ```
-例：注释为`20220613-11:34:59`。可根据个人习惯修改格式。
-### 取消目录安全提示
-自己是搞小破玩意的，没必要一直被安全提示烦（笑
+例：注释为`20220613-11:34:59`。可根据个人习惯修改格式。注意，该语句可能在 bash 以外的命令行中无法使用。
+### 取消目录安全警告
 ```sh
 git config --global --add safe.directory '*'
 ```
+### 用于备份
+有了 `.sh` 脚本后，我们就能很轻松地在 Github 上备份自己的文件。请 ChatGPT 讲一下移动与覆盖：
+> cp 是一个在 Bash shell 中用来复制文件和目录的命令。与 cp 命令一起使用的选项控制了复制的方式。这里是每个选项的含义：
+> 
+> -r：递归地复制目录。这意味着 cp 命令会复制指定的目录以及它的所有子目录和它们的内容。
+> 
+> -f：强制 cp 命令在不提示的情况下覆盖现有文件。
+> 
+> -n：防止 cp 命令覆盖现有文件。如果目标目录中已经存在同名文件，cp 命令会跳过它并且不复制该文件。
+> 
+> -u：仅在目标文件不存在或目标文件比源文件旧时才复制文件。这对于在两个目录之间同步文件非常有用。
+
+因此，对于**文件夹** 备份移动适合使用 `cp -rfu /path/to/source/directory /path/to/destination`，而对于**文件** 备份移动适合使用 `cp -fu /path/to/source/file /path/to/destination/file`。
 ## 疑难解答
 * ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误。
 >

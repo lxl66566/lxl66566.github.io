@@ -77,7 +77,7 @@ sidebar: 'auto'
 |ISLAND
 |PARQUET|
 |仰望夜空的星辰<Badge type="tip" text="1" vertical="top" />|2022.10.18|8.5|5|4.5|+40+30+40+15min|
-|常轨脱离Creative|2022.10.04|4|9.5|8|+40min+100min|
+|常轨脱离Creative|2022.10.04|4|9.5|<text style="color:red;">0</text>|+40min+100min|
 |アンレス テルミナリア|
 |魔女的夜宴|2022.02.10|5.7|7.2|9.5|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
@@ -152,9 +152,9 @@ sidebar: 'auto'
 
 |游戏名|问题|
 | :----: | :----: |
-|仰望夜空的星辰|自动模式速度标注反了；鼠标左右键均无法解除自动；<text style="color:red;">未阉割版的汉化无法正常启动</text>|
-|灵感满溢的甜蜜创想|<text style="color:red;">恶性bug（民汉版）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决</text>；<!-- 无法关闭操作的效果语音<text style="color:red;">且会覆盖播放中的语音</text>；--> backlog界面下滑滚轮无法返回|
-|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/galgame_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/galgame_exe_collapse.jpg)|
+|仰望夜空的星辰|自动模式速度标注反了；鼠标左右键均无法解除自动；<text style="color:red;">未阉割版的汉化无法正常启动（包括兼容模式）</text>|
+|灵感满溢的甜蜜创想|<text style="color:red;">恶性bug（民汉版）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决；backlog bug（官中）：背景透明，头像变大，按钮消失，继而游戏黑屏无法打开；恢复存档无法恢复 save/load/语音收藏</text>；backlog界面下滑滚轮无法返回![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/hamidashi_error1.png)|
+|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；A键未绑定至auto；<text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有*跳到下个选择支* 按钮造成的</span> ![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/aokana_picture_error.png) ![程序崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/aokana_exe_collapse.jpg)|
 |9-nine-新章 & 9-nine-雪色雪花雪余痕|使用オーバーロード跳转分支时，右侧滑动条会被弹出的存档遮挡|
 |冥契的牧神节|<text style="color:red;">存档&删除存档时出现过序号错乱，错误覆盖（仅发生一次）；<br/>点击auto后按左键停止后会继续向下跳一页；</text><br/>读档后无法查看此位置前的历史记录|
 |鯨神のティアスティラ|在历史对话界面播放语音后，右键退出此界面，语音将自动终止|
@@ -192,4 +192,4 @@ sidebar: 'auto'
 * 作为神器之一，应得那一份敬畏。
 * 好像是我玩的第一部内嵌 スタッフコメント 的 gal，感觉很好玩（真的），应该大力推广（
 #### 常轨脱离Creative
-玩汉化到一半[程序出问题了](https://github.com/lxl66566/my-key-data/issues/1)，然后润去玩官中。但是，官中为什么要把 锦亚澄 翻成 锦明日海 啊！不习惯。
+玩汉化到一半[程序出问题了](https://github.com/lxl66566/my-key-data/issues/1)，然后润去玩官中。但是，官中为什么要把 锦亚澄 翻成 锦明日海 啊！不习惯。后来也确实感觉官中水平没有民汉高。。

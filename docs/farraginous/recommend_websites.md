@@ -57,6 +57,7 @@ sidebar: 'auto'
 * 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/)
 * [片头制作](https://panzoid.com/)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！
+* [SVG在线编辑器](https://c.runoob.com/more/svgeditor/)
 ## 生活
 * [居家简易食谱](https://cook.yunyoujun.cn/)
 ## 游戏

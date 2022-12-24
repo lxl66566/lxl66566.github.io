@@ -146,10 +146,10 @@
         { "name": "俯卧撑" , "时刻": "20220508", "times" : 12 + 15 },
         { "name": "俯卧撑" , "时刻": "20220509", "times" : 15 },
         { "name": "俯卧撑" , "时刻": "20220511", "times" : 18 },
-        // { "name": "开合跳" , "时刻": "20220511", "times" : 0 },
-        // { "name": "俯卧撑" , "时刻": "20220512", "times" : 0 },
-        // { "name": "开合跳" , "时刻": "20220512", "times" : 200 },
-        // { "name": "开合跳" , "时刻": "20220602", "times" : 0 },
+        { "name": "开合跳" , "时刻": "20220511", "times" : 0 },
+        { "name": "俯卧撑" , "时刻": "20220512", "times" : 0 },
+        { "name": "开合跳" , "时刻": "20220512", "times" : 200 },
+        { "name": "开合跳" , "时刻": "20220602", "times" : 0 },
         { "name": "俯卧撑" , "时刻": "20220602", "times" : 12 },
         { "name": "俯卧撑" , "时刻": "20220604", "times" : 11 },
         { "name": "引体向上" , "时刻": "20220604", "times" : 0 },
@@ -244,7 +244,21 @@
         { "name": "俯卧撑" , "时刻": "20221221", "times" : 0 },
         { "name": "俯卧撑" , "时刻": "20221223", "times" : 15 },
         { "name": "引体向上" , "时刻": "20221223", "times" : 0 },
+        { "name": "仰卧起坐" , "时刻": "20221223", "times" : 0 },
+        { "name": "俯卧撑" , "时刻": "20221224", "times" : 17 },
+        { "name": "仰卧起坐" , "时刻": "20221224", "times" : 30 },
       ]
+      function detimes(item,rate)
+      {
+        item.times /= rate;
+        item.name = item.name + '/' + String(rate);
+      }
+      data.forEach(items =>
+      {
+        if(items.name == '仰卧起坐'){detimes(items,2);}
+        else if(items.name == '开合跳'){detimes(items,8);}
+        else if(items.name == '深蹲'){detimes(items,10);}
+      });
       const { Line } = G2Plot;
       const linePlot = new Line('container', {
         data,
