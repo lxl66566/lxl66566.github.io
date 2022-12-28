@@ -35,7 +35,7 @@ sidebar: 'auto'
 * 日日词典：[Weblio辞書国語辞典](https://www.weblio.jp/) | [goo辞書](https://dictionary.goo.ne.jp/) | [広辞苑無料検索](https://sakura-paris.org/dict/)
 * 语言学习站：[languageplayer](https://languageplayer.io/)：提供 Youtube 音视频文献推荐与词典查询。
 * [DeepL翻译器](https://www.deepl.com/translator)：提供高质量的翻译
-* [Grammaly](https://app.grammarly.com/)：英文润色
+* 英文润色：[Grammaly](https://app.grammarly.com/) | [QuillBot](https://quillbot.com/)
 * [反向词典](https://wantwords.net/)：可以根据输入的中文/英文给出近义词汇。
 ### 计算机
 * CS自学：[CS自学指南](https://csdiy.wiki/) | [学长的文章](https://honeysuckle-terrier-6c8.notion.site/CS-4b9f59acd3a64bf8916f834d0c7f25ea)
