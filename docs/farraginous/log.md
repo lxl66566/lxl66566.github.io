@@ -130,7 +130,7 @@ sidebar: 'auto'
 * 修复 图片加载失败问题：使用cdn加速
 ### .07
 #### 2022.07.30
-* 新增 [游戏-galgame#游戏优点](../hobbies/galgame.md#游戏优点)
+* 新增 游戏-galgame#游戏优点（已合并到 #说两句）
 #### 2022.07.29
 * 改为使用图床存放图片(images分支)
 * 新增 [游戏-其他游戏#明日方舟](../hobbies/other_games.md#明日方舟)，[文章#Windows端记录软件使用时长](../my_articles.md#windows端记录软件使用时长)

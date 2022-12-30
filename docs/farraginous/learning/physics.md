@@ -5,9 +5,9 @@ sidebar: 'auto'
 ## 电学
 常量：
 
-e = 1.6×10⁻¹⁹C
+e = 1.6×10^-19C
 
-<span v-pre>$\varepsilon_0 = 8.85\times 10^{12}\ C^2/N\cdot m^2$</span>
+<span v-pre>$\varepsilon_0 = 8.85\times 10^{-12}\ C^2/N\cdot m^2$</span>
 
 真空磁导率：<span v-pre>$\mu_0 = 4\pi\times 10^{-7}\ T\cdot m/A$</span>
 
@@ -85,7 +85,7 @@ Ampère's circuital law: <span v-pre>$\large \oint_{L}\vec{B}\cdot d\vec{l} = \m
 <span v-pre>$B=\mu_0\mu_r H$</span>
 
 ## 电磁感应
-法拉第电磁感应定律：感应电动势 <span v-pre>$\varepsilon_i=-\Large\frac{d\Phi}{dt}$</span>
+法拉第电磁感应定律：感应电动势 <span v-pre>$\varepsilon_i=-\Large\frac{d\Phi_N}{dt}$</span>
 
 磁链：<span v-pre>$\Phi_N=NΦ（匝数×磁通）=NBS$</span>
 
