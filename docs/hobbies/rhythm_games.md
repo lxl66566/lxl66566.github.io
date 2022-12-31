@@ -25,7 +25,7 @@ sidebar: 'auto'
 
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
-|osu|81|<text style="color:red;">-89ms(-83~-100)</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p></text></details>|30|0|
+|osu|81|<text style="color:red;">-92ms(-83~-100)</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p></text></details>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">70</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|

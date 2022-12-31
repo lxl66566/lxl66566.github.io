@@ -7,8 +7,10 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2022
 ### .12
+#### 2022.12.31
+* 新增[闲聊-xxx有多难用#B站有多难用](../gossip/fuckxxx.md#b站有多难用)、[文章-TG教程](../articles/telegram.md)
 #### 2022.12.29
-* 更新[学习笔记-大学物理](./learning/physics.md)
+* 完结[学习笔记-大学物理](./learning/physics.md)
 #### 2022.12.26
 * 新增[学习笔记-电路分析基础](../farraginous/learning/circuit_analysis.md)
 * 新增*回忆录#大二上寒假*
@@ -123,7 +125,7 @@ sidebar: 'auto'
 * 添加[我的o!m健身按键数](../hobbies/rhythm_games.md#osu)图表并每日维护
 * 尝试vue组件形式使用g2plot失败
 #### 2022.08.06
-* 维护 [网址汇总#TG推荐](./recommend_websites.md#tg推荐)
+* 维护 网址汇总#TG推荐（已合并到文章-TG教程）
 #### 2022.08.05
 * 维护 [初级科学上网](..//articles/vpn.md)，添加机场性价比图表
 #### 2022.08.03
@@ -174,10 +176,10 @@ sidebar: 'auto'
 #### 2022.06.19
 * 新增 [软件汇总#浏览器插件&浏览器脚本](./recommend_packages.md#浏览器插件)
 #### 2022.06.18
-* 新增 [网址汇总#其他游戏&TG推荐](./recommend_websites.md#tg推荐)
+* 新增 [网址汇总#其他游戏](./recommend_websites.md#其他游戏)&[TG推荐](../articles/telegram.md#频道群组推荐)
 * 维护 [游戏-音游](../hobbies/rhythm_games.md)、[编程-C++](../coding/Cpp.md)、[回忆录](../hide/memories.md)
 #### 2022.06.17
-* 新增 [游戏-音游](../hobbies/rhythm_games.md)、[闲聊#QQ有多难用](../gossip/fuckqq.md)
+* 新增 [游戏-音游](../hobbies/rhythm_games.md)、闲聊#QQ有多难用（已合并为*xxx有多难用*）
 #### 2022.06.16
 * 取消editLink与contributors
 #### 2022.06.13

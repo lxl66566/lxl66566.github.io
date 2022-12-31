@@ -24,7 +24,7 @@
     * 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
 5. 关闭搜索推荐&热门新闻：关闭 *设置-隐私和安全性-搜索权限-更多设置-显示搜索要点* 。（参考[来源](https://www.landiannews.com/archives/95045.html)
 6. 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级win11专业版并激活。
-7. 开启Hyper-V功能 <Badge type="tip" text="前置条件：6." vertical="top" />：由于在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项，因此采用网上教程：文本文档输入以下代码：
+7. 开启Hyper-V功能 <Badge type="tip" text="前置条件：6." />：由于在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项，因此采用网上教程：文本文档输入以下代码：
 ```batch
 pushd "%~dp0"
 dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
@@ -35,7 +35,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 保存为.bat文件并管理员运行即可。
 
 8. 更改触摸板功能：三指左右划调节音量。我本人感觉挺方便。
-9. 安装Win11 Android子系统 <Badge type="tip" text="前置条件：7." vertical="top" />：
+9. 安装Win11 Android子系统 <Badge type="tip" text="前置条件：7." />：
     * *设置-时间和语言-国家和地区* ，选择美国
     * 打开Microsoft Store （记得关代理），下载Amazon Appstore。系统将自动下载安装Windows Subsystem for Android™️。
     * 可选项：在*设置-应用和功能* 内找到Windows Subsystem for Android™️，移动到D盘以节省空间。

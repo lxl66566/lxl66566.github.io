@@ -20,12 +20,12 @@ sidebar: 'auto'
 
 > 解压密码详见[极点ACG公告](https://lspgal.com/5702/)
 
-在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + 小牛云平台翻译。个人认为，御坂翻译器比起vnr有以下优点：1. 小，仅44.3MB 2. 开源 3. 社区完善，依托于github；相比之下vnr依赖百度贴吧，资源BT失效，大多使用城通网盘，真让人火大<span class="heimu" title="你知道的太多了">ソラのむかつく顔</span>。而小牛云平台签到送字数流量，给的够多。
+在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + 小牛云平台翻译。个人认为，御坂翻译器比起vnr有以下优点：1. 小，仅44.3MB 2. 开源 3. 社区完善，依托于github；相比之下vnr依赖百度贴吧，资源BT失效，大多使用城通网盘，真让人火大。而小牛云平台签到送字数流量，给的够多。
 ## 我已玩完
 
 ::: details 一些解释说明
 * 排序方式：后完结→先完结
-* *一般以游戏的所有支线全部推完才算完结<Badge type="tip" text="可能有例外" vertical="top" />*
+* *一般以游戏的所有支线全部推完才算完结<Badge type="tip" text="可能有例外" />*
 * 时间统计利用[Tai](../farraginous/recommend_packages.md#tai)作出。`*`表示统计数据有偏差，`<...>`表示偏差较小，可能由以下原因引起：
     1. Tai 1.0.0.4 及其之前版本可能出现时长错误统计bug；
     2. Tai **闪退**或未成功获取焦点。（闪退bug极为频繁，大约在 2022.11 后修复）
@@ -35,36 +35,36 @@ sidebar: 'auto'
 
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: | :----: |
-|常轨脱离Creative|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
+|常轨脱离Creative<Badge type="tip" text="1"/>|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
 |euphoria|23h17min|2022.12.06-<br/>2022.12.23|10|4|3.5|
-|NEKOPARA Vol.3 ネコたちのアロマティゼ<Badge type="danger" text="4" vertical="top" />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|5|
+|NEKOPARA Vol.3 ネコたちのアロマティゼ<Badge type="danger" text="4" />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|5|
 |冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|13.5|5|2|
 |墮落聖處女|2h2min+|2022.04.27-<br/>2022.10.01|0|3.7|0|
-|七音学园-旅行部-·箱根篇<Badge type="warning" text="2" vertical="top" />|<2h5min>|2022.09.22-<br/>2022.09.24|7.8|10|9|
-|七音学园-旅行部-·伊香保篇<Badge type="tip" text="1" vertical="top" />|<2h23min>|2022.09.18|8|10|9|
-|苍之彼方的四重奏<Badge type="tip" text="1" vertical="top" />|<39h50min>|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
+|七音学园-旅行部-·箱根篇<Badge type="warning" text="2" />|<2h5min>|2022.09.22-<br/>2022.09.24|7.8|10|9|
+|七音学园-旅行部-·伊香保篇<Badge type="tip" text="1" />|<2h23min>|2022.09.18|8|10|9|
+|苍之彼方的四重奏<Badge type="tip" text="1" />|<39h50min>|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
 |鯨神のティアスティラ|<25h47min>|2022.06.21-<br/>2022.08.20|4.2|7.5|9.3|
-|9-nine-新章<Badge type="danger" text="5" vertical="top" />|<4h43min>|2022.07.20-<br/>2022.07.23|5|7|8|
+|9-nine-新章<Badge type="danger" text="5" />|<4h43min>|2022.07.20-<br/>2022.07.23|5|7|8|
 |星光咖啡馆与死神之蝶|-|2020.10.15-<br/>2022.07.05|5.5|9|9.9|
-|9-nine-雪色雪花雪余痕<Badge type="danger" text="4" vertical="top" />|<13h54min>|2022.06.08-<br/>2022.07.05|10|6|9|
-|NEKOPARA Vol.2 姉妹ネコのシュクレ<Badge type="danger" text="3" vertical="top" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
-|龍姬混~日子<Badge type="tip" text="1" vertical="top" />|-|2022.01.28-<br/>2022.06.28|2|8|5|
+|9-nine-雪色雪花雪余痕<Badge type="danger" text="4" />|<13h54min>|2022.06.08-<br/>2022.07.05|10|6|9|
+|NEKOPARA Vol.2 姉妹ネコのシュクレ<Badge type="danger" text="3" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
+|龍姬混~日子<Badge type="tip" text="1" />|-|2022.01.28-<br/>2022.06.28|2|8|5|
 |纸上魔法使|>36h27min|2022.03.22-<br/>2022.06.20|10|7|3|
-|9-nine-春色春恋春熙风<Badge type="danger" text="3" vertical="top" />|<11h46min>|2022.04.30-<br/>2022.06.07|7|6|8.5|
-|9-nine-天色天歌天籁音<Badge type="warning" text="2" vertical="top" />|-|2022.04.09-<br/>2022.04.28|7.5|6|8.5|
+|9-nine-春色春恋春熙风<Badge type="danger" text="3" />|<11h46min>|2022.04.30-<br/>2022.06.07|7|6|8.5|
+|9-nine-天色天歌天籁音<Badge type="warning" text="2" />|-|2022.04.09-<br/>2022.04.28|7.5|6|8.5|
 |氤氲之白|-|2022.04.19|1|4|1|
-|9-nine-九次九日九重色<Badge type="tip" text="1" vertical="top" />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
+|9-nine-九次九日九重色<Badge type="tip" text="1" />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
 |星空列车与白的旅行|-|2022.03.08-<br/>2022.03.11|10|9|7|
-|仰望夜空的星辰 Interstellar Focus<Badge type="danger" text="3" vertical="top" />|-|2022.01.29-<br/>2022.02.06|3|5|3|
+|仰望夜空的星辰 Interstellar Focus<Badge type="danger" text="3" />|-|2022.01.29-<br/>2022.02.06|3|5|3|
 |ATRI -My Dear Moments-|-|2022.01.02-<br/>2022.01.28|9|9|7|
-|龍姬混~日子2<Badge type="warning" text="2" vertical="top" />|-|2021.12.23-<br/>2022.01.27|2|10|5|
-|NEKOPARA Vol.1 ソレイユ開店しました！ <Badge type="warning" text="2" vertical="top" />|-|2021.11.26-<br/>2021.12.20|4|9|5|
+|龍姬混~日子2<Badge type="warning" text="2" />|-|2021.12.23-<br/>2022.01.27|2|10|5|
+|NEKOPARA Vol.1 ソレイユ開店しました！ <Badge type="warning" text="2" />|-|2021.11.26-<br/>2021.12.20|4|9|5|
 |猫神大人与七颗星星|-|2021.11.16-<br/>2021.11.23|8|10|?|
 |CURE GIRL|-|2021.10.10-<br/>2021.11.08|1|4|?|
-|NEKOPARA Vol.0 水無月ネコたちの日常！<Badge type="tip" text="1" vertical="top" /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
+|NEKOPARA Vol.0 水無月ネコたちの日常！<Badge type="tip" text="1" /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
 |真爱の百合は赤く染まる <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.21|?|3|?|
 |青空下的加缪 <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.20|0|5|?|
-|Fox Hime Zero <Badge type="tip" text="1" vertical="top" /><Badge type="tip" text="app" vertical="bottom" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
+|Fox Hime Zero <Badge type="tip" text="1" /><Badge type="tip" text="app" vertical="bottom" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
 
 *（不排除有缺漏）*
 
@@ -75,16 +75,16 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
-|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|
+|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|6|9|9.4|
 |ISLAND
 |PARQUET|
-|仰望夜空的星辰<Badge type="tip" text="1" vertical="top" />|2022.10.18|8.5|5|4.5|+40+30+40+15min|
+|仰望夜空的星辰<Badge type="tip" text="1" />|2022.10.18|8.5|5|4.5|+40+30+40+15min|
 |アンレス テルミナリア|
-|魔女的夜宴|2022.02.10|5.7|7.2|9.5|
+|魔女的夜宴|2022.02.10|5.7|7.2|9|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
 |NEKOPARA VOL.4
-|哥哥，早上起床之前都要抱紧我哦！<Badge type="tip" text="1" vertical="top" />|2021.02.14?|3|8.6|8|
-|お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" vertical="top" />|
+|哥哥，早上起床之前都要抱紧我哦！<Badge type="tip" text="1" />|2021.02.14?|3|8.6|8|
+|お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
 |灰色的果实
 |DDLC <Badge type="tip" text="steam" vertical="bottom" /> *(暂时不玩)*|2021.11.11|?|3|?|
 |千恋万花 <Badge type="warning" text="krkr" vertical="bottom" />|2021.06.21|6.8|9|7.5|
@@ -169,6 +169,8 @@ sidebar: 'auto'
 
 ### 说两句
 一般来说，能打动我，能让我产生共鸣的galgame，我都会打上比较高的剧情分。此处作出更加详细的解释，列出一些本人对之有高评价的游戏。当然，优点也包括程序的优秀。（啊，对了，那些快忘了的，或者说不出哪里好但就是好的作品不列举出）
+#### 真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜
+* 玩到的第一部带有 autoload 功能的 gal，是个好东西。（开启后创建快捷方式，可以直达 qsave 位置。）
 #### 常轨脱离Creative
 * 玩汉化到一半[程序出问题了](https://github.com/lxl66566/my-key-data/issues/1)，然后润去玩官中。但是，官中为什么要把 锦亚澄 翻成 锦明日海 啊！不习惯。后来也确实感觉官中水平没有民汉高。。
     * 私が満足に寝られないので... -> 我睡不了...

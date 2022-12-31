@@ -29,7 +29,7 @@ tips：加速前需事先选择能通过连接测试的节点
 开启成功率看脸，网速不敌上面两位，同样有强制弹窗广告
 ## 机场选择
 
-此处列出部分优秀机场性价比及其变化情况。数字代表**每1元RMB买到的GB数**<Badge type="tip" text="合理价格" vertical="top" />。免费机场不包括在图表中。
+此处列出部分优秀机场性价比及其变化情况。数字代表**每1元RMB买到的GB数**<Badge type="tip" text="合理价格" />。免费机场不包括在图表中。
 
 <iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280"></iframe>
 <!-- <iframe frameborder="no" src="/charts/animation.html?src=GBperprice" width="100%" height="280"></iframe> -->

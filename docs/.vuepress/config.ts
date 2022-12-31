@@ -97,7 +97,7 @@ export default defineUserConfig({
           children: [
             "author.md",
             "schedule.md",
-            "fuckqq.md",
+            "fuckxxx.md",
             "difficulties.md",
             "withvuepress2.md",
             "consider.md",
@@ -116,6 +116,7 @@ export default defineUserConfig({
             "Androi_ISA.md",
             "time_record.md",
             "track_record.md",
+            "telegram.md",
           ],
         },
       ],
@@ -138,7 +139,7 @@ export default defineUserConfig({
           children: [
             "/gossip/author.md",
             "/gossip/schedule.md",
-            "/gossip/fuckqq.md",
+            "/gossip/fuckxxx.md",
             "/gossip/difficulties.md",
             "/gossip/withvuepress2.md",
             "/gossip/consider.md",
