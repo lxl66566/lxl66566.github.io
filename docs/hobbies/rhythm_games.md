@@ -25,7 +25,7 @@ sidebar: 'auto'
 
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :----: | :----: | :----: | :----: | :----: |
-|osu|81|<text style="color:red;">-92ms(-83~-100)</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p></text></details>|30|0|
+|osu|81|<text style="color:red;">-85ms(-83~-100)</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p></text></details>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">70</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
@@ -137,6 +137,8 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 
 轴体以线性轴为佳。本人[根据经验推荐ttc快银轴](#键盘参数)。
 
+**不要买低端达尔优键盘！** 我摸过两个百元价位的，主控问题很大，四键同时按会阻塞，丢响应。真的垃圾。
+
 * 谱面下载
 
 [Ranked地图下载器.exe](https://wwp.lanzout.com/ilX4V06l9yef)
@@ -147,7 +149,7 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 
 * 键数记录
 
-[osu-kps](https://github.com/UnnamedOrange/osu-kps)，具有kps图表与键数记录。当然，它甚至还能在osu的replay中记录键数。
+[osu-kps](https://github.com/UnnamedOrange/osu-kps)，具有 kps 图表与键数记录。当然，它甚至还能在 osu 的 replay 中记录键数。
 
 * 夹带私货
 
