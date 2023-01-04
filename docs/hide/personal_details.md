@@ -50,3 +50,7 @@ while(alive)
 * vim与archlinux
 * [运动](./sports.md)
 ## [运动记录](./sports.md)
+## xx记录
+无题。
+
+<iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300"></iframe>
