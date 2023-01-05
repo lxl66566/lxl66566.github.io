@@ -21,14 +21,17 @@ let mut spirit:f64 = about(MAX_SPIRIT);
 while(alive)
 {
     for _ in WAKE_UP_TIME {
-        spirit -= consume(work intensity);
+        spirit -= consume(work_intensity);
     }
     for time in SLEEP_TIME {
+        if spirit <= TIRED_SPIRIT {
+            spirit += additional_recovery(time);
+        }
         spirit += sleep_cycle(time);
     }
 }
 ```
-有亿点抽象就是了；总之，我的一个特点就是早上完全清醒后一定不会困。一般地，只有当 `spirit` 低于一定值时，才会犯困和工作效率降低。若睡眠不足，影响的是晚间效率。<span class="heimu" title="你知道的太多了">rnm，细思极恐，我这精神状况不会是专门给资本家压榨的吧</span>
+有亿点抽象就是了；总之，我的一个特点就是早上完全清醒后一定不会困。一般地，只有当 `spirit` 低于 TIRED_SPIRIT 时，才会犯困和工作效率降低。若睡眠不足，影响的主要是晚间效率。<span class="heimu" title="你知道的太多了">rnm，细思极恐，我这精神状况不会是专门给资本家压榨的吧</span>
 ## 价值观
 * 食堂中，拿着饭的比空手的享有更高优先级
 * 路上（不借助外力），走的快的人比走的慢的人享有更高优先级
