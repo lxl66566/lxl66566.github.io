@@ -4,7 +4,7 @@
     <title>my xxx time interval</title>
   </head>
   <body style="line-height: 1">
-    <div align="center">
+    <div style="text-align:center">
       <p id="average" style="font-size: 10px"></p>
     </div>
     <div id="container" style="width: 100%; height: 260px"></div>
@@ -16,6 +16,7 @@
       const { Line } = G2Plot;
       const data = [
         { date: "20230104", interval: 2 },
+        { date: "20230106", interval: 2 },
       ];
       const linePlot = new Line("container", {
         data,
