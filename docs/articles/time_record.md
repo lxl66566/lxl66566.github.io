@@ -2,7 +2,7 @@
 ## Windows端记录软件使用时长
 我从20220428开始使用[Tai](../farraginous/recommend_packages.md#tai)记录Windows下的应用时长。直到在20220729了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。在此将比较它俩的一些特性。
 
-此处小小介绍一下`ActivityWatch`。相较于`Tai`，它拥有可视化程度&自由度更高的图表。但我最关心的还是我自己的使用体验。
+此处小小介绍一下`ActivityWatch`。相较于`Tai`，它拥有可视化程度 & 自由度更高的图表。~~（Tai 改版后也不差）~~ 但我最关心的还是我自己的使用体验。两者均为开源软件。
 
 |软件名|运行时内存|查询区间长|
 | :-: | :-: | :-: |
@@ -14,7 +14,7 @@
 2. `ActivityWatch`核心采用python编写，高内存占用。
 3. 我对时长记录最大的要求，除了准确性外，就是**查询区间长**了。而`ActivityWatch`的表现（30days）无法达到预期。
 
-我仍然选用`Tai`作为我的时长统计软件。*（顺带一提，这俩记录的时长有点区别，而我无法分辨哪个是正确的，因为windows没有官方的时长记录工具。目前看来，Tai1.0.0.5还是有记录时长偏差的存在。）*
+我仍然选用`Tai`作为我的时长统计软件。*（顺带一提，这俩记录的时长有点区别，而我无法分辨哪个是正确的，因为windows没有官方的时长记录工具。Tai 目前改版至 1.4.0.0，可能具有偏差，但是不多）*
 ## Android端记录软件使用时长
 我有多喜欢统计时长，从[galgame页面](../hobbies/galgame.md)和[读书页面](../hobbies/books.md)便可略知一二。但是——
 
@@ -32,7 +32,7 @@
 |手机使用时间|?/11.73|100%?|<text style="color:red;">上个月</text>|月|<text style="color:red;">必需挂着后台才可计时；广告</text>|后台免杀|
 |<text style="color:blue;">Digitox</text>|3.89/20.67|100%|ALL|月|-|-|
 |AppBlock|10.87/44.05|<text style="color:red;">0%</text>|ALL|<text style="color:red;">周</text>|<text style="color:red;">不氪金仅能查看前3个程序数据</text>|<text style="color:red;">无障碍</text>|
-|<text style="color:blue;">Phone statistic</text>|3.07/14.61|100%|当年|<text style="color:blue;">年</text>|-|-|
+|<text style="color:blue;">Phone statistic</text>|3.07/14.61|100%|年|<text style="color:blue;">年</text>|-|-|
 
 解释：
 * `StayFree`仅有81%准确率：QQ、nekogramX、Via等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到19%）（后来发现也有偏大数据）
