@@ -67,7 +67,7 @@ Laplace transform: <span v-pre>$\large F(s)=\mathscr{L}(f(t))=\int_{0}^{+\infty}
 
 微分性质：<span v-pre>$\large \mathscr{L}(f'(t))=sF(s)-f(0)$</span>
 
-> 推论: <span v-pre>$ \mathscr{L}(f^{(n)}(t))=s^nF(s)-s^{(n-1)}f(0)-s^{(n-2)}f'(0)-...-f^{(n-1)}(0)$</span>
+> 推论: <span v-pre>$\mathscr{L}(f^{(n)}(t))=s^nF(s)-s^{(n-1)}f(0)-s^{(n-2)}f'(0)-...-f^{(n-1)}(0)$</span>
 
 像函数的微分性质：<span v-pre>$\large F^{(n)}(s)=(-1)^n\mathscr{L}(t^nf(t))$</span>
 
