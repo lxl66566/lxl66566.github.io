@@ -8,3 +8,4 @@
 4. [电脑、手机端记录软件使用时长](./time_record.md)
 5. [运动轨迹记录软件横评](./track_record.md)
 6. [TG（telegram）教程](./telegram.md)
+7. [Potplayer 设置](./potplayer_setting.md)

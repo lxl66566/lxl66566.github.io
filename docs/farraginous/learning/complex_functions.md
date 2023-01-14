@@ -1,6 +1,3 @@
----
-sidebar: 'auto'
----
 # 复变函数与积分变换
 ## 基础计算
 <span v-pre>$\large sinz=\frac{e^{iz}-e^{-iz}}{2i} \ , \ cosz=\frac{e^{iz}+e^{-iz}}{2}$</span>

@@ -44,7 +44,7 @@ MT管理器是一款强大的文件管理工具和APK逆向修改神器。（[�
 
 [酷安下载地址](https://www.coolapk.com/apk/com.goplaycn.googleinstall) | [私链](https://wwp.lanzout.com/iYyA10686e7c)
 ### NekoX
-Telegram第三方开源客户端，自带公共代理（建议配合校园网使用）
+Telegram第三方开源客户端，自带公共代理
 
 ~~但是在tg第三方内名声不算好(?~~
 
@@ -74,7 +74,7 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 *（我的建议是：推荐和github配合存储）*
 ### HiNative
 
-一个可以直接问外国人(语言)问题的app&网站。
+一个可以直接问外国人~~语言~~问题的app&网站。
 
 [官网](https://zh.hinative.com/)
 ### Adobe Scan
@@ -84,7 +84,7 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 
 [谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
 ### Seal
-开源的视频下载app，Android端的不错的选择。
+开源的视频下载app，Android 端的优质选择。
 
 [项目地址](https://github.com/JunkFood02/Seal)
 ## Windows
@@ -102,7 +102,7 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 
 * 全英文
 * 需要自己解决驱动兼容性问题（如果有的话）
-* 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标，屏幕小点不准）
+* 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠
 
 [官网下载地址](https://parsec.app/downloads)
 ### Tai
@@ -115,28 +115,24 @@ APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提�
 [下载地址](https://spacesniffer.en.softonic.com/)
 ### [uTools](http://www.u.tools/)
 uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88) 由于逐步开始付费模式，此处可选择使用开源替代品：[PowerToys](https://github.com/microsoft/PowerToys)
-### steam++
+### [steam++](https://steampp.net/)
 加速器，主要加速steam商店与github
-
-[官网下载地址](http://steampp.net/)
-### Everything
-快速搜索
-
-[官网下载地址](https://www.voidtools.com/zh-cn/downloads/)
+### [Everything](https://www.voidtools.com/zh-cn/downloads/)
+快速搜索，可配合 [uTools](#utools) 使用
 ### geek
 用于卸载软件。轻量，可清理残留。
 
 [官网下载地址](https://geekuninstaller.com/download) | [私链](https://wwp.lanzout.com/icAdmharg2h)
-### Bandizip
-压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有需求可换用[7zip](https://www.7-zip.org/)，同样是一款优秀的压缩解压软件。
+### [Bandizip](http://www.bandisoft.com/)
+压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有需求可换用 [7zip](https://www.7-zip.org/)，同样是一款优秀的压缩解压软件。
+### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
+视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
 
-[官网下载地址](http://www.bandisoft.com/)
-### Potplayer
-视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，导入字幕，视频截屏等<span class="heimu" title="你知道的太多了">本人</span>常用功能。
-
-[官网下载地址](https://potplayer.daum.net/?lang=zh_CN)
+[关于 Potplayer 设置](../articles/potplayer_setting.md)
 ### f.lux
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。（一般来说win10自带的夜间模式够用，但是它的权限更高，能在打游戏时也强制护眼。）
+
+> 若需要进一步降低屏幕背光亮度，带有 Intel 核显电脑可使用 *Intel Graphics Command Center*
 
 [官网下载地址](https://justgetflux.com/) | [私有下载地址](https://wwp.lanzout.com/iqmkq06s0wtg)
 ### [图吧工具箱](http://www.tbtool.cn/)
@@ -148,7 +144,7 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 开源的右键菜单管理器。高度自定义化。
 ### [Anki](https://apps.ankiweb.net/)
-多端开源背词软件，多语言，高自由度，拥有庞大的词库社区。
+多端开源记忆软件，多语言，高自由度。
 
 [使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)
 ### [Winaero Tweaker](https://winaero.com/)
@@ -168,9 +164,9 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 </details>
 
 ## 浏览器插件
-注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。
+> *注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。*
 ### 视频速度控制
-控制视频播放速度，0.07x-16.00x。主要适合需要2倍速以上看视频的人群 *（对我来说用处真的很大）*，也可用来快速刷课，练习听力等。
+控制视频播放速度，0.07x - 16.00x。主要适合需要2倍速以上看视频的人群 *（对我来说用处真的很大）*，也可用来快速刷课，练习听力等。
 
 * 使用方法：`A`和`D`可+-0.1x倍速，`S`用来回到1.00x或上一倍速。当然也可用鼠标操作。插件倍速会覆盖视频本身的倍速。
 如需更改热键请在`扩展-扩展选项`中进行操作。
