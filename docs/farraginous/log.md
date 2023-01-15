@@ -7,6 +7,8 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2023
 ### .01
+#### 2023.01.15
+* [TG 教程](../articles/telegram.md)、[Rust](../coding/Rust.md) 新增大量内容
 #### 2023.01.14
 * 全局优化排版与语言逻辑
 * 新增[Potplayer 设置](../articles/potplayer_setting.md)页面

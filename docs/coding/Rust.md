@@ -34,6 +34,14 @@ for i in 0..100 {} // i in [0,99]
 ```rs
 for i in 0..=100.step_by(2) {} // i in { 0,2,4,6...,98,100 }
 ```
+而类似 C++ 的 do while 循环可以写成：
+```rs
+loop{
+  // do something
+  if condition { break; }
+}
+```
+## [输出](https://doc.rust-lang.org/rust-by-example/hello/print.html)
 ## 输入
 众所周知 rust 一般使用 `print!()` 或 `println!()` 进行输出。而输入需要使用标准库中的std::io.（或者其他非标准库）
 ```rust
@@ -49,10 +57,18 @@ io::stdin().read_line(&mut s).expect("failed to read");
 let num : Vec<i128> = s.trim().split(" ")
   .map(|x| x.parse().unwrap_or(0)).collect(); // 转换类型过程
 ```
+## 基础数据结构
+[这里](https://skyao.io/learning-rust/docs/grammar/collection.html)可能会有一些帮助。
+* 栈：Vec. 使用 `push()` & `pop()` 管理栈。
+* （双端）队列：[`std::collections::VecDeque`](https://doc.rust-lang.org/std/collections/struct.VecDeque.html)
+* 优先队列（堆）：[`std::collections::BinaryHeap`](https://doc.rust-lang.org/std/collections/struct.BinaryHeap.html)
+* 字典 / Object / map（键值对）：[`std::collections::HashMap`](https://doc.rust-lang.org/std/collections/struct.HashMap.html)
+* 链表：自己写。[对于链表的实现，在 Rust 中有多种方式，比如：（摘自）](https://jasonkayzk.github.io/2022/02/20/%E4%BD%BF%E7%94%A8Rust%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/)
+  * 使用 Box 实现（由于 Box 本身的限制，基本只能实现单向链表）；
+  * 使用 Rc + RefCell 实现（由于 RefCell 的限制，迭代器无法很好的实现）；
+  * 使用 Unsafe 实现；
 ## 字符串修改
-
 在Rust语言中，字符串采用utf-8编码，字符长度不一，因此Rust不提供下标查找字符串的方法。这让字符串的修改需要一点点的技巧。
-
 1. 转换为`Vec<char>`后修改
 
 C++程序员认为这种方式非常亲切。之后若有需要，还可将`Vec<char>`重新转换为字符串。
@@ -63,7 +79,6 @@ a[5] = '你';
 let s2 = a.iter().collect::<String>();
 assert_eq!(s2,"Hello你是绝对值_x");
 ```
-
 2. replace_range函数
 ```rust
 let mut s1:String = String::from("Hello我是绝对值_x");
