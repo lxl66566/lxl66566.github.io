@@ -74,12 +74,12 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥60.00|1300G|500Mbps|
 |￥100.00|6000G|无限制|
 
-### [GLaDOS（推荐）](https://glados.rocks/) 邀请码：`3SPFS-IABW1-77EJL-PE8NR`
+### [GLaDOS（推荐）](https://glados.rocks/)
+邀请码：`3SPFS-IABW1-77EJL-PE8NR`
 
-学生免费用360天，每月30G。[说明](https://glados.rocks/console/education)
+学生免费用 360 天，每月30G。[说明](https://glados.rocks/console/education)
 
-> *此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。*
-
+> *此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。*<br/>
 > 很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。
 
 |月付|流量|限速|
@@ -173,33 +173,33 @@ tips：加速前需事先选择能通过连接测试的节点
 * [XSUS](https://xsus.buzz/)
 * [墙裂](https://my.qianglie.com/)
 * [大哥云](https://www.dageyun.net/)
-* [流量库](https://llcool.xyz/) （已无法登录
+* [流量库](https://llcool.xyz/) 
 ## 客户端选择
 ### Clash for Windows（推荐）
 #### 简介
-*Clash for Windows* 是闭源的PC客户端。相比[开源端](#clash-verge)，*Clash for Windows* 拥有更完善的功能。
+*Clash for Windows* 是闭源的PC客户端。相比[另一个开源端](#clash-verge)，*Clash for Windows* 拥有更完善的功能。（但是 bugs 也不少就是了，安全需求高者慎用）
 #### 下载地址
 [项目地址](https://github.com/Fndroid/clash_for_windows_pkg) | [PC端下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases) | [私链](https://wwp.lanzout.com/ixncj0a1k28h)
 
 #### 优势
-* 流畅的图形界面
+* 优秀图形界面
 * 简单易上手
 
 #### 简易配置教程 *v0.19.16*
-1. 在Profiles中的文本框内粘贴订阅链接并下载。选中下载的配置文件。
-2. 进入Proxies，选择rule，并在下方选择一个可用节点。
-3. 进入General，开启System Proxy。
+1. 在 Profiles 中的文本框内粘贴订阅链接并下载。选中下载的配置文件。
+2. 进入 Proxies，选择 rule，点击测速图标并在下方选择一个可用节点。
+3. 进入 General，开启 System Proxy。
 
 #### 一些提示
 
 <!-- * 科学上网默认只对浏览器有效。若要全局加速请开启TUN Mode。 -->
 * [这里](https://github.com/BoyceLig/Clash_Chinese_Patch)提供clash的汉化。
 * 在节点界面点击测速图标测试全部节点的连通性
-* 建议设置配置文件自动更新（Profiles->右击配置文件->Settings->Update Interval）
+* 建议设置配置文件自动更新（Profiles -> 右击配置文件 -> Settings -> Update Interval 设为 24）
 ### Clash For Android（推荐）
-请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)。[Android端私链](https://wwp.lanzout.com/iL6sD03mi0gf)
+请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)。[私链](https://wwp.lanzout.com/iL6sD03mi0gf)
 ### Clash Verge
-开源Clash客户端。[下载地址](https://github.com/zzzgydi/clash-verge/releases/)
+开源 Clash 客户端。[下载地址](https://github.com/zzzgydi/clash-verge/releases/)
 ### V2ray
 #### 简介
 V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（摘自[此处](https://www.xuebuyuan.com/3296293.html)）
@@ -211,6 +211,6 @@ V2ray同样拥有Android与PC客户端。由于我不常用，故不给出教程
 [内核项目地址](https://github.com/v2fly/v2ray-core) | [客户端项目地址](https://github.com/2dust/v2rayN)
 
 ### Matsuri & NekoRay
-开源，选项丰富，安全性好，使用体验一般 *(Matsuri > NekoRay)* 。
+开源，自由度高，安全性好，使用体验一般 *(Matsuri > NekoRay)* 。
 
 关于下载与使用请[进入网站](https://matsuricom.github.io/)自行查阅。

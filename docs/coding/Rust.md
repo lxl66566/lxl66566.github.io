@@ -25,6 +25,15 @@ Rust是一门系统编程语言，专注于安全，尤其是并发安全，支�
 其他资料：[Rust语言圣经](https://course.rs/about-book.html)
 
 以下所涉及到的类型与函数，请自行Google。
+## 循环
+Rust 的 for 循环需要跟可迭代对象，例如：
+```rs
+for i in 0..100 {} // i in [0,99]
+```
+若需要设置步长，可使用 `step_by()` ：
+```rs
+for i in 0..=100.step_by(2) {} // i in { 0,2,4,6...,98,100 }
+```
 ## 输入
 众所周知 rust 一般使用 `print!()` 或 `println!()` 进行输出。而输入需要使用标准库中的std::io.（或者其他非标准库）
 ```rust
