@@ -12,6 +12,8 @@ sidebar: 'auto'
 ## 其他习惯
 * 心情与天气相关性较大，雨天（及其衍生现象）会导致心情不好
 * 洗完手习惯把水往额头上抹（给 cpu 降温x
+* 高代谢水平（异常多的油脂分泌、头屑、囊肿；频繁脱皮<span class="heimu" title="你知道的太多了">看起来像是寿元不多的样子</span>）
+* [抗饿](../hide/memories.md#饿)
 ### 睡眠
 ```rs
 fn consume(level:f64) -> f64 {
