@@ -42,6 +42,7 @@ loop{
 }
 ```
 ## [输出](https://doc.rust-lang.org/rust-by-example/hello/print.html)
+`dbg!()` 宏可以在 `stderr` 中输出调试信息。
 ## 输入
 众所周知 rust 一般使用 `print!()` 或 `println!()` 进行输出。而输入需要使用标准库中的std::io.（或者其他非标准库）
 ```rust
@@ -67,7 +68,10 @@ let num : Vec<i128> = s.trim().split(" ")
   * 使用 Box 实现（由于 Box 本身的限制，基本只能实现单向链表）；
   * 使用 Rc + RefCell 实现（由于 RefCell 的限制，迭代器无法很好的实现）；
   * 使用 Unsafe 实现；
-## 字符串修改
+## 字符串处理
+* 字符串转换：`to_owned()` or `to_string()` converts &str -> String.
+* [字符串连接](https://iq.opengenus.org/rust-string-concat/)
+### 字符串修改
 在Rust语言中，字符串采用utf-8编码，字符长度不一，因此Rust不提供下标查找字符串的方法。这让字符串的修改需要一点点的技巧。
 1. 转换为`Vec<char>`后修改
 
