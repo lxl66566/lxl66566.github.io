@@ -54,10 +54,11 @@ sidebar: 'auto'
 * 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)
 * 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
 * [Media.io](https://www.media.io/)：一键添加字幕，视频处理
-* 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/)
+* 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/) & [音效2](https://www.ear0.com/)
 * [片头制作](https://panzoid.com/)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！
 * [SVG在线编辑器](https://c.runoob.com/more/svgeditor/)
+* [AI配音](https://www.sd235.net/dubbingAI/detail/51)
 ## 生活
 * [居家简易食谱](https://cook.yunyoujun.cn/)
 ## 游戏
