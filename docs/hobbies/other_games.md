@@ -127,6 +127,9 @@ bind "mouse5" "+cjump"
 |显示着弹点|`sv_showimpacts 1`|
 |显示投掷物轨迹|`sv_grenade_trajectory 1`|
 
+### 问题解决
+无法连接到服务器可以尝试：
+cmd 中执行 `netsh winsock reset` | `ipconfig /flushdns`.
 ## 明日方舟
 * 纪念一下曾经沉迷明日方舟的我。（20201031-20220615）
 

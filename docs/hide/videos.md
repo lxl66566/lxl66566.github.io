@@ -23,7 +23,9 @@ sidebar: 'auto'
 |[SNIS-991](https://www2.javhdporn.net/video/snis-991c)|7.2|11|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:1632088697942D97B912E7AAFE3B98A281AE7058</p></details>|
 |[FSDSS-509](https://jable.tv/videos/fsdss-509/)|10|8|
 |[FNEO-014](https://missav.com/fneo-014)|11.4|5.8|
+|[STARS-256](https://missav.com/stars-256)|6|10|
 |[IPX-726](https://www2.javhdporn.net/video/ipx-726)|11|3|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:74ED6ED378FBD3B58224A057BF7B59E1298CB72A</p></details>|
+|[GANA-2548](https://www5.javmost.com/GANA-2548/)|10|3|
 
 ## 普通
 
@@ -34,6 +36,7 @@ sidebar: 'auto'
 |[WANZ-359](https://www2.javhdporn.net/video/WANZ-359c/)|8.3|8.6|
 |[SNIS-992](https://www2.javhdporn.net/video/snis-992/)|7.7|8.8|
 |[ROYD-082](https://www2.javhdporn.net/video/ROYD-082c/)|8.3|8|
+|[MTALL-044](https://www2.javhdporn.net/video/mtall-044/)|8.2|8|
 |[MIAA-648](https://www2.javhdporn.net/video/miaa-648/)|7.3|8.9|
 |[HMN-156](https://www2.javhdporn.net/video/hmn-156)|8|7.7|
 |[IPX-881](https://www2.javhdporn.net/video/ipx-881)|7.5|8|
