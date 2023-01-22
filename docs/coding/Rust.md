@@ -68,14 +68,17 @@ let num : Vec<i128> = s.trim().split(" ")
   * 使用 Box 实现（由于 Box 本身的限制，基本只能实现单向链表）；
   * 使用 Rc + RefCell 实现（由于 RefCell 的限制，迭代器无法很好的实现）；
   * 使用 Unsafe 实现；
-## 字符串处理
+## 字符串
+* Rust 字符串默认支持分行。使用 \ 可以使多行字符串不换行。
+* 原始字符串：`r#"\something"#`
+### 字符串处理
 * 字符串转换：`to_owned()` or `to_string()` converts &str -> String.
 * [字符串连接](https://iq.opengenus.org/rust-string-concat/)
 ### 字符串修改
 在Rust语言中，字符串采用utf-8编码，字符长度不一，因此Rust不提供下标查找字符串的方法。这让字符串的修改需要一点点的技巧。
 1. 转换为`Vec<char>`后修改
 
-C++程序员认为这种方式非常亲切。之后若有需要，还可将`Vec<char>`重新转换为字符串。
+C++程序员认为这种方式非常亲切。之后若有需要，还可将`Vec<char>`重新转换为字符串。注意，Rust 中的 `char` 为 4 字节，转为 Vec 后，可进行 O(1) 查找。
 ```rust
 let s1:String = String::from("Hello我是绝对值_x");
 let mut a : Vec<char> = s1.chars().collect();
@@ -108,3 +111,16 @@ assert_eq!(s1,"Hello你是绝对值_x");
 ```rust
 Hello�你��绝对值_x
 ```
+## 问号
+目前本人所学到的问号主要用于 `Result` 的处理。
+`do_something_that_might_fail()?` 等价于
+```rs
+match do_something_that_might_fail() {
+  Ok(v) => v,
+  Err(e) => return Err(e),
+}
+```
+## [drop](https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#%E9%80%9A%E8%BF%87-stdmemdrop-%E6%8F%90%E6%97%A9%E4%B8%A2%E5%BC%83%E5%80%BC)
+可以显式调用 `std::mem::drop()` 释放值。
+## 获取 Cargo 根目录
+`env!("CARGO_MANIFEST_DIR")`

@@ -188,6 +188,12 @@
         { name: "reg 10", 时刻: "20230117", acc: 93.96 },
         { name: "ex 1", 时刻: "20230117", acc: 92.01 },
         { name: "ex 2", 时刻: "20230117", acc: 91.69 },
+        { name: "reg 10", 时刻: "20230122", acc: 96.61 },
+        { name: "ex 1", 时刻: "20230122", acc: 94.35 },
+        { name: "ex 2", 时刻: "20230122", acc: 95.02 },
+        { name: "ex 3", 时刻: "20230122", acc: 89.96 },
+        { name: "ex 8 HT", 时刻: "20230122", acc: 95.03 },
+        { name: "ex 9 HT", 时刻: "20230122", acc: 89.62 },
       ];
       const linePlot = new Line("container", {
         data,
@@ -232,7 +238,7 @@
           position: "top",
         },
         slider: {
-          start: 0,
+          start: 0.3,
           end: 1,
         },
       });

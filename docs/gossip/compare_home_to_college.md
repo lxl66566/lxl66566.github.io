@@ -10,7 +10,7 @@
 
 <img alt="桌上" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/table.jpg"  width="50%" height="50%"/><img alt="凳子" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/stool.jpg"  width="50%" height="50%"/>
 
-* 解法
+> 解法
 <img alt="新桌面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/new_table.jpg"  width="50%" height="50%"/>
 ## 零食
 * 宿舍：有着一大堆零食，包括但不限于薯片，糖果，其他膨化食品，饮料，麻辣小包食品，锅巴，辣条，方便面。
@@ -22,6 +22,7 @@
 * 宿舍：在双层玻璃与密封条加持下，冬季室温能维持在 22℃ 左右。（甚至某东北舍友在寝室都是短袖，不穿裤子）
 * 家：室温与外界相差不到 4℃。**并导致我关节僵硬，无法在 [OSU](../hobbies/rhythm_games.md#osu) 打出满意的成绩。**
 
+> 通过买热水袋解决
 ## 声音
 * 宿舍：双层玻璃与高素质的左邻右舍。宿舍外声音基本不可闻，一般情况下没有外放。（但是有个舍友最近脱单，喜欢在寝室煲电话粥）
 * 家：
@@ -36,10 +37,12 @@
 * 家：测速（下载）通常为 10 Mbps 左右。勉强能看 B站 720p 2.5倍速 的视频。**但是！**
     * 高延迟。通常为 90 ms - 150 ms。所有竞技游戏就不要想了。
     * **稳定性极差，平均每过几十分钟会突然抽风，无法连通，下载与上传均归零。** *包括今天的英语 quiz，抽风时无法加载题目。* 抽风的恢复时间为 30s - 3min 不等。
+> 已通过买新路由器（Mercury D121G）解决。测速约 150Mbps，csgo 国服延迟 40 ms.
 ## 干活
 * 学校：想干嘛干嘛。
-* 家：会被抓去干苦力。<span class="heimu" title="你知道的太多了">我本来以为回家能享受几天生活，谁知道，还不到 24h 啊！**不到  24h 啊！** 被抓去搬水了。十几箱。</span>
+* 家：会被抓去干苦力。<span class="heimu" title="你知道的太多了">我本来以为回家能享受几天生活，谁知道，还不到 24h 啊！**不到  24h 啊！** 被抓去搬水了。十几箱。</span> 频繁。
 
 ## 时间安排
 * 学校：想啥时候去吃饭就啥时候去吃饭。
 * 家：吃饭之前一分钟能敲我三次门。
+> 已沟通改善。

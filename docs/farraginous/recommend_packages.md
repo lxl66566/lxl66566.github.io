@@ -141,6 +141,14 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。
 
 [官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+::: tip
+基本使用方法：下载并解压后，进入 adb 目录，打开 cmd，连接 [*开启了 USB 调试的手机*](https://baidu.lvshuncai.com/?q=5omL5py65aaC5L2V5omT5byAVVNC6LCD6K+V) 后执行 `adb devices`，出现以下代码即为连接成功.
+```batch
+* daemon started successfully
+List of devices attached
+****************        device
+```
+:::
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 开源的右键菜单管理器。高度自定义化。
 ### [Anki](https://apps.ankiweb.net/)

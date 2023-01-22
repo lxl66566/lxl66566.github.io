@@ -94,7 +94,7 @@ sidebar: 'auto'
 
 我曾经历了一段时间的准度崩坏期（2022.06.28前后），现在想来，应该是当时打段位过于急于求成了，无视准度打了很多超过我极限的曲子。为了救回准度付出了一定代价。所以，**在逆天的路上，也别忘了去欣赏沿途的风景。**
 
-Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
+Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
 
 ### 键盘参数
 这里给出总结表
@@ -113,12 +113,10 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 
 第四也就是现在用的，朋友送我几个ttc快银轴，试了试，手感挺不错的。不过还有一些缺点：克数稍微大了点(45g)，打久了累；声音也比较大。
 
-第五，ttc金粉v2，跟第三个RK红轴很像，这里不多说。摸完五种轴我感觉应该已经有了一定的认知了，**osu不仅仅是耐力游戏，更是准度游戏，键程比压力更重要。** 快银凭借导通行程1.08+0.4/-0.2mm，总行程3.4-0.4mm获得第一。
+第五，ttc金粉v2，跟第三个RK红轴很像，这里不多说。摸完五种轴我感觉应该已经有了一定的认知了，**osu不仅仅是耐力游戏，更是准度游戏，键程比压力更重要。** 快银凭借导通行程 1.08+0.4/-0.2mm，总行程 3.4-0.4mm 获得第一。
 
 在[键盘/轴推荐](#其他推荐)这里再多bb两句。
-
 ### 皮肤
-
 大一一整年用的是蓝白钉皮，R Skin v3.1 (diamond) 的改版。可以在我的B站视频里找到。顺带一提，当时也是试了好多皮肤，发现其他皮肤都没什么手感，只有这套拥有超亮击打特效的蓝白钉皮很对我的胃口。~~当然，猫猫也很好看！~~
 
 然后地狱时刻（20220612）到了，我下载了一个别人的同名皮肤，并且覆盖掉了原皮肤。这种覆盖是不可逆的，无法恢复。同时我在当时下载皮肤的群里和网上疯狂找原皮肤。找不到了，销声匿迹了，找到的都是R Skin的原版或其他改版。这大概是我最痛苦的一个晚上。
@@ -126,10 +124,19 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 第二天我几乎是死心了，开始了自己融合皮肤的过程，希望能融出像原来那种的蓝白钉皮。自己融了整整一天，也融不出什么手感好的皮肤。
 
 然后在20220613晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了absolute x v2。（当前改版至[absolute x v5](https://wwkh.lanzout.com/i0D1c0iv79gh)）手感还不错，能够足够逼近原来的皮肤了。
+### 段位
+#### 4k
+* [4K Reform Dan](https://wwp.lanzout.com/iIUjo02rxm5a) （官方）
+* [Malody 4K Regular Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20regular%20dan%20v3&s=any)
+* [Malody 4K Extra Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20extra%20dan%20v3&s=any)
+
+民间（高难）：
+* [4K Technical Dan Course](https://www.bilibili.com/read/cv21330945)
+* [勿段](https://www.bilibili.com/read/cv19532510)
 ### 其他推荐
 * 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
 
-由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但f.lux可以无视这个屏蔽（win10不稳定，win11稳定），强制护眼，我还是觉得很舒服的。
+由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的osu皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu运行时会自动屏蔽win10的夜间模式，但f.lux可以无视这个屏蔽（win10不稳定，win11稳定），强制护眼，我还是觉得很舒服的。平时玩电脑也是常开的。
 
 * 键盘/轴推荐
 
@@ -137,15 +144,13 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 
 轴体以线性轴为佳。本人[根据经验推荐ttc快银轴](#键盘参数)。
 
-**不要买低端达尔优键盘！** 我摸过两个百元价位的，主控问题很大，四键同时按会阻塞，丢响应。真的垃圾。
+**不要买低端达尔优键盘！** 摸过两个百元价位的，主控问题很大，四键同时按会阻塞，丢响应。真的垃圾。
 
 * 谱面下载
 
 [Ranked地图下载器.exe](https://wwp.lanzout.com/ilX4V06l9yef)
 
 按照bp列表下载会闪退。只能按ranked时间下载，且不可选择key数。但它已经是我用过的最好用的谱面下载器了。
-
-这里是[4K常规段位单曲列表及链接](https://wwp.lanzout.com/iIUjo02rxm5a)。
 
 * 键数记录
 
@@ -158,19 +163,10 @@ Win11更新到现在，对osu游玩体验没啥影响了，可以放心上。
 * 关于制谱
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
-<!-- ### 调整offset
-由于osu的延迟调整太拉，这里给出一个仿照arc调整的解法。在纯音押打歌后：
-
-late过多，向负方向调整。 
-
-early过多，向正方向调整。 -->
 ### 最好成绩
-10th reform Dan 96.40%
+段位：[malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | 单曲：[malody v3-stream ex4 96.32%](https://www.bilibili.com/video/BV1AR4y1Y785)
 
-*推荐[前往bilibili观看](https://www.bilibili.com/video/BV1BU4y167na)以获取更高码率 & 帧率*
-
-<iframe src="https://player.bilibili.com/player.html?bvid=BV1BU4y167na&cid=817384811&page=1&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="440" > </iframe>
-
+![malody v3 ex2 96.03%](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg)
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了<span class="heimu" title="你知道的太多了">放屁</span>；16能ap的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
 
@@ -193,6 +189,8 @@ early过多，向正方向调整。 -->
 * `adb restore NAME.ab`
 
 [这里（Phigros 2.4.1）](https://github.com/lxl66566/my-key-data/releases/tag/backup)是我的用户数据，data充足，AT全解锁，有需要可以自取。
+
+> 然而现在有在线存档了. ..
 ### 最好成绩
 15.9 all perfect
 
@@ -202,7 +200,6 @@ early过多，向正方向调整。 -->
 * 2.1.4（2022愚人节）
 
 [下载链接](https://pan.baidu.com/s/1dRuoIVPCCgkbSxCyD-Z-IQ?pwd=2022) | [出处：『Phigors』2022年愚人节共存版Phigros来了！！！](https://www.bilibili.com/video/BV1L44y15713)
-
 ## Arcaea
 目前处于恢复期：因好久没打了，比巅峰时，11平均退步15w分，10+平均退步8w分。
 

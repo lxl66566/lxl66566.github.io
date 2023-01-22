@@ -50,11 +50,11 @@ img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
 
 使用此内置函数进行高斯模糊将无法改变 sigma 的值。
 ## miniconda
-提供python包管理与虚拟环境。
+提供 python 包管理与虚拟环境。
 
-由于pyinstaller的打包会将环境内所有的工具包都整合到一起，因此使用conda的虚拟环境隔离出运行所需环境，可以减小打包体积。
+由于 pyinstaller 的打包会将环境内所有的工具包都整合到一起，因此使用 conda 的虚拟环境隔离出运行所需环境，可以减小打包体积。
 
-Anaconda体积过于庞大（6G+），**强烈建议[安装miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda捆绑祸害了多少编程新人！（包括我）</span>
+Anaconda 体积过于庞大（6G+），**强烈建议[安装miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda 捆绑祸害了多少编程新人！（包括我）</span>
 
 ### 基本命令
 #### 创建环境

@@ -118,6 +118,7 @@ export default defineUserConfig({
             "track_record.md",
             "telegram.md",
             "potplayer_setting.md",
+            "fuck_quickapp.md",
           ],
         },
       ],
@@ -159,6 +160,7 @@ export default defineUserConfig({
             "/articles/track_record.md",
             "/articles/telegram.md",
             "/articles/potplayer_setting.md",
+            "/articles/fuck_quickapp.md",
           ],
         },
         {
