@@ -16,10 +16,10 @@ sidebar: 'auto'
 * [抗饿](../hide/memories.md#饿)
 ### 睡眠
 ```rs
-fn consume(level:f64) -> f64 {
+fn consume(level: f64) -> f64 {
     std::f64::log(level)
 }
-let mut spirit:f64 = about(MAX_SPIRIT);
+let mut spirit: f64 = about(MAX_SPIRIT);
 while(alive)
 {
     for _ in WAKE_UP_TIME {
@@ -43,6 +43,7 @@ while(alive)
 * 性恶论
 ## XP
 * 颜控，主要看脸。~~（不露脸的我都不看的）~~
+* 二次元图像：不要太大，也不要太小；不要太开放，可以保守；不要太骚，可以装清纯；不要太神魔，但可以背德；
 * 三次元现实：家乡的中学校服（夏短袖）；[四线xx](https://t.me/withabsolutex/701) <Badge text="特定个体"/>；
 * 三次元影片：强迫性质。
 * 幻想：容纳二人的宽松短袖；
@@ -57,7 +58,7 @@ while(alive)
 <!-- * vim 与 archlinux -->
 * [运动](./sports.md)
 ## [运动记录](./sports.md)
-## xx记录
+## xx_interval
 无题。
 
 <iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300"></iframe>

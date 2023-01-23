@@ -17,16 +17,16 @@ sidebar: 'auto'
 |[SNIS-397](https://www2.javhdporn.net/video/SNIS-397/)|8.7|11.5|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:11CAC397D8B472DCADD6DD7F58988D443D511B8C</p></details>|
 |[PPPE-013](https://www2.javhdporn.net/video/PPPE-013c/)|10|10|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:484d3db110d9c7d8a47ff1f5e53433db32e58eba</p></details>|
 |[STARS-190](https://www2.javhdporn.net/video/STARS-190/)|9.8|8.8|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:b8197c436e07951dbe3a329fa7c2e1925cc003b4</p></details>|
-|[CAWD-426](https://www2.javhdporn.net/video/cawd-426c)|8.2|11.2|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:E49CBDB1DC6831BE08BB8119A348B6BCE23838B5</p></details>|
+|[CAWD-426](https://missav.com/cawd-426)|8.2|11.2|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:E49CBDB1DC6831BE08BB8119A348B6BCE23838B5</p></details>|
 |[ABW-087](https://www2.javhdporn.net/video/ABW-087/)|8|11|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:c8478e3aa5a20c599cd48638fb8faa02206a6d65</p></details>|
 |[PPPE-062](https://www2.javhdporn.net/video/pppe-062)|9.7|8.6|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:9082F40E5DD827973FADA9D3583F6F766BC1107C</p></details>|
 |[SNIS-991](https://www2.javhdporn.net/video/snis-991c)|7.2|11|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:1632088697942D97B912E7AAFE3B98A281AE7058</p></details>|
 |[FSDSS-509](https://jable.tv/videos/fsdss-509/)|10|8|
+|[SSIS-588](https://missav.com/ssis-588)|6.5|11|
 |[FNEO-014](https://missav.com/fneo-014)|11.4|5.8|
 |[STARS-256](https://missav.com/stars-256)|6|10|
 |[IPX-726](https://www2.javhdporn.net/video/ipx-726)|11|3|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:74ED6ED378FBD3B58224A057BF7B59E1298CB72A</p></details>|
 |[GANA-2548](https://www5.javmost.com/GANA-2548/)|10|3|
-
 ## 普通
 
 |号|颜|演|
@@ -34,6 +34,8 @@ sidebar: 'auto'
 |[IPX-917](https://www2.javhdporn.net/video/ipx-917/)|9.4|8|
 |[DASD-998](https://www2.javhdporn.net/video/dasd-998c/)|8|9.2|
 |[WANZ-359](https://www2.javhdporn.net/video/WANZ-359c/)|8.3|8.6|
+|[SSNI-025](https://missav.com/ssni-025)|9|7.7|
+|[MIDE-674](https://missav.com/mide-674)|9|7.5|
 |[SNIS-992](https://www2.javhdporn.net/video/snis-992/)|7.7|8.8|
 |[ROYD-082](https://www2.javhdporn.net/video/ROYD-082c/)|8.3|8|
 |[MTALL-044](https://www2.javhdporn.net/video/mtall-044/)|8.2|8|
