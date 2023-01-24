@@ -8,4 +8,5 @@
 例：在 MIUI 12.5 中，快应用服务框架包名为`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>
 2. 连接手机并[开启 ADB 调试](../farraginous/recommend_packages.md#adb)。
 3. 禁用包：`adb shell pm disable-user <package_name>`，例如：`adb shell pm disable-user com.miui.hybrid`.
-> 若需直接卸载请自行搜索 ADB 指令。
+
+*若需直接卸载请使用 `adb shell pm uninstall -k --user 0 <package_name>`。*

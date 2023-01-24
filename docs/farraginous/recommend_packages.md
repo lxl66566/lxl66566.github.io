@@ -18,13 +18,13 @@ sidebar: 'auto'
 
 [私有下载地址](https://wwp.lanzout.com/iLG4D03de8fe)
 ### ZArchiver
-Android端压缩/解压缩软件。（注：官方也有PC端软件）
+Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 ::: warning 警告
 不要在国内应用商店下载该软件，均鉴定为盗版。
 :::
 [官网下载地址](https://www.zarchiver.me/zarchiver-apk/)  [私有下载地址](https://wwp.lanzout.com/i82ku049jz6j)
 ### m浏览器
-强大的浏览器，满足了我对Android浏览器的大部分幻想。
+强大的浏览器，满足了我对 Android 浏览器的大部分幻想。
 
 * 拥有审查元素，查看网页源码，嗅探网页资源的功能。
 * 支持安装脚本，自定义拦截广告，悬浮视频，可调长按倍速的视频播放器。
@@ -32,11 +32,11 @@ Android端压缩/解压缩软件。（注：官方也有PC端软件）
 
 [官网下载](http://mbrowser.nr19.cn/) | [私链](https://wwp.lanzout.com/iP7FA0eaqk8j)
 ### MT管理器
-MT管理器是一款强大的文件管理工具和APK逆向修改神器。（[摘自](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。
+MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（[摘自](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。
 
 [官网下载地址](https://bbs.binmt.cc/forum-2-1.html) | [酷安下载地址](https://www.coolapk.com/apk/bin.mt.plus) | [私链](https://wwp.lanzout.com/i9frh06qke0h) | 可在国内应用商店下载
 ### Fake Location
-虚拟定位软件，免ROOT
+虚拟定位软件，免 ROOT
 
 [官方项目地址](https://github.com/Lerist/FakeLocation)  [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 ### Go安装器
@@ -57,8 +57,43 @@ Telegram第三方开源客户端，自带公共代理
 开源多端密码管理器。其中Keepass2Android是Android端的软件，而KeePassXC则是PC端的。
 
 [Keepass2Android项目地址](https://github.com/PhilippC/keepass2android) | [KeePassXC项目地址](https://github.com/keepassxreboot/keepassxc)
-### 蓝奏云
-比较推荐的云盘。PC上可直接从[网站主页](https://wwa.lanzoui.com/)进入。*（本页所有私链下载文件均保存于蓝奏云）*
+<!-- ### HiNative
+
+一个可以直接问外国人~~语言~~问题的 app & 网站。
+
+[官网](https://zh.hinative.com/) -->
+### Adobe Scan
+扫描文档并转为pdf。免费版就够用了。
+
+与[扫描全能王](https://w103.camscanner.com/)相比有如下优点：小（安装后，扫描全能王 591MB，Adobe Scan 114MB）；无水印。
+
+[谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
+### Seal
+开源的视频下载app，Android 端的优质选择。（PC 端请选择 [yt-dlp](https://github.com/yt-dlp/yt-dlp)）
+
+[项目地址](https://github.com/JunkFood02/Seal)
+### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
+强大的数据监视型应用(?，玩机爱好者必备。建议配合 ADB 食用。
+## Windows
+### Parsec
+**极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。
+
+与向日葵相比：
+* 优点：
+    * 低延迟
+    * 性能占用极低
+* 缺点：
+    * 全英文
+    * 需要自己解决驱动兼容性问题（如果有的话）
+    * 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠
+
+[官网下载地址](https://parsec.app/downloads)
+### Tai
+记录软件使用时长  ~~推gal神器~~
+
+[官方项目地址](https://github.com/Planshit/Tai)
+### [蓝奏云](https://wwa.lanzoui.com/)
+比较推荐的云盘。虽然是个网页，放进 *应用汇总* 里面不太合适。*（本页私链下载文件均保存于蓝奏云）*
 
 优点：
 * 无限存储空间
@@ -67,52 +102,9 @@ Telegram第三方开源客户端，自带公共代理
 
 缺点：
 * 单文件限制大小100M（且不能通过分包压缩改后缀规避限制；~~*猜测是会读取分包的连接信息并判断*~~）
-* 文件目录管理功能差
-
-APP下载：手机浏览器打开[网站主页](https://wwa.lanzoui.com/)即提示下载。*（也可访问网页版）*
-
-*（我的建议是：推荐和github配合存储）*
-### HiNative
-
-一个可以直接问外国人~~语言~~问题的app&网站。
-
-[官网](https://zh.hinative.com/)
-### Adobe Scan
-扫描文档并转为pdf。免费版就够用了。
-
-与[扫描全能王](https://w103.camscanner.com/)相比有如下优点：小（安装后，扫描全能王 591MB，Adobe Scan 114MB）；无水印。
-
-[谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
-### Seal
-开源的视频下载app，Android 端的优质选择。
-
-[项目地址](https://github.com/JunkFood02/Seal)
-## Windows
-### Parsec
-**极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。
-
-与向日葵相比：
-
-**优点：**
-
-* 低延迟
-* 性能占用极低
-
-**缺点：**
-
-* 全英文
-* 需要自己解决驱动兼容性问题（如果有的话）
-* 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠
-
-[官网下载地址](https://parsec.app/downloads)
-### Tai
-记录软件使用时长  ~~推gal神器~~
-
-[官方项目地址](https://github.com/Planshit/Tai)
-### SpaceSniffer
+* 文件目录管理功能垃圾
+### [SpaceSniffer](https://spacesniffer.en.softonic.com/)
 可视化磁盘空间占用，方便清理
-
-[下载地址](https://spacesniffer.en.softonic.com/)
 ### [uTools](http://www.u.tools/)
 uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88) 由于逐步开始付费模式，此处可选择使用开源替代品：[PowerToys](https://github.com/microsoft/PowerToys)
 ### [steam++](https://steampp.net/)
@@ -138,17 +130,9 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 ### [图吧工具箱](http://www.tbtool.cn/)
 集成了电脑及其外接设备测试所需的多数软件。
 ### ADB
-电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。
+电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。[基础教程](../articles/adb.md)
 
 [官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
-::: tip
-基本使用方法：下载并解压后，进入 adb 目录，打开 cmd，连接 [*开启了 USB 调试的手机*](https://baidu.lvshuncai.com/?q=5omL5py65aaC5L2V5omT5byAVVNC6LCD6K+V) 后执行 `adb devices`，出现以下代码即为连接成功.
-```batch
-* daemon started successfully
-List of devices attached
-****************        device
-```
-:::
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 开源的右键菜单管理器。高度自定义化。
 ### [Anki](https://apps.ankiweb.net/)

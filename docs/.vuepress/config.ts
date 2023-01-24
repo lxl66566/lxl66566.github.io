@@ -119,6 +119,7 @@ export default defineUserConfig({
             "telegram.md",
             "potplayer_setting.md",
             "fuck_quickapp.md",
+            "adb.md",
           ],
         },
       ],
@@ -161,6 +162,7 @@ export default defineUserConfig({
             "/articles/telegram.md",
             "/articles/potplayer_setting.md",
             "/articles/fuck_quickapp.md",
+            "/articles/adb.md",
           ],
         },
         {
