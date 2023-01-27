@@ -11,6 +11,8 @@ sidebar: 'auto'
 5. 同上打开命令面板，搜索并点击 `Tasks: Configure Default Build Task`，再选择 `C/C++: g++.exe build active file`。
 
 现在你已经可以在vscode中编译并运行一串c++代码了。
+## 程序计时
+程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) ~~大佬请直接看汇编结果~~
 ## Qt
 ### 基本介绍 --> [官网](https://www.qt.io/)
 Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用就是用Qt写的。对于C++开发GUI应用来说，Qt是比较简单快速的选择。

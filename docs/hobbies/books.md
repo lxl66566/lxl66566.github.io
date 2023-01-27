@@ -62,6 +62,7 @@ sidebar: 'auto'
 |异界邪君|?<2018.07.28|
 |傲剑凌云|?|
 |九荒天帝 <Badge text="二刷" />|?||可惜的烂尾作，文风很好。|
+|天火大道|?|
 
 ### 无记录
 * 诛仙（初中）
@@ -225,4 +226,6 @@ sidebar: 'auto'
 * 《技术大全》[波兰] 斯坦尼斯瓦夫·莱姆，超竞技游戏，太阳的距离，妖刀记，道诡异仙；
 
 这是有了 blog 以后加的，不一定看，但可以在无书可读时指明一个方向。
-* （全球高武，星门）：万族之劫上、下作。
+* （万族之劫上、下作）：全球高武，星门。
+
+* <div class="image40" style="text-align: center;"><img alt="开始界面" src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f8376fe99e6c4bfa82dd01551c98bbfd~tplv-obj:1080:1925.image?from=post&x-expires=1682524800&x-signature=CjGGz8%2FoXM9JQaDlbTF%2BpRtHXWA%3D" /></div>

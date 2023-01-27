@@ -5,7 +5,7 @@ sidebar: 'auto'
 ## CS:GO
 CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此需要[时不时戒一段时间](../hide/personal_details.md#强迫自己做的事)。
 
-> 另外，我已于 2022.11.20 戒掉了 CS:GO（两个月后：偶尔会碰一下 但不会花太多时间）。希望各位适度游戏，享受游戏过程。
+> 另外，我已于 2022.11.20 戒掉了 CS:GO，且于 2023.01.28 卸载。~~（不卸载的话效果不好）~~ 希望各位适度游戏，享受游戏过程。
 ### 设置方案
 #### 启用控制台
 ![控制台](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo_settings_1.png)
