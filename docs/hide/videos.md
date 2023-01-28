@@ -41,6 +41,7 @@ sidebar: 'auto'
 |[MTALL-044](https://www2.javhdporn.net/video/mtall-044/)|8.2|8|
 |[MIAA-648](https://www2.javhdporn.net/video/miaa-648/)|7.3|8.9|
 |[HMN-156](https://www2.javhdporn.net/video/hmn-156)|8|7.7|
+|[IPX-660](https://missav.com/ipx-660)|7.5|8.2|
 |[IPX-881](https://www2.javhdporn.net/video/ipx-881)|7.5|8|
 |[SSIS-348](https://www2.javhdporn.net/video/SSIS-348c/)|9|6|
 |[ROYD-084](https://www2.javhdporn.net/video/ROYD-084c/)|7.7|7|
@@ -49,6 +50,7 @@ sidebar: 'auto'
 |[MIAA-604](https://www2.javhdporn.net/video/MIAA-604c/)|7.8|6.8|
 |[STARS-574](https://www2.javhdporn.net/video/stars-574)|8.5|6|
 |[CAWD-194](https://www2.javhdporn.net/video/cawd-194)|7|7.5|
+|[ROYD-102](https://missav.com/royd-102)|8|6.3|
 |[IPX-773](https://www2.javhdporn.net/video/ipx-773/)|9|5|
 |[MIAA-704](https://www2.javhdporn.net/video/miaa-704c)|4|10|
 |[MIAA-391](https://www2.javhdporn.net/video/miaa-391)|6.3|7.3|
