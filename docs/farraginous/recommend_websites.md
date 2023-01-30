@@ -47,7 +47,7 @@ sidebar: 'auto'
 * [desmos](https://www.desmos.com/calculator?lang=zh-CN)：在线画函数图表（比 matlab 好看），一般需要配合拟合使用
 * [Octave Online](https://octave-online.net/)：在线 Octave 解释器。Octave 基本兼容 MATLAB 语法。
 ## 媒体创作
-* [稿定](https://ps.gaoding.com/#/)：在线PS
+* 在线PS：[稿定](https://ps.gaoding.com/#/) | [Photopea](https://www.photopea.com/)
 * [Adobe全家桶破解](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 * [AI图片放大](https://bigjpg.com/)
 * 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
