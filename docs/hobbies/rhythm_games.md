@@ -50,42 +50,48 @@ sidebar: 'auto'
 
 ### 我的记录
 
-* 我的o!m健身按键数 ~~（众所周知osu是健身游戏）~~
+* 我的 o!m 健身按键数 ~~（众所周知osu是健身游戏）~~
 
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="300"></iframe>
 
-* Jackmap变化图
+* 叠（Jack）：α, ex-3
 
 <iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280"></iframe>
 
-* Techmap变化图
+* 技（Tech）：β, ex-3
+    * 本人最擅长技。尤其是偏叠的技。
 
 <iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_tech.html" width="100%" height="280"></iframe>
 
-* Speedmap变化图
+* 乱（Speed）：10, ex-1
+    * 乱打得最烂。
 
 <iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280"></iframe>
 
-* Staminamap/Stream变化图
+* 切（Stamina / Stream）：10,  ex-4
+    * 耐力是限制切力的最重要因素。耐力不稳定，因此成绩不稳定。
+    * 非常痛恨无休切。Malody v3 段打得挺好，但 reform 段极为下手。（α 无休切，β 有个大乱，都不会打）
 
 <iframe frameborder="no" src="/charts/reform_stamina.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_stream.html" width="100%" height="280"></iframe>
 
 :::details 一些解释说明
-* 上为reform段位，下为malody v3段位；MR等特殊MOD不显示。
-* `00:00后，睡前`还在打的键数计入上一天。
+* 上为 reform 段位，下为 malody v3 段位；MR 等特殊 MOD 不显示。
 * 健身按键数 20220809+：由于[OSU打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
 * 健身按键数 20221022?：由于osu-kps（记录键数的软件）崩溃，导致键数只能取估计值。
 :::
 
+### 说两句
 给新人： [OSU萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
 原本大学时看到音游群的同学在玩osu，我也入坑了，想着练练4k可以提高我其他音游的成绩（多指力）。当时打了好久osu默认自带的那几首曲子，后来才知道怎么下载曲子...
 
-我打osu只打mania。主要打4k，偶尔也会打打6k，5k打得就更少了。其他key数从来不碰。其他模式仅会碰一下std，而且一部分打的是[McOsu](https://store.steampowered.com/app/607260/McOsu/)的3d模式。
+我打 osu 主打mania。主 4k，副 6k。其他key数从来不碰。其他模式仅会碰一下 std。 <span class="heimu" title="你知道的太多了">曾经练定位用[McOsu](https://store.steampowered.com/app/607260/McOsu/)的 3d 模式打 std</span>
+
+
 * 为什么打osu最频繁呢？
 
 因为上限最高。 **osu，本是逆天而行。** <span class="heimu" title="你知道的太多了">（内卷而行</span> ~~虽然Malody同样具有高上限，但是固定key还是习惯敲键盘…~~<span class="heimu" title="你知道的太多了">明明最早接触的是触屏端 为什么会变成这样呢？</span>
@@ -104,7 +110,7 @@ Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
 |光轴|2020-20220530|便宜<br/>延迟低<br/>耐操|巨吵无比<br/>触发压力大<br/>无法换轴|
 |AJAZZ红轴|20220607-20220609|手感不错<br/>静音|-|
 |RK红轴|20220611-20220614|触发压力小|触发键程大|
-|快银轴|20220614-至今|快，触发键程小|触发压力稍大|
+|<text style="color:blue;">快银轴</text>|20220614-至今|快，触发键程小|触发压力稍大|
 |金粉轴v2|20220624-20220625|触发压力小|触发键程大|
 
 大一用了一整年的地摊货键盘，光轴，咸鱼40的网吧淘汰品。延迟很低，可以随便泡水不会坏——但是巨tm吵，舍友震怒；而且触发压力大，打得很累。
@@ -124,6 +130,7 @@ Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
 第二天我几乎是死心了，开始了自己融合皮肤的过程，希望能融出像原来那种的蓝白钉皮。自己融了整整一天，也融不出什么手感好的皮肤。
 
 然后在20220613晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了absolute x v2。（当前改版至[absolute x v5](https://wwkh.lanzout.com/i0D1c0iv79gh)）手感还不错，能够足够逼近原来的皮肤了。
+> 注意，若有 7k 等其他 key 数需求请自行修改。 
 ### 段位
 #### 4k
 * [4K Reform Dan](https://wwp.lanzout.com/iIUjo02rxm5a) （官方）
@@ -133,6 +140,8 @@ Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
 民间（高难）：
 * [4K Technical Dan Course](https://www.bilibili.com/read/cv21330945)
 * [勿段](https://www.bilibili.com/read/cv19532510)
+#### 6k
+6k 对玩家与谱面把控极为严格。~~（怎么会事呢？）~~ 请加入 QQ群: 579602633 获取谱面与资讯。群内对成员活跃度有一定要求。
 ### 其他推荐
 * 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
 

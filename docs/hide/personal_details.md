@@ -15,6 +15,7 @@ sidebar: 'auto'
 * 高代谢水平（异常多的油脂分泌、头屑、囊肿；频繁脱皮<span class="heimu" title="你知道的太多了">看起来像是寿元不多的样子</span>）
 * [抗饿](../hide/memories.md#饿)
 * 夜行者，电子设备常年低亮度 + 黑夜模式。
+* 不擅长恐怖。
 ### 睡眠
 ```rs
 fn consume(level: f64) -> f64 {

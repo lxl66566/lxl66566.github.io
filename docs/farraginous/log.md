@@ -6,6 +6,8 @@ sidebar: 'auto'
 
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2023
+### .02
+* 新增[xxx有多难用 # Telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
 ### .01
 #### 2023.01.24
 * 新增[文章 - ADB](../articles/adb.md)
