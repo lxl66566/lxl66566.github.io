@@ -65,8 +65,8 @@ sidebar: 'auto'
 <iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_tech.html" width="100%" height="280"></iframe>
 
-* 乱（Speed）：10, ex-1
-    * 乱打得最烂。
+* 乱（Speed）：10, reg-10
+    * 严重偏科。
 
 <iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280"></iframe>
@@ -133,10 +133,9 @@ Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
 > 注意，若有 7k 等其他 key 数需求请自行修改。 
 ### 段位
 #### 4k
-* [4K Reform Dan](https://wwp.lanzout.com/iIUjo02rxm5a) （官方）
-* [Malody 4K Regular Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20regular%20dan%20v3&s=any)
-* [Malody 4K Extra Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20extra%20dan%20v3&s=any)
-
+* [4K Reform Dan](https://wwp.lanzout.com/iIUjo02rxm5a) （官方，96% pass）
+* [Malody 4K Regular Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20regular%20dan%20v3&s=any) | [Malody 4K Extra Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20extra%20dan%20v3&s=any)（96% pass）
+* [4k LN Dan Courses v2](https://osu.ppy.sh/beatmapsets?q=4k%20ln%20dan&s=any)（需要开启 Score V2 mod, 97% pass）
 民间（高难）：
 * [4K Technical Dan Course](https://www.bilibili.com/read/cv21330945)
 * [勿段](https://www.bilibili.com/read/cv19532510)
