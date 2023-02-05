@@ -7,6 +7,11 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2023
 ### .02
+#### 2023.02.06
+* [软件汇总](./recommend_packages.md)与[网址汇总](./recommend_websites.md)新增一些项目
+* 新增[如何看待xxx - 如何看待猫这种生物](../gossip/consider.md#如何看待猫这种生物)
+* 回忆录新增内容
+#### 2023.02.01
 * 新增[xxx有多难用 # Telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
 ### .01
 #### 2023.01.24

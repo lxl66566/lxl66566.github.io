@@ -22,7 +22,7 @@ Rust是一门系统编程语言，专注于安全，尤其是并发安全，支�
 
 我在学习初期，先阅读 rust 教程（官网），然后尝试用 Rust 去解决 leetcode 上的一些题目 <span class="heimu" title="你知道的太多了">由于 rust 的 I/O 较为麻烦，leetcode 能免去 I/O 之苦</span> ，去搜索题目一些的子问题，了解解决方法。最后，去[上述文档](https://doc.rust-lang.org/std/index.html)进一步了解该解决方法的详细信息。
 
-其他资料：[Rust语言圣经](https://course.rs/about-book.html)
+其他资料：[Rust 语言圣经](https://course.rs/about-book.html) | [Rust new libraries and applications](https://lib.rs/new)
 
 以下所涉及到的类型与函数，请自行Google。
 ## 循环

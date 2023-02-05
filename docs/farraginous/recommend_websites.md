@@ -8,19 +8,24 @@ sidebar: 'auto'
 * [蓝奏云](https://wwa.lanzoui.com/)：云存储 *（[跳转介绍](recommend_packages.md/#蓝奏云)）*
 * [Microsoft Forms](https://forms.office.com/)：微软官方的问卷、投票、测验收集表。
 * [webtor](https://webtor.io/)：在线解析磁链（并在线播放）。<span class="heimu" title="你知道的太多了">一般作验车用（</span>
-* [1paragraph](https://1paragraph.app/)：在线网页EPUB阅读器
+* [1paragraph](https://1paragraph.app/) | [EPUB Reader](https://epub-reader.online/)：在线网页EPUB阅读器
 * [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
-* [音乐解锁 (v1.10.3)](https://demo.unlock-music.dev/)：移除已购音乐的加密保护。**开源，但仓库已被 github 封禁。**
 * [免费盐选](https://mfyx.top/)：免费看知乎盐选
-## 合集类
+### 合集类
 * [即时工具](https://www.67tool.com/)：致力打造安全、快捷、好用的在线工具箱~
 * [LKs Site](http://lkssite.vip/)：B站up主做的网页推荐站。本站小部分内容为此站精简提取而来。
+## 收藏
+平时不用，但以后可能用得上。
+* [eu.org 免费域名](https://nic.eu.org/)
 ## 资源搜索
 * 搜电子书：<!-- [zlibrary](https://z-lib.is/)--> Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
 > 2022.11.04: 绝对值x悲哀地说：z-library暂时离开了我们。
 * 搜动漫：[樱花动漫](https://www.yhdmp.live/) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/)
 * 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN) | [找脚本](http://zhaojiaoben.cn/)
 * 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/)
+### 音乐
+* [FREE MUSIC DOWNLOAD](https://freemusicdownloads.world/en8/)
+* [音乐解锁 (v1.10.3)](https://demo.unlock-music.dev/)：移除已购音乐的加密保护。**开源，但仓库已被 github 封禁。**
 ## 新闻
 **建议去[tg频道](#新闻)看新闻。**
 * [今日热榜](https://tophub.today/) *（国内热搜榜汇总*
@@ -54,7 +59,7 @@ sidebar: 'auto'
 * 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)
 * 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
 * [Media.io](https://www.media.io/)：一键添加字幕，视频处理
-* 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/) & [音效2](https://www.ear0.com/)
+* 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/) & [音效2](https://www.ear0.com/) | [搞笑音效](https://www.aigei.com/)
 * [片头制作](https://panzoid.com/)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！
 * [SVG在线编辑器](https://c.runoob.com/more/svgeditor/)
