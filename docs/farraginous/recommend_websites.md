@@ -22,7 +22,7 @@ sidebar: 'auto'
 > 2022.11.04: 绝对值x悲哀地说：z-library暂时离开了我们。
 * 搜动漫：[樱花动漫](https://www.yhdmp.live/) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/)
 * 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN) | [找脚本](http://zhaojiaoben.cn/)
-* 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/)
+* 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/) | [Explore connected papers in a visual graph](https://www.connectedpapers.com/)
 ### 音乐
 * [FREE MUSIC DOWNLOAD](https://freemusicdownloads.world/en8/)
 * [音乐解锁 (v1.10.3)](https://demo.unlock-music.dev/)：移除已购音乐的加密保护。**开源，但仓库已被 github 封禁。**
