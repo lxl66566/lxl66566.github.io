@@ -61,7 +61,7 @@ sidebar: 'auto'
 
 重度电脑使用者，目前不玩任何手游。
 ### 以前曾喜欢
-* [moSiyuan](https://lmoliver.github.io/mosiyuan/)<span class="heimu" title="你知道的太多了">沉迷这个也太羞耻了啊啊啊</span>
+* [moSiyuan](https://lmoliver.github.io/mosiyuan/)（<20191107>）<span class="heimu" title="你知道的太多了">沉迷这个也太羞耻了啊啊啊</span>
 * [读书](../hobbies/books.md)
 * [番剧](../hobbies/anime.md)
 * 王者荣耀

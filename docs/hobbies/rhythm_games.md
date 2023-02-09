@@ -172,7 +172,7 @@ Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
 ### 最好成绩
-段位：[malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | 单曲：[malody v3-stream ex4 96.32%](https://www.bilibili.com/video/BV1AR4y1Y785)
+段位：[α 96.39%](https://www.bilibili.com/video/BV13M411Y7c5/) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | 单曲：[malody v3-stream ex4 96.32%](https://www.bilibili.com/video/BV1AR4y1Y785)
 
 ![malody v3 ex2 96.03%](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg)
 ## phigros
