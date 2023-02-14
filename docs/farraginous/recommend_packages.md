@@ -122,9 +122,9 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 
 [关于 Potplayer 设置](../articles/potplayer_setting.md)
 ### f.lux
-护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。（一般来说win10自带的夜间模式够用，但是它的权限更高，能在打游戏时也强制护眼。）
-
-> 若需要进一步降低屏幕背光亮度，带有 Intel 核显电脑可使用 *Intel Graphics Command Center*
+护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。
+* 可以在全屏游戏时护眼
+* 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）
 
 [官网下载地址](https://justgetflux.com/) | [私有下载地址](https://wwp.lanzout.com/iqmkq06s0wtg)
 ### [图吧工具箱](http://www.tbtool.cn/)
