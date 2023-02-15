@@ -130,7 +130,7 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 ### [图吧工具箱](http://www.tbtool.cn/)
 集成了电脑及其外接设备测试所需的多数软件。
 ### ADB
-电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。[基础教程](../articles/adb.md)
+电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。[简易教程](../articles/adb.md)
 
 [官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)

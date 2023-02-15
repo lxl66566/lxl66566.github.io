@@ -7,6 +7,9 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2023
 ### .02
+#### 2023.02.15
+* 新增[闲聊-xxx有多难用#运营商有多傻逼](../gossip/fuckxxx.md#运营商有多傻逼)，[设置电脑 - edge 转 firefox](../articles/computer_setting.md#edge-转-firefox)，[学习笔记 - 食物制作](./learning/foods.md)
+* 修复了一些跳转错误
 #### 2023.02.10
 * 新增 *灵感 - 奇物志*
 #### 2023.02.09
@@ -118,7 +121,7 @@ sidebar: 'auto'
 #### 2022.09.06
 * 新增[软件汇总#Seal](./recommend_packages.md#seal)
 * 新增[编程-工具-Github](../coding/github.md)页面
-* 维护隐藏页面：灵感 | 愿景，[文章-对win11的设置](../my_articles.md#对win11的设置)
+* 维护隐藏页面：灵感 | 愿景，文章-对win11的设置（迁移至[电脑设置](../articles/computer_setting.md)）
 #### 2022.09.03
 * 新增[OSU能力变化表](../hobbies/rhythm_games.md#我的记录)
 #### 2022.09.01
@@ -168,7 +171,7 @@ sidebar: 'auto'
 * 新增 游戏-galgame#游戏优点（已合并到 #说两句）
 #### 2022.07.29
 * 改为使用图床存放图片(images分支)
-* 新增 [游戏-其他游戏#明日方舟](../hobbies/other_games.md#明日方舟)，[文章#Windows端记录软件使用时长](../my_articles.md#windows端记录软件使用时长)
+* 新增 [游戏-其他游戏#明日方舟](../hobbies/other_games.md#明日方舟)，文章#Windows端记录软件使用时长（迁移至[文章 - 记录软件使用时长](../articles/time_record.md#windows端记录软件使用时长)）
 * 维护 [VuePress2与博客心得](../gossip/withvuepress2.md)
 #### 2022.07.26
 * 新增 [galgame#吐槽一下](../hobbies/galgame.md#吐槽一下)
@@ -188,12 +191,12 @@ sidebar: 'auto'
 * 尝试添加dr-vue-echarts组件，无法使用
 * 维护 [游戏-音游](../hobbies/rhythm_games.md)
 #### 2022.07.12
-* 新增 [文章-运动轨迹记录软件横评](../my_articles.md#运动轨迹记录软件横评)
+* 新增 [文章-运动轨迹记录软件横评](../articles/track_record.md)
 #### 2022.07.09
-* 新增 [文章-Android端记录软件使用时长](../my_articles.md#android端记录软件使用时长)
+* 新增 [文章-Android端记录软件使用时长](../articles/time_record.md#android端记录软件使用时长)
 #### 2022.07.06
 * 添加 自动注册Vue组件插件
-* 新增 [文章#BIOS密码重置](../my_articles.md#bios密码重置)
+* 新增 [文章#BIOS密码重置](../articles/computer_setting.md#bios密码重置)
 #### 2022.07.03
 * 维护 [随笔](../essay.md)
 #### 2022.07.01
@@ -216,14 +219,14 @@ sidebar: 'auto'
 #### 2022.06.16
 * 取消editLink与contributors
 #### 2022.06.13
-* 新增 [编程-Git#高级技巧](../coding/Git.md#高级技巧)、[闲聊-初级科学上网（现：文章-~）](../my_articles.md#科学上网初级)
+* 新增 [编程-Git#高级技巧](../coding/Git.md#高级技巧)、[闲聊-初级科学上网（现：文章-~）](../articles/vpn.md)
 #### 2022.06.11
 * 新增 [编程-C++](../coding/Cpp.md)、[闲聊#回忆录&对编程语言的希望](../gossip/hope_of_coding_language.md)
 ### .05
 #### 2022.05.26
 * 新增 [闲聊#灵感&对美好未来社会的愿景](../gossip/)
 #### 2022.05.21
-* 新增 [我的文章-Win10设置开机自启动（现：设置开机自启动）](../my_articles.md#设置开机自启动)、[闲聊#日程区](../gossip/schedule.md)
+* 新增 [我的文章-Win10设置开机自启动（现：设置开机自启动）](../articles/computer_setting.md#设置开机自启动)、[闲聊#日程区](../gossip/schedule.md)
 #### 2022.05.17
 * 新增 [游戏-我的世界](../hobbies/Minecraft.md)
 #### 2022.05.16
@@ -234,7 +237,7 @@ sidebar: 'auto'
 * 更改navbar逻辑
 * 新增 [编程-Git](../coding/Git.md)&*其他工具（已整合为[python](../coding/python.md)页面）*、[随笔](../essay.md)
 #### 2022.05.05
-* 新增 [杂项-我的文章#查看手机cpu指令集（现：文章-~）](../my_articles.md#查看手机cpu指令集)
+* 新增 [杂项-我的文章#查看手机cpu指令集（现：文章-~）](../articles/Android_ISA.md)
 * 更新 [主页](../README.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
 #### 2022.05.04
 * 发布博客

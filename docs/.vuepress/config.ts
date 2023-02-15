@@ -113,7 +113,7 @@ export default defineUserConfig({
           children: [
             "computer_setting.md",
             "vpn.md",
-            "Androi_ISA.md",
+            "Android_ISA.md",
             "time_record.md",
             "track_record.md",
             "telegram.md",
@@ -131,6 +131,7 @@ export default defineUserConfig({
             "physics.md",
             "complex_functions.md",
             "circuit_analysis.md",
+            "foods.md",
           ],
         },
       ],
@@ -156,7 +157,7 @@ export default defineUserConfig({
           children: [
             "/articles/computer_setting.md",
             "/articles/vpn.md",
-            "/articles/Androi_ISA.md",
+            "/articles/Android_ISA.md",
             "/articles/time_record.md",
             "/articles/track_record.md",
             "/articles/telegram.md",

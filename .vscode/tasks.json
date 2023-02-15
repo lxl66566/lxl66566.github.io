@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "docs:dev",
+			"problemMatcher": [],
+			"label": "npm: docs:dev",
+			"detail": "vuepress dev docs"
+		},
+		{
+			"type": "npm",
+			"script": "deploy",
+			"problemMatcher": [
+				"$node-sass"
+			],
+			"label": "deploy & backup",
+			"detail": "backup.sh"
+		}
+	]
+}
