@@ -72,7 +72,7 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 ### 资源
 * [Visual Novel Channel](https://t.me/erogamecloud)：galgame 推荐与下载
 * [NEP.Anime | 动画仓库](https://t.me/AnimeNep)：动漫收藏搬运
-### 涩涩
+### NSFW
 * [美图与色图](https://t.me/setu_nsfw) & [everyday color photos](https://t.me/everydaycolorphoto)：每日色图
 * [安利 (NSFW)](https://t.me/qingan567)：本子推荐
 * [韵の小院🍃ᴺˢᶠʷ](https://t.me/YunRan1314)：<span class="heimu" title="你知道的太多了">露点</span>涩图

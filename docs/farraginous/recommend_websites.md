@@ -18,8 +18,9 @@ sidebar: 'auto'
 平时不用，但以后可能用得上。
 * [eu.org 免费域名](https://nic.eu.org/)
 ## 资源搜索
-* 搜电子书：<!-- [zlibrary](https://z-lib.is/)--> Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
-> 2022.11.04: 绝对值x悲哀地说：z-library暂时离开了我们。
+* 搜电子书：[zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
+> 2022.11.04: 绝对值x悲哀道：z-library暂时离开了我们。<br/>
+> 但天无绝自由之路。
 * 搜动漫：[樱花动漫](https://www.yhdmp.live/) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/)
 * 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN) | [找脚本](http://zhaojiaoben.cn/)
 * 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/) | [Explore connected papers in a visual graph](https://www.connectedpapers.com/)

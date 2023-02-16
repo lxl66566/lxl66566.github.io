@@ -61,6 +61,7 @@ sidebar: 'auto'
 |[ATID-522](https://www2.javhdporn.net/video/atid-522)|5.7|6.6|
 |[STARS-495](https://www2.javhdporn.net/video/stars-495c/)|5.7|6.5|
 |[SHKD-996](https://www2.javhdporn.net/video/shkd-996)|6|6|
+|[MVSD-525](https://jable.tv/videos/mvsd-525/)|6.3|5.5|
 |[MIDE-525](https://www2.javhdporn.net/video/mide-525)|6|5.7|
 |[DASS-054](https://www2.javhdporn.net/video/dass-054c/)|6.2|5.4|
 |[SSIS-502](https://www2.javhdporn.net/video/ssis-502)|5.5|6|
