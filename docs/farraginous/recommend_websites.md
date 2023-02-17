@@ -10,7 +10,7 @@ sidebar: 'auto'
 * [webtor](https://webtor.io/)：在线解析磁链（并在线播放）。<span class="heimu" title="你知道的太多了">一般作验车用（</span>
 * [1paragraph](https://1paragraph.app/) | [EPUB Reader](https://epub-reader.online/)：在线网页EPUB阅读器
 * [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
-* [免费盐选](https://mfyx.top/)：免费看知乎盐选
+<!-- * [免费盐选](https://mfyx.top/)：免费看知乎盐选 -->
 ### 合集类
 * [即时工具](https://www.67tool.com/)：致力打造安全、快捷、好用的在线工具箱~
 * [LKs Site](http://lkssite.vip/)：B站up主做的网页推荐站。本站小部分内容为此站精简提取而来。

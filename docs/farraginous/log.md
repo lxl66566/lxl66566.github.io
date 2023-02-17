@@ -7,6 +7,8 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录。）*
 ## 2023
 ### .02
+#### 2023.02.17
+* 维护 [编程 - git](../coding/Git.md)
 #### 2023.02.15
 * 新增[闲聊-xxx有多难用#运营商有多傻逼](../gossip/fuckxxx.md#运营商有多傻逼)，[设置电脑 - edge 转 firefox](../articles/computer_setting.md#edge-转-firefox)，[学习笔记 - 食物制作](./learning/foods.md)
 * 修复了一些跳转错误

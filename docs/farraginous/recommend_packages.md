@@ -186,7 +186,7 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 
 [前往 Github](https://github.com/vinta/pangu.js)
 ### [沉浸式翻译](https://microsoftedge.microsoft.com/addons/detail/amkbmndfnliijdhojkpoglbnaaahippg)
-爆杀 edge 翻译：支持双语对照；支持为翻译添加样式；支持主要区域翻译；可选择引擎。
+爆杀 edge 翻译：支持双语对照；支持为翻译添加样式；可选择引擎。
 
 前往[项目地址](https://github.com/immersive-translate/immersive-translate)
 ## 浏览器脚本

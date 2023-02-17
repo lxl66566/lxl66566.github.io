@@ -25,40 +25,45 @@ git init
 创建仓库后，目录下出现`.git`隐藏文件夹，即为仓库本体。
 
 因此若要删除仓库，最快捷的方法就是直接删除`.git`文件夹。
+> 在 windows 下由于权限问题会出现无法删除的情况，此时请 `rm -rf .git`
 ### 添加文件
 ```sh
-git add filename.xxx    #添加文件
+git add *.py            #添加所有后缀为 .py 的文件
 git add dirname         #添加文件夹
-git add -A              #添加目录下所有文件与文件夹
-git add *.py            #添加所有后缀为.py的文件
+git add -A              #添加仓库内所有文件与文件夹
 ```
 关于“添加所有文件”不同方法的差异，请看[这里](https://www.jb51.net/article/191458.htm)
 
 该方法用于将文件添加到暂存区。
 
-### 打包
-添加文件后需要将暂存区的文件打包到仓库内。
+### 提交与撤销
+添加文件后需要将暂存区的文件打包（commit，提交）到仓库内。
 ```sh
-git commit -m '注释'
+git commit -m "注释"
 ```
-你可以任意填写对文件的注释。请注意，使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以：
+
+请注意，使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以选择其一：
 
 1. 分批add，并每次commit不同的注释
 2. 一次性add，并每次使用`git commit file1.xxx file2.xxx -m ''`命令打包。
 
-*（注：ssh密钥生成后首次添加注释可能会出现额外提醒，请根据提醒照做）*
-### 远程仓库
+> 注释也可单引号，有的终端环境使用单引号会报错<br/>
+> ssh密钥生成后首次添加注释可能会出现额外提醒，请根据提示照做
+#### 撤销
+撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
+修改注释：`git commit --amend`，需要使用 Vim
+### 上传与远程仓库
 将你的仓库上传到github等平台。
-#### 连接远程仓库
+#### 连接
 :::: code-group
 ::: code-group-item SSH
 ```sh
-git remote add origin git@github.com:yourgithubID/gitRepo.git
+git remote add origin git@github.com:yourgithubID/gitRepo.git   # origin 为用户别名，可自定义
 ```
 :::
 ::: code-group-item HTTPS
 ```sh
-git remote add origin https://github.com/yourgithubID/gitRepo.git
+git remote add origin https://github.com/yourgithubID/gitRepo.git   # origin 为用户别名，可自定义
 ```
 :::
 ::::
@@ -74,18 +79,16 @@ ssh -T git@github.com       #你可输入该命令验证是否成功
 ```
 :::
 
-若你遇到`ssh: connect to host github.com port 22: Connection refused` / `bash: clip: command not found`错误，可以参考[疑难解答](#疑难解答)。
-#### 上传到远程仓库
+若你遇到 `ssh: connect to host github.com port 22: Connection refused` / `bash: clip: command not found` 错误，可以参考[疑难解答](#疑难解答)。
+#### 上传
 请确保已连接远程仓库。
 ```sh
-git push origin main
+git push origin <branch> # branch 为当前分支
 ```
 
-上述代码默认分支名为`main`（github的默认分支名），你可以将`main`替换为任意自己想要的分支。同时用户名`origin`也可自由更改。
+你也可以在`push`命令后加入`-u`参数，代表将当前分支设为默认。`-f`参数代表强制推送，即强制覆盖上传，慎用。
 
-你也可以在`push`命令后加入`-u`参数，代表将当前分支设为默认。`-f`参数代表强制推送，即不比对远程仓库直接覆盖上传。
-
-#### 删除已连接的远程仓库
+#### 删除
 
 ```sh
 git remote remove origin
@@ -96,67 +99,32 @@ git remote remove origin
 
 接下来是一些其他命令
 :::
-### 查看仓库文件
-```sh
-git ls-files
-```
+### 仓库查询
+* 查看仓库内文件：`git ls-files`
+* 查看仓库状态：`git status`
+* 查看仓库提交记录：`git log`
+* 查询 commit 详细信息：`git show --stat [commit]`；`[commit]` 留空则查询最近一次 commit 的信息
 ### 更改分支
-```sh
-git branch -m BranchName
-```
-若需要将分支改名：
-```sh
-git branch -m OldBranchName NewBranchName
-```
+`git branch -m BranchName`
 
+若需要将分支改名：`git branch -m OldBranchName NewBranchName`
 ### 删除文件
-* 仅删除仓库内文件（不删除本地文件）
 ```sh
-git rm --cached filename.xxx
+git rm --cached filename.xxx    # --cached 指仅删除仓库内文件，不删除本地文件
+git rm -r --cached dirname      # 删除仓库内文件夹
 ```
-* 同时删除仓库内文件与本地文件
-```sh
-git rm filename.xxx
-```
-* 删除仓库内**文件夹**：添加`-r`参数。；例如：`git rm -r --cached dirname`
-
 ### 从仓库内恢复文件
 ```sh
-git checkout -- filename
+git checkout -- filename    # 注意 `--` 后的空格
 ```
-`--`与`filename`之间有空格。
 ### 更新远程仓库到本地
-```sh
-git fetch origin main
-```
-若还需要从仓库中释放分支：
-```sh
-git merge origin/main
-```
-### 修改注释
-~~原则上，不应该更改注释~~
+`git fetch origin main`
 
-git提供了修改最近一次注释的方法：
-```sh
-git commit --amend
-```
-注：需要使用Vim[^1]。
+若还需要从仓库中释放分支：`git merge origin/main`
 ### 删除远程tag
-如果在github上新建了一个release后，代码又发生了改变，此时release中的source code将不会自动更新。我们可以通过删除原tag再添加tag的方法更新source code。（release信息会被保留，状态更改为draft）
+如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新source code。（release 信息会被保留，状态更改为 draft）
 
-仅删除远程tag：
-```sh
-git push origin :refs/tags/TAGNAME
-```
-
-### 回档
-`git reset --hard 版本号`
-
-此版本后的所有 commit log 将被删除。
-### 查看commit详细信息
-`git show --stat [commit]`
-
-`[commit]` 留空则查询最近一次 commit 的信息
+仅删除远程tag：`git push origin :refs/tags/TAGNAME`
 ## 其他技巧
 ### 忽略文件(夹)
 1. 在仓库所在根目录下新建文本文档，输入你需要忽略的文件或文件夹（文件需带有后缀），以回车键隔开。
@@ -212,5 +180,3 @@ git config --global --add safe.directory '*'
 > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
 > 
 > 不过这只是复制一个密钥的事，用不着那么麻烦。执行`cat ~/.ssh/id_rsa.pub`手动复制你的密钥即可。
-
-[^1]:按`i`或`a`进入insert模式，编辑完后按esc进入normal模式，输入`:wq`保存并退出。更多命令请看[这里](https://yianwillis.github.io/vimcdoc/doc/quickref.html#quickref)或者[这里](https://coolshell.cn/articles/5426.html)。
