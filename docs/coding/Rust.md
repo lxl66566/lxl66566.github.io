@@ -18,6 +18,8 @@ Rust是一门系统编程语言，专注于安全，尤其是并发安全，支�
 ### 如何学习
 [官网](https://www.rust-lang.org/zh-CN/)有详细的 QA 与你所需要的一切。以下陈述个人想法：
 
+对于新手而言，[tour of rust](https://tourofrust.com/00_zh-cn.html)可能是一个不错的选择。
+
 我认为[这个文档](https://doc.rust-lang.org/std/index.html)最为重要。
 
 我在学习初期，先阅读 rust 教程（官网），然后尝试用 Rust 去解决 leetcode 上的一些题目 <span class="heimu" title="你知道的太多了">由于 rust 的 I/O 较为麻烦，leetcode 能免去 I/O 之苦</span> ，去搜索题目一些的子问题，了解解决方法。最后，去[上述文档](https://doc.rust-lang.org/std/index.html)进一步了解该解决方法的详细信息。
