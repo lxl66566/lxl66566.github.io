@@ -65,7 +65,7 @@ sidebar: 'auto'
 <iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_tech.html" width="100%" height="280"></iframe>
 
-* 乱（Speed）：10, reg-10
+* 乱（Speed）：10, ex-2
     * 严重偏科。
 
 <iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>

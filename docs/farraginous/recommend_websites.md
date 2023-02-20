@@ -57,7 +57,7 @@ sidebar: 'auto'
 * [Adobe全家桶破解](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 * [AI图片放大](https://bigjpg.com/)
 * 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
-* 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)
+* 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)（付费下载，建议消除后直接截图）
 * 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
 * [Media.io](https://www.media.io/)：一键添加字幕，视频处理
 * 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/) & [音效2](https://www.ear0.com/) | [搞笑音效](https://www.aigei.com/)
