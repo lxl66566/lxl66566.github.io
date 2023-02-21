@@ -49,6 +49,30 @@ img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
 ```
 
 使用此内置函数进行高斯模糊将无法改变 sigma 的值。
+## 使用 poetry 进行包管理
+这是一种更为现代的 python 包管理措施，个人认为确实比 pip 优秀，但门槛较高。[关于安装](https://python-poetry.org/docs/#installation)；记得按照安装提示添加环境变量。
+
+以下记录一些基本命令：
+* 新建项目：`poetry new <package name>`
+    * 创建 .toml 文件：`poetry init`，然后跟着提示填入信息
+* 包管理
+    * 添加包：`poetry add <package name>`
+    * 移除包：`poetry remove <package name>`
+    * 列出可用包：`poetry show`
+* 安装所需环境（使用者）：`poetry install`，其会自动为您新建虚拟环境
+* 虚拟环境
+    * 查询：`poetry env info`
+    * 激活：`poetry shell`；或者在虚拟环境下的 Scripts 文件夹中打开命令行，输入 `call activate.bat`.
+* 运行：`poetry run <filename>.py`
+### 换源
+为了方便没有梯子的其他使用者安装环境，可在 .toml 文件中添加：
+```
+[[tool.poetry.source]]
+name = "tsinghua-pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+```
+以指定源。
 ## miniconda
 提供 python 包管理与虚拟环境。
 

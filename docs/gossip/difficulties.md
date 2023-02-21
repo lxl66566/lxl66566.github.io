@@ -2,6 +2,50 @@
 **此页面几乎不再更新。请前往[我的频道](https://t.me/withabsolutex)搜索 tag: `#垃圾桶`。**
 
 有关博客写作的问题请跳转[VuePress2与博客心得](./withvuepress2.md)。
+## 20230221：网站访问问题
+问题描述：开启 clash 系统代理时无法访问校内 pt 站：`pt6.neko2022.com`。反之则可以访问。<text style="color:red;font-weight:bold">未解决！</text>
+
+一些信息：
+> \> ping pt6.neko2022.com<br/>
+> Ping request could not find host pt6.neko2022.com.<br/>
+> \> nslookup<br/>
+> \> pt6.neko2022.com<br/>
+> Server:  dns2.ecust.edu.cn<br/>
+> Address:  202.120.111.30<br/>
+> Name:    pt6.neko2022.com<br/>
+> Address:  2001:da8:8007:1358:20c:29ff:fe89:603f
+
+尝试 1：在 clash Mixin Yaml 中添加：
+```yaml
+mixin:
+  ipv6: true
+  dns:
+    enable: true
+    ipv6: true
+    default-nameserver: [202.120.111.30, ...]
+    ...
+  rules:
+    - 'DOMAIN,pt6.neko2022.com,DIRECT'
+    - 'DOMAIN,[2001:da8:8007:1358:20c:29ff:fe89:603f],DIRECT'
+    ...
+```
+无效。
+
+尝试 2：在 clash - Settings - System Proxy - Bypass Domain/IPNet 中添加：
+```yaml
+bypass:
+  - pt6.neko2022.com
+  - [2001:da8:8007:1358:20c:29ff:fe89:603f]
+  ...
+```
+无效。（以上均尝试有无中括号的版本）
+
+进行上述尝试后，可以 ping 通该站，但浏览器无法访问（域名与 ipv6 都无法访问），clash log：
+> <text style="color:red;">pt6.neko2022.com:80</text><br/>
+> couldn't find ip:pt6.neko2022.com<br/>
+> <text style="color:red;">DIRECT (match Domain/pt6.neko2022.com)</text>
+
+大致感觉问题在 DNS 上（那为什么 v6 也无法访问呢）。然而搜了很久，ipv6 两个开关都放行了，还是不行。明天再说吧。
 ## 20220817-18：Hyper-V的各种问题
 * 问题一：在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项。<text style="color:blue;">[已解决](../articles/computer_setting.md)</text>
 * 问题二：在安装系统界面无法使用键盘鼠标。<text style="color:red;font-weight:bold">未解决！</text>
