@@ -3,7 +3,7 @@
 
 有关博客写作的问题请跳转[VuePress2与博客心得](./withvuepress2.md)。
 ## 20230221：网站访问问题
-问题描述：开启 clash 系统代理时无法访问校内 pt 站：`pt6.neko2022.com`。反之则可以访问。<text style="color:red;font-weight:bold">未解决！</text>
+问题描述：开启 clash 系统代理时无法访问校内 pt 站：`pt6.neko2022.com`。反之则可以访问。需要实现分流功能。<text style="color:red;font-weight:bold">未解决！</text>
 
 一些信息：
 > \> ping pt6.neko2022.com<br/>
