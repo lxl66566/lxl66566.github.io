@@ -10,7 +10,21 @@ sidebar: 'auto'
 4. `Ctrl + Shift + P` 打开命令面板，搜索并点击 `C/C++: Edit Configurations (UI)` ，将编译器路径改为 mingw 文件夹下的 `/bin/g++.exe`；在*IntelliSense 模式* 下选择 `gcc-x64`。此时 vscode 会自动在工作区创建 `.vscode` 存放配置。
 5. 同上打开命令面板，搜索并点击 `Tasks: Configure Default Build Task`，再选择 `C/C++: g++.exe build active file`。
 
-现在你已经可以在vscode中编译并运行一串c++代码了。
+现在你已经可以在 vscode 中编译并运行 c++ 代码了。
+## 类型转换
+>= C++11
+* `static_cast`：不进行安全检查
+* `const_cast`：设置或移除指针/引用所指对象的 const
+* `dynamic_cast`：进行安全检查，用于指针/引用转换
+* `reinterpret_cast`：无视类型，进行最底层的比特位复制
+## 智能指针
+>= C++11, &lt;memory>
+* `shared_ptr` 允许多个指针指向同一个对象
+* `unique_ptr` 独占所指向的对象
+* `weak_ptr` *shared_ptr* 的弱引用，不影响其计数器
+### 操作
+* 可以使用 `std::make_shared<Type>()` 构建
+* `reset()` 不带参数则释放（== release()）
 ## 程序计时
 程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) ~~大佬请直接看汇编结果~~
 ## Qt

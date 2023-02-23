@@ -85,11 +85,12 @@ sidebar: 'auto'
 * <Badge text="PPT" /> 表示上课纯念 PPT，很没意思
 * 以颜色区分严重程度，从轻到重依次为 <Badge text="绿色" /> -> <Badge type="warning" text="黄色" /> -> <Badge type="danger" text="橙色" />
 
-|信息|打分|评价|
-| :--: | :--: | :--: |
-|信号与系统 - 朱煜|10|有学识，随和，懂新闻|
+|信息|打分|评价|联系方式|
+| :--: | :--: | :--: | :--: |
+|概率论 - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
+|信号与系统 - 朱煜|10|有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|
-|模电 - 李振坡|5|<Badge text="限手机" />|
+|模电 - 李振坡|5|<Badge text="限手机" />|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
 |马原 - 秦美珠|4|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 较佛系|
 |体育篮球男 - 宣沁|8.5|现代化教学，会聊天|
 |毛概 - 张驰|1|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 严肃，过于热情的粉红|
@@ -99,9 +100,9 @@ sidebar: 'auto'
 |毛概 - 徐国民|6|佛系，能够清晰地作出通知|
 |体育龙舟男 - 陈家云|4.5|给分明确，教学一般|
 |复变 - 朱焱|8.5|允许电子版作业，温和，教学良好|
-|形势政策&道德法治 - 王瑞超|10.5|尊重学生个性，聊天型课堂|
+|形势政策&道德法治 - 王瑞超|10.5|尊重学生个性，聊天型课堂|<details><summary>点击展开</summary><p>wrc0475@163.com</p></details>|
 |大物 - 章登宏|4|平时分高，心善；上课质量低，催眠|
-|大英 - 马丽丽|7|捞人，平时分不低，课堂氛围轻松；互动过多|
+|大英 - 马丽丽|6.8|捞人，平时分不低，课堂氛围轻松；互动过多|
 |高数 - 吕雪芹|6|认真负责；作业量过多|
 |Python - 李昱瑾|5|<Badge type="warning" text="PPT" />|
 |线代 - 施劲松|7|声情并茂，教学质量高；故意激起内卷|
