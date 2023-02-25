@@ -233,9 +233,11 @@ export default defineUserConfig({
       provider: "Giscus",
       repo: "lxl66566/lxl66566.github.io",
       repoId: "R_kgDOHRyDvA",
-      category: "Announcements",
-      categoryId: "DIC_kwDOHRyDvM4CQSP0",
+      category: "General",
+      categoryId: "DIC_kwDOHRyDvM4CQSP1",
       mapping: "pathname",
+      light: "light",
+      darkTheme: "transparent_dark",
     }),
   ],
   extendsMarkdown: (md) => {

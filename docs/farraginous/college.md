@@ -42,6 +42,7 @@ sidebar: 'auto'
     * 自弃用 *小步点* 改用自研软件后，可使用 [fake location](./recommend_packages.md#fake-location) 代替跑步。**拒绝非个性化的不负责任的强制体育活动。**
 * 要打联机游戏的别看了，直接去开宿舍网，否则服务器都连不上。不要购买校园网的 20M 套餐！血亏。记好网络账号密码。
 * 尽快登录学生邮箱，首次登录修改密码记好。日后白嫖的地方很多。
+* 选课（自由选）时，盯着余量为 0 的老师选准没错（一般都是炙手可热的老师）。当然这里也有[一些信息](#评教)可供参考。
 ## 信息版块
 * 在线打印：[http://store.mzyunyin.com/a/index?store_id=971](http://store.mzyunyin.com/a/index?store_id=971)
 ## 奇闻轶事
@@ -88,12 +89,12 @@ sidebar: 'auto'
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
 |概率论 - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
-|信号与系统 - 朱煜|10|有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
+|信号与系统 - 朱煜|9|有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|
 |模电 - 李振坡|5|<Badge text="限手机" />|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
-|马原 - 秦美珠|4|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 较佛系|
+|马原 - 秦美珠|4|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 只能坐前 8 排，左侧不坐人；较佛系|
 |体育篮球男 - 宣沁|8.5|现代化教学，会聊天|
-|毛概 - 张驰|1|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 严肃，过于热情的粉红|
+|毛概 - 张驰|1|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红|
 |电路原理 - 黄如|3|<Badge type="danger" text="拖占课" /> 过于热情，讲课进度慢，复习资料漏知识点|
 |MATLAB - 陈宁|4|<Badge text="PPT" /> 没听说过 *MATLAB Online*|
 |数据结构 - 蒋翠玲|3|<Badge type="warning" text="PPT" /> 比较好交流；堪忧，困扰于低级问题|

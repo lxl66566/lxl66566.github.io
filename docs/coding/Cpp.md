@@ -28,6 +28,9 @@ sidebar: 'auto'
 ## 程序计时
 程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) ~~大佬请直接看汇编结果~~
 ## Qt
+:::tip
+此处 Qt 版本均为 Qt4-5，部分代码无法正常迁移至 Qt6.
+:::
 ### 基本介绍 --> [官网](https://www.qt.io/)
 Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用就是用Qt写的。对于C++开发GUI应用来说，Qt是比较简单快速的选择。
 
