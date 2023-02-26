@@ -176,41 +176,39 @@ tips：加速前需事先选择能通过连接测试的节点
 * [大哥云](https://www.dageyun.net/)
 * [流量库](https://llcool.xyz/) 
 ## 客户端选择
-### Clash for Windows（推荐）
+### Clash Verge（推荐）
+开源 Clash 客户端。[项目地址](https://github.com/zzzgydi/clash-verge)
+
+相比[Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于新手无关紧要的</span>功能会更少一些。
+#### 简易教程
+我们可以先在设置中将其语言调成中文。
+
+类似地，在 *配置* 中粘贴订阅链接，下载并选中，然后就可以在 *代理* 中使用节点了。
+### Clash for Windows
 #### 简介
-*Clash for Windows* 是闭源的PC客户端。相比[另一个开源端](#clash-verge)，*Clash for Windows* 拥有更完善的功能。（但是 bugs 也不少就是了，安全需求高者慎用）
+*Clash for Windows* 是闭源的PC客户端。然而因为一个 [bug](https://github.com/Fndroid/clash_for_windows_pkg/issues/1105)导致我转向了 [Clash Verge](#clash-verge)。
 #### 下载地址
 [项目地址](https://github.com/Fndroid/clash_for_windows_pkg) | [PC端下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases) | [私链](https://wwp.lanzout.com/ixncj0a1k28h)
-
 #### 优势
 * 优秀图形界面
 * 简单易上手
-
 #### 简易配置教程 *v0.19.16*
 1. 在 Profiles 中的文本框内粘贴订阅链接并下载。选中下载的配置文件。
 2. 进入 Proxies，选择 rule，点击测速图标并在下方选择一个可用节点。
 3. 进入 General，开启 System Proxy。
-
 #### 一些提示
-
-<!-- * 科学上网默认只对浏览器有效。若要全局加速请开启TUN Mode。 -->
 * [这里](https://github.com/BoyceLig/Clash_Chinese_Patch)提供clash的汉化。
 * 在节点界面点击测速图标测试全部节点的连通性
 * 建议设置配置文件自动更新（Profiles -> 右击配置文件 -> Settings -> Update Interval 设为 24）
 ### Clash For Android（推荐）
 请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)。[私链](https://wwp.lanzout.com/iL6sD03mi0gf)
-### Clash Verge
-开源 Clash 客户端。[下载地址](https://github.com/zzzgydi/clash-verge/releases/)
 ### V2ray
 #### 简介
-V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（摘自[此处](https://www.xuebuyuan.com/3296293.html)）
+V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（[摘自](https://www.xuebuyuan.com/3296293.html)）
 
 V2ray同样拥有Android与PC客户端。由于我不常用，故不给出教程与建议。
-
 #### 下载地址
-
 [内核项目地址](https://github.com/v2fly/v2ray-core) | [客户端项目地址](https://github.com/2dust/v2rayN)
-
 ### Matsuri & NekoRay
 开源，自由度高，安全性好，使用体验一般 *(Matsuri > NekoRay)* 。
 

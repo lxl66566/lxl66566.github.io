@@ -38,6 +38,10 @@ sidebar: 'auto'
         * (2,2) 麻辣香锅。素菜性价比还行，辣味香且足。
 ## 校内生存技巧
 <!-- * 大学生活动中心的健身房不对外开放（？），想要健身可去体育场看台下，器材较完备，免费，基本上全天开放。注意别跟校队选手抢设备。 -->
+* 推荐一些校内仓库。
+    * [ecust CourseShare](https://github.com/tianyilt/ecust-CourseShare)：各类文件、答案、课程资料。
+    * [Ecust Leap](https://ecust-leap.github.io/)：飞跃手册，记载出国，考研，保研，求职等方面的心得体会。
+    * [ecust electricity statistics](https://github.com/lxl66566/ecust-electricity-statistics)：（夹带私货）电费统计
 * 体育社团的活动能抵扣强制跑步的次数。可以参加多个体育社团，一个下午轮流去各社团打卡，可以短时间内拿完所有跑步的次数。
     * 自弃用 *小步点* 改用自研软件后，可使用 [fake location](./recommend_packages.md#fake-location) 代替跑步。**拒绝非个性化的不负责任的强制体育活动。**
 * 要打联机游戏的别看了，直接去开宿舍网，否则服务器都连不上。不要购买校园网的 20M 套餐！血亏。记好网络账号密码。
