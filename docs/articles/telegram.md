@@ -58,6 +58,7 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 * [风向旗参考快讯](https://t.me/xhqcankao)
 * [Solidot](https://t.me/solidot)
 * [每日消费电子观察](https://t.me/CE_Observe)
+* [Testflight 新闻投稿](https://t.me/TestFlightCN)
 ### 外语
 * [双语新闻](https://t.me/shuangyunews_rss)：看新闻学英语，拥有逐段双语对照
 * [【音声可能】日本語雑談部屋](https://t.me/onseizatudan) & [日本語雑談部屋](https://t.me/nihongo_practice)：日语聊天群（不使用日语会被封禁）
@@ -68,6 +69,8 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 ### 科技
 * [黑洞资源笔记](https://t.me/tieliu)：分享一些有价值的编程工具及技巧 / 卖课的
 * [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题 ~~（以及膜拜~~
+* [Rust 众](https://t.me/rust_zh)：讨论 Rust 问题 ~~（以及膜拜~~
+* [#archlinux-cn](https://t.me/archlinuxcn_group)
 * [蓝点网订阅频道](https://t.me/landiansub)：分享好用软件
 ### 资源
 * [Visual Novel Channel](https://t.me/erogamecloud)：galgame 推荐与下载
@@ -76,12 +79,15 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 * [美图与色图](https://t.me/setu_nsfw) & [everyday color photos](https://t.me/everydaycolorphoto)：每日色图
 * [安利 (NSFW)](https://t.me/qingan567)：本子推荐
 * [韵の小院🍃ᴺˢᶠʷ](https://t.me/YunRan1314)：<span class="heimu" title="你知道的太多了">露点</span>涩图
-* [(ゲームCG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG鉴赏
+* [(ゲームCG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG**鉴赏**
 * [每日精选](https://t.me/watchaveveryday) & [超清|中文字幕](https://t.me/CCTAV)：三次元的，嗯，不用我介绍吧
 * [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，*绝对值_x 精选，质量有保证！*
 ### 闲聊
 * [垃圾高校毁我青春](https://t.me/joinchat/Ytplgt-buepkYThl)：大学生闲聊群
 ### vpn
 建议去看[初级科学上网](../articles/vpn.md)，你可以在那些机场的官网找到TG群组链接。
+### 友链
+* [Kum's Various Cubes](https://t.me/KumsVariousCubes)
+* [粒粒子的琐碎思考](https://t.me/lilic_8232)
 ### 其他
 * [Iyouport](https://t.me/iyouport)：教你如何保护自己
