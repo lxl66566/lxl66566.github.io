@@ -318,7 +318,10 @@
         { name: "俯卧撑", 时刻: "20230224", times: 10 },
         { name: "俯卧撑", 时刻: "20230225", times: 12 },
         { name: "俯卧撑", 时刻: "20230227", times: 11 },
-        { name: "俯卧撑", 时刻: "20230228", times: 12 },
+        { name: "引体向上", 时刻: "20230228", times: 0 },
+        { name: "俯卧撑", 时刻: "20230228", times: 12 + 10 },
+        { name: "引体向上", 时刻: "20230301", times: 9 },
+        { name: "俯卧撑", 时刻: "20230301", times: 0 },
       ];
       function detimes(item, rate) {
         item.times /= rate;
@@ -345,7 +348,7 @@
           position: "top",
         },
         slider: {
-          start: 0,
+          start: 0.5,
           end: 1,
         },
         // area: {

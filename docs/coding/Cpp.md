@@ -23,7 +23,7 @@ sidebar: 'auto'
 * `unique_ptr` 独占所指向的对象
 * `weak_ptr` *shared_ptr* 的弱引用，不影响其计数器
 ### 操作
-* 可以使用 `std::make_shared<Type>()` 构建
+* 可以使用 `std::make_shared<Type>()` 构建 (C++14)
 * `reset()` 不带参数则释放（== release()）
 ## 程序计时
 程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) ~~大佬请直接看汇编结果~~
