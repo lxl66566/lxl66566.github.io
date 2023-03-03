@@ -132,6 +132,7 @@ export default defineUserConfig({
             "complex_functions.md",
             "circuit_analysis.md",
             "analog_circuit.md",
+            "signals_and_systems.md",
             "foods.md",
           ],
         },

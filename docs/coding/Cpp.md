@@ -25,6 +25,41 @@ sidebar: 'auto'
 ### 操作
 * 可以使用 `std::make_shared<Type>()` 构建 (C++14)
 * `reset()` 不带参数则释放（== release()）
+## 多行字符串
+```cpp
+R""(some text)""
+```
+## 面向对象
+protected：指能被子类访问，不能被外部访问的成员。
+## option
+学过 rust 后，比较推崇 rust 中的 Option 的写法。C++ 中有 std::optional&lt;T> (C++17) 起到类似作用。
+* 一些函数：`has_value() -> bool`, `value() -> T`, `value_or(T) -> T`
+## variant
+错误处理的时候比较好用。类似 rust Result.
+
+获取值一般用 std::get + try catch，也可用 std::visit :
+```cpp
+std::variant<int,string> v;
+try{
+    return std::get<int>(v);
+}catch (std::bad_variant_access&)
+{
+    return std::get<string>(v);
+}
+// C++20
+std::visit([](auto&& arg) {
+    using T = std::decay_t<decltype(arg)>;
+    if constexpr (std::is_same_v<T, int>)
+        std::cout << "int with value " << arg << '\n';
+    else if constexpr (std::is_same_v<T, string>)
+        std::cout << "errlog: " << arg << '\n';
+});
+```
+（来源：[std::visit](https://zh.cppreference.com/w/cpp/utility/variant/visit)）
+## 其他注意点
+* C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.
+* 慎用 C++20 （的 std::ranges::remove_if()）
+
 ## 程序计时
 程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) ~~大佬请直接看汇编结果~~
 ## Qt
