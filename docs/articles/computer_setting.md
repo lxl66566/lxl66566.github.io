@@ -66,6 +66,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 3. 进入BIOS后，设置supervisor password为空。
 ## edge 转 firefox
 20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满足我的需求，甚至更加贴合我的个人需求（纵向标签栏，firefox 没有内置此功能），换浏览器大约只是我的心血来潮而已。为此我花了很多功夫设置 firefox。
+> 于 20230304 换回 edge。
 
 我最终使用 [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) 而不是 Firefox。
 

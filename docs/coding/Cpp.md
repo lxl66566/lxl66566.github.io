@@ -36,6 +36,7 @@ protected：指能被子类访问，不能被外部访问的成员。
 * 一些函数：`has_value() -> bool`, `value() -> T`, `value_or(T) -> T`
 ## variant
 错误处理的时候比较好用。类似 rust Result.
+> [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato
 
 获取值一般用 std::get + try catch，也可用 std::visit :
 ```cpp
