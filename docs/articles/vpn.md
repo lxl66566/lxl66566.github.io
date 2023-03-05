@@ -170,7 +170,7 @@ tips：加速前需事先选择能通过连接测试的节点
 ### 其他
 以下机场因性价比原因不推荐购买
 * [XFLTD](https://xftld.org/)
-* [Simple Cloud](https://www.spcloud.me/index.php#/register?code=97EXi3tX)
+* [Simple Cloud](https://www.spcloud.cc/index.php#/register?code=97EXi3tX)
 * [XSUS](https://xsus.buzz/)
 * [墙裂](https://my.qianglie.com/)
 * [大哥云](https://www.dageyun.net/)
