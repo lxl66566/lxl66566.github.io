@@ -88,16 +88,18 @@ sidebar: 'auto'
 * <Badge text="限座位" /> 表示上课限制学生坐的位子
 * <Badge text="拖占课" /> 表示有拖课占课行为 
 * <Badge text="PPT" /> 表示上课纯念 PPT，很没意思
+* <Badge text="口音" /> 表示有口音，颜色区分严重程度
 * <Badge text="电子版" /> 表示支持电子版作业，<Badge type="warning" text="电子版" /> 表示支持但需要主动申请
 * <Badge type="warning" text="半开卷" /> 表示可携带部分资料考试
 * 以颜色区分严重程度，从轻到重依次为 <Badge text="绿色" /> -> <Badge type="warning" text="黄色" /> -> <Badge type="danger" text="橙色" />
 
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
+|数字系统设计 - 木昌洪|4|<Badge type="warning" text="口音" />人不差，废话贼多|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
 |概率论 - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
 |信号与系统 - 朱煜|9|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|
-|模电 - 李振坡|4|<Badge text="限手机" /> 有口音，知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
+|模电 - 李振坡|4|<Badge text="限手机" /><Badge text="口音" /> 知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
 |马原 - 秦美珠|3|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 只能坐前 8 排，左侧不坐人；较佛系|
 |体育篮球男 - 宣沁|8.5|现代化教学，会聊天|
 |毛概 - 张驰|1|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红|
@@ -108,7 +110,7 @@ sidebar: 'auto'
 |体育龙舟男 - 陈家云|4.5|给分明确，教学一般|
 |复变 - 朱焱|8.5|<Badge type="warning" text="电子版" /> 温和，教学良好|
 |形势政策&道德法治 - 王瑞超|10.5|尊重学生个性，聊天型课堂|<details><summary>点击展开</summary><p>wrc0475@163.com</p></details>|
-|大物 - 章登宏|4|平时分高，心善；上课质量低，催眠|
+|大物 - 章登宏|4|<Badge type="danger" text="口音" /> 平时分高，心善；上课质量低，催眠|
 |大英 - 马丽丽|6.8|捞人，平时分不低，课堂氛围轻松；互动过多|
 |高数 - 吕雪芹|6|认真负责；作业量过多|
 |Python - 李昱瑾|5|<Badge type="warning" text="PPT" />|
@@ -120,6 +122,7 @@ sidebar: 'auto'
 |体育网球男 - 冯作龙|8|给分高，平易近人|
 |高数 - 李继根|6.5|给分高，佛系自由|
 :::
+## [如何看待大学班级](../gossip/consider.md#如何看待大学班级)
 ## 命令行认证校园网
 ```sh
 curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=login&username=<学号>&password={B}<Base64密码>&ac_id=18&user_ip=&nas_ip=&user_mac=&ajax=1'
