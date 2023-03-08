@@ -78,3 +78,35 @@ sidebar: 'auto'
 * [Gartic.io](https://gartic.io/)：你画我猜网页版
 * [Delicious Fruit](https://delicious-fruit.com/ratings/full.php?q=ALL)：I wanna 资源
 * [Switch618公益分享](https://www.switch618.com/)：破解游戏下载站
+## jobs
+<details><summary>点击展开</summary>
+From: 花果山 - 大圣 的[视频](https://www.bilibili.com/video/BV1SL411C7B3)，可能能用到。。。
+
+纳瓦尔宝典作者的公司 https://www.angellist.com/
+
+电鸭远程工作者社区 :  https://eleduck.com/
+
+阮一峰谁在招人 https://github.com/ruanyf/weekly/issues/2960
+
+Vercel 工作讨论区 https://github.com/vercel/next.js/discussions/44541
+
+Vuejobs 相关远程: vuejobs.com
+
+JavascriptJob :  https://javascriptjob.xyz/
+
+远程工作 Jobs: remoteok.com
+
+欧洲远程工作 : justjoin.it
+
+web3 招聘相关 : https://abetterweb3.notion.site/
+
+创业公司招人: angel.co/jobs
+
+接个人项目: upwork.com
+
+高端 remote 工作 (号称只接受全球 top 3% freelancer)：toptal.com
+
+创业公司： https://startup.jobs/
+
+Bold Jobs: www.bolejobs.co
+</details>

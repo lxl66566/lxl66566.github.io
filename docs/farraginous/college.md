@@ -102,7 +102,7 @@ sidebar: 'auto'
 |模电 - 李振坡|4|<Badge text="限手机" /><Badge text="口音" /> 知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
 |马原 - 秦美珠|3|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 只能坐前 8 排，左侧不坐人；较佛系|
 |体育篮球男 - 宣沁|8.5|现代化教学，会聊天|
-|毛概 - 张驰|1|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红|
+|毛概 - 张驰|0.5|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红，一句话总要讲两遍|
 |电路原理<Badge type="warning" text="半开卷" /> - 黄如|3|<Badge type="danger" text="拖占课" /> 过于热情，讲课进度慢，复习资料漏知识点|
 |MATLAB - 陈宁|4|<Badge text="PPT" /> 没听说过 *MATLAB Online*|
 |数据结构 - 蒋翠玲|3|<Badge type="warning" text="PPT" /><Badge type="warning" text="电子版" /> 比较好交流；堪忧，困扰于低级问题|
