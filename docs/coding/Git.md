@@ -159,6 +159,13 @@ git config --global --add safe.directory '*'
 > -u：仅在目标文件不存在或目标文件比源文件旧时才复制文件。这对于在两个目录之间同步文件非常有用。
 
 因此，对于**文件夹** 备份移动适合使用 `cp -rfu /path/to/source/directory /path/to/destination`，而对于**文件** 备份移动适合使用 `cp -fu /path/to/source/file /path/to/destination/file`。
+## 取消转义
+git 默认会将中文以 `\` 转义的方式显示。要取消，需要：
+1. 右键 - Options - Text - Locale，选择 `zh-CN`，字符选择 `UTF-8`。
+2. `git config --global core.quotepath false`
+## 删除大文件
+参考[文章](https://www.cnblogs.com/oloroso/p/13367120.html)
+<!-- (https://blog.csdn.net/HappyRocking/article/details/89313501) -->
 ## 疑难解答
 * ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误。
 >
