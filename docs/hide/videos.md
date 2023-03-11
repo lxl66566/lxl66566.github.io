@@ -13,7 +13,7 @@ sidebar: 'auto'
 | :--: | :--: | :--: | :--: |
 |[SHKD-999](https://www2.javhdporn.net/video/shkd-999)|9.9|10.9|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:210B775C018A5D487B1315A3DD2A3BD597DF59EA</p></details>|
 |[FSDSS-365](https://www2.javhdporn.net/video/FSDSS-365c/)|10|10.7|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:d43c655cb761cd2fab0a0df093a9c1e663cb6d5f</p></details>|
-|[WAAA-184（重）](https://www2.javhdporn.net/video/waaa-184)|8.3|12|
+|[WAAA-184（重）](https://jable.tv/videos/waaa-184/)|8.3|12|
 |[SNIS-397](https://www2.javhdporn.net/video/SNIS-397/)|8.7|11.5|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:11CAC397D8B472DCADD6DD7F58988D443D511B8C</p></details>|
 |[PPPE-013](https://www2.javhdporn.net/video/PPPE-013c/)|10|10|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:484d3db110d9c7d8a47ff1f5e53433db32e58eba</p></details>|
 |[STARS-190](https://www2.javhdporn.net/video/STARS-190/)|9.8|8.8|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:b8197c436e07951dbe3a329fa7c2e1925cc003b4</p></details>|
@@ -22,6 +22,7 @@ sidebar: 'auto'
 |[PPPE-062](https://www2.javhdporn.net/video/pppe-062)|9.7|8.6|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:9082F40E5DD827973FADA9D3583F6F766BC1107C</p></details>|
 |[SNIS-991](https://www2.javhdporn.net/video/snis-991c)|7.2|11|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:1632088697942D97B912E7AAFE3B98A281AE7058</p></details>|
 |[FSDSS-509](https://jable.tv/videos/fsdss-509/)|10|8|
+|[NSFS-119](https://jable.tv/videos/nsfs-119/)|5.7|11.7|
 |[SSIS-588](https://missav.com/ssis-588)|6.5|11|
 |[FNEO-014](https://missav.com/fneo-014)|11.4|5.8|
 |[STARS-256](https://missav.com/stars-256)|6|10|

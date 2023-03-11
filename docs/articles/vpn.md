@@ -136,7 +136,7 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥240.00|3600G|不限|
 
 ### [八方云](https://user.bafang.vip/)
-[邀请链接](https://user.bafang.vip/#/register?code=WPIANE92)
+[邀请链接](https://user.bafang.vip/#/register?code=WPIANE92) | [防爆链](https://八方云.com)
 
 |月付|流量|限速|
 | :--: | :--: | :--: |
