@@ -78,8 +78,10 @@ clip < ~/.ssh/id_rsa.pub    # 复制密钥至剪切板
 ssh -T git@github.com       #你可输入该命令验证是否成功
 ```
 :::
+（疑难解答[^1] [^2]）
 
-若你遇到 `ssh: connect to host github.com port 22: Connection refused` / `bash: clip: command not found` 错误，可以参考[疑难解答](#疑难解答)。
+[^1]: #ssh密钥添加后出现ssh-connect-to-host-github-com-port-22-connection-refused错误
+[^2]: #复制密钥时遇到bash-clip-command-not-found错误
 #### 上传
 请确保已连接远程仓库。
 ```sh
@@ -101,8 +103,9 @@ git remote remove origin
 :::
 ### 仓库查询
 * 查看仓库内文件：`git ls-files`
-* 查看仓库状态：`git status`
+* **查看仓库状态：`git status`**，比较重要
 * 查看仓库提交记录：`git log`
+* 查询远程仓库信息：`git remote show <name>`，name 可留空
 * 查询 commit 详细信息：`git show --stat [commit]`；`[commit]` 留空则查询最近一次 commit 的信息
 ### 更改分支
 `git branch -m BranchName`
@@ -159,15 +162,50 @@ git config --global --add safe.directory '*'
 > -u：仅在目标文件不存在或目标文件比源文件旧时才复制文件。这对于在两个目录之间同步文件非常有用。
 
 因此，对于**文件夹** 备份移动适合使用 `cp -rfu /path/to/source/directory /path/to/destination`，而对于**文件** 备份移动适合使用 `cp -fu /path/to/source/file /path/to/destination/file`。
-## 取消转义
+### 取消转义
 git 默认会将中文以 `\` 转义的方式显示。要取消，需要：
 1. 右键 - Options - Text - Locale，选择 `zh-CN`，字符选择 `UTF-8`。
 2. `git config --global core.quotepath false`
-## 删除大文件
-参考[文章](https://www.cnblogs.com/oloroso/p/13367120.html)
-<!-- (https://blog.csdn.net/HappyRocking/article/details/89313501) -->
+### 删除大文件
+删除大文件是必要的。即使你删除了某个文件，其仍会存在于仓库的提交记录内。
+::: danger
+在删除之前请务必 commit 未提交的修改！！警钟长鸣！警钟长鸣！这里是血的惨痛教训（20230312）。
+:::
+
+* 查找大文件：
+```sh
+git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -15 | awk '{print$1}')"
+# another edition
+# git rev-list --all | xargs -rL1 git ls-tree -r --long | sort -uk3 | sort -rnk4 | head -15
+```
+
+其中 `tail [-n]` 为显示的条目数。（疑难解答[^3]）
+
+[^3]: #查找大文件时出现cannot-open-existing-pack-file-git-objects-pack-idx-错误
+
+* 清理完成后请使用 `git gc --prune=now` 进行碎片收集，上传时需要 `git push -f` 强制覆盖。
+#### [filter-repo](https://github.com/newren/git-filter-repo)（推荐）
+git 官方推荐的清理工具。
+
+我使用 `scoop` 安装，安装过程详见仓库说明。（疑难解答[^4]）关于使用方法，~~没人能看懂官方文档~~，建议直接找教程。
+
+[^4]: #运行git-filter-repo出现name-git-is-not-defined报错
+
+```sh
+git filter-repo --invert-paths -f --path "<path/of/file>"
+```
+
+> [References](https://nyakku.moe/posts/2020/06/12/use-git-filter-repo-clean-git-history.html)
+#### filter-branch
+不太推荐这种方式，比较慢（真的）。
+```sh
+git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-unmatch <path/of/file>' --tag-name-filter cat -- --all
+# another edition
+# git filter-branch --tree-filter "rm -f <path/of/file>" -- --all
+```
+> [References](https://harttle.land/2016/03/22/purge-large-files-in-gitrepo.html)
 ## 疑难解答
-* ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误。
+#### ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误
 >
 > 以下内容摘自[此文](https://segmentfault.com/a/1190000041909858)，可自行前往查看。
 >
@@ -183,7 +221,11 @@ git 默认会将中文以 `\` 转义的方式显示。要取消，需要：
 > ```
 > 此时回到[这里](#连接远程仓库)进行实验。成功连接即解决问题。
 
-* 复制密钥时遇到`bash: clip: command not found`错误。
+#### 复制密钥时遇到`bash: clip: command not found`错误
 > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
 > 
 > 不过这只是复制一个密钥的事，用不着那么麻烦。执行`cat ~/.ssh/id_rsa.pub`手动复制你的密钥即可。
+#### 查找大文件时出现`Cannot open existing pack file '.git/objects/pack/*.idx'`错误
+说明该项目并未触发 git 的 packfile 机制，无需删除大文件。若仍需查找，可以使用 `# another edition` 后的语句。
+#### 运行`git filter-repo`出现`name 'git' is not defined`报错
+根据[这里](https://github.com/newren/git-filter-repo/issues/360)的描述做就行了。

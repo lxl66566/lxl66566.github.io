@@ -14,7 +14,6 @@ sidebar: 'auto'
 <!-- * [免费盐选](https://mfyx.top/)：免费看知乎盐选 -->
 ### 合集类
 * [即时工具](https://www.67tool.com/)：致力打造安全、快捷、好用的在线工具箱~
-* [LKs Site](http://lkssite.vip/)：B站up主做的网页推荐站。本站小部分内容为此站精简提取而来。
 ## 收藏
 平时不用，但以后可能用得上。
 * [eu.org 免费域名](https://nic.eu.org/)
@@ -56,18 +55,25 @@ sidebar: 'auto'
 * [desmos](https://www.desmos.com/calculator?lang=zh-CN)：在线画函数图表（比 matlab 好看），一般需要配合拟合使用
 * [Octave Online](https://octave-online.net/)：在线 Octave 解释器。Octave 基本兼容 MATLAB 语法。
 ## 媒体创作
-* 在线PS：[稿定](https://ps.gaoding.com/#/) | [Photopea](https://www.photopea.com/)
 * [Adobe全家桶破解](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
-* [AI图片放大](https://bigjpg.com/)
+### 图片相关
+* 在线PS：[稿定](https://ps.gaoding.com/#/) | [Photopea](https://www.photopea.com/)
+* 图片放大：[bigjpg](https://bigjpg.com/)
 * 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
 * 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)（付费下载，建议消除后直接截图）
 * 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
-* [Media.io](https://www.media.io/)：一键添加字幕，视频处理
-* 免费素材：[图片/视频](https://www.pexels.com/zh-cn/) | [字体](https://www.zitijia.com/) | [音效](https://www.conservethesound.de/) & [音效2](https://www.ear0.com/) | [搞笑音效](https://www.aigei.com/)
-* [片头制作](https://panzoid.com/)
+* 素材：
+    * 图片：[Pexels](https://www.pexels.com/zh-cn/)
+    * SVG：[SVG在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！
-* [SVG在线编辑器](https://c.runoob.com/more/svgeditor/)
+### 视频相关
+* [Media.io](https://www.media.io/)：一键添加字幕，视频处理
+* [片头制作](https://panzoid.com/)
+### 音频相关
+* 物件音效：[音效](https://www.conservethesound.de/) | [音效2](https://www.ear0.com/)
+* 搞笑音效：[爱给网](https://www.aigei.com/)
 * [AI配音](https://www.sd235.net/dubbingAI/detail/51)
+### [字体相关](https://www.zitijia.com/)
 ## 生活
 * [居家简易食谱](https://cook.yunyoujun.cn/)
 ## 游戏

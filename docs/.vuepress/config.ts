@@ -35,7 +35,7 @@ export default defineUserConfig({
           },
           {
             text: "工具",
-            children: ["/coding/github.md", "/coding/Git.md", "/coding/vim.md"],
+            children: ["/coding/github.md", "/coding/Git.md", {text:"Vim",link:"/coding/vim.md"}],
           },
         ],
       },

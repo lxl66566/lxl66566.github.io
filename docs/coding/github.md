@@ -11,7 +11,7 @@ Github是全球最大的~~同性交友平台~~ 源代码托管服务平台，拥
 
 * 首先，github服务器在国外，国内访问速度慢且有几率连接不上。请：
     * 使用校园网访问
-    * 使用加速器访问，如[steam++](../farraginous/recommend_packages.md#steam)或[dev-sidecar](https://github.com/docmirror/dev-sidecar)
+    * 使用加速器访问，如 [steam++](../farraginous/recommend_packages.md#steam) 或 [dev-sidecar](https://github.com/docmirror/dev-sidecar)
     * [科学上网](../articles/vpn.md)
     * 更换访问时间段
 
@@ -47,7 +47,7 @@ A: 此处我假设会看此条目的都是Windows&Android用户。
     * 如果文件名带有v7a,v8a的：请[查看手机指令集](../articles/Android_ISA.md)，然后按结果选择。
     * 如果实在无法判断，优先选择更上方的。
 ## 搜索技巧
-搜索格式与你的关键词使用空格隔开。你也可以使用[Github官方提供的高级搜索](https://github.com/search/advanced)界面。
+搜索格式与你的关键词使用空格隔开。你也可以使用 [Github 官方提供的高级搜索](https://github.com/search/advanced)界面。
 
 |格式|作用|样例|
 | :-: | :-: | :-: |
@@ -59,9 +59,9 @@ A: 此处我假设会看此条目的都是Windows&Android用户。
 |language:|指定程序语言|`language:c#`|
 |pushed:|指定最近更新时间范围|`pushed:>2022-01-01`|
 ## 上传文件
-在此之前，你需要有一个Github账号，创建一个属于你自己的仓库。
+在此之前，你需要有一个 Github 账号，创建一个属于你自己的仓库。
 
-Github只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
+Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
 ## Github Workflow
 Github 工作流，极为强大。可以理解为一个虚拟机。[官方文档](https://docs.github.com/cn/actions/using-workflows/about-workflows)
 
@@ -75,5 +75,6 @@ on:
     - cron: '30 00 * * *'
 ```
 定时任务: 使用 cron 表达式。[此处](https://crontab.guru/)可在线计算表达式。
-> 注意，定时任务时间为中时区（UTC），并且会出现 0-60+ min 的延时，若有精确执行需求请
+> 注意，定时任务时间为中时区（UTC），并且会出现 0-60+ min 的延时，若有精确执行需求请使用其他服务商提供的云函数
+
 手动任务：使用 `workflow_dispatch`。强烈建议不要再使用 `on:push` 进行手动运行控制。
