@@ -48,7 +48,8 @@ sidebar: 'auto'
 ### 计算机
 * CS自学：[CS自学指南](https://csdiy.wiki/) | [学长的文章](https://honeysuckle-terrier-6c8.notion.site/CS-4b9f59acd3a64bf8916f834d0c7f25ea)
 * 算法刷题：[力扣](https://leetcode-cn.com/problemset/all/) | [洛谷](https://www.luogu.com.cn/)
-* [Vim学习](https://coolshell.cn/articles/5426.html)
+#### 资源
+* 动效图标：[unicorn icons](https://unicornicons.com/)
 ### 数学/理科
 * [WolframAlpha](https://www.wolframalpha.com/)：在线高级计算
 * [在线工具VIP](https://atool.vip/) [拟合](https://atool.vip/fitting/)：在线工具站，本人最常用的是数据拟合
