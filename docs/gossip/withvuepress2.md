@@ -262,3 +262,8 @@ export const data=[...]
 ```
 :::
 ::::
+## pangu 插件安装失败
+
+<text style="color:red;font-weight:bold">未解决！</text>
+
+试图安装 [vuepress-plugin-pangu](https://shigma.github.io/markdown-it-pangu) 失败。官方文档稀烂，缺乏维护，只有 vuepress1.x 的 js 配置，而我使用 ts ；由于并未学习，面对各种报错显得很无力。（有生之年必学）

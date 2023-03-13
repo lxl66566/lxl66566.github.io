@@ -8,6 +8,8 @@ const {
 const { path } = require("@vuepress/utils");
 const { commentPlugin } = require("vuepress-plugin-comment2");
 const { commentTheme } = require("./theme");
+// const { pangu } = require("vuepress-plugin-pangu");
+// require('vuepress-plugin-pangu');
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -18,7 +20,6 @@ export default defineUserConfig({
   head: [["link", { rel: "stylesheet", href: "/styles/head.css" }]],
   theme: commentTheme({
     logo: "https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/logo.jpg",
-    // logo: 'https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg',
     navbar: [
       {
         text: "编程",
@@ -242,6 +243,7 @@ export default defineUserConfig({
       light: "light",
       darkTheme: "transparent_dark",
     }),
+    // "pangu",
   ],
   extendsMarkdown: (md) => {
     md.use(require("markdown-it-mathjax3"));
