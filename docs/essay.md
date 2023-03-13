@@ -8,6 +8,8 @@ sidebar: 'auto'
 [前往我的频道](./gossip/author.md#社交)查看更多随笔。
 ## 2023
 ### .03
+#### 2023.03.13
+* It's difficult to balance **learning** and **exploring**.
 #### 2023.03.07
 * 死亡是生物最大的不自由。
 ### .02

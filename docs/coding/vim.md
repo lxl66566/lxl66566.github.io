@@ -6,16 +6,20 @@ sidebar: 'auto'
 
 此次重新启用，也大概是我的心血来潮吧。
 ## 设置
-此处是我对 vim for vscode 的一些设置。在 `.vscode/settings.json` 添加即可。
+此处是我对 vim for vscode 的一些设置。在 `C:/Users/<user name>/AppData/Roaming/Code/User/settings.json` 添加即可。路径可在扩展设置中打开。
 ```json
 "vim.useSystemClipboard": true,
 "vim.history": 100,
 "explorer.confirmDragAndDrop": false,
-"vim.visualModeKeyBindings": [
-    { "before": "x", "after": "\"_x", },
-    { "before": "X", "after": "\"_X", },
-    { "before": "d", "after": "\"_d", },
-    { "before": "dd", "after": "\"_dd", },
+"vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["x"], "after": ["\"","_","x",] },
+    { "before": ["X"], "after": ["\"","_","X",] },
+    { "before": ["d"], "after": ["\"","_","d",] },
+    { "before": ["D"], "after": ["\"","_","D",] },
+    { "before": ["dd"], "after": ["\"","_","dd",] },
+    { "before": ["("], "after": ["s","(","<esc>","p",] },
+    { "before": ["["], "after": ["s","[","<esc>","p",] },
+    { "before": ["{"], "after": ["s","{","<esc>","p",] },
 ],
 "vim.insertModeKeyBindings": [
     { "before": ["j", "j"], "after": ["<Esc>"] },
@@ -36,9 +40,11 @@ sidebar: 'auto'
 * 加括号：选中括号头位置，`ysw`,`yse`...（不太好用）
 * `vi(` 选中括号内内容，不包括括号本身。`va(` 选中包括括号本身。
 ## 一些想法
-用 vim for vscode 用了一周，感觉有些欠缺，也有些臃肿。以下阐述我对 vimin（更小的 vim）的一些构思。
+用 vim for vscode 用了一周，感觉有些欠缺，因此进行了一些自定义化。以下阐述我的自定义化的一些构思。
 * visual 下按`(`,`[`等括号类可直接为选中区域添加闭合括号。
 * 保留非 vim 的 Ctrl 组合键功能，例如复制粘贴等。
 * 删除选中区域时不复制到剪贴板。
+
+而以下是我对 vim 无法实现功能的更多构思：
 * 更改指令查找替换方式（太麻烦了），直接搜索高亮，然后选择其中的一些或全部，进行直观替换
 * 增加 *保持光标* 与 *新建光标* 功能，并可任意移动任一光标，方便随机修改。
