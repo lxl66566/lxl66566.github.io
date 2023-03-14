@@ -75,6 +75,8 @@ Telegram第三方开源客户端，自带公共代理
 ### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
 强大的数据监视型应用(?，玩机爱好者必备。建议配合 ADB 食用。
 ## Windows
+### [scoop](https://scoop.sh/)
+说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件，而不必担心环境变量等问题。
 ### Parsec
 **极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。
 
@@ -93,7 +95,7 @@ Telegram第三方开源客户端，自带公共代理
 
 [官方项目地址](https://github.com/Planshit/Tai)
 ### [蓝奏云](https://wwa.lanzoui.com/)
-比较推荐的云盘。虽然是个网页，放进 *应用汇总* 里面不太合适。*（本页私链下载文件均保存于蓝奏云）*
+比较推荐的云盘。虽然是个网页，放进 *应用汇总* 里面不太合适。*（本页私链下载文件大多保存于蓝奏云）*
 
 优点：
 * 无限存储空间
@@ -106,13 +108,13 @@ Telegram第三方开源客户端，自带公共代理
 ### [SpaceSniffer](https://spacesniffer.en.softonic.com/)
 可视化磁盘空间占用，方便清理
 ### [uTools](http://www.u.tools/)
-uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88) 由于逐步开始付费模式，此处可选择使用开源替代品：[PowerToys](https://github.com/microsoft/PowerToys)
+uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88) 由于逐步开始付费模式，此处可选择使用开源替代品：[PowerToys](https://github.com/microsoft/PowerToys)，但其不支持添加快捷启动，对用惯了 utools 的我来说还是不敢苟同。
 ### [steam++](https://steampp.net/)
-加速器，主要加速steam商店与github
+加速器，主要加速 steam 商店与 github。当然更好的选择是[科学上网](../articles/vpn.md)。
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
 快速搜索，可配合 [uTools](#utools) 使用
 ### geek
-用于卸载软件。轻量，可清理残留。
+用于卸载软件。轻量，可清理文件与注册表残留。
 
 [官网下载地址](https://geekuninstaller.com/download) | [私链](https://wwp.lanzout.com/icAdmharg2h)
 ### [Bandizip](http://www.bandisoft.com/)
@@ -141,19 +143,21 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 [使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)
 ### [Winaero Tweaker](https://winaero.com/)
 挺不错的windows小工具，集成一些高级功能（特别对我这种**被迫设置win11**的人有点帮助）
-### [EnergyStar](https://github.com/imbushuo/EnergyStar)
+### [flameshot](https://flameshot.org/)
+基于 Qt 的强大的截屏软件，开源跨平台轻量级。
+
+建议在设置中开启开机自启。
+<!-- ### [EnergyStar](https://github.com/imbushuo/EnergyStar)
 为你的windows笔记本提升续航。
 
-小提示，双击exe文件后，EnergyStar将自动在后台运行，不会跳出提示与弹窗。
-### [ffsend](https://github.com/timvisee/ffsend)
-<details><summary>经测试，国内下载速度较慢，不推荐</summary>
+小提示，双击exe文件后，EnergyStar将自动在后台运行，不会跳出提示与弹窗。 -->
+<!-- ### [ffsend](https://github.com/timvisee/ffsend)
 （命令行）快速上传分享你的文件 / 文件夹
 
 使用方法（Windows x64）：
 1. 下载[ffsend-v0.2.74-windows-x64.exe](https://github.com/timvisee/ffsend/releases/download/v0.2.74/ffsend-v0.2.74-windows-x64.exe)
 2. 在下载目录打开**管理员**终端，执行`move .\ffsend-v0.2.74-windows-x64.exe C:\Windows\System32\ffsend.exe`（或手动复制改名
-3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>`下载
-</details>
+3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>`下载 -->
 
 ## 浏览器插件
 > *注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。*

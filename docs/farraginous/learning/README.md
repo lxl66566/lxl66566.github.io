@@ -7,5 +7,6 @@
 3. [电路分析基础（少量）](./circuit_analysis.md)
 4. [模电](./analog_circuit.md)
 5. [信号与系统](./signals_and_systems.md)
+6. [概率论与数理统计](./Probab.Math.Stat.md)
 ## 业余笔记
 1. [食物制作](./foods.md)

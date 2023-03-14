@@ -10,6 +10,7 @@ const { commentPlugin } = require("vuepress-plugin-comment2");
 const { commentTheme } = require("./theme");
 // const { pangu } = require("vuepress-plugin-pangu");
 // require('vuepress-plugin-pangu');
+// const panguPlugin = require('markdown-it-pangu')
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -134,6 +135,7 @@ export default defineUserConfig({
             "circuit_analysis.md",
             "analog_circuit.md",
             "signals_and_systems.md",
+            "Probab.Math.Stat.md",
             "foods.md",
           ],
         },
@@ -243,7 +245,6 @@ export default defineUserConfig({
       light: "light",
       darkTheme: "transparent_dark",
     }),
-    // "pangu",
   ],
   extendsMarkdown: (md) => {
     md.use(require("markdown-it-mathjax3"));

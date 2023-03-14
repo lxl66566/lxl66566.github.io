@@ -12,14 +12,11 @@ sidebar: 'auto'
 "vim.history": 100,
 "explorer.confirmDragAndDrop": false,
 "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["x"], "after": ["\"","_","x",] },
-    { "before": ["X"], "after": ["\"","_","X",] },
     { "before": ["d"], "after": ["\"","_","d",] },
     { "before": ["D"], "after": ["\"","_","D",] },
-    { "before": ["dd"], "after": ["\"","_","dd",] },
-    { "before": ["("], "after": ["s","(","<esc>","p",] },
-    { "before": ["["], "after": ["s","[","<esc>","p",] },
-    { "before": ["{"], "after": ["s","{","<esc>","p",] },
+    { "before": ["("], "after": ["s","(",")","<esc>","h","p","l"] },
+    { "before": ["["], "after": ["s","[","]","<esc>","h","p","l"] },
+    { "before": ["{"], "after": ["s","{","}","<esc>","h","p","l"] },
 ],
 "vim.insertModeKeyBindings": [
     { "before": ["j", "j"], "after": ["<Esc>"] },
@@ -29,6 +26,10 @@ sidebar: 'auto'
 "vim.normalModeKeyBindings": [
     { "before": ["<C-s>"], "commands": [ "workbench.action.files.save", ] },
     { "before": ["<C-w>"], "commands": [ ":q", ] },
+],
+"vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["x"], "after": ["\"","_","x",] },
+    { "before": ["X"], "after": ["\"","_","X",] },
 ],
 ```
 ## 组合键
