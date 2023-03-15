@@ -50,15 +50,24 @@ sidebar: 'auto'
     * 自弃用 *小步点* 改用自研软件后，可使用 [fake location](./recommend_packages.md#fake-location) 代替跑步。**拒绝非个性化的不负责任的强制体育活动。**
 * 要打联机游戏的别看了，直接去开宿舍网，否则服务器都连不上。不要购买校园网的 20M 套餐！血亏。记好网络账号密码。
 * 尽快登录学生邮箱，首次登录修改密码记好。日后白嫖的地方很多。
-* 选课（自由选）时，盯着余量为 0 的老师选准没错（一般都是炙手可热的老师）。当然这里也有[一些信息](#评教)可供参考。
-* 公选课要求的 12 学分，可以多选线上平台的课，会舒服很多，分也高。
+* 选课（自由选）时，盯着余量为 0 的老师选准没错（一般都是炙手可热的老师）。当然这里也有[本人亲历的一些信息](#评教)可供参考。
+* 公选课要求的 12 学分，尽量选线上平台的课，会舒服很多，分也高。
 ## 信息版块
 * 在线打印：[http://store.mzyunyin.com/a/index?store_id=971](http://store.mzyunyin.com/a/index?store_id=971)
+* 宿舍网（2021）：账号 手机号@shtel 密码：身份证后 6 位
 ## 奇闻轶事
 * 关于闸机 <span class="heimu" title="你知道的太多了">我校的闸机实在是太棒辣</span>
     1. 大一某天，和舍友买了方便面回寝，到楼下闸机刷脸。我望着方便面上的代言人头像陷入沉思，拿着方便面对准摄像头刷脸。刷了许久，成功进入。
     2. 因工作需要，在别的宿舍楼外解决完晚饭（外卖），顺便去楼下扔个垃圾。（不同闸机人脸数据不互通）我本人是X同学，而进去时我是A同学，出来时我是B同学。
     3. 跟舍友取快递时经常去隔壁的宿舍楼下刷脸玩，每次刷出来我的名字都不一样。
+## 校内迷惑行为大赏
+<div style="text-align: center; ">
+<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun1.png"  width="50%" height="50%">
+<div>
+众所周知饮水机的重量大约是 1.3kg ...
+</div>
+</div>
+
 ## 校内极限生存
 <div class="subtitle">——活下去，为了你的无限可能。</div>
 
@@ -95,30 +104,30 @@ sidebar: 'auto'
 * <Badge text="PPT" /> 表示上课纯念 PPT，很没意思
 * <Badge text="口音" /> 表示有口音，颜色区分严重程度
 * <Badge text="电子版" /> 表示支持电子版作业，<Badge type="warning" text="电子版" /> 表示支持但需要主动申请
-* <Badge type="warning" text="半开卷" /> 表示可携带部分资料考试
+* <Badge text="半开卷" /> 表示可携带部分资料考试
 * 以颜色区分严重程度，从轻到重依次为 <Badge text="绿色" /> -> <Badge type="warning" text="黄色" /> -> <Badge type="danger" text="橙色" />
 
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
-|数字系统设计 - 木昌洪|4|<Badge type="warning" text="口音" />人不差，废话贼多|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
-|概率论 - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
+|数字系统设计 - 木昌洪|4|<Badge type="danger" text="口音" />人不差，废话贼多|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
+|概率论<Badge text="半开卷" /> - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
 |信号与系统 - 朱煜|9|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|
 |模电 - 李振坡|4|<Badge text="限手机" /><Badge text="口音" /> 知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
 |马原 - 秦美珠|3|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 只能坐前 8 排，左侧不坐人；较佛系|
 |体育篮球男 - 宣沁|8.5|现代化教学，会聊天|
 |毛概 - 张驰|0.5|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红，一句话总要讲两遍|
-|电路原理<Badge type="warning" text="半开卷" /> - 黄如|3|<Badge type="danger" text="拖占课" /> 过于热情，讲课进度慢，复习资料漏知识点|
-|MATLAB - 陈宁|4|<Badge text="PPT" /> 没听说过 *MATLAB Online*|
-|数据结构 - 蒋翠玲|3|<Badge type="warning" text="PPT" /><Badge type="warning" text="电子版" /> 比较好交流；堪忧，困扰于低级问题|
+|电路原理<Badge text="半开卷" /> - 黄如|3|<Badge type="danger" text="拖占课" /> 过于热情，讲课进度慢，复习资料漏知识点|
+|MATLAB - 陈宁|4|<Badge text="PPT" /> 没听说过 *MATLAB Online*|<details><summary>点击展开</summary><p>nchen@ecust.edu.cn<br/>13611758166</p></details>|
+|数据结构 - 蒋翠玲|3|<Badge type="warning" text="PPT" /><Badge type="warning" text="电子版" /> 比较好交流；堪忧，困扰于低级问题|<details><summary>点击展开</summary><p>cuilingjiang@ecust.edu.cn</p></details>|
 |毛概 - 徐国民|6|佛系，能够清晰地作出通知|
 |体育龙舟男 - 陈家云|4.5|给分明确，教学一般|
-|复变 - 朱焱|8.5|<Badge type="warning" text="电子版" /> 温和，教学良好|
+|复变 - 朱焱|8.5|<Badge type="warning" text="电子版" /> 温和，教学良好|<details><summary>点击展开</summary><p>zhuygraph@ecust.edu.cn</p></details>|
 |形势政策&道德法治 - 王瑞超|10.5|尊重学生个性，聊天型课堂|<details><summary>点击展开</summary><p>wrc0475@163.com</p></details>|
-|大物 - 章登宏|4|<Badge type="danger" text="口音" /> 平时分高，心善；上课质量低，催眠|
-|大英 - 马丽丽|6.8|捞人，平时分不低，课堂氛围轻松；互动过多|
+|大物 - 章登宏|4|<Badge type="danger" text="口音" /> 平时分高，心善；上课质量低，催眠|<details><summary>点击展开</summary><p>13816448336<br/>1694888619@qq.com</p></details>|
+|大英 - 马丽丽|6.8|捞人，平时分不低，课堂氛围轻松；互动过多|<details><summary>点击展开</summary><p>masha1004@163.com</p></details>|
 |高数 - 吕雪芹|6|认真负责；作业量过多|
-|Python - 李昱瑾|5|<Badge type="warning" text="PPT" />|
+|Python - 李昱瑾|5|<Badge type="warning" text="PPT" />|<details><summary>点击展开</summary><p>yjli@ecust.edu.cn<br/>76076306</p></details>|
 |线代 - 施劲松|7|声情并茂，逻辑清晰，教学质量高；故意激起内卷，废话比较多|
 |大英 - 李萍|6|佛系|
 |军理 - 赵妍君|6.5|对该课的水有清晰认知，高度自由|

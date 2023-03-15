@@ -98,7 +98,9 @@ sidebar: 'auto'
 
 更多细节参见[详细回答](#关于作者的更详细回答)。
 ## 社交
-telegram 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-%40ab5__x-blue?style=flat-square&logo=telegram" /></a>
+telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-%40ab5__x-blue?style=flat-square&logo=telegram" /></a>
+
+[^2]: ../articles/telegram.md
 
 [我的哔哩哔哩账号](https://space.bilibili.com/346365047)
 

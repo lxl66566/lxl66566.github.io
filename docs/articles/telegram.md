@@ -1,9 +1,11 @@
 # TG教程
 [Telegram](https://telegram.org/)(TG) 是一款境外的聊天软件。需要[科学上网](./vpn.md)。（[维基百科](https://zh.m.wikipedia.org/zh-cn/Telegram)）其优势如下：
 * 云端永久无限量存储
-* 客户端友好，爆杀国内一众聊天软件
+* 客户端逻辑友好，爆杀国内一众聊天软件
 * 多端，优秀的同步机制
-* 言论不受审查与限制
+* 言论**基本**不受审查与限制
+
+也可使用 Telegram 第三方客户端 [NekoX](https://github.com/NekoX-Dev/NekoX)，内置代理，无需科学上网。缺点是带宽小和不稳定。
 ## 教程
 * 简体中文包：`tg://setlanguage?lang=classic-zh-cn`（复制，发送给任意用户，点击；PC 用户可直接在浏览器内打开
 :::danger 特别注意

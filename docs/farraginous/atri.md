@@ -6,7 +6,7 @@ sidebar: 'auto'
 :::tip QQ: 2433269451
 :::
 <div style="text-align: center; ">
-<img alt="atri" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/atri.jpg"  width="50%" height="50%">
+<img alt="atri" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/atri/atri.jpg"  width="50%" height="50%">
 </div>
 
 `atri`是一个QQbot，她可以：
