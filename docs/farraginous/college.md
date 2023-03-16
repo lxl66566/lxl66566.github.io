@@ -60,9 +60,17 @@ sidebar: 'auto'
     1. 大一某天，和舍友买了方便面回寝，到楼下闸机刷脸。我望着方便面上的代言人头像陷入沉思，拿着方便面对准摄像头刷脸。刷了许久，成功进入。
     2. 因工作需要，在别的宿舍楼外解决完晚饭（外卖），顺便去楼下扔个垃圾。（不同闸机人脸数据不互通）我本人是X同学，而进去时我是A同学，出来时我是B同学。
     3. 跟舍友取快递时经常去隔壁的宿舍楼下刷脸玩，每次刷出来我的名字都不一样。
+    
+<div style="text-align: center; ">
+<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun1.jpg"  width="50%" height="50%">
+<div>
+大风起兮云飞扬，单车与草兮倒四方
+</div>
+</div>
+
 ## 校内迷惑行为大赏
 <div style="text-align: center; ">
-<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun1.png"  width="50%" height="50%">
+<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/61.png"  width="50%" height="50%">
 <div>
 众所周知饮水机的重量大约是 1.3kg ...
 </div>

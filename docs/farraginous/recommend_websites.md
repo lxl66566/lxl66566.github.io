@@ -66,6 +66,7 @@ sidebar: 'auto'
 * 素材：
     * 图片：[Pexels](https://www.pexels.com/zh-cn/)
     * SVG：[SVG在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/)
+    * 各种图表：[Mermaid](https://mermaid.live/edit)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！
 ### 视频相关
 * [Media.io](https://www.media.io/)：一键添加字幕，视频处理

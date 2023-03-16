@@ -15,7 +15,7 @@ const { commentTheme } = require("./theme");
 export default defineUserConfig({
   lang: "zh-CN",
   base: "/",
-  build: { chunkSizeWarningLimit: 1500 },
+  build: { chunkSizeWarningLimit: 3000 },
   title: "绝对值_x的博客",
   description: "没什么有价值的内容的，真的！",
   head: [["link", { rel: "stylesheet", href: "/styles/head.css" }]],
