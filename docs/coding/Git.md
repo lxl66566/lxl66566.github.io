@@ -123,7 +123,9 @@ git checkout -- filename    # 注意 `--` 后的空格
 ### 更新远程仓库到本地
 `git fetch origin main`
 
-若还需要从仓库中释放分支：`git merge origin/main`
+fetch 对比 clone 的好处在于可以分段传输。（指定`--depth=x`）
+### 合并分支
+`git merge origin/main`
 ### 删除远程tag
 如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新source code。（release 信息会被保留，状态更改为 draft）
 
@@ -149,6 +151,13 @@ git commit -m $(date "+%Y%m%d-%H:%M:%S")
 ```sh
 git config --global --add safe.directory '*'
 ```
+### 设置代理
+有时候 github 切换到 443 端口后也无法连接，此时若有科学上网可切换到梯子进行连接。
+```sh
+git config http.proxy http://127.0.0.1:port
+git config https.proxy http://127.0.0.1:port
+```
+请将端口改为你的代理端口。
 ### 用于备份
 有了 `.sh` 脚本后，我们就能很轻松地在 Github 上备份自己的文件。请 ChatGPT 讲一下移动与覆盖：
 > cp 是一个在 Bash shell 中用来复制文件和目录的命令。与 cp 命令一起使用的选项控制了复制的方式。这里是每个选项的含义：

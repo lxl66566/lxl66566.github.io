@@ -33,6 +33,7 @@ export default defineUserConfig({
               "/coding/Cpp.md",
               "/coding/csharp.md",
               "/coding/python.md",
+              "/coding/java.md",
             ],
           },
           {
@@ -194,6 +195,7 @@ export default defineUserConfig({
             "/coding/github.md",
             "/coding/Git.md",
             "/coding/vim.md",
+            "/coding/java.md",
           ],
         },
         {

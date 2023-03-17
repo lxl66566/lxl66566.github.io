@@ -46,6 +46,16 @@ A: 此处我假设会看此条目的都是Windows&Android用户。
 4. 关于apk文件：
     * 如果文件名带有v7a,v8a的：请[查看手机指令集](../articles/Android_ISA.md)，然后按结果选择。
     * 如果实在无法判断，优先选择更上方的。
+## 上传文件
+在此之前，你需要有一个 Github 账号，创建一个属于你自己的仓库。
+
+Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
+## 下载仓库
+几种方法都可使用，请选择以下一种，自行查指令。
+1. `git clone`
+2. `git init && git pull`
+3. `git init && git fetch && git checkout`
+4. CDN：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`。暂时不清楚下载的 zip 是否包含 .git 信息。
 ## 搜索技巧
 搜索格式与你的关键词使用空格隔开。你也可以使用 [Github 官方提供的高级搜索](https://github.com/search/advanced)界面。
 
@@ -58,10 +68,6 @@ A: 此处我假设会看此条目的都是Windows&Android用户。
 |fork:|指定fork数范围|类比|
 |language:|指定程序语言|`language:c#`|
 |pushed:|指定最近更新时间范围|`pushed:>2022-01-01`|
-## 上传文件
-在此之前，你需要有一个 Github 账号，创建一个属于你自己的仓库。
-
-Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
 ## Github Workflow
 Github 工作流，极为强大。可以理解为一个虚拟机。[官方文档](https://docs.github.com/cn/actions/using-workflows/about-workflows)
 
