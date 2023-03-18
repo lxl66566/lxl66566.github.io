@@ -8,6 +8,8 @@ sidebar: 'auto'
 [前往我的频道](./gossip/author.md#社交)查看更多随笔。
 ## 2023
 ### .03
+#### 2023.03.18
+一个正反馈系统的例子：快下课，骚动 -> 听不进课，老师选择提前下课 -> 造成更大的骚动
 #### 2023.03.13
 * It's difficult to balance **learning** and **exploring**.
 #### 2023.03.07

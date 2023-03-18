@@ -55,7 +55,9 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 1. `git clone`
 2. `git init && git pull`
 3. `git init && git fetch && git checkout`
-4. CDN：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`。暂时不清楚下载的 zip 是否包含 .git 信息。
+
+下面的一个方法下载仓库文件而不包含 .git 信息：
+4. CDN：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`
 ## 搜索技巧
 搜索格式与你的关键词使用空格隔开。你也可以使用 [Github 官方提供的高级搜索](https://github.com/search/advanced)界面。
 
