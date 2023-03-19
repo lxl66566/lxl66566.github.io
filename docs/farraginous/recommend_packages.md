@@ -140,7 +140,7 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 ### [Anki](https://apps.ankiweb.net/)
 多端开源记忆软件，多语言，高自由度。
 
-[使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)
+[使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)，顺带这是[我的卡组](https://ankiweb.net/shared/info/772249450)
 ### [Winaero Tweaker](https://winaero.com/)
 挺不错的windows小工具，集成一些高级功能（特别对我这种**被迫设置win11**的人有点帮助）
 ### [flameshot](https://flameshot.org/)

@@ -108,7 +108,7 @@ git remote remove origin
 * 查询远程仓库信息：`git remote show <name>`，name 可留空
 * 查询 commit 详细信息：`git show --stat [commit]`；`[commit]` 留空则查询最近一次 commit 的信息
 ### 更改分支
-`git branch -m BranchName`
+`git checkout <branch-name>`
 
 若需要将分支改名：`git branch -m OldBranchName NewBranchName`
 ### 删除文件
@@ -178,7 +178,7 @@ git 默认会将中文以 `\` 转义的方式显示。要取消，需要：
 ### 删除大文件
 删除大文件是必要的。即使你删除了某个文件，其仍会存在于仓库的提交记录内。
 ::: danger
-在删除之前请务必 commit 未提交的修改！！警钟长鸣！警钟长鸣！这里是血的惨痛教训（20230312）。
+在删除之前请务必 commit 未提交的修改！！警钟长鸣！警钟长鸣！这里（20230312）是血的惨痛教训。
 :::
 
 * 查找大文件：
@@ -213,6 +213,29 @@ git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-
 # git filter-branch --tree-filter "rm -f <path/of/file>" -- --all
 ```
 > [References](https://harttle.land/2016/03/22/purge-large-files-in-gitrepo.html)
+### 大文件上传
+> Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。
+
+首先，若有大文件，最该考虑的是 `git-lfs`。具有先见之明的做法可以极大减少后期维护的成本。
+
+其次，我在网上找到了[这些资料](https://gist.github.com/banyudu/b5bac69767f49073e09985d82128e713)，但其中提到的 Stackoverflow 的[脚本](https://stackoverflow.com/questions/15125862/github-remote-push-pack-size-exceeded/51468389#51468389)并不能很好地运行。因此我根据上述原理支撑，自己写了一个脚本。适用于文件总体过大但每个 commit 都不超出大小限制的情况。
+
+1. 导出所有 commit hash 并翻转使最早的 commit 被最先提交。
+```sh
+git log --pretty=format:"%H" > temp.txt
+tac temp.txt > log_hash.txt
+```
+注意，`tac` 反转可能会出现第一行与第二行换行缺失问题，请手动添加换行。
+
+2. 分 commit 上传
+```sh
+while IFS= read -r hash; do
+    echo "pushing $hash"
+    git push origin $hash:refs/heads/master -f
+done < log_hash.txt
+exec /bin/bash
+```
+关于分支与是否加 `-f` 需要根据情况判断。
 ## 疑难解答
 #### ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误
 >

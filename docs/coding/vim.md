@@ -12,8 +12,8 @@ sidebar: 'auto'
 "vim.history": 100,
 "explorer.confirmDragAndDrop": false,
 "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["d"], "after": ["\"","_","d",] },
-    { "before": ["D"], "after": ["\"","_","D",] },
+    { "before": ["x"], "after": ["\"","_","x",] },
+    { "before": ["X"], "after": ["\"","_","X",] },
     { "before": ["("], "after": ["s","(",")","<esc>","h","p","l"] },
     { "before": ["["], "after": ["s","[","]","<esc>","h","p","l"] },
     { "before": ["{"], "after": ["s","{","}","<esc>","h","p","l"] },
