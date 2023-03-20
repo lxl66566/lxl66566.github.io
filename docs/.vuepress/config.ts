@@ -38,7 +38,7 @@ export default defineUserConfig({
           },
           {
             text: "工具",
-            children: ["/coding/github.md", "/coding/Git.md", {text:"Vim",link:"/coding/vim.md"}],
+            children: ["/coding/github.md", "/coding/Git.md", {text:"Vim",link:"/coding/vim.md"},],
           },
         ],
       },
@@ -123,6 +123,7 @@ export default defineUserConfig({
             "potplayer_setting.md",
             "fuck_quickapp.md",
             "adb.md",
+            "markdown.md",
           ],
         },
       ],
@@ -170,6 +171,7 @@ export default defineUserConfig({
             "/articles/potplayer_setting.md",
             "/articles/fuck_quickapp.md",
             "/articles/adb.md",
+            "/articles/markdown.md",
           ],
         },
         {
