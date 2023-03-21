@@ -87,7 +87,7 @@ inverse Laplace transform：<span v-pre>$\large f(t)=\frac{1}{2\pi i}\int_{\beta
 
 卷积满足：交换律，结合律，分配率
 
-（时域）卷积定理：<span v-pre>$ F[f_1(t)*f_2(t)]=F_1(w)\cdot F_2(w)$</span>
+（时域）卷积定理：<span v-pre>$F[f_1(t)*f_2(t)]=F_1(w)\cdot F_2(w)$</span>
 
 ## 共形映射
 

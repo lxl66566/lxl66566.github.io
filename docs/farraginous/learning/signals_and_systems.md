@@ -19,9 +19,26 @@
 #### 卷积性质
 满足交换律，结合律，总体积分（微分）等于对其中之一积分（微分）
 ## 傅里叶变换
-### 前置知识
+### 正交
+内积：<span v-pre>$<f_1(t),f_2(t)>=\int_{t1}^{t2}f_1(t)f_2^*(t)dt$</span> （`*` 是共轭，不影响实函数）
+
+正交：&lt;f1(t),f2(t)&gt;=0
+
+最佳近似：对正交函数集有近似 <span v-pre>$f(t)\approx c_1g_1(t)+c_2g_2(t)+...，则 c_i=\frac{<f(t),g_i(t)>}{<g_i(t),g_i(t)>}$</span>
+
+### 傅里叶级数
 从 1,cos(w0x),cos(2w0x),...,sin(w0x),sin(2w0x)... 中任取两个相乘并在 0-T0 上做定积分，结果均为 0。其互为正交基函数。
 ### 公式
+#### 离散
 <span v-pre>$\begin{cases}B_0=\frac{1}{T_0}\int_0^{T_0}f(x)dx \\ B_k=\frac2{T_0}\int_0^{T_0}f(x)cos(k\omega_0x)dx \\ C_k=\frac2{T_0}\int_0^{T_0}f(x)sin(k\omega_0x)dx\end{cases}$</span>
 
 复数形式：<span v-pre>$x(t)=\sum_{k=-\infty}^{\infty}a_ke^{jk\omega_0t}, a_k=\frac{1}{T_0}\int_0^{T_0}x(t)e^{-jk\omega_0t}dt$</span>
+#### 连续
+[跳转复变函数](./complex_functions.md#fourier-transform)
+### 条件
+狄利赫里条件：
+1. 周期内绝对可积
+2. 最值个数有限
+3. 不连续点有限
+### 常见变换
+<span v-pre>$\mathscr{F}[ e^{-at}u(t) ]=\frac1{a+j\omega} \\ \mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega) \\ \mathscr{F}[ E[u(t+\frac{\tau}{2}) - u(t-\frac{\tau}{2})]]=E\tau Sa(\frac\tau2\omega)=\large \frac{2Esin(\frac\tau2\omega)}{\omega} \\ \mathscr{F}[ \frac{sin(\omega_ct)}{\pi t} ]\normalsize =u(t+\omega_c) - u(t-\omega_c) \\ \mathscr{F}[ cos(\omega_0t)]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)] \\ \mathscr{F}[ sin(\omega_0t)]=\frac\pi j[\delta(\omega-\omega_0) - \delta(\omega+\omega_0)] \\ \mathscr{F}[ u(t) ]=\frac1{j\omega}+\pi\delta(\omega)$</span>
