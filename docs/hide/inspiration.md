@@ -24,6 +24,7 @@ sidebar: 'auto'
 * 浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）
     * 基于 Chromium 内核，非商用，开源
     * 高度自定义化
+* CNM, condition manager with Rust
 
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕

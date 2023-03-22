@@ -41,4 +41,16 @@
 2. 最值个数有限
 3. 不连续点有限
 ### 常见变换
-<span v-pre>$\mathscr{F}[ e^{-at}u(t) ]=\frac1{a+j\omega} \\ \mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega) \\ \mathscr{F}[ E[u(t+\frac{\tau}{2}) - u(t-\frac{\tau}{2})]]=E\tau Sa(\frac\tau2\omega)=\large \frac{2Esin(\frac\tau2\omega)}{\omega} \\ \mathscr{F}[ \frac{sin(\omega_ct)}{\pi t} ]\normalsize =u(t+\omega_c) - u(t-\omega_c) \\ \mathscr{F}[ cos(\omega_0t)]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)] \\ \mathscr{F}[ sin(\omega_0t)]=\frac\pi j[\delta(\omega-\omega_0) - \delta(\omega+\omega_0)] \\ \mathscr{F}[ u(t) ]=\frac1{j\omega}+\pi\delta(\omega)$</span>
+<span v-pre>$\mathscr{F}[ e^{-at}u(t) ]=\frac1{a+j\omega}$</span>
+
+<span v-pre>$\mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega)$</span>
+
+<span v-pre>$\mathscr{F}[ E[u(t+\frac{\tau}{2}) - u(t-\frac{\tau}{2})]]=E\tau Sa(\frac\tau2\omega)=\large \frac{2Esin(\frac\tau2\omega)}{\omega}$</span>
+
+<span v-pre>$\mathscr{F}[ \frac{sin(\omega_ct)}{\pi t} ]\normalsize =u(t+\omega_c) - u(t-\omega_c)$</span>
+
+<span v-pre>$\mathscr{F}[ cos(\omega_0t)]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)]$</span>
+
+<span v-pre>$\mathscr{F}[ sin(\omega_0t)]=\frac\pi j[\delta(\omega-\omega_0) - \delta(\omega+\omega_0)]$</span>
+
+<span v-pre>$\mathscr{F}[ u(t) ]=\frac1{j\omega}+\pi\delta(\omega)$</span>
