@@ -67,6 +67,12 @@ sidebar: 'auto'
 大风起兮云飞扬，单车与草兮倒四方
 </div>
 </div>
+<div style="text-align: center; ">
+<img alt="fun2" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun2.jpg"  width="50%" height="50%">
+<div>
+这个染色什么水平？
+</div>
+</div>
 
 ## 校内迷惑行为大赏
 <div style="text-align: center; ">
@@ -123,7 +129,7 @@ sidebar: 'auto'
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|
 |模电 - 李振坡|4|<Badge text="限手机" /><Badge text="口音" /> 知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
 |马原 - 秦美珠|3|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 只能坐前 8 排，左侧不坐人；较佛系|
-|体育篮球男 - 宣沁|8.5|现代化教学，会聊天|
+|体育篮球男 - 宣沁|6.5|现代化教学，会聊天；力量训练量不合理|
 |毛概 - 张驰|0.5|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红，一句话总要讲两遍|
 |电路原理<Badge text="半开卷" /> - 黄如|3|<Badge type="danger" text="拖占课" /> 过于热情，讲课进度慢，复习资料漏知识点|
 |MATLAB - 陈宁|4|<Badge text="PPT" /> 没听说过 *MATLAB Online*|<details><summary>点击展开</summary><p>nchen@ecust.edu.cn<br/>13611758166</p></details>|
