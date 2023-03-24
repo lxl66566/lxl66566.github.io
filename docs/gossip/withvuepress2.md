@@ -11,7 +11,7 @@
 网上教程为使用 `<font color="red">` 标签，但此标签不受 html5 支持（并导致了下述 *Rendering pages failed* 问题）。我还尝试了 `<p>` 标签（但会自动换行）与 `<a>` 标签（但有下划线和点击效果）。最终选用 `<text style="color:red;">` 标签，写起来最为简洁，无需添加额外属性。
 
 ## Rendering pages failed问题
-显示的错误信息是 Vuepress 的底层问题，无法直接看出问题所在。且 `docs:dev` 本地预览完全不受影响。之后不断比对各处编译，发现是引入未知 html 标签导致的。（初次为 `<font>` 标签，之后还有：自定义组件的标签，被识别成组件的语法）*（感谢[oyh同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
+显示的错误信息是 Vuepress 的底层问题，无法直接看出问题所在。且 `docs:dev` 本地预览完全不受影响。之后不断比对各处编译，发现是引入未知 html 标签导致的。（初次为 `<font>` 标签，之后还有：自定义组件的标签，被识别成组件的语法）*（感谢[dream 同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
 
 > TypeError: Invalid value used as weak map key<br/>
 > at WeakMap.set (\<anonymous\>)<br/>
@@ -122,13 +122,11 @@ export default defineUserConfig({
 
 <text style="color:red;font-weight:bold">未解决！</text>
 
-用 html, js, css 三件套写了一个简陋的[背词器](../farraginous/reciter.md)出来，但是受制于 iframe 的固定大小，很容易出现超出边框的情况。*（曲线救国：预留大量位置）* 于是想到了 vue 组件引入的方法。但是，遇到了~~前所未有~~的麻烦。vue 组件单文件（SFC）仅允许一个 `<script>` 标签的存在。而我的背词器中使用了两个 script：jquery 库与我自己写的 js。
-
-网上的关于 SFC 的解释非常的含糊其辞。几乎没有实例。
-
-现在无法正常执行 js 脚本。
+用 html, js, css 三件套写了一个简陋的[背词器](../farraginous/reciter.md)出来，但是受制于 iframe 的固定大小，很容易出现超出边框的情况。*（曲线救国：预留大量位置）* 于是想到了 vue 组件引入的方法。但是，遇到了~~前所未有~~的麻烦。vue 组件单文件（SFC）仅允许一个 `<script>` 标签的存在。而我的背词器中使用了两个 script：jquery 库与我自己写的 js。现在无法正常执行 js 脚本。
 
 > 学长提示：可使用另一种曲线解法：[you might not need jquery](https://youmightnotneedjquery.com/)（XD
+
+后来发现需要学习 Vue 而不是普通地套 html。。~~在学了在学了~~
 ## 配置sidebar问题
 由于我一开始对 sidebar 的机制并不清楚，官方文档的教程也无法满足我的需求，于是就自己慢慢摸了几个小时…**此处只讲述如何*在不同子路径中使用不同的侧边栏* 这一泛用性广但示例少的解决方案。**
 

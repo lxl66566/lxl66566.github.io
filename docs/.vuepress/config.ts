@@ -12,6 +12,9 @@ const { commentTheme } = require("./theme");
 // require('vuepress-plugin-pangu');
 // const panguPlugin = require('markdown-it-pangu')
 
+function add_prefix(prefix: string,list: string[]): string[] {
+  return list.map((item) => prefix + item);
+}
 export default defineUserConfig({
   lang: "zh-CN",
   base: "/",
@@ -28,13 +31,7 @@ export default defineUserConfig({
           "/coding/farraginous.md",
           {
             text: "语言",
-            children: [
-              "/coding/Rust.md",
-              "/coding/Cpp.md",
-              "/coding/csharp.md",
-              "/coding/python.md",
-              "/coding/java.md",
-            ],
+            children: add_prefix("/coding/",["Rust.md","Cpp.md","csharp.md","python.md","java.md",])
           },
           {
             text: "工具",
@@ -47,30 +44,19 @@ export default defineUserConfig({
         children: [
           {
             text: "游戏",
-            children: [
-              "/hobbies/rhythm_games.md",
-              "/hobbies/galgame.md",
-              "/hobbies/Minecraft.md",
-              "/hobbies/other_games.md",
-            ],
+            children: add_prefix("/hobbies/",["rhythm_games.md","galgame.md","Minecraft.md","other_games.md",]),
           },
           {
             text: "其他",
-            children: ["/hobbies/books.md", "/hobbies/anime.md"],
+            children: add_prefix("/hobbies/",["books.md", "anime.md"]),
           },
         ],
       },
       {
         text: "杂项",
-        children: [
-          "/farraginous/recommend_packages.md",
-          "/farraginous/recommend_websites.md",
-          "/farraginous/college.md",
-          "/farraginous/atri.md",
-          "/farraginous/reciter.md",
-          "/farraginous/learning/",
-          "/farraginous/log.md",
-        ],
+        children: add_prefix("/farraginous/",["recommend_packages.md","recommend_websites.md","college.md","atri.md","reciter.md",
+          "learning/","log.md",
+        ]),
       },
       {
         text: "文章",
@@ -98,13 +84,7 @@ export default defineUserConfig({
           text: "闲聊",
           link: "/gossip/",
           children: [
-            "author.md",
-            "schedule.md",
-            "fuckxxx.md",
-            "difficulties.md",
-            "withvuepress2.md",
-            "consider.md",
-            "hope.md",
+            "author.md","schedule.md","fuckxxx.md","difficulties.md","withvuepress2.md","consider.md","hope.md",
             "compare_home_to_college.md",
           ],
         },
@@ -114,16 +94,8 @@ export default defineUserConfig({
           text: "我的文章",
           link: "/articles/",
           children: [
-            "computer_setting.md",
-            "vpn.md",
-            "Android_ISA.md",
-            "time_record.md",
-            "track_record.md",
-            "telegram.md",
-            "potplayer_setting.md",
-            "fuck_quickapp.md",
-            "adb.md",
-            "markdown.md",
+            "computer_setting.md","vpn.md","Android_ISA.md","time_record.md","track_record.md","telegram.md",
+            "potplayer_setting.md","fuck_quickapp.md","adb.md","markdown.md",
           ],
         },
       ],
@@ -132,13 +104,8 @@ export default defineUserConfig({
           text: "学习笔记",
           link: "/farraginous/learning/",
           children: [
-            "physics.md",
-            "complex_functions.md",
-            "circuit_analysis.md",
-            "analog_circuit.md",
-            "signals_and_systems.md",
-            "Probab.Math.Stat.md",
-            "foods.md",
+            "physics.md","complex_functions.md","circuit_analysis.md","analog_circuit.md","signals_and_systems.md",
+            "Probab.Math.Stat.md","foods.md",
           ],
         },
       ],
@@ -147,69 +114,35 @@ export default defineUserConfig({
         {
           text: "闲聊",
           link: "/gossip/",
-          children: [
-            "/gossip/author.md",
-            "/gossip/schedule.md",
-            "/gossip/fuckxxx.md",
-            "/gossip/difficulties.md",
-            "/gossip/withvuepress2.md",
-            "/gossip/consider.md",
-            "/gossip/hope.md",
-            "/gossip/compare_home_to_college.md",
-          ],
+          children: add_prefix("/gossip/",[
+            "author.md","schedule.md","fuckxxx.md","difficulties.md","withvuepress2.md","consider.md","hope.md","compare_home_to_college.md",
+          ]),
         },
         {
           text: "我的文章",
           link: "/articles/",
-          children: [
-            "/articles/computer_setting.md",
-            "/articles/vpn.md",
-            "/articles/Android_ISA.md",
-            "/articles/time_record.md",
-            "/articles/track_record.md",
-            "/articles/telegram.md",
-            "/articles/potplayer_setting.md",
-            "/articles/fuck_quickapp.md",
-            "/articles/adb.md",
-            "/articles/markdown.md",
-          ],
+          children: add_prefix("/articles/",[
+            "computer_setting.md","vpn.md","Android_ISA.md","time_record.md","track_record.md",
+            "telegram.md","potplayer_setting.md","fuck_quickapp.md","adb.md","markdown.md",
+          ]),
         },
         {
           text: "杂项",
-          children: [
-            "/farraginous/recommend_packages.md",
-            "/farraginous/recommend_websites.md",
-            "/farraginous/college.md",
-            "/farraginous/atri.md",
-            "/farraginous/reciter.md",
-            "/farraginous/learning/",
-            "/farraginous/log.md",
-          ],
+          children: add_prefix("/farraginous/",[
+            "recommend_packages.md","recommend_websites.md","college.md","atri.md","reciter.md","learning/","log.md",
+          ]),
         },
         {
           text: "编程",
-          children: [
-            "/coding/farraginous.md",
-            "/coding/Rust.md",
-            "/coding/Cpp.md",
-            "/coding/csharp.md",
-            "/coding/python.md",
-            "/coding/github.md",
-            "/coding/Git.md",
-            "/coding/vim.md",
-            "/coding/java.md",
-          ],
+          children: add_prefix("/coding/",[
+            "farraginous.md","Rust.md","Cpp.md","csharp.md","python.md","github.md","Git.md","vim.md","java.md",
+          ]),
         },
         {
           text: "爱好",
-          children: [
-            "/hobbies/rhythm_games.md",
-            "/hobbies/galgame.md",
-            "/hobbies/Minecraft.md",
-            "/hobbies/books.md",
-            "/hobbies/anime.md",
-            "/hobbies/other_games.md",
-          ],
+          children: add_prefix("/hobbies/",[
+            "rhythm_games.md","galgame.md","Minecraft.md","books.md","anime.md","other_games.md",
+          ]),
         },
       ],
     },
@@ -226,14 +159,7 @@ export default defineUserConfig({
     }),
     prismjsPlugin({
       preloadLanguages: [
-        "markdown",
-        "jsdoc",
-        "yaml",
-        "rust",
-        "cpp",
-        "git",
-        "bash",
-        "batch",
+        "markdown","jsdoc","yaml","rust","cpp","git","bash","batch",
       ],
     }),
     registerComponentsPlugin({
