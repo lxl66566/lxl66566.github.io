@@ -56,6 +56,7 @@ sidebar: 'auto'
 ## 信息版块
 * 在线打印：[http://store.mzyunyin.com/a/index?store_id=971](http://store.mzyunyin.com/a/index?store_id=971)
 * 宿舍网（2021）：账号 手机号@shtel 密码：身份证后 6 位
+* 超星学习通下载直链：`http://cs.e.ecust.edu.cn/download/[objectID]`
 ## 奇闻轶事
 * 关于闸机 <span class="heimu" title="你知道的太多了">我校的闸机实在是太棒辣</span>
     1. 大一某天，和舍友买了方便面回寝，到楼下闸机刷脸。我望着方便面上的代言人头像陷入沉思，拿着方便面对准摄像头刷脸。刷了许久，成功进入。
