@@ -119,14 +119,14 @@ sidebar: 'auto'
 * <Badge text="拖占课" /> 表示有拖课占课行为 
 * <Badge text="PPT" /> 表示上课纯念 PPT，很没意思
 * <Badge text="口音" /> 表示有口音，颜色区分严重程度
-* <Badge text="电子版" /> 表示支持电子版作业，<Badge type="warning" text="电子版" /> 表示支持但需要主动申请
+* <Badge text="电子版" /> 表示支持电子版作业，<Badge type="warning" text="电子版" /> 表示支持但需要主动申请（一般来说可能需要看助教脸色）
 * <Badge text="半开卷" /> 表示可携带部分资料考试
 * 以颜色区分严重程度，从轻到重依次为 <Badge text="绿色" /> -> <Badge type="warning" text="黄色" /> -> <Badge type="danger" text="橙色" />
 
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
 |数字系统设计 - 木昌洪|4|<Badge type="danger" text="口音" />人不差，废话贼多|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
-|概率论<Badge text="半开卷" /> - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
+|概率论<Badge text="半开卷" /><Badge type="warning" text="电子版" /> - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
 |信号与系统 - 朱煜|9|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|
 |模电 - 李振坡|4|<Badge text="限手机" /><Badge text="口音" /> 知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|

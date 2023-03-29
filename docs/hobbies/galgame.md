@@ -197,7 +197,7 @@ sidebar: 'auto'
 
 |游戏名|问题|
 | :----: | :----: |
-|NEKOPARA vol.4|崩了好几次，估计是这个破解包的问题![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4.png)|
+|NEKOPARA vol.4|崩了好几次，估计是这个破解包的问题![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png)![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png)|
 |Girl Fantasy|没有滚轮动作；语音切断；backlog 不自动更新|
 |水葬銀貨のイストリア|没有 backlog 跳转，没有 qsave & qload；退出 auto 会继续往下一句|
 |NekoMiko|无法关闭操作音效；backlog 与下一句都会切断语音|

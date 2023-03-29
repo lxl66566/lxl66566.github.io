@@ -21,11 +21,12 @@ sidebar: 'auto'
 "vim.insertModeKeyBindings": [
     { "before": ["j", "j"], "after": ["<Esc>"] },
     { "before": ["<C-s>"], "commands": [ "workbench.action.files.save", ] },
-    { "before": ["<C-w>"], "commands": [ ":q", ] },
+    { "before": ["<C-w>"], "commands": [ "workbench.action.closeActiveEditor", ] },
+    { "before": ["<C-c>"], "commands": ["editor.action.clipboardCopyAction",] },
 ],
 "vim.normalModeKeyBindings": [
     { "before": ["<C-s>"], "commands": [ "workbench.action.files.save", ] },
-    { "before": ["<C-w>"], "commands": [ ":q", ] },
+    { "before": ["<C-w>"], "commands": [ "workbench.action.closeActiveEditor", ] },
 ],
 "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["x"], "after": ["\"","_","x",] },
