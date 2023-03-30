@@ -1,5 +1,5 @@
 # TG教程
-[Telegram](https://telegram.org/)(TG) 是一款境外的聊天软件。需要[科学上网](./vpn.md)。（[维基百科](https://zh.m.wikipedia.org/zh-cn/Telegram)）其优势如下：
+[Telegram](https://telegram.org/)(TG) 是一款境外的聊天软件。需要科学上网。（[维基百科](https://zh.m.wikipedia.org/zh-cn/Telegram)）其优势如下：
 * 云端永久无限量存储
 * 客户端逻辑友好，爆杀国内一众聊天软件
 * 多端，优秀的同步机制
@@ -87,7 +87,7 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 ### 闲聊
 * [垃圾高校毁我青春](https://t.me/joinchat/Ytplgt-buepkYThl)：大学生闲聊群
 ### vpn
-建议去看[初级科学上网](../articles/vpn.md)，你可以在那些机场的官网找到TG群组链接。
+建议去看初级科学上网，你可以在那些机场的官网找到TG群组链接。
 ### 友链
 * [Kum's Various Cubes](https://t.me/KumsVariousCubes)
 * [粒粒子的琐碎思考](https://t.me/lilic_8232)

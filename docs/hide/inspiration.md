@@ -24,7 +24,12 @@ sidebar: 'auto'
 * 浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）
     * 基于 Chromium 内核，非商用，开源
     * 高度自定义化
-* CNM, condition manager with Rust
+* CNM, ~~condition manager with Rust~~, a git-like distributed version manager
+    * 连续压缩，实时解压读取信息
+    * 目录式
+    * parts in a project, like how i use branch
+    * 断点重传
+    * 软连接，可在目录外创建虚仓库，指向真实仓库
 
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕

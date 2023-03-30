@@ -4,7 +4,6 @@
 请跳转板块：
 1. [道论](./worldview.md)
 1. [我设置电脑的过程和一些小技巧](./computer_setting.md)
-2. [初级科学上网](./vpn.md)
 3. [Android 查看手机 cpu 指令集](./Android_ISA.md)
 4. [电脑、手机端记录软件使用时长](./time_record.md)
 5. [运动轨迹记录软件横评](./track_record.md)

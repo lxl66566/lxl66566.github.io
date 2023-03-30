@@ -1,3 +1,6 @@
+---
+sidebar: 'auto'
+---
 # Java
 由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。
 

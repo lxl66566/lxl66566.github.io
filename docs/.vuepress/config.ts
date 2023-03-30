@@ -94,7 +94,7 @@ export default defineUserConfig({
           text: "我的文章",
           link: "/articles/",
           children: [
-            "worldview.md","computer_setting.md","vpn.md","Android_ISA.md","time_record.md","track_record.md",
+            "worldview.md","computer_setting.md","Android_ISA.md","time_record.md","track_record.md",
             "telegram.md","potplayer_setting.md","fuck_quickapp.md","adb.md","markdown.md",
           ],
         },
@@ -122,7 +122,7 @@ export default defineUserConfig({
           text: "我的文章",
           link: "/articles/",
           children: add_prefix("/articles/",[
-            "worldview.md","computer_setting.md","vpn.md","Android_ISA.md","time_record.md",
+            "worldview.md","computer_setting.md","Android_ISA.md","time_record.md",
             "track_record.md","telegram.md","potplayer_setting.md","fuck_quickapp.md","adb.md","markdown.md",
           ]),
         },
@@ -155,7 +155,11 @@ export default defineUserConfig({
         },
       },
       maxSuggestions: 10,
-      isSearchable: (page) => page.path !== "/hide/videos.html",
+      isSearchable: (page) => {
+        const bannedlist = ["videos","wish","vpn"]
+          .map((item) => item.concat(".html"));
+        return !bannedlist.some((item) => String(page.path).endsWith(item));
+      },
     }),
     prismjsPlugin({
       preloadLanguages: [

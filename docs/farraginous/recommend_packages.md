@@ -110,7 +110,7 @@ Telegram第三方开源客户端，自带公共代理
 ### [uTools](http://www.u.tools/)
 uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88) 由于逐步开始付费模式，此处可选择使用开源替代品：[PowerToys](https://github.com/microsoft/PowerToys)，但其不支持添加快捷启动，对用惯了 utools 的我来说还是不敢苟同。
 ### [steam++](https://steampp.net/)
-加速器，主要加速 steam 商店与 github。当然更好的选择是[科学上网](../articles/vpn.md)。
+加速器，主要加速 steam 商店与 github。当然更好的选择是科学上网。
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
 快速搜索，可配合 [uTools](#utools) 使用
 ### geek
