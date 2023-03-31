@@ -23,14 +23,16 @@ Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 不要在国内应用商店下载该软件，均鉴定为盗版。
 :::
 [官网下载地址](https://www.zarchiver.me/zarchiver-apk/)  [私有下载地址](https://wwp.lanzout.com/i82ku049jz6j)
-### m浏览器
-强大的浏览器，满足了我对 Android 浏览器的大部分幻想。
-
+### 浏览器
+#### [Kiwi Browser](https://kiwibrowser.com/)
+**重量级** chromium 系浏览器，你可以像使用电脑浏览器那样使用它。
+* 支持所有 chromium 插件，重度插件依赖请务必安装。
+* 拥有控制台。
+#### [m浏览器](http://mbrowser.nr19.cn/)
+**轻量级**浏览器,（[私链](https://wwp.lanzout.com/iP7FA0eaqk8j)）
 * 拥有审查元素，查看网页源码，嗅探网页资源的功能。
-* 支持安装脚本，自定义拦截广告，悬浮视频，可调长按倍速的视频播放器。
-* 安装包仅9M。
-
-[官网下载](http://mbrowser.nr19.cn/) | [私链](https://wwp.lanzout.com/iP7FA0eaqk8j)
+* 支持安装脚本，自定义拦截广告，可调长按倍速的视频播放器。
+* 安装包仅 9 M。
 ### MT管理器
 MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（[摘自](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。
 
@@ -44,9 +46,9 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 
 [酷安下载地址](https://www.coolapk.com/apk/com.goplaycn.googleinstall) | [私链](https://wwp.lanzout.com/iYyA10686e7c)
 ### NekoX
-Telegram第三方开源客户端，自带公共代理
+Telegram 第三方开源客户端，自带公共代理
 
-~~但是在tg第三方内名声不算好(?~~
+~~但是在tg第三方内名声不算好~~
 
 [官方项目地址](https://github.com/NekoX-Dev/NekoX)  [私有下载地址](https://wwp.lanzout.com/ivUi00fbvmte)
 ### Picacg
@@ -76,8 +78,13 @@ Telegram第三方开源客户端，自带公共代理
 强大的数据监视型应用(?，玩机爱好者必备。建议配合 ADB 食用。
 ## Windows
 ### [scoop](https://scoop.sh/)
-说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件，而不必担心环境变量等问题。
-### Parsec
+说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
+```
+scoop bucket add extras # 建议安装后先运行，extras 包含了更多包
+scoop search <name>     # 搜索包
+scoop install <name>    # 安装包
+```
+### [Parsec](https://parsec.app/downloads)
 **极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。
 
 与向日葵相比：
@@ -88,19 +95,15 @@ Telegram第三方开源客户端，自带公共代理
     * 全英文
     * 需要自己解决驱动兼容性问题（如果有的话）
     * 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠
-
-[官网下载地址](https://parsec.app/downloads)
-### Tai
-记录软件使用时长  ~~推gal神器~~
-
-[官方项目地址](https://github.com/Planshit/Tai)
+### [Tai](https://github.com/Planshit/Tai)
+记录软件使用时长  ~~推gal神器~~，掌控自己的时间消耗
 ### [蓝奏云](https://wwa.lanzoui.com/)
 比较推荐的云盘。虽然是个网页，放进 *应用汇总* 里面不太合适。*（本页私链下载文件大多保存于蓝奏云）*
 
 优点：
 * 无限存储空间
 * 无限制的下载速度
-* 文件分享机制优秀
+* 优秀的文件分享机制
 
 缺点：
 * 单文件限制大小100M（且不能通过分包压缩改后缀规避限制；~~*猜测是会读取分包的连接信息并判断*~~）
@@ -118,7 +121,7 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 
 [官网下载地址](https://geekuninstaller.com/download) | [私链](https://wwp.lanzout.com/icAdmharg2h)
 ### [Bandizip](http://www.bandisoft.com/)
-压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有需求可换用 [7zip](https://www.7-zip.org/)，同样是一款优秀的压缩解压软件。
+压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有追求可换用 [7zip](https://www.7-zip.org/)，同样是一款优秀的压缩解压软件。
 ### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
 视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
 
@@ -144,13 +147,14 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 ### [Winaero Tweaker](https://winaero.com/)
 挺不错的windows小工具，集成一些高级功能（特别对我这种**被迫设置win11**的人有点帮助）
 ### [flameshot](https://flameshot.org/)
-基于 Qt 的强大的截屏软件，开源跨平台轻量级。
+基于 Qt 的强大的截屏软件，开源，跨平台，轻量级。（呼出有一定延迟）
 
 建议在设置中开启开机自启。
 <!-- ### [EnergyStar](https://github.com/imbushuo/EnergyStar)
 为你的windows笔记本提升续航。
 
 小提示，双击exe文件后，EnergyStar将自动在后台运行，不会跳出提示与弹窗。 -->
+
 <!-- ### [ffsend](https://github.com/timvisee/ffsend)
 （命令行）快速上传分享你的文件 / 文件夹
 
@@ -169,6 +173,8 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 * 缺点：全局锁死热键，需要用此键原本功能时要临时禁用。
 
 [官方项目地址](https://github.com/polywock/globalSpeed) | [edge商店](https://microsoftedge.microsoft.com/addons/detail/global-speed-%E8%A7%86%E9%A2%91%E9%80%9F%E5%BA%A6%E6%8E%A7%E5%88%B6/mjhlabbcmjflkpjknnicihkfnmbdfced) | [私链](https://wwp.lanzout.com/i9LKF05ht3ni)
+### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
+极为强大的广告拦截。支持选中元素，自定义规则。
 ### IDM
 高速多线程下载器。需要浏览器插件配合软件使用。
 
@@ -181,8 +187,6 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 运行脚本。
 ### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
 强大的`禁止复制`破解插件。比脚本好用。
-### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
-广告拦截。
 ### [DARK READER](https://darkreader.org/)
 浏览器强制夜间模式，效果不错。
 ### [为什么你们就是不能加个空格呢？](https://chrome.google.com/webstore/detail/paphcfdffjnbcgkokihcdjliihicmbpd)
@@ -197,11 +201,9 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 ::: tip 提示
 请确保已经安装插件[Tampermonkey](#tampermonkey)。
 :::
-### [百度网盘简易下载助手](https://greasyfork.org/zh-CN/scripts/418182)
-百度网盘高速下载脚本，亲测可用，免费。教程里面有。
-
+### [Google Hit Hider](https://greasyfork.org/scripts/1682)
+过滤 Google 搜索结果，不要让垃圾网站污染眼睛。
 ### [秒传链接提取](https://greasyfork.org/zh-CN/scripts/424574-%E7%A7%92%E4%BC%A0%E9%93%BE%E6%8E%A5%E6%8F%90%E5%8F%96)
 秒传链接，百度网盘分享的一种优秀模式。
-
 ### [哔哩哔哩自动连播](https://greasyfork.org/zh-CN/scripts/408516-%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%92%AD)
 跳过bilibili视频末尾的充电鸣谢 *（对B站重度使用者还是很推荐的）*

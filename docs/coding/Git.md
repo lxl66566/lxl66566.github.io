@@ -251,7 +251,7 @@ exec /bin/bash
 >   Hostname ssh.github.com
 >   Port 443
 > ```
-> 此时回到[这里](#连接远程仓库)进行实验。成功连接即解决问题。
+> 此时回到[这里](#连接)进行实验。成功连接即解决问题。
 
 #### 复制密钥时遇到`bash: clip: command not found`错误
 > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.

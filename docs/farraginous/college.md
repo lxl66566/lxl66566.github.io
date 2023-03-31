@@ -125,11 +125,11 @@ sidebar: 'auto'
 
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
-|数字系统设计 - 木昌洪|4|<Badge type="danger" text="口音" />人不差，废话贼多|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
+|数字系统设计 - 木昌洪|3|<Badge type="danger" text="口音" />人不差，但是废话贼多|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
 |概率论<Badge text="半开卷" /><Badge type="warning" text="电子版" /> - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
-|信号与系统 - 朱煜|9|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
+|信号与系统 - 朱煜|7[^1]|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|
-|模电 - 李振坡|4|<Badge text="限手机" /><Badge text="口音" /> 知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
+|模电 - 李振坡|3|<Badge text="限手机" /> 上课质量低，知识点讲不清楚|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|
 |马原 - 秦美珠|3|<Badge text="限手机" /><Badge type="danger" text="限座位" /> 只能坐前 8 排，左侧不坐人；较佛系|
 |体育篮球男 - 宣沁|6.5|现代化教学，会聊天；力量训练量不合理|
 |毛概 - 张驰|0.5|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红，一句话总要讲两遍|
@@ -152,6 +152,8 @@ sidebar: 'auto'
 |体育网球男 - 冯作龙|8|给分高，平易近人|
 |高数 - 李继根|6.5|给分高，佛系自由|
 :::
+
+[^1]: https://t.me/withabsolutex/945
 ## [如何看待大学班级](../gossip/consider.md#如何看待大学班级)
 ## 命令行认证校园网
 ```sh
