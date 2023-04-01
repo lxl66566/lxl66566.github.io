@@ -26,6 +26,7 @@ sidebar: 'auto'
 |[NSFS-119](https://jable.tv/videos/nsfs-119/)|5.7|11.7|
 |[SSIS-588](https://missav.com/ssis-588)|6.5|11|
 |[FNEO-014](https://missav.com/fneo-014)|11.4|5.8|
+|[MIDV-934](https://missav.com/mide-934)|6.3|10.6|
 |[STARS-256](https://missav.com/stars-256)|6|10|
 |[IPX-726](https://www2.javhdporn.net/video/ipx-726)|11|3|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:74ED6ED378FBD3B58224A057BF7B59E1298CB72A</p></details>|
 |[GANA-2548](https://www5.javmost.com/GANA-2548/)|10|3|
@@ -60,7 +61,8 @@ sidebar: 'auto'
 |[REAL-810](https://missav.com/real-810)|6.5|7|
 |[MIDV-204](https://www2.javhdporn.net/video/midv-204c)|8.7|4.5|
 |[HMN-120](https://www2.javhdporn.net/video/HMN-120c/)|8|5|
-|[MUDR-124](https://www2.javhdporn.net/video/mudr-124c)|6.2|6.8|
+|[SNIS-534](https://missav.com/cn/snis-534)|4.7|8.3|
+|[MUDR-124](https://www2.javhdporn.net/video/mudr-124c)|6|6.8|
 |[ABW-032](https://missav.com/abw-032)|8.7|4|
 |[CAWD-419](https://www2.javhdporn.net/video/cawd-419)|5|7.6|
 |[ATID-522](https://www2.javhdporn.net/video/atid-522)|5.7|6.6|
@@ -82,10 +84,11 @@ sidebar: 'auto'
 |[HMN-127](https://www2.javhdporn.net/video/HMN-127c/)|5|4|
 |[CAWD-406](https://www2.javhdporn.net/video/cawd-406)|5|4|
 |[DCOL-017](https://www2.javhdporn.net/video/dcol-017c)|4|5|
-|[CAWD-377](https://www2.javhdporn.net/video/cawd-377/)|4.8|4|
+|[CAWD-377](https://www2.javhdporn.net/video/cawd-377/)|4.7|4|
 |[ABP-874](https://www2.javhdporn.net/video/ABP-874/)|3.8|5|
 |[MIDE-422](https://www2.javhdporn.net/video/mide-422)|5|3|
 |[ABW-018](https://www2.javhdporn.net/video/abw-018/)|4|4|
+
 *（顺序记录到miaa-604，剩下的逆序改天，我鉴不动辣）*
 
 ## 额外

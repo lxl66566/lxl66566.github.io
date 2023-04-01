@@ -44,7 +44,7 @@ export default defineUserConfig({
         children: [
           {
             text: "游戏",
-            children: add_prefix("/hobbies/",["rhythm_games.md","galgame.md","Minecraft.md","other_games.md",]),
+            children: add_prefix("/hobbies/",["rhythm_games.md","galgame.md","Minecraft.md","other_games/",]),
           },
           {
             text: "其他",
@@ -109,6 +109,15 @@ export default defineUserConfig({
           ],
         },
       ],
+      "/hobbies/other_games/":[
+        {
+          text: "其他游戏",
+          link: "/hobbies/other_games/",
+          children: [
+            "arknights.md","csgo.md","uno.md","rec_college.md","rec_hometown.md",
+          ]
+        }
+      ],
       "/": [
         "../README.md",
         {
@@ -141,7 +150,7 @@ export default defineUserConfig({
         {
           text: "爱好",
           children: add_prefix("/hobbies/",[
-            "rhythm_games.md","galgame.md","Minecraft.md","books.md","anime.md","other_games.md",
+            "rhythm_games.md","galgame.md","Minecraft.md","books.md","anime.md","other_games/",
           ]),
         },
       ],
