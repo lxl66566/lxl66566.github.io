@@ -10,7 +10,7 @@
 
 分布函数：<span v-pre>$F(x)=P\{\xi\leq x\}$</span>
 ### 离散
-二项分布，X ~ B(n,p)，期望：np
+二项分布，X ~ B(n,p)，期望：np，方差：np(1-p)
 
 泊松分布：<span v-pre>$X\sim\pi(\lambda), P\{x=k\}=\large \frac{\lambda^k}{k!}\cdot e^{-\lambda}$</span>，期望：λ，方差：λ
 
@@ -31,7 +31,7 @@
 
 > 无记忆性质：P{X>t} = P{X>s+t|X>s}
 
-正态分布：<span v-pre>$X\sim N(\mu,\sigma^2)：f(x)=\large\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</span>，期望：μ
+正态分布：<span v-pre>$X\sim N(\mu,\sigma^2)：f(x)=\large\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}$</span>，期望：μ，方差：<span v-pre>$\sigma^2$</span>
 
 正态标准化：若 <span v-pre>$X\sim N(\mu,\sigma^2)，则Z=\frac{x-\mu}\sigma\sim N(0,1)$</span>，标准正态分布函数记为 Φ(x)
 
@@ -60,3 +60,6 @@ E(C) = C（常数）
 <span v-pre>$D(CX)=C^2D(X)$</span>
 
 <span v-pre>$D(X+Y)=D(X)+D(Y)+2E((X-EX)(Y-EY))$</span>，（若 X Y 独立，则最后一项为 0）
+
+### 切比雪夫不等式
+<span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon$</span> 为任意大于 0 常数
