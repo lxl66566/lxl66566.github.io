@@ -17,6 +17,7 @@ sidebar: 'auto'
 ## 收藏
 平时不用，但以后可能用得上。
 * [eu.org 免费域名](https://nic.eu.org/)
+* [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
 ## 资源搜索
 * 搜电子书：[zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
 > 2022.11.04: 绝对值x悲哀道：z-library暂时离开了我们。<br/>
@@ -33,6 +34,7 @@ sidebar: 'auto'
 **建议去[tg频道](#新闻)看新闻。**
 * [今日热榜](https://tophub.today/) *（国内热搜榜汇总*
 ## 学习
+* [learnxinyminutes](https://learnxinyminutes.com/)：各种入门速成，适合学习能力强的（或多语言学习者）
 * [各种公开课程](https://docs.qq.com/sheet/DRU5MWHZCTHFGQnhM?tab=qb1sze)
 ### 语言
 * 英语新闻：[Breaking News English](https://breakingnewsenglish.com/) ~~（旧闻~~

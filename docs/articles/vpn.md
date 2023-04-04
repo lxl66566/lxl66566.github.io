@@ -174,7 +174,8 @@ tips：加速前需事先选择能通过连接测试的节点
 * [XSUS](https://xsus.buzz/)
 * [墙裂](https://my.qianglie.com/)
 * [大哥云](https://www.dageyun.net/)
-* [流量库](https://llcool.xyz/) 
+* [流量库](https://llcool.xyz/)
+* [飞鸟云](https://feiniaoyun.xyz/)
 ## 客户端选择
 ### Clash Verge（推荐）
 开源 Clash 客户端。[项目地址](https://github.com/zzzgydi/clash-verge)

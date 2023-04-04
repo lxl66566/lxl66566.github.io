@@ -26,7 +26,7 @@ Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 ### 浏览器
 #### [Kiwi Browser](https://kiwibrowser.com/)
 **重量级** chromium 系浏览器，你可以像使用电脑浏览器那样使用它。
-* 支持所有 chromium 插件，重度插件依赖请务必安装。
+* 支持所有 chromium 插件，重度插件依赖者请务必安装。
 * 拥有控制台。
 #### [m浏览器](http://mbrowser.nr19.cn/)
 **轻量级**浏览器,（[私链](https://wwp.lanzout.com/iP7FA0eaqk8j)）
@@ -46,7 +46,7 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 
 [酷安下载地址](https://www.coolapk.com/apk/com.goplaycn.googleinstall) | [私链](https://wwp.lanzout.com/iYyA10686e7c)
 ### NekoX
-Telegram 第三方开源客户端，自带公共代理
+Telegram 第三方开源客户端，自带很不稳定的低速公共代理，但至少能用；更新滞后较大，若有科学上网方法还是建议使用官方端。
 
 ~~但是在tg第三方内名声不算好~~
 
@@ -111,45 +111,47 @@ scoop install <name>    # 安装包
 ### [SpaceSniffer](https://spacesniffer.en.softonic.com/)
 可视化磁盘空间占用，方便清理
 ### [uTools](http://www.u.tools/)
-uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。——[uTools用户指南](http://www.u.tools/docs/guide/about-uTools.html#utools-%E6%98%AF%E4%BB%80%E4%B9%88) 由于逐步开始付费模式，此处可选择使用开源替代品：[PowerToys](https://github.com/microsoft/PowerToys)，但其不支持添加快捷启动，对用惯了 utools 的我来说还是不敢苟同。
+基于 Electron 的插件化一站式工具。我是其快捷启动功能重度使用者，此功能可添加 `.exe` 文件并快捷启动。此外也常用剪贴板，ocr 等功能。
+
+但其本质上是一个商业化产品，有些功能还免费转收费了，Electron 也高占用低性能。因此对开源有需求可以看看 [PowerToys](https://github.com/microsoft/PowerToys) 和 [rubick](https://github.com/rubickCenter/rubick)，但二者都无法满足我的需求：两者都不支持自添加 `.exe` 文件启动。
 ### [steam++](https://steampp.net/)
 加速器，主要加速 steam 商店与 github。当然更好的选择是科学上网。
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
 快速搜索，可配合 [uTools](#utools) 使用
-### geek
-用于卸载软件。轻量，可清理文件与注册表残留。
-
-[官网下载地址](https://geekuninstaller.com/download) | [私链](https://wwp.lanzout.com/icAdmharg2h)
+### [geek](https://geekuninstaller.com/download)
+轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/icAdmharg2h)</span>
 ### [Bandizip](http://www.bandisoft.com/)
 压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有追求可换用 [7zip](https://www.7-zip.org/)，同样是一款优秀的压缩解压软件。
 ### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
 视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
 
 [关于 Potplayer 设置](../articles/potplayer_setting.md)
-### f.lux
-护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。
+### [f.lux](https://justgetflux.com/)
+护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</span>
 * 可以在全屏游戏时护眼
 * 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）
-
-[官网下载地址](https://justgetflux.com/) | [私有下载地址](https://wwp.lanzout.com/iqmkq06s0wtg)
 ### [图吧工具箱](http://www.tbtool.cn/)
 集成了电脑及其外接设备测试所需的多数软件。
 ### ADB
-电脑调试Android手机的必备工具，包括查询信息，备份，安装等常用功能。[简易教程](../articles/adb.md)
+电脑调试 Android 手机的必备工具，包括查询信息，备份，安装等常用功能。
+* [简易教程](../articles/adb.md)
 
 [官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+### 
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 开源的右键菜单管理器。高度自定义化。
 ### [Anki](https://apps.ankiweb.net/)
-多端开源记忆软件，多语言，高自由度。
+多平台开源记忆软件。拥有多端同步，遵循记忆曲线，高自由度制卡等特色。
 
-[使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)，顺带这是[我的卡组](https://ankiweb.net/shared/info/772249450)
+附有[使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)与[我的卡组](https://ankiweb.net/shared/info/772249450)。
+### [sandboxie](https://sandboxie-plus.com/downloads/)
+开源沙盒，隔离运行程序，有时候用得到。
 ### [Winaero Tweaker](https://winaero.com/)
-挺不错的windows小工具，集成一些高级功能（特别对我这种**被迫设置win11**的人有点帮助）
+挺不错的windows小工具，集成一些高级功能（特别对我这种被迫设置win11的人有点帮助）
 ### [flameshot](https://flameshot.org/)
-基于 Qt 的强大的截屏软件，开源，跨平台，轻量级。（呼出有一定延迟）
+基于 Qt 的强大的截屏软件，开源，跨平台，轻量级。（有一定延迟）
 
-建议在设置中开启开机自启。
+*建议在设置中开启开机自启。*
 <!-- ### [EnergyStar](https://github.com/imbushuo/EnergyStar)
 为你的windows笔记本提升续航。
 
