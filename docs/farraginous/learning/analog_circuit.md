@@ -1,5 +1,11 @@
 # 模拟电子技术及实验
-## 三极管
+b站课程：[郑益慧](https://www.bilibili.com/video/BV1Gt411b7Zq)（原本看过一段时间华成英的，发现看不下去）
+## 电子元器件
+### 二极管
+PN 结电流方程：<span v-pre>$I=I_s(\large e^\frac{U}{U_T}-1)，\small U_T =26mV,I_S$</span> 为饱和电流
+
+温度升高，同电压下的电流变大。每升高 1℃，正向压降减小 2-2.5mV；每升高 10℃，反向电流增大一倍。
+### 三极管
 三极管本质：1. 电流放大，<span v-pre>$I_c = \beta I_b$</span>, 2. <span v-pre>$U_{be}$</span> 固定压降（硅管 0.7 V）
 
 已知三极管电压判断三极管三级：
