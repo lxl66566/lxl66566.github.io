@@ -30,6 +30,7 @@ sidebar: 'auto'
     * parts in a project, like how i use branch
     * 断点重传
     * 软连接，可在目录外创建虚仓库，指向真实仓库
+* osu 谱面下载器
 
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕

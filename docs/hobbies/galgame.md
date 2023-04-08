@@ -38,6 +38,7 @@ sidebar: 'auto'
 
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: | :----: |
+|ISLAND|29h43min|2023.01.07-<br/>2023.04.08|14|7.8|3.5|
 |竜姫ぐーたらいふ3 <Badge type="danger" text="4" />|5h50min|2023.03.30-<br/>2023.04.04|2.8|10|6|
 |竜姫ぐーたらいふLOVE+PLUS <Badge type="warning" text="2" />|2h59min|2023.03.25-<br/>2023.03.28|2|9|6|
 |水葬銀貨のイストリア|43h6min|2023.02.08-<br/>2023.03.26|8.2|7.3|3|
@@ -90,7 +91,6 @@ sidebar: 'auto'
 | :----: | :----: | :----: | :----: | :----: |
 |終のステラ
 |真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|8|8.4|
-|ISLAND|2023.01.07-<br/>2023.04.07|14|7.7|3.5|-5min
 |アンレス テルミナリア|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
 |NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|
@@ -155,10 +155,10 @@ sidebar: 'auto'
 <th style="text-align:center;">幻梦</th>
 </tr></thead>
 <tbody><tr>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="水葬銀貨のイストリア" src="http://lain.bgm.tv/pic/cover/l/db/44/202552_lwBMg.jpg" class="medium-zoom-image" width=180px height=250px></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="ISLAND" src="http://lain.bgm.tv/pic/cover/l/69/62/150191_BtQpr.jpg" class="medium-zoom-image" width=180px height=250px></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="euphoria" src="http://lain.bgm.tv/pic/cover/l/c5/3a/19385_Unjr9.jpg" class="medium-zoom-image" width=180px height=250px></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="冥契的牧神节" src="http://lain.bgm.tv/pic/cover/l/d8/85/316637_34696.jpg" class="medium-zoom-image" width=180px height=250px></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="水葬銀貨のイストリア" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/suisouginka.jpg" class="medium-zoom-image" width=180px height=250px></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="ISLAND" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/island.jpg" class="medium-zoom-image" width=180px height=250px></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="euphoria" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/euphoria.jpg" class="medium-zoom-image" width=180px height=250px></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="冥契的牧神节" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/meikeinoruperukaria.jpg" class="medium-zoom-image" width=180px height=250px></td>
 </tr></tbody>
 </table>
 </div>
@@ -239,12 +239,11 @@ sidebar: 'auto'
 #### NekoMiko
 游戏能 select English，突发奇想，于是就听着日语看着英语字幕玩了，还真挺不错的，表达很地道。但是要多花好多时间啊，毕竟阅读速度摆在那里。
 #### ISLAND
-* 有悬疑要素，剧本逻辑性高，有点幽默。
-* 悬疑作基本的思考引导与不对称信息反转。
-* 伽藍堂 紗羅：太危险了，悬疑氛围很足，总是要担心下一秒突然被精神病人捅死
 * 恭喜 ISLAND 打败冥契成为目前列表的剧情最高分！🥰🥰
-* 跨越了世界线的多处铺垫与伏笔，时不时出现的悬疑剧情，跨越哲学科学超自然的思考与在最后迎来的十多级超级反转，真是让人欲罢不能！
-* 不使用分割商法真是不错啊，一部抵三部
+* 信息不对称式悬疑，超级反转，幽默风趣；总是要担心下一秒突然捅死（）
+    * 跨越了世界线的多处铺垫与伏笔，时不时出现的悬疑剧情，跨越哲学科学超自然的思考与在最后迎来的十多级超级反转，真是让人欲罢不能！
+* 拒绝分割商法，从 ISLAND 做起，一部抵三部
+* 剧情树优秀；结局丰富。
 #### PARQUET
 yuzusoft 的小短篇，感觉剧情跟柚子正作差不多，没有达到我心中对全年龄的标准。（而且画风很好，全年龄有<span class="heimu" title="你知道的太多了">那么一点</span>点可惜）
 不过程序分我给破纪录的 10 分，非常满意，没有任何毛病可挑。
