@@ -189,6 +189,7 @@
         { 时刻: "20230406", 次数: 41976 + 7813 + 56121 + 33486 },
         { 时刻: "20230407", 次数: 27350 + 33244 + 57778 },
         { 时刻: "20230408", 次数: 29248 + 40350 + 79628 },
+        { 时刻: "20230409", 次数: 38232 },
       ];
       const linePlot = new Line("container", {
         data,
@@ -210,11 +211,15 @@
       });
 
       linePlot.render();
-      var rec = 0;
+      let rec = 0, rec_year = 0;
+      let year = new Date().getFullYear().toString();
       for (const element of data) {
         rec += element["次数"];
+        if(element["时刻"].startsWith(year)){
+          rec_year += element["次数"];
+        }
       }
-      document.getElementById("keysnumber").innerHTML = "total: " + String(rec);
+      document.getElementById("keysnumber").innerHTML = "total: " + String(rec) + " & " + year + ": " + String(rec_year);
     </script>
   </body>
 </html>

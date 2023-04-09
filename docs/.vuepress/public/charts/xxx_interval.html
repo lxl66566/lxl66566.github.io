@@ -50,6 +50,7 @@
         { date: "20230330", interval: 3 },
         { date: "20230402", interval: 3 },
         { date: "20230405", interval: 3 },
+        { date: "20230409", interval: 4 },
       ];
       const linePlot = new Line("container", {
         data,
@@ -71,7 +72,7 @@
         rec += element["interval"];
       }
       document.getElementById("average").innerHTML =
-        "average: " + String(rec / data.length);
+        "average: " + String((rec / data.length).toFixed(6));
     </script>
   </body>
 </html>

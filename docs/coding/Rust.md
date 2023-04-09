@@ -13,7 +13,7 @@ Rust是一门系统编程语言，专注于安全，尤其是并发安全，支�
 * 开发社区激进，更新频繁
 #### 缺点
 * 限制条件多，难以通过编译
-* 新生代语言，网上缺少问题的解决方案
+<!-- * 新生代语言，网上缺少问题的解决方案 -->
 * 学习曲线陡峭
 ### 如何学习
 [官网](https://www.rust-lang.org/zh-CN/)有详细的 QA 与你所需要的一切。以下陈述个人想法：
@@ -25,8 +25,6 @@ Rust是一门系统编程语言，专注于安全，尤其是并发安全，支�
 我在学习初期，先阅读 rust 教程（官网），然后尝试用 Rust 去解决 leetcode 上的一些题目 <span class="heimu" title="你知道的太多了">由于 rust 的 I/O 较为麻烦，leetcode 能免去 I/O 之苦</span> ，去搜索题目一些的子问题，了解解决方法。最后，去[上述文档](https://doc.rust-lang.org/std/index.html)进一步了解该解决方法的详细信息。
 
 其他资料：[Rust 语言圣经](https://course.rs/about-book.html) | [Rust new libraries and applications](https://lib.rs/new)
-
-以下所涉及到的类型与函数，请自行Google。
 ## 循环
 Rust 的 for 循环需要跟可迭代对象，例如：
 ```rs
@@ -71,6 +69,8 @@ let num : Vec<i128> = s.trim().split(" ")
   * 使用 Rc + RefCell 实现（由于 RefCell 的限制，迭代器无法很好的实现）；
   * 使用 Unsafe 实现；
 ## 字符串
+*Rust 的字符串所包含的问题实际上很多，此处只是冰山一角。*
+
 * Rust 字符串默认支持分行。使用 \ 可以使多行字符串不换行。
 * 原始字符串：`r#"\something"#`
 ### 字符串处理

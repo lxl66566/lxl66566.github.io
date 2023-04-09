@@ -51,6 +51,7 @@ git commit -m "注释"
 > ssh密钥生成后首次添加注释可能会出现额外提醒，请根据提示照做
 #### 撤销
 撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
+
 修改注释：`git commit --amend`，需要使用 Vim
 ### 上传与远程仓库
 将你的仓库上传到github等平台。

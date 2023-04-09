@@ -4,6 +4,9 @@
     <title>sports record in times</title>
   </head>
   <body>
+    <div style="text-align:center">
+      <p id="statistic" style="font-size: 10px"></p>
+    </div>
     <div id="container" style="width: 100%; height: 260px"></div>
     <script
       type="text/javascript"
@@ -347,7 +350,24 @@
         { name: "引体向上", 时刻: "20230406", times: 0 },
         { name: "俯卧撑", 时刻: "20230407", times: 0 },
         { name: "引体向上", 时刻: "20230407", times: 8 },
+        { name: "引体向上", 时刻: "20230409", times: 0 },
+        { name: "俯卧撑", 时刻: "20230409", times: 27 },
       ];
+      let data_in_a_year = new Map();
+      let year = new Date().getFullYear().toString();
+      data.forEach((item) => {
+        if(!item.时刻.startsWith(year)) return;
+        data_in_a_year.set(item.name,(data_in_a_year.get(item.name) || 0) + item.times);
+      })
+      let show_string = year + ": ";
+      [...data_in_a_year]
+        .sort((a, b) => b - a)
+        .forEach((item) => {
+          item.forEach((item2) => {
+            show_string += item2 + " ";
+          });
+        });
+      document.getElementById("statistic").innerHTML = show_string;
       function detimes(item, rate) {
         item.times /= rate;
         item.name = item.name + "/" + String(rate);

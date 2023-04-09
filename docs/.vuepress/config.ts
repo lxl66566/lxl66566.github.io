@@ -27,17 +27,18 @@ export default defineUserConfig({
     navbar: [
       {
         text: "编程",
-        children: [
-          "/coding/farraginous.md",
-          {
-            text: "语言",
-            children: add_prefix("/coding/",["Rust.md","Cpp.md","csharp.md","python.md","java.md",])
-          },
-          {
-            text: "工具",
-            children: ["/coding/github.md", "/coding/Git.md", {text:"Vim",link:"/coding/vim.md"},],
-          },
-        ],
+        // children: [
+        //   "/coding/farraginous.md",
+        //   {
+        //     text: "语言",
+        //     children: add_prefix("/coding/",["Rust.md","Cpp.md","csharp.md","python.md","java.md",])
+        //   },
+        //   {
+        //     text: "工具",
+        //     children: ["/coding/github.md", "/coding/Git.md", {text:"Vim",link:"/coding/vim.md"},],
+        //   },
+        // ],
+        link: "/coding/",
       },
       {
         text: "爱好",
@@ -96,6 +97,26 @@ export default defineUserConfig({
           children: [
             "worldview.md","computer_setting.md","Android_ISA.md","time_record.md","track_record.md",
             "telegram.md","potplayer_setting.md","fuck_quickapp.md","adb.md","markdown.md",
+          ],
+        },
+      ],
+      "/coding/": [
+        {
+          text: "语言",
+          children: [
+            "Rust.md","Cpp.md","csharp.md","python.md","java.md","javascript.md",
+          ],
+        },
+        {
+          text: "工具",
+          children: [
+            "github.md", "Git.md", {text:"Vim",link:"/coding/vim.md"},
+          ],
+        },
+        {
+          text: "其他",
+          children: [
+            "algorithm.md",
           ],
         },
       ],
