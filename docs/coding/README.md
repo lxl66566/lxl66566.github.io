@@ -6,7 +6,7 @@
 2. [C++](./Cpp.md)
 3. [Python](./python.md)
 4. [Java](./java.md)
-### 预习阶段
+### 预学习阶段
 5. [Javascript](./javascript.md)
 6. [C#](./csharp.md)
 ## 工具

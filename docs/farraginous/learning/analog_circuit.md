@@ -21,3 +21,5 @@ g,s,d 对应三极管的 b,e,c
 N 沟道结型场效应管需要工作在 <span v-pre>$U_{GS(off)}<U_{GS}<0$</span> 的条件下
 
 N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(\frac{U_{GS}}{U_{GS(th)}}-1)^2,I_{DO}(I_{DSS})$</span>在不同型代表的意义不同。
+## 放大电路
+指标：通频带，指 A > 0.707 Am 的频率区域。
