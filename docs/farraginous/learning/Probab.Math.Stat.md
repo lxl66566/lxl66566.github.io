@@ -16,6 +16,8 @@
 
 > 泊松定理：(...) 若 n * p = λ，则（对任意 k） <span v-pre>$lim_{n\to+\infty}X\sim b(n,p)=X\sim\pi(\lambda)$</span> 一般地，n >= 20, p <= 0.05 时可近似计算。
 
+> 泊松分布可加性：X,Y 独立，各自服从 π(λ1),π(λ2)，则 Z=X+Y 服从 π(λ1 + λ2)
+
 几何分布：<span v-pre>$X\sim G(p), P\{x=k\}=(1-p)^{k-1}p$</span>，期望：1/p
 
 超几何分布：<span v-pre>$X\sim H(n,D,N), P\{x=k\}=\Large\frac{C_D^kC_{N-D}^{n-k}}{C_N^n}$</span>

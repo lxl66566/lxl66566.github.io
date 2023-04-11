@@ -89,15 +89,16 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
-|終のステラ|2023.04.09|
-|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|8|8.4|
+|拔作岛|2023.04.11|?|3|2|
+|終のステラ|2023.04.09|?|8|9.7|
+|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|
 |アンレス テルミナリア|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
 |NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|
 |哥哥，早上起床之前都要抱紧我哦！<Badge text="1" />|2021.02.14?|3|8.6|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
 |灰色的果实
-|DDLC <Badge type="tip" text="steam" vertical="bottom" /> *(暂时不玩)*|2021.11.11|?|3|?|
+|DDLC <Badge type="tip" text="steam" vertical="bottom" /> *(暂时不玩)*|2021.11.11|?|2|?|
 |千恋万花 <Badge type="warning" text="krkr" vertical="bottom" />|2021.06.21|6.8|9|7.5|
 |少女领域 <Badge type="warning" text="krkr" vertical="bottom" />|<2020.10.29|5|8|8|
 |保健室のセンセーとシャボン玉中毒の助手 <Badge type="danger" text="tyranor" vertical="bottom" />|
@@ -131,7 +132,6 @@ sidebar: 'auto'
 * 花鐘カナデグラム
 * Yuri
 * 初雪樱
-* 拔作岛
 * GINKA
 * 瑠璃櫻
 * 变态监狱?
@@ -198,6 +198,7 @@ sidebar: 'auto'
 
 |游戏名|问题|
 | :----: | :----: |
+|住在下体升级岛上的贫乳该如何是好？|贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
 |NEKOPARA vol.4|崩了好几次，估计是这个破解包的问题![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png)![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png)|
 |Girl Fantasy|没有滚轮动作；语音切断；backlog 不自动更新|
 |水葬銀貨のイストリア|没有 backlog 跳转，没有 qsave & qload；退出 auto 会继续往下一句|
