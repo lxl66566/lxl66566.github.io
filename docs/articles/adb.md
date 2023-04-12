@@ -17,3 +17,6 @@ List of devices attached
 ## 常用指令
 * `adb devices`：开启端口，检测设备，请求匹配。
 * `adb install <filepath>`：安装应用。`<filepath>` 可以是相对 / 绝对路径。一般为 .apk 文件。
+* `adb shell pm list package [<keyword>]` 或 `adb shell pm list packages | findstr <keyword>`：根据包名查找包
+* `adb shell pm uninstall -k --user 0 <package name>`：卸载包
+* `adb shell pm disable-user <package name>`：禁用包

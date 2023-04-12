@@ -55,6 +55,7 @@ sidebar: 'auto'
 |[STARS-574](https://www2.javhdporn.net/video/stars-574)|8.5|6|
 |[CAWD-194](https://www2.javhdporn.net/video/cawd-194)|7|7.5|
 |[ROYD-102](https://missav.com/royd-102)|8|6.3|
+|[SDMU-672](https://missav.com/sdmu-672)|6.5|7.6|
 |[IPX-773](https://www2.javhdporn.net/video/ipx-773/)|9|5|
 |[MIAA-704](https://www2.javhdporn.net/video/miaa-704c)|4|10|
 |[MIAA-391](https://www2.javhdporn.net/video/miaa-391)|6.3|7.3|
