@@ -132,6 +132,10 @@ fetch 对比 clone 的好处在于可以分段传输。（指定`--depth=x`）
 
 仅删除远程tag：`git push origin :refs/tags/TAGNAME`
 ## 其他技巧
+### 全局设置
+```sh
+git config --global push.default current    # 设置默认推送，简化 git push
+```
 ### 忽略文件(夹)
 1. 在仓库所在根目录下新建文本文档，输入你需要忽略的文件或文件夹（文件需带有后缀），以回车键隔开。
 2. 保存并重命名为`.gitignore`。

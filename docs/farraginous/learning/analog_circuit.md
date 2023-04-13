@@ -23,3 +23,7 @@ N 沟道结型场效应管需要工作在 <span v-pre>$U_{GS(off)}<U_{GS}<0$</sp
 N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(\frac{U_{GS}}{U_{GS(th)}}-1)^2,I_{DO}(I_{DSS})$</span>在不同型代表的意义不同。
 ## 放大电路
 指标：通频带，指 A > 0.707 Am 的频率区域。
+### 分析法
+等效电路法：三极管等效为 <span v-pre>$r_{be}=r_{bb'}+(1+\beta)\frac{U_T}{I_{EQ}}=\frac{\Delta U_{be}}{\Delta I_b}$</span> （复习：如何求 rbe?）
+
+输出电阻越小，输出电压越稳定；输出电阻越大，输出电流越稳定。
