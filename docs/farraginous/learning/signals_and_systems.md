@@ -44,13 +44,14 @@
 ### 常用公式
 <span v-pre>$lim_{n\to +\infty}\frac{sin(\omega n)}{\omega}=\pi\delta(\omega),\int_{-\infty}^{+\infty}\frac{sin(\omega t)}{\omega}d\omega = \pi sgn(t)$</span>
 
+<span v-pre>$\int_{-\infty}^{+\infty}f(t)dt=F(j0)$</span>
+
 ### 基本变换
 <span v-pre>$\mathscr{F}[ e^{-at}u(t) ]=\frac1{a+j\omega}\ \ \ \  (a>0)$</span>
 
 <span v-pre>$\mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega)$</span>
 
-<span v-pre>$\mathscr{F}[ E[u(t+\frac{\tau}{2}) - u(t-\frac{\tau}{2})]]=E\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*
- ω)
+<span v-pre>$\mathscr{F}[ E[u(t+\frac{\tau}{2}) - u(t-\frac{\tau}{2})]]=E\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*ω)
 <!-- =\large \frac{2Esin(\frac\tau2\omega)}{\omega} -->
 
 <span v-pre>$\mathscr{F}[ \frac{sin(\omega_ct)}{t} ]\normalsize =\pi[u(t+\omega_c) - u(t-\omega_c)]$</span>
@@ -64,4 +65,4 @@
 ### 性质
 [跳转复变函数](./complex_functions.md#fourier-transform)
 
-时域卷积 = 频域相乘
+时域卷积 = 频域相乘； 时域相乘 = 频域卷积 / 2π

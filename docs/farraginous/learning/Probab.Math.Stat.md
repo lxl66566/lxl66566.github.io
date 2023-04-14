@@ -2,6 +2,8 @@
 概率论与数理统计。我看的网课是[孔祥仁](https://space.bilibili.com/453967238)的。
 
 `(...)` 表示此处表述不够严谨，若想完全掌握请自行学习。
+## 工具
+[分布计算器](https://www.statskingdom.com/zh-Hans/2distributions-zhhans.html)：计算标准正态分布
 ## 概率论基础
 ### 独立性
 若 A,B 相互独立，则 {A,~A} 和 {B,~B} 相互独立。
