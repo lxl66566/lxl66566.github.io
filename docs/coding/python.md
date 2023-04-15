@@ -73,6 +73,23 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
 ```
 以指定源。
+## 序列化
+序列化是指将对象转换成字节流，从而存储对象或将对象传输到内存、数据库或文件的过程。——[MS](https://learn.microsoft.com/zh-cn/dotnet/visual-basic/programming-guide/concepts/serialization/)
+
+python 自带了 json 包进行 .json 序列化。也可以使用 configparser 进行 .ini 序列化。
+```py
+class my_config:
+    def __init__(self):
+        self.config = ConfigParser()
+        self.config.read(DIR / "config.ini")
+    def get(self, section, option) -> str:
+        return self.config.get(section, option, fallback="")
+    def set(self, section, option, value):
+        self.config[section][option] = value
+    def write_to_file(self):
+        with open(DIR / "config.ini", "w") as configfile:
+            self.config.write(configfile)
+```
 ## miniconda
 提供 python 包管理与虚拟环境。
 

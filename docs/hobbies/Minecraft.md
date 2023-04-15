@@ -5,7 +5,35 @@ sidebar: 'auto'
 
 以前玩 hypixel 起床战争最多，国服关服后转向 Domcer。但一上大学，我对 Minecraft 的兴趣骤减。大一上还有进校内的 cic 服（1.16.1）沉迷一段时间的生存发展。后来服务器升级到 1.18 后我就没再加过了。大一下仅偶尔和舍友打打数据包小游戏。大二不玩啦。
 ## 数据包
-[bingo数据包](https://www.mcbbs.net/thread-1269608-1-1.html) | [不要做挑战](https://github.com/KunoSayo/donotdo) | [猎人游戏（未测试）](https://www.bilibili.com/video/BV1Ta411M72R) | [我下载的数据包私链](https://wwp.lanzout.com/b00vy0h9c)，密码:boc3 | [数据包网站](../farraginous/recommend_websites.md#其他游戏) | [Minegames pvp小游戏（未测试）](https://www.minecraftmaps.com/pvp-maps/minegames) | [Gold Rush PvP](https://www.planetminecraft.com/project/gold-rush-pvp/)
+[bingo数据包](https://www.mcbbs.net/thread-1269608-1-1.html) | [bingo高版本](https://www.flytre.net/bingo) | [不要做挑战](https://github.com/KunoSayo/donotdo) | [猎人游戏（未测试）](https://www.bilibili.com/video/BV1Ta411M72R) | [我下载的数据包私链](https://wwp.lanzout.com/b00vy0h9c)，密码:boc3 | [数据包网站](../farraginous/recommend_websites.md#其他游戏) | [Minegames pvp小游戏（未测试）](https://www.minecraftmaps.com/pvp-maps/minegames) | [Gold Rush PvP](https://www.planetminecraft.com/project/gold-rush-pvp/)
+## 我的世界bingo速查（1.19.4）
+### 锻造台
+|||
+| :-: | :-: |
+|铁|铁|
+|木板|木板|
+|木板|木板|
+### 石砖
+|||
+| :-: | :-: |
+|石头|石头|
+|石头|石头|
+### 灯笼
+中间火把，外圈铁粒\*8
+### 侦测器
+||||
+| :----: | :----: | :----: |
+|圆石|圆石|圆石|
+|红石|红石|石英|
+|圆石|圆石|圆石|
+### 堆肥桶
+||||
+| :----: | :----: | :----: |
+|木台阶||木台阶|
+|木台阶||木台阶|
+|木台阶|木台阶|木台阶|
+### 胡萝卜钓竿
+钓竿在左上，胡萝卜在右下
 ## 我的世界bingo速查（1.17.1）
 ### 紫色染料
 红色染料\*1 + 蓝色染料\*1
