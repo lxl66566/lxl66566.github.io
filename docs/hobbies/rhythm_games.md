@@ -54,7 +54,7 @@ sidebar: 'auto'
 
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="300"></iframe>
 
-* 叠（Jack）：α, ex-3
+* 叠（Jack）：β, ex-3
 
 <iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280"></iframe>
@@ -71,7 +71,7 @@ sidebar: 'auto'
 <iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280"></iframe>
 
-* 切（Stamina / Stream）：10,  ex-4
+* 切（Stamina / Stream）：α,  ex-4
     * 耐力是限制切力的最重要因素。耐力不稳定，因此成绩不稳定。
     * 非常痛恨无休切。Malody v3 段打得挺好，但 reform 段极为下手。（α 无休切，β 有个大乱，都不会打）
 
