@@ -122,10 +122,10 @@ scoop install <name>    # 安装包
 轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/icAdmharg2h)</span>
 ### [Bandizip](http://www.bandisoft.com/)
 压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有追求可换用 [7zip](https://www.7-zip.org/)，同样是一款优秀的压缩解压软件。
-### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
+<!-- ### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
 视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
 
-[关于 Potplayer 设置](../articles/potplayer_setting.md)
+[关于 Potplayer 设置](../articles/potplayer_setting.md) -->
 ### [f.lux](https://justgetflux.com/)
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</span>
 * 可以在全屏游戏时护眼

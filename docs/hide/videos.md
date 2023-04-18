@@ -46,6 +46,7 @@ sidebar: 'auto'
 |[MIAA-648](https://www2.javhdporn.net/video/miaa-648/)|7.3|8.9|
 |[HMN-156](https://www2.javhdporn.net/video/hmn-156)|8|7.7|
 |[IPX-660](https://missav.com/ipx-660)|7.5|8.2|
+|[IPX-674](https://missav.com/cn/ipx-674)|8|7.5|
 |[IPX-881](https://www2.javhdporn.net/video/ipx-881)|7.5|8|
 |[SSIS-348](https://www2.javhdporn.net/video/SSIS-348c/)|9|6|
 |[ROYD-084](https://www2.javhdporn.net/video/ROYD-084c/)|7.7|7|
