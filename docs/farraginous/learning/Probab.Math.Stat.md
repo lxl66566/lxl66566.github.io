@@ -67,3 +67,15 @@ E(C) = C（常数）
 
 ### 切比雪夫不等式
 <span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon$</span> 为任意大于 0 常数
+
+## 二维
+边缘概率密度 = 联合概率密度在 R 上对另一自变量积分。
+
+联合能求边缘，边缘不能求联合
+
+条件概率密度：<span v-pre>$f_{X|Y}(x|y)=f(x,y)/f_Y(y)$</span> （联合概率密度 / 边缘概率密度）
+
+独立性判断：
+* 离散：<span v-pre>$P_{ij}=\Sigma P_i\cdot\Sigma P_j$</span>
+* 连续：<span v-pre>$f(x,y)=f_X(x)\cdot f_Y(y)$</span>
+    * 对分布函数也适用

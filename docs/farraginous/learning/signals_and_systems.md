@@ -66,3 +66,11 @@
 [跳转复变函数](./complex_functions.md#fourier-transform)
 
 时域卷积 = 频域相乘； 时域相乘 = 频域卷积 / 2π
+
+Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\pi}\int_{-\infty}^{+\infty}|X(j\omega)|^2d\omega$</span>
+
+任意实函数的傅里叶变换实部偶函数，虚部奇函数。实偶对实偶，实奇对虚奇。
+## 调制与解调
+调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
+
+解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
