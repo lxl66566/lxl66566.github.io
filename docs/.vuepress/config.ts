@@ -96,7 +96,7 @@ export default defineUserConfig({
           link: "/articles/",
           children: [
             "worldview.md","computer_setting.md","mobile_setting.md","Android_ISA.md","time_record.md","track_record.md",
-            "telegram.md","potplayer_setting.md","adb.md","markdown.md",
+            "telegram.md","adb.md","markdown.md",
           ],
         },
       ],
@@ -153,7 +153,7 @@ export default defineUserConfig({
           link: "/articles/",
           children: add_prefix("/articles/",[
             "worldview.md","computer_setting.md","mobile_setting.md","Android_ISA.md","time_record.md",
-            "track_record.md","telegram.md","potplayer_setting.md","adb.md","markdown.md",
+            "track_record.md","telegram.md","adb.md","markdown.md",
           ]),
         },
         {

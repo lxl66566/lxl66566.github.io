@@ -126,6 +126,18 @@ scoop install <name>    # 安装包
 视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
 
 [关于 Potplayer 设置](../articles/potplayer_setting.md) -->
+### [mpv](https://mpv.io/)
+轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是我的 mpv 配置文件：
+```
+# C:\Users\<user name>\scoop\persist\mpv\portable_config\input.conf
+d add speed .1
+a add speed -.1
+s set speed 1.0
+WHEEL_UP seek -10
+WHEEL_DOWN seek 10
+UP add volume 1
+DOWN add volume -1
+```
 ### [f.lux](https://justgetflux.com/)
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</span>
 * 可以在全屏游戏时护眼

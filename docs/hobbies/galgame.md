@@ -90,7 +90,7 @@ sidebar: 'auto'
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
 |拔作岛|2023.04.11|?|3|2|-5min
-|終のステラ|2023.04.09|?|8|9.7|-9min
+|終のステラ|2023.04.09|?|8|9.1|-9min
 |真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|
 |アンレス テルミナリア|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
@@ -199,6 +199,7 @@ sidebar: 'auto'
 
 |游戏名|问题|
 | :----: | :----: |
+|終のステラ|闪屏，backlog 文字颜色错乱![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/tsuinosutera_1.png)|
 |住在下体升级岛上的贫乳该如何是好？|贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
 |NEKOPARA vol.4|崩了好几次，估计是这个破解包的问题![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png)![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png)|
 |Girl Fantasy|没有滚轮动作；语音切断；backlog 不自动更新|
