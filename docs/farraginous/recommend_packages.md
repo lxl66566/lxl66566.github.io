@@ -117,7 +117,7 @@ scoop install <name>    # 安装包
 ### [steam++](https://steampp.net/)
 加速器，主要加速 steam 商店与 github。当然更好的选择是科学上网。
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
-快速搜索，可配合 [uTools](#utools) 使用
+快速搜索，几乎不花时间。推荐配合 [EverythingToolbar](https://github.com/srwi/EverythingToolbar) 使用。
 ### [geek](https://geekuninstaller.com/download)
 轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/icAdmharg2h)</span>
 ### [Bandizip](http://www.bandisoft.com/)

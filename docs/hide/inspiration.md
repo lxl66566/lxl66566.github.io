@@ -22,11 +22,10 @@ sidebar: 'auto'
     * 跨平台，多端同步
     * 自行导入歌曲，支持文件导入与 url导入（下载后可听）
 * 浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）
-    * 基于 Chromium 内核，非商用，开源
-    * 高度自定义化
+    * 基于 Chromium 内核（出于兼容性考虑），非商用，开源
+    * **高度自定义化**
 * CNM, ~~condition manager with Rust~~, a git-like distributed version manager
-    * 连续压缩，实时解压读取信息
-    * 目录式
+    * 连续压缩
     * parts in a project, like how i use branch
     * 断点重传
     * 软连接，可在目录外创建虚仓库，指向真实仓库
@@ -34,6 +33,8 @@ sidebar: 'auto'
 * HDL 高阶语言，能将类 Rust 语法的语言编译成 verilog 或 VHDL。
 * 音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）
 * 流式分布式的视频软件
+* 响应式计算机设计与编程（与轮询式相对）
+* Android opensource store, package manager
 
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
