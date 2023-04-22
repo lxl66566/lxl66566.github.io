@@ -74,7 +74,7 @@ sidebar: 'auto'
 * [Media.io](https://www.media.io/)：一键添加字幕，视频处理
 * [片头制作](https://panzoid.com/)
 ### 音频相关
-* 物件音效：[音效](https://www.conservethesound.de/) | [音效2](https://www.ear0.com/)
+* 物件音效：[音效](https://www.conservethesound.de/) | [音效2](https://www.ear0.com/) | [小森平](https://taira-komori.jpn.org/freesoundcn.html)
 * 搞笑音效：[爱给网](https://www.aigei.com/)
 * [AI配音](https://www.sd235.net/dubbingAI/detail/51)
 ### [字体相关](https://www.zitijia.com/)

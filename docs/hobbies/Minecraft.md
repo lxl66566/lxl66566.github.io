@@ -18,6 +18,13 @@ sidebar: 'auto'
 ### 地图
 [练习炸龙](https://sites.google.com/view/emma-practice-map/home) | [bingo 1.19](https://www.flytre.net/bingo)
 ## 我的世界bingo速查（1.19.4）
+### 高炉
+铁锭 \*5，平滑石头 \*3，熔炉 \*1
+||||
+| :-: | :-: | :-: |
+|铁锭|铁锭|铁锭|
+|铁锭|熔炉|铁锭|
+|平滑石头|平滑石头|平滑石头|
 ### 锻造台
 铁锭\*2，木板\*4
 |||
