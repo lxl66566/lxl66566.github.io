@@ -4,7 +4,7 @@
     <title>sports record in meter</title>
   </head>
   <body>
-    <div style="text-align:center">
+    <div style="text-align: center">
       <p id="statistic" style="font-size: 10px"></p>
     </div>
     <div id="container" style="width: 100%; height: 260px"></div>
@@ -177,13 +177,17 @@
         { name: "跑步", 时刻: "20230329", meter: 43 * 4 },
         { name: "跑步", 时刻: "20230410", meter: 480 + 780 },
         { name: "跑步", 时刻: "20230412", meter: 150 },
+        { name: "跑步", 时刻: "20230424", meter: 350 },
       ];
       let data_in_a_year = new Map();
       let year = new Date().getFullYear().toString();
       data.forEach((item) => {
-        if(!item.时刻.startsWith(year)) return;
-        data_in_a_year.set(item.name,(data_in_a_year.get(item.name) || 0) + item.meter);
-      })
+        if (!item.时刻.startsWith(year)) return;
+        data_in_a_year.set(
+          item.name,
+          (data_in_a_year.get(item.name) || 0) + item.meter
+        );
+      });
       console.log(data_in_a_year);
       let show_string = year + ": ";
       [...data_in_a_year]
