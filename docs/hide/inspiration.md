@@ -35,7 +35,8 @@ sidebar: 'auto'
 * 流式分布式的视频软件
 * 响应式计算机设计与编程（与轮询式相对）
 * Android opensource store, package manager
-
+* pdf 无损图片压缩
+* 轻量级 pdf 演示
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
 * 甩棍伞
