@@ -49,9 +49,8 @@
 2. 设 X 有概率密度<span v-pre>$f_X(x),a<x<b$</span> ,g(x) 在 (a,b) 处处可导且严格单调，则 Y = g(X) 有概率密度 <span v-pre>$f_Y(y)=f_X(g^{-1}(y))|\frac{g^{-1} (y)}{dy}|\ \ \ \ \ \ \small g(a)<y<g(b)$</span>，其中 g(a) 与 g(b) 小的在前。其他位置概率密度为 0
 ## 数字特征
 ### 期望
-E(C) = C（常数）
-
-期望满足线性规律；
+* EC = C
+* 期望满足线性规律；
 
 **独立变量**的积的期望 = 期望的积
 
@@ -60,13 +59,22 @@ E(C) = C（常数）
 本质上是函数的期望。函数为 (X-EX)^2
 
 计算公式 2：<span v-pre>$D(X)=E(X^2)-E^2(X)$</span>
-#### 性质
-<span v-pre>$D(CX)=C^2D(X)$</span>
-
-<span v-pre>$D(X+Y)=D(X)+D(Y)+2E((X-EX)(Y-EY))$</span>，（若 X Y 独立，则最后一项为 0）
+* <span v-pre>$D(CX)=C^2D(X)$</span>
+* D(X+Y)=D(X)+D(Y)+2[cov(X,Y)](#协方差)，（若 X,Y 独立，则 cov(X,Y) s为 0）
 
 ### 切比雪夫不等式
 <span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon$</span> 为任意大于 0 常数
+
+### 协方差
+cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
+* cov(X,X) = DX
+* cov(CX,Y) = Ccov(X,Y)
+* cov(X+Y,Z) = cov(X,Z) + cov(Y,Z)
+
+### 相关系数
+<span v-pre>$\rho_{XY} = \frac{cov(X,Y)}{\sqrt{DX} \sqrt{DY}},|\rho|\leq 1,\rho$</span> =1时即为线性关系。
+
+独立 => 不相关，不相关 !=> 独立。特例：当 X,Y ~ N(μ1,μ2,...) 时可互推。
 
 ## 二维
 边缘概率密度 = 联合概率密度在 R 上对另一自变量积分。
