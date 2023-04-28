@@ -126,3 +126,10 @@ match do_something_that_might_fail() {
 可以显式调用 `std::mem::drop()` 释放值。
 ## 获取 Cargo 根目录
 `env!("CARGO_MANIFEST_DIR")`
+## GUI
+我使用 [native-windows-gui](https://github.com/gabdube/native-windows-gui) 作为我的 windows 开发轻量级 GUI。
+### install
+```batch
+cargo add native-windows-derive
+cargo add native-windows-gui
+```

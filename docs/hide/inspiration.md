@@ -37,6 +37,7 @@ sidebar: 'auto'
 * Android opensource store, package manager
 * pdf 无损图片压缩
 * 轻量级 pdf 演示
+* b站历史记录搜索
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
 * 甩棍伞

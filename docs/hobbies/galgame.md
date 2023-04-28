@@ -91,12 +91,12 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
-|近月少女的礼仪|2023.04.23|?|6.1|3.3|-8min
+|近月少女的礼仪|2023.04.23|?|6.1|3.3|-15min
 |拔作岛|2023.04.11|?|3|2|-5min
 |真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|
 |アンレス テルミナリア|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
-|NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|
+|NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|-2min
 |哥哥，早上起床之前都要抱紧我哦！<Badge text="1" />|2021.02.14?|3|8.6|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
 |灰色的果实
@@ -201,6 +201,7 @@ sidebar: 'auto'
 
 |游戏名|问题|
 | :----: | :----: |
+|近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况。|
 |終のステラ|闪屏，backlog 文字颜色错乱![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/tsuinosutera_1.png)|
 |住在下体升级岛上的贫乳该如何是好？|贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
 |NEKOPARA vol.4|崩了好几次，估计是这个破解包的问题![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png)![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png)|

@@ -2,7 +2,7 @@
 sidebar: 'auto'
 ---
 # C++
-## 在vscode中配置环境
+## 配置 vscode 环境
 1. 下载安装 mingw 编译器。我使用[chocolatey](https://chocolatey.org/)进行下载安装，好处是无需手动配置环境变量。
     * 打开管理员下的命令提示符，执行 `choco install mingw`，按提示进行安装。安装后，默认位置应为`C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64`。（当然，得参考你的chocolatey安装位置）
 2. 在 vscode 中安装 *C/C++* 扩展。
@@ -11,6 +11,28 @@ sidebar: 'auto'
 5. 同上打开命令面板，搜索并点击 `Tasks: Configure Default Build Task`，再选择 `C/C++: g++.exe build active file`。
 
 现在你已经可以在 vscode 中编译并运行 c++ 代码了。
+### vscode 配置 Qt 开发环境
+由于 Qt 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。下述过程：
+1. 假设你：
+    * 安装了 Qt 与 cmake
+    * vscode 已经安装好 cmake 与 C/C++ 扩展
+    * Qt 的版本构建文件使用 cmake 而非 qmake. （Qt6 默认使用 cmake）
+2. 打开项目文件夹，`Ctrl + Shift + P`，键入`C/C++: Edit Configurations (UI)`
+    * 在 *包含路径* 下添加 `D:\software\Qt\6.5.0\mingw_64\include\**`（使用你自己的 include path）
+    * 将 *C++ 标准* 改为你需要的。
+3. 在项目目录下执行：
+```batch
+uic mainwindow.ui -o ui_mainwindow.h
+rcc static.qrc -o static.cpp    // 如果有 qrc 文件则执行。
+// rcc 不会读取 qresource prefix，可能需要将 .qrc 文件拷贝到静态资源文件夹下并执行
+```
+4. 将 3. 生成的文件（static.cpp） 添加至 `CMakelists.txt` 中的 `PROJECT_SOURCES`
+5. 在 `CMakelists.txt` 中的 `find_package` 语句前添加：
+```cmake
+set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 path）
+```
+
+然后就能~~愉快地~~构建了。
 ## 类型转换
 >= C++11
 * `static_cast`：不进行安全检查

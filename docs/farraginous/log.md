@@ -9,6 +9,9 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录；学习笔记区因其特殊性，此处不做普通维护记录。）*
 ## 2023
 ### .04
+#### 2023.04.28
+* [文章](../articles/)新增[最小化二进制文件与 dll](../articles/minimize_exe.md)
+* [C++](../coding/Cpp.md)新增[vscode 配置 Qt 开发环境](../coding/Cpp.md#vscode-配置-qt-开发环境)
 #### 2023.04.17
 * [编程](../coding/)新增[Linux](../coding/linux.md)
 #### 2023.04.12
@@ -153,7 +156,7 @@ sidebar: 'auto'
 #### 2022.09.28
 * 新增[校内专栏#校内极限生存](./college.md#校内极限生存)
 #### 2022.09.21
-* 新增[C++#在vscode中配置环境](../coding/Cpp.md#在vscode中配置环境)
+* 新增[C++#在vscode中配置环境](../coding/Cpp.md#配置_vscode_环境)
 * 新增 csgo#常用指令（现已移动到[其他游戏-csgo#常用指令](../hobbies/other_games.md#常用指令)）
 #### 2022.09.15
 * 维护[网址汇总](./recommend_websites.md)页面，新增大量条目，更改排版

@@ -43,6 +43,7 @@ sidebar: 'auto'
 * 日语百科：[コトバンク](https://kotobank.jp/) | [ニコニコ大百科](https://dic.nicovideo.jp/)
 * 英英词典：[Oxford Learner's Dictionaries](https://www.oxfordlearnersdictionaries.com/) | [Merriam Webster](https://www.merriam-webster.com/dictionary/) | [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/)
 * 日日词典：[Weblio辞書国語辞典](https://www.weblio.jp/) | [goo辞書](https://dictionary.goo.ne.jp/) | [広辞苑無料検索](https://sakura-paris.org/dict/)
+* 英语词频查询：[Linggle](https://linggle.com/)
 * 语言学习站：[languageplayer](https://languageplayer.io/)：提供 Youtube 音视频文献推荐与词典查询。
 * [DeepL翻译器](https://www.deepl.com/translator)：提供高质量的翻译
 * 英文润色：[Grammaly](https://app.grammarly.com/) | [QuillBot](https://quillbot.com/)

@@ -1,5 +1,4 @@
 const { defineUserConfig } = require("@vuepress/cli");
-// const { defaultTheme } = require('@vuepress/theme-default')
 const { searchPlugin } = require("@vuepress/plugin-search");
 const { prismjsPlugin } = require("@vuepress/plugin-prismjs");
 const {
@@ -96,7 +95,7 @@ export default defineUserConfig({
           link: "/articles/",
           children: [
             "worldview.md","computer_setting.md","mobile_setting.md","Android_ISA.md","time_record.md","track_record.md",
-            "telegram.md","adb.md","markdown.md",
+            "telegram.md","adb.md","markdown.md","minimize_exe.md"
           ],
         },
       ],
@@ -153,7 +152,7 @@ export default defineUserConfig({
           link: "/articles/",
           children: add_prefix("/articles/",[
             "worldview.md","computer_setting.md","mobile_setting.md","Android_ISA.md","time_record.md",
-            "track_record.md","telegram.md","adb.md","markdown.md",
+            "track_record.md","telegram.md","adb.md","markdown.md","minimize_exe.md"
           ]),
         },
         {
