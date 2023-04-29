@@ -185,6 +185,15 @@ git config https.proxy http://127.0.0.1:port
 git 默认会将中文以 `\` 转义的方式显示。要取消，需要：
 1. 右键 - Options - Text - Locale，选择 `zh-CN`，字符选择 `UTF-8`。
 2. `git config --global core.quotepath false`
+### 协同开发
+多人协同开发时，免不了要拉取上游，合并代码，解决冲突。`git stash` 可以帮助你保存当前代码，之后若有需要，还可合并与解决冲突。
+```sh
+git stash   # 暂存代码
+git pull origin main    # 拉取上游
+git stash pop   # 释放代码，进行合并
+git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
+```
+当然你也可以使用 `git fetch && git merge` 进行协同开发。
 ### 删除大文件
 删除大文件是必要的。即使你删除了某个文件，其仍会存在于仓库的提交记录内。
 ::: danger

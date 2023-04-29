@@ -9,6 +9,8 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录；学习笔记区因其特殊性，此处不做普通维护记录。）*
 ## 2023
 ### .04
+#### 2023.04.29
+* [xxx 的缺陷](../gossip/fuckxxx.md) 新增 [OSU](../gossip/fuckxxx.md#osu-有多难用)
 #### 2023.04.28
 * [文章](../articles/)新增[最小化二进制文件与 dll](../articles/minimize_exe.md)
 * [C++](../coding/Cpp.md)新增[vscode 配置 Qt 开发环境](../coding/Cpp.md#vscode-配置-qt-开发环境)
@@ -17,7 +19,7 @@ sidebar: 'auto'
 #### 2023.04.12
 * [文章](../articles/) 新增 [设置手机](../articles/mobile_setting.md)
 #### 2023.04.10
-* [xxx有多难用](../gossip/fuckxxx.md) 新增了一些内容
+* [xxx 的缺陷](../gossip/fuckxxx.md) 新增了一些内容
 #### 2023.04.09
 * 部分图表新增当年数据统计
 * 编程部分新增[版块主页](../coding/)，并添加[javascript](../coding/javascript.md)，[算法](../coding/algorithm.md)页面
