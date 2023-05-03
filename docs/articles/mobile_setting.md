@@ -10,4 +10,5 @@
     * `com.miui.systemAdSolution`：广告
     * `com.miui.hybrid`：快应用，杂种；[为什么要卸载](./fuck_quickapp.md)
     * `com.sohu.inputmethod.sogou.xiaomi` & `com.iflytek.inputmethod.miui`：自带的 搜狗 讯飞 输入法，我用 gboard
+    * `com.miui.newhome`：内容中心，广告，好像不能卸载只能禁用
 3. 关闭 Github Mobile 的默认打开网址。Github Mobile 因 2FA 需要使用，但使用其查看项目确实非常智障。幸好 MIUI14 提供了设置应用默认打开的功能：长按应用 - 应用信息 - 默认打开，调为拒绝。

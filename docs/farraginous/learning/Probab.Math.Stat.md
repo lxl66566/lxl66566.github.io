@@ -89,5 +89,9 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
     * 对分布函数也适用
 ### 函数
 令 Z=X+Y，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f(z-y,y)dy$</span> （也可类比对 X 积分）
-### 性质
+## 多维正态
 <span v-pre>$\small 若 X_1\sim N(\mu_1,\sigma_1^2) 与 X_2\sim N(\mu_2,\sigma_2^2)独立，则\sum X\sim N(\sum\mu,\sum(\sigma^2))$</span> （对线性组合成立）
+
+正态变量具有线性变换不变性，即多维正态变量的线性组合也服从正态分布；多维正态变量的线性函数也服从正态分布
+
+多个多维正态变量若相互独立，则各变量之间不相关

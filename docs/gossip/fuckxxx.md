@@ -74,3 +74,5 @@ B站歧视网页版用户。可能是因为：网页版用户不是核心群体�
 [OSU](../hobbies/rhythm_games.md#osu) 是一款开源游戏，但是实际上其运营依旧是盈利性质的。尤其现在 OSU 的开发极为保守，与开源精神相背甚远。
 * —令人难过的是，osu并不支持任何低延迟音效组件(coreaudio/wasapi/asio)。[source](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md#42-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95)
 * OSU API 无法查询 osu!mania 歌曲的 key 数信息。因此目前我使用过的谱面下载器均无法选择 key 数下载。
+* 需要纵连任务栏图标才能打开的恶性 bug 几年了都没修。。还有 edit 闪退恶性 bug
+* 偶然间点开了最早的没有合并的 pull request，发现是个我迫切需要的**任意倍速**功能的前置功能：任意倍数计算 star 数的功能。接近 2 years 的不被合并的更改。
