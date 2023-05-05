@@ -33,7 +33,17 @@
 
 <span v-pre>$\begin{cases}B_0=\frac{1}{T_0}\int_0^{T_0}f(x)dx \\ B_k=\frac2{T_0}\int_0^{T_0}f(x)cos(k\omega_0x)dx \\ C_k=\frac2{T_0}\int_0^{T_0}f(x)sin(k\omega_0x)dx\end{cases}$</span>
 
-复数形式：<span v-pre>$x(t)=\sum_{k=-\infty}^{\infty}a_ke^{jk\omega_0t}, a_k=\frac{1}{T_0}\int_0^{T_0}x(t)e^{-jk\omega_0t}dt$</span>
+**复数形式**：<span v-pre>$x(t)=\sum_{k=-\infty}^{\infty}a_ke^{jk\omega_0t}, a_k=\frac{1}T\int_0^Tx(t)e^{-jk\omega_0t}dt$</span>
+### 周期傅里叶
+<span v-pre>$a_k=\frac{1}{T}F(jk\omega_0)$</span>
+
+周期函数的傅里叶变换：<span v-pre>$\mathscr{F}[ x(t) ]=2\pi\sum_{k=-\infty}^{\infty}a_k\delta(\omega-k\omega_0)$</span>
+
+求解过程：
+1. 对单个周期作傅里叶变换
+2. 求 a_k
+3. 写出 x(t)
+4. 带入公式
 ### 连续傅里叶变换公式
 [跳转复变函数](./complex_functions.md#fourier-transform)
 ### 条件
@@ -56,9 +66,9 @@
 
 <span v-pre>$\mathscr{F}[ \frac{sin(\omega_ct)}{t} ]\normalsize =\pi[u(t+\omega_c) - u(t-\omega_c)]$</span>
 
-<span v-pre>$\mathscr{F}[ cos(\omega_0t)]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)]$</span>
+<span v-pre>$\mathscr{F}[ cos(\omega_0t) ]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)]$</span>
 
-<span v-pre>$\mathscr{F}[ sin(\omega_0t)]=\frac\pi j[\delta(\omega-\omega_0) - \delta(\omega+\omega_0)]$</span>
+<span v-pre>$\mathscr{F}[ sin(\omega_0t) ]=\frac\pi j[\delta(\omega-\omega_0) - \delta(\omega+\omega_0)]$</span>
 
 <span v-pre>$\mathscr{F}[ u(t) ]=\frac1{j\omega}+\pi\delta(\omega)$</span>
 
@@ -70,7 +80,14 @@
 Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\pi}\int_{-\infty}^{+\infty}|X(j\omega)|^2d\omega$</span>
 
 任意实函数的傅里叶变换实部偶函数，虚部奇函数。实偶对实偶，实奇对虚奇。
+### 特殊变换
+总宽度 T，幅值 E 的三角波：<span v-pre>$\large\mathscr{F}[ f(t) ]=\frac{TE}2Sa^2(\frac{T}{4}\omega)$</span>
+双边指数信号：<span v-pre>$\large\mathscr{F}[ e^{-a|t|} ]=\frac{2a}{a^2+\omega^2}$</span>
 ## 调制与解调
 调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
 
 解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
+## 离散傅里叶
+标记：离散 <span v-pre>$\mathscr{F}(x[n]) = X(e^{j\omega})$</span>  是一个 2π 为周期的函数。
+### 基本变换
+<span v-pre>$\large\mathscr{F}[ a^nu[n] ]=\frac1{1-ae^{-j\omega}}\ \ \ \  (a>0)$</span>

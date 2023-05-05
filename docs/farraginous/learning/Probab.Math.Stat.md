@@ -89,6 +89,8 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
     * 对分布函数也适用
 ### 函数
 令 Z=X+Y，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f(z-y,y)dy$</span> （也可类比对 X 积分）
+
+若 X，Y 独立，还可写成 <span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f_X(z-y)f_Y(y)dy$</span>
 ## 多维正态
 <span v-pre>$\small 若 X_1\sim N(\mu_1,\sigma_1^2) 与 X_2\sim N(\mu_2,\sigma_2^2)独立，则\sum X\sim N(\sum\mu,\sum(\sigma^2))$</span> （对线性组合成立）
 
