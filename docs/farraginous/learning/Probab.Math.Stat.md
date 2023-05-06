@@ -88,9 +88,10 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 * 连续：<span v-pre>$f(x,y)=f_X(x)\cdot f_Y(y)$</span>
     * 对分布函数也适用
 ### 函数
-令 Z=X+Y，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f(z-y,y)dy$</span> （也可类比对 X 积分）
-
-若 X，Y 独立，还可写成 <span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f_X(z-y)f_Y(y)dy$</span>
+* Z=X+Y，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f(z-y,y)dy$</span> （也可类比对 X 积分）若 X，Y 独立，还可写成 <span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f_X(z-y)f_Y(y)dy$</span>（卷积公式）
+* Z=aX+bY，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}\frac1{|b|}f(x,\frac{z-ax}{b})dx = \int_{-\infty}^{+\infty}\frac1{|a|}f(\frac{z-by}{a},y)dy$</span>
+* Z=max{X,Y...} 且 XY... 独立，则 <span v-pre>$F_Z(z)=\prod F_{...}(z)$</span>
+* Z=min{X,Y...} 且 XY... 独立，则 <span v-pre>$F_Z(z)=1-\prod (1-F_{...}(z))$</span>
 ## 多维正态
 <span v-pre>$\small 若 X_1\sim N(\mu_1,\sigma_1^2) 与 X_2\sim N(\mu_2,\sigma_2^2)独立，则\sum X\sim N(\sum\mu,\sum(\sigma^2))$</span> （对线性组合成立）
 
