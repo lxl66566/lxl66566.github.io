@@ -2,8 +2,76 @@
 **此页面几乎不再更新。请前往[我的频道](https://t.me/withabsolutex)搜索 tag: `#垃圾桶`。**
 
 有关博客写作的问题请跳转[VuePress2与博客心得](./withvuepress2.md)。
+## 20230507：qt6 项目构建失败
+问题描述：使用 cmake 与 xmake 构建 qt6 项目均失败。<text style="color:red;font-weight:bold">未解决！</text>
+### cmake
+项目结构：
+
+> ├─ui
+> │  ├─\*.ui
+> │  └─ui_\*.h
+> ├─\*.cpp
+> └─\*.h
+
+其中 `ui_\*.h` 为 `uic` 命令行生成。
+
+以 settingswidget 为例：
+1. settingswidget.ui
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>settingswidget</class>
+ <widget class="QWidget" name="settingswidget">
+...
+```
+2. ui_settingswidget.h
+```cpp
+...
+namespace Ui {
+    class settingswidget: public Ui_settingswidget {};
+} // namespace Ui
+...
+```
+3. settingswidget.h
+```cpp
+namespace Ui
+{
+    class settingswidget;
+}
+class settingswidget : public QWidget
+{
+    ...
+    Ui::settingswidget *ui;
+    ...
+}
+```
+4. settingswidget.cpp
+```cpp
+#include "settingswidget.h"
+#include "ui/ui_settingswidget.h"
+settingswidget::settingswidget(QWidget *parent) : QWidget(parent), ui(new Ui::settingswidget)
+{                                                                      // ^...不允许使用不完整的类型C/C++(70): namespace Ui
+    ui->setupUi(this);                                                 // invalid use of incomplete type 'class Ui::...'
+    ...
+}
+```
+### xmake
+xmake 就别说项目了，连最基本的 example 都无法构建。
+```shell
+xmake create -t qt.widgetapp test
+cd test
+xmake
+```
+> [ 71%]: linking.release test.exe
+> error: LINK : fatal error LNK1181: 无法打开输入文件“Qt6Gui.lib”
+
+Qt sdk lib 里没有 `Qt6Gui.lib`，全是 `.prl` 文件（和 `.a`）。xmake 的资料太少，网上也缺少问题解法。
+### 说两句
+感觉 c++ 项目管理差不多了，cmake 抽象得一批，xmake 又 bug 频发
 ## 20230221：网站访问问题
 问题描述：开启 clash 系统代理时无法访问校内 pt 站：`pt6.neko2022.com`。反之则可以访问。需要实现分流功能。<text style="color:red;font-weight:bold">未解决！</text>
+
+ps. 后续：不用 pt 站了，也不用 clash for windows 而改用 clash verge 了。
 
 一些信息：
 > \> ping pt6.neko2022.com<br/>
