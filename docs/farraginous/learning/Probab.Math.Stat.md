@@ -5,8 +5,7 @@
 ## 工具
 [分布计算器](https://www.statskingdom.com/zh-Hans/2distributions-zhhans.html)：计算标准正态分布
 ## 概率论基础
-### 独立性
-若 A,B 相互独立，则 {A,~A} 和 {B,~B} 相互独立。
+独立性：若 A,B 相互独立，则 {A,~A} 和 {B,~B} 相互独立。
 ## 分布
 求**概率分布**，就是求：分布函数 + 分布律（离散）/概率密度（连续）
 
@@ -61,10 +60,6 @@
 计算公式 2：<span v-pre>$D(X)=E(X^2)-E^2(X)$</span>
 * <span v-pre>$D(CX)=C^2D(X)$</span>
 * D(X+Y)=D(X)+D(Y)+2[cov(X,Y)](#协方差)，（若 X,Y 独立，则 cov(X,Y) s为 0）
-
-### 切比雪夫不等式
-<span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon$</span> 为任意大于 0 常数
-
 ### 协方差
 cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 * cov(X,X) = DX
@@ -90,11 +85,21 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 ### 函数
 * Z=X+Y，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f(z-y,y)dy$</span> （也可类比对 X 积分）若 X，Y 独立，还可写成 <span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f_X(z-y)f_Y(y)dy$</span>（卷积公式）
 * Z=aX+bY，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}\frac1{|b|}f(x,\frac{z-ax}{b})dx = \int_{-\infty}^{+\infty}\frac1{|a|}f(\frac{z-by}{a},y)dy$</span>
+* Z=XY，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}\frac1{|x|}f(x,\frac{z}{x})dx = $</span>...
+* Z=X/Y，类比
 * Z=max{X,Y...} 且 XY... 独立，则 <span v-pre>$F_Z(z)=\prod F_{...}(z)$</span>
 * Z=min{X,Y...} 且 XY... 独立，则 <span v-pre>$F_Z(z)=1-\prod (1-F_{...}(z))$</span>
-## 多维正态
+### 多维正态
 <span v-pre>$\small 若 X_1\sim N(\mu_1,\sigma_1^2) 与 X_2\sim N(\mu_2,\sigma_2^2)独立，则\sum X\sim N(\sum\mu,\sum(\sigma^2))$</span> （对线性组合成立）
 
 正态变量具有线性变换不变性，即多维正态变量的线性组合也服从正态分布；多维正态变量的线性函数也服从正态分布
 
 多个多维正态变量若相互独立，则各变量之间不相关
+### 矩
+* k 阶原点矩：<span v-pre>$Ex^k=E(x-0)^k$</span>
+* k 阶中心矩：<span v-pre>$E(x-Ex)^k$</span>
+## 数理统计
+### inequalities
+* Markov's inequality：<span v-pre>$\displaystyle \mathrm {P} (X\geq a)\leq {\frac {\mathrm {E} (X)}{a}}$</span>
+* Chebyshev's Inequality：<span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon\geq0$</span>
+### Law of large numbers

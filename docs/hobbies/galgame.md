@@ -28,7 +28,7 @@ sidebar: 'auto'
 
 ::: details 一些解释说明
 * 排序方式：后完结→先完结
-* *一般以游戏的所有支线全部推完才算完结 <Badge type="tip" text="可能有例外" />*
+* *一般以游戏的所有支线全部推完才算完结 <Badge text="可能有例外" />*
 * 时间统计利用[Tai](../farraginous/recommend_packages.md#tai)作出。`*`表示统计数据有偏差，`<...>`表示偏差较小，可能由以下原因引起：
     1. Tai 1.0.0.4 及其之前版本可能出现时长错误统计bug；
     2. Tai **闪退**或未成功获取焦点。（闪退bug极为频繁，大约在 2022.11 后修复部分）
@@ -40,35 +40,34 @@ sidebar: 'auto'
 | :----: | :----: | :----: | :----: | :----: | :----: |
 |[melancholianna](https://melancholianna.pages.dev/)|30min?|2023.04.22|0.0|5|0.2|
 |終のステラ|8h15min|2023.04.09-<br/>2023.04.22|9.2|8.3|9.1|
-|ISLAND|29h43min|2023.01.07-<br/>2023.04.08|<text style="color:blue;">14</text>|7.8|3.5|
+|ISLAND|29h43min|2023.01.07-<br/>2023.04.08|<text style="color:blue;">13</text>|7.8|3.5|
 |竜姫ぐーたらいふ3 <Badge type="danger" text="4" />|5h50min|2023.03.30-<br/>2023.04.04|2.8|10|6|
 |竜姫ぐーたらいふLOVE+PLUS <Badge type="warning" text="2" />|2h59min|2023.03.25-<br/>2023.03.28|2|9|6|
 |水葬銀貨のイストリア|43h6min|2023.02.08-<br/>2023.03.26|8.2|7.3|3|
-|Girl Fantasy|19min|2023.02.16|0.1|1|<text style="color:red;">0</text>|
 |[NekoMiko](https://t.me/erogamecloud/2926)|5h47min|2023.02.03-<br/>2023.02.06|3.2|9.8|4|
-|仰望夜空的星辰<Badge type="tip" text="1" />|<39h40min>|2022.10.18-<br/>2023.02.02|8.2|5.7|4.5|
+|仰望夜空的星辰<Badge text="1" />|<39h40min>|2022.10.18-<br/>2023.02.02|8.2|5.7|4.5|
 |魔女的夜宴|-|2022.02.10-<br/>2023.01.27|6.2|7.5|9.3|
-|Fox Hime <Badge type="tip" text="1"/>|29min|2023.01.15|0.4|4.6|<text style="color:red;">0</text>|
+|Fox Hime <Badge text="1"/>|29min|2023.01.15|0.4|4.6|<text style="color:red;">0</text>|
 |PARQUET|8h38min|2023.01.03-<br/>2023.01.07|6.3|9|<text style="color:blue;">10</text>|
-|常轨脱离Creative <Badge type="tip" text="1"/>|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
+|常轨脱离Creative <Badge text="1"/>|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
 |euphoria|23h17min|2022.12.06-<br/>2022.12.23|9.8|4|3.2|
 |NEKOPARA Vol.3 ネコたちのアロマティゼ <Badge type="danger" text="4" />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|5|
-|冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|<text style="color:blue;">13</text>|5|2|
+|冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|<text style="color:blue;">12</text>|5|2|
 |墮落聖處女|2h2min+|2022.04.27-<br/>2022.10.01|0|3.7|<text style="color:red;">0</text>|
 |七音学园-旅行部-·箱根篇 <Badge type="warning" text="2" />|<2h5min>|2022.09.22-<br/>2022.09.24|7.5|9.8|9|
-|七音学园-旅行部-·伊香保篇 <Badge type="tip" text="1" />|<2h23min>|2022.09.18|7.7|9.8|9|
-|苍之彼方的四重奏 <Badge type="tip" text="1" />|<39h50min>|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
+|七音学园-旅行部-·伊香保篇 <Badge text="1" />|<2h23min>|2022.09.18|7.7|9.8|9|
+|苍之彼方的四重奏 <Badge text="1" />|<39h50min>|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
 |鯨神のティアスティラ|<25h47min>|2022.06.21-<br/>2022.08.20|4.2|7.2|9.3|
 |9-nine-新章 <Badge type="danger" text="5" />|<4h43min>|2022.07.20-<br/>2022.07.23|5|6.6|8|
 |星光咖啡馆与死神之蝶|-|2020.10.15-<br/>2022.07.05|5.5|8.5|9.9|
 |9-nine-雪色雪花雪余痕 <Badge type="danger" text="4" />|<13h54min>|2022.06.08-<br/>2022.07.05|10|6|9|
 |NEKOPARA Vol.2 姉妹ネコのシュクレ <Badge type="danger" text="3" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
-|龍姬混~日子 <Badge type="tip" text="1" />|-|2022.01.28-<br/>2022.06.28|2|9|6|
+|龍姬混~日子 <Badge text="1" />|-|2022.01.28-<br/>2022.06.28|2|9|6|
 |纸上魔法使|>36h27min|2022.03.22-<br/>2022.06.20|10.5|7|3|
 |9-nine-春色春恋春熙风 <Badge type="danger" text="3" />|<11h46min>|2022.04.30-<br/>2022.06.07|7|6|8.5|
 |9-nine-天色天歌天籁音 <Badge type="warning" text="2" />|-|2022.04.09-<br/>2022.04.28|7.5|6|8.5|
 |氤氲之白|-|2022.04.19|1|4|1|
-|9-nine-九次九日九重色 <Badge type="tip" text="1" />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
+|9-nine-九次九日九重色 <Badge text="1" />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
 |星空列车与白的旅行|-|2022.03.08-<br/>2022.03.11|10|9|7|
 |仰望夜空的星辰 Interstellar Focus <Badge type="danger" text="3" />|-|2022.01.29-<br/>2022.02.06|3|5|3|
 |ATRI -My Dear Moments-|-|2022.01.02-<br/>2022.01.28|9|9|7|
@@ -76,10 +75,11 @@ sidebar: 'auto'
 |NEKOPARA Vol.1 ソレイユ開店しました！ <Badge type="warning" text="2" />|-|2021.11.26-<br/>2021.12.20|4|9|5|
 |猫神大人与七颗星星|-|2021.11.16-<br/>2021.11.23|8|10|?|
 |CURE GIRL|-|2021.10.10-<br/>2021.11.08|1|4|?|
-|NEKOPARA Vol.0 水無月ネコたちの日常！<Badge type="tip" text="1" /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
+|NEKOPARA Vol.0 水無月ネコたちの日常！<Badge text="1" /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
 |真爱の百合は赤く染まる <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.21|?|3|?|
 |青空下的加缪 <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.20|0|5|?|
-|Fox Hime Zero <Badge type="warning" text="2" /><Badge type="tip" text="app" vertical="bottom" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
+|Fox Hime Zero <Badge type="warning" text="2" /><Badge text="app" vertical="bottom" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
+|Girl Fantasy（烂尾）|19min|2023.02.16|0.1|1|<text style="color:red;">0</text>|
 |小白兔电商（烂尾）|-|?|
 
 *（不排除有缺漏）*
@@ -91,16 +91,16 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
-|近月少女的礼仪|2023.04.23|5.3|6.1|3.3|-22min
-|拔作岛|2023.04.11|?|3|<text style="color:red;">0</text>|-5min
+|近月少女的礼仪 <Badge text="1" />|2023.04.23|5.3|6.1|3.3|-22min
+|拔作岛 <Badge text="1" />|2023.04.11|?|3|<text style="color:red;">0</text>|-5min
 |真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|-5min
 |アンレス テルミナリア|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
-|NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|-4min
+|NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|-5min
 |哥哥，早上起床之前都要抱紧我哦！<Badge text="1" />|2021.02.14?|3|8.6|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
 |灰色的果实
-|DDLC <Badge type="tip" text="steam" vertical="bottom" /> *(暂时不玩)*|2021.11.11|?|1.5|?|
+|DDLC <Badge text="steam" vertical="bottom" /> *(暂时不玩)*|2021.11.11|?|1.5|?|
 |千恋万花 <Badge type="warning" text="krkr" vertical="bottom" />|2021.06.21|6.8|9|9.1|
 |少女领域 <Badge type="warning" text="krkr" vertical="bottom" />|<2020.10.29|5|8|8|
 |KARAKARA|2021.08.25|3.3|5|6.5|
@@ -204,8 +204,8 @@ sidebar: 'auto'
 | :----: | :----: |
 |近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况。|
 |終のステラ|闪屏，backlog 文字颜色错乱![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/tsuinosutera_1.png)|
-|住在下体升级岛上的贫乳该如何是好？|<text style="color:red;">恶性 bug（善雅鸽汉化）：分辨率调整后黑屏，除了删档外无法解决；</text>贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
-|NEKOPARA vol.4|崩了好几次，估计是这个破解包的问题![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png)![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png)|
+|住在下体升级岛上的贫乳该如何是好？|<text style="color:red;">恶性 bug（善雅鸽汉化）：分辨率调整后黑屏，除了删档外无法解决；</text>出现点击无响应情况；贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
+|NEKOPARA vol.4|<text style="color:red;">恶性 bug：推进量达到某一阈值时则崩溃；游戏内打开其他全屏游戏时卡死</text>![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png)![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png)|
 |Girl Fantasy|没有滚轮动作；语音切断；backlog 不自动更新|
 |水葬銀貨のイストリア|没有 backlog 跳转，没有 qsave & qload；退出 auto 会继续往下一句|
 |NekoMiko|无法关闭操作音效；backlog 与下一句都会切断语音|
@@ -246,7 +246,7 @@ sidebar: 'auto'
     * 見たことありますけど -> 我们没见过
     * 君がどうしても行きたいと言うなら -> 如果你告诉我为什么想去
     * 我至今不知道是怎么把 `Q.E.D.`（证明完毕）翻译成 `真~可~爱~` 的……
-    * 。。错别字还有很多，懒得说了
+    * 。。还有很多，懒得说了
 * 学了点简单的在日本流行的扑克玩法（x
 * 共通线贼长，个人线贼短。
 * ~~第一选择支：废柴线；年下线~~
@@ -254,8 +254,8 @@ sidebar: 'auto'
 游戏能 select English，突发奇想，于是就听着日语看着英语字幕玩了，还真挺不错的，表达很地道。但是要多花好多时间啊，毕竟阅读速度摆在那里。
 #### ISLAND
 * 恭喜 ISLAND 打败冥契成为目前列表的剧情最高分！🥰🥰
-* 信息不对称式悬疑，超级反转，幽默风趣；总是要担心下一秒突然捅死（）
-    * 跨越了世界线的多处铺垫与伏笔，时不时出现的悬疑剧情，跨越哲学科学超自然的思考与在最后迎来的十多级超级反转，真是让人欲罢不能！
+* 信息不对称式悬疑，超级反转，幽默风趣；总是要担心下一秒突然被捅死（）
+* 跨越了世界线的多处铺垫与伏笔，时不时出现的悬疑剧情，跨越哲学科学超自然的思考与在最后迎来的十多级超级反转，真是让人欲罢不能！
 * 拒绝分割商法，从 ISLAND 做起，一部抵三部
 * 剧情树优秀；结局丰富。
 #### PARQUET

@@ -3,7 +3,7 @@ I'm very sensitive to file size. And 20230428 I found a nice guy to minimize my 
 
 [UPX](https://github.com/upx/upx), The Ultimate Packer for eXecutables. (copy from its readme, ~~strange capitals~~)
 ## install
-use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install upx`.
+use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install upx`
 ## usage
 `upx --best --lzma <yourfile.exe>`
 

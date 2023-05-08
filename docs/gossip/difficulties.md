@@ -7,10 +7,10 @@
 ### cmake
 项目结构：
 
-> ├─ui
-> │  ├─\*.ui
-> │  └─ui_\*.h
-> ├─\*.cpp
+> ├─ui<br/>
+> │  ├─\*.ui<br/>
+> │  └─ui_\*.h<br/>
+> ├─\*.cpp<br/>
 > └─\*.h
 
 其中 `ui_\*.h` 为 `uic` 命令行生成。
@@ -55,6 +55,17 @@ settingswidget::settingswidget(QWidget *parent) : QWidget(parent), ui(new Ui::se
     ...
 }
 ```
+5. CMakeLists.txt
+```
+...
+file(GLOB UI "${PROJECT_SOURCES}/ui/ui_(.*).h")
+set(PROJECT_SOURCES
+        ...h
+        ...cpp
+        ${UI}
+)
+...
+```
 ### xmake
 xmake 就别说项目了，连最基本的 example 都无法构建。
 ```shell
@@ -62,7 +73,7 @@ xmake create -t qt.widgetapp test
 cd test
 xmake
 ```
-> [ 71%]: linking.release test.exe
+> [ 71%]: linking.release test.exe<br/>
 > error: LINK : fatal error LNK1181: 无法打开输入文件“Qt6Gui.lib”
 
 Qt sdk lib 里没有 `Qt6Gui.lib`，全是 `.prl` 文件（和 `.a`）。xmake 的资料太少，网上也缺少问题解法。

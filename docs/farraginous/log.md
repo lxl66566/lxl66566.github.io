@@ -10,7 +10,7 @@ sidebar: 'auto'
 ## 2023
 ### .05
 #### 2023.05.08
-* 生活中遇到的困难 新增 [qt6 项目构建失败](../gossip/difficulties.md#20230507qt6-项目构建失败)
+* 生活中遇到的困难 新增 [qt6 项目构建失败](../gossip/difficulties.md#_20230507-qt6-项目构建失败)
 ### .04
 #### 2023.04.29
 * [xxx 的缺陷](../gossip/fuckxxx.md) 新增 [OSU](../gossip/fuckxxx.md#osu-有多难用)
