@@ -103,3 +103,4 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 * Markov's inequality：<span v-pre>$\displaystyle \mathrm {P} (X\geq a)\leq {\frac {\mathrm {E} (X)}{a}}$</span>
 * Chebyshev's Inequality：<span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon\geq0$</span>
 ### Law of large numbers
+* Weak Law (also Khinchin's law)：*均值* 概率收敛于 *期望值* （独立同分布）

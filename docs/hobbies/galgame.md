@@ -51,7 +51,7 @@ sidebar: 'auto'
 |PARQUET|8h38min|2023.01.03-<br/>2023.01.07|6.3|9|<text style="color:blue;">10</text>|
 |常轨脱离Creative <Badge text="1"/>|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
 |euphoria|23h17min|2022.12.06-<br/>2022.12.23|9.8|4|3.2|
-|NEKOPARA Vol.3 ネコたちのアロマティゼ <Badge type="danger" text="4" />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|5|
+|NEKOPARA Vol.3 ネコたちのアロマティゼ <Badge type="danger" text="4" />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|6|
 |冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|<text style="color:blue;">12</text>|5|2|
 |墮落聖處女|2h2min+|2022.04.27-<br/>2022.10.01|0|3.7|<text style="color:red;">0</text>|
 |七音学园-旅行部-·箱根篇 <Badge type="warning" text="2" />|<2h5min>|2022.09.22-<br/>2022.09.24|7.5|9.8|9|
@@ -61,7 +61,7 @@ sidebar: 'auto'
 |9-nine-新章 <Badge type="danger" text="5" />|<4h43min>|2022.07.20-<br/>2022.07.23|5|6.6|8|
 |星光咖啡馆与死神之蝶|-|2020.10.15-<br/>2022.07.05|5.5|8.5|9.9|
 |9-nine-雪色雪花雪余痕 <Badge type="danger" text="4" />|<13h54min>|2022.06.08-<br/>2022.07.05|10|6|9|
-|NEKOPARA Vol.2 姉妹ネコのシュクレ <Badge type="danger" text="3" />|-|2022.02.16-<br/>2022.07.01|4|9|4|
+|NEKOPARA Vol.2 姉妹ネコのシュクレ <Badge type="danger" text="3" />|-|2022.02.16-<br/>2022.07.01|4|9|6|
 |龍姬混~日子 <Badge text="1" />|-|2022.01.28-<br/>2022.06.28|2|9|6|
 |纸上魔法使|>36h27min|2022.03.22-<br/>2022.06.20|10.5|7|3|
 |9-nine-春色春恋春熙风 <Badge type="danger" text="3" />|<11h46min>|2022.04.30-<br/>2022.06.07|7|6|8.5|
@@ -72,7 +72,7 @@ sidebar: 'auto'
 |仰望夜空的星辰 Interstellar Focus <Badge type="danger" text="3" />|-|2022.01.29-<br/>2022.02.06|3|5|3|
 |ATRI -My Dear Moments-|-|2022.01.02-<br/>2022.01.28|9|9|7|
 |龍姬混~日子2 <Badge type="danger" text="3" />|-|2021.12.23-<br/>2022.01.27|2|10|5|
-|NEKOPARA Vol.1 ソレイユ開店しました！ <Badge type="warning" text="2" />|-|2021.11.26-<br/>2021.12.20|4|9|5|
+|NEKOPARA Vol.1 ソレイユ開店しました！ <Badge type="warning" text="2" />|-|2021.11.26-<br/>2021.12.20|4|9|6|
 |猫神大人与七颗星星|-|2021.11.16-<br/>2021.11.23|8|10|?|
 |CURE GIRL|-|2021.10.10-<br/>2021.11.08|1|4|?|
 |NEKOPARA Vol.0 水無月ネコたちの日常！<Badge text="1" /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
@@ -91,12 +91,12 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
-|近月少女的礼仪 <Badge text="1" />|2023.04.23|5.3|6.1|3.3|-22min
+|近月少女的礼仪 <Badge text="1" />|2023.04.23|5.3|6.1|3.3|-23min
 |拔作岛 <Badge text="1" />|2023.04.11|?|3|<text style="color:red;">0</text>|-5min
-|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|-5min
+|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|-6min
 |アンレス テルミナリア|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
-|NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|-5min
+|NEKOPARA vol.4 ネコとパティシエのノエル <Badge type="danger" text="5" />|2023.03.11|?|9.7|7|-8min
 |哥哥，早上起床之前都要抱紧我哦！<Badge text="1" />|2021.02.14?|3|8.6|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
 |灰色的果实
