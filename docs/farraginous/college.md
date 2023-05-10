@@ -126,7 +126,7 @@ sidebar: 'auto'
 
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
-|数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" />人不差，但是废话贼多|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
+|数字系统设计 - 木昌洪|1|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教学质量低，~~遇到他算你们倒霉~~|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
 |概率论<Badge text="半开卷" /><Badge type="warning" text="电子版" /> - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
 |信号与系统 - 朱煜|7[^1]|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|3|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊|

@@ -56,6 +56,19 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 11. 使用[O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10)禁用一些非必须功能。
 12. 启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（[参考](https://zhuanlan.zhihu.com/p/336846460)）：在 regedit 中，将 `HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled` 的值设为 0.
 13. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
+14. 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
+
+## 对 ArchWSL 的设置
+* 我安装的包：cmake, yay, fishshell, neovim, 
+* ~/.bashrc（仅含手动编辑）:
+```bash
+alias ll='ls -alF'
+export DWM=/home/lxl/myfile/dwm
+if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
+then
+    exec fish
+fi
+```
     
 ## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
