@@ -59,6 +59,7 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 下面的一个方法下载仓库文件而不包含 .git 信息：
 4. CDN：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`
 ## 搜索技巧
+### 仓库搜索
 搜索格式与你的关键词使用空格隔开。你也可以使用 [Github 官方提供的高级搜索](https://github.com/search/advanced)界面。
 
 |格式|作用|样例|
@@ -70,6 +71,7 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 |fork:|指定fork数范围|类比|
 |language:|指定程序语言|`language:c#`|
 |pushed:|指定最近更新时间范围|`pushed:>2022-01-01`|
+### [代码搜索](https://docs.github.com/zh/search-github/github-code-search/understanding-github-code-search-syntax)
 ## Github Workflow
 Github 工作流，极为强大。可以理解为一个虚拟机。[官方文档](https://docs.github.com/cn/actions/using-workflows/about-workflows)
 
