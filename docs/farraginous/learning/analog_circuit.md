@@ -38,3 +38,8 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(
     * 缺点：漂移放大，调试困难，Q 点不稳定
 * 阻容耦合，优缺点相反
 * 变压器耦合与光电耦合（非重点）
+* 长尾式
+* 功率放大电路
+## 频率响应
+* 高通：<span v-pre>$\large\.A_u=\frac{j\frac{f}{f_L}}{1+j\frac{f}{f_L}}$</span>，U0 超前
+* 低通：<span v-pre>$\large\.A_u=\frac{1}{1+j\frac{f}{f_H}}$</span>，U0 滞后

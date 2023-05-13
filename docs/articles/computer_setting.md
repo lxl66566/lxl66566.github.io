@@ -59,7 +59,8 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 14. 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
 
 ## 对 ArchWSL 的设置
-* 我安装的包：cmake, yay, fishshell, neovim, 
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, 
+* 我计划装的包：trash-cli
 * ~/.bashrc（仅含手动编辑）:
 ```bash
 alias ll='ls -alF'
