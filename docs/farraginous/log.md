@@ -9,6 +9,10 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录；学习笔记区因其特殊性，此处不做普通维护记录。）*
 ## 2023
 ### .05
+#### 2023.05.14
+* [Linux](../coding/linux.md) 中新增内容
+* 网址推荐 中新增 [AI 工具](./recommend_websites.md#ai-工具)
+* 文章新增 [VPS 收藏](../articles/vps.md)
 #### 2023.05.10
 * 设置电脑 新增 [对 ArchWSL 的设置](../articles/computer_setting.md#对-archwsl-的设置)
 #### 2023.05.08

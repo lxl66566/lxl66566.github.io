@@ -15,5 +15,6 @@
 ## 推荐
 1. [电脑、手机端记录软件使用时长](./time_record.md)
 2. [运动轨迹记录软件横评](./track_record.md)
+3. [VPS 收藏](./vps.md)
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->

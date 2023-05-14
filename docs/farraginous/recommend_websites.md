@@ -18,6 +18,14 @@ sidebar: 'auto'
 平时不用，但以后可能用得上。
 * [eu.org 免费域名](https://nic.eu.org/)
 * [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
+## AI 工具
+### LLM
+LLM：Large Language Models，大型语言模型。下述均可免费使用。
+* [BAI Chat](https://chatbot.theb.ai/)：GPT-3.5 模型。也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)。
+* [new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。坏处是被微软大削弱后，不会帮你写作业（
+    * 需要使用科学上网，若自动重定向到 `bing.com` 则需要检查节点，并清楚 Cookies。
+* [Claude](https://www.anthropic.com/product)：据说是 OpenAI 独立出来的员工创办的。无法直接使用（需要美国身份），请[通过 slack bot 使用](https://slackbot.anthropic.com/slack/install)。
+* [phind](https://www.phind.com/)：搜索编程有关问题。会给出来源。
 ## 资源搜索
 * 搜电子书：[zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
 > 2022.11.04: 绝对值x悲哀道：z-library暂时离开了我们。<br/>
