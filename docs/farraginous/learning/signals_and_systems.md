@@ -88,6 +88,20 @@ Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\
 
 解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
 ## 离散傅里叶
-标记：离散 <span v-pre>$\mathscr{F}(x[n]) = X(e^{j\omega})$</span>  是一个 2π 为周期的函数。
-### 基本变换
-<span v-pre>$\large\mathscr{F}[ a^nu[n] ]=\frac1{1-ae^{-j\omega}}\ \ \ \  (a>0)$</span>
+离散： <span v-pre>$\mathscr{F}(x[n]) = X(e^{j\omega})=\sum X[n]e^{-j\omega n}$</span>  是一个 2π 为周期的函数。
+
+<span v-pre>$X[n]=\frac1{2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega$</span>
+
+### [基本变换](https://www.bilibili.com/video/BV1g94y1Q76G/?p=33)
+
+<span v-pre>$\large\mathscr{F}[ a^nu[n] ]=\frac1{1-ae^{-j\omega}}\ \ \ \  (|a|\lt1)$</span>
+
+<span v-pre>$\mathscr{F}[ \delta[n] ]=1$</span>
+
+<span v-pre>$\mathscr{F}[ 1 ]=2\pi\sum_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)$</span>
+
+<span v-pre>$\mathscr{F}[ u[n+N]-u[n-N-1] ]=\large\frac{sin((N+1/2)\omega)}{sin(\frac12\omega)}$</span>
+
+<span v-pre>$\large\mathscr{F}[ \frac{sin(\omega_0n)}{\pi n} ]=\sum g(\omega_0)$</span>（当 ω0 &gt; 2π 时，需要考虑叠加）
+
+<span v-pre>$\mathscr{F}[ u[n] ]=\large\frac1{1-e^{-j\omega}}+\small\pi\sum_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)$</span>

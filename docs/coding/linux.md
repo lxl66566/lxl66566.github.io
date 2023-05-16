@@ -1,7 +1,7 @@
 # linux
 我使用的是 [ArchWSL](https://github.com/yuk7/ArchWSL) on WSL2。因为游戏原因无法抛弃 windows，但又想学习体验 Linux，于是使用折中方案。
 ## 包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, 
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, 
 * 我计划装的包：trash-cli
 ## 更换镜像
 `nvim /etc/pacman.d/mirrorlist`
