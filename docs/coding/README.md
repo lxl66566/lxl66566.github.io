@@ -12,6 +12,7 @@
 ## 工具
 1. [Github](./github.md)
 2. [Git](./Git.md)
-3. [Vim](./vim.md)
+3. [Linux](./linux.md)
+4. [Vim](./vim.md)
 ## 其他能力
 1. [算法](./algorithm.md)

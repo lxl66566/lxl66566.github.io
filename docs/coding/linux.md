@@ -1,10 +1,23 @@
 # linux
 我使用的是 [ArchWSL](https://github.com/yuk7/ArchWSL) on WSL2。因为游戏原因无法抛弃 windows，但又想学习体验 Linux，于是使用折中方案。
+
+Android 平板使用 termux。
 ## 包
 * 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, 
-* 我计划装的包：trash-cli
+* 我计划装的包：trash-cli, tmux
 ## 更换镜像
-`nvim /etc/pacman.d/mirrorlist`
+:::: code-group
+::: code-group-item ArchWSL
+```bash
+nvim /etc/pacman.d/mirrorlist
+```
+:::
+::: code-group-item termux
+```bash
+termux-change-repo
+```
+:::
+::::
 ## 使用 windows 代理
 懒得在 wsl 里重复下载，直接使用 windows 代理。[参考](https://zhuanlan.zhihu.com/p/153124468)
 ```sh
@@ -29,6 +42,7 @@ fi
 ```
 </details>
 
+termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`。
 ### fishshell
 * `~/.config/fish/config.fish`：
 ```bash
