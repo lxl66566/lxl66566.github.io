@@ -102,5 +102,11 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 ### inequalities
 * Markov's inequality：<span v-pre>$\displaystyle \mathrm {P} (X\geq a)\leq {\frac {\mathrm {E} (X)}{a}}$</span>
 * Chebyshev's Inequality：<span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon\geq0$</span>
-### Law of large numbers
+### [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers)
+* Bernoulli's theorem (LLN)：*频率* 概率收敛于 *概率*
+> Today, Bernoulli’s law of large numbers is also known as the weak law of large numbers. —— Bernoulli’s Law of Large Numbers, Erwin Bolthausen∗ and Mario V. W¨uthrich†
 * Weak Law (also Khinchin's law)：*均值* 概率收敛于 *期望值* （独立同分布）
+### Central limit theorem
+* [De Moivre–Laplace theorem](https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem)：<span v-pre>${\displaystyle \left(X\!\,-\!\,np\right)\!/\!{\sqrt {np(1-p)}}} \xrightarrow {d} \ {\mathcal {N}}(0,1)$</span>
+* [Lindeberg CLT](https://zh.wikipedia.org/wiki/中心极限定理#林德伯格－列维定理)：（独立同分布）<span v-pre>$\displaystyle{\frac {{\bar {X}}-EX }{\sigma /{\sqrt {n}}}}\xrightarrow {d} \ {\mathcal {N}}(0,1).$</span>
+* [Lyapunov CLT](https://en.wikipedia.org/wiki/Central_limit_theorem#Lyapunov_CLT)：（独立，满足...条件）<span v-pre>$s_{n}^{2}=\sum _{i=1}^{n}\sigma _{i}^{2},\displaystyle {\frac {1}{s_{n}}}\,\sum _{i=1}^{n}\left(X_{i}-EX_{i}\right) \ \xrightarrow {d} \ {\mathcal {N}}(0,1).$</span>

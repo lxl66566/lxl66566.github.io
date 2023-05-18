@@ -17,6 +17,12 @@ PN 结电流方程：<span v-pre>$I=I_s(\large e^\frac{U}{U_T}-1)，\small U_T =
 （H 参数微变等效，中低频）：b e 加电阻，c e 加流控电流源
 
 （物理模型等效，全频域）：
+
+<div style="text-align: center;">
+<img alt="物理模型等效" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/learning/analog_circuit/1.png"  width="70%" height="70%"/>
+</div>
+
+且还能再继续简化。
 ### 场效应管
 g,s,d 对应三极管的 b,e,c，跨导 gm 对应三极管的 β
 
@@ -43,5 +49,5 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(
 * 长尾式
 * 功率放大电路
 ## 频率响应
-* 高通：<span v-pre>$\large\.A_u=\frac{j\frac{f}{f_L}}{1+j\frac{f}{f_L}}$</span>，U0 超前
-* 低通：<span v-pre>$\large\.A_u=\frac{1}{1+j\frac{f}{f_H}}$</span>，U0 滞后
+* 高通：<span v-pre>$\large\dot A_u=\frac{j\frac{f}{f_L}}{1+j\frac{f}{f_L}}$</span>，U0 超前
+* 低通：<span v-pre>$\large\dot A_u=\frac{1}{1+j\frac{f}{f_H}}$</span>，U0 滞后

@@ -23,7 +23,7 @@ sidebar: 'auto'
 LLM：Large Language Models，大型语言模型。下述均可免费使用。
 * [BAI Chat](https://chatbot.theb.ai/)：GPT-3.5 模型。也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)。
 * [new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。坏处是被微软大削弱后，不会帮你写作业（
-    * 需要使用科学上网，若自动重定向到 `bing.com` 则需要检查节点，并清楚 Cookies。
+    * 需要使用科学上网，若自动重定向到 `bing.com` 则需要检查节点，并清除 Cookies。
 * [Claude](https://www.anthropic.com/product)：据说是 OpenAI 独立出来的员工创办的。无法直接使用（需要美国身份），请[通过 slack bot 使用](https://slackbot.anthropic.com/slack/install)。
 * [phind](https://www.phind.com/)：搜索编程有关问题。会给出来源。
 ## 资源搜索
@@ -31,7 +31,7 @@ LLM：Large Language Models，大型语言模型。下述均可免费使用。
 > 2022.11.04: 绝对值x悲哀道：z-library暂时离开了我们。<br/>
 > 但天无绝自由之路。<br/>
 > zlib 下载挺好用的，但是上传死活传不上去。。
-* 搜编程&开发：[phind](https://phind.com/)，The AI search engine for developers, like new bing.
+<!-- * 搜编程&开发：[phind](https://phind.com/)，The AI search engine for developers, like new bing. -->
 * 搜动漫：[樱花动漫](https://www.yhdmp.live/) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/)
 * 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN) | [找脚本](http://zhaojiaoben.cn/)
 * 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/) | [Explore connected papers in a visual graph](https://www.connectedpapers.com/)

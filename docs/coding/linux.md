@@ -27,6 +27,17 @@ export ALL_PROXY="http://$host_ip:$your_port"
 ```
 
 代理软件需要开启局域网连接。测试时不要使用 `ping` 指令（用 `curl`），其不走代理。
+## 关于进程
+一般使用 `ps aux` 配合 `grep` 查找进程。
+### 清理僵尸进程
+如果你看到许多 `[journalctl] <defunct>` 标识，这代表有未结束的僵尸子进程。可以[参考此处](https://www.linkedin.com/pulse/how-identify-kill-zombiedefunct-processes-linux-without-george-gabra)清理他们。
+```sh
+top -b1 -n1 | grep Z    # find
+ps -A -ostat,ppid | grep -e '[zZ]'| awk '{ print $2 }' | uniq | xargs ps -p # Find the parent of zombie processes, remenber ppid
+kill -s SIGCHLD <ppid>
+top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
+# if haven't been killed, just kill <ppid>
+```
 ## 包使用
 ### bash
 <details><summary>use fishshell, not bash</summary>

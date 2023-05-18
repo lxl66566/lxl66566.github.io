@@ -8,10 +8,10 @@ sidebar: 'auto'
 
 ## 免费VPN
 :::warning 警告
-自带闭源客户端的免费VPN在安全性方面没有保证，不推荐使用。
-:::
+自带闭源客户端的免费 VPN 在安全性方面没有保证，不推荐使用。
 
 **免费VPN仅应在无其他安全选择的情况下，接触非敏感信息时使用，且有较高信息泄露风险。** 随着审查力度变化，不排除更高危险。[血的教训（当然不是我](https://focus.scol.com.cn/shwx/202007/57862317.html)
+:::
 
 以下免费推荐均为Android端app，**均可在谷歌商店下载**。
 ### 火箭加速（推荐）
@@ -181,16 +181,18 @@ tips：加速前需事先选择能通过连接测试的节点
 * [飞鸟云](https://feiniaoyun.xyz/)
 ## 客户端选择
 ### Clash Verge（推荐）
-开源 Clash 客户端。[项目地址](https://github.com/zzzgydi/clash-verge)
+开源 Clash 客户端，rust + tauri 使我非常满意 & 放心。[项目地址](https://github.com/zzzgydi/clash-verge)
 
-相比[Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于新手无关紧要的</span>功能会更少一些。
+相比[Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。
+
+其 *设置热键* 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，放弃了 Clash Verge 而去使用了 [v2rayN](#v2ray)。
 #### 简易教程
 我们可以先在设置中将其语言调成中文。
 
-类似地，在 *配置* 中粘贴订阅链接，下载并选中，然后就可以在 *代理* 中使用节点了。
+类似地，在 *配置* 中粘贴订阅链接，下载并选中，然后就可以在 *代理* 中使用节点了。记得在 *配置* 中打开 *系统代理* 选项。
 ### Clash for Windows
 #### 简介
-*Clash for Windows* 是闭源的PC客户端。然而因为一个 [bug](https://github.com/Fndroid/clash_for_windows_pkg/issues/1105)导致我转向了 [Clash Verge](#clash-verge)。
+*Clash for Windows* 是闭源的PC客户端。（然而因为一个 [bug](https://github.com/Fndroid/clash_for_windows_pkg/issues/1105)导致我转向了 [Clash Verge](#clash-verge)。）
 #### 下载地址
 [项目地址](https://github.com/Fndroid/clash_for_windows_pkg) | [PC端下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases) | [私链](https://wwp.lanzout.com/ixncj0a1k28h)
 #### 优势
@@ -204,16 +206,29 @@ tips：加速前需事先选择能通过连接测试的节点
 * [这里](https://github.com/BoyceLig/Clash_Chinese_Patch)提供clash的汉化。
 * 在节点界面点击测速图标测试全部节点的连通性
 * 建议设置配置文件自动更新（Profiles -> 右击配置文件 -> Settings -> Update Interval 设为 24）
-### Clash For Android（推荐）
+### Clash For Android
 请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)。[私链](https://wwp.lanzout.com/iL6sD03mi0gf)
 ### V2ray
 #### 简介
 V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（[摘自](https://www.xuebuyuan.com/3296293.html)）
 
-V2ray同样拥有Android与PC客户端。由于我不常用，故不给出教程与建议。
+V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
+
+相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点，单个特定协议的节点无法直接导入 clash，因此使用 v2ray。<span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>
 #### 下载地址
-[内核项目地址](https://github.com/v2fly/v2ray-core) | [客户端项目地址](https://github.com/2dust/v2rayN)
+[内核项目地址](https://github.com/v2fly/v2ray-core) | [PC 客户端项目地址](https://github.com/2dust/v2rayN)
+#### 简易教程
+以 PC 端的 v2rayN为例。
+1. 前往 PC 客户端项目地址，下载
+    * 可以选择下载 `v2rayN-With-Core.zip`，最为简单无脑。
+    * With Core 体积太大了，我选择自己配置内核。则需要在内核项目地址下载内核后，解压放入 `/v2rayN/bin/v2fly_v5` 下。
+    根据项目提示，我还下载了 [Xray-core](https://github.com/XTLS/Xray-core) 放入 `/v2rayN/bin/Xray`。<span class="heimu" title="你知道的太多了">应该不会有人把解压后的整个文件夹丢进去吧</span>
+2. 复制节点地址，按 `Ctrl+V` 导入，按 `Enter` 激活。
+3. 测试真连接延迟，确保节点有效。
+4. 下方 *系统代理* 处选择 *自动配置系统代理*，开启代理。
 ### Matsuri & NekoRay
 开源，自由度高，安全性好，使用体验一般 *(Matsuri > NekoRay)* 。
 
 关于下载与使用请[进入网站](https://matsuricom.github.io/)自行查阅。
+### SagerNet
+跟 Matsuri 高度重合的 Android 代理。
