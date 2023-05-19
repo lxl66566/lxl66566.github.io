@@ -12,9 +12,9 @@
 ## 经历
 1. [我设置电脑的过程和一些小技巧](./computer_setting.md)
 2. [设置手机](./mobile_setting.md)
+3. [购买，设置 VPS](./vps.md)
 ## 推荐
 1. [电脑、手机端记录软件使用时长](./time_record.md)
 2. [运动轨迹记录软件横评](./track_record.md)
-3. [VPS 收藏](./vps.md)
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->

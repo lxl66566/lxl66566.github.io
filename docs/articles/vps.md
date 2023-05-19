@@ -24,30 +24,56 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 * 可以在 `/var/log/auth.log` 中查看登录日志。我的日志里的攻击记录非常多。
 * `ps aux | grep sshd` 查看有没有 `sshd: root [.*]` 类型的进程。
     * `ps aux | grep 'sshd' | grep -v 'root@pts/0\|grep\|/sbin/sshd' | awk '{print $2}' | xargs kill -9` 可以杀掉这些进程。（很粗糙了属于是）
+* `less /var/log/auth.log | grep -i 'accepted'` 可以查看登录成功的记录
+* `lastb -9` 可以查看最近 9 条登录失败记录
+
 ### 解法
 * 可以通过修改 `/etc/ssh/sshd_config` 中的内容进行限制，例如修改 `MaxAuthTries`。
 * 密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。
+* 限制登录 ip。修改 `/etc/hosts.allow` & `/etc/hosts.deny` 文件。
 * firewalld
-:::: code-group
-::: code-group-item basic
-```sh
-systemctl <start | enable | stop | disable> firewalld
-firewall-cmd --state
-firewall-cmd --reload   # after change
-```
-:::
-::: code-group-item add
-```sh
-firewall-cmd --add-port=<port>/tcp --permanent  # permanent
-```
-:::
-::: code-group-item show
-```sh
-firewall-cmd --zone=public --list-all
-firewall-cmd --zone=public --list-ports # or
-```
-:::
-::::
+    :::: code-group
+    ::: code-group-item basic
+    ```sh
+    systemctl <start | enable | stop | disable> firewalld
+    firewall-cmd --state
+    firewall-cmd --reload   # after change
+    ```
+    :::
+    ::: code-group-item add
+    ```sh
+    firewall-cmd --add-port=<port>/tcp --permanent  # permanent
+    ```
+    :::
+    ::: code-group-item show
+    ```sh
+    firewall-cmd --zone=public --list-all
+    firewall-cmd --zone=public --list-ports # or
+    ```
+    :::
+    ::::
+    * 我写了一个脚本用于快速执行防火墙指令。
+    ```bash
+    function firewall --description 'enable or disable firewalld'
+    set usage "usage: firewall [option]
+    options: -e: enable and start firewall
+            -d: disable and stop firewall"
+    if [ (count $argv) -eq 0 ]
+        echo $usage
+    else
+        switch $argv[1]
+            case '-e'
+                systemctl enable firewalld
+                systemctl start firewalld
+            case '-d'
+                systemctl stop firewalld
+                systemctl disable firewalld
+            case '*'
+                echo $usage
+        end
+    end
+    end
+    ```
 ## 搭建代理
 有谁买了海外 VPS 不是为了搭代理的呢？
 ### 协议
@@ -55,11 +81,19 @@ firewall-cmd --zone=public --list-ports # or
 
 我比较菜，直接用 [trojan 一键脚本](https://github.com/Jrohy/trojan)了。（本来是想用 X-UI 的，然而[出了问题](#x-ui-does-not-work)）
 
-如果有问题可以尝试换个端口。我的 443 也放行了，但就是不能用。。
+如果有问题可以尝试换个端口。[GFW 会主动对端口进行封禁](#对抗-gfw)，我有一个端口仅存活一天。
 ### WARP
 发现访问 Google 时会有机器人异常验证，久而久之还是挺烦的。可以用 [WARP 一键脚本](https://github.com/P3TERX/warp.sh) 装个 WARP 解决。
+### 对抗 GFW
+GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 ip 被永久封禁的风险。trojan 本身是 TLS over TLS 加密方式，但仍然有办法识别出流量特征。
+
+我使用如下方式降低封锁几率（有没有用其实是不太清楚的）：
+* 开启 trojan-go 而非纯 trojan
+* [WARP](#warp)
+* 使用 Nginx 将伪装页面（我选择我的小破博客<span class="heimu" title="你知道的太多了">的不完全体</span>）部署到 80 和 443 端口。
+    * ~~吐槽一下一键脚本，把 trojan-web 面板开在 80 端口然后用 443 映射到 80...~~
 ## 包
-已安装：psmisc, nvim, firewalld, curl, 
+已安装：psmisc, nvim, firewalld, curl, fd, net-tools,
 ## 遇到的问题
 ### 配置了错误的 firewalld 把自己防住了
 20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 `firewall-cmd --reload`，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...
