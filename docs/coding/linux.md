@@ -1,7 +1,7 @@
 # linux
-我使用的是 [ArchWSL](https://github.com/yuk7/ArchWSL) on WSL2。因为游戏原因无法抛弃 windows，但又想学习体验 Linux，于是使用折中方案。
+我使用的是 [ArchWSL](https://github.com/yuk7/ArchWSL) on WSL2。因为游戏原因无法抛弃 windows，但又想学习体验 Linux，于是使用折中方案。在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。
 
-Android 平板使用 termux。
+VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 包
 * 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, 
 * 我计划装的包：trash-cli, tmux
@@ -55,6 +55,7 @@ fi
 
 termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`。
 ### fishshell
+* 配置文件一般在 `~/.config/fish` 下。
 * `~/.config/fish/config.fish`：
 ```bash
 if status is-interactive
@@ -63,6 +64,7 @@ if status is-interactive
 end
 ```
 * 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)
+* 函数：使用 function 新增函数后，还需要使用 `funcsave <function>` 保存到配置文件夹下以便修改。
 ## 遇到的问题
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。

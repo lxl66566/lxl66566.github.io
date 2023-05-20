@@ -1,5 +1,7 @@
 # VPS
 我与我的 VPS 的故事。
+
+与 VPS 无关的 linux 问题请移步 [linux](../coding/linux.md)
 ## Price
 ### 20230514
 |Host|Price|bandwidth|RAM|Storage|Core|
@@ -81,22 +83,76 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 
 我比较菜，直接用 [trojan 一键脚本](https://github.com/Jrohy/trojan)了。（本来是想用 X-UI 的，然而[出了问题](#x-ui-does-not-work)）
 
-如果有问题可以尝试换个端口。[GFW 会主动对端口进行封禁](#对抗-gfw)，我有一个端口仅存活一天。
+如果有问题可以尝试换个端口。[GFW 会主动对端口进行封禁](#对抗-gfw)，我的端口基本只能存活一天。
 ### WARP
 发现访问 Google 时会有机器人异常验证，久而久之还是挺烦的。可以用 [WARP 一键脚本](https://github.com/P3TERX/warp.sh) 装个 WARP 解决。
 ### 对抗 GFW
 GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 ip 被永久封禁的风险。trojan 本身是 TLS over TLS 加密方式，但仍然有办法识别出流量特征。
 
-我使用如下方式降低封锁几率（有没有用其实是不太清楚的）：
+我使用如下方式降低封锁几率（**有没有用其实是不太清楚的**）：
 * 开启 trojan-go 而非纯 trojan
 * [WARP](#warp)
-* 使用 Nginx 将伪装页面（我选择我的小破博客<span class="heimu" title="你知道的太多了">的不完全体</span>）部署到 80 和 443 端口。
-    * ~~吐槽一下一键脚本，把 trojan-web 面板开在 80 端口然后用 443 映射到 80...~~
+* 使用 Nginx 将伪装页面（我选择我的小破博客）[部署](#nginx)到 443 端口 (80 转发 443)。
+* 设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。
 ## 包
-已安装：psmisc, nvim, firewalld, curl, fd, net-tools,
+已安装：psmisc, nvim, firewalld, curl, fd, net-tools, nginx, fish, 
+### nginx
+部署我的博客到 443，同时将 80 端口转发到 443.
+* /etc/nginx/nginx.conf:
+    ```nginx
+    http {
+        server {
+            listen 80;
+            server_name <domain name>;
+            rewrite ^(.*)$ https://${host}$1 permanent;
+        }
+        server {
+            listen 443 ssl;
+            server_name <domain name>;
+            ssl_certificate /root/cert/....cer;
+            ssl_certificate_key /root/cert/....key;
+            index index.html;
+            location / {
+                root /etc/nginx/myblog;
+            }
+
+        }
+    }
+    ...
+    ```
+* 重新载入：`nginx -s reload`
 ## 遇到的问题
+### 端口被封问题
+20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口并显示在伪装页面上。
+```fish
+function new_trojan_port --description 'change to a new trojan port'
+    firewall-cmd --remove-forward-port=port=12138:proto=tcp:toport=$trojan_port --permanent
+    firewall-cmd --remove-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
+    set -U trojan_port (math $trojan_port + 1)
+    firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
+    firewall-cmd --add-forward-port=port=12138:proto=tcp:toport=$trojan_port --permanent
+    set temp (echo $trojan_port | trojan port | tee /dev/tty | sed -n "s/.*端口: \([0-9]*\).*/\1/p")
+    echo "port: $temp -> $trojan_port"
+    firewall-cmd --reload
+    cd /etc/nginx/lxl66566.github.io
+    git pull origin main
+    sed -i "s/MyGitHub/$trojan_port/g" index.html
+    nginx -s reload
+end
+```
+不应同时使用 firewalld 和 iptables，可能会导致混乱。由于 `firewalld` 是更高一层的抽象(?)，因此我使用之：
+```
+systemctl stop iptables
+systemctl disable iptables
+systemctl mask iptables
+systemctl unmask firewalld
+systemctl enable firewalld
+systemctl start firewalld
+```
 ### 配置了错误的 firewalld 把自己防住了
 20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 `firewall-cmd --reload`，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...
+
+> rescue mode 是 VPS 服务商的一项服务，可以将 VPS 挂载到另一个虚拟机上，通过其对文件进行备份与修改，适用于乱搞把 VPS 搞炸了的情况。
 
 rescue 只有 nano file editor；挂载了分区到 `test` 以后，直接 `nano /test/etc/firewalld/zones/public.xml` 加上 `<port port="22" protocol="tcp"/>`。
 ### X-UI does not work
