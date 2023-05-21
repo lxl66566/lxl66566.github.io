@@ -15,14 +15,6 @@ PN 结电流方程：<span v-pre>$I=I_s(\large e^\frac{U}{U_T}-1)，\small U_T =
 牢记输入特性曲线（类似二极管）与输出特性曲线。温度升高，输入曲线左移，输出上移。
 
 （H 参数微变等效，中低频）：b e 加电阻，c e 加流控电流源
-
-（物理模型等效，全频域）：
-
-<div style="text-align: center;">
-<img alt="物理模型等效" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/learning/analog_circuit/1.png"  width="70%" height="70%"/>
-</div>
-
-且还能再继续简化。
 ### 场效应管
 g,s,d 对应三极管的 b,e,c，跨导 gm 对应三极管的 β
 
@@ -48,6 +40,25 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(
 * 变压器耦合与光电耦合（非重点）
 * 长尾式
 * 功率放大电路
+## 电流源
+* 镜像电流源
+* 比例电流源
+* 微电流源
+* 改进电流源
+    * 射极输出电流源
+    * 威尔逊电流源
 ## 频率响应
 * 高通：<span v-pre>$\large\dot A_u=\frac{j\frac{f}{f_L}}{1+j\frac{f}{f_L}}$</span>，U0 超前
 * 低通：<span v-pre>$\large\dot A_u=\frac{1}{1+j\frac{f}{f_H}}$</span>，U0 滞后
+
+（物理模型等效，全频域）：
+
+<div style="text-align: center;">
+<img alt="物理模型等效" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/learning/analog_circuit/1.png"  width="70%" height="70%"/>
+</div>
+
+且还能再继续简化。<span v-pre>$g_m=\beta_0/r_{b'e}$</span>
+### 多级频率响应
+级数越多，通频带越窄。
+
+<span v-pre>$f_L^2=1.1\sum f_{Li}^2$</span>，修正系数

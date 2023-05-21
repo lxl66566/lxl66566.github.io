@@ -3,7 +3,7 @@
 
 VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, 
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate(locate)
 * 我计划装的包：trash-cli, tmux
 ## 更换镜像
 :::: code-group
@@ -39,32 +39,52 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 # if haven't been killed, just kill <ppid>
 ```
 ## 包使用
+[包](#包)
 ### bash
 <details><summary>use fishshell, not bash</summary>
 
 * ~/.bashrc（仅含手动编辑）:
-```bash
-alias ll='ls -alF'
-export DWM=/home/lxl/myfile/dwm
-if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
-then
-    exec fish
-fi
-```
+    ```bash
+    alias ll='ls -alF'
+    export DWM=/home/lxl/myfile/dwm
+    ```
 </details>
 
 termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`。
 ### fishshell
+* set fish as default
+    :::: code-group
+    ::: code-group-item ArchWSL
+    ```bash
+    # edit ~/.bashrc
+    if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
+    then
+        exec fish
+    fi
+    ```
+    :::
+    ::: code-group-item termux
+    ```bash
+    chsh -s fish
+    ```
+    :::
+    ::::
 * 配置文件一般在 `~/.config/fish` 下。
 * `~/.config/fish/config.fish`：
+    ```bash
+    if status is-interactive
+        # bind \t accept-autosuggestion
+        bind \t forward-word
+    end
+    ```
+* 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)，注意作用域问题
+* 函数：使用 function 新增函数后，还需要使用 `funcsave <function>` 保存到配置文件夹下以便修改，修改后需要重新加载 fish。
+### locate
+快速搜索。
 ```bash
-if status is-interactive
-    # bind \t accept-autosuggestion
-    bind \t forward-word
-end
+sudo pacman -S locate
+sudo updatedb
 ```
-* 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)
-* 函数：使用 function 新增函数后，还需要使用 `funcsave <function>` 保存到配置文件夹下以便修改。
 ## 遇到的问题
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。

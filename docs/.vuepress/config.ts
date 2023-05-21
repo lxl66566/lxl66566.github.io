@@ -109,7 +109,7 @@ export default defineUserConfig({
         {
           text: "工具",
           children: [
-            "github.md", "Git.md", {text:"Vim",link:"/coding/vim.md"},
+            "github.md", "Git.md", "linux.md", {text:"Vim",link:"/coding/vim.md"},
           ],
         },
         {
@@ -164,7 +164,7 @@ export default defineUserConfig({
         {
           text: "编程",
           children: add_prefix("/coding/",[
-            "farraginous.md","Rust.md","Cpp.md","csharp.md","python.md","github.md","Git.md","vim.md","java.md",
+            "farraginous.md","Rust.md","Cpp.md","csharp.md","python.md","github.md","Git.md","vim.md","java.md","linux",
           ]),
         },
         {

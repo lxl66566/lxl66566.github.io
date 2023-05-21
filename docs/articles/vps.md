@@ -13,11 +13,13 @@
 also see here: 
 * [$1 VPS – 1 USD VPS Per Month (Updated February 2023)](https://lowendbox.com/blog/1-vps-1-usd-vps-per-month/)
 * [Best Cheap VPS Hosting - Updated March 2023](https://lowendbox.com/best-cheap-vps-hosting-updated-2020/)
+## about me
+我本来想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款。（无语子）。因此只能退而求其次买了 RackNerd 家的。
 
-我本来想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款。。因此只能退而求其次买了 RackNerd 家的。
+10G storage 打消了我自建 java server 的欲望，同时美国西海岸 VPS 的地理位置也使节点真连接延迟常年维持在 700+ms，并不适合作为游戏服务器。
 <!-- |[hostEONS](https://my.hosteons.com/cart.php?a=confproduct&i=0)||2TB 1Gbps|256MB|5GB|1| -->
 ## SSH 工具
-youtube 上清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。
+youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。
 
 先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 `sudo pacman -S openssl` 了（
 ## 安全性
@@ -40,6 +42,7 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
     systemctl <start | enable | stop | disable> firewalld
     firewall-cmd --state
     firewall-cmd --reload   # after change
+    firewall-cmd --add-masquerade --permanent   # 伪装
     ```
     :::
     ::: code-group-item add
@@ -92,8 +95,12 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
 我使用如下方式降低封锁几率（**有没有用其实是不太清楚的**）：
 * 开启 trojan-go 而非纯 trojan
 * [WARP](#warp)
-* 使用 Nginx 将伪装页面（我选择我的小破博客）[部署](#nginx)到 443 端口 (80 转发 443)。
+* 使用 Nginx 将伪装页面（我选择我的小破博客）[部署](#nginx)到 443 端口 (80 转发 443)。（然而 443 早就被封了，令人感慨）
+* 开启 cloudflare 代理
 * 设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。
+    ```bash
+    firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
+    ```
 ## 包
 已安装：psmisc, nvim, firewalld, curl, fd, net-tools, nginx, fish, 
 ### nginx
@@ -115,7 +122,6 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
             location / {
                 root /etc/nginx/myblog;
             }
-
         }
     }
     ...
@@ -123,8 +129,8 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
 * 重新载入：`nginx -s reload`
 ## 遇到的问题
 ### 端口被封问题
-20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口并显示在伪装页面上。
-```fish
+20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口并显示在伪装页面上（还作出了[其他努力](#对抗-gfw)）。脚本还是有 bug 的（我菜），`$temp` 赋值不成功，但无伤大雅。
+```bash
 function new_trojan_port --description 'change to a new trojan port'
     firewall-cmd --remove-forward-port=port=12138:proto=tcp:toport=$trojan_port --permanent
     firewall-cmd --remove-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
@@ -134,6 +140,7 @@ function new_trojan_port --description 'change to a new trojan port'
     set temp (echo $trojan_port | trojan port | tee /dev/tty | sed -n "s/.*端口: \([0-9]*\).*/\1/p")
     echo "port: $temp -> $trojan_port"
     firewall-cmd --reload
+    # update blog and show port
     cd /etc/nginx/lxl66566.github.io
     git pull origin main
     sed -i "s/MyGitHub/$trojan_port/g" index.html
@@ -141,7 +148,7 @@ function new_trojan_port --description 'change to a new trojan port'
 end
 ```
 不应同时使用 firewalld 和 iptables，可能会导致混乱。由于 `firewalld` 是更高一层的抽象(?)，因此我使用之：
-```
+```bash
 systemctl stop iptables
 systemctl disable iptables
 systemctl mask iptables
@@ -150,7 +157,7 @@ systemctl enable firewalld
 systemctl start firewalld
 ```
 ### 配置了错误的 firewalld 把自己防住了
-20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 `firewall-cmd --reload`，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...
+20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 reload，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...
 
 > rescue mode 是 VPS 服务商的一项服务，可以将 VPS 挂载到另一个虚拟机上，通过其对文件进行备份与修改，适用于乱搞把 VPS 搞炸了的情况。
 
