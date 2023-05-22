@@ -114,9 +114,13 @@ git remote remove origin
 * 查询远程仓库信息：`git remote show <name>`，name 可留空
 * 查询 commit 详细信息：`git show --stat [commit]`；`[commit]` 留空则查询最近一次 commit 的信息
 ### 更改分支
-`git checkout <branch-name>`
-
-若需要将分支改名：`git branch -m OldBranchName NewBranchName`
+```sh
+git branch                      # 查看分支
+git branch <new_branch_name>    # 新建分支
+git checkout <branch_name>      # 切换到分支
+git branch -m old_name new_name # 重命名分支
+git branch --delete <branch_name>   # 删除分支
+```
 ### 删除文件
 ```sh
 git rm --cached filename.xxx    # --cached 指仅删除仓库内文件，不删除本地文件

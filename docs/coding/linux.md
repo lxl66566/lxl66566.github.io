@@ -3,8 +3,8 @@
 
 VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate(locate)
-* 我计划装的包：trash-cli, tmux
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate(locate), trash-cli, tmux
+* 我计划装的包：
 ## 更换镜像
 :::: code-group
 ::: code-group-item ArchWSL
@@ -85,6 +85,11 @@ termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`�
 sudo pacman -S locate
 sudo updatedb
 ```
+### tmux
+是一个很牛逼的终端。支持多窗口，分屏，后台挂起。
+* 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/archwsl/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
+* 插件：不要用默认的插件管理器。。不好用。
+* copy-mode(vi): `Space` 进入选择，`Enter` 复制。（我觉得是假的 vi mode）
 ## 遇到的问题
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。
