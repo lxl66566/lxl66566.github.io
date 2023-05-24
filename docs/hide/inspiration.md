@@ -45,6 +45,7 @@ sidebar: 'auto'
 * b站历史记录搜索
 * 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 * html yaml extransfer
+* 录音机 app，抓住日常的每一个瞬间
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
 * 甩棍伞
