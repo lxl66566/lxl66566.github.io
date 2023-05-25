@@ -74,7 +74,7 @@ sidebar: 'auto'
 |ATRI -My Dear Moments-|-|2022.01.02-<br/>2022.01.28|9|9|7|
 |龍姬混~日子2 <Badge type="danger" text="3" />|-|2021.12.23-<br/>2022.01.27|2|10|5|
 |NEKOPARA Vol.1 ソレイユ開店しました！ <Badge type="warning" text="2" />|-|2021.11.26-<br/>2021.12.20|4|9|6|
-|猫神大人与七颗星星|-|2021.11.16-<br/>2021.11.23|8|10|?|
+|猫神大人与七颗星星|-|2021.11.16-<br/>2021.11.23|8|9.7|?|
 |CURE GIRL|-|2021.10.10-<br/>2021.11.08|1|4|?|
 |NEKOPARA Vol.0 水無月ネコたちの日常！<Badge text="1" /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
 |真爱の百合は赤く染まる <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.21|?|3|?|
@@ -93,9 +93,9 @@ sidebar: 'auto'
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
 |近月少女的礼仪 <Badge text="1" />|2023.04.23|5.3|6.1|3.3|-31min
-|拔作岛 <Badge text="1" />|2023.04.11|9.1|3.2|<text style="color:red;">0</text>|-12min
-|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|-6min
-|アンレス テルミナリア|2023.05.11|-|-|9.5|+1h35min
+|拔作岛 <Badge text="1" />|2023.04.11|8.6|3.2|<text style="color:red;">0</text>|-14min
+|真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|2022.12.30|4.7|7|8.4|-8min
+|アンレス テルミナリア|2023.05.11|-|9.5|9.5|+1h47min
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
 |哥哥，早上起床之前都要抱紧我哦！<Badge text="1" />|2021.02.14?|3|8.6|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
@@ -226,17 +226,21 @@ sidebar: 'auto'
 
 还有，一般（早年）作品都**不可选择 *Ctrl的快进是已读还是全部***，由于是普遍性问题，不写进表中。
 
-### 说两句
+## 说两句
 一般来说，能打动我，能让我产生共鸣的galgame，我都会打上比较高的剧情分。此处作出更加详细的解释，列出一些本人对之有高评价的游戏。当然，优点也包括程序的优秀。（啊，对了，那些快忘了的，或者说不出哪里好但就是好的作品不列举出）
 #### 住在下体升级岛上的贫乳该如何是好？
 * ~~玩拔作岛，练习自如地控制姬儿！（误~~
 * 草啊！
 
-<img class="image50" alt="我的也死了啊！" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nukidashi_2.jpg" />
+<div class="image60" style="text-align: center;">
+<img alt="我的也死了啊！" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nukidashi_2.jpg" />
+</div>
 
 * 你不是数学挂科了吗喂（
 
-<img class="image50" alt="数学鬼才" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nukidashi_1.jpg" />
+<div class="image60" style="text-align: center;">
+<img alt="数学鬼才" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nukidashi_1.jpg" />
+</div>
 
 #### 終のステラ
 * 全年龄，有刀

@@ -64,24 +64,30 @@ sidebar: 'auto'
     2. 因工作需要，在别的宿舍楼外解决完晚饭（外卖），顺便去楼下扔个垃圾。（不同闸机人脸数据不互通）我本人是X同学，而进去时我是A同学，出来时我是B同学。
     3. 跟舍友取快递时经常去隔壁的宿舍楼下刷脸玩，每次刷出来我的名字都不一样。
     
-<div style="text-align: center; ">
-<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun1.jpg"  width="50%" height="50%">
+<div class="image50" style="text-align: center; ">
+<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun1.jpg" />
 <div>
 大风起兮云飞扬，单车与草兮倒四方
 </div>
 </div>
-<div style="text-align: center; ">
-<img alt="fun2" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun2.jpg"  width="50%" height="50%">
+<div class="image50" style="text-align: center; ">
+<img alt="fun2" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun2.jpg" />
 <div>
-这个染色什么水平？
+没空，忙着给树叶尖儿上色
+</div>
+</div>
+<div class="image50" style="text-align: center; ">
+<img alt="fun3" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun3.jpg" />
+<div>
+滥 车 充 数
 </div>
 </div>
 
 ## 校内迷惑行为大赏
-<div style="text-align: center; ">
-<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/61.png"  width="50%" height="50%">
+<div class="image50" style="text-align: center; ">
+<img alt="61" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/61.png" />
 <div>
-众所周知饮水机的重量大约是 1.3kg ...
+众所周知饮水机的重量大约是 1.5kg ...
 </div>
 </div>
 
