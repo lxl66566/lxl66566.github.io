@@ -1,6 +1,3 @@
----
-sidebar: 'auto'
----
 # 杂项
 ## 命令行压缩
 我电脑上使用的压缩软件为[Bandizip](../farraginous/recommend_packages.md#bandizip)，命令行指令为`bz`，详见[官网-命令行参数](https://cn.bandisoft.com/bandizip/help/parameter/)。

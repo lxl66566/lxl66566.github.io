@@ -103,7 +103,7 @@ export default defineUserConfig({
         {
           text: "语言",
           children: [
-            "Rust.md","Cpp.md","csharp.md","python.md","java.md","javascript.md",
+            "Rust.md","Cpp.md","python.md","java.md","javascript.md","csharp.md","kotlin"
           ],
         },
         {
@@ -164,7 +164,7 @@ export default defineUserConfig({
         {
           text: "编程",
           children: add_prefix("/coding/",[
-            "farraginous.md","Rust.md","Cpp.md","csharp.md","python.md","github.md","Git.md","vim.md","java.md","linux",
+            "farraginous.md","Rust.md","Cpp.md","python.md","github.md","Git.md","vim.md","java.md","linux.md","csharp.md","kotlin.md",
           ]),
         },
         {

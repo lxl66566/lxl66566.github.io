@@ -1,6 +1,3 @@
----
-sidebar: 'auto'
----
 # Github
 [跳转官网](https://github.com/)
 

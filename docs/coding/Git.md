@@ -1,6 +1,3 @@
----
-sidebar: 'auto'
----
 # Git
 ## 是什么
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. ——[Git官网](https://git-scm.com/)

@@ -9,6 +9,7 @@
 ### 预学习阶段
 5. [Javascript](./javascript.md)
 6. [C#](./csharp.md)
+7. [kotlin](./kotlin.md)
 ## 工具
 1. [Github](./github.md)
 2. [Git](./Git.md)

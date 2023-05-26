@@ -9,10 +9,12 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录；学习笔记区因其特殊性，此处不做普通维护记录。）*
 ## 2023
 ### .05
+#### 2023.05.26
+* *编程* 新增 [kotlin](../coding/kotlin.md)
 #### 2023.05.18
-* VPS 新增 [搭建代理](../articles/vps.md#搭建代理) 内容
+* *VPS* 新增 [搭建代理](../articles/vps.md#搭建代理) 内容
 #### 2023.05.17
-* VPS 新增 [安全性](../articles/vps.md#安全性) 内容
+* *VPS* 新增 [安全性](../articles/vps.md#安全性) 内容
 #### 2023.05.14
 * [Linux](../coding/linux.md) 中新增内容
 * 网址推荐 中新增 [AI 工具](./recommend_websites.md#ai-工具)

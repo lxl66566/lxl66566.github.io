@@ -105,3 +105,13 @@ Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\
 <span v-pre>$\large\mathscr{F}[ \frac{sin(\omega_0n)}{\pi n} ]=\sum g(\omega_0)$</span>（当 ω0 &gt; 2π 时，需要考虑叠加）
 
 <span v-pre>$\mathscr{F}[ u[n] ]=\large\frac1{1-e^{-j\omega}}+\small\pi\sum_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)$</span>
+
+cos，sin 在[-π,π]上跟连续一样，其他部分周期重复
+
+### 性质
+重要概念：离散条件下，<span v-pre>$\displaystyle cos\pi n=e^{\pm j\omega n}=(-1)^n$</span>
+
+基本与连续时的相同：线性性质，时移频移性质，微分，卷积
+
+不同的：
+* 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n]=X(e^{j\omega k}), x_{(k)}[n]=x[n/k]$</span> 当且仅当 n%k==0
