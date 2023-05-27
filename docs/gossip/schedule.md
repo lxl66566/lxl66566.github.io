@@ -4,6 +4,7 @@
 `(?)` 代表重新考虑日程的存在性与重要性。
 ## 博客日程
 * vscode extensions recommendation
+* 零食推荐 (?)
 ### 需要考虑
 * Github stars (?)
 ## 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
