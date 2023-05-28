@@ -1,5 +1,5 @@
 # VuePress2与博客心得
-建站时我还是个小白，对 javascript & typescript & css 一窍不通，html 也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于 20220718（之后持续更新），算是对我建站三个半月来的一些总结。
+建博客时我还是个小白，对 javascript & typescript & css & vue 一窍不通，html 也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于 20220718（之后持续更新），算是对我建站三个半月来的一些总结。
 
 设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo,Wordpress,HUGO,docsify 等。后来随着慢慢深入接触也了解了 Vitepress,mdbook,Gitbook。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
 
@@ -11,7 +11,7 @@
 网上教程为使用 `<font color="red">` 标签，但此标签不受 html5 支持（并导致了下述 *Rendering pages failed* 问题）。我还尝试了 `<p>` 标签（但会自动换行）与 `<a>` 标签（但有下划线和点击效果）。最终选用 `<text style="color:red;">` 标签，写起来最为简洁，无需添加额外属性。
 
 ## Rendering pages failed问题
-显示的错误信息是 Vuepress 的底层问题，无法直接看出问题所在。且 `docs:dev` 本地预览完全不受影响。之后不断比对各处编译，发现是引入未知 html 标签导致的。（初次为 `<font>` 标签，之后还有：自定义组件的标签，被识别成组件的语法）*（感谢[dream 同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* <span class="heimu" title="你知道的太多了">原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
+显示的错误信息是 Vuepress 的底层问题，无法直接看出问题所在。且 `docs:dev` 本地预览完全不受影响。之后不断比对各处编译，发现是引入未知 html 标签导致的。（初次为 `<font>` 标签，之后还有：自定义组件的标签，被识别成组件的语法）<span class="heimu" title="你知道的太多了">*（感谢[dream 同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）* 原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
 
 > TypeError: Invalid value used as weak map key<br/>
 > at WeakMap.set (\<anonymous\>)<br/>
@@ -26,12 +26,12 @@
 > at renderComponentSubTree (C:\Users\oyh\vuepress-starter\node_modules\@vue\server-renderer\dist\server-renderer.cjs.prod.js:256:13)<br/>
 
 ## Vue组件注册失败的问题
-目前开发过程中遇到的最大的问题。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用 iframe 引入带组件的 html），就暂时不尝试了。（20220720 速报：问题已解决，解决方法：重新下载 vuepress2 包。猜测是旧 vuepress2 的依赖包出了问题。）
+前期开发过程中遇到的最大的问题。详情懒得再写一遍了，请直接[跳转stackoverflow查看](https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2)。我还剩一种方法（在client.ts中手动注册组件）没试，不过既然已经曲线救国成功（使用 iframe 引入带组件的 html），就暂时不尝试了。（20220720 速报：问题已解决，解决方法：重新下载 vuepress2 包。猜测是旧 vuepress2 的依赖包出了问题。）
 
 ## 评论插件配置失败问题
 我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比 vuepress2 文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个 theme 出来...我哪有那个能耐啊，直接 Ctrl+CV 了。不过这种东西本应在文档里指明的。
 ## 添加黑幕
-在`.vuepress/public`下任选目录，新建`FileName.css`，输入如下代码：
+在`.vuepress/public`下任意位置新建`head.css`（名字不重要），输入：
 ```css
 .heimu, .heimu a, a .heimu, .heimu a.new {
     background-color: #404040;
@@ -55,7 +55,7 @@
 ```ts
 export default defineUserConfig({
     head:[
-        ['link', { rel: 'stylesheet', href: '/styles/head.css' }] //填写你创建的css目录
+        ['link', { rel: 'stylesheet', href: '/styles/head.css' }] // 填写对 public 的 css 相对路径
     ],
 })
 ```
@@ -70,7 +70,8 @@ export default defineUserConfig({
 > Error:fatal:No url found for submodule path 'images' in .gitmodules<br/>
 > Error:The process '/usr/bin/git' failed with exit code 128<br/>
 
-后来经过不断摸索发现是.git文件夹放在 public/images 文件夹里的原因。现在把 images 文件夹整个移出去以后就好了。我也是至今还不知道为什么会在如此诡异刁钻的地方出现这种问题。
+
+后来经过不断摸索发现大概是git内包含了一个git的原因。把 images 文件夹整个移出去以后就好了。
 
 ## 编译失败问题
 运行 `npm run docs:build` 时报错。显示：
@@ -84,7 +85,7 @@ export default defineUserConfig({
 我原本使用的 github 图床图片格式为`https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：
 > Failed to load resource: net::ERR_NAME_NOT_RESOLVED
 
-一个比较合理的解释是国内dns无法解析`raw.githubusercontent.com`域名。
+原因是`raw.githubusercontent.com`域名在墙内受到污染。
 
 然后我尝试了其他图床：[SM.MS](https://sm.ms/)，但是：
 1. 这个图床有*容量上限：5GB*和*单张图片上限：5MB*
@@ -94,7 +95,7 @@ export default defineUserConfig({
 
 因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：
 * 不改变图片目录结构
-* 替换方便。仅需全局查找替换，点一下鼠标即可。~~（但是对我来说需要把SM.MS图床的链接再换回原链接…）~~
+* 替换方便。仅需全局查找替换，点一下鼠标即可。<span class="heimu" title="你知道的太多了">~~（但是对我来说需要把SM.MS图床的链接再换回原链接…）~~</span>
 
 然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下 [jsdelivr](https://www.jsdelivr.com/)，不能用。网上搜，大家也都说寄了。再试 [statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。
 ## 关于数学插件
@@ -106,18 +107,18 @@ export default defineUserConfig({
 
 我之前一直使用 `<img src="..." width="100%" height="100%">` 进行图片缩放。当我使用此方法对此图片进行缩放时，图片将不显示，调试显示此图片标签属性为 `width="0" height="0"`。只有当 `width` 与 `height` 都不含 `%` 时，图片才能显示。
 
-有以下两个解决方法：
-
-1. 在全局 css 中新增类选择器`.ClassName img{width: 60% !important; height:auto !important;}`，并在md中以`<div class="ClassName"><img src="..."/></div>`使用。
-2. 在全局 css 中新增类选择器`.ClassName img{max-width: 60%;}`，并在md中以同样方式使用。
-
+解决方法：
+* 在全局 css 中新增类选择器`.ClassName img{width: 60% !important; height:auto !important;}`或`.ClassName img{max-width: 60%;}`，并在md中以`<div class="ClassName"><img src="..."/></div>`使用。
 ## 为单一页面添加css
 
 <text style="color:red;font-weight:bold">未解决！</text>
 
 起因：不想全局添加 css。[官方说明](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E7%B1%BB)已尝试，无效。（该文档为 v1 文档，不适用于 v2）
 
-最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6)中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。
+最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6)中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。~~扩展名与文件无关！~~
+
+<span class="heimu" title="你知道的太多了">其实加的css也就这么几行，全局不全局的无所谓了</span>
+
 ## html转vue组件失败问题
 
 <text style="color:red;font-weight:bold">未解决！</text>
@@ -216,8 +217,9 @@ sidebar: {
 ## 上传问题
 `git push` 时出现问题：`ssh: connect to host github.com port 22: Connection timed out`。代理无问题，可上 Github。
 
-解决方法：
-参考[Github官方解释](https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)
+解决方法（二选一）：
+1. 参考[Github官方解释](https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)，使用 443 端口
+2. 配置 git 全局代理
 
 ## html传参引入指定js
 目的：复用画图表的 html 文件。尝试：
@@ -261,7 +263,15 @@ export const data=[...]
 :::
 ::::
 ## pangu 插件安装失败
-
-<text style="color:red;font-weight:bold">未解决！</text>
-
 试图安装 [vuepress-plugin-pangu](https://shigma.github.io/markdown-it-pangu) 失败。官方文档稀烂，缺乏维护，只有 vuepress1.x 的 js 配置，而我使用 ts ；由于并未学习，面对各种报错显得很无力。（有生之年必学）
+
+解决方法：
+突然想到了我[加黑幕的方法](#添加黑幕)，直接将 js 引入每个页面的head。
+config.ts:
+```ts
+head: [
+  ["link", { rel: "stylesheet", href: "/styles/head.css" }],
+  ["script", { src: "/styles/pangu.min.js" } ],
+],
+```
+其中`/styles/pangu.min.js`内是[https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js](https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js)的内容。

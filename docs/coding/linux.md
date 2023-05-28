@@ -4,7 +4,7 @@
 VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 包
 * 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate(locate), trash-cli, tmux
-* 我计划装的包：
+* 我计划装的包：Joshuto
 ## 更换镜像
 :::: code-group
 ::: code-group-item ArchWSL

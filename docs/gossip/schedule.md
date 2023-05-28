@@ -12,10 +12,10 @@
 * 英语 IELTS & TOEFL (without a target score)
 * CS 自学
     * C# learning and pull request to Tai, MisakaTranslator
+    * lua
 
 ## 日程库（不急）
 * [开发应用](../hide/inspiration.md#编程灵感)
-* 虚幻引擎 (?)
 * osu reform β pass
 * 算法类
 
@@ -23,6 +23,7 @@
 * 钢琴
 * 绘画
 * 旅游（非国内）
+* 虚幻引擎 (?)
 * build-my-own-language (?)
 * [灵感区](../hide/inspiration.md)：对任何东西灵光一闪的想法。希望能用得上。
 * 理论数学
