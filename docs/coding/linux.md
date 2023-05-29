@@ -91,5 +91,7 @@ sudo updatedb
 * 插件：不要用默认的插件管理器。。不好用。
 * copy-mode(vi): `Space` 进入选择，`Enter` 复制。（我觉得是假的 vi mode）
 ## 遇到的问题
+### sed 语法
+sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。
