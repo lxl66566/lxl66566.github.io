@@ -1,5 +1,39 @@
 # Python
 和[C++](./Cpp.md)页面一样杂乱，想到什么写什么。
+## 开发准备（vscode）
+windows 上建议直接无脑 all in vscode。
+### 扩展
+开发 python 前，强烈建议安装以下扩展：
+* **Python** - Microsoft
+* **Black Formatter** - Microsoft：提供格式化
+* **Ruff** - Charlie Marsh：提供语法分析
+
+可装可不装：
+* isort - Microsoft：提供 import 排序
+
+其他就见仁见智了。
+### 我的配置
+全局 `settings.json`:
+```json
+"[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true
+    }
+},
+```
+该配置在保存时自动格式化，自动纠正语法。
+### 启用虚拟环境
+创建虚拟环境并引入依赖后，代码仍会收到vscode的报错：
+
+![set_vscode_environment](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/set_vscode_environment1.png)
+
+解决方法：
+1. `Ctrl + Shift + P`打开命令面板，搜索`Python: Select Interpreter`
+2. 选中你的虚拟环境
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
 ## 图像相关
@@ -138,14 +172,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 ![anaconda_pureenv](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_2.png)
 
 这样，一个纯净环境就创建好了，你可以[安装Pyinstaller](#安装)进行打包前的准备。
-### 在vscode中启用虚拟环境
-创建虚拟环境并引入依赖后，代码仍会收到vscode的报错：
 
-![set_vscode_environment](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/set_vscode_environment1.png)
-
-解决方法：
-1. `Ctrl + Shift + P`打开命令面板，搜索`Python: Select Interpreter`
-2. 选中你的虚拟环境
 ## Pyinstaller
 ### 安装
 `pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple`

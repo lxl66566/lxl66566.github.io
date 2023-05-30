@@ -16,7 +16,7 @@
 
 对blog的反馈与建议，请 在对应页面下评论 / [私聊我](./gossip/author.md#社交)。我很乐意看到大家的反馈。
 
-本站地址：[absx.pages.dev](https://absx.pages.dev) | [absx.netlify.app](https://absx.netlify.app) | [lxl66566.github.io](https://lxl66566.github.io)
+本站地址（按推荐顺序）：[absx.pages.dev](https://absx.pages.dev) | [absx.netlify.app](https://absx.netlify.app) | [lxl66566.github.io](https://lxl66566.github.io)
 ::: tip 提示
 本站点持续更新！
 :::

@@ -30,6 +30,8 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 ```
 
 然后就能~~愉快地~~构建了。
+## 构建系统
+最广泛使用的是 Cmake，然而我并不喜欢它。网上也有一些[类似的想法](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。所以我也不太好说。
 ## 类型转换
 >= C++11
 * `static_cast`：不进行安全检查
@@ -66,22 +68,24 @@ try{
 {
     return std::get<string>(v);
 }
-// C++20
-std::visit([](auto&& arg) {
-    using T = std::decay_t<decltype(arg)>;
-    if constexpr (std::is_same_v<T, int>)
-        std::cout << "int with value " << arg << '\n';
-    else if constexpr (std::is_same_v<T, string>)
-        std::cout << "errlog: " << arg << '\n';
-});
+// std::visit([](auto&& arg) {
+//     using T = std::decay_t<decltype(arg)>;
+//     if constexpr (std::is_same_v<T, int>)
+//         std::cout << "int with value " << arg << '\n';
+//     else if constexpr (std::is_same_v<T, string>)
+//         std::cout << "errlog: " << arg << '\n';
+// });
+std::visit(overloaded{
+    [](auto arg) { std::cout << arg << ' '; },
+    [](const std::string& arg) { std::cout << std::quoted(arg) << ' '; }
+}, v);
 ```
-（来源：[std::visit](https://zh.cppreference.com/w/cpp/utility/variant/visit)）
-## 其他注意点
-* C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.
-* 慎用 C++20 （的 std::ranges::remove_if()）
-
+（来源：[std::visit](https://en.cppreference.com/w/cpp/utility/variant/visit)）
 ## 程序计时
 程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) ~~大佬请直接看汇编结果~~
+## 其他注意点
+* C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.
+* 慎用 C++20 的 std::ranges::remove_if()
 ## Qt
 :::tip
 此处 Qt 版本均为 Qt4-5，部分代码无法正常迁移至 Qt6.
