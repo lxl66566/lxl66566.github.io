@@ -22,7 +22,7 @@ git init
 创建仓库后，目录下出现`.git`隐藏文件夹，即为仓库本体。
 
 因此若要删除仓库，最快捷的方法就是直接删除`.git`文件夹。
-> 在 windows 下由于权限问题会出现无法删除的情况，此时请 `rm -rf .git`
+> 在 windows 下由于权限问题会出现无法删除的情况，此时请在 bash `rm -rf .git`
 ### 添加文件
 ```sh
 git add *.py            #添加所有后缀为 .py 的文件
@@ -58,6 +58,7 @@ git commit -m "注释"
 ### 上传与远程仓库
 将你的仓库上传到github等平台。
 #### 连接
+优先使用 ssh。
 :::: code-group
 ::: code-group-item SSH
 ```sh
@@ -130,25 +131,30 @@ git checkout -- filename    # 注意 `--` 后的空格
 ### 更新远程仓库到本地
 `git fetch origin main`
 
-fetch 对比 clone 的好处在于可以分段传输。（指定`--depth=x`）
+> fetch 对比 clone 的好处在于可以分段传输。（指定`--depth=x`）
 ### 合并分支
 `git merge origin/main`
 ### 删除远程tag
 如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新source code。（release 信息会被保留，状态更改为 draft）
 
 仅删除远程tag：`git push origin :refs/tags/TAGNAME`
+## 忽略文件(夹)
+在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。
+:::warning
+协同开发时请务必将你的无关文件添加进 `.gitignore`。
+:::
+注意其语法与 linux 文件系统类似，`/` 开头的为根目录，别搞错了。
 ## 其他技巧
 ### 全局设置
 ```sh
 git config --global push.default current    # 设置默认推送，简化 git push
+git config --global --add safe.directory '*'    # 取消目录安全警告
+git config http.proxy http://127.0.0.1:port     # 设置代理
+git config https.proxy http://127.0.0.1:port    # 设置代理
 ```
-### 忽略文件(夹)
-1. 在仓库所在根目录下新建文本文档，输入你需要忽略的文件或文件夹（文件需带有后缀），以回车键隔开。
-2. 保存并重命名为`.gitignore`。
 ### 自动化脚本
-1. 新建文本文档，输入你需要的所有指令语句，以回车键隔开。
-2. 保存并将该文本文档后缀改为`.sh`。
-3. 双击运行即可。
+1. 新建 `xxx.sh`，输入你需要的所有指令语句，以换行隔开。
+2. 双击运行或 `bash xxx.sh`
 
 ::: tip
 脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
@@ -158,17 +164,6 @@ git config --global push.default current    # 设置默认推送，简化 git pu
 git commit -m $(date "+%Y%m%d-%H:%M:%S")
 ```
 例：注释为`20220613-11:34:59`。可根据个人习惯修改格式。注意，该语句可能在 bash 以外的命令行中无法使用。
-### 取消目录安全警告
-```sh
-git config --global --add safe.directory '*'
-```
-### 设置代理
-有时候 github 切换到 443 端口后也无法连接，此时若有科学上网可切换到梯子进行连接。
-```sh
-git config http.proxy http://127.0.0.1:port
-git config https.proxy http://127.0.0.1:port
-```
-请将端口改为你的代理端口。
 ### 用于备份
 有了 `.sh` 脚本后，我们就能很轻松地在 Github 上备份自己的文件。请 ChatGPT 讲一下移动与覆盖：
 > cp 是一个在 Bash shell 中用来复制文件和目录的命令。与 cp 命令一起使用的选项控制了复制的方式。这里是每个选项的含义：

@@ -1,26 +1,50 @@
 # Java
 由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。
 
-在我看来 Java 的优势是跨平台。但是作为带 GC 的语言，Java 的性能一般；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度很低（甚至不能自定义类型别名，还有默认驼峰命名并对异己发出警告），因此我对之并无好感。
+在我看来 Java 的优势是跨平台。但是作为带 GC 的语言，Java 的性能一般；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（不能自定义类型别名），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（</span>
+
+哦，顺带一提，Android 开发建议直接 [kotlin](./kotlin.md)，Google 官方推荐的语言，并且全兼容 java。反正学 java 用 gradle 也逃不过 kotlin 的制裁，不如立马开润（
 ## 学习方法
 根据其他语言学习经验，到处搜，用 Java 写点算法题，多写就完了。也可以问问 ChatGPT。
 
 Java 跟 C++ 语法挺像的。~~虽然对标的 C# 应该会更像，但我没学。~~
-## 使用 vscode 开发
+## 开发环境
+去官网下 sdk。**请尽可能下载最新版本。**（编程不激进还能干啥？
+### 原理
+`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序。
+### vscode
 首先假设已经装好了 JDK。
 
-在 vscode 扩展商店搜 `java`，直接装整个包：*Extension Pack for Java*，然后就能跑了。包管理器就 scoop 一行完事。
+在 vscode 扩展商店搜 `java`，直接装整个包：*Extension Pack for Java*，然后就能跑了。也可以自己选插件。
+
+包管理器（gradle）就 scoop install gradle 一行完事。
 ## var
-Java 10 新特性，类型推断。like C++: `auto`
+Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
 ## 数据结构
 ### 动态数组
 Arraylist 和 Vector，后者是线程安全的，更慢。没有多线程需求建议直接用前者。
+```java
+private ArrayList<account> accounts = new ArrayList<>(List.of(new account("admin", "admin")));
+```
 ### Hashmap
 搜吧，懒得再讲了
+### LinkedHashMap
+有序的 HashMap，按照添加顺序
+## exception
+> java 错误处理挺不错的，至今也有人认为 java exception 优于 rust Result&lt;T,E&gt;.
+
+函数可以声明可能抛出的异常，则 throw exception 后会直接跳出这个函数。
+```java
+void t() throws Exception{throw new Exception("...");assert unreachable == true;}
+// ... main
+try { t(); } catch(Exception e) {
+    System.out.println(e.getMessage());
+}
+```
 ## Stream
 stream (Java 8) 是 java 中很重要的一个概念，可以理解成迭代器（链表?）。类比 Rust 或 C++20 的 std::ranges。
 
-刚发现的写的不错的[参考](https://blog.csdn.net/zhiyuan263287/article/details/124540708)。
+> 刚发现的写的不错的[参考](https://blog.csdn.net/zhiyuan263287/article/details/124540708)。
 ### 基本操作
 * 连接流：`Stream.concat(stream1,stream2)`
 * 映射：`map`
@@ -47,13 +71,11 @@ var temp2 = IntStream.range(1, 3);      // 生成左闭右开区间流 1,2
 var temp3 = temp1.boxed();              // Intstream 转为 Stream
 ```
 ## 断言
-使用非常简单，`assert expression`
-
-不过呢，需要加入 JVM 参数 `-ea`：`java -ea Main.java`
+使用非常简单，`assert expression`，不过呢，需要加入 JVM 参数 `-ea`：`java -ea Main.java`
 
 具体地，在 vscode 中，点击 *运行(R) - 添加配置...*，在你需要的文件项下加入 `"vmArgs": "-ea"`。
 ## Optional
-option 思想，编程的重要思想。Java 8 新增的，还挺早的。
+option 思想，编程错误处理的重要思想。Java 8 新增的，还挺早的。
 ```java
 Optional.of(value)          // 创建，value 不可为 null
 Optional.ofNullable(null)   // 创建，建议都使用此方法
@@ -61,6 +83,31 @@ Optional.ofNullable(123).ifPresent(u -> System.out.println(u)); // 操作值
 Optional.ofNullable(123).orElse(456);   // 取值
 Optional.ofNullable(123).map(u -> u + 2);   // 映射
 Optional.ofNullable(123).filter(u -> u < 150);   // 映射
+```
+## Serialize
+> java 的序列化真是方便啊。。其他语言需要自己写 json or configparser。
+
+序列化就理解为保存变量到文件，必要时也可以从文件里反序列化，读取变量。
+```java
+class account implements Serializable {}    // 继承接口
+private ArrayList<account> accounts;    // 可以直接序列化对象数组
+// serilize
+try (FileOutputStream fos = new FileOutputStream("account.data");   // 存在执行目录下
+        ObjectOutputStream oos = new ObjectOutputStream(fos);) {
+    oos.writeObject(accounts);
+} catch (Exception e) {
+    System.out.println("write to file failed");
+}
+// deserilize
+try (var fis = new FileInputStream("account.data");
+    var ois = new ObjectInputStream(fis);) {
+    accounts = (ArrayList<account>) ois.readObject();
+} catch (IOException ioe) { // 如果文件不存在
+    accounts = new ArrayList<>();   // 默认值
+} catch (Exception c) {
+    System.out.println("unknown exception");
+    c.printStackTrace();
+}
 ```
 ## swing
 java GUI，跟 Qt 相比肯定是很拉的，但是也有一些优点：
@@ -70,10 +117,20 @@ java GUI，跟 Qt 相比肯定是很拉的，但是也有一些优点：
 但是纯靠布局真的是非常噩梦的体验...
 ### 组件
 * JPanel：理解为容器
+* JLable
+    * 设置字号/字体/效果：`lable.setFont(new Font(Font.SERIF, Font.BOLD, 18));`
+* JPasswordField：密码输入框。`getText()` 不安全会被警告，`getPassword()` 则返回 char[] 需要自行处理。
 ### 事件
-请使用 lambda 函数而不是将所有窗口事件在一个函数中处理。
+>=Java 8: 请使用 lambda 函数而不是将所有窗口事件在一个函数中处理。
 ```java
 button.addActionListener(e -> {
     ...
 });
+```
+### 一些问题
+#### repaint
+在 remove 后 add 组件，需要重绘。
+```java
+panel.revalidate();
+panel.repaint();
 ```

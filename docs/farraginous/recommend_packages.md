@@ -80,7 +80,7 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 ### [scoop](https://scoop.sh/)
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
 :::warning
-请使用代理以获得更好的 scoop 使用体验。
+请使用代理以获得更好的 scoop 使用体验：`scoop config proxy 127.0.0.1:port`
 :::
 
 ```
