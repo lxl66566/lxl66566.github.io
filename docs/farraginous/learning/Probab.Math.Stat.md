@@ -85,7 +85,7 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 ### 函数
 * Z=X+Y，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f(z-y,y)dy$</span> （也可类比对 X 积分）若 X，Y 独立，还可写成 <span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}f_X(z-y)f_Y(y)dy$</span>（卷积公式）
 * Z=aX+bY，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}\frac1{|b|}f(x,\frac{z-ax}{b})dx = \int_{-\infty}^{+\infty}\frac1{|a|}f(\frac{z-by}{a},y)dy$</span>
-* Z=XY，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}\frac1{|x|}f(x,\frac{z}{x})dx = $</span>...
+* Z=XY，则<span v-pre>$f_Z(z)=\int_{-\infty}^{+\infty}\frac1{|x|}f(x,\frac{z}{x})dx =$</span>...
 * Z=X/Y，类比
 * Z=max{X,Y...} 且 XY... 独立，则 <span v-pre>$F_Z(z)=\prod F_{...}(z)$</span>
 * Z=min{X,Y...} 且 XY... 独立，则 <span v-pre>$F_Z(z)=1-\prod (1-F_{...}(z))$</span>

@@ -13,15 +13,21 @@
 also see here: 
 * [$1 VPS – 1 USD VPS Per Month (Updated February 2023)](https://lowendbox.com/blog/1-vps-1-usd-vps-per-month/)
 * [Best Cheap VPS Hosting - Updated March 2023](https://lowendbox.com/best-cheap-vps-hosting-updated-2020/)
+<!-- |[hostEONS](https://my.hosteons.com/cart.php?a=confproduct&i=0)||2TB 1Gbps|256MB|5GB|1| -->
+### 20230602
+[vpslog](https://distribute.vpslog.net/)，白嫖低配置小鸡（RAM 64M，现在来可能没汤了）
 ## about me
-我本来想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款。（无语子）。因此只能退而求其次买了 RackNerd 家的。
+我本来想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款。（无语子）。因此只能退而求其次买了 RackNerd 家的，装了 Debian 10.
 
 10G storage 打消了我自建 java server 的欲望，同时美国西海岸 VPS 的地理位置也使节点真连接延迟常年维持在 700+ms，并不适合作为游戏服务器。
-<!-- |[hostEONS](https://my.hosteons.com/cart.php?a=confproduct&i=0)||2TB 1Gbps|256MB|5GB|1| -->
+
+白嫖的小鸡只有 64M RAM，只能装 alpine.
 ## SSH 工具
 youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。
 
 先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 `sudo pacman -S openssl` 了（
+
+用法：`ssh root@ip [-p port]`
 ## 安全性
 VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 ### 自检
@@ -166,3 +172,9 @@ rescue 只有 nano file editor；挂载了分区到 `test` 以后，直接 `nano
 我小白一个，只会跟着用简单的一键部署脚本，然后寄了。面板添加节点后，使用 v2rayN 添加服务器无法连上。
 
 后面换了 [trojan 面板](https://github.com/Jrohy/trojan)，能正常用一阵子，但稳定性一般。
+
+顺带，x-ui 在 alpine 的表现可谓是《惊艳》到我了，，，
+> ~# x-ui install<br/>
+> [ERR] 面板启动失败，可能是因为启动时间超过了两秒，请稍后查看日志信息<br/>
+> ~# x-ui log<br/>
+> [ERR] 请先安装面板

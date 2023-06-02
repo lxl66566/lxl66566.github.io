@@ -85,11 +85,9 @@ Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\
 ### 特殊变换
 总宽度 T，幅值 E 的三角波：<span v-pre>$\large\mathscr{F}[ f(t) ]=\frac{TE}2Sa^2(\frac{T}{4}\omega)$</span>
 双边指数信号：<span v-pre>$\large\mathscr{F}[ e^{-a|t|} ]=\frac{2a}{a^2+\omega^2}$</span>
-## 调制与解调
-调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
-
-解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
 ## 离散傅里叶
+本质：离散 -> 连续
+
 离散： <span v-pre>$\mathscr{F}(x[n]) = X(e^{j\omega})=\sum X[n]e^{-j\omega n}$</span>  是一个 2π 为周期的函数。
 
 <span v-pre>$X[n]=\frac1{2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega$</span>
@@ -118,3 +116,9 @@ cos，sin 在[-π,π]上跟连续一样，其他部分周期重复
 不同的：
 * 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n]=X(e^{j\omega k}), x_{(k)}[n]=x[n/k]$</span> 当且仅当 n%k==0（即离散扩宽）
 * 调制性质：频域相乘 = 频域卷积 / 2π，卷积积分限为周期 2π。卷积的时候可能需要考虑其他周期的卷积重合影响。
+## 调制与解调
+调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
+
+解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
+
+(Nyquist–Shannon) sampling theorem：带限连续信号可以由 <span v-pre>$\omega_s>2\omega_m$</span>的采样频率的离散信号完美恢复。

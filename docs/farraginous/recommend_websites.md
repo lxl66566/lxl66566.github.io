@@ -23,7 +23,7 @@ sidebar: 'auto'
 LLM：Large Language Models，大型语言模型。下述均可免费使用。
 * [BAI Chat](https://chatbot.theb.ai/)：GPT-3.5 模型。也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)。
 * [new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。坏处是被微软大削弱后，不会帮你写作业（
-    * 需要使用科学上网，若自动重定向到 `bing.com` 则需要检查节点，并清除 Cookies。
+    * 需要使用科学上网，若自动重定向到 `(cn).bing.com` 则需要：检查代理，清除 Cookies，并在 microsoft 账户设置中关闭严格搜索。
 * [Claude](https://www.anthropic.com/product)：据说是 OpenAI 独立出来的员工创办的。无法直接使用（需要美国身份），请[通过 slack bot 使用](https://slackbot.anthropic.com/slack/install)。
 * [phind](https://www.phind.com/)：搜索编程有关问题。会给出来源。
 ## 资源搜索
@@ -71,6 +71,8 @@ LLM：Large Language Models，大型语言模型。下述均可免费使用。
 <details><summary>archived</summary>
 [2022](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 </details>
+
+* [极简白板](https://github.com/zserge/awfice#drawing-app---327-bytes)
 
 ### 图片相关
 * 在线PS：[稿定](https://ps.gaoding.com/#/) | [Photopea](https://www.photopea.com/)

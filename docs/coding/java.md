@@ -35,9 +35,14 @@ private ArrayList<account> accounts = new ArrayList<>(List.of(new account("admin
 
 函数可以声明可能抛出的异常，则 throw exception 后会直接跳出这个函数。
 ```java
-void t() throws Exception{throw new Exception("...");assert unreachable == true;}
+class X1Exception extends Exception{}
+class X2Exception extends Exception{}
+void t() throws Exception{
+    throw new X2Exception("...");
+    assert unreachable == true;
+}
 // ... main
-try { t(); } catch(Exception e) {
+try { t(); } catch(X1Exception | X2Exception e) {
     System.out.println(e.getMessage());
 }
 ```
