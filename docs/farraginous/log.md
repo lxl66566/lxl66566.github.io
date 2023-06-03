@@ -9,6 +9,10 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录；学习笔记区因其特殊性，此处不做普通维护记录。）*
 ## 2023
 ### .06
+#### 2023.06.03
+* 编程 新增 [数据库](../coding/sql.md)
+* 维护 [TypeScript](../coding/tsjs.md)
+* 移动 *编程 - 杂项* 到 [文章 - 命令行压缩](../articles/cli_compress.md)
 #### 2023.06.01
 * [Java](../coding/java.md) 新增内容
 ### .05
@@ -42,7 +46,7 @@ sidebar: 'auto'
 * [xxx 的缺陷](../gossip/fuckxxx.md) 新增了一些内容
 #### 2023.04.09
 * 部分图表新增当年数据统计
-* 编程部分新增[版块主页](../coding/)，并添加[javascript](../coding/javascript.md)，[算法](../coding/algorithm.md)页面
+* 编程部分新增[版块主页](../coding/)，并添加[TypeScript & JavaScript](../coding/tsjs.md)，[算法](../coding/algorithm.md)页面
 #### 2023.04.01
 * [其他游戏](../hobbies/other_games/) 细分
 ### .03

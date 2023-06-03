@@ -72,6 +72,7 @@ LLM：Large Language Models，大型语言模型。下述均可免费使用。
 [2022](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 </details>
 
+* [Office Tool Plus](https://otp.landian.vip/zh-cn/)
 * [极简白板](https://github.com/zserge/awfice#drawing-app---327-bytes)
 
 ### 图片相关

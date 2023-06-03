@@ -7,13 +7,14 @@
 3. [Python](./python.md)
 4. [Java](./java.md)
 ### 预学习阶段
-5. [Javascript](./javascript.md)
+5. [TypeScript & JavaScript](./tsjs.md)
 6. [C#](./csharp.md)
 7. [kotlin](./kotlin.md)
 ## 工具
-1. [Github](./github.md)
-2. [Git](./Git.md)
-3. [Linux](./linux.md)
-4. [Vim](./vim.md)
+1. [Github](./github.md)：如何进行最基本的使用
+2. [Git](./Git.md)：版本控制系统
+3. [Linux](./linux.md)：操作系统
+4. [Vim](./vim.md)：文件编辑器
+5. [数据库](./sql.md)：SQL
 ## 其他能力
 1. [算法](./algorithm.md)

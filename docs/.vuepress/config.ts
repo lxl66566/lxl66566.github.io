@@ -35,7 +35,6 @@ export default defineUserConfig({
       {
         text: "编程",
         // children: [
-        //   "/coding/farraginous.md",
         //   {
         //     text: "语言",
         //     children: add_prefix("/coding/",["Rust.md","Cpp.md","csharp.md","python.md","java.md",])
@@ -129,6 +128,7 @@ export default defineUserConfig({
             "adb.md",
             "markdown.md",
             "minimize_exe.md",
+            "cli_compress.md",
             "vps.md",
           ],
         },
@@ -141,7 +141,7 @@ export default defineUserConfig({
             "Cpp.md",
             "python.md",
             "java.md",
-            "javascript.md",
+            "tsjs.md",
             "csharp.md",
             "kotlin",
           ],
@@ -153,6 +153,7 @@ export default defineUserConfig({
             "Git.md",
             "linux.md",
             { text: "Vim", link: "/coding/vim.md" },
+            "sql.md",
           ],
         },
         {
@@ -218,6 +219,7 @@ export default defineUserConfig({
             "adb.md",
             "markdown.md",
             "minimize_exe.md",
+            "cli_compress.md",
             "vps.md",
           ]),
         },
@@ -236,7 +238,6 @@ export default defineUserConfig({
         {
           text: "编程",
           children: add_prefix("/coding/", [
-            "farraginous.md",
             "Rust.md",
             "Cpp.md",
             "python.md",
@@ -244,9 +245,11 @@ export default defineUserConfig({
             "Git.md",
             "vim.md",
             "java.md",
+            "tsjs.md",
             "linux.md",
             "csharp.md",
             "kotlin.md",
+            "sql.md",
           ]),
         },
         {

@@ -13,6 +13,7 @@
 4. [Android 手机禁用快应用中心](./fuck_quickapp.md)
 5. [Android 查看手机 cpu 指令集](./Android_ISA.md)
 6. [最小化二进制文件与 dll](./minimize_exe.md)
+7. [命令行压缩](./cli_compress.md)
 ## 推荐
 1. [电脑、手机端记录软件使用时长](./time_record.md)
 2. [运动轨迹记录软件横评](./track_record.md)
