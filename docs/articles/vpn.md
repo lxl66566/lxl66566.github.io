@@ -6,6 +6,10 @@ sidebar: 'auto'
 本人不承担因使用以下推荐所带来的任何后果。
 :::
 
+<div class="image60" style="text-align: center; ">
+<img alt="meme" src="https://imgur.com/YhMBjxn.png" />
+<div>
+
 ## 免费VPN
 :::warning 警告
 自带闭源客户端的免费 VPN 在安全性方面没有保证，不推荐使用。
