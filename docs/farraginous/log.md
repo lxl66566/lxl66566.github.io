@@ -9,6 +9,9 @@ sidebar: 'auto'
 *（注：此处的维护指对页面进行较大改动与写作。语句优化与无关大局的增删改不作记录；学习笔记区因其特殊性，此处不做普通维护记录。）*
 ## 2023
 ### .06
+#### 2023.06.05
+* 新增 [学习笔记 - 数字系统设计](./learning/dsp.md)
+* 维护 [xxx 有多难用](../gossip/fuckxxx.md)，[网址汇总](./recommend_websites.md)
 #### 2023.06.03
 * 编程 新增 [数据库](../coding/sql.md)
 * 维护 [TypeScript](../coding/tsjs.md)

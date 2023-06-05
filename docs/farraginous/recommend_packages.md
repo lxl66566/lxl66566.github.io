@@ -114,10 +114,11 @@ scoop install <name>    # 安装包
 * 文件目录管理功能垃圾
 ### [SpaceSniffer](https://spacesniffer.en.softonic.com/)
 可视化磁盘空间占用，方便清理
-### [uTools](http://www.u.tools/)
-基于 Electron 的插件化一站式工具。我是其快捷启动功能重度使用者，此功能可添加 `.exe` 文件并快捷启动。此外也常用剪贴板，ocr 等功能。
+### ~~uTools~~
+~~小时候不懂事加进来的，~~现在的 utools 已经[变味了](../gossip/fuckxxx.md#utools-有多难用)，我不推荐。
+<!-- 基于 Electron 的插件化一站式工具。我是其快捷启动功能重度使用者，此功能可添加 `.exe` 文件并快捷启动。此外也常用剪贴板，ocr 等功能。
 
-但其本质上是一个商业化产品，有些功能还免费转收费了，Electron 也高占用低性能。因此对开源有需求可以看看 [PowerToys](https://github.com/microsoft/PowerToys) 和 [rubick](https://github.com/rubickCenter/rubick)，但二者都无法满足我的需求：两者都不支持自添加 `.exe` 文件启动。
+但其本质上是一个商业化产品，有些功能还免费转收费了，Electron 也高占用低性能。因此对开源有需求可以看看 [PowerToys](https://github.com/microsoft/PowerToys) 和 [rubick](https://github.com/rubickCenter/rubick)，但二者都无法满足我的需求：两者都不支持自添加 `.exe` 文件启动。 -->
 ### [steam++](https://steampp.net/)
 加速器，主要加速 steam 商店与 github。当然更好的选择是科学上网。
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
@@ -193,12 +194,15 @@ DOWN add volume -1
 [官方项目地址](https://github.com/polywock/globalSpeed) | [edge商店](https://microsoftedge.microsoft.com/addons/detail/global-speed-%E8%A7%86%E9%A2%91%E9%80%9F%E5%BA%A6%E6%8E%A7%E5%88%B6/mjhlabbcmjflkpjknnicihkfnmbdfced) | [私链](https://wwp.lanzout.com/i9LKF05ht3ni)
 ### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
 极为强大的广告拦截。支持选中元素，自定义规则。
-### IDM
-高速多线程下载器。需要浏览器插件配合软件使用。
+### ~~IDM~~
+use [xdm](#xdm) instead.
+<!-- 高速多线程下载器。需要浏览器插件配合软件使用。
 
 官方仅有30天试用。若想下载破解版可在B站搜索教程。
 
-[官网](https://www.internetdownloadmanager.com/) | [破解](https://www.lanzouw.com/iYFgSw4lede)
+[官网](https://www.internetdownloadmanager.com/) | [破解](https://www.lanzouw.com/iYFgSw4lede) -->
+### [xdm](https://github.com/subhra74/xdm)
+开源免费的多线程高速下载器，[idm](#idm) 替代品。截至 20230605，部分汉化缺失。
 ### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
 快速启用禁用扩展。
 ### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)

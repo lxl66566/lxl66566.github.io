@@ -224,13 +224,13 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 ### 我的XP
 此处列出一些我觉得好听的曲子（Favorites的一部分）。（排名按照FTR难度顺序）
 
-<=9: Particle Arts, Alice's Suitcase, Equilibrium, Vindication
+<=9: INTERNET OVERDOSE, Particle Arts, Alice's Suitcase, Equilibrium, Vindication
 
-9+: 7thSense, Defection, Far Away Light, Infinite Strife,, Lost Desire, Sulfur
+9+: 7thSense, amygdata, Defection, Far Away Light, Infinite Strife,, Lost Desire, Sulfur
 
-10: cyanine, GLORY : ROAD, Löschen, Oshama Scramble!, Pentiment, PRAGMATISM, Sheriruth, アリス・リデルに捧ぐ, 妖艶魔女 -trappola bewitching-
+10: Climax, cyanine, `Good bye, Merry-Go-Round`, GLORY : ROAD, Löschen, Oshama Scramble!, Pentiment, PRAGMATISM, Sheriruth, アリス・リデルに捧ぐ, 妖艶魔女 -trappola bewitching-
 
-10+: #1f1e33, AMAZING MIGHTYYYY!!!!, Cyaegha, Halcyon, ouroboros -twin stroke of the end-, 烈華RESONANCE, Ringed Genesis, Singularity, Stasis, Tempestissimo, Testify, World Vanquisher
+10+: #1f1e33, AMAZING MIGHTYYYY!!!!, Cyaegha, Halcyon, ouroboros -twin stroke of the end-, 烈華RESONANCE, Ringed Genesis, Singularity, Stasis, Tempestissimo, Testify, TEmPTaTiON, World Vanquisher
 
 11: Aegleseeker, Grievous Lady, 最強STRONGER
 

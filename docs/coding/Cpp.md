@@ -52,9 +52,13 @@ R""(some text)""
 ```
 ## 面向对象
 protected：指能被子类访问，不能被外部访问的成员。
+
+C++ 允许多继承，菱形继承需要将中间类声明为虚类。（不要使用菱形继承！）
 ## option
 学过 rust 后，比较推崇 rust 中的 Option 的写法。C++ 中有 std::optional&lt;T> (C++17) 起到类似作用。
 * 一些函数：`has_value() -> bool`, `value() -> T`, `value_or(T) -> T`
+## template
+[see here](https://github.com/wuye9036/CppTemplateTutorial).讲得非常不错。
 ## variant
 错误处理的时候比较好用。类似 rust Result.
 > [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato

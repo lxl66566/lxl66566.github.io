@@ -10,6 +10,8 @@ A. 延长寿命；应对危机；减少死亡概率。
 
 <iframe frameborder="no" src="/charts/sports_times.html" width="100%" height="304"></iframe>
 
+注：*半俯冲轰炸机* 等效为两个俯卧撑
+
 ## 以距离记
 
 单位：米

@@ -7,8 +7,8 @@ sidebar: 'auto'
 :::
 
 <div class="image60" style="text-align: center; ">
-<img alt="meme" src="https://imgur.com/YhMBjxn.png" />
-<div>
+<img alt="meme" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/vpn/meme.png" />
+</div>
 
 ## 免费VPN
 :::warning 警告

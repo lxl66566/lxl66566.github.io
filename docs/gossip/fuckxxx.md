@@ -87,3 +87,19 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 * 偶然间点开了最早的没有合并的 pull request，发现是个我迫切需要的**任意倍速**功能的前置功能：任意倍数计算 star 数的功能。接近 2 years 的不被合并的更改。
 * 20230507：恶性 bug，osu 打开便闪退，目录出现 `.require_update` 文件，再次打开 `osu!.exe` 或 `repair osu!` 均会下载替换 exe 并继续闪退，不断循环。
 * [20230508](https://t.me/withabsolutex/1054)：尝试下载 osu!lazer，然后自动安装到 c 盘并把我 20+G 的谱面文件夹复制了一份到 c 盘并塞满了。直接导致了我退坑 osu。
+## utools 有多难用
+* 远离 electron，维持身心健康
+* 插件一直在后台消耗内存（还挺大），为什么不能随开随用？
+* 商业化，拿着开源社区的东西疯狂吸血。（我亲身经历，好用的剪贴板插件某天开始收费）
+* bug：时不时有个子进程莫名其妙让我的风扇转起来，瞬时 CPU & 内存高占用，kill 后不影响主进程，猜测是某个插件死循环
+
+如何戒断？
+1. 剪贴板用 [Ditto](https://github.com/sabrogden/Ditto)
+2. 取色用 [ColorPicker](https://github.com/martinchrzan/ColorPicker) 随用随开
+
+<div class="image60" style="text-align: center; ">
+<img alt="utools vs noutools" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/fuckxxx/fuckutools.png" />
+<div>
+utools vs diy my tools
+</div>
+</div>

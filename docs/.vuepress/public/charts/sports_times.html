@@ -423,6 +423,8 @@
         { name: "深蹲", 时刻: "20230603", times: 40 },
         { name: "俯卧撑", 时刻: "20230604", times: 14 },
         { name: "深蹲", 时刻: "20230604", times: 0 },
+        { name: "俯卧撑", 时刻: "20230605", times: 14 },
+        { name: "深蹲", 时刻: "20230605", times: 101 },
       ];
       let data_in_a_year = new Map();
       let year = new Date().getFullYear().toString();
@@ -452,7 +454,7 @@
         } else if (items.name == "开合跳") {
           detimes(items, 8);
         } else if (items.name == "深蹲") {
-          detimes(items, 10);
+          detimes(items, 7);
         }
       });
       const { Line } = G2Plot;

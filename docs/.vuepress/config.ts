@@ -172,6 +172,7 @@ export default defineUserConfig({
             "analog_circuit.md",
             "signals_and_systems.md",
             "Probab.Math.Stat.md",
+            "dsp.md",
             "foods.md",
           ],
         },
