@@ -1,13 +1,35 @@
 # C++
 ## 配置 vscode 环境
-1. 下载安装 mingw 编译器。我使用[chocolatey](https://chocolatey.org/)进行下载安装，好处是无需手动配置环境变量。
-    * 打开管理员下的命令提示符，执行 `choco install mingw`，按提示进行安装。安装后，默认位置应为`C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64`。（当然，得参考你的chocolatey安装位置）
+默认 Windows 下。
+### mingw + *C/C++*
+1. 下载安装 mingw 编译器。推荐使用 Windows 下包管理器进行安装（[scoop](../farraginous/recommend_packages.md#scoop) | [chocolatey](https://chocolatey.org/)），好处是无需手动配置环境变量。
+    * 打开管理员下终端，执行 `choco install mingw`，按提示进行安装。安装后，默认位置应为`C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64`。（当然，得参考 chocolatey 安装位置）
 2. 在 vscode 中安装 *C/C++* 扩展。
 3. 在工作区**打开一个文件夹**，新建一个简单的 helloworld.cpp 文件（内容请自己写完）。
 4. `Ctrl + Shift + P` 打开命令面板，搜索并点击 `C/C++: Edit Configurations (UI)` ，将编译器路径改为 mingw 文件夹下的 `/bin/g++.exe`；在*IntelliSense 模式* 下选择 `gcc-x64`。此时 vscode 会自动在工作区创建 `.vscode` 存放配置。
 5. 同上打开命令面板，搜索并点击 `Tasks: Configure Default Build Task`，再选择 `C/C++: g++.exe build active file`。
 
 现在你已经可以在 vscode 中编译并运行 c++ 代码了。
+### clangd + xmake
+这里是进阶的环境配置。需要先安装好编译器（随便哪个），~~和一点对技术的渴望。（需要学习 xmake）~~
+
+> clangd 是一个基于Clang C++编译器的语言服务器，可以通过LSP协议向编辑器如VSCode、Vim、Emacs等提供语法补全、错误检测、跳转、格式化等功能。 —— GPT4
+
+相比 *C/C++* 扩展的 LSP，clangd 具有其他优点：
+1. 响应速度快。用过 *C/C++* 扩展 的人都知道其慢的一批。
+2. 格式化功能强大。
+3. 支持 inlay hints
+
+而 xmake 也是向下兼容 cmake 的构建工具，拥有简洁的语法。~~我真的不想再面对一团乱麻的 cmake 了~~
+
+具体配置方式如下：
+1. 扩展：安装 *clangd - LLVM*, *XMake - tboox*
+2. 从 [scoop](../farraginous/recommend_packages.md#scoop) 安装 xmake：`scoop install xmake`
+3. `xmake create -l c++ -P ./cpp && cd cpp`，意思是在当前目录下创建项目`cpp`并进入
+4. `xmake && xmake r` 构建并运行。
+5. 设置格式化：在项目根目录运行 `clang-format.exe -style=llvm -dump-config > .clang-format`
+    * 若找不到`clang-format.exe`可以使用[everything](../farraginous/recommend_packages.md#everything)搜索并用绝对路径启动，我的`clang-format.exe`路径为`C:\Users\<user_name>\.vscode\extensions\ms-vscode.cpptools-1.15.4-win32-x64\LLVM\bin\clang-format.exe`
+    * 进入`.clang-format`编辑个性化设置。主要是把缩进调成 4（我的习惯）。其他具体项的意思可以自行搜索。
 ### vscode 配置 Qt 开发环境
 由于 Qt 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。下述过程：
 1. 假设你：

@@ -103,3 +103,10 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 utools vs diy my tools
 </div>
 </div>
+
+## 批判微软
+简单看了一下[《开源世界旅行》](https://i.linuxtoy.org/docs/guide/index.html)，比较老的一本书，作者是国人，对微软批判非常辛辣。我借用赞同的观点。
+* Office 是恶心的垄断，它庞大（占用以 G 计），混乱（甚至 2021 版都经常出现无法删除空行，无法对齐，保存崩溃），打开还慢。
+* 无论 windows 还是 office，本质上都是傻瓜式操作，限制了人类的创造力（对首字自动大写有深刻体会）
+* windows 就是强迫你接受微软的设计理念，我无法得到我需要的个性化效果
+* windows bug 一堆，历史遗留重，设计也有缺陷（我极度赞赏 linux 统一 lib 位置的设计，避免了大堆重复占用空间。例如 windows 下 electron 人人喊打，但 linux 上却并没有太多不妥）

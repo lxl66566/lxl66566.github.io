@@ -10,7 +10,13 @@ A. 延长寿命；应对危机；减少死亡概率。
 
 <iframe frameborder="no" src="/charts/sports_times.html" width="100%" height="304"></iframe>
 
-注：*半俯冲轰炸机* 等效为两个俯卧撑
+注：此处为等效计算表
+```js
+const 半俯冲轰炸机 = 1.3,
+        错手俯卧撑 = 1.7,
+        中式俯卧撑 = 2.0,
+        反手俯卧撑 = 3.0;
+```
 
 ## 以距离记
 

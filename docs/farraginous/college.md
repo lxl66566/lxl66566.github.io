@@ -99,6 +99,12 @@ curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=l
 滥 车 充 数
 </div>
 </div>
+<div class="image50" style="text-align: center; ">
+<img alt="fun3" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun4.jpg" />
+<div>
+野生熊猫吃人事件实时播报
+</div>
+</div>
 
 ## 校内迷惑行为大赏
 <div class="image50" style="text-align: center; ">
