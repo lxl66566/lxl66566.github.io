@@ -57,7 +57,8 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 12. 启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（[参考](https://zhuanlan.zhihu.com/p/336846460)）：在 regedit 中，将 `HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled` 的值设为 0.
 13. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
 14. 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
-
+## 我使用的软件们
+20230607，我的 windows 11 开机自启动的托盘软件有：[XDM](../farraginous/recommend_packages.md#xdm), Ditto, [parsec](../farraginous/recommend_packages.md#parsec), V2rayN, [f.lux](../farraginous/recommend_packages.md#flux), [everything](../farraginous/recommend_packages.md#everything), 火绒, [Tai](../farraginous/recommend_packages.md#tai), [flameshot](../farraginous/recommend_packages.md#flameshot)
 ## 对 ArchWSL 的设置
 
 * ~/.bashrc（仅含手动编辑）:

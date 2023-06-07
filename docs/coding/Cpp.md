@@ -1,4 +1,7 @@
 # C++
+## 一些工具
+* [cppinsights](https://cppinsights.io/)：显式指明代码中的隐式转换与中间变量。
+* [godbolt](https://godbolt.org/)：汇编分析；pastebin
 ## 配置 vscode 环境
 默认 Windows 下。
 ### mingw + *C/C++*
