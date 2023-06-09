@@ -1,3 +1,6 @@
+---
+sidebar: auto
+---
 # 信号与系统
 我看的网课是浙大的胡浩基老师的[视频](https://www.bilibili.com/video/BV1g94y1Q76G)，优点是讲的非常细致生动，缺点大概是时长太长了。
 ## 捷径与方法
@@ -37,7 +40,7 @@
 
 **复数形式**：<span v-pre>$x(t)=\sum_{k=-\infty}^{\infty}a_ke^{jk\omega_0t}, a_k=\frac{1}T\int_0^Tx(t)e^{-jk\omega_0t}dt$</span>
 ### 周期傅里叶
-<span v-pre>$a_k=\frac{1}{T}F(jk\omega_0)$</span>
+<span v-pre>$a_k=\frac{1}{T}F(jk\omega_0)=\frac{1}{T}\int_Tx(t)e^{-jk\omega_0}dt$</span>
 
 周期函数的傅里叶变换：<span v-pre>$\mathscr{F}[ x(t) ]=2\pi\sum_{k=-\infty}^{\infty}a_k\delta(\omega-k\omega_0)$</span>
 
@@ -120,5 +123,22 @@ cos，sin 在[-π,π]上跟连续一样，其他部分周期重复
 调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
 
 解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
+### 采样定理
+(Nyquist–Shannon) sampling theorem[^证明]：带限连续信号可以由 <span v-pre>$\omega_s>2\omega_m$</span>的采样频率的离散信号完美恢复（唯一确定）。
 
-(Nyquist–Shannon) sampling theorem：带限连续信号可以由 <span v-pre>$\omega_s>2\omega_m$</span>的采样频率的离散信号完美恢复。
+证明中间式：
+1. 对 X(t) 的 T 周期冲激串采样的 Fourier transform：<span v-pre>$X_p(j\omega)=\frac1T\sum X(j(\omega-k\omega_s))，\omega_s=2\pi/T$</span> 为采样频率
+
+[^证明]:https://www.bilibili.com/video/BV1g94y1Q76G?p=39
+
+Nyquist frequency: 2wm
+## Laplace transform
+计算拉式变换必须考虑收敛域
+### 基本变换
+<span v-pre>$\mathscr{L}[ e^{-at}u(t) ]=1/(s+a),\ \ \ Re(s)>-a$</span>
+
+<span v-pre>$\mathscr{L}[ -e^{-at}u(-t) ]=1/(s+a),\ \ \ Re(s)<-a$</span>
+
+-a 称为*极点*，用 `x` 表示
+### 性质
+见 [复变函数 - Laplace transform](./complex_functions.md#laplace-transform)

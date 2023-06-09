@@ -1,3 +1,6 @@
+---
+sidebar: auto
+---
 # 复变函数与积分变换
 ## 基础计算
 <span v-pre>$\large sinz=\frac{e^{iz}-e^{-iz}}{2i} \ , \ cosz=\frac{e^{iz}+e^{-iz}}{2}$</span>
@@ -59,6 +62,8 @@ Dirichlet integral: <span v-pre>$\large \int_{0}^{+\infty}\frac{sin\omega}{\omeg
 
 ## Laplace transform
 Laplace transform: <span v-pre>$\large F(s)=\mathscr{L}(f(t))=\int_{0}^{+\infty}f(t)e^{-st}dt$</span>
+
+> 信号与系统中，积分下限可从 -∞ 开始
 
 相似性质：<span v-pre>$\large \mathscr{L}(f(at))=\frac{1}{a}F(s/a)$</span>
 

@@ -155,6 +155,7 @@ curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=l
 
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
+|王嵘 - 代信号实验|0|我对其不会有半点尊敬。[^2][^3]|
 |大物实验 - 顾晓艳|8|温和，讲解清楚，手把手教||
 |数字系统设计 - 木昌洪|1|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
 |概率论<Badge text="半开卷" /><Badge type="warning" text="电子版" /> - 郭继明|6|温和|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
@@ -185,4 +186,6 @@ curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=l
 :::
 
 [^1]: https://t.me/withabsolutex/945
+[^2]: https://t.me/withabsolutex/1114
+[^3]: https://t.me/withabsolutex/1115
 ## [如何看待大学班级](../gossip/consider.md#如何看待大学班级)
