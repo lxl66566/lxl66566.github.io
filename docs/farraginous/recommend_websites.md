@@ -26,6 +26,7 @@ LLM：Large Language Models，大型语言模型。下述均可免费使用。
     * 需要使用科学上网，若自动重定向到 `(cn).bing.com` 则需要：检查代理，清除 Cookies，并在 microsoft 账户设置中关闭严格搜索。
 * [Claude](https://www.anthropic.com/product)：据说是 OpenAI 独立出来的员工创办的。无法直接使用（需要美国身份），请[通过 slack bot 使用](https://slackbot.anthropic.com/slack/install)。
 * [phind](https://www.phind.com/)：搜索编程有关问题。会给出来源。
+* [wrtn.ai](https://wrtn.ai/)：韩国网站，免费的 GPT-4
 ## 资源搜索
 * 搜电子书：[zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
 > 2022.11.04: 绝对值x悲哀道：z-library暂时离开了我们。<br/>

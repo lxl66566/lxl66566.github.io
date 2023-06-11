@@ -49,47 +49,59 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 ### 置顶
 聊天界面的上方可以看到置顶消息（如果有的话）。点击即可跳转。跳转置顶消息**不会**将当前位置记为锚点。
 ### 回复与锚点
-点击 *回复性质的消息* 会添加当前位置为锚点。你可以点击右下角向下的箭头返回最近的锚点。
+点击 *回复性质的消息* 会添加当前位置为锚点。你可以点击右下角向下的箭头返回最近的锚点。这里有一个“设计缺陷”，即点击置顶消息跳转不会设置锚点。
 ## 频道群组推荐
 由于本人使用telegram的时间不算久，此处频道/群组多为受先行者们所转发传播，在此对他们表示敬意。<span class="heimu" title="你知道的太多了">但是现在的我与当时写下这句话的我已经不一样啦kora！</span>
 
-首先当然是要夹带私货啦！我和我的频道：<a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-%40ab5__x-blue?style=flat-square&logo=telegram" /></a>
+*首先当然是要夹带私货啦！我和我的频道：*<a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-%40ab5__x-blue?style=flat-square&logo=telegram" /></a>
 ### 新闻
-* [竹新社](https://t.me/tnews365)：较为客观的国内外新闻转载，简洁
-* [Disclose.tv](https://t.me/disclosetv)：英文新闻频道，较客观
+* [竹新社](https://t.me/tnews365)：国内外新闻转载，较客观
+* [Disclose.tv](https://t.me/disclosetv)：英文新闻频道
 * [中国数字时代](https://t.me/cdtchinesefeed)：转载网评文章，较主观
 #### 科技新闻
 * [风向旗参考快讯](https://t.me/xhqcankao)
 * [Solidot](https://t.me/solidot)
 * [每日消费电子观察](https://t.me/CE_Observe)
 * [Testflight 新闻投稿](https://t.me/TestFlightCN)
-### 外语
+### 学习
+#### 编程及技术
+* [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题 ~~（以及膜拜~~
+* [Rust 众](https://t.me/rust_zh)：讨论 Rust 问题 ~~（以及膜拜~~
+* [Java 编程语言](https://t.me/Javaer)：群里都是聊天的，没几个正经学习~~（java 怎么这么拉了）~~
+* [Python 中文交流](https://t.me/pythonzh)
+* [#archlinux-cn](https://t.me/archlinuxcn_group)
+#### 外语
 * [双语新闻](https://t.me/shuangyunews_rss)：看新闻学英语，拥有逐段双语对照
-* [【音声可能】日本語雑談部屋](https://t.me/onseizatudan) & [日本語雑談部屋](https://t.me/nihongo_practice)：日语聊天群（不使用日语会被封禁）
-* [つぐみ喫茶店](https://t.me/nihongo_soudann)：颇具规模的日语聊天群
-* [英日部屋](https://t.me/enjpchat)：聊天群，仅能使用日语与英语
-* [日語學習小組](https://t.me/learn_ja_group) & [日本語研修](https://t.me/LearningJapaneseGroup)：中文交流的日语学习群组
+* [【音声可能】日本語雑談部屋](https://t.me/onseizatudan) & [日本語雑談部屋](https://t.me/nihongo_practice) & [つぐみ喫茶店](https://t.me/nihongo_soudann)：聊天群，仅日语
+* [英日部屋](https://t.me/enjpchat)：聊天群，日语 | 英语
+* [日語學習小組](https://t.me/learn_ja_group) & [日本語研修](https://t.me/LearningJapaneseGroup)：中文交流的日语学习群
 * [Word Power Made Easy](https://t.me/pieroots)：英语单词词根起源探寻
 ### 科技
 * [黑洞资源笔记](https://t.me/tieliu)：分享一些有价值的编程工具及技巧 / 卖课的
-* [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题 ~~（以及膜拜~~
-* [Rust 众](https://t.me/rust_zh)：讨论 Rust 问题 ~~（以及膜拜~~
-* [#archlinux-cn](https://t.me/archlinuxcn_group)
 * [蓝点网订阅频道](https://t.me/landiansub)：分享好用软件
+### NSFW
+* [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，*绝对值_x 精选，质量有保证！*
+* [美图与色图](https://t.me/setu_nsfw) & [everyday color photos](https://t.me/everydaycolorphoto) | [萌图交流](https://t.me/jialeleya2233) | [韵の小院🍃ᴺˢᶠʷ](https://t.me/YunRan1314)：每日色图
+* [安利 (NSFW)](https://t.me/qingan567) | [ExLOLI - 每日萝莉本子](https://t.me/exlolicon)：来点本子
+* [(ゲームCG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG**鉴赏**
+* [超高质量R18动画资源分享[NSFW]](https://t.me/acgr18)
+* [每日精选](https://t.me/watchaveveryday) & [超清|中文字幕](https://t.me/CCTAV)...：三次元的，嗯，不用我介绍吧
 ### 资源
 * [Visual Novel Channel](https://t.me/erogamecloud)：galgame 推荐与下载
 * [NEP.Anime | 动画仓库](https://t.me/AnimeNep)：动漫收藏搬运
-### NSFW
-* [美图与色图](https://t.me/setu_nsfw) & [everyday color photos](https://t.me/everydaycolorphoto)：每日色图
-* [安利 (NSFW)](https://t.me/qingan567)：本子推荐
-* [韵の小院🍃ᴺˢᶠʷ](https://t.me/YunRan1314)：<span class="heimu" title="你知道的太多了">露点</span>涩图
-* [(ゲームCG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG**鉴赏**
-* [每日精选](https://t.me/watchaveveryday) & [超清|中文字幕](https://t.me/CCTAV)：三次元的，嗯，不用我介绍吧
-* [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，*绝对值_x 精选，质量有保证！*
+### 乐
+* [知乎暴论](https://t.me/mightyflame)：知乎一些易删回答，看点乐
+* [美图与沙雕](https://t.me/shadiaotu)
+* [尼古拉斯二手消息转运中心](https://t.me/nichoIascw)
 ### 闲聊
 * [垃圾高校毁我青春](https://t.me/joinchat/Ytplgt-buepkYThl)：大学生闲聊群
-### vpn
-建议去看初级科学上网，你可以在那些机场的官网找到TG群组链接。
+* [真红真红真](https://t.me/upsetGroup)：[失落小站](../hobbies/galgame.md#资源)附属群
+* [Coder Offtopic 中文群](https://t.me/coder_ot)：技术 ot 群
+* [VPS信号旗资讯本部](https://t.me/vps_xinhaoqi)：键政群
+### vps
+vpn 建议去看初级科学上网页面，你可以在那些机场的官网找到TG群组链接。
+* [VPS log 官方讨论群](https://t.me/vpalogchat)
+* [IPv6 Server - Chinese](https://t.me/ipv6china)
 ### 友链
 * [Kum's Various Cubes](https://t.me/KumsVariousCubes)
 * [粒粒子的琐碎思考](https://t.me/lilic_8232)

@@ -36,6 +36,7 @@ windows 上建议直接无脑 all in vscode。
 2. 选中你的虚拟环境
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
+## [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
 ## 图像相关
 ### 从网站获取图片
 ```python
