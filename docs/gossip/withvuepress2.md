@@ -274,4 +274,28 @@ head: [
   ["script", { src: "/styles/pangu.min.js" } ],
 ],
 ```
-其中`/styles/pangu.min.js`内是[https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js](https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js)的内容。
+其中`/styles/pangu.min.js`内是[https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js](https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js)的内容。但是这样一来便引入了以下问题：
+### 无法加载 pangu 问题
+
+<text style="color:red;font-weight:bold">未解决！</text>
+
+使用此方法添加的 pangu.min.js 在 head 中被注入，存在加载次序问题，在浏览器上无法正常运行。我尝试使用 `enhanceApp.js`[^1] 将其添加到文档末尾解决这个问题：
+
+`.vuepress/enhanceApp.js`:
+```js
+export default ({
+  Vue, // VuePress 正在使用的 Vue 构造函数
+  router, // 当前应用的路由实例
+}) => {
+  const pangujs = document.createElement("script");
+  pangujs.src = "./styles/pangu.min.js";
+  pangujs.async = true;
+  pangujs.defer = true;
+  document.body.appendChild(pangujs);
+  console.log("pangu installed");   // test
+};
+```
+但是失败了，`console.log` 并未执行，说明 `.vuepress/enhanceApp.js` 未被自动加载。我也尝试了在 `config.ts` 中加入 `enhanceAppFiles: resolve(__dirname, 'enhanceApp.js')`[^2]，无效。
+
+[^1]: https://vuepress.vuejs.org/zh/guide/basic-config.html#%E5%BA%94%E7%94%A8%E7%BA%A7%E5%88%AB%E7%9A%84%E9%85%8D%E7%BD%AE
+[^2]: https://vuepress.vuejs.org/zh/plugin/option-api.html#enhanceappfiles

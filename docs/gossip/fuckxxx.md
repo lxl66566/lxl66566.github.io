@@ -110,3 +110,12 @@ utools vs diy my tools
 * 无论 windows 还是 office，本质上都是傻瓜式操作，限制了人类的创造力（对首字自动大写有深刻体会）
 * windows 就是强迫你接受微软的设计理念，我无法得到我需要的个性化效果
 * windows bug 一堆，历史遗留重，设计也有缺陷（我极度赞赏 linux 统一 lib 位置的设计，避免了大堆重复占用空间。例如 windows 下 electron 人人喊打，但 linux 上却并没有太多不妥）
+
+## Github 有多难用
+虽说 Github 为开发者提供了非常多的便利，但是该骂还是得骂。
+* 权限管理一坨屎。
+    * private 仓库只能通过添加 collaborator 对个人开放，但 collaborator 也意味着给出了写权限。
+    * ssh 权限稀烂。Github 建议使用 ssh 进行传输，没有添加 ssh 密钥连 clone 都做不到，但添加了 ssh 密钥后，本机就对 Github 的所有仓库拥有了所有权限。我认为[^1]ssh 至少需要能够控制对不同仓库的访问权限与写入权限。这样开发者能够在可能不安全的主机上使用 ssh。
+* Github app 一坨屎。无法下载 raw file。
+
+[^1]: https://t.me/withabsolutex/1075

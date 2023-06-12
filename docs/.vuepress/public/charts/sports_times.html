@@ -402,6 +402,7 @@
         { name: "俯卧撑", 时刻: "20230518", times: 13 },
         { name: "深蹲", 时刻: "20230518", times: 0 },
         { name: "俯卧撑", 时刻: "20230519", times: 26 },
+        { name: "深蹲", 时刻: "20230519", times: 0 },
         { name: "俯卧撑", 时刻: "20230520", times: 0 },
         { name: "深蹲", 时刻: "20230520", times: 40 },
         { name: "俯卧撑", 时刻: "20230521", times: 24 },
@@ -443,6 +444,7 @@
         { name: "俯卧撑", 时刻: "20230607", times: 13 },
         { name: "深蹲", 时刻: "20230607", times: 0 },
         { name: "引体向上", 时刻: "20230607", times: 0 },
+        { name: "引体向上", 时刻: "20230608", times: 0 },
         { name: "俯卧撑", 时刻: "20230608", times: 错手俯卧撑 * 6 + 30 },
         { name: "引体向上", 时刻: "20230609", times: 9 },
         { name: "俯卧撑", 时刻: "20230609", times: 15 },
@@ -452,6 +454,7 @@
         { name: "深蹲", 时刻: "20230610", times: 36 },
         { name: "俯卧撑", 时刻: "20230611", times: 15 },
         { name: "深蹲", 时刻: "20230611", times: 0 },
+        { name: "俯卧撑", 时刻: "20230612", times: 27 },
       ];
       let data_in_a_year = new Map();
       let year = new Date().getFullYear().toString();
@@ -481,7 +484,7 @@
         } else if (items.name == "开合跳") {
           detimes(items, 8);
         } else if (items.name == "深蹲") {
-          detimes(items, 7);
+          detimes(items, 3);
         }
       });
       const { Line } = G2Plot;

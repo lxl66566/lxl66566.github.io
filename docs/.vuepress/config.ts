@@ -7,6 +7,7 @@ const {
 const { path } = require("@vuepress/utils");
 const { commentPlugin } = require("vuepress-plugin-comment2");
 const { commentTheme } = require("./theme");
+import { resolve } from "path";
 // const { pangu } = require("vuepress-plugin-pangu");
 // require('vuepress-plugin-pangu');
 // const panguPlugin = require('markdown-it-pangu')
@@ -22,13 +23,14 @@ export default defineUserConfig({
   description: "没什么有价值的内容的，真的！",
   head: [
     ["link", { rel: "stylesheet", href: "/styles/head.css" }],
-    [
-      "script",
-      {
-        src: "/styles/pangu.min.js",
-      },
-    ],
+    // [
+    //   "script",
+    //   {
+    //     src: "/styles/pangu.min.js",
+    //   },
+    // ],
   ],
+  extraWatchFiles: [".vuepress/public/*", ".vuepress/enhanceApp.js"],
   theme: commentTheme({
     logo: "https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/logo.jpg",
     navbar: [
