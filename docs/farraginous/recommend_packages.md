@@ -71,11 +71,20 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 
 [谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
 ### Seal
-开源的视频下载app，Android 端的优质选择。（PC 端请选择 [yt-dlp](https://github.com/yt-dlp/yt-dlp)）
+<details><summary>?</summary>
+开源的视频下载app，Android 端的选择。我几乎不用手机下载视频，因此折叠，不作评价。（PC 端请选择 [yt-dlp](https://github.com/yt-dlp/yt-dlp)）
 
 [项目地址](https://github.com/JunkFood02/Seal)
+</details>
+
 ### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
-强大的数据监视型应用(?，玩机爱好者必备。建议配合 ADB 食用。
+强大的数据监视型应用(?)，玩机爱好者必备。建议配合 ADB & root 食用。
+### [raindrop.io](https://github.com/raindropio)
+第三方书签管理工具。云端存储，多设备访问，免费使用，支持书签分享。
+
+> 我曾经用过 [xbrowsersync](https://github.com/xbrowsersync/app) 书签同步器，但是很久没维护了，而且由于 manifest v2 不再受支持的原因，每隔一段时间就会被浏览器杀掉扩展。因此找到了这个替代品。
+
+电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
 ## Windows
 ### [scoop](https://scoop.sh/)
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。

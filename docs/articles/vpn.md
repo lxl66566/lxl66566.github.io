@@ -214,11 +214,11 @@ tips：加速前需事先选择能通过连接测试的节点
 请前往谷歌商店或[前往github下载](https://github.com/Kr328/ClashForAndroid/releases)。[私链](https://wwp.lanzout.com/iL6sD03mi0gf)
 ### V2ray
 #### 简介
-V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（[摘自](https://www.xuebuyuan.com/3296293.html)）
+V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（[source](https://www.xuebuyuan.com/3296293.html)）
 
 V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
 
-相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点，单个特定协议的节点无法直接导入 clash，因此使用 v2ray。<span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>
+相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用配置文件。
 #### 下载地址
 [内核项目地址](https://github.com/v2fly/v2ray-core) | [PC 客户端项目地址](https://github.com/2dust/v2rayN)
 #### 简易教程
@@ -230,6 +230,12 @@ V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
 2. 复制节点地址，按 `Ctrl+V` 导入，按 `Enter` 激活。
 3. 测试真连接延迟，确保节点有效。
 4. 下方 *系统代理* 处选择 *自动配置系统代理*，开启代理。
+
+若为订阅链接：
+1. 点击加号，在订阅分组设置中，将订阅链接填入 URL。别名随便写。
+2. 订阅分组 - 更新全部订阅
+3. 一键测延迟/速度，选择节点双击激活。
+4. 同上方 4.
 ### Matsuri & NekoRay
 开源，自由度高，安全性好，使用体验一般 *(Matsuri > NekoRay)* 。
 

@@ -3,7 +3,7 @@
 
 VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate(locate), trash-cli, tmux
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate(locate), trash-cli, tmux, tldr
 * 我计划装的包：Joshuto
 ## 更换镜像
 :::: code-group
@@ -79,6 +79,10 @@ termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`�
     ```
 * 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)，注意作用域问题
 * 函数：使用 function 新增函数后，还需要使用 `funcsave <function>` 保存到配置文件夹下以便修改，修改后需要重新加载 fish。
+    * 删除函数：`functions -e <function>`
+    * alias 本质上也是函数+
+### neovim
+参考 [从零开始配置 Neovim (Nvim) - MartinLwx](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)
 ### locate
 快速搜索。
 ```bash
@@ -90,6 +94,12 @@ sudo updatedb
 * 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/archwsl/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
 * 插件：不要用默认的插件管理器。。不好用。
 * copy-mode(vi): `Space` 进入选择，`Enter` 复制。（我觉得是假的 vi mode）
+* 默认启动 ([source](http://129.226.226.195/post/28785.html))：
+    ```sh
+    if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    exec tmux
+    fi
+    ```
 ## 遇到的问题
 ### sed 语法
 sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。

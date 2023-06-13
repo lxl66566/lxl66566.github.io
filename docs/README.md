@@ -26,6 +26,10 @@
 :::
 
 ## [关于作者](./gossip/author.md)
+## 友链与外链
+单方面引用一些写得很好的博客。若有异议，请联系我删除，。
+* [asukaminato.notion.site](https://asukaminato.notion.site/asukaminato/Blog-3c0df75d3d8b471ab67e97ecc82e10a4)
+* [martinlwx.github.io](https://martinlwx.github.io/zh-cn/)
 ## 关于博客
 * 使用 [VuePress2](https://v2.vuepress.vuejs.org/zh/) 搭建，默认主题，极简风格
 * [项目地址](https://github.com/lxl66566/lxl66566.github.io)，Markdown 源码位于 branch *[code](https://github.com/lxl66566/lxl66566.github.io/tree/code)*

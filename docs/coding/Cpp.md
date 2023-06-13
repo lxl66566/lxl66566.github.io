@@ -56,7 +56,7 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 
 然后就能~~愉快地~~构建了。
 ## 构建系统
-最广泛使用的是 Cmake，然而我并不喜欢它。网上也有一些[类似的想法](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。所以我也不太好说。
+最广泛使用的是 Cmake，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。所以我也不太好说。不过姑且我还是用着 xmake 的。
 ## 类型转换
 >= C++11
 * `static_cast`：不进行安全检查
@@ -117,7 +117,7 @@ std::visit(overloaded{
 * 慎用 C++20 的 std::ranges::remove_if()
 ## Qt
 :::tip
-此处 Qt 版本均为 Qt4-5，部分代码无法正常迁移至 Qt6.
+此处 Qt 版本大多为 Qt4-5，部分代码无法正常迁移至 Qt6.
 :::
 ### 基本介绍 --> [官网](https://www.qt.io/)
 Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用就是用Qt写的。对于C++开发GUI应用来说，Qt是比较简单快速的选择。
@@ -129,6 +129,12 @@ Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用
 ::: tip
 以下内容并不是Qt基础的教程，缺乏目的性和针对性
 :::
+### 安装
+* CLI: [aqtinstall](https://github.com/miurahr/aqtinstall)（我并未试过）
+* 官方 GUI: [qt.io](https://www.qt.io/zh-cn/download)
+### 第三方
+一些可能会用到的第三方组件 / 框架。
+* [FluentUI](https://github.com/zhuzichu520/FluentUI)：提供一套 UI 框架。
 ### 唤起最小化的窗口
 ```cpp
 show();showNormal();raise();activateWindow();

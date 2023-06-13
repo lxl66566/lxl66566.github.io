@@ -18,6 +18,7 @@
 我并未系统学习以下新生语言，只是想了解其设计理念，并获取一些语言设计的灵感。
 * [V language](https://github.com/vlang/v)：基于 C 的注重性能的静态类型编译语言。语法比较像 go?
 * [Mun](https://github.com/mun-lang/mun)：基于 Rust 的静态类型语言，注重热重载 (hot reloading)。
+* [Mojo](https://docs.modular.com/mojo/)：python 的超集，注重性能，类型，兼容性，目标是 AI 领域。
 ## 工具
 1. [Github](./github.md)：如何进行最基本的使用
 2. [Git](./Git.md)：版本控制系统
@@ -28,9 +29,9 @@
 一些值得学习的地方，语言无关。
 * [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 * [learnxinyminutes](https://learnxinyminutes.com/)
-* [CS自学指南](https://csdiy.wiki/)：英文好的话可以看看。
+* [CS自学指南](https://csdiy.wiki/) & [计算机专业学习路线 - hackway](https://hackway.org/docs/cs/intro)：英文好的话可以看看。
 ## 其他能力
 1. [算法](./algorithm.md)
 ## 杂项
 ### 字体
-[top-programming-fonts](https://github.com/hbin/top-programming-fonts/)，随便选。反正我用 Fira Code
+[top-programming-fonts](https://github.com/hbin/top-programming-fonts/)，随便选。反正我用 Fira Code。
