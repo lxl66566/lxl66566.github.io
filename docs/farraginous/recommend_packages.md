@@ -212,6 +212,8 @@ use [xdm](#xdm) instead.
 [官网](https://www.internetdownloadmanager.com/) | [破解](https://www.lanzouw.com/iYFgSw4lede) -->
 ### [xdm](https://github.com/subhra74/xdm)
 开源免费的多线程高速下载器，[idm](#idm) 替代品。截至 20230605，部分汉化缺失。
+
+20230614: 闪退 bug，重置无效。
 ### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
 快速启用禁用扩展。
 ### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
