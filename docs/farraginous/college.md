@@ -81,6 +81,12 @@ curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=l
     * 调控论：学校为了调控设备磨损，不定期将使用少的喷头调为 free
     * ~~黑客论：有牛逼的学生黑进了系统，将自己的卡变为 free 卡，插哪哪 free，但会撤销上一次的改变~~
 
+<div class="image60" style="text-align: center; ">
+<img alt="meme1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/meme1.jpg" />
+<div>
+难绷
+</div>
+</div>
 <div class="image50" style="text-align: center; ">
 <img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun1.jpg" />
 <div>
@@ -102,7 +108,7 @@ curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=l
 <div class="image50" style="text-align: center; ">
 <img alt="fun3" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun4.jpg" />
 <div>
-野生熊猫吃人事件实时播报
+野生熊猫吃人事件
 </div>
 </div>
 

@@ -58,10 +58,25 @@
 1. 隐藏：*首页右上角 - 设置 - App - 隐藏*
 2. 安装 [LSPosed](https://github.com/LSPosed/LSPosed/releases/latest) (Zygisk)：下载 zip，复制进手机，在 *magisk - 模块* 安装并重启，在设置中打开 Zygisk。（不再重复模块安装步骤）
 3. 安装内置的屏蔽广告插件
-### modules
+### magisk modules
 * [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)：隐藏 root。
+### LSPosed modules
+* WeXposed
+* QXposed
+* TSBattery
 ### 其他
-* shizuku：通过 play 商店安装。
+通过 play 商店安装：
+* [shizuku](https://github.com/RikkaApps/Shizuku)
+* [雹](https://github.com/aistra0528/Hail)：冻结应用。拒绝使用闭源商业化的 *冰箱*。
+* App ops（**闭源！**）：权限管理。闭源功能有限。
+
+通过 Github 安装：
+* [AdAway](https://github.com/AdAway/AdAway)：屏蔽广告。
+* [DarQ](https://github.com/KieronQuinn/DarQ)：强制黑夜。支持不算好，pdd，咸鱼都无法强制。
+
+通过酷安安装：
+* Scene5（**闭源！**）：
+
 
 [^1]: #刷机
 ## Redmi note 10 pro - after root

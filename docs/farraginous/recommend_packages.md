@@ -34,7 +34,7 @@ Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 * 支持安装脚本，自定义拦截广告，可调长按倍速的视频播放器。
 * 安装包仅 9 M。
 ### MT管理器
-MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（[摘自](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。
+MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（[source](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。
 
 [官网下载地址](https://bbs.binmt.cc/forum-2-1.html) | [酷安下载地址](https://www.coolapk.com/apk/bin.mt.plus) | [私链](https://wwp.lanzout.com/i9frh06qke0h) | 可在国内应用商店下载
 ### Fake Location
@@ -42,7 +42,7 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 
 [官方项目地址](https://github.com/Lerist/FakeLocation)  [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 ### Go安装器
-一键安装Google三件套
+一键安装 Google 框架。注意，安装框架后还需自行安装 Google Play 等。
 
 [酷安下载地址](https://www.coolapk.com/apk/com.goplaycn.googleinstall) | [私链](https://wwp.lanzout.com/iYyA10686e7c)
 ### NekoX
@@ -54,7 +54,7 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 ### Picacg
 ~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
 
-[官方下载地址](http://picacgs.com/)  [备用官方地址](http://picacgp.com/)  [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
+[官方地址?](https://picacg2022.com/) | [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
 ### Keepass系列
 开源多端密码管理器。其中Keepass2Android是Android端的软件，而KeePassXC则是PC端的。
 
@@ -78,13 +78,15 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 </details>
 
 ### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
-强大的数据监视型应用(?)，玩机爱好者必备。建议配合 ADB & root 食用。
+强大的数据监视/性能修改应用，玩机爱好者必备。建议配合 ADB & root 食用。
 ### [raindrop.io](https://github.com/raindropio)
 第三方书签管理工具。云端存储，多设备访问，免费使用，支持书签分享。
 
 > 我曾经用过 [xbrowsersync](https://github.com/xbrowsersync/app) 书签同步器，但是很久没维护了，而且由于 manifest v2 不再受支持的原因，每隔一段时间就会被浏览器杀掉扩展。因此找到了这个替代品。
 
 电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
+### [歌词适配](https://gcsp.lanzoux.com/tp/igsE90gu7tsb)
+能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。
 ## Windows
 ### [scoop](https://scoop.sh/)
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
