@@ -47,9 +47,9 @@ git commit -m "注释"
 > 注释也可单引号，有的终端环境使用单引号会报错<br/>
 > ssh密钥生成后首次添加注释可能会出现额外提醒，请根据提示照做
 #### 撤销提交
-撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
-
-修改注释：`git commit --amend`，需要使用 Vim
+* 撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
+* 修改注释：`git commit --amend`，需要使用 Vim
+* 还有比较常用的，回到上一个 commit 的状态，去除所有多余文件和改动：`git reset --hard HEAD && git clean -f -d`
 #### 合并提交
 在 Pull Requst 时，最好将自己所做的更改合为一个。假设上游没有冲突，需要将最后两个 commit 合并为一个：
 1. `git rebase -i HEAD~2`
@@ -160,10 +160,24 @@ git config https.proxy http://127.0.0.1:port    # 设置代理
 脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
 :::
 ### 将注释设为当前时间
+:::: code-group
+::: code-group-item bash
 ```sh
+# use only in bash
 git commit -m $(date "+%Y%m%d-%H:%M:%S")
+# result: 20220613-11:34:59
 ```
-例：注释为`20220613-11:34:59`。可根据个人习惯修改格式。注意，该语句可能在 bash 以外的命令行中无法使用。
+:::
+::: code-group-item powershell
+```shell
+# use only in powershell
+git commit -m $(get-Date)
+# result: 06/17/2023 21:05:13
+```
+:::
+::::
+
+注意，请选择合适的终端环境。
 ### 用于备份
 有了 `.sh` 脚本后，我们就能很轻松地在 Github 上备份自己的文件。请 ChatGPT 讲一下移动与覆盖：
 > cp 是一个在 Bash shell 中用来复制文件和目录的命令。与 cp 命令一起使用的选项控制了复制的方式。这里是每个选项的含义：

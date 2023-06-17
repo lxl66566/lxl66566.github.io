@@ -2,6 +2,9 @@
 好的设置能够在未来降低你的血压，并大幅提高你的工作效率。
 
 关于软件推荐请前往[杂项-软件汇总](../farraginous/recommend_packages.md)页面。
+
+本章目录：
+[[toc]]
 ## 对 win11 的设置
 由于入手了 12500H，即使很不想使用 win11，也只能硬上了。以下是我对新电脑 win11 系统的设置。
 
@@ -59,18 +62,6 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 14. 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
 ## 我使用的软件们
 20230607，我的 windows 11 开机自启动的托盘软件有：[XDM](../farraginous/recommend_packages.md#xdm), Ditto, [parsec](../farraginous/recommend_packages.md#parsec), V2rayN, [f.lux](../farraginous/recommend_packages.md#flux), [everything](../farraginous/recommend_packages.md#everything), 火绒, [Tai](../farraginous/recommend_packages.md#tai), [flameshot](../farraginous/recommend_packages.md#flameshot)
-## 对 ArchWSL 的设置
-
-* ~/.bashrc（仅含手动编辑）:
-```bash
-alias ll='ls -alF'
-export DWM=/home/lxl/myfile/dwm
-if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
-then
-    exec fish
-fi
-```
-    
 ## 设置开机自启动
 `win + r`打开运行面板，输入`shell:startup`打开启动文件夹，拖入需自启动的程序快捷方式即可。
 
@@ -102,3 +93,10 @@ fi
     * 在 `about:support` 中，点击 *配置文件夹 -> 打开文件夹*（*Profile Folder -> Open Folder*），在此目录下新建名为 `chrome` 的文件夹，在新文件夹下新建 `userChrome.css`，写入[此处代码](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css)。
 > 注：在地址栏输入上述 *about:\** 即可打开对应界面。
 6. 解决跨源错误：在 `about:config` 中，将 security.fileuri.strict_origin_policy 设为 false。
+## windows 下的权限控制
+起因：MS-DOS 自带的 `tree` 命令太难用了（不包含文件）。我需要把它替换为 [tree for windows](https://gnuwin32.sourceforge.net/packages/tree.htm)。windows 的权限管理太“安全”了，很烦。
+1. （本节无关）下载并将 `tree.exe` 单文件放入 `C:\WINDOWS\System32`
+2. 修改 `tree.com` 的名字（或直接删除），需要获取权限。
+    1. *属性 - 安全 - 高级*，更改所有者为当前用户。
+    2. 然后在下面选择 *Users* 那一栏，编辑，改为完全控制。
+    3. 一路确定即可。

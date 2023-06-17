@@ -7,9 +7,9 @@
     * 在 USB 调试版块，该放行放行，该关闭关闭。
     * 在最下方关闭 MIUI 优化。MIUI 优化可能会导致无法使用 adb install 安装软件。（报错 `INSTALL_FAILED_USER_RESTRICTED`）*顺带，这已经是一个持续至少 6 年的问题了。*
         * 关闭后刷新率会自动 120HZ，调回 60。
-2. [使用 ADB](./adb.md) 卸载一些包
+2. [使用 ADB 卸载](./adb.md)一些包
     * `com.miui.systemAdSolution`：广告
-    * `com.miui.hybrid`：快应用，杂种；[为什么要卸载](./fuck_quickapp.md)
+    * `com.miui.hybrid`：快应用，杂种；[为什么要卸载](#禁用快应用中心)
     * `com.sohu.inputmethod.sogou.xiaomi` & `com.iflytek.inputmethod.miui`：自带的 搜狗 讯飞 输入法，我用 gboard
     * `com.miui.newhome`：内容中心，广告，好像不能卸载只能禁用
 3. 关闭 Github Mobile 的默认打开网址。Github Mobile 因 2FA 需要使用，但使用其查看项目确实非常智障。幸好 MIUI14 提供了设置应用默认打开的功能：长按应用 - 应用信息 - 默认打开，调为拒绝。
@@ -67,7 +67,7 @@
 ### 其他
 通过 play 商店安装：
 * [shizuku](https://github.com/RikkaApps/Shizuku)
-* [雹](https://github.com/aistra0528/Hail)：冻结应用。拒绝使用闭源商业化的 *冰箱*。
+* [雹](https://github.com/aistra0528/Hail)：冻结应用。拒绝使用闭源商业化的 *冰箱*。（顺带一提，下述的 *Scene5* 也有冻结应用的功能）
 * App ops（**闭源！**）：权限管理。闭源功能有限。
 
 通过 Github 安装：
@@ -84,3 +84,16 @@
 2. 安装 Google Play。
 3. 不要在 Google Play 安装 Wechat，会被冻结账号。需要绑定身份证解封 (fuck u)。<span class="heimu" title="你知道的太多了">然后我人脸验证的时候刚好熄灯了，你妈</span>
 4. 不要在 Google Play 安装 QQ，无法开启深色模式 (fuck u)。
+
+## 禁用快应用中心
+快应用服务框架本意是好的，大家联合起来统一为一个标准，减少不必要的重复开发。
+
+但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和**家人**的身心健康，建议禁用之：
+
+1. 查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到*快应用服务框架* 进入，点击右上角感叹号，查看应用包名。
+> 或：已知关键字可使用 `adb shell pm list package [<keyword>]` 在手机内以关键字查找包名。
+例：在 MIUI 12.5 中，快应用服务框架包名为`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>
+2. 连接手机并[开启 ADB 调试](./adb.md)。
+3. 禁用包：`adb shell pm disable-user com.miui.hybrid`，也可以直接卸载，详情参考 [ADB](./adb.md)
+
+以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。

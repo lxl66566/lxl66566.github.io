@@ -1,3 +1,6 @@
+---
+sidebar: auto
+---
 # TG教程
 [Telegram](https://telegram.org/)(TG) 是一款境外的聊天软件。需要科学上网。（[维基百科](https://zh.m.wikipedia.org/zh-cn/Telegram)）其优势如下：
 * 云端永久无限量存储

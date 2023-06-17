@@ -176,6 +176,7 @@ export default defineUserConfig({
             "Probab.Math.Stat.md",
             "dsp.md",
             "foods.md",
+            "japanese.md",
           ],
         },
       ],
