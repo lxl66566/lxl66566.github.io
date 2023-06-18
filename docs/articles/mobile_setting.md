@@ -64,6 +64,12 @@
 * WeXposed
 * QXposed
 * TSBattery
+* [核心破解](https://github.com/LSPosed/CorePatch/releases)
+* 哔哩漫游
+* [自动记账](https://github.com/Auto-Accounting/Qianji_auto)，测试中
+* [QQ 瘦身](https://github.com/KitsunePie/QQCleaner)
+* Telegram UserID Viewer
+* Bili调速
 ### 其他
 通过 play 商店安装：
 * [shizuku](https://github.com/RikkaApps/Shizuku)
