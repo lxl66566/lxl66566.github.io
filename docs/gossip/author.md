@@ -59,11 +59,13 @@ sidebar: 'auto'
 
 <iframe frameborder="no" src="/charts/sense_persentage_of_my_life.html" width="100%" height="280"></iframe>
 
+也不妨看看[道论](../articles/worldview.md)。
 ## 我的爱好
 建议前往 *爱好* 版块查看。
 
-重度电脑使用者，目前不玩任何手游。
+重度电脑使用者，目前不玩任何非音游手游。
 ### 以前曾喜欢
+早年爱好请查看回忆录。
 * [moSiyuan](https://lmoliver.github.io/mosiyuan/)（<20191107>）<span class="heimu" title="你知道的太多了">沉迷这个也太羞耻了啊啊啊</span>
 * [读书](../hobbies/books.md)
 * [番剧](../hobbies/anime.md)
@@ -73,10 +75,10 @@ sidebar: 'auto'
 * 东方：东方绀珠传(99%) / 东方永夜抄(1%)，注重游戏性而非剧情
 * 跑团
 * [CS:GO](../hobbies/other_games.md#csgo)
+* 黎明杀机
 ### 现在主要在玩
 * [纯剧情 galgame](../hobbies/galgame.md)
 * [以 **OSU!mania 4k/6k** 为主的音游](../hobbies/rhythm_games.md)
-* 黎明杀机
 
 <!-- ~~*终于熬到了上完课，双手激动地放上键盘，OSU!挥洒你的汗水。傍晚，为时5小时的夜生活开始，开始CSGO穿越枪林弹雨。经历大战后，在galgame老婆们的怀里沉沉睡去，这大概也算是一种幸福吧。*~~ -->
 
