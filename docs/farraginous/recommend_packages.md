@@ -10,9 +10,9 @@ sidebar: 'auto'
 ## Android
 此条目下**大多数**软件可通过Google Play下载官方的，最新的版本。
 
-请注意，私有下载地址很可能不是最新版安装包。
+请注意，私有下载地址不是最新版安装包。若私有链接/安装包失效请[联系作者](../gossip/author.md#社交)。
 
-若私有链接/安装包失效请[联系作者](/README.md#写在前面)
+root / magisk 推荐请跳转[设置手机 - magisk](../articles/mobile_setting.md#magisk)
 ### 永久阅读器
 内置书源的小说阅读器。阅读界面无广告，开屏有广告。（注：相当一部分日轻无可用书源）
 

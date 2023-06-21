@@ -9,7 +9,7 @@ sidebar: 'auto'
 * 经点醒，从第三周中期开始上课不听，课后 b站自学。其后**开始翘课**。由于开摆原因，学习进度总体落后。
 * 开始每日早餐泡面，不上课就随便零食吃点
 * [暂时退坑 osu](../hobbies/rhythm_games.md#osu)，退坑黎明杀机
-* 开始使用双拼
+* 开始使用[双拼](../farraginous/learning/ulpb.md)
 * 初步使用 ArchWSL，Debian 10 (VPS)
 * 购买 [VPS](../articles/vps.md)，自建节点
 * [root 与模块](../articles/mobile_setting.md#刷机)

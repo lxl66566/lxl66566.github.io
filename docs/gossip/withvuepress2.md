@@ -299,3 +299,7 @@ export default ({
 
 [^1]: https://vuepress.vuejs.org/zh/guide/basic-config.html#%E5%BA%94%E7%94%A8%E7%BA%A7%E5%88%AB%E7%9A%84%E9%85%8D%E7%BD%AE
 [^2]: https://vuepress.vuejs.org/zh/plugin/option-api.html#enhanceappfiles
+### 端口拒绝访问
+> listen EACCES: permission denied 0.0.0.0:8080
+
+[解法](../articles/computer_setting.md#端口随机占用)

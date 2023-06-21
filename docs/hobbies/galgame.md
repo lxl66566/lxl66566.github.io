@@ -24,7 +24,7 @@ sidebar: 'auto'
 
 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft合集](https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/) | [十二神魔器](https://pan.cangshui.net/) *密码：god* 
 
-> 解压密码详见[极点ACG公告](https://lspgal.com/5702/)
+<!-- > 解压密码详见[极点ACG公告](https://lspgal.com/5702/) -->
 
 在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + [小牛云平台翻译](https://niutrans.com/)。个人认为，御坂翻译器比起 vnr 有以下优点：
 1. 小，仅44.3MB 
@@ -116,8 +116,8 @@ sidebar: 'auto'
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
 |灰色的果实
 |DDLC <Badge text="steam" vertical="bottom" /> *(暂时不玩)*|2021.11.11|?|1.5|?|
-|千恋万花 <Badge type="warning" text="krkr" vertical="bottom" />|2021.06.21|6.8|8|9.1|
-|少女领域 <Badge type="warning" text="krkr" vertical="bottom" />|<2020.10.29|5|9|8|
+|千恋万花 <Badge type="warning" text="krkr" vertical="bottom" />|2021.06.21|6.8|8.5|9.1|
+|少女领域 <Badge type="warning" text="krkr" vertical="bottom" />|<2020.10.29|5|9.5|8|
 |KARAKARA|2021.08.25|3.3|5|6.5|
 |保健室のセンセーとシャボン玉中毒の助手 <Badge type="danger" text="tyranor" vertical="bottom" />|
 
@@ -126,7 +126,6 @@ sidebar: 'auto'
 |游戏名|补正|
 | :----: | :----: |
 |近月少女的礼仪|-37min|
-|时停之馆|-24min|
 |アンレス テルミナリア|+2h5min|
 
 ## 我计划玩

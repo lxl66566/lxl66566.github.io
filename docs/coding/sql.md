@@ -15,6 +15,8 @@ SQLite 没有驱动，没有压缩，没有加密，非常简单的数据库，�
 SQLite 本身不具备压缩功能，而我非常看重压缩，因此我使用 [sqlite-zstd](https://github.com/phiresky/sqlite-zstd) 进行压缩。
 
 具体使用，我试过 rust crates，结果发现 sqlite-zstd 和 rusqlite 的依赖冲突了(?)，python3 的库就嗯装不上。。因此只能使用最基本的 dll，即在 `.open` 后 `.load sqlite_zstd.dll`，dll 是在 Release 里下的，然后调用 `select zstd_enable_transparent(...);` 和 `select zstd_incremental_maintenance(null, 0.05);`，效果其实不是很理想：其压缩功能只针对 `TEXT / BLOB` 类型才可使用，同时具有一定额外开销。
+
+嘛，我真正需要的压缩大概是类似透明压缩的吧...
 ### python
 ```py
 import sqlite3
@@ -31,4 +33,4 @@ cursor.close()
 conn.close()
 ```
 ### rust
-随便找个 gpt 写吧。
+随便找个 [gpt](../farraginous/recommend_websites.md#ai-工具) 写吧。

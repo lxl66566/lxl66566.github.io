@@ -177,6 +177,7 @@ export default defineUserConfig({
             "dsp.md",
             "foods.md",
             "japanese.md",
+            "ulpb.md",
           ],
         },
       ],
