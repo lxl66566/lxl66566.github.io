@@ -124,7 +124,7 @@ sidebar: 'auto'
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :----: | :----: | :----: | :----: | :----: |
-|Summer Pockets Reflection Blue|2023.06.22|
+|Summer Pockets Reflection Blue|2023.06.22|8|8.6|8|
 |近月少女的礼仪 <Badge text="1" />|2023.04.23|6|6.1|3.3|
 |アンレス テルミナリア|2023.05.11|4.3|9.7|9.5|
 |ちぇ～んじ！ ～あの娘になってクンクンペロペロ～|2022.08.26|1|2|4|
@@ -143,6 +143,7 @@ sidebar: 'auto'
 | :----: | :----: |
 |近月少女的礼仪|-38min|
 |アンレス テルミナリア|+2h5min|
+|Summer Pockets Reflection Blue|+2min|
 
 ## 我计划玩
 仅列出一部分，排名不分先后。
@@ -187,6 +188,7 @@ sidebar: 'auto'
 * タマユラミライ
 * トリノライン
 * 纯白交响曲 remake
+* [ソラコイ](https://t.me/erogamecloud/3709)
 ## 一言
 有感而发。
 
@@ -242,7 +244,7 @@ sidebar: 'auto'
 
 |游戏名|问题|
 | :----: | :----: |
-|Summer Pockets Reflection Blue|跟*終のステラ*同一个引擎，所以有一样的问题![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png)![崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png)|
+|Summer Pockets Reflection Blue|跟*終のステラ*同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png)![崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png)|
 |近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况。|
 |終のステラ|闪屏，backlog 文字颜色错乱![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/tsuinosutera_1.png)|
 |住在下体升级岛上的贫乳该如何是好？|<text style="color:red;">恶性 bug（善雅鸽汉化）：分辨率调整后黑屏，除了删档外无法解决；</text>出现点击无响应情况；贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
@@ -269,9 +271,10 @@ sidebar: 'auto'
 ## 说两句
 一般来说，能打动我，能让我产生共鸣的galgame，我都会打上比较高的剧情分（满足剧情党的喜好）。此处作出更加详细的解释，列出一些本人对之有高评价的游戏。当然，优点也包括程序的优秀。（啊，对了，那些快忘了的，或者说不出哪里好但就是好的作品不列举出）
 #### Summer Pockets Reflection Blue
-* 小游戏加分
+* 小游戏加分，制作精美
 * auto 下鼠标移动则不会继续播放，第一次遇到，真用心啊。
 * 不过如果有跳转下个选择支选项就好了。
+* 游玩顺序：うみ -> 紬　ヴェンダース
 #### 近月少女的礼仪
 * 同样的女装与男主语音，不由得会想到什么
 * 有点剧情，但其中的一些非反派人物的观念恕我无法认同
