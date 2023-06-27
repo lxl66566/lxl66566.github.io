@@ -140,7 +140,7 @@ sidebar: 'auto'
 | :----: | :----: |
 |近月少女的礼仪|-38min|
 |アンレス テルミナリア|+2h5min|
-|Summer Pockets Reflection Blue|+2min|
+|Summer Pockets Reflection Blue|-3min|
 
 ## 我计划玩
 仅列出一部分，排名不分先后。
@@ -186,6 +186,7 @@ sidebar: 'auto'
 * トリノライン
 * 纯白交响曲 remake
 * [ソラコイ](https://t.me/erogamecloud/3709)
+* 据传的剧情作：海市蜃楼之馆，交响乐之雨，装甲恶鬼村正
 ## 一言
 有感而发。
 
@@ -278,7 +279,7 @@ sidebar: 'auto'
     * うみ（偽）
     * 紬　ヴェンダース：ムギュー！
     * 空門　蒼：看到眼睛，发现跟 9nine 一模一样（[和泉つばす](https://ja.wikipedia.org/wiki/和泉つばす#作品リスト)
-    * 鳴瀬　白羽
+    * 鳴瀬　白羽：没刀，留了悬念。
 #### 近月少女的礼仪
 * 同样的女装与男主语音，不由得会想到什么
 * 有点剧情，但其中的一些非反派人物的观念恕我无法认同
