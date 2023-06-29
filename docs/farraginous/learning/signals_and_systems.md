@@ -4,9 +4,17 @@ sidebar: auto
 # 信号与系统
 我看的网课是浙大的胡浩基老师的[视频](https://www.bilibili.com/video/BV1g94y1Q76G)，优点是讲的非常细致生动，缺点大概是时长太长了。
 ## 捷径与方法
-待定系数法，[盖起来算其他](https://www.bilibili.com/video/BV1g94y1Q76G/?p=34&vd_source=71a6ca6eaedad249d0549081f1edfdec&t=9752)：盖一个待定分子，假设分母为 0，令另一个分子为原分子（拆分前），那个分数就是盖起来的分子
+> ?
+
+* 待定系数法，[盖起来算其他](https://www.bilibili.com/video/BV1g94y1Q76G/?p=34&vd_source=71a6ca6eaedad249d0549081f1edfdec&t=9752)：盖一个待定分子，假设分母为 0，令另一个分子为原分子（拆分前），那个分数就是盖起来的分子
+* -∞ 到 t 的积分可以看成卷积 u(t)
+
 ## 信号
-能量信号：积分为有限值 功率信号：积分无限
+* 能量信号：积分为有限值
+* 功率信号：积分无限
+* 因果信号：从 0 开始有值的信号
+* 双边信号：(-∞, +∞) 都有值的信号
+* [稳定信号](https://www.bilibili.com/video/BV1g94y1Q76G/?p=49&t=2628)：绝对可积
 ## LTI System
 > 注意，此章节中的微分方程直接求解考试不考。（考变换求解）
 
@@ -135,10 +143,39 @@ Nyquist frequency: 2wm
 ## Laplace transform
 计算拉式变换必须考虑收敛域
 ### 基本变换
-<span v-pre>$\mathscr{L}[ e^{-at}u(t) ]=1/(s+a),\ \ \ Re(s)>-a$</span>
+<span v-pre>$\displaystyle\mathscr{L}[ e^{-at}u(t) ]=1/(s+a),\ \ \ Re(s)>-a$</span>
 
-<span v-pre>$\mathscr{L}[ -e^{-at}u(-t) ]=1/(s+a),\ \ \ Re(s)<-a$</span>
+>（特例）<span v-pre>$\displaystyle\mathscr{L}[ u(t) ]=1/s,\ \ \ Re(s)>0$</span>
 
--a 称为*极点*，用 `x` 表示
+<span v-pre>$\displaystyle\mathscr{L}[ -e^{-at}u(-t) ]=1/(s+a),\ \ \ Re(s)<-a$</span>
+
+<span v-pre>$\displaystyle\mathscr{L}[ \delta(t) ]=1$</span>
+
+<span v-pre>$\displaystyle\mathscr{L}[ cos(\omega_0t)u(t) ]=s/(s^2+\omega_0^2),\ \ \ Re(s)>0$</span>
+
+<span v-pre>$\displaystyle\mathscr{L}[ sin(\omega_0t)u(t) ]=\omega_0/(s^2+\omega_0^2),\ \ \ Re(s)>0$</span>
+
+<span v-pre>$\displaystyle\mathscr{L}[ t^nu(t) ]=n!/s^{n+1},\ \ \ Re(s)>0$</span>
+
 ### 性质
 见 [复变函数 - Laplace transform](./complex_functions.md#laplace-transform)
+
+或[wikipedia](https://zh.wikipedia.org/zh-hans/拉普拉斯变换#性质和定理)
+
+与傅里叶变换的联系：s=jw，可以直接互相代入
+#### [收敛域性质](https://www.bilibili.com/video/BV1g94y1Q76G/?p=47&t=807)
+* 收敛域为平行于 jw 轴的带状区域
+* 收敛域无极点
+* 绝对可积信号收敛域为全平面
+* 右/左边信号收敛于最右/左边极点的右/左侧
+* 双边信号收敛域为带状
+* [稳定信号](#信号)收敛域包含 jw 轴
+### 周期拉普拉斯
+* 单边(0, +∞)：<span v-pre>$\displaystyle\mathscr{L}[ x(t) ]=\frac{1}{1-e^{sT}}X(s)$</span>，收敛域 R 交 Re(s)>0，X(s) 为单周期的变换
+### 系统与微分方程
+* 求 H(s)
+* [画系统框图](https://www.bilibili.com/video/BV1g94y1Q76G/?p=52&t=2028)：二阶微分框图：左边从上到下是 1/a2, -a1, -a0；一阶的是 1/a1, -a0；
+* 定理：系统s域函数 H(s)，若 <span v-pre>$x(t)=e^{s_0t}, s_0$</span>在收敛域内，则 y = H(s)x(t)
+* zero-input response: x(t) = 0 while t > 0; y(0), y'(0) 有值
+* zero-state response: x(t) 有值；y(0) = y'(0) = 0
+    * [例题](https://www.bilibili.com/video/BV1g94y1Q76G/?p=53&t=4365)

@@ -140,7 +140,7 @@ sidebar: 'auto'
 | :----: | :----: |
 |近月少女的礼仪|-38min|
 |アンレス テルミナリア|+2h5min|
-|Summer Pockets Reflection Blue|-3min|
+|Summer Pockets Reflection Blue|-5min|
 
 ## 我计划玩
 仅列出一部分，排名不分先后。
@@ -187,6 +187,7 @@ sidebar: 'auto'
 * 纯白交响曲 remake
 * [ソラコイ](https://t.me/erogamecloud/3709)
 * 据传的剧情作：海市蜃楼之馆，交响乐之雨，装甲恶鬼村正
+* LOOPERS
 ## 一言
 有感而发。
 

@@ -65,25 +65,34 @@ Laplace transform: <span v-pre>$\large F(s)=\mathscr{L}(f(t))=\int_{0}^{+\infty}
 
 > 信号与系统中，积分下限可从 -∞ 开始
 
-相似性质：<span v-pre>$\large \mathscr{L}(f(at))=\frac{1}{a}F(s/a)$</span>
+线性性质，收敛域**至少**为两个收敛域的交
 
-微分性质：<span v-pre>$\large \mathscr{L}(f'(t))=sF(s)-f(0)$</span>
+时域平移性质：<span v-pre>$\mathscr{L}(x(t-t_0))=e^{-st_0}X(s)$</span>，收敛域不变
 
-> 推论: <span v-pre>$\mathscr{L}(f^{(n)}(t))=s^nF(s)-s^{(n-1)}f(0)-s^{(n-2)}f'(0)-...-f^{(n-1)}(0)$</span>
+s域平移性质：<span v-pre>$\large \mathscr{L}(e^{at}x(t))=X(s-a)$</span>，收敛域 R+Re(a)
 
-像函数的微分性质：<span v-pre>$\large F^{(n)}(s)=(-1)^n\mathscr{L}(t^nf(t))$</span>
+尺度变换：<span v-pre>$\large \mathscr{L}(f(at))=\frac{1}{|a|}F(s/a)$</span>，收敛域 aR
+
+<!-- 时域微分：<span v-pre>$\large \mathscr{L}(f'(t))=sF(s)$</span>，收敛域至少 R -->
+
+时域微分性质（单边）：<span v-pre>$\mathscr{L}(f'(t))=sF(s)-f(0_-)$</span>
+
+> 推论: <span v-pre>$\mathscr{L}(f^{(n)}(t))=s^nF(s)-s^{(n-1)}f(0)-s^{(n-2)}f'(0)-...-f^{(n-1)}(0)$</span><br/>
+> 时域微分性质（双边）：<span v-pre>$\mathscr{L}(f'(t))=sF(s)$</span>
+
+s域微分性质：<span v-pre>$\mathscr{L}(t^nf(t))=(-1)^nF^{(n)}(s)$</span>
 
 积分性质：<span v-pre>$\large \mathscr{L}(\int_0^t f(t)dt)=\frac{1}{s}F(s)$</span>
 
 象函数的积分性质：<span v-pre>$\large \int_s^{\infty}F(s)ds=\mathscr{L}(\frac{f(t)}{t})$</span>
-
-位移性质：<span v-pre>$\large \mathscr{L}(e^{at}f(t))=F(s-a)$</span>
 
 初值定理：f(t)在[0,+∞]可微，则<span v-pre>$\large \begin{cases}lim_{t \to 0}f(t)\\ f(0)\end{cases}=lim_{s\to\infty}sF(s)$</span>    （若存在）
 
 终值定理：若sF(s)在Re(s)≥0的区域解析，<span v-pre>$\large \begin{cases}lim_{t \to \infty}f(t)\\ f(\infty)\end{cases}=lim_{s\to 0}sF(s)$</span>
 
 inverse Laplace transform：<span v-pre>$\large f(t)=\frac{1}{2\pi i}\int_{\beta-i\infty}^{\beta+i\infty}F(s)e^{st}ds=\Sigma Res[F(s)e^{st},s_k], \ s_k$</span> is to the left of Re(s)=β
+
+卷积性质：收敛域至少为两个收敛域的交
 
 ## 卷积
 傅氏卷积：<span v-pre>$\large f_1(t) * f_2(t) = \int_{-\infty}^{\infty}f_1(\tau)f_2(t-\tau)d\tau$</span>&nbsp;&nbsp;&nbsp;（收敛）
