@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 # 信号与系统
-我看的网课是浙大的胡浩基老师的[视频](https://www.bilibili.com/video/BV1g94y1Q76G)，优点是讲的非常细致生动，缺点大概是时长太长了。
+我看的网课是浙大的胡浩基老师的[视频](https://www.bilibili.com/video/BV1g94y1Q76G)，优点是讲的非常细致，不管什么点全部讲一遍 + 推导一遍，缺点大概是时长太长了（网课有总计 55h）
 ## 捷径与方法
 > ?
 
@@ -14,7 +14,7 @@ sidebar: auto
 * 功率信号：积分无限
 * 因果信号：从 0 开始有值的信号
 * 双边信号：(-∞, +∞) 都有值的信号
-* [稳定信号](https://www.bilibili.com/video/BV1g94y1Q76G/?p=49&t=2628)：绝对可积
+* [稳定信号](https://www.bilibili.com/video/BV1g94y1Q76G/?p=49&t=2628)：绝对可积，即绝对值积分有界
 ## LTI System
 > 注意，此章节中的微分方程直接求解考试不考。（考变换求解）
 
@@ -179,3 +179,36 @@ Nyquist frequency: 2wm
 * zero-input response: x(t) = 0 while t > 0; y(0), y'(0) 有值
 * zero-state response: x(t) 有值；y(0) = y'(0) = 0
     * [例题](https://www.bilibili.com/video/BV1g94y1Q76G/?p=53&t=4365)
+## Z-transform
+<span v-pre>$\displaystyle X(z)=\sum x[n]z^{-n}=\mathscr{F}[ x[n]r^{-n} ]$</span>
+
+<span v-pre>$\displaystyle x[n]=\frac{1}{2\pi j}\int_{\omega\in(0,2\pi]}X(z)z^{n-1}dz$</span>
+
+### 基本变换
+> 见 [wikipedia](https://zh.wikipedia.org/wiki/Z轉換#常见的Z变换对表ttps://zh.wikipedia.org/wiki/Z轉換#常见的Z变换对表)
+
+<span v-pre>$\displaystyle a^nu[n] \rightarrow 1/(1-az^{-1}),|z|>|a|$</span>
+
+<span v-pre>$\displaystyle -a^nu[-n-1] \rightarrow 1/(1-az^{-1}),|z|<|a|$</span>
+
+### 性质
+* 线性
+* 移位性质：<span v-pre>$\displaystyle x[n-n_0] \rightarrow X(z)z^{-n_0}$</span>，收敛域不变
+* z域微分性质：<span v-pre>$\displaystyle nx[n] \rightarrow -zX'(z)$</span>，收敛域不变
+* 序列指数加权：<span v-pre>$\displaystyle a^nx[n] \rightarrow X(z/a)$</span>，收敛域扩大 a 倍
+* 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n] \rightarrow X(z^k)$</span>，收敛域 R^{1/k}[^2]
+* 卷积性质
+* 累加性质：等于与 u[n] 卷积
+* 与离散 fourier 的联系：z = e^jw
+* 因果信号
+    * 初值定理：<span v-pre>$\displaystyle x[0] \rightarrow X(+\infty)$</span>
+    * 终值定理：<span v-pre>$\displaystyle x[+\infty] \rightarrow lim_{z\to 1}(z-1)X(z)$</span>
+
+[^2]: #性质
+#### 收敛域性质
+* 有限长序列，收敛域全平面
+* 右/左/双边序列，收敛域圆外/内/环
+* 稳定序列：收敛域包含单位圆（充要）
+* 相当于 Laplace 变换 jw 轴向负半轴折成单位圆
+### 系统与差分方程
+使用移位性质。
