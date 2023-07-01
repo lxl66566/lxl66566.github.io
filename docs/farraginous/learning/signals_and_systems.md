@@ -194,6 +194,7 @@ Nyquist frequency: 2wm
 ### 性质
 * 线性
 * 移位性质：<span v-pre>$\displaystyle x[n-n_0] \rightarrow X(z)z^{-n_0}$</span>，收敛域不变
+> [单边移位公式](https://www.bilibili.com/video/BV1g94y1Q76G/?p=60&t=3258)
 * z域微分性质：<span v-pre>$\displaystyle nx[n] \rightarrow -zX'(z)$</span>，收敛域不变
 * 序列指数加权：<span v-pre>$\displaystyle a^nx[n] \rightarrow X(z/a)$</span>，收敛域扩大 a 倍
 * 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n] \rightarrow X(z^k)$</span>，收敛域 R^{1/k}[^2]
@@ -212,3 +213,9 @@ Nyquist frequency: 2wm
 * 相当于 Laplace 变换 jw 轴向负半轴折成单位圆
 ### 系统与差分方程
 使用移位性质。
+
+系统框图与 Laplace 框图大致相同。
+
+解差分方程：默认为因果信号，单位样值响应即冲激响应，此时 Y(z) = H(z) （X(z)=1）
+
+定理：系统z域函数 H(z)，若 <span v-pre>$x[n]=a^n, a$</span>在收敛域内，则 y = H(a)x(n)

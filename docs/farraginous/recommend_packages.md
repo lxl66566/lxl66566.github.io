@@ -192,7 +192,16 @@ DOWN add volume -1
 1. 下载[ffsend-v0.2.74-windows-x64.exe](https://github.com/timvisee/ffsend/releases/download/v0.2.74/ffsend-v0.2.74-windows-x64.exe)
 2. 在下载目录打开**管理员**终端，执行`move .\ffsend-v0.2.74-windows-x64.exe C:\Windows\System32\ffsend.exe`（或手动复制改名
 3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>`下载 -->
-
+### [Ditto](https://github.com/sabrogden/Ditto)
+是一个开源轻量级的剪贴板管理工具。使用 C 语言编写，具有低内存占用和高性能，同时拥有一些其他特色：
+* 支持暗黑模式
+* 支持对复制粘贴行为的脚本处理，例如我使用以下脚本去除 bilibili 视频分享链接的跟踪器与其他无用内容：
+    ```
+    clip.AsciiTextReplaceRegex(".*https://www.bilibili", "https://www.bilibili");
+    clip.AsciiTextReplaceRegex("share_source=copy_web&?", "");
+    clip.AsciiTextReplaceRegex("vd_source=[0-9a-zA-Z]+&?", "");
+    return false
+    ```
 ## 浏览器插件
 > *注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。*
 ### 视频速度控制

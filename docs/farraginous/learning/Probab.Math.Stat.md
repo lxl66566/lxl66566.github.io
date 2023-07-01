@@ -101,15 +101,60 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 ### 矩
 * k 阶原点矩：<span v-pre>$Ex^k=E(x-0)^k$</span>
 * k 阶中心矩：<span v-pre>$E(x-Ex)^k$</span>
-## 数理统计
-### inequalities
+:::tip
+以下为数理统计内容
+:::
+## inequalities
 * Markov's inequality：<span v-pre>$\displaystyle \mathrm {P} (X\geq a)\leq {\frac {\mathrm {E} (X)}{a}}$</span>
 * Chebyshev's Inequality：<span v-pre>$P\{|X-EX|\geq\varepsilon\}\leq\frac{DX}{\varepsilon^2}，\varepsilon\geq0$</span>
-### [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers)
+## [Law of large numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers)
 * Bernoulli's theorem (LLN)：*频率* 概率收敛于 *概率*
 > Today, Bernoulli’s law of large numbers is also known as the weak law of large numbers. —— Bernoulli’s Law of Large Numbers, Erwin Bolthausen∗ and Mario V. W¨uthrich†
 * Weak Law (also Khinchin's law)：*均值* 概率收敛于 *期望值* （独立同分布）
-### Central limit theorem
+## Central limit theorem
 * [De Moivre–Laplace theorem](https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem)：<span v-pre>${\displaystyle \left(X\!\,-\!\,np\right)\!/\!{\sqrt {np(1-p)}}} \xrightarrow {d} \ {\mathcal {N}}(0,1)$</span>
 * [Lindeberg CLT](https://zh.wikipedia.org/wiki/中心极限定理#林德伯格－列维定理)：（独立同分布）<span v-pre>$\displaystyle{\frac {{\bar {X}}-EX }{\sigma /{\sqrt {n}}}}\xrightarrow {d} \ {\mathcal {N}}(0,1).$</span>
 * [Lyapunov CLT](https://en.wikipedia.org/wiki/Central_limit_theorem#Lyapunov_CLT)：（独立，满足...条件）<span v-pre>$s_{n}^{2}=\sum _{i=1}^{n}\sigma _{i}^{2},\displaystyle {\frac {1}{s_{n}}}\,\sum _{i=1}^{n}\left(X_{i}-EX_{i}\right) \ \xrightarrow {d} \ {\mathcal {N}}(0,1).$</span>
+## 抽样
+* 样本方差是除以 n-1 的
+* [经验分布函数](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=67&t=1499)
+* Glivenko–Cantelli Theorem: n → ∞，经验分布函数趋于分布函数
+### [箱线图](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=66&t=1991)
+不是重点；需要掌握分位数的求法。
+### distribution
+* χ²-distribution：χ²(n) 为 n 个（总体为服从标准正态分布的变量的抽样）的平方和，n 称为自由度
+    * 期望：n，方差：2n
+    * X,Y ~ χ²(n), χ²(m) 且相互独立，则 X+Y ~ χ²(n+m)
+    * 任意 0 &lt; x &gt; 1，x 右边面积 = x
+* Student's t-distribution: X~N(0,1), Y~ χ²(n) 且独立，t=<span v-pre>$\displaystyle \frac{X}{\sqrt{Y/n}}$</span> ~ t(n)
+    * E = 0, D = n/(n-2)
+    * t → ∞, t ~ N(0,1)
+    * （与上一个分布）一样的右边面积为 x
+* [F-distribution](https://zh.wikipedia.org/wiki/F-分布#特征)
+    * E = <span v-pre>$\displaystyle \frac{n_2}{n_2-2}$</span>
+    * （与上一个分布）一样的右边面积为 x
+    * [性质](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=70&t=623)
+### 其他性质
+总体 X 均值 方差 则<span v-pre>$\displaystyle E\bar X=\mu,D\bar X=\sigma^2/n,ES_{n-1}^2=\sigma^2,DS_{n-1}^2=\frac{2\sigma^4}{n-1}$</span>
+
+[四个定理](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=73&t=1096)
+
+<span v-pre>$\displaystyle \frac{(n-1)S_{n-1}^2}{\sigma^2}\sim\chi(n-1)$</span>
+
+<span v-pre>$\displaystyle \frac{\bar X-\mu}{S_{n-1}}\sqrt n\sim t(n-1)$</span>
+
+<span v-pre>$\displaystyle \frac{S_x^2/\sigma_1^2}{S_y^2/\sigma_2^2}\sim F(m-1,n-1)$</span>
+
+## 参数估计
+### 矩估计
+有几个变量就作几阶原点矩
+
+[例题：求矩估计量](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=77&t=1372)
+### 最大似然估计
+已知观测值，估计参数
+
+[例题](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=78&t=1416)
+### 评选标准
+* 无偏性：<span v-pre>$\displaystyle E\hat\theta=\theta,\hat\theta为\theta$</span> 的无偏估计
+* 有效性：都是无偏估计，则方差更小的估计更加有效
+* 相合性：当 n → ∞ 时，估计量依概率收敛于某值。

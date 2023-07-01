@@ -4,6 +4,7 @@ sidebar: 'auto'
 # 音游
 至今我只打过移动端音游。本篇不含任何街机元素。
 
+[[toc]]
 ## 回忆
 小时候有打过节奏大师，很菜，平常管控也很严，拿不到手机。因此打的时长可以忽略不计。
 
@@ -43,6 +44,8 @@ sidebar: 'auto'
 
 <iframe frameborder="no" src="/charts/rhythm_games_time_percentage.html" width="100%" height="280"></iframe>
 
+## 观点
+* OSU 敲键盘的快感是敲平板无法带来的：平板用力会敲坏，而且越级空有力气还不一定能敲到键上。而 OSU 很适合发泄情绪。x
 ## OSU
 <div class="subtitle">——空を超えるために、頑張らなくちゃいけないんだよ！</div>
 
@@ -97,7 +100,7 @@ sidebar: 'auto'
 
 * 为什么打osu最频繁呢？
 
-因为上限最高。 **osu，本是逆天而行。** <span class="heimu" title="你知道的太多了">（内卷而行</span> ~~虽然Malody同样具有高上限，但是固定key还是习惯敲键盘…~~<span class="heimu" title="你知道的太多了">明明最早接触的是触屏端 为什么会变成这样呢？</span>
+因为上限最高。 **osu，本是逆天而行。** <span class="heimu" title="你知道的太多了">（内卷而行</span> ~~虽然Malody同样具有高上限，但是固定key还是习惯敲键盘…~~<span class="heimu" title="你知道的太多了">明明最早接触的是触屏端 [为什么会变成这样呢？](#观点)</span>
 
 * 其他想说的。
 
