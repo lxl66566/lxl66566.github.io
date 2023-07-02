@@ -62,7 +62,7 @@ sidebar: auto
 
 计算公式 2：<span v-pre>$D(X)=E(X^2)-E^2(X)$</span>
 * <span v-pre>$D(CX)=C^2D(X)$</span>
-* D(X+Y)=D(X)+D(Y)+2[cov(X,Y)](#协方差)，（若 X,Y 独立，则 cov(X,Y) s为 0）
+* D(X+Y)=D(X)+D(Y)+2[cov(X,Y)](#协方差)，（若 X,Y 独立，则 cov(X,Y) 为 0）
 ### 协方差
 cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 * cov(X,X) = DX
@@ -125,17 +125,15 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 * χ²-distribution：χ²(n) 为 n 个（总体为服从标准正态分布的变量的抽样）的平方和，n 称为自由度
     * 期望：n，方差：2n
     * X,Y ~ χ²(n), χ²(m) 且相互独立，则 X+Y ~ χ²(n+m)
-    * 任意 0 &lt; x &gt; 1，x 右边面积 = x
+    * <span v-pre>$\displaystyle \frac{(n-1)S^2}{\sigma^2}=\chi^2(n-1)$</span>
 * Student's t-distribution: X~N(0,1), Y~ χ²(n) 且独立，t=<span v-pre>$\displaystyle \frac{X}{\sqrt{Y/n}}$</span> ~ t(n)
     * E = 0, D = n/(n-2)
-    * t → ∞, t ~ N(0,1)
-    * （与上一个分布）一样的右边面积为 x
+    * n → ∞, t ~ N(0,1)
 * [F-distribution](https://zh.wikipedia.org/wiki/F-分布#特征)
     * E = <span v-pre>$\displaystyle \frac{n_2}{n_2-2}$</span>
-    * （与上一个分布）一样的右边面积为 x
     * [性质](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=70&t=623)
 ### 其他性质
-总体 X 均值 方差 则<span v-pre>$\displaystyle E\bar X=\mu,D\bar X=\sigma^2/n,ES_{n-1}^2=\sigma^2,DS_{n-1}^2=\frac{2\sigma^4}{n-1}$</span>
+总体 X 均值 μ 方差 σ 则<span v-pre>$\displaystyle E\bar X=\mu,D\bar X=\sigma^2/n,ES_{n-1}^2=\sigma^2,DS_{n-1}^2=\frac{2\sigma^4}{n-1}$</span>
 
 [四个定理](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=73&t=1096)
 
@@ -158,3 +156,16 @@ cov(X,Y) = E((X-EX)(Y-EY)) = E(XY) - EXEY
 * 无偏性：<span v-pre>$\displaystyle E\hat\theta=\theta,\hat\theta为\theta$</span> 的无偏估计
 * 有效性：都是无偏估计，则方差更小的估计更加有效
 * 相合性：当 n → ∞ 时，估计量依概率收敛于某值。
+### 置信区间
+[例题](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=84&t=231) | [正态估均值通解](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=85&t=1398) | 下一节为正态估方差通解
+## 参数检验
+### 正态检验
+解题步骤：
+1. 设 H0, H1 并判断是否进入 H1
+2. 判断是否落在拒绝域内。
+#### 拒绝域
+均值检验：总体方差已知，构造正态检验量<span v-pre>$\displaystyle \frac{\bar X-\mu_0}{\sigma/\sqrt{n}}$</span>；未知，构造 t 分布检验量<span v-pre>$\displaystyle \frac{\bar X-\mu_0}{s/\sqrt{n}}$</span>
+
+[各种拒绝域的判断](https://www.bilibili.com/video/BV1hD4y1b7Y4/?p=94&t=556)
+
+之后还有方差检验。

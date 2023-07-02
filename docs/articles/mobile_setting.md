@@ -59,7 +59,11 @@
 2. 安装 [LSPosed](https://github.com/LSPosed/LSPosed/releases/latest) (Zygisk)：下载 zip，复制进手机，在 *magisk - 模块* 安装并重启，在设置中打开 Zygisk。（不再重复模块安装步骤）
 3. 安装内置的屏蔽广告插件
 ### magisk modules
+* LSPosed
 * [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)：隐藏 root。
+* [uperf](https://github.com/yc9559/uperf)
+* 神仙自动救砖（**闭源**）
+* [电池容量纠正](https://downloads.suchenqaq.club/magiskmodules/tool/%E7%94%B5%E9%87%8F%E4%BF%AE%E5%A4%8D.zip)（**闭源**）
 ### LSPosed modules
 * WeXposed
 * QXposed
@@ -81,7 +85,8 @@
 * [DarQ](https://github.com/KieronQuinn/DarQ)：强制黑夜。支持不算好，pdd，咸鱼都无法强制。
 
 通过酷安安装：
-* Scene5（**闭源！**）：
+* Scene5（**闭源！**）：注意，scene5 ROOT 后的功能为试用，到期需**付费**，正在寻找开源免费替代品。
+    * 目前依赖其任务管理，控制性能与冻结应用。
 
 
 [^1]: #刷机
