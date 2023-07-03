@@ -49,7 +49,7 @@ sidebar: 'auto'
 ## OSU
 <div class="subtitle">——空を超えるために、頑張らなくちゃいけないんだよ！</div>
 
-> 20230514 已退坑。
+> 20230514 - 20230629 退坑
 
 * [我的osu主页](https://osu.ppy.sh/users/25751103)
 

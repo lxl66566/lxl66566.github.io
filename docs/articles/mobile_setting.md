@@ -82,6 +82,7 @@
 
 通过 Github 安装：
 * [AdAway](https://github.com/AdAway/AdAway)：屏蔽广告。
+    <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
 * [DarQ](https://github.com/KieronQuinn/DarQ)：强制黑夜。支持不算好，pdd，咸鱼都无法强制。
 
 通过酷安安装：
