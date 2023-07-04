@@ -1,4 +1,7 @@
 # Potplayer 设置
+::: warning
+本人已不再使用 potplayer，改用 [mpv](../farraginous/recommend_packages.md#mpv)，请知悉
+:::
 [Potplayer](../farraginous/recommend_packages.md#potplayer) 是一个强大的视频播放器。
 
 由于自定义程度过高，普通情况下很难调教好 Potplayer。因此本文分享一些我在设置过程中的微不足道的心得。

@@ -86,7 +86,11 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 
 电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
 ### [歌词适配](https://gcsp.lanzoux.com/tp/igsE90gu7tsb)
-能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。
+能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。~~说不定哪天就寄了~~
+### 多设备互传
+[localsend](https://github.com/localsend/localsend) 和 [LANDrop](https://github.com/LANDrop/LANDrop) 都是优秀的开源局域网多设备互传软件，体积都不大。
+
+我都用过了，更推荐 localsend，因为维护比较频繁。（LANDrop 最后一次 commit 还在 2021 年。。）
 ## Windows
 ### [scoop](https://scoop.sh/)
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。

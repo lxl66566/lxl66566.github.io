@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 # Probability and Mathematical Statistics
-概率论与数理统计。我看的网课是[孔祥仁](https://space.bilibili.com/453967238)的。
+概率论与数理统计。我看的网课是[孔祥仁](https://space.bilibili.com/453967238)的。概率论东西真不多，多刷题就完了，题型比较死。
 
 `(...)` 表示此处表述不够严谨，若想完全掌握请自行学习。
 ## 工具

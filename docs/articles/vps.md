@@ -99,8 +99,8 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 ip 被永久封禁的风险。trojan 本身是 TLS over TLS 加密方式，但仍然有办法识别出流量特征。
 
 我使用如下方式降低封锁几率（**有没有用其实是不太清楚的**）：
-* 开启 trojan-go 而非纯 trojan
-* [WARP](#warp)
+<!-- * 开启 trojan-go 而非纯 trojan
+* [WARP](#warp) -->
 * 使用 Nginx 将伪装页面（我选择我的小破博客）[部署](#nginx)到 443 端口 (80 转发 443)。（然而 443 早就被封了，令人感慨）
 * 开启 cloudflare 代理
 * 设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。
@@ -162,6 +162,8 @@ systemctl unmask firewalld
 systemctl enable firewalld
 systemctl start firewalld
 ```
+
+后来采用[端口转发和伪装](#对抗-gfw)后就没被封过端口了www
 ### 配置了错误的 firewalld 把自己防住了
 20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 reload，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...
 

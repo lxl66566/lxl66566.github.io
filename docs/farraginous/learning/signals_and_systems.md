@@ -17,8 +17,8 @@ sidebar: auto
     * 双边信号：(-∞, +∞) 都有值的信号
     * [稳定信号](https://www.bilibili.com/video/BV1g94y1Q76G/?p=49&t=2628)：绝对可积，即绝对值积分有界
 * 系统
-    * 线性：齐次 + 可加。
-    * 时不变：先延时后变换 = 先变换后延时
+    * 线性：齐次 + 可加。积分、微分都是线性运算。
+    * 时不变：先延时后变换 = 先变换后延时。f(t) 内的 t 系数只能为 1 且 f(t) 系数需要是常数。
 ## LTI System
 > 注意，此章节中的微分方程直接求解考试不考。（考变换求解）
 
@@ -39,7 +39,7 @@ sidebar: auto
 * 等宽方波的卷积是三角波，不等宽方波的卷积是梯形波。
 * 任意函数与阶跃函数的卷积相当于对此任意函数做积分
 ## 傅里叶变换
-### 离散傅里叶级数
+### 离散傅里叶级数（非重点）
 内积：<span v-pre>$<f_1(t),f_2(t)>=\int_{t1}^{t2}f_1(t)f_2^*(t)dt$</span> （`*` 是共轭，不影响实函数）
 
 正交：&lt;f1(t),f2(t)&gt;=0
@@ -78,8 +78,9 @@ sidebar: auto
 
 <span v-pre>$\mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega)$</span>
 
-<span v-pre>$\mathscr{F}[ E[u(t+\frac{\tau}{2}) - u(t-\frac{\tau}{2})]]=E\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*ω)
-<!-- =\large \frac{2Esin(\frac\tau2\omega)}{\omega} -->
+<span v-pre>$\mathscr{F}[ Eg_\tau(t)]=E\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*ω)
+
+> <span v-pre>$\displaystyle\mathscr{F}[ \frac{sin(\omega_0t) }{\pi t}]=g_{2\omega_0}(\omega)$</span>
 
 <span v-pre>$\mathscr{F}[ \frac{sin(\omega_ct)}{t} ]\normalsize =\pi[u(t+\omega_c) - u(t-\omega_c)]$</span>
 
@@ -100,7 +101,7 @@ Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\
 ### 特殊变换
 总宽度 T，幅值 E 的三角波：<span v-pre>$\large\mathscr{F}[ f(t) ]=\frac{TE}2Sa^2(\frac{T}{4}\omega)$</span>
 双边指数信号：<span v-pre>$\large\mathscr{F}[ e^{-a|t|} ]=\frac{2a}{a^2+\omega^2}$</span>
-## 离散傅里叶
+## 离散傅里叶（非重点）
 本质：离散 -> 连续
 
 离散： <span v-pre>$\mathscr{F}(x[n]) = X(e^{j\omega})=\sum X[n]e^{-j\omega n}$</span>  是一个 2π 为周期的函数。
@@ -131,11 +132,13 @@ cos，sin 在[-π,π]上跟连续一样，其他部分周期重复
 不同的：
 * 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n]=X(e^{j\omega k}), x_{(k)}[n]=x[n/k]$</span> 当且仅当 n%k==0（即离散扩宽）
 * 调制性质：频域相乘 = 频域卷积 / 2π，卷积积分限为周期 2π。卷积的时候可能需要考虑其他周期的卷积重合影响。
-## 调制与解调
-调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
-
-解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
-### 采样定理
+### 应用
+* 带宽 Bf = 脉宽的倒数，脉宽是（一个周期内）信号的宽度
+* Nyquist frequency = 2 * max frequency
+* 调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
+* 解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
+* 无失真系统幅频特性为水平直线，相频特性为“捺”斜线
+#### 采样定理（非重点）
 (Nyquist–Shannon) sampling theorem[^证明]：带限连续信号可以由 <span v-pre>$\omega_s>2\omega_m$</span>的采样频率的离散信号完美恢复（唯一确定）。
 
 证明中间式：
@@ -177,8 +180,9 @@ Nyquist frequency: 2wm
 ### 周期拉普拉斯
 * 单边(0, +∞)：<span v-pre>$\displaystyle\mathscr{L}[ x(t) ]=\frac{1}{1-e^{sT}}X(s)$</span>，收敛域 R 交 Re(s)>0，X(s) 为单周期的变换
 ### 系统与微分方程
+* 极点都在左半平面，则系统稳定
 * 求 H(s)
-* [画系统框图](https://www.bilibili.com/video/BV1g94y1Q76G/?p=52&t=2028)：二阶微分框图：左边从上到下是 1/a2, -a1, -a0；一阶的是 1/a1, -a0；
+* [画系统框图](https://www.bilibili.com/video/BV1g94y1Q76G/?p=52&t=2028)（不考）：二阶微分框图：左边从上到下是 1/a2, -a1, -a0；一阶的是 1/a1, -a0；
 * 定理：系统s域函数 H(s)，若 <span v-pre>$x(t)=e^{s_0t}, s_0$</span>在收敛域内，则 y = H(s)x(t)
 * zero-input response: x(t) = 0 while t > 0; y(0), y'(0) 有值
 * zero-state response: x(t) 有值；y(0) = y'(0) = 0
