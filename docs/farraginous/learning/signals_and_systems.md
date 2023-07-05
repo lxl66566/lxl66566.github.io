@@ -2,7 +2,9 @@
 sidebar: auto
 ---
 # 信号与系统
-我看的网课是浙大的胡浩基老师的[视频](https://www.bilibili.com/video/BV1g94y1Q76G)，优点是讲的非常细致，不管什么点全部讲一遍 + 推导一遍，缺点大概是时长太长了（网课有总计 55h）
+信号与系统的差异度非常大，同一教材不同大学的教学顺序、公式变量与考试重点千差万别。
+
+我看的网课是浙大的胡浩基老师的[视频](https://www.bilibili.com/video/BV1g94y1Q76G)，优点是讲的非常细致，不管什么点全部讲一遍 + 推导一遍，缺点大概是时长太长了（网课有总计 55h）。对于我校的课程考试来说，不是很合适。
 ## 捷径与方法
 > ?
 
@@ -19,12 +21,13 @@ sidebar: auto
 * 系统
     * 线性：齐次 + 可加。积分、微分都是线性运算。
     * 时不变：先延时后变换 = 先变换后延时。f(t) 内的 t 系数只能为 1 且 f(t) 系数需要是常数。
+    * 因果：与未来的状态无关
 ## LTI System
-> 注意，此章节中的微分方程直接求解考试不考。（考变换求解）
+> 此章节中的微分方程直接求解考试不一定考。
 
 设 h(t) 为系统冲激响应，则任意信号的响应为其与 h(t) 的卷积。
 
-> 课外知识：系统稳定：<span v-pre>$\int_{-\infty}^{+\infty}|h(t)|dt < +\infty$</span>
+系统稳定：<span v-pre>$\int_{-\infty}^{+\infty}|h(t)|dt < +\infty$</span>
 ## 卷积
 与 u(t) 的卷积：通过门函数的选择作用，改变积分的上下限；其本身可不参与卷积。记得卷积结果要把 u(t) 加回去！
 
@@ -37,9 +40,10 @@ sidebar: auto
 满足交换律，结合律，总体积分（微分）等于对其中之一积分（微分）
 ### 卷积样例
 * 等宽方波的卷积是三角波，不等宽方波的卷积是梯形波。
-* 任意函数与阶跃函数的卷积相当于对此任意函数做积分
+* 对任意函数做积分相当于与 u(t) 的卷积（重要！）
 ## 傅里叶变换
-### 离散傅里叶级数（非重点）
+### 离散傅里叶级数
+::: details 非重点
 内积：<span v-pre>$<f_1(t),f_2(t)>=\int_{t1}^{t2}f_1(t)f_2^*(t)dt$</span> （`*` 是共轭，不影响实函数）
 
 正交：&lt;f1(t),f2(t)&gt;=0
@@ -47,6 +51,7 @@ sidebar: auto
 最佳近似：对正交函数集有近似 <span v-pre>$f(t)\approx c_1g_1(t)+c_2g_2(t)+...，则 c_i=\frac{<f(t),g_i(t)>}{<g_i(t),g_i(t)>}$</span>
 
 从 1,cos(w0x),cos(2w0x),...,sin(w0x),sin(2w0x)... 中任取两个相乘并在 0-T0 上做定积分，结果均为 0。其互为正交基函数。
+:::
 
 <span v-pre>$\begin{cases}B_0=\frac{1}{T_0}\int_0^{T_0}f(x)dx \\ B_k=\frac2{T_0}\int_0^{T_0}f(x)cos(k\omega_0x)dx \\ C_k=\frac2{T_0}\int_0^{T_0}f(x)sin(k\omega_0x)dx\end{cases}$</span>
 
@@ -59,30 +64,31 @@ sidebar: auto
 求解过程：
 1. 对单个周期作傅里叶变换
 2. 求 a_k
-3. 写出 x(t)
+3. 写出 x(t)，前面的复数形式
 4. 带入公式
-### 连续傅里叶变换公式
-[跳转复变函数](./complex_functions.md#fourier-transform)
-### 条件
+### 连续傅里叶变换
+定义式：[跳转复变函数](./complex_functions.md#fourier-transform)
+::: details 非重点
+
 狄利赫里条件：
 1. 周期内绝对可积
 2. 最值个数有限
 3. 不连续点有限
-### 常用公式
+
+常用公式
+
 <span v-pre>$lim_{n\to +\infty}\frac{sin(\omega n)}{\omega}=\pi\delta(\omega),\int_{-\infty}^{+\infty}\frac{sin(\omega t)}{\omega}d\omega = \pi sgn(t)$</span>
 
 <span v-pre>$\int_{-\infty}^{+\infty}f(t)dt=F(j0)$</span>
-
+:::
 ### 基本变换
 <span v-pre>$\mathscr{F}[ e^{-at}u(t) ]=\frac1{a+j\omega}\ \ \ \  (a>0)$</span>
 
 <span v-pre>$\mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega)$</span>
 
-<span v-pre>$\mathscr{F}[ Eg_\tau(t)]=E\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*ω)
+<span v-pre>$\mathscr{F}[ g_\tau(t)]=\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*ω)
 
-> <span v-pre>$\displaystyle\mathscr{F}[ \frac{sin(\omega_0t) }{\pi t}]=g_{2\omega_0}(\omega)$</span>
-
-<span v-pre>$\mathscr{F}[ \frac{sin(\omega_ct)}{t} ]\normalsize =\pi[u(t+\omega_c) - u(t-\omega_c)]$</span>
+<span v-pre>$\displaystyle\mathscr{F}[ \frac{sin(\omega_0t) }{t}]=\pi g_{2\omega_0}(\omega)$</span>
 
 <span v-pre>$\mathscr{F}[ cos(\omega_0t) ]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)]$</span>
 
@@ -98,9 +104,8 @@ sidebar: auto
 Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\pi}\int_{-\infty}^{+\infty}|X(j\omega)|^2d\omega$</span>
 
 任意实函数的傅里叶变换实部偶函数，虚部奇函数。实偶对实偶，实奇对虚奇。
-### 特殊变换
-总宽度 T，幅值 E 的三角波：<span v-pre>$\large\mathscr{F}[ f(t) ]=\frac{TE}2Sa^2(\frac{T}{4}\omega)$</span>
-双边指数信号：<span v-pre>$\large\mathscr{F}[ e^{-a|t|} ]=\frac{2a}{a^2+\omega^2}$</span>
+
+> 特殊变换 - 双边指数信号：<span v-pre>$\large\mathscr{F}[ e^{-a|t|} ]=\frac{2a}{a^2+\omega^2}$</span>
 ## 离散傅里叶（非重点）
 本质：离散 -> 连续
 
@@ -131,9 +136,9 @@ cos，sin 在[-π,π]上跟连续一样，其他部分周期重复
 
 不同的：
 * 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n]=X(e^{j\omega k}), x_{(k)}[n]=x[n/k]$</span> 当且仅当 n%k==0（即离散扩宽）
-* 调制性质：频域相乘 = 频域卷积 / 2π，卷积积分限为周期 2π。卷积的时候可能需要考虑其他周期的卷积重合影响。
+* 调制性质：频域相乘 = 时域卷积 / 2π，卷积积分限为周期 2π。卷积的时候可能需要考虑其他周期的卷积重合影响。
 ### 应用
-* 带宽 Bf = 脉宽的倒数，脉宽是（一个周期内）信号的宽度
+* 带宽 Bf = 脉宽的倒数 = Bw/2π，脉宽是（一个周期内）信号的宽度，Bw 是频域的第一个零点
 * Nyquist frequency = 2 * max frequency
 * 调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
 * 解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
@@ -187,6 +192,10 @@ Nyquist frequency: 2wm
 * zero-input response: x(t) = 0 while t > 0; y(0), y'(0) 有值
 * zero-state response: x(t) 有值；y(0) = y'(0) = 0
     * [例题](https://www.bilibili.com/video/BV1g94y1Q76G/?p=53&t=4365)
+* 全通网络的极点在左半平面，零点在对称的右半平面。
+* 最小相移网络的极点在左半平面，零点在左半平面和 jw 轴。([source](https://www.bilibili.com/video/BV1ZB4y1q7Cr/?p=145&t=71))
+* 画 s 域电路：电压源 / s, 电容 1/sC + Vc(0-)/s, 电感 Ls - L iL(0-)
+* [根据零极点画幅频相频曲线](https://www.bilibili.com/video/BV1ZB4y1q7Cr/?p=141&t=444)
 ## Z-transform
 <span v-pre>$\displaystyle X(z)=\sum x[n]z^{-n}=\mathscr{F}[ x[n]r^{-n} ]$</span>
 

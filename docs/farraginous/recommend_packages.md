@@ -206,6 +206,16 @@ DOWN add volume -1
     clip.AsciiTextReplaceRegex("vd_source=[0-9a-zA-Z]+&?", "");
     return false
     ```
+* 超星学习通自动转为下载链接：
+    ```
+    clip.AsciiTextReplaceRegex("^https://mooc.s.ecust.edu.cn/coursedata.*objectId=(.*)&?.*","http://cs.e.ecust.edu.cn/download/$1");
+    return false
+    ```
+* 复制网址保留汉字时自动补全：
+    ```
+    clip.AsciiTextReplaceRegex("^t?(tps?://.*)","ht$1");
+    return false
+    ```
 ## 浏览器插件
 > *注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。*
 ### 视频速度控制

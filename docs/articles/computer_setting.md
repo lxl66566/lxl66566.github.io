@@ -61,7 +61,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 13. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
 14. 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
 15. 解决[端口随机占用](#端口随机占用)
-16. 开启全局 UTF-8：*设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8...*
+16. ~~开启全局 UTF-8：*设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8...*~~ 实测会导致一些 galgame 乱码。
 ## 我使用的软件们
 20230607，我的 windows 11 开机自启动的托盘软件有：[XDM](../farraginous/recommend_packages.md#xdm), Ditto, [parsec](../farraginous/recommend_packages.md#parsec), V2rayN, [f.lux](../farraginous/recommend_packages.md#flux), [everything](../farraginous/recommend_packages.md#everything), 火绒, [Tai](../farraginous/recommend_packages.md#tai), [flameshot](../farraginous/recommend_packages.md#flameshot)
 ## 设置开机自启动

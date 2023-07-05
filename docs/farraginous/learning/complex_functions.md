@@ -86,9 +86,9 @@ s域微分性质：<span v-pre>$\mathscr{L}(t^nf(t))=(-1)^nF^{(n)}(s)$</span>
 
 象函数的积分性质：<span v-pre>$\large \int_s^{\infty}F(s)ds=\mathscr{L}(\frac{f(t)}{t})$</span>
 
-初值定理：f(t)在[0,+∞]可微，则<span v-pre>$\large \begin{cases}lim_{t \to 0}f(t)\\ f(0)\end{cases}=lim_{s\to\infty}sF(s)$</span>    （若存在）
+初值定理：f(t)在[0,+∞]可微，则<span v-pre>$\displaystyle f(0)=lim_{s\to\infty}sF(s)$</span>    （若存在）
 
-终值定理：若sF(s)在Re(s)≥0的区域解析，<span v-pre>$\large \begin{cases}lim_{t \to \infty}f(t)\\ f(\infty)\end{cases}=lim_{s\to 0}sF(s)$</span>
+终值定理：若sF(s)在Re(s)≥0的区域解析，<span v-pre>$\displaystyle f(\infty)=lim_{s\to 0}sF(s)$</span>
 
 inverse Laplace transform：<span v-pre>$\large f(t)=\frac{1}{2\pi i}\int_{\beta-i\infty}^{\beta+i\infty}F(s)e^{st}ds=\Sigma Res[F(s)e^{st},s_k], \ s_k$</span> is to the left of Re(s)=β
 
