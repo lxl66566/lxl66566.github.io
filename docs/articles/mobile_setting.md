@@ -84,6 +84,7 @@
 * [AdAway](https://github.com/AdAway/AdAway)：屏蔽广告。
     <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
 * [DarQ](https://github.com/KieronQuinn/DarQ)：强制黑夜。支持不算好，pdd，咸鱼都无法强制。
+* [App Manager](https://github.com/MuntashirAkon/AppManager)：开源的 root 软件管理，可以查看运行中服务，可以禁用，控制权限
 
 通过酷安安装：
 * Scene5（**闭源！**）：注意，scene5 ROOT 后的功能为试用，到期需**付费**，正在寻找开源免费替代品。

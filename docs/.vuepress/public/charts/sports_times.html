@@ -500,6 +500,8 @@
         { name: "俯卧撑", 时刻: "20230704", times: 0 },
         { name: "引体向上", 时刻: "20230706", times: 0 },
         { name: "俯卧撑", 时刻: "20230706", times: 12 },
+        { name: "引体向上", 时刻: "20230707", times: 19 },
+        { name: "俯卧撑", 时刻: "20230707", times: 13 },
       ];
       let data_in_a_year = new Map();
       let year = new Date().getFullYear().toString();
@@ -512,8 +514,10 @@
       });
       let show_string = year + ": ";
       [...data_in_a_year]
-        .sort((a, b) => b - a)
+        .sort((a, b) => b[1] - a[1])
         .forEach((item) => {
+          // console.log(item);
+          item[1] = parseInt(item[1]);
           item.forEach((item2) => {
             show_string += item2 + " ";
           });
@@ -544,7 +548,7 @@
           position: "top",
         },
         slider: {
-          start: 0.5,
+          start: 1 - 120 / data.length,
           end: 1,
         },
         // area: {

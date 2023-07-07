@@ -1,7 +1,9 @@
 # C++
 ## 一些工具
 * [cppinsights](https://cppinsights.io/)：显式指明代码中的隐式转换与中间变量。
-* [godbolt](https://godbolt.org/)：汇编分析；pastebin
+* [godbolt](https://godbolt.org/)：汇编分析；pastebin；不同编译器的行为分析
+## 常见名词
+* UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`。
 ## 配置 vscode 环境
 默认 Windows 下。
 ### mingw + *C/C++*
@@ -85,7 +87,7 @@ C++ 允许多继承，菱形继承需要将中间类声明为虚类。（不要�
 ## template
 [see here](https://github.com/wuye9036/CppTemplateTutorial).讲得非常不错。
 ## variant
-错误处理的时候比较好用。类似 rust Result.
+错误处理的时候比较好用。类似<Badge text="?" /> rust Result.
 > [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato
 
 获取值一般用 std::get + try catch，也可用 std::visit :
@@ -115,6 +117,7 @@ std::visit(overloaded{
 ## 其他注意点
 * C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.
 * 慎用 C++20 的 std::ranges::remove_if()
+* 或许很难注意到的一些 [UB](#常见名词)：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，~~还有一些操作裸指针的~~ [source](https://zhuanlan.zhihu.com/p/391088391)
 ## Qt
 :::tip
 此处 Qt 版本大多为 Qt4-5，部分代码无法正常迁移至 Qt6.

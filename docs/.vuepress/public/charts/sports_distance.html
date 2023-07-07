@@ -203,7 +203,7 @@
       console.log(data_in_a_year);
       let show_string = year + ": ";
       [...data_in_a_year]
-        .sort((a, b) => b - a)
+        .sort((a, b) => b[1] - a[1])
         .forEach((item) => {
           item.forEach((item2) => {
             show_string += item2 + " ";
