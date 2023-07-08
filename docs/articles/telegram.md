@@ -11,6 +11,8 @@ sidebar: auto
 也可使用 Telegram 第三方客户端 [NekoX](https://github.com/NekoX-Dev/NekoX)，内置代理，无需科学上网。缺点是带宽小和不稳定。
 
 telegram 也有一些我认为的缺点，见[telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
+
+> 紧急情况还请使用其他聊天软件。
 ## 教程
 * 简体中文包：`tg://setlanguage?lang=classic-zh-cn`（复制，发送给任意用户，点击；PC 用户可直接在浏览器内打开
 :::danger 特别注意

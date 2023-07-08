@@ -1,3 +1,6 @@
+---
+sidebar: 'auto'
+---
 # Git
 ## 是什么
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. ——[Git官网](https://git-scm.com/)
@@ -127,11 +130,10 @@ git rm -r --cached dirname      # 删除仓库内文件夹
 ### 从仓库内恢复文件
 ```sh
 git checkout -- filename    # 注意 `--` 后的空格
+git reset --hard origin/main    # 强制恢复，忽略更改，但不删除新增文件
 ```
 ### 更新远程仓库到本地
 `git fetch origin main`
-
-> fetch 对比 clone 的好处在于可以分段传输。（指定`--depth=x`）
 ### 合并分支
 `git merge origin/main`
 ### 删除远程tag
