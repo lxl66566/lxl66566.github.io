@@ -170,7 +170,7 @@ curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=l
 |王嵘 - 代信号实验|-1|我对其不会有半点尊敬。[^2][^3][^4]|
 |大物实验 - 顾晓艳|8|温和，讲解清楚，手把手教||
 |数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~，不过至少专业性没有问题；平时分高，哥几个都是 90+|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
-|概率论<Badge text="半开卷" /><Badge type="warning" text="电子版" /> - 郭继明|4.5|温和，**然而**本人考勤全勤，作业全交且几乎全 A，考试 82，平时分只有 80.我不是很认可。|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
+|概率论<Badge text="半开卷" /><Badge type="warning" text="电子版" /> - 郭继明|4.5|温和，**然而**本人考勤 1/3，作业全交且几乎全 A，考试 82，平时分只有 80.我不是很认可。|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
 |信号与系统 - 朱煜|7[^1]|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|2.5|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊，会让同学去讲解 ppt|
 |模电 - 李振坡|2.8|<Badge text="限手机" /> 上课质量低，知识点讲不清楚；极其喜欢点名；作业少|<details><summary>点击展开</summary><p>lizhenpo@ecust.edu.cn</p></details>|

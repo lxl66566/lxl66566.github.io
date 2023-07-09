@@ -139,7 +139,7 @@ sidebar: 'auto'
 |游戏名|补正|
 | :----: | :----: |
 |近月少女的礼仪|-38min|
-|アンレス テルミナリア|+2h5min|
+|アンレス テルミナリア|+2h20min|
 |Summer Pockets Reflection Blue|-7min|
 
 ## 我计划玩
