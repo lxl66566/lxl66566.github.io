@@ -46,6 +46,7 @@ sidebar: 'auto'
 
 ## 观点
 * OSU 敲键盘的快感是敲平板无法带来的：平板用力会敲坏，而且越级空有力气还不一定能敲到键上。而 OSU 很适合发泄情绪。x
+* 我很讨厌在面条上写变速的谱师。非常讨厌。
 ## OSU
 <div class="subtitle">——空を超えるために、頑張らなくちゃいけないんだよ！</div>
 
@@ -59,7 +60,7 @@ sidebar: 'auto'
 
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="300"></iframe>
 
-* 叠（Jack）：β, ex-3
+* 叠（Jack）：β, ex-4
 
 <iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280"></iframe>
@@ -76,7 +77,7 @@ sidebar: 'auto'
 <iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
 <iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280"></iframe>
 
-* 切（Stamina / Stream）：α,  ex-4
+* 切（Stamina / Stream）：β, ex-4
     * 耐力是限制切力的最重要因素。耐力不稳定，因此成绩不稳定。
     * 非常痛恨无休切。Malody v3 段打得挺好，但 reform 段极为下手。（α 无休切，β 有个大乱，都不会打）
 
@@ -182,7 +183,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
 ### 最好成绩
-段位：[α 96.39%](https://www.bilibili.com/video/BV13M411Y7c5/) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | 单曲：[malody v3-stream ex4 96.32%](https://www.bilibili.com/video/BV1AR4y1Y785)
+段位：[α 96.39%](https://www.bilibili.com/video/BV13M411Y7c5/) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | LN 11
 
 ![malody v3 ex2 96.03%](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg)
 ## phigros

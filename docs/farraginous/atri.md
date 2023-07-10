@@ -33,4 +33,4 @@ sidebar: 'auto'
 pip install nb-cli
 pip install nonebot-adapter-onebot
 ```
-3. 参考[随笔中的启动脚本](../essay.md#_2022-05-06)
+3. 参考[随笔中的启动脚本](../essay.md#_20220506)
