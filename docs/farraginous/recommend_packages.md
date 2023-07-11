@@ -169,7 +169,6 @@ DOWN add volume -1
 * [简易教程](../articles/adb.md)
 
 [官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
-### 
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 开源的右键菜单管理器。高度自定义化。
 ### [Anki](https://apps.ankiweb.net/)

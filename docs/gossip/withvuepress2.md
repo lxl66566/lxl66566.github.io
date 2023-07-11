@@ -1,7 +1,7 @@
 # VuePress2与博客心得
 建博客时我还是个小白，对 javascript & typescript & css & vue 一窍不通，html 也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于 20220718（之后持续更新），算是对我建站三个半月来的一些总结。
 
-设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo,Wordpress,HUGO,docsify 等。后来随着慢慢深入接触也了解了 Vitepress,mdbook,Gitbook。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
+设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo, Wordpress, HUGO, docsify 等。后来随着慢慢深入接触也了解了 Vitepress([已尝试](#试图迁移至-vitepress)), mdbook, Gitbook。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
 
 然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我被网上教程（我看的很多是用 js 写的）与官方文档的 ts 搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
 
@@ -158,7 +158,7 @@ sidebar:{
     },
     ],
     '/': [
-    '../README.md',
+    '../index.md',
     {
         text : '闲聊',
         link : '/gossip/',
@@ -185,7 +185,7 @@ sidebar:{
 },
 ```
 
-17行写的是`'../README.md'`而不是`'/README.md'`，是因为我需要让某些二级页面也能显示主页的侧边栏，为此提供索引。主页已经在顶层目录下，无法向前回退。
+17行写的是`'../index.md'`而不是`'/index.md'`，是因为我需要让某些二级页面也能显示主页的侧边栏，为此提供索引。主页已经在顶层目录下，无法向前回退。
 
 ### vuepress v1.x的要求
 vuepress1 的配置有一点不一样。
@@ -303,3 +303,108 @@ export default ({
 > listen EACCES: permission denied 0.0.0.0:8080
 
 [解法](../articles/computer_setting.md#端口随机占用)
+## 试图迁移至 vitepress
+vitepress 其实是 VuePress 的一个分支，其具有更快的渲染速度与更高的自由度(?)，因此我尝试将此 blog 迁移至 vitepress。结果——如你所见，失败了。但是，此配置过程中也学到了一些东西。
+
+1. 安装好 vitepress 并配置。其配置有些许不同：
+    * `navbar` 改为 `nav`，并且其与 `sidebar` 接受参数的语法不同。
+    * vitepress 以 `index.md` 作为默认页面，而非 `readme.md`.
+    * 考虑[抄抄官方](https://github.com/vuejs/vitepress/blob/main/docs/.vitepress/config.ts)，有一些好的理念。
+2. 安装插件。
+    1. 搜索插件：vitepress [内置](https://vitepress.dev/reference/default-theme-search#local-search)，并且其功能爆杀 VuePress。
+    2. 数学公式插件，`npm install markdown-it markdown-it-mathjax3`。详细配置可以抄[这里](https://github.com/brc-dd/vitepress-mathjax3)，完美解决遇到的问题。
+    3. 评论插件：[vitepress-plugin-comment-with-giscus](https://github.com/T-miracle/vitepress-plugin-comment-with-giscus)，非常简单，但是首页无法显示评论，搞了好久没法解决。
+3. 全局 css：在 `.vitepress/theme/styles/` 中放入任何想要的 css 文件，然后在 `theme/index.ts` 下 import 就行了。可惜没法这样引入 js，`pangu.js` 还是无法使用。
+4. 无法加载 `public` 中的资源。无论 img 还是 html 用 iframe 引入都不行。
+    * iframe 404，用法 `<iframe frameborder="no" src="/charts/sports_distance.html" width="100%" height="304"></iframe>`，报错 `GET http://localhost:5173/charts/sports_distance.md?import&t=1689086185464 net::ERR_ABORTED 404 (Not Found)`，看起来是把后缀强制上了 `.md`。。我在官方文档看到了[关于 pathname:// 的解释](https://vitepress.dev/guide/asset-handling#the-public-directory)，但是并没有什么卵用。
+5. 无法 build，preview。我是真的很不理解。
+    1. `npm run docs:build` 报错
+    > ✓ building client + server bundles...<br/>
+    > build error:<br/>
+    > ReferenceError: window is not defined<br/>
+    >     at file:///D:/program/vitepress/docs/.vitepress/.temp/app.js:4675:3<br/>
+    > ...
+
+    但是我也没用什么组件，找不到解法。
+    2. `npm run docs:preview` 报错
+    > failed to start server. error:<br/>
+    > Error: ENOENT: no such file or directory, open 'D:\program\vitepress\docs\.vitepress\dist\404.html'
+
+    这就很好理解了，毕竟 `dist` 还是残缺的。不过至少有个理论能用的 preview 已经很不错了，~~都可以杀 VuePress（~~
+
+::: details 最后附上我尝试的 config.ts 代码留念x
+```ts
+import { defineConfig } from "vitepress";
+import mathjax3 from "markdown-it-mathjax3";
+const customElements = ["mjx-container"];
+export default defineConfig({
+  lang: "zh-CN",
+  title: "绝对值_x的博客",
+  description: "没什么有价值的内容的，真的！",
+  lastUpdated: true,
+  ignoreDeadLinks: true,
+  themeConfig: {
+    logo: "https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/logo.jpg",
+    nav: nav(),
+    sidebar: sidebar(),
+    socialLinks: [
+      {
+        icon: "github",
+        link: "https://github.com/lxl66566/lxl66566.github.io",
+      },
+    ],
+    search: {
+      provider: "local",
+    },
+    externalLinkIcon: true,
+  },
+  markdown: {
+    config: (md) => {
+      md.use(mathjax3);
+    },
+  },
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => customElements.includes(tag),
+      },
+    },
+  },
+});
+function nav() {
+  return [
+    {
+      text: "编程",
+      link: "/coding/",
+    },
+    {
+      text: "文章",
+      link: "/articles/",
+    },
+    {
+      text: "闲聊",
+      link: "/gossip/",
+    },
+    {
+      text: "随笔",
+      link: "/essay.md",
+    },
+  ];
+}
+function sidebar() {
+  return {
+    "/gossip/": [
+      {
+        text: "闲聊",
+        link: "/gossip/",
+        items: [{ text: "author", link: "/gossip/author" }],
+      },
+    ],
+  };
+}
+```
+:::
+
+## 尝试更好的搜索
+[如上所述](#试图迁移至-vitepress)，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方搜索服务需要经过严格审查。因此我看到了能够本地索引的[flexsearch](https://github.com/nextapps-de/flexsearch)，继续找到了：
+* [vuepress-plugin-flexsearch](https://github.com/z3by/vuepress-plugin-flexsearch)，此插件已经两年未维护，依赖包的安全漏洞数十个，甚至连 [example 都未能执行](https://github.com/z3by/vuepress-plugin-flexsearch/issues/85)。。

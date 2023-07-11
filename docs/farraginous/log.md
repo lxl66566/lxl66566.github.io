@@ -14,6 +14,9 @@ sidebarDepth: 1
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230711
+* *VuePress2与博客心得* 新增 [试图迁移至 vitepress](../gossip/withvuepress2.md#试图迁移至-vitepress)
+* config.ts 改动
 ### 20230704
 * [consider](../gossip/consider.md#如何看待偏科) 新增内容
 ### 20230702
@@ -322,8 +325,8 @@ sidebarDepth: 1
 * 新增 [编程-Git](../coding/Git.md)&*其他工具（已整合为[python](../coding/python.md)页面）*、[随笔](../essay.md)
 ### 20220505
 * 新增 [杂项-我的文章#查看手机cpu指令集（现：文章-~）](../articles/Android_ISA.md)
-* 更新 [主页](../README.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
+* 更新 [主页](../index.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
 ### 20220504
 * 发布博客
-* 创建 [主页](../README.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、游戏-csgo游戏配置（现已移动到[其他游戏-csgo#常用指令](../hobbies/other_games.md#常用指令)）
+* 创建 [主页](../index.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、游戏-csgo游戏配置（现已移动到[其他游戏-csgo#常用指令](../hobbies/other_games.md#常用指令)）
 * 添加搜索插件
