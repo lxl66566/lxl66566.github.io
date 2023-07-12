@@ -2,12 +2,12 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "npm: docs:dev",
+      "label": "npm: dev",
       "type": "npm",
-      "script": "docs:dev",
+      "script": "dev",
       "problemMatcher": [],
       "detail": "vuepress dev docs",
-      //   "command": "npm run docs:dev",
+      //   "command": "npm run dev",
       "options": {
         "shell": {
           "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -16,11 +16,18 @@
       }
     },
     {
-      "type": "npm",
-      "script": "deploy",
-      "problemMatcher": ["$node-sass"],
-      "label": "deploy & backup",
-      "detail": "backup.sh"
+      "label": "release",
+      "type": "shell",
+      "command": "${workspaceFolder}/release.sh",
+      "detail": "./release.sh",
+      "problemMatcher": [],
+      "options": {
+        "shell": {
+          "executable": "C:\\Program Files\\Git\\git-bash.exe",
+          "args": []
+        },
+        "cwd": "${workspaceFolder}"
+      }
     }
   ]
 }

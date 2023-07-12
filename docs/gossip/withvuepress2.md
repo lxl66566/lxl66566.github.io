@@ -1,7 +1,7 @@
 # VuePress2与博客心得
 建博客时我还是个小白，对 javascript & typescript & css & vue 一窍不通，html 也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于 20220718（之后持续更新），算是对我建站三个半月来的一些总结。
 
-设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo, Wordpress, HUGO, docsify 等。后来随着慢慢深入接触也了解了 Vitepress([已尝试](#试图迁移至-vitepress)), mdbook, Gitbook。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
+设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo, Wordpress, HUGO, docsify 等。后来随着慢慢深入接触也了解了 Vitepress([已尝试](#试图迁移至-vitepress)), mdbook, Gitbook, Docusaurus。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
 
 然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我被网上教程（我看的很多是用 js 写的）与官方文档的 ts 搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
 
@@ -31,6 +31,8 @@
 ## 评论插件配置失败问题
 我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比 vuepress2 文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个 theme 出来...我哪有那个能耐啊，直接 Ctrl+CV 了。不过这种东西本应在文档里指明的。
 ## 添加黑幕
+其实就是添加全局 css。
+
 在`.vuepress/public`下任意位置新建`head.css`（名字不重要），输入：
 ```css
 .heimu, .heimu a, a .heimu, .heimu a.new {
@@ -60,6 +62,9 @@ export default defineUserConfig({
 })
 ```
 然后就可以在 .md 文件中使用黑幕了：`<span class="heimu" title="你知道的太多了">你想说的话</span>` 效果：<span class="heimu" title="你知道的太多了">比如这样</span>
+
+### 另一个方法
+创建 `.vuepress/styles/index.scss` 并写入 css。vuepress 会自动引入，无需写入配置。
 
 ## 图床衍生问题
 由于图片越来越多，博客更新频繁，这样占云端空间大，上传也慢。于是就直接就地开了个 images 分支当作图床。我一开始直接在 `.vuepress/public/images` 文件夹里创建仓库上传的，然后也能正常使用，到了发布博客的时候，编译也过了，上传也成功了，结果 Github 告诉我因为一个奇妙的问题构建不成功......此处放出错误信息：
@@ -406,5 +411,10 @@ function sidebar() {
 :::
 
 ## 尝试更好的搜索
-[如上所述](#试图迁移至-vitepress)，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方搜索服务需要经过严格审查。因此我看到了能够本地索引的[flexsearch](https://github.com/nextapps-de/flexsearch)，继续找到了：
-* [vuepress-plugin-flexsearch](https://github.com/z3by/vuepress-plugin-flexsearch)，此插件已经两年未维护，依赖包的安全漏洞数十个，甚至连 [example 都未能执行](https://github.com/z3by/vuepress-plugin-flexsearch/issues/85)。。
+[如上所述](#试图迁移至-vitepress)，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方服务（algolia）需要经过严格审查。因此我看到了能够本地索引的[flexsearch](https://github.com/nextapps-de/flexsearch)，继续找到了：
+* [vuepress-plugin-flexsearch](https://github.com/z3by/vuepress-plugin-flexsearch)，此插件已经两年未维护，依赖包的安全漏洞数十个，甚至连 [example 都未能执行](https://github.com/z3by/vuepress-plugin-flexsearch/issues/85)。。在 vuepress 2.x 上无法使用。
+* [vuepress-plugin-fulltext-search](https://github.com/leo-buneev/vuepress-plugin-fulltext-search)，我更愿意将其看成 *vuepress-plugin-flexsearch* 的一个 fork，同样的两年未维护，同样的无法使用，同样的安全漏洞。/流汗
+* [Run your own docsearch](https://docsearch.algolia.com/docs/legacy/run-your-own)，文章也两年未更新了，而且也需要借助 algolia 的 API 服务，免费最高支持 10k 条(?)，总之不是一个好选择。
+* [vuepress-plugin-full-text-search2](https://github.com/ota-meshi/vuepress-plugin-full-text-search2)：testing
+
+参考：[liuli-moe/to-the-stars](https://github.com/liuli-moe/to-the-stars/issues/22)

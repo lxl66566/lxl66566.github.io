@@ -1,4 +1,4 @@
-npm run docs:build
+npm run build
 cd docs/.vuepress/dist
 git init
 git config --local user.name "deploy"

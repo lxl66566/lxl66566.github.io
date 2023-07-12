@@ -14,8 +14,10 @@ sidebarDepth: 1
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230712
+* 新增 [文章 - 输入法](../articles/input_method.md) 页面
 ### 20230711
-* *VuePress2与博客心得* 新增 [试图迁移至 vitepress](../gossip/withvuepress2.md#试图迁移至-vitepress)
+* *VuePress2与博客心得* 新增 [试图迁移至 vitepress](../gossip/withvuepress2.md#试图迁移至-vitepress)，[尝试更好的搜索](../gossip/withvuepress2.md#尝试更好的搜索)
 * config.ts 改动
 ### 20230704
 * [consider](../gossip/consider.md#如何看待偏科) 新增内容
