@@ -1,5 +1,5 @@
 npm run build
-cd docs/.vuepress/dist
+cd src/.vuepress/dist
 git init
 git config --local user.name "deploy"
 git config --local user.email "deploy@example.com"

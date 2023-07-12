@@ -1,7 +1,8 @@
-node_modules
-.temp
-.cache
-dist
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/
+demo/
+.github/
 images
 *.py
-target/
