@@ -1,3 +1,10 @@
+---
+date: 2022-12-15
+icon: compare
+category:
+    - 生活
+    - 评价
+---
 # 家与学校生活环境对比
 妈的，忍不了了，~~一拳把地球打爆！~~ 写个博客发泄。
 
@@ -12,6 +19,7 @@
 
 > 解法
 <img alt="新桌面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/new_table.jpg"  width="50%" height="50%"/>
+
 ## 零食
 * 宿舍：有着一大堆零食，包括但不限于薯片，糖果，其他膨化食品，饮料，麻辣小包食品，锅巴，辣条，方便面。
 * 家里：一眼就很健康的水果。没了。

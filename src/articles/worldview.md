@@ -1,3 +1,12 @@
+---
+date: 2023-02-22
+icon: network
+category:
+    - 主张
+    - 生活
+tag:
+    - 世界
+---
 # 道论
 <div class="subtitle">——吾道何处去？</div>
 

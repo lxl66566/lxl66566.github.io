@@ -1,5 +1,14 @@
 ---
 sidebar: heading
+icon: proxy
+date: 2022-06-13
+category:
+    - 教程
+tag:
+    - 网络
+    - 加密
+    - 桌面端
+    - 移动端
 ---
 # 初级科学上网
 :::danger 警告

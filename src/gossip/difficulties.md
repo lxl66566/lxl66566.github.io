@@ -1,3 +1,9 @@
+---
+date: 2022-08-13
+icon: debug
+category:
+    - 生活
+---
 # 生活中遇到的困难
 **此页面几乎不再更新。请前往[我的频道](https://t.me/withabsolutex)搜索 tag: `#垃圾桶`。**
 

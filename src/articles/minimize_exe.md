@@ -1,3 +1,12 @@
+---
+date: 2023-04-28
+icon: workingDirectory
+category:
+    - 教程
+tag:
+    - CLI
+    - 桌面端
+---
 # program minimize
 I'm very sensitive to file size. And 20230428 I found a nice guy to minimize my released executable files:
 

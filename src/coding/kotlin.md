@@ -1,3 +1,11 @@
+---
+date: 2023-05-26
+icon: code
+category:
+    - 编程
+tag:
+    - 编程语言
+---
 # kotlin
 java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。
 ## 我的入坑

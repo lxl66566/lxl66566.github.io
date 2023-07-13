@@ -1,3 +1,12 @@
+---
+date: 2023-05-14
+icon: computer
+category:
+    - 教程
+    - 经历
+tag:
+    - 桌面端
+---
 # VPS
 我与我的 VPS 的故事。
 

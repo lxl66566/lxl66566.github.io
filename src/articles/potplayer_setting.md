@@ -1,3 +1,12 @@
+---
+date: 2023-01-14
+icon: play
+category:
+    - 教程
+tag:
+    - 视频播放器
+    - 桌面端
+---
 # Potplayer 设置
 ::: warning
 本人已不再使用 potplayer，改用 [mpv](../farraginous/recommend_packages.md#mpv)，请知悉

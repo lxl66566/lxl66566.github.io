@@ -1,7 +1,10 @@
 ---
 sidebar: heading
-tag:
+date: 2023-06-17
+category:
   - 学习
+tag:
+  - 自然语言
 ---
 # 日本語勉強
 我也说不上玩 galgame[^1] 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。

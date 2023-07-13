@@ -1,7 +1,11 @@
 ---
 sidebar: heading
+date: 2022-11-05
+icon: physics
+category:
+    - 学习
 tag:
-  - 学习
+  - 物理
 ---
 # 大学物理
 ## 电学

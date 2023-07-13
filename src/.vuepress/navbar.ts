@@ -1,33 +1,36 @@
 import { navbar } from "vuepress-theme-hope";
-function add_prefix(prefix: string, list: string[]): string[] {
-  return list.map((item) => prefix + item);
-}
 export default navbar([
   {
     text: "编程",
     link: "/coding/",
+    icon: "code",
   },
   {
     text: "爱好",
+    icon: "like",
     children: [
       {
         text: "游戏",
-        children: add_prefix("/hobbies/", [
+        prefix: "/hobbies/",
+        children: [
           "rhythm_games.md",
           "galgame.md",
           "Minecraft.md",
           "other_games/",
-        ]),
+        ],
       },
       {
         text: "其他",
-        children: add_prefix("/hobbies/", ["books.md", "anime.md"]),
+        prefix: "/hobbies/",
+        children: ["books.md", "anime.md"],
       },
     ],
   },
   {
     text: "杂项",
-    children: add_prefix("/farraginous/", [
+    prefix: "/farraginous/",
+    icon: "categoryselected",
+    children: [
       "recommend_packages.md",
       "recommend_websites.md",
       "college.md",
@@ -35,18 +38,21 @@ export default navbar([
       "reciter.md",
       "learning/",
       "log.md",
-    ]),
+    ],
   },
   {
     text: "文章",
     link: "/articles/",
+    icon: "blog",
   },
   {
     text: "闲聊",
     link: "/gossip/",
+    icon: "comment",
   },
   {
     text: "随笔",
     link: "/essay.md",
+    icon: "article",
   },
 ]);

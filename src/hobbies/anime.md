@@ -1,5 +1,11 @@
 ---
 sidebar: heading
+date: 2022-08-13
+icon: slides
+category:
+    - 爱好
+tag:
+    - 二次元
 ---
 # 番剧
 本人边缘二次元人，[剧情党](./galgame.md#分类)，自 18+ 后逐渐形成自己的一系列观点。

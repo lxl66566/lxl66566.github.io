@@ -1,7 +1,11 @@
 ---
 sidebar: heading
+date: 2023-02-15
+category:
+    - 学习
+    - 教程
 tag:
-  - 学习
+  - 吃的
 ---
 # 食物制作
 ## 蛋糕胚

@@ -1,3 +1,12 @@
+---
+date: 2022-06-17
+icon: light
+category:
+    - 主张
+    - 评价
+tag:
+    - 负面
+---
 # xxx有多难用
 ## QQ有多难用
 实在受不了了，来细数QQ的罪状 *~~（可以当作对比 telegram~~*

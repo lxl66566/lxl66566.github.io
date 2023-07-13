@@ -1,5 +1,12 @@
 ---
 sidebar: heading
+date: 2022-06-24
+icon: snow
+category:
+    - 爱好
+tag:
+    - 二次元
+    - 游戏
 ---
 # galgame
 <div class="subtitle">——おーい、早く起きてー！ギャルゲーがまだいっぱいあるよ！</div>

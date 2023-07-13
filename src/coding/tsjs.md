@@ -1,3 +1,11 @@
+---
+date: 2023-04-09
+icon: typescript
+category:
+    - 编程
+tag:
+    - 编程语言
+---
 # TypeScript
 TypeScript 是在 JavaScript 基础上建立的一门语言，新增了类型控制，可以被编译为 JavaScript. 我是激进派，因此本文主要讲 TypeScript；JS 版本 >= ES6.
 

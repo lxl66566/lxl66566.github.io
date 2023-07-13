@@ -1,5 +1,11 @@
 ---
 sidebar: heading
+icon: android
+date: 2022-05-10
+category:
+    - 杂项
+tag:
+    - 成果
 ---
 
 # atri

@@ -1,5 +1,13 @@
 ---
 sidebar: heading
+icon: install
+date: 2022-05-04
+category:
+    - 推荐
+tag:
+    - 桌面端
+    - 移动端
+    - 工具
 ---
 # 软件汇总
 一些好用软件的推荐。

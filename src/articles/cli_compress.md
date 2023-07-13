@@ -1,3 +1,12 @@
+---
+date: 2022-10-10
+# 注：此日期不准确，是估计值
+icon: generic
+category:
+    - 教程
+tag:
+    - CLI
+---
 # 命令行压缩
 我电脑上使用的压缩软件为[Bandizip](../farraginous/recommend_packages.md#bandizip)，命令行指令为`bz`，详见[官网-命令行参数](https://cn.bandisoft.com/bandizip/help/parameter/)。
 

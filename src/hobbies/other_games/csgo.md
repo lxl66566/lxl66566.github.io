@@ -1,3 +1,11 @@
+---
+date: 2022-05-04
+icon: hot
+category:
+    - 爱好
+tag:
+    - 游戏
+---
 # CS:GO
 CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此需要[时不时戒一段时间](../../hide/personal_details.md#强迫自己做的事)。
 

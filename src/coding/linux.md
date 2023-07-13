@@ -1,3 +1,12 @@
+---
+date: 2023-04-17
+icon: linux
+category:
+    - 编程
+    - 教程
+tag:
+    - 工具
+---
 # linux
 我使用的是 [ArchWSL](https://github.com/yuk7/ArchWSL) on WSL2。因为游戏原因无法抛弃 windows，但又想学习体验 Linux，于是使用折中方案。在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。
 

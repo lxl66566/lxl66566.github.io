@@ -1,5 +1,11 @@
 ---
 sidebar: heading
+date: 2022-05-06
+icon: git
+category:
+    - 编程
+tag:
+    - 工具
 ---
 # Git
 ## 是什么

@@ -1,7 +1,10 @@
 ---
 sidebar: heading
+date: 2023-03-14
+category:
+    - 学习
 tag:
-  - 学习
+  - 数学
 ---
 # Probability and Mathematical Statistics
 概率论与数理统计。我看的网课是[孔祥仁](https://space.bilibili.com/453967238)的。概率论东西真不多，多刷题就完了，题型比较死。

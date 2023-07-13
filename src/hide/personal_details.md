@@ -1,5 +1,8 @@
 ---
 sidebar: heading
+date: 2022-07-20
+category:
+    - 作者
 ---
 # 关于作者更加详细的回答
 ## [我的回忆录](./memories.md)

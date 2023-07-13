@@ -1,3 +1,11 @@
+---
+date: 2022-06-11
+icon: code
+category:
+    - 编程
+tag:
+    - 编程语言
+---
 # C++
 ## 一些工具
 * [cppinsights](https://cppinsights.io/)：显式指明代码中的隐式转换与中间变量。

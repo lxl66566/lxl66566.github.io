@@ -1,3 +1,13 @@
+---
+date: 2022-05-21
+icon: computer
+category:
+    - 教程
+tag:
+    - 桌面端
+    - CLI
+    - Windows
+---
 # 设置电脑
 好的设置能够在未来降低你的血压，并大幅提高你的工作效率。
 

@@ -1,5 +1,11 @@
 ---
-sidebar: heading
+date: 2022-05-26
+icon: return
+category:
+    - 主张
+tag:
+    - 希望
+    - 世界
 ---
 # 对美好未来社会的愿景
 :::danger 警告

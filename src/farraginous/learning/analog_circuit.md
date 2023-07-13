@@ -1,7 +1,10 @@
 ---
 sidebar: heading
+date: 2023-03-01
+category:
+    - 学习
 tag:
-  - 学习
+  - 电子与电路
 ---
 # 模拟电子技术及实验
 b站课程：[郑益慧](https://www.bilibili.com/video/BV1Gt411b7Zq)（原本看过一段时间华成英的，发现看不下去）

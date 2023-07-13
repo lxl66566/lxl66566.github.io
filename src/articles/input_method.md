@@ -1,3 +1,13 @@
+---
+date: 2023-07-12
+icon: keyboard
+category:
+    - 教程
+    - 推荐
+tag:
+    - 输入法
+    - 桌面端
+---
 # 输入法
 <div class="subtitle">——windows 端的输入法都是一坨垃圾。</div>
 

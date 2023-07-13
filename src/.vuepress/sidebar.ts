@@ -1,7 +1,4 @@
 import { sidebar } from "vuepress-theme-hope";
-function add_prefix(prefix: string, list: string[]): string[] {
-  return list.map((item) => prefix + item);
-}
 export default sidebar({
   "/gossip/": [
     {
@@ -62,13 +59,7 @@ export default sidebar({
     },
     {
       text: "工具",
-      children: [
-        "github.md",
-        "Git.md",
-        "linux.md",
-        { text: "Vim", link: "/coding/vim.md" },
-        "sql.md",
-      ],
+      children: ["github.md", "Git.md", "linux.md", "vim.md", "sql.md"],
     },
     {
       text: "其他",
@@ -122,18 +113,20 @@ export default sidebar({
     },
     {
       text: "爱好",
-      children: add_prefix("/hobbies/", [
+      prefix: "/hobbies/",
+      children: [
         "rhythm_games.md",
         "galgame.md",
         "Minecraft.md",
         "books.md",
         "anime.md",
         "other_games/",
-      ]),
+      ],
     },
     {
       text: "杂项",
-      children: add_prefix("/farraginous/", [
+      prefix: "/farraginous/",
+      children: [
         "recommend_packages.md",
         "recommend_websites.md",
         "college.md",
@@ -141,7 +134,7 @@ export default sidebar({
         "reciter.md",
         "learning/",
         "log.md",
-      ]),
+      ],
     },
   ],
 });

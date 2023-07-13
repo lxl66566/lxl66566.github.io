@@ -1,3 +1,12 @@
+---
+date: 2023-01-22
+icon: mobile
+category:
+    - 教程
+    - 生活
+tag:
+    - 移动端
+---
 # 设置手机
 为了追求绝对控制与我所需要的功能。前往[MIUI 有多难用](../gossip/fuckxxx.md#miui13-有多难用)
 ## Redmi note 10 pro - before root

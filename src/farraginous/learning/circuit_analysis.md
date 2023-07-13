@@ -1,10 +1,13 @@
 ---
 sidebar: heading
+date: 2022-12-26
+category:
+    - 学习
 tag:
-  - 学习
+  - 电子与电路
 ---
 # 电路分析基础
-此处仅记载部分重要内容。更多内容请前往查看[Github - 电路分析_复习纲要](https://github.com/lxl66566/my-college-files/blob/main/%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%AE%9E%E9%AA%8C/%E8%AF%BE%E4%BB%B6/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90_%E5%A4%8D%E4%B9%A0%E7%BA%B2%E8%A6%81.pdf)。
+此处仅记载部分重要内容。更多内容请前往查看[Github - 电子与电路分析_复习纲要](https://github.com/lxl66566/my-college-files/blob/main/%E7%94%B5%E8%B7%AF%E5%8E%9F%E7%90%86%E5%8F%8A%E5%85%B6%E5%AE%9E%E9%AA%8C/%E8%AF%BE%E4%BB%B6/%E7%94%B5%E8%B7%AF%E5%88%86%E6%9E%90_%E5%A4%8D%E4%B9%A0%E7%BA%B2%E8%A6%81.pdf)。
 ## 分析法
 ### 回路电流法
 自电阻\*自电流 + 互电阻\*互电流（同向为正） = 压升

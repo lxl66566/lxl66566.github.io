@@ -1,14 +1,25 @@
+---
+date: 2022-07-18
+icon: vue
+category:
+    - 博客
+    - 教程
+    - 经历
+---
 # VuePress2与博客心得
 建博客时我还是个小白，对 javascript & typescript & css & vue 一窍不通，html 也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于 20220718（之后持续更新），算是对我建站三个半月来的一些总结。
 
-设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo, Wordpress, HUGO, docsify 等。后来随着慢慢深入接触也了解了 Vitepress([已尝试](#试图迁移至-vitepress)), mdbook, Gitbook, Docusaurus。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
+设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo, Wordpress, HUGO, docsify 等。后来随着慢慢深入接触也了解了 Vitepress([已尝试](#试图迁移至-vitepress)), mdbook, Gitbook, Docusaurus。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，曾经我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
 
 然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我被网上教程（我看的很多是用 js 写的）与官方文档的 ts 搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
 
-20230712 由于依赖地狱把 node_modules 给崩了，救不回来，于是重新配置博客并更换主题为 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)。该主题自带合适的评论插件，搜索增强插件，[Markdown 增强](https://plugin-md-enhance.vuejs.press/zh/) 插件，应有尽有。如果一开始就用此主题，定然能解决下述大部分的问题。
+20230712 由于依赖地狱把 node_modules 给崩了，重装，回档也救不回来。破罐子破摔，试了下 VuePress Theme Hope[^1] 主题，然后发现异常好用。。该主题自带合适的评论插件，搜索增强插件，[Markdown 增强](https://plugin-md-enhance.vuejs.press/zh/) 插件，应有尽有。如果一开始就用此主题，定然能解决下述大部分的问题。
+[^1]: [VuePress Theme Hope 官网](https://theme-hope.vuejs.press/zh/)
 
 后来在开发过程中还遇到了亿些问题——
-
+:::warning
+以下问题不具有时效性，请自行判断
+:::
 ## 字体颜色问题
 网上教程为使用 `<font color="red">` 标签，但此标签不受 html5 支持（并导致了下述 *Rendering pages failed* 问题）。我还尝试了 `<p>` 标签（但会自动换行）与 `<a>` 标签（但有下划线和点击效果）。最终选用 `<text style="color:red;">` 标签，写起来最为简洁，无需添加额外属性。
 
@@ -32,6 +43,8 @@
 
 ## 评论插件配置失败问题
 我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比 vuepress2 文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个 theme 出来...我哪有那个能耐啊，直接 Ctrl+CV 了。不过这种东西本应在文档里指明的。
+
+后来发现。。事实上这个插件是 VuePress Theme Hope[^1] 主题的专用组件，因此未说明默认主题下的使用方法。
 ## 添加黑幕
 其实就是添加全局 css。
 
@@ -124,7 +137,7 @@ export default defineUserConfig({
 
 最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6)中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。~~扩展名与文件无关！~~
 
-<span class="heimu" title="你知道的太多了">其实加的css也就这么几行，全局不全局的无所谓了</span>
+~~其实加的css也就这么几行，全局不全局的无所谓了~~
 
 ## html转vue组件失败问题
 
@@ -420,5 +433,21 @@ function sidebar() {
 
 参考：[liuli-moe/to-the-stars](https://github.com/liuli-moe/to-the-stars/issues/22)
 ## 更换主题
-20230712 由于开头所述原因，更换了 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 主题。迁移过程比我想象的时间要少。 不过还有一些问题（功能改进）没有解决：
+20230712 由于开头所述原因，更换了 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 主题。迁移过程比我想象的时间要少。该主题有如下优势：
+* 自动检测 Broken links
+* Markdown 增强：
+    * 自带 $TEX$ 支持
+    * 任务列表
+    * 脚注支持
+    * 容器扩展
+    * 图片扩展
+* 更适用于博客的首页
+* 无障碍图标
+* 自动明暗主题
+* 内容加密
+
+反正就是非常牛逼。
+
+不过还有一些问题（功能改进）没有解决：
 * 比如我想在 navbar 上加一个 telegram 的跳转链接，但是 VuePress Theme Hope 的实现是自己写 Vue 插件，看了半天看不到在哪引入的，也就只能下次再说了。
+* 主页评论区寄了。明明都是 gisgus 的服务，配置一模一样，也是按照 `pathname` 查找，但是原先的评论就是找不回来。

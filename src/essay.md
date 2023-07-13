@@ -1,6 +1,14 @@
 ---
 sidebar: heading
 headerDepth: 1
+date: 2022-05-06
+icon: write
+category:
+    - 随笔
+    - 作者
+tag:
+    - 负面
+    - 谜语
 ---
 # 随笔
 

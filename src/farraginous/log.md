@@ -1,21 +1,29 @@
 ---
 sidebar: heading
 headerDepth: 1
+date: 2022-07-21
+icon: list
+category:
+    - 博客
+tag:
+    - 日志
 ---
 # 博客日志
 <div class="subtitle">记录点点滴滴</div>
 
-本版块于20220721开始记录，更早的提交只能通过 git 历史版本比对记录，缺漏无可奈何，实属遗憾。~~*（因为有时候我改了但会等待大更新才提交）*~~ 日后将不间断更新日志。
-
-由于目录结构时而变动，此页失效链接可能比较多，请多包涵，也可联系我指出。
 ::: tip
 * 较小的语句优化与增删改不作记录。因此即使博客几乎为**日更**，但日志较稀疏。
 * *维护* 一般指花费时间较长或改动占比较大。
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230713
+* 为文章添加创建日期，分类，标签
+* navbar, sidebar 添加无障碍图标
+* 移除 Broken links
 ### 20230712
 * **更换主题：[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)，并使用其提供的全文搜索，加密，Markdown 增强，评论功能**
+* *VuePress2与博客心得* 新增 [# 更换主题](../gossip/withvuepress2.md#更换主题)
 * 新增 [文章 - 输入法](../articles/input_method.md) 页面
 ### 20230711
 * *VuePress2与博客心得* 新增 [试图迁移至 vitepress](../gossip/withvuepress2.md#试图迁移至-vitepress)，[尝试更好的搜索](../gossip/withvuepress2.md#尝试更好的搜索)
@@ -25,6 +33,8 @@ headerDepth: 1
 ### 20230702
 * 重审 *边缘二次元* 属性，维护相关页面
 * 更改本页面：去除月份索引，使用 8digit 日期格式
+### 20230622
+* 新增 [学习笔记 - 双拼](./learning/ulpb.md)
 ### 20230620
 * 维护回忆录
 ### 20230617
@@ -33,7 +43,7 @@ headerDepth: 1
 ### 20230615
 * 新增 [闲聊 - 绷不住了](../gossip/memes.md)
 ### 20230614
-* 新增 [设置手机 - 刷机](../articles/mobile_setting.md#刷机)
+* 新增 [设置手机 # 刷机](../articles/mobile_setting.md#刷机)
 ### 20230610
 * 维护 [算法](../coding/algorithm.md)
 ### 20230605
@@ -46,7 +56,7 @@ headerDepth: 1
 ### 20230601
 * [Java](../coding/java.md) 新增内容
 ### 20230528
-* 新增自动空格（[盘古之白](https://github.com/vinta/pangu.js/tree/master)）
+* 新增自动空格（[盘古之白](https://github.com/vinta/pangu.js/tree/master)）（后证明无效）
 ### 20230526
 * *编程* 新增 [kotlin](../coding/kotlin.md)
 ### 20230518
@@ -135,7 +145,7 @@ headerDepth: 1
 * 全局优化排版与语言逻辑
 * 新增[Potplayer 设置](../articles/potplayer_setting.md)页面
 ### 20230112
-* 初级科学上网更新，新增性价比机场两位
+* [初级科学上网](../articles/vpn.md)更新，新增性价比机场两位
 ### 20230104
 * [读书](../hobbies/books.md)新增部分书评
 * 新增 xxx_interval 图表
@@ -155,8 +165,6 @@ headerDepth: 1
 * [OSU](../hobbies/rhythm_games.md#osu)新增键数求和统计
 ### 20221219
 * 完结[学习笔记-复变函数与积分变换](./learning/complex_functions.md) （考完试了
-### 20221218
-* 更新[学习笔记-复变函数与积分变换](./learning/complex_functions.md)
 ### 20221215
 * 压缩所有站内图片。
 * 新增[闲聊-家与学校生活环境对比](../gossip/compare_home_to_college.md)
@@ -165,11 +173,11 @@ headerDepth: 1
 ### 20221130
 * 维护[网址汇总](./recommend_websites.md)
 ### 20221129
-* 更新*初级科学上网* 页面并更改排版
+* 更新 [初级科学上网](../articles/vpn.md) 并更改排版
 * 维护*我的回忆录-大二*
 * 小维护：[关于作者](../gossip/author.md)及其子页面、[编程-Git](../coding/Git.md)页面
 ### 20221125
-* 移动 *爱好-CSGO* 页面至 [其他游戏#CSGO](../hobbies/other_games.md#csgo)
+* 移动 *爱好-CSGO* 页面至 其他游戏#CSGO （已撤销更改）
 * 新增[对xxx的希望#对推荐算法的希望](../gossip/hope.md#对推荐算法的希望)
 * 新增[软件汇总#为什么你们就是不能加个空格呢？](./recommend_packages.md#为什么你们就是不能加个空格呢？)
 ### 20221120
@@ -178,8 +186,6 @@ headerDepth: 1
 * 新增[Rust-输入](../coding/Rust.md#输入)
 ### 20221115
 * 归类并新增[python页面](../coding/python.md)中条目
-### 20221114
-* 维护大量[学习笔记](./learning/)
 ### 20221113
 * 新增[学习笔记-复变函数与积分变换](./learning/complex_functions.md)
 ### 20221105
@@ -190,7 +196,7 @@ headerDepth: 1
 * 新增[闲聊-对算法竞赛 & OJ contest的希望](../gossip/hope.md#对算法竞赛-oj-contest的希望)页面（已合并）
 * 在软件汇总页面中，将Via更换为[m浏览器](./recommend_packages.md#m浏览器)
 ### 20221020
-* 更新我的文章-初级科学上网页面
+* 更新[我的文章-初级科学上网](../articles/vpn.md)页面
 ### 20221016
 * 新增[闲聊-如何看待xxx](../gossip/consider.md)
 ### 20221003
@@ -204,7 +210,7 @@ headerDepth: 1
 * 新增[校内专栏#校内极限生存](./college.md#校内极限生存)
 ### 20220921
 * 新增[C++#在vscode中配置环境](../coding/Cpp.md#配置_vscode_环境)
-* 新增 csgo#常用指令（现已移动到[其他游戏-csgo#常用指令](../hobbies/other_games.md#常用指令)）
+* 新增 csgo#常用指令
 ### 20220915
 * 维护[网址汇总](./recommend_websites.md)页面，新增大量条目，更改排版
 ### 20220911
@@ -263,12 +269,12 @@ headerDepth: 1
 * 新增 游戏-galgame#游戏优点（已合并到 #说两句）
 ### 20220729
 * 改为使用图床存放图片(images分支)
-* 新增 [游戏-其他游戏#明日方舟](../hobbies/other_games.md#明日方舟)，文章#Windows端记录软件使用时长（迁移至[文章 - 记录软件使用时长](../articles/time_record.md#windows端记录软件使用时长)）
+* 新增 [游戏-明日方舟](../hobbies/other_games/arknights.md)，文章#Windows端记录软件使用时长（迁移至[文章 - 记录软件使用时长](../articles/time_record.md#windows端记录软件使用时长)）
 * 维护 [VuePress2与博客心得](../gossip/withvuepress2.md)
 ### 20220726
 * 新增 [galgame#吐槽一下](../hobbies/galgame.md#吐槽一下)
 ### 20220721
-* 新增 [杂项-博客日志](#博客日志)、[游戏-其他游戏](../hobbies/other_games.md)
+* 新增 [杂项-博客日志](#博客日志)、游戏-其他游戏
 * 更改搜索插件配置
 ### 20220720
 * 添加评论插件
@@ -280,7 +286,7 @@ headerDepth: 1
 * 添加黑幕样式并实装
 * 尝试添加vue组件失败
 ### 20220713
-* 尝试添加dr-vue-echarts组件，无法使用
+* 尝试添加 dr-vue-echarts 组件，无法使用
 * 维护 [游戏-音游](../hobbies/rhythm_games.md)
 ### 20220712
 * 新增 [文章-运动轨迹记录软件横评](../articles/track_record.md)
@@ -312,7 +318,7 @@ headerDepth: 1
 ### 20220613
 * 新增 [编程-Git#高级技巧](../coding/Git.md#高级技巧)、闲聊-初级科学上网（现：隐藏）
 ### 20220611
-* 新增 [编程-C++](../coding/Cpp.md)、[闲聊#回忆录&对编程语言的希望](../gossip/hope_of_coding_language.md)
+* 新增 [编程-C++](../coding/Cpp.md)、闲聊 # 回忆录 & [对编程语言的希望](../gossip/hope.md#对编程语言的希望)（回忆录已隐藏）
 ### 20220526
 * 新增 闲聊#灵感&对美好未来社会的愿景（现：隐藏）
 ### 20220521
@@ -331,5 +337,5 @@ headerDepth: 1
 * 更新 [主页](../index.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
 ### 20220504
 * 发布博客
-* 创建 [主页](../index.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、游戏-csgo游戏配置（现已移动到[其他游戏-csgo#常用指令](../hobbies/other_games.md#常用指令)）
+* 创建 [主页](../index.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、游戏 - 其他游戏 - csgo游戏配置
 * 添加搜索插件

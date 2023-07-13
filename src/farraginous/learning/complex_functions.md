@@ -1,7 +1,10 @@
 ---
 sidebar: heading
+date: 2022-11-13
+category:
+    - 学习
 tag:
-  - 学习
+  - 数学
 ---
 # 复变函数与积分变换
 ## 基础计算

@@ -1,3 +1,9 @@
+---
+date: 2023-01-14
+icon: comment
+category:
+    - 导航
+---
 # 闲聊
 请选择你想进入的闲聊板块。
 1. [关于作者](./author.md)

@@ -1,3 +1,11 @@
+---
+date: 2022-05-04
+icon: python
+category:
+    - 编程
+tag:
+    - 编程语言
+---
 # Python
 和[C++](./Cpp.md)页面一样杂乱，想到什么写什么。
 ## 开发准备（vscode）

@@ -1,3 +1,9 @@
+---
+date: 2023-04-01
+icon: discover
+category:
+    - 爱好
+---
 # 其他游戏
 ## 电子游戏
 1. [CS:GO](./csgo.md)

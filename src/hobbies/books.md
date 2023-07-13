@@ -1,5 +1,11 @@
 ---
 sidebar: heading
+icon: read
+date: 2022-07-01
+category:
+    - 爱好
+tag:
+    - 阅读
 ---
 # 读书
 <span class="subtitle">缅怀过去是老了的证明。但我必需直面这~~羞耻~~的过去。</span>

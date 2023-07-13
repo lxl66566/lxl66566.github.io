@@ -1,5 +1,8 @@
 ---
 sidebar: heading
+date: 2022-05-26
+category:
+    - 作者
 ---
 # 灵感
 ## 游戏灵感

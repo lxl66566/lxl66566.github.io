@@ -5,13 +5,14 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   pure: true,
   hostname: "https://mister-hope.github.io",
-  // iconAssets: "fontawesome-with-brands",
+  iconAssets: "iconfont",
   logo: "/logo.jpg",
-  repo: "https://github.com/lxl66566",
+  repo: "https://github.com/lxl66566/lxl66566.github.io",
   docsDir: "src",
   navbar,
   sidebar,
   editLink: false,
+  contributors: false,
   encrypt: {
     config: {
       "/articles/vpn.html": ["2003"],
@@ -19,9 +20,19 @@ export default hopeTheme({
       "/gossip/wish.html": ["2003"],
     },
   },
+  blog: {
+    name: "绝对值_x",
+    intro: "/gossip/author.html",
+    medias: {
+      GitHub: "https://github.com/lxl66566",
+      Telegram: "https://t.me/ab5_x",
+      Bilibili: "https://space.bilibili.com/346365047",
+    },
+    articlePerPage: 1,
+    articleInfo: ["Date", "Category", "PageView", "Tag", "ReadingTime"],
+  },
   plugins: {
     blog: true,
-
     comment: {
       provider: "Giscus",
       repo: "lxl66566/lxl66566.github.io",
@@ -42,6 +53,8 @@ export default hopeTheme({
       mathjax: true,
       mark: true,
       footnote: true,
+      tabs: true,
+      tasklist: true,
       stylize: [
         {
           matcher: "Recommended",
@@ -55,7 +68,6 @@ export default hopeTheme({
           },
         },
       ],
-      tabs: true,
     },
   },
 });

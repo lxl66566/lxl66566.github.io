@@ -1,3 +1,12 @@
+---
+date: 2022-10-16
+icon: comment
+category:
+    - 主张
+    - 评价
+tag:
+    - 希望
+---
 # 如何看待xxx
 ::: tip
 本页不包含涉政内容

@@ -1,3 +1,11 @@
+---
+date: 2023-03-17
+icon: java
+category:
+    - 编程
+tag:
+    - 编程语言
+---
 # Java
 由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。
 

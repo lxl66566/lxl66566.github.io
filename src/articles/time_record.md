@@ -1,3 +1,12 @@
+---
+date: 2022-07-08
+icon: timer
+category:
+    - 推荐
+    - 评价
+tag:
+    - 移动端
+---
 # 记录软件使用时长
 ## Windows端记录软件使用时长
 我从20220428开始使用[Tai](../farraginous/recommend_packages.md#tai)记录Windows下的应用时长。直到在20220729了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。在此将比较它俩的一些特性。

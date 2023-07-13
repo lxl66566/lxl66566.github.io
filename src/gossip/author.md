@@ -1,5 +1,9 @@
 ---
 sidebar: heading
+icon: profile
+date: 2022-05-04
+category:
+    - 作者
 ---
 # 关于作者
 <div class="subtitle">——不要迷失了真实的我。</div>
@@ -23,7 +27,7 @@ sidebar: heading
 * 为什么会成为意义党？ *关联[被害妄想](../hide/personal_details.md#深层性格)，[意义道](../articles/worldview.md#意义道)*
     * 幻想自己死掉以后的种种。世界仍然在行进，我却没有意识感受这一切。这会让我感到恐惧。人生长则百年，短则随时都可能死亡。我需要做一些有意义的事来对抗幻想中的虚无。
 * 为什么 *非纯粹* ？
-    * 自控力差。明知道某些游戏没有任何意义，却还是忍不住玩下去。这与意义党的理念相悖。~~（虽然也有[戒游戏成功的例子](../hobbies/other_games.md#csgo)，但大体上还是摇摆不定的）~~
+    * 自控力差。明知道某些游戏没有任何意义，却还是忍不住玩下去。这与意义党的理念相悖。~~（虽然也有戒游戏成功的例子[^3]，但大体上还是摇摆不定的）~~
 * 如何理解 *绝对理性* ？
     * 一切都是相对的。*绝对* 只是我自认为我的理性的程度副词。
     * *关联：健忘者（比如，如果你让我填`我永远喜欢________`，那我只能说我写不出来。她们在我的记忆中，随感性一起渐渐散去）*
@@ -51,6 +55,7 @@ sidebar: heading
     * 由*剧情党*，不对特定角色投入过多感情。
 
 [^1]: [特定范围内的二次元文化](../hobbies/anime.md)
+[^3]: 成功戒掉了 [csgo](../hobbies/other_games/csgo.md)
 ## 生存意义
 <span class="heimu" title="你知道的太多了">活着就是为了________</span>
 
@@ -77,10 +82,10 @@ sidebar: heading
 * [番剧](../hobbies/anime.md)
 * 王者荣耀
 * [我的世界](../hobbies/Minecraft.md)（小游戏服: hypixel,Domcer；生存服：秋月之光 <1.9，cic 1.16服）
-* [明日方舟](../hobbies/other_games.md#明日方舟)
+* [明日方舟](../hobbies/other_games/arknights.md)
 * 东方：东方绀珠传(99%) / 东方永夜抄(1%)，注重游戏性而非剧情
 * 跑团
-* [CS:GO](../hobbies/other_games.md#csgo)
+* [CS:GO](../hobbies/other_games/csgo.md)
 * 黎明杀机
 ### 现在主要在玩
 * [纯剧情 galgame](../hobbies/galgame.md)
