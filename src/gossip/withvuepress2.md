@@ -16,6 +16,10 @@ category:
 20230712 由于依赖地狱把 node_modules 给崩了，重装，回档也救不回来。破罐子破摔，试了下 VuePress Theme Hope[^1] 主题，然后发现异常好用。。该主题自带合适的评论插件，搜索增强插件，[Markdown 增强](https://plugin-md-enhance.vuejs.press/zh/) 插件，应有尽有。如果一开始就用此主题，定然能解决下述大部分的问题。
 [^1]: [VuePress Theme Hope 官网](https://theme-hope.vuejs.press/zh/)
 
+我写博客并在朋友间分享这件事也带动了朋友们写博客——一个朋友[^3]用的 vuepress 默认主题，另一个[^4]用的 hexo。
+[^3]: [dream_oyh 的 blog](https://dream-oyh.github.io/)
+[^4]: [Lilic 的博客](https://lilic2233.github.io/)
+
 后来在开发过程中还遇到了亿些问题——
 :::warning
 以下问题不具有时效性，请自行判断

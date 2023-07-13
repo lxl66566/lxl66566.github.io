@@ -1,5 +1,5 @@
 git add -A
 # git commit -m $(date "+%Y%m%d-%H:%M:%S")
-git commit -m "文章添加创建日期，分类，标签；添加无障碍图标；移除 Broken links"
+git commit -m "维护家与学校对比，优化首页，日常维护"
 git push origin code
 exit

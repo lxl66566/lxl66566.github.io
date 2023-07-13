@@ -17,6 +17,7 @@ tag:
 * [1paragraph](https://1paragraph.app/) | [EPUB Reader](https://epub-reader.online/)：在线网页EPUB阅读器
 * [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
 * [代码高亮](https://romannurik.github.io/SlidesCodeHighlighter/)
+* [PageSpeed Insights](https://pagespeed.web.dev/)：测试静态网站的性能
 <!-- * [免费盐选](https://mfyx.top/)：免费看知乎盐选 -->
 ### 合集类
 * [即时工具](https://www.67tool.com/)：致力打造安全、快捷、好用的在线工具箱~

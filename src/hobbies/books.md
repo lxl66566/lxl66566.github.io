@@ -13,6 +13,12 @@ tag:
 我自小就爱读书。小学爱看杂志 *（特别是《我们爱科学》）* 和其他故事书，初中时爱看玄幻小说，而高中主要看图书馆/图书角有的书（什么都看）。但是自上大学来，对**非学术类的**书的兴趣越来越小了。<span class="heimu" title="你知道的太多了">事实上学术类的也大抵如此</span> 此处仅列举记得起的部分，当作缅怀我的青春了。同时也承担记录当下未来读书记录的任务。
 
 或许现在的我已经记不清我读过哪些书，记不清书中的故事情节，但我曾经读的书绝非没有价值。阅读量的增加能提高信息获取速度，减少时间消耗，在垃圾视频的海洋中保全自身，同时也帮助了思考，帮助形成自己的世界观价值观而不是被灌输的其他货色。现在的我对以前的我表示感激。
+## 工具
+我曾不得不读纸质书，但我更喜欢读电子书。
+* pdf 格式的书（多为学术类），我使用 *云记* 阅读，可以在上面做笔记，划重点。
+* 网络小说我曾喜欢使用[永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，现在则使用[开源阅读](https://github.com/gedoor/legado)+[全书源](https://legado.aoaostar.com/)。但是很遗憾，仍有很多小说无法找到。[^1]
+
+[^1]: [吐槽一下](../essay.md#20230713)
 ## 网络小说
 我~~曾经~~很爱看网络小说，主要类别有玄幻，爽文，日轻。此处列举出有记录的部分。（大概算是大学&高中部分，更早的基本上都记不住了）
 
@@ -82,7 +88,7 @@ tag:
 |天火大道|<2018.07.21|
 |诛仙|2018.07.21?|
 |傲剑凌云|?|
-|九荒天帝 <Badge text="二刷" />|?||可惜的烂尾作，文风很好。|
+|九荒天帝 <Badge text="二刷" /><Badge type="danger" text="停更" />|?||可惜的烂尾作，文风很好。|
 
 ### 无记录
 * 戮仙（初中，后期，半纸质半电子）
@@ -262,6 +268,8 @@ tag:
 * 《技术大全》[波兰] 斯坦尼斯瓦夫·莱姆，超竞技游戏，太阳的距离，妖刀记，道诡异仙；
 
 这是有了 blog 以后加的，不一定看，但可以在书荒时指明一个方向。
-* （万族之劫上、下作）：全球高武，星门。
+* 全球高武，星门（万族之劫上、下作）；
+* 就算没有外挂，也要在末日活下去
+* [大学刑法课](http://www.zhihuxs.com/zhxs.asp?id=7959667)
 
-* <div class="image40" style="text-align: center;"><img alt="开始界面" src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f8376fe99e6c4bfa82dd01551c98bbfd~tplv-obj:1080:1925.image?from=post&x-expires=1682524800&x-signature=CjGGz8%2FoXM9JQaDlbTF%2BpRtHXWA%3D" /></div>
+<!-- * <div class="image40" style="text-align: center;"><img alt="开始界面" src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f8376fe99e6c4bfa82dd01551c98bbfd~tplv-obj:1080:1925.image?from=post&x-expires=1682524800&x-signature=CjGGz8%2FoXM9JQaDlbTF%2BpRtHXWA%3D" /></div> -->

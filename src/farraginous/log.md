@@ -21,6 +21,7 @@ tag:
 * 为文章添加创建日期，分类，标签
 * navbar, sidebar 添加无障碍图标
 * 移除 Broken links
+* 维护首页
 ### 20230712
 * **更换主题：[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)，并使用其提供的全文搜索，加密，Markdown 增强，评论功能**
 * *VuePress2与博客心得* 新增 [# 更换主题](../gossip/withvuepress2.md#更换主题)
