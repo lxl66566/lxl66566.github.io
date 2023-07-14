@@ -18,7 +18,7 @@ tag:
 :::
 ## 2023
 ### 20230714
-* [UNO 扩展规则](../hobbies/other_games/uno.md) 更新至 5.2.0，优化页面阅读体验
+* [UNO 扩展规则](../hobbies/other_games/uno.md) 更新至 5.2.1，优化页面阅读体验
 ### 20230713
 * 为文章添加创建日期，分类，标签
 * navbar, sidebar 添加无障碍图标

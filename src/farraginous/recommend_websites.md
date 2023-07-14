@@ -97,6 +97,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
     * SVG：[SVG在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/)
     * 各种图表：[Mermaid](https://mermaid.live/edit)
 * [WaifuLabs](https://waifulabs.com/)：用AI生成你的二次元头像！
+* [Sekai Stickers](https://st.ayaka.one/)：生成 pjsk 吊图
 ### 视频相关
 * [Media.io](https://www.media.io/)：一键添加字幕，视频处理
 * [片头制作](https://panzoid.com/)
