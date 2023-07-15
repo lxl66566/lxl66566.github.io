@@ -22,9 +22,10 @@ tag:
 
 root / magisk 推荐请跳转[设置手机 - magisk](../articles/mobile_setting.md#magisk)
 ### 永久阅读器
-内置书源的小说阅读器。阅读界面无广告，开屏有广告。（注：相当一部分日轻无可用书源）
+推荐使用 [开源阅读](../hobbies/books.md#工具)。
+<details><summary>archived</summary><p>
+内置书源的小说阅读器。阅读界面无广告，开屏有广告。（注：相当一部分日轻无可用书源）[私有下载地址](https://wwp.lanzout.com/iLG4D03de8fe)</p></details>
 
-[私有下载地址](https://wwp.lanzout.com/iLG4D03de8fe)
 ### ZArchiver
 Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 ::: warning 警告

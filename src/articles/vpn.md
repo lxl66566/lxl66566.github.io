@@ -47,8 +47,7 @@ tips：加速前需事先选择能通过连接测试的节点
 
 此处列出部分机场性价比及其变化情况。数字代表**每1元RMB买到的GB数**<Badge type="tip" text="合理价格" />。免费机场不包括在图表中。
 
-<iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280"></iframe>
-<!-- <iframe frameborder="no" src="/charts/animation.html?src=GBperprice" width="100%" height="280"></iframe> -->
+<iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280" loading="lazy"></iframe>
 
 :::warning
 每一次付费都请告诫自己机场跑路的可能性。同时，**性价比与稳定性不可兼得。**

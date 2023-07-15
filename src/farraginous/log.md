@@ -17,6 +17,11 @@ tag:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230715
+* 为图表添加 `loading="lazy"`
+* 再刷机一次，[设置手机](../articles/mobile_setting.md) 新增内容
+* 音游新增 [pjsk](../hobbies/rhythm_games.md#pjsk)
+* [灭蟑记（六）](../essay.md#_20230715)
 ### 20230714
 * [UNO 扩展规则](../hobbies/other_games/uno.md) 更新至 5.2.1，优化页面阅读体验
 ### 20230713
@@ -42,7 +47,7 @@ tag:
 * 维护回忆录
 ### 20230617
 * 新增 [学习笔记 - 日本語勉強](./learning/japanese.md)
-* 合并 *禁用快应用中心* 到 [设置手机](../articles/mobile_setting.md#禁用快应用中心)
+* 合并 *禁用快应用中心* 到 [设置手机 - 禁用软件](../articles/mobile_setting.md#禁用禁用软件)
 ### 20230615
 * 新增 [闲聊 - 绷不住了](../gossip/memes.md)
 ### 20230614

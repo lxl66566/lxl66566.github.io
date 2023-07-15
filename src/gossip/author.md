@@ -68,7 +68,7 @@ category:
 | 体验生活  | 10 |
 | 挑战自身  | 3 | -->
 
-<iframe frameborder="no" src="/charts/sense_persentage_of_my_life.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/sense_persentage_of_my_life.html" width="100%" height="280" loading="lazy"></iframe>
 
 也不妨看看[道论](../articles/worldview.md)。
 ## 我的爱好

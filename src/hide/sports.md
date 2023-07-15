@@ -11,7 +11,7 @@ category:
 A. 延长寿命；应对危机；减少死亡概率。
 ## 以次数记
 
-<iframe frameborder="no" src="/charts/sports_times.html" width="100%" height="304"></iframe>
+<iframe frameborder="no" src="/charts/sports_times.html" width="100%" height="304" loading="lazy"></iframe>
 
 注：此处为等效计算表
 ```js
@@ -26,13 +26,13 @@ const 半俯冲轰炸机 = 1.3,
 
 单位：米
 
-<iframe frameborder="no" src="/charts/sports_distance.html" width="100%" height="304"></iframe>
+<iframe frameborder="no" src="/charts/sports_distance.html" width="100%" height="304" loading="lazy"></iframe>
 
 ## 以时间记
 
 单位：分钟
 
-<iframe frameborder="no" src="/charts/sports_time.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/sports_time.html" width="100%" height="280" loading="lazy"></iframe>
 
 ## 关于游泳
 由于肺活量限制，最擅长50-100m内的蛙泳。

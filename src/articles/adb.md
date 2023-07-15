@@ -34,3 +34,15 @@ adb shell pm uninstall -k --user 0 <package name>   # 卸载包
 adb shell pm disable-user <package name>    # 禁用包
 adb reboot fastboot # 重启至 fastboot
 ```
+## 刷机指令
+由于 fastboot 同属于 platform tools，因此也归入 ADB 指令。
+```sh
+adb reboot  # 普通重启，= fastboot reboot
+adb reboot bootloader   # 重启至 fastboot
+fastboot flash boot xxx.img # 刷入 ROM
+```
+## 其他指令
+```sh
+adb shell getprop ro.product.name   # 查看设备代号，或 fastboot getvar product
+adb shell am startservice <package name>    # 启动服务
+```

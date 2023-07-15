@@ -90,4 +90,4 @@ while(alive)
 ## xx_interval
 无题。
 
-<iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300"></iframe>
+<iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300" loading="lazy"></iframe>

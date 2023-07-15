@@ -48,7 +48,7 @@ tag:
 
 **游玩时长变化情况：**
 
-<iframe frameborder="no" src="/charts/rhythm_games_time_percentage.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/rhythm_games_time_percentage.html" width="100%" height="280" loading="lazy"></iframe>
 
 ## 观点
 * OSU 敲键盘的快感是敲平板无法带来的：平板用力会敲坏，而且越级空有力气还不一定能敲到键上。而 OSU 很适合发泄情绪。x
@@ -64,31 +64,31 @@ tag:
 
 * 我的 o!m 健身按键数 ~~（众所周知osu是健身游戏）~~
 
-<iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="300"></iframe>
+<iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="300" loading="lazy"></iframe>
 
 * 叠（Jack）：β, ex-4
 
-<iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280"></iframe>
-<iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280" loading="lazy"></iframe>
+<iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280" loading="lazy"></iframe>
 
 * 技（Tech）：β, ex-3
     * 本人最擅长技。尤其是偏叠的技。
 
-<iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280"></iframe>
-<iframe frameborder="no" src="/charts/malody_tech.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280" loading="lazy"></iframe>
+<iframe frameborder="no" src="/charts/malody_tech.html" width="100%" height="280" loading="lazy"></iframe>
 
 * 乱（Speed）：10, ex-2
     * 严重偏科。
 
-<iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280"></iframe>
-<iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/reform_speed.html" width="100%" height="280" loading="lazy"></iframe>
+<iframe frameborder="no" src="/charts/malody_speed.html" width="100%" height="280" loading="lazy"></iframe>
 
 * 切（Stamina / Stream）：β, ex-4
     * 耐力是限制切力的最重要因素。耐力不稳定，因此成绩不稳定。
     * 非常痛恨无休切。Malody v3 段打得挺好，但 reform 段极为下手。（α 无休切，β 有个大乱，都不会打）
 
-<iframe frameborder="no" src="/charts/reform_stamina.html" width="100%" height="280"></iframe>
-<iframe frameborder="no" src="/charts/malody_stream.html" width="100%" height="280"></iframe>
+<iframe frameborder="no" src="/charts/reform_stamina.html" width="100%" height="280" loading="lazy"></iframe>
+<iframe frameborder="no" src="/charts/malody_stream.html" width="100%" height="280" loading="lazy"></iframe>
 
 :::details 一些解释说明
 * 上为 reform 段位，下为 malody v3 段位；MR 等特殊 MOD 不显示。
@@ -215,7 +215,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 [这里（Phigros 2.4.1）](https://github.com/lxl66566/my-key-data/releases/tag/backup)是我的用户数据，data充足，AT全解锁，有需要可以自取。
 
-> 然而现在有在线存档了. ..而且能否下载到老版本也是个问题。
+> 然而现在有在线存档了. ..而且能否下载到老版本也是个问题。而且现在好像无法通过此方式备份了。
 ### 最好成绩
 15.9 all perfect
 
@@ -248,3 +248,15 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 Sheriruth 10.1 pure memory
 
 ![Sheriruth 10.1 pure memory](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/arcaea_best.jpg)
+## pjsk
+20230715，我为我的 mipad5 解 bl 锁。由于需要清空数据，我复制出了我的引き継ぎ码并发给了我的 telegram 收藏夹。
+
+机也刷完了，pjsk 也下回来了，我去 tg 找我的码时，震惊地发现——它没了。或许是梯子问题没发出去，或许是我误删了，反正它没了。
+
+众所周知 tg 收藏夹无法恢复，而我好久没打 pjsk 了，账号信息基本上不记得。。因此没有任何一丝可能性能救回我的账号。里面有想抽 *朝比奈まふゆ* 的 100 抽。这已经是我第二次丢失 pjsk 账号了。
+
+<div style="text-align: center; ">
+<img alt="有人丢了引き継ぎ 我不说是谁" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/sbgaaru.png"  width="40%" height="40%">
+</div>
+
+本人于 20230715 退坑 pjsk。
