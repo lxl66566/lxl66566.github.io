@@ -16,7 +16,7 @@ tag:
 ## 工具
 我曾不得不读纸质书，但我更喜欢读电子书。
 * pdf 格式的书（多为学术类），我使用 *云记* 阅读，可以在上面做笔记，划重点。
-* 网络小说我曾喜欢使用[永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，现在则使用[开源阅读](https://github.com/gedoor/legado)+[全书源](https://legado.aoaostar.com/)。但是很遗憾，仍有很多小说无法找到。[^1]
+* 网络小说我曾喜欢使用[永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，现在则使用[开源阅读](../farraginous/recommend_packages.md#开源阅读)。但是很遗憾，仍有很多小说无法找到。[^1]
 
 [^1]: [吐槽一下](../essay.md#20230713)
 ## 网络小说

@@ -147,7 +147,7 @@ tag:
 | :----: | :----: |
 |近月少女的礼仪|-38min|
 |アンレス テルミナリア|+2h20min|
-|Summer Pockets Reflection Blue|-8min|
+|Summer Pockets Reflection Blue|-9min|
 
 ## 我计划玩
 仅列出一部分，排名不分先后。

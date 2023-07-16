@@ -4,6 +4,7 @@ icon: mobile
 category:
     - 教程
     - 生活
+    - 经历
 tag:
     - 移动端
 ---
@@ -58,28 +59,6 @@ tag:
 所以刷欧版是一件非常冒险的事：在只使用初级工具前提下[^1]，这一步没有后悔药，没法再刷回其他系统[^2]。
 [^1]: 指 miflash + adb。我有考虑过使用[磁盘模式工具](https://web.vip.miui.com/page/info/mio/mio/detail?postId=1655550)甚至更底层的方法，但是尚未有收入的我还是无法承担飙升的刷砖风险。
 [^2]: 暂不清楚是只是 *无法刷回国行* 还是 *无法刷成其他任一系统*。推测是刷 EU 的分区(?)更改比国行的多，导致刷回国行时未对额外分区进行更改。
-### 一些问题
-#### 线刷 global 失败
-已经注释了 `Missmatching image and device` 验证，跳过了 crclist & sparsecrclis 认证，最后还是卡在了 `error: Writing 'xbl' FAILED (remote:'This partition doesn't exist')` 上。。网上说 xbl error 是没解 bl 锁，但我这个显然是找不到分区。
-
-下了两个 global (sweet)，都需要 `xbl` 分区，都没法用。然后放弃了。
-#### 刷入 twrp 失败
-在 fastboot 下执行 `fastboot flash recovery twrp.img`，报错：`Writing 'recovery'   FAILED (remote: 'This partition doesn't exist')`。
-
-网上看了一下，这个型号是 A/B 分区的，并没有 recovery 分区。执行 `fastboot boot twrp.img`（不刷入，直接启动），报错 `Booting   FAILED (Status read failed (Too many links))`。然后能试的方法都试过了，使用 USB2.0，改注册表驱动，使用最新的 platform-tools，使用舍友的电脑，把 twrp 换用 OrangeFox...都无法解决此问题。
-
-之后的刷 mipad5 我也去网上找了带有 twrp 的 boot.img，但都是不可用的。
-#### 误炸 boot
-> 此事件也直接导致了我屏蔽 csdn
-
-弱智 csdn 给了一个把 twrp 镜像刷入 boot 的脑残方法（那是刷 recovery 的）。。于是 boot 损坏，手机无限重启。
-
-解法：下载个官方 ROM 解压，找到 `boot.img` 刷入 `fastboot flash boot boot.img` 就行了。
-
-我第一次搞，以为要刷砖了比较慌，直接用 miflash 把整个原生 ROM 都刷进去了。。（最后还刷失败了，还是无限重启，miflash 你不得好死）
-
-> 再吐槽一下 [bandizip](../farraginous/recommend_packages.md#bandizip)，解压 `*.tgz` 时默认一层一层解（`*.tgz` -> `*.tar` -> `*`）。。一个 10G 的包硬生生给我占了 26G 的空间。<br/>
-> <div class="image50" style="text-align: center; "><img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/mobile_setting/fuckbandizip.png" /><div>你为什么不开？你为什么不开？</div></div>
 ## magisk
 假定已经完全安装好了 magisk（参见[刷机](#刷机)）。以下是我的配置步骤。
 1. 隐藏：*首页右上角 - 设置 - App - 隐藏*
@@ -89,7 +68,7 @@ tag:
 * LSPosed
 * [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)：隐藏 root。
 * [uperf](https://github.com/yc9559/uperf)：性能调度。我设为 powersave 模式。
-* 神仙自动救砖（**闭源**）
+* [神仙自动救砖](https://drive.google.com/file/d/14yctRZDZRrN-PaNsnnRn6d9uzbnMYglo/view?usp=sharing)（**闭源！**）：不好找，做了个私链备份（需要科学上网）
 <!-- * [电池容量纠正](https://downloads.suchenqaq.club/magiskmodules/tool/%E7%94%B5%E9%87%8F%E4%BF%AE%E5%A4%8D.zip)（**闭源**） -->
 ### LSPosed modules
 * WeXposed
@@ -140,8 +119,29 @@ tag:
 3. 禁用包：`adb shell pm disable-user com.miui.hybrid`，也可以直接卸载，详情参考 [ADB](./adb.md)
 
 以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。
-### 遇到的问题
-#### 乱冻结
+## 遇到的问题
+### 线刷 global 失败
+已经注释了 `Missmatching image and device` 验证，跳过了 crclist & sparsecrclis 认证，最后还是卡在了 `error: Writing 'xbl' FAILED (remote:'This partition doesn't exist')` 上。。网上说 xbl error 是没解 bl 锁，但我这个显然是找不到分区。
+
+下了两个 global (sweet)，都需要 `xbl` 分区，都没法用。然后放弃了。
+### 刷入 twrp 失败
+在 fastboot 下执行 `fastboot flash recovery twrp.img`，报错：`Writing 'recovery'   FAILED (remote: 'This partition doesn't exist')`。
+
+网上看了一下，这个型号是 A/B 分区的，并没有 recovery 分区。执行 `fastboot boot twrp.img`（不刷入，直接启动），报错 `Booting   FAILED (Status read failed (Too many links))`。然后能试的方法都试过了，使用 USB2.0，改注册表驱动，使用最新的 platform-tools，使用舍友的电脑，把 twrp 换用 OrangeFox...都无法解决此问题。
+
+之后的刷 mipad5 我也去网上找了带有 twrp 的 boot.img，但都是不可用的。
+### 误炸 boot
+> 此事件也直接导致了我屏蔽 csdn
+
+弱智 csdn 给了一个把 twrp 镜像刷入 boot 的脑残方法（那是刷 recovery 的）。。于是 boot 损坏，手机无限重启。
+
+解法：下载个官方 ROM 解压，找到 `boot.img` 刷入 `fastboot flash boot boot.img` 就行了。
+
+我第一次搞，以为要刷砖了比较慌，直接用 miflash 把整个原生 ROM 都刷进去了。。（最后还刷失败了，还是无限重启，miflash 你不得好死）
+
+> 再吐槽一下 [bandizip](../farraginous/recommend_packages.md#bandizip)，解压 `*.tgz` 时默认一层一层解（`*.tgz` -> `*.tar` -> `*`）。。一个 10G 的包硬生生给我占了 26G 的空间。<br/>
+> <div class="image50" style="text-align: center; "><img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/mobile_setting/fuckbandizip.png" /><div>你为什么不开？你为什么不开？</div></div>
+### 乱冻结
 在刷了 EU 版 MIUI 后，使用 App Manager 冻结了 `媒体存储设备`(`com.google.android.providers.media.module`)，导致 App Manager 闪退；无法访问 sdcard。随之发生壁纸变黑，帧率暴降，VPN 自动断连等现象。<span class="heimu" title="你知道的太多了">对于 app 来说，大概就像是末世吧。</span>
 
 信息：
@@ -157,4 +157,13 @@ tag:
     3. `pm unsuspend com.google.android.providers.media.module`
     4. 三步开启权限后，退出 shell，重启，静·候·佳·音。
 
-然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装。刚好我对 EU 挺失望的，直接装回原国行系统。（甚至还[失败了](#mipad-5)）
+然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装。刚好我对 EU 挺失望的，想直接装回原国行系统，甚至还[失败了](#mipad-5)。
+
+这个故事告诉我：root 后记得先刷救砖模块。
+### ANDROID_PRODUCT_OUT not set
+`fastboot flash` 刷入分区时报错：
+> fastboot: error: ANDROID_PRODUCT_OUT not set
+
+此时需要检查当前终端路径，是否包含你的 `.img` 文件。
+### 找不到 LSPosed 图标
+解法：`adb shell`，`su` 提权后，输入 `am start "intent:#Intent;action=android.intent.action.MAIN;category=org.lsposed.manager.LAUNCH_MANAGER;package=com.android.shell;component=com.android.shell/.BugreportWarningActivity;end"` 即可启动。（[source](https://www.bilibili.com/video/BV1UR4y1V7Ry/)）

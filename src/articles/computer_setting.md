@@ -21,20 +21,23 @@ tag:
 1. 移动 *文档、图片、下载* 等文件夹到新分区的D盘。
 2. 还原右键菜单并设置：右击 *开始键*，打开 *Windows终端（管理员）* ，执行`reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
 3. 关闭所有系统提示音。
-4. 关闭 Windows 安全中心，[参考文章](https://zhuanlan.zhihu.com/p/494923217)：
-    * *Windows安全中心-病毒和威胁防护-管理设置* ，关闭所有开关
-    * 使用组策略编辑器禁用 Windows Defender
-        * `win + r`运行`gpedit.msc`，*计算机配置-管理模板-Windows 组件-关闭Microsoft Defender防病毒* ，选择已启用
-        * 由于我的电脑是家庭版升专业版，没有 `gpedit.msc` 文件，因此需先添加组策略编辑器。
-        * 在记事本输入以下代码并保存为 .bat 文件，管理员运行。
-        ```batch
-        pushd "%~dp0"
-        dir /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >gp.txt
-        dir /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>gp.txt
-        for /f %%i in ('findstr /i . gp.txt 2^>nul') do dism /online /norestart /add-package:"%systemroot%\servicing\Packages\%%i"
-        pause
-        ```
-    * 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
+4. 关闭 Windows 安全中心。[为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419)[^1]
+    * 法一（推荐）：[Defender Remover](https://github.com/jbara2002/windows-defender-remover)
+    * 法二（[source](https://zhuanlan.zhihu.com/p/494923217)，但实测并不能完全关闭）：
+        * *Windows安全中心-病毒和威胁防护-管理设置* ，关闭所有开关
+        * 使用组策略编辑器禁用 Windows Defender
+            * `win + r`运行`gpedit.msc`，*计算机配置-管理模板-Windows 组件-关闭Microsoft Defender防病毒* ，选择已启用
+            * 由于我的电脑是家庭版升专业版，没有 `gpedit.msc` 文件，因此需先添加组策略编辑器。
+            * 在记事本输入以下代码并保存为 .bat 文件，管理员运行。
+            ```batch
+            pushd "%~dp0"
+            dir /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum >gp.txt
+            dir /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum >>gp.txt
+            for /f %%i in ('findstr /i . gp.txt 2^>nul') do dism /online /norestart /add-package:"%systemroot%\servicing\Packages\%%i"
+            pause
+            ```
+        * 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
+[^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 5. 关闭搜索推荐&热门新闻：关闭 *设置-隐私和安全性-搜索权限-更多设置-显示搜索要点* 。（参考[来源](https://www.landiannews.com/archives/95045.html)
 6. 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级win11专业版并激活。
 7. 开启Hyper-V功能 <Badge type="tip" text="前置条件：6." />：由于在 *设置-应用-可选功能-更多Windows功能* 中找不到Hyper-V选项，因此采用网上教程：文本文档输入以下代码：
