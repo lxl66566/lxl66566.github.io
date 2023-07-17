@@ -39,19 +39,17 @@ tag:
     * 代表言论：`单推xxx`；
         * Oborozu 2023.06.21 23:50:35：`现在看来，始终没给rinne一个好结局`；`主要不能接受看着女儿结婚`
 ## 资源
-源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [其他网址](../farraginous/recommend_websites.md#游戏)
-
-下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft合集](https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/) | [十二神魔器](https://pan.cangshui.net/) *密码：god* 
-
-<!-- > 解压密码详见[极点ACG公告](https://lspgal.com/5702/) -->
-
-在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + [小牛云平台翻译](https://niutrans.com/)。个人认为，御坂翻译器有以下优点：
+* 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [其他网址](../farraginous/recommend_websites.md#游戏)
+* 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft合集](https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/) | [十二神魔器](https://pan.cangshui.net/) *密码：god* 
+* 模拟器推荐：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor](https://dl.ghacg.com/s/67U9)
+* 在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + [小牛云平台翻译](https://niutrans.com/)。个人认为，御坂翻译器有以下优点：
 1. 小，仅44.3MB 
 2. 开源 
 3. 社区完善，依托于 github
 
 相比之下 vnr 依赖百度贴吧，资源 BT 失效，大多使用城通网盘，真让人火大。而小牛云平台签到送字数流量，给的够多。
 > 现在无需签到就有免费额度
+<!-- > 解压密码详见[极点ACG公告](https://lspgal.com/5702/) -->
 ## 我已玩完
 ::: details 一些解释说明
 * 排序方式：完结时间降序
@@ -150,7 +148,7 @@ tag:
 |Summer Pockets Reflection Blue|-9min|
 
 ## 我计划玩
-仅列出一部分，排名不分先后。
+排名不分先后。
 
 * 三色绘恋
 * Riddle Joker

@@ -28,13 +28,15 @@ tag:
 ## AI 工具
 ### LLM
 建议先看看别人做的合集：[awesome-free-chatgpt - github](https://github.com/LiLittleCat/awesome-free-chatgpt)
+
 LLM：Large Language Models，大型语言模型。下述均为本人总结，可免费使用。
 * [BAI Chat](https://chatbot.theb.ai/)：GPT-3.5 模型。也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)。
 * [new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。坏处是被微软大削弱后，不会帮你写作业（
     * 需要使用科学上网，若自动重定向到 `(cn).bing.com` 则需要：检查代理，清除 Cookies，并在 microsoft 账户设置中关闭严格搜索。
 * [Claude](https://www.anthropic.com/product)：据说是 OpenAI 独立出来的员工创办的。无法直接使用（需要美国身份），请[通过 slack bot 使用](https://slackbot.anthropic.com/slack/install)。
 * [phind](https://www.phind.com/)：搜索编程有关问题。会给出来源。
-* [wrtn.ai](https://wrtn.ai/)：韩国网站，免费的 GPT-4，无需科学上网
+* [wrtn.ai](https://wrtn.ai/)：韩国网站，免费的 GPT-4，无需科学上网；支持画图，但新政策不支持中文，需要先翻译再使用。
+* [Bard](bard.google.com)：Google 官方提供的 LLM。目前还在 Beta。
 ## 资源搜索
 * 搜电子书：[zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
     > 2022.11.04: 绝对值x悲哀道：z-library暂时离开了我们。<br/>
@@ -49,6 +51,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ### 音乐
 * [FREE MUSIC DOWNLOAD](https://freemusicdownloads.world/en8/)
 * [音乐解锁 (v1.10.3)](https://demo.unlock-music.dev/)：移除已购音乐的加密保护。**开源，但仓库已被 github 封禁。**
+> 需要免费下载可以试试[歌词适配](./recommend_packages.md#歌词适配)（这个软件跟歌词确实没啥关系）
 ## 新闻
 **建议去[tg频道](#新闻)看新闻。**
 * [今日热榜](https://tophub.today/) *（国内热搜榜汇总*
@@ -79,10 +82,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 * [Octave Online](https://octave-online.net/)：在线 Octave 解释器。Octave 基本兼容 MATLAB 语法。
 ## 媒体创作
 * [Adobe全家桶破解](https://pity.eu.org/OD4/Adobe/)
-<details><summary>archived</summary>
-[2022](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
-</details>
-
+    * [2022](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 * [Office Tool Plus](https://otp.landian.vip/zh-cn/)
 * [极简白板](https://github.com/zserge/awfice#drawing-app---327-bytes)
 
@@ -118,7 +118,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 * [Delicious Fruit](https://delicious-fruit.com/ratings/full.php?q=ALL)：I wanna 资源
 * [Switch618公益分享](https://www.switch618.com/)：破解游戏下载站
 ## jobs
-<details><summary>点击展开</summary>
+::: details
 From: 花果山 - 大圣 的[视频](https://www.bilibili.com/video/BV1SL411C7B3)，可能能用到。。。
 
 纳瓦尔宝典作者的公司 https://www.angellist.com/
@@ -148,4 +148,4 @@ web3 招聘相关 : https://abetterweb3.notion.site/
 创业公司： https://startup.jobs/
 
 Bold Jobs: www.bolejobs.co
-</details>
+:::
