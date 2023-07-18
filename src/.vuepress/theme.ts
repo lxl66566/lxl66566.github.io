@@ -31,6 +31,11 @@ export default hopeTheme({
     articlePerPage: 1,
     articleInfo: ["Date", "Category", "PageView", "Tag", "ReadingTime"],
   },
+  navbarLayout: {
+    start: ["Brand"],
+    center: ["Links"],
+    end: ["Repo", "TelegramLink", "Outlook", "Search"],
+  },
   plugins: {
     blog: true,
     comment: {

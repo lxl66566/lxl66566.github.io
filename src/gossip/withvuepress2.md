@@ -453,5 +453,10 @@ function sidebar() {
 反正就是非常牛逼。
 
 不过还有一些问题（功能改进）没有解决：
-* 比如我想在 navbar 上加一个 telegram 的跳转链接，但是 VuePress Theme Hope 的实现是自己写 Vue 插件，看了半天看不到在哪引入的，也就只能下次再说了。
+* 比如我想在 navbar 上加一个 telegram 的跳转链接。（已解决）
 * 主页评论区寄了。明明都是 gisgus 的服务，配置一模一样，也是按照 `pathname` 查找，但是原先的评论就是找不回来。
+## navbar 添加组件
+起因：想给导航栏添加一个 Telegram 的链接。由于 VuePress Theme Hope 就有，可以直接抄。
+1. 写（抄）一个[组件](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/components/TelegramLink.ts)，替换链接。
+2. 在 `client.ts` 中[手动注册](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/client.ts)。
+3. 在 `theme.ts` 中[引入](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/9baaa2ffac93f9952a244b39769e7dc6c598a611/docs-shared/src/theme-wrapper.ts#L48)。

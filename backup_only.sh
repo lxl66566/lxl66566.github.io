@@ -1,5 +1,5 @@
 git add -A
 # git commit -m $(date "+%Y%m%d-%H:%M:%S")
-git commit -m "应用汇总大改，重新排版，添加/归档条目"
+git commit -m "添加 Telegram 图标，日常维护"
 git push origin code
 exit

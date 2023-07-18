@@ -57,7 +57,7 @@ git commit -m "注释"
 > ssh密钥生成后首次添加注释可能会出现额外提醒，请根据提示照做
 #### 撤销提交
 * 撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
-* 修改注释：`git commit --amend`，需要使用 Vim
+* 修改注释：`git commit --amend`，(git bash 下) 需要使用 [Vim](../coding/vim.md)，需要强制推送。
 * 还有比较常用的，回到上一个 commit 的状态，去除所有多余文件和改动：`git reset --hard HEAD && git clean -f -d`
 #### 合并提交
 在 Pull Requst 时，最好将自己所做的更改合为一个。假设上游没有冲突，需要将最后两个 commit 合并为一个：
