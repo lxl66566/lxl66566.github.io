@@ -106,8 +106,13 @@ tag:
 ## 禁用软件
 [这里](https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a)可以看 MIUI 有哪些不能禁用的东西。
 
-我使用 [App Manager](#其他) 进行软件的冻结操作。（scene5/6 也可以，但是其为闭源商业软件，我不信任。）
+我使用 [App Manager](#其他) 进行软件的冻结操作。（scene5/6 也可以，但是其为闭源商业软件，操作麻烦，故不用它。）
+### EU MIUI
+* 禁用负一屏需要冻结 Google (`com.google.android.googlequicksearchbox`)。
+* Google 家的大多数都能冻
+* 不要冻 *媒体存储设备*(`com.google.android.providers.media.module`) ！！！[惨痛教训](#乱冻结)
 ### 禁用快应用中心
+> 这是一篇久远的文章，是本页面年龄最大的。
 快应用服务框架本意是好的，大家联合起来统一为一个标准，减少不必要的重复开发。
 
 但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和**家人**的身心健康，建议禁用之：
@@ -157,7 +162,7 @@ tag:
     3. `pm unsuspend com.google.android.providers.media.module`
     4. 三步开启权限后，退出 shell，重启，静·候·佳·音。
 
-然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装。刚好我对 EU 挺失望的，想直接装回原国行系统，甚至还[失败了](#mipad-5)。
+然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装，前面全部白折腾。刚好我对 EU 挺失望的，想直接装回原国行系统，甚至还[失败了](#mipad-5)。
 
 这个故事告诉我：root 后记得先刷救砖模块。
 ### ANDROID_PRODUCT_OUT not set
@@ -166,4 +171,13 @@ tag:
 
 此时需要检查当前终端路径，是否包含你的 `.img` 文件。
 ### 找不到 LSPosed 图标
-解法：`adb shell`，`su` 提权后，输入 `am start "intent:#Intent;action=android.intent.action.MAIN;category=org.lsposed.manager.LAUNCH_MANAGER;package=com.android.shell;component=com.android.shell/.BugreportWarningActivity;end"` 即可启动。（[source](https://www.bilibili.com/video/BV1UR4y1V7Ry/)）
+解法：`adb shell`，`su` 提权后，输入
+```shell:no-line-numbers
+am start "intent:#Intent;action=android.intent.action.MAIN;category=org.lsposed.manager.LAUNCH_MANAGER;package=com.android.shell;component=com.android.shell/.BugreportWarningActivity;end"
+```
+即可启动。（[source](https://www.bilibili.com/video/BV1UR4y1V7Ry/), my_version: 1.8.6）
+### 备份恢复
+由于尝试了 `App Manager` 和 `adb backup` 均无法备份应用数据，无奈使用小米的备份（`com.miui.backup`）。结果果然不出所料——出事了，EU 版系统即使装了国内的应用商店也无法下载备份[^3]。解法：
+1. 从手机提取安装包，装到平板。（可用 App Manager 或 [Localsend](../farraginous/recommend_packages.md#多设备互传)）
+2. 安装完后没有快捷方式，也无法打开（App Manager 与 ADB 均无法启动，摸索了挺久）。此时需要去设置中搜索 `备份` 即可进入界面使用。<span class="heimu" title="你知道的太多了">假如刷的非小米系统就惨了，我也不懂能不能用</span>
+[^3]: [source](https://t.me/withabsolutex/1165)

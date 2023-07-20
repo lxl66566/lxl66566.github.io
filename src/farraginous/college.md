@@ -75,11 +75,11 @@ category:
 * 宿舍网（2021，电信）：账号 手机号@shtel 密码：身份证后 6 位
 * 超星学习通下载直链：`http://cs.e.ecust.edu.cn/download/[objectID]`
 * 上传大文件（转自 CIC，未验证）：
-```sh
+```sh:no-line-numbers
 curl --progress-bar 'https://mooc1.chaoxing.com/upload/uploadNew' -H 'Content-Type: multipart/form-data' -H 'Expect: 100-continue' --form "file=@\"${file}\""
 ```
 * 命令行认证校园网
-```sh
+```sh:no-line-numbers
 curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=login&username=<学号>&password={B}<Base64密码>&ac_id=18&user_ip=&nas_ip=&user_mac=&ajax=1'
 ```
 ## 奇闻轶事

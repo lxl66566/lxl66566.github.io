@@ -15,18 +15,17 @@ VPS 有关问题请移步 [VPS](../articles/vps.md)。
 * 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate(locate), trash-cli, tmux, tldr
 * 我计划装的包：Joshuto
 ## 更换镜像
-:::: code-group
-::: code-group-item ArchWSL
-```bash
+::: code-tabs
+@tab ArchWSL
+```bash:no-line-numbers
 nvim /etc/pacman.d/mirrorlist
 ```
-:::
-::: code-group-item termux
-```bash
+
+@tab termux
+```bash:no-line-numbers
 termux-change-repo
 ```
 :::
-::::
 ## 使用 windows 代理
 懒得在 wsl 里重复下载，直接使用 windows 代理。[参考](https://zhuanlan.zhihu.com/p/153124468)
 ```sh
@@ -62,8 +61,8 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`。
 ### fishshell
 * set fish as default
-    :::: code-group
-    ::: code-group-item ArchWSL
+    ::: code-tabs
+    @tab ArchWSL
     ```bash
     # edit ~/.bashrc
     if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
@@ -71,13 +70,11 @@ termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`�
         exec fish
     fi
     ```
-    :::
-    ::: code-group-item termux
-    ```bash
+    @tab termux
+    ```bash:no-line-numbers
     chsh -s fish
     ```
     :::
-    ::::
 * 配置文件一般在 `~/.config/fish` 下。
 * `~/.config/fish/config.fish`：
     ```bash

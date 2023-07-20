@@ -38,6 +38,7 @@ heroText: "绝对值_x的博客"
 
 :::
 ## 关于博客
+* 本博客原创文章遵循 MIT 协议，可任意修改、转载、再发布
 * 使用 [VuePress2](https://v2.vuepress.vuejs.org/zh/) 搭建，[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 主题，pure: true
 * [项目地址](https://github.com/lxl66566/lxl66566.github.io)，Markdown 源码位于 branch *[code](https://github.com/lxl66566/lxl66566.github.io/tree/code)*
 * 部署于 Github Pages / Cloudflare / netlify / vps + nginx

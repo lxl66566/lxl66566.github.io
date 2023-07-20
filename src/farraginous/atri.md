@@ -35,7 +35,7 @@ tag:
 1. [使用conda](../coding/python.md#创建环境)创建出所需环境（此处环境名为`atri`）：`conda create -n atri python=3.9`
 > nonebot2需要在python>=3.8环境下运行
 2. 使用pip安装依赖：
-```
+```sh
 pip install nb-cli
 pip install nonebot-adapter-onebot
 ```

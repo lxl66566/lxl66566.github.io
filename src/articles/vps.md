@@ -51,27 +51,26 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 * 密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。
 * 限制登录 ip。修改 `/etc/hosts.allow` & `/etc/hosts.deny` 文件。
 * firewalld
-    :::: code-group
-    ::: code-group-item basic
+    ::: code-tabs
+    @tab basic
     ```sh
     systemctl <start | enable | stop | disable> firewalld
     firewall-cmd --state
     firewall-cmd --reload   # after change
     firewall-cmd --add-masquerade --permanent   # 伪装
     ```
-    :::
-    ::: code-group-item add
-    ```sh
+    
+    @tab add
+    ```sh:no-line-numbers
     firewall-cmd --add-port=<port>/tcp --permanent  # permanent
     ```
-    :::
-    ::: code-group-item show
+    
+    @tab show
     ```sh
     firewall-cmd --zone=public --list-all
     firewall-cmd --zone=public --list-ports # or
     ```
     :::
-    ::::
     * 我写了一个脚本用于快速执行防火墙指令。
     ```bash
     function firewall --description 'enable or disable firewalld'
@@ -113,7 +112,7 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
 * 使用 Nginx 将伪装页面（我选择我的小破博客）[部署](#nginx)到 443 端口 (80 转发 443)。（然而 443 早就被封了，令人感慨）
 * 开启 cloudflare 代理
 * 设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。
-    ```bash
+    ```bash:no-line-numbers
     firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
     ```
 ## 包

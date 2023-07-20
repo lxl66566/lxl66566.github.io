@@ -31,7 +31,7 @@ Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
 ## 数据结构
 ### 动态数组
 Arraylist 和 Vector，后者是线程安全的，更慢。没有多线程需求建议直接用前者。
-```java
+```java:no-line-numbers
 private ArrayList<account> accounts = new ArrayList<>(List.of(new account("admin", "admin")));
 ```
 ### Hashmap

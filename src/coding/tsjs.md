@@ -12,7 +12,7 @@ TypeScript 是在 JavaScript 基础上建立的一门语言，新增了类型控
 > JavaScript 是符合 ECMAscript 标准规范的，一门弱类型的 GC 语言，又称 ECMAScript. 浏览器的默认语言。
 ## 环境
 假设已经安装了 node.js。
-```shell
+```shell:no-line-numbers
 npm i node-ts -g
 ```
 然后便可使用 `node-ts xxx.ts` 运行了。

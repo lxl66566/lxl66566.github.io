@@ -60,7 +60,7 @@ rcc static.qrc -o static.cpp    // 如果有 qrc 文件则执行。
 ```
 4. 将 3. 生成的文件（static.cpp） 添加至 `CMakelists.txt` 中的 `PROJECT_SOURCES`
 5. 在 `CMakelists.txt` 中的 `find_package` 语句前添加：
-```cmake
+```cmake:no-line-numbers
 set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 path）
 ```
 
@@ -82,7 +82,7 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 * 可以使用 `std::make_shared<Type>()` 构建 (C++14)
 * `reset()` 不带参数则释放（== release()）
 ## 多行字符串
-```cpp
+```cpp:no-line-numbers
 R""(some text)""
 ```
 ## 面向对象
@@ -147,7 +147,7 @@ Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用
 一些可能会用到的第三方组件 / 框架。
 * [FluentUI](https://github.com/zhuzichu520/FluentUI)：提供一套 UI 框架。
 ### 唤起最小化的窗口
-```cpp
+```cpp:no-line-numbers
 show();showNormal();raise();activateWindow();
 ```
 ### 关于控件组

@@ -9,20 +9,45 @@ tag:
 ---
 # Git
 ## 是什么
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. ——[Git官网](https://git-scm.com/)
+*Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. ——[git-scm.com](https://git-scm.com/)*
 
-我的理解：版本控制，可以用来备份，提交，分支与合并。主要用于如 Github 等平台的远程仓库管理。Github 只支持 Git 作为唯一的版本库格式进行托管。
-## 如何使用
-下载安装 git 后，在任意目录右击即可看到 Git Bash Here （命令行界面）和 Git GUI Here （图形界面）。本文仅介绍 Git Bash 用法。
+版本控制，可以进行备份，协同开发。*Github 只支持 Git 作为唯一的版本库格式进行托管。*
+## 安装与配置
+### 安装
+git 在 windows 下的安装也算是一门学问。一共十几个步骤选项极其折磨[^5]。因此建议先了解下 Git 的基本知识。
+[^5]: 当然你也可以一路确定，没什么大问题，就是占用空间多一点罢了
+
+下载安装 git 后，在任意目录右击即可看到 Git Bash Here （命令行界面）（若安装时使用默认选项，还会出现 *Git GUI Here（图形界面）*）。本文仅介绍 Git Bash 用法。
 
 当然，git 安装时会将自身安装目录添加到环境变量，因此你也可以在 cmd 或 Powershell 中使用 git 命令。
-
-第一次使用 git 前需要配置环境：
-```sh
-git config --global user.name "Your Name"
-git config --global user.email "your-email@example.com"
-```
-这里建议将 `Your Name` & `your-email@example.com` 设为你的 Github 注册用户名与邮箱。（使 Github 能够统计你的活跃度）
+### 配置
+建议在第一次使用前配置 git。当然不配置也没关系，~~后面慢慢摸索也就会了~~。
+1. 配置个人信息
+    ```sh
+    git config --global user.name "Your Name"
+    git config --global user.email "your-email@example.com"
+    ```
+    这里建议将 `Your Name` & `your-email@example.com` 设为 Github 注册用户名与邮箱，使 Github 能够统计你的 commits。
+2. 配置代理
+    由于众所周知的原因，最好使用代理上 Github。请在 `<port>` 处填写你的本地代理端口
+    ```sh
+    git config --global http.proxy http://127.0.0.1:<port>
+    git config --global https.proxy http://127.0.0.1:<port>
+    ```
+    还需要配置 ssh 的代理：执行 `vi ~/.ssh/config`，输入如下内容[^6]：
+    ```
+    Host github.com
+        User git
+        Hostname ssh.github.com
+        Port 443
+        ProxyCommand connect -H 127.0.0.1:<port> %h %p
+    ```
+3. 其他全局设置
+    ```sh
+    git config --global push.default current    # 设置默认推送，简化 git push
+    git config --global --add safe.directory '*'    # 取消目录安全警告
+    ```
+[^6]: 需要使用 [Vim](./vim.md)。若不想用，请自行搜索 `git bash 更改默认编辑器`
 ## 常用命令
 ### 创建仓库
 ```sh
@@ -67,23 +92,21 @@ git commit -m "注释"
 ### 上传与远程仓库
 将你的仓库上传到github等平台。
 #### 连接
-优先使用 ssh。
-:::: code-group
-::: code-group-item SSH
+优先使用 ssh。origin 为远程别名，可自定义
+::: code-tabs
+@tab SSH
 ```sh
-git remote add origin git@github.com:yourgithubID/gitRepo.git   # origin 为用户别名，可自定义
+git remote add origin git@github.com:yourgithubID/gitRepo.git
+```
+@tab HTTPS
+```sh
+git remote add origin https://github.com/yourgithubID/gitRepo.git
 ```
 :::
-::: code-group-item HTTPS
-```sh
-git remote add origin https://github.com/yourgithubID/gitRepo.git   # origin 为用户别名，可自定义
-```
-:::
-::::
 ::: tip
 注：首次使用ssh连接需要先配置ssh证书。
 ```sh
-cd ~        # 进入根目录，若已进入请忽略
+cd ~        # 进入 home 目录，若已进入请忽略
 ssh-keygen -t rsa -C "youremail@example.com"
             # 然后一路回车
 clip < ~/.ssh/id_rsa.pub    # 复制密钥至剪切板
@@ -151,13 +174,6 @@ git reset --hard origin/main    # 强制恢复，忽略更改，但不删除新�
 :::
 注意其语法与 linux 文件系统类似，`/` 开头的为根目录，别搞错了。
 ## 其他技巧
-### 全局设置
-```sh
-git config --global push.default current    # 设置默认推送，简化 git push
-git config --global --add safe.directory '*'    # 取消目录安全警告
-git config http.proxy http://127.0.0.1:port     # 设置代理
-git config https.proxy http://127.0.0.1:port    # 设置代理
-```
 ### 自动化脚本
 1. 新建 `xxx.sh`，输入你需要的所有指令语句，以换行隔开。
 2. 双击运行或 `bash xxx.sh`
@@ -166,23 +182,20 @@ git config https.proxy http://127.0.0.1:port    # 设置代理
 脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
 :::
 ### 将注释设为当前时间
-:::: code-group
-::: code-group-item bash
+::: code-tabs
+@tab bash
 ```sh
 # use only in bash
 git commit -m $(date "+%Y%m%d-%H:%M:%S")
 # result: 20220613-11:34:59
 ```
-:::
-::: code-group-item powershell
+@tab powershell
 ```shell
 # use only in powershell
 git commit -m $(get-Date)
 # result: 06/17/2023 21:05:13
 ```
 :::
-::::
-
 注意，请选择合适的终端环境。
 ### 用于备份
 有了 `.sh` 脚本后，我们就能很轻松地在 Github 上备份自己的文件。请 ChatGPT 讲一下移动与覆盖：
@@ -267,7 +280,6 @@ done < log_hash.txt
 exec /bin/bash
 ```
 关于分支与是否加 `-f` 需要根据情况判断。
-## 疑难解答
 [^1]: > 尝试连接GitHub的443端口。
     > ```sh
     > vim ~/.ssh/config

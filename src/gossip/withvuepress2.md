@@ -248,7 +248,7 @@ sidebar: {
 ## html传参引入指定js
 目的：复用画图表的 html 文件。尝试：
 1. 给页面中的 iframe html 传参:
-```html
+```html:no-line-numbers
 <iframe src="/charts/animation.html?src=GBperprice"></iframe>
 ```
 2. 然后在 html script 中处理参数:
@@ -267,8 +267,8 @@ const addr = "/charts/" + getParams("src") + ".js";
 
 <text style="color:red;font-weight:bold">未解决！</text>
 
-:::: code-group
-::: code-group-item HTML
+::: code-tabs
+@tab HTML
 ```html
 ...
 <!-- <script type="text/javascript" src=addr></script> 
@@ -279,13 +279,11 @@ const addr = "/charts/" + getParams("src") + ".js";
 </script>
 ...
 ```
-:::
-::: code-group-item JS
-```js
+@tab JS
+```js:no-line-numbers
 export const data=[...]
 ```
 :::
-::::
 ## pangu 插件安装失败
 试图安装 [vuepress-plugin-pangu](https://shigma.github.io/markdown-it-pangu) 失败。官方文档稀烂，缺乏维护，只有 vuepress1.x 的 js 配置，而我使用 ts ；由于并未学习，面对各种报错显得很无力。（有生之年必学）
 

@@ -19,7 +19,7 @@ ADB 的权限较高，但小于 root 权限。
     * 开启开发者模式：（例：MIUI 12.5）设置 - 我的设备 - 全部参数 - 多次点击 *MIUI 版本*
     * 在开发者选项中启用 *USB 调试*
 3. 执行 `adb devices`，出现以下代码即为连接成功：
-```batch
+```batch:no-line-numbers
 * daemon started successfully
 List of devices attached
 ****************        device
