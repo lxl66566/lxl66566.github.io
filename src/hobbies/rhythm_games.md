@@ -248,8 +248,9 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 Sheriruth 10.1 pure memory
 
 ![Sheriruth 10.1 pure memory](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/arcaea_best.jpg)
-### 改残片
-[跳转](https://www.mbrjun.cn/archives/443/)（亲测有效，version: 4.6.0c）
+### 其他
+* [改残片](https://www.mbrjun.cn/archives/443/)（亲测有效，version: 4.6.0c）
+* [破解版](https://t.me/GlowerHi_mods/24)，截至 4.6.0 的所有歌曲，未测试
 ## pjsk
 20230715，我为我的 mipad5 解 bl 锁。由于需要清空数据，我复制出了我的引き継ぎ码并发给了我的 telegram 收藏夹。
 

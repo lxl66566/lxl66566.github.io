@@ -12,13 +12,17 @@ tag:
 `(?)` 代表重新考虑日程的存在性与重要性。
 ## 博客日程
 - [ ] vscode extensions recommendation
-- [ ] 零食推荐 (?)
 ### 需要考虑
 - [ ] Github stars (?)
+- [ ] 零食推荐 (?)
 ## 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
+- [ ] ArchWSL 传文件，编译 wordsreciter Qt6
 - [ ] 日语 N2
 - [ ] 英语 IELTS & TOEFL (without a target score)
 * CS 自学：
+    - [ ] tauri or flask, to dev wordsreciter
+    - [ ] koishi plugin, like atri bot
+    - [ ] magisk module, mainly about *usage time recoder*, *MIUI 10s*, *bilibili speed* and so on
     - [ ] C# learning and pull request to Tai, MisakaTranslator
     - [ ] lua
 
@@ -26,6 +30,7 @@ tag:
 - [ ] [开发应用](../hide/inspiration.md#编程灵感)
 - [ ] osu reform β pass
 - [ ] 算法类
+- [ ] CTF
 
 ## 有生之年
 - [ ] 钢琴

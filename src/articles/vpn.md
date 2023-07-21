@@ -250,3 +250,5 @@ V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
 关于下载与使用请[进入网站](https://matsuricom.github.io/)自行查阅。
 ### SagerNet
 跟 Matsuri 高度重合的 Android 代理。
+## 课外阅读
+* [如何正确地叫外卖](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/)

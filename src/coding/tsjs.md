@@ -32,7 +32,8 @@ npm i node-ts -g
 ## Node.js & npm
 Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台执行环境。一言：集成开发环境，必装。
 
-npm 为 Node.js 的包管理器。
+npm 为 Node.js 的包管理器[^2]。
+[^2]: 比较广泛使用的包管理器还有 yarn。其各有优势，指令相似，可自行选择使用。[source](https://zhuanlan.zhihu.com/p/27449990)
 ### [镜像](https://www.runoob.com/w3cnote/npm-switch-repo.html)
 ### 基本命令
 ```shell

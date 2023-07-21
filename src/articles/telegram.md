@@ -106,7 +106,7 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 * [尼古拉斯二手消息转运中心](https://t.me/nichoIascw)
 ### 闲聊
 * [垃圾高校毁我青春](https://t.me/joinchat/Ytplgt-buepkYThl)：大学生闲聊群
-* [真红真红真](https://t.me/upsetGroup)：[失落小站](../hobbies/galgame.md#资源)附属群
+* [真红真红真](https://t.me/upsetGroup)：[失落小站](../hobbies/galgame.md#资源)属群
 * [Coder Offtopic 中文群](https://t.me/coder_ot)：技术 ot 群
 * [VPS信号旗资讯本部](https://t.me/vps_xinhaoqi)：键政群
 ### vps

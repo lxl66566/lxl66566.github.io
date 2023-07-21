@@ -138,3 +138,6 @@ match do_something_that_might_fail() {
 cargo add native-windows-derive
 cargo add native-windows-gui
 ```
+~~待续.~~
+## external
+1. [Rust Learning Smart Pointers](https://silente.top/posts/Rust-Learning-Smart-Pointers/)

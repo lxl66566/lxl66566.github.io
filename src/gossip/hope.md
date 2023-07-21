@@ -9,6 +9,9 @@ tag:
 ---
 # 对xxx的希望
 查看政治性内容请前往[愿景](./wish.md)
+## 对浏览器的希望
+* 原生支持 ts when
+* 参考一下人家 [Arc](https://type.cyhsu.xyz/2022/08/arc/) 的设计理念
 ## 对编程语言的希望
 * 完整的 oop (class + interface, traits)
 * 多样的内置数据类型 (dict, tree and map)

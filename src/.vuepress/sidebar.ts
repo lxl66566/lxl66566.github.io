@@ -41,7 +41,12 @@ export default sidebar({
     },
     {
       text: "推荐",
-      children: ["time_record.md", "track_record.md", "input_method"],
+      children: [
+        "time_record.md",
+        "track_record.md",
+        "input_method",
+        "external.md",
+      ],
     },
   ],
   "/coding/": [

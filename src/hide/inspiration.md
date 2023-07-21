@@ -53,6 +53,7 @@ category:
 * rust cli 浏览器书签 & 历史数据库
 * 类 markdown 方言
 * better sqlite_zstd
+* 答题网，选择题实时反馈
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
 * 甩棍伞

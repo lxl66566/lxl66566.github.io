@@ -14,7 +14,7 @@ category:
 然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我被网上教程（我看的很多是用 js 写的）与官方文档的 ts 搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
 
 20230712 由于依赖地狱把 node_modules 给崩了，重装，回档也救不回来。破罐子破摔，试了下 VuePress Theme Hope[^1] 主题，然后发现异常好用。。该主题自带合适的评论插件，搜索增强插件，[Markdown 增强](https://plugin-md-enhance.vuejs.press/zh/) 插件，应有尽有。如果一开始就用此主题，定然能解决下述大部分的问题。
-[^1]: [VuePress Theme Hope 官网](https://theme-hope.vuejs.press/zh/)
+[^1]: [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)
 
 我写博客并在朋友间分享这件事也带动了朋友们写博客——一个朋友[^3]用的 vuepress 默认主题，另一个[^4]用的 hexo。
 [^3]: [dream_oyh 的 blog](https://dream-oyh.github.io/)
@@ -22,8 +22,12 @@ category:
 
 后来在开发过程中还遇到了亿些问题——
 :::warning
-以下问题不具有时效性，请自行判断
+以下问题可能不具有时效性，请自行判断
 :::
+## 主题选择
+最开始用的 Vuepress2 默认主题，快，但比较折磨。之后选择了 VuePress Theme Hope[^1]，方便强大，迁移也不难，但代价是静态体积多了一倍。
+
+如果你专注于博客内容产出，也可以看看 [Gungnir V2](https://github.com/Renovamen/vuepress-theme-gungnir)。
 ## 字体颜色问题
 网上教程为使用 `<font color="red">` 标签，但此标签不受 html5 支持（并导致了下述 *Rendering pages failed* 问题）。我还尝试了 `<p>` 标签（但会自动换行）与 `<a>` 标签（但有下划线和点击效果）。最终选用 `<text style="color:red;">` 标签，写起来最为简洁，无需添加额外属性。
 

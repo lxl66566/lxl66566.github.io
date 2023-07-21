@@ -394,3 +394,5 @@ tag:
 #### 魔女的夜宴
 * 玩一半汉化崩了，无法运行，只能玩生肉。连带着丢失了汉化存档。
 * 柚子社正常水平作品。
+## external
+1. Uncover XP3 [前篇：認識基本 XP3 封包格式](https://galgamer.moe/article/20021) | [後篇：揭祕 XP3 封包中的的壓縮和加密技術](https://galgamer.moe/article/20022)
