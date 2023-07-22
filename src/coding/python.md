@@ -16,7 +16,7 @@ windows 上建议直接无脑 all in vscode。
 * **Black Formatter** - Microsoft：提供格式化
 * **Ruff** - Charlie Marsh：提供语法分析
 
-可装可不装：
+选装：
 * isort - Microsoft：提供 import 排序
 
 其他就见仁见智了。
@@ -45,6 +45,7 @@ windows 上建议直接无脑 all in vscode。
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
 ## [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
+## [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
 ## 图像相关
 ### 从网站获取图片
 ```python
@@ -204,3 +205,5 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 之后再使用 `pip` 命令时，就会不断报错，找不到 pip。我觉得很怪。`C:\Python310\Scripts` 路径下也能找得到 pip.exe，环境变量也没改。我在当前路径下打开 cmd ，执行 pip，然而还是不能正常使用。 ~~（忘了报什么错了）~~ 鼓捣了一会儿，试图使用离线安装，提示找不到 wheel.exe.
 
 最终解决方法：在[此页面](https://pypi.org/project/pip/#files)下载`.tar.gz`,解压后在目录下执行 `setup.py build` 与 `python -m pip install --upgrade pip --user`。
+## external
+1. [The Right Way to Run Shell Commands From Python](https://martinheinz.dev/blog/98)

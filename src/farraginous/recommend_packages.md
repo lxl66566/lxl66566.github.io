@@ -46,8 +46,10 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 [官网下载地址](https://bbs.binmt.cc/forum-2-1.html) | [酷安下载地址](https://www.coolapk.com/apk/bin.mt.plus) | [私链](https://wwp.lanzout.com/i9frh06qke0h) | 可在国内应用商店下载
 ### Fake Location
 虚拟定位软件，免 ROOT，大学模拟跑步神器
-
-[官方项目地址](https://github.com/Lerist/FakeLocation)  [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
+::: warning
+请不要从 Google Play 安装。其对中国地区不可用。
+:::
+[官方项目地址](https://github.com/Lerist/FakeLocation) | [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 ### Picacg
 ~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
 
@@ -148,8 +150,12 @@ e screenshot
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</span>
 * 可以在全屏游戏时护眼
 * 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）
+### RAM Disk
+RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。
+
+推荐使用 [Softperfect RAM Disk](https://www.majorgeeks.com/files/details/softperfect_ram_disk.html)。（[RAM Disk comparison](https://www.ghacks.net/2017/04/03/the-best-free-ramdisk-programs-for-windows/)）
 ### [图吧工具箱](http://www.tbtool.cn/)
-集成了电脑及其外接设备测试所需的多数软件。
+集成了电脑及其外接设备测试所需的多数软件集硬件测试，跑分，信息查询为一体。不过也比较大。
 ### ADB
 电脑调试 Android 手机的必备工具，包括查询信息，备份，安装等常用功能。
 * [简易教程](../articles/adb.md)
