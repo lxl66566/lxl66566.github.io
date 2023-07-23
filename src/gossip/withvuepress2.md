@@ -462,3 +462,7 @@ function sidebar() {
 1. 写（抄）一个[组件](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/components/TelegramLink.ts)，替换链接。
 2. 在 `client.ts` 中[手动注册](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/client.ts)。
 3. 在 `theme.ts` 中[引入](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/9baaa2ffac93f9952a244b39769e7dc6c598a611/docs-shared/src/theme-wrapper.ts#L48)。
+## 添加 rss 订阅
+* （未解决）
+
+[官方说](https://theme-hope.vuejs.press/zh/guide/advanced/feed.html)是说支持，还内置，但是并不能用...首先 VuePress Theme Hope 文档的描述就比插件文档描述少了东西，比如 `hostname`。其次我配置好以后并不知晓如何获取 `rss.xml`，官方示例使用默认主题配置，使用外部导入的插件，没有参考意义。

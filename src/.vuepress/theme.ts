@@ -75,10 +75,10 @@ export default hopeTheme({
         },
       ],
     },
-    feed: {
-      rss: true,
-      icon: "/logo.jpg",
-      count: 20,
-    },
+    // feed: {
+    //   rss: true,
+    //   icon: "/logo.jpg",
+    //   count: 20,
+    // },
   },
 });

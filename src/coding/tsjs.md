@@ -29,27 +29,3 @@ npm i node-ts -g
 > [菜鸟教程的类型声明](https://www.runoob.com/typescript/ts-variables.html)全是 var，难绷
 
 不许用 var（暴论）。全部使用 `let` | `const`。[区别](https://www.tutorialsteacher.com/typescript/typescript-variable)
-## Node.js & npm
-Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台执行环境。一言：集成开发环境，必装。
-
-npm 为 Node.js 的包管理器[^2]。
-[^2]: 比较广泛使用的包管理器还有 yarn。其各有优势，指令相似，可自行选择使用。[source](https://zhuanlan.zhihu.com/p/27449990)
-### [镜像](https://www.runoob.com/w3cnote/npm-switch-repo.html)
-### 基本命令
-```shell
-npm install -g typescript  # 安装 typescript 开发环境
-tsc xxx.ts  # 将其编译为 js
-node xxx.js # 执行 js 文件
-# npm
-npm search <package_name>   # 查找包
-npm install <package_name> [option] # 安装包
-npm list -g --depth=0   # 列出全局包，不包含依赖
-npm update -g   # Update all global
-npm uninstall <package_name> [option] # 卸载包
-```
-
-如果需要重装所有 `node_modules`，可在 bash 中：`rm -rf node_modules && rm package-lock.json && npm cache clear --force`
-## 遇到的问题
-### CORS policy
-在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。
-在文件目录下 `python -m http.server`，打开浏览器访问 `localhost:8000`，点击要调试的 html 即可。<span class="heimu" title="你知道的太多了">20230603：我是铸币</span>

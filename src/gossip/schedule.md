@@ -12,6 +12,7 @@ tag:
 `(?)` 代表重新考虑日程的存在性与重要性。
 ## 博客日程
 - [ ] vscode extensions recommendation
+- [ ] koishi
 ### 需要考虑
 - [ ] Github stars (?)
 - [ ] 零食推荐 (?)

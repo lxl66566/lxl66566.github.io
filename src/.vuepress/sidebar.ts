@@ -64,7 +64,14 @@ export default sidebar({
     },
     {
       text: "工具",
-      children: ["github.md", "Git.md", "linux.md", "vim.md", "sql.md"],
+      children: [
+        "github.md",
+        "Git.md",
+        "nodejs.md",
+        "linux.md",
+        "vim.md",
+        "sql.md",
+      ],
     },
     {
       text: "其他",

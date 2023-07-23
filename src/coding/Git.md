@@ -163,6 +163,8 @@ git reset --hard origin/main    # 强制恢复，忽略更改，但不删除新�
 `git fetch origin main`
 ### 合并分支
 `git merge origin/main`
+* （疑难解答[^7]：*fatal: refusing to merge unrelated histories*）
+[^7]: 当本地仓库已有提交时，想合并远程仓库会出现此情况。解法：`git pull origin main --allow-unrelated-histories`
 ### 删除远程tag
 如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新source code。（release 信息会被保留，状态更改为 draft）
 

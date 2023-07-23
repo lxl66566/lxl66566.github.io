@@ -17,6 +17,8 @@ tag:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230723
+* 将 typescript 中的 node.js 部分分离为新增独立页面 [node.js](../coding/nodejs.md)
 ### 20230721
 * 新增 [文章 - 文章分享](../articles/external.md)，并在许多页面末尾新增 *external*，用于相关文章推荐。
 * *对 xxx 的希望* 新增[内容](../gossip/hope.md#对浏览器的希望)
