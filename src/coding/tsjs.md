@@ -19,7 +19,7 @@ npm i node-ts -g
 
 或者也可以用 `tsc` 转成 js 再运行[^1]。
 
-[^1]: `tsc xxx.ts`
+[^1]: `tsc xxx.ts && node xxx.js`
 ## 语言基础
 大部分语法跟其他语言挺像的。
 ### 判断
@@ -29,3 +29,5 @@ npm i node-ts -g
 > [菜鸟教程的类型声明](https://www.runoob.com/typescript/ts-variables.html)全是 var，难绷
 
 不许用 var（暴论）。全部使用 `let` | `const`。[区别](https://www.tutorialsteacher.com/typescript/typescript-variable)
+### 遍历
+注意 `for ... in ...` 和 `for ... of ...` 的区别；前者遍历 key，后者遍历 value

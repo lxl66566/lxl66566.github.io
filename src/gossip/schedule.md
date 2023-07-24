@@ -12,7 +12,7 @@ tag:
 `(?)` 代表重新考虑日程的存在性与重要性。
 ## 博客日程
 - [ ] vscode extensions recommendation
-- [ ] koishi
+- [x] koishi
 ### 需要考虑
 - [ ] Github stars (?)
 - [ ] 零食推荐 (?)
@@ -22,7 +22,8 @@ tag:
 - [ ] 英语 IELTS & TOEFL (without a target score)
 * CS 自学：
     - [ ] tauri or flask, to dev wordsreciter
-    - [ ] koishi plugin, like atri bot
+    - [x] koishi plugin, like atri bot
+        - [ ] advanced: wordle game
     - [ ] magisk module, mainly about *usage time recoder*, *MIUI 10s*, *bilibili speed* and so on
     - [ ] C# learning and pull request to Tai, MisakaTranslator
     - [ ] lua

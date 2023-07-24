@@ -34,7 +34,6 @@ export default navbar([
       "recommend_packages.md",
       "recommend_websites.md",
       "college.md",
-      "atri.md",
       "reciter.md",
       "learning/",
       "log.md",

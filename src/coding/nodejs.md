@@ -13,20 +13,24 @@ npm 为 Node.js 的包管理器[^2]。
 [^2]: 比较广泛使用的包管理器还有 yarn。其各有优势，指令相似，可自行选择使用。[source](https://zhuanlan.zhihu.com/p/27449990)
 ## [镜像](https://www.runoob.com/w3cnote/npm-switch-repo.html)
 ## 基本命令
-```shell
-npm install -g typescript  # 安装 typescript 开发环境
-tsc xxx.ts  # 将其编译为 js
-node xxx.js # 执行 js 文件
-# npm
+```sh
 npm search <package_name>   # 查找包
 npm install <package_name> [option] # 安装包
 npm list -g --depth=0   # 列出全局包，不包含依赖
 npm update -g   # Update all global
-npm uninstall <package_name> [option] # 卸载包
+npm uninstall <package_name> [option] # 卸载包及其依赖
 ```
 如果需要重装所有 `node_modules`，可在 bash 中：`rm -rf node_modules && rm package-lock.json && npm cache clear --force`
 ## 关于 --save
 有时候会看到 `npm i xxx --save`，`--save` 是写入 `package.json` 的过程，而 npm 5 之后 install 会自动 save，不需要手动指定。一句话：**不用加**。
+## 查询包大小
+查询 install size 可以使用 [Package Phobia](https://packagephobia.com/)。
+## 更新依赖
+([ref](https://juejin.cn/post/6844903827599015944))
+```sh
+npm i -g npm-check
+npm-check -u
+```
 ## 遇到的问题
 ### CORS policy
 在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。

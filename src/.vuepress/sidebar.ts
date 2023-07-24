@@ -75,7 +75,7 @@ export default sidebar({
     },
     {
       text: "其他",
-      children: ["algorithm.md"],
+      children: ["algorithm.md", "bot.md"],
     },
   ],
   "/farraginous/learning/": [
@@ -142,7 +142,6 @@ export default sidebar({
         "recommend_packages.md",
         "recommend_websites.md",
         "college.md",
-        "atri.md",
         "reciter.md",
         "learning/",
         "log.md",

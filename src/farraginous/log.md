@@ -17,6 +17,8 @@ tag:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230724
+* 迁移 *atri* 页面到 [编程 - bot](../coding/bot.md) 并新增 koishi 内容
 ### 20230723
 * 将 typescript 中的 node.js 部分分离为新增独立页面 [node.js](../coding/nodejs.md)
 ### 20230721
@@ -347,7 +349,7 @@ tag:
 ### 20220516
 * 新增 [Rust#字符串修改](../coding/Rust.md#字符串修改)、[关于作者#习惯（现：关于作者#性格）](../gossip/author.md#性格)
 ### 20220510
-* 新增 [杂项-atri](./atri.md)
+* 新增 杂项-atri（迁移到 编程 - bot）
 ### 20220506
 * 更改navbar逻辑
 * 新增 [编程-Git](../coding/Git.md)&*其他工具（已整合为[python](../coding/python.md)页面）*、[随笔](../essay.md)

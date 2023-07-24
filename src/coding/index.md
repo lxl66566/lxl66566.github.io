@@ -21,8 +21,8 @@ tag:
 2. [C++](./Cpp.md)
 3. [Python](./python.md)
 4. [Java](./java.md)
-### 预学习阶段
 5. [TypeScript & JavaScript](./tsjs.md)
+### 预学习阶段
 6. [C#](./csharp.md)
 7. [kotlin](./kotlin.md)
 ### 新生语言
@@ -42,8 +42,9 @@ tag:
 * [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 * [learnxinyminutes](https://learnxinyminutes.com/)
 * [CS自学指南](https://csdiy.wiki/) & [计算机专业学习路线 - hackway](https://hackway.org/docs/cs/intro)：英文好的话可以看看。
-## 其他能力
+## 其他
 1. [算法](./algorithm.md)
+2. [搭建 bot](./bot.md)
 ## 杂项
 ### 字体
 [top-programming-fonts](https://github.com/hbin/top-programming-fonts/)，随便选。反正我用 Fira Code。
