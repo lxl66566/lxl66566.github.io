@@ -69,6 +69,7 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 * [竹新社](https://t.me/tnews365)：国内外新闻转载，较客观
 * [Disclose.tv](https://t.me/disclosetv)：英文新闻频道
 * [中国数字时代](https://t.me/cdtchinesefeed)：转载网评文章，较主观
+* [今读](https://t.me/today_read)：时评
 #### 科技新闻
 * [风向旗参考快讯](https://t.me/xhqcankao)
 * [Solidot](https://t.me/solidot)
@@ -76,7 +77,7 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 * [Testflight 新闻投稿](https://t.me/TestFlightCN)
 ### 学习
 #### 编程及技术
-* [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题 ~~（以及膜拜~~
+* [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题，群规严格，风气良好 ~~（以及膜拜~~
 * [Rust 众](https://t.me/rust_zh)：讨论 Rust 问题 ~~（以及膜拜~~
 * [Java 编程语言](https://t.me/Javaer)：群里都是聊天的，没几个正经学习~~（java 怎么这么拉了）~~
 * [Python 中文交流](https://t.me/pythonzh)
@@ -88,8 +89,7 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 * [日語學習小組](https://t.me/learn_ja_group) & [日本語研修](https://t.me/LearningJapaneseGroup)：中文交流的日语学习群
 * [Word Power Made Easy](https://t.me/pieroots)：英语单词词根起源探寻
 ### 科技
-* [黑洞资源笔记](https://t.me/tieliu)：分享一些有价值的编程工具及技巧 / 卖课的
-* [蓝点网订阅频道](https://t.me/landiansub)：分享好用软件
+* [黑洞资源笔记](https://t.me/tieliu)：分享一些有价值的编程学习资料 / 卖课的
 ### NSFW
 * [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，*绝对值_x 精选，质量有保证！*
 * [美图与色图](https://t.me/setu_nsfw) & [everyday color photos](https://t.me/everydaycolorphoto) | [萌图交流](https://t.me/jialeleya2233) | [韵の小院🍃ᴺˢᶠʷ](https://t.me/YunRan1314)：每日色图
@@ -99,11 +99,14 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 * [每日精选](https://t.me/watchaveveryday) & [超清|中文字幕](https://t.me/CCTAV)...：三次元的，嗯，不用我介绍吧
 ### 资源
 * [Visual Novel Channel](https://t.me/erogamecloud)：galgame 推荐与下载
+* [安卓破解分享](https://t.me/apkrxwy)
 * [NEP.Anime | 动画仓库](https://t.me/AnimeNep)：动漫收藏搬运
 ### 乐
 * [知乎暴论](https://t.me/mightyflame)：知乎一些易删回答，看点乐
 * [美图与沙雕](https://t.me/shadiaotu)
 * [尼古拉斯二手消息转运中心](https://t.me/nichoIascw)
+### 涉政
+* [知乎暴论](https://t.me/mightyflame)
 ### 闲聊
 * [垃圾高校毁我青春](https://t.me/joinchat/Ytplgt-buepkYThl)：大学生闲聊群
 * [真红真红真](https://t.me/upsetGroup)：[失落小站](../hobbies/galgame.md#资源)属群

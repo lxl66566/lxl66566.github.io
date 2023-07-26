@@ -56,7 +56,6 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 **建议去[tg频道](#新闻)看新闻。**
 * [今日热榜](https://tophub.today/) *（国内热搜榜汇总*
 ## 学习
-* [learnxinyminutes](https://learnxinyminutes.com/)：各种入门速成，适合学习能力强的（或多语言学习者）
 * [各种公开课程](https://docs.qq.com/sheet/DRU5MWHZCTHFGQnhM?tab=qb1sze)
 ### 语言
 * 英语新闻：[Breaking News English](https://breakingnewsenglish.com/) ~~（旧闻~~
@@ -71,6 +70,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 * 英文润色：[Grammaly](https://app.grammarly.com/) | [QuillBot](https://quillbot.com/)
 * [反向词典](https://wantwords.net/)：可以根据输入的中文/英文给出近义词汇。
 ### 计算机
+* [learnxinyminutes](https://learnxinyminutes.com/)：各种入门速成，适合学习能力强的
 * CS自学：[CS自学指南](https://csdiy.wiki/) | [学长的文章](https://honeysuckle-terrier-6c8.notion.site/CS-4b9f59acd3a64bf8916f834d0c7f25ea)
 * 算法刷题：[力扣](https://leetcode-cn.com/problemset/all/) | [洛谷](https://www.luogu.com.cn/)
 #### 资源

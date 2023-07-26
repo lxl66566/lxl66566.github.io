@@ -19,6 +19,9 @@ tag:
 * 网络小说我曾喜欢使用[永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，现在则使用[开源阅读](../farraginous/recommend_packages.md#开源阅读)。但是很遗憾，仍有很多小说无法找到。[^1]
 
 [^1]: [吐槽一下](../essay.md#20230713)
+## 资源
+* [轻小说文库](https://www.wenku8.net/login.php)[^2]
+[^2]: [妈的，被骗啦](https://t.me/withabsolutex/1180)
 ## 网络小说
 我~~曾经~~很爱看网络小说，主要类别有玄幻，爽文，日轻。此处列举出有记录的部分。（大概算是大学&高中部分，更早的基本上都记不住了）
 
@@ -274,3 +277,6 @@ tag:
 * [大学刑法课](http://www.zhihuxs.com/zhxs.asp?id=7959667)
 
 <!-- * <div class="image40" style="text-align: center;"><img alt="开始界面" src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f8376fe99e6c4bfa82dd01551c98bbfd~tplv-obj:1080:1925.image?from=post&x-expires=1682524800&x-signature=CjGGz8%2FoXM9JQaDlbTF%2BpRtHXWA%3D" /></div> -->
+
+## external
+1. [历史上有哪些「点错技能树」的例子？](https://ctreaderbot.vercel.app/a/BIwiUxMntG7yoBU.html)

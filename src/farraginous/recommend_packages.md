@@ -154,6 +154,8 @@ e screenshot
 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。
 
 推荐使用 [Softperfect RAM Disk](https://www.majorgeeks.com/files/details/softperfect_ram_disk.html)。（[RAM Disk comparison](https://www.ghacks.net/2017/04/03/the-best-free-ramdisk-programs-for-windows/)）
+
+设置好后，可以将 Windows Temp 环境变量设为此 RAM Disk.
 ### [图吧工具箱](http://www.tbtool.cn/)
 集成了电脑及其外接设备测试所需的多数软件集硬件测试，跑分，信息查询为一体。不过也比较大。
 ### ADB

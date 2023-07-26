@@ -23,8 +23,6 @@ tag:
 * CS 自学：
     - [ ] tauri or flask, to dev wordsreciter
     - [x] koishi plugin, like atri bot
-        - [ ] advanced: wordle game
-    - [ ] magisk module, mainly about *usage time recoder*, *MIUI 10s*, *bilibili speed* and so on
     - [ ] C# learning and pull request to Tai, MisakaTranslator
     - [ ] lua
 

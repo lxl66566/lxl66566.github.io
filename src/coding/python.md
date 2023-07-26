@@ -46,6 +46,25 @@ windows 上建议直接无脑 all in vscode。
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
 ## [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
 ## [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
+基本用法
+```py
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("nexturl: %s", nexturl)
+# 如果要保存到文件：
+logging.basicConfig(filename='...', encoding='utf-8')
+```
+## 序列化
+对象序列化极为简单无脑，爱了
+```py
+import pickle
+...
+soup = BeautifulSoup(response.content, "html.parser")
+with open("soup.test", "wb") as f:
+    pickle.dump(soup, f)    # serialize
+with open("soup.test", "rb") as f:
+    soup = pickle.load(f)   # deserialize
+```
 ## 图像相关
 ### 从网站获取图片
 ```python
@@ -194,9 +213,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 * `-F` 打包为单个exe文件
 * `-w` 运行时不显示命令窗口
 * `-i <icon.ico>` 设置图标
-## Python代码混淆
-[这里](https://pyob.oxyry.com/)是一个网站，可以在线混淆您的 python 代码。
-
+## [Python代码混淆](https://pyob.oxyry.com/)
 ## 一些问题
 ### 找不到pip
 执行 `python -m pip install --upgrade pip` 后报错：

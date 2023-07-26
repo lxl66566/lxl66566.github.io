@@ -466,3 +466,5 @@ function sidebar() {
 * （未解决）
 
 [官方说](https://theme-hope.vuejs.press/zh/guide/advanced/feed.html)是说支持，还内置，但是并不能用...首先 VuePress Theme Hope 文档的描述就比插件文档描述少了东西，比如 `hostname`。其次我配置好以后并不知晓如何获取 `rss.xml`，官方示例使用默认主题配置，使用外部导入的插件，没有参考意义。
+## external
+1. [No CSS Club](https://nocss.club/)
