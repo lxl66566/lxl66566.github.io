@@ -150,7 +150,9 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥120.00|1660G|不限|
 |￥240.00|3600G|不限|
 
-### [八方云](https://user.bafang.vip/)
+### [八方云](https://user.bafang.vip/)（已跑路）
+<details><summary>archived</summary>
+
 [邀请链接](https://user.bafang.vip/#/register?code=WPIANE92) | [防爆链](https://八方云.com)
 
 |月付|流量|限速|
@@ -165,22 +167,20 @@ tips：加速前需事先选择能通过连接测试的节点
 |￥6.00|500G|5000Mbps|
 |￥20.00|2000G|5000Mbps|
 |￥50.00|8000G|5000Mbps|
+</details>
 
 ### [赔钱机场](https://xn--mes358aby2apfg.com/)
 
-|年付|流量|限速|
-| :--: | :--: | :--: |
-|￥6.99|1T*12|未知|
-|￥4.99|200G*12|未知|
-
 |月付|流量|限速|
 | :--: | :--: | :--: |
-|￥1.00|100G|未知|
-|￥3.99|5T|未知|
+|￥1.00|100G|20000Mbps|
+|￥1.99|500G|20000Mbps|
+|￥3.99|1T|20000Mbps|
+|￥6.99|5T|20000Mbps|
 
 |一次性|流量|限速|
 | :--: | :--: | :--: |
-|￥5.99|1000G|未知|
+|￥14.90|1000G|20000Mbps|
 
 ### 其他
 以下机场因性价比原因不推荐购买
@@ -249,6 +249,6 @@ V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
 
 关于下载与使用请[进入网站](https://matsuricom.github.io/)自行查阅。
 ### SagerNet
-跟 Matsuri 高度重合的 Android 代理。
-## 课外阅读
+跟 Matsuri 高度重合的 Android 代理。都是基于 *singbox* 的。
+## external
 * [如何正确地叫外卖](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/)

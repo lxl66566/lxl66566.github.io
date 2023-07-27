@@ -115,6 +115,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 * 论坛：[月幕](https://www.ymgal.games/)
 ### 其他游戏
 * [最好玩的io游戏网站推荐](https://zhuanlan.zhihu.com/p/531408059) | [bak](https://telegra.ph/最好玩的io游戏网站推荐-07-21)
+* [lichess.org](https://lichess.org/)：在线国际象棋
 * [我的世界数据包](https://www.planetminecraft.com/data-packs)
 * [Gartic.io](https://gartic.io/)：你画我猜网页版
 * [Delicious Fruit](https://delicious-fruit.com/ratings/full.php?q=ALL)：I wanna 资源

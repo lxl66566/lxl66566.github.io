@@ -21,3 +21,5 @@ category:
 2. [双拼](./ulpb.md)
 ## 业余笔记
 1. [食物制作](./foods.md)
+## external
+1. [英语自学](https://bewaters.me/limxtop/2021/08/18/English-introduction/)

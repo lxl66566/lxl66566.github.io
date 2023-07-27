@@ -12,7 +12,7 @@ tag:
 # bot
 我曾使用 [nonebot2](https://nonebot.dev/) + cqhttp 的方式搭建 bot。这种方案使用 python 语言，只能搭建 QQ bot，并且需要自己写比较底层的代码。在此感谢 [yaowan233](https://github.com/yaowan233) 学长的指导。
 
-而现在我选择 [koishi](https://koishi.chat/zh-CN/) 框架。该框架基于 [node.js](./nodejs.md)，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比 nonebot2 的垃圾强数倍。同时也有[论坛](https://forum.koishi.xyz/)以供交流。
+而现在我选择 [koishi](https://koishi.chat/zh-CN/) 框架。该框架基于 [node.js](./nodejs.md)，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比 nonebot2 的垃圾强数倍。同时也有[论坛](https://forum.koishi.xyz/)以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）
 
 我建的 bot 有两个实例：一个是之前一直在用的 QQ bot `atri`（2433269451），另一个是后来使用 koishi 的 Telegram bot [`atri bot`](https://t.me/atri_absx_bot)。
 

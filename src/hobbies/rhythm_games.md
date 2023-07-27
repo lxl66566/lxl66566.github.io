@@ -149,6 +149,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 现在的皮肤是[absolutex v6](https://osu.ppy.sh/community/forums/topics/1746341)。
 ### 段位
+叠和切主要考验手速和耐力；乱是节奏和读谱；技在这二者之间。
 #### 4k
 * [4K Reform Dan](https://wwp.lanzout.com/iIUjo02rxm5a) （官方，96% pass）
 * [Malody 4K Regular Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20regular%20dan%20v3&s=any) | [Malody 4K Extra Dans v3](https://osu.ppy.sh/beatmapsets?q=malody%204k%20extra%20dan%20v3&s=any)（96% pass）
