@@ -4,7 +4,6 @@ icon: check
 category:
     - 博客
 tag:
-    - 日程
 ---
 # 日程区
 <div class="subtitle">——有生之年能做到这里的全部，是一个美好的愿望。</div>

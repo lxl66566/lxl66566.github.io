@@ -6,6 +6,7 @@ category:
 tag:
     - 视频播放器
     - 桌面端
+    - Windows
 ---
 # Potplayer 设置
 ::: warning

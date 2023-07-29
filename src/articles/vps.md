@@ -6,6 +6,7 @@ category:
     - 经历
 tag:
     - 桌面端
+    - Linux
 ---
 # VPS
 我与我的 VPS 的故事。

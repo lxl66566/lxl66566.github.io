@@ -75,7 +75,8 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 14. 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
 15. 解决[端口随机占用](#端口随机占用)
 16. ~~开启全局 UTF-8：*设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8...*~~ 实测会导致一些 galgame 乱码。
-17. 文件夹与文件改为单击
+17. 文件夹与文件改为单击。
+18. 关闭快速启动。
 ## 我使用的软件们
 20230607，我的 windows 11 开机自启动的托盘软件有：[XDM](../farraginous/recommend_packages.md#xdm), Ditto, [parsec](../farraginous/recommend_packages.md#parsec), V2rayN, [f.lux](../farraginous/recommend_packages.md#flux), [everything](../farraginous/recommend_packages.md#everything), 火绒, [Tai](../farraginous/recommend_packages.md#tai), [flameshot](../farraginous/recommend_packages.md#flameshot)
 ## 设置开机自启动

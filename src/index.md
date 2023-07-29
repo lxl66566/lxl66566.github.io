@@ -4,6 +4,8 @@ home: true
 layout: BlogHome
 hero: false
 heroText: "绝对值_x的博客"
+category:
+    - 导航
 ---
 # 绝对值_x 的博客
 ## 写在前面

@@ -4,6 +4,7 @@ sidebar: heading
 date: 2022-07-04
 category:
     - 推荐
+    - 主张
 ---
 # My Movie List
 <div class="subtitle">若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。</div>

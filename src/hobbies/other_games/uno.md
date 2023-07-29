@@ -4,6 +4,7 @@ icon: group
 category:
     - 爱好
     - 推荐
+    - 教程
 tag:
     - 打牌
 ---

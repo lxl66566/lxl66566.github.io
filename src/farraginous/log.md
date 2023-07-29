@@ -5,8 +5,6 @@ date: 2022-07-21
 icon: list
 category:
     - 博客
-tag:
-    - 日志
 ---
 # 博客日志
 <div class="subtitle">记录点点滴滴</div>
@@ -17,6 +15,9 @@ tag:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230729
+* 新增 [文章 - RAM Disk 横评](../articles/ramdisk.md)
+* 分类增强
 ### 20230724
 * 迁移 *atri* 页面到 [编程 - bot](../coding/bot.md) 并新增 koishi 内容
 ### 20230723

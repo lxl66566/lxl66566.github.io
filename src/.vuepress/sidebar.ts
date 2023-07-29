@@ -46,6 +46,7 @@ export default sidebar({
         "track_record.md",
         "input_method",
         "external.md",
+        "ramdisk.md",
       ],
     },
   ],
