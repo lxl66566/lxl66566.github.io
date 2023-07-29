@@ -48,3 +48,5 @@ tag:
 ## 杂项
 ### 字体
 [top-programming-fonts](https://github.com/hbin/top-programming-fonts/)，随便选。反正我用 Fira Code。
+## external
+1. [大陆台湾计算机术语对照表](https://zh.wikibooks.org/zh-hans/大陆台湾计算机术语对照表)

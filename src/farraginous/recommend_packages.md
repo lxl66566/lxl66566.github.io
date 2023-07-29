@@ -54,11 +54,8 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 ~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
 
 [官方地址?](https://picacg2022.com/) | [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
-### Keepass系列
-开源多端密码管理器。其中Keepass2Android是Android端的软件，而KeePassXC则是PC端的。
-
-[Keepass2Android项目地址](https://github.com/PhilippC/keepass2android) | [KeePassXC项目地址](https://github.com/keepassxreboot/keepassxc)
-> 为了方便，可以考虑使用 bitwarden 的服务，其支持多端同步密码。但是若你对云端存储感到不安全，还是使用无需联网的 Keepass 吧。
+### [bitwarden](https://vault.bitwarden.com/#/login)
+多端密码管理服务，支持生物识别和自动填充。数据存在美国（或欧盟），自动同步。如果你不信任密码托管方，请使用 [KeePass 系列](#keepass-系列)。
 ### Adobe Scan
 扫描文档并转为pdf。免费版就够用了。
 
@@ -305,5 +302,10 @@ use [xdm](#xdm) instead.
 ### [秒传链接提取](https://greasyfork.org/zh-CN/scripts/424574-%E7%A7%92%E4%BC%A0%E9%93%BE%E6%8E%A5%E6%8F%90%E5%8F%96)
 秒传链接，百度网盘分享的一种优秀模式。
 > 20230xxx: 脚本下架，作者被抓，有需求可以看[其他版本](https://greasyfork.org/zh-CN/scripts/427628-百度网盘秒传链接提取-最新可维护版本)
+### Keepass 系列
+开源多端密码管理器。其中Keepass2Android是Android端的软件，而KeePassXC则是PC端的。
+
+[Keepass2Android项目地址](https://github.com/PhilippC/keepass2android) | [KeePassXC项目地址](https://github.com/keepassxreboot/keepassxc)
+> 为了方便，可以考虑使用 bitwarden 的服务，其支持多端同步密码。但是若你对云端存储感到不安全，还是使用无需联网的 Keepass 吧。
 ## external
 1. [自由软件与专有软件之战——写在 MatLab 不再授权给实体请单上的中国高校之后](https://billchen.bid/jekyll/update/2020/06/10/free-software-vs-proprietary-software/)

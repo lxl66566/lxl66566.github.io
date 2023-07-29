@@ -16,6 +16,7 @@ tag:
 ### 需要考虑
 - [ ] Github stars (?)
 - [ ] 零食推荐 (?)
+- [ ] bilibili up 推荐(?)
 ## 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
 - [ ] ArchWSL 传文件，编译 wordsreciter Qt6
 - [ ] 日语 N2

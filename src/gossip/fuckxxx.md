@@ -67,7 +67,7 @@ B站歧视网页版用户。可能是因为：网页版用户不是核心群体�
 虽然我已渐渐由国产聊天软件用户转型为 Telegram 用户，但 Telegram 的程序也并非尽善尽美。以下所述皆为官方客户端的问题：
 * bug: windows 端有着极为严重的内存泄漏问题（[source](https://t.me/withabsolutex/1132)）。截至 20230723 仍未解决。
     * 尝试解决：降低其进程优先级，为其开启 windows 效率模式（任务管理器）。
-    * 根据 [issue](https://github.com/telegramdesktop/tdesktop/issues/25189) 所述，在 *设置 - 高级* 中更改 ANGLE 图形后端
+    * 根据 [issue](https://github.com/telegramdesktop/tdesktop/issues/25189) 所述，在 *设置 - 高级* 中更改 ANGLE 图形后端，建议改为 *OpenGL*
 * 中文（CJK）内容检索垃圾。使用空格分词检索模式，不适合该语系的内容检索。
 * （PC）：无法针对聊天内容调整字体大小。
 * bug：在频道回复消息时，链接的群组不会回复。
