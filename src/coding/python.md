@@ -46,7 +46,7 @@ windows 上建议直接无脑 all in vscode。
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
 ## [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
 ## [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
-基本用法
+使用 logging（py 自带） 进行能够控制等级的输出。基本用法：
 ```py
 import logging
 logging.basicConfig(level=logging.INFO)
@@ -65,6 +65,8 @@ with open("soup.test", "wb") as f:
 with open("soup.test", "rb") as f:
     soup = pickle.load(f)   # deserialize
 ```
+## [pprint](https://docs.python.org/3/library/pprint.html)
+pretty-print，打印对象比较好用。
 ## 图像相关
 ### 从网站获取图片
 ```python

@@ -46,6 +46,7 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
     ```sh
     git config --global push.default current    # 设置默认推送，简化 git push
     git config --global --add safe.directory '*'    # 取消目录安全警告
+    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见 external 1.
     ```
 [^6]: 需要使用 [Vim](./vim.md)。若不想用，请自行搜索 `git bash 更改默认编辑器`
 ## 常用命令
@@ -116,6 +117,22 @@ ssh -T git@github.com       #你可输入该命令验证是否成功
 :::
 * （疑难解答[^1]：*ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误*）
 * （疑难解答[^2]：*复制密钥时遇到`bash: clip: command not found`错误*）
+[^1]: > 尝试连接GitHub的443端口。
+    > ```sh
+    > vim ~/.ssh/config
+    > ```
+    > 然后在打开的vim编辑器内添加以下内容：
+    > ```
+    > Host github.com
+    >   Hostname ssh.github.com
+    >   Port 443
+    > ```
+    > 此时回到[这里](#连接)进行实验。成功连接即解决问题。
+
+    ([source](https://segmentfault.com/a/1190000041909858))
+[^2]: > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
+
+    不过这只是复制一个密钥的事，用不着那么麻烦。执行 `cat ~/.ssh/id_rsa.pub` 并手动复制你的密钥即可。
 #### 上传
 请确保已连接远程仓库。
 ```sh
@@ -239,12 +256,14 @@ git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.id
 ```
 
 其中 `tail [-n]` 为显示的条目数。（疑难解答[^3]：*查找大文件时出现`Cannot open existing pack file '.git/objects/pack/*.idx'`错误*）
+[^3]: 说明该项目并未触发 git 的 packfile 机制，无需删除大文件。若仍需查找，可以使用 `# another edition` 后的语句。
 
 * 清理完成后请使用 `git gc --prune=now` 进行碎片收集，上传时需要 `git push -f` 强制覆盖。
 #### [filter-repo](https://github.com/newren/git-filter-repo)（推荐）
 git 官方推荐的清理工具。
 
 我使用 `scoop` 安装，安装过程详见仓库说明。（疑难解答[^4]：*运行`git filter-repo`出现`name 'git' is not defined`报错*）关于使用方法，~~没人能看懂官方文档~~，建议直接找教程。
+[^4]: 根据[这里](https://github.com/newren/git-filter-repo/issues/360)的描述做就行了。
 
 ```sh
 git filter-repo --invert-paths -f --path "<path/of/file>"
@@ -282,22 +301,5 @@ done < log_hash.txt
 exec /bin/bash
 ```
 关于分支与是否加 `-f` 需要根据情况判断。
-[^1]: > 尝试连接GitHub的443端口。
-    > ```sh
-    > vim ~/.ssh/config
-    > ```
-    > 然后在打开的vim编辑器内添加以下内容：
-    > ```
-    > Host github.com
-    >   Hostname ssh.github.com
-    >   Port 443
-    > ```
-    > 此时回到[这里](#连接)进行实验。成功连接即解决问题。
-
-    ([source](https://segmentfault.com/a/1190000041909858))
-
-[^2]: > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
-
-    不过这只是复制一个密钥的事，用不着那么麻烦。执行 `cat ~/.ssh/id_rsa.pub` 并手动复制你的密钥即可。
-[^3]: 说明该项目并未触发 git 的 packfile 机制，无需删除大文件。若仍需查找，可以使用 `# another edition` 后的语句。
-[^4]: 根据[这里](https://github.com/newren/git-filter-repo/issues/360)的描述做就行了。
+## external
+1. [How different are different diff algorithms in Git?](https://link.springer.com/article/10.1007/s10664-019-09772-z)

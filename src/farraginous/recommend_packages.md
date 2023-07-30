@@ -70,7 +70,7 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 > 我曾经用过 [xbrowsersync](https://github.com/xbrowsersync/app) 书签同步器，但是很久没维护了，而且由于 manifest v2 不再受支持的原因，每隔一段时间就会被浏览器杀掉扩展。因此找到了这个替代品。
 
 电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
-### [歌词适配](https://gcsp.lanzoux.com/tp/igsE90gu7tsb)
+### [歌词适配](https://wwp.lanzouy.com/iH13D13tnaif)
 能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。~~说不定哪天就寄了~~
 ### 多设备互传
 [localsend](https://github.com/localsend/localsend) 和 [LANDrop](https://github.com/LANDrop/LANDrop) 都是优秀的开源局域网多设备互传软件，体积都不大。
@@ -84,13 +84,17 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 ### [scoop](https://scoop.sh/)
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
 :::warning
-请使用代理以获得更好的 scoop 使用体验：`scoop config proxy 127.0.0.1:port`
+请使用[代理](../articles/vpn.md)以获得更好的 scoop 使用体验：`scoop config proxy 127.0.0.1:port`
 :::
-
-``` bat
+基本指令 | 查看[进阶指南](https://www.thisfaner.com/p/scoop/)
+```sh
 scoop bucket add extras # 建议安装后先运行，extras 包含了更多包
 scoop search <name>     # 搜索包
 scoop install <name>    # 安装包
+```
+其他指令：
+```sh
+scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置，配合 RAM Disk
 ```
 ### [Parsec](https://parsec.app/downloads)
 **极低延迟**的远程控制软件。P2P连接。支持手机控制电脑。

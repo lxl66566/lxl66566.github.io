@@ -133,8 +133,8 @@ tag:
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
-|Summer Pockets Reflection Blue|2023.06.22|9.6|8.6|<span class="heimu" title="如果不崩溃的话">9.</span>5|
-|近月少女的礼仪 <Badge text="1" />|2023.04.23|5.6|5|3.3|
+|Summer Pockets Reflection Blue|2023.06.22|9.7|8.6|<span class="heimu" title="如果不崩溃的话">9.</span>5|
+|近月少女的礼仪 <Badge text="1" />|2023.04.23|5.6|4.7|3.8|
 |アンレス テルミナリア|2023.05.11|4.3|9.7|9.5|
 |哥哥，早上起床之前都要抱紧我哦！<Badge text="1" />|2021.02.14?|3|7.5|8|
 |お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<Badge type="warning" text="2" />|
@@ -149,7 +149,7 @@ tag:
 
 |游戏名|补正|
 | :-: | :-: |
-|近月少女的礼仪|-38min|
+|近月少女的礼仪|-39min|
 |アンレス テルミナリア|+2h20min|
 |Summer Pockets Reflection Blue|-9min|
 

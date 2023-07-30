@@ -9,10 +9,13 @@ tag:
 # node.js
 Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台执行环境。一言：集成开发环境，必装。
 
-npm 为 Node.js 的包管理器[^2]。
-[^2]: 比较广泛使用的包管理器还有 yarn。其各有优势，指令相似，可自行选择使用。[source](https://zhuanlan.zhihu.com/p/27449990)
-## [镜像](https://www.runoob.com/w3cnote/npm-switch-repo.html)
-## 基本命令
+[npm](#npm) 为 Node.js 的官方包管理器。此外比较广泛使用的包管理器还有 yarn 和 pnpm 等，其各有优势，可自行选择使用。yarn 在早期比 npm 强，现在优势[貌似不大](https://zhuanlan.zhihu.com/p/27449990)。pnpm 使用硬链接，在空间上具有很大优势，但普及度还是略逊一筹（可能难以找到非常规问题解法）。
+
+我对磁盘空间较为敏感，因此使用 pnpm。由于其文档问题，建议先熟悉 npm 命令后，再使用 pnpm 命令。
+## pnpm
+[用前必读](https://pnpm.io/zh/pnpm-cli#命令行)
+## npm
+### 基本命令
 ```sh
 npm search <package_name>   # 查找包
 npm install <package_name> [option] # 安装包
@@ -20,17 +23,18 @@ npm list -g --depth=0   # 列出全局包，不包含依赖
 npm update -g   # Update all global
 npm uninstall <package_name> [option] # 卸载包及其依赖
 ```
-如果需要重装所有 `node_modules`，可在 bash 中：`rm -rf node_modules && rm package-lock.json && npm cache clear --force`
-## 关于 --save
+* [镜像](https://www.runoob.com/w3cnote/npm-switch-repo.html)
+### 其他命令
+* 如果需要重装所有 `node_modules`，可在 bash 中：`rm -rf node_modules && rm package-lock.json && npm cache clear --force`
+* 更新依赖([ref](https://juejin.cn/post/6844903827599015944))：
+    ```sh
+    npm i -g npm-check
+    npm-check -u
+    ```
+### 关于 --save
 有时候会看到 `npm i xxx --save`，`--save` 是写入 `package.json` 的过程，而 npm 5 之后 install 会自动 save，不需要手动指定。一句话：**不用加**。
 ## 查询包大小
 查询 install size 可以使用 [Package Phobia](https://packagephobia.com/)。
-## 更新依赖
-([ref](https://juejin.cn/post/6844903827599015944))
-```sh
-npm i -g npm-check
-npm-check -u
-```
 ## 遇到的问题
 ### CORS policy
 在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。

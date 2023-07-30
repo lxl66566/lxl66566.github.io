@@ -64,6 +64,8 @@ tag:
     - [ ] *MIUI 10s*
 * koishi plugin:
     - [ ] advanced: wordle game
+* windows electron lib(runtime)
+* windows volume locker
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
 * 甩棍伞
