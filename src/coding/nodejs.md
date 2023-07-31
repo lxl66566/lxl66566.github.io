@@ -14,6 +14,10 @@ Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台
 我对磁盘空间较为敏感，因此使用 pnpm。由于其文档问题，建议先熟悉 npm 命令后，再使用 pnpm 命令。
 ## pnpm
 [用前必读](https://pnpm.io/zh/pnpm-cli#命令行)
+
+* 对于已有项目，请使用 `pnpm i --shamefully-hoist` 安装依赖（防炸）！[^1]
+* `npm init ...` == `pnpm create ...`
+[^1]: 感谢 Asuka Minato 解答
 ## npm
 ### 基本命令
 ```sh
@@ -68,3 +72,5 @@ npm ERR! sharp: Installation error: Request timed out
 难道真的山穷水尽了吗？不！再次 `npm i sharp` 后，经过漫长的等待，终于安装成功了！并且服务器也没有报错！
 
 总之，还是挺玄学的。
+## external
+1. [npm vs pnpm vs Yarn — Which Package Manager Reigns Supreme?](https://javascript.plainenglish.io/npm-vs-pnpm-vs-yarn-which-package-manager-reigns-supreme-a942d17a2051)

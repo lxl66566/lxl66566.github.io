@@ -21,3 +21,5 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。而且语法�
 * 由..原材料制成，看得出用`で`，看不出用`から` ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=383))
 * にとって　vs　に対して：前者有站在...角度来讲的意思 ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=2151))
 * 兎　的量词为 羽 ([source](https://japanknowledge.com/articles/kze/column_kaz_02.html))
+## 扩展
+1. [最好要记住的日语古代的读法](https://t.me/jp_study/2222)

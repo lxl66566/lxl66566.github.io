@@ -24,6 +24,7 @@ category:
     - [x] koishi plugin, like atri bot
     - [ ] C# learning and pull request to Tai, MisakaTranslator
     - [ ] lua
+    - [ ] tg 教务信息转发
 
 ## 日程库（不急）
 - [ ] [开发应用](../hide/inspiration.md#编程灵感)
