@@ -131,6 +131,10 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/icAdmharg2h)</span>
 ### [Bandizip](http://www.bandisoft.com/)
 闭源压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有追求，请移步 [7zip](https://www.7-zip.org/) | [NanaZip](https://github.com/M2Team/NanaZip)。
+
+初次使用前请按照如下教程设置（踩过坑了）：
+1. *设置 - 解压*，打开 *一次性解压 TGZ...* 下的 *即使是大体积的 TGZ...* 选项
+2. 如果你使用 [RAM Disk](../articles/ramdisk.md)，可以在 *设置 - 高级* 中，将临时文件夹设为 RAM Disk 路径
 <!-- ### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
 视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
 

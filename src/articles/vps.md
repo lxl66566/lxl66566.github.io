@@ -116,6 +116,8 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
     ```bash:no-line-numbers
     firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
     ```
+### 连通性测试
+[ping.pe](https://ping.pe/#)
 ## 包
 已安装：psmisc, nvim, firewalld, curl, fd, net-tools, nginx, fish, 
 ### nginx

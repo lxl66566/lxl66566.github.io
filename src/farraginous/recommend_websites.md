@@ -106,6 +106,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 * 物件音效：[音效](https://www.conservethesound.de/) | [音效2](https://www.ear0.com/) | [小森平](https://taira-komori.jpn.org/freesoundcn.html)
 * 搞笑音效：[爱给网](https://www.aigei.com/)
 * [AI配音](https://www.sd235.net/dubbingAI/detail/51)
+* [Mubert](https://mubert.com/render)：按 prompt 生成音乐，指定时长和气氛。free 5/mo，流程较为繁琐。
 ### [字体相关](https://www.zitijia.com/)
 ## 生活
 * [居家简易食谱](https://cook.yunyoujun.cn/)

@@ -15,7 +15,7 @@ Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台
 ## pnpm
 [用前必读](https://pnpm.io/zh/pnpm-cli#命令行)
 
-* 对于已有项目，请使用 `pnpm i --shamefully-hoist` 安装依赖（防炸）！[^1]
+* 如果直接使用 `pnpm i` 安装依赖后运行报错，请使用 `pnpm i --shamefully-hoist` 安装依赖！[^1]
 * `npm init ...` == `pnpm create ...`
 [^1]: 感谢 Asuka Minato 解答
 ## npm
