@@ -3,7 +3,7 @@ src/.vuepress/.cache/
 src/.vuepress/.temp/
 src/.vuepress/dist/
 demo/
-.github/
 images/
 *.py
 backup_only.sh
+# .github/
