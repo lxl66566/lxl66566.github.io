@@ -9,7 +9,7 @@ category:
 
 有关博客写作的问题请跳转[VuePress2与博客心得](./withvuepress2.md)。
 ## 20230507：qt6 项目构建失败
-问题描述：使用 cmake 与 xmake 构建 qt6 项目均失败。<text style="color:red;font-weight:bold">未解决！</text>
+问题描述：使用 cmake 与 xmake 构建 qt6 项目均失败。
 ### cmake
 项目结构：
 

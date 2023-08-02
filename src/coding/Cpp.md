@@ -13,9 +13,11 @@ tag:
 * [godbolt](https://godbolt.org/)：汇编分析；pastebin；不同编译器的行为分析
 ## 常见名词
 * UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`。
-## 配置 vscode 环境
-默认 Windows 下。
-### mingw + *C/C++*
+## 配置环境
+默认 Windows 下，使用 vscode 开发。如果使用其他系统 | IDE，请移步他出。
+### mingw + *Microsoft C/C++*
+> 使用此方法的好处是比较无脑，可以快速上手；可以直接点右上角 *运行* 按钮快速运行单文件。
+::: details archived，已不再使用此方式
 1. 下载安装 mingw 编译器。推荐使用 Windows 下包管理器进行安装（[scoop](../farraginous/recommend_packages.md#scoop) | [chocolatey](https://chocolatey.org/)），好处是无需手动配置环境变量。
     * 打开管理员下终端，执行 `choco install mingw`，按提示进行安装。安装后，默认位置应为`C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64`。（当然，得参考 chocolatey 安装位置）
 2. 在 vscode 中安装 *C/C++* 扩展。
@@ -24,28 +26,31 @@ tag:
 5. 同上打开命令面板，搜索并点击 `Tasks: Configure Default Build Task`，再选择 `C/C++: g++.exe build active file`。
 
 现在你已经可以在 vscode 中编译并运行 c++ 代码了。
-### clangd + xmake
-这里是进阶的环境配置。需要先安装好编译器（随便哪个），~~和一点对技术的渴望。（需要学习 xmake）~~
+:::
+### clang + clangd + xmake
+这里是进阶的环境配置。~~需要一点对技术的渴望（需要学习 [xmake](#xmake)）。~~
 
-> clangd 是一个基于Clang C++编译器的语言服务器，可以通过LSP协议向编辑器如VSCode、Vim、Emacs等提供语法补全、错误检测、跳转、格式化等功能。 —— GPT4
+> clangd 是一个基于 Clang C++ 编译器的语言服务器，可以通过 LSP 协议向编辑器如 VSCode、Vim、Emacs 等提供语法补全、错误检测、跳转、格式化等功能。 —— GPT4<br/>
+> Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可读性强、兼容性好等优势。- [ref](https://www.51cto.com/article/630677.html)
 
 相比 *C/C++* 扩展的 LSP，clangd 具有其他优点：
-1. 响应速度快。用过 *C/C++* 扩展 的人都知道其慢的一批。
-2. 格式化功能强大。
+1. 响应速度快。用过 *Microsoft C/C++* 扩展的人都知道其慢的一批。
+2. 格式化功能强大，高度自定义化。
 3. 支持 inlay hints
 
-而 xmake 也是向下兼容 cmake 的构建工具，拥有简洁的语法。~~我真的不想再面对一团乱麻的 cmake 了~~
-
-具体配置方式如下：
-1. 扩展：安装 *clangd - LLVM*, *XMake - tboox*
-2. 从 [scoop](../farraginous/recommend_packages.md#scoop) 安装 xmake：`scoop install xmake`
-3. `xmake create -l c++ -P ./cpp && cd cpp`，意思是在当前目录下创建项目`cpp`并进入
+配置方式如下：
+1. 扩展：安装 *clangd (LLVM)*, *XMake (tboox)*（习惯 CLI 的可以不装 xmake 扩展）
+2. 从 [scoop](../farraginous/recommend_packages.md#scoop) 安装 xmake, clangd, llvm：`scoop install xmake clangd llvm`
+3. `xmake create -l c++ -P ./cpp && cd cpp`（在当前目录下创建项目`cpp`并进入）
 4. `xmake && xmake r` 构建并运行。
 5. 设置格式化：在项目根目录运行 `clang-format.exe -style=llvm -dump-config > .clang-format`
     * 若找不到`clang-format.exe`可以使用[everything](../farraginous/recommend_packages.md#everything)搜索并用绝对路径启动，我的`clang-format.exe`路径为`C:\Users\<user_name>\.vscode\extensions\ms-vscode.cpptools-1.15.4-win32-x64\LLVM\bin\clang-format.exe`
     * 进入`.clang-format`编辑个性化设置。主要是把缩进调成 4（我的习惯）。其他具体项的意思可以自行搜索。
-### vscode 配置 Qt 开发环境
-由于 Qt 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。下述过程：
+### 配置 Qt 开发环境
+由于 Qt 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。其他 Qt 内容请[跳转 Qt](#qt)
+#### cmake + *Microsoft C/C++*
+> 默认已做过[之前](#mingw-microsoft-c-c)的环境配置。
+::: details archived，已不再使用此方式
 1. 假设你：
     * 安装了 Qt 与 cmake
     * vscode 已经安装好 cmake 与 C/C++ 扩展
@@ -64,10 +69,37 @@ rcc static.qrc -o static.cpp    // 如果有 qrc 文件则执行。
 ```cmake:no-line-numbers
 set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 path）
 ```
-
 然后就能~~愉快地~~构建了。
+:::
+#### xmake + clangd
+ 选用 xmake 作为 Qt 的构建系统是一个不错的选择。之前曾经出现过[一些问题](../gossip/difficulties.md#20230507-qt6-项目构建失败)，但 20230802 再次尝试已经可以正常使用。以 Mainwindow 项目为例： 
+1. 使用 Qt Creator 创建模版项目。（还是逃不开的，，<span class="heimu" title="你知道的太多了">除非有大叠特别熟练嘎嘎写完</span>
+2. `xmake.lua` 参考[官方文档](https://xmake.io/#/zh-cn/guide/project_examples?id=widgets-应用程序)
+    ```lua
+    add_rules("mode.debug", "mode.release")
+    target("qt_widgetapp")
+        add_rules("qt.widgetapp")
+        add_files("src/*.cpp")
+        add_files("src/mainwindow.ui")
+        add_files("src/mainwindow.h")
+    ```
+3. 可能需要指定 sdk：`xmake f --qt=D:\software\QtSDK\6.6.0`（你的 Qt 路径）
+4. [生成 compiler_commands.json](https://xmake.io/#/zh-cn/plugin/builtin_plugins?id=生成compiler_commands)，使 clangd 能够读取 includePath 等。一行：`xmake project -k compile_commands`
+5. `xmake && xmake r` 就能跑了。
+
+刚做完 2. 的时候会出现经典问题，找不到 `ui_mainwindow.h` 文件… 因为它是编译期生成的。。用 cmake 的时候需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，clangd 会自己去 build 里找。
 ## 构建系统
-最广泛使用的是 Cmake，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。所以我也不太好说。不过姑且我还是用着 xmake 的。
+最广泛使用的是用 *Cmake* 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
+### xmake
+xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmake 使用 lua 脚本作为构建系统语言。**~~我真的不想再面对一团乱麻的 cmake 了！~~**
+* 开始使用：use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install xmake` 一行安装。输入 `xmake -h` 了解更多。
+* *xmake.lua* 一定要加这句：`set_encodings("utf-8")`（之前没加导致 Qt 中文乱码）
+* 可以抢先使用 dev：`xmake update -s dev`
+* 至少得用个 c++20 吧：(*xmake.lua*)`set_languages("cxx20")`；注意，如果使用 `set_languages("cxxlatest")` 可能会出现问题，clangd 无法读取 *compiler_commands.json* 的 c++ 版本
+#### 指定工具链
+用惯了 mingw 和 msvc，想试试用 clang 编译，很简单：
+1. 安装 llvm: `scoop install llvm`
+2. 在 target 中添加一句 `set_toolchains("clang")` 即可。
 ## 类型转换
 >= C++11
 * `static_cast`：不进行安全检查
@@ -83,9 +115,7 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 * 可以使用 `std::make_shared<Type>()` 构建 (C++14)
 * `reset()` 不带参数则释放（== release()）
 ## 多行字符串
-```cpp:no-line-numbers
-R""(some text)""
-```
+Raw string: `R""(some\text)""`
 ## 面向对象
 protected：指能被子类访问，不能被外部访问的成员。
 
@@ -94,7 +124,7 @@ C++ 允许多继承，菱形继承需要将中间类声明为虚类。（不要�
 学过 rust 后，比较推崇 rust 中的 Option 的写法。C++ 中有 std::optional&lt;T> (C++17) 起到类似作用。
 * 一些函数：`has_value() -> bool`, `value() -> T`, `value_or(T) -> T`
 ## template
-[see here](https://github.com/wuye9036/CppTemplateTutorial).讲得非常不错。
+前往 [external 1.](#external)，讲得非常不错。
 ## variant
 错误处理的时候比较好用。类似<Badge text="?" /> rust Result.
 > [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato
@@ -122,14 +152,14 @@ std::visit(overloaded{
 ```
 （来源：[std::visit](https://en.cppreference.com/w/cpp/utility/variant/visit)）
 ## 程序计时
-程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) ~~大佬请直接看汇编结果~~
+程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) <span class="heimu" title="你知道的太多了">大佬能直接看汇编分析，但是太复杂还得 benchmark</span>
 ## 其他注意点
 * C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.
 * 慎用 C++20 的 std::ranges::remove_if()
 * 或许很难注意到的一些 [UB](#常见名词)：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，~~还有一些操作裸指针的~~ [source](https://zhuanlan.zhihu.com/p/391088391)
 ## Qt
 :::tip
-此处 Qt 版本大多为 Qt4-5，部分代码无法正常迁移至 Qt6.
+此处 Qt 部分版本代码为 Qt4-5，不保证能正常迁移至 Qt6.
 :::
 ### 基本介绍 --> [官网](https://www.qt.io/)
 Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用就是用Qt写的。对于C++开发GUI应用来说，Qt是比较简单快速的选择。
@@ -142,10 +172,16 @@ Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用
 以下内容并不是Qt基础的教程，缺乏目的性和针对性
 :::
 ### 安装
-* CLI: [aqtinstall](https://github.com/miurahr/aqtinstall)（我并未试过）
-* 官方 GUI: [qt.io](https://www.qt.io/zh-cn/download)
+> 推荐使用 CLI，快、用时短、空间占用小、无需登录
+* CLI: [aqtinstall](https://aqtinstall.readthedocs.io/en/latest/getting_started.html)
+    1. `scoop install aqtinstaller`
+    2. `aqt install-qt --outputdir D:\software\QtSDK windows desktop 6.6.0 win64_msvc2019_64`（别抄，意会一下；安装大小是 1.46G，已经很不错了）
+* 官方 GUI: [qt.io](https://www.qt.io/zh-cn/download)。
+
+如果你不想装重量级的 Visual Studio，你可以尝试安装 mingw 的 sdk，占用空间小点，不过配置会稍微麻烦一点
 ### 第三方
 一些可能会用到的第三方组件 / 框架。
+* [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)：窗口深色模式。
 * [FluentUI](https://github.com/zhuzichu520/FluentUI)：提供一套 UI 框架。
 ### 唤起最小化的窗口
 ```cpp:no-line-numbers
@@ -215,4 +251,6 @@ file.write(data);
 file.close();
 ```
 ## external
-1. [2020年 C++语言律师 等级考试 参考答案](https://www.bilibili.com/video/BV1et4y1D796/)
+1. [C++ Template 进阶指南](https://github.com/wuye9036/CppTemplateTutorial)
+2. [2020年 C++语言律师 等级考试 参考答案](https://www.bilibili.com/video/BV1et4y1D796/)
+3. [为什么看到这么多人不推荐 C++？](https://www.zhihu.com/question/22853451/answer/1847571322)

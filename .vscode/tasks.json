@@ -16,24 +16,10 @@
       }
     },
     {
-      "label": "release",
+      "label": "upload",
       "type": "shell",
-      "command": "${workspaceFolder}/release.sh",
-      "detail": "./release.sh",
-      "problemMatcher": [],
-      "options": {
-        "shell": {
-          "executable": "C:\\Program Files\\Git\\git-bash.exe",
-          "args": []
-        },
-        "cwd": "${workspaceFolder}"
-      }
-    },
-    {
-      "label": "backup",
-      "type": "shell",
-      "command": "${workspaceFolder}/backup_only.sh",
-      "detail": "./backup_only.sh",
+      "command": "${workspaceFolder}/upload.sh",
+      "detail": "./upload.sh",
       "problemMatcher": [],
       "options": {
         "shell": {

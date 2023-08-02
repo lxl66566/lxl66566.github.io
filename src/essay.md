@@ -17,6 +17,10 @@ tag:
 
 [前往我的频道](https://t.me/withabsolutex)查看更多随笔。
 ## 2023
+### 20230802
+Don't be nervous about mistakes.
+### 20230801
+Keep curious, keep learning.
 ### 20230731
 世间一大遗憾：好看的不露脸，露脸的不好看
 ### 20230730

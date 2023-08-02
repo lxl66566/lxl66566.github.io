@@ -15,6 +15,11 @@ category:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，更改过多）
 :::
 ## 2023
+### 20230802
+* [c++](../coding/Cpp.md) 新增内容
+### 20230801
+* 使用 pnpm 代替 npm 进行包管理
+* 设置自动部署并写进[心得](../gossip/withvuepress2.md)
 ### 20230729
 * 新增 [文章 - RAM Disk 横评](../articles/ramdisk.md)
 * 分类增强

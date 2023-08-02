@@ -24,6 +24,7 @@ tag:
 ## 收藏
 平时不用，但以后可能用得上。
 * [eu.org 免费域名](https://nic.eu.org/)
+* [TLD-LIST](https://zh-hans.tld-list.com/)：比较所有顶级域名的价格
 * [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
 ## AI 工具
 ### LLM

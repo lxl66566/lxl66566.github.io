@@ -149,7 +149,7 @@ tag:
 
 |游戏名|补正|
 | :-: | :-: |
-|近月少女的礼仪|-39min|
+|近月少女的礼仪|-40min|
 |アンレス テルミナリア|+2h20min|
 |Summer Pockets Reflection Blue|-9min|
 
@@ -260,7 +260,7 @@ tag:
 |游戏名|问题|
 | :-: | :-: |
 |Summer Pockets Reflection Blue|跟*終のステラ*同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png)![崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png)|
-|近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况。|
+|近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况；背景音乐调到最小(10%)还是太大，又不想关|
 |終のステラ|闪屏，backlog 文字颜色错乱![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/tsuinosutera_1.png)|
 |住在下体升级岛上的贫乳该如何是好？|<text style="color:red;">恶性 bug（善雅鸽汉化）：分辨率调整后黑屏，除了删档外无法解决；</text>出现点击无响应情况；贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
 |NEKOPARA vol.4|<text style="color:red;">恶性 bug：推进量达到某一阈值时则崩溃；游戏内打开其他全屏游戏时卡死</text>![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png)![贴图错误](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png)|

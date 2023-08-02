@@ -91,7 +91,7 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 scoop bucket add extras # 建议安装后先运行，extras 包含了更多包
 scoop search <name>     # 搜索包
 scoop install <name>    # 安装包
-scoop update <name>     # 更新包
+scoop update <name>     # 更新包，* 表示全部
 ```
 其他指令：
 ```sh
