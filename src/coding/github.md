@@ -13,8 +13,7 @@ tag:
 Github是全球最大的~~同性交友平台~~ 源代码托管服务平台，拥有良好的开源生态，是开发者的圣地。<span class="heimu" title="你知道的太多了">（我乱写的）</span>
 
 ## 给新人
-如果你没听说过 Github，或者知道它但却不会下载，请看完此条目。
-
+::: details 如果你没听说过 Github，或者知道它但却不会下载，请看完此条目
 * 首先，github服务器在国外，国内访问速度慢且有几率连接不上。请：
     * 使用校园网访问
     * 使用加速器访问，如 [steam++](../farraginous/recommend_packages.md#steam) 或 [dev-sidecar](https://github.com/docmirror/dev-sidecar)
@@ -56,16 +55,17 @@ A: 此处我假设会看此条目的都是Windows&Android用户。
 在此之前，你需要有一个 Github 账号，创建一个属于你自己的仓库。
 
 Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
+:::
 ## 下载仓库
 几种方法都可使用，请选择以下一种，自行查指令。
 1. `git clone`
 2. `git init && git pull`
 3. `git init && git fetch && git checkout`
 
-下面的一个方法下载仓库文件而不包含 .git 信息：
+下面的方法下载仓库文件而不包含 .git 信息：
 4. CDN：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`
+5. 点击 download zip 下载
 ## 搜索技巧
-### 仓库搜索
 搜索格式与你的关键词使用空格隔开。你也可以使用 [Github 官方提供的高级搜索](https://github.com/search/advanced)界面。
 
 |格式|作用|样例|
@@ -77,7 +77,18 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 |fork:|指定fork数范围|类比|
 |language:|指定程序语言|`language:c#`|
 |pushed:|指定最近更新时间范围|`pushed:>2022-01-01`|
-### [代码搜索](https://docs.github.com/zh/search-github/github-code-search/understanding-github-code-search-syntax)
+
+在这里查看[代码搜索](https://docs.github.com/zh/search-github/github-code-search/understanding-github-code-search-syntax)的详细信息。
+## 批量下载 Release
+我需要批量下载某个 Release 中的所有文件。首先，**需要保证这个仓库是 Public 的**。<span class="heimu" title="你知道的太多了">被坑了，我是傻杯</span>
+* 一个方法是手动复制所有链接，然后用 [Ditto](../farraginous/recommend_packages.md#ditto) 批量粘贴到 AriaNgGUI/IDM 等下载器下载。
+    * 由于我使用 XDM 而批量下载抽风了，于是只好 `scoop install aria-ng-gui` 下载了一个万恶的 electron 下载器下载。
+* 另一个方法是用命令行下载（[ref](https://www.bilibili.com/read/cv21459907)）。打开我的 ArchWSL，配好代理和路径：
+    ```sh
+    sudo pacman -Syy    # 更新缓存
+    sudo pacman -S aria2 jq
+    curl -s https://api.github.com/repos/<USERNAME>/<REPONAME>/releases/latest | jq -r '.assets[].browser_download_url' | aria2c -c -s 16 -x 16 -k 1M -i -
+    ```
 ## Github Workflow
 Github 工作流，极为强大。可以理解为一个虚拟机。[官方文档](https://docs.github.com/cn/actions/using-workflows/about-workflows)
 
@@ -93,4 +104,4 @@ on:
 定时任务: 使用 cron 表达式。[此处](https://crontab.guru/)可在线计算表达式。
 > 注意，定时任务时间为中时区（UTC），并且会出现 0-60+ min 的延时，若有精确执行需求请使用其他服务商提供的云函数
 
-手动任务：使用 `workflow_dispatch`。强烈建议不要再使用 `on:push` 进行手动运行控制。
+手动任务：使用 `workflow_dispatch`；建议每个 workflow 都加一个方便调试。不要再使用 `on:push` 进行**手动运行控制**。

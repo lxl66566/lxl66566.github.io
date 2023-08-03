@@ -80,6 +80,9 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
 16. ~~开启全局 UTF-8：*设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8...*~~ 实测会导致一些 galgame 乱码。
 17. 文件夹与文件改为单击。
 18. 在 *Internet 选项 - 高级* 中，打开 TLS 1.3
+19. [组织管理滚](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c)
+20. [关闭自动更新](https://answers.microsoft.com/zh-hans/windows/forum/all/要彻底关闭win11/3c448d50-2e7f-42df-9fdb-f7f9aa9820ec)，我只需手动更新。
+    * 既然无需经常更新，那就[关闭传递优化](https://blog.51cto.com/u_13464709/2057007)，并且用磁盘清理清一下这位占用的空间。
 ## 我使用的软件们
 20230607，我的 windows 11 开机自启动的托盘软件有：[XDM](../farraginous/recommend_packages.md#xdm), Ditto, [parsec](../farraginous/recommend_packages.md#parsec), V2rayN, [f.lux](../farraginous/recommend_packages.md#flux), [everything](../farraginous/recommend_packages.md#everything), 火绒, [Tai](../farraginous/recommend_packages.md#tai), [flameshot](../farraginous/recommend_packages.md#flameshot)，[Quiet on the Set?](https://github.com/troylar/quiet-on-the-set)
 ## 设置开机自启动
@@ -120,6 +123,7 @@ Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /AL
     1. *属性 - 安全 - 高级*，更改所有者为当前用户。
     2. 然后在下面选择 *Users* 那一栏，编辑，改为完全控制。
     3. 一路确定即可。
+不过之后清理 WinSxS 的时候又没法用了。。
 ## 遇到的问题
 ### 端口随机占用
 win11 下有时代理软件端口突然无法使用，有时测试网站localhost端口无法使用，随机性很强。于是去搜了下[解法](https://www.cnblogs.com/fanqisoft/p/17071121.html)。
