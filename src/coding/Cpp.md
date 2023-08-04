@@ -14,7 +14,7 @@ tag:
 ## 常见名词
 * UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`。
 ## 配置环境
-默认 Windows 下，使用 vscode 开发。如果使用其他系统 | IDE，请移步他出。
+默认 Windows 下，使用 vscode 开发。如果使用其他系统 | IDE，请移步他处。
 ### mingw + *Microsoft C/C++*
 > 使用此方法的好处是比较无脑，可以快速上手；可以直接点右上角 *运行* 按钮快速运行单文件。
 ::: details archived，已不再使用此方式
@@ -250,6 +250,8 @@ QByteArray data(jDoc.toJson());
 file.write(data);
 file.close();
 ```
+## 潜伏知识
+* C++ 开源 json 库性能好的有 simdjson 和 sonic；[benchmark](https://github.com/miloyip/nativejson-benchmark), but out of date
 ## external
 1. [C++ Template 进阶指南](https://github.com/wuye9036/CppTemplateTutorial)
 2. [2020年 C++语言律师 等级考试 参考答案](https://www.bilibili.com/video/BV1et4y1D796/)

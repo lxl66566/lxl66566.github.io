@@ -468,10 +468,13 @@ function sidebar() {
 
 [官方说](https://theme-hope.vuejs.press/zh/guide/advanced/feed.html)是说支持，还内置，但是并不能用...首先 VuePress Theme Hope 文档的描述就比插件文档描述少了东西，比如 `hostname`。其次我配置好以后并不知晓如何获取 `rss.xml`，官方示例使用默认主题配置，使用外部导入的插件，没有参考意义。
 ## 自动部署
+* 已提 [issue](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3332)
+
 使用 pnpm 指令 `pnpm create vuepress-theme-hope my-docs` 创建模版项目后，自动生成的 *.github/workflows/deploy-docs.yml* 并不能在 Github actions 中成功构建，报错：
 > Error: Error: No pnpm version is specified.<br/>
 > Please specify it by one of the following ways:<br/>
 >     - in the GitHub Action config with the key "version"
+
 解法可以参考 [pnpm 文档](https://pnpm.io/zh/continuous-integration#github-actions)，加一条 `version: 8` 即可。
 ## external
 1. [No CSS Club](https://nocss.club/)

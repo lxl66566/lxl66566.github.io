@@ -42,6 +42,7 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
         Port 443
         ProxyCommand connect -H 127.0.0.1:<port> %h %p
     ```
+    也可以将 `-H` 换为 `-S` 以使用 socks 代理。（[ref](https://hanyuzhou.com/2022/03/06/connect-with-ssh-through-a-proxy/)）
 3. 其他全局设置
     ```sh
     git config --global push.default current    # 设置默认推送，简化 git push
