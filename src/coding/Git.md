@@ -12,9 +12,11 @@ tag:
 *Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. ——[git-scm.com](https://git-scm.com/)*
 
 版本控制，可以进行备份，协同开发。*Github 只支持 Git 作为唯一的版本库格式进行托管。*
+## 学习
+[learngitbranching](https://learngitbranching.js.org/?locale=zh_CN)对学习 git 有一定帮助。
 ## 安装与配置
 ### 安装
-git 在 windows 下的安装也算是一门学问。一共十几个步骤选项极其折磨[^5]。因此建议先了解下 Git 的基本知识。
+git 在 windows 下的安装也算是一门学问。一共十几个步骤选项极其折磨[^5]。因此建议先了解下 Git 的基本知识。更推荐的安装方法是 [scoop](../farraginous/recommend_packages.md#scoop)：`scoop install git`。
 [^5]: 当然你也可以一路确定，没什么大问题，就是占用空间多一点罢了
 
 下载安装 git 后，在任意目录右击即可看到 Git Bash Here （命令行界面）（若安装时使用默认选项，还会出现 *Git GUI Here（图形界面）*）。本文仅介绍 Git Bash 用法。
@@ -42,7 +44,7 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
         Port 443
         ProxyCommand connect -H 127.0.0.1:<port> %h %p
     ```
-    也可以将 `-H` 换为 `-S` 以使用 socks 代理。（[ref](https://hanyuzhou.com/2022/03/06/connect-with-ssh-through-a-proxy/)）
+    也可以将 `-H` 换为 `-S` 以使用 socks 代理，若 http 代理失效，可使用。（[ref](https://hanyuzhou.com/2022/03/06/connect-with-ssh-through-a-proxy/)）
 3. 其他全局设置
     ```sh
     git config --global push.default current    # 设置默认推送，简化 git push
@@ -50,6 +52,9 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
     git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见 external 1.
     ```
 [^6]: 需要使用 [Vim](./vim.md)。若不想用，请自行搜索 `git bash 更改默认编辑器`
+### 基础
+* 在 windows git bash 中，`ctrl + insert` 复制，`shift + insert` 粘贴
+* 执行 git 命令前，请确认当前目录是否正确
 ## 常用命令
 ### 创建仓库
 ```sh
@@ -60,28 +65,26 @@ git init
 因此若要删除仓库，最快捷的方法就是直接删除`.git`文件夹。
 > 在 windows 下由于权限问题会出现无法删除的情况，此时请在 bash `rm -rf .git`
 ### 添加文件
+将文件添加到暂存区。
 ```sh
-git add *.py            #添加所有后缀为 .py 的文件
-git add dirname         #添加文件夹
-git add -A              #添加仓库内所有文件与文件夹
+git add *.py    # 添加所有后缀为 .py 的文件
+git add dirname # 添加文件夹
+git add -A      # 添加仓库内所有文件与文件夹
 ```
 关于“添加所有文件”不同方法的差异，请看[这里](https://www.jb51.net/article/191458.htm)
 
-该方法用于将文件添加到暂存区。
-
+推荐[使用 `.gitignore`](#忽略文件-夹)，然后都直接 `git add -A`。
 ### 提交
-添加文件后需要将暂存区的文件打包（commit，提交）到仓库内。
+添加文件后需要将暂存区的文件提交（commit）到仓库内。
 ```sh
 git commit -m "注释"
 ```
+使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以选择其一：
+1. 分批 add，并每次 commit 不同的注释
+2. 一次性 add，并每次使用 `git commit file1.xxx file2.xxx -m '...'` 命令打包。
 
-请注意，使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以选择其一：
-
-1. 分批add，并每次commit不同的注释
-2. 一次性add，并每次使用`git commit file1.xxx file2.xxx -m ''`命令打包。
-
-> 注释也可单引号，有的终端环境使用单引号会报错<br/>
-> ssh密钥生成后首次添加注释可能会出现额外提醒，请根据提示照做
+> 有的终端环境注释使用单引号会报错，需要双引号<br/>
+> ssh 密钥生成后首次添加注释可能会出现额外提醒，请根据提示照做
 #### 撤销提交
 * 撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
 * 修改注释：`git commit --amend`，(git bash 下) 需要使用 [Vim](../coding/vim.md)，需要强制推送。
@@ -91,33 +94,39 @@ git commit -m "注释"
 1. `git rebase -i HEAD~2`
 2. 留出一个主 commit 不改变，将其余 commit 的 `pick` 改为 `squash`，保存关闭。
 3. 下一个页面是更改注释的，可以直接关闭。
-### 上传与远程仓库
-将你的仓库上传到github等平台。
-#### 连接
-优先使用 ssh。origin 为远程别名，可自定义
+### 连接远程仓库
 ::: code-tabs
 @tab SSH
 ```sh
-git remote add origin git@github.com:yourgithubID/gitRepo.git
+git remote add origin git@github.com:<yourgithubID>/<Repo>.git
 ```
 @tab HTTPS
 ```sh
 git remote add origin https://github.com/yourgithubID/gitRepo.git
 ```
 :::
-::: tip
-注：首次使用ssh连接需要先配置ssh证书。
+> 优先使用 ssh，不过需要配置<br/>
+> 可以理解为给后面那串玩意起了个别名，方便记忆。一般都用 `origin`。
+
+其他指令：
 ```sh
-cd ~        # 进入 home 目录，若已进入请忽略
-ssh-keygen -t rsa -C "youremail@example.com"
-            # 然后一路回车
-clip < ~/.ssh/id_rsa.pub    # 复制密钥至剪切板
-            # 点击github右上角头像，进入Settings-SSH and GPG keys，新建你的ssh key并粘贴内容，标题可不写
-ssh -T git@github.com       #你可输入该命令验证是否成功
+git remote show <name>  # 查看远程仓库，name 留空即为列出当前远程仓库列表
+git remote rm <remote name> # 删除远程仓库
 ```
-:::
+### 上传
+将你的仓库上传到 github 等仓库托管平台。
+::: tip
+注：首次使用ssh连接需要先配置 ssh 密钥。在 git bash 中输入下述指令。若不使用 *git bash*，请理解指令意思后自行操作
+```sh
+cd ~    # 进入 home 目录（windows 下即为 C:/Users/<your windows user name>）
+ssh-keygen -t rsa -C "youremail@example.com"    # 然后一路回车
+clip < ~/.ssh/id_rsa.pub    # 复制公钥内容至剪切板
+# 点击github右上角头像，进入Settings-SSH and GPG keys，新建你的 ssh key 并粘贴内容。标题随便写。
+ssh -T git@github.com   # 输入该命令验证是否成功
+```
 * （疑难解答[^1]：*ssh密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误*）
 * （疑难解答[^2]：*复制密钥时遇到`bash: clip: command not found`错误*）
+:::
 [^1]: > 尝试连接GitHub的443端口。
     > ```sh
     > vim ~/.ssh/config
@@ -134,20 +143,13 @@ ssh -T git@github.com       #你可输入该命令验证是否成功
 [^2]: > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
 
     不过这只是复制一个密钥的事，用不着那么麻烦。执行 `cat ~/.ssh/id_rsa.pub` 并手动复制你的密钥即可。
-#### 上传
-请确保已连接远程仓库。
-```sh
-git push origin <branch> # branch 为当前分支
+
+请确保已[连接远程仓库](#连接远程仓库)。
+```sh:no-line-numbers
+git push origin <branch>    # branch 为当前分支
+git push origin <branch> -u     # 将当前分支设为默认
+git push origin <branch> -f     # 强制覆盖上传，慎用
 ```
-
-你也可以在`push`命令后加入`-u`参数，代表将当前分支设为默认。`-f`参数代表强制推送，即强制覆盖上传，慎用。
-
-#### 删除
-
-```sh
-git remote remove origin
-```
-
 :::tip 提示
 至此，你已经可以完成github等平台的文件上传了。
 
@@ -157,13 +159,13 @@ git remote remove origin
 * 查看仓库内文件：`git ls-files`
 * **查看仓库状态：`git status`**，比较重要
 * 查看仓库提交记录：`git log`
-* 查询远程仓库信息：`git remote show <name>`，name 可留空
 * 查询 commit 详细信息：`git show --stat [commit]`；`[commit]` 留空则查询最近一次 commit 的信息
-### 更改分支
+### 分支
 ```sh
 git branch                      # 查看分支
 git branch <new_branch_name>    # 新建分支
 git checkout <branch_name>      # 切换到分支
+git checkout -b <branch_name>   # 新建并切换到分支，trick
 git branch -m old_name new_name # 重命名分支
 git branch --delete <branch_name>   # 删除分支
 ```
@@ -187,13 +189,13 @@ git reset --hard origin/main    # 强制恢复，忽略更改，但不删除新�
 如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新source code。（release 信息会被保留，状态更改为 draft）
 
 仅删除远程tag：`git push origin :refs/tags/TAGNAME`
-## 忽略文件(夹)
+## 其他技巧
+### 忽略文件(夹)
 在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。
 :::warning
-协同开发时请务必将你的无关文件添加进 `.gitignore`。
+开发时请务必将你的无关文件添加进 `.gitignore`。
 :::
 注意其语法与 linux 文件系统类似，`/` 开头的为根目录，别搞错了。
-## 其他技巧
 ### 自动化脚本
 1. 新建 `xxx.sh`，输入你需要的所有指令语句，以换行隔开。
 2. 双击运行或 `bash xxx.sh`
@@ -216,7 +218,6 @@ git commit -m $(get-Date)
 # result: 06/17/2023 21:05:13
 ```
 :::
-注意，请选择合适的终端环境。
 ### 用于备份
 有了 `.sh` 脚本后，我们就能很轻松地在 Github 上备份自己的文件。请 ChatGPT 讲一下移动与覆盖：
 > cp 是一个在 Bash shell 中用来复制文件和目录的命令。与 cp 命令一起使用的选项控制了复制的方式。这里是每个选项的含义：

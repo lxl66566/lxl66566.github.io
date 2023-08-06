@@ -96,6 +96,7 @@ category:
 |[ATID-522](https://www2.javhdporn.net/video/atid-522)|5.7|6.6|
 |[STARS-495](https://www2.javhdporn.net/video/stars-495c/)|5.7|6.5|
 |[SHKD-996](https://www2.javhdporn.net/video/shkd-996)|6|6|
+|[SVDVD-750](https://missav.com/zh/svdvd-750)|6|5.9|
 |[MVSD-525](https://jable.tv/videos/mvsd-525/)|6.3|5.5|
 |[MIDE-525](https://www2.javhdporn.net/video/mide-525)|6|5.7|
 |[IPX-203](https://missav.com/ipx-203)|5|6.7|
@@ -109,6 +110,7 @@ category:
 |[SSIS-306](https://jable.tv/videos/ssis-306/)|7.5|3|
 |[CAWD-041](https://www2.javhdporn.net/video/cawd-041)|4.6|5.8|
 |[IPX-699](https://www2.javhdporn.net/video/ipx-699)|4|6.1|
+|[PIYO-027](https://missav.com/zh/piyo-027)|5|5|
 |[HMN-152](https://www2.javhdporn.net/video/hmn-152c)|2|7.9|
 |[DVDMS-002](https://missav.com/dvdms-002)|3.8|6|
 |[HNDS-075](https://www2.javhdporn.net/video/HNDS-075c/)|5|4.7|
@@ -123,6 +125,7 @@ category:
 |[STARS-042](https://sextb.net/stars-042-us)|1|7.6|
 |[MIDE-422](https://www2.javhdporn.net/video/mide-422)|5|3|
 |[ABW-018](https://www2.javhdporn.net/video/abw-018/)|4|4|
+|[IPZZ-008](https://www4.javhdporn.net/video/ipzz-008-decensored/)|4|4|
 
 *（顺序记录到miaa-604，剩下的逆序改天，我鉴不动辣）*
 
