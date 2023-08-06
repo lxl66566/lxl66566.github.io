@@ -48,6 +48,9 @@ tag:
 * pdf 无损图片压缩
 * 轻量级 pdf 演示
 * b站历史记录搜索
+* B站直播增强
+    * 弹幕区域取消，发送弹幕放在视频下方
+    *  f 全屏
 * 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 * html yaml extransfer
 * 录音机 app，抓住日常的每一个瞬间

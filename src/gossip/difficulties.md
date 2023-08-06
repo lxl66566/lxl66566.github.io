@@ -83,6 +83,11 @@ xmake
 > error: LINK : fatal error LNK1181: 无法打开输入文件“Qt6Gui.lib”
 
 Qt sdk lib 里没有 `Qt6Gui.lib`，全是 `.prl` 文件（和 `.a`）。xmake 的资料太少，网上也缺少问题解法。
+
+之后使用 aqtinstaller 装了另一套 qt sdk，然后就能 `xmake && xmake r` 跑了。。但是程序用 windeployqt/windeployqt6 打包以后又寄了，运行报错跟[这个](https://stackoverflow.com/questions/57631383/qimageqeaaqeav0z-could-not-be-located-in-dll)差不多。
+
+然后发现两个版本 Qt 并存问题，抱着试试看的心态，把老 Qt 环境变量删了，加了新 Qt 的 `PATH`，然后能本机跑。但是当我删掉 `PATH`，windeployqt6 打包，补全提示缺失的 dll 再运行，最后给我报了：
+> This application failed to start because no Qt platform plugin could be initialized.
 ### 说两句
 感觉 c++ 项目管理差不多了，cmake 抽象得一批，xmake 又 bug 频发
 ## 20230221：网站访问问题

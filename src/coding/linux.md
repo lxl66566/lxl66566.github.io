@@ -14,7 +14,7 @@ tag:
 
 VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 外部包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop
 * 我计划装的包：Joshuto
 ## Terminal 基础
 `<C-a>` 代表 `Ctrl + a`.
@@ -163,3 +163,5 @@ sudo updatedb   # 更新缓存，使用前执行
 sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。
+## external
+1. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)

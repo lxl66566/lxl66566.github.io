@@ -87,7 +87,7 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 4. [生成 compiler_commands.json](https://xmake.io/#/zh-cn/plugin/builtin_plugins?id=生成compiler_commands)，使 clangd 能够读取 includePath 等。一行：`xmake project -k compile_commands`
 5. `xmake && xmake r` 就能跑了。
 
-刚做完 2. 的时候会出现经典问题，找不到 `ui_mainwindow.h` 文件… 因为它是编译期生成的。。用 cmake 的时候需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，clangd 会自己去 build 里找。
+刚做完 2. 的时候会出现经典问题，clangd 报*找不到 `ui_mainwindow.h` 文件*… 因为它是编译期生成的。。用 cmake 的时候需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，clangd 会自己去 build 里找。
 ## 构建系统
 最广泛使用的是用 *Cmake* 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
 ### xmake
