@@ -57,7 +57,7 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
 * 执行 git 命令前，请确认当前目录是否正确
 ## 常用命令
 ### 创建仓库
-```sh
+```sh:no-line-numbers
 git init
 ```
 创建仓库后，目录下出现`.git`隐藏文件夹，即为仓库本体。
@@ -76,7 +76,7 @@ git add -A      # 添加仓库内所有文件与文件夹
 推荐[使用 `.gitignore`](#忽略文件-夹)，然后都直接 `git add -A`。
 ### 提交
 添加文件后需要将暂存区的文件提交（commit）到仓库内。
-```sh
+```sh:no-line-numbers
 git commit -m "注释"
 ```
 使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以选择其一：
@@ -267,7 +267,7 @@ git 官方推荐的清理工具。
 我使用 `scoop` 安装，安装过程详见仓库说明。（疑难解答[^4]：*运行`git filter-repo`出现`name 'git' is not defined`报错*）关于使用方法，~~没人能看懂官方文档~~，建议直接找教程。
 [^4]: 根据[这里](https://github.com/newren/git-filter-repo/issues/360)的描述做就行了。
 
-```sh
+```sh:no-line-numbers
 git filter-repo --invert-paths -f --path "<path/of/file>"
 ```
 

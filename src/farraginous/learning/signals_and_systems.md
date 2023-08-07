@@ -215,15 +215,13 @@ Nyquist frequency: 2wm
 > [单边移位公式](https://www.bilibili.com/video/BV1g94y1Q76G/?p=60&t=3258)
 * z域微分性质：<span v-pre>$\displaystyle nx[n] \rightarrow -zX'(z)$</span>，收敛域不变
 * 序列指数加权：<span v-pre>$\displaystyle a^nx[n] \rightarrow X(z/a)$</span>，收敛域扩大 a 倍
-* 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n] \rightarrow X(z^k)$</span>，收敛域 R^{1/k}[^2]
+* 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n] \rightarrow X(z^k)$</span>，收敛域 R^{1/k}
 * 卷积性质
 * 累加性质：等于与 u[n] 卷积
 * 与离散 fourier 的联系：z = e^jw
 * 因果信号
     * 初值定理：<span v-pre>$\displaystyle x[0] \rightarrow X(+\infty)$</span>
     * 终值定理：<span v-pre>$\displaystyle x[+\infty] \rightarrow lim_{z\to 1}(z-1)X(z)$</span>
-
-[^2]: #性质
 #### 收敛域性质
 * 有限长序列，收敛域全平面
 * 右/左/双边序列，收敛域圆外/内/环

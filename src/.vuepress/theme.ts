@@ -34,7 +34,7 @@ export default hopeTheme({
   navbarLayout: {
     start: ["Brand"],
     center: ["Links"],
-    end: ["Repo", "TelegramLink", "Outlook", "Search"],
+    end: ["Repo", "TelegramLink", "rssLink", "Outlook", "Search"],
   },
   plugins: {
     blog: true,
@@ -56,7 +56,7 @@ export default hopeTheme({
       // attrs: true,
       imgLazyload: true,
       figure: true,
-      mathjax: true,
+      katex: { copy: true },
       mark: true,
       footnote: true,
       tabs: true,
@@ -75,10 +75,16 @@ export default hopeTheme({
         },
       ],
     },
-    // feed: {
-    //   rss: true,
-    //   icon: "/logo.jpg",
-    //   count: 20,
-    // },
+    feed: {
+      rss: true,
+      icon: "/logo.jpg",
+      count: 20,
+    },
+    pwa: {
+      maxSize: 4096,
+      cacheHTML: true,
+      cachePic: true,
+      update: "hint",
+    },
   },
 });

@@ -91,3 +91,5 @@ ___
 <text style="color:red;">红色字体</text>
 
 强制添加空格&nbsp;&nbsp;&nbsp;&nbsp;，&lt;尖括号&gt;
+## external
+1. [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)

@@ -96,6 +96,13 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 * *xmake.lua* 一定要加这句：`set_encodings("utf-8")`（之前没加导致 Qt 中文乱码）
 * 可以抢先使用 dev：`xmake update -s dev`
 * 至少得用个 c++20 吧：(*xmake.lua*)`set_languages("cxx20")`；注意，如果使用 `set_languages("cxxlatest")` 可能会出现问题，clangd 无法读取 *compiler_commands.json* 的 c++ 版本
+* 添加包，例如 fmt：(*xmake.lua*)
+    ```lua
+    add_requires("fmt")
+    target("test")
+        ...
+        add_packages("fmt")
+    ```
 #### 指定工具链
 用惯了 mingw 和 msvc，想试试用 clang 编译，很简单：
 1. 安装 llvm: `scoop install llvm`

@@ -88,7 +88,7 @@ while(alive)
 * [运动](./sports.md)
 * 放松眼睛
 ## [运动记录](./sports.md)
-## xx_interval
+## 克己
 无题。
 
 <iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300" loading="lazy"></iframe>

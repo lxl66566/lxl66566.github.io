@@ -464,9 +464,11 @@ function sidebar() {
 2. 在 `client.ts` 中[手动注册](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/client.ts)。
 3. 在 `theme.ts` 中[引入](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/9baaa2ffac93f9952a244b39769e7dc6c598a611/docs-shared/src/theme-wrapper.ts#L48)。
 ## 添加 rss 订阅
-* （未解决）
-
 [官方说](https://theme-hope.vuejs.press/zh/guide/advanced/feed.html)是说支持，还内置，但是并不能用...首先 VuePress Theme Hope 文档的描述就比插件文档描述少了东西，比如 `hostname`。其次我配置好以后并不知晓如何获取 `rss.xml`，官方示例使用默认主题配置，使用外部导入的插件，没有参考意义。
+
+后来发现 dev 没法使用，但是 build 后在 dist 内会生成 `rss.xml`，就可以订阅了。
+### 添加订阅图标
+模仿 [telegram 图标](#navbar-添加组件) 添加。首先替换链接，再去找个 rss 的 svg，替换 `<path d=...>` 内容；替换 `viewBox` 内容（没错，我踩坑了）即可。<details><summary>点击展开</summary><p>不熟悉 svg 是这样的</p></details>
 ## 自动部署
 * 已提 [issue](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3332)
 
@@ -476,5 +478,9 @@ function sidebar() {
 >     - in the GitHub Action config with the key "version"
 
 解法可以参考 [pnpm 文档](https://pnpm.io/zh/continuous-integration#github-actions)，加一条 `version: 8` 即可。
+## hope theme template build error
+20230807，使用 pnpm 指令 `pnpm create vuepress-theme-hope my-docs` 创建模版项目后，执行 `pnpm docs:build` 会报错。原因是依赖未更新，Github 上的依赖更新未同步至 npmjs [create-vuepress-theme-hope](https://www.npmjs.com/package/create-vuepress-theme-hope)。
+
+解法：在 `package.json` 中将 vue 版本改为 `^3.3.4` 并执行 `pnpm i` 更新依赖。
 ## external
 1. [No CSS Club](https://nocss.club/)
