@@ -1,0 +1,2272 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="https://mister-hope.github.io/rss.xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <atom:link href="https://mister-hope.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    <title>绝对值_x的博客</title>
+    <link>https://mister-hope.github.io/</link>
+    <description>没什么有价值的内容的，真的！</description>
+    <language>zh-CN</language>
+    <pubDate>Mon, 07 Aug 2023 18:28:52 GMT</pubDate>
+    <lastBuildDate>Mon, 07 Aug 2023 18:28:52 GMT</lastBuildDate>
+    <generator>vuepress-plugin-feed2</generator>
+    <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>推荐</category>
+    <category>教程</category>
+    <category>评价</category>
+    <category>经历</category>
+    <category>编程</category>
+    <category>随笔</category>
+    <category>作者</category>
+    <category>导航</category>
+    <category>生活</category>
+    <item>
+      <title>RAM Disk 横评</title>
+      <link>https://mister-hope.github.io/articles/ramdisk.html</link>
+      <guid>https://mister-hope.github.io/articles/ramdisk.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">RAM Disk 横评</source>
+      <description>RAM Disk 横评 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 你可以直接阅读总结。 使用指南 本文默认使用 Windows 系统。 在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）被坑了好几天 安装 RAM Disk 软件并挂载。 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）</description>
+      <category>推荐</category>
+      <category>教程</category>
+      <category>评价</category>
+      <category>经历</category>
+      <pubDate>Sat, 29 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> RAM Disk 横评</h1>
+<p>RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。</p>
+<blockquote>
+<p>你可以直接<a href="#%E6%80%BB%E7%BB%93">阅读<code>总结</code></a>。</p>
+</blockquote>
+<h2> 使用指南</h2>
+<p>本文默认使用 Windows 系统。</p>
+<ol>
+<li>在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span></li>
+<li>安装 RAM Disk 软件并挂载。</li>
+<li>将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）</li>
+</ol>
+<h2> ERAM</h2>
+<p><a href="https://github.com/topics/ramdisk" target="_blank" rel="noopener noreferrer">Github ramdisk topic</a> 的第一名。但是呢，直接卡在安装上了。。如何使用？文档在何方？README 早已过时，于是开源阵营 RAM Disk 阵亡。<s>（樂</s></p>
+<h2> AMD Radeon RAMDISK</h2>
+<p>免费版只能开 4G，太商业了，<s>只有 4G 我能存下 yuzusoft 的压缩包吗？下一个。</s></p>
+<h2> <a href="https://www.majorgeeks.com/files/details/softperfect_ram_disk.html" target="_blank" rel="noopener noreferrer">Softperfect RAM Disk</a></h2>
+<ul>
+<li>不得不说，<strong>Softperfect 的 UI 是本横评中最好的一个</strong>。</li>
+<li>还有添加开机启动的小玩具。</li>
+<li>可一键设置 <code>$Temp</code> 环境变量。</li>
+<li>缺点：
+<ol>
+<li>（也许不算缺点）会一直占用一个托盘图标。</li>
+<li>有时关机会出现蓝屏。</li>
+</ol>
+</li>
+</ul>
+<h2> StarWind RAM Disk</h2>
+<ul>
+<li>官网下载需要注册，需要非中国号码。。</li>
+<li>不能更换盘符与文件格式（默认 FAT32，最大支持 file size = 4GB，显然不够）。</li>
+<li>UI 很老，win11 下有 bug（标题栏被挤没）</li>
+<li>无中文翻译。</li>
+</ul>
+<h2> <a href="https://sourceforge.net/projects/imdisk-toolkit/" target="_blank" rel="noopener noreferrer">ImDisk Toolkit</a></h2>
+<ul>
+<li><strong>本横评中唯一一个带有动态内存分配功能的软件！</strong> 动态内存分配指的是往 RAM Disk 里放多少东西就吃多少内存，而不是一般的，开多少空间就吃多少内存。会慢一点，但胜在内存自由。</li>
+<li>非常好，有关闭电源计划的提示。</li>
+<li>可一键设置 <code>$Temp</code> 环境变量。</li>
+<li>RAM Disk 的文件会占用双倍的空间？？我不太清楚原理。文件 6.68 GB，占用空间差不多，但是设备和驱动器里显示磁盘占用了 13.38 GB 空间。</li>
+<li>但是 <em>ImDisk</em> 能够<strong>保留文件扩容</strong>，非常舒服。</li>
+</ul>
+<h2> 魔方内存盘</h2>
+<p>创建 RAM Disk <strong>必需要创建同样大小的镜像文件</strong>，即使无需保存。逗我玩呢？</p>
+<h2> 总结</h2>
+<p>使用 <a href="#imdisk-toolkit">ImDisk Toolkit</a>。</p>
+<h2> external</h2>
+<ol>
+<li><a href="https://www.ghacks.net/2017/04/03/the-best-free-ramdisk-programs-for-windows/" target="_blank" rel="noopener noreferrer">RAM Disk comparison</a></li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>bot</title>
+      <link>https://mister-hope.github.io/coding/bot.html</link>
+      <guid>https://mister-hope.github.io/coding/bot.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">bot</source>
+      <description>bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，只能搭建 QQ bot，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比 nonebot2 的垃圾强数倍。同时也有论坛以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）</description>
+      <category>编程</category>
+      <category>教程</category>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> bot</h1>
+<p>我曾使用 <a href="https://nonebot.dev/" target="_blank" rel="noopener noreferrer">nonebot2</a> + cqhttp 的方式搭建 bot。这种方案使用 python 语言，只能搭建 QQ bot，并且需要自己写比较底层的代码。在此感谢 <a href="https://github.com/yaowan233" target="_blank" rel="noopener noreferrer">yaowan233</a> 学长的指导。</p>
+<p>而现在我选择 <a href="https://koishi.chat/zh-CN/" target="_blank" rel="noopener noreferrer">koishi</a> 框架。该框架基于 <a href="/coding/nodejs.html" target="blank">node.js</a>，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比 nonebot2 的垃圾强数倍。同时也有<a href="https://forum.koishi.xyz/" target="_blank" rel="noopener noreferrer">论坛</a>以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）</p>
+<p>我建的 bot 有两个实例：一个是之前一直在用的 QQ bot <code>atri</code>（2433269451），另一个是后来使用 koishi 的 Telegram bot <a href="https://t.me/atri_absx_bot" target="_blank" rel="noopener noreferrer"><code>atri bot</code></a>。</p>
+<details class="hint-container details"><summary>查看 atri(QQ) 的信息</summary>
+<div style="text-align: center;" class="image40">
+<img alt="atri" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/atri/atri.jpg">
+</div>
+<p>她的功能：</p>
+<ul>
+<li>背单词（英日双语）</li>
+<li>随机数</li>
+<li>带饭记账</li>
+<li>偷窥我</li>
+</ul>
+<p>请加为好友（联系绝对值_x同意好友）后发送<code>help</code>获取详细指令。你也可以在<a href="https://github.com/lxl66566/primary-atri-bot-plugins" target="_blank" rel="noopener noreferrer">这里</a>得到她的实现上述功能的python源码。关于环境：</p>
+<ol>
+<li><a href="/coding/python.html#%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83" target="blank">使用conda</a>创建出所需环境（此处环境名为<code>atri</code>）：<code>conda create -n atri python=3.9</code></li>
+</ol>
+<blockquote>
+<p>nonebot2需要在python&gt;=3.8环境下运行</p>
+</blockquote>
+<ol start="2">
+<li>使用pip安装依赖：</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
+<li>参考<a href="/essay.html#_20220506" target="blank">随笔中的启动脚本</a></li>
+</ol>
+</details>
+<h2> koishi</h2>
+<h3> install</h3>
+<p>这里推荐<a href="https://koishi.chat/zh-CN/manual/starter/boilerplate.html" target="_blank" rel="noopener noreferrer">使用 npm 安装</a>，而不是官方推荐的下载安装包。使用 npm 安装对 bot 功能没有影响。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 使用</h3>
+<ul>
+<li>
+<p>telegram：本机没有公网 ip，因此选择 <em>polling</em> 工作模式。代理用 http 好像不能用（这也是我第一次退坑 koishi 的理由），之后尝试用 socks 端口就可以了。</p>
+</li>
+<li>
+<p>QQ：参考<a href="https://forum.koishi.xyz/t/topic/2502" target="_blank" rel="noopener noreferrer">论坛</a>。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:</p>
+<blockquote>
+<p>由用户 '*' 发送的 session '*' 缺失 username。插件处理可能出现问题。若要针对此问题进行反馈，请前往 https://k.ilharp.cc/2510 。错误码：2130</p>
+</blockquote>
+<p>不影响使用，开发者也<a href="https://forum.koishi.xyz/t/topic/2510/154" target="_blank" rel="noopener noreferrer">说不用在意</a>，那就不管了。</p>
+</li>
+</ul>
+<h3> 开发</h3>
+<p>我写了一个小玩具（<a href="https://github.com/lxl66566/koishi-plugin-peek" target="_blank" rel="noopener noreferrer">koishi-plugin-peek</a>），大致涵盖了基本的开发指令。推荐在 github 上搜索其他源码广泛学习。</p>
+<ul>
+<li>关于发布插件：<strong><code>pub</code> 之前请一定记得 <code>build</code>！！切记！！</strong></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>node.js</title>
+      <link>https://mister-hope.github.io/coding/nodejs.html</link>
+      <guid>https://mister-hope.github.io/coding/nodejs.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">node.js</source>
+      <description>node.js Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台执行环境。一言：集成开发环境，必装。 npm 为 Node.js 的官方包管理器。此外比较广泛使用的包管理器还有 yarn 和 pnpm 等，其各有优势，可自行选择使用。yarn 在早期比 npm 强，现在优势貌似不大。pnpm 使用硬链接，在空间上具有很大优势，但普及度还是略逊一筹（可能难以找到非常规问题解法）。</description>
+      <category>编程</category>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> node.js</h1>
+<p>Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台执行环境。一言：集成开发环境，必装。</p>
+<p><a href="#npm">npm</a> 为 Node.js 的官方包管理器。此外比较广泛使用的包管理器还有 yarn 和 pnpm 等，其各有优势，可自行选择使用。yarn 在早期比 npm 强，现在优势<a href="https://zhuanlan.zhihu.com/p/27449990" target="_blank" rel="noopener noreferrer">貌似不大</a>。pnpm 使用硬链接，在空间上具有很大优势，但普及度还是略逊一筹（可能难以找到非常规问题解法）。</p>
+<p>我对磁盘空间较为敏感，因此使用 pnpm。由于其文档问题，建议先熟悉 npm 命令后，再使用 pnpm 命令。</p>
+<h2> pnpm</h2>
+<p><a href="https://pnpm.io/zh/pnpm-cli#%E5%91%BD%E4%BB%A4%E8%A1%8C" target="_blank" rel="noopener noreferrer">用前必读</a></p>
+<ul>
+<li>如果直接使用 <code>pnpm i</code> 安装依赖后运行报错，请使用 <code>pnpm i --shamefully-hoist</code> 安装依赖！<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></li><a class="footnote-anchor" id="footnote-ref1">
+<li><code>npm init ...</code> == <code>pnpm create ...</code></li>
+</a></ul><a class="footnote-anchor" id="footnote-ref1">
+</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> npm</h2>
+<h3> 基本命令</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li><a href="https://www.runoob.com/w3cnote/npm-switch-repo.html" target="_blank" rel="noopener noreferrer">镜像</a></li>
+</ul>
+<h3> 其他命令</h3>
+<ul>
+<li>如果需要重装所有 <code>node_modules</code>，可在 bash 中：<code>rm -rf node_modules &amp;&amp; rm package-lock.json &amp;&amp; npm cache clear --force</code></li>
+<li>更新依赖(<a href="https://juejin.cn/post/6844903827599015944" target="_blank" rel="noopener noreferrer">ref</a>)：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ul>
+<h3> 关于 --save</h3>
+<p>有时候会看到 <code>npm i xxx --save</code>，<code>--save</code> 是写入 <code>package.json</code> 的过程，而 npm 5 之后 install 会自动 save，不需要手动指定。一句话：<strong>不用加</strong>。</p>
+<h2> 查询包大小</h2>
+<p>查询 install size 可以使用 <a href="https://packagephobia.com/" target="_blank" rel="noopener noreferrer">Package Phobia</a>。</p>
+<h2> 遇到的问题</h2>
+<h3> CORS policy</h3>
+<p>在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。
+在文件目录下 <code>python -m http.server</code>，打开浏览器访问 <code>localhost:8000</code>，点击要调试的 html 即可。<span class="heimu" title="你知道的太多了">20230603：我是铸币</span></p>
+<h3> 安装 sharp</h3>
+<p>我想使用 sharp 作为图像处理库。而直接 <code>npm i sharp</code> 会报错：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>尝试：</p>
+<ol>
+<li>更换其他 npm 源，无法解决。</li>
+<li>使用 <code>--ignore-scripts</code> 选项，能够安装，但无法启动 koishi 服务器：
+<blockquote>
+<p>app Error: <br>
+Something went wrong installing the "sharp" module<br>
+Cannot find module '../build/Release/sharp-win32-x64.node'</p>
+</blockquote>
+</li>
+<li>尝试执行(<a href="https://sharp.pixelplumbing.com/install#chinese-mirror" target="_blank" rel="noopener noreferrer">ref</a>)：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>报错
+<blockquote>
+<p>npm ERR! code ENOWORKSPACES<br>
+npm ERR! This command does not support workspaces.</p>
+</blockquote>
+</li>
+</ol>
+<p>难道真的山穷水尽了吗？不！再次 <code>npm i sharp</code> 后，经过漫长的等待，终于安装成功了！并且服务器也没有报错！</p>
+<p>总之，还是挺玄学的。</p>
+<h2> external</h2>
+<ol>
+<li><a href="https://javascript.plainenglish.io/npm-vs-pnpm-vs-yarn-which-package-manager-reigns-supreme-a942d17a2051" target="_blank" rel="noopener noreferrer">npm vs pnpm vs Yarn — Which Package Manager Reigns Supreme?</a></li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>感谢 Asuka Minato 解答 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>文章分享</title>
+      <link>https://mister-hope.github.io/articles/external.html</link>
+      <guid>https://mister-hope.github.io/articles/external.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">文章分享</source>
+      <description>文章分享 我的外部文章分享。请尽量使用科学上网，若链接失效，请默哀。排名不分先后。 波士顿漫游指南 日本移居指南 | bak</description>
+      <category>推荐</category>
+      <pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 文章分享</h1>
+<p>我的外部文章分享。请尽量使用科学上网，若链接失效，请默哀。排名不分先后。</p>
+<ol>
+<li><a href="https://blog.zxh.io/post/2022/01/29/travel-to-boston/" target="_blank" rel="noopener noreferrer">波士顿漫游指南</a></li>
+<li><a href="https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso" target="_blank" rel="noopener noreferrer">日本移居指南</a> | <a href="https://ctreaderbot.vercel.app/a/D05AAicCD7-5pMw.html" target="_blank" rel="noopener noreferrer">bak</a></li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>编程</title>
+      <link>https://mister-hope.github.io/coding/</link>
+      <guid>https://mister-hope.github.io/coding/</guid>
+      <source url="https://mister-hope.github.io/rss.xml">编程</source>
+      <description>编程 写在前面 过激言论，谨慎查看 你国计算机教育就是一坨屎（我是说绝大多数的大学校）。思政课先不说，为什么要学大学物理，大物实验，数字电路？编程语言为什么还在用上古版本？ 语言有关 我的编程语言学习属于多而不精的类型。多语言学习者能在短时间内掌握一门新的语言，但这也意味着基础不够扎实，缺乏经验等。因此需要多做项目以降低劣势。 多语言只是手段，目的是为了开拓视野，总结出不同语言中的共性。编程学习不能仅仅“见树”，而需要“见森林”。希望我不会绕到语言学习的圈子里。</description>
+      <category>编程</category>
+      <pubDate>Sun, 09 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 编程</h1>
+
+<h2> 写在前面</h2>
+<details class="hint-container details"><summary>过激言论，谨慎查看</summary>
+<p>你国计算机教育就是一坨屎（我是说绝大多数的大学校）。思政课先不说，为什么要学大学物理，大物实验，数字电路？编程语言为什么还在用上古版本？</p>
+</details>
+<h2> 语言有关</h2>
+<p>我的编程语言学习属于多而不精的类型。多语言学习者能在短时间内掌握一门新的语言，但这也意味着基础不够扎实，缺乏经验等。因此需要多做项目以降低劣势。</p>
+<p>多语言只是手段，目的是为了开拓视野，总结出不同语言中的共性。编程学习不能仅仅“见树”，而需要“见森林”。希望我不会绕到语言学习的圈子里。</p>
+<h3> 学习阶段</h3>
+<ol>
+<li><a href="/coding/Rust.html" target="blank">Rust</a></li>
+<li><a href="/coding/Cpp.html" target="blank">C++</a></li>
+<li><a href="/coding/python.html" target="blank">Python</a></li>
+<li><a href="/coding/java.html" target="blank">Java</a></li>
+<li><a href="/coding/tsjs.html" target="blank">TypeScript &amp; JavaScript</a></li>
+</ol>
+<h3> 预学习阶段</h3>
+<ol start="6">
+<li><a href="/coding/csharp.html" target="blank">C#</a></li>
+<li><a href="/coding/kotlin.html" target="blank">kotlin</a></li>
+</ol>
+<h3> 新生语言</h3>
+<p>我并未系统学习以下新生语言，只是想了解其设计理念，并获取一些语言设计的灵感。</p>
+<ul>
+<li><a href="https://github.com/vlang/v" target="_blank" rel="noopener noreferrer">V language</a>：基于 C 的注重性能的静态类型编译语言。语法比较像 go?</li>
+<li><a href="https://github.com/mun-lang/mun" target="_blank" rel="noopener noreferrer">Mun</a>：基于 Rust 的静态类型语言，注重热重载 (hot reloading)。</li>
+<li><a href="https://docs.modular.com/mojo/" target="_blank" rel="noopener noreferrer">Mojo</a>：python 的超集，注重性能，类型，兼容性，目标是 AI 领域。</li>
+</ul>
+<h2> 工具</h2>
+<ol>
+<li><a href="/coding/github.html" target="blank">Github</a>：如何进行最基本的使用</li>
+<li><a href="/coding/Git.html" target="blank">Git</a>：版本控制系统</li>
+<li><a href="/coding/nodejs.html" target="blank">node.js</a>：js 运行时</li>
+<li><a href="/coding/linux.html" target="blank">Linux</a>：操作系统</li>
+<li><a href="/coding/vim.html" target="blank">Vim</a>：文件编辑器</li>
+<li><a href="/coding/sql.html" target="blank">数据库</a>：SQL</li>
+</ol>
+<h3> 网站</h3>
+<p>一些值得学习的地方，语言无关。</p>
+<ul>
+<li><a href="https://missing-semester-cn.github.io/" target="_blank" rel="noopener noreferrer">计算机教育中缺失的一课</a></li>
+<li><a href="https://learnxinyminutes.com/" target="_blank" rel="noopener noreferrer">learnxinyminutes</a></li>
+<li><a href="https://csdiy.wiki/" target="_blank" rel="noopener noreferrer">CS自学指南</a> &amp; <a href="https://hackway.org/docs/cs/intro" target="_blank" rel="noopener noreferrer">计算机专业学习路线 - hackway</a>：英文好的话可以看看。</li>
+</ul>
+<h2> 其他</h2>
+<ol>
+<li><a href="/coding/algorithm.html" target="blank">算法</a></li>
+<li><a href="/coding/bot.html" target="blank">搭建 bot</a></li>
+</ol>
+<h2> 杂项</h2>
+<h3> 字体</h3>
+<p><a href="https://github.com/hbin/top-programming-fonts/" target="_blank" rel="noopener noreferrer">top-programming-fonts</a>，随便选。反正我用 Fira Code。</p>
+<h2> external</h2>
+<ol>
+<li><a href="https://zh.wikibooks.org/zh-hans/%E5%A4%A7%E9%99%86%E5%8F%B0%E6%B9%BE%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7%E8%A1%A8" target="_blank" rel="noopener noreferrer">大陆台湾计算机术语对照表</a></li>
+<li><a href="https://awesome-programming-books.github.io/" target="_blank" rel="noopener noreferrer">经典技术书籍 PDF 文件</a></li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>随笔</title>
+      <link>https://mister-hope.github.io/essay.html</link>
+      <guid>https://mister-hope.github.io/essay.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">随笔</source>
+      <description>随笔 ——谜语人的处所，闷声者的温巢。 谜，侃，思，叹，道 前往我的频道查看更多随笔。 2023 20230802 Don&amp;apos;t be nervous about mistakes. 20230801 Keep curious, keep learning.</description>
+      <category>随笔</category>
+      <category>作者</category>
+      <pubDate>Fri, 06 May 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 随笔</h1>
+<div class="subtitle">——谜语人的处所，闷声者的温巢。</div>
+<div class="subtitle">谜，侃，思，叹，道</div>
+<p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
+<h2> 2023</h2>
+<h3> 20230802</h3>
+<p>Don't be nervous about mistakes.</p>
+<h3> 20230801</h3>
+<p>Keep curious, keep learning.</p>
+<h3> 20230731</h3>
+<p>世间一大遗憾：好看的不露脸，露脸的不好看</p>
+<h3> 20230730</h3>
+<p>灭蟑记（七）<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
+<p>今入厨，已然为灭蟑之师。四处拨弄，意欲惊其而以显于动也。环视之，一蟑伏门后，悄取武器，三击而得，而后方知爆蟑之汁可透双层纸也。</p>
+<p>灭蟑有一理，曰：大蟑喜厨，小蟑喜厕。入厕洗漱，见青年二蟑游走拖鞋之间。移鞋，受惊躲于门轨之缝，竟不可得。持械喝赶之，意欲乱其心智，脱出藏身处。未料其转守为攻，登于械上，占尽先机，欲除吾之械。万幸其年方少，行动迟缓，得以离心之力反击之，投于地，杀之。</p>
+<p>洗脚毕，而脚生瘙痒，有虫豸为乱之感，遂佩叆叇以观之，见三蟑伏于脚跟上。此蟑仅一分（合 1/3 厘米）不足，脚跟皮厚，故感知不甚。投于地，杀之。后再度入浴洗脚。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 20230728</h3>
+<p>B站的严肃科普都喜欢升华主题是吧，流量密码是吧。。</p>
+<h3> 20230719</h3>
+<p>猫看似爱干净；但它会去舔自己的足底，我不认为这是干净的表现。</p>
+<h3> 20230717</h3>
+<p>荞麦等颗粒填充物的枕头有一个优点，那就是能随意调整高度。</p>
+<h3> 20230716</h3>
+<p>福建人在当今大陆，是比较容易被洗脑的一批人。</p>
+<hr>
+<p>svg 使用了召唤术！召唤出了一只线条恐龙！恐龙单调空虚消失了！</p>
+<p>png 使用了召唤术！召唤出了一只像素恐龙！恐龙变大模糊消失了！</p>
+<hr>
+<p>夏季不要在喜糖里放巧克力，应当是婚宴服务者的基本常识。</p>
+<h3> 20230715</h3>
+<p>灭蟑记（六）<sup class="footnote-ref"><a href="#footnote1">[1:1]</a><a class="footnote-anchor" id="footnote-ref1:1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:1">
+</a><p><a class="footnote-anchor" id="footnote-ref1:1">方点灯入厨，一蟑逃窜，另一蟑振翅疾驰而来。本能避之，而先入厨以脚跺逃窜者，其仍余力，钻入柜下。乃反，持拖鞋若泰山，寻方才飞出之蟑，毙其墙上。二蟑前受一压，步履蹒跚，慌不择路，逃离柜底，一击毙命，尸首分离。正欲离去之际，瞥见三蟑静止隐身于盘橱之中。盘橱者，地势低而杂物众，吾见三蟑呆呆傻傻，即清理两蟑尸体，而后清理杂物，终是毙其于绝路。今有</a><a href="#_20220724">前车之鉴</a>，不敢投于下水道，遂覆纸，碾其头部，葬与桶中，料定死透。</p>
+<h3> 20230713</h3>
+<p>阅读圈资源比番剧/gal 圈难找多了，鉴定为二次元浓度与技术水平正相关x</p>
+<h3> 20230710</h3>
+<p>时穿剧情就像操作裸指针。</p>
+<hr>
+<p>近视眼中的世界，是发散的概率云</p>
+<h3> 20230709</h3>
+<p>超现实的核心是对世界本质的探寻。</p>
+<h3> 20230707</h3>
+<p>如果你不喜欢某句话被永久存储、转发，那就不要说</p>
+<div style="text-align:right">
+<p><em>——oldherl, <a href="https://t.me/archlinuxcn_group/2754411" target="_blank" rel="noopener noreferrer">archlinux-cn</a></em></p>
+</div>
+<h3> 20230706</h3>
+<p>图论中好像蕴藏者一些大道理. ..</p>
+<hr>
+<p>谨记，勿大声喧哗</p>
+<h3> 20230703</h3>
+<p>戒胶戒皂，那还打什么呢？</p>
+<h3> 20230702</h3>
+<p>性恶论与进化论挡在了共产主义面前；.*</p>
+<h3> 20230623</h3>
+<p>自由研究がいいことだと思う。</p>
+<h3> 20230613</h3>
+<p>网课和 ChatGPT 是相辅相成的：前者负责教学，后者负责答疑。我很期待能淘汰老师和线下教学的那一天。</p>
+<h3> 20230609</h3>
+<p>原以为我被世事打磨圆滑，然而骗不了自己不可久藏那一点锋芒。</p>
+<hr>
+<p>大学是猫的黑域。</p>
+<hr>
+<p>不要迷失在欲望之中，独行是我灵感的泉源。</p>
+<hr>
+<p>想经由网跨越阶级，则必先打破网之枷锁。</p>
+<hr>
+<p>以长远眼光放大自我，谓之成长。</p>
+<hr>
+<p>踏尘土而染之，方知其必有可恨之处也。</p>
+<h3> 20230608</h3>
+<p>站在牲畜的角度，并没有为主人牺牲的必要。</p>
+<h3> 20230606</h3>
+<p>我的手机体会到了我的杀意。我尝试解 bl 锁，结果手机流量断网了，重启也打不开；我等着，结果手机表面出现了类似凝固的血滴的暗红色圆形固体物质。</p>
+<h3> 20230605</h3>
+<p>反向看本，界原展开</p>
+<h3> 20230531</h3>
+<p>你的手鸡快冲是几毫升的？</p>
+<h3> 20230529</h3>
+<p>枯れない世界と終わる花 -&gt; sendan life -?&gt; 先端（せんたん）ライフ -?&gt; 前端工程师（フロントエンド・エンジニア）的生活   <s>（误</s></p>
+<hr>
+<p>空调是正反馈：当少量人开始开空调，排放的热气使环境极速升温，大家都开始开空调，室外温度达到饱和</p>
+<h3> 20230528</h3>
+<p>笑是正反馈：不明白为什么笑，但就是被传染着笑，最后笑声达到饱和后衰减</p>
+<h3> 20230524</h3>
+<p>我现在所做之事，是否违背了我对死亡的主张？</p>
+<h3> 20230516</h3>
+<p>不要弄混了爱欲，色欲和性欲啊！</p>
+<hr>
+<p>宿舍桌子是充能器，累了的时候趴一下就能充能。</p>
+<h3> 20230411</h3>
+<p>传签到表是一种混乱的行为：若无外力规定传递次序，每个人以随机方向朝四周传递（实际上真的挺随机），几乎不可能遍历到所有的点。已经签过到的人视其为烫手山芋，推诿拒绝；拒力不足的，无奈接过山芋，开始寻找其他方向的破绽。而当你环视四周，皆闭目谢表，于是将其上传给老师，无形中也承担了可能还有人没签到，进而被老师怒斥的风险。</p>
+<p>问：谁之过也？</p>
+<h4> 2023.03.xx</h4>
+<p>寄生虫也是积分器</p>
+<h3> 20230326</h3>
+<p>体验有两种：亲身经历与脑内模拟。二者不可兼得，该如何选择？</p>
+<h3> 20230325</h3>
+<p>一年前的此时，我面对着封城封校的静寂处境，在纸上魔法使的宝石之中，聆听着各色书册物语。</p>
+<h3> 20230324</h3>
+<p>思维打开，<span class="heimu" title="你知道的太多了">屎又何尝不是一种肛塞呢？</span></p>
+<h3> 20230322</h3>
+<p>自私是生命的公理。</p>
+<hr>
+<p>商业化拥有许多令人不快的机制，但也为普罗众生提供了便利。</p>
+<h3> 20230318</h3>
+<p>一个正反馈系统的例子：快下课，骚动 -&gt; 听不进课，老师选择提前下课 -&gt; 造成更大的骚动</p>
+<h3> 20230313</h3>
+<p>It's difficult to balance <strong>learning</strong> and <strong>exploring</strong>.</p>
+<h3> 20230307</h3>
+<p>死亡是生物最大的不自由。</p>
+<h3> 20230222</h3>
+<ul>
+<li>当今，由于武器技术发展，中低层人民的反抗能力无限减弱，某些原理不再适用。</li>
+<li>（哲学意义上的）自由会产生灵感的激烈碰撞以推动社会进步。不自由的社会没有未来。</li>
+<li>技术改变世界。对未来社会的预想需要与对未来技术的预想结合。</li>
+</ul>
+<h3> 20230221</h3>
+<p>发现命运经常让我获得挺不错但算不上完美的结果。</p>
+<h3> 20230217</h3>
+<p>更认可<em>道由心生</em>。</p>
+<hr>
+<p>身体完全掌控，为一道。非大毅力持之以恒者，弗可进。此为武夫之道，若遭绝望，如何？</p>
+<h3> 20230216</h3>
+<p>“不拘一物，不羁一念，方是自由。”</p><div style="text-align: right;font-style: italic;">——《知北游》</div>
+我言：矛盾平衡处生自由。一念则静，一念则动，自由在其中矣。<p></p>
+<hr>
+<p>今有一疑：道在天地？道在我心？</p>
+<h3> 20230210</h3>
+<p>家里蹲虽爽， 却会失去一些幻想，灵感与思考。</p>
+<h3> 20230131</h3>
+<p>赖床看小说可以养生：挤占了本来会拿来看 H 的时间。</p>
+<h3> 20230130</h3>
+<p>重要的东西总是在不经意间建立起来的。我过去的 12 年学习生涯是失败的，而现在我需要去接受这些失败。</p>
+<h3> 20230126</h3>
+<p>华莱士是穷人是聚集地。然而当我常看到一些高龄人在华莱士一边点着血亏单品 / 套餐一边心疼钱包的时候，还是挺感慨的。</p>
+<h3> 20230113</h3>
+<p>深入分析演练固然是好事，但也失去了那破釜沉舟的勇气。</p>
+<h3> 20230109</h3>
+<p>凡书中英雄，多正义，多为苍生，多敢作敢当。他日吾若著书，必逆此律。</p>
+<h2> 2022</h2>
+<h3> 20221220</h3>
+<p>在午夜的黑暗中看手机，会很容易被当成目标的吧. ..呜哇</p>
+<h3> 20221218</h3>
+<p>为什么放假了才会选择看小说呢？
+<span class="heimu" title="你知道的太多了">因为冷，被窝舒服，早上不想爬起床，只能玩手机，然后就只能看小说了. ..</span></p>
+<h3> 20221129</h3>
+<p>幼时，我心向光明；今日，我沉逸黑暗。</p>
+<h3> 20221114</h3>
+<p>从今以后我将作为意义党而活着。</p>
+<hr>
+<p>72小时后禁止指纹解锁是我觉得Android机上最傻逼的设计。</p>
+<h3> 20221111</h3>
+<p>我的缓存比较大而存储比较小。因此将缓存写入存储的过程是必要的。</p>
+<h3> 20221103</h3>
+<p>看不见星光的夜空中泛着红。</p>
+<h3> 20221030</h3>
+<p>面具之下，还会是面具吗？我自己也不知道。</p>
+<h3> 20221023</h3>
+<p>享乐精神使我追求平稳安逸，经历意义又使我憧憬危难刺激；在大厦将倾的今天，我是否还能感受童年时的记忆？</p>
+<h3> 20221019</h3>
+<p>深夜在冷冽的寒风中，仰望夜空星辰，是否能唤起一些从前我对未知的渴望？</p>
+<hr>
+<p>饱暖思淫欲，饥寒知世艰。</p>
+<h3> 20221018</h3>
+<p>每次用IDM下载大文件我都好奇为什么盘盒硬盘灯不闪。。今天发现IDM是默认下载缓存到C盘再合并的。。</p>
+<h3> 20221016</h3>
+<p>激进应当是程序员的必备品质。</p>
+<h3> 20221010</h3>
+<p>很喜欢23:00-24:00这段时间。每天23点断电后，我会把笔记本亮度调到最低，加上黄得发黑的屏幕滤镜，在漆黑的小宿舍里推galgame。寂暗的夜，我可以沉醉在屏幕后的世界中，不用想太多多余的事情；而午夜卡着时间领完每日折扣券后出门刷牙，走廊冷冽的白色淡光又能使我沉醉梦幻。</p>
+<h3> 20220925</h3>
+<p>我的爆肝小助手：冰红茶+外卖。</p>
+<h3> 20220924</h3>
+<p>在周末半黑不黑的傍晚，能感受到侵入体内的寒气中，骑着一辆辐条嘎吱响的自行车，绕着学校慢悠悠地骑行一圈，看着现充卷王们三三两两走过，胸中会涌起孤独，充实，和其他的一些说不上来的感觉。</p>
+<h3> 20220917</h3>
+<p>市面上这些四六级头戴式耳机…把耳罩做大一点会死啊…</p>
+<h3> 20220914</h3>
+<p>一个老师性格温和但啥都不会，一个老师技术大佬但脾气暴躁，当这两个老师开始轮换教学，这将是一场灾难。</p>
+<hr>
+<p>烈日让我舒适而迷茫，飘雨给我失落与决心。</p>
+<h3> 20220829</h3>
+<p>将返校焦虑转化为打osu的动力！</p>
+<h3> 20220818</h3>
+<p>由于我的两个galgame没法正常运行，我认定是不兼容win11的问题，花了几个小时去<a href="/articles/computer_setting.html" target="blank">搞hyper-v虚拟机</a>（毕竟是原生的，所以首选了）和出现的亿点bug……最后还是没搞好，愤然选择VMware装上了win10。结果发现玩不了gal的问题是 <strong><a href="/farraginous/log.html#_20220815" target="blank">20220815硬盘崩了</a>把文件损坏了</strong>……笑死个人</p>
+<h3> 20220817</h3>
+<p>玄幻读者表示，泳池是最没有素质的公共场所<span class="heimu" title="你知道的太多了">之一</span>。</p>
+<h3> 20220815</h3>
+<p>把存档放在<code>%AppData%\Roaming</code>里面的是坏文明！太坏了……呜…呜呜……</p>
+<h3> 20220814</h3>
+<p>蚊香液p用没有，还得是电蚊拍。（啊…《灭蚊记》的话还是算了吧……</p>
+<h3> 20220813</h3>
+<p>由于<a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">一些原因</a>，此间缺失的随笔统一算作今日随笔。</p>
+<hr>
+<p>我希望有一间像<em>冥契</em>中妹妹那样的房间，纯净而不染一丝污垢，沉醉而不想醒来，不受世俗所扰，仅需我与所爱之物便可。</p>
+<hr>
+<p>曾想在博客设立一个垃圾箱，用来发泄我的感情。想想还是算了。（移步频道搜 #垃圾桶）</p>
+<hr>
+<p>Q：公交车/大巴车的哪个位置比较安全？A：左前右后。</p>
+<h3> 20220808</h3>
+<p><a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">右耳聋了7天5小时</a>，恢复听力后感慨：还是健康最重要啊。</p>
+<h3> 20220730</h3>
+<p>高中没接触那些有意义的事真是太糟了……损失了很多成长的机会。我开始后悔了。</p>
+<hr>
+<p>灭蟑记（五）<sup class="footnote-ref"><a href="#footnote1">[1:2]</a><a class="footnote-anchor" id="footnote-ref1:2"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:2">
+<p>入庖厨，一蟑伏地，一蟑藏左柜边，皆不动弹。乃踏之一而拖鞋迅击之二。处理于水道，而三蟑探头于盥洗旁，困入死角，杀之。此时乃杀蟑如麻，战意沸腾之际，遂入厨四处细寻，见四蟑藏于炊具后。移釜而杀之。噫！今日四杀，吾之大胜也。此间蟑螂皆缓动呆滞，料其亲友皆亡于前日，饥而寻食，却无逃遁之速度，无对敌之经验，其亡也当然耳。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1:2"></a> 20220729</h3>
+<p>灭蟑记（四）<sup class="footnote-ref"><a href="#footnote1">[1:3]</a><a class="footnote-anchor" id="footnote-ref1:3"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:3">
+<p>灭一蚊，净手，忽见一稍小蟑螂伏于池边盆上。其经验不足，未逃，一击毙命。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1:3"></a> 20220725</h3>
+<p>灭蟑记（三）<sup class="footnote-ref"><a href="#footnote1">[1:4]</a><a class="footnote-anchor" id="footnote-ref1:4"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:4">
+<p>丑时二刻，入庖厨环视，四处击而探之，无所见。遂入浴后起，听得耳边窸窣声，蟑螂也。拿拖鞋而反，不见，击探久之不得。方欲委去，复见其逃于隐辟。遂以神戒之，敌退我进，敌伏我杀，如此反复，其精疲力尽，终灭之一隅。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1:4"></a> 20220724</h3>
+<p>灭蟑记（二）<sup class="footnote-ref"><a href="#footnote1">[1:5]</a><a class="footnote-anchor" id="footnote-ref1:5"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:5">
+<p>今再遇一蟑，复震之，藏于一管内。管径二指，长半臂有余，震而不出。遂将此蟑以水冲入便器，然浮于水面，活蹦乱跳，久冲不下。覆纸其上，纸散，仍不灭。无奈，以器捞之，包于厚纸中受压而死，然后冲入水道，方得清净。呜呼！吾竟败与一蟑耳。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1:5"></a> 20220723</h3>
+<p>灭蟑记（一）<sup class="footnote-ref"><a href="#footnote1">[1:6]</a><a class="footnote-anchor" id="footnote-ref1:6"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:6">
+<p>熬夜欲睡，点灯入庖厨，直视右上橱柜，必有蟑螂因强光呆伏其上。遂取鞋，瓶碗却不可击。其一受惊震逃于墙上，命中当受此拖鞋劫。余一有大气运，入地即遁入狭间，视不可得。纸包蟑螂尸，入水道，欲绝后患。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1:6"></a> 20220718</h3>
+<p>在空调房睡觉时混入了两只蚊子...已知蚊香液不能在密闭空间中使用，请问要保空调还是杀蚊子？<span class="heimu" title="你知道的太多了">我选择了后者</span></p>
+<h3> 20220717</h3>
+<p>无法适应规则，难以打破规则...那就绕过规则</p>
+<h3> 20220712</h3>
+<p>写<a href="/articles/track_record.html" target="blank">（第二篇）横评</a>时的那种掌控感有点爽（软件们在我手里瑟瑟发抖的样子. ..</p>
+<h3> 20220708</h3>
+<p>Android的软件使用时长计时为什么只能查看本周数据...然后我做了个<a href="/articles/time_record.html" target="blank">横评</a>。</p>
+<h3> 20220702</h3>
+<p>感性的代价可不止一点呢...我究竟是为了什么回到家里来的啊...</p>
+<h3> 20220629</h3>
+<p>Github治国有何不可！</p>
+<h3> 20220628</h3>
+<p>在模仿中重塑自我，在尝试中走出道路。</p>
+<h3> 20220618</h3>
+<p>能早解决的事就不要拖。不要像我这样垂死病中惊坐起发现论文已经过了ddl同时还发现ip不在学校不能免费看知网论文。（前几天一直在 <strong>享 受 假 期</strong> ）
+<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/essay/20220619.png" alt="绝望影像" loading="lazy"></p>
+<h3> 20220613</h3>
+<p>历经11天终于回到家了。这11天我的评价是很无聊，甚至不能给我的生命留下什么记忆。</p>
+<h3> 20220612</h3>
+<p>丈许浪大争西东，相击相灭一场空。</p>
+<h3> 20220531</h3>
+<p>回家路不过是名为隔离的笼子罢了。一时的感性还使我空虚。</p>
+<h3> 20220529</h3>
+<p>感性是需要代价的。纸魔给我的感性使我付出了代价。</p>
+<h3> 20220522</h3>
+<p>不使用杠杆原理的水龙头不是好水龙头。</p>
+<h3> 20220521</h3>
+<p>原来带给我满足与快感的不是爆肝，是创造！</p>
+<h3> 20220519</h3>
+<p>提防悄无声息的自我标准降低。</p>
+<p>爆肝过后，满足与空虚一并涌上，想把成果分享给全世界，然后立刻开摆。</p>
+<h3> 20220515</h3>
+<p>在Minecraft中，人们追求更强的装备而忘记了建设家园的初衷；</p>
+<p>在文艺作品中，反派渴望更强的力量而忘记了，身边的人。</p>
+<h3> 20220514</h3>
+<p>人类是很脆弱的。需要做好意外伤残甚至失去生命的觉悟。把幻想化为经验，预防悲剧发生。</p>
+<h3> 20220513</h3>
+<p>倘若遭遇绝望，也要去享受绝望。</p>
+<h3> 20220510</h3>
+<p>怎么会事呢？突然发现博客好像没什么东西写了awa. ..前几天的干劲一定是用完了罢。对了，可以添加<code>atri</code>bot！</p>
+<p>我恨不得每一天都能有200小时，不，2000小时！</p>
+<h3> 20220506</h3>
+<p><code>cmd /k</code> : 执行命令，保留窗口</p>
+<p>这里是启动<code>atri</code>bot的关键脚本：</p>
+<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 更早</h2>
+<p>一些高中时代写出的东西，姑且就放在这里好了。<s>反正也都算是随笔嘛！</s></p>
+<h3> 道理</h3>
+<p>道，世之所存；理，心之所证。</p>
+<p>大道不灭，亘古长存；大理不失，永伴己身。孕道于理，天纵之才；以理创道，圣贤之姿。</p>
+<p>世有一道，名曰真理。才高八斗，学识凌天。以质为本，追根溯源。一方通行，笑卒道中。</p>
+<p>世有一道，名曰奉献。立志崇高，命不可及。为心所向，捐此余生。鞠躬尽瘁，死而后已。</p>
+<p>世有一道，名曰自我。寿有尽时，命无定数。或为宝财，或为喜乐。碌碌足满，泯然众生。</p>
+<h3> 质象</h3>
+<p>质象焉得其一？质，物之本，如水于雪，丝于锦，得之而晓宇宙也。象，物之表，如土覆地，虽不知其下，然一草一木，皆生于土焉。世人多以为质乃象之祖，何哉？原子构分，积则显其行，是以象质之积也。然之于医道又如何？中医，经验之积，通其象而不知其质，千年不衰；西医，质之所导，重质而轻象，不治极端之病。中医效用恐微，而不伤身；西医除疾见影，而自损其身。例吾理学，通质而废象，虽解万题，难以足寿。质象之分，何高一筹？吾道也，于何去从？</p>
+<h3> 大理之行</h3>
+<p>理为所悟者，之于人也，则贯今时，通未来。人寿于今，虽觉多，然沧海一粟耳。寿有穷而道无穷，则理创道谓之不朽。何理可于此？</p>
+<p>《礼记》言：修身，齐家，治国，平天下。此可为四理。大非优，小非劣。修身为一人之我，集世万千于己身。平天下为众人之天下，为人族迈步而舍身。吾且从之首，于思中省矣。</p>
+<hr>
+<p>吾常数省吾身：思否？学否？律否？效否？善为人否？改何？</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>这里是《灭蟑记》目录 <a href="#footnote-ref1" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:1" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:2" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:3" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:4" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:5" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:6" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/essay/20220619.png" type="image/png"/>
+    </item>
+    <item>
+      <title>查看手机cpu指令集</title>
+      <link>https://mister-hope.github.io/articles/Android_ISA.html</link>
+      <guid>https://mister-hope.github.io/articles/Android_ISA.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">查看手机cpu指令集</source>
+      <description>查看手机cpu指令集 手段 大小 图片 使用方法 一个木函（国内应用商店） 7M 设备应用-查看设备详细信息 CPU X（谷歌商店） 10M 中央处理器 ADB（需要电脑） - 执行adb shell getprop ro.product.cpu.abi</description>
+      <category>教程</category>
+      <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 查看手机cpu指令集</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">手段</th>
+<th style="text-align:center">大小</th>
+<th style="text-align:center">图片</th>
+<th style="text-align:center">使用方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">一个木函（国内应用商店）</td>
+<td style="text-align:center">7M</td>
+<td style="text-align:center"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/yigemuhan.jpg" alt="一个木函" loading="lazy"></td>
+<td style="text-align:center">设备应用-查看设备详细信息</td>
+</tr>
+<tr>
+<td style="text-align:center">CPU X（谷歌商店）</td>
+<td style="text-align:center">10M</td>
+<td style="text-align:center"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/cpux.jpg" alt="CPU X" loading="lazy"></td>
+<td style="text-align:center">中央处理器</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="/articles/adb.html" target="blank">ADB</a>（需要电脑）</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/adb.png" alt="ADB" loading="lazy"></td>
+<td style="text-align:center">执行<code>adb shell getprop ro.product.cpu.abi</code></td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/yigemuhan.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>ADB</title>
+      <link>https://mister-hope.github.io/articles/adb.html</link>
+      <guid>https://mister-hope.github.io/articles/adb.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">ADB</source>
+      <description>ADB ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手机的一些共性（垃圾的应用管理 / 备份 / 安装），同时我还是重度电脑使用者 和 root user，因此 ADB 使用频率很高。</description>
+      <category>教程</category>
+      <pubDate>Tue, 24 Jan 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> ADB</h1>
+<p>ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手机的一些共性（垃圾的应用管理 / 备份 / 安装），同时我还是<a href="/gossip/author.html#%E6%88%91%E7%9A%84%E7%88%B1%E5%A5%BD" target="blank">重度电脑使用者</a> 和 <a href="/articles/mobile_setting.html#%E5%88%B7%E6%9C%BA" target="blank">root user</a>，因此 ADB 使用频率很高。</p>
+<p>ADB 的权限较高，但小于 root 权限。</p>
+<p><a href="/farraginous/recommend_packages.html#adb" target="blank">前往下载</a></p>
+<h2> 使用方法</h2>
+<ol>
+<li>下载并解压后，进入 ADB 目录，打开 cmd。</li>
+</ol>
+<blockquote>
+<p>推荐将 ADB 目录加入环境变量。这样就不仅限于在 ADB 目录下使用指令。</p>
+</blockquote>
+<ol start="2">
+<li>手机开启 USB 调试，并用数据线连接电脑。
+<ul>
+<li>开启开发者模式：（例：MIUI 12.5）设置 - 我的设备 - 全部参数 - 多次点击 <em>MIUI 版本</em></li>
+<li>在开发者选项中启用 <em>USB 调试</em></li>
+</ul>
+</li>
+<li>执行 <code>adb devices</code>，出现以下代码即为连接成功：</li>
+</ol>
+<div class="language-batch" data-ext="batch"></div><h2> 常用指令</h2>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 刷机指令</h2>
+<p>由于 fastboot 同属于 platform tools，因此也归入 ADB 指令。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他指令</h2>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>命令行压缩</title>
+      <link>https://mister-hope.github.io/articles/cli_compress.html</link>
+      <guid>https://mister-hope.github.io/articles/cli_compress.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">命令行压缩</source>
+      <description>命令行压缩 我电脑上使用的压缩软件为Bandizip，命令行指令为bz，详见官网-命令行参数。 我使用脚本备份我的浏览器历史记录，并使用bandizip命令行进行7z加密压缩后上传到Github。代码如下（隐去关键部分）：</description>
+      <category>教程</category>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 命令行压缩</h1>
+<p>我电脑上使用的压缩软件为<a href="/farraginous/recommend_packages.html#bandizip" target="blank">Bandizip</a>，命令行指令为<code>bz</code>，详见<a href="https://cn.bandisoft.com/bandizip/help/parameter/" target="_blank" rel="noopener noreferrer">官网-命令行参数</a>。</p>
+<p>我使用脚本备份我的浏览器历史记录，并使用bandizip命令行进行7z加密压缩后上传到Github。代码如下（隐去关键部分）：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>若直接对History文件压缩会报错（我也不清楚为什么），因此使用cp命令复制到缓存文件夹压缩，曲线救国。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>设置电脑</title>
+      <link>https://mister-hope.github.io/articles/computer_setting.html</link>
+      <guid>https://mister-hope.github.io/articles/computer_setting.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">设置电脑</source>
+      <description>设置电脑 好的设置能够在未来降低你的血压，并大幅提高你的工作效率。 关于软件推荐请前往杂项-软件汇总页面。 本章目录： 对 win11 的设置 由于入手了 12500H，即使很不想使用 win11，也只能硬上了。以下是我对新电脑 win11 系统的设置。 移动 文档、图片、下载 等文件夹到新分区的D盘。 还原右键菜单并设置：右击 开始键，打开 Windows终端（管理员） ，执行reg add &amp;quot;HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32&amp;quot; /f /ve （或直接使用Winaero Tweaker 进行设置），再用 ContextMenuManager 调整。 关闭所有系统提示音。 关闭 Windows 安全中心。为什么我们需要关闭它？[1] 法一（推荐）：Defender Remover 法二（source，但实测并不能完全关闭）： Windows安全中心-病毒和威胁防护-管理设置 ，关闭所有开关 使用组策略编辑器禁用 Windows Defender win + r运行gpedit.msc，计算机配置-管理模板-Windows 组件-关闭Microsoft Defender防病毒 ，选择已启用 由于我的电脑是家庭版升专业版，没有 gpedit.msc 文件，因此需先添加组策略编辑器。 在记事本输入以下代码并保存为 .bat 文件，管理员运行。 pushd &amp;quot;%~dp0&amp;quot; dir /b %systemroot%\Windows\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum &amp;gt;gp.txt dir /b %systemroot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum &amp;gt;&amp;gt;gp.txt for /f %%i in (&amp;apos;findstr /i . gp.txt 2^&amp;gt;nul&amp;apos;) do dism /online /norestart /add-package:&amp;quot;%systemroot%\servicing\Packages\%%i&amp;quot; pause 使用Defender Control彻底关闭安全中心。</description>
+      <category>教程</category>
+      <pubDate>Sat, 21 May 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 设置电脑</h1>
+<p>好的设置能够在未来降低你的血压，并大幅提高你的工作效率。</p>
+<p>关于软件推荐请前往<a href="/farraginous/recommend_packages.html" target="blank">杂项-软件汇总</a>页面。</p>
+<p>本章目录：</p>
+
+<h2> 对 win11 的设置</h2>
+<p>由于入手了 12500H，即使很不想使用 win11，也只能硬上了。以下是我对新电脑 win11 系统的设置。</p>
+<ol>
+<li>移动 <em>文档、图片、下载</em> 等文件夹到新分区的D盘。</li>
+<li>还原右键菜单并设置：右击 <em>开始键</em>，打开 <em>Windows终端（管理员）</em> ，执行<code>reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve</code> （或直接使用<a href="/farraginous/recommend_packages.html#winaero-tweaker" target="blank">Winaero Tweaker</a> 进行设置），再用 <a href="/farraginous/recommend_packages.html#ContextMenuManager" target="blank">ContextMenuManager</a> 调整。</li>
+<li>关闭所有系统提示音。</li>
+<li>关闭 Windows 安全中心。<a href="https://zhuanlan.zhihu.com/p/611313419" target="_blank" rel="noopener noreferrer">为什么我们需要关闭它？</a><sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">
+</a><ul><a class="footnote-anchor" id="footnote-ref1">
+</a><li><a class="footnote-anchor" id="footnote-ref1">法一（推荐）：</a><a href="https://github.com/jbara2002/windows-defender-remover" target="_blank" rel="noopener noreferrer">Defender Remover</a></li>
+<li>法二（<a href="https://zhuanlan.zhihu.com/p/494923217" target="_blank" rel="noopener noreferrer">source</a>，但实测并不能完全关闭）：
+<ul>
+<li><em>Windows安全中心-病毒和威胁防护-管理设置</em> ，关闭所有开关</li>
+<li>使用组策略编辑器禁用 Windows Defender
+<ul>
+<li><code>win + r</code>运行<code>gpedit.msc</code>，<em>计算机配置-管理模板-Windows 组件-关闭Microsoft Defender防病毒</em> ，选择已启用</li>
+<li>由于我的电脑是家庭版升专业版，没有 <code>gpedit.msc</code> 文件，因此需先添加组策略编辑器。</li>
+<li>在记事本输入以下代码并保存为 .bat 文件，管理员运行。</li>
+</ul>
+<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>使用<a href="https://www.sordum.org/9480/defender-control-v2-1/" target="_blank" rel="noopener noreferrer">Defender Control</a>彻底关闭安全中心。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ol start="5">
+<li>关闭搜索推荐&amp;热门新闻：关闭 <em>设置-隐私和安全性-搜索权限-更多设置-显示搜索要点</em> 。（参考<a href="https://www.landiannews.com/archives/95045.html" target="_blank" rel="noopener noreferrer">来源</a></li>
+<li>升级专业版：使用<a href="https://github.com/zbezj/HEU_KMS_Activator" target="_blank" rel="noopener noreferrer">HEU_KMS_Activator</a>升级win11专业版并激活。</li>
+<li>开启Hyper-V功能 </li>
+</ol>
+<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>保存为.bat文件并管理员运行即可。</p>
+<ol start="8">
+<li>更改触摸板功能：三指左右划调节音量。我本人感觉挺方便。</li>
+<li>安装 Win11 Android 子系统（WSA） </li>
+<li>更改任务栏样式：下载<a href="https://apps.microsoft.com/store/detail/roundedtb/9MTFTXSJ9M7F?hl=en-us&amp;gl=us" target="_blank" rel="noopener noreferrer">RoundedTB</a>，根据提示更改。</li>
+<li>使用<a href="https://www.oo-software.com/en/shutup10" target="_blank" rel="noopener noreferrer">O&amp;O ShutUp10++: Free antispy tool for Windows 10 and 11</a>禁用一些非必须功能。</li>
+<li>启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（<a href="https://zhuanlan.zhihu.com/p/336846460" target="_blank" rel="noopener noreferrer">参考</a>）：在 regedit 中，将 <code>HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled</code> 的值设为 0.</li>
+<li>卸载小组件：打开管理员终端，执行 <code>winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy</code>。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。</li>
+<li><strong>关闭快速启动</strong>。
+<ul>
+<li>原因1：避免关机时自动保存 <a href="/articles/ramdisk.html" target="blank">RAM Disk</a> 文件到固态盘；</li>
+<li>原因2: Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 <em>更新并重启</em>。<a href="https://t.me/withabsolutex/1193" target="_blank" rel="noopener noreferrer">ref</a></li>
+</ul>
+</li>
+<li>开 <a href="https://github.com/yuk7/ArchWSL" target="_blank" rel="noopener noreferrer">ArchWSL</a>。</li>
+<li>解决<a href="#%E7%AB%AF%E5%8F%A3%E9%9A%8F%E6%9C%BA%E5%8D%A0%E7%94%A8">端口随机占用</a></li>
+<li><s>开启全局 UTF-8：<em>设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8...</em></s> 实测会导致一些 galgame 乱码。</li>
+<li>文件夹与文件改为单击。</li>
+<li>在 <em>Internet 选项 - 高级</em> 中，打开 TLS 1.3</li>
+<li><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c" target="_blank" rel="noopener noreferrer">组织管理滚</a></li>
+<li><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E8%A6%81%E5%BD%BB%E5%BA%95%E5%85%B3%E9%97%ADwin11/3c448d50-2e7f-42df-9fdb-f7f9aa9820ec" target="_blank" rel="noopener noreferrer">关闭自动更新</a>，我只需手动更新。
+<ul>
+<li>既然无需经常更新，那就<a href="https://blog.51cto.com/u_13464709/2057007" target="_blank" rel="noopener noreferrer">关闭传递优化</a>，并且用磁盘清理清一下这位占用的空间。</li>
+</ul>
+</li>
+</ol>
+<h2> 我使用的软件们</h2>
+<p>20230607，我的 windows 11 开机自启动的托盘软件有：<a href="/farraginous/recommend_packages.html#xdm" target="blank">XDM</a>, Ditto, <a href="/farraginous/recommend_packages.html#parsec" target="blank">parsec</a>, V2rayN, <a href="/farraginous/recommend_packages.html#flux" target="blank">f.lux</a>, <a href="/farraginous/recommend_packages.html#everything" target="blank">everything</a>, 火绒, <a href="/farraginous/recommend_packages.html#tai" target="blank">Tai</a>, <a href="/farraginous/recommend_packages.html#flameshot" target="blank">flameshot</a>，<a href="https://github.com/troylar/quiet-on-the-set" target="_blank" rel="noopener noreferrer">Quiet on the Set?</a></p>
+<h2> 设置开机自启动</h2>
+<p><code>win + r</code>打开运行面板，输入<code>shell:startup</code>打开启动文件夹，拖入需自启动的程序快捷方式即可。</p>
+<p>但启动文件夹中没有其他软件的自启动控制。若需关闭某些程序的自启动，可以打开任务管理器，选择<code>启动</code>进行修改。</p>
+<h2> BIOS密码重置</h2>
+<blockquote>
+<p><em>以 Predator G3-573 为例，不保证其他品牌电脑的重置方法相同</em></p>
+</blockquote>
+<ol>
+<li>在BIOS界面中输错三次密码，出现输入恢复码的弹窗，并给出一个Key。（我的电脑Key为10位纯数字）</li>
+<li>进入<a href="https://1024kb.co.nz/bios/" target="_blank" rel="noopener noreferrer">此网站</a>，输入Key，然后将计算结果输回电脑。</li>
+<li>进入BIOS后，设置supervisor password为空。</li>
+</ol>
+<h2> edge 转 firefox</h2>
+<p>20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满足我的需求，甚至更加贴合我的个人需求（纵向标签栏，firefox 没有内置此功能），换浏览器大约只是我的心血来潮而已。为此我花了很多功夫设置 firefox。</p>
+<blockquote>
+<p>于 20230304 换回 edge。</p>
+</blockquote>
+<p>我最终使用 <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank" rel="noopener noreferrer">Firefox Developer Edition</a> 而不是 Firefox。</p>
+<ul>
+<li>优点：
+<ul>
+<li>firefox 在 bilibili 等网站的表现较差，放开权限后子页面仍无法读取 cookies。Firefox Developer Edition 无此问题。</li>
+<li>
+<blockquote>
+<p>只有这个可以安装 ruffle —— Asuka Minato（虽然这不是我的刚需）</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>设置步骤如下：</p>
+<ol>
+<li>迁移书签与历史记录。此方面 firefox 有专门的接口，可以一键导入。</li>
+<li>设置中文：在 <code>about:config</code> 中，将 <code>intl.multilingual.enabled</code>、<code>intl.multilingual.downloadEnabled</code> 设为 true，然后就能在设置中选择中文。</li>
+<li>迁移扩展与扩展数据。具体地：
+<ul>
+<li>由于 chrome 系扩展与 mozilla 系扩展不兼容，扩展需要手动迁移。</li>
+<li>Tampermonkey 脚本迁移：<em>Dashboard - Utilities - File Export &amp; Import from file</em></li>
+</ul>
+</li>
+<li>使用 <a href="https://addons.mozilla.org/en-US/firefox/addon/sidebery/" target="_blank" rel="noopener noreferrer">Sidebery</a> 实现纵向标签栏。</li>
+<li>隐藏标题栏，书签栏，标签栏：
+<ul>
+<li>在 <code>about:config</code> 中，将 <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> 改为 true。（为了允许 firefox 加载自定义 css）</li>
+<li>在 <code>about:support</code> 中，点击 <em>配置文件夹 -&gt; 打开文件夹</em>（<em>Profile Folder -&gt; Open Folder</em>），在此目录下新建名为 <code>chrome</code> 的文件夹，在新文件夹下新建 <code>userChrome.css</code>，写入<a href="https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css" target="_blank" rel="noopener noreferrer">此处代码</a>。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>注：在地址栏输入上述 <em>about:*</em> 即可打开对应界面。</p>
+</blockquote>
+<ol start="6">
+<li>解决跨源错误：在 <code>about:config</code> 中，将 security.fileuri.strict_origin_policy 设为 false。</li>
+</ol>
+<h2> windows 下的权限控制</h2>
+<p>起因：MS-DOS 自带的 <code>tree</code> 命令太难用了（不包含文件）。我需要把它替换为 <a href="https://gnuwin32.sourceforge.net/packages/tree.htm" target="_blank" rel="noopener noreferrer">tree for windows</a>。windows 的权限管理太“安全”了，很烦。</p>
+<ol>
+<li>（本节无关）下载并将 <code>tree.exe</code> 单文件放入 <code>C:\WINDOWS\System32</code></li>
+<li>修改 <code>tree.com</code> 的名字（或直接删除），需要获取权限。
+<ol>
+<li><em>属性 - 安全 - 高级</em>，更改所有者为当前用户。</li>
+<li>然后在下面选择 <em>Users</em> 那一栏，编辑，改为完全控制。</li>
+<li>一路确定即可。
+不过之后清理 WinSxS 的时候又没法用了。。</li>
+</ol>
+</li>
+</ol>
+<h2> 遇到的问题</h2>
+<h3> 端口随机占用</h3>
+<p>win11 下有时代理软件端口突然无法使用，有时测试网站localhost端口无法使用，随机性很强。于是去搜了下<a href="https://www.cnblogs.com/fanqisoft/p/17071121.html" target="_blank" rel="noopener noreferrer">解法</a>。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>我的文章</title>
+      <link>https://mister-hope.github.io/articles/</link>
+      <guid>https://mister-hope.github.io/articles/</guid>
+      <source url="https://mister-hope.github.io/rss.xml">我的文章</source>
+      <description>我的文章 此处仅包含杂项文章。若需要阅读编程、爱好有关文章请前往对应版块。 这里有一些外部文章分享。 主张 道论 经历 设置电脑（windows）（Linux 请前往Linux，VPS） 设置手机（Android） 购买，设置 VPS</description>
+      <category>导航</category>
+      <pubDate>Thu, 29 Sep 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 我的文章</h1>
+<p>此处仅包含杂项文章。若需要阅读编程、爱好有关文章请前往对应版块。</p>
+<ul>
+<li>这里有一些<a href="/articles/external.html" target="blank">外部文章分享</a>。</li>
+</ul>
+<h2> 主张</h2>
+<ol>
+<li><a href="/articles/worldview.html" target="blank">道论</a></li>
+</ol>
+<h2> 经历</h2>
+<ol>
+<li><a href="/articles/computer_setting.html" target="blank">设置电脑（windows）</a>（Linux 请前往<a href="/coding/linux.html" target="blank">Linux</a>，<a href="/articles/vps.html" target="blank">VPS</a>）</li>
+<li><a href="/articles/mobile_setting.html" target="blank">设置手机（Android）</a></li>
+<li><a href="/articles/vps.html" target="blank">购买，设置 VPS</a></li>
+</ol>
+<h2> 教程</h2>
+<ol>
+<li><a href="/articles/telegram.html" target="blank">TG（telegram）教程</a></li>
+<li><a href="/articles/adb.html" target="blank">ADB 教程与常用指令</a></li>
+<li><a href="/articles/markdown.html" target="blank">Markdown 教程</a></li>
+<li><a href="/articles/vpn.html" target="blank">VPN 教程与推荐</a></li>
+<li><a href="/articles/Android_ISA.html" target="blank">Android 查看手机 cpu 指令集</a></li>
+<li><a href="/articles/minimize_exe.html" target="blank">最小化二进制文件与 dll</a></li>
+<li><a href="/articles/cli_compress.html" target="blank">命令行压缩</a></li>
+</ol>
+<h2> 推荐</h2>
+<ol>
+<li><a href="/articles/time_record.html" target="blank">电脑、手机端记录软件使用时长</a></li>
+<li><a href="/articles/track_record.html" target="blank">运动轨迹记录软件横评</a></li>
+<li><a href="/articles/input_method.html" target="blank">输入法</a></li>
+<li><a href="/articles/ramdisk.html" target="blank">RAM Disk 横评</a></li>
+</ol>
+<!-- 7. [Potplayer 设置](./potplayer_setting.md) -->]]></content:encoded>
+    </item>
+    <item>
+      <title>输入法</title>
+      <link>https://mister-hope.github.io/articles/input_method.html</link>
+      <guid>https://mister-hope.github.io/articles/input_method.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">输入法</source>
+      <description>输入法 ——windows 端的输入法都是一坨垃圾。 我的手机端输入法使用 Gboard，除了语音输入比较烂以外没啥缺点。windows 端我从初中就开始用 手心输入法，体验也还不错。但我刚需的语音输入在 手心输入法 中并不自带，使用微软的语音输入识别率又极为感人，因此尝试了一些其他输入法，并把我对每个输入法的评价写于此文。 手心输入法 这是陪伴我最久的一个输入法，轻量级，无广告，双拼方案多。 微软输入法 windows 自带的输入法，继承了微软一贯以来的毛病：强迫你接受微软的设计理念。它提供的自定义选项少得可怜，我无法获得我需要的体验。并且其未内置小鹤双拼方案，我需要自行修改注册表：</description>
+      <category>教程</category>
+      <category>推荐</category>
+      <pubDate>Wed, 12 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 输入法</h1>
+<div class="subtitle">——windows 端的输入法都是一坨垃圾。</div>
+<p>我的手机端输入法使用 Gboard，除了语音输入比较烂以外没啥缺点。windows 端我从初中就开始用 <em>手心输入法</em>，体验也还不错。但我刚需的语音输入在 <em>手心输入法</em> 中并不自带，使用微软的语音输入识别率又极为感人，因此尝试了一些其他输入法，并把我对每个输入法的评价写于此文。</p>
+<h2> 手心输入法</h2>
+<p>这是陪伴我最久的一个输入法，轻量级，无广告，双拼方案多。</p>
+<h2> 微软输入法</h2>
+<p>windows 自带的输入法，继承了微软一贯以来的毛病：<strong>强迫你接受微软的设计理念</strong>。它提供的自定义选项少得可怜，我无法获得我需要的体验。并且其未内置小鹤双拼方案，我需要自行修改注册表：</p>
+<ol>
+<li>打开 regedit，在 <code>计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS</code> 路径下添加字符串值，名称为 <code>UserDefinedDoublePinyinScheme0</code>，值为 <code>小鹤双拼 *2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt</code>，注意空格。</li>
+<li>在双拼方案中选择 <em>小鹤双拼</em>。</li>
+</ol>
+<p>不过微软输入法也有优点：其是我用过的输入法中<strong>唯一</strong>支持 <em>暗黑模式</em> 的。这项对我来说也是刚需，只是平常都在忍受而已。</p>
+<h2> 讯飞输入法</h2>
+<p>试用讯飞输入法主要还是看重了它的语音输入能力，实际体验也确实不错。但最终我还是放弃了它，只有这一个原因：<strong>切换输入法时会卡</strong>。</p>
+<p>我使用 <code>Ctrl + Shift</code> 切换输入法，而在切换到讯飞输入法时需要多按住 <code>Ctrl</code> 约 0.3s，这是我不能接受的。虽然 windows 官方推荐使用 <code>win + space</code> 切换输入法并且此方式没有问题，但我还是选择继续使用手心输入法。</p>
+<h2> 其他</h2>
+<h3> <a href="https://github.com/HaujetZhao/CapsWriter" target="_blank" rel="noopener noreferrer">CapsWriter</a></h3>
+<p>这是一款语音输入工具。但是使用它需要购买阿里云的 API，而现在语音 API 的价格普遍都挺可观，逼迫我放弃了这个想法。<s>你们移动端都是给免费随便用的喂！</s></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://mister-hope.github.io/articles/markdown.html</link>
+      <guid>https://mister-hope.github.io/articles/markdown.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">Markdown</source>
+      <description>Markdown Markdown 是被广泛使用的轻量级标记语言。 推荐教程：younghz.github.io/Markdown/ 速查 标题：1-6 个 # 加空格加标题。# 数量对应标题等级（大小）。例如： ### 这是三级标题 这是三级标题</description>
+      <category>教程</category>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Markdown</h1>
+<p>Markdown 是被广泛使用的轻量级标记语言。</p>
+<p>推荐教程：<a href="http://younghz.github.io/Markdown/" target="_blank" rel="noopener noreferrer">younghz.github.io/Markdown/</a></p>
+<h2> 速查</h2>
+<p>标题：1-6 个 <code>#</code> 加空格加标题。<code>#</code> 数量对应标题等级（大小）。例如：</p>
+<p><code>### 这是三级标题</code></p>
+<h3> 这是三级标题</h3>
+<hr>
+<p>换行：多给一个空行。有些 Markdown 渲染器可能不需要。</p>
+<hr>
+<p>引用：
+&gt; 一级引用
+&gt;&gt; 二级引用</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+</blockquote>
+</blockquote>
+<hr>
+<p>代码块<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">：（部分渲染器有语法高亮功能，可以在头部的 ``` 后加上语言。）</a></p><a class="footnote-anchor" id="footnote-ref1">
+<p>```python<br>
+print("123")<br>
+```</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><hr>
+<p>分割线：连续的三个 <code>*</code> 或者 <code>_</code></p>
+<hr>
+<p>列表（注意符号后面要有一个空格）：</p>
+<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>无序列表1</li>
+<li>无序列表2
+<ul>
+<li>前面加 Tab 可分级
+<ul>
+<li>再分级</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+<li>有序列表3</li>
+</ol>
+<hr>
+<p>文本样式</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">样式</th>
+<th style="text-align:center">样例</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">斜体</td>
+<td style="text-align:center"><code>*斜体*</code></td>
+<td style="text-align:center"><em>斜体</em></td>
+</tr>
+<tr>
+<td style="text-align:center">粗体</td>
+<td style="text-align:center"><code>**粗体**</code></td>
+<td style="text-align:center"><strong>粗体</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">删除线</td>
+<td style="text-align:center"><code>~~删除~~</code></td>
+<td style="text-align:center"><s>删除</s></td>
+</tr>
+<tr>
+<td style="text-align:center">标记</td>
+<td style="text-align:center">`等宽标记`</td>
+<td style="text-align:center"><code>等宽标记</code></td>
+</tr>
+<tr>
+<td style="text-align:center">链接</td>
+<td style="text-align:center"><code>[百度](https://www.baidu.com/)</code></td>
+<td style="text-align:center"><a href="https://www.baidu.com/" target="_blank" rel="noopener noreferrer">百度</a></td>
+</tr>
+<tr>
+<td style="text-align:center">图片</td>
+<td style="text-align:center"><code>![加载失败时显示此处文字](https://s2.loli.net/2023/03/20/bn4zcdBPgXKq5DH.jpg)</code></td>
+<td style="text-align:center"><img src="https://s2.loli.net/2023/03/20/bn4zcdBPgXKq5DH.jpg" alt="加载失败时显示此处文字" loading="lazy"></td>
+</tr>
+<tr>
+<td style="text-align:center">转义</td>
+<td style="text-align:center"><code>\*不是斜体\*</code></td>
+<td style="text-align:center">*不是斜体*</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>表格：</p>
+<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><table>
+<thead>
+<tr>
+<th style="text-align:left">靠左内容</th>
+<th style="text-align:center">居中内容</th>
+<th style="text-align:right">靠右内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">L</td>
+<td style="text-align:center">M</td>
+<td style="text-align:right">R</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 其他</h2>
+<ol>
+<li>有时候没有渲染出想要的效果，不妨前后加个空格或空行试试。</li>
+<li>Markdown 支持 HTML，所以也可以进行如下操作：</li>
+</ol>
+<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div style="text-align: center">居中</div>
+<text style="color:red;">红色字体</text>
+<p>强制添加空格&nbsp;&nbsp;&nbsp;&nbsp;，&lt;尖括号&gt;</p>
+<h2> external</h2>
+<ol>
+<li><a href="https://github.github.com/gfm/" target="_blank" rel="noopener noreferrer">GitHub Flavored Markdown Spec</a></li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>本博客的代码块功能颇多，详见<a href="https://theme-hope.vuejs.press/zh/cookbook/vuepress/markdown.html#%E4%BB%A3%E7%A0%81%E5%9D%97" target="_blank" rel="noopener noreferrer">此处</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+      <enclosure url="https://s2.loli.net/2023/03/20/bn4zcdBPgXKq5DH.jpg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>program minimize</title>
+      <link>https://mister-hope.github.io/articles/minimize_exe.html</link>
+      <guid>https://mister-hope.github.io/articles/minimize_exe.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">program minimize</source>
+      <description>program minimize I&amp;apos;m very sensitive to file size. And 20230428 I found a nice guy to minimize my released executable files: UPX, The Ultimate Packer for eXecutables. (copy from its readme, strange capitals)</description>
+      <category>教程</category>
+      <pubDate>Fri, 28 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> program minimize</h1>
+<p>I'm very sensitive to file size. And 20230428 I found a nice guy to minimize my released executable files:</p>
+<p><a href="https://github.com/upx/upx" target="_blank" rel="noopener noreferrer">UPX</a>, The Ultimate Packer for eXecutables. (copy from its readme, <s>strange capitals</s>)</p>
+<h2> install</h2>
+<p>use <a href="/farraginous/recommend_packages.html#scoop" target="blank">scoop</a>, <code>scoop install upx</code></p>
+<h2> usage</h2>
+<p><code>upx --best --lzma &lt;yourfile.exe&gt;</code></p>
+<p>or you want to minimize the whole package folder including dlls, replace <code>&lt;yourfile.exe&gt;</code> with <code>&lt;yourfolder&gt;/*</code></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>设置手机</title>
+      <link>https://mister-hope.github.io/articles/mobile_setting.html</link>
+      <guid>https://mister-hope.github.io/articles/mobile_setting.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">设置手机</source>
+      <description>设置手机 为了追求绝对控制与我所需要的功能。前往MIUI 有多难用 Redmi note 10 pro - before root 题外话：高考结束后买的手机，当时还是一个普通人，自然不知道刷机解 bl root 这些东西，等我想解的时候已经太迟了，数据已经太多了。下一部手机必 root。 然而等到了一个能够使我无视数据的契机。</description>
+      <category>教程</category>
+      <category>生活</category>
+      <category>经历</category>
+      <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 设置手机</h1>
+<p>为了追求绝对控制与我所需要的功能。前往<a href="/gossip/fuckxxx.html#miui13-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">MIUI 有多难用</a></p>
+<h2> Redmi note 10 pro - before root</h2>
+<blockquote>
+<p>题外话：高考结束后买的手机，当时还是一个普通人，自然不知道刷机解 bl root 这些东西，等我想解的时候已经太迟了，数据已经太多了。下一部手机必 root。<br>
+然而等到了一个能够使我无视数据的契机。</p>
+</blockquote>
+<ol>
+<li>开启开发者模式
+<ul>
+<li>在 USB 调试版块，该放行放行，该关闭关闭。</li>
+<li>在最下方关闭 MIUI 优化。MIUI 优化可能会导致无法使用 adb install 安装软件。（报错 <code>INSTALL_FAILED_USER_RESTRICTED</code>）<em>顺带，这已经是一个持续至少 6 年的问题了。</em>
+<ul>
+<li>关闭后刷新率会自动 120HZ，调回 60。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/articles/adb.html" target="blank">使用 ADB 卸载</a>一些包
+<ul>
+<li><code>com.miui.systemAdSolution</code>：广告</li>
+<li><code>com.miui.hybrid</code>：快应用，杂种；<a href="#%E7%A6%81%E7%94%A8%E5%BF%AB%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BF%83">为什么要卸载</a></li>
+<li><code>com.sohu.inputmethod.sogou.xiaomi</code> &amp; <code>com.iflytek.inputmethod.miui</code>：自带的 搜狗 讯飞 输入法，我用 gboard</li>
+<li><code>com.miui.newhome</code>：内容中心，广告，好像不能卸载只能禁用</li>
+</ul>
+</li>
+<li>关闭 Github Mobile 的默认打开网址。Github Mobile 因 2FA 需要使用，但使用其查看项目确实非常智障。幸好 MIUI14 提供了设置应用默认打开的功能：长按应用 - 应用信息 - 默认打开，调为拒绝。</li>
+</ol>
+<h2> 刷机</h2>
+<p>使用 MIUI 刷机工具时，千万不要在右下角选择 lock；最好把 Configuration 中的 CheckPoint 删了。</p>
+<h3> Redmi Note 10 pro</h3>
+<p><span class="heimu" title="你知道的太多了">忘了备份应用时间了，妈的</span></p>
+<p>20230614 记一次失败的刷机。型号：redmi note 10 pro</p>
+<ol>
+<li>解 BL 锁，等了 7days。</li>
+<li>刷入 twrp <a href="#%E5%88%B7%E5%85%A5-twrp-%E5%A4%B1%E8%B4%A5">失败</a>。</li>
+</ol>
+<p>没有第三方 recovery 就无法卡刷，而一些类原生例如 Havoc OS | Evolution OS 只提供了卡刷包，无法线刷。寄。<s>（据说有 python 脚本能把卡刷包转成线刷包，没试过，有生之年）</s></p>
+<p>退而求其次，想刷 EU 版 MIUI，<a href="#%E7%BA%BF%E5%88%B7-global-%E5%A4%B1%E8%B4%A5">失败 again</a>，寄。</p>
+<p>再退，用国行 MIUI (chopin)，不使用 twrp 刷入 magisk。（kernelSU 不支持：非 GKI 设备内核）</p>
+<ol>
+<li>安装 <a href="https://github.com/topjohnwu/Magisk/releases/latest" target="_blank" rel="noopener noreferrer">magisk</a>。</li>
+<li>从原生线刷包把 <code>boot.img</code> 拷到手机上。</li>
+<li>在 magisk 中，选择安装 magisk（修补一个文件），选择 <code>boot.img</code> 修补。</li>
+<li>再将修补后的 <code>magiskxxx.img</code> 拷回电脑，<code>fastboot flash boot magiskxxx.img &amp;&amp; fastboot reboot</code> 刷 新 boot。</li>
+<li>好了，之后就是<a href="#magisk">另一个板块</a>了。</li>
+</ol>
+<h3> mipad 5</h3>
+<p>20230715，尝试刷我的小米平板5（nabu）。</p>
+<p>折腾了一下 twrp，在 Github 下载了一个<a href="https://github.com/bm0x/twrp_device_xiaomi_nabu/releases" target="_blank" rel="noopener noreferrer">不明来源的 twrp</a> 刷入，又寄了，表现为闪屏无法启动。算了，这年头 VAB 分区的我再也不想再折腾 twrp 了。好在有了第一次的刷机经验，没有手忙脚乱，能进 fastboot 就能救。</p>
+<p>退而求其次，刷 EU。在<a href="https://xiaomirom.com/download/xiaomi-pad-5-nabu-stable-V14.0.4.0.TKXMIXM/#global-fastboot" target="_blank" rel="noopener noreferrer">这里</a>找了个欧版 ROM，这次倒是没出什么岔子，10min 后顺利刷入。那接下来的 root &amp; magisk 也是水到渠成了，这里按下不表。</p>
+<p>但是等我开始搞机，渐渐发现事情没我想象得那么简单。</p>
+<ol>
+<li>EU 的 Google 全家桶也是无法卸载（即使有些边角如 YT Music 能卸载，Play store 也会再悄悄给你下回来），近 20 个 Google 密密麻麻排着嘲笑我，数量甚至比国行还多；</li>
+<li>后台运行着好多叫不出名字的奇怪服务，有些我 Google 半天也搜不到是什么（例如 <code>com.qti.qcc</code>）；</li>
+<li>也间接导致了<a href="#%E4%B9%B1%E5%86%BB%E7%BB%93">之后的系统崩溃</a>。（我承认主要责任在我）</li>
+</ol>
+<p>然后使用 miflash 刷回国行；刷入失败。一重启就自动进 fastboot。由于<a href="https://xiaomirom.com/rom/mi-pad-5-nabu-china-fastboot-recovery-rom/" target="_blank" rel="noopener noreferrer">此 ROM 下载地址</a>没有 MD5，于是<a href="https://xiaomifirmwareupdater.com/archive/miui/nabu/" target="_blank" rel="noopener noreferrer">换了一个</a>重下，校验 MD5，没有任何问题。刷机工具 Configuration 设置 EraseAll，再刷，还是不行。然后刷欧版，就行了。。由于每次刷机都需要 10min 以上，我连着刷了 5 6 次，等待的时间确实紧张难熬。</p>
+<p>所以刷欧版是一件非常冒险的事：在只使用初级工具前提下<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，这一步没有后悔药，没法再刷回其他系统<sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">。</a></p><a class="footnote-anchor" id="footnote-ref2">
+</a><h2><a class="footnote-anchor" id="footnote-ref2"></a> magisk</h2>
+<p>假定已经完全安装好了 magisk（参见<a href="#%E5%88%B7%E6%9C%BA">刷机</a>）。以下是我的配置步骤。</p>
+<ol>
+<li>隐藏：<em>首页右上角 - 设置 - App - 隐藏</em></li>
+<li>安装 <a href="https://github.com/LSPosed/LSPosed/releases/latest" target="_blank" rel="noopener noreferrer">LSPosed</a> (Zygisk)：下载 zip，复制进手机，在 <em>magisk - 模块</em> 安装并重启，在设置中打开 Zygisk。（不再重复模块安装步骤）</li>
+<li>安装内置的屏蔽广告插件</li>
+</ol>
+<h3> magisk modules</h3>
+<ul>
+<li>LSPosed</li>
+<li><a href="https://github.com/LSPosed/LSPosed.github.io/releases" target="_blank" rel="noopener noreferrer">Shamiko</a>：隐藏 root。</li>
+<li><a href="https://github.com/yc9559/uperf" target="_blank" rel="noopener noreferrer">uperf</a>：性能调度。我设为 powersave 模式。</li>
+<li><a href="https://drive.google.com/file/d/14yctRZDZRrN-PaNsnnRn6d9uzbnMYglo/view?usp=sharing" target="_blank" rel="noopener noreferrer">神仙自动救砖</a>（<strong>闭源！</strong>）：不好找，做了个私链备份（需要科学上网）</li>
+</ul>
+<!-- * [电池容量纠正](https://downloads.suchenqaq.club/magiskmodules/tool/%E7%94%B5%E9%87%8F%E4%BF%AE%E5%A4%8D.zip)（**闭源**） -->
+<h3> LSPosed modules</h3>
+<ul>
+<li>WeXposed</li>
+<li>QXposed</li>
+<li>TSBattery</li>
+<li><a href="https://github.com/LSPosed/CorePatch/releases" target="_blank" rel="noopener noreferrer">核心破解</a></li>
+<li>哔哩漫游</li>
+<li><a href="https://github.com/Auto-Accounting/Qianji_auto" target="_blank" rel="noopener noreferrer">自动记账</a>，测试中</li>
+<li><a href="https://github.com/KitsunePie/QQCleaner" target="_blank" rel="noopener noreferrer">QQ 瘦身</a></li>
+<li>Telegram UserID Viewer</li>
+<li>Bili调速</li>
+</ul>
+<h3> 其他</h3>
+<p>通过 play 商店安装：</p>
+<ul>
+<li><a href="https://github.com/RikkaApps/Shizuku" target="_blank" rel="noopener noreferrer">shizuku</a></li>
+<li><a href="https://github.com/aistra0528/Hail" target="_blank" rel="noopener noreferrer">雹</a>：冻结应用。拒绝使用闭源商业化的 <em>冰箱</em>。（顺带一提，下述的 <em>Scene5</em> 也有冻结应用的功能）</li>
+<li>App ops（<strong>闭源！</strong>）：权限管理。闭源功能有限。</li>
+</ul>
+<p>通过 Github 安装：</p>
+<ul>
+<li><a href="https://github.com/AdAway/AdAway" target="_blank" rel="noopener noreferrer">AdAway</a>：屏蔽广告。  <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
+</li>
+<li><a href="https://github.com/KieronQuinn/DarQ" target="_blank" rel="noopener noreferrer">DarQ</a>：强制黑夜。支持不算好，pdd，咸鱼都无法强制。</li>
+<li><a href="https://github.com/MuntashirAkon/AppManager" target="_blank" rel="noopener noreferrer">App Manager</a>：开源的 root 软件管理，可以查看运行中服务，可以冻结应用，控制权限。</li>
+</ul>
+<p>通过酷安安装：</p>
+<ul>
+<li>Scene5（<strong>闭源！</strong>）：注意，scene5 ROOT 后的功能为试用，到期需<strong>付费</strong>，正在寻找开源免费替代品。
+<ul>
+<li>目前依赖其任务管理，控制性能与冻结应用。</li>
+</ul>
+</li>
+</ul>
+<h2> Redmi note 10 pro - after root</h2>
+<ol>
+<li>安装 V2rayNG.基础中的基础。</li>
+<li>安装 Google Play。</li>
+<li>不要在 Google Play 安装 Wechat，会被冻结账号。需要绑定身份证解封 (fuck u)。<span class="heimu" title="你知道的太多了">然后我人脸验证的时候刚好熄灯了，你妈</span></li>
+<li>不要在 Google Play 安装 QQ，无法开启深色模式 (fuck u)。</li>
+<li>见<a href="#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6">禁用软件</a>。</li>
+</ol>
+<h2> 禁用软件</h2>
+<p><a href="https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a" target="_blank" rel="noopener noreferrer">这里</a>可以看 MIUI 有哪些不能禁用的东西。</p>
+<p>我使用 <a href="#%E5%85%B6%E4%BB%96">App Manager</a> 进行软件的冻结操作。（scene5/6 也可以，但是其为闭源商业软件，操作麻烦，故不用它。）</p>
+<h3> EU MIUI</h3>
+<ul>
+<li>禁用负一屏需要冻结 Google (<code>com.google.android.googlequicksearchbox</code>)。</li>
+<li>Google 家的大多数都能冻</li>
+<li>不要冻 <em>媒体存储设备</em>(<code>com.google.android.providers.media.module</code>) ！！！<a href="#%E4%B9%B1%E5%86%BB%E7%BB%93">惨痛教训</a></li>
+</ul>
+<h3> 禁用快应用中心</h3>
+<blockquote>
+<p>这是一篇久远的文章，是本页面年龄最大的。
+快应用服务框架本意是好的，大家联合起来统一为一个标准，减少不必要的重复开发。</p>
+</blockquote>
+<p>但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和<strong>家人</strong>的身心健康，建议禁用之：</p>
+<ol>
+<li>查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到<em>快应用服务框架</em> 进入，点击右上角感叹号，查看应用包名。</li>
+</ol>
+<blockquote>
+<p>或：已知关键字可使用 <code>adb shell pm list package [&lt;keyword&gt;]</code> 在手机内以关键字查找包名。
+例：在 MIUI 12.5 中，快应用服务框架包名为<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span></p>
+</blockquote>
+<ol start="2">
+<li>连接手机并<a href="/articles/adb.html" target="blank">开启 ADB 调试</a>。</li>
+<li>禁用包：<code>adb shell pm disable-user com.miui.hybrid</code>，也可以直接卸载，详情参考 <a href="/articles/adb.html" target="blank">ADB</a></li>
+</ol>
+<p>以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。</p>
+<h2> 遇到的问题</h2>
+<h3> 线刷 global 失败</h3>
+<p>已经注释了 <code>Missmatching image and device</code> 验证，跳过了 crclist &amp; sparsecrclis 认证，最后还是卡在了 <code>error: Writing 'xbl' FAILED (remote:'This partition doesn't exist')</code> 上。。网上说 xbl error 是没解 bl 锁，但我这个显然是找不到分区。</p>
+<p>下了两个 global (sweet)，都需要 <code>xbl</code> 分区，都没法用。然后放弃了。</p>
+<h3> 刷入 twrp 失败</h3>
+<p>在 fastboot 下执行 <code>fastboot flash recovery twrp.img</code>，报错：<code>Writing 'recovery'   FAILED (remote: 'This partition doesn't exist')</code>。</p>
+<p>网上看了一下，这个型号是 A/B 分区的，并没有 recovery 分区。执行 <code>fastboot boot twrp.img</code>（不刷入，直接启动），报错 <code>Booting   FAILED (Status read failed (Too many links))</code>。然后能试的方法都试过了，使用 USB2.0，改注册表驱动，使用最新的 platform-tools，使用舍友的电脑，把 twrp 换用 OrangeFox...都无法解决此问题。</p>
+<p>之后的刷 mipad5 我也去网上找了带有 twrp 的 boot.img，但都是不可用的。</p>
+<h3> 误炸 boot</h3>
+<blockquote>
+<p>此事件也直接导致了我屏蔽 csdn</p>
+</blockquote>
+<p>弱智 csdn 给了一个把 twrp 镜像刷入 boot 的脑残方法（那是刷 recovery 的）。。于是 boot 损坏，手机无限重启。</p>
+<p>解法：下载个官方 ROM 解压，找到 <code>boot.img</code> 刷入 <code>fastboot flash boot boot.img</code> 就行了。</p>
+<p>我第一次搞，以为要刷砖了比较慌，直接用 miflash 把整个原生 ROM 都刷进去了。。（最后还刷失败了，还是无限重启，miflash 你不得好死）</p>
+<blockquote>
+<p>再吐槽一下 <a href="/farraginous/recommend_packages.html#bandizip" target="blank">bandizip</a>，解压 <code>*.tgz</code> 时默认一层一层解（<code>*.tgz</code> -&gt; <code>*.tar</code> -&gt; <code>*</code>）。。一个 10G 的包硬生生给我占了 26G 的空间。<br></p>
+<div class="image50" style="text-align: center; "><img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/mobile_setting/fuckbandizip.png"><div>你为什么不开？你为什么不开？</div></div>
+</blockquote>
+<h3> 乱冻结</h3>
+<p>在刷了 EU 版 MIUI 后，使用 App Manager 冻结了 <code>媒体存储设备</code>(<code>com.google.android.providers.media.module</code>)，导致 App Manager 闪退；无法访问 sdcard。随之发生壁纸变黑，帧率暴降，VPN 自动断连等现象。<span class="heimu" title="你知道的太多了">对于 app 来说，大概就像是末世吧。</span></p>
+<p>信息：</p>
+<ol>
+<li><a href="https://github.com/MuntashirAkon/AppManager/discussions/835" target="_blank" rel="noopener noreferrer">freeze 实际上做了什么？</a>，是 App Manager 的官方(?)解释</li>
+</ol>
+<p>尝试：</p>
+<ol>
+<li>先瞎尝试：<code>adb shell pm enable &lt;package name&gt;</code> + <code>adb shell am start com.google.android.providers.media.module</code>：
+<blockquote>
+<p>Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=com.google.android.providers.media.module }<br>
+Error: Activity not started, unable to resolve Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.google.android.providers.media.module }</p>
+</blockquote>
+</li>
+<li>在获取上述信息后，进入 <code>adb shell</code>，<code>su</code> 获取 root，执行：
+<ol>
+<li><code>pm unhide com.google.android.providers.media.module</code></li>
+<li><code>pm enable com.google.android.providers.media.module</code></li>
+<li><code>pm unsuspend com.google.android.providers.media.module</code></li>
+<li>三步开启权限后，退出 shell，重启，静·候·佳·音。</li>
+</ol>
+</li>
+</ol>
+<p>然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装，前面全部白折腾。刚好我对 EU 挺失望的，想直接装回原国行系统，甚至还<a href="#mipad-5">失败了</a>。</p>
+<p>这个故事告诉我：root 后记得先刷救砖模块。</p>
+<h3> ANDROID_PRODUCT_OUT not set</h3>
+<p><code>fastboot flash</code> 刷入分区时报错：</p>
+<blockquote>
+<p>fastboot: error: ANDROID_PRODUCT_OUT not set</p>
+</blockquote>
+<p>此时需要检查当前终端路径，是否包含你的 <code>.img</code> 文件。</p>
+<h3> 找不到 LSPosed 图标</h3>
+<p>解法：<code>adb shell</code>，<code>su</code> 提权后，输入</p>
+<div class="language-bash" data-ext="sh"></div><p>即可启动。（<a href="https://www.bilibili.com/video/BV1UR4y1V7Ry/" target="_blank" rel="noopener noreferrer">source</a>, my_version: 1.8.6）</p>
+<h3> 备份恢复</h3>
+<p>由于尝试了 <code>App Manager</code> 和 <code>adb backup</code> 均无法备份应用数据，无奈使用小米的备份（<code>com.miui.backup</code>）。结果果然不出所料——出事了，EU 版系统即使装了国内的应用商店也无法下载备份<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">。解法：</a></p><a class="footnote-anchor" id="footnote-ref3">
+<ol>
+<li>从手机提取安装包，装到平板。（可用 App Manager 或 <a href="/farraginous/recommend_packages.html#%E5%A4%9A%E8%AE%BE%E5%A4%87%E4%BA%92%E4%BC%A0" target="blank">Localsend</a>）</li>
+<li>安装完后没有快捷方式，也无法打开（App Manager 与 ADB 均无法启动，摸索了挺久）。此时需要去设置中搜索 <code>备份</code> 即可进入界面使用。<span class="heimu" title="你知道的太多了">假如刷的非小米系统就惨了，我也不懂能不能用</span></li>
+</ol>
+<hr class="footnotes-sep">
+</a><section class="footnotes"><a class="footnote-anchor" id="footnote-ref3">
+</a><ol class="footnotes-list"><a class="footnote-anchor" id="footnote-ref3">
+</a><li id="footnote1" class="footnote-item"><a class="footnote-anchor" id="footnote-ref3"></a><p><a class="footnote-anchor" id="footnote-ref3">指 miflash + adb。我有考虑过使用</a><a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=1655550" target="_blank" rel="noopener noreferrer">磁盘模式工具</a>甚至更底层的方法，但是尚未有收入的我还是无法承担飙升的刷砖风险。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>暂不清楚是只是 <em>无法刷回国行</em> 还是 <em>无法刷成其他任一系统</em>。推测是刷 EU 的分区(?)更改比国行的多，导致刷回国行时未对额外分区进行更改。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote3" class="footnote-item"><p><a href="https://t.me/withabsolutex/1165" target="_blank" rel="noopener noreferrer">source</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Potplayer 设置</title>
+      <link>https://mister-hope.github.io/articles/potplayer_setting.html</link>
+      <guid>https://mister-hope.github.io/articles/potplayer_setting.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">Potplayer 设置</source>
+      <description>Potplayer 设置 注意 本人已不再使用 potplayer，改用 mpv，请知悉 Potplayer 是一个强大的视频播放器。</description>
+      <category>教程</category>
+      <pubDate>Sat, 14 Jan 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Potplayer 设置</h1>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p>本人已不再使用 potplayer，改用 <a href="/farraginous/recommend_packages.html#mpv" target="blank">mpv</a>，请知悉</p>
+</div>
+<p><a href="/farraginous/recommend_packages.html#potplayer" target="blank">Potplayer</a> 是一个强大的视频播放器。</p>
+<p>由于自定义程度过高，普通情况下很难调教好 Potplayer。因此本文分享一些我在设置过程中的微不足道的心得。</p>
+<h2> 解码器设置</h2>
+<p>请自行搜索 <em>Potplayer + Lav Filters + madVR</em> .其中，<em>Lav Filters</em> 为解码器，<em>madVR</em> 则为渲染器。</p>
+<h2> 倍速音画不同步</h2>
+<p>我喜欢高倍速看视频，最高不限于 5x.（解说性质） 但受限于解码器与电脑性能，高倍速下视频渲染速度无法跟上倍速，会出现音画不同步现象。</p>
+<p>解决方法：F5 打开参数选项，依次点击 <em>滤镜 - 视频解码器 - 内置解码器/DXVA 设置 - 图像滞后时允许漏帧保持同步</em>。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>TG教程</title>
+      <link>https://mister-hope.github.io/articles/telegram.html</link>
+      <guid>https://mister-hope.github.io/articles/telegram.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">TG教程</source>
+      <description>TG教程 Telegram(TG) 是一款境外的聊天软件。需要科学上网。（维基百科）其优势如下： 云端永久无限量存储 客户端逻辑友好，爆杀国内一众聊天软件 多端，优秀的同步机制 言论基本不受审查与限制</description>
+      <category>教程</category>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> TG教程</h1>
+<p><a href="https://telegram.org/" target="_blank" rel="noopener noreferrer">Telegram</a>(TG) 是一款境外的聊天软件。需要科学上网。（<a href="https://zh.m.wikipedia.org/zh-cn/Telegram" target="_blank" rel="noopener noreferrer">维基百科</a>）其优势如下：</p>
+<ul>
+<li>云端永久无限量存储</li>
+<li>客户端逻辑友好，爆杀国内一众聊天软件</li>
+<li>多端，优秀的同步机制</li>
+<li>言论<strong>基本</strong>不受审查与限制</li>
+</ul>
+<p>也可使用 Telegram 第三方客户端 <a href="https://github.com/NekoX-Dev/NekoX" target="_blank" rel="noopener noreferrer">NekoX</a>，内置代理，无需科学上网。缺点是带宽小和不稳定。</p>
+<p>telegram 也有一些我认为的缺点，见<a href="/gossip/fuckxxx.html#telegram-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">telegram 有多难用</a></p>
+<blockquote>
+<p>紧急情况还请使用其他聊天软件。</p>
+</blockquote>
+<h2> 教程</h2>
+<ul>
+<li>简体中文包：<code>tg://setlanguage?lang=classic-zh-cn</code>（复制，发送给任意用户，点击；PC 用户可直接在浏览器内打开</li>
+</ul>
+<div class="hint-container danger">
+<p class="hint-container-title">特别注意</p>
+<p>若您使用 +86 号码注册，请点击 <em>设置-隐私与安全-手机号码-谁可以通过我的手机号找到我</em> ，将其改为<em>我的联系人</em> 。<br>请务必保护好你和他人的隐私。</p>
+</div>
+<ul>
+<li>单击消息（PC：右键消息）可对消息进行处理。你可以<strong>删除</strong>（相当于撤回）&amp; <strong>编辑</strong> 你发出的任意时刻的消息。<span class="heimu" title="你知道的太多了">此二者是聊天软件<strong>最基本</strong>的功能，而国内聊天软件做不到这<strong>基本</strong>。</span></li>
+<li>消息发送成功后会在消息右下角显示一个 <code>√</code>。对方已读会在消息右下角显示两个 <code>√</code>。</li>
+<li>聊天界面点击 头像 / 聊天标题 即可进入聊天详情界面。可以查看一些详细信息，查找媒体文件等。</li>
+<li>你可以对任何人发起聊天，即便你们不是联系人。</li>
+</ul>
+<h3> 分类</h3>
+<p>大体上，telegram 的聊天领域可分为三类：<strong>私聊（Private message,PM），群组（Group），频道（Channel）</strong>。此处着重解释频道：</p>
+<ul>
+<li>加入者被称为 <strong>订阅者</strong>，仅能单向接受频道主的消息。订阅者可以对频道消息进行<strong>回应（Reactions）</strong>（指目前 61 种表情）。</li>
+<li>频道主可以为频道<strong>链接一个群组</strong>，使订阅者能够在群组内交流，并开启频道的评论功能。（增加了频道的双向性）频道内发布的内容会在链接的群组自动置顶。</li>
+<li>在频道的聊天详情界面，点击右上角三个点 - 查看讨论 即可进入链接的群组。</li>
+</ul>
+<h3> 文字效果</h3>
+<p>Telegram 文字效果支持 粗体，斜体，下划线，等宽，删除线，链接，防剧透。（除了<em>防剧透</em>，其余均为 markdown 支持的效果）</p>
+<p>要使用这些效果：</p>
+<ul>
+<li>移动端，使用 markdown 语法。</li>
+<li>PC 端：选中文字，右键，在文字样式中选择。</li>
+</ul>
+<h3> 文本搜索</h3>
+<p>TG 仅支持<em>空格分词搜索</em>。这是拉丁语系国家习惯的搜索方式，但对 CJK 国家极为不友好。<span class="heimu" title="你知道的太多了">当然，有寄术的可以使用 bot + sql <a href="https://github.com/lilydjwg/luoxu" target="_blank" rel="noopener noreferrer">自建查询系统</a>。</span> 在文本中使用 <a href="#tag">#tag</a> 也是一个不错的选择。</p>
+<h3> 用户搜索</h3>
+<p>每一位用户，每个群组、频道都<strong>可以有</strong>一个<strong>用户名</strong>。（有别于昵称，需要主动设置）已知用户名情况下，有许多方法可以添加对应的用户、群组、频道：</p>
+<ul>
+<li>在 TG 搜索框输入 <code>@</code> + <em>用户名</em> ；</li>
+<li>在浏览器中打开 <code>t.me/</code> + <em>用户名</em> 所构成的网址；</li>
+<li>在任意聊天窗口发送 <code>@</code> + <em>用户名</em> ，Telegram 会自动创建链接，单击。</li>
+</ul>
+<h3> 发送图片</h3>
+<p>Telegram 会自动压缩发送的图片。若想发送原图：</p>
+<ul>
+<li>移动端：点击回形针 - 文件 - 相册（发送未经压缩的图片）</li>
+<li>PC 端：拖入 / 粘贴图片，取消勾选 Compress the image</li>
+</ul>
+<h3> 贴纸</h3>
+<p>单击别人发送的贴纸（PC：右键）可以添加贴纸包。然后就能用了。</p>
+<p>下载贴纸可以使用：<a href="https://t.me/GIFDownloader_bot" target="_blank" rel="noopener noreferrer">TG Downloader</a></p>
+<h3> tag</h3>
+<p>tag 由两端的空格，<code>#</code>号与 tag 名构成。Telegram 会自动为 tag 创建链接，点击即可在此聊天搜索所有带有该 tag 的消息。<a href="https://t.me/withabsolutex/520" target="_blank" rel="noopener noreferrer">这是一个示例</a></p>
+<h3> 置顶</h3>
+<p>聊天界面的上方可以看到置顶消息（如果有的话）。点击即可跳转。跳转置顶消息<strong>不会</strong>将当前位置记为锚点。</p>
+<h3> 回复与锚点</h3>
+<p>点击 <em>回复性质的消息</em> 会添加当前位置为锚点。你可以点击右下角向下的箭头返回最近的锚点。这里有一个“设计缺陷”，即点击置顶消息跳转不会设置锚点。</p>
+<h2> 频道群组推荐</h2>
+<p>由于本人使用telegram的时间不算久，此处频道/群组多为受先行者们所转发传播，在此对他们表示敬意。<span class="heimu" title="你知道的太多了">但是现在的我与当时写下这句话的我已经不一样啦kora！</span> <a href="https://github.com/alexbei/telegram-groups" target="_blank" rel="noopener noreferrer">这里</a>有其他人的推荐。</p>
+<p><em>首先当然是要夹带私货啦！我和我的频道：</em><a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-%40ab5__x-blue?style=flat-square&amp;logo=telegram"></a></p>
+<h3> 新闻</h3>
+<ul>
+<li><a href="https://t.me/tnews365" target="_blank" rel="noopener noreferrer">竹新社</a>：国内外新闻转载，较客观</li>
+<li><a href="https://t.me/disclosetv" target="_blank" rel="noopener noreferrer">Disclose.tv</a>：英文新闻频道</li>
+<li><a href="https://t.me/cdtchinesefeed" target="_blank" rel="noopener noreferrer">中国数字时代</a>：转载网评文章，较主观</li>
+<li><a href="https://t.me/today_read" target="_blank" rel="noopener noreferrer">今读</a>：时评</li>
+</ul>
+<h4> 科技新闻</h4>
+<ul>
+<li><a href="https://t.me/xhqcankao" target="_blank" rel="noopener noreferrer">风向旗参考快讯</a></li>
+<li><a href="https://t.me/solidot" target="_blank" rel="noopener noreferrer">Solidot</a></li>
+<li><a href="https://t.me/CE_Observe" target="_blank" rel="noopener noreferrer">每日消费电子观察</a></li>
+<li><a href="https://t.me/TestFlightCN" target="_blank" rel="noopener noreferrer">Testflight 新闻投稿</a></li>
+</ul>
+<h3> 学习</h3>
+<h4> 编程及技术</h4>
+<ul>
+<li><a href="https://t.me/cpluspluszh" target="_blank" rel="noopener noreferrer">C++ 中文交流</a>：讨论 C++ 问题，群规严格，风气良好 <s>（以及膜拜</s></li>
+<li><a href="https://t.me/rust_zh" target="_blank" rel="noopener noreferrer">Rust 众</a>：讨论 Rust 问题 <s>（以及膜拜</s></li>
+<li><a href="https://t.me/Javaer" target="_blank" rel="noopener noreferrer">Java 编程语言</a>：群里都是聊天的，没几个正经学习~~（java 怎么这么拉了）~~</li>
+<li><a href="https://t.me/pythonzh" target="_blank" rel="noopener noreferrer">Python 中文交流</a></li>
+<li><a href="https://t.me/archlinuxcn_group" target="_blank" rel="noopener noreferrer">#archlinux-cn</a></li>
+</ul>
+<h4> 外语</h4>
+<ul>
+<li><a href="https://t.me/shuangyunews_rss" target="_blank" rel="noopener noreferrer">双语新闻</a>：看新闻学英语，拥有逐段双语对照</li>
+<li><a href="https://t.me/onseizatudan" target="_blank" rel="noopener noreferrer">【音声可能】日本語雑談部屋</a> &amp; <a href="https://t.me/nihongo_practice" target="_blank" rel="noopener noreferrer">日本語雑談部屋</a> &amp; <a href="https://t.me/nihongo_soudann" target="_blank" rel="noopener noreferrer">つぐみ喫茶店</a>：聊天群，仅日语</li>
+<li><a href="https://t.me/enjpchat" target="_blank" rel="noopener noreferrer">英日部屋</a>：聊天群，日语 | 英语</li>
+<li><a href="https://t.me/learn_ja_group" target="_blank" rel="noopener noreferrer">日語學習小組</a> &amp; <a href="https://t.me/LearningJapaneseGroup" target="_blank" rel="noopener noreferrer">日本語研修</a>：中文交流的日语学习群</li>
+<li><a href="https://t.me/pieroots" target="_blank" rel="noopener noreferrer">Word Power Made Easy</a>：英语单词词根起源探寻</li>
+</ul>
+<h3> 科技</h3>
+<ul>
+<li><a href="https://t.me/tieliu" target="_blank" rel="noopener noreferrer">黑洞资源笔记</a>：分享一些有价值的编程学习资料 / 卖课的</li>
+</ul>
+<h3> NSFW</h3>
+<ul>
+<li><a href="https://t.me/absolutexsH" target="_blank" rel="noopener noreferrer">Absolutex's H storage</a>：夹带私货，是我自己的涩涩仓库，<em>绝对值_x 精选，质量有保证！</em></li>
+<li><a href="https://t.me/setu_nsfw" target="_blank" rel="noopener noreferrer">美图与色图</a> &amp; <a href="https://t.me/everydaycolorphoto" target="_blank" rel="noopener noreferrer">everyday color photos</a> | <a href="https://t.me/jialeleya2233" target="_blank" rel="noopener noreferrer">萌图交流</a> | <a href="https://t.me/YunRan1314" target="_blank" rel="noopener noreferrer">韵の小院🍃ᴺˢᶠʷ</a>：每日色图</li>
+<li><a href="https://t.me/qingan567" target="_blank" rel="noopener noreferrer">安利 (NSFW)</a> | <a href="https://t.me/exlolicon" target="_blank" rel="noopener noreferrer">ExLOLI - 每日萝莉本子</a>：来点本子</li>
+<li><a href="https://t.me/galgamenoHCG" target="_blank" rel="noopener noreferrer">(ゲームCG) 一个兴趣使然的[NSFW-ios-XNR]</a>：galgame CG<strong>鉴赏</strong></li>
+<li><a href="https://t.me/acgr18" target="_blank" rel="noopener noreferrer">超高质量R18动画资源分享[NSFW]</a></li>
+<li><a href="https://t.me/watchaveveryday" target="_blank" rel="noopener noreferrer">每日精选</a> &amp; <a href="https://t.me/CCTAV" target="_blank" rel="noopener noreferrer">超清|中文字幕</a>...：三次元的，嗯，不用我介绍吧</li>
+</ul>
+<h3> 资源</h3>
+<ul>
+<li><a href="https://t.me/erogamecloud" target="_blank" rel="noopener noreferrer">Visual Novel Channel</a>：galgame 推荐与下载</li>
+<li><a href="https://t.me/apkrxwy" target="_blank" rel="noopener noreferrer">安卓破解分享</a></li>
+<li><a href="https://t.me/AnimeNep" target="_blank" rel="noopener noreferrer">NEP.Anime | 动画仓库</a>：动漫收藏搬运</li>
+</ul>
+<h3> 乐</h3>
+<ul>
+<li><a href="https://t.me/mightyflame" target="_blank" rel="noopener noreferrer">知乎暴论</a>：知乎一些易删回答，看点乐</li>
+<li><a href="https://t.me/shadiaotu" target="_blank" rel="noopener noreferrer">美图与沙雕</a></li>
+<li><a href="https://t.me/nichoIascw" target="_blank" rel="noopener noreferrer">尼古拉斯二手消息转运中心</a></li>
+</ul>
+<h3> 涉政</h3>
+<ul>
+<li><a href="https://t.me/mightyflame" target="_blank" rel="noopener noreferrer">知乎暴论</a></li>
+</ul>
+<h3> 闲聊</h3>
+<ul>
+<li><a href="https://t.me/joinchat/Ytplgt-buepkYThl" target="_blank" rel="noopener noreferrer">垃圾高校毁我青春</a>：大学生闲聊群</li>
+<li><a href="https://t.me/upsetGroup" target="_blank" rel="noopener noreferrer">真红真红真</a>：<a href="/hobbies/galgame.html#%E8%B5%84%E6%BA%90" target="blank">失落小站</a>属群</li>
+<li><a href="https://t.me/coder_ot" target="_blank" rel="noopener noreferrer">Coder Offtopic 中文群</a>：技术 ot 群</li>
+<li><a href="https://t.me/vps_xinhaoqi" target="_blank" rel="noopener noreferrer">VPS信号旗资讯本部</a>：键政群</li>
+</ul>
+<h3> vps</h3>
+<p>vpn 建议去看初级科学上网页面，你可以在那些机场的官网找到TG群组链接。</p>
+<ul>
+<li><a href="https://t.me/vpalogchat" target="_blank" rel="noopener noreferrer">VPS log 官方讨论群</a></li>
+<li><a href="https://t.me/ipv6china" target="_blank" rel="noopener noreferrer">IPv6 Server - Chinese</a></li>
+</ul>
+<h3> 友链</h3>
+<ul>
+<li><a href="https://t.me/KumsVariousCubes" target="_blank" rel="noopener noreferrer">Kum's Various Cubes</a></li>
+<li><a href="https://t.me/lilic_8232" target="_blank" rel="noopener noreferrer">粒粒子的琐碎思考</a></li>
+</ul>
+<h3> 其他</h3>
+<ul>
+<li><a href="https://t.me/iyouport" target="_blank" rel="noopener noreferrer">Iyouport</a>：教你如何保护自己</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>记录软件使用时长</title>
+      <link>https://mister-hope.github.io/articles/time_record.html</link>
+      <guid>https://mister-hope.github.io/articles/time_record.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">记录软件使用时长</source>
+      <description>记录软件使用时长 Windows端记录软件使用时长 我从20220428开始使用Tai记录Windows下的应用时长。直到在20220729了解到ActivityWatch。在此将比较它俩的一些特性。</description>
+      <category>推荐</category>
+      <category>评价</category>
+      <pubDate>Fri, 08 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 记录软件使用时长</h1>
+<h2> Windows端记录软件使用时长</h2>
+<p>我从20220428开始使用<a href="/farraginous/recommend_packages.html#tai" target="blank">Tai</a>记录Windows下的应用时长。直到在20220729了解到<a href="https://github.com/ActivityWatch/activitywatch" target="_blank" rel="noopener noreferrer">ActivityWatch</a>。在此将比较它俩的一些特性。</p>
+<p>此处小小介绍一下<code>ActivityWatch</code>。相较于<code>Tai</code>，它拥有可视化程度 &amp; 自由度更高的图表。<s>（Tai 改版后也不差）</s> 但我最关心的还是我自己的使用体验。两者均为开源软件。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件名</th>
+<th style="text-align:center">运行时内存</th>
+<th style="text-align:center">查询区间长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Tai</td>
+<td style="text-align:center">41.0M</td>
+<td style="text-align:center">年</td>
+</tr>
+<tr>
+<td style="text-align:center">ActivityWatch</td>
+<td style="text-align:center">102.2M</td>
+<td style="text-align:center">月</td>
+</tr>
+</tbody>
+</table>
+<p>结果很明显。</p>
+<ol>
+<li>我追求简洁与直接性的数据，不需要优秀的界面。</li>
+<li><code>ActivityWatch</code>核心采用python编写，高内存占用。</li>
+<li>我对时长记录最大的要求，除了准确性外，就是<strong>查询区间长</strong>了。而<code>ActivityWatch</code>的表现（30days）无法达到预期。</li>
+</ol>
+<p>我仍然选用<code>Tai</code>作为我的时长统计软件。<em>（顺带一提，这俩记录的时长有点区别，而我无法分辨哪个是正确的，因为windows没有官方的时长记录工具。Tai 目前改版至 1.4.0.0，可能具有偏差，但是不多）</em></p>
+<h2> Android端记录软件使用时长</h2>
+<p>我有多喜欢统计时长，从<a href="/hobbies/galgame.html" target="blank">galgame页面</a>和<a href="/hobbies/books.html" target="blank">读书页面</a>便可略知一二。但是——</p>
+<p>由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似windows端<a href="/farraginous/recommend_packages.html#tai" target="blank">Tai</a>的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的app，在此做个横评。<s><em>（将<code>自己做个这种软件</code>写入日程！）</em></s> <span class="heimu" title="你知道的太多了"><em>笑死，开摆</em> </span></p>
+<text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。<table>
+<thead>
+<tr>
+<th style="text-align:center">软件名</th>
+<th style="text-align:center">大小（使用前/后,MB）</th>
+<th style="text-align:center">准确率</th>
+<th style="text-align:center">数据可查询</th>
+<th style="text-align:center">查询区间长</th>
+<th style="text-align:center"><text style="color:red;">其他缺陷</text></th>
+<th style="text-align:center">其他权限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">StayFree</td>
+<td style="text-align:center">48.88/63.11</td>
+<td style="text-align:center"><text style="color:red;">81%</text></td>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center"><text style="color:blue;">无限</text></td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><text style="color:red;">无障碍</text></td>
+</tr>
+<tr>
+<td style="text-align:center">My Phone Time</td>
+<td style="text-align:center">15.23/20.65</td>
+<td style="text-align:center"><text style="color:red;">0%</text></td>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center"><text style="color:blue;">无限</text></td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">ActionDash</td>
+<td style="text-align:center">17/43.26</td>
+<td style="text-align:center">100%</td>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center"><text style="color:red;">周</text></td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">YourHour</td>
+<td style="text-align:center">25.74/70.52</td>
+<td style="text-align:center">100%</td>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center"><text style="color:red;">天</text></td>
+<td style="text-align:center"><text style="color:red;">查看具体应用数据需付费</text></td>
+<td style="text-align:center">上层显示</td>
+</tr>
+<tr>
+<td style="text-align:center">App Usage</td>
+<td style="text-align:center">4.69/28.54</td>
+<td style="text-align:center"><text style="color:red;">0%</text></td>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center">月</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">手机使用时间</td>
+<td style="text-align:center">?/11.73</td>
+<td style="text-align:center">100%?</td>
+<td style="text-align:center"><text style="color:red;">上个月</text></td>
+<td style="text-align:center">月</td>
+<td style="text-align:center"><text style="color:red;">必需挂着后台才可计时；广告</text></td>
+<td style="text-align:center">后台免杀</td>
+</tr>
+<tr>
+<td style="text-align:center"><text style="color:blue;">Digitox</text></td>
+<td style="text-align:center">3.89/20.67</td>
+<td style="text-align:center">100%</td>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center">月</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">AppBlock</td>
+<td style="text-align:center">10.87/44.05</td>
+<td style="text-align:center"><text style="color:red;">0%</text></td>
+<td style="text-align:center">ALL</td>
+<td style="text-align:center"><text style="color:red;">周</text></td>
+<td style="text-align:center"><text style="color:red;">不氪金仅能查看前3个程序数据</text></td>
+<td style="text-align:center"><text style="color:red;">无障碍</text></td>
+</tr>
+<tr>
+<td style="text-align:center"><text style="color:blue;">Phone statistic</text></td>
+<td style="text-align:center">3.07/14.61</td>
+<td style="text-align:center">100%</td>
+<td style="text-align:center">年</td>
+<td style="text-align:center"><text style="color:blue;">年</text></td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<ul>
+<li><code>StayFree</code>仅有81%准确率：QQ、nekogramX、Via等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到19%）（后来发现也有偏大数据）</li>
+<li>准确率为0%的软件：在20220709我看了67min小说后，这些软件有的未记录阅读器时长；有的将时长错加到QQ上。它们的准确率由0.8%-10%不等，由于偏差过大，统一算作0%。</li>
+<li>除<code>My Phone Time</code> <code>ActionDash</code>外其他软件均请求<code>使用情况访问权限</code>，此处视为默认放行。</li>
+<li><code>Phone statistic</code>有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期9天前的。</li>
+</ul>
+<p>总结：</p>
+<p>推荐同时使用<code>Digitox</code>与<code>Phone statistic</code>。<em>（这俩加一起都没某些家伙大</em></p>
+<p><span class="heimu" title="你知道的太多了">感觉还想自己写啊，但是我不会，这下有生之年了</span></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>运动轨迹记录软件横评</title>
+      <link>https://mister-hope.github.io/articles/track_record.html</link>
+      <guid>https://mister-hope.github.io/articles/track_record.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">运动轨迹记录软件横评</source>
+      <description>运动轨迹记录软件横评 我希望找到一款能够记录运动轨迹的软件，在满足需求前提下越小越好。需求：在地图上绘制运动轨迹，定位精确，最好显示方向（由指南针得到）。 评测结果挺让我失望的，有一大批软件连定位精确都无法做到，而且都不约而同地定位到我西北方向数百米。我只能猜想这些软件用了错误的地图，或者久远以前的地图。（我甚至考虑了大陆漂移）因此以下将分为两部分横评。 （后来的测试印证了我的观点：同一软件中使用Google-&amp;gt;标准，地形和卫星地图出现定位偏移，使用OpenStreetMap-&amp;gt;标准地图则未出现偏移。）</description>
+      <category>推荐</category>
+      <category>评价</category>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 运动轨迹记录软件横评</h1>
+<p>我希望找到一款能够记录运动轨迹的软件，在满足需求前提下越小越好。需求：在地图上绘制运动轨迹，定位精确，最好显示方向（由指南针得到）。</p>
+<p>评测结果挺让我失望的，有一大批软件连定位精确都无法做到，而且都不约而同地定位到我西北方向数百米。我只能猜想这些软件用了错误的地图，或者久远以前的地图。<span class="heimu" title="你知道的太多了">（我甚至考虑了大陆漂移）</span>因此以下将分为两部分横评。</p>
+<p>（后来的测试印证了我的观点：同一软件中使用<code>Google-&gt;标准，地形和卫星地图</code>出现定位偏移，使用<code>OpenStreetMap-&gt;标准地图</code>则未出现偏移。）</p>
+<p>老规矩，<text style="color:red;">红色劣势</text>，<text style="color:blue;">蓝色优势</text>。</p>
+<h3>定位精确的软件</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件名</th>
+<th style="text-align:center">大小（安装后,MB）</th>
+<th style="text-align:center">显示方向?</th>
+<th style="text-align:center">无需翻墙?</th>
+<th style="text-align:center">其他缺陷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">GPX Viewer</td>
+<td style="text-align:center">53.43</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Gaia GPS</td>
+<td style="text-align:center">205</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">卫星地图&amp;OpenStreetMap需付费</td>
+</tr>
+<tr>
+<td style="text-align:center">小步点</td>
+<td style="text-align:center">211</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Keep</td>
+<td style="text-align:center"><text style="color:red;">895</text></td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">GPS信号弱</td>
+</tr>
+<tr>
+<td style="text-align:center">Wikiloc</td>
+<td style="text-align:center">55.34</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Guru Maps</td>
+<td style="text-align:center">119</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">部分地名&amp;街道名为英文</td>
+</tr>
+</tbody>
+</table>
+<p>解释：</p>
+<ul>
+<li><code>无需翻墙</code>一般代表该软件的地图非谷歌地图组件，可直连加载。</li>
+</ul>
+<h3>定位偏移的软件</h3>
+<p>此栏为<strong>避雷</strong>而设置。毕竟做不到精确的话，自然就没有了使用的必要。</p>
+<p>由于定位偏移是地图问题，此处将列出<strong>所有地图均存在偏移现象</strong>的软件。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件名</th>
+<th style="text-align:center">大小（安装后,MB）</th>
+<th style="text-align:center">显示方向?</th>
+<th style="text-align:center">无需翻墙?</th>
+<th style="text-align:center">其他缺陷</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Yudo</td>
+<td style="text-align:center">71.90</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">RouteHistory</td>
+<td style="text-align:center">53.80</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">越野路线</td>
+<td style="text-align:center">22.31</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">指南针延迟高</td>
+</tr>
+<tr>
+<td style="text-align:center">跑步记录</td>
+<td style="text-align:center">42.06</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">指南针延迟高</td>
+</tr>
+<tr>
+<td style="text-align:center">我的路线</td>
+<td style="text-align:center">26.54</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">指南针延迟高</td>
+</tr>
+<tr>
+<td style="text-align:center">Geo Tracker</td>
+<td style="text-align:center">56.74</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p>总结：没有特别满意的。姑且用着 Wikiloc</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>初级科学上网</title>
+      <link>https://mister-hope.github.io/articles/vpn.html</link>
+      <guid>https://mister-hope.github.io/articles/vpn.html</guid>
+      <source url="https://mister-hope.github.io/rss.xml">初级科学上网</source>
+      <description>警告 本人不承担因使用以下推荐所带来的任何后果。 免费VPN警告 自带闭源客户端的免费 VPN 在安全性方面没有保证，不推荐使用。 免费VPN仅应在无其他安全选择的情况下，接触非敏感信息时使用，且有较高信息泄露风险。 随着审查力度变化，不排除更高危险。血的教训（当然不是我 (https://focus.scol.com.cn/shwx/202007/5...</description>
+      <category>教程</category>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 初级科学上网</h1>
+<div class="hint-container danger">
+<p class="hint-container-title">警告</p>
+<p>本人不承担因使用以下推荐所带来的任何后果。</p>
+</div>
+<div class="image60" style="text-align: center; ">
+<img alt="meme" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/vpn/meme.png">
+</div>
+<h2> 免费VPN</h2>
+<div class="hint-container warning">
+<p class="hint-container-title">警告</p>
+<p>自带闭源客户端的免费 VPN 在安全性方面没有保证，不推荐使用。</p>
+<p><strong>免费VPN仅应在无其他安全选择的情况下，接触非敏感信息时使用，且有较高信息泄露风险。</strong> 随着审查力度变化，不排除更高危险。<a href="https://focus.scol.com.cn/shwx/202007/57862317.html" target="_blank" rel="noopener noreferrer">血的教训（当然不是我</a></p>
+</div>
+<p>以下免费推荐均为Android端app，<strong>均可在谷歌商店下载</strong>。</p>
+<h3> 火箭加速（推荐）</h3>
+<p><a href="https://wwp.lanzout.com/ibdoB02z8o8d" target="_blank" rel="noopener noreferrer">私链下载地址</a></p>
+<p>优点：</p>
+<ul>
+<li>体积小</li>
+<li>权限低</li>
+<li>速度较快（有时能跑到1.5M/s）</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>节点变化频繁，易失效</li>
+</ul>
+<p>tips：加速前需事先选择能通过连接测试的节点</p>
+<h3> 蚂蚁VPN</h3>
+<p>声称永久免费，操作简单，但开启较慢，有强制弹窗广告</p>
+<h3> 银河VPN（不推荐）</h3>
+<p>开启成功率看脸，网速不敌上面两位，同样有强制弹窗广告</p>
+<h2> 机场选择</h2>
+<p>此处列出部分机场性价比及其变化情况。数字代表<strong>每1元RMB买到的GB数</strong></p>
+<iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280" loading="lazy"></iframe>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<p>每一次付费都请告诫自己机场跑路的可能性。同时，<strong>性价比与稳定性不可兼得。</strong></p>
+</div>
+<p><em>（以下数据截止于20230112）</em></p>
+<h3> 白嫖机场</h3>
+<!-- [官网](https://bpjc.xyz/) | [邀请链接](https://bpjc.xyz/#/register?code=YnrLNenI) -->
+<!-- [官网](https://xn--mesv7f5toqlp.club/) | [邀请链接](https://xn--mesv7f5toqlp.club/#/register?code=YnrLNenI) -->
+<p>不稳定，后果自负。</p>
+<p><a href="https://paolu.pics/" target="_blank" rel="noopener noreferrer">官网</a> | <a href="https://paolu.pics/#/register?code=YnrLNenI" target="_blank" rel="noopener noreferrer">邀请链接</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">年付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥10.00</td>
+<td style="text-align:center">669G*12</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<h3> 一元机场</h3>
+<p><a href="https://xn--4gq62f52gdss.com/" target="_blank" rel="noopener noreferrer">官网</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥4.00</td>
+<td style="text-align:center">1000G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥6.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">不限</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">年付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥11.00</td>
+<td style="text-align:center">100G*12</td>
+<td style="text-align:center">不限</td>
+</tr>
+</tbody>
+</table>
+<p><em>（采用Trojan协议）</em></p>
+<h3> <a href="https://fqhy.xyz/" target="_blank" rel="noopener noreferrer">番茄花园（推荐）</a></h3>
+<p>拥有免费节点，每日签到可领免费流量</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥0.00</td>
+<td style="text-align:center">每日签到（约2G）</td>
+<td style="text-align:center">100Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥30.00</td>
+<td style="text-align:center">300G</td>
+<td style="text-align:center">300Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥60.00</td>
+<td style="text-align:center">1300G</td>
+<td style="text-align:center">500Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥100.00</td>
+<td style="text-align:center">6000G</td>
+<td style="text-align:center">无限制</td>
+</tr>
+</tbody>
+</table>
+<h3> <a href="https://glados.rocks/" target="_blank" rel="noopener noreferrer">GLaDOS（推荐）</a></h3>
+<p>邀请码：<code>3SPFS-IABW1-77EJL-PE8NR</code></p>
+<p>学生免费用 360 天，每月30G。<a href="https://glados.rocks/console/education" target="_blank" rel="noopener noreferrer">说明</a></p>
+<blockquote>
+<p><em>此机场可通过签到延长到期时间，建议使用<a href="https://github.com/DullSword/GLaDOS-CheckIn" target="_blank" rel="noopener noreferrer">脚本</a>自动签到。</em><br>
+很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$1.60</td>
+<td style="text-align:center">200G</td>
+<td style="text-align:center">100Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">$4.20</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">$18.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+</tbody>
+</table>
+<h3> <a href="https://muguacloud.win/" target="_blank" rel="noopener noreferrer">木瓜云</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥7.00</td>
+<td style="text-align:center">900G</td>
+<td style="text-align:center">100Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥10.00</td>
+<td style="text-align:center">1600G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥18.00</td>
+<td style="text-align:center">2800G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+</tbody>
+</table>
+<h3> StarTrip（已跑路）</h3>
+<details><summary>archived</summary>
+<p><a href="https://www.startrip.top" target="_blank" rel="noopener noreferrer">官网</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">￥1.00</th>
+<th style="text-align:center">无限期（已取消）</th>
+<th style="text-align:center">￥1.00</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">流量</td>
+<td style="text-align:center">60G</td>
+<td style="text-align:center">流量</td>
+<td style="text-align:center">15G</td>
+</tr>
+<tr>
+<td style="text-align:center">限速</td>
+<td style="text-align:center">50Mbps</td>
+<td style="text-align:center">限速</td>
+<td style="text-align:center">无限制</td>
+</tr>
+</tbody>
+</table>
+<p><em>（旧版表格）</em></p>
+</details>
+<h3> <a href="https://neko.services/" target="_blank" rel="noopener noreferrer">貓貓互聯</a></h3>
+ <!-- | [邀请链接](https://neko.services/#/register?code=xjZ5356D) -->
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥13.00</td>
+<td style="text-align:center">200G</td>
+<td style="text-align:center">未知</td>
+</tr>
+<tr>
+<td style="text-align:center">￥28.00</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">年付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥20.00</td>
+<td style="text-align:center">128G</td>
+<td style="text-align:center">未知</td>
+</tr>
+<tr>
+<td style="text-align:center">￥38.00</td>
+<td style="text-align:center">256G</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<h3> <a href="https://www.mojie.link/" target="_blank" rel="noopener noreferrer">魔戒</a></h3>
+<p>此机场<strong>仅有不限时流量出售</strong></p>
+ <!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
+<table>
+<thead>
+<tr>
+<th style="text-align:center">一次性</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥1.00</td>
+<td style="text-align:center">2G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥12.00</td>
+<td style="text-align:center">130G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥36.00</td>
+<td style="text-align:center">420G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥60.00</td>
+<td style="text-align:center">750G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥120.00</td>
+<td style="text-align:center">1660G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥240.00</td>
+<td style="text-align:center">3600G</td>
+<td style="text-align:center">不限</td>
+</tr>
+</tbody>
+</table>
+<h3> <a href="https://user.bafang.vip/" target="_blank" rel="noopener noreferrer">八方云</a>（已跑路）</h3>
+<details><summary>archived</summary>
+<p><a href="https://user.bafang.vip/#/register?code=WPIANE92" target="_blank" rel="noopener noreferrer">邀请链接</a> | <a href="https://xn--9kq52et30a.com" target="_blank" rel="noopener noreferrer">防爆链</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥1.00</td>
+<td style="text-align:center">100G</td>
+<td style="text-align:center">1000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥5.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">1000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥10.00</td>
+<td style="text-align:center">5000G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">一次性</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥2.00</td>
+<td style="text-align:center">100G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥6.00</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥20.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥50.00</td>
+<td style="text-align:center">8000G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3> <a href="https://xn--mes358aby2apfg.com/" target="_blank" rel="noopener noreferrer">赔钱机场</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥1.00</td>
+<td style="text-align:center">100G</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥1.99</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥3.99</td>
+<td style="text-align:center">1T</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥6.99</td>
+<td style="text-align:center">5T</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">一次性</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥14.90</td>
+<td style="text-align:center">1000G</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+</tbody>
+</table>
+<h3> 其他</h3>
+<p>以下机场因性价比原因不推荐购买</p>
+<ul>
+<li><a href="https://xftld.org/" target="_blank" rel="noopener noreferrer">XFLTD</a></li>
+<li><a href="https://www.spcloud.cc/index.php#/register?code=97EXi3tX" target="_blank" rel="noopener noreferrer">Simple Cloud</a></li>
+<li><a href="https://xsus.buzz/" target="_blank" rel="noopener noreferrer">XSUS</a></li>
+<li><a href="https://my.qianglie.com/" target="_blank" rel="noopener noreferrer">墙裂</a></li>
+<li><a href="https://www.dageyun.net/" target="_blank" rel="noopener noreferrer">大哥云</a></li>
+<li><a href="https://llcool.xyz/" target="_blank" rel="noopener noreferrer">流量库</a></li>
+<li><a href="https://feiniaoyun.xyz/" target="_blank" rel="noopener noreferrer">飞鸟云</a></li>
+</ul>
+<h2> 客户端选择</h2>
+<h3> Clash Verge（推荐）</h3>
+<p>开源 Clash 客户端，rust + tauri 使我非常满意 &amp; 放心。<a href="https://github.com/zzzgydi/clash-verge" target="_blank" rel="noopener noreferrer">项目地址</a></p>
+<p>相比<a href="#clash-for-windows">Clash for Windows</a>，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。</p>
+<p>其 <em>设置热键</em> 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，放弃了 Clash Verge 而去使用了 <a href="#v2ray">v2rayN</a>。</p>
+<h4> 简易教程</h4>
+<p>我们可以先在设置中将其语言调成中文。</p>
+<p>类似地，在 <em>配置</em> 中粘贴订阅链接，下载并选中，然后就可以在 <em>代理</em> 中使用节点了。记得在 <em>配置</em> 中打开 <em>系统代理</em> 选项。</p>
+<h3> Clash for Windows</h3>
+<h4> 简介</h4>
+<p><em>Clash for Windows</em> 是闭源的PC客户端。（然而因为一个 <a href="https://github.com/Fndroid/clash_for_windows_pkg/issues/1105" target="_blank" rel="noopener noreferrer">bug</a>导致我转向了 <a href="#clash-verge">Clash Verge</a>。）</p>
+<h4> 下载地址</h4>
+<p><a href="https://github.com/Fndroid/clash_for_windows_pkg" target="_blank" rel="noopener noreferrer">项目地址</a> | <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" target="_blank" rel="noopener noreferrer">PC端下载地址</a> | <a href="https://wwp.lanzout.com/ixncj0a1k28h" target="_blank" rel="noopener noreferrer">私链</a></p>
+<h4> 优势</h4>
+<ul>
+<li>优秀图形界面</li>
+<li>简单易上手</li>
+</ul>
+<h4> 简易配置教程 <em>v0.19.16</em></h4>
+<ol>
+<li>在 Profiles 中的文本框内粘贴订阅链接并下载。选中下载的配置文件。</li>
+<li>进入 Proxies，选择 rule，点击测速图标并在下方选择一个可用节点。</li>
+<li>进入 General，开启 System Proxy。</li>
+</ol>
+<h4> 一些提示</h4>
+<ul>
+<li><a href="https://github.com/BoyceLig/Clash_Chinese_Patch" target="_blank" rel="noopener noreferrer">这里</a>提供clash的汉化。</li>
+<li>在节点界面点击测速图标测试全部节点的连通性</li>
+<li>建议设置配置文件自动更新（Profiles -&gt; 右击配置文件 -&gt; Settings -&gt; Update Interval 设为 24）</li>
+</ul>
+<h3> Clash For Android</h3>
+<p>请前往谷歌商店或<a href="https://github.com/Kr328/ClashForAndroid/releases" target="_blank" rel="noopener noreferrer">前往github下载</a>。<a href="https://wwp.lanzout.com/iL6sD03mi0gf" target="_blank" rel="noopener noreferrer">私链</a></p>
+<h3> V2ray</h3>
+<h4> 简介</h4>
+<p>V2ray是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（<a href="https://www.xuebuyuan.com/3296293.html" target="_blank" rel="noopener noreferrer">source</a>）</p>
+<p>V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。</p>
+<p>相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用配置文件。</p>
+<h4> 下载地址</h4>
+<p><a href="https://github.com/v2fly/v2ray-core" target="_blank" rel="noopener noreferrer">内核项目地址</a> | <a href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener noreferrer">PC 客户端项目地址</a></p>
+<h4> 简易教程</h4>
+<p>以 PC 端的 v2rayN为例。</p>
+<ol>
+<li>前往 PC 客户端项目地址，下载
+<ul>
+<li>可以选择下载 <code>v2rayN-With-Core.zip</code>，最为简单无脑。</li>
+<li>With Core 体积太大了，我选择自己配置内核。则需要在内核项目地址下载内核后，解压放入 <code>/v2rayN/bin/v2fly_v5</code> 下。
+根据项目提示，我还下载了 <a href="https://github.com/XTLS/Xray-core" target="_blank" rel="noopener noreferrer">Xray-core</a> 放入 <code>/v2rayN/bin/Xray</code>。<span class="heimu" title="你知道的太多了">应该不会有人把解压后的整个文件夹丢进去吧</span></li>
+</ul>
+</li>
+<li>复制节点地址，按 <code>Ctrl+V</code> 导入，按 <code>Enter</code> 激活。</li>
+<li>测试真连接延迟，确保节点有效。</li>
+<li>下方 <em>系统代理</em> 处选择 <em>自动配置系统代理</em>，开启代理。</li>
+</ol>
+<p>若为订阅链接：</p>
+<ol>
+<li>点击加号，在订阅分组设置中，将订阅链接填入 URL。别名随便写。</li>
+<li>订阅分组 - 更新全部订阅</li>
+<li>一键测延迟/速度，选择节点双击激活。</li>
+<li>同上方 4.</li>
+</ol>
+<h3> Matsuri &amp; NekoRay</h3>
+<p>开源，自由度高，安全性好，使用体验一般 <em>(Matsuri &gt; NekoRay)</em> 。</p>
+<p>关于下载与使用请<a href="https://matsuricom.github.io/" target="_blank" rel="noopener noreferrer">进入网站</a>自行查阅。</p>
+<h3> SagerNet</h3>
+<p>跟 Matsuri 高度重合的 Android 代理。都是基于 <em>singbox</em> 的。</p>
+<h2> external</h2>
+<ul>
+<li><a href="https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/" target="_blank" rel="noopener noreferrer">如何正确地叫外卖</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
