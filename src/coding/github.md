@@ -65,6 +65,19 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 下面的方法下载仓库文件而不包含 .git 信息：
 4. CDN：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`
 5. 点击 download zip 下载
+## 合并 Pull Request
+你是一个仓库 owner，有人对仓库发起了 pr。如果你愿意全盘接受改动，可以简单地在网页上点击 merge 即可。如果需要修改细节而对方没开写权限<span class="heimu" title="你知道的太多了">OR 不想亲自动手</span>，那就在网页上提出 review 叫对方改，改到满意为止（~~堪比黑心资本家~~）。而这里讲的是第三种情形，即需要修改细节而对方提供写权限，owner 亲自进行修改并 merge 的方法。
+> 为什么不使用 codespace 呢？因为它确实难用（
+1. 拉取到本地：可以使用 Github CLI 完成。
+    * 在 pull request 界面右上角点击 *Code - Local - Checkout with GitHub CLI*，复制指令。
+    * 安装 [Github CLI](https://cli.github.com/)，运行指令。
+2. 将提交树上的 HEAD 设为最新的，属于 Contributor 的远程分支：`git checkout <branch>`（[参考 Git](./Git.md)）
+3. 修改
+4. 提交
+5. rebase 一下，想干啥干啥，~~注释稀烂就删注释，提交没压就 squash 一下~~。
+6. push 到自己的 remote 即可。
+
+此时进入 Github pull request 界面一看，发现已经是 *Merged* 的状态了。
 ## 搜索技巧
 搜索格式与你的关键词使用空格隔开。你也可以使用 [Github 官方提供的高级搜索](https://github.com/search/advanced)界面。
 

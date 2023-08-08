@@ -14,4 +14,5 @@ export default defineUserConfig({
       autoSuggestions: false,
     }),
   ],
+  shouldPrefetch: false,
 });

@@ -51,6 +51,7 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
     git config --global --add safe.directory '*'    # 取消目录安全警告
     git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见 external 1.
     ```
+4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用插件 `Git Graph` 以直观地查看 git 提交树。
 [^6]: 需要使用 [Vim](./vim.md)。若不想用，请自行搜索 `git bash 更改默认编辑器`
 ### 基础
 * 在 windows git bash 中，`ctrl + insert` 复制，`shift + insert` 粘贴
@@ -76,8 +77,9 @@ git add -A      # 添加仓库内所有文件与文件夹
 推荐[使用 `.gitignore`](#忽略文件-夹)，然后都直接 `git add -A`。
 ### 提交
 添加文件后需要将暂存区的文件提交（commit）到仓库内。
-```sh:no-line-numbers
+```sh
 git commit -m "注释"
+git commit -am "注释"   # =git add -A && git commit -m "..." , good trick
 ```
 使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以选择其一：
 1. 分批 add，并每次 commit 不同的注释
@@ -189,6 +191,11 @@ git reset --hard origin/main    # 强制恢复，忽略更改，但不删除新�
 如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新source code。（release 信息会被保留，状态更改为 draft）
 
 仅删除远程tag：`git push origin :refs/tags/TAGNAME`
+## 深入 Git
+git 的一个重要概念是 `HEAD`。`HEAD` （理解为指针）指向你当前所在的节点。`branch` 也是指针，指向某个节点。而 git 构成的结构可以看成一颗**提交树**。
+* 使用 `git reset` 删除节点
+* 使用 `git checkout` 切换 `HEAD`
+* 使用 `git rebase -i` 对提交树进行任意操作
 ## 其他技巧
 ### 忽略文件(夹)
 在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。
@@ -199,7 +206,8 @@ git reset --hard origin/main    # 强制恢复，忽略更改，但不删除新�
 ### 自动化脚本
 1. 新建 `xxx.sh`，输入你需要的所有指令语句，以换行隔开。
 2. 双击运行或 `bash xxx.sh`
-
+> 其本质是 linux bash 脚本，因此你可以使用其语法<br/>
+> 若你在 windows 且未安装 git bash，可以尝试使用 bat 批处理脚本替代。
 ::: tip
 脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
 :::
@@ -244,6 +252,8 @@ git stash pop   # 释放代码，进行合并
 git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 ```
 当然你也可以使用 `git fetch && git merge` 进行协同开发。
+### 合并 Pull request
+[参考 Github - 合并 Pull Request](./github.md#合并-pull-request)
 ### 删除大文件
 删除大文件是必要的。即使你删除了某个文件，其仍会存在于仓库的提交记录内。
 ::: danger

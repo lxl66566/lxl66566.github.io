@@ -14,7 +14,7 @@ tag:
 
 VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 外部包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh
 * 我计划装的包：Joshuto
 ## Terminal 基础
 `<C-a>` 代表 `Ctrl + a`.
@@ -70,18 +70,19 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 ```
 ## bash
 使用：
-<details><summary>use fishshell, not bash</summary>
+<details><summary>use zsh or fishshell, not bash</summary>
 
 * ~/.bashrc（仅含手动编辑）:
     ```bash
     alias ll='ls -alF'
-    export DWM=/home/lxl/myfile/dwm
     ```
 * termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`。
 </details>
 
 可以不用，但是需要会写。。
 * [Y/N 选择器](https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395)
+    ::: code-tabs
+    @tab bash
     ```sh
     read -n 1 -p "Are you sure to clean git and push force? (y/n) " answer
     case ${answer:0:1} in
@@ -93,9 +94,23 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
         ;;
     esac
     ```
-
+    @tab fish
+    ```sh
+    read -n 1 -P 'Use tldr instead of man? (y/n) ' answer
+    switch $answer
+        case n N
+            /usr/sbin/man "$argv"
+        case '' y Y
+            tldr "$argv"
+    end
+    ```
+    :::
 ## 包使用
 我安装的：[外部包](#外部包)
+### [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)[^1]
+[^1]: 推荐阅读：[Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
+* 安装 zsh 时会问 set default shell, `y` 即可
+* [我的配置&插件](https://github.com/lxl66566/config/blob/archwsl/.zshrc)
 ### fishshell
 * set fish as default
     ::: code-tabs
@@ -139,12 +154,22 @@ sudo updatedb   # 更新缓存，使用前执行
 * 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/archwsl/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
 * 插件：不要用默认的插件管理器。。不好用。
 * copy-mode(vi): `Space` 进入选择，`Enter` 复制。（我觉得是假的 vi mode）
-* 默认启动 ([source](http://129.226.226.195/post/28785.html))：
+* 默认启动 ([bash ref](http://129.226.226.195/post/28785.html) | [zsh ref](https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched) [ref2](https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell))：
+    :::code-tabs
+    @tab zsh
+    ```sh
+    # add on top of .zshrc
+    if [ "$TMUX" = "" ]; then tmux; fi
+    # add in .tmux.config
+    set-option -g default-shell /bin/zsh
+    ```
+    @tab bash
     ```sh
     if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
     exec tmux
     fi
     ```
+    :::
 ## 遇到的问题
 按时间倒序。
 ### 更新 pacman keyring

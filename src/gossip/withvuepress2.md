@@ -468,7 +468,7 @@ function sidebar() {
 
 后来发现 dev 没法使用，但是 build 后在 dist 内会生成 `rss.xml`，就可以订阅了。
 ### 添加订阅图标
-模仿 [telegram 图标](#navbar-添加组件) 添加。首先替换链接，再去找个 rss 的 svg，替换 `<path d=...>` 内容；替换 `viewBox` 内容（没错，我踩坑了）即可。<details><summary>点击展开</summary><p>不熟悉 svg 是这样的</p></details>
+模仿 [telegram 图标](#navbar-添加组件) 添加。首先替换链接，再去找个 rss 的 svg，替换 `<path d=...>` 内容；替换 `viewBox` 内容（没错，我踩坑了）即可。<span class="heimu" title="你知道的太多了">不熟悉 svg 是这样的</span>
 ## 自动部署
 * 已提 [issue](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3332)
 
