@@ -30,7 +30,7 @@ category:
 
 设 h(t) 为系统冲激响应，则任意信号的响应为其与 h(t) 的卷积。
 
-系统稳定：<span v-pre>$\int_{-\infty}^{+\infty}|h(t)|dt < +\infty$</span>
+系统稳定：<span v-pre>$\displaystyle \int_{-\infty}^{+\infty}|h(t)|dt < +\infty$</span>
 ## 卷积
 与 u(t) 的卷积：通过门函数的选择作用，改变积分的上下限；其本身可不参与卷积。记得卷积结果要把 u(t) 加回去！
 
@@ -47,22 +47,22 @@ category:
 ## 傅里叶变换
 ### 离散傅里叶级数
 ::: details 非重点
-内积：<span v-pre>$<f_1(t),f_2(t)>=\int_{t1}^{t2}f_1(t)f_2^*(t)dt$</span> （`*` 是共轭，不影响实函数）
+内积：<span v-pre>$\displaystyle <f_1(t),f_2(t)>=\int_{t1}^{t2}f_1(t)f_2^*(t)dt$</span> （`*` 是共轭，不影响实函数）
 
 正交：&lt;f1(t),f2(t)&gt;=0
 
-最佳近似：对正交函数集有近似 <span v-pre>$f(t)\approx c_1g_1(t)+c_2g_2(t)+...，则 c_i=\frac{<f(t),g_i(t)>}{<g_i(t),g_i(t)>}$</span>
+最佳近似：对正交函数集有近似 <span v-pre>$\displaystyle f(t)\approx c_1g_1(t)+c_2g_2(t)+..., \text{则} c_i=\frac{<f(t),g_i(t)>}{<g_i(t),g_i(t)>}$</span>
 
 从 1,cos(w0x),cos(2w0x),...,sin(w0x),sin(2w0x)... 中任取两个相乘并在 0-T0 上做定积分，结果均为 0。其互为正交基函数。
 :::
 
-<span v-pre>$\begin{cases}B_0=\frac{1}{T_0}\int_0^{T_0}f(x)dx \\ B_k=\frac2{T_0}\int_0^{T_0}f(x)cos(k\omega_0x)dx \\ C_k=\frac2{T_0}\int_0^{T_0}f(x)sin(k\omega_0x)dx\end{cases}$</span>
+<span v-pre>$\displaystyle \begin{cases}B_0=\frac{1}{T_0}\int_0^{T_0}f(x)dx \\ B_k=\frac2{T_0}\int_0^{T_0}f(x)cos(k\omega_0x)dx \\ C_k=\frac2{T_0}\int_0^{T_0}f(x)sin(k\omega_0x)dx\end{cases}$</span>
 
-**复数形式**：<span v-pre>$x(t)=\sum_{k=-\infty}^{\infty}a_ke^{jk\omega_0t}, a_k=\frac{1}T\int_0^Tx(t)e^{-jk\omega_0t}dt$</span>
+**复数形式**：<span v-pre>$\displaystyle x(t)=\sum_{k=-\infty}^{\infty}a_ke^{jk\omega_0t}, a_k=\frac{1}T\int_0^Tx(t)e^{-jk\omega_0t}dt$</span>
 ### 周期傅里叶
-<span v-pre>$a_k=\frac{1}{T}F(jk\omega_0)=\frac{1}{T}\int_Tx(t)e^{-jk\omega_0}dt$</span>
+<span v-pre>$\displaystyle a_k=\frac{1}{T}F(jk\omega_0)=\frac{1}{T}\int_Tx(t)e^{-jk\omega_0}dt$</span>
 
-周期函数的傅里叶变换：<span v-pre>$\mathscr{F}[ x(t) ]=2\pi\sum_{k=-\infty}^{\infty}a_k\delta(\omega-k\omega_0)$</span>
+周期函数的傅里叶变换：<span v-pre>$\displaystyle \mathscr{F}[ x(t) ]=2\pi\sum_{k=-\infty}^{\infty}a_k\delta(\omega-k\omega_0)$</span>
 
 求解过程：
 1. 对单个周期作傅里叶变换
@@ -80,55 +80,55 @@ category:
 
 常用公式
 
-<span v-pre>$lim_{n\to +\infty}\frac{sin(\omega n)}{\omega}=\pi\delta(\omega),\int_{-\infty}^{+\infty}\frac{sin(\omega t)}{\omega}d\omega = \pi sgn(t)$</span>
+<span v-pre>$\displaystyle lim_{n\to +\infty}\frac{sin(\omega n)}{\omega}=\pi\delta(\omega),\int_{-\infty}^{+\infty}\frac{sin(\omega t)}{\omega}d\omega = \pi sgn(t)$</span>
 
-<span v-pre>$\int_{-\infty}^{+\infty}f(t)dt=F(j0)$</span>
+<span v-pre>$\displaystyle \int_{-\infty}^{+\infty}f(t)dt=F(j0)$</span>
 :::
 ### 基本变换
-<span v-pre>$\mathscr{F}[ e^{-at}u(t) ]=\frac1{a+j\omega}\ \ \ \  (a>0)$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ e^{-at}u(t) ]=\frac1{a+j\omega}\ \ \ \  (a>0)$</span>
 
-<span v-pre>$\mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega)$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ \delta(t) ]=1,\mathscr{F}[ 1 ]=2\pi\delta(\omega)$</span>
 
-<span v-pre>$\mathscr{F}[ g_\tau(t)]=\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*ω)
+<span v-pre>$\displaystyle \mathscr{F}[ g_\tau(t)]=\tau Sa(\frac\tau2\omega)$</span> 面积\*Sa(端点\*ω)
 
-<span v-pre>$\displaystyle\mathscr{F}[ \frac{sin(\omega_0t) }{t}]=\pi g_{2\omega_0}(\omega)$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ \frac{sin(\omega_0t) }{t}]=\pi g_{2\omega_0}(\omega)$</span>
 
-<span v-pre>$\mathscr{F}[ cos(\omega_0t) ]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)]$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ cos(\omega_0t) ]=\pi[\delta(\omega+\omega_0) + \delta(\omega-\omega_0)]$</span>
 
-<span v-pre>$\mathscr{F}[ sin(\omega_0t) ]=\frac\pi j[\delta(\omega-\omega_0) - \delta(\omega+\omega_0)]$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ sin(\omega_0t) ]=\frac\pi j[\delta(\omega-\omega_0) - \delta(\omega+\omega_0)]$</span>
 
-<span v-pre>$\mathscr{F}[ u(t) ]=\frac1{j\omega}+\pi\delta(\omega)$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ u(t) ]=\frac1{j\omega}+\pi\delta(\omega)$</span>
 
 ### 性质
 [跳转复变函数](./complex_functions.md#fourier-transform)
 
 时域卷积 = 频域相乘； 时域相乘 = 频域卷积 / 2π
 
-Parseval's theorem：<span v-pre>$\int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\pi}\int_{-\infty}^{+\infty}|X(j\omega)|^2d\omega$</span>
+Parseval's theorem：<span v-pre>$\displaystyle \int_{-\infty}^{+\infty}|x(t)|^2dt=\frac{1}{2\pi}\int_{-\infty}^{+\infty}|X(j\omega)|^2d\omega$</span>
 
 任意实函数的傅里叶变换实部偶函数，虚部奇函数。实偶对实偶，实奇对虚奇。
 
-> 特殊变换 - 双边指数信号：<span v-pre>$\large\mathscr{F}[ e^{-a|t|} ]=\frac{2a}{a^2+\omega^2}$</span>
+> 特殊变换 - 双边指数信号：<span v-pre>$\displaystyle \mathscr{F}[ e^{-a|t|} ]=\frac{2a}{a^2+\omega^2}$</span>
 ## 离散傅里叶（非重点）
 本质：离散 -> 连续
 
-离散： <span v-pre>$\mathscr{F}(x[n]) = X(e^{j\omega})=\sum X[n]e^{-j\omega n}$</span>  是一个 2π 为周期的函数。
+离散： <span v-pre>$\displaystyle \mathscr{F}(x[n]) = X(e^{j\omega})=\sum X[n]e^{-j\omega n}$</span>  是一个 2π 为周期的函数。
 
-<span v-pre>$X[n]=\frac1{2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega$</span>
+<span v-pre>$\displaystyle X[n]=\frac1{2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega$</span>
 
 ### [基本变换](https://www.bilibili.com/video/BV1g94y1Q76G/?p=33)
 
-<span v-pre>$\large\mathscr{F}[ a^nu[n] ]=\frac1{1-ae^{-j\omega}}\ \ \ \  (|a|\lt1)$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ a^nu[n] ]=\frac1{1-ae^{-j\omega}}\ \ \ \  (|a|\lt1)$</span>
 
-<span v-pre>$\mathscr{F}[ \delta[n] ]=1$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ \delta[n] ]=1$</span>
 
-<span v-pre>$\mathscr{F}[ 1 ]=2\pi\sum_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ 1 ]=2\pi\sum_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)$</span>
 
-<span v-pre>$\mathscr{F}[ u[n+N]-u[n-N-1] ]=\large\frac{sin((N+1/2)\omega)}{sin(\frac12\omega)}$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ u[n+N]-u[n-N-1] ]=\frac{sin((N+1/2)\omega)}{sin(\frac12\omega)}$</span>
 
-<span v-pre>$\large\mathscr{F}[ \frac{sin(\omega_0n)}{\pi n} ]=\sum g(\omega_0)$</span>（当 ω0 &gt; 2π 时，需要考虑叠加）
+<span v-pre>$\displaystyle \mathscr{F}[ \frac{sin(\omega_0n)}{\pi n} ]=\sum g(\omega_0)$</span>（当 ω0 &gt; 2π 时，需要考虑叠加）
 
-<span v-pre>$\mathscr{F}[ u[n] ]=\large\frac1{1-e^{-j\omega}}+\small\pi\sum_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)$</span>
+<span v-pre>$\displaystyle \mathscr{F}[ u[n] ]=\frac1{1-e^{-j\omega}}+\pi\sum_{k=-\infty}^{+\infty}\delta(\omega-2k\pi)$</span>
 
 cos，sin 在[-π,π]上跟连续一样，其他部分周期重复
 
@@ -143,32 +143,32 @@ cos，sin 在[-π,π]上跟连续一样，其他部分周期重复
 ### 应用
 * 带宽 Bf = 脉宽的倒数 = Bw/2π，脉宽是（一个周期内）信号的宽度，Bw 是频域的第一个零点
 * Nyquist frequency = 2 * max frequency
-* 调制：<span v-pre>$y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
-* 解调：卷积低通滤波器：<span v-pre>$2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
+* 调制：<span v-pre>$\displaystyle y(t)=\sum X_i(t)cos(w_{ci}t), X_i(t)$</span> 是 [-w0,w0) 的带限信号
+* 解调：卷积低通滤波器：<span v-pre>$\displaystyle 2sin(w_pt)/\pi t, 2w_0<w_{ci}-w_{cj}, w_0<w_p<2w_{c1}-w_0$</span>
 * 无失真系统幅频特性为水平直线，相频特性为“捺”斜线
 #### 采样定理（非重点）
-(Nyquist–Shannon) sampling theorem （[证明](https://www.bilibili.com/video/BV1g94y1Q76G?p=39)）：带限连续信号可以由 <span v-pre>$\omega_s>2\omega_m$</span>的采样频率的离散信号完美恢复（唯一确定）。
+(Nyquist–Shannon) sampling theorem （[证明](https://www.bilibili.com/video/BV1g94y1Q76G?p=39)）：带限连续信号可以由 <span v-pre>$\displaystyle \omega_s>2\omega_m$</span>的采样频率的离散信号完美恢复（唯一确定）。
 
 证明中间式：
-1. 对 X(t) 的 T 周期冲激串采样的 Fourier transform：<span v-pre>$X_p(j\omega)=\frac1T\sum X(j(\omega-k\omega_s))，\omega_s=2\pi/T$</span> 为采样频率
+1. 对 X(t) 的 T 周期冲激串采样的 Fourier transform：<span v-pre>$\displaystyle X_p(j\omega)=\frac1T\sum X(j(\omega-k\omega_s)), \omega_s=2\pi/T$</span> 为采样频率
 
 Nyquist frequency: 2wm
 ## Laplace transform
 计算拉式变换必须考虑收敛域
 ### 基本变换
-<span v-pre>$\displaystyle\mathscr{L}[ e^{-at}u(t) ]=1/(s+a),\ \ \ Re(s)>-a$</span>
+<span v-pre>$\displaystyle \mathscr{L}[ e^{-at}u(t) ]=1/(s+a),\ \ \ Re(s)>-a$</span>
 
->（特例）<span v-pre>$\displaystyle\mathscr{L}[ u(t) ]=1/s,\ \ \ Re(s)>0$</span>
+>（特例）<span v-pre>$\displaystyle \mathscr{L}[ u(t) ]=1/s,\ \ \ Re(s)>0$</span>
 
-<span v-pre>$\displaystyle\mathscr{L}[ -e^{-at}u(-t) ]=1/(s+a),\ \ \ Re(s)<-a$</span>
+<span v-pre>$\displaystyle \mathscr{L}[ -e^{-at}u(-t) ]=1/(s+a),\ \ \ Re(s)<-a$</span>
 
-<span v-pre>$\displaystyle\mathscr{L}[ \delta(t) ]=1$</span>
+<span v-pre>$\displaystyle \mathscr{L}[ \delta(t) ]=1$</span>
 
-<span v-pre>$\displaystyle\mathscr{L}[ cos(\omega_0t)u(t) ]=s/(s^2+\omega_0^2),\ \ \ Re(s)>0$</span>
+<span v-pre>$\displaystyle \mathscr{L}[ cos(\omega_0t)u(t) ]=s/(s^2+\omega_0^2),\ \ \ Re(s)>0$</span>
 
-<span v-pre>$\displaystyle\mathscr{L}[ sin(\omega_0t)u(t) ]=\omega_0/(s^2+\omega_0^2),\ \ \ Re(s)>0$</span>
+<span v-pre>$\displaystyle \mathscr{L}[ sin(\omega_0t)u(t) ]=\omega_0/(s^2+\omega_0^2),\ \ \ Re(s)>0$</span>
 
-<span v-pre>$\displaystyle\mathscr{L}[ t^nu(t) ]=n!/s^{n+1},\ \ \ Re(s)>0$</span>
+<span v-pre>$\displaystyle \mathscr{L}[ t^nu(t) ]=n!/s^{n+1},\ \ \ Re(s)>0$</span>
 
 ### 性质
 见 [复变函数 - Laplace transform](./complex_functions.md#laplace-transform)
@@ -184,12 +184,12 @@ Nyquist frequency: 2wm
 * 双边信号收敛域为带状
 * [稳定信号](#信号)收敛域包含 jw 轴
 ### 周期拉普拉斯
-* 单边(0, +∞)：<span v-pre>$\displaystyle\mathscr{L}[ x(t) ]=\frac{1}{1-e^{sT}}X(s)$</span>，收敛域 R 交 Re(s)>0，X(s) 为单周期的变换
+* 单边(0, +∞)：<span v-pre>$\displaystyle \mathscr{L}[ x(t) ]=\frac{1}{1-e^{sT}}X(s)$</span>，收敛域 R 交 Re(s)>0，X(s) 为单周期的变换
 ### 系统与微分方程
 * 极点都在左半平面，则系统稳定
 * 求 H(s)
 * [画系统框图](https://www.bilibili.com/video/BV1g94y1Q76G/?p=52&t=2028)（不考）：二阶微分框图：左边从上到下是 1/a2, -a1, -a0；一阶的是 1/a1, -a0；
-* 定理：系统s域函数 H(s)，若 <span v-pre>$x(t)=e^{s_0t}, s_0$</span>在收敛域内，则 y = H(s)x(t)
+* 定理：系统s域函数 H(s)，若 <span v-pre>$\displaystyle x(t)=e^{s_0t}, s_0$</span>在收敛域内，则 y = H(s)x(t)
 * zero-input response: x(t) = 0 while t > 0; y(0), y'(0) 有值
 * zero-state response: x(t) 有值；y(0) = y'(0) = 0
     * [例题](https://www.bilibili.com/video/BV1g94y1Q76G/?p=53&t=4365)
@@ -234,4 +234,4 @@ Nyquist frequency: 2wm
 
 解差分方程：默认为因果信号，单位样值响应即冲激响应，此时 Y(z) = H(z) （X(z)=1）
 
-定理：系统z域函数 H(z)，若 <span v-pre>$x[n]=a^n, a$</span>在收敛域内，则 y = H(a)x(n)
+定理：系统z域函数 H(z)，若 <span v-pre>$\displaystyle x[n]=a^n, a$</span>在收敛域内，则 y = H(a)x(n)

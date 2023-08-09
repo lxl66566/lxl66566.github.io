@@ -277,7 +277,7 @@ category:
 ### 20220818
 * 新增[闲聊-生活中遇到的困难](../gossip/difficulties.md)
 ### 20220817
-* [安装<span v-pre>$\LaTeX$</span>插件](../gossip/withvuepress2.md#关于数学插件)并实装
+* [安装<span v-pre>$\displaystyle \LaTeX$</span>插件](../gossip/withvuepress2.md#关于数学插件)并实装
 ### 20220815
 * 紧急修复：文件损坏导致的`keysnum`与`GBperprice`图表、初级科学上网缺失问题。（同时导致了其他的一系列问题）
 * 调整运动图表

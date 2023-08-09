@@ -127,7 +127,7 @@ export default defineUserConfig({
 
 然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下 [jsdelivr](https://www.jsdelivr.com/)，不能用。网上搜，大家也都说寄了。再试 [statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。
 ## 关于数学插件
-为 markdown-it 渲染器安装<span v-pre>$\LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
+为 markdown-it 渲染器安装<span v-pre>$\displaystyle \LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
 
 由于`$...$`会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发[weak map key](#rendering-pages-failed问题) bug。
 ## 图片无法比例缩放问题

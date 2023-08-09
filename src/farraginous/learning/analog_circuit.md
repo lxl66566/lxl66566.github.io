@@ -10,7 +10,7 @@ tag:
 b站课程：[郑益慧](https://www.bilibili.com/video/BV1Gt411b7Zq)（原本看过一段时间华成英的，发现看不下去）
 ## 电子元器件
 ### 二极管
-PN 结电流方程：<span v-pre>$I=I_s(\large e^\frac{U}{U_T}-1)，\small U_T =26mV,I_S$</span> 为饱和电流
+PN 结电流方程：<span v-pre>$\displaystyle I=I_s(e^\frac{U}{U_T}-1),U_T =26mV,I_S$</span> 为饱和电流
 
 温度升高，同电压下的电流变大。每升高 1℃，正向压降减小 2-2.5mV；每升高 10℃，反向电流增大一倍。
 
@@ -18,7 +18,7 @@ PN 结电流方程：<span v-pre>$I=I_s(\large e^\frac{U}{U_T}-1)，\small U_T =
 
 正向压降，硅管 0.7 V，锗管 0.2V
 ### 三极管
-三极管本质：1. 电流放大，<span v-pre>$I_c = \beta I_b（\small\beta 为共射放大系数）$</span>, 2. <span v-pre>$U_{be}$</span> 二极管压降
+三极管本质：1. 电流放大，<span v-pre>$\displaystyle I_c = \beta I_b,(\beta\text{为共射放大系数})$</span>, 2. <span v-pre>$\displaystyle U_{be}$</span> 二极管压降
 
 牢记输入特性曲线（类似二极管）与输出特性曲线。温度升高，输入曲线左移，输出上移。
 
@@ -26,16 +26,16 @@ PN 结电流方程：<span v-pre>$I=I_s(\large e^\frac{U}{U_T}-1)，\small U_T =
 ### 场效应管
 g,s,d 对应三极管的 b,e,c，跨导 gm 对应三极管的 β
 
-N 沟道结型场效应管需要工作在 <span v-pre>$U_{GS(off)}<U_{GS}<0$</span> 的条件下
+N 沟道结型场效应管需要工作在 <span v-pre>$\displaystyle U_{GS(off)}<U_{GS}<0$</span> 的条件下
 
-N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(\frac{U_{GS}}{U_{GS(th)}}-1)^2,I_{DO}(I_{DSS})$</span>在不同型代表的意义不同。
+N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$\displaystyle i_D=I_{DO}(\frac{U_{GS}}{U_{GS(th)}}-1)^2,I_{DO}(I_{DSS})$</span>在不同型代表的意义不同。
 
 ## 单级放大电路
 指标：通频带，指 A > 0.707 Am 的频率区域。
 
 共射放大电路：底部失真为饱和，顶部失真为截止。
 ### 分析法
-等效电路法：三极管等效为 <span v-pre>$r_{be}=r_{bb'}+(1+\beta)\frac{U_T}{I_{EQ}}=\frac{\Delta U_{be}}{\Delta I_b}$</span> （复习：如何求 rbe?）
+等效电路法：三极管等效为 <span v-pre>$\displaystyle r_{be}=r_{bb'}+(1+\beta)\frac{U_T}{I_{EQ}}=\frac{\Delta U_{be}}{\Delta I_b}$</span> （复习：如何求 rbe?）
 
 输出电阻越小，输出电压越稳定；输出电阻越大，输出电流越稳定。
 ### 特点
@@ -58,8 +58,8 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(
     * 射极输出电流源
     * 威尔逊电流源
 ## 频率响应
-* 高通：<span v-pre>$\large\dot A_u=\frac{j\frac{f}{f_L}}{1+j\frac{f}{f_L}}$</span>，U0 超前
-* 低通：<span v-pre>$\large\dot A_u=\frac{1}{1+j\frac{f}{f_H}}$</span>，U0 滞后
+* 高通：<span v-pre>$\displaystyle \dot A_u=\frac{j\frac{f}{f_L}}{1+j\frac{f}{f_L}}$</span>，U0 超前
+* 低通：<span v-pre>$\displaystyle \dot A_u=\frac{1}{1+j\frac{f}{f_H}}$</span>，U0 滞后
 
 （物理模型等效，全频域）：
 
@@ -67,11 +67,11 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(
 <img alt="物理模型等效" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/learning/analog_circuit/1.png"  width="70%" height="70%"/>
 </div>
 
-且还能再继续简化。<span v-pre>$g_m=\beta_0/r_{b'e}$</span>
+且还能再继续简化。<span v-pre>$\displaystyle g_m=\beta_0/r_{b'e}$</span>
 ### 多级频率响应
 级数越多，通频带越窄。
 
-<span v-pre>$f_L^2=1.1\sum f_{Li}^2$</span>，修正系数
+<span v-pre>$\displaystyle f_L^2=1.1\sum f_{Li}^2$</span>，修正系数
 
 ## 反馈
 * 怎么判断到底是电压反馈还是电流反馈？
@@ -79,7 +79,7 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$i_D=I_{DO}(
 
 负反馈在相同端子：并联负反馈；相异端子：串联负反馈
 ### 参数
-* 闭环放大倍数：<span v-pre>$\displaystyle\dot A_f=\frac{\dot A}{1+\dot A\dot F}	\approx\frac{1}{\dot F}$</span> &nbsp;&nbsp;&nbsp;(深度负反馈
+* 闭环放大倍数：<span v-pre>$\displaystyle \dot A_f=\frac{\dot A}{1+\dot A\dot F}	\approx\frac{1}{\dot F}$</span> &nbsp;&nbsp;&nbsp;(深度负反馈
 * 反馈深度：|1+AF|
 ### 负反馈影响
 * 输入电阻，串联：\*反馈深度，并联：/反馈深度

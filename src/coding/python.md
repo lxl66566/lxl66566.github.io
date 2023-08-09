@@ -15,6 +15,7 @@ windows 上建议直接无脑 all in vscode。
 * **Python** - Microsoft
 * **Black Formatter** - Microsoft：提供格式化
 * **Ruff** - Charlie Marsh：提供语法分析
+    * [配置技巧](https://stackoverflow.com/questions/75639719/decrease-mistake-severity-for-ruff-python-linter-in-vscode-extension)
 
 选装：
 * isort - Microsoft：提供 import 排序
