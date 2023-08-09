@@ -48,14 +48,23 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
 3. 其他全局设置
     ```sh
     git config --global push.default current    # 设置默认推送，简化 git push
+    git config --global core.quotepath false    # 取消中文转义，需要终端支持 utf-8
     git config --global --add safe.directory '*'    # 取消目录安全警告
-    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见 external 1.
+    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见页面底 external 1.
     ```
-4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用插件 `Git Graph` 以直观地查看 git 提交树。
+4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用插件 `Git Graph` 以直观地查看 git 提交树与更改。
 [^6]: 需要使用 [Vim](./vim.md)。若不想用，请自行搜索 `git bash 更改默认编辑器`
-### 基础
+### 基础使用
 * 在 windows git bash 中，`ctrl + insert` 复制，`shift + insert` 粘贴
 * 执行 git 命令前，请确认当前目录是否正确
+* 如果你只想上传文件到 Github，请参考[常用命令](#常用命令) - *创建仓库 -> 提交* 即可。
+## 深入
+git 的一个重要概念是 `HEAD`。`HEAD` （理解为指针）指向你当前所在的节点。`branch` 也是指针，指向某个节点。而 git 构成的结构可以看成一颗**提交树**。
+* 使用 `git checkout` 切换 `HEAD`
+* 使用 `git rebase -i` 对提交树进行任意操作
+* 使用 `git reset` 删除节点
+
+remote branch(ex. `origin/main`) 和 local branch(ex. `main`) 可以看成是不同的分支。push 就可以看成让 `origin/main` 指向 `main` 的过程（当然还有同步）。
 ## 常用命令
 ### 创建仓库
 ```sh:no-line-numbers
@@ -79,7 +88,7 @@ git add -A      # 添加仓库内所有文件与文件夹
 添加文件后需要将暂存区的文件提交（commit）到仓库内。
 ```sh
 git commit -m "注释"
-git commit -am "注释"   # =git add -A && git commit -m "..." , good trick
+git commit -am "注释"   # add 跟踪的文件并 commit
 ```
 使用此命令的一次commit会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以选择其一：
 1. 分批 add，并每次 commit 不同的注释
@@ -170,32 +179,27 @@ git checkout <branch_name>      # 切换到分支
 git checkout -b <branch_name>   # 新建并切换到分支，trick
 git branch -m old_name new_name # 重命名分支
 git branch --delete <branch_name>   # 删除分支
+git merge <branch_name>         # 将 当前分支 合并到 指定分支
+git merge <branch_name> --ff-only   # 快进合并
 ```
+* （疑难解答[^7]：*fatal: refusing to merge unrelated histories*）
+[^7]: 当本地与远程交集为空时会出现此情况。解法：`git pull origin main --allow-unrelated-histories`
 ### 删除文件
 ```sh
-git rm --cached filename.xxx    # --cached 指仅删除仓库内文件，不删除本地文件
-git rm -r --cached dirname      # 删除仓库内文件夹
+# --cached 指仅删除仓库内文件，不删除本地文件；-r 为递归
+git rm --cached filename.xxx -r
 ```
-### 从仓库内恢复文件
+### 恢复文件
 ```sh
-git checkout -- filename    # 注意 `--` 后的空格
-git reset --hard origin/main    # 强制恢复，忽略更改，但不删除新增文件
+git checkout [commit_hash] -- <path/to/file>  # 从某个 commit 恢复文件，注意空格
+git reset --hard <HEAD pointer>    # 强制重置到某 commit，重置所有更改，但不删除新增文件
 ```
-### 更新远程仓库到本地
-`git fetch origin main`
-### 合并分支
-`git merge origin/main`
-* （疑难解答[^7]：*fatal: refusing to merge unrelated histories*）
-[^7]: 当本地仓库已有提交时，想合并远程仓库会出现此情况。解法：`git pull origin main --allow-unrelated-histories`
+### 拉取远程
+`git fetch origin <branch>`
 ### 删除远程tag
 如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新source code。（release 信息会被保留，状态更改为 draft）
 
 仅删除远程tag：`git push origin :refs/tags/TAGNAME`
-## 深入 Git
-git 的一个重要概念是 `HEAD`。`HEAD` （理解为指针）指向你当前所在的节点。`branch` 也是指针，指向某个节点。而 git 构成的结构可以看成一颗**提交树**。
-* 使用 `git reset` 删除节点
-* 使用 `git checkout` 切换 `HEAD`
-* 使用 `git rebase -i` 对提交树进行任意操作
 ## 其他技巧
 ### 忽略文件(夹)
 在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。
@@ -276,21 +280,20 @@ git 官方推荐的清理工具。
 
 我使用 `scoop` 安装，安装过程详见仓库说明。（疑难解答[^4]：*运行`git filter-repo`出现`name 'git' is not defined`报错*）关于使用方法，~~没人能看懂官方文档~~，建议直接找教程。
 [^4]: 根据[这里](https://github.com/newren/git-filter-repo/issues/360)的描述做就行了。
-
 ```sh:no-line-numbers
 git filter-repo --invert-paths -f --path "<path/of/file>"
 ```
-
 > [References](https://nyakku.moe/posts/2020/06/12/use-git-filter-repo-clean-git-history.html)
 #### filter-branch
 不太推荐这种方式，比较慢（真的）。
 ```sh
 git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-unmatch <path/of/file>' --tag-name-filter cat -- --all
-# another edition
+# another edition:
 # git filter-branch --tree-filter "rm -f <path/of/file>" -- --all
 ```
 > [References](https://harttle.land/2016/03/22/purge-large-files-in-gitrepo.html)
 ### 大文件上传
+> 此处暂不讨论 git-lfs.<br/>
 > Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。
 
 首先，若有大文件，最该考虑的是 `git-lfs`。具有先见之明的做法可以极大减少后期维护的成本。
@@ -298,20 +301,19 @@ git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-
 其次，我在网上找到了[这些资料](https://gist.github.com/banyudu/b5bac69767f49073e09985d82128e713)，但其中提到的 Stackoverflow 的[脚本](https://stackoverflow.com/questions/15125862/github-remote-push-pack-size-exceeded/51468389#51468389)并不能很好地运行。因此我根据上述原理支撑，自己写了一个脚本。适用于文件总体过大但每个 commit 都不超出大小限制的情况。
 
 1. 导出所有 commit hash 并翻转使最早的 commit 被最先提交。
-```sh
-git log --pretty=format:"%H" > temp.txt
-tac temp.txt > log_hash.txt
-```
-注意，`tac` 反转可能会出现第一行与第二行换行缺失问题，请手动添加换行。
-
+    ```sh
+    git log --pretty=format:"%H" > temp.txt
+    tac temp.txt > log_hash.txt
+    ```
+    注意，`tac` 反转可能会出现第一行与第二行换行缺失问题，请手动添加换行。
 2. 分 commit 上传
-```sh
-while IFS= read -r hash; do
-    echo "pushing $hash"
-    git push origin $hash:refs/heads/master -f
-done < log_hash.txt
-exec /bin/bash
-```
+    ```sh
+    while IFS= read -r hash; do
+        echo "pushing $hash"
+        git push origin $hash:refs/heads/master -f
+    done < log_hash.txt
+    exec /bin/bash
+    ```
 关于分支与是否加 `-f` 需要根据情况判断。
 ## external
 1. [How different are different diff algorithms in Git?](https://link.springer.com/article/10.1007/s10664-019-09772-z)

@@ -29,8 +29,8 @@ category:
 * 时间规则：博客中的时间为 8 位数字格式（有时添加间隔符以增加可读性），以每日 04:00（UTC+8）作为分割线。例如，20221231 指 2022.12.31-04:00 - 2023.01.01-04:00(UTC+8) 这段时间。
 * 图表均带有可拖动时间轴，同时也可聚焦某一曲线以改善观感。
 * 加密页面密码为我出生年份，反正也不是非常秘密（
-* 多个页面末尾有 `external` 条目，可以理解为推荐阅读
-[^2]: *不推荐使用移动端的原因*：大表格观感较差；不支持加粗字体；在 [PageSpeed Insights](./farraginous/recommend_websites.md#工具) 上移动端性能得分只有 57，而桌面端为 99.
+* 多数页面末尾有 `external` 条目，可以理解为推荐阅读
+[^2]: *不推荐使用移动端的原因*：大表格观感较差；不支持**加粗字体**；在 [PageSpeed Insights](./farraginous/recommend_websites.md#工具) 上移动端性能得分只有 57，而桌面端为 99；移动端的各类 Webview 浏览器无法享受 PWA 的离线缓存 & 高速加载。
 
 ::: details 其他解释说明
 * 符号：
@@ -38,12 +38,11 @@ category:
 |&|\|, /|<|>|?|<>|+|-|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |与|或|此前|此后|未知<br/>存疑|大约，前后|多于|少于|
-
 :::
 ## 关于博客
-* 本博客原创文章遵循 MIT 协议，可任意修改、转载、再发布
+* 本博客原创文章遵循 MIT 协议，可任意修改、转载、再发布，甚至不注明来源转载。
 * 使用 [VuePress2](https://v2.vuepress.vuejs.org/zh/) 搭建，[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 主题，pure: true
-* [项目地址](https://github.com/lxl66566/lxl66566.github.io)，Markdown 源码位于 branch *[code](https://github.com/lxl66566/lxl66566.github.io/tree/code)*
+* [项目地址](https://github.com/lxl66566/lxl66566.github.io)，Markdown 源码位于 branch code.
 * 部署于 Github Pages / Cloudflare / netlify / vps + nginx
 * 前往[闲聊：vuepress2与博客心得](./gossip/withvuepress2.md)
 * 前往[博客维护日志](./farraginous/log.md)

@@ -482,5 +482,20 @@ function sidebar() {
 20230807，使用 pnpm 指令 `pnpm create vuepress-theme-hope my-docs` 创建模版项目后，执行 `pnpm docs:build` 会报错。原因是依赖未更新，Github 上的依赖更新未同步至 npmjs [create-vuepress-theme-hope](https://www.npmjs.com/package/create-vuepress-theme-hope)。
 
 解法：在 `package.json` 中将 vue 版本改为 `^3.3.4` 并执行 `pnpm i` 更新依赖。
+
+<span class="heimu" title="你知道的太多了">妈的，这些 bugs Github 都修了，npmjs 一直不更新是几个意思呢？</span>
+
+## 图片防爆
+* 已撤销
+
+此博客使用 CDN 引入图片。然而即使是老牌 CDN 也可能会有不稳定的时候，想着加个防爆链接，当 CDN 爆了以后 img 从另一个链接加载。([ref](https://www.w3schools.com/jsref/event_onerror.asp))
+```html
+<img src="image.jpg" onerror="this.src='other link'"/>
+```
+而 markdown 内的图片格式可以用[markdown enhancement: attr](https://theme-hope.vuejs.press/zh/guide/markdown/attrs.html#%E4%BD%BF%E7%94%A8)添加 attr。然后踩了坑：
+1. 首先大括号 `{}` 需要紧跟在图片的 `)` 后，不能有空格。。（然而官网示例是给的空格）
+2. 其次，添加的 attr 不允许出现大写字母。。。（这确实是标准，但是一般浏览器遇到大写会自动纠正 ([ref](https://stackoverflow.com/questions/25033268/are-html5-data-attributes-case-insensitive))）
+
+最后还是决定不加了，毕竟防爆用的原始链接是 `raw.githubusercontent.com` 下的，本身就被墙了；而且还没有考虑可能出现的的死循环问题。
 ## external
 1. [No CSS Club](https://nocss.club/)

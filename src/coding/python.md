@@ -45,6 +45,8 @@ windows 上建议直接无脑 all in vscode。
 2. 选中你的虚拟环境
 ## 导出全部环境依赖
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
+
+`requirements.txt` 也可以每行只写一个模块名。
 ## [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
 ## [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
 使用 logging（py 自带） 进行能够控制等级的输出。基本用法：
@@ -203,12 +205,16 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 
 ![anaconda_pureenv](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_2.png)
 
-这样，一个纯净环境就创建好了，你可以[安装Pyinstaller](#安装)进行打包前的准备。
-
-## Pyinstaller
-### 安装
+这样，一个纯净环境就创建好了，你可以[安装Pyinstaller](#pyinstaller)进行打包前的准备。
+## 打包
+虽然我只使用过 [pyinstaller](#pyinstaller)，但是还有其他的打包工具，能够打出更小的体积与更高的性能：
+* [nuitka](https://nuitka.net/)
+* [cx_Freeze](https://cx-freeze.readthedocs.io/en/latest/installation.html)
+### Pyinstaller
+Pyinstaller 会打包当前环境的所有模块。需要隔离出虚拟环境进行打包，参考 [miniconda](#miniconda)。
+#### 安装
 `pip install pyinstaller -i https://pypi.tuna.tsinghua.edu.cn/simple`
-### 命令
+#### 命令
 在.py目录下，所需环境内执行`pyinstaller -D xxxx.py`
 
 参数解释：
@@ -227,3 +233,4 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 最终解决方法：在[此页面](https://pypi.org/project/pip/#files)下载`.tar.gz`,解压后在目录下执行 `setup.py build` 与 `python -m pip install --upgrade pip --user`。
 ## external
 1. [The Right Way to Run Shell Commands From Python](https://martinheinz.dev/blog/98)
+2. [Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别](https://tryanswer.github.io/2018/05/17/py-int-confusing/)

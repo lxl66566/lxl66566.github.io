@@ -4,7 +4,7 @@ import sidebar from "./sidebar.js";
 
 export default hopeTheme({
   pure: true,
-  hostname: "https://mister-hope.github.io",
+  hostname: "https://absx.pages.dev",
   iconAssets: "iconfont",
   logo: "/logo.jpg",
   repo: "https://github.com/lxl66566/lxl66566.github.io",
@@ -77,8 +77,8 @@ export default hopeTheme({
     },
     feed: {
       rss: true,
-      icon: "/logo.jpg",
-      count: 20,
+      // icon: "/logo.jpg",
+      // count: 30,
     },
     pwa: {
       maxSize: 4096,

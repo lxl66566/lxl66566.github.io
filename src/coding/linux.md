@@ -34,7 +34,7 @@ VPS 有关问题请移步 [VPS](../articles/vps.md)。
     ```
     @tab termux
     ```bash:no-line-numbers
-    termux-change-repo
+    termux-change-repo  # 虽然不是 pacman 的（
     ```
     :::
 * 遇到的问题：[更新 pacman keyring](#更新-pacman-keyring)
@@ -52,7 +52,7 @@ export ALL_PROXY="http://$host_ip:$your_port"
 @tab fish
 ```sh
 set host_ip $(cat /etc/resolv.conf |grep "nameserver" |cut -f 2 -d " ")
-export ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
+set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 ```
 :::
 代理软件需要开启局域网连接。测试时不要使用 `ping` 指令（其不走代理），用 `curl`。

@@ -71,7 +71,7 @@ tag:
 <iframe frameborder="no" src="/charts/reform_jack.html" width="100%" height="280" loading="lazy"></iframe>
 <iframe frameborder="no" src="/charts/malody_jack.html" width="100%" height="280" loading="lazy"></iframe>
 
-* 技（Tech）：β, ex-3
+* 技（Tech）：β, ex-4
     * 本人最擅长技。尤其是偏叠的技。
 
 <iframe frameborder="no" src="/charts/reform_tech.html" width="100%" height="280" loading="lazy"></iframe>
@@ -190,9 +190,9 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 [MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频bpm。
 ### 最好成绩
-段位：[α 96.39%](https://www.bilibili.com/video/BV13M411Y7c5/) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | LN 11
-
-![malody v3 ex2 96.03%](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg)
+* 4k 段位：[α 96.39%](https://www.bilibili.com/video/BV13M411Y7c5/) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | [LN 11](https://www.bilibili.com/video/BV1vv4y1p7b1)
+    ![malody v3 ex2 96.03%](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg)
+* 6k 段位：[4dan 96.27%](https://www.bilibili.com/video/BV1Ks4y1K77B/)
 ## phigros
 目前处于瓶颈期/厌倦期：因osu打多了开始反感谱面演出；15好听的能收的基本上收完了<span class="heimu" title="你知道的太多了">放屁</span>；16能ap的 *（Lyrith -迷宮リリス-）* 懒得打，摆烂；16想ap的 *（Stasis）* 还没解5k段。16上位 *（igallta & Rrhar'il）* 根本不会打。
 
