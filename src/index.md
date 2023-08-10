@@ -3,7 +3,6 @@ date: 2022-05-04
 home: true
 layout: BlogHome
 hero: false
-heroText: "绝对值_x的博客"
 category:
     - 导航
 ---

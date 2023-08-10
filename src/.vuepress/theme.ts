@@ -13,6 +13,7 @@ export default hopeTheme({
   sidebar,
   editLink: false,
   contributors: false,
+  breadcrumb: false,
   encrypt: {
     config: {
       "/articles/vpn.html": ["2003"],
@@ -28,7 +29,7 @@ export default hopeTheme({
       Telegram: "https://t.me/ab5_x",
       Bilibili: "https://space.bilibili.com/346365047",
     },
-    articlePerPage: 1,
+    articlePerPage: 3,
     articleInfo: ["Date", "Category", "PageView", "Tag", "ReadingTime"],
   },
   navbarLayout: {
@@ -37,7 +38,7 @@ export default hopeTheme({
     end: ["Repo", "TelegramLink", "rssLink", "Outlook", "Search"],
   },
   plugins: {
-    blog: true,
+    blog: { excerptLength: 1 },
     comment: {
       provider: "Giscus",
       repo: "lxl66566/lxl66566.github.io",
@@ -49,7 +50,6 @@ export default hopeTheme({
       darkTheme: "transparent_dark",
     },
 
-    // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       align: true,
       codetabs: true,
@@ -77,13 +77,10 @@ export default hopeTheme({
     },
     feed: {
       rss: true,
-      // icon: "/logo.jpg",
-      // count: 30,
     },
     pwa: {
       maxSize: 4096,
       cacheHTML: true,
-      cachePic: true,
       update: "hint",
     },
   },
