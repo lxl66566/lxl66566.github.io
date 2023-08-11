@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 10 Aug 2023 04:21:40 GMT</pubDate>
-    <lastBuildDate>Thu, 10 Aug 2023 04:21:40 GMT</lastBuildDate>
+    <pubDate>Fri, 11 Aug 2023 18:06:48 GMT</pubDate>
+    <lastBuildDate>Fri, 11 Aug 2023 18:06:48 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -717,9 +717,9 @@ npm ERR! This command does not support workspaces.</p>
 <ul>
 <li><code>win + r</code>运行<code>gpedit.msc</code>，<em>计算机配置-管理模板-Windows 组件-关闭Microsoft Defender防病毒</em> ，选择已启用</li>
 <li>由于我的电脑是家庭版升专业版，没有 <code>gpedit.msc</code> 文件，因此需先添加组策略编辑器。</li>
-<li>在记事本输入以下代码并保存为 .bat 文件，管理员运行。</li>
+<li>在记事本输入以下代码并保存为 .bat 文件，管理员运行。<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
-<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</li>
 <li>使用<a href="https://www.sordum.org/9480/defender-control-v2-1/" target="_blank" rel="noopener noreferrer">Defender Control</a>彻底关闭安全中心。</li>
 </ul>
 </li>
@@ -730,14 +730,15 @@ npm ERR! This command does not support workspaces.</p>
 <li>关闭搜索推荐&amp;热门新闻：关闭 <em>设置-隐私和安全性-搜索权限-更多设置-显示搜索要点</em> 。（参考<a href="https://www.landiannews.com/archives/95045.html" target="_blank" rel="noopener noreferrer">来源</a></li>
 <li>升级专业版：使用<a href="https://github.com/zbezj/HEU_KMS_Activator" target="_blank" rel="noopener noreferrer">HEU_KMS_Activator</a>升级win11专业版并激活。</li>
 <li>开启Hyper-V功能 </li>
-</ol>
-<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>保存为.bat文件并管理员运行即可。</p>
-<ol start="8">
 <li>更改触摸板功能：三指左右划调节音量。我本人感觉挺方便。</li>
 <li>安装 Win11 Android 子系统（WSA） </li>
 <li>更改任务栏样式：下载<a href="https://apps.microsoft.com/store/detail/roundedtb/9MTFTXSJ9M7F?hl=en-us&amp;gl=us" target="_blank" rel="noopener noreferrer">RoundedTB</a>，根据提示更改。</li>
 <li>使用<a href="https://www.oo-software.com/en/shutup10" target="_blank" rel="noopener noreferrer">O&amp;O ShutUp10++: Free antispy tool for Windows 10 and 11</a>禁用一些非必须功能。</li>
-<li>启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（<a href="https://zhuanlan.zhihu.com/p/336846460" target="_blank" rel="noopener noreferrer">参考</a>）：在 regedit 中，将 <code>HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled</code> 的值设为 0.</li>
+<li>启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（<a href="https://zhuanlan.zhihu.com/p/336846460" target="_blank" rel="noopener noreferrer">参考</a>）：在 regedit 中，将 <code>HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled</code> 的值设为 0.
+<blockquote>
+<p>是否为休眠？</p>
+</blockquote>
+</li>
 <li>卸载小组件：打开管理员终端，执行 <code>winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy</code>。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。</li>
 <li><strong>关闭快速启动</strong>。
 <ul>
@@ -756,9 +757,10 @@ npm ERR! This command does not support workspaces.</p>
 <li>既然无需经常更新，那就<a href="https://blog.51cto.com/u_13464709/2057007" target="_blank" rel="noopener noreferrer">关闭传递优化</a>，并且用磁盘清理清一下这位占用的空间。</li>
 </ul>
 </li>
+<li><a href="https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows" target="_blank" rel="noopener noreferrer">开启 bbr 拥塞算法</a>：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。</li>
 </ol>
 <h2> 我使用的软件们</h2>
-<p>20230607，我的 windows 11 开机自启动的托盘软件有：<a href="/farraginous/recommend_packages.html#xdm" target="blank">XDM</a>, Ditto, <a href="/farraginous/recommend_packages.html#parsec" target="blank">parsec</a>, V2rayN, <a href="/farraginous/recommend_packages.html#flux" target="blank">f.lux</a>, <a href="/farraginous/recommend_packages.html#everything" target="blank">everything</a>, 火绒, <a href="/farraginous/recommend_packages.html#tai" target="blank">Tai</a>, <a href="/farraginous/recommend_packages.html#flameshot" target="blank">flameshot</a>，<a href="https://github.com/troylar/quiet-on-the-set" target="_blank" rel="noopener noreferrer">Quiet on the Set?</a></p>
+<p>我的 windows 11 开机自启动的托盘软件有：<a href="/farraginous/recommend_packages.html#xdm" target="blank">XDM</a>, Ditto, <a href="/farraginous/recommend_packages.html#parsec" target="blank">parsec</a>, V2rayN, <a href="/farraginous/recommend_packages.html#flux" target="blank">f.lux</a>, <a href="/farraginous/recommend_packages.html#everything" target="blank">everything</a>, 火绒, <a href="/farraginous/recommend_packages.html#tai" target="blank">Tai</a>, <a href="/farraginous/recommend_packages.html#flameshot" target="blank">flameshot</a>，<a href="https://github.com/troylar/quiet-on-the-set" target="_blank" rel="noopener noreferrer">Quiet on the Set?</a>，还有一个后台的<a href="/articles/ramdisk.html" target="blank">Imdisk</a></p>
 <h2> 设置开机自启动</h2>
 <p><code>win + r</code>打开运行面板，输入<code>shell:startup</code>打开启动文件夹，拖入需自启动的程序快捷方式即可。</p>
 <p>但启动文件夹中没有其他软件的自启动控制。若需关闭某些程序的自启动，可以打开任务管理器，选择<code>启动</code>进行修改。</p>
@@ -2424,6 +2426,7 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <h2> external</h2>
 <ol>
 <li><a href="https://bulianglin.com/archives/guide.html" target="_blank" rel="noopener noreferrer">节点搭建系列教程 - 不良林</a>，在一众垃圾 youtube 教程中算是讲得比较透彻的。</li>
+<li><a href="https://gitlab.com/drizzt/vps2arch" target="_blank" rel="noopener noreferrer">vps2arch</a>：为你的 vps 安装 arch！</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3323,6 +3326,10 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>注意，定时任务时间为中时区（UTC），并且会出现 0-60+ min 的延时，若有精确执行需求请使用其他服务商提供的云函数</p>
 </blockquote>
 <p>手动任务：使用 <code>workflow_dispatch</code>；建议每个 workflow 都加一个方便调试。不要再使用 <code>on:push</code> 进行<strong>手动运行控制</strong>。</p>
+<h2> external</h2>
+<ol>
+<li><a href="https://www.conventionalcommits.org/zh-hans/v1.0.0/" target="_blank" rel="noopener noreferrer">约定式提交</a></li>
+</ol>
 ]]></content:encoded>
       <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/releases.png" type="image/png"/>
     </item>
@@ -3488,11 +3495,13 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </tr>
 </tbody>
 </table>
-<h2> pacman</h2>
+<h2> pacman &amp; yay</h2>
 <p>使用前请先 <code>sudo pacman -Syy</code> 更新本地缓存，否则可能找不到包。（类比：scoop 每次运行都更新一次所以无需手动）</p>
 <ul>
 <li><code>sudo pacman -Ss &lt;name&gt;</code> 是搜索包，支持正则</li>
-<li>更换镜像
+<li>yay 用来下载 AUR 的包，更多社区维护，质量更差</li>
+<li>如果一个包同时在 archlinux 仓库和 AUR 仓库，则优先使用 pacman (<a href="https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63" target="_blank" rel="noopener noreferrer">ref</a>)</li>
+<li>pacman 更换镜像
 </li>
 <li>遇到的问题：<a href="#%E6%9B%B4%E6%96%B0-pacman-keyring">更新 pacman keyring</a></li>
 </ul>
@@ -3823,6 +3832,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p><a href="https://www.runoob.com/typescript/ts-variables.html" target="_blank" rel="noopener noreferrer">菜鸟教程的类型声明</a>全是 var，难绷</p>
 </blockquote>
 <p>不许用 var（暴论）。全部使用 <code>let</code> | <code>const</code>。<a href="https://www.tutorialsteacher.com/typescript/typescript-variable" target="_blank" rel="noopener noreferrer">区别</a></p>
+<p>const 指的是指针不变，指向的值可以变。</p>
 <h3> 遍历</h3>
 <p>注意 <code>for ... in ...</code> 和 <code>for ... of ...</code> 的区别；前者遍历 key，后者遍历 value</p>
 <hr class="footnotes-sep">
@@ -7662,6 +7672,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"><details><summary>点击展开</summary><p>むしゃぶりつきたくなる超スリム清純系美少女を接吻教育 監禁拘束して全身がふやけるまで舐め倒す開発調教 倉本すみれ</p></details></td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://missav.com/shkd-951" target="_blank" rel="noopener noreferrer">SHKD-951</a></td>
+<td style="text-align:center">8.1</td>
+<td style="text-align:center">7.7</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://www2.javhdporn.net/video/hmn-156" target="_blank" rel="noopener noreferrer">HMN-156</a></td>
 <td style="text-align:center">8</td>
 <td style="text-align:center">7.7</td>
@@ -7744,6 +7760,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">7.7</td>
 <td style="text-align:center">6.8</td>
 <td style="text-align:center"><details><summary>点击展开</summary><p>絶対に孕ませてやる！ずっと好きだった姉が結婚するので、ボクの子供を妊娠するまで 72 時間ハメまくって 1 滴残らず種付けして犯った！ 三舩みすず</p></details></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://missav.com/shkd-859" target="_blank" rel="noopener noreferrer">SHKD-859</a></td>
+<td style="text-align:center">7.5</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><a href="https://www2.javhdporn.net/video/cawd-194" target="_blank" rel="noopener noreferrer">CAWD-194</a></td>
@@ -7893,6 +7915,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"><a href="https://www2.javhdporn.net/video/stars-495c/" target="_blank" rel="noopener noreferrer">STARS-495</a></td>
 <td style="text-align:center">5.7</td>
 <td style="text-align:center">6.5</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://missav.com/SDAM-014" target="_blank" rel="noopener noreferrer">SDAM-014</a></td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">5</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -8112,11 +8140,11 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">T1</td>
-<td style="text-align:center">桃乃木かな</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">T2</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">桃乃木かな</td>
 </tr>
 <tr>
 <td style="text-align:center">T3</td>
@@ -10587,6 +10615,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center">家喵二三事</td>
+<td style="text-align:center">2023.08.10</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">君と彼女と彼女の恋</td>
 <td style="text-align:center">2023.08.04</td>
 <td style="text-align:center"></td>
@@ -10702,7 +10737,6 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>秽翼的尤斯蒂娅</li>
 <li>金辉恋曲四重奏</li>
 <li>枯れない世界と終わる花</li>
-<li>家喵二三事</li>
 <li>巧克甜恋</li>
 <li>Cabbage Soft：樱色之云*绯色之恋</li>
 <li>恋爱成双</li>
@@ -10796,6 +10830,10 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:center">家喵二三事</td>
+<td style="text-align:center"><code>space</code>与小键盘<code>enter</code>键均无法使用；没有回跳</td>
+</tr>
 <tr>
 <td style="text-align:center">Summer Pockets Reflection Blue</td>
 <td style="text-align:center">跟<em>終のステラ</em>同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png" alt="颜色错乱" loading="lazy"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png" alt="崩溃" loading="lazy"></td>
