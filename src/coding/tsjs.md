@@ -29,5 +29,7 @@ npm i node-ts -g
 > [菜鸟教程的类型声明](https://www.runoob.com/typescript/ts-variables.html)全是 var，难绷
 
 不许用 var（暴论）。全部使用 `let` | `const`。[区别](https://www.tutorialsteacher.com/typescript/typescript-variable)
+
+const 指的是指针不变，指向的值可以变。
 ### 遍历
 注意 `for ... in ...` 和 `for ... of ...` 的区别；前者遍历 key，后者遍历 value

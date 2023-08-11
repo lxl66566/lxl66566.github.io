@@ -56,6 +56,7 @@ category:
 |[MIAA-648](https://www2.javhdporn.net/video/miaa-648/)|7.3|8.9|<details><summary>点击展开</summary><p>僕を助けてくれる幼なじみがいじめっこに犯●れているのを見て勃起した 東條なつ</p></details>
 |[IPX-149](https://en.jable.tv/videos/ipx-149/?lang=jp)|7.7|8.2|<details><summary>点击展开</summary><p>初凌辱 純潔女子大生につけ込んだ狂気ストーカーに堕とされて… 桜空もも</p></details>
 |[MILK-137](https://jable.tv/videos/milk-137/)|7.9|8|<details><summary>点击展开</summary><p>むしゃぶりつきたくなる超スリム清純系美少女を接吻教育 監禁拘束して全身がふやけるまで舐め倒す開発調教 倉本すみれ</p></details>
+|[SHKD-951](https://missav.com/shkd-951)|8.1|7.7|
 |[HMN-156](https://www2.javhdporn.net/video/hmn-156)|8|7.7|<details><summary>点击展开</summary><p></p></details>
 |[IPX-660](https://missav.com/ipx-660)|7.5|8.2|<details><summary>点击展开</summary><p>初恋の新人女子マネージャーは合宿中の自由時間 60 分で汗だく絶倫先輩たちに寝取られ中出し輪●されています… 上坂めい</p></details>
 |[IPX-674](https://missav.com/cn/ipx-674)|8|7.5|<details><summary>点击展开</summary><p>ユメカウツツカ 日間 1 位 週間 1 位 月間 1 位 大人気同人コミックを S 級超単体女優で実写化！！ 桜空もも</p></details>
@@ -70,6 +71,7 @@ category:
 |[IPX-182](https://missav.com/zh/ipx-182)|7|7.6|<details><summary>点击展开</summary><p>狙われた通学路 共謀痴漢電車 岬ななみ</p></details>|
 |[STARS-574](https://www2.javhdporn.net/video/stars-574)|8.5|6|<details><summary>点击展开</summary><p>『親が娘にセックスを教える時代になりました。』家族で義務 SEX 性教育をすることになった日本 朝田ひまり</p></details>
 |[ROYD-084](https://www2.javhdporn.net/video/ROYD-084c/)|7.7|6.8|<details><summary>点击展开</summary><p>絶対に孕ませてやる！ずっと好きだった姉が結婚するので、ボクの子供を妊娠するまで 72 時間ハメまくって 1 滴残らず種付けして犯った！ 三舩みすず</p></details>
+|[SHKD-859](https://missav.com/shkd-859)|7.5|7|
 |[CAWD-194](https://www2.javhdporn.net/video/cawd-194)|7|7.5|<details><summary>点击展开</summary><p>キモい！ダサい！童貞臭い！軽蔑の視線でこき下ろしてくるナメくさった教え子を一晩中犯し続けた修学旅行の最終日 朝比奈ななせ</p></details>|
 |[SSPD-146](https://missav.com/sspd-146)|5.8|8.6|<details><summary>点击展开</summary><p>団地妻レズ調教 媚肉の交姦</p></details>|
 |[PPPE-089](https://jable.tv/videos/pppe-089/)|9.9|4.3|<details><summary>点击展开</summary><p>会社の飲み会で終電を逃した僕に「うちに泊まっていきます？」と巨乳の後輩女子が小悪魔な囁き。部屋着の胸チラ誘惑に負けて何度も SEX した 楪カレン</p></details>|
@@ -95,6 +97,7 @@ category:
 |[ADN-210](https://www.eporner.com/video-jIs39qWwrxd/adn-210/)|5.8|6.6|
 |[ATID-522](https://www2.javhdporn.net/video/atid-522)|5.7|6.6|
 |[STARS-495](https://www2.javhdporn.net/video/stars-495c/)|5.7|6.5|
+|[SDAM-014](https://missav.com/SDAM-014)|7|5|
 |[SHKD-996](https://www2.javhdporn.net/video/shkd-996)|6|6|
 |[SVDVD-750](https://missav.com/zh/svdvd-750)|6|5.9|
 |[MVSD-525](https://jable.tv/videos/mvsd-525/)|6.3|5.5|
@@ -142,8 +145,8 @@ category:
 |rank|name|
 | :-: | :-: |
 |T0|楪カレン，永野いち夏|
-|T1|桃乃木かな|
-|T2||
+|T1||
+|T2|桃乃木かな|
 |T3|石原莉奈|
 
 ## 工具

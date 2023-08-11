@@ -23,10 +23,12 @@ VPS 有关问题请移步 [VPS](../articles/vps.md)。
 |`<C-a>`|移动光标到最前|
 |`<C-w>`|删除前一个单词|
 |`<C-u>`|清空当前输入|
-## pacman
+## pacman & yay
 使用前请先 `sudo pacman -Syy` 更新本地缓存，否则可能找不到包。（类比：scoop 每次运行都更新一次所以无需手动）
 * `sudo pacman -Ss <name>` 是搜索包，支持正则
-* 更换镜像
+* yay 用来下载 AUR 的包，更多社区维护，质量更差
+* 如果一个包同时在 archlinux 仓库和 AUR 仓库，则优先使用 pacman ([ref](https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63))
+* pacman 更换镜像
     ::: code-tabs
     @tab ArchWSL
     ```bash:no-line-numbers

@@ -134,6 +134,7 @@ tag:
 
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
+|家喵二三事|2023.08.10|
 |君と彼女と彼女の恋|2023.08.04|
 |近月少女的礼仪 <Badge text="1" />|2023.04.23|5.6|4.7|3.8|
 |アンレス テルミナリア|2023.05.11|4.3|9.7|9.5|
@@ -166,7 +167,6 @@ tag:
 * 秽翼的尤斯蒂娅
 * 金辉恋曲四重奏
 * 枯れない世界と終わる花
-* 家喵二三事
 * 巧克甜恋
 * Cabbage Soft：樱色之云*绯色之恋
 * 恋爱成双
@@ -260,6 +260,7 @@ tag:
 
 |游戏名|问题|
 | :-: | :-: |
+|家喵二三事|`space`与小键盘`enter`键均无法使用；没有回跳|
 |Summer Pockets Reflection Blue|跟*終のステラ*同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png)![崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png)|
 |近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况；背景音乐调到最小(10%)还是太大，又不想关|
 |終のステラ|闪屏，backlog 文字颜色错乱![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/tsuinosutera_1.png)|

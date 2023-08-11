@@ -193,3 +193,4 @@ rescue 只有 nano file editor；挂载了分区到 `test` 以后，直接 `nano
 > [ERR] 请先安装面板
 ## external
 1. [节点搭建系列教程 - 不良林](https://bulianglin.com/archives/guide.html)，在一众垃圾 youtube 教程中算是讲得比较透彻的。
+2. [vps2arch](https://gitlab.com/drizzt/vps2arch)：为你的 vps 安装 arch！

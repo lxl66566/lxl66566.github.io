@@ -118,3 +118,5 @@ on:
 > 注意，定时任务时间为中时区（UTC），并且会出现 0-60+ min 的延时，若有精确执行需求请使用其他服务商提供的云函数
 
 手动任务：使用 `workflow_dispatch`；建议每个 workflow 都加一个方便调试。不要再使用 `on:push` 进行**手动运行控制**。
+## external
+1. [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
