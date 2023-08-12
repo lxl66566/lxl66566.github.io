@@ -13,6 +13,7 @@ tag:
 # 软件汇总
 一些好用软件的推荐。
 * 关于 magisk & LSPosed，请移步[设置手机](../articles/mobile_setting.md#magisk)
+* 关于 linux，请移步 [linux](../coding/linux.md#外部包)
 * 猜你喜欢：[设置电脑](../articles/computer_setting.md)
 
 :::tip 阅读此页前请注意
@@ -223,12 +224,11 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 [官方项目地址](https://github.com/polywock/globalSpeed) | [edge商店](https://microsoftedge.microsoft.com/addons/detail/global-speed-%E8%A7%86%E9%A2%91%E9%80%9F%E5%BA%A6%E6%8E%A7%E5%88%B6/mjhlabbcmjflkpjknnicihkfnmbdfced) | [私链](https://wwp.lanzout.com/i9LKF05ht3ni)
 ### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
 极为强大的广告拦截。支持选中元素，自定义规则。
+* 推荐搭配[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Adblock-Rule)食用：复制订阅规则 URL（根据情况选择是否反代），粘贴到 *Adguard - 设置 - 过滤器 - 自定义 - 添加自定义过滤器* 中。
 ### [xdm](https://github.com/subhra74/xdm)
 开源免费的多线程高速下载器，[idm](#idm) 替代品。截至 20230605，部分汉化缺失。
 
 20230614: 闪退 bug，重置无效。
-### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
-快速启用禁用扩展。
 ### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
 运行脚本。
 ### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
@@ -314,5 +314,8 @@ use [xdm](#xdm) instead.
 
 [Keepass2Android项目地址](https://github.com/PhilippC/keepass2android) | [KeePassXC项目地址](https://github.com/keepassxreboot/keepassxc)
 > 为了方便，可以考虑使用 bitwarden 的服务，其支持多端同步密码。但是若你对云端存储感到不安全，还是使用无需联网的 Keepass 吧。
+### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
+快速启用禁用扩展。
+> 比较鸡肋，还吃我资源，因此弃用。
 ## external
 1. [自由软件与专有软件之战——写在 MatLab 不再授权给实体请单上的中国高校之后](https://billchen.bid/jekyll/update/2020/06/10/free-software-vs-proprietary-software/)

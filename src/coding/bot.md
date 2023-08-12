@@ -39,11 +39,22 @@ pip install nonebot-adapter-onebot
 :::
 ## koishi
 ### install
-这里推荐[使用 npm 安装](https://koishi.chat/zh-CN/manual/starter/boilerplate.html)，而不是官方推荐的下载安装包。使用 npm 安装对 bot 功能没有影响。
+这里推荐[使用 pnpm/npm 安装](https://koishi.chat/zh-CN/manual/starter/boilerplate.html)，而不是官方推荐的下载安装包。使用 pnpm/npm 安装对 bot 功能没有影响，而且方便开发。
+::: code-tabs
+@tab pnpm
+```sh
+pnpm i -g create-koishi@latest
+pnpm create koishi  # 选择是否 install and start 的时候选择 否
+pnpm i --shamefully-hoist   # 需要添加此后缀
+pnpm dev
+```
+@tab npm
 ```sh
 npm i -g create-koishi@latest
 npm init koishi
 ```
+:::
+> *关于 pnpm 安装后缀，详见 [nodejs](./nodejs.md#神秘报错)*
 ### 使用
 * telegram：本机没有公网 ip，因此选择 *polling* 工作模式。代理用 http 好像不能用（这也是我第一次退坑 koishi 的理由），之后尝试用 socks 端口就可以了。
 * QQ：参考[论坛](https://forum.koishi.xyz/t/topic/2502)。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:

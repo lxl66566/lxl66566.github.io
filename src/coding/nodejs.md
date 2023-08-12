@@ -37,9 +37,19 @@ npm uninstall <package_name> [option] # 卸载包及其依赖
     ```
 ### 关于 --save
 有时候会看到 `npm i xxx --save`，`--save` 是写入 `package.json` 的过程，而 npm 5 之后 install 会自动 save，不需要手动指定。一句话：**不用加**。
+## 关于 lockfile
+> 对于不同的包管理器，lockfile 的名称不同。
+
+在 `package.json` 的包版本信息是使用[版本修饰符](https://eminoda.github.io/2021/01/29/npm-semver-strategy/)，允许上下浮动的。然而版本不同就有可能导致错误。此时就需要使用 lockfile 进行精确版本的指定。
+
+若 lockfile 不存在，install/update 时会自动生成。若存在且 lockfile 版本符合 `package.json` 版本，则从 lockfile 中安装依赖。若 lockfile 不兼容 `package.json`，则 pnpm/npm 会直接更新 lockfile 或报错退出（因此，强烈建议将 lockfile 添加到 git 版本控制中[^2]）。
+
+很遗憾，目前我没有找到任何方法使我能够严格依照 lockfile 进行依赖安装：在冲突时使用 `--frozen-lockfile` 参数，npm 会直接忽略之并写入 lockfile，pnpm/yarn 会报错并终止。同样的，`npm init -y` | `npm-collect` 都无法完成此任务。
+[^2]: [惨痛教训](https://t.me/withabsolutex/1216)
 ## 查询包大小
 查询 install size 可以使用 [Package Phobia](https://packagephobia.com/)。
 ## 遇到的问题
+> 时间顺序
 ### CORS policy
 在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。
 在文件目录下 `python -m http.server`，打开浏览器访问 `localhost:8000`，点击要调试的 html 即可。<span class="heimu" title="你知道的太多了">20230603：我是铸币</span>
@@ -72,5 +82,9 @@ npm ERR! sharp: Installation error: Request timed out
 难道真的山穷水尽了吗？不！再次 `npm i sharp` 后，经过漫长的等待，终于安装成功了！并且服务器也没有报错！
 
 总之，还是挺玄学的。
+### 神秘报错
+nodejs 出错的报错基本上是没用的，因为一般出现玄学问题是依赖包的问题而不是用户的问题（笑）。
+1. pnpm 安装 [koishi](./bot.md) 依赖的问题，dev 的时候遇到神秘报错，而使用 npm 安装却不会报错。需要使用 `--shamefully-hoist`[^1]用于生成与 npm 一样的扁平化目录。寄的原因大概是有依赖不支持 pnpm 的目录模式。
+2. [vuepress1 文档构建失败](https://github.com/DIYgod/RSSHub/issues/13007)：webpack 与 nodejs 之间的碰撞！我甚至想到了降级 nodejs 到 LTS，但没想到的是连 LTS v18 也不行，得降到 v17......
 ## external
 1. [npm vs pnpm vs Yarn — Which Package Manager Reigns Supreme?](https://javascript.plainenglish.io/npm-vs-pnpm-vs-yarn-which-package-manager-reigns-supreme-a942d17a2051)

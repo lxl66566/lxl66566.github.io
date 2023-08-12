@@ -23,14 +23,14 @@ category:
     - [ ] tauri or flask, to dev wordsreciter
     - [x] koishi plugin, like atri bot
     - [ ] C# learning and pull request to Tai, MisakaTranslator
-    - [ ] lua
-    - [ ] tg 教务信息转发
+    - [ ] lua(?)
+    - [x] tg 教务信息转发（通过 rss 实现）
 
 ## 日程库（不急）
-- [ ] [开发应用](../hide/inspiration.md#编程灵感)
+- [ ] [开发各类应用](../hide/inspiration.md#编程灵感)
 - [ ] osu reform β pass
-- [ ] 算法类
-- [ ] CTF
+- [ ] 算法类(?)
+- [ ] CTF(?)
 
 ## 有生之年
 - [ ] 钢琴
@@ -39,4 +39,4 @@ category:
 - [ ] 虚幻引擎 (?)
 - [ ] build-my-own-language (?)
 - [ ] [灵感区](../hide/inspiration.md)：对任何东西灵光一闪的想法。希望能用得上。
-- [ ] 理论数学
+- [ ] 理论数学(?)

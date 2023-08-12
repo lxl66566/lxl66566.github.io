@@ -65,10 +65,11 @@ tag:
     * bilibili 任意倍速
     - [ ] *usage time recoder*
     - [ ] *MIUI 10s*
-* koishi plugin:
-    - [ ] advanced: wordle game
+* ~~koishi plugin:~~ （koishi 有关计划暂时搁置）
+    - [ ] ~~advanced: wordle game~~
 * windows electron lib(runtime)
 * windows volume locker
+* SAVE MY LOCK FILE
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
 * 甩棍伞

@@ -24,7 +24,7 @@ VPS 有关问题请移步 [VPS](../articles/vps.md)。
 |`<C-w>`|删除前一个单词|
 |`<C-u>`|清空当前输入|
 ## pacman & yay
-使用前请先 `sudo pacman -Syy` 更新本地缓存，否则可能找不到包。（类比：scoop 每次运行都更新一次所以无需手动）
+使用前请先 `sudo pacman -Syy` 更新本地缓存，否则可能找不到包。（类比：scoop 每次运行都更新一次所以无需手动）每次修改镜像之后都应该使用 `pacman -Syyu` 强制更新缓存 ([ref](https://wiki.archlinuxcn.org/wiki/镜像源#强制_pacman_刷新软件包列表))。
 * `sudo pacman -Ss <name>` 是搜索包，支持正则
 * yay 用来下载 AUR 的包，更多社区维护，质量更差
 * 如果一个包同时在 archlinux 仓库和 AUR 仓库，则优先使用 pacman ([ref](https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63))
