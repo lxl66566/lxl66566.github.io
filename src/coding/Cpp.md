@@ -96,6 +96,7 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 * *xmake.lua* 一定要加这句：`set_encodings("utf-8")`（之前没加导致 Qt 中文乱码）
 * 可以抢先使用 dev：`xmake update -s dev`
 * 至少得用个 c++20 吧：(*xmake.lua*)`set_languages("cxx20")`；注意，如果使用 `set_languages("cxxlatest")` 可能会出现问题，clangd 无法读取 *compiler_commands.json* 的 c++ 版本
+* 代码优化：`set_optimize("fastest")` ~~开你妈的 O3 就完事了！~~
 * 添加包，例如 fmt：(*xmake.lua*)
     ```lua
     add_requires("fmt")
@@ -103,6 +104,9 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
         ...
         add_packages("fmt")
     ```
+* 查找包（任选）：
+    * 手动去 [xmake-repo](https://github.com/xmake-io/xmake-repo/) 找
+    * 命令行：`xrepo search <package_name>...`，可用 `*` 作为通配符
 #### 指定工具链
 用惯了 mingw 和 msvc，想试试用 clang 编译，很简单：
 1. 安装 llvm: `scoop install llvm`
@@ -207,24 +211,32 @@ for (auto i = elements.begin();i != elements.end();++i) (*i)->hide();
 
 *对于 hide() 与 show() 操作来说，更简便的方法是将所有控件加入新的 widget，然后将该widget的父对象设为主窗口。之后的隐藏与显示只需对该 widget 操作即可。*
 ### 关于资源文件
-Qt提供方便的资源文件引用。在项目中通过 `Add New...`新建 Qt Resource File 并添加文件到 .qrc 内。Qt 在构建时会将添加的文件以二进制形式存放在生成的 exe 文件中。无需将资源文件放入打包目录，程序将会从 exe 中引用资源。
+Qt提供方便的资源文件引用。在项目中通过 `Add New...`新建 Qt Resource File[^2] 并添加文件到 `.qrc` 内。Qt 在构建时会将添加的文件以二进制形式存放在生成的 exe 文件中。无需将资源文件放入打包目录，程序将会从 exe 中引用资源。
 
 但是请注意，**加入 .qrc 中的资源文件是只读的。有修改需求的文件请勿使用此方法。***（使用相对路径）*
-
+[^2]: `.qrc` 文件内部是 xml 格式，理论可手搓，因此可以放心抛弃 QtCreator。
 ### 添加图标与版本信息
-
+::: details 使用 qmake，已过时
 图标：在项目目录下放入 .ico 图标（[在线转ico](https://www.aconvert.com/cn/icon/)），在项目 .pro 文件中加入 `RC_ICONS = xxx.ico` 即可。所有该项目下的子窗口都会自动使用该图标。注意仅允许 ico 格式图像。
 
 版本信息：在项目 .pro 文件中加入 `VERSION = x.x.x` 即可。
+:::
+主窗口一句 `setWindowIcon(QIcon(":/static/logo.ico"));` 即可。icon 需要加入 qrc 文件。
+### 打包
+Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件到任意目标目录，在目录下使用 `windeployqt xxx.exe` 命令即可完成打包（windeployqt 需要在环境变量内，否则使用绝对位置）。
 
-### 打包技巧
+但是到了 Qt6，情况就完全不一样了。。Qt6 的打包不管使用 `windeployqt` 或 `windeployqt6` 打包后，程序都无法运行。重装 SDK 后也是如此。首先，使用 `windeployqt` 会缺失 `Qt6Core.dll`, `Qt6Gui.dll`, `Qt6Widgets.dll` 这老三样。其次，手动复制这三样后，测试还会出现 bug：
 
-Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件到任意目标目录，打开开始菜单 Qt 文件夹中的 MinGW 命令行，进入目标目录后使用 `windeployqt xxx.exe` 命令即可完成打包。
+<div class="image50" style="text-align: center; "><img alt="bug" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/cpp/windeployqt_bug.png" /></div>
 
-但是，这样打包出来的程序体积还能**进一步缩小**。运行 exe 后，全选目录下文件并删除，跳过已被打开的所有文件。这样能够移除不必要的运行库从而大幅降低发布包的大小。
+解法是将 Qt SDK 目录下的 `Plugins` 文件夹复制到打包的 exe 目录下[^1]。。
+[^1]: 我找出这个问题[真的不容易](../gossip/difficulties.md#20230507qt6-项目构建失败)，还差点错怪 xmake。。主要是 `Plugins` 并不在我的环境变量中，但却能够跑起来，迷惑了我的判断。这个报错也基本上得不到信息，网上也找不到解法。
+#### 优化
+这样打包出来的程序体积还能**进一步缩小**。运行 exe 后，全选目录下文件并删除，跳过已被打开的所有文件，并递归地对每个文件夹进行同样的操作。这样能够移除不必要的运行库从而==大幅==降低发布包的大小。
 ### 全局快捷键
 [参考此文章](https://blog.csdn.net/scueee/article/details/108541574)
 ### JSON处理
+> 根据 [benchmark](#潜伏知识)，QJson 是 JSON 库中占用内存最小的。（某个测试项目）
 #### 读取
 ```cpp
 QFile file("a.json");
@@ -257,9 +269,14 @@ QByteArray data(jDoc.toJson());
 file.write(data);
 file.close();
 ```
+### dark mode
+深色模式支持是很重要的。
+
+你可以很简单地[添加深色模式](https://forum.qt.io/topic/101391/windows-10-dark-theme/4)（高对比度）；若你想使用更为柔和一点的颜色，可以使用第三方的[QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)。
 ## 潜伏知识
 * C++ 开源 json 库性能好的有 simdjson 和 sonic；[benchmark](https://github.com/miloyip/nativejson-benchmark), but out of date
 ## external
 1. [C++ Template 进阶指南](https://github.com/wuye9036/CppTemplateTutorial)
 2. [2020年 C++语言律师 等级考试 参考答案](https://www.bilibili.com/video/BV1et4y1D796/)
 3. [为什么看到这么多人不推荐 C++？](https://www.zhihu.com/question/22853451/answer/1847571322)
+4. [Zig's New Relationship with LLVM](https://kristoff.it/blog/zig-new-relationship-llvm/)
