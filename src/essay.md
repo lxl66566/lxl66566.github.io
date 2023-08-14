@@ -17,6 +17,8 @@ tag:
 
 [前往我的频道](https://t.me/withabsolutex)查看更多随笔。
 ## 2023
+### 20230814
+小地方民好，官不好；大地方相反（有待验证）。
 ### 20230802
 Don't be nervous about mistakes.
 ### 20230801
