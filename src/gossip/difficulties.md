@@ -9,8 +9,9 @@ category:
 
 有关博客写作的问题请跳转[VuePress2与博客心得](./withvuepress2.md)。
 ## 20230507：qt6 项目构建失败
-问题描述：使用 cmake 与 xmake 构建 qt6 项目均失败。
+状态：已解决；问题描述：使用 cmake | xmake 构建 qt6 项目均失败。
 ### cmake
+::: details 已过时；已弃用 cmake
 项目结构：
 
 > ├─ui<br/>
@@ -72,6 +73,8 @@ set(PROJECT_SOURCES
 )
 ...
 ```
+:::
+现在想来，错误可能是没有生成 `compile_commands.json`，clangd 读不到导致的。
 ### xmake
 xmake 就别说项目了，连最基本的 example 都无法构建。
 ```shell
@@ -84,12 +87,11 @@ xmake
 
 Qt sdk lib 里没有 `Qt6Gui.lib`，全是 `.prl` 文件（和 `.a`）。xmake 的资料太少，网上也缺少问题解法。
 
-之后使用 aqtinstaller 装了另一套 qt sdk，然后就能 `xmake && xmake r` 跑了。。但是程序用 windeployqt/windeployqt6 打包以后又寄了，运行报错跟[这个](https://stackoverflow.com/questions/57631383/qimageqeaaqeav0z-could-not-be-located-in-dll)差不多。
+之后使用 aqtinstaller 装了另一套 qt sdk，然后就能 `xmake && xmake r` 跑了。。但是程序用 windeployqt/windeployqt6 打包以后又寄了。。
 
-然后发现两个版本 Qt 并存问题，抱着试试看的心态，把老 Qt 环境变量删了，加了新 Qt 的 `PATH`，然后能本机跑。但是当我删掉 `PATH`，windeployqt6 打包，补全提示缺失的 dll 再运行，最后给我报了：
-> This application failed to start because no Qt platform plugin could be initialized.
+最终解决了，可以看 [C++ - Qt 打包](../coding/Cpp.md#打包)
 ### 说两句
-感觉 c++ 项目管理差不多了，cmake 抽象得一批，xmake 又 bug 频发
+感觉 c++ 项目管理差不多了，cmake 抽象得一批，xmake 出了问题又找不到解法。
 ## 20230221：网站访问问题
 问题描述：开启 clash 系统代理时无法访问校内 pt 站：`pt6.neko2022.com`。反之则可以访问。需要实现分流功能。<text style="color:red;font-weight:bold">未解决！</text>
 

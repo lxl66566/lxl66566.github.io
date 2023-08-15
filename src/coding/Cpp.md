@@ -87,7 +87,9 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 4. [生成 compiler_commands.json](https://xmake.io/#/zh-cn/plugin/builtin_plugins?id=生成compiler_commands)，使 clangd 能够读取 includePath 等。一行：`xmake project -k compile_commands`
 5. `xmake && xmake r` 就能跑了。
 
-刚做完 2. 的时候会出现经典问题，clangd 报*找不到 `ui_mainwindow.h` 文件*… 因为它是编译期生成的。。用 cmake 的时候需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，clangd 会自己去 build 里找。
+刚做完 2. 的时候会出现经典问题，clangd 报*找不到 `ui_mainwindow.h` 文件*… 因为它是编译期生成的。。用 cmake CLI 的时候可能需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，应该是 xmake 内置的 qt 规则起作用了。
+
+需要注意，使用 xmake 构建的 Qt 程序无法在 stdout 输出字符，无论 release 还是 debug mode。（不知道是不是缺少了什么设置选项）
 ## 构建系统
 最广泛使用的是用 *Cmake* 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
 ### xmake
@@ -189,11 +191,15 @@ Qt是一个跨平台，跨语言的GUI框架。我用C++做的最早的GUI应用
     2. `aqt install-qt --outputdir D:\software\QtSDK windows desktop 6.6.0 win64_msvc2019_64`（别抄，意会一下；安装大小是 1.46G，已经很不错了）
 * 官方 GUI: [qt.io](https://www.qt.io/zh-cn/download)。
 
-如果你不想装重量级的 Visual Studio，你可以尝试安装 mingw 的 sdk，占用空间小点，不过配置会稍微麻烦一点
+如果你不想装重量级的 Visual Studio，你可以尝试安装 mingw 的 sdk，占用空间小点，不过配置会稍微麻烦一点。
 ### 第三方
 一些可能会用到的第三方组件 / 框架。
-* [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)：窗口深色模式。
+* [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)：窗口深色模式，参考[深色模式](#dark-mode)。
 * [FluentUI](https://github.com/zhuzichu520/FluentUI)：提供一套 UI 框架。
+### dark mode
+深色模式支持是很重要的。
+
+你可以很简单地[添加深色模式](https://forum.qt.io/topic/101391/windows-10-dark-theme/4)（高对比度）；若你想使用更为柔和一点的颜色，可以使用第三方的[QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)。
 ### 唤起最小化的窗口
 ```cpp:no-line-numbers
 show();showNormal();raise();activateWindow();
@@ -211,7 +217,7 @@ for (auto i = elements.begin();i != elements.end();++i) (*i)->hide();
 
 *对于 hide() 与 show() 操作来说，更简便的方法是将所有控件加入新的 widget，然后将该widget的父对象设为主窗口。之后的隐藏与显示只需对该 widget 操作即可。*
 ### 关于资源文件
-Qt提供方便的资源文件引用。在项目中通过 `Add New...`新建 Qt Resource File[^2] 并添加文件到 `.qrc` 内。Qt 在构建时会将添加的文件以二进制形式存放在生成的 exe 文件中。无需将资源文件放入打包目录，程序将会从 exe 中引用资源。
+Qt 提供方便的资源文件引用。在项目中通过 `Add New...`新建 Qt Resource File[^2] 并添加文件到 `.qrc` 内。Qt 在构建时会将添加的文件以二进制形式存放在生成的 exe 文件中。无需将资源文件放入打包目录，程序将会从 exe 中引用资源。
 
 但是请注意，**加入 .qrc 中的资源文件是只读的。有修改需求的文件请勿使用此方法。***（使用相对路径）*
 [^2]: `.qrc` 文件内部是 xml 格式，理论可手搓，因此可以放心抛弃 QtCreator。
@@ -221,7 +227,8 @@ Qt提供方便的资源文件引用。在项目中通过 `Add New...`新建 Qt R
 
 版本信息：在项目 .pro 文件中加入 `VERSION = x.x.x` 即可。
 :::
-主窗口一句 `setWindowIcon(QIcon(":/static/logo.ico"));` 即可。icon 需要加入 qrc 文件。
+1. 新建 `xxx.rc`，内容为 `IDI_ICON1 ICON DISCARDABLE "logo.ico"` （定位到你的 ico 图标）
+2. 将 `xxx.rc` 加入 xmake.lua：`add_files(static/xxx.rc)`
 ### 打包
 Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件到任意目标目录，在目录下使用 `windeployqt xxx.exe` 命令即可完成打包（windeployqt 需要在环境变量内，否则使用绝对位置）。
 
@@ -229,7 +236,7 @@ Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件
 
 <div class="image50" style="text-align: center; "><img alt="bug" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/cpp/windeployqt_bug.png" /></div>
 
-解法是将 Qt SDK 目录下的 `Plugins` 文件夹复制到打包的 exe 目录下[^1]。。
+解法是将 Qt SDK 目录下的 `plugins` 文件夹复制到打包的 exe 目录下[^1]。。
 [^1]: 我找出这个问题[真的不容易](../gossip/difficulties.md#20230507qt6-项目构建失败)，还差点错怪 xmake。。主要是 `Plugins` 并不在我的环境变量中，但却能够跑起来，迷惑了我的判断。这个报错也基本上得不到信息，网上也找不到解法。
 #### 优化
 这样打包出来的程序体积还能**进一步缩小**。运行 exe 后，全选目录下文件并删除，跳过已被打开的所有文件，并递归地对每个文件夹进行同样的操作。这样能够移除不必要的运行库从而==大幅==降低发布包的大小。
@@ -243,7 +250,12 @@ main.exe
 ```
 :::
 ### 全局快捷键
-[参考此文章](https://blog.csdn.net/scueee/article/details/108541574)
+[参考此文章](https://blog.csdn.net/scueee/article/details/108541574)。如果要在 Qt6 中使用，需要把 `virtual bool nativeEventFilter` 的最后一个参数由 `long*` 改为 `qintptr*`.
+
+怎么说，这几乎是我在几乎全网搜到的唯一可用的全局快捷键代码[^3]。。
+[^3]: 升级 Qt6 后我尝试寻找其他全局快捷键方法，全部失败。甚至生出了直接调 windows.h api 的心。
+### 按键事件
+Qt6 提供了 *QShortCut*，大大简化了==非全局==按键事件的处理。只需要创建一个 *QShortCut* 对象，connect 即可。
 ### JSON处理
 > 根据 [benchmark](#潜伏知识)，QJson 是 JSON 库中占用内存最小的。（某个测试项目）
 #### 读取
@@ -278,10 +290,6 @@ QByteArray data(jDoc.toJson());
 file.write(data);
 file.close();
 ```
-### dark mode
-深色模式支持是很重要的。
-
-你可以很简单地[添加深色模式](https://forum.qt.io/topic/101391/windows-10-dark-theme/4)（高对比度）；若你想使用更为柔和一点的颜色，可以使用第三方的[QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)。
 ## 潜伏知识
 * C++ 开源 json 库性能好的有 simdjson 和 sonic；[benchmark](https://github.com/miloyip/nativejson-benchmark), but out of date
 ## external
@@ -289,3 +297,4 @@ file.close();
 2. [2020年 C++语言律师 等级考试 参考答案](https://www.bilibili.com/video/BV1et4y1D796/)
 3. [为什么看到这么多人不推荐 C++？](https://www.zhihu.com/question/22853451/answer/1847571322)
 4. [Zig's New Relationship with LLVM](https://kristoff.it/blog/zig-new-relationship-llvm/)
+5. [C++ 用户定义 Ranges 算子](https://xr1s.me/2023/08/13/cxx-user-defined-range-adaptor/)
