@@ -33,3 +33,8 @@ npm i node-ts -g
 const 指的是指针不变，指向的值可以变。
 ### 遍历
 注意 `for ... in ...` 和 `for ... of ...` 的区别；前者遍历 key，后者遍历 value
+### Promise
+异步，链式调用，异常处理，强大的语法。
+### 语法糖
+* `a ?? b`: `if(a) { return a; } else { return b; }`
+* `&&`, `&&=`, `||=`, `?.`

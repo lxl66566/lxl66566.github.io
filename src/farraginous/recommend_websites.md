@@ -120,6 +120,9 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 * [play.m3o](https://play.m3o.xyz/)：在线联机扫雷
 * [lichess.org](https://lichess.org/)：在线国际象棋
 * [Gartic.io](https://gartic.io/)：你画我猜网页版
+* [You're the OS!](https://plbrault.github.io/youre-the-os/)：一款让你模拟 OS 的游戏
+
+资源：
 * [我的世界数据包](https://www.planetminecraft.com/data-packs)
 * [Delicious Fruit](https://delicious-fruit.com/ratings/full.php?q=ALL)：I wanna 资源
 * [Switch618公益分享](https://www.switch618.com/)：破解游戏下载站

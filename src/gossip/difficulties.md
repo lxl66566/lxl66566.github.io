@@ -8,6 +8,23 @@ category:
 **此页面几乎不再更新。请前往[我的频道](https://t.me/withabsolutex)搜索 tag: `#垃圾桶`。**
 
 有关博客写作的问题请跳转[VuePress2与博客心得](./withvuepress2.md)。
+## 20230816: install electron
+状态：已解决；问题描述：安装 electron 失败。
+
+首先，在 cmd 中使用 `pnpm i -g electron`，然后 postinstalling 后就无响应了。
+
+看了一下，可能是 postinstalling 不会调用系统代理。于是[设置镜像](https://www.electronjs.org/zh/docs/latest/tutorial/installation#自定义镜像和缓存)：`set ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"`，然后再次安装，报错：
+> Error: EPERM: operation not permitted, lstat "xxx.zip"
+
+查了一下是权限问题。然而 windows 权限设置[就是他妈一坨屎](../articles/computer_setting.md#windows-下的权限控制)，我改来改去，都放了 *完全控制*，还是报错。之后也尝试了：使用管理员终端，更换 `TEMP` 位置，更换安装盘符，均无法正常安装。网上查到的要么是 clean cache，要么是改权限，没有一点用。
+
+<span class="heimu" title="你知道的太多了">妈的，不想玩了，跟这个傻卵 windows 爆了！（我仍然认为是 windows 的问题）</span>然后因为 `lstat` 是 linux 指令，突然想到在 git bash 中执行安装命令会怎样。于是问题解决了。。。。
+```sh
+export ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"
+pnpm i -g electron
+```
+
+最终，我还是对 electron 抱有怨气：为什么不直接使用 npm 的包管理，非要自己用一个 postinstall 脚本还他妈问题一堆，非要去其他源下载还不走代理，非要用 linux 命令，😅
 ## 20230507：qt6 项目构建失败
 状态：已解决；问题描述：使用 cmake | xmake 构建 qt6 项目均失败。
 ### cmake
