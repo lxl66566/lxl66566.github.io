@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 16 Aug 2023 17:35:28 GMT</pubDate>
-    <lastBuildDate>Wed, 16 Aug 2023 17:35:28 GMT</lastBuildDate>
+    <pubDate>Thu, 17 Aug 2023 15:19:57 GMT</pubDate>
+    <lastBuildDate>Thu, 17 Aug 2023 15:19:57 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -3535,7 +3535,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>VPS 有关问题请移步 <a href="/articles/vps.html" target="blank">VPS</a>。</p>
 <h2> 外部包</h2>
 <ul>
-<li>我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh</li>
+<li>我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat</li>
 <li>我计划装的包：Joshuto</li>
 </ul>
 <h2> Terminal 基础</h2>
@@ -3934,6 +3934,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>此处是我对 vim for vscode 的一些设置。在 <code>C:/Users/&lt;user name&gt;/AppData/Roaming/Code/User/settings.json</code> 添加即可。路径可在扩展设置中打开。</p>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 常用组合键</h2>
 <ul>
+<li><code>A</code> = <code>$a</code>, <code>I</code> = <code>0i</code></li>
+<li><code>*</code> 是当前单词的下一个匹配项</li>
 <li><code>yyp</code> 复制当前行并粘贴到下一行。我的数据记录需要频繁使用此功能。</li>
 <li><code>daw</code> delete a word()</li>
 <li><code>f{char}</code> search next char</li>
@@ -7512,13 +7514,16 @@ x 表示水平位移，h 表示垂直位移。<br>
       <link>https://absx.pages.dev/hide/videos.html</link>
       <guid>https://absx.pages.dev/hide/videos.html</guid>
       <source url="https://absx.pages.dev/rss.xml">My Movie List</source>
-      <description>若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。 最高 号颜演名链 :--: :--: :--: :--: :--: SHKD-999 (https://jable.tv/videos/shkd-999/)9.911.1点击展开風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子点击展开magnet:?xt=urn:btih:210B...</description>
+      <description>若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。 最高 单科得分 &amp;gt;= 10 或总分 &amp;gt;= 18 号颜演名链 :--: :--: :--: :--: :--: SHKD-999 (https://jable.tv/videos/shkd-999/)9.911.1点击展开風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子点击展开mag...</description>
       <category>推荐</category>
       <category>主张</category>
       <pubDate>Mon, 04 Jul 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> My Movie List</h1>
 <div class="subtitle">若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。</div>
 <h2> 最高</h2>
+<blockquote>
+<p>单科得分 &gt;= 10 或总分 &gt;= 18</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -7584,6 +7589,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">8.7</td>
 <td style="text-align:center">10.2</td>
 <td style="text-align:center"><details><summary>点击展开</summary><p>リモまん リモートま●こコントロール:DNAをインストールするだけであの子のマ●コを遠隔操作！ クラスメイト・女教師・妹をイカセまくり！ハメまくり！</p></details></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://missav.com/ja/heyzo-0153" target="_blank" rel="noopener noreferrer">HEYZO-0153</a></td>
+<td style="text-align:center">9.8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center"><details><summary>点击展开</summary><p>性春の汗～コーチ、一発お願いします！～</p></details></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -10852,7 +10864,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center">近月少女的礼仪</td>
-<td style="text-align:center">-40min</td>
+<td style="text-align:center">-41min</td>
 </tr>
 <tr>
 <td style="text-align:center">アンレス テルミナリア</td>
