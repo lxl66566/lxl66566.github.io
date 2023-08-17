@@ -14,7 +14,7 @@ tag:
 
 VPS 有关问题请移步 [VPS](../articles/vps.md)。
 ## 外部包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh
+* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
 * 我计划装的包：Joshuto
 ## Terminal 基础
 `<C-a>` 代表 `Ctrl + a`.

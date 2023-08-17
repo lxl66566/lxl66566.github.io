@@ -10,6 +10,8 @@ category:
 <div class="subtitle">若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。</div>
 
 ## 最高
+> 单科得分 >= 10 或总分 >= 18
+
 |号|颜|演|名|链|
 | :--: | :--: | :--: | :--: | :--: |
 |[SHKD-999](https://jable.tv/videos/shkd-999/)|9.9|11.1|<details><summary>点击展开</summary><p>風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:210B775C018A5D487B1315A3DD2A3BD597DF59EA</p></details>|
@@ -20,6 +22,7 @@ category:
 |[PPPE-013](https://www2.javhdporn.net/video/PPPE-013c/)|10|10|<details><summary>点击展开</summary><p>大嫌いな義父のチ●ポがドストライクすぎて…時短中出しされていたのに延長を懇願して貪り合うような、おかわり中出し性交 楪カレン</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:484d3db110d9c7d8a47ff1f5e53433db32e58eba</p></details>|
 |[REAL-797](https://tktube.com/videos/141768/real-797/)|7|12.3|<details><summary>点击展开</summary><p>今からこの大家族全員レ●プします</p></details>|
 |[SDDE-640](https://missav.com/en/sdde-640)|8.7|10.2|<details><summary>点击展开</summary><p>リモまん リモートま●こコントロール:DNAをインストールするだけであの子のマ●コを遠隔操作！ クラスメイト・女教師・妹をイカセまくり！ハメまくり！</p></details>|
+|[HEYZO-0153](https://missav.com/ja/heyzo-0153)|9.8|9|<details><summary>点击展开</summary><p>性春の汗～コーチ、一発お願いします！～</p></details>|
 |[STARS-190](https://www2.javhdporn.net/video/STARS-190/)|9.8|8.8|<details><summary>点击展开</summary><p>敏感微乳乳首の●気な美少女は変態性欲者の兄の性処理玩具として毎日犯●れている 永野いち夏</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:b8197c436e07951dbe3a329fa7c2e1925cc003b4</p></details>|
 |[STARS-256](https://missav.com/stars-256)|8|10.5|<details><summary>点击展开</summary><p>生まれたての子鹿の如く崩れ落とす 1日中超ピストン性交 永野いち夏</p></details>|
 |[CAWD-426](https://missav.com/cawd-426)|8.2|11.2|<details><summary>点击展开</summary><p>隣人のゴミ部屋で異臭中年おやじに抜かずの連撃中出し58発で孕まされた制服女子の末路… 花狩まい</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:E49CBDB1DC6831BE08BB8119A348B6BCE23838B5</p></details>|
