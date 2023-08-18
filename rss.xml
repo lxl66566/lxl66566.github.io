@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 17 Aug 2023 15:19:57 GMT</pubDate>
-    <lastBuildDate>Thu, 17 Aug 2023 15:19:57 GMT</lastBuildDate>
+    <pubDate>Fri, 18 Aug 2023 15:56:03 GMT</pubDate>
+    <lastBuildDate>Fri, 18 Aug 2023 15:56:03 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -339,6 +339,8 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20230817</h3>
+<p>苍蝇捕捉器：装过生鱼的袋子。</p>
 <h3> 20230814</h3>
 <p>小地方民好，官不好；大地方相反（有待验证）。</p>
 <h3> 20230802</h3>
@@ -13668,6 +13670,7 @@ cmd 中执行</p>
 <th style="text-align:center">A</th>
 <th style="text-align:center">M</th>
 <th style="text-align:center">G</th>
+<th style="text-align:center">Y</th>
 </tr>
 </thead>
 <tbody>
@@ -13676,12 +13679,312 @@ cmd 中执行</p>
 <td style="text-align:center">AbsoluteX</td>
 <td style="text-align:center">M姓朋友</td>
 <td style="text-align:center">G姓朋友</td>
+<td style="text-align:center">Y姓朋友</td>
+</tr>
+</tbody>
+</table>
+<h2> 20230818</h2>
+<p>经典斗地主：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">G</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+</tr>
+</tbody>
+</table>
+<p>UNO扩展规则 5.2.2</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">M</th>
+<th style="text-align:center">G</th>
+<th style="text-align:center">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">当日积分</td>
+<td style="text-align:center"><text style="color:red;">7</text></td>
+<td style="text-align:center"><text style="color:red;">8</text></td>
+<td style="text-align:center"><text style="color:red;">9</text></td>
+<td style="text-align:center"><text style="color:red;">17</text></td>
+<td style="text-align:center"><text style="color:red;">9</text></td>
+</tr>
+<tr>
+<td style="text-align:center">CAMGY UNO总积分</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">9</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">序号</th>
+<th style="text-align:center">C</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">G</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">28</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">31</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">当日积分</td>
+<td style="text-align:center"><text style="color:red;">33</text></td>
+<td style="text-align:center"><text style="color:red;">30</text></td>
+<td style="text-align:center"><text style="color:red;">30</text></td>
+</tr>
+<tr>
+<td style="text-align:center">CAG UNO总积分</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">30</td>
 </tr>
 </tbody>
 </table>
 <h2> 20230714</h2>
-<ul>
-<li>
 <p>经典斗地主：</p>
 <table>
 <thead>
@@ -13707,8 +14010,6 @@ cmd 中执行</p>
 </tr>
 </tbody>
 </table>
-</li>
-<li>
 <p>UNO扩展规则 5.2.0</p>
 <table>
 <thead>
@@ -13841,7 +14142,7 @@ cmd 中执行</p>
 <td style="text-align:center"><text style="color:red;">22</text></td>
 </tr>
 <tr>
-<td style="text-align:center">四人总积分</td>
+<td style="text-align:center">CAMG UNO总积分</td>
 <td style="text-align:center">43</td>
 <td style="text-align:center">61</td>
 <td style="text-align:center">39</td>
@@ -13849,8 +14150,6 @@ cmd 中执行</p>
 </tr>
 </tbody>
 </table>
-</li>
-</ul>
 <h2> 20230211</h2>
 <p>后半场，1v1v1v1 斗地主</p>
 <table>
@@ -13963,7 +14262,7 @@ cmd 中执行</p>
 <td style="text-align:center"><text style="color:red;">26</text></td>
 </tr>
 <tr>
-<td style="text-align:center">四人总积分</td>
+<td style="text-align:center">CAMG UNO总积分</td>
 <td style="text-align:center">20</td>
 <td style="text-align:center">29</td>
 <td style="text-align:center">20</td>
@@ -14013,7 +14312,7 @@ cmd 中执行</p>
 <td style="text-align:center"><text style="color:red;">1</text></td>
 </tr>
 <tr>
-<td style="text-align:center">四人总积分</td>
+<td style="text-align:center">CAMG UNO总积分</td>
 <td style="text-align:center">5</td>
 <td style="text-align:center">6</td>
 <td style="text-align:center">6</td>
@@ -14024,16 +14323,16 @@ cmd 中执行</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>UNO扩展规则5.2.2</title>
+      <title>UNO扩展规则5.2.3</title>
       <link>https://absx.pages.dev/hobbies/other_games/uno.html</link>
       <guid>https://absx.pages.dev/hobbies/other_games/uno.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">UNO扩展规则5.2.2</source>
-      <description>UNO扩展规则5.2.2</description>
+      <source url="https://absx.pages.dev/rss.xml">UNO扩展规则5.2.3</source>
+      <description>UNO扩展规则5.2.3</description>
       <category>爱好</category>
       <category>推荐</category>
       <category>教程</category>
       <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> UNO扩展规则5.2.2</h1>
+      <content:encoded><![CDATA[<h1> UNO扩展规则5.2.3</h1>
 <p>这是一个高度扩展的<strong>线下桌游</strong>。由于迭代次数较多，具有较高可玩性。我们自制了一套牌进行了不少于 30h 的游玩。</p>
 <table>
 <thead>
@@ -14149,7 +14448,9 @@ cmd 中执行</p>
 <p>我们将 <strong>“当前牌”称为<code>last</code>。</strong> 你当前出牌阶段能打出的牌需要满足：是黑牌 || 与<code>last</code><strong>数字/功能相同</strong> || <strong>颜色相同</strong>。而不论你打出什么牌，都需要满足该牌的打出条件。除<code>改色</code> <code>+4</code>外的所有黑牌打出时不会<strong>直接</strong>改变<code>last</code>。非黑牌打出后将会替换<code>last</code>。</p>
 <p>你需要在你的手牌<text style="color:red;">从多于一张变为只剩一张</text>后喊“UNO!”。若被任意玩家指出没喊则需摸两张。你的手牌在脱离肢体接触时才视为失去。</p>
 <p><strong><text style="color:red;">所有功能牌的功能都可被视为效果。</text></strong></p>
-</a><h2><a class="footnote-anchor" id="footnote-ref2"></a> 效果分类</h2>
+</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 关于 bug</h3>
+<p>当游玩时出现规则未清晰指明的行为，或钻了规则漏洞时，若玩家能提出合理有效理由，则允许此擦边行为；而后与其他玩家讨论是否更改规则。若规则更改后生效，且之前的行动在新规则下不再成立，则此钻空子的玩家此轮游戏积分 -1.（不影响之前的擦边行为）</p>
+<h2> 效果分类</h2>
 <h3> 即时性效果</h3>
 <p>你（或游戏）需要立刻对它作出回应。</p>
 <h3> 持续性效果</h3>
@@ -14175,6 +14476,8 @@ cmd 中执行</p>
 <h3> 眩晕效果</h3>
 
 <h3> 虚弱效果</h3>
+
+<h3> 重置效果</h3>
 
 <h2> 卡牌说明</h2>
 <h3> 禁</h3>
@@ -14246,6 +14549,10 @@ cmd 中执行</p>
 <li><em>天选之子（+全功能牌），迷彩</em> 是无副作用的胜利方法，可以不用喊出 <code>UNO</code> 而出完全部手牌获胜，且不会为自身遗留效果。</li>
 <li>如果你的手牌很好，你最好留个 <em>寡妇</em>。</li>
 <li><em>转移</em> 虽然使用条件严格，但是收益很高，在手牌少的时候尤为如此。同时，<em>转移</em> 对自己不利的牌，是成本很低的不使用而失去牌的手段。</li>
+</ul>
+<h2> 名句</h2>
+<ul>
+<li>开局一张手，好牌全靠偷。</li>
 </ul>
 <hr class="footnotes-sep">
 <section class="footnotes">
