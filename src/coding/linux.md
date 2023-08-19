@@ -9,10 +9,19 @@ tag:
     - Linux
 ---
 # linux
-我使用的是 [ArchWSL](https://github.com/yuk7/ArchWSL) on WSL2。因为游戏原因无法抛弃 windows，但又想学习 Linux（享受丝滑的开发），于是使用折中方案。在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。
+我最早使用 linux 用的是 [ArchWSL](https://github.com/yuk7/ArchWSL) on WSL2，之后正式使用 archlinux。因为游戏原因（galgame & osu stable 地狱兼容）无法抛弃 windows，但又想学习 Linux，于是使用折中方案。在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。VPS 有关问题请移步 [VPS](../articles/vps.md)。
 * 更新 ArchWSL：从[此处](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
-
-VPS 有关问题请移步 [VPS](../articles/vps.md)。
+## 安装
+20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，下面问题区可见一斑。
+* [中文教程](https://arch.icekylin.online/)，讲的确实好。不过还是建议 archwiki 也一起看看，取长补短。
+### 添加 windows 引导
+安装后我肯定是都使用 grub 作为引导，但是我双系统分别在两块不同硬盘上，无法使用 *os-prober* 自动共存。因此我使用如下方法进行自动检测并添加：
+```sh
+mkdir /mnt/windows
+mount /dev/<windows efi> /mnt/windows
+grub-mkconfig -o /boot/grub/grub.cfg
+umount /mnt/windows
+```
 ## 外部包
 * 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
 * 我计划装的包：Joshuto
@@ -190,5 +199,19 @@ sudo updatedb   # 更新缓存，使用前执行
 sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。
+### 分区格式化
+使用 `cfdisk` 分好区，需要分别为每个分区进行格式化。然而我使用 nvme 盘而看的 sata 指令，对硬盘格式化而非对分区进行格式化（`mkfs.vfat /dev/nvme1n1`），报错：
+> Partitions or virtual mapping on device, not making file system. (use -I to override)
+
+然后尝试了 `-I`，结果分区全没了；对着 `nvme1n1` `mkswap`，分区又炸了。最后才发现不能对硬盘操作。。
+### 挂载出错
+非常低级的错误。。挂载时打错了指令，导致不同的分区被挂载到了同一个位置。不过检查得早，没有继续下一步就发现了问题。
+
+然后重新挂载，后来到 *生成 fstab 文件* 的时候又出了问题：`genfstab -U /mnt > /mnt/etc/fstab` 输出了一大堆东西，我读了一下，原来把我挂载时做的所有操作都记录进去了，包括错误的部分。于是手动删除了冗余，不清楚后续是否会出问题。
+### NetworkManager warning
+设置自启服务 `systemctl enable --now NetworkManager` 时报错：
+> ... iwlwifi ... WRT: invalid buffer destination
+
+不过后面 `systemctl status NetworkManager` 发现服务已经启动了，也就没管了（所以问题还是没解决的。
 ## external
 1. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)

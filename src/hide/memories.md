@@ -9,6 +9,7 @@ category:
 ## 大学
 ### 大二下暑假
 读书和开发时间消耗较多，galgame 与 osu 时长不足。
+* **成为了真正的 Archlinux User!**
 * 成功让世界遗忘我的生日[^2]
 * use xmake and update(ing) my Qt project to 6.6.0.
 * 开发 koishi 插件

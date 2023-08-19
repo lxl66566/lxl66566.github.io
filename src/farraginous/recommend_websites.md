@@ -26,6 +26,14 @@ tag:
 * [eu.org 免费域名](https://nic.eu.org/)
 * [TLD-LIST](https://zh-hans.tld-list.com/)：比较所有顶级域名的价格
 * [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
+## 网盘
+|名称|空间|限速|时间|单文件大小|备注|
+| :-: | :-: | :-: | :-: | :-: | :-: |
+|[蓝奏云](https://www.lanzou.com/)|不限|不限|不限|100MB|中国境内的较好选择；有审查，力度小；限制文件后缀|
+|[Catbox](https://catbox.moe/)|未知|未知|不限|200MB|特殊限制|
+|[GoFile](https://gofile.io/welcome)|不限|不限|未知|不限|-|
+|[ufile](https://ufile.io/)|10GB|1MB/s|不限|5GB|-|
+
 ## AI 工具
 ### LLM
 建议先看看别人做的合集：[awesome-free-chatgpt - github](https://github.com/LiLittleCat/awesome-free-chatgpt)
