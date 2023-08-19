@@ -213,5 +213,9 @@ Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还
 > ... iwlwifi ... WRT: invalid buffer destination
 
 不过后面 `systemctl status NetworkManager` 发现服务已经启动了，也就没管了（所以问题还是没解决的。
+### yay 安装问题
+使用 `sudo pacman -S yay` 时一直报错，`signature is unknown trust` 类似的。怀疑是 pacman-keyring 问题，去前面 [更新 pacman-keyring](#更新-pacman-keyring) 试了好久，都不行。
+
+后面看教程，发现需要先安装 cn 源中的签名：`sudo pacman -S archlinuxcn-keyring`，然后才能正常使用。。
 ## external
 1. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
