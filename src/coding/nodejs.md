@@ -29,7 +29,7 @@ npm uninstall <package_name> [option] # 卸载包及其依赖
 ```
 * [镜像](https://www.runoob.com/w3cnote/npm-switch-repo.html)
 ### 其他命令
-* 如果需要重装所有 `node_modules`，可在 bash 中：`rm -rf node_modules && rm package-lock.json && npm cache clear --force`
+* 如果需要重装所有 `node_modules`，可在 bash 中：`rm -rf node_modules && npm cache clear --force`
 * 更新依赖([ref](https://juejin.cn/post/6844903827599015944))：
     ```sh
     npm i -g npm-check

@@ -97,7 +97,7 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 ## 搭建代理
 有谁买了海外 VPS 不是为了搭代理的呢？
 ### 协议
-网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。
+网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 伪装 HTTPS 加密方案，安全性高，但是数据包比较大，有被主动封禁的可能。
 
 我比较菜，直接用 [trojan 一键脚本](https://github.com/Jrohy/trojan)了。（本来是想用 X-UI 的，然而[出了问题](#x-ui-does-not-work)）
 
@@ -118,6 +118,18 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
     ```
 ### 连通性测试
 [ping.pe](https://ping.pe/#)
+## 系统管理
+1. 使用 `lsof`（推荐）/ `ps aux` 配合 `grep` 查找进程。
+2. 使用 `top` / `htop`（推荐）查看内存，CPU 占用等。
+### 清理僵尸进程
+如果你看到许多 `[journalctl] <defunct>` 标识，这代表有未结束的僵尸子进程。可以[参考此处](https://www.linkedin.com/pulse/how-identify-kill-zombiedefunct-processes-linux-without-george-gabra)清理他们。
+```sh
+top -b1 -n1 | grep Z    # find
+ps -A -ostat,ppid | grep -e '[zZ]'| awk '{ print $2 }' | uniq | xargs ps -p # Find the parent of zombie processes, remenber ppid
+kill -s SIGCHLD <ppid>
+top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
+# if haven't been killed, just kill <ppid>
+```
 ## 包
 已安装：psmisc, nvim, firewalld, curl, fd, net-tools, nginx, fish, 
 ### nginx
@@ -146,8 +158,9 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
 * 重新载入：`nginx -s reload`
 ## 遇到的问题
 ### 端口被封问题
-20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口并显示在伪装页面上（还作出了[其他努力](#对抗-gfw)）。脚本还是有 bug 的（我菜），`$temp` 赋值不成功，但无伤大雅。
-```bash
+20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口~~并显示在伪装页面上~~映射到 12138（还作出了[其他努力](#对抗-gfw)）。脚本还是有 bug 的（我菜），`$temp` 赋值不成功，但无伤大雅。
+```sh
+# fish function
 function new_trojan_port --description 'change to a new trojan port'
     firewall-cmd --remove-forward-port=port=12138:proto=tcp:toport=$trojan_port --permanent
     firewall-cmd --remove-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
@@ -160,12 +173,12 @@ function new_trojan_port --description 'change to a new trojan port'
     # update blog and show port
     cd /etc/nginx/lxl66566.github.io
     git pull origin main
-    sed -i "s/MyGitHub/$trojan_port/g" index.html
+    # sed -i "s/MyGitHub/$trojan_port/g" index.html
     nginx -s reload
 end
 ```
 不应同时使用 firewalld 和 iptables，可能会导致混乱。由于 `firewalld` 是更高一层的抽象(?)，因此我使用之：
-```bash
+```sh
 systemctl stop iptables
 systemctl disable iptables
 systemctl mask iptables

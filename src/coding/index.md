@@ -34,7 +34,7 @@ tag:
 1. [Github](./github.md)：如何进行最基本的使用
 2. [Git](./Git.md)：版本控制系统
 3. [node.js](./nodejs.md)：js 运行时
-3. [Linux](./linux.md)：操作系统
+3. [(Arch)linux](./linux.md)：操作系统
 4. [Vim](./vim.md)：文件编辑器
 5. [数据库](./sql.md)：SQL
 ### 网站
