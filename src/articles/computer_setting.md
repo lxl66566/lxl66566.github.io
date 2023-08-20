@@ -117,6 +117,7 @@ tag:
     * 在 `about:support` 中，点击 *配置文件夹 -> 打开文件夹*（*Profile Folder -> Open Folder*），在此目录下新建名为 `chrome` 的文件夹，在新文件夹下新建 `userChrome.css`，写入[此处代码](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css)。
 > 注：在地址栏输入上述 *about:\** 即可打开对应界面。
 6. 解决跨源错误：在 `about:config` 中，将 security.fileuri.strict_origin_policy 设为 false。
+7. `adons.mozilla.org` 对中国用户屏蔽了广告拦截扩展，因此我使用一个第三方的[扩展商店](https://www.crxsoso.com/firefox/category/extensions) 进行安装。
 ## windows 下的权限控制
 起因：MS-DOS 自带的 `tree` 命令太难用了（不包含文件）。我需要把它替换为 [tree for windows](https://gnuwin32.sourceforge.net/packages/tree.htm)。windows 的权限管理太“安全”了，很烦。
 1. （本节无关）下载并将 `tree.exe` 单文件放入 `C:\WINDOWS\System32`

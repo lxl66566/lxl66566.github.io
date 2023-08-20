@@ -51,6 +51,7 @@ git 在 windows 下的安装也算是一门学问。一共十几个步骤选项�
     git config --global core.quotepath false    # 取消中文转义，需要终端支持 utf-8
     git config --global --add safe.directory '*'    # 取消目录安全警告
     git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见页面底 external 1.
+    git config --global init.defaultBranch main     # 更改默认分支为 main（linux 默认还是 master）
     ```
 4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用插件 `Git Graph` 以直观地查看 git 提交树与更改。
 [^6]: 需要使用 [Vim](./vim.md)。若不想用，请自行搜索 `git bash 更改默认编辑器`

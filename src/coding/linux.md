@@ -23,7 +23,9 @@ grub-mkconfig -o /boot/grub/grub.cfg
 umount /mnt/windows
 ```
 ## 外部包
-* 我安装的包：cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
+* 我安装的包：
+    * archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
+    * archlinux: htop, exfat-utils
 * 我计划装的包：Joshuto
 ## Terminal 基础
 `<C-a>` 代表 `Ctrl + a`.
@@ -49,8 +51,18 @@ umount /mnt/windows
     ```
     :::
 * 遇到的问题：[更新 pacman keyring](#更新-pacman-keyring)
-## 使用 windows 代理
-懒得在 wsl 里重复下载，直接使用 windows 代理。[ref](https://zhuanlan.zhihu.com/p/153124468)
+## 设置代理
+### v2raya
+v2raya 的质量其实一般，速度比我的 windows 代理用的 Xray 内核差。但是目前还不想直接写内核配置文件，qv2ray 又停止维护，所以没得选。
+```sh
+sudo pacman -S v2raya
+v2raya --lite
+# fishshell
+set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理无效
+```
+之后的操作都在网页上进行。使用系统代理端口为 `http://127.0.0.1:20172`，这个端口带自动分流。
+### 使用 windows 代理
+我在 archwsl 中懒得重复下载，直接使用 windows 代理。[ref](https://zhuanlan.zhihu.com/p/153124468)
 
 后来直接写了 [fish 脚本](https://github.com/lxl66566/config/blob/archwsl/.config/fish/functions/proxy_con.fish)，自用方便。
 ::: code-tabs
@@ -67,6 +79,9 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 ```
 :::
 代理软件需要开启局域网连接。测试时不要使用 `ping` 指令（其不走代理），用 `curl`。
+## kde
+我使用 kde 作为为的桌面（看起来就很现代，很符合我的想象）。
+1. enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在*系统设置 - 添加快捷键 - 火焰截图*，然后手动设置快捷键。
 ## 系统管理
 1. 一般使用 `ps aux` 配合 `grep` 查找进程。
 2. 使用 `top` 查看内存，CPU 占用等。
@@ -80,6 +95,7 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 # if haven't been killed, just kill <ppid>
 ```
 ## bash
+若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。所以最好装好系统就先装 shell.
 使用：
 <details><summary>use zsh or fishshell, not bash</summary>
 
@@ -217,5 +233,24 @@ Windows 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还
 使用 `sudo pacman -S yay` 时一直报错，`signature is unknown trust` 类似的。怀疑是 pacman-keyring 问题，去前面 [更新 pacman-keyring](#更新-pacman-keyring) 试了好久，都不行。
 
 后面看教程，发现需要先安装 cn 源中的签名：`sudo pacman -S archlinuxcn-keyring`，然后才能正常使用。。
+## 复制时出现问题
+根据[教程](https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#安装-windows-字体)复制 windows 字体，打错大小写就先不说了，纠正以后提示：
+> cp: 对 './yuminl.ttf' 调用 stat 失败: 没有那个文件或目录
+
+未解决。
+## umount failed
+`sudo umount /mnt/windows`，提示
+> /mnt/windows: 目标忙
+
+估计有莫名奇妙的软件在占用。我直接 `lsof /mnt/windows` 查占用，然后再 `kill -9 <PID>` 强关。
+## yay 换源问题
+刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：`yay --aururl "https://..." --save`），发现用不了后换成了中科大源，结果报错：
+> -> 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br/>
+>       * response decoding failed: invalid character '<' looking for beginning of value
+
+并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU[^2].
+[^2]: 参考[刷机](../article/mobile_setting#mipad-5)
+
+之后发现，在 `~/.config/yay/config.json` 中有一个 `aurrpcurl` 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 `yay --aururl "https://aur.archlinux.org" --save`，问题得解。如果一次不行就两次，一定能解(?)。
 ## external
 1. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
