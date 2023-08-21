@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 20 Aug 2023 15:07:39 GMT</pubDate>
-    <lastBuildDate>Sun, 20 Aug 2023 15:07:39 GMT</lastBuildDate>
+    <pubDate>Mon, 21 Aug 2023 18:33:44 GMT</pubDate>
+    <lastBuildDate>Mon, 21 Aug 2023 18:33:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -254,6 +254,7 @@ npm ERR! This command does not support workspaces.</p>
 <ol>
 <li><a href="https://blog.zxh.io/post/2022/01/29/travel-to-boston/" target="_blank" rel="noopener noreferrer">波士顿漫游指南</a></li>
 <li><a href="https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso" target="_blank" rel="noopener noreferrer">日本移居指南</a> | <a href="https://ctreaderbot.vercel.app/a/D05AAicCD7-5pMw.html" target="_blank" rel="noopener noreferrer">bak</a></li>
+<li><a href="https://www.zhihu.com/question/549539904/answer/2836937246" target="_blank" rel="noopener noreferrer">为什么我觉得北京没有大家说的那么繁华？</a> | <a href="https://telegra.ph/%E5%8C%97%E4%BA%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%B2%A1%E6%9C%89%E5%A4%A7%E5%AE%B6%E8%AF%B4%E7%9A%84%E9%82%A3%E4%B9%88%E7%B9%81%E5%8D%8E-08-14-6" target="_blank" rel="noopener noreferrer">bak</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3699,6 +3700,12 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p></p></details>
 <h2> 遇到的问题</h2>
 <p><strong>按时间倒序</strong>。</p>
+<h2> 修复ubuntu</h2>
+<p>在别人的电脑上<s>乱搞</s>，装了 intel 核显驱动然后没有重启就 <code>sudo apt install vim</code>（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 <code>sudo reboot</code>，再次开机就内核加载失败了。。</p>
+<p>（待续）</p>
+<h2> 中文设置问题</h2>
+<p>在语言中设置了中文，重启后 kde 有部分 ui 变为英文。</p>
+<p>原因：更改 <code>/etc/locale.gen</code> 后没有运行 <code>sudo locale-gen</code>。运行即可。</p>
 <h2> yay 换源问题</h2>
 <p>刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：<code>yay --aururl "https://..." --save</code>），发现用不了后换成了中科大源，结果报错：</p>
 <blockquote>
