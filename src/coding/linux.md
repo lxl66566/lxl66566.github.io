@@ -218,6 +218,14 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 ## 遇到的问题
 **按时间倒序**。
+## 修复ubuntu
+在别人的电脑上~~乱搞~~，装了 intel 核显驱动然后没有重启就 `sudo apt install vim`（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 `sudo reboot`，再次开机就内核加载失败了。。
+
+（待续）
+## 中文设置问题
+在语言中设置了中文，重启后 kde 有部分 ui 变为英文。
+
+原因：更改 `/etc/locale.gen` 后没有运行 `sudo locale-gen`。运行即可。 
 ## yay 换源问题
 刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：`yay --aururl "https://..." --save`），发现用不了后换成了中科大源，结果报错：
 > -> 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br/>
