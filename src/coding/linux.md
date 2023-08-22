@@ -74,6 +74,8 @@ v2raya --lite
 set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理无效
 ```
 之后的操作都在网页上进行。使用系统代理端口为 `http://127.0.0.1:20172`，这个端口带自动分流。
+
+如果需要后台运行，开机自启，可以参考[文档](https://v2raya.org/docs/advanced-application/noroot/)：`systemctl --user enable --now v2raya-lite.service`
 ### 使用 windows 代理
 archwsl 内容
 :::: details 点击展开
@@ -175,7 +177,7 @@ alias l="ls -alF --color=auto"
     * 删除函数 / 变量：`-e` == `--erase`
     * fish 皆为函数，alias 也是函数
 ### neovim
-参考 [从零开始配置 Neovim (Nvim) - MartinLwx](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)
+前往 [vim](./vim.md)
 ### [locate](https://man7.org/linux/man-pages/man1/locate.1.html)
 快速搜索。
 ```bash:no-line-numbers
@@ -221,7 +223,9 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 ## 修复ubuntu
 在别人的电脑上~~乱搞~~，装了 intel 核显驱动然后没有重启就 `sudo apt install vim`（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 `sudo reboot`，再次开机就内核加载失败了。。
 
-（待续）
+然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，`iwconfig` or `ls /sys/class/net` 只显示 `lo`，也就是说找不到网卡了。。那没网我能干啥，~~vi 进去修吗？~~
+
+还好没啥重要数据。授权后重装了 kubuntu。至少能改亮度了。
 ## 中文设置问题
 在语言中设置了中文，重启后 kde 有部分 ui 变为英文。
 

@@ -11,7 +11,10 @@ tag:
 我曾在约一年前强迫自己使用 vim 作为代码编辑器，并进行相关学习。但是 vscode vim 给了我极其惨痛的教训：混用 Ctrl + Z 和 u(undo) 打乱了我的代码，我只能从 git 中恢复，浪费了数小时的时间。因此弃用。
 
 此次重新启用，也大概是我的心血来潮吧。
-## 设置
+
+开始使用 archlinux 后，我使用 nvim 作为我的默认编辑器。这下也不得不设置了。
+## 设置(vscode)
+::: details 在 archlinux 上我已经不再使用 vscode
 此处是我对 vim for vscode 的一些设置。在 `C:/Users/<user name>/AppData/Roaming/Code/User/settings.json` 添加即可。路径可在扩展设置中打开。
 ```json
 "vim.useSystemClipboard": true,
@@ -38,6 +41,46 @@ tag:
     { "before": ["x"], "after": ["\"","_","x",] },
     { "before": ["X"], "after": ["\"","_","X",] },
 ],
+```
+:::
+## 设置(neovim)
+首先基础设置我是照着[从零开始配置 Neovim(Nvim)](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)来的。这篇文章确实不错。
+
+然后进入到了自定义环节：
+### 基础设置
+* nvim 不支持 alt 和 TAB 快捷键绑定。。（骂人） 切窗口的快捷键还得再自定义。
+* `vim.opt.wrap = true` 这行是一定要开的，可以让过长的行到行尾自动换行。（[ref](https://neovim.io/doc/user/options.html#'wrap')）
+### 侧边栏
+俗话说 neovim 人都在为了逼近 vscode 而努力（来源请求），我需要的侧边栏也不例外。vscode 的“打开文件夹”功能好用，我需要使用。在尝试了多个插件（opener.nvim, Telescope, NerdTree）后，最终我使用的插件是[Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)。这个插件专为 neovim 设计，并且快捷键更加简单易懂<span class="heimu" title="你知道的太多了">NerdTree 是什么妖魔鬼怪</span>。
+
+1. 在 `lua/plugin.lua` 中添加：
+```lua
+use {
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v3.x",
+  requires = { 
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+    "MunifTanjim/nui.nvim",
+  }
+}
+
+```
+2. 快捷键（lua/keymaps.lua）：
+```lua
+vim.keymap.set('n', '<C-o>', ':Neotree<CR>', opts)
+```
+3. 其他设置（init.lua）：
+```lua
+require('neo-tree').setup {
+  filesystem = {
+    filtered_items = {
+      visible = true,  
+      hide_dotfiles = false,
+      hide_gitignored = true,
+    },
+  }
+}
 ```
 ## 常用组合键
 * `A` = `$a`, `I` = `0i`
