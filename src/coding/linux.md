@@ -38,7 +38,7 @@ umount /mnt/windows
 |`<C-w>`|删除前一个单词|
 |`<C-u>`|清空当前输入|
 ## 外部包
-* 我安装的包：
+* 我安装的包（少部分）：
     * archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
     * archlinux: htop, exfat-utils
 * 我计划装的包：Joshuto
@@ -97,9 +97,15 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 :::
 ::::
 代理软件需要开启局域网连接。测试时不要使用 `ping` 指令（其不走代理），用 `curl`。
-## kde
-我使用 kde 作为为的桌面（看起来就很现代，很符合我的想象）。
+## kde 及其配套设施
+我使用 kde 作为我的桌面（kde 爆杀 gnome!）。
 1. enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在*系统设置 - 添加快捷键 - 火焰截图*，然后手动设置快捷键。
+2. *输入设备*，将键盘的按键延迟改短。
+3. *外观*，黑色主题
+4. *开关机 - 桌面会话*，选择启动为空会话
+5. *快捷键*，添加应用程序 *konsole*，设置唤醒快捷键
+6. 关闭通知声音
+7. 输入法，语言设置，缩放率等基础的就不要我讲了。kde 对分数缩放做的不算太差，只是有的图标有点糊而已。
 ## bash
 若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。所以最好装好系统就先装 shell.
 使用：
@@ -220,12 +226,24 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 ## 遇到的问题
 **按时间倒序**。
-## 修复ubuntu
+## 输入法不显示
+在[安装了 kubuntu](#修复-重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
+
+解法是 `sudo apt install $(check-language-support)`。然后注销，再 login 就有输入法了。
+## 日文输入法
+需要安装日文输入法，去 archwiki 日语页面看，选择了 `mozc`。然后我就直接 `yay -S mozc` 了，，装是装了，然而没法使用。。
+
+后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是`fcitx5-mozc-ut`）。然后就没啥问题了。
+> ~~吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了AUR 的不便。~~
+
+## 修复（重装）ubuntu
 在别人的电脑上~~乱搞~~，装了 intel 核显驱动然后没有重启就 `sudo apt install vim`（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 `sudo reboot`，再次开机就内核加载失败了。。
 
 然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，`iwconfig` or `ls /sys/class/net` 只显示 `lo`，也就是说找不到网卡了。。那没网我能干啥，~~vi 进去修吗？~~
 
-还好没啥重要数据。授权后重装了 kubuntu。至少能改亮度了。
+还好没啥重要数据。授权后重装了 kubuntu。然后发现 kde 爆杀 gnome（二嘲）。
+
+有一说一，我不喜欢 ubuntu 这样臃肿的系统。~~[其他观点](https://t.me/archlinuxcn_group/2896194)，看上下文~~ 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。
 ## 中文设置问题
 在语言中设置了中文，重启后 kde 有部分 ui 变为英文。
 
