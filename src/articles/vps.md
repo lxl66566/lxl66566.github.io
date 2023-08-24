@@ -32,12 +32,14 @@ also see here:
 10G storage 打消了我自建 java server 的欲望，同时美国西海岸 VPS 的地理位置也使节点真连接延迟常年维持在 700+ms，并不适合作为游戏服务器。
 
 白嫖的小鸡只有 64M RAM，只能装 alpine.
-## SSH 工具
+## SSH
 youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。
 
-先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 `sudo pacman -S openssl` 了（
+先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 `sudo pacman -S openssl` 了（。后来转 linux 后就没 ssh 这烦恼了。
 
 用法：`ssh root@ip [-p port]`
+### 添加公钥
+由于 vps 暴露在公网，因此需要复杂的密码，但是我肯定不想每次登录都需要输那么一长串的密码。因此需要将公钥添加到 vps。在本机上 `cat ~/.ssh/id_rsa.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内就好了。每行一个公钥。
 ## 安全性
 VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 ### 自检

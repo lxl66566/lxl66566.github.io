@@ -16,7 +16,24 @@ tag:
 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。
 > 你可以直接[阅读`总结`](#总结)。
 ## 使用指南
-本文默认使用 Windows 系统。
+archlinux 下的 ramdisk 非常简单，只需
+:::code-tabs
+@tab 临时
+```sh
+mkdir -p /mnt/tmp
+sudo mount -t ramfs -o size=10g ramfs /mnt/tmp
+sudo chmod -R 777 /mnt/tmp
+# 注意，ramfs 可以写入大于设定量的值，可能会造成系统不稳定。
+```
+@tab 自动
+```
+# edit /etc/fstab, add the following line
+tmpfs   /tmp    tmpfs  rw,size=10G,noexec,nodev,nosuid,noatime,mode=1777 0 0
+```
+:::
+即可。
+
+因此后文介绍的皆为 Windows 系统上的 ramdisk。
 1. 在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span>
 2. 安装 RAM Disk 软件并挂载。
 3. 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）
