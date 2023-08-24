@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 23 Aug 2023 10:05:07 GMT</pubDate>
-    <lastBuildDate>Wed, 23 Aug 2023 10:05:07 GMT</lastBuildDate>
+    <pubDate>Thu, 24 Aug 2023 15:46:39 GMT</pubDate>
+    <lastBuildDate>Thu, 24 Aug 2023 15:46:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -41,7 +41,10 @@
 <p>你可以直接<a href="#%E6%80%BB%E7%BB%93">阅读<code>总结</code></a>。</p>
 </blockquote>
 <h2> 使用指南</h2>
-<p>本文默认使用 Windows 系统。</p>
+<p>archlinux 下的 ramdisk 非常简单，只需</p>
+
+<p>即可。</p>
+<p>因此后文介绍的皆为 Windows 系统上的 ramdisk。</p>
 <ol>
 <li>在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span></li>
 <li>安装 RAM Disk 软件并挂载。</li>
@@ -340,6 +343,8 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20230824</h3>
+<p>不带处理器和存储器提问简直太致命了。。以后问就是中立派折中说。</p>
 <h3> 20230817</h3>
 <p>苍蝇捕捉器：装过生鱼的袋子。</p>
 <h3> 20230814</h3>
@@ -2374,10 +2379,12 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <p>我本来想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款。（无语子）。因此只能退而求其次买了 RackNerd 家的，装了 Debian 10.</p>
 <p>10G storage 打消了我自建 java server 的欲望，同时美国西海岸 VPS 的地理位置也使节点真连接延迟常年维持在 700+ms，并不适合作为游戏服务器。</p>
 <p>白嫖的小鸡只有 64M RAM，只能装 alpine.</p>
-<h2> SSH 工具</h2>
+<h2> SSH</h2>
 <p>youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。</p>
-<p>先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 <code>sudo pacman -S openssl</code> 了（</p>
+<p>先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 <code>sudo pacman -S openssl</code> 了（。后来转 linux 后就没 ssh 这烦恼了。</p>
 <p>用法：<code>ssh root@ip [-p port]</code></p>
+<h3> 添加公钥</h3>
+<p>由于 vps 暴露在公网，因此需要复杂的密码，但是我肯定不想每次登录都需要输那么一长串的密码。因此需要将公钥添加到 vps。在本机上 <code>cat ~/.ssh/id_rsa.pub</code> 并复制，再粘贴到 vps 的 <code>~/.ssh/authorized_keys</code> 内就好了。每行一个公钥。</p>
 <h2> 安全性</h2>
 <p>VPS 的公网 ip 一定会带来安全性问题。不容忽视。</p>
 <h3> 自检</h3>
@@ -3611,12 +3618,18 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 </li>
 </ul>
-<h2> 设置代理</h2>
-<h3> v2raya</h3>
+<h2> 设置</h2>
+<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux。</p>
+<ol>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5</li>
+<li>设置<a href="/articles/ramdisk.html" target="blank">默认挂载 tmpfs</a></li>
+</ol>
+<h3> 设置代理</h3>
+<h4> v2raya</h4>
 <p>v2raya 的质量其实一般，速度比我的 windows V2rayN 用的 <a href="https://xtls.github.io/" target="_blank" rel="noopener noreferrer">Xray 内核</a>差。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后的操作都在网页上进行。使用系统代理端口为 <code>http://127.0.0.1:20172</code>，这个端口带自动分流。</p>
 <p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" target="_blank" rel="noopener noreferrer">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code></p>
-<h3> 使用 windows 代理</h3>
+<h4> 使用 windows 代理</h4>
 <p>archwsl 内容</p>
 <details class="hint-container details"><summary>点击展开</summary>
 <p>我在 archwsl 中懒得重复下载，直接使用 windows 代理。<a href="https://zhuanlan.zhihu.com/p/153124468" target="_blank" rel="noopener noreferrer">ref</a></p>
@@ -3624,7 +3637,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 
 </details>
 <p>代理软件需要开启局域网连接。测试时不要使用 <code>ping</code> 指令（其不走代理），用 <code>curl</code>。</p>
-<h2> kde 及其配套设施</h2>
+<h3> kde 及其配套设施</h3>
 <p>我使用 kde 作为我的桌面（kde 爆杀 gnome!）。</p>
 <ol>
 <li>enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在<em>系统设置 - 添加快捷键 - 火焰截图</em>，然后手动设置快捷键。</li>
@@ -9285,6 +9298,10 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:center">魔装学园H×H</td>
+<td style="text-align:center">2023.08.23-<br>未完</td>
+</tr>
 <tr>
 <td style="text-align:center">天元突破红莲螺岩</td>
 <td style="text-align:center">2023.04.16-<br>第 4 集</td>
