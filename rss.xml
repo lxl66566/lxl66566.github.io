@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 24 Aug 2023 15:46:39 GMT</pubDate>
-    <lastBuildDate>Thu, 24 Aug 2023 15:46:39 GMT</lastBuildDate>
+    <pubDate>Fri, 25 Aug 2023 16:58:20 GMT</pubDate>
+    <lastBuildDate>Fri, 25 Aug 2023 16:58:20 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -892,7 +892,7 @@ npm ERR! This command does not support workspaces.</p>
 </ol>
 <h2> 经历</h2>
 <ol>
-<li><a href="/articles/computer_setting.html" target="blank">设置电脑（windows）</a>（Linux 请前往<a href="/coding/linux.html" target="blank">(Arch)Linux</a>）</li>
+<li><a href="/articles/computer_setting.html" target="blank">设置电脑（windows）</a>（Archlinux 设置请前往<a href="/coding/linux.html#%E8%AE%BE%E7%BD%AE" target="blank">Linux</a>）</li>
 <li><a href="/articles/mobile_setting.html" target="blank">设置手机（Android）</a></li>
 <li><a href="/articles/vps.html" target="blank">设置 VPS</a></li>
 </ol>
@@ -913,7 +913,8 @@ npm ERR! This command does not support workspaces.</p>
 <li><a href="/articles/input_method.html" target="blank">输入法</a></li>
 <li><a href="/articles/ramdisk.html" target="blank">RAM Disk 横评</a></li>
 </ol>
-<!-- 7. [Potplayer 设置](./potplayer_setting.md) -->]]></content:encoded>
+<!-- 7. [Potplayer 设置](./potplayer_setting.md) -->
+]]></content:encoded>
     </item>
     <item>
       <title>输入法</title>
@@ -3563,6 +3564,9 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <h3> 添加 windows 引导</h3>
 <p>由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 <em>os-prober</em> 自动共存。因此我使用如下方法进行自动检测并添加：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 基础</h2>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/495554731" target="_blank" rel="noopener noreferrer">Linux ls -al 得到的结果代表什么意思？</a></li>
+</ol>
 <h3> <a href="https://linuxhandbook.com/linux-shortcuts/" target="_blank" rel="noopener noreferrer">Terminal shortcuts</a></h3>
 <p><code>&lt;C-a&gt;</code> 代表 <code>Ctrl + a</code>.</p>
 <table>
@@ -3592,21 +3596,29 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li>我安装的包（少部分）：
 <ul>
 <li>archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat</li>
-<li>archlinux: htop, exfat-utils</li>
+<li>archlinux: 与 archwsl 相同，htop, exfat-utils, <a href="https://github.com/ajeetdsouza/zoxide" target="_blank" rel="noopener noreferrer">zoxide</a>, ncdu, newsboat, namcap, activitywatch-bin</li>
 </ul>
 </li>
-<li>我计划装的包：Joshuto</li>
+<li>我计划装的包：Joshuto, gparted</li>
 </ul>
-<h2> pacman &amp; yay</h2>
+<h2> pacman &amp; AUR Helper</h2>
 <ul>
-<li>请定期 <code>sudo pacman -Syy</code> 更新本地缓存（update），否则可能找不到包。（<s>今日也无事可做</s>）</li>
+<li>请定期 <code>sudo pacman -Syy</code> 更新本地缓存（update），否则可能找不到包。（<s>今日也无事可做</s>）
+<ul>
+<li>也可以直接 <code>yay</code> 或 <code>paru</code> 进行更新</li>
+</ul>
+</li>
 <li>每次修改镜像之后都应该使用 <code>sudo pacman -Syyu</code> 强制更新缓存 (<a href="https://wiki.archlinuxcn.org/wiki/%E9%95%9C%E5%83%8F%E6%BA%90#%E5%BC%BA%E5%88%B6_pacman_%E5%88%B7%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8" target="_blank" rel="noopener noreferrer">ref</a>)。</li>
-<li><code>pacman -Ss &lt;name&gt;</code> 是搜索包，支持正则</li>
 <li>yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
 <ul>
-<li>yay 用来下载 AUR 的包（也可以下载官方包），社区维护，质量更差，更容易过期，常出现安装报错的情况。</li>
+<li>yay 用来下载 AUR 的包（也可以下载官方包），社区维护，不够稳定容易过期，可能需要代理。</li>
 <li>如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman (<a href="https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63" target="_blank" rel="noopener noreferrer">ref</a>)</li>
 <li>yay 使用系统代理，需要导出 <code>ALL_PROXY</code> 环境变量。否则会出现 Github 源的包无法安装的情况。</li>
+</ul>
+</li>
+<li>另一个广泛使用的 AUR Helper 是 <em>paru</em>，使用 rust 编写。
+<ul>
+<li>安装时默认展示 PKGBUILD。</li>
 </ul>
 </li>
 <li>pacman 更换镜像
@@ -3619,10 +3631,33 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </li>
 </ul>
 <h2> 设置</h2>
-<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux。</p>
+<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
 <ol>
+<li>基础 alias</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol>
 <li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5</li>
-<li>设置<a href="/articles/ramdisk.html" target="blank">默认挂载 tmpfs</a></li>
+<li>设置 <code>/etc/fstab</code>
+<ul>
+<li><a href="/articles/ramdisk.html" target="blank">挂载 tmpfs</a></li>
+<li>添加 <code>noatime</code> 标识，即不带访问时间 | <a href="https://t.me/archlinuxcn_group/2900548" target="_blank" rel="noopener noreferrer">ref: archlinuxcn_group</a></li>
+</ul>
+</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Wayland#Electron" target="_blank" rel="noopener noreferrer">electron 支持</a></li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#SDDM" target="_blank" rel="noopener noreferrer">激活启动时 numlock</a></li>
+<li>设置 pacman：
+<ul>
+<li>将某些不常用的备用包加入 IgnorePkg，例如 <em>chromium</em> | <a href="https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/" target="_blank" rel="noopener noreferrer">ref</a></li>
+<li>更改缓存至 ramdisk （<code>CacheDir</code>）</li>
+</ul>
+</li>
+<li>设置 yay：
+<ul>
+<li>更改缓存至 ramdisk: <code>yay --builddir /tmp/yay --save</code></li>
+<li><em>很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。</em></li>
+</ul>
+</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
 </ol>
 <h3> 设置代理</h3>
 <h4> v2raya</h4>
@@ -3646,7 +3681,9 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><em>开关机 - 桌面会话</em>，选择启动为空会话</li>
 <li><em>快捷键</em>，添加应用程序 <em>konsole</em>，设置唤醒快捷键</li>
 <li>关闭通知声音</li>
-<li>输入法，语言设置，缩放率等基础的就不要我讲了。kde 对分数缩放做的不算太差，只是有的图标有点糊而已。</li>
+<li>输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。</li>
+<li>自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，<s>因为可以通过风扇声判断</s></span> 还有时间格式，无用图标的自定义。</li>
+<li><em>工作区行为 - 锁屏</em>，改锁屏时间。</li>
 </ol>
 <h2> bash</h2>
 <p>若使用 <code>chsh</code> 切换了其他的 shell，则 <code>.bashrc</code> &amp; <code>.bash_profile</code> 将失效。所以最好装好系统就先装 shell.
@@ -3692,9 +3729,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>前往 <a href="/coding/vim.html" target="blank">vim</a></p>
 <h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
 <p>快速搜索。</p>
-<div class="language-bash" data-ext="sh"></div><h3> tldr</h3>
-<p>人类可读的 man 替代品。</p>
-<h3> <a href="https://www.jianshu.com/p/a3aa6b01b2e1" target="_blank" rel="noopener noreferrer">lsof</a></h3>
+<div class="language-bash" data-ext="sh"></div><h3> <a href="https://www.jianshu.com/p/a3aa6b01b2e1" target="_blank" rel="noopener noreferrer">lsof</a></h3>
+<p>umount 的时候用来查占用很好用。</p>
 <h3> tmux</h3>
 <blockquote>
 <p>tmux 在不使用图形界面或有恢复 shell 需求时比较好用。</p>
@@ -3718,26 +3754,33 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
 </ul>
 <p></p></details>
-<h2> 遇到的问题</h2>
-<p><strong>按时间倒序</strong>。</p>
-<h2> 输入法不显示</h2>
-<p>在<a href="#%E4%BF%AE%E5%A4%8D-%E9%87%8D%E8%A3%85-ubuntu">安装了 kubuntu</a> 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。</p>
+## trick
+可能不是最简，欢迎指正
+### 删除所有目录，排除文件
+众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 `rm *`。若我要反过来，只删除目录而排除文件呢？
+```sh
+find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
+```
+## 遇到的问题
+**按时间倒序**。
+### 输入法不显示
+在[安装了 kubuntu](#修复-重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
 <p>解法是 <code>sudo apt install $(check-language-support)</code>。然后注销，再 login 就有输入法了。</p>
-<h2> 日文输入法</h2>
+<h3> 日文输入法</h3>
 <p>需要安装日文输入法，去 archwiki 日语页面看，选择了 <code>mozc</code>。然后我就直接 <code>yay -S mozc</code> 了，，装是装了，然而没法使用。。</p>
 <p>后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是<code>fcitx5-mozc-ut</code>）。然后就没啥问题了。</p>
 <blockquote>
 <p><s>吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了AUR 的不便。</s></p>
 </blockquote>
-<h2> 修复（重装）ubuntu</h2>
+<h3> 修复（重装）ubuntu</h3>
 <p>在别人的电脑上<s>乱搞</s>，装了 intel 核显驱动然后没有重启就 <code>sudo apt install vim</code>（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 <code>sudo reboot</code>，再次开机就内核加载失败了。。</p>
 <p>然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，<code>iwconfig</code> or <code>ls /sys/class/net</code> 只显示 <code>lo</code>，也就是说找不到网卡了。。那没网我能干啥，<s>vi 进去修吗？</s></p>
 <p>还好没啥重要数据。授权后重装了 kubuntu。然后发现 kde 爆杀 gnome（二嘲）。</p>
 <p>有一说一，我不喜欢 ubuntu 这样臃肿的系统。<s><a href="https://t.me/archlinuxcn_group/2896194" target="_blank" rel="noopener noreferrer">其他观点</a>，看上下文</s> 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。</p>
-<h2> 中文设置问题</h2>
+<h3> 中文设置问题</h3>
 <p>在语言中设置了中文，重启后 kde 有部分 ui 变为英文。</p>
 <p>原因：更改 <code>/etc/locale.gen</code> 后没有运行 <code>sudo locale-gen</code>。运行即可。</p>
-<h2> yay 换源问题</h2>
+<h3> yay 换源问题</h3>
 <p>刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：<code>yay --aururl "https://..." --save</code>），发现用不了后换成了中科大源，结果报错：</p>
 <blockquote>
 <p>-&gt; 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br>
@@ -3745,13 +3788,13 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </blockquote>
 <p>并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">.</a></p><a class="footnote-anchor" id="footnote-ref1">
 <p>之后发现，在 <code>~/.config/yay/config.json</code> 中有一个 <code>aurrpcurl</code> 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 <code>yay --aururl "https://aur.archlinux.org" --save</code>，问题得解。如果一次不行就两次，一定能解(?)。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> umount failed</h2>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> umount failed</h3>
 <p><code>sudo umount /mnt/windows</code>，提示</p>
 <blockquote>
 <p>/mnt/windows: 目标忙</p>
 </blockquote>
 <p>估计有莫名奇妙的软件在占用。直接 <code>lsof /mnt/windows</code> 查占用，然后再 <code>kill -9 &lt;PID&gt;</code> 强关。</p>
-<h2> Windows 字体问题</h2>
+<h3> Windows 字体问题</h3>
 <p><strong>未解决</strong>。</p>
 <p>根据<a href="https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#%E5%AE%89%E8%A3%85-windows-%E5%AD%97%E4%BD%93" target="_blank" rel="noopener noreferrer">教程</a>复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：</p>
 <blockquote>
@@ -3793,10 +3836,10 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <h3> <a href="https://bbs.archlinuxcn.org/viewtopic.php?id=13402" target="_blank" rel="noopener noreferrer">libcuda.so.1 is not a symbolic link</a></h3>
 <p>Windows WSL 的锅，<a href="https://github.com/microsoft/WSL/issues/5548" target="_blank" rel="noopener noreferrer">解法</a>，但还有问题残留。</p>
 <h2> external</h2>
-<ol>
-<li><a href="https://zhuanlan.zhihu.com/p/495554731" target="_blank" rel="noopener noreferrer">Linux ls -al 得到的结果代表什么意思？</a></li>
+<ol start="2">
 <li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
 <li><a href="https://blog.origincode.me/manjaro-controversies/" target="_blank" rel="noopener noreferrer">【譯】Manjaro 的爭議</a></li>
+<li><a href="https://catcat.cc/post/2020-10-31/" target="_blank" rel="noopener noreferrer">Linux fontconfig 的字体匹配机制</a></li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
@@ -9299,12 +9342,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">魔装学园H×H</td>
-<td style="text-align:center">2023.08.23-<br>未完</td>
+<td style="text-align:center">天元突破红莲螺岩</td>
+<td style="text-align:center">2023.04.16-<br>第 x 集</td>
 </tr>
 <tr>
-<td style="text-align:center">天元突破红莲螺岩</td>
-<td style="text-align:center">2023.04.16-<br>第 4 集</td>
+<td style="text-align:center">魔装学园H×H</td>
+<td style="text-align:center">2023.08.23-<br>2023.08.25</td>
 </tr>
 <tr>
 <td style="text-align:center">赛马娘 </td>
@@ -11089,7 +11132,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center">近月少女的礼仪</td>
-<td style="text-align:center">-42min</td>
+<td style="text-align:center">-43min</td>
 </tr>
 <tr>
 <td style="text-align:center">アンレス テルミナリア</td>
