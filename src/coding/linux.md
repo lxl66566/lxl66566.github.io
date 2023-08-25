@@ -30,6 +30,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 umount /mnt/windows
 ```
 ## 基础
+1. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
 ### [Terminal shortcuts](https://linuxhandbook.com/linux-shortcuts/)
 `<C-a>` 代表 `Ctrl + a`.
 |按键|执行|
@@ -40,16 +41,18 @@ umount /mnt/windows
 ## 外部包
 * 我安装的包（少部分）：
     * archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
-    * archlinux: htop, exfat-utils
-* 我计划装的包：Joshuto
-## pacman & yay
+    * archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, newsboat, namcap, activitywatch-bin
+* 我计划装的包：Joshuto, gparted
+## pacman & AUR Helper
 * 请定期 `sudo pacman -Syy` 更新本地缓存（update），否则可能找不到包。（~~今日也无事可做~~）
+    * 也可以直接 `yay` 或 `paru` 进行更新
 * 每次修改镜像之后都应该使用 `sudo pacman -Syyu` 强制更新缓存 ([ref](https://wiki.archlinuxcn.org/wiki/镜像源#强制_pacman_刷新软件包列表))。
-* `pacman -Ss <name>` 是搜索包，支持正则
 * yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
-    * yay 用来下载 AUR 的包（也可以下载官方包），社区维护，质量更差，更容易过期，常出现安装报错的情况。
+    * yay 用来下载 AUR 的包（也可以下载官方包），社区维护，不够稳定容易过期，可能需要代理。
     * 如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman ([ref](https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63))
     * yay 使用系统代理，需要导出 `ALL_PROXY` 环境变量。否则会出现 Github 源的包无法安装的情况。
+* 另一个广泛使用的 AUR Helper 是 *paru*，使用 rust 编写。
+    * 安装时默认展示 PKGBUILD。
 * pacman 更换镜像
     ::: code-tabs
     @tab ArchWSL
@@ -65,9 +68,27 @@ umount /mnt/windows
     * pacman：[更新 pacman keyring](#更新-pacman-keyring)
     * yay：疑难解答：[yay 安装问题](#yay-安装问题) | [yay 换源问题](#yay-换源问题)
 ## 设置
-这里是 *[文章 - 设置电脑](../articles/computer_setting.md)* 的 linux 板块内容。设置项均为 archlinux。
+这里是 *[文章 - 设置电脑](../articles/computer_setting.md)* 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
+1. 基础 alias
+```sh
+# fish
+alias e=nvim
+alias l="ls -AFLhl --color=auto"
+
+```
 1. [调整 swappiness](https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)) 至 5
-2. 设置[默认挂载 tmpfs](../articles/ramdisk.md)
+2. 设置 `/etc/fstab`
+    * [挂载 tmpfs](../articles/ramdisk.md)
+    * 添加 `noatime` 标识，即不带访问时间 | [ref: archlinuxcn_group](https://t.me/archlinuxcn_group/2900548)
+3. [electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)
+4. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
+5. 设置 pacman：
+    * 将某些不常用的备用包加入 IgnorePkg，例如 *chromium* | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
+    * 更改缓存至 ramdisk （`CacheDir`）
+6. 设置 yay：
+    * 更改缓存至 ramdisk: `yay --builddir /tmp/yay --save`
+    * *很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。*
+7. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
 ### 设置代理
 #### v2raya
 v2raya 的质量其实一般，速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。
@@ -109,7 +130,9 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 4. *开关机 - 桌面会话*，选择启动为空会话
 5. *快捷键*，添加应用程序 *konsole*，设置唤醒快捷键
 6. 关闭通知声音
-7. 输入法，语言设置，缩放率等基础的就不要我讲了。kde 对分数缩放做的不算太差，只是有的图标有点糊而已。
+7. 输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。
+8. 自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，~~因为可以通过风扇声判断~~</span> 还有时间格式，无用图标的自定义。
+9. *工作区行为 - 锁屏*，改锁屏时间。
 ## bash
 若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。所以最好装好系统就先装 shell.
 使用：
@@ -193,9 +216,8 @@ alias l="ls -alF --color=auto"
 ```bash:no-line-numbers
 sudo updatedb   # 更新缓存，使用前执行
 ```
-### tldr
-人类可读的 man 替代品。
 ### [lsof](https://www.jianshu.com/p/a3aa6b01b2e1)
+umount 的时候用来查占用很好用。
 ### tmux
 > tmux 在不使用图形界面或有恢复 shell 需求时比较好用。
 
@@ -227,20 +249,26 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 * 安装 zsh 时会问 set default shell, `y` 即可
 * [我的配置&插件](https://github.com/lxl66566/config/blob/archwsl/.zshrc)
 </p></details>
-
+## trick
+可能不是最简，欢迎指正
+### 删除所有目录，排除文件
+众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 `rm *`。若我要反过来，只删除目录而排除文件呢？
+```sh
+find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
+```
 ## 遇到的问题
 **按时间倒序**。
-## 输入法不显示
+### 输入法不显示
 在[安装了 kubuntu](#修复-重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
 
 解法是 `sudo apt install $(check-language-support)`。然后注销，再 login 就有输入法了。
-## 日文输入法
+### 日文输入法
 需要安装日文输入法，去 archwiki 日语页面看，选择了 `mozc`。然后我就直接 `yay -S mozc` 了，，装是装了，然而没法使用。。
 
 后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是`fcitx5-mozc-ut`）。然后就没啥问题了。
 > ~~吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了AUR 的不便。~~
 
-## 修复（重装）ubuntu
+### 修复（重装）ubuntu
 在别人的电脑上~~乱搞~~，装了 intel 核显驱动然后没有重启就 `sudo apt install vim`（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 `sudo reboot`，再次开机就内核加载失败了。。
 
 然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，`iwconfig` or `ls /sys/class/net` 只显示 `lo`，也就是说找不到网卡了。。那没网我能干啥，~~vi 进去修吗？~~
@@ -248,11 +276,11 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 还好没啥重要数据。授权后重装了 kubuntu。然后发现 kde 爆杀 gnome（二嘲）。
 
 有一说一，我不喜欢 ubuntu 这样臃肿的系统。~~[其他观点](https://t.me/archlinuxcn_group/2896194)，看上下文~~ 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。
-## 中文设置问题
+### 中文设置问题
 在语言中设置了中文，重启后 kde 有部分 ui 变为英文。
 
 原因：更改 `/etc/locale.gen` 后没有运行 `sudo locale-gen`。运行即可。 
-## yay 换源问题
+### yay 换源问题
 刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：`yay --aururl "https://..." --save`），发现用不了后换成了中科大源，结果报错：
 > -> 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br/>
 >       * response decoding failed: invalid character '<' looking for beginning of value
@@ -261,12 +289,12 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 [^1]: 参考[刷机](../article/mobile_setting#mipad-5)
 
 之后发现，在 `~/.config/yay/config.json` 中有一个 `aurrpcurl` 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 `yay --aururl "https://aur.archlinux.org" --save`，问题得解。如果一次不行就两次，一定能解(?)。
-## umount failed
+### umount failed
 `sudo umount /mnt/windows`，提示
 > /mnt/windows: 目标忙
 
 估计有莫名奇妙的软件在占用。直接 `lsof /mnt/windows` 查占用，然后再 `kill -9 <PID>` 强关。
-## Windows 字体问题
+### Windows 字体问题
 **未解决**。
 
 根据[教程](https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#安装-windows-字体)复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：
@@ -313,6 +341,6 @@ sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows WSL 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。
 ## external
-1. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
 2. 了解一下 btrfs（注意时效）：[Linux Btrfs 文件系统使用指南](https://www.mivm.cn/linux-btrfs-usage-guide)
 3. [【譯】Manjaro 的爭議](https://blog.origincode.me/manjaro-controversies/)
+4. [Linux fontconfig 的字体匹配机制](https://catcat.cc/post/2020-10-31/)
