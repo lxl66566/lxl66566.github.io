@@ -53,6 +53,7 @@ tag:
     *  f 全屏
 * 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 * html yaml extransfer
+* html compresser, <-> rss
 * 录音机 app，抓住日常的每一个瞬间
 * lzma 数据库，简易迁移，不依赖特定程序
 * rust cli 浏览器书签 & 历史数据库

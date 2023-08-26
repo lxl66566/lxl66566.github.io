@@ -70,12 +70,11 @@ umount /mnt/windows
 ## 设置
 这里是 *[文章 - 设置电脑](../articles/computer_setting.md)* 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
 1. 基础 alias
-```sh
-# fish
-alias e=nvim
-alias l="ls -AFLhl --color=auto"
-
-```
+    ```sh
+    # fish
+    alias e=nvim
+    alias l="ls -AFLhl --color=auto"
+    ```
 1. [调整 swappiness](https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)) 至 5
 2. 设置 `/etc/fstab`
     * [挂载 tmpfs](../articles/ramdisk.md)
@@ -89,6 +88,15 @@ alias l="ls -AFLhl --color=auto"
     * 更改缓存至 ramdisk: `yay --builddir /tmp/yay --save`
     * *很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。*
 7. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
+8. grub 改等待时间
+    ```sh
+    sudo nvim /etc/default/grub
+    # after edit
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    ```
+### 输入法
+我使用 fcitx5，输入要求为英语，双拼，日语。可以在遇到的问题里找到一些输入法的设置。
+1. 双拼关闭快速输入，默认为`；`。
 ### 设置代理
 #### v2raya
 v2raya 的质量其实一般，速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。
@@ -133,6 +141,7 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 7. 输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。
 8. 自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，~~因为可以通过风扇声判断~~</span> 还有时间格式，无用图标的自定义。
 9. *工作区行为 - 锁屏*，改锁屏时间。
+10. [设置 numlock 行为](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#KDE_Plasma_用户)
 ## bash
 若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。所以最好装好系统就先装 shell.
 使用：
@@ -318,7 +327,7 @@ find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
 
 然后重新挂载，后来到 *生成 fstab 文件* 的时候又发现了怪事：`genfstab -U /mnt > /mnt/etc/fstab` 输出了一大堆东西，我读了一下，原来把我挂载时做的所有操作（包括错误部分）都记录进去了。于是手动删除了冗余，后续重启工作正常。
 
-这个文件我猜测是开机指示挂载的指令。我以后还会改 btrfs 挂载选项，到时候试试从这里改。
+这个文件用于指示开机挂载。包括后来挂内存盘也是从这里改。
 ### 分区格式化
 使用 `cfdisk` 分好区，需要分别为每个分区进行格式化。然而我使用 nvme 盘而看的 sata 指令，对硬盘格式化而非对分区进行格式化（错误示范：`mkfs.vfat /dev/nvme1n1`），报错：
 > Partitions or virtual mapping on device, not making file system. (use -I to override)

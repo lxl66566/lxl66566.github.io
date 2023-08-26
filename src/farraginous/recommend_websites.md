@@ -46,6 +46,11 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 * [phind](https://www.phind.com/)：搜索编程有关问题。会给出来源。
 * [wrtn.ai](https://wrtn.ai/)：韩国网站，免费的 GPT-4，无需科学上网；支持画图，但新政策不支持中文，需要先翻译再使用。
 * [Bard](bard.google.com)：Google 官方提供的 LLM。目前还在 Beta。
+## pastebin
+网上分享一些日志 报错啥的，不要刷屏，用 pastebin 服务。
+* [pastebin.com](https://pastebin.com/)，好记，免登录，以前一直用；但是有内容机审（贴日志的时候可能误报敏感信息）。
+* [gist.github.com](https://gist.github.com/)，github 的服务，可以在日志下方讨论，挺不错。缺点可能是需要登录，不过~~谁还没有个 github 账号呢~~？
+* [pb](https://fars.ee/f)：支持 paste from cli，待测试
 ## 资源搜索
 * 搜电子书：[zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
     > 2022.11.04: 绝对值x悲哀道：z-library暂时离开了我们。<br/>

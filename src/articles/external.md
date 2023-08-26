@@ -11,3 +11,4 @@ tag:
 1. [波士顿漫游指南](https://blog.zxh.io/post/2022/01/29/travel-to-boston/)
 2. [日本移居指南](https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso) | [bak](https://ctreaderbot.vercel.app/a/D05AAicCD7-5pMw.html)
 3. [为什么我觉得北京没有大家说的那么繁华？](https://www.zhihu.com/question/549539904/answer/2836937246) | [bak](https://telegra.ph/北京为什么会没有大家说的那么繁华-08-14-6)
+4. [优等生的无声危机：为好成绩付出的代价](https://zhuanlan.zhihu.com/p/636293259) | [bak](https://ctreaderbot.vercel.app/a/BkoThTPPDRD4Szg.html)
