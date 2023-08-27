@@ -103,6 +103,7 @@ category:
 |[ADN-210](https://www.eporner.com/video-jIs39qWwrxd/adn-210/)|5.8|6.6|
 |[ATID-522](https://www2.javhdporn.net/video/atid-522)|5.7|6.6|
 |[STARS-495](https://www2.javhdporn.net/video/stars-495c/)|5.7|6.5|
+|[MIDE-595](https://missav.com/mide-595)|9|3|
 |[SDAM-014](https://missav.com/SDAM-014)|7|5|
 |[SHKD-996](https://www2.javhdporn.net/video/shkd-996)|6|6|
 |[SVDVD-750](https://missav.com/zh/svdvd-750)|6|5.9|
@@ -151,7 +152,7 @@ category:
 |rank|name|
 | :-: | :-: |
 |T0|永野いち夏，花狩まい，楪カレン|
-|T1||
+|T1|水卜櫻|
 |T2|桃乃木かな|神木蘭|
 |T3|石原莉奈|
 

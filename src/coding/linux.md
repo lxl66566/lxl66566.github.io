@@ -258,6 +258,7 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 * 安装 zsh 时会问 set default shell, `y` 即可
 * [我的配置&插件](https://github.com/lxl66566/config/blob/archwsl/.zshrc)
 </p></details>
+
 ## trick
 可能不是最简，欢迎指正
 ### 删除所有目录，排除文件
