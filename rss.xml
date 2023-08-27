@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 26 Aug 2023 17:04:17 GMT</pubDate>
-    <lastBuildDate>Sat, 26 Aug 2023 17:04:17 GMT</lastBuildDate>
+    <pubDate>Sun, 27 Aug 2023 09:22:58 GMT</pubDate>
+    <lastBuildDate>Sun, 27 Aug 2023 09:22:58 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -3764,17 +3764,14 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
 </ul>
 <p></p></details>
-## trick
-可能不是最简，欢迎指正
-### 删除所有目录，排除文件
-众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 `rm *`。若我要反过来，只删除目录而排除文件呢？
-```sh
-find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
-```
-## 遇到的问题
-**按时间倒序**。
-### 输入法不显示
-在[安装了 kubuntu](#修复-重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
+<h2> trick</h2>
+<p>可能不是最简，欢迎指正</p>
+<h3> 删除所有目录，排除文件</h3>
+<p>众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 <code>rm *</code>。若我要反过来，只删除目录而排除文件呢？</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 遇到的问题</h2>
+<p><strong>按时间倒序</strong>。</p>
+<h3> 输入法不显示</h3>
+<p>在<a href="#%E4%BF%AE%E5%A4%8D-%E9%87%8D%E8%A3%85-ubuntu">安装了 kubuntu</a> 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。</p>
 <p>解法是 <code>sudo apt install $(check-language-support)</code>。然后注销，再 login 就有输入法了。</p>
 <h3> 日文输入法</h3>
 <p>需要安装日文输入法，去 archwiki 日语页面看，选择了 <code>mozc</code>。然后我就直接 <code>yay -S mozc</code> 了，，装是装了，然而没法使用。。</p>
@@ -8353,6 +8350,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://missav.com/mide-595" target="_blank" rel="noopener noreferrer">MIDE-595</a></td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://missav.com/SDAM-014" target="_blank" rel="noopener noreferrer">SDAM-014</a></td>
 <td style="text-align:center">7</td>
 <td style="text-align:center">5</td>
@@ -8575,7 +8578,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">T1</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">水卜櫻</td>
 </tr>
 <tr>
 <td style="text-align:center">T2</td>
@@ -11078,13 +11081,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">アンレス テルミナリア</td>
 <td style="text-align:center">2023.05.11</td>
 <td style="text-align:center">4.3</td>
-<td style="text-align:center">9.7</td>
+<td style="text-align:center">9.9</td>
 <td style="text-align:center">9.5</td>
 </tr>
 <tr>
 <td style="text-align:center">哥哥，早上起床之前都要抱紧我哦！</td>
 <td style="text-align:center">2021.02.14?</td>
-<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
 <td style="text-align:center">8</td>
 <td style="text-align:center">8.2</td>
 </tr>
