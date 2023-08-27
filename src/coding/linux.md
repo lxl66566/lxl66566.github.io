@@ -48,9 +48,10 @@ umount /mnt/windows
     * 也可以直接 `yay` 或 `paru` 进行更新
 * 每次修改镜像之后都应该使用 `sudo pacman -Syyu` 强制更新缓存 ([ref](https://wiki.archlinuxcn.org/wiki/镜像源#强制_pacman_刷新软件包列表))。
 * yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
-    * yay 用来下载 AUR 的包（也可以下载官方包），社区维护，不够稳定容易过期，可能需要代理。
+    * yay 用来下载 AUR 的包（也可以下载官方包），社区维护，不够稳定容易过期，需要代理。
     * 如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman ([ref](https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63))
     * yay 使用系统代理，需要导出 `ALL_PROXY` 环境变量。否则会出现 Github 源的包无法安装的情况。
+    * yay 的问题也太多了点。。可以试试 paru。
 * 另一个广泛使用的 AUR Helper 是 *paru*，使用 rust 编写。
     * 安装时默认展示 PKGBUILD。
 * pacman 更换镜像
@@ -66,7 +67,7 @@ umount /mnt/windows
     :::
 * 疑难解答：
     * pacman：[更新 pacman keyring](#更新-pacman-keyring)
-    * yay：疑难解答：[yay 安装问题](#yay-安装问题) | [yay 换源问题](#yay-换源问题)
+    * yay：疑难解答：[yay 安装问题](#yay-安装问题) | [yay 换源问题](#yay-换源问题) | [yay 权限错误](#yay-权限错误)
 ## 设置
 这里是 *[文章 - 设置电脑](../articles/computer_setting.md)* 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
 1. 基础 alias
@@ -84,9 +85,13 @@ umount /mnt/windows
 5. 设置 pacman：
     * 将某些不常用的备用包加入 IgnorePkg，例如 *chromium* | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
     * 更改缓存至 ramdisk （`CacheDir`）
-6. 设置 yay：
-    * 更改缓存至 ramdisk: `yay --builddir /tmp/yay --save`
-    * *很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。*
+6. 设置 AUR Helper：
+    * yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
+    * *很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。* <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也挂上同一个 tmpfs，这样就能够解决问题了。
+        ```
+        # sudo nvim /etc/fstab  ，在 /tmp 已经挂上 tmpfs 后（记得改 username）：
+        /tmp/paru /home/absolutex/.cache/paru/clone  none  defaults,bind,nofail,x-systemd.device-timeout=2  0  0
+        ```
 7. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
 8. grub 改等待时间
     ```sh
@@ -268,6 +273,37 @@ find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
 ```
 ## 遇到的问题
 **按时间倒序**。
+### nvim 剪贴板问题
+我在 `option.lua` 中有设置 `vim.opt.clipboard = 'unnamedplus'`，之前运作挺好，但自从换了 X11 以后就不能再复制。
+
+解法也很简单，安装 `xclip` 即可。
+### yay 权限错误
+使用 `yay` 安装 `wine-stable` 时出现了一些问题。
+```
+-> 无法安装以下软件包, 需要手动介入处理:
+lib32-http-parser - exit status 4
+lib32-libheif - exit status 8
+lib32-libgphoto2 - exit status 8
+lib32-libxpm - exit status 1
+lib32-libgit2 - exit status 8
+lib32-gd - exit status 8
+wine-stable - exit status 8
+lib32-libraqm - exit status 4
+lib32-rav1e - exit status 8
+```
+其中大多数是权限错误。但是我用 paru 安装就可以成功安装，有没有可能是 fakeroot 的问题(?) 附带安装的报错：
+```
+==> 正在检查编译时依赖关系==> 警告： 使用现存的 $srcdir/ 树==> 正在开始 build()...
+（一些输出）
+==> 正在开始 check()...
+（这里出现了一些警告）
+.test_g
+make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
+==> 错误： 在 check() 中发生一个错误。正在放弃...
+-> 生成时出错: lib32-http-parser-exit status 4
+-> 无法安装以下软件包, 需要手动介入处理:
+lib32-http-parser - exit status 4
+```
 ### 输入法不显示
 在[安装了 kubuntu](#修复-重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
 

@@ -90,6 +90,20 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 刚做完 2. 的时候会出现经典问题，clangd 报*找不到 `ui_mainwindow.h` 文件*… 因为它是编译期生成的。。用 cmake CLI 的时候可能需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，应该是 xmake 内置的 qt 规则起作用了。
 
 需要注意，使用 xmake 构建的 Qt 程序无法在 stdout 输出字符，无论 release 还是 debug mode。（不知道是不是缺少了什么设置选项）
+#### linux
+在 (arch)linux 上开发 qt 应用。
+1. 通过 [aqtinstall](#安装) 安装 sdk；通过 pacman 安装 `qt6-base`.
+2. 在 `xmake.lua` 中，新建 toolchains:
+    ```lua
+    toolchain("myqt")
+        set_kind("standalone")
+        if is_os("linux") then
+            set_sdkdir("~/program/qt/6.6.0/gcc_64/") -- 填写 sdk 目录
+            set_toolset("cxx", "clang")  -- 指定编译器
+            add_linkdirs("/usr/lib/qt6/")
+        end
+    ```
+    然后在 target 中 `set_toolchains("myqt")` 即可。
 ## 构建系统
 最广泛使用的是用 *Cmake* 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
 ### xmake
