@@ -15,6 +15,11 @@ category:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，维护过多）
 :::
 ## 2023
+### 20230828
+- 新增 [笔记软件横评](../articles/note.md) 页面
+- 格式化部分文档
+### 20230820-26
+- 持续更新 [linux](../coding/linux.md) 页面
 ### 20230808
 * 维护 [Github](../coding/github.md)，[linux](../coding/linux.md)
 * 图表去缩进，减小体积

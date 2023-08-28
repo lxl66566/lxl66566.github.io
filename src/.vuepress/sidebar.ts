@@ -47,32 +47,18 @@ export default sidebar({
         "input_method",
         "external.md",
         "ramdisk.md",
+        "note.md",
       ],
     },
   ],
   "/coding/": [
     {
       text: "语言",
-      children: [
-        "Rust.md",
-        "Cpp.md",
-        "python.md",
-        "java.md",
-        "tsjs.md",
-        "csharp.md",
-        "kotlin",
-      ],
+      children: ["Rust.md", "Cpp.md", "python.md", "java.md", "tsjs.md", "csharp.md", "kotlin"],
     },
     {
       text: "工具",
-      children: [
-        "github.md",
-        "Git.md",
-        "nodejs.md",
-        "linux.md",
-        "vim.md",
-        "sql.md",
-      ],
+      children: ["github.md", "Git.md", "nodejs.md", "linux.md", "vim.md", "sql.md"],
     },
     {
       text: "其他",
@@ -101,13 +87,7 @@ export default sidebar({
     {
       text: "其他游戏",
       link: "/hobbies/other_games/",
-      children: [
-        "arknights.md",
-        "csgo.md",
-        "uno.md",
-        "rec_college.md",
-        "rec_hometown.md",
-      ],
+      children: ["arknights.md", "csgo.md", "uno.md", "rec_college.md", "rec_hometown.md"],
     },
   ],
   "/": [

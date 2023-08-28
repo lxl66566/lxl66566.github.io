@@ -3,14 +3,17 @@ date: 2022-10-10
 # 注：此日期不准确，是估计值
 icon: generic
 category:
-    - 教程
+  - 教程
 tag:
-    - CLI
+  - CLI
 ---
+
 # 命令行压缩
+
 我电脑上使用的压缩软件为[Bandizip](../farraginous/recommend_packages.md#bandizip)，命令行指令为`bz`，详见[官网-命令行参数](https://cn.bandisoft.com/bandizip/help/parameter/)。
 
-我使用脚本备份我的浏览器历史记录，并使用bandizip命令行进行7z加密压缩后上传到Github。代码如下（隐去关键部分）：
+我使用脚本备份我的浏览器历史记录，并使用 bandizip 命令行进行 7z 加密压缩后上传到 Github。代码如下（隐去关键部分）：
+
 ```bash
 cp -f "C:\Users\<NAME>\AppData\Local\Microsoft\Edge\User Data\Default\History" D:/browsertemp
 # backup edge
@@ -22,4 +25,4 @@ bz c -p:<PASSWORD> -aoa -l:9 ./History_pwd:<TIP>.7z D:/temp/History
 exit
 ```
 
-若直接对History文件压缩会报错（我也不清楚为什么），因此使用cp命令复制到缓存文件夹压缩，曲线救国。
+若直接对 History 文件压缩会报错（我也不清楚为什么），因此使用 cp 命令复制到缓存文件夹压缩，曲线救国。
