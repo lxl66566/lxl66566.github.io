@@ -7,13 +7,24 @@ tag:
   - 自然语言
 ---
 # 日本語勉強
-我也说不上玩 galgame[^1] 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。
+我也说不上玩 [galgame](../../hobbies/galgame.md) 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。
+## 关于学习
+其实学日语可以不看教科书的。我现在的学习方式是**背单词 + 学语法 + 多听读** <span class="heimu" title="你知道的太多了">但是很惭愧，语法基本没学</span>，如果为了考试还得**刷题**。语言学习说到底也就那么点东西。
 
-[^1]: ../../hobbies/galgame.md
+也有推一点 galgame 生肉，例如 *アンレス テルミナリア*。会开着 Misaka Translator（这玩意真适合学习），看一句日文，再看中文，查词。详见[galgame - 资源](../../hobbies/galgame.md#资源)。~~（不过如果能开英文还是会开英文的，例如 *NekoMiko* 和 *家喵二三事*~~
+### 资源
+* 単語：
+  * Anki deck：[JLPT (N1～N5) 日语 中文](https://ankiweb.net/shared/info/34073638) | [Open Anki JLPT](https://ankiweb.net/shared/decks?search=Open%20anki%20JLPT)
+* 文法：[毎日のんびり日本語教師](https://nihongonosensei.net/)
+* 例文：[例文買取センター](https://reibuncnt.jp/)
+* 百科：[コトバンク](https://kotobank.jp/)
+* 见 [galgame](../../hobbies/galgame.md)
 ## 关于考试
-jlpt 死贵，除非有一次过 n1 的自信，否则我不考。而且语法有关的分值比重很大，而我的学习模式最不擅长的就是语法。
+jlpt 死贵，除非有一次过 n1 的自信，否则我不考。而且语法有关的分值比重很大，而我的学习模式最不擅长的就是语法。不过也有优势：全是选择题。
 
-而大学日语六级虽然没什么用，但是胜在便宜（25元）<span class="heimu" title="你知道的太多了">考场人少，但试卷固定为 30 张一包，所以交的报名费还不一定比成本高，血赚</span>。而且除了作文，其他的都没什么难度，作为练手或者学习动力是非常适合的。
+而大学日语六级虽然没什么用，但是胜在便宜（25元）[^1]而且除了作文 ~~*（没写过几个字，这 15 分我先扔为敬）*~~，其他的都没什么难度，作为练手或者学习动力是非常适合的。我 69.5 勉强过了，但在几乎没有学习的前提下，还是挺好的。
+[^1]: 考场人少，但试卷固定为 30 张一包，所以交的报名费还不一定有成本高，血赚。[source](https://t.me/withabsolutex/1129)
+
 * 六级备考：zlib 能下载到往年考卷（大学日语四六级考试指南与真题 (全国大学日语考试设计组) (Z-Library)）。听力在[这里](https://app.readoor.cn/app/dt/bi/1523326392/85264-8480865e855413)有免费免登录的。<span class="heimu" title="你知道的太多了">我校为数不多的好事</span>
 ## 零碎的知识点
 * [ために　vs　ように](https://japanese.stackexchange.com/questions/12450/difference-between-%E3%81%9F%E3%82%81%E3%81%AB-and-%E3%82%88%E3%81%86%E3%81%AB)
@@ -21,5 +32,5 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。而且语法�
 * 由..原材料制成，看得出用`で`，看不出用`から` ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=383))
 * にとって　vs　に対して：前者有站在...角度来讲的意思 ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=2151))
 * 兎　的量词为 羽 ([source](https://japanknowledge.com/articles/kze/column_kaz_02.html))
-## 扩展
+## external
 1. [最好要记住的日语古代的读法](https://t.me/jp_study/2222)

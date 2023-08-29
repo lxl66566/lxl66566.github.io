@@ -9,9 +9,9 @@ tag:
 # Java
 由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。
 
-在我看来 Java 的优势是跨平台。但是作为带 GC 的语言，Java 的性能一般；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（不能自定义类型别名），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（</span>
+在我看来 Java 的优势是跨平台，代码容易维护（方便 t 人）。但是作为带 GC 的语言，Java 的性能一般（强类型打不过弱类型）；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（其实某些方面可能还算优点），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（不过是通病，python 群也一样</span>。java 学到后期全是框架，不好玩，没意思（
 
-哦，顺带一提，Android 开发建议直接 [kotlin](./kotlin.md)，Google 官方推荐的语言，并且全兼容 java。反正学 java 用 gradle 也逃不过 kotlin 的制裁，不如立马开润（
+哦，顺带一提，Android 开发建议直接 [kotlin](./kotlin.md)，Google 官方推荐的语言，并且全兼容 java。~~反正学 java 用 gradle 也逃不过 kotlin 的制裁，不如立马开润（~~
 ## 学习方法
 根据其他语言学习经验，到处搜，用 Java 写点算法题，多写就完了。也可以问问 ChatGPT。
 
