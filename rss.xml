@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 28 Aug 2023 16:01:29 GMT</pubDate>
-    <lastBuildDate>Mon, 28 Aug 2023 16:01:29 GMT</lastBuildDate>
+    <pubDate>Tue, 29 Aug 2023 09:09:17 GMT</pubDate>
+    <lastBuildDate>Tue, 29 Aug 2023 09:09:17 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -3539,8 +3539,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
       <pubDate>Fri, 17 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Java</h1>
 <p>由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。</p>
-<p>在我看来 Java 的优势是跨平台。但是作为带 GC 的语言，Java 的性能一般；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（不能自定义类型别名），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（</span></p>
-<p>哦，顺带一提，Android 开发建议直接 <a href="/coding/kotlin.html" target="blank">kotlin</a>，Google 官方推荐的语言，并且全兼容 java。反正学 java 用 gradle 也逃不过 kotlin 的制裁，不如立马开润（</p>
+<p>在我看来 Java 的优势是跨平台，代码容易维护（方便 t 人）。但是作为带 GC 的语言，Java 的性能一般（强类型打不过弱类型）；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（其实某些方面可能还算优点），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（不过是通病，python 群也一样</span>。java 学到后期全是框架，不好玩，没意思（</p>
+<p>哦，顺带一提，Android 开发建议直接 <a href="/coding/kotlin.html" target="blank">kotlin</a>，Google 官方推荐的语言，并且全兼容 java。<s>反正学 java 用 gradle 也逃不过 kotlin 的制裁，不如立马开润（</s></p>
 <h2> 学习方法</h2>
 <p>根据其他语言学习经验，到处搜，用 Java 写点算法题，多写就完了。也可以问问 ChatGPT。</p>
 <p>Java 跟 C++ 语法挺像的。<s>虽然对标的 C# 应该会更像，但我没学。</s></p>
@@ -9597,7 +9597,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <p>虽然但是，我已经不是当年 18- 的我了，这里的番。。只能说观看概率不高</p>
 </blockquote>
 <details class="hint-container details"><summary>详情</summary>
-<p>to love，代号D机关，女皇之刃，剃须。然后捡到女高中生，伪恋，天使的3p，紫罗兰永恒花园，巨人，魔禁，fate0，犬夜叉，我立于百万生命之上，成神之日，铁路浪漫谭，魔女之旅，咒术回战，赛马娘2，派对浪客诸葛孔明，幻灵镇魂曲，リコリス・リコイル，孤独摇滚</p>
+<p>to love，代号D机关，女皇之刃，剃须。然后捡到女高中生，伪恋，天使的3p，紫罗兰永恒花园，巨人，魔禁，fate0，犬夜叉，我立于百万生命之上，成神之日，铁路浪漫谭，魔女之旅，咒术回战，赛马娘2，派对浪客诸葛孔明，幻灵镇魂曲，リコリス・リコイル，孤独摇滚，新妹魔王的契约者</p>
 </details>
 ]]></content:encoded>
     </item>
@@ -9610,13 +9610,12 @@ x 表示水平位移，h 表示垂直位移。<br>
       <category>爱好</category>
       <pubDate>Fri, 01 Jul 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 读书</h1>
-<p><span class="subtitle">缅怀过去是老了的证明。但我必需直面这<s>羞耻</s>的过去。</span></p>
-<p>我自小就爱读书。小学爱看杂志 <em>（特别是《我们爱科学》）</em> 和其他故事书，初中时爱看玄幻小说，而高中主要看图书馆/图书角有的书（什么都看）。但是自上大学来，对<strong>非学术类的</strong>书的兴趣越来越小了。<span class="heimu" title="你知道的太多了">事实上学术类的也大抵如此</span> 此处仅列举记得起的部分，当作缅怀我的青春了。同时也承担记录当下未来读书记录的任务。</p>
+<p>我自小就爱读书。小学爱看杂志 <em>（特别是《我们爱科学》）</em> 和其他故事书，初中时爱看玄幻小说，而高中主要看图书馆/图书角有的书（什么都看）。但是自上大学来，对<strong>非学术类的</strong>书的兴趣越来越小了。<span class="heimu" title="你知道的太多了">事实上学术类的也大抵如此</span> 此处列举记得起的部分缅怀青春，同时也承担记录未来读书记录的任务。</p>
 <p>或许现在的我已经记不清我读过哪些书，记不清书中的故事情节，但我曾经读的书绝非没有价值。阅读量的增加能提高信息获取速度，减少时间消耗，在垃圾视频的海洋中保全自身，同时也帮助了思考，帮助形成自己的世界观价值观而不是被灌输的其他货色。现在的我对以前的我表示感激。</p>
 <h2> 工具</h2>
 <p>我曾不得不读纸质书，但我更喜欢读电子书。</p>
 <ul>
-<li>pdf 格式的书（多为学术类），我使用 <em>云记</em> 阅读，可以在上面做笔记，划重点。</li>
+<li>pdf 格式的书（多为学术类），<s>我使用 <em>云记</em> 阅读</s> （已不用，详见<a href="/articles/note.html" target="blank">笔记软件横评</a>），可以在上面做笔记，划重点。</li>
 <li>网络小说我曾喜欢使用<a href="/farraginous/recommend_packages.html#%E6%B0%B8%E4%B9%85%E9%98%85%E8%AF%BB%E5%99%A8" target="blank">永久阅读器</a>，现在则使用<a href="/farraginous/recommend_packages.html#%E5%BC%80%E6%BA%90%E9%98%85%E8%AF%BB" target="blank">开源阅读</a>。但是很遗憾，仍有很多小说无法找到。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></li><a class="footnote-anchor" id="footnote-ref1">
 </a></ul><a class="footnote-anchor" id="footnote-ref1">
 </a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 资源</h2>
@@ -9628,6 +9627,14 @@ x 表示水平位移，h 表示垂直位移。<br>
 <p>我最喜欢看的是科技相关的超自然类小说，其中首推《走进修仙》。最喜欢学院生活类内容。</p>
 <p>刚开始看网络小说时最多能一天 12.5 小时 (20230109)，坚持几天。<span class="heimu" title="你知道的太多了">前提是有空</span> 之后视精彩程度逐渐放缓阅读速度。</p>
 <details class="hint-container details"><summary>一些解释说明</summary>
+<ul>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+</ul>
 </details>
 <h3> 有记录</h3>
 <table>
@@ -9641,6 +9648,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center"><a href="https://t.me/soushubaa/427" target="_blank" rel="noopener noreferrer">我在末世捡到白狐</a> </td>
+<td style="text-align:center">2023.08.29-<br>在读</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://www.wenku8.net/book/381.htm" target="_blank" rel="noopener noreferrer">加速世界</a></td>
 <td style="text-align:center">2023.07.09-<br>在读</td>
 <td style="text-align:center">未包括前0.235</td>
@@ -9653,7 +9666,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">末世之黑暗召唤师</td>
+<td style="text-align:center">末世之黑暗召唤师 </td>
 <td style="text-align:center">2023.07.14-<br>2023.07.31</td>
 <td style="text-align:center">41h10min</td>
 <td style="text-align:center"><span class="heimu" title="你知道的太多了">垃圾人妻爽文，</span>后期写得比较水，还好结局发挥不差。世界设定较混乱，没有体系。</td>
@@ -9689,7 +9702,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">双视角青春恋爱轻小说。</td>
 </tr>
 <tr>
-<td style="text-align:center">与绿茶妹妹交换身体之后</td>
+<td style="text-align:center">与绿茶妹妹交换身体之后 </td>
 <td style="text-align:center">2022.08.04-<br>2022.08.05</td>
 <td style="text-align:center">50min*</td>
 <td style="text-align:center"></td>
@@ -9725,13 +9738,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">有趣的完善的世界观，西式玄幻文(?</td>
 </tr>
 <tr>
-<td style="text-align:center">我当上帝那些事</td>
+<td style="text-align:center">我当上帝那些事 </td>
 <td style="text-align:center">?-<br>2022.01.20</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">末日之无限兑换</td>
+<td style="text-align:center">末日之无限兑换 </td>
 <td style="text-align:center">2021.08.23-<br>2021.12.16</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9743,7 +9756,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">茅山终极僵尸王</td>
+<td style="text-align:center">茅山终极僵尸王 </td>
 <td style="text-align:center">2021.07.10-<br>2021.08.07</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9755,7 +9768,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">抱歉有系统就是了不起</td>
+<td style="text-align:center">抱歉有系统就是了不起 </td>
 <td style="text-align:center">2021.06.11-<br>2021.06.18</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9767,7 +9780,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">都市之无赖弃少</td>
+<td style="text-align:center">都市之无赖弃少 </td>
 <td style="text-align:center">2021.01.09-<br>?</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9779,7 +9792,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">凌天传说</td>
+<td style="text-align:center">凌天传说 </td>
 <td style="text-align:center">2020.12.14-<br>2020.12.31</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9851,7 +9864,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">我的极品大小姐</td>
+<td style="text-align:center">我的极品大小姐 </td>
 <td style="text-align:center">?-<br>2020.01.30</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9863,7 +9876,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">绝品仙医</td>
+<td style="text-align:center">绝品仙医 </td>
 <td style="text-align:center">?-<br>2019.11.24</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9917,25 +9930,25 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">飞天</td>
+<td style="text-align:center">飞天 </td>
 <td style="text-align:center">?&lt;2018.10.17</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">我是大法师</td>
+<td style="text-align:center">我是大法师 </td>
 <td style="text-align:center">?&lt;2018.10.17</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">纨绔子弟</td>
+<td style="text-align:center">纨绔子弟 </td>
 <td style="text-align:center">?&lt;2018.07.28</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">现代艳帝</td>
+<td style="text-align:center">现代艳帝 </td>
 <td style="text-align:center">?&lt;2018.07.28</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -9965,7 +9978,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">傲剑凌云</td>
+<td style="text-align:center">傲剑凌云 </td>
 <td style="text-align:center">?</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -10009,22 +10022,22 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center">如何系统思考 - 邱绍良</td>
-<td style="text-align:center">2023.07.06-<br>在读</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
 <td style="text-align:center">sicp</td>
 <td style="text-align:center">2023.?-<br>在读</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center">如何系统思考 - 邱绍良</td>
+<td style="text-align:center">2023.07.06-<br>烂尾, 50%</td>
+<td style="text-align:center">1h15min</td>
+<td style="text-align:center">质量不高，知识密度低，比起学术书更像是推销书</td>
+</tr>
+<tr>
 <td style="text-align:center">新版标准日本语中级下</td>
-<td style="text-align:center">?-<br>在读</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td style="text-align:center">?-<br>烂尾<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">, 80%</a></td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">其实学日语没必要看教科书</td>
 </tr>
 <tr>
 <td style="text-align:center">别闹了，费曼先生</td>
@@ -10577,21 +10590,23 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tbody>
 </table>
 <h3> 无记录</h3>
-<p>此处列出的书我绝对看过，但只能想的起来而没有证据。比如学校图书角自己拿的书。<em>（事实上我在学校图书角看过了非常多的书，但回忆不起来。）</em></p>
+<p>此处列出的书我绝对看过，但只能想的起来而没有记录。比如学校图书角自己拿的书<span class="heimu" title="你知道的太多了"><em>事实上我在学校图书角看过了非常多的书，但回忆不起来。</em></span>，家里书架上的书，等等。</p>
 <ul>
 <li>长安十二时辰（上下）</li>
 <li>时间简史</li>
 <li>万物简史</li>
 <li>法医秦明</li>
+<li>聊斋志异</li>
 </ul>
 <h2> 更早</h2>
 <p>接下来的就是小学与初中时期看的书了。当时因为没有手机电脑，我能做的有乐趣的事就是去书店看书。不过可惜，书店的书虽然好看，但却回想不起来多少。（毕竟看的也都是小说类）</p>
 <p>仅挑选有印象的或还能在家里找到的纸质书籍列出。有写日期的是日记里记录的。</p>
 <ul>
+<li>物质探微从电子到夸克：是我的物理入门书，对于激发学习兴趣有着重要作用</li>
 <li>学校要求（草房子，活着，小王子，追风筝的人，平凡的世界，海底两万里（几遍）（20140405），钢铁是怎样炼成的，围城，狼王梦）</li>
 <li>拇指班长1-8</li>
 <li>战魔利剑</li>
-<li>韩寒全套（零下一度，像少年啦飞驰，通稿2003，他的国，一座城池，三重门，1988：我想和这个世界谈谈，光荣日，毒 1-2）</li>
+<li>韩寒全套（零下一度，像少年啦飞驰，通稿2003，他的国，一座城池，三重门，1988：我想和这个世界谈谈，光荣日，毒 1-2，等）</li>
 <li>象棋绝杀实战精选</li>
 <li>被删除的人（两遍）</li>
 <li>童年河</li>
@@ -10634,6 +10649,8 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li id="footnote1" class="footnote-item"><p><a href="/essay.html#20230713" target="blank">吐槽一下</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="footnote2" class="footnote-item"><p><a href="https://t.me/withabsolutex/1180" target="_blank" rel="noopener noreferrer">妈的，被骗啦</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote3" class="footnote-item"><p>我是想看完的，但是<a href="/articles/note.html" target="blank">都怪云记</a>。顺带一提这是我云记上笔记最多的一本。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -12839,12 +12856,27 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
       <category>学习</category>
       <pubDate>Sat, 17 Jun 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 日本語勉強</h1>
-<p>我也说不上玩 galgame<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"> 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。</a></p><a class="footnote-anchor" id="footnote-ref1">
-</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 关于考试</h2>
-<p>jlpt 死贵，除非有一次过 n1 的自信，否则我不考。而且语法有关的分值比重很大，而我的学习模式最不擅长的就是语法。</p>
-<p>而大学日语六级虽然没什么用，但是胜在便宜（25元）<span class="heimu" title="你知道的太多了">考场人少，但试卷固定为 30 张一包，所以交的报名费还不一定比成本高，血赚</span>。而且除了作文，其他的都没什么难度，作为练手或者学习动力是非常适合的。</p>
+<p>我也说不上玩 <a href="/hobbies/galgame.html" target="blank">galgame</a> 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。</p>
+<h2> 关于学习</h2>
+<p>其实学日语可以不看教科书的。我现在的学习方式是<strong>背单词 + 学语法 + 多听读</strong> <span class="heimu" title="你知道的太多了">但是很惭愧，语法基本没学</span>，如果为了考试还得<strong>刷题</strong>。语言学习说到底也就那么点东西。</p>
+<p>也有推一点 galgame 生肉，例如 <em>アンレス テルミナリア</em>。会开着 Misaka Translator（这玩意真适合学习），看一句日文，再看中文，查词。详见<a href="/hobbies/galgame.html#%E8%B5%84%E6%BA%90" target="blank">galgame - 资源</a>。<s>（不过如果能开英文还是会开英文的，例如 <em>NekoMiko</em> 和 <em>家喵二三事</em></s></p>
+<h3> 资源</h3>
 <ul>
-<li>六级备考：zlib 能下载到往年考卷（大学日语四六级考试指南与真题 (全国大学日语考试设计组) (Z-Library)）。听力在<a href="https://app.readoor.cn/app/dt/bi/1523326392/85264-8480865e855413" target="_blank" rel="noopener noreferrer">这里</a>有免费免登录的。<span class="heimu" title="你知道的太多了">我校为数不多的好事</span></li>
+<li>単語：
+<ul>
+<li>Anki deck：<a href="https://ankiweb.net/shared/info/34073638" target="_blank" rel="noopener noreferrer">JLPT (N1～N5) 日语 中文</a> | <a href="https://ankiweb.net/shared/decks?search=Open%20anki%20JLPT" target="_blank" rel="noopener noreferrer">Open Anki JLPT</a></li>
+</ul>
+</li>
+<li>文法：<a href="https://nihongonosensei.net/" target="_blank" rel="noopener noreferrer">毎日のんびり日本語教師</a></li>
+<li>例文：<a href="https://reibuncnt.jp/" target="_blank" rel="noopener noreferrer">例文買取センター</a></li>
+<li>百科：<a href="https://kotobank.jp/" target="_blank" rel="noopener noreferrer">コトバンク</a></li>
+<li>见 <a href="/hobbies/galgame.html" target="blank">galgame</a></li>
+</ul>
+<h2> 关于考试</h2>
+<p>jlpt 死贵，除非有一次过 n1 的自信，否则我不考。而且语法有关的分值比重很大，而我的学习模式最不擅长的就是语法。不过也有优势：全是选择题。</p>
+<p>而大学日语六级虽然没什么用，但是胜在便宜（25元）<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">而且除了作文 <s><em>（没写过几个字，这 15 分我先扔为敬）</em></s>，其他的都没什么难度，作为练手或者学习动力是非常适合的。我 69.5 勉强过了，但在几乎没有学习的前提下，还是挺好的。</a></p><a class="footnote-anchor" id="footnote-ref1">
+</a><ul><a class="footnote-anchor" id="footnote-ref1">
+</a><li><a class="footnote-anchor" id="footnote-ref1">六级备考：zlib 能下载到往年考卷（大学日语四六级考试指南与真题 (全国大学日语考试设计组) (Z-Library)）。听力在</a><a href="https://app.readoor.cn/app/dt/bi/1523326392/85264-8480865e855413" target="_blank" rel="noopener noreferrer">这里</a>有免费免登录的。<span class="heimu" title="你知道的太多了">我校为数不多的好事</span></li>
 </ul>
 <h2> 零碎的知识点</h2>
 <ul>
@@ -12854,14 +12886,14 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <li>にとって　vs　に対して：前者有站在...角度来讲的意思 (<a href="https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=2151" target="_blank" rel="noopener noreferrer">source</a>)</li>
 <li>兎　的量词为 羽 (<a href="https://japanknowledge.com/articles/kze/column_kaz_02.html" target="_blank" rel="noopener noreferrer">source</a>)</li>
 </ul>
-<h2> 扩展</h2>
+<h2> external</h2>
 <ol>
 <li><a href="https://t.me/jp_study/2222" target="_blank" rel="noopener noreferrer">最好要记住的日语古代的读法</a></li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>../../hobbies/galgame.md <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+<li id="footnote1" class="footnote-item"><p>考场人少，但试卷固定为 30 张一包，所以交的报名费还不一定有成本高，血赚。<a href="https://t.me/withabsolutex/1129" target="_blank" rel="noopener noreferrer">source</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
