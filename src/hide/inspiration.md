@@ -27,50 +27,57 @@ tag:
 * 剪贴板灵感。
     * 无论是国内输入法的长时间保存剪贴板，还是谷歌输入法的一小时后删除的剪贴板，都有其取舍与不便之处。我选择折中说——
     * 剪贴板数据永久保存<Badge type="tip" text="仅文本数据" />，可手动访问，而应用对剪贴板的访问通过条数来限制。（例：仅能访问最近一条）
-* B站CC字幕下载脚本
 * 音乐播放器
     * 跨平台，多端同步
     * 自行导入歌曲，支持文件导入与 url导入（下载后可听）
-* 浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）
-    * 基于 Chromium 内核（出于兼容性考虑），非商用，开源
-    * **高度自定义化**
+* ~~浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）~~
+    * ~~基于 Chromium 内核（出于兼容性考虑），非商用，开源，**高度自定义化**~~ 难度过高，暂不考虑
 * CNM, ~~condition manager with Rust~~, a git-like distributed version manager
     * 连续压缩
     * parts in a project, like how i use branch
     * 断点重传
     * 软连接，可在目录外创建虚仓库，指向真实仓库
-* osu 谱面下载器
 * HDL 高阶语言，能将类 Rust 语法的语言编译成 verilog 或 VHDL。
 * 音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）
 * 流式分布式的视频软件
 * 响应式计算机设计与编程（与轮询式相对）
 * Android opensource store, package manager
 * pdf 无损图片压缩
-* 轻量级 pdf 演示
-* b站历史记录搜索
-* B站直播增强
-    * 弹幕区域取消，发送弹幕放在视频下方
-    *  f 全屏
 * 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
-* html yaml extransfer
-* html compresser, <-> rss
 * 录音机 app，抓住日常的每一个瞬间
+    - 全天录音 to RAM，手动保存重放
 * lzma 数据库，简易迁移，不依赖特定程序
-* rust cli 浏览器书签 & 历史数据库
-* 类 markdown 方言
-- [ ] markdown formatter
+* 浏览器书签 & 历史数据库(rust cli / js)
 * better sqlite_zstd
-* 答题网，选择题实时反馈
 * magisk & LSP:
     * tg 多选截屏
     * bilibili 任意倍速
     - [ ] *usage time recoder*
     - [ ] *MIUI 10s*
-* ~~koishi plugin:~~ （koishi 有关计划暂时搁置）
-    - [ ] ~~advanced: wordle game~~
 * windows electron lib(runtime)
 * windows volume locker
+### nodejs & tsjs
+* B站CC字幕下载脚本
+* osu 谱面下载器（仅前端？）
+* 轻量级 pdf 演示
+* b站历史记录搜索
+* html yaml extransfer
+* html compresser, <-> rss
+* B站直播增强
+    * 弹幕区域取消，发送弹幕放在视频下方
+    * f 全屏
+    * 屏蔽无用组件
+* 类 markdown 方言
+    - 换行问题
+    - 部分样式统一
+    - 高亮与黑幕
+    - 双列阅读区支持
+- better markdown formatter
+* 答题网，选择题实时反馈
 * SAVE MY LOCK FILE
+* gaussian blur lib
+* ~~koishi plugin:~~ （koishi 有关计划暂时搁置）
+    - [ ] ~~advanced: wordle game~~
 ## 实物创作灵感
 * 不压耳朵（开槽?）的侧睡枕
 * 甩棍伞

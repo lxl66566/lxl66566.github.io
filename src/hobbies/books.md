@@ -36,7 +36,7 @@ tag:
 ### 有记录
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
-|[我在末世捡到白狐](https://t.me/soushubaa/427) <Badge type="warning" text="爽" />|2023.08.29-<br/>在读|-|
+|[我在末世捡到白狐](https://www.pixiv.net/novel/series/10523577) <Badge type="warning" text="爽" />|2023.08.29-<br/>在读|2h10min|
 |[加速世界](https://www.wenku8.net/book/381.htm)|2023.07.09-<br/>在读|未包括前0.235|
 |[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126)|2023.0[34]-<br/>在读|-|
 |末世之黑暗召唤师 <Badge type="warning" text="爽" />|2023.07.14-<br/>2023.07.31|41h10min|<span class="heimu" title="你知道的太多了">垃圾人妻爽文，</span>后期写得比较水，还好结局发挥不差。世界设定较混乱，没有体系。|
