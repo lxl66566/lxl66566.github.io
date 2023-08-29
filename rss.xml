@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 29 Aug 2023 09:09:17 GMT</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2023 09:09:17 GMT</lastBuildDate>
+    <pubDate>Tue, 29 Aug 2023 17:41:08 GMT</pubDate>
+    <lastBuildDate>Tue, 29 Aug 2023 17:41:08 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -7325,17 +7325,15 @@ Please specify it by one of the following ways:<br>
 <li>剪贴板数据永久保存</li>
 </ul>
 </li>
-<li>B站CC字幕下载脚本</li>
 <li>音乐播放器
 <ul>
 <li>跨平台，多端同步</li>
 <li>自行导入歌曲，支持文件导入与 url导入（下载后可听）</li>
 </ul>
 </li>
-<li>浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）
+<li><s>浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）</s>
 <ul>
-<li>基于 Chromium 内核（出于兼容性考虑），非商用，开源</li>
-<li><strong>高度自定义化</strong></li>
+<li><s>基于 Chromium 内核（出于兼容性考虑），非商用，开源，<strong>高度自定义化</strong></s> 难度过高，暂不考虑</li>
 </ul>
 </li>
 <li>CNM, <s>condition manager with Rust</s>, a git-like distributed version manager
@@ -7346,53 +7344,70 @@ Please specify it by one of the following ways:<br>
 <li>软连接，可在目录外创建虚仓库，指向真实仓库</li>
 </ul>
 </li>
-<li>osu 谱面下载器</li>
 <li>HDL 高阶语言，能将类 Rust 语法的语言编译成 verilog 或 VHDL。</li>
 <li>音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）</li>
 <li>流式分布式的视频软件</li>
 <li>响应式计算机设计与编程（与轮询式相对）</li>
 <li>Android opensource store, package manager</li>
 <li>pdf 无损图片压缩</li>
-<li>轻量级 pdf 演示</li>
-<li>b站历史记录搜索</li>
-<li>B站直播增强
+<li>类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。</li>
+<li>录音机 app，抓住日常的每一个瞬间
 <ul>
-<li>弹幕区域取消，发送弹幕放在视频下方</li>
-<li>f 全屏</li>
+<li>全天录音 to RAM，手动保存重放</li>
 </ul>
 </li>
-<li>类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。</li>
-<li>html yaml extransfer</li>
-<li>html compresser, &lt;-&gt; rss</li>
-<li>录音机 app，抓住日常的每一个瞬间</li>
 <li>lzma 数据库，简易迁移，不依赖特定程序</li>
-<li>rust cli 浏览器书签 &amp; 历史数据库</li>
-<li>类 markdown 方言</li>
-</ul>
-<ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> markdown formatter</label></li>
-</ul>
-<ul>
+<li>浏览器书签 &amp; 历史数据库(rust cli / js)</li>
 <li>better sqlite_zstd</li>
-<li>答题网，选择题实时反馈</li>
 <li>magisk &amp; LSP:
 <ul>
 <li>tg 多选截屏</li>
 <li>bilibili 任意倍速</li>
 </ul>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> <em>usage time recoder</em></label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> <em>MIUI 10s</em></label></li>
-</ul>
-</li>
-<li><s>koishi plugin:</s> （koishi 有关计划暂时搁置）
-<ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> <s>advanced: wordle game</s></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> <em>usage time recoder</em></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> <em>MIUI 10s</em></label></li>
 </ul>
 </li>
 <li>windows electron lib(runtime)</li>
 <li>windows volume locker</li>
+</ul>
+<h3> nodejs &amp; tsjs</h3>
+<ul>
+<li>B站CC字幕下载脚本</li>
+<li>osu 谱面下载器（仅前端？）</li>
+<li>轻量级 pdf 演示</li>
+<li>b站历史记录搜索</li>
+<li>html yaml extransfer</li>
+<li>html compresser, &lt;-&gt; rss</li>
+<li>B站直播增强
+<ul>
+<li>弹幕区域取消，发送弹幕放在视频下方</li>
+<li>f 全屏</li>
+<li>屏蔽无用组件</li>
+</ul>
+</li>
+<li>类 markdown 方言
+<ul>
+<li>换行问题</li>
+<li>部分样式统一</li>
+<li>高亮与黑幕</li>
+<li>双列阅读区支持</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>better markdown formatter</li>
+</ul>
+<ul>
+<li>答题网，选择题实时反馈</li>
 <li>SAVE MY LOCK FILE</li>
+<li>gaussian blur lib</li>
+<li><s>koishi plugin:</s> （koishi 有关计划暂时搁置）
+<ul class="task-list-container">
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> <s>advanced: wordle game</s></label></li>
+</ul>
+</li>
 </ul>
 <h2> 实物创作灵感</h2>
 <ul>
@@ -9648,9 +9663,9 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><a href="https://t.me/soushubaa/427" target="_blank" rel="noopener noreferrer">我在末世捡到白狐</a> </td>
+<td style="text-align:center"><a href="https://www.pixiv.net/novel/series/10523577" target="_blank" rel="noopener noreferrer">我在末世捡到白狐</a> </td>
 <td style="text-align:center">2023.08.29-<br>在读</td>
-<td style="text-align:center">-</td>
+<td style="text-align:center">2h10min</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
