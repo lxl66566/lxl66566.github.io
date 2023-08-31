@@ -11,7 +11,7 @@ tag:
 # VPS
 我与我的 VPS 的故事。
 
-与 VPS 无关的 linux 问题请移步 [linux](../coding/linux.md)
+与 VPS 无关的 linux 问题请移步 [linux](./linux.md)
 ## Price
 |Host|Price|bandwidth|RAM|Storage|Core|
 | :-: | :-: | :-: | :-: | :-: | :-: |

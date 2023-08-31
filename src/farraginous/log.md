@@ -15,13 +15,16 @@ category:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，维护过多）
 :::
 ## 2023
+### 20230831
+- 新增[编程 - vscode](../coding/vscode.md)
+- 迁移 Linux 页面至[文章](../articles)
 ### 20230828
 - 新增 [笔记软件横评](../articles/note.md) 页面
 - 格式化部分文档
 ### 20230820-26
-- 持续更新 [linux](../coding/linux.md) 页面
+- 持续更新 [linux](../articles/linux.md) 页面
 ### 20230808
-* 维护 [Github](../coding/github.md)，[linux](../coding/linux.md)
+* 维护 [Github](../coding/github.md)，[linux](../articles/linux.md)
 * 图表去缩进，减小体积
 ### 20230807
 * 尝试添加 pwa 支持，更改代码行号宽度
@@ -104,7 +107,7 @@ category:
 ### 20230517
 * *VPS* 新增 [安全性](../articles/vps.md#安全性) 内容
 ### 20230514
-* [Linux](../coding/linux.md) 中新增内容
+* [Linux](../articles/linux.md) 中新增内容
 * 网址推荐 中新增 [AI 工具](./recommend_websites.md#ai-工具)
 * 文章新增 [VPS](../articles/vps.md)
 ### 20230510
@@ -117,7 +120,7 @@ category:
 * [文章](../articles/)新增[最小化二进制文件与 dll](../articles/minimize_exe.md)
 * [C++](../coding/Cpp.md)新增[vscode 配置 Qt 开发环境](../coding/Cpp.md#vscode-配置-qt-开发环境)
 ### 20230417
-* [编程](../coding/)新增[Linux](../coding/linux.md)
+* [编程](../coding/)新增[Linux](../articles/linux.md)
 ### 20230412
 * [文章](../articles/) 新增 [设置手机](../articles/mobile_setting.md)
 ### 20230410

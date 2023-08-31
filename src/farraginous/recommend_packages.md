@@ -13,7 +13,7 @@ tag:
 # 软件汇总
 一些好用软件的推荐。
 * 关于 magisk & LSPosed，请移步[设置手机](../articles/mobile_setting.md#magisk)
-* 关于 linux，请移步 [linux](../coding/linux.md#外部包)
+* 关于 linux，请移步 [linux](../articles/linux.md#外部包)
 * 猜你喜欢：[设置电脑](../articles/computer_setting.md)
 
 :::tip 阅读此页前请注意
@@ -141,7 +141,7 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 [关于 Potplayer 设置](../articles/potplayer_setting.md) -->
 ### [mpv](https://mpv.io/)
-轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是我的 mpv 配置文件：
+轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是[我的 mpv 配置文件](https://github.com/lxl66566/my-key-data/blob/main/config/mpv/input.conf)：
 ```
 # C:\Users\<user name>\scoop\persist\mpv\portable_config\input.conf
 d add speed .1

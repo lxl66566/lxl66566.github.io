@@ -17,9 +17,10 @@ category:
 
 ## 经历
 
-1. [设置电脑（windows）](./computer_setting.md)（Archlinux 设置请前往[Linux](../coding/linux.md#设置)）
-2. [设置手机（Android）](./mobile_setting.md)
-3. [设置 VPS](./vps.md)
+1. [(Arch)linux](./linux.md)
+2. [设置电脑（windows）](./computer_setting.md)
+3. [设置手机（Android）](./mobile_setting.md)
+4. [设置 VPS](./vps.md)
 
 ## 教程
 

@@ -7,7 +7,7 @@ tag:
     - 编程语言
 ---
 # TypeScript
-TypeScript 是在 JavaScript 基础上建立的一门语言，新增了类型控制，可以被编译为 JavaScript. 我是激进派，因此本文主要讲 TypeScript；JS 版本 >= ES6.
+TypeScript 是在 JavaScript 基础上建立的一门语言，新增了类型控制，可以被编译为 JavaScript. 我是激进派，因此本文主要讲 TypeScript；JS 版本 >= ES6. ~~没有类型提示编程是真的难受啊，面对着无数的 *any* 翻文档。。有的十年老库还基本没有文档。~~
 
 > JavaScript 是符合 ECMAscript 标准规范的，一门弱类型的 GC 语言，又称 ECMAScript. 浏览器的默认语言。
 ## 环境

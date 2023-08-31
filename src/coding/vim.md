@@ -14,35 +14,7 @@ tag:
 
 开始使用 archlinux 后，我使用 nvim 作为我的默认编辑器。这下也不得不设置了。
 ## 设置(vscode)
-::: details 在 archlinux 上我已经不再使用 vscode
-此处是我对 vim for vscode 的一些设置。在 `C:/Users/<user name>/AppData/Roaming/Code/User/settings.json` 添加即可。路径可在扩展设置中打开。
-```json
-"vim.useSystemClipboard": true,
-"vim.history": 100,
-"explorer.confirmDragAndDrop": false,
-"vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["x"], "after": ["\"","_","x",] },
-    { "before": ["X"], "after": ["\"","_","X",] },
-    { "before": ["("], "after": ["s","(",")","<esc>","h","p","l"] },
-    { "before": ["["], "after": ["s","[","]","<esc>","h","p","l"] },
-    { "before": ["{"], "after": ["s","{","}","<esc>","h","p","l"] },
-],
-"vim.insertModeKeyBindings": [
-    { "before": ["j", "j"], "after": ["<Esc>"] },
-    { "before": ["<C-s>"], "commands": [ "workbench.action.files.save", ] },
-    { "before": ["<C-w>"], "commands": [ "workbench.action.closeActiveEditor", ] },
-    { "before": ["<C-c>"], "commands": ["editor.action.clipboardCopyAction",] },
-],
-"vim.normalModeKeyBindings": [
-    { "before": ["<C-s>"], "commands": [ "workbench.action.files.save", ] },
-    { "before": ["<C-w>"], "commands": [ "workbench.action.closeActiveEditor", ] },
-],
-"vim.normalModeKeyBindingsNonRecursive": [
-    { "before": ["x"], "after": ["\"","_","x",] },
-    { "before": ["X"], "after": ["\"","_","X",] },
-],
-```
-:::
+[此处](https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json)是我对 (vim for) vscode 的一些设置。
 ## 设置(neovim)
 首先基础设置我是照着[从零开始配置 Neovim(Nvim)](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)来的。这篇文章确实不错。
 
@@ -89,17 +61,15 @@ require('neo-tree').setup {
 * `daw` delete a word()
 * `f{char}` search next char
 * `w`,`e`,`W`,`E`,`b` 一些移动光标的操作。前四个都是向后移动，大写的会快一点（空格分隔）。`b` 是向前移动。
-> 我不是很想记它们的具体移动方式。能用就行，但是光标移动确实是 vim 增加效率的很重要的一环。
+  > 我不是很想记它们的具体移动方式。能用就行，但是光标移动确实是 vim 增加效率的很重要的一环。
 * `<C-q>` 进入 visual block，选中区域后使用 `I` 进行多行输入 / 删除。
-    > 哦，这个好像是 vscode vim 插件的特有功能（
+  > 哦，这个好像是 vscode vim 插件的特有功能（
 * 替换：参考[此处](http://yyq123.blogspot.com/2011/10/vim-substitute.html)。。~~感觉不如 vscode ctrl+f~~
 * 加括号：选中括号头位置，`ysw`,`yse`...（不太好用）
 * `vi(` 选中括号内内容，不包括括号本身。`va(` 选中包括括号本身。
 ## 一些想法
 用 vim for vscode 用了一周，感觉有些欠缺，因此进行了一些自定义化。以下阐述我的自定义化的一些构思。
-
-当前需要自定义：
-* visual 下按`(`,`[`等括号类可直接为选中区域添加闭合括号。
+* visual 下按 `(`,`[` 等括号类可直接为选中区域添加闭合括号。
 * 保留非 vim 的 Ctrl 组合键功能，例如复制粘贴等。
 * 删除选中区域时不复制到剪贴板。
 

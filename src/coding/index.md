@@ -34,18 +34,17 @@ tag:
 1. [Github](./github.md)：如何进行最基本的使用
 2. [Git](./Git.md)：版本控制系统
 3. [node.js](./nodejs.md)：js 运行时
-3. [(Arch)linux](./linux.md)：操作系统
 4. [Vim](./vim.md)：文件编辑器
 5. [数据库](./sql.md)：SQL
+## 其他
+1. [算法](./algorithm.md)
+2. [搭建 bot](./bot.md)
+## 杂项
 ### 网站
 一些值得学习的地方，语言无关。
 * [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 * [learnxinyminutes](https://learnxinyminutes.com/)
 * [CS自学指南](https://csdiy.wiki/) & [计算机专业学习路线 - hackway](https://hackway.org/docs/cs/intro)：英文好的话可以看看。
-## 其他
-1. [算法](./algorithm.md)
-2. [搭建 bot](./bot.md)
-## 杂项
 ### 字体
 [top-programming-fonts](https://github.com/hbin/top-programming-fonts/)，随便选。反正我用 Fira Code。
 ## external

@@ -13,7 +13,7 @@ tag:
 
 之后正式使用 archlinux，双系统，windows 只拿来打游戏（galgame & osu stable 地狱兼容）。
 
-在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。VPS 有关问题请移步 [VPS](../articles/vps.md)。
+在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。VPS 有关问题请移步 [VPS](./vps.md)。
 * 更新 ArchWSL：从[此处](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
 ## 安装
 20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，下面[问题区](#遇到的问题)可见一斑。
@@ -69,7 +69,7 @@ umount /mnt/windows
     * pacman：[更新 pacman keyring](#更新-pacman-keyring)
     * yay：疑难解答：[yay 安装问题](#yay-安装问题) | [yay 换源问题](#yay-换源问题) | [yay 权限错误](#yay-权限错误)
 ## 设置
-这里是 *[文章 - 设置电脑](../articles/computer_setting.md)* 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
+这里是 *[文章 - 设置电脑](./computer_setting.md)* 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
 1. 基础 alias
     ```sh
     # fish
@@ -78,7 +78,7 @@ umount /mnt/windows
     ```
 1. [调整 swappiness](https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)) 至 5
 2. 设置 `/etc/fstab`
-    * [挂载 tmpfs](../articles/ramdisk.md)
+    * [挂载 tmpfs](./ramdisk.md)
     * 添加 `noatime` 标识，即不带访问时间 | [ref: archlinuxcn_group](https://t.me/archlinuxcn_group/2900548)
 3. [electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)
 4. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
@@ -224,7 +224,7 @@ alias l="ls -alF --color=auto"
     * 删除函数 / 变量：`-e` == `--erase`
     * fish 皆为函数，alias 也是函数
 ### neovim
-前往 [vim](./vim.md)
+前往 [vim](../coding/vim.md)
 ### [locate](https://man7.org/linux/man-pages/man1/locate.1.html)
 快速搜索。
 ```bash:no-line-numbers
@@ -387,6 +387,7 @@ sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 Windows WSL 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。
 ## external
-2. 了解一下 btrfs（注意时效）：[Linux Btrfs 文件系统使用指南](https://www.mivm.cn/linux-btrfs-usage-guide)
+1. 了解一下 btrfs（注意时效）：[Linux Btrfs 文件系统使用指南](https://www.mivm.cn/linux-btrfs-usage-guide)
 3. [【譯】Manjaro 的爭議](https://blog.origincode.me/manjaro-controversies/)
 4. [Linux fontconfig 的字体匹配机制](https://catcat.cc/post/2020-10-31/)
+5. [btrfs 元数据满了怎么办](https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html)

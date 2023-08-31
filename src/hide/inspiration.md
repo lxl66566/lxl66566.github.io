@@ -29,7 +29,7 @@ tag:
     * 剪贴板数据永久保存<Badge type="tip" text="仅文本数据" />，可手动访问，而应用对剪贴板的访问通过条数来限制。（例：仅能访问最近一条）
 * 音乐播放器
     * 跨平台，多端同步
-    * 自行导入歌曲，支持文件导入与 url导入（下载后可听）
+    * 自行导入歌曲，支持文件导入与 url导入（即音源）
 * ~~浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）~~
     * ~~基于 Chromium 内核（出于兼容性考虑），非商用，开源，**高度自定义化**~~ 难度过高，暂不考虑
 * CNM, ~~condition manager with Rust~~, a git-like distributed version manager
@@ -41,7 +41,7 @@ tag:
 * 音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）
 * 流式分布式的视频软件
 * 响应式计算机设计与编程（与轮询式相对）
-* Android opensource store, package manager
+* Android opensource store, package manager（AUR-like）
 * pdf 无损图片压缩
 * 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 * 录音机 app，抓住日常的每一个瞬间

@@ -25,30 +25,15 @@ export default sidebar({
     },
     {
       text: "经历",
-      children: ["computer_setting.md", "mobile_setting.md", "vps.md"],
+      children: ["linux.md", "computer_setting.md", "mobile_setting.md", "vps.md"],
     },
     {
       text: "教程",
-      children: [
-        "telegram.md",
-        "adb.md",
-        "markdown.md",
-        "vpn.md",
-        "Android_ISA.md",
-        "minimize_exe.md",
-        "cli_compress.md",
-      ],
+      children: ["telegram.md", "adb.md", "markdown.md", "vpn.md", "Android_ISA.md", "minimize_exe.md", "cli_compress.md"],
     },
     {
       text: "推荐",
-      children: [
-        "time_record.md",
-        "track_record.md",
-        "input_method",
-        "external.md",
-        "ramdisk.md",
-        "note.md",
-      ],
+      children: ["time_record.md", "track_record.md", "input_method", "external.md", "ramdisk.md", "note.md"],
     },
   ],
   "/coding/": [
@@ -58,7 +43,7 @@ export default sidebar({
     },
     {
       text: "工具",
-      children: ["github.md", "Git.md", "nodejs.md", "linux.md", "vim.md", "sql.md"],
+      children: ["github.md", "Git.md", "nodejs.md", "vscode.md", "vim.md", "sql.md"],
     },
     {
       text: "其他",
@@ -107,26 +92,12 @@ export default sidebar({
     {
       text: "爱好",
       prefix: "/hobbies/",
-      children: [
-        "rhythm_games.md",
-        "galgame.md",
-        "Minecraft.md",
-        "books.md",
-        "anime.md",
-        "other_games/",
-      ],
+      children: ["rhythm_games.md", "galgame.md", "Minecraft.md", "books.md", "anime.md", "other_games/"],
     },
     {
       text: "杂项",
       prefix: "/farraginous/",
-      children: [
-        "recommend_packages.md",
-        "recommend_websites.md",
-        "college.md",
-        "reciter.md",
-        "learning/",
-        "log.md",
-      ],
+      children: ["recommend_packages.md", "recommend_websites.md", "college.md", "reciter.md", "learning/", "log.md"],
     },
   ],
 });
