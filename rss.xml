@@ -6,15 +6,15 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 29 Aug 2023 17:41:08 GMT</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2023 17:41:08 GMT</lastBuildDate>
+    <pubDate>Thu, 31 Aug 2023 07:28:57 GMT</pubDate>
+    <lastBuildDate>Thu, 31 Aug 2023 07:28:57 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>推荐</category>
+    <category>编程</category>
     <category>教程</category>
+    <category>推荐</category>
     <category>评价</category>
     <category>经历</category>
-    <category>编程</category>
     <category>随笔</category>
     <category>作者</category>
     <category>导航</category>
@@ -24,6 +24,395 @@
     <category>学习</category>
     <category>负面</category>
     <category>爱好</category>
+    <item>
+      <title>linux</title>
+      <link>https://absx.pages.dev/articles/linux.html</link>
+      <guid>https://absx.pages.dev/articles/linux.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">linux</source>
+      <description>linux</description>
+      <category>编程</category>
+      <category>教程</category>
+      <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> linux</h1>
+<p>我最早使用 linux 用的是 <a href="https://github.com/yuk7/ArchWSL" target="_blank" rel="noopener noreferrer">ArchWSL</a> on WSL2，最初是学习用，基本上没啥存在感。</p>
+<p>之后正式使用 archlinux，双系统，windows 只拿来打游戏（galgame &amp; osu stable 地狱兼容）。</p>
+<p>在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。VPS 有关问题请移步 <a href="/articles/vps.html" target="blank">VPS</a>。</p>
+<ul>
+<li>更新 ArchWSL：从<a href="https://github.com/yuk7/wsldl/releases" target="_blank" rel="noopener noreferrer">此处</a>下载 <code>wsldl.exe</code>，改名为 <code>arch.exe</code> 并替换。</li>
+</ul>
+<h2> 安装</h2>
+<p>20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，下面<a href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98">问题区</a>可见一斑。</p>
+<ul>
+<li><a href="https://arch.icekylin.online/" target="_blank" rel="noopener noreferrer">中文教程</a>，讲的确实好，有一些针对中文用户的细节。</li>
+<li>不过还是建议 <a href="https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">archwiki - installation guide</a> 也一起看看，取长补短。</li>
+</ul>
+<p>分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢失数据（安装时我确实失手格掉了全盘数据和分区）。</p>
+<h3> 添加 windows 引导</h3>
+<p>由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 <em>os-prober</em> 自动共存。因此我使用如下方法进行自动检测并添加：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 基础</h2>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/495554731" target="_blank" rel="noopener noreferrer">Linux ls -al 得到的结果代表什么意思？</a></li>
+</ol>
+<h3> <a href="https://linuxhandbook.com/linux-shortcuts/" target="_blank" rel="noopener noreferrer">Terminal shortcuts</a></h3>
+<p><code>&lt;C-a&gt;</code> 代表 <code>Ctrl + a</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">按键</th>
+<th style="text-align:center">执行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;C-a&gt;</code></td>
+<td style="text-align:center">移动光标到最前</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;C-w&gt;</code></td>
+<td style="text-align:center">删除前一个单词</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;C-u&gt;</code></td>
+<td style="text-align:center">清空当前输入</td>
+</tr>
+</tbody>
+</table>
+<h2> 外部包</h2>
+<ul>
+<li>我安装的包（少部分）：
+<ul>
+<li>archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat</li>
+<li>archlinux: 与 archwsl 相同，htop, exfat-utils, <a href="https://github.com/ajeetdsouza/zoxide" target="_blank" rel="noopener noreferrer">zoxide</a>, ncdu, newsboat, namcap, activitywatch-bin</li>
+</ul>
+</li>
+<li>我计划装的包：Joshuto, gparted</li>
+</ul>
+<h2> pacman &amp; AUR Helper</h2>
+<ul>
+<li>请定期 <code>sudo pacman -Syy</code> 更新本地缓存（update），否则可能找不到包。（<s>今日也无事可做</s>）
+<ul>
+<li>也可以直接 <code>yay</code> 或 <code>paru</code> 进行更新</li>
+</ul>
+</li>
+<li>每次修改镜像之后都应该使用 <code>sudo pacman -Syyu</code> 强制更新缓存 (<a href="https://wiki.archlinuxcn.org/wiki/%E9%95%9C%E5%83%8F%E6%BA%90#%E5%BC%BA%E5%88%B6_pacman_%E5%88%B7%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8" target="_blank" rel="noopener noreferrer">ref</a>)。</li>
+<li>yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
+<ul>
+<li>yay 用来下载 AUR 的包（也可以下载官方包），社区维护，不够稳定容易过期，需要代理。</li>
+<li>如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman (<a href="https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63" target="_blank" rel="noopener noreferrer">ref</a>)</li>
+<li>yay 使用系统代理，需要导出 <code>ALL_PROXY</code> 环境变量。否则会出现 Github 源的包无法安装的情况。</li>
+<li>yay 的问题也太多了点。。可以试试 paru。</li>
+</ul>
+</li>
+<li>另一个广泛使用的 AUR Helper 是 <em>paru</em>，使用 rust 编写。
+<ul>
+<li>安装时默认展示 PKGBUILD。</li>
+</ul>
+</li>
+<li>pacman 更换镜像
+</li>
+<li>疑难解答：
+<ul>
+<li>pacman：<a href="#%E6%9B%B4%E6%96%B0-pacman-keyring">更新 pacman keyring</a></li>
+<li>yay：疑难解答：<a href="#yay-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98">yay 安装问题</a> | <a href="#yay-%E6%8D%A2%E6%BA%90%E9%97%AE%E9%A2%98">yay 换源问题</a> | <a href="#yay-%E6%9D%83%E9%99%90%E9%94%99%E8%AF%AF">yay 权限错误</a></li>
+</ul>
+</li>
+</ul>
+<h2> 设置</h2>
+<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
+<ol>
+<li>基础 alias<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5</li>
+<li>设置 <code>/etc/fstab</code>
+<ul>
+<li><a href="/articles/ramdisk.html" target="blank">挂载 tmpfs</a></li>
+<li>添加 <code>noatime</code> 标识，即不带访问时间 | <a href="https://t.me/archlinuxcn_group/2900548" target="_blank" rel="noopener noreferrer">ref: archlinuxcn_group</a></li>
+</ul>
+</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Wayland#Electron" target="_blank" rel="noopener noreferrer">electron 支持</a></li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#SDDM" target="_blank" rel="noopener noreferrer">激活启动时 numlock</a></li>
+<li>设置 pacman：
+<ul>
+<li>将某些不常用的备用包加入 IgnorePkg，例如 <em>chromium</em> | <a href="https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/" target="_blank" rel="noopener noreferrer">ref</a></li>
+<li>更改缓存至 ramdisk （<code>CacheDir</code>）</li>
+</ul>
+</li>
+<li>设置 AUR Helper：
+<ul>
+<li>yay 更改缓存至 tmpfs: <code>yay --builddir /tmp/yay --save</code></li>
+<li><em>很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。</em> <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 <code>clonedir</code> 也挂上同一个 tmpfs，这样就能够解决问题了。<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ul>
+</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
+<li>grub 改等待时间<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ol>
+<h3> 输入法</h3>
+<p>我使用 fcitx5，输入要求为英语，双拼，日语。可以在遇到的问题里找到一些输入法的设置。</p>
+<ol>
+<li>双拼关闭快速输入，默认为<code>；</code>。</li>
+</ol>
+<h3> 设置代理</h3>
+<h4> v2raya</h4>
+<p>v2raya 的质量其实一般，速度比我的 windows V2rayN 用的 <a href="https://xtls.github.io/" target="_blank" rel="noopener noreferrer">Xray 内核</a>差。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后的操作都在网页上进行。使用系统代理端口为 <code>http://127.0.0.1:20172</code>，这个端口带自动分流。</p>
+<p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" target="_blank" rel="noopener noreferrer">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code></p>
+<h4> 使用 windows 代理</h4>
+<p>archwsl 内容</p>
+<details class="hint-container details"><summary>点击展开</summary>
+<p>我在 archwsl 中懒得重复下载，直接使用 windows 代理。<a href="https://zhuanlan.zhihu.com/p/153124468" target="_blank" rel="noopener noreferrer">ref</a></p>
+<p>后来直接写了 <a href="https://github.com/lxl66566/config/blob/archwsl/.config/fish/functions/proxy_con.fish" target="_blank" rel="noopener noreferrer">fish 脚本</a>，自用方便。</p>
+
+</details>
+<p>代理软件需要开启局域网连接。测试时不要使用 <code>ping</code> 指令（其不走代理），用 <code>curl</code>。</p>
+<h3> kde 及其配套设施</h3>
+<p>我使用 kde 作为我的桌面（kde 爆杀 gnome!）。</p>
+<ol>
+<li>enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在<em>系统设置 - 添加快捷键 - 火焰截图</em>，然后手动设置快捷键。</li>
+<li><em>输入设备</em>，将键盘的按键延迟改短。</li>
+<li><em>外观</em>，黑色主题</li>
+<li><em>开关机 - 桌面会话</em>，选择启动为空会话</li>
+<li><em>快捷键</em>，添加应用程序 <em>konsole</em>，设置唤醒快捷键</li>
+<li>关闭通知声音</li>
+<li>输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。</li>
+<li>自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，<s>因为可以通过风扇声判断</s></span> 还有时间格式，无用图标的自定义。</li>
+<li><em>工作区行为 - 锁屏</em>，改锁屏时间。</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#KDE_Plasma_%E7%94%A8%E6%88%B7" target="_blank" rel="noopener noreferrer">设置 numlock 行为</a></li>
+</ol>
+<h2> bash</h2>
+<p>若使用 <code>chsh</code> 切换了其他的 shell，则 <code>.bashrc</code> &amp; <code>.bash_profile</code> 将失效。所以最好装好系统就先装 shell.
+使用：</p>
+<details><summary>use zsh or fishshell, not bash</summary>
+<ul>
+<li>~/.bashrc（仅含手动编辑）:<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+<li>termux 的 bash 配置文件位置比较奇怪，在 <code>~/../usr/etc/bash.bashrc</code>。</li>
+</ul>
+</details>
+<p>可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/N 选择器</a>
+</li>
+</ul>
+<h2> 包使用</h2>
+<p>我安装的：<a href="#%E5%A4%96%E9%83%A8%E5%8C%85">外部包</a></p>
+<h3> fishshell</h3>
+<p>fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。</p>
+<ul>
+<li>set fish as default
+<blockquote>
+<p>不建议通过chsh更换shell,你可以使用Konsole(如果是KDE)的profile改shell——<a href="https://t.me/archlinuxcn_group/2755963" target="_blank" rel="noopener noreferrer">@MkfsSion</a></p>
+</blockquote>
+</li>
+<li><code>~/.config/fish/config.fish</code>：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>我的习惯：</li>
+</ul>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。
+<ul>
+<li>我喜欢使用 <code>set -Ux ...</code>，这样开机就能自动加载</li>
+</ul>
+</li>
+<li>函数：使用 function 新增函数后，可以使用 <code>funcsave &lt;function&gt;</code> 保存到配置文件夹下以便修改与备份，修改后需要重新加载 fish：<code>. ~/.config/fish/config.fish</code>。（用不惯 <code>funced</code> 的交互式编辑。。）
+<ul>
+<li>删除函数 / 变量：<code>-e</code> == <code>--erase</code></li>
+<li>fish 皆为函数，alias 也是函数</li>
+</ul>
+</li>
+</ul>
+<h3> neovim</h3>
+<p>前往 <a href="/coding/vim.html" target="blank">vim</a></p>
+<h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
+<p>快速搜索。</p>
+<div class="language-bash" data-ext="sh"></div><h3> <a href="https://www.jianshu.com/p/a3aa6b01b2e1" target="_blank" rel="noopener noreferrer">lsof</a></h3>
+<p>umount 的时候用来查占用很好用。</p>
+<h3> tmux</h3>
+<blockquote>
+<p>tmux 在不使用图形界面或有恢复 shell 需求时比较好用。</p>
+</blockquote>
+<p>是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起。</p>
+<ul>
+<li>配置：<a href="https://github.com/lxl66566/config/blob/archwsl/.tmux.conf" target="_blank" rel="noopener noreferrer"><code>~/.tmux.conf</code></a>，初始时没有，需要自己创建。编辑后需要重新载入：<code>tmux source ~/.tmux.conf</code> or <code>prefix</code>+<code>:source ~/.tmux.conf</code></li>
+<li>插件：不要用默认的插件管理器。。不好用。</li>
+<li>copy-mode(vi): <code>Space</code> 进入选择，<code>Enter</code> 复制。（我觉得是假的 vi mode）</li>
+<li>默认启动 (<a href="http://129.226.226.195/post/28785.html" target="_blank" rel="noopener noreferrer">bash ref</a> | <a href="https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched" target="_blank" rel="noopener noreferrer">zsh ref</a> <a href="https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell" target="_blank" rel="noopener noreferrer">ref2</a>)：
+</li>
+</ul>
+<h3> <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a></h3>
+<blockquote>
+<p>在尝试三大 shell 后我选择 fish 而不是 zsh.</p>
+</blockquote>
+<details><summary>archived</summary><p>
+</p><p>ref: <a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></p>
+<ul>
+<li>安装 zsh 时会问 set default shell, <code>y</code> 即可</li>
+<li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
+</ul>
+<p></p></details>
+<h2> trick</h2>
+<p>可能不是最简，欢迎指正</p>
+<h3> 删除所有目录，排除文件</h3>
+<p>众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 <code>rm *</code>。若我要反过来，只删除目录而排除文件呢？</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 遇到的问题</h2>
+<p><strong>按时间倒序</strong>。</p>
+<h3> nvim 剪贴板问题</h3>
+<p>我在 <code>option.lua</code> 中有设置 <code>vim.opt.clipboard = 'unnamedplus'</code>，之前运作挺好，但自从换了 X11 以后就不能再复制。</p>
+<p>解法也很简单，安装 <code>xclip</code> 即可。</p>
+<h3> yay 权限错误</h3>
+<p>使用 <code>yay</code> 安装 <code>wine-stable</code> 时出现了一些问题。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中大多数是权限错误。但是我用 paru 安装就可以成功安装，有没有可能是 fakeroot 的问题(?) 附带安装的报错：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 输入法不显示</h3>
+<p>在<a href="#%E4%BF%AE%E5%A4%8D-%E9%87%8D%E8%A3%85-ubuntu">安装了 kubuntu</a> 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。</p>
+<p>解法是 <code>sudo apt install $(check-language-support)</code>。然后注销，再 login 就有输入法了。</p>
+<h3> 日文输入法</h3>
+<p>需要安装日文输入法，去 archwiki 日语页面看，选择了 <code>mozc</code>。然后我就直接 <code>yay -S mozc</code> 了，，装是装了，然而没法使用。。</p>
+<p>后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是<code>fcitx5-mozc-ut</code>）。然后就没啥问题了。</p>
+<blockquote>
+<p><s>吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了AUR 的不便。</s></p>
+</blockquote>
+<h3> 修复（重装）ubuntu</h3>
+<p>在别人的电脑上<s>乱搞</s>，装了 intel 核显驱动然后没有重启就 <code>sudo apt install vim</code>（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 <code>sudo reboot</code>，再次开机就内核加载失败了。。</p>
+<p>然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，<code>iwconfig</code> or <code>ls /sys/class/net</code> 只显示 <code>lo</code>，也就是说找不到网卡了。。那没网我能干啥，<s>vi 进去修吗？</s></p>
+<p>还好没啥重要数据。授权后重装了 kubuntu。然后发现 kde 爆杀 gnome（二嘲）。</p>
+<p>有一说一，我不喜欢 ubuntu 这样臃肿的系统。<s><a href="https://t.me/archlinuxcn_group/2896194" target="_blank" rel="noopener noreferrer">其他观点</a>，看上下文</s> 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。</p>
+<h3> 中文设置问题</h3>
+<p>在语言中设置了中文，重启后 kde 有部分 ui 变为英文。</p>
+<p>原因：更改 <code>/etc/locale.gen</code> 后没有运行 <code>sudo locale-gen</code>。运行即可。</p>
+<h3> yay 换源问题</h3>
+<p>刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：<code>yay --aururl "https://..." --save</code>），发现用不了后换成了中科大源，结果报错：</p>
+<blockquote>
+<p>-&gt; 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br>
+* response decoding failed: invalid character '&lt;' looking for beginning of value</p>
+</blockquote>
+<p>并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">.</a></p><a class="footnote-anchor" id="footnote-ref1">
+<p>之后发现，在 <code>~/.config/yay/config.json</code> 中有一个 <code>aurrpcurl</code> 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 <code>yay --aururl "https://aur.archlinux.org" --save</code>，问题得解。如果一次不行就两次，一定能解(?)。</p>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> umount failed</h3>
+<p><code>sudo umount /mnt/windows</code>，提示</p>
+<blockquote>
+<p>/mnt/windows: 目标忙</p>
+</blockquote>
+<p>估计有莫名奇妙的软件在占用。直接 <code>lsof /mnt/windows</code> 查占用，然后再 <code>kill -9 &lt;PID&gt;</code> 强关。</p>
+<h3> Windows 字体问题</h3>
+<p><strong>未解决</strong>。</p>
+<p>根据<a href="https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#%E5%AE%89%E8%A3%85-windows-%E5%AD%97%E4%BD%93" target="_blank" rel="noopener noreferrer">教程</a>复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：</p>
+<blockquote>
+<p>cp: 对 './yuminl.ttf' 调用 stat 失败: 没有那个文件或目录</p>
+</blockquote>
+<p>后来使用 <code>yay -S ttf-ms-win11-auto-zh_cn </code> 安装字体也失败，中间报 warning 一大堆。</p>
+<p>没辙，暂时用 U 盘拷吧。</p>
+<h3> yay 安装问题</h3>
+<p>使用 <code>sudo pacman -S yay</code> 时一直报错，<code>signature is unknown trust</code> 类似的。怀疑是 pacman-keyring 问题，去前面 <a href="#%E6%9B%B4%E6%96%B0-pacman-keyring">更新 pacman-keyring</a> 试了好久，都不行。</p>
+<p>后面看教程，发现需要先安装 cn 源中的签名：<code>sudo pacman -S archlinuxcn-keyring</code>，然后才能正常使用。。（因为 pacman 用的是 archlinuxcn 源）</p>
+<h3> NetworkManager warning</h3>
+<p>设置自启服务 <code>systemctl enable --now NetworkManager</code> 时报错：</p>
+<blockquote>
+<p>... iwlwifi ... WRT: invalid buffer destination</p>
+</blockquote>
+<p>不过后面 <code>systemctl status NetworkManager</code> 发现服务已经启动了，也就没管了（所以问题还是没解决的，然而图形界面后开机自启看不到报错了）</p>
+<h3> 挂载出错</h3>
+<p>非常低级的错误。。挂载时打错了指令，导致不同的分区被挂载到了同一个位置。不过检查得早，没有继续下一步就发现了问题。</p>
+<p>然后重新挂载，后来到 <em>生成 fstab 文件</em> 的时候又发现了怪事：<code>genfstab -U /mnt &gt; /mnt/etc/fstab</code> 输出了一大堆东西，我读了一下，原来把我挂载时做的所有操作（包括错误部分）都记录进去了。于是手动删除了冗余，后续重启工作正常。</p>
+<p>这个文件用于指示开机挂载。包括后来挂内存盘也是从这里改。</p>
+<h3> 分区格式化</h3>
+<p>使用 <code>cfdisk</code> 分好区，需要分别为每个分区进行格式化。然而我使用 nvme 盘而看的 sata 指令，对硬盘格式化而非对分区进行格式化（错误示范：<code>mkfs.vfat /dev/nvme1n1</code>），报错：</p>
+<blockquote>
+<p>Partitions or virtual mapping on device, not making file system. (use -I to override)</p>
+</blockquote>
+<p>然后尝试了 <code>-I</code>，结果分区全没了；对着 <code>nvme1n1</code> <code>mkswap</code>，分区又炸了（全盘格成了 swap）。最后才发现格式化是分区操作，而不是硬盘操作。。</p>
+<h3> 更新 pacman keyring</h3>
+<p>遇到问题：使用 pacman 安装时报错</p>
+<blockquote>
+<p>error: python-cairo: signature from "Caleb Maclennan <a href="mailto:alerque@archlinux.org">alerque@archlinux.org</a>" is unknown trust</p>
+</blockquote>
+<ol>
+<li>尝试执行 <code>pacman-key --refresh-keys</code>，但是效率感人</li>
+<li><a href="https://www.reddit.com/r/archlinux/comments/sorhb1/how_long_does_a_pacmankey_refreshkeys_take/" target="_blank" rel="noopener noreferrer">据此所述</a>：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>然而没什么软用，还是报相同错误</li>
+<li>更新 <code>archlinux-keyring</code> 本身：<code>sudo pacman -Sy archlinux-keyring</code>，问题解决</li>
+</ol>
+<h3> sed 语法</h3>
+<p>sed 正则表达式的 <code>{}</code> 需要转义 <code>\{\}</code> 。。。。。。</p>
+<h3> <a href="https://bbs.archlinuxcn.org/viewtopic.php?id=13402" target="_blank" rel="noopener noreferrer">libcuda.so.1 is not a symbolic link</a></h3>
+<p>Windows WSL 的锅，<a href="https://github.com/microsoft/WSL/issues/5548" target="_blank" rel="noopener noreferrer">解法</a>，但还有问题残留。</p>
+<h2> external</h2>
+<ol>
+<li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
+<li><a href="https://blog.origincode.me/manjaro-controversies/" target="_blank" rel="noopener noreferrer">【譯】Manjaro 的爭議</a></li>
+<li><a href="https://catcat.cc/post/2020-10-31/" target="_blank" rel="noopener noreferrer">Linux fontconfig 的字体匹配机制</a></li>
+<li><a href="https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html" target="_blank" rel="noopener noreferrer">btrfs 元数据满了怎么办</a></li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>参考<a href="../article/mobile_setting#mipad-5">刷机</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>VSCode</title>
+      <link>https://absx.pages.dev/coding/vscode.html</link>
+      <guid>https://absx.pages.dev/coding/vscode.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">VSCode</source>
+      <description>VSCode</description>
+      <category>编程</category>
+      <category>教程</category>
+      <pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> VSCode</h1>
+<div class="subtitle">——neovim 死里配，不如 vscode 同步一根毛</div>
+<p>我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实强大且开箱即用。</p>
+<p>在 linux 端我曾尝试抛弃 vscode，转向 neovim，但是几天后即放弃。</p>
+<h2> 使用</h2>
+<p>在 <em>设置</em> 页右上角可以 <code>打开设置（json）</code>，我经常需要直接编辑配置文件。</p>
+<h3> 快捷键</h3>
+<p>这里是我比较常用的快捷键。</p>
+<ul>
+<li><code>Ctrl + ,</code>：打开设置</li>
+<li><code>Ctrl + r</code>（资源管理器窗口）：选择打开最近项目</li>
+<li><code>Ctrl + p</code>：选择打开文件</li>
+<li><code>Ctrl + Shift + p</code>：操作面板</li>
+</ul>
+<h2> 插件</h2>
+<p>插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里会放出我使用的插件。</p>
+<ul>
+<li>通用：
+<ul>
+<li>AI 代码补全（只需其一）：<em>Codeium...</em> | <em>Tabnine...</em></li>
+<li>更好的警告：<em>Error Lens</em>，<em>SonarLint</em></li>
+<li>轻量级 Git 可视化：<em>Git Graph</em></li>
+<li>代码格式化：<em>Prettier - Code formatter</em></li>
+<li>编辑器：<em>Vim</em></li>
+</ul>
+</li>
+<li>markdown：<em>Markdown Preview Enhanced</em></li>
+<li>前端：<em>Auto Rename Tag</em>，<em>ESLint</em></li>
+<li>C++：<em>clangd</em></li>
+<li>python：<em>Black Formatter</em>，<em>isort</em>，<em>Ruff</em></li>
+<li>rust：<em>Cargo</em>，<em>cargo-crate-completer</em>，<em>Even Better TOML</em>，<em>rust-analyzer</em></li>
+<li>java：<em>Language Support for Java(TM) by Red Hat</em>，<em>Test Runner for Java</em></li>
+<li>kotlin：<em>Kotlin Language</em>，<em>vscode-runner</em></li>
+<li>数据库：<em>SQLite Viewer</em></li>
+<li>其他：<em>Chinese (Simplified)...</em>，<em>CodeSnap</em></li>
+</ul>
+<h2> feature</h2>
+<p>vscode 的特色：</p>
+<ul>
+<li>前文的插件系统不再赘述</li>
+<li><strong>设置同步</strong>，可以瞬间在其他平台搭好最适合自己的开发环境。（这也是小标题的由来）</li>
+<li>集成全文搜索；linux 下需要自己 <code>find</code> / <code>grep</code></li>
+<li>集成 git 图形化界面，虽说我不用且功能不多，但是对不会用 git 的新手非常友好</li>
+<li>多光标支持</li>
+</ul>
+<h2> 其他评价</h2>
+<ul>
+<li>vscode 的可自定义程度还不够高</li>
+<li>有一些官方插件太臃肿了（例如 <em>python</em>，<em>C/C++</em>）</li>
+<li>没法控制插件行为和权限
+<ul>
+<li>（比如某个看似没啥用的插件向我的 C 盘写入了 6GB 的缓存，说的就是你，<em>SonarLint</em>！）</li>
+<li>（比如 java 的插件天天申请公共网络访问权限）</li>
+</ul>
+</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>笔记软件横评</title>
       <link>https://absx.pages.dev/articles/note.html</link>
@@ -402,10 +791,15 @@ npm ERR! This command does not support workspaces.</p>
 <li><a href="/coding/github.html" target="blank">Github</a>：如何进行最基本的使用</li>
 <li><a href="/coding/Git.html" target="blank">Git</a>：版本控制系统</li>
 <li><a href="/coding/nodejs.html" target="blank">node.js</a>：js 运行时</li>
-<li><a href="/coding/linux.html" target="blank">(Arch)linux</a>：操作系统</li>
 <li><a href="/coding/vim.html" target="blank">Vim</a>：文件编辑器</li>
 <li><a href="/coding/sql.html" target="blank">数据库</a>：SQL</li>
 </ol>
+<h2> 其他</h2>
+<ol>
+<li><a href="/coding/algorithm.html" target="blank">算法</a></li>
+<li><a href="/coding/bot.html" target="blank">搭建 bot</a></li>
+</ol>
+<h2> 杂项</h2>
 <h3> 网站</h3>
 <p>一些值得学习的地方，语言无关。</p>
 <ul>
@@ -413,12 +807,6 @@ npm ERR! This command does not support workspaces.</p>
 <li><a href="https://learnxinyminutes.com/" target="_blank" rel="noopener noreferrer">learnxinyminutes</a></li>
 <li><a href="https://csdiy.wiki/" target="_blank" rel="noopener noreferrer">CS自学指南</a> &amp; <a href="https://hackway.org/docs/cs/intro" target="_blank" rel="noopener noreferrer">计算机专业学习路线 - hackway</a>：英文好的话可以看看。</li>
 </ul>
-<h2> 其他</h2>
-<ol>
-<li><a href="/coding/algorithm.html" target="blank">算法</a></li>
-<li><a href="/coding/bot.html" target="blank">搭建 bot</a></li>
-</ol>
-<h2> 杂项</h2>
 <h3> 字体</h3>
 <p><a href="https://github.com/hbin/top-programming-fonts/" target="_blank" rel="noopener noreferrer">top-programming-fonts</a>，随便选。反正我用 Fira Code。</p>
 <h2> external</h2>
@@ -442,6 +830,8 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20230828</h3>
+<p>一只隐形的蚊子在蚊帐里，太致命了</p>
 <h3> 20230826</h3>
 <p>拥有对政治和经济的基础判断，投资黄金就不容易亏。</p>
 <hr>
@@ -994,7 +1384,8 @@ npm ERR! This command does not support workspaces.</p>
 </ol>
 <h2> 经历</h2>
 <ol>
-<li><a href="/articles/computer_setting.html" target="blank">设置电脑（windows）</a>（Archlinux 设置请前往<a href="/coding/linux.html#%E8%AE%BE%E7%BD%AE" target="blank">Linux</a>）</li>
+<li><a href="/articles/linux.html" target="blank">(Arch)linux</a></li>
+<li><a href="/articles/computer_setting.html" target="blank">设置电脑（windows）</a></li>
 <li><a href="/articles/mobile_setting.html" target="blank">设置手机（Android）</a></li>
 <li><a href="/articles/vps.html" target="blank">设置 VPS</a></li>
 </ol>
@@ -2423,7 +2814,7 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
       <pubDate>Sun, 14 May 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> VPS</h1>
 <p>我与我的 VPS 的故事。</p>
-<p>与 VPS 无关的 linux 问题请移步 <a href="/coding/linux.html" target="blank">linux</a></p>
+<p>与 VPS 无关的 linux 问题请移步 <a href="/articles/linux.html" target="blank">linux</a></p>
 <h2> Price</h2>
 <table>
 <thead>
@@ -3648,327 +4039,6 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 ]]></content:encoded>
     </item>
     <item>
-      <title>linux</title>
-      <link>https://absx.pages.dev/coding/linux.html</link>
-      <guid>https://absx.pages.dev/coding/linux.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">linux</source>
-      <description>linux</description>
-      <category>编程</category>
-      <category>教程</category>
-      <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> linux</h1>
-<p>我最早使用 linux 用的是 <a href="https://github.com/yuk7/ArchWSL" target="_blank" rel="noopener noreferrer">ArchWSL</a> on WSL2，最初是学习用，基本上没啥存在感。</p>
-<p>之后正式使用 archlinux，双系统，windows 只拿来打游戏（galgame &amp; osu stable 地狱兼容）。</p>
-<p>在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。VPS 有关问题请移步 <a href="/articles/vps.html" target="blank">VPS</a>。</p>
-<ul>
-<li>更新 ArchWSL：从<a href="https://github.com/yuk7/wsldl/releases" target="_blank" rel="noopener noreferrer">此处</a>下载 <code>wsldl.exe</code>，改名为 <code>arch.exe</code> 并替换。</li>
-</ul>
-<h2> 安装</h2>
-<p>20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，下面<a href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98">问题区</a>可见一斑。</p>
-<ul>
-<li><a href="https://arch.icekylin.online/" target="_blank" rel="noopener noreferrer">中文教程</a>，讲的确实好，有一些针对中文用户的细节。</li>
-<li>不过还是建议 <a href="https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">archwiki - installation guide</a> 也一起看看，取长补短。</li>
-</ul>
-<p>分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢失数据（安装时我确实失手格掉了全盘数据和分区）。</p>
-<h3> 添加 windows 引导</h3>
-<p>由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 <em>os-prober</em> 自动共存。因此我使用如下方法进行自动检测并添加：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 基础</h2>
-<ol>
-<li><a href="https://zhuanlan.zhihu.com/p/495554731" target="_blank" rel="noopener noreferrer">Linux ls -al 得到的结果代表什么意思？</a></li>
-</ol>
-<h3> <a href="https://linuxhandbook.com/linux-shortcuts/" target="_blank" rel="noopener noreferrer">Terminal shortcuts</a></h3>
-<p><code>&lt;C-a&gt;</code> 代表 <code>Ctrl + a</code>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">按键</th>
-<th style="text-align:center">执行</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>&lt;C-a&gt;</code></td>
-<td style="text-align:center">移动光标到最前</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;C-w&gt;</code></td>
-<td style="text-align:center">删除前一个单词</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;C-u&gt;</code></td>
-<td style="text-align:center">清空当前输入</td>
-</tr>
-</tbody>
-</table>
-<h2> 外部包</h2>
-<ul>
-<li>我安装的包（少部分）：
-<ul>
-<li>archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat</li>
-<li>archlinux: 与 archwsl 相同，htop, exfat-utils, <a href="https://github.com/ajeetdsouza/zoxide" target="_blank" rel="noopener noreferrer">zoxide</a>, ncdu, newsboat, namcap, activitywatch-bin</li>
-</ul>
-</li>
-<li>我计划装的包：Joshuto, gparted</li>
-</ul>
-<h2> pacman &amp; AUR Helper</h2>
-<ul>
-<li>请定期 <code>sudo pacman -Syy</code> 更新本地缓存（update），否则可能找不到包。（<s>今日也无事可做</s>）
-<ul>
-<li>也可以直接 <code>yay</code> 或 <code>paru</code> 进行更新</li>
-</ul>
-</li>
-<li>每次修改镜像之后都应该使用 <code>sudo pacman -Syyu</code> 强制更新缓存 (<a href="https://wiki.archlinuxcn.org/wiki/%E9%95%9C%E5%83%8F%E6%BA%90#%E5%BC%BA%E5%88%B6_pacman_%E5%88%B7%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8" target="_blank" rel="noopener noreferrer">ref</a>)。</li>
-<li>yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
-<ul>
-<li>yay 用来下载 AUR 的包（也可以下载官方包），社区维护，不够稳定容易过期，需要代理。</li>
-<li>如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman (<a href="https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63" target="_blank" rel="noopener noreferrer">ref</a>)</li>
-<li>yay 使用系统代理，需要导出 <code>ALL_PROXY</code> 环境变量。否则会出现 Github 源的包无法安装的情况。</li>
-<li>yay 的问题也太多了点。。可以试试 paru。</li>
-</ul>
-</li>
-<li>另一个广泛使用的 AUR Helper 是 <em>paru</em>，使用 rust 编写。
-<ul>
-<li>安装时默认展示 PKGBUILD。</li>
-</ul>
-</li>
-<li>pacman 更换镜像
-</li>
-<li>疑难解答：
-<ul>
-<li>pacman：<a href="#%E6%9B%B4%E6%96%B0-pacman-keyring">更新 pacman keyring</a></li>
-<li>yay：疑难解答：<a href="#yay-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98">yay 安装问题</a> | <a href="#yay-%E6%8D%A2%E6%BA%90%E9%97%AE%E9%A2%98">yay 换源问题</a> | <a href="#yay-%E6%9D%83%E9%99%90%E9%94%99%E8%AF%AF">yay 权限错误</a></li>
-</ul>
-</li>
-</ul>
-<h2> 设置</h2>
-<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
-<ol>
-<li>基础 alias<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5</li>
-<li>设置 <code>/etc/fstab</code>
-<ul>
-<li><a href="/articles/ramdisk.html" target="blank">挂载 tmpfs</a></li>
-<li>添加 <code>noatime</code> 标识，即不带访问时间 | <a href="https://t.me/archlinuxcn_group/2900548" target="_blank" rel="noopener noreferrer">ref: archlinuxcn_group</a></li>
-</ul>
-</li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Wayland#Electron" target="_blank" rel="noopener noreferrer">electron 支持</a></li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#SDDM" target="_blank" rel="noopener noreferrer">激活启动时 numlock</a></li>
-<li>设置 pacman：
-<ul>
-<li>将某些不常用的备用包加入 IgnorePkg，例如 <em>chromium</em> | <a href="https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/" target="_blank" rel="noopener noreferrer">ref</a></li>
-<li>更改缓存至 ramdisk （<code>CacheDir</code>）</li>
-</ul>
-</li>
-<li>设置 AUR Helper：
-<ul>
-<li>yay 更改缓存至 tmpfs: <code>yay --builddir /tmp/yay --save</code></li>
-<li><em>很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。</em> <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 <code>clonedir</code> 也挂上同一个 tmpfs，这样就能够解决问题了。<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-</li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
-<li>grub 改等待时间<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ol>
-<h3> 输入法</h3>
-<p>我使用 fcitx5，输入要求为英语，双拼，日语。可以在遇到的问题里找到一些输入法的设置。</p>
-<ol>
-<li>双拼关闭快速输入，默认为<code>；</code>。</li>
-</ol>
-<h3> 设置代理</h3>
-<h4> v2raya</h4>
-<p>v2raya 的质量其实一般，速度比我的 windows V2rayN 用的 <a href="https://xtls.github.io/" target="_blank" rel="noopener noreferrer">Xray 内核</a>差。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后的操作都在网页上进行。使用系统代理端口为 <code>http://127.0.0.1:20172</code>，这个端口带自动分流。</p>
-<p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" target="_blank" rel="noopener noreferrer">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code></p>
-<h4> 使用 windows 代理</h4>
-<p>archwsl 内容</p>
-<details class="hint-container details"><summary>点击展开</summary>
-<p>我在 archwsl 中懒得重复下载，直接使用 windows 代理。<a href="https://zhuanlan.zhihu.com/p/153124468" target="_blank" rel="noopener noreferrer">ref</a></p>
-<p>后来直接写了 <a href="https://github.com/lxl66566/config/blob/archwsl/.config/fish/functions/proxy_con.fish" target="_blank" rel="noopener noreferrer">fish 脚本</a>，自用方便。</p>
-
-</details>
-<p>代理软件需要开启局域网连接。测试时不要使用 <code>ping</code> 指令（其不走代理），用 <code>curl</code>。</p>
-<h3> kde 及其配套设施</h3>
-<p>我使用 kde 作为我的桌面（kde 爆杀 gnome!）。</p>
-<ol>
-<li>enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在<em>系统设置 - 添加快捷键 - 火焰截图</em>，然后手动设置快捷键。</li>
-<li><em>输入设备</em>，将键盘的按键延迟改短。</li>
-<li><em>外观</em>，黑色主题</li>
-<li><em>开关机 - 桌面会话</em>，选择启动为空会话</li>
-<li><em>快捷键</em>，添加应用程序 <em>konsole</em>，设置唤醒快捷键</li>
-<li>关闭通知声音</li>
-<li>输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。</li>
-<li>自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，<s>因为可以通过风扇声判断</s></span> 还有时间格式，无用图标的自定义。</li>
-<li><em>工作区行为 - 锁屏</em>，改锁屏时间。</li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#KDE_Plasma_%E7%94%A8%E6%88%B7" target="_blank" rel="noopener noreferrer">设置 numlock 行为</a></li>
-</ol>
-<h2> bash</h2>
-<p>若使用 <code>chsh</code> 切换了其他的 shell，则 <code>.bashrc</code> &amp; <code>.bash_profile</code> 将失效。所以最好装好系统就先装 shell.
-使用：</p>
-<details><summary>use zsh or fishshell, not bash</summary>
-<ul>
-<li>~/.bashrc（仅含手动编辑）:<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
-<li>termux 的 bash 配置文件位置比较奇怪，在 <code>~/../usr/etc/bash.bashrc</code>。</li>
-</ul>
-</details>
-<p>可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。</p>
-<ul>
-<li><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/N 选择器</a>
-</li>
-</ul>
-<h2> 包使用</h2>
-<p>我安装的：<a href="#%E5%A4%96%E9%83%A8%E5%8C%85">外部包</a></p>
-<h3> fishshell</h3>
-<p>fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。</p>
-<ul>
-<li>set fish as default
-<blockquote>
-<p>不建议通过chsh更换shell,你可以使用Konsole(如果是KDE)的profile改shell——<a href="https://t.me/archlinuxcn_group/2755963" target="_blank" rel="noopener noreferrer">@MkfsSion</a></p>
-</blockquote>
-</li>
-<li><code>~/.config/fish/config.fish</code>：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>我的习惯：</li>
-</ul>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。
-<ul>
-<li>我喜欢使用 <code>set -Ux ...</code>，这样开机就能自动加载</li>
-</ul>
-</li>
-<li>函数：使用 function 新增函数后，可以使用 <code>funcsave &lt;function&gt;</code> 保存到配置文件夹下以便修改与备份，修改后需要重新加载 fish：<code>. ~/.config/fish/config.fish</code>。（用不惯 <code>funced</code> 的交互式编辑。。）
-<ul>
-<li>删除函数 / 变量：<code>-e</code> == <code>--erase</code></li>
-<li>fish 皆为函数，alias 也是函数</li>
-</ul>
-</li>
-</ul>
-<h3> neovim</h3>
-<p>前往 <a href="/coding/vim.html" target="blank">vim</a></p>
-<h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
-<p>快速搜索。</p>
-<div class="language-bash" data-ext="sh"></div><h3> <a href="https://www.jianshu.com/p/a3aa6b01b2e1" target="_blank" rel="noopener noreferrer">lsof</a></h3>
-<p>umount 的时候用来查占用很好用。</p>
-<h3> tmux</h3>
-<blockquote>
-<p>tmux 在不使用图形界面或有恢复 shell 需求时比较好用。</p>
-</blockquote>
-<p>是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起。</p>
-<ul>
-<li>配置：<a href="https://github.com/lxl66566/config/blob/archwsl/.tmux.conf" target="_blank" rel="noopener noreferrer"><code>~/.tmux.conf</code></a>，初始时没有，需要自己创建。编辑后需要重新载入：<code>tmux source ~/.tmux.conf</code> or <code>prefix</code>+<code>:source ~/.tmux.conf</code></li>
-<li>插件：不要用默认的插件管理器。。不好用。</li>
-<li>copy-mode(vi): <code>Space</code> 进入选择，<code>Enter</code> 复制。（我觉得是假的 vi mode）</li>
-<li>默认启动 (<a href="http://129.226.226.195/post/28785.html" target="_blank" rel="noopener noreferrer">bash ref</a> | <a href="https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched" target="_blank" rel="noopener noreferrer">zsh ref</a> <a href="https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell" target="_blank" rel="noopener noreferrer">ref2</a>)：
-</li>
-</ul>
-<h3> <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a></h3>
-<blockquote>
-<p>在尝试三大 shell 后我选择 fish 而不是 zsh.</p>
-</blockquote>
-<details><summary>archived</summary><p>
-</p><p>ref: <a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></p>
-<ul>
-<li>安装 zsh 时会问 set default shell, <code>y</code> 即可</li>
-<li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
-</ul>
-<p></p></details>
-<h2> trick</h2>
-<p>可能不是最简，欢迎指正</p>
-<h3> 删除所有目录，排除文件</h3>
-<p>众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 <code>rm *</code>。若我要反过来，只删除目录而排除文件呢？</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 遇到的问题</h2>
-<p><strong>按时间倒序</strong>。</p>
-<h3> nvim 剪贴板问题</h3>
-<p>我在 <code>option.lua</code> 中有设置 <code>vim.opt.clipboard = 'unnamedplus'</code>，之前运作挺好，但自从换了 X11 以后就不能再复制。</p>
-<p>解法也很简单，安装 <code>xclip</code> 即可。</p>
-<h3> yay 权限错误</h3>
-<p>使用 <code>yay</code> 安装 <code>wine-stable</code> 时出现了一些问题。</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中大多数是权限错误。但是我用 paru 安装就可以成功安装，有没有可能是 fakeroot 的问题(?) 附带安装的报错：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 输入法不显示</h3>
-<p>在<a href="#%E4%BF%AE%E5%A4%8D-%E9%87%8D%E8%A3%85-ubuntu">安装了 kubuntu</a> 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。</p>
-<p>解法是 <code>sudo apt install $(check-language-support)</code>。然后注销，再 login 就有输入法了。</p>
-<h3> 日文输入法</h3>
-<p>需要安装日文输入法，去 archwiki 日语页面看，选择了 <code>mozc</code>。然后我就直接 <code>yay -S mozc</code> 了，，装是装了，然而没法使用。。</p>
-<p>后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是<code>fcitx5-mozc-ut</code>）。然后就没啥问题了。</p>
-<blockquote>
-<p><s>吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了AUR 的不便。</s></p>
-</blockquote>
-<h3> 修复（重装）ubuntu</h3>
-<p>在别人的电脑上<s>乱搞</s>，装了 intel 核显驱动然后没有重启就 <code>sudo apt install vim</code>（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 <code>sudo reboot</code>，再次开机就内核加载失败了。。</p>
-<p>然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，<code>iwconfig</code> or <code>ls /sys/class/net</code> 只显示 <code>lo</code>，也就是说找不到网卡了。。那没网我能干啥，<s>vi 进去修吗？</s></p>
-<p>还好没啥重要数据。授权后重装了 kubuntu。然后发现 kde 爆杀 gnome（二嘲）。</p>
-<p>有一说一，我不喜欢 ubuntu 这样臃肿的系统。<s><a href="https://t.me/archlinuxcn_group/2896194" target="_blank" rel="noopener noreferrer">其他观点</a>，看上下文</s> 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。</p>
-<h3> 中文设置问题</h3>
-<p>在语言中设置了中文，重启后 kde 有部分 ui 变为英文。</p>
-<p>原因：更改 <code>/etc/locale.gen</code> 后没有运行 <code>sudo locale-gen</code>。运行即可。</p>
-<h3> yay 换源问题</h3>
-<p>刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：<code>yay --aururl "https://..." --save</code>），发现用不了后换成了中科大源，结果报错：</p>
-<blockquote>
-<p>-&gt; 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br>
-* response decoding failed: invalid character '&lt;' looking for beginning of value</p>
-</blockquote>
-<p>并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">.</a></p><a class="footnote-anchor" id="footnote-ref1">
-<p>之后发现，在 <code>~/.config/yay/config.json</code> 中有一个 <code>aurrpcurl</code> 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 <code>yay --aururl "https://aur.archlinux.org" --save</code>，问题得解。如果一次不行就两次，一定能解(?)。</p>
-</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> umount failed</h3>
-<p><code>sudo umount /mnt/windows</code>，提示</p>
-<blockquote>
-<p>/mnt/windows: 目标忙</p>
-</blockquote>
-<p>估计有莫名奇妙的软件在占用。直接 <code>lsof /mnt/windows</code> 查占用，然后再 <code>kill -9 &lt;PID&gt;</code> 强关。</p>
-<h3> Windows 字体问题</h3>
-<p><strong>未解决</strong>。</p>
-<p>根据<a href="https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#%E5%AE%89%E8%A3%85-windows-%E5%AD%97%E4%BD%93" target="_blank" rel="noopener noreferrer">教程</a>复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：</p>
-<blockquote>
-<p>cp: 对 './yuminl.ttf' 调用 stat 失败: 没有那个文件或目录</p>
-</blockquote>
-<p>后来使用 <code>yay -S ttf-ms-win11-auto-zh_cn </code> 安装字体也失败，中间报 warning 一大堆。</p>
-<p>没辙，暂时用 U 盘拷吧。</p>
-<h3> yay 安装问题</h3>
-<p>使用 <code>sudo pacman -S yay</code> 时一直报错，<code>signature is unknown trust</code> 类似的。怀疑是 pacman-keyring 问题，去前面 <a href="#%E6%9B%B4%E6%96%B0-pacman-keyring">更新 pacman-keyring</a> 试了好久，都不行。</p>
-<p>后面看教程，发现需要先安装 cn 源中的签名：<code>sudo pacman -S archlinuxcn-keyring</code>，然后才能正常使用。。（因为 pacman 用的是 archlinuxcn 源）</p>
-<h3> NetworkManager warning</h3>
-<p>设置自启服务 <code>systemctl enable --now NetworkManager</code> 时报错：</p>
-<blockquote>
-<p>... iwlwifi ... WRT: invalid buffer destination</p>
-</blockquote>
-<p>不过后面 <code>systemctl status NetworkManager</code> 发现服务已经启动了，也就没管了（所以问题还是没解决的，然而图形界面后开机自启看不到报错了）</p>
-<h3> 挂载出错</h3>
-<p>非常低级的错误。。挂载时打错了指令，导致不同的分区被挂载到了同一个位置。不过检查得早，没有继续下一步就发现了问题。</p>
-<p>然后重新挂载，后来到 <em>生成 fstab 文件</em> 的时候又发现了怪事：<code>genfstab -U /mnt &gt; /mnt/etc/fstab</code> 输出了一大堆东西，我读了一下，原来把我挂载时做的所有操作（包括错误部分）都记录进去了。于是手动删除了冗余，后续重启工作正常。</p>
-<p>这个文件用于指示开机挂载。包括后来挂内存盘也是从这里改。</p>
-<h3> 分区格式化</h3>
-<p>使用 <code>cfdisk</code> 分好区，需要分别为每个分区进行格式化。然而我使用 nvme 盘而看的 sata 指令，对硬盘格式化而非对分区进行格式化（错误示范：<code>mkfs.vfat /dev/nvme1n1</code>），报错：</p>
-<blockquote>
-<p>Partitions or virtual mapping on device, not making file system. (use -I to override)</p>
-</blockquote>
-<p>然后尝试了 <code>-I</code>，结果分区全没了；对着 <code>nvme1n1</code> <code>mkswap</code>，分区又炸了（全盘格成了 swap）。最后才发现格式化是分区操作，而不是硬盘操作。。</p>
-<h3> 更新 pacman keyring</h3>
-<p>遇到问题：使用 pacman 安装时报错</p>
-<blockquote>
-<p>error: python-cairo: signature from "Caleb Maclennan <a href="mailto:alerque@archlinux.org">alerque@archlinux.org</a>" is unknown trust</p>
-</blockquote>
-<ol>
-<li>尝试执行 <code>pacman-key --refresh-keys</code>，但是效率感人</li>
-<li><a href="https://www.reddit.com/r/archlinux/comments/sorhb1/how_long_does_a_pacmankey_refreshkeys_take/" target="_blank" rel="noopener noreferrer">据此所述</a>：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>然而没什么软用，还是报相同错误</li>
-<li>更新 <code>archlinux-keyring</code> 本身：<code>sudo pacman -Sy archlinux-keyring</code>，问题解决</li>
-</ol>
-<h3> sed 语法</h3>
-<p>sed 正则表达式的 <code>{}</code> 需要转义 <code>\{\}</code> 。。。。。。</p>
-<h3> <a href="https://bbs.archlinuxcn.org/viewtopic.php?id=13402" target="_blank" rel="noopener noreferrer">libcuda.so.1 is not a symbolic link</a></h3>
-<p>Windows WSL 的锅，<a href="https://github.com/microsoft/WSL/issues/5548" target="_blank" rel="noopener noreferrer">解法</a>，但还有问题残留。</p>
-<h2> external</h2>
-<ol start="2">
-<li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
-<li><a href="https://blog.origincode.me/manjaro-controversies/" target="_blank" rel="noopener noreferrer">【譯】Manjaro 的爭議</a></li>
-<li><a href="https://catcat.cc/post/2020-10-31/" target="_blank" rel="noopener noreferrer">Linux fontconfig 的字体匹配机制</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>参考<a href="../article/mobile_setting#mipad-5">刷机</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
       <title>Python</title>
       <link>https://absx.pages.dev/coding/python.html</link>
       <guid>https://absx.pages.dev/coding/python.html</guid>
@@ -4181,7 +4251,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
       <category>编程</category>
       <pubDate>Sun, 09 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> TypeScript</h1>
-<p>TypeScript 是在 JavaScript 基础上建立的一门语言，新增了类型控制，可以被编译为 JavaScript. 我是激进派，因此本文主要讲 TypeScript；JS 版本 &gt;= ES6.</p>
+<p>TypeScript 是在 JavaScript 基础上建立的一门语言，新增了类型控制，可以被编译为 JavaScript. 我是激进派，因此本文主要讲 TypeScript；JS 版本 &gt;= ES6. <s>没有类型提示编程是真的难受啊，面对着无数的 <em>any</em> 翻文档。。有的十年老库还基本没有文档。</s></p>
 <blockquote>
 <p>JavaScript 是符合 ECMAscript 标准规范的，一门弱类型的 GC 语言，又称 ECMAScript. 浏览器的默认语言。</p>
 </blockquote>
@@ -4237,9 +4307,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>此次重新启用，也大概是我的心血来潮吧。</p>
 <p>开始使用 archlinux 后，我使用 nvim 作为我的默认编辑器。这下也不得不设置了。</p>
 <h2> 设置(vscode)</h2>
-<details class="hint-container details"><summary>在 archlinux 上我已经不再使用 vscode</summary>
-<p>此处是我对 vim for vscode 的一些设置。在 <code>C:/Users/&lt;user name&gt;/AppData/Roaming/Code/User/settings.json</code> 添加即可。路径可在扩展设置中打开。</p>
-<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<p><a href="https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json" target="_blank" rel="noopener noreferrer">此处</a>是我对 (vim for) vscode 的一些设置。</p>
 <h2> 设置(neovim)</h2>
 <p>首先基础设置我是照着<a href="https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/" target="_blank" rel="noopener noreferrer">从零开始配置 Neovim(Nvim)</a>来的。这篇文章确实不错。</p>
 <p>然后进入到了自定义环节：</p>
@@ -4266,12 +4334,11 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><code>yyp</code> 复制当前行并粘贴到下一行。我的数据记录需要频繁使用此功能。</li>
 <li><code>daw</code> delete a word()</li>
 <li><code>f{char}</code> search next char</li>
-<li><code>w</code>,<code>e</code>,<code>W</code>,<code>E</code>,<code>b</code> 一些移动光标的操作。前四个都是向后移动，大写的会快一点（空格分隔）。<code>b</code> 是向前移动。</li>
-</ul>
+<li><code>w</code>,<code>e</code>,<code>W</code>,<code>E</code>,<code>b</code> 一些移动光标的操作。前四个都是向后移动，大写的会快一点（空格分隔）。<code>b</code> 是向前移动。
 <blockquote>
 <p>我不是很想记它们的具体移动方式。能用就行，但是光标移动确实是 vim 增加效率的很重要的一环。</p>
 </blockquote>
-<ul>
+</li>
 <li><code>&lt;C-q&gt;</code> 进入 visual block，选中区域后使用 <code>I</code> 进行多行输入 / 删除。
 <blockquote>
 <p>哦，这个好像是 vscode vim 插件的特有功能（</p>
@@ -4283,9 +4350,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 <h2> 一些想法</h2>
 <p>用 vim for vscode 用了一周，感觉有些欠缺，因此进行了一些自定义化。以下阐述我的自定义化的一些构思。</p>
-<p>当前需要自定义：</p>
 <ul>
-<li>visual 下按<code>(</code>,<code>[</code>等括号类可直接为选中区域添加闭合括号。</li>
+<li>visual 下按 <code>(</code>,<code>[</code> 等括号类可直接为选中区域添加闭合括号。</li>
 <li>保留非 vim 的 Ctrl 组合键功能，例如复制粘贴等。</li>
 <li>删除选中区域时不复制到剪贴板。</li>
 </ul>
@@ -4748,6 +4814,11 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20230831</h3>
+<ul>
+<li>新增<a href="/coding/vscode.html" target="blank">编程 - vscode</a></li>
+<li>迁移 Linux 页面至<a href="../articles">文章</a></li>
+</ul>
 <h3> 20230828</h3>
 <ul>
 <li>新增 <a href="/articles/note.html" target="blank">笔记软件横评</a> 页面</li>
@@ -4755,11 +4826,11 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 <h3> 20230820-26</h3>
 <ul>
-<li>持续更新 <a href="/coding/linux.html" target="blank">linux</a> 页面</li>
+<li>持续更新 <a href="/articles/linux.html" target="blank">linux</a> 页面</li>
 </ul>
 <h3> 20230808</h3>
 <ul>
-<li>维护 <a href="/coding/github.html" target="blank">Github</a>，<a href="/coding/linux.html" target="blank">linux</a></li>
+<li>维护 <a href="/coding/github.html" target="blank">Github</a>，<a href="/articles/linux.html" target="blank">linux</a></li>
 <li>图表去缩进，减小体积</li>
 </ul>
 <h3> 20230807</h3>
@@ -4904,7 +4975,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 <h3> 20230514</h3>
 <ul>
-<li><a href="/coding/linux.html" target="blank">Linux</a> 中新增内容</li>
+<li><a href="/articles/linux.html" target="blank">Linux</a> 中新增内容</li>
 <li>网址推荐 中新增 <a href="/farraginous/recommend_websites.html#ai-%E5%B7%A5%E5%85%B7" target="blank">AI 工具</a></li>
 <li>文章新增 <a href="/articles/vps.html" target="blank">VPS</a></li>
 </ul>
@@ -4927,7 +4998,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 <h3> 20230417</h3>
 <ul>
-<li><a href="/coding/" target="blank">编程</a>新增<a href="/coding/linux.html" target="blank">Linux</a></li>
+<li><a href="/coding/" target="blank">编程</a>新增<a href="/articles/linux.html" target="blank">Linux</a></li>
 </ul>
 <h3> 20230412</h3>
 <ul>
@@ -5434,7 +5505,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>一些好用软件的推荐。</p>
 <ul>
 <li>关于 magisk &amp; LSPosed，请移步<a href="/articles/mobile_setting.html#magisk" target="blank">设置手机</a></li>
-<li>关于 linux，请移步 <a href="/coding/linux.html#%E5%A4%96%E9%83%A8%E5%8C%85" target="blank">linux</a></li>
+<li>关于 linux，请移步 <a href="/articles/linux.html#%E5%A4%96%E9%83%A8%E5%8C%85" target="blank">linux</a></li>
 <li>猜你喜欢：<a href="/articles/computer_setting.html" target="blank">设置电脑</a></li>
 </ul>
 <div class="hint-container tip">
@@ -5567,7 +5638,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 
 [关于 Potplayer 设置](../articles/potplayer_setting.md) -->
 <h3> <a href="https://mpv.io/" target="_blank" rel="noopener noreferrer">mpv</a></h3>
-<p>轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是我的 mpv 配置文件：</p>
+<p>轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是<a href="https://github.com/lxl66566/my-key-data/blob/main/config/mpv/input.conf" target="_blank" rel="noopener noreferrer">我的 mpv 配置文件</a>：</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> <a href="https://justgetflux.com/" target="_blank" rel="noopener noreferrer">f.lux</a></h3>
 <p>护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了"><a href="https://wwp.lanzout.com/iqmkq06s0wtg" target="_blank" rel="noopener noreferrer">私链</a></span></p>
 <ul>
@@ -7328,7 +7399,7 @@ Please specify it by one of the following ways:<br>
 <li>音乐播放器
 <ul>
 <li>跨平台，多端同步</li>
-<li>自行导入歌曲，支持文件导入与 url导入（下载后可听）</li>
+<li>自行导入歌曲，支持文件导入与 url导入（即音源）</li>
 </ul>
 </li>
 <li><s>浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）</s>
@@ -7348,7 +7419,7 @@ Please specify it by one of the following ways:<br>
 <li>音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）</li>
 <li>流式分布式的视频软件</li>
 <li>响应式计算机设计与编程（与轮询式相对）</li>
-<li>Android opensource store, package manager</li>
+<li>Android opensource store, package manager（AUR-like）</li>
 <li>pdf 无损图片压缩</li>
 <li>类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。</li>
 <li>录音机 app，抓住日常的每一个瞬间
@@ -7454,10 +7525,14 @@ Please specify it by one of the following ways:<br>
 <ul>
 <li><strong>成为了真正的 Archlinux User!</strong></li>
 <li>成功让世界遗忘我的生日<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></li><a class="footnote-anchor" id="footnote-ref1">
-<li>use xmake and update(ing) my Qt project to 6.6.0.</li>
+<li>use xmake and update my Qt project to 6.6.0.</li>
 <li>开发 koishi 插件</li>
 </a><li><a class="footnote-anchor" id="footnote-ref1">pr: </a><a href="https://github.com/DIYgod/RSSHub/pull/12982" target="_blank" rel="noopener noreferrer">华理教务处 rss</a></li>
 <li>参与各种文档与奇怪东西的翻译</li>
+</ul>
+<p>其他：</p>
+<ul>
+<li>早起跑步</li>
 </ul>
 <details><summary>点击展开：更换身份证</summary><p>
 </p><blockquote>
@@ -9612,7 +9687,31 @@ x 表示水平位移，h 表示垂直位移。<br>
 <p>虽然但是，我已经不是当年 18- 的我了，这里的番。。只能说观看概率不高</p>
 </blockquote>
 <details class="hint-container details"><summary>详情</summary>
-<p>to love，代号D机关，女皇之刃，剃须。然后捡到女高中生，伪恋，天使的3p，紫罗兰永恒花园，巨人，魔禁，fate0，犬夜叉，我立于百万生命之上，成神之日，铁路浪漫谭，魔女之旅，咒术回战，赛马娘2，派对浪客诸葛孔明，幻灵镇魂曲，リコリス・リコイル，孤独摇滚，新妹魔王的契约者</p>
+<ul>
+<li>to love</li>
+<li>代号D机关</li>
+<li>女皇之刃</li>
+<li>剃须。然后捡到女高中生</li>
+<li>伪恋</li>
+<li>天使的3p</li>
+<li>紫罗兰永恒花园</li>
+<li>巨人</li>
+<li>魔禁</li>
+<li>fate0</li>
+<li>犬夜叉</li>
+<li>我立于百万生命之上</li>
+<li>成神之日</li>
+<li>铁路浪漫谭</li>
+<li>魔女之旅</li>
+<li>咒术回战</li>
+<li>赛马娘2</li>
+<li>派对浪客诸葛孔明</li>
+<li>幻灵镇魂曲</li>
+<li>リコリス・リコイル</li>
+<li>孤独摇滚</li>
+<li>新妹魔王的契约者</li>
+<li>校园的日子</li>
+</ul>
 </details>
 ]]></content:encoded>
     </item>
@@ -11317,7 +11416,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">アンレス テルミナリア</td>
-<td style="text-align:center">+2h50min</td>
+<td style="text-align:center">+3h0min</td>
 </tr>
 <tr>
 <td style="text-align:center">君と彼女と彼女の恋</td>
@@ -11757,7 +11856,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tr>
 <td style="text-align:center">osu</td>
 <td style="text-align:center">81</td>
-<td style="text-align:center"><text style="color:red;">GS02声卡 -32~-40ms</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p>将星X15内置声卡: -85ms(-83~-100)</text></details></td>
+<td style="text-align:center"><text style="color:red;">GS02声卡 -32~-41~-44ms</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p>将星X15内置声卡: -85ms(-83~-100)</text></details></td>
 <td style="text-align:center">30</td>
 <td style="text-align:center">0</td>
 </tr>
