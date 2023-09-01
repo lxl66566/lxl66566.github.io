@@ -12,7 +12,7 @@ tag:
 
 <div class="subtitle">——neovim 死里配，不如 vscode 同步一根毛</div>
 
-我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实强大且开箱即用。
+我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实强大且开箱即用。_（据说是优化得很好的电子垃圾，来源请求）_
 
 在 linux 端我曾尝试抛弃 vscode，转向 neovim，但是几天后即放弃。
 
@@ -48,6 +48,13 @@ tag:
 - kotlin：_Kotlin Language_，_vscode-runner_
 - 数据库：_SQLite Viewer_
 - 其他：_Chinese (Simplified)..._，_CodeSnap_
+
+### 关于补全
+
+上述两个代码补全的插件我都用过，感觉难分伯仲。目前在使用 _Codeium_。不过如果还想看看其他的 AI 代码补全插件（本人未使用过），也可以：
+
+- [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型。
+- [CodeGeeX](https://codegeex.cn/)：国产，对标 GitHub CoPilot
 
 ## feature
 

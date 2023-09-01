@@ -13,9 +13,10 @@ category:
 
 20230712 由于依赖地狱把 node_modules 给崩了，救不回来[^1]，于是重新配置博客并更换主题为 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)。
 :::
-[^1]: 详见[博客心得](./gossip/withvuepress2.md#vuepress2与博客心得)
+[^1]: 详见[博客心得](./gossip/withvuepress2.md#vuepress2与博客心得)。此事件甚至引发了关于 lockfile 的思考。
 
-本博客比起其他**文章导向**的博客，更注重于**版块导向**，各版块文章持续更新。
+本博客比起其他**文章导向**的博客，更注重于**版块导向**，各版块文章持续更新[^3]。
+[^3]: 优势是写博客成本低，动力充足；劣势是由于无需完全掌握知识点，在正确性和学习价值上做了妥协。
 
 对 blog 的反馈与建议，请在对应页面下评论 / [私聊我](./gossip/author.md#社交)。我很乐意看到大家的反馈。
 

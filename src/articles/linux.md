@@ -42,7 +42,7 @@ umount /mnt/windows
 * 我安装的包（少部分）：
     * archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
     * archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, newsboat, namcap, activitywatch-bin
-* 我计划装的包：Joshuto, gparted
+* 我计划装的包：Joshuto, gparted, txcv
 ## pacman & AUR Helper
 * 请定期 `sudo pacman -Syy` 更新本地缓存（update），否则可能找不到包。（~~今日也无事可做~~）
     * 也可以直接 `yay` 或 `paru` 进行更新
@@ -256,7 +256,8 @@ umount 的时候用来查占用很好用。
     ```
     :::
 ### [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
-> 在尝试三大 shell 后我选择 fish 而不是 zsh.
+> 在尝试三大 shell 后我选择 fish 而不是 zsh. [why?](https://t.me/withabsolutex/1214)<br/>
+> 据说 omz 会有性能问题。[ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=omz&sender=313927976)
 <details><summary>archived</summary><p>
 
 ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
@@ -273,6 +274,8 @@ find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
 ```
 ## 遇到的问题
 **按时间倒序**。
+### 更新破坏依赖
+先删再装。参考[forum](https://bbs.archlinuxcn.org/viewtopic.php?id=10208).
 ### nvim 剪贴板问题
 我在 `option.lua` 中有设置 `vim.opt.clipboard = 'unnamedplus'`，之前运作挺好，但自从换了 X11 以后就不能再复制。
 

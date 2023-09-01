@@ -56,6 +56,7 @@ tag:
     - [ ] *MIUI 10s*
 * windows electron lib(runtime)
 * windows volume locker
+* Android task manager, *top
 ### nodejs & tsjs
 * B站CC字幕下载脚本
 * osu 谱面下载器（仅前端？）
