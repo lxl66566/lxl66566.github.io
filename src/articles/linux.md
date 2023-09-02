@@ -76,7 +76,7 @@ umount /mnt/windows
     alias e=nvim
     alias l="ls -AFLhl --color=auto"
     ```
-1. [调整 swappiness](https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)) 至 5
+1. [调整 swappiness](https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)) 至 5（我对写入量敏感）
 2. 设置 `/etc/fstab`
     * [挂载 tmpfs](./ramdisk.md)
     * 添加 `noatime` 标识，即不带访问时间 | [ref: archlinuxcn_group](https://t.me/archlinuxcn_group/2900548)
@@ -293,20 +293,13 @@ lib32-gd - exit status 8
 wine-stable - exit status 8
 lib32-libraqm - exit status 4
 lib32-rav1e - exit status 8
-```
-其中大多数是权限错误。但是我用 paru 安装就可以成功安装，有没有可能是 fakeroot 的问题(?) 附带安装的报错：
-```
-==> 正在检查编译时依赖关系==> 警告： 使用现存的 $srcdir/ 树==> 正在开始 build()...
-（一些输出）
-==> 正在开始 check()...
-（这里出现了一些警告）
-.test_g
+# 详细报错：
 make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 ==> 错误： 在 check() 中发生一个错误。正在放弃...
--> 生成时出错: lib32-http-parser-exit status 4
--> 无法安装以下软件包, 需要手动介入处理:
-lib32-http-parser - exit status 4
 ```
+其中大多数是权限错误。但是我用 paru 安装就可以成功安装。
+
+结果发现是下载目录的 tmpfs 开了 `noexec` 导致的。而同时由于 paru 的 clonedir 是 [bind to tmpfs](#设置) 的，没有加 `noexec`，于是可以正常使用。。。（乐
 ### 输入法不显示
 在[安装了 kubuntu](#修复-重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
 
@@ -315,7 +308,7 @@ lib32-http-parser - exit status 4
 需要安装日文输入法，去 archwiki 日语页面看，选择了 `mozc`。然后我就直接 `yay -S mozc` 了，，装是装了，然而没法使用。。
 
 后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是`fcitx5-mozc-ut`）。然后就没啥问题了。
-> ~~吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了AUR 的不便。~~
+> ~~吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了编译源码的不便。~~
 
 ### 修复（重装）ubuntu
 在别人的电脑上~~乱搞~~，装了 intel 核显驱动然后没有重启就 `sudo apt install vim`（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 `sudo reboot`，再次开机就内核加载失败了。。

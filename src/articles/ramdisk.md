@@ -23,6 +23,14 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 archlinux 下的 ramdisk 非常简单，只需
 :::code-tabs
+@tab 自动
+
+```
+# edit /etc/fstab, add the following line
+# 此处最好不要添加 `noexec`，否则 AUR Helper 可能无法编译软件包
+tmpfs   /tmp    tmpfs  rw,size=10G,nodev,nosuid,noatime,mode=1777 0 0
+```
+
 @tab 临时
 
 ```sh
@@ -30,13 +38,6 @@ mkdir -p /mnt/tmp
 sudo mount -t ramfs -o size=10g ramfs /mnt/tmp
 sudo chmod -R 777 /mnt/tmp
 # 注意，ramfs 可以写入大于设定量的值，可能会造成系统不稳定。
-```
-
-@tab 自动
-
-```
-# edit /etc/fstab, add the following line
-tmpfs   /tmp    tmpfs  rw,size=10G,noexec,nodev,nosuid,noatime,mode=1777 0 0
 ```
 
 :::
