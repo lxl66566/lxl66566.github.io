@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 01 Sep 2023 16:15:07 GMT</pubDate>
-    <lastBuildDate>Fri, 01 Sep 2023 16:15:07 GMT</lastBuildDate>
+    <pubDate>Sat, 02 Sep 2023 16:02:14 GMT</pubDate>
+    <lastBuildDate>Sat, 02 Sep 2023 16:02:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -121,7 +121,7 @@
 <p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
 <ol>
 <li>基础 alias<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5（我对写入量敏感）</li>
 <li>设置 <code>/etc/fstab</code>
 <ul>
 <li><a href="/articles/ramdisk.html" target="blank">挂载 tmpfs</a></li>
@@ -260,15 +260,16 @@
 <p>解法也很简单，安装 <code>xclip</code> 即可。</p>
 <h3> yay 权限错误</h3>
 <p>使用 <code>yay</code> 安装 <code>wine-stable</code> 时出现了一些问题。</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中大多数是权限错误。但是我用 paru 安装就可以成功安装，有没有可能是 fakeroot 的问题(?) 附带安装的报错：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 输入法不显示</h3>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中大多数是权限错误。但是我用 paru 安装就可以成功安装。</p>
+<p>结果发现是下载目录的 tmpfs 开了 <code>noexec</code> 导致的。而同时由于 paru 的 clonedir 是 <a href="#%E8%AE%BE%E7%BD%AE">bind to tmpfs</a> 的，没有加 <code>noexec</code>，于是可以正常使用。。。（乐</p>
+<h3> 输入法不显示</h3>
 <p>在<a href="#%E4%BF%AE%E5%A4%8D-%E9%87%8D%E8%A3%85-ubuntu">安装了 kubuntu</a> 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。</p>
 <p>解法是 <code>sudo apt install $(check-language-support)</code>。然后注销，再 login 就有输入法了。</p>
 <h3> 日文输入法</h3>
 <p>需要安装日文输入法，去 archwiki 日语页面看，选择了 <code>mozc</code>。然后我就直接 <code>yay -S mozc</code> 了，，装是装了，然而没法使用。。</p>
 <p>后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是<code>fcitx5-mozc-ut</code>）。然后就没啥问题了。</p>
 <blockquote>
-<p><s>吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了AUR 的不便。</s></p>
+<p><s>吐槽一下，mozc 源码有600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了编译源码的不便。</s></p>
 </blockquote>
 <h3> 修复（重装）ubuntu</h3>
 <p>在别人的电脑上<s>乱搞</s>，装了 intel 核显驱动然后没有重启就 <code>sudo apt install vim</code>（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 <code>sudo reboot</code>，再次开机就内核加载失败了。。</p>
@@ -755,6 +756,7 @@ npm ERR! This command does not support workspaces.</p>
 <li><a href="https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso" target="_blank" rel="noopener noreferrer">日本移居指南</a> | <a href="https://ctreaderbot.vercel.app/a/D05AAicCD7-5pMw.html" target="_blank" rel="noopener noreferrer">bak</a></li>
 <li><a href="https://www.zhihu.com/question/549539904/answer/2836937246" target="_blank" rel="noopener noreferrer">为什么我觉得北京没有大家说的那么繁华？</a> | <a href="https://telegra.ph/%E5%8C%97%E4%BA%AC%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%B2%A1%E6%9C%89%E5%A4%A7%E5%AE%B6%E8%AF%B4%E7%9A%84%E9%82%A3%E4%B9%88%E7%B9%81%E5%8D%8E-08-14-6" target="_blank" rel="noopener noreferrer">bak</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/636293259" target="_blank" rel="noopener noreferrer">优等生的无声危机：为好成绩付出的代价</a> | <a href="https://ctreaderbot.vercel.app/a/BkoThTPPDRD4Szg.html" target="_blank" rel="noopener noreferrer">bak</a></li>
+<li><a href="https://chinadigitaltimes.net/chinese/668430.html" target="_blank" rel="noopener noreferrer">【404 文库】大象公会 2015—2021 年 66 篇微信文章合集</a>（注意时效）</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -6847,7 +6849,7 @@ utools vs diy my tools
 <li>需要<strong>完美的</strong>上下文定位功能。（这点现有聊天软件都做的很差）</li>
 <li>支持较好的全局搜索功能。</li>
 <li>永久保存文本聊天记录。</li>
-<li>支持类正则式屏蔽消息。</li>
+<li>支持类正则式 pattern 屏蔽，按成员屏蔽。</li>
 <li>完整地支持 markdown。（telegram 差了点）</li>
 <li>静态文件以 hash 标识，唯一来源激励，人工响应判重系统，有效转发延时。</li>
 <li>支持自定义排版样式，html 或自定义排版语言。</li>
@@ -9722,6 +9724,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>孤独摇滚</li>
 <li>新妹魔王的契约者</li>
 <li>校园的日子</li>
+<li>圣痕炼金士</li>
 </ul>
 </details>
 ]]></content:encoded>
@@ -11435,7 +11438,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">家喵二三事</td>
-<td style="text-align:center">+3min</td>
+<td style="text-align:center">+0min</td>
 </tr>
 </tbody>
 </table>
