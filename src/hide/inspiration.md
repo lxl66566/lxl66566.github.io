@@ -64,6 +64,7 @@ tag:
 * b站历史记录搜索
 * html yaml extransfer
 * html compresser, <-> rss
+    * 已找到同类项目 [sanitize-html](https://www.npmjs.com/package/sanitize-html)，但可以改进合并
 * B站直播增强
     * 弹幕区域取消，发送弹幕放在视频下方
     * f 全屏
