@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 03 Sep 2023 03:41:34 GMT</pubDate>
-    <lastBuildDate>Sun, 03 Sep 2023 03:41:34 GMT</lastBuildDate>
+    <pubDate>Sun, 03 Sep 2023 15:45:09 GMT</pubDate>
+    <lastBuildDate>Sun, 03 Sep 2023 15:45:09 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -6904,7 +6904,8 @@ utools vs diy my tools
 <h2> meme 图集</h2>
 <p><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/meme1.jpg" alt="meme1" loading="lazy">
 <img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/memes/1.jpg" alt="meme2" loading="lazy">
-<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/memes/2.jpg" alt="meme3" loading="lazy"></p>
+<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/memes/2.jpg" alt="meme3" loading="lazy">
+<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/memes/3.webp" alt="meme4" loading="lazy"></p>
 ]]></content:encoded>
       <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/meme1.jpg" type="image/jpeg"/>
     </item>
@@ -7479,7 +7480,11 @@ Please specify it by one of the following ways:<br>
 <li>轻量级 pdf 演示</li>
 <li>b站历史记录搜索</li>
 <li>html yaml extransfer</li>
-<li>html compresser, &lt;-&gt; rss</li>
+<li>html compresser, &lt;-&gt; rss
+<ul>
+<li>已找到同类项目 <a href="https://www.npmjs.com/package/sanitize-html" target="_blank" rel="noopener noreferrer">sanitize-html</a>，但可以改进合并</li>
+</ul>
+</li>
 <li>B站直播增强
 <ul>
 <li>弹幕区域取消，发送弹幕放在视频下方</li>
@@ -9800,8 +9805,8 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center"><a href="https://www.pixiv.net/novel/series/10523577" target="_blank" rel="noopener noreferrer">我在末世捡到白狐</a> </td>
-<td style="text-align:center">2023.08.29-<br>在读</td>
-<td style="text-align:center">2h10min</td>
+<td style="text-align:center">2023.08.29-<br>23,等待连载</td>
+<td style="text-align:center">2h23min</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -11457,7 +11462,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">君と彼女と彼女の恋</td>
-<td style="text-align:center">-1min</td>
+<td style="text-align:center">-2min</td>
 </tr>
 <tr>
 <td style="text-align:center">家喵二三事</td>
