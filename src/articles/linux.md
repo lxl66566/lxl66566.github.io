@@ -43,6 +43,14 @@ umount /mnt/windows
     * archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
     * archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, newsboat, namcap, activitywatch-bin
 * 我计划装的包：Joshuto, gparted, txcv
+## 文件系统
+稳定的 ubuntu 默认使用 ext4，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊（
+### btrfs
+btrfs 有好多功能吸引着我，~~当我第一次看到介绍 btrfs 的文章时，我不禁大呼：“这才是现代文件系统！用惯了的 windows ntfs 是什么垃圾！” ~~ 文章参考 [external](#external) 1. 我最爱 CoW(写时复制)，透明压缩。
+
+使用 btrfs 有一些坑需要注意：
+1. 由于 CoW，使用 `du` 查看磁盘空间可能不准确，需要使用：`btrfs fi usage /`.
+2. 由于 CoW + 快照，操作数据库的时候需要小心，尽可能不要将数据库加入快照备份区（可以使用其他子卷存放）。
 ## pacman & AUR Helper
 * 请定期 `sudo pacman -Syy` 更新本地缓存（update），否则可能找不到包。（~~今日也无事可做~~）
     * 也可以直接 `yay` 或 `paru` 进行更新
@@ -85,13 +93,14 @@ umount /mnt/windows
 5. 设置 pacman：
     * 将某些不常用的备用包加入 IgnorePkg，例如 *chromium* | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
     * 更改缓存至 ramdisk （`CacheDir`）
-6. 设置 AUR Helper：
+6. 更改 AUR Helper 缓存（ 参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
     * yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
     * *很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。* <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也挂上同一个 tmpfs，这样就能够解决问题了。
         ```
         # sudo nvim /etc/fstab  ，在 /tmp 已经挂上 tmpfs 后（记得改 username）：
         /tmp/paru /home/absolutex/.cache/paru/clone  none  defaults,bind,nofail,x-systemd.device-timeout=2  0  0
         ```
+    * 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
 7. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
 8. grub 改等待时间
     ```sh
@@ -99,12 +108,17 @@ umount /mnt/windows
     # after edit
     sudo grub-mkconfig -o /boot/grub/grub.cfg
     ```
+9. 修改 faillock attempt times
+    ```sh
+    # sudo edit /etc/security/faillock.conf
+    deny = 10
+    ```
 ### 输入法
 我使用 fcitx5，输入要求为英语，双拼，日语。可以在遇到的问题里找到一些输入法的设置。
 1. 双拼关闭快速输入，默认为`；`。
 ### 设置代理
 #### v2raya
-v2raya 的质量其实一般，速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。
+v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。
 ```sh
 sudo pacman -S v2raya
 v2raya --lite
@@ -114,6 +128,10 @@ set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理�
 之后的操作都在网页上进行。使用系统代理端口为 `http://127.0.0.1:20172`，这个端口带自动分流。
 
 如果需要后台运行，开机自启，可以参考[文档](https://v2raya.org/docs/advanced-application/noroot/)：`systemctl --user enable --now v2raya-lite.service`
+#### clash-verge
+见[vpn](./vpn.md#clash-verge)介绍页。内核为 clash-meta，接受订阅文件，不接受节点。有订阅的可以尝试。
+#### daed
+一个类似 v2raya 的使用网页面板的开源代理。没试过，有机会试试。[官方仓库](https://github.com/daeuniverse/daed)
 #### 使用 windows 代理
 archwsl 内容
 :::: details 点击展开
@@ -384,6 +402,6 @@ sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。
 Windows WSL 的锅，[解法](https://github.com/microsoft/WSL/issues/5548)，但还有问题残留。
 ## external
 1. 了解一下 btrfs（注意时效）：[Linux Btrfs 文件系统使用指南](https://www.mivm.cn/linux-btrfs-usage-guide)
-3. [【譯】Manjaro 的爭議](https://blog.origincode.me/manjaro-controversies/)
-4. [Linux fontconfig 的字体匹配机制](https://catcat.cc/post/2020-10-31/)
-5. [btrfs 元数据满了怎么办](https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html)
+2. [【譯】Manjaro 的爭議](https://blog.origincode.me/manjaro-controversies/)
+3. [Linux fontconfig 的字体匹配机制](https://catcat.cc/post/2020-10-31/)
+4. [btrfs 元数据满了怎么办](https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html)

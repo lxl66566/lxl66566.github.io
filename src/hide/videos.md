@@ -137,6 +137,7 @@ category:
 |[MIDE-422](https://www2.javhdporn.net/video/mide-422)|5|3|
 |[ABW-018](https://www2.javhdporn.net/video/abw-018/)|4|4|
 |[IPZZ-008](https://www4.javhdporn.net/video/ipzz-008-decensored/)|4|4|
+|[STARS-250](https://missav.com/STARS-250)|4|4|
 
 *（顺序记录到miaa-604，剩下的逆序改天，我鉴不动辣）*
 

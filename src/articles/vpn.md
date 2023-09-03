@@ -192,8 +192,8 @@ tips：加速前需事先选择能通过连接测试的节点
 * [流量库](https://llcool.xyz/)
 * [飞鸟云](https://feiniaoyun.xyz/)
 ## 客户端选择
-### Clash Verge（推荐）
-开源 Clash 客户端，rust + tauri 使我非常满意 & 放心。[项目地址](https://github.com/zzzgydi/clash-verge)
+### Clash Verge
+（推荐）开源 Clash 客户端，rust + tauri 使我非常满意 & 放心。[项目地址](https://github.com/zzzgydi/clash-verge)
 
 相比[Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。
 

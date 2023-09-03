@@ -259,6 +259,8 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 三相之力！B 站评论区自动标注三相玩家。
 ### [全平台自动答题脚本](https://greasyfork.org/zh-CN/scripts/451356-万能-全平台自动答题脚本)
 大学生的学习通答题神器。
+### [Bilibili AntiBV](https://greasyfork.org/zh-CN/scripts/398499-bilibili-antibv)
+BV 自动转 AV
 ## 一些过时的推荐
 ::: warning
 此处推荐多为我年轻时的推荐，现已放弃使用，仅供参考。
@@ -308,7 +310,7 @@ use [xdm](#xdm) instead.
 [官网](https://www.internetdownloadmanager.com/) | [破解](https://www.lanzouw.com/iYFgSw4lede)
 ### [秒传链接提取](https://greasyfork.org/zh-CN/scripts/424574-%E7%A7%92%E4%BC%A0%E9%93%BE%E6%8E%A5%E6%8F%90%E5%8F%96)
 秒传链接，百度网盘分享的一种优秀模式。
-> 20230xxx: 脚本下架，作者被抓，有需求可以看[其他版本](https://greasyfork.org/zh-CN/scripts/427628-百度网盘秒传链接提取-最新可维护版本)
+> 20230xxx: 脚本下架，作者被抓（来源请求），有需求可以看[其他版本](https://greasyfork.org/zh-CN/scripts/427628-百度网盘秒传链接提取-最新可维护版本)
 ### Keepass 系列
 开源多端密码管理器。其中Keepass2Android是Android端的软件，而KeePassXC则是PC端的。
 

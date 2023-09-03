@@ -18,14 +18,10 @@
     {
       "label": "upload",
       "type": "shell",
-      "command": "${workspaceFolder}/upload.sh",
+      "command": "bash ${workspaceFolder}/upload.sh",
       "detail": "./upload.sh",
       "problemMatcher": [],
       "options": {
-        "shell": {
-          "executable": "C:\\Program Files\\Git\\git-bash.exe",
-          "args": []
-        },
         "cwd": "${workspaceFolder}"
       }
     }
