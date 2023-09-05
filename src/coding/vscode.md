@@ -18,7 +18,7 @@ tag:
 
 ## 使用
 
-在 _设置_ 页右上角可以 `打开设置（json）`，我经常需要直接编辑配置文件。
+在 _设置_ 页右上角可以 `打开设置（json）`，我经常需要直接编辑配置文件。[这里](https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json)是我的全局配置文件。
 
 ### 快捷键
 
@@ -37,10 +37,10 @@ tag:
   - AI 代码补全（只需其一）：_Codeium..._ | _Tabnine..._
   - 更好的警告：_Error Lens_，_SonarLint_
   - 轻量级 Git 可视化：_Git Graph_
-  - 代码格式化：_Prettier - Code formatter_
+  - 代码格式化：_Prettier - Code formatter_（主要用于 markdown
   - 编辑器：_Vim_
 - markdown：_Markdown Preview Enhanced_
-- 前端：_Auto Rename Tag_，_ESLint_
+- 前端：_Auto Rename Tag_，_Rome_（需要设置 `"rome.requireConfiguration": false`）
 - C++：_clangd_
 - python：_Black Formatter_，_isort_，_Ruff_
 - rust：_Cargo_，_cargo-crate-completer_，_Even Better TOML_，_rust-analyzer_

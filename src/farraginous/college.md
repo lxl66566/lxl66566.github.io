@@ -39,12 +39,13 @@ tag:
     * 一楼
         * 热干面：8元（加面 +2 元），味道很不错，爆杀食堂一众面窗口。
         * 小馄饨：6元，早餐食用为佳。美味程度碾压包子馒头豆浆，价格也很亲民。就是不一定吃的饱，建议配合少量零食或者午餐多吃点。<span class="heimu" title="你知道的太多了">宅了以后就吃得饱了</span>
-        * 小厨精品菜：荤6元，素2元，量大，素菜性价比最高。<span class="heimu" title="你知道的太多了">（极端情况下5元两素/7元三素能吃得爽）</span>
+        * ~~小厨精品菜：荤6元，素2元，量大，素菜性价比最高。~~<span class="heimu" title="你知道的太多了">（极端情况下5元两素/7元三素能吃得爽）</span> 2023.09 小厨精品菜离开了我们
     * 二楼
         <!-- * 重庆小面：8元，好吃，但是吃不饱，适合能量消耗少的放假时间去吃。 -->
         * 大众快餐：每种菜有它自己的价格。优势是荤菜便宜（大羊肉串4元），但素菜很贵。<span class="heimu" title="你知道的太多了">因此诞生了一个吃法：去大众快餐打包1-2个荤菜然后再去(1,1)小厨精品菜点素菜。</span>
     * 三楼
         * 老鸡汤：我常吃 11 + 3，养生，又能吃很饱。不过总是满人，排队挺久的。
+        * 香锅：全校香锅都是素 15 荤 30/斤，但是我独喜欢(1,3)的。经常吃全素，不贵，营养够。
 * 二食堂
     * 一楼
         * 清真食堂：素菜便宜，可以以约12元价格吃到1荤3素1汤。荤菜点炸鸡类，便宜，牛羊肉很贵。素菜中的豆芽，海带极为便宜。
@@ -78,13 +79,13 @@ tag:
 * 宿舍网（2021，电信）：账号 手机号@shtel 密码：身份证后 6 位
 * 超星学习通下载直链：`http://cs.e.ecust.edu.cn/download/[objectID]`
 * 上传大文件（转自 CIC，未验证）：
-```sh:no-line-numbers
-curl --progress-bar 'https://mooc1.chaoxing.com/upload/uploadNew' -H 'Content-Type: multipart/form-data' -H 'Expect: 100-continue' --form "file=@\"${file}\""
-```
+    ```sh:no-line-numbers
+    curl --progress-bar 'https://mooc1.chaoxing.com/upload/uploadNew' -H 'Content-Type: multipart/form-data' -H 'Expect: 100-continue' --form "file=@\"${file}\""
+    ```
 * 命令行认证校园网
-```sh:no-line-numbers
-curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=login&username=<学号>&password={B}<Base64密码>&ac_id=18&user_ip=&nas_ip=&user_mac=&ajax=1'
-```
+    ```sh:no-line-numbers
+    curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=login&username=<学号>&password={B}<Base64密码>&ac_id=18&user_ip=&nas_ip=&user_mac=&ajax=1'
+    ```
 ## 奇闻轶事
 * 关于闸机 <span class="heimu" title="你知道的太多了">我校的闸机实在是太棒辣</span>
     1. 大一某天，和舍友买了方便面回寝，到楼下闸机刷脸。我望着方便面上的代言人头像陷入沉思，拿着方便面对准摄像头刷脸。刷了许久，成功进入。
@@ -95,6 +96,7 @@ curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=l
     * 灵异论：有小鬼把控着 free 喷头，如果有阳气重的人进去使用，小鬼就会不堪忍受换位置
     * 调控论：学校为了调控设备磨损，不定期将使用少的喷头调为 free
     * ~~黑客论：有牛逼的学生黑进了系统，将自己的卡变为 free 卡，插哪哪 free，但会撤销上一次的改变~~
+* 哈啰路障，不动如山。
 
 <div class="image60" style="text-align: center; ">
 <img alt="meme1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/meme1.jpg" />
