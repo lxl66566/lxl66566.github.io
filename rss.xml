@@ -6,14 +6,14 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 05 Sep 2023 15:48:07 GMT</pubDate>
-    <lastBuildDate>Tue, 05 Sep 2023 15:48:07 GMT</lastBuildDate>
+    <pubDate>Wed, 06 Sep 2023 15:46:35 GMT</pubDate>
+    <lastBuildDate>Wed, 06 Sep 2023 15:46:35 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>评价</category>
     <category>编程</category>
     <category>教程</category>
     <category>推荐</category>
-    <category>评价</category>
     <category>经历</category>
     <category>随笔</category>
     <category>作者</category>
@@ -24,6 +24,77 @@
     <category>学习</category>
     <category>负面</category>
     <category>爱好</category>
+    <item>
+      <title>神评</title>
+      <link>https://absx.pages.dev/gossip/forward.html</link>
+      <guid>https://absx.pages.dev/gossip/forward.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">神评</source>
+      <description>神评</description>
+      <category>评价</category>
+      <pubDate>Wed, 06 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 神评</h1>
+<p>转发一些本人冲浪看到的神评。</p>
+<h2> 20230904</h2>
+<p>前人造过的轮子就有点像是数轴上的有理数点：稠密，有序，无穷无尽。但是真当你用的时候，你会发现，你的实际需求有着几乎 100%的概率落在有理数的缝隙里。</p>
+<div style="text-align:right">
+<p>——<a href="https://www.zhihu.com/question/620107729/answer/3195827527" target="_blank" rel="noopener noreferrer">src</a></p>
+</div>
+<ul>
+<li>但你的任意一个无理需求，总可以用一列别人的有理轮子逼近 🥰</li>
+</ul>
+<div style="text-align:right">
+<p>——<a href="https://t.me/SIGFPE" target="_blank" rel="noopener noreferrer">(⊙o⊙) 🥦</a></p>
+</div>
+<h2> 20230707</h2>
+<p>「女性とみられる服装の人物」スーツケースで"頭部"持ち去ったか…ススキノのホテル浴室に『首を切断された男性の遺体』</p>
+<div style="text-align:right">
+<p>——<a href="https://news.yahoo.co.jp/articles/14ad56e3f7adecadf0ac6b44f160aa5a001c244c" target="_blank" rel="noopener noreferrer">新聞</a></p>
+</div>
+<ul>
+<li>下 头 男</li>
+</ul>
+<div style="text-align:right">
+<p>——R my</p>
+</div>
+<h2> 20230620</h2>
+<p>#猜口音系列 genius 恒流源和 beneath 恒流源</p>
+<div style="text-align:right">
+<p>——<a href="https://t.me/ChubbyPerryKum" target="_blank" rel="noopener noreferrer">Perry Kum</a></p>
+</div>
+<ul>
+<li>答案：<span class="heimu" title="你知道的太多了">激励式电流源和比例式电流源</span></li>
+</ul>
+<h2> 20230601</h2>
+<p>版权公司要求谷歌删除 YouTube 下载器维基百科页面，避免被更多用户看到了解这些下载器。</p>
+<div style="text-align:right">
+<p>——<a href="https://ourl.co/98900" target="_blank" rel="noopener noreferrer">src</a></p>
+</div>
+<p>过去几年版权公司例如 RIAA 和 BPI 都在持之以恒的发送 DMCA 投诉，要求谷歌从索引里删除基于 YouTube-dl 搭建的各种网站或软件。现在更离谱的来了：这些版权机构似乎觉得光删除提供下载页面的还不行，还得把介绍 YouTube 下载器的维基百科也删了，这样就可以阻止用户了解这些下载器。</p>
+<ul>
+<li>为什么不把版权公司的维基百科页面删除呢，这样大家就不用管什么东西在维权了</li>
+</ul>
+<div style="text-align:right">
+<p>——<a href="https://t.me/finalwishing" target="_blank" rel="noopener noreferrer">Finally</a></p>
+</div>
+<h2> 20230328</h2>
+<p>我：“<strong>道为何</strong>？”</p>
+<ul>
+<li>舍友：“我也<strong>到围合</strong>了。”</li>
+</ul>
+<h2> 20230316</h2>
+<p><a href="https://www.solidot.org/story?sid=74399" target="_blank" rel="noopener noreferrer">AI 棋手帮助人类棋手进步</a></p>
+<p>根据发表在 PNAS 上的一项研究，在 DeepMind 的 AlphaGo 击败最强大的人类棋手之后，人类棋手通过与 AI 棋手对弈而取得了显著进步。香港城市大学的研究人员收集了 1950 年至 2021 年间职业棋手作出的 580 万次移棋决策的数据集。然后使用围棋人工智能帮助计算一种称为“决策质量指数”（DQI）的指标。该指标用于评估一步棋的质量。如果没有尝试与之前的动作相结合，即认为一个动作是“新颖的”。分析发现，人类棋手对 2016 年围棋人工智能的出现作出了明显更好、更新颖的反应。1950 年至 2015 年间，围棋水平的改善相对较小，年度 DQI 中值在 -0.2 至 0.2 之间波动。而在 2016 年后，DQI 跃升，2018 年至 2021 年间的中值超过 0.7。</p>
+<div style="text-align:right">
+<p><a href="https://www.pnas.org/doi/10.1073/pnas.2214840120" target="_blank" rel="noopener noreferrer">ref1</a> | <a href="https://news.sciencenet.cn/htmlnews/2023/3/496171.shtm" target="_blank" rel="noopener noreferrer">ref2</a></p>
+</div>
+<ul>
+<li>人工智能反过来训练人类了</li>
+</ul>
+<div style="text-align:right">
+<p>——<a href="https://t.me/hhdgnnnn" target="_blank" rel="noopener noreferrer">funk thion</a></p>
+</div>
+]]></content:encoded>
+    </item>
     <item>
       <title>linux</title>
       <link>https://absx.pages.dev/articles/linux.html</link>
@@ -857,6 +928,8 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20230906</h3>
+<p>层次（level）是各类世界吸引人（我）的一大要素。</p>
 <h3> 20230828</h3>
 <p>一只隐形的蚊子在蚊帐里，太致命了</p>
 <h3> 20230826</h3>
@@ -881,7 +954,7 @@ npm ERR! This command does not support workspaces.</p>
 <p>灭蟑有一理，曰：大蟑喜厨，小蟑喜厕。入厕洗漱，见青年二蟑游走拖鞋之间。移鞋，受惊躲于门轨之缝，竟不可得。持械喝赶之，意欲乱其心智，脱出藏身处。未料其转守为攻，登于械上，占尽先机，欲除吾之械。万幸其年方少，行动迟缓，得以离心之力反击之，投于地，杀之。</p>
 <p>洗脚毕，而脚生瘙痒，有虫豸为乱之感，遂佩叆叇以观之，见三蟑伏于脚跟上。此蟑仅一分（合 1/3 厘米）不足，脚跟皮厚，故感知不甚。投于地，杀之。后再度入浴洗脚。</p>
 </a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 20230728</h3>
-<p>B站的严肃科普都喜欢升华主题是吧，流量密码是吧。。</p>
+<p>B 站的严肃科普都喜欢升华主题是吧，流量密码是吧。。</p>
 <h3> 20230719</h3>
 <p>猫看似爱干净；但它会去舔自己的足底，我不认为这是干净的表现。</p>
 <h3> 20230717</h3>
@@ -897,7 +970,7 @@ npm ERR! This command does not support workspaces.</p>
 <p>灭蟑记（六）<sup class="footnote-ref"><a href="#footnote1">[1:1]</a><a class="footnote-anchor" id="footnote-ref1:1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:1">
 </a><p><a class="footnote-anchor" id="footnote-ref1:1">方点灯入厨，一蟑逃窜，另一蟑振翅疾驰而来。本能避之，而先入厨以脚跺逃窜者，其仍余力，钻入柜下。乃反，持拖鞋若泰山，寻方才飞出之蟑，毙其墙上。二蟑前受一压，步履蹒跚，慌不择路，逃离柜底，一击毙命，尸首分离。正欲离去之际，瞥见三蟑静止隐身于盘橱之中。盘橱者，地势低而杂物众，吾见三蟑呆呆傻傻，即清理两蟑尸体，而后清理杂物，终是毙其于绝路。今有</a><a href="#_20220724">前车之鉴</a>，不敢投于下水道，遂覆纸，碾其头部，葬与桶中，料定死透。</p>
 <h3> 20230713</h3>
-<p>阅读圈资源比番剧/gal 圈难找多了，鉴定为二次元浓度与技术水平正相关x</p>
+<p>阅读圈资源比番剧/gal 圈难找多了，鉴定为二次元浓度与技术水平正相关 x</p>
 <h3> 20230710</h3>
 <p>时穿剧情就像操作裸指针。</p>
 <hr>
@@ -942,7 +1015,7 @@ npm ERR! This command does not support workspaces.</p>
 <h3> 20230531</h3>
 <p>你的手鸡快冲是几毫升的？</p>
 <h3> 20230529</h3>
-<p>枯れない世界と終わる花 -&gt; sendan life -?&gt; 先端（せんたん）ライフ -?&gt; 前端工程师（フロントエンド・エンジニア）的生活   <s>（误</s></p>
+<p>枯れない世界と終わる花 -&gt; sendan life -?&gt; 先端（せんたん）ライフ -?&gt; 前端工程师（フロントエンド・エンジニア）的生活 <s>（误</s></p>
 <hr>
 <p>空调是正反馈：当少量人开始开空调，排放的热气使环境极速升温，大家都开始开空调，室外温度达到饱和</p>
 <h3> 20230528</h3>
@@ -1014,7 +1087,7 @@ npm ERR! This command does not support workspaces.</p>
 <h3> 20221114</h3>
 <p>从今以后我将作为意义党而活着。</p>
 <hr>
-<p>72小时后禁止指纹解锁是我觉得Android机上最傻逼的设计。</p>
+<p>72 小时后禁止指纹解锁是我觉得 Android 机上最傻逼的设计。</p>
 <h3> 20221111</h3>
 <p>我的缓存比较大而存储比较小。因此将缓存写入存储的过程是必要的。</p>
 <h3> 20221103</h3>
@@ -1028,11 +1101,11 @@ npm ERR! This command does not support workspaces.</p>
 <hr>
 <p>饱暖思淫欲，饥寒知世艰。</p>
 <h3> 20221018</h3>
-<p>每次用IDM下载大文件我都好奇为什么盘盒硬盘灯不闪。。今天发现IDM是默认下载缓存到C盘再合并的。。</p>
+<p>每次用 IDM 下载大文件我都好奇为什么盘盒硬盘灯不闪。。今天发现 IDM 是默认下载缓存到 C 盘再合并的。。</p>
 <h3> 20221016</h3>
 <p>激进应当是程序员的必备品质。</p>
 <h3> 20221010</h3>
-<p>很喜欢23:00-24:00这段时间。每天23点断电后，我会把笔记本亮度调到最低，加上黄得发黑的屏幕滤镜，在漆黑的小宿舍里推galgame。寂暗的夜，我可以沉醉在屏幕后的世界中，不用想太多多余的事情；而午夜卡着时间领完每日折扣券后出门刷牙，走廊冷冽的白色淡光又能使我沉醉梦幻。</p>
+<p>很喜欢 23:00-24:00 这段时间。每天 23 点断电后，我会把笔记本亮度调到最低，加上黄得发黑的屏幕滤镜，在漆黑的小宿舍里推 galgame。寂暗的夜，我可以沉醉在屏幕后的世界中，不用想太多多余的事情；而午夜卡着时间领完每日折扣券后出门刷牙，走廊冷冽的白色淡光又能使我沉醉梦幻。</p>
 <h3> 20220925</h3>
 <p>我的爆肝小助手：冰红茶+外卖。</p>
 <h3> 20220924</h3>
@@ -1044,15 +1117,15 @@ npm ERR! This command does not support workspaces.</p>
 <hr>
 <p>烈日让我舒适而迷茫，飘雨给我失落与决心。</p>
 <h3> 20220829</h3>
-<p>将返校焦虑转化为打osu的动力！</p>
+<p>将返校焦虑转化为打 osu 的动力！</p>
 <h3> 20220818</h3>
-<p>由于我的两个galgame没法正常运行，我认定是不兼容win11的问题，花了几个小时去<a href="/articles/computer_setting.html" target="blank">搞hyper-v虚拟机</a>（毕竟是原生的，所以首选了）和出现的亿点bug……最后还是没搞好，愤然选择VMware装上了win10。结果发现玩不了gal的问题是 <strong><a href="/farraginous/log.html#_20220815" target="blank">20220815硬盘崩了</a>把文件损坏了</strong>……笑死个人</p>
+<p>由于我的两个 galgame 没法正常运行，我认定是不兼容 win11 的问题，花了几个小时去<a href="/articles/computer_setting.html" target="blank">搞 hyper-v 虚拟机</a>（毕竟是原生的，所以首选了）和出现的亿点 bug……最后还是没搞好，愤然选择 VMware 装上了 win10。结果发现玩不了 gal 的问题是 <strong><a href="/farraginous/log.html#_20220815" target="blank">20220815 硬盘崩了</a>把文件损坏了</strong>……笑死个人</p>
 <h3> 20220817</h3>
 <p>玄幻读者表示，泳池是最没有素质的公共场所<span class="heimu" title="你知道的太多了">之一</span>。</p>
 <h3> 20220815</h3>
 <p>把存档放在<code>%AppData%\Roaming</code>里面的是坏文明！太坏了……呜…呜呜……</p>
 <h3> 20220814</h3>
-<p>蚊香液p用没有，还得是电蚊拍。（啊…《灭蚊记》的话还是算了吧……</p>
+<p>蚊香液 p 用没有，还得是电蚊拍。（啊…《灭蚊记》的话还是算了吧……</p>
 <h3> 20220813</h3>
 <p>由于<a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">一些原因</a>，此间缺失的随笔统一算作今日随笔。</p>
 <hr>
@@ -1062,7 +1135,7 @@ npm ERR! This command does not support workspaces.</p>
 <hr>
 <p>Q：公交车/大巴车的哪个位置比较安全？A：左前右后。</p>
 <h3> 20220808</h3>
-<p><a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">右耳聋了7天5小时</a>，恢复听力后感慨：还是健康最重要啊。</p>
+<p><a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">右耳聋了 7 天 5 小时</a>，恢复听力后感慨：还是健康最重要啊。</p>
 <h3> 20220730</h3>
 <p>高中没接触那些有意义的事真是太糟了……损失了很多成长的机会。我开始后悔了。</p>
 <hr>
@@ -1087,18 +1160,18 @@ npm ERR! This command does not support workspaces.</p>
 <h3> 20220712</h3>
 <p>写<a href="/articles/track_record.html" target="blank">（第二篇）横评</a>时的那种掌控感有点爽（软件们在我手里瑟瑟发抖的样子. ..</p>
 <h3> 20220708</h3>
-<p>Android的软件使用时长计时为什么只能查看本周数据...然后我做了个<a href="/articles/time_record.html" target="blank">横评</a>。</p>
+<p>Android 的软件使用时长计时为什么只能查看本周数据...然后我做了个<a href="/articles/time_record.html" target="blank">横评</a>。</p>
 <h3> 20220702</h3>
 <p>感性的代价可不止一点呢...我究竟是为了什么回到家里来的啊...</p>
 <h3> 20220629</h3>
-<p>Github治国有何不可！</p>
+<p>Github 治国有何不可！</p>
 <h3> 20220628</h3>
 <p>在模仿中重塑自我，在尝试中走出道路。</p>
 <h3> 20220618</h3>
-<p>能早解决的事就不要拖。不要像我这样垂死病中惊坐起发现论文已经过了ddl同时还发现ip不在学校不能免费看知网论文。（前几天一直在 <strong>享 受 假 期</strong> ）
+<p>能早解决的事就不要拖。不要像我这样垂死病中惊坐起发现论文已经过了 ddl 同时还发现 ip 不在学校不能免费看知网论文。（前几天一直在 <strong>享 受 假 期</strong> ）
 <img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/essay/20220619.png" alt="绝望影像" loading="lazy"></p>
 <h3> 20220613</h3>
-<p>历经11天终于回到家了。这11天我的评价是很无聊，甚至不能给我的生命留下什么记忆。</p>
+<p>历经 11 天终于回到家了。这 11 天我的评价是很无聊，甚至不能给我的生命留下什么记忆。</p>
 <h3> 20220612</h3>
 <p>丈许浪大争西东，相击相灭一场空。</p>
 <h3> 20220531</h3>
@@ -1113,18 +1186,18 @@ npm ERR! This command does not support workspaces.</p>
 <p>提防悄无声息的自我标准降低。</p>
 <p>爆肝过后，满足与空虚一并涌上，想把成果分享给全世界，然后立刻开摆。</p>
 <h3> 20220515</h3>
-<p>在Minecraft中，人们追求更强的装备而忘记了建设家园的初衷；</p>
+<p>在 Minecraft 中，人们追求更强的装备而忘记了建设家园的初衷；</p>
 <p>在文艺作品中，反派渴望更强的力量而忘记了，身边的人。</p>
 <h3> 20220514</h3>
 <p>人类是很脆弱的。需要做好意外伤残甚至失去生命的觉悟。把幻想化为经验，预防悲剧发生。</p>
 <h3> 20220513</h3>
 <p>倘若遭遇绝望，也要去享受绝望。</p>
 <h3> 20220510</h3>
-<p>怎么会事呢？突然发现博客好像没什么东西写了awa. ..前几天的干劲一定是用完了罢。对了，可以添加<code>atri</code>bot！</p>
-<p>我恨不得每一天都能有200小时，不，2000小时！</p>
+<p>怎么会事呢？突然发现博客好像没什么东西写了 awa. ..前几天的干劲一定是用完了罢。对了，可以添加<code>atri</code>bot！</p>
+<p>我恨不得每一天都能有 200 小时，不，2000 小时！</p>
 <h3> 20220506</h3>
 <p><code>cmd /k</code> : 执行命令，保留窗口</p>
-<p>这里是启动<code>atri</code>bot的关键脚本：</p>
+<p>这里是启动<code>atri</code>bot 的关键脚本：</p>
 <div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 更早</h2>
 <p>一些高中时代写出的东西，姑且就放在这里好了。<s>反正也都算是随笔嘛！</s></p>
 <h3> 道理</h3>
@@ -1706,7 +1779,16 @@ print("123")<br>
 <ul>
 <li>LSPosed</li>
 <li><a href="https://github.com/LSPosed/LSPosed.github.io/releases" target="_blank" rel="noopener noreferrer">Shamiko</a>：隐藏 root。</li>
-<li><a href="https://github.com/yc9559/uperf" target="_blank" rel="noopener noreferrer">uperf</a>：性能调度。我设为 powersave 模式。</li>
+<li><a href="https://github.com/yc9559/uperf" target="_blank" rel="noopener noreferrer">uperf</a>：性能调度。设为 powersave 模式。
+<ul>
+<li>在 <code>perapp_powermode.txt</code> 中添加音游性能调度为 <code>fast</code>，<strong>然后需要在 <code>cur_powermode.txt</code> 中设为 <code>auto</code> 才会启用</strong>。</li>
+<li>
+<blockquote>
+<p>注：可能会对音游等造成影响，不要安装其推荐的两个模块；需要在 <code>/sdcard/Android/yc/uperf/uperf.json</code> 中设置 <code>sfanalysis</code> 为 <code>"enable": false</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
 <li><a href="https://drive.google.com/file/d/14yctRZDZRrN-PaNsnnRn6d9uzbnMYglo/view?usp=sharing" target="_blank" rel="noopener noreferrer">神仙自动救砖</a>（<strong>闭源！</strong>）：不好找，做了个私链备份（需要科学上网）</li>
 </ul>
 <!-- * [电池容量纠正](https://downloads.suchenqaq.club/magiskmodules/tool/%E7%94%B5%E9%87%8F%E4%BF%AE%E5%A4%8D.zip)（**闭源**） -->
@@ -1727,7 +1809,7 @@ print("123")<br>
 <ul>
 <li><a href="https://github.com/RikkaApps/Shizuku" target="_blank" rel="noopener noreferrer">shizuku</a></li>
 <li><a href="https://github.com/aistra0528/Hail" target="_blank" rel="noopener noreferrer">雹</a>：冻结应用。拒绝使用闭源商业化的 <em>冰箱</em>。（顺带一提，下述的 <em>Scene5</em> 也有冻结应用的功能）</li>
-<li>App ops（<strong>闭源！</strong>）：权限管理。闭源功能有限。</li>
+<li>App ops（<strong>闭源！</strong>）：权限管理。闭源功能有限，可使用 <em>App Manager</em> 代替。</li>
 </ul>
 <p>通过 Github 安装：</p>
 <ul>
@@ -4418,6 +4500,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><a href="https://github.com/lxl66566/ecust-electricity-statistics" target="_blank" rel="noopener noreferrer">ecust electricity statistics</a>：（夹带私货）电费统计</li>
 </ul>
 </li>
+<li>奉贤很小，主要生活区走路 5min 可达，因此非富裕则不需要买共享单车服务。（健康跑也无需买车，见下条）</li>
 <li>体育社团的活动能抵扣强制跑步的次数。可以参加多个体育社团，一个下午轮流去各社团打卡，可以短时间内拿完所有跑步的次数。
 <ul>
 <li>自弃用 <em>小步点</em> 改用<em>华理健康</em>后，可使用 <a href="/farraginous/recommend_packages.html#fake-location" target="blank">fake location</a> 代替跑步。<strong>拒绝非个性化的不负责任的强制体育活动。</strong></li>
@@ -4604,7 +4687,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </li>
 </ul>
 <h2> 评教</h2>
-<p>对教过我的老师的个人评价与打分。我遇上的计算机老师基本是一般未满的水平。</p>
+<p>对教过我的老师的个人评价与打分。<span class="heimu" title="你知道的太多了">我遇上的计算机老师基本是一般未满的水平。</span></p>
 <details class="hint-container details"><summary>对敏感信息进行折叠</summary>
 <ul>
 <li>
@@ -4634,9 +4717,33 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center">通信电子线路 - 凌小峰</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details></td>
+</tr>
+<tr>
+<td style="text-align:center">DSP - 万永菁</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">线上下结合，课前给所有学生打印教学计划和作业</td>
+<td style="text-align:center"><details><summary>点击展开</summary><p>13817781630<br>Q:2447131015<br>We:ecust_wyj<br>wanyongjing@ecust.ecu.cn</p></details></td>
+</tr>
+<tr>
+<td style="text-align:center">算法导论 - 吴粤</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">较现代，懂 rust，但是有些方面又觉得像在古代<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup></td>
+<td style="text-align:center"><details><summary>点击展开</summary><p>Q:1769013250<br>We:mathwuyue<br>yuewu@ecust.edu.cn<br>yue.wu@etalkai.com</p></details></td>
+</tr>
+<tr>
+<td style="text-align:center">人工智能基础 - 朱宏擎</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">王嵘 - 代信号实验</td>
 <td style="text-align:center">-1</td>
-<td style="text-align:center">我对其不会有半点尊敬。<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"><sup class="footnote-ref"></sup></a><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"><sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></td>
+<td style="text-align:center">我对其不会有半点尊敬。<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3"><sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"><sup class="footnote-ref"></sup></a><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -4659,7 +4766,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </tr>
 <tr>
 <td style="text-align:center">信号与系统 - 朱煜</td>
-<td style="text-align:center">7<sup class="footnote-ref"><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></sup></td>
+<td style="text-align:center">7<sup class="footnote-ref"><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6"></a></sup></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"><details><summary>点击展开</summary><p>13817566582</p></details></td>
 </tr>
@@ -4810,13 +4917,15 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <ol class="footnotes-list">
 <li id="footnote1" class="footnote-item"><p>某个学习通答题脚本和这个有冲突。。<a href="https://github.com/alist-org/alist/discussions/2399" target="_blank" rel="noopener noreferrer">source</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote2" class="footnote-item"><p><a href="https://t.me/withabsolutex/1114" target="_blank" rel="noopener noreferrer">讲得慢 + 不给 PPT，故意吊着学生</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+<li id="footnote2" class="footnote-item"><p>他说 ssd 硬盘写速度 220kb/s 左右，内存是 5-10 倍；然后说 一块 3090 | 4090 三五千（2023.09 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote3" class="footnote-item"><p><a href="https://t.me/withabsolutex/1115" target="_blank" rel="noopener noreferrer">实验做完不放人，实验室器材不足不处理，强制大创团队报名<em>互联网+</em></a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+<li id="footnote3" class="footnote-item"><p><a href="https://t.me/withabsolutex/1114" target="_blank" rel="noopener noreferrer">讲得慢 + 不给 PPT，故意吊着学生</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote4" class="footnote-item"><p><a href="https://t.me/withabsolutex/1126" target="_blank" rel="noopener noreferrer">自己不知道电解电容，还嘲讽别人</a> <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
+<li id="footnote4" class="footnote-item"><p><a href="https://t.me/withabsolutex/1115" target="_blank" rel="noopener noreferrer">实验做完不放人，实验室器材不足不处理，强制大创团队报名<em>互联网+</em></a> <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote5" class="footnote-item"><p><a href="https://t.me/withabsolutex/945" target="_blank" rel="noopener noreferrer">课前上厕所时间做随堂练习</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
+<li id="footnote5" class="footnote-item"><p><a href="https://t.me/withabsolutex/1126" target="_blank" rel="noopener noreferrer">自己不知道电解电容，还嘲讽别人</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote6" class="footnote-item"><p><a href="https://t.me/withabsolutex/945" target="_blank" rel="noopener noreferrer">课前上厕所时间做随堂练习</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -4841,6 +4950,10 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20230906</h3>
+<ul>
+<li>新增<a href="/gossip/forward.html" target="blank">闲聊 - 神评</a></li>
+</ul>
 <h3> 20230831</h3>
 <ul>
 <li>新增<a href="/coding/vscode.html" target="blank">编程 - vscode</a></li>
@@ -6125,6 +6238,7 @@ ps. 上传修复了。</p>
 <li><a href="/gossip/hope.html" target="blank">绝对值 x 对 xxx 的希望是什么？</a></li>
 <li><a href="/gossip/compare_home_to_college.html" target="blank">家与学校生活环境对比（我为什么不愿意回家）</a></li>
 <li><a href="/gossip/memes.html" target="blank">绷不住了</a></li>
+<li><a href="/gossip/forward.html" target="blank">神评</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -6929,53 +7043,54 @@ utools vs diy my tools
 <p><code>(?)</code> 代表重新考虑日程的存在性与重要性。</p>
 <h2> 博客日程</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> vscode extensions recommendation</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> vscode extensions recommendation</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> koishi</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> tampermonkey</label></li>
 </ul>
 <h3> 需要考虑</h3>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> Github stars (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> 零食推荐 (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> bilibili up 推荐(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> Github stars (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> 零食推荐 (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-5" disabled="disabled"><label class="task-list-item-label" for="task-item-5"> bilibili up 推荐(?)</label></li>
 </ul>
 <h2> 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span></h2>
 <ul class="task-list-container">
 <li class="task-list-item">
-<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-5" disabled="disabled"><label class="task-list-item-label" for="task-item-5"> ArchWSL 传文件，编译 wordsreciter Qt6</label></p>
+<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-6" disabled="disabled"><label class="task-list-item-label" for="task-item-6"> ArchWSL 传文件，编译 wordsreciter Qt6</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-6" disabled="disabled"><label class="task-list-item-label" for="task-item-6"> 日语 N2</label></p>
+<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-7" disabled="disabled"><label class="task-list-item-label" for="task-item-7"> 日语 N2</label></p>
 </li>
 <li class="task-list-item">
-<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-7" disabled="disabled"><label class="task-list-item-label" for="task-item-7"> 英语 IELTS &amp; TOEFL (without a target score)</label></p>
+<p><input type="checkbox" class="task-list-item-checkbox" id="task-item-8" disabled="disabled"><label class="task-list-item-label" for="task-item-8"> 英语 IELTS &amp; TOEFL (without a target score)</label></p>
 </li>
 <li>
 <p>CS 自学：</p>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-8" disabled="disabled"><label class="task-list-item-label" for="task-item-8"> tauri or flask, to dev wordsreciter</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-9" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-9"> koishi plugin, like atri bot</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-10" disabled="disabled"><label class="task-list-item-label" for="task-item-10"> C# learning and pull request to Tai, MisakaTranslator</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-11" disabled="disabled"><label class="task-list-item-label" for="task-item-11"> lua(?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-12" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-12"> tg 教务信息转发（通过 rss 实现）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-9" disabled="disabled"><label class="task-list-item-label" for="task-item-9"> tauri or flask, to dev wordsreciter</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-10" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-10"> koishi plugin, like atri bot</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-11" disabled="disabled"><label class="task-list-item-label" for="task-item-11"> C# learning and pull request to Tai, MisakaTranslator</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-12" disabled="disabled"><label class="task-list-item-label" for="task-item-12"> lua(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-13" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-13"> tg 教务信息转发（通过 rss 实现）</label></li>
 </ul>
 </li>
 </ul>
 <h2> 日程库（不急）</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-13" disabled="disabled"><label class="task-list-item-label" for="task-item-13"> <a href="/hide/inspiration.html#%E7%BC%96%E7%A8%8B%E7%81%B5%E6%84%9F" target="blank">开发各类应用</a></label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-14" disabled="disabled"><label class="task-list-item-label" for="task-item-14"> osu reform β pass</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-15" disabled="disabled"><label class="task-list-item-label" for="task-item-15"> 算法类(?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-16" disabled="disabled"><label class="task-list-item-label" for="task-item-16"> CTF(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-14" disabled="disabled"><label class="task-list-item-label" for="task-item-14"> <a href="/hide/inspiration.html#%E7%BC%96%E7%A8%8B%E7%81%B5%E6%84%9F" target="blank">开发各类应用</a></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-15" disabled="disabled"><label class="task-list-item-label" for="task-item-15"> osu reform β pass</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-16" disabled="disabled"><label class="task-list-item-label" for="task-item-16"> 算法类(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-17" disabled="disabled"><label class="task-list-item-label" for="task-item-17"> CTF(?)</label></li>
 </ul>
 <h2> 有生之年</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-17" disabled="disabled"><label class="task-list-item-label" for="task-item-17"> 钢琴</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-18" disabled="disabled"><label class="task-list-item-label" for="task-item-18"> 绘画</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-19" disabled="disabled"><label class="task-list-item-label" for="task-item-19"> 旅游（非国内）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-20" disabled="disabled"><label class="task-list-item-label" for="task-item-20"> 虚幻引擎 (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-21" disabled="disabled"><label class="task-list-item-label" for="task-item-21"> build-my-own-language (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-22" disabled="disabled"><label class="task-list-item-label" for="task-item-22"> <a href="/hide/inspiration.html" target="blank">灵感区</a>：对任何东西灵光一闪的想法。希望能用得上。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-23" disabled="disabled"><label class="task-list-item-label" for="task-item-23"> 理论数学(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-18" disabled="disabled"><label class="task-list-item-label" for="task-item-18"> 钢琴</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-19" disabled="disabled"><label class="task-list-item-label" for="task-item-19"> 绘画</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-20" disabled="disabled"><label class="task-list-item-label" for="task-item-20"> 旅游（非国内）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-21" disabled="disabled"><label class="task-list-item-label" for="task-item-21"> 虚幻引擎 (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-22" disabled="disabled"><label class="task-list-item-label" for="task-item-22"> build-my-own-language (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-23" disabled="disabled"><label class="task-list-item-label" for="task-item-23"> <a href="/hide/inspiration.html" target="blank">灵感区</a>：对任何东西灵光一闪的想法。希望能用得上。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-24" disabled="disabled"><label class="task-list-item-label" for="task-item-24"> 理论数学(?)</label></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -11472,7 +11587,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center">近月少女的礼仪</td>
-<td style="text-align:center">-43min</td>
+<td style="text-align:center">-44min</td>
 </tr>
 <tr>
 <td style="text-align:center">アンレス テルミナリア</td>
@@ -11715,8 +11830,10 @@ x 表示水平位移，h 表示垂直位移。<br>
 </ul>
 <h4> 近月少女的礼仪</h4>
 <ul>
+<li>甜度过高，被齁死了</li>
 <li>同样的女装与男主语音，不由得会想到什么</li>
 <li>有点剧情，但其中的一些非反派人物的观念恕我无法认同</li>
+<li>游玩顺序：柳ヶ瀬 湊 -&gt; 桜小路 ルナ -&gt; ユルシュール＝フルール＝ジャンメール -&gt; 花之宮 瑞穂</li>
 </ul>
 <h4> ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか</h4>
 <ul>
