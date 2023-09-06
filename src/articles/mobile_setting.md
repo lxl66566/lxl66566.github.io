@@ -67,7 +67,9 @@ tag:
 ### magisk modules
 * LSPosed
 * [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)：隐藏 root。
-* [uperf](https://github.com/yc9559/uperf)：性能调度。我设为 powersave 模式。
+* [uperf](https://github.com/yc9559/uperf)：性能调度。设为 powersave 模式。
+    * 在 `perapp_powermode.txt` 中添加音游性能调度为 `fast`，**然后需要在 `cur_powermode.txt` 中设为 `auto` 才会启用**。
+    * > 注：可能会对音游等造成影响，不要安装其推荐的两个模块；需要在 `/sdcard/Android/yc/uperf/uperf.json` 中设置 `sfanalysis` 为 `"enable": false`
 * [神仙自动救砖](https://drive.google.com/file/d/14yctRZDZRrN-PaNsnnRn6d9uzbnMYglo/view?usp=sharing)（**闭源！**）：不好找，做了个私链备份（需要科学上网）
 <!-- * [电池容量纠正](https://downloads.suchenqaq.club/magiskmodules/tool/%E7%94%B5%E9%87%8F%E4%BF%AE%E5%A4%8D.zip)（**闭源**） -->
 ### LSPosed modules
@@ -84,7 +86,7 @@ tag:
 通过 play 商店安装：
 * [shizuku](https://github.com/RikkaApps/Shizuku)
 * [雹](https://github.com/aistra0528/Hail)：冻结应用。拒绝使用闭源商业化的 *冰箱*。（顺带一提，下述的 *Scene5* 也有冻结应用的功能）
-* App ops（**闭源！**）：权限管理。闭源功能有限。
+* App ops（**闭源！**）：权限管理。闭源功能有限，可使用 *App Manager* 代替。
 
 通过 Github 安装：
 * [AdAway](https://github.com/AdAway/AdAway)：屏蔽广告。

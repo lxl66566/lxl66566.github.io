@@ -13,8 +13,9 @@ category:
 
 ## 博客日程
 
-- [ ] vscode extensions recommendation
+- [x] vscode extensions recommendation
 - [x] koishi
+- [ ] tampermonkey
 
 ### 需要考虑
 

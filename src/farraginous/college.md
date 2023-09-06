@@ -20,6 +20,7 @@ tag:
     * [ecust CourseShare](https://github.com/tianyilt/ecust-CourseShare)：各类文件、答案、课程资料。
     * [Ecust Leap](https://ecust-leap.github.io/)：飞跃手册，记载出国，考研，保研，求职等方面的心得体会。
     * [ecust electricity statistics](https://github.com/lxl66566/ecust-electricity-statistics)：（夹带私货）电费统计
+* 奉贤很小，主要生活区走路 5min 可达，因此非富裕则不需要买共享单车服务。（健康跑也无需买车，见下条）
 * 体育社团的活动能抵扣强制跑步的次数。可以参加多个体育社团，一个下午轮流去各社团打卡，可以短时间内拿完所有跑步的次数。
     * 自弃用 *小步点* 改用*华理健康*后，可使用 [fake location](./recommend_packages.md#fake-location) 代替跑步。**拒绝非个性化的不负责任的强制体育活动。**
 * 如果有平板的话，不要买书。自学的话教科书没有太大用处，而且基本上可以在 [zlib](./recommend_websites.md#资源搜索) 或 [alist](https://alist.世界百流大学.com)[^5] 上找到。而且类似形势与政策，军事理论等课是不用书的（头铁的话其他课也都能不用）。
@@ -165,7 +166,8 @@ tag:
         * 网上兼职不建议。水深，回报率低，并且上述两项的最低工资已经够高了。
     3. 免听几门垃圾课，把时间留给兼职。（但是本人更建议把这些时间拿来提升自我。）
 ## 评教
-对教过我的老师的个人评价与打分。我遇上的计算机老师基本是一般未满的水平。
+对教过我的老师的个人评价与打分。<span class="heimu" title="你知道的太多了">我遇上的计算机老师基本是一般未满的水平。</span>
+
 :::details 对敏感信息进行折叠
 * <Badge text="限手机" /> 表示上课不允许使用电子设备
 * <Badge text="限座位" /> 表示上课限制学生坐的位子
@@ -178,6 +180,10 @@ tag:
 
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
+|通信电子线路 - 凌小峰|4|-|<details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details>|
+|DSP - 万永菁|9|线上下结合，课前给所有学生打印教学计划和作业|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>
+|算法导论 - 吴粤|6|较现代，懂 rust，但是有些方面又觉得像在古代[^6]|<details><summary>点击展开</summary><p>Q:1769013250<br/>We:mathwuyue<br/>yuewu@ecust.edu.cn<br/>yue.wu@etalkai.com</p></details>|
+|人工智能基础 - 朱宏擎|5|-|
 |王嵘 - 代信号实验|-1|我对其不会有半点尊敬。[^2][^3][^4]|
 |大物实验 - 顾晓艳|8|温和，讲解清楚，手把手教||
 |数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~，不过至少专业性没有问题；平时分高，哥几个都是 90+|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
@@ -212,4 +218,5 @@ tag:
 [^2]: [讲得慢 + 不给 PPT，故意吊着学生](https://t.me/withabsolutex/1114)
 [^3]: [实验做完不放人，实验室器材不足不处理，强制大创团队报名*互联网+*](https://t.me/withabsolutex/1115)
 [^4]: [自己不知道电解电容，还嘲讽别人](https://t.me/withabsolutex/1126)
+[^6]: 他说 ssd 硬盘写速度 220kb/s 左右，内存是 5-10 倍；然后说 一块 3090 | 4090 三五千（2023.09
 ## [如何看待大学班级](../gossip/consider.md#如何看待大学班级)

@@ -15,6 +15,8 @@ category:
 * [学习笔记](./learning/)区只记录 *创建* 活动。（学习不止，维护过多）
 :::
 ## 2023
+### 20230906
+- 新增[闲聊 - 神评](../gossip/forward.md)
 ### 20230831
 - 新增[编程 - vscode](../coding/vscode.md)
 - 迁移 Linux 页面至[文章](../articles)

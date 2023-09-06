@@ -18,7 +18,7 @@
     {
       "label": "upload",
       "type": "shell",
-      "command": "bash ${workspaceFolder}/upload.sh",
+      "command": "./upload.sh",
       "detail": "./upload.sh",
       "problemMatcher": [],
       "options": {
