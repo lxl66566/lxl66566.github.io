@@ -161,6 +161,7 @@ ssh -T git@github.com   # 输入该命令验证是否成功
 git push origin <branch>    # branch 为当前分支
 git push origin <branch> -u     # 将当前分支设为默认
 git push origin <branch> -f     # 强制覆盖上传，慎用
+git push origin <branch> --force-with-lease # 建议使用此选项代替 -f，更加安全
 ```
 :::tip 提示
 至此，你已经可以完成github等平台的文件上传了。
