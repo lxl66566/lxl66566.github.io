@@ -2,58 +2,73 @@
 date: 2022-05-04
 icon: hot
 category:
-    - 爱好
+  - 爱好
 tag:
-    - 游戏
+  - 游戏
 ---
+
 # CS:GO
-CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此需要[时不时戒一段时间](../../hide/personal_details.md#强迫自己做的事)。
+
+CS:GO 确实是一款吸引我的游戏。但我打 CS:GO 会有罪恶感，因此需要[时不时戒一段时间](../../hide/personal_details.md#强迫自己做的事)。
 
 > 另外，我已于 2022.11.20 戒掉了 CS:GO，且于 2023.01.28 卸载。~~（不卸载的话效果不好）~~ 希望各位适度游戏，享受游戏过程。
+
 ## 设置方案
+
 ### 启用控制台
+
 ![控制台](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_1.png)
 
-控制台是对csgo进行高级操作的基础。现在你可以按`~`键呼出控制台。
+控制台是对 csgo 进行高级操作的基础。现在你可以按`~`键呼出控制台。
+
 ### 切换国服
+
 #### 如何切换
-国服游玩csgo的优点是：
-* 无需加速器，延迟低
-* 匹配国人队友
+
+国服游玩 csgo 的优点是：
+
+- 无需加速器，延迟低
+- 匹配国人队友
 
 不过切换国服也有缺点，比如需要防沉迷认证，无法跟外服联机等。请自行决定是否切换。你可以选择以下**一项**：
 
-* 下载安装[完美世界竞技平台](https://pvp.wanmei.com/)软件。之后每次启动csgo时就会让你选择游玩哪个服务器。
+- 下载安装[完美世界竞技平台](https://pvp.wanmei.com/)软件。之后每次启动 csgo 时就会让你选择游玩哪个服务器。
 
 <div style="text-align: center;">
 <img alt="开始界面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_2.png"  width="43%" height="43%"/>
 </div>
 
-* 在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
+- 在 steam 库中右击 csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
+
 #### 切换后的设置
-由于切换国服后csgo的语音会变成中文，若需要切换回英文语音请：
-1. 进入Steam安装目录下的Steam\steamapps\common\Counter-Strike Global Offensive\csgo文件夹
-2. 删除所有名称带有 audiochinese 的.vpk文件与全部三个名称带有 perfectworld 的.vpk文件 *（后者与语音无关，但建议删除）*
+
+由于切换国服后 csgo 的语音会变成中文，若需要切换回英文语音请：
+
+1. 进入 Steam 安装目录下的 Steam\steamapps\common\Counter-Strike Global Offensive\csgo 文件夹
+2. 删除所有名称带有 audiochinese 的.vpk 文件与全部三个名称带有 perfectworld 的.vpk 文件 _（后者与语音无关，但建议删除）_
 
 :::tip 提示
 若更新后出现**文件缺失提醒**、**素材加载失败**或**语音变回中文**情况，请再次进入目录删除。
 :::
+
 ### 调整纵横比
 
-游戏默认比例16:9，但调整成4:3有如下好处：
-* 更容易爆头
-* 分辨率更低，提高帧率（性能过剩的话当我没说）
+游戏默认比例 16:9，但调整成 4:3 有如下好处：
+
+- 更容易爆头
+- 分辨率更低，提高帧率（性能过剩的话当我没说）
 
 调整纵横比后，还需要将画面拉长以充分适应电脑屏幕。但是画面拉长有如下缺点：
-* 调整后的玩家头身比例会让你觉得奇怪，需要一段时间的适应
-* 游戏开始时会改变已打开窗口的纵横比
-* 鼠标的水平移动速率与垂直移动速率将不相等
 
-画面拉长的常规方法是进入NVIDIA控制面板进行设置。此处给出一种非常规的解决方案：
+- 调整后的玩家头身比例会让你觉得奇怪，需要一段时间的适应
+- 游戏开始时会改变已打开窗口的纵横比
+- 鼠标的水平移动速率与垂直移动速率将不相等
+
+画面拉长的常规方法是进入 NVIDIA 控制面板进行设置。此处给出一种非常规的解决方案：
 
 1. Win+R 键进入运行，输入 regedit 打开注册表
-2. 依次点击 HKEY_LOCAL_MACHINE..SYSTEM..ControlSet001..Control..GraphicsDrivers..Configuration 
-（此时每个目录下仅有一个文件夹，一直点到最后），在右侧找到 Scaling 并双击，更改数值为3
+2. 依次点击 HKEY_LOCAL_MACHINE..SYSTEM..ControlSet001..Control..GraphicsDrivers..Configuration
+   （此时每个目录下仅有一个文件夹，一直点到最后），在右侧找到 Scaling 并双击，更改数值为 3
 
 <div style="text-align: center; ">
 <img alt="注册表" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_4.png"  width="100%" height="100%"/>
@@ -64,58 +79,77 @@ CS:GO确实是一款吸引我的游戏。但我打CS:GO会有罪恶感，因此�
 <br/><img alt="注册表备份" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_3.png"  width="40%" height="40%"/>
 :::
 
-### 显示FPS
+### 显示 FPS
+
 在控制台中输入`net_graph 1`
 
-该命令还能显示ping值，丢包率，tick等。
+该命令还能显示 ping 值，丢包率，tick 等。
 
 ### 显示回合伤害
+
 每回合结束后在左上角显示本回合伤害数据：
 
+1. 进入 Steam 安装目录下的 _Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg_ 文件夹，新建文本文档，复制粘贴以下代码：
 
-1. 进入Steam安装目录下的 *Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg* 文件夹，新建文本文档，复制粘贴以下代码：
 ```
 developer 1;
 con_filter_enable 2;
 con_filter_text_out "player:";
 con_filter_text "damage";
 ```
+
 2. 保存关闭后重命名为”damage.cfg”
-3. 在steam库中右击csgo，点击`属性`，在`通用-启动选项`中加入 +exec damage
+3. 在 steam 库中右击 csgo，点击`属性`，在`通用-启动选项`中加入 +exec damage
 
 ### 一键跳投
+
 比起手动跳投，一键跳投拥有更高的精确度。（理论上绝对精确）
 
 在控制台输入：
+
 ```
 alias +jumpthrow"+jump;-attack;-attack2"
 alias -jumpthrow -jump
 bind "t" "+jumpthrow"
 ```
+
 之后拉开投掷物后按`t`即可一键跳投。其中`t`也可更换为其他不冲突的按键。
 
 ### 清除血迹
+
 `bind "shift" "+speed;r_cleardecals"` 或者 `bind f "+lookatweapon;r_cleardecals"`
+
 ### 一键大跳
+
 ```
 alias +cjump "+jump; +duck"
 alias -cjump "-jump; -duck"
 bind "mouse5" "+cjump"
 ```
+
 ### 缩小雷达图
+
 `cl_radar_scale 0.3`可以使雷达图包含的信息更多。
+
 ### 快速切指定道具
+
 `bind "6" "use weapon_smokegrenade"`
-* 闪光弹 weapon_flashbang
-* 烟雾弹 weapon_smokegrenade
-* 诱饵弹 weapon_decoy
-* 手雷 weapon_hegrenade
-* 燃烧弹 weapon_incgrenade
+
+- 闪光弹 weapon_flashbang
+- 烟雾弹 weapon_smokegrenade
+- 诱饵弹 weapon_decoy
+- 手雷 weapon_hegrenade
+- 燃烧弹 weapon_incgrenade
+
 ### 静步加快
-`bind "c"+moveup` 按`c`即可快速无声走路。仅适用于内格夫，开镜的SG 553和AUG。
+
+`bind "c"+moveup` 按`c`即可快速无声走路。仅适用于内格夫，开镜的 SG 553 和 AUG。
+
 ## 常用指令
+
 多用于自定义服务器（创意工坊）。
 
+<!-- prettier-ignore -->
 |用途|指令|
 | :-: | :-: |
 |设置出生金钱|`mp_startmoney 16000`|
@@ -132,8 +166,10 @@ bind "mouse5" "+cjump"
 |显示投掷物轨迹|`sv_grenade_trajectory 1`|
 
 ## 问题解决
+
 无法连接到服务器可以尝试：
 cmd 中执行
+
 ```batch
 netsh winsock reset
 ipconfig /flushdns

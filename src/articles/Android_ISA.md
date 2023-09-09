@@ -2,12 +2,14 @@
 date: 2022-05-05
 icon: android
 category:
-    - 教程
+  - 教程
 tag:
-    - 移动端
+  - 移动端
 ---
-# 查看手机cpu指令集
 
+# 查看手机 cpu 指令集
+
+<!-- prettier-ignore -->
 |手段|大小|图片|使用方法|
 | :-: | :-: | :-: | :-: |
 |一个木函（国内应用商店）|7M|![一个木函](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/yigemuhan.jpg)|设备应用-查看设备详细信息|

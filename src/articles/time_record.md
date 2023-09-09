@@ -38,17 +38,18 @@ tag:
 
 <text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。
 
-|                      软件名                      | 大小（使用前/后,MB） |               准确率                |               数据可查询               |              查询区间长               |           <text style="color:red;">其他缺陷</text>            |                其他权限                |
-| :----------------------------------------------: | :------------------: | :---------------------------------: | :------------------------------------: | :-----------------------------------: | :-----------------------------------------------------------: | :------------------------------------: |
-|                     StayFree                     |     48.88/63.11      | <text style="color:red;">81%</text> |                  ALL                   | <text style="color:blue;">无限</text> |                               -                               | <text style="color:red;">无障碍</text> |
-|                  My Phone Time                   |     15.23/20.65      | <text style="color:red;">0%</text>  |                  ALL                   | <text style="color:blue;">无限</text> |                               -                               |                   -                    |
-|                    ActionDash                    |       17/43.26       |                100%                 |                  ALL                   |  <text style="color:red;">周</text>   |                               -                               |                   -                    |
-|                     YourHour                     |     25.74/70.52      |                100%                 |                  ALL                   |  <text style="color:red;">天</text>   |    <text style="color:red;">查看具体应用数据需付费</text>     |                上层显示                |
-|                    App Usage                     |      4.69/28.54      | <text style="color:red;">0%</text>  |                  ALL                   |                  月                   |                               -                               |                   -                    |
-|                   手机使用时间                   |       ?/11.73        |                100%?                | <text style="color:red;">上个月</text> |                  月                   |  <text style="color:red;">必需挂着后台才可计时；广告</text>   |                后台免杀                |
-|     <text style="color:blue;">Digitox</text>     |      3.89/20.67      |                100%                 |                  ALL                   |                  月                   |                               -                               |                   -                    |
-|                     AppBlock                     |     10.87/44.05      | <text style="color:red;">0%</text>  |                  ALL                   |  <text style="color:red;">周</text>   | <text style="color:red;">不氪金仅能查看前 3 个程序数据</text> | <text style="color:red;">无障碍</text> |
-| <text style="color:blue;">Phone statistic</text> |      3.07/14.61      |                100%                 |                   年                   |  <text style="color:blue;">年</text>  |                               -                               |                   -                    |
+<!-- prettier-ignore -->
+|软件名|大小（使用前/后,MB）|准确率|数据可查询|查询区间长|<text style="color:red;">其他缺陷</text>|其他权限|
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+|StayFree|48.88/63.11|<text style="color:red;">81%</text>|ALL|<text style="color:blue;">无限</text>|-|<text style="color:red;">无障碍</text>|
+|MyPhoneTime|15.23/20.65|<text style="color:red;">0%</text>|ALL|<text style="color:blue;">无限</text>|-|-|
+|ActionDash|17/43.26|100%|ALL|<text style="color:red;">周</text>|-|-|
+|YourHour|25.74/70.52|100%|ALL|<text style="color:red;">天</text>|<text style="color:red;">查看具体应用数据需付费</text>|上层显示|
+|AppUsage|4.69/28.54|<text style="color:red;">0%</text>|ALL|月|-|-|
+|手机使用时间|?/11.73|100%?|<text style="color:red;">上个月</text>|月|<text style="color:red;">必需挂着后台才可计时；广告</text>|后台免杀|
+|<text style="color:blue;">Digitox</text>|3.89/20.67|100%|ALL|月|-|-|
+|AppBlock|10.87/44.05|<text style="color:red;">0%</text>|ALL|<text style="color:red;">周</text>|<text style="color:red;">不氪金仅能查看前3个程序数据</text>|<text style="color:red;">无障碍</text>|
+|<text style="color:blue;">Phonestatistic</text>|3.07/14.61|100%|年|<text style="color:blue;">年</text>|-|-|
 
 解释：
 

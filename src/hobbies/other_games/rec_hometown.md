@@ -2,28 +2,39 @@
 date: 2023-04-01
 icon: group
 category:
-    - 爱好
-    - 生活
+  - 爱好
+  - 生活
 tag:
-    - 打牌
+  - 打牌
 ---
+
 # 打牌记录（家乡）
+
 记录我与朋友们打牌的积分。
+
 ## 总规则
+
 各自为战的对局中，积分按照排名反序从 0 递增。
+
 ## 人物
+
+<!-- prettier-ignore -->
 |C|A|M|G|Y|
 |:--:|:--:|:--:|:--:|:--:|
 |Minute Maid|AbsoluteX|M姓朋友|G姓朋友|Y姓朋友|
+
 ## 20230818
+
 经典斗地主：
 
+<!-- prettier-ignore -->
 |序号|C|A|G|
 |:--:|:--:|:--:|:--:|
 |1|2|-1|-1|
-    
-UNO扩展规则 5.2.2
 
+UNO 扩展规则 5.2.2
+
+<!-- prettier-ignore -->
 |序号|C|A|M|G|Y|
 |:--:|:--:|:--:|:--:|:--:|:--:|
 |1|3|0|4|2|1|
@@ -34,6 +45,7 @@ UNO扩展规则 5.2.2
 |当日积分|<text style="color:red;">7</text>|<text style="color:red;">8</text>|<text style="color:red;">9</text>|<text style="color:red;">17</text>|<text style="color:red;">9</text>|
 |CAMGY UNO总积分|7|8|9|17|9|
 
+<!-- prettier-ignore -->
 |序号|C|A|G|
 |:--:|:--:|:--:|:--:|
 |1|1|2|0|
@@ -71,15 +83,18 @@ UNO扩展规则 5.2.2
 |CAG UNO总积分|33|30|30|
 
 ## 20230714
+
 经典斗地主：
 
+<!-- prettier-ignore -->
 |序号|C|A|G|
 |:--:|:--:|:--:|:--:|
 |1|-1|-1|2|
 |2|1|-2|1|
-    
-UNO扩展规则 5.2.0
 
+UNO 扩展规则 5.2.0
+
+<!-- prettier-ignore -->
 |序号|C|A|M|G|
 |:--:|:--:|:--:|:--:|:--:|
 |1|2|3|1|0|
@@ -102,8 +117,10 @@ UNO扩展规则 5.2.0
 |CAMG UNO总积分|43|61|39|49|
 
 ## 20230211
+
 后半场，1v1v1v1 斗地主
 
+<!-- prettier-ignore -->
 |序号|C|A|M|G|
 |:--:|:--:|:--:|:--:|:--:|
 |1|0|2|3|1|
@@ -121,9 +138,12 @@ UNO扩展规则 5.2.0
 |13|1|2|0|3|
 |当日积分|<text style="color:red;">15</text>|<text style="color:red;">23</text>|<text style="color:red;">14</text>|<text style="color:red;">26</text>|
 |CAMG UNO总积分|20|29|20|27|
+
 ## 20220216
+
 后半场，UNO 扩展规则 3.0 - 3.1
 
+<!-- prettier-ignore -->
 |序号|C|A|M|G|
 |:--:|:--:|:--:|:--:|:--:|
 |1|3|1|2|0|
