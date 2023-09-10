@@ -529,6 +529,14 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
    然而没什么软用，还是报相同错误
 3. 更新 `archlinux-keyring` 本身：`sudo pacman -Sy archlinux-keyring`，问题解决
 
+:::: tip
+裝 `archlinux-keyring` 其實就是在跑 `pacman-key --populate archlinux`
+:::right
+——farseerfc 😂, [src](https://t.me/archlinuxcn_group/2911740)
+:::
+~~所以这个问题还是挺玄学的，~~
+::::
+
 ### sed 语法
 
 sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。

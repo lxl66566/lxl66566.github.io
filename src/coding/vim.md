@@ -22,7 +22,7 @@ tag:
 
 ## 设置(neovim)
 
-首先基础设置我是照着[从零开始配置 Neovim(Nvim)](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)来的。这篇文章确实不错。
+首先基础设置我是照着 [external 2.](#external) 来的。这篇文章确实讲的还行。后续冲浪时也看到一篇写得很好的文章，见 [external 3.](#external)，有空的话去试吧。
 
 然后进入到了自定义环节：
 
@@ -101,3 +101,5 @@ require('neo-tree').setup {
 ## external
 
 1. [Vim 实用技巧](https://awesome-programming-books.github.io/vim/Vim实用技巧.pdf)，进阶阅读
+2. [从零开始配置 Neovim(Nvim)](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)
+3. [Neovim 使用体验](https://luyuhuang.tech/2023/03/21/nvim.html)

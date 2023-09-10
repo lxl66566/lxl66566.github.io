@@ -58,3 +58,7 @@ const 指的是指针不变，指向的值可以变。
 
 - `a ?? b`: `if(a) { return a; } else { return b; }`
 - `&&`, `&&=`, `||=`, `?.`
+
+## external
+
+1. [The Concise TypeScript Book](https://github.com/gibbok/typescript-book)

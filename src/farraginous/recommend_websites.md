@@ -136,7 +136,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ### 图片相关
 
 - 在线 PS：[稿定](https://ps.gaoding.com/#/) | [Photopea](https://www.photopea.com/)
-- 图片放大：[bigjpg](https://bigjpg.com/)
+- 图片超分辨率：[bigjpg](https://bigjpg.com/) | ~~[Final2x](https://github.com/Tohrusky/Final2x)~~（本地应用）
 - 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
 - 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)（付费下载，建议消除后直接截图）
 - 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)

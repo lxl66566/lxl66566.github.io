@@ -30,6 +30,8 @@ category:
 - [ ] 英语 IELTS & TOEFL (without a target score)
 
 - CS 自学：
+  - [ ] 编译原理
+  - [ ] css 权威指南
   - [ ] tauri or flask, to dev wordsreciter
   - [x] koishi plugin, like atri bot
   - [ ] C# learning and pull request to Tai, MisakaTranslator
