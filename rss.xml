@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 09 Sep 2023 08:32:28 GMT</pubDate>
-    <lastBuildDate>Sat, 09 Sep 2023 08:32:28 GMT</lastBuildDate>
+    <pubDate>Sun, 10 Sep 2023 15:15:42 GMT</pubDate>
+    <lastBuildDate>Sun, 10 Sep 2023 15:15:42 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>评价</category>
@@ -424,6 +424,14 @@
 <li><a href="https://www.reddit.com/r/archlinux/comments/sorhb1/how_long_does_a_pacmankey_refreshkeys_take/" target="_blank" rel="noopener noreferrer">据此所述</a>：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>然而没什么软用，还是报相同错误</li>
 <li>更新 <code>archlinux-keyring</code> 本身：<code>sudo pacman -Sy archlinux-keyring</code>，问题解决</li>
 </ol>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>裝 <code>archlinux-keyring</code> 其實就是在跑 <code>pacman-key --populate archlinux</code></p>
+<div style="text-align:right">
+<p>——farseerfc 😂, <a href="https://t.me/archlinuxcn_group/2911740" target="_blank" rel="noopener noreferrer">src</a></p>
+</div>
+<p><s>所以这个问题还是挺玄学的，</s></p>
+</div>
 <h3> sed 语法</h3>
 <p>sed 正则表达式的 <code>{}</code> 需要转义 <code>\{\}</code> 。。。。。。</p>
 <h3> <a href="https://bbs.archlinuxcn.org/viewtopic.php?id=13402" target="_blank" rel="noopener noreferrer">libcuda.so.1 is not a symbolic link</a></h3>
@@ -4385,6 +4393,10 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><code>a ?? b</code>: <code>if(a) { return a; } else { return b; }</code></li>
 <li><code>&amp;&amp;</code>, <code>&amp;&amp;=</code>, <code>||=</code>, <code>?.</code></li>
 </ul>
+<h2> external</h2>
+<ol>
+<li><a href="https://github.com/gibbok/typescript-book" target="_blank" rel="noopener noreferrer">The Concise TypeScript Book</a></li>
+</ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -4410,7 +4422,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <h2> 设置(vscode)</h2>
 <p><a href="https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json" target="_blank" rel="noopener noreferrer">此处</a>是我对 (vim for) vscode 的一些设置。</p>
 <h2> 设置(neovim)</h2>
-<p>首先基础设置我是照着<a href="https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/" target="_blank" rel="noopener noreferrer">从零开始配置 Neovim(Nvim)</a>来的。这篇文章确实不错。</p>
+<p>首先基础设置我是照着 <a href="#external">external 2.</a> 来的。这篇文章确实讲的还行。后续冲浪时也看到一篇写得很好的文章，见 <a href="#external">external 3.</a>，有空的话去试吧。</p>
 <p>然后进入到了自定义环节：</p>
 <h3> 基础设置</h3>
 <ul>
@@ -4464,6 +4476,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <h2> external</h2>
 <ol>
 <li><a href="https://awesome-programming-books.github.io/vim/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.pdf" target="_blank" rel="noopener noreferrer">Vim 实用技巧</a>，进阶阅读</li>
+<li><a href="https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/" target="_blank" rel="noopener noreferrer">从零开始配置 Neovim(Nvim)</a></li>
+<li><a href="https://luyuhuang.tech/2023/03/21/nvim.html" target="_blank" rel="noopener noreferrer">Neovim 使用体验</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -6147,7 +6161,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <h3> 图片相关</h3>
 <ul>
 <li>在线 PS：<a href="https://ps.gaoding.com/#/" target="_blank" rel="noopener noreferrer">稿定</a> | <a href="https://www.photopea.com/" target="_blank" rel="noopener noreferrer">Photopea</a></li>
-<li>图片放大：<a href="https://bigjpg.com/" target="_blank" rel="noopener noreferrer">bigjpg</a></li>
+<li>图片超分辨率：<a href="https://bigjpg.com/" target="_blank" rel="noopener noreferrer">bigjpg</a> | <s><a href="https://github.com/Tohrusky/Final2x" target="_blank" rel="noopener noreferrer">Final2x</a></s>（本地应用）</li>
 <li>背景消除：<a href="https://www.remove.bg/zh" target="_blank" rel="noopener noreferrer">removebg</a> | <a href="https://bgsub.cn/" target="_blank" rel="noopener noreferrer">BgSub</a></li>
 <li>什么都能消除：<a href="https://remover.zmo.ai/" target="_blank" rel="noopener noreferrer">ZMO</a> | <a href="https://www.magiceraser.io/" target="_blank" rel="noopener noreferrer">MAGIC ERASER</a>（付费下载，建议消除后直接截图）</li>
 <li>一站式图片处理：<a href="https://imagestool.com/zh_CN/" target="_blank" rel="noopener noreferrer">imagesTool</a> | <a href="http://www.zuohaotu.com/image-merge.aspx" target="_blank" rel="noopener noreferrer">在线图片拼接（包含其他工具）</a></li>
@@ -7065,30 +7079,32 @@ utools vs diy my tools
 <li>
 <p>CS 自学：</p>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-9" disabled="disabled"><label class="task-list-item-label" for="task-item-9"> tauri or flask, to dev wordsreciter</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-10" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-10"> koishi plugin, like atri bot</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-11" disabled="disabled"><label class="task-list-item-label" for="task-item-11"> C# learning and pull request to Tai, MisakaTranslator</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-12" disabled="disabled"><label class="task-list-item-label" for="task-item-12"> lua(?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-13" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-13"> tg 教务信息转发（通过 rss 实现）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-9" disabled="disabled"><label class="task-list-item-label" for="task-item-9"> 编译原理</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-10" disabled="disabled"><label class="task-list-item-label" for="task-item-10"> css 权威指南</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-11" disabled="disabled"><label class="task-list-item-label" for="task-item-11"> tauri or flask, to dev wordsreciter</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-12" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-12"> koishi plugin, like atri bot</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-13" disabled="disabled"><label class="task-list-item-label" for="task-item-13"> C# learning and pull request to Tai, MisakaTranslator</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-14" disabled="disabled"><label class="task-list-item-label" for="task-item-14"> lua(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-15" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-15"> tg 教务信息转发（通过 rss 实现）</label></li>
 </ul>
 </li>
 </ul>
 <h2> 日程库（不急）</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-14" disabled="disabled"><label class="task-list-item-label" for="task-item-14"> <a href="/hide/inspiration.html#%E7%BC%96%E7%A8%8B%E7%81%B5%E6%84%9F" target="blank">开发各类应用</a></label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-15" disabled="disabled"><label class="task-list-item-label" for="task-item-15"> osu reform β pass</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-16" disabled="disabled"><label class="task-list-item-label" for="task-item-16"> 算法类(?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-17" disabled="disabled"><label class="task-list-item-label" for="task-item-17"> CTF(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-16" disabled="disabled"><label class="task-list-item-label" for="task-item-16"> <a href="/hide/inspiration.html#%E7%BC%96%E7%A8%8B%E7%81%B5%E6%84%9F" target="blank">开发各类应用</a></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-17" disabled="disabled"><label class="task-list-item-label" for="task-item-17"> osu reform β pass</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-18" disabled="disabled"><label class="task-list-item-label" for="task-item-18"> 算法类(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-19" disabled="disabled"><label class="task-list-item-label" for="task-item-19"> CTF(?)</label></li>
 </ul>
 <h2> 有生之年</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-18" disabled="disabled"><label class="task-list-item-label" for="task-item-18"> 钢琴</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-19" disabled="disabled"><label class="task-list-item-label" for="task-item-19"> 绘画</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-20" disabled="disabled"><label class="task-list-item-label" for="task-item-20"> 旅游（非国内）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-21" disabled="disabled"><label class="task-list-item-label" for="task-item-21"> 虚幻引擎 (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-22" disabled="disabled"><label class="task-list-item-label" for="task-item-22"> build-my-own-language (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-23" disabled="disabled"><label class="task-list-item-label" for="task-item-23"> <a href="/hide/inspiration.html" target="blank">灵感区</a>：对任何东西灵光一闪的想法。希望能用得上。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-24" disabled="disabled"><label class="task-list-item-label" for="task-item-24"> 理论数学(?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-20" disabled="disabled"><label class="task-list-item-label" for="task-item-20"> 钢琴</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-21" disabled="disabled"><label class="task-list-item-label" for="task-item-21"> 绘画</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-22" disabled="disabled"><label class="task-list-item-label" for="task-item-22"> 旅游（非国内）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-23" disabled="disabled"><label class="task-list-item-label" for="task-item-23"> 虚幻引擎 (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-24" disabled="disabled"><label class="task-list-item-label" for="task-item-24"> build-my-own-language (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-25" disabled="disabled"><label class="task-list-item-label" for="task-item-25"> <a href="/hide/inspiration.html" target="blank">灵感区</a>：对任何东西灵光一闪的想法。希望能用得上。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-26" disabled="disabled"><label class="task-list-item-label" for="task-item-26"> 理论数学(?)</label></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -8840,6 +8856,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://missav.com/WAAA-087" target="_blank" rel="noopener noreferrer">WAAA-087</a></td>
+<td style="text-align:center">6.8</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://jable.tv/videos/ssis-306/" target="_blank" rel="noopener noreferrer">SSIS-306</a></td>
 <td style="text-align:center">7.5</td>
 <td style="text-align:center">3</td>
@@ -8894,6 +8916,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://missav.com/HBAD-640" target="_blank" rel="noopener noreferrer">HBAD-640</a></td>
+<td style="text-align:center">5.2</td>
+<td style="text-align:center">4.2</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://www2.javhdporn.net/video/stars-248c" target="_blank" rel="noopener noreferrer">STARS-248</a></td>
 <td style="text-align:center">3.2</td>
 <td style="text-align:center">6</td>
@@ -8936,6 +8964,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://missav.com/ja/bony-016" target="_blank" rel="noopener noreferrer">BONY-016</a></td>
+<td style="text-align:center">3.1</td>
+<td style="text-align:center">5.7</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://sextb.net/stars-042-us" target="_blank" rel="noopener noreferrer">STARS-042</a></td>
 <td style="text-align:center">1</td>
 <td style="text-align:center">7.6</td>
@@ -8969,10 +9003,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </table>
 <p><em>（顺序记录到 miaa-604，剩下的逆序改天，我鉴不动辣）</em></p>
 <h2> 额外</h2>
+<p>此处质量总体不如上面的，不过也值得一看。</p>
 <ul>
 <li>FXX-SM-24</li>
 <li>FC2PPV 778927 <a href="https://jp.xero.porn/video/z6jtbjln09icqbaj24440" target="_blank" rel="noopener noreferrer">01</a> <a href="https://www.tokyomotion.net/video/592838/%E7%84%A1%E4%BF%AE%E6%AD%A3-fc2ppv-778927-%E3%81%A1%E3%82%85%E3%81%B1%E7%8E%8B-%E3%81%93%E3%81%A8%E3%82%8A19%E6%AD%B3icup-%E8%B6%85s%E7%B4%9A-%E7%A5%9E%E4%B9%B3-02" target="_blank" rel="noopener noreferrer">02</a></li>
 <li>HAKC-010</li>
+<li><a href="https://missav.com/zh/fc2-ppv-3470313" target="_blank" rel="noopener noreferrer">FC2-PPV-3470313</a></li>
 </ul>
 <h2> 评优</h2>
 <p><s>顾名思义啦~</s></p>
@@ -11565,12 +11601,52 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
+<tr>
+<td style="text-align:center">灰色的果实</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">DDLC </td>
+<td style="text-align:center">2021.11.11</td>
+<td style="text-align:center">?</td>
+<td style="text-align:center">1.5</td>
+<td style="text-align:center">?</td>
+</tr>
+<tr>
+<td style="text-align:center">千恋万花 </td>
+<td style="text-align:center">2021.06.21</td>
+<td style="text-align:center">6.8</td>
+<td style="text-align:center">8.5</td>
+<td style="text-align:center">9.1</td>
+</tr>
+<tr>
+<td style="text-align:center">少女领域 </td>
+<td style="text-align:center">&lt;2020.10.29</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">9.5</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">KARAKARA</td>
+<td style="text-align:center">2021.08.25</td>
+<td style="text-align:center">3.3</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6.5</td>
+</tr>
+<tr>
+<td style="text-align:center">保健室のセンセーとシャボン玉中毒の助手 </td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
 </tbody>
 </table>
-<p>|灰色的果实
-|DDLC </p>
 <ul>
-<li>时间补正  <!-- prettier-ignore -->
+<li>时间补正<!-- prettier-ignore -->
 <table>
 <thead>
 <tr>
@@ -11581,7 +11657,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center">近月少女的礼仪</td>
-<td style="text-align:center">-46min</td>
+<td style="text-align:center">-47min</td>
 </tr>
 <tr>
 <td style="text-align:center">アンレス テルミナリア</td>
