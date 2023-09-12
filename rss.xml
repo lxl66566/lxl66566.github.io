@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 10 Sep 2023 15:15:42 GMT</pubDate>
-    <lastBuildDate>Sun, 10 Sep 2023 15:15:42 GMT</lastBuildDate>
+    <pubDate>Tue, 12 Sep 2023 16:12:53 GMT</pubDate>
+    <lastBuildDate>Tue, 12 Sep 2023 16:12:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>评价</category>
@@ -949,6 +949,8 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20230911</h3>
+<p>八股 == バグ</p>
 <h3> 20230908</h3>
 <p>如果我在电子厂里压抑着灵魂，大致的下场是幻想走神然后手指被切掉一截吧。</p>
 <h3> 20230906</h3>
@@ -6414,8 +6416,8 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <p><a href="https://space.bilibili.com/346365047" target="_blank" rel="noopener noreferrer">我的哔哩哔哩账号</a></p>
 <p><a href="https://osu.ppy.sh/users/25751103" target="_blank" rel="noopener noreferrer">我的 osu 账号</a></p>
 <h2> 音乐</h2>
-<p><a href="https://music.163.com/playlist?id=3098200457&amp;userid=2061039950" target="_blank" rel="noopener noreferrer">我的网易云音乐歌单</a> <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span></p>
-<p>主张切割音游曲：即使很多音游曲好听，我也不愿将之加入我的歌单中。</p>
+<p><a href="https://t.me/absolutexsmusic" target="_blank" rel="noopener noreferrer">我的音乐频道</a> | <a href="https://music.163.com/playlist?id=3098200457&amp;userid=2061039950" target="_blank" rel="noopener noreferrer">我的网易云音乐歌单（out of date）</a> <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span></p>
+<p>主张切割歌单与好听的音游曲：但是在我的音乐频道中是混合的。</p>
 <h2> <a href="/hide/sports.html" target="blank">运动</a></h2>
 <h2> <a href="/hide/personal_details.html" target="blank">关于作者的更详细回答</a></h2>
 <p>太啰嗦，所以新开一页。</p>
@@ -11488,7 +11490,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tbody>
 </table>
 <p><em>（不排除早期缺漏）</em></p>
-<p>以下是没啥意思的 RPG 黄油，<strong>个人定义</strong>不能严格属于 galgame 范畴，姑且做个记录</p>
+<p>以下是 RPG 黄油，<strong>个人定义</strong>不能严格属于 galgame 范畴，姑且做个记录</p>
 <!-- prettier-ignore -->
 <table>
 <thead>
@@ -11502,6 +11504,14 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:center"><a href="https://shinnku.com/api/download/03/win/%E5%85%B0%E6%96%AF01%20%E5%AF%BB%E6%89%BE%E5%B0%8F%E5%85%89%20%E9%87%8D%E5%88%B6%E7%89%88.7z" target="_blank" rel="noopener noreferrer">兰斯01重制</a></td>
+<td style="text-align:center">6h45min</td>
+<td style="text-align:center">2023.09.12</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">4</td>
+</tr>
 <tr>
 <td style="text-align:center"><a href="https://t.me/LaiYinCangChu/2476" target="_blank" rel="noopener noreferrer">Melia's Witch Test</a></td>
 <td style="text-align:center">46min</td>
@@ -11783,6 +11793,10 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center">兰斯</td>
+<td style="text-align:center">画像保存崩溃</td>
+</tr>
+<tr>
 <td style="text-align:center">家喵二三事</td>
 <td style="text-align:center"><code>space</code>与小键盘<code>enter</code>键均无法使用；没有回跳</td>
 </tr>
@@ -11876,6 +11890,17 @@ x 表示水平位移，h 表示垂直位移。<br>
 <h2> 说两句</h2>
 <ul>
 <li>一般来说，能打动我，能让我产生共鸣的 galgame，我都会打上比较高的剧情分（满足剧情党的喜好）。</li>
+</ul>
+<h4> 兰斯</h4>
+<p>由于我剧情党不喜欢玩 RPG，入坑兰斯更多也是看剧情的，因此使用<a href="https://ngabbs.com/read.php?tid=22317178&amp;rand=8" target="_blank" rel="noopener noreferrer">修改器</a>。</p>
+<ul>
+<li>01 重置
+<ul>
+<li>XP 大满足，很多 CG 没解就通关了（补）。反正比起一般的 RPG 简直爆杀。</li>
+<li>关卡设置也比较有意思。</li>
+<li>到 60% 左右开始看<a href="https://www.bilibili.com/read/cv7105718/" target="_blank" rel="noopener noreferrer">攻略</a>，发现之前没看导致丢失很多重要道具，有的地方需要重打。。</li>
+</ul>
+</li>
 </ul>
 <h4> Summer Pockets Reflection Blue</h4>
 <ul>
@@ -12063,6 +12088,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <h2> 哥哥，早上起床之前都要抱紧我哦！</h2>
 <ul>
 <li>妹系废萌神作，拔度不低。我很早就开玩了，但是一直没啥动力推下去，这都几年了…</li>
+<li>澄线的前某个 hscene，这人体比例是否太过离谱？</li>
 <li>排序：茜 -&gt; 琥珀 -&gt; 空 -&gt; 澄</li>
 </ul>
 <h2> external</h2>
@@ -12404,8 +12430,9 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>2.1.4（2022 愚人节）：<a href="https://pan.baidu.com/s/1dRuoIVPCCgkbSxCyD-Z-IQ?pwd=2022" target="_blank" rel="noopener noreferrer">下载链接</a> | <a href="https://www.bilibili.com/video/BV1L44y15713" target="_blank" rel="noopener noreferrer">出处：『Phigors』2022 年愚人节共存版 Phigros 来了！！！</a></li>
 </ul>
 <h2> Arcaea</h2>
-<p>目前处于恢复期：因好久没打了，比巅峰时，11 平均退步 15w 分，10+平均退步 8w 分。</p>
+<!-- 目前处于恢复期：因好久没打了，比巅峰时，11 平均退步 15w 分，10+平均退步 8w 分。 -->
 <p>我在 arc 打歌基本只打好听的戳 xp 的曲子，这也导致了我在各曲子上的实力极度不均衡。</p>
+<p>之前用手机打，后来买了 mipad5，平板大，接蛇确实好接。但是米板断触极为严重，属实傻逼。</p>
 <h3> 账号</h3>
 <p>本人账号（917042883）0 氪，很久没登录了。一直在借别人的号打。感谢 NitroYlide 和 Colinxu29 的支持。</p>
 <h3> 我的 XP</h3>
@@ -12422,7 +12449,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/arcaea_best.jpg" alt="Sheriruth 10.1 pure memory" tabindex="0" loading="lazy"><figcaption>Sheriruth 10.1 pure memory</figcaption></figure>
 <h3> 其他</h3>
 <ul>
-<li><a href="https://www.mbrjun.cn/archives/443/" target="_blank" rel="noopener noreferrer">改残片</a>（亲测有效，version: 4.6.0c）</li>
+<li><a href="https://www.mbrjun.cn/archives/443/" target="_blank" rel="noopener noreferrer">改残片</a> ，需 root（精简版：<code>/data/data/moe.low.arc/shared_prefs/Cocos2dxPrefsFile.xml</code>, <code>&lt;string name="fr_k"&gt;e71fbd09303b100e1e97b9acc8970bb4&lt;/string&gt;</code>, <code>&lt;int name="fr_v" value="29997" /&gt;</code>）</li>
 <li><a href="https://t.me/GlowerHi_mods/24" target="_blank" rel="noopener noreferrer">破解版</a>，截至 4.6.0 的所有歌曲，未测试</li>
 </ul>
 <h2> pjsk</h2>
