@@ -144,9 +144,9 @@ telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src
 
 ## 音乐
 
-[我的网易云音乐歌单](https://music.163.com/playlist?id=3098200457&userid=2061039950) <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span>
+[我的音乐频道](https://t.me/absolutexsmusic) | [我的网易云音乐歌单（out of date）](https://music.163.com/playlist?id=3098200457&userid=2061039950) <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span>
 
-主张切割音游曲：即使很多音游曲好听，我也不愿将之加入我的歌单中。
+主张切割歌单与好听的音游曲：但是在我的音乐频道中是混合的。
 
 ## [运动](../hide/sports.md)
 

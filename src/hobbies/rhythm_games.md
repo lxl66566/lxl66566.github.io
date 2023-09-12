@@ -246,9 +246,11 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 ## Arcaea
 
-目前处于恢复期：因好久没打了，比巅峰时，11 平均退步 15w 分，10+平均退步 8w 分。
+<!-- 目前处于恢复期：因好久没打了，比巅峰时，11 平均退步 15w 分，10+平均退步 8w 分。 -->
 
 我在 arc 打歌基本只打好听的戳 xp 的曲子，这也导致了我在各曲子上的实力极度不均衡。
+
+之前用手机打，后来买了 mipad5，平板大，接蛇确实好接。但是米板断触极为严重，属实傻逼。
 
 ### 账号
 
@@ -278,7 +280,7 @@ Sheriruth 10.1 pure memory
 
 ### 其他
 
-- [改残片](https://www.mbrjun.cn/archives/443/)（亲测有效，version: 4.6.0c）
+- [改残片](https://www.mbrjun.cn/archives/443/) ，需 root（精简版：`/data/data/moe.low.arc/shared_prefs/Cocos2dxPrefsFile.xml`, `<string name="fr_k">e71fbd09303b100e1e97b9acc8970bb4</string>`, `<int name="fr_v" value="29997" />`）
 - [破解版](https://t.me/GlowerHi_mods/24)，截至 4.6.0 的所有歌曲，未测试
 
 ## pjsk

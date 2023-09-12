@@ -131,11 +131,12 @@ tag:
 
 _（不排除早期缺漏）_
 
-以下是没啥意思的 RPG 黄油，**个人定义**不能严格属于 galgame 范畴，姑且做个记录
+以下是 RPG 黄油，**个人定义**不能严格属于 galgame 范畴，姑且做个记录
 
 <!-- prettier-ignore -->
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: | :-: |
+|[兰斯01重制](https://shinnku.com/api/download/03/win/兰斯01%20寻找小光%20重制版.7z)<Badge text="1" />|6h45min|2023.09.12|5|6|4|
 |[Melia's Witch Test](https://t.me/LaiYinCangChu/2476)|46min|2023.06.07|0|3|0.1|
 |[melancholianna](https://melancholianna.pages.dev/)|30min?|2023.04.22|0.0|5|0.3|
 
@@ -295,6 +296,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
+|兰斯|画像保存崩溃|
 |家喵二三事|`space`与小键盘`enter`键均无法使用；没有回跳|
 |Summer Pockets Reflection Blue|跟*終のステラ*同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png)![崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png)|
 |近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况；背景音乐调到最小(10%)还是太大，又不想关|
@@ -323,6 +325,15 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 ## 说两句
 
 - 一般来说，能打动我，能让我产生共鸣的 galgame，我都会打上比较高的剧情分（满足剧情党的喜好）。
+
+#### 兰斯
+
+由于我剧情党不喜欢玩 RPG，入坑兰斯更多也是看剧情的，因此使用[修改器](https://ngabbs.com/read.php?tid=22317178&rand=8)。
+
+- 01 重置
+  - XP 大满足，很多 CG 没解就通关了（补）。反正比起一般的 RPG 简直爆杀。
+  - 关卡设置也比较有意思。
+  - 到 60% 左右开始看[攻略](https://www.bilibili.com/read/cv7105718/)，发现之前没看导致丢失很多重要道具，有的地方需要重打。。
 
 #### Summer Pockets Reflection Blue
 
@@ -496,6 +507,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 ## 哥哥，早上起床之前都要抱紧我哦！
 
 - 妹系废萌神作，拔度不低。我很早就开玩了，但是一直没啥动力推下去，这都几年了…
+- 澄线的前某个 hscene，这人体比例是否太过离谱？
 - 排序：茜 -> 琥珀 -> 空 -> 澄
 
 ## external
