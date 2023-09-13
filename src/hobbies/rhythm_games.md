@@ -41,7 +41,7 @@ tag:
 | :-: | :-: | :-: | :-: | :-: |
 |osu|81|<text style="color:red;">GS02声卡 -32~-41~-44ms</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p>将星X15内置声卡: -85ms(-83~-100)</text></details>|30|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
-|arcaea|7|<text style="color:blue;">70</text>|5|5|
+|arcaea|7|<text style="color:blue;">75</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
 |lanota|<0.5|<text style="color:blue;">+12</text>|7.0|0|
 |Dynamix|<0.1|<text style="color:red;">-0.12</text>|1.2|2|

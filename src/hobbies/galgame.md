@@ -136,7 +136,7 @@ _（不排除早期缺漏）_
 <!-- prettier-ignore -->
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: | :-: |
-|[兰斯01重制](https://shinnku.com/api/download/03/win/兰斯01%20寻找小光%20重制版.7z)<Badge text="1" />|6h45min|2023.09.12|5|6|4|
+|[兰斯01重制](https://shinnku.com/api/download/03/win/兰斯01%20寻找小光%20重制版.7z)<Badge text="1" />|8h3min|2023.09.12-<br/>2023.09.13|5.4|6|4|
 |[Melia's Witch Test](https://t.me/LaiYinCangChu/2476)|46min|2023.06.07|0|3|0.1|
 |[melancholianna](https://melancholianna.pages.dev/)|30min?|2023.04.22|0.0|5|0.3|
 
@@ -158,6 +158,7 @@ _（不排除早期缺漏）_
 <!-- prettier-ignore -->
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
+|兰斯02|2023.09.13|
 |家喵二三事|2023.08.10|3|7|3|
 |君と彼女と彼女の恋|2023.08.04|
 |近月少女的礼仪 <Badge text="1" />|2023.04.23|5.6|4.7|3.8|
@@ -334,6 +335,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
   - XP 大满足，很多 CG 没解就通关了（补）。反正比起一般的 RPG 简直爆杀。
   - 关卡设置也比较有意思。
   - 到 60% 左右开始看[攻略](https://www.bilibili.com/read/cv7105718/)，发现之前没看导致丢失很多重要道具，有的地方需要重打。。
+- 02 | [攻略](https://www.bilibili.com/read/readlist/rl304332) | [补丁](https://ufile.io/is89sokc)（由于度盘慢，所以自己再传了一次）
 
 #### Summer Pockets Reflection Blue
 
