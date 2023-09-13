@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 12 Sep 2023 16:12:53 GMT</pubDate>
-    <lastBuildDate>Tue, 12 Sep 2023 16:12:53 GMT</lastBuildDate>
+    <pubDate>Wed, 13 Sep 2023 15:59:11 GMT</pubDate>
+    <lastBuildDate>Wed, 13 Sep 2023 15:59:11 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>评价</category>
@@ -6047,10 +6047,18 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <td style="text-align:center">特殊限制</td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://litterbox.catbox.moe/" target="_blank" rel="noopener noreferrer">Litterbox</a></td>
+<td style="text-align:center">不限</td>
+<td style="text-align:center">未知</td>
+<td style="text-align:center">3days</td>
+<td style="text-align:center">1GB</td>
+<td style="text-align:center">特殊限制</td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://gofile.io/welcome" target="_blank" rel="noopener noreferrer">GoFile</a></td>
 <td style="text-align:center">不限</td>
 <td style="text-align:center">不限</td>
-<td style="text-align:center">未知</td>
+<td style="text-align:center"><a href="https://gofile.io/faq" target="_blank" rel="noopener noreferrer">10days</a></td>
 <td style="text-align:center">不限</td>
 <td style="text-align:center">-</td>
 </tr>
@@ -7707,6 +7715,7 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 <details class="hint-container details"><summary>其他</summary>
 <ul>
 <li>喝奶粉从未不适，而假期回家喝牛奶拉肚 -&gt; 我有乳糖不耐受 -&gt; 奶粉全是植脂末。</li>
+<li>每日一餐素，(1,3) 香锅常客</li>
 </ul>
 </details>
 <h3> 大二下暑假</h3>
@@ -11506,9 +11515,9 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center"><a href="https://shinnku.com/api/download/03/win/%E5%85%B0%E6%96%AF01%20%E5%AF%BB%E6%89%BE%E5%B0%8F%E5%85%89%20%E9%87%8D%E5%88%B6%E7%89%88.7z" target="_blank" rel="noopener noreferrer">兰斯01重制</a></td>
-<td style="text-align:center">6h45min</td>
-<td style="text-align:center">2023.09.12</td>
-<td style="text-align:center">5</td>
+<td style="text-align:center">8h3min</td>
+<td style="text-align:center">2023.09.12-<br>2023.09.13</td>
+<td style="text-align:center">5.4</td>
 <td style="text-align:center">6</td>
 <td style="text-align:center">4</td>
 </tr>
@@ -11569,6 +11578,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:center">兰斯02</td>
+<td style="text-align:center">2023.09.13</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
 <tr>
 <td style="text-align:center">家喵二三事</td>
 <td style="text-align:center">2023.08.10</td>
@@ -11901,6 +11917,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>到 60% 左右开始看<a href="https://www.bilibili.com/read/cv7105718/" target="_blank" rel="noopener noreferrer">攻略</a>，发现之前没看导致丢失很多重要道具，有的地方需要重打。。</li>
 </ul>
 </li>
+<li>02 | <a href="https://www.bilibili.com/read/readlist/rl304332" target="_blank" rel="noopener noreferrer">攻略</a> | <a href="https://ufile.io/is89sokc" target="_blank" rel="noopener noreferrer">补丁</a>（由于度盘慢，所以自己再传了一次）</li>
 </ul>
 <h4> Summer Pockets Reflection Blue</h4>
 <ul>
@@ -12158,7 +12175,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tr>
 <td style="text-align:center">arcaea</td>
 <td style="text-align:center">7</td>
-<td style="text-align:center"><text style="color:blue;">70</text></td>
+<td style="text-align:center"><text style="color:blue;">75</text></td>
 <td style="text-align:center">5</td>
 <td style="text-align:center">5</td>
 </tr>
