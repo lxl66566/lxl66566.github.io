@@ -136,6 +136,7 @@ _（不排除早期缺漏）_
 <!-- prettier-ignore -->
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: | :-: |
+|兰斯02 <Badge type="warning" text="2" />|2h10min|2023.09.13-<br/>2023.09.14|2|3.3|2|
 |[兰斯01重制](https://shinnku.com/api/download/03/win/兰斯01%20寻找小光%20重制版.7z)<Badge text="1" />|8h3min|2023.09.12-<br/>2023.09.13|5.4|6|4|
 |[Melia's Witch Test](https://t.me/LaiYinCangChu/2476)|46min|2023.06.07|0|3|0.1|
 |[melancholianna](https://melancholianna.pages.dev/)|30min?|2023.04.22|0.0|5|0.3|
@@ -158,7 +159,7 @@ _（不排除早期缺漏）_
 <!-- prettier-ignore -->
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
-|兰斯02|2023.09.13|
+|兰斯03|2023.09.14|?|9|8.7|
 |家喵二三事|2023.08.10|3|7|3|
 |君と彼女と彼女の恋|2023.08.04|
 |近月少女的礼仪 <Badge text="1" />|2023.04.23|5.6|4.7|3.8|
@@ -180,6 +181,7 @@ _（不排除早期缺漏）_
   |アンレス テルミナリア|+3h0min|
   |君と彼女と彼女の恋|-2min|
   |家喵二三事|+0min|
+  |兰斯3|-2min|
 
 ## 我计划玩
 
@@ -297,7 +299,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
-|兰斯|画像保存崩溃|
+|兰斯|01画像保存崩溃;02小键盘混淆`2`&`0`|
 |家喵二三事|`space`与小键盘`enter`键均无法使用；没有回跳|
 |Summer Pockets Reflection Blue|跟*終のステラ*同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png)![崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png)|
 |近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况；背景音乐调到最小(10%)还是太大，又不想关|
@@ -336,6 +338,8 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
   - 关卡设置也比较有意思。
   - 到 60% 左右开始看[攻略](https://www.bilibili.com/read/cv7105718/)，发现之前没看导致丢失很多重要道具，有的地方需要重打。。
 - 02 | [攻略](https://www.bilibili.com/read/readlist/rl304332) | [补丁](https://ufile.io/is89sokc)（由于度盘慢，所以自己再传了一次）
+  - 玩过重置后，感觉 02 确实不太行。。
+- 03 | [攻略](https://www.bilibili.com/read/readlist/rl309546/)
 
 #### Summer Pockets Reflection Blue
 
