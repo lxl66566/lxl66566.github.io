@@ -95,7 +95,7 @@ _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<
 
 - 切（Stamina / Stream）：β, ex-4
   - 耐力是限制切力的最重要因素。耐力不稳定，因此成绩不稳定。
-  - 非常痛恨无休切。Malody v3 段打得挺好，但 reform 段极为下手。（α 无休切，β 有个大乱，都不会打）
+  - 非常痛恨无休切。Malody v3 段打得挺好，但 reform 段极为下手。
 
 <iframe frameborder="no" src="/charts/reform_stamina.html" width="100%" height="280" loading="lazy"></iframe>
 <iframe frameborder="no" src="/charts/malody_stream.html" width="100%" height="280" loading="lazy"></iframe>
@@ -201,7 +201,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 ### 最好成绩
 
-- 4k 段位：[α 96.39%](https://www.bilibili.com/video/BV13M411Y7c5/) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | [LN 11](https://www.bilibili.com/video/BV1vv4y1p7b1)
+- 4k 段位：[β 96.33%](https://www.bilibili.com/video/av661009839/)([replay](https://wwkh.lanzout.com/iGlrJ18lyudi)) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | [LN 11](https://www.bilibili.com/video/BV1vv4y1p7b1)
   ![malody v3 ex2 96.03%](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg)
 - 6k 段位：[4dan 96.27%](https://www.bilibili.com/video/BV1Ks4y1K77B/)
 

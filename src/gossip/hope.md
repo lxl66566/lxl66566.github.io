@@ -25,18 +25,25 @@ tag:
 
 ## 对编程语言的希望
 
-- 完整的 oop (class + interface, traits)
-- 多样的内置数据类型 (dict, tree and map)
-- 运行时的安全性（Rust，所有权与生命周期）
-- 完善的包管理与发布版本 (cargo, minimize release)
-- 提供最高的自由度(pointer)
-- 所有错误均为可恢复错误(python)
+- 完整的 oop (class + interface / trait)
+  - _interface_ / _trait_ 提供了自由组合，在泛型中具有极为强大的作用。只依赖虚函数继承的纯 class 不够完备。
+- 充分的内置数据类型 (dict, tree and map)
+- 清晰的所有权机制 (rust, ~~我们不要学 c++~~)
+  - 并且可以选择是否使用 gc (`import gc`)
+- 完善的包管理与二进制编译 (cargo, minimize release bin)
+- 提供最高的自由度 (可以直接操作 pointer)
+- 所有错误均为可恢复错误 (python)
+  - > 例如，linux rust 内核尽量避免 panic
+  - 尽可能减少 undefined behaviour。（私以为当前很多 ub 都能被定义）
 - ~~通过 io 暂存变量~~ serialization
 - 高度模块化
 - 支持对函数式编程的优化，例如热更新 (hot-reloading)；区别函数 (function) 与闭包 (closure)
-- 自由选择静态类型与动态类型
+  - 优秀的 lambda
+  - 推荐使用链式调用
+- 自由选择静态类型与动态类型 (ts, any)
+- 充足的语法糖 (js)
 
-可能算是学过的语言的融合版。。不过确实不是很现实捏~
+可能算是各语言优点的融合怪。。不过确实不是很现实捏~
 
 ## 对算法竞赛 & OJ contest 的希望
 

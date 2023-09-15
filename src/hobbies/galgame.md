@@ -340,6 +340,8 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 02 | [攻略](https://www.bilibili.com/read/readlist/rl304332) | [补丁](https://ufile.io/is89sokc)（由于度盘慢，所以自己再传了一次）
   - 玩过重置后，感觉 02 确实不太行。。
 - 03 | [攻略](https://www.bilibili.com/read/readlist/rl309546/)
+  - <div class="image60"><img alt="您要不看看您在说什么" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/rance03.jpg" /></div>
+    您要不看看您在说什么（.jpg
 
 #### Summer Pockets Reflection Blue
 

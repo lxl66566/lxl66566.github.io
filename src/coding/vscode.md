@@ -39,6 +39,7 @@ tag:
   - 轻量级 Git 可视化：_Git Graph_
   - 代码格式化：_Prettier - Code formatter_（主要用于 markdown
   - 编辑器：_Vim_
+    - [添加如下配置](https://github.com/microsoft/vscode/issues/75627#issuecomment-1114048271)可以降低 vim 插件的延迟。
 - markdown：_Markdown Preview Enhanced_
 - 前端：_Auto Rename Tag_，_Rome_（需要设置 `"rome.requireConfiguration": false`）
 - C++：_clangd_

@@ -39,6 +39,8 @@ tag:
 - 别去图书馆卷了，B 教很多小教室，随便选。当然最好是在寝室（前提，安静的舍友）。
 - 军训肩章掉色！里面别穿浅色衣服。
   [^5]: 某个学习通答题脚本和这个有冲突。。[source](https://github.com/alist-org/alist/discussions/2399)
+- 使用学生邮箱注册 MATLAB 账号，可以免费使用 matlab online，免去了数十 GB 的安装包，非常好用。
+- 宿舍网不要续费（续费 599），每年开学找 cic 同学办换新（399）
 
 ## 性价比商品
 
@@ -89,7 +91,7 @@ tag:
 注意，此处信息可能具有时效性，不保证可用。
 
 - 在线打印：[http://store.mzyunyin.com/a/index?store_id=971](http://store.mzyunyin.com/a/index?store_id=971)
-- 宿舍网（2021，电信）：账号 手机号@shtel 密码：身份证后 6 位
+- 宿舍网：账号 _手机号@shtel_ 密码：_身份证后 6 位_
 - 超星学习通下载直链：`http://cs.e.ecust.edu.cn/download/[objectID]`
 - 上传大文件（转自 CIC，未验证）：
   ```sh:no-line-numbers
@@ -99,6 +101,7 @@ tag:
   ```sh:no-line-numbers
   curl 'http://172.20.13.100:804/include/auth_action.php' -X POST --data 'action=login&username=<学号>&password={B}<Base64密码>&ac_id=18&user_ip=&nas_ip=&user_mac=&ajax=1'
   ```
+- 学校提供的[免费下载](https://xxb.ecust.edu.cn/7648/list.htm)，虽然并没有什么卵用。。（office 和 matlab 都有更好的渠道，其他都是垃圾）
 
 ## 奇闻轶事
 
@@ -203,7 +206,7 @@ tag:
 |通信电子线路 - 凌小峰|4|<Badge text="限手机" />-|<details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details>|
 |DSP - 万永菁|9|线上下结合，课前给所有学生打印教学计划和作业|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>
 |算法导论 - 吴粤|6|较现代，懂 rust，但是有些方面又觉得像在古代[^6]|<details><summary>点击展开</summary><p>Q:1769013250<br/>We:mathwuyue<br/>yuewu@ecust.edu.cn<br/>yue.wu@etalkai.com</p></details>|
-|人工智能基础 - 朱宏擎|5|课堂练习多|
+|人工智能基础 - 朱宏擎|5|几乎每节课都有课堂练习|
 |王嵘 - 代信号实验|-1|我对其不会有半点尊敬。[^2][^3][^4]|
 |大物实验 - 顾晓艳|8|温和，讲解清楚，手把手教||
 |数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~，不过至少专业性没有问题；平时分高，哥几个都是 90+|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
