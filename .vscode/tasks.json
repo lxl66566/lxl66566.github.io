@@ -7,7 +7,6 @@
       "script": "dev",
       "problemMatcher": [],
       "detail": "vuepress dev docs",
-      //   "command": "npm run dev",
       "options": {
         "shell": {
           "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -18,12 +17,9 @@
     {
       "label": "upload",
       "type": "shell",
-      "command": "./upload.sh",
-      "detail": "./upload.sh",
-      "problemMatcher": [],
-      "options": {
-        "cwd": "${workspaceFolder}"
-      }
+      "command": "bash ./upload.sh",
+      "detail": "bash ./upload.sh",
+      "problemMatcher": []
     }
   ]
 }

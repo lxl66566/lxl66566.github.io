@@ -56,8 +56,9 @@ umount /mnt/windows
 ## 外部包
 
 - 我安装的包（少部分）：
-  - archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat, ripgrep, starship
-  - archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, newsboat, namcap, activitywatch-bin
+  - archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
+  - archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, namcap, activitywatch-bin, ripgrep, starship, nnn， fex
+  - > rg 是增强版的 grep，fex 是增强版的 cut ——依云
 - 我计划装的包：Joshuto, gparted, txcv
 
 ## 文件系统
@@ -228,6 +229,8 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 8. 自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，~~因为可以通过风扇声判断~~</span> 还有时间格式，无用图标的自定义。
 9. _工作区行为 - 锁屏_，改锁屏时间。
 10. [设置 numlock 行为](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#KDE_Plasma_用户)
+11. _窗口管理 - 窗口行为_ 设置 _焦点跟随鼠标_
+12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
 
 ## bash
 

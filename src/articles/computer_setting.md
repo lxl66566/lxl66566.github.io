@@ -132,6 +132,7 @@ tag:
    > 注：在地址栏输入上述 \*about:\*\* 即可打开对应界面。
 6. 解决跨源错误：在 `about:config` 中，将 security.fileuri.strict_origin_policy 设为 false。
 7. `adons.mozilla.org` 对中国用户屏蔽了广告拦截扩展，因此我使用一个第三方的[扩展商店](https://www.crxsoso.com/firefox/category/extensions) 进行安装。
+8. 在 _about:config_ 中把 `mousewheel.system_scroll_override.enabled` 改成 `false`
 
 ## windows 下的权限控制
 
