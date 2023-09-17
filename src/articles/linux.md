@@ -57,7 +57,7 @@ umount /mnt/windows
 
 - 我安装的包（少部分）：
   - archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
-  - archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, namcap, activitywatch-bin, ripgrep, starship, nnn， fex
+  - archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, namcap, activitywatch-bin, ripgrep, starship, nnn, fex, ntfs-3g
   - > rg 是增强版的 grep，fex 是增强版的 cut ——依云
 - 我计划装的包：Joshuto, gparted, txcv
 
@@ -111,16 +111,17 @@ btrfs 有好多功能吸引着我，~~当我第一次看到介绍 btrfs 的文�
    alias e=nvim
    alias l="ls -AFLhl --color=auto"
    ```
-1. [调整 swappiness](<https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)>) 至 5（我对写入量敏感）
-1. 设置 `/etc/fstab`
+2. [调整 swappiness](<https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)>) 至 5（我对写入量敏感）
+3. 设置 `/etc/fstab`
    - [挂载 tmpfs](./ramdisk.md)
+     - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了
    - 添加 `noatime` 标识，即不带访问时间 | [ref: archlinuxcn_group](https://t.me/archlinuxcn_group/2900548)
-1. [electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)
-1. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
-1. 设置 pacman：
+4. [electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)
+5. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
+6. 设置 pacman：
    - 将某些不常用的备用包加入 IgnorePkg，例如 _chromium_ | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
    - 更改缓存至 ramdisk （`CacheDir`）
-1. 更改 AUR Helper 缓存（ 参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
+7. 更改 AUR Helper 缓存（ 参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
    - yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
    - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也挂上同一个 tmpfs，这样就能够解决问题了。
      ```
@@ -128,18 +129,18 @@ btrfs 有好多功能吸引着我，~~当我第一次看到介绍 btrfs 的文�
      /tmp/paru /home/absolutex/.cache/paru/clone  none  defaults,bind,nofail,x-systemd.device-timeout=2  0  0
      ```
    - 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
-1. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
-1. grub 改等待时间
+8. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
+9. grub 改等待时间
    ```sh
    sudo nvim /etc/default/grub
    # after edit
    sudo grub-mkconfig -o /boot/grub/grub.cfg
    ```
-1. 修改 faillock attempt times
-   ```sh
-   # sudo edit /etc/security/faillock.conf
-   deny = 10
-   ```
+10. 修改 faillock attempt times
+    ```sh
+    # sudo edit /etc/security/faillock.conf
+    deny = 10
+    ```
 
 ### 输入法
 

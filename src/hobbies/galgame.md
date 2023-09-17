@@ -181,7 +181,7 @@ _（不排除早期缺漏）_
   |アンレス テルミナリア|+3h0min|
   |君と彼女と彼女の恋|-2min|
   |家喵二三事|+0min|
-  |兰斯3|-2min|
+  |兰斯3|-6min|
 
 ## 我计划玩
 
@@ -299,7 +299,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
-|兰斯|01画像保存崩溃;02小键盘混淆`2`&`0`|
+|兰斯|01 画像保存崩溃<br/>02 小键盘混淆`2`&`0`<br/>03 技能刷太多，自动战斗思考超时崩溃；前往*废弃都市恐*时崩溃；郁金香1号改改改改再升级崩溃![空指针](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/rance03_2.png)|
 |家喵二三事|`space`与小键盘`enter`键均无法使用；没有回跳|
 |Summer Pockets Reflection Blue|跟*終のステラ*同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）![颜色错乱](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png)![崩溃](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png)|
 |近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况；背景音乐调到最小(10%)还是太大，又不想关|
@@ -342,6 +342,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 03 | [攻略](https://www.bilibili.com/read/readlist/rl309546/)
   - <div class="image60"><img alt="您要不看看您在说什么" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/rance03.jpg" /></div>
     您要不看看您在说什么（.jpg
+  - RPG 不能随时存档，但是这部 CV 实在是太顶了啊啊啊啊啊！我的好多好听的语音存不了啊啊啊啊啊！哭
 
 #### Summer Pockets Reflection Blue
 

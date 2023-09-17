@@ -140,6 +140,8 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
 
 最广泛使用的是用 _Cmake_ 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
 
+有兴趣的话也可以看看[cmkr](https://github.com/build-cpp/cmkr)，基于 toml 生成 cmake 文件，三阶构建（cmkr -> cmakelists -> makefile）
+
 ### xmake
 
 xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmake 使用 lua 脚本作为构建系统语言。**~~我真的不想再面对一团乱麻的 cmake 了！~~**
