@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 17 Sep 2023 15:41:36 GMT</pubDate>
-    <lastBuildDate>Sun, 17 Sep 2023 15:41:36 GMT</lastBuildDate>
+    <pubDate>Mon, 18 Sep 2023 16:05:32 GMT</pubDate>
+    <lastBuildDate>Mon, 18 Sep 2023 16:05:32 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>评价</category>
@@ -491,7 +491,7 @@
 <ul>
 <li>通用：
 <ul>
-<li>AI 代码补全（只需其一）：<em>Codeium...</em> | <em>Tabnine...</em></li>
+<li><a href="#AI-%E8%A1%A5%E5%85%A8">AI 代码补全</a></li>
 <li>更好的警告：<em>Error Lens</em>，<em>SonarLint</em></li>
 <li>轻量级 Git 可视化：<em>Git Graph</em></li>
 <li>代码格式化：<em>Prettier - Code formatter</em>（主要用于 markdown</li>
@@ -512,11 +512,14 @@
 <li>数据库：<em>SQLite Viewer</em></li>
 <li>其他：<em>Chinese (Simplified)...</em>，<em>CodeSnap</em></li>
 </ul>
-<h3> 关于补全</h3>
-<p>上述两个代码补全的插件我都用过，感觉难分伯仲。目前在使用 <em>Codeium</em>。不过如果还想看看其他的 AI 代码补全插件（本人未使用过），也可以：</p>
+<h3> AI 补全</h3>
+<p>本人目前在使用 <em>CodeGeeX</em>。</p>
+<details><summary>点击展开前言</summary><p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 %TEMP% 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p></details>
 <ul>
+<li><a href="https://codegeex.cn/" target="_blank" rel="noopener noreferrer">CodeGeeX</a>：国产开源模型，对标 GitHub CoPilot，响应速度快</li>
+<li><a href="https://codeium.com/" target="_blank" rel="noopener noreferrer">Codeium</a>：免费，在线服务</li>
 <li><a href="https://docs.codegpt.co/" target="_blank" rel="noopener noreferrer">Code GPT</a>：需要自己提供 API KEY 或本地跑模型。</li>
-<li><a href="https://codegeex.cn/" target="_blank" rel="noopener noreferrer">CodeGeeX</a>：国产，对标 GitHub CoPilot</li>
+<li><a href="https://www.tabnine.com/" target="_blank" rel="noopener noreferrer">Tabnine</a>：免费的补全较弱（<em>Short code completions (2 to 3 words)</em>）</li>
 </ul>
 <h2> feature</h2>
 <p>vscode 的特色：</p>
@@ -965,6 +968,11 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20230918</h3>
+<blockquote>
+<p>IT 行业本质上是一个服务型行业——<a href="https://www.zhihu.com/question/615395614/answer/3209628247" target="_blank" rel="noopener noreferrer">src</a></p>
+</blockquote>
+<p>很真实，一语点醒</p>
 <h3> 20230915</h3>
 <p>蝉鸣以群计，乱音均摊风险者也。</p>
 <h3> 20230911</h3>
@@ -3750,23 +3758,24 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>我认为<a href="https://doc.rust-lang.org/std/index.html" target="_blank" rel="noopener noreferrer">这个文档</a>最为重要。</p>
 <p>我在学习初期，先阅读 rust 教程（官网），然后尝试用 Rust 去解决 leetcode 上的一些题目 <span class="heimu" title="你知道的太多了">由于 rust 的 I/O 较为麻烦，leetcode 能免去 I/O 之苦</span> ，去搜索题目一些的子问题，了解解决方法。最后，去<a href="https://doc.rust-lang.org/std/index.html" target="_blank" rel="noopener noreferrer">上述文档</a>进一步了解该解决方法的详细信息。</p>
 <p>其他资料：<a href="https://course.rs/about-book.html" target="_blank" rel="noopener noreferrer">Rust 语言圣经</a> | <a href="https://lib.rs/new" target="_blank" rel="noopener noreferrer">Rust new libraries and applications</a></p>
-<h2> 循环</h2>
+<h2> 语言基础</h2>
+<h3> 循环</h3>
 <p>Rust 的 for 循环需要跟可迭代对象，例如：</p>
 <div class="language-rust" data-ext="rs"></div><p>若需要设置步长，可使用 <code>step_by()</code> ：</p>
 <div class="language-rust" data-ext="rs"></div><p>而类似 C++ 的 do while 循环可以写成：</p>
-<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> <a href="https://doc.rust-lang.org/rust-by-example/hello/print.html" target="_blank" rel="noopener noreferrer">输出</a></h2>
+<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> <a href="https://doc.rust-lang.org/rust-by-example/hello/print.html" target="_blank" rel="noopener noreferrer">输出</a></h3>
 <p><code>dbg!()</code> 宏可以在 <code>stderr</code> 中输出调试信息。</p>
-<h2> 输入</h2>
+<h3> 输入</h3>
 <p>众所周知 rust 一般使用 <code>print!()</code> 或 <code>println!()</code> 进行输出。而输入需要使用标准库中的 std::io.（或者其他非标准库）</p>
 <div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>读入一行以空格隔开的不定量整数：</p>
-<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 基础数据结构</h2>
+<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 基础数据结构</h3>
 <p><a href="https://skyao.io/learning-rust/docs/grammar/collection.html" target="_blank" rel="noopener noreferrer">这里</a>可能会有一些帮助。</p>
 <ul>
 <li>栈：Vec. 使用 <code>push()</code> &amp; <code>pop()</code> 管理栈。</li>
 <li>（双端）队列：<a href="https://doc.rust-lang.org/std/collections/struct.VecDeque.html" target="_blank" rel="noopener noreferrer"><code>std::collections::VecDeque</code></a></li>
 <li>优先队列（堆）：<a href="https://doc.rust-lang.org/std/collections/struct.BinaryHeap.html" target="_blank" rel="noopener noreferrer"><code>std::collections::BinaryHeap</code></a></li>
 <li>字典 / Object / map（键值对）：<a href="https://doc.rust-lang.org/std/collections/struct.HashMap.html" target="_blank" rel="noopener noreferrer"><code>std::collections::HashMap</code></a></li>
-<li>链表：自己写。<a href="https://jasonkayzk.github.io/2022/02/20/%E4%BD%BF%E7%94%A8Rust%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" target="_blank" rel="noopener noreferrer">对于链表的实现，在 Rust 中有多种方式，比如：（摘自）</a>
+<li>链表：<a href="https://doc.rust-lang.org/std/collections/struct.LinkedList.html" target="_blank" rel="noopener noreferrer"><code>std::collections::LinkedList</code></a>，但是其功能在所有权机制下被削弱了（例如，无法删除一个 iter 的值 (safe)）。rust 并不推荐使用链表，如果确实需要完整链表，可以自己写 <span class="heimu" title="你知道的太多了">反正我是不写</span>。<a href="https://jasonkayzk.github.io/2022/02/20/%E4%BD%BF%E7%94%A8Rust%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/" target="_blank" rel="noopener noreferrer">对于链表的实现，在 Rust 中有多种方式，比如：（摘自）</a>
 <ul>
 <li>使用 Box 实现（由于 Box 本身的限制，基本只能实现单向链表）；</li>
 <li>使用 Rc + RefCell 实现（由于 RefCell 的限制，迭代器无法很好的实现）；</li>
@@ -3774,18 +3783,18 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 </li>
 </ul>
-<h2> 字符串</h2>
+<h3> 字符串</h3>
 <p><em>Rust 的字符串所包含的问题实际上很多，此处只是冰山一角。</em></p>
 <ul>
 <li>Rust 字符串默认支持分行。使用 \ 可以使多行字符串不换行。</li>
 <li>原始字符串：<code>r#"\something"#</code></li>
 </ul>
-<h3> 字符串处理</h3>
+<h4> 字符串处理</h4>
 <ul>
 <li>字符串转换：<code>to_owned()</code> or <code>to_string()</code> converts &amp;str -&gt; String.</li>
 <li><a href="https://iq.opengenus.org/rust-string-concat/" target="_blank" rel="noopener noreferrer">字符串连接</a></li>
 </ul>
-<h3> 字符串修改</h3>
+<h4> 字符串修改</h4>
 <p>在 Rust 语言中，字符串采用 utf-8 编码，字符长度不一，因此 Rust 不提供下标查找字符串的方法。这让字符串的修改需要一点点的技巧。</p>
 <ol>
 <li>转换为<code>Vec&lt;char&gt;</code>后修改</li>
@@ -3800,13 +3809,30 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ol>
 <div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>该方法异常繁琐，同样也不适用于变字节数的未知字符串的替换，但是若替换范围不在 utf-8 字符的分割点上并不会触发 panic.
 例如，将第 6 行代码改为<code>s1_bytes[i + 6] = s2_bytes[i]</code>的运行结果：</p>
-<div class="language-rust" data-ext="rs"></div><h2> 问号</h2>
+<div class="language-rust" data-ext="rs"></div><h3> 语法糖</h3>
+<h4> 问号</h4>
 <p>目前本人所学到的问号主要用于 <code>Result</code> 的处理。
 <code>do_something_that_might_fail()?</code> 等价于</p>
-<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> <a href="https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#%E9%80%9A%E8%BF%87-stdmemdrop-%E6%8F%90%E6%97%A9%E4%B8%A2%E5%BC%83%E5%80%BC" target="_blank" rel="noopener noreferrer">drop</a></h2>
-<p>可以显式调用 <code>std::mem::drop()</code> 释放值。</p>
-<h2> 获取 Cargo 根目录</h2>
+<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 其他</h3>
+<p>可以显式调用 <a href="https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#%E9%80%9A%E8%BF%87-stdmemdrop-%E6%8F%90%E6%97%A9%E4%B8%A2%E5%BC%83%E5%80%BC" target="_blank" rel="noopener noreferrer"><code>std::mem::drop()</code></a> 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。</p>
+<h2> Cargo</h2>
+<p>rust 唯一官方指定包管理器：<code>cargo</code></p>
+<h3> 获取 Cargo 根目录</h3>
 <p><code>env!("CARGO_MANIFEST_DIR")</code></p>
+<h3> alias</h3>
+<p>创建 <code>.cargo/config</code> 并写入：</p>
+<div class="language-toml line-numbers-mode" data-ext="toml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 打包</h2>
+<h3> <a href="https://github.com/johnthagen/min-sized-rust" target="_blank" rel="noopener noreferrer">最小化二进制</a></h3>
+<h2> 测试</h2>
+<p>assert 有 <code>assert!()</code> 和 <code>debug_assert!()</code> 之分，感觉对于应用开发，使用 <code>debug_assert!()</code> 会更妥当一些。</p>
+<h3> cargo test</h3>
+<p>cargo 的测试，与我的设想还是差了不止一点的。。首先看看<a href="https://doc.rust-lang.org/rust-by-example/testing.html" target="_blank" rel="noopener noreferrer">文档</a>，了解一下不同测试的区别。</p>
+<p>然后，关于 <code>#[cfg(test)]</code> 与 <code>#[test]</code> 的区别：</p>
+<ul>
+<li><code>#[cfg(test)]</code> 后的内容将在 build 时忽略；后面一般接 <code>mod tests{...}</code>；<code>cargo test</code> 时不会判断内部的 <em>assert</em> 内容(?)...总感觉挺鸡肋的。</li>
+<li><code>#[test]</code> 后一定要接函数，名称随意。可以进行 <em>assert</em>。</li>
+</ul>
+<p><code>cargo test</code> 默认不打印 <em>stdout</em> 输出，想打印需要 <code>cargo test -- --show-output</code></p>
 <h2> GUI</h2>
 <p>我使用 <a href="https://github.com/gabdube/native-windows-gui" target="_blank" rel="noopener noreferrer">native-windows-gui</a> 作为我的 windows 开发轻量级 GUI。</p>
 <h3> install</h3>
@@ -6387,7 +6413,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 </li>
 </a></ul><a class="footnote-anchor" id="footnote-ref2">
 </a><h2><a class="footnote-anchor" id="footnote-ref2"></a> 生存意义</h2>
-<p><span class="heimu" title="你知道的太多了">活着就是为了**____**</span></p>
+<p><span class="heimu" title="你知道的太多了">活着就是为了________</span></p>
 <p>下列出自认为的生存意义占比及其变化趋势。</p>
 <!-- |  条目   |占比(%,初期数据)|
 |  :----:  | :----: |
@@ -7196,6 +7222,7 @@ utools vs diy my tools
 <li>考研仅考察英语与专业成绩。</li>
 <li>适当降低规定中的校招比例，提高社招比例。</li>
 <li>分配宿舍前先通过问卷形式收集学生习惯，例如需不需要租空调，一般几点睡几点起，是否需要午觉等。然后同类分在一起。</li>
+<li>启用免修考</li>
 </ul>
 <h3> 高考高招 &amp; 中学教育</h3>
 <ul>
@@ -7651,89 +7678,93 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-28" disabled="disabled"><label class="task-list-item-label" for="task-item-28"> better sqlite_zstd</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-29" disabled="disabled"><label class="task-list-item-label" for="task-item-29"> windows electron lib(runtime)?</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-30" disabled="disabled"><label class="task-list-item-label" for="task-item-30"> windows volume locker</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-31" disabled="disabled"><label class="task-list-item-label" for="task-item-31"> wd: info words online in cli, written in rust</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-31" disabled="disabled"><label class="task-list-item-label" for="task-item-31"> wd: info words online in cli, written in rust</label>
+<ul class="task-list-container">
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-32" disabled="disabled"><label class="task-list-item-label" for="task-item-32"> if not english, test other languages</label></li>
+</ul>
+</li>
 </ul>
 <h3> Android</h3>
 <!-- - [ ] 绝对值下载器，贯彻小而美（same as appstore） -->
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-32" disabled="disabled"><label class="task-list-item-label" for="task-item-32"> 关于轨迹记录软件与应用时长记录软件<span class="heimu" title="你知道的太多了">时空刻录器</span></label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-33" disabled="disabled"><label class="task-list-item-label" for="task-item-33"> Android opensource store, package manager（AUR-like）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-34" disabled="disabled"><label class="task-list-item-label" for="task-item-34"> 录音机 app，抓住日常的每一个瞬间</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-33" disabled="disabled"><label class="task-list-item-label" for="task-item-33"> 关于轨迹记录软件与应用时长记录软件<span class="heimu" title="你知道的太多了">时空刻录器</span></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-34" disabled="disabled"><label class="task-list-item-label" for="task-item-34"> Android opensource store, package manager（AUR-like）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-35" disabled="disabled"><label class="task-list-item-label" for="task-item-35"> 录音机 app，抓住日常的每一个瞬间</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-35" disabled="disabled"><label class="task-list-item-label" for="task-item-35"> 全天录音 to RAM，手动保存重放</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-36" disabled="disabled"><label class="task-list-item-label" for="task-item-36"> 全天录音 to RAM，手动保存重放</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-36" disabled="disabled"><label class="task-list-item-label" for="task-item-36"> Android task manager, *top</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-37" disabled="disabled"><label class="task-list-item-label" for="task-item-37"> Android task manager, *top</label></li>
 </ul>
 <h4> module</h4>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-37" disabled="disabled"><label class="task-list-item-label" for="task-item-37"> tg 多选截屏</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-38" disabled="disabled"><label class="task-list-item-label" for="task-item-38"> bilibili 任意倍速</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-39" disabled="disabled"><label class="task-list-item-label" for="task-item-39"> <em>usage time recoder</em></label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-40" disabled="disabled"><label class="task-list-item-label" for="task-item-40"> <em>kill MIUI restriction</em></label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-38" disabled="disabled"><label class="task-list-item-label" for="task-item-38"> tg 多选截屏</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-39" disabled="disabled"><label class="task-list-item-label" for="task-item-39"> bilibili 任意倍速</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-40" disabled="disabled"><label class="task-list-item-label" for="task-item-40"> <em>usage time recoder</em></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-41" disabled="disabled"><label class="task-list-item-label" for="task-item-41"> <em>kill MIUI restriction</em></label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-41" disabled="disabled"><label class="task-list-item-label" for="task-item-41"> 10s countdown</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-42" disabled="disabled"><label class="task-list-item-label" for="task-item-42"> 72h(24h in EU) unlock</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-42" disabled="disabled"><label class="task-list-item-label" for="task-item-42"> 10s countdown</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-43" disabled="disabled"><label class="task-list-item-label" for="task-item-43"> 72h(24h in EU) unlock</label></li>
 </ul>
 </li>
 </ul>
 <h3> nodejs &amp; tsjs</h3>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-43" disabled="disabled"><label class="task-list-item-label" for="task-item-43"> B 站 CC 字幕下载脚本</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-44" disabled="disabled"><label class="task-list-item-label" for="task-item-44"> osu 谱面下载器（仅前端？）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-45" disabled="disabled"><label class="task-list-item-label" for="task-item-45"> 轻量级 pdf 演示</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-46" disabled="disabled"><label class="task-list-item-label" for="task-item-46"> b 站历史记录搜索</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-47" disabled="disabled"><label class="task-list-item-label" for="task-item-47"> html yaml extransfer</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-48" disabled="disabled"><label class="task-list-item-label" for="task-item-48"> html compresser, &lt;-&gt; rss</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-44" disabled="disabled"><label class="task-list-item-label" for="task-item-44"> B 站 CC 字幕下载脚本</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-45" disabled="disabled"><label class="task-list-item-label" for="task-item-45"> osu 谱面下载器（仅前端？）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-46" disabled="disabled"><label class="task-list-item-label" for="task-item-46"> 轻量级 pdf 演示</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-47" disabled="disabled"><label class="task-list-item-label" for="task-item-47"> b 站历史记录搜索</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-48" disabled="disabled"><label class="task-list-item-label" for="task-item-48"> html yaml extransfer</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-49" disabled="disabled"><label class="task-list-item-label" for="task-item-49"> html compresser, &lt;-&gt; rss</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-49" disabled="disabled"><label class="task-list-item-label" for="task-item-49"> 已找到同类项目 <a href="https://www.npmjs.com/package/sanitize-html" target="_blank" rel="noopener noreferrer">sanitize-html</a>，但可以改进合并</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-50" disabled="disabled"><label class="task-list-item-label" for="task-item-50"> 已找到同类项目 <a href="https://www.npmjs.com/package/sanitize-html" target="_blank" rel="noopener noreferrer">sanitize-html</a>，但可以改进合并</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-50" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-50"> B 站直播增强</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-51" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-51"> B 站直播增强</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-51" disabled="disabled"><label class="task-list-item-label" for="task-item-51"> 弹幕区域取消，发送弹幕放在视频下方</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-52" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-52"> f 全屏</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-53" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-53"> 屏蔽无用组件</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-52" disabled="disabled"><label class="task-list-item-label" for="task-item-52"> 弹幕区域取消，发送弹幕放在视频下方</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-53" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-53"> f 全屏</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-54" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-54"> 屏蔽无用组件</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-54" disabled="disabled"><label class="task-list-item-label" for="task-item-54"> 类 markdown 方言</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-55" disabled="disabled"><label class="task-list-item-label" for="task-item-55"> 类 markdown 方言</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-55" disabled="disabled"><label class="task-list-item-label" for="task-item-55"> 换行问题</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 部分样式统一</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-57" disabled="disabled"><label class="task-list-item-label" for="task-item-57"> 高亮与黑幕</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-58" disabled="disabled"><label class="task-list-item-label" for="task-item-58"> 双列阅读区支持</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 换行问题</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-57" disabled="disabled"><label class="task-list-item-label" for="task-item-57"> 部分样式统一</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-58" disabled="disabled"><label class="task-list-item-label" for="task-item-58"> 高亮与黑幕</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-59" disabled="disabled"><label class="task-list-item-label" for="task-item-59"> 双列阅读区支持</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-59" disabled="disabled"><label class="task-list-item-label" for="task-item-59"> better markdown formatter</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-60" disabled="disabled"><label class="task-list-item-label" for="task-item-60"> 答题网，选择题实时反馈</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-61" disabled="disabled"><label class="task-list-item-label" for="task-item-61"> SAVE MY LOCK FILE</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-62" disabled="disabled"><label class="task-list-item-label" for="task-item-62"> gaussian blur lib</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-63" disabled="disabled"><label class="task-list-item-label" for="task-item-63"> <s>koishi plugin:</s> （koishi 有关计划暂时搁置）</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-60" disabled="disabled"><label class="task-list-item-label" for="task-item-60"> better markdown formatter</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-61" disabled="disabled"><label class="task-list-item-label" for="task-item-61"> 答题网，选择题实时反馈</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-62" disabled="disabled"><label class="task-list-item-label" for="task-item-62"> SAVE MY LOCK FILE</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-63" disabled="disabled"><label class="task-list-item-label" for="task-item-63"> gaussian blur lib</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-64" disabled="disabled"><label class="task-list-item-label" for="task-item-64"> <s>koishi plugin:</s> （koishi 有关计划暂时搁置）</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-64" disabled="disabled"><label class="task-list-item-label" for="task-item-64"> <s>advanced: wordle game</s></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-65" disabled="disabled"><label class="task-list-item-label" for="task-item-65"> <s>advanced: wordle game</s></label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-65" disabled="disabled"><label class="task-list-item-label" for="task-item-65"> 今天吃什么 project</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-66" disabled="disabled"><label class="task-list-item-label" for="task-item-66"> 今天吃什么 project</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-66" disabled="disabled"><label class="task-list-item-label" for="task-item-66"> 分食堂，自动根据图片目录生成</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-67" disabled="disabled"><label class="task-list-item-label" for="task-item-67"> 可添加排除，写入 cookie</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-67" disabled="disabled"><label class="task-list-item-label" for="task-item-67"> 分食堂，自动根据图片目录生成</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-68" disabled="disabled"><label class="task-list-item-label" for="task-item-68"> 可添加排除，写入 cookie</label></li>
 </ul>
 </li>
 </ul>
 <h2> 实物创作灵感</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-68" disabled="disabled"><label class="task-list-item-label" for="task-item-68"> 不压耳朵（开槽?）的侧睡枕</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-69" disabled="disabled"><label class="task-list-item-label" for="task-item-69"> 甩棍伞</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-70" disabled="disabled"><label class="task-list-item-label" for="task-item-70"> 安全鸭舌帽</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-71" disabled="disabled"><label class="task-list-item-label" for="task-item-71"> 肉色隐形防割护颈带</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-69" disabled="disabled"><label class="task-list-item-label" for="task-item-69"> 不压耳朵（开槽?）的侧睡枕</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-70" disabled="disabled"><label class="task-list-item-label" for="task-item-70"> 甩棍伞</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-71" disabled="disabled"><label class="task-list-item-label" for="task-item-71"> 安全鸭舌帽</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-72" disabled="disabled"><label class="task-list-item-label" for="task-item-72"> 肉色隐形防割护颈带</label></li>
 </ul>
 <h2> 大型灵感</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-72" disabled="disabled"><label class="task-list-item-label" for="task-item-72"> 水中的 <em>Swimming Circus (スイミング・サーカス)</em> 。FC 的模仿产物。</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-73" disabled="disabled"><label class="task-list-item-label" for="task-item-73"> 水中的 <em>Swimming Circus (スイミング・サーカス)</em> 。FC 的模仿产物。</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-73" disabled="disabled"><label class="task-list-item-label" for="task-item-73"> 25*25*3 - [ ] 30*30*4 (m)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-74" disabled="disabled"><label class="task-list-item-label" for="task-item-74"> 是否携带氧气罐：未决定。可做成扁平型。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-75" disabled="disabled"><label class="task-list-item-label" for="task-item-75"> 背部装备统一大小的触控信号贴</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-74" disabled="disabled"><label class="task-list-item-label" for="task-item-74"> 25*25*3 - [ ] 30*30*4 (m)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-75" disabled="disabled"><label class="task-list-item-label" for="task-item-75"> 是否携带氧气罐：未决定。可做成扁平型。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-76" disabled="disabled"><label class="task-list-item-label" for="task-item-76"> 背部装备统一大小的触控信号贴</label></li>
 </ul>
 </li>
 </ul>
@@ -7750,9 +7781,9 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 </ol>
 <p>异变是什么，梦里并没有具体感受。</p>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-76" disabled="disabled"><label class="task-list-item-label" for="task-item-76"> 描述：蓝色描边的具体图形：两个同心圆和花纹，两根指针，还有一个颜色稍有异的刻度线。其余区域皆透明无阻挡。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-77" disabled="disabled"><label class="task-list-item-label" for="task-item-77"> 特性：自晦，未认主时不会被轻易发现。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-78" disabled="disabled"><label class="task-list-item-label" for="task-item-78"> 副作用：表盘认主后，主人的修为不会继续上升；表盘脱离时，会将正常应上升的修为返还，实现飞跃。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-77" disabled="disabled"><label class="task-list-item-label" for="task-item-77"> 描述：蓝色描边的具体图形：两个同心圆和花纹，两根指针，还有一个颜色稍有异的刻度线。其余区域皆透明无阻挡。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-78" disabled="disabled"><label class="task-list-item-label" for="task-item-78"> 特性：自晦，未认主时不会被轻易发现。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-79" disabled="disabled"><label class="task-list-item-label" for="task-item-79"> 副作用：表盘认主后，主人的修为不会继续上升；表盘脱离时，会将正常应上升的修为返还，实现飞跃。</label></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -8528,6 +8559,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">9</td>
 <td style="text-align:center">7.8</td>
 <td style="text-align:center"><details><summary>点击展开</summary><p>小柄な元アイドル美少女がデカチンでイキ狂う！ 限界イカセ 何回イっても止まらない巨根超絶激ピストン 永野いち夏</p></details></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://missav.com/mide-558" target="_blank" rel="noopener noreferrer">MIDE-558</a></td>
+<td style="text-align:center">9.8</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center"><a href="https://missav.com/cn/ipx-641" target="_blank" rel="noopener noreferrer">IPX-641</a></td>
@@ -11668,7 +11705,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">2023.09.14</td>
 <td style="text-align:center">?</td>
 <td style="text-align:center">9</td>
-<td style="text-align:center">8.7</td>
+<td style="text-align:center">4.7</td>
 </tr>
 <tr>
 <td style="text-align:center">家喵二三事</td>
@@ -12050,6 +12087,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>甜度过高，被齁死了</li>
 <li>同样的女装与男主语音，不由得会想到什么</li>
 <li>有点剧情，但其中的一些非反派人物的观念恕我无法认同</li>
+<li>被 AfterStory 背刺了：这也太长了吧——</li>
 <li>游玩顺序：柳ヶ瀬 湊 -&gt; 桜小路 ルナ -&gt; ユルシュール＝フルール＝ジャンメール -&gt; 花之宮 瑞穂</li>
 </ul>
 <h4> ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか</h4>
