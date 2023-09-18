@@ -51,6 +51,7 @@ tag:
 - [ ] windows electron lib(runtime)?
 - [ ] windows volume locker
 - [ ] wd: info words online in cli, written in rust
+  - [ ] if not english, test other languages
 
 ### Android
 

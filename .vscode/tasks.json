@@ -1,24 +1,26 @@
 {
   "version": "2.0.0",
+  "windows": {
+    "options": {
+      "shell": {
+        "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "args": []
+      }
+    }
+  },
   "tasks": [
     {
       "label": "npm: dev",
       "type": "npm",
       "script": "dev",
       "problemMatcher": [],
-      "detail": "vuepress dev docs",
-      "options": {
-        "shell": {
-          "executable": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-          "args": []
-        }
-      }
+      "detail": "vuepress dev docs"
     },
     {
       "label": "upload",
       "type": "shell",
-      "command": "bash ./upload.sh",
-      "detail": "bash ./upload.sh",
+      "command": "./upload.sh",
+      "detail": "./upload.sh",
       "problemMatcher": []
     }
   ]

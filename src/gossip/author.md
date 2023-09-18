@@ -66,7 +66,7 @@ category:
 
 ## 生存意义
 
-<span class="heimu" title="你知道的太多了">活着就是为了**\_\_\_\_**</span>
+<span class="heimu" title="你知道的太多了">活着就是为了\_\_\_\_\_\_\_\_</span>
 
 下列出自认为的生存意义占比及其变化趋势。
 
