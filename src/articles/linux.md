@@ -74,6 +74,14 @@ btrfs 有好多功能吸引着我，~~当我第一次看到介绍 btrfs 的文�
 1. 由于 CoW，使用 `du` 查看磁盘空间可能不准确，需要使用：`btrfs fi usage /`.
 2. 由于 CoW + 快照，操作数据库的时候需要小心，尽可能不要将数据库加入快照备份区（可以使用其他子卷存放）。
 
+#### 互操作
+
+众所周知 windows 默认使用它那 ntfs 已经很久了，并且默认没有 btrfs 支持。而双系统经常需要进行文件的互访问。linux 默认可读 ntfs，写入则只需安装 `ntfs-3g` 即可。而 windows 访问 btrfs 也非常简单。
+
+1. [安装 Winbtrfs](https://github.com/maharmstone/btrfs)
+2. 此时已经可以在资源管理器中访问了。
+3. 默认挂载是读写的，我比较建议改为只读，以免 windows 发癫改掉了什么东西。[在这里](https://github.com/maharmstone/btrfs#mount-options)可以进行一些设置，重启生效。
+
 ## pacman & AUR Helper
 
 - 请定期 `sudo pacman -Syy` 更新本地缓存（update），否则可能找不到包。（~~今日也无事可做~~）

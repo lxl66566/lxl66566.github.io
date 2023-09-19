@@ -98,6 +98,7 @@ export default sidebar({
 				"signals_and_systems.md",
 				"Probab.Math.Stat.md",
 				"dsp.md",
+				"CEC.md",
 				"foods.md",
 				"japanese.md",
 				"ulpb.md",
