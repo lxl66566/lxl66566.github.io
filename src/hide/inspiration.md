@@ -76,7 +76,8 @@ tag:
 
 - [ ] B 站 CC 字幕下载脚本
 - [ ] osu 谱面下载器（仅前端？）
-- [ ] 轻量级 pdf 演示
+- [ ] 轻量级 pdf 演示 (pdf as ppt, in any browser)
+  - [ ] 结合表现力稍强一点的文本描述语言
 - [ ] b 站历史记录搜索
 - [ ] html yaml extransfer
 - [ ] html compresser, <-> rss

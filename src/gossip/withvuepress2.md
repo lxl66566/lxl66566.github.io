@@ -140,25 +140,27 @@ export default defineUserConfig({
 
 ## 图床国内无法解析问题
 
-我原本使用的 github 图床图片格式为`https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：
+我原本博客托管在 github.io，图片加载链接为`https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：
 
 > Failed to load resource: net::ERR_NAME_NOT_RESOLVED
 
-原因是`raw.githubusercontent.com`域名在墙内受到污染。
+原因是 `raw.githubusercontent.com` 域名在墙内受到污染。
 
-然后我尝试了其他图床：[SM.MS](https://sm.ms/)，但是：
+然后我尝试了使用其他图床托管图片：[SM.MS](https://sm.ms/)，但是：
 
 1. 这个图床有*容量上限：5GB*和*单张图片上限：5MB*
 2. 原有的每张图都需要手动替换，因为 src 是随机生成的
 3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
-4. 在[关于 SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
+4. 在[关于 SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](/images/gossip/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
 
 因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：
 
 - 不改变图片目录结构
 - 替换方便。仅需全局查找替换，点一下鼠标即可。<span class="heimu" title="你知道的太多了">~~（但是对我来说需要把 SM.MS 图床的链接再换回原链接…）~~</span>
 
-然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下 [jsdelivr](https://www.jsdelivr.com/)，不能用。网上搜，大家也都说寄了。再试 [statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。
+然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下 [jsdelivr](https://www.jsdelivr.com/)，然而国内不能用。网上搜，大家也都说寄了。再试 [statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。
+
+后来 2023.09，statically 也寄了（_cdn.staticaly.com has expired._）。不过现在博客主要托管在 cloudflare 上而不是 github.io 上，所以把图片放到静态站点里，说不定也是一个不差的选择。
 
 ## 关于数学插件
 

@@ -32,11 +32,11 @@ Github 是全球最大的~~同性交友平台~~ 源代码托管服务平台，�
 
 打开仓库后，点击 releases（发行版）。
 
-![下载文件](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/releases.png)
+![下载文件](/images/coding/github/releases.png)
 
 在最底下找到 Assets，下载你需要的条目。
 
-![下载文件](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/assets.png)
+![下载文件](/images/coding/github/assets.png)
 
 - Q: Releases 栏显示 No releases published ？
 
@@ -46,7 +46,7 @@ A: 开发者并未发布 release.
 2. 可能源码就是文件本身，请点击 Code -> Download ZIP 下载源码。
 
 - Q: 这么多文件到底要下载哪一个？
-  ![下载文件](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/packages.png)
+  ![下载文件](/images/coding/github/packages.png)
 
 A: 此处我假设会看此条目的都是 Windows&Android 用户。
 

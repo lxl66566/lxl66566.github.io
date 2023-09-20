@@ -193,7 +193,7 @@ bypass:
 - 问题一：在 _设置-应用-可选功能-更多 Windows 功能_ 中找不到 Hyper-V 选项。<text style="color:blue;">[已解决](../articles/computer_setting.md)</text>
 - 问题二：在安装系统界面无法使用键盘鼠标。<text style="color:red;font-weight:bold">未解决！</text>
 
-  ![fuckhyperv](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/difficulties/fuckhyperv.png)
+  ![fuckhyperv](/images/gossip/difficulties/fuckhyperv.png)
 
   尝试：
 

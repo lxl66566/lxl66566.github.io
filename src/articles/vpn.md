@@ -18,7 +18,7 @@ tag:
 :::
 
 <div class="image60" style="text-align: center; ">
-<img alt="meme" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/vpn/meme.png" />
+<img alt="meme" src="/images/articles/vpn/meme.png" />
 </div>
 
 ## 免费 VPN

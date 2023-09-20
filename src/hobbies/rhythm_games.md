@@ -202,7 +202,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 ### 最好成绩
 
 - 4k 段位：[β 96.33%](https://www.bilibili.com/video/av661009839/)([replay](https://wwkh.lanzout.com/iGlrJ18lyudi)) & [malody v3 ex2 96.03%](https://www.bilibili.com/video/BV1R8411A7Ye) | [LN 11](https://www.bilibili.com/video/BV1vv4y1p7b1)
-  ![malody v3 ex2 96.03%](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg)
+  ![malody v3 ex2 96.03%](/images/hobbies/rhythm_games/osu_best.jpg)
 - 6k 段位：[4dan 96.27%](https://www.bilibili.com/video/BV1Ks4y1K77B/)
 
 ## phigros
@@ -238,7 +238,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 15.9 all perfect
 
-![15.9 all perfect](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/phigros_best.jpg)
+![15.9 all perfect](/images/hobbies/rhythm_games/phigros_best.jpg)
 
 ### 共存版
 
@@ -276,7 +276,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 Sheriruth 10.1 pure memory
 
-![Sheriruth 10.1 pure memory](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/arcaea_best.jpg)
+![Sheriruth 10.1 pure memory](/images/hobbies/rhythm_games/arcaea_best.jpg)
 
 ### 其他
 
@@ -292,7 +292,7 @@ Sheriruth 10.1 pure memory
 众所周知 tg 收藏夹无法恢复，而我好久没打 pjsk 了，账号信息基本上不记得。。因此没有任何一丝可能性能救回我的账号。~~里面有想抽 _朝比奈まふゆ_ 的 100 抽~~。这已经是我第二次丢失 pjsk 账号了。
 
 <div style="text-align: center; ">
-<img alt="有人丢了引き継ぎ 我不说是谁" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/sbgaaru.png"  width="40%" height="40%">
+<img alt="有人丢了引き継ぎ 我不说是谁" src="/images/hobbies/rhythm_games/sbgaaru.png"  width="40%" height="40%">
 </div>
 
 本人于 20230715 退坑 pjsk。

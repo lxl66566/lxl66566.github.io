@@ -86,7 +86,7 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$\displaysty
 （物理模型等效，全频域）：
 
 <div style="text-align: center;">
-<img alt="物理模型等效" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/learning/analog_circuit/1.png"  width="70%" height="70%"/>
+<img alt="物理模型等效" src="/images/farraginous/learning/analog_circuit/1.png"  width="70%" height="70%"/>
 </div>
 
 且还能再继续简化。<span v-pre>$\displaystyle g_m=\beta_0/r_{b'e}$</span>

@@ -196,7 +196,7 @@ tag:
 
 > 再吐槽一下 [bandizip](../farraginous/recommend_packages.md#bandizip)，解压 `*.tgz` 时默认一层一层解（`*.tgz` -> `*.tar` -> `*`）。。一个 10G 的包硬生生给我占了 26G 的空间。<br/>
 >
-> <div class="image50" style="text-align: center; "><img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/mobile_setting/fuckbandizip.png" /><div>你为什么不开？你为什么不开？</div></div>
+> <div class="image50" style="text-align: center; "><img alt="fun1" src="/images/articles/mobile_setting/fuckbandizip.png" /><div>你为什么不开？你为什么不开？</div></div>
 
 ### 乱冻结
 

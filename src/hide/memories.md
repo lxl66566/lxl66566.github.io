@@ -215,7 +215,7 @@ OSU 击打键数（20220807-20221231）：6811665
 
 跑步里程：97130 m，俯卧撑：872 个，引体向上：249.5 个
 
-<img alt="电脑时长" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hide/memories/2022_1.jpg"  width="50%" height="50%"/><img alt="电脑时长" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hide/memories/2022_2.jpg"  width="50%" height="50%"/>
+<img alt="电脑时长" src="/images/hide/memories/2022_1.jpg"  width="50%" height="50%"/><img alt="电脑时长" src="/images/hide/memories/2022_2.jpg"  width="50%" height="50%"/>
 
 </details>
 

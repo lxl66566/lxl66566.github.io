@@ -57,7 +57,7 @@ tag:
 如图，
 
 <div class="image40">
-<img alt="shortcut" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/consider/1.jpg"/>
+<img alt="shortcut" src="/images/gossip/consider/1.jpg"/>
 </div>
 
 观点：**自由派**。人们有表达自己观点的自由，频道不应该通过关闭部分 reactions 来限制这种自由。

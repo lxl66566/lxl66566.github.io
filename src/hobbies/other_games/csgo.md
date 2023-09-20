@@ -17,7 +17,7 @@ CS:GO 确实是一款吸引我的游戏。但我打 CS:GO 会有罪恶感，因�
 
 ### 启用控制台
 
-![控制台](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_1.png)
+![控制台](/images/hobbies/other_games/csgo/csgo_settings_1.png)
 
 控制台是对 csgo 进行高级操作的基础。现在你可以按`~`键呼出控制台。
 
@@ -35,7 +35,7 @@ CS:GO 确实是一款吸引我的游戏。但我打 CS:GO 会有罪恶感，因�
 - 下载安装[完美世界竞技平台](https://pvp.wanmei.com/)软件。之后每次启动 csgo 时就会让你选择游玩哪个服务器。
 
 <div style="text-align: center;">
-<img alt="开始界面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_2.png"  width="43%" height="43%"/>
+<img alt="开始界面" src="/images/hobbies/other_games/csgo/csgo_settings_2.png"  width="43%" height="43%"/>
 </div>
 
 - 在 steam 库中右击 csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
@@ -71,12 +71,12 @@ CS:GO 确实是一款吸引我的游戏。但我打 CS:GO 会有罪恶感，因�
    （此时每个目录下仅有一个文件夹，一直点到最后），在右侧找到 Scaling 并双击，更改数值为 3
 
 <div style="text-align: center; ">
-<img alt="注册表" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_4.png"  width="100%" height="100%"/>
+<img alt="注册表" src="/images/hobbies/other_games/csgo/csgo_settings_4.png"  width="100%" height="100%"/>
 </div>
 
 ::: danger 警告
 对注册表进行直接操作前请务必事先备份！
-<br/><img alt="注册表备份" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_3.png"  width="40%" height="40%"/>
+<br/><img alt="注册表备份" src="/images/hobbies/other_games/csgo/csgo_settings_3.png"  width="40%" height="40%"/>
 :::
 
 ### 显示 FPS

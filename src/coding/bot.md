@@ -20,7 +20,7 @@ tag:
 ::: details 查看 atri(QQ) 的信息
 
 <div style="text-align: center;" class="image40">
-<img alt="atri" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/atri/atri.jpg"/>
+<img alt="atri" src="/images/farraginous/atri/atri.jpg"/>
 </div>
 
 她的功能：

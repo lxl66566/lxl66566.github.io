@@ -20,10 +20,10 @@ category:
   - 图一，电脑屏幕已顶到最上方。然而我坐直时视线平视线在红线处，长期低头看电脑对我的颈椎极为不利。
   - 图二，我只能坐在一个摇晃的没有靠背的凳子上（拿一个枕头让我屁股不疼），这把凳子在今天的英语 quiz 上差点解体。
 
-<img alt="桌上" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/table.jpg"  width="50%" height="50%"/><img alt="凳子" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/stool.jpg"  width="50%" height="50%"/>
+<img alt="桌上" src="/images/gossip/compare_home_to_college/table.jpg"  width="50%" height="50%"/><img alt="凳子" src="/images/gossip/compare_home_to_college/stool.jpg"  width="50%" height="50%"/>
 
 > 解法
-> <img alt="新桌面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/new_table.jpg"  width="50%" height="50%"/>
+> <img alt="新桌面" src="/images/gossip/compare_home_to_college/new_table.jpg"  width="50%" height="50%"/>
 
 ## 零食
 
@@ -32,7 +32,7 @@ category:
   - 20230714：连吃了几天桃子，要吃吐了。
   - 给我水果，我需要立刻停下手头的游戏和事去拿。否则数落我。
 
-<img alt="桌上" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/fruits.jpg"  width="50%" height="50%"/>
+<img alt="桌上" src="/images/gossip/compare_home_to_college/fruits.jpg"  width="50%" height="50%"/>
 
 > 解法：网购了一些零食，不过由于注重性价比，并不是很香。
 

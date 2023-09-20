@@ -159,7 +159,7 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 2. 取色用 [ColorPicker](https://github.com/martinchrzan/ColorPicker) 随用随开
 
 <div class="image60" style="text-align: center; ">
-<img alt="utools vs noutools" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/fuckxxx/fuckutools.png" />
+<img alt="utools vs noutools" src="/images/gossip/fuckxxx/fuckutools.png" />
 <div>
 utools vs diy my tools
 </div>

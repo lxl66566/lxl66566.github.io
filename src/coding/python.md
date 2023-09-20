@@ -49,7 +49,7 @@ windows 上建议直接无脑 all in vscode。
 
 创建虚拟环境并引入依赖后，代码仍会收到 vscode 的报错：
 
-![set_vscode_environment](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/set_vscode_environment1.png)
+![set_vscode_environment](/images/coding/python/set_vscode_environment1.png)
 
 解决方法：
 
@@ -232,7 +232,7 @@ conda list  # 查看环境内工具包
 
 我们使用[上述指令](#创建环境)创建环境后：
 
-<img alt="anaconda_list" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_1.png"  width="65%" height="65%"/>
+<img alt="anaconda_list" src="/images/coding/python/anaconda_1.png"  width="65%" height="65%"/>
 
 可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
 
@@ -251,7 +251,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 
 2. 该目录下执行`conda create --name <name> --file env.txt`
 
-![anaconda_pureenv](https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_2.png)
+![anaconda_pureenv](/images/coding/python/anaconda_2.png)
 
 这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller)进行打包前的准备。
 
