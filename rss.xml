@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 19 Sep 2023 15:48:49 GMT</pubDate>
-    <lastBuildDate>Tue, 19 Sep 2023 15:48:49 GMT</lastBuildDate>
+    <pubDate>Wed, 20 Sep 2023 15:12:47 GMT</pubDate>
+    <lastBuildDate>Wed, 20 Sep 2023 15:12:47 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -36,13 +36,35 @@
 <h2> 基础概念</h2>
 <p>电容：电流超前电压，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>i</mi><mo>=</mo><mi>C</mi><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle i=C\frac{du}{dt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">u</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
 <p>电感：电压超前电流，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>u</mi><mo>=</mo><mi>L</mi><mfrac><mrow><mi>d</mi><mi>i</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle u=L\frac{di}{dt}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0574em;vertical-align:-0.686em;"></span><span class="mord mathnormal">L</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
-<p>品质因数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>Q</mi><mo>=</mo><mfrac><mrow><mi>ω</mi><mi>L</mi></mrow><mi>R</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle Q=\frac{\omega L}{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>（感抗/损耗）</p>
+<p>品质因数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>Q</mi><mo>=</mo><mfrac><mrow><mi>ω</mi><mi>L</mi></mrow><mi>R</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle Q=\frac{\omega L}{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">Q</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>（感抗 / 损耗）</p>
 <blockquote>
 <p>回路品质因数是为谐振时的线圈品质因数。</p>
 </blockquote>
-<p>特性阻抗 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>ρ</mi><mo>=</mo><mfrac><mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>L</mi></mrow><mi>R</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>C</mi><mi>R</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \rho=\frac{\omega_0L}R=\frac1{\omega_0CR}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1574em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.00773em;">CR</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>（谐振时的电抗）</p>
+<p>特性阻抗 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>ρ</mi><mo>=</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>L</mi><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>C</mi></mrow></mfrac><mo>=</mo><msqrt><mfrac><mi>L</mi><mi>C</mi></mfrac></msqrt></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \rho=\omega_0L=\frac1{\omega_0C}=\sqrt{\frac{L}C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1574em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.44em;vertical-align:-0.769em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.671em;"><span class="svg-align" style="top:-4.4em;"><span class="pstrut" style="height:4.4em;"></span><span class="mord" style="padding-left:1em;"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.631em;"><span class="pstrut" style="height:4.4em;"></span><span class="hide-tail" style="min-width:1.02em;height:2.48em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="2.48em" viewBox="0 0 400000 2592" preserveAspectRatio="xMinYMin slice"><path d="M424,2478
+c-1.3,-0.7,-38.5,-172,-111.5,-514c-73,-342,-109.8,-513.3,-110.5,-514
+c0,-2,-10.7,14.3,-32,49c-4.7,7.3,-9.8,15.7,-15.5,25c-5.7,9.3,-9.8,16,-12.5,20
+s-5,7,-5,7c-4,-3.3,-8.3,-7.7,-13,-13s-13,-13,-13,-13s76,-122,76,-122s77,-121,77,-121
+s209,968,209,968c0,-2,84.7,-361.7,254,-1079c169.3,-717.3,254.7,-1077.7,256,-1081
+l0 -0c4,-6.7,10,-10,18,-10 H400000
+v40H1014.6
+s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185
+c-2,6,-10,9,-24,9
+c-8,0,-12,-0.7,-12,-2z M1001 80
+h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.769em;"><span></span></span></span></span></span></span></span></span>（谐振时的容/感抗）</p>
 <h2> 谐振回路</h2>
+<p>谐振曲线 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>N</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mover accent="true"><mi>I</mi><mo>˙</mo></mover><msub><mover accent="true"><mi>I</mi><mo>˙</mo></mover><mn>0</mn></msub></mfrac><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mi>j</mi><mi>ξ</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle N(f)=\frac{\dot I}{\dot I_0}=\frac1{1+j\xi}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.5574em;vertical-align:-0.9602em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5972em;"><span style="top:-2.1898em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0278em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.0278em;"><span class="mord">˙</span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9602em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2019em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<p>（通频）带宽 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>B</mi><mn>0</mn></msub><mo>=</mo><mn>2</mn><mi mathvariant="normal">Δ</mi><msub><mi>f</mi><mn>0.7</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle B_0=2\Delta f_{0.7}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0502em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">2Δ</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">0.7</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<ul>
+<li>公式：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>Q</mi><mn>0</mn></msub><mo>⋅</mo><mi>B</mi><mo>=</mo><msub><mi>f</mi><mn>0</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle Q_0\cdot B=f_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>（常数）</li>
+</ul>
+<h3> 串联谐振</h3>
+<p>广义失谐系数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>ξ</mi><mo>=</mo><mfrac><mrow><mi>ω</mi><mi>L</mi><mo>−</mo><mfrac><mn>1</mn><mrow><mi>ω</mi><mi>C</mi></mrow></mfrac></mrow><mi>R</mi></mfrac><mo>≈</mo><msub><mi>Q</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mrow><mn>2</mn><mi mathvariant="normal">Δ</mi><mi>ω</mi></mrow><msub><mi>ω</mi><mn>0</mn></msub></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \xi=\frac{\omega L-\frac1{\omega C}}{R}\approx Q_0\cdot\frac{2\Delta\omega}{\omega_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2661em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5801em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.735em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal">L</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>（电抗和 / 电阻）</p>
 <p>谐振时，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mover accent="true"><mi>V</mi><mo>˙</mo></mover><mrow><mi>L</mi><mn>0</mn></mrow></msub><mo>=</mo><mi>j</mi><msub><mi>Q</mi><mn>0</mn></msub><msub><mover accent="true"><mi>V</mi><mo>˙</mo></mover><mi>s</mi></msub></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mover accent="true"><mi>V</mi><mo>˙</mo></mover><mrow><mi>C</mi><mn>0</mn></mrow></msub><mo>=</mo><mo>−</mo><mi>j</mi><msub><mi>Q</mi><mn>0</mn></msub><msub><mover accent="true"><mi>V</mi><mo>˙</mo></mover><mi>s</mi></msub></mrow></mstyle></mtd></mtr></mtable></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\begin{cases} \dot V_{L0}=jQ_0\dot V_s \\ \dot V_{C0}=-jQ_0\dot V_s \end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1389em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">L</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1389em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1389em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9202em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span></span><span style="top:-3.2523em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.1389em;"><span class="mord">˙</span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<h3> 并联谐振</h3>
+<p>广义失谐系数 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>ξ</mi><mo>=</mo><mfrac><mrow><mi>ω</mi><mi>C</mi><mo>−</mo><mfrac><mn>1</mn><mrow><mi>ω</mi><mi>L</mi></mrow></mfrac></mrow><mi>G</mi></mfrac><mo>≈</mo><msub><mi>Q</mi><mn>0</mn></msub><mo>⋅</mo><mfrac><mrow><mn>2</mn><mi mathvariant="normal">Δ</mi><mi>ω</mi></mrow><msub><mi>ω</mi><mn>0</mn></msub></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \xi=\frac{\omega C-\frac1{\omega L}}{G}\approx Q_0\cdot\frac{2\Delta\omega}{\omega_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.04601em;">ξ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2661em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5801em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">G</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.735em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal mtight">L</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2Δ</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>（电纳和 / 电导）</p>
+<p>固有谐振电阻 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>R</mi><mrow><mi>e</mi><mn>0</mn></mrow></msub><mo>=</mo><mfrac><mi>L</mi><mrow><mi>C</mi><mi>R</mi></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle R_{e0}=\frac{L}{CR}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">e</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0463em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">CR</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">L</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<h3> 串并转换</h3>
+<p>串转并，有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mi>R</mi><mn>2</mn></msub><mo>=</mo><msub><mi>R</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><msup><mi>Q</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><msub><mi>X</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>Q</mi><mn>2</mn></msup></mfrac><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\begin{cases}R_2=R_1(1+Q^2) \\ X_2=X_1(1+\frac1{Q^2})\end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7146em;"><span style="top:-3.7146em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">Q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-2.2746em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">Q</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.4811em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2146em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，一般 Q 很大，可以约</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -751,7 +773,7 @@
 <p>我建的 bot 有两个实例：一个是之前一直在用的 QQ bot <code>atri</code>（2433269451），另一个是后来使用 koishi 的 Telegram bot <a href="https://t.me/atri_absx_bot" target="_blank" rel="noopener noreferrer"><code>atri bot</code></a>。</p>
 <details class="hint-container details"><summary>查看 atri(QQ) 的信息</summary>
 <div style="text-align: center;" class="image40">
-<img alt="atri" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/atri/atri.jpg">
+<img alt="atri" src="/images/farraginous/atri/atri.jpg">
 </div>
 <p>她的功能：</p>
 <ul>
@@ -1250,7 +1272,7 @@ npm ERR! This command does not support workspaces.</p>
 <p>在模仿中重塑自我，在尝试中走出道路。</p>
 <h3> 20220618</h3>
 <p>能早解决的事就不要拖。不要像我这样垂死病中惊坐起发现论文已经过了 ddl 同时还发现 ip 不在学校不能免费看知网论文。（前几天一直在 <strong>享 受 假 期</strong> ）
-<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/essay/20220619.png" alt="绝望影像" loading="lazy"></p>
+<img src="/images/essay/20220619.png" alt="绝望影像" loading="lazy"></p>
 <h3> 20220613</h3>
 <p>历经 11 天终于回到家了。这 11 天我的评价是很无聊，甚至不能给我的生命留下什么记忆。</p>
 <h3> 20220612</h3>
@@ -1302,7 +1324,7 @@ npm ERR! This command does not support workspaces.</p>
 </ol>
 </section>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/essay/20220619.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/essay/20220619.png" type="image/png"/>
     </item>
     <item>
       <title>查看手机 cpu 指令集</title>
@@ -1327,25 +1349,25 @@ npm ERR! This command does not support workspaces.</p>
 <tr>
 <td style="text-align:center">一个木函（国内应用商店）</td>
 <td style="text-align:center">7M</td>
-<td style="text-align:center"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/yigemuhan.jpg" alt="一个木函" loading="lazy"></td>
+<td style="text-align:center"><img src="/images/articles/Android_ISA/yigemuhan.jpg" alt="一个木函" loading="lazy"></td>
 <td style="text-align:center">设备应用-查看设备详细信息</td>
 </tr>
 <tr>
 <td style="text-align:center">CPU X（谷歌商店）</td>
 <td style="text-align:center">10M</td>
-<td style="text-align:center"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/cpux.jpg" alt="CPU X" loading="lazy"></td>
+<td style="text-align:center"><img src="/images/articles/Android_ISA/cpux.jpg" alt="CPU X" loading="lazy"></td>
 <td style="text-align:center">中央处理器</td>
 </tr>
 <tr>
 <td style="text-align:center"><a href="/articles/adb.html" target="blank">ADB</a>（需要电脑）</td>
 <td style="text-align:center">-</td>
-<td style="text-align:center"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/adb.png" alt="ADB" loading="lazy"></td>
+<td style="text-align:center"><img src="/images/articles/Android_ISA/adb.png" alt="ADB" loading="lazy"></td>
 <td style="text-align:center">执行<code>adb shell getprop ro.product.cpu.abi</code></td>
 </tr>
 </tbody>
 </table>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/Android_ISA/yigemuhan.jpg" type="image/jpeg"/>
+      <enclosure url="https://absx.pages.dev/images/articles/Android_ISA/yigemuhan.jpg" type="image/jpeg"/>
     </item>
     <item>
       <title>ADB</title>
@@ -1956,7 +1978,7 @@ print("123")<br>
 <p>我第一次搞，以为要刷砖了比较慌，直接用 miflash 把整个原生 ROM 都刷进去了。。（最后还刷失败了，还是无限重启，miflash 你不得好死）</p>
 <blockquote>
 <p>再吐槽一下 <a href="/farraginous/recommend_packages.html#bandizip" target="blank">bandizip</a>，解压 <code>*.tgz</code> 时默认一层一层解（<code>*.tgz</code> -&gt; <code>*.tar</code> -&gt; <code>*</code>）。。一个 10G 的包硬生生给我占了 26G 的空间。<br></p>
-<div class="image50" style="text-align: center; "><img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/mobile_setting/fuckbandizip.png"><div>你为什么不开？你为什么不开？</div></div>
+<div class="image50" style="text-align: center; "><img alt="fun1" src="/images/articles/mobile_setting/fuckbandizip.png"><div>你为什么不开？你为什么不开？</div></div>
 </blockquote>
 <h3> 乱冻结</h3>
 <p>在刷了 EU 版 MIUI 后，使用 App Manager 冻结了 <code>媒体存储设备</code>(<code>com.google.android.providers.media.module</code>)，导致 App Manager 闪退；无法访问 sdcard。随之发生壁纸变黑，帧率暴降，VPN 自动断连等现象。<span class="heimu" title="你知道的太多了">对于 app 来说，大概就像是末世吧。</span></p>
@@ -2497,7 +2519,7 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <p>本人不承担因使用以下推荐所带来的任何后果。</p>
 </div>
 <div class="image60" style="text-align: center; ">
-<img alt="meme" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/articles/vpn/meme.png">
+<img alt="meme" src="/images/articles/vpn/meme.png">
 </div>
 <h2> 免费 VPN</h2>
 <div class="hint-container warning">
@@ -3478,7 +3500,7 @@ Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可�
 <h3> 打包</h3>
 <p>Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件到任意目标目录，在目录下使用 <code>windeployqt xxx.exe</code> 命令即可完成打包（windeployqt 需要在环境变量内，否则使用绝对位置）。</p>
 <p>但是到了 Qt6，情况就完全不一样了。。Qt6 的打包不管使用 <code>windeployqt</code> 或 <code>windeployqt6</code> 打包后，程序都无法运行。重装 SDK 后也是如此。首先，使用 <code>windeployqt</code> 会缺失 <code>Qt6Core.dll</code>, <code>Qt6Gui.dll</code>, <code>Qt6Widgets.dll</code> 这老三样。其次，手动复制这三样后，测试还会出现 bug：</p>
-<div class="image50" style="text-align: center; "><img alt="bug" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/cpp/windeployqt_bug.png"></div>
+<div class="image50" style="text-align: center; "><img alt="bug" src="/images/coding/cpp/windeployqt_bug.png"></div>
 <p>解法是将 Qt SDK 目录下的 <code>plugins</code> 文件夹复制到打包的 exe 目录下<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">。。</a></p><a class="footnote-anchor" id="footnote-ref2">
 </a><h4><a class="footnote-anchor" id="footnote-ref2"></a> 优化</h4>
 <p>这样打包出来的程序体积还能<strong>进一步缩小</strong>。运行 exe 后，全选目录下文件并删除，跳过已被打开的所有文件，并递归地对每个文件夹进行同样的操作。这样能够移除不必要的运行库从而<mark>大幅</mark>降低发布包的大小。</p>
@@ -3991,9 +4013,9 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 <h2> 下载文件</h2>
 <p>打开仓库后，点击 releases（发行版）。</p>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/releases.png" alt="下载文件" tabindex="0" loading="lazy"><figcaption>下载文件</figcaption></figure>
+<figure><img src="/images/coding/github/releases.png" alt="下载文件" tabindex="0" loading="lazy"><figcaption>下载文件</figcaption></figure>
 <p>在最底下找到 Assets，下载你需要的条目。</p>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/assets.png" alt="下载文件" tabindex="0" loading="lazy"><figcaption>下载文件</figcaption></figure>
+<figure><img src="/images/coding/github/assets.png" alt="下载文件" tabindex="0" loading="lazy"><figcaption>下载文件</figcaption></figure>
 <ul>
 <li>Q: Releases 栏显示 No releases published ？</li>
 </ul>
@@ -4004,7 +4026,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ol>
 <ul>
 <li>Q: 这么多文件到底要下载哪一个？
-<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/packages.png" alt="下载文件" loading="lazy"></li>
+<img src="/images/coding/github/packages.png" alt="下载文件" loading="lazy"></li>
 </ul>
 <p>A: 此处我假设会看此条目的都是 Windows&amp;Android 用户。</p>
 <ol>
@@ -4130,7 +4152,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><a href="https://www.conventionalcommits.org/zh-hans/v1.0.0/" target="_blank" rel="noopener noreferrer">约定式提交</a></li>
 </ol>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/github/releases.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/coding/github/releases.png" type="image/png"/>
     </item>
     <item>
       <title>Java</title>
@@ -4278,7 +4300,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>该配置在保存时自动格式化，自动纠正语法。</p>
 <h3> 启用虚拟环境</h3>
 <p>创建虚拟环境并引入依赖后，代码仍会收到 vscode 的报错：</p>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/set_vscode_environment1.png" alt="set_vscode_environment" tabindex="0" loading="lazy"><figcaption>set_vscode_environment</figcaption></figure>
+<figure><img src="/images/coding/python/set_vscode_environment1.png" alt="set_vscode_environment" tabindex="0" loading="lazy"><figcaption>set_vscode_environment</figcaption></figure>
 <p>解决方法：</p>
 <ol>
 <li><code>Ctrl + Shift + P</code>打开命令面板，搜索<code>Python: Select Interpreter</code></li>
@@ -4347,7 +4369,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>调用前加入<code>call activate.bat</code>指令</p>
 <h4> 创建纯净环境</h4>
 <p>我们使用<a href="#%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83">上述指令</a>创建环境后：</p>
-<img alt="anaconda_list" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_1.png" width="65%" height="65%">
+<img alt="anaconda_list" src="/images/coding/python/anaconda_1.png" width="65%" height="65%">
 <p>可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。</p>
 <p>这里给出一个解决方法：</p>
 <ol>
@@ -4357,7 +4379,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <ol start="2">
 <li>该目录下执行<code>conda create --name &lt;name&gt; --file env.txt</code></li>
 </ol>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/anaconda_2.png" alt="anaconda_pureenv" tabindex="0" loading="lazy"><figcaption>anaconda_pureenv</figcaption></figure>
+<figure><img src="/images/coding/python/anaconda_2.png" alt="anaconda_pureenv" tabindex="0" loading="lazy"><figcaption>anaconda_pureenv</figcaption></figure>
 <p>这样，一个纯净环境就创建好了，你可以<a href="#pyinstaller">安装 Pyinstaller</a>进行打包前的准备。</p>
 <h2> 打包</h2>
 <p>虽然我只使用过 <a href="#pyinstaller">pyinstaller</a>，但是还有其他的打包工具，能够打出更小的体积与更高的性能：</p>
@@ -4393,7 +4415,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><a href="https://tryanswer.github.io/2018/05/17/py-int-confusing/" target="_blank" rel="noopener noreferrer">Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别</a></li>
 </ol>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/coding/python/set_vscode_environment1.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/coding/python/set_vscode_environment1.png" type="image/png"/>
     </item>
     <item>
       <title>数据库</title>
@@ -4702,38 +4724,38 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li>哈啰路障，不动如山。</li>
 </ul>
 <div class="image60" style="text-align: center; ">
-<img alt="meme1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/meme1.jpg">
+<img alt="meme1" src="/images/farraginous/college/meme1.jpg">
 <div>
 难绷
 </div>
 </div>
 <div class="image50" style="text-align: center; ">
-<img alt="fun1" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun1.jpg">
+<img alt="fun1" src="/images/farraginous/college/fun1.jpg">
 <div>
 大风起兮云飞扬，单车与草兮倒四方
 </div>
 </div>
 <div class="image50" style="text-align: center; ">
-<img alt="fun2" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun2.jpg">
+<img alt="fun2" src="/images/farraginous/college/fun2.jpg">
 <div>
 没空，忙着给树叶尖儿上色
 </div>
 </div>
 <div class="image50" style="text-align: center; ">
-<img alt="fun3" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun3.jpg">
+<img alt="fun3" src="/images/farraginous/college/fun3.jpg">
 <div>
 滥 车 充 数
 </div>
 </div>
 <div class="image50" style="text-align: center; ">
-<img alt="fun3" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/fun4.jpg">
+<img alt="fun3" src="/images/farraginous/college/fun4.jpg">
 <div>
 野生熊猫吃人事件
 </div>
 </div>
 <h2> 校内迷惑行为大赏</h2>
 <div class="image50" style="text-align: center; ">
-<img alt="61" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/61.png">
+<img alt="61" src="/images/farraginous/college/61.png">
 <div>
 众所周知饮水机的重量大约是 1.5kg ...
 </div>
@@ -5045,6 +5067,10 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20230920</h3>
+<ul>
+<li>不再使用 cdn 作为图片加载来源</li>
+</ul>
 <h3> 20230919</h3>
 <ul>
 <li>新增<a href="/farraginous/learning/CEC.html" target="blank">学习笔记 - 通信电子线路</a></li>
@@ -5824,7 +5850,10 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <p><a href="https://legado.aoaostar.com/" target="_blank" rel="noopener noreferrer">书源推荐</a>，也可去 Telegram 官方群寻找其他书源。</p>
 <h2> Windows</h2>
 <h3> <a href="https://scoop.sh/" target="_blank" rel="noopener noreferrer">scoop</a></h3>
-<p>说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，说实话都挺好用的</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。</p>
+<div style="text-align:right">
+<p>scoop 比起 pacman 和 AUR 还差得远呢。。<span class="heimu" title="你知道的太多了">来自一个被重复装了依赖的可怜人的怨念</span></p>
+</div>
+<p>说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。</p>
 <div class="hint-container warning">
 <p class="hint-container-title">注意</p>
 <p>请使用<a href="/articles/vpn.html" target="blank">代理</a>以获得更好的 scoop 使用体验：<code>scoop config proxy 127.0.0.1:&lt;port&gt;</code></p>
@@ -6548,10 +6577,10 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 </ul>
 </li>
 </ul>
-<p><img alt="桌上" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/table.jpg" width="50%" height="50%"><img alt="凳子" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/stool.jpg" width="50%" height="50%"></p>
+<p><img alt="桌上" src="/images/gossip/compare_home_to_college/table.jpg" width="50%" height="50%"><img alt="凳子" src="/images/gossip/compare_home_to_college/stool.jpg" width="50%" height="50%"></p>
 <blockquote>
 <p>解法
-<img alt="新桌面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/new_table.jpg" width="50%" height="50%"></p>
+<img alt="新桌面" src="/images/gossip/compare_home_to_college/new_table.jpg" width="50%" height="50%"></p>
 </blockquote>
 <h2> 零食</h2>
 <ul>
@@ -6563,7 +6592,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 </ul>
 </li>
 </ul>
-<img alt="桌上" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/compare_home_to_college/fruits.jpg" width="50%" height="50%">
+<img alt="桌上" src="/images/gossip/compare_home_to_college/fruits.jpg" width="50%" height="50%">
 <blockquote>
 <p>解法：网购了一些零食，不过由于注重性价比，并不是很香。</p>
 </blockquote>
@@ -6673,7 +6702,7 @@ _ <strong>稳定性极差，平均每过几十分钟会突然抽风，无法连�
 <h2> 如何看待关于 reactions 的讨论</h2>
 <p>如图，</p>
 <div class="image40">
-<img alt="shortcut" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/consider/1.jpg">
+<img alt="shortcut" src="/images/gossip/consider/1.jpg">
 </div>
 <p>观点：<strong>自由派</strong>。人们有表达自己观点的自由，频道不应该通过关闭部分 reactions 来限制这种自由。</p>
 <div style="text-align: right;font-style: italic;">——20230219</div>
@@ -6814,7 +6843,7 @@ Address: 2001:da8:8007:1358:20c:29ff:fe89:603f</p>
 </li>
 <li>
 <p>问题二：在安装系统界面无法使用键盘鼠标。<text style="color:red;font-weight:bold">未解决！</text></p>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/difficulties/fuckhyperv.png" alt="fuckhyperv" tabindex="0" loading="lazy"><figcaption>fuckhyperv</figcaption></figure>
+<figure><img src="/images/gossip/difficulties/fuckhyperv.png" alt="fuckhyperv" tabindex="0" loading="lazy"><figcaption>fuckhyperv</figcaption></figure>
 <p>尝试：</p>
 <ul>
 <li>使用其他系统 iso ：出现<code>Start PXE over IPv4</code>，键盘仍然无法使用。</li>
@@ -6835,7 +6864,7 @@ Address: 2001:da8:8007:1358:20c:29ff:fe89:603f</p>
 </ol>
 <p>然后人就累死了。。。</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/difficulties/fuckhyperv.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/gossip/difficulties/fuckhyperv.png" type="image/png"/>
     </item>
     <item>
       <title>xxx 有多难用</title>
@@ -6995,7 +7024,7 @@ Address: 2001:da8:8007:1358:20c:29ff:fe89:603f</p>
 <li>取色用 <a href="https://github.com/martinchrzan/ColorPicker" target="_blank" rel="noopener noreferrer">ColorPicker</a> 随用随开</li>
 </ol>
 <div class="image60" style="text-align: center; ">
-<img alt="utools vs noutools" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/fuckxxx/fuckutools.png">
+<img alt="utools vs noutools" src="/images/gossip/fuckxxx/fuckutools.png">
 <div>
 utools vs diy my tools
 </div>
@@ -7156,12 +7185,12 @@ utools vs diy my tools
       <pubDate>Thu, 15 Jun 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 绷不住了</h1>
 <h2> meme 图集</h2>
-<p><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/meme1.jpg" alt="meme1" loading="lazy">
-<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/memes/1.jpg" alt="meme2" loading="lazy">
-<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/memes/2.jpg" alt="meme3" loading="lazy">
-<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/memes/3.webp" alt="meme4" loading="lazy"></p>
+<p><img src="/images/farraginous/college/meme1.jpg" alt="meme1" loading="lazy">
+<img src="/images/gossip/memes/1.jpg" alt="meme2" loading="lazy">
+<img src="/images/gossip/memes/2.jpg" alt="meme3" loading="lazy">
+<img src="/images/gossip/memes/3.webp" alt="meme4" loading="lazy"></p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/college/meme1.jpg" type="image/jpeg"/>
+      <enclosure url="https://absx.pages.dev/images/farraginous/college/meme1.jpg" type="image/jpeg"/>
     </item>
     <item>
       <title>日程区</title>
@@ -7404,24 +7433,25 @@ Error:The process '/usr/bin/git' failed with exit code 128<br></p>
 <p>本地预览 <em><code>npm run docs:dev</code></em> 不受影响。</p>
 <p>上网搜索，尝试管理员权限，清除缓存，更新 npm 手段，皆无效。看到有人说是 xftp 造成的 dist 文件夹占用问题，不了解。但是既然说是占用，那我就重启试试。于是问题解决。<s>看来这是 99%的问题其中之一呢</s></p>
 <h2> 图床国内无法解析问题</h2>
-<p>我原本使用的 github 图床图片格式为<code>https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg</code>，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：</p>
+<p>我原本博客托管在 github.io，图片加载链接为<code>https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg</code>，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：</p>
 <blockquote>
 <p>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</p>
 </blockquote>
-<p>原因是<code>raw.githubusercontent.com</code>域名在墙内受到污染。</p>
-<p>然后我尝试了其他图床：<a href="https://sm.ms/" target="_blank" rel="noopener noreferrer">SM.MS</a>，但是：</p>
+<p>原因是 <code>raw.githubusercontent.com</code> 域名在墙内受到污染。</p>
+<p>然后我尝试了使用其他图床托管图片：<a href="https://sm.ms/" target="_blank" rel="noopener noreferrer">SM.MS</a>，但是：</p>
 <ol>
 <li>这个图床有<em>容量上限：5GB</em>和<em>单张图片上限：5MB</em></li>
 <li>原有的每张图都需要手动替换，因为 src 是随机生成的</li>
 <li>会出现一些玄学问题，例如：使用<code>&lt;img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%"&gt;</code>进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（<a href="#%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%AF%94%E4%BE%8B%E7%BC%A9%E6%94%BE%E9%97%AE%E9%A2%98">下文</a>有解释，这并不是图床的问题）</li>
-<li>在<a href="https://sm.ms/about" target="_blank" rel="noopener noreferrer">关于 SM.MS</a>界面你将能看到：<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/withvuepress2/fucksmms.png" alt="fucksmms" loading="lazy"> <s>这样的图床还是早点死吧！</s></li>
+<li>在<a href="https://sm.ms/about" target="_blank" rel="noopener noreferrer">关于 SM.MS</a>界面你将能看到：<img src="/images/gossip/withvuepress2/fucksmms.png" alt="fucksmms" loading="lazy"> <s>这样的图床还是早点死吧！</s></li>
 </ol>
 <p>因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：</p>
 <ul>
 <li>不改变图片目录结构</li>
 <li>替换方便。仅需全局查找替换，点一下鼠标即可。<span class="heimu" title="你知道的太多了"><s>（但是对我来说需要把 SM.MS 图床的链接再换回原链接…）</s></span></li>
 </ul>
-<p>然后参考<a href="https://www.31du.cn/blog/jsdelivr.html" target="_blank" rel="noopener noreferrer">这篇文章</a>，先试了下 <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener noreferrer">jsdelivr</a>，不能用。网上搜，大家也都说寄了。再试 <a href="https://statically.io/" target="_blank" rel="noopener noreferrer">statically</a>，这次成功了。于是就决定用它了。至此，问题解决。</p>
+<p>然后参考<a href="https://www.31du.cn/blog/jsdelivr.html" target="_blank" rel="noopener noreferrer">这篇文章</a>，先试了下 <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener noreferrer">jsdelivr</a>，然而国内不能用。网上搜，大家也都说寄了。再试 <a href="https://statically.io/" target="_blank" rel="noopener noreferrer">statically</a>，这次成功了。于是就决定用它了。至此，问题解决。</p>
+<p>后来 2023.09，statically 也寄了（<em>cdn.staticaly.com has expired.</em>）。不过现在博客主要托管在 cloudflare 上而不是 github.io 上，所以把图片放到静态站点里，说不定也是一个不差的选择。</p>
 <h2> 关于数学插件</h2>
 <p>为 markdown-it 渲染器安装<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mtext>LaTeX</mtext></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span></span>插件。<a href="https://blog.csdn.net/Flyingheart1991/article/details/126067149" target="_blank" rel="noopener noreferrer">参考来源</a>，亲测有效。</p>
 <p>由于<code>$...$</code>会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹<code>&lt;span v-pre&gt;&lt;/span&gt;</code>标签。否则将触发<a href="#rendering-pages-failed%E9%97%AE%E9%A2%98">weak map key</a> bug。</p>
@@ -7645,7 +7675,7 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 </ol>
 </section>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/gossip/withvuepress2/fucksmms.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/gossip/withvuepress2/fucksmms.png" type="image/png"/>
     </item>
     <item>
       <title>灵感</title>
@@ -7746,59 +7776,63 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 <ul class="task-list-container">
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-44" disabled="disabled"><label class="task-list-item-label" for="task-item-44"> B 站 CC 字幕下载脚本</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-45" disabled="disabled"><label class="task-list-item-label" for="task-item-45"> osu 谱面下载器（仅前端？）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-46" disabled="disabled"><label class="task-list-item-label" for="task-item-46"> 轻量级 pdf 演示</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-47" disabled="disabled"><label class="task-list-item-label" for="task-item-47"> b 站历史记录搜索</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-48" disabled="disabled"><label class="task-list-item-label" for="task-item-48"> html yaml extransfer</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-49" disabled="disabled"><label class="task-list-item-label" for="task-item-49"> html compresser, &lt;-&gt; rss</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-46" disabled="disabled"><label class="task-list-item-label" for="task-item-46"> 轻量级 pdf 演示 (pdf as ppt, in any browser)</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-50" disabled="disabled"><label class="task-list-item-label" for="task-item-50"> 已找到同类项目 <a href="https://www.npmjs.com/package/sanitize-html" target="_blank" rel="noopener noreferrer">sanitize-html</a>，但可以改进合并</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-47" disabled="disabled"><label class="task-list-item-label" for="task-item-47"> 结合表现力稍强一点的文本描述语言</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-51" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-51"> B 站直播增强</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-48" disabled="disabled"><label class="task-list-item-label" for="task-item-48"> b 站历史记录搜索</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-49" disabled="disabled"><label class="task-list-item-label" for="task-item-49"> html yaml extransfer</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-50" disabled="disabled"><label class="task-list-item-label" for="task-item-50"> html compresser, &lt;-&gt; rss</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-52" disabled="disabled"><label class="task-list-item-label" for="task-item-52"> 弹幕区域取消，发送弹幕放在视频下方</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-53" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-53"> f 全屏</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-54" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-54"> 屏蔽无用组件</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-51" disabled="disabled"><label class="task-list-item-label" for="task-item-51"> 已找到同类项目 <a href="https://www.npmjs.com/package/sanitize-html" target="_blank" rel="noopener noreferrer">sanitize-html</a>，但可以改进合并</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-55" disabled="disabled"><label class="task-list-item-label" for="task-item-55"> 类 markdown 方言</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-52" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-52"> B 站直播增强</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 换行问题</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-57" disabled="disabled"><label class="task-list-item-label" for="task-item-57"> 部分样式统一</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-58" disabled="disabled"><label class="task-list-item-label" for="task-item-58"> 高亮与黑幕</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-59" disabled="disabled"><label class="task-list-item-label" for="task-item-59"> 双列阅读区支持</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-53" disabled="disabled"><label class="task-list-item-label" for="task-item-53"> 弹幕区域取消，发送弹幕放在视频下方</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-54" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-54"> f 全屏</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-55" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-55"> 屏蔽无用组件</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-60" disabled="disabled"><label class="task-list-item-label" for="task-item-60"> better markdown formatter</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-61" disabled="disabled"><label class="task-list-item-label" for="task-item-61"> 答题网，选择题实时反馈</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-62" disabled="disabled"><label class="task-list-item-label" for="task-item-62"> SAVE MY LOCK FILE</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-63" disabled="disabled"><label class="task-list-item-label" for="task-item-63"> gaussian blur lib</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-64" disabled="disabled"><label class="task-list-item-label" for="task-item-64"> <s>koishi plugin:</s> （koishi 有关计划暂时搁置）</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 类 markdown 方言</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-65" disabled="disabled"><label class="task-list-item-label" for="task-item-65"> <s>advanced: wordle game</s></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-57" disabled="disabled"><label class="task-list-item-label" for="task-item-57"> 换行问题</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-58" disabled="disabled"><label class="task-list-item-label" for="task-item-58"> 部分样式统一</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-59" disabled="disabled"><label class="task-list-item-label" for="task-item-59"> 高亮与黑幕</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-60" disabled="disabled"><label class="task-list-item-label" for="task-item-60"> 双列阅读区支持</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-66" disabled="disabled"><label class="task-list-item-label" for="task-item-66"> 今天吃什么 project</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-61" disabled="disabled"><label class="task-list-item-label" for="task-item-61"> better markdown formatter</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-62" disabled="disabled"><label class="task-list-item-label" for="task-item-62"> 答题网，选择题实时反馈</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-63" disabled="disabled"><label class="task-list-item-label" for="task-item-63"> SAVE MY LOCK FILE</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-64" disabled="disabled"><label class="task-list-item-label" for="task-item-64"> gaussian blur lib</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-65" disabled="disabled"><label class="task-list-item-label" for="task-item-65"> <s>koishi plugin:</s> （koishi 有关计划暂时搁置）</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-67" disabled="disabled"><label class="task-list-item-label" for="task-item-67"> 分食堂，自动根据图片目录生成</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-68" disabled="disabled"><label class="task-list-item-label" for="task-item-68"> 可添加排除，写入 cookie</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-66" disabled="disabled"><label class="task-list-item-label" for="task-item-66"> <s>advanced: wordle game</s></label></li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-67" disabled="disabled"><label class="task-list-item-label" for="task-item-67"> 今天吃什么 project</label>
+<ul class="task-list-container">
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-68" disabled="disabled"><label class="task-list-item-label" for="task-item-68"> 分食堂，自动根据图片目录生成</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-69" disabled="disabled"><label class="task-list-item-label" for="task-item-69"> 可添加排除，写入 cookie</label></li>
 </ul>
 </li>
 </ul>
 <h2> 实物创作灵感</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-69" disabled="disabled"><label class="task-list-item-label" for="task-item-69"> 不压耳朵（开槽?）的侧睡枕</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-70" disabled="disabled"><label class="task-list-item-label" for="task-item-70"> 甩棍伞</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-71" disabled="disabled"><label class="task-list-item-label" for="task-item-71"> 安全鸭舌帽</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-72" disabled="disabled"><label class="task-list-item-label" for="task-item-72"> 肉色隐形防割护颈带</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-70" disabled="disabled"><label class="task-list-item-label" for="task-item-70"> 不压耳朵（开槽?）的侧睡枕</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-71" disabled="disabled"><label class="task-list-item-label" for="task-item-71"> 甩棍伞</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-72" disabled="disabled"><label class="task-list-item-label" for="task-item-72"> 安全鸭舌帽</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-73" disabled="disabled"><label class="task-list-item-label" for="task-item-73"> 肉色隐形防割护颈带</label></li>
 </ul>
 <h2> 大型灵感</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-73" disabled="disabled"><label class="task-list-item-label" for="task-item-73"> 水中的 <em>Swimming Circus (スイミング・サーカス)</em> 。FC 的模仿产物。</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-74" disabled="disabled"><label class="task-list-item-label" for="task-item-74"> 水中的 <em>Swimming Circus (スイミング・サーカス)</em> 。FC 的模仿产物。</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-74" disabled="disabled"><label class="task-list-item-label" for="task-item-74"> 25*25*3 - [ ] 30*30*4 (m)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-75" disabled="disabled"><label class="task-list-item-label" for="task-item-75"> 是否携带氧气罐：未决定。可做成扁平型。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-76" disabled="disabled"><label class="task-list-item-label" for="task-item-76"> 背部装备统一大小的触控信号贴</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-75" disabled="disabled"><label class="task-list-item-label" for="task-item-75"> 25*25*3 - [ ] 30*30*4 (m)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-76" disabled="disabled"><label class="task-list-item-label" for="task-item-76"> 是否携带氧气罐：未决定。可做成扁平型。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-77" disabled="disabled"><label class="task-list-item-label" for="task-item-77"> 背部装备统一大小的触控信号贴</label></li>
 </ul>
 </li>
 </ul>
@@ -7815,9 +7849,9 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 </ol>
 <p>异变是什么，梦里并没有具体感受。</p>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-77" disabled="disabled"><label class="task-list-item-label" for="task-item-77"> 描述：蓝色描边的具体图形：两个同心圆和花纹，两根指针，还有一个颜色稍有异的刻度线。其余区域皆透明无阻挡。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-78" disabled="disabled"><label class="task-list-item-label" for="task-item-78"> 特性：自晦，未认主时不会被轻易发现。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-79" disabled="disabled"><label class="task-list-item-label" for="task-item-79"> 副作用：表盘认主后，主人的修为不会继续上升；表盘脱离时，会将正常应上升的修为返还，实现飞跃。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-78" disabled="disabled"><label class="task-list-item-label" for="task-item-78"> 描述：蓝色描边的具体图形：两个同心圆和花纹，两根指针，还有一个颜色稍有异的刻度线。其余区域皆透明无阻挡。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-79" disabled="disabled"><label class="task-list-item-label" for="task-item-79"> 特性：自晦，未认主时不会被轻易发现。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-80" disabled="disabled"><label class="task-list-item-label" for="task-item-80"> 副作用：表盘认主后，主人的修为不会继续上升；表盘脱离时，会将正常应上升的修为返还，实现飞跃。</label></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -7998,7 +8032,7 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 电脑端数据始于 20220428
 <p>OSU 击打键数（20220807-20221231）：6811665</p>
 <p>跑步里程：97130 m，俯卧撑：872 个，引体向上：249.5 个</p>
-<p><img alt="电脑时长" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hide/memories/2022_1.jpg" width="50%" height="50%"><img alt="电脑时长" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hide/memories/2022_2.jpg" width="50%" height="50%"></p>
+<p><img alt="电脑时长" src="/images/hide/memories/2022_1.jpg" width="50%" height="50%"><img alt="电脑时长" src="/images/hide/memories/2022_2.jpg" width="50%" height="50%"></p>
 </details>
 <h2> 更早</h2>
 <h3> 小学</h3>
@@ -8237,7 +8271,7 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 </ul>
 <p>另诉：游泳会带来不幸。。比如我的<a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">暂时性耳聋</a>，关节疼痛和脱皮。</p>
 <div class="image50" style="text-align: center;">
-<img alt="游泳会带来不幸" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hide/sports/1.jpg">
+<img alt="游泳会带来不幸" src="/images/hide/sports/1.jpg">
 </div>
 <h2> 关于跑步</h2>
 <p>由于肺活量限制，最擅长 200-400m 短跑。</p>
@@ -11921,10 +11955,10 @@ x 表示水平位移，h 表示垂直位移。<br>
 <th style="text-align:center;">幻梦</th>
 </tr></thead>
 <tbody><tr>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="水葬銀貨のイストリア" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/suisouginka.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="ISLAND" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/island.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="euphoria" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/euphoria.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="冥契的牧神节" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/meikeinoruperukaria.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="水葬銀貨のイストリア" src="/images/hobbies/galgame/suisouginka.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="ISLAND" src="/images/hobbies/galgame/island.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="euphoria" src="/images/hobbies/galgame/euphoria.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
+<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="冥契的牧神节" src="/images/hobbies/galgame/meikeinoruperukaria.jpg" class="medium-zoom-image" width="180px" height="250px"></td>
 </tr></tbody>
 </table>
 </div>
@@ -11970,7 +12004,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center">兰斯</td>
-<td style="text-align:center">01 画像保存崩溃<br>02 小键盘混淆<code>2</code>&amp;<code>0</code><br>03 技能刷太多，自动战斗思考超时崩溃；前往<em>废弃都市恐</em>时崩溃；郁金香1号改改改改再升级崩溃<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/rance03_2.png" alt="空指针" loading="lazy"></td>
+<td style="text-align:center">01 画像保存崩溃<br>02 小键盘混淆<code>2</code>&amp;<code>0</code><br>03 技能刷太多，自动战斗思考超时崩溃；前往<em>废弃都市恐</em>时崩溃；郁金香1号改改改改再升级崩溃<img src="/images/hobbies/galgame/rance03_2.png" alt="空指针" loading="lazy"></td>
 </tr>
 <tr>
 <td style="text-align:center">家喵二三事</td>
@@ -11978,7 +12012,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">Summer Pockets Reflection Blue</td>
-<td style="text-align:center">跟<em>終のステラ</em>同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb1.png" alt="颜色错乱" loading="lazy"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/sprb2.png" alt="崩溃" loading="lazy"></td>
+<td style="text-align:center">跟<em>終のステラ</em>同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）<img src="/images/hobbies/galgame/sprb1.png" alt="颜色错乱" loading="lazy"><img src="/images/hobbies/galgame/sprb2.png" alt="崩溃" loading="lazy"></td>
 </tr>
 <tr>
 <td style="text-align:center">近月少女的礼仪</td>
@@ -11986,7 +12020,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">終のステラ</td>
-<td style="text-align:center">闪屏，backlog 文字颜色错乱<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/tsuinosutera_1.png" alt="颜色错乱" loading="lazy"></td>
+<td style="text-align:center">闪屏，backlog 文字颜色错乱<img src="/images/hobbies/galgame/tsuinosutera_1.png" alt="颜色错乱" loading="lazy"></td>
 </tr>
 <tr>
 <td style="text-align:center">住在下体升级岛上的贫乳该如何是好？</td>
@@ -11994,7 +12028,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">NEKOPARA vol.4</td>
-<td style="text-align:center"><text style="color:red;">恶性 bug：推进量达到某一阈值时则崩溃；游戏内打开其他全屏游戏时卡死</text><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_1.png" alt="贴图错误" loading="lazy"><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nekopara4_2.png" alt="贴图错误" loading="lazy"></td>
+<td style="text-align:center"><text style="color:red;">恶性 bug：推进量达到某一阈值时则崩溃；游戏内打开其他全屏游戏时卡死</text><img src="/images/hobbies/galgame/nekopara4_1.png" alt="贴图错误" loading="lazy"><img src="/images/hobbies/galgame/nekopara4_2.png" alt="贴图错误" loading="lazy"></td>
 </tr>
 <tr>
 <td style="text-align:center">Girl Fantasy</td>
@@ -12022,11 +12056,11 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">灵感满溢的甜蜜创想</td>
-<td style="text-align:center"><text style="color:red;">恶性bug（民汉）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决；<br>backlog bug（官中）：背景透明，头像变大，按钮消失，继而游戏黑屏无法打开；恢复存档无法恢复 save/load/语音收藏；鉴赏界面卡死，脱离聚焦后再聚焦出现疯狂神奇跳动</text><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/hamidashi_error1.png" alt="贴图错误" loading="lazy"></td>
+<td style="text-align:center"><text style="color:red;">恶性bug（民汉）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决；<br>backlog bug（官中）：背景透明，头像变大，按钮消失，继而游戏黑屏无法打开；恢复存档无法恢复 save/load/语音收藏；鉴赏界面卡死，脱离聚焦后再聚焦出现疯狂神奇跳动</text><img src="/images/hobbies/galgame/hamidashi_error1.png" alt="贴图错误" loading="lazy"></td>
 </tr>
 <tr>
 <td style="text-align:center">苍之彼方的四重奏</td>
-<td style="text-align:center">在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；<br><text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；<br>快进时多次出现：<strong>贴图错误，程序崩溃，画面卡死</strong>（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有<em>跳到下个选择支</em> 按钮造成的</span> <img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/aokana_picture_error.png" alt="贴图错误" loading="lazy"> <img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/aokana_exe_collapse.jpg" alt="程序崩溃" loading="lazy"></td>
+<td style="text-align:center">在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；<br><text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；<br>快进时多次出现：<strong>贴图错误，程序崩溃，画面卡死</strong>（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有<em>跳到下个选择支</em> 按钮造成的</span> <img src="/images/hobbies/galgame/aokana_picture_error.png" alt="贴图错误" loading="lazy"> <img src="/images/hobbies/galgame/aokana_exe_collapse.jpg" alt="程序崩溃" loading="lazy"></td>
 </tr>
 <tr>
 <td style="text-align:center">9-nine-新章 &amp; 9-nine-雪色雪花雪余痕</td>
@@ -12085,7 +12119,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>03 | <a href="https://www.bilibili.com/read/readlist/rl309546/" target="_blank" rel="noopener noreferrer">攻略</a>
 <ul>
 <li>
-<div class="image60"><img alt="您要不看看您在说什么" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/rance03.jpg"></div>
+<div class="image60"><img alt="您要不看看您在说什么" src="/images/hobbies/galgame/rance03.jpg"></div>
 您要不看看您在说什么（.jpg
 </li>
 <li>RPG 不能随时存档，但是这部 CV 实在是太顶了啊啊啊啊啊！我的好多好听的语音存不了啊啊啊啊啊！哭</li>
@@ -12140,13 +12174,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>草啊！</li>
 </ul>
 <div class="image60" style="text-align: center;">
-<img alt="我的也死了啊！" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nukidashi_2.jpg">
+<img alt="我的也死了啊！" src="/images/hobbies/galgame/nukidashi_2.jpg">
 </div>
 <ul>
 <li>你不是数学挂科了吗喂（</li>
 </ul>
 <div class="image60" style="text-align: center;">
-<img alt="数学鬼才" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/nukidashi_1.jpg">
+<img alt="数学鬼才" src="/images/hobbies/galgame/nukidashi_1.jpg">
 </div>
 <h4> 終のステラ</h4>
 <ul>
@@ -12296,7 +12330,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </ol>
 </section>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/galgame/rance03_2.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/hobbies/galgame/rance03_2.png" type="image/png"/>
     </item>
     <item>
       <title>音游</title>
@@ -12586,7 +12620,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <h3> 最好成绩</h3>
 <ul>
 <li>4k 段位：<a href="https://www.bilibili.com/video/av661009839/" target="_blank" rel="noopener noreferrer">β 96.33%</a>(<a href="https://wwkh.lanzout.com/iGlrJ18lyudi" target="_blank" rel="noopener noreferrer">replay</a>) &amp; <a href="https://www.bilibili.com/video/BV1R8411A7Ye" target="_blank" rel="noopener noreferrer">malody v3 ex2 96.03%</a> | <a href="https://www.bilibili.com/video/BV1vv4y1p7b1" target="_blank" rel="noopener noreferrer">LN 11</a>
-<img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg" alt="malody v3 ex2 96.03%" loading="lazy"></li>
+<img src="/images/hobbies/rhythm_games/osu_best.jpg" alt="malody v3 ex2 96.03%" loading="lazy"></li>
 <li>6k 段位：<a href="https://www.bilibili.com/video/BV1Ks4y1K77B/" target="_blank" rel="noopener noreferrer">4dan 96.27%</a></li>
 </ul>
 <h2> phigros</h2>
@@ -12615,7 +12649,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <p>现在有在线存档了，请使用在线存档转移。而且能否下载到老版本也是个问题。</p>
 <h3> 最好成绩</h3>
 <p>15.9 all perfect</p>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/phigros_best.jpg" alt="15.9 all perfect" tabindex="0" loading="lazy"><figcaption>15.9 all perfect</figcaption></figure>
+<figure><img src="/images/hobbies/rhythm_games/phigros_best.jpg" alt="15.9 all perfect" tabindex="0" loading="lazy"><figcaption>15.9 all perfect</figcaption></figure>
 <h3> 共存版</h3>
 <ul>
 <li>2.1.4（2022 愚人节）：<a href="https://pan.baidu.com/s/1dRuoIVPCCgkbSxCyD-Z-IQ?pwd=2022" target="_blank" rel="noopener noreferrer">下载链接</a> | <a href="https://www.bilibili.com/video/BV1L44y15713" target="_blank" rel="noopener noreferrer">出处：『Phigors』2022 年愚人节共存版 Phigros 来了！！！</a></li>
@@ -12637,7 +12671,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <p>11: Aegleseeker, Grievous Lady, 最強STRONGER</p>
 <h3> 最好成绩</h3>
 <p>Sheriruth 10.1 pure memory</p>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/arcaea_best.jpg" alt="Sheriruth 10.1 pure memory" tabindex="0" loading="lazy"><figcaption>Sheriruth 10.1 pure memory</figcaption></figure>
+<figure><img src="/images/hobbies/rhythm_games/arcaea_best.jpg" alt="Sheriruth 10.1 pure memory" tabindex="0" loading="lazy"><figcaption>Sheriruth 10.1 pure memory</figcaption></figure>
 <h3> 其他</h3>
 <ul>
 <li><a href="https://www.mbrjun.cn/archives/443/" target="_blank" rel="noopener noreferrer">改残片</a> ，需 root（精简版：<code>/data/data/moe.low.arc/shared_prefs/Cocos2dxPrefsFile.xml</code>, <code>&lt;string name="fr_k"&gt;e71fbd09303b100e1e97b9acc8970bb4&lt;/string&gt;</code>, <code>&lt;int name="fr_v" value="29997" /&gt;</code>）</li>
@@ -12648,11 +12682,11 @@ x 表示水平位移，h 表示垂直位移。<br>
 <p>机也刷完了，pjsk 也下回来了，我去 tg 找我的码时，震惊地发现——它没了。或许是梯子问题没发出去，或许是我误删了，反正它没了。</p>
 <p>众所周知 tg 收藏夹无法恢复，而我好久没打 pjsk 了，账号信息基本上不记得。。因此没有任何一丝可能性能救回我的账号。<s>里面有想抽 <em>朝比奈まふゆ</em> 的 100 抽</s>。这已经是我第二次丢失 pjsk 账号了。</p>
 <div style="text-align: center; ">
-<img alt="有人丢了引き継ぎ 我不说是谁" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/sbgaaru.png" width="40%" height="40%">
+<img alt="有人丢了引き継ぎ 我不说是谁" src="/images/hobbies/rhythm_games/sbgaaru.png" width="40%" height="40%">
 </div>
 <p>本人于 20230715 退坑 pjsk。</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/rhythm_games/osu_best.jpg" type="image/jpeg"/>
+      <enclosure url="https://absx.pages.dev/images/hobbies/rhythm_games/osu_best.jpg" type="image/jpeg"/>
     </item>
     <item>
       <title>Probability and Mathematical Statistics</title>
@@ -13081,7 +13115,7 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 </ul>
 <p>（物理模型等效，全频域）：</p>
 <div style="text-align: center;">
-<img alt="物理模型等效" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/farraginous/learning/analog_circuit/1.png" width="70%" height="70%">
+<img alt="物理模型等效" src="/images/farraginous/learning/analog_circuit/1.png" width="70%" height="70%">
 </div>
 <p>且还能再继续简化。<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>g</mi><mi>m</mi></msub><mo>=</mo><msub><mi>β</mi><mn>0</mn></msub><mi mathvariant="normal">/</mi><msub><mi>r</mi><mrow><msup><mi>b</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mi>e</mi></mrow></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle g_m=\beta_0/r_{b'e}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">m</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0528em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">b</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6828em;"><span style="top:-2.786em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathnormal mtight">e</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
 <h3> 多级频率响应</h3>
@@ -14217,14 +14251,14 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <ul>
 <li>纪念一下曾经沉迷明日方舟的我。（20201031-20220615）</li>
 </ul>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/arknights/arknights.png" alt="我的明日方舟账号" tabindex="0" loading="lazy"><figcaption>我的明日方舟账号</figcaption></figure>
+<figure><img src="/images/hobbies/other_games/arknights/arknights.png" alt="我的明日方舟账号" tabindex="0" loading="lazy"><figcaption>我的明日方舟账号</figcaption></figure>
 <p>全程零氪。大号：共 196 位干员，其中有 38 位 6 星干员，升到满级的有能天使和史尔特尔；32 位精二干员，其中 22 位专三。主线推至 8 章 M8-6,9 章 9-11。</p>
 <p>小号：94 级的精一 1 级号，此处不展示。我还有一些小小号，投入精力不多，此处不展示。</p>
 <p>最喜欢的干员是<a href="https://prts.wiki/w/%E7%BA%A2" target="_blank" rel="noopener noreferrer"><em>红</em></a>。不看剧情的游戏党，强度党，曾认为<em>为了危机合约而打明日方舟</em>。</p>
 <p>从开始入坑到 2021 年末都极度沉迷。可在<a href="/hide/memories.html#%E7%94%B5%E8%84%91%E5%AE%A4" target="blank">回忆录</a>内窥得一丝端倪 <span class="heimu" title="你知道的太多了">明日方舟所带给我的，也只剩下这些回忆了。</span> 2022 基本停止推进主线，放缓推进活动。2022.05 左右开始一周一登，仅打剿灭，并于 20220615 卸载，标志正式退坑。</p>
 <p>游玩方式 99.9% 为电脑模拟器（雷电模拟器 -&gt; MuMu 模拟器 -&gt; Bluestacks 蓝叠），并使用挂机脚本应对普通关卡、长关卡、剿灭等。仅在外情况使用手机游玩。</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/arknights/arknights.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/hobbies/other_games/arknights/arknights.png" type="image/png"/>
     </item>
     <item>
       <title>CS:GO</title>
@@ -14241,7 +14275,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 </blockquote>
 <h2> 设置方案</h2>
 <h3> 启用控制台</h3>
-<figure><img src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_1.png" alt="控制台" tabindex="0" loading="lazy"><figcaption>控制台</figcaption></figure>
+<figure><img src="/images/hobbies/other_games/csgo/csgo_settings_1.png" alt="控制台" tabindex="0" loading="lazy"><figcaption>控制台</figcaption></figure>
 <p>控制台是对 csgo 进行高级操作的基础。现在你可以按<code>~</code>键呼出控制台。</p>
 <h3> 切换国服</h3>
 <h4> 如何切换</h4>
@@ -14255,7 +14289,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <li>下载安装<a href="https://pvp.wanmei.com/" target="_blank" rel="noopener noreferrer">完美世界竞技平台</a>软件。之后每次启动 csgo 时就会让你选择游玩哪个服务器。</li>
 </ul>
 <div style="text-align: center;">
-<img alt="开始界面" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_2.png" width="43%" height="43%">
+<img alt="开始界面" src="/images/hobbies/other_games/csgo/csgo_settings_2.png" width="43%" height="43%">
 </div>
 <ul>
 <li>在 steam 库中右击 csgo，点击<code>属性</code>，在<code>通用-启动选项</code>中加入<code>-perfectworld</code></li>
@@ -14289,12 +14323,12 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 （此时每个目录下仅有一个文件夹，一直点到最后），在右侧找到 Scaling 并双击，更改数值为 3</li>
 </ol>
 <div style="text-align: center; ">
-<img alt="注册表" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_4.png" width="100%" height="100%">
+<img alt="注册表" src="/images/hobbies/other_games/csgo/csgo_settings_4.png" width="100%" height="100%">
 </div>
 <div class="hint-container danger">
 <p class="hint-container-title">警告</p>
 <p>对注册表进行直接操作前请务必事先备份！
-<br><img alt="注册表备份" src="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_3.png" width="40%" height="40%"></p>
+<br><img alt="注册表备份" src="/images/hobbies/other_games/csgo/csgo_settings_3.png" width="40%" height="40%"></p>
 </div>
 <h3> 显示 FPS</h3>
 <p>在控制台中输入<code>net_graph 1</code></p>
@@ -14394,7 +14428,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 cmd 中执行</p>
 <div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>有时候有用。</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.staticaly.com/gh/lxl66566/lxl66566.github.io/images/hobbies/other_games/csgo/csgo_settings_1.png" type="image/png"/>
+      <enclosure url="https://absx.pages.dev/images/hobbies/other_games/csgo/csgo_settings_1.png" type="image/png"/>
     </item>
     <item>
       <title>打牌记录（大学）</title>
