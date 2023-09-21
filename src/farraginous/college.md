@@ -18,6 +18,24 @@ tag:
 
 <text style="color:red;">紧急情况：校医院 大一-大三 33612123 大四 64252637</text>
 
+## 暴论
+
+::: right
+——读你妈的大学
+:::
+
+::: details 在我校（本科），你可以看到：
+
+1. 职能割裂的行政部门
+2. 非人性化的学校网站
+3. **作业、实验报告强制打印后手写**，**上课疯狂抽问**，**对着 PPT 念经**，**乐此不疲让学生分组做 PPT 做视频展示**，**随手乱给平时分**的（部分）老师
+4. 手写 10000 字的实习日记和报告
+5. 每晚 11 点断电的无卫生间的狭小宿舍，收高额使用费的空调
+6. 涨价的食堂菜品，从免费到收费的体育馆，上涨且不给出明细的学费，从**助学贷款**学生银行卡里扣走生活费交学费的财务处
+7. 强迫学生交钱选修所谓的美育劳育课程
+
+:::
+
 ## 校内生存技巧
 
 <!-- * 大学生活动中心的健身房不对外开放（？），想要健身可去体育场看台下，器材较完备，免费，基本上全天开放。注意别跟校队选手抢设备。 -->
@@ -203,10 +221,11 @@ tag:
 <!-- prettier-ignore -->
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
+|互联网 - 程华|3.5|<Badge text="PPT" /><Badge text="电子版" />|
 |通信电子线路 - 凌小峰|4|<Badge text="限手机" />-|<details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details>|
-|DSP - 万永菁|9|线上下结合，课前给所有学生打印教学计划和作业|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>
-|算法导论 - 吴粤|6|较现代，懂 rust，但是有些方面又觉得像在古代[^6]|<details><summary>点击展开</summary><p>Q:1769013250<br/>We:mathwuyue<br/>yuewu@ecust.edu.cn<br/>yue.wu@etalkai.com</p></details>|
-|人工智能基础 - 朱宏擎|5|几乎每节课都有课堂练习|
+|DSP - 万永菁|8|线上下结合，课前给所有学生打印教学计划和作业；但是作业过多|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>
+|算法导论 - 吴粤|5|较现代，但是有些方面又觉得像在古代[^6]|<details><summary>点击展开</summary><p>Q:1769013250<br/>We:mathwuyue<br/>yuewu@ecust.edu.cn<br/>yue.wu@etalkai.com</p></details>|
+|人工智能基础 - 朱宏擎|3|几乎每节课都有课堂练习|
 |王嵘 - 代信号实验|-1|我对其不会有半点尊敬。[^2][^3][^4]|
 |大物实验 - 顾晓艳|8|温和，讲解清楚，手把手教||
 |数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~，不过至少专业性没有问题；平时分高，哥几个都是 90+|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
@@ -242,6 +261,6 @@ tag:
 [^2]: [讲得慢 + 不给 PPT，故意吊着学生](https://t.me/withabsolutex/1114)
 [^3]: [实验做完不放人，实验室器材不足不处理，强制大创团队报名*互联网+*](https://t.me/withabsolutex/1115)
 [^4]: [自己不知道电解电容，还嘲讽别人](https://t.me/withabsolutex/1126)
-[^6]: 他说 ssd 硬盘写速度 220kb/s 左右，内存是 5-10 倍；然后说 一块 3090 | 4090 三五千（2023.09
+[^6]: _现代_ 指吹了几节课 rust，_古代_ 指他说 ssd 硬盘写速度 220kb/s 左右，内存是 5-10 倍；然后说 一块 3090 | 4090 三五千（2023.09
 
 ## [如何看待大学班级](../gossip/consider.md#如何看待大学班级)

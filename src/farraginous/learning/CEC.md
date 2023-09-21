@@ -44,3 +44,11 @@ tag:
 ### 串并转换
 
 串转并，有 $\displaystyle\begin{cases}R_2=R_1(1+Q^2) \\ X_2=X_1(1+\frac1{Q^2})\end{cases}$，一般 Q 很大，可以约
+
+### 抽头
+
+接入系数 p = 低抽头电压/高抽头电压，&lt;=1
+
+$\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需要低抽头阻抗 >> 电抗
+
+等效阻抗为 $\displaystyle Z'=\frac1{p^2}Z$（低抽头等效到高抽头

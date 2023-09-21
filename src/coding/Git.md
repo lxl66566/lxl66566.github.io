@@ -240,6 +240,7 @@ git checkout <branch_name>      # 切换到分支
 git checkout -b <branch_name>   # 新建并切换到分支，trick
 git branch -m old_name new_name # 重命名分支
 git branch --delete <branch_name>   # 删除分支
+git push origin -d <branch_name> # 仅删除远程分支
 git merge <branch_name>         # 将 当前分支 合并到 指定分支
 git merge <branch_name> --ff-only   # 快进合并
 ```

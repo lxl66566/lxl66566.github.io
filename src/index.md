@@ -23,7 +23,9 @@ category:
 
 对 blog 的反馈与建议，请在对应页面下评论 / [私聊我](./gossip/author.md#社交)。我很乐意看到大家的反馈。
 
-- 本站地址（按推荐顺序）：[absx.pages.dev](https://absx.pages.dev) | [absx.netlify.app](https://absx.netlify.app) | [lxl66566.github.io](https://lxl66566.github.io)
+- 本站地址（按推荐顺序）[^4]：[absx.pages.dev](https://absx.pages.dev) | [absx.netlify.app](https://absx.netlify.app) | [lxl66566.github.io](https://lxl66566.github.io)
+
+[^4]: github.io 较慢，且**可能**无法加载图片，参考[图床国内无法解析](./gossip/withvuepress2.md#图床国内无法解析问题)。
 
 ## 使用指南
 

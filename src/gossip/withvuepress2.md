@@ -158,9 +158,11 @@ export default defineUserConfig({
 - 不改变图片目录结构
 - 替换方便。仅需全局查找替换，点一下鼠标即可。<span class="heimu" title="你知道的太多了">~~（但是对我来说需要把 SM.MS 图床的链接再换回原链接…）~~</span>
 
-然后参考[这篇文章](https://www.31du.cn/blog/jsdelivr.html)，先试了下 [jsdelivr](https://www.jsdelivr.com/)，然而国内不能用。网上搜，大家也都说寄了。再试 [statically](https://statically.io/)，这次成功了。于是就决定用它了。至此，问题解决。
+后来尝试了以下 cdn：
 
-后来 2023.09，statically 也寄了（_cdn.staticaly.com has expired._）。不过现在博客主要托管在 cloudflare 上而不是 github.io 上，所以把图片放到静态站点里，说不定也是一个不差的选择。
+- [jsdelivr](https://www.jsdelivr.com/)，然而国内无法使用。网上搜，大家也都说寄了。
+- [statically](https://statically.io/)，成功。于是就决定用它了。
+  - 后来 _cdn.staticaly.com has expired._，然而我并没有发现是代理域名的问题（_statically.io_ 可以正常使用），于是把图片直接放到静态站点里了。由于博客主要托管不再是 _github.io_ 而是 cloudflare，因此回归本源也不错，不会再出现此问题。
 
 ## 关于数学插件
 

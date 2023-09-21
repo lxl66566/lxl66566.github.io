@@ -88,7 +88,8 @@ tag:
   - [x] 屏蔽无用组件
 - [ ] 类 markdown 方言
   - [ ] 换行问题
-  - [ ] 部分样式统一
+  - [ ] 样式统一
+  - [ ] formatter
   - [ ] 高亮与黑幕
   - [ ] 双列阅读区支持
 - [ ] better markdown formatter

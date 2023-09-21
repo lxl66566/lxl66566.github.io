@@ -15,11 +15,13 @@ tag:
 
 之后正式使用 archlinux，双系统，windows 只拿来打游戏（galgame & osu stable 地狱兼容）。
 
-在 Android 平板上 使用 termux，主要用作 ssh 连接 VPS。VPS 有关问题请移步 [VPS](./vps.md)。
+在 Android 平板上 使用 termux，也装了 arch（[TermuxArch](https://github.com/TermuxArch/TermuxArch)），之前主要用作 ssh 连接 VPS。VPS 有关问题请移步 [VPS](./vps.md)。
 
 - 更新 ArchWSL：从[此处](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
 
 ## 安装
+
+### Archlinux
 
 20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，下面[问题区](#遇到的问题)可见一斑。
 
@@ -28,7 +30,7 @@ tag:
 
 分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢失数据（安装时我确实失手格掉了全盘数据和分区）。
 
-### 添加 windows 引导
+#### 添加 windows 引导
 
 由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 _os-prober_ 自动共存。因此我使用如下方法进行自动检测并添加：
 
@@ -37,6 +39,24 @@ mkdir /mnt/windows
 mount /dev/<windows efi> /mnt/windows
 grub-mkconfig -o /boot/grub/grub.cfg
 umount /mnt/windows
+```
+
+### TermuxArch
+
+20230920 下午安装 TermuxArch，也踩了不少坑。
+
+1. termux 本身的 pkg 需要配置好镜像源（`termux-change-repo`）。
+2. 安装时如果有报错要注意看，可能需要：
+
+- 手动在移动端环境创建目录
+- 手动安装一些包，例如 bsdtar
+
+3. 安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。
+
+```
+Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
+Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
+Server = http://mirrors.stuhome.net/archlinuxarm/$arch/$repo
 ```
 
 ## 基础
@@ -435,7 +455,7 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 
 ### 输入法不显示
 
-在[安装了 kubuntu](#修复-重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
+在[安装了 kubuntu](#重装-ubuntu) 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。
 
 解法是 `sudo apt install $(check-language-support)`。然后注销，再 login 就有输入法了。
 
@@ -447,7 +467,7 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 
 > ~~吐槽一下，mozc 源码有 600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了编译源码的不便。~~
 
-### 修复（重装）ubuntu
+### 重装 ubuntu
 
 在别人的电脑上~~乱搞~~，装了 intel 核显驱动然后没有重启就 `sudo apt install vim`（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 `sudo reboot`，再次开机就内核加载失败了。。
 
@@ -470,7 +490,7 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 > -> 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br/> \* response decoding failed: invalid character '<' looking for beginning of value
 
 并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU[^1].
-[^1]: 参考[刷机](../article/mobile_setting#mipad-5)
+[^1]: 参考[刷机](../articles/mobile_setting#mipad-5)
 
 之后发现，在 `~/.config/yay/config.json` 中有一个 `aurrpcurl` 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 `yay --aururl "https://aur.archlinux.org" --save`，问题得解。如果一次不行就两次，一定能解(?)。
 

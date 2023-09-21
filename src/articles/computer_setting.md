@@ -87,6 +87,7 @@ tag:
 21. [关闭自动更新](https://answers.microsoft.com/zh-hans/windows/forum/all/要彻底关闭win11/3c448d50-2e7f-42df-9fdb-f7f9aa9820ec)，我只需手动更新。
     - 既然无需经常更新，那就[关闭传递优化](https://blog.51cto.com/u_13464709/2057007)，并且用磁盘清理清一下这位占用的空间。
 22. [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。
+23. 打开任务栏时间秒数显示：_任务栏设置 - 任务栏行为_
 
 ## 我使用的软件们
 
