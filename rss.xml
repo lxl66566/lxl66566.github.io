@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 21 Sep 2023 14:51:10 GMT</pubDate>
-    <lastBuildDate>Thu, 21 Sep 2023 14:51:10 GMT</lastBuildDate>
+    <pubDate>Fri, 22 Sep 2023 09:22:53 GMT</pubDate>
+    <lastBuildDate>Fri, 22 Sep 2023 09:22:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -24,6 +24,22 @@
     <category>博客</category>
     <category>负面</category>
     <category>爱好</category>
+    <item>
+      <title>数字信号处理</title>
+      <link>https://absx.pages.dev/farraginous/learning/dsp2.html</link>
+      <guid>https://absx.pages.dev/farraginous/learning/dsp2.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">数字信号处理</source>
+      <description>数字信号处理</description>
+      <category>学习</category>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 数字信号处理</h1>
+<p>教师：万永菁</p>
+<h2> z 变换</h2>
+<p>参考<a href="/farraginous/learning/signals_and_systems.html#z-transform" target="blank">信号与系统 - z 变换</a></p>
+<p>与 s 的关系：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>z</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>s</mi><mi>T</mi></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle z=e^{sT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8913em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>收敛域：满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover><mi mathvariant="normal">∣</mi><mi>h</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><msup><mi>z</mi><mrow><mo>−</mo><mi>n</mi></mrow></msup><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \sum_{n=-\infty}^{+\infty}|h(n)z^{-n}|&lt;\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0667em;vertical-align:-1.3083em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7583em;"><span style="top:-1.9em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">+</span><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3083em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∣</span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span> 的 z 值区间。注意判明 <code>0</code> 处和 <code>∞</code> 处的值是否能取到。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>通信电子线路</title>
       <link>https://absx.pages.dev/farraginous/learning/CEC.html</link>
@@ -172,16 +188,15 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>20230920 下午安装 TermuxArch，也踩了不少坑。</p>
 <ol>
 <li>termux 本身的 pkg 需要配置好镜像源（<code>termux-change-repo</code>）。</li>
-<li>安装时如果有报错要注意看，可能需要：</li>
-</ol>
+<li>安装时如果有报错要注意看，可能需要：
 <ul>
 <li>手动在移动端环境创建目录</li>
 <li>手动安装一些包，例如 bsdtar</li>
 </ul>
-<ol start="3">
-<li>安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。</li>
+</li>
+<li>安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ol>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 基础</h2>
+<h2> 基础</h2>
 <ol>
 <li><a href="https://zhuanlan.zhihu.com/p/495554731" target="_blank" rel="noopener noreferrer">Linux ls -al 得到的结果代表什么意思？</a></li>
 </ol>
@@ -1397,8 +1412,12 @@ npm ERR! This command does not support workspaces.</p>
       <pubDate>Tue, 24 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> ADB</h1>
 <p>ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手机的一些共性（垃圾的应用管理 / 备份 / 安装），同时我还是<a href="/gossip/author.html#%E6%88%91%E7%9A%84%E7%88%B1%E5%A5%BD" target="blank">重度电脑使用者</a> 和 <a href="/articles/mobile_setting.html#%E5%88%B7%E6%9C%BA" target="blank">root user</a>，因此 ADB 使用频率很高。</p>
-<p>ADB 的权限较高，但小于 root 权限。</p>
-<p><a href="/farraginous/recommend_packages.html#adb" target="blank">前往下载</a></p>
+<p>通过 ADB 获取到的权限较高，但低于 root 权限。</p>
+<h2> 下载</h2>
+<ul>
+<li><a href="https://developer.android.com/studio/command-line/adb" target="_blank" rel="noopener noreferrer">官网</a></li>
+<li><a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener noreferrer">从谷歌直接下载</a></li>
+</ul>
 <h2> 使用方法</h2>
 <ol>
 <li>下载并解压后，进入 ADB 目录，打开 cmd。
@@ -1464,7 +1483,15 @@ _ 在记事本输入以下代码并保存为 .bat 文件，管理员运行。<di
 </ul>
 </li>
 <li>关闭搜索推荐&amp;热门新闻：关闭 <em>设置-隐私和安全性-搜索权限-更多设置-显示搜索要点</em> 。（参考<a href="https://www.landiannews.com/archives/95045.html" target="_blank" rel="noopener noreferrer">来源</a></li>
-<li>升级专业版：使用<a href="https://github.com/zbezj/HEU_KMS_Activator" target="_blank" rel="noopener noreferrer">HEU_KMS_Activator</a>升级 win11 专业版并激活。</li>
+<li>升级专业版：使用<a href="https://github.com/zbezj/HEU_KMS_Activator" target="_blank" rel="noopener noreferrer">HEU_KMS_Activator</a>升级 win11 专业版并激活。
+<ul>
+<li>
+<blockquote>
+<p>若对开源有需求，也可使用 <a href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener noreferrer">Microsoft-Activation-Scripts</a>激活。</p>
+</blockquote>
+</li>
+</ul>
+</li>
 <li>开启 Hyper-V 功能 </li>
 <li>更改触摸板功能：三指左右划调节音量。我本人感觉挺方便。</li>
 <li>安装 Win11 Android 子系统（WSA） </li>
@@ -3884,7 +3911,9 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <h4> 问号</h4>
 <p>目前本人所学到的问号主要用于 <code>Result</code> 的处理。
 <code>do_something_that_might_fail()?</code> 等价于</p>
-<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 其他</h3>
+<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 并发</h3>
+<p>如果你对 <em>async/await</em> 模型没有明确概念，可以看看<a href="https://course.rs/advance/async/getting-started.html" target="_blank" rel="noopener noreferrer">这篇文章</a>入门。</p>
+<h3> 其他</h3>
 <p>可以显式调用 <a href="https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#%E9%80%9A%E8%BF%87-stdmemdrop-%E6%8F%90%E6%97%A9%E4%B8%A2%E5%BC%83%E5%80%BC" target="_blank" rel="noopener noreferrer"><code>std::mem::drop()</code></a> 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。</p>
 <h2> Cargo</h2>
 <p>rust 唯一官方指定包管理器：<code>cargo</code></p>
@@ -5850,10 +5879,9 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li>安装包仅 9 M。</li>
 </ul>
 <h3> MT 管理器</h3>
-<p>MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（<a href="https://www.coolapk.com/apk/bin.mt.plus" target="_blank" rel="noopener noreferrer">source</a>）此处主要推荐文件管理功能，爆杀手机自带的文件管理。可搭配 ROOT 食用。</p>
+<p>MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（双列排布是好文明）。搭配 ROOT 食用更佳。虽然其为闭源商业化软件，不过免费功能够用。</p>
 <ul>
 <li>简易教程：滑动进入多选；多选状态下滑动可以选中之间的所有项；多选状态下点击为选中点击项。</li>
-<li>此软件不开源，为商业化应用；不过免费功能已经够用了。</li>
 </ul>
 <p><a href="https://bbs.binmt.cc/forum-2-1.html" target="_blank" rel="noopener noreferrer">官网下载地址</a> | <a href="https://www.coolapk.com/apk/bin.mt.plus" target="_blank" rel="noopener noreferrer">酷安下载地址</a> | <a href="https://wwp.lanzout.com/i9frh06qke0h" target="_blank" rel="noopener noreferrer">私链</a> | 可在国内应用商店下载</p>
 <h3> Fake Location</h3>
@@ -5863,35 +5891,48 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <p>请不要从 Google Play 安装。其对中国地区不可用。</p>
 </div>
 <p><a href="https://github.com/Lerist/FakeLocation" target="_blank" rel="noopener noreferrer">官方项目地址</a> | <a href="https://wwp.lanzout.com/i4x8E03de5ab" target="_blank" rel="noopener noreferrer">私有下载地址</a></p>
-<h3> Picacg</h3>
-<p><s>年幼的目光.jpg</s> <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span></p>
-<p><a href="https://picacg2022.com/" target="_blank" rel="noopener noreferrer">官方地址?</a> | <a href="https://wwp.lanzout.com/iqB7803de12j" target="_blank" rel="noopener noreferrer">私有下载地址</a></p>
 <h3> <a href="https://vault.bitwarden.com/#/login" target="_blank" rel="noopener noreferrer">bitwarden</a></h3>
 <p>多端密码管理服务，支持生物识别和自动填充。数据存在美国（或欧盟），自动同步。如果你不信任密码托管方，请使用 <a href="#keepass-%E7%B3%BB%E5%88%97">KeePass 系列</a>。</p>
 <h3> Adobe Scan</h3>
 <p>扫描文档并转为 pdf。免费版就够用了。</p>
 <p>与<a href="https://w103.camscanner.com/" target="_blank" rel="noopener noreferrer">扫描全能王</a>相比有如下优点：小（安装后，扫描全能王 591MB，Adobe Scan 114MB）；无水印。</p>
 <p><a href="https://play.google.com/store/apps/details?id=com.adobe.scan.android&amp;hl=zh&amp;gl=US" target="_blank" rel="noopener noreferrer">谷歌商店下载</a></p>
-<h3> <a href="https://www.coolapk.com/apk/com.omarea.vtools" target="_blank" rel="noopener noreferrer">Scene5</a></h3>
-<p>强大的数据监视/性能修改应用。建议配合 ADB &amp; root 食用。但是呢，该应用是商业化的闭源软件，不充值是无法使用 root 后的功能的。我现在只用充耗电统计功能了，其他的还是算了。</p>
 <h3> <a href="https://github.com/raindropio" target="_blank" rel="noopener noreferrer">raindrop.io</a></h3>
 <p>第三方书签管理工具。云端存储，多设备访问，免费使用，支持书签分享。</p>
 <blockquote>
 <p>我曾经用过 <a href="https://github.com/xbrowsersync/app" target="_blank" rel="noopener noreferrer">xbrowsersync</a> 书签同步器，但是很久没维护了，而且由于 manifest v2 不再受支持的原因，每隔一段时间就会被浏览器杀掉扩展。因此找到了这个替代品。</p>
 </blockquote>
 <p>电脑端请直接使用<a href="https://app.raindrop.io/" target="_blank" rel="noopener noreferrer">网页版</a>，手机端可以选择 google play 下载 apk。</p>
-<h3> <a href="https://wwp.lanzouy.com/iH13D13tnaif" target="_blank" rel="noopener noreferrer">歌词适配</a></h3>
-<p>能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。<s>说不定哪天就寄了</s></p>
 <h3> 多设备互传</h3>
 <p><a href="https://github.com/localsend/localsend" target="_blank" rel="noopener noreferrer">localsend</a> 和 <a href="https://github.com/LANDrop/LANDrop" target="_blank" rel="noopener noreferrer">LANDrop</a> 都是优秀的开源局域网多设备互传软件，体积都不大。</p>
 <p>我都用过了，更推荐 localsend，因为维护比较频繁。（LANDrop 最后一次 commit 还在 2021 年。。）</p>
+<blockquote>
+<p>如果 localsend 在传输结束时报错，请试试打开 <em>所有文件访问权限</em></p>
+</blockquote>
 <h3> <a href="https://github.com/gedoor/legado" target="_blank" rel="noopener noreferrer">开源阅读</a></h3>
-<p>开源的阅读器，支持导入书源，支持 txt <strong>与 epub 格式</strong>。</p>
-<p><a href="https://legado.aoaostar.com/" target="_blank" rel="noopener noreferrer">书源推荐</a>，也可去 Telegram 官方群寻找其他书源。</p>
+<p>开源的阅读器，支持：</p>
+<ul>
+<li>导入书源
+<ul>
+<li>这里是<a href="https://legado.aoaostar.com/" target="_blank" rel="noopener noreferrer">书源推荐</a>，也可去 Telegram 官方群寻找其他书源。</li>
+</ul>
+</li>
+<li>txt, <strong>pdf 与 epub 格式</strong>的书籍
+<ul>
+<li>pdf 格式有一些小 bug，需要在阅读界面 <em>右上角 -&gt; 图片样式</em> 选择 <code>DEFAULT</code>，然后翻页动画设为 <code>滚动</code>。</li>
+</ul>
+</li>
+<li>阅读时长统计</li>
+<li>WebDAV 同步阅读进度
+<ul>
+<li>将平板和手机的设备名称设为同一个，可以在两个设备间自动同步进度</li>
+</ul>
+</li>
+</ul>
 <h2> Windows</h2>
 <h3> <a href="https://scoop.sh/" target="_blank" rel="noopener noreferrer">scoop</a></h3>
 <div style="text-align:right">
-<p>scoop 比起 pacman 和 AUR 还差得远呢。。<span class="heimu" title="你知道的太多了">来自一个被重复装了依赖的可怜人的怨念</span></p>
+<p>——scoop 比起 pacman 和 AUR 还差得远呢。。<br><span class="heimu" title="你知道的太多了">来自一个被重复装了依赖的可怜人的怨念</span></p>
 </div>
 <p>说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。</p>
 <div class="hint-container warning">
@@ -5901,7 +5942,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <p>基本指令 | 查看<a href="https://www.thisfaner.com/p/scoop/" target="_blank" rel="noopener noreferrer">进阶指南</a></p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其他指令：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> <a href="https://parsec.app/downloads" target="_blank" rel="noopener noreferrer">Parsec</a></h3>
-<p><strong>极低延迟</strong>的远程控制软件。P2P 连接。支持手机控制电脑。</p>
+<p><strong>极低延迟</strong>的远程控制软件，为游戏而生。P2P 连接。支持手机控制电脑。</p>
 <p>与向日葵相比：</p>
 <ul>
 <li>优点：
@@ -5915,27 +5956,12 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li>全英文</li>
 <li>需要自己解决驱动兼容性问题（如果有的话）</li>
 <li>手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠</li>
+<li>早期版本可能会有音频撕裂问题</li>
 </ul>
 </li>
 </ul>
 <h3> <a href="https://github.com/Planshit/Tai" target="_blank" rel="noopener noreferrer">Tai</a></h3>
 <p>记录软件使用时长 <s>推 gal 神器</s>，掌控自己的时间消耗</p>
-<h3> <a href="https://wwa.lanzoui.com/" target="_blank" rel="noopener noreferrer">蓝奏云</a></h3>
-<p>比较推荐的云盘。虽然是个网页，放进 <em>应用汇总</em> 里面不太合适。<em>（本页私链下载文件大多保存于蓝奏云）</em></p>
-<p>优点：</p>
-<ul>
-<li>无限存储空间</li>
-<li>无限制的下载速度</li>
-<li>优秀的文件分享机制</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>单文件限制大小 100M（且不能通过分包压缩改后缀规避限制；<s><em>猜测是会读取分包的连接信息并判断</em></s>）</li>
-<li>文件目录管理功能垃圾</li>
-</ul>
-<blockquote>
-<p>若并非主要面向国内下载，也可以使用 Google drive &amp; onedrive</p>
-</blockquote>
 <h3> <a href="https://spacesniffer.en.softonic.com/" target="_blank" rel="noopener noreferrer">SpaceSniffer</a></h3>
 <p>可视化磁盘空间占用，方便清理</p>
 <h3> <a href="https://www.voidtools.com/zh-cn/downloads/" target="_blank" rel="noopener noreferrer">Everything</a></h3>
@@ -5949,13 +5975,9 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li><em>设置 - 解压</em>，打开 <em>一次性解压 TGZ...</em> 下的 <em>即使是大体积的 TGZ...</em> 选项</li>
 <li>如果你使用 <a href="/articles/ramdisk.html" target="blank">RAM Disk</a>，可以在 <em>设置 - 高级</em> 中，将临时文件夹设为 RAM Disk 路径</li>
 </ol>
-<!-- ### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
-视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
-
-[关于 Potplayer 设置](../articles/potplayer_setting.md) -->
 <h3> <a href="https://mpv.io/" target="_blank" rel="noopener noreferrer">mpv</a></h3>
-<p>轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是<a href="https://github.com/lxl66566/my-key-data/blob/main/config/mpv/input.conf" target="_blank" rel="noopener noreferrer">我的 mpv 配置文件</a>：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> <a href="https://justgetflux.com/" target="_blank" rel="noopener noreferrer">f.lux</a></h3>
+<p>轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是<a href="https://github.com/lxl66566/config/blob/archlinux/.config/mpv/input.conf" target="_blank" rel="noopener noreferrer">我的 mpv 配置文件</a>：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> <a href="https://justgetflux.com/" target="_blank" rel="noopener noreferrer">f.lux</a></h3>
 <p>护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了"><a href="https://wwp.lanzout.com/iqmkq06s0wtg" target="_blank" rel="noopener noreferrer">私链</a></span></p>
 <ul>
 <li>可以在全屏游戏时护眼</li>
@@ -5965,24 +5987,27 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <p>RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。</p>
 <p>详情请见 <a href="/articles/ramdisk.html" target="blank">文章 - RAM Disk 横评</a>。</p>
 <h3> <a href="http://www.tbtool.cn/" target="_blank" rel="noopener noreferrer">图吧工具箱</a></h3>
-<p>集成了电脑及其外接设备测试所需的多数软件集硬件测试，跑分，信息查询为一体。不过也比较大。</p>
+<p>集成了电脑及其外接设备测试所需的多数软件，集硬件测试，跑分，信息查询为一体。不过体积比较大。</p>
 <h3> ADB</h3>
 <p>电脑调试 Android 手机的必备工具，包括查询信息，备份，安装等常用功能。</p>
 <ul>
-<li><a href="/articles/adb.html" target="blank">简易教程</a></li>
+<li><a href="/articles/adb.html" target="blank">简易教程与下载</a></li>
 </ul>
-<p><a href="https://developer.android.com/studio/command-line/adb" target="_blank" rel="noopener noreferrer">官网</a> | <a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener noreferrer">从谷歌直接下载</a></p>
 <h3> <a href="https://github.com/BluePointLilac/ContextMenuManager" target="_blank" rel="noopener noreferrer">ContextMenuManager</a></h3>
 <p>开源的右键菜单管理器。高度自定义化。</p>
 <h3> <a href="https://apps.ankiweb.net/" target="_blank" rel="noopener noreferrer">Anki</a></h3>
 <p>多平台开源记忆软件。拥有多端同步，遵循记忆曲线，高自由度制卡等特色。</p>
 <p>附有<a href="https://github.com/lxl66566/wordsreciter/issues/1" target="_blank" rel="noopener noreferrer">使用技巧</a>与<a href="https://ankiweb.net/shared/info/772249450" target="_blank" rel="noopener noreferrer">我的卡组</a>。</p>
 <h3> <a href="https://sandboxie-plus.com/downloads/" target="_blank" rel="noopener noreferrer">sandboxie</a></h3>
-<p>开源沙盒，隔离运行程序，有时候用得到。</p>
+<p>开源沙盒，隔离运行程序，有时候用得到。请务必使用沙盒运行未知来源的程序。</p>
 <h3> <a href="https://winaero.com/" target="_blank" rel="noopener noreferrer">Winaero Tweaker</a></h3>
-<p>挺不错的 windows 小工具，集成一些高级功能（特别对我这种被迫设置 win11 的人有点帮助）</p>
+<p>windows 设置小工具，集成了一些高级功能（特别对我这种被迫设置 win11 的人有点帮助）</p>
 <h3> <a href="https://flameshot.org/" target="_blank" rel="noopener noreferrer">flameshot</a></h3>
-<p>基于 Qt 的强大的截屏软件，开源，跨平台，轻量级。（有一定延迟）</p>
+<p>基于 Qt 的开源跨平台截屏软件，支持截屏编辑，图床在线分享。</p>
+<ul>
+<li>windows 下有一定延迟</li>
+<li>在 wayland 分数缩放下工作较差，请使用 <a href="https://apps.kde.org/zh-cn/spectacle/" target="_blank" rel="noopener noreferrer">kde spectacle</a></li>
+</ul>
 <p><em>建议在设置中开启开机自启。</em></p>
 <h3> <a href="https://github.com/sabrogden/Ditto" target="_blank" rel="noopener noreferrer">Ditto</a></h3>
 <p>是一个开源轻量级的剪贴板管理工具。使用 C 语言编写，具有低内存占用和高性能，同时拥有一些其他特色：</p>
@@ -5990,14 +6015,14 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li>支持暗黑模式</li>
 <li>支持对复制粘贴行为的脚本处理，例如我使用以下脚本去除 bilibili 视频分享链接的跟踪器与其他无用内容：<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>超星学习通自动转为下载链接：<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>复制网址保留汉字时自动补全：<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h3> <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener noreferrer">yt-dlp</a></h3>
+<li>复制网址保留汉字时自动补全<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">：<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></a></li><a class="footnote-anchor" id="footnote-ref1">
+</a></ul><a class="footnote-anchor" id="footnote-ref1">
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener noreferrer">yt-dlp</a></h3>
 <p>视频下载<strong>命令行</strong>工具。主要用于 bilibili, youtube 视频的下载。若不想用命令行请移步 <a href="#cococut">CoCoCut</a>。</p>
 <p>简易教程（Windows）：</p>
 <ol>
-<li>去 release 下载 <code>yt-dlp.exe</code> 并扔到 <code>C:\Windows\System32</code> 下<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。</a></li><a class="footnote-anchor" id="footnote-ref1">
-</a><li><a class="footnote-anchor" id="footnote-ref1">默认下载为音视频分离。若需音视频合成，还需下载大名鼎鼎的 ffmpeg：使用 </a><a href="#scoop">scoop</a> 一行完事：<code>scoop install ffmpeg</code></li>
+<li>去 release 下载 <code>yt-dlp.exe</code> 并扔到 <code>C:\Windows\System32</code> 下<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">。</a></li><a class="footnote-anchor" id="footnote-ref2">
+</a><li><a class="footnote-anchor" id="footnote-ref2">默认下载为音视频分离。若需音视频合成，还需下载大名鼎鼎的 ffmpeg：使用 </a><a href="#scoop">scoop</a> 一行完事：<code>scoop install ffmpeg</code></li>
 <li><code>yt-dlp &lt;url&gt;</code> 快速下载视频。</li>
 <li>下载指定清晰度或仅音频：<code>yt-dlp -F &lt;url&gt;</code> 选择清晰度或音频资源；将选项 ID 填入 <code>yt-dlp -f &lt;ID&gt; &lt;url&gt;</code> 进行下载。</li>
 </ol>
@@ -6047,8 +6072,8 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <p>请确保已经安装插件<a href="#tampermonkey">Tampermonkey</a>。</p>
 </div>
 <h3> <a href="https://greasyfork.org/scripts/1682" target="_blank" rel="noopener noreferrer">Google Hit Hider</a></h3>
-<p>过滤 Google &amp; 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">。</a></p><a class="footnote-anchor" id="footnote-ref2">
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> <a href="https://greasyfork.org/zh-CN/scripts/408516-%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%92%AD" target="_blank" rel="noopener noreferrer">哔哩哔哩自动连播</a></h3>
+<p>过滤 Google &amp; 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">。</a></p><a class="footnote-anchor" id="footnote-ref3">
+</a><h3><a class="footnote-anchor" id="footnote-ref3"></a> <a href="https://greasyfork.org/zh-CN/scripts/408516-%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%92%AD" target="_blank" rel="noopener noreferrer">哔哩哔哩自动连播</a></h3>
 <p>跳过 bilibili 视频末尾的充电鸣谢 <em>（对 B 站重度使用者还是很推荐的）</em></p>
 <h3> <a href="https://greasyfork.org/zh-CN/scripts/451150-%E6%96%B0-%E4%B8%89%E7%9B%B8%E4%B9%8B%E5%8A%9B%E6%8C%87%E7%A4%BA%E5%99%A8" target="_blank" rel="noopener noreferrer">三相之力指示器</a></h3>
 <p>三相之力！B 站评论区自动标注三相玩家。</p>
@@ -6073,8 +6098,8 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <h3> <a href="https://github.com/NekoX-Dev/NekoX" target="_blank" rel="noopener noreferrer">NekoX</a></h3>
 <p>Telegram 第三方开源客户端，自带很不稳定的低速公共代理，但至少能用；<s>在 tg 第三方内名声挺差</s>。更新滞后较大，若有科学上网方法还是建议使用官方端。</p>
 <h3> <a href="https://github.com/JunkFood02/Seal" target="_blank" rel="noopener noreferrer">Seal</a></h3>
-<p>开源的视频下载 app，Android 端的选择。但是它的内核就是 <a href="#yt-dlp">yt-dlp</a>，为什么不用电脑的 yt-dlp 呢？<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup></p><a class="footnote-anchor" id="footnote-ref3">
-</a><h3><a class="footnote-anchor" id="footnote-ref3"></a> <a href="https://zh.hinative.com/" target="_blank" rel="noopener noreferrer">HiNative</a></h3>
+<p>开源的视频下载 app，Android 端的选择。但是它的内核就是 <a href="#yt-dlp">yt-dlp</a>，为什么不用电脑的 yt-dlp 呢？<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup></p><a class="footnote-anchor" id="footnote-ref4">
+</a><h3><a class="footnote-anchor" id="footnote-ref4"></a> <a href="https://zh.hinative.com/" target="_blank" rel="noopener noreferrer">HiNative</a></h3>
 <p>一个可以直接问外国人<s>语言</s>问题的 app &amp; 网站。</p>
 <h3> <a href="https://github.com/timvisee/ffsend" target="_blank" rel="noopener noreferrer">ffsend</a></h3>
 <p>（命令行）快速上传分享你的文件 / 文件夹</p>
@@ -6118,6 +6143,26 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <blockquote>
 <p>比较鸡肋，还吃我资源，因此弃用。</p>
 </blockquote>
+<h3> <a href="https://www.coolapk.com/apk/com.omarea.vtools" target="_blank" rel="noopener noreferrer">Scene5</a></h3>
+<p>强大的数据监视/性能修改应用。建议配合 ADB &amp; root 食用。但是呢，该应用是商业化的收费闭源软件，不充值是无法使用 root 后的功能的。目前其<strong>全功能</strong>均可使用其他软件替代<sup class="footnote-ref"><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></sup><a class="footnote-anchor" id="footnote-ref5">。因此弃用。</a></p><a class="footnote-anchor" id="footnote-ref5">
+<ul>
+<li>如若确实需要，可以找它的最后一个免费版本使用。</li>
+</ul>
+</a><h3><a class="footnote-anchor" id="footnote-ref5"></a> Picacg</h3>
+<details class="hint-container details"><summary>详情</summary>
+<p><s>年幼的目光.jpg</s> <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span></p>
+<p><a href="https://picacg2022.com/" target="_blank" rel="noopener noreferrer">官方地址?</a> | <a href="https://wwp.lanzout.com/iqB7803de12j" target="_blank" rel="noopener noreferrer">私有下载地址</a></p>
+</details>
+<p>现在看本子都用 nhentai.net 了。平时也就看看 tg 推荐，没了。</p>
+<h3> <s><a href="https://wwp.lanzouy.com/iH13D13tnaif" target="_blank" rel="noopener noreferrer">歌词适配</a></s></h3>
+<p>能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。<s>说不定哪天就寄了</s></p>
+<p>ps. 已经寄了。</p>
+<h3> <a href="https://potplayer.daum.net/?lang=zh_CN" target="_blank" rel="noopener noreferrer">Potplayer</a></h3>
+<p>视频播放器。无广告，支持格式丰富，功能多样，自定义程度较高。</p>
+<p>然而我现在选择 <a href="#mpv">mpv</a> 了。</p>
+<ul>
+<li><a href="/articles/potplayer_setting.html" target="blank">关于 Potplayer 设置</a></li>
+</ul>
 <h2> external</h2>
 <ol>
 <li><a href="https://billchen.bid/jekyll/update/2020/06/10/free-software-vs-proprietary-software/" target="_blank" rel="noopener noreferrer">自由软件与专有软件之战——写在 MatLab 不再授权给实体请单上的中国高校之后</a></li>
@@ -6125,11 +6170,15 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>可能需要提权。一个普通人更熟悉的方法是将 <code>yt-dlp.exe</code> 存放目录添加到环境变量（但是更麻烦）。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+<li id="footnote1" class="footnote-item"><p>浏览器复制汉字时会自动转义为 <code>%..</code> 格式，而不复制全（例如不复制第一个 <code>h</code>，只从 <code>ttp</code> 开始复制）可以保护这些汉字不被转义。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote2" class="footnote-item"><p>也可以用用<a href="https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt" target="_blank" rel="noopener noreferrer">我的</a>；但是很抱歉，目前仓库是 private <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+<li id="footnote2" class="footnote-item"><p>可能需要提权。一个普通人更熟悉的方法是将 <code>yt-dlp.exe</code> 存放目录添加到环境变量（但是更麻烦）。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote3" class="footnote-item"><p>毕竟我是重度电脑使用者 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+<li id="footnote3" class="footnote-item"><p>也可以用用<a href="https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt" target="_blank" rel="noopener noreferrer">我的</a>；但是很抱歉，目前仓库是 private <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote4" class="footnote-item"><p>毕竟我是重度电脑使用者 <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote5" class="footnote-item"><p><a href="https://t.me/withabsolutex/1260" target="_blank" rel="noopener noreferrer">log</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -6188,7 +6237,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <td style="text-align:center">不限</td>
 <td style="text-align:center">不限</td>
 <td style="text-align:center">100MB</td>
-<td style="text-align:center">中国境内的较好选择；有审查，力度小；限制文件后缀</td>
+<td style="text-align:center">中国境内的较好选择；有审查，力度小；限制文件后缀；无法通过分包压缩绕过大小限制</td>
 </tr>
 <tr>
 <td style="text-align:center"><a href="https://catbox.moe/" target="_blank" rel="noopener noreferrer">Catbox</a></td>
@@ -10597,6 +10646,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center">操作系统道论</td>
+<td style="text-align:center">2023.09.22-<br>在读</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">世界重启</td>
 <td style="text-align:center">2023.09.0?-<br>在读</td>
 <td style="text-align:center"></td>
@@ -10616,7 +10671,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">sicp</td>
-<td style="text-align:center">2023.?-<br>在读</td>
+<td style="text-align:center">2023.0?.??-<br>在读</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
@@ -11825,6 +11880,20 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center">兰斯4.2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">兰斯4.1</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">家喵二三事</td>
 <td style="text-align:center">2023.08.10</td>
 <td style="text-align:center">3</td>
@@ -11922,7 +11991,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center">近月少女的礼仪</td>
-<td style="text-align:center">-47min</td>
+<td style="text-align:center">-49min</td>
 </tr>
 <tr>
 <td style="text-align:center">アンレス テルミナリア</td>
@@ -13084,6 +13153,7 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <li><a href="/farraginous/learning/Probab.Math.Stat.html" target="blank">概率论与数理统计</a></li>
 <li><a href="/farraginous/learning/dsp.html" target="blank">数字系统设计（少量）</a></li>
 <li><a href="/farraginous/learning/CEC.html" target="blank">通信电子线路</a></li>
+<li><a href="/farraginous/learning/dsp2.html" target="blank">数字信号处理</a></li>
 </ol>
 <h2> 授课外</h2>
 <ol>
@@ -14013,9 +14083,6 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>信号与系统的差异度非常大，同一教材不同大学的教学顺序、公式变量与考试重点千差万别。</p>
 <p>我看的网课是浙大的胡浩基老师的<a href="https://www.bilibili.com/video/BV1g94y1Q76G" target="_blank" rel="noopener noreferrer">视频</a>，优点是讲的非常细致，不管什么点全部讲一遍 + 推导一遍，缺点大概是时长太长了（网课有总计 55h）。对于我校的课程考试来说，不是很合适。</p>
 <h2> 捷径与方法</h2>
-<blockquote>
-<p>?</p>
-</blockquote>
 <ul>
 <li>待定系数法，<a href="https://www.bilibili.com/video/BV1g94y1Q76G/?p=34&amp;vd_source=71a6ca6eaedad249d0549081f1edfdec&amp;t=9752" target="_blank" rel="noopener noreferrer">盖起来算其他</a>：盖一个待定分子，假设分母为 0，令另一个分子为原分子（拆分前），那个分数就是盖起来的分子</li>
 <li>-∞ 到 t 的积分可以看成卷积 u(t)</li>
@@ -14108,7 +14175,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 </blockquote>
 <h2> 离散傅里叶（非重点）</h2>
 <p>本质：离散 -&gt; 连续</p>
-<p>离散： <span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi mathvariant="script">F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>=</mo><mi>X</mi><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy="false">)</mo><mo>=</mo><mo>∑</mo><mi>X</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \mathscr{F}(x[n]) = X(e^{j\omega})=\sum X[n]e^{-j\omega n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathscr" style="margin-right:0.13634em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">])</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1247em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.6em;vertical-align:-0.55em;"></span><span class="mop op-symbol large-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">jωn</span></span></span></span></span></span></span></span></span></span></span></span></span>  是一个 2π 为周期的函数。</p>
+<p>离散： <span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi mathvariant="script">F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo>=</mo><mi>X</mi><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy="false">)</mo><mo>=</mo><mo>∑</mo><mi>X</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \mathscr{F}(x[n]) = X(e^{j\omega})=\sum X[n]e^{-j\omega n}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathscr" style="margin-right:0.13634em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">])</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1247em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.6em;vertical-align:-0.55em;"></span><span class="mop op-symbol large-op" style="position:relative;top:0em;">∑</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">jωn</span></span></span></span></span></span></span></span></span></span></span></span></span> 是一个 2π 为周期的函数。</p>
 <p><span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>X</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><msub><mo>∫</mo><mrow><mn>2</mn><mi>π</mi></mrow></msub><mi>X</mi><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy="false">)</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi><mi>n</mi></mrow></msup><mi>d</mi><mi>ω</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle X[n]=\frac1{2\pi}\int_{2\pi}X(e^{j\omega})e^{j\omega n}d\omega</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2719em;vertical-align:-0.9119em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.4608em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8747em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">jωn</span></span></span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span></span></span></span></span></p>
 <h3> <a href="https://www.bilibili.com/video/BV1g94y1Q76G/?p=33" target="_blank" rel="noopener noreferrer">基本变换</a></h3>
 <p><span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi mathvariant="script">F</mi><mo stretchy="false">[</mo><msup><mi>a</mi><mi>n</mi></msup><mi>u</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mi>a</mi><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi></mrow></msup></mrow></mfrac><mtext>&nbsp;&nbsp;&nbsp;&nbsp;</mtext><mo stretchy="false">(</mo><mi mathvariant="normal">∣</mi><mi>a</mi><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mn>1</mn><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \mathscr{F}[ a^nu[n] ]=\frac1{1-ae^{-j\omega}}\ \ \ \  (|a|\lt1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathscr" style="margin-right:0.13634em;">F</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mord mathnormal">u</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0908em;vertical-align:-0.7693em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7507em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace">&nbsp;</span><span class="mspace">&nbsp;</span><span class="mspace">&nbsp;</span><span class="mspace">&nbsp;</span><span class="mopen">(</span><span class="mord">∣</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span></span></p>
@@ -14175,7 +14242,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <li>极点都在左半平面，则系统稳定</li>
 <li>求 H(s)</li>
 <li><a href="https://www.bilibili.com/video/BV1g94y1Q76G/?p=52&amp;t=2028" target="_blank" rel="noopener noreferrer">画系统框图</a>（不考）：二阶微分框图：左边从上到下是 1/a2, -a1, -a0；一阶的是 1/a1, -a0；</li>
-<li>定理：系统s域函数 H(s)，若 <span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>0</mn></msub><mi>t</mi></mrow></msup><mo separator="true">,</mo><msub><mi>s</mi><mn>0</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle x(t)=e^{s_0t}, s_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.038em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8436em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>在收敛域内，则 y = H(s)x(t)</li>
+<li>定理：系统 s 域函数 H(s)，若 <span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>0</mn></msub><mi>t</mi></mrow></msup><mo separator="true">,</mo><msub><mi>s</mi><mn>0</mn></msub></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle x(t)=e^{s_0t}, s_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.038em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8436em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span>在收敛域内，则 y = H(s)x(t)</li>
 <li>zero-input response: x(t) = 0 while t &gt; 0; y(0), y'(0) 有值</li>
 <li>zero-state response: x(t) 有值；y(0) = y'(0) = 0
 <ul>
@@ -14201,11 +14268,15 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <li>线性</li>
 <li>移位性质：<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo>−</mo><msub><mi>n</mi><mn>0</mn></msub><mo stretchy="false">]</mo><mo>→</mo><mi>X</mi><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo><msup><mi>z</mi><mrow><mo>−</mo><msub><mi>n</mi><mn>0</mn></msub></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle x[n-n_0] \rightarrow X(z)z^{-n_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0713em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3173em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>，收敛域不变</li>
 </ul>
+<ul>
+<li>
 <blockquote>
 <p><a href="https://www.bilibili.com/video/BV1g94y1Q76G/?p=60&amp;t=3258" target="_blank" rel="noopener noreferrer">单边移位公式</a></p>
 </blockquote>
+</li>
+</ul>
 <ul>
-<li>z域微分性质：<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>n</mi><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo>→</mo><mo>−</mo><mi>z</mi><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle nx[n] \rightarrow -zX'(z)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0519em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)</span></span></span></span></span>，收敛域不变</li>
+<li>z 域微分性质：<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>n</mi><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo>→</mo><mo>−</mo><mi>z</mi><msup><mi>X</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle nx[n] \rightarrow -zX'(z)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0519em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mclose">)</span></span></span></span></span>，收敛域不变</li>
 <li>序列指数加权：<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msup><mi>a</mi><mi>n</mi></msup><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo>→</mo><mi>X</mi><mo stretchy="false">(</mo><mi>z</mi><mi mathvariant="normal">/</mi><mi>a</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle a^nx[n] \rightarrow X(z/a)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mord">/</span><span class="mord mathnormal">a</span><span class="mclose">)</span></span></span></span></span>，收敛域扩大 a 倍</li>
 <li>时域扩展：<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>x</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msub><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo>→</mo><mi>X</mi><mo stretchy="false">(</mo><msup><mi>z</mi><mi>k</mi></msup><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle x_{(k)}[n] \rightarrow X(z^k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1052em;vertical-align:-0.3552em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3552em;"><span></span></span></span></span></span></span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span>，收敛域 R^{1/k}</li>
 <li>卷积性质</li>
@@ -14221,7 +14292,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <h4> 收敛域性质</h4>
 <ul>
 <li>有限长序列，收敛域全平面</li>
-<li>右/左/双边序列，收敛域圆外/内/环</li>
+<li>右/左/双边序列，收敛域圆外/内/环，不包括 <code>0</code> &amp; <code>∞</code></li>
 <li>稳定序列：收敛域包含单位圆（充要）</li>
 <li>相当于 Laplace 变换 jw 轴向负半轴折成单位圆</li>
 </ul>
@@ -14229,7 +14300,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>使用移位性质。</p>
 <p>系统框图与 Laplace 框图大致相同。</p>
 <p>解差分方程：默认为因果信号，单位样值响应即冲激响应，此时 Y(z) = H(z) （X(z)=1）</p>
-<p>定理：系统z域函数 H(z)，若 <span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo>=</mo><msup><mi>a</mi><mi>n</mi></msup><mo separator="true">,</mo><mi>a</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle x[n]=a^n, a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9088em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span></span></span></span></span>在收敛域内，则 y = H(a)x(n)</p>
+<p>定理：系统 z 域函数 H(z)，若 <span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>x</mi><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo><mo>=</mo><msup><mi>a</mi><mi>n</mi></msup><mo separator="true">,</mo><mi>a</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle x[n]=a^n, a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mopen">[</span><span class="mord mathnormal">n</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.9088em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">a</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">a</span></span></span></span></span>在收敛域内，则 y = H(a)x(n)</p>
 ]]></content:encoded>
     </item>
     <item>
