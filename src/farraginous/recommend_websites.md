@@ -41,7 +41,7 @@ tag:
 <!-- prettier-ignore -->
 |名称|空间|限速|时间|单文件大小|备注|
 | :-: | :-: | :-: | :-: | :-: | :-: |
-|[蓝奏云](https://www.lanzou.com/)|不限|不限|不限|100MB|中国境内的较好选择；有审查，力度小；限制文件后缀|
+|[蓝奏云](https://www.lanzou.com/)|不限|不限|不限|100MB|中国境内的较好选择；有审查，力度小；限制文件后缀；无法通过分包压缩绕过大小限制|
 |[Catbox](https://catbox.moe/)<Badge type="danger" text="不可用" />|未知|未知|不限|200MB|特殊限制|
 |[Litterbox](https://litterbox.catbox.moe/)|不限|未知|3days|1GB|特殊限制|
 |[GoFile](https://gofile.io/welcome)|不限|不限|[10days](https://gofile.io/faq)|不限|-|

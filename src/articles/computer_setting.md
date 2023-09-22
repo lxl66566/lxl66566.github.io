@@ -43,6 +43,7 @@ tag:
      [^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 5. 关闭搜索推荐&热门新闻：关闭 _设置-隐私和安全性-搜索权限-更多设置-显示搜索要点_ 。（参考[来源](https://www.landiannews.com/archives/95045.html)
 6. 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级 win11 专业版并激活。
+   - > 若对开源有需求，也可使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)激活。
 7. 开启 Hyper-V 功能 <Badge type="tip" text="前置条件：6." />：由于在 _设置-应用-可选功能-更多 Windows 功能_ 中找不到 Hyper-V 选项，因此采用网上教程：文本文档输入以下代码：
    ```batch
    pushd "%~dp0"

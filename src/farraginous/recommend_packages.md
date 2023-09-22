@@ -56,10 +56,9 @@ Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 
 ### MT 管理器
 
-MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（[source](https://www.coolapk.com/apk/bin.mt.plus)）此处主要推荐文件管理功能，爆杀手机自带的文件管理。可搭配 ROOT 食用。
+MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（双列排布是好文明）。搭配 ROOT 食用更佳。虽然其为闭源商业化软件，不过免费功能够用。
 
 - 简易教程：滑动进入多选；多选状态下滑动可以选中之间的所有项；多选状态下点击为选中点击项。
-- 此软件不开源，为商业化应用；不过免费功能已经够用了。
 
 [官网下载地址](https://bbs.binmt.cc/forum-2-1.html) | [酷安下载地址](https://www.coolapk.com/apk/bin.mt.plus) | [私链](https://wwp.lanzout.com/i9frh06qke0h) | 可在国内应用商店下载
 
@@ -70,12 +69,6 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 请不要从 Google Play 安装。其对中国地区不可用。
 :::
 [官方项目地址](https://github.com/Lerist/FakeLocation) | [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
-
-### Picacg
-
-~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
-
-[官方地址?](https://picacg2022.com/) | [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
 
 ### [bitwarden](https://vault.bitwarden.com/#/login)
 
@@ -89,10 +82,6 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 
 [谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
 
-### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
-
-强大的数据监视/性能修改应用。建议配合 ADB & root 食用。但是呢，该应用是商业化的闭源软件，不充值是无法使用 root 后的功能的。我现在只用充耗电统计功能了，其他的还是算了。
-
 ### [raindrop.io](https://github.com/raindropio)
 
 第三方书签管理工具。云端存储，多设备访问，免费使用，支持书签分享。
@@ -101,28 +90,32 @@ MT 管理器是一款强大的文件管理工具和 APK 逆向修改神器。（
 
 电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
 
-### [歌词适配](https://wwp.lanzouy.com/iH13D13tnaif)
-
-能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。~~说不定哪天就寄了~~
-
 ### 多设备互传
 
 [localsend](https://github.com/localsend/localsend) 和 [LANDrop](https://github.com/LANDrop/LANDrop) 都是优秀的开源局域网多设备互传软件，体积都不大。
 
 我都用过了，更推荐 localsend，因为维护比较频繁。（LANDrop 最后一次 commit 还在 2021 年。。）
 
+> 如果 localsend 在传输结束时报错，请试试打开 _所有文件访问权限_
+
 ### [开源阅读](https://github.com/gedoor/legado)
 
-开源的阅读器，支持导入书源，支持 txt **与 epub 格式**。
+开源的阅读器，支持：
 
-[书源推荐](https://legado.aoaostar.com/)，也可去 Telegram 官方群寻找其他书源。
+- 导入书源
+  - 这里是[书源推荐](https://legado.aoaostar.com/)，也可去 Telegram 官方群寻找其他书源。
+- txt, **pdf 与 epub 格式**的书籍
+  - pdf 格式有一些小 bug，需要在阅读界面 _右上角 -> 图片样式_ 选择 `DEFAULT`，然后翻页动画设为 `滚动`。
+- 阅读时长统计
+- WebDAV 同步阅读进度
+  - 将平板和手机的设备名称设为同一个，可以在两个设备间自动同步进度
 
 ## Windows
 
 ### [scoop](https://scoop.sh/)
 
 ::: right
-scoop 比起 pacman 和 AUR 还差得远呢。。<span class="heimu" title="你知道的太多了">来自一个被重复装了依赖的可怜人的怨念</span>
+——scoop 比起 pacman 和 AUR 还差得远呢。。<br/><span class="heimu" title="你知道的太多了">来自一个被重复装了依赖的可怜人的怨念</span>
 :::
 
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
@@ -146,7 +139,7 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 ### [Parsec](https://parsec.app/downloads)
 
-**极低延迟**的远程控制软件。P2P 连接。支持手机控制电脑。
+**极低延迟**的远程控制软件，为游戏而生。P2P 连接。支持手机控制电脑。
 
 与向日葵相比：
 
@@ -157,27 +150,11 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
   - 全英文
   - 需要自己解决驱动兼容性问题（如果有的话）
   - 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠
+  - 早期版本可能会有音频撕裂问题
 
 ### [Tai](https://github.com/Planshit/Tai)
 
 记录软件使用时长 ~~推 gal 神器~~，掌控自己的时间消耗
-
-### [蓝奏云](https://wwa.lanzoui.com/)
-
-比较推荐的云盘。虽然是个网页，放进 _应用汇总_ 里面不太合适。_（本页私链下载文件大多保存于蓝奏云）_
-
-优点：
-
-- 无限存储空间
-- 无限制的下载速度
-- 优秀的文件分享机制
-
-缺点：
-
-- 单文件限制大小 100M（且不能通过分包压缩改后缀规避限制；~~_猜测是会读取分包的连接信息并判断_~~）
-- 文件目录管理功能垃圾
-
-> 若并非主要面向国内下载，也可以使用 Google drive & onedrive
 
 ### [SpaceSniffer](https://spacesniffer.en.softonic.com/)
 
@@ -199,24 +176,25 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 1. _设置 - 解压_，打开 _一次性解压 TGZ..._ 下的 _即使是大体积的 TGZ..._ 选项
 2. 如果你使用 [RAM Disk](../articles/ramdisk.md)，可以在 _设置 - 高级_ 中，将临时文件夹设为 RAM Disk 路径
-<!-- ### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
-视频播放器。轻量无广告，功能多，支持格式丰富，支持任意倍速，功能多样，自定义程度高。
-
-[关于 Potplayer 设置](../articles/potplayer_setting.md) -->
 
 ### [mpv](https://mpv.io/)
 
-轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是[我的 mpv 配置文件](https://github.com/lxl66566/my-key-data/blob/main/config/mpv/input.conf)：
+轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是[我的 mpv 配置文件](https://github.com/lxl66566/config/blob/archlinux/.config/mpv/input.conf)：
 
 ```
-# C:\Users\<user name>\scoop\persist\mpv\portable_config\input.conf
+# C:\Users\<user name>\scoop\persist\mpv\portable_config
+# ~/.config/mpv
+
 d add speed .1
 a add speed -.1
 s set speed 1.0
 WHEEL_UP seek -10
 WHEEL_DOWN seek 10
-UP add volume 1
-DOWN add volume -1
+UP add volume 2
+DOWN add volume -2
+z seek -7
+x seek 7
+Ctrl+w quit
 e screenshot
 ```
 
@@ -235,15 +213,13 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 ### [图吧工具箱](http://www.tbtool.cn/)
 
-集成了电脑及其外接设备测试所需的多数软件集硬件测试，跑分，信息查询为一体。不过也比较大。
+集成了电脑及其外接设备测试所需的多数软件，集硬件测试，跑分，信息查询为一体。不过体积比较大。
 
 ### ADB
 
 电脑调试 Android 手机的必备工具，包括查询信息，备份，安装等常用功能。
 
-- [简易教程](../articles/adb.md)
-
-[官网](https://developer.android.com/studio/command-line/adb) | [从谷歌直接下载](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+- [简易教程与下载](../articles/adb.md)
 
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 
@@ -257,15 +233,18 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 ### [sandboxie](https://sandboxie-plus.com/downloads/)
 
-开源沙盒，隔离运行程序，有时候用得到。
+开源沙盒，隔离运行程序，有时候用得到。请务必使用沙盒运行未知来源的程序。
 
 ### [Winaero Tweaker](https://winaero.com/)
 
-挺不错的 windows 小工具，集成一些高级功能（特别对我这种被迫设置 win11 的人有点帮助）
+windows 设置小工具，集成了一些高级功能（特别对我这种被迫设置 win11 的人有点帮助）
 
 ### [flameshot](https://flameshot.org/)
 
-基于 Qt 的强大的截屏软件，开源，跨平台，轻量级。（有一定延迟）
+基于 Qt 的开源跨平台截屏软件，支持截屏编辑，图床在线分享。
+
+- windows 下有一定延迟
+- 在 wayland 分数缩放下工作较差，请使用 [kde spectacle](https://apps.kde.org/zh-cn/spectacle/)
 
 _建议在设置中开启开机自启。_
 
@@ -286,11 +265,13 @@ _建议在设置中开启开机自启。_
   clip.AsciiTextReplaceRegex("^https://mooc.s.ecust.edu.cn/coursedata.*objectId=(.*)&?.*","http://cs.e.ecust.edu.cn/download/$1");
   return false
   ```
-- 复制网址保留汉字时自动补全：
+- 复制网址保留汉字时自动补全[^5]：
   ```
   clip.AsciiTextReplaceRegex("^t?(tps?://.*)","ht$1");
   return false
   ```
+
+[^5]: 浏览器复制汉字时会自动转义为 `%..` 格式，而不复制全（例如不复制第一个 `h`，只从 `ttp` 开始复制）可以保护这些汉字不被转义。
 
 ### [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
@@ -479,6 +460,37 @@ use [xdm](#xdm) instead.
 快速启用禁用扩展。
 
 > 比较鸡肋，还吃我资源，因此弃用。
+
+### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
+
+强大的数据监视/性能修改应用。建议配合 ADB & root 食用。但是呢，该应用是商业化的收费闭源软件，不充值是无法使用 root 后的功能的。目前其**全功能**均可使用其他软件替代[^4]。因此弃用。
+[^4]: [log](https://t.me/withabsolutex/1260)
+
+- 如若确实需要，可以找它的最后一个免费版本使用。
+
+### Picacg
+
+::: details
+~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
+
+[官方地址?](https://picacg2022.com/) | [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
+:::
+
+现在看本子都用 nhentai.net 了。平时也就看看 tg 推荐，没了。
+
+### ~~[歌词适配](https://wwp.lanzouy.com/iH13D13tnaif)~~
+
+能够直接下载歌曲 / 下载网易云歌单。没有官网，主要靠相互分享传播。~~说不定哪天就寄了~~
+
+ps. 已经寄了。
+
+### [Potplayer](https://potplayer.daum.net/?lang=zh_CN)
+
+视频播放器。无广告，支持格式丰富，功能多样，自定义程度较高。
+
+然而我现在选择 [mpv](#mpv) 了。
+
+- [关于 Potplayer 设置](../articles/potplayer_setting.md)
 
 ## external
 

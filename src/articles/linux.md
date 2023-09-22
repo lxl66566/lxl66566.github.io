@@ -47,17 +47,14 @@ umount /mnt/windows
 
 1. termux 本身的 pkg 需要配置好镜像源（`termux-change-repo`）。
 2. 安装时如果有报错要注意看，可能需要：
-
-- 手动在移动端环境创建目录
-- 手动安装一些包，例如 bsdtar
-
+   - 手动在移动端环境创建目录
+   - 手动安装一些包，例如 bsdtar
 3. 安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。
-
-```
-Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
-Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
-Server = http://mirrors.stuhome.net/archlinuxarm/$arch/$repo
-```
+   ```
+   Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
+   Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
+   Server = http://mirrors.stuhome.net/archlinuxarm/$arch/$repo
+   ```
 
 ## 基础
 
