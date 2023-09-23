@@ -86,7 +86,7 @@ tag:
   - [ ] 弹幕区域取消，发送弹幕放在视频下方
   - [x] f 全屏
   - [x] 屏蔽无用组件
-- [ ] 类 markdown 方言
+- [ ] 类 markdown 方言, nmd (negative markdown)
   - [ ] 换行问题
   - [ ] 样式统一
   - [ ] formatter

@@ -39,7 +39,8 @@ tag:
 <!-- prettier-ignore -->
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :-: | :-: | :-: | :-: | :-: |
-|osu|81|<text style="color:red;">GS02声卡 -32~-41~-44ms</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p>将星X15内置声卡: -85ms(-83~-100)</text></details>|30|0|
+|osu|81|<text style="color:red;">将星X15内置声卡: -85ms</text>|30|0|
+|osu!lazer|-|<text style="color:red;">-</text>|25|0|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">75</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
@@ -50,6 +51,8 @@ tag:
 |phigros(1.6.5)|<0.05|+105ms|-|1|
 |phigros(1.4.1)|<0.04|+120ms|-|1|
 |プロセカ|<0.01|<text style="color:red;">-2</text>|10.7|2|
+
+<!-- Predator G3-573: -63ms(-55~-70) 鞋盒机: -13ms  GS02声卡 -41ms -->
 
 _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<text style="color:red;">late 过多，向负方向调整，early 过多，向正方向调整；</text> <text style="color:blue;">late 过多，向正方向调整，early 过多，向负方向调整。</text>）_
 
@@ -113,6 +116,10 @@ _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<
 
 给新人： [OSU 萌娘百科](https://mzh.moegirl.org.cn/Osu!) | [osu!mania 4k](https://www.bilibili.com/read/mobile?id=11073476)
 
+Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
+
+::: details 我的经历
+
 原本大学时看到音游群的同学在玩 osu，我也入坑了，想着练练 4k 可以提高我其他音游的成绩（多指力）。当时打了好久 osu 默认自带的那几首曲子，后来才知道怎么下载曲子...
 
 我打 osu 主打 mania。主 4k，副 6k。其他 key 数从来不碰。其他模式仅会碰一下 std。 <span class="heimu" title="你知道的太多了">曾经练定位用[McOsu](https://store.steampowered.com/app/607260/McOsu/)的 3d 模式打 std</span>
@@ -125,7 +132,23 @@ _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<
 
 我曾经历了一段时间的准度崩坏期（2022.06.28 前后），现在想来，应该是当时打段位过于急于求成了，无视准度打了很多超过我极限的曲子。为了救回准度付出了一定代价。所以，**在逆天的路上，也别忘了去欣赏沿途的风景。** 还有，**OSU 如逆水行舟，不进则退**，72h 内需要有完全热手的时间，否则实力就会开始退步。对我而言，4 天不打 OSU，就需要约 20w 键的复健才能恢复原先水平。
 
-Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。
+:::
+
+#### OSU 缺陷
+
+打了两年，感觉 OSU 存在着一些问题。我直接开始暴论。
+
+- pp 设计不合理。同水平段的 6,7k 玩家比 4k 玩家的 pp 和排名要高。
+- 倍速 mod 只有 0.75x 和 1.5x 两个可选，而很多高难歌曲甚至需要 0.05x 的间距划分。
+- 设计缺陷，windows 下声道合成的延迟极高。原生不支持 ASIO。
+- 设计缺陷，只能调打击 offset，但是音游能调整的 offset 实际上应该要有两个：_打击_，_音乐_，_谱面_ 三选二。
+  - 只能调一个 offset 的结果就是音押和目押没法兼顾。
+- 官方态度，stable 玩家不被支持，赶人去 lazer。
+- 而 lazer 很难用：安装时无法选择安装目录；谱面文件夹不公开；迁移后皮肤高度出现不适配。（据说）还有卡顿问题。
+- 服务器缺陷：mania 下载歌曲时不能按 key 数筛选。而不同 key 数的 mania 基本相当于两个游戏。
+
+我也被坑了几次[^1]。
+[^1]: [offset 机制](https://t.me/withabsolutex/1044)，[无限崩溃](https://t.me/withabsolutex/1051)，[lazer 缺陷](https://t.me/withabsolutex/1054)
 
 ### 设置
 
