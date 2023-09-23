@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 22 Sep 2023 09:22:53 GMT</pubDate>
-    <lastBuildDate>Fri, 22 Sep 2023 09:22:53 GMT</lastBuildDate>
+    <pubDate>Sat, 23 Sep 2023 15:53:50 GMT</pubDate>
+    <lastBuildDate>Sat, 23 Sep 2023 15:53:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -3852,9 +3852,9 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <!-- * 新生代语言，网上缺少问题的解决方案 -->
 <h3> 如何学习</h3>
 <p><a href="https://www.rust-lang.org/zh-CN/" target="_blank" rel="noopener noreferrer">官网</a>有详细的 QA 与你所需要的一切。以下陈述个人想法：</p>
-<p>对于新手而言，<a href="https://tourofrust.com/00_zh-cn.html" target="_blank" rel="noopener noreferrer">tour of rust</a>可能是一个不错的选择。</p>
-<p>我认为<a href="https://doc.rust-lang.org/std/index.html" target="_blank" rel="noopener noreferrer">这个文档</a>最为重要。</p>
-<p>我在学习初期，先阅读 rust 教程（官网），然后尝试用 Rust 去解决 leetcode 上的一些题目 <span class="heimu" title="你知道的太多了">由于 rust 的 I/O 较为麻烦，leetcode 能免去 I/O 之苦</span> ，去搜索题目一些的子问题，了解解决方法。最后，去<a href="https://doc.rust-lang.org/std/index.html" target="_blank" rel="noopener noreferrer">上述文档</a>进一步了解该解决方法的详细信息。</p>
+<p>对于新手而言，<a href="https://tourofrust.com/00_zh-cn.html" target="_blank" rel="noopener noreferrer">tour of rust</a>，<a href="https://doc.rust-lang.org/rust-by-example/index.html" target="_blank" rel="noopener noreferrer">rust by example</a>可能是不错的选择。</p>
+<p>我在学习初期，先阅读 rust 教程（官网），然后尝试用 Rust 去解决 leetcode 上的一些题目 <span class="heimu" title="你知道的太多了">由于 rust 的 I/O 较为麻烦，leetcode 能免去 I/O 之苦</span> ，去搜索题目一些的子问题，了解解决方法。最后，去<a href="https://doc.rust-lang.org/std/index.html" target="_blank" rel="noopener noreferrer">官方文档</a>进一步了解该解决方法的详细信息。</p>
+<p>有机会还是写点项目，遇到不会的就去 <a href="https://t.me/rust_zh" target="_blank" rel="noopener noreferrer">Telegram 群</a>问，是提升比较快的办法。</p>
 <p>其他资料：<a href="https://course.rs/about-book.html" target="_blank" rel="noopener noreferrer">Rust 语言圣经</a> | <a href="https://lib.rs/new" target="_blank" rel="noopener noreferrer">Rust new libraries and applications</a></p>
 <h2> 语言基础</h2>
 <h3> 循环</h3>
@@ -3913,6 +3913,36 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <code>do_something_that_might_fail()?</code> 等价于</p>
 <div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 并发</h3>
 <p>如果你对 <em>async/await</em> 模型没有明确概念，可以看看<a href="https://course.rs/advance/async/getting-started.html" target="_blank" rel="noopener noreferrer">这篇文章</a>入门。</p>
+<h3> mod</h3>
+<p>rust 的 mod 确实会让人摸不着头脑。建议先搜几篇文章看看，然后以下是我的一些浅薄理解，可能不正确，请自行分辨：</p>
+<ol>
+<li>每一个 <strong><code>.rs</code>文件</strong> 和 <strong>带有 <code>mod.rs</code> 的文件夹</strong> 都是模块。</li>
+<li><code>main.rs</code> 是顶层模块(<code>crate</code>)，其他模块层级即为<strong>文件目录层级</strong>。</li>
+<li>mod 后若不跟代码块，则<strong>声明当前模块与<mark>低层级</mark>模块的依赖关系</strong>；若跟代码块，则<strong>在当前模块中声明定义一个子模块</strong>。</li>
+</ol>
+<p>例如我有一个文件结构：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>则 <code>main.rs</code> 为 0 级模块，<code>config.rs</code> &amp; <code>request.rs</code> &amp; <code>core</code> 为 1 级模块，<code>cambridge_en_zh.rs</code> 为 2 级模块。</p>
+<p>在某个模块中使用 <code>mod</code> 语句只能声明<strong>更低级</strong>的模块关系。例如，我不能在 <code>request.rs</code> 中使用 <code>mod core;</code>，因为它俩同级（1 级）。</p>
+<p>那我们怎样在 <code>request.rs</code> 中使用 <code>core</code> 的内容呢？这就要通过更高级的模块进行中转：</p>
+<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> trait</h3>
+<p>trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难点也是掌握 trait 的用法。</p>
+<ul>
+<li>
+<p>trait 在一些方面有点像其他语言的 interface，但脱离了继承的限制，可以随时创建，随时 implement，trait 之间不需要有联系。</p>
+</li>
+<li>
+<p>trait 可以为现有的结构<strong>附加方法</strong>，这是多数强类型语言所不具备的。</p>
+</li>
+<li>
+<p>trait 简化了泛型的实现。（点名 C++ (&lt;20)）</p>
+</li>
+<li>
+<p>trait 本身也是一个类型，可以 <code>impl trait for trait</code>:</p>
+<div class="language-rust line-numbers-mode" data-ext="rs"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>但是从其他模块调用 take 时需要 <code>use &lt;mod_name&gt;::Takable</code>。</li>
+</ul>
+</li>
+</ul>
 <h3> 其他</h3>
 <p>可以显式调用 <a href="https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#%E9%80%9A%E8%BF%87-stdmemdrop-%E6%8F%90%E6%97%A9%E4%B8%A2%E5%BC%83%E5%80%BC" target="_blank" rel="noopener noreferrer"><code>std::mem::drop()</code></a> 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。</p>
 <h2> Cargo</h2>
@@ -3920,7 +3950,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <h3> 获取 Cargo 根目录</h3>
 <p><code>env!("CARGO_MANIFEST_DIR")</code></p>
 <h3> alias</h3>
-<p>创建 <code>.cargo/config</code> 并写入：</p>
+<p>创建 <code>~/.cargo/config</code> 并写入：</p>
 <div class="language-toml line-numbers-mode" data-ext="toml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 打包</h2>
 <h3> <a href="https://github.com/johnthagen/min-sized-rust" target="_blank" rel="noopener noreferrer">最小化二进制</a></h3>
 <h2> 测试</h2>
@@ -3932,7 +3962,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <li><code>#[cfg(test)]</code> 后的内容将在 build 时忽略；后面一般接 <code>mod tests{...}</code>；<code>cargo test</code> 时不会判断内部的 <em>assert</em> 内容(?)...总感觉挺鸡肋的。</li>
 <li><code>#[test]</code> 后一定要接函数，名称随意。可以进行 <em>assert</em>。</li>
 </ul>
-<p><code>cargo test</code> 默认不打印 <em>stdout</em> 输出，想打印需要 <code>cargo test -- --show-output</code></p>
+<p><code>cargo test</code> 默认不打印 <em>stdout</em> 输出，想打印需要 <code>cargo test -- --show-output</code>。<s>（rust 不能在 <code>Cargo.toml</code> 中直接指定 alias 我不是很认可）</s></p>
 <h2> GUI</h2>
 <p>我使用 <a href="https://github.com/gabdube/native-windows-gui" target="_blank" rel="noopener noreferrer">native-windows-gui</a> 作为我的 windows 开发轻量级 GUI。</p>
 <h3> install</h3>
@@ -5136,6 +5166,10 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20230922</h3>
+<ul>
+<li>新增<a href="/farraginous/learning/dsp2.html" target="blank">学习笔记 - 数字信号处理路</a></li>
+</ul>
 <h3> 20230920</h3>
 <ul>
 <li>不再使用 cdn 作为图片加载来源</li>
@@ -7891,7 +7925,7 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-55" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-55"> 屏蔽无用组件</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 类 markdown 方言</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 类 markdown 方言, nmd (negative markdown)</label>
 <ul class="task-list-container">
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-57" disabled="disabled"><label class="task-list-item-label" for="task-item-57"> 换行问题</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-58" disabled="disabled"><label class="task-list-item-label" for="task-item-58"> 样式统一</label></li>
@@ -8678,6 +8712,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center"><a href="https://missav.com/zh/miaa-146" target="_blank" rel="noopener noreferrer">MIAA-146</a></td>
+<td style="text-align:center">8.4</td>
+<td style="text-align:center">9.2</td>
+<td style="text-align:center"><details><summary>点击展开</summary><p>母の再婚相手に妹が犯されているのを見てクズ勃起。 永瀬ゆい</p></details></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://njav.tv/en/v/stars-225-uncensored-leaked" target="_blank" rel="noopener noreferrer">STARS-225</a></td>
 <td style="text-align:center">9</td>
 <td style="text-align:center">8.4</td>
@@ -9287,6 +9327,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>FC2PPV 778927 <a href="https://jp.xero.porn/video/z6jtbjln09icqbaj24440" target="_blank" rel="noopener noreferrer">01</a> <a href="https://www.tokyomotion.net/video/592838/%E7%84%A1%E4%BF%AE%E6%AD%A3-fc2ppv-778927-%E3%81%A1%E3%82%85%E3%81%B1%E7%8E%8B-%E3%81%93%E3%81%A8%E3%82%8A19%E6%AD%B3icup-%E8%B6%85s%E7%B4%9A-%E7%A5%9E%E4%B9%B3-02" target="_blank" rel="noopener noreferrer">02</a></li>
 <li>HAKC-010</li>
 <li><a href="https://missav.com/zh/fc2-ppv-3470313" target="_blank" rel="noopener noreferrer">FC2-PPV-3470313</a></li>
+<li><a href="https://njav.tv/en/v/fc2-ppv-3600188" target="_blank" rel="noopener noreferrer">FC2-PPV-3600188</a>（关闭 adblock）</li>
 </ul>
 <h2> 评优</h2>
 <p><s>顾名思义啦~</s></p>
@@ -12492,8 +12533,15 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tr>
 <td style="text-align:center">osu</td>
 <td style="text-align:center">81</td>
-<td style="text-align:center"><text style="color:red;">GS02声卡 -32~-41~-44ms</text><details><summary>其它环境</summary><p>（均为快银轴数据）</p><text style="color:red;"><p>Predator G3-573: -63ms(-55~-70)</p><p>鞋盒机: -13ms</p>将星X15内置声卡: -85ms(-83~-100)</text></details></td>
+<td style="text-align:center"><text style="color:red;">将星X15内置声卡: -85ms</text></td>
 <td style="text-align:center">30</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">osu!lazer</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><text style="color:red;">-</text></td>
+<td style="text-align:center">25</td>
 <td style="text-align:center">0</td>
 </tr>
 <tr>
@@ -12568,6 +12616,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 </tbody>
 </table>
+<!-- Predator G3-573: -63ms(-55~-70) 鞋盒机: -13ms  GS02声卡 -41ms -->
 <p><em>（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<text style="color:red;">late 过多，向负方向调整，early 过多，向正方向调整；</text> <text style="color:blue;">late 过多，向正方向调整，early 过多，向负方向调整。</text>）</em></p>
 <p><strong>游玩时长变化情况：</strong></p>
 <iframe frameborder="no" src="/charts/rhythm_games_time_percentage.html" width="100%" height="280" loading="lazy"></iframe>
@@ -12635,6 +12684,8 @@ x 表示水平位移，h 表示垂直位移。<br>
 </details>
 <h3> 说两句</h3>
 <p>给新人： <a href="https://mzh.moegirl.org.cn/Osu!" target="_blank" rel="noopener noreferrer">OSU 萌娘百科</a> | <a href="https://www.bilibili.com/read/mobile?id=11073476" target="_blank" rel="noopener noreferrer">osu!mania 4k</a></p>
+<p>Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。</p>
+<details class="hint-container details"><summary>我的经历</summary>
 <p>原本大学时看到音游群的同学在玩 osu，我也入坑了，想着练练 4k 可以提高我其他音游的成绩（多指力）。当时打了好久 osu 默认自带的那几首曲子，后来才知道怎么下载曲子...</p>
 <p>我打 osu 主打 mania。主 4k，副 6k。其他 key 数从来不碰。其他模式仅会碰一下 std。 <span class="heimu" title="你知道的太多了">曾经练定位用<a href="https://store.steampowered.com/app/607260/McOsu/" target="_blank" rel="noopener noreferrer">McOsu</a>的 3d 模式打 std</span></p>
 <ul>
@@ -12645,8 +12696,24 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>其他想说的。</li>
 </ul>
 <p>我曾经历了一段时间的准度崩坏期（2022.06.28 前后），现在想来，应该是当时打段位过于急于求成了，无视准度打了很多超过我极限的曲子。为了救回准度付出了一定代价。所以，<strong>在逆天的路上，也别忘了去欣赏沿途的风景。</strong> 还有，<strong>OSU 如逆水行舟，不进则退</strong>，72h 内需要有完全热手的时间，否则实力就会开始退步。对我而言，4 天不打 OSU，就需要约 20w 键的复健才能恢复原先水平。</p>
-<p>Win11 更新到现在，对 osu 游玩体验没啥影响了，可以放心上。</p>
-<h3> 设置</h3>
+</details>
+<h4> OSU 缺陷</h4>
+<p>打了两年，感觉 OSU 存在着一些问题。我直接开始暴论。</p>
+<ul>
+<li>pp 设计不合理。同水平段的 6,7k 玩家比 4k 玩家的 pp 和排名要高。</li>
+<li>倍速 mod 只有 0.75x 和 1.5x 两个可选，而很多高难歌曲甚至需要 0.05x 的间距划分。</li>
+<li>设计缺陷，windows 下声道合成的延迟极高。原生不支持 ASIO。</li>
+<li>设计缺陷，只能调打击 offset，但是音游能调整的 offset 实际上应该要有两个：<em>打击</em>，<em>音乐</em>，<em>谱面</em> 三选二。
+<ul>
+<li>只能调一个 offset 的结果就是音押和目押没法兼顾。</li>
+</ul>
+</li>
+<li>官方态度，stable 玩家不被支持，赶人去 lazer。</li>
+<li>而 lazer 很难用：安装时无法选择安装目录；谱面文件夹不公开；迁移后皮肤高度出现不适配。（据说）还有卡顿问题。</li>
+<li>服务器缺陷：mania 下载歌曲时不能按 key 数筛选。而不同 key 数的 mania 基本相当于两个游戏。</li>
+</ul>
+<p>我也被坑了几次<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。</a></p><a class="footnote-anchor" id="footnote-ref1">
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 设置</h3>
 <p>参考<a href="https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md" target="_blank" rel="noopener noreferrer">OsuCNwiki</a>。</p>
 <h4> 调整延迟</h4>
 <p>offset 对个人手感，后续进步与习惯养成极为重要。但是调整 offset 是个漫长而痛苦的过程（20230502-03，16w 键才调好）。</p>
@@ -12808,6 +12875,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 <img alt="有人丢了引き継ぎ 我不说是谁" src="/images/hobbies/rhythm_games/sbgaaru.png" width="40%" height="40%">
 </div>
 <p>本人于 20230715 退坑 pjsk。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p><a href="https://t.me/withabsolutex/1044" target="_blank" rel="noopener noreferrer">offset 机制</a>，<a href="https://t.me/withabsolutex/1051" target="_blank" rel="noopener noreferrer">无限崩溃</a>，<a href="https://t.me/withabsolutex/1054" target="_blank" rel="noopener noreferrer">lazer 缺陷</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
 ]]></content:encoded>
       <enclosure url="https://absx.pages.dev/images/hobbies/rhythm_games/osu_best.jpg" type="image/jpeg"/>
     </item>
