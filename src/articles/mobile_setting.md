@@ -168,6 +168,16 @@ tag:
 
 ## 遇到的问题
 
+### MIUI 无法更换铃声
+
+1. 点击 _设置 - 声音与触感 - 电话铃声 - 全部铃声_，bug 闪退
+2. 下载 138M 的音乐（系统应用），“设置铃声需要开通 VIP”
+3. 将铃声 push 到系统 ringtone 文件夹：`adb push xxx.mp3 /system/media/audio/ringtones/`（[ref](https://oddity.oddineers.co.uk/2020/08/24/wear-os-custom-ringtones-via-adb/)），报错 `remote couldn't create file: Read-only file system`
+4. `adb remount` <Badge text="root" />，报错 `/system/bin/sh: adb: inaccessible or not found`
+5. `adb shell`，`su`，`mount -o rw,remount /system` <Badge text="root" />，报错 `mount: '/system' not in /proc/mounts`
+
+没招了，非常痛苦。可能还能参考下[这篇](https://forum.xda-developers.com/t/closed-universal-systemrw-superrw-feat-makerw-ro2rw-read-only-2-read-write-super-partition-converter.4247311/)，不过希望不大且比较危险。
+
 ### 线刷 global 失败
 
 已经注释了 `Missmatching image and device` 验证，跳过了 crclist & sparsecrclis 认证，最后还是卡在了 `error: Writing 'xbl' FAILED (remote:'This partition doesn't exist')` 上。。网上说 xbl error 是没解 bl 锁，但我这个显然是找不到分区。

@@ -111,7 +111,7 @@ _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角�
 
 #### 字符串处理
 
-- 字符串转换：`to_owned()` or `to_string()` converts &str -> String.
+- 字符串转换：~~`to_owned()` or `to_string()` converts &str -> String.~~ But you'd better to use `into()`.
 - [字符串连接](https://iq.opengenus.org/rust-string-concat/)
 
 #### 字符串修改

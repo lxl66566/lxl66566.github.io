@@ -40,7 +40,7 @@ tag:
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :-: | :-: | :-: | :-: | :-: |
 |osu|81|<text style="color:red;">将星X15内置声卡: -85ms</text>|30|0|
-|osu!lazer|-|<text style="color:red;">-</text>|25|0|
+|osu!lazer|-|<text style="color:red;">-107ms - -94ms</text>|25|4|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">75</text>|5|5|
 |KALPA|<1|<text style="color:red;">-148ms</text>|6.5|5|
