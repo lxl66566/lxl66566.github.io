@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 23 Sep 2023 15:53:50 GMT</pubDate>
-    <lastBuildDate>Sat, 23 Sep 2023 15:53:50 GMT</lastBuildDate>
+    <pubDate>Sun, 24 Sep 2023 16:22:08 GMT</pubDate>
+    <lastBuildDate>Sun, 24 Sep 2023 16:22:08 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -38,6 +38,11 @@
 <p>参考<a href="/farraginous/learning/signals_and_systems.html#z-transform" target="blank">信号与系统 - z 变换</a></p>
 <p>与 s 的关系：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>z</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>s</mi><mi>T</mi></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle z=e^{sT}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8913em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span></span></span></span></span></p>
 <p>收敛域：满足 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></munderover><mi mathvariant="normal">∣</mi><mi>h</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><msup><mi>z</mi><mrow><mo>−</mo><mi>n</mi></mrow></msup><mi mathvariant="normal">∣</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \sum_{n=-\infty}^{+\infty}|h(n)z^{-n}|&lt;\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0667em;vertical-align:-1.3083em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7583em;"><span style="top:-1.9em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">+</span><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3083em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">∣</span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span> 的 z 值区间。注意判明 <code>0</code> 处和 <code>∞</code> 处的值是否能取到。</p>
+<h3> 反变换</h3>
+<ol>
+<li>部分分式法，就是信号与系统学的方法。</li>
+<li>长除法，也需要判断收敛域（决定长除的延伸方向），然后进行多项式的硬除。</li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
@@ -2005,6 +2010,15 @@ print("123")<br>
 </ol>
 <p>以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。</p>
 <h2> 遇到的问题</h2>
+<h3> MIUI 无法更换铃声</h3>
+<ol>
+<li>点击 <em>设置 - 声音与触感 - 电话铃声 - 全部铃声</em>，bug 闪退</li>
+<li>下载 138M 的音乐（系统应用），“设置铃声需要开通 VIP”</li>
+<li>将铃声 push 到系统 ringtone 文件夹：<code>adb push xxx.mp3 /system/media/audio/ringtones/</code>（<a href="https://oddity.oddineers.co.uk/2020/08/24/wear-os-custom-ringtones-via-adb/" target="_blank" rel="noopener noreferrer">ref</a>），报错 <code>remote couldn't create file: Read-only file system</code></li>
+<li><code>adb remount</code> </li>
+<li><code>adb shell</code>，<code>su</code>，<code>mount -o rw,remount /system</code> </li>
+</ol>
+<p>没招了，非常痛苦。可能还能参考下<a href="https://forum.xda-developers.com/t/closed-universal-systemrw-superrw-feat-makerw-ro2rw-read-only-2-read-write-super-partition-converter.4247311/" target="_blank" rel="noopener noreferrer">这篇</a>，不过希望不大且比较危险。</p>
 <h3> 线刷 global 失败</h3>
 <p>已经注释了 <code>Missmatching image and device</code> 验证，跳过了 crclist &amp; sparsecrclis 认证，最后还是卡在了 <code>error: Writing 'xbl' FAILED (remote:'This partition doesn't exist')</code> 上。。网上说 xbl error 是没解 bl 锁，但我这个显然是找不到分区。</p>
 <p>下了两个 global (sweet)，都需要 <code>xbl</code> 分区，都没法用。然后放弃了。</p>
@@ -3889,7 +3903,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </ul>
 <h4> 字符串处理</h4>
 <ul>
-<li>字符串转换：<code>to_owned()</code> or <code>to_string()</code> converts &amp;str -&gt; String.</li>
+<li>字符串转换：<s><code>to_owned()</code> or <code>to_string()</code> converts &amp;str -&gt; String.</s> But you'd better to use <code>into()</code>.</li>
 <li><a href="https://iq.opengenus.org/rust-string-concat/" target="_blank" rel="noopener noreferrer">字符串连接</a></li>
 </ul>
 <h4> 字符串修改</h4>
@@ -5168,7 +5182,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <h2> 2023</h2>
 <h3> 20230922</h3>
 <ul>
-<li>新增<a href="/farraginous/learning/dsp2.html" target="blank">学习笔记 - 数字信号处理路</a></li>
+<li>新增<a href="/farraginous/learning/dsp2.html" target="blank">学习笔记 - 数字信号处理</a></li>
 </ul>
 <h3> 20230920</h3>
 <ul>
@@ -11845,7 +11859,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">2023.09.14-<br>2023.09.21</td>
 <td style="text-align:center">6.3</td>
 <td style="text-align:center">9.5</td>
-<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
 </tr>
 <tr>
 <td style="text-align:center">兰斯02 </td>
@@ -12413,7 +12427,11 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>错别字：
 <ul>
 <li>当机 -&gt; 宕机（フリーズ）</li>
-<li>为什么会把 去了（いく）翻成 丢了 啊，我大受震撼（可能是什么奇怪的审查设定）</li>
+<li>为什么会把 去了（いく）翻成 丢了 啊，我大受震撼（可能是什么奇怪的审查设定）
+<ul>
+<li>ps. 这个在好多 gal 的翻译中都有出现…</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -12454,6 +12472,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <ul>
 <li>将主人公的刻画（特别是内心的黑暗之处）发挥得很好。</li>
 <li>游戏制作极为精美。包括动效，表情，比赛画面。<strong>精美的制作很大程度上能给人继续推下去的动力。</strong></li>
+<li>游玩顺序：鳶沢 みさき -&gt; 有坂 真白 -&gt; 倉科 明日香 -&gt; 市ノ瀬 莉佳</li>
 </ul>
 <h4> 9-nine 系列</h4>
 <ul>
@@ -12467,7 +12486,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </ul>
 <h4> 纸上魔法使</h4>
 <ul>
-<li>剧情跌宕起伏，作为<em>ウグイスカグラ</em> 的入教之作，我很幸运。</li>
+<li>剧情跌宕起伏，<s>作为 <em>ウグイスカグラ</em> 的入教之作，我很幸运</s>。</li>
 </ul>
 <h4> 魔女的夜宴</h4>
 <ul>
@@ -12540,9 +12559,9 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tr>
 <td style="text-align:center">osu!lazer</td>
 <td style="text-align:center">-</td>
-<td style="text-align:center"><text style="color:red;">-</text></td>
+<td style="text-align:center"><text style="color:red;">-107ms - -94ms</text></td>
 <td style="text-align:center">25</td>
-<td style="text-align:center">0</td>
+<td style="text-align:center">4</td>
 </tr>
 <tr>
 <td style="text-align:center">phigros(latest)</td>
