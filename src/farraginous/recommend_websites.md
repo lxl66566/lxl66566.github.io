@@ -141,6 +141,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
 - 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)（付费下载，建议消除后直接截图）
 - 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
+- 在线画图演示：[EXCALIDRAW](https://excalidraw.com/)
 - 素材：
   - 图片：[Pexels](https://www.pexels.com/zh-cn/)
   - SVG：[SVG 在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/) | [iconbuddy](https://iconbuddy.app/)
@@ -180,7 +181,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [play.m3o](https://play.m3o.xyz/)：在线联机扫雷
 - [lichess.org](https://lichess.org/)：在线国际象棋
 - [Gartic.io](https://gartic.io/)：你画我猜网页版
-- [You're the OS!](https://plbrault.github.io/youre-the-os/)：一款让你模拟 OS 的游戏
+- [You're the OS!](https://plbrault.github.io/youre-the-os/)：一款让你模拟 OS 的游戏 | [mir](https://drfreckles42.itch.io/youre-the-os)
 
 资源：
 

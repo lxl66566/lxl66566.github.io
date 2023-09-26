@@ -416,6 +416,16 @@ find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
 
 **按时间倒序**。
 
+### 安装 OSU
+
+首先[教程在这](https://osu.ppy.sh/community/forums/topics/1248084?n=1)。
+
+安装时显示没网，是我 daed 透明代理的锅，`curl google.com` 正常但是 ping 不动。把脚本那行 ping 验证注释掉就行了。后面安装可能会缺东西，照着提示装。
+
+装完后没有 `osu-wine` 被添加到环境变量，不能直接执行；`osu-wine` 脚本在 `git clone` 那个目录，手动 `bash -c ...` 即可。
+
+这样用 wine 装好的 osu 游戏时只能跑到 170 帧，估计是驱动调度问题吧。日后再解。
+
 ### 更新破坏依赖
 
 先删再装。参考[forum](https://bbs.archlinuxcn.org/viewtopic.php?id=10208).

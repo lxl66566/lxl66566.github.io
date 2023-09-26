@@ -21,6 +21,10 @@ category:
 
 ## 2023
 
+### 20230926
+
+- _软件汇总_ 新增 [linux](./recommend_packages.md#linux)
+
 ### 20230925
 
 - 新增 vue 组件：`av`

@@ -13,16 +13,16 @@ tag:
 
 # 软件汇总
 
-一些好用软件的推荐。
+一些好用软件的推荐，包含 Windows，Linux，Android，浏览器插件和脚本。
+
+::: tip
 
 - 关于 magisk & LSPosed，请移步[设置手机](../articles/mobile_setting.md#magisk)
-- 关于 linux，请移步 [linux](../articles/linux.md#外部包)
 - 猜你喜欢：[设置电脑](../articles/computer_setting.md)
 
-:::tip 阅读此页前请注意
-若你还不知道如何使用 Github 下载文件，请参考[此教程](../coding/github.md)。
+- 若您还不知道如何使用 Github 下载文件，请参考[此教程](../coding/github.md)。
+- 使用 Google Play 下载需要[科学上网](../articles/vpn.md)。未注明应用来源的 Android 软件，不妨试试在 Play 商店里找找。
 
-使用 Google Play 下载需要[科学上网](../articles/vpn.md)。若未注明应用来源，不妨试试在 Play 商店里找找。
 :::
 
 ## Android
@@ -285,6 +285,38 @@ _建议在设置中开启开机自启。_
 4. 下载指定清晰度或仅音频：`yt-dlp -F <url>` 选择清晰度或音频资源；将选项 ID 填入 `yt-dlp -f <ID> <url>` 进行下载。
 
 [^2]: 可能需要提权。一个普通人更熟悉的方法是将 `yt-dlp.exe` 存放目录添加到环境变量（但是更麻烦）。
+
+## Linux
+
+更详细的说明或使用教程请前往 [Linux](../articles/linux.md)。由于我使用 pacman，因此不指明下载方式。
+
+> 避免啰嗦，默认不包含上述部分跨平台软件。
+
+### 基础 CLI 工具
+
+- `fishshell` + `starship`：shell 及其外观
+- `ripgrep`：`grep` 的代替
+- `fd`, `plocate`：查找
+- `tldr`：`man` 的代替
+- `fex`：`cut` 的代替
+- `htop`：任务管理器，看性能
+- `zoxide`：智能 cd
+- `ncdu`（或 `gdu`）：磁盘容量查询
+- `nnn`（或 `yazi`）：文件浏览器
+- `lsof`：查进程占用
+- `neovim`：文本编辑器
+
+### activitywatch
+
+记录软件使用时长，参考[文章](../articles/time_record.md)
+
+### bottles
+
+运行 windows 软件，比 wine 更傻瓜式。
+
+### daed
+
+eBPF 代理工具，透明代理。
 
 ## 浏览器插件
 

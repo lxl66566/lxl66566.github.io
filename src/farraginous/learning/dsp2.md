@@ -20,10 +20,19 @@ category:
 
 $R_k(n)$ 为 $[0,k)$ 上的全 1 序列
 
-$\omega$ 为数字角频，$\Omega$ 为模拟角频率；$\omega n, \Omega t$。$T_0$ 为原周期，$T$ 为采样周期
+周期性：对采样后信号求$\displaystyle \frac{2\pi}\omega$，分为三种情况判断：整数，整分式，无理。
 
-- $\displaystyle\Omega=\frac{2\pi}{T}$
-- $\omega=\Omega T$
+### 采样
+
+$\omega$ 为数字角频率，$\Omega$ 为模拟角频率；$\omega n, \Omega t$
+
+$T_0$ 为原周期，$T$ 为采样周期；下标$_h$是截止频率，$_s$为 sampling.
+
+- 采样角频率：$\displaystyle\Omega_s=\frac{2\pi}{T}$，即为采样信号的频谱间隔
+- $\omega=\Omega T$，对同一下标成立。
+- $\displaystyle\frac{\Omega}{\Omega_s}=\frac{f}{f_s}=\frac\omega{2\pi}$
+
+时域采样后，频域被周期延拓了。
 
 ## z 变换
 
@@ -45,3 +54,7 @@ $\omega$ 为数字角频，$\Omega$ 为模拟角频率；$\omega n, \Omega t$。
 - $\displaystyle\begin{cases} x(n)=x_e(n)+x_o(n)\\ x^*(-n)=x_e(n)-x_o(n)\end{cases}$
 - $\displaystyle\begin{cases} DTFT[Re[x(n)]]=X_e(e^{j\omega})\\ DTFT[jIm[x(n)]]=X_o(e^{j\omega})\end{cases}$
 - $\displaystyle\begin{cases} DTFT[x_e(n)]=Re[X(e^{j\omega})]\\ DTFT[x_o(n)]=jIm[X(e^{j\omega})]\end{cases}$
+
+## 频率响应
+
+$\displaystyle |H(e^{j\omega})|=A\cdot\frac{\prod c_rb}{\prod d_rb}$
