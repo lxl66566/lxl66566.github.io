@@ -259,16 +259,17 @@ Nyquist frequency: 2wm
 ### 性质
 
 - 线性
-- 移位性质：<span v-pre>$\displaystyle x[n-n_0] \rightarrow X(z)z^{-n_0}$</span>，收敛域不变
+- 移位性质：$\displaystyle x[n-n_0] \rightarrow X(z)z^{-n_0}$，收敛域可能变（在 0, ∞ 点）
 
 * > [单边移位公式](https://www.bilibili.com/video/BV1g94y1Q76G/?p=60&t=3258)
 
 - z 域微分性质：<span v-pre>$\displaystyle nx[n] \rightarrow -zX'(z)$</span>，收敛域不变
 - 序列指数加权：<span v-pre>$\displaystyle a^nx[n] \rightarrow X(z/a)$</span>，收敛域扩大 a 倍
-- 时域扩展：<span v-pre>$\displaystyle x_{(k)}[n] \rightarrow X(z^k)$</span>，收敛域 R^{1/k}
-- 卷积性质
+- 时域扩展：$\displaystyle x_{(k)}[n] \rightarrow X(z^k)$，收敛域 $R^{1/k}$
+- 卷积性质，收敛域可能零极点抵消
 - 累加性质：等于与 u[n] 卷积
-- 与离散 fourier 的联系：z = e^jw
+- 补充：时间反转：$\displaystyle x(-n)\rightarrow X(1/z)$，收敛域 $1/R_x$
+- 与离散 fourier 的联系：$z = e^{jw}$
 - 因果信号
   - 初值定理：<span v-pre>$\displaystyle x[0] \rightarrow X(+\infty)$</span>
   - 终值定理：<span v-pre>$\displaystyle x[+\infty] \rightarrow lim_{z\to 1}(z-1)X(z)$</span>
