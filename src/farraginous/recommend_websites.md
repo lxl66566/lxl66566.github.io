@@ -15,14 +15,20 @@ tag:
 ## 工具
 
 - [DOWNSUB](https://downsub.com/)：youtube 下载字幕。对于陈述性视频，下载字幕观看能节省很多时间。
-- [蓝奏云](https://wwa.lanzoui.com/)：云存储 _（[跳转介绍](recommend_packages.md/#蓝奏云)）_
 - [Microsoft Forms](https://forms.office.com/)：微软官方的问卷、投票、测验收集表。
 - [webtor](https://webtor.io/)：在线解析磁链（并在线播放）。<span class="heimu" title="你知道的太多了">一般作验车用（</span>
 - [1paragraph](https://1paragraph.app/) | [EPUB Reader](https://epub-reader.online/)：在线网页 EPUB 阅读器
-- [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
 - [代码高亮](https://romannurik.github.io/SlidesCodeHighlighter/)
 - [PageSpeed Insights](https://pagespeed.web.dev/)：测试静态网站的性能
+- [ReadPaper](https://readpaper.com/)：论文助手，翻译
 <!-- * [免费盐选](https://mfyx.top/)：免费看知乎盐选 -->
+
+::: details 还有一些一般用不到的
+
+- [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
+- [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
+
+:::
 
 ### 合集类
 
@@ -34,7 +40,6 @@ tag:
 
 - [eu.org 免费域名](https://nic.eu.org/)
 - [TLD-LIST](https://zh-hans.tld-list.com/)：比较所有顶级域名的价格
-- [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
 
 ## 网盘
 
@@ -132,7 +137,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [Adobe 全家桶破解](https://pity.eu.org/OD4/Adobe/)
   - [2022](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 - [Office Tool Plus](https://otp.landian.vip/zh-cn/)
-- [极简白板](https://github.com/zserge/awfice#drawing-app---327-bytes)
+- 在线画图演示：[EXCALIDRAW](https://excalidraw.com/) | [极简白板](https://github.com/zserge/awfice#drawing-app---327-bytes)
 
 ### 图片相关
 
@@ -141,7 +146,6 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
 - 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)（付费下载，建议消除后直接截图）
 - 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
-- 在线画图演示：[EXCALIDRAW](https://excalidraw.com/)
 - 素材：
   - 图片：[Pexels](https://www.pexels.com/zh-cn/)
   - SVG：[SVG 在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/) | [iconbuddy](https://iconbuddy.app/)
@@ -161,6 +165,11 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 搞笑音效：[爱给网](https://www.aigei.com/)
 - [AI 配音](https://www.sd235.net/dubbingAI/detail/51)
 - [Mubert](https://mubert.com/render)：按 prompt 生成音乐，指定时长和气氛。free 5/mo，流程较为繁琐。
+
+### 标记格式相关
+
+- 一站式 pdf 处理：[smallpdf](https://smallpdf.com/)
+- 格式转换：[Pandoc](https://pandoc.org/try)，也可以安装软件使用
 
 ### [字体相关](https://www.zitijia.com/)
 

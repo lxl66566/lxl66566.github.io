@@ -11,7 +11,7 @@ tag:
 
 # VPS
 
-我与我的 VPS 的故事。
+我与我的 VPS 的故事。服务器运维。
 
 与 VPS 无关的 linux 问题请移步 [linux](./linux.md)
 
@@ -45,11 +45,15 @@ also see here:
 
 ## SSH
 
+<details><summary>没啥用的</summary><p>
+
 youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。
 
 先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 `sudo pacman -S openssl` 了（。后来转 linux 后就没 ssh 这烦恼了。
 
 用法：`ssh root@ip [-p port]`
+
+</p></details>
 
 ### 添加公钥
 
@@ -197,6 +201,13 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
   ...
   ```
 - 重新载入：`nginx -s reload`
+
+## 运维
+
+虽然我非常菜，但还是姑且记录一些心得。由于有的服务器是公家的，想干点啥总是感觉束手束脚。。
+
+1. 如果是自己的服务器，那肯定先把[常用工具](../farraginous/recommend_packages.md#linux)下载好。
+2. ssh 保活用的 screen 而不是 tmux。[一些基础命令](https://linuxize.com/post/how-to-use-linux-screen/)，加一个[删除命令](https://stackoverflow.com/a/1509764/18929691)。
 
 ## 遇到的问题
 
