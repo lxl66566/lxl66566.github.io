@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 26 Sep 2023 15:42:40 GMT</pubDate>
-    <lastBuildDate>Tue, 26 Sep 2023 15:42:40 GMT</lastBuildDate>
+    <pubDate>Fri, 29 Sep 2023 16:56:04 GMT</pubDate>
+    <lastBuildDate>Fri, 29 Sep 2023 16:56:04 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -119,6 +119,25 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>接入系数 p = 低抽头电压/高抽头电压，&lt;=1</p>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>p</mi><mo>=</mo><mfrac><msub><mi>L</mi><mn>1</mn></msub><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>+</mo><msub><mi>L</mi><mn>2</mn></msub></mrow></mfrac><mo>=</mo><mfrac><msub><mi>C</mi><mn>2</mn></msub><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>+</mo><msub><mi>C</mi><mn>2</mn></msub></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1963em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，1 在抽头内，需要低抽头阻抗 &gt;&gt; 电抗</p>
 <p>等效阻抗为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msup><mi>Z</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>=</mo><mfrac><mn>1</mn><msup><mi>p</mi><mn>2</mn></msup></mfrac><mi>Z</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle Z'=\frac1{p^2}Z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8019em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8019em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2019em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span></span></span></span>（低抽头等效到高抽头</p>
+<h3> 耦合</h3>
+<p>反射阻抗：通过耦合对另一回路的附加阻抗。反射后，电抗正负号发生改变。</p>
+<p>初级反射阻抗：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>Z</mi><mrow><mi>f</mi><mn>1</mn></mrow></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mi>ω</mi><mi>M</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><msub><mi>Z</mi><mn>22</mn></msub></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle Z_{f1}=\frac{(\omega M)^2}{Z_{22}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.3271em;vertical-align:-0.836em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">Z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">22</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.836em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>，次级类似</p>
+<ul>
+<li>部分谐振：<strong>等效</strong>回路谐振，即等效回路电抗 = 0</li>
+<li>复谐振：<strong>等效</strong>回路谐振并匹配（<em>原电阻 = 等效电阻</em>）</li>
+<li>全谐振：初级与次级的<strong>原</strong>回路均谐振，=&gt; <strong>等效</strong>回路也谐振</li>
+<li>最佳全谐振：全谐振 + 匹配</li>
+</ul>
+<h2> 滤波器</h2>
+<ul>
+<li>石英晶体/陶瓷
+<ul>
+<li>接入系数小</li>
+<li>Q 很大（石英晶体 &gt; 陶瓷）</li>
+<li>并联谐振频率比串联大；在此二频率中间显感性，其他显容性</li>
+</ul>
+</li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>
@@ -1071,7 +1090,11 @@ npm ERR! This command does not support workspaces.</p>
 <h2> external</h2>
 <ol>
 <li><a href="https://zh.wikibooks.org/zh-hans/%E5%A4%A7%E9%99%86%E5%8F%B0%E6%B9%BE%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%9C%AF%E8%AF%AD%E5%AF%B9%E7%85%A7%E8%A1%A8" target="_blank" rel="noopener noreferrer">大陆台湾计算机术语对照表</a></li>
-<li><a href="https://awesome-programming-books.github.io/" target="_blank" rel="noopener noreferrer">经典技术书籍 PDF 文件</a></li>
+<li><a href="https://awesome-programming-books.github.io/" target="_blank" rel="noopener noreferrer">经典技术书籍 PDF 文件</a>
+<ul>
+<li><a href="https://www.cs.princeton.edu/~appel/modern/" target="_blank" rel="noopener noreferrer">Modern Compiler Implementation in ( Java | ML | C )</a></li>
+</ul>
+</li>
 <li><a href="https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang" target="_blank" rel="noopener noreferrer">Lies we tell ourselves to keep using Golang</a></li>
 </ol>
 ]]></content:encoded>
@@ -1090,6 +1113,10 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20230928</h3>
+<p>尝试对我在路上看到的尽可能多的 <code>.{2}</code> 进行<a href="/hide/videos.html" target="blank">videos</a>的颜打分。</p>
+<h3> 20230927</h3>
+<p>不给读权限是很坏的。</p>
 <h3> 20230919</h3>
 <p>将谐波分析用于气候变化。</p>
 <h3> 20230918</h3>
@@ -3119,7 +3146,7 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
       <category>经历</category>
       <pubDate>Sun, 14 May 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> VPS</h1>
-<p>我与我的 VPS 的故事。</p>
+<p>我与我的 VPS 的故事。服务器运维。</p>
 <p>与 VPS 无关的 linux 问题请移步 <a href="/articles/linux.html" target="blank">linux</a></p>
 <h2> Price</h2>
 <!-- prettier-ignore -->
@@ -3182,9 +3209,11 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <p>10G storage 打消了我自建 java server 的欲望，同时美国西海岸 VPS 的地理位置也使节点真连接延迟常年维持在 700+ms，并不适合作为游戏服务器。</p>
 <p>白嫖的小鸡只有 64M RAM，只能装 alpine.</p>
 <h2> SSH</h2>
-<p>youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。</p>
+<details><summary>没啥用的</summary><p>
+</p><p>youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。</p>
 <p>先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 <code>sudo pacman -S openssl</code> 了（。后来转 linux 后就没 ssh 这烦恼了。</p>
 <p>用法：<code>ssh root@ip [-p port]</code></p>
+<p></p></details>
 <h3> 添加公钥</h3>
 <p>由于 vps 暴露在公网，因此需要复杂的密码，但是我肯定不想每次登录都需要输那么一长串的密码。因此需要将公钥添加到 vps。在本机上 <code>cat ~/.ssh/id_rsa.pub</code> 并复制，再粘贴到 vps 的 <code>~/.ssh/authorized_keys</code> 内就好了。每行一个公钥。</p>
 <h2> 安全性</h2>
@@ -3246,6 +3275,12 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <li>/etc/nginx/nginx.conf:<div class="language-nginx line-numbers-mode" data-ext="nginx"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>重新载入：<code>nginx -s reload</code></li>
 </ul>
+<h2> 运维</h2>
+<p>虽然我非常菜，但还是姑且记录一些心得。由于有的服务器是公家的，想干点啥总是感觉束手束脚。。</p>
+<ol>
+<li>如果是自己的服务器，那肯定先把<a href="/farraginous/recommend_packages.html#linux" target="blank">常用工具</a>下载好。</li>
+<li>ssh 保活用的 screen 而不是 tmux。<a href="https://linuxize.com/post/how-to-use-linux-screen/" target="_blank" rel="noopener noreferrer">一些基础命令</a>，加一个<a href="https://stackoverflow.com/a/1509764/18929691" target="_blank" rel="noopener noreferrer">删除命令</a>。</li>
+</ol>
 <h2> 遇到的问题</h2>
 <h3> 端口被封问题</h3>
 <p>20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口<s>并显示在伪装页面上</s>映射到 12138（还作出了<a href="#%E5%AF%B9%E6%8A%97-gfw">其他努力</a>）。脚本还是有 bug 的（我菜），<code>$temp</code> 赋值不成功，但无伤大雅。</p>
@@ -6319,15 +6354,20 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <h2> 工具</h2>
 <ul>
 <li><a href="https://downsub.com/" target="_blank" rel="noopener noreferrer">DOWNSUB</a>：youtube 下载字幕。对于陈述性视频，下载字幕观看能节省很多时间。</li>
-<li><a href="https://wwa.lanzoui.com/" target="_blank" rel="noopener noreferrer">蓝奏云</a>：云存储 <em>（<a href="/farraginous/recommend_packages.md/#%E8%93%9D%E5%A5%8F%E4%BA%91" target="blank">跳转介绍</a>）</em></li>
 <li><a href="https://forms.office.com/" target="_blank" rel="noopener noreferrer">Microsoft Forms</a>：微软官方的问卷、投票、测验收集表。</li>
 <li><a href="https://webtor.io/" target="_blank" rel="noopener noreferrer">webtor</a>：在线解析磁链（并在线播放）。<span class="heimu" title="你知道的太多了">一般作验车用（</span></li>
 <li><a href="https://1paragraph.app/" target="_blank" rel="noopener noreferrer">1paragraph</a> | <a href="https://epub-reader.online/" target="_blank" rel="noopener noreferrer">EPUB Reader</a>：在线网页 EPUB 阅读器</li>
-<li><a href="https://www.immuniweb.com/websec/" target="_blank" rel="noopener noreferrer">ImmuniWeb</a>：检测网址是否安全</li>
 <li><a href="https://romannurik.github.io/SlidesCodeHighlighter/" target="_blank" rel="noopener noreferrer">代码高亮</a></li>
 <li><a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed Insights</a>：测试静态网站的性能</li>
+<li><a href="https://readpaper.com/" target="_blank" rel="noopener noreferrer">ReadPaper</a>：论文助手，翻译</li>
 </ul>
 <!-- * [免费盐选](https://mfyx.top/)：免费看知乎盐选 -->
+<details class="hint-container details"><summary>还有一些一般用不到的</summary>
+<ul>
+<li><a href="https://www.immuniweb.com/websec/" target="_blank" rel="noopener noreferrer">ImmuniWeb</a>：检测网址是否安全</li>
+<li><a href="https://app.tunemymusic.com/zh-CN/transfer" target="_blank" rel="noopener noreferrer">tunemymusic.com</a>：歌单迁移</li>
+</ul>
+</details>
 <h3> 合集类</h3>
 <ul>
 <li><a href="https://www.67tool.com/" target="_blank" rel="noopener noreferrer">即时工具</a>：致力打造安全、快捷、好用的在线工具箱~</li>
@@ -6337,7 +6377,6 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <ul>
 <li><a href="https://nic.eu.org/" target="_blank" rel="noopener noreferrer">eu.org 免费域名</a></li>
 <li><a href="https://zh-hans.tld-list.com/" target="_blank" rel="noopener noreferrer">TLD-LIST</a>：比较所有顶级域名的价格</li>
-<li><a href="https://app.tunemymusic.com/zh-CN/transfer" target="_blank" rel="noopener noreferrer">tunemymusic.com</a>：歌单迁移</li>
 </ul>
 <h2> 网盘</h2>
 <!-- prettier-ignore -->
@@ -6489,7 +6528,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 </ul>
 </li>
 <li><a href="https://otp.landian.vip/zh-cn/" target="_blank" rel="noopener noreferrer">Office Tool Plus</a></li>
-<li><a href="https://github.com/zserge/awfice#drawing-app---327-bytes" target="_blank" rel="noopener noreferrer">极简白板</a></li>
+<li>在线画图演示：<a href="https://excalidraw.com/" target="_blank" rel="noopener noreferrer">EXCALIDRAW</a> | <a href="https://github.com/zserge/awfice#drawing-app---327-bytes" target="_blank" rel="noopener noreferrer">极简白板</a></li>
 </ul>
 <h3> 图片相关</h3>
 <ul>
@@ -6498,7 +6537,6 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li>背景消除：<a href="https://www.remove.bg/zh" target="_blank" rel="noopener noreferrer">removebg</a> | <a href="https://bgsub.cn/" target="_blank" rel="noopener noreferrer">BgSub</a></li>
 <li>什么都能消除：<a href="https://remover.zmo.ai/" target="_blank" rel="noopener noreferrer">ZMO</a> | <a href="https://www.magiceraser.io/" target="_blank" rel="noopener noreferrer">MAGIC ERASER</a>（付费下载，建议消除后直接截图）</li>
 <li>一站式图片处理：<a href="https://imagestool.com/zh_CN/" target="_blank" rel="noopener noreferrer">imagesTool</a> | <a href="http://www.zuohaotu.com/image-merge.aspx" target="_blank" rel="noopener noreferrer">在线图片拼接（包含其他工具）</a></li>
-<li>在线画图演示：<a href="https://excalidraw.com/" target="_blank" rel="noopener noreferrer">EXCALIDRAW</a></li>
 <li>素材：
 <ul>
 <li>图片：<a href="https://www.pexels.com/zh-cn/" target="_blank" rel="noopener noreferrer">Pexels</a></li>
@@ -6521,6 +6559,11 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li>搞笑音效：<a href="https://www.aigei.com/" target="_blank" rel="noopener noreferrer">爱给网</a></li>
 <li><a href="https://www.sd235.net/dubbingAI/detail/51" target="_blank" rel="noopener noreferrer">AI 配音</a></li>
 <li><a href="https://mubert.com/render" target="_blank" rel="noopener noreferrer">Mubert</a>：按 prompt 生成音乐，指定时长和气氛。free 5/mo，流程较为繁琐。</li>
+</ul>
+<h3> 标记格式相关</h3>
+<ul>
+<li>一站式 pdf 处理：<a href="https://smallpdf.com/" target="_blank" rel="noopener noreferrer">smallpdf</a></li>
+<li>格式转换：<a href="https://pandoc.org/try" target="_blank" rel="noopener noreferrer">Pandoc</a>，也可以安装软件使用</li>
 </ul>
 <h3> <a href="https://www.zitijia.com/" target="_blank" rel="noopener noreferrer">字体相关</a></h3>
 <h2> 生活</h2>
@@ -7088,6 +7131,17 @@ Address: 2001:da8:8007:1358:20c:29ff:fe89:603f</p>
       <category>评价</category>
       <pubDate>Fri, 17 Jun 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> xxx 有多难用</h1>
+<h2> git 有多难用</h2>
+<ul>
+<li>git diff 算法仍有待进步。（本人只用过 <code>Myers</code> &amp; <code>Histogram</code>）
+<ul>
+<li>会出现未修改代码，却被标记成变动的情况</li>
+<li>以行为单位（check <code>--word-diff-regex</code>）</li>
+</ul>
+</li>
+<li>压缩率一般</li>
+<li>无法通过链接添加仓库外的文件（需要将仓库目录设为根目录）</li>
+</ul>
 <h2> QQ 有多难用</h2>
 <p>实在受不了了，来细数 QQ 的罪状 <em><s>（可以当作对比 telegram</s></em></p>
 <p>程序角度：</p>
@@ -7493,7 +7547,12 @@ utools vs diy my tools
 <h3> 大学教育</h3>
 <ul>
 <li>平时成绩绝对不低于考试成绩。</li>
-<li>取消必修课与选修课之分。仅以<strong>前置课程</strong>作为选课的唯一限制条件。（有点像<a href="https://leetcode.com/problems/course-schedule-ii/description/" target="_blank" rel="noopener noreferrer">这样</a>）规定毕业条件为完成<strong>最低要求学分</strong>与完成任意一条<strong>专业课程路径</strong>。分数使用排名赋分制计算，便于不同路径选择的比较。</li>
+<li>取消必修课与选修课之分。仅以<strong>前置课程</strong>作为选课的唯一限制条件。（有点像<a href="https://leetcode.com/problems/course-schedule-ii/description/" target="_blank" rel="noopener noreferrer">这样</a>）规定毕业条件为完成<strong>最低要求学分</strong>与完成任意一条<strong>专业课程路径</strong>。
+<ul>
+<li>分数使用排名赋分制计算，便于不同路径选择的比较。</li>
+<li>挂科标准仍通过绝对分值判定。</li>
+</ul>
+</li>
 <li>考研仅考察英语与专业成绩。</li>
 <li>适当降低规定中的校招比例，提高社招比例。</li>
 <li>分配宿舍前先通过问卷形式收集学生习惯，例如需不需要租空调，一般几点睡几点起，是否需要午觉等。然后同类分在一起。</li>
@@ -14585,8 +14644,19 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>CS:GO 确实是一款吸引我的游戏。但我打 CS:GO 会有罪恶感，因此需要<a href="/hide/personal_details.html#%E5%BC%BA%E8%BF%AB%E8%87%AA%E5%B7%B1%E5%81%9A%E7%9A%84%E4%BA%8B" target="blank">时不时戒一段时间</a>。</p>
 <blockquote>
 <p>另外，我已于 2022.11.20 戒掉了 CS:GO，且于 2023.01.28 卸载。<s>（不卸载的话效果不好）</s> 希望各位适度游戏，享受游戏过程。</p>
+<p>update: 20230928，cs2 回坑</p>
 </blockquote>
-<h2> 设置方案</h2>
+<h2> 设置方案（CS2）</h2>
+<p>绝大部分控制台指令在 CS2 中都无法使用。我简述一下我的设置。</p>
+<ol>
+<li>将画面设为 4:3。CS2 原生提供了 4:3 的拉伸（必需使用全屏模式）。</li>
+<li>在设置里可以直接改小地图缩放，无需通过控制台。我直接拉到了最低。</li>
+<li>帧率显示：通过控制台显示帧率比较丑，建议用 steam 提供的接口：<em>Steam - 设置 - 游戏中 - 开启帧率显示 与高对比度</em></li>
+<li>绑定跳投指令：<code>steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg</code> 中新建 <code>&lt;name&gt;.cfg</code>，写入：<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>然后在游戏控制台 <code>bind &lt;key&gt; "exec &lt;name&gt;"</code> 即可。一次绑定即可永久使用。</li>
+<li><code>cl_crosshairsize &lt;length&gt;</code> 可以调整准心长度（突破设置页调整上限）</li>
+</ol>
+<h2> 设置方案（CS:GO）</h2>
+<details class="hint-container details"><summary>过时信息，cs2 可能不适用</summary>
 <h3> 启用控制台</h3>
 <figure><img src="/images/hobbies/other_games/csgo/csgo_settings_1.png" alt="控制台" tabindex="0" loading="lazy"><figcaption>控制台</figcaption></figure>
 <p>控制台是对 csgo 进行高级操作的基础。现在你可以按<code>~</code>键呼出控制台。</p>
@@ -14740,6 +14810,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>无法连接到服务器可以尝试：
 cmd 中执行</p>
 <div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>有时候有用。</p>
+</details>
 ]]></content:encoded>
       <enclosure url="https://absx.pages.dev/images/hobbies/other_games/csgo/csgo_settings_1.png" type="image/png"/>
     </item>
