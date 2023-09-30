@@ -53,11 +53,13 @@ category:
 |[IPX-034](https://missav.com/cn/ipx-034)|8.9|8.3|<details><summary>点击展开</summary><p>売られた愛嬢 幸せな家庭を襲った DQN グループの鬼畜訪問 相沢みなみ</p></details>|
 |[DASD-998](https://www2.javhdporn.net/video/dasd-998c/)|8|9.2|<details><summary>点击展开</summary><p>女体化した俺は親友に求められるがまま、受け入れて、心も女になっていた。 天然美月</p></details>
 |[MIDE-909](https://www4.javhdporn.net/video/mide-909/)|8|9.2|<details><summary>点击展开</summary><p>大嫌いな同級生の部屋に監禁されオシッコも許されなかった私… 七沢みあ</p></details>
+|<av bg="miaa-657" />|7.9|9.3|
 |[SSNI-677](https://missav.com/ssni-677)|9|8|
 |[WANZ-359](https://www2.javhdporn.net/video/WANZ-359c/)|8.3|8.6|<details><summary>点击展开</summary><p>新任女教師 残忍冷酷中出しレ × プ輪姦 つぼみ</p></details>
 |[STARS-205](https://missav.com/ja/stars-205)|9|7.8|<details><summary>点击展开</summary><p>小柄な元アイドル美少女がデカチンでイキ狂う！ 限界イカセ 何回イっても止まらない巨根超絶激ピストン 永野いち夏</p></details>
 |[MIDE-558](https://missav.com/mide-558)|9.8|7|
 |[IPX-641](https://missav.com/cn/ipx-641)|9.7|7|<details><summary>点击展开</summary><p>旦那への罪悪感を覚えつつ今日も義父の濃密レ●プに繰り返し絶頂を… 楓カレン</p></details>
+|<av bg="DASS-203" />|8.6|8|
 |[MIDE-674](https://missav.com/mide-674)|9|7.5|<details><summary>点击展开</summary><p>肩こりを軽減させるおっぱいストレッチで性感刺激マッサージ イヤと言えない無口な女子大生を狙うパーソナルトレーナー 水卜さくら</p></details>
 |[SNIS-992](https://www2.javhdporn.net/video/snis-992/)|7.7|8.8|<details><summary>点击展开</summary><p>女子校生鬼畜輪姦レ●プ～標的にされた性処理生徒会長～ 橋本ありな</p></details>
 |[SSNI-025](https://missav.com/ssni-025)|8.7|7.7|<details><summary>点击展开</summary><p>女子校生の美乳がチラリ・ポロリ 水トさくら</p></details>
@@ -68,9 +70,11 @@ category:
 |[MIAA-648](https://www2.javhdporn.net/video/miaa-648/)|7.3|8.9|<details><summary>点击展开</summary><p>僕を助けてくれる幼なじみがいじめっこに犯●れているのを見て勃起した 東條なつ</p></details>
 |[IPX-149](https://en.jable.tv/videos/ipx-149/?lang=jp)|7.7|8.2|<details><summary>点击展开</summary><p>初凌辱 純潔女子大生につけ込んだ狂気ストーカーに堕とされて… 桜空もも</p></details>
 |[MILK-137](https://jable.tv/videos/milk-137/)|7.9|8|<details><summary>点击展开</summary><p>むしゃぶりつきたくなる超スリム清純系美少女を接吻教育 監禁拘束して全身がふやけるまで舐め倒す開発調教 倉本すみれ</p></details>
+|<av bg="midv-488" />|9.8|6|
 |[SHKD-951](https://missav.com/shkd-951)|8.1|7.7|
 |<av bg="hmn-156" />|8|7.7|<details><summary>点击展开</summary><p>初恋の新人女子マネージャーは合宿中の自由時間60分で汗だく絶倫先輩たちに寝取られ中出し輪●されています… 上坂めい</p></details>
 |[IPX-660](https://missav.com/ipx-660)|7.5|8.2|<details><summary>点击展开</summary><p>初恋の新人女子マネージャーは合宿中の自由時間 60 分で汗だく絶倫先輩たちに寝取られ中出し輪●されています… 上坂めい</p></details>
+|<av bg="SDMF-022" />|7|8.6|
 |[IPX-674](https://missav.com/cn/ipx-674)|8|7.5|<details><summary>点击展开</summary><p>ユメカウツツカ 日間 1 位 週間 1 位 月間 1 位 大人気同人コミックを S 級超単体女優で実写化！！ 桜空もも</p></details>
 |[SSNI-630](https://missav.com/cn/ssni-630)|7.9|7.6|<details><summary>点击展开</summary><p>電車の中で女をイかせる競技会に参加させられた私の 1 年間の記録 天使もえ</p></details>
 |[IPX-881](https://www2.javhdporn.net/video/ipx-881)|7.5|8|<details><summary>点击展开</summary><p>幼少期から面倒を見てくれた中年オヤジに突然犯●れて… 親には言えない入浴約 15 分間の背徳性交 二葉エマ</p></details>
@@ -83,6 +87,7 @@ category:
 |[ROYD-102](https://missav.com/royd-102)|8.2|6.5|<details><summary>点击展开</summary><p>無防備すぎる巨乳妹と目のやり場のないメチャ狭ワンルーム同居性活 綾瀬こころ</p></details>|
 |[IPX-182](https://missav.com/zh/ipx-182)|7|7.6|<details><summary>点击展开</summary><p>狙われた通学路 共謀痴漢電車 岬ななみ</p></details>|
 |[STARS-574](https://www2.javhdporn.net/video/stars-574)|8.5|6|<details><summary>点击展开</summary><p>『親が娘にセックスを教える時代になりました。』家族で義務 SEX 性教育をすることになった日本 朝田ひまり</p></details>
+|<av bg="SAME-014" />|6.5|8|
 |[ROYD-084](https://www2.javhdporn.net/video/ROYD-084c/)|7.7|6.8|<details><summary>点击展开</summary><p>絶対に孕ませてやる！ずっと好きだった姉が結婚するので、ボクの子供を妊娠するまで 72 時間ハメまくって 1 滴残らず種付けして犯った！ 三舩みすず</p></details>
 |[SHKD-859](https://missav.com/shkd-859)|7.5|7|
 |[CAWD-194](https://www2.javhdporn.net/video/cawd-194)|7|7.5|<details><summary>点击展开</summary><p>キモい！ダサい！童貞臭い！軽蔑の視線でこき下ろしてくるナメくさった教え子を一晩中犯し続けた修学旅行の最終日 朝比奈ななせ</p></details>|
@@ -90,8 +95,10 @@ category:
 |[PPPE-089](https://jable.tv/videos/pppe-089/)|9.9|4.3|<details><summary>点击展开</summary><p>会社の飲み会で終電を逃した僕に「うちに泊まっていきます？」と巨乳の後輩女子が小悪魔な囁き。部屋着の胸チラ誘惑に負けて何度も SEX した 楪カレン</p></details>|
 |[SDMU-672](https://missav.com/sdmu-672)|6.5|7.6|<details><summary>点击展开</summary><p>繋がりヲタに狙われたメジャーデビュー直前のアイドルが参加したカラオケオフ会ビデオ～スカウトから 5 年 マネージャーが手塩にかけて育てた美少女はオタクを装った DQN 集団の肉便器になりました～</p></details>|
 |[IPX-773](https://www2.javhdporn.net/video/ipx-773/)|9|5|
+|<av bg="mide-580" />|9|5|
 |[MUM-216](https://www.japteenx.com/video/3639/mum-216-have-fun-with-short-girls-the-favorite-bed-sharing-reflexology-therapeutic-massage)|5|9|
 |[MIAA-704](https://jable.tv/videos/miaa-704/)|4|10|
+|<av bg="SSIS-843" />|8.9|5|
 |[MIDE-721](https://missav.com/mide-721)|8.2|5.7|
 |[MIAA-391](https://www2.javhdporn.net/video/miaa-391)|6.3|7.3|
 |[REAL-810](https://missav.com/real-810)|6.5|7|
@@ -129,6 +136,7 @@ category:
 |[WAAA-087](https://missav.com/WAAA-087)|6.8|4|
 |[SSIS-306](https://jable.tv/videos/ssis-306/)|7.5|3|
 |[CAWD-041](https://www2.javhdporn.net/video/cawd-041)|4.6|5.8|
+|[MIDV-484](https://www5.javmost.com/MIDV-484/)|8.3|2|
 |<av bg="GANA-2652" />|7.8|2.3|
 |[IPX-699](https://www2.javhdporn.net/video/ipx-699)|4|6.1|
 |[PIYO-027](https://missav.com/zh/piyo-027)|5|5|
