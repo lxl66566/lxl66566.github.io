@@ -529,3 +529,4 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 ## external
 
 1. Uncover XP3 [前篇：認識基本 XP3 封包格式](https://galgamer.moe/article/20021) | [後篇：揭祕 XP3 封包中的的壓縮和加密技術](https://galgamer.moe/article/20022)
+2. [Summer Pockets 聖地考察指南 - 前篇](https://galgamer.moe/article/20024#)
