@@ -39,7 +39,7 @@ tag:
 <!-- prettier-ignore -->
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :-: | :-: | :-: | :-: | :-: |
-|osu|81|<text style="color:red;">将星X15内置声卡: -85ms</text>|30|0|
+|osu|81|<text style="color:red;">将星X15内置声卡: -86ms<br/>GS02声卡 -41ms</text>|30|0|
 |osu!lazer|-|<text style="color:red;">-107ms - -94ms</text>|25|4|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">75</text>|5|5|
@@ -52,7 +52,7 @@ tag:
 |phigros(1.4.1)|<0.04|+120ms|-|1|
 |プロセカ|<0.01|<text style="color:red;">-2</text>|10.7|2|
 
-<!-- Predator G3-573: -63ms(-55~-70) 鞋盒机: -13ms  GS02声卡 -41ms -->
+<!-- Predator G3-573: -63ms(-55~-70) 鞋盒机: -13ms  -->
 
 _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<text style="color:red;">late 过多，向负方向调整，early 过多，向正方向调整；</text> <text style="color:blue;">late 过多，向正方向调整，early 过多，向负方向调整。</text>）_
 

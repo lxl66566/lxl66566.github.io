@@ -21,6 +21,12 @@ tag:
 
 特性阻抗 $\displaystyle \rho=\omega_0L=\frac1{\omega_0C}=\sqrt{\frac{L}C}$（谐振时的容/感抗）
 
+矩形系数 $\displaystyle K_{r0.1}=\frac{f_{0.1}}{f_{0.7}}$ 表示接近理想曲线的程度
+
+抑制比 $\displaystyle d_n=\frac{A_{v0}}{A_{vn}}$
+
+噪声系数 = 输入信噪比 / 输出信噪比
+
 ## 谐振回路
 
 谐振曲线 $\displaystyle N(f)=\frac{\dot I}{\dot I_0}=\frac1{1+j\xi}$
@@ -64,7 +70,26 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 - 全谐振：初级与次级的**原**回路均谐振，=> **等效**回路也谐振
 - 最佳全谐振：全谐振 + 匹配
 
-## 滤波器
+## 高频谐振小放
+
+### 单级
+
+模型：三极管输出端 接 耦合并联谐振放大回路
+
+三要素：增益，品质因数，通频带
+
+电压增益：$\displaystyle \dot A_v=\frac{-p_1p_2y_{fe}}{g_\Sigma+j\omega C_\Sigma+\frac1{j\omega L}}$
+
+电压增益 \* 通频带 = const
+
+矩形系数 $\displaystyle K_{r0.1}=\sqrt{99}\approx9.96$
+
+### 多级
+
+- 增益：乘积
+- 通频带：（各级增益相同情况下）总通频带 = $\displaystyle\sqrt{2^{\frac1{m}}-1}\times$ 单级通频带
+
+## 滤波器（非重点）
 
 - 石英晶体/陶瓷
   - 接入系数小
