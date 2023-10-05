@@ -14,6 +14,7 @@ tag:
 
 - [cppinsights](https://cppinsights.io/)：显式指明代码中的隐式转换与中间变量。
 - [godbolt](https://godbolt.org/)：汇编分析；pastebin；不同编译器的行为分析
+- [Quick C++ Benchmark](https://quick-bench.com/)
 
 ## 常见名词
 
@@ -25,7 +26,7 @@ tag:
 
 ### mingw + _Microsoft C/C++_
 
-> 使用此方法的好处是比较无脑，可以快速上手；可以直接点右上角 _运行_ 按钮快速运行单文件。
+> 使用此方法的好处是比较无脑，可以快速上手；可以直接点右上角 _运行_ 按钮快速运行单文件；可以可视化调试。
 
 ::: details archived，已不再使用此方式
 

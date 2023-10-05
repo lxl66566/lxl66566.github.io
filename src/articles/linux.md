@@ -58,7 +58,10 @@ umount /mnt/windows
 
 ## 基础
 
-1. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
+1. 我建议仔细看看 [The Missing](https://missing-semester-cn.github.io/)的前几章，比较到位，免去了自己折腾之苦。
+2. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
+
+awk 是一门语言（[ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=awk+语言)），~~我从不用 awk~~，用 sed 也[踩过坑](#sed-语法)。
 
 ### [Terminal shortcuts](https://linuxhandbook.com/linux-shortcuts/)
 
@@ -578,7 +581,7 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 
 ### sed 语法
 
-sed 正则表达式的 `{}` 需要转义 `\{\}` 。。。。。。
+sed 正则表达式的 `{}` 需要转义 `\{\}`，否则需要使用 `sed -r`（我感觉可以直接加 `alias sed='sed -r'`）
 
 ### [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 

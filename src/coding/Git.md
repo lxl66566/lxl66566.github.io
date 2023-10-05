@@ -18,7 +18,10 @@ _Git is a free and open source distributed version control system designed to ha
 
 ## 学习
 
-[learngitbranching](https://learngitbranching.js.org/?locale=zh_CN)对学习 git 有一定帮助。
+> 通过自顶向下的方式（从命令行接口开始）学习 Git 可能会让人感到非常困惑。很多时候您只能死记硬背一些命令行，然后像使用魔法一样使用它们。 ——[The Missing](https://missing-semester-cn.github.io/2020/version-control/)
+
+- [learngitbranching](https://learngitbranching.js.org/?locale=zh_CN)
+- [The Missing](https://missing-semester-cn.github.io/2020/version-control/)
 
 ## 安装与配置
 

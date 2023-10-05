@@ -75,7 +75,7 @@ tag:
 
 ## external
 
-1. [大陆台湾计算机术语对照表](https://zh.wikibooks.org/zh-hans/大陆台湾计算机术语对照表)
+1. [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 2. [经典技术书籍 PDF 文件](https://awesome-programming-books.github.io/)
    - [Modern Compiler Implementation in ( Java | ML | C )](https://www.cs.princeton.edu/~appel/modern/)
 3. [Lies we tell ourselves to keep using Golang](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang)
