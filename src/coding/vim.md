@@ -22,6 +22,15 @@ tag:
 
 ## 设置(neovim)
 
+在折腾了大段配置后，我决定使用 lazy.vim 代替 packer 进行插件管理。于是懒狗的我直接使用 [lazyvim](https://www.lazyvim.org/)，该仓库使用 lazy.vim 并预设了许多插件和 keybindings，非常方便。因此我就在此基础上再进行自定义。
+
+我的配置存放在 [github 仓库](https://github.com/lxl66566/config/tree/archlinux/.config/nvim)，直接替换 `~/.config/nvim` 然后启动 nvim 就能使用。首次启动会黑屏一阵，不要 Ctrl+c 终止，否则需要清理缓存重新配置。
+
+1. 迁移我原先的 keymaps。
+2. 禁用 Telescope 及其衍生插件，改为使用 [Neotree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)。
+
+::: details outdated, archived
+
 首先基础设置我是照着 [external 2.](#external) 来的。这篇文章确实讲的还行。后续冲浪时也看到一篇写得很好的文章，见 [external 3.](#external)，有空的话去试吧。
 
 然后进入到了自定义环节：
@@ -70,6 +79,12 @@ require('neo-tree').setup {
 }
 ```
 
+:::
+
+### 我的插件
+
+- Neotree
+
 ## 常用组合键
 
 - `A` = `$a`, `I` = `0i`
@@ -101,5 +116,5 @@ require('neo-tree').setup {
 ## external
 
 1. [Vim 实用技巧](https://awesome-programming-books.github.io/vim/Vim实用技巧.pdf)，进阶阅读
-2. [从零开始配置 Neovim(Nvim)](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)
+2. [从零开始配置 Neovim(Nvim)](https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/)（踩坑配置教程）
 3. [Neovim 使用体验](https://luyuhuang.tech/2023/03/21/nvim.html)
