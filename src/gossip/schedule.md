@@ -16,6 +16,7 @@ category:
 - [x] vscode extensions recommendation
 - [x] koishi
 - [ ] tampermonkey
+- [ ] foods recommend(?)
 
 ### 需要考虑
 

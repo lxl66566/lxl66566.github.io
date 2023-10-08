@@ -48,7 +48,7 @@ category:
 |号|颜|演|名|
 | :--: | :--: | :--: | :--: |
 |[MIAA-146](https://missav.com/zh/miaa-146)|8.4|9.2|<details><summary>点击展开</summary><p>母の再婚相手に妹が犯されているのを見てクズ勃起。 永瀬ゆい</p></details>
-|[STARS-225](https://njav.tv/en/v/stars-225-uncensored-leaked)|9|8.4|<details><summary>点击展开</summary><p>僕を助けてくれた大好きな女子が体育会系クズにレ × プされているのに… 青空ひかり</p><img src="https://pics.dmm.co.jp/mono/movie/adult/royd084/royd084pl.jpg" /></details>|
+|[STARS-225](https://njav.tv/en/v/stars-225-uncensored-leaked)|9|8.4|<details><summary>点击展开</summary><p>僕を助けてくれた大好きな女子が体育会系クズにレ × プされているのに… 青空ひかり</p></details>|
 |[IPX-917](https://www2.javhdporn.net/video/ipx-917/)|9.3|8|<details><summary>点击展开</summary><p>「家出して来たって言うから泊めてあげるけどお前ヤラせろよ。」 家出娘の末路… 征服ハメ撮りレ × プ姦 桃乃木かな</p></details>|
 |[IPX-034](https://missav.com/cn/ipx-034)|8.9|8.3|<details><summary>点击展开</summary><p>売られた愛嬢 幸せな家庭を襲った DQN グループの鬼畜訪問 相沢みなみ</p></details>|
 |[DASD-998](https://www2.javhdporn.net/video/dasd-998c/)|8|9.2|<details><summary>点击展开</summary><p>女体化した俺は親友に求められるがまま、受け入れて、心も女になっていた。 天然美月</p></details>
@@ -58,6 +58,7 @@ category:
 |[WANZ-359](https://www2.javhdporn.net/video/WANZ-359c/)|8.3|8.6|<details><summary>点击展开</summary><p>新任女教師 残忍冷酷中出しレ × プ輪姦 つぼみ</p></details>
 |[STARS-205](https://missav.com/ja/stars-205)|9|7.8|<details><summary>点击展开</summary><p>小柄な元アイドル美少女がデカチンでイキ狂う！ 限界イカセ 何回イっても止まらない巨根超絶激ピストン 永野いち夏</p></details>
 |[MIDE-558](https://missav.com/mide-558)|9.8|7|
+|<av bg="miaa-029" />|7.6|9.2|
 |[IPX-641](https://missav.com/cn/ipx-641)|9.7|7|<details><summary>点击展开</summary><p>旦那への罪悪感を覚えつつ今日も義父の濃密レ●プに繰り返し絶頂を… 楓カレン</p></details>
 |<av bg="DASS-203" />|8.6|8|
 |[MIDE-674](https://missav.com/mide-674)|9|7.5|<details><summary>点击展开</summary><p>肩こりを軽減させるおっぱいストレッチで性感刺激マッサージ イヤと言えない無口な女子大生を狙うパーソナルトレーナー 水卜さくら</p></details>
@@ -94,6 +95,7 @@ category:
 |[ROYD-084](https://www2.javhdporn.net/video/ROYD-084c/)|7.7|6.8|<details><summary>点击展开</summary><p>絶対に孕ませてやる！ずっと好きだった姉が結婚するので、ボクの子供を妊娠するまで 72 時間ハメまくって 1 滴残らず種付けして犯った！ 三舩みすず</p></details>
 |[SHKD-859](https://missav.com/shkd-859)|7.5|7|
 |[CAWD-194](https://www2.javhdporn.net/video/cawd-194)|7|7.5|<details><summary>点击展开</summary><p>キモい！ダサい！童貞臭い！軽蔑の視線でこき下ろしてくるナメくさった教え子を一晩中犯し続けた修学旅行の最終日 朝比奈ななせ</p></details>|
+|<av bg="ipx-374" />|6.7|7.7|
 |[SSPD-146](https://missav.com/sspd-146)|5.8|8.6|<details><summary>点击展开</summary><p>団地妻レズ調教 媚肉の交姦</p></details>|
 |[PPPE-089](https://jable.tv/videos/pppe-089/)|9.9|4.3|<details><summary>点击展开</summary><p>会社の飲み会で終電を逃した僕に「うちに泊まっていきます？」と巨乳の後輩女子が小悪魔な囁き。部屋着の胸チラ誘惑に負けて何度も SEX した 楪カレン</p></details>|
 |[SDMU-672](https://missav.com/sdmu-672)|6.5|7.6|<details><summary>点击展开</summary><p>繋がりヲタに狙われたメジャーデビュー直前のアイドルが参加したカラオケオフ会ビデオ～スカウトから 5 年 マネージャーが手塩にかけて育てた美少女はオタクを装った DQN 集団の肉便器になりました～</p></details>|
@@ -183,11 +185,13 @@ _（顺序记录到 miaa-604，剩下的逆序改天，我鉴不动辣）_
 <!-- prettier-ignore -->
 |rank|name|
 | :-: | :-: |
-|T0|永野いち夏，花狩まい，楪カレン|
-|T1|水卜櫻|
+|T0|永野いち夏 花狩まい 楪カレン|
+|T1|水卜櫻 松本いちか|
 |T2|桃乃木かな|神木蘭|
-|T3|石原莉奈|
+|T3||
+|T4|明里つむぎ|
 
 ## 工具
 
-[javlibrary.com](https://www.javlibrary.com/cn/)
+- [javlibrary.com](https://www.javlibrary.com/cn/)
+- [女优人脸识别](https://xslist.org/zh)

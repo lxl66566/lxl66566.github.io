@@ -299,6 +299,7 @@ _建议在设置中开启开机自启。_
 - `fd`, `plocate`：查找
 - `tldr`：`man` 的代替
 - `fex`：`cut` 的代替
+- `exa`：`ls` 的代替
 - `htop`：任务管理器，看性能
 - `zoxide`：智能 cd
 - `ncdu`（或 `gdu`）：磁盘容量查询
