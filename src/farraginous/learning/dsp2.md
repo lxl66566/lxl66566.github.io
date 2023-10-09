@@ -55,6 +55,8 @@ $T_0$ 为原周期，$T$ 为采样周期；下标$_h$是截止频率，$_s$为 s
 - $\displaystyle\begin{cases} DTFT[Re[x(n)]]=X_e(e^{j\omega})\\ DTFT[jIm[x(n)]]=X_o(e^{j\omega})\end{cases}$
 - $\displaystyle\begin{cases} DTFT[x_e(n)]=Re[X(e^{j\omega})]\\ DTFT[x_o(n)]=jIm[X(e^{j\omega})]\end{cases}$
 
-## 频率响应
+## 频率响应与滤波器
 
-$\displaystyle |H(e^{j\omega})|=A\cdot\frac{\prod c_rb}{\prod d_rb}$
+$\displaystyle |H(e^{j\omega})|=A\cdot\frac{\prod c_rb}{\prod d_rb}$ ，c 零 d 极
+
+归一化：滤波器最大值设为 1

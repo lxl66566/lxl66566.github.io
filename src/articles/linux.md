@@ -81,13 +81,15 @@ awk 是一门语言（[ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=awk+�
   - > rg 是增强版的 grep，fex 是增强版的 cut ——依云
 - 我计划装的包：Joshuto, gparted, txcv
 
-## 文件系统
+## 文件系统(fs)
 
-稳定的 ubuntu 默认使用 ext4，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊（
+ext4 是许多旧 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 zfs, xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊（
+
+> [有前辈说](https://t.me/archlinuxcn_group/2949935)了一些 zfs 的优势。
 
 ### btrfs
 
-btrfs 有好多功能吸引着我，~~当我第一次看到介绍 btrfs 的文章时，我不禁大呼：“这才是现代文件系统！用惯了的 windows ntfs 是什么垃圾！” ~~ 文章参考 [external](#external) 1. 我最爱 CoW(写时复制)，透明压缩。
+btrfs <span class="heimu" title="你知道的太多了">其实现代文件系统都</span>有好多功能吸引着我，~~当我第一次看到介绍 btrfs 的文章时，我不禁大呼：“这才是现代文件系统！windows ntfs 是什么垃圾！” ~~ 文章参考 [external](#external) 1. 我最爱 CoW(写时复制)，透明压缩，还有好用的 winbtrfs 极大提升多系统使用体验。<span class="heimu" title="你知道的太多了">ext4 从 windows 访问根本没啥好用工具</span>
 
 使用 btrfs 有一些坑需要注意：
 

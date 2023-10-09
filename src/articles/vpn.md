@@ -310,4 +310,5 @@ V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
 
 ## external
 
-- [如何正确地叫外卖](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/)
+1. [如何正确地叫外卖](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/)
+2. [中国的防火长城是如何检测和封锁完全加密流量的](https://gfw.report/publications/usenixsecurity23/zh/)
