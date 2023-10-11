@@ -20,3 +20,4 @@ category:
 9. [家与学校生活环境对比（我为什么不愿意回家）](./compare_home_to_college.md)
 10. [绷不住了](./memes.md)
 11. [神评](./forward.md)
+12. [鲜鸡汤](./chicken_soup.md)

@@ -192,6 +192,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [lichess.org](https://lichess.org/)：在线国际象棋
 - [Gartic.io](https://gartic.io/)：你画我猜网页版
 - [You're the OS!](https://plbrault.github.io/youre-the-os/)：一款让你模拟 OS 的游戏 | [mir](https://drfreckles42.itch.io/youre-the-os)
+- [Nazo Game](https://nazo.one-story.cn/)：网页解谜，一般
 
 资源：
 

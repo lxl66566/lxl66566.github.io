@@ -16,6 +16,7 @@ export default sidebar({
 				"compare_home_to_college.md",
 				"memes.md",
 				"forward.md",
+				"chicken_soup.md",
 			],
 		},
 	],

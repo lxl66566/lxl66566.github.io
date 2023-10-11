@@ -381,6 +381,10 @@ alias l="ls -alF --color=auto"
 sudo updatedb   # 更新缓存，使用前执行
 ```
 
+### exa
+
+`ls='exa --long --color-scale --binary --header --time-style=long-iso'`
+
 ### tmux
 
 > tmux 在不使用图形界面或有恢复 shell 需求时比较好用。

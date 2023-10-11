@@ -4,6 +4,7 @@ icon: compare
 category:
   - 生活
   - 评价
+tag:
   - 负面
 ---
 

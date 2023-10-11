@@ -25,6 +25,7 @@ category:
 
 - 目录结构更改：分离 [linux](../articles/linux) 与 [折腾 linux 遇到的问题](../articles/linux/problem.md)
 - 折腾 linux，新增内容。
+- 新增[闲聊 - 鲜鸡汤](../gossip/chicken_soup.md)
 
 ### 20230926
 

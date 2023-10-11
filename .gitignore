@@ -3,5 +3,5 @@ src/.vuepress/.cache/
 src/.vuepress/.temp/
 src/.vuepress/dist/
 *.py
-# upload.sh
+upload.sh
 # .github/
