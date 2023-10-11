@@ -21,6 +21,11 @@ category:
 
 ## 2023
 
+### 20231011
+
+- 目录结构更改：分离 [linux](../articles/linux) 与 [折腾 linux 遇到的问题](../articles/linux/problem.md)
+- 折腾 linux，新增内容。
+
 ### 20230926
 
 - _软件汇总_ 新增 [linux](./recommend_packages.md#linux)
@@ -66,11 +71,11 @@ category:
 
 ### 20230820-26
 
-- 持续更新 [linux](../articles/linux.md) 页面
+- 持续更新 [linux](../articles/linux) 页面
 
 ### 20230808
 
-- 维护 [Github](../coding/github.md)，[linux](../articles/linux.md)
+- 维护 [Github](../coding/github.md)，[linux](../articles/linux)
 - 图表去缩进，减小体积
 
 ### 20230807
@@ -215,7 +220,7 @@ category:
 
 ### 20230514
 
-- [Linux](../articles/linux.md) 中新增内容
+- [Linux](../articles/linux) 中新增内容
 - 网址推荐 中新增 [AI 工具](./recommend_websites.md#ai-工具)
 - 文章新增 [VPS](../articles/vps.md)
 
@@ -238,7 +243,7 @@ category:
 
 ### 20230417
 
-- [编程](../coding/)新增[Linux](../articles/linux.md)
+- [编程](../coding/)新增[Linux](../articles/linux)
 
 ### 20230412
 

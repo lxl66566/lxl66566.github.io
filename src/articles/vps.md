@@ -13,7 +13,7 @@ tag:
 
 我与我的 VPS 的故事。服务器运维。
 
-与 VPS 无关的 linux 问题请移步 [linux](./linux.md)
+与 VPS 无关的 linux 问题请移步 [linux](./linux)
 
 ## Price
 

@@ -288,24 +288,30 @@ _建议在设置中开启开机自启。_
 
 ## Linux
 
-更详细的说明或使用教程请前往 [Linux](../articles/linux.md)。由于我使用 pacman，因此不指明下载方式。
-
 > 避免啰嗦，默认不包含上述部分跨平台软件。
+
+更详细的说明或使用教程请前往 [Linux](../articles/linux)。由于我使用 pacman，因此不指明下载方式。
 
 ### 基础 CLI 工具
 
-- `fishshell` + `starship`：shell 及其外观
-- `ripgrep`：`grep` 的代替
-- `fd`, `plocate`：查找
-- `tldr`：`man` 的代替
-- `fex`：`cut` 的代替
-- `exa`：`ls` 的代替
-- `htop`：任务管理器，看性能
-- `zoxide`：智能 cd
-- `ncdu`（或 `gdu`）：磁盘容量查询
-- `nnn`（或 `yazi`）：文件浏览器
-- `lsof`：查进程占用
-- `neovim`：文本编辑器
+> 对于通过 `/`（OR） 相连的软件，本人仅推荐首个
+
+<!-- prettier-ignore -->
+|软件包|功用|
+| :-: | :-: |
+|`fishshell` + `starship`|shell 及其外观|
+|`ripgrep`|`grep` 的代替|
+|`fd` & `plocate`|查找，`find` 的代替|
+|`tldr`|`man` 的代替|
+|`fex`|`cut` 的代替|
+|`exa`|`ls` 的代替|
+|`htop`|任务管理器，看性能|
+|`lsof`|[查端口占用](../articles/linux/problem.md#umount-failed)|
+|`zoxide`|智能 cd|
+|`ncdu` / `gdu`|磁盘容量查询|
+|`nnn`/ `yazi` / `ranger`|文件浏览器|
+|`lsof`|查进程占用|
+|`neovim`|文本编辑器|
 
 ### activitywatch
 

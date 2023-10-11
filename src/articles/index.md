@@ -17,7 +17,7 @@ category:
 
 ## 经历
 
-1. [(Arch)linux](./linux.md)
+1. [(Arch)linux](./linux)：我的 linux 笔记与遇到的问题
 2. [设置电脑（windows）](./computer_setting.md)
 3. [设置手机（Android）](./mobile_setting.md)
 4. [设置 VPS](./vps.md)

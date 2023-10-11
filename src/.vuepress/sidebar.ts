@@ -26,12 +26,7 @@ export default sidebar({
 		},
 		{
 			text: "经历",
-			children: [
-				"linux.md",
-				"computer_setting.md",
-				"mobile_setting.md",
-				"vps.md",
-			],
+			children: ["linux", "computer_setting.md", "mobile_setting.md", "vps.md"],
 		},
 		{
 			text: "教程",
