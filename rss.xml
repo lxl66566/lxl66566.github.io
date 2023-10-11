@@ -6,10 +6,11 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 11 Oct 2023 09:43:04 GMT</pubDate>
-    <lastBuildDate>Wed, 11 Oct 2023 09:43:04 GMT</lastBuildDate>
+    <pubDate>Wed, 11 Oct 2023 15:38:35 GMT</pubDate>
+    <lastBuildDate>Wed, 11 Oct 2023 15:38:35 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>主张</category>
     <category>编程</category>
     <category>教程</category>
     <category>经历</category>
@@ -20,10 +21,23 @@
     <category>作者</category>
     <category>导航</category>
     <category>生活</category>
-    <category>主张</category>
     <category>博客</category>
-    <category>负面</category>
     <category>爱好</category>
+    <item>
+      <title>鲜鸡汤</title>
+      <link>https://absx.pages.dev/gossip/chicken_soup.html</link>
+      <guid>https://absx.pages.dev/gossip/chicken_soup.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">鲜鸡汤</source>
+      <description>鲜鸡汤</description>
+      <category>主张</category>
+      <pubDate>Wed, 11 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 鲜鸡汤</h1>
+<p>如果你我觉得生活太安逸颓废，请来碗鲜鸡汤吧。动力++</p>
+<ol>
+<li><a href="https://github.com/plctlab/weloveinterns/blob/master/how-do-we-rank-interns.md" target="_blank" rel="noopener noreferrer">plct - 我们如何对实习生进行能力分级评定</a></li>
+</ol>
+]]></content:encoded>
+    </item>
     <item>
       <title>linux</title>
       <link>https://absx.pages.dev/articles/linux/</link>
@@ -287,7 +301,9 @@
 <h3> <a href="/coding/vim.html" target="blank">neovim</a></h3>
 <h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
 <p>快速搜索。</p>
-<div class="language-bash" data-ext="sh"></div><h3> tmux</h3>
+<div class="language-bash" data-ext="sh"></div><h3> exa</h3>
+<p><code>ls='exa --long --color-scale --binary --header --time-style=long-iso'</code></p>
+<h3> tmux</h3>
 <blockquote>
 <p>tmux 在不使用图形界面或有恢复 shell 需求时比较好用。</p>
 </blockquote>
@@ -5386,6 +5402,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <ul>
 <li>目录结构更改：分离 <a href="../articles/linux">linux</a> 与 <a href="/articles/linux/problem.html" target="blank">折腾 linux 遇到的问题</a></li>
 <li>折腾 linux，新增内容。</li>
+<li>新增<a href="/gossip/chicken_soup.html" target="blank">闲聊 - 鲜鸡汤</a></li>
 </ul>
 <h3> 20230926</h3>
 <ul>
@@ -6775,6 +6792,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li><a href="https://lichess.org/" target="_blank" rel="noopener noreferrer">lichess.org</a>：在线国际象棋</li>
 <li><a href="https://gartic.io/" target="_blank" rel="noopener noreferrer">Gartic.io</a>：你画我猜网页版</li>
 <li><a href="https://plbrault.github.io/youre-the-os/" target="_blank" rel="noopener noreferrer">You're the OS!</a>：一款让你模拟 OS 的游戏 | <a href="https://drfreckles42.itch.io/youre-the-os" target="_blank" rel="noopener noreferrer">mir</a></li>
+<li><a href="https://nazo.one-story.cn/" target="_blank" rel="noopener noreferrer">Nazo Game</a>：网页解谜，一般</li>
 </ul>
 <p>资源：</p>
 <ul>
@@ -6824,6 +6842,7 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
 <li><a href="/gossip/compare_home_to_college.html" target="blank">家与学校生活环境对比（我为什么不愿意回家）</a></li>
 <li><a href="/gossip/memes.html" target="blank">绷不住了</a></li>
 <li><a href="/gossip/forward.html" target="blank">神评</a></li>
+<li><a href="/gossip/chicken_soup.html" target="blank">鲜鸡汤</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -7009,7 +7028,6 @@ _ (1,3) 齐鲁牛肉汤，很好吃！（但是经常吃会腻） * (2,2) 麻辣
       <description>家与学校生活环境对比</description>
       <category>生活</category>
       <category>评价</category>
-      <category>负面</category>
       <pubDate>Thu, 15 Dec 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 家与学校生活环境对比</h1>
 <p>妈的，忍不了了，<s>一拳把地球打爆！</s> 写个博客发泄。</p>
