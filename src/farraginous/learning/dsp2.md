@@ -47,14 +47,6 @@ $T_0$ 为原周期，$T$ 为采样周期；下标$_h$是截止频率，$_s$为 s
 1. 部分分式法，就是信号与系统学的方法。
 2. 长除法，也需要判断收敛域（决定长除的延伸方向），然后进行多项式的硬除。
 
-## DTFT
-
-- 共轭对称序列：$\displaystyle x_e(n)=x_e^*(-n)$，即实部偶函数，虚部奇函数
-- 共轭反对称序列 $x_o(n)$
-- $\displaystyle\begin{cases} x(n)=x_e(n)+x_o(n)\\ x^*(-n)=x_e(n)-x_o(n)\end{cases}$
-- $\displaystyle\begin{cases} DTFT[Re[x(n)]]=X_e(e^{j\omega})\\ DTFT[jIm[x(n)]]=X_o(e^{j\omega})\end{cases}$
-- $\displaystyle\begin{cases} DTFT[x_e(n)]=Re[X(e^{j\omega})]\\ DTFT[x_o(n)]=jIm[X(e^{j\omega})]\end{cases}$
-
 ## 频率响应与滤波器
 
 群延迟：某一个角频率 W1 的群延迟是在 W1 上的相频曲线的切线斜率 \*-1
@@ -73,3 +65,19 @@ $\displaystyle H(e^{j\omega})=A\cdot e^{j\omega(N-M)}\frac{\prod^M e^{j\omega}-c
 - 全通滤波器：幅频=常数，零点与极点共轭倒易，若实系数因果稳定则群延迟为正，相位响应递减
 - 最小相位滤波器：零点极点均在单位圆内；最小相位滞后
   - 一般系统可以配成一个 _最小相位系统_ + _全通系统_
+
+## FT
+
+时域周期，频域离散。
+
+时域离散，频域周期，周期为 $\Omega_s=2\pi f_s$，幅度变为 $\frac1T$
+
+谱密度函数即为单周期内的频域连续函数
+
+### DTFT
+
+- 共轭对称序列：$\displaystyle x_e(n)=x_e^*(-n)$，即实部偶函数，虚部奇函数
+- 共轭反对称序列 $x_o(n)$
+- $\displaystyle\begin{cases} x(n)=x_e(n)+x_o(n)\\ x^*(-n)=x_e(n)-x_o(n)\end{cases}$
+- $\displaystyle\begin{cases} DTFT[Re[x(n)]]=X_e(e^{j\omega})\\ DTFT[jIm[x(n)]]=X_o(e^{j\omega})\end{cases}$
+- $\displaystyle\begin{cases} DTFT[x_e(n)]=Re[X(e^{j\omega})]\\ DTFT[x_o(n)]=jIm[X(e^{j\omega})]\end{cases}$

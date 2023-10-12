@@ -38,8 +38,13 @@ tag:
 
 平时不用，但以后可能用得上。
 
+::: details
+
 - [eu.org 免费域名](https://nic.eu.org/)
 - [TLD-LIST](https://zh-hans.tld-list.com/)：比较所有顶级域名的价格
+- [浏览器测试刷新率](https://cohost.org/lunasorcery/post/2465593-testing-your-animati)
+
+:::
 
 ## 网盘
 

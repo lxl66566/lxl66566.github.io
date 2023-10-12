@@ -21,6 +21,7 @@ category:
 |<av bg="shkd-999" />|9.9|11.1|<details><summary>点击展开</summary><p>風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:210B775C018A5D487B1315A3DD2A3BD597DF59EA</p></details>|
 |[ABW-087](https://www2.javhdporn.net/video/ABW-087/)|10|10.8|<details><summary>点击展开</summary><p>※胸糞NTR 最悪の鬱勃起映像 幸せを約束した大好きな彼女がおっさんに寝取られて、壊されました。 涼森れむ</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:c8478e3aa5a20c599cd48638fb8faa02206a6d65</p></details>|
 |[FSDSS-365](https://www2.javhdporn.net/video/FSDSS-365c/)|10|10.7|<details><summary>点击展开</summary><p>田舎の夏休みはヤることが無いから都会で洗練された幼なじみを帰省中にキメセク漬けにして絶頂しまくり即アクメBODYに仕上げた 橋本ありな</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:d43c655cb761cd2fab0a0df093a9c1e663cb6d5f</p></details>|
+|<av bg="ipx-593"/>|10|10.4|
 |[WAAA-184（重）](https://jable.tv/videos/waaa-184/)|8.3|12|<details><summary>点击展开</summary><p>鉄フックマ○コ引き裂き失禁拷問 陸上部エース ドM覚醒アクメ漬け 花狩まい</p></details>|
 |[SNIS-397](https://www2.javhdporn.net/video/SNIS-397/)|8.7|11.5|<details><summary>点击展开</summary><p>わたし、犯されにゆきます。～弟を愛してしまった姉編～ 天使もえ</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:11CAC397D8B472DCADD6DD7F58988D443D511B8C</p></details>|
 |[PPPE-013](https://www2.javhdporn.net/video/PPPE-013c/)|10|10|<details><summary>点击展开</summary><p>大嫌いな義父のチ●ポがドストライクすぎて…時短中出しされていたのに延長を懇願して貪り合うような、おかわり中出し性交 楪カレン</p></details>|<details><summary>点击展开</summary><p>magnet:?xt=urn:btih:484d3db110d9c7d8a47ff1f5e53433db32e58eba</p></details>|
@@ -54,17 +55,20 @@ category:
 |[DASD-998](https://www2.javhdporn.net/video/dasd-998c/)|8|9.2|<details><summary>点击展开</summary><p>女体化した俺は親友に求められるがまま、受け入れて、心も女になっていた。 天然美月</p></details>
 |[MIDE-909](https://www4.javhdporn.net/video/mide-909/)|8|9.2|<details><summary>点击展开</summary><p>大嫌いな同級生の部屋に監禁されオシッコも許されなかった私… 七沢みあ</p></details>
 |<av bg="miaa-657" />|7.9|9.3|
+|<av bg="ipx-415"/>|8.2|8.9|
 |[SSNI-677](https://missav.com/ssni-677)|9|8|
 |[WANZ-359](https://www2.javhdporn.net/video/WANZ-359c/)|8.3|8.6|<details><summary>点击展开</summary><p>新任女教師 残忍冷酷中出しレ × プ輪姦 つぼみ</p></details>
 |[STARS-205](https://missav.com/ja/stars-205)|9|7.8|<details><summary>点击展开</summary><p>小柄な元アイドル美少女がデカチンでイキ狂う！ 限界イカセ 何回イっても止まらない巨根超絶激ピストン 永野いち夏</p></details>
 |[MIDE-558](https://missav.com/mide-558)|9.8|7|
 |<av bg="miaa-029" />|7.6|9.2|
 |[IPX-641](https://missav.com/cn/ipx-641)|9.7|7|<details><summary>点击展开</summary><p>旦那への罪悪感を覚えつつ今日も義父の濃密レ●プに繰り返し絶頂を… 楓カレン</p></details>
+|<av bg="ssis-840"/>|7.7|9|
 |<av bg="DASS-203" />|8.6|8|
 |[MIDE-674](https://missav.com/mide-674)|9|7.5|<details><summary>点击展开</summary><p>肩こりを軽減させるおっぱいストレッチで性感刺激マッサージ イヤと言えない無口な女子大生を狙うパーソナルトレーナー 水卜さくら</p></details>
 |[SNIS-992](https://www2.javhdporn.net/video/snis-992/)|7.7|8.8|<details><summary>点击展开</summary><p>女子校生鬼畜輪姦レ●プ～標的にされた性処理生徒会長～ 橋本ありな</p></details>
 |[SSNI-025](https://missav.com/ssni-025)|8.7|7.7|<details><summary>点击展开</summary><p>女子校生の美乳がチラリ・ポロリ 水トさくら</p></details>
 |[MIDE-643](https://tktube.com/videos/28454/mide-643c2/)|9.5|6.8|<details><summary>点击展开</summary><p>女子大生サイレント輪姦レ × プ ～助けを呼んで周りにバレるのが怖くて声を押し殺し屈辱ケイレン絶頂～ 水卜さくら</p></details>
+|[IPX-930](https://missav.com/ipx-930-uncensored-leak)|8.8|7.5|
 |[ROYD-082](https://www2.javhdporn.net/video/ROYD-082c/)|8.3|8|<details><summary>点击展开</summary><p>血のつながりがないと知った僕と妹… 本当は両想いなのに、他の男にヤられる妹を見てしまい欲望が爆発した僕はついに妹を犯してしまい… 花狩まい</p></details>
 [SHKD-676](https://www4.javhdporn.net/video/shkd-676-decensored/)|7.6|8.7|脱獄者|
 |[MTALL-044](https://www2.javhdporn.net/video/mtall-044/)|8.2|8|<details><summary>点击展开</summary><p>【ピンク過ぎ】が原因で乳首イジメに合い感度限界突破して乳首イキ潮吹かす女子○生 上坂めい</p></details>
@@ -81,7 +85,9 @@ category:
 |[IPX-881](https://www2.javhdporn.net/video/ipx-881)|7.5|8|<details><summary>点击展开</summary><p>幼少期から面倒を見てくれた中年オヤジに突然犯●れて… 親には言えない入浴約 15 分間の背徳性交 二葉エマ</p></details>
 |[SSIS-687](https://www5.javmost.com/SSIS-687/)|8.2|7.2|<details><summary>点击展开</summary><p>大嫌いな義父の汚いイチモツを上下の穴にぶち込まれた不幸な連れ子「でも… おぞましいアレがなぜかまた欲しいの…」 香水じゅん</p></details>
 |<av bg="pppe-019" />|7.7|7.6|
+|<av bg="pppd-552"/>|8.2|7|
 |[SSIS-348](https://www2.javhdporn.net/video/SSIS-348c/)|8.8|6.2|<details><summary>点击展开</summary><p>「ウブでめちゃくちゃ押しに弱い」彼女の妹に欲情し、こっそりハメ続けた最低な僕。 小倉七海</p></details>
+|<av bg="ipx-213"/>|7.6|7.4|
 |<av bg="SW-132" />|7.8|7|
 |<av bg="FSDSS-500" />|7.3|7.4|
 |[ZEAA-39](https://www2.javhdporn.net/video/zeaa-39)|7.3|7.4|<details><summary>点击展开</summary><p>若妻の子宮にザーメンぶっかけ 変態義父の狂った性欲 有坂深雪</p></details>
@@ -136,6 +142,7 @@ category:
 |<av bg="ROYD-112" />|6|5.5|
 |[SSIS-502](https://www2.javhdporn.net/video/ssis-502)|5.5|6|
 |[MIAA-520](https://missav.com/en/miaa-520)|5.7|5.6|
+|<av bg="MUDR-197"/>|6.6|4.6|
 |[MIDE-007](https://missav.com/mide-007)|4.2|7|
 |[MIDV-185](https://www2.javhdporn.net/video/midv-185)|5|6|
 |[FSDSS-378](https://www2.javhdporn.net/video/fsdss-378/)|4.7|6.3|
@@ -186,7 +193,7 @@ _（顺序记录到 miaa-604，剩下的逆序改天，我鉴不动辣）_
 <!-- prettier-ignore -->
 |rank|name|
 | :-: | :-: |
-|T0|永野いち夏 花狩まい 楪カレン|
+|T0|永野いち夏 花狩まい 楪カレン 二葉エマ|
 |T1|水卜櫻 松本いちか|
 |T2|桃乃木かな|神木蘭|
 |T3||

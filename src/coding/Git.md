@@ -431,3 +431,4 @@ exec /bin/bash
 ## external
 
 1. [How different are different diff algorithms in Git?](https://link.springer.com/article/10.1007/s10664-019-09772-z)
+2. [Commits are snapshots, not diffs](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)

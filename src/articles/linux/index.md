@@ -26,7 +26,8 @@ tag:
 
 20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，在[问题区](./problem.md)可见一斑。
 
-- [中文教程](https://arch.icekylin.online/)，讲的确实好，有一些针对中文用户的细节。
+- [中文教程](https://arch.icekylin.online/)，讲的比较好，有不少针对中文用户的细节。
+  - 本人也参与了一些错误修正和内容追加。
 - 不过还是建议 [archwiki - installation guide](https://wiki.archlinuxcn.org/wiki/安装指南) 也一起看看，取长补短。
 
 分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢另一块盘的数据<span class="heimu" title="你知道的太多了">安装时我确实失手格掉了全盘数据和分区</span>。
@@ -84,9 +85,15 @@ umount /mnt/windows
 
 #### find
 
+- 末尾的 `\;` 的作用是声明了 `-exec` 的结尾。
 - 众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 `rm *`。若我要反过来，只删除目录而排除文件呢？
   ```sh
-  find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r
+  find . -maxdepth 1 -mindepth 1 -type d -exec rm -r {} \;
+  # OR `find . -maxdepth 1 -mindepth 1 -type d -print0 | xargs -0 rm -r`
+  ```
+- 复制目录下所有文件，除了其中一个：
+  ```sh
+  find . -maxdepth 1 ! -name 'exclude.*' -type f -exec cp {} to_dir \;
   ```
 
 <!-- ## 外部包
@@ -120,37 +127,6 @@ btrfs <span class="heimu" title="你知道的太多了">其实现代文件系统
 2. 此时已经可以在资源管理器中访问了。
 3. 默认挂载是读写的，我比较建议改为只读，以免 windows 发癫改掉了什么东西。[在这里](https://github.com/maharmstone/btrfs#mount-options)可以进行一些设置，重启生效。
 
-## pacman & AUR Helper
-
-AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于一个**小型安装脚本**而非程序本体。这里有一篇[说明文章](https://blog.asukaminato.eu.org/AUR-vs-vs-cn-dd42c7a8f0f943dcabd23d4cdf03a914)。
-
-而由于 PKGBUILD 经常会从 github 等地方拉取软件压缩包，所以请[使用代理](#设置代理)。
-
-AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
-
-- 请定期 `sudo pacman -Syy` 更新本地缓存（update），否则可能找不到包（`The requested URL returned error: 404`）。（~~今日也无事可做~~）
-  - 也可以直接 `yay` 或 `paru` 进行更新。（这俩不带参数默认执行 `-Syu`）
-- 每次修改镜像之后都应该使用 `sudo pacman -Syyu` 强制更新缓存 ([ref](https://wiki.archlinuxcn.org/wiki/镜像源#强制_pacman_刷新软件包列表))。
-- yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
-  - 如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman ([ref](https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63))
-  - yay 的问题也太多了点。。可以试试 paru。
-- 另一个广泛使用的 AUR Helper 是 _paru_，使用 rust 编写。
-  - 与 yay 不同的是安装时默认展示 PKGBUILD 以供审阅。
-- pacman 更换镜像
-  ::: code-tabs
-  @tab ArchWSL
-  ```bash:no-line-numbers
-  nvim /etc/pacman.d/mirrorlist
-  ```
-  @tab termux
-  ```bash:no-line-numbers
-  termux-change-repo  # 虽然不是 pacman （
-  ```
-  :::
-- 疑难解答：
-  - pacman：[更新 pacman keyring](#更新-pacman-keyring)
-  - yay：疑难解答：[yay 安装问题](./problem.md#yay-安装问题) | [yay 换源问题](./problem.md#yay-换源问题) | [yay 权限错误](./problem.md#yay-权限错误)
-
 ## 设置
 
 这里是 _[文章 - 设置电脑](../computer_setting.md)_ 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
@@ -159,26 +135,23 @@ AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
    ```sh
    # fish
    alias e=nvim
-   alias l="ls -AFLhl --color=auto"
+   alias l='exa --long --color-scale --binary --header --time-style=long-iso'
    ```
-2. [调整 swappiness](<https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)>) 至 5（我对写入量敏感）
+2. [调整 swappiness](<https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)>) 至 5（我对写入量敏感，同时我拥有大 RAM）
 3. 设置 `/etc/fstab`
    - [挂载 tmpfs](../ramdisk.md)
      - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了，可以调整容量。
-   - 添加 `noatime` 标识，即不带访问时间 | [ref: archlinuxcn_group](https://t.me/archlinuxcn_group/2900548)
+   - 添加 `noatime` 标识，即不带访问时间([ref](https://t.me/archlinuxcn_group/2900548))
    - 删除 `subvolid`，详见 [timeshift 引发的血案](./problem.md#timeshift-引发的血案)
 4. [wayland 的 electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)（据说 wayland 对 electron 不太友好）
 5. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
 6. 设置 pacman：
-   - 将某些不常用的备用包加入 IgnorePkg，例如 _chromium_ | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
+   - 将某些不常用包和自更新包加入 IgnorePkg，例如 _chromium_ & xmake | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
    - 更改缓存至 ramdisk （`CacheDir`）
 7. 更改 AUR Helper 缓存（ 参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
    - yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
-   - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也挂上同一个 tmpfs，这样就能够解决问题了。
-     ```
-     # sudo nvim /etc/fstab  ，在 /tmp 已经挂上 tmpfs 后（记得改 username）：
-     /tmp/paru /home/absolutex/.cache/paru/clone  none  defaults,bind,nofail,x-systemd.device-timeout=2  0  0
-     ```
+   - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 [bind mount 同一个 tmpfs](https://github.com/lxl66566/config/blob/archlinux/etc/fstab)，这样就能够解决问题了。
+     - 然而这里还会出现权限问题。
    - 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
 8. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
 9. grub 改等待时间
@@ -195,7 +168,7 @@ AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
 
 ### 输入法
 
-我使用 fcitx5，输入要求为英语，双拼，日语。可以在遇到的问题里找到一些输入法的设置。
+我使用 fcitx5，输入要求为 _英语，双拼，日语_。可以在遇到的问题里找到一些输入法的设置。
 
 1. 双拼关闭快速输入，默认为`；`。
 
@@ -212,7 +185,7 @@ AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
 
 ```sh
 sudo pacman -S daed
-sudo systemctl enable --now daed.service
+sudo systemctl enable --now daed
 ```
 
 这样就开机自启，并可以 `localhost:2023` 进面板了。然后写节点，拖到 proxy 里就行。
@@ -284,27 +257,17 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 11. _窗口管理 - 窗口行为_ 设置 _焦点跟随鼠标_
 12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
 
-## bash
+## shell
 
-若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。所以最好装好系统就先装 shell.
-使用：
+最好装完系统就先装 shell。
 
-<details><summary>use zsh or fishshell, not bash</summary>
-
-- ~/.bashrc（仅含手动编辑）:
-  ```bash
-  alias ll='ls -alF'
-  ```
-- termux 的 bash 配置文件位置比较奇怪，在 `~/../usr/etc/bash.bashrc`。
-</details>
-
-可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。
-
-- [Y/N 选择器](https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395)
+- 若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。
+- bash 可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。
+- [Y/N 选择器](https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395)，以下是两个例子：
   ::: code-tabs
   @tab bash
   ```sh
-  read -n 1 -p "Are you sure to clean git and push force? (y/n) " answer
+  read -n 1 -p "Are you sure to clean git and push force? (y/N) " answer
   case ${answer:0:1} in
       y|Y )
           echo "Y"
@@ -316,7 +279,8 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
   ```
   @tab fish
   ```sh
-  read -n 1 -P 'Use tldr instead of man? (y/n) ' answer
+  # fish 的语法有些许差别。。例如 `-P` 大写
+  read -n 1 -P 'Use tldr instead of man? (Y/n) ' answer
   switch $answer
       case n N
           /usr/sbin/man "$argv"
@@ -325,10 +289,6 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
   end
   ```
   :::
-
-## 包使用
-
-推荐的包 / 软件请跳转[软件汇总](../../farraginous/recommend_packages.md#linux)
 
 ### fishshell
 
@@ -358,18 +318,48 @@ fishshell 语法自成一系，学习成本较高，但是补全太好用了，�
       bind \t forward-word    # 每个 tab 键只补全一个单词
   end
   ```
-- 我的习惯：
-
-```sh
-alias e=nvim    # editor，快捷编辑，或使用 e=$EDITOR
-alias l="ls -alF --color=auto"
-```
-
 - 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)，注意作用域与是否 export 的问题。
-  - 我喜欢使用 `set -Ux ...`，这样开机就能自动加载
-- 函数：使用 function 新增函数后，可以使用 `funcsave <function>` 保存到配置文件夹下以便修改与备份，修改后需要重新加载 fish：`. ~/.config/fish/config.fish`。（用不惯 `funced` 的交互式编辑。。）
+- 函数
+  - 使用 function 新增函数后，可以使用 `funcsave <function>` 保存到配置文件夹下以便修改与备份，修改后需要重新 source：`. ~/.config/fish/config.fish`
+  - 当然，官方推荐的修改是使用 `funced <function>`。
+    - `funced` 默认是 interactive 编辑的。我建议设置 `$EDITOR` 环境变量，可以在喜欢的编辑器里修改。
   - 删除函数 / 变量：`-e` == `--erase`
   - fish 皆为函数，alias 也是函数
+
+## pacman & AUR Helper
+
+AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于一个**小型安装脚本**而非程序本体。这里有一篇[说明文章](https://blog.asukaminato.eu.org/AUR-vs-vs-cn-dd42c7a8f0f943dcabd23d4cdf03a914)。
+
+而由于 PKGBUILD 经常会从 github 等地方拉取软件压缩包，所以请[使用代理](#设置代理)。
+
+AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
+
+- 请定期 `sudo pacman -Syy` 更新本地缓存（update），否则可能找不到包（`The requested URL returned error: 404`）。（~~今日也无事可做~~）
+  - 也可以直接 `yay` 或 `paru` 进行更新。（这俩不带参数默认执行 `-Syu`）
+- 每次修改镜像之后都应该使用 `sudo pacman -Syyu` 强制更新缓存 ([ref](https://wiki.archlinuxcn.org/wiki/镜像源#强制_pacman_刷新软件包列表))。
+- yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
+  - 如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman ([ref](https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63))
+  - yay 的问题也太多了点。。可以试试 paru。
+- 另一个广泛使用的 AUR Helper 是 _paru_，使用 rust 编写。
+  - 与 yay 不同的是安装时默认展示 PKGBUILD 以供审阅。
+- pacman 更换镜像
+  ::: code-tabs
+  @tab ArchWSL
+  ```bash:no-line-numbers
+  nvim /etc/pacman.d/mirrorlist
+  ```
+  @tab termux
+  ```bash:no-line-numbers
+  termux-change-repo  # 虽然不是 pacman （
+  ```
+  :::
+- 疑难解答：
+  - pacman：[更新 pacman keyring](#更新-pacman-keyring)
+  - yay：疑难解答：[yay 安装问题](./problem.md#yay-安装问题) | [yay 换源问题](./problem.md#yay-换源问题) | [yay 权限错误](./problem.md#yay-权限错误)
+
+## 包使用
+
+推荐的包 / 软件请跳转[软件汇总](../../farraginous/recommend_packages.md#linux)
 
 ### [neovim](../../coding/vim.md)
 

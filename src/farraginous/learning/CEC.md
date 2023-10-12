@@ -25,8 +25,6 @@ tag:
 
 抑制比 $\displaystyle d_n=\frac{A_{v0}}{A_{vn}}$
 
-噪声系数 = 输入信噪比 / 输出信噪比
-
 ## 谐振回路
 
 谐振曲线 $\displaystyle N(f)=\frac{\dot I}{\dot I_0}=\frac1{1+j\xi}$
@@ -37,7 +35,7 @@ tag:
 
 ### 串联谐振
 
-广义失谐系数 $\displaystyle \xi=\frac{\omega L-\frac1{\omega C}}{R}\approx Q_0\cdot\frac{2\Delta\omega}{\omega_0}$（电抗和 / 电阻）
+广义失谐系数 $\displaystyle \xi=\frac{\omega L-\frac1{\omega C}}{R}\approx 2Q_0\cdot\frac{\Delta\omega}{\omega_0}$（电抗和 / 电阻）
 
 谐振时，$\displaystyle\begin{cases} \dot V_{L0}=jQ_0\dot V_s \\ \dot V_{C0}=-jQ_0\dot V_s \end{cases}$
 
@@ -96,9 +94,17 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
   - 中和法：高增益，不适合带宽放大
   - 失配法：低增益，但稳定
 
-## 滤波器（非重点）
+## 滤波器
 
 - 石英晶体/陶瓷
   - 接入系数小
   - Q 很大（石英晶体 > 陶瓷）
   - 并联谐振频率比串联大；在此二频率中间显感性，其他显容性
+
+## 噪声
+
+- 串并联电阻噪声等于等效电阻噪声（均方值）
+- 并联谐振回路噪声约等于等效电阻产生的噪声
+- 等效噪声带宽 $\displaystyle B_n\approx\frac\pi 2B_{0.7}$
+- 噪声系数 $N_F$ = 输入信噪比 / 输出信噪比 $\approx\displaystyle 1 + \frac{U_a^2}{U_{io}^2} = ...$ （自激噪声 / 输入对输出的影响）
+  - 信噪比是功率比值
