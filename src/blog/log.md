@@ -1,5 +1,5 @@
 ---
-sidebar: heading
+# sidebar: heading
 headerDepth: 1
 date: 2022-07-21
 icon: list
@@ -15,11 +15,17 @@ category:
 
 - 较小的语句优化与增删改不作记录。因此即使博客几乎为**日更**，但日志较稀疏。
 - _维护_ 一般指花费时间较长或改动占比较大。
-- [学习笔记](./learning/)区只记录 _创建_ 活动。（学习不止，维护过多）
+- [学习笔记](../farraginous/learning/README.md)区只记录 _创建_ 活动。（学习不止，维护过多）
 
 :::
 
 ## 2023
+
+### 20231013
+
+- **新增 _博客_ 板块，并移动 _VuePress2 与博客心得_（更名为 _问题列表_） 与本页面到此处**
+  - 从 _日程库_ 中独立出 _博客日程_
+- add Google Analytics
 
 ### 20231011
 
@@ -29,7 +35,7 @@ category:
 
 ### 20230926
 
-- _软件汇总_ 新增 [linux](./recommend_packages.md#linux)
+- _软件汇总_ 新增 [linux](../farraginous/recommend_packages.md#linux)
 
 ### 20230925
 
@@ -37,7 +43,7 @@ category:
 
 ### 20230922
 
-- 新增[学习笔记 - 数字信号处理](./learning/dsp2.md)
+- 新增学习笔记 - 数字信号处理
 
 ### 20230920
 
@@ -45,7 +51,7 @@ category:
 
 ### 20230919
 
-- 新增[学习笔记 - 通信电子线路](./learning/CEC.md)
+- 新增学习笔记 - 通信电子线路
 
 ### 20230909
 
@@ -95,7 +101,7 @@ category:
 ### 20230801
 
 - 使用 pnpm 代替 npm 进行包管理
-- 设置自动部署并写进[心得](../gossip/withvuepress2.md)
+- 设置自动部署并写进[心得](./withvuepress2.md)
 
 ### 20230729
 
@@ -123,7 +129,7 @@ category:
 
 ### 20230716
 
-- [应用汇总](./recommend_packages.md) 大改动：重新排版，添加/归档许多条目。
+- _应用汇总_ 大改动：重新排版，添加/归档许多条目。
 
 ### 20230715
 
@@ -146,12 +152,12 @@ category:
 ### 20230712
 
 - **更换主题：[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)，并使用其提供的全文搜索，加密，Markdown 增强，评论功能**
-- _VuePress2 与博客心得_ 新增 [# 更换主题](../gossip/withvuepress2.md#更换主题)
+- _VuePress2 与博客心得_ 新增 [# 更换主题](./withvuepress2.md#更换主题)
 - 新增 [文章 - 输入法](../articles/input_method.md) 页面
 
 ### 20230711
 
-- _VuePress2 与博客心得_ 新增 [试图迁移至 vitepress](../gossip/withvuepress2.md#试图迁移至-vitepress)，[尝试更好的搜索](../gossip/withvuepress2.md#尝试更好的搜索)
+- _VuePress2 与博客心得_ 新增 [试图迁移至 vitepress](./withvuepress2.md#试图迁移至-vitepress)，[尝试更好的搜索](./withvuepress2.md#尝试更好的搜索)
 - config.ts 改动
 
 ### 20230704
@@ -165,7 +171,7 @@ category:
 
 ### 20230622
 
-- 新增 [学习笔记 - 双拼](./learning/ulpb.md)
+- 新增 _学习笔记 - 双拼_
 
 ### 20230620
 
@@ -173,7 +179,7 @@ category:
 
 ### 20230617
 
-- 新增 [学习笔记 - 日本語勉強](./learning/japanese.md)
+- 新增 _学习笔记 - 日本語勉強_
 - 合并 _禁用快应用中心_ 到 [设置手机 - 禁用软件](../articles/mobile_setting.md#禁用禁用软件)
 
 ### 20230615
@@ -190,8 +196,8 @@ category:
 
 ### 20230605
 
-- 新增 [学习笔记 - 数字系统设计](./learning/dsp.md)
-- 维护 [xxx 有多难用](../gossip/fuckxxx.md)，[网址汇总](./recommend_websites.md)
+- 新增 _学习笔记 - 数字系统设计_
+- 维护 _xxx 有多难用_，_网址汇总_
 
 ### 20230603
 
@@ -222,7 +228,7 @@ category:
 ### 20230514
 
 - [Linux](../articles/linux) 中新增内容
-- 网址推荐 中新增 [AI 工具](./recommend_websites.md#ai-工具)
+- _网址推荐_ 中新增 _AI 工具_
 - 文章新增 [VPS](../articles/vps.md)
 
 ### 20230510
@@ -281,10 +287,6 @@ category:
 
 - 维护 [Git](../coding/Git.md) 页面，并为博客添加注释。
 
-### 20230311
-
-- 维护 [校内专栏](./college.md)，回忆录及其他页面。
-
 ### 20230306
 
 - 新增 [如何看待 xxx # 如何看待大学班级](../gossip/consider.md#如何看待大学班级)
@@ -295,11 +297,11 @@ category:
 
 ### 20230303
 
-- 新增 [学习笔记 - 信号与系统](./learning/signals_and_systems.md)
+- 新增 _学习笔记 - 信号与系统_
 
 ### 20230301
 
-- 新增 [学习笔记 - 模电](./learning/analog_circuit.md)
+- 新增 _学习笔记 - 模电_
 
 ### 20230223
 
@@ -307,7 +309,7 @@ category:
 
 ### 20230222
 
-- 新增 _闲聊 - 自由道_ 入口 & [校内专栏 # 评教](./college.md#评教)
+- 新增 _闲聊 - 自由道（已移除）_ & _校内专栏 # 评教_
 
 ### 20230221
 
@@ -320,7 +322,7 @@ category:
 
 ### 20230215
 
-- 新增[闲聊-xxx 有多难用#运营商有多傻逼](../gossip/fuckxxx.md#运营商有多傻逼)，[设置电脑 - edge 转 firefox](../articles/computer_setting.md#edge-转-firefox)，[学习笔记 - 食物制作](./learning/foods.md)
+- 新增[闲聊-xxx 有多难用#运营商有多傻逼](../gossip/fuckxxx.md#运营商有多傻逼)，[设置电脑 - edge 转 firefox](../articles/computer_setting.md#edge-转-firefox)，_学习笔记 - 食物制作_
 - 修复了一些跳转错误
 
 ### 20230210
@@ -333,7 +335,7 @@ category:
 
 ### 20230206
 
-- [软件汇总](./recommend_packages.md)与[网址汇总](./recommend_websites.md)新增一些项目
+- _软件汇总_ 与 _网址汇总_ 新增一些项目
 - 新增[如何看待 xxx - 如何看待猫这种生物](../gossip/consider.md#如何看待猫这种生物)
 - 回忆录新增内容
 
@@ -383,14 +385,10 @@ category:
 
 - 新增[闲聊 - xxx 有多难用#B 站有多难用](../gossip/fuckxxx.md#b站有多难用)、[文章 - TG 教程](../articles/telegram.md)
 
-### 20221229
-
-- 完结[学习笔记-大学物理](./learning/physics.md)
-
 ### 20221226
 
-- 新增[学习笔记-电路分析基础](../farraginous/learning/circuit_analysis.md)
-- 新增*回忆录#大二上寒假*
+- 新增 _学习笔记-电路分析基础_
+- 新增 _回忆录#大二上寒假_
 
 ### 20221224
 
@@ -402,22 +400,10 @@ category:
 - 添加各图表的夜间模式适配
 - [OSU](../hobbies/rhythm_games.md#osu)新增键数求和统计
 
-### 20221219
-
-- 完结[学习笔记-复变函数与积分变换](./learning/complex_functions.md) （考完试了
-
 ### 20221215
 
 - 压缩所有站内图片。
 - 新增[闲聊-家与学校生活环境对比](../gossip/compare_home_to_college.md)
-
-### 202212.2
-
-- [网址汇总](./recommend_websites.md)中添加少量好用的网站
-
-### 20221130
-
-- 维护[网址汇总](./recommend_websites.md)
 
 ### 20221129
 
@@ -429,11 +415,11 @@ category:
 
 - 移动 _爱好-CSGO_ 页面至 其他游戏#CSGO （已撤销更改）
 - 新增[对 xxx 的希望#对推荐算法的希望](../gossip/hope.md#对推荐算法的希望)
-- 新增[软件汇总#为什么你们就是不能加个空格呢？](./recommend_packages.md#为什么你们就是不能加个空格呢？)
+- 新增 _软件汇总 # 为什么你们就是不能加个空格呢？_
 
 ### 20221120
 
-- [背词器](./reciter.md)英文网址更新
+- [背词器](../farraginous/reciter.md)英文网址更新
 
 ### 20221118
 
@@ -445,11 +431,11 @@ category:
 
 ### 20221113
 
-- 新增[学习笔记-复变函数与积分变换](./learning/complex_functions.md)
+- 新增 _学习笔记 - 复变函数与积分变换_
 
 ### 20221105
 
-- 新增[杂项-学习笔记](./learning/) <-- [大学物理](./learning/physics.md)
+- 新增[杂项 - 学习笔记](../farraginous/learning/README.md) <-- _学习笔记 - 大学物理_
 
 ### 20221028
 
@@ -458,7 +444,7 @@ category:
 ### 20221021
 
 - 新增[闲聊-对算法竞赛 & OJ contest 的希望](../gossip/hope.md#对算法竞赛-oj-contest的希望)页面（已合并）
-- 在软件汇总页面中，将 Via 更换为[m 浏览器](./recommend_packages.md#m浏览器)
+- 在软件汇总页面中，将 _Via_ 更换为 _m 浏览器_
 
 ### 20221020
 
@@ -474,7 +460,7 @@ category:
 
 ### 20220930
 
-- 新增[VuePress2 与博客心得#配置 sidebar 问题](../gossip/withvuepress2.md#配置sidebar问题)
+- 新增[VuePress2 与博客心得 # 配置 sidebar 问题](./withvuepress2.md#配置sidebar问题)
 
 ### 20220929
 
@@ -483,7 +469,7 @@ category:
 
 ### 20220928
 
-- 新增[校内专栏#校内极限生存](./college.md#校内极限生存)
+- 新增 _校内专栏 # 校内极限生存_
 
 ### 20220921
 
@@ -492,20 +478,20 @@ category:
 
 ### 20220915
 
-- 维护[网址汇总](./recommend_websites.md)页面，新增大量条目，更改排版
+- 维护 _网址汇总_ 页面，新增大量条目，更改排版
 
 ### 20220911
 
-- 新增[校内专栏](./college.md)页面
+- 新增[校内专栏](../farraginous/college.md)页面
 
 ### 20220908
 
 - 新增[音游#我的记录](../hobbies/rhythm_games.md#我的记录)四个图表
-- [软件汇总](./recommend_packages.md#软件汇总)新增 Keepass2Android 与 KeePassXC 两个密码管理器（已合并为[Keepass 系列](./recommend_packages.md#keepass系列)）
+- _软件汇总_ 新增 Keepass2Android 与 KeePassXC 两个密码管理器（已合并为 _Keepass 系列_）
 
 ### 20220906
 
-- 新增[软件汇总#Seal](./recommend_packages.md#seal)
+- 新增 _软件汇总 # Seal_
 - 新增[编程-工具-Github](../coding/github.md)页面
 - 维护隐藏页面：灵感 | 愿景，文章-对 win11 的设置（迁移至[电脑设置](../articles/computer_setting.md)）
 
@@ -515,7 +501,7 @@ category:
 
 ### 20220901
 
-- [使用 vue 组件创建背词器失败](../gossip/withvuepress2.md#html转vue组件失败问题)
+- [使用 vue 组件创建背词器失败](./withvuepress2.md#html转vue组件失败问题)
 
 ### 20220831
 
@@ -535,8 +521,7 @@ category:
 
 ### 20220824
 
-- 新增[网址汇总#我的常用网站](./recommend_websites.md#我的常用网站)
-- 维护[网址汇总](./recommend_websites.md)
+- 新增 _网址汇总 # 我的常用网站_
 
 ### 20220822
 
@@ -548,7 +533,7 @@ category:
 
 ### 20220817
 
-- [安装<span v-pre>$\displaystyle \LaTeX$</span>插件](../gossip/withvuepress2.md#关于数学插件)并实装
+- [安装$\displaystyle \LaTeX$插件](./withvuepress2.md#关于数学插件)
 
 ### 20220815
 
@@ -596,7 +581,7 @@ category:
 
 - 改为使用图床存放图片(images 分支)
 - 新增 [游戏-明日方舟](../hobbies/other_games/arknights.md)，文章#Windows 端记录软件使用时长（迁移至[文章 - 记录软件使用时长](../articles/time_record.md#windows端记录软件使用时长)）
-- 维护 [VuePress2 与博客心得](../gossip/withvuepress2.md)
+- 维护 [VuePress2 与博客心得](./withvuepress2.md)
 
 ### 20220726
 
@@ -614,7 +599,7 @@ category:
 
 ### 20220718
 
-- 新增 [闲聊#VuePress2 与博客心得](../gossip/withvuepress2.md)
+- 新增 [闲聊#VuePress2 与博客心得](./withvuepress2.md)
 
 ### 20220717
 
@@ -663,11 +648,11 @@ category:
 
 ### 20220619
 
-- 新增 [软件汇总#浏览器插件&浏览器脚本](./recommend_packages.md#浏览器插件)
+- 新增 [软件汇总#浏览器插件&浏览器脚本](../farraginous/recommend_packages.md#浏览器插件)
 
 ### 20220618
 
-- 新增 [网址汇总#其他游戏](./recommend_websites.md#其他游戏)&[TG 推荐](../articles/telegram.md#频道群组推荐)
+- 新增 _网址汇总 # 其他游戏_ & [TG 推荐](../articles/telegram.md#频道群组推荐)
 - 维护 [游戏-音游](../hobbies/rhythm_games.md)、[编程-C++](../coding/Cpp.md)、[回忆录](../hide/memories.md)
 
 ### 20220617
@@ -719,5 +704,5 @@ category:
 ### 20220504
 
 - 发布博客
-- 创建 [主页](../index.md)、[闲聊-关于作者](../gossip/author.md)、[编程-Rust](../coding/Rust.md)、[杂项-软件汇总](./recommend_packages.md)&[网址汇总](./recommend_websites.md)、游戏 - 其他游戏 - csgo 游戏配置
+- 创建 [主页](../index.md)、[闲聊 - 关于作者](../gossip/author.md)、[编程 - Rust](../coding/Rust.md)、[杂项 - 软件汇总](../farraginous/recommend_packages.md)、[杂项 - 网址汇总](../farraginous/recommend_websites.md)、游戏 - 其他游戏 - csgo 游戏配置
 - 添加搜索插件

@@ -7,31 +7,14 @@ category:
   - 经历
 ---
 
-# VuePress2 与博客心得
+# 问题列表
 
-建博客时我还是个小白，对 javascript & typescript & css & vue 一窍不通，html 也只看过菜鸟教程的前几部分，因此在搭建博客过程中遇到了很多问题。有一些在现在的我看来已经不是问题，但仍有问题悬而未决。本栏写于 20220718（之后持续更新），算是对我建站三个半月来的一些总结。
+::: tip
 
-设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo, Wordpress, HUGO, docsify 等。后来随着慢慢深入接触也了解了 Vitepress([已尝试](#试图迁移至-vitepress)), mdbook, Gitbook, Docusaurus。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>（出于简洁性原因，曾经我甚至没有采用官方推荐的首页主题）。vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF)，但对一个萌新而言这些理由显然~~看不懂~~…
+- 以下问题可能不具有时效性与主题泛用性，请自行判断。
+- 按时间升序。
 
-然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我被网上教程（我看的很多是用 js 写的）与官方文档的 ts 搞得不明所以。（官方文档肯定正确，但是官方的说明显然不是面向当时的我的）
-
-20230712 由于依赖地狱把 node_modules 给崩了，重装，回档也救不回来。破罐子破摔，试了下 VuePress Theme Hope[^1] 主题，然后发现异常好用。。该主题自带合适的评论插件，搜索增强插件，[Markdown 增强](https://plugin-md-enhance.vuejs.press/zh/) 插件，应有尽有。如果一开始就用此主题，定然能解决下述大部分的问题。
-[^1]: [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)
-
-我写博客并在朋友间分享这件事也带动了朋友们写博客——一个朋友[^3]用的 vuepress 默认主题，另一个[^4]用的 hexo。
-[^3]: [dream_oyh 的 blog](https://dream-oyh.github.io/)
-[^4]: [Lilic 的博客](https://lilic2233.github.io/)
-
-后来在开发过程中还遇到了亿些问题——
-:::warning
-以下问题可能不具有时效性，请自行判断
 :::
-
-## 主题选择
-
-最开始用的 Vuepress2 默认主题，快，但比较折磨。之后选择了 VuePress Theme Hope[^1]，方便强大，迁移也不难，但代价是静态体积多了一倍。
-
-如果你专注于博客内容产出，也可以看看 [Gungnir V2](https://github.com/Renovamen/vuepress-theme-gungnir)。
 
 ## 字体颜色问题
 
@@ -61,7 +44,7 @@ category:
 
 我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比 vuepress2 文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个 theme 出来...我哪有那个能耐啊，直接 Ctrl+CV 了。不过这种东西本应在文档里指明的。
 
-后来发现。。事实上这个插件是 VuePress Theme Hope[^1] 主题的专用组件，因此未说明默认主题下的使用方法。
+后来发现。。事实上这个插件是 [VuePress Theme Hope 主题](./index.md#主题选择)的专用组件，因此未说明默认主题下的使用方法。
 
 ## 添加黑幕
 
@@ -114,7 +97,7 @@ export default defineUserConfig({
 
 ### 另一个方法
 
-创建 `.vuepress/styles/index.scss` 并写入 css。vuepress 会自动引入，无需写入配置。
+创建 `.vuepress/styles/index.scss` 并写入 css。vuepress 会自动引入，无需写入配置。是通用解法，与主题无关。
 
 ## 图床衍生问题
 
@@ -151,7 +134,7 @@ export default defineUserConfig({
 1. 这个图床有*容量上限：5GB*和*单张图片上限：5MB*
 2. 原有的每张图都需要手动替换，因为 src 是随机生成的
 3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
-4. 在[关于 SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](/images/gossip/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
+4. 在[关于 SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](/images/blog/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
 
 因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：
 
@@ -390,9 +373,9 @@ export default ({
 };
 ```
 
-但是失败了，`console.log` 并未执行，说明 `.vuepress/enhanceApp.js` 未被自动加载。我也尝试了在 `config.ts` 中加入 `enhanceAppFiles: resolve(__dirname, 'enhanceApp.js')`[^2]，无效。
+但是失败了，`console.log` 并未执行，说明 `.vuepress/enhanceApp.js` 未被自动加载。我也尝试了在 `config.ts` 中加入 `enhanceAppFiles: resolve(__dirname, 'enhanceApp.js')`[^1]，无效。
 
-[^2]: [ref](https://vuepress.vuejs.org/zh/plugin/option-api.html#enhanceappfiles)
+[^1]: [ref](https://vuepress.vuejs.org/zh/plugin/option-api.html#enhanceappfiles)
 
 > ps. 现在已使用 Prettier 格式化代码，其会自动添加空格，曲线救国。
 
@@ -597,6 +580,37 @@ function sidebar() {
 
 最后还是决定不加了，毕竟防爆用的原始链接是 `raw.githubusercontent.com` 下的，本身就被墙了；而且还没有考虑可能出现的的死循环问题。
 
-## external
+## Google Analystics
 
-1. [No CSS Club](https://nocss.club/)
+**ps. 当天发现 _cloudflare pages_ 自带 _Web Analytics_，白干。**
+
+想看看我的博客的访问数据，但是不能直接用一个简单计数器，否则我自己对我的博客访问最多，会污染数据。于是使用 Google 家的免费服务。
+
+跟随[官网操作](https://analytics.google.com/)，账号和媒体资源名称随便填。输入博客网址，然后会给你一段 html 代码让你写进网页。
+
+很容易想到在 `config.ts` 中写 head 项，把 script 载入每个博客页面。这里是[官网的说明](https://v2.vuepress.vuejs.org/zh/reference/config.html#head)。
+
+写的时候犹豫了一下 `async` 要怎么写，稍作尝试就写出来了。示例：
+
+```ts
+...
+head: [
+  [
+    "script",
+    {
+      async: true,
+      src: "https://www.googletagmanager.com/gtag/js?id=G-xxxxxxxx",
+    },
+  ],
+  [
+    "script",
+    {},
+    `<!-- Google tag (gtag.js) -->
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-xxxxxxxx');`,
+  ],
+],
+...
+```

@@ -17,7 +17,7 @@ category:
 
 ## 经历
 
-1. [(Arch)linux](./linux)：我的 linux 笔记与遇到的问题
+1. [(Arch)linux](./linux/index.md)：我的 linux 笔记与遇到的问题
 2. [设置电脑（windows）](./computer_setting.md)
 3. [设置手机（Android）](./mobile_setting.md)
 4. [设置 VPS](./vps.md)
@@ -27,7 +27,7 @@ category:
 1. [TG（telegram）教程](./telegram.md)
 2. [ADB 教程与常用指令](./adb.md)
 3. [Markdown 教程](./markdown.md)
-4. [VPN 教程与推荐](./vpn.md)
+4. [VPN 教程与推荐（加密）](./vpn.md)
 5. [Android 查看手机 cpu 指令集](./Android_ISA.md)
 6. [最小化二进制文件与 dll](./minimize_exe.md)
 7. [命令行压缩](./cli_compress.md)

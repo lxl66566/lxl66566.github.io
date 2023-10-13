@@ -82,6 +82,7 @@ export default sidebar({
 			children: ["algorithm.md", "bot.md"],
 		},
 	],
+	"/blog/": ["index.md", "withvuepress2.md", "log.md", "todo.md"],
 	"/farraginous/learning/": [
 		{
 			text: "学习笔记",
