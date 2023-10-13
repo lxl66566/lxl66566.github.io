@@ -18,7 +18,7 @@ tag:
 
 ## 常见名词
 
-- UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`。
+- UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`，一个容易被忽视的 UB 是 `a[i] = i++;`。([ref](https://en.cppreference.com/w/c/language/eval_order))
 
 ## 配置环境
 

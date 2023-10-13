@@ -56,6 +56,15 @@ windows 上建议直接无脑 all in vscode。
 1. `Ctrl + Shift + P`打开命令面板，搜索`Python: Select Interpreter`
 2. 选中你的虚拟环境
 
+## GUI
+
+一些 GUI 框架。（我都没用过）
+
+- [nicegui](https://github.com/zauberzeug/nicegui)：基于 web 的
+- [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
+- [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+
 ## 导出全部环境依赖
 
 `python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
