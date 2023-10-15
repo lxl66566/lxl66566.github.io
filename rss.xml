@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 13 Oct 2023 16:08:43 GMT</pubDate>
-    <lastBuildDate>Fri, 13 Oct 2023 16:08:43 GMT</lastBuildDate>
+    <pubDate>Sun, 15 Oct 2023 15:10:54 GMT</pubDate>
+    <lastBuildDate>Sun, 15 Oct 2023 15:10:54 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>导航</category>
@@ -1656,6 +1656,28 @@ Please specify it by one of the following ways:<br> - in the GitHub Action confi
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>D</mi><mi>T</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><mi>R</mi><mi>e</mi><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>=</mo><msub><mi>X</mi><mi>e</mi></msub><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>D</mi><mi>T</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><mi>j</mi><mi>I</mi><mi>m</mi><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo stretchy="false">]</mo><mo>=</mo><msub><mi>X</mi><mi>o</mi></msub><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr></mtable></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\begin{cases} DTFT[Re[x(n)]]=X_e(e^{j\omega})\\ DTFT[jIm[x(n)]]=X_o(e^{j\omega})\end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">TFT</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">e</span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)]]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">TFT</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">m</span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)]]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
 <li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mrow><mo fence="true">{</mo><mtable rowspacing="0.36em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>D</mi><mi>T</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><msub><mi>x</mi><mi>e</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>=</mo><mi>R</mi><mi>e</mi><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>D</mi><mi>T</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><msub><mi>x</mi><mi>o</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>=</mo><mi>j</mi><mi>I</mi><mi>m</mi><mo stretchy="false">[</mo><mi>X</mi><mo stretchy="false">(</mo><msup><mi>e</mi><mrow><mi>j</mi><mi>ω</mi></mrow></msup><mo stretchy="false">)</mo><mo stretchy="false">]</mo></mrow></mstyle></mtd></mtr></mtable></mrow></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle\begin{cases} DTFT[x_e(n)]=Re[X(e^{j\omega})]\\ DTFT[x_o(n)]=jIm[X(e^{j\omega})]\end{cases}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">TFT</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">e</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="mord mathnormal">e</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span><span class="mclose">)]</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">TFT</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">o</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="mord mathnormal">m</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03588em;">jω</span></span></span></span></span></span></span></span></span><span class="mclose">)]</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
 </ul>
+<h3> DFS</h3>
+<p>时域、频域均为离散周期，时域周期为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">T_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，间隔为 T；频域周期为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>s</mi></msub></mrow><annotation encoding="application/x-tex">f_s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，间隔为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">F_0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>s</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>T</mi></mfrac></mrow><annotation encoding="application/x-tex">f_s=\frac{1}{T}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1076em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<p>定义式、性质只需要用 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>ω</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>k</mi></mfrac><mi>N</mi></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \omega=\frac{2\pi}{k}N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ω</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span> 代入 (I)DTFT 即可。</p>
+<p>DFS：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mover accent="true"><mi>X</mi><mo stretchy="true">~</mo></mover><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mover accent="true"><mi>x</mi><mo stretchy="true">~</mo></mover><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>N</mi></mfrac><mi>k</mi><mi>n</mi></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \widetilde X(k)=\sum_{n=0}^{N-1}\widetilde x(n)e^{-j\frac{2\pi}Nkn}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.1933em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9433em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span><span class="svg-align" style="width:calc(100% - 0.1667em);margin-left:0.1667em;top:-3.6833em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.26em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.26em" viewBox="0 0 600 260" preserveAspectRatio="none"><path d="M200 55.538c-77 0-168 73.953-177 73.953-3 0-7
+-2.175-9-5.437L2 97c-1-2-2-4-2-6 0-4 2-7 5-9l20-12C116 12 171 0 207 0c86 0
+ 114 68 191 68 78 0 168-68 177-68 4 0 7 2 9 5l12 19c1 2.175 2 4.35 2 6.525 0
+ 4.35-2 7.613-5 9.788l-19 13.05c-92 63.077-116.937 75.308-183 76.128
+-68.267.847-113-73.952-191-73.952z"></path></svg></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6906em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span class="svg-align" style="width:calc(100% - 0.0556em);margin-left:0.0556em;top:-3.4306em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.26em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.26em" viewBox="0 0 600 260" preserveAspectRatio="none"><path d="M200 55.538c-77 0-168 73.953-177 73.953-3 0-7
+-2.175-9-5.437L2 97c-1-2-2-4-2-6 0-4 2-7 5-9l20-12C116 12 171 0 207 0c86 0
+ 114 68 191 68 78 0 168-68 177-68 4 0 7 2 9 5l12 19c1 2.175 2 4.35 2 6.525 0
+ 4.35-2 7.613-5 9.788l-19 13.05c-92 63.077-116.937 75.308-183 76.128
+-68.267.847-113-73.952-191-73.952z"></path></svg></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.004em;"><span style="top:-3.413em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span><span class="mord mathnormal mtight">kn</span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>助记符：旋转因子 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>W</mi><mi>n</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>N</mi></mfrac></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle W_n=e^{-j\frac{2\pi}N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.004em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.004em;"><span style="top:-3.413em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<h3> DFT</h3>
+<p>在 DFS 基础上只取主值。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><msub><mo stretchy="false">)</mo><mi>N</mi></msub><mo>=</mo><mover accent="true"><mi>x</mi><mo stretchy="true">~</mo></mover><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x((n))_N=\widetilde x(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mopen">((</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6906em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span class="svg-align" style="width:calc(100% - 0.0556em);margin-left:0.0556em;top:-3.4306em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.26em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.26em" viewBox="0 0 600 260" preserveAspectRatio="none"><path d="M200 55.538c-77 0-168 73.953-177 73.953-3 0-7
+-2.175-9-5.437L2 97c-1-2-2-4-2-6 0-4 2-7 5-9l20-12C116 12 171 0 207 0c86 0
+ 114 68 191 68 78 0 168-68 177-68 4 0 7 2 9 5l12 19c1 2.175 2 4.35 2 6.525 0
+ 4.35-2 7.613-5 9.788l-19 13.05c-92 63.077-116.937 75.308-183 76.128
+-68.267.847-113-73.952-191-73.952z"></path></svg></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+<p>圆周（循环移位）：<s>相当于传送门</s>，先周期延拓，再移位，再取主值。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>D</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo><msub><mo stretchy="false">)</mo><mi>N</mi></msub><mo stretchy="false">]</mo><mo>=</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mo>−</mo><mi>k</mi><mi>m</mi></mrow></msubsup><mi>X</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">FT</span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mopen">((</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1828em;vertical-align:-0.2837em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-2.4163em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">km</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2837em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><msub><mi>R</mi><mi>N</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>=</mo><mi>N</mi><mi>δ</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">DFT[R_N(n)]=N\delta(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">FT</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span>（直流分量）</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -2360,6 +2382,8 @@ npm ERR! This command does not support workspaces.</p>
 <div class="subtitle">谜，侃，思，叹，道</div>
 <p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
 <h2> 2023</h2>
+<h3> 20231014</h3>
+<p>视聚力和精神力一样，是可再生消耗品</p>
 <h3> 20231013</h3>
 <p>穿着漏底拖鞋，奔波在阴暗朦胧的下雨天。七天工作日，日日爆课；八股文作业，焦头烂额。</p>
 <hr>
@@ -4652,10 +4676,14 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 </ul>
 <h2> 常见名词</h2>
 <ul>
-<li>UB：Undefined behavior，未定义行为，典型的有 <code>i = i++ + ++i</code>，一个容易被忽视的 UB 是 <code>a[i] = i++;</code>。(<a href="https://en.cppreference.com/w/c/language/eval_order" target="_blank" rel="noopener noreferrer">ref</a>)</li>
+<li>UB：Undefined behavior，未定义行为，典型的有 <code>i = i++ + ++i</code>，一个容易被忽视的 UB 是 <code>a[i] = i++;</code>。(<a href="https://en.cppreference.com/w/c/language/eval_order" target="_blank" rel="noopener noreferrer">ref</a>)
+<ul>
+<li>还有一些易忽视 UB：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，<s>还有一些操作裸指针的</s> <a href="https://zhuanlan.zhihu.com/p/391088391" target="_blank" rel="noopener noreferrer">src</a></li>
+</ul>
+</li>
 </ul>
 <h2> 配置环境</h2>
-<p>默认 Windows 下，使用 vscode 开发。如果使用其他系统 | IDE，请移步他处。</p>
+<p>本文默认使用 windows vscode 开发。如果使用其他 IDE，请移步他处。linux 简单很多，应该不用我赘述。</p>
 <h3> mingw + <em>Microsoft C/C++</em></h3>
 <blockquote>
 <p>使用此方法的好处是比较无脑，可以快速上手；可以直接点右上角 <em>运行</em> 按钮快速运行单文件；可以可视化调试。</p>
@@ -4771,55 +4799,63 @@ Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可�
 <li>安装 llvm: <code>scoop install llvm</code></li>
 <li>在 target 中添加一句 <code>set_toolchains("clang")</code> 即可。</li>
 </ol>
-<h2> 类型转换</h2>
+<h2> 语言相关</h2>
+<p><s>太悲哀了</s></p>
+<h3> 类型转换</h3>
 <blockquote>
-<p>= C++11</p>
+<p>&gt;= C++11</p>
 </blockquote>
 <ul>
 <li><code>static_cast</code>：不进行安全检查</li>
 <li><code>const_cast</code>：设置或移除指针/引用所指对象的 const</li>
-<li><code>dynamic_cast</code>：进行安全检查，用于指针/引用转换</li>
+<li><code>dynamic_cast</code>：进行安全检查，用于指针/引用转换
+<ul>
+<li>有些情况下 <code>dynamic_cast</code> 的性能可以接近 <code>static_cast</code>。但大多数时候有额外开销。</li>
+</ul>
+</li>
 <li><code>reinterpret_cast</code>：无视类型，进行最底层的比特位复制</li>
 </ul>
-<h2> 智能指针</h2>
+<h3> 智能指针</h3>
 <blockquote>
-<p>= C++11, &lt;memory&gt;</p>
+<p>&gt;= C++11, &lt;memory&gt;</p>
 </blockquote>
 <ul>
-<li><code>shared_ptr</code> 允许多个指针指向同一个对象</li>
+<li><code>shared_ptr</code> 允许多个指针指向同一个对象，引用计数
+<ul>
+<li>(C++14) 使用 <code>std::make_shared&lt;Type&gt;()</code> 构建</li>
+<li><code>reset()</code> 不带参数则释放（== release()）</li>
+</ul>
+</li>
 <li><code>unique_ptr</code> 独占所指向的对象</li>
 <li><code>weak_ptr</code> <em>shared_ptr</em> 的弱引用，不影响其计数器</li>
 </ul>
-<h3> 操作</h3>
-<ul>
-<li>可以使用 <code>std::make_shared&lt;Type&gt;()</code> 构建 (C++14)</li>
-<li><code>reset()</code> 不带参数则释放（== release()）</li>
-</ul>
-<h2> 多行字符串</h2>
+<h3> 多行字符串</h3>
 <p>Raw string: <code>R""(some\text)""</code></p>
-<h2> 面向对象</h2>
+<h3> 面向对象</h3>
 <p>protected：指能被子类访问，不能被外部访问的成员。</p>
 <p>C++ 允许多继承，菱形继承需要将中间类声明为虚类。（不要使用菱形继承！）</p>
-<h2> option</h2>
-<p>学过 rust 后，比较推崇 rust 中的 Option 的写法。C++ 中有 std::optional&lt;T&gt; (C++17) 起到类似作用。</p>
+<h3> option</h3>
+<p>(C++17) C++ 中有 <code>std::optional&lt;T&gt;</code> 起到类似 rust 中 Option 的作用。</p>
 <ul>
 <li>一些函数：<code>has_value() -&gt; bool</code>, <code>value() -&gt; T</code>, <code>value_or(T) -&gt; T</code></li>
 </ul>
-<h2> template</h2>
+<h3> template</h3>
 <p>前往 <a href="#external">external 1.</a>，讲得非常不错。</p>
-<h2> variant</h2>
-<p>错误处理的时候比较好用。类似</p>
+<h3> variant</h3>
+<p>本意是封装的 <code>union</code>，可以当成错误处理的一种实现，类似 rust <code>Result</code>.</p>
+<p>c++23 请使用 <code>std::expected</code>.</p>
 <blockquote>
 <p><a href="https://github.com/bitwizeshift/result" target="_blank" rel="noopener noreferrer">github.com/bitwizeshift/result</a> —— Asuka Minato</p>
 </blockquote>
 <p>获取值一般用 std::get + try catch，也可用 std::visit :</p>
-<div class="language-cpp line-numbers-mode" data-ext="cpp"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>（来源：<a href="https://en.cppreference.com/w/cpp/utility/variant/visit" target="_blank" rel="noopener noreferrer">std::visit</a>）</p>
-<h2> 程序计时</h2>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>（<a href="https://en.cppreference.com/w/cpp/utility/variant/visit" target="_blank" rel="noopener noreferrer">src: std::visit</a>）</p>
+<h3> assert</h3>
+<div class="language-cpp line-numbers-mode" data-ext="cpp"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 程序计时</h2>
 <p>程序计时可以用于分析代码效率。<a href="https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c" target="_blank" rel="noopener noreferrer">代码参考</a> <span class="heimu" title="你知道的太多了">大佬能直接看汇编分析，但是太复杂还得 benchmark</span></p>
 <h2> 其他注意点</h2>
 <ul>
 <li>C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.</li>
-<li>慎用 C++20 的 std::ranges::remove_if()</li>
+<li>被 C++20 的 <code>std::ranges::remove_if()</code> 坑过（可能当时编译器实现有 bug(?)）</li>
 <li>或许很难注意到的一些 <a href="#%E5%B8%B8%E8%A7%81%E5%90%8D%E8%AF%8D">UB</a>：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，<s>还有一些操作裸指针的</s> <a href="https://zhuanlan.zhihu.com/p/391088391" target="_blank" rel="noopener noreferrer">source</a></li>
 </ul>
 <h2> Qt</h2>
@@ -4829,11 +4865,11 @@ Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可�
 <p>以下内容并不是 Qt 基础的教程，缺乏目的性和针对性</p>
 </div>
 <h3> 基本介绍 --&gt; <a href="https://www.qt.io/" target="_blank" rel="noopener noreferrer">官网</a></h3>
-<p>Qt 是一个跨平台，跨语言的 GUI 框架。我用 C++做的最早的 GUI 应用就是用 Qt 写的。对于 C++开发 GUI 应用来说，Qt 是比较简单快速的选择。</p>
+<p>Qt 是一个成熟的跨平台，<s>跨语言</s>的 GUI 框架（不建议再使用 MFC 等等了）。我用 C++ 做的最早的 GUI 应用就是用 Qt 写的。对于 C++ + GUI 需求，Qt 是比较简单快速的选择。</p>
 <ul>
 <li>它封装了很多窗口与控件类，可以轻松使用而并不需要深入了解其内部实现与原理 <em><s>（实际上它几乎封装了一切）</s></em></li>
-<li>它支持可视化构建窗口界面，极大幅度减小代码量</li>
-<li>它提供的软件打包方式比较人性化</li>
+<li>它支持可视化构建窗口界面 (Qt Designer)，极大幅度减小代码量</li>
+<li><s>它提供的软件打包方式比较人性化</s>（有坑）</li>
 </ul>
 <h3> 安装</h3>
 <blockquote>
@@ -4866,7 +4902,7 @@ Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可�
 <p>Qt 官方提供了 QButtonGroup 类。该类提供了对 QAbstractButton（即记忆化选择按钮）的分组。将按钮添加到 QButtonGroup 对象中，点击某一按钮时，组中其他按钮会被自动取消 toggle（已点击状态）。你也可以为组中每个按钮赋予数字 id，通过 id 对控件进行调用。</p>
 <p>当然，QButtonGroup 类的使用范围是具有很大局限性的。若想对其他不同类型的控件新建分组该怎么做呢？</p>
 <p>答：使用 <code>QVector&lt;QWidget*&gt;</code>。由于部分常用控件(QPushButton,QLable 等)继承自 QWidget，因此通过 QWidget 类型容器对组内控件进行统一操作，例如需要隐藏主窗口内的所有控件，只需
-<code>for (auto i = elements.begin();i != elements.end();++i) (*i)-&gt;hide();</code>
+<code>for (auto &amp;i : elements) i-&gt;hide();</code>
 即可。</p>
 <p><em>对于 hide() 与 show() 操作来说，更简便的方法是将所有控件加入新的 widget，然后将该 widget 的父对象设为主窗口。之后的隐藏与显示只需对该 widget 操作即可。</em></p>
 <h3> 关于资源文件</h3>
@@ -7804,10 +7840,28 @@ Address: 2001:da8:8007:1358:20c:29ff:fe89:603f</p>
 <h2> 微信有多难用</h2>
 <p>不是很理解很多以前同学抛弃 QQ 转到微信的做法。在我看来就是从一坨屎跳出来跑到了另一坨更臭的屎里。</p>
 <ul>
-<li>之前爆出过，转发文件一次，就复制一次。虽然修复了，但这条已经成为了微信永久的笑点了。</li>
+<li>之前爆出过，转发文件一次，就复制一次。虽然修复了，但这条已经成为了微信永久的笑点了。
+<ul>
+<li>然而微信电脑版还是没有修复这个问题（特性）</li>
+</ul>
+</li>
 <li>20230614 备份出现检测错网络，无法自定义备份聊天与备份保存位置。比起 QQ 备份差了十八条街。</li>
-<li>权限管理稀烂。朋友圈等。</li>
+<li>权限管理稀烂。朋友圈等。
+<ul>
+<li>群聊群主除了踢人，啥都干不了。</li>
+</ul>
+</li>
 <li>挂梯子登陆 wechat，直接被封了</li>
+<li>linux 下没有可用的微信客户端。
+<ul>
+<li>
+<blockquote>
+<p>为了保障你的账号安全，暂不支持使用网页版微信。你可以前往微信官网 https://weixin.qq.com/ 下载客户端登录。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>在我的平板 wechat 上会出现小程序无法获取位置信息的情况。（已开权限）</li>
 </ul>
 <h2> B 站有多难用</h2>
 <p>B 站你<strong>什么时候</strong>啊?</p>
@@ -9145,6 +9199,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">10.5</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://www2.javhdporn.net/video/ipx-726" target="_blank" rel="noopener noreferrer">IPX-726</a></td>
 <td style="text-align:center">11</td>
 <td style="text-align:center">3</td>
@@ -9179,6 +9240,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">8.7</td>
+<td style="text-align:center">9.1</td>
+<td style="text-align:center"></td>
+</tr>
 <tr>
 <td style="text-align:center"><a href="https://missav.com/zh/miaa-146" target="_blank" rel="noopener noreferrer">MIAA-146</a></td>
 <td style="text-align:center">8.4</td>
@@ -9403,6 +9470,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center"></td>
+<td style="text-align:center">9.2</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
 <td style="text-align:center">8.2</td>
 <td style="text-align:center">7</td>
 <td style="text-align:center"></td>
@@ -9555,6 +9628,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"><a href="https://missav.com/mide-721" target="_blank" rel="noopener noreferrer">MIDE-721</a></td>
 <td style="text-align:center">8.2</td>
 <td style="text-align:center">5.7</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">9.4</td>
+<td style="text-align:center">4.2</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -9753,6 +9832,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"><a href="https://missav.com/mide-007" target="_blank" rel="noopener noreferrer">MIDE-007</a></td>
 <td style="text-align:center">4.2</td>
 <td style="text-align:center">7</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">3</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -11306,6 +11391,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 </thead>
 <tbody>
 <tr>
+<td style="text-align:center"><a href="https://github.com/lxl66566/sicp-js-zh/" target="_blank" rel="noopener noreferrer">sicp-js</a></td>
+<td style="text-align:center">2023.10.13-<br>在读</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center">操作系统导论</td>
 <td style="text-align:center">2023.09.22-<br>在读</td>
 <td style="text-align:center"></td>
@@ -11325,7 +11416,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 </tr>
 <tr>
 <td style="text-align:center">sicp</td>
-<td style="text-align:center">2023.0?.??-<br>在读</td>
+<td style="text-align:center">2023.0?.??-<br>放弃，转向<em>sicp-js</em></td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
@@ -12559,7 +12650,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center">牛顿与苹果树</td>
 <td style="text-align:center">2023.10.03</td>
 <td style="text-align:center">9.2</td>
-<td style="text-align:center">8</td>
+<td style="text-align:center">7</td>
 <td style="text-align:center">5</td>
 </tr>
 <tr>
@@ -12898,7 +12989,8 @@ x 表示水平位移，h 表示垂直位移。<br>
 <h4> 牛顿与苹果树</h4>
 <ul>
 <li>留白很厉害</li>
-<li>非纯粹的渐进式推进，我认为优于传统的并行个人线</li>
+<li>渐进式个人线，并且安排得有深意</li>
+<li>个人线中间的 <em>作中挿入ムービー</em> 太生草了吧喂</li>
 </ul>
 <h4> 兰斯</h4>
 <p>由于我剧情党不喜欢玩 RPG，入坑兰斯更多也是看剧情的，因此使用<a href="https://ngabbs.com/read.php?tid=22317178&amp;rand=8" target="_blank" rel="noopener noreferrer">修改器</a>。</p>
