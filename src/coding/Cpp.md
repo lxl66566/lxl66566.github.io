@@ -19,10 +19,11 @@ tag:
 ## 常见名词
 
 - UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`，一个容易被忽视的 UB 是 `a[i] = i++;`。([ref](https://en.cppreference.com/w/c/language/eval_order))
+  - 还有一些易忽视 UB：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，~~还有一些操作裸指针的~~ [src](https://zhuanlan.zhihu.com/p/391088391)
 
 ## 配置环境
 
-默认 Windows 下，使用 vscode 开发。如果使用其他系统 | IDE，请移步他处。
+本文默认使用 windows vscode 开发。如果使用其他 IDE，请移步他处。linux 简单很多，应该不用我赘述。
 
 ### mingw + _Microsoft C/C++_
 
@@ -171,51 +172,55 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 1. 安装 llvm: `scoop install llvm`
 2. 在 target 中添加一句 `set_toolchains("clang")` 即可。
 
-## 类型转换
+## 语言相关
 
-> = C++11
+~~太悲哀了~~
+
+### 类型转换
+
+> \>= C++11
 
 - `static_cast`：不进行安全检查
 - `const_cast`：设置或移除指针/引用所指对象的 const
 - `dynamic_cast`：进行安全检查，用于指针/引用转换
+  - 有些情况下 `dynamic_cast` 的性能可以接近 `static_cast`。但大多数时候有额外开销。
 - `reinterpret_cast`：无视类型，进行最底层的比特位复制
 
-## 智能指针
+### 智能指针
 
-> = C++11, &lt;memory>
+> \>= C++11, &lt;memory>
 
-- `shared_ptr` 允许多个指针指向同一个对象
+- `shared_ptr` 允许多个指针指向同一个对象，引用计数
+  - (C++14) 使用 `std::make_shared<Type>()` 构建
+  - `reset()` 不带参数则释放（== release()）
 - `unique_ptr` 独占所指向的对象
 - `weak_ptr` _shared_ptr_ 的弱引用，不影响其计数器
 
-### 操作
-
-- 可以使用 `std::make_shared<Type>()` 构建 (C++14)
-- `reset()` 不带参数则释放（== release()）
-
-## 多行字符串
+### 多行字符串
 
 Raw string: `R""(some\text)""`
 
-## 面向对象
+### 面向对象
 
 protected：指能被子类访问，不能被外部访问的成员。
 
 C++ 允许多继承，菱形继承需要将中间类声明为虚类。（不要使用菱形继承！）
 
-## option
+### option
 
-学过 rust 后，比较推崇 rust 中的 Option 的写法。C++ 中有 std::optional&lt;T> (C++17) 起到类似作用。
+(C++17) C++ 中有 `std::optional<T>` 起到类似 rust 中 Option 的作用。
 
 - 一些函数：`has_value() -> bool`, `value() -> T`, `value_or(T) -> T`
 
-## template
+### template
 
 前往 [external 1.](#external)，讲得非常不错。
 
-## variant
+### variant
 
-错误处理的时候比较好用。类似<Badge text="?" /> rust Result.
+本意是封装的 `union`，可以当成错误处理的一种实现，类似 rust `Result`.
+
+c++23 请使用 `std::expected`.
 
 > [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato
 
@@ -242,7 +247,15 @@ std::visit(overloaded{
 }, v);
 ```
 
-（来源：[std::visit](https://en.cppreference.com/w/cpp/utility/variant/visit)）
+（[src: std::visit](https://en.cppreference.com/w/cpp/utility/variant/visit)）
+
+### assert
+
+```cpp
+static_assert(a < 0 && "error message"); // compile time
+#include <cassert>
+assert(a < 0 && "error message");  // runtime
+```
 
 ## 程序计时
 
@@ -251,24 +264,26 @@ std::visit(overloaded{
 ## 其他注意点
 
 - C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.
-- 慎用 C++20 的 std::ranges::remove_if()
+- 被 C++20 的 `std::ranges::remove_if()` 坑过（可能当时编译器实现有 bug(?)）
 - 或许很难注意到的一些 [UB](#常见名词)：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，~~还有一些操作裸指针的~~ [source](https://zhuanlan.zhihu.com/p/391088391)
 
 ## Qt
 
 :::tip
+
 此处 Qt 部分版本代码为 Qt4-5，不保证能正常迁移至 Qt6;
 
 以下内容并不是 Qt 基础的教程，缺乏目的性和针对性
+
 :::
 
 ### 基本介绍 --> [官网](https://www.qt.io/)
 
-Qt 是一个跨平台，跨语言的 GUI 框架。我用 C++做的最早的 GUI 应用就是用 Qt 写的。对于 C++开发 GUI 应用来说，Qt 是比较简单快速的选择。
+Qt 是一个成熟的跨平台，~~跨语言~~的 GUI 框架（不建议再使用 MFC 等等了）。我用 C++ 做的最早的 GUI 应用就是用 Qt 写的。对于 C++ + GUI 需求，Qt 是比较简单快速的选择。
 
 - 它封装了很多窗口与控件类，可以轻松使用而并不需要深入了解其内部实现与原理 _~~（实际上它几乎封装了一切）~~_
-- 它支持可视化构建窗口界面，极大幅度减小代码量
-- 它提供的软件打包方式比较人性化
+- 它支持可视化构建窗口界面 (Qt Designer)，极大幅度减小代码量
+- ~~它提供的软件打包方式比较人性化~~（有坑）
 
 ### 安装
 
@@ -306,7 +321,7 @@ Qt 官方提供了 QButtonGroup 类。该类提供了对 QAbstractButton（即�
 当然，QButtonGroup 类的使用范围是具有很大局限性的。若想对其他不同类型的控件新建分组该怎么做呢？
 
 答：使用 `QVector<QWidget*>`。由于部分常用控件(QPushButton,QLable 等)继承自 QWidget，因此通过 QWidget 类型容器对组内控件进行统一操作，例如需要隐藏主窗口内的所有控件，只需
-`for (auto i = elements.begin();i != elements.end();++i) (*i)->hide();`
+`for (auto &i : elements) i->hide();`
 即可。
 
 _对于 hide() 与 show() 操作来说，更简便的方法是将所有控件加入新的 widget，然后将该 widget 的父对象设为主窗口。之后的隐藏与显示只需对该 widget 操作即可。_

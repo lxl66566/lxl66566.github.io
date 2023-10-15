@@ -81,3 +81,23 @@ $\displaystyle H(e^{j\omega})=A\cdot e^{j\omega(N-M)}\frac{\prod^M e^{j\omega}-c
 - $\displaystyle\begin{cases} x(n)=x_e(n)+x_o(n)\\ x^*(-n)=x_e(n)-x_o(n)\end{cases}$
 - $\displaystyle\begin{cases} DTFT[Re[x(n)]]=X_e(e^{j\omega})\\ DTFT[jIm[x(n)]]=X_o(e^{j\omega})\end{cases}$
 - $\displaystyle\begin{cases} DTFT[x_e(n)]=Re[X(e^{j\omega})]\\ DTFT[x_o(n)]=jIm[X(e^{j\omega})]\end{cases}$
+
+### DFS
+
+时域、频域均为离散周期，时域周期为 $T_0$，间隔为 T；频域周期为 $f_s$，间隔为 $F_0$，$f_s=\frac{1}{T}$
+
+定义式、性质只需要用 $\displaystyle \omega=\frac{2\pi}{k}N$ 代入 (I)DTFT 即可。
+
+DFS：$\displaystyle \widetilde X(k)=\sum_{n=0}^{N-1}\widetilde x(n)e^{-j\frac{2\pi}Nkn}$
+
+助记符：旋转因子 $\displaystyle W_n=e^{-j\frac{2\pi}N}$
+
+### DFT
+
+在 DFS 基础上只取主值。
+
+$x((n))_N=\widetilde x(n)$
+
+圆周（循环移位）：~~相当于传送门~~，先周期延拓，再移位，再取主值。$\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)$
+
+$DFT[R_N(n)]=N\delta(k)$（直流分量）
