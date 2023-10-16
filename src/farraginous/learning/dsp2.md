@@ -22,6 +22,8 @@ $R_k(n)$ 为 $[0,k)$ 上的全 1 序列
 
 周期性：对采样后信号求$\displaystyle \frac{2\pi}\omega$，分为三种情况判断：整数，整分式，无理。
 
+离散线性卷积，结果长度为 $N_1+N_2-1$
+
 ### 采样
 
 $\omega$ 为数字角频率，$\Omega$ 为模拟角频率；$\omega n, \Omega t$
@@ -77,7 +79,7 @@ $\displaystyle H(e^{j\omega})=A\cdot e^{j\omega(N-M)}\frac{\prod^M e^{j\omega}-c
 ### DTFT
 
 - 共轭对称序列：$\displaystyle x_e(n)=x_e^*(-n)$，即实部偶函数，虚部奇函数
-- 共轭反对称序列 $x_o(n)$
+- 共轭反对称序列 $x_o(n)$，即实部奇函数，虚部偶函数
 - $\displaystyle\begin{cases} x(n)=x_e(n)+x_o(n)\\ x^*(-n)=x_e(n)-x_o(n)\end{cases}$
 - $\displaystyle\begin{cases} DTFT[Re[x(n)]]=X_e(e^{j\omega})\\ DTFT[jIm[x(n)]]=X_o(e^{j\omega})\end{cases}$
 - $\displaystyle\begin{cases} DTFT[x_e(n)]=Re[X(e^{j\omega})]\\ DTFT[x_o(n)]=jIm[X(e^{j\omega})]\end{cases}$
@@ -94,10 +96,14 @@ DFS：$\displaystyle \widetilde X(k)=\sum_{n=0}^{N-1}\widetilde x(n)e^{-j\frac{2
 
 ### DFT
 
-在 DFS 基础上只取主值。
+DFT：在 DFS 基础上只取主值，$\displaystyle X(k)=\sum_{n=0}^{N-1}x(n)W_N^{nk}$
 
 $x((n))_N=\widetilde x(n)$
 
 圆周（循环移位）：~~相当于传送门~~，先周期延拓，再移位，再取主值。$\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)$
 
 $DFT[R_N(n)]=N\delta(k)$（直流分量）
+
+实部 DFT 得到（圆周）共轭对称的频谱；频谱实部 IDFT 得到（圆周）共轭对称的时域谱
+
+圆周卷积的主值 N >= 线性卷积的长度，则两者相等；否则混叠。

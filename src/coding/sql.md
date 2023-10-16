@@ -57,3 +57,19 @@ conn.close()
 ### rust
 
 随便找个 [gpt](../farraginous/recommend_websites.md#ai-工具) 写吧。
+
+## 运维
+
+有一次需要删除某个字段，而我是一个完全不懂数据库的非计专业学生（
+
+```sql
+mysql -p  # 登录
+show databases;
+use xxx;
+show tables;
+select * from users where sID = 'xxx';
+delete from users where sID = 'xxx';
+\q
+```
+
+- 查看 sql 历史指令：`less ~/.mysql_history`

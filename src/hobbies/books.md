@@ -18,8 +18,16 @@ tag:
 
 我曾不得不读纸质书，但我更喜欢读电子书。
 
-- pdf 格式的书（多为学术类），~~我使用 _云记_ 阅读~~ （已不用，详见[笔记软件横评](../articles/note.md)），可以在上面做笔记，划重点。
-- 网络小说我曾喜欢使用[永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，现在则使用[开源阅读](../farraginous/recommend_packages.md#开源阅读)。但是很遗憾，仍有很多小说无法找到。[^1]
+- 无需做笔记的书使用 [开源阅读](../farraginous/recommend_packages.md#开源阅读)，可同步进度，支持 pdf, epub
+- 否则使用 [Notein](../articles/note.md)
+- 很遗憾，即使使用许多书源 + Google，仍有很多小说难以找到。[^1]
+
+<details><summary>点击展开老工具</summary><p>
+
+- pdf 格式的书（学术类）使用 _云记_ 阅读
+- 网络小说使用[永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，是一个盗版免费 app。
+
+</p></details>
 
 [^1]: [吐槽一下](../essay.md#20230713)
 
@@ -316,6 +324,12 @@ _（[此处附上证明](https://wwp.lanzout.com/iL6o8076zi2j)）_
 - [大学刑法课](http://www.zhihuxs.com/zhxs.asp?id=7959667)
 
 ## 说两句
+
+### 操作系统导论
+
+- 行文风格比较平易近人，没有太多“学术”书籍的感觉。
+- > 事实上，Dijkstra 不仅提出了死锁问题的一些解决方案，更重要的是他首先注意到了死锁的存在，至少是以书面形式。然而，他称之为“致命的拥抱”，（幸好）没有流行起来。——操作系统导论
+  - [中二] Black Lotus 「死亡拥抱（Dead by Embracing）」！
 
 ### 别闹了，费曼先生
 
