@@ -9,13 +9,15 @@ tag:
 
 # Python
 
-和[C++](./Cpp.md)页面一样杂乱，想到什么写什么。
+## 安装
 
-## 开发准备（vscode）
+python 本身的安装应该不用我多说，[scoop](../farraginous/recommend_packages.md#scoop) 一行结束。不过注意，没有启用虚拟环境时，电脑中**最好只有一个 python**。
 
-windows 上建议直接无脑 all in vscode。
+## 开发环境
 
-### 扩展
+关于开发，我直接无脑 all in [vscode](./vscode.md)。
+
+### vscode 扩展
 
 开发 python 前，强烈建议安装以下扩展：
 
@@ -43,51 +45,128 @@ windows 上建议直接无脑 all in vscode。
 },
 ```
 
-该配置在保存时自动格式化，自动纠正语法。
+该配置在保存时自动格式化。
 
 ### 启用虚拟环境
 
 创建虚拟环境并引入依赖后，代码仍会收到 vscode 的报错：
 
-![set_vscode_environment](/images/coding/python/set_vscode_environment1.png)
+![vscode 中未启用环境](/images/coding/python/set_vscode_environment1.png)
 
 解决方法：
 
 1. `Ctrl + Shift + P`打开命令面板，搜索`Python: Select Interpreter`
 2. 选中你的虚拟环境
 
-## GUI
+### poetry
 
-一些 GUI 框架。（我都没用过）
+这是一种更为现代的 python 包管理器，看起来像抄的 npm，爆杀 pip，略胜 miniconda。
 
-- [nicegui](https://github.com/zauberzeug/nicegui)：基于 web 的
-- [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
-- [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+#### 安装
 
-## 导出全部环境依赖
+这里是[官方教程](https://python-poetry.org/docs/#installation)。poetry 在 windows 上的 install script 可谓傻逼[^1]，开代理不能装，关代理不能装，scoop 用的也是官方 install script。只好使用 pipx。
 
-`python -m pip freeze > requirements.txt`该命令导出全部环境使用的依赖包为`requirements.txt`。
-
-`requirements.txt` 也可以每行只写一个模块名。
-
-## [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
-
-## [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
-
-使用 logging（py 自带） 进行能够控制等级的输出。基本用法：
-
-```py
-import logging
-logging.basicConfig(level=logging.INFO)
-logging.info("nexturl: %s", nexturl)
-# 如果要保存到文件：
-logging.basicConfig(filename='...', encoding='utf-8')
+```sh
+pip install pipx -i https://pypi.tuna.tsinghua.edu.cn/simple
+pipx install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-## 序列化
+> pipx: 事实上，它使用 pip，但专注于安装和管理可直接作为应用程序从命令行运行的 Python 包。
 
-对象序列化极为简单无脑，爱了
+[^1]: [不读系统代理，不能配置代理，不做错误处理，不具有可读性](https://t.me/withabsolutex/1304)
+
+#### 基本命令
+
+- 新建项目：`poetry new <package name>`
+  - 创建 .toml 文件：`poetry init`，然后跟着提示填入信息
+- 包管理
+  - 添加包：`poetry add <package name>`
+  - 移除包：`poetry remove <package name>`
+  - 列出可用包：`poetry show`
+- 安装依赖：`poetry install`，会自动新建虚拟环境
+- 虚拟环境
+  - 查询：`poetry env info`
+  - 激活：`poetry shell`
+    - 或者在虚拟环境下的 Scripts 文件夹中打开命令行，输入 `call activate.bat`.
+- 运行：`poetry run <filename>.py`
+
+#### 换源
+
+参考[文档](https://python-poetry.org/docs/repositories#project-configuration)。
+
+```toml
+[[tool.poetry.source]]
+name = "tsinghua-pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "primary"
+```
+
+### miniconda
+
+提供 python 包管理与虚拟环境。我已弃用 miniconda，转向 poetry。
+
+::: details archived
+
+Anaconda 体积过于庞大（6G+），**强烈建议[安装 miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda 捆绑祸害了多少编程新人！（包括我）</span> windows 可以使用 [scoop](../farraginous/recommend_packages.md#scoop) 一行搞定。
+
+### 基本命令
+
+```sh
+conda create -n <name> python=<version> # 创建环境
+conda create -n <name> --clone <FromEnv<name>>    # 迁移环境
+conda info -e   # 查看环境
+conda activate <name> # 唤醒环境
+conda deactivate    # 关闭环境
+conda remove -n <name> --all  # 删除环境，也可进入 conda 安装目录下的 /envs/ 删除文件夹
+conda list  # 查看环境内工具包
+```
+
+### 高级技巧
+
+#### bat 文件中调用 conda 指令
+
+调用前加入`call activate.bat`指令
+
+#### 创建纯净环境
+
+我们使用[上述指令](#创建环境)创建环境后：
+
+<img alt="anaconda_list" src="/images/coding/python/anaconda_1.png"  width="65%" height="65%"/>
+
+可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
+
+这里给出一个解决方法：
+
+1. 在任意目录下新建 txt 文档，输入
+
+```batch
+@EXPLICIT
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/python-3.9.7-h6244533_1.tar.bz2
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/pip-21.2.4-py39haa95532_0.tar.bz2
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4-py39haa95532_0.tar.bz2
+```
+
+并保存为`env.txt`（名字不重要）
+
+2. 该目录下执行`conda create --name <name> --file env.txt`
+
+![anaconda_pureenv](/images/coding/python/anaconda_2.png)
+
+这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller)进行打包前的准备。
+
+:::
+
+### 其他
+
+如果不使用现代包管理器（如果用 pip），需要在项目下导出一个 `requirements.txt` 用于声明项目依赖。可以用 pip 导出，也可以自己写模块。可以不写版本，只写每行一个模块名。
+
+## 语言相关
+
+### [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
+
+### 序列化
+
+对象序列化极为简单无脑。弱类型语言的大优势。
 
 ```py
 import pickle
@@ -99,9 +178,46 @@ with open("soup.test", "rb") as f:
     soup = pickle.load(f)   # deserialize
 ```
 
-## [pprint](https://docs.python.org/3/library/pprint.html)
+## 常用模块
+
+### [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
+
+使用 logging（py 自带） 进行能够控制等级的输出。基本用法：
+
+```py
+import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("nexturl: %s", nexturl)
+# 如果要保存到文件：
+logging.basicConfig(filename='...', encoding='utf-8')
+```
+
+### [pprint](https://docs.python.org/3/library/pprint.html)
 
 pretty-print，打印对象比较好用。
+
+### configparser
+
+py 自带模块。configparser 做 config 对客户而言比较新手友好。如果对 config file 有很高兼容性要求可以用 json。
+
+```py
+from configparser import ConfigParser
+config = ConfigParser()
+config.read("config.ini")                   # 读
+config.get(section, option, fallback="")    # 获取（带默认值）
+config[section][option] = value             # 新增 / 修改
+with open("config.ini", "w") as configfile:
+  config.write(configfile)                  # 写
+```
+
+## GUI
+
+一些 GUI 框架。（我都没用过）
+
+- [nicegui](https://github.com/zauberzeug/nicegui)：基于 web 的
+- [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
+- [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
 
 ## 图像相关
 
@@ -159,110 +275,6 @@ img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
 ```
 
 使用此内置函数进行高斯模糊将无法改变 sigma 的值。
-
-## 使用 poetry 进行包管理
-
-这是一种更为现代的 python 包管理措施，个人认为确实比 pip 优秀，但门槛较高。[关于安装](https://python-poetry.org/docs/#installation)；记得按照安装提示添加环境变量。
-
-以下记录一些基本命令：
-
-- 新建项目：`poetry new <package name>`
-  - 创建 .toml 文件：`poetry init`，然后跟着提示填入信息
-- 包管理
-  - 添加包：`poetry add <package name>`
-  - 移除包：`poetry remove <package name>`
-  - 列出可用包：`poetry show`
-- 安装所需环境（使用者）：`poetry install`，其会自动为您新建虚拟环境
-- 虚拟环境
-  - 查询：`poetry env info`
-  - 激活：`poetry shell`；或者在虚拟环境下的 Scripts 文件夹中打开命令行，输入 `call activate.bat`.
-- 运行：`poetry run <filename>.py`
-
-### 换源
-
-为了方便没有梯子的其他使用者安装环境，可在 .toml 文件中添加：
-
-```
-[[tool.poetry.source]]
-name = "tsinghua-pypi"
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-default = true
-```
-
-以指定源。
-
-## 序列化
-
-序列化是指将对象转换成字节流，从而存储对象或将对象传输到内存、数据库或文件的过程。——[MS](https://learn.microsoft.com/zh-cn/dotnet/visual-basic/programming-guide/concepts/serialization/)
-
-python 自带了 json 包进行 .json 序列化。也可以使用 configparser 进行 .ini 序列化。
-
-```py
-class my_config:
-    def __init__(self):
-        self.config = ConfigParser()
-        self.config.read(DIR / "config.ini")
-    def get(self, section, option) -> str:
-        return self.config.get(section, option, fallback="")
-    def set(self, section, option, value):
-        self.config[section][option] = value
-    def write_to_file(self):
-        with open(DIR / "config.ini", "w") as configfile:
-            self.config.write(configfile)
-```
-
-## miniconda
-
-提供 python 包管理与虚拟环境。
-
-由于 pyinstaller 的打包会将环境内所有的工具包都整合到一起，因此使用 conda 的虚拟环境隔离出运行所需环境，可以减小打包体积。
-
-Anaconda 体积过于庞大（6G+），**强烈建议[安装 miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda 捆绑祸害了多少编程新人！（包括我）</span>
-
-### 基本命令
-
-```sh
-conda create -n <name> python=<version> # 创建环境
-conda create -n <name> --clone <FromEnv<name>>    # 迁移环境
-conda info -e   # 查看环境
-conda activate <name> # 唤醒环境
-conda deactivate    # 关闭环境
-conda remove -n <name> --all  # 删除环境，也可进入 conda 安装目录下的 /envs/ 删除文件夹
-conda list  # 查看环境内工具包
-```
-
-### 高级技巧
-
-#### bat 文件中调用 conda 指令
-
-调用前加入`call activate.bat`指令
-
-#### 创建纯净环境
-
-我们使用[上述指令](#创建环境)创建环境后：
-
-<img alt="anaconda_list" src="/images/coding/python/anaconda_1.png"  width="65%" height="65%"/>
-
-可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
-
-这里给出一个解决方法：
-
-1. 在任意目录下新建 txt 文档，输入
-
-```batch
-@EXPLICIT
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/python-3.9.7-h6244533_1.tar.bz2
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/pip-21.2.4-py39haa95532_0.tar.bz2
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4-py39haa95532_0.tar.bz2
-```
-
-并保存为`env.txt`（名字不重要）
-
-2. 该目录下执行`conda create --name <name> --file env.txt`
-
-![anaconda_pureenv](/images/coding/python/anaconda_2.png)
-
-这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller)进行打包前的准备。
 
 ## 打包
 

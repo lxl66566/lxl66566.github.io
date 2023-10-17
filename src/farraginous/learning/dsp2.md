@@ -51,7 +51,7 @@ $T_0$ 为原周期，$T$ 为采样周期；下标$_h$是截止频率，$_s$为 s
 
 ## 频率响应与滤波器
 
-群延迟：某一个角频率 W1 的群延迟是在 W1 上的相频曲线的切线斜率 \*-1
+群延迟：某一个角频率 W1 的群延迟是在 W1 上的相频曲线的切线斜率 \*-1. $\displaystyle grd(\omega)=-\frac{d\theta(\omega)}{d\omega}$
 
 $\displaystyle H(e^{j\omega})=A\cdot e^{j\omega(N-M)}\frac{\prod^M e^{j\omega}-c_r}{\prod^N e^{j\omega}-d_r}$ ，c 零 d 极
 

@@ -10,7 +10,6 @@ export default sidebar({
 				"wish.md",
 				"fuckxxx.md",
 				"difficulties.md",
-				"withvuepress2.md",
 				"consider.md",
 				"hope.md",
 				"compare_home_to_college.md",
@@ -83,6 +82,13 @@ export default sidebar({
 		},
 	],
 	"/blog/": ["index.md", "withvuepress2.md", "log.md", "todo.md"],
+	"/essay/": [
+		{
+			text: "随笔",
+			link: "/essay/",
+			children: ["2023.md", "2022.md", "earlier.md"],
+		},
+	],
 	"/farraginous/learning/": [
 		{
 			text: "学习笔记",
@@ -153,5 +159,6 @@ export default sidebar({
 				"log.md",
 			],
 		},
+		"essay/",
 	],
 });

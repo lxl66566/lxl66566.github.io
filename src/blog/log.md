@@ -21,6 +21,11 @@ category:
 
 ## 2023
 
+### 20231017
+
+- 按年份独立 [随笔](../essay/index.md) 并放入 _年终总结_
+- 维护 python, Git
+
 ### 20231013
 
 - **新增 _博客_ 板块，并移动 _VuePress2 与博客心得_（更名为 _问题列表_） 与本页面到此处**
@@ -136,7 +141,7 @@ category:
 - 为图表添加 `loading="lazy"`
 - 再刷机一次，[设置手机](../articles/mobile_setting.md) 新增内容
 - 音游新增 [pjsk](../hobbies/rhythm_games.md#pjsk)
-- [灭蟑记（六）](../essay.md#_20230715)
+- [灭蟑记（六）](../essay/2023.md#_20230715)
 
 ### 20230714
 
@@ -627,7 +632,7 @@ category:
 
 ### 20220703
 
-- 维护 [随笔](../essay.md)
+- 维护 [随笔](../essay/2022.md)
 
 ### 20220701
 
@@ -694,7 +699,7 @@ category:
 ### 20220506
 
 - 更改 navbar 逻辑
-- 新增 [编程-Git](../coding/Git.md)&_其他工具（已整合为[python](../coding/python.md)页面）_、[随笔](../essay.md)
+- 新增 [编程-Git](../coding/Git.md)&_其他工具（已整合为[python](../coding/python.md)页面）_、[随笔](../essay/index.md)
 
 ### 20220505
 

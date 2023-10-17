@@ -153,7 +153,7 @@ tag:
 
 ### 禁用快应用中心
 
-> 这是一篇久远的文章，是本页面中年龄最大的一篇。<br/>
+> 这是一篇久远的文章，是本页面中年龄最大的一篇。  
 > 快应用服务框架本意是好的，大家联合起来统一为一个标准，减少不必要的重复开发。（参考 browser）
 
 但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和**家人**的身心健康，建议禁用之：
@@ -204,7 +204,7 @@ tag:
 
 我第一次搞，以为要刷砖了比较慌，直接用 miflash 把整个原生 ROM 都刷进去了。。（最后还刷失败了，还是无限重启，miflash 你不得好死）
 
-> 再吐槽一下 [bandizip](../farraginous/recommend_packages.md#bandizip)，解压 `*.tgz` 时默认一层一层解（`*.tgz` -> `*.tar` -> `*`）。。一个 10G 的包硬生生给我占了 26G 的空间。<br/>
+> 再吐槽一下 [bandizip](../farraginous/recommend_packages.md#bandizip)，解压 `*.tgz` 时默认一层一层解（`*.tgz` -> `*.tar` -> `*`）。。一个 10G 的包硬生生给我占了 26G 的空间。
 >
 > <div class="image50" style="text-align: center; "><img alt="fun1" src="/images/articles/mobile_setting/fuckbandizip.png" /><div>你为什么不开？你为什么不开？</div></div>
 

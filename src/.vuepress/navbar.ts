@@ -50,7 +50,7 @@ export default navbar([
 	},
 	{
 		text: "随笔",
-		link: "/essay.md",
+		link: "/essay/",
 		icon: "article",
 	},
 	{

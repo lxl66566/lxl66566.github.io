@@ -419,14 +419,40 @@ git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-
    ```
    注意，`tac` 反转可能会出现第一行与第二行换行缺失问题，请手动添加换行。
 2. 分 commit 上传
-   `sh
-while IFS= read -r hash; do
-    echo "pushing $hash"
-    git push origin $hash:refs/heads/master -f
-done < log_hash.txt
-exec /bin/bash
-`
+   ```sh
+   while IFS= read -r hash; do
+   echo "pushing $hash"
+   git push origin $hash:refs/heads/master -f
+   done < log_hash.txt
+   exec /bin/bash
+   ```
    关于分支与是否加 `-f` 需要根据情况判断。
+
+## 奇技淫巧
+
+### 自动化 squash
+
+最初目的是不要让 Github Actions 的每日 commit 过多（），于是想自动将所有 Github Actions 的 commits 压在一起。而 CI 流程让我无法手动 squash。话不多说，直接上脚本：
+
+```sh
+git commit -a --fixup HEAD
+GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash HEAD~2
+```
+
+首先 `commit -a` 跟踪所有改动并提交，`--fixup HEAD` 表明这是一个对上次 commit 的修正。新的提交会被命名为 `fixup! <last commit message>`。
+
+然后关于 `--autosquash`，[文档](https://git-scm.com/docs/git-rebase#Documentation/git-rebase.txt---autosquash)指出以 `squash! …​` or `fixup! …​` or `amend! …​` 开头的 commit 都会被 squash 进 `…` 对应的 commit。但是这个参数的使用条件被限制死了：
+
+> _move commits that begin with squash!/fixup! ==under -i==_
+
+也就是必需要进入 `--interactive` 环境下才可进行 _autosquash_。在平常这可能不是一个问题，手动在 vim `:q` 即可。但现在需要在全自动条件下执行，又无法绕开 `-i` 条件，那么我们要怎么办呢？
+
+`GIT_SEQUENCE_EDITOR=:` 是绝杀，它重写了环境变量，使 git 无法打开编辑器。这样 _rebase_ 就会被强制结束，问题解决。
+
+总结：
+
+> _Asuka Minato：用 ci 的 repo 为啥要在意提交次数，人家 cn 源的 bot 那次数都没人管_  
+> _AbsoluteX：话题结束，鉴定为吃太饱（_
 
 ## external
 

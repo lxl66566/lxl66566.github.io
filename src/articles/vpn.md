@@ -112,7 +112,7 @@ _（采用 Trojan 协议）_
 
 学生免费用 360 天，每月 30G。[说明](https://glados.rocks/console/education)
 
-> _此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。_<br/>
+> _此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。_  
 > 很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。
 
 |  月付  | 流量  |  限速   |

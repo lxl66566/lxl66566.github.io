@@ -111,7 +111,7 @@ export default defineUserConfig({
 
 后来经过不断摸索发现大概是 git 内包含了一个 git 的原因。把 images 文件夹整个移出去以后就好了。
 
-## 编译失败问题
+## EPERM 编译失败问题
 
 运行 `npm run docs:build` 时报错。显示：
 
@@ -614,3 +614,15 @@ gtag('config', 'G-xxxxxxxx');`,
 ],
 ...
 ```
+
+## 静态资源引用错误
+
+build 报错
+
+> ✖ Compiling with vite - failed in 1.80s<br/>
+> Error: [vite]: Rollup failed to resolve import "/images/essay/20220619.png" from "D:/program/lxlsblog/src/.vuepress/.temp/pages/essay/2022.html.vue".
+> This is most likely unintended because it can break your application at runtime.<br/>
+> If you do want to externalize this module explicitly add it to
+> `build.rollupOptions.external`
+
+第二句提示报错，发现是 public 资源改位置了而文章里没改，没引用到。
