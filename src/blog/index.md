@@ -42,6 +42,8 @@ category:
 
 我写博客并在朋友间分享这件事也带动了朋友们写博客——甲朋友[^1]用的 vuepress 默认主题，乙[^2]用的 hexo，丙[^3]直接手搓 bootstrap，丁[^4]和我一样用 VuePress Theme Hope。不知不觉带动了整整四个人写，连我自己都很惊讶。
 
+本人对存储空间敏感，因此博客的图片很少（越后期新增越少），且所有图片均压缩。
+
 [^1]: [dream_oyh 的 blog](https://dream-oyh.github.io/)
 [^2]: [Lilic 的博客](https://lilic2233.github.io/)
 [^3]: [Perry Kum's Personal Blog](https://perrykum.github.io/)

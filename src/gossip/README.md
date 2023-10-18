@@ -10,8 +10,8 @@ category:
 请选择你想进入的闲聊板块。
 
 1. [关于作者](./author.md)
-2. [作者的日程库（加密）](./schedule.md)
-3. [社会愿望](./wish.md)
+2. [作者的日程库](./schedule.md)
+3. [社会愿望（加密）](./wish.md)
 4. [fuckxxx](./fuckxxx.md)
 5. [生活中遇到的困难](./difficulties.md)
 6. [绝对值 x 是如何看待 xxx 的？~~一些锐评与想法~~](./consider.md)
@@ -20,3 +20,5 @@ category:
 9. [绷不住了](./memes.md)
 10. [神评](./forward.md)
 11. [鲜鸡汤](./chicken_soup.md)
+12. [「零化（Zero Fill）」](./zero_fill.md)
+13. [脑洞](./brainhole.md)

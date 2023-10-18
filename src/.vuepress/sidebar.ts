@@ -16,6 +16,8 @@ export default sidebar({
 				"memes.md",
 				"forward.md",
 				"chicken_soup.md",
+				"zero_fill.md",
+				"brainhole.md",
 			],
 		},
 	],
