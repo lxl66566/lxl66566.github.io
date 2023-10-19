@@ -123,3 +123,4 @@ nodejs 出错的报错基本上是没用的，因为一般出现玄学问题是�
 ## external
 
 1. [npm vs pnpm vs Yarn — Which Package Manager Reigns Supreme?](https://javascript.plainenglish.io/npm-vs-pnpm-vs-yarn-which-package-manager-reigns-supreme-a942d17a2051)
+2. [加盐 hash 保存密码的正确方式](https://wooyun.js.org/drops/加盐hash保存密码的正确方式.html)

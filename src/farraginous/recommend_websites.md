@@ -27,6 +27,7 @@ tag:
 
 - [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
 - [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
+- [CrackStation](https://crackstation.net/): Free Hash Cracker
 
 :::
 

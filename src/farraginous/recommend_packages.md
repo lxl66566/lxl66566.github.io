@@ -308,6 +308,7 @@ _建议在设置中开启开机自启。_
 |`htop`|任务管理器，看性能|
 |`lsof`|[查端口占用](../articles/linux/problem.md#umount-failed)|
 |`zoxide`|智能 cd|
+|[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
 |`ncdu` / `gdu`|磁盘容量查询|
 |`nnn`/ `yazi` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
