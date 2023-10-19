@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 18 Oct 2023 05:28:35 GMT</pubDate>
-    <lastBuildDate>Wed, 18 Oct 2023 05:28:35 GMT</lastBuildDate>
+    <pubDate>Thu, 19 Oct 2023 07:41:07 GMT</pubDate>
+    <lastBuildDate>Thu, 19 Oct 2023 07:41:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>随笔</category>
@@ -1586,6 +1586,7 @@ If you do want to externalize this module explicitly add it to
 <ol>
 <li><a href="https://github.com/plctlab/weloveinterns/blob/master/how-do-we-rank-interns.md" target="_blank" rel="noopener noreferrer">plct - 我们如何对实习生进行能力分级评定</a></li>
 <li><a href="/gossip/numbbbbb.com/2016/07/04/20160704_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%89%E4%B8%AA%E6%9C%88%E5%85%A5%E9%97%A8%E6%97%A5%E8%AF%AD/" target="blank">我如何用三个月入门日语</a></li>
+<li><a href="https://hurricane618.me/2022/11/27/seven-years-of-my-life1/" target="_blank" rel="noopener noreferrer">我的人生七年（一）</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -2713,6 +2714,7 @@ npm ERR! This command does not support workspaces.</p>
 <h2> external</h2>
 <ol>
 <li><a href="https://javascript.plainenglish.io/npm-vs-pnpm-vs-yarn-which-package-manager-reigns-supreme-a942d17a2051" target="_blank" rel="noopener noreferrer">npm vs pnpm vs Yarn — Which Package Manager Reigns Supreme?</a></li>
+<li><a href="https://wooyun.js.org/drops/%E5%8A%A0%E7%9B%90hash%E4%BF%9D%E5%AD%98%E5%AF%86%E7%A0%81%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E5%BC%8F.html" target="_blank" rel="noopener noreferrer">加盐 hash 保存密码的正确方式</a></li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
@@ -2742,6 +2744,7 @@ npm ERR! This command does not support workspaces.</p>
 <li><a href="https://zhuanlan.zhihu.com/p/636293259" target="_blank" rel="noopener noreferrer">优等生的无声危机：为好成绩付出的代价</a> | <a href="https://ctreaderbot.vercel.app/a/BkoThTPPDRD4Szg.html" target="_blank" rel="noopener noreferrer">bak</a></li>
 <li><a href="https://chinadigitaltimes.net/chinese/668430.html" target="_blank" rel="noopener noreferrer">【404 文库】大象公会 2015—2021 年 66 篇微信文章合集</a>（注意时效）</li>
 <li><a href="https://telegra.ph/%E5%BD%93%E4%B8%80%E4%BD%8D%E6%B8%85%E5%8D%8E%E6%9C%AC%E7%A1%95%E5%8D%9A%E6%94%BE%E5%BC%83%E5%8C%97%E4%BA%AC%E4%B8%AD%E4%BA%A7%E5%8E%BB%E5%BE%80%E9%9D%9E%E6%B4%B2-10-07" target="_blank" rel="noopener noreferrer">是理想也是现实：一个清华博士的非洲选择｜文化纵横</a></li>
+<li><a href="https://survivesjtu.gitbook.io/survivesjtumanual/" target="_blank" rel="noopener noreferrer">上海交通大学生存手册</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -6225,7 +6228,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
       <pubDate>Sun, 11 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 校内专栏</h1>
 <blockquote>
-<p>即使我极力隐藏我所在的大学，但想必各位也能轻易找到线索，也就随你们的便了。</p>
+<p><em>即使我极力隐藏我所在的大学，但想必各位也能轻易找到线索，也就随你们的便了。</em></p>
 </blockquote>
 <h2> 校内电话</h2>
 <text style="color:red;">紧急情况：校医院 大一-大三 33612123 大四 64252637</text><h2> 暴论</h2>
@@ -6688,6 +6691,10 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </table>
 </details>
 <h2> <a href="/gossip/consider.html#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A4%A7%E5%AD%A6%E7%8F%AD%E7%BA%A7" target="blank">如何看待大学班级</a></h2>
+<h2> external</h2>
+<ol>
+<li><a href="https://survivesjtu.gitbook.io/survivesjtumanual/" target="_blank" rel="noopener noreferrer">上海交通大学生存手册</a></li>
+</ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -6975,6 +6982,10 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <td style="text-align:center">智能 cd</td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://github.com/cantino/mcfly" target="_blank" rel="noopener noreferrer"><code>mcfly</code></a></td>
+<td style="text-align:center">智能 history</td>
+</tr>
+<tr>
 <td style="text-align:center"><code>ncdu</code> / <code>gdu</code></td>
 <td style="text-align:center">磁盘容量查询</td>
 </tr>
@@ -7181,6 +7192,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <ul>
 <li><a href="https://www.immuniweb.com/websec/" target="_blank" rel="noopener noreferrer">ImmuniWeb</a>：检测网址是否安全</li>
 <li><a href="https://app.tunemymusic.com/zh-CN/transfer" target="_blank" rel="noopener noreferrer">tunemymusic.com</a>：歌单迁移</li>
+<li><a href="https://crackstation.net/" target="_blank" rel="noopener noreferrer">CrackStation</a>: Free Hash Cracker</li>
 </ul>
 </details>
 <h3> 合集类</h3>
@@ -8521,108 +8533,112 @@ utools vs diy my tools
 </ul>
 </li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-20" disabled="disabled"><label class="task-list-item-label" for="task-item-20"> HDL 高阶语言，能将类 Rust 语法的语言编译成 verilog 或 VHDL。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-21" disabled="disabled"><label class="task-list-item-label" for="task-item-21"> 音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-22" disabled="disabled"><label class="task-list-item-label" for="task-item-22"> 流式分布式的视频软件?</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-23" disabled="disabled"><label class="task-list-item-label" for="task-item-23"> 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-24" disabled="disabled"><label class="task-list-item-label" for="task-item-24"> pdf 无损图片压缩</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-25" disabled="disabled"><label class="task-list-item-label" for="task-item-25"> 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-26" disabled="disabled"><label class="task-list-item-label" for="task-item-26"> lzma 数据库，简易迁移，不依赖特定程序</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-27" disabled="disabled"><label class="task-list-item-label" for="task-item-27"> 浏览器书签 &amp; 历史数据库(rust cli / js)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-28" disabled="disabled"><label class="task-list-item-label" for="task-item-28"> better sqlite_zstd</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-29" disabled="disabled"><label class="task-list-item-label" for="task-item-29"> windows electron lib(runtime)?</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-30" disabled="disabled"><label class="task-list-item-label" for="task-item-30"> windows volume locker</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-31" disabled="disabled"><label class="task-list-item-label" for="task-item-31"> wd: info words online in cli, written in rust</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-21" disabled="disabled"><label class="task-list-item-label" for="task-item-21"> 音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-32" disabled="disabled"><label class="task-list-item-label" for="task-item-32"> if not english, test other languages</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-22" disabled="disabled"><label class="task-list-item-label" for="task-item-22"> 从一次损坏声卡经历发现驱动可以改变音频播放速度（包括软件运行速度）</label></li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-23" disabled="disabled"><label class="task-list-item-label" for="task-item-23"> 流式分布式的视频软件?</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-24" disabled="disabled"><label class="task-list-item-label" for="task-item-24"> 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-25" disabled="disabled"><label class="task-list-item-label" for="task-item-25"> pdf 无损图片压缩</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-26" disabled="disabled"><label class="task-list-item-label" for="task-item-26"> 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-27" disabled="disabled"><label class="task-list-item-label" for="task-item-27"> lzma 数据库，简易迁移，不依赖特定程序</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-28" disabled="disabled"><label class="task-list-item-label" for="task-item-28"> 浏览器书签 &amp; 历史数据库(rust cli / js)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-29" disabled="disabled"><label class="task-list-item-label" for="task-item-29"> better sqlite_zstd</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-30" disabled="disabled"><label class="task-list-item-label" for="task-item-30"> windows electron lib(runtime)?</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-31" disabled="disabled"><label class="task-list-item-label" for="task-item-31"> windows volume locker</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-32" disabled="disabled"><label class="task-list-item-label" for="task-item-32"> wd: info words online in cli, written in rust</label>
+<ul class="task-list-container">
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-33" disabled="disabled"><label class="task-list-item-label" for="task-item-33"> if not english, test other languages</label></li>
 </ul>
 </li>
 </ul>
 <h3> Android</h3>
 <!-- - [ ] 绝对值下载器，贯彻小而美（same as appstore） -->
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-33" disabled="disabled"><label class="task-list-item-label" for="task-item-33"> 关于轨迹记录软件与应用时长记录软件<span class="heimu" title="你知道的太多了">时空刻录器</span></label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-34" disabled="disabled"><label class="task-list-item-label" for="task-item-34"> Android opensource store, package manager（AUR-like）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-35" disabled="disabled"><label class="task-list-item-label" for="task-item-35"> 录音机 app，抓住日常的每一个瞬间</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-34" disabled="disabled"><label class="task-list-item-label" for="task-item-34"> 关于轨迹记录软件与应用时长记录软件<span class="heimu" title="你知道的太多了">时空刻录器</span></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-35" disabled="disabled"><label class="task-list-item-label" for="task-item-35"> Android opensource store, package manager（AUR-like）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-36" disabled="disabled"><label class="task-list-item-label" for="task-item-36"> 录音机 app，抓住日常的每一个瞬间</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-36" disabled="disabled"><label class="task-list-item-label" for="task-item-36"> 全天录音 to RAM，手动保存重放</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-37" disabled="disabled"><label class="task-list-item-label" for="task-item-37"> 全天录音 to RAM，手动保存重放</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-37" disabled="disabled"><label class="task-list-item-label" for="task-item-37"> Android task manager, *top</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-38" disabled="disabled"><label class="task-list-item-label" for="task-item-38"> Android task manager, *top</label></li>
 </ul>
 <h4> module</h4>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-38" disabled="disabled"><label class="task-list-item-label" for="task-item-38"> tg 多选截屏</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-39" disabled="disabled"><label class="task-list-item-label" for="task-item-39"> bilibili 任意倍速</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-40" disabled="disabled"><label class="task-list-item-label" for="task-item-40"> <em>usage time recoder</em></label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-41" disabled="disabled"><label class="task-list-item-label" for="task-item-41"> <em>kill MIUI restriction</em></label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-39" disabled="disabled"><label class="task-list-item-label" for="task-item-39"> tg 多选截屏</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-40" disabled="disabled"><label class="task-list-item-label" for="task-item-40"> bilibili 任意倍速</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-41" disabled="disabled"><label class="task-list-item-label" for="task-item-41"> <em>usage time recoder</em></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-42" disabled="disabled"><label class="task-list-item-label" for="task-item-42"> <em>kill MIUI restriction</em></label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-42" disabled="disabled"><label class="task-list-item-label" for="task-item-42"> 10s countdown</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-43" disabled="disabled"><label class="task-list-item-label" for="task-item-43"> 72h(24h in EU) unlock</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-43" disabled="disabled"><label class="task-list-item-label" for="task-item-43"> 10s countdown</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-44" disabled="disabled"><label class="task-list-item-label" for="task-item-44"> 72h(24h in EU) unlock</label></li>
 </ul>
 </li>
 </ul>
 <h3> nodejs &amp; tsjs</h3>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-44" disabled="disabled"><label class="task-list-item-label" for="task-item-44"> B 站 CC 字幕下载脚本</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-45" disabled="disabled"><label class="task-list-item-label" for="task-item-45"> osu 谱面下载器（仅前端？）</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-46" disabled="disabled"><label class="task-list-item-label" for="task-item-46"> 轻量级 pdf 演示 (pdf as ppt, in any browser)</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-45" disabled="disabled"><label class="task-list-item-label" for="task-item-45"> B 站 CC 字幕下载脚本</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-46" disabled="disabled"><label class="task-list-item-label" for="task-item-46"> osu 谱面下载器（仅前端？）</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-47" disabled="disabled"><label class="task-list-item-label" for="task-item-47"> 轻量级 pdf 演示 (pdf as ppt, in any browser)</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-47" disabled="disabled"><label class="task-list-item-label" for="task-item-47"> 结合表现力稍强一点的文本描述语言</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-48" disabled="disabled"><label class="task-list-item-label" for="task-item-48"> 结合表现力稍强一点的文本描述语言</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-48" disabled="disabled"><label class="task-list-item-label" for="task-item-48"> b 站历史记录搜索</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-49" disabled="disabled"><label class="task-list-item-label" for="task-item-49"> html yaml extransfer</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-50" disabled="disabled"><label class="task-list-item-label" for="task-item-50"> html compresser, &lt;-&gt; rss</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-49" disabled="disabled"><label class="task-list-item-label" for="task-item-49"> b 站历史记录搜索</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-50" disabled="disabled"><label class="task-list-item-label" for="task-item-50"> html yaml extransfer</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-51" disabled="disabled"><label class="task-list-item-label" for="task-item-51"> html compresser, &lt;-&gt; rss</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-51" disabled="disabled"><label class="task-list-item-label" for="task-item-51"> 已找到同类项目 <a href="https://www.npmjs.com/package/sanitize-html" target="_blank" rel="noopener noreferrer">sanitize-html</a>，但可以改进合并</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-52" disabled="disabled"><label class="task-list-item-label" for="task-item-52"> 已找到同类项目 <a href="https://www.npmjs.com/package/sanitize-html" target="_blank" rel="noopener noreferrer">sanitize-html</a>，但可以改进合并</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-52" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-52"> B 站直播增强</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-53" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-53"> B 站直播增强</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-53" disabled="disabled"><label class="task-list-item-label" for="task-item-53"> 弹幕区域取消，发送弹幕放在视频下方</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-54" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-54"> f 全屏</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-55" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-55"> 屏蔽无用组件</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-54" disabled="disabled"><label class="task-list-item-label" for="task-item-54"> 弹幕区域取消，发送弹幕放在视频下方</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-55" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-55"> f 全屏</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 屏蔽无用组件</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-56" disabled="disabled"><label class="task-list-item-label" for="task-item-56"> 类 markdown 方言, nmd (negative markdown)</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-57" disabled="disabled"><label class="task-list-item-label" for="task-item-57"> 类 markdown 方言, nmd (negative markdown)</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-57" disabled="disabled"><label class="task-list-item-label" for="task-item-57"> 换行问题</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-58" disabled="disabled"><label class="task-list-item-label" for="task-item-58"> 样式统一</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-59" disabled="disabled"><label class="task-list-item-label" for="task-item-59"> formatter</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-60" disabled="disabled"><label class="task-list-item-label" for="task-item-60"> 高亮与黑幕</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-61" disabled="disabled"><label class="task-list-item-label" for="task-item-61"> 双列阅读区支持</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-58" disabled="disabled"><label class="task-list-item-label" for="task-item-58"> 换行问题</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-59" disabled="disabled"><label class="task-list-item-label" for="task-item-59"> 样式统一</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-60" disabled="disabled"><label class="task-list-item-label" for="task-item-60"> formatter</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-61" disabled="disabled"><label class="task-list-item-label" for="task-item-61"> 高亮与黑幕</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-62" disabled="disabled"><label class="task-list-item-label" for="task-item-62"> 双列阅读区支持</label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-62" disabled="disabled"><label class="task-list-item-label" for="task-item-62"> better markdown formatter</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-63" disabled="disabled"><label class="task-list-item-label" for="task-item-63"> 答题网，选择题实时反馈</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-64" disabled="disabled"><label class="task-list-item-label" for="task-item-64"> SAVE MY LOCK FILE</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-65" disabled="disabled"><label class="task-list-item-label" for="task-item-65"> gaussian blur lib</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-66" disabled="disabled"><label class="task-list-item-label" for="task-item-66"> <s>koishi plugin:</s> （koishi 有关计划暂时搁置）</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-63" disabled="disabled"><label class="task-list-item-label" for="task-item-63"> better markdown formatter</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-64" disabled="disabled"><label class="task-list-item-label" for="task-item-64"> 答题网，选择题实时反馈</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-65" disabled="disabled"><label class="task-list-item-label" for="task-item-65"> SAVE MY LOCK FILE</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-66" disabled="disabled"><label class="task-list-item-label" for="task-item-66"> gaussian blur lib</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-67" disabled="disabled"><label class="task-list-item-label" for="task-item-67"> <s>koishi plugin:</s> （koishi 有关计划暂时搁置）</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-67" disabled="disabled"><label class="task-list-item-label" for="task-item-67"> <s>advanced: wordle game</s></label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-68" disabled="disabled"><label class="task-list-item-label" for="task-item-68"> <s>advanced: wordle game</s></label></li>
 </ul>
 </li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-68" disabled="disabled"><label class="task-list-item-label" for="task-item-68"> 今天吃什么 project</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-69" disabled="disabled"><label class="task-list-item-label" for="task-item-69"> 今天吃什么 project</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-69" disabled="disabled"><label class="task-list-item-label" for="task-item-69"> 分食堂，自动根据图片目录生成</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-70" disabled="disabled"><label class="task-list-item-label" for="task-item-70"> 可添加排除，写入 cookie</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-70" disabled="disabled"><label class="task-list-item-label" for="task-item-70"> 分食堂，自动根据图片目录生成</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-71" disabled="disabled"><label class="task-list-item-label" for="task-item-71"> 可添加排除，写入 cookie</label></li>
 </ul>
 </li>
 </ul>
 <h2> 实物创作灵感</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-71" disabled="disabled"><label class="task-list-item-label" for="task-item-71"> 不压耳朵（开槽?）的侧睡枕</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-72" disabled="disabled"><label class="task-list-item-label" for="task-item-72"> 甩棍伞</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-73" disabled="disabled"><label class="task-list-item-label" for="task-item-73"> 安全鸭舌帽</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-74" disabled="disabled"><label class="task-list-item-label" for="task-item-74"> 肉色隐形防割护颈带</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-72" disabled="disabled"><label class="task-list-item-label" for="task-item-72"> 不压耳朵（开槽?）的侧睡枕</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-73" disabled="disabled"><label class="task-list-item-label" for="task-item-73"> 甩棍伞</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-74" disabled="disabled"><label class="task-list-item-label" for="task-item-74"> 安全鸭舌帽</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-75" disabled="disabled"><label class="task-list-item-label" for="task-item-75"> 肉色隐形防割护颈带</label></li>
 </ul>
 <h2> 大型灵感</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-75" disabled="disabled"><label class="task-list-item-label" for="task-item-75"> 水中的 <em>Swimming Circus (スイミング・サーカス)</em> 。FC 的模仿产物。</label>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-76" disabled="disabled"><label class="task-list-item-label" for="task-item-76"> 水中的 <em>Swimming Circus (スイミング・サーカス)</em> 。FC 的模仿产物。</label>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-76" disabled="disabled"><label class="task-list-item-label" for="task-item-76"> 25*25*3 - [ ] 30*30*4 (m)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-77" disabled="disabled"><label class="task-list-item-label" for="task-item-77"> 是否携带氧气罐：未决定。可做成扁平型。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-78" disabled="disabled"><label class="task-list-item-label" for="task-item-78"> 背部装备统一大小的触控信号贴</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-77" disabled="disabled"><label class="task-list-item-label" for="task-item-77"> 25*25*3 - [ ] 30*30*4 (m)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-78" disabled="disabled"><label class="task-list-item-label" for="task-item-78"> 是否携带氧气罐：未决定。可做成扁平型。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-79" disabled="disabled"><label class="task-list-item-label" for="task-item-79"> 背部装备统一大小的触控信号贴</label></li>
 </ul>
 </li>
 </ul>
@@ -8639,9 +8655,9 @@ utools vs diy my tools
 </ol>
 <p>异变是什么，梦里并没有具体感受。</p>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-79" disabled="disabled"><label class="task-list-item-label" for="task-item-79"> 描述：蓝色描边的具体图形：两个同心圆和花纹，两根指针，还有一个颜色稍有异的刻度线。其余区域皆透明无阻挡。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-80" disabled="disabled"><label class="task-list-item-label" for="task-item-80"> 特性：自晦，未认主时不会被轻易发现。</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-81" disabled="disabled"><label class="task-list-item-label" for="task-item-81"> 副作用：表盘认主后，主人的修为不会继续上升；表盘脱离时，会将正常应上升的修为返还，实现飞跃。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-80" disabled="disabled"><label class="task-list-item-label" for="task-item-80"> 描述：蓝色描边的具体图形：两个同心圆和花纹，两根指针，还有一个颜色稍有异的刻度线。其余区域皆透明无阻挡。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-81" disabled="disabled"><label class="task-list-item-label" for="task-item-81"> 特性：自晦，未认主时不会被轻易发现。</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-82" disabled="disabled"><label class="task-list-item-label" for="task-item-82"> 副作用：表盘认主后，主人的修为不会继续上升；表盘脱离时，会将正常应上升的修为返还，实现飞跃。</label></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -9182,16 +9198,17 @@ x 表示水平位移，h 表示垂直位移。<br>
 ]]></content:encoded>
     </item>
     <item>
-      <title>My Movie List</title>
+      <title>Video</title>
       <link>https://absx.pages.dev/hide/videos.html</link>
       <guid>https://absx.pages.dev/hide/videos.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">My Movie List</source>
-      <description>若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。 最高 单科得分 &amp;gt;= 10 或总分 &amp;gt;= 18 号颜演名链 :--: :--: :--: :--: :--: |9.911.1点击展开風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子点击展开magnet:?xt=urn:btih:210B775C018A5D487B1315A3DD...</description>
+      <source url="https://absx.pages.dev/rss.xml">Video</source>
+      <description>若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。 这里是我的番号收藏。 最高 单科得分 &amp;gt;= 10 或总分 &amp;gt;= 18 号颜演名链 :--: :--: :--: :--: :--: |9.911.1点击展开風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子点击展开magnet:?xt=urn:btih:210B775C018A5D4...</description>
       <category>推荐</category>
       <category>主张</category>
       <pubDate>Mon, 04 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> My Movie List</h1>
+      <content:encoded><![CDATA[<h1> Video</h1>
 <div class="subtitle">若你对以下内容感到不明所以，——快跑！这里不是你该来的地方。</div>
+<p>这里是我的番号收藏。</p>
 <h2> 最高</h2>
 <blockquote>
 <p>单科得分 &gt;= 10 或总分 &gt;= 18</p>
@@ -9902,6 +9919,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 </tr>
 <tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">7.2</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
 <td style="text-align:center"><a href="https://www2.javhdporn.net/video/stars-495c/" target="_blank" rel="noopener noreferrer">STARS-495</a></td>
 <td style="text-align:center">5.7</td>
 <td style="text-align:center">6.5</td>
@@ -10097,6 +10120,12 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"><a href="https://www2.javhdporn.net/video/stars-248c" target="_blank" rel="noopener noreferrer">STARS-248</a></td>
 <td style="text-align:center">3.2</td>
 <td style="text-align:center">6</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">1</td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
@@ -12735,11 +12764,11 @@ x 表示水平位移，h 表示垂直位移。<br>
 <tbody>
 <tr>
 <td style="text-align:center">兰斯06 </td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">20231015-<br>在玩</td>
+<td style="text-align:center">12h49min</td>
+<td style="text-align:center">20231015-<br>20231018</td>
 <td style="text-align:center">6</td>
 <td style="text-align:center">4.8</td>
-<td style="text-align:center">6.5</td>
+<td style="text-align:center">4.5</td>
 </tr>
 <tr>
 <td style="text-align:center">兰斯5D </td>
@@ -13204,9 +13233,10 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>04：没有修改器；操作比较麻烦；不玩。</li>
 <li>06
 <ul>
-<li>体量比我想的要大很多</li>
+<li>体量比我想的要<strong>大得多</strong>；打完发现还有二周目</li>
 <li>剧情还不错</li>
 <li>走迷宫太慢了，我直接开 ce 2x 才感觉差不多（可惜打了 60% 才意识到）</li>
+<li>我打到二周目 <em>赛斯首都-残存部队歼灭</em> 然后可耻地卡关了。。在 CE 2x 下花了 40min 到处找敌人，结果还剩两个死活找不到。也没有任何提示。我制霸率 93%（并没有强迫症，很多房间不踩完），剩下的两个 star 估计藏在未探索区，没有任何提示。。。直接不玩了</li>
 </ul>
 </li>
 </ul>
@@ -13239,7 +13269,7 @@ x 表示水平位移，h 表示垂直位移。<br>
 <li>甜度过高，被齁死了</li>
 <li>同样的女装与男主语音，不由得会想到什么</li>
 <li>有点剧情，但其中的一些非反派人物的观念恕我无法认同</li>
-<li>被 AfterStory 背刺了：这也太长了吧——</li>
+<li>被 AfterStory 背刺了：这也太长了吧————————</li>
 <li>游玩顺序：柳ヶ瀬 湊 -&gt; 桜小路 ルナ -&gt; ユルシュール＝フルール＝ジャンメール -&gt; 花之宮 瑞穂</li>
 </ul>
 <h4> ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか</h4>
