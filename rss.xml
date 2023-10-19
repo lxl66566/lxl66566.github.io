@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 19 Oct 2023 07:41:07 GMT</pubDate>
-    <lastBuildDate>Thu, 19 Oct 2023 07:41:07 GMT</lastBuildDate>
+    <pubDate>Thu, 19 Oct 2023 14:59:43 GMT</pubDate>
+    <lastBuildDate>Thu, 19 Oct 2023 14:59:43 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>随笔</category>
@@ -1800,14 +1800,21 @@ If you do want to externalize this module explicitly add it to
 <h3> fishshell</h3>
 <p>fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。</p>
 <ul>
-<li>set fish as default
+<li>
+<p>set fish as default</p>
+
 <blockquote>
 <p>不建议通过 chsh 更换 shell,你可以使用 Konsole(如果是 KDE)的 profile 改 shell——<a href="https://t.me/archlinuxcn_group/2755963" target="_blank" rel="noopener noreferrer">@MkfsSion</a></p>
 </blockquote>
 </li>
-<li><code>~/.config/fish/config.fish</code>：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。</li>
-<li>函数
+<li>
+<p>语法：有个叫 <a href="https://github.com/edc/bass" target="_blank" rel="noopener noreferrer">bass</a> 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。</p>
+</li>
+<li>
+<p>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。</p>
+</li>
+<li>
+<p>函数</p>
 <ul>
 <li>使用 function 新增函数后，可以使用 <code>funcsave &lt;function&gt;</code> 保存到配置文件夹下以便修改与备份，修改后需要重新 source：<code>. ~/.config/fish/config.fish</code></li>
 <li>当然，官方推荐的修改是使用 <code>funced &lt;function&gt;</code>。
@@ -1819,7 +1826,22 @@ If you do want to externalize this module explicitly add it to
 <li>fish 皆为函数，alias 也是函数</li>
 </ul>
 </li>
+<li>
+<p>美化：我使用 starship，零配置。如果需要更多自定义可以使用 <a href="https://github.com/IlanCosman/tide" target="_blank" rel="noopener noreferrer">tide</a>。</p>
+</li>
 </ul>
+<h3> <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a></h3>
+<blockquote>
+<p>在尝试三大 shell 后我选择 fish 而不是 zsh. <a href="https://t.me/withabsolutex/1214" target="_blank" rel="noopener noreferrer">why?</a><br>
+据说 omz 会有性能问题。<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=omz&amp;sender=313927976" target="_blank" rel="noopener noreferrer">ref</a></p>
+</blockquote>
+<details><summary>archived</summary><p>
+</p><p>ref: <a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></p>
+<ul>
+<li>安装 zsh 时会问 set default shell, <code>y</code> 即可</li>
+<li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
+</ul>
+<p></p></details>
 <h2> pacman &amp; AUR Helper</h2>
 <p>AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于一个<strong>小型安装脚本</strong>而非程序本体。这里有一篇<a href="https://blog.asukaminato.eu.org/AUR-vs-vs-cn-dd42c7a8f0f943dcabd23d4cdf03a914" target="_blank" rel="noopener noreferrer">说明文章</a>。</p>
 <p>而由于 PKGBUILD 经常会从 github 等地方拉取软件压缩包，所以请<a href="#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86">使用代理</a>。</p>
@@ -1853,10 +1875,15 @@ If you do want to externalize this module explicitly add it to
 </ul>
 <h2> 包使用</h2>
 <p>推荐的包 / 软件请跳转<a href="/farraginous/recommend_packages.html#linux" target="blank">软件汇总</a></p>
+<p>先生，何不看看<a href="https://github.com/toolleeo/cli-apps" target="_blank" rel="noopener noreferrer">The largest Awesome List of CLI/TUI programs</a>？</p>
 <h3> <a href="/coding/vim.html" target="blank">neovim</a></h3>
 <h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
 <p>快速搜索。</p>
-<div class="language-bash" data-ext="sh"></div><h3> exa</h3>
+<div class="language-bash" data-ext="sh"></div><h3> 快照</h3>
+<p>快照本质上就是一个 cp 而已。只不过在 btrfs 上吃了 CoW 的福利，空间占用很小罢了。</p>
+<p>因为<a href="/articles/linux/problem.html#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88" target="blank">被 timeshift 坑过</a>，因此换用 snapper + btrfs-assistant。</p>
+<p>当然还有 <a href="https://github.com/digint/btrbk" target="_blank" rel="noopener noreferrer">btrbk</a> 可以选择，不过其主业 (backup tool) 并非快照，因此没有尝试。</p>
+<h3> exa</h3>
 <p><code>ls='exa --long --color-scale --binary --header --time-style=long-iso'</code></p>
 <h3> tmux</h3>
 <blockquote>
@@ -1870,19 +1897,9 @@ If you do want to externalize this module explicitly add it to
 <li>默认启动 (<a href="http://129.226.226.195/post/28785.html" target="_blank" rel="noopener noreferrer">bash ref</a> | <a href="https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched" target="_blank" rel="noopener noreferrer">zsh ref</a> <a href="https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell" target="_blank" rel="noopener noreferrer">ref2</a>)：
 </li>
 </ul>
-<h3> <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a></h3>
-<blockquote>
-<p>在尝试三大 shell 后我选择 fish 而不是 zsh. <a href="https://t.me/withabsolutex/1214" target="_blank" rel="noopener noreferrer">why?</a><br>
-据说 omz 会有性能问题。<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=omz&amp;sender=313927976" target="_blank" rel="noopener noreferrer">ref</a></p>
-</blockquote>
-<details><summary>archived</summary><p>
-</p><p>ref: <a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></p>
-<ul>
-<li>安装 zsh 时会问 set default shell, <code>y</code> 即可</li>
-<li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
-</ul>
-<p></p></details>
-<h2> <a href="/articles/linux/problem.html" target="blank">遇到的问题</a></h2>
+<h3> <a href="https://wiki.archlinux.org/title/TLP" target="_blank" rel="noopener noreferrer">tlp</a></h3>
+<p>笔记本省电的。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> <a href="/articles/linux/problem.html" target="blank">遇到的问题</a></h2>
 <h2> external</h2>
 <ol>
 <li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
@@ -1942,6 +1959,7 @@ If you do want to externalize this module explicitly add it to
 <p>这样用 wine 装好的 osu 游戏时只能跑到 170 帧，估计是驱动调度问题吧。日后再解。</p>
 <h2> 更新破坏依赖</h2>
 <p>先删再装。参考<a href="https://bbs.archlinuxcn.org/viewtopic.php?id=10208" target="_blank" rel="noopener noreferrer">forum</a>.</p>
+<p>问题主要出在有游离的软件包。</p>
 <h2> nvim 剪贴板问题</h2>
 <p>我在 <code>option.lua</code> 中有设置 <code>vim.opt.clipboard = 'unnamedplus'</code>，之前运作挺好，但自从换了 X11 以后就不能再复制。</p>
 <p>解法也很简单，安装 <code>xclip</code> 即可。</p>
@@ -5349,6 +5367,9 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
       <content:encoded><![CDATA[<h1> Rust</h1>
 <h2> 介绍</h2>
 <p>Rust 是一门系统编程语言，专注于安全，尤其是并发安全，支持函数式和命令式以及泛型等编程范式的多范式语言。Rust 在语法上和 C++类似，但是设计者想要在保证性能的同时提供更好的内存安全。——<a href="https://baike.baidu.com/item/Rust%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener noreferrer">百度百科</a></p>
+<h3> 成果</h3>
+<p>几年前 rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。</p>
+<p><a href="https://github.com/TaKO8Ki/awesome-alternatives-in-rust" target="_blank" rel="noopener noreferrer">Awesome Alternatives in Rust</a> 有一些 rust 成果。主要是 linux cli 工具。</p>
 <h3> 为什么推荐</h3>
 <h4> 优点</h4>
 <ul>
@@ -5362,8 +5383,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <ul>
 <li>限制条件多，难以通过编译</li>
 <li>学习曲线陡峭</li>
+<li>GUI 库有待进步</li>
 </ul>
-<!-- * 新生代语言，网上缺少问题的解决方案 -->
 <h3> 如何学习</h3>
 <p><a href="https://www.rust-lang.org/zh-CN/" target="_blank" rel="noopener noreferrer">官网</a>有详细的 QA 与你所需要的一切。以下陈述个人想法：</p>
 <p>对于新手而言，<a href="https://tourofrust.com/00_zh-cn.html" target="_blank" rel="noopener noreferrer">tour of rust</a>，<a href="https://doc.rust-lang.org/rust-by-example/index.html" target="_blank" rel="noopener noreferrer">rust by example</a>可能是不错的选择。</p>
@@ -6063,7 +6084,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>嘛，我真正需要的压缩大概是类似透明压缩的吧...</p>
 <h3> python</h3>
 <div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> rust</h3>
-<p>随便找个 <a href="/farraginous/recommend_websites.html#ai-%E5%B7%A5%E5%85%B7" target="blank">gpt</a> 写吧。</p>
+<p>随便找个 <a href="/farraginous/recommend_websites.html#ai-%E5%B7%A5%E5%85%B7" target="blank">gpt</a> 写吧。我目前看到有 rusqlite 和 sqlx 两套库可以选择。</p>
 <h2> 运维</h2>
 <p>有一次需要删除某个字段，而我是一个完全不懂数据库的非计专业学生（</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
@@ -6934,7 +6955,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>更详细的说明或使用教程请前往 <a href="../articles/linux">Linux</a>。由于我使用 pacman，因此不指明下载方式。</p>
 <h3> 基础 CLI 工具</h3>
 <blockquote>
-<p>对于通过 <code>/</code>（OR） 相连的软件，本人仅推荐首个</p>
+<p>对于通过 <code>/</code>（OR） 相连的软件，本人<strong>仅推荐首个</strong></p>
 </blockquote>
 <!-- prettier-ignore -->
 <table>
@@ -6970,6 +6991,10 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <td style="text-align:center"><code>ls</code> 的代替</td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://github.com/nivekuil/rip" target="_blank" rel="noopener noreferrer"><code>rip</code></a> / <code>trash-cli</code></td>
+<td style="text-align:center">easier, safer <code>rm</code></td>
+</tr>
+<tr>
 <td style="text-align:center"><code>htop</code></td>
 <td style="text-align:center">任务管理器，看性能</td>
 </tr>
@@ -6990,7 +7015,7 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <td style="text-align:center">磁盘容量查询</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>nnn</code>/ <code>yazi</code> / <code>ranger</code></td>
+<td style="text-align:center"><code>yazi</code><sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3"> / <code>nnn</code> / <code>ranger</code></a></td>
 <td style="text-align:center">文件浏览器</td>
 </tr>
 <tr>
@@ -7055,8 +7080,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>请确保已经安装插件<a href="#tampermonkey">Tampermonkey</a>。</p>
 </div>
 <h3> <a href="https://greasyfork.org/scripts/1682" target="_blank" rel="noopener noreferrer">Google Hit Hider</a></h3>
-<p>过滤 Google &amp; 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">。</a></p><a class="footnote-anchor" id="footnote-ref3">
-</a><h3><a class="footnote-anchor" id="footnote-ref3"></a> <a href="https://greasyfork.org/zh-CN/scripts/408516-%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%92%AD" target="_blank" rel="noopener noreferrer">哔哩哔哩自动连播</a></h3>
+<p>过滤 Google &amp; 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup><a class="footnote-anchor" id="footnote-ref4">。</a></p><a class="footnote-anchor" id="footnote-ref4">
+</a><h3><a class="footnote-anchor" id="footnote-ref4"></a> <a href="https://greasyfork.org/zh-CN/scripts/408516-%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%92%AD" target="_blank" rel="noopener noreferrer">哔哩哔哩自动连播</a></h3>
 <p>跳过 bilibili 视频末尾的充电鸣谢 <em>（对 B 站重度使用者还是很推荐的）</em></p>
 <h3> <a href="https://greasyfork.org/zh-CN/scripts/451150-%E6%96%B0-%E4%B8%89%E7%9B%B8%E4%B9%8B%E5%8A%9B%E6%8C%87%E7%A4%BA%E5%99%A8" target="_blank" rel="noopener noreferrer">三相之力指示器</a></h3>
 <p>三相之力！B 站评论区自动标注三相玩家。</p>
@@ -7081,8 +7106,8 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <h3> <a href="https://github.com/NekoX-Dev/NekoX" target="_blank" rel="noopener noreferrer">NekoX</a></h3>
 <p>Telegram 第三方开源客户端，自带很不稳定的低速公共代理，但至少能用；<s>在 tg 第三方内名声挺差</s>。更新滞后较大，若有科学上网方法还是建议使用官方端。</p>
 <h3> <a href="https://github.com/JunkFood02/Seal" target="_blank" rel="noopener noreferrer">Seal</a></h3>
-<p>开源的视频下载 app，Android 端的选择。但是它的内核就是 <a href="#yt-dlp">yt-dlp</a>，为什么不用电脑的 yt-dlp 呢？<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup></p><a class="footnote-anchor" id="footnote-ref4">
-</a><h3><a class="footnote-anchor" id="footnote-ref4"></a> <a href="https://zh.hinative.com/" target="_blank" rel="noopener noreferrer">HiNative</a></h3>
+<p>开源的视频下载 app，Android 端的选择。但是它的内核就是 <a href="#yt-dlp">yt-dlp</a>，为什么不用电脑的 yt-dlp 呢？<sup class="footnote-ref"><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></sup></p><a class="footnote-anchor" id="footnote-ref5">
+</a><h3><a class="footnote-anchor" id="footnote-ref5"></a> <a href="https://zh.hinative.com/" target="_blank" rel="noopener noreferrer">HiNative</a></h3>
 <p>一个可以直接问外国人<s>语言</s>问题的 app &amp; 网站。</p>
 <h3> <a href="https://github.com/timvisee/ffsend" target="_blank" rel="noopener noreferrer">ffsend</a></h3>
 <p>（命令行）快速上传分享你的文件 / 文件夹</p>
@@ -7127,11 +7152,11 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 <p>比较鸡肋，还吃我资源，因此弃用。</p>
 </blockquote>
 <h3> <a href="https://www.coolapk.com/apk/com.omarea.vtools" target="_blank" rel="noopener noreferrer">Scene5</a></h3>
-<p>强大的数据监视/性能修改应用。建议配合 ADB &amp; root 食用。但是呢，该应用是商业化的收费闭源软件，不充值是无法使用 root 后的功能的。目前其<strong>全功能</strong>均可使用其他软件替代<sup class="footnote-ref"><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></sup><a class="footnote-anchor" id="footnote-ref5">。因此弃用。</a></p><a class="footnote-anchor" id="footnote-ref5">
+<p>强大的数据监视/性能修改应用。建议配合 ADB &amp; root 食用。但是呢，该应用是商业化的收费闭源软件，不充值是无法使用 root 后的功能的。目前其<strong>全功能</strong>均可使用其他软件替代<sup class="footnote-ref"><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6"></a></sup><a class="footnote-anchor" id="footnote-ref6">。因此弃用。</a></p><a class="footnote-anchor" id="footnote-ref6">
 <ul>
 <li>如若确实需要，可以找它的最后一个免费版本使用。</li>
 </ul>
-</a><h3><a class="footnote-anchor" id="footnote-ref5"></a> Picacg</h3>
+</a><h3><a class="footnote-anchor" id="footnote-ref6"></a> Picacg</h3>
 <details class="hint-container details"><summary>详情</summary>
 <p><s>年幼的目光.jpg</s> <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span></p>
 <p><a href="https://picacg2022.com/" target="_blank" rel="noopener noreferrer">官方地址?</a> | <a href="https://wwp.lanzout.com/iqB7803de12j" target="_blank" rel="noopener noreferrer">私有下载地址</a></p>
@@ -7157,11 +7182,13 @@ Github 对单次上传限制为 2G，在我看来是个非常脑瘫的举措。<
 </li>
 <li id="footnote2" class="footnote-item"><p>可能需要提权。一个普通人更熟悉的方法是将 <code>yt-dlp.exe</code> 存放目录添加到环境变量（但是更麻烦）。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote3" class="footnote-item"><p>也可以用用<a href="https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt" target="_blank" rel="noopener noreferrer">我的</a>；但是很抱歉，目前仓库是 private <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+<li id="footnote3" class="footnote-item"><p><code>yazi</code> 甚至能在 console 下查看图片。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote4" class="footnote-item"><p>毕竟我是重度电脑使用者 <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
+<li id="footnote4" class="footnote-item"><p>也可以用用<a href="https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt" target="_blank" rel="noopener noreferrer">我的</a>；但是很抱歉，目前仓库是 private <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote5" class="footnote-item"><p><a href="https://t.me/withabsolutex/1260" target="_blank" rel="noopener noreferrer">log</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
+<li id="footnote5" class="footnote-item"><p>毕竟我是重度电脑使用者 <a href="#footnote-ref5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote6" class="footnote-item"><p><a href="https://t.me/withabsolutex/1260" target="_blank" rel="noopener noreferrer">log</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
