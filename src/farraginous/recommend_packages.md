@@ -294,7 +294,7 @@ _建议在设置中开启开机自启。_
 
 ### 基础 CLI 工具
 
-> 对于通过 `/`（OR） 相连的软件，本人仅推荐首个
+> 对于通过 `/`（OR） 相连的软件，本人**仅推荐首个**
 
 <!-- prettier-ignore -->
 |软件包|功用|
@@ -305,14 +305,17 @@ _建议在设置中开启开机自启。_
 |`tldr`|`man` 的代替|
 |`fex`|`cut` 的代替|
 |`exa`|`ls` 的代替|
+|[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
 |`htop`|任务管理器，看性能|
 |`lsof`|[查端口占用](../articles/linux/problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
 |`ncdu` / `gdu`|磁盘容量查询|
-|`nnn`/ `yazi` / `ranger`|文件浏览器|
+|`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
 |`neovim`|文本编辑器|
+
+[^6]: `yazi` 甚至能在 console 下查看图片。
 
 ### activitywatch
 

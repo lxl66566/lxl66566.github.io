@@ -56,7 +56,7 @@ conn.close()
 
 ### rust
 
-随便找个 [gpt](../farraginous/recommend_websites.md#ai-工具) 写吧。
+随便找个 [gpt](../farraginous/recommend_websites.md#ai-工具) 写吧。我目前看到有 rusqlite 和 sqlx 两套库可以选择。
 
 ## 运维
 

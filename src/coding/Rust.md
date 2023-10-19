@@ -13,6 +13,12 @@ tag:
 
 Rust 是一门系统编程语言，专注于安全，尤其是并发安全，支持函数式和命令式以及泛型等编程范式的多范式语言。Rust 在语法上和 C++类似，但是设计者想要在保证性能的同时提供更好的内存安全。——[百度百科](https://baike.baidu.com/item/Rust%E8%AF%AD%E8%A8%80)
 
+### 成果
+
+几年前 rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
+
+[Awesome Alternatives in Rust](https://github.com/TaKO8Ki/awesome-alternatives-in-rust) 有一些 rust 成果。主要是 linux cli 工具。
+
 ### 为什么推荐
 
 #### 优点
@@ -27,7 +33,7 @@ Rust 是一门系统编程语言，专注于安全，尤其是并发安全，支
 
 - 限制条件多，难以通过编译
 - 学习曲线陡峭
-<!-- * 新生代语言，网上缺少问题的解决方案 -->
+- GUI 库有待进步
 
 ### 如何学习
 

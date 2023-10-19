@@ -75,6 +75,8 @@ tag:
 
 先删再装。参考[forum](https://bbs.archlinuxcn.org/viewtopic.php?id=10208).
 
+问题主要出在有游离的软件包。
+
 ## nvim 剪贴板问题
 
 我在 `option.lua` 中有设置 `vim.opt.clipboard = 'unnamedplus'`，之前运作挺好，但自从换了 X11 以后就不能再复制。

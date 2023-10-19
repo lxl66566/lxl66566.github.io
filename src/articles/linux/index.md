@@ -297,11 +297,14 @@ fishshell 语法自成一系，学习成本较高，但是补全太好用了，�
 - set fish as default
   ::: code-tabs
   @tab 侵入式
+
   ```bash
   # 侵入式就是直接设置默认 shell，包括启动时(?)
   chsh -s fish
   ```
+
   @tab 温和式
+
   ```sh
   # 温和式是先启动 bash，再将 shell 作为 bash 子进程启动
   # edit ~/.bashrc
@@ -310,14 +313,12 @@ fishshell 语法自成一系，学习成本较高，但是补全太好用了，�
       exec fish
   fi
   ```
+
   :::
+
   > 不建议通过 chsh 更换 shell,你可以使用 Konsole(如果是 KDE)的 profile 改 shell——[@MkfsSion](https://t.me/archlinuxcn_group/2755963)
-- `~/.config/fish/config.fish`：
-  ```sh
-  if status is-interactive
-      bind \t forward-word    # 每个 tab 键只补全一个单词
-  end
-  ```
+
+- 语法：有个叫 [bass](https://github.com/edc/bass) 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。
 - 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)，注意作用域与是否 export 的问题。
 - 函数
   - 使用 function 新增函数后，可以使用 `funcsave <function>` 保存到配置文件夹下以便修改与备份，修改后需要重新 source：`. ~/.config/fish/config.fish`
@@ -325,6 +326,20 @@ fishshell 语法自成一系，学习成本较高，但是补全太好用了，�
     - `funced` 默认是 interactive 编辑的。我建议设置 `$EDITOR` 环境变量，可以在喜欢的编辑器里修改。
   - 删除函数 / 变量：`-e` == `--erase`
   - fish 皆为函数，alias 也是函数
+- 美化：我使用 starship，零配置。如果需要更多自定义可以使用 [tide](https://github.com/IlanCosman/tide)。
+
+### [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
+
+> 在尝试三大 shell 后我选择 fish 而不是 zsh. [why?](https://t.me/withabsolutex/1214)<br/>
+> 据说 omz 会有性能问题。[ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=omz&sender=313927976)
+
+<details><summary>archived</summary><p>
+
+ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
+
+- 安装 zsh 时会问 set default shell, `y` 即可
+- [我的配置&插件](https://github.com/lxl66566/config/blob/archwsl/.zshrc)
+</p></details>
 
 ## pacman & AUR Helper
 
@@ -361,6 +376,8 @@ AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
 
 推荐的包 / 软件请跳转[软件汇总](../../farraginous/recommend_packages.md#linux)
 
+先生，何不看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps)？
+
 ### [neovim](../../coding/vim.md)
 
 ### [locate](https://man7.org/linux/man-pages/man1/locate.1.html)
@@ -370,6 +387,14 @@ AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
 ```bash:no-line-numbers
 sudo updatedb   # 更新缓存，使用前执行
 ```
+
+### 快照
+
+快照本质上就是一个 cp 而已。只不过在 btrfs 上吃了 CoW 的福利，空间占用很小罢了。
+
+因为[被 timeshift 坑过](./problem.md#timeshift-引发的血案)，因此换用 snapper + btrfs-assistant。
+
+当然还有 [btrbk](https://github.com/digint/btrbk) 可以选择，不过其主业 (backup tool) 并非快照，因此没有尝试。
 
 ### exa
 
@@ -401,18 +426,15 @@ sudo updatedb   # 更新缓存，使用前执行
   ```
   :::
 
-### [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
+### [tlp](https://wiki.archlinux.org/title/TLP)
 
-> 在尝试三大 shell 后我选择 fish 而不是 zsh. [why?](https://t.me/withabsolutex/1214)<br/>
-> 据说 omz 会有性能问题。[ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=omz&sender=313927976)
+笔记本省电的。
 
-<details><summary>archived</summary><p>
-
-ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
-
-- 安装 zsh 时会问 set default shell, `y` 即可
-- [我的配置&插件](https://github.com/lxl66566/config/blob/archwsl/.zshrc)
-</p></details>
+```sh
+paru -S tlp tlpui
+sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
+sudo systemctl enable --now tlp
+```
 
 ## [遇到的问题](./problem.md)
 
