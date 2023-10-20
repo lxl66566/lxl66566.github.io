@@ -135,7 +135,7 @@ btrfs <span class="heimu" title="你知道的太多了">其实现代文件系统
    ```sh
    # fish
    alias e=nvim
-   alias l='exa --long --color-scale --binary --header --time-style=long-iso'
+   alias l='exa --all --long --color-scale --binary --header --time-style=long-iso'
    ```
 2. [调整 swappiness](<https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)>) 至 5（我对写入量敏感，同时我拥有大 RAM）
 3. 设置 `/etc/fstab`

@@ -39,11 +39,17 @@ tag:
 
 谐振时，$\displaystyle\begin{cases} \dot V_{L0}=jQ_0\dot V_s \\ \dot V_{C0}=-jQ_0\dot V_s \end{cases}$
 
+小于谐振频率时，$\varphi<0$，容性阻抗
+
+$Q=\rho/r$
+
 ### 并联谐振
 
 广义失谐系数 $\displaystyle \xi=\frac{\omega C-\frac1{\omega L}}{G}\approx Q_0\cdot\frac{2\Delta\omega}{\omega_0}$（电纳和 / 电导）
 
-固有谐振电阻 $\displaystyle R_{e0}=\frac{L}{CR}$
+固有谐振电阻（等效并联电阻） $\displaystyle R_{e0}\approx\frac{L}{RC}$ （在 Q 高时成立）
+
+$Q=R_{e0}/\rho$
 
 ### 串并转换
 
@@ -72,7 +78,7 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 
 ### 单级
 
-模型：三极管输出端 接 耦合并联谐振放大回路
+模型：三极管输出端 接 耦合并联谐振放大回路 作为负载
 
 三要素：增益，品质因数，通频带
 
@@ -92,6 +98,7 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 - 稳定系数越接近 1，越不稳定
 - 降低自激：
   - 中和法：高增益，不适合带宽放大
+    - [具体方法公式](https://www.bilibili.com/video/BV1p441197Xp/?p=15&t=1307)
   - 失配法：低增益，但稳定
 
 ## 滤波器
@@ -108,3 +115,9 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 - 等效噪声带宽 $\displaystyle B_n\approx\frac\pi 2B_{0.7}$
 - 噪声系数 $N_F$ = 输入信噪比 / 输出信噪比 $\approx\displaystyle 1 + \frac{U_a^2}{U_{io}^2} = ...$ （自激噪声 / 输入对输出的影响）
   - 信噪比是功率比值
+  - 降低噪声系数可以提高系统灵敏度，但是灵敏度不是越高越好
+- 多级噪声：$\displaystyle N_F=N_{F1}+\frac{N_{F2}-1}{K_1}+\frac{N_{F3}-1}{K_1\cdot K_2}+...$，显然与第一级关系最大
+
+## 谐振功放
+
+负载是谐振回路，工作在丙类（效率高）

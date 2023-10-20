@@ -11,7 +11,7 @@ tag:
 
 # 设置手机
 
-为了追求**绝对控制**与我所需要的功能。前往[MIUI 有多难用](../gossip/fuckxxx.md#miui13-有多难用)
+为了追求**绝对控制**与我所需要的功能。前往[MIUI 有多难用](../gossip/fuckxxx.md#miui-有多难用)
 
 ## before root
 

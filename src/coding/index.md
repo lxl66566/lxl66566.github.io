@@ -58,6 +58,7 @@ tag:
 
 1. [算法](./algorithm.md)
 2. [搭建 bot](./bot.md)
+3. [SICP learning](https://github.com/lxl66566/sicp-learning)
 
 ## 杂项
 

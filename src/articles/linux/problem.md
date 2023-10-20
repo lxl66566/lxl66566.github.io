@@ -148,6 +148,8 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 
 之后发现，在 `~/.config/yay/config.json` 中有一个 `aurrpcurl` 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 `yay --aururl "https://aur.archlinux.org" --save`，问题得解。如果一次不行就两次，一定能解(?)。
 
+ps. 群友提出了 `yay --aurrpcurl 'https://aur.archlinux.org' --save`
+
 ## umount failed
 
 `sudo umount /mnt/windows`，提示

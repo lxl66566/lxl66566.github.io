@@ -79,6 +79,8 @@ npm uninstall <package_name> [option] # 卸载包及其依赖
 在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。
 在文件目录下 `python -m http.server`，打开浏览器访问 `localhost:8000`，点击要调试的 html 即可。<span class="heimu" title="你知道的太多了">20230603：我是铸币</span>
 
+这种方法只能避开访问 localhots 的跨域，不能避开 fetch 其他网站的跨域。如果对于确定的网站资源，可以 _curl_ 到本地再引入。
+
 ### 安装 sharp
 
 我想使用 sharp 作为图像处理库。而直接 `npm i sharp` 会报错：
