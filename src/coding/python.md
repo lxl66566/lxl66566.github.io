@@ -11,7 +11,7 @@ tag:
 
 ## 安装
 
-python 本身的安装应该不用我多说，[scoop](../farraginous/recommend_packages.md#scoop) 一行结束。不过注意，没有启用虚拟环境时，电脑中**最好只有一个 python**。
+python 本身的安装应该不用我多说，windows [scoop](../farraginous/recommend_packages.md#scoop) / archlinux pacman 一行结束。不过注意，没有启用虚拟环境时，电脑中**最好只有一个 python**。
 
 ## 开发环境
 
@@ -98,7 +98,7 @@ pipx install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
 [[tool.poetry.source]]
 name = "tsinghua-pypi"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-priority = "primary"
+priority = "default"
 ```
 
 ### miniconda
@@ -177,6 +177,22 @@ with open("soup.test", "wb") as f:
 with open("soup.test", "rb") as f:
     soup = pickle.load(f)   # deserialize
 ```
+
+### 解耦
+
+```py
+def printa(a, b, c):
+    print(a, b, c)
+
+l = {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+}
+printa(**l)
+```
+
+但是要注意，使用条件很严格，参数不能多也不能少。我没有找到一个比较好的设置 default 的方法。
 
 ## 常用模块
 

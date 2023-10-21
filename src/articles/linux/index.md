@@ -93,7 +93,7 @@ umount /mnt/windows
   ```
 - 复制目录下所有文件，除了其中一个：
   ```sh
-  find . -maxdepth 1 ! -name 'exclude.*' -type f -exec cp {} to_dir \;
+  find . -maxdepth 1 -mindepth 1 ! -name 'exclude.*' -type f -exec cp {} to_dir \;
   ```
 
 <!-- ## 外部包
@@ -349,9 +349,12 @@ AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于
 
 AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
 
-- 请定期 `sudo pacman -Syy` 更新本地缓存（update），否则可能找不到包（`The requested URL returned error: 404`）。（~~今日也无事可做~~）
+- “滚” 指 `sudo pacman -Syu`，更新所有包。不要隔太久不滚，挂的概率会增加。（~~今日也无事可做~~）
   - 也可以直接 `yay` 或 `paru` 进行更新。（这俩不带参数默认执行 `-Syu`）
+  - 如果更新了内核（`linux` 包），请立即重启。
+- 出现 `The requested URL returned error: 404`，可能是本地缓存没有更新，请 `sudo pacman -Syy`
 - 每次修改镜像之后都应该使用 `sudo pacman -Syyu` 强制更新缓存 ([ref](https://wiki.archlinuxcn.org/wiki/镜像源#强制_pacman_刷新软件包列表))。
+- pacman 常用指令：`-S`, `-Ss`, `-Rs`
 - yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
   - 如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman ([ref](https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63))
   - yay 的问题也太多了点。。可以试试 paru。
@@ -369,7 +372,6 @@ AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
   ```
   :::
 - 疑难解答：
-  - pacman：[更新 pacman keyring](#更新-pacman-keyring)
   - yay：疑难解答：[yay 安装问题](./problem.md#yay-安装问题) | [yay 换源问题](./problem.md#yay-换源问题) | [yay 权限错误](./problem.md#yay-权限错误)
 
 ## 包使用
@@ -398,7 +400,7 @@ sudo updatedb   # 更新缓存，使用前执行
 
 ### exa
 
-`ls='exa --long --color-scale --binary --header --time-style=long-iso'`
+`ls='exa --all --long --color-scale --binary --header --time-style=long-iso'`
 
 ### tmux
 

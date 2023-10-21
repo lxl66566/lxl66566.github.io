@@ -304,7 +304,7 @@ _建议在设置中开启开机自启。_
 |`fd` & `plocate`|查找，`find` 的代替|
 |`tldr`|`man` 的代替|
 |`fex`|`cut` 的代替|
-|`exa`|`ls` 的代替|
+|`exa`|[`ls` 的代替](../articles/linux/index.md#exa)|
 |[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
 |`htop`|任务管理器，看性能|
 |`lsof`|[查端口占用](../articles/linux/problem.md#umount-failed)|
