@@ -79,7 +79,7 @@ export default hopeTheme({
 			rss: true,
 		},
 		pwa: {
-			update: "hint",
+			update: "force",
 			maxSize: 4096,
 			cacheHTML: true,
 		},
