@@ -96,9 +96,9 @@ DFS：$\displaystyle \widetilde X(k)=\sum_{n=0}^{N-1}\widetilde x(n)e^{-j\frac{2
 
 ### DFT
 
-DFT：在 DFS 基础上只取主值，$\displaystyle X(k)=\sum_{n=0}^{N-1}x(n)W_N^{nk}$
+DFT：在 DFS 基础上只取主值，$\displaystyle X(k)=\sum_{n=0}^{N-1}x(n)W_N^{nk}, x(n)=\frac{1}{N}\sum_{n=0}^{N-1}X(k)W^{-nk}$
 
-$x((n))_N=\widetilde x(n)$
+$x((n))_N=\widetilde x(n)$，表示周期
 
 圆周（循环移位）：~~相当于传送门~~，先周期延拓，再移位，再取主值。$\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)$
 
@@ -107,3 +107,14 @@ $DFT[R_N(n)]=N\delta(k)$（直流分量）
 实部 DFT 得到（圆周）共轭对称的频谱；频谱实部 IDFT 得到（圆周）共轭对称的时域谱
 
 圆周卷积的主值 N >= 线性卷积的长度，则两者相等；否则混叠。
+
+### 长序列 DFT
+
+指的是一个长序列和一个短序列 DFT。
+
+- 重叠相加法：混叠发生在输出端
+- 重叠保留法：混叠发生在输入端，需要舍弃前 N-1 （可能要舍去后面）
+
+### 频域采样定理
+
+当频域采样点数 >= 时域序列长度时才能不混叠。
