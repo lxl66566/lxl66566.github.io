@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 22 Oct 2023 15:28:40 GMT</pubDate>
-    <lastBuildDate>Sun, 22 Oct 2023 15:28:40 GMT</lastBuildDate>
+    <pubDate>Mon, 23 Oct 2023 15:25:49 GMT</pubDate>
+    <lastBuildDate>Mon, 23 Oct 2023 15:25:49 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -1320,12 +1320,13 @@ RTT = Round Trip Time，往返时间</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> vscode extensions recommendation</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> koishi</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> tampermonkey</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> author/p_d 网状图</label></li>
 </ul>
 <h2> 鸽了鸽了</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> awesome Github repos (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> 零食推荐 (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-5" disabled="disabled"><label class="task-list-item-label" for="task-item-5"> bilibili up 推荐 (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> awesome Github repos (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-5" disabled="disabled"><label class="task-list-item-label" for="task-item-5"> 零食推荐 (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-6" disabled="disabled"><label class="task-list-item-label" for="task-item-6"> bilibili up 推荐 (?)</label></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -2220,16 +2221,24 @@ If you do want to externalize this module explicitly add it to
 -68.267.847-113-73.952-191-73.952z"></path></svg></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.004em;"><span style="top:-3.413em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span><span class="mord mathnormal mtight">kn</span></span></span></span></span></span></span></span></span></span></span></span></p>
 <p>助记符：旋转因子 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><msub><mi>W</mi><mi>n</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mfrac><mrow><mn>2</mn><mi>π</mi></mrow><mi>N</mi></mfrac></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle W_n=e^{-j\frac{2\pi}N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.004em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.004em;"><span style="top:-3.413em;margin-right:0.05em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.05724em;">j</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443em;"><span style="top:-2.656em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight" style="margin-right:0.03588em;">π</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.344em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
 <h3> DFT</h3>
-<p>DFT：在 DFS 基础上只取主值，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>X</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>x</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mi>n</mi><mi>k</mi></mrow></msubsup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle X(k)=\sum_{n=0}^{N-1}x(n)W_N^{nk}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-2.453em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">nk</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>DFT：在 DFS 基础上只取主值，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>X</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>x</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mi>n</mi><mi>k</mi></mrow></msubsup><mo separator="true">,</mo><mi>x</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mi>N</mi></mfrac><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></munderover><mi>X</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><msup><mi>W</mi><mrow><mo>−</mo><mi>n</mi><mi>k</mi></mrow></msup></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle X(k)=\sum_{n=0}^{N-1}x(n)W_N^{nk}, x(n)=\frac{1}{N}\sum_{n=0}^{N-1}X(k)W^{-nk}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-2.453em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">nk</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0954em;vertical-align:-1.2671em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.8283em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">nk</span></span></span></span></span></span></span></span></span></span></span></span></p>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><msub><mo stretchy="false">)</mo><mi>N</mi></msub><mo>=</mo><mover accent="true"><mi>x</mi><mo stretchy="true">~</mo></mover><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x((n))_N=\widetilde x(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mopen">((</span><span class="mord mathnormal">n</span><span class="mclose">)</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6906em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord mathnormal">x</span></span><span class="svg-align" style="width:calc(100% - 0.0556em);margin-left:0.0556em;top:-3.4306em;"><span class="pstrut" style="height:3em;"></span><span style="height:0.26em;"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="0.26em" viewBox="0 0 600 260" preserveAspectRatio="none"><path d="M200 55.538c-77 0-168 73.953-177 73.953-3 0-7
 -2.175-9-5.437L2 97c-1-2-2-4-2-6 0-4 2-7 5-9l20-12C116 12 171 0 207 0c86 0
  114 68 191 68 78 0 168-68 177-68 4 0 7 2 9 5l12 19c1 2.175 2 4.35 2 6.525 0
  4.35-2 7.613-5 9.788l-19 13.05c-92 63.077-116.937 75.308-183 76.128
--68.267.847-113-73.952-191-73.952z"></path></svg></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span></p>
+-68.267.847-113-73.952-191-73.952z"></path></svg></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>，表示周期</p>
 <p>圆周（循环移位）：<s>相当于传送门</s>，先周期延拓，再移位，再取主值。<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>D</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><mi>x</mi><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">)</mo><msub><mo stretchy="false">)</mo><mi>N</mi></msub><mo stretchy="false">]</mo><mo>=</mo><msubsup><mi>W</mi><mi>N</mi><mrow><mo>−</mo><mi>k</mi><mi>m</mi></mrow></msubsup><mi>X</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">FT</span><span class="mopen">[</span><span class="mord mathnormal">x</span><span class="mopen">((</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">m</span><span class="mclose">)</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.1828em;vertical-align:-0.2837em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-2.4163em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">km</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2837em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span></p>
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mi>F</mi><mi>T</mi><mo stretchy="false">[</mo><msub><mi>R</mi><mi>N</mi></msub><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mo>=</mo><mi>N</mi><mi>δ</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">DFT[R_N(n)]=N\delta(k)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">FT</span><span class="mopen">[</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.00773em;">R</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0077em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">)]</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal" style="margin-right:0.03785em;">δ</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span></span></span></span>（直流分量）</p>
 <p>实部 DFT 得到（圆周）共轭对称的频谱；频谱实部 IDFT 得到（圆周）共轭对称的时域谱</p>
 <p>圆周卷积的主值 N &gt;= 线性卷积的长度，则两者相等；否则混叠。</p>
+<h3> 长序列 DFT</h3>
+<p>指的是一个长序列和一个短序列 DFT。</p>
+<ul>
+<li>重叠相加法：混叠发生在输出端</li>
+<li>重叠保留法：混叠发生在输入端，需要舍弃前 N-1 （可能要舍去后面）</li>
+</ul>
+<h3> 频域采样定理</h3>
+<p>当频域采样点数 &gt;= 时域序列长度时才能不混叠。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -8851,245 +8860,6 @@ utools vs diy my tools
 ]]></content:encoded>
     </item>
     <item>
-      <title>我的回忆录</title>
-      <link>https://absx.pages.dev/hide/memories.html</link>
-      <guid>https://absx.pages.dev/hide/memories.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">我的回忆录</source>
-      <description>我的回忆录</description>
-      <category>作者</category>
-      <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 我的回忆录</h1>
-<p>由于此页存在于公开的博客中，因此选择性展示可公开的部分。<s>我感觉应该也不会有多少人看到这个隐藏页面吧。（但是我设置了很多入口）</s></p>
-<h2> 大学</h2>
-<h3> 梗集合</h3>
-<ul>
-<li>毛巾短裤遁：我去洗个毛巾短裤回来再看你 xxxxxx</li>
-</ul>
-<h3> 大三上</h3>
-<ul>
-<li>习惯穿拖鞋，两个月不穿袜子</li>
-</ul>
-<details class="hint-container details"><summary>其他</summary>
-<ul>
-<li>喝奶粉从未不适，而假期回家喝牛奶拉肚 -&gt; 我有乳糖不耐受 -&gt; 奶粉全是植脂末。</li>
-<li>每日一餐素，(1,3) 香锅常客</li>
-</ul>
-</details>
-<h3> 大二下暑假</h3>
-<p>读书和开发时间消耗较多，galgame 与 osu 时长不足。</p>
-<ul>
-<li><strong>成为了真正的 Archlinux User!</strong></li>
-<li>成功让世界遗忘我的生日<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></li><a class="footnote-anchor" id="footnote-ref1">
-<li>use xmake and update my Qt project to 6.6.0.</li>
-<li>开发 koishi 插件</li>
-</a><li><a class="footnote-anchor" id="footnote-ref1">pr: </a><a href="https://github.com/DIYgod/RSSHub/pull/12982" target="_blank" rel="noopener noreferrer">华理教务处 rss</a></li>
-<li>参与各种文档与奇怪东西的翻译</li>
-</ul>
-<p>其他：</p>
-<ul>
-<li>早起跑步</li>
-<li>在多多买菜买了一个暑假零食，然后才认清它假冒伪劣的本质。</li>
-</ul>
-<details><summary>点击展开：更换身份证</summary><p>
-</p><blockquote>
-<p>cost: 35（照相）+ 40（费用）+ 16（邮寄）</p>
-</blockquote>
-<ul>
-<li>
-<p>身份证大概会在下学期的考试时间过期。为了寒假能够顺利回家，去更换身份证。</p>
-</li>
-<li>
-<p>换了一部二号手机。在派出所对面拍了个血亏照。然后派出所取号，填表，waiting。</p>
-</li>
-<li>
-<p>与情报一致：有专人挨个检查国家反诈中心，命中率 80%+。凭借离群、走位，逃过一劫。（来点<em>美岬</em>震撼）</p>
-</li>
-<li>
-<p>派出所有三个人在旁边玩手机，柜台只有三个在干活。有一个不负责身份证，有一个在不断接血压 MAX 时长 MAX 的电话，只有一个人在干活。二号机没东西玩，无聊，还得走位。</p>
-</li>
-<li>
-<p>办理：由于离开学不足 20 日，而正常领取只能在 20 <strong>工作日</strong>后，因此加急。-16 ￥</p>
-<ul>
-<li>
-<p>距离失效日期 &gt; 3mo, 不可走换证流程。二选一：</p>
-<ol>
-<li>等到 3mo 内，在学校当地派出所远程换证。</li>
-<li>加钱</li>
-</ol>
-<p>为了不麻烦到以后的自己，加钱。-40 ￥</p>
-</li>
-</ul>
-</li>
-<li>
-<p>失策：2 号机没有设置付款方式。为了缴费，只好掏出一号机。所幸我在柜台处没有掏出过二号机，因此也没被过多怀疑。</p>
-</li>
-<li>
-<p>结束：邮寄成功后还需去派出所激活。就像是打完 boss 发现还有二周目。</p>
-</li>
-<li>
-<p>总结：心疼我的钱和时间。希望这辈子不用再去换证了（好的意义上）。</p>
-</li>
-</ul>
-<p></p></details>
-<h3> 大二下</h3>
-<p>由于上学期挂科，没有<a href="#%E5%A4%A7%E4%BA%8C%E4%B8%8A">读书的目的</a>了，直接换赛道开摆了。</p>
-<ul>
-<li>经点醒，从第三周中期开始上课不听，课后 b 站自学。其后<strong>开始翘课</strong>。由于开摆原因，学习进度总体落后。</li>
-<li>开始每日早餐泡面，不上课就随便零食吃点</li>
-<li>退坑 <a href="/hobbies/rhythm_games.html#osu" target="blank">osu</a> 47 天，退坑黎明杀机</li>
-<li>开始使用<a href="/farraginous/learning/ulpb.html" target="blank">双拼</a></li>
-<li>初步使用 ArchWSL，Debian 10 (VPS) 等 linux 系统</li>
-<li>购买 <a href="/articles/vps.html" target="blank">VPS</a>，自建节点</li>
-<li><a href="/articles/mobile_setting.html#%E5%88%B7%E6%9C%BA" target="blank">root 与模块</a></li>
-<li>开始坚持无氧锻炼；近视可能加深</li>
-<li>蓝桥省赛、国赛，日语六级</li>
-</ul>
-<details><summary>点击展开：更加啰嗦的</summary><p>
-</p><ul>
-<li>放弃华莱士选择美团外卖炸鸡（频率：1.8/week）；发现<a href="https://t.me/withabsolutex/1088" target="_blank" rel="noopener noreferrer">全素吃法</a>并经常吃；</li>
-<li><s>《学会呼吸》</s>；</li>
-</ul>
-<p></p></details>
-<h4> 轶事：戒 B 行动</h4>
-<p>我总是花太多时间在 B 站上，特别是碎片时间。然而 B 站推荐算法稀烂，会周期性地有一段时间，B 站总给我推荐垃圾视频，让我血压飙升。于是尝试戒掉 B 站，除了关注，不看其他推荐内容而是把时间放在更有价值的事情上。此时（20230311）我正要如此做，但我的决心更加强烈，希望能够打破此次戒 B 行动的周期律。<s>PS. 失败</s></p>
-<p>后面<strong>将 B 站首页链接改成了直达动态</strong>，非常有效。</p>
-<h3> 大二上寒假</h3>
-<p>由于全面放开，提前回家网考。20221226 开始出现阳性症状。27 日发烧，峰值 38.5 度。28 日退烧。30 日开始咳咳咳。26-28 有严重腹泻。一个假期基本上在 galgame，osu，小说 这三样里度过了。没有学习挺惭愧的。</p>
-<h3> 大二上</h3>
-<p>总共只上了两个月的线下课。开摆程度比大一下更好了一点<span class="heimu" title="你知道的太多了">现在的我读书的全部动力都来自奖学金</span>。10 至 11 月封校一个月，期间入坑了黎明杀机并沉迷（当月游玩时长 81 小时）。<s>我到现在完全不明白/不记得我 10 月份究竟干了些什么。</s> 11 月开始回归正常生活，减少游戏频率。被 Asuka Minato 先辈注意到并讲了两句话。提醒了我该学习我所追求的那些东西。</p>
-<ul>
-<li>创建了自己的 telegram 频道</li>
-<li>被一年大学生活磨平了棱角，不再对周边部分不合理的事情提出质疑<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup></li><a class="footnote-anchor" id="footnote-ref2">
-<li>保持了封控时的死宅习性</li>
-<li>不自己洗衣服了<s>而是选择跟舍友拼洗衣机</s></li>
-<li>完全戒掉了 CS:GO</li>
-<li>挂了一科电路原理，但是补考过了。</li>
-</a></ul><a class="footnote-anchor" id="footnote-ref2">
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 大一后暑假</h3>
-<p>波澜不惊的一个暑假 <s>（仅限前两个月</s>。时间全献给游戏了（游戏：99%，学习：1%）。此处列出一些印象深刻的事。</p>
-<ul>
-<li>20220801 游泳耳朵进水聋了几天 <span class="heimu" title="你知道的太多了">水泥的工作原理 x</span>。去医院搞好了。</li>
-<li>20220809 电脑寄了。过了几天买了新的。</li>
-</ul>
-<p>（ps. 太啰嗦了我直接言简意赅了，想看全文的可以</p>
-<details><summary>点击展开</summary>
-20220801 游泳，右耳进水了听不到了。本来我觉得是正常情况（之前进水但是到下午就又听得到了），然而这次到了晚上我还是听不到声音，挺慌的。网上说能拿棉签吸水，我试了试，吸了点表层耳屎出来，没什么用。<span class="heimu" title="你知道的太多了">反而把耳屎推进去塞得更严实了）</span>于是我就又聋了几天。滴氧氟沙星滴耳液，没用。期间去过了小诊所，说是炎症，吃了几天一代头孢，没用。然后20220808去医院，医生用镊子把耳屎弄出来了（还挺痛的），听力终于恢复了（cost:55 CNY）。这一周时间我没怎么推 gal（一只耳朵听不清啊喂），时间全给了 csgo 摆烂和 osu ~~摆烂（划掉~~ 内卷，坏耶…
-<p>20220809 晚，osu 锻炼中，突然 <strong>滋</strong> 地一下，笔记本黑屏了，插电灯不亮。次日去电脑城维修，结论：mos 短路导致 cpu 被击穿。所幸两块硬盘都没寄。换新 cpu 的报价是 1000 <span class="heimu" title="你知道的太多了">我知道 7700hq 本身价格是 400 左右，维修费算的挺高</span>。不是很想修，原因：</p>
-<ol>
-<li>本来就想换，性能确实差点，osu 60hz 屏幕看的我有点眼花（毕竟快 9dan 了），夏天打 csgo 也常常掉帧（全低锁 60 帧，但是约每 3 分钟会突然掉到 18 帧持续 2-3s）</li>
-<li>电脑（Predator G3-573）本身二手价只值 2000 <span class="heimu" title="你知道的太多了">而我的电脑因为亿些瑕疵，可能只能值 1700</span>，再花近 1000 换个 cpu 完全不值。</li>
-</ol>
-<p>结论：买新的。但爸妈是修修补补的性格，坚决支持维修反对换新。于是我向她们要 1000 块钱，剩下的我出（就当作我是去修的），但即便是这样，我也要钱要了整整两天没要到。由于没有拿到钱，于是 20220812 晚找海鲜市场个人卖家买了二手<em>神舟战神 Z7T-TA5NS</em> i5-11260H+3050+16+512 ，3400 包邮。<span class="heimu" title="你知道的太多了">一年前 3400 能买到个 p 啊！好便宜！</span>我妈把此次电脑坏掉的事归咎于二手，所以当我买了二手以后告诉她，她疯狂数落我。<span class="heimu" title="你知道的太多了">（我为什么买二手？预算啊预算啊！</span>。第二天卖家变卦不卖了，我妈就叫我买全新的，终于是要到钱了（2300CNY，其中 1000 为维修费抵扣，1300 为补全新差价）。买了<em>七彩虹将星 X15-XS</em> i5-12500H+3050+16+512 ，pdd4699。（因为全新<em>神舟 Z7T-TA5NS</em>也要 4600，<em>神舟 Z7-DA5NS</em>则屏幕差了点）。我是真不喜欢 win11，但是买之前试了试，osu 能玩，gal 就算不兼容也能开虚拟机，所以也只能硬着头皮上 win11 了。（没办法，有这个钱如果上 11260 总感觉血亏）（后来感觉这个决定是正确的）</p>
-<p>我本已打算过一段痛苦的无电脑生活（原电脑使用时间</p>
-<p>附新电脑跑分：室温 25℃，Time Spy 5036；鲁大师：处理器 603129，显卡 194335，内存 113868，硬盘 177384，总分 1088716.</p>
-</details>
-<h3> 大一</h3>
-<p>现在想想，我刚进大学时跟现在（大一结束）的思想差的太多了。或许是这一年来信息接收得比较多的缘故吧。刚入学时我还是个充满激情与斗志的、努力内卷想要转计算机专业和保研的、重视身体锻炼的、想要赚钱的<s>一般男人</s>，如今的我已经是个拒绝外出，拒绝交流，学业摆大烂，天天把自己反锁在房间中玩电脑的死宅。</p>
-<p>大一上确实卷得厉害，满绩了几门，全班选课数我报的课程最多（指公选与网络课程），当时想转计算机（我兴趣一直都是这个），结果后来 12 月转专业规则出来 发现我这个专业不让我转计算机，当时人挺沮丧的。高学分的高数考得很烂，因此排名也不算靠前。上学期的我还会在课余时间去约人打乒乓球，打网球，在楼下发外卖赚钱，真是纯纯的阳光少年。（不过成绩在大类分流时起了作用，也不能说卷得没有意义。）</p>
-<p>然后就到了下学期疫情取消所有线下课。四级考试推迟。宿舍上网课直接摆大烂。我刚开始还有听一个月多的网课，到后来学期末那段时间高数，英语，大物，线代，python，近代史等几乎所有课程全翘了。<span class="heimu" title="你知道的太多了">哈哈，腾讯会议使用时长还没 vscode 长</span>不过姑且只是嫌讲课慢才翘掉而已，自己看看 B 站看看学习通网课，倒也没挂。疫情对我影响非常小：毕竟原本就挺宅的，也没啥钱买吃的，天天打音游推 gal 看番，偶尔还为自己喜欢的东西爆肝一阵子，小日子过得真不错。学校盒饭也挺好（早餐除外！），性价比足够优秀，2 荤 2 素我完全没意见。——于是作为疫情后遗症<span class="heimu" title="你知道的太多了">死宅症状</span>，暑假在老家我也不出门了。</p>
-<p>现在的我觉得当时宁愿报个差点的专业（语言类）去更高层次的学校，课余自学<span class="heimu" title="你知道的太多了">摆烂</span>时间多还能避开讨厌的大物课。。。或者干脆去差一点的学校但是能保计算机专业，喜欢的学科学着也舒服。</p>
-<ul>
-<li>放弃内卷，放弃保研</li>
-<li>转专业失败，因为我这一届新规：信院内不能互转。
-<ul>
-<li>一年后听说转专业笔试机考，用的 OJ 考算法，不禁感慨良多。</li>
-</ul>
-</li>
-</ul>
-<h2> 高中（高二、三）</h2>
-<h3> 电脑室</h3>
-<p>要说学校里与我最有缘的，我最喜欢的地方，那无疑就是实验楼 4 楼的电脑室了。从高二因信息竞赛需要拿到电脑室钥匙开始，我就和这片土地有了不解之缘。在这里和几个信息竞赛的同学一起玩电脑成为了我最快乐的时光。高二的记忆已经模糊，我需要细细翻日记才能想起当时在电脑室干些什么。但我知道高三的每天晚上我都借着竞赛的名义去电脑室打游戏。包括后来高三开始全员晚自习后，我也以这个理由翘掉晚自习。大家坐在那里，朋友们打 300 英雄，我一个人打游戏顺便聊天，晚饭随便在学校后门买个饭团或者盒饭（我比较喜欢盒饭的，感觉饭团营养不足），然后又回到楼上。</p>
-<p>当电脑室门前有人走过时，我们就屏息凝神，祈祷没有注意到电脑室中的几人。（电脑室门上有小洞，可观察到里面）</p>
-<p>但我只能回想起快乐，而记不起我在那儿到底玩些什么。我记得我当时有玩明日方舟，我的世界起床战争，其他的实在是想不起来。（P.S.翻了日记，还有玩东方（以绀珠传为主）、星光咖啡馆与死神之蝶、生死狙击，每日看约 1 小时的 B 站动态）并且当时玩的游戏现在基本都不再玩了，还是觉得有些许遗憾。</p>
-<p>好景不长：我对家人说去晚自习，而对班主任说去准备竞赛。终究还是有一天（高三 10-11 月左右）露馅了，他俩口风没对上，把我抓包到了。只能乖乖上晚自习。之后的事详见<a href="#%E6%99%9A%E8%87%AA%E4%B9%A0">晚自习</a>。</p>
-<p>后来沉迷明日方舟时，还是有趁机在傍晚放学到回家之间去一下电脑室，挂机聊天一下，然后在自由的朋友们的谈笑声中回家（我的朋友们并没有被抓包，还是天天上去玩一晚上）。特别是高考前十几天我还天天放学去电脑室打危机合约（光谱行动），令人感慨。</p>
-<p>因为手机空间不够，家中电脑性能不足以带动模拟器，我的明日方舟一直都是在学校电脑室玩的。记得当时同学知道了电脑室电脑还原卡的密码，然后我们几人偷偷将日常坐的那几台机子的还原卡关掉，装上向日葵远程控制和雷电模拟器&amp;明日方舟，我就经常在家控制方舟挂机，即使延迟极高也在所不惜。控制时间挑晚上，绝对没有电脑课的时候，如果控制后发现屏幕显示不在桌面（有人在用），就立刻退出假装什么事也没发生。我让朋友们走的时候不拉闸（仅关电脑屏幕），保持控制电脑开机，以便周末肝理智。中午回到家也是第一时间打开向日葵刷理智。我还得定期删除桌面多出的文件，假装这台机子跟有自动还原的机子一样。晚上如果远控发现电脑没开机的话，还会打电话给在那玩的朋友让他们帮忙开电脑。现在想想还觉得刺激，并惊讶于我当时<a href="/hobbies/other_games/arknights.html" target="blank">对明日方舟的热情</a>。</p>
-<h3> 教室景色</h3>
-<p>一直坐在教室最左后方，王の座位。换组与我无关。上课坐最后面学习，看书（图书馆借的，走廊直接拿的），或者睡觉。胡思乱想一些事。要是我还记得我那时候想的是什么就好了。这算是我的一大遗憾吧，明明是很重要的东西，却忘记了。</p>
-<p>ps. 灵感都写在草稿本上，处理一个就划去一个。草稿本有 QQ 相册留档纪念，因此还是能找的出来的。</p>
-<h3> 下课时间</h3>
-<p>经常在教室外的走廊趴着，放松眼睛。大课间去找好朋友，一起去图书馆、去操场走走，跑跑步，小卖部买东西吃。尤其喜欢在教学楼图书角找书看，有一种寻宝的期待感。有时也在座位上坐着看窗外。</p>
-<h3> 王の座位</h3>
-<p>班上的换组与我无关。换组时会将桌子搬到最后，然后直接走人，第二天再搬回原位。我的椅子与桌子从不变，陪伴我很久。书都堆在桌子右上角，方便挡右上角老师的视线。有时喜欢侧着坐，翘二郎腿，把背靠在左边的墙上。</p>
-<h3> 晚自习</h3>
-<p>从高二到高三约 10 月，我晚上都在<a href="#%E7%94%B5%E8%84%91%E5%AE%A4">电脑室</a>度过。跟一群朋友一起打游戏，非常开心。</p>
-<p>由于我妈和老师对好口风了，发现天天翘晚自习的事实，因此高三 10 月后在学校晚自习两个月。基本不写作业都在看书，特别是小说绘合订本。四本装订在一起超厚的书（C++ primer 的约 1.7 倍），2-3 个晚自习看完。</p>
-<p>从 1 月开始在家晚自习，看视频。由于家里没有通网络，经常需要去电脑室下载 B 站课程视频，晚上回家看。主要都在看数学，很迟（高考前一个月，大概）才开始看物化。后来为了高考前能在线看视频，通网了。我记得高考当天还在看 B 站视频课程；现在也说不上究竟对我的分数有多大作用。</p>
-<h3> 操场</h3>
-<p>大概从高二不知何时开始，每天傍晚放学跟好基友一起去操场跑 5 圈（1500m）。一直坚持到了毕业（甚至高考）。有时因天气原因或身体原因会缺跑。但是总的来说还是基本天天跑的。包括高三下后来的傍晚去电脑室也是跑完步大汗淋漓爬上 4 楼去的。运动会前后更加努力，曾在中午放学烈日下在操场冲刺。</p>
-<p>当然，有时也会跟朋友一起踢足球。我是一起踢球的人里最菜的之一，但还是玩得很开心。（早期有一次缺人被叫去守门然后被虐，不开心，远离正式比赛）</p>
-<h2> 高中（高一）</h2>
-<p>没什么记忆。高一对我来说是记忆模糊的一年。只知道喜欢聊天（包括上课聊天），尝试自己写小说，跟一群狐朋狗友搞“哲乐会所”打闹，曾经把班上电脑的英语听力换成鸡你太美，这些比较印象深刻的小事。至于一整年干了些啥，鬼知道。</p>
-<h2> 高中（高一、二）</h2>
-<h3> 体育馆一楼</h3>
-<p>每天傍晚放学去体育馆打乒乓球。我跟我的好基友。在高二时基本上要打到 18:30 才走。有时候正在兴头上甚至会打到 19:00。当时没怎么打削球，都是扣和拉，很有观赏性。我们俩打久了以后有了默契，扣球都可以打好多来回，感觉非常爽。</p>
-<p>当然也有其他小伙伴经常加入我们一起打。甚至还有校外的大叔，扣球也很强，打得更爽了。</p>
-<p>高三学生放学时间比高一高二晚一节课。没有时间打球了，而且高三开始晚自习。。已经不是晚上可以迟迟回家的时代了。</p>
-<h2> 初中</h2>
-<p>更记不清了。能记得的事只有更小的细微片段。比如找老师退出小组制度(20161031)，坐在班上讲台桌边上坐了很久。还有一些不经脑子说出的话，伤害了同学。下课喜欢在教学楼附近跑来跑去（好像是玩某个游戏）。初中也爱看书，但不知道究竟看了什么书。谈了一次莫名其妙曲折的恋爱。突然流行然后一起玩的魔方。</p>
-<p>现在回忆起这些，感觉初中的我已经完全是另一个人了。</p>
-<h2> 更早</h2>
-<p>我愿把我的童年称为：低观点下的强迫。</p>
-<h3> 小学</h3>
-<p>记得的东西很少。<a href="/hobbies/books.html#%E6%9B%B4%E6%97%A9" target="blank">喜欢看杂志</a>。优等生，口算/奥数竞赛，被非暴力霸凌。喜欢玩的游戏是 <em>造梦西游 3</em>，<em>Q 宠大乐斗</em>。</p>
-<ul>
-<li>参加同学生日，一辆吉普车塞了 16 个人。</li>
-</ul>
-<h3> 饿</h3>
-<p>我一向拥有强抗饿性。</p>
-<ol>
-<li>小时候家教严格，经常受到不许吃饭的惩罚。记忆最清楚的一次是没吃三餐，饿的半死，最后到夜宵时间认错求饶，大吃特吃。</li>
-<li>后来上学，脑子功率比较大，我一般会在 10 - 11 点开始感到饿（家里都没有小靈石<span class="heimu" title="你知道的太多了">零食</span>吃，更别说带东西去学校吃了）。饿习惯了就无所谓了。根据物极必反，我饿 30min 后饿感消除，反而会变得不想吃东西。</li>
-</ol>
-<h3> 课外辅导</h3>
-<p>小时候被我妈半强迫地报了好多“兴趣班”（练字，作文，各种球类运动，机器人）。很残念，那些学到的东西再也不在我的生活出现，而我现在真正喜欢的东西（电脑，看书）在以前却倍受打压。</p>
-<p>这些辅导班的全部意义就在于让我知道我究竟喜欢什么，不喜欢什么。</p>
-<h2> 梦，幻想和其他虚幻之物</h2>
-<details class="hint-container details"><summary>详情</summary>
-<h3> 大球恐惧</h3>
-<p>一个我数次在半梦半醒中看到的画面：我的感知中，睡觉的房间被放大了，寂静，我无法移动。有无数直径大于 6m 的球状物体一个接一个向我滚来，把我碾碎。能让我感到自己的渺小，与恐惧。</p>
-<h3> 蓝色机械蜗牛壳 / 透明艇</h3>
-<p>贯穿我整个小学时代的幻想（与部分初中时代）。我生活在标题所述的物质包围的空间内，其不会被任何外力打破；其具有凭空生成任意心想的物质的能力；其内部空间需要通过特定通道与外界进行物质交换；其具有无限能源与任何物质中的移动能力；其中的万有引力方向永远垂直其“地面”向下；在其中的生物拥有无穷的寿元。在幻想后期，其内部还能够进行时间回溯。</p>
-<p>透明艇是蓝色机械蜗牛壳的升级版，占用更大的体积，具有更高的舒适度。</p>
-<p>经常出现的场景有：</p>
-<ul>
-<li>我位于该空间内，置于教室后排听课，下课后与班上同学融洽地玩耍（在教室里开网吧！）。</li>
-<li>在黑暗的地下河漂流</li>
-<li>在公共场所摆摊</li>
-<li>海面与深海风光</li>
-<li>与同样拥有该物质的其他指定同龄人的封闭空间进行对接，开仓等一系列行为。<span class="heimu" title="你知道的太多了">\^_^/</span></li>
-</ul>
-<h3> 覆地印 / 翻海印</h3>
-<p>高中时代的幻想，简记为 <code>earth &amp; sea</code>.</p>
-<ul>
-<li>前者为女性用，后者为男性用。</li>
-<li>持印人数分别为 &gt;=14 , &gt;=4 .</li>
-<li>非常抱歉，随着时间流逝，现在的我可能已经忘记了其中某些人的名字（我甚至连人数都不能保证为一个精确值），甚至是面容。但是对于给定的个体，我能记住一些特征。</li>
-</ul>
-<h3> 配对室</h3>
-<p>主要存在于小学初中的幻想。拥有多种变体。</p>
-<p>特定缘关系配比均衡人群中性强势一方按照一定次序对性弱势进行配对的行为。变体有：</p>
-<ul>
-<li>配对模式：有辨识环节的盲配对与自由选择配对</li>
-<li>场地：幻想纯白室内区域与社会实际基地</li>
-</ul>
-<h3> 博学之书</h3>
-<p>梦想着写一本博学之书，并作出了一些努力。——20180510 的日记，可以代表我初中时代的梦想</p>
-<h3> 中二</h3>
-<p>不详细说了。 时间，命运，冰火；守心三式；心之道 20190816；</p>
-</details>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>参考<a href="/gossip/author.html#%E6%80%A7%E6%A0%BC" target="blank">无节日主义者</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p><a href="/essay/2023.html#_20230609" target="blank">不纯粹</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
       <title>关于作者更加详细的回答</title>
       <link>https://absx.pages.dev/hide/personal_details.html</link>
       <guid>https://absx.pages.dev/hide/personal_details.html</guid>
@@ -9208,182 +8978,6 @@ utools vs diy my tools
 </li>
 </ol>
 </section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>运动</title>
-      <link>https://absx.pages.dev/hide/sports.html</link>
-      <guid>https://absx.pages.dev/hide/sports.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">运动</source>
-      <description>运动</description>
-      <category>作者</category>
-      <pubDate>Mon, 15 Aug 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 运动</h1>
-<p>目的：记录运动状况，如果能稍稍提供一点运动动力就更好了。</p>
-<ul>
-<li>Q. 我为什么运动？</li>
-</ul>
-<p>A. 延长寿命；应对危机；减少死亡概率。</p>
-<h2> 以次数记</h2>
-<iframe frameborder="no" src="/charts/sports_times.html" width="100%" height="304" loading="lazy"></iframe>
-<p>注：此处为等效计算表</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 以距离记</h2>
-<p>单位：米</p>
-<iframe frameborder="no" src="/charts/sports_distance.html" width="100%" height="304" loading="lazy"></iframe>
-<h2> 以时间记</h2>
-<p>单位：分钟</p>
-<iframe frameborder="no" src="/charts/sports_time.html" width="100%" height="280" loading="lazy"></iframe>
-<h2> 关于游泳</h2>
-<p>由于肺活量限制，最擅长 50-100m 内的蛙泳。</p>
-<ul>
-<li>蛙泳为主，占比：96%.
-<ul>
-<li>推力比：脚 50%，手 50%</li>
-<li>脚部：主要靠脚背排水前进，脚踝不使力，以获得最大速度。刚开始脚踝会有点痛，习惯就不会了。</li>
-<li>手部：由于右肩关节疼痛，尝试双手向下划水，略有成效。</li>
-<li>关于换气：
-<ul>
-<li>前 50m 可以做到两划一呼吸，可节省换气时间。</li>
-<li>利用被减速后剩下的一点速度向上冲出水面换气。</li>
-<li>呼吸困难或泳池水位低时，建议冲向更高处换气以避免吸入过多二氧化碳。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>自由泳：
-<ul>
-<li>尝试过蛙泳脚法，轻松，但蛙泳属于<strong>离散加速型</strong>，而自由泳是<strong>持续加速型</strong>，两者相性不是很好，故弃用。</li>
-<li>随缘换气。</li>
-</ul>
-</li>
-<li>仰泳：
-<ul>
-<li>注重漂浮时长而不是速度。</li>
-<li>手提供些许浮力，前进动力完全靠脚。</li>
-</ul>
-</li>
-<li>其他游法：为了提高极端情况下生还概率，而练习的游法。
-<ul>
-<li>背双手游。</li>
-<li>紧贴双脚游。</li>
-<li>上述二者结合。（腰腹游泳）</li>
-<li>四肢捆绑游。（未掌握）</li>
-</ul>
-</li>
-<li>20220817 看强者游泳所得，有待验证：
-<ol>
-<li>蛙泳双脚不同时蹬，时间间隔约 300ms；</li>
-<li>自由泳手臂打水力量可以大点，获得更大初速。（但是注意减少气泡）</li>
-</ol>
-</li>
-</ul>
-<p>另诉：游泳会带来不幸。。比如我的<a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">暂时性耳聋</a>，关节疼痛和脱皮。</p>
-<div class="image50" style="text-align: center;">
-<img alt="游泳会带来不幸" src="/images/hide/sports/1.jpg">
-</div>
-<h2> 关于跑步</h2>
-<p>由于肺活量限制，最擅长 200-400m 短跑。</p>
-<p>长距离跑，前<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mfrac><mn>2</mn><mn>3</mn></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \frac{2}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>路程四步一呼吸，然后升为三步一呼吸（呼:吸=1:2），最后两步一呼吸。</p>
-<p><a href="/hide/memories.html#%E6%93%8D%E5%9C%BA" target="blank">高中经常跑步</a>。大学以后变成懒狗了。</p>
-<h2> 其他记录</h2>
-<p>以下列出无精确数量的或不便于绘制的运动数据。</p>
-<blockquote>
-<p>此处出现的 <code>?</code> 表示估计数值，默认使用<a href="https://zh.wikipedia.org/zh-cn/%E5%9B%BD%E9%99%85%E5%8D%95%E4%BD%8D%E5%88%B6" target="_blank" rel="noopener noreferrer">国际单位制（SI）</a>.<br>
-x 表示水平位移，h 表示垂直位移。<br>
-一个 <em>W 移动（Warehouse Movement）</em> 指从柴火间到家的移动，相当于 x50?h12?.<br>
-例：<code>136 砖 x30</code> =&gt; 人力将总计 136kg 的砖移动 30m 水平距离.</p>
-</blockquote>
-<!-- prettier-ignore -->
-<table>
-<thead>
-<tr>
-<th style="text-align:center">日期</th>
-<th style="text-align:center">记录</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">20210618</td>
-<td style="text-align:center">走路2000，引体向上压腿搬石板</td>
-</tr>
-<tr>
-<td style="text-align:center">20210622</td>
-<td style="text-align:center">走2000，引体向上9+x</td>
-</tr>
-<tr>
-<td style="text-align:center">20211029</td>
-<td style="text-align:center">网球乒乓球共3.5h</td>
-</tr>
-<tr>
-<td style="text-align:center">20211230</td>
-<td style="text-align:center">网球1h+</td>
-</tr>
-<tr>
-<td style="text-align:center">20220413</td>
-<td style="text-align:center">俯卧撑14+体育课若干锻炼</td>
-</tr>
-<tr>
-<td style="text-align:center">20220420</td>
-<td style="text-align:center">俯卧撑17+体育课若干运动</td>
-</tr>
-<tr>
-<td style="text-align:center">20220427</td>
-<td style="text-align:center">俯卧撑15+体育课若干运动</td>
-</tr>
-<tr>
-<td style="text-align:center">20221214</td>
-<td style="text-align:center">搬水</td>
-</tr>
-<tr>
-<td style="text-align:center">20221229</td>
-<td style="text-align:center">13.5? 椅子*10 <em>W移动</em> + x80</td>
-</tr>
-<tr>
-<td style="text-align:center">20230120</td>
-<td style="text-align:center">搬水</td>
-</tr>
-<tr>
-<td style="text-align:center">20230129</td>
-<td style="text-align:center">360? 水 x20；骑车往返共 3.2km</td>
-</tr>
-<tr>
-<td style="text-align:center">20230130</td>
-<td style="text-align:center">搬水；骑车往返往返共 3.2km</td>
-</tr>
-<tr>
-<td style="text-align:center">20230203</td>
-<td style="text-align:center">148 米、水 <em>W移动</em></td>
-</tr>
-<tr>
-<td style="text-align:center">20230204</td>
-<td style="text-align:center">搬各种大件物品，桌子，柜子等。（花费 3h）+ 下午两盆花</td>
-</tr>
-<tr>
-<td style="text-align:center">20230712</td>
-<td style="text-align:center">39 西瓜+水 <em>W移动</em></td>
-</tr>
-<tr>
-<td style="text-align:center">20230713</td>
-<td style="text-align:center">7 桃子 x95?h12</td>
-</tr>
-<tr>
-<td style="text-align:center">20230726</td>
-<td style="text-align:center">136 砖 x30</td>
-</tr>
-<tr>
-<td style="text-align:center">20230727</td>
-<td style="text-align:center">100 水 x29h12</td>
-</tr>
-<tr>
-<td style="text-align:center">20230731</td>
-<td style="text-align:center">112.7 石头、货 <em>W移动</em></td>
-</tr>
-<tr>
-<td style="text-align:center">20230812</td>
-<td style="text-align:center">95? 树 x12</td>
-</tr>
-</tbody>
-</table>
 ]]></content:encoded>
     </item>
     <item>
@@ -9565,6 +9159,13 @@ x 表示水平位移，h 表示垂直位移。<br>
 <td style="text-align:center"></td>
 <td style="text-align:center">5</td>
 <td style="text-align:center">10.5</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">5</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
 </tr>
