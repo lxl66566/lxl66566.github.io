@@ -122,6 +122,11 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 
 有谁买了海外 VPS 不是为了搭代理的呢？
 
+### 测试工具
+
+- [ping.pe](https://ping.pe/#)：连通性
+- `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
+
 ### 协议
 
 网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 伪装 HTTPS 加密方案，安全性高，但是数据包比较大，有被主动封禁的可能。
@@ -149,10 +154,6 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
   ```bash:no-line-numbers
   firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
   ```
-
-### 连通性测试
-
-[ping.pe](https://ping.pe/#)
 
 ## 系统管理
 

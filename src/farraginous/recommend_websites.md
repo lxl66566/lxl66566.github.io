@@ -80,8 +80,10 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 - [pastebin.com](https://pastebin.com/)，好记，免登录，以前一直用；但是有内容机审（贴日志的时候可能误报敏感信息）。
 - [gist.github.com](https://gist.github.com/)，github 的服务，可以在日志下方讨论，挺不错。缺点可能是需要登录，不过~~谁还没有个 github 账号呢~~？
-- [pb](https://fars.ee/f)：支持 [paste from cli](https://fars.ee/)，archlinux 大佬绝赞自建
+- [pb](https://fars.ee/f)：支持 [paste from cli](https://fars.ee/)，farseerfc 大佬的 pb
 - [pastes.dev](https://pastes.dev/)：极简风格
+- [pb.nichi.co](https://pb.nichi.co/)：仅支持 paste from cli，极极简
+- [bin.outv.im](https://bin.outv.im/)：注重加密
 
 ## 资源搜索
 

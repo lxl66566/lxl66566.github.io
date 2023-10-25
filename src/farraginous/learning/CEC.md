@@ -15,7 +15,7 @@ tag:
 
 电感：电压超前电流，$\displaystyle u=L\frac{di}{dt}$
 
-品质因数 $\displaystyle Q=\frac{\omega L}{R}$（感抗 / 损耗）
+品质因数 $\displaystyle Q=\frac{\omega L}{R}$（感抗 / 损耗）= $2\pi\times$ 回路储能 / 每周期耗能
 
 > 回路品质因数是为谐振时的线圈品质因数。
 
@@ -82,7 +82,9 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 
 三要素：增益，品质因数，通频带
 
-电压增益：$\displaystyle \dot A_v=\frac{-p_1p_2y_{fe}}{g_\Sigma+j\omega C_\Sigma+\frac1{j\omega L}}$
+电压增益：$\displaystyle \dot A_v=\frac{-p_1p_2y_{fe}}{g_\Sigma+j\omega C_\Sigma+\frac1{j\omega L}}$；关于公式理解可以看[视频](https://www.bilibili.com/video/BV1hE411N79f/?p=23&t=337)
+
+- 在谐振频率附近分母后两项可以舍去
 
 电压增益 \* 通频带 = const
 
@@ -100,6 +102,14 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
   - 中和法：高增益，不适合带宽放大
     - [具体方法公式](https://www.bilibili.com/video/BV1p441197Xp/?p=15&t=1307)
   - 失配法：低增益，但稳定
+
+### 做题
+
+[这个](https://www.bilibili.com/video/BV1bq4y1v7a7/?t=500)讲的不错。
+
+- 会画交流等效电路和 Y 参数微变等效电路。
+- $\displaystyle g_{eo}=\frac1{Q_0\omega_0L}$
+- 知道抽头变换，$n_1$ 和 $n_2$ 的计算。
 
 ## 滤波器
 

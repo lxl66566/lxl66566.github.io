@@ -109,6 +109,7 @@ umount /mnt/windows
 ext4 是许多旧 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 zfs, xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊，而且没进内核主线
 
 > [有前辈说](https://t.me/archlinuxcn_group/2949935)了一些 zfs 的优势。
+> xfs 比较适合数据库使用，并发写性能好 ([ref](https://t.me/archlinuxcn_group/2963733))
 
 ### btrfs
 

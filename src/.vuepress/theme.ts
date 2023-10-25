@@ -77,6 +77,7 @@ export default hopeTheme({
 		},
 		feed: {
 			rss: true,
+			count: 30,
 		},
 		pwa: {
 			update: "force",

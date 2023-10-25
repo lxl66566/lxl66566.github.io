@@ -211,7 +211,7 @@ _（旧版表格）_
 以下机场因性价比原因不推荐购买
 
 - [XFLTD](https://xftld.org/)
-- [Simple Cloud](https://www.spcloud.cc/index.php#/register?code=97EXi3tX)
+- [Simple Cloud](https://www.spcloud.pro/index.php#/register?code=97EXi3tX)
 - [XSUS](https://xsus.buzz/)
 - [墙裂](https://my.qianglie.com/)
 - [大哥云](https://www.dageyun.net/)
