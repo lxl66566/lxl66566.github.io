@@ -156,9 +156,10 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 记录软件使用时长 ~~推 gal 神器~~，掌控自己的时间消耗
 
-### [SpaceSniffer](https://spacesniffer.en.softonic.com/)
+### 可视化磁盘空间
 
-可视化磁盘空间占用，方便清理
+- [WizTree](https://diskanalyzer.com/)：扫描快速，号称 fastest
+- [SpaceSniffer](https://spacesniffer.en.softonic.com/)：较慢，但是可视化更好
 
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
 
@@ -294,7 +295,7 @@ _建议在设置中开启开机自启。_
 
 ### 基础 CLI 工具
 
-> 对于通过 `/`（OR） 相连的软件，本人**仅推荐首个**
+> 对于通过 `/`（OR）相连的软件，本人**仅推荐首个**
 
 <!-- prettier-ignore -->
 |软件包|功用|
@@ -310,7 +311,7 @@ _建议在设置中开启开机自启。_
 |`lsof`|[查端口占用](../articles/linux/problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
-|`ncdu` / `gdu`|磁盘容量查询|
+|`dust` & `ncdu` / `gdu`|磁盘容量查询|
 |`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
 |`neovim`|文本编辑器|
