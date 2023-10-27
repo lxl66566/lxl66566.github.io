@@ -130,4 +130,14 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 
 ## 谐振功放
 
-负载是谐振回路，工作在丙类（效率高）
+基极反偏，截止区域 > 工作区域，因此是工作在丙类（效率高）。负载是谐振回路。
+
+电压利用系数 $\displaystyle\xi=\frac{V_{cm}}{V_{cc}}$，波形系数 $\displaystyle g_1(\theta_c)=\frac{I_{cm1}}{I_{c0}}$
+
+[效率](https://www.bilibili.com/video/BV1hE411N79f/?p=30&t=344) $\displaystyle\eta=\frac12\xi g_1(\theta_c)$
+
+$I_{cmax}=g_cV_{bm}(1-cos(\theta_c))$
+
+[傅里叶级数展开求 $I_{c0},I_{cm1}$](https://www.bilibili.com/video/BV1hE411N79f/?p=31&t=637)
+
+最佳半导通角约为 70 度

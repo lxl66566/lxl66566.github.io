@@ -126,7 +126,9 @@ btrfs <span class="heimu" title="你知道的太多了">其实现代文件系统
 
 1. [安装 Winbtrfs](https://github.com/maharmstone/btrfs)
 2. 此时已经可以在资源管理器中访问了。
-3. 默认挂载是读写的，我比较建议改为只读，以免 windows 发癫改掉了什么东西。[在这里](https://github.com/maharmstone/btrfs#mount-options)可以进行一些设置，重启生效。
+3. 默认挂载是读写的，我比较建议改为只读，降低出现问题的概率。[在这里](https://github.com/maharmstone/btrfs#mount-options)可以进行一些设置，重启生效。
+
+事实上，_winbtrfs_ 与 _ntfs-3g_ 都不能保证一定不会出问题（有一些群友被坑过）。所以建议都只读不写。
 
 ## 设置
 
@@ -374,6 +376,22 @@ AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。
   :::
 - 疑难解答：
   - yay：疑难解答：[yay 安装问题](./problem.md#yay-安装问题) | [yay 换源问题](./problem.md#yay-换源问题) | [yay 权限错误](./problem.md#yay-权限错误)
+
+## 打包
+
+AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
+
+首先看看 arch wiki，很有用。[打包准则](https://wiki.archlinuxcn.org/zh/Arch_打包准则) | [创建软件包](https://wiki.archlinuxcn.org/wiki/创建软件包)
+
+我在先辈推动下，先接过了一个 `autocorrect-bin` 练手。
+
+1. 首先，创建一个 AUR 账号，并[认证](https://wiki.archlinuxcn.org/wiki/AUR_提交准则#认证)
+2. 认领包，clone 到本地
+3. 改 PKGBUILD
+4. 更新 `.SRCINFO`: `makepkg --printsrcinfo > .SRCINFO`
+5. push。注意不要使用那些阻断 ssh 的代理。
+
+可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；`makepkg -si` 测试安装。
 
 ## 包使用
 
