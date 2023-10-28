@@ -10,6 +10,8 @@ tag:
 
 # 命令行压缩
 
+## bz
+
 我电脑上使用的压缩软件为[Bandizip](../farraginous/recommend_packages.md#bandizip)，命令行指令为`bz`，详见[官网-命令行参数](https://cn.bandisoft.com/bandizip/help/parameter/)。
 
 我使用脚本备份我的浏览器历史记录，并使用 bandizip 命令行进行 7z 加密压缩后上传到 Github。代码如下（隐去关键部分）：
@@ -26,3 +28,15 @@ exit
 ```
 
 若直接对 History 文件压缩会报错（我也不清楚为什么），因此使用 cp 命令复制到缓存文件夹压缩，曲线救国。
+
+## 7z/7za
+
+linux 上安装 p7zip 即可。
+
+```sh
+7za a -p<PASSWORD> -mx9 output input
+```
+
+## tar
+
+压缩 cvaf 解压 xvaf ([ref](https://t.me/archlinuxcn_group/2966078))

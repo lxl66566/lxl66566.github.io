@@ -58,7 +58,7 @@ git 在 windows 下的安装也算是一门学问，一共十几个英文步骤�
        Port 443
        ProxyCommand connect -H 127.0.0.1:<port> %h %p
    ```
-   也可以将 `-H` 换为 `-S` 以使用 socks 代理，若 http 代理失效，可使用。（[ref](https://hanyuzhou.com/2022/03/06/connect-with-ssh-through-a-proxy/)）
+   也可以将 `-H` 换为 `-S` 以使用 socks 代理，若 http 代理失效，可使用。([ref](https://hanyuzhou.com/2022/03/06/connect-with-ssh-through-a-proxy/))
 3. 其他全局设置
    ```sh
    git config --global push.default current    # 设置默认推送，简化 git push
@@ -68,7 +68,8 @@ git 在 windows 下的安装也算是一门学问，一共十几个英文步骤�
    git config --global init.defaultBranch main     # 更改默认分支为 main（linux 默认还是 master）
    ```
 4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用插件 `Git Graph` 以直观地查看 git 提交树与更改。
-   [^6]: 需要使用 [Vim](./vim.md)。若不想用，请自行搜索 `git bash 更改默认编辑器`
+
+[^6]: 需要使用 [Vim](./vim.md)。若不(想/会)用，可以修改环境变量 `EDITOR` 的值指定默认编辑器。
 
 ### 基础使用
 
@@ -145,7 +146,9 @@ git commit -am "注释"   # add 跟踪的文件并 commit
 2. 留出一个主 commit 不改变，将其余 commit 的 `pick` 改为 `squash`，保存关闭。
 3. 下一个页面是更改注释的，可以直接关闭。
 
-### 连接远程仓库
+### 操作远程
+
+#### 连接远程仓库
 
 ::: code-tabs
 @tab SSH
@@ -165,19 +168,25 @@ git remote add origin https://github.com/yourgithubID/gitRepo.git
 > 优先使用 ssh，不过需要配置<br/>
 > 可以理解为给后面那串玩意起了个别名，方便记忆。一般都用 `origin`。
 
-其他指令：
+#### 其他
 
 ```sh
-git remote show <name>  # 查看远程仓库，name 留空即为列出当前远程仓库列表
-git remote rm <remote name> # 删除远程仓库
+git remote show <name>        # 查看远程仓库，name 留空即为列出当前远程仓库列表
+git remote rm <remote name>   # 删除远程仓库
+git fetch origin <branch>     # 拉取远程
 ```
+
+#### 删除远程 tag
+
+如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新 source code。（release 信息会被保留，状态更改为 draft）
+
+仅删除远程 tag：`git push origin :refs/tags/TAGNAME#
 
 ### 上传
 
 将你的仓库上传到 github 等仓库托管平台。
 ::: tip
 注：首次使用 ssh 连接需要先配置 ssh 密钥。在 git bash 中输入下述指令。若不使用 _git bash_，请理解指令意思后自行操作
-:::
 
 ```sh
 cd ~    # 进入 home 目录（windows 下即为 C:/Users/<your windows user name>）
@@ -190,22 +199,18 @@ ssh -T git@github.com   # 输入该命令验证是否成功
 - （疑难解答[^1]：_ssh 密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误_）
 - （疑难解答[^2]：_复制密钥时遇到`bash: clip: command not found`错误_）
 
-[^1]:
-    > 尝试连接 GitHub 的 443 端口。([source](https://segmentfault.com/a/1190000041909858))
-    >
-    > ```sh
-    > vim ~/.ssh/config
-    > ```
-    >
-    > 然后在打开的 vim 编辑器内添加以下内容：
-    >
-    > ```
-    > Host github.com
-    >   Hostname ssh.github.com
-    >   Port 443
-    > ```
-    >
-    > 此时回到[这里](#连接)进行实验。成功连接即解决问题。
+:::
+
+[^1]: 可能是代理阻断了 ssh 22 端口造成。有两个解法：
+
+    1.  关闭代理。
+    2.  连接 GitHub 的 443 端口([ref](https://segmentfault.com/a/1190000041909858))。在 `~/.ssh/config` 中添加：
+
+        ```
+        Host github.com
+           Hostname ssh.github.com
+           Port 443
+        ```
 
 [^2]:
     > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
@@ -251,29 +256,17 @@ git merge <branch_name> --ff-only   # 快进合并
 - （疑难解答[^7]：_fatal: refusing to merge unrelated histories_）
   [^7]: 当本地与远程交集为空时会出现此情况。解法：`git pull origin main --allow-unrelated-histories`
 
-### 删除文件
+### 操作文件
 
 ```sh
-# --cached 指仅删除仓库内文件，不删除本地文件；-r 为递归
-git rm --cached filename.xxx -r
-```
-
-### 恢复文件
-
-```sh
-git checkout [commit_hash] -- <path/to/file>  # 从某个 commit 恢复文件，注意空格
+git rm --cached filename.xxx -r  # --cached 指仅删除仓库内文件，不删除本地文件；-r 为递归
+git checkout [commit_hash] -- <path/to/file>  # 从某个 HEAD 指针恢复文件，注意空格
 git reset --hard <HEAD pointer>    # 强制重置到某 commit，重置所有更改，但不删除新增文件
 ```
 
-### 拉取远程
+### 变基
 
-`git fetch origin <branch>`
-
-### 删除远程 tag
-
-如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新 source code。（release 信息会被保留，状态更改为 draft）
-
-仅删除远程 tag：`git push origin :refs/tags/TAGNAME`
+变基(rebase) 能修改提交之间的关系，是一个很强大的命令。git 提供了一个简单的操作：`git rebase -i` （即 `--interactive`，交互式），只需要按照注释操作即可。需要使用编辑器[^6]。
 
 ## 其他技巧
 
@@ -389,7 +382,7 @@ git 官方推荐的清理工具。
 git filter-repo --invert-paths -f --path "<path/of/file>"
 ```
 
-> [References](https://nyakku.moe/posts/2020/06/12/use-git-filter-repo-clean-git-history.html)
+> [src](https://nyakku.moe/posts/2020/06/12/use-git-filter-repo-clean-git-history.html)
 
 #### filter-branch
 

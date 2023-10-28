@@ -21,7 +21,13 @@ export default sidebar({
 			],
 		},
 	],
-	"/articles/linux/": ["index.md", "problem.md"],
+	"/articles/linux/": [
+		"index.md",
+		"basic.md",
+		"install_and_config.md",
+		"package.md",
+		"problem.md",
+	],
 	"/articles/": [
 		{
 			text: "主张",

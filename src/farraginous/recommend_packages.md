@@ -289,46 +289,7 @@ _建议在设置中开启开机自启。_
 
 ## Linux
 
-> 避免啰嗦，默认不包含上述部分跨平台软件。
-
-更详细的说明或使用教程请前往 [Linux](../articles/linux)。由于我使用 pacman，因此不指明下载方式。
-
-### 基础 CLI 工具
-
-> 对于通过 `/`（OR）相连的软件，本人**仅推荐首个**
-
-<!-- prettier-ignore -->
-|软件包|功用|
-| :-: | :-: |
-|`fishshell` + `starship`|shell 及其外观|
-|`ripgrep`|`grep` 的代替|
-|`fd` & `plocate`|查找，`find` 的代替|
-|`tldr`|`man` 的代替|
-|`fex`|`cut` 的代替|
-|`exa`|[`ls` 的代替](../articles/linux/index.md#exa)|
-|[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
-|`htop`|任务管理器，看性能|
-|`lsof`|[查端口占用](../articles/linux/problem.md#umount-failed)|
-|`zoxide`|智能 cd|
-|[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
-|`dust` & `ncdu` / `gdu`|磁盘容量查询|
-|`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
-|`lsof`|查进程占用|
-|`neovim`|文本编辑器|
-
-[^6]: `yazi` 甚至能在 console 下查看图片。
-
-### activitywatch
-
-记录软件使用时长，参考[文章](../articles/time_record.md)
-
-### bottles
-
-运行 windows 软件，比 wine 更傻瓜式。
-
-### daed
-
-eBPF 代理工具，透明代理。
+前往 [Linux - 包管理与使用](../articles/linux/package.md#包使用)
 
 ## 浏览器插件
 

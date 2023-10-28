@@ -269,7 +269,7 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 
 #### 简介
 
-V2ray 是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。（[source](https://www.xuebuyuan.com/3296293.html)）
+V2ray 是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。([source](https://www.xuebuyuan.com/3296293.html))
 
 V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
 

@@ -38,7 +38,7 @@ tag:
 ### 基础设置
 
 - nvim 不支持 alt 和 TAB 快捷键绑定。。（骂人） 切窗口的快捷键还得再自定义。
-- `vim.opt.wrap = true` 这行是一定要开的，可以让过长的行到行尾自动换行。（[ref](https://neovim.io/doc/user/options.html#'wrap')）
+- `vim.opt.wrap = true` 这行是一定要开的，可以让过长的行到行尾自动换行。([ref](https://neovim.io/doc/user/options.html#'wrap'))
 
 ### 侧边栏
 

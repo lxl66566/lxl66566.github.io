@@ -66,7 +66,7 @@ category:
 
 ## 友链与外链
 
-> 单方面引用一些写得很好的公开博客。若有异议，请联系我删除。
+> 单方面引用的公开博客。
 
 - [asukaminato.notion.site](https://asukaminato.notion.site/asukaminato/Blog-3c0df75d3d8b471ab67e97ecc82e10a4)
 - [martinlwx.github.io](https://martinlwx.github.io/zh-cn/)

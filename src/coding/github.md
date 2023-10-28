@@ -117,7 +117,7 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 
 - 一个方法是手动复制所有链接，然后用 [Ditto](../farraginous/recommend_packages.md#ditto) 批量粘贴到 AriaNgGUI/IDM 等下载器下载。
   - 由于我使用 XDM 而批量下载抽风了，于是只好 `scoop install aria-ng-gui` 下载了一个万恶的 electron 下载器下载。
-- 另一个方法是用命令行下载（[ref](https://www.bilibili.com/read/cv21459907)）。打开我的 ArchWSL，配好代理和路径：
+- 另一个方法是用命令行下载([ref](https://www.bilibili.com/read/cv21459907))。打开我的 ArchWSL，配好代理和路径：
   ```sh
   sudo pacman -Syy    # 更新缓存
   sudo pacman -S aria2 jq

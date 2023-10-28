@@ -138,7 +138,7 @@ MariaDB replaces mysql (( ([src](https://archlinux.org/news/mariadb-replaces-mys
 
 首先[获取到 mysql 的 dumpfile](#备份与恢复)，尝试直接恢复报错：`Unknown collation: 'utf8mb4_0900_ai_ci'`。
 
-于是直接 `sed -i 's/utf8mb4_0900_ai_ci/uca1400_as_ci/g' test.sql` 再导入，问题解决。（[ref](https://dba.stackexchange.com/a/314442)）
+于是直接 `sed -i 's/utf8mb4_0900_ai_ci/uca1400_as_ci/g' test.sql` 再导入，问题解决。([ref](https://dba.stackexchange.com/a/314442))
 
 ## 遇到的问题
 

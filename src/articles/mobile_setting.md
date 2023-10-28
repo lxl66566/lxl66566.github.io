@@ -172,7 +172,7 @@ tag:
 
 1. 点击 _设置 - 声音与触感 - 电话铃声 - 全部铃声_，bug 闪退
 2. 下载 138M 的音乐（系统应用），“设置铃声需要开通 VIP”
-3. 将铃声 push 到系统 ringtone 文件夹：`adb push xxx.mp3 /system/media/audio/ringtones/`（[ref](https://oddity.oddineers.co.uk/2020/08/24/wear-os-custom-ringtones-via-adb/)），报错 `remote couldn't create file: Read-only file system`
+3. 将铃声 push 到系统 ringtone 文件夹：`adb push xxx.mp3 /system/media/audio/ringtones/`([ref](https://oddity.oddineers.co.uk/2020/08/24/wear-os-custom-ringtones-via-adb/))，报错 `remote couldn't create file: Read-only file system`
 4. `adb remount` <Badge text="root" />，报错 `/system/bin/sh: adb: inaccessible or not found`
 5. `adb shell`，`su`，`mount -o rw,remount /system` <Badge text="root" />，报错 `mount: '/system' not in /proc/mounts`
 
