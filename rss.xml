@@ -6,10 +6,12 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 27 Oct 2023 15:23:09 GMT</pubDate>
-    <lastBuildDate>Fri, 27 Oct 2023 15:23:09 GMT</lastBuildDate>
+    <pubDate>Sat, 28 Oct 2023 12:31:50 GMT</pubDate>
+    <lastBuildDate>Sat, 28 Oct 2023 12:31:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
+    <category>推荐</category>
     <category>编程</category>
     <category>学习</category>
     <category>随笔</category>
@@ -17,10 +19,470 @@
     <category>评价</category>
     <category>导航</category>
     <category>博客</category>
-    <category>教程</category>
     <category>经历</category>
     <category>主张</category>
-    <category>推荐</category>
+    <item>
+      <title>基础</title>
+      <link>https://absx.pages.dev/articles/linux/basic.html</link>
+      <guid>https://absx.pages.dev/articles/linux/basic.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">基础</source>
+      <description>基础</description>
+      <category>教程</category>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 基础</h1>
+<ol>
+<li>我建议仔细看看 <a href="https://missing-semester-cn.github.io/" target="_blank" rel="noopener noreferrer">The Missing</a>的前几章，比较到位，<strong>免去了自己折腾之苦</strong>（本人亲身体会）。</li>
+<li><a href="https://zhuanlan.zhihu.com/p/495554731" target="_blank" rel="noopener noreferrer">Linux ls -al 得到的结果代表什么意思？</a></li>
+<li><code>[Y/n]</code> 可以直接回车表示确认。<code>Y</code> 大写表示默认。(<a href="https://t.me/archlinuxcn_group/2950979" target="_blank" rel="noopener noreferrer">ref</a>)</li>
+<li>awk 是一门语言(<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=awk+%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener noreferrer">ref</a>)，<s>但我从不用 awk</s>。</li>
+</ol>
+<h2> <a href="https://linuxhandbook.com/linux-shortcuts/" target="_blank" rel="noopener noreferrer">Terminal shortcuts</a></h2>
+<p><code>&lt;C-a&gt;</code> 代表 <code>Ctrl + a</code>.</p>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th style="text-align:center">按键</th>
+<th style="text-align:center">执行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;C-a&gt;</code></td>
+<td style="text-align:center">移动光标到最前</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;C-w&gt;</code></td>
+<td style="text-align:center">删除前一个单词</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;C-u&gt;</code></td>
+<td style="text-align:center">清空光标前输入</td>
+</tr>
+</tbody>
+</table>
+<h2> POSIX 指令</h2>
+<blockquote>
+<p>不是系统性描述，更多是一些 tricks 和踩坑；可能不是最简，欢迎指正。</p>
+</blockquote>
+<h3> sed</h3>
+<ul>
+<li>sed 正则表达式的 <code>{}</code> 需要转义 <code>\{\}</code>，否则需要使用 <code>sed -r</code>（maybe <code>alias sed='sed -r'</code> ?）</li>
+</ul>
+<h3> find</h3>
+<ul>
+<li>末尾的 <code>\;</code> 的作用是声明了 <code>-exec</code> 的结尾。</li>
+<li>众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 <code>rm *</code>。若我要反过来，只删除目录而排除文件呢？<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>复制目录下所有文件，除了其中一个：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+</ul>
+<p>通过这些例子，应该就能基本上手 <code>find</code> 了。</p>
+<h2> 文件系统(fs)</h2>
+<p>ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 zfs, xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊</p>
+<blockquote>
+<p><a href="https://t.me/archlinuxcn_group/2949935" target="_blank" rel="noopener noreferrer">有前辈说</a>了一些 zfs 的优势。
+xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/archlinuxcn_group/2963733" target="_blank" rel="noopener noreferrer">ref</a>)</p>
+</blockquote>
+<h3> btrfs</h3>
+<p>对于一个用惯 windows ntfs 的人来说，btrfs <span class="heimu" title="你知道的太多了">as well as 现代文件系统</span>一定能让他眼前一亮。（文章参考 <a href="#external">external</a> 1.）我最爱 CoW(写时复制)，透明压缩。</p>
+<p>使用 btrfs 有一些坑需要注意：</p>
+<ol>
+<li>由于 CoW，使用 <code>du</code> 查看磁盘空间可能不准确，需要使用：<code>btrfs fi usage /</code>.</li>
+<li>由于 CoW + 快照，操作数据库的时候需要小心，尽可能不要将数据库加入快照备份区（可以使用其他子卷存放）。</li>
+</ol>
+<h4> 工具</h4>
+<p><a href="https://github.com/knorrie/btrfs-heatmap" target="_blank" rel="noopener noreferrer">btrfs-heatmap</a> 可以看 bg 的大小与碎片分布 (<a href="https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html" target="_blank" rel="noopener noreferrer">src</a>)。</p>
+<h4> 互操作</h4>
+<p>互操作能极大提升多系统使用体验。<span class="heimu" title="你知道的太多了">ext4 从 windows 访问根本没啥好用工具</span></p>
+<p>众所周知 windows 默认使用它那 ntfs 已经很久了，并且默认没有 btrfs 支持。而双系统经常需要进行文件的互访问。linux 默认可读 ntfs，写入则只需安装 <code>ntfs-3g</code> 即可。而 windows 访问 btrfs 也非常简单。</p>
+<ol>
+<li><a href="https://github.com/maharmstone/btrfs" target="_blank" rel="noopener noreferrer">安装 Winbtrfs</a></li>
+<li>此时已经可以在资源管理器中访问了。</li>
+<li>默认挂载是读写的，我比较建议改为只读，降低出现问题的概率。<a href="https://github.com/maharmstone/btrfs#mount-options" target="_blank" rel="noopener noreferrer">在这里</a>可以进行一些设置，重启生效。</li>
+</ol>
+<p>事实上，<em>winbtrfs</em> 与 <em>ntfs-3g</em> 都不能保证一定不会出问题（有一些群友被坑过）。所以建议都只读不写。</p>
+<h2> external</h2>
+<ol>
+<li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
+<li><a href="https://catcat.cc/post/2020-10-31/" target="_blank" rel="noopener noreferrer">Linux fontconfig 的字体匹配机制</a></li>
+<li><a href="https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html" target="_blank" rel="noopener noreferrer">btrfs 元数据满了怎么办</a></li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>安装与配置</title>
+      <link>https://absx.pages.dev/articles/linux/install_and_config.html</link>
+      <guid>https://absx.pages.dev/articles/linux/install_and_config.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">安装与配置</source>
+      <description>安装与配置</description>
+      <category>教程</category>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 安装与配置</h1>
+<h2> 安装</h2>
+<h3> Archlinux</h3>
+<p>20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，在<a href="/articles/linux/problem.html" target="blank">问题区</a>可见一斑。</p>
+<ul>
+<li><a href="https://arch.icekylin.online/" target="_blank" rel="noopener noreferrer">中文教程</a>，讲的比较好，有不少针对中文用户的细节。
+<ul>
+<li>本人也参与了一些错误修正和内容追加。</li>
+</ul>
+</li>
+<li>不过还是建议 <a href="https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">archwiki - installation guide</a> 也一起看看，取长补短。</li>
+</ul>
+<p>分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢另一块盘的数据<span class="heimu" title="你知道的太多了">安装时我确实失手格掉了全盘数据和分区</span>。</p>
+<h4> 添加 windows 引导</h4>
+<p>由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 <em>os-prober</em> 自动共存。因此我使用如下方法进行自动检测并添加：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 驱动</h4>
+<p>安装初期只看了一点<a href="https://arch.icekylin.online/guide/rookie/graphic-driver.html" target="_blank" rel="noopener noreferrer">第三方教程</a>。后面发现也要看 <a href="https://wiki.archlinux.org/title/NVIDIA" target="_blank" rel="noopener noreferrer">wiki</a>。</p>
+<p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。</p>
+<p>我安装的驱动是 <code>nvidia-open</code>。</p>
+<ol>
+<li><code>sudo nvidia-xconfig</code> 生成默认配置</li>
+<li>不删 <em>mkinitcpio</em> 的 <code>kms</code> hook 也不会出问题，只要装了 <em>nvidia-utils</em></li>
+</ol>
+<h3> ArchWSL</h3>
+<ul>
+<li>更新 ArchWSL：从<a href="https://github.com/yuk7/wsldl/releases" target="_blank" rel="noopener noreferrer">此处</a>下载 <code>wsldl.exe</code>，改名为 <code>arch.exe</code> 并替换。</li>
+</ul>
+<h3> TermuxArch</h3>
+<p>20230920 下午安装 TermuxArch，也踩了不少坑。</p>
+<ol>
+<li>termux 本身的 pkg 需要配置好镜像源（<code>termux-change-repo</code>）。</li>
+<li>安装时如果有报错要注意看，可能需要：
+<ul>
+<li>手动在移动端环境创建目录</li>
+<li>手动安装一些包，例如 bsdtar</li>
+</ul>
+</li>
+<li>安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ol>
+<h2> 配置</h2>
+<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
+<h3> 系统设置</h3>
+<ol>
+<li>基础 alias<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5（我对写入量敏感，同时我拥有大 RAM）</li>
+<li>设置 <code>/etc/fstab</code>
+<ul>
+<li><a href="/articles/ramdisk.html" target="blank">挂载 tmpfs</a>
+<ul>
+<li>Archlinux 实际上有 <a href="https://wiki.archlinux.org/title/Tmpfs#Usage" target="_blank" rel="noopener noreferrer">tmpfs 挂载的默认值</a>，然而我还是手动搞了，可以调整容量。</li>
+</ul>
+</li>
+<li>添加 <code>noatime</code> 标识，即不带访问时间(<a href="https://t.me/archlinuxcn_group/2900548" target="_blank" rel="noopener noreferrer">ref</a>)</li>
+<li>删除 <code>subvolid</code>，详见 <a href="/articles/linux/problem.html#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88" target="blank">timeshift 引发的血案</a></li>
+</ul>
+</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Wayland#Electron" target="_blank" rel="noopener noreferrer">wayland 的 electron 支持</a>（据说 wayland 对 electron 不太友好）</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#SDDM" target="_blank" rel="noopener noreferrer">激活启动时 numlock</a></li>
+<li>设置 pacman：
+<ul>
+<li>将某些不常用包和自更新包加入 IgnorePkg，例如 <em>chromium</em> &amp; xmake | <a href="https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/" target="_blank" rel="noopener noreferrer">ref</a></li>
+<li>更改缓存至 ramdisk （<code>CacheDir</code>）</li>
+</ul>
+</li>
+<li>更改 AUR Helper 缓存（ 参考<a href="https://wiki.archlinuxcn.org/wiki/Makepkg#%E4%BD%BF%E7%94%A8%E5%86%85%E5%AD%98%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%AF%91" target="_blank" rel="noopener noreferrer">wiki</a> 注意事项）：
+<ul>
+<li>yay 更改缓存至 tmpfs: <code>yay --builddir /tmp/yay --save</code></li>
+<li><em>很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。</em> <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 <code>clonedir</code> 也 <a href="https://github.com/lxl66566/config/blob/archlinux/etc/fstab" target="_blank" rel="noopener noreferrer">bind mount 同一个 tmpfs</a>，这样就能够解决问题了。
+<ul>
+<li>然而这里还会出现权限问题。</li>
+</ul>
+</li>
+<li>未测试：是否能够使用 <code>$PKGDEST</code> env 改变编译位置？(<a href="https://wiki.archlinuxcn.org/wiki/Makepkg#%E5%8C%85%E8%BE%93%E5%87%BA" target="_blank" rel="noopener noreferrer">source</a>)</li>
+</ul>
+</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
+<li>grub 改等待时间<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>修改 faillock attempt times<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ol>
+<h3> 输入法</h3>
+<p>我使用 fcitx5，输入要求为 <em>英语，双拼，日语</em>。可以在遇到的问题里找到一些输入法的设置。</p>
+<ol>
+<li>双拼关闭快速输入，默认为<code>；</code>。</li>
+<li>双拼的 <code>w</code> 默认总给的是 <code>为</code> 而不是 <code>我</code>。因此可以 <em>自定义词组</em>。</li>
+</ol>
+<h3> 代理</h3>
+<h4> <a href="https://github.com/daeuniverse/daed" target="_blank" rel="noopener noreferrer">daed</a></h4>
+<blockquote>
+<p>根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多</p>
+<div style="text-align:right">
+<p>——Au, <a href="https://t.me/archlinuxcn_group/2912643" target="_blank" rel="noopener noreferrer">src</a></p>
+</div>
+</blockquote>
+<p>网页面板的开源代理，dae 的前端。由于比较新，目前使用的人不多。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>这样就开机自启，并可以 <code>localhost:2023</code> 进面板了。然后写节点，拖到 proxy 里就行。</p>
+<p>daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 <code>ALL_PROXY</code> 等系统代理变量记得取消；firefox 需要在代理设置中设为 <em>自动探测网络环境</em>。</p>
+<p>需要写规则可以参考<a href="https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522" target="_blank" rel="noopener noreferrer">这里</a>。</p>
+<h4> v2raya</h4>
+<p>v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 <a href="https://xtls.github.io/" target="_blank" rel="noopener noreferrer">Xray 内核</a>差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。（后面逃到 daed 了）</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后的操作都在网页上进行。使用系统代理端口为 <code>http://127.0.0.1:20172</code>，这个端口带自动分流。</p>
+<p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" target="_blank" rel="noopener noreferrer">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code></p>
+<h4> clash-verge</h4>
+<p>见<a href="/articles/vpn.html#clash-verge" target="blank">vpn</a>介绍页。内核为 clash-meta，接受订阅文件，不接受节点。有订阅的可以尝试。</p>
+<h4> 使用 windows 代理</h4>
+<details class="hint-container details"><summary>archwsl 内容，点击展开</summary>
+<p>我在 archwsl 中懒得重复下载，直接使用 windows 代理。<a href="https://zhuanlan.zhihu.com/p/153124468" target="_blank" rel="noopener noreferrer">ref</a></p>
+<p>后来直接写了 <a href="https://github.com/lxl66566/config/blob/archwsl/.config/fish/functions/proxy_con.fish" target="_blank" rel="noopener noreferrer">fish 脚本</a>，自用方便。</p>
+
+</details>
+<p>代理软件需要开启局域网连接。测试时不要使用 <code>ping</code> 指令（其不走代理），用 <code>curl</code>。</p>
+<h3> kde 及其配套设施</h3>
+<p>我使用 kde 作为我的桌面（kde 爆杀 gnome!）。</p>
+<ol>
+<li>enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在<em>系统设置 - 添加快捷键 - 火焰截图</em>，然后手动设置快捷键。</li>
+<li><em>输入设备</em>，将键盘的按键延迟改短。</li>
+<li><em>外观</em>，黑色主题</li>
+<li><em>开关机 - 桌面会话</em>，选择启动为空会话</li>
+<li><em>快捷键</em>，添加应用程序 <em>konsole</em>，设置唤醒快捷键</li>
+<li>关闭通知声音</li>
+<li>输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。</li>
+<li>自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，<s>因为可以通过风扇声判断</s></span> 还有时间格式，无用图标的自定义。</li>
+<li><em>工作区行为 - 锁屏</em>，改锁屏时间。</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#KDE_Plasma_%E7%94%A8%E6%88%B7" target="_blank" rel="noopener noreferrer">设置 numlock 行为</a></li>
+<li><em>窗口管理 - 窗口行为</em> 设置 <em>焦点跟随鼠标</em></li>
+<li>配置窗口管理器，在窗口装饰中选择主题，调出 <code>置顶</code> 按钮。</li>
+</ol>
+<h3> 快照</h3>
+<p>快照本质上就是一个 cp 而已，只不过在 btrfs 上吃了 CoW 的福利，空间占用很小罢了。</p>
+<p>因为<a href="/articles/linux/problem.html#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88" target="blank">被 timeshift 坑过</a>，因此换用 snapper + btrfs-assistant。</p>
+<blockquote>
+<p>当然还有 <a href="https://github.com/digint/btrbk" target="_blank" rel="noopener noreferrer">btrbk</a> 可以选择，不过其主业 (backup tool) 并非快照，因此没有尝试。</p>
+</blockquote>
+<p>快照一般不备份 <code>/boot</code>，因此若回滚了旧的内核，而 boot 仍启动新的内核，则无法正常启动。<a href="https://wiki.archlinux.org/title/System_backup#Snapshots_and_/boot_partition" target="_blank" rel="noopener noreferrer">wiki 里有解法</a>，可以在更新内核时备份 <code>/boot</code> 以便回滚时能够手动替换 <code>/boot</code>。</p>
+<h4> snapper</h4>
+<p><code>btrfs-assistant</code> 为 snapper 提供了 GUI 界面，建议安装。</p>
+<p><code>snap-pac</code> 会在<strong>每次 pacman 安装 &amp; 删除时</strong>打一次快照（<em>before and after pacman transactions</em>），这样可能会<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=snap-pac" target="_blank" rel="noopener noreferrer">比较占空间</a>。我对快照没有那么高要求，因此我不用。</p>
+<h4> timeshift</h4>
+<p>timeshift 要求子卷名字必须以 <code>@</code> 开头。</p>
+<p>timeshift 的 cron 定时备份默认是残废的。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>包管理与使用</title>
+      <link>https://absx.pages.dev/articles/linux/package.html</link>
+      <guid>https://absx.pages.dev/articles/linux/package.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">包管理与使用</source>
+      <description>包管理与使用</description>
+      <category>教程</category>
+      <category>推荐</category>
+      <pubDate>Sat, 28 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 包管理与使用</h1>
+<h2> 包管理</h2>
+<h3> pacman</h3>
+<p>pacman 是 linux 官方指定包管理器，好用，就是指令比较难记。安装来源是 linux 官方仓库，基本上都是二进制。</p>
+<ul>
+<li>“滚” 指 <code>sudo pacman -Syu</code>，更新所有包。不要隔太久不滚，挂的概率会增加。（<s>今日也无事可做</s>）
+<ul>
+<li>也可以直接 <code>yay</code> 或 <code>paru</code> 进行更新。（这俩不带参数默认执行 <code>-Syu</code>）</li>
+<li>如果更新了内核（<code>linux</code> 包），请立即重启。</li>
+</ul>
+</li>
+<li>出现 <code>The requested URL returned error: 404</code>，可能是本地缓存没有更新，请 <code>sudo pacman -Syy</code></li>
+<li>每次修改镜像之后都应该使用 <code>sudo pacman -Syyu</code> 强制更新缓存 (<a href="https://wiki.archlinuxcn.org/wiki/%E9%95%9C%E5%83%8F%E6%BA%90#%E5%BC%BA%E5%88%B6_pacman_%E5%88%B7%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8" target="_blank" rel="noopener noreferrer">ref</a>)。</li>
+<li>pacman 常用指令：<code>-S</code>, <code>-Ss</code>, <code>-Rs</code></li>
+<li>pacman 更换镜像
+</li>
+</ul>
+<h3> AUR</h3>
+<p>AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于一个<strong>小型安装脚本</strong>而非程序本体。这里有一篇<a href="https://blog.asukaminato.eu.org/AUR-vs-vs-cn-dd42c7a8f0f943dcabd23d4cdf03a914" target="_blank" rel="noopener noreferrer">说明文章</a>。</p>
+<p>由于 PKGBUILD 经常会从 github 等地方拉取软件压缩包，所以请<a href="/articles/linux/install_and_config.html#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86" target="blank">使用代理</a>。PKGBUILD 经常需要自行编译，因此尽量不要在笔记本未插入电源情况下更新<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。</a></p><a class="footnote-anchor" id="footnote-ref1">
+<p>由于上传无门槛，AUR 可能携带恶意软件，请谨慎下载偏门小软件。有经验的用户会在安装前审阅 PKGBUILD。</p>
+<ul>
+<li>AUR Helper 会先在官方仓库搜索包。若失败才会去 AUR 下载（并编译），然后<strong>使用 pacman 安装</strong>。</li>
+<li>yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
+<ul>
+<li>yay 的问题也太多了点。。可以试试 paru。</li>
+</ul>
+</li>
+<li>另一个广泛使用的 AUR Helper 是 <em>paru</em>，使用 rust 编写。
+<ul>
+<li>与 yay 不同的是安装时默认展示 PKGBUILD 以供审阅。</li>
+</ul>
+</li>
+<li>疑难解答：
+<ul>
+<li>yay：疑难解答：<a href="/articles/linux/problem.html#yay-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98" target="blank">yay 安装问题</a> | <a href="/articles/linux/problem.html#yay-%E6%8D%A2%E6%BA%90%E9%97%AE%E9%A2%98" target="blank">yay 换源问题</a> | <a href="/articles/linux/problem.html#yay-%E6%9D%83%E9%99%90%E9%94%99%E8%AF%AF" target="blank">yay 权限错误</a></li>
+</ul>
+</li>
+</ul>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 打包</h3>
+<p>AUR 的包都是志愿维护，为开源社区做贡献是一件好事。</p>
+<p>首先看看 arch wiki，很有用。<a href="https://wiki.archlinuxcn.org/zh/Arch_%E6%89%93%E5%8C%85%E5%87%86%E5%88%99" target="_blank" rel="noopener noreferrer">打包准则</a> | <a href="https://wiki.archlinuxcn.org/wiki/%E5%88%9B%E5%BB%BA%E8%BD%AF%E4%BB%B6%E5%8C%85" target="_blank" rel="noopener noreferrer">创建软件包</a></p>
+<p>我在先辈推动下，先接过了一个 <code>autocorrect-bin</code> 练手。</p>
+<ol>
+<li>首先，创建一个 AUR 账号，并<a href="https://wiki.archlinuxcn.org/wiki/AUR_%E6%8F%90%E4%BA%A4%E5%87%86%E5%88%99#%E8%AE%A4%E8%AF%81" target="_blank" rel="noopener noreferrer">认证</a></li>
+<li>认领包，clone 到本地</li>
+<li>改 PKGBUILD</li>
+<li>更新 <code>.SRCINFO</code>: <code>makepkg --printsrcinfo &gt; .SRCINFO</code></li>
+<li>push。注意不要使用那些阻断 ssh 的代理。</li>
+</ol>
+<p>可以 <code>paru -Gp &lt;package&gt;</code> 看看别人写的 PKGBUILD；<code>makepkg -f</code> 测试。</p>
+<h2> 包使用</h2>
+<p>此处不包含代理与快照工具，请前往<a href="/articles/linux/install_and_config.html#%E4%BB%A3%E7%90%86" target="blank">配置页</a>查看。</p>
+<h3> 基础 CLI 工具</h3>
+<blockquote>
+<p>对于通过 <code>/</code>（OR）相连的软件，本人<strong>仅推荐首个</strong></p>
+</blockquote>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th style="text-align:center">软件包</th>
+<th style="text-align:center">功用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>fishshell</code> + <code>starship</code></td>
+<td style="text-align:center">shell 及其外观</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>ripgrep</code></td>
+<td style="text-align:center"><code>grep</code> 的代替</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>fd</code> &amp; <code>plocate</code></td>
+<td style="text-align:center">查找，<code>find</code> 的代替</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>tldr</code></td>
+<td style="text-align:center"><code>man</code> 的代替</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>fex</code></td>
+<td style="text-align:center"><code>cut</code> 的代替</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>exa</code></td>
+<td style="text-align:center"><a href="#exa"><code>ls</code> 的代替</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://github.com/nivekuil/rip" target="_blank" rel="noopener noreferrer"><code>rip</code></a> / <code>trash-cli</code></td>
+<td style="text-align:center">easier, safer <code>rm</code></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>htop</code></td>
+<td style="text-align:center">任务管理器，看性能</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>lsof</code></td>
+<td style="text-align:center"><a href="/articles/linux/problem.html#umount-failed" target="blank">查端口占用</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>zoxide</code></td>
+<td style="text-align:center">智能 cd</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://github.com/cantino/mcfly" target="_blank" rel="noopener noreferrer"><code>mcfly</code></a></td>
+<td style="text-align:center">智能 history</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>dust</code> &amp; <code>ncdu</code> / <code>gdu</code></td>
+<td style="text-align:center">磁盘容量查询</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>yazi</code><sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2"> / <code>nnn</code> / <code>ranger</code></a></td>
+<td style="text-align:center">文件浏览器</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>lsof</code></td>
+<td style="text-align:center">查进程占用</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>neovim</code></td>
+<td style="text-align:center">文本编辑器</td>
+</tr>
+</tbody>
+</table>
+<p>以上是本人体验总结的结果。若需要更多推荐，不如看看<a href="https://github.com/toolleeo/cli-apps" target="_blank" rel="noopener noreferrer">The largest Awesome List of CLI/TUI programs</a>。</p>
+<h3> shell</h3>
+<p>最好装完系统就先装 shell。</p>
+<ul>
+<li>若使用 <code>chsh</code> 切换了其他的 shell，则 <code>.bashrc</code> &amp; <code>.bash_profile</code> 将失效。</li>
+<li>bash 可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。</li>
+<li><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/N 选择器</a>，以下是两个例子：
+</li>
+</ul>
+<h4> fishshell</h4>
+<p>fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。</p>
+<ul>
+<li>
+<p>set fish as default</p>
+
+<blockquote>
+<p>不建议通过 chsh 更换 shell,你可以使用 Konsole(如果是 KDE)的 profile 改 shell——<a href="https://t.me/archlinuxcn_group/2755963" target="_blank" rel="noopener noreferrer">@MkfsSion</a></p>
+</blockquote>
+</li>
+<li>
+<p>语法：有个叫 <a href="https://github.com/edc/bass" target="_blank" rel="noopener noreferrer">bass</a> 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。</p>
+</li>
+<li>
+<p>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。</p>
+</li>
+<li>
+<p>函数</p>
+<ul>
+<li>使用 function 新增函数后，可以使用 <code>funcsave &lt;function&gt;</code> 保存到配置文件夹下以便修改与备份，修改后需要重新 source：<code>. ~/.config/fish/config.fish</code></li>
+<li>当然，官方推荐的修改是使用 <code>funced &lt;function&gt;</code>。
+<ul>
+<li><code>funced</code> 默认是 interactive 编辑的。我建议设置 <code>$EDITOR</code> 环境变量，可以在喜欢的编辑器里修改。</li>
+</ul>
+</li>
+<li>删除函数 / 变量：<code>-e</code> == <code>--erase</code></li>
+<li>fish 皆为函数，alias 也是函数</li>
+</ul>
+</li>
+<li>
+<p>美化：我使用 starship，零配置。如果需要更多自定义可以使用 <a href="https://github.com/IlanCosman/tide" target="_blank" rel="noopener noreferrer">tide</a>。</p>
+</li>
+</ul>
+<h4> <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a></h4>
+<blockquote>
+<p>在尝试三大 shell 后我选择 fish 而不是 zsh. <a href="https://t.me/withabsolutex/1214" target="_blank" rel="noopener noreferrer">why?</a><br>
+据说 omz 会有性能问题。<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=omz&amp;sender=313927976" target="_blank" rel="noopener noreferrer">ref</a></p>
+</blockquote>
+<details><summary>archived</summary><p>
+</p><p>ref: <a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></p>
+<ul>
+<li>安装 zsh 时会问 set default shell, <code>y</code> 即可</li>
+<li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
+</ul>
+<p></p></details>
+<h3> <a href="/coding/vim.html" target="blank">neovim</a></h3>
+<h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
+<p>快速搜索，其维护了一个数据库，使用 <code>sudo updatedb</code> 更新（默认开机时自动执行），搜索时不再遍历目录。</p>
+<h3> exa</h3>
+<p><code>ls='exa --all --long --color-scale --binary --header --time-style=long-iso'</code></p>
+<h3> tmux</h3>
+<blockquote>
+<p>tmux 在不使用图形界面或有恢复 shell 需求时比较好用。</p>
+</blockquote>
+<p>是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起。</p>
+<ul>
+<li>配置：<a href="https://github.com/lxl66566/config/blob/archwsl/.tmux.conf" target="_blank" rel="noopener noreferrer"><code>~/.tmux.conf</code></a>，初始时没有，需要自己创建。编辑后需要重新载入：<code>tmux source ~/.tmux.conf</code> or <code>prefix</code>+<code>:source ~/.tmux.conf</code></li>
+<li>插件：不要用默认的插件管理器。。不好用。</li>
+<li>copy-mode(vi): <code>Space</code> 进入选择，<code>Enter</code> 复制。（我觉得是假的 vi mode）</li>
+<li>默认启动 (<a href="http://129.226.226.195/post/28785.html" target="_blank" rel="noopener noreferrer">bash ref</a> | <a href="https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched" target="_blank" rel="noopener noreferrer">zsh ref</a> <a href="https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell" target="_blank" rel="noopener noreferrer">ref2</a>)：
+</li>
+</ul>
+<h3> <a href="https://wiki.archlinux.org/title/TLP" target="_blank" rel="noopener noreferrer">tlp</a></h3>
+<p>笔记本省电的。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> activitywatch</h3>
+<p>记录软件使用时长，参考<a href="/articles/time_record.html" target="blank">文章</a></p>
+<h3> bottles</h3>
+<p>基于 wine 运行 windows 软件，比 wine 更傻瓜式（只需要点鼠标，不用写配置）。</p>
+<p>目前试了两个 galgame，都能正常运行。<s>（来人，上点逆天的！）</s></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p><a href="https://t.me/withabsolutex/1303" target="_blank" rel="noopener noreferrer">我再也不敢在课上不插电滚 aur 了 😭</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p><code>yazi</code> 甚至能在 console 下查看图片。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>html</title>
       <link>https://absx.pages.dev/coding/html.html</link>
@@ -617,6 +1079,10 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20231028</h3>
+<ul>
+<li>继续拆分 <em>linux</em> 页面，分为 <em>基础</em>、<em>安装与配置</em>、<em>包管理与使用</em> 以及之前的 <em>遇到的问题</em> 四个页面</li>
+</ul>
 <h3> 20231021</h3>
 <ul>
 <li><em>编程 - 数据库</em> 新增大量内容</li>
@@ -1693,332 +2159,21 @@ If you do want to externalize this module explicitly add it to
       <guid>https://absx.pages.dev/articles/linux/</guid>
       <source url="https://absx.pages.dev/rss.xml">linux</source>
       <description>linux</description>
-      <category>编程</category>
-      <category>教程</category>
+      <category>导航</category>
       <pubDate>Mon, 17 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> linux</h1>
-<p>我最早使用 linux 用的是 <a href="https://github.com/yuk7/ArchWSL" target="_blank" rel="noopener noreferrer">ArchWSL</a> on WSL2，最初是学习用，基本上没啥存在感。</p>
-<p>之后正式使用 archlinux，双系统，windows 只拿来打游戏（galgame &amp; osu stable 地狱兼容）。也在 linux 上试着跑了点模拟器。</p>
+<p>我最早的 linux 发行版是 <a href="https://github.com/yuk7/ArchWSL" target="_blank" rel="noopener noreferrer">ArchWSL</a> on WSL2，最初是学习用，基本上没啥存在感。</p>
+<p>之后正式使用 archlinux，双系统，windows 只拿来打游戏。也在 linux 上试着跑了点模拟器。</p>
 <p>在 Android 平板上 使用 termux，也装了 arch（<a href="https://github.com/TermuxArch/TermuxArch" target="_blank" rel="noopener noreferrer">TermuxArch</a>），之前主要用作 ssh 连接 VPS。VPS 有关问题请移步 <a href="/articles/vps.html" target="blank">VPS</a>。</p>
-<ul>
-<li>更新 ArchWSL：从<a href="https://github.com/yuk7/wsldl/releases" target="_blank" rel="noopener noreferrer">此处</a>下载 <code>wsldl.exe</code>，改名为 <code>arch.exe</code> 并替换。</li>
-</ul>
-<h2> 安装</h2>
-<h3> Archlinux</h3>
-<p>20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，在<a href="/articles/linux/problem.html" target="blank">问题区</a>可见一斑。</p>
-<ul>
-<li><a href="https://arch.icekylin.online/" target="_blank" rel="noopener noreferrer">中文教程</a>，讲的比较好，有不少针对中文用户的细节。
-<ul>
-<li>本人也参与了一些错误修正和内容追加。</li>
-</ul>
-</li>
-<li>不过还是建议 <a href="https://wiki.archlinuxcn.org/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97" target="_blank" rel="noopener noreferrer">archwiki - installation guide</a> 也一起看看，取长补短。</li>
-</ul>
-<p>分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢另一块盘的数据<span class="heimu" title="你知道的太多了">安装时我确实失手格掉了全盘数据和分区</span>。</p>
-<h4> 添加 windows 引导</h4>
-<p>由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 <em>os-prober</em> 自动共存。因此我使用如下方法进行自动检测并添加：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> TermuxArch</h3>
-<p>20230920 下午安装 TermuxArch，也踩了不少坑。</p>
-<ol>
-<li>termux 本身的 pkg 需要配置好镜像源（<code>termux-change-repo</code>）。</li>
-<li>安装时如果有报错要注意看，可能需要：
-<ul>
-<li>手动在移动端环境创建目录</li>
-<li>手动安装一些包，例如 bsdtar</li>
-</ul>
-</li>
-<li>安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ol>
-<h2> 基础</h2>
-<ol>
-<li>我建议仔细看看 <a href="https://missing-semester-cn.github.io/" target="_blank" rel="noopener noreferrer">The Missing</a>的前几章，比较到位，<strong>免去了自己折腾之苦</strong>。</li>
-<li><a href="https://zhuanlan.zhihu.com/p/495554731" target="_blank" rel="noopener noreferrer">Linux ls -al 得到的结果代表什么意思？</a></li>
-<li><code>[Y/n]</code> 可以直接回车表示确认。<code>Y</code> 大写表示默认。(<a href="https://t.me/archlinuxcn_group/2950979" target="_blank" rel="noopener noreferrer">ref</a>)</li>
-<li>awk 是一门语言（<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=awk+%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener noreferrer">ref</a>），<s>但我从不用 awk</s>。</li>
-</ol>
-<h3> <a href="https://linuxhandbook.com/linux-shortcuts/" target="_blank" rel="noopener noreferrer">Terminal shortcuts</a></h3>
-<p><code>&lt;C-a&gt;</code> 代表 <code>Ctrl + a</code>.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">按键</th>
-<th style="text-align:center">执行</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><code>&lt;C-a&gt;</code></td>
-<td style="text-align:center">移动光标到最前</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;C-w&gt;</code></td>
-<td style="text-align:center">删除前一个单词</td>
-</tr>
-<tr>
-<td style="text-align:center"><code>&lt;C-u&gt;</code></td>
-<td style="text-align:center">清空当前输入</td>
-</tr>
-</tbody>
-</table>
-<h3> POSIX 指令</h3>
-<blockquote>
-<p>不是系统性描述，更多是一些 tricks 和踩坑. 可能不是最简，欢迎指正。</p>
-</blockquote>
-<h4> sed</h4>
-<ul>
-<li>sed 正则表达式的 <code>{}</code> 需要转义 <code>\{\}</code>，否则需要使用 <code>sed -r</code>（maybe <code>alias sed='sed -r'</code> ?）</li>
-</ul>
-<h4> find</h4>
-<ul>
-<li>末尾的 <code>\;</code> 的作用是声明了 <code>-exec</code> 的结尾。</li>
-<li>众所周知如果要删除当前目录中的所有文件，排除目录，可以直接 <code>rm *</code>。若我要反过来，只删除目录而排除文件呢？<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>复制目录下所有文件，除了其中一个：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
-</ul>
-<!-- ## 外部包
-
-- 我安装的包（少部分）：
-  - archwsl: cmake, yay, fishshell, neovim, neofetch, fd, openssh, plocate, trash-cli, tmux, tldr, jq, netcat, lsof, iotop, zsh, sysstat
-  - archlinux: 与 archwsl 相同，htop, exfat-utils, [zoxide](https://github.com/ajeetdsouza/zoxide), ncdu, namcap, activitywatch-bin, ripgrep, starship, nnn, fex, ntfs-3g
-  - > rg 是增强版的 grep，fex 是增强版的 cut ——依云
-- 我计划装的包：Joshuto, gparted, txcv -->
-<h2> 文件系统(fs)</h2>
-<p>ext4 是许多旧 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 zfs, xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊，而且没进内核主线</p>
-<blockquote>
-<p><a href="https://t.me/archlinuxcn_group/2949935" target="_blank" rel="noopener noreferrer">有前辈说</a>了一些 zfs 的优势。
-xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/archlinuxcn_group/2963733" target="_blank" rel="noopener noreferrer">ref</a>)</p>
-</blockquote>
-<h3> btrfs</h3>
-<p>btrfs <span class="heimu" title="你知道的太多了">其实现代文件系统都</span>有好多功能吸引着我，~~当我第一次看到介绍 btrfs 的文章时，我不禁大呼：“这才是现代文件系统！windows ntfs 是什么垃圾！” ~~ 文章参考 <a href="#external">external</a> 1. 我最爱 CoW(写时复制)，透明压缩，还有好用的 winbtrfs 极大提升多系统使用体验。<span class="heimu" title="你知道的太多了">ext4 从 windows 访问根本没啥好用工具</span></p>
-<p>使用 btrfs 有一些坑需要注意：</p>
-<ol>
-<li>由于 CoW，使用 <code>du</code> 查看磁盘空间可能不准确，需要使用：<code>btrfs fi usage /</code>.</li>
-<li>由于 CoW + 快照，操作数据库的时候需要小心，尽可能不要将数据库加入快照备份区（可以使用其他子卷存放）。</li>
-</ol>
-<h4> 互操作</h4>
-<p>众所周知 windows 默认使用它那 ntfs 已经很久了，并且默认没有 btrfs 支持。而双系统经常需要进行文件的互访问。linux 默认可读 ntfs，写入则只需安装 <code>ntfs-3g</code> 即可。而 windows 访问 btrfs 也非常简单。</p>
-<ol>
-<li><a href="https://github.com/maharmstone/btrfs" target="_blank" rel="noopener noreferrer">安装 Winbtrfs</a></li>
-<li>此时已经可以在资源管理器中访问了。</li>
-<li>默认挂载是读写的，我比较建议改为只读，降低出现问题的概率。<a href="https://github.com/maharmstone/btrfs#mount-options" target="_blank" rel="noopener noreferrer">在这里</a>可以进行一些设置，重启生效。</li>
-</ol>
-<p>事实上，<em>winbtrfs</em> 与 <em>ntfs-3g</em> 都不能保证一定不会出问题（有一些群友被坑过）。所以建议都只读不写。</p>
-<h2> 设置</h2>
-<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
-<ol>
-<li>基础 alias<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5（我对写入量敏感，同时我拥有大 RAM）</li>
-<li>设置 <code>/etc/fstab</code>
-<ul>
-<li><a href="/articles/ramdisk.html" target="blank">挂载 tmpfs</a>
-<ul>
-<li>Archlinux 实际上有 <a href="https://wiki.archlinux.org/title/Tmpfs#Usage" target="_blank" rel="noopener noreferrer">tmpfs 挂载的默认值</a>，然而我还是手动搞了，可以调整容量。</li>
-</ul>
-</li>
-<li>添加 <code>noatime</code> 标识，即不带访问时间(<a href="https://t.me/archlinuxcn_group/2900548" target="_blank" rel="noopener noreferrer">ref</a>)</li>
-<li>删除 <code>subvolid</code>，详见 <a href="/articles/linux/problem.html#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88" target="blank">timeshift 引发的血案</a></li>
-</ul>
-</li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Wayland#Electron" target="_blank" rel="noopener noreferrer">wayland 的 electron 支持</a>（据说 wayland 对 electron 不太友好）</li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#SDDM" target="_blank" rel="noopener noreferrer">激活启动时 numlock</a></li>
-<li>设置 pacman：
-<ul>
-<li>将某些不常用包和自更新包加入 IgnorePkg，例如 <em>chromium</em> &amp; xmake | <a href="https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/" target="_blank" rel="noopener noreferrer">ref</a></li>
-<li>更改缓存至 ramdisk （<code>CacheDir</code>）</li>
-</ul>
-</li>
-<li>更改 AUR Helper 缓存（ 参考<a href="https://wiki.archlinuxcn.org/wiki/Makepkg#%E4%BD%BF%E7%94%A8%E5%86%85%E5%AD%98%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E8%BF%9B%E8%A1%8C%E7%BC%96%E8%AF%91" target="_blank" rel="noopener noreferrer">wiki</a> 注意事项）：
-<ul>
-<li>yay 更改缓存至 tmpfs: <code>yay --builddir /tmp/yay --save</code></li>
-<li><em>很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。</em> <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 <code>clonedir</code> 也 <a href="https://github.com/lxl66566/config/blob/archlinux/etc/fstab" target="_blank" rel="noopener noreferrer">bind mount 同一个 tmpfs</a>，这样就能够解决问题了。
-<ul>
-<li>然而这里还会出现权限问题。</li>
-</ul>
-</li>
-<li>未测试：是否能够使用 <code>$PKGDEST</code> env 改变编译位置？(<a href="https://wiki.archlinuxcn.org/wiki/Makepkg#%E5%8C%85%E8%BE%93%E5%87%BA" target="_blank" rel="noopener noreferrer">source</a>)</li>
-</ul>
-</li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
-<li>grub 改等待时间<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>修改 faillock attempt times<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ol>
-<h3> 输入法</h3>
-<p>我使用 fcitx5，输入要求为 <em>英语，双拼，日语</em>。可以在遇到的问题里找到一些输入法的设置。</p>
-<ol>
-<li>双拼关闭快速输入，默认为<code>；</code>。</li>
-</ol>
-<h3> 设置代理</h3>
-<h4> <a href="https://github.com/daeuniverse/daed" target="_blank" rel="noopener noreferrer">daed</a></h4>
-<blockquote>
-<p>根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多</p>
-<div style="text-align:right">
-<p>——Au, <a href="https://t.me/archlinuxcn_group/2912643" target="_blank" rel="noopener noreferrer">src</a></p>
-</div>
-</blockquote>
-<p>网页面板的开源代理，dae 的前端。由于比较新，目前使用的人不多。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>这样就开机自启，并可以 <code>localhost:2023</code> 进面板了。然后写节点，拖到 proxy 里就行。</p>
-<p>daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 <code>ALL_PROXY</code> 等系统代理变量记得取消；firefox 需要在代理设置中设为 <em>自动探测网络环境</em>。</p>
-<p>需要写规则可以参考<a href="https://github.com/daeuniverse/dae/discussions/245" target="_blank" rel="noopener noreferrer">这里</a>。</p>
-<h4> v2raya</h4>
-<p>v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 <a href="https://xtls.github.io/" target="_blank" rel="noopener noreferrer">Xray 内核</a>差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后的操作都在网页上进行。使用系统代理端口为 <code>http://127.0.0.1:20172</code>，这个端口带自动分流。</p>
-<p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" target="_blank" rel="noopener noreferrer">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code></p>
-<h4> clash-verge</h4>
-<p>见<a href="/articles/vpn.html#clash-verge" target="blank">vpn</a>介绍页。内核为 clash-meta，接受订阅文件，不接受节点。有订阅的可以尝试。</p>
-<h4> 使用 windows 代理</h4>
-<p>archwsl 内容</p>
-<details class="hint-container details"><summary>点击展开</summary>
-<p>我在 archwsl 中懒得重复下载，直接使用 windows 代理。<a href="https://zhuanlan.zhihu.com/p/153124468" target="_blank" rel="noopener noreferrer">ref</a></p>
-<p>后来直接写了 <a href="https://github.com/lxl66566/config/blob/archwsl/.config/fish/functions/proxy_con.fish" target="_blank" rel="noopener noreferrer">fish 脚本</a>，自用方便。</p>
-
-</details>
-<p>代理软件需要开启局域网连接。测试时不要使用 <code>ping</code> 指令（其不走代理），用 <code>curl</code>。</p>
-<h3> kde 及其配套设施</h3>
-<p>我使用 kde 作为我的桌面（kde 爆杀 gnome!）。</p>
-<ol>
-<li>enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在<em>系统设置 - 添加快捷键 - 火焰截图</em>，然后手动设置快捷键。</li>
-<li><em>输入设备</em>，将键盘的按键延迟改短。</li>
-<li><em>外观</em>，黑色主题</li>
-<li><em>开关机 - 桌面会话</em>，选择启动为空会话</li>
-<li><em>快捷键</em>，添加应用程序 <em>konsole</em>，设置唤醒快捷键</li>
-<li>关闭通知声音</li>
-<li>输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。</li>
-<li>自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，<s>因为可以通过风扇声判断</s></span> 还有时间格式，无用图标的自定义。</li>
-<li><em>工作区行为 - 锁屏</em>，改锁屏时间。</li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#KDE_Plasma_%E7%94%A8%E6%88%B7" target="_blank" rel="noopener noreferrer">设置 numlock 行为</a></li>
-<li><em>窗口管理 - 窗口行为</em> 设置 <em>焦点跟随鼠标</em></li>
-<li>配置窗口管理器，在窗口装饰中选择主题，调出 <code>置顶</code> 按钮。</li>
-</ol>
-<h2> shell</h2>
-<p>最好装完系统就先装 shell。</p>
-<ul>
-<li>若使用 <code>chsh</code> 切换了其他的 shell，则 <code>.bashrc</code> &amp; <code>.bash_profile</code> 将失效。</li>
-<li>bash 可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。</li>
-<li><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/N 选择器</a>，以下是两个例子：
-</li>
-</ul>
-<h3> fishshell</h3>
-<p>fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。</p>
-<ul>
-<li>
-<p>set fish as default</p>
-
-<blockquote>
-<p>不建议通过 chsh 更换 shell,你可以使用 Konsole(如果是 KDE)的 profile 改 shell——<a href="https://t.me/archlinuxcn_group/2755963" target="_blank" rel="noopener noreferrer">@MkfsSion</a></p>
-</blockquote>
-</li>
-<li>
-<p>语法：有个叫 <a href="https://github.com/edc/bass" target="_blank" rel="noopener noreferrer">bass</a> 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。</p>
-</li>
-<li>
-<p>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。</p>
-</li>
-<li>
-<p>函数</p>
-<ul>
-<li>使用 function 新增函数后，可以使用 <code>funcsave &lt;function&gt;</code> 保存到配置文件夹下以便修改与备份，修改后需要重新 source：<code>. ~/.config/fish/config.fish</code></li>
-<li>当然，官方推荐的修改是使用 <code>funced &lt;function&gt;</code>。
-<ul>
-<li><code>funced</code> 默认是 interactive 编辑的。我建议设置 <code>$EDITOR</code> 环境变量，可以在喜欢的编辑器里修改。</li>
-</ul>
-</li>
-<li>删除函数 / 变量：<code>-e</code> == <code>--erase</code></li>
-<li>fish 皆为函数，alias 也是函数</li>
-</ul>
-</li>
-<li>
-<p>美化：我使用 starship，零配置。如果需要更多自定义可以使用 <a href="https://github.com/IlanCosman/tide" target="_blank" rel="noopener noreferrer">tide</a>。</p>
-</li>
-</ul>
-<h3> <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a></h3>
-<blockquote>
-<p>在尝试三大 shell 后我选择 fish 而不是 zsh. <a href="https://t.me/withabsolutex/1214" target="_blank" rel="noopener noreferrer">why?</a><br>
-据说 omz 会有性能问题。<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=omz&amp;sender=313927976" target="_blank" rel="noopener noreferrer">ref</a></p>
-</blockquote>
-<details><summary>archived</summary><p>
-</p><p>ref: <a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></p>
-<ul>
-<li>安装 zsh 时会问 set default shell, <code>y</code> 即可</li>
-<li><a href="https://github.com/lxl66566/config/blob/archwsl/.zshrc" target="_blank" rel="noopener noreferrer">我的配置&amp;插件</a></li>
-</ul>
-<p></p></details>
-<h2> pacman &amp; AUR Helper</h2>
-<p>AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于一个<strong>小型安装脚本</strong>而非程序本体。这里有一篇<a href="https://blog.asukaminato.eu.org/AUR-vs-vs-cn-dd42c7a8f0f943dcabd23d4cdf03a914" target="_blank" rel="noopener noreferrer">说明文章</a>。</p>
-<p>而由于 PKGBUILD 经常会从 github 等地方拉取软件压缩包，所以请<a href="#%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86">使用代理</a>。</p>
-<p>AUR 可能携带恶意软件，请自行甄别，谨慎下载偏门小软件。</p>
-<ul>
-<li>“滚” 指 <code>sudo pacman -Syu</code>，更新所有包。不要隔太久不滚，挂的概率会增加。（<s>今日也无事可做</s>）
-<ul>
-<li>也可以直接 <code>yay</code> 或 <code>paru</code> 进行更新。（这俩不带参数默认执行 <code>-Syu</code>）</li>
-<li>如果更新了内核（<code>linux</code> 包），请立即重启。</li>
-</ul>
-</li>
-<li>出现 <code>The requested URL returned error: 404</code>，可能是本地缓存没有更新，请 <code>sudo pacman -Syy</code></li>
-<li>每次修改镜像之后都应该使用 <code>sudo pacman -Syyu</code> 强制更新缓存 (<a href="https://wiki.archlinuxcn.org/wiki/%E9%95%9C%E5%83%8F%E6%BA%90#%E5%BC%BA%E5%88%B6_pacman_%E5%88%B7%E6%96%B0%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%88%97%E8%A1%A8" target="_blank" rel="noopener noreferrer">ref</a>)。</li>
-<li>pacman 常用指令：<code>-S</code>, <code>-Ss</code>, <code>-Rs</code></li>
-<li>yay 是一个广泛使用的 AUR Helper，使用 go 语言编写。
-<ul>
-<li>如果一个包同时在 archlinux 仓库和 AUR 仓库，则 yay 优先使用 pacman (<a href="https://github.com/ArchLinuxStudio/ArchLinuxTutorial/issues/63" target="_blank" rel="noopener noreferrer">ref</a>)</li>
-<li>yay 的问题也太多了点。。可以试试 paru。</li>
-</ul>
-</li>
-<li>另一个广泛使用的 AUR Helper 是 <em>paru</em>，使用 rust 编写。
-<ul>
-<li>与 yay 不同的是安装时默认展示 PKGBUILD 以供审阅。</li>
-</ul>
-</li>
-<li>pacman 更换镜像
-</li>
-<li>疑难解答：
-<ul>
-<li>yay：疑难解答：<a href="/articles/linux/problem.html#yay-%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98" target="blank">yay 安装问题</a> | <a href="/articles/linux/problem.html#yay-%E6%8D%A2%E6%BA%90%E9%97%AE%E9%A2%98" target="blank">yay 换源问题</a> | <a href="/articles/linux/problem.html#yay-%E6%9D%83%E9%99%90%E9%94%99%E8%AF%AF" target="blank">yay 权限错误</a></li>
-</ul>
-</li>
-</ul>
-<h2> 打包</h2>
-<p>AUR 的包都是志愿维护，为开源社区做贡献是一件好事。</p>
-<p>首先看看 arch wiki，很有用。<a href="https://wiki.archlinuxcn.org/zh/Arch_%E6%89%93%E5%8C%85%E5%87%86%E5%88%99" target="_blank" rel="noopener noreferrer">打包准则</a> | <a href="https://wiki.archlinuxcn.org/wiki/%E5%88%9B%E5%BB%BA%E8%BD%AF%E4%BB%B6%E5%8C%85" target="_blank" rel="noopener noreferrer">创建软件包</a></p>
-<p>我在先辈推动下，先接过了一个 <code>autocorrect-bin</code> 练手。</p>
-<ol>
-<li>首先，创建一个 AUR 账号，并<a href="https://wiki.archlinuxcn.org/wiki/AUR_%E6%8F%90%E4%BA%A4%E5%87%86%E5%88%99#%E8%AE%A4%E8%AF%81" target="_blank" rel="noopener noreferrer">认证</a></li>
-<li>认领包，clone 到本地</li>
-<li>改 PKGBUILD</li>
-<li>更新 <code>.SRCINFO</code>: <code>makepkg --printsrcinfo &gt; .SRCINFO</code></li>
-<li>push。注意不要使用那些阻断 ssh 的代理。</li>
-</ol>
-<p>可以 <code>paru -Gp &lt;package&gt;</code> 看看别人写的 PKGBUILD；<code>makepkg -si</code> 测试安装。</p>
-<h2> 包使用</h2>
-<p>推荐的包 / 软件请跳转<a href="/farraginous/recommend_packages.html#linux" target="blank">软件汇总</a></p>
-<p>先生，何不看看<a href="https://github.com/toolleeo/cli-apps" target="_blank" rel="noopener noreferrer">The largest Awesome List of CLI/TUI programs</a>？</p>
-<h3> <a href="/coding/vim.html" target="blank">neovim</a></h3>
-<h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
-<p>快速搜索。</p>
-<div class="language-bash" data-ext="sh"></div><h3> 快照</h3>
-<p>快照本质上就是一个 cp 而已。只不过在 btrfs 上吃了 CoW 的福利，空间占用很小罢了。</p>
-<p>因为<a href="/articles/linux/problem.html#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88" target="blank">被 timeshift 坑过</a>，因此换用 snapper + btrfs-assistant。</p>
-<p>当然还有 <a href="https://github.com/digint/btrbk" target="_blank" rel="noopener noreferrer">btrbk</a> 可以选择，不过其主业 (backup tool) 并非快照，因此没有尝试。</p>
-<h3> exa</h3>
-<p><code>ls='exa --all --long --color-scale --binary --header --time-style=long-iso'</code></p>
-<h3> tmux</h3>
-<blockquote>
-<p>tmux 在不使用图形界面或有恢复 shell 需求时比较好用。</p>
-</blockquote>
-<p>是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起。</p>
-<ul>
-<li>配置：<a href="https://github.com/lxl66566/config/blob/archwsl/.tmux.conf" target="_blank" rel="noopener noreferrer"><code>~/.tmux.conf</code></a>，初始时没有，需要自己创建。编辑后需要重新载入：<code>tmux source ~/.tmux.conf</code> or <code>prefix</code>+<code>:source ~/.tmux.conf</code></li>
-<li>插件：不要用默认的插件管理器。。不好用。</li>
-<li>copy-mode(vi): <code>Space</code> 进入选择，<code>Enter</code> 复制。（我觉得是假的 vi mode）</li>
-<li>默认启动 (<a href="http://129.226.226.195/post/28785.html" target="_blank" rel="noopener noreferrer">bash ref</a> | <a href="https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched" target="_blank" rel="noopener noreferrer">zsh ref</a> <a href="https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell" target="_blank" rel="noopener noreferrer">ref2</a>)：
-</li>
-</ul>
-<h3> <a href="https://wiki.archlinux.org/title/TLP" target="_blank" rel="noopener noreferrer">tlp</a></h3>
-<p>笔记本省电的。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> <a href="/articles/linux/problem.html" target="blank">遇到的问题</a></h2>
+<p>搞别人的电脑和 VPS 也用了点 debian 系的。只能说是会用。</p>
+<p>日后看情况，可能会试试 nixos 吧。</p>
+<h2> <a href="/articles/linux/basic.html" target="blank">基础</a></h2>
+<h2> <a href="/articles/linux/install_and_config.html" target="blank">安装与配置</a></h2>
+<h2> <a href="/articles/linux/package.html" target="blank">包管理与使用</a></h2>
+<h2> <a href="/articles/linux/problem.html" target="blank">遇到的问题</a></h2>
 <h2> external</h2>
 <ol>
-<li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
 <li><a href="https://blog.origincode.me/manjaro-controversies/" target="_blank" rel="noopener noreferrer">【譯】Manjaro 的爭議</a></li>
-<li><a href="https://catcat.cc/post/2020-10-31/" target="_blank" rel="noopener noreferrer">Linux fontconfig 的字体匹配机制</a></li>
-<li><a href="https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html" target="_blank" rel="noopener noreferrer">btrfs 元数据满了怎么办</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3070,224 +3225,6 @@ npm ERR! This command does not support workspaces.</p>
 <p>由于 fastboot 同属于 platform tools，因此也归入 ADB 指令。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他指令</h2>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>命令行压缩</title>
-      <link>https://absx.pages.dev/articles/cli_compress.html</link>
-      <guid>https://absx.pages.dev/articles/cli_compress.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">命令行压缩</source>
-      <description>命令行压缩</description>
-      <category>教程</category>
-      <pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 命令行压缩</h1>
-<p>我电脑上使用的压缩软件为<a href="/farraginous/recommend_packages.html#bandizip" target="blank">Bandizip</a>，命令行指令为<code>bz</code>，详见<a href="https://cn.bandisoft.com/bandizip/help/parameter/" target="_blank" rel="noopener noreferrer">官网-命令行参数</a>。</p>
-<p>我使用脚本备份我的浏览器历史记录，并使用 bandizip 命令行进行 7z 加密压缩后上传到 Github。代码如下（隐去关键部分）：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>若直接对 History 文件压缩会报错（我也不清楚为什么），因此使用 cp 命令复制到缓存文件夹压缩，曲线救国。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>设置电脑</title>
-      <link>https://absx.pages.dev/articles/computer_setting.html</link>
-      <guid>https://absx.pages.dev/articles/computer_setting.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">设置电脑</source>
-      <description>设置电脑</description>
-      <category>教程</category>
-      <pubDate>Sat, 21 May 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 设置电脑</h1>
-<p>好的设置能够在未来降低你的血压，并大幅提高你的工作效率。</p>
-<p>关于软件推荐请前往<a href="/farraginous/recommend_packages.html" target="blank">杂项-软件汇总</a>页面。</p>
-<p>本章目录：</p>
-
-<h2> 对 win11 的设置</h2>
-<p>由于入手了 12500H，即使很不想使用 win11，也只能硬上了。以下是我对新电脑 win11 系统的设置。</p>
-<ol>
-<li>移动 <em>文档、图片、下载</em> 等文件夹到新分区的 D 盘。</li>
-<li>还原右键菜单并设置：右击 <em>开始键</em>，打开 <em>Windows 终端（管理员）</em> ，执行<code>reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve</code> （或直接使用<a href="/farraginous/recommend_packages.html#winaero-tweaker" target="blank">Winaero Tweaker</a> 进行设置），再用 <a href="/farraginous/recommend_packages.html#ContextMenuManager" target="blank">ContextMenuManager</a> 调整。</li>
-<li>关闭所有系统提示音。</li>
-<li>关闭 Windows 安全中心。<a href="https://zhuanlan.zhihu.com/p/611313419" target="_blank" rel="noopener noreferrer">为什么我们需要关闭它？</a><sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">
-_ 法一（推荐）：</a><a href="https://github.com/jbara2002/windows-defender-remover" target="_blank" rel="noopener noreferrer">Defender Remover</a>
-_ 法二（<a href="https://zhuanlan.zhihu.com/p/494923217" target="_blank" rel="noopener noreferrer">source</a>，但实测并不能完全关闭）： * <em>Windows 安全中心-病毒和威胁防护-管理设置</em> ，关闭所有开关
-_ 使用组策略编辑器禁用 Windows Defender
-_ <code>win + r</code>运行<code>gpedit.msc</code>，<em>计算机配置-管理模板-Windows 组件-关闭 Microsoft Defender 防病毒</em> ，选择已启用
-_ 由于我的电脑是家庭版升专业版，没有 <code>gpedit.msc</code> 文件，因此需先添加组策略编辑器。
-_ 在记事本输入以下代码并保存为 .bat 文件，管理员运行。<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>使用<a href="https://www.sordum.org/9480/defender-control-v2-1/" target="_blank" rel="noopener noreferrer">Defender Control</a>彻底关闭安全中心。</li>
-</ul>
-</li>
-<li>关闭搜索推荐&amp;热门新闻：关闭 <em>设置-隐私和安全性-搜索权限-更多设置-显示搜索要点</em> 。（参考<a href="https://www.landiannews.com/archives/95045.html" target="_blank" rel="noopener noreferrer">来源</a></li>
-<li>升级专业版：使用<a href="https://github.com/zbezj/HEU_KMS_Activator" target="_blank" rel="noopener noreferrer">HEU_KMS_Activator</a>升级 win11 专业版并激活。
-<ul>
-<li>
-<blockquote>
-<p>若对开源有需求，也可使用 <a href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener noreferrer">Microsoft-Activation-Scripts</a>激活。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>开启 Hyper-V 功能 </li>
-<li>更改触摸板功能：三指左右划调节音量。我本人感觉挺方便。</li>
-<li>安装 Win11 Android 子系统（WSA） </li>
-<li>更改任务栏样式：下载<a href="https://apps.microsoft.com/store/detail/roundedtb/9MTFTXSJ9M7F?hl=en-us&amp;gl=us" target="_blank" rel="noopener noreferrer">RoundedTB</a>，根据提示更改。</li>
-<li>使用<a href="https://www.oo-software.com/en/shutup10" target="_blank" rel="noopener noreferrer">O&amp;O ShutUp10++: Free antispy tool for Windows 10 and 11</a>禁用一些非必须功能。</li>
-<li><s>启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（<a href="https://zhuanlan.zhihu.com/p/336846460" target="_blank" rel="noopener noreferrer">参考</a>）：在 regedit 中，将 <code>HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled</code> 的值设为 0.</s><br>
-其实应该是休眠。而且现在我建议多关机少休眠。</li>
-<li>卸载小组件：打开管理员终端，执行 <code>winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy</code>。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。</li>
-<li><strong>关闭快速启动</strong>。
-<ol>
-<li>避免关机时自动保存 <a href="/articles/ramdisk.html" target="blank">RAM Disk</a> 文件到固态盘；
-<ul>
-<li>事实上快速启动的关机<a href="https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail#more-information" target="_blank" rel="noopener noreferrer">其实是 hibernate</a>，是固态写入量的<strong>最大贡献者</strong>。</li>
-<li>为什么安装 linux 双系统时要关闭快速启动？因为挂载在 hibernate 状态的硬盘几乎必炸（double mount）</li>
-</ul>
-</li>
-<li>Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 <em>更新并重启</em>。<a href="https://t.me/withabsolutex/1193" target="_blank" rel="noopener noreferrer">ref</a></li>
-</ol>
-</li>
-<li>开 <a href="https://github.com/yuk7/ArchWSL" target="_blank" rel="noopener noreferrer">ArchWSL</a>。</li>
-<li>解决<a href="#%E7%AB%AF%E5%8F%A3%E9%9A%8F%E6%9C%BA%E5%8D%A0%E7%94%A8">端口随机占用</a></li>
-<li><s>开启全局 UTF-8：<em>设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8...</em></s> 实测会导致一些 galgame 乱码。</li>
-<li>文件夹与文件改为单击。
-<ul>
-<li>windows 的单击逻辑做的还是比 linux kde 好的，<em>悬浮选中</em> 是单击逻辑中的重要组成部分。</li>
-</ul>
-</li>
-<li>在 <em>Internet 选项 - 高级</em> 中，打开 TLS 1.3</li>
-<li><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c" target="_blank" rel="noopener noreferrer">组织管理滚</a></li>
-<li><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E8%A6%81%E5%BD%BB%E5%BA%95%E5%85%B3%E9%97%ADwin11/3c448d50-2e7f-42df-9fdb-f7f9aa9820ec" target="_blank" rel="noopener noreferrer">关闭自动更新</a>，我只需手动更新。
-<ul>
-<li>既然无需经常更新，那就<a href="https://blog.51cto.com/u_13464709/2057007" target="_blank" rel="noopener noreferrer">关闭传递优化</a>，并且用 <em>磁盘清理</em> 清一下这位占用的空间。</li>
-</ul>
-</li>
-<li><a href="https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows" target="_blank" rel="noopener noreferrer">开启 bbr 拥塞算法</a>：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。</li>
-<li>打开任务栏时间秒数显示：<em>任务栏设置 - 任务栏行为</em></li>
-</ol>
-<h2> 我使用的软件们</h2>
-<p>我的 windows 11 开机自启动的托盘软件有：<a href="/farraginous/recommend_packages.html#xdm" target="blank">XDM</a>, Ditto, <a href="/farraginous/recommend_packages.html#parsec" target="blank">parsec</a>, V2rayN, <a href="/farraginous/recommend_packages.html#flux" target="blank">f.lux</a>, <a href="/farraginous/recommend_packages.html#everything" target="blank">everything</a>, 火绒, <a href="/farraginous/recommend_packages.html#tai" target="blank">Tai</a>, <a href="/farraginous/recommend_packages.html#flameshot" target="blank">flameshot</a>，<a href="https://github.com/troylar/quiet-on-the-set" target="_blank" rel="noopener noreferrer">Quiet on the Set?</a>，还有一个后台的<a href="/articles/ramdisk.html" target="blank">Imdisk</a></p>
-<h2> 设置开机自启动</h2>
-<p><code>win + r</code>打开运行面板，输入<code>shell:startup</code>打开启动文件夹，拖入需自启动的程序快捷方式即可。</p>
-<p>但启动文件夹中没有其他软件的自启动控制。若需关闭某些程序的自启动，可以打开任务管理器，选择<code>启动</code>进行修改。</p>
-<h2> BIOS 密码重置</h2>
-<blockquote>
-<p><em>以 Predator G3-573 为例，不保证其他品牌电脑的重置方法相同</em></p>
-</blockquote>
-<ol>
-<li>在 BIOS 界面中输错三次密码，出现输入恢复码的弹窗，并给出一个 Key。（我的电脑 Key 为 10 位纯数字）</li>
-<li>进入<a href="https://1024kb.co.nz/bios/" target="_blank" rel="noopener noreferrer">此网站</a>，输入 Key，然后将计算结果输回电脑。</li>
-<li>进入 BIOS 后，设置 supervisor password 为空。</li>
-</ol>
-<h2> edge 转 firefox</h2>
-<p>20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满足我的需求，甚至更加贴合我的个人需求（纵向标签栏，firefox 没有内置此功能），换浏览器大约只是我的心血来潮而已。为此我花了很多功夫设置 firefox。</p>
-<blockquote>
-<p>于 20230304 换回 edge。</p>
-</blockquote>
-<p>我最终使用 <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank" rel="noopener noreferrer">Firefox Developer Edition</a> 而不是 Firefox。</p>
-<ul>
-<li>优点：
-<ul>
-<li>firefox 在 bilibili 等网站的表现较差，放开权限后子页面仍无法读取 cookies。Firefox Developer Edition 无此问题。</li>
-<li>
-<blockquote>
-<p>只有这个可以安装 ruffle —— Asuka Minato（虽然这不是我的刚需）</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ul>
-<p>设置步骤如下：</p>
-<ol>
-<li>迁移书签与历史记录。此方面 firefox 有专门的接口，可以一键导入。</li>
-<li>设置中文：在 <code>about:config</code> 中，将 <code>intl.multilingual.enabled</code>、<code>intl.multilingual.downloadEnabled</code> 设为 true，然后就能在设置中选择中文。</li>
-<li>迁移扩展与扩展数据。具体地：
-<ul>
-<li>由于 chrome 系扩展与 mozilla 系扩展不兼容，扩展需要手动迁移。</li>
-<li>Tampermonkey 脚本迁移：<em>Dashboard - Utilities - File Export &amp; Import from file</em></li>
-</ul>
-</li>
-<li>使用 <a href="https://addons.mozilla.org/en-US/firefox/addon/sidebery/" target="_blank" rel="noopener noreferrer">Sidebery</a> 实现纵向标签栏。</li>
-<li>隐藏标题栏，书签栏，标签栏：
-_ 在 <code>about:config</code> 中，将 <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> 改为 true。（为了允许 firefox 加载自定义 css）
-_ 在 <code>about:support</code> 中，点击 <em>配置文件夹 -&gt; 打开文件夹</em>（<em>Profile Folder -&gt; Open Folder</em>），在此目录下新建名为 <code>chrome</code> 的文件夹，在新文件夹下新建 <code>userChrome.css</code>，写入<a href="https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css" target="_blank" rel="noopener noreferrer">此处代码</a>。
-<blockquote>
-<p>注：在地址栏输入上述 *about:** 即可打开对应界面。</p>
-</blockquote>
-</li>
-<li>解决跨源错误：在 <code>about:config</code> 中，将 <code>security.fileuri.strict_origin_policy</code> 设为 false。
-<ul>
-<li>并不能绕过 CORS</li>
-</ul>
-</li>
-<li><code>adons.mozilla.org</code> 对中国用户屏蔽了广告拦截扩展，因此我使用一个第三方的<a href="https://www.crxsoso.com/firefox/category/extensions" target="_blank" rel="noopener noreferrer">扩展商店</a> 进行安装。</li>
-<li>在 <em>about:config</em> 中把 <code>mousewheel.system_scroll_override.enabled</code> 改成 <code>false</code></li>
-</ol>
-<h2> windows 下的权限控制</h2>
-<p>起因：MS-DOS 自带的 <code>tree</code> 命令太难用了（不包含文件）。我需要把它替换为 <a href="https://gnuwin32.sourceforge.net/packages/tree.htm" target="_blank" rel="noopener noreferrer">tree for windows</a>。windows 的权限管理太“安全”了，很烦。</p>
-<ol>
-<li>（本节无关）下载并将 <code>tree.exe</code> 单文件放入 <code>C:\WINDOWS\System32</code></li>
-<li>修改 <code>tree.com</code> 的名字（或直接删除），需要获取权限。
-<ol>
-<li><em>属性 - 安全 - 高级</em>，更改所有者为当前用户。</li>
-<li>然后在下面选择 <em>Users</em> 那一栏，编辑，改为完全控制。</li>
-<li>一路确定即可。</li>
-</ol>
-</li>
-</ol>
-<p>不过之后清理 WinSxS 的时候又没法用了。。</p>
-<h2> 遇到的问题</h2>
-<h3> 端口随机占用</h3>
-<p>win11 下有时代理软件端口突然无法使用，有时测试网站 localhost 端口无法使用，随机性很强。于是去搜了下<a href="https://www.cnblogs.com/fanqisoft/p/17071121.html" target="_blank" rel="noopener noreferrer">解法</a>。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>我的文章</title>
-      <link>https://absx.pages.dev/articles/</link>
-      <guid>https://absx.pages.dev/articles/</guid>
-      <source url="https://absx.pages.dev/rss.xml">我的文章</source>
-      <description>我的文章</description>
-      <category>导航</category>
-      <pubDate>Thu, 29 Sep 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 我的文章</h1>
-<p>此处仅包含杂项文章。若需要阅读编程、爱好有关文章请前往对应版块。</p>
-<ul>
-<li>这里有一些<a href="/articles/external.html" target="blank">外部文章分享</a>。</li>
-</ul>
-<h2> 主张</h2>
-<ol>
-<li><a href="/articles/worldview.html" target="blank">道论</a></li>
-</ol>
-<h2> 经历</h2>
-<ol>
-<li><a href="/articles/linux/" target="blank">(Arch)linux</a>：我的 linux 笔记与遇到的问题</li>
-<li><a href="/articles/computer_setting.html" target="blank">设置电脑（windows）</a></li>
-<li><a href="/articles/mobile_setting.html" target="blank">设置手机（Android）</a></li>
-<li><a href="/articles/vps.html" target="blank">设置 VPS</a></li>
-</ol>
-<h2> 教程</h2>
-<ol>
-<li><a href="/articles/telegram.html" target="blank">TG（telegram）教程</a></li>
-<li><a href="/articles/adb.html" target="blank">ADB 教程与常用指令</a></li>
-<li><a href="/articles/markdown.html" target="blank">Markdown 教程</a></li>
-<li><a href="/articles/vpn.html" target="blank">VPN 教程与推荐（加密）</a></li>
-<li><a href="/articles/Android_ISA.html" target="blank">Android 查看手机 cpu 指令集</a></li>
-<li><a href="/articles/minimize_exe.html" target="blank">最小化二进制文件与 dll</a></li>
-<li><a href="/articles/cli_compress.html" target="blank">命令行压缩</a></li>
-</ol>
-<h2> 推荐</h2>
-<ol>
-<li><a href="/articles/time_record.html" target="blank">电脑、手机端记录软件使用时长</a></li>
-<li><a href="/articles/track_record.html" target="blank">运动轨迹记录软件横评</a></li>
-<li><a href="/articles/input_method.html" target="blank">输入法</a></li>
-<li><a href="/articles/ramdisk.html" target="blank">RAM Disk 横评</a></li>
-<li><a href="/articles/note.html" target="blank">Android 手写笔记软件横评</a></li>
-</ol>
-<!-- 7. [Potplayer 设置](./potplayer_setting.md) -->
-]]></content:encoded>
     </item>
   </channel>
 </rss>
