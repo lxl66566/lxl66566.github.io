@@ -17,8 +17,14 @@ tag:
 20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，在[问题区](./problem.md)可见一斑。
 
 - [中文教程](https://arch.icekylin.online/)，讲的比较好，有不少针对中文用户的细节。
-  - 本人也参与了一些错误修正和内容追加。
+  - 本人也参与了一些微小的错误修正和内容追加。
 - 不过还是建议 [archwiki - installation guide](https://wiki.archlinuxcn.org/wiki/安装指南) 也一起看看，取长补短。
+
+::: tip
+
+[archwiki](https://wiki.archlinuxcn.org) 是最官方、最权威、最详细的指南，可以多看看，发生分歧时，以 wiki 为准。
+
+:::
 
 分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢另一块盘的数据<span class="heimu" title="你知道的太多了">安装时我确实失手格掉了全盘数据和分区</span>。
 
@@ -81,7 +87,9 @@ GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。
      - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了，可以调整容量。
    - 添加 `noatime` 标识，即不带访问时间([ref](https://t.me/archlinuxcn_group/2900548))
    - 删除 `subvolid`，详见 [timeshift 引发的血案](./problem.md#timeshift-引发的血案)
-4. [wayland 的 electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)（据说 wayland 对 electron 不太友好）
+     - 可以用 `sudo sed -i -E 's/(subvolid=[0-9]+,)|(,subvolid=[0-9]+)//g' /etc/fstab` 命令行删除。
+4. ~~[wayland 的 electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)（据说 wayland 对 electron 不太友好）~~
+   - > 无所谓，现在是 X11 人
 5. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
 6. 设置 pacman：
    - 将某些不常用包和自更新包加入 IgnorePkg，例如 _chromium_ & xmake | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
@@ -89,7 +97,7 @@ GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。
 7. 更改 AUR Helper 缓存（ 参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
    - yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
    - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 [bind mount 同一个 tmpfs](https://github.com/lxl66566/config/blob/archlinux/etc/fstab)，这样就能够解决问题了。
-     - 然而这里还会出现权限问题。
+     - 然而这里还会出现权限问题，无法(?)解决，因此我 mount 到了另一个新的 tmpfs。（不 bind 了）
    - 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
 8. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
 9. grub 改等待时间

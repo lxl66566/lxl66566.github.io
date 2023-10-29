@@ -102,7 +102,7 @@ $x((n))_N=\widetilde x(n)$，表示周期
 
 圆周（循环移位）：~~相当于传送门~~，先周期延拓，再移位，再取主值。$\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)$
 
-$DFT[R_N(n)]=N\delta(k)$（直流分量）
+$DFT[R_N(n)]=N\delta(k)$（直流分量，重要！）
 
 实部 DFT 得到（圆周）共轭对称的频谱；频谱实部 IDFT 得到（圆周）共轭对称的时域谱
 

@@ -81,6 +81,40 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 事实上，_winbtrfs_ 与 _ntfs-3g_ 都不能保证一定不会出问题（有一些群友被坑过）。所以建议都只读不写。
 
+## 服务
+
+与 windows _service_ 的概念相通。有的 debian 系 distro 使用 `service` 指令，而 archlinux 使用 `systemctl` 进行服务管理。本节默认使用 `systemctl`。
+
+查看服务的输出，请前往[日志](#日志)。
+
+### 常用指令
+
+`systemctl <operation> <service_name>`，无需打 `.service` 全名。
+
+- `start` & `stop`，不多说
+- `enable` & `disable`，设置是否开机自启
+  - `enable --now` 为 `enable` + `start`
+- `mask` （深度）禁用。
+
+### WSL2
+
+WSL2(ArchWSL) 由于不从 systemd 启动，导致无法使用 `systemctl` 管理服务。
+
+解法是有一个 python 实现的 [docker-systemctl-replacement](https://github.com/gdraheim/docker-systemctl-replacement)，可以代替(?) `systemctl` 的功能。([ref](https://github.com/yuk7/ArchWSL/issues/20))
+
+```sh
+sudo curl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py -o /usr/bin/systemctl
+sudo python /usr/bin/systemctl <command>
+```
+
+## 日志
+
+`journalctl` 用于查看系统日志。
+
+- `journalctl -u <service_name>` 查看服务日志
+
+`dmesg` 用于查看内核消息。
+
 ## external
 
 1. 了解一下 btrfs（注意时效）：[Linux Btrfs 文件系统使用指南](https://www.mivm.cn/linux-btrfs-usage-guide)
