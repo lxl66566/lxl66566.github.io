@@ -98,13 +98,15 @@ DFS：$\displaystyle \widetilde X(k)=\sum_{n=0}^{N-1}\widetilde x(n)e^{-j\frac{2
 
 DFT：在 DFS 基础上只取主值，$\displaystyle X(k)=\sum_{n=0}^{N-1}x(n)W_N^{nk}, x(n)=\frac{1}{N}\sum_{n=0}^{N-1}X(k)W^{-nk}$
 
-$x((n))_N=\widetilde x(n)$，表示周期
-
 圆周（循环移位）：~~相当于传送门~~，先周期延拓，再移位，再取主值。$\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)$
+
+想求圆周卷积，可以先求线性卷积，再求圆周移位。
 
 $DFT[R_N(n)]=N\delta(k)$（直流分量，重要！）
 
 实部 DFT 得到（圆周）共轭对称的频谱；频谱实部 IDFT 得到（圆周）共轭对称的时域谱
+
+- $\displaystyle x_{ep}(n)=\frac12[x((n))_N+x^*((N-n))_N]R_N(n)$
 
 圆周卷积的主值 N >= 线性卷积的长度，则两者相等；否则混叠。
 
@@ -117,4 +119,6 @@ $DFT[R_N(n)]=N\delta(k)$（直流分量，重要！）
 
 ### 频域采样定理
 
-当频域采样点数 >= 时域序列长度时才能不混叠。
+当频域采样点数 >= 时域序列长度时才能不失真。
+
+内插函数。
