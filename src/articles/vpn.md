@@ -24,7 +24,7 @@ tag:
 ## 免费 VPN
 
 :::warning 警告
-自带闭源客户端的免费 VPN 在安全性方面没有保证，不推荐使用。
+自带闭源客户端的免费 VPN 在**安全性方面没有保证**，不推荐使用。（典型的可以搜索 _老王 VPN_）
 
 **免费 VPN 仅应在无其他安全选择的情况下，接触非敏感信息时使用，且有较高信息泄露风险。** 随着审查力度变化，不排除更高危险。[血的教训（当然不是我](https://focus.scol.com.cn/shwx/202007/57862317.html)
 :::
@@ -62,15 +62,16 @@ tips：加速前需事先选择能通过连接测试的节点
 <iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280" loading="lazy"></iframe>
 
 :::warning
-每一次付费都请告诫自己机场跑路的可能性。同时，**性价比与稳定性不可兼得。**
+
+- 每一次付费都请告诫自己机场跑路的可能性。
+  - （你看看这里跑路了几家？）
+- 机场变动频繁，数据可能过时。
+
 :::
 
-_（以下数据截止于 20230112）_
+### 白嫖机场（已跑路）
 
-### 白嫖机场
-
-<!-- [官网](https://bpjc.xyz/) | [邀请链接](https://bpjc.xyz/#/register?code=YnrLNenI) -->
-<!-- [官网](https://xn--mesv7f5toqlp.club/) | [邀请链接](https://xn--mesv7f5toqlp.club/#/register?code=YnrLNenI) -->
+<details><summary>archived</summary>
 
 不稳定，后果自负。
 
@@ -80,9 +81,9 @@ _（以下数据截止于 20230112）_
 | :------: | :------: | :--: |
 | ￥ 10.00 | 669G\*12 | 未知 |
 
-### 一元机场
+</details>
 
-[官网](https://一元机场.com/)
+### [一元机场](https://一元机场.com/)
 
 |  月付   | 流量  | 限速 |
 | :-----: | :---: | :--: |
@@ -95,7 +96,11 @@ _（以下数据截止于 20230112）_
 
 _（采用 Trojan 协议）_
 
-### [番茄花园（推荐）](https://fqhy.xyz/)
+### [番茄花园（取消）](https://fqhy.xyz/)
+
+新用户已取消免费套餐。
+
+<details><summary>archived</summary>
 
 拥有免费节点，每日签到可领免费流量
 
@@ -106,20 +111,27 @@ _（采用 Trojan 协议）_
 | ￥ 60.00  |       1300G       | 500Mbps |
 | ￥ 100.00 |       6000G       | 无限制  |
 
-### [GLaDOS（推荐）](https://glados.rocks/)
+</details>
+
+### [GLaDOS（取消）](https://glados.rocks/)
+
+> 很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。
+
+<details><summary>archived</summary>
 
 邀请码：`3SPFS-IABW1-77EJL-PE8NR`
 
 学生免费用 360 天，每月 30G。[说明](https://glados.rocks/console/education)
 
-> _此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。_  
-> 很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。
+> _此机场可通过签到延长到期时间，建议使用[脚本](https://github.com/DullSword/GLaDOS-CheckIn)自动签到。_
 
 |  月付  | 流量  |  限速   |
 | :----: | :---: | :-----: |
 | $1.60  | 200G  | 100Mbps |
 | $4.20  | 500G  | 200Mbps |
 | $18.00 | 2000G | 200Mbps |
+
+</details>
 
 ### [木瓜云](https://muguacloud.win/)
 
@@ -157,21 +169,6 @@ _（旧版表格）_
 | ￥ 20.00 | 128G | 未知 |
 | ￥ 38.00 | 256G | 未知 |
 
-### [魔戒](https://www.mojie.link/)
-
-此机场**仅有不限时流量出售**
-
- <!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
-
-|  一次性   | 流量  | 限速 |
-| :-------: | :---: | :--: |
-|  ￥ 1.00  |  2G   | 不限 |
-| ￥ 12.00  | 130G  | 不限 |
-| ￥ 36.00  | 420G  | 不限 |
-| ￥ 60.00  | 750G  | 不限 |
-| ￥ 120.00 | 1660G | 不限 |
-| ￥ 240.00 | 3600G | 不限 |
-
 ### [八方云](https://user.bafang.vip/)（已跑路）
 
 <details><summary>archived</summary>
@@ -193,7 +190,7 @@ _（旧版表格）_
 
 </details>
 
-### [赔钱机场](https://xn--mes358aby2apfg.com/)
+### [赔钱机场](https://赔钱机场.com)
 
 |  月付   | 流量 |   限速    |
 | :-----: | :--: | :-------: |
@@ -206,7 +203,39 @@ _（旧版表格）_
 | :------: | :---: | :-------: |
 | ￥ 14.90 | 1000G | 20000Mbps |
 
+### [特价机场](https://tejiajichang.com)
+
+| 月付  | 流量  | 限速 |
+| :---: | :---: | :--: |
+| ￥ 6  | 1200G | 未知 |
+| ￥ 10 | 8000G | 未知 |
+
+| 一次性 | 流量  | 限速 |
+| :----: | :---: | :--: |
+| ￥ 18  | 1000G | 未知 |
+
+| 半年付 |   流量    | 限速 |
+| :----: | :-------: | :--: |
+| ￥ 10  | 200G \* 6 | 未知 |
+
 ### 其他
+
+[魔戒](https://www.mojie.link/)，仅有**不限时流量**出售，稳定但贵。
+
+ <!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
+
+<details><summary>查看</summary>
+
+|  一次性   | 流量  | 限速 |
+| :-------: | :---: | :--: |
+|  ￥ 1.00  |  2G   | 不限 |
+| ￥ 12.00  | 130G  | 不限 |
+| ￥ 36.00  | 420G  | 不限 |
+| ￥ 60.00  | 750G  | 不限 |
+| ￥ 120.00 | 1660G | 不限 |
+| ￥ 240.00 | 3600G | 不限 |
+
+</details>
 
 以下机场因性价比原因不推荐购买
 
@@ -219,6 +248,8 @@ _（旧版表格）_
 - [飞鸟云](https://feiniaoyun.xyz/)
 
 ## 客户端选择
+
+linux 代理软件推荐请前往[linux - 配置](./linux/install_and_config.md#代理)
 
 ### Clash Verge
 

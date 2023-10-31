@@ -15,7 +15,7 @@
             <av :bg="row.id" :u="row.u" />
           </td>
           <td v-if="row.otherlink">
-            <a :href="row.otherlink">{{ row.id }}</a>
+            <a :href="row.otherlink">{{ row.id.toUpperCase() }}</a>
           </td>
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
