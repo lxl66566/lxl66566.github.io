@@ -9,10 +9,16 @@ export default {
       type: String,
       required: true,
     },
+    u: {
+      type: Boolean,
+      required: false,
+      default: false,
+    }
   },
   methods: {
     generateLink() {
-      return `https://missav.com/${this.bg}`;
+
+      return `https://missav.com/${this.bg}${this.u ? "-uncensored-leak" : ""}`;
     },
     formatText() {
       return this.bg.toUpperCase();

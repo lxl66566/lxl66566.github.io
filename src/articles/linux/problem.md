@@ -26,6 +26,23 @@ tag:
 以下是正文，按时间倒序。
 :::
 
+## sddm 无法启动
+
+这是我遇到的第二个恶性 bug[^2]（第一个是 [timeshift](#timeshift-引发的血案)）。
+
+[^2]: 个人定义需要使用 archiso 进 arch-chroot 的都叫恶性。
+
+[log](https://t.me/withabsolutex/1331)，具体来说是启动全绿，而后左上角光标卡住不闪烁。`Ctrl + Alt + F1` 后进入 tty，屏幕显示方才的内核全绿消息，光标闪烁，但仍然无法输入任何字符。
+
+我尝试：
+
+1. 首先短按关机，用 archiso 挂载后 `arch-chroot` 进去，看日志，看内核消息，无相关报错。
+2. 重新 `mkinitcpio -p linux`，重启无效。
+3. 想到最后一条内核消息是 SDDM，绞尽脑汁，我今天干了啥呢，哦，我用了个 `nvidia-xconfig` 生成了 NVIDIA 配置。
+4. 重新 `arch-chroot`，去 `/etc/X11` 里根据修改日期删除生成的两个 `.conf` 文件，重启，问题解决。
+
+哎，NVIDIA 害人不浅。。而且 archwiki 并未指出双显卡不能使用 `nvidia-xconfig`。
+
 ## ubuntu 提示重启
 
 在公家服务器上 `apt update && apt install ...`，然后出现一个 tui 界面让我选要重启的服务。。由于不知道重启之后会多出什么问题，我按两次 ESC 退出了。

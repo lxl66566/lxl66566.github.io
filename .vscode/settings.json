@@ -7,6 +7,10 @@
   "[markdown]": {
     "editor.formatOnSave": true
   },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": true
+  },
   "Codegeex.DisabledFor": {
     "markdown": "true"
   }

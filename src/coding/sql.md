@@ -79,6 +79,7 @@ use xxx;
 show tables;
 select * from users where sID = 'xxx';
 delete from users where sID = 'xxx';
+update users set sBalance = 1000.00 where sID = '...';
 ```
 
 - 查看 sql 历史指令：`less ~/.mysql_history`
