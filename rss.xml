@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 30 Oct 2023 15:11:46 GMT</pubDate>
-    <lastBuildDate>Mon, 30 Oct 2023 15:11:46 GMT</lastBuildDate>
+    <pubDate>Tue, 31 Oct 2023 10:40:37 GMT</pubDate>
+    <lastBuildDate>Tue, 31 Oct 2023 10:40:37 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -2247,6 +2247,17 @@ If you do want to externalize this module explicitly add it to
 <p class="hint-container-title">提示</p>
 <p>以下是正文，按时间倒序。</p>
 </div>
+<h2> sddm 无法启动</h2>
+<p>这是我遇到的第二个恶性 bug<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">（第一个是 </a><a href="#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88">timeshift</a>）。</p>
+<p><a href="https://t.me/withabsolutex/1331" target="_blank" rel="noopener noreferrer">log</a>，具体来说是启动全绿，而后左上角光标卡住不闪烁。<code>Ctrl + Alt + F1</code> 后进入 tty，屏幕显示方才的内核全绿消息，光标闪烁，但仍然无法输入任何字符。</p>
+<p>我尝试：</p>
+<ol>
+<li>首先短按关机，用 archiso 挂载后 <code>arch-chroot</code> 进去，看日志，看内核消息，无相关报错。</li>
+<li>重新 <code>mkinitcpio -p linux</code>，重启无效。</li>
+<li>想到最后一条内核消息是 SDDM，绞尽脑汁，我今天干了啥呢，哦，我用了个 <code>nvidia-xconfig</code> 生成了 NVIDIA 配置。</li>
+<li>重新 <code>arch-chroot</code>，去 <code>/etc/X11</code> 里根据修改日期删除生成的两个 <code>.conf</code> 文件，重启，问题解决。</li>
+</ol>
+<p>哎，NVIDIA 害人不浅。。而且 archwiki 并未指出双显卡不能使用 <code>nvidia-xconfig</code>。</p>
 <h2> ubuntu 提示重启</h2>
 <p>在公家服务器上 <code>apt update &amp;&amp; apt install ...</code>，然后出现一个 tui 界面让我选要重启的服务。。由于不知道重启之后会多出什么问题，我按两次 ESC 退出了。</p>
 <h2> timeshift 引发的血案</h2>
@@ -2306,10 +2317,10 @@ If you do want to externalize this module explicitly add it to
 <blockquote>
 <p>-&gt; 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br> * response decoding failed: invalid character '&lt;' looking for beginning of value</p>
 </blockquote>
-<p>并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">.</a></p><a class="footnote-anchor" id="footnote-ref1">
+<p>并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">.</a></p><a class="footnote-anchor" id="footnote-ref2">
 <p>之后发现，在 <code>~/.config/yay/config.json</code> 中有一个 <code>aurrpcurl</code> 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 <code>yay --aururl "https://aur.archlinux.org" --save</code>，问题得解。如果一次不行就两次，一定能解(?)。</p>
 <p>ps. 群友提出了 <code>yay --aurrpcurl 'https://aur.archlinux.org' --save</code></p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> umount failed</h2>
+</a><h2><a class="footnote-anchor" id="footnote-ref2"></a> umount failed</h2>
 <p><code>sudo umount /mnt/windows</code>，提示</p>
 <blockquote>
 <p>/mnt/windows: 目标忙</p>
@@ -2366,7 +2377,9 @@ If you do want to externalize this module explicitly add it to
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>参考<a href="../mobile_setting#mipad-5">刷机</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+<li id="footnote1" class="footnote-item"><p>个人定义需要使用 archiso 进 arch-chroot 的都叫恶性。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>参考<a href="../mobile_setting#mipad-5">刷机</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -3020,41 +3033,61 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 </blockquote>
 <p><a href="#npm">npm</a> 为 Node.js 的官方包管理器。此外比较广泛使用的包管理器还有 yarn 和 pnpm 等，其各有优势，可自行选择使用。yarn 在早期比 npm 强，现在优势<a href="https://zhuanlan.zhihu.com/p/27449990" target="_blank" rel="noopener noreferrer">貌似不大</a>。pnpm 使用硬链接，在空间上具有很大优势，但普及度还是略逊一筹（可能难以找到非常规问题解法）。</p>
 <p>我对磁盘空间较为敏感，因此使用 pnpm。由于其文档问题，建议先熟悉 npm 命令后，再使用 pnpm 命令。</p>
-<h2> pnpm</h2>
+<h2> 包管理</h2>
+<h3> pnpm</h3>
 <p><a href="https://pnpm.io/zh/pnpm-cli#%E5%91%BD%E4%BB%A4%E8%A1%8C" target="_blank" rel="noopener noreferrer">用前必读</a></p>
 <ul>
 <li>如果直接使用 <code>pnpm i</code> 安装依赖后运行报错（而在 npm/yarn 上表现良好），请使用 <code>pnpm i --shamefully-hoist</code> 安装依赖！<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></li><a class="footnote-anchor" id="footnote-ref1">
 <li><code>npm init ...</code> == <code>pnpm create ...</code></li>
 </a></ul><a class="footnote-anchor" id="footnote-ref1">
-</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> npm</h2>
-<h3> 基本命令</h3>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> npm</h3>
+<h4> 基本命令</h4>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li><a href="https://www.runoob.com/w3cnote/npm-switch-repo.html" target="_blank" rel="noopener noreferrer">镜像</a></li>
 </ul>
-<h3> 其他命令</h3>
+<h4> 其他命令</h4>
 <ul>
 <li>如果需要重装所有 <code>node_modules</code>，可在 bash 中：<code>rm -rf node_modules &amp;&amp; npm cache clear --force</code></li>
 <li>更新依赖(<a href="https://juejin.cn/post/6844903827599015944" target="_blank" rel="noopener noreferrer">ref</a>)：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
-<h3> 关于 --save</h3>
+<h4> 关于 --save</h4>
 <p>有时候会看到 <code>npm i xxx --save</code>，<code>--save</code> 是写入 <code>package.json</code> 的过程，而 npm 5 之后 install 会自动 save，不需要手动指定。一句话：<strong>不用加</strong>。</p>
-<h2> 关于 lockfile</h2>
+<h3> 关于 lockfile</h3>
 <blockquote>
 <p>对于不同的包管理器，lockfile 的名称不同。</p>
 </blockquote>
 <p>在 <code>package.json</code> 的包版本信息是使用<a href="https://eminoda.github.io/2021/01/29/npm-semver-strategy/" target="_blank" rel="noopener noreferrer">版本修饰符</a>，允许上下浮动的。然而版本不同就有可能导致错误。此时就需要使用 lockfile 进行精确版本的指定。</p>
 <p>若 lockfile 不存在，install/update 时会自动生成。若存在且 lockfile 版本符合 <code>package.json</code> 版本，则从 lockfile 中安装依赖。若 lockfile 不兼容 <code>package.json</code>，则 pnpm/npm 会直接更新 lockfile 或报错退出（因此，强烈建议将 lockfile 添加到 git 版本控制中<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">）。</a></p><a class="footnote-anchor" id="footnote-ref2">
 <p>很遗憾，目前我没有找到任何方法使我能够严格依照 lockfile 进行依赖安装：在冲突时使用 <code>--frozen-lockfile</code> 参数，npm 会直接忽略之并写入 lockfile，pnpm/yarn 会报错并终止。同样的，<code>npm init -y</code> | <code>npm-collect</code> 都无法完成此任务。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref2"></a> 查询包大小</h2>
+</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 查询包大小</h3>
 <p>查询 install size 可以使用 <a href="https://packagephobia.com/" target="_blank" rel="noopener noreferrer">Package Phobia</a>。</p>
 <h2> 遇到的问题</h2>
 <blockquote>
-<p>时间顺序</p>
+<p>时间倒序</p>
 </blockquote>
-<h3> CORS policy</h3>
-<p>在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。
-在文件目录下 <code>python -m http.server</code>，打开浏览器访问 <code>localhost:8000</code>，点击要调试的 html 即可。<span class="heimu" title="你知道的太多了">20230603：我是铸币</span></p>
-<p>这种方法只能避开访问 localhots 的跨域，不能避开 fetch 其他网站的跨域。如果对于确定的网站资源，可以 <em>curl</em> 到本地再引入。</p>
+<h2> 标准输入</h2>
+<p>nodejs 想实现在 terminal 内的标准输入甚至需要对 async/await 模型有一点了解。</p>
+<p>首先，<code>import readline from "readline";</code> 的 readline 是非阻塞的。回调函数会在用户输入后才执行，但在 readline 前的代码就惨了。。</p>
+<p>其次，<code>"readline"</code> 本身没有提供 Promise。因此需要这样：</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>才能让 <code>pre()</code> 与 <code>after()</code> 都呈现阻塞的效果。</p>
+<h2> 脚本调库</h2>
+<p>有时我们可能会想在简单的脚本中调用第三方 nodejs 库。但使用包管理器后，又带来了不必要的复杂度。</p>
+<p>当我为了调库而创建了一个项目后，首先需要填写一堆信息。当然，只是写点小脚本完全可以不填，一路回车。然后再安装需要的包。</p>
+<p>然而，在代码中直接使用 <code>require</code> 调库会报错：</p>
+<blockquote>
+<p>ReferenceError: require is not defined in ES module scope, you can use import instead</p>
+</blockquote>
+<p>而使用 <code>import</code> 又会报：</p>
+<blockquote>
+<p>SyntaxError: Cannot use import statement outside a module</p>
+</blockquote>
+<p>在 <code>package.json</code> 中添加 <code>"type": "module",</code> 后，才能算是结束。</p>
+<h3> 神秘报错</h3>
+<p>nodejs 出错的报错基本上是没用的，因为一般出现玄学问题是依赖包的问题而不是用户的问题（笑）。</p>
+<ol>
+<li>pnpm 安装 <a href="/coding/bot.html" target="blank">koishi</a> 依赖的问题，dev 的时候遇到神秘报错，而使用 npm 安装却不会报错。需要使用 <code>--shamefully-hoist</code> 生成与 npm 一样的扁平化目录。</li>
+<li><a href="https://github.com/DIYgod/RSSHub/issues/13007" target="_blank" rel="noopener noreferrer">vuepress1 文档构建失败</a>：webpack 与 nodejs 之间的碰撞！我甚至想到了降级 nodejs 到 LTS，但没想到的是连 LTS v18 也不行，得降到 v17......</li>
+</ol>
 <h3> 安装 sharp</h3>
 <p>我想使用 sharp 作为图像处理库。而直接 <code>npm i sharp</code> 会报错：</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>尝试：</p>
@@ -3076,12 +3109,10 @@ npm ERR! This command does not support workspaces.</p>
 </ol>
 <p>难道真的山穷水尽了吗？不！再次 <code>npm i sharp</code> 后，经过漫长的等待，终于安装成功了！并且服务器也没有报错！</p>
 <p>总之，还是挺玄学的。</p>
-<h3> 神秘报错</h3>
-<p>nodejs 出错的报错基本上是没用的，因为一般出现玄学问题是依赖包的问题而不是用户的问题（笑）。</p>
-<ol>
-<li>pnpm 安装 <a href="/coding/bot.html" target="blank">koishi</a> 依赖的问题，dev 的时候遇到神秘报错，而使用 npm 安装却不会报错。需要使用 <code>--shamefully-hoist</code><sup class="footnote-ref"><a href="#footnote1">[1:1]</a><a class="footnote-anchor" id="footnote-ref1:1"></a></sup><a class="footnote-anchor" id="footnote-ref1:1">用于生成与 npm 一样的扁平化目录。寄的原因大概是有依赖不支持 pnpm 的目录模式。</a></li><a class="footnote-anchor" id="footnote-ref1:1">
-</a><li><a class="footnote-anchor" id="footnote-ref1:1"></a><a href="https://github.com/DIYgod/RSSHub/issues/13007" target="_blank" rel="noopener noreferrer">vuepress1 文档构建失败</a>：webpack 与 nodejs 之间的碰撞！我甚至想到了降级 nodejs 到 LTS，但没想到的是连 LTS v18 也不行，得降到 v17......</li>
-</ol>
+<h3> CORS policy</h3>
+<p>在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。
+在文件目录下 <code>python -m http.server</code>，打开浏览器访问 <code>localhost:8000</code>，点击要调试的 html 即可。<span class="heimu" title="你知道的太多了">20230603：我是铸币</span></p>
+<p>这种方法只能避开访问 localhots 的跨域，不能避开 fetch 其他网站的跨域。如果对于确定的网站资源，可以 <em>curl</em> 到本地再引入。</p>
 <h2> external</h2>
 <ol>
 <li><a href="https://javascript.plainenglish.io/npm-vs-pnpm-vs-yarn-which-package-manager-reigns-supreme-a942d17a2051" target="_blank" rel="noopener noreferrer">npm vs pnpm vs Yarn — Which Package Manager Reigns Supreme?</a></li>
@@ -3090,7 +3121,7 @@ npm ERR! This command does not support workspaces.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>感谢 Asuka Minato 解答 <a href="#footnote-ref1" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:1" class="footnote-backref">↩︎</a></p>
+<li id="footnote1" class="footnote-item"><p>大概是有依赖不支持 pnpm 的目录模式。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="footnote2" class="footnote-item"><p><a href="https://t.me/withabsolutex/1216" target="_blank" rel="noopener noreferrer">惨痛教训</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
