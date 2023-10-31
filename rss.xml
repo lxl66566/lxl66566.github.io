@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 31 Oct 2023 10:40:37 GMT</pubDate>
-    <lastBuildDate>Tue, 31 Oct 2023 10:40:37 GMT</lastBuildDate>
+    <pubDate>Tue, 31 Oct 2023 15:37:19 GMT</pubDate>
+    <lastBuildDate>Tue, 31 Oct 2023 15:37:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -1121,11 +1121,19 @@ RTT = Round Trip Time，往返时间</p>
 <p class="hint-container-title">提示</p>
 <ul>
 <li>较小的语句优化与增删改不作记录。因此即使博客几乎为<strong>日更</strong>，但日志较稀疏。</li>
-<li><em>维护</em> 一般指花费时间较长或改动占比较大。</li>
+<li><em>维护</em> 一般指花费时间较长或改动占比较大。后期记录频次降低。</li>
 <li><a href="/farraginous/learning/" target="blank">学习笔记</a>区只记录 <em>创建</em> 活动。（学习不止，维护过多）</li>
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20231031</h3>
+<ul>
+<li>使用 vue 组件重写 av 列表，拥有自动分组，自动排序功能。
+<ul>
+<li>脚本审阅替换了 <code>uncensored-leak</code></li>
+</ul>
+</li>
+</ul>
 <h3> 20231028</h3>
 <ul>
 <li>继续拆分 <em>linux</em> 页面，分为 <em>基础</em>、<em>安装与配置</em>、<em>包管理与使用</em> 以及之前的 <em>遇到的问题</em> 四个页面</li>
