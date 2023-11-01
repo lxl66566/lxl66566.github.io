@@ -6,21 +6,58 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 31 Oct 2023 15:37:19 GMT</pubDate>
-    <lastBuildDate>Tue, 31 Oct 2023 15:37:19 GMT</lastBuildDate>
+    <pubDate>Wed, 01 Nov 2023 15:37:17 GMT</pubDate>
+    <lastBuildDate>Wed, 01 Nov 2023 15:37:17 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>教程</category>
+    <category>导航</category>
+    <category>爱好</category>
     <category>推荐</category>
+    <category>主张</category>
+    <category>教程</category>
     <category>编程</category>
     <category>学习</category>
     <category>随笔</category>
     <category>作者</category>
     <category>评价</category>
-    <category>导航</category>
     <category>博客</category>
     <category>经历</category>
-    <category>主张</category>
+    <item>
+      <title>NSFW</title>
+      <link>https://absx.pages.dev/hobbies/NSFW/</link>
+      <guid>https://absx.pages.dev/hobbies/NSFW/</guid>
+      <source url="https://absx.pages.dev/rss.xml">NSFW</source>
+      <description>NSFW</description>
+      <category>导航</category>
+      <category>爱好</category>
+      <pubDate>Wed, 01 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> NSFW</h1>
+<p>欢迎来到 <em>绝对值_x</em> 的 NSFW 区。在这里推荐一下<a href="https://t.me/absolutexsH" target="_blank" rel="noopener noreferrer">本人的 NSFW 频道</a>。</p>
+<p>为了确定您的<s>老涩批资质</s>，这里设置了一个非常简单的小测验：根据以下图片，猜出<strong>四位数字</strong>，即为下列所有文章的密码。</p>
+<!-- <div class="image60" style="text-align: center; "> -->
+<img alt="綾地 寧々" src="/images/hobbies/NSFW/nene.jpg">
+<!-- </div> -->
+<blockquote>
+<p>这是一个非常出名的梗，在 galgame 圈等各种 NSFW 圈内均属于经典放送级别。</p>
+</blockquote>
+<p>通过测验后，您可以在各文章下留言，交流学习。</p>
+<!-- prettier-ignore -->
+<h2> <a href="/hobbies/NSFW/videos.html" target="blank">番☆号☆收☆藏</a></h2>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>番号收藏</title>
+      <link>https://absx.pages.dev/hobbies/NSFW/videos.html</link>
+      <guid>https://absx.pages.dev/hobbies/NSFW/videos.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">番号收藏</source>
+      <description>这里是我的番号收藏，希望你们会喜欢。 备注： 最高分界：单科得分 &amp;gt;= 10 或总分 &amp;gt;= 18; IPX-964 1:33:20 极善; 额外 此处质量总体不如上面的，不过也值得一看。 FXX-SM-24; FC2PPV 778927 01 (https://jp.xero.porn/video/z6jtbjln09icqbaj24440) 02 (...</description>
+      <category>推荐</category>
+      <category>主张</category>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 番号收藏</h1>
+<p>这里是我的番号收藏，希望你们会喜欢。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>基础</title>
       <link>https://absx.pages.dev/articles/linux/basic.html</link>
@@ -834,7 +871,7 @@ RTT = Round Trip Time，往返时间</p>
 <h2> 20231006</h2>
 <p>暴论：图片的默认背景应该是透明的。</p>
 <h2> 20230928</h2>
-<p>尝试对我在路上看到的尽可能多的 <code>.{2}</code> 进行<a href="/hide/videos.html" target="blank">videos</a>的颜打分。</p>
+<p>尝试对我在路上看到的尽可能多的 <code>.{2}</code> 进行<a href="/hobbies/NSFW/videos.html" target="blank">videos</a>的颜打分。</p>
 <h2> 20230927</h2>
 <p>不给读权限是很坏的。</p>
 <h2> 20230919</h2>
@@ -1126,6 +1163,10 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20231101</h3>
+<ul>
+<li>新增 <em>爱好 - NSFW</em> 区，将 videos 移入。</li>
+</ul>
 <h3> 20231031</h3>
 <ul>
 <li>使用 vue 组件重写 av 列表，拥有自动分组，自动排序功能。
@@ -1860,12 +1901,13 @@ RTT = Round Trip Time，往返时间</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> koishi</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> tampermonkey</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> author/p_d 网状图</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> NSFW</label></li>
 </ul>
 <h2> 鸽了鸽了</h2>
 <ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> awesome Github repos (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-5" disabled="disabled"><label class="task-list-item-label" for="task-item-5"> 零食推荐 (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-6" disabled="disabled"><label class="task-list-item-label" for="task-item-6"> bilibili up 推荐 (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-5" disabled="disabled"><label class="task-list-item-label" for="task-item-5"> awesome Github repos (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-6" disabled="disabled"><label class="task-list-item-label" for="task-item-6"> 零食推荐 (?)</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-7" disabled="disabled"><label class="task-list-item-label" for="task-item-7"> bilibili up 推荐 (?)</label></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -3231,86 +3273,6 @@ npm ERR! This command does not support workspaces.</p>
 <li><a href="https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang" target="_blank" rel="noopener noreferrer">Lies we tell ourselves to keep using Golang</a></li>
 </ol>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>查看手机 cpu 指令集</title>
-      <link>https://absx.pages.dev/articles/Android_ISA.html</link>
-      <guid>https://absx.pages.dev/articles/Android_ISA.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">查看手机 cpu 指令集</source>
-      <description>查看手机 cpu 指令集</description>
-      <category>教程</category>
-      <pubDate>Thu, 05 May 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 查看手机 cpu 指令集</h1>
-<!-- prettier-ignore -->
-<table>
-<thead>
-<tr>
-<th style="text-align:center">手段</th>
-<th style="text-align:center">大小</th>
-<th style="text-align:center">图片</th>
-<th style="text-align:center">使用方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">一个木函（国内应用商店）</td>
-<td style="text-align:center">7M</td>
-<td style="text-align:center"><img src="/images/articles/Android_ISA/yigemuhan.jpg" alt="一个木函" loading="lazy"></td>
-<td style="text-align:center">设备应用-查看设备详细信息</td>
-</tr>
-<tr>
-<td style="text-align:center">CPU X（谷歌商店）</td>
-<td style="text-align:center">10M</td>
-<td style="text-align:center"><img src="/images/articles/Android_ISA/cpux.jpg" alt="CPU X" loading="lazy"></td>
-<td style="text-align:center">中央处理器</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="/articles/adb.html" target="blank">ADB</a>（需要电脑）</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center"><img src="/images/articles/Android_ISA/adb.png" alt="ADB" loading="lazy"></td>
-<td style="text-align:center">执行<code>adb shell getprop ro.product.cpu.abi</code></td>
-</tr>
-</tbody>
-</table>
-]]></content:encoded>
-      <enclosure url="https://absx.pages.dev/images/articles/Android_ISA/yigemuhan.jpg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>ADB</title>
-      <link>https://absx.pages.dev/articles/adb.html</link>
-      <guid>https://absx.pages.dev/articles/adb.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">ADB</source>
-      <description>ADB</description>
-      <category>教程</category>
-      <pubDate>Tue, 24 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> ADB</h1>
-<p>ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手机的一些共性（垃圾的应用管理 / 备份 / 安装），同时我还是<a href="/gossip/author.html#%E6%88%91%E7%9A%84%E7%88%B1%E5%A5%BD" target="blank">重度电脑使用者</a> 和 <a href="/articles/mobile_setting.html#%E5%88%B7%E6%9C%BA" target="blank">root user</a>，因此 ADB 使用频率很高。</p>
-<p>通过 ADB 获取到的权限较高，但低于 root 权限。</p>
-<h2> 下载</h2>
-<ul>
-<li><a href="https://developer.android.com/studio/command-line/adb" target="_blank" rel="noopener noreferrer">官网</a></li>
-<li><a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip" target="_blank" rel="noopener noreferrer">从谷歌直接下载</a></li>
-</ul>
-<h2> 使用方法</h2>
-<ol>
-<li>下载并解压后，进入 ADB 目录，打开 cmd。
-<blockquote>
-<p>推荐将 ADB 目录加入环境变量。这样就不仅限于在 ADB 目录下使用指令。</p>
-</blockquote>
-</li>
-<li>手机开启 USB 调试，并用数据线连接电脑。
-<ul>
-<li>开启开发者模式：（例：MIUI 12.5）设置 - 我的设备 - 全部参数 - 多次点击 <em>MIUI 版本</em></li>
-<li>在开发者选项中启用 <em>USB 调试</em></li>
-</ul>
-</li>
-<li>执行 <code>adb devices</code>，出现以下代码即为连接成功：</li>
-</ol>
-<div class="language-batch" data-ext="batch"></div><h2> 常用指令</h2>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 刷机指令</h2>
-<p>由于 fastboot 同属于 platform tools，因此也归入 ADB 指令。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他指令</h2>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
   </channel>
 </rss>
