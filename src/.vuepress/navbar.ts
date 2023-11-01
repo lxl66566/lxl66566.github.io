@@ -22,7 +22,7 @@ export default navbar([
 			{
 				text: "其他",
 				prefix: "/hobbies/",
-				children: ["books.md", "anime.md"],
+				children: ["books.md", "anime.md", "NSFW/"],
 			},
 		],
 	},

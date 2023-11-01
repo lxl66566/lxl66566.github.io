@@ -106,7 +106,7 @@ const data = [
   { id: "IPX-773", aScore: 9, bScore: 5 },
   { id: "mide-580", aScore: 9, bScore: 5, u: true },
   { id: "MUM-216", aScore: 5, bScore: 9 },
-  { id: "MIAA-704", aScore: 4, bScore: 10, u: true },
+  { id: "MIAA-704", aScore: 4, bScore: 10, u: true, name: "ひまりが私の好きな男と結ばれるなんて超ムカつくッ！だから…結婚前中出しレ×プしてもらったんだ… 木下ひまり" },
   { id: "SSIS-843", aScore: 8.9, bScore: 5, u: true },
   { id: "MIDE-721", aScore: 8.2, bScore: 5.7 },
   { id: "hnd-646", aScore: 9.4, bScore: 4.2 },
@@ -180,7 +180,8 @@ const data = [
   { id: "MIDE-422", aScore: 5, bScore: 3 },
   { id: "ABW-018", aScore: 4, bScore: 4 },
   { id: "IPZZ-008", aScore: 4, bScore: 4, u: true },
-  { id: "STARS-250", aScore: 4, bScore: 4, u: true }
+  { id: "STARS-250", aScore: 4, bScore: 4, u: true },
+  { id: "hnd-661", aScore: 8.9, bScore: 9, u: true, name: "睨まれても嫌がられても俺は平然と孕ませて犯ル 有坂深雪" },
 ];
 export default {
   name: "App",

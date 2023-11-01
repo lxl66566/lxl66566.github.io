@@ -13,6 +13,7 @@ category:
 - [x] koishi
 - [ ] tampermonkey
 - [ ] author/p_d 网状图
+- [x] NSFW
 
 ## 鸽了鸽了
 

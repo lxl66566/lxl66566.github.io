@@ -35,7 +35,7 @@ Java 跟 C++ 语法挺像的。~~虽然对标的 C# 应该会更像，但我没�
 
 在 vscode 扩展商店搜 `java`，直接装整个包：_Extension Pack for Java_，然后就能跑了。也可以自己选插件。
 
-包管理器（gradle）就 scoop install gradle 一行完事。
+包管理器（gradle）就 `scoop install gradle` 一行完事。
 
 ## var
 
@@ -67,6 +67,10 @@ private ArrayList<account> accounts = new ArrayList<>(List.of(new account("admin
 ### LinkedHashMap
 
 有序的 HashMap，按照添加顺序
+
+### record
+
+java 14 语法糖，快速创建一个拥有不可变成员的类，自带 toString 等。
 
 ## exception
 

@@ -17,7 +17,7 @@ export default hopeTheme({
 	encrypt: {
 		config: {
 			"/articles/vpn.html": ["2003"],
-			"/hide/videos.html": ["2003"],
+			"/hobbies/NSFW/videos.html": ["0721"],
 			"/gossip/wish.html": ["2003"],
 		},
 	},
