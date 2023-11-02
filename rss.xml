@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 01 Nov 2023 15:37:17 GMT</pubDate>
-    <lastBuildDate>Wed, 01 Nov 2023 15:37:17 GMT</lastBuildDate>
+    <pubDate>Thu, 02 Nov 2023 15:01:22 GMT</pubDate>
+    <lastBuildDate>Thu, 02 Nov 2023 15:01:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>导航</category>
@@ -165,6 +165,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
 <li><a href="https://catcat.cc/post/2020-10-31/" target="_blank" rel="noopener noreferrer">Linux fontconfig 的字体匹配机制</a></li>
 <li><a href="https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html" target="_blank" rel="noopener noreferrer">btrfs 元数据满了怎么办</a></li>
+<li>A chapter of <a href="https://github.com/asukaminato0721/PKGBUILD-cookbook/blob/master/launch.md" target="_blank" rel="noopener noreferrer">PKGBUILD-cookbook</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1163,6 +1164,10 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20231102</h3>
+<ul>
+<li>作者详细信息 新增 <em>About Me 流程图</em></li>
+</ul>
 <h3> 20231101</h3>
 <ul>
 <li>新增 <em>爱好 - NSFW</em> 区，将 videos 移入。</li>
@@ -1900,7 +1905,7 @@ RTT = Round Trip Time，往返时间</p>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> vscode extensions recommendation</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> koishi</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> tampermonkey</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> author/p_d 网状图</label></li>
+<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> author/p_d 网状图</label></li>
 <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> NSFW</label></li>
 </ul>
 <h2> 鸽了鸽了</h2>
@@ -3011,8 +3016,9 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
       <category>教程</category>
       <pubDate>Mon, 24 Jul 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> bot</h1>
-<p>我曾使用 <a href="https://nonebot.dev/" target="_blank" rel="noopener noreferrer">nonebot2</a> + cqhttp 的方式搭建 bot。这种方案使用 python 语言，只能搭建 QQ bot，并且需要自己写比较底层的代码。在此感谢 <a href="https://github.com/yaowan233" target="_blank" rel="noopener noreferrer">yaowan233</a> 学长的指导。</p>
-<p>而现在我选择 <a href="https://koishi.chat/zh-CN/" target="_blank" rel="noopener noreferrer">koishi</a> 框架。该框架基于 <a href="/coding/nodejs.html" target="blank">node.js</a>，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比 nonebot2 的垃圾强数倍。同时也有<a href="https://forum.koishi.xyz/" target="_blank" rel="noopener noreferrer">论坛</a>以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）</p>
+<p>我曾使用 <a href="https://nonebot.dev/" target="_blank" rel="noopener noreferrer">nonebot2</a> + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 <a href="https://github.com/yaowan233" target="_blank" rel="noopener noreferrer">yaowan233</a> 学长的指导。</p>
+<p>而现在我选择 <a href="https://koishi.chat/zh-CN/" target="_blank" rel="noopener noreferrer">koishi</a> 框架。该框架基于 <a href="/coding/nodejs.html" target="blank">node.js</a>，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比曾经的 nonebot2 强数倍。同时也有<a href="https://forum.koishi.xyz/" target="_blank" rel="noopener noreferrer">论坛</a>以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）</p>
+<p>comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；都有数据库的抽象层，比较易用；2023 开源之夏 nonebot2 也新增了图形界面。我感觉还是看写 python 还是写 ts 舒服来选平台比较合适。</p>
 <p>我建的 bot 有两个实例：一个是之前一直在用的 QQ bot <code>atri</code>（2433269451），另一个是后来使用 koishi 的 Telegram bot <a href="https://t.me/atri_absx_bot" target="_blank" rel="noopener noreferrer"><code>atri bot</code></a>。</p>
 <details class="hint-container details"><summary>查看 atri(QQ) 的信息</summary>
 <div style="text-align: center;" class="image40">
@@ -3051,11 +3057,12 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p>telegram：本机没有公网 ip，因此选择 <em>polling</em> 工作模式。代理用 http 好像不能用（这也是我第一次退坑 koishi 的理由），之后尝试用 socks 端口就可以了。</p>
 </li>
 <li>
-<p>QQ：参考<a href="https://forum.koishi.xyz/t/topic/2502" target="_blank" rel="noopener noreferrer">论坛</a>。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:</p>
+<p>QQ：<s>参考<a href="https://forum.koishi.xyz/t/topic/2502" target="_blank" rel="noopener noreferrer">论坛</a>。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:</s></p>
 <blockquote>
 <p>由用户 '*' 发送的 session '*' 缺失 username。插件处理可能出现问题。若要针对此问题进行反馈，请前往 https://k.ilharp.cc/2510 。错误码：2130</p>
 </blockquote>
-<p>不影响使用，开发者也<a href="https://forum.koishi.xyz/t/topic/2510/154" target="_blank" rel="noopener noreferrer">说不用在意</a>，那就不管了。</p>
+<p><s>不影响使用，开发者也<a href="https://forum.koishi.xyz/t/topic/2510/154" target="_blank" rel="noopener noreferrer">说不用在意</a>，那就不管了。</s>
+chronocat 开发的 QQNT 适配器现已被下架。</p>
 </li>
 </ul>
 <h3> 开发</h3>
