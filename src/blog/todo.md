@@ -12,7 +12,7 @@ category:
 - [x] vscode extensions recommendation
 - [x] koishi
 - [ ] tampermonkey
-- [ ] author/p_d 网状图
+- [x] author/p_d 网状图
 - [x] NSFW
 
 ## 鸽了鸽了

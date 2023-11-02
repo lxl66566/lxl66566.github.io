@@ -120,3 +120,4 @@ sudo python /usr/bin/systemctl <command>
 1. 了解一下 btrfs（注意时效）：[Linux Btrfs 文件系统使用指南](https://www.mivm.cn/linux-btrfs-usage-guide)
 2. [Linux fontconfig 的字体匹配机制](https://catcat.cc/post/2020-10-31/)
 3. [btrfs 元数据满了怎么办](https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html)
+4. A chapter of [PKGBUILD-cookbook](https://github.com/asukaminato0721/PKGBUILD-cookbook/blob/master/launch.md)

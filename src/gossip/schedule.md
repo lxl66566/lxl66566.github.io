@@ -13,15 +13,15 @@ category:
 
 ## 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
 
-- [ ] ArchWSL 传文件，编译 wordsreciter Qt6
 - [ ] 日语 N2
 - [ ] 英语 IELTS & TOEFL (without a target score)
+- [ ] try NixOS
 
 - CS 自学：
   - [ ] 操作系统
   - [ ] 编译原理
   - [ ] 数据库
-  - [ ] css
+  - [ ] 基础前端
   - [ ] tauri or flask, to dev wordsreciter
   - [x] koishi plugin, like atri bot
   - [ ] C# learning and pull request to Tai, MisakaTranslator

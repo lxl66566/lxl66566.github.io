@@ -20,9 +20,7 @@ category:
 - 绝对有限理性
 - 节欲派
 - 激进派与自由主义
-- 幻想家
 - 健忘者
-- 模仿者
 - 旋律党
 - 边缘二次元人
 - [剧情党](../hobbies/galgame.md#分类)
@@ -116,7 +114,6 @@ category:
 - 对于群聊，持 _多看少说 <span class="heimu" title="你知道的太多了">少看不说</span>_ 态度。属于极不活跃群体。喜欢接收有意义的信息。
 - 在小说的影响下，（仅）敬畏内在性 强者。
 - 无意识地为周围事物寻找看起来合理，实际上是错误的解释。
-- 性价比的奴隶。
 - 不擅长安慰他人。也不需要被别人安慰。<span class="heimu" title="你知道的太多了">只要发泄就够了</span>
 - 无节日主义者：反对节日带来的常轨脱离、额外开销与牺牲少数派利益的做法。
 - 极简主义。（看看这个 blog）
@@ -128,7 +125,6 @@ category:
 - 一旦被吵醒就很难再次入睡，除非特别困。[睡眠模型](../hide/personal_details.md#睡眠)
 - 夜行者，电子设备常年低亮度 + 黑夜模式。
 - 喜欢吃糖与吃辣。
-- 效率至上。
 
 更多细节参见[详细回答](#关于作者的更详细回答)。
 
@@ -147,8 +143,6 @@ telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src
 [我的音乐频道](https://t.me/absolutexsmusic) | [我的网易云音乐歌单（out of date）](https://music.163.com/playlist?id=3098200457&userid=2061039950) <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span>
 
 主张切割歌单与好听的音游曲：但是在我的音乐频道中是混合的。
-
-## [运动](../hide/sports.md)
 
 ## [关于作者的更详细回答](../hide/personal_details.md)
 

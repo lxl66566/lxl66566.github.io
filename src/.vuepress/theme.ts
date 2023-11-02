@@ -61,6 +61,7 @@ export default hopeTheme({
 			footnote: true,
 			tabs: true,
 			tasklist: true,
+			mermaid: true,
 			stylize: [
 				{
 					matcher: "Recommended",
