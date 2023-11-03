@@ -28,6 +28,14 @@ tag:
 
 分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢另一块盘的数据<span class="heimu" title="你知道的太多了">安装时我确实失手格掉了全盘数据和分区</span>。
 
+#### 分区
+
+如果想使用多个内核，_boot 分区_ 分 512M 可能不够。不缺的话建议直接 1G。
+
+swap 无所谓，不分都行，~~反正我有大 RAM~~。（即使我分了，我也[调低了 swappiness](#系统设置)。）
+
+由于我用 btrfs，因此只要把其他空间全部给主分区就行了。
+
 #### 添加 windows 引导
 
 由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 _os-prober_ 自动共存。因此我使用如下方法进行自动检测并添加：
@@ -111,6 +119,10 @@ GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。
     # sudo edit /etc/security/faillock.conf
     deny = 10
     ```
+11. [安装 `xsettingsd`](https://wiki.archlinux.org/title/Xsettingsd) 并简单配置
+12. sysctl 相关。
+    - [Tcp Fast Open](https://wiki.archlinux.org/title/sysctl#Enable_TCP_Fast_Open)
+    - [bbr](https://wiki.archlinux.org/title/sysctl#Enable_BBR)
 
 ### 输入法
 
@@ -225,3 +237,5 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 timeshift 要求子卷名字必须以 `@` 开头。
 
 timeshift 的 cron 定时备份默认是残废的。
+
+甚至连卸载 timeshift 都是一个[大坑](./problem.md#timeshift-删除子卷)。

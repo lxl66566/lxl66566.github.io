@@ -70,6 +70,20 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 
 可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；`makepkg -f` 测试。
 
+`updpkgsums PKGBUILD` 可以自动更新校验和。
+
+#### 测试
+
+如果需要一个纯净环境测试，可以看看 [pacstrap](https://wiki.archlinux.org/title/Pacstrap)。
+
+```sh
+mkdir container
+sudo pacstrap container base base-develsudo # 创建容器（使用主机密钥）。下载大小约为 223MB
+sudo systemd-nspawn -D container  # 进入容器
+```
+
+或许还可以找个机会试试 [bwrap](https://blog.lilydjwg.me/2021/8/12/using-bwrap.215869.html)？据说更轻量。我确实觉得为了打个包下载 200+MB 的东西有点浪费了。
+
 ## 包使用
 
 此处不包含代理与快照工具，请前往[配置页](./install_and_config.md#代理)查看。

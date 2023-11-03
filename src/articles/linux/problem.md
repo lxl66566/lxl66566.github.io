@@ -26,6 +26,17 @@ tag:
 以下是正文，按时间倒序。
 :::
 
+## timeshift 删除子卷
+
+我已经转 snapper 了，想删除所有 timeshift 的子卷并卸载。然而有一个子卷在删除中出现错误（真的太傻逼了）。于是我找到了[这个回答](https://bbs.archlinux.org/viewtopic.php?id=266965)，发现问题基本是一样的。于是只要手动删除子卷就行了。
+
+但是，我找不到子卷的位置。
+
+> \> sudo timeshift --list  
+> Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'
+
+`/run/timeshift` 文件夹是空的。后来又找到了[其他人相同的遭遇](https://bbs.archlinux.org/viewtopic.php?id=287094)。That's STICKY！
+
 ## sddm 无法启动
 
 这是我遇到的第二个恶性 bug[^2]（第一个是 [timeshift](#timeshift-引发的血案)）。

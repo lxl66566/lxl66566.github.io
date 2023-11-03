@@ -249,7 +249,7 @@ _（旧版表格）_
 
 ## 客户端选择
 
-linux 代理软件推荐请前往[linux - 配置](./linux/install_and_config.md#代理)
+> linux 代理软件推荐请前往[linux - 配置](./linux/install_and_config.md#代理)
 
 ### Clash Verge
 
@@ -257,7 +257,7 @@ linux 代理软件推荐请前往[linux - 配置](./linux/install_and_config.md#
 
 相比[Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。
 
-其 _设置热键_ 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，放弃了 Clash Verge 而去使用了 [v2rayN](#v2ray)。
+其 _设置热键_ 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，懒得做订阅转换，放弃了 Clash Verge 而去使用了 [v2rayN](#v2ray)。
 
 #### 简易教程
 
@@ -266,6 +266,10 @@ linux 代理软件推荐请前往[linux - 配置](./linux/install_and_config.md#
 类似地，在 _配置_ 中粘贴订阅链接，下载并选中，然后就可以在 _代理_ 中使用节点了。记得在 _配置_ 中打开 _系统代理_ 选项。
 
 ### Clash for Windows
+
+> 20231102 Clash for Windows 删库跑路。
+
+::: details archived
 
 #### 简介
 
@@ -292,9 +296,17 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 - 在节点界面点击测速图标测试全部节点的连通性
 - 建议设置配置文件自动更新（Profiles -> 右击配置文件 -> Settings -> Update Interval 设为 24）
 
+:::
+
 ### Clash For Android
 
+> 20231103 继 CFW 删库后，Clash 内核与 Meta 核均删库跑路。
+
+::: details archived
+
 请前往谷歌商店或[前往 github 下载](https://github.com/Kr328/ClashForAndroid/releases)。[私链](https://wwp.lanzout.com/iL6sD03mi0gf)
+
+:::
 
 ### V2ray
 
