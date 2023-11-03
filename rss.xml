@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 02 Nov 2023 15:01:22 GMT</pubDate>
-    <lastBuildDate>Thu, 02 Nov 2023 15:01:22 GMT</lastBuildDate>
+    <pubDate>Fri, 03 Nov 2023 08:50:58 GMT</pubDate>
+    <lastBuildDate>Fri, 03 Nov 2023 08:50:58 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>导航</category>
@@ -194,6 +194,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p><a href="https://wiki.archlinuxcn.org" target="_blank" rel="noopener noreferrer">archwiki</a> 是最官方、最权威、最详细的指南，可以多看看，发生分歧时，以 wiki 为准。</p>
 </div>
 <p>分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢另一块盘的数据<span class="heimu" title="你知道的太多了">安装时我确实失手格掉了全盘数据和分区</span>。</p>
+<h4> 分区</h4>
+<p>如果想使用多个内核，<em>boot 分区</em> 分 512M 可能不够。不缺的话建议直接 1G。</p>
+<p>swap 无所谓，不分都行，<s>反正我有大 RAM</s>。（即使我分了，我也<a href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">调低了 swappiness</a>。）</p>
+<p>由于我用 btrfs，因此只要把其他空间全部给主分区就行了。</p>
 <h4> 添加 windows 引导</h4>
 <p>由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 <em>os-prober</em> 自动共存。因此我使用如下方法进行自动检测并添加：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 驱动</h4>
@@ -271,6 +275,13 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
 <li>grub 改等待时间<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li>修改 faillock attempt times<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li><a href="https://wiki.archlinux.org/title/Xsettingsd" target="_blank" rel="noopener noreferrer">安装 <code>xsettingsd</code></a> 并简单配置</li>
+<li>sysctl 相关。
+<ul>
+<li><a href="https://wiki.archlinux.org/title/sysctl#Enable_TCP_Fast_Open" target="_blank" rel="noopener noreferrer">Tcp Fast Open</a></li>
+<li><a href="https://wiki.archlinux.org/title/sysctl#Enable_BBR" target="_blank" rel="noopener noreferrer">bbr</a></li>
+</ul>
+</li>
 </ol>
 <h3> 输入法</h3>
 <p>我使用 fcitx5，输入要求为 <em>英语，双拼，日语</em>。可以在遇到的问题里找到一些输入法的设置。</p>
@@ -332,6 +343,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h4> timeshift</h4>
 <p>timeshift 要求子卷名字必须以 <code>@</code> 开头。</p>
 <p>timeshift 的 cron 定时备份默认是残废的。</p>
+<p>甚至连卸载 timeshift 都是一个<a href="/articles/linux/problem.html#timeshift-%E5%88%A0%E9%99%A4%E5%AD%90%E5%8D%B7" target="blank">大坑</a>。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -394,6 +406,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>push。注意不要使用那些阻断 ssh 的代理。</li>
 </ol>
 <p>可以 <code>paru -Gp &lt;package&gt;</code> 看看别人写的 PKGBUILD；<code>makepkg -f</code> 测试。</p>
+<p><code>updpkgsums PKGBUILD</code> 可以自动更新校验和。</p>
+<h4> 测试</h4>
+<p>如果需要一个纯净环境测试，可以看看 <a href="https://wiki.archlinux.org/title/Pacstrap" target="_blank" rel="noopener noreferrer">pacstrap</a>。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>或许还可以找个机会试试 <a href="https://blog.lilydjwg.me/2021/8/12/using-bwrap.215869.html" target="_blank" rel="noopener noreferrer">bwrap</a>？据说更轻量。我确实觉得为了打个包下载 200+MB 的东西有点浪费了。</p>
 <h2> 包使用</h2>
 <p>此处不包含代理与快照工具，请前往<a href="/articles/linux/install_and_config.html#%E4%BB%A3%E7%90%86" target="blank">配置页</a>查看。</p>
 <h3> 基础 CLI 工具</h3>
@@ -2302,6 +2318,14 @@ If you do want to externalize this module explicitly add it to
 <p class="hint-container-title">提示</p>
 <p>以下是正文，按时间倒序。</p>
 </div>
+<h2> timeshift 删除子卷</h2>
+<p>我已经转 snapper 了，想删除所有 timeshift 的子卷并卸载。然而有一个子卷在删除中出现错误（真的太傻逼了）。于是我找到了<a href="https://bbs.archlinux.org/viewtopic.php?id=266965" target="_blank" rel="noopener noreferrer">这个回答</a>，发现问题基本是一样的。于是只要手动删除子卷就行了。</p>
+<p>但是，我找不到子卷的位置。</p>
+<blockquote>
+<p>&gt; sudo timeshift --list<br>
+Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'</p>
+</blockquote>
+<p><code>/run/timeshift</code> 文件夹是空的。后来又找到了<a href="https://bbs.archlinux.org/viewtopic.php?id=287094" target="_blank" rel="noopener noreferrer">其他人相同的遭遇</a>。That's STICKY！</p>
 <h2> sddm 无法启动</h2>
 <p>这是我遇到的第二个恶性 bug<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">（第一个是 </a><a href="#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88">timeshift</a>）。</p>
 <p><a href="https://t.me/withabsolutex/1331" target="_blank" rel="noopener noreferrer">log</a>，具体来说是启动全绿，而后左上角光标卡住不闪烁。<code>Ctrl + Alt + F1</code> 后进入 tty，屏幕显示方才的内核全绿消息，光标闪烁，但仍然无法输入任何字符。</p>
