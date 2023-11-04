@@ -6,22 +6,88 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 03 Nov 2023 08:50:58 GMT</pubDate>
-    <lastBuildDate>Fri, 03 Nov 2023 08:50:58 GMT</lastBuildDate>
+    <pubDate>Sat, 04 Nov 2023 16:10:42 GMT</pubDate>
+    <lastBuildDate>Sat, 04 Nov 2023 16:10:42 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>学习</category>
+    <category>推荐</category>
+    <category>教程</category>
     <category>导航</category>
     <category>爱好</category>
-    <category>推荐</category>
     <category>主张</category>
-    <category>教程</category>
     <category>编程</category>
-    <category>学习</category>
     <category>随笔</category>
     <category>作者</category>
     <category>评价</category>
     <category>博客</category>
     <category>经历</category>
+    <item>
+      <title>typst</title>
+      <link>https://absx.pages.dev/farraginous/learning/typst.html</link>
+      <guid>https://absx.pages.dev/farraginous/learning/typst.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">typst</source>
+      <description>typst</description>
+      <category>学习</category>
+      <category>推荐</category>
+      <category>教程</category>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> typst</h1>
+<blockquote>
+<p><a href="https://github.com/typst/typst" target="_blank" rel="noopener noreferrer">Typst</a> is a new markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.</p>
+</blockquote>
+<p>我不是很喜欢 latex，所以尝试使用 typst 作为我的论文排版工具。</p>
+<p>优点：</p>
+<ul>
+<li>typst 使用 rust 语言编写，编译极快，几乎秒出</li>
+<li>语法是类 rust 的语法，看着非常亲切</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>新兴工具，bug 较多</li>
+<li>社区不够完善，网上模版/教程不多</li>
+</ul>
+<h2> 安装与配置</h2>
+<p>基础用法是 CLI 使用，但我配合 <a href="/coding/vscode.html" target="blank">VSCode</a> 使用。</p>
+<ol>
+<li>进 release 下载，解压后把 <code>typst.exe</code> 直接丢进 <code>C:\Windows\System32</code> 就行。
+<ul>
+<li>或者也可以 <code>scoop install typst</code> 一行搞定。</li>
+</ul>
+</li>
+<li>vscode 安装两个扩展，无需配置：
+<ul>
+<li><em>Typst LSP</em>，Linter + watch</li>
+<li><em>vscode-pdf</em> (optional)，viewer</li>
+<li>或：什么也不装，只要 <code>typst watch example.typ</code> 即可。</li>
+</ul>
+</li>
+</ol>
+<p>然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。</p>
+<h2> 使用</h2>
+<p><a href="https://typst-doc-cn.github.io/docs/chinese/#resources" target="_blank" rel="noopener noreferrer">这里</a>有许多大学的毕业论文模版，<s>多抄抄就会用了</s></p>
+<p>简单来说，<code>[]</code> 内是正文，<code>{}</code> 内是代码，<code>()</code> 是数组或列表，正文调用函数要加 <code>#</code>，代码里可以直接调。</p>
+<p>关键字也就 <code>set</code> 和 <code>show</code> 常用，<code>set</code> 设置全局属性，<code>show</code> 设置某个组件的（外观）属性。</p>
+<p>剩下的 <code>let</code>，<code>if</code> 什么的都是 rust 的东西，这里不说（</p>
+<h2> bug</h2>
+<p>这东西 bug 其实还真不少。。</p>
+<h3> 参考文献</h3>
+<p><a href="https://github.com/typst/typst/issues/2548" target="_blank" rel="noopener noreferrer">issue</a></p>
+<p>从 <code>.bib</code> 引入参考文献时，如果文献类型是 <code>thesis</code>，本该在适当位置加 <code>[D]</code> 的，然而它不会加。。</p>
+<p>感觉是 <em>hayagriva</em> 的锅，但是我翻了下源码发现看不懂。爆了！</p>
+<blockquote>
+<p>看了一下 issue 时间，<em>3 days ago</em>。。那我这次课程论文寄了，唉，扣点分不重要</p>
+</blockquote>
+<p>其他大学模版的解法是用 python 写了个处理脚本，通过 CSL 解析，半自动加参考文献。</p>
+<h3> 缩进</h3>
+<p><a href="https://github.com/typst/typst/issues/311" target="_blank" rel="noopener noreferrer">issue</a></p>
+<p>中文等语言需要在每行开头缩进两个宽字符。typst 提供了 <code>par()</code> 控制缩进行为，但是在标题下面一行的文字却不会被缩进。。</p>
+<p>所以下面有人提供了<a href="https://github.com/typst/typst/issues/311#issuecomment-1678940781" target="_blank" rel="noopener noreferrer">一个解法</a>：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>我最早在知乎看到一个解法，但是有副作用。。</p>
+</blockquote>
+]]></content:encoded>
+    </item>
     <item>
       <title>NSFW</title>
       <link>https://absx.pages.dev/hobbies/NSFW/</link>
@@ -166,6 +232,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li><a href="https://catcat.cc/post/2020-10-31/" target="_blank" rel="noopener noreferrer">Linux fontconfig 的字体匹配机制</a></li>
 <li><a href="https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html" target="_blank" rel="noopener noreferrer">btrfs 元数据满了怎么办</a></li>
 <li>A chapter of <a href="https://github.com/asukaminato0721/PKGBUILD-cookbook/blob/master/launch.md" target="_blank" rel="noopener noreferrer">PKGBUILD-cookbook</a></li>
+<li><a href="https://www.eaimty.com/2020/zfs-file-system/" target="_blank" rel="noopener noreferrer">ZFS ── 瑞士军刀般的文件系统</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1180,6 +1247,10 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20231104</h3>
+<ul>
+<li>新增 <em>学习笔记 - typst</em></li>
+</ul>
 <h3> 20231102</h3>
 <ul>
 <li>作者详细信息 新增 <em>About Me 流程图</em></li>
@@ -2988,6 +3059,7 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <li>在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span></li>
 <li>安装 RAM Disk 软件并挂载。</li>
 <li>将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）</li>
+<li>如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。<a href="https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&amp;utm_medium=web2x&amp;context=3" target="_blank" rel="noopener noreferrer">src</a>，保存为 <code>.reg</code> 文件后双击<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ol>
 <h2> ERAM</h2>
 <p><a href="https://github.com/topics/ramdisk" target="_blank" rel="noopener noreferrer">Github ramdisk topic</a> 的第一名。但是呢，直接卡在安装上了。。如何使用？文档在何方？README 早已过时，于是开源阵营 RAM Disk 阵亡。<s>（樂</s></p>
@@ -3017,8 +3089,12 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <li><strong>本横评中唯一一个带有动态内存分配功能的软件！</strong> 动态内存分配指的是往 RAM Disk 里放多少东西就吃多少内存，而不是一般的，开多少空间就吃多少内存。会慢一点，但胜在内存自由。</li>
 <li>非常好，有关闭电源计划的提示。</li>
 <li>可一键设置 <code>$Temp</code> 环境变量。</li>
-<li>RAM Disk 的文件会占用双倍的空间？？我不太清楚原理。文件 6.68 GB，占用空间差不多，但是设备和驱动器里显示磁盘占用了 13.38 GB 空间。</li>
+<li>RAM Disk 的文件会占用双倍的空间？？我不太清楚原理。文件 6.68 GB，占用空间差不多，但是设备和驱动器里显示磁盘占用了 13.38 GB 空间。
+<ul>
 <li>但是 <em>ImDisk</em> 能够<strong>保留文件扩容</strong>，非常舒服。</li>
+</ul>
+</li>
+<li>开机自启，默认隐藏托盘</li>
 </ul>
 <h2> 魔方内存盘</h2>
 <p>创建 RAM Disk <strong>必需要创建同样大小的镜像文件</strong>，即使无需保存。逗我玩呢？</p>
@@ -3228,80 +3304,6 @@ npm ERR! This command does not support workspaces.</p>
 <li><a href="https://chinadigitaltimes.net/chinese/668430.html" target="_blank" rel="noopener noreferrer">【404 文库】大象公会 2015—2021 年 66 篇微信文章合集</a>（注意时效）</li>
 <li><a href="https://telegra.ph/%E5%BD%93%E4%B8%80%E4%BD%8D%E6%B8%85%E5%8D%8E%E6%9C%AC%E7%A1%95%E5%8D%9A%E6%94%BE%E5%BC%83%E5%8C%97%E4%BA%AC%E4%B8%AD%E4%BA%A7%E5%8E%BB%E5%BE%80%E9%9D%9E%E6%B4%B2-10-07" target="_blank" rel="noopener noreferrer">是理想也是现实：一个清华博士的非洲选择｜文化纵横</a></li>
 <li><a href="https://survivesjtu.gitbook.io/survivesjtumanual/" target="_blank" rel="noopener noreferrer">上海交通大学生存手册</a></li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>编程</title>
-      <link>https://absx.pages.dev/coding/</link>
-      <guid>https://absx.pages.dev/coding/</guid>
-      <source url="https://absx.pages.dev/rss.xml">编程</source>
-      <description>编程</description>
-      <category>编程</category>
-      <pubDate>Sun, 09 Apr 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 编程</h1>
-
-<h2> 写在前面</h2>
-<details class="hint-container details"><summary>过激言论，谨慎查看</summary>
-<p>你国计算机教育就是一坨屎（我是说绝大多数的大学校）。思政课先不说，为什么要学大学物理，大物实验，数字电路？编程语言为什么还在用上古版本？</p>
-</details>
-<p>编程领域，本人比较喜欢 ToC 软件开发，实用至上，自由主义。</p>
-<h2> 语言有关</h2>
-<p>我的编程语言学习属于多而不精的类型。多语言学习者能在短时间内掌握一门新的语言，但这也意味着基础不够扎实，缺乏经验等。因此需要多做项目以降低劣势。</p>
-<p>多语言只是手段，目的是为了开拓视野，总结出不同语言中的共性。编程学习不能仅仅“见树”，而需要“见森林”。希望我不会绕到语言学习的圈子里。</p>
-<h3> 学习阶段</h3>
-<ol>
-<li><a href="/coding/Rust.html" target="blank">Rust</a></li>
-<li><a href="/coding/Cpp.html" target="blank">C++</a></li>
-<li><a href="/coding/python.html" target="blank">Python</a></li>
-<li><a href="/coding/java.html" target="blank">Java</a></li>
-<li><a href="/coding/tsjs.html" target="blank">TypeScript &amp; JavaScript</a></li>
-</ol>
-<h3> 预学习阶段</h3>
-<ol start="6">
-<li><a href="/coding/csharp.html" target="blank">C#</a></li>
-<li><a href="/coding/kotlin.html" target="blank">kotlin</a></li>
-</ol>
-<h3> 新生语言</h3>
-<p>我并未系统学习以下新生语言，只是想了解其设计理念，并获取一些语言设计的灵感。</p>
-<ul>
-<li><a href="https://github.com/vlang/v" target="_blank" rel="noopener noreferrer">V language</a>：基于 C 的注重性能的静态类型编译语言。语法比较像 go?</li>
-<li><a href="https://github.com/mun-lang/mun" target="_blank" rel="noopener noreferrer">Mun</a>：基于 Rust 的静态类型语言，注重热重载 (hot reloading)。</li>
-<li><a href="https://docs.modular.com/mojo/" target="_blank" rel="noopener noreferrer">Mojo</a>：python 的超集，注重性能，类型，兼容性，目标是 AI 领域。</li>
-</ul>
-<h2> 工具</h2>
-<ol>
-<li><a href="/coding/github.html" target="blank">Github</a>：如何进行最基本的使用</li>
-<li><a href="/coding/Git.html" target="blank">Git</a>：版本控制系统</li>
-<li><a href="/coding/nodejs.html" target="blank">node.js</a>：js 运行时</li>
-<li><a href="/coding/vim.html" target="blank">Vim</a>：文件编辑器</li>
-<li><a href="/coding/sql.html" target="blank">数据库</a>：SQL</li>
-</ol>
-<h2> 其他</h2>
-<ol>
-<li><a href="/coding/algorithm.html" target="blank">算法</a></li>
-<li><a href="/coding/bot.html" target="blank">搭建 bot</a></li>
-<li><a href="https://github.com/lxl66566/sicp-learning" target="_blank" rel="noopener noreferrer">SICP learning</a></li>
-</ol>
-<h2> 杂项</h2>
-<h3> 网站</h3>
-<p>一些值得学习的地方，语言无关。</p>
-<ul>
-<li><a href="https://missing-semester-cn.github.io/" target="_blank" rel="noopener noreferrer">计算机教育中缺失的一课</a></li>
-<li><a href="https://learnxinyminutes.com/" target="_blank" rel="noopener noreferrer">learnxinyminutes</a></li>
-<li><a href="https://csdiy.wiki/" target="_blank" rel="noopener noreferrer">CS 自学指南</a> &amp; <a href="https://hackway.org/docs/cs/intro" target="_blank" rel="noopener noreferrer">计算机专业学习路线 - hackway</a>：英文好的话可以看看。</li>
-</ul>
-<h3> 字体</h3>
-<p><a href="https://github.com/hbin/top-programming-fonts/" target="_blank" rel="noopener noreferrer">top-programming-fonts</a>，随便选。反正我用 Fira Code。</p>
-<h2> external</h2>
-<ol>
-<li><a href="https://missing-semester-cn.github.io/" target="_blank" rel="noopener noreferrer">计算机教育中缺失的一课</a></li>
-<li><a href="https://awesome-programming-books.github.io/" target="_blank" rel="noopener noreferrer">经典技术书籍 PDF 文件</a>
-<ul>
-<li><a href="https://www.cs.princeton.edu/~appel/modern/" target="_blank" rel="noopener noreferrer">Modern Compiler Implementation in ( Java | ML | C )</a></li>
-</ul>
-</li>
-<li><a href="https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang" target="_blank" rel="noopener noreferrer">Lies we tell ourselves to keep using Golang</a></li>
 </ol>
 ]]></content:encoded>
     </item>
