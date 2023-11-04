@@ -182,6 +182,7 @@ const data = [
   { id: "IPZZ-008", aScore: 4, bScore: 4, u: true },
   { id: "STARS-250", aScore: 4, bScore: 4, u: true },
   { id: "hnd-661", aScore: 8.9, bScore: 9, u: true, name: "睨まれても嫌がられても俺は平然と孕ませて犯ル 有坂深雪" },
+  { id: "milk-189", aScore: 7.8, bScore: 7 },
 ];
 export default {
   name: "App",

@@ -22,25 +22,26 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 ## 使用指南
 
 archlinux 下的 ramdisk 非常简单，只需
+
 :::code-tabs
 @tab 自动
 
 ```
 # edit /etc/fstab, add the following line
-# 此处最好不要添加 `noexec`，否则 AUR Helper 可能无法编译软件包
-tmpfs   /tmp    tmpfs  rw,size=10G,nodev,nosuid,noatime,mode=1777 0 0
+# 此处不要添加 `noexec`，否则 AUR Helper 无法编译软件包
+tmpfs /tmp tmpfs rw,size=10G,nodev,nosuid,noatime,mode=1777 0 0
 ```
 
 @tab 临时
 
 ```sh
 mkdir -p /mnt/tmp
-sudo mount -t ramfs -o size=10g ramfs /mnt/tmp
+sudo mount -t tmpfs -o size=10g tmpfs /mnt/tmp
 sudo chmod -R 777 /mnt/tmp
-# 注意，ramfs 可以写入大于设定量的值，可能会造成系统不稳定。
 ```
 
 :::
+
 即可。
 
 因此后文介绍的皆为 Windows 系统上的 ramdisk。
@@ -48,6 +49,12 @@ sudo chmod -R 777 /mnt/tmp
 1. 在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span>
 2. 安装 RAM Disk 软件并挂载。
 3. 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）
+4. 如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。[src](https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&utm_medium=web2x&context=3)，保存为 `.reg` 文件后双击
+   ```
+   Windows Registry Editor Version 5.00
+   [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+   "DiskCacheDir"="Z:\\EdgeCache"
+   ```
 
 ## ERAM
 
@@ -79,7 +86,8 @@ sudo chmod -R 777 /mnt/tmp
 - 非常好，有关闭电源计划的提示。
 - 可一键设置 `$Temp` 环境变量。
 - RAM Disk 的文件会占用双倍的空间？？我不太清楚原理。文件 6.68 GB，占用空间差不多，但是设备和驱动器里显示磁盘占用了 13.38 GB 空间。
-- 但是 _ImDisk_ 能够**保留文件扩容**，非常舒服。
+  - 但是 _ImDisk_ 能够**保留文件扩容**，非常舒服。
+- 开机自启，默认隐藏托盘
 
 ## 魔方内存盘
 

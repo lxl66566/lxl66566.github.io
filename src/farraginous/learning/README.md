@@ -14,7 +14,7 @@ category:
 
 1. [日本語勉強](./japanese.md)
 2. [双拼](./ulpb.md)
-3. typst
+3. [typst](./typst.md)
 
 ## 大学课程
 

@@ -101,6 +101,10 @@ url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 priority = "default"
 ```
 
+#### 缓存
+
+poetry 默认把虚拟环境和包都装在 C 盘。若空间不足，可以考虑改缓存位置：`poetry config cache-dir D:\\poetry_enev`
+
 ### miniconda
 
 提供 python 包管理与虚拟环境。我已弃用 miniconda，转向 poetry。

@@ -121,3 +121,4 @@ sudo python /usr/bin/systemctl <command>
 2. [Linux fontconfig 的字体匹配机制](https://catcat.cc/post/2020-10-31/)
 3. [btrfs 元数据满了怎么办](https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html)
 4. A chapter of [PKGBUILD-cookbook](https://github.com/asukaminato0721/PKGBUILD-cookbook/blob/master/launch.md)
+5. [ZFS ── 瑞士军刀般的文件系统](https://www.eaimty.com/2020/zfs-file-system/)
