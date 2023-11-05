@@ -162,6 +162,8 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 
 ### 其他
 
+关于包管理器，除了 _poetry_ 和 _conda_ 外，还有例如 [_pdm_](https://github.com/pdm-project/pdm) 可以尝试使用。
+
 如果不使用现代包管理器（如果用 pip），需要在项目下导出一个 `requirements.txt` 用于声明项目依赖。可以用 pip 导出，也可以自己写模块。可以不写版本，只写每行一个模块名。
 
 ## 语言相关

@@ -25,14 +25,15 @@ _Git is a free and open source distributed version control system designed to ha
 
 ## 安装与配置
 
-### 安装
+### 安装（windows）
 
-git 在 windows 下的安装也算是一门学问，一共十几个英文步骤选项极其折磨[^5]。实际上 git 官方会为电脑安装一个模拟 linux 的终端（msys2）。你也可以选择 [scoop](../farraginous/recommend_packages.md#scoop)：`scoop install git` 来快速安装 git 软件。
+git 在 windows 下的安装也算是一门学问，官方安装包一共十几个英文步骤选项极其折磨[^5]。实际上 git 官方会为电脑安装一个模拟 linux 的终端（msys2）。
+
 [^5]: 当然你也可以一路确定，没什么大问题，就是占用空间多一点罢了
 
-安装 git(msys2) 后，在任意目录右击即可看到 Git Bash Here （命令行界面）（若安装时使用默认选项，还会出现 _Git GUI Here（图形界面）_）。本文仅介绍 Git Bash 用法。
+这里推荐 [scoop](../farraginous/recommend_packages.md#scoop) 一行搞定：`scoop install git`。不过呢，使用 scoop 装完还建议手动在 _windows 设置 - 应用 - 默认应用_ 中为 `.sh` 文件添加默认打开方式，添加为 `...\scoop\apps\git\current\git-bash.exe`（填写实际路径）。否则无法直接双击 `*.sh` 文件直接运行。
 
-当然，git 安装时会将自身安装目录添加到环境变量，因此你也可以在 cmd 或 Powershell 中使用 git 命令。
+安装后在任意 shell 输入 `git`，测试安装是否成功。本文仅介绍 Git Bash 用法，不涉及 GUI 使用。
 
 ### 配置
 

@@ -31,6 +31,7 @@ category:
 5. [Android 查看手机 cpu 指令集](./Android_ISA.md)
 6. [最小化二进制文件与 dll](./minimize_exe.md)
 7. [命令行压缩](./cli_compress.md)
+8. [音频转文字](./voice2text.md)
 
 ## 推荐
 

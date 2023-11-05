@@ -1,4 +1,5 @@
 <template>
+  <h2 v-if="errorMessage">{{ errorMessage }}</h2>
   <h2>最高</h2>
   <div>
     <SortableTable :rows="data" />
@@ -183,6 +184,11 @@ const data = [
   { id: "STARS-250", aScore: 4, bScore: 4, u: true },
   { id: "hnd-661", aScore: 8.9, bScore: 9, u: true, name: "睨まれても嫌がられても俺は平然と孕ませて犯ル 有坂深雪" },
   { id: "milk-189", aScore: 7.8, bScore: 7 },
+  { id: "waaa-028", aScore: 8.8, bScore: 6 },
+  { id: "wanz-329", aScore: 9.1, bScore: 4 },
+  { id: "wanz-853", aScore: 8.6, bScore: 2.6 },
+  { id: "ssis-494", aScore: 9, bScore: 7 },
+  { id: "ssis-018", aScore: 7.5, bScore: 5 },
 ];
 export default {
   name: "App",

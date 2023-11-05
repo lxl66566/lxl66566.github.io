@@ -47,6 +47,7 @@ export default sidebar({
 				"Android_ISA.md",
 				"minimize_exe.md",
 				"cli_compress.md",
+				"voice2text.md",
 			],
 		},
 		{

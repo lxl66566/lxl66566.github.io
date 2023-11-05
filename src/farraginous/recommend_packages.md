@@ -119,9 +119,13 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 :::
 
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
+
 :::warning
 请使用[代理](../articles/vpn.md)以获得更好的 scoop 使用体验：`scoop config proxy 127.0.0.1:<port>`
+
+scoop 将其与所有软件默认安装在 C 盘，可以通过设置 `SCOOP` 环境变量以更改安装位置。若已安装，可以考虑[迁移](https://github.com/ScoopInstaller/Scoop/issues/3852#issuecomment-1417160249)。
 :::
+
 基本指令 | 查看[进阶指南](https://www.thisfaner.com/p/scoop/)
 
 ```sh

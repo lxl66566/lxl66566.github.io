@@ -35,6 +35,7 @@ category:
 - FC2PPV 778927 [01](https://jp.xero.porn/video/z6jtbjln09icqbaj24440) [02](https://www.tokyomotion.net/video/592838/%E7%84%A1%E4%BF%AE%E6%AD%A3-fc2ppv-778927-%E3%81%A1%E3%82%85%E3%81%B1%E7%8E%8B-%E3%81%93%E3%81%A8%E3%82%8A19%E6%AD%B3icup-%E8%B6%85s%E7%B4%9A-%E7%A5%9E%E4%B9%B3-02)
 - HAKC-010
 - [FC2-PPV-3470313](https://missav.com/zh/fc2-ppv-3470313)
+- [FC2-PPV-3059030](https://missav.com/cn/fc2-ppv-3059030)
 - [FC2-PPV-3600188](https://njav.tv/en/v/fc2-ppv-3600188)（关闭 adblock）
 
 ## 评优
@@ -44,7 +45,7 @@ category:
 <!-- prettier-ignore -->
 |rank|name|
 | :-: | :-: |
-|T0|永野いち夏 花狩まい 楪カレン 二葉エマ 蕾|
+|T0|永野いち夏 花狩まい 楪カレン 二葉エマ 蕾 夢乃あいか|
 |T1|水卜櫻 松本いちか|
 |T2|桃乃木かな|
 |T3|神木蘭|
@@ -54,3 +55,4 @@ category:
 
 - [javlibrary.com](https://www.javlibrary.com/cn/)
 - [人脸识别](https://xslist.org/zh)
+- [av wiki](https://av-wiki.net/)
