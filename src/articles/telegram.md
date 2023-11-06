@@ -149,7 +149,6 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 ### 乐
 
-- [知乎暴论](https://t.me/mightyflame)：知乎一些易删回答，看点乐
 - [美图与沙雕](https://t.me/shadiaotu)
 - [尼古拉斯二手消息转运中心](https://t.me/nichoIascw)
 
@@ -170,11 +169,6 @@ vpn 建议去看初级科学上网页面，你可以在那些机场的官网找�
 
 - [VPS log 官方讨论群](https://t.me/vpalogchat)
 - [IPv6 Server - Chinese](https://t.me/ipv6china)
-
-### 友链
-
-- [Kum's Various Cubes](https://t.me/KumsVariousCubes)
-- [粒粒子的琐碎思考](https://t.me/lilic_8232)
 
 ### 其他
 

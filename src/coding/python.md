@@ -64,14 +64,11 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 
 #### 安装
 
-这里是[官方教程](https://python-poetry.org/docs/#installation)。poetry 在 windows 上的 install script 可谓傻逼[^1]，开代理不能装，关代理不能装，scoop 用的也是官方 install script。只好使用 pipx。
+这里是[官方教程](https://python-poetry.org/docs/#installation)。poetry 在 windows 上的 install script 可谓傻逼[^1]，开代理不能装，关代理不能装，scoop 用的也是官方 install script。只好使用 pip。
 
 ```sh
-pip install pipx -i https://pypi.tuna.tsinghua.edu.cn/simple
-pipx install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
-
-> pipx: 事实上，它使用 pip，但专注于安装和管理可直接作为应用程序从命令行运行的 Python 包。
 
 [^1]: [不读系统代理，不能配置代理，不做错误处理，不具有可读性](https://t.me/withabsolutex/1304)
 
@@ -327,6 +324,24 @@ Pyinstaller 会打包当前环境的所有模块。需要隔离出虚拟环境�
 ## [代码混淆](https://pyob.oxyry.com/)
 
 ## 一些问题
+
+### 为什么不该使用 pipx
+
+在一次迁移 python 的过程后，我再次使用 pipx 及其安装的软件，报错 _python not found_（指向我原先的 python 位置）。
+
+我纳闷了，我直接 `python` 能用，也把所有环境变量全改成了新 python 的位置，检查了好几次，为啥还是不能用？
+
+然后重装 pipx：
+
+```sh
+pip install --upgrade --force-reinstall pipx -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+仍然不行。后来在 `~/.local/pipx/shared/pyvenv.cfg` 找到了没改过的 python 路径。
+
+原来你重装是不动配置文件的啊，卸了卸了。
+
+实际上对于全局用 pip，虚拟环境开 poetry 的我来说，pipx 确实是一个没必要存在的东西。
 
 ### 找不到 pip
 
