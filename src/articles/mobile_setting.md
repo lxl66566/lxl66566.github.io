@@ -90,6 +90,7 @@ tag:
   - ~~目前依赖其任务管理，控制性能与冻结应用。~~
   - > Scene5 功能均可替代，因此弃用之。
 - [Battery Guru(Premium Unlocked)](https://modyolo.com/battery-guru-battery-saver.html)（**闭源！**）：电池管理，省电。
+- [李跳跳](https://t.me/apkrxwy/927) | [bak](https://wwkh.lanzout.com/iokl61e21oha)（**闭源！**）：跳广告，比 AdAway 好用。软件离线使用，不再更新。~~腾讯封杀，必属精品~~
 
 ## 刷机
 
@@ -140,7 +141,7 @@ Android 特有的不自由，并且有越发不自由的趋势。
 [^1]: 指 miflash + adb。我有考虑过使用[磁盘模式工具](https://web.vip.miui.com/page/info/mio/mio/detail?postId=1655550)甚至更底层的方法，但是尚未有收入的我还是无法承担飙升的刷砖风险。
 [^2]: 暂不清楚是只是 _无法刷回国行_ 还是 _无法刷成其他任一系统_。推测是刷 EU 的分区(?)更改比国行的多，导致刷回国行时未对额外分区进行更改。
 
-## Oneplus Ace Racing edition
+### Oneplus Ace Racing edition
 
 这里是 _一加 Ace 竞速版_ 的 root 过程。
 

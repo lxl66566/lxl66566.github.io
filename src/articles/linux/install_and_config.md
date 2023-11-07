@@ -47,17 +47,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 umount /mnt/windows
 ```
 
-#### 驱动
-
-安装初期只看了一点[第三方教程](https://arch.icekylin.online/guide/rookie/graphic-driver.html)。后面发现也要看 [wiki](https://wiki.archlinux.org/title/NVIDIA)。
-
-GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。
-
-我安装的驱动是 `nvidia-open`。
-
-1. `sudo nvidia-xconfig` 生成默认配置
-2. 不删 _mkinitcpio_ 的 `kms` hook 也不会出问题，只要装了 _nvidia-utils_
-
 ### ArchWSL
 
 - 更新 ArchWSL：从[此处](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
@@ -108,12 +97,14 @@ GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。
      - 然而这里还会出现权限问题，无法(?)解决，因此我 mount 到了另一个新的 tmpfs。（不 bind 了）
    - 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
 8. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
-9. grub 改等待时间
+9. 设置 grub
    ```sh
    sudo nvim /etc/default/grub
    # after edit
    sudo grub-mkconfig -o /boot/grub/grub.cfg
    ```
+   - 改等待时间
+   - [多内核的设置](https://wiki.archlinuxcn.org/wiki/GRUB/技巧和窍门#多个启动条目)
 10. 修改 faillock attempt times
     ```sh
     # sudo edit /etc/security/faillock.conf
@@ -239,3 +230,29 @@ timeshift 要求子卷名字必须以 `@` 开头。
 timeshift 的 cron 定时备份默认是残废的。
 
 甚至连卸载 timeshift 都是一个[大坑](./problem.md#timeshift-删除子卷)。
+
+### 驱动
+
+安装初期只看了一点[第三方教程](https://arch.icekylin.online/guide/rookie/graphic-driver.html)。后面发现也要看 [wiki](https://wiki.archlinux.org/title/NVIDIA)。
+
+GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。
+
+我安装的驱动是 `nvidia-open`。双显卡，管理器用 _prime_，不要用 _optimus-manager_（具体去落絮搜）。想要用 N 卡运行的软件需要 `prime-run`，实测是需要的。至于怎么测，打开 `nvtop` 然后开游戏，看占用。
+
+1. 删除 `/etc/mkinitcpio.conf` 的 `kms` hook，然后重新 `mkinitcpio -P`
+   - 不删也不会出问题，只要装了 _nvidia-utils_
+
+## 更换内核
+
+linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本。
+
+例如我想更换 `linux-zen` 内核（该内核在官方仓库无需编译），只需要：
+
+```sh
+sudo pacman -S linux-zen
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+即可。initramfs 会通过 pacman hook 自动生成，无需手动 `mkinitcpio -P`。
+
+如果是第一次使用其他内核，请参考[系统设置](#系统设置) `9.` 的 grub 设置。

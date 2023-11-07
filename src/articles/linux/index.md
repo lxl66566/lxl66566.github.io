@@ -24,7 +24,7 @@ tag:
 
 ## [安装与配置](./install_and_config.md)
 
-## [包管理与使用](./package.md)
+## [包管理与使用推荐](./package.md)
 
 ## [遇到的问题](./problem.md)
 

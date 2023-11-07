@@ -150,16 +150,16 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 
 - [新手教程](https://zhuanlan.zhihu.com/p/640701847)，由于我自己摸索而不是看教程，多走了许多弯路。因此推荐看看。
 - 开始使用：use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install xmake` 一行安装。输入 `xmake -h` 了解更多。
-- _xmake.lua_ 一定要加这句：`set_encodings("utf-8")`（之前没加导致 Qt 中文乱码）
-- 可以抢先使用 dev：`xmake update -s dev`
-- 至少得用个 c++20 吧：(_xmake.lua_)`set_languages("cxx20")`；注意，如果使用 `set_languages("cxxlatest")` 可能会出现问题，clangd 无法读取 _compiler_commands.json_ 的 c++ 版本
-- 代码优化：`set_optimize("fastest")` ~~开你妈的 O3 就完事了！~~
-- 添加包，例如 fmt：(_xmake.lua_)
+- 一些预设
   ```lua
+  set_encodings("utf-8")  -- 没加会导致 Qt 中文乱码
+  set_policy("build.warning", true) -- 开启编译警告
+  set_languages("cxxlatest")  -- 设置 C++ 版本，或 `cxx20`
+  set_optimize("fastest")     -- 优化等级，不过 release 有默认
   add_requires("fmt")
-  target("test")
-      ...
-      add_packages("fmt")
+  target("test")              -- 添加 fmt 包
+    ...
+    add_packages("fmt")
   ```
 - 查找包（任选）：
   - 手动去 [xmake-repo](https://github.com/xmake-io/xmake-repo/) 找

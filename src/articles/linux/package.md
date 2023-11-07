@@ -10,7 +10,7 @@ tag:
   - 工具
 ---
 
-# 包管理与使用
+# 包管理与使用推荐
 
 ## 包管理
 
@@ -222,9 +222,9 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 ### tmux
 
-> tmux 在不使用图形界面或有恢复 shell 需求时比较好用。
+tmux 是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起，在**不使用图形界面**或有恢复 shell 需求时比较好用。
 
-是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起。
+如果只想要简单的恢复 shell 功能，可以考虑一下 `screen`。
 
 - 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/archwsl/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
 - 插件：不要用默认的插件管理器。。不好用。
@@ -265,3 +265,20 @@ sudo systemctl enable --now tlp
 基于 wine 运行 windows 软件，比 wine 更傻瓜式（只需要点鼠标，不用写配置）。
 
 目前试了两个 galgame，都能正常运行。~~（来人，上点逆天的！）~~
+
+### [waydroid](https://wiki.archlinuxcn.org/wiki/Waydroid)
+
+waydroid 是 linux 上的首选 android 模拟器。不过想用还是需要折腾一阵的。
+
+1. 切换为 zen 内核，参考[更换内核](./install_and_config.md#更换内核)
+2. 安装 waydroid。具体流程在 wiki 上有。
+
+这里主要说下在 X11 下用 waydroid：
+
+```sh
+sudo pacman -S weston
+weston
+# 然后点击打开的窗口的左上角，打开内部终端，执行 waydroid 指令。
+```
+
+> archwiki 的主站说用 cage，CN 站说用 weston，，
