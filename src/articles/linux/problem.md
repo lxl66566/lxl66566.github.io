@@ -26,9 +26,11 @@ tag:
 以下是正文，按时间倒序。
 :::
 
-## timeshift 删除子卷
+## timeshift 删除快照
 
-我已经转 snapper 了，想删除所有 timeshift 的子卷并卸载。然而有一个子卷在删除中出现错误（真的太傻逼了）。于是我找到了[这个回答](https://bbs.archlinux.org/viewtopic.php?id=266965)，发现问题基本是一样的。于是只要手动删除子卷就行了。
+未解决！
+
+我已经转 snapper 了，想删除所有 timeshift 的快照并卸载。然而有一个快照在删除中出现错误（真的太傻逼了）。于是我找到了[这个回答](https://bbs.archlinux.org/viewtopic.php?id=266965)，发现问题基本是一样的。于是只要手动删除子卷就行了。
 
 但是，我找不到子卷的位置。
 
@@ -99,15 +101,17 @@ tag:
 
 安装时显示没网，是我 daed 透明代理的锅，`curl google.com` 正常但是 ping 不动。把脚本那行 ping 验证注释掉就行了。后面安装可能会缺东西，照着提示装。
 
-装完后没有 `osu-wine` 被添加到环境变量，不能直接执行；`osu-wine` 脚本在 `git clone` 那个目录，手动 `bash -c ...` 即可。
+装完后没有 `osu-wine` 被添加到环境变量，不能直接执行；`osu-wine` 脚本在 `git clone` 那个目录，使用绝对路径即可。
 
-这样用 wine 装好的 osu 游戏时只能跑到 170 帧，估计是驱动调度问题吧。日后再解。
+这样用 wine 装好的 osu 游戏时只能跑到 170 帧（windows 上 1k+ fps），使用 `nvtop` 查看，果然跑在核显上，需要 `prime-run`。
+
+现在又出现了音频问题，pipewire 下无法正常播放，唉。
 
 ## 更新破坏依赖
 
-先删再装。参考[forum](https://bbs.archlinuxcn.org/viewtopic.php?id=10208).
+四个字，**先删再装**。参考[forum](https://bbs.archlinuxcn.org/viewtopic.php?id=10208)，问题可能是有游离的软件包，也可能是上游改了依赖。
 
-问题主要出在有游离的软件包。
+相信我，这个问题以后还会经常出现。
 
 ## nvim 剪贴板问题
 
@@ -163,6 +167,8 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 
 有一说一，我不喜欢 ubuntu 这样臃肿的系统。~~[其他观点](https://t.me/archlinuxcn_group/2896194)，看上下文~~ 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。
 
+> 出现此问题时我是纯正小白，能力不足.jpg
+
 ## 中文设置问题
 
 在语言中设置了中文，重启后 kde 有部分 ui 变为英文。
@@ -192,14 +198,11 @@ ps. 群友提出了 `yay --aurrpcurl 'https://aur.archlinux.org' --save`
 
 ## Windows 字体问题
 
-**未解决**。
-
 根据[教程](https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#安装-windows-字体)复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：
 
 > cp: 对 './yuminl.ttf' 调用 stat 失败: 没有那个文件或目录
 
-后来使用 `yay -S ttf-ms-win11-auto-zh_cn
-` 安装字体也失败，中间报 warning 一大堆。
+后来使用 `yay -S ttf-ms-win11-auto-zh_cn` 安装字体也失败，中间报 warning 一大堆。
 
 没辙，暂时用 U 盘拷吧。
 

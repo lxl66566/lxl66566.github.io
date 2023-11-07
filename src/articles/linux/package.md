@@ -68,7 +68,7 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 4. 更新 `.SRCINFO`: `makepkg --printsrcinfo > .SRCINFO`
 5. push。注意不要使用那些阻断 ssh 的代理。
 
-可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；`makepkg -f` 测试。
+可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；`makepkg -f` 测试（`-f` 是覆盖下载）。
 
 `updpkgsums PKGBUILD` 可以自动更新校验和。
 
@@ -95,7 +95,7 @@ sudo systemd-nspawn -D container  # 进入容器
 <!-- prettier-ignore -->
 |软件包|功用|
 | :-: | :-: |
-|`fishshell` + `starship`|shell 及其外观|
+|`fishshell` + `starship`|[shell](#shell) 及其外观|
 |`ripgrep`|`grep` 的代替|
 |`fd` & `plocate`|查找，`find` 的代替|
 |`tldr`|`man` 的代替|
@@ -109,7 +109,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`dust` & `ncdu` / `gdu`|磁盘容量查询|
 |`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
-|`neovim`|文本编辑器|
+|`neovim`|[文本编辑器](../../coding/vim.md)|
 
 [^6]: `yazi` 甚至能在 console 下查看图片。
 
@@ -151,6 +151,8 @@ sudo systemd-nspawn -D container  # 进入容器
 #### fishshell
 
 fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。
+
+> fish 会自动从 man 生成补全 ([ref](https://t.me/archlinuxcn_group/2974806))
 
 - set fish as default
   ::: code-tabs

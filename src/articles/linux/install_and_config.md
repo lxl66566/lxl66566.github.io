@@ -96,8 +96,7 @@ umount /mnt/windows
    - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 [bind mount 同一个 tmpfs](https://github.com/lxl66566/config/blob/archlinux/etc/fstab)，这样就能够解决问题了。
      - 然而这里还会出现权限问题，无法(?)解决，因此我 mount 到了另一个新的 tmpfs。（不 bind 了）
    - 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
-8. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)（待续）
-9. 设置 grub
+8. 设置 grub
    ```sh
    sudo nvim /etc/default/grub
    # after edit
@@ -105,13 +104,13 @@ umount /mnt/windows
    ```
    - 改等待时间
    - [多内核的设置](https://wiki.archlinuxcn.org/wiki/GRUB/技巧和窍门#多个启动条目)
-10. 修改 faillock attempt times
-    ```sh
-    # sudo edit /etc/security/faillock.conf
-    deny = 10
-    ```
-11. [安装 `xsettingsd`](https://wiki.archlinux.org/title/Xsettingsd) 并简单配置
-12. sysctl 相关。
+9. 修改 faillock attempt times
+   ```sh
+   # sudo edit /etc/security/faillock.conf
+   deny = 10
+   ```
+10. [安装 `xsettingsd`](https://wiki.archlinux.org/title/Xsettingsd) 并简单配置
+11. sysctl 相关。
     - [Tcp Fast Open](https://wiki.archlinux.org/title/sysctl#Enable_TCP_Fast_Open)
     - [bbr](https://wiki.archlinux.org/title/sysctl#Enable_BBR)
 
@@ -121,6 +120,7 @@ umount /mnt/windows
 
 1. 双拼关闭快速输入，默认为`；`。
 2. 双拼的 `w` 默认总给的是 `为` 而不是 `我`。因此可以 _自定义词组_。
+3. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)
 
 ### 代理
 
@@ -229,7 +229,7 @@ timeshift 要求子卷名字必须以 `@` 开头。
 
 timeshift 的 cron 定时备份默认是残废的。
 
-甚至连卸载 timeshift 都是一个[大坑](./problem.md#timeshift-删除子卷)。
+甚至连卸载 timeshift 都是一个[大坑](./problem.md#timeshift-删除快照)。
 
 ### 驱动
 
@@ -255,4 +255,4 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 即可。initramfs 会通过 pacman hook 自动生成，无需手动 `mkinitcpio -P`。
 
-如果是第一次使用其他内核，请参考[系统设置](#系统设置) `9.` 的 grub 设置。
+如果是第一次使用其他内核，请参考[系统设置](#系统设置) `8.` 的 grub 设置。

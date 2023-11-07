@@ -148,6 +148,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [Office Tool Plus](https://otp.landian.vip/zh-cn/)
 - 在线画图演示：[EXCALIDRAW](https://excalidraw.com/) | [极简白板](https://github.com/zserge/awfice#drawing-app---327-bytes)
 - [GOSSIP](https://gossip.ink/)：在线制作、放映**简易的**幻灯片
+- [随机简易 PPT 背景](https://app.haikei.app/)
 
 ### 图片相关
 
