@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 07 Nov 2023 07:31:10 GMT</pubDate>
-    <lastBuildDate>Tue, 07 Nov 2023 07:31:10 GMT</lastBuildDate>
+    <pubDate>Tue, 07 Nov 2023 15:31:47 GMT</pubDate>
+    <lastBuildDate>Tue, 07 Nov 2023 15:31:47 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -357,7 +357,6 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>未测试：是否能够使用 <code>$PKGDEST</code> env 改变编译位置？(<a href="https://wiki.archlinuxcn.org/wiki/Makepkg#%E5%8C%85%E8%BE%93%E5%87%BA" target="_blank" rel="noopener noreferrer">source</a>)</li>
 </ul>
 </li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
 <li>设置 grub<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li>改等待时间</li>
 <li><a href="https://wiki.archlinuxcn.org/wiki/GRUB/%E6%8A%80%E5%B7%A7%E5%92%8C%E7%AA%8D%E9%97%A8#%E5%A4%9A%E4%B8%AA%E5%90%AF%E5%8A%A8%E6%9D%A1%E7%9B%AE" target="_blank" rel="noopener noreferrer">多内核的设置</a></li>
@@ -377,6 +376,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <ol>
 <li>双拼关闭快速输入，默认为<code>；</code>。</li>
 <li>双拼的 <code>w</code> 默认总给的是 <code>为</code> 而不是 <code>我</code>。因此可以 <em>自定义词组</em>。</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a></li>
 </ol>
 <h3> 代理</h3>
 <h4> <a href="https://github.com/daeuniverse/daed" target="_blank" rel="noopener noreferrer">daed</a></h4>
@@ -432,7 +432,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h4> timeshift</h4>
 <p>timeshift 要求子卷名字必须以 <code>@</code> 开头。</p>
 <p>timeshift 的 cron 定时备份默认是残废的。</p>
-<p>甚至连卸载 timeshift 都是一个<a href="/articles/linux/problem.html#timeshift-%E5%88%A0%E9%99%A4%E5%AD%90%E5%8D%B7" target="blank">大坑</a>。</p>
+<p>甚至连卸载 timeshift 都是一个<a href="/articles/linux/problem.html#timeshift-%E5%88%A0%E9%99%A4%E5%BF%AB%E7%85%A7" target="blank">大坑</a>。</p>
 <h3> 驱动</h3>
 <p>安装初期只看了一点<a href="https://arch.icekylin.online/guide/rookie/graphic-driver.html" target="_blank" rel="noopener noreferrer">第三方教程</a>。后面发现也要看 <a href="https://wiki.archlinux.org/title/NVIDIA" target="_blank" rel="noopener noreferrer">wiki</a>。</p>
 <p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。</p>
@@ -448,7 +448,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本。</p>
 <p>例如我想更换 <code>linux-zen</code> 内核（该内核在官方仓库无需编译），只需要：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>即可。initramfs 会通过 pacman hook 自动生成，无需手动 <code>mkinitcpio -P</code>。</p>
-<p>如果是第一次使用其他内核，请参考<a href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">系统设置</a> <code>9.</code> 的 grub 设置。</p>
+<p>如果是第一次使用其他内核，请参考<a href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">系统设置</a> <code>8.</code> 的 grub 设置。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -510,7 +510,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>更新 <code>.SRCINFO</code>: <code>makepkg --printsrcinfo &gt; .SRCINFO</code></li>
 <li>push。注意不要使用那些阻断 ssh 的代理。</li>
 </ol>
-<p>可以 <code>paru -Gp &lt;package&gt;</code> 看看别人写的 PKGBUILD；<code>makepkg -f</code> 测试。</p>
+<p>可以 <code>paru -Gp &lt;package&gt;</code> 看看别人写的 PKGBUILD；<code>makepkg -f</code> 测试（<code>-f</code> 是覆盖下载）。</p>
 <p><code>updpkgsums PKGBUILD</code> 可以自动更新校验和。</p>
 <h4> 测试</h4>
 <p>如果需要一个纯净环境测试，可以看看 <a href="https://wiki.archlinux.org/title/Pacstrap" target="_blank" rel="noopener noreferrer">pacstrap</a>。</p>
@@ -532,7 +532,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <tbody>
 <tr>
 <td style="text-align:center"><code>fishshell</code> + <code>starship</code></td>
-<td style="text-align:center">shell 及其外观</td>
+<td style="text-align:center"><a href="#shell">shell</a> 及其外观</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>ripgrep</code></td>
@@ -588,7 +588,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 </tr>
 <tr>
 <td style="text-align:center"><code>neovim</code></td>
-<td style="text-align:center">文本编辑器</td>
+<td style="text-align:center"><a href="/coding/vim.html" target="blank">文本编辑器</a></td>
 </tr>
 </tbody>
 </table>
@@ -603,6 +603,9 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 </ul>
 <h4> fishshell</h4>
 <p>fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。</p>
+<blockquote>
+<p>fish 会自动从 man 生成补全 (<a href="https://t.me/archlinuxcn_group/2974806" target="_blank" rel="noopener noreferrer">ref</a>)</p>
+</blockquote>
 <ul>
 <li>
 <p>set fish as default</p>
@@ -2435,8 +2438,9 @@ If you do want to externalize this module explicitly add it to
 <p class="hint-container-title">提示</p>
 <p>以下是正文，按时间倒序。</p>
 </div>
-<h2> timeshift 删除子卷</h2>
-<p>我已经转 snapper 了，想删除所有 timeshift 的子卷并卸载。然而有一个子卷在删除中出现错误（真的太傻逼了）。于是我找到了<a href="https://bbs.archlinux.org/viewtopic.php?id=266965" target="_blank" rel="noopener noreferrer">这个回答</a>，发现问题基本是一样的。于是只要手动删除子卷就行了。</p>
+<h2> timeshift 删除快照</h2>
+<p>未解决！</p>
+<p>我已经转 snapper 了，想删除所有 timeshift 的快照并卸载。然而有一个快照在删除中出现错误（真的太傻逼了）。于是我找到了<a href="https://bbs.archlinux.org/viewtopic.php?id=266965" target="_blank" rel="noopener noreferrer">这个回答</a>，发现问题基本是一样的。于是只要手动删除子卷就行了。</p>
 <p>但是，我找不到子卷的位置。</p>
 <blockquote>
 <p>&gt; sudo timeshift --list<br>
@@ -2479,11 +2483,12 @@ Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'</p>
 <h2> 安装 OSU</h2>
 <p>首先<a href="https://osu.ppy.sh/community/forums/topics/1248084?n=1" target="_blank" rel="noopener noreferrer">教程在这</a>。</p>
 <p>安装时显示没网，是我 daed 透明代理的锅，<code>curl google.com</code> 正常但是 ping 不动。把脚本那行 ping 验证注释掉就行了。后面安装可能会缺东西，照着提示装。</p>
-<p>装完后没有 <code>osu-wine</code> 被添加到环境变量，不能直接执行；<code>osu-wine</code> 脚本在 <code>git clone</code> 那个目录，手动 <code>bash -c ...</code> 即可。</p>
-<p>这样用 wine 装好的 osu 游戏时只能跑到 170 帧，估计是驱动调度问题吧。日后再解。</p>
+<p>装完后没有 <code>osu-wine</code> 被添加到环境变量，不能直接执行；<code>osu-wine</code> 脚本在 <code>git clone</code> 那个目录，使用绝对路径即可。</p>
+<p>这样用 wine 装好的 osu 游戏时只能跑到 170 帧（windows 上 1k+ fps），使用 <code>nvtop</code> 查看，果然跑在核显上，需要 <code>prime-run</code>。</p>
+<p>现在又出现了音频问题，pipewire 下无法正常播放，唉。</p>
 <h2> 更新破坏依赖</h2>
-<p>先删再装。参考<a href="https://bbs.archlinuxcn.org/viewtopic.php?id=10208" target="_blank" rel="noopener noreferrer">forum</a>.</p>
-<p>问题主要出在有游离的软件包。</p>
+<p>四个字，<strong>先删再装</strong>。参考<a href="https://bbs.archlinuxcn.org/viewtopic.php?id=10208" target="_blank" rel="noopener noreferrer">forum</a>，问题可能是有游离的软件包，也可能是上游改了依赖。</p>
+<p>相信我，这个问题以后还会经常出现。</p>
 <h2> nvim 剪贴板问题</h2>
 <p>我在 <code>option.lua</code> 中有设置 <code>vim.opt.clipboard = 'unnamedplus'</code>，之前运作挺好，但自从换了 X11 以后就不能再复制。</p>
 <p>解法也很简单，安装 <code>xclip</code> 即可。</p>
@@ -2505,6 +2510,9 @@ Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'</p>
 <p>然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，<code>iwconfig</code> or <code>ls /sys/class/net</code> 只显示 <code>lo</code>，也就是说找不到网卡了。。那没网我能干啥，<s>vi 进去修吗？</s></p>
 <p>还好没啥重要数据。授权后重装了 kubuntu。然后发现 kde 爆杀 gnome（二嘲）。</p>
 <p>有一说一，我不喜欢 ubuntu 这样臃肿的系统。<s><a href="https://t.me/archlinuxcn_group/2896194" target="_blank" rel="noopener noreferrer">其他观点</a>，看上下文</s> 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。</p>
+<blockquote>
+<p>出现此问题时我是纯正小白，能力不足.jpg</p>
+</blockquote>
 <h2> 中文设置问题</h2>
 <p>在语言中设置了中文，重启后 kde 有部分 ui 变为英文。</p>
 <p>原因：更改 <code>/etc/locale.gen</code> 后没有运行 <code>sudo locale-gen</code>。运行即可。</p>
@@ -2523,12 +2531,11 @@ Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'</p>
 </blockquote>
 <p>估计有莫名奇妙的软件在占用。直接 <code>lsof /mnt/windows</code> 查占用，然后再 <code>kill -9 &lt;PID&gt;</code> 强关。</p>
 <h2> Windows 字体问题</h2>
-<p><strong>未解决</strong>。</p>
 <p>根据<a href="https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#%E5%AE%89%E8%A3%85-windows-%E5%AD%97%E4%BD%93" target="_blank" rel="noopener noreferrer">教程</a>复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：</p>
 <blockquote>
 <p>cp: 对 './yuminl.ttf' 调用 stat 失败: 没有那个文件或目录</p>
 </blockquote>
-<p>后来使用 <code>yay -S ttf-ms-win11-auto-zh_cn </code> 安装字体也失败，中间报 warning 一大堆。</p>
+<p>后来使用 <code>yay -S ttf-ms-win11-auto-zh_cn</code> 安装字体也失败，中间报 warning 一大堆。</p>
 <p>没辙，暂时用 U 盘拷吧。</p>
 <h2> yay 安装问题</h2>
 <p>使用 <code>sudo pacman -S yay</code> 时一直报错，<code>signature is unknown trust</code> 类似的。怀疑是 pacman-keyring 问题，去前面 <a href="#%E6%9B%B4%E6%96%B0-pacman-keyring">更新 pacman-keyring</a> 试了好久，都不行。</p>
