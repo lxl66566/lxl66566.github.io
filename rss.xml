@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 06 Nov 2023 15:25:08 GMT</pubDate>
-    <lastBuildDate>Mon, 06 Nov 2023 15:25:08 GMT</lastBuildDate>
+    <pubDate>Tue, 07 Nov 2023 06:28:44 GMT</pubDate>
+    <lastBuildDate>Tue, 07 Nov 2023 06:28:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -293,15 +293,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>由于我用 btrfs，因此只要把其他空间全部给主分区就行了。</p>
 <h4> 添加 windows 引导</h4>
 <p>由于双系统，安装后我肯定是都使用 grub 作为引导（开 bios 挺麻烦的），但是我双系统分别在两块不同硬盘上，无法使用 <em>os-prober</em> 自动共存。因此我使用如下方法进行自动检测并添加：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 驱动</h4>
-<p>安装初期只看了一点<a href="https://arch.icekylin.online/guide/rookie/graphic-driver.html" target="_blank" rel="noopener noreferrer">第三方教程</a>。后面发现也要看 <a href="https://wiki.archlinux.org/title/NVIDIA" target="_blank" rel="noopener noreferrer">wiki</a>。</p>
-<p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。</p>
-<p>我安装的驱动是 <code>nvidia-open</code>。</p>
-<ol>
-<li><code>sudo nvidia-xconfig</code> 生成默认配置</li>
-<li>不删 <em>mkinitcpio</em> 的 <code>kms</code> hook 也不会出问题，只要装了 <em>nvidia-utils</em></li>
-</ol>
-<h3> ArchWSL</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> ArchWSL</h3>
 <ul>
 <li>更新 ArchWSL：从<a href="https://github.com/yuk7/wsldl/releases" target="_blank" rel="noopener noreferrer">此处</a>下载 <code>wsldl.exe</code>，改名为 <code>arch.exe</code> 并替换。</li>
 </ul>
@@ -366,7 +358,11 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 </ul>
 </li>
 <li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a>（待续）</li>
-<li>grub 改等待时间<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>设置 grub<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>改等待时间</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/GRUB/%E6%8A%80%E5%B7%A7%E5%92%8C%E7%AA%8D%E9%97%A8#%E5%A4%9A%E4%B8%AA%E5%90%AF%E5%8A%A8%E6%9D%A1%E7%9B%AE" target="_blank" rel="noopener noreferrer">多内核的设置</a></li>
+</ul>
+</li>
 <li>修改 faillock attempt times<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 <li><a href="https://wiki.archlinux.org/title/Xsettingsd" target="_blank" rel="noopener noreferrer">安装 <code>xsettingsd</code></a> 并简单配置</li>
 <li>sysctl 相关。
@@ -437,6 +433,22 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>timeshift 要求子卷名字必须以 <code>@</code> 开头。</p>
 <p>timeshift 的 cron 定时备份默认是残废的。</p>
 <p>甚至连卸载 timeshift 都是一个<a href="/articles/linux/problem.html#timeshift-%E5%88%A0%E9%99%A4%E5%AD%90%E5%8D%B7" target="blank">大坑</a>。</p>
+<h3> 驱动</h3>
+<p>安装初期只看了一点<a href="https://arch.icekylin.online/guide/rookie/graphic-driver.html" target="_blank" rel="noopener noreferrer">第三方教程</a>。后面发现也要看 <a href="https://wiki.archlinux.org/title/NVIDIA" target="_blank" rel="noopener noreferrer">wiki</a>。</p>
+<p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。</p>
+<p>我安装的驱动是 <code>nvidia-open</code>。双显卡，管理器用 <em>prime</em>，不要用 <em>optimus-manager</em>（具体去落絮搜）。想要用 N 卡运行的软件需要 <code>prime-run</code>，实测是需要的。至于怎么测，打开 <code>nvtop</code> 然后开游戏，看占用。</p>
+<ol>
+<li>删除 <code>/etc/mkinitcpio.conf</code> 的 <code>kms</code> hook，然后重新 <code>mkinitcpio -P</code>
+<ul>
+<li>不删也不会出问题，只要装了 <em>nvidia-utils</em></li>
+</ul>
+</li>
+</ol>
+<h2> 更换内核</h2>
+<p>linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本。</p>
+<p>例如我想更换 <code>linux-zen</code> 内核（该内核在官方仓库无需编译），只需要：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>即可。initramfs 会通过 pacman hook 自动生成，无需手动 <code>mkinitcpio -P</code>。</p>
+<p>如果是第一次使用其他内核，请参考<a href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">系统设置</a> <code>9.</code> 的 grub 设置。</p>
 ]]></content:encoded>
     </item>
     <item>
