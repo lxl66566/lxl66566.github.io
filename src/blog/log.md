@@ -21,6 +21,10 @@ category:
 
 ## 2023
 
+### 20231108
+
+- 拆分 _设置手机_
+
 ### 20231104
 
 - 新增 _学习笔记 - typst_
@@ -96,10 +100,6 @@ category:
 - 使用 Prettier 几乎格式化了所有文档
 - 日常维护
 
-### 20230907
-
-- 维护[设置手机](../articles/mobile_setting.md)
-
 ### 20230906
 
 - 新增[闲聊 - 神评](../gossip/forward.md)
@@ -172,7 +172,7 @@ category:
 ### 20230715
 
 - 为图表添加 `loading="lazy"`
-- 再刷机一次，[设置手机](../articles/mobile_setting.md) 新增内容
+- 再刷机一次，[设置手机](../articles/mobile/root_and_setting.md) 新增内容
 - 音游新增 [pjsk](../hobbies/rhythm_games.md#pjsk)
 - [灭蟑记（六）](../essay/2023.md#_20230715)
 
@@ -218,7 +218,7 @@ category:
 ### 20230617
 
 - 新增 _学习笔记 - 日本語勉強_
-- 合并 _禁用快应用中心_ 到 [设置手机 - 禁用软件](../articles/mobile_setting.md#禁用禁用软件)
+- 合并 _禁用快应用中心_ 到 [设置手机 - 禁用软件](../articles/mobile/root_and_setting.md#禁用软件)
 
 ### 20230615
 
@@ -226,7 +226,7 @@ category:
 
 ### 20230614
 
-- 新增 [设置手机 # 刷机](../articles/mobile_setting.md#刷机)
+- 新增 [设置手机 - 刷机](../articles/mobile/root_and_setting.md#刷机)
 
 ### 20230610
 
@@ -292,7 +292,7 @@ category:
 
 ### 20230412
 
-- [文章](../articles/) 新增 [设置手机](../articles/mobile_setting.md)
+- [文章](../articles/) 新增 [设置手机](../articles/mobile/index.md)
 
 ### 20230410
 
@@ -391,7 +391,7 @@ category:
 
 ### 20230122
 
-- 新增：文章 - 禁用手机快应用中心（迁移至[设置手机](../articles/mobile_setting.md#禁用快应用中心)）
+- 新增：文章 - 禁用手机快应用中心（迁移至[设置手机](../articles/mobile/root_and_setting.md#禁用快应用中心)）
 - 全局优化排版与语言逻辑，补充信息
 
 ### 20230117

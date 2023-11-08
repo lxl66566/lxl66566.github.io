@@ -9,7 +9,7 @@ tag:
 
 # ADB
 
-ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手机的一些共性（垃圾的应用管理 / 备份 / 安装），同时我还是[重度电脑使用者](../gossip/author.md#我的爱好) 和 [root user](./mobile_setting.md#刷机)，因此 ADB 使用频率很高。
+ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手机的一些共性（垃圾的应用管理 / 备份 / 安装），同时我还是[重度电脑使用者](../gossip/author.md#我的爱好) 和 [root user](./mobile/index.md)，因此 ADB 使用频率很高。
 
 通过 ADB 获取到的权限较高，但低于 root 权限。
 

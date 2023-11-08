@@ -17,9 +17,7 @@ tag:
 
 ::: tip
 
-- 关于 magisk & LSPosed，请移步[设置手机](../articles/mobile_setting.md#magisk)
-- 猜你喜欢：[设置电脑](../articles/computer_setting.md)
-
+- 关于手机模块推荐，请移步[设置手机](../articles/mobile/module_and_app.md)
 - 若您还不知道如何使用 Github 下载文件，请参考[此教程](../coding/github.md)。
 - 使用 Google Play 下载需要[科学上网](../articles/vpn.md)。未注明应用来源的 Android 软件，不妨试试在 Play 商店里找找。
 

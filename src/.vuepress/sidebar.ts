@@ -28,6 +28,12 @@ export default sidebar({
 		"package.md",
 		"problem.md",
 	],
+	"/articles/mobile/": [
+		"index.md",
+		"root_and_setting.md",
+		"module_and_app.md",
+		"problem.md",
+	],
 	"/articles/": [
 		{
 			text: "主张",
@@ -35,7 +41,7 @@ export default sidebar({
 		},
 		{
 			text: "经历",
-			children: ["linux", "computer_setting.md", "mobile_setting.md", "vps.md"],
+			children: ["linux", "computer_setting.md", "mobile", "vps.md"],
 		},
 		{
 			text: "教程",

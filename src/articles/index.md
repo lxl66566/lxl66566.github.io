@@ -11,16 +11,14 @@ category:
 
 - 这里有一些[外部文章分享](./external.md)。
 
-## 主张
+## [道论](./worldview.md)
 
-1. [道论](./worldview.md)
+## [linux 相关](./linux/index.md)
 
-## 经历
+## [手机相关](./mobile/index.md)
 
-1. [(Arch)linux](./linux/index.md)：我的 linux 笔记与遇到的问题
-2. [设置电脑（windows）](./computer_setting.md)
-3. [设置手机（Android）](./mobile_setting.md)
-4. [设置 VPS](./vps.md)
+1. [设置电脑（windows）](./computer_setting.md)
+2. [设置 VPS](./vps.md)
 
 ## 教程
 

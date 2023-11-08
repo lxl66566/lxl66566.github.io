@@ -123,7 +123,7 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 - [文件管理逻辑问题和无效点击 bug](https://t.me/withabsolutex/976)
 - 无法使用小米互传
 - [相机录制视频被吞](https://t.me/withabsolutex/1099)
-- [bug: 无法设置铃声](../articles/mobile_setting.md#miui-无法更换铃声)
+- [bug: 无法设置铃声](../articles/mobile/problem.md#miui-无法更换铃声)
 
 什么，你说让我反馈？我早在 2018 就试过了，p 都没有一个。
 
