@@ -6,22 +6,386 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 07 Nov 2023 15:31:47 GMT</pubDate>
-    <lastBuildDate>Tue, 07 Nov 2023 15:31:47 GMT</lastBuildDate>
+    <pubDate>Wed, 08 Nov 2023 16:09:09 GMT</pubDate>
+    <lastBuildDate>Wed, 08 Nov 2023 16:09:09 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>导航</category>
+    <category>经历</category>
+    <category>主张</category>
+    <category>教程</category>
+    <category>生活</category>
     <category>推荐</category>
     <category>评价</category>
     <category>学习</category>
-    <category>教程</category>
-    <category>导航</category>
     <category>爱好</category>
-    <category>主张</category>
     <category>编程</category>
     <category>随笔</category>
     <category>作者</category>
     <category>博客</category>
-    <category>经历</category>
+    <item>
+      <title>关于手机</title>
+      <link>https://absx.pages.dev/articles/mobile/</link>
+      <guid>https://absx.pages.dev/articles/mobile/</guid>
+      <source url="https://absx.pages.dev/rss.xml">关于手机</source>
+      <description>关于手机</description>
+      <category>导航</category>
+      <category>经历</category>
+      <category>主张</category>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 关于手机</h1>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>此处有且仅有 Android 内容。</p>
+</div>
+<p>Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的趋势<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。</a></p><a class="footnote-anchor" id="footnote-ref1">
+<p>我是重度电脑使用者，手机没有游戏，这玩意只是我生活中可缺的一部分。但是我仍然愿意折腾。</p>
+</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> <a href="/articles/mobile/root_and_setting.html" target="blank">root 经历与手机配置</a></h2>
+<h2> <a href="/articles/mobile/module_and_app.html" target="blank">模块与软件推荐</a></h2>
+<h2> <a href="/articles/mobile/problem.html" target="blank">遇到的问题</a></h2>
+<h2> 选购</h2>
+<ol>
+<li>自由。需要 root。
+<ul>
+<li>随着最近小米开始搞 HyperOS 并且正在逐步收紧 root 限制<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">，正转向一加（一加具有极为舒适的 root 环境）。</a></li><a class="footnote-anchor" id="footnote-ref2">
+</a></ul><a class="footnote-anchor" id="footnote-ref2">
+</a></li><a class="footnote-anchor" id="footnote-ref2">
+<li>价格。能用就行的手机，不能太贵。</li>
+</a><li><a class="footnote-anchor" id="footnote-ref2">能效。能效优秀的手机可以降低充电次数，提高寿命。参考能效</a><a href="http://socpk.com/cpucurve/" target="_blank" rel="noopener noreferrer">曲线</a></li>
+</ol>
+<h2> 评价</h2>
+<blockquote>
+<p>前情提要：<a href="/gossip/fuckxxx.html#miui-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">MIUI 有多难用</a></p>
+</blockquote>
+<p>从 MIUI 换到 ColorOS 的一些感受：</p>
+<ol>
+<li>进行敏感系统设置后不用再等待万恶的 10s</li>
+<li>ColorOS 一些不错的 idea：
+<ul>
+<li>双击空白处锁屏</li>
+</ul>
+</li>
+</ol>
+<!-- 2. root 后 _手机管家_ 可以冻结。（MIUI 不行） -->
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>Google 要剥离原生 Android 的电话功能；三星有熔断锁；国内通过法律逐步收紧 root 限制，各大厂“自研”系统…… <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>HyperOS 解 BL 锁要求：社区等级达到 5 级，然而某 <a href="https://t.me/wtdnwbzda/1490" target="_blank" rel="noopener noreferrer">12 年资深开发者</a> 3 级，雷军本人 4 级。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>模块与软件</title>
+      <link>https://absx.pages.dev/articles/mobile/module_and_app.html</link>
+      <guid>https://absx.pages.dev/articles/mobile/module_and_app.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">模块与软件</source>
+      <description>模块与软件</description>
+      <category>教程</category>
+      <category>经历</category>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 模块与软件</h1>
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>非 root 软件推荐请前往<a href="/farraginous/recommend_packages.html#android" target="blank">软件汇总</a>。</p>
+</div>
+<p>root 手机的最大目的就是装模块与需要 root 权限的软件，获取更加舒适与安全的使用体验。这里给出一些推荐。</p>
+<h2> Magisk</h2>
+<p>安装后可以先隐藏自身，装一下推荐的 <em>Systemless Hosts</em> 模块。</p>
+<ul>
+<li><a href="https://github.com/LSPosed/LSPosed/releases/latest" target="_blank" rel="noopener noreferrer">LSPosed</a> (Zygisk)</li>
+<li><a href="https://github.com/LSPosed/LSPosed.github.io/releases" target="_blank" rel="noopener noreferrer">Shamiko</a>：隐藏 root。</li>
+<li><a href="https://github.com/yc9559/uperf" target="_blank" rel="noopener noreferrer">uperf</a>：性能调度。设为 powersave 模式。
+<ul>
+<li>在 <code>perapp_powermode.txt</code> 中添加音游等游戏性能调度为 <code>fast</code>，<strong>然后需要在 <code>cur_powermode.txt</code> 中设为 <code>auto</code> 才会启用</strong>。</li>
+<li>可能会对音游造成影响。不要安装其推荐的两个模块；需要在 <code>/sdcard/Android/yc/uperf/uperf.json</code> 中设置 <code>sfanalysis</code> 为 <code>"enable": false</code></li>
+</ul>
+</li>
+<li><a href="https://wwkh.lanzout.com/iWtRC1e7q9wf" target="_blank" rel="noopener noreferrer">神仙自动救砖</a> | <a href="https://drive.google.com/file/d/14yctRZDZRrN-PaNsnnRn6d9uzbnMYglo/view?usp=sharing" target="_blank" rel="noopener noreferrer">bak</a>（<strong>闭源！</strong>）：不好找，做了私链备份</li>
+</ul>
+<h2> LSPosed</h2>
+<ul>
+<li>WeXposed</li>
+<li>QXposed</li>
+<li>TSBattery</li>
+<li><a href="https://github.com/LSPosed/CorePatch/releases" target="_blank" rel="noopener noreferrer">核心破解</a></li>
+<li>哔哩漫游</li>
+<li><a href="https://github.com/KitsunePie/QQCleaner" target="_blank" rel="noopener noreferrer">QQ 瘦身</a></li>
+<li>Telegram UserID Viewer</li>
+<li>Bili 调速</li>
+<li><a href="https://github.com/KieronQuinn/DarQ" target="_blank" rel="noopener noreferrer">DarQ</a>：强制暗黑模式。需要在启用模块中选中所有需要强制黑夜的应用。</li>
+</ul>
+<h2> App</h2>
+<p>通过 play 商店安装：</p>
+<ul>
+<li><a href="https://github.com/RikkaApps/Shizuku" target="_blank" rel="noopener noreferrer">shizuku</a></li>
+<li><a href="https://github.com/aistra0528/Hail" target="_blank" rel="noopener noreferrer">雹</a>：冻结应用，详情参考<a href="#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6">禁用软件</a>章节。（拒绝使用同功能闭源商业化的 <em>冰箱</em>）</li>
+<li>App ops（<strong>闭源！</strong>）：权限管理。闭源功能有限，可使用 <em>App Manager</em> 代替。（但是没有批量终究不方便）</li>
+</ul>
+<p>通过 Github 安装：</p>
+<ul>
+<li><a href="https://github.com/AdAway/AdAway" target="_blank" rel="noopener noreferrer">AdAway</a>：改 host 屏蔽广告。经常需要手动添加屏蔽项。  <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
+</li>
+<li><a href="https://github.com/MuntashirAkon/AppManager" target="_blank" rel="noopener noreferrer">App Manager</a>：开源的 root 软件管理，可以查看运行中服务，可以冻结应用，控制权限。</li>
+</ul>
+<p>通过其他来源安装：</p>
+<ul>
+<li><s>Scene5（<strong>闭源！</strong>）：注意，scene5 ROOT 后的功能为试用，到期需<strong>付费</strong>，正在寻找开源免费替代品。</s>
+<ul>
+<li><s>目前依赖其任务管理，控制性能与冻结应用。</s></li>
+<li>
+<blockquote>
+<p>Scene5 功能均可替代，因此弃用之。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href="https://modyolo.com/battery-guru-battery-saver.html" target="_blank" rel="noopener noreferrer">Battery Guru(Premium Unlocked)</a>（<strong>闭源！</strong>）：电池管理，省电。</li>
+<li><a href="https://t.me/apkrxwy/927" target="_blank" rel="noopener noreferrer">李跳跳</a> | <a href="https://wwkh.lanzout.com/iokl61e21oha" target="_blank" rel="noopener noreferrer">bak</a>（<strong>闭源！</strong>）：跳广告，比 AdAway 好用。软件离线使用，不再更新。<s>腾讯封杀，必属精品</s>## Magisk</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>遇到的问题</title>
+      <link>https://absx.pages.dev/articles/mobile/problem.html</link>
+      <guid>https://absx.pages.dev/articles/mobile/problem.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">遇到的问题</source>
+      <description>遇到的问题</description>
+      <category>经历</category>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 遇到的问题</h1>
+<p>时间倒序。</p>
+<h2> 一加无限重启</h2>
+<p>root 以后，安装了个 <a href="/articles/mobile/module_and_app.html#magisk" target="blank"><em>神仙自动救砖</em></a> 就大意了，折腾了许久，一个重启直接给我干砖了。。我所期望的救砖模块并没有生效。但是 fastboot 还是能进的，因此尝试救砖。</p>
+<p>刷回官方 <code>boot.img</code>，但是还是无限重启。看样子原因并非模块，而可能是冻结了不该冻结的东西（maybe <em>手机管家</em>？）。然后进 recovery 清除了数据分区，才能进入。</p>
+<p>后来我测试了一下，root 的裸机，冻结一堆应用然后重启，确实变砖了。然后开始测试能冻结的应用。</p>
+<p>假如测到了变砖的应用，我需要重启 recovery 恢复，再重新开机准备选项，root 一遍，才能进行下一轮测试，时间（与<span class="heimu" title="你知道的太多了">产品</span>寿命）成本还是很高的。</p>
+<p>第一次测试：手机管家，居然不是？</p>
+<p>第二次测试：OPPO* Carlink 主题* 智能* 智慧*，没有问题</p>
+<p>第三次测试：远程守护服务 游戏* 应用?安装* 一加互传 小游戏 小布* 下载*，寄了，答案就在这里！（<code>?</code> 匹配 0 或 1 个字符）</p>
+<p>这时候开始俄罗斯轮盘赌了，舍友赌一个 <code>小布*</code>（：<em>我不认为一加会让你把小布卸了去装小爱同学</em>），我则赌 <code>应用?安装*</code>。紧张刺激的重启环节后，结果我一次赌对了，崩了。</p>
+<p>现在目标只剩两个：<code>应用包安装程序</code> 与 <code>应用安装器</code>，不管哪个都很可疑。按道理我只需要将这俩位都加入冻结黑名单即可，但我很好奇，非常好奇！到底是哪个干崩了我的系统！</p>
+<p>这是一个二选一的赌注，我把罪魁祸首赌在了 <code>应用安装器</code> 上，而冻结了 <code>应用包安装程序</code>。我可能潜意识觉得，反正我用第三方安装程序，如果能够安全地冻结 <code>应用包安装程序</code>，那对我来说也是一个不错的消息。然而这次赌错了。问题就是出在 <code>应用包安装程序</code> 上。用 adb 和 root 都无法绕过这个玩意，我体会到了不自由的感觉，不禁一阵恶心。</p>
+<p>后续测试：安全* 百变引擎 (动态)?壁纸* 多彩引擎 儿童空间 服务治理框架 更新服务 基本互动屏保 健康* 快应用 乐划锁屏 浏览器 默认打印服务 钱包 (全局)|(融合)搜索 设备*连* 升级指南 识屏* 手势体感 速览 随身工作台 我的一加 系统升级服务 这些全部没有问题。</p>
+<p>一个傻逼应用，坏了一部手机。</p>
+<h2> MIUI 无法更换铃声</h2>
+<ol>
+<li>点击 <em>设置 - 声音与触感 - 电话铃声 - 全部铃声</em>，bug 闪退</li>
+<li>下载 138M 的音乐（系统应用），“设置铃声需要开通 VIP”</li>
+<li>将铃声 push 到系统 ringtone 文件夹：<code>adb push xxx.mp3 /system/media/audio/ringtones/</code>(<a href="https://oddity.oddineers.co.uk/2020/08/24/wear-os-custom-ringtones-via-adb/" target="_blank" rel="noopener noreferrer">ref</a>)，报错 <code>remote couldn't create file: Read-only file system</code></li>
+<li><code>adb remount</code> </li>
+<li><code>adb shell</code>，<code>su</code>，<code>mount -o rw,remount /system</code> </li>
+</ol>
+<p>没招了，非常痛苦。可能还能参考下<a href="https://forum.xda-developers.com/t/closed-universal-systemrw-superrw-feat-makerw-ro2rw-read-only-2-read-write-super-partition-converter.4247311/" target="_blank" rel="noopener noreferrer">这篇</a>，不过希望不大且比较危险。</p>
+<h2> 线刷 global 失败</h2>
+<p>已经注释了 <code>Missmatching image and device</code> 验证，跳过了 crclist &amp; sparsecrclis 认证，最后还是卡在了 <code>error: Writing 'xbl' FAILED (remote:'This partition doesn't exist')</code> 上。。网上说 xbl error 是没解 bl 锁，但我这个显然是找不到分区。</p>
+<p>下了两个 global (sweet)，都需要 <code>xbl</code> 分区，都没法用。然后放弃了。</p>
+<h2> 刷入 twrp 失败</h2>
+<p>在 fastboot 下执行 <code>fastboot flash recovery twrp.img</code>，报错：<code>Writing 'recovery'   FAILED (remote: 'This partition doesn't exist')</code>。</p>
+<p>网上看了一下，这个型号是 A/B 分区的，并没有 recovery 分区。执行 <code>fastboot boot twrp.img</code>（不刷入，直接启动），报错 <code>Booting   FAILED (Status read failed (Too many links))</code>。然后能试的方法都试过了，使用 USB2.0，改注册表驱动，使用最新的 platform-tools，使用舍友的电脑，把 twrp 换用 OrangeFox...都无法解决此问题。</p>
+<p>之后的刷 mipad5 我也去网上找了带有 twrp 的 boot.img，但都是不可用的。</p>
+<blockquote>
+<p>貌似 XDA 上有能用的 recovery，以后再试吧。</p>
+</blockquote>
+<h2> 误炸 boot</h2>
+<blockquote>
+<p>此事件也直接导致了我屏蔽 csdn</p>
+</blockquote>
+<p>弱智 csdn 给了一个把 twrp 镜像刷入 boot 的脑残方法（那是刷 recovery 的）。。于是 boot 损坏，手机无限重启。</p>
+<p>解法：下载个官方 ROM 解压，找到 <code>boot.img</code> 刷入 <code>fastboot flash boot boot.img</code> 就行了。</p>
+<p>我第一次搞，以为要刷砖了比较慌，直接用 miflash 把整个原生 ROM 都刷进去了。。（最后还刷失败了，还是无限重启，miflash 你不得好死）</p>
+<blockquote>
+<p>再吐槽一下 <a href="/farraginous/recommend_packages.html#bandizip" target="blank">bandizip</a>，解压 <code>*.tgz</code> 时默认一层一层解（<code>*.tgz</code> -&gt; <code>*.tar</code> -&gt; <code>*</code>）。。一个 10G 的包硬生生给我占了 26G 的空间。</p>
+<div class="image50" style="text-align: center; "><img alt="fun1" src="/images/articles/mobile_setting/fuckbandizip.png"><div>你为什么不开？你为什么不开？</div></div>
+</blockquote>
+<h2> 乱冻结</h2>
+<p>在刷了 EU 版 MIUI 后，使用 App Manager 冻结了 <code>媒体存储设备</code>(<code>com.google.android.providers.media.module</code>)，导致 App Manager 闪退；无法访问 sdcard。随之发生壁纸变黑，帧率暴降，VPN 自动断连等现象。<span class="heimu" title="你知道的太多了">对于 app 来说，大概就像是末世吧。</span></p>
+<p>信息：</p>
+<ol>
+<li><a href="https://github.com/MuntashirAkon/AppManager/discussions/835" target="_blank" rel="noopener noreferrer">freeze 实际上做了什么？</a>，是 App Manager 的官方(?)解释</li>
+</ol>
+<p>尝试：</p>
+<ol>
+<li>先瞎尝试：<code>adb shell pm enable &lt;package name&gt;</code> + <code>adb shell am start com.google.android.providers.media.module</code>：
+<blockquote>
+<p>Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] pkg=com.google.android.providers.media.module }<br>
+Error: Activity not started, unable to resolve Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 pkg=com.google.android.providers.media.module }</p>
+</blockquote>
+</li>
+<li>在获取上述信息后，进入 <code>adb shell</code>，<code>su</code> 获取 root，执行：
+<ol>
+<li><code>pm unhide com.google.android.providers.media.module</code></li>
+<li><code>pm enable com.google.android.providers.media.module</code></li>
+<li><code>pm unsuspend com.google.android.providers.media.module</code></li>
+<li>三步开启权限后，退出 shell，重启，静·候·佳·音。</li>
+</ol>
+</li>
+</ol>
+<p>然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装，前面全部白折腾。刚好我对 EU 挺失望的，想直接装回原国行系统，甚至还<a href="#mipad-5">失败了</a>。</p>
+<p>这个故事告诉我：<strong>root 后记得先刷救砖模块。</strong></p>
+<h2> ANDROID_PRODUCT_OUT not set</h2>
+<p><code>fastboot flash</code> 刷入分区时报错：</p>
+<blockquote>
+<p>fastboot: error: ANDROID_PRODUCT_OUT not set</p>
+</blockquote>
+<p>此时需要检查当前终端路径，是否包含你的 <code>.img</code> 文件。</p>
+<h2> 找不到 LSPosed 图标</h2>
+<p>解法：<code>adb shell</code>，<code>su</code> 提权后，输入</p>
+<div class="language-bash" data-ext="sh"></div><p>即可启动。（<a href="https://www.bilibili.com/video/BV1UR4y1V7Ry/" target="_blank" rel="noopener noreferrer">source</a>, my_version: 1.8.6）</p>
+<h2> 备份恢复</h2>
+<p>由于尝试了 <code>App Manager</code> 和 <code>adb backup</code> 均无法备份应用数据，无奈使用小米的备份（<code>com.miui.backup</code>）。结果果然不出所料——出事了，EU 版系统即使装了国内的应用商店也无法下载备份<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。解法：</a></p><a class="footnote-anchor" id="footnote-ref1">
+<ol>
+<li>从手机提取安装包，装到平板。（可用 App Manager 或 <a href="/farraginous/recommend_packages.html#%E5%A4%9A%E8%AE%BE%E5%A4%87%E4%BA%92%E4%BC%A0" target="blank">Localsend</a>）</li>
+<li>安装完后没有快捷方式，也无法打开（App Manager 与 ADB 均无法启动，摸索了挺久）。此时需要去设置中搜索 <code>备份</code> 即可进入界面使用。<span class="heimu" title="你知道的太多了">假如刷的非小米系统就惨了，我也不懂能不能用</span></li>
+</ol>
+<hr class="footnotes-sep">
+</a><section class="footnotes"><a class="footnote-anchor" id="footnote-ref1">
+</a><ol class="footnotes-list"><a class="footnote-anchor" id="footnote-ref1">
+</a><li id="footnote1" class="footnote-item"><a class="footnote-anchor" id="footnote-ref1"></a><p><a class="footnote-anchor" id="footnote-ref1"></a><a href="https://t.me/withabsolutex/1165" target="_blank" rel="noopener noreferrer">source</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>root 与配置</title>
+      <link>https://absx.pages.dev/articles/mobile/root_and_setting.html</link>
+      <guid>https://absx.pages.dev/articles/mobile/root_and_setting.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">root 与配置</source>
+      <description>root 与配置</description>
+      <category>教程</category>
+      <category>生活</category>
+      <category>经历</category>
+      <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> root 与配置</h1>
+<h2> 刷机</h2>
+<p>使用 MIUI 刷机工具时，千万不要在右下角选择 lock（我一般直接删 <em>*lock.sh/bat</em>）；最好把 Configuration 中的 CheckPoint 删了。</p>
+<blockquote>
+<p>为了 <code>boot.img</code> 需要下载全量 ROM 真的很脑残。如果你需要 <code>dd ... of=/sdcard/boot.img</code>，你需要 root；因为需要 root 所以需要 <code>boot.img</code>。。</p>
+</blockquote>
+<h3> Redmi Note 10 pro</h3>
+<blockquote>
+<p>题外话：<s>高考结束后买的手机，当时还是一个普通人，自然不知道刷机解 bl root 这些东西，等我想解的时候已经太迟了，数据已经太多了。下一部手机必 root。</s> 然而等到了一个能够使我无视数据的契机。<br>
+<span class="heimu" title="你知道的太多了">忘了备份应用时间了，妈的；后来发现这东西没法备份。</span></p>
+</blockquote>
+<p>20230614 记一次失败的刷机（redmi note 10 pro, sweet）。</p>
+<ol>
+<li>解 BL 锁，等了 7days。</li>
+<li>刷入 twrp <a href="#%E5%88%B7%E5%85%A5-twrp-%E5%A4%B1%E8%B4%A5">失败</a>。</li>
+</ol>
+<p>没有第三方 recovery 就无法卡刷，而一些类原生例如 Havoc OS | Evolution OS 只提供了卡刷包，无法线刷。寄。<s>（据说有 python 脚本能把卡刷包转成线刷包，没试过，有生之年）</s></p>
+<p>退而求其次，想刷 EU 版 MIUI，<a href="#%E7%BA%BF%E5%88%B7-global-%E5%A4%B1%E8%B4%A5">失败 again</a>，寄。</p>
+<p>再退，用国行 MIUI (chopin)，不使用 twrp 刷入 magisk。（kernelSU 不支持：非 GKI 设备内核）</p>
+<ol>
+<li>安装 <a href="https://github.com/topjohnwu/Magisk/releases/latest" target="_blank" rel="noopener noreferrer">magisk</a>。</li>
+<li>从原生线刷包把 <code>boot.img</code> 拷到手机上。</li>
+<li>在 magisk 中，选择安装 magisk（修补一个文件），选择 <code>boot.img</code> 修补。</li>
+<li>再将修补后的 <code>magiskxxx.img</code> 拷回电脑，<code>fastboot flash boot magiskxxx.img &amp;&amp; fastboot reboot</code> 刷新 boot。</li>
+<li>好了，之后就是<a href="/articles/mobile/module_and_app.html#magisk" target="blank">另一个板块</a>了。</li>
+</ol>
+<h3> mipad 5</h3>
+<p>20230715，尝试刷我的小米平板 5（nabu）。</p>
+<p>折腾了一下 twrp，在 Github 下载了一个<a href="https://github.com/bm0x/twrp_device_xiaomi_nabu/releases" target="_blank" rel="noopener noreferrer">不明来源的 twrp</a> 刷入，又寄了，表现为闪屏无法启动。算了，这年头 VAB 分区的我再也不想再折腾 twrp 了。好在有了第一次的刷机经验，没有手忙脚乱，能进 fastboot 就能救。</p>
+<p>退而求其次，刷 EU。在<a href="https://xiaomirom.com/download/xiaomi-pad-5-nabu-stable-V14.0.4.0.TKXMIXM/#global-fastboot" target="_blank" rel="noopener noreferrer">这里</a>找了个欧版 ROM，这次倒是没出什么岔子，10min 后顺利刷入。那接下来的 root &amp; magisk 也是水到渠成了，这里按下不表。</p>
+<p>但是等我开始搞机，渐渐发现事情没我想象得那么简单。</p>
+<ol>
+<li>EU 的 Google 全家桶也是无法卸载（即使有些边角如 YT Music 能卸载，Play store 也会再悄悄给你下回来），近 20 个 Google 密密麻麻排着嘲笑我，数量甚至比国行还多；</li>
+<li>后台运行着好多叫不出名字的奇怪服务，有些我 Google 半天也搜不到是什么（例如 <code>com.qti.qcc</code>）；</li>
+<li>也间接导致了<a href="#%E4%B9%B1%E5%86%BB%E7%BB%93">之后的系统崩溃</a>。（我承认主要责任在我）</li>
+</ol>
+<p>然后使用 miflash 刷回国行；刷入失败。一重启就自动进 fastboot。由于<a href="https://xiaomirom.com/rom/mi-pad-5-nabu-china-fastboot-recovery-rom/" target="_blank" rel="noopener noreferrer">此 ROM 下载地址</a>没有 MD5，于是<a href="https://xiaomifirmwareupdater.com/archive/miui/nabu/" target="_blank" rel="noopener noreferrer">换了一个</a>重下，校验 MD5，没有任何问题。刷机工具 Configuration 设置 EraseAll，再刷，还是不行。然后刷欧版，就行了。。由于每次刷机都需要 10min 以上，我连着刷了 5 6 次，等待的时间确实紧张难熬。</p>
+<p>所以刷欧版是一件非常冒险的事：在只使用初级工具前提下<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，这一步没有后悔药，没法再刷回其他系统<sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">。</a></p><a class="footnote-anchor" id="footnote-ref2">
+</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> Oneplus Ace Racing edition</h3>
+<p>这里是 <em>一加 Ace 竞速版</em> 的 root 过程。</p>
+<p>一加的教程基本都是 <em>daxiaamu</em> 的一键工具箱，让人 root 了以后却不知其所以然。这样是不好的。</p>
+<p>找了半天没找到这个机型如何刷 Oxygen OS，也没有提供线刷 ROM <span class="heimu" title="你知道的太多了">daxiaamu 自称官方</span>，怕出问题，还是将就用着并不喜欢的 ColorOS 吧。</p>
+<p>解 BL 的过程中，无法通过音量键选择 unlock。。甚至也无法长按开机键重启。用 <code>fastboot reboot</code> 试了一下，第二次还是一样。具体地：</p>
+<ul>
+<li>在 <em>fastboot</em> 界面，电脑执行 <code>fastboot flashing unlock</code>，手机出现文字且立刻 timeout，无法选择，无法解锁。</li>
+<li><code>... failed to record unlock state</code></li>
+<li>长按 <em>音量+</em> 键输入解锁指令，可成功解锁。</li>
+<li>或者长按 <em>音量-</em> 键输入解锁指令，此时不会弹出 timeout，再按 <em>音量+</em> 即可。</li>
+</ul>
+<p>莫名其妙。我测过音量键，并无问题。总之最终是解锁了。root 的折腾过程中也遇到了很多问题：</p>
+<p>下载 rom 包，解出一个 <code>payload.bin</code>；目的：从中提取出 <code>boot.img</code>。</p>
+<ol>
+<li>用不知哪下的 <code>payload_dumper.exe</code>（一眼 python 打包），发现不能自定义输入输出路径。勉为其难地把 rom 拷进同目录，运行闪退。</li>
+<li>去找 payload_dumper 的<a href="https://github.com/vm03/payload_dumper" target="_blank" rel="noopener noreferrer">源码</a>，搞环境<span class="heimu" title="你知道的太多了">由于前几天迁移 python 导致 <a href="/coding/python.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%AF%A5%E4%BD%BF%E7%94%A8-pipx" target="blank">pipx 及其安装的软件路径坏了</a>，</span>又搞了好久。运行，报错 <code>_lzma.LZMAError: Input format not supported by decoder</code>...</li>
+<li>我甚至还重新解压到 RAMDisk 然后 checksum 了一下，不出所料，并没有什么问题。</li>
+<li>在 <a href="https://github.com/vm03/payload_dumper/issues/47#issuecomment-1311973400" target="_blank" rel="noopener noreferrer">issue</a> 中找到另一个 go 版本，亲测可用，速度还快。</li>
+</ol>
+<p>得到了 <code>boot.img</code>，剩下的就是用 magisk 修补，刷入了。跟<a href="#redmi-note-10-pro">用小米时</a>一样，不再赘述。</p>
+<h2> 配置</h2>
+<h3> before root(MIUI)</h3>
+<ol>
+<li>开启开发者模式
+<ul>
+<li>在 USB 调试版块，该放行放行，该关闭关闭。</li>
+<li>在最下方关闭 MIUI 优化。MIUI 优化可能会导致无法使用 adb install 安装软件。（报错 <code>INSTALL_FAILED_USER_RESTRICTED</code>）<em>顺带，这已经是一个持续至少 6 年的问题了。</em>
+<ul>
+<li>关闭后刷新率会自动 120HZ，调回 60。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/articles/adb.html" target="blank">使用 ADB 卸载</a>一些包
+<ul>
+<li><code>com.miui.systemAdSolution</code>：广告</li>
+<li><code>com.miui.hybrid</code>：快应用，杂种；<a href="#%E7%A6%81%E7%94%A8%E5%BF%AB%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BF%83">为什么要卸载</a></li>
+<li><code>com.sohu.inputmethod.sogou.xiaomi</code> &amp; <code>com.iflytek.inputmethod.miui</code>：自带的 搜狗 讯飞 输入法，我用 gboard</li>
+<li><code>com.miui.newhome</code>：内容中心，广告，好像不能卸载只能禁用</li>
+</ul>
+</li>
+<li>关闭 Github Mobile 的默认打开网址。Github Mobile 因 2FA 需要使用，但使用其查看项目确实非常智障。幸好 MIUI14 提供了设置应用默认打开的功能：长按应用 - 应用信息 - 默认打开，调为拒绝。</li>
+</ol>
+<h3> after root</h3>
+<ol>
+<li>不要在 Google Play 安装 QQ，无法开启深色模式 (fuck u)。</li>
+<li>见<a href="#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6">禁用软件</a>。</li>
+</ol>
+<h3> 禁用软件</h3>
+<p><a href="https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a" target="_blank" rel="noopener noreferrer">这里</a>可以看 MIUI 有哪些不能禁用的东西。</p>
+<p>我使用 <a href="/articles/mobile/module_and_app.html#app" target="blank">App Manager</a> 进行软件的冻结操作。</p>
+<blockquote>
+<p><em>scene5/6</em> 也可以，但是其为闭源商业软件，操作麻烦，不用它。<br><em>雹</em> 也可以，但是主要用于禁止日常应用后台运行；无法冻结某些系统应用。</p>
+</blockquote>
+<h4> EU MIUI</h4>
+<ul>
+<li>禁用负一屏需要冻结 Google (<code>com.google.android.googlequicksearchbox</code>)。</li>
+<li>Google 家的大多数都能冻</li>
+<li>不要冻 <em>媒体存储设备</em>(<code>com.google.android.providers.media.module</code>) ！！！<a href="#%E4%B9%B1%E5%86%BB%E7%BB%93">惨痛教训</a></li>
+</ul>
+<h4> 禁用快应用中心</h4>
+<blockquote>
+<p>这是一篇久远的文章，是本页面中年龄最大的一篇。<br>
+快应用服务框架本意是好的，大家联合起来统一为一个标准，减少不必要的重复开发。（参考 browser）</p>
+</blockquote>
+<p>但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和<strong>家人</strong>的身心健康，建议禁用之：</p>
+<ol>
+<li>查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到<em>快应用服务框架</em> 进入，点击右上角感叹号，查看应用包名。
+<blockquote>
+<p>或：已知关键字可使用 <code>adb shell pm list package [&lt;keyword&gt;]</code> 在手机内以关键字查找包名。
+例：在 MIUI 12.5 中，快应用服务框架包名为<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span></p>
+</blockquote>
+</li>
+<li>连接手机并<a href="/articles/adb.html" target="blank">开启 ADB 调试</a>。</li>
+<li>禁用包：<code>adb shell pm disable-user com.miui.hybrid</code>，也可以直接卸载，详情参考 <a href="/articles/adb.html" target="blank">ADB</a></li>
+</ol>
+<p>以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>指 miflash + adb。我有考虑过使用<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=1655550" target="_blank" rel="noopener noreferrer">磁盘模式工具</a>甚至更底层的方法，但是尚未有收入的我还是无法承担飙升的刷砖风险。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>暂不清楚是只是 <em>无法刷回国行</em> 还是 <em>无法刷成其他任一系统</em>。推测是刷 EU 的分区(?)更改比国行的多，导致刷回国行时未对额外分区进行更改。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>音频转文字</title>
       <link>https://absx.pages.dev/articles/voice2text.html</link>
@@ -1296,6 +1660,10 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20231108</h3>
+<ul>
+<li>拆分 <em>设置手机</em></li>
+</ul>
 <h3> 20231104</h3>
 <ul>
 <li>新增 <em>学习笔记 - typst</em></li>
@@ -1377,10 +1745,6 @@ RTT = Round Trip Time，往返时间</p>
 <li>使用 Prettier 几乎格式化了所有文档</li>
 <li>日常维护</li>
 </ul>
-<h3> 20230907</h3>
-<ul>
-<li>维护<a href="/articles/mobile_setting.html" target="blank">设置手机</a></li>
-</ul>
 <h3> 20230906</h3>
 <ul>
 <li>新增<a href="/gossip/forward.html" target="blank">闲聊 - 神评</a></li>
@@ -1453,7 +1817,7 @@ RTT = Round Trip Time，往返时间</p>
 <h3> 20230715</h3>
 <ul>
 <li>为图表添加 <code>loading="lazy"</code></li>
-<li>再刷机一次，<a href="/articles/mobile_setting.html" target="blank">设置手机</a> 新增内容</li>
+<li>再刷机一次，<a href="/articles/mobile/root_and_setting.html" target="blank">设置手机</a> 新增内容</li>
 <li>音游新增 <a href="/hobbies/rhythm_games.html#pjsk" target="blank">pjsk</a></li>
 <li><a href="/essay/2023.html#_20230715" target="blank">灭蟑记（六）</a></li>
 </ul>
@@ -1499,7 +1863,7 @@ RTT = Round Trip Time，往返时间</p>
 <h3> 20230617</h3>
 <ul>
 <li>新增 <em>学习笔记 - 日本語勉強</em></li>
-<li>合并 <em>禁用快应用中心</em> 到 <a href="/articles/mobile_setting.html#%E7%A6%81%E7%94%A8%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6" target="blank">设置手机 - 禁用软件</a></li>
+<li>合并 <em>禁用快应用中心</em> 到 <a href="/articles/mobile/root_and_setting.html#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6" target="blank">设置手机 - 禁用软件</a></li>
 </ul>
 <h3> 20230615</h3>
 <ul>
@@ -1507,7 +1871,7 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 <h3> 20230614</h3>
 <ul>
-<li>新增 <a href="/articles/mobile_setting.html#%E5%88%B7%E6%9C%BA" target="blank">设置手机 # 刷机</a></li>
+<li>新增 <a href="/articles/mobile/root_and_setting.html#%E5%88%B7%E6%9C%BA" target="blank">设置手机 - 刷机</a></li>
 </ul>
 <h3> 20230610</h3>
 <ul>
@@ -1573,7 +1937,7 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 <h3> 20230412</h3>
 <ul>
-<li><a href="/articles/" target="blank">文章</a> 新增 <a href="/articles/mobile_setting.html" target="blank">设置手机</a></li>
+<li><a href="/articles/" target="blank">文章</a> 新增 <a href="/articles/mobile/" target="blank">设置手机</a></li>
 </ul>
 <h3> 20230410</h3>
 <ul>
@@ -1672,7 +2036,7 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 <h3> 20230122</h3>
 <ul>
-<li>新增：文章 - 禁用手机快应用中心（迁移至<a href="/articles/mobile_setting.html#%E7%A6%81%E7%94%A8%E5%BF%AB%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BF%83" target="blank">设置手机</a>）</li>
+<li>新增：文章 - 禁用手机快应用中心（迁移至<a href="/articles/mobile/root_and_setting.html#%E7%A6%81%E7%94%A8%E5%BF%AB%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BF%83" target="blank">设置手机</a>）</li>
 <li>全局优化排版与语言逻辑，补充信息</li>
 </ul>
 <h3> 20230117</h3>
@@ -2689,6 +3053,9 @@ Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'</p>
 <h3> 频域采样定理</h3>
 <p>当频域采样点数 &gt;= 时域序列长度时才能不失真。</p>
 <p>内插函数。</p>
+<h2> FFT</h2>
+<p>传统方法：复乘 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>N</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">N^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 次，复加 N(N-1) 次。</p>
+<p>基-2-FFT：复乘 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>N</mi><mn>2</mn></mfrac><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>N</mi></mrow><annotation encoding="application/x-tex">\frac{N}{2}log_2N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.2173em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8723em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>，复加 <em>2x 复乘</em></p>
 ]]></content:encoded>
     </item>
     <item>
@@ -2987,356 +3354,6 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 </ul>
 </li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>笔记软件横评</title>
-      <link>https://absx.pages.dev/articles/note.html</link>
-      <guid>https://absx.pages.dev/articles/note.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">笔记软件横评</source>
-      <description>笔记软件横评</description>
-      <category>推荐</category>
-      <pubDate>Mon, 28 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 笔记软件横评</h1>
-<p>我曾经是云记用户，大学使用云记写了一年半的笔记。然而一次事件使我成为了云记黑粉，我不得不寻找其他的替代品。</p>
-<ul>
-<li><strong>基本需求：免费；支持手写笔；支持导入导出 pdf。</strong>
-<ul>
-<li><strong>加分项：开源；同步与备份；黑夜模式与反色。</strong></li>
-</ul>
-</li>
-<li>起源：
-<ul>
-<li>大学的书挺贵，而且没啥用，没有必要买。大多本科工科教科书都能在 zlib 上找到，少部分找不到的也能在淘宝以 1-3CNY 的价格购买。</li>
-<li>我是忠实的电子书派，对纸质书并不感冒。</li>
-</ul>
-</li>
-<li>云记事件：
-<ul>
-<li><a href="/articles/mobile_setting.html#mipad-5" target="blank">20230715 mipad 刷机</a>，使用 <em>小米备份</em> 备份了云记数据。刷完机恢复数据后，所有笔记封面消失，打开闪退。而我备份的其他软件数据全部正常恢复。</li>
-<li>刷机前开启了华为云同步功能，尝试从云端下载数据。失败，下载进度条走完后无任何反应，没有笔记被导入。清除所有数据后均如此。</li>
-<li>于是我的大堆书籍，笔记，阅读进度全部归零。由于刷机解 bl 锁，数据清空无法恢复。<span class="heimu" title="你知道的太多了">简直太他妈傻逼了。</span></li>
-</ul>
-</li>
-</ul>
-<h2> 横评</h2>
-<p>入选软件均满足基本需求。下面为加分项情况。</p>
-<blockquote>
-<p>付费功能不计入加分项</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件</th>
-<th style="text-align:center">云记</th>
-<th style="text-align:center">Notein</th>
-<th style="text-align:center">OneNote</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">开源</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✖</td>
-</tr>
-<tr>
-<td style="text-align:center">同步与备份</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✔</td>
-</tr>
-<tr>
-<td style="text-align:center">黑夜模式</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-</tr>
-<tr>
-<td style="text-align:center">反色</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✖</td>
-</tr>
-</tbody>
-</table>
-<p>评语：</p>
-<ul>
-<li>云记：
-<ul>
-<li>除上述 <em>云记事件</em>，还有频繁的开屏广告折磨。<span class="heimu" title="你知道的太多了">虽说 root 后能去广告</span></li>
-</ul>
-</li>
-<li>
-<text style="color:blue;">Notein</text>：<ul>
-<li>云记有的，它几乎都有。基本上是爆杀。</li>
-<li><strong>笔迹挺好</strong>！不断墨，没有毛边。</li>
-<li>需要会员的、我比较想要的功能有：几何图形，云同步。不过也不是不能用。</li>
-</ul>
-</li>
-<li>OneNote：
-<ul>
-<li>微软自带<strong>实时同步</strong> 根本不担心丢笔记，还能多设备复习。</li>
-<li>笔迹较差，压感太弱会断；也有锯齿边。</li>
-<li>其并非采用“打开一个 PDF”模式，而是将 PDF 作为图片(?)插入笔记。观感稍差。</li>
-<li>由于 OneNote 页面不限制大小，导致 PDF 可以左右滑动，阅读体验不佳。</li>
-</ul>
-</li>
-</ul>
-<h2> 结论</h2>
-<p>使用 Notein. <em>可以在 Google Play 下载。</em></p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>RAM Disk 横评</title>
-      <link>https://absx.pages.dev/articles/ramdisk.html</link>
-      <guid>https://absx.pages.dev/articles/ramdisk.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">RAM Disk 横评</source>
-      <description>RAM Disk 横评</description>
-      <category>推荐</category>
-      <category>教程</category>
-      <category>评价</category>
-      <category>经历</category>
-      <pubDate>Sat, 29 Jul 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> RAM Disk 横评</h1>
-<p>RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。</p>
-<blockquote>
-<p>你可以直接<a href="#%E6%80%BB%E7%BB%93">阅读<code>总结</code></a>。</p>
-</blockquote>
-<h2> 使用指南</h2>
-<p>archlinux 下的 ramdisk 非常简单，只需</p>
-
-<p>即可。</p>
-<p>因此后文介绍的皆为 Windows 系统上的 ramdisk。</p>
-<ol>
-<li>在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span></li>
-<li>安装 RAM Disk 软件并挂载。</li>
-<li>将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）</li>
-<li>如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。<a href="https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&amp;utm_medium=web2x&amp;context=3" target="_blank" rel="noopener noreferrer">src</a>，保存为 <code>.reg</code> 文件后双击<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ol>
-<h2> ERAM</h2>
-<p><a href="https://github.com/topics/ramdisk" target="_blank" rel="noopener noreferrer">Github ramdisk topic</a> 的第一名。但是呢，直接卡在安装上了。。如何使用？文档在何方？README 早已过时，于是开源阵营 RAM Disk 阵亡。<s>（樂</s></p>
-<h2> AMD Radeon RAMDISK</h2>
-<p>免费版只能开 4G，太商业了，<s>只有 4G 我能存下 yuzusoft 的压缩包吗？下一个。</s></p>
-<h2> <a href="https://www.majorgeeks.com/files/details/softperfect_ram_disk.html" target="_blank" rel="noopener noreferrer">Softperfect RAM Disk</a></h2>
-<ul>
-<li>不得不说，<strong>Softperfect 的 UI 是本横评中最好的一个</strong>。</li>
-<li>还有添加开机启动的小玩具。</li>
-<li>可一键设置 <code>$Temp</code> 环境变量。</li>
-<li>缺点：
-<ol>
-<li>（也许不算缺点）会一直占用一个托盘图标。</li>
-<li>有时关机会出现蓝屏。</li>
-</ol>
-</li>
-</ul>
-<h2> StarWind RAM Disk</h2>
-<ul>
-<li>官网下载需要注册，需要非中国号码。。</li>
-<li>不能更换盘符与文件格式（默认 FAT32，最大支持 file size = 4GB，显然不够）。</li>
-<li>UI 很老，win11 下有 bug（标题栏被挤没）</li>
-<li>无中文翻译。</li>
-</ul>
-<h2> <a href="https://sourceforge.net/projects/imdisk-toolkit/" target="_blank" rel="noopener noreferrer">ImDisk Toolkit</a></h2>
-<ul>
-<li><strong>本横评中唯一一个带有动态内存分配功能的软件！</strong> 动态内存分配指的是往 RAM Disk 里放多少东西就吃多少内存，而不是一般的，开多少空间就吃多少内存。会慢一点，但胜在内存自由。</li>
-<li>非常好，有关闭电源计划的提示。</li>
-<li>可一键设置 <code>$Temp</code> 环境变量。</li>
-<li>RAM Disk 的文件会占用双倍的空间？？我不太清楚原理。文件 6.68 GB，占用空间差不多，但是设备和驱动器里显示磁盘占用了 13.38 GB 空间。
-<ul>
-<li>但是 <em>ImDisk</em> 能够<strong>保留文件扩容</strong>，非常舒服。</li>
-</ul>
-</li>
-<li>开机自启，默认隐藏托盘</li>
-</ul>
-<h2> 魔方内存盘</h2>
-<p>创建 RAM Disk <strong>必需要创建同样大小的镜像文件</strong>，即使无需保存。逗我玩呢？</p>
-<h2> 总结</h2>
-<p>使用 <a href="#imdisk-toolkit">ImDisk Toolkit</a>。</p>
-<h2> external</h2>
-<ol>
-<li><a href="https://www.ghacks.net/2017/04/03/the-best-free-ramdisk-programs-for-windows/" target="_blank" rel="noopener noreferrer">RAM Disk comparison</a></li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>bot</title>
-      <link>https://absx.pages.dev/coding/bot.html</link>
-      <guid>https://absx.pages.dev/coding/bot.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">bot</source>
-      <description>bot</description>
-      <category>编程</category>
-      <category>教程</category>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> bot</h1>
-<p>我曾使用 <a href="https://nonebot.dev/" target="_blank" rel="noopener noreferrer">nonebot2</a> + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 <a href="https://github.com/yaowan233" target="_blank" rel="noopener noreferrer">yaowan233</a> 学长的指导。</p>
-<p>而现在我选择 <a href="https://koishi.chat/zh-CN/" target="_blank" rel="noopener noreferrer">koishi</a> 框架。该框架基于 <a href="/coding/nodejs.html" target="blank">node.js</a>，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比曾经的 nonebot2 强数倍。同时也有<a href="https://forum.koishi.xyz/" target="_blank" rel="noopener noreferrer">论坛</a>以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）</p>
-<p>comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；都有数据库的抽象层，比较易用；2023 开源之夏 nonebot2 也新增了图形界面。我感觉还是看写 python 还是写 ts 舒服来选平台比较合适。</p>
-<p>我建的 bot 有两个实例：一个是之前一直在用的 QQ bot <code>atri</code>（2433269451），另一个是后来使用 koishi 的 Telegram bot <a href="https://t.me/atri_absx_bot" target="_blank" rel="noopener noreferrer"><code>atri bot</code></a>。</p>
-<details class="hint-container details"><summary>查看 atri(QQ) 的信息</summary>
-<div style="text-align: center;" class="image40">
-<img alt="atri" src="/images/farraginous/atri/atri.jpg">
-</div>
-<p>她的功能：</p>
-<ul>
-<li>背单词（英日双语）</li>
-<li>随机数</li>
-<li>带饭记账</li>
-<li>偷窥我</li>
-</ul>
-<p>请加为好友（联系绝对值_x 同意好友）后发送<code>help</code>获取详细指令。你也可以在<a href="https://github.com/lxl66566/primary-atri-bot-plugins" target="_blank" rel="noopener noreferrer">这里</a>得到她的实现上述功能的 python 源码。关于环境：</p>
-<ol>
-<li><a href="/coding/python.html#%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83" target="blank">使用 conda</a>创建出所需环境（此处环境名为<code>atri</code>）：<code>conda create -n atri python=3.9</code>
-<blockquote>
-<p>nonebot2 需要在 python&gt;=3.8 环境下运行</p>
-</blockquote>
-</li>
-<li>使用 pip 安装依赖：</li>
-</ol>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
-<li>参考<a href="/essay/2022.html#_20220506" target="blank">随笔中的启动脚本</a></li>
-</ol>
-</details>
-<h2> koishi</h2>
-<h3> install</h3>
-<p>这里推荐<a href="https://koishi.chat/zh-CN/manual/starter/boilerplate.html" target="_blank" rel="noopener noreferrer">使用 pnpm/npm 安装</a>，而不是官方推荐的下载安装包。使用 pnpm/npm 安装对 bot 功能没有影响，而且方便开发。</p>
-
-<blockquote>
-<p><em>关于 pnpm 安装后缀，详见 <a href="/coding/nodejs.html#%E7%A5%9E%E7%A7%98%E6%8A%A5%E9%94%99" target="blank">nodejs</a></em></p>
-</blockquote>
-<h3> 使用</h3>
-<ul>
-<li>
-<p>telegram：本机没有公网 ip，因此选择 <em>polling</em> 工作模式。代理用 http 好像不能用（这也是我第一次退坑 koishi 的理由），之后尝试用 socks 端口就可以了。</p>
-</li>
-<li>
-<p>QQ：<s>参考<a href="https://forum.koishi.xyz/t/topic/2502" target="_blank" rel="noopener noreferrer">论坛</a>。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:</s></p>
-<blockquote>
-<p>由用户 '*' 发送的 session '*' 缺失 username。插件处理可能出现问题。若要针对此问题进行反馈，请前往 https://k.ilharp.cc/2510 。错误码：2130</p>
-</blockquote>
-<p><s>不影响使用，开发者也<a href="https://forum.koishi.xyz/t/topic/2510/154" target="_blank" rel="noopener noreferrer">说不用在意</a>，那就不管了。</s>
-chronocat 开发的 QQNT 适配器现已被下架。</p>
-</li>
-</ul>
-<h3> 开发</h3>
-<p>我写了一个小玩具（<a href="https://github.com/lxl66566/koishi-plugin-peek" target="_blank" rel="noopener noreferrer">koishi-plugin-peek</a>），大致涵盖了基本的开发指令。推荐在 github 上搜索其他源码广泛学习。</p>
-<ul>
-<li>关于发布插件：<strong><code>pub</code> 之前请一定记得 <code>build</code>！！切记！！</strong></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>node.js</title>
-      <link>https://absx.pages.dev/coding/nodejs.html</link>
-      <guid>https://absx.pages.dev/coding/nodejs.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">node.js</source>
-      <description>node.js</description>
-      <category>编程</category>
-      <pubDate>Mon, 24 Jul 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> node.js</h1>
-<blockquote>
-<p><em>（js/ts 语言有关请<a href="/coding/tsjs.html" target="blank">跳转 Javascript/Typescript</a>）</em></p>
-</blockquote>
-<p>Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台执行环境。一言：开发环境，必装。</p>
-<blockquote>
-<p>不过现在也出现了很多新的 js/ts 集成开发环境，如<a href="https://swc.rs/" target="_blank" rel="noopener noreferrer">swc</a>, <a href="https://bun.sh/" target="_blank" rel="noopener noreferrer">bun</a>, <a href="https://deno.com/" target="_blank" rel="noopener noreferrer">deno</a> 等。可以酌情尝试使用。</p>
-</blockquote>
-<p><a href="#npm">npm</a> 为 Node.js 的官方包管理器。此外比较广泛使用的包管理器还有 yarn 和 pnpm 等，其各有优势，可自行选择使用。yarn 在早期比 npm 强，现在优势<a href="https://zhuanlan.zhihu.com/p/27449990" target="_blank" rel="noopener noreferrer">貌似不大</a>。pnpm 使用硬链接，在空间上具有很大优势，但普及度还是略逊一筹（可能难以找到非常规问题解法）。</p>
-<p>我对磁盘空间较为敏感，因此使用 pnpm。由于其文档问题，建议先熟悉 npm 命令后，再使用 pnpm 命令。</p>
-<h2> 包管理</h2>
-<h3> pnpm</h3>
-<p><a href="https://pnpm.io/zh/pnpm-cli#%E5%91%BD%E4%BB%A4%E8%A1%8C" target="_blank" rel="noopener noreferrer">用前必读</a></p>
-<ul>
-<li>如果直接使用 <code>pnpm i</code> 安装依赖后运行报错（而在 npm/yarn 上表现良好），请使用 <code>pnpm i --shamefully-hoist</code> 安装依赖！<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></li><a class="footnote-anchor" id="footnote-ref1">
-<li><code>npm init ...</code> == <code>pnpm create ...</code></li>
-</a></ul><a class="footnote-anchor" id="footnote-ref1">
-</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> npm</h3>
-<h4> 基本命令</h4>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li><a href="https://www.runoob.com/w3cnote/npm-switch-repo.html" target="_blank" rel="noopener noreferrer">镜像</a></li>
-</ul>
-<h4> 其他命令</h4>
-<ul>
-<li>如果需要重装所有 <code>node_modules</code>，可在 bash 中：<code>rm -rf node_modules &amp;&amp; npm cache clear --force</code></li>
-<li>更新依赖(<a href="https://juejin.cn/post/6844903827599015944" target="_blank" rel="noopener noreferrer">ref</a>)：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ul>
-<h4> 关于 --save</h4>
-<p>有时候会看到 <code>npm i xxx --save</code>，<code>--save</code> 是写入 <code>package.json</code> 的过程，而 npm 5 之后 install 会自动 save，不需要手动指定。一句话：<strong>不用加</strong>。</p>
-<h3> 关于 lockfile</h3>
-<blockquote>
-<p>对于不同的包管理器，lockfile 的名称不同。</p>
-</blockquote>
-<p>在 <code>package.json</code> 的包版本信息是使用<a href="https://eminoda.github.io/2021/01/29/npm-semver-strategy/" target="_blank" rel="noopener noreferrer">版本修饰符</a>，允许上下浮动的。然而版本不同就有可能导致错误。此时就需要使用 lockfile 进行精确版本的指定。</p>
-<p>若 lockfile 不存在，install/update 时会自动生成。若存在且 lockfile 版本符合 <code>package.json</code> 版本，则从 lockfile 中安装依赖。若 lockfile 不兼容 <code>package.json</code>，则 pnpm/npm 会直接更新 lockfile 或报错退出（因此，强烈建议将 lockfile 添加到 git 版本控制中<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">）。</a></p><a class="footnote-anchor" id="footnote-ref2">
-<p>很遗憾，目前我没有找到任何方法使我能够严格依照 lockfile 进行依赖安装：在冲突时使用 <code>--frozen-lockfile</code> 参数，npm 会直接忽略之并写入 lockfile，pnpm/yarn 会报错并终止。同样的，<code>npm init -y</code> | <code>npm-collect</code> 都无法完成此任务。</p>
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> 查询包大小</h3>
-<p>查询 install size 可以使用 <a href="https://packagephobia.com/" target="_blank" rel="noopener noreferrer">Package Phobia</a>。</p>
-<h2> 遇到的问题</h2>
-<blockquote>
-<p>时间倒序</p>
-</blockquote>
-<h2> 标准输入</h2>
-<p>nodejs 想实现在 terminal 内的标准输入甚至需要对 async/await 模型有一点了解。</p>
-<p>首先，<code>import readline from "readline";</code> 的 readline 是非阻塞的。回调函数会在用户输入后才执行，但在 readline 前的代码就惨了。。</p>
-<p>其次，<code>"readline"</code> 本身没有提供 Promise。因此需要这样：</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>才能让 <code>pre()</code> 与 <code>after()</code> 都呈现阻塞的效果。</p>
-<h2> 脚本调库</h2>
-<p>有时我们可能会想在简单的脚本中调用第三方 nodejs 库。但使用包管理器后，又带来了不必要的复杂度。</p>
-<p>当我为了调库而创建了一个项目后，首先需要填写一堆信息。当然，只是写点小脚本完全可以不填，一路回车。然后再安装需要的包。</p>
-<p>然而，在代码中直接使用 <code>require</code> 调库会报错：</p>
-<blockquote>
-<p>ReferenceError: require is not defined in ES module scope, you can use import instead</p>
-</blockquote>
-<p>而使用 <code>import</code> 又会报：</p>
-<blockquote>
-<p>SyntaxError: Cannot use import statement outside a module</p>
-</blockquote>
-<p>在 <code>package.json</code> 中添加 <code>"type": "module",</code> 后，才能算是结束。</p>
-<h3> 神秘报错</h3>
-<p>nodejs 出错的报错基本上是没用的，因为一般出现玄学问题是依赖包的问题而不是用户的问题（笑）。</p>
-<ol>
-<li>pnpm 安装 <a href="/coding/bot.html" target="blank">koishi</a> 依赖的问题，dev 的时候遇到神秘报错，而使用 npm 安装却不会报错。需要使用 <code>--shamefully-hoist</code> 生成与 npm 一样的扁平化目录。</li>
-<li><a href="https://github.com/DIYgod/RSSHub/issues/13007" target="_blank" rel="noopener noreferrer">vuepress1 文档构建失败</a>：webpack 与 nodejs 之间的碰撞！我甚至想到了降级 nodejs 到 LTS，但没想到的是连 LTS v18 也不行，得降到 v17......</li>
-</ol>
-<h3> 安装 sharp</h3>
-<p>我想使用 sharp 作为图像处理库。而直接 <code>npm i sharp</code> 会报错：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>尝试：</p>
-<ol>
-<li>更换其他 npm 源，无法解决。</li>
-<li>使用 <code>--ignore-scripts</code> 选项，能够安装，但无法启动 koishi 服务器：
-<blockquote>
-<p>app Error: <br>
-Something went wrong installing the "sharp" module<br>
-Cannot find module '../build/Release/sharp-win32-x64.node'</p>
-</blockquote>
-</li>
-<li>尝试执行(<a href="https://sharp.pixelplumbing.com/install#chinese-mirror" target="_blank" rel="noopener noreferrer">ref</a>)：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>报错
-<blockquote>
-<p>npm ERR! code ENOWORKSPACES<br>
-npm ERR! This command does not support workspaces.</p>
-</blockquote>
-</li>
-</ol>
-<p>难道真的山穷水尽了吗？不！再次 <code>npm i sharp</code> 后，经过漫长的等待，终于安装成功了！并且服务器也没有报错！</p>
-<p>总之，还是挺玄学的。</p>
-<h3> CORS policy</h3>
-<p>在单文件 html 内写 js 时调试，总会遇到 CORS policy 问题，即不允许访问本地文件。解法很简单，开个 local server (!= localhost) 跑 html 就完事了。
-在文件目录下 <code>python -m http.server</code>，打开浏览器访问 <code>localhost:8000</code>，点击要调试的 html 即可。<span class="heimu" title="你知道的太多了">20230603：我是铸币</span></p>
-<p>这种方法只能避开访问 localhots 的跨域，不能避开 fetch 其他网站的跨域。如果对于确定的网站资源，可以 <em>curl</em> 到本地再引入。</p>
-<h2> external</h2>
-<ol>
-<li><a href="https://javascript.plainenglish.io/npm-vs-pnpm-vs-yarn-which-package-manager-reigns-supreme-a942d17a2051" target="_blank" rel="noopener noreferrer">npm vs pnpm vs Yarn — Which Package Manager Reigns Supreme?</a></li>
-<li><a href="https://wooyun.js.org/drops/%E5%8A%A0%E7%9B%90hash%E4%BF%9D%E5%AD%98%E5%AF%86%E7%A0%81%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%96%B9%E5%BC%8F.html" target="_blank" rel="noopener noreferrer">加盐 hash 保存密码的正确方式</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>大概是有依赖不支持 pnpm 的目录模式。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p><a href="https://t.me/withabsolutex/1216" target="_blank" rel="noopener noreferrer">惨痛教训</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 ]]></content:encoded>
     </item>
   </channel>
