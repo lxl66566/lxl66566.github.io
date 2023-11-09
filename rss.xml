@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 08 Nov 2023 16:09:09 GMT</pubDate>
-    <lastBuildDate>Wed, 08 Nov 2023 16:09:09 GMT</lastBuildDate>
+    <pubDate>Thu, 09 Nov 2023 05:40:14 GMT</pubDate>
+    <lastBuildDate>Thu, 09 Nov 2023 05:40:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>导航</category>
@@ -899,7 +899,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <td style="text-align:center"><a href="#shell">shell</a> 及其外观</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>ripgrep</code></td>
+<td style="text-align:center"><code>ripgrep</code> / <a href="https://github.com/lotabout/skim" target="_blank" rel="noopener noreferrer"><code>skim</code></a> / fzf</td>
 <td style="text-align:center"><code>grep</code> 的代替</td>
 </tr>
 <tr>
@@ -917,6 +917,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <tr>
 <td style="text-align:center"><code>exa</code></td>
 <td style="text-align:center"><a href="#exa"><code>ls</code> 的代替</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><code>fastfetch</code></td>
+<td style="text-align:center"><code>neofetch</code> 的代替</td>
 </tr>
 <tr>
 <td style="text-align:center"><a href="https://github.com/nivekuil/rip" target="_blank" rel="noopener noreferrer"><code>rip</code></a> / <code>trash-cli</code></td>
@@ -1047,12 +1051,21 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>waydroid 是 linux 上的首选 android 模拟器。不过想用还是需要折腾一阵的。</p>
 <ol>
 <li>切换为 zen 内核，参考<a href="/articles/linux/install_and_config.html#%E6%9B%B4%E6%8D%A2%E5%86%85%E6%A0%B8" target="blank">更换内核</a></li>
-<li>安装 waydroid。具体流程在 wiki 上有。</li>
+<li>安装 waydroid，具体流程在 wiki 上有。
+<ul>
+<li><code>pacman -S waydroid</code> 没有 Android 镜像，联网自动下载可能需要代理。</li>
+</ul>
+</li>
 </ol>
-<p>这里主要说下在 X11 下用 waydroid：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>archwiki 的主站说用 cage，CN 站说用 weston，，</p>
+<p>这里主要说下在 X11 下用 waydroid：需要一个 wayland 模拟器，archwiki 的主站说用 cage，CN 站说用 weston，都没有讲具体用法。我用 weston 了。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>存储位置：<code>~/.local/share/waydroid/data/media/0</code>，还有权限问题，我直接乱暴 <code>chmod 777 ... -R</code></li>
+<li>进去不用连 wifi，直接有网。<s>虽然想连也连不上</s></li>
+</ul>
+<blockquote>
+<p>挺想吐槽，waydroid 居然不能重连 session，所以如果 session activated，weston 窗口又关了，这时候只能 <code>waydroid session stop &amp;&amp; waydroid show-full-ui</code> 重启。。</p>
 </blockquote>
+<p>更多踩坑可以看看<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=%E8%BF%99%E6%98%AF%E6%88%91%E5%9C%A8waydroid%E4%B8%8A%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91&amp;sender=5958395317" target="_blank" rel="noopener noreferrer">某位群友的心得</a></p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -2823,7 +2836,7 @@ Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'</p>
 </ol>
 <p>哎，NVIDIA 害人不浅。。而且 archwiki 并未指出双显卡不能使用 <code>nvidia-xconfig</code>。</p>
 <h2> ubuntu 提示重启</h2>
-<p>在公家服务器上 <code>apt update &amp;&amp; apt install ...</code>，然后出现一个 tui 界面让我选要重启的服务。。由于不知道重启之后会多出什么问题，我按两次 ESC 退出了。</p>
+<p>在公家服务器上 <code>apt update &amp;&amp; apt install ...</code>，然后出现一个 tui 界面提示 <em>new kernel available</em>，让我选要重启的服务。。由于不知道重启之后会多出什么问题，我按两次 ESC 退出了。</p>
 <h2> timeshift 引发的血案</h2>
 <blockquote>
 <p>前情提要见<a href="#%E7%BD%91%E5%8D%A1%E9%97%AE%E9%A2%98">网卡问题</a>。</p>
