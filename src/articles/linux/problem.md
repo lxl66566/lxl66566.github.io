@@ -58,7 +58,7 @@ tag:
 
 ## ubuntu 提示重启
 
-在公家服务器上 `apt update && apt install ...`，然后出现一个 tui 界面让我选要重启的服务。。由于不知道重启之后会多出什么问题，我按两次 ESC 退出了。
+在公家服务器上 `apt update && apt install ...`，然后出现一个 tui 界面提示 _new kernel available_，让我选要重启的服务。。由于不知道重启之后会多出什么问题，我按两次 ESC 退出了。
 
 ## timeshift 引发的血案
 

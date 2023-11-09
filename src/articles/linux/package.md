@@ -96,11 +96,12 @@ sudo systemd-nspawn -D container  # 进入容器
 |软件包|功用|
 | :-: | :-: |
 |`fishshell` + `starship`|[shell](#shell) 及其外观|
-|`ripgrep`|`grep` 的代替|
+|`ripgrep` / [`skim`](https://github.com/lotabout/skim) / fzf|`grep` 的代替|
 |`fd` & `plocate`|查找，`find` 的代替|
 |`tldr`|`man` 的代替|
 |`fex`|`cut` 的代替|
 |`exa`|[`ls` 的代替](#exa)|
+|`fastfetch`|`neofetch` 的代替|
 |[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
 |`htop`|任务管理器，看性能|
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
@@ -273,14 +274,21 @@ sudo systemctl enable --now tlp
 waydroid 是 linux 上的首选 android 模拟器。不过想用还是需要折腾一阵的。
 
 1. 切换为 zen 内核，参考[更换内核](./install_and_config.md#更换内核)
-2. 安装 waydroid。具体流程在 wiki 上有。
+2. 安装 waydroid，具体流程在 wiki 上有。
+   - `pacman -S waydroid` 没有 Android 镜像，联网自动下载可能需要代理。
 
-这里主要说下在 X11 下用 waydroid：
+这里主要说下在 X11 下用 waydroid：需要一个 wayland 模拟器，archwiki 的主站说用 cage，CN 站说用 weston，都没有讲具体用法。我用 weston 了。
 
 ```sh
 sudo pacman -S weston
 weston
 # 然后点击打开的窗口的左上角，打开内部终端，执行 waydroid 指令。
+waydroid show-full-ui
 ```
 
-> archwiki 的主站说用 cage，CN 站说用 weston，，
+- 存储位置：`~/.local/share/waydroid/data/media/0`，还有权限问题，我直接乱暴 `chmod 777 ... -R`
+- 进去不用连 wifi，直接有网。~~虽然想连也连不上~~
+
+> 挺想吐槽，waydroid 居然不能重连 session，所以如果 session activated，weston 窗口又关了，这时候只能 `waydroid session stop && waydroid show-full-ui` 重启。。
+
+更多踩坑可以看看[某位群友的心得](https://luoxu.archlinuxcn.org/#g=1031857103&q=这是我在waydroid上踩过的坑&sender=5958395317)

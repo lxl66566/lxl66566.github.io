@@ -70,6 +70,7 @@ tag:
 - [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 - [learnxinyminutes](https://learnxinyminutes.com/)
 - [CS 自学指南](https://csdiy.wiki/) & [计算机专业学习路线 - hackway](https://hackway.org/docs/cs/intro)：英文好的话可以看看。
+- [Regular Expressions Cheat Sheet](https://cheatography.com/davechild/cheat-sheets/regular-expressions/)
 
 ### 字体
 
