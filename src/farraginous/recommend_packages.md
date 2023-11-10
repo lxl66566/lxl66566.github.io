@@ -17,15 +17,19 @@ tag:
 
 ::: tip
 
-- 关于手机模块推荐，请移步[设置手机](../articles/mobile/module_and_app.md)
 - 若您还不知道如何使用 Github 下载文件，请参考[此教程](../coding/github.md)。
 - 使用 Google Play 下载需要[科学上网](../articles/vpn.md)。未注明应用来源的 Android 软件，不妨试试在 Play 商店里找找。
+- 请注意，私有下载地址**不是**最新版安装包。若失效，可以[跟我反馈](../gossip/author.md#社交)。
 
 :::
 
 ## Android
 
-请注意，私有下载地址不是最新版安装包。若私有链接/安装包失效请[联系作者](../gossip/author.md#社交)。
+::: tip
+
+- 此处应用推荐均为免 ROOT 应用。若需要模块/ROOT 应用推荐，请移步[模块与软件](../articles/mobile/module_and_app.md)
+
+:::
 
 ### ZArchiver
 
@@ -106,7 +110,13 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
   - pdf 格式有一些小 bug，需要在阅读界面 _右上角 -> 图片样式_ 选择 `DEFAULT`，然后翻页动画设为 `滚动`。
 - 阅读时长统计
 - WebDAV 同步阅读进度
-  - 将平板和手机的设备名称设为同一个，可以在两个设备间自动同步进度
+  - 将平板和手机的设备名称设为同一个，可以在多个设备间自动同步进度
+
+### [Anything](https://www.xitmi.com/11378.html)
+
+类似 windows everything，在 Android 手机上建立索引，快速搜文件。~~资源不好找，只能找到一个看起来很不安全的网站做下载站~~
+
+[bak v1.3.22](https://wwkh.lanzout.com/iSZ7J1ecswha)
 
 ## Windows
 

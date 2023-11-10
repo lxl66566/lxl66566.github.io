@@ -181,9 +181,15 @@ tag:
 </div>
 </div>
 <div class="image50" style="text-align: center; ">
-<img alt="fun3" src="/images/farraginous/college/fun4.jpg" />
+<img alt="fun4" src="/images/farraginous/college/fun4.jpg" />
 <div>
 野生熊猫吃人事件
+</div>
+</div>
+<div class="image50" style="text-align: center; ">
+<img alt="fun5" src="/images/farraginous/college/fun5.jpg" />
+<div>
+食堂顶上的猫
 </div>
 </div>
 

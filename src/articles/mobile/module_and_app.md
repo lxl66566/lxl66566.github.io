@@ -31,15 +31,21 @@ root 手机的最大目的就是装模块与需要 root 权限的软件，获取
 
 ## LSPosed
 
+LSPosed 模块挺多闭源的，这里就懒得标注了。
+
 - WeXposed
 - QXposed
-- TSBattery
+- ~~TSBattery~~
 - [核心破解](https://github.com/LSPosed/CorePatch/releases)
 - 哔哩漫游
 - [QQ 瘦身](https://github.com/KitsunePie/QQCleaner)
-- Telegram UserID Viewer
+- Telegram：
+  - Telegram UserID Viewer
+  - Killergram
+  - TeleSpeed
 - Bili 调速
 - [DarQ](https://github.com/KieronQuinn/DarQ)：强制暗黑模式。需要在启用模块中选中所有需要强制黑夜的应用。
+- [LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool)：一加的 ColorOS 必装。
 
 ## App
 
@@ -54,6 +60,7 @@ root 手机的最大目的就是装模块与需要 root 权限的软件，获取
 - [AdAway](https://github.com/AdAway/AdAway)：改 host 屏蔽广告。经常需要手动添加屏蔽项。
     <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
 - [App Manager](https://github.com/MuntashirAkon/AppManager)：开源的 root 软件管理，可以查看运行中服务，可以冻结应用，控制权限。
+- [Neo Backup](https://github.com/NeoApplications/Neo-Backup)：批量备份，带数据，可定时
 
 通过其他来源安装：
 
@@ -61,4 +68,9 @@ root 手机的最大目的就是装模块与需要 root 权限的软件，获取
   - ~~目前依赖其任务管理，控制性能与冻结应用。~~
   - > Scene5 功能均可替代，因此弃用之。
 - [Battery Guru(Premium Unlocked)](https://modyolo.com/battery-guru-battery-saver.html)（**闭源！**）：电池管理，省电。
-- [李跳跳](https://t.me/apkrxwy/927) | [bak](https://wwkh.lanzout.com/iokl61e21oha)（**闭源！**）：跳广告，比 AdAway 好用。软件离线使用，不再更新。~~腾讯封杀，必属精品~~## Magisk
+- [李跳跳](https://t.me/apkrxwy/927) | [bak](https://wwkh.lanzout.com/iokl61e21oha)（**闭源！**）：跳广告，比 AdAway 好用。软件离线使用，不再更新。~~腾讯封杀，必属精品~~
+- ~~[奇妙应用](​https://wwwh.lanzoul.co​m/s/MagicalApp)~~
+
+## external
+
+1. [一加 ACE 竞速版——优化](https://bananazone.cc/一加ace-竞速版-优化/)
