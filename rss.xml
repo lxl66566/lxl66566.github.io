@@ -6,16 +6,16 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 10 Nov 2023 15:50:05 GMT</pubDate>
-    <lastBuildDate>Fri, 10 Nov 2023 15:50:05 GMT</lastBuildDate>
+    <pubDate>Sat, 11 Nov 2023 08:39:34 GMT</pubDate>
+    <lastBuildDate>Sat, 11 Nov 2023 08:39:34 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>推荐</category>
     <category>导航</category>
     <category>经历</category>
     <category>主张</category>
     <category>教程</category>
     <category>生活</category>
-    <category>推荐</category>
     <category>评价</category>
     <category>学习</category>
     <category>爱好</category>
@@ -23,6 +23,18 @@
     <category>随笔</category>
     <category>作者</category>
     <category>博客</category>
+    <item>
+      <title>本子合集</title>
+      <link>https://absx.pages.dev/hobbies/NSFW/comic.html</link>
+      <guid>https://absx.pages.dev/hobbies/NSFW/comic.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">本子合集</source>
+      <description>虽然打分跨度较大，但是能出现在此处的本子就已经是足够好的了。 画师排行 画风 级别名字 ------ T0田屋沼屋(たぬま) 毛玉牛乳(玉之けだま)|</description>
+      <category>推荐</category>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 本子合集</h1>
+<p>虽然打分跨度较大，但是能出现在此处的本子就已经是足够好的了。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>关于手机</title>
       <link>https://absx.pages.dev/articles/mobile/</link>
@@ -515,6 +527,8 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <p>通过测验后，您可以在各文章下留言，交流学习。</p>
 <!-- prettier-ignore -->
 <h2> <a href="/hobbies/NSFW/videos.html" target="blank">番☆号☆收☆藏</a></h2>
+<!-- prettier-ignore -->
+<h2> <a href="/hobbies/NSFW/comic.html" target="blank">本☆子☆合☆集</a></h2>
 ]]></content:encoded>
     </item>
     <item>
@@ -632,6 +646,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li><code>journalctl -u &lt;service_name&gt;</code> 查看服务日志</li>
 </ul>
 <p><code>dmesg</code> 用于查看内核消息。</p>
+<h2> .desktop</h2>
+<p>许多软件安装后可以在 krunner 中直接运行，实际上就是读取了 <em>.desktop file</em>。</p>
+<p><em>.desktop file</em> 理解为启动脚本。只要随便打开看一个就懂了。</p>
+<p><em>.desktop file</em> 保存在 <code>~/.local/share/applications</code>。</p>
 <h2> external</h2>
 <ol>
 <li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
@@ -755,7 +773,12 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>我使用 fcitx5，输入要求为 <em>英语，双拼，日语</em>。可以在遇到的问题里找到一些输入法的设置。</p>
 <ol>
 <li>双拼关闭快速输入，默认为<code>；</code>。</li>
-<li>双拼的 <code>w</code> 默认总给的是 <code>为</code> 而不是 <code>我</code>。因此可以 <em>自定义词组</em>。</li>
+<li>中文 <em>自定义词组</em>。
+<ul>
+<li><code>w</code> -&gt; <code>我</code></li>
+<li><code>l</code> -&gt; <code>了</code></li>
+</ul>
+</li>
 <li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a></li>
 </ol>
 <h3> 代理</h3>
@@ -813,22 +836,30 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>timeshift 要求子卷名字必须以 <code>@</code> 开头。</p>
 <p>timeshift 的 cron 定时备份默认是残废的。</p>
 <p>甚至连卸载 timeshift 都是一个<a href="/articles/linux/problem.html#timeshift-%E5%88%A0%E9%99%A4%E5%BF%AB%E7%85%A7" target="blank">大坑</a>。</p>
-<h3> 驱动</h3>
+<h2> 驱动</h2>
+<h3> 显卡驱动</h3>
 <p>安装初期只看了一点<a href="https://arch.icekylin.online/guide/rookie/graphic-driver.html" target="_blank" rel="noopener noreferrer">第三方教程</a>。后面发现也要看 <a href="https://wiki.archlinux.org/title/NVIDIA" target="_blank" rel="noopener noreferrer">wiki</a>。</p>
-<p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。</p>
-<p>我安装的驱动是 <code>nvidia-open</code>。双显卡，管理器用 <em>prime</em>，不要用 <em>optimus-manager</em>（具体去落絮搜）。想要用 N 卡运行的软件需要 <code>prime-run</code>，实测是需要的。至于怎么测，打开 <code>nvtop</code> 然后开游戏，看占用。</p>
+<p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显。至于安装什么驱动，<a href="#archlinux">抄教程</a>即可（但是不要抄后面的 <em>双显卡</em>）。检测驱动是否成功安装，可以执行 <code>nvidia-smi</code>。</p>
+<p>关于双显卡，混合方案用 <em>prime</em>，不要用 <em>optimus-manager</em>（具体去落絮搜）。想要用 N 卡运行的软件需要 <code>prime-run</code>，实测是需要的。至于怎么测，打开 <code>nvtop</code> 然后开游戏，看占用。</p>
 <ol>
 <li>删除 <code>/etc/mkinitcpio.conf</code> 的 <code>kms</code> hook，然后重新 <code>mkinitcpio -P</code>
 <ul>
 <li>不删也不会出问题，只要装了 <em>nvidia-utils</em></li>
 </ul>
 </li>
+<li><strong>不要安装</strong> <code>xf86-video-intel</code>，DRI 3 直接炸，DRI 2 在 election 下会花屏。</li>
 </ol>
-<h2> 更换内核</h2>
+<h3> 音频驱动</h3>
+<p>默认是 <code>pulseaudio</code>，我尝试更换为 <code>pipewire</code>。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 更换内核</h2>
 <p>linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本。</p>
-<p>例如我想更换 <code>linux-zen</code> 内核（该内核在官方仓库无需编译），只需要：</p>
+<p>例如我想更换 <code>linux-zen</code> 内核（该内核在官方仓库无需编译），需要：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>即可。initramfs 会通过 pacman hook 自动生成，无需手动 <code>mkinitcpio -P</code>。</p>
-<p>如果是第一次使用其他内核，请参考<a href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">系统设置</a> <code>8.</code> 的 grub 设置。</p>
+<p>首次更换内核还请注意：</p>
+<ol>
+<li>参考<a href="#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">系统设置</a> <code>8.</code> 的 grub 设置。</li>
+<li>需要更换 NVIDIA 驱动至 dkms（如果有的话）：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
@@ -1062,7 +1093,8 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>记录软件使用时长，参考<a href="/articles/time_record.html" target="blank">文章</a></p>
 <h3> bottles</h3>
 <p>基于 wine 运行 windows 软件，比 wine 更傻瓜式（只需要点鼠标，不用写配置）。</p>
-<p>目前试了两个 galgame，都能正常运行。<s>（来人，上点逆天的！）</s></p>
+<p>但是试了一下，不能直接运行挂载 windows 盘里的游戏，只能 copy 一份到 linux 下运行。</p>
+<p>目前试了几个 galgame，都能正常运行。<s>（来人，上点逆天的！）</s></p>
 <h3> <a href="https://wiki.archlinuxcn.org/wiki/Waydroid" target="_blank" rel="noopener noreferrer">waydroid</a></h3>
 <p>waydroid 是 linux 上的首选 android 模拟器。不过想用还是需要折腾一阵的。</p>
 <ol>
@@ -1691,6 +1723,10 @@ RTT = Round Trip Time，往返时间</p>
 </ul>
 </div>
 <h2> 2023</h2>
+<h3> 20231111</h3>
+<ul>
+<li>新增 <em>爱好 - NSFW - 本子合集</em></li>
+</ul>
 <h3> 20231108</h3>
 <ul>
 <li>拆分 <em>设置手机</em></li>
@@ -3307,86 +3343,6 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <div style="text-align:right">
 <p>——<a href="https://t.me/hhdgnnnn" target="_blank" rel="noopener noreferrer">funk thion</a></p>
 </div>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>VSCode</title>
-      <link>https://absx.pages.dev/coding/vscode.html</link>
-      <guid>https://absx.pages.dev/coding/vscode.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">VSCode</source>
-      <description>VSCode</description>
-      <category>编程</category>
-      <category>教程</category>
-      <pubDate>Thu, 31 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> VSCode</h1>
-<div class="subtitle">——neovim 死里配，不如 vscode 同步一根毛</div>
-<p>我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实强大且开箱即用。<em>（据说是优化得很好的电子垃圾，来源请求）</em></p>
-<p>在 linux 端我曾尝试抛弃 vscode，转向 neovim，但是几天后即放弃。</p>
-<h2> 使用</h2>
-<p>在 <em>设置</em> 页右上角可以 <code>打开设置（json）</code>，我经常需要直接编辑配置文件。<a href="https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json" target="_blank" rel="noopener noreferrer">这里</a>是我的全局配置文件。</p>
-<h3> 快捷键</h3>
-<p>这里是我比较常用的快捷键。</p>
-<ul>
-<li><code>Ctrl + ,</code>：打开设置</li>
-<li><code>Ctrl + r</code>（资源管理器窗口）：选择打开最近项目</li>
-<li><code>Ctrl + p</code>：选择打开文件</li>
-<li><code>Ctrl + Shift + p</code>：操作面板</li>
-</ul>
-<h2> 插件</h2>
-<p>插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里会放出我使用的插件。</p>
-<ul>
-<li>通用：
-<ul>
-<li><a href="#AI-%E8%A1%A5%E5%85%A8">AI 代码补全</a></li>
-<li>更好的警告：<em>Error Lens</em>，<em>SonarLint</em></li>
-<li>轻量级 Git 可视化：<em>Git Graph</em></li>
-<li>代码格式化：<em>Prettier - Code formatter</em>（主要用于 markdown</li>
-<li>编辑器：<em>Vim</em>
-<ul>
-<li><a href="https://github.com/microsoft/vscode/issues/75627#issuecomment-1114048271" target="_blank" rel="noopener noreferrer">添加如下配置</a>可以降低 vim 插件的延迟。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>markdown：<em>Markdown Preview Enhanced</em></li>
-<li>前端：<em>Auto Rename Tag</em>，<em>Rome</em>（需要设置 <code>"rome.requireConfiguration": false</code>）</li>
-<li>C++：<em>clangd</em></li>
-<li>python：<em>Black Formatter</em>，<em>isort</em>，<em>Ruff</em></li>
-<li>rust：<em>Cargo</em>，<em>cargo-crate-completer</em>，<em>Even Better TOML</em>，<em>rust-analyzer</em></li>
-<li>java：<em>Language Support for Java(TM) by Red Hat</em>，<em>Test Runner for Java</em></li>
-<li>kotlin：<em>Kotlin Language</em>，<em>vscode-runner</em></li>
-<li>数据库：<em>SQLite Viewer</em></li>
-<li>其他：<em>Chinese (Simplified)...</em>，<em>CodeSnap</em></li>
-</ul>
-<h3> AI 补全</h3>
-<p>本人目前在使用 <em>CodeGeeX</em>。</p>
-<details><summary>点击展开前言</summary><p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 %TEMP% 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p></details>
-<ul>
-<li><a href="https://codegeex.cn/" target="_blank" rel="noopener noreferrer">CodeGeeX</a>：国产开源模型，对标 GitHub CoPilot，响应速度快</li>
-<li><a href="https://codeium.com/" target="_blank" rel="noopener noreferrer">Codeium</a>：免费，在线服务</li>
-<li><a href="https://docs.codegpt.co/" target="_blank" rel="noopener noreferrer">Code GPT</a>：需要自己提供 API KEY 或本地跑模型。</li>
-<li><a href="https://www.tabnine.com/" target="_blank" rel="noopener noreferrer">Tabnine</a>：免费的补全较弱（<em>Short code completions (2 to 3 words)</em>）</li>
-</ul>
-<h2> feature</h2>
-<p>vscode 的特色：</p>
-<ul>
-<li>前文的插件系统不再赘述</li>
-<li><strong>设置同步</strong>，可以瞬间在其他平台搭好最适合自己的开发环境。（这也是小标题的由来）</li>
-<li>集成全文搜索；linux 下需要自己 <code>find</code> / <code>grep</code></li>
-<li>集成 git 图形化界面，虽说我不用且功能不多，但是对不会用 git 的新手非常友好</li>
-<li>多光标支持</li>
-</ul>
-<h2> 其他评价</h2>
-<ul>
-<li>vscode 的可自定义程度还不够高</li>
-<li>有一些官方插件太臃肿了（例如 <em>python</em>，<em>C/C++</em>）</li>
-<li>没法控制插件行为和权限
-<ul>
-<li>（比如某个看似没啥用的插件向我的 C 盘写入了 6GB 的缓存，说的就是你，<em>SonarLint</em>！）</li>
-<li>（比如 java 的插件天天申请公共网络访问权限）</li>
-</ul>
-</li>
-</ul>
 ]]></content:encoded>
     </item>
   </channel>
