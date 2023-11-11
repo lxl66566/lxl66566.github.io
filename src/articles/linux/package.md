@@ -267,7 +267,9 @@ sudo systemctl enable --now tlp
 
 基于 wine 运行 windows 软件，比 wine 更傻瓜式（只需要点鼠标，不用写配置）。
 
-目前试了两个 galgame，都能正常运行。~~（来人，上点逆天的！）~~
+但是试了一下，不能直接运行挂载 windows 盘里的游戏，只能 copy 一份到 linux 下运行。
+
+目前试了几个 galgame，都能正常运行。~~（来人，上点逆天的！）~~
 
 ### [waydroid](https://wiki.archlinuxcn.org/wiki/Waydroid)
 

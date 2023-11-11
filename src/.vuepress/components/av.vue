@@ -1,5 +1,5 @@
 <template>
-  <a :href="generateLink()">{{ formatText() }}</a>
+  <a :href="generateLink()" target="_blank">{{ formatText() }}</a>
 </template>
 
 <script>

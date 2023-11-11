@@ -119,7 +119,9 @@ umount /mnt/windows
 我使用 fcitx5，输入要求为 _英语，双拼，日语_。可以在遇到的问题里找到一些输入法的设置。
 
 1. 双拼关闭快速输入，默认为`；`。
-2. 双拼的 `w` 默认总给的是 `为` 而不是 `我`。因此可以 _自定义词组_。
+2. 中文 _自定义词组_。
+   - `w` -> `我`
+   - `l` -> `了`
 3. [添加自定义词库](https://wiki.archlinuxcn.org/wiki/Fcitx5#词库)
 
 ### 代理
@@ -231,28 +233,45 @@ timeshift 的 cron 定时备份默认是残废的。
 
 甚至连卸载 timeshift 都是一个[大坑](./problem.md#timeshift-删除快照)。
 
-### 驱动
+## 驱动
+
+### 显卡驱动
 
 安装初期只看了一点[第三方教程](https://arch.icekylin.online/guide/rookie/graphic-driver.html)。后面发现也要看 [wiki](https://wiki.archlinux.org/title/NVIDIA)。
 
-GPU：NVIDIA RTX 3050 Laptop + Intel 核显，这里主要讨论 NVIDIA。
+GPU：NVIDIA RTX 3050 Laptop + Intel 核显。至于安装什么驱动，[抄教程](#archlinux)即可（但是不要抄后面的 _双显卡_）。检测驱动是否成功安装，可以执行 `nvidia-smi`。
 
-我安装的驱动是 `nvidia-open`。双显卡，管理器用 _prime_，不要用 _optimus-manager_（具体去落絮搜）。想要用 N 卡运行的软件需要 `prime-run`，实测是需要的。至于怎么测，打开 `nvtop` 然后开游戏，看占用。
+关于双显卡，混合方案用 _prime_，不要用 _optimus-manager_（具体去落絮搜）。想要用 N 卡运行的软件需要 `prime-run`，实测是需要的。至于怎么测，打开 `nvtop` 然后开游戏，看占用。
 
 1. 删除 `/etc/mkinitcpio.conf` 的 `kms` hook，然后重新 `mkinitcpio -P`
    - 不删也不会出问题，只要装了 _nvidia-utils_
+2. **不要安装** `xf86-video-intel`，DRI 3 直接炸，DRI 2 在 election 下会花屏。
+
+### 音频驱动
+
+默认是 `pulseaudio`，我尝试更换为 `pipewire`。
+
+```sh
+sudo pacman -S lib32-libpipewire libpipewire pipewire-alsa pipewire-pulse pipewire-audio pipewire-jack wireplumber
+```
 
 ## 更换内核
 
 linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本。
 
-例如我想更换 `linux-zen` 内核（该内核在官方仓库无需编译），只需要：
+例如我想更换 `linux-zen` 内核（该内核在官方仓库无需编译），需要：
 
 ```sh
-sudo pacman -S linux-zen
+sudo pacman -S linux-zen linux-zen-headers
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 即可。initramfs 会通过 pacman hook 自动生成，无需手动 `mkinitcpio -P`。
 
-如果是第一次使用其他内核，请参考[系统设置](#系统设置) `8.` 的 grub 设置。
+首次更换内核还请注意：
+
+1. 参考[系统设置](#系统设置) `8.` 的 grub 设置。
+2. 需要更换 NVIDIA 驱动至 dkms（如果有的话）：
+   ```sh
+   sudo pacman -S nvidia-dkms
+   ```

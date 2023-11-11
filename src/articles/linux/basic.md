@@ -115,6 +115,14 @@ sudo python /usr/bin/systemctl <command>
 
 `dmesg` 用于查看内核消息。
 
+## .desktop
+
+许多软件安装后可以在 krunner 中直接运行，实际上就是读取了 _.desktop file_。
+
+_.desktop file_ 理解为启动脚本。只要随便打开看一个就懂了。
+
+_.desktop file_ 保存在 `~/.local/share/applications`。
+
 ## external
 
 1. 了解一下 btrfs（注意时效）：[Linux Btrfs 文件系统使用指南](https://www.mivm.cn/linux-btrfs-usage-guide)

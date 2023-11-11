@@ -1,5 +1,4 @@
 ---
-sidebar: heading
 date: 2023-11-01
 icon: like
 category:
@@ -25,3 +24,6 @@ tag:
 
 <!-- prettier-ignore -->
 ## [番☆号☆收☆藏](./videos.md)
+
+<!-- prettier-ignore -->
+## [本☆子☆合☆集](./comic.md)

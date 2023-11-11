@@ -139,6 +139,7 @@ export default sidebar({
 			],
 		},
 	],
+	"/hobbies/NSFW/": ["index.md", "videos.md", "comic.md"],
 	"/": [
 		"/index.md", // 需要让某些二级页面也能显示主页的侧边栏，为此提供索引。主页已经在顶层目录下，不向前回退。
 		{
@@ -174,7 +175,6 @@ export default sidebar({
 				"college.md",
 				"reciter.md",
 				"learning/",
-				"log.md",
 			],
 		},
 		"essay/",

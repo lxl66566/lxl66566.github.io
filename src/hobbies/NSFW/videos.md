@@ -1,6 +1,6 @@
 ---
 externalLinkIcon: false
-sidebar: heading
+icon: play
 date: 2022-07-04
 category:
   - 推荐
