@@ -6,10 +6,11 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 11 Nov 2023 08:39:34 GMT</pubDate>
-    <lastBuildDate>Sat, 11 Nov 2023 08:39:34 GMT</lastBuildDate>
+    <pubDate>Sun, 12 Nov 2023 06:46:30 GMT</pubDate>
+    <lastBuildDate>Sun, 12 Nov 2023 06:46:30 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>编程</category>
     <category>推荐</category>
     <category>导航</category>
     <category>经历</category>
@@ -19,10 +20,36 @@
     <category>评价</category>
     <category>学习</category>
     <category>爱好</category>
-    <category>编程</category>
     <category>随笔</category>
     <category>作者</category>
     <category>博客</category>
+    <item>
+      <title>容器</title>
+      <link>https://absx.pages.dev/coding/container.html</link>
+      <guid>https://absx.pages.dev/coding/container.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">容器</source>
+      <description>容器</description>
+      <category>编程</category>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 容器</h1>
+<p>其实我一直不喜欢容器，我认为处理复杂依赖是包管理器的职责，推给 container 是比较粗暴浪费的做法。</p>
+<h2> 选择</h2>
+<p>最流行的容器工具应该就是 docker 了吧，然而因为几次负面消息<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1"><sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">让我对其没有任何好感。</a></p><a class="footnote-anchor" id="footnote-ref2">
+</a><p><a class="footnote-anchor" id="footnote-ref2">我也尝试在 wsl2 上部署了一下 docker，然而由于没有 systemctl 而无法启动其守护进程。</a><a href="https://github.com/gdraheim/docker-systemctl-replacement" target="_blank" rel="noopener noreferrer">docker-systemctl-replacement</a> 不可用，需要 nohup 启动 <code>dockerd</code>。我的 wsl2 只有纯命令行，折腾许久，浪费了许多时间。</p>
+<p>于是我转向了 <a href="https://docs.podman.io" target="_blank" rel="noopener noreferrer">podman</a>，这是一个 <strong>daemonless, open source</strong>（开源的、无守护进程的）容器工具，完美解决了我对 docker 的偏见。并且其兼容性也不错：<em>Most users can simply alias Docker to Podman (alias docker=podman) without any problems.</em></p>
+<h2> 基础</h2>
+<p>看看<a href="https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md" target="_blank" rel="noopener noreferrer">tutorial</a>。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>Docker 向所有 Docker Hub 用户发去邮件，如果他们是以组织的名义创建账号，那么他们的账号将被删除，所有镜像也将一并删除，除非他们升级到一个付费的团队方案——其年费为 420 美元。<a href="https://www.solidot.org/story?sid=74406" target="_blank" rel="noopener noreferrer">src: solidot</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>Docker 公司将限制其 Docker Desktop 工具仅供个人或小企业免费使用，大企业将需要<a href="https://www.theregister.com/2021/08/31/docker_desktop_no_longer_free/" target="_blank" rel="noopener noreferrer">付费订阅</a>。该公司要求员工人数在 250 人以上或年收入超过一千万美元的企业如果需要使用 Docker Desktop 那么就必须付费订阅。<a href="https://www.solidot.org/story?sid=68775" target="_blank" rel="noopener noreferrer">src: solidot</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>本子合集</title>
       <link>https://absx.pages.dev/hobbies/NSFW/comic.html</link>
@@ -70,6 +97,7 @@
 <p>前情提要：<a href="/gossip/fuckxxx.html#miui-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">MIUI 有多难用</a></p>
 </blockquote>
 <p>从 MIUI 换到 ColorOS 的一些感受：</p>
+<p>好：</p>
 <ol>
 <li>进行敏感系统设置后不用再等待万恶的 10s</li>
 <li>ColorOS 一些不错的 idea：
@@ -77,14 +105,22 @@
 <li>双击空白处锁屏</li>
 </ul>
 </li>
+<li><em>手机管家</em> 可以冻结</li>
 </ol>
-<!-- 2. root 后 _手机管家_ 可以冻结。（MIUI 不行） -->
+<p>坏:</p>
+<ol>
+<li>不能一键关闭所有通知的振动权限，搞得我手机收个消息就震一下。</li>
+<li>首次进系统默认勾选的“推荐”设置也太多了，点取消点得我手疼<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">。</a></li><a class="footnote-anchor" id="footnote-ref3">
+<li><a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="blank">无法冻结 <code>应用包安装程序</code></a>，冻结不会有提示，直接无法开机。</li>
+</a></ol><a class="footnote-anchor" id="footnote-ref3">
 <hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>Google 要剥离原生 Android 的电话功能；三星有熔断锁；国内通过法律逐步收紧 root 限制，各大厂“自研”系统…… <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</a><section class="footnotes"><a class="footnote-anchor" id="footnote-ref3">
+</a><ol class="footnotes-list"><a class="footnote-anchor" id="footnote-ref3">
+</a><li id="footnote1" class="footnote-item"><a class="footnote-anchor" id="footnote-ref3"></a><p><a class="footnote-anchor" id="footnote-ref3">Google 要剥离原生 Android 的电话功能；三星有熔断锁；国内通过法律逐步收紧 root 限制，各大厂“自研”系统…… </a><a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="footnote2" class="footnote-item"><p>HyperOS 解 BL 锁要求：社区等级达到 5 级，然而某 <a href="https://t.me/wtdnwbzda/1490" target="_blank" rel="noopener noreferrer">12 年资深开发者</a> 3 级，雷军本人 4 级。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote3" class="footnote-item"><p>由于<a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="blank">一个测试</a>，我重置系统近 10 次，每次都需要走一遍流程 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -373,6 +409,7 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <li>见<a href="#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6">禁用软件</a>。</li>
 <li>Google Play 可以通过蓝牙进行发送 - 接受软件，无需再次下载，不过只能传商店内的软件。</li>
 <li>Delta Chat 可以在源手机上点击 <em>设置 - 添加第二台设备</em>，然后用目标机扫码即可迁移<strong>单个账户</strong>。</li>
+<li>（一加）可以在开发者选项里关闭 5G，减少耗电。</li>
 </ol>
 <h3> 禁用软件</h3>
 <p><a href="https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a" target="_blank" rel="noopener noreferrer">这里</a>可以看 MIUI 有哪些不能禁用的东西。</p>
@@ -591,6 +628,7 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <h3> sed</h3>
 <ul>
 <li>sed 正则表达式的 <code>{}</code> 需要转义 <code>\{\}</code>，否则需要使用 <code>sed -r</code>（maybe <code>alias sed='sed -r'</code> ?）</li>
+<li>冷知识：sed（和 awk）都是图灵完备的语言。</li>
 </ul>
 <h3> find</h3>
 <ul>
@@ -599,6 +637,10 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <li>复制目录下所有文件，除了其中一个：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></li>
 </ul>
 <p>通过这些例子，应该就能基本上手 <code>find</code> 了。</p>
+<h3> sudo</h3>
+<ul>
+<li><code>sudo nvim</code> 相当于切换到 root 用户空间，无法使用用户 nvim 配置。然而 <code>sudo -e</code> 编辑文件，相当于在用户空间编辑完后覆盖回去，是可以用用户配置的。</li>
+</ul>
 <h2> 文件系统(fs)</h2>
 <p>ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 zfs, xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊</p>
 <blockquote>
@@ -842,11 +884,6 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显。至于安装什么驱动，<a href="#archlinux">抄教程</a>即可（但是不要抄后面的 <em>双显卡</em>）。检测驱动是否成功安装，可以执行 <code>nvidia-smi</code>。</p>
 <p>关于双显卡，混合方案用 <em>prime</em>，不要用 <em>optimus-manager</em>（具体去落絮搜）。想要用 N 卡运行的软件需要 <code>prime-run</code>，实测是需要的。至于怎么测，打开 <code>nvtop</code> 然后开游戏，看占用。</p>
 <ol>
-<li>删除 <code>/etc/mkinitcpio.conf</code> 的 <code>kms</code> hook，然后重新 <code>mkinitcpio -P</code>
-<ul>
-<li>不删也不会出问题，只要装了 <em>nvidia-utils</em></li>
-</ul>
-</li>
 <li><strong>不要安装</strong> <code>xf86-video-intel</code>，DRI 3 直接炸，DRI 2 在 election 下会花屏。</li>
 </ol>
 <h3> 音频驱动</h3>
@@ -1076,7 +1113,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
 <p>快速搜索，其维护了一个数据库，使用 <code>sudo updatedb</code> 更新（默认开机时自动执行），搜索时不再遍历目录。</p>
 <h3> exa</h3>
-<p><code>ls='exa --all --long --color-scale --binary --header --time-style=long-iso'</code></p>
+<p><code>ls='exa --all --long --color-scale all --binary --header --time-style=long-iso'</code></p>
 <h3> tmux</h3>
 <p>tmux 是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起，在<strong>不使用图形界面</strong>或有恢复 shell 需求时比较好用。</p>
 <p>如果只想要简单的恢复 shell 功能，可以考虑一下 <code>screen</code>。</p>
@@ -1720,6 +1757,7 @@ RTT = Round Trip Time，往返时间</p>
 <li>较小的语句优化与增删改不作记录。因此即使博客几乎为<strong>日更</strong>，但日志较稀疏。</li>
 <li><em>维护</em> 一般指花费时间较长或改动占比较大。后期记录频次降低。</li>
 <li><a href="/farraginous/learning/" target="blank">学习笔记</a>区只记录 <em>创建</em> 活动。（学习不止，维护过多）</li>
+<li>自 20231112 起，新增文章不再记录于此处。</li>
 </ul>
 </div>
 <h2> 2023</h2>
@@ -2869,6 +2907,13 @@ If you do want to externalize this module explicitly add it to
 <p class="hint-container-title">提示</p>
 <p>以下是正文，按时间倒序。</p>
 </div>
+<h2> waydroid 的问题</h2>
+<h3> 启动失败</h3>
+<p>安装 waydroid 不久后，<code>waydroid show-full-ui</code> 启动失败，命令行显示 <code>waydroid  [gbinder] Service manager /dev/anbox-binder has appeared</code>，但是却没有打开图形界面。</p>
+<p>重启后好了，再重启又炸了。</p>
+<p><a href="https://github.com/waydroid/waydroid/issues/136#issuecomment-949694932" target="_blank" rel="noopener noreferrer">某个 issue</a> 讲设置内核启动参数，试了一下，无效。</p>
+<p>此时想到要看 log，<code>waydroid log</code> 显示 <code>lxc-start: waydroid: ../src/lxc/conf.c: run_buffer: 322 Script exited with status 126</code>。</p>
+<p>没辙，然后 <code>sudo waydroid init -f</code> 重装。然后就能用了。</p>
 <h2> timeshift 删除快照</h2>
 <p>未解决！</p>
 <p>我已经转 snapper 了，想删除所有 timeshift 的快照并卸载。然而有一个快照在删除中出现错误（真的太傻逼了）。于是我找到了<a href="https://bbs.archlinux.org/viewtopic.php?id=266965" target="_blank" rel="noopener noreferrer">这个回答</a>，发现问题基本是一样的。于是只要手动删除子卷就行了。</p>
@@ -3272,77 +3317,6 @@ M1001 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlis
 <p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>c</mi><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><msub><mi>g</mi><mi>c</mi></msub><msub><mi>V</mi><mrow><mi>b</mi><mi>m</mi></mrow></msub><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>c</mi><mi>o</mi><mi>s</mi><mo stretchy="false">(</mo><msub><mi>θ</mi><mi>c</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">I_{cmax}=g_cV_{bm}(1-cos(\theta_c))</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight">ma</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.2222em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">bm</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">cos</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">))</span></span></span></span></p>
 <p><a href="https://www.bilibili.com/video/BV1hE411N79f/?p=31&amp;t=637" target="_blank" rel="noopener noreferrer">傅里叶级数展开求 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>c</mi><mn>0</mn></mrow></msub><mo separator="true">,</mo><msub><mi>I</mi><mrow><mi>c</mi><mi>m</mi><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">I_{c0},I_{cm1}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0785em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight">m</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></a></p>
 <p>最佳半导通角约为 70 度</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>神评</title>
-      <link>https://absx.pages.dev/gossip/forward.html</link>
-      <guid>https://absx.pages.dev/gossip/forward.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">神评</source>
-      <description>神评</description>
-      <category>评价</category>
-      <pubDate>Wed, 06 Sep 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 神评</h1>
-<p>转发一些本人冲浪看到的神评。</p>
-<h2> 20230904</h2>
-<p>前人造过的轮子就有点像是数轴上的有理数点：稠密，有序，无穷无尽。但是真当你用的时候，你会发现，你的实际需求有着几乎 100%的概率落在有理数的缝隙里。</p>
-<div style="text-align:right">
-<p>——<a href="https://www.zhihu.com/question/620107729/answer/3195827527" target="_blank" rel="noopener noreferrer">src</a></p>
-</div>
-<ul>
-<li>但你的任意一个无理需求，总可以用一列别人的有理轮子逼近 🥰</li>
-</ul>
-<div style="text-align:right">
-<p>——<a href="https://t.me/SIGFPE" target="_blank" rel="noopener noreferrer">(⊙o⊙) 🥦</a></p>
-</div>
-<h2> 20230707</h2>
-<p>「女性とみられる服装の人物」スーツケースで"頭部"持ち去ったか…ススキノのホテル浴室に『首を切断された男性の遺体』</p>
-<div style="text-align:right">
-<p>——<a href="https://news.yahoo.co.jp/articles/14ad56e3f7adecadf0ac6b44f160aa5a001c244c" target="_blank" rel="noopener noreferrer">新聞</a></p>
-</div>
-<ul>
-<li>下 头 男</li>
-</ul>
-<div style="text-align:right">
-<p>——R my</p>
-</div>
-<h2> 20230620</h2>
-<p>#猜口音系列 genius 恒流源和 beneath 恒流源</p>
-<div style="text-align:right">
-<p>——<a href="https://t.me/ChubbyPerryKum" target="_blank" rel="noopener noreferrer">Perry Kum</a></p>
-</div>
-<ul>
-<li>答案：<span class="heimu" title="你知道的太多了">激励式电流源和比例式电流源</span></li>
-</ul>
-<h2> 20230601</h2>
-<p>版权公司要求谷歌删除 YouTube 下载器维基百科页面，避免被更多用户看到了解这些下载器。</p>
-<div style="text-align:right">
-<p>——<a href="https://ourl.co/98900" target="_blank" rel="noopener noreferrer">src</a></p>
-</div>
-<p>过去几年版权公司例如 RIAA 和 BPI 都在持之以恒的发送 DMCA 投诉，要求谷歌从索引里删除基于 YouTube-dl 搭建的各种网站或软件。现在更离谱的来了：这些版权机构似乎觉得光删除提供下载页面的还不行，还得把介绍 YouTube 下载器的维基百科也删了，这样就可以阻止用户了解这些下载器。</p>
-<ul>
-<li>为什么不把版权公司的维基百科页面删除呢，这样大家就不用管什么东西在维权了</li>
-</ul>
-<div style="text-align:right">
-<p>——<a href="https://t.me/finalwishing" target="_blank" rel="noopener noreferrer">Finally</a></p>
-</div>
-<h2> 20230328</h2>
-<p>我：“<strong>道为何</strong>？”</p>
-<ul>
-<li>舍友：“我也<strong>到围合</strong>了。”</li>
-</ul>
-<h2> 20230316</h2>
-<p><a href="https://www.solidot.org/story?sid=74399" target="_blank" rel="noopener noreferrer">AI 棋手帮助人类棋手进步</a></p>
-<p>根据发表在 PNAS 上的一项研究，在 DeepMind 的 AlphaGo 击败最强大的人类棋手之后，人类棋手通过与 AI 棋手对弈而取得了显著进步。香港城市大学的研究人员收集了 1950 年至 2021 年间职业棋手作出的 580 万次移棋决策的数据集。然后使用围棋人工智能帮助计算一种称为“决策质量指数”（DQI）的指标。该指标用于评估一步棋的质量。如果没有尝试与之前的动作相结合，即认为一个动作是“新颖的”。分析发现，人类棋手对 2016 年围棋人工智能的出现作出了明显更好、更新颖的反应。1950 年至 2015 年间，围棋水平的改善相对较小，年度 DQI 中值在 -0.2 至 0.2 之间波动。而在 2016 年后，DQI 跃升，2018 年至 2021 年间的中值超过 0.7。</p>
-<div style="text-align:right">
-<p><a href="https://www.pnas.org/doi/10.1073/pnas.2214840120" target="_blank" rel="noopener noreferrer">ref1</a> | <a href="https://news.sciencenet.cn/htmlnews/2023/3/496171.shtm" target="_blank" rel="noopener noreferrer">ref2</a></p>
-</div>
-<ul>
-<li>人工智能反过来训练人类了</li>
-</ul>
-<div style="text-align:right">
-<p>——<a href="https://t.me/hhdgnnnn" target="_blank" rel="noopener noreferrer">funk thion</a></p>
-</div>
 ]]></content:encoded>
     </item>
   </channel>
