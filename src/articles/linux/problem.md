@@ -26,6 +26,20 @@ tag:
 以下是正文，按时间倒序。
 :::
 
+## waydroid 的问题
+
+### 启动失败
+
+安装 waydroid 不久后，`waydroid show-full-ui` 启动失败，命令行显示 `waydroid  [gbinder] Service manager /dev/anbox-binder has appeared`，但是却没有打开图形界面。
+
+重启后好了，再重启又炸了。
+
+[某个 issue](https://github.com/waydroid/waydroid/issues/136#issuecomment-949694932) 讲设置内核启动参数，试了一下，无效。
+
+此时想到要看 log，`waydroid log` 显示 `lxc-start: waydroid: ../src/lxc/conf.c: run_buffer: 322 Script exited with status 126`。
+
+没辙，然后 `sudo waydroid init -f` 重装。然后就能用了。
+
 ## timeshift 删除快照
 
 未解决！

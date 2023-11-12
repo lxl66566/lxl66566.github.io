@@ -76,7 +76,7 @@ umount /mnt/windows
    ```sh
    # fish
    alias e=nvim
-   alias l='exa --all --long --color-scale --binary --header --time-style=long-iso'
+   alias l='exa --all --long --color-scale all --binary --header --time-style=long-iso'
    ```
 2. [调整 swappiness](<https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)>) 至 5（我对写入量敏感，同时我拥有大 RAM）
 3. 设置 `/etc/fstab`
@@ -243,9 +243,7 @@ GPU：NVIDIA RTX 3050 Laptop + Intel 核显。至于安装什么驱动，[抄教
 
 关于双显卡，混合方案用 _prime_，不要用 _optimus-manager_（具体去落絮搜）。想要用 N 卡运行的软件需要 `prime-run`，实测是需要的。至于怎么测，打开 `nvtop` 然后开游戏，看占用。
 
-1. 删除 `/etc/mkinitcpio.conf` 的 `kms` hook，然后重新 `mkinitcpio -P`
-   - 不删也不会出问题，只要装了 _nvidia-utils_
-2. **不要安装** `xf86-video-intel`，DRI 3 直接炸，DRI 2 在 election 下会花屏。
+1. **不要安装** `xf86-video-intel`，DRI 3 直接炸，DRI 2 在 election 下会花屏。
 
 ### 音频驱动
 

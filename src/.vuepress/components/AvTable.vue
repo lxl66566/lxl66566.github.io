@@ -190,6 +190,10 @@ const data = [
   { id: "ssis-494", aScore: 9, bScore: 7 },
   { id: "ssis-018", aScore: 7.5, bScore: 5 },
   { id: "midv-131", aScore: 8.4, bScore: 6.3, u: true },
+  { id: "pred-403", aScore: 10, bScore: 0.8, u: true },
+  { id: "dass-043", aScore: 6, bScore: 7.8, u: true },
+  { id: "midv-162", aScore: 7, bScore: 0.1, u: true },
+  { id: "mide-872", aScore: 9, bScore: 4, u: true },
 ];
 export default {
   name: "App",

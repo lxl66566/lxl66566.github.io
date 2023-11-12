@@ -90,6 +90,7 @@ export default sidebar({
 				"vscode.md",
 				"vim.md",
 				"sql.md",
+				"container.md",
 			],
 		},
 		{
