@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 12 Nov 2023 06:46:30 GMT</pubDate>
-    <lastBuildDate>Sun, 12 Nov 2023 06:46:30 GMT</lastBuildDate>
+    <pubDate>Mon, 13 Nov 2023 15:25:21 GMT</pubDate>
+    <lastBuildDate>Mon, 13 Nov 2023 15:25:21 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -111,7 +111,8 @@
 <ol>
 <li>不能一键关闭所有通知的振动权限，搞得我手机收个消息就震一下。</li>
 <li>首次进系统默认勾选的“推荐”设置也太多了，点取消点得我手疼<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">。</a></li><a class="footnote-anchor" id="footnote-ref3">
-<li><a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="blank">无法冻结 <code>应用包安装程序</code></a>，冻结不会有提示，直接无法开机。</li>
+<li><a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="blank">若冻结 <code>应用包安装程序</code></a>，无提示，<strong>直接变砖</strong>。</li>
+<li>省电模式下无法锁定应用。</li>
 </a></ol><a class="footnote-anchor" id="footnote-ref3">
 <hr class="footnotes-sep">
 </a><section class="footnotes"><a class="footnote-anchor" id="footnote-ref3">
@@ -541,6 +542,12 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>我最早在知乎看到一个解法，但是有副作用。。</p>
 </blockquote>
+<h3> 代码</h3>
+<p>代码不要直接写 <code>typ</code> 文件里。最好从外部引用，解耦，还方便扔 formatter。</p>
+<h4> 好看的边框</h4>
+<p>从 <a href="https://github.com/typst/typst/issues/1494#issuecomment-1591847881" target="_blank" rel="noopener noreferrer">#1494</a> 摸了个好看的代码块样式来，然后自己改改，就是下面的了。</p>
+<div class="language-typ line-numbers-mode" data-ext="typ"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。</p>
+<p>我去其他地方寻找解法，<a href="https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ" target="_blank" rel="noopener noreferrer">BUAA 的</a>用 figure 包的也会有这个问题，暂时无解。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -665,6 +672,9 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>默认挂载是读写的，我比较建议改为只读，降低出现问题的概率。<a href="https://github.com/maharmstone/btrfs#mount-options" target="_blank" rel="noopener noreferrer">在这里</a>可以进行一些设置，重启生效。</li>
 </ol>
 <p>事实上，<em>winbtrfs</em> 与 <em>ntfs-3g</em> 都不能保证一定不会出问题（有一些群友被坑过）。所以建议都只读不写。</p>
+<h2> 链接</h2>
+<p>分为硬链接和软链接。硬链接文件共享相同的 inode 值，指向同一份文件，因此是同步更新。软链接就是快捷方式。</p>
+<p>git 内添加链接指向的文件需要手动 <code>git add -f</code>。</p>
 <h2> 服务</h2>
 <p>与 windows <em>service</em> 的概念相通。有的 debian 系 distro 使用 <code>service</code> 指令，而 archlinux 使用 <code>systemctl</code> 进行服务管理。本节默认使用 <code>systemctl</code>。</p>
 <p>查看服务的输出，请前往<a href="#%E6%97%A5%E5%BF%97">日志</a>。</p>
@@ -1250,6 +1260,10 @@ RTT = Round Trip Time，往返时间</p>
 <li>RW = 1 时，若出错，将重传所有 SW 内的分组；</li>
 <li>RW &gt; 1 时，若出错，只重传出错分组。</li>
 </ul>
+<h2> external</h2>
+<ol>
+<li><a href="https://cangsdarm.github.io/illustrate/quic" target="_blank" rel="noopener noreferrer">图解 QUIC 连接 - 对每一个字节的解释和再现</a></li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
