@@ -78,3 +78,50 @@ show heading: it =>  {
 ```
 
 > 我最早在知乎看到一个解法，但是有副作用。。
+
+### 代码
+
+代码不要直接写 `typ` 文件里。最好从外部引用，解耦，还方便扔 formatter。
+
+#### 好看的边框
+
+从 [#1494](https://github.com/typst/typst/issues/1494#issuecomment-1591847881) 摸了个好看的代码块样式来，然后自己改改，就是下面的了。
+
+```typ
+#let frame(title: none, body) = {
+  let stroke = black + 1pt
+  let radius = 5pt
+  let font = (font: "Fira Code", size: 10pt)
+  let name = block(
+               breakable: false,
+               fill: color.linear-rgb(0, 0, 0, 10),
+               stroke: stroke,
+               inset: 0.5em,
+               below: -1.5em,
+               radius: (top-right: radius, bottom-left: radius),
+               title,
+             )
+  set text(..font)
+  show raw: set text(..font)
+  box(stroke: stroke, radius: radius)[
+    #if title != none {
+      align(top + right, name)
+    }
+    #block(
+      width: 100%,
+      inset: (rest: 0.5em),
+      body,
+    )
+  ]
+}
+
+#let include_code_file(file_path, name, lang) = {
+  frame(title: name)[
+    #raw(read(file_path), lang: lang)
+  ]
+}
+```
+
+这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。
+
+我去其他地方寻找解法，[BUAA 的](https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ)用 figure 包的也会有这个问题，暂时无解。

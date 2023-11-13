@@ -61,3 +61,7 @@ RW > 1 时，发送的 ACK 序号等于接收到的。
 
 - RW = 1 时，若出错，将重传所有 SW 内的分组；
 - RW > 1 时，若出错，只重传出错分组。
+
+## external
+
+1. [图解 QUIC 连接 - 对每一个字节的解释和再现](https://cangsdarm.github.io/illustrate/quic)

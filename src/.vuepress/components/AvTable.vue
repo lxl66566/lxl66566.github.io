@@ -194,6 +194,9 @@ const data = [
   { id: "dass-043", aScore: 6, bScore: 7.8, u: true },
   { id: "midv-162", aScore: 7, bScore: 0.1, u: true },
   { id: "mide-872", aScore: 9, bScore: 4, u: true },
+  { id: "pppe-052", aScore: 8.6, bScore: 6.2, u: true },
+  { id: "atid-519", aScore: 8, bScore: 8.8, u: true },
+  { id: "shkd-986", aScore: 8.3, bScore: 9.8, u: true },
 ];
 export default {
   name: "App",
