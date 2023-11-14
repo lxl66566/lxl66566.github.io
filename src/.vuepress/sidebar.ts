@@ -95,7 +95,7 @@ export default sidebar({
 		},
 		{
 			text: "其他",
-			children: ["algorithm.md", "bot.md"],
+			children: ["algorithm.md", "bot.md", "octave.md"],
 		},
 	],
 	"/blog/": ["index.md", "withvuepress2.md", "log.md", "todo.md"],

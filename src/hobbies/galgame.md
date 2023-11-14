@@ -46,13 +46,13 @@ tag:
 - 人物派：在爱与柔中沉沦
   - 人物派专注于对特定人物的喜爱；可以只推喜欢的角色线，喜欢甜与发糖。
   - 代表言论：`单推xxx`；
-    - Oborozu 2023.06.21 23:50:35：`现在看来，始终没给rinne一个好结局`；`主要不能接受看着女儿结婚`
+    - Oborozu 2023.06.21 23:50:35：`主要不能接受看着女儿结婚`
 
 ## 资源
 
-- 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [其他网址](../farraginous/recommend_websites.md#游戏)
-- 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_
-- 模拟器推荐：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor](https://dl.ghacg.com/s/67U9)
+- 源站（按推荐优先级）：[失落小站](https://shinnku.com/) | [TG 频道](https://t.me/erogamecloud) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
+- 论坛：~~[月幕](https://www.ymgal.games/) | [各种 TG 群聊](../articles/telegram.md#nsfw)~~（建议专注游戏，而不是在分裂的社区寻找存在感）
+- 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor](https://dl.ghacg.com/s/67U9)
 - 在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + [小牛云平台翻译](https://niutrans.com/)。个人认为，御坂翻译器有以下优点：
   1. 小，仅 44.3MB
   2. 开源
@@ -60,9 +60,9 @@ tag:
 
 相比之下 vnr 依赖百度贴吧，资源 BT 失效，大多使用城通网盘，真让人火大。而小牛云平台签到送字数流量，给的够多。
 
-> 现在无需签到就有免费额度
+<!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
 
-<!-- > 解压密码详见[极点ACG公告](https://lspgal.com/5702/) -->
+> 现在无需签到就有免费额度
 
 ## 我已玩完
 
@@ -348,6 +348,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 
 - ~~白玉中毒，幼态审美~~
 - 怎么还是时穿啊…主角完全没意识到寿命啊。
+- 每条个人线的表现力不太够。几个 H 场景过于集中，然后 H 完个人线就结束了。
 - 这玩意完全不讲科学性和逻辑性的。
   - 薛定谔的猫提出于 1935 年，而游戏背景是 1920 年，结果谈这个实验还有来有去。
   - 莲觉得洋裙太短，然而日常服饰也是短裙
@@ -490,6 +491,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 拒绝分割商法，从 ISLAND 做起，一部抵三部
 - 剧情树优秀；结局丰富。
 - 游玩顺序：枢都 夏蓮 -> 伽藍堂 紗羅 -> 御原 凛音
+- [攻略](https://www.bilibili.com/read/cv10265029/)
 
 ### PARQUET
 

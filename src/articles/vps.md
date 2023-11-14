@@ -271,3 +271,4 @@ rescue 只有 nano file editor；挂载了分区到 `test` 以后，直接 `nano
 
 1. [节点搭建系列教程 - 不良林](https://bulianglin.com/archives/guide.html)，在一众垃圾 youtube 教程中算是讲得比较透彻的。
 2. [vps2arch](https://gitlab.com/drizzt/vps2arch)：为你的 vps 安装 arch！
+3. [使用一键脚本，部署 Hysteria 2 协议节点](https://blog.misaka.rest/2023/09/02/hysteria2-script/)

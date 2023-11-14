@@ -191,19 +191,13 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 ## 游戏
 
-### galgame
-
-- 资源：[极点 ACG](https://lspgal.com/) | [萌幻之乡](hmoe.top) | [GAL 图书馆](https://galgame.pw/) | [初音的青葱](https://www.yygal.com/)
-- 论坛：[月幕](https://www.ymgal.games/)
-
-### 其他游戏
-
 - [最好玩的 io 游戏网站推荐](https://zhuanlan.zhihu.com/p/531408059) | [bak](https://telegra.ph/最好玩的io游戏网站推荐-07-21)
 - [play.m3o](https://play.m3o.xyz/)：在线联机扫雷
 - [lichess.org](https://lichess.org/)：在线国际象棋
 - [Gartic.io](https://gartic.io/)：你画我猜网页版
 - [You're the OS!](https://plbrault.github.io/youre-the-os/)：一款让你模拟 OS 的游戏 | [mir](https://drfreckles42.itch.io/youre-the-os)
 - [Nazo Game](https://nazo.one-story.cn/)：网页解谜，一般
+- [Hackergame 2023](https://hack.lug.ustc.edu.cn)
 
 资源：
 

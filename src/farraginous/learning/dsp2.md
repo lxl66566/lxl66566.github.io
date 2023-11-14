@@ -9,6 +9,16 @@ category:
 
 教师：万永菁
 
+## 实验
+
+我肯定不下载 matlab，尝试用 octave 补足。在 archlinux 下使用 octave 代替 matlab：
+
+```sh
+paru -S octave octave-signal
+```
+
+其余部分 octave 无法实现的，用 matlab-online。
+
 ## 基础
 
 系统分类（见 [信号与系统基础](./signals_and_systems.md#信号系统基础)）：
