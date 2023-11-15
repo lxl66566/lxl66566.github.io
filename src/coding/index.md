@@ -84,3 +84,4 @@ tag:
 2. [经典技术书籍 PDF 文件](https://awesome-programming-books.github.io/)
    - [Modern Compiler Implementation in ( Java | ML | C )](https://www.cs.princeton.edu/~appel/modern/)
 3. [Lies we tell ourselves to keep using Golang](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang)
+4. [A decade of developing a programming language](https://yorickpeterse.com/articles/a-decade-of-developing-a-programming-language/)

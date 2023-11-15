@@ -65,6 +65,7 @@ export default sidebar({
 				"external.md",
 				"ramdisk.md",
 				"note.md",
+				"browser.md",
 			],
 		},
 	],

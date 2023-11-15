@@ -38,4 +38,5 @@ category:
 3. [输入法](./input_method.md)
 4. [RAM Disk 横评](./ramdisk.md)
 5. [Android 手写笔记软件横评](./note.md)
+6. [浏览器大杂谈](./browser.md)
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->

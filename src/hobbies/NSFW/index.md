@@ -27,3 +27,7 @@ tag:
 
 <!-- prettier-ignore -->
 ## [本☆子☆合☆集](./comic.md)
+
+## external
+
+1. [可穿戴科技](https://wt.tepis.me/)

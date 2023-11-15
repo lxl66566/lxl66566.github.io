@@ -136,3 +136,7 @@ tag:
 3. 禁用包：`adb shell pm disable-user com.miui.hybrid`，也可以直接卸载，详情参考 [ADB](../adb.md)
 
 以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。
+
+## external
+
+1. [小米平板 5 Pro 刷入 GSI Android 教程](https://dev.moe/2716)

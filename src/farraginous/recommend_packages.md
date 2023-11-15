@@ -41,20 +41,7 @@ Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 
 ### 浏览器
 
-#### [Kiwi Browser](https://kiwibrowser.com/)
-
-**重量级** chromium 系浏览器，你可以像使用电脑浏览器那样使用它。
-
-- 支持所有 chromium 插件，重度插件依赖者请务必安装。
-- 拥有控制台。
-
-#### [m 浏览器](http://mbrowser.nr19.cn/)
-
-**轻量级**浏览器,（[私链](https://wwp.lanzout.com/iP7FA0eaqk8j)）
-
-- 拥有审查元素，查看网页源码，嗅探网页资源的功能。
-- 支持安装脚本，自定义拦截广告，可调长按倍速的视频播放器。
-- 安装包仅 9 M。
+参见[浏览器大杂谈](../articles/browser.md)
 
 ### MT 管理器
 

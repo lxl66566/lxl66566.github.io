@@ -36,7 +36,7 @@ category:
 
 然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。
 
-## 使用
+## 基础
 
 [这里](https://typst-doc-cn.github.io/docs/chinese/#resources)有许多大学的毕业论文模版，~~多抄抄就会用了~~
 
@@ -46,40 +46,11 @@ category:
 
 剩下的 `let`，`if` 什么的都是 rust 的东西，这里不说（
 
-## bug
+## 数学
 
-这东西 bug 其实还真不少。。
+[这里](https://github.com/brynne8/typst-undergradmath-zh/blob/main/undergradmath.pdf)有比较全的数学符号。
 
-### 参考文献
-
-[issue](https://github.com/typst/typst/issues/2548)
-
-从 `.bib` 引入参考文献时，如果文献类型是 `thesis`，本该在适当位置加 `[D]` 的，然而它不会加。。
-
-感觉是 _hayagriva_ 的锅，但是我翻了下源码发现看不懂。爆了！
-
-> 看了一下 issue 时间，_3 days ago_。。那我这次课程论文寄了，唉，扣点分不重要
-
-其他大学模版的解法是用 python 写了个处理脚本，通过 CSL 解析，半自动加参考文献。
-
-### 缩进
-
-[issue](https://github.com/typst/typst/issues/311)
-
-中文等语言需要在每行开头缩进两个宽字符。typst 提供了 `par()` 控制缩进行为，但是在标题下面一行的文字却不会被缩进。。
-
-所以下面有人提供了[一个解法](https://github.com/typst/typst/issues/311#issuecomment-1678940781)：
-
-```
-show heading: it =>  {
-  it
-  par()[#text(size:0.5em)[#h(0.0em)]]
-}
-```
-
-> 我最早在知乎看到一个解法，但是有副作用。。
-
-### 代码
+## 代码
 
 代码不要直接写 `typ` 文件里。最好从外部引用，解耦，还方便扔 formatter。
 
@@ -125,3 +96,36 @@ show heading: it =>  {
 这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。
 
 我去其他地方寻找解法，[BUAA 的](https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ)用 figure 包的也会有这个问题，暂时无解。
+
+## bug
+
+这东西 bug 其实还真不少。。
+
+### 参考文献
+
+[issue](https://github.com/typst/typst/issues/2548)
+
+从 `.bib` 引入参考文献时，如果文献类型是 `thesis`，本该在适当位置加 `[D]` 的，然而它不会加。。
+
+感觉是 _hayagriva_ 的锅，但是我翻了下源码发现看不懂。爆了！
+
+> 看了一下 issue 时间，_3 days ago_。。那我这次课程论文寄了，唉，扣点分不重要
+
+其他大学模版的解法是用 python 写了个处理脚本，通过 CSL 解析，半自动加参考文献。
+
+### 缩进
+
+[issue](https://github.com/typst/typst/issues/311)
+
+中文等语言需要在每行开头缩进两个宽字符。typst 提供了 `par()` 控制缩进行为，但是在标题下面一行的文字却不会被缩进。。
+
+所以下面有人提供了[一个解法](https://github.com/typst/typst/issues/311#issuecomment-1678940781)：
+
+```
+show heading: it =>  {
+  it
+  par()[#text(size:0.5em)[#h(0.0em)]]
+}
+```
+
+> 我最早在知乎看到一个解法，但是有副作用。。
