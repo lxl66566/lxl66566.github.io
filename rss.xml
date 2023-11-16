@@ -6,12 +6,12 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 15 Nov 2023 16:46:31 GMT</pubDate>
-    <lastBuildDate>Wed, 15 Nov 2023 16:46:31 GMT</lastBuildDate>
+    <pubDate>Thu, 16 Nov 2023 15:05:21 GMT</pubDate>
+    <lastBuildDate>Thu, 16 Nov 2023 15:05:21 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>推荐</category>
     <category>教程</category>
+    <category>推荐</category>
     <category>编程</category>
     <category>导航</category>
     <category>经历</category>
@@ -23,6 +23,34 @@
     <category>随笔</category>
     <category>作者</category>
     <category>博客</category>
+    <item>
+      <title>反向代理</title>
+      <link>https://absx.pages.dev/articles/reverse_proxy.html</link>
+      <guid>https://absx.pages.dev/articles/reverse_proxy.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">反向代理</source>
+      <description>反向代理</description>
+      <category>教程</category>
+      <category>推荐</category>
+      <pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 反向代理</h1>
+<p>一个系统可能有一堆服务器，一台服务器上可能运行着一堆服务。反代是一种中间件，将不同请求转发到不同服务上，兼顾了加密，负载均衡等。<a href="https://www.cloudflare.com/zh-cn/learning/cdn/glossary/reverse-proxy/" target="_blank" rel="noopener noreferrer">more</a></p>
+<h2> caddy</h2>
+<p>caddy 是一个更年轻的工具，提供<strong>非常简单</strong>的语法和自动 https。</p>
+<ul>
+<li><a href="https://caddyserver.com/docs/install" target="_blank" rel="noopener noreferrer">安装指南</a></li>
+<li>一些<a href="https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/" target="_blank" rel="noopener noreferrer">讨论</a></li>
+</ul>
+<p>能有多简单呢，例如我需要反代一个静态站点（我用于 vps 伪装），只需要在 <code>/etc/caddy/Caddyfile</code> 中写入：</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="blank">启动 caddy 服务</a>即可。</p>
+<p>这个配置文件可以将 http 自动重定向到 https，并且不用自己签证书。</p>
+<blockquote>
+<p>而我在 nginx 上得自己用 acme.sh 签证书，然后写<a href="https://github.com/lxl66566/config/blob/a3065d4b9797d43eb113e2932e9799f9b420c4f4/nginx.conf" target="_blank" rel="noopener noreferrer">一大坨的配置文件</a>，还得去看看 nginx 命令行用法，signal 有哪些，才能把我的网站搞好。</p>
+</blockquote>
+<p>反代也很简单，这里不展示了。总之，在初级配置、流量不算大的服务上，选 caddy 准没错。</p>
+<h2> nginx</h2>
+<p><s>Nginx 502 bad gateway 😦</s> nginx 是老牌反代大哥了，但是它其实不是今天&amp;这里的主角（）。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>浏览器</title>
       <link>https://absx.pages.dev/articles/browser.html</link>
@@ -79,7 +107,36 @@
 <li>自定义程度……例如我想隐去标题栏，并没有一个合理的配置项能够实现；需要手写 user css。自由度高，但是门槛也高。</li>
 <li>firefox 在 linux 上对字体的支持比较好，而且有硬件解码。</li>
 <li><a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3259" target="_blank" rel="noopener noreferrer">部分元素在 firefox 上显示错误</a>。</li>
+<li>不能直接停止脚本执行。</li>
 </ul>
+<h3> Vivaldi</h3>
+<p>卖点是 <em>隐私</em> 和 <em>快速强大</em> 的浏览器。</p>
+<ul>
+<li>集成了邮件、日历、日程、rss 订阅等功能。
+<ul>
+<li>邮件只能添加一个账号。。</li>
+</ul>
+</li>
+<li>在快速拨号中添加某些网址（例：<code>s.ecust.edu.cn</code>）会直接闪退？？
+<ul>
+<li>这个网址直接进会弹窗，<em><code>s.ecust.edu.cn</code> 想打开 <code>xdg-open</code></em>。但是在其他任意浏览器上不会出现这个提示。</li>
+<li>而且我<strong>无法禁用</strong>该网站的打开请求(?)。</li>
+<li>快速拨号会在后台打开网页，截图作为其封面。感觉是不做错误处理的锅。</li>
+</ul>
+</li>
+<li>软件默认不带有标题栏，<s>跟我的理念不谋而合</s>，但是也会带来问题：
+<ul>
+<li>在缩小时的显示效果差，按钮会重叠</li>
+<li>最小/大化和关闭的按钮作用区域太小，导致单击按钮边缘位置时不会出现预期的按钮点击行为，变为拖动窗口。
+<ul>
+<li>其实 kde 上任何不使用系统任务栏的软件都会出现此问题，参考 linux-qq。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3> nyxt</h3>
+<p>基于 webkit2gtk 的，号称无需使用鼠标的浏览器。试了一下，根本不可用，所有页面 <em>Page could not be loaded</em>。</p>
 <h2> 移动端</h2>
 <p>我对手机浏览器的要求也“不高”，能审查元素，能装扩展就行。当然如果够<strong>轻量</strong>，即使没有这些功能，我也会考虑将其作为第二浏览器安装到手机上。</p>
 <p>Android 端浏览器我经历了 <em>夸克 -&gt; Via -&gt; m 浏览器 -&gt; Kiwi Browser -&gt; 狐猴浏览器</em> 的转变，我自认为还是有一些心得的。</p>
@@ -941,7 +998,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h3> 系统设置</h3>
 <ol>
 <li>基础 alias<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li><a href="https://wiki.archlinuxcn.org/wiki/Swap#%E4%BA%A4%E6%8D%A2%E5%80%BC(Swappiness)" target="_blank" rel="noopener noreferrer">调整 swappiness</a> 至 5（我对写入量敏感，同时我拥有大 RAM）</li>
+<li>设置 <a href="https://wiki.archlinux.org/title/Zram#Using_zram-generator" target="_blank" rel="noopener noreferrer">zram swap</a>。</li>
 <li>设置 <code>/etc/fstab</code>
 <ul>
 <li><a href="/articles/ramdisk.html" target="blank">挂载 tmpfs</a>
@@ -1068,10 +1125,13 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h2> 驱动</h2>
 <h3> 显卡驱动</h3>
 <p>安装初期只看了一点<a href="https://arch.icekylin.online/guide/rookie/graphic-driver.html" target="_blank" rel="noopener noreferrer">第三方教程</a>。后面发现也要看 <a href="https://wiki.archlinux.org/title/NVIDIA" target="_blank" rel="noopener noreferrer">wiki</a>。</p>
-<p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显。至于安装什么驱动，<a href="#archlinux">抄教程</a>即可（但是不要抄后面的 <em>双显卡</em>）。检测驱动是否成功安装，可以执行 <code>nvidia-smi</code>。</p>
+<p>GPU：NVIDIA RTX 3050 Laptop + Intel 核显，装驱动<a href="#archlinux">抄教程</a>即可（但是不要抄后面的 <em>双显卡</em>）。检测驱动是否成功安装，可以执行 <code>nvidia-smi</code>。</p>
 <p>关于双显卡，混合方案用 <em>prime</em>，不要用 <em>optimus-manager</em>（具体去落絮搜）。想要用 N 卡运行的软件需要 <code>prime-run</code>，实测是需要的。至于怎么测，打开 <code>nvtop</code> 然后开游戏，看占用。</p>
+<p>以下设置可能并没有什么卵用，但是写在这里记录以下我的摸索过程。</p>
 <ol>
 <li><strong>不要安装</strong> <code>xf86-video-intel</code>，DRI 3 直接炸，DRI 2 在 election 下会花屏。</li>
+<li>设置<a href="https://wiki.archlinuxcn.org/wiki/PRIME#NVIDIA" target="_blank" rel="noopener noreferrer">在不使用的时候完全关闭 GPU</a>。</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/NVIDIA#DRM_%E5%86%85%E6%A0%B8%E7%BA%A7%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E8%AE%BE%E7%BD%AE" target="_blank" rel="noopener noreferrer">DRM 内核级显示模式设置</a></li>
 </ol>
 <h3> 音频驱动</h3>
 <p>默认是 <code>pulseaudio</code>，我尝试更换为 <code>pipewire</code>。</p>
@@ -1198,7 +1258,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <td style="text-align:center">easier, safer <code>rm</code></td>
 </tr>
 <tr>
-<td style="text-align:center"><code>htop</code></td>
+<td style="text-align:center"><code>glances</code> &amp; <code>htop</code></td>
 <td style="text-align:center">任务管理器，看性能</td>
 </tr>
 <tr>
@@ -3048,6 +3108,7 @@ If you do want to externalize this module explicitly add it to
 <li><a href="https://github.com/plctlab/weloveinterns/blob/master/how-do-we-rank-interns.md" target="_blank" rel="noopener noreferrer">plct - 我们如何对实习生进行能力分级评定</a></li>
 <li><a href="/gossip/numbbbbb.com/2016/07/04/20160704_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%89%E4%B8%AA%E6%9C%88%E5%85%A5%E9%97%A8%E6%97%A5%E8%AF%AD/" target="blank">我如何用三个月入门日语</a></li>
 <li><a href="https://hurricane618.me/2022/11/27/seven-years-of-my-life1/" target="_blank" rel="noopener noreferrer">我的人生七年（一）</a></li>
+<li><a href="https://roadmap.sh" target="_blank" rel="noopener noreferrer">roadmap.sh</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3073,186 +3134,6 @@ If you do want to externalize this module explicitly add it to
 <ol>
 <li><a href="https://blog.origincode.me/manjaro-controversies/" target="_blank" rel="noopener noreferrer">【譯】Manjaro 的爭議</a></li>
 </ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>遇到的问题</title>
-      <link>https://absx.pages.dev/articles/linux/problem.html</link>
-      <guid>https://absx.pages.dev/articles/linux/problem.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">遇到的问题</source>
-      <description>遇到的问题</description>
-      <category>经历</category>
-      <pubDate>Wed, 11 Oct 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 遇到的问题</h1>
-<h2> 如何减少问题</h2>
-<p>老生常谈：</p>
-<ol>
-<li><code>pacman -Syu</code> 若更新了内核，立刻重启</li>
-</ol>
-<p>踩了很多坑，总结了点通用经验：</p>
-<ol>
-<li>干点什么之前，先备份（打快照）</li>
-<li>干点什么之前，先去<a href="https://luoxu.archlinuxcn.org/" target="_blank" rel="noopener noreferrer">落絮</a>搜一下关键词，看看别人有没有踩坑</li>
-</ol>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>以下是正文，按时间倒序。</p>
-</div>
-<h2> waydroid 的问题</h2>
-<h3> 启动失败</h3>
-<p>安装 waydroid 不久后，<code>waydroid show-full-ui</code> 启动失败，命令行显示 <code>waydroid  [gbinder] Service manager /dev/anbox-binder has appeared</code>，但是却没有打开图形界面。</p>
-<p>重启后好了，再重启又炸了。</p>
-<p><a href="https://github.com/waydroid/waydroid/issues/136#issuecomment-949694932" target="_blank" rel="noopener noreferrer">某个 issue</a> 讲设置内核启动参数，试了一下，无效。</p>
-<p>此时想到要看 log，<code>waydroid log</code> 显示 <code>lxc-start: waydroid: ../src/lxc/conf.c: run_buffer: 322 Script exited with status 126</code>。</p>
-<p>没辙，然后 <code>sudo waydroid init -f</code> 重装。然后就能用了。</p>
-<h2> timeshift 删除快照</h2>
-<p>未解决！</p>
-<p>我已经转 snapper 了，想删除所有 timeshift 的快照并卸载。然而有一个快照在删除中出现错误（真的太傻逼了）。于是我找到了<a href="https://bbs.archlinux.org/viewtopic.php?id=266965" target="_blank" rel="noopener noreferrer">这个回答</a>，发现问题基本是一样的。于是只要手动删除子卷就行了。</p>
-<p>但是，我找不到子卷的位置。</p>
-<blockquote>
-<p>&gt; sudo timeshift --list<br>
-Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'</p>
-</blockquote>
-<p><code>/run/timeshift</code> 文件夹是空的。后来又找到了<a href="https://bbs.archlinux.org/viewtopic.php?id=287094" target="_blank" rel="noopener noreferrer">其他人相同的遭遇</a>。That's STICKY！</p>
-<h2> sddm 无法启动</h2>
-<p>这是我遇到的第二个恶性 bug<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">（第一个是 </a><a href="#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88">timeshift</a>）。</p>
-<p><a href="https://t.me/withabsolutex/1331" target="_blank" rel="noopener noreferrer">log</a>，具体来说是启动全绿，而后左上角光标卡住不闪烁。<code>Ctrl + Alt + F1</code> 后进入 tty，屏幕显示方才的内核全绿消息，光标闪烁，但仍然无法输入任何字符。</p>
-<p>我尝试：</p>
-<ol>
-<li>首先短按关机，用 archiso 挂载后 <code>arch-chroot</code> 进去，看日志，看内核消息，无相关报错。</li>
-<li>重新 <code>mkinitcpio -p linux</code>，重启无效。</li>
-<li>想到最后一条内核消息是 SDDM，绞尽脑汁，我今天干了啥呢，哦，我用了个 <code>nvidia-xconfig</code> 生成了 NVIDIA 配置。</li>
-<li>重新 <code>arch-chroot</code>，去 <code>/etc/X11</code> 里根据修改日期删除生成的两个 <code>.conf</code> 文件，重启，问题解决。</li>
-</ol>
-<p>哎，NVIDIA 害人不浅。。而且 archwiki 并未指出双显卡不能使用 <code>nvidia-xconfig</code>。</p>
-<h2> ubuntu 提示重启</h2>
-<p>在公家服务器上 <code>apt update &amp;&amp; apt install ...</code>，然后出现一个 tui 界面提示 <em>new kernel available</em>，让我选要重启的服务。。由于不知道重启之后会多出什么问题，我按两次 ESC 退出了。</p>
-<h2> timeshift 引发的血案</h2>
-<blockquote>
-<p>前情提要见<a href="#%E7%BD%91%E5%8D%A1%E9%97%AE%E9%A2%98">网卡问题</a>。</p>
-</blockquote>
-<ol>
-<li>使用 timeshift 回退到 20+days 前，重启，发现错误：<em>Failed to mount /boot</em>。<code>journalctl -xb</code> 查看，找到：<em>unknown filesystem type 'vfat'</em>。</li>
-<li>搜了一阵，<code>uname -a</code> 显示我内核是 6.5.5，而回退到的时间点正在用内核 6.5.3，猜测是内核版本冲突。</li>
-<li>去 archlinuxcn 群里问，果真，然后都在说是 timeshift 的锅。（本群又一个 timeshift 受害者）去 luoxu 找历史记录，出现回答 “<em>timeshift 不兼容 genfstab，生成出來的子卷掛載帶 subvolid= 參數的情況</em>” (<a href="https://t.me/archlinuxcn_group/2927677" target="_blank" rel="noopener noreferrer">ref</a>)</li>
-<li>照着 13 天前另一个人的一模一样的问题走了一遍老路。具体的，进入 archiso 安装盘：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ol>
-<p>其实在折腾过程中还遇到各种脑残小问题，排查花了一些时间，这里按下不表。</p>
-<blockquote>
-<p>你是遇到问题才想到恢复到快照吗，下次建议直接修遇到的问题，只要解决 1 个问题。回滚的话你现在要修原本遇到的问题和因为回滚遇到的问题，共 2 个问题（</p>
-<div style="text-align:right">
-<p>——@Senaruk, <a href="https://t.me/archlinuxcn_group/2951737" target="_blank" rel="noopener noreferrer">ref</a></p>
-</div>
-</blockquote>
-<h2> 网卡问题</h2>
-<p>连接网线使用时总是约每 5min 炸一次（以太网无 Internet 响应，回退到使用 wlan0）。去 Realtek 下载网卡驱动，README 让执行一个自动脚本，<code>sudo bash xxx.sh</code> 把我原来网卡驱动卸(禁用?)掉以后就报错强退了。。。（写的什么屎山，真不负责啊）于是没有 eth0 用了。</p>
-<p>搜索解法无果，想着用 timeshift 回退到爆炸前，但是快照打得不勤，只能回退到 20+days 前，于是就发生了<a href="#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88">timeshift 引发的血案</a>——</p>
-<h2> 安装 OSU</h2>
-<p>首先<a href="https://osu.ppy.sh/community/forums/topics/1248084?n=1" target="_blank" rel="noopener noreferrer">教程在这</a>。</p>
-<p>安装时显示没网，是我 daed 透明代理的锅，<code>curl google.com</code> 正常但是 ping 不动。把脚本那行 ping 验证注释掉就行了。后面安装可能会缺东西，照着提示装。</p>
-<p>装完后没有 <code>osu-wine</code> 被添加到环境变量，不能直接执行；<code>osu-wine</code> 脚本在 <code>git clone</code> 那个目录，使用绝对路径即可。</p>
-<p>这样用 wine 装好的 osu 游戏时只能跑到 170 帧（windows 上 1k+ fps），使用 <code>nvtop</code> 查看，果然跑在核显上，需要 <code>prime-run</code>。</p>
-<p>现在又出现了音频问题，pipewire 下无法正常播放，唉。</p>
-<h2> 更新破坏依赖</h2>
-<p>四个字，<strong>先删再装</strong>。参考<a href="https://bbs.archlinuxcn.org/viewtopic.php?id=10208" target="_blank" rel="noopener noreferrer">forum</a>，问题可能是有游离的软件包，也可能是上游改了依赖。</p>
-<p>相信我，这个问题以后还会经常出现。</p>
-<h2> nvim 剪贴板问题</h2>
-<p>我在 <code>option.lua</code> 中有设置 <code>vim.opt.clipboard = 'unnamedplus'</code>，之前运作挺好，但自从换了 X11 以后就不能再复制。</p>
-<p>解法也很简单，安装 <code>xclip</code> 即可。</p>
-<h2> yay 权限错误</h2>
-<p>使用 <code>yay</code> 安装 <code>wine-stable</code> 时出现了一些问题。</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中大多数是权限错误。但是我用 paru 安装就可以成功安装。</p>
-<p>结果发现是下载目录的 tmpfs 开了 <code>noexec</code> 导致的。而同时由于 paru 的 clonedir 是 <a href="/articles/linux/#%E8%AE%BE%E7%BD%AE" target="blank">bind to tmpfs</a> 的，没有加 <code>noexec</code>，于是可以正常使用。。。（乐</p>
-<h2> 输入法不显示</h2>
-<p>在<a href="#%E9%87%8D%E8%A3%85-ubuntu">安装了 kubuntu</a> 后，设置页默认不显示输入法。在语言页面一看，简体中文是残缺的，警告需要 Install Missing Packages。但是我无法直接在 kde ui 里直接下载安装，点击了过一阵子又是残缺警告（包括 kde ui 也没法更新软件）。</p>
-<p>解法是 <code>sudo apt install $(check-language-support)</code>。然后注销，再 login 就有输入法了。</p>
-<h2> 日文输入法</h2>
-<p>需要安装日文输入法，去 archwiki 日语页面看，选择了 <code>mozc</code>。然后我就直接 <code>yay -S mozc</code> 了，，装是装了，然而没法使用。。</p>
-<p>后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是<code>fcitx5-mozc-ut</code>）。然后就没啥问题了。</p>
-<blockquote>
-<p><s>吐槽一下，mozc 源码有 600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了编译源码的不便。</s></p>
-</blockquote>
-<h2> 重装 ubuntu</h2>
-<p>在别人的电脑上<s>乱搞</s>，装了 intel 核显驱动然后没有重启就 <code>sudo apt install vim</code>（是的，没有 vim）；然后 gnome 就已经开始出问题了，重启键消失了。这时候我还没有意识到，直接 <code>sudo reboot</code>，再次开机就内核加载失败了。。</p>
-<p>然后尝试修复。能进 tty，但什么都没有，ifconfig 没有，<code>iwconfig</code> or <code>ls /sys/class/net</code> 只显示 <code>lo</code>，也就是说找不到网卡了。。那没网我能干啥，<s>vi 进去修吗？</s></p>
-<p>还好没啥重要数据。授权后重装了 kubuntu。然后发现 kde 爆杀 gnome（二嘲）。</p>
-<p>有一说一，我不喜欢 ubuntu 这样臃肿的系统。<s><a href="https://t.me/archlinuxcn_group/2896194" target="_blank" rel="noopener noreferrer">其他观点</a>，看上下文</s> 但是是帮别人装，还是别搞什么 archlinux（哪天滚挂了都不会修）和 nixos（小众，问题解法少）了。</p>
-<blockquote>
-<p>出现此问题时我是纯正小白，能力不足.jpg</p>
-</blockquote>
-<h2> 中文设置问题</h2>
-<p>在语言中设置了中文，重启后 kde 有部分 ui 变为英文。</p>
-<p>原因：更改 <code>/etc/locale.gen</code> 后没有运行 <code>sudo locale-gen</code>。运行即可。</p>
-<h2> yay 换源问题</h2>
-<p>刚开始一直以为 yay 就是类似 pacman 的 extra，所以想要给 yay 换源。根据简中内网的傻逼教程（没错，此时还没上代理），换了个已经废弃的清华源（换源指令：<code>yay --aururl "https://..." --save</code>），发现用不了后换成了中科大源，结果报错：</p>
-<blockquote>
-<p>-&gt; 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br> * response decoding failed: invalid character '&lt;' looking for beginning of value</p>
-</blockquote>
-<p>并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">.</a></p><a class="footnote-anchor" id="footnote-ref2">
-<p>之后发现，在 <code>~/.config/yay/config.json</code> 中有一个 <code>aurrpcurl</code> 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 <code>yay --aururl "https://aur.archlinux.org" --save</code>，问题得解。如果一次不行就两次，一定能解(?)。</p>
-<p>ps. 群友提出了 <code>yay --aurrpcurl 'https://aur.archlinux.org' --save</code></p>
-</a><h2><a class="footnote-anchor" id="footnote-ref2"></a> umount failed</h2>
-<p><code>sudo umount /mnt/windows</code>，提示</p>
-<blockquote>
-<p>/mnt/windows: 目标忙</p>
-</blockquote>
-<p>估计有莫名奇妙的软件在占用。直接 <code>lsof /mnt/windows</code> 查占用，然后再 <code>kill -9 &lt;PID&gt;</code> 强关。</p>
-<h2> Windows 字体问题</h2>
-<p>根据<a href="https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#%E5%AE%89%E8%A3%85-windows-%E5%AD%97%E4%BD%93" target="_blank" rel="noopener noreferrer">教程</a>复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：</p>
-<blockquote>
-<p>cp: 对 './yuminl.ttf' 调用 stat 失败: 没有那个文件或目录</p>
-</blockquote>
-<p>后来使用 <code>yay -S ttf-ms-win11-auto-zh_cn</code> 安装字体也失败，中间报 warning 一大堆。</p>
-<p>没辙，暂时用 U 盘拷吧。</p>
-<h2> yay 安装问题</h2>
-<p>使用 <code>sudo pacman -S yay</code> 时一直报错，<code>signature is unknown trust</code> 类似的。怀疑是 pacman-keyring 问题，去前面 <a href="#%E6%9B%B4%E6%96%B0-pacman-keyring">更新 pacman-keyring</a> 试了好久，都不行。</p>
-<p>后面看教程，发现需要先安装 cn 源中的签名：<code>sudo pacman -S archlinuxcn-keyring</code>，然后才能正常使用。。（因为 pacman 用的是 archlinuxcn 源）</p>
-<h2> NetworkManager warning</h2>
-<p>设置自启服务 <code>systemctl enable --now NetworkManager</code> 时报错：</p>
-<blockquote>
-<p>... iwlwifi ... WRT: invalid buffer destination</p>
-</blockquote>
-<p>不过后面 <code>systemctl status NetworkManager</code> 发现服务已经启动了，也就没管了（所以问题还是没解决的，然而图形界面后开机自启看不到报错了）</p>
-<p>ps. 实际上 linux 下不明所以的 warning, error 好多的（详见 <code>journalctl</code> or <code>dmesg</code>），都是<strong>能用就别管</strong>原则</p>
-<h2> 挂载出错</h2>
-<p>非常低级的错误。。挂载时打错了指令，导致不同的分区被挂载到了同一个位置。不过检查得早，没有继续下一步就发现了问题。</p>
-<p>然后重新挂载，后来到 <em>生成 fstab 文件</em> 的时候又发现了怪事：<code>genfstab -U /mnt &gt; /mnt/etc/fstab</code> 输出了一大堆东西，我读了一下，原来把我挂载时做的所有操作（包括错误部分）都记录进去了。于是手动删除了冗余，后续重启工作正常。</p>
-<p>这个文件用于指示开机挂载。包括后来挂内存盘也是从这里改。</p>
-<h2> 分区格式化</h2>
-<p>使用 <code>cfdisk</code> 分好区，需要分别为每个分区进行格式化。然而我使用 nvme 盘而看的 sata 指令，对硬盘格式化而非对分区进行格式化（错误示范：<code>mkfs.vfat /dev/nvme1n1</code>），报错：</p>
-<blockquote>
-<p>Partitions or virtual mapping on device, not making file system. (use -I to override)</p>
-</blockquote>
-<p>然后尝试了 <code>-I</code>，结果分区全没了；对着 <code>nvme1n1</code> <code>mkswap</code>，分区又炸了（全盘格成了 swap）。最后才发现格式化是分区操作，而不是硬盘操作。。</p>
-<h2> 更新 pacman keyring</h2>
-<p>遇到问题：使用 pacman 安装时报错</p>
-<blockquote>
-<p>error: python-cairo: signature from "Caleb Maclennan <a href="mailto:alerque@archlinux.org">alerque@archlinux.org</a>" is unknown trust</p>
-</blockquote>
-<ol>
-<li>尝试执行 <code>pacman-key --refresh-keys</code>，但是效率感人</li>
-<li><a href="https://www.reddit.com/r/archlinux/comments/sorhb1/how_long_does_a_pacmankey_refreshkeys_take/" target="_blank" rel="noopener noreferrer">据此所述</a>：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>然而没什么软用，还是报相同错误</li>
-<li>更新 <code>archlinux-keyring</code> 本身：<code>sudo pacman -Sy archlinux-keyring</code>，问题解决</li>
-</ol>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>裝 <code>archlinux-keyring</code> 其實就是在跑 <code>pacman-key --populate archlinux</code></p>
-<div style="text-align:right">
-<p>——farseerfc 😂, <a href="https://t.me/archlinuxcn_group/2911740" target="_blank" rel="noopener noreferrer">src</a></p>
-</div>
-<p><s>所以这个问题还是挺玄学的，</s></p>
-</div>
-<h2> <a href="https://bbs.archlinuxcn.org/viewtopic.php?id=13402" target="_blank" rel="noopener noreferrer">libcuda.so.1 is not a symbolic link</a></h2>
-<p>Windows WSL 的锅，<a href="https://github.com/microsoft/WSL/issues/5548" target="_blank" rel="noopener noreferrer">解法</a>，但还有问题残留。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>个人定义需要使用 archiso 进 arch-chroot 的都叫恶性。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p>参考<a href="../mobile_setting#mipad-5">刷机</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 ]]></content:encoded>
     </item>
   </channel>
