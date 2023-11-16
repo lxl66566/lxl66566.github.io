@@ -54,6 +54,7 @@ export default sidebar({
 				"minimize_exe.md",
 				"cli_compress.md",
 				"voice2text.md",
+				"reverse_proxy.md",
 			],
 		},
 		{

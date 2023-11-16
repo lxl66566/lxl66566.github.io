@@ -78,7 +78,7 @@ umount /mnt/windows
    alias e=nvim
    alias l='exa --all --long --color-scale all --binary --header --time-style=long-iso'
    ```
-2. [调整 swappiness](<https://wiki.archlinuxcn.org/wiki/Swap#交换值(Swappiness)>) 至 5（我对写入量敏感，同时我拥有大 RAM）
+2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
 3. 设置 `/etc/fstab`
    - [挂载 tmpfs](../ramdisk.md)
      - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了，可以调整容量。
@@ -98,7 +98,7 @@ umount /mnt/windows
    - 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
 8. 设置 grub
    ```sh
-   sudo nvim /etc/default/grub
+   sudo -e /etc/default/grub
    # after edit
    sudo grub-mkconfig -o /boot/grub/grub.cfg
    ```
@@ -106,7 +106,7 @@ umount /mnt/windows
    - [多内核的设置](https://wiki.archlinuxcn.org/wiki/GRUB/技巧和窍门#多个启动条目)
 9. 修改 faillock attempt times
    ```sh
-   # sudo edit /etc/security/faillock.conf
+   # sudo -e /etc/security/faillock.conf
    deny = 10
    ```
 10. [安装 `xsettingsd`](https://wiki.archlinux.org/title/Xsettingsd) 并简单配置
@@ -239,11 +239,15 @@ timeshift 的 cron 定时备份默认是残废的。
 
 安装初期只看了一点[第三方教程](https://arch.icekylin.online/guide/rookie/graphic-driver.html)。后面发现也要看 [wiki](https://wiki.archlinux.org/title/NVIDIA)。
 
-GPU：NVIDIA RTX 3050 Laptop + Intel 核显。至于安装什么驱动，[抄教程](#archlinux)即可（但是不要抄后面的 _双显卡_）。检测驱动是否成功安装，可以执行 `nvidia-smi`。
+GPU：NVIDIA RTX 3050 Laptop + Intel 核显，装驱动[抄教程](#archlinux)即可（但是不要抄后面的 _双显卡_）。检测驱动是否成功安装，可以执行 `nvidia-smi`。
 
 关于双显卡，混合方案用 _prime_，不要用 _optimus-manager_（具体去落絮搜）。想要用 N 卡运行的软件需要 `prime-run`，实测是需要的。至于怎么测，打开 `nvtop` 然后开游戏，看占用。
 
+以下设置可能并没有什么卵用，但是写在这里记录以下我的摸索过程。
+
 1. **不要安装** `xf86-video-intel`，DRI 3 直接炸，DRI 2 在 election 下会花屏。
+2. 设置[在不使用的时候完全关闭 GPU](https://wiki.archlinuxcn.org/wiki/PRIME#NVIDIA)。
+3. [DRM 内核级显示模式设置](https://wiki.archlinuxcn.org/wiki/NVIDIA#DRM_内核级显示模式设置)
 
 ### 音频驱动
 

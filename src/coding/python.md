@@ -295,6 +295,43 @@ img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
 
 使用此内置函数进行高斯模糊将无法改变 sigma 的值。
 
+## django
+
+django 能够快速搭建一个网站。
+
+django 的前后端是深度耦合的，前端大概只能使用传统三件套（但是据说可以用 GraphQL 做中间层与框架式前端进行交互，没试过），后端自然就是 python 了。
+
+### 数据库
+
+> 由于我平常接触的不是 django 开发而是运维，所以这里主要讲讲数据库内容。
+
+django 做了 ORM。django 官方支持[这些数据库](https://docs.djangoproject.com/en/4.2/ref/databases/#databases)。
+
+首先进行数据库操作前需要选择 model（可以理解为选表）。具体看 `models.py` 的实现。
+
+```py
+from Djangoxxx.models import <module_name>
+```
+
+然后根据需求选出 object 或者 queryset.
+
+```py
+qs = <module_name>.objects.all()
+obj = <module_name>.objects.get(id='xxx')
+qs = <module_name>.objects.filter(FinishTime__range=[datetime(2023, 1, 1, 00, 00),datetime(2023, 11, 5, 00, 00)])  # 区间筛选 datetime
+```
+
+再进行进一步处理。
+
+```py
+c = qs.values_list('price', flat=True)  # 获取某一列(colume)
+print(c[0])             # 然后类似 list 形式操作取值
+obj = qs.get(id='xxx')  # 可以从 queryset 中取 object
+print(obj.id)           # 然后从 object 中取值
+```
+
+取了值就可以爱干啥干啥了。我不太习惯高层次的抽象，因此类似求和啥的虽然 django 也提供了 `django.db.models.Sum`，但有查文档的功夫早都写好了，还是自己做吧。
+
 ## 打包
 
 虽然我只使用过 [pyinstaller](#pyinstaller)，但是还有其他的打包工具，能够打出更小的体积与更高的性能：

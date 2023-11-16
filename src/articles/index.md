@@ -17,8 +17,8 @@ category:
 
 ## [手机相关](./mobile/index.md)
 
-1. [设置电脑（windows）](./computer_setting.md)
-2. [设置 VPS](./vps.md)
+1. [设置 windows](./computer_setting.md)
+2. [VPS 与服务器](./vps.md)
 
 ## 教程
 
@@ -30,6 +30,7 @@ category:
 6. [最小化二进制文件与 dll](./minimize_exe.md)
 7. [命令行压缩](./cli_compress.md)
 8. [音频转文字](./voice2text.md)
+9. [反向代理](./reverse_proxy.md)
 
 ## 推荐
 
@@ -39,4 +40,4 @@ category:
 4. [RAM Disk 横评](./ramdisk.md)
 5. [Android 手写笔记软件横评](./note.md)
 6. [浏览器大杂谈](./browser.md)
-<!-- 7. [Potplayer 设置](./potplayer_setting.md) -->
+7. <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->
