@@ -17,20 +17,24 @@ category:
 
 ## [手机相关](./mobile/index.md)
 
-1. [设置 windows](./computer_setting.md)
-2. [VPS 与服务器](./vps.md)
+1. [设置电脑（windows）](./computer_setting.md)
 
 ## 教程
 
 1. [TG（telegram）教程](./telegram.md)
 2. [ADB 教程与常用指令](./adb.md)
 3. [Markdown 教程](./markdown.md)
-4. [VPN 教程与推荐（加密）](./vpn.md)
-5. [Android 查看手机 cpu 指令集](./Android_ISA.md)
-6. [最小化二进制文件与 dll](./minimize_exe.md)
-7. [命令行压缩](./cli_compress.md)
-8. [音频转文字](./voice2text.md)
-9. [反向代理](./reverse_proxy.md)
+4. [Android 查看手机 cpu 指令集](./Android_ISA.md)
+5. [最小化二进制文件与 dll](./minimize_exe.md)
+6. [命令行压缩](./cli_compress.md)
+7. [音频转文字](./voice2text.md)
+
+### 代理相关
+
+1. [VPN 教程与推荐（加密）](./vpn.md)
+2. [设置 VPS](./vps.md)
+3. [反向代理](./reverse_proxy.md)
+4. [hysteria 协议的使用](./hysteria.md)
 
 ## 推荐
 

@@ -41,7 +41,7 @@ export default sidebar({
 		},
 		{
 			text: "经历",
-			children: ["linux", "computer_setting.md", "mobile", "vps.md"],
+			children: ["linux", "computer_setting.md", "mobile"],
 		},
 		{
 			text: "教程",
@@ -49,12 +49,14 @@ export default sidebar({
 				"telegram.md",
 				"adb.md",
 				"markdown.md",
-				"vpn.md",
 				"Android_ISA.md",
 				"minimize_exe.md",
 				"cli_compress.md",
 				"voice2text.md",
+				"vpn.md",
+				"vps.md",
 				"reverse_proxy.md",
+				"hysteria.md",
 			],
 		},
 		{
