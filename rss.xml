@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 17 Nov 2023 16:17:38 GMT</pubDate>
-    <lastBuildDate>Fri, 17 Nov 2023 16:17:38 GMT</lastBuildDate>
+    <pubDate>Sun, 19 Nov 2023 15:06:15 GMT</pubDate>
+    <lastBuildDate>Sun, 19 Nov 2023 15:06:15 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -80,13 +80,14 @@
 <li><a href="https://caddyserver.com/docs/install" target="_blank" rel="noopener noreferrer">安装指南</a></li>
 <li>一些<a href="https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/" target="_blank" rel="noopener noreferrer">讨论</a></li>
 </ul>
-<p>能有多简单呢，例如我需要反代一个静态站点（我用于 vps 伪装），只需要在 <code>/etc/caddy/Caddyfile</code> 中写入：</p>
+<p>能有多简单呢，例如我需要部署一个静态站点（用于 vps 伪装），只需要在 <code>/etc/caddy/Caddyfile</code> 中写入：</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="blank">启动 caddy 服务</a>即可。</p>
 <p>这个配置文件可以将 http 自动重定向到 https，并且不用自己签证书。</p>
 <blockquote>
 <p>而我在 nginx 上得自己用 acme.sh 签证书，然后写<a href="https://github.com/lxl66566/config/blob/a3065d4b9797d43eb113e2932e9799f9b420c4f4/nginx.conf" target="_blank" rel="noopener noreferrer">一大坨的配置文件</a>，还得去看看 nginx 命令行用法，signal 有哪些，才能把我的网站搞好。</p>
 </blockquote>
-<p>反代也很简单，这里不展示了。总之，在初级配置、流量不算大的服务上，选 caddy 准没错。</p>
+<p>反代也很简单，只需将 <code>file_server</code> 换成 <code>reverse_proxy :8000</code>（端口号）。如果要用自己的证书就加一句 <code>tls &lt;pem&gt; &lt;key&gt;</code> 即可。</p>
+<p>总之，在初级配置、流量不算大的服务上，选 caddy 准没错。</p>
 <h2> nginx</h2>
 <p><s>Nginx 502 bad gateway 😦</s> nginx 是老牌反代大哥了，但是它其实不是今天&amp;这里的主角（）。</p>
 ]]></content:encoded>
@@ -215,6 +216,9 @@
 <p>现在则是一个极其臃肿的、什么都集成但是大部分都要钱的傻逼玩意儿。</p>
 <h2> 结语</h2>
 <p>我相信未来会有更加友善高质量的浏览器出现。我也会继续积极尝试其他浏览器，1 丰富本博文的内容，2 满足我的尝新欲与好奇心。</p>
+<h2> 浏览器设置</h2>
+<p>我使用 <a href="/articles/ramdisk.html" target="blank">RAMDisk</a>，（在 windows 上）拿到浏览器第一件事就是改缓存位置。</p>
+<p>一般的 chromium 内核浏览器都能通过加 <code>--disk-cache-dir="Z:\123"</code> 启动参数更改缓存位置。Edge 浏览器也可以改注册表。</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
