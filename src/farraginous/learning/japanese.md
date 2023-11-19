@@ -54,6 +54,8 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 - 由..原材料制成，看得出用`で`，看不出用`から` ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=383))
 - にとって　 vs 　に対して：前者有站在...角度来讲的意思 ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=2151))
 - 兎　的量词为 羽 ([source](https://japanknowledge.com/articles/kze/column_kaz_02.html))
+- [ごくありふれた](https://ja.hinative.com/questions/8252283)
+- [いわゆる vs すなわち](https://ja.hinative.com/questions/23858327)
 
 ## 说两句
 

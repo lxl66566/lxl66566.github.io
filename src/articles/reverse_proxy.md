@@ -19,7 +19,7 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 - [安装指南](https://caddyserver.com/docs/install)
 - 一些[讨论](https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/)
 
-能有多简单呢，例如我需要反代一个静态站点（我用于 vps 伪装），只需要在 `/etc/caddy/Caddyfile` 中写入：
+能有多简单呢，例如我需要部署一个静态站点（用于 vps 伪装），只需要在 `/etc/caddy/Caddyfile` 中写入：
 
 ```
 <域名> {
@@ -34,7 +34,9 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 
 > 而我在 nginx 上得自己用 acme.sh 签证书，然后写[一大坨的配置文件](https://github.com/lxl66566/config/blob/a3065d4b9797d43eb113e2932e9799f9b420c4f4/nginx.conf)，还得去看看 nginx 命令行用法，signal 有哪些，才能把我的网站搞好。
 
-反代也很简单，这里不展示了。总之，在初级配置、流量不算大的服务上，选 caddy 准没错。
+反代也很简单，只需将 `file_server` 换成 `reverse_proxy :8000`（端口号）。如果要用自己的证书就加一句 `tls <pem> <key>` 即可。
+
+总之，在初级配置、流量不算大的服务上，选 caddy 准没错。
 
 ## nginx
 
