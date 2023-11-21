@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 19 Nov 2023 15:06:15 GMT</pubDate>
-    <lastBuildDate>Sun, 19 Nov 2023 15:06:15 GMT</lastBuildDate>
+    <pubDate>Tue, 21 Nov 2023 12:16:34 GMT</pubDate>
+    <lastBuildDate>Tue, 21 Nov 2023 12:16:34 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -61,6 +61,8 @@
 <p>我在 linux 上使用 <a href="/articles/linux/install_and_config.html#daed" target="blank">daed</a>，然而其<a href="https://github.com/daeuniverse/dae/issues/48" target="_blank" rel="noopener noreferrer">尚未支持且不打算支持 hysteria 协议</a>。而官方使用样例的黑窗口问题虽然可以写一个 service 绕过，但是没有透明代理会比较难受（官方透明代理教程是相对复杂的，包括创建新 user，写路由规则和 iptables）。</p>
 <h3> Android</h3>
 <p>NekoBox (v1.2.9) 号称支持，实测不可用。</p>
+<h3> 总结</h3>
+<p>这是我第一次直接写配置文件部署一个协议。任何协议都吃第三方适配，hysteria 的劣势还是不小的，并且在代理广泛使用的大陆效果并不佳。然而在 TUIC 删库后，hysteria 仍然具有一定竞争力。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -987,6 +989,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li><a href="https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html" target="_blank" rel="noopener noreferrer">btrfs 元数据满了怎么办</a></li>
 <li>A chapter of <a href="https://github.com/asukaminato0721/PKGBUILD-cookbook/blob/master/launch.md" target="_blank" rel="noopener noreferrer">PKGBUILD-cookbook</a></li>
 <li><a href="https://www.eaimty.com/2020/zfs-file-system/" target="_blank" rel="noopener noreferrer">ZFS ── 瑞士军刀般的文件系统</a></li>
+<li><a href="https://www.ducksoft.site/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/fuck-hdf5-compression-using-btrfs.html" target="_blank" rel="noopener noreferrer">使用 btrfs 提升 HDF5 透明压缩百倍性能</a></li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1279,7 +1282,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 </tr>
 <tr>
 <td style="text-align:center"><code>fd</code> &amp; <code>plocate</code></td>
-<td style="text-align:center">查找，<code>find</code> 的代替</td>
+<td style="text-align:center">查找，faster <code>find</code></td>
 </tr>
 <tr>
 <td style="text-align:center"><code>tldr</code></td>
