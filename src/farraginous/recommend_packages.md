@@ -360,21 +360,17 @@ _建议在设置中开启开机自启。_
 过滤 Google & 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist[^3]。
 [^3]: 也可以用用[我的](<https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt>)；但是很抱歉，目前仓库是 private
 
-### [哔哩哔哩自动连播](https://greasyfork.org/zh-CN/scripts/408516-%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%92%AD)
-
-跳过 bilibili 视频末尾的充电鸣谢 _（对 B 站重度使用者还是很推荐的）_
-
-### [三相之力指示器](https://greasyfork.org/zh-CN/scripts/451150-新-三相之力指示器)
-
-三相之力！B 站评论区自动标注三相玩家。
-
 ### [全平台自动答题脚本](https://greasyfork.org/zh-CN/scripts/451356-万能-全平台自动答题脚本)
 
-大学生的学习通答题神器。
+大学生的学习通答题神器，最好把匹配改下，不然在各种地方都会执行。。。
 
-### [Bilibili AntiBV](https://greasyfork.org/zh-CN/scripts/398499-bilibili-antibv)
+### B 站相关
 
-BV 自动转 AV
+- [Bilibili AntiBV](https://greasyfork.org/zh-CN/scripts/398499-bilibili-antibv)：BV 自动转 AV
+- [三相之力指示器](https://greasyfork.org/zh-CN/scripts/451150-新-三相之力指示器)：三相之力！B 站评论区自动标注三相玩家。
+- [哔哩哔哩自动连播](https://greasyfork.org/zh-CN/scripts/408516-哔哩哔哩自动连播)：跳过 bilibili 视频末尾的充电鸣谢
+- [Bilibili live enhance](https://greasyfork.org/zh-CN/scripts/474523-bilibili-live-enhance)：夹带私货，本人写的直播增强。
+- [一些改善未登录下观看体验的脚本](https://greasyfork.org/zh-CN/users/675901-dd1969)
 
 ## 一些过时的推荐
 

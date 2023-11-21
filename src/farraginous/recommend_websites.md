@@ -58,6 +58,7 @@ tag:
 |[Litterbox](https://litterbox.catbox.moe/)|不限|未知|3days|1GB|特殊限制|
 |[GoFile](https://gofile.io/welcome)|不限|不限|[10days](https://gofile.io/faq)|不限|-|
 |[ufile](https://ufile.io/)|10GB|1MB/s|不限|5GB|-|
+|[mediafire](https://www.mediafire.com)|10GB|不限|不限|4GB|-|
 
 ## AI 工具
 

@@ -19,7 +19,9 @@ GNU Octave 是一个开源科学计算语言，拥有与 matlab 极其相似的�
 1. 小，本体安装后只有 64.07 MiB。（version 8.4.0）
 2. 模块化，例如抽离了信号处理的 signal 包。
 
-## 安装
+## 开发环境/工具
+
+### 安装
 
 在 archlinux 上安装。
 
@@ -37,7 +39,19 @@ paru -S octave-signal
 
 使用前需要在 octave 命令行 load：`pkg load signal`。
 
-## 开发环境
+### 退化至 matlab
+
+很遗憾，octave 并不能完全替代 matlab：可能你需要使用 Simulink，或者你的代码使用了不兼容的语法，并会被放到 matlab 中进行检验。这时候可以使用 [matlab online](https://matlab.mathworks.com/) / Simulink online。
+
+使用学生邮箱注册即可使用（至少我校的学生邮箱是有效的）。访问比较慢，在敏感时期可能会被墙，建议科学上网。
+
+matlab online 的使用体验肯定是很差的，非必要的话尽量不用。
+
+1. 浏览器本身性能不足，matlab 网页优化也差。
+2. 联网计算延迟极高，**特别是在处理 figure 的时候**。
+3. 云盘垃圾。matlab 云盘甚至不记 cookie，每次进页面都需要登录。
+
+### IDE
 
 不论 Octave 还是 matlab，自带的代码编辑器都是**一坨大便**。
 
@@ -55,14 +69,6 @@ paru -S octave-signal
 
 如果需要 runner，可以安装 `Octave Language` 插件，但是使用 runner，画出的 figure 会闪退。因此我还是选择使用 Octave 本体运行代码，麻烦自己的右手动下鼠标。
 
-## 退化至 matlab
+### 工具
 
-很遗憾，octave 并不能完全替代 matlab：可能你需要使用 Simulink，或者你的代码使用了不兼容的语法，并会被放到 matlab 中进行检验。这时候可以使用 [matlab online](https://matlab.mathworks.com/) / Simulink online。
-
-使用学生邮箱注册即可使用（至少我校的学生邮箱是有效的）。访问比较慢，在敏感时期可能会被墙，建议科学上网。
-
-matlab online 的使用体验肯定是很差的，非必要的话尽量不用。
-
-1. 浏览器本身性能不足，matlab 网页优化也差。
-2. 联网计算延迟极高，**特别是在处理 figure 的时候**。
-3. 云盘垃圾。matlab 云盘甚至不记 cookie，每次进页面都需要登录。
+- [function list](https://octave.sourceforge.io/list_functions.php)：查函数

@@ -9,6 +9,14 @@ tag:
 
 # Java
 
+::: details 暴论
+
+入门 java，远离 java。
+
+DBeaver 烂，JB 家一堆烂，Minecraft 烂，我接触到的 java 写成的玩意总能给我带来不悦。
+
+:::
+
 由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。
 
 在我看来 Java 的优势是跨平台，代码容易维护（方便 t 人）。但是作为带 GC 的语言，Java 的性能一般（强类型打不过弱类型）；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（其实某些方面可能还算优点），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（不过是通病，python 群也一样</span>。java 学到后期全是框架，不好玩，没意思（

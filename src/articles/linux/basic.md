@@ -141,3 +141,4 @@ _.desktop file_ 保存在 `~/.local/share/applications`。
 3. [btrfs 元数据满了怎么办](https://blog.lilydjwg.me/2023/7/25/btrfs-metadata-full.216670.html)
 4. A chapter of [PKGBUILD-cookbook](https://github.com/asukaminato0721/PKGBUILD-cookbook/blob/master/launch.md)
 5. [ZFS ── 瑞士军刀般的文件系统](https://www.eaimty.com/2020/zfs-file-system/)
+6. [使用 btrfs 提升 HDF5 透明压缩百倍性能](https://www.ducksoft.site/深度学习/fuck-hdf5-compression-using-btrfs.html)

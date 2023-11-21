@@ -9,7 +9,17 @@ tag:
 
 # 文章分享
 
-我的外部文章分享。请尽量使用科学上网，若链接失效，请默哀。排名不分先后。
+这里是外部文章分享。请尽量使用科学上网，若链接失效，请默哀。
+
+## 强推
+
+能很大程度上改变自身观念的文章。
+
+1. [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual/)
+
+## 一般
+
+能拓宽知识面，或者当故事看的文章。
 
 1. [波士顿漫游指南](https://blog.zxh.io/post/2022/01/29/travel-to-boston/)
 2. [日本移居指南](https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso) | [bak](https://ctreaderbot.vercel.app/a/D05AAicCD7-5pMw.html)
@@ -17,4 +27,4 @@ tag:
 4. [优等生的无声危机：为好成绩付出的代价](https://zhuanlan.zhihu.com/p/636293259) | [bak](https://ctreaderbot.vercel.app/a/BkoThTPPDRD4Szg.html)
 5. [【404 文库】大象公会 2015—2021 年 66 篇微信文章合集](https://chinadigitaltimes.net/chinese/668430.html)（注意时效）
 6. [是理想也是现实：一个清华博士的非洲选择｜文化纵横](https://telegra.ph/当一位清华本硕博放弃北京中产去往非洲-10-07)
-7. [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual/)
+7. [为什么固态会掉盘？著名的 30 分钟大法修复是什么原理？](https://zhuanlan.zhihu.com/p/57617932)

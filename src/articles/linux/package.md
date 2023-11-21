@@ -97,7 +97,7 @@ sudo systemd-nspawn -D container  # 进入容器
 | :-: | :-: |
 |`fishshell` + `starship`|[shell](#shell) 及其外观|
 |`ripgrep` / [`skim`](https://github.com/lotabout/skim) / fzf|`grep` 的代替|
-|`fd` & `plocate`|查找，`find` 的代替|
+|`fd` & `plocate`|查找，faster `find`|
 |`tldr`|`man` 的代替|
 |`fex`|`cut` 的代替|
 |`exa`|[`ls` 的代替](#exa)|

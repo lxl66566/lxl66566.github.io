@@ -37,15 +37,29 @@ Rust 是一门系统编程语言，专注于安全，尤其是并发安全，支
 
 ### 如何学习
 
-[官网](https://www.rust-lang.org/zh-CN/)有详细的 QA 与你所需要的一切。以下陈述个人想法：
+[官网](https://www.rust-lang.org/zh-CN/)有详细的 QA 与你所需要的一切。资料方面，rust 的学习资料非常多，列举几个：
 
-对于新手而言，[tour of rust](https://tourofrust.com/00_zh-cn.html)，[rust by example](https://doc.rust-lang.org/rust-by-example/index.html)可能是不错的选择。
+- [Rust 语言圣经](https://course.rs/about-book.html)：圣经，**文风**上乘，**质量**高。
+- [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式。
+- [rust by example](https://doc.rust-lang.org/rust-by-example/index.html)：注重例子。
 
-我在学习初期，先阅读 rust 教程（官网），然后尝试用 Rust 去解决 leetcode 上的一些题目 <span class="heimu" title="你知道的太多了">由于 rust 的 I/O 较为麻烦，leetcode 能免去 I/O 之苦</span> ，去搜索题目一些的子问题，了解解决方法。最后，去[官方文档](https://doc.rust-lang.org/std/index.html)进一步了解该解决方法的详细信息。
+我在学习初期，先读资料，然后尝试用 Rust 去解 leetcode 上的[^1]题目，看题解以后去[文档](https://doc.rust-lang.org/std/index.html)进一步搜关键字和用法。中期就该做点项目了，遇到不会的就去 [Telegram 群](https://t.me/rust_zh)问。
 
-有机会还是写点项目，遇到不会的就去 [Telegram 群](https://t.me/rust_zh)问，是提升比较快的办法。
+[^1]: 由于 rust 的 I/O 较为麻烦，leetcode （比起 _洛谷_ 等）能免去 I/O 之苦。
 
-其他资料：[Rust 语言圣经](https://course.rs/about-book.html) | [Rust new libraries and applications](https://lib.rs/new)
+其他资料：
+
+- [Rust new libraries and applications](https://lib.rs/new)
+
+## 开发环境
+
+rust 的开发环境配置非常简单。在 windows 上可以使用官方脚本一行安装 rustup 及 rust。linux 就直接用包管理器。
+
+然后我使用 [vscode](./vscode.md) 作为 IDE。只需安装 `rust-analyzer` 插件即可。
+
+还有一些能够优化开发体验的非必选项：
+
+1. [使用 clippy](https://code.visualstudio.com/docs/languages/rust#_linting)
 
 ## 语言基础
 
