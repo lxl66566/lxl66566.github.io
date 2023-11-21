@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 21 Nov 2023 12:16:34 GMT</pubDate>
-    <lastBuildDate>Tue, 21 Nov 2023 12:16:34 GMT</lastBuildDate>
+    <pubDate>Tue, 21 Nov 2023 12:20:30 GMT</pubDate>
+    <lastBuildDate>Tue, 21 Nov 2023 12:20:30 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -251,11 +251,21 @@
 <li>小，本体安装后只有 64.07 MiB。（version 8.4.0）</li>
 <li>模块化，例如抽离了信号处理的 signal 包。</li>
 </ol>
-<h2> 安装</h2>
+<h2> 开发环境/工具</h2>
+<h3> 安装</h3>
 <p>在 archlinux 上安装。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果要做信号处理相关工作，需要使用包管理器<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">安装 signal 包(AUR)：</a></p><a class="footnote-anchor" id="footnote-ref1">
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>使用前需要在 octave 命令行 load：<code>pkg load signal</code>。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 开发环境</h2>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> 退化至 matlab</h3>
+<p>很遗憾，octave 并不能完全替代 matlab：可能你需要使用 Simulink，或者你的代码使用了不兼容的语法，并会被放到 matlab 中进行检验。这时候可以使用 <a href="https://matlab.mathworks.com/" target="_blank" rel="noopener noreferrer">matlab online</a> / Simulink online。</p>
+<p>使用学生邮箱注册即可使用（至少我校的学生邮箱是有效的）。访问比较慢，在敏感时期可能会被墙，建议科学上网。</p>
+<p>matlab online 的使用体验肯定是很差的，非必要的话尽量不用。</p>
+<ol>
+<li>浏览器本身性能不足，matlab 网页优化也差。</li>
+<li>联网计算延迟极高，<strong>特别是在处理 figure 的时候</strong>。</li>
+<li>云盘垃圾。matlab 云盘甚至不记 cookie，每次进页面都需要登录。</li>
+</ol>
+<h3> IDE</h3>
 <p>不论 Octave 还是 matlab，自带的代码编辑器都是<strong>一坨大便</strong>。</p>
 <ul>
 <li>双方的编辑器都无法自动补全括号。</li>
@@ -275,15 +285,10 @@
 <p>因此用 <a href="/coding/vscode.html" target="blank">vscode</a> 就好了。<s>（vscode 宇宙编辑器！）</s> 安装插件：<code>Octave</code>、<code>Octave Formatter</code>，如果提示没有权限执行 Formatter 脚本就自己 <code>chmod +x</code> 一下。</p>
 <p>需要注意的是，这些插件只能提供高亮和 formatter，没有内嵌 linter（除非把 matlab 插件薅来用（</p>
 <p>如果需要 runner，可以安装 <code>Octave Language</code> 插件，但是使用 runner，画出的 figure 会闪退。因此我还是选择使用 Octave 本体运行代码，麻烦自己的右手动下鼠标。</p>
-<h2> 退化至 matlab</h2>
-<p>很遗憾，octave 并不能完全替代 matlab：可能你需要使用 Simulink，或者你的代码使用了不兼容的语法，并会被放到 matlab 中进行检验。这时候可以使用 <a href="https://matlab.mathworks.com/" target="_blank" rel="noopener noreferrer">matlab online</a> / Simulink online。</p>
-<p>使用学生邮箱注册即可使用（至少我校的学生邮箱是有效的）。访问比较慢，在敏感时期可能会被墙，建议科学上网。</p>
-<p>matlab online 的使用体验肯定是很差的，非必要的话尽量不用。</p>
-<ol>
-<li>浏览器本身性能不足，matlab 网页优化也差。</li>
-<li>联网计算延迟极高，<strong>特别是在处理 figure 的时候</strong>。</li>
-<li>云盘垃圾。matlab 云盘甚至不记 cookie，每次进页面都需要登录。</li>
-</ol>
+<h3> 工具</h3>
+<ul>
+<li><a href="https://octave.sourceforge.io/list_functions.php" target="_blank" rel="noopener noreferrer">function list</a>：查函数</li>
+</ul>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
