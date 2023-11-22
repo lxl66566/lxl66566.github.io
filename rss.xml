@@ -6,10 +6,11 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 22 Nov 2023 08:46:33 GMT</pubDate>
-    <lastBuildDate>Wed, 22 Nov 2023 08:46:33 GMT</lastBuildDate>
+    <pubDate>Wed, 22 Nov 2023 16:18:52 GMT</pubDate>
+    <lastBuildDate>Wed, 22 Nov 2023 16:18:52 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>学习</category>
     <category>教程</category>
     <category>推荐</category>
     <category>编程</category>
@@ -18,11 +19,67 @@
     <category>主张</category>
     <category>生活</category>
     <category>评价</category>
-    <category>学习</category>
     <category>爱好</category>
     <category>随笔</category>
     <category>作者</category>
     <category>博客</category>
+    <item>
+      <title>English learning</title>
+      <link>https://absx.pages.dev/farraginous/learning/english.html</link>
+      <guid>https://absx.pages.dev/farraginous/learning/english.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">English learning</source>
+      <description>English learning</description>
+      <category>学习</category>
+      <pubDate>Wed, 22 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> English learning</h1>
+<details class="hint-container details"><summary>往事</summary>
+<p>小学时由于补习的关系英语不错，当过课代表。</p>
+<p>初高中（初三 - 高二）的英语老师挺糟的，连带着我也讨厌起这个学科了。当时英语上课不听，作业不写，想着“反正以后我不出国，学英语顶多读点文档，学那么好干啥”，所有的学习只有刷点题，背点单词而已。于是高考英语比起其他学科落后一大档次，大拖后腿。</p>
+<p>即使到了大一，英语学习也不长进，学习只为了应付考试，加之疫情网课，更加肆无忌惮。</p>
+<p>大二时清楚了学英语的必要性，但是即使想要说服自己多阅读，看到满屏英文文档还是忍不住点翻译键。之后喜提第一次六级不过。</p>
+<p>由此可见直到大三，所有英语课结束，才想起来要好好学英语的我有多蠢。有点想回去扇自己巴掌。</p>
+</details>
+<h2> 学习方法</h2>
+<ul>
+<li>我从来读英语都是<strong>弱语法，重单词</strong>。我认为语感可以一定程度上弥补语法。</li>
+<li>关于背单词：
+<ul>
+<li>高中把阅读看不懂的单词查完写本子上，每天随机抽，会了以后就划掉。因为不能自由使用电子设备，整个高中英语课都在做这些效率低下的事。</li>
+<li>大学后自己写了<a href="#wordsreciter">背词器</a>，其实就是高中单词本的电子版，效果很差。</li>
+<li>看别人博客推荐 <a href="#anki">anki</a>，然后断断续续试了半年（没有动力），最后用它作为主力了。这玩意根据遗忘曲线进行复习，效果不错。</li>
+</ul>
+</li>
+<li>看过一些文章</li>
+</ul>
+<h2> 资源与工具</h2>
+<h3> <a href="https://github.com/ankitects/anki" target="_blank" rel="noopener noreferrer">anki</a></h3>
+<p>anki 是一个记忆工具，不止能用于英语，可以是任意语言，任意知识点的记忆。它可以：</p>
+<ul>
+<li>按照遗忘曲线复习</li>
+<li>多设备同步进度</li>
+<li>分享牌组</li>
+</ul>
+<p><a href="https://ankiweb.net/shared/info/772249450" target="_blank" rel="noopener noreferrer">这里</a>是我自制的牌组，包含英语和日语。释义有手动加的，有爬虫爬的，有 github 资源汇总得来的。反正是个大杂烩，当然里面也细分了，你可以自取所需。</p>
+<p>anki 的云同步裸连很不稳，可能需要科学上网。</p>
+<p>请开启 V3 排程获取更佳体验。（新版好像多平台都内置了，以前需要手动导入 <a href="https://github.com/open-spaced-repetition/fsrs4anki" target="_blank" rel="noopener noreferrer">fsrs</a> 脚本）</p>
+<h3> <a href="https://github.com/lxl66566/wordsreciter" target="_blank" rel="noopener noreferrer">wordsreciter</a></h3>
+<p>我自己写的背词器，从 python 版本重写到 C++/Qt 版本。由于我选择 anki，它的作用没有那么大，但也不是完全没用：</p>
+<ul>
+<li>可以用快捷键调出，方便快速记录单词。</li>
+<li>可以用爬虫自动爬取已记录的单词的释义，并导入 anki。</li>
+</ul>
+<h3> 视频资源</h3>
+<p>视频资源主要是练习听力的（大概）。</p>
+<p>看了几个 youtube 英语老师推荐，只能说大众的口味跟我不是很合得来，而且跟着老师学，知识密度比较低。大多数老师会在视频中推销各种网站，有的能在短短几分钟之内推销好几次。可以理解，但我不能接受。</p>
+<ul>
+<li><a href="https://www.youtube.com/@AccurateEnglish" target="_blank" rel="noopener noreferrer">AccurateEnglish</a>：一个不打广告的老师（难得），语速很慢很初心者向。</li>
+</ul>
+<p>我想，与其去看专门的英语教学，不如直接看我原本就感兴趣的英文流内容。于是乎，这里是我的一些拙见：</p>
+<ul>
+<li><a href="https://www.youtube.com/@ThePrimeTimeagen" target="_blank" rel="noopener noreferrer">ThePrimeTime</a>：锐评他人视频/文章，编程领域。</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>Hysteria</title>
       <link>https://absx.pages.dev/articles/hysteria.html</link>
@@ -3149,24 +3206,6 @@ If you do want to externalize this module explicitly add it to
 </section>
 ]]></content:encoded>
       <enclosure url="https://absx.pages.dev/images/blog/withvuepress2/fucksmms.png" type="image/png"/>
-    </item>
-    <item>
-      <title>鲜鸡汤</title>
-      <link>https://absx.pages.dev/gossip/chicken_soup.html</link>
-      <guid>https://absx.pages.dev/gossip/chicken_soup.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">鲜鸡汤</source>
-      <description>鲜鸡汤</description>
-      <category>主张</category>
-      <pubDate>Wed, 11 Oct 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 鲜鸡汤</h1>
-<p>如果你我觉得生活太安逸颓废，请来碗鲜鸡汤吧。动力++</p>
-<ol>
-<li><a href="https://github.com/plctlab/weloveinterns/blob/master/how-do-we-rank-interns.md" target="_blank" rel="noopener noreferrer">plct - 我们如何对实习生进行能力分级评定</a></li>
-<li><a href="/gossip/numbbbbb.com/2016/07/04/20160704_%E6%88%91%E5%A6%82%E4%BD%95%E7%94%A8%E4%B8%89%E4%B8%AA%E6%9C%88%E5%85%A5%E9%97%A8%E6%97%A5%E8%AF%AD/" target="blank">我如何用三个月入门日语</a></li>
-<li><a href="https://hurricane618.me/2022/11/27/seven-years-of-my-life1/" target="_blank" rel="noopener noreferrer">我的人生七年（一）</a></li>
-<li><a href="https://roadmap.sh" target="_blank" rel="noopener noreferrer">roadmap.sh</a></li>
-</ol>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
