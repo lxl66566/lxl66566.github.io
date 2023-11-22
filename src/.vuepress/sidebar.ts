@@ -116,6 +116,7 @@ export default sidebar({
 			link: "/farraginous/learning/",
 			children: [
 				"japanese.md",
+				"english.md",
 				"ulpb.md",
 				"typst.md",
 				"physics.md",

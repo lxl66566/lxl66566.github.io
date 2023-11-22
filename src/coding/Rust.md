@@ -308,18 +308,12 @@ cargo 的测试，与我的设想还是差了不止一点的。。首先看看[�
 
 ## GUI
 
-我使用 [native-windows-gui](https://github.com/gabdube/native-windows-gui) 作为我的 windows 开发轻量级 GUI。
+一些 GUI 框架：
 
-### install
+- [slint](https://github.com/slint-ui/slint)
+- [native-windows-gui](https://github.com/gabdube/native-windows-gui)
 
-```batch
-cargo add native-windows-derive
-cargo add native-windows-gui
-```
-
-~~待续.~~
-
-~~ps. 会前端可以考虑 tauri~~
+我早期尝试过一下 iced，用不明白，不用了。
 
 ## external
 

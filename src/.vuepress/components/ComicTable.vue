@@ -16,7 +16,7 @@
               <nhentai :id="row.id" />
             </span>
             <span v-if="row.otherlink">
-              <a :href="row.otherlink">{{ row.id }}</a>
+              <a :href="row.otherlink" target="_blank">{{ row.id }}</a>
             </span>
             <span v-if="row.bak"> | <a :href="row.bak">bak</a></span>
             <OrderBadge v-if="row.order" :order="row.order" />

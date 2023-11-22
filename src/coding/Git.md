@@ -266,6 +266,14 @@ git checkout [commit_hash] -- <path/to/file>  # 从某个 HEAD 指针恢复文�
 git reset --hard <HEAD pointer>    # 强制重置到某 commit，重置所有更改，但不删除新增文件
 ```
 
+### 下载
+
+```sh
+git clone <gitrepo>  # 在当前目录下创建文件夹并克隆完整仓库
+git clone <gitrepo> --depth 1 # 仅克隆最新提交，减少大小
+git clone <gitrepo> --filter=tree:0 # 与上面一个大小相当，但是保留了提交 hash 记录
+```
+
 ### 变基
 
 变基(rebase) 能修改提交之间的关系，是一个很强大的命令。git 提供了一个简单的操作：`git rebase -i` （即 `--interactive`，交互式），只需要按照注释操作即可。需要使用编辑器[^6]。
