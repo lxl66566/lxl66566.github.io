@@ -11,11 +11,15 @@
       </thead>
       <tbody>
         <tr v-for="row in sortedRows" :key="row.id">
-          <td v-if="!row.otherlink">
-            <nhentai :id="row.id" :bak="row.bak" />
-          </td>
-          <td v-if="row.otherlink">
-            <a :href="row.otherlink">{{ row.id }}</a>
+          <td>
+            <span v-if="!row.otherlink">
+              <nhentai :id="row.id" />
+            </span>
+            <span v-if="row.otherlink">
+              <a :href="row.otherlink">{{ row.id }}</a>
+            </span>
+            <span v-if="row.bak"> | <a :href="row.bak">bak</a></span>
+            <OrderBadge v-if="row.order" :order="row.order" />
           </td>
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
@@ -54,7 +58,12 @@ const data = [
   { id: "434419", aScore: 3.4, bScore: 3.6 },
   { id: "451160", aScore: 5.5, bScore: 2 },
   { id: "415522", aScore: 9.9, bScore: 8.9, info: "#毛玉" },
-  // next: 4.22
+  { id: "253872", aScore: 3.8, bScore: 6.8, info: "#强迫", order: 4, bak: "https://telegra.ph/C92-カナリヤバいカナリヤ-まゃ吾郎-アルマがアレコレされるのを眺める本4-神羅万象-中国翻訳-10-19" },
+  { id: "248121", aScore: 9, bScore: 6, info: "#猫娘", order: 1, bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-中国語-DL版-10-19" },
+  { id: "254892", aScore: 5.3, bScore: 7.4, bak: "https://telegra.ph/ぬんぬ-それいけパン工場-COMIC-BAVEL-2018年7月号-中国翻訳-DL版-10-19" },
+  { id: "477905", aScore: 6, bScore: 4.3, info: "#兄妹", order: 5, bak: "https://telegra.ph/C101-NANACAN-ななかまい-妹調教日記and-more5-中国翻訳-10-16-2" },
+  { id: "(ex)", aScore: 9.7, bScore: 1.5, info: "#合集 #蔚蓝档案 #全彩", otherlink: "https://exhentai.org/g/2709897/647222d154/", bak: "https://telegra.ph/殿宮-蔚藍檔案相关翻译合集-10-18-2" }
+  // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
   const bScore = b.aScore + b.bScore;

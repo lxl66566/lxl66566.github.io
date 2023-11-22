@@ -21,90 +21,152 @@ tag:
 - UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`，一个容易被忽视的 UB 是 `a[i] = i++;`。([ref](https://en.cppreference.com/w/c/language/eval_order))
   - 还有一些易忽视 UB：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，~~还有一些操作裸指针的~~ [src](https://zhuanlan.zhihu.com/p/391088391)
 
-## 配置环境
+## 安装
 
-本文默认使用 windows vscode 开发。如果使用其他 IDE，请移步他处。linux 简单很多，应该不用我赘述。
+C++ 开发前的准备挺复杂的，做好心理准备。
 
-### mingw + _Microsoft C/C++_
+linux 下用包管理器，配置环境应该是基础技能。这里写的主要是 windows 下的开发步骤。
 
-> 使用此方法的好处是比较无脑，可以快速上手；可以直接点右上角 _运行_ 按钮快速运行单文件；可以可视化调试。
+我目前正在使用 _xmake + clang 全套_ 进行开发。
 
-::: details archived，已不再使用此方式
+### 编译器
 
-1. 下载安装 mingw 编译器。推荐使用 Windows 下包管理器进行安装（[scoop](../farraginous/recommend_packages.md#scoop) | [chocolatey](https://chocolatey.org/)），好处是无需手动配置环境变量。
-   - 打开管理员下终端，执行 `choco install mingw`，按提示进行安装。安装后，默认位置应为`C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64`。（当然，得参考 chocolatey 安装位置）
-2. 在 vscode 中安装 _C/C++_ 扩展。
-3. 在工作区**打开一个文件夹**，新建一个简单的 helloworld.cpp 文件（内容请自己写完）。
-4. `Ctrl + Shift + P` 打开命令面板，搜索并点击 `C/C++: Edit Configurations (UI)` ，将编译器路径改为 mingw 文件夹下的 `/bin/g++.exe`；在 _IntelliSense 模式_ 下选择 `gcc-x64`。此时 vscode 会自动在工作区创建 `.vscode` 存放配置。
-5. 同上打开命令面板，搜索并点击 `Tasks: Configure Default Build Task`，再选择 `C/C++: g++.exe build active file`。
+::: tabs
 
-现在你已经可以在 vscode 中编译并运行 c++ 代码了。
+@tab clang
+
+> Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可读性强、兼容性好等优势。[ref](https://www.51cto.com/article/630677.html)
+
+[scoop](../farraginous/recommend_packages.md#scoop) 一行：`scoop install llvm`。
+
+安装 llvm 还会附带一些工具如 _clangd_, _clang-tidy_, _clang-format_。
+
+@tab mingw
+
+windows 上不想装 msvc 的话可以考虑使用 mingw。
+
+[scoop](../farraginous/recommend_packages.md#scoop) 一行：`scoop install mingw`。
+
+@tab msvc
+
+[安装 visual studio](https://learn.microsoft.com/zh-cn/visualstudio/install/install-visual-studio)（体积较大）。
+
 :::
 
-### clang + clangd + xmake
+### 开发环境
 
-这里是进阶的环境配置。~~需要一点对技术的渴望（需要学习 [xmake](#xmake)）。~~
+我使用 [VSCode](./vscode.md) 作为 C++ 代码编辑器。以下扩展都可以直接在 vscode 商店搜到；只需选择一个即可。
 
-> clangd 是一个基于 Clang C++ 编译器的语言服务器，可以通过 LSP 协议向编辑器如 VSCode、Vim、Emacs 等提供语法补全、错误检测、跳转、格式化等功能。 —— GPT4<br/>
-> Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可读性强、兼容性好等优势。- [ref](https://www.51cto.com/article/630677.html)
+:::: tabs
+
+@tab Clang-Tidy + Clang-Format
+
+> 我感觉 Clang-Tidy 比 clangd 要慢一点。
+
+为什么选这个组合呢，因为解耦：我不喜欢让一个扩展完成所有任务，我希望 linter 和 formatter 分离[^4]，这样是自由度最高的方案。
+
+[^4]: 例如我在嵌入式课用 vscode 写码，我需要一个 formatter 减少我的精神负担，但是由于嵌入式开发 Keil 使用自己的构建系统，因此我希望关闭 linter，否则 linter 读不出项目的结构，会满屏红色报错。
+
+Clang-Tidy 在 vscode 扩展里的名字叫 _CS 128 Clang-Tidy_。
+
+@tab clangd
+
+调用外部的 linter + formatter，非常快速。
+
+前置条件：安装 [clang 全套](#编译器)工具。主要是 linter `clangd` 和 formatter `clang-format`。
+
+::: tip
 
 相比 _C/C++_ 扩展的 LSP，clangd 具有其他优点：
 
 1. 响应速度快。用过 _Microsoft C/C++_ 扩展的人都知道其慢的一批。
-2. 格式化功能强大，高度自定义化。
+2. _clang-format_ 格式化功能强大，高度自定义化。
 3. 支持 inlay hints
 
-配置方式如下：
-
-1. 扩展：安装 _clangd (LLVM)_, _XMake (tboox)_（习惯 CLI 的可以不装 xmake 扩展）
-2. 从 [scoop](../farraginous/recommend_packages.md#scoop) 安装 _xmake_, _clangd_, _llvm_：`scoop install xmake clangd llvm`
-3. `xmake create -l c++ -P ./cpp && cd cpp`（在当前目录下创建项目`cpp`并进入）
-4. `xmake && xmake r` 构建并运行。
-5. 设置格式化：在项目根目录运行 `clang-format.exe -style=llvm -dump-config > .clang-format`
-   - 若找不到`clang-format.exe`可以使用[everything](../farraginous/recommend_packages.md#everything)搜索并用绝对路径启动，我的`clang-format.exe`路径为`C:\Users\<user_name>\.vscode\extensions\ms-vscode.cpptools-1.15.4-win32-x64\LLVM\bin\clang-format.exe`
-   - 进入`.clang-format`编辑个性化设置。主要是把缩进调成 4（我的习惯）。其他具体项的意思可以自行搜索。
-
-### 配置 Qt 开发环境
-
-由于 Qt 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。其他 Qt 内容请[跳转 Qt](#qt)
-
-#### cmake + _Microsoft C/C++_
-
-> 默认已做过[之前](#mingw-microsoft-c-c)的环境配置。
-
-::: details archived，已不再使用此方式
-
-1. 假设你：
-   - 安装了 Qt 与 cmake
-   - vscode 已经安装好 cmake 与 C/C++ 扩展
-   - Qt 的版本构建文件使用 cmake 而非 qmake. （Qt6 默认使用 cmake）
-2. 打开项目文件夹，`Ctrl + Shift + P`，键入`C/C++: Edit Configurations (UI)`
-   - 在 _包含路径_ 下添加 `D:\software\Qt\6.5.0\mingw_64\include\**`（使用你自己的 include path）
-   - 将 _C++ 标准_ 改为你需要的。
-3. 在项目目录下执行：
-
-```batch
-uic mainwindow.ui -o ui_mainwindow.h
-rcc static.qrc -o static.cpp    // 如果有 qrc 文件则执行。
-// rcc 不会读取 qresource prefix，可能需要将 .qrc 文件拷贝到静态资源文件夹下并执行
-```
-
-4. 将 3. 生成的文件（static.cpp） 添加至 `CMakelists.txt` 中的 `PROJECT_SOURCES`
-5. 在 `CMakelists.txt` 中的 `find_package` 语句前添加：
-
-```cmake:no-line-numbers
-set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 path）
-```
-
-然后就能~~愉快地~~构建了。
 :::
 
-#### xmake + clangd
+可能需要自己填一个 `clang-format.exe` 的位置，去 llvm 安装位置找，或者用 [everything](../farraginous/recommend_packages.md#everything) 搜一下。
 
-选用 xmake 作为 Qt 的构建系统是一个不错的选择。之前曾经出现过[一些问题](../gossip/difficulties.md#20230507-qt6-项目构建失败)，但 20230802 再次尝试已经可以正常使用。以 Mainwindow 项目为例：
+- `clang-format.exe -style=llvm -dump-config > .clang-format` 可以导出设置，一般不需要。
 
-1. 使用 Qt Creator 创建模版项目。（还是逃不开的，，<span class="heimu" title="你知道的太多了">除非有大叠特别熟练嘎嘎写完</span>
-2. `xmake.lua` 参考[官方文档](https://xmake.io/#/zh-cn/guide/project_examples?id=widgets-应用程序)
+@tab Microsoft C/C++
+
+all in one 类型的插件，我**不是很喜欢，不够自由**。
+
+::: tip 不过还是说几句好话
+
+- 快速上手，对新人友好。
+- 无需了解[构建系统](#构建系统)，可以直接点右上角 _运行_ 按钮快速运行**单文件**。
+- 可视化 debug。
+
+:::
+
+1. 在工作区**打开一个文件夹**，新建一个简单的 helloworld.cpp 文件（内容请自己写完）。
+2. `Ctrl + Shift + P` 打开命令面板。
+   1. 搜索并点击 `C/C++: Edit Configurations (UI)` ，将编译器路径改为编译器的 `g++.exe`；在 _IntelliSense 模式_ 下选择相应的工具链，例如 mingw 选择 `gcc-x64`。此时 vscode 会自动在工作区创建 `.vscode` 存放配置。
+   2. 搜索并点击 `Tasks: Configure Default Build Task`，再选择 `C/C++: g++.exe build active file`。
+
+::::
+
+### 构建系统
+
+最广泛使用的是用 _Cmake_ 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
+
+有兴趣的话也可以看看[cmkr](https://github.com/build-cpp/cmkr)，基于 toml 生成 cmake 文件，三阶构建（cmkr -> cmakelists -> makefile）
+
+#### xmake
+
+xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmake 使用 lua 脚本作为构建系统语言。**~~我真的不想再面对一团乱麻的 cmake 了！~~**
+
+- [新手教程](https://zhuanlan.zhihu.com/p/640701847)，由于我自己摸索而不是看教程，多走了许多弯路。因此推荐看看。
+- 开始使用：
+  - use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install xmake` 一行安装。输入 `xmake -h` 了解更多。
+  - 示例：`xmake create -l c++ -P ./cpp && cd cpp && xmake && xmake r`
+- 一些预设
+  ```lua
+  set_encodings("utf-8")  -- 没加会导致 Qt 中文乱码
+  set_policy("build.warning", true) -- 开启编译警告
+  set_languages("cxxlatest")  -- 设置 C++ 版本，或 `cxx20`
+  set_optimize("fastest")     -- 优化等级，不过 release 有默认
+  add_requires("fmt")
+  target("test")              -- 添加 fmt 包
+    ...
+    add_packages("fmt")
+  ```
+- 查找包（任选）：
+  - 手动去 [xmake-repo](https://github.com/xmake-io/xmake-repo/) 找
+  - 命令行：`xrepo search <package_name>...`，可用 `*` 作为通配符
+- 指定工具链
+  - 在 target 中添加 `set_toolchains("clang")`
+
+#### cmake
+
+实际上我也就写 Qt 接触了一下 cmake，后面很快转到 xmake 了，关于 cmake 的了解不算多。
+
+::: details archived
+
+`scoop install cmake`。
+
+:::
+
+### Qt 开发环境
+
+Qt 是一个 C++ 框架，主要是做 GUI 用的。[查看介绍](#qt-开发环境)。不用的话可以不装。
+
+由于 Qt creater 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。
+
+Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 xmake 配置。
+
+#### windows
+
+::: tabs
+
+@tab xmake
+
+用 xmake 作为 Qt 的构建系统是一个不错的选择。之前曾经出现过[一些问题](../gossip/difficulties.md#20230507-qt6-项目构建失败)，但 20230802 再次尝试已经可以正常使用。
+
+1. 使用 Qt Creator 创建模版项目。
+2. `xmake.lua` 参考[官方文档](https://xmake.io/#/zh-cn/guide/project_examples?id=widgets-应用程序)，这里是一个示例：
    ```lua
    add_rules("mode.debug", "mode.release")
    target("qt_widgetapp")
@@ -113,13 +175,33 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
        add_files("src/mainwindow.ui")
        add_files("src/mainwindow.h")
    ```
-3. 可能需要指定 sdk：`xmake f --qt=D:\software\QtSDK\6.6.0`（你的 Qt 路径）
+3. 可能需要指定 sdk：`xmake f --qt=D:\software\QtSDK\6.6.0`（你的 Qt 安装路径）
 4. [生成 compiler_commands.json](https://xmake.io/#/zh-cn/plugin/builtin_plugins?id=生成compiler_commands)，使 clangd 能够读取 includePath 等。一行：`xmake project -k compile_commands`
 5. `xmake && xmake r` 就能跑了。
 
 刚做完 2. 的时候会出现经典问题，clangd 报*找不到 `ui_mainwindow.h` 文件*… 因为它是编译期生成的。。用 cmake CLI 的时候可能需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，应该是 xmake 内置的 qt 规则起作用了。
 
 需要注意，使用 xmake 构建的 Qt 程序无法在 stdout 输出字符，无论 release 还是 debug mode。（不知道是不是缺少了什么设置选项）
+
+@tab cmake + C/C++ 扩展
+
+1. 先用 Qt creater 创建一个模板项目，或者打开现有项目，或者自己手写模板。
+2. `Ctrl + Shift + P`，键入`C/C++: Edit Configurations (UI)`
+   - 在 _包含路径_ 下添加 `D:\software\Qt\6.5.0\mingw_64\include\**`（使用你自己的 include path）
+   - 将 _C++ 标准_ 改为你需要的。（截至 Qt6.6.0 不支持 C++23）
+3. 在项目目录下执行：
+   ```sh
+   uic mainwindow.ui -o ui_mainwindow.h
+   rcc static.qrc -o static.cpp    // 如果有 qrc 文件则执行。
+   // rcc 不会读取 qresource prefix，可能需要将 .qrc 文件拷贝到静态资源文件夹下并执行
+   ```
+4. 将 _3._ 生成的文件（static.cpp） 添加至 `CMakelists.txt` 中的 `PROJECT_SOURCES`
+5. 在 `CMakelists.txt` 中的 `find_package` 语句前添加：
+   ```cmake:no-line-numbers
+   set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 path）
+   ```
+
+:::
 
 #### linux
 
@@ -137,40 +219,6 @@ set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 
        end
    ```
    然后在 target 中 `set_toolchains("myqt")` 即可。
-
-## 构建系统
-
-最广泛使用的是用 _Cmake_ 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
-
-有兴趣的话也可以看看[cmkr](https://github.com/build-cpp/cmkr)，基于 toml 生成 cmake 文件，三阶构建（cmkr -> cmakelists -> makefile）
-
-### xmake
-
-xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmake 使用 lua 脚本作为构建系统语言。**~~我真的不想再面对一团乱麻的 cmake 了！~~**
-
-- [新手教程](https://zhuanlan.zhihu.com/p/640701847)，由于我自己摸索而不是看教程，多走了许多弯路。因此推荐看看。
-- 开始使用：use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install xmake` 一行安装。输入 `xmake -h` 了解更多。
-- 一些预设
-  ```lua
-  set_encodings("utf-8")  -- 没加会导致 Qt 中文乱码
-  set_policy("build.warning", true) -- 开启编译警告
-  set_languages("cxxlatest")  -- 设置 C++ 版本，或 `cxx20`
-  set_optimize("fastest")     -- 优化等级，不过 release 有默认
-  add_requires("fmt")
-  target("test")              -- 添加 fmt 包
-    ...
-    add_packages("fmt")
-  ```
-- 查找包（任选）：
-  - 手动去 [xmake-repo](https://github.com/xmake-io/xmake-repo/) 找
-  - 命令行：`xrepo search <package_name>...`，可用 `*` 作为通配符
-
-#### 指定工具链
-
-用惯了 mingw 和 msvc，想试试用 clang 编译，很简单：
-
-1. 安装 llvm: `scoop install llvm`
-2. 在 target 中添加一句 `set_toolchains("clang")` 即可。
 
 ## 语言相关
 

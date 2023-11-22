@@ -22,6 +22,15 @@ category:
 
 ## 2023
 
+### 20231122
+
+- 新增组件：OrderBadge。替换正则表达式：
+  ```
+  \s?<Badge (type=".*" )?text="(\d)"\s?/>
+  <OrderBadge order=$2 />
+  ```
+  anime 页面特殊处理。
+
 ### 20231111
 
 - 新增 _爱好 - NSFW - 本子合集_

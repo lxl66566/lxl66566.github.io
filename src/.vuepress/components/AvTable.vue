@@ -197,6 +197,7 @@ const data = [
   { id: "pppe-052", aScore: 8.6, bScore: 6.2, u: true },
   { id: "atid-519", aScore: 8, bScore: 8.8, u: true },
   { id: "shkd-986", aScore: 8.3, bScore: 9.8, u: true },
+  { id: "rctd-526", aScore: 7.2, bScore: 8.5 },
 ];
 export default {
   name: "App",

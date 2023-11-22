@@ -1,5 +1,5 @@
 <template>
-  <a :href="generateLink()" target="_blank">{{ id }}</a><span v-if="bak"> | <a :href="bak">bak</a></span>
+  <a :href="generateLink()" target="_blank">{{ id }}</a>
 </template>
 
 <script>
@@ -9,10 +9,6 @@ export default {
       type: Number,
       required: true,
     },
-    bak: {
-      type: String,
-      default: false,
-    }
   },
   methods: {
     generateLink() {
