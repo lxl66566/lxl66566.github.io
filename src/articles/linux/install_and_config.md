@@ -113,6 +113,8 @@ umount /mnt/windows
 11. sysctl 相关。
     - [Tcp Fast Open](https://wiki.archlinux.org/title/sysctl#Enable_TCP_Fast_Open)
     - [bbr](https://wiki.archlinux.org/title/sysctl#Enable_BBR)
+12. system.conf
+    - [调整 DefaultTimeoutStopSec](https://unix.stackexchange.com/a/297318)，使关机时不会被某些应用阻断长达 90s
 
 ### 输入法
 

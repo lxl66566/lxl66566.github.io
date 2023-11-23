@@ -50,6 +50,12 @@ category:
 
 [这里](https://github.com/brynne8/typst-undergradmath-zh/blob/main/undergradmath.pdf)有比较全的数学符号。
 
+## 表格
+
+建议直接使用 [tablem](https://github.com/typst/packages/tree/main/packages/preview/tablem/0.1.0)，大佬写的类 markdown 语法的表格。
+
+但是还存在着一些问题，例如无法通过 `\|` 转义打出 `|` 字符，没法控制居中，只能说还在起步阶段。
+
 ## 代码
 
 代码不要直接写 `typ` 文件里。最好从外部引用，解耦，还方便扔 formatter。

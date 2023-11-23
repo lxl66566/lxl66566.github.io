@@ -9,6 +9,8 @@ tag:
 
 # 灵感
 
+这里的灵感请随便用。如果有人能实现我的想法，我会非常高兴的。
+
 ## 游戏灵感
 
 - [ ] 双人智力竞技，边战斗边添加规则。触发规则则失败。在规则越来越多的情况下作出正确判断反应。
@@ -80,7 +82,6 @@ tag:
 - [ ] 轻量级 pdf 演示 (pdf as ppt, in any browser)
   - [ ] 结合表现力稍强一点的文本描述语言
 - [ ] b 站历史记录搜索
-- [ ] html yaml extransfer
 - [ ] html compresser, <-> rss
   - [ ] 已找到同类项目 [sanitize-html](https://www.npmjs.com/package/sanitize-html)，但可以改进合并
 - [x] B 站直播增强
@@ -93,7 +94,7 @@ tag:
   - [ ] formatter
   - [ ] 高亮与黑幕
   - [ ] 双列阅读区支持
-- [ ] better markdown formatter
+- [ ] ~~better markdown formatter~~ just pull to _prettier_ if you don't like it.
 - [ ] 答题网，选择题实时反馈
 - [ ] SAVE MY LOCK FILE
 - [ ] gaussian blur lib
@@ -102,6 +103,12 @@ tag:
 - [ ] 今天吃什么 project
   - [ ] 分食堂，自动根据图片目录生成
   - [ ] 可添加排除，写入 cookie
+
+### 插件
+
+#### vscode
+
+- [ ] typst formatter
 
 ## 实物创作灵感
 

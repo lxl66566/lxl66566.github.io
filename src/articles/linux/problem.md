@@ -40,6 +40,8 @@ tag:
 
 没辙，然后 `sudo waydroid init -f` 重装。然后就能用了。
 
+后来又一次遇到了相同问题，这次拿了更多信息去搜，发现一个[看起来不相似的 issue](https://github.com/waydroid/waydroid/issues/294#issuecomment-1027392592) 居然能解决我的问题，非常惊讶。
+
 ## timeshift 删除快照
 
 未解决！

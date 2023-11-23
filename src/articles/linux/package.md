@@ -103,7 +103,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`exa`|[`ls` 的代替](#exa)|
 |`fastfetch`|`neofetch` 的代替|
 |[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
-|`glances` & `htop`|任务管理器，看性能|
+|`btop` / `htop` / `glances`|任务管理器，看性能，`top` 的代替|
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
