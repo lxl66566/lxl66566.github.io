@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 23 Nov 2023 07:22:53 GMT</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2023 07:22:53 GMT</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2023 15:53:04 GMT</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2023 15:53:04 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -137,7 +137,6 @@
 <p>caddy 是一个更年轻的工具，提供<strong>非常简单</strong>的语法和自动 https。</p>
 <ul>
 <li><a href="https://caddyserver.com/docs/install" target="_blank" rel="noopener noreferrer">安装指南</a></li>
-<li>一些<a href="https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/" target="_blank" rel="noopener noreferrer">讨论</a></li>
 </ul>
 <p>能有多简单呢，例如我需要部署一个静态站点（用于 vps 伪装），只需要在 <code>/etc/caddy/Caddyfile</code> 中写入：</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="blank">启动 caddy 服务</a>即可。</p>
@@ -146,9 +145,24 @@
 <p>而我在 nginx 上得自己用 acme.sh 签证书，然后写<a href="https://github.com/lxl66566/config/blob/a3065d4b9797d43eb113e2932e9799f9b420c4f4/nginx.conf" target="_blank" rel="noopener noreferrer">一大坨的配置文件</a>，还得去看看 nginx 命令行用法，signal 有哪些，才能把我的网站搞好。</p>
 </blockquote>
 <p>反代也很简单，只需将 <code>file_server</code> 换成 <code>reverse_proxy :8000</code>（端口号）。如果要用自己的证书就加一句 <code>tls &lt;pem&gt; &lt;key&gt;</code> 即可。</p>
-<p>总之，在初级配置、流量不算大的服务上，选 caddy 准没错。</p>
+<h3> 其他资料</h3>
+<ul>
+<li><a href="https://github.com/caddyserver/nginx-adapter" target="_blank" rel="noopener noreferrer">Caddy NGINX Config Adapter</a>, converts NGINX config files into Caddy's native format.</li>
+</ul>
 <h2> nginx</h2>
 <p><s>Nginx 502 bad gateway 😦</s> nginx 是老牌反代大哥了，但是它其实不是今天&amp;这里的主角（）。</p>
+<p>Several features that are free (in caddy) which cost money in nginx. 😦</p>
+<p>nginx 的 quic 还不是原生支持而是 module。</p>
+<h2> 所以到底如何选</h2>
+<p>观点：激进派</p>
+<p>虽然 go 写的 caddy 性能可能比纯 c 写的、经过时间检验的 nginx 差，但是流量不大的情况下真的缺那点性能吗？nginx 那坨配置我得上 gpt 才能勉强<strong>读</strong>懂，折腾技术还是用尽可能简单的，减少自己精神内耗的比较好。<s>选择 caddy 是在为自己的脑子着想，兄弟。</s></p>
+<p>因此在自己搞着玩的小流量服务器上用 caddy 准没错。</p>
+<p>目前 caddy 在 github 上有 50k star，也侧面反映了 caddy 的优秀。</p>
+<h2> external</h2>
+<ol>
+<li><a href="https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/" target="_blank" rel="noopener noreferrer">reddit: Caddy vs Nginx: How Do These Web Servers / Reverse Proxies Compare?</a></li>
+<li><a href="https://caddy.community/t/why-caddy-2-over-nginx/9549" target="_blank" rel="noopener noreferrer">Why Caddy 2 over NGINX</a></li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
@@ -1823,6 +1837,8 @@ RTT = Round Trip Time，往返时间</p>
       <category>作者</category>
       <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 2023</h1>
+<h2> 20231123</h2>
+<p><em>同源策略</em> 实在是过于简单粗暴，然后为了满足需求又在此策略上到处开洞，我的评价是纯纯的大便。</p>
 <h2> 20231024</h2>
 <p>人类从模仿中起步……所以说人的社会性是必要的。</p>
 <h2> 20231018</h2>
