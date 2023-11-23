@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 22 Nov 2023 16:18:52 GMT</pubDate>
-    <lastBuildDate>Wed, 22 Nov 2023 16:18:52 GMT</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2023 07:22:53 GMT</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2023 07:22:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -863,6 +863,9 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <p>剩下的 <code>let</code>，<code>if</code> 什么的都是 rust 的东西，这里不说（</p>
 <h2> 数学</h2>
 <p><a href="https://github.com/brynne8/typst-undergradmath-zh/blob/main/undergradmath.pdf" target="_blank" rel="noopener noreferrer">这里</a>有比较全的数学符号。</p>
+<h2> 表格</h2>
+<p>建议直接使用 <a href="https://github.com/typst/packages/tree/main/packages/preview/tablem/0.1.0" target="_blank" rel="noopener noreferrer">tablem</a>，大佬写的类 markdown 语法的表格。</p>
+<p>但是还存在着一些问题，例如无法通过 <code>\|</code> 转义打出 <code>|</code> 字符，没法控制居中，只能说还在起步阶段。</p>
 <h2> 代码</h2>
 <p>代码不要直接写 <code>typ</code> 文件里。最好从外部引用，解耦，还方便扔 formatter。</p>
 <h4> 好看的边框</h4>
@@ -1163,6 +1166,11 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li><a href="https://wiki.archlinux.org/title/sysctl#Enable_BBR" target="_blank" rel="noopener noreferrer">bbr</a></li>
 </ul>
 </li>
+<li>system.conf
+<ul>
+<li><a href="https://unix.stackexchange.com/a/297318" target="_blank" rel="noopener noreferrer">调整 DefaultTimeoutStopSec</a>，使关机时不会被某些应用阻断长达 90s</li>
+</ul>
+</li>
 </ol>
 <h3> 输入法</h3>
 <p>我使用 fcitx5，输入要求为 <em>英语，双拼，日语</em>。可以在遇到的问题里找到一些输入法的设置。</p>
@@ -1367,8 +1375,8 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <td style="text-align:center">easier, safer <code>rm</code></td>
 </tr>
 <tr>
-<td style="text-align:center"><code>glances</code> &amp; <code>htop</code></td>
-<td style="text-align:center">任务管理器，看性能</td>
+<td style="text-align:center"><code>btop</code> / <code>htop</code> / <code>glances</code></td>
+<td style="text-align:center">任务管理器，看性能，<code>top</code> 的代替</td>
 </tr>
 <tr>
 <td style="text-align:center"><code>lsof</code></td>
