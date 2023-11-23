@@ -26,12 +26,14 @@ tag:
 
 - `Ctrl + ,`：打开设置
 - `Ctrl + r`（资源管理器窗口）：选择打开最近项目
-- `Ctrl + p`：选择打开文件
+- `Ctrl + p` / `Ctrl + e`：选择打开文件
 - `Ctrl + Shift + p`：操作面板
 
 ## 插件
 
-插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里会放出我使用的插件。
+编程需要有好用的工具，编程语言的流行离不开好用的 linter, highlighter, formatter。
+
+插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里放出我使用的插件：
 
 - 通用：
   - [AI 代码补全](#AI-补全)
@@ -42,11 +44,15 @@ tag:
     - [添加如下配置](https://github.com/microsoft/vscode/issues/75627#issuecomment-1114048271)可以降低 vim 插件的延迟。
 - markdown：_Markdown Preview Enhanced_
 - 前端：_Auto Rename Tag_，_Rome_（需要设置 `"rome.requireConfiguration": false`）
-- C++：_clangd_
-- python：_Black Formatter_，_isort_，_Ruff_
+  - Vue: _Vue Language Features (Volar)_ （为什么要用这个呢，因为我的 vue 组件有特殊 formatter 需求，不方便用 prettier 预设）
+- C++：_Clang-Tidy_，_Clang-Format_，详见[开发环境](./Cpp.md#开发环境)
+- python：_Black Formatter_，_isort_，_Ruff_，详见[Python](./python.md#vscode-扩展)
 - rust：_Cargo_，_cargo-crate-completer_，_Even Better TOML_，_rust-analyzer_
 - java：_Language Support for Java(TM) by Red Hat_，_Test Runner for Java_
 - kotlin：_Kotlin Language_，_vscode-runner_
+- verilog：_verilog-formatter_（有点记不太清了）
+- octave：_Octave_，_Octave Formatter_，详见[octave](./octave.md#ide)
+- Typst：_Typst LSP_
 - 数据库：_SQLite Viewer_
 - 其他：_Chinese (Simplified)..._，_CodeSnap_
 

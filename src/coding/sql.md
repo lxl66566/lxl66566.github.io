@@ -9,9 +9,11 @@ tag:
 
 # 数据库
 
-大概分为关系型和非关系型，分布式和非分布式...
+本人并没有深入学习数据库，日常都是简单的基础使用。因此事先声明，不要对此文抱有过高的期望。
 
 ## 数据库选择
+
+大概分为关系型和非关系型，分布式和非分布式...
 
 首先有一个很重要的概念，有跟随程序分发到客户端的文件数据库，也有作为服务器端具有本地驱动的数据库。前者主要就是 SQLite，其他常见数据库基本都属于后者。所以在 java 连接 Mysql 时出现的 `jdbc:mysql://localhost:3306/mydatabase` 就是需要先启动数据库的服务驱动，在电脑上开个端口才能使用，不像 SQLite 直接读文件。
 
@@ -20,7 +22,7 @@ tag:
 常见的数据库：
 
 - 文件型大多是 SQLite，不过也有 [duckdb](https://duckdb.org/)。
-- 关系型一般选择 MySQL, PostgreSQL, 追求极致性能可以选 OracleDB，
+- 关系型优先 PostgreSQL / MariaDB(MySQL), 追求极致性能可以选 OracleDB。
 - 非关系型 Redis, MongoDB，分布式就 Cassandra 等等。
 
 （反正都没用过，以上信息都是浅浅了解的）
@@ -118,7 +120,7 @@ sudo systemctl start mysqld
 sudo mysqld
 ```
 
-如果真的这么想，那就大错特错了。
+如果真的这么想，[那就大错特错了](#安装-mysql)。
 
 ### 创建
 
@@ -205,3 +207,7 @@ sudo systemctl start mysql
 ```
 
 才解决。感觉像是从 mysql 换到 mariadb 没有删 `/var/lib/mysql/` ，不兼容导致的。
+
+## external
+
+1. [MySQL 和 PostgreSQL 有何区别？](https://aws.amazon.com/cn/compare/the-difference-between-mysql-vs-postgresql)

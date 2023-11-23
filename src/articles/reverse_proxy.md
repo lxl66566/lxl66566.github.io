@@ -17,7 +17,6 @@ tag:
 caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 https。
 
 - [安装指南](https://caddyserver.com/docs/install)
-- 一些[讨论](https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/)
 
 能有多简单呢，例如我需要部署一个静态站点（用于 vps 伪装），只需要在 `/etc/caddy/Caddyfile` 中写入：
 
@@ -36,8 +35,29 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 
 反代也很简单，只需将 `file_server` 换成 `reverse_proxy :8000`（端口号）。如果要用自己的证书就加一句 `tls <pem> <key>` 即可。
 
-总之，在初级配置、流量不算大的服务上，选 caddy 准没错。
+### 其他资料
+
+- [Caddy NGINX Config Adapter](https://github.com/caddyserver/nginx-adapter), converts NGINX config files into Caddy's native format.
 
 ## nginx
 
 ~~Nginx 502 bad gateway :(~~ nginx 是老牌反代大哥了，但是它其实不是今天&这里的主角（）。
+
+Several features that are free (in caddy) which cost money in nginx. :(
+
+nginx 的 quic 还不是原生支持而是 module。
+
+## 所以到底如何选
+
+观点：激进派
+
+虽然 go 写的 caddy 性能可能比纯 c 写的、经过时间检验的 nginx 差，但是流量不大的情况下真的缺那点性能吗？nginx 那坨配置我得上 gpt 才能勉强**读**懂，折腾技术还是用尽可能简单的，减少自己精神内耗的比较好。~~选择 caddy 是在为自己的脑子着想，兄弟。~~
+
+因此在自己搞着玩的小流量服务器上用 caddy 准没错。
+
+目前 caddy 在 github 上有 50k star，也侧面反映了 caddy 的优秀。
+
+## external
+
+1. [reddit: Caddy vs Nginx: How Do These Web Servers / Reverse Proxies Compare?](https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/)
+2. [Why Caddy 2 over NGINX](https://caddy.community/t/why-caddy-2-over-nginx/9549)
