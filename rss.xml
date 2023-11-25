@@ -6,23 +6,935 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 23 Nov 2023 15:53:04 GMT</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2023 15:53:04 GMT</lastBuildDate>
+    <pubDate>Sat, 25 Nov 2023 04:28:19 GMT</pubDate>
+    <lastBuildDate>Sat, 25 Nov 2023 04:28:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>学习</category>
     <category>教程</category>
-    <category>推荐</category>
-    <category>编程</category>
     <category>导航</category>
+    <category>推荐</category>
     <category>经历</category>
+    <category>学习</category>
+    <category>编程</category>
     <category>主张</category>
     <category>生活</category>
     <category>评价</category>
     <category>爱好</category>
     <category>随笔</category>
     <category>作者</category>
-    <category>博客</category>
+    <item>
+      <title>Hysteria</title>
+      <link>https://absx.pages.dev/articles/proxy/hysteria.html</link>
+      <guid>https://absx.pages.dev/articles/proxy/hysteria.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">Hysteria</source>
+      <description>Hysteria</description>
+      <category>教程</category>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Hysteria</h1>
+<p><a href="https://v2.hysteria.network/zh/" target="_blank" rel="noopener noreferrer">Hysteria</a> 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。</p>
+<p>优势：</p>
+<ul>
+<li>这玩意文档写的<strong>很好</strong>，自己写配置也非常简单。</li>
+<li>自带了网页伪装、自动 <code>acme.sh</code> 签证书等功能，<s>即使不用代理也能当成<a href="/articles/reverse_proxy.html" target="blank">反代</a>来用</s>。</li>
+</ul>
+<p>劣势：</p>
+<ul>
+<li>其 Brutal 拥塞控制算法<a href="https://v2.hysteria.network/zh/docs/misc/Hysteria-Brutal/#q-hysteria_1" target="_blank" rel="noopener noreferrer">非常凶猛霸道</a>，容易被 IDC 警告，被本地网络 QOS，因为确实太像被攻击了。<a href="https://www.youtube.com/watch?v=kTYfclAzy38" target="_blank" rel="noopener noreferrer">src</a>
+<ul>
+<li>因此我使用 bbr 而不是 Brutal。</li>
+</ul>
+</li>
+</ul>
+<h2> 服务器配置</h2>
+<p>安装 hysteria2 后，编辑 <code>/etc/hysteria/config.yml</code>，写入配置。</p>
+<p>具体怎么写配置建议看文档，讲的挺详细的。这里给出我的配置，使用之前签过的证书，我的静态博客做伪装（）。然后国内(?)的 QUIC 网络环境非常差（亲测），因此设置 <code>obfs</code> 退化成了伪装 UDP。</p>
+<p>伪装的网页当然也是开启了 HTTP3 的。</p>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后需要<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="blank">启动</a> <code>hysteria-server</code> 服务，并检查是否启动成功。我在启动服务时遇到了一些问题。</p>
+<ol>
+<li>即使在 root 下运行，仍然提示权限不足无法读取证书文件。
+<ul>
+<li>尝试编辑 <code>.service</code> 文件，删除 <code>group</code>，将 <code>User</code> 改为 <code>root</code>，无效。</li>
+<li>尝试把证书移到 <code>/etc/hysteria</code> 下。</li>
+<li>后续又折腾一阵，发现需要 <code>chmod +rwx 证书文件</code> 才行。（只 <code>+x</code> 是不行的）</li>
+</ul>
+</li>
+<li>在 debian 上这样启动服务没啥问题，然而在 archlinux 上就不行了。
+<ul>
+<li>AUR 的 <code>hysteria-bin</code> 包安装的证书在 <code>/usr/lib/systemd/system</code>，名字是 <code>xxx@.service</code>，根据 <a href="https://wiki.archlinux.org/title/systemd#Using_units" target="_blank" rel="noopener noreferrer">wiki</a> 所述是模板文件，需要传参。直接 <code>systemctl start hysteria-server</code> 是不行的，只会提示 <em>unit not found</em>。因此需要自己读 service，理解那个传参的意思。</li>
+</ul>
+</li>
+</ol>
+<p>然后就是客户端了。</p>
+<h2> 客户端使用</h2>
+<p>虽说可以按照官方教程启动一个客户端服务，但是一个黑窗口一直最小化运行比较丑。</p>
+<h3> Windows</h3>
+<p>V2rayN 以内核插件形式支持 hysteria。</p>
+<ol>
+<li>从 Release 下载 <code>.exe</code> 内核，放入 V2rayN 文件夹的 <code>bin/hysteria</code> 下。注意可能需要重命名为 <code>hysteria.exe</code>。</li>
+<li>打开 V2rayN，<em>添加自定义配置服务器</em>，<em>地址</em> 选择客户端的配置文件，<em>Core 类型</em> 选择 <code>hysteria</code>。</li>
+</ol>
+<p>然后就可以愉快地使用了。我的客户端配置文件参考：</p>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Linux</h3>
+<p>我在 linux 上使用 <a href="/articles/proxy/proxy_software.html#daed" target="blank">daed</a>，然而其<a href="https://github.com/daeuniverse/dae/issues/48" target="_blank" rel="noopener noreferrer">尚未支持且不打算支持 hysteria 协议</a>。</p>
+<p>不过我们可以本地开一个 hysteria client，通过 http 或 socks5 再接入 daed。</p>
+<ol>
+<li>下载
+</li>
+<li>写好配置文件。</li>
+<li>启动 client 服务。
+</li>
+<li>在 daed 中手动添加 socks5 节点，使用配置文件端口。</li>
+</ol>
+<h3> Android</h3>
+<p>NekoBox (v1.2.9) 号称支持，<s>实测不可用</s>。windows 上测了能用的配置，放在 NekoBox 上用不了。</p>
+<p>后来我换了个 japan 的 vps，试了下，居然又能用了？？服务端版本相同，配置也没变，就改个服务器地址，我不好说。</p>
+<p>测了一下其他软件，SagerNet 安装了<a href="https://github.com/SagerNet/SagerNet/releases/tag/hysteria-plugin-1.3.5" target="_blank" rel="noopener noreferrer">插件</a>，然而 <em>专有设备供应商篡改了你的安卓系统，使该插件无法使用</em>，我又不好说了。</p>
+<h2> 总结</h2>
+<ul>
+<li>这是我第一次直接写配置文件部署一个协议。（以前都是一键脚本）</li>
+<li>任何协议都吃第三方适配，hysteria 的适配在一众代理内算好的了。</li>
+<li>hysteria 在大陆不能发挥其全部实力，因为 QUIC 支持较弱。</li>
+<li>基于 QUIC 的代理协议挺多，hysteria 据说打不过 TUIC（<s>rust 写的，干掉 go 可以理解</s>），但是现在 TUIC 删库了（乐）。</li>
+</ul>
+<h2> 遇到的问题</h2>
+<h3> no route to host</h3>
+<p>前一秒还正常使用的 hysteria 连接，立刻变得无法使用了。</p>
+<p>NekoBox 报错：<code>...cloudflare.com INTERNAL_ERROR(local):read udp ...: read: no route to host.</code>，客户端报 <code>FATAL failed to initialize client {"error": "connect error: timeout: no recent networkactivity"}</code>。并且我服务端没有任何收到连接消息。看着也不像是网络问题啊。</p>
+<p>重启服务无效，重启服务器有效。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>代理</title>
+      <link>https://absx.pages.dev/articles/proxy/</link>
+      <guid>https://absx.pages.dev/articles/proxy/</guid>
+      <source url="https://absx.pages.dev/rss.xml">代理</source>
+      <description>代理</description>
+      <category>导航</category>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 代理</h1>
+<ol>
+<li><a href="/articles/proxy/vpn.html" target="blank">机场推荐</a></li>
+<li><a href="/articles/proxy/proxy_software.html" target="blank">代理软件</a></li>
+<li><a href="/articles/proxy/vps.html" target="blank">VPS</a></li>
+<li><a href="/articles/proxy/hysteria.html" target="blank">hysteria 协议的使用</a></li>
+<li><a href="/articles/proxy/trojan-go.html" target="blank">trojan-go 协议的使用</a></li>
+</ol>
+<h2> external</h2>
+<ol>
+<li><a href="https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/" target="_blank" rel="noopener noreferrer">如何正确地叫外卖</a></li>
+<li><a href="https://gfw.report/publications/usenixsecurity23/zh/" target="_blank" rel="noopener noreferrer">中国的防火长城是如何检测和封锁完全加密流量的</a></li>
+<li><a href="https://github.com/bannedbook/fanqiang" target="_blank" rel="noopener noreferrer">ChromeGo - Chrome 一键翻墙包</a></li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>代理软件选择</title>
+      <link>https://absx.pages.dev/articles/proxy/proxy_software.html</link>
+      <guid>https://absx.pages.dev/articles/proxy/proxy_software.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">代理软件选择</source>
+      <description>代理软件选择</description>
+      <category>推荐</category>
+      <category>教程</category>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 代理软件选择</h1>
+<h2> Clash 系</h2>
+<blockquote>
+<p>20231102-20231103 Clash 系几乎全部删库跑路。因此非必要不推荐使用。</p>
+</blockquote>
+<details class="hint-container details"><summary>详情</summary>
+<h3> <a href="https://github.com/zzzgydi/clash-verge" target="_blank" rel="noopener noreferrer">Clash Verge</a></h3>
+<p>开源跨平台 Clash 客户端，rust + tauri 使我非常放心。</p>
+<p>相比<a href="#clash-for-windows">Clash for Windows</a>，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。</p>
+<p>其 <em>设置热键</em> 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，懒得做订阅转换，放弃了 Clash Verge 而去使用了 <a href="#v2ray">v2rayN</a>。</p>
+<h4> 简易教程</h4>
+<p>我们可以先在设置中将其语言调成中文。</p>
+<p>类似地，在 <em>配置</em> 中粘贴订阅链接，下载并选中，然后就可以在 <em>代理</em> 中使用节点了。记得在 <em>配置</em> 中打开 <em>系统代理</em> 选项。</p>
+<h3> Clash for Windows</h3>
+<h4> 简介</h4>
+<p><em>Clash for Windows</em> 是闭源的 PC 客户端。（然而因为一个 <a href="https://github.com/Fndroid/clash_for_windows_pkg/issues/1105" target="_blank" rel="noopener noreferrer">bug</a>导致我转向了 <a href="#clash-verge">Clash Verge</a>。）</p>
+<h4> 下载地址</h4>
+<p><a href="https://github.com/Fndroid/clash_for_windows_pkg" target="_blank" rel="noopener noreferrer">项目地址</a> | <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" target="_blank" rel="noopener noreferrer">PC 端下载地址</a> | <a href="https://wwp.lanzout.com/ixncj0a1k28h" target="_blank" rel="noopener noreferrer">私链</a></p>
+<h4> 优势</h4>
+<ul>
+<li>优秀图形界面</li>
+<li>简单易上手</li>
+</ul>
+<h4> 简易配置教程 <em>v0.19.16</em></h4>
+<ol>
+<li>在 Profiles 中的文本框内粘贴订阅链接并下载。选中下载的配置文件。</li>
+<li>进入 Proxies，选择 rule，点击测速图标并在下方选择一个可用节点。</li>
+<li>进入 General，开启 System Proxy。</li>
+</ol>
+<h4> 一些提示</h4>
+<ul>
+<li><a href="https://github.com/BoyceLig/Clash_Chinese_Patch" target="_blank" rel="noopener noreferrer">这里</a>提供 clash 的汉化。</li>
+<li>在节点界面点击测速图标测试全部节点的连通性</li>
+<li>建议设置配置文件自动更新（Profiles -&gt; 右击配置文件 -&gt; Settings -&gt; Update Interval 设为 24）</li>
+</ul>
+<h3> Clash For Android</h3>
+<blockquote>
+<p>20231103 继 CFW 删库后，Clash 内核与 Meta 核均删库跑路。</p>
+</blockquote>
+<p>请前往谷歌商店或<a href="https://github.com/Kr328/ClashForAndroid/releases" target="_blank" rel="noopener noreferrer">前往 github 下载</a>。<a href="https://wwp.lanzout.com/iL6sD03mi0gf" target="_blank" rel="noopener noreferrer">私链</a></p>
+</details>
+<h2> <a href="https://github.com/2dust/v2rayN" target="_blank" rel="noopener noreferrer">V2rayN</a></h2>
+<h3> 简介</h3>
+<p>V2rayN 是 V2ray 的 windows 前端，支持自定义协议。</p>
+<p>相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点+规则，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用 clash 配置文件。</p>
+<h3> 简易教程</h3>
+<ol>
+<li>前往 PC 客户端项目地址，下载
+<ul>
+<li>可以选择下载 <code>v2rayN-With-Core.zip</code>，最为简单无脑。</li>
+<li>With Core 体积太大了，我选择自己配置内核。则需要在内核项目地址下载内核后，解压放入 <code>/v2rayN/bin/v2fly_v5</code> 下。
+根据项目提示，我还下载了 <a href="https://github.com/XTLS/Xray-core" target="_blank" rel="noopener noreferrer">Xray-core</a> 放入 <code>/v2rayN/bin/Xray</code>。<span class="heimu" title="你知道的太多了">应该不会有人把解压后的整个文件夹丢进去吧</span></li>
+</ul>
+</li>
+<li>复制节点地址，按 <code>Ctrl+V</code> 导入，按 <code>Enter</code> 激活。</li>
+<li>测试真连接延迟，确保节点有效。</li>
+<li>下方 <em>系统代理</em> 处选择 <em>自动配置系统代理</em>，开启代理。</li>
+</ol>
+<p>若为订阅链接：</p>
+<ol>
+<li>点击加号，在订阅分组设置中，将订阅链接填入 URL。别名随便写。</li>
+<li>订阅分组 - 更新全部订阅</li>
+<li>一键测延迟/速度，选择节点双击激活。</li>
+<li>同上方 4.</li>
+</ol>
+<h3> <a href="https://github.com/MatsuriDayo/nekoray" target="_blank" rel="noopener noreferrer">NekoRay</a></h3>
+<p>基于 Qt 的代理软件。记得好像有停更过一阵子，仓库提交记录是 2022 开始的，找不到。</p>
+<h3> V2rayNG</h3>
+<p>v2ray 的 Android 前端。</p>
+<h3> sing-box 系</h3>
+<p><em>sing-box 系</em> 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 <em>The universal proxy platform</em>。</p>
+<ul>
+<li><a href="https://github.com/MatsuriDayo/NekoBoxForAndroid" target="_blank" rel="noopener noreferrer">NekoBox</a>：Matsuri 的继任。</li>
+<li><a href="https://github.com/MatsuriDayo/Matsuri" target="_blank" rel="noopener noreferrer">Matsuri</a>：项目已 archived。之前用过一阵，后面换回 V2rayNG 了。</li>
+<li><a href="https://github.com/SagerNet" target="_blank" rel="noopener noreferrer">SagerNet</a>：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。</li>
+</ul>
+<p>并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。</p>
+<h4> <a href="https://github.com/daeuniverse/daed" target="_blank" rel="noopener noreferrer">daed</a></h4>
+<blockquote>
+<p>根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多</p>
+<div style="text-align:right">
+<p>——Au, <a href="https://t.me/archlinuxcn_group/2912643" target="_blank" rel="noopener noreferrer">src</a></p>
+</div>
+</blockquote>
+<p>网页面板的开源代理，dae 的前端。由于比较新，目前使用的人不多。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>这样就开机自启，并可以 <code>localhost:2023</code> 进面板了。然后写节点，拖到 proxy 里就行。</p>
+<p>daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 <code>ALL_PROXY</code> 等系统代理变量记得取消；firefox 需要在代理设置中设为 <em>自动探测网络环境</em>。</p>
+<p>需要写规则可以参考<a href="https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522" target="_blank" rel="noopener noreferrer">这里</a>。</p>
+<h4> v2raya</h4>
+<p>v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 <a href="https://xtls.github.io/" target="_blank" rel="noopener noreferrer">Xray 内核</a>差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。（后面逃到 daed 了）</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后的操作都在网页上进行。使用系统代理端口为 <code>http://127.0.0.1:20172</code>，这个端口带自动分流。</p>
+<p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" target="_blank" rel="noopener noreferrer">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Trojan-Go</title>
+      <link>https://absx.pages.dev/articles/proxy/trojan-go.html</link>
+      <guid>https://absx.pages.dev/articles/proxy/trojan-go.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">Trojan-Go</source>
+      <description>Trojan-Go</description>
+      <category>教程</category>
+      <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> <a href="https://github.com/p4gefau1t/trojan-go" target="_blank" rel="noopener noreferrer">Trojan-Go</a></h1>
+<p>trojan-go 是 trojan 的 go 实现，兼容原版。</p>
+<p>这里再简单介绍一下 trojan 协议，这是一个伪装成明确特征的 https 流量的协议，直接利用了现有的 tls 加密。</p>
+<h2> <a href="https://p4gefau1t.github.io/trojan-go/basic/config/" target="_blank" rel="noopener noreferrer">服务端配置</a></h2>
+<p>trojan-go 的配置又是一个简洁的典范，几乎不逊色于 hysteria。</p>
+<ol>
+<li>安装。
+</li>
+<li>配置。
+编辑 <code>/etc/trojan-go/config.json</code>：<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ol>
+<p>然后就可以愉快地使用了。</p>
+<h2> 客户端</h2>
+<p>由于 trojan 协议广泛使用，因此是个客户端基本都支持。</p>
+<p>而关于 trojan-go，在 Android 端可以用 <a href="/articles/proxy/proxy_software.html#sing-box-%E7%B3%BB" target="blank">NekoBox</a>，不过需要<a href="https://f-droid.org/packages/io.nekohasekai.sagernet.plugin.trojan_go/" target="_blank" rel="noopener noreferrer">下载插件</a>。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>机场推荐</title>
+      <link>https://absx.pages.dev/articles/proxy/vpn.html</link>
+      <guid>https://absx.pages.dev/articles/proxy/vpn.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">机场推荐</source>
+      <description>机场推荐</description>
+      <category>教程</category>
+      <pubDate>Mon, 13 Jun 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 机场推荐</h1>
+<div class="hint-container danger">
+<p class="hint-container-title">警告</p>
+<p>本人不承担因使用以下推荐所带来的任何后果。</p>
+</div>
+<div class="image60" style="text-align: center; ">
+<img alt="meme" src="/images/articles/vpn/meme.png">
+</div>
+<h2> 免费 VPN</h2>
+<div class="hint-container warning">
+<p class="hint-container-title">警告</p>
+<p>自带闭源客户端的免费 VPN 在<strong>安全性方面没有保证</strong>，不推荐使用。（典型的可以搜索 <em>老王 VPN</em>）</p>
+<p><strong>免费 VPN 仅应在无其他安全选择的情况下，接触非敏感信息时使用，且有较高信息泄露风险。</strong> 随着审查力度变化，不排除更高危险。<a href="https://focus.scol.com.cn/shwx/202007/57862317.html" target="_blank" rel="noopener noreferrer">血的教训（当然不是我</a></p>
+</div>
+<p>以下免费推荐均为 Android 端 app，<strong>均可在谷歌商店下载</strong>。</p>
+<h3> 火箭加速（推荐）</h3>
+<p><a href="https://wwp.lanzout.com/ibdoB02z8o8d" target="_blank" rel="noopener noreferrer">私链下载地址</a></p>
+<p>优点：</p>
+<ul>
+<li>体积小</li>
+<li>权限低</li>
+<li>速度较快（有时能跑到 1.5M/s）</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>节点变化频繁，易失效</li>
+</ul>
+<p>tips：加速前需事先选择能通过连接测试的节点</p>
+<h3> 蚂蚁 VPN</h3>
+<p>声称永久免费，操作简单，但开启较慢，有强制弹窗广告</p>
+<h3> 银河 VPN（不推荐）</h3>
+<p>开启成功率看脸，网速不敌上面两位，同样有强制弹窗广告</p>
+<h2> 付费机场</h2>
+<p>此处列出部分机场性价比及其变化情况。数字代表<strong>每 1 元 RMB 买到的 GB 数</strong></p>
+<iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280" loading="lazy"></iframe>
+<div class="hint-container warning">
+<p class="hint-container-title">注意</p>
+<ul>
+<li>每一次付费都请告诫自己机场跑路的可能性。
+<ul>
+<li>（你看看这里跑路了几家？）</li>
+</ul>
+</li>
+<li>机场变动频繁，数据可能过时。</li>
+</ul>
+</div>
+<h3> 白嫖机场（已跑路）</h3>
+<details><summary>archived</summary>
+<p>不稳定，后果自负。</p>
+<p><a href="https://paolu.pics/" target="_blank" rel="noopener noreferrer">官网</a> | <a href="https://paolu.pics/#/register?code=YnrLNenI" target="_blank" rel="noopener noreferrer">邀请链接</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">年付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 10.00</td>
+<td style="text-align:center">669G*12</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3> <a href="https://xn--4gq62f52gdss.com/" target="_blank" rel="noopener noreferrer">一元机场</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 4.00</td>
+<td style="text-align:center">1000G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 6.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">不限</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">年付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 11.00</td>
+<td style="text-align:center">100G*12</td>
+<td style="text-align:center">不限</td>
+</tr>
+</tbody>
+</table>
+<p><em>（采用 Trojan 协议）</em></p>
+<h3> <a href="https://fqhy.xyz/" target="_blank" rel="noopener noreferrer">番茄花园（取消）</a></h3>
+<p>新用户已取消免费套餐。</p>
+<details><summary>archived</summary>
+<p>拥有免费节点，每日签到可领免费流量</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 0.00</td>
+<td style="text-align:center">每日签到（约 2G）</td>
+<td style="text-align:center">100Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 30.00</td>
+<td style="text-align:center">300G</td>
+<td style="text-align:center">300Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 60.00</td>
+<td style="text-align:center">1300G</td>
+<td style="text-align:center">500Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 100.00</td>
+<td style="text-align:center">6000G</td>
+<td style="text-align:center">无限制</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3> <a href="https://glados.rocks/" target="_blank" rel="noopener noreferrer">GLaDOS（取消）</a></h3>
+<blockquote>
+<p>很遗憾，GLaDOS 现已关闭免费用户的签到延期功能。</p>
+</blockquote>
+<details><summary>archived</summary>
+<p>邀请码：<code>3SPFS-IABW1-77EJL-PE8NR</code></p>
+<p>学生免费用 360 天，每月 30G。<a href="https://glados.rocks/console/education" target="_blank" rel="noopener noreferrer">说明</a></p>
+<blockquote>
+<p><em>此机场可通过签到延长到期时间，建议使用<a href="https://github.com/DullSword/GLaDOS-CheckIn" target="_blank" rel="noopener noreferrer">脚本</a>自动签到。</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$1.60</td>
+<td style="text-align:center">200G</td>
+<td style="text-align:center">100Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">$4.20</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">$18.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3> <a href="https://muguacloud.win/" target="_blank" rel="noopener noreferrer">木瓜云</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 7.00</td>
+<td style="text-align:center">900G</td>
+<td style="text-align:center">100Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 10.00</td>
+<td style="text-align:center">1600G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 18.00</td>
+<td style="text-align:center">2800G</td>
+<td style="text-align:center">200Mbps</td>
+</tr>
+</tbody>
+</table>
+<h3> StarTrip（已跑路）</h3>
+<details><summary>archived</summary>
+<p><a href="https://www.startrip.top" target="_blank" rel="noopener noreferrer">官网</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">￥ 1.00</th>
+<th style="text-align:center">无限期（已取消）</th>
+<th style="text-align:center">￥ 1.00</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">流量</td>
+<td style="text-align:center">60G</td>
+<td style="text-align:center">流量</td>
+<td style="text-align:center">15G</td>
+</tr>
+<tr>
+<td style="text-align:center">限速</td>
+<td style="text-align:center">50Mbps</td>
+<td style="text-align:center">限速</td>
+<td style="text-align:center">无限制</td>
+</tr>
+</tbody>
+</table>
+<p><em>（旧版表格）</em></p>
+</details>
+<h3> <a href="https://neko.services/" target="_blank" rel="noopener noreferrer">貓貓互聯</a></h3>
+ <!-- | [邀请链接](https://neko.services/#/register?code=xjZ5356D) -->
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 13.00</td>
+<td style="text-align:center">200G</td>
+<td style="text-align:center">未知</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 28.00</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">年付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 20.00</td>
+<td style="text-align:center">128G</td>
+<td style="text-align:center">未知</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 38.00</td>
+<td style="text-align:center">256G</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<h3> <a href="https://user.bafang.vip/" target="_blank" rel="noopener noreferrer">八方云</a>（已跑路）</h3>
+<details><summary>archived</summary>
+<p><a href="https://user.bafang.vip/#/register?code=WPIANE92" target="_blank" rel="noopener noreferrer">邀请链接</a> | <a href="https://xn--9kq52et30a.com" target="_blank" rel="noopener noreferrer">防爆链</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 1.00</td>
+<td style="text-align:center">100G</td>
+<td style="text-align:center">1000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 5.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">1000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 10.00</td>
+<td style="text-align:center">5000G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">一次性</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 2.00</td>
+<td style="text-align:center">100G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 6.00</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 20.00</td>
+<td style="text-align:center">2000G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 50.00</td>
+<td style="text-align:center">8000G</td>
+<td style="text-align:center">5000Mbps</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3> <a href="https://xn--mes358aby2apfg.com" target="_blank" rel="noopener noreferrer">赔钱机场</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 1.00</td>
+<td style="text-align:center">100G</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 1.99</td>
+<td style="text-align:center">500G</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 3.99</td>
+<td style="text-align:center">1T</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 6.99</td>
+<td style="text-align:center">5T</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">一次性</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 14.90</td>
+<td style="text-align:center">1000G</td>
+<td style="text-align:center">20000Mbps</td>
+</tr>
+</tbody>
+</table>
+<h3> <a href="https://tejiajichang.com" target="_blank" rel="noopener noreferrer">特价机场</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">月付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 6</td>
+<td style="text-align:center">1200G</td>
+<td style="text-align:center">未知</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 10</td>
+<td style="text-align:center">8000G</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">一次性</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 18</td>
+<td style="text-align:center">1000G</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">半年付</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 10</td>
+<td style="text-align:center">200G * 6</td>
+<td style="text-align:center">未知</td>
+</tr>
+</tbody>
+</table>
+<h3> 其他</h3>
+<p><a href="https://www.mojie.link/" target="_blank" rel="noopener noreferrer">魔戒</a>，仅有<strong>不限时流量</strong>出售，稳定但贵。</p>
+ <!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
+<details><summary>查看</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">一次性</th>
+<th style="text-align:center">流量</th>
+<th style="text-align:center">限速</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">￥ 1.00</td>
+<td style="text-align:center">2G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 12.00</td>
+<td style="text-align:center">130G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 36.00</td>
+<td style="text-align:center">420G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 60.00</td>
+<td style="text-align:center">750G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 120.00</td>
+<td style="text-align:center">1660G</td>
+<td style="text-align:center">不限</td>
+</tr>
+<tr>
+<td style="text-align:center">￥ 240.00</td>
+<td style="text-align:center">3600G</td>
+<td style="text-align:center">不限</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p>以下机场因性价比原因不推荐购买</p>
+<ul>
+<li><a href="https://xftld.org/" target="_blank" rel="noopener noreferrer">XFLTD</a></li>
+<li><a href="https://www.spcloud.pro/index.php#/register?code=97EXi3tX" target="_blank" rel="noopener noreferrer">Simple Cloud</a></li>
+<li><a href="https://xsus.buzz/" target="_blank" rel="noopener noreferrer">XSUS</a></li>
+<li><a href="https://my.qianglie.com/" target="_blank" rel="noopener noreferrer">墙裂</a></li>
+<li><a href="https://www.dageyun.net/" target="_blank" rel="noopener noreferrer">大哥云</a></li>
+<li><a href="https://llcool.xyz/" target="_blank" rel="noopener noreferrer">流量库</a></li>
+<li><a href="https://feiniaoyun.xyz/" target="_blank" rel="noopener noreferrer">飞鸟云</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>VPS</title>
+      <link>https://absx.pages.dev/articles/proxy/vps.html</link>
+      <guid>https://absx.pages.dev/articles/proxy/vps.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">VPS</source>
+      <description>VPS</description>
+      <category>教程</category>
+      <category>经历</category>
+      <pubDate>Sun, 14 May 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> VPS</h1>
+<p>我与我的 VPS 的故事。服务器运维/代理搭建。</p>
+<p>与 VPS 无关的 linux 问题请移步 <a href="./linux">linux</a></p>
+<h2> 购买</h2>
+<h3> 消息来源</h3>
+<ul>
+<li><a href="https://lowendbox.com/" target="_blank" rel="noopener noreferrer">lowendbox</a></li>
+<li><a href="https://zhujiwiki.com" target="_blank" rel="noopener noreferrer">主机百科</a></li>
+</ul>
+<h3> 我买到的</h3>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Host</th>
+<th style="text-align:center">location</th>
+<th style="text-align:center">Price</th>
+<th style="text-align:center">bandwidth</th>
+<th style="text-align:center">RAM</th>
+<th style="text-align:center">Storage</th>
+<th style="text-align:center">Core</th>
+<th style="text-align:center">saying</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">20230514 <a href="https://my.racknerd.com/cart.php?a=add&amp;pid=695" target="_blank" rel="noopener noreferrer">RackNerd</a></td>
+<td style="text-align:center">San Jose</td>
+<td style="text-align:center">$10.28/yr</td>
+<td style="text-align:center">1000GB 1Gbps</td>
+<td style="text-align:center">768MB</td>
+<td style="text-align:center">10GB</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></td>
+</tr>
+<tr>
+<td style="text-align:center">20230602 <a href="https://distribute.vpslog.net/" target="_blank" rel="noopener noreferrer">vpslog</a></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">free</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">64MB</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">20231124 <a href="www.silicloud.com">silicloud</a> (BF)</td>
+<td style="text-align:center">Tokyo</td>
+<td style="text-align:center">HK$128/yr</td>
+<td style="text-align:center">300GB 300Mbps</td>
+<td style="text-align:center">768MB</td>
+<td style="text-align:center">20GB</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h2> 工具</h2>
+<ul>
+<li><a href="https://ping.pe/#" target="_blank" rel="noopener noreferrer">ping.pe</a>：连通性</li>
+<li><code>curl -Lso- bench.sh | bash</code>：VPS 信息，全球测速</li>
+</ul>
+<h3> SSH</h3>
+
+<h4> 添加公钥</h4>
+<p>由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。在本机上 <code>cat ~/.ssh/id_xxx.pub</code> 并复制，再粘贴到 vps 的 <code>~/.ssh/authorized_keys</code> 内就好了。每行一个公钥。</p>
+<h2> 安全性</h2>
+<p>VPS 的公网 ip 一定会带来安全性问题。不容忽视。</p>
+<h3> 自检</h3>
+<ul>
+<li>可以在 <code>/var/log/auth.log</code> 中查看登录日志。我的日志里的攻击记录非常多。
+<ul>
+<li><code>less /var/log/auth.log | grep -i 'accepted'</code> 可以查看登录成功的记录，看看是不是自己的 ip。</li>
+</ul>
+</li>
+<li><code>ps aux | grep sshd</code> 查看有没有除自己以外的 <code>sshd: root [.*]</code> 类型的进程。
+<ul>
+<li><code>ps aux | grep 'sshd' | grep -v 'root@pts/0\|grep\|/sbin/sshd' | awk '{print $2}' | xargs kill -9</code> 可以杀掉这些进程。（很粗糙了属于是）</li>
+</ul>
+</li>
+<li><code>lastb -9</code> 可以查看最近 9 条登录失败记录</li>
+</ul>
+<h3> 解法</h3>
+<ul>
+<li>可以通过修改 <code>/etc/ssh/sshd_config</code> 中的内容进行限制，例如修改 <code>MaxAuthTries</code>。</li>
+<li>密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。</li>
+<li>限制登录 ip。修改 <code>/etc/hosts.allow</code> &amp; <code>/etc/hosts.deny</code> 文件。</li>
+<li>firewalld
+</li>
+</ul>
+<h2> 代理</h2>
+<h3> 协议</h3>
+<p>网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在的 trojan 检测技术也比较成熟。</p>
+<p>我最开始直接用 <a href="https://github.com/Jrohy/trojan" target="_blank" rel="noopener noreferrer">trojan 一键脚本</a><sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">。如</a><a href="#%E5%AF%B9%E6%8A%97-gfw">GFW 会主动对端口进行封禁</a>，我的端口基本只能存活一天。（后来做了端口转发就基本没死了，偶尔会被 Qos(?)）</p>
+<p>随着后来自己也使用 linux，我对于一键脚本不够满意，因此开始自己写 trojan-go 的配置文件。</p>
+<p>也尝试了一下 hysteria 协议，并且写了个教程。</p>
+<h3> WARP</h3>
+<p>发现访问 Google 时会有机器人异常验证，久而久之还是挺烦的。可以用 <a href="https://github.com/P3TERX/warp.sh" target="_blank" rel="noopener noreferrer">WARP 一键脚本</a> 装个 WARP 解决。</p>
+<h3> 对抗 GFW</h3>
+<p>GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 ip 被永久封禁的风险。trojan 本身是 TLS over TLS 加密方式，但仍然有办法识别出流量特征。</p>
+<p>我使用如下方式降低封锁几率（<strong>有没有用其实是不太清楚的</strong>）：</p>
+<!-- * 开启 trojan-go 而非纯 trojan
+* [WARP](#warp) -->
+<ul>
+<li>反代一个伪装主页，详见<a href="/articles/reverse_proxy.html" target="blank">反向代理</a>。（然而 443 早就被封了，令人感慨）</li>
+<li>开启 cloudflare 代理</li>
+<li>设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。<div class="language-bash" data-ext="sh"></div></li>
+</ul>
+<h3> 清理僵尸进程</h3>
+<p>如果你看到许多 <code>[journalctl] &lt;defunct&gt;</code> 标识，这代表有未结束的僵尸子进程。可以<a href="https://www.linkedin.com/pulse/how-identify-kill-zombiedefunct-processes-linux-without-george-gabra" target="_blank" rel="noopener noreferrer">参考此处</a>清理他们。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 运维</h2>
+<p>虽然我非常菜，但还是姑且记录一些心得。由于有的服务器是公家的，想干点啥总是感觉束手束脚。。</p>
+<ol>
+<li>如果是自己的服务器，那肯定先把<a href="/farraginous/recommend_packages.html#linux" target="blank">常用工具</a>下载好。
+<ul>
+<li>公家服务器如果有权限安装软件，也可以装一些典型的/极大增加效率的。例如 fish, zoxide</li>
+</ul>
+</li>
+<li>ssh 保活用的 screen 而不是 tmux。<a href="https://linuxize.com/post/how-to-use-linux-screen/" target="_blank" rel="noopener noreferrer">一些基础命令</a>，加一个<a href="https://stackoverflow.com/a/1509764/18929691" target="_blank" rel="noopener noreferrer">删除命令</a>，加一个 <code>&lt;C-a&gt; [</code> 进 copy mode 然后可以往上滚的命令。</li>
+</ol>
+<h2> 遇到的问题</h2>
+<h3> 卡在 Reloading system manager configuration</h3>
+<p>archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration。</p>
+<p>尝试了一下 <code>systemctl daemon-reload</code> 也卡住了。</p>
+<p>然后根据<a href="https://bbs.archlinux.org/viewtopic.php?id=281599" target="_blank" rel="noopener noreferrer">这个回答</a>，罪魁祸首是 <code>netplan</code>（<em>netplan</em> 是 <em>cloud-init</em> 的可选依赖。而 <em>cloud-init</em> 是 VPS 自带的玩意）于是卸载，问题解决——</p>
+<p>然后服务器重启就连不上 ssh 了。。。</p>
+<p>这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。</p>
+<p>所以这个问题是无解的，或许得等我哪天琢磨出换个 vps 联网手段才行吧。</p>
+<h3> 端口被封问题</h3>
+<p>20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口<s>并显示在伪装页面上</s>映射到 12138（还作出了<a href="#%E5%AF%B9%E6%8A%97-gfw">其他努力</a>）。脚本还是有 bug 的（我菜），<code>$temp</code> 赋值不成功，但无伤大雅。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>不应同时使用 firewalld 和 iptables，可能会导致混乱。由于 <code>firewalld</code> 是更高一层的抽象(?)，因此我使用之：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>后来采用<a href="#%E5%AF%B9%E6%8A%97-gfw">端口转发和伪装</a>后就没被封过端口了 www</p>
+<h3> 配置了错误的 firewalld 把自己防住了</h3>
+<p>20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 reload，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...</p>
+<blockquote>
+<p>rescue mode 是 VPS 服务商的一项服务，可以将 VPS 挂载到另一个虚拟机上，通过其对文件进行备份与修改，适用于乱搞把 VPS 搞炸了的情况。</p>
+</blockquote>
+<p>rescue 只有 nano file editor；挂载了分区到 <code>test</code> 以后，直接 <code>nano /test/etc/firewalld/zones/public.xml</code> 加上 <code>&lt;port port="22" protocol="tcp"/&gt;</code>。</p>
+<h3> X-UI does not work</h3>
+<p>我小白一个，只会跟着用简单的一键部署脚本，然后寄了。面板添加节点后，使用 v2rayN 添加服务器无法连上。</p>
+<p>后面换了 <a href="https://github.com/Jrohy/trojan" target="_blank" rel="noopener noreferrer">trojan 面板</a>，能正常用一阵子，但稳定性一般。</p>
+<p>顺带，x-ui 在 alpine 的表现可谓是《惊艳》到我了，，，</p>
+<blockquote>
+<p>~# x-ui install<br> &gt; [ERR] 面板启动失败，可能是因为启动时间超过了两秒，请稍后查看日志信息<br>
+~# x-ui log<br> &gt; [ERR] 请先安装面板</p>
+</blockquote>
+<h2> external</h2>
+<ol>
+<li><a href="https://bulianglin.com/archives/guide.html" target="_blank" rel="noopener noreferrer">节点搭建系列教程 - 不良林</a>，在一众垃圾 youtube 教程中算是讲得比较透彻的。</li>
+<li><a href="https://gitlab.com/drizzt/vps2arch" target="_blank" rel="noopener noreferrer">vps2arch</a>：为你的 vps 安装 arch！</li>
+<li><a href="https://blog.misaka.rest/2023/09/02/hysteria2-script/" target="_blank" rel="noopener noreferrer">使用一键脚本，部署 Hysteria 2 协议节点</a></li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote2" class="footnote-item"><p>本来是想用 X-UI 的，然而<a href="#x-ui-does-not-work">出了问题</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>English learning</title>
       <link>https://absx.pages.dev/farraginous/learning/english.html</link>
@@ -81,48 +993,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Hysteria</title>
-      <link>https://absx.pages.dev/articles/hysteria.html</link>
-      <guid>https://absx.pages.dev/articles/hysteria.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">Hysteria</source>
-      <description>Hysteria</description>
-      <category>教程</category>
-      <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Hysteria</h1>
-<p><a href="https://v2.hysteria.network/zh/" target="_blank" rel="noopener noreferrer">Hysteria</a> 是一个比较新的代理协议，基于 QUIC/HTTP 3。其 Brutal 拥塞控制算法<a href="https://v2.hysteria.network/zh/docs/misc/Hysteria-Brutal/#q-hysteria_1" target="_blank" rel="noopener noreferrer">非常凶猛</a>。</p>
-<p>这玩意文档写的很好，自己写配置也非常简单。其自带了网页伪装、自动 <code>acme.sh</code> 签证书等功能，<s>即使不用代理也能当成<a href="/articles/reverse_proxy.html" target="blank">反代</a>来用</s>。</p>
-<h2> 服务器配置</h2>
-<p>安装 hysteria2 后，编辑 <code>/etc/hysteria/config.yml</code>，写入配置。</p>
-<p>具体怎么写配置建议看文档，讲的挺详细的。这里给出我的配置，使用之前签过的证书，我的静态博客做伪装（）。然后国内(?)的 QUIC 网络环境非常差（亲测），因此设置 <code>obfs</code> 退化成了伪装 UDP。</p>
-<p>伪装的网页当然也是开启了 HTTP3 的。</p>
-<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后需要<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="blank">启动</a> <code>hysteria-server</code> 服务，并检查是否启动成功。我在启动服务时遇到了一些问题。</p>
-<ol>
-<li>即使在 root 下运行，仍然提示权限不足无法读取证书文件。
-<ul>
-<li>尝试编辑 <code>.service</code> 文件，删除 <code>group</code>，将 <code>User</code> 改为 <code>root</code>，无效。</li>
-<li>尝试把证书移到 <code>/etc/hysteria</code> 下，有效。</li>
-</ul>
-</li>
-</ol>
-<p>然后就是客户端了。</p>
-<h2> 客户端使用</h2>
-<p>虽说可以按照官方教程启动一个客户端服务，但是一个黑窗口一直最小化运行比较丑。</p>
-<h3> Windows</h3>
-<p>V2rayN 以内核插件形式支持 hysteria。</p>
-<ol>
-<li>从 Release 下载 <code>.exe</code> 内核，放入 V2rayN 文件夹的 <code>bin/hysteria</code> 下。注意可能需要重命名为 <code>hysteria.exe</code>。</li>
-<li>打开 V2rayN，<em>添加自定义配置服务器</em>，<em>地址</em> 选择客户端的配置文件，<em>Core 类型</em> 选择 <code>hysteria</code>。</li>
-</ol>
-<p>然后就可以愉快地使用了。我的客户端配置文件参考：</p>
-<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Linux</h3>
-<p>我在 linux 上使用 <a href="/articles/linux/install_and_config.html#daed" target="blank">daed</a>，然而其<a href="https://github.com/daeuniverse/dae/issues/48" target="_blank" rel="noopener noreferrer">尚未支持且不打算支持 hysteria 协议</a>。而官方使用样例的黑窗口问题虽然可以写一个 service 绕过，但是没有透明代理会比较难受（官方透明代理教程是相对复杂的，包括创建新 user，写路由规则和 iptables）。</p>
-<h3> Android</h3>
-<p>NekoBox (v1.2.9) 号称支持，实测不可用。</p>
-<h3> 总结</h3>
-<p>这是我第一次直接写配置文件部署一个协议。任何协议都吃第三方适配，hysteria 的劣势还是不小的，并且在代理广泛使用的大陆效果并不佳。然而在 TUIC 删库后，hysteria 仍然具有一定竞争力。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>反向代理</title>
       <link>https://absx.pages.dev/articles/reverse_proxy.html</link>
       <guid>https://absx.pages.dev/articles/reverse_proxy.html</guid>
@@ -158,6 +1028,11 @@
 <p>虽然 go 写的 caddy 性能可能比纯 c 写的、经过时间检验的 nginx 差，但是流量不大的情况下真的缺那点性能吗？nginx 那坨配置我得上 gpt 才能勉强<strong>读</strong>懂，折腾技术还是用尽可能简单的，减少自己精神内耗的比较好。<s>选择 caddy 是在为自己的脑子着想，兄弟。</s></p>
 <p>因此在自己搞着玩的小流量服务器上用 caddy 准没错。</p>
 <p>目前 caddy 在 github 上有 50k star，也侧面反映了 caddy 的优秀。</p>
+<h2> 遇到的问题</h2>
+<h3> caddy 无法建立连接</h3>
+<p>我想开一个 file server，静态文件没有任何问题（就是我的 blog）。然而 caddy 开了以后一访问就是 js 执行错误。我也用 nginx 试了一下，是可用的。</p>
+<h3> ERR_ADDRESS_UNREACHABLE</h3>
+<p>用 caddy 和 nginx 都试了一遍，浏览器访问 ERR<em>ADDRESS_UNREACHABLE，本地访问 403，说明不是防火墙的问题。nginx 有报错 _13: Permission denied</em>，然后搜一下发现需要 <code>chmod +x &lt;root&gt;</code>。加了以后还是没用，原来 <em>root</em> 的全路径都需要 <code>chmod +x</code>。。问题解决。</p>
 <h2> external</h2>
 <ol>
 <li><a href="https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/" target="_blank" rel="noopener noreferrer">reddit: Caddy vs Nginx: How Do These Web Servers / Reverse Proxies Compare?</a></li>
@@ -236,6 +1111,8 @@
 <li>这个网址直接进会弹窗，<em><code>s.ecust.edu.cn</code> 想打开 <code>xdg-open</code></em>。但是在其他任意浏览器上不会出现这个提示。</li>
 <li>而且我<strong>无法禁用</strong>该网站的打开请求(?)。</li>
 <li>快速拨号会在后台打开网页，截图作为其封面。感觉是不做错误处理的锅。</li>
+<li>我后来在其他平台的 vivaldi 上加了这个快速拨号（避免闪退），于是每次在 linux 上打开 vivaldi 时都会弹个窗：<em>先生请问您要来点 xdg-open 吗？</em></li>
+<li>严格来说这属于比较恶性的 bug 了，不过我还是忍了一阵子。</li>
 </ul>
 </li>
 <li>软件默认不带有标题栏，<s>跟我的理念不谋而合</s>，但是也会带来问题：
@@ -249,6 +1126,8 @@
 </ul>
 </li>
 </ul>
+<p>当我遇到一个重大的问题后，我果断抛弃了 Vivaldi。我需要以 http 访问一个网址，而我一直被重定向到 https 并 error。我每次把 https 换成 http，一按回车，它又变成了 https。。没有开启 <em>始终使用安全连接</em>，没有 cookies，浪费我好多时间真是火大。。</p>
+<figure><img src="/images/articles/browser/vivaldi_bug.gif" alt="我的 VPS 反代连不上的罪魁祸首竟是！" tabindex="0" loading="lazy"><figcaption>我的 VPS 反代连不上的罪魁祸首竟是！</figcaption></figure>
 <h3> nyxt</h3>
 <p>基于 webkit2gtk 的，号称无需使用鼠标的浏览器。试了一下，根本不可用，所有页面 <em>Page could not be loaded</em>。</p>
 <h2> 移动端</h2>
@@ -300,6 +1179,7 @@
 </ol>
 </section>
 ]]></content:encoded>
+      <enclosure url="https://absx.pages.dev/images/articles/browser/vivaldi_bug.gif" type="image/gif"/>
     </item>
     <item>
       <title>Octave</title>
@@ -1035,8 +1915,13 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>分为硬链接和软链接。硬链接文件共享相同的 inode 值，指向同一份文件，因此是同步更新。软链接就是快捷方式。</p>
 <p>git 内添加链接指向的文件需要手动 <code>git add -f</code>。</p>
 <h2> 服务</h2>
-<p>与 windows <em>service</em> 的概念相通。有的 debian 系 distro 使用 <code>service</code> 指令，而 archlinux 使用 <code>systemctl</code> 进行服务管理。本节默认使用 <code>systemctl</code>。</p>
-<p>查看服务的输出，请前往<a href="#%E6%97%A5%E5%BF%97">日志</a>。</p>
+<p>与 windows <em>service</em> 的概念相通。有的 debian 系 distro 使用 <code>service</code> 指令，而 archlinux 使用 <code>systemctl</code> 进行服务管理。<a href="https://wiki.archlinux.org/title/systemd" target="_blank" rel="noopener noreferrer">archwiki</a></p>
+<p>查看服务的输出，一般在 status 里会有，也可以前往<a href="#%E6%97%A5%E5%BF%97">日志</a>查看。</p>
+<h3> 基本概念</h3>
+<p>每个服务（unit）是一个 <code>.service</code> 文件，存放在不同位置，其中由软件安装的服务在 <code>/usr/lib/systemd/system/</code> 下。</p>
+<ul>
+<li><code>xxx@.service</code> 是一个 template unit，不能直接启动，而是需要传入一个 string，作为 <code>xxx@something.service</code> 启动。string 的含义需要自己看 service 内容。</li>
+</ul>
 <h3> 常用指令</h3>
 <p><code>systemctl &lt;operation&gt; &lt;service_name&gt;</code>，无需打 <code>.service</code> 全名。</p>
 <ul>
@@ -1123,7 +2008,12 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
 <h3> 系统设置</h3>
 <ol>
-<li>基础 alias<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>基础 alias
+<ul>
+<li><code>e</code>：EDITOR</li>
+<li><code>l</code>：<a href="/articles/linux/package.html#exa" target="blank">exa</a></li>
+</ul>
+</li>
 <li>设置 <a href="https://wiki.archlinux.org/title/Zram#Using_zram-generator" target="_blank" rel="noopener noreferrer">zram swap</a>。</li>
 <li>设置 <code>/etc/fstab</code>
 <ul>
@@ -1199,23 +2089,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li><a href="https://wiki.archlinuxcn.org/wiki/Fcitx5#%E8%AF%8D%E5%BA%93" target="_blank" rel="noopener noreferrer">添加自定义词库</a></li>
 </ol>
 <h3> 代理</h3>
-<h4> <a href="https://github.com/daeuniverse/daed" target="_blank" rel="noopener noreferrer">daed</a></h4>
-<blockquote>
-<p>根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多</p>
-<div style="text-align:right">
-<p>——Au, <a href="https://t.me/archlinuxcn_group/2912643" target="_blank" rel="noopener noreferrer">src</a></p>
-</div>
-</blockquote>
-<p>网页面板的开源代理，dae 的前端。由于比较新，目前使用的人不多。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>这样就开机自启，并可以 <code>localhost:2023</code> 进面板了。然后写节点，拖到 proxy 里就行。</p>
-<p>daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 <code>ALL_PROXY</code> 等系统代理变量记得取消；firefox 需要在代理设置中设为 <em>自动探测网络环境</em>。</p>
-<p>需要写规则可以参考<a href="https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522" target="_blank" rel="noopener noreferrer">这里</a>。</p>
-<h4> v2raya</h4>
-<p>v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 <a href="https://xtls.github.io/" target="_blank" rel="noopener noreferrer">Xray 内核</a>差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。（后面逃到 daed 了）</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后的操作都在网页上进行。使用系统代理端口为 <code>http://127.0.0.1:20172</code>，这个端口带自动分流。</p>
-<p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" target="_blank" rel="noopener noreferrer">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code></p>
-<h4> clash-verge</h4>
-<p>见<a href="/articles/vpn.html#clash-verge" target="blank">vpn</a>介绍页。内核为 clash-meta，接受订阅文件，不接受节点。有订阅的可以尝试。</p>
+<p>目前我使用 <a href="/articles/proxy/proxy_software.html#daed" target="blank">daed</a> 作为 linux 下的代理软件。</p>
 <h4> 使用 windows 代理</h4>
 <details class="hint-container details"><summary>archwsl 内容，点击展开</summary>
 <p>我在 archwsl 中懒得重复下载，直接使用 windows 代理。<a href="https://zhuanlan.zhihu.com/p/153124468" target="_blank" rel="noopener noreferrer">ref</a></p>
@@ -1491,7 +2365,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h3> <a href="https://man7.org/linux/man-pages/man1/locate.1.html" target="_blank" rel="noopener noreferrer">locate</a></h3>
 <p>快速搜索，其维护了一个数据库，使用 <code>sudo updatedb</code> 更新（默认开机时自动执行），搜索时不再遍历目录。</p>
 <h3> exa</h3>
-<p><code>ls='exa --all --long --color-scale all --binary --header --time-style=long-iso'</code></p>
+<p><code>ls='exa --all --long --color-scale size --binary --header --time-style=long-iso'</code></p>
 <h3> tmux</h3>
 <p>tmux 是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起，在<strong>不使用图形界面</strong>或有恢复 shell 需求时比较好用。</p>
 <p>如果只想要简单的恢复 shell 功能，可以考虑一下 <code>screen</code>。</p>
@@ -2042,1194 +2916,6 @@ RTT = Round Trip Time，往返时间</p>
 <hr>
 <p>吾常数省吾身：思否？学否？律否？效否？善为人否？改何？</p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>随笔</title>
-      <link>https://absx.pages.dev/essay/</link>
-      <guid>https://absx.pages.dev/essay/</guid>
-      <source url="https://absx.pages.dev/rss.xml">随笔</source>
-      <description>随笔</description>
-      <category>随笔</category>
-      <category>作者</category>
-      <category>导航</category>
-      <pubDate>Fri, 06 May 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 随笔</h1>
-<div class="subtitle">——谜语人的处所，闷声者的温巢。</div>
-<div class="subtitle">谜，侃，思，叹，道</div>
-<p><a href="https://t.me/withabsolutex" target="_blank" rel="noopener noreferrer">前往我的频道</a>查看更多随笔。</p>
-<ul>
-<li><a href="/essay/2023.html" target="blank">2023</a></li>
-<li><a href="/essay/2022.html" target="blank">2022</a></li>
-<li><a href="/essay/earlier.html" target="blank">更早</a></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>关于博客</title>
-      <link>https://absx.pages.dev/blog/</link>
-      <guid>https://absx.pages.dev/blog/</guid>
-      <source url="https://absx.pages.dev/rss.xml">关于博客</source>
-      <description>关于博客</description>
-      <category>导航</category>
-      <category>博客</category>
-      <pubDate>Fri, 13 Oct 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 关于博客</h1>
-<h2> 基本信息</h2>
-<ul>
-<li>使用 <a href="https://v2.vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer">VuePress2</a> 搭建，<a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">VuePress Theme Hope</a> 主题，<code>pure: true</code></li>
-<li><a href="https://github.com/lxl66566/lxl66566.github.io" target="_blank" rel="noopener noreferrer">项目地址</a>，Markdown 源码位于 branch code。</li>
-<li>您可以下载源码并在本地预览（dep: <code>node</code>, <code>pnpm</code>, <code>git</code>）：<div class="language-bash line-numbers-mode" data-ext="sh"><div class="highlight-lines"><div class="highlight-line">&nbsp;</div><br><br><br></div><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>部署于 <em>Github Pages</em> / <em>Cloudflare</em> / <em>netlify</em> / <em>vps + nginx</em></li>
-</ul>
-<h2> 文章</h2>
-<ol>
-<li><a href="/blog/withvuepress2.html" target="blank">遇到的问题</a></li>
-<li><a href="/blog/log.html" target="blank">博客日志</a></li>
-<li><a href="/blog/todo.html" target="blank">博客日程</a></li>
-</ol>
-<h2> 前言</h2>
-<blockquote>
-<p>本栏最初写于 20220718，算是对我建站三个半月来的一些总结。（之后持续更新）</p>
-</blockquote>
-<p>建博客时我还是个小白，对 javascript &amp; typescript &amp; css &amp; vue 一窍不通，html 也是菜鸟级，因此在搭建博客过程中遇到了很多麻烦。有些在现在的我看来已经不是问题，但仍有问题悬而未决。</p>
-<p>设想建立博客之初，选择工具阶段，有很多博客工具可供选择，如 Hexo, Wordpress, HUGO, docsify 等。后来随着慢慢深入接触也了解了 Vitepress(<a href="#%E8%AF%95%E5%9B%BE%E8%BF%81%E7%A7%BB%E8%87%B3-vitepress">已尝试</a>), mdbook, Gitbook, Docusaurus。但我还是选择 vuepress。个中缘由嘛，vuepress 的简洁是我最欣赏的一个点，因为像我这种意义党并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>。vuepress 官方也作出了<a href="https://v2.vuepress.vuejs.org/zh/guide/#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%98%AF" target="_blank" rel="noopener noreferrer">为什么推荐自己的说明</a>，但对一个萌新而言这些理由<s>显然看不懂</s>…</p>
-<p>然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我被网上教程（多为 js 写成）与官方文档的 ts 搞得不明所以<span class="heimu" title="你知道的太多了">官方文档肯定正确，但是官方的说明显然不是面向新手的</span>。</p>
-<p>刚开始三个月写得不多。2022 暑假大爆发，写了很多文章，也踩了很多坑。之后一直保持“平常做点记录，偶尔一次大更新”的状态。</p>
-<p>再后来经历了<a href="#%E4%BE%9D%E8%B5%96%E7%88%86%E7%82%B8">依赖爆炸</a>，换了主题。</p>
-<p>我写博客并在朋友间分享这件事也带动了朋友们写博客——甲朋友<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">用的 vuepress 默认主题，乙<sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">用的 hexo，丙<sup class="footnote-ref"></sup></a><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3">直接手搓 bootstrap，丁<sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4">和我一样用 VuePress Theme Hope。不知不觉带动了整整四个人写，连我自己都很惊讶。</a></p><a class="footnote-anchor" id="footnote-ref4">
-<p>本人对存储空间敏感，因此博客的图片很少（越后期新增越少），且所有图片均压缩。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref4"></a> 事迹</h2>
-<h3> 依赖爆炸</h3>
-<p>20230712 由于依赖地狱把 node_modules 给崩了，重装、回档也救不回来。并且是在 lockfile 存在的情况下。</p>
-<h2> 主题选择</h2>
-<div class="subtitle">——主题选的好，写文没烦恼</div>
-<p>最开始年少无知，用的 Vuepress2 默认主题，非常折磨，<a href="/blog/withvuepress2.html" target="blank">问题列表</a>基本都是关于默认主题的问题。</p>
-<p><a href="#%E4%BE%9D%E8%B5%96%E7%88%86%E7%82%B8">炸了</a>之后破罐子破摔，试了下 <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">VuePress Theme Hope</a> 主题，然后发现异常好用。。该主题自带合适的<strong>评论</strong>插件，<strong>搜索增强</strong>插件，<a href="https://plugin-md-enhance.vuejs.press/zh/" target="_blank" rel="noopener noreferrer"><strong>Markdown 增强</strong></a> 插件，<strong>死链检测</strong>，应有尽有。如果一开始就用此主题，定然能解决下述大部分的问题。代价是静态体积多了一倍，在我可接受范围内。</p>
-<p>如果您专注于博客内容产出，也可以看看更小众的 <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank" rel="noopener noreferrer">Gungnir V2</a>。</p>
-<h2> external</h2>
-<ol>
-<li><a href="https://nocss.club/" target="_blank" rel="noopener noreferrer">No CSS Club</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p><a href="https://dream-oyh.github.io/" target="_blank" rel="noopener noreferrer">dream_oyh 的 blog</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p><a href="https://lilic2233.github.io/" target="_blank" rel="noopener noreferrer">Lilic 的博客</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote3" class="footnote-item"><p><a href="https://perrykum.github.io/" target="_blank" rel="noopener noreferrer">Perry Kum's Personal Blog</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote4" class="footnote-item"><p><a href="https://bear-sin.github.io/" target="_blank" rel="noopener noreferrer">Sin 的博客</a> <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>博客日志</title>
-      <link>https://absx.pages.dev/blog/log.html</link>
-      <guid>https://absx.pages.dev/blog/log.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">博客日志</source>
-      <description>博客日志</description>
-      <category>博客</category>
-      <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 博客日志</h1>
-<div class="subtitle">记录点点滴滴</div>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<ul>
-<li>较小的语句优化与增删改不作记录。因此即使博客几乎为<strong>日更</strong>，但日志较稀疏。</li>
-<li><em>维护</em> 一般指花费时间较长或改动占比较大。后期记录频次降低。</li>
-<li><a href="/farraginous/learning/" target="blank">学习笔记</a>区只记录 <em>创建</em> 活动。（学习不止，维护过多）</li>
-<li>自 20231112 起，新增文章不再记录于此处。</li>
-</ul>
-</div>
-<h2> 2023</h2>
-<h3> 20231122</h3>
-<ul>
-<li>新增组件：OrderBadge。替换正则表达式：<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div>anime 页面特殊处理。</li>
-</ul>
-<h3> 20231111</h3>
-<ul>
-<li>新增 <em>爱好 - NSFW - 本子合集</em></li>
-</ul>
-<h3> 20231108</h3>
-<ul>
-<li>拆分 <em>设置手机</em></li>
-</ul>
-<h3> 20231104</h3>
-<ul>
-<li>新增 <em>学习笔记 - typst</em></li>
-</ul>
-<h3> 20231102</h3>
-<ul>
-<li>作者详细信息 新增 <em>About Me 流程图</em></li>
-</ul>
-<h3> 20231101</h3>
-<ul>
-<li>新增 <em>爱好 - NSFW</em> 区，将 videos 移入。</li>
-</ul>
-<h3> 20231031</h3>
-<ul>
-<li>使用 vue 组件重写 av 列表，拥有自动分组，自动排序功能。
-<ul>
-<li>脚本审阅替换了 <code>uncensored-leak</code></li>
-</ul>
-</li>
-</ul>
-<h3> 20231028</h3>
-<ul>
-<li>继续拆分 <em>linux</em> 页面，分为 <em>基础</em>、<em>安装与配置</em>、<em>包管理与使用</em> 以及之前的 <em>遇到的问题</em> 四个页面</li>
-</ul>
-<h3> 20231021</h3>
-<ul>
-<li><em>编程 - 数据库</em> 新增大量内容</li>
-</ul>
-<h3> 20231020</h3>
-<ul>
-<li>新增 <em>编程 - html</em>、<em>学习笔记 - 计算机网络</em></li>
-</ul>
-<h3> 20231018</h3>
-<ul>
-<li>闲聊新增 <em>零化</em>、<em>脑洞</em></li>
-</ul>
-<h3> 20231017</h3>
-<ul>
-<li>按年份独立 <a href="/essay/" target="blank">随笔</a> 并放入 <em>年终总结</em></li>
-<li>维护 python, Git</li>
-</ul>
-<h3> 20231013</h3>
-<ul>
-<li><strong>新增 <em>博客</em> 板块，并移动 <em>VuePress2 与博客心得</em>（更名为 <em>问题列表</em>） 与本页面到此处</strong>
-<ul>
-<li>从 <em>日程库</em> 中独立出 <em>博客日程</em></li>
-</ul>
-</li>
-<li>add Google Analytics</li>
-</ul>
-<h3> 20231011</h3>
-<ul>
-<li>目录结构更改：分离 <a href="../articles/linux">linux</a> 与 <a href="/articles/linux/problem.html" target="blank">折腾 linux 遇到的问题</a></li>
-<li>折腾 linux，新增内容。</li>
-<li>新增<a href="/gossip/chicken_soup.html" target="blank">闲聊 - 鲜鸡汤</a></li>
-</ul>
-<h3> 20230926</h3>
-<ul>
-<li><em>软件汇总</em> 新增 <a href="/farraginous/recommend_packages.html#linux" target="blank">linux</a></li>
-</ul>
-<h3> 20230925</h3>
-<ul>
-<li>新增 vue 组件：<code>av</code></li>
-</ul>
-<h3> 20230922</h3>
-<ul>
-<li>新增学习笔记 - 数字信号处理</li>
-</ul>
-<h3> 20230920</h3>
-<ul>
-<li>不再使用 cdn 作为图片加载来源</li>
-</ul>
-<h3> 20230919</h3>
-<ul>
-<li>新增学习笔记 - 通信电子线路</li>
-</ul>
-<h3> 20230909</h3>
-<ul>
-<li>使用 Prettier 几乎格式化了所有文档</li>
-<li>日常维护</li>
-</ul>
-<h3> 20230906</h3>
-<ul>
-<li>新增<a href="/gossip/forward.html" target="blank">闲聊 - 神评</a></li>
-</ul>
-<h3> 20230831</h3>
-<ul>
-<li>新增<a href="/coding/vscode.html" target="blank">编程 - vscode</a></li>
-<li>迁移 Linux 页面至<a href="../articles">文章</a></li>
-</ul>
-<h3> 20230828</h3>
-<ul>
-<li>新增 <a href="/articles/note.html" target="blank">笔记软件横评</a> 页面</li>
-<li>格式化部分文档</li>
-</ul>
-<h3> 20230820-26</h3>
-<ul>
-<li>持续更新 <a href="../articles/linux">linux</a> 页面</li>
-</ul>
-<h3> 20230808</h3>
-<ul>
-<li>维护 <a href="/coding/github.html" target="blank">Github</a>，<a href="../articles/linux">linux</a></li>
-<li>图表去缩进，减小体积</li>
-</ul>
-<h3> 20230807</h3>
-<ul>
-<li>尝试添加 pwa 支持，更改代码行号宽度</li>
-<li>添加 <a href="../rss.xml">rss</a></li>
-</ul>
-<h3> 20230806</h3>
-<ul>
-<li><a href="/coding/Git.html" target="blank">git</a> 大改。</li>
-</ul>
-<h3> 20230802</h3>
-<ul>
-<li><a href="/coding/Cpp.html" target="blank">c++</a> 新增内容</li>
-</ul>
-<h3> 20230801</h3>
-<ul>
-<li>使用 pnpm 代替 npm 进行包管理</li>
-<li>设置自动部署并写进<a href="/blog/withvuepress2.html" target="blank">心得</a></li>
-</ul>
-<h3> 20230729</h3>
-<ul>
-<li>新增 <a href="/articles/ramdisk.html" target="blank">文章 - RAM Disk 横评</a></li>
-<li>分类增强</li>
-</ul>
-<h3> 20230724</h3>
-<ul>
-<li>迁移 <em>atri</em> 页面到 <a href="/coding/bot.html" target="blank">编程 - bot</a> 并新增 koishi 内容</li>
-</ul>
-<h3> 20230723</h3>
-<ul>
-<li>将 typescript 中的 node.js 部分分离为新增独立页面 <a href="/coding/nodejs.html" target="blank">node.js</a></li>
-</ul>
-<h3> 20230721</h3>
-<ul>
-<li>新增 <a href="/articles/external.html" target="blank">文章 - 文章分享</a>，并在许多页面末尾新增 <em>external</em>，用于相关文章推荐。</li>
-<li><em>对 xxx 的希望</em> 新增<a href="/gossip/hope.html#%E5%AF%B9%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B8%8C%E6%9C%9B" target="blank">内容</a></li>
-</ul>
-<h3> 20230720</h3>
-<ul>
-<li>修复代码块选项卡的 bug，代码块行号优化。</li>
-<li><a href="/coding/Git.html" target="blank">Git 页面</a> 修改</li>
-<li><a href="/#%E5%85%B3%E4%BA%8E%E5%8D%9A%E5%AE%A2" target="blank">添加协议为 MIT</a></li>
-</ul>
-<h3> 20230716</h3>
-<ul>
-<li><em>应用汇总</em> 大改动：重新排版，添加/归档许多条目。</li>
-</ul>
-<h3> 20230715</h3>
-<ul>
-<li>为图表添加 <code>loading="lazy"</code></li>
-<li>再刷机一次，<a href="/articles/mobile/root_and_setting.html" target="blank">设置手机</a> 新增内容</li>
-<li>音游新增 <a href="/hobbies/rhythm_games.html#pjsk" target="blank">pjsk</a></li>
-<li><a href="/essay/2023.html#_20230715" target="blank">灭蟑记（六）</a></li>
-</ul>
-<h3> 20230714</h3>
-<ul>
-<li><a href="/hobbies/other_games/uno.html" target="blank">UNO 扩展规则</a> 更新至 5.2.1，优化页面阅读体验</li>
-</ul>
-<h3> 20230713</h3>
-<ul>
-<li>为文章添加创建日期，分类，标签</li>
-<li>navbar, sidebar 添加无障碍图标</li>
-<li>移除 Broken links</li>
-<li>维护首页</li>
-</ul>
-<h3> 20230712</h3>
-<ul>
-<li><strong>更换主题：<a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">VuePress Theme Hope</a>，并使用其提供的全文搜索，加密，Markdown 增强，评论功能</strong></li>
-<li><em>VuePress2 与博客心得</em> 新增 <a href="/blog/withvuepress2.html#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98" target="blank"># 更换主题</a></li>
-<li>新增 <a href="/articles/input_method.html" target="blank">文章 - 输入法</a> 页面</li>
-</ul>
-<h3> 20230711</h3>
-<ul>
-<li><em>VuePress2 与博客心得</em> 新增 <a href="/blog/withvuepress2.html#%E8%AF%95%E5%9B%BE%E8%BF%81%E7%A7%BB%E8%87%B3-vitepress" target="blank">试图迁移至 vitepress</a>，<a href="/blog/withvuepress2.html#%E5%B0%9D%E8%AF%95%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%90%9C%E7%B4%A2" target="blank">尝试更好的搜索</a></li>
-<li>config.ts 改动</li>
-</ul>
-<h3> 20230704</h3>
-<ul>
-<li><a href="/gossip/consider.html#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%81%8F%E7%A7%91" target="blank">consider</a> 新增内容</li>
-</ul>
-<h3> 20230702</h3>
-<ul>
-<li>重审 <em>边缘二次元</em> 属性，维护相关页面</li>
-<li>更改本页面：去除月份索引，使用 8digit 日期格式</li>
-</ul>
-<h3> 20230622</h3>
-<ul>
-<li>新增 <em>学习笔记 - 双拼</em></li>
-</ul>
-<h3> 20230620</h3>
-<ul>
-<li>维护回忆录</li>
-</ul>
-<h3> 20230617</h3>
-<ul>
-<li>新增 <em>学习笔记 - 日本語勉強</em></li>
-<li>合并 <em>禁用快应用中心</em> 到 <a href="/articles/mobile/root_and_setting.html#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6" target="blank">设置手机 - 禁用软件</a></li>
-</ul>
-<h3> 20230615</h3>
-<ul>
-<li>新增 <a href="/gossip/memes.html" target="blank">闲聊 - 绷不住了</a></li>
-</ul>
-<h3> 20230614</h3>
-<ul>
-<li>新增 <a href="/articles/mobile/root_and_setting.html#%E5%88%B7%E6%9C%BA" target="blank">设置手机 - 刷机</a></li>
-</ul>
-<h3> 20230610</h3>
-<ul>
-<li>维护 <a href="/coding/algorithm.html" target="blank">算法</a></li>
-</ul>
-<h3> 20230605</h3>
-<ul>
-<li>新增 <em>学习笔记 - 数字系统设计</em></li>
-<li>维护 <em>xxx 有多难用</em>，<em>网址汇总</em></li>
-</ul>
-<h3> 20230603</h3>
-<ul>
-<li>编程 新增 <a href="/coding/sql.html" target="blank">数据库</a></li>
-<li>维护 <a href="/coding/tsjs.html" target="blank">TypeScript</a></li>
-<li>移动 <em>编程 - 杂项</em> 到 <a href="/articles/cli_compress.html" target="blank">文章 - 命令行压缩</a></li>
-</ul>
-<h3> 20230601</h3>
-<ul>
-<li><a href="/coding/java.html" target="blank">Java</a> 新增内容</li>
-</ul>
-<h3> 20230528</h3>
-<ul>
-<li>新增自动空格（<a href="https://github.com/vinta/pangu.js/tree/master" target="_blank" rel="noopener noreferrer">盘古之白</a>）（后证明无效）</li>
-</ul>
-<h3> 20230526</h3>
-<ul>
-<li><em>编程</em> 新增 <a href="/coding/kotlin.html" target="blank">kotlin</a></li>
-</ul>
-<h3> 20230518</h3>
-<ul>
-<li><em>VPS</em> 新增 <a href="/articles/vps.html#%E6%90%AD%E5%BB%BA%E4%BB%A3%E7%90%86" target="blank">搭建代理</a> 内容</li>
-</ul>
-<h3> 20230517</h3>
-<ul>
-<li><em>VPS</em> 新增 <a href="/articles/vps.html#%E5%AE%89%E5%85%A8%E6%80%A7" target="blank">安全性</a> 内容</li>
-</ul>
-<h3> 20230514</h3>
-<ul>
-<li><a href="../articles/linux">Linux</a> 中新增内容</li>
-<li><em>网址推荐</em> 中新增 <em>AI 工具</em></li>
-<li>文章新增 <a href="/articles/vps.html" target="blank">VPS</a></li>
-</ul>
-<h3> 20230510</h3>
-<ul>
-<li>设置电脑 新增 <a href="/articles/computer_setting.html#%E5%AF%B9-archwsl-%E7%9A%84%E8%AE%BE%E7%BD%AE" target="blank">对 ArchWSL 的设置</a></li>
-</ul>
-<h3> 20230508</h3>
-<ul>
-<li>生活中遇到的困难 新增 <a href="/gossip/difficulties.html#_20230507-qt6-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%A4%B1%E8%B4%A5" target="blank">qt6 项目构建失败</a></li>
-</ul>
-<h3> 20230429</h3>
-<ul>
-<li><a href="/gossip/fuckxxx.html" target="blank">xxx 的缺陷</a> 新增 <a href="/gossip/fuckxxx.html#osu-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">OSU</a></li>
-</ul>
-<h3> 20230428</h3>
-<ul>
-<li><a href="/articles/" target="blank">文章</a>新增<a href="/articles/minimize_exe.html" target="blank">最小化二进制文件与 dll</a></li>
-<li><a href="/coding/Cpp.html" target="blank">C++</a>新增<a href="/coding/Cpp.html#vscode-%E9%85%8D%E7%BD%AE-qt-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83" target="blank">vscode 配置 Qt 开发环境</a></li>
-</ul>
-<h3> 20230417</h3>
-<ul>
-<li><a href="/coding/" target="blank">编程</a>新增<a href="../articles/linux">Linux</a></li>
-</ul>
-<h3> 20230412</h3>
-<ul>
-<li><a href="/articles/" target="blank">文章</a> 新增 <a href="/articles/mobile/" target="blank">设置手机</a></li>
-</ul>
-<h3> 20230410</h3>
-<ul>
-<li><a href="/gossip/fuckxxx.html" target="blank">xxx 的缺陷</a> 新增了一些内容</li>
-</ul>
-<h3> 20230409</h3>
-<ul>
-<li>部分图表新增当年数据统计</li>
-<li>编程部分新增<a href="/coding/" target="blank">版块主页</a>，并添加<a href="/coding/tsjs.html" target="blank">TypeScript &amp; JavaScript</a>，<a href="/coding/algorithm.html" target="blank">算法</a>页面</li>
-</ul>
-<h3> 20230401</h3>
-<ul>
-<li><a href="/hobbies/other_games/" target="blank">其他游戏</a> 细分</li>
-</ul>
-<h3> 20230328</h3>
-<ul>
-<li><strong>新增 <a href="/articles/worldview.html" target="blank">道论</a></strong></li>
-</ul>
-<h3> 20230320</h3>
-<ul>
-<li>新增 <a href="/articles/markdown.html" target="blank">Markdown 教程</a></li>
-</ul>
-<h3> 20230317</h3>
-<ul>
-<li>新增 <a href="/coding/java.html" target="blank">编程 - Java</a></li>
-<li><a href="/gossip/fuckxxx.html" target="blank">xxx 有多难用</a> 新增了一些内容</li>
-<li>维护 <a href="/coding/Git.html" target="blank">Git</a>, <a href="/coding/github.html" target="blank">Github</a> 页面</li>
-</ul>
-<h3> 20230312</h3>
-<ul>
-<li>维护 <a href="/coding/Git.html" target="blank">Git</a> 页面，并为博客添加注释。</li>
-</ul>
-<h3> 20230306</h3>
-<ul>
-<li>新增 <a href="/gossip/consider.html#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%A4%A7%E5%AD%A6%E7%8F%AD%E7%BA%A7" target="blank">如何看待 xxx # 如何看待大学班级</a></li>
-</ul>
-<h3> 20230305</h3>
-<ul>
-<li>新增 <a href="/coding/vim.html" target="blank">编程 - Vim</a></li>
-</ul>
-<h3> 20230303</h3>
-<ul>
-<li>新增 <em>学习笔记 - 信号与系统</em></li>
-</ul>
-<h3> 20230301</h3>
-<ul>
-<li>新增 <em>学习笔记 - 模电</em></li>
-</ul>
-<h3> 20230223</h3>
-<ul>
-<li>C++ 页面新增内容</li>
-</ul>
-<h3> 20230222</h3>
-<ul>
-<li>新增 <em>闲聊 - 自由道（已移除）</em> &amp; <em>校内专栏 # 评教</em></li>
-</ul>
-<h3> 20230221</h3>
-<ul>
-<li>新增 <a href="/coding/python.html#%E4%BD%BF%E7%94%A8-poetry-%E8%BF%9B%E8%A1%8C%E5%8C%85%E7%AE%A1%E7%90%86" target="blank">python # 使用 poetry 进行包管理</a></li>
-<li>新增 <a href="/gossip/difficulties.html#_20230221-%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98" target="blank">生活中遇到的困难 # 20230221：网站访问问题</a></li>
-</ul>
-<h3> 20230217</h3>
-<ul>
-<li>维护 <a href="/coding/Git.html" target="blank">编程 - git</a></li>
-</ul>
-<h3> 20230215</h3>
-<ul>
-<li>新增<a href="/gossip/fuckxxx.html#%E8%BF%90%E8%90%A5%E5%95%86%E6%9C%89%E5%A4%9A%E5%82%BB%E9%80%BC" target="blank">闲聊-xxx 有多难用#运营商有多傻逼</a>，<a href="/articles/computer_setting.html#edge-%E8%BD%AC-firefox" target="blank">设置电脑 - edge 转 firefox</a>，<em>学习笔记 - 食物制作</em></li>
-<li>修复了一些跳转错误</li>
-</ul>
-<h3> 20230210</h3>
-<ul>
-<li>新增 <em>灵感 - 奇物志</em></li>
-</ul>
-<h3> 20230209</h3>
-<ul>
-<li>读日记，补充了<a href="/hobbies/books.html" target="blank">读书</a>页面与回忆录的一些内容</li>
-</ul>
-<h3> 20230206</h3>
-<ul>
-<li><em>软件汇总</em> 与 <em>网址汇总</em> 新增一些项目</li>
-<li>新增<a href="/gossip/consider.html#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E7%8C%AB%E8%BF%99%E7%A7%8D%E7%94%9F%E7%89%A9" target="blank">如何看待 xxx - 如何看待猫这种生物</a></li>
-<li>回忆录新增内容</li>
-</ul>
-<h3> 20230201</h3>
-<ul>
-<li>新增<a href="/gossip/fuckxxx.html#telegram-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">xxx 有多难用 # Telegram 有多难用</a></li>
-</ul>
-<h3> 20230124</h3>
-<ul>
-<li>新增<a href="/articles/adb.html" target="blank">文章 - ADB</a></li>
-</ul>
-<h3> 20230123</h3>
-<ul>
-<li>维护<a href="/gossip/author.html" target="blank">关于作者</a>与更详细回答</li>
-</ul>
-<h3> 20230122</h3>
-<ul>
-<li>新增：文章 - 禁用手机快应用中心（迁移至<a href="/articles/mobile/root_and_setting.html#%E7%A6%81%E7%94%A8%E5%BF%AB%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BF%83" target="blank">设置手机</a>）</li>
-<li>全局优化排版与语言逻辑，补充信息</li>
-</ul>
-<h3> 20230117</h3>
-<ul>
-<li>回忆录新增内容：<em>#更早</em> 与 <em>#梦 / 幻想</em>（更名为 <em>梦，幻想和其他虚幻之物</em> ）</li>
-<li>新增<a href="/gossip/consider.html#%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E4%B8%89%E4%BD%93%E5%8A%A8%E7%94%BB-%E7%94%B5%E8%A7%86%E5%89%A7" target="blank">如何看待 xxx - 如何看待三体动画/电视剧</a></li>
-</ul>
-<h3> 20230115</h3>
-<ul>
-<li><a href="/articles/telegram.html" target="blank">TG 教程</a>、<a href="/coding/Rust.html" target="blank">Rust</a> 新增大量内容</li>
-</ul>
-<h3> 20230114</h3>
-<ul>
-<li>全局优化排版与语言逻辑</li>
-<li>新增<a href="/articles/potplayer_setting.html" target="blank">Potplayer 设置</a>页面</li>
-</ul>
-<h3> 20230112</h3>
-<ul>
-<li><a href="/articles/vpn.html" target="blank">初级科学上网</a>更新，新增性价比机场两位</li>
-</ul>
-<h3> 20230104</h3>
-<ul>
-<li><a href="/hobbies/books.html" target="blank">读书</a>新增部分书评</li>
-<li>新增 xxx_interval 图表</li>
-</ul>
-<h2> 2022</h2>
-<h3> 20221231</h3>
-<ul>
-<li>新增<a href="/gossip/fuckxxx.html#b%E7%AB%99%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">闲聊 - xxx 有多难用#B 站有多难用</a>、<a href="/articles/telegram.html" target="blank">文章 - TG 教程</a></li>
-</ul>
-<h3> 20221226</h3>
-<ul>
-<li>新增 <em>学习笔记-电路分析基础</em></li>
-<li>新增 <em>回忆录#大二上寒假</em></li>
-</ul>
-<h3> 20221224</h3>
-<ul>
-<li>公开<a href="/hide/sports.html" target="blank">关于作者-运动</a>页面并优化图表</li>
-</ul>
-<h3> 20221220</h3>
-<ul>
-<li>更新亿些页面的过时信息；增加页面可读性</li>
-<li>添加各图表的夜间模式适配</li>
-<li><a href="/hobbies/rhythm_games.html#osu" target="blank">OSU</a>新增键数求和统计</li>
-</ul>
-<h3> 20221215</h3>
-<ul>
-<li>压缩所有站内图片。</li>
-<li>新增<a href="/gossip/compare_home_to_college.html" target="blank">闲聊-家与学校生活环境对比</a></li>
-</ul>
-<h3> 20221129</h3>
-<ul>
-<li>更新 <a href="/articles/vpn.html" target="blank">初级科学上网</a> 并更改排版</li>
-<li>维护<em>我的回忆录-大二</em></li>
-<li>小维护：<a href="/gossip/author.html" target="blank">关于作者</a>及其子页面、<a href="/coding/Git.html" target="blank">编程-Git</a>页面</li>
-</ul>
-<h3> 20221125</h3>
-<ul>
-<li>移动 <em>爱好-CSGO</em> 页面至 其他游戏#CSGO （已撤销更改）</li>
-<li>新增<a href="/gossip/hope.html#%E5%AF%B9%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95%E7%9A%84%E5%B8%8C%E6%9C%9B" target="blank">对 xxx 的希望#对推荐算法的希望</a></li>
-<li>新增 <em>软件汇总 # 为什么你们就是不能加个空格呢？</em></li>
-</ul>
-<h3> 20221120</h3>
-<ul>
-<li><a href="/farraginous/reciter.html" target="blank">背词器</a>英文网址更新</li>
-</ul>
-<h3> 20221118</h3>
-<ul>
-<li>新增<a href="/coding/Rust.html#%E8%BE%93%E5%85%A5" target="blank">Rust-输入</a></li>
-</ul>
-<h3> 20221115</h3>
-<ul>
-<li>归类并新增<a href="/coding/python.html" target="blank">python 页面</a>中条目</li>
-</ul>
-<h3> 20221113</h3>
-<ul>
-<li>新增 <em>学习笔记 - 复变函数与积分变换</em></li>
-</ul>
-<h3> 20221105</h3>
-<ul>
-<li>新增<a href="/farraginous/learning/" target="blank">杂项 - 学习笔记</a> &lt;-- <em>学习笔记 - 大学物理</em></li>
-</ul>
-<h3> 20221028</h3>
-<ul>
-<li>合并闲聊-...希望的两个页面，并加入<a href="/gossip/hope.html#%E5%AF%B9%E8%81%8A%E5%A4%A9%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%B8%8C%E6%9C%9B" target="blank">#对聊天软件的希望</a></li>
-</ul>
-<h3> 20221021</h3>
-<ul>
-<li>新增<a href="/gossip/hope.html#%E5%AF%B9%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B-oj-contest%E7%9A%84%E5%B8%8C%E6%9C%9B" target="blank">闲聊-对算法竞赛 &amp; OJ contest 的希望</a>页面（已合并）</li>
-<li>在软件汇总页面中，将 <em>Via</em> 更换为 <em>m 浏览器</em></li>
-</ul>
-<h3> 20221020</h3>
-<ul>
-<li>更新<a href="/articles/vpn.html" target="blank">我的文章-初级科学上网</a>页面</li>
-</ul>
-<h3> 20221016</h3>
-<ul>
-<li>新增<a href="/gossip/consider.html" target="blank">闲聊-如何看待 xxx</a></li>
-</ul>
-<h3> 20221003</h3>
-<ul>
-<li>新增<a href="/coding/python.html" target="blank">编程-Python</a>页面，且整合了原<em>其他工具</em> 页面并更改排版。</li>
-</ul>
-<h3> 20220930</h3>
-<ul>
-<li>新增<a href="/blog/withvuepress2.html#%E9%85%8D%E7%BD%AEsidebar%E9%97%AE%E9%A2%98" target="blank">VuePress2 与博客心得 # 配置 sidebar 问题</a></li>
-</ul>
-<h3> 20220929</h3>
-<ul>
-<li><strong>大更新：重写博客 sidebar 逻辑</strong></li>
-<li>新增<a href="/coding/csharp.html" target="blank">编程-C#</a>页面</li>
-</ul>
-<h3> 20220928</h3>
-<ul>
-<li>新增 <em>校内专栏 # 校内极限生存</em></li>
-</ul>
-<h3> 20220921</h3>
-<ul>
-<li>新增<a href="/coding/Cpp.html#%E9%85%8D%E7%BD%AE_vscode_%E7%8E%AF%E5%A2%83" target="blank">C++#在 vscode 中配置环境</a></li>
-<li>新增 csgo#常用指令</li>
-</ul>
-<h3> 20220915</h3>
-<ul>
-<li>维护 <em>网址汇总</em> 页面，新增大量条目，更改排版</li>
-</ul>
-<h3> 20220911</h3>
-<ul>
-<li>新增<a href="/farraginous/college.html" target="blank">校内专栏</a>页面</li>
-</ul>
-<h3> 20220908</h3>
-<ul>
-<li>新增<a href="/hobbies/rhythm_games.html#%E6%88%91%E7%9A%84%E8%AE%B0%E5%BD%95" target="blank">音游#我的记录</a>四个图表</li>
-<li><em>软件汇总</em> 新增 Keepass2Android 与 KeePassXC 两个密码管理器（已合并为 <em>Keepass 系列</em>）</li>
-</ul>
-<h3> 20220906</h3>
-<ul>
-<li>新增 <em>软件汇总 # Seal</em></li>
-<li>新增<a href="/coding/github.html" target="blank">编程-工具-Github</a>页面</li>
-<li>维护隐藏页面：灵感 | 愿景，文章-对 win11 的设置（迁移至<a href="/articles/computer_setting.html" target="blank">电脑设置</a>）</li>
-</ul>
-<h3> 20220903</h3>
-<ul>
-<li>新增<a href="/hobbies/rhythm_games.html#%E6%88%91%E7%9A%84%E8%AE%B0%E5%BD%95" target="blank">OSU 能力变化表</a></li>
-</ul>
-<h3> 20220901</h3>
-<ul>
-<li><a href="/blog/withvuepress2.html#html%E8%BD%ACvue%E7%BB%84%E4%BB%B6%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98" target="blank">使用 vue 组件创建背词器失败</a></li>
-</ul>
-<h3> 20220831</h3>
-<ul>
-<li>新增<a href="/farraginous/reciter.html" target="blank">背词器</a>，功能还未完全实现</li>
-</ul>
-<h3> 20220829</h3>
-<ul>
-<li>维护初级科学上网页面</li>
-</ul>
-<h3> 20220828</h3>
-<ul>
-<li>修正了运动图表错误</li>
-</ul>
-<h3> 20220827</h3>
-<ul>
-<li>将博客内<em>长日期格式</em> 从<code>2022/08/27</code>统一为<code>20220827</code>样式</li>
-</ul>
-<h3> 20220824</h3>
-<ul>
-<li>新增 <em>网址汇总 # 我的常用网站</em></li>
-</ul>
-<h3> 20220822</h3>
-<ul>
-<li>新增<a href="/hobbies/anime.html#%E6%88%91%E8%AE%A1%E5%88%92%E7%9C%8B" target="blank">番剧#我计划看</a></li>
-</ul>
-<h3> 20220818</h3>
-<ul>
-<li>新增<a href="/gossip/difficulties.html" target="blank">闲聊-生活中遇到的困难</a></li>
-</ul>
-<h3> 20220817</h3>
-<ul>
-<li><a href="/blog/withvuepress2.html#%E5%85%B3%E4%BA%8E%E6%95%B0%E5%AD%A6%E6%8F%92%E4%BB%B6" target="blank">安装<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mtext>LaTeX</mtext></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span>插件</a></li>
-</ul>
-<h3> 20220815</h3>
-<ul>
-<li>紧急修复：文件损坏导致的<code>keysnum</code>与<code>GBperprice</code>图表、初级科学上网缺失问题。（同时导致了其他的一系列问题）</li>
-<li>调整运动图表</li>
-</ul>
-<h3> 20220814</h3>
-<ul>
-<li>添加运动页面与图表</li>
-</ul>
-<h3> 20220813</h3>
-<ul>
-<li>添加<a href="/hobbies/anime.html" target="blank">杂项-番剧</a>页面</li>
-<li>维护<a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">回忆录#大学（大一后暑假）</a>，与其他一堆页面</li>
-<li>更改页面逻辑（改<code>游戏</code>版块为<code>兴趣</code>，并移动<code>番剧</code>与<code>读书</code>到此）</li>
-</ul>
-<h3> 20220808</h3>
-<ul>
-<li>新增<a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">大学（大一后暑假）</a></li>
-<li>在<a href="/hobbies/galgame.html#%E7%A8%8B%E5%BA%8F%E9%97%AE%E9%A2%98" target="blank">galgame#程序问题</a>反馈 bug</li>
-<li>尝试选定其他网页的一个 div 加入博客中的 iframe，失败</li>
-</ul>
-<h3> 20220807</h3>
-<ul>
-<li>添加<a href="/hobbies/rhythm_games.html#osu" target="blank">我的 o!m 健身按键数</a>图表并每日维护</li>
-<li>尝试 vue 组件形式使用 g2plot 失败</li>
-</ul>
-<h3> 20220806</h3>
-<ul>
-<li>维护 网址汇总#TG 推荐（已合并到文章-TG 教程）</li>
-</ul>
-<h3> 20220805</h3>
-<ul>
-<li>维护 初级科学上网，添加机场性价比图表</li>
-</ul>
-<h3> 20220803</h3>
-<ul>
-<li>修复 图片加载失败问题：使用 cdn 加速</li>
-</ul>
-<h3> 20220730</h3>
-<ul>
-<li>新增 游戏-galgame#游戏优点（已合并到 #说两句）</li>
-</ul>
-<h3> 20220729</h3>
-<ul>
-<li>改为使用图床存放图片(images 分支)</li>
-<li>新增 <a href="/hobbies/other_games/arknights.html" target="blank">游戏-明日方舟</a>，文章#Windows 端记录软件使用时长（迁移至<a href="/articles/time_record.html#windows%E7%AB%AF%E8%AE%B0%E5%BD%95%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%97%B6%E9%95%BF" target="blank">文章 - 记录软件使用时长</a>）</li>
-<li>维护 <a href="/blog/withvuepress2.html" target="blank">VuePress2 与博客心得</a></li>
-</ul>
-<h3> 20220726</h3>
-<ul>
-<li>新增 <a href="/hobbies/galgame.html#%E5%90%90%E6%A7%BD%E4%B8%80%E4%B8%8B" target="blank">galgame#吐槽一下</a></li>
-</ul>
-<h3> 20220721</h3>
-<ul>
-<li>新增 <a href="#%E5%8D%9A%E5%AE%A2%E6%97%A5%E5%BF%97">杂项-博客日志</a>、游戏-其他游戏</li>
-<li>更改搜索插件配置</li>
-</ul>
-<h3> 20220720</h3>
-<ul>
-<li>添加评论插件</li>
-<li>修复 Vue 组件注册失败的问题</li>
-</ul>
-<h3> 20220718</h3>
-<ul>
-<li>新增 <a href="/blog/withvuepress2.html" target="blank">闲聊#VuePress2 与博客心得</a></li>
-</ul>
-<h3> 20220717</h3>
-<ul>
-<li>为 <a href="/hobbies/rhythm_games.html#%E6%80%BB%E4%BD%93%E7%8E%B0%E5%86%B5" target="blank">游戏-音游</a>、<a href="/gossip/author.html#%E7%94%9F%E5%AD%98%E6%84%8F%E4%B9%89" target="blank">闲聊-生存意义</a> 添加<a href="https://g2plot.antv.vision/zh" target="_blank" rel="noopener noreferrer">g2plot</a>图表</li>
-<li>添加黑幕样式并实装</li>
-<li>尝试添加 vue 组件失败</li>
-</ul>
-<h3> 20220713</h3>
-<ul>
-<li>尝试添加 dr-vue-echarts 组件，无法使用</li>
-<li>维护 <a href="/hobbies/rhythm_games.html" target="blank">游戏-音游</a></li>
-</ul>
-<h3> 20220712</h3>
-<ul>
-<li>新增 <a href="/articles/track_record.html" target="blank">文章-运动轨迹记录软件横评</a></li>
-</ul>
-<h3> 20220709</h3>
-<ul>
-<li>新增 <a href="/articles/time_record.html#android%E7%AB%AF%E8%AE%B0%E5%BD%95%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%97%B6%E9%95%BF" target="blank">文章-Android 端记录软件使用时长</a></li>
-</ul>
-<h3> 20220706</h3>
-<ul>
-<li>添加 自动注册 Vue 组件插件</li>
-<li>新增 <a href="/articles/computer_setting.html#bios%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE" target="blank">文章#BIOS 密码重置</a></li>
-</ul>
-<h3> 20220703</h3>
-<ul>
-<li>维护 <a href="/essay/2022.html" target="blank">随笔</a></li>
-</ul>
-<h3> 20220701</h3>
-<ul>
-<li>新增 <a href="/hobbies/books.html" target="blank">杂项-读书</a></li>
-</ul>
-<h3> 20220628</h3>
-<ul>
-<li>新增 <a href="/hobbies/galgame.html#%E6%88%91%E7%9A%84%E8%AE%BE%E7%BD%AE" target="blank">galgame#我的设置</a></li>
-</ul>
-<h3> 20220625</h3>
-<ul>
-<li>新增 <a href="/gossip/author.html#%E6%88%91%E7%9A%84%E7%88%B1%E5%A5%BD" target="blank">闲聊#我的爱好</a>、<a href="/hobbies/galgame.html" target="blank">游戏-galgame</a></li>
-</ul>
-<h3> 20220623</h3>
-<ul>
-<li>添加代码染色插件并实装</li>
-<li>维护 <a href="/coding/Git.html" target="blank">编程-Git</a></li>
-</ul>
-<h3> 20220619</h3>
-<ul>
-<li>新增 <a href="/farraginous/recommend_packages.html#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6" target="blank">软件汇总#浏览器插件&amp;浏览器脚本</a></li>
-</ul>
-<h3> 20220618</h3>
-<ul>
-<li>新增 <em>网址汇总 # 其他游戏</em> &amp; <a href="/articles/telegram.html#%E9%A2%91%E9%81%93%E7%BE%A4%E7%BB%84%E6%8E%A8%E8%8D%90" target="blank">TG 推荐</a></li>
-<li>维护 <a href="/hobbies/rhythm_games.html" target="blank">游戏-音游</a>、<a href="/coding/Cpp.html" target="blank">编程-C++</a>、<a href="/hide/memories.html" target="blank">回忆录</a></li>
-</ul>
-<h3> 20220617</h3>
-<ul>
-<li>新增 <a href="/hobbies/rhythm_games.html" target="blank">游戏-音游</a>、闲聊#QQ 有多难用（已合并为<em>xxx 有多难用</em>）</li>
-</ul>
-<h3> 20220616</h3>
-<ul>
-<li>取消 editLink 与 contributors</li>
-</ul>
-<h3> 20220613</h3>
-<ul>
-<li>新增 <a href="/coding/Git.html#%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7" target="blank">编程-Git#高级技巧</a>、闲聊-初级科学上网（现：隐藏）</li>
-</ul>
-<h3> 20220611</h3>
-<ul>
-<li>新增 <a href="/coding/Cpp.html" target="blank">编程-C++</a>、闲聊 # 回忆录 &amp; <a href="/gossip/hope.html#%E5%AF%B9%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%9A%84%E5%B8%8C%E6%9C%9B" target="blank">对编程语言的希望</a>（回忆录已隐藏）</li>
-</ul>
-<h3> 20220526</h3>
-<ul>
-<li>新增 闲聊#灵感&amp;对美好未来社会的愿景（现：隐藏）</li>
-</ul>
-<h3> 20220521</h3>
-<ul>
-<li>新增 <a href="/articles/computer_setting.html#%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8" target="blank">我的文章-Win10 设置开机自启动（现：设置开机自启动）</a>、<a href="/gossip/schedule.html" target="blank">闲聊#日程区</a></li>
-</ul>
-<h3> 20220517</h3>
-<ul>
-<li>新增 <a href="/hobbies/Minecraft.html" target="blank">游戏-我的世界</a></li>
-</ul>
-<h3> 20220516</h3>
-<ul>
-<li>新增 <a href="/coding/Rust.html#%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BF%AE%E6%94%B9" target="blank">Rust#字符串修改</a>、<a href="/gossip/author.html#%E6%80%A7%E6%A0%BC" target="blank">关于作者#习惯（现：关于作者#性格）</a></li>
-</ul>
-<h3> 20220510</h3>
-<ul>
-<li>新增 杂项-atri（迁移到 编程 - bot）</li>
-</ul>
-<h3> 20220506</h3>
-<ul>
-<li>更改 navbar 逻辑</li>
-<li>新增 <a href="/coding/Git.html" target="blank">编程-Git</a>&amp;<em>其他工具（已整合为<a href="/coding/python.html" target="blank">python</a>页面）</em>、<a href="/essay/" target="blank">随笔</a></li>
-</ul>
-<h3> 20220505</h3>
-<ul>
-<li>新增 <a href="/articles/Android_ISA.html" target="blank">杂项-我的文章#查看手机 cpu 指令集（现：文章-~）</a></li>
-<li>更新 <a href="/" target="blank">主页</a>、<a href="/gossip/author.html#qa" target="blank">闲聊-关于作者#QA</a></li>
-</ul>
-<h3> 20220504</h3>
-<ul>
-<li>发布博客</li>
-<li>创建 <a href="/" target="blank">主页</a>、<a href="/gossip/author.html" target="blank">闲聊 - 关于作者</a>、<a href="/coding/Rust.html" target="blank">编程 - Rust</a>、<a href="/farraginous/recommend_packages.html" target="blank">杂项 - 软件汇总</a>、<a href="/farraginous/recommend_websites.html" target="blank">杂项 - 网址汇总</a>、游戏 - 其他游戏 - csgo 游戏配置</li>
-<li>添加搜索插件</li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>博客日程</title>
-      <link>https://absx.pages.dev/blog/todo.html</link>
-      <guid>https://absx.pages.dev/blog/todo.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">博客日程</source>
-      <description>博客日程</description>
-      <category>博客</category>
-      <pubDate>Fri, 13 Oct 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 博客日程</h1>
-<h2> 新建文件.md</h2>
-<ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-0" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-0"> vscode extensions recommendation</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-1" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-1"> koishi</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-2" disabled="disabled"><label class="task-list-item-label" for="task-item-2"> tampermonkey</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-3" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-3"> author/p_d 网状图</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-4" checked="checked" disabled="disabled"><label class="task-list-item-label" for="task-item-4"> NSFW</label></li>
-</ul>
-<h2> 鸽了鸽了</h2>
-<ul class="task-list-container">
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-5" disabled="disabled"><label class="task-list-item-label" for="task-item-5"> awesome Github repos (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-6" disabled="disabled"><label class="task-list-item-label" for="task-item-6"> 零食推荐 (?)</label></li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" id="task-item-7" disabled="disabled"><label class="task-list-item-label" for="task-item-7"> bilibili up 推荐 (?)</label></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>问题列表</title>
-      <link>https://absx.pages.dev/blog/withvuepress2.html</link>
-      <guid>https://absx.pages.dev/blog/withvuepress2.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">问题列表</source>
-      <description>问题列表</description>
-      <category>博客</category>
-      <category>教程</category>
-      <category>经历</category>
-      <pubDate>Mon, 18 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 问题列表</h1>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<ul>
-<li>以下问题可能不具有时效性与主题泛用性，请自行判断。</li>
-<li>按时间升序。</li>
-</ul>
-</div>
-<h2> 字体颜色问题</h2>
-<p>网上教程为使用 <code>&lt;font color="red"&gt;</code> 标签，但此标签不受 html5 支持（并导致了下述 <em>Rendering pages failed</em> 问题）。我还尝试了 <code>&lt;p&gt;</code> 标签（但会自动换行）与 <code>&lt;a&gt;</code> 标签（但有下划线和点击效果）。最终选用 <code>&lt;text style="color:red;"&gt;</code> 标签，写起来最为简洁，无需添加额外属性。</p>
-<h2> Rendering pages failed 问题</h2>
-<p>显示的错误信息是 Vuepress 的底层问题，无法直接看出问题所在。且 <code>docs:dev</code> 本地预览完全不受影响。之后不断比对各处编译，发现是引入未知 html 标签导致的。（初次为 <code>&lt;font&gt;</code> 标签，之后还有：自定义组件的标签，被识别成组件的语法）<span class="heimu" title="你知道的太多了"><em>（感谢<a href="https://dream-oyh.github.io/" target="_blank" rel="noopener noreferrer">dream 同学</a>重蹈覆辙，提供<strong>完全一致</strong>的错误信息，如下所示。）</em> 原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span></p>
-<blockquote>
-<p>TypeError: Invalid value used as weak map key<br>
-at WeakMap.set (&lt;anonymous&gt;)<br>
-at normalizePropsOptions (C:\Users\oyh\vuepress-starter\node_modules@vue\runtime-core\dist\runtime-core.cjs.prod.js:3179:15)<br>
-at createComponentInstance (C:\Users\oyh\vuepress-starter\node_modules@vue\runtime-core\dist\runtime-core.cjs.prod.js:5695:23)<br>
-at renderComponentVNode (C:\Users\oyh\vuepress-starter\node_modules@vue\server-renderer\dist\server-renderer.cjs.prod.js:168:22)<br>
-at Object.ssrRenderComponent (C:\Users\oyh\vuepress-starter\node_modules@vue\server-renderer\dist\server-renderer.cjs.prod.js:605:12)<br>
-at _sfc_ssrRender$b (C:\Users\oyh\vuepress-starter\docs.vuepress.temp.server\app.js:1362:24)<br>
-at renderComponentSubTree (C:\Users\oyh\vuepress-starter\node_modules@vue\server-renderer\dist\server-renderer.cjs.prod.js:250:13)<br>
-at renderComponentVNode (C:\Users\oyh\vuepress-starter\node_modules@vue\server-renderer\dist\server-renderer.cjs.prod.js:185:16)<br>
-at renderVNode (C:\Users\oyh\vuepress-starter\node_modules@vue\server-renderer\dist\server-renderer.cjs.prod.js:292:22)<br>
-at renderComponentSubTree (C:\Users\oyh\vuepress-starter\node_modules@vue\server-renderer\dist\server-renderer.cjs.prod.js:256:13)<br></p>
-</blockquote>
-<h2> Vue 组件注册失败的问题</h2>
-<p>前期开发过程中遇到的最大的问题。详情懒得再写一遍了，请直接<a href="https://stackoverflow.com/questions/73009755/failed-to-register-a-vue-component-in-vuepress2" target="_blank" rel="noopener noreferrer">跳转 stackoverflow 查看</a>。我还剩一种方法（在 client.ts 中手动注册组件）没试，不过既然已经曲线救国成功（使用 iframe 引入带组件的 html），就暂时不尝试了。（20220720 速报：问题已解决，解决方法：重新下载 vuepress2 包。猜测是旧 vuepress2 的依赖包出了问题。）</p>
-<h2> 评论插件配置失败问题</h2>
-<p>我使用的评论插件是<a href="https://vuepress-theme-hope.github.io/v2/comment/zh/" target="_blank" rel="noopener noreferrer">vuepress-plugin-comment2</a>。该插件的文档写的甚至比 vuepress2 文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出<a href="https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html" target="_blank" rel="noopener noreferrer">演示</a>）才发现原来还需要自己写一个 theme 出来...我哪有那个能耐啊，直接 Ctrl+CV 了。不过这种东西本应在文档里指明的。</p>
-<p>后来发现。。事实上这个插件是 <a href="/blog/#%E4%B8%BB%E9%A2%98%E9%80%89%E6%8B%A9" target="blank">VuePress Theme Hope 主题</a>的专用组件，因此未说明默认主题下的使用方法。</p>
-<h2> 添加黑幕</h2>
-<p>其实就是添加全局 css。</p>
-<p>在<code>.vuepress/public</code>下任意位置新建<code>head.css</code>（名字不重要），输入：</p>
-<div class="language-css line-numbers-mode" data-ext="css"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在<code>config.ts</code>内添加全局 css：</p>
-<div class="language-typescript line-numbers-mode" data-ext="ts"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后就可以在 .md 文件中使用黑幕了：<code>&lt;span class="heimu" title="你知道的太多了"&gt;你想说的话&lt;/span&gt;</code> 效果：<span class="heimu" title="你知道的太多了">比如这样</span></p>
-<h3> 另一个方法</h3>
-<p>创建 <code>.vuepress/styles/index.scss</code> 并写入 css。vuepress 会自动引入，无需写入配置。是通用解法，与主题无关。</p>
-<h2> 图床衍生问题</h2>
-<p>由于图片越来越多，博客更新频繁，这样占云端空间大，上传也慢。于是就直接就地开了个 images 分支当作图床。我一开始直接在 <code>.vuepress/public/images</code> 文件夹里创建仓库上传的，然后也能正常使用，到了发布博客的时候，编译也过了，上传也成功了，结果 Github 告诉我因为一个奇妙的问题构建不成功......此处放出错误信息：</p>
-<blockquote>
-<p>Fetching submodules<br>
-/usr/bin/git submodule sync --recursive<br>
-/usr/bin/git -c protocol.version=2 submodule update --init --force --depth=1 --recursive<br>
-Error:fatal:No url found for submodule path 'images' in .gitmodules<br>
-Error:The process '/usr/bin/git' failed with exit code 128<br></p>
-</blockquote>
-<p>后来经过不断摸索发现大概是 git 内包含了一个 git 的原因。把 images 文件夹整个移出去以后就好了。</p>
-<h2> EPERM 编译失败问题</h2>
-<p>运行 <code>npm run docs:build</code> 时报错。显示：</p>
-<blockquote>
-<p>Error: EPERM: operation not permitted, lstat 'F:\program\myweb\docs.vuepress\dist.git\logs\refs\heads\main'</p>
-</blockquote>
-<p>本地预览 <em><code>npm run docs:dev</code></em> 不受影响。</p>
-<p>上网搜索，尝试管理员权限，清除缓存，更新 npm 手段，皆无效。看到有人说是 xftp 造成的 dist 文件夹占用问题，不了解。但是既然说是占用，那我就重启试试。于是问题解决。<s>看来这是 99%的问题其中之一呢</s></p>
-<h2> 图床国内无法解析问题</h2>
-<p>我原本博客托管在 github.io，图片加载链接为<code>https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg</code>，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：</p>
-<blockquote>
-<p>Failed to load resource: net::ERR_NAME_NOT_RESOLVED</p>
-</blockquote>
-<p>原因是 <code>raw.githubusercontent.com</code> 域名在墙内受到污染。</p>
-<p>然后我尝试了使用其他图床托管图片：<a href="https://sm.ms/" target="_blank" rel="noopener noreferrer">SM.MS</a>，但是：</p>
-<ol>
-<li>这个图床有<em>容量上限：5GB</em>和<em>单张图片上限：5MB</em></li>
-<li>原有的每张图都需要手动替换，因为 src 是随机生成的</li>
-<li>会出现一些玄学问题，例如：使用<code>&lt;img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%"&gt;</code>进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（<a href="#%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%AF%94%E4%BE%8B%E7%BC%A9%E6%94%BE%E9%97%AE%E9%A2%98">下文</a>有解释，这并不是图床的问题）</li>
-<li>在<a href="https://sm.ms/about" target="_blank" rel="noopener noreferrer">关于 SM.MS</a>界面你将能看到：<img src="/images/blog/withvuepress2/fucksmms.png" alt="fucksmms" loading="lazy"> <s>这样的图床还是早点死吧！</s></li>
-</ol>
-<p>因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：</p>
-<ul>
-<li>不改变图片目录结构</li>
-<li>替换方便。仅需全局查找替换，点一下鼠标即可。<span class="heimu" title="你知道的太多了"><s>（但是对我来说需要把 SM.MS 图床的链接再换回原链接…）</s></span></li>
-</ul>
-<p>后来尝试了以下 cdn：</p>
-<ul>
-<li><a href="https://www.jsdelivr.com/" target="_blank" rel="noopener noreferrer">jsdelivr</a>，然而国内无法使用。网上搜，大家也都说寄了。</li>
-<li><a href="https://statically.io/" target="_blank" rel="noopener noreferrer">statically</a>，成功。于是就决定用它了。
-<ul>
-<li>后来 <em>cdn.staticaly.com has expired.</em>，然而我并没有发现是代理域名的问题（<em>statically.io</em> 可以正常使用），于是把图片直接放到静态站点里了。由于博客主要托管不再是 <em>github.io</em> 而是 cloudflare，因此回归本源也不错，不会再出现此问题。</li>
-</ul>
-</li>
-</ul>
-<h2> 关于数学插件</h2>
-<p>为 markdown-it 渲染器安装<span v-pre=""><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mtext>LaTeX</mtext></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle \LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8988em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6833em;"><span style="top:-2.905em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord"><span class="mord textrm mtight sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.4678em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span></span>插件。<a href="https://blog.csdn.net/Flyingheart1991/article/details/126067149" target="_blank" rel="noopener noreferrer">参考来源</a>，亲测有效。</p>
-<p>由于<code>$...$</code>会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹<code>&lt;span v-pre&gt;&lt;/span&gt;</code>标签。否则将触发<a href="#rendering-pages-failed%E9%97%AE%E9%A2%98">weak map key</a> bug。</p>
-<h2> 图片无法比例缩放问题</h2>
-<p>实际上，在<a href="#%E5%9B%BE%E5%BA%8A%E5%9B%BD%E5%86%85%E6%97%A0%E6%B3%95%E8%A7%A3%E6%9E%90%E9%97%AE%E9%A2%98">之前</a>已经出现过此问题，当时只会使用绝对大小解决。而这次，当我向图床中添加第一张手机照片时，玄学问题出现了。</p>
-<p>我之前一直使用 <code>&lt;img src="..." width="100%" height="100%"&gt;</code> 进行图片缩放。当我使用此方法对此图片进行缩放时，图片将不显示，调试显示此图片标签属性为 <code>width="0" height="0"</code>。只有当 <code>width</code> 与 <code>height</code> 都不含 <code>%</code> 时，图片才能显示。</p>
-<p>解决方法：</p>
-<ul>
-<li>在全局 css 中新增类选择器<code>.ClassName img{width: 60% !important; height:auto !important;}</code>或<code>.ClassName img{max-width: 60%;}</code>，并在 md 中以<code>&lt;div class="ClassName"&gt;&lt;img src="..."/&gt;&lt;/div&gt;</code>使用。</li>
-</ul>
-<h2> 为单一页面添加 css</h2>
-<text style="color:red;font-weight:bold">未解决！</text><p>起因：不想全局添加 css。<a href="https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E7%B1%BB" target="_blank" rel="noopener noreferrer">官方说明</a>已尝试，无效。（该文档为 v1 文档，不适用于 v2）</p>
-<p>最新发现：<a href="https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6" target="_blank" rel="noopener noreferrer">官方在此处的声明</a>中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。<s>扩展名与文件无关！</s></p>
-<p><s>其实加的 css 也就这么几行，全局不全局的无所谓了</s></p>
-<h2> html 转 vue 组件失败问题</h2>
-<text style="color:red;font-weight:bold">未解决！</text><p>用 html, js, css 三件套写了一个简陋的<a href="/farraginous/reciter.html" target="blank">背词器</a>出来，但是受制于 iframe 的固定大小，很容易出现超出边框的情况。<em>（曲线救国：预留大量位置）</em> 于是想到了 vue 组件引入的方法。但是，遇到了<s>前所未有</s>的麻烦。vue 组件单文件（SFC）仅允许一个 <code>&lt;script&gt;</code> 标签的存在。而我的背词器中使用了两个 script：jquery 库与我自己写的 js。现在无法正常执行 js 脚本。</p>
-<blockquote>
-<p>学长提示：可使用另一种曲线解法：<a href="https://youmightnotneedjquery.com/" target="_blank" rel="noopener noreferrer">you might not need jquery</a>（XD</p>
-</blockquote>
-<p>后来发现需要学习 Vue 而不是普通地套 html。。<s>在学了在学了</s></p>
-<h2> 配置 sidebar 问题</h2>
-<p>由于我一开始对 sidebar 的机制并不清楚，官方文档的教程也无法满足我的需求，于是就自己慢慢摸了几个小时…<strong>此处只讲述如何<em>在不同子路径中使用不同的侧边栏</em> 这一泛用性广但示例少的解决方案。</strong></p>
-<p>首先，sidebar 配置结构为 <code>绝对路径:sidebar对象</code> 这样的键值对。一个 sidebar 对象有：</p>
-<ul>
-<li><code>text</code>，表示该栏显示的文字</li>
-<li><code>link</code>，表示点击该栏后跳转的位置</li>
-<li><code>children</code>，表示该栏下的 sidebar 对象</li>
-</ul>
-<p>当然它也可以是一个路径字符串，其他功能由 vuepress2 帮你自动生成。</p>
-<p>另外，若需要为文件夹做一个向导，应在文件夹内部添加 <code>README.md</code> 主页。指向该主页的路径为文件夹名称。使指定页面覆盖配置，自动生成 sidebar 需要在该页面顶部添加<a href="https://v2.vuepress.vuejs.org/zh/reference/default-theme/frontmatter.html#sidebar" target="_blank" rel="noopener noreferrer">sidebar frontmatter</a>。</p>
-<p>下面是我的 sidebar 配置参考。</p>
-<div class="language-typescript line-numbers-mode" data-ext="ts"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>17 行写的是<code>'../index.md'</code>而不是<code>'/index.md'</code>，是因为我需要让某些二级页面也能显示主页的侧边栏，为此提供索引。主页已经在顶层目录下，无法向前回退。</p>
-<h3> vuepress v1.x 的要求</h3>
-<p>vuepress1 的配置有一点不一样。</p>
-<p>v1.x sidebar 工作机制为：<strong>从上到下寻找该页面匹配的绝对路径前缀，若匹配则使用该 sidebar 对象</strong>。这使我需要把多级 sidebar 放在前而根目录放在最后。还好<a href="https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html#%E5%A4%9A%E4%B8%AA%E4%BE%A7%E8%BE%B9%E6%A0%8F" target="_blank" rel="noopener noreferrer">v1.x 文档对此有警告</a>。</p>
-<p>团队使用的<a href="https://vuepress-theme-hope.github.io/v1/zh/" target="_blank" rel="noopener noreferrer">vuepress-theme-hope</a>主题中，sidebar 对象有以下字段：</p>
-<ul>
-<li><code>title</code>：规定显示的文字</li>
-<li><code>link</code>：表示点击该栏后跳转的位置</li>
-<li><code>prefix</code>：路径前缀</li>
-<li><code>children</code>：子对象</li>
-</ul>
-<p>一个配置示例为：</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 上传问题</h2>
-<p><code>git push</code> 时出现问题：<code>ssh: connect to host github.com port 22: Connection timed out</code>。代理无问题，可上 Github。</p>
-<p>解决方法（二选一）：</p>
-<ol>
-<li>参考<a href="https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port" target="_blank" rel="noopener noreferrer">Github 官方解释</a>，使用 443 端口</li>
-<li>配置 git 全局代理</li>
-</ol>
-<h2> html 传参引入指定 js</h2>
-<p>目的：复用画图表的 html 文件。尝试：</p>
-<ol>
-<li>给页面中的 iframe html 传参:</li>
-</ol>
-<div class="language-html" data-ext="html"></div><ol start="2">
-<li>然后在 html script 中处理参数:</li>
-</ol>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ol start="3">
-<li>并引入<code>addr</code>参数位置的 .js 文件。</li>
-</ol>
-<text style="color:red;font-weight:bold">未解决！</text>
-<h2> pangu 插件安装失败</h2>
-<p>试图安装 <a href="https://shigma.github.io/markdown-it-pangu" target="_blank" rel="noopener noreferrer">vuepress-plugin-pangu</a> 失败。官方文档稀烂，缺乏维护，只有 vuepress1.x 的 js 配置，而我使用 ts ；由于并未学习，面对各种报错显得很无力。（有生之年必学）</p>
-<p>解决方法：
-突然想到了我<a href="#%E6%B7%BB%E5%8A%A0%E9%BB%91%E5%B9%95">加黑幕的方法</a>，直接将 js 引入每个页面的 head。
-config.ts:</p>
-<div class="language-typescript line-numbers-mode" data-ext="ts"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中<code>/styles/pangu.min.js</code>内是<a href="https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js" target="_blank" rel="noopener noreferrer">https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js</a>的内容。但是这样一来便引入了以下问题：</p>
-<h3> 无法加载 pangu 问题</h3>
-<text style="color:red;font-weight:bold">未解决！</text><p>使用此方法添加的 pangu.min.js 在 head 中被注入，存在加载次序问题，在浏览器上无法正常运行。我尝试使用 <a href="https://vuepress.vuejs.org/zh/guide/basic-config.html#%E5%BA%94%E7%94%A8%E7%BA%A7%E5%88%AB%E7%9A%84%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener noreferrer"><code>enhanceApp.js</code></a> 将其添加到文档末尾解决这个问题：</p>
-<p><code>.vuepress/enhanceApp.js</code>:</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>但是失败了，<code>console.log</code> 并未执行，说明 <code>.vuepress/enhanceApp.js</code> 未被自动加载。我也尝试了在 <code>config.ts</code> 中加入 <code>enhanceAppFiles: resolve(__dirname, 'enhanceApp.js')</code><sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，无效。</a></p><a class="footnote-anchor" id="footnote-ref1">
-<blockquote>
-<p>ps. 现在已使用 Prettier 格式化代码，其会自动添加空格，曲线救国。</p>
-</blockquote>
-</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 端口拒绝访问</h2>
-<blockquote>
-<p>listen EACCES: permission denied 0.0.0.0:8080</p>
-</blockquote>
-<p>解法：<a href="/articles/computer_setting.html#%E7%AB%AF%E5%8F%A3%E9%9A%8F%E6%9C%BA%E5%8D%A0%E7%94%A8" target="blank">解决 windows(hyper-v) 端口随机占用</a></p>
-<h2> 试图迁移至 vitepress</h2>
-<p>vitepress 其实是 VuePress 的一个分支，其具有更快的渲染速度与更高的自由度(?)，因此我尝试将此 blog 迁移至 vitepress。结果——如你所见，失败了。但是，此配置过程中也学到了一些东西。</p>
-<ol>
-<li>
-<p>安装好 vitepress 并配置。其配置有些许不同：</p>
-<ul>
-<li><code>navbar</code> 改为 <code>nav</code>，并且其与 <code>sidebar</code> 接受参数的语法不同。</li>
-<li>vitepress 以 <code>index.md</code> 作为默认页面，而非 <code>readme.md</code>.</li>
-<li>考虑<a href="https://github.com/vuejs/vitepress/blob/main/docs/.vitepress/config.ts" target="_blank" rel="noopener noreferrer">抄抄官方</a>，有一些好的理念。</li>
-</ul>
-</li>
-<li>
-<p>安装插件。</p>
-<ol>
-<li>搜索插件：vitepress <a href="https://vitepress.dev/reference/default-theme-search#local-search" target="_blank" rel="noopener noreferrer">内置</a>，并且其功能爆杀 VuePress。</li>
-<li>数学公式插件，<code>npm install markdown-it markdown-it-mathjax3</code>。详细配置可以抄<a href="https://github.com/brc-dd/vitepress-mathjax3" target="_blank" rel="noopener noreferrer">这里</a>，完美解决遇到的问题。</li>
-<li>评论插件：<a href="https://github.com/T-miracle/vitepress-plugin-comment-with-giscus" target="_blank" rel="noopener noreferrer">vitepress-plugin-comment-with-giscus</a>，非常简单，但是首页无法显示评论，搞了好久没法解决。</li>
-</ol>
-</li>
-<li>
-<p>全局 css：在 <code>.vitepress/theme/styles/</code> 中放入任何想要的 css 文件，然后在 <code>theme/index.ts</code> 下 import 就行了。可惜没法这样引入 js，<code>pangu.js</code> 还是无法使用。</p>
-</li>
-<li>
-<p>无法加载 <code>public</code> 中的资源。无论 img 还是 html 用 iframe 引入都不行。</p>
-<ul>
-<li>iframe 404，用法 <code>&lt;iframe frameborder="no" src="/charts/sports_distance.html" width="100%" height="304"&gt;&lt;/iframe&gt;</code>，报错 <code>GET http://localhost:5173/charts/sports_distance.md?import&amp;t=1689086185464 net::ERR_ABORTED 404 (Not Found)</code>，看起来是把后缀强制上了 <code>.md</code>。。我在官方文档看到了<a href="https://vitepress.dev/guide/asset-handling#the-public-directory" target="_blank" rel="noopener noreferrer">关于 pathname:// 的解释</a>，但是并没有什么卵用。</li>
-</ul>
-</li>
-<li>
-<p>无法 build，preview。我是真的很不理解。</p>
-<ol>
-<li><code>npm run docs:build</code> 报错
-<blockquote>
-<p>✓ building client + server bundles...<br>
-build error:<br>
-ReferenceError: window is not defined<br>
-at file:///D:/program/vitepress/docs/.vitepress/.temp/app.js:4675:3<br>
-...</p>
-</blockquote>
-</li>
-</ol>
-<p>但是我也没用什么组件，找不到解法。 2. <code>npm run docs:preview</code> 报错</p>
-<blockquote>
-<p>failed to start server. error:<br>
-Error: ENOENT: no such file or directory, open 'D:\program\vitepress\docs.vitepress\dist\404.html'</p>
-</blockquote>
-<p>这就很好理解了，毕竟 <code>dist</code> 还是残缺的。不过至少有个理论能用的 preview 已经很不错了，<s>都可以杀 VuePress（</s></p>
-</li>
-</ol>
-<details class="hint-container details"><summary>最后附上我尝试的 config.ts 代码留念 x</summary>
-<div class="language-typescript line-numbers-mode" data-ext="ts"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
-<h2> 尝试更好的搜索</h2>
-<p><a href="#%E8%AF%95%E5%9B%BE%E8%BF%81%E7%A7%BB%E8%87%B3-vitepress">如上所述</a>，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方服务（algolia）需要经过严格审查。因此我看到了能够本地索引的<a href="https://github.com/nextapps-de/flexsearch" target="_blank" rel="noopener noreferrer">flexsearch</a>，继续找到了：</p>
-<ul>
-<li><a href="https://github.com/z3by/vuepress-plugin-flexsearch" target="_blank" rel="noopener noreferrer">vuepress-plugin-flexsearch</a>，此插件已经两年未维护，依赖包的安全漏洞数十个，甚至连 <a href="https://github.com/z3by/vuepress-plugin-flexsearch/issues/85" target="_blank" rel="noopener noreferrer">example 都未能执行</a>。。在 vuepress 2.x 上无法使用。</li>
-<li><a href="https://github.com/leo-buneev/vuepress-plugin-fulltext-search" target="_blank" rel="noopener noreferrer">vuepress-plugin-fulltext-search</a>，我更愿意将其看成 <em>vuepress-plugin-flexsearch</em> 的一个 fork，同样的两年未维护，同样的无法使用，同样的安全漏洞。/流汗</li>
-<li><a href="https://docsearch.algolia.com/docs/legacy/run-your-own" target="_blank" rel="noopener noreferrer">Run your own docsearch</a>，文章也两年未更新了，而且也需要借助 algolia 的 API 服务，免费最高支持 10k 条(?)，总之不是一个好选择。</li>
-<li><a href="https://github.com/ota-meshi/vuepress-plugin-full-text-search2" target="_blank" rel="noopener noreferrer">vuepress-plugin-full-text-search2</a>：testing</li>
-</ul>
-<p>参考：<a href="https://github.com/liuli-moe/to-the-stars/issues/22" target="_blank" rel="noopener noreferrer">liuli-moe/to-the-stars</a></p>
-<h2> 更换主题</h2>
-<p>20230712 由于开头所述原因，更换了 <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">VuePress Theme Hope</a> 主题。迁移过程比我想象的时间要少。该主题有如下优势：</p>
-<ul>
-<li>自动检测 Broken links</li>
-<li>Markdown 增强：
-<ul>
-<li>自带 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mi>E</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">TEX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">TEX</span></span></span></span> 支持</li>
-<li>任务列表</li>
-<li>脚注支持</li>
-<li>容器扩展</li>
-<li>图片扩展</li>
-</ul>
-</li>
-<li>更适用于博客的首页</li>
-<li>无障碍图标</li>
-<li>自动明暗主题</li>
-<li>内容加密</li>
-</ul>
-<p>反正就是非常牛逼。</p>
-<p>不过还有一些问题（功能改进）没有解决：</p>
-<ul>
-<li><s>比如我想在 navbar 上加一个 telegram 的跳转链接。</s>（<a href="#navbar-%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6">已解决</a>）</li>
-<li>主页评论区寄了。明明都是 gisgus 的服务，配置一模一样，也是按照 <code>pathname</code> 查找，但是原先的评论就是找不回来。
-<ul>
-<li>官方有提到<a href="https://theme-hope.vuejs.press/zh/guide/advanced/replace.html#%E6%8F%92%E6%A7%BD%E5%88%A9%E7%94%A8" target="_blank" rel="noopener noreferrer">如何在主页添加评论</a>，但是事实上并没有什么软用。。。直接报错 import 路径错误了。</li>
-</ul>
-</li>
-</ul>
-<h2> navbar 添加组件</h2>
-<p>起因：想给导航栏添加一个 Telegram 的链接。由于 VuePress Theme Hope 就有，可以直接抄。</p>
-<ol>
-<li>写（抄）一个<a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/components/TelegramLink.ts" target="_blank" rel="noopener noreferrer">组件</a>，替换链接。</li>
-<li>在 <code>client.ts</code> 中<a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/client.ts" target="_blank" rel="noopener noreferrer">手动注册</a>。</li>
-<li>在 <code>theme.ts</code> 中<a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/9baaa2ffac93f9952a244b39769e7dc6c598a611/docs-shared/src/theme-wrapper.ts#L48" target="_blank" rel="noopener noreferrer">引入</a>。</li>
-</ol>
-<h2> 添加 rss 订阅</h2>
-<p><a href="https://theme-hope.vuejs.press/zh/guide/advanced/feed.html" target="_blank" rel="noopener noreferrer">官方说</a>是说支持，还内置，但是并不能用...首先 VuePress Theme Hope 文档的描述就比插件文档描述少了东西，比如 <code>hostname</code>。其次我配置好以后并不知晓如何获取 <code>rss.xml</code>，官方示例使用默认主题配置，使用外部导入的插件，没有参考意义。</p>
-<p>后来发现 dev 没法使用，但是 build 后在 dist 内会生成 <code>rss.xml</code>，就可以订阅了。</p>
-<h3> 添加订阅图标</h3>
-<p>模仿 <a href="#navbar-%E6%B7%BB%E5%8A%A0%E7%BB%84%E4%BB%B6">telegram 图标</a> 添加。首先替换链接，再去找个 rss 的 svg，替换 <code>&lt;path d=...&gt;</code> 内容；替换 <code>viewBox</code> 内容（没错，我踩坑了）即可。<span class="heimu" title="你知道的太多了">不熟悉 svg 是这样的</span></p>
-<h2> 自动部署</h2>
-<ul>
-<li>已提 <a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3332" target="_blank" rel="noopener noreferrer">issue</a></li>
-</ul>
-<p>使用 pnpm 指令 <code>pnpm create vuepress-theme-hope my-docs</code> 创建模版项目后，自动生成的 <em>.github/workflows/deploy-docs.yml</em> 并不能在 Github actions 中成功构建，报错：</p>
-<blockquote>
-<p>Error: Error: No pnpm version is specified.<br>
-Please specify it by one of the following ways:<br> - in the GitHub Action config with the key "version"</p>
-</blockquote>
-<p>解法可以参考 <a href="https://pnpm.io/zh/continuous-integration#github-actions" target="_blank" rel="noopener noreferrer">pnpm 文档</a>，加一条 <code>version: 8</code> 即可。</p>
-<h2> hope theme template build error</h2>
-<p>20230807，使用 pnpm 指令 <code>pnpm create vuepress-theme-hope my-docs</code> 创建模版项目后，执行 <code>pnpm docs:build</code> 会报错。原因是依赖未更新，Github 上的依赖更新未同步至 npmjs <a href="https://www.npmjs.com/package/create-vuepress-theme-hope" target="_blank" rel="noopener noreferrer">create-vuepress-theme-hope</a>。</p>
-<p>解法：在 <code>package.json</code> 中将 vue 版本改为 <code>^3.3.4</code> 并执行 <code>pnpm i</code> 更新依赖。</p>
-<p><span class="heimu" title="你知道的太多了">妈的，这些 bugs Github 都修了，npmjs 一直不更新是几个意思呢？</span></p>
-<h2> 图片防爆</h2>
-<ul>
-<li>已撤销</li>
-</ul>
-<p>此博客使用 CDN 引入图片。然而即使是老牌 CDN 也可能会有不稳定的时候，想着加个防爆链接，当 CDN 爆了以后 img 从另一个链接加载。(<a href="https://www.w3schools.com/jsref/event_onerror.asp" target="_blank" rel="noopener noreferrer">ref</a>)</p>
-<div class="language-html line-numbers-mode" data-ext="html"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>而 markdown 内的图片格式可以用<a href="https://theme-hope.vuejs.press/zh/guide/markdown/attrs.html#%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener noreferrer">markdown enhancement: attr</a>添加 attr。然后踩了坑：</p>
-<ol>
-<li>首先大括号 <code>{}</code> 需要紧跟在图片的 <code>)</code> 后，不能有空格。。（然而官网示例是给的空格）</li>
-<li>其次，添加的 attr 不允许出现大写字母。。。（这确实是标准，但是一般浏览器遇到大写会自动纠正 (<a href="https://stackoverflow.com/questions/25033268/are-html5-data-attributes-case-insensitive" target="_blank" rel="noopener noreferrer">ref</a>)）</li>
-</ol>
-<p>最后还是决定不加了，毕竟防爆用的原始链接是 <code>raw.githubusercontent.com</code> 下的，本身就被墙了；而且还没有考虑可能出现的的死循环问题。</p>
-<h2> Google Analystics</h2>
-<p><strong>ps. 当天发现 <em>cloudflare pages</em> 自带 <em>Web Analytics</em>，白干。</strong></p>
-<p>想看看我的博客的访问数据，但是不能直接用一个简单计数器，否则我自己对我的博客访问最多，会污染数据。于是使用 Google 家的免费服务。</p>
-<p>跟随<a href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer">官网操作</a>，账号和媒体资源名称随便填。输入博客网址，然后会给你一段 html 代码让你写进网页。</p>
-<p>很容易想到在 <code>config.ts</code> 中写 head 项，把 script 载入每个博客页面。这里是<a href="https://v2.vuepress.vuejs.org/zh/reference/config.html#head" target="_blank" rel="noopener noreferrer">官网的说明</a>。</p>
-<p>写的时候犹豫了一下 <code>async</code> 要怎么写，稍作尝试就写出来了。示例：</p>
-<div class="language-typescript line-numbers-mode" data-ext="ts"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 静态资源引用错误</h2>
-<p>build 报错</p>
-<blockquote>
-<p>✖ Compiling with vite - failed in 1.80s<br>
-Error: [vite]: Rollup failed to resolve import "/images/essay/20220619.png" from "D:/program/lxlsblog/src/.vuepress/.temp/pages/essay/2022.html.vue".
-This is most likely unintended because it can break your application at runtime.<br>
-If you do want to externalize this module explicitly add it to
-<code>build.rollupOptions.external</code></p>
-</blockquote>
-<p>第二句提示报错，发现是 public 资源改位置了而文章里没改，没引用到。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p><a href="https://vuepress.vuejs.org/zh/plugin/option-api.html#enhanceappfiles" target="_blank" rel="noopener noreferrer">ref</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-      <enclosure url="https://absx.pages.dev/images/blog/withvuepress2/fucksmms.png" type="image/png"/>
     </item>
   </channel>
 </rss>
