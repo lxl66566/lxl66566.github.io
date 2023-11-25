@@ -75,7 +75,7 @@ feed: false
 - 退坑 [osu](../hobbies/rhythm_games.md#osu) 47 天，退坑黎明杀机
 - 开始使用[双拼](../farraginous/learning/ulpb.md)
 - 初步使用 ArchWSL，Debian 10 (VPS) 等 linux 系统
-- 购买 [VPS](../articles/vps.md)，自建节点
+- 购买 [VPS](../articles/proxy/vps.md)，自建节点
 - [root 与模块](../articles/mobile/root_and_setting.md#刷机)
 - 开始坚持无氧锻炼；近视可能加深
 - 蓝桥省赛、国赛，日语六级

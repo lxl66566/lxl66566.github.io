@@ -73,11 +73,8 @@ umount /mnt/windows
 ### 系统设置
 
 1. 基础 alias
-   ```sh
-   # fish
-   alias e=nvim
-   alias l='exa --all --long --color-scale all --binary --header --time-style=long-iso'
-   ```
+   - `e`：EDITOR
+   - `l`：[exa](./package.md#exa)
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
 3. 设置 `/etc/fstab`
    - [挂载 tmpfs](../ramdisk.md)
@@ -128,44 +125,7 @@ umount /mnt/windows
 
 ### 代理
 
-#### [daed](https://github.com/daeuniverse/daed)
-
-> 根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多
-> ::: right
-> ——Au, [src](https://t.me/archlinuxcn_group/2912643)
-> :::
-
-网页面板的开源代理，dae 的前端。由于比较新，目前使用的人不多。
-
-```sh
-sudo pacman -S daed
-sudo systemctl enable --now daed
-```
-
-这样就开机自启，并可以 `localhost:2023` 进面板了。然后写节点，拖到 proxy 里就行。
-
-daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
-
-需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。
-
-#### v2raya
-
-v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。（后面逃到 daed 了）
-
-```sh
-sudo pacman -S v2raya
-v2raya --lite
-# fishshell
-set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理无效
-```
-
-之后的操作都在网页上进行。使用系统代理端口为 `http://127.0.0.1:20172`，这个端口带自动分流。
-
-如果需要后台运行，开机自启，可以参考[文档](https://v2raya.org/docs/advanced-application/noroot/)：`systemctl --user enable --now v2raya-lite.service`
-
-#### clash-verge
-
-见[vpn](../vpn.md#clash-verge)介绍页。内核为 clash-meta，接受订阅文件，不接受节点。有订阅的可以尝试。
+目前我使用 [daed](../proxy/proxy_software.md#daed) 作为 linux 下的代理软件。
 
 #### 使用 windows 代理
 

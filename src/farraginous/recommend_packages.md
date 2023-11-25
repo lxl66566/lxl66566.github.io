@@ -18,7 +18,7 @@ tag:
 ::: tip
 
 - 若您还不知道如何使用 Github 下载文件，请参考[此教程](../coding/github.md)。
-- 使用 Google Play 下载需要[科学上网](../articles/vpn.md)。未注明应用来源的 Android 软件，不妨试试在 Play 商店里找找。
+- 使用 Google Play 下载需要[科学上网](../articles/proxy/index.md)。未注明应用来源的 Android 软件，不妨试试在 Play 商店里找找。
 - 请注意，私有下载地址**不是**最新版安装包。若失效，可以[跟我反馈](../gossip/author.md#社交)。
 
 :::
@@ -116,7 +116,7 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
 
 :::warning
-请使用[代理](../articles/vpn.md)以获得更好的 scoop 使用体验：`scoop config proxy 127.0.0.1:<port>`
+请使用[代理](../articles/proxy/index.md)以获得更好的 scoop 使用体验：`scoop config proxy 127.0.0.1:<port>`
 
 scoop 将其与所有软件默认安装在 C 盘，可以通过设置 `SCOOP` 环境变量以更改安装位置。若已安装，可以考虑[迁移](https://github.com/ScoopInstaller/Scoop/issues/3852#issuecomment-1417160249)。
 :::

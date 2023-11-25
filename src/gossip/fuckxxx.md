@@ -149,7 +149,8 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 
 - 不支持 ssh key 的权限控制（只读，可写）。
 - (2023) 强制 2FA
-- fork 没有细分类型。例如为了推送上游或为了自立门户的。而无论哪种类型的 fork 均不会被搜索到。
+- feat: fork 没有细分类型，例如为了推送上游或为了自立门户的。
+- 查看 history commit 的页面写的稀烂，甚至只有 newer/older 两个按钮来翻页。
 
 ## Youtube Music 有多难用
 

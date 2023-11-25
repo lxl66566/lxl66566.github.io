@@ -1,6 +1,6 @@
 ---
 sidebar: heading
-icon: proxy
+icon: launch
 date: 2022-06-13
 category:
   - 教程
@@ -11,7 +11,7 @@ tag:
   - 移动端
 ---
 
-# 初级科学上网
+# 机场推荐
 
 :::danger 警告
 本人不承担因使用以下推荐所带来的任何后果。
@@ -55,7 +55,7 @@ tips：加速前需事先选择能通过连接测试的节点
 
 开启成功率看脸，网速不敌上面两位，同样有强制弹窗广告
 
-## 机场选择
+## 付费机场
 
 此处列出部分机场性价比及其变化情况。数字代表**每 1 元 RMB 买到的 GB 数**<Badge type="tip" text="合理价格" />。免费机场不包括在图表中。
 
@@ -246,113 +246,3 @@ _（旧版表格）_
 - [大哥云](https://www.dageyun.net/)
 - [流量库](https://llcool.xyz/)
 - [飞鸟云](https://feiniaoyun.xyz/)
-
-## 客户端选择
-
-> linux 代理软件推荐请前往[linux - 配置](./linux/install_and_config.md#代理)
-
-### Clash Verge
-
-（推荐）开源 Clash 客户端，rust + tauri 使我非常满意 & 放心。[项目地址](https://github.com/zzzgydi/clash-verge)
-
-相比[Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。
-
-其 _设置热键_ 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，懒得做订阅转换，放弃了 Clash Verge 而去使用了 [v2rayN](#v2ray)。
-
-#### 简易教程
-
-我们可以先在设置中将其语言调成中文。
-
-类似地，在 _配置_ 中粘贴订阅链接，下载并选中，然后就可以在 _代理_ 中使用节点了。记得在 _配置_ 中打开 _系统代理_ 选项。
-
-### Clash for Windows
-
-> 20231102 Clash for Windows 删库跑路。
-
-::: details archived
-
-#### 简介
-
-_Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](https://github.com/Fndroid/clash_for_windows_pkg/issues/1105)导致我转向了 [Clash Verge](#clash-verge)。）
-
-#### 下载地址
-
-[项目地址](https://github.com/Fndroid/clash_for_windows_pkg) | [PC 端下载地址](https://github.com/Fndroid/clash_for_windows_pkg/releases) | [私链](https://wwp.lanzout.com/ixncj0a1k28h)
-
-#### 优势
-
-- 优秀图形界面
-- 简单易上手
-
-#### 简易配置教程 _v0.19.16_
-
-1. 在 Profiles 中的文本框内粘贴订阅链接并下载。选中下载的配置文件。
-2. 进入 Proxies，选择 rule，点击测速图标并在下方选择一个可用节点。
-3. 进入 General，开启 System Proxy。
-
-#### 一些提示
-
-- [这里](https://github.com/BoyceLig/Clash_Chinese_Patch)提供 clash 的汉化。
-- 在节点界面点击测速图标测试全部节点的连通性
-- 建议设置配置文件自动更新（Profiles -> 右击配置文件 -> Settings -> Update Interval 设为 24）
-
-:::
-
-### Clash For Android
-
-> 20231103 继 CFW 删库后，Clash 内核与 Meta 核均删库跑路。
-
-::: details archived
-
-请前往谷歌商店或[前往 github 下载](https://github.com/Kr328/ClashForAndroid/releases)。[私链](https://wwp.lanzout.com/iL6sD03mi0gf)
-
-:::
-
-### V2ray
-
-#### 简介
-
-V2ray 是一款优秀的开源网络代理软件包，它的目标是提供常用的代理软件模块，简化网络代理软件的开发。([source](https://www.xuebuyuan.com/3296293.html))
-
-V2ray 同样拥有 Android (v2rayNG) 与 PC (v2rayN) 客户端。
-
-相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用配置文件。
-
-#### 下载地址
-
-[内核项目地址](https://github.com/v2fly/v2ray-core) | [PC 客户端项目地址](https://github.com/2dust/v2rayN)
-
-#### 简易教程
-
-以 PC 端的 v2rayN 为例。
-
-1. 前往 PC 客户端项目地址，下载
-   - 可以选择下载 `v2rayN-With-Core.zip`，最为简单无脑。
-   - With Core 体积太大了，我选择自己配置内核。则需要在内核项目地址下载内核后，解压放入 `/v2rayN/bin/v2fly_v5` 下。
-     根据项目提示，我还下载了 [Xray-core](https://github.com/XTLS/Xray-core) 放入 `/v2rayN/bin/Xray`。<span class="heimu" title="你知道的太多了">应该不会有人把解压后的整个文件夹丢进去吧</span>
-2. 复制节点地址，按 `Ctrl+V` 导入，按 `Enter` 激活。
-3. 测试真连接延迟，确保节点有效。
-4. 下方 _系统代理_ 处选择 _自动配置系统代理_，开启代理。
-
-若为订阅链接：
-
-1. 点击加号，在订阅分组设置中，将订阅链接填入 URL。别名随便写。
-2. 订阅分组 - 更新全部订阅
-3. 一键测延迟/速度，选择节点双击激活。
-4. 同上方 4.
-
-### Matsuri & NekoRay
-
-开源，自由度高，安全性好，使用体验一般 _(Matsuri > NekoRay)_ 。
-
-关于下载与使用请[进入网站](https://matsuricom.github.io/)自行查阅。
-
-### SagerNet
-
-跟 Matsuri 高度重合的 Android 代理。都是基于 _singbox_ 的。
-
-## external
-
-1. [如何正确地叫外卖](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/)
-2. [中国的防火长城是如何检测和封锁完全加密流量的](https://gfw.report/publications/usenixsecurity23/zh/)
-3. [ChromeGo - Chrome 一键翻墙包](https://github.com/bannedbook/fanqiang)

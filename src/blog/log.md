@@ -22,6 +22,10 @@ category:
 
 ## 2023
 
+### 20231125
+
+- 合并所有代理相关文章。
+
 ### 20231122
 
 - 新增组件：OrderBadge。替换正则表达式：
@@ -271,17 +275,17 @@ category:
 
 ### 20230518
 
-- _VPS_ 新增 [搭建代理](../articles/vps.md#搭建代理) 内容
+- _VPS_ 新增 搭建代理 内容
 
 ### 20230517
 
-- _VPS_ 新增 [安全性](../articles/vps.md#安全性) 内容
+- _VPS_ 新增 安全性 内容
 
 ### 20230514
 
 - [Linux](../articles/linux) 中新增内容
 - _网址推荐_ 中新增 _AI 工具_
-- 文章新增 [VPS](../articles/vps.md)
+- 文章新增 VPS
 
 ### 20230510
 
@@ -424,7 +428,7 @@ category:
 
 ### 20230112
 
-- [初级科学上网](../articles/vpn.md)更新，新增性价比机场两位
+- VPN 更新，新增性价比机场两位
 
 ### 20230104
 
@@ -459,7 +463,7 @@ category:
 
 ### 20221129
 
-- 更新 [初级科学上网](../articles/vpn.md) 并更改排版
+- 更新 _初级科学上网_ [（现 VPN）](../articles/proxy/vpn.md) 并更改排版
 - 维护*我的回忆录-大二*
 - 小维护：[关于作者](../gossip/author.md)及其子页面、[编程-Git](../coding/Git.md)页面
 
@@ -500,7 +504,7 @@ category:
 
 ### 20221020
 
-- 更新[我的文章-初级科学上网](../articles/vpn.md)页面
+- 更新 [VPN](../articles/proxy/vpn.md) 页面
 
 ### 20221016
 

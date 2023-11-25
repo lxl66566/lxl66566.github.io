@@ -57,6 +57,16 @@ nginx 的 quic 还不是原生支持而是 module。
 
 目前 caddy 在 github 上有 50k star，也侧面反映了 caddy 的优秀。
 
+## 遇到的问题
+
+### caddy 无法建立连接
+
+我想开一个 file server，静态文件没有任何问题（就是我的 blog）。然而 caddy 开了以后一访问就是 js 执行错误。我也用 nginx 试了一下，是可用的。
+
+### ERR_ADDRESS_UNREACHABLE
+
+用 caddy 和 nginx 都试了一遍，浏览器访问 ERR*ADDRESS_UNREACHABLE，本地访问 403，说明不是防火墙的问题。nginx 有报错 \_13: Permission denied*，然后搜一下发现需要 `chmod +x <root>`。加了以后还是没用，原来 _root_ 的全路径都需要 `chmod +x`。。问题解决。
+
 ## external
 
 1. [reddit: Caddy vs Nginx: How Do These Web Servers / Reverse Proxies Compare?](https://www.reddit.com/r/selfhosted/comments/hur1hx/caddy_vs_nginx_how_do_these_web_servers_reverse/)

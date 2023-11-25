@@ -221,7 +221,7 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 ### exa
 
-`ls='exa --all --long --color-scale all --binary --header --time-style=long-iso'`
+`ls='exa --all --long --color-scale size --binary --header --time-style=long-iso'`
 
 ### tmux
 

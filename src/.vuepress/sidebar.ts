@@ -34,6 +34,14 @@ export default sidebar({
 		"module_and_app.md",
 		"problem.md",
 	],
+	"/articles/proxy/": [
+		"index.md",
+		"vpn.md",
+		"vps.md",
+		"proxy_software.md",
+		"hysteria.md",
+		"trojan-go.md",
+	],
 	"/articles/": [
 		{
 			text: "主张",
@@ -46,6 +54,7 @@ export default sidebar({
 		{
 			text: "教程",
 			children: [
+				"proxy",
 				"telegram.md",
 				"adb.md",
 				"markdown.md",
@@ -53,10 +62,6 @@ export default sidebar({
 				"minimize_exe.md",
 				"cli_compress.md",
 				"voice2text.md",
-				"vpn.md",
-				"vps.md",
-				"reverse_proxy.md",
-				"hysteria.md",
 			],
 		},
 		{
@@ -69,6 +74,7 @@ export default sidebar({
 				"ramdisk.md",
 				"note.md",
 				"browser.md",
+				"reverse_proxy.md",
 			],
 		},
 	],

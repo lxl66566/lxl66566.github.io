@@ -11,53 +11,50 @@ tag:
 
 # VPS
 
-我与我的 VPS 的故事。服务器运维。
+我与我的 VPS 的故事。服务器运维/代理搭建。
 
 与 VPS 无关的 linux 问题请移步 [linux](./linux)
 
-## Price
+## 购买
+
+### 消息来源
+
+- [lowendbox](https://lowendbox.com/)
+- [主机百科](https://zhujiwiki.com)
+
+### 我买到的
 
 <!-- prettier-ignore -->
-|Host|Price|bandwidth|RAM|Storage|Core|
-| :-: | :-: | :-: | :-: | :-: | :-: |
-|20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695)|$10.28/yr|1000GB 1Gbps|768MB|10GB|1|
-|20230514 [CloudServer](https://cloudserver.net/billing/index.php?rp=/store/custom-packages/leb-1gb-annual-plan)|$10.00/yr|1000GB 1Gbps|1GB|20GB|1|
-|20230514 [CLOUDCONE](https://cloudcone.com/vps/)|$21.60/yr|1TB 1Gbps|1GB|30GB|1|
-|20230707 [wap.ac](https://wap.ac/store/tw-epyc-vps-netflix)|$2.00/mo|1TB 1000Mbps|1G|5GB NVMe|1|
+|Host|location|Price|bandwidth|RAM|Storage|Core|saying|
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+|20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695)|San Jose|$10.28/yr|1000GB 1Gbps|768MB|10GB|1|<dtls>装了 Debian 10。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。</dtls>[^1]|
+|20230602 [vpslog](https://distribute.vpslog.net/)||free||64MB|||<dtls>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</dtls>|
+|20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>性价比高，代价是超售。提供 archlinux 镜像，很好。</dtls>
 
-also see here, from [lowendbox](https://lowendbox.com/):
+[^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
-- [$1 VPS – 1 USD VPS Per Month (Updated February 2023)](https://lowendbox.com/blog/1-vps-1-usd-vps-per-month/)
-- [Best Cheap VPS Hosting - Updated March 2023](https://lowendbox.com/best-cheap-vps-hosting-updated-2020/)
-<!-- |[hostEONS](https://my.hosteons.com/cart.php?a=confproduct&i=0)||2TB 1Gbps|256MB|5GB|1| -->
+## 工具
 
-### 20230602
+- [ping.pe](https://ping.pe/#)：连通性
+- `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
 
-[vpslog](https://distribute.vpslog.net/)，白嫖低配置小鸡（RAM 64M，现在来可能没汤了）
+### SSH
 
-## about me
-
-我本来想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款。（无语子）。因此只能退而求其次买了 RackNerd 家的，装了 Debian 10.
-
-10G storage 打消了我自建 java server 的欲望，同时美国西海岸 VPS 的地理位置也使节点真连接延迟常年维持在 700+ms，并不适合作为游戏服务器。
-
-白嫖的小鸡只有 64M RAM，只能装 alpine.
-
-## SSH
-
-<details><summary>没啥用的</summary><p>
+<dtls alt="没啥用的">
 
 youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。
 
 先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 `sudo pacman -S openssl` 了（。后来转 linux 后就没 ssh 这烦恼了。
 
+说回来，其实 windows 好像是有自带(?) ssh 的。
+
 用法：`ssh root@ip [-p port]`
 
-</p></details>
+</dtls>
 
-### 添加公钥
+#### 添加公钥
 
-由于 vps 暴露在公网，因此需要复杂的密码，但是我肯定不想每次登录都需要输那么一长串的密码。因此需要将公钥添加到 vps。在本机上 `cat ~/.ssh/id_rsa.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内就好了。每行一个公钥。
+由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。在本机上 `cat ~/.ssh/id_xxx.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内就好了。每行一个公钥。
 
 ## 安全性
 
@@ -66,9 +63,9 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 ### 自检
 
 - 可以在 `/var/log/auth.log` 中查看登录日志。我的日志里的攻击记录非常多。
-- `ps aux | grep sshd` 查看有没有 `sshd: root [.*]` 类型的进程。
+  - `less /var/log/auth.log | grep -i 'accepted'` 可以查看登录成功的记录，看看是不是自己的 ip。
+- `ps aux | grep sshd` 查看有没有除自己以外的 `sshd: root [.*]` 类型的进程。
   - `ps aux | grep 'sshd' | grep -v 'root@pts/0\|grep\|/sbin/sshd' | awk '{print $2}' | xargs kill -9` 可以杀掉这些进程。（很粗糙了属于是）
-- `less /var/log/auth.log | grep -i 'accepted'` 可以查看登录成功的记录
 - `lastb -9` 可以查看最近 9 条登录失败记录
 
 ### 解法
@@ -95,45 +92,20 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
   firewall-cmd --zone=public --list-ports # or
   ```
   :::
-  - 我写了一个脚本用于快速执行防火墙指令。
-  ```bash
-  function firewall --description 'enable or disable firewalld'
-  set usage "usage: firewall [option]
-  options: -e: enable and start firewall
-          -d: disable and stop firewall"
-  if [ (count $argv) -eq 0 ]
-      echo $usage
-  else
-      switch $argv[1]
-          case '-e'
-              systemctl enable firewalld
-              systemctl start firewalld
-          case '-d'
-              systemctl stop firewalld
-              systemctl disable firewalld
-          case '*'
-              echo $usage
-      end
-  end
-  end
-  ```
 
-## 搭建代理
-
-有谁买了海外 VPS 不是为了搭代理的呢？
-
-### 测试工具
-
-- [ping.pe](https://ping.pe/#)：连通性
-- `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
+## 代理
 
 ### 协议
 
-网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 伪装 HTTPS 加密方案，安全性高，但是数据包比较大，有被主动封禁的可能。
+网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在的 trojan 检测技术也比较成熟。
 
-我比较菜，直接用 [trojan 一键脚本](https://github.com/Jrohy/trojan)了。（本来是想用 X-UI 的，然而[出了问题](#x-ui-does-not-work)）
+我最开始直接用 [trojan 一键脚本](https://github.com/Jrohy/trojan)[^2]。如[GFW 会主动对端口进行封禁](#对抗-gfw)，我的端口基本只能存活一天。（后来做了端口转发就基本没死了，偶尔会被 Qos(?)）
 
-如果有问题可以尝试换个端口。[GFW 会主动对端口进行封禁](#对抗-gfw)，我的端口基本只能存活一天。
+[^2]: 本来是想用 X-UI 的，然而[出了问题](#x-ui-does-not-work)
+
+随着后来自己也使用 linux，我对于一键脚本不够满意，因此开始自己写 trojan-go 的配置文件。
+
+也尝试了一下 hysteria 协议，并且写了个教程。
 
 ### WARP
 
@@ -148,17 +120,12 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
 <!-- * 开启 trojan-go 而非纯 trojan
 * [WARP](#warp) -->
 
-- 使用 Nginx 将伪装页面（我选择我的小破博客）[部署](#nginx)到 443 端口 (80 转发 443)。（然而 443 早就被封了，令人感慨）
+- 反代一个伪装主页，详见[反向代理](../reverse_proxy.md)。（然而 443 早就被封了，令人感慨）
 - 开启 cloudflare 代理
 - 设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。
   ```bash:no-line-numbers
   firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
   ```
-
-## 系统管理
-
-1. 使用 `lsof`（推荐）/ `ps aux` 配合 `grep` 查找进程。
-2. 使用 `top` / `htop`（推荐）查看内存，CPU 占用等。
 
 ### 清理僵尸进程
 
@@ -172,46 +139,29 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 # if haven't been killed, just kill <ppid>
 ```
 
-## 包
-
-已安装：psmisc, nvim, firewalld, curl, fd, net-tools, nginx, fish,
-
-### nginx
-
-部署我的博客到 443，同时将 80 端口转发到 443.
-
-- /etc/nginx/nginx.conf:
-  ```nginx
-  http {
-      server {
-          listen 80;
-          server_name <domain name>;
-          rewrite ^(.*)$ https://${host}$1 permanent;
-      }
-      server {
-          listen 443 ssl;
-          server_name <domain name>;
-          ssl_certificate /root/cert/....cer;
-          ssl_certificate_key /root/cert/....key;
-          index index.html;
-          location / {
-              root /etc/nginx/myblog;
-          }
-      }
-  }
-  ...
-  ```
-- 重新载入：`nginx -s reload`
-
 ## 运维
 
 虽然我非常菜，但还是姑且记录一些心得。由于有的服务器是公家的，想干点啥总是感觉束手束脚。。
 
-1. 如果是自己的服务器，那肯定先把[常用工具](../farraginous/recommend_packages.md#linux)下载好。
+1. 如果是自己的服务器，那肯定先把[常用工具](../../farraginous/recommend_packages.md#linux)下载好。
    - 公家服务器如果有权限安装软件，也可以装一些典型的/极大增加效率的。例如 fish, zoxide
 2. ssh 保活用的 screen 而不是 tmux。[一些基础命令](https://linuxize.com/post/how-to-use-linux-screen/)，加一个[删除命令](https://stackoverflow.com/a/1509764/18929691)，加一个 `<C-a> [` 进 copy mode 然后可以往上滚的命令。
 
 ## 遇到的问题
+
+### 卡在 Reloading system manager configuration
+
+archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration。
+
+尝试了一下 `systemctl daemon-reload` 也卡住了。
+
+然后根据[这个回答](https://bbs.archlinux.org/viewtopic.php?id=281599)，罪魁祸首是 `netplan`（_netplan_ 是 _cloud-init_ 的可选依赖。而 _cloud-init_ 是 VPS 自带的玩意）于是卸载，问题解决——
+
+然后服务器重启就连不上 ssh 了。。。
+
+这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。
+
+所以这个问题是无解的，或许得等我哪天琢磨出换个 vps 联网手段才行吧。
 
 ### 端口被封问题
 

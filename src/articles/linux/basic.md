@@ -94,9 +94,15 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 
 ## 服务
 
-与 windows _service_ 的概念相通。有的 debian 系 distro 使用 `service` 指令，而 archlinux 使用 `systemctl` 进行服务管理。本节默认使用 `systemctl`。
+与 windows _service_ 的概念相通。有的 debian 系 distro 使用 `service` 指令，而 archlinux 使用 `systemctl` 进行服务管理。[archwiki](https://wiki.archlinux.org/title/systemd)
 
-查看服务的输出，请前往[日志](#日志)。
+查看服务的输出，一般在 status 里会有，也可以前往[日志](#日志)查看。
+
+### 基本概念
+
+每个服务（unit）是一个 `.service` 文件，存放在不同位置，其中由软件安装的服务在 `/usr/lib/systemd/system/` 下。
+
+- `xxx@.service` 是一个 template unit，不能直接启动，而是需要传入一个 string，作为 `xxx@something.service` 启动。string 的含义需要自己看 service 内容。
 
 ### 常用指令
 
