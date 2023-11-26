@@ -12,8 +12,6 @@ tag:
 
 trojan-go 是 trojan 的 go 实现，兼容原版。
 
-这里再简单介绍一下 trojan 协议，这是一个伪装成明确特征的 https 流量的协议，直接利用了现有的 tls 加密。
-
 ## [服务端配置](https://p4gefau1t.github.io/trojan-go/basic/config/)
 
 trojan-go 的配置又是一个简洁的典范，几乎不逊色于 hysteria。
@@ -63,3 +61,7 @@ trojan-go 的配置又是一个简洁的典范，几乎不逊色于 hysteria。
 由于 trojan 协议广泛使用，因此是个客户端基本都支持。
 
 而关于 trojan-go，在 Android 端可以用 [NekoBox](./proxy_software.md#sing-box-系)，不过需要[下载插件](https://f-droid.org/packages/io.nekohasekai.sagernet.plugin.trojan_go/)。
+
+## 遇到的问题
+
+一觉醒来，trojan-go 寄了。

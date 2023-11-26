@@ -14,7 +14,7 @@ category:
 ## 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
 
 - [ ] 日语 N2
-- [ ] 英语 IELTS & TOEFL (without a target score)
+- [ ] 英语 IELTS / TOEFL (without a target score)
 - [ ] try NixOS
 
 - CS 自学：
@@ -25,7 +25,6 @@ category:
   - [ ] tauri or flask, to dev wordsreciter
   - [x] koishi plugin, like atri bot
   - [ ] C# learning and pull request to Tai, MisakaTranslator
-  - [ ] lua(?)
   - [x] tg 教务信息转发（通过 rss 实现）
 
 ## 日程库（不急）

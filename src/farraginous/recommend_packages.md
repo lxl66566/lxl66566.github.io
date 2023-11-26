@@ -160,6 +160,23 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 - [WizTree](https://diskanalyzer.com/)：扫描快速，号称 fastest
 - [SpaceSniffer](https://spacesniffer.en.softonic.com/)：较慢，但是可视化更好
 
+### 截图软件
+
+- [flameshot](https://flameshot.org/)：基于 Qt 的开源跨平台截屏软件。
+- [PixPin](https://pixpinapp.com/)：国产闭源截图软件
+
+相同点：编辑截图，固定截图，软件都是 Qt 写的，大小都差不多
+
+不同点：
+
+- flameshot
+  - 支持上传到图床，获取分享 url
+  - windows 下有一定延迟
+  - 在 wayland 分数缩放下工作较差（请使用 [kde spectacle](https://apps.kde.org/zh-cn/spectacle/)）
+- PixPin
+  - 支持**离线 OCR**，我非常喜欢
+  - 无法设置 _PrintSc_ 和两键以上的快捷键
+
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
 
 快速搜索，几乎不花时间。推荐配合 [EverythingToolbar](https://github.com/srwi/EverythingToolbar) 使用。
@@ -238,15 +255,6 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 ### [Winaero Tweaker](https://winaero.com/)
 
 windows 设置小工具，集成了一些高级功能（特别对我这种被迫设置 win11 的人有点帮助）
-
-### [flameshot](https://flameshot.org/)
-
-基于 Qt 的开源跨平台截屏软件，支持截屏编辑，图床在线分享。
-
-- windows 下有一定延迟
-- 在 wayland 分数缩放下工作较差，请使用 [kde spectacle](https://apps.kde.org/zh-cn/spectacle/)
-
-_建议在设置中开启开机自启。_
 
 ### [Ditto](https://github.com/sabrogden/Ditto)
 

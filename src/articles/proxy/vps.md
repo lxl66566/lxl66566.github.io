@@ -73,25 +73,26 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 - 可以通过修改 `/etc/ssh/sshd_config` 中的内容进行限制，例如修改 `MaxAuthTries`。
 - 密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。
 - 限制登录 ip。修改 `/etc/hosts.allow` & `/etc/hosts.deny` 文件。
-- firewalld
-  ::: code-tabs
-  @tab basic
-  ```sh
-  systemctl <start | enable | stop | disable> firewalld
-  firewall-cmd --state
-  firewall-cmd --reload   # after change
-  firewall-cmd --add-masquerade --permanent   # 伪装
-  ```
-  @tab add
-  ```sh:no-line-numbers
-  firewall-cmd --add-port=<port>/tcp --permanent  # permanent
-  ```
-  @tab show
-  ```sh
-  firewall-cmd --zone=public --list-all
-  firewall-cmd --zone=public --list-ports # or
-  ```
-  :::
+
+#### 防火墙
+
+::: tabs
+@tab firewalld
+
+```sh
+systemctl <start | enable | stop | disable> firewalld
+firewall-cmd --state
+firewall-cmd --reload   # after change
+firewall-cmd --add-masquerade --permanent   # 伪装
+firewall-cmd --add-port=<port>/tcp --permanent  # 永久放行
+firewall-cmd --zone=public --list-all
+firewall-cmd --zone=public --list-ports
+```
+
+@tab nftables
+[查看 wiki](https://wiki.archlinuxcn.org/wiki/Nftables)
+
+:::
 
 ## 代理
 
@@ -151,13 +152,13 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 
 ### 卡在 Reloading system manager configuration
 
-archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration。
+archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration，卡大约 1min。
 
 尝试了一下 `systemctl daemon-reload` 也卡住了。
 
 然后根据[这个回答](https://bbs.archlinux.org/viewtopic.php?id=281599)，罪魁祸首是 `netplan`（_netplan_ 是 _cloud-init_ 的可选依赖。而 _cloud-init_ 是 VPS 自带的玩意）于是卸载，问题解决——
 
-然后服务器重启就连不上 ssh 了。。。
+才怪。服务器重启就连不上 ssh 了。。。
 
 这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。
 

@@ -121,7 +121,7 @@ sudo systemd-nspawn -D container  # 进入容器
 最好装完系统就先装 shell。
 
 - 若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。
-- bash 可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。
+- ~~bash 可以不用，但是需要会写。毕竟 default shell 的兼容性不是盖的。[脚本](https://wangdoc.com/bash/)~~ 我撤回我的话[^7]
 - [Y/N 选择器](https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395)，以下是两个例子：
   ::: code-tabs
   @tab bash
@@ -148,6 +148,8 @@ sudo systemd-nspawn -D container  # 进入容器
   end
   ```
   :::
+
+[^7]: 尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞(`"${arr[@]}"`)。我的评价是还是**写点阳间语言**吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。
 
 #### fishshell
 

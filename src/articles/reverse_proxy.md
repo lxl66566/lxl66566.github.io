@@ -31,9 +31,13 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 
 这个配置文件可以将 http 自动重定向到 https，并且不用自己签证书。
 
+如果要用自己的证书就加一句 `tls <crt> <key>` 即可。
+
 > 而我在 nginx 上得自己用 acme.sh 签证书，然后写[一大坨的配置文件](https://github.com/lxl66566/config/blob/a3065d4b9797d43eb113e2932e9799f9b420c4f4/nginx.conf)，还得去看看 nginx 命令行用法，signal 有哪些，才能把我的网站搞好。
 
-反代也很简单，只需将 `file_server` 换成 `reverse_proxy :8000`（端口号）。如果要用自己的证书就加一句 `tls <pem> <key>` 即可。
+反代也很简单，只需将 `file_server` 换成 `reverse_proxy :8000`（端口号）。
+
+- 自带 formatter：`caddy fmt --overwrite /etc/caddy/Caddyfile`
 
 ### 其他资料
 
@@ -43,9 +47,9 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 
 ~~Nginx 502 bad gateway :(~~ nginx 是老牌反代大哥了，但是它其实不是今天&这里的主角（）。
 
-Several features that are free (in caddy) which cost money in nginx. :(
+> Several features that are free (in caddy) which cost money in nginx. :(
 
-nginx 的 quic 还不是原生支持而是 module。
+~~nginx 的 quic 还是 module。~~ _NGINX now officially supports HTTP/3 with QUIC. It is available as part of NGINX 1.25.1 mainline version for open source users and NGINX Plus R30 for enterprise customers._
 
 ## 所以到底如何选
 
@@ -62,6 +66,8 @@ nginx 的 quic 还不是原生支持而是 module。
 ### caddy 无法建立连接
 
 我想开一个 file server，静态文件没有任何问题（就是我的 blog）。然而 caddy 开了以后一访问就是 js 执行错误。我也用 nginx 试了一下，是可用的。
+
+手动 `caddy run` 却是好的，可能是 service 出了问题。
 
 ### ERR_ADDRESS_UNREACHABLE
 
