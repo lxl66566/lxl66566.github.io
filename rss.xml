@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 25 Nov 2023 04:28:19 GMT</pubDate>
-    <lastBuildDate>Sat, 25 Nov 2023 04:28:19 GMT</lastBuildDate>
+    <pubDate>Sun, 26 Nov 2023 15:53:09 GMT</pubDate>
+    <lastBuildDate>Sun, 26 Nov 2023 15:53:09 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -22,6 +22,28 @@
     <category>爱好</category>
     <category>随笔</category>
     <category>作者</category>
+    <item>
+      <title>Trojan</title>
+      <link>https://absx.pages.dev/articles/proxy/trojan.html</link>
+      <guid>https://absx.pages.dev/articles/proxy/trojan.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">Trojan</source>
+      <description>Trojan</description>
+      <category>教程</category>
+      <pubDate>Sun, 26 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Trojan</h1>
+<p>trojan 协议是一个广泛使用的，伪装成明确特征的 https 流量的协议，直接利用了现有的 tls 加密。</p>
+<p><a href="https://github.com/trojan-gfw/trojan" target="_blank" rel="noopener noreferrer">trojan</a> repo 的上一次 commit 是 2020 年，大致能认为无人维护了。（并且 issue 区充斥着大量垃圾内容）</p>
+<h2> 安装</h2>
+
+<p>配置文件在 <code>/etc/trojan/config.json</code>，内部已有一个模版，<a href="https://trojan-gfw.github.io/trojan/config" target="_blank" rel="noopener noreferrer">稍作修改</a>即可使用。</p>
+<p>首次启动建议先 <code>trojan /etc/trojan/config.json</code> 测试配置文件是否正确。若正确，启动服务 <code>trojan.service</code> 即可。</p>
+<h2> 客户端</h2>
+<p>不需要我多说。</p>
+<h2> 遇到的问题</h2>
+<p>启动服务时报错 <code>trojan.service: Start request repeated too quickly.</code>。搜，按照 <a href="https://github.com/trojan-gfw/trojan/issues/387" target="_blank" rel="noopener noreferrer">issue 所述</a>改了用户组，无效。</p>
+<p>然后直接运行 <code>trojan /etc/trojan/config.json</code>，看到 error 是端口占用了。猜测 trojan 不会将报错信息输出到 stderr，因此无法直接 <code>systemctl status trojan</code> 查看报错信息。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Hysteria</title>
       <link>https://absx.pages.dev/articles/proxy/hysteria.html</link>
@@ -240,7 +262,6 @@
       <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> <a href="https://github.com/p4gefau1t/trojan-go" target="_blank" rel="noopener noreferrer">Trojan-Go</a></h1>
 <p>trojan-go 是 trojan 的 go 实现，兼容原版。</p>
-<p>这里再简单介绍一下 trojan 协议，这是一个伪装成明确特征的 https 流量的协议，直接利用了现有的 tls 加密。</p>
 <h2> <a href="https://p4gefau1t.github.io/trojan-go/basic/config/" target="_blank" rel="noopener noreferrer">服务端配置</a></h2>
 <p>trojan-go 的配置又是一个简洁的典范，几乎不逊色于 hysteria。</p>
 <ol>
@@ -253,6 +274,8 @@
 <h2> 客户端</h2>
 <p>由于 trojan 协议广泛使用，因此是个客户端基本都支持。</p>
 <p>而关于 trojan-go，在 Android 端可以用 <a href="/articles/proxy/proxy_software.html#sing-box-%E7%B3%BB" target="blank">NekoBox</a>，不过需要<a href="https://f-droid.org/packages/io.nekohasekai.sagernet.plugin.trojan_go/" target="_blank" rel="noopener noreferrer">下载插件</a>。</p>
+<h2> 遇到的问题</h2>
+<p>一觉醒来，trojan-go 寄了。</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -859,9 +882,9 @@
 <li>可以通过修改 <code>/etc/ssh/sshd_config</code> 中的内容进行限制，例如修改 <code>MaxAuthTries</code>。</li>
 <li>密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。</li>
 <li>限制登录 ip。修改 <code>/etc/hosts.allow</code> &amp; <code>/etc/hosts.deny</code> 文件。</li>
-<li>firewalld
-</li>
 </ul>
+<h4> 防火墙</h4>
+
 <h2> 代理</h2>
 <h3> 协议</h3>
 <p>网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在的 trojan 检测技术也比较成熟。</p>
@@ -894,10 +917,10 @@
 </ol>
 <h2> 遇到的问题</h2>
 <h3> 卡在 Reloading system manager configuration</h3>
-<p>archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration。</p>
+<p>archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration，卡大约 1min。</p>
 <p>尝试了一下 <code>systemctl daemon-reload</code> 也卡住了。</p>
 <p>然后根据<a href="https://bbs.archlinux.org/viewtopic.php?id=281599" target="_blank" rel="noopener noreferrer">这个回答</a>，罪魁祸首是 <code>netplan</code>（<em>netplan</em> 是 <em>cloud-init</em> 的可选依赖。而 <em>cloud-init</em> 是 VPS 自带的玩意）于是卸载，问题解决——</p>
-<p>然后服务器重启就连不上 ssh 了。。。</p>
+<p>才怪。服务器重启就连不上 ssh 了。。。</p>
 <p>这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。</p>
 <p>所以这个问题是无解的，或许得等我哪天琢磨出换个 vps 联网手段才行吧。</p>
 <h3> 端口被封问题</h3>
@@ -1011,18 +1034,24 @@
 <p>能有多简单呢，例如我需要部署一个静态站点（用于 vps 伪装），只需要在 <code>/etc/caddy/Caddyfile</code> 中写入：</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="blank">启动 caddy 服务</a>即可。</p>
 <p>这个配置文件可以将 http 自动重定向到 https，并且不用自己签证书。</p>
+<p>如果要用自己的证书就加一句 <code>tls &lt;crt&gt; &lt;key&gt;</code> 即可。</p>
 <blockquote>
 <p>而我在 nginx 上得自己用 acme.sh 签证书，然后写<a href="https://github.com/lxl66566/config/blob/a3065d4b9797d43eb113e2932e9799f9b420c4f4/nginx.conf" target="_blank" rel="noopener noreferrer">一大坨的配置文件</a>，还得去看看 nginx 命令行用法，signal 有哪些，才能把我的网站搞好。</p>
 </blockquote>
-<p>反代也很简单，只需将 <code>file_server</code> 换成 <code>reverse_proxy :8000</code>（端口号）。如果要用自己的证书就加一句 <code>tls &lt;pem&gt; &lt;key&gt;</code> 即可。</p>
+<p>反代也很简单，只需将 <code>file_server</code> 换成 <code>reverse_proxy :8000</code>（端口号）。</p>
+<ul>
+<li>自带 formatter：<code>caddy fmt --overwrite /etc/caddy/Caddyfile</code></li>
+</ul>
 <h3> 其他资料</h3>
 <ul>
 <li><a href="https://github.com/caddyserver/nginx-adapter" target="_blank" rel="noopener noreferrer">Caddy NGINX Config Adapter</a>, converts NGINX config files into Caddy's native format.</li>
 </ul>
 <h2> nginx</h2>
 <p><s>Nginx 502 bad gateway 😦</s> nginx 是老牌反代大哥了，但是它其实不是今天&amp;这里的主角（）。</p>
+<blockquote>
 <p>Several features that are free (in caddy) which cost money in nginx. 😦</p>
-<p>nginx 的 quic 还不是原生支持而是 module。</p>
+</blockquote>
+<p><s>nginx 的 quic 还是 module。</s> <em>NGINX now officially supports HTTP/3 with QUIC. It is available as part of NGINX 1.25.1 mainline version for open source users and NGINX Plus R30 for enterprise customers.</em></p>
 <h2> 所以到底如何选</h2>
 <p>观点：激进派</p>
 <p>虽然 go 写的 caddy 性能可能比纯 c 写的、经过时间检验的 nginx 差，但是流量不大的情况下真的缺那点性能吗？nginx 那坨配置我得上 gpt 才能勉强<strong>读</strong>懂，折腾技术还是用尽可能简单的，减少自己精神内耗的比较好。<s>选择 caddy 是在为自己的脑子着想，兄弟。</s></p>
@@ -1031,6 +1060,7 @@
 <h2> 遇到的问题</h2>
 <h3> caddy 无法建立连接</h3>
 <p>我想开一个 file server，静态文件没有任何问题（就是我的 blog）。然而 caddy 开了以后一访问就是 js 执行错误。我也用 nginx 试了一下，是可用的。</p>
+<p>手动 <code>caddy run</code> 却是好的，可能是 service 出了问题。</p>
 <h3> ERR_ADDRESS_UNREACHABLE</h3>
 <p>用 caddy 和 nginx 都试了一遍，浏览器访问 ERR<em>ADDRESS_UNREACHABLE，本地访问 403，说明不是防火墙的问题。nginx 有报错 _13: Permission denied</em>，然后搜一下发现需要 <code>chmod +x &lt;root&gt;</code>。加了以后还是没用，原来 <em>root</em> 的全路径都需要 <code>chmod +x</code>。。问题解决。</p>
 <h2> external</h2>
@@ -2301,8 +2331,8 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>最好装完系统就先装 shell。</p>
 <ul>
 <li>若使用 <code>chsh</code> 切换了其他的 shell，则 <code>.bashrc</code> &amp; <code>.bash_profile</code> 将失效。</li>
-<li>bash 可以不用，但是需要会写。。毕竟 default shell 的兼容性不是盖的。</li>
-<li><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/N 选择器</a>，以下是两个例子：
+<li><s>bash 可以不用，但是需要会写。毕竟 default shell 的兼容性不是盖的。<a href="https://wangdoc.com/bash/" target="_blank" rel="noopener noreferrer">脚本</a></s> 我撤回我的话<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup></li><a class="footnote-anchor" id="footnote-ref3">
+</a><li><a class="footnote-anchor" id="footnote-ref3"></a><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/N 选择器</a>，以下是两个例子：
 </li>
 </ul>
 <h4> fishshell</h4>
@@ -2409,6 +2439,8 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li id="footnote1" class="footnote-item"><p><a href="https://t.me/withabsolutex/1303" target="_blank" rel="noopener noreferrer">我再也不敢在课上不插电滚 aur 了 😭</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 <li id="footnote2" class="footnote-item"><p><code>yazi</code> 甚至能在 console 下查看图片。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="footnote3" class="footnote-item"><p>尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞(<code>"${arr[@]}"</code>)。我的评价是还是<strong>写点阳间语言</strong>吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
@@ -2711,6 +2743,8 @@ RTT = Round Trip Time，往返时间</p>
       <category>作者</category>
       <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 2023</h1>
+<h2> 20231126</h2>
+<p>悬疑的大要素无外乎时穿，轮回，以及一些其他的。</p>
 <h2> 20231123</h2>
 <p><em>同源策略</em> 实在是过于简单粗暴，然后为了满足需求又在此策略上到处开洞，我的评价是纯纯的大便。</p>
 <h2> 20231024</h2>
@@ -2890,31 +2924,6 @@ RTT = Round Trip Time，往返时间</p>
 <p>深入分析演练固然是好事，但也失去了那破釜沉舟的勇气。</p>
 <h2> 20230109</h2>
 <p>凡书中英雄，多正义，多为苍生，多敢作敢当。他日吾若著书，必逆此律。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>更早</title>
-      <link>https://absx.pages.dev/essay/earlier.html</link>
-      <guid>https://absx.pages.dev/essay/earlier.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">更早</source>
-      <description>更早</description>
-      <category>随笔</category>
-      <pubDate>Sun, 03 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 更早</h1>
-<p>一些高中时代写出的东西，姑且就放在这里好了。<s>反正也都算是随笔嘛！</s></p>
-<h2> 道理</h2>
-<p>道，世之所存；理，心之所证。</p>
-<p>大道不灭，亘古长存；大理不失，永伴己身。孕道于理，天纵之才；以理创道，圣贤之姿。</p>
-<p>世有一道，名曰真理。才高八斗，学识凌天。以质为本，追根溯源。一方通行，笑卒道中。</p>
-<p>世有一道，名曰奉献。立志崇高，命不可及。为心所向，捐此余生。鞠躬尽瘁，死而后已。</p>
-<p>世有一道，名曰自我。寿有尽时，命无定数。或为宝财，或为喜乐。碌碌足满，泯然众生。</p>
-<h2> 质象</h2>
-<p>质象焉得其一？质，物之本，如水于雪，丝于锦，得之而晓宇宙也。象，物之表，如土覆地，虽不知其下，然一草一木，皆生于土焉。世人多以为质乃象之祖，何哉？原子构分，积则显其行，是以象质之积也。然之于医道又如何？中医，经验之积，通其象而不知其质，千年不衰；西医，质之所导，重质而轻象，不治极端之病。中医效用恐微，而不伤身；西医除疾见影，而自损其身。例吾理学，通质而废象，虽解万题，难以足寿。质象之分，何高一筹？吾道也，于何去从？</p>
-<h2> 大理之行</h2>
-<p>理为所悟者，之于人也，则贯今时，通未来。人寿于今，虽觉多，然沧海一粟耳。寿有穷而道无穷，则理创道谓之不朽。何理可于此？</p>
-<p>《礼记》言：修身，齐家，治国，平天下。此可为四理。大非优，小非劣。修身为一人之我，集世万千于己身。平天下为众人之天下，为人族迈步而舍身。吾且从之首，于思中省矣。</p>
-<hr>
-<p>吾常数省吾身：思否？学否？律否？效否？善为人否？改何？</p>
 ]]></content:encoded>
     </item>
   </channel>
