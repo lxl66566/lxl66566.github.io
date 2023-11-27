@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 26 Nov 2023 15:53:09 GMT</pubDate>
-    <lastBuildDate>Sun, 26 Nov 2023 15:53:09 GMT</lastBuildDate>
+    <pubDate>Mon, 27 Nov 2023 13:33:22 GMT</pubDate>
+    <lastBuildDate>Mon, 27 Nov 2023 13:33:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -861,6 +861,11 @@
 
 <h4> 添加公钥</h4>
 <p>由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。在本机上 <code>cat ~/.ssh/id_xxx.pub</code> 并复制，再粘贴到 vps 的 <code>~/.ssh/authorized_keys</code> 内就好了。每行一个公钥。</p>
+<h2> 我的设置</h2>
+<ol>
+<li><a href="https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes" target="_blank" rel="noopener noreferrer">增加 UDP Buffer Sizes</a></li>
+<li>如果 VPS 没开 bbr 记得开。（<a href="/articles/linux/install_and_config.html#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE" target="blank">参考 11. sysctl 相关</a>）</li>
+</ol>
 <h2> 安全性</h2>
 <p>VPS 的公网 ip 一定会带来安全性问题。不容忽视。</p>
 <h3> 自检</h3>
@@ -886,21 +891,19 @@
 <h4> 防火墙</h4>
 
 <h2> 代理</h2>
+<p><strong>不要把证书放在 <code>/root</code> ！！！</strong> 我又不能改 <code>/root</code>权限，代理服务端又会出一大堆权限问题，日志还不好看。</p>
 <h3> 协议</h3>
 <p>网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在的 trojan 检测技术也比较成熟。</p>
 <p>我最开始直接用 <a href="https://github.com/Jrohy/trojan" target="_blank" rel="noopener noreferrer">trojan 一键脚本</a><sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup><a class="footnote-anchor" id="footnote-ref2">。如</a><a href="#%E5%AF%B9%E6%8A%97-gfw">GFW 会主动对端口进行封禁</a>，我的端口基本只能存活一天。（后来做了端口转发就基本没死了，偶尔会被 Qos(?)）</p>
 <p>随着后来自己也使用 linux，我对于一键脚本不够满意，因此开始自己写 trojan-go 的配置文件。</p>
 <p>也尝试了一下 hysteria 协议，并且写了个教程。</p>
 <h3> WARP</h3>
-<p>发现访问 Google 时会有机器人异常验证，久而久之还是挺烦的。可以用 <a href="https://github.com/P3TERX/warp.sh" target="_blank" rel="noopener noreferrer">WARP 一键脚本</a> 装个 WARP 解决。</p>
+<p>有的 IP 访问 Google 时会有机器人异常验证。可以用 <a href="https://github.com/P3TERX/warp.sh" target="_blank" rel="noopener noreferrer">WARP 一键脚本</a>解决。</p>
 <h3> 对抗 GFW</h3>
 <p>GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 ip 被永久封禁的风险。trojan 本身是 TLS over TLS 加密方式，但仍然有办法识别出流量特征。</p>
 <p>我使用如下方式降低封锁几率（<strong>有没有用其实是不太清楚的</strong>）：</p>
-<!-- * 开启 trojan-go 而非纯 trojan
-* [WARP](#warp) -->
 <ul>
 <li>反代一个伪装主页，详见<a href="/articles/reverse_proxy.html" target="blank">反向代理</a>。（然而 443 早就被封了，令人感慨）</li>
-<li>开启 cloudflare 代理</li>
 <li>设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。<div class="language-bash" data-ext="sh"></div></li>
 </ul>
 <h3> 清理僵尸进程</h3>
@@ -916,6 +919,9 @@
 <li>ssh 保活用的 screen 而不是 tmux。<a href="https://linuxize.com/post/how-to-use-linux-screen/" target="_blank" rel="noopener noreferrer">一些基础命令</a>，加一个<a href="https://stackoverflow.com/a/1509764/18929691" target="_blank" rel="noopener noreferrer">删除命令</a>，加一个 <code>&lt;C-a&gt; [</code> 进 copy mode 然后可以往上滚的命令。</li>
 </ol>
 <h2> 遇到的问题</h2>
+<h3> 无法使用密钥登录</h3>
+<p>某天服务器突然无法使用密钥验证登录了。查一下日志，发现一句：<code>Authentication refused: bad ownership or modes for directory /root</code>。</p>
+<p>我确实改过 <code>/root</code> 的权限，因此改回 750 即可。</p>
 <h3> 卡在 Reloading system manager configuration</h3>
 <p>archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration，卡大约 1min。</p>
 <p>尝试了一下 <code>systemctl daemon-reload</code> 也卡住了。</p>
@@ -923,6 +929,7 @@
 <p>才怪。服务器重启就连不上 ssh 了。。。</p>
 <p>这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。</p>
 <p>所以这个问题是无解的，或许得等我哪天琢磨出换个 vps 联网手段才行吧。</p>
+<p>ps. 群里也有相同问题的。</p>
 <h3> 端口被封问题</h3>
 <p>20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口<s>并显示在伪装页面上</s>映射到 12138（还作出了<a href="#%E5%AF%B9%E6%8A%97-gfw">其他努力</a>）。脚本还是有 bug 的（我菜），<code>$temp</code> 赋值不成功，但无伤大雅。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>不应同时使用 firewalld 和 iptables，可能会导致混乱。由于 <code>firewalld</code> 是更高一层的抽象(?)，因此我使用之：</p>
@@ -1041,6 +1048,7 @@
 <p>反代也很简单，只需将 <code>file_server</code> 换成 <code>reverse_proxy :8000</code>（端口号）。</p>
 <ul>
 <li>自带 formatter：<code>caddy fmt --overwrite /etc/caddy/Caddyfile</code></li>
+<li>自动证书存放位置是 <code>/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/&lt;domain&gt;</code>，可以 ln 到其他地方给其他软件用。</li>
 </ul>
 <h3> 其他资料</h3>
 <ul>
