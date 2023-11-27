@@ -38,6 +38,7 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 反代也很简单，只需将 `file_server` 换成 `reverse_proxy :8000`（端口号）。
 
 - 自带 formatter：`caddy fmt --overwrite /etc/caddy/Caddyfile`
+- 自动证书存放位置是 `/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/<domain>`，可以 ln 到其他地方给其他软件用。
 
 ### 其他资料
 

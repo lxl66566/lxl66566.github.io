@@ -56,6 +56,11 @@ youtube 上（与其他教程）清一色的 finalshell，但是这种不开源�
 
 由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。在本机上 `cat ~/.ssh/id_xxx.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内就好了。每行一个公钥。
 
+## 我的设置
+
+1. [增加 UDP Buffer Sizes](https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes)
+2. 如果 VPS 没开 bbr 记得开。（[参考 11. sysctl 相关](../linux/install_and_config.md#系统设置)）
+
 ## 安全性
 
 VPS 的公网 ip 一定会带来安全性问题。不容忽视。
@@ -96,6 +101,8 @@ firewall-cmd --zone=public --list-ports
 
 ## 代理
 
+**不要把证书放在 `/root` ！！！** 我又不能改 `/root`权限，代理服务端又会出一大堆权限问题，日志还不好看。
+
 ### 协议
 
 网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在的 trojan 检测技术也比较成熟。
@@ -110,7 +117,7 @@ firewall-cmd --zone=public --list-ports
 
 ### WARP
 
-发现访问 Google 时会有机器人异常验证，久而久之还是挺烦的。可以用 [WARP 一键脚本](https://github.com/P3TERX/warp.sh) 装个 WARP 解决。
+有的 IP 访问 Google 时会有机器人异常验证。可以用 [WARP 一键脚本](https://github.com/P3TERX/warp.sh)解决。
 
 ### 对抗 GFW
 
@@ -118,11 +125,7 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
 
 我使用如下方式降低封锁几率（**有没有用其实是不太清楚的**）：
 
-<!-- * 开启 trojan-go 而非纯 trojan
-* [WARP](#warp) -->
-
 - 反代一个伪装主页，详见[反向代理](../reverse_proxy.md)。（然而 443 早就被封了，令人感慨）
-- 开启 cloudflare 代理
 - 设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。
   ```bash:no-line-numbers
   firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
@@ -150,6 +153,12 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 
 ## 遇到的问题
 
+### 无法使用密钥登录
+
+某天服务器突然无法使用密钥验证登录了。查一下日志，发现一句：`Authentication refused: bad ownership or modes for directory /root`。
+
+我确实改过 `/root` 的权限，因此改回 750 即可。
+
 ### 卡在 Reloading system manager configuration
 
 archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration，卡大约 1min。
@@ -163,6 +172,8 @@ archlinux 的服务器，每次安装软件都卡在 Reloading system manager co
 这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。
 
 所以这个问题是无解的，或许得等我哪天琢磨出换个 vps 联网手段才行吧。
+
+ps. 群里也有相同问题的。
 
 ### 端口被封问题
 

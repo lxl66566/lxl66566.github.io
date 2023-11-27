@@ -191,8 +191,8 @@ git fetch origin <branch>     # 拉取远程
 
 ```sh
 cd ~    # 进入 home 目录（windows 下即为 C:/Users/<your windows user name>）
-ssh-keygen -t rsa -C "youremail@example.com"    # 然后一路回车
-clip < ~/.ssh/id_rsa.pub    # 复制公钥内容至剪切板
+ssh-keygen  -C "youremail@example.com"    # 然后一路回车
+clip < ~/.ssh/id_ed25519.pub    # 复制公钥内容至剪切板
 # 点击github右上角头像，进入Settings-SSH and GPG keys，新建你的 ssh key 并粘贴内容。标题随便写。
 ssh -T git@github.com   # 输入该命令验证是否成功
 ```
