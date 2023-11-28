@@ -88,6 +88,9 @@ obfs:
     password: ************
 ```
 
+> ps. V2rayN v6.23 亲测可用；而 v6.30 虽然加入了官方 hysteria2 支持，但其使用 sing-box 内核，相同配置下测试不可用。  
+> 唉，偏偏要去用 sing-box
+
 ### Linux
 
 我在 linux 上使用 [daed](./proxy_software.md#daed)，然而其[尚未支持且不打算支持 hysteria 协议](https://github.com/daeuniverse/dae/issues/48)。

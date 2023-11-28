@@ -9,6 +9,12 @@ tag:
 
 # Python
 
+python 易学易用，使用广泛，生态完善，除了性能外没啥缺点。
+
+在经历了 bash 地狱般的折磨[^2]后，我选择 python 作为脚本语言。
+
+[^2]: [喜欢我 `"${arr[@]}"` 吗？](https://t.me/withabsolutex/1374)
+
 ## 安装
 
 python 本身的安装应该不用我多说，windows [scoop](../farraginous/recommend_packages.md#scoop) / archlinux pacman 一行结束。不过注意，没有启用虚拟环境时，电脑中**最好只有一个 python**。
@@ -26,6 +32,7 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 - **Ruff** - Charlie Marsh：提供语法分析
   - [配置技巧](https://stackoverflow.com/questions/75639719/decrease-mistake-severity-for-ruff-python-linter-in-vscode-extension)
 - (optional) **isort** - Microsoft：提供 import 排序
+  - 实测 isort 会导致 python 的高亮消失。
 
 其他就见仁见智了。
 
@@ -82,10 +89,8 @@ pip install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
   - 列出可用包：`poetry show`
 - 安装依赖：`poetry install`，会自动新建虚拟环境
 - 虚拟环境
-  - 查询：`poetry env info`
-  - 激活：`poetry shell`
-    - 或者在虚拟环境下的 Scripts 文件夹中打开命令行，输入 `call activate.bat`.
-- 运行：`poetry run <filename>.py`
+  - 激活：`poetry shell`（或在虚拟环境目录执行 `call activate.bat`）
+- 运行：`poetry run python <filename>.py`
 
 #### 换源
 
@@ -165,21 +170,24 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 
 ## 语言相关
 
-### [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
+### 基本概念
 
-### 序列化
+- python 函数传参跟其他语言很像，基本类型是值传递，object, list, dict 是引用传递。
+  - 深拷贝和浅拷贝，这个应该是编程基本概念而不是语言基本概念。
+- python 的类型标注只会报警告，运行时不检查。
+- 每个目录 / `.py` 文件都被视作一个模块。
+  - `import ./xxx` 是当前目录模块，不加 `./` 是顶层模块。
+- python 不支持重载。
 
-对象序列化极为简单无脑。弱类型语言的大优势。
+### assert
+
+> 都写 py 了，性能已经不敏感了，不如多做点防御性编程。
 
 ```py
-import pickle
-...
-soup = BeautifulSoup(response.content, "html.parser")
-with open("soup.test", "wb") as f:
-    pickle.dump(soup, f)    # serialize
-with open("soup.test", "rb") as f:
-    soup = pickle.load(f)   # deserialize
+assert need_be_true(), "error message"
 ```
+
+assert 的 error message 不是 & 不能改红色，让我很不爽。
 
 ### 解耦
 
@@ -197,7 +205,40 @@ printa(**l)
 
 但是要注意，使用条件很严格，参数不能多也不能少。我没有找到一个比较好的设置 default 的方法。
 
-## 常用模块
+`*` 是解 list，`**` 是解 dict。
+
+## 语法糖
+
+### map
+
+```py
+a = [1, 2, 3]
+b = [i**2 for i in a]
+# b = [1, 4, 9]
+```
+
+### supress
+
+“抑制”
+
+```py
+from contextlib import suppress
+with suppress(Exception):
+    something_could_go_wrong()
+# 能少写两行。等价于
+# try:
+#     something_could_go_wrong()
+# except Exception:
+#     pass
+```
+
+### [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
+
+`if` 和 `while` 里创建临时变量用的。简单清晰，容易控制生命周期。
+
+## 自带模块
+
+这里的模块都不需要额外安装。python 自带。
 
 ### [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
 
@@ -213,7 +254,13 @@ logging.basicConfig(filename='...', encoding='utf-8')
 
 ### [pprint](https://docs.python.org/3/library/pprint.html)
 
-pretty-print，打印对象比较好用。
+pretty-print，打印嵌套数据结构比较好看。**pprint 不能打印 object 信息。**
+
+```py
+from pprint import pprint
+pprint({"a": 1, "b": 2})  # {'a': 1, 'b': 2}
+pprint(an_obj)  # <__main__.o object at 0x00000234DC0FAF60>
+```
 
 ### configparser
 
@@ -229,6 +276,56 @@ with open("config.ini", "w") as configfile:
   config.write(configfile)                  # 写
 ```
 
+### [subprocess](https://docs.python.org/zh-cn/3/library/subprocess.html)
+
+写脚本必不可少的东西，可以向终端发出信息。代替 `os.system()`。
+
+```py
+from subprocess import run  # 官方建议使用 run 代替所有其他低阶函数
+run("ls", "-al", check=True)  # check=True 表示遇到错误则发出异常，= run(..).check_returncode()
+run("ls | grep py", shell=True, check=True) # shell=True 可以无需拆分命令，如果碰到管道或复杂指令还是不要难为自己。
+```
+
+### pathlib
+
+也是写脚本必不可少的东西。操作文件。
+
+```py
+from pathlib import Path
+Path("a.py").read_text(s: str, encoding="utf-8")  # 读取
+Path("a.py").write_text(s: str, encoding="utf-8") # 写入
+Path("a.py").unlink()  # 删除
+```
+
+### pickle
+
+对象序列化极为简单无脑。弱类型语言的大优势。
+
+```py
+import pickle
+...
+soup = BeautifulSoup(response.content, "html.parser")
+with open("soup.test", "wb") as f:
+    pickle.dump(soup, f)    # serialize
+with open("soup.test", "rb") as f:
+    soup = pickle.load(f)   # deserialize
+```
+
+## 常用外部包
+
+### pandas
+
+读 xlsx/csv 神器，爆杀 openpyxl。
+
+```py
+import pandas as pd
+file = pd.ExcelFile("a.xlsx")
+for name in file.sheet_names:
+    sheet = pd.read_excel(file, sheet_name=name)
+    for _, row in sheet.iterrows():
+        print(row["姓名"])
+```
+
 ## GUI
 
 一些 GUI 框架。（我都没用过）
@@ -237,6 +334,12 @@ with open("config.ini", "w") as configfile:
 - [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
 - [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
 - [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+
+### CustomTkinter
+
+用过，文档没搜索功能，该有回调的地方不给回调，关联变量只能 get 不能 set。。。
+
+系统需要有 tkinter，例如 archlinux 需要安装 `tk`。
 
 ## 图像相关
 
