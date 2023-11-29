@@ -6,22 +6,55 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 27 Nov 2023 13:33:22 GMT</pubDate>
-    <lastBuildDate>Mon, 27 Nov 2023 13:33:22 GMT</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2023 04:01:01 GMT</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2023 04:01:01 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>主张</category>
+    <category>生活</category>
     <category>教程</category>
     <category>导航</category>
     <category>推荐</category>
     <category>经历</category>
     <category>学习</category>
     <category>编程</category>
-    <category>主张</category>
-    <category>生活</category>
     <category>评价</category>
     <category>爱好</category>
     <category>随笔</category>
     <category>作者</category>
+    <item>
+      <title>杂论</title>
+      <link>https://absx.pages.dev/gossip/va_view.html</link>
+      <guid>https://absx.pages.dev/gossip/va_view.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">杂论</source>
+      <description>杂论</description>
+      <category>主张</category>
+      <category>生活</category>
+      <pubDate>Wed, 29 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 杂论</h1>
+<h2> 究其原理</h2>
+<ul>
+<li>近视的成因是晶状体调焦失灵<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。
+<ul>
+<li>因此放松眼睛时需要<strong>尽力</strong>对焦不同距离的物体。</li>
+<li>放松时戴眼镜的效果比不戴眼镜更好。因为高度近视下不戴眼镜根本做不到对焦。</li>
+</ul>
+</a></li><a class="footnote-anchor" id="footnote-ref1">
+<li>人的身体是具有一定适应能力的系统。
+<ul>
+<li>“三分饥和寒”是扩大身体适应面，防止过度适应于现代人的精细脆弱的一种方式。</li>
+</ul>
+</li>
+</a></ul><a class="footnote-anchor" id="footnote-ref1">
+<hr class="footnotes-sep">
+</a><section class="footnotes"><a class="footnote-anchor" id="footnote-ref1">
+</a><ol class="footnotes-list"><a class="footnote-anchor" id="footnote-ref1">
+</a><li id="footnote1" class="footnote-item"><a class="footnote-anchor" id="footnote-ref1"></a><p><a class="footnote-anchor" id="footnote-ref1"></a><a href="https://zh.wikipedia.org/wiki/%E8%BF%91%E8%A6%96" target="_blank" rel="noopener noreferrer">wikipedia</a>上并没有关于晶状体的描述，因此此结论来源未知，可能有错误。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>Trojan</title>
       <link>https://absx.pages.dev/articles/proxy/trojan.html</link>
@@ -96,7 +129,11 @@
 <li>打开 V2rayN，<em>添加自定义配置服务器</em>，<em>地址</em> 选择客户端的配置文件，<em>Core 类型</em> 选择 <code>hysteria</code>。</li>
 </ol>
 <p>然后就可以愉快地使用了。我的客户端配置文件参考：</p>
-<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Linux</h3>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<p>ps. V2rayN v6.23 亲测可用；而 v6.30 虽然加入了官方 hysteria2 支持，但其使用 sing-box 内核，相同配置下测试不可用。<br>
+唉，偏偏要去用 sing-box</p>
+</blockquote>
+<h3> Linux</h3>
 <p>我在 linux 上使用 <a href="/articles/proxy/proxy_software.html#daed" target="blank">daed</a>，然而其<a href="https://github.com/daeuniverse/dae/issues/48" target="_blank" rel="noopener noreferrer">尚未支持且不打算支持 hysteria 协议</a>。</p>
 <p>不过我们可以本地开一个 hysteria client，通过 http 或 socks5 再接入 daed。</p>
 <ol>
@@ -852,6 +889,16 @@
 </tr>
 </tbody>
 </table>
+<details class="hint-container details"><summary>我想买的</summary>
+<p>想买但没买的超级好价</p>
+<ul>
+<li>2023 BF
+<ul>
+<li><a href="https://zhujiwiki.com/35833/" target="_blank" rel="noopener noreferrer">InfraveoCloud</a>，东京机 1T 月流量只要 $9/yr。然而我已经入手了一台东京灵车，因此没钱再买了。</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2> 工具</h2>
 <ul>
 <li><a href="https://ping.pe/#" target="_blank" rel="noopener noreferrer">ping.pe</a>：连通性</li>
@@ -2150,7 +2197,14 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li><a href="https://wiki.archlinuxcn.org/wiki/%E5%90%AF%E5%8A%A8%E6%97%B6%E6%89%93%E5%BC%80%E6%95%B0%E5%AD%97%E9%94%81%E5%AE%9A%E9%94%AE#KDE_Plasma_%E7%94%A8%E6%88%B7" target="_blank" rel="noopener noreferrer">设置 numlock 行为</a></li>
 <li><em>窗口管理 - 窗口行为</em> 设置 <em>焦点跟随鼠标</em></li>
 <li>配置窗口管理器，在窗口装饰中选择主题，调出 <code>置顶</code> 按钮。</li>
+<li><a href="https://wiki.archlinuxcn.org/wiki/%E8%93%9D%E7%89%99" target="_blank" rel="noopener noreferrer">配置蓝牙</a>，安装 <code>bluedevil</code></li>
 </ol>
+<h4> kde 系列软件</h4>
+<p>此处列出我额外安装的 kde 家的软件。</p>
+<ul>
+<li><code>bluedevil</code>：蓝牙前端。</li>
+<li><code>yakuake</code>：下拉式终端，比起 konsole 的优点是快（预加载）。</li>
+</ul>
 <h3> 快照</h3>
 <p>快照本质上就是一个 cp 而已，只不过在 btrfs 上吃了 CoW 的福利，空间占用很小罢了。</p>
 <p>因为<a href="/articles/linux/problem.html#timeshift-%E5%BC%95%E5%8F%91%E7%9A%84%E8%A1%80%E6%A1%88" target="blank">被 timeshift 坑过</a>，因此换用 snapper + btrfs-assistant。</p>
@@ -2273,11 +2327,15 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <td style="text-align:center"><a href="#shell">shell</a> 及其外观</td>
 </tr>
 <tr>
+<td style="text-align:center"><a href="https://github.com/chmln/sd" target="_blank" rel="noopener noreferrer"><code>sd</code></a></td>
+<td style="text-align:center"><code>sed</code> 的代替</td>
+</tr>
+<tr>
 <td style="text-align:center"><code>ripgrep</code> / <a href="https://github.com/lotabout/skim" target="_blank" rel="noopener noreferrer"><code>skim</code></a> / fzf</td>
 <td style="text-align:center"><code>grep</code> 的代替</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>fd</code> &amp; <code>plocate</code></td>
+<td style="text-align:center"><a href="https://github.com/sharkdp/fd" target="_blank" rel="noopener noreferrer"><code>fd</code></a> &amp; <code>plocate</code></td>
 <td style="text-align:center">查找，faster <code>find</code></td>
 </tr>
 <tr>
@@ -2331,6 +2389,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <tr>
 <td style="text-align:center"><code>neovim</code></td>
 <td style="text-align:center"><a href="/coding/vim.html" target="blank">文本编辑器</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://github.com/zellij-org/zellij" target="_blank" rel="noopener noreferrer"><code>Zellij</code></a> / <code>tmux</code></td>
+<td style="text-align:center">终端复用，多窗口</td>
 </tr>
 </tbody>
 </table>
@@ -2405,8 +2467,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h3> exa</h3>
 <p><code>ls='exa --all --long --color-scale size --binary --header --time-style=long-iso'</code></p>
 <h3> tmux</h3>
-<p>tmux 是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起，在<strong>不使用图形界面</strong>或有恢复 shell 需求时比较好用。</p>
+<p>tmux 是一个 Terminal Multiplexers（终端复用）。支持多窗口，分屏，后台挂起，在<strong>不使用图形界面</strong>（服务器上）或有恢复 shell 需求时比较好用。</p>
+<p>tmux 的默认键位实在是过于诡异。后来了解了一下 <a href="https://github.com/zellij-org/zellij" target="_blank" rel="noopener noreferrer">Zellij</a>，我选择使用其代替 tmux。</p>
 <p>如果只想要简单的恢复 shell 功能，可以考虑一下 <code>screen</code>。</p>
+<details class="hint-container details"><summary>use Zellij instead of tmux</summary>
 <ul>
 <li>配置：<a href="https://github.com/lxl66566/config/blob/archwsl/.tmux.conf" target="_blank" rel="noopener noreferrer"><code>~/.tmux.conf</code></a>，初始时没有，需要自己创建。编辑后需要重新载入：<code>tmux source ~/.tmux.conf</code> or <code>prefix</code>+<code>:source ~/.tmux.conf</code></li>
 <li>插件：不要用默认的插件管理器。。不好用。</li>
@@ -2414,6 +2478,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>默认启动 (<a href="http://129.226.226.195/post/28785.html" target="_blank" rel="noopener noreferrer">bash ref</a> | <a href="https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched" target="_blank" rel="noopener noreferrer">zsh ref</a> <a href="https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell" target="_blank" rel="noopener noreferrer">ref2</a>)：
 </li>
 </ul>
+</details>
 <h3> <a href="https://wiki.archlinux.org/title/TLP" target="_blank" rel="noopener noreferrer">tlp</a></h3>
 <p>笔记本省电的。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> activitywatch</h3>
@@ -2740,199 +2805,6 @@ RTT = Round Trip Time，往返时间</p>
 </section>
 ]]></content:encoded>
       <enclosure url="https://absx.pages.dev/images/essay/2022/20220619.png" type="image/png"/>
-    </item>
-    <item>
-      <title>2023</title>
-      <link>https://absx.pages.dev/essay/2023.html</link>
-      <guid>https://absx.pages.dev/essay/2023.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">2023</source>
-      <description>2023</description>
-      <category>随笔</category>
-      <category>作者</category>
-      <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 2023</h1>
-<h2> 20231126</h2>
-<p>悬疑的大要素无外乎时穿，轮回，以及一些其他的。</p>
-<h2> 20231123</h2>
-<p><em>同源策略</em> 实在是过于简单粗暴，然后为了满足需求又在此策略上到处开洞，我的评价是纯纯的大便。</p>
-<h2> 20231024</h2>
-<p>人类从模仿中起步……所以说人的社会性是必要的。</p>
-<h2> 20231018</h2>
-<p>少女祈祷中…血液冷却中…体征消失中…</p>
-<h2> 20231014</h2>
-<p>视聚力和精神力一样，是可再生消耗品</p>
-<h2> 20231013</h2>
-<p>穿着漏底拖鞋，奔波在阴暗朦胧的下雨天。七天工作日，日日爆课；八股文作业，焦头烂额。</p>
-<hr>
-<p>脑洞：可否使用 IS/PR ratio (issue / pull request) 来衡量开源项目的活跃程度？</p>
-<h2> 20231006</h2>
-<p>暴论：图片的默认背景应该是透明的。</p>
-<h2> 20230928</h2>
-<p>尝试对我在路上看到的尽可能多的 <code>.{2}</code> 进行<a href="/hobbies/NSFW/videos.html" target="blank">videos</a>的颜打分。</p>
-<h2> 20230927</h2>
-<p>不给读权限是很坏的。</p>
-<h2> 20230919</h2>
-<p>将谐波分析用于气候变化。</p>
-<h2> 20230918</h2>
-<blockquote>
-<p>IT 行业本质上是一个服务型行业——<a href="https://www.zhihu.com/question/615395614/answer/3209628247" target="_blank" rel="noopener noreferrer">src</a></p>
-</blockquote>
-<p>很真实，一语点醒</p>
-<h2> 20230915</h2>
-<p>蝉鸣以群计，乱音均摊风险者也。</p>
-<h2> 20230911</h2>
-<p>八股 == バグ</p>
-<h2> 20230908</h2>
-<p>如果我在电子厂里压抑着灵魂，大致的下场是幻想走神然后手指被切掉一截吧。</p>
-<h2> 20230906</h2>
-<p>层次（level）是各类世界吸引人（我）的一大要素。</p>
-<h2> 20230828</h2>
-<p>一只隐形的蚊子在蚊帐里，太致命了</p>
-<h2> 20230826</h2>
-<p>拥有对政治和经济的基础判断，投资黄金就不容易亏。</p>
-<hr>
-<p>物种越安逸，智能可能会越高。牺牲了反应速度，增加神经网络的复杂性。</p>
-<h2> 20230824</h2>
-<p>不带处理器和存储器提问简直太致命了。。以后问就是中立派折中说。</p>
-<h2> 20230817</h2>
-<p>苍蝇捕捉器：装过生鱼的袋子。</p>
-<h2> 20230814</h2>
-<p>小地方民好，官不好；大地方相反（有待验证）。</p>
-<h2> 20230802</h2>
-<p>Don't be nervous about mistakes.</p>
-<h2> 20230801</h2>
-<p>Keep curious, keep learning.</p>
-<h2> 20230731</h2>
-<p>世间一大遗憾：好看的不露脸，露脸的不好看</p>
-<h2> 20230730</h2>
-<p>灭蟑记（七）[^1]</p>
-<p>今入厨，已然为灭蟑之师。四处拨弄，意欲惊其而以显于动也。环视之，一蟑伏门后，悄取武器，三击而得，而后方知爆蟑之汁可透双层纸也。</p>
-<p>灭蟑有一理，曰：大蟑喜厨，小蟑喜厕。入厕洗漱，见青年二蟑游走拖鞋之间。移鞋，受惊躲于门轨之缝，竟不可得。持械喝赶之，意欲乱其心智，脱出藏身处。未料其转守为攻，登于械上，占尽先机，欲除吾之械。万幸其年方少，行动迟缓，得以离心之力反击之，投于地，杀之。</p>
-<p>洗脚毕，而脚生瘙痒，有虫豸为乱之感，遂佩叆叇以观之，见三蟑伏于脚跟上。此蟑仅一分（合 1/3 厘米）不足，脚跟皮厚，故感知不甚。投于地，杀之。后再度入浴洗脚。</p>
-<h2> 20230728</h2>
-<p>B 站的严肃科普都喜欢升华主题是吧，流量密码是吧。。</p>
-<h2> 20230719</h2>
-<p>猫看似爱干净；但它会去舔自己的足底，我不认为这是干净的表现。</p>
-<h2> 20230717</h2>
-<p>荞麦等颗粒填充物的枕头有一个优点，那就是能随意调整高度。</p>
-<h2> 20230716</h2>
-<p>福建人在当今大陆，是比较容易被洗脑的一批人。</p>
-<hr>
-<p>svg 使用了召唤术！召唤出了一只线条恐龙！恐龙单调空虚消失了！</p>
-<p>png 使用了召唤术！召唤出了一只像素恐龙！恐龙变大模糊消失了！</p>
-<hr>
-<p>夏季不要在喜糖里放巧克力，应当是婚宴服务者的基本常识。</p>
-<h2> 20230715</h2>
-<p>灭蟑记（六）[^1]</p>
-<p>方点灯入厨，一蟑逃窜，另一蟑振翅疾驰而来。本能避之，而先入厨以脚跺逃窜者，其仍余力，钻入柜下。乃反，持拖鞋若泰山，寻方才飞出之蟑，毙其墙上。二蟑前受一压，步履蹒跚，慌不择路，逃离柜底，一击毙命，尸首分离。正欲离去之际，瞥见三蟑静止隐身于盘橱之中。盘橱者，地势低而杂物众，吾见三蟑呆呆傻傻，即清理两蟑尸体，而后清理杂物，终是毙其于绝路。今有<a href="#_20220724">前车之鉴</a>，不敢投于下水道，遂覆纸，碾其头部，葬与桶中，料定死透。</p>
-<h2> 20230713</h2>
-<p>阅读圈资源比番剧/gal 圈难找多了，鉴定为二次元浓度与技术水平正相关 x</p>
-<h2> 20230710</h2>
-<p>时穿剧情就像操作裸指针。</p>
-<hr>
-<p>近视眼中的世界，是发散的概率云</p>
-<h2> 20230709</h2>
-<p>超现实的核心是对世界本质的探寻。</p>
-<h2> 20230707</h2>
-<p>如果你不喜欢某句话被永久存储、转发，那就不要说</p>
-<div style="text-align:right">
-<p><em>——oldherl, <a href="https://t.me/archlinuxcn_group/2754411" target="_blank" rel="noopener noreferrer">archlinux-cn</a></em></p>
-</div>
-<h2> 20230706</h2>
-<p>图论中好像蕴藏者一些大道理. ..</p>
-<hr>
-<p>谨记，勿大声喧哗</p>
-<h2> 20230703</h2>
-<p>戒胶戒皂，那还打什么呢？</p>
-<h2> 20230702</h2>
-<p>性恶论与进化论挡在了共产主义面前；.*</p>
-<h2> 20230623</h2>
-<p>自由研究がいいことだと思う。</p>
-<h2> 20230613</h2>
-<p>网课和 ChatGPT 是相辅相成的：前者负责教学，后者负责答疑。我很期待能淘汰老师和线下教学的那一天。</p>
-<h2> 20230609</h2>
-<p>原以为我被世事打磨圆滑，然而骗不了自己不可久藏那一点锋芒。</p>
-<hr>
-<p>大学是猫的黑域。</p>
-<hr>
-<p>不要迷失在欲望之中，独行是我灵感的泉源。</p>
-<hr>
-<p>想经由网跨越阶级，则必先打破网之枷锁。</p>
-<hr>
-<p>以长远眼光放大自我，谓之成长。</p>
-<hr>
-<p>踏尘土而染之，方知其必有可恨之处也。</p>
-<h2> 20230608</h2>
-<p>站在牲畜的角度，并没有为主人牺牲的必要。</p>
-<h2> 20230606</h2>
-<p>我的手机体会到了我的杀意。我尝试解 bl 锁，结果手机流量断网了，重启也打不开；我等着，结果手机表面出现了类似凝固的血滴的暗红色圆形固体物质。</p>
-<h2> 20230605</h2>
-<p>反向看本，界原展开</p>
-<h2> 20230531</h2>
-<p>你的手鸡快冲是几毫升的？</p>
-<h2> 20230529</h2>
-<p>枯れない世界と終わる花 -&gt; sendan life -?&gt; 先端（せんたん）ライフ -?&gt; 前端工程师（フロントエンド・エンジニア）的生活 <s>（误</s></p>
-<hr>
-<p>空调是正反馈：当少量人开始开空调，排放的热气使环境极速升温，大家都开始开空调，室外温度达到饱和</p>
-<h2> 20230528</h2>
-<p>笑是正反馈：不明白为什么笑，但就是被传染着笑，最后笑声达到饱和后衰减</p>
-<h2> 20230524</h2>
-<p>我现在所做之事，是否违背了我对死亡的主张？</p>
-<h2> 20230516</h2>
-<p>不要弄混了爱欲，色欲和性欲啊！</p>
-<hr>
-<p>宿舍桌子是充能器，累了的时候趴一下就能充能。</p>
-<h2> 20230411</h2>
-<p>传签到表是一种混乱的行为：若无外力规定传递次序，每个人以随机方向朝四周传递（实际上真的挺随机），几乎不可能遍历到所有的点。已经签过到的人视其为烫手山芋，推诿拒绝；拒力不足的，无奈接过山芋，开始寻找其他方向的破绽。而当你环视四周，皆闭目谢表，于是将其上传给老师，无形中也承担了可能还有人没签到，进而被老师怒斥的风险。</p>
-<p>问：谁之过也？</p>
-<h2> 2023.03.xx</h2>
-<p>寄生虫也是积分器</p>
-<h2> 20230326</h2>
-<p>体验有两种：亲身经历与脑内模拟。二者不可兼得，该如何选择？</p>
-<h2> 20230325</h2>
-<p>一年前的此时，我面对着封城封校的静寂处境，在纸上魔法使的宝石之中，聆听着各色书册物语。</p>
-<h2> 20230324</h2>
-<p>思维打开，<span class="heimu" title="你知道的太多了">屎又何尝不是一种肛塞呢？</span></p>
-<h2> 20230322</h2>
-<p>自私是生命的公理。</p>
-<hr>
-<p>商业化拥有许多令人不快的机制，但也为普罗众生提供了便利。</p>
-<h2> 20230318</h2>
-<p>一个正反馈系统的例子：快下课，骚动 -&gt; 听不进课，老师选择提前下课 -&gt; 造成更大的骚动</p>
-<h2> 20230313</h2>
-<p>It's difficult to balance <strong>learning</strong> and <strong>exploring</strong>.</p>
-<h2> 20230307</h2>
-<p>死亡是生物最大的不自由。</p>
-<h2> 20230222</h2>
-<ul>
-<li>当今，由于武器技术发展，中低层人民的反抗能力无限减弱，某些原理不再适用。</li>
-<li>（哲学意义上的）自由会产生灵感的激烈碰撞以推动社会进步。不自由的社会没有未来。</li>
-<li>技术改变世界。对未来社会的预想需要与对未来技术的预想结合。</li>
-</ul>
-<h2> 20230221</h2>
-<p>发现命运经常让我获得挺不错但算不上完美的结果。</p>
-<h2> 20230217</h2>
-<p>更认可<em>道由心生</em>。</p>
-<hr>
-<p>身体完全掌控，为一道。非大毅力持之以恒者，弗可进。此为武夫之道，若遭绝望，如何？</p>
-<h2> 20230216</h2>
-<p>“不拘一物，不羁一念，方是自由。”</p><div style="text-align: right;font-style: italic;">——《知北游》</div>
-我言：矛盾平衡处生自由。一念则静，一念则动，自由在其中矣。<p></p>
-<hr>
-<p>今有一疑：道在天地？道在我心？</p>
-<h2> 20230210</h2>
-<p>家里蹲虽爽， 却会失去一些幻想，灵感与思考。</p>
-<h2> 20230131</h2>
-<p>赖床看小说可以养生：挤占了本来会拿来看 H 的时间。</p>
-<h2> 20230130</h2>
-<p>重要的东西总是在不经意间建立起来的。我过去的 12 年学习生涯是失败的，而现在我需要去接受这些失败。</p>
-<h2> 20230126</h2>
-<p>华莱士是穷人是聚集地。然而当我常看到一些高龄人在华莱士一边点着血亏单品 / 套餐一边心疼钱包的时候，还是挺感慨的。</p>
-<h2> 20230113</h2>
-<p>深入分析演练固然是好事，但也失去了那破釜沉舟的勇气。</p>
-<h2> 20230109</h2>
-<p>凡书中英雄，多正义，多为苍生，多敢作敢当。他日吾若著书，必逆此律。</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
