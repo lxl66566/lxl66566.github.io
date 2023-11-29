@@ -119,7 +119,7 @@ tag:
 
 装完后没有 `osu-wine` 被添加到环境变量，不能直接执行；`osu-wine` 脚本在 `git clone` 那个目录，使用绝对路径即可。
 
-这样用 wine 装好的 osu 游戏时只能跑到 170 帧（windows 上 1k+ fps），使用 `nvtop` 查看，果然跑在核显上，需要 `prime-run`。
+这样用 wine 装好的 osu 游戏时只能跑到 170 帧（windows 上 1k+ fps），使用 `nvtop` 查看，果然跑在核显上，需要 `prime-run`。这个 `prime-run` 还不是随便加的，我在 krunner 里加了以后帧率没有变化，但是 `nvtop` 是有输出的。我一直以为有什么其他问题，直到我看到了[这个](<https://github.com/NelloKudo/osu-winello/wiki/(Possibly)-optimize-your-game:-Gamemode#installing-gamemode>)，我才发现加错了位置，需要加到 `~/.local/bin/osu-wine` 脚本里。（对，这是个脚本）
 
 现在又出现了音频问题，pipewire 下无法正常播放，唉。
 

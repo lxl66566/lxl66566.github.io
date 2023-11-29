@@ -170,6 +170,14 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 10. [设置 numlock 行为](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#KDE_Plasma_用户)
 11. _窗口管理 - 窗口行为_ 设置 _焦点跟随鼠标_
 12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
+13. [配置蓝牙](https://wiki.archlinuxcn.org/wiki/蓝牙)，安装 `bluedevil`
+
+#### kde 系列软件
+
+此处列出我额外安装的 kde 家的软件。
+
+- `bluedevil`：蓝牙前端。
+- `yakuake`：下拉式终端，比起 konsole 的优点是快（预加载）。
 
 ### 快照
 

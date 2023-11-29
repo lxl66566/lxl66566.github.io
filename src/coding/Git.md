@@ -326,19 +326,21 @@ git commit -m $(get-Date)
 
 ### 用于备份
 
-有了 `.sh` 脚本后，我们就能很轻松地在 Github 上备份自己的文件。请 ChatGPT 讲一下移动与覆盖：
+#### 使用 cp 方法
 
-> cp 是一个在 Bash shell 中用来复制文件和目录的命令。与 cp 命令一起使用的选项控制了复制的方式。这里是每个选项的含义：
->
-> -r：递归地复制目录。这意味着 cp 命令会复制指定的目录以及它的所有子目录和它们的内容。
->
-> -f：强制 cp 命令在不提示的情况下覆盖现有文件。
->
-> -n：防止 cp 命令覆盖现有文件。如果目标目录中已经存在同名文件，cp 命令会跳过它并且不复制该文件。
->
-> -u：仅在目标文件不存在或目标文件比源文件旧时才复制文件。这对于在两个目录之间同步文件非常有用。
+有了 `.sh` 脚本后，可以用 `cp -rfu` 将所需文件复制到仓库再提交上传，进行备份。
 
-因此，对于**文件夹** 备份移动适合使用 `cp -rfu /path/to/source/directory /path/to/destination`，而对于**文件** 备份移动适合使用 `cp -fu /path/to/source/file /path/to/destination/file`。
+> -r：递归地复制目录。  
+> -f：强制 cp 命令在不提示的情况下覆盖现有文件。  
+> -u：仅在目标文件不存在或目标文件比源文件旧时才复制文件。
+
+但是这样也太丑了一点。
+
+#### git bare repo
+
+后来试了一下 [git bare repo](https://github.com/rodrigofrancisco/dotfiles#backup-technique)。
+
+linux 上倒是挺方便，但不清楚能否在 windows 下跨盘符使用。
 
 ### 取消转义
 

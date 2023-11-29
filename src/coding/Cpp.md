@@ -61,7 +61,7 @@ windows 上不想装 msvc 的话可以考虑使用 mingw。
 
 @tab Clang-Tidy + Clang-Format
 
-> 我感觉 Clang-Tidy 比 clangd 要慢一点。
+> Clang-Tidy 比 clangd 要**慢很多**。并且 [clangd 尊重 clang-tidy 的设置](https://discourse.llvm.org/t/list-of-clang-tidy-checks-supported-in-clangd/61013)，因此非解耦需求下还是用 clangd 比较好。
 
 为什么选这个组合呢，因为解耦：我不喜欢让一个扩展完成所有任务，我希望 linter 和 formatter 分离[^4]，这样是自由度最高的方案。
 

@@ -33,6 +33,15 @@ tag:
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
+::: details 我想买的
+
+想买但没买的超级好价
+
+- 2023 BF
+  - [InfraveoCloud](https://zhujiwiki.com/35833/)，东京机 1T 月流量只要 $9/yr。然而我已经入手了一台东京灵车，因此没钱再买了。
+
+:::
+
 ## 工具
 
 - [ping.pe](https://ping.pe/#)：连通性

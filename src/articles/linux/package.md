@@ -96,8 +96,9 @@ sudo systemd-nspawn -D container  # 进入容器
 |软件包|功用|
 | :-: | :-: |
 |`fishshell` + `starship`|[shell](#shell) 及其外观|
+|[`sd`](https://github.com/chmln/sd)|`sed` 的代替|
 |`ripgrep` / [`skim`](https://github.com/lotabout/skim) / fzf|`grep` 的代替|
-|`fd` & `plocate`|查找，faster `find`|
+|[`fd`](https://github.com/sharkdp/fd) & `plocate`|查找，faster `find`|
 |`tldr`|`man` 的代替|
 |`fex`|`cut` 的代替|
 |`exa`|[`ls` 的代替](#exa)|
@@ -111,6 +112,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
 |`neovim`|[文本编辑器](../../coding/vim.md)|
+|[`Zellij`](https://github.com/zellij-org/zellij) / `tmux`|终端复用，多窗口|
 
 [^6]: `yazi` 甚至能在 console 下查看图片。
 
@@ -227,9 +229,13 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 ### tmux
 
-tmux 是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起，在**不使用图形界面**或有恢复 shell 需求时比较好用。
+tmux 是一个 Terminal Multiplexers（终端复用）。支持多窗口，分屏，后台挂起，在**不使用图形界面**（服务器上）或有恢复 shell 需求时比较好用。
+
+tmux 的默认键位实在是过于诡异。后来了解了一下 [Zellij](https://github.com/zellij-org/zellij)，我选择使用其代替 tmux。
 
 如果只想要简单的恢复 shell 功能，可以考虑一下 `screen`。
+
+:::: details use Zellij instead of tmux
 
 - 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/archwsl/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
 - 插件：不要用默认的插件管理器。。不好用。
@@ -250,6 +256,8 @@ tmux 是一个比较牛逼的终端(?)。支持多窗口，分屏，后台挂起
   fi
   ```
   :::
+
+::::
 
 ### [tlp](https://wiki.archlinux.org/title/TLP)
 

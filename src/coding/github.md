@@ -69,13 +69,13 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 
 ## 下载仓库
 
-几种方法都可使用，请选择以下一种，自行查指令。
+直接点击 _Download ZIP_ 仅下载仓库文件，不包含 `.git` 仓库。可以使用 CDN 加速：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`
 
-1. `git clone`
-2. `git init && git pull`
-3. `git init && git fetch && git checkout`
+在需要拉取 `.git` 仓库时，可以用 clone, pull, fetch 等拉取指令，一般使用 [clone](./Git.md#下载)。
 
-下面的方法下载仓库文件而不包含 .git 信息： 4. CDN：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>` 5. 点击 download zip 下载
+## markdown 增强
+
+冷知识，Github 的 markdown 也可以用提示块，[src](https://github.com/orgs/community/discussions/16925)。
 
 ## 合并 Pull Request
 
@@ -119,10 +119,9 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 我需要批量下载某个 Release 中的所有文件。首先，**需要保证这个仓库是 Public 的**。<span class="heimu" title="你知道的太多了">被坑了，我是傻杯</span>
 
 - 一个方法是手动复制所有链接，然后用 [Ditto](../farraginous/recommend_packages.md#ditto) 批量粘贴到 AriaNgGUI/IDM 等下载器下载。
-  - 由于我使用 XDM 而批量下载抽风了，于是只好 `scoop install aria-ng-gui` 下载了一个万恶的 electron 下载器下载。
-- 另一个方法是用命令行下载([ref](https://www.bilibili.com/read/cv21459907))。打开我的 ArchWSL，配好代理和路径：
+  - 由于我使用 XDM 而批量下载抽风了，于是只好使用 aria2 下载。
+- 另一个方法是用命令行下载([ref](https://www.bilibili.com/read/cv21459907))。例如在 Archlinux 上：
   ```sh
-  sudo pacman -Syy    # 更新缓存
   sudo pacman -S aria2 jq
   curl -s https://api.github.com/repos/<USERNAME>/<REPONAME>/releases/latest | jq -r '.assets[].browser_download_url' | aria2c -c -s 16 -x 16 -k 1M -i -
   ```
