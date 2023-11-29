@@ -28,13 +28,13 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 开发 python 前，强烈建议安装以下扩展：
 
 - **Python** - Microsoft
-- **Black Formatter** - Microsoft：提供格式化
-- **Ruff** - Charlie Marsh：提供语法分析
+- **Ruff** - Charlie Marsh：linter + formatter + highlighter
   - [配置技巧](https://stackoverflow.com/questions/75639719/decrease-mistake-severity-for-ruff-python-linter-in-vscode-extension)
-- (optional) **isort** - Microsoft：提供 import 排序
-  - 实测 isort 会导致 python 的高亮消失。
-
-其他就见仁见智了。
+  - ruff 的 formatter [几乎与 black 兼容](https://docs.astral.sh/ruff/faq/#is-the-ruff-linter-compatible-with-black)，因此可以放心用。
+    - python 的代码风格非常统一，是一件好事。（反观隔壁 `.clang-format` 行数）
+  - ruff 的 highlighter 以白色居多，可能会让人误以为没有 highlighter。（pylance 用多了是这样(笑)）
+- (optional) **isort** - Microsoft：提供 import 排序，formatter
+- (optional) **Black Formatter** - Microsoft：formatter
 
 ### 我的配置
 
@@ -283,7 +283,8 @@ with open("config.ini", "w") as configfile:
 ```py
 from subprocess import run  # 官方建议使用 run 代替所有其他低阶函数
 run("ls", "-al", check=True)  # check=True 表示遇到错误则发出异常，= run(..).check_returncode()
-run("ls | grep py", shell=True, check=True) # shell=True 可以无需拆分命令，如果碰到管道或复杂指令还是不要难为自己。
+run("ls | grep py", shell=True) # shell=True 无需拆分命令，如果碰到管道或复杂指令还是不要难为自己
+a = run("ls", "-al", capture_output=True) # 获取输出
 ```
 
 ### pathlib

@@ -134,3 +134,11 @@ $DFT[R_N(n)]=N\delta(k)$（直流分量，重要！）
 传统方法：复乘 $N^2$ 次，复加 N(N-1) 次。
 
 基-2-FFT：复乘 $\frac{N}{2}log_2N$，复加 _2x 复乘_
+
+## 滤波器
+
+IIR：$\displaystyle\frac{\sum^M_{i=0}b_iz^{-i}}{1-\sum^N_{i=0}a_iz^{-i}}$, $a_i$ 至少有一个不为 0
+
+FIR：没有极点，只有 IIR 的分子部分
+
+线性相位：$\displaystyle H(e^{j\omega})=|H(e^{j\omega})|e^{-j\omega\alpha}$
