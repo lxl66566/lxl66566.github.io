@@ -118,6 +118,15 @@ sudo systemd-nspawn -D container  # 进入容器
 
 以上是本人体验总结的结果。若需要更多推荐，不如看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps)。
 
+### kde apps
+
+此处列出我**额外**安装的 kde 家的软件。
+
+- `bluedevil`：蓝牙前端。
+- `yakuake`：下拉式终端，比起 konsole 的优点是快（预加载）。
+  - 需要在 _系统设置 - 开机与关机_ 中将其加入开机自启。
+  - [配置](https://wiki.archlinuxcn.org/wiki/Yakuake#Plasma_上的透明/模糊背景)
+
 ### shell
 
 最好装完系统就先装 shell。

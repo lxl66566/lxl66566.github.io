@@ -297,6 +297,17 @@ Path("a.py").write_text(s: str, encoding="utf-8") # 写入
 Path("a.py").unlink()  # 删除
 ```
 
+### timeit
+
+benchmark.
+
+```py
+from timeit import timeit
+def a():
+    pass
+print(timeit(a,number=10000))
+```
+
 ### pickle
 
 对象序列化极为简单无脑。弱类型语言的大优势。

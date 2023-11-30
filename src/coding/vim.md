@@ -16,6 +16,13 @@ tag:
 
 其他同等级编辑器还有 emacs, helix 等，等有缘人去尝试吧。
 
+## for beginner
+
+如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助：
+
+1. `a` or `i` 开启编辑。
+2. `<ESC>:wq` 保存并退出。
+
 ## 设置(vscode)
 
 [此处](https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json)是我对 (vim for) vscode 的一些设置。

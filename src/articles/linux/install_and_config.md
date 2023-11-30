@@ -158,6 +158,8 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 
 我使用 kde 作为我的桌面（kde 爆杀 gnome!）。
 
+我安装的 kde 系列软件详见[包管理与使用推荐](./package.md#kde-apps)。
+
 1. enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在*系统设置 - 添加快捷键 - 火焰截图*，然后手动设置快捷键。
 2. _输入设备_，将键盘的按键延迟改短。
 3. _外观_，黑色主题
@@ -172,14 +174,7 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
 13. [配置蓝牙](https://wiki.archlinuxcn.org/wiki/蓝牙)，安装 `bluedevil`
 
-#### kde 系列软件
-
-此处列出我额外安装的 kde 家的软件。
-
-- `bluedevil`：蓝牙前端。
-- `yakuake`：下拉式终端，比起 konsole 的优点是快（预加载）。
-
-### 快照
+## 快照
 
 快照本质上就是一个 cp 而已，只不过在 btrfs 上吃了 CoW 的福利，空间占用很小罢了。
 
@@ -189,13 +184,13 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 
 快照一般不备份 `/boot`，因此若回滚了旧的内核，而 boot 仍启动新的内核，则无法正常启动。[wiki 里有解法](https://wiki.archlinux.org/title/System_backup#Snapshots_and_/boot_partition)，可以在更新内核时备份 `/boot` 以便回滚时能够手动替换 `/boot`。
 
-#### snapper
+### snapper
 
 `btrfs-assistant` 为 snapper 提供了 GUI 界面，建议安装。
 
 `snap-pac` 会在**每次 pacman 安装 & 删除时**打一次快照（_before and after pacman transactions_），这样可能会[比较占空间](https://luoxu.archlinuxcn.org/#g=1031857103&q=snap-pac)。我对快照没有那么高要求，因此我不用。
 
-#### timeshift
+### timeshift
 
 timeshift 要求子卷名字必须以 `@` 开头。
 
@@ -211,13 +206,18 @@ timeshift 的 cron 定时备份默认是残废的。
 
 GPU：NVIDIA RTX 3050 Laptop + Intel 核显，装驱动[抄教程](#archlinux)即可（但是不要抄后面的 _双显卡_）。检测驱动是否成功安装，可以执行 `nvidia-smi`。
 
-关于双显卡，混合方案用 _prime_，不要用 _optimus-manager_（具体去落絮搜）。想要用 N 卡运行的软件需要 `prime-run`，实测是需要的。至于怎么测，打开 `nvtop` 然后开游戏，看占用。
-
 以下设置可能并没有什么卵用，但是写在这里记录以下我的摸索过程。
 
 1. **不要安装** `xf86-video-intel`，DRI 3 直接炸，DRI 2 在 election 下会花屏。
-2. 设置[在不使用的时候完全关闭 GPU](https://wiki.archlinuxcn.org/wiki/PRIME#NVIDIA)。
-3. [DRM 内核级显示模式设置](https://wiki.archlinuxcn.org/wiki/NVIDIA#DRM_内核级显示模式设置)
+2. [DRM 内核级显示模式设置](https://wiki.archlinuxcn.org/wiki/NVIDIA#DRM_内核级显示模式设置)
+
+#### 双显卡
+
+关于双显卡，混合方案用 _prime_，不要用 _optimus-manager_（具体去落絮搜）。想要用 N 卡运行的软件需要 `prime-run`，实测是需要的。至于怎么测，打开 `nvtop` 然后开游戏，看占用。
+
+目前我还没找到能够硬件加速 firefox 的方法。`prime-run` 测的结果是不行。
+
+1. 设置[在不使用的时候完全关闭 GPU](https://wiki.archlinuxcn.org/wiki/PRIME#NVIDIA)。
 
 ### 音频驱动
 
