@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 01 Dec 2023 10:29:18 GMT</pubDate>
-    <lastBuildDate>Fri, 01 Dec 2023 10:29:18 GMT</lastBuildDate>
+    <pubDate>Fri, 01 Dec 2023 15:11:39 GMT</pubDate>
+    <lastBuildDate>Fri, 01 Dec 2023 15:11:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>主张</category>
@@ -965,6 +965,20 @@
 </li>
 <li>ssh 保活用的 screen 而不是 tmux。<a href="https://linuxize.com/post/how-to-use-linux-screen/" target="_blank" rel="noopener noreferrer">一些基础命令</a>，加一个<a href="https://stackoverflow.com/a/1509764/18929691" target="_blank" rel="noopener noreferrer">删除命令</a>，加一个 <code>&lt;C-a&gt; [</code> 进 copy mode 然后可以往上滚的命令。</li>
 </ol>
+<h2> 挂机</h2>
+<p>VPS 的流量可以共享，并且可以赚点小钱(<a href="https://post.vpslog.org/archives/gua-ji" target="_blank" rel="noopener noreferrer">src</a>)。为了防止 IP 被污染，一般放在非主要的 VPS 上跑。</p>
+<p>跑挂机的 VPS 就变成美国最抢手了，毕竟 openai 流媒体啥的都能解。（我的 jp 机就没法解 openai）</p>
+<p>一般挂机都拿 docker 跑，我当然！用 <a href="/coding/container.html" target="blank">podman</a> 啦。</p>
+<ul>
+<li><a href="https://packetstream.io/?psr=5wA2" target="_blank" rel="noopener noreferrer">PacketStream</a>：0.1<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">/</mi><mi>G</mi><mtext>，满</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">/G，满 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">G</span><span class="mord cjk_fallback">，满</span><span class="mord">5</span></span></span></span> 可提现。</li>
+<li><s><a href="https://earn.fm/ref/LXZX43NC" target="_blank" rel="noopener noreferrer">EarnFM</a></s>，不可用：<code>Connection is halted because: This IP is a known proxy connection, therefore its not allowed.</code></li>
+<li><a href="https://traffmonetizer.com/?aff=1578168" target="_blank" rel="noopener noreferrer">traffmonetizer</a>
+<ul>
+<li>启动脚本需要加上 <code>-d</code> 使其在后台运行。</li>
+</ul>
+</li>
+</ul>
+<p>先挂着，到时候再看看收益。</p>
 <h2> 遇到的问题</h2>
 <h3> 无法使用密钥登录</h3>
 <p>某天服务器突然无法使用密钥验证登录了。查一下日志，发现一句：<code>Authentication refused: bad ownership or modes for directory /root</code>。</p>
@@ -1351,7 +1365,7 @@
 <p>于是我转向了 <a href="https://docs.podman.io" target="_blank" rel="noopener noreferrer">podman</a>，这是一个 <strong>daemonless, open source</strong>（开源的、无守护进程的）容器工具，完美解决了我对 docker 的偏见。并且其兼容性也不错：<em>Most users can simply alias Docker to Podman (alias docker=podman) without any problems.</em></p>
 <h2> 基础</h2>
 <p>看看<a href="https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md" target="_blank" rel="noopener noreferrer">tutorial</a>。</p>
-<hr class="footnotes-sep">
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="footnote1" class="footnote-item"><p>抽象层次与价值取向绑定。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
@@ -2098,10 +2112,11 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <ol>
 <li>基础 alias
 <ul>
-<li><code>e</code>：EDITOR</li>
+<li><code>e</code>：default <code>$EDITOR</code></li>
 <li><code>l</code>：<a href="/articles/linux/package.html#exa" target="blank">exa</a></li>
-<li><code>gp</code>: git pull</li>
-<li><code>gfixup</code>: <a href="/coding/Git.html#%E5%A5%87%E6%8A%80%E6%B7%AB%E5%B7%A7" target="blank">git 奇技淫巧</a></li>
+<li><code>gp</code>: <code>git pull</code></li>
+<li><code>gfixup</code>: <a href="/coding/Git.html#%E8%87%AA%E5%8A%A8%E5%8C%96-squash" target="blank">git 奇技淫巧 # 自动化 squash</a></li>
+<li><code>docker</code>: <code>podman</code> <a href="/coding/container.html" target="blank">-&gt; container</a></li>
 </ul>
 </li>
 <li>设置 <a href="https://wiki.archlinux.org/title/Zram#Using_zram-generator" target="_blank" rel="noopener noreferrer">zram swap</a>。</li>
