@@ -75,6 +75,8 @@ umount /mnt/windows
 1. 基础 alias
    - `e`：EDITOR
    - `l`：[exa](./package.md#exa)
+   - `gp`: git pull
+   - `gfixup`: [git 奇技淫巧](../../coding/Git.md#奇技淫巧)
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
 3. 设置 `/etc/fstab`
    - [挂载 tmpfs](../ramdisk.md)

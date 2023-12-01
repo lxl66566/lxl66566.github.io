@@ -449,14 +449,33 @@ print(obj.id)           # 然后从 object 中取值
 
 ## 打包
 
-虽然我只使用过 [pyinstaller](#pyinstaller)，但是还有其他的打包工具，能够打出更小的体积与更高的性能：
+一些工具
 
 - [nuitka](https://nuitka.net/)
 - [cx_Freeze](https://cx-freeze.readthedocs.io/en/latest/installation.html)
 
+### nuitka
+
+这玩意文档只能说一般，甚至没有 `--help` 好用。
+
+- 安装（[poetry](#poetry)）：`poetry install --group dev nuitka`
+- 我使用的打包指令：
+  ```sh
+  nuitka3 --run --follow-imports --prefer-source-code --clang --disable-console --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow --plugin-enable=upx main.py
+  ```
+  - `--clang` 是选择 C 编译器，不用 clang 的话就不指定。
+  - `--disable-console`，因为我打包的是 GUI 程序。
+  - `--plugin-enable=upx` 使用 [upx](../articles/minimize_exe.md) 插件能够压缩程序大小。需要已安装 upx。
+- 其他命令：自行 `nuitka3 --help` 查看
+
 ### Pyinstaller
 
-Pyinstaller 会打包当前环境的所有模块。需要隔离出虚拟环境进行打包，参考 [miniconda](#miniconda)。
+简单粗暴的传统打包工具。
+
+::: details 不再使用
+Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟环境进行打包，参考 [poetry](#poetry) / [miniconda](#miniconda)。
+
+并且若需要减小打包体积，则需要考虑创建纯净环境。
 
 #### 安装
 
@@ -472,6 +491,8 @@ Pyinstaller 会打包当前环境的所有模块。需要隔离出虚拟环境�
 - `-F` 打包为单个 exe 文件
 - `-w` 运行时不显示命令窗口
 - `-i <icon.ico>` 设置图标
+
+:::
 
 ## [代码混淆](https://pyob.oxyry.com/)
 

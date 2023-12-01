@@ -318,3 +318,4 @@ cargo 的测试，与我的设想还是差了不止一点的。。首先看看[�
 ## external
 
 1. [Rust Learning Smart Pointers](https://silente.top/posts/Rust-Learning-Smart-Pointers/)
+2. [Rust 中的闭包递归与 Y 组合子](https://nihil.cc/posts/rust_closure_and_y/)

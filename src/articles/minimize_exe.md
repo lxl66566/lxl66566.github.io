@@ -16,7 +16,8 @@ I'm very sensitive to file size. And 20230428 I found a nice guy to minimize my 
 
 ## install
 
-use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install upx`
+- for windows: using [scoop](../farraginous/recommend_packages.md#scoop), `scoop install upx`
+- for archlinux: `sudo pacman -S upx`
 
 ## usage
 

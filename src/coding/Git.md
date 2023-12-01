@@ -68,27 +68,15 @@ git 在 windows 下的安装也算是一门学问，官方安装包一共十几�
    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见页面底 external 1.
    git config --global init.defaultBranch main     # 更改默认分支为 main（linux 默认还是 master）
    ```
-4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用插件 `Git Graph` 以直观地查看 git 提交树与更改。
+   - 参考[取消转义](#取消转义)
+4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用轻量级插件 `Git Graph` 以直观地查看 git 提交树与更改。
 
-[^6]: 需要使用 [Vim](./vim.md)。若不(想/会)用，可以修改环境变量 `EDITOR` 的值指定默认编辑器。
+[^6]: 需要使用 [Vim](./vim.md)。那篇文章有教两句 Vim 基础用法。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。
 
-### 基础使用
+## 基础
 
 - 在 windows git bash 中，`ctrl + insert` 复制，`shift + insert` 粘贴
 - 执行 git 命令前，请确认当前目录是否正确
-- 如果你只想上传文件到 Github，请参考[常用命令](#常用命令) - _创建仓库 -> 提交_ 即可。
-
-## 深入
-
-git 的一个重要概念是 `HEAD`。`HEAD` （理解为指针）指向你当前所在的节点。`branch` 也是指针，指向某个节点。而 git 构成的结构可以看成一颗**提交树**。
-
-- 使用 `git checkout` 切换 `HEAD`
-- 使用 `git rebase -i` 对提交树进行任意操作
-- 使用 `git reset` 删除节点
-
-remote branch(ex. `origin/main`) 和 local branch(ex. `main`) 可以看成是不同的分支。push 就可以看成让 `origin/main` 指向 `main` 的过程（当然还有同步）。
-
-## 常用命令
 
 ### 创建仓库
 
@@ -96,60 +84,30 @@ remote branch(ex. `origin/main`) 和 local branch(ex. `main`) 可以看成是不
 git init
 ```
 
-创建仓库后，目录下出现`.git`隐藏文件夹，即为仓库本体。
-
-因此若要删除仓库，最快捷的方法就是直接删除`.git`文件夹。
+创建仓库后，目录下出现`.git`隐藏文件夹，即为仓库本体。因此若要删除仓库，最快捷的方法就是直接删除`.git`文件夹。
 
 > 在 windows 下由于权限问题会出现无法删除的情况，此时请在 bash `rm -rf .git`
 
-### 添加文件
-
-将文件添加到暂存区。
-
-```sh
-git add *.py    # 添加所有后缀为 .py 的文件
-git add dirname # 添加文件夹
-git add -A      # 添加仓库内所有文件与文件夹
-```
-
-关于“添加所有文件”不同方法的差异，请看[这里](https://www.jb51.net/article/191458.htm)
-
-推荐[使用 `.gitignore`](#忽略文件-夹)，然后都直接 `git add -A`。
-
 ### 提交
 
-添加文件后需要将暂存区的文件提交（commit）到仓库内。
+提交你的修改。提交前需要**先将文件添加到暂存区**。
 
-```sh
-git commit -m "注释"
-git commit -am "注释"   # add 跟踪的文件并 commit
-```
+可以直接 `git add <file_path>`，但是一般的工程都会在主目录下使用 `.gitignore` 声明忽略的文件，然后直接 `git add -A`。
 
-使用此命令的一次 commit 会将所有变化的文件添加同一个注释。若需要对不同文件添加不同注释，你可以选择其一：
+然后执行 `git commit -m "注释"` 提交。提交的注释有一定要求，如果是协作开发，请遵守。如果是个人项目，那随意。
 
-1. 分批 add，并每次 commit 不同的注释
-2. 一次性 add，并每次使用 `git commit file1.xxx file2.xxx -m '...'` 命令打包。
+- 言简意赅，清楚描述自己这次提交的修改内容
+- 一般现在时
 
-> 有的终端环境注释使用单引号会报错，需要双引号<br/>
-> ssh 密钥生成后首次添加注释可能会出现额外提醒，请根据提示照做
+如果没有新增文件，可以将添加到暂存区和提交合成一条指令，`git commit -am "注释"`，即提交所有**已追踪文件**。
 
-#### 撤销提交
+一般来说，不需要为修改的每个文件使用不同注释。
 
-- 撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
-- 修改注释：`git commit --amend`，(git bash 下) 需要使用 [Vim](../coding/vim.md)，需要强制推送。
-- 还有比较常用的，回到上一个 commit 的状态，去除所有多余文件和改动：`git reset --hard HEAD && git clean -f -d`
+### 上传
 
-#### 合并提交
+将你的仓库上传到 github 等仓库托管平台。
 
-在 Pull Requst 时，最好将自己所做的更改合为一个。假设上游没有冲突，需要将最后两个 commit 合并为一个：
-
-1. `git rebase -i HEAD~2`
-2. 留出一个主 commit 不改变，将其余 commit 的 `pick` 改为 `squash`，保存关闭。
-3. 下一个页面是更改注释的，可以直接关闭。
-
-### 操作远程
-
-#### 连接远程仓库
+#### 添加远程地址
 
 ::: code-tabs
 @tab SSH
@@ -166,41 +124,22 @@ git remote add origin https://github.com/yourgithubID/gitRepo.git
 
 :::
 
-> 优先使用 ssh，不过需要配置<br/>
-> 可以理解为给后面那串玩意起了个别名，方便记忆。一般都用 `origin`。
+> 优先使用 ssh，不过需要配置，如果不想配置可以使用 https。  
+> 可以理解为给 git 地址起了个别名，方便记忆。一般都用 `origin`。
 
-#### 其他
+#### 配置 ssh
 
-```sh
-git remote show <name>        # 查看远程仓库，name 留空即为列出当前远程仓库列表
-git remote rm <remote name>   # 删除远程仓库
-git fetch origin <branch>     # 拉取远程
-```
-
-#### 删除远程 tag
-
-如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。我们可以通过删除原 tag 再添加 tag 的方法更新 source code。（release 信息会被保留，状态更改为 draft）
-
-仅删除远程 tag：`git push origin :refs/tags/TAGNAME#
-
-### 上传
-
-将你的仓库上传到 github 等仓库托管平台。
-::: tip
-注：首次使用 ssh 连接需要先配置 ssh 密钥。在 git bash 中输入下述指令。若不使用 _git bash_，请理解指令意思后自行操作
+首次使用 ssh 连接需要先配置 ssh 密钥。在 git bash 中输入下述指令：
 
 ```sh
-cd ~    # 进入 home 目录（windows 下即为 C:/Users/<your windows user name>）
 ssh-keygen  -C "youremail@example.com"    # 然后一路回车
-clip < ~/.ssh/id_ed25519.pub    # 复制公钥内容至剪切板
+clip < ~/.ssh/id_*.pub    # 复制公钥内容至剪切板
 # 点击github右上角头像，进入Settings-SSH and GPG keys，新建你的 ssh key 并粘贴内容。标题随便写。
 ssh -T git@github.com   # 输入该命令验证是否成功
 ```
 
 - （疑难解答[^1]：_ssh 密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误_）
 - （疑难解答[^2]：_复制密钥时遇到`bash: clip: command not found`错误_）
-
-:::
 
 [^1]: 可能是代理阻断了 ssh 22 端口造成。有两个解法：
 
@@ -220,6 +159,8 @@ ssh -T git@github.com   # 输入该命令验证是否成功
 
 请确保已[连接远程仓库](#连接远程仓库)。
 
+#### 推送
+
 ```sh:no-line-numbers
 git push origin <branch>    # branch 为当前分支
 git push origin <branch> -u     # 将当前分支设为默认
@@ -227,11 +168,51 @@ git push origin <branch> -f     # 强制覆盖上传，慎用
 git push origin <branch> --force-with-lease # 建议使用此选项代替 -f，更加安全
 ```
 
-:::tip 提示
-至此，你已经可以完成 github 等平台的文件上传了。
+现在你已经能完成基本的上传文件到 github 的操作。
 
-接下来是一些其他命令
+### 忽略文件(夹)
+
+在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。
+
+`!` 开头的表示反选，即“不要忽略”。
+:::warning
+开发时请务必将你的无关文件添加进 `.gitignore`。
 :::
+注意其语法与 linux 文件系统类似，`/` 开头的为根目录，别搞错了。
+
+### 自动化脚本
+
+新建 `xxx.sh`，输入每行一个指令，双击运行。本质是 bash 脚本。
+
+::: tip
+脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
+:::
+
+## 进阶
+
+### 提交
+
+- 撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
+- 修改注释：`git commit --amend`，(git bash 下) 需要使用 [Vim](../coding/vim.md)，需要强制推送。
+- 还有比较常用的，回到上一个 commit 的状态，去除所有多余文件和改动：`git reset --hard HEAD && git clean -f -d`
+
+### 远程
+
+```sh
+git remote show <name>        # 查看远程仓库，name 留空即为列出当前远程仓库列表
+git remote rm <remote name>   # 删除远程名字
+git fetch origin <branch>     # 拉取远程
+```
+
+#### 删除远程 tag
+
+如果在 github 上新建了一个 release 后，代码又发生了改变，此时 release 中的 source code 将不会自动更新。
+
+理论上，需要新建一个 tag 进行更新。
+
+在特殊需求下，我们也可以通过删除原 tag 再添加 tag 的方法更新 source code。此时 release 信息会被保留，状态更改为 draft。
+
+`git push origin :refs/tags/TAGNAME`
 
 ### 仓库查询
 
@@ -244,15 +225,13 @@ git push origin <branch> --force-with-lease # 建议使用此选项代替 -f，�
 ### 分支
 
 ```sh
-git branch -a                   # 查看分支
-git branch <new_branch_name>    # 新建分支
-git checkout <branch_name>      # 切换到分支
-git checkout -b <branch_name>   # 新建并切换到分支，trick
-git branch -m old_name new_name # 重命名分支
+git branch -a                    # 查看分支
+git branch <new_branch_name>     # 新建分支
+git switch <branch_name>         # 切换到分支
+git checkout -b <branch_name>    # 新建并切换到分支，trick
+git branch -m <old_name> <new_name> # 重命名分支
 git branch --delete <branch_name>   # 删除分支
 git push origin -d <branch_name> # 删除远程分支
-git merge <branch_name>         # 将 当前分支 合并到 指定分支
-git merge <branch_name> --ff-only   # 快进合并
 ```
 
 - （疑难解答[^7]：_fatal: refusing to merge unrelated histories_）
@@ -265,8 +244,8 @@ git merge <branch_name> --ff-only   # 快进合并
 
 ```sh
 git rm --cached filename.xxx -r  # --cached 指仅删除仓库内文件，不删除本地文件；-r 为递归
+# 也可以用来删除被添加到暂存区 (git add) 的文件
 git checkout [commit_hash] -- <path/to/file>  # 从某个 HEAD 指针恢复文件，注意空格
-git reset --hard <HEAD pointer>    # 强制重置到某 commit，重置所有更改，但不删除新增文件
 ```
 
 ### 下载
@@ -277,33 +256,49 @@ git clone <gitrepo> --depth 1 # 仅克隆最新提交，减少大小
 git clone <gitrepo> --filter=tree:0 # 与上面一个大小相当，但是保留了提交 hash 记录
 ```
 
-### 变基
+## 深入
 
-变基(rebase) 能修改提交之间的关系，是一个很强大的命令。git 提供了一个简单的操作：`git rebase -i` （即 `--interactive`，交互式），只需要按照注释操作即可。需要使用编辑器[^6]。
+git 构成的结构可以看成一颗**提交树**。（实际上是 DAG，有向无环图）
+
+git 的一个重要概念是 `HEAD`。`HEAD` （理解为指针）指向你当前所在的节点。
+
+每次提交（包括 `git stash`）相当于在提交树上创造一个 `HEAD` 的子节点。只要有过 commit，它就不会消失。后文中默认 `节点` == `提交`。
+
+每个 branch 也是指针，指向某个节点。后文中默认 `分支` --> `指针`。（but `指针` !== `分支`）
+
+_remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成是不同的 branch。`git push` 就可以看成让 `origin/main` 指向 `main` 的过程（当然还有同步）。
+
+### 畅游 git 提交树
+
+> 这里是原创内容，是我个人摸索出的、对提交树的理解。
+
+每个节点的 hash 值是 40 位的，但是可以用（最短）前 4 位来代替，当然也可以用一个指针的名字来代替。
+
+`git checkout <hash>` 可以让 `HEAD` 指向任意节点。如果没有任何分支指向 `HEAD` 同一节点，则进入 `HEAD detached` 模式。
+
+`git checkout <branch_name>`（新版本 git 建议用 `switch` 代替 `checkout` 的这一功能）会退出 `HEAD detached` 模式，并将 `HEAD` 附着到分支指针上。
+
+而 `git reset --hard <hash>` 则更进一步，若当前并非 `HEAD detached` 模式（即 `HEAD` 依附于一个分支），则在将 `HEAD` 指向节点的同时，也会让分支跟随着指向 `HEAD`。
+
+- `--hard` 表示强制恢复节点处的文件（不删除未追踪文件），请确保当前没有 Uncommited Changes，否则。。。
+- 还有其他让分支指向其他节点的方法：
+  - 可以用 `git branch -f <branch> <point_to>`。这个分支不能是 `HEAD` 依附的分支。
+  - 可以用 `git merge --ff-only <point_to>`。将当前 `HEAD` 依附的分支指向任意代子节点。
+    - 不加 `--ff-only` 则没有子节点的限制，进化为合并操作。
+
+这样我们已经可以操作任意指针指向任意节点了。
+
+`git rebase -i`（即 `--interactive`，交互式）可以对提交树进行任意操作，例如：任意编辑注释，更改提交顺序，删除（`drop`）或合并（`squash`）节点等。需要使用编辑器[^6]。
+
+`git merge ...` 创建一个节点，作为两个 branch 共同的子节点，并将两个 branch 都指向它。此时提交树已失去树结构，退化为 DAG。
+
+默认情况下，不在 _根节点_ 和 _任意指针_ 连线路径上的节点会被隐藏，`git log -a` 是看不到的。可以用 `git reflog` 查看 hash 值。
 
 ## 其他技巧
 
-### 忽略文件(夹)
-
-在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。
-:::warning
-开发时请务必将你的无关文件添加进 `.gitignore`。
-:::
-注意其语法与 linux 文件系统类似，`/` 开头的为根目录，别搞错了。
-
-### 自动化脚本
-
-1. 新建 `xxx.sh`，输入你需要的所有指令语句，以换行隔开。
-2. 双击运行或 `bash xxx.sh`
-
-> 其本质是 linux bash 脚本，因此你可以使用其语法<br/>
-> 若你在 windows 且未安装 git bash，可以尝试使用 bat 批处理脚本替代。
-
-::: tip
-脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
-:::
-
 ### 将注释设为当前时间
+
+一般不建议，但如果个人项目实在想不到写啥，可以这样。
 
 ::: code-tabs
 @tab bash
@@ -360,11 +355,11 @@ git stash pop   # 释放代码，进行合并
 git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 ```
 
-当然你也可以使用 `git fetch && git merge` 进行协同开发。
+当然也可以使用 `git fetch && git merge`。
 
 ### 合并 Pull request
 
-[参考 Github - 合并 Pull Request](./github.md#合并-pull-request)
+需要手动干预 PR 的场合，[参考 Github - 合并 Pull Request](./github.md#合并-pull-request)
 
 ### 删除大文件
 
