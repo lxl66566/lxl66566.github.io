@@ -160,6 +160,21 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
    - 公家服务器如果有权限安装软件，也可以装一些典型的/极大增加效率的。例如 fish, zoxide
 2. ssh 保活用的 screen 而不是 tmux。[一些基础命令](https://linuxize.com/post/how-to-use-linux-screen/)，加一个[删除命令](https://stackoverflow.com/a/1509764/18929691)，加一个 `<C-a> [` 进 copy mode 然后可以往上滚的命令。
 
+## 挂机
+
+VPS 的流量可以共享，并且可以赚点小钱([src](https://post.vpslog.org/archives/gua-ji))。为了防止 IP 被污染，一般放在非主要的 VPS 上跑。
+
+跑挂机的 VPS 就变成美国最抢手了，毕竟 openai 流媒体啥的都能解。（我的 jp 机就没法解 openai）
+
+一般挂机都拿 docker 跑，我当然！用 [podman](../../coding/container.md) 啦。
+
+- [PacketStream](https://packetstream.io/?psr=5wA2)：0.1$/G，满 5$ 可提现。
+- ~~[EarnFM](https://earn.fm/ref/LXZX43NC)~~，不可用：`Connection is halted because: This IP is a known proxy connection, therefore its not allowed.`
+- [traffmonetizer](https://traffmonetizer.com/?aff=1578168)
+  - 启动脚本需要加上 `-d` 使其在后台运行。
+
+先挂着，到时候再看看收益。
+
 ## 遇到的问题
 
 ### 无法使用密钥登录

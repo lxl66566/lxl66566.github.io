@@ -177,6 +177,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 - python 的类型标注只会报警告，运行时不检查。
 - 每个目录 / `.py` 文件都被视作一个模块。
   - `import ./xxx` 是当前目录模块，不加 `./` 是顶层模块。
+  - 模块不能循环导入，即模块引用结构需要是 DAG。
 - python 不支持重载。
 
 ### assert
@@ -449,16 +450,11 @@ print(obj.id)           # 然后从 object 中取值
 
 ## 打包
 
-一些工具
-
-- [nuitka](https://nuitka.net/)
-- [cx_Freeze](https://cx-freeze.readthedocs.io/en/latest/installation.html)
-
-### nuitka
+### [nuitka](https://nuitka.net/)
 
 这玩意文档只能说一般，甚至没有 `--help` 好用。
 
-- 安装（[poetry](#poetry)）：`poetry install --group dev nuitka`
+- 安装（[poetry](#poetry)）：`poetry add --group dev nuitka`
 - 我使用的打包指令：
   ```sh
   nuitka3 --run --follow-imports --prefer-source-code --clang --disable-console --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow --plugin-enable=upx main.py
@@ -494,6 +490,10 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
 :::
 
+### [cx_Freeze](https://cx-freeze.readthedocs.io/en/latest/installation.html)
+
+不好用，文档一坨，编译还爆栈了。
+
 ## [代码混淆](https://pyob.oxyry.com/)
 
 ## 一些问题
@@ -512,9 +512,13 @@ pip install --upgrade --force-reinstall pipx -i https://pypi.tuna.tsinghua.edu.c
 
 仍然不行。后来在 `~/.local/pipx/shared/pyvenv.cfg` 找到了没改过的 python 路径。
 
-原来你重装是不动配置文件的啊，卸了卸了。
+原来你 TM 重装是不动配置文件的啊，卸了卸了。
 
-实际上对于全局用 pip，虚拟环境开 poetry 的我来说，pipx 确实是一个没必要存在的东西。
+后话：
+
+- 正常的包管理器，例如 _pacman_，卸载时会将配置存为 `*.pacsave`
+- 路径不用环境变量存，就已经够奇怪了，更别说还保留 python 的绝对路径。。明明 python 自己有环境变量。
+- 实际上对于全局用 pip，虚拟环境开 poetry 的我来说，pipx 确实是一个没必要存在的东西
 
 ### 找不到 pip
 
@@ -524,7 +528,12 @@ pip install --upgrade --force-reinstall pipx -i https://pypi.tuna.tsinghua.edu.c
 
 之后再使用 `pip` 命令时，就会不断报错，找不到 pip。我觉得很怪。`C:\Python310\Scripts` 路径下也能找得到 pip.exe，环境变量也没改。我在当前路径下打开 cmd ，执行 pip，然而还是不能正常使用。 ~~（忘了报什么错了）~~ 鼓捣了一会儿，试图使用离线安装，提示找不到 wheel.exe.
 
-最终解决方法：在[此页面](https://pypi.org/project/pip/#files)下载`.tar.gz`,解压后在目录下执行 `setup.py build` 与 `python -m pip install --upgrade pip --user`。
+最终解决方法：在[此处](https://pypi.org/project/pip/#files)下载 `.tar.gz`，解压后在目录下执行：
+
+```sh
+python setup.py build
+python -m pip install --upgrade pip --user
+```
 
 ## external
 

@@ -29,3 +29,10 @@ tag:
 ## 基础
 
 看看[tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
+
+```sh
+podman ps   # 查看运行状态
+podman run -d ... # -d 表示后台运行
+podman rm <name>  # 删除容器
+podman logs <name>  # 查看输出(stdout + stderr)
+```
