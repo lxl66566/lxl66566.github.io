@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 01 Dec 2023 15:11:39 GMT</pubDate>
-    <lastBuildDate>Fri, 01 Dec 2023 15:11:39 GMT</lastBuildDate>
+    <pubDate>Sat, 02 Dec 2023 15:49:41 GMT</pubDate>
+    <lastBuildDate>Sat, 02 Dec 2023 15:49:41 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>主张</category>
@@ -906,8 +906,11 @@
 </ul>
 <h3> SSH</h3>
 
-<h4> 添加公钥</h4>
-<p>由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。在本机上 <code>cat ~/.ssh/id_xxx.pub</code> 并复制，再粘贴到 vps 的 <code>~/.ssh/authorized_keys</code> 内就好了。每行一个公钥。</p>
+<h4> 别名</h4>
+<p>建立一个 <em>别名 -&gt; VPS(用户 + ip + 端口)</em> 的映射关系。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4> 添加公钥</h4>
+<p>由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。</p>
+
 <h2> 我的设置</h2>
 <ol>
 <li><a href="https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes" target="_blank" rel="noopener noreferrer">增加 UDP Buffer Sizes</a></li>
