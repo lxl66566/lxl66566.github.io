@@ -61,9 +61,33 @@ youtube 上（与其他教程）清一色的 finalshell，但是这种不开源�
 
 </dtls>
 
+#### 别名
+
+建立一个 _别名 -> VPS(用户 + ip + 端口)_ 的映射关系。
+
+```
+# edit ~/.ssh/config
+Host <name>
+  User root
+  Hostname <ip>
+  Port 22
+```
+
 #### 添加公钥
 
-由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。在本机上 `cat ~/.ssh/id_xxx.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内就好了。每行一个公钥。
+由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。
+
+::: tabs
+
+@tab 自动添加
+
+`ssh-copy-id hostname`
+
+@tab 手动复制
+
+`cat ~/.ssh/id_*.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内。
+
+:::
 
 ## 我的设置
 

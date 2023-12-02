@@ -155,13 +155,13 @@ ssh -T git@github.com   # 输入该命令验证是否成功
 [^2]:
     > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
 
-    不过这只是复制一个密钥的事，用不着那么麻烦。执行 `cat ~/.ssh/id_rsa.pub` 并手动复制你的密钥即可。
+    不过这只是复制一个密钥的事，用不着那么麻烦。执行 `cat ~/.ssh/id_*.pub` 并手动复制你的密钥即可。
 
 请确保已[连接远程仓库](#连接远程仓库)。
 
 #### 推送
 
-```sh:no-line-numbers
+```sh
 git push origin <branch>    # branch 为当前分支
 git push origin <branch> -u     # 将当前分支设为默认
 git push origin <branch> -f     # 强制覆盖上传，慎用
@@ -258,6 +258,8 @@ git clone <gitrepo> --filter=tree:0 # 与上面一个大小相当，但是保留
 
 ## 深入
 
+> 这里是原创内容，是我个人摸索/结合其他文章得出的、对提交树的理解。可能有误，需要自行辨认。
+
 git 构成的结构可以看成一颗**提交树**。（实际上是 DAG，有向无环图）
 
 git 的一个重要概念是 `HEAD`。`HEAD` （理解为指针）指向你当前所在的节点。
@@ -269,8 +271,6 @@ git 的一个重要概念是 `HEAD`。`HEAD` （理解为指针）指向你当�
 _remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成是不同的 branch。`git push` 就可以看成让 `origin/main` 指向 `main` 的过程（当然还有同步）。
 
 ### 畅游 git 提交树
-
-> 这里是原创内容，是我个人摸索出的、对提交树的理解。
 
 每个节点的 hash 值是 40 位的，但是可以用（最短）前 4 位来代替，当然也可以用一个指针的名字来代替。
 
@@ -293,6 +293,16 @@ _remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成
 `git merge ...` 创建一个节点，作为两个 branch 共同的子节点，并将两个 branch 都指向它。此时提交树已失去树结构，退化为 DAG。
 
 默认情况下，不在 _根节点_ 和 _任意指针_ 连线路径上的节点会被隐藏，`git log -a` 是看不到的。可以用 `git reflog` 查看 hash 值。
+
+### 任意组合提交树
+
+现在我们已经不满足于 **畅游** 了，我们需要更进一步：将提交树改为我们想要的任意形状（）
+
+`git cherry-pick <...nodes>` 将 `<...nodes>` 复制以后，按顺序接在 `HEAD` 的下方，成为 `HEAD` 的子链。
+
+`git rebase <to> <from>` 会稍微复杂一点。首先 rebase 找到 `<to>` 和 `<from>` 的最近公共祖先，记为 `<pa>`，然后复制 `<pa>` 到 `<from>` 这条链（不包括 `<pa>` 自身），将其接到 `<to>` 上。
+
+注意，这些命令都**不会改变**已存在的节点，如果遇到需要移动的情况，则会复制成不同节点。原先节点被隐藏，但我们仍然可以通过 hash 值移动到其所在位置。
 
 ## 其他技巧
 
