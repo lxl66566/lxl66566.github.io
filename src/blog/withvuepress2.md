@@ -212,7 +212,7 @@ sidebar:{
     {
         text : '我的文章',
         link : '/articles/',
-        children: ['computer_setting.md',...],
+        children: ['windows_setting.md',...],
     },
     ],
     '/': [
@@ -225,7 +225,7 @@ sidebar:{
     {
         text : '我的文章',
         link : '/articles/',
-        children: ['/articles/computer_setting.md',...],
+        children: ['/articles/windows_setting.md',...],
     },
     {
         text : '编程',
@@ -383,7 +383,7 @@ export default ({
 
 > listen EACCES: permission denied 0.0.0.0:8080
 
-解法：[解决 windows(hyper-v) 端口随机占用](../articles/computer_setting.md#端口随机占用)
+解法：[解决 windows(hyper-v) 端口随机占用](../articles/windows_setting.md#端口随机占用)
 
 ## 试图迁移至 vitepress
 

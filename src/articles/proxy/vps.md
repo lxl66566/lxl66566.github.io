@@ -192,10 +192,12 @@ VPS 的流量可以共享，并且可以赚点小钱([src](https://post.vpslog.o
 
 一般挂机都拿 docker 跑，我当然！用 [podman](../../coding/container.md) 啦。
 
-- [PacketStream](https://packetstream.io/?psr=5wA2)：0.1$/G，满 5$ 可提现。
+- [PacketStream](https://packetstream.io/?psr=5wA2)：0.1\$/G，满 5\$ 可提现。
+  - 流量跑得慢，80M / 36h，不过至少可用
 - ~~[EarnFM](https://earn.fm/ref/LXZX43NC)~~，不可用：`Connection is halted because: This IP is a known proxy connection, therefore its not allowed.`
+- [repoket](https://link.repocket.co/cwYQ): 满 20$ 可提。不可用：`Too many devices on the same IPs.`
 - [traffmonetizer](https://traffmonetizer.com/?aff=1578168)
-  - 启动脚本需要加上 `-d` 使其在后台运行。
+  - `podman run -d --name tm traffmonetizer/cli_v2 start accept --token TOKEN`
 
 先挂着，到时候再看看收益。
 

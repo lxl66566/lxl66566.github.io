@@ -11,6 +11,9 @@
     "editor.defaultFormatter": "Vue.volar",
     "editor.formatOnSave": true
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "rome.rome"
+  },
   "Codegeex.DisabledFor": {
     "markdown": "true"
   }

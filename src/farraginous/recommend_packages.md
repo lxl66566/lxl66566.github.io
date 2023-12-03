@@ -41,7 +41,7 @@ Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
 
 ### 浏览器
 
-参见[浏览器大杂谈](../articles/browser.md)
+参见[浏览器横评](../articles/browser/assess.md)
 
 ### MT 管理器
 

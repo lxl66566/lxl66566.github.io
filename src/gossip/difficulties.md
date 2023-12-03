@@ -21,7 +21,7 @@ category:
 
 > Error: EPERM: operation not permitted, lstat "xxx.zip"
 
-查了一下是权限问题。然而 windows 权限设置[就是他妈一坨屎](../articles/computer_setting.md#windows-下的权限控制)，我改来改去，都放了 _完全控制_，还是报错。之后也尝试了：使用管理员终端，更换 `TEMP` 位置，更换安装盘符，均无法正常安装。网上查到的要么是 clean cache，要么是改权限，没有一点用。
+查了一下是权限问题。然而 windows 权限设置[就是他妈一坨屎](../articles/windows_setting.md#windows-下的权限控制)，我改来改去，都放了 _完全控制_，还是报错。之后也尝试了：使用管理员终端，更换 `TEMP` 位置，更换安装盘符，均无法正常安装。网上查到的要么是 clean cache，要么是改权限，没有一点用。
 
 <span class="heimu" title="你知道的太多了">妈的，不想玩了，跟这个傻卵 windows 爆了！（我仍然认为是 windows 的问题）</span>然后因为 `lstat` 是 linux 指令，突然想到在 git bash 中执行安装命令会怎样。于是问题解决了。。。。
 
@@ -190,7 +190,7 @@ bypass:
 
 ## 20220817-18：Hyper-V 的各种问题
 
-- 问题一：在 _设置-应用-可选功能-更多 Windows 功能_ 中找不到 Hyper-V 选项。<text style="color:blue;">[已解决](../articles/computer_setting.md)</text>
+- 问题一：在 _设置-应用-可选功能-更多 Windows 功能_ 中找不到 Hyper-V 选项。<text style="color:blue;">[已解决](../articles/windows_setting.md)</text>
 - 问题二：在安装系统界面无法使用键盘鼠标。<text style="color:red;font-weight:bold">未解决！</text>
 
   ![fuckhyperv](/images/gossip/difficulties/fuckhyperv.png)

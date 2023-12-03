@@ -37,8 +37,23 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 
 反代也很简单，只需将 `file_server` 换成 `reverse_proxy :8000`（端口号）。
 
+- 如果只有一个域名，可以去掉大括号。（压行！现在只有三行了）
 - 自带 formatter：`caddy fmt --overwrite /etc/caddy/Caddyfile`
 - 自动证书存放位置是 `/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/<domain>`，可以 ln 到其他地方给其他软件用。
+
+### 日志
+
+caddy 默认将日志输出 stderr，可以用 `journalctl` 查看。但也可以将其输出至文件，或者按域名分流日志等。
+
+```
+{
+	log default {
+		output file <file_path>
+	}
+}
+```
+
+更具体的应用请参考文档：[log 参数](https://caddyserver.com/docs/caddyfile/directives/log) | [全局 log default](https://caddyserver.com/docs/caddyfile/options#log)。
 
 ### 其他资料
 

@@ -19,9 +19,11 @@ category:
 
 ## [代理](./proxy/index.md)
 
+## [浏览器](./browser/index.md)
+
 ## 教程
 
-- [设置电脑（windows）](./computer_setting.md)
+- [设置 windows](./windows_setting.md)
 - [TG（telegram）教程](./telegram.md)
 - [ADB 教程与常用指令](./adb.md)
 - [Markdown 教程](./markdown.md)
@@ -37,7 +39,6 @@ category:
 - [输入法](./input_method.md)
 - [RAM Disk 横评](./ramdisk.md)
 - [Android 手写笔记软件横评](./note.md)
-- [浏览器大杂谈](./browser.md)
 - [反向代理](./reverse_proxy.md)
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->

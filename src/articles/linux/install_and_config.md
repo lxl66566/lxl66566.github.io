@@ -68,7 +68,7 @@ umount /mnt/windows
 
 ## 配置
 
-这里是 _[文章 - 设置电脑](../computer_setting.md)_ 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
+这里是 _[文章 - 设置电脑](../windows_setting.md)_ 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。
 
 ### 系统设置
 

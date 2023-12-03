@@ -43,6 +43,7 @@ export default sidebar({
 		"hysteria.md",
 		"trojan-go.md",
 	],
+	"/articles/browser/": ["index.md", "assess.md", "settings.md"],
 	"/articles/": [
 		{
 			text: "主张",
@@ -50,7 +51,7 @@ export default sidebar({
 		},
 		{
 			text: "经历",
-			children: ["linux", "computer_setting.md", "mobile"],
+			children: ["linux", "windows_setting.md", "mobile"],
 		},
 		{
 			text: "教程",
@@ -74,7 +75,6 @@ export default sidebar({
 				"external.md",
 				"ramdisk.md",
 				"note.md",
-				"browser.md",
 				"reverse_proxy.md",
 			],
 		},
