@@ -6,22 +6,380 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 02 Dec 2023 15:49:41 GMT</pubDate>
-    <lastBuildDate>Sat, 02 Dec 2023 15:49:41 GMT</lastBuildDate>
+    <pubDate>Sun, 03 Dec 2023 04:32:47 GMT</pubDate>
+    <lastBuildDate>Sun, 03 Dec 2023 04:32:47 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
+    <category>推荐</category>
+    <category>导航</category>
     <category>主张</category>
     <category>生活</category>
-    <category>教程</category>
-    <category>导航</category>
-    <category>推荐</category>
     <category>经历</category>
     <category>学习</category>
     <category>编程</category>
     <category>评价</category>
     <category>爱好</category>
-    <category>随笔</category>
-    <category>作者</category>
+    <item>
+      <title>设置 Windows</title>
+      <link>https://absx.pages.dev/articles/windows_setting.html</link>
+      <guid>https://absx.pages.dev/articles/windows_setting.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">设置 Windows</source>
+      <description>设置 Windows</description>
+      <category>教程</category>
+      <pubDate>Sat, 21 May 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 设置 Windows</h1>
+<p>好的设置能够在未来降低血压，并大幅提高工作效率。</p>
+<h2> 对 win11 的设置</h2>
+<p>由于入手了 12500H，即使很不想使用 win11，也只能硬上了。以下是我对新电脑 win11 系统的设置。</p>
+<ol>
+<li>移动 <em>文档、图片、下载</em> 等文件夹到新分区的 D 盘。</li>
+<li>还原右键菜单并设置：右击 <em>开始键</em>，打开 <em>Windows 终端（管理员）</em> ，执行<code>reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve</code> （或直接使用<a href="/farraginous/recommend_packages.html#winaero-tweaker" target="blank">Winaero Tweaker</a> 进行设置），再用 <a href="/farraginous/recommend_packages.html#ContextMenuManager" target="blank">ContextMenuManager</a> 调整。</li>
+<li>关闭所有系统提示音。</li>
+<li>关闭 Windows 安全中心。<a href="https://zhuanlan.zhihu.com/p/611313419" target="_blank" rel="noopener noreferrer">为什么我们需要关闭它？</a>
+<ol>
+<li>法一（推荐）：<a href="https://github.com/jbara2002/windows-defender-remover" target="_blank" rel="noopener noreferrer">Defender Remover</a></li>
+<li>法二（<a href="https://zhuanlan.zhihu.com/p/494923217" target="_blank" rel="noopener noreferrer">src</a>，但实测并不能完全关闭）：
+<ul>
+<li><em>Windows 安全中心-病毒和威胁防护-管理设置</em> ，关闭所有开关</li>
+<li>使用组策略编辑器禁用 Windows Defender</li>
+<li><code>win + r</code>运行<code>gpedit.msc</code>，<em>计算机配置 - 管理模板-Windows 组件 - 关闭 Microsoft Defender 防病毒</em> ，选择已启用</li>
+<li>由于我的电脑是家庭版升专业版，没有 <code>gpedit.msc</code> 文件，因此需先添加组策略编辑器。在记事本输入以下代码并保存为 <code>.bat</code> 文件，管理员运行。<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>使用<a href="https://www.sordum.org/9480/defender-control-v2-1/" target="_blank" rel="noopener noreferrer">Defender Control</a>彻底关闭安全中心。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>注意，关闭 Windows 安全中心不会关闭防火墙。之后若需要设置防火墙，不能再从安全中心进入，而需要从（尚存的 win10）控制面板进入。</li>
+</ul>
+</li>
+<li>关闭搜索推荐&amp;热门新闻：关闭 <em>设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点</em> 。(<a href="https://www.landiannews.com/archives/95045.html" target="_blank" rel="noopener noreferrer">src</a>)</li>
+<li>升级专业版：使用<a href="https://github.com/zbezj/HEU_KMS_Activator" target="_blank" rel="noopener noreferrer">HEU_KMS_Activator</a>升级 win11 专业版并激活。
+<ul>
+<li>若对开源有需求，也可使用 <a href="https://github.com/massgravel/Microsoft-Activation-Scripts" target="_blank" rel="noopener noreferrer">Microsoft-Activation-Scripts</a>激活。</li>
+</ul>
+</li>
+<li>开启 Hyper-V 功能 </li>
+<li>更改触摸板功能：三指左右划调节音量。实际上并不是很好用：我音量常年 20%，触摸板调节的话很容易拉得太大。</li>
+<li><s>安装 Win11 Android 子系统（WSA） </s> WSA 兼容性还有待进步；WSA 在开机时自启，会占用一定性能 / 内存；我是双系统用户，而 Android Emulator 在 linux 上的有更好的选择（<a href="/articles/linux/package.html#waydroid" target="blank">Waydroid</a>）。
+<ul>
+<li><em>设置 - 时间和语言 - 国家和地区</em> ，选择美国</li>
+<li>打开 Microsoft Store（记得关代理），下载 Amazon Appstore。系统将自动下载安装 Windows Subsystem for Android™️。</li>
+<li>可选项：在 <em>设置 - 应用和功能</em> 内找到 Windows Subsystem for Android™️，移动到 D 盘以节省空间。</li>
+<li>别忘了把 <em>国家和地区</em> 改回去。</li>
+<li>打开安装好的 Windows Subsystem for Android™️，点击左侧 Developer，打开 Developer mode.（意味着在 <code>127.0.0.1:58526</code> 默认端口开启调试）</li>
+<li>在这里你可以使用两种方式安装软件：
+<ol>
+<li><a href="https://github.com/alesimula/wsa_pacman" target="_blank" rel="noopener noreferrer">WSA PacMan</a>提供了便捷的图形化界面。</li>
+<li>使用<a href="/articles/adb.html" target="blank">ADB</a>，输入 <code>adb connect 127.0.0.1:58526</code> 连接,<code>adb install ...</code>安装。</li>
+</ol>
+</li>
+<li>关于网络受限问题：在虚拟机的 <em>设置 - Network&amp;internet</em> 中看到网络连接受限。win11 发出弹窗警告。
+解决方法（参考<a href="https://www.shenshanhongye.com/jc/2134.html" target="_blank" rel="noopener noreferrer">来源</a>）：在 adb 成功连接后，输入：<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>重启 wifi 即可。</li>
+</ul>
+</li>
+<li>更改任务栏样式：下载<a href="https://apps.microsoft.com/store/detail/roundedtb/9MTFTXSJ9M7F?hl=en-us&amp;gl=us" target="_blank" rel="noopener noreferrer">RoundedTB</a>，根据提示更改。</li>
+<li>使用<a href="https://www.oo-software.com/en/shutup10" target="_blank" rel="noopener noreferrer">O&amp;O ShutUp10++: Free antispy tool for Windows 10 and 11</a>禁用一些非必须功能。</li>
+<li><s>启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（<a href="https://zhuanlan.zhihu.com/p/336846460" target="_blank" rel="noopener noreferrer">参考</a>）：在 regedit 中，将 <code>HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled</code> 的值设为 0.</s><br>
+应该是休眠。而且现在的我已经禁用了休眠。
+<ul>
+<li>休眠 == hibernate，原理是将内存写入磁盘。其会在 C 盘创建一块用于休眠的大块文件，并且每次休眠都会向硬盘中写入大量数据。我显然无法接受这一点</li>
+</ul>
+</li>
+<li>卸载小组件：打开管理员终端，执行 <code>winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy</code>。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。</li>
+<li><strong>关闭快速启动</strong>。
+<ol>
+<li>避免关机时自动保存 <a href="/articles/ramdisk.html" target="blank">RAM Disk</a> 文件到固态盘；</li>
+<li>Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 <em>更新并重启</em>。<a href="https://t.me/withabsolutex/1193" target="_blank" rel="noopener noreferrer">ref</a></li>
+<li>事实上快速启动的关机<a href="https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail#more-information" target="_blank" rel="noopener noreferrer">其实是 hibernate</a>，是固态写入量的<strong>最大贡献者</strong><sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">。</a></li><a class="footnote-anchor" id="footnote-ref1">
+<li>热知识：为什么安装 linux 双系统时要关闭快速启动？因为挂载在 hibernate 状态的硬盘几乎必炸（double mount）。</li>
+</a></ol><a class="footnote-anchor" id="footnote-ref1">
+</a></li><a class="footnote-anchor" id="footnote-ref1">
+</a><li><a class="footnote-anchor" id="footnote-ref1">开 </a><a href="https://github.com/yuk7/ArchWSL" target="_blank" rel="noopener noreferrer">ArchWSL</a>。</li>
+<li>解决<a href="#%E7%AB%AF%E5%8F%A3%E9%9A%8F%E6%9C%BA%E5%8D%A0%E7%94%A8">端口随机占用</a></li>
+<li><s>开启全局 UTF-8：<em>设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8...</em></s> 实测会导致一些 galgame 乱码。</li>
+<li>文件夹与文件改为单击。
+<ul>
+<li>windows 的单击逻辑做的还是比 linux kde 好的，<em>悬浮选中</em> 是单击逻辑中的重要组成部分。</li>
+</ul>
+</li>
+<li>在 <em>Internet 选项 - 高级</em> 中，打开 TLS 1.3</li>
+<li><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c" target="_blank" rel="noopener noreferrer">组织管理滚</a></li>
+<li><a href="https://answers.microsoft.com/zh-hans/windows/forum/all/%E8%A6%81%E5%BD%BB%E5%BA%95%E5%85%B3%E9%97%ADwin11/3c448d50-2e7f-42df-9fdb-f7f9aa9820ec" target="_blank" rel="noopener noreferrer">关闭自动更新</a>，我只需手动更新。
+<ul>
+<li>既然无需经常更新，那就<a href="https://blog.51cto.com/u_13464709/2057007" target="_blank" rel="noopener noreferrer">关闭传递优化</a>，并且用 <em>磁盘清理</em> 清一下这位占用的空间。</li>
+</ul>
+</li>
+<li><a href="https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows" target="_blank" rel="noopener noreferrer">开启 bbr 拥塞算法</a>：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。</li>
+<li>打开任务栏时间秒数显示：<em>任务栏设置 - 任务栏行为</em></li>
+<li>开启透明压缩。LZW 算法，效果只能说聊胜于无，非系统盘 208G 压到 183G。</li>
+</ol>
+<h2> 软件</h2>
+<p>关于软件推荐请前往<a href="/farraginous/recommend_packages.html" target="blank">杂项 - 软件汇总</a>页面。</p>
+<p>我的 windows 开机自启动的托盘软件有：</p>
+<ul>
+<li><a href="/farraginous/recommend_packages.html#xdm" target="blank">XDM</a></li>
+<li><a href="/farraginous/recommend_packages.html#ditto" target="blank">Ditto</a></li>
+<li><a href="/farraginous/recommend_packages.html#parsec" target="blank">parsec</a></li>
+<li>V2rayN</li>
+<li><a href="/farraginous/recommend_packages.html#flux" target="blank">f.lux</a></li>
+<li><a href="/farraginous/recommend_packages.html#everything" target="blank">everything</a></li>
+<li>火绒</li>
+<li><a href="/farraginous/recommend_packages.html#tai" target="blank">Tai</a></li>
+<li><a href="/farraginous/recommend_packages.html#%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6" target="blank">截图软件</a></li>
+</ul>
+<p>后台：</p>
+<ul>
+<li><a href="/articles/ramdisk.html" target="blank">Imdisk</a></li>
+</ul>
+<p>因此耗电还是挺多的，因此我出门一般都用 linux。</p>
+<h2> 设置开机自启动</h2>
+<p><code>win + r</code>打开运行面板，输入<code>shell:startup</code>打开启动文件夹，拖入需自启动的程序快捷方式即可。</p>
+<p>但启动文件夹中没有其他软件的自启动控制。若需关闭某些程序的自启动，可以打开任务管理器，选择<code>启动</code>进行修改。</p>
+<h2> BIOS 密码重置</h2>
+<blockquote>
+<p><em>以 Predator G3-573 为例，不保证其他品牌电脑的重置方法相同</em></p>
+</blockquote>
+<ol>
+<li>在 BIOS 界面中输错三次密码，出现输入恢复码的弹窗，并给出一个 Key。（我的电脑 Key 为 10 位纯数字）</li>
+<li>进入<a href="https://1024kb.co.nz/bios/" target="_blank" rel="noopener noreferrer">此网站</a>，输入 Key，然后将计算结果输回电脑。</li>
+<li>进入 BIOS 后，设置 supervisor password 为空。</li>
+</ol>
+<h2> windows 下的权限控制</h2>
+<p>起因：MS-DOS 自带的 <code>tree</code> 命令太难用了（不包含文件）。我需要把它替换为 <a href="https://gnuwin32.sourceforge.net/packages/tree.htm" target="_blank" rel="noopener noreferrer">tree for windows</a>。windows 的权限管理太“安全”了，很烦。</p>
+<ol>
+<li>（本节无关）下载并将 <code>tree.exe</code> 单文件放入 <code>C:\WINDOWS\System32</code></li>
+<li>修改 <code>tree.com</code> 的名字（或直接删除），需要获取权限。
+<ol>
+<li><em>属性 - 安全 - 高级</em>，更改所有者为当前用户。</li>
+<li>然后在下面选择 <em>Users</em> 那一栏，编辑，改为完全控制。</li>
+<li>一路确定即可。</li>
+</ol>
+</li>
+</ol>
+<p>不过之后清理 WinSxS 的时候又没法用了。。</p>
+<h2> 遇到的问题</h2>
+<h3> 端口随机占用</h3>
+<p>win11 下有时代理软件端口突然无法使用，有时测试网站 localhost 端口无法使用，随机性很强。于是去搜了下<a href="https://www.cnblogs.com/fanqisoft/p/17071121.html" target="_blank" rel="noopener noreferrer">解法</a>。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>浏览器横评</title>
+      <link>https://absx.pages.dev/articles/browser/assess.html</link>
+      <guid>https://absx.pages.dev/articles/browser/assess.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">浏览器横评</source>
+      <description>浏览器横评</description>
+      <category>推荐</category>
+      <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 浏览器横评</h1>
+<p>没错，这里是浏览器<s>大横评</s>（不算“大”，也不算“横评”，更像杂谈）。浏览器是我的 <em>软件日常使用时间</em> 的榜首，因此我肯定也是想获得最好的使用体验的。<s>现在的浏览器就像一个操作系统。。（ChromeOS（误</s></p>
+<p>我个人的刚需是：自由无审查（针对某些国产垃圾），扩展支持，垂直标签栏。</p>
+<h2> 桌面端</h2>
+<p>说到桌面端浏览器就不得不提“御三家” chrome, firefox, edge 了。这三个我确实都用过。</p>
+<h3> edge</h3>
+<p>目前我在 windows 上使用 edge 作为我的默认浏览器。</p>
+<ul>
+<li>edge 的自定义程度不差，我可以隐藏标题栏，干掉我不想要的图标，自定义新标签页等等。
+<ul>
+<li>但也说不上好。我不能自定义快捷键。</li>
+</ul>
+</li>
+<li>edge 的一大槽点是（微软）非常喜欢干它的用户群体。
+<ul>
+<li>最广为人知的是广告多。不过我实际使用基本没看到广告，一般只有更新后才有。</li>
+<li>在更新后(?或者其他触发条件)会把我的默认搜索引擎换成 bing。</li>
+</ul>
+</li>
+<li>另一大槽点是隐私。<s>但是人在大陆因此这点程度都不是什么问题</s></li>
+<li>关于扩展：
+<ul>
+<li>如果使用开发者模式安装了本地扩展，edge 会疯狂提醒移除此扩展。<strong>没有关闭提醒的选项</strong>，只能点两周后提醒，然后每两周被不断打扰。</li>
+<li>不支持 manifest v2，所谓的不支持的做法是：让你先用几天，然后悄无声息地把该扩展直接静默删除。</li>
+</ul>
+</li>
+</ul>
+<h3> chrome</h3>
+<p>我对 chrome 一直都没什么好感，一方面 Google 吃相也极为难看<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，另一方面可能是我高中 4G 内存和钥匙扣 CPU 的破电脑带不动它。</a></p><a class="footnote-anchor" id="footnote-ref1">
+<ul>
+<li>chrome （在某个时期）的槽点大概是吃内存非常恐怖。但是实际跟其他两家应该差不了多少。</li>
+<li>chrome 的一些服务在国内无法使用，需要科学上网。</li>
+</ul>
+</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> firefox</h3>
+<p>firefox 相对来说比较自由，毕竟 mozilla is <a href="https://www.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">not a normal tech company</a>.在 Google 发癫时 mozilla 会跳出来骂，我还是很敬佩&amp;庆幸的。</p>
+<p>我在 linux 上使用 firefox (dev edition) 作为我的默认浏览器。</p>
+<ul>
+<li>由于 firefox 使用群体较少，扩展开发者不会优先适配它。</li>
+<li>firefox 内核与 chrome 系不同，因此:
+<ul>
+<li>某些网页不支持（不多，但是让你电脑上还需要有 chromium 内核浏览器）</li>
+<li>许多 chrome 系插件不可用</li>
+</ul>
+</li>
+<li>没有我想要的垂直标签栏，只能用 Sidebery 模拟。</li>
+<li>自定义程度……例如我想隐去标题栏，并没有一个合理的配置项能够实现；需要手写 user css。自由度高，但是门槛也高。</li>
+<li>firefox 在 linux 上对字体的支持比较好，而且有硬件解码。</li>
+<li><a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3259" target="_blank" rel="noopener noreferrer">部分元素在 firefox 上显示错误</a>。</li>
+<li>不能直接停止脚本执行。</li>
+</ul>
+<h3> Vivaldi</h3>
+<p>卖点是 <em>隐私</em> 和 <em>快速强大</em> 的浏览器。</p>
+<ul>
+<li>集成了邮件、日历、日程、rss 订阅等功能。
+<ul>
+<li>邮件只能添加一个账号。。</li>
+</ul>
+</li>
+<li>在快速拨号中添加某些网址（例：<code>s.ecust.edu.cn</code>）会直接闪退？？
+<ul>
+<li>这个网址直接进会弹窗，<em><code>s.ecust.edu.cn</code> 想打开 <code>xdg-open</code></em>。但是在其他任意浏览器上不会出现这个提示。</li>
+<li>而且我<strong>无法禁用</strong>该网站的打开请求(?)。</li>
+<li>快速拨号会在后台打开网页，截图作为其封面。感觉是不做错误处理的锅。</li>
+<li>我后来在其他平台的 vivaldi 上加了这个快速拨号（避免闪退），于是每次在 linux 上打开 vivaldi 时都会弹个窗：<em>先生请问您要来点 xdg-open 吗？</em></li>
+<li>严格来说这属于比较恶性的 bug 了，不过我还是忍了一阵子。</li>
+</ul>
+</li>
+<li>软件默认不带有标题栏，<s>跟我的理念不谋而合</s>，但是也会带来问题：
+<ul>
+<li>在缩小时的显示效果差，按钮会重叠</li>
+<li>最小/大化和关闭的按钮作用区域太小，导致单击按钮边缘位置时不会出现预期的按钮点击行为，变为拖动窗口。
+<ul>
+<li>其实 kde 上任何不使用系统任务栏的软件都会出现此问题，参考 linux-qq。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>当我遇到一个重大的问题后，我果断抛弃了 Vivaldi。我需要以 http 访问一个网址，而我一直被重定向到 https 并 error。我每次把 https 换成 http，一按回车，它又变成了 https。。没有开启 <em>始终使用安全连接</em>，没有 cookies，浪费我好多时间真是火大。。</p>
+<figure><img src="/images/articles/browser/vivaldi_bug.gif" alt="我的 VPS 反代连不上的罪魁祸首竟是！" tabindex="0" loading="lazy"><figcaption>我的 VPS 反代连不上的罪魁祸首竟是！</figcaption></figure>
+<h3> nyxt</h3>
+<p>基于 webkit2gtk 的，号称无需使用鼠标的浏览器。试了一下，根本不可用，所有页面 <em>Page could not be loaded</em>。</p>
+<h2> 移动端</h2>
+<p>我对手机浏览器的要求也“不高”，能审查元素，能装扩展就行。当然如果够<strong>轻量</strong>，即使没有这些功能，我也会考虑将其作为第二浏览器安装到手机上。</p>
+<p>Android 端浏览器我经历了 <em>夸克 -&gt; Via -&gt; m 浏览器 -&gt; Kiwi Browser -&gt; 狐猴浏览器</em> 的转变，我自认为还是有一些心得的。</p>
+<h3> Kiwi Browser</h3>
+<p>Kiwi Browser 是我接触到的第一个能够装扩展的重量级浏览器。</p>
+<ul>
+<li>开源！非常好文明。
+<ul>
+<li>没有广告，没有商业化元素。</li>
+<li>当然也没有用户登录。虽说隐私保护得很好，但是要备份/转移配置可不太方便。</li>
+</ul>
+</li>
+<li>可以看控制台，审查元素。</li>
+<li>DNS 解析有问题(?还是我的问题?)，网页打开较慢。</li>
+<li>它的书签布局不太一样。这导致了 Xbrowsersync 同步书签的层次出现问题。</li>
+</ul>
+<h3> 狐猴浏览器</h3>
+<p>一款国产商业浏览器，主打卖点就是扩展丰富，同时支持 chrome 和 edge 商店。</p>
+<ul>
+<li>UI 是仿夸克浏览器的</li>
+</ul>
+<h3> Firefox nightly</h3>
+<p>没用过，不过我开始用 Kiwi Browser 的时候，这位还没有能装扩展的消息出现。</p>
+<p>Firefox 倒是用过，没啥特别的，要功能没功能，还重量级，用了两天不用了。</p>
+<h3> m 浏览器</h3>
+<p>国产轻量级浏览器，安装包 9M。</p>
+<ul>
+<li>拥有审查元素，查看网页源码，嗅探网页资源的功能。</li>
+<li>支持安装脚本，自定义拦截广告，可调长按倍速的视频播放器。</li>
+</ul>
+<h3> Via</h3>
+<p>国产轻量级浏览器，把“小”做到极致，下载大小不到 1M。界面挺干净的，该有的设置也有。</p>
+<h3> 夸克浏览器</h3>
+<p>这个就纯属回忆了，现在的夸克已经<strong>烂透了</strong>。</p>
+<p>曾经我在夸克看免翻毛片网，用自带的下载功能下了一堆（自动 m3u8 转 mp4）；曾经夸克能访问任意网站，不受限制；曾经夸克干净无广告，尚未商业化……</p>
+<p>现在则是一个极其臃肿的、什么都集成但是大部分都要钱的傻逼玩意儿。</p>
+<h2> 结语</h2>
+<p>我相信未来会有更加友善高质量的浏览器出现。我也会继续积极尝试其他浏览器，1 丰富本博文的内容，2 满足我的尝新欲与好奇心。</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>关键词：<code>隐私沙盒</code> <code>Web Environment Integrity API</code> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+      <enclosure url="https://absx.pages.dev/images/articles/browser/vivaldi_bug.gif" type="image/gif"/>
+    </item>
+    <item>
+      <title>浏览器</title>
+      <link>https://absx.pages.dev/articles/browser/</link>
+      <guid>https://absx.pages.dev/articles/browser/</guid>
+      <source url="https://absx.pages.dev/rss.xml">浏览器</source>
+      <description>浏览器</description>
+      <category>导航</category>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 浏览器</h1>
+<ol>
+<li><a href="/articles/browser/assess.html" target="blank">主流浏览器横评</a></li>
+<li><a href="/articles/browser/settings.html" target="blank">浏览器设置</a></li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>浏览器设置</title>
+      <link>https://absx.pages.dev/articles/browser/settings.html</link>
+      <guid>https://absx.pages.dev/articles/browser/settings.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">浏览器设置</source>
+      <description>浏览器设置</description>
+      <category>教程</category>
+      <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 浏览器设置</h1>
+<h2> 缓存位置</h2>
+<p>我使用 <a href="/articles/ramdisk.html" target="blank">RAMDisk</a>，拿到浏览器都会修改缓存位置。</p>
+<p>一般的 chromium 内核浏览器都能通过加 <code>--disk-cache-dir="Z:\123"</code> 启动参数更改缓存位置。Edge 浏览器也可以改注册表。firefox 修改设置项即可。</p>
+<h2> firefox</h2>
+<p>20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满足我的需求，甚至更加贴合我的个人需求（纵向标签栏，firefox 没有内置此功能），换浏览器大约只是我的心血来潮而已。为此我花了很多功夫设置 firefox。然而我还是于 20230304 换回了 edge。</p>
+<p>在朋友推荐下，我使用 <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank" rel="noopener noreferrer">Firefox Developer Edition</a>（蓝狐狸）而不是原始 Firefox。</p>
+<ul>
+<li>优点：
+<ul>
+<li>firefox 在 bilibili 等网站的表现较差，放开权限后子页面仍无法读取 cookies。Firefox Developer Edition 无此问题。</li>
+<li>
+<blockquote>
+<p>只有这个可以安装 ruffle —— Asuka Minato（虽然这不是我的刚需）</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>设置步骤如下：</p>
+<ol>
+<li>迁移书签与历史记录。此方面 firefox 有专门的接口，可以一键导入。</li>
+<li>迁移扩展与扩展数据。具体地：
+<ul>
+<li>由于 chrome 系扩展与 mozilla 系扩展不兼容，扩展需要手动迁移。
+<ul>
+<li>包括所有扩展的数据（例如设置项）都需要手动处理。</li>
+</ul>
+</li>
+<li>Tampermonkey 脚本迁移：<em>Dashboard - Utilities - File Export &amp; Import from file</em></li>
+<li>有的脚本可能有自己的设置项，需要手动导出。</li>
+</ul>
+</li>
+<li><em>about:config</em>
+<ul>
+<li>设置中文：将 <code>intl.multilingual.enabled</code>、<code>intl.multilingual.downloadEnabled</code> 设为 true，然后就能在设置中选择中文。</li>
+<li>更改缓存位置到 RAMDisk <a href="https://blog.csdn.net/freedom_wbs/article/details/38415315" target="_blank" rel="noopener noreferrer">src</a>：将 <code>browser.cache.disk.parent_directory</code> 设为字符串值，绝对路径。</li>
+<li>使用系统滚轮设置：把 <code>mousewheel.system_scroll_override.enabled</code> 改成 <code>false</code>。</li>
+</ul>
+</li>
+<li>使用 <a href="https://addons.mozilla.org/en-US/firefox/addon/sidebery/" target="_blank" rel="noopener noreferrer">Sidebery</a> 实现纵向标签栏。</li>
+<li>隐藏标题栏，书签栏，标签栏：
+_ 在 <code>about:config</code> 中，将 <code>toolkit.legacyUserProfileCustomizations.stylesheets</code> 改为 true。（为了允许 firefox 加载自定义 css）
+_ 在 <code>about:support</code> 中，点击 <em>配置文件夹 -&gt; 打开文件夹</em>（<em>Profile Folder -&gt; Open Folder</em>），在此目录下新建名为 <code>chrome</code> 的文件夹，在新文件夹下新建 <code>userChrome.css</code>，写入<a href="https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css" target="_blank" rel="noopener noreferrer">此处代码</a>。</li>
+<li><code>adons.mozilla.org</code> 对中国用户屏蔽了广告拦截扩展，因此我使用一个第三方的<a href="https://www.crxsoso.com/firefox/category/extensions" target="_blank" rel="noopener noreferrer">扩展商店</a> 进行安装。</li>
+<li><a href="https://support.mozilla.org/zh-CN/kb/performance-settings" target="_blank" rel="noopener noreferrer">强制硬件加速</a></li>
+</ol>
+]]></content:encoded>
+    </item>
     <item>
       <title>杂论</title>
       <link>https://absx.pages.dev/gossip/va_view.html</link>
@@ -973,11 +1331,16 @@
 <p>跑挂机的 VPS 就变成美国最抢手了，毕竟 openai 流媒体啥的都能解。（我的 jp 机就没法解 openai）</p>
 <p>一般挂机都拿 docker 跑，我当然！用 <a href="/coding/container.html" target="blank">podman</a> 啦。</p>
 <ul>
-<li><a href="https://packetstream.io/?psr=5wA2" target="_blank" rel="noopener noreferrer">PacketStream</a>：0.1<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">/</mi><mi>G</mi><mtext>，满</mtext><mn>5</mn></mrow><annotation encoding="application/x-tex">/G，满 5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathnormal">G</span><span class="mord cjk_fallback">，满</span><span class="mord">5</span></span></span></span> 可提现。</li>
+<li><a href="https://packetstream.io/?psr=5wA2" target="_blank" rel="noopener noreferrer">PacketStream</a>：0.1$/G，满 5$ 可提现。
+<ul>
+<li>流量跑得慢，80M / 36h，不过至少可用</li>
+</ul>
+</li>
 <li><s><a href="https://earn.fm/ref/LXZX43NC" target="_blank" rel="noopener noreferrer">EarnFM</a></s>，不可用：<code>Connection is halted because: This IP is a known proxy connection, therefore its not allowed.</code></li>
+<li><a href="https://link.repocket.co/cwYQ" target="_blank" rel="noopener noreferrer">repoket</a>: 满 20$ 可提。不可用：<code>Too many devices on the same IPs.</code></li>
 <li><a href="https://traffmonetizer.com/?aff=1578168" target="_blank" rel="noopener noreferrer">traffmonetizer</a>
 <ul>
-<li>启动脚本需要加上 <code>-d</code> 使其在后台运行。</li>
+<li><code>podman run -d --name tm traffmonetizer/cli_v2 start accept --token TOKEN</code></li>
 </ul>
 </li>
 </ul>
@@ -1111,9 +1474,13 @@
 </blockquote>
 <p>反代也很简单，只需将 <code>file_server</code> 换成 <code>reverse_proxy :8000</code>（端口号）。</p>
 <ul>
+<li>如果只有一个域名，可以去掉大括号。（压行！现在只有三行了）</li>
 <li>自带 formatter：<code>caddy fmt --overwrite /etc/caddy/Caddyfile</code></li>
 <li>自动证书存放位置是 <code>/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/&lt;domain&gt;</code>，可以 ln 到其他地方给其他软件用。</li>
 </ul>
+<h3> 日志</h3>
+<p>caddy 默认将日志输出 stderr，可以用 <code>journalctl</code> 查看。但也可以将其输出至文件，或者按域名分流日志等。</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>更具体的应用请参考文档：<a href="https://caddyserver.com/docs/caddyfile/directives/log" target="_blank" rel="noopener noreferrer">log 参数</a> | <a href="https://caddyserver.com/docs/caddyfile/options#log" target="_blank" rel="noopener noreferrer">全局 log default</a>。</p>
 <h3> 其他资料</h3>
 <ul>
 <li><a href="https://github.com/caddyserver/nginx-adapter" target="_blank" rel="noopener noreferrer">Caddy NGINX Config Adapter</a>, converts NGINX config files into Caddy's native format.</li>
@@ -1141,147 +1508,6 @@
 <li><a href="https://caddy.community/t/why-caddy-2-over-nginx/9549" target="_blank" rel="noopener noreferrer">Why Caddy 2 over NGINX</a></li>
 </ol>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>浏览器</title>
-      <link>https://absx.pages.dev/articles/browser.html</link>
-      <guid>https://absx.pages.dev/articles/browser.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">浏览器</source>
-      <description>浏览器</description>
-      <category>推荐</category>
-      <pubDate>Wed, 15 Nov 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 浏览器</h1>
-<p>没错，这里是浏览器<s>大横评</s>（不算“大”，也不算“横评”，更像杂谈）。浏览器是我的 <em>软件日常使用时间</em> 的榜首，因此我肯定也是想获得最好的使用体验的。<s>现在的浏览器就像一个操作系统。。（ChromeOS（误</s></p>
-<p>我个人的刚需是：自由无审查（针对某些国产垃圾），扩展支持，垂直标签栏。</p>
-<h2> 桌面端</h2>
-<p>说到桌面端浏览器就不得不提“御三家” chrome, firefox, edge 了。这三个我确实都用过。</p>
-<h3> edge</h3>
-<p>目前我在 windows 上使用 edge 作为我的默认浏览器。</p>
-<ul>
-<li>edge 的自定义程度不差，我可以隐藏标题栏，干掉我不想要的图标，自定义新标签页等等。
-<ul>
-<li>但也说不上好。我不能自定义快捷键。</li>
-</ul>
-</li>
-<li>edge 的一大槽点是（微软）非常喜欢干它的用户群体。
-<ul>
-<li>最广为人知的是广告多。不过我实际使用基本没看到广告，一般只有更新后才有。</li>
-<li>在更新后(?或者其他触发条件)会把我的默认搜索引擎换成 bing。</li>
-</ul>
-</li>
-<li>另一大槽点是隐私。<s>但是人在大陆因此这点程度都不是什么问题</s></li>
-<li>关于扩展：
-<ul>
-<li>如果使用开发者模式安装了本地扩展，edge 会疯狂提醒移除此扩展。<strong>没有关闭提醒的选项</strong>，只能点两周后提醒，然后每两周被不断打扰。</li>
-<li>不支持 manifest v2，所谓的不支持的做法是：让你先用几天，然后悄无声息地把该扩展直接静默删除。</li>
-</ul>
-</li>
-</ul>
-<h3> chrome</h3>
-<p>我对 chrome 一直都没什么好感，一方面 Google 吃相也极为难看<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，另一方面可能是我高中 4G 内存和钥匙扣 CPU 的破电脑带不动它。</a></p><a class="footnote-anchor" id="footnote-ref1">
-<ul>
-<li>chrome （在某个时期）的槽点大概是吃内存非常恐怖。但是实际跟其他两家应该差不了多少。</li>
-<li>chrome 的一些服务在国内无法使用，需要科学上网。</li>
-</ul>
-</a><h3><a class="footnote-anchor" id="footnote-ref1"></a> firefox</h3>
-<p>firefox 相对来说比较自由，毕竟 mozilla is <a href="https://www.mozilla.org/en-US/" target="_blank" rel="noopener noreferrer">not a normal tech company</a>.在 Google 发癫时 mozilla 会跳出来骂，我还是很敬佩&amp;庆幸的。</p>
-<p>我在 linux 上使用 firefox (dev edition) 作为我的默认浏览器。</p>
-<ul>
-<li>由于 firefox 使用群体较少，扩展开发者不会优先适配它。</li>
-<li>firefox 内核与 chrome 系不同，因此:
-<ul>
-<li>某些网页不支持（不多，但是让你电脑上还需要有 chromium 内核浏览器）</li>
-<li>许多 chrome 系插件不可用</li>
-</ul>
-</li>
-<li>没有我想要的垂直标签栏，只能用 Sidebery 模拟。</li>
-<li>自定义程度……例如我想隐去标题栏，并没有一个合理的配置项能够实现；需要手写 user css。自由度高，但是门槛也高。</li>
-<li>firefox 在 linux 上对字体的支持比较好，而且有硬件解码。</li>
-<li><a href="https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3259" target="_blank" rel="noopener noreferrer">部分元素在 firefox 上显示错误</a>。</li>
-<li>不能直接停止脚本执行。</li>
-</ul>
-<h3> Vivaldi</h3>
-<p>卖点是 <em>隐私</em> 和 <em>快速强大</em> 的浏览器。</p>
-<ul>
-<li>集成了邮件、日历、日程、rss 订阅等功能。
-<ul>
-<li>邮件只能添加一个账号。。</li>
-</ul>
-</li>
-<li>在快速拨号中添加某些网址（例：<code>s.ecust.edu.cn</code>）会直接闪退？？
-<ul>
-<li>这个网址直接进会弹窗，<em><code>s.ecust.edu.cn</code> 想打开 <code>xdg-open</code></em>。但是在其他任意浏览器上不会出现这个提示。</li>
-<li>而且我<strong>无法禁用</strong>该网站的打开请求(?)。</li>
-<li>快速拨号会在后台打开网页，截图作为其封面。感觉是不做错误处理的锅。</li>
-<li>我后来在其他平台的 vivaldi 上加了这个快速拨号（避免闪退），于是每次在 linux 上打开 vivaldi 时都会弹个窗：<em>先生请问您要来点 xdg-open 吗？</em></li>
-<li>严格来说这属于比较恶性的 bug 了，不过我还是忍了一阵子。</li>
-</ul>
-</li>
-<li>软件默认不带有标题栏，<s>跟我的理念不谋而合</s>，但是也会带来问题：
-<ul>
-<li>在缩小时的显示效果差，按钮会重叠</li>
-<li>最小/大化和关闭的按钮作用区域太小，导致单击按钮边缘位置时不会出现预期的按钮点击行为，变为拖动窗口。
-<ul>
-<li>其实 kde 上任何不使用系统任务栏的软件都会出现此问题，参考 linux-qq。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>当我遇到一个重大的问题后，我果断抛弃了 Vivaldi。我需要以 http 访问一个网址，而我一直被重定向到 https 并 error。我每次把 https 换成 http，一按回车，它又变成了 https。。没有开启 <em>始终使用安全连接</em>，没有 cookies，浪费我好多时间真是火大。。</p>
-<figure><img src="/images/articles/browser/vivaldi_bug.gif" alt="我的 VPS 反代连不上的罪魁祸首竟是！" tabindex="0" loading="lazy"><figcaption>我的 VPS 反代连不上的罪魁祸首竟是！</figcaption></figure>
-<h3> nyxt</h3>
-<p>基于 webkit2gtk 的，号称无需使用鼠标的浏览器。试了一下，根本不可用，所有页面 <em>Page could not be loaded</em>。</p>
-<h2> 移动端</h2>
-<p>我对手机浏览器的要求也“不高”，能审查元素，能装扩展就行。当然如果够<strong>轻量</strong>，即使没有这些功能，我也会考虑将其作为第二浏览器安装到手机上。</p>
-<p>Android 端浏览器我经历了 <em>夸克 -&gt; Via -&gt; m 浏览器 -&gt; Kiwi Browser -&gt; 狐猴浏览器</em> 的转变，我自认为还是有一些心得的。</p>
-<h3> Kiwi Browser</h3>
-<p>Kiwi Browser 是我接触到的第一个能够装扩展的重量级浏览器。</p>
-<ul>
-<li>开源！非常好文明。
-<ul>
-<li>没有广告，没有商业化元素。</li>
-<li>当然也没有用户登录。虽说隐私保护得很好，但是要备份/转移配置可不太方便。</li>
-</ul>
-</li>
-<li>可以看控制台，审查元素。</li>
-<li>DNS 解析有问题(?还是我的问题?)，网页打开较慢。</li>
-<li>它的书签布局不太一样。这导致了 Xbrowsersync 同步书签的层次出现问题。</li>
-</ul>
-<h3> 狐猴浏览器</h3>
-<p>一款国产商业浏览器，主打卖点就是扩展丰富，同时支持 chrome 和 edge 商店。</p>
-<ul>
-<li>UI 是仿夸克浏览器的</li>
-</ul>
-<h3> Firefox nightly</h3>
-<p>没用过，不过我开始用 Kiwi Browser 的时候，这位还没有能装扩展的消息出现。</p>
-<p>Firefox 倒是用过，没啥特别的，要功能没功能，还重量级，用了两天不用了。</p>
-<h3> m 浏览器</h3>
-<p>国产轻量级浏览器，安装包 9M。</p>
-<ul>
-<li>拥有审查元素，查看网页源码，嗅探网页资源的功能。</li>
-<li>支持安装脚本，自定义拦截广告，可调长按倍速的视频播放器。</li>
-</ul>
-<h3> Via</h3>
-<p>国产轻量级浏览器，把“小”做到极致，下载大小不到 1M。界面挺干净的，该有的设置也有。</p>
-<h3> 夸克浏览器</h3>
-<p>这个就纯属回忆了，现在的夸克已经<strong>烂透了</strong>。</p>
-<p>曾经我在夸克看免翻毛片网，用自带的下载功能下了一堆（自动 m3u8 转 mp4）；曾经夸克能访问任意网站，不受限制；曾经夸克干净无广告，尚未商业化……</p>
-<p>现在则是一个极其臃肿的、什么都集成但是大部分都要钱的傻逼玩意儿。</p>
-<h2> 结语</h2>
-<p>我相信未来会有更加友善高质量的浏览器出现。我也会继续积极尝试其他浏览器，1 丰富本博文的内容，2 满足我的尝新欲与好奇心。</p>
-<h2> 浏览器设置</h2>
-<p>我使用 <a href="/articles/ramdisk.html" target="blank">RAMDisk</a>，（在 windows 上）拿到浏览器第一件事就是改缓存位置。</p>
-<p>一般的 chromium 内核浏览器都能通过加 <code>--disk-cache-dir="Z:\123"</code> 启动参数更改缓存位置。Edge 浏览器也可以改注册表。</p>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>关键词：<code>隐私沙盒</code> <code>Web Environment Integrity API</code> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-      <enclosure url="https://absx.pages.dev/images/articles/browser/vivaldi_bug.gif" type="image/gif"/>
     </item>
     <item>
       <title>Octave</title>
@@ -2110,7 +2336,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ol>
 <h2> 配置</h2>
-<p>这里是 <em><a href="/articles/computer_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
+<p>这里是 <em><a href="/articles/windows_setting.html" target="blank">文章 - 设置电脑</a></em> 的 linux 板块内容。设置项均为 archlinux，且排名不分先后。</p>
 <h3> 系统设置</h3>
 <ol>
 <li>基础 alias
@@ -2645,199 +2871,6 @@ RTT = Round Trip Time，往返时间</p>
 <li><a href="https://cangsdarm.github.io/illustrate/quic" target="_blank" rel="noopener noreferrer">图解 QUIC 连接 - 对每一个字节的解释和再现</a></li>
 </ol>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>脑洞</title>
-      <link>https://absx.pages.dev/gossip/brainhole.html</link>
-      <guid>https://absx.pages.dev/gossip/brainhole.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">脑洞</source>
-      <description>脑洞</description>
-      <category>随笔</category>
-      <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 脑洞</h1>
-<h2> f cond 黑屋</h2>
-<p>如果你挑战在 f 条件下呆在一个封闭环境 x 天 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo mathvariant="normal">≠</mo><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">x \neq \infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="inner"><span class="mord"><span class="mrel"></span></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span>)，你会如何选择？</p>
-<h3> f = 无电</h3>
-<p>Whatever the f condition is, I would take English &amp; Japanese dictionary and paper and pen.</p>
-<h3> f = 无网络，有电</h3>
-<p>anki 词典，带<a href="/hobbies/galgame.html#%E6%88%91%E8%AE%A1%E5%88%92%E7%8E%A9" target="blank">一堆 galgame</a></p>
-<h4> f += 数据量上限</h4>
-<p>anki 词典 + 小说。anki 词典的利用率高（反复看多次），而小说的信息密度高。一本 10M 的小说够我看约 27h，也就某些手机一张原图的大小。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>零化</title>
-      <link>https://absx.pages.dev/gossip/zero_fill.html</link>
-      <guid>https://absx.pages.dev/gossip/zero_fill.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">零化</source>
-      <description>零化</description>
-      <category>作者</category>
-      <category>评价</category>
-      <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 零化</h1>
-<blockquote>
-<p>「她发生了『零化现象』……本来应该从她的灵魂输出到这个虚拟角色上的讯号，现在全都被零填满了。没有斗志的超频连线者操纵不了对战虚拟角色，原因很简单，因为对战虚拟角色的动力来源，就是连线者一颗火热的心。如果没有力量面对自己的伤痛，就会连站都站不起来。」<br>
-零化现象是心思被无的心念，也就是心灰意冷或无力感给填满导致全身不能动弹。</p>
-<div style="text-align:right">
-<p>——《加速世界》</p>
-</div>
-</blockquote>
-<h2> 我这辈子就是被这 b 专业 &amp; 学校给害了</h2>
-<p>看我的博客也知道我有多喜欢编程。我重视实用性，而计算机是一门实用学科；有许多前辈秉持实用性大于意识形态的理念，为开源社区舔砖加瓦，我也想成为他们中的一员。</p>
-<p>然而在<a href="/gossip/consider.html#%E4%B8%93%E4%B8%9A%E4%B8%8E%E5%AD%A6%E6%A0%A1%E5%A6%82%E4%BD%95%E6%8A%89%E6%8B%A9" target="blank">我国现行志愿报考规则</a>下，我很不幸地被分配到了第二志愿：电子信息类 - 信息工程。</p>
-<p>我把这位放在第二志愿是想着，专业列表里最接近计算机的就是这位；然而我却低估了专业之间的鸿沟。彼时的我还不会用 google，且我校将培养方案如防贼般藏在登录系统后，因此我并不知道等待着我的命运。</p>
-<p>首先是大一的我尝试转专业。彼时我有着高中 NOIP 的经验，对于转专业机考的算法题可谓手到擒来，同时我的成绩也在转专业要求之上。然而一纸新规打破了我的幻想——本学年转专业规则相比往年新增：计算机专业不招收信息学院学生。于是我只能继续呆在这个 b 专业里。</p>
-<p>我对学习的情绪导向极为严重，在我高中时就因极为厌恶政治而多次不及格。所以可想而知我的大学成绩有多烂。前两年还好，大多都是基础课，只挂了一科 <em>电路基础</em>。而到大三全是专业课，我的情绪差不多就爆发了：几乎全是我厌恶的课。各种信号处理、电路分析，外加<strong>抽象课程三大天王</strong>：<strong><em>高频电子线路</em></strong>、<strong><em>通信原理</em></strong>、<strong><em>电磁场与电磁波</em></strong>，让我悲痛欲绝。更可恶的是各种课程论文和毕业设计，我必需在我不感兴趣的领域死磕一番，研究出点什么成果。借机研究/实现点<a href="/hide/inspiration.html" target="blank">灵感区</a>的什么奇思妙想的想法化为泡影。</p>
-<p>而且我还想走编程的就业道路，因此我需要自费时间在上课时读操作系统、SICP 等专业无关书籍，而下课后花费大量时间看网课补作业。<!-- 我校教学的原则是“学在华理”，即用各种大小事情填满你，你只需按部就班，不要有自己的多余的想法。 -->不同学校的考试标准不同，专业课程不容易找到合适的网课，还需自行摸索课程考点。</p>
-<p>话就说到这里吧。如果再让我回答<a href="/gossip/consider.html#%E4%B8%93%E4%B8%9A%E4%B8%8E%E5%AD%A6%E6%A0%A1%E5%A6%82%E4%BD%95%E6%8A%89%E6%8B%A9" target="blank">专业与学校如何抉择</a>的问题，我将回答：<strong>拼死也要选到喜欢的专业</strong>。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>2022</title>
-      <link>https://absx.pages.dev/essay/2022.html</link>
-      <guid>https://absx.pages.dev/essay/2022.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">2022</source>
-      <description>2022</description>
-      <category>随笔</category>
-      <category>作者</category>
-      <pubDate>Fri, 06 May 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 2022</h1>
-<h2> 年度总结</h2>
-<p>电脑端数据始于 20220428</p>
-<p>OSU 击打键数（20220807-20221231）：6811665</p>
-<p>跑步里程：97130 m，俯卧撑：872 个，引体向上：249.5 个</p>
-<img alt="电脑时长（部分）" src="/images/essay/2022/2022_1.jpg" width="50%" height="50%">
-<img alt="手机时长" src="/images/essay/2022/2022_2.jpg" width="50%" height="50%">
-<h2> 20221220</h2>
-<p>在午夜的黑暗中看手机，会很容易被当成目标的吧. ..呜哇</p>
-<h2> 20221218</h2>
-<p>为什么放假了才会选择看小说呢？
-<span class="heimu" title="你知道的太多了">因为冷，被窝舒服，早上不想爬起床，只能玩手机，然后就只能看小说了. ..</span></p>
-<h2> 20221129</h2>
-<p>幼时，我心向光明；今日，我沉逸黑暗。</p>
-<h2> 20221114</h2>
-<p>从今以后我将作为意义党而活着。</p>
-<hr>
-<p>72 小时后禁止指纹解锁是我觉得 Android 机上最傻逼的设计。</p>
-<h2> 20221111</h2>
-<p>我的缓存比较大而存储比较小。因此将缓存写入存储的过程是必要的。</p>
-<h2> 20221103</h2>
-<p>看不见星光的夜空中泛着红。</p>
-<h2> 20221030</h2>
-<p>面具之下，还会是面具吗？我自己也不知道。</p>
-<h2> 20221023</h2>
-<p>享乐精神使我追求平稳安逸，经历意义又使我憧憬危难刺激；在大厦将倾的今天，我是否还能感受童年时的记忆？</p>
-<h2> 20221019</h2>
-<p>深夜在冷冽的寒风中，仰望夜空星辰，是否能唤起一些从前我对未知的渴望？</p>
-<hr>
-<p>饱暖思淫欲，饥寒知世艰。</p>
-<h2> 20221018</h2>
-<p>每次用 IDM 下载大文件我都好奇为什么盘盒硬盘灯不闪。。今天发现 IDM 是默认下载缓存到 C 盘再合并的。。</p>
-<h2> 20221016</h2>
-<p>激进应当是程序员的必备品质。</p>
-<h2> 20221010</h2>
-<p>很喜欢 23:00-24:00 这段时间。每天 23 点断电后，我会把笔记本亮度调到最低，加上黄得发黑的屏幕滤镜，在漆黑的小宿舍里推 galgame。寂暗的夜，我可以沉醉在屏幕后的世界中，不用想太多多余的事情；而午夜卡着时间领完每日折扣券后出门刷牙，走廊冷冽的白色淡光又能使我沉醉梦幻。</p>
-<h2> 20220925</h2>
-<p>我的爆肝小助手：冰红茶+外卖。</p>
-<h2> 20220924</h2>
-<p>在周末半黑不黑的傍晚，能感受到侵入体内的寒气中，骑着一辆辐条嘎吱响的自行车，绕着学校慢悠悠地骑行一圈，看着现充卷王们三三两两走过，胸中会涌起孤独，充实，和其他的一些说不上来的感觉。</p>
-<h2> 20220917</h2>
-<p>市面上这些四六级头戴式耳机…把耳罩做大一点会死啊…</p>
-<h2> 20220914</h2>
-<p>一个老师性格温和但啥都不会，一个老师技术大佬但脾气暴躁，当这两个老师开始轮换教学，这将是一场灾难。</p>
-<hr>
-<p>烈日让我舒适而迷茫，飘雨给我失落与决心。</p>
-<h2> 20220829</h2>
-<p>将返校焦虑转化为打 osu 的动力！</p>
-<h2> 20220818</h2>
-<p>由于我的两个 galgame 没法正常运行，我认定是不兼容 win11 的问题，花了几个小时去<a href="/articles/computer_setting.html" target="blank">搞 hyper-v 虚拟机</a>（毕竟是原生的，所以首选了）和出现的亿点 bug……最后还是没搞好，愤然选择 VMware 装上了 win10。结果发现玩不了 gal 的问题是 <strong><a href="/blog/log.html#_20220815" target="blank">20220815 硬盘崩了</a>把文件损坏了</strong>……笑死个人</p>
-<h2> 20220817</h2>
-<p>玄幻读者表示，泳池是最没有素质的公共场所<span class="heimu" title="你知道的太多了">之一</span>。</p>
-<h2> 20220815</h2>
-<p>把存档放在<code>%AppData%\Roaming</code>里面的是坏文明！太坏了……呜…呜呜……</p>
-<h2> 20220814</h2>
-<p>蚊香液 p 用没有，还得是电蚊拍。（啊…《灭蚊记》的话还是算了吧……</p>
-<h2> 20220813</h2>
-<p>由于<a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">一些原因</a>，此间缺失的随笔统一算作今日随笔。</p>
-<hr>
-<p>我希望有一间像<em>冥契</em>中妹妹那样的房间，纯净而不染一丝污垢，沉醉而不想醒来，不受世俗所扰，仅需我与所爱之物便可。</p>
-<hr>
-<p>曾想在博客设立一个垃圾箱，用来发泄我的感情。想想还是算了。（移步频道搜 #垃圾桶）</p>
-<hr>
-<p>Q：公交车/大巴车的哪个位置比较安全？A：左前右后。</p>
-<h2> 20220808</h2>
-<p><a href="/hide/memories.html#%E5%A4%A7%E5%AD%A6-%E5%A4%A7%E4%B8%80%E5%90%8E%E6%9A%91%E5%81%87" target="blank">右耳聋了 7 天 5 小时</a>，恢复听力后感慨：还是健康最重要啊。</p>
-<h2> 20220730</h2>
-<p>高中没接触那些有意义的事真是太糟了……损失了很多成长的机会。我开始后悔了。</p>
-<hr>
-<p>灭蟑记（五）<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1">
-<p>入庖厨，一蟑伏地，一蟑藏左柜边，皆不动弹。乃踏之一而拖鞋迅击之二。处理于水道，而三蟑探头于盥洗旁，困入死角，杀之。此时乃杀蟑如麻，战意沸腾之际，遂入厨四处细寻，见四蟑藏于炊具后。移釜而杀之。噫！今日四杀，吾之大胜也。此间蟑螂皆缓动呆滞，料其亲友皆亡于前日，饥而寻食，却无逃遁之速度，无对敌之经验，其亡也当然耳。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1"></a> 20220729</h2>
-<p>灭蟑记（四）<sup class="footnote-ref"><a href="#footnote1">[1:1]</a><a class="footnote-anchor" id="footnote-ref1:1"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:1">
-<p>灭一蚊，净手，忽见一稍小蟑螂伏于池边盆上。其经验不足，未逃，一击毙命。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1:1"></a> 20220725</h2>
-<p>灭蟑记（三）<sup class="footnote-ref"><a href="#footnote1">[1:2]</a><a class="footnote-anchor" id="footnote-ref1:2"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:2">
-<p>丑时二刻，入庖厨环视，四处击而探之，无所见。遂入浴后起，听得耳边窸窣声，蟑螂也。拿拖鞋而反，不见，击探久之不得。方欲委去，复见其逃于隐辟。遂以神戒之，敌退我进，敌伏我杀，如此反复，其精疲力尽，终灭之一隅。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1:2"></a> 20220724</h2>
-<p>灭蟑记（二）<sup class="footnote-ref"><a href="#footnote1">[1:3]</a><a class="footnote-anchor" id="footnote-ref1:3"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:3">
-<p>今再遇一蟑，复震之，藏于一管内。管径二指，长半臂有余，震而不出。遂将此蟑以水冲入便器，然浮于水面，活蹦乱跳，久冲不下。覆纸其上，纸散，仍不灭。无奈，以器捞之，包于厚纸中受压而死，然后冲入水道，方得清净。呜呼！吾竟败与一蟑耳。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1:3"></a> 20220723</h2>
-<p>灭蟑记（一）<sup class="footnote-ref"><a href="#footnote1">[1:4]</a><a class="footnote-anchor" id="footnote-ref1:4"></a></sup></p><a class="footnote-anchor" id="footnote-ref1:4">
-<p>熬夜欲睡，点灯入庖厨，直视右上橱柜，必有蟑螂因强光呆伏其上。遂取鞋，瓶碗却不可击。其一受惊震逃于墙上，命中当受此拖鞋劫。余一有大气运，入地即遁入狭间，视不可得。纸包蟑螂尸，入水道，欲绝后患。</p>
-</a><h2><a class="footnote-anchor" id="footnote-ref1:4"></a> 20220718</h2>
-<p>在空调房睡觉时混入了两只蚊子...已知蚊香液不能在密闭空间中使用，请问要保空调还是杀蚊子？<span class="heimu" title="你知道的太多了">我选择了后者</span></p>
-<h2> 20220717</h2>
-<p>无法适应规则，难以打破规则...那就绕过规则</p>
-<h2> 20220712</h2>
-<p>写<a href="/articles/track_record.html" target="blank">（第二篇）横评</a>时的那种掌控感有点爽（软件们在我手里瑟瑟发抖的样子. ..</p>
-<h2> 20220708</h2>
-<p>Android 的软件使用时长计时为什么只能查看本周数据...然后我做了个<a href="/articles/time_record.html" target="blank">横评</a>。</p>
-<h2> 20220702</h2>
-<p>感性的代价可不止一点呢...我究竟是为了什么回到家里来的啊...</p>
-<h2> 20220629</h2>
-<p>Github 治国有何不可！</p>
-<h2> 20220628</h2>
-<p>在模仿中重塑自我，在尝试中走出道路。</p>
-<h2> 20220618</h2>
-<p>能早解决的事就不要拖。不要像我这样垂死病中惊坐起发现论文已经过了 ddl 同时还发现 ip 不在学校不能免费看知网论文。（前几天一直在 <strong>享 受 假 期</strong> ）
-<img src="/images/essay/2022/20220619.png" alt="绝望影像" loading="lazy"></p>
-<h2> 20220613</h2>
-<p>历经 11 天终于回到家了。这 11 天我的评价是很无聊，甚至不能给我的生命留下什么记忆。</p>
-<h2> 20220612</h2>
-<p>丈许浪大争西东，相击相灭一场空。</p>
-<h2> 20220531</h2>
-<p>回家路不过是名为隔离的笼子罢了。一时的感性还使我空虚。</p>
-<h2> 20220529</h2>
-<p>感性是需要代价的。纸魔给我的感性使我付出了代价。</p>
-<h2> 20220522</h2>
-<p>不使用杠杆原理的水龙头不是好水龙头。</p>
-<h2> 20220521</h2>
-<p>原来带给我满足与快感的不是爆肝，是创造！</p>
-<h2> 20220519</h2>
-<p>提防悄无声息的自我标准降低。</p>
-<p>爆肝过后，满足与空虚一并涌上，想把成果分享给全世界，然后立刻开摆。</p>
-<h2> 20220515</h2>
-<p>在 Minecraft 中，人们追求更强的装备而忘记了建设家园的初衷；</p>
-<p>在文艺作品中，反派渴望更强的力量而忘记了，身边的人。</p>
-<h2> 20220514</h2>
-<p>人类是很脆弱的。需要做好意外伤残甚至失去生命的觉悟。把幻想化为经验，预防悲剧发生。</p>
-<h2> 20220513</h2>
-<p>倘若遭遇绝望，也要去享受绝望。</p>
-<h2> 20220510</h2>
-<p>怎么会事呢？突然发现博客好像没什么东西写了 awa. ..前几天的干劲一定是用完了罢。对了，可以添加<code>atri</code>bot！</p>
-<p>我恨不得每一天都能有 200 小时，不，2000 小时！</p>
-<h2> 20220506</h2>
-<p><code>cmd /k</code> : 执行命令，保留窗口</p>
-<p>这里是启动<code>atri</code>bot 的关键脚本：</p>
-<div class="language-batch line-numbers-mode" data-ext="batch"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>这里是《灭蟑记》目录 <a href="#footnote-ref1" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:1" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:2" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:3" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:4" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-      <enclosure url="https://absx.pages.dev/images/essay/2022/20220619.png" type="image/png"/>
     </item>
   </channel>
 </rss>
