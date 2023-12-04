@@ -198,6 +198,7 @@ const data = [
   { id: "atid-519", aScore: 8, bScore: 8.8, u: true },
   { id: "shkd-986", aScore: 8.3, bScore: 9.8, u: true },
   { id: "rctd-526", aScore: 7.2, bScore: 8.5 },
+  { id: "fc2-ppv-2805736", aScore: 9.6, bScore: 4, otherlink: "https://njav.tv/zh/v/fc2-ppv-2805736" }
 ];
 export default {
   name: "App",

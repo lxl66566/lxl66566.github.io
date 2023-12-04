@@ -35,6 +35,10 @@ tag:
 - sed 正则表达式的 `{}` 需要转义 `\{\}`，否则需要使用 `sed -r`（maybe `alias sed='sed -r'` ?）
 - 冷知识：sed（和 awk）都是图灵完备的语言。
 
+### grep
+
+- grep 不支持贪婪匹配 `.*?`，需要的话要 `grep -P` (`--perl-regexp`)
+
 ### find
 
 - 末尾的 `\;` 的作用是声明了 `-exec` 的结尾。

@@ -242,6 +242,7 @@ _（不排除早期缺漏）_
 - RE:D Cherish
 - 幻のディストピア
 - 五彩斑斓的世界 & 五彩斑斓的曙光
+- 奇异恩典 -What color is your attribute?-
 
 ## 一言
 

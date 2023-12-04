@@ -285,7 +285,7 @@ with open("config.ini", "w") as configfile:
 from subprocess import run  # 官方建议使用 run 代替所有其他低阶函数
 run("ls", "-al", check=True)  # check=True 表示遇到错误则发出异常，= run(..).check_returncode()
 run("ls | grep py", shell=True) # shell=True 无需拆分命令，如果碰到管道或复杂指令还是不要难为自己
-a = run("ls", "-al", capture_output=True) # 获取输出
+run("ls", "-al", capture_output=True, text=True).stdout # 以字符串获取输出
 ```
 
 ### pathlib
