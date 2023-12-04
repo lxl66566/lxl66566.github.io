@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 03 Dec 2023 04:32:47 GMT</pubDate>
-    <lastBuildDate>Sun, 03 Dec 2023 04:32:47 GMT</lastBuildDate>
+    <pubDate>Mon, 04 Dec 2023 15:20:30 GMT</pubDate>
+    <lastBuildDate>Mon, 04 Dec 2023 15:20:30 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -2206,6 +2206,10 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <ul>
 <li>sed 正则表达式的 <code>{}</code> 需要转义 <code>\{\}</code>，否则需要使用 <code>sed -r</code>（maybe <code>alias sed='sed -r'</code> ?）</li>
 <li>冷知识：sed（和 awk）都是图灵完备的语言。</li>
+</ul>
+<h3> grep</h3>
+<ul>
+<li>grep 不支持贪婪匹配 <code>.*?</code>，需要的话要 <code>grep -P</code> (<code>--perl-regexp</code>)</li>
 </ul>
 <h3> find</h3>
 <ul>
