@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 04 Dec 2023 15:20:30 GMT</pubDate>
-    <lastBuildDate>Mon, 04 Dec 2023 15:20:30 GMT</lastBuildDate>
+    <pubDate>Tue, 05 Dec 2023 15:30:44 GMT</pubDate>
+    <lastBuildDate>Tue, 05 Dec 2023 15:30:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -2509,7 +2509,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h3> pacman</h3>
 <p>pacman 是 linux 官方指定包管理器，好用，就是指令比较难记。安装来源是 linux 官方仓库，基本上都是二进制。</p>
 <ul>
-<li>“滚” 指 <code>sudo pacman -Syu</code>，更新所有包。不要隔太久不滚，挂的概率会增加。（<s>今日也无事可做</s>）
+<li>“滚”指 <code>sudo pacman -Syu</code>，更新所有包。不要隔太久不滚，挂的概率会增加。（<s>今日也无事可做</s>）
 <ul>
 <li>也可以直接 <code>yay</code> 或 <code>paru</code> 进行更新。（这俩不带参数默认执行 <code>-Syu</code>）</li>
 <li>如果更新了内核（<code>linux</code> 包），请立即重启。</li>
@@ -2555,7 +2555,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <li>push。注意不要使用那些阻断 ssh 的代理。</li>
 </ol>
 <p>可以 <code>paru -Gp &lt;package&gt;</code> 看看别人写的 PKGBUILD；<code>makepkg -f</code> 测试（<code>-f</code> 是覆盖下载）。</p>
-<p><code>updpkgsums PKGBUILD</code> 可以自动更新校验和。</p>
+<p><code>updpkgsums PKGBUILD</code>（<code>-f</code>）可以自动更新校验和。</p>
 <h4> 测试</h4>
 <p>如果需要一个纯净环境测试，可以看看 <a href="https://wiki.archlinux.org/title/Pacstrap" target="_blank" rel="noopener noreferrer">pacstrap</a>。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>或许还可以找个机会试试 <a href="https://blog.lilydjwg.me/2021/8/12/using-bwrap.215869.html" target="_blank" rel="noopener noreferrer">bwrap</a>？据说更轻量。我确实觉得为了打个包下载 200+MB 的东西有点浪费了。</p>
@@ -2678,7 +2678,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>set fish as default</p>
 
 <blockquote>
-<p>不建议通过 chsh 更换 shell,你可以使用 Konsole(如果是 KDE)的 profile 改 shell——<a href="https://t.me/archlinuxcn_group/2755963" target="_blank" rel="noopener noreferrer">@MkfsSion</a></p>
+<p>不建议通过 chsh 更换 shell，你可以使用 Konsole(如果是 KDE) 的 profile 改 shell——<a href="https://t.me/archlinuxcn_group/2755963" target="_blank" rel="noopener noreferrer">@MkfsSion</a></p>
 </blockquote>
 </li>
 <li>
@@ -2776,7 +2776,7 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 </li>
 <li id="footnote2" class="footnote-item"><p><code>yazi</code> 甚至能在 console 下查看图片。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote3" class="footnote-item"><p>尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞(<code>"${arr[@]}"</code>)。我的评价是还是<strong>写点阳间语言</strong>吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+<li id="footnote3" class="footnote-item"><p>尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞 (<code>"${arr[@]}"</code>)。我的评价是还是<strong>写点阳间语言</strong>吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
