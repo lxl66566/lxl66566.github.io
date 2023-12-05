@@ -18,7 +18,7 @@ tag:
 
 pacman 是 linux 官方指定包管理器，好用，就是指令比较难记。安装来源是 linux 官方仓库，基本上都是二进制。
 
-- “滚” 指 `sudo pacman -Syu`，更新所有包。不要隔太久不滚，挂的概率会增加。（~~今日也无事可做~~）
+- “滚”指 `sudo pacman -Syu`，更新所有包。不要隔太久不滚，挂的概率会增加。（~~今日也无事可做~~）
   - 也可以直接 `yay` 或 `paru` 进行更新。（这俩不带参数默认执行 `-Syu`）
   - 如果更新了内核（`linux` 包），请立即重启。
 - 出现 `The requested URL returned error: 404`，可能是本地缓存没有更新，请 `sudo pacman -Syy`
@@ -32,7 +32,7 @@ pacman 是 linux 官方指定包管理器，好用，就是指令比较难记。
   ```
   @tab termux
   ```bash:no-line-numbers
-  termux-change-repo  # 虽然不是 pacman （
+  termux-change-repo  # 虽然不是 pacman（
   ```
   :::
 
@@ -70,7 +70,7 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 
 可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；`makepkg -f` 测试（`-f` 是覆盖下载）。
 
-`updpkgsums PKGBUILD` 可以自动更新校验和。
+`updpkgsums PKGBUILD`（`-f`）可以自动更新校验和。
 
 #### 测试
 
@@ -93,7 +93,7 @@ sudo systemd-nspawn -D container  # 进入容器
 > 对于通过 `/`（OR）相连的软件，本人**仅推荐首个**
 
 <!-- prettier-ignore -->
-|软件包|功用|
+|软件包 | 功用|
 | :-: | :-: |
 |`fishshell` + `starship`|[shell](#shell) 及其外观|
 |[`sd`](https://github.com/chmln/sd)|`sed` 的代替|
@@ -160,7 +160,7 @@ sudo systemd-nspawn -D container  # 进入容器
   ```
   :::
 
-[^7]: 尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞(`"${arr[@]}"`)。我的评价是还是**写点阳间语言**吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。
+[^7]: 尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞 (`"${arr[@]}"`)。我的评价是还是**写点阳间语言**吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。
 
 #### fishshell
 
@@ -173,7 +173,7 @@ fishshell 语法自成一系，学习成本较高，但是补全太好用了，�
   @tab 侵入式
 
   ```bash
-  # 侵入式就是直接设置默认 shell，包括启动时(?)
+  # 侵入式就是直接设置默认 shell，包括启动时 (?)
   chsh -s fish
   ```
 
@@ -190,7 +190,7 @@ fishshell 语法自成一系，学习成本较高，但是补全太好用了，�
 
   :::
 
-  > 不建议通过 chsh 更换 shell,你可以使用 Konsole(如果是 KDE)的 profile 改 shell——[@MkfsSion](https://t.me/archlinuxcn_group/2755963)
+  > 不建议通过 chsh 更换 shell，你可以使用 Konsole(如果是 KDE) 的 profile 改 shell——[@MkfsSion](https://t.me/archlinuxcn_group/2755963)
 
 - 语法：有个叫 [bass](https://github.com/edc/bass) 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。
 - 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)，注意作用域与是否 export 的问题。
