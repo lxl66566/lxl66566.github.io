@@ -56,6 +56,7 @@ tag:
 - [ ] wd: info words online in cli, written in rust
   - [ ] if not english, test other languages
 - [ ] ecust-survival, (with vuepress)
+- [ ] galgame engine
 
 ### Android
 

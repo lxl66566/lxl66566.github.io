@@ -65,6 +65,8 @@ const data = [
   { id: "477905", aScore: 6, bScore: 4.3, info: "#兄妹", order: 5, bak: "https://telegra.ph/C101-NANACAN-ななかまい-妹調教日記and-more5-中国翻訳-10-16-2" },
   { id: "(ex)", aScore: 9.7, bScore: 1.5, info: "#合集 #蔚蓝档案 #全彩", otherlink: "https://exhentai.org/g/2709897/647222d154/", bak: "https://telegra.ph/殿宮-蔚藍檔案相关翻译合集-10-18-2" },
   { id: "447025", aScore: 8.4, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/C101-662KB-拾次-うへぇーしょうがないなぁ-ブルーアーカイブ-中国翻訳-08-01" },
+  { id: "477903", aScore: 9, bScore: 5.7 },
+  { id: "303996", aScore: 8, bScore: 4.1 },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

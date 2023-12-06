@@ -16,5 +16,6 @@
   },
   "Codegeex.DisabledFor": {
     "markdown": "true"
-  }
+  },
+  "autocorrect.enable": false
 }
