@@ -144,7 +144,7 @@ ssh -T git@github.com   # 输入该命令验证是否成功
 [^1]: 可能是代理阻断了 ssh 22 端口造成。有两个解法：
 
     1.  关闭代理。
-    2.  连接 GitHub 的 443 端口([ref](https://segmentfault.com/a/1190000041909858))。在 `~/.ssh/config` 中添加：
+    2.  连接 GitHub 的 443 端口 ([ref](https://segmentfault.com/a/1190000041909858))。在 `~/.ssh/config` 中添加：
 
         ```
         Host github.com
@@ -170,7 +170,7 @@ git push origin <branch> --force-with-lease # 建议使用此选项代替 -f，�
 
 现在你已经能完成基本的上传文件到 github 的操作。
 
-### 忽略文件(夹)
+### 忽略文件（夹）
 
 在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。
 
@@ -285,6 +285,9 @@ _remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成
   - 可以用 `git branch -f <branch> <point_to>`。这个分支不能是 `HEAD` 依附的分支。
   - 可以用 `git merge --ff-only <point_to>`。将当前 `HEAD` 依附的分支指向任意代子节点。
     - 不加 `--ff-only` 则没有子节点的限制，进化为合并操作。
+  - （疑难解答[^9]：无法强制更新被工作区...所使用的分支）
+
+[^9]: 我的这个例子是没有退出变基造成的。需要 `git rebase --quit`。
 
 这样我们已经可以操作任意指针指向任意节点了。
 
