@@ -57,6 +57,7 @@ tag:
   - [ ] if not english, test other languages
 - [ ] ecust-survival, (with vuepress)
 - [ ] galgame engine
+- [ ] bin package manager
 
 ### Android
 

@@ -99,9 +99,31 @@ category:
 }
 ```
 
-这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。
+这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。我去其他地方寻找解法，[BUAA 的](https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ)用 figure 包的也会有这个问题。
 
-我去其他地方寻找解法，[BUAA 的](https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ)用 figure 包的也会有这个问题，暂时无解。
+然后偷窥交流群发现，如果不需要 `name` 参数的话，简单用 `block` 包一下就能实现自动切割。抄来的代码用的是 `box`，因此才会自动换页。
+
+````typst
+#let 字体 = (代码: ("Fira Code", "Times New Roman", "SimSun"))
+#let frame(body) = {
+  set text(font: 字体.代码)
+  block(
+    stroke: black + 1pt,
+    width: 100%,
+    inset: (rest: 0.5em),
+    radius: 7pt,
+    body,
+  )
+}
+
+// 使用方法：
+#frame[
+```js
+console.log("1")
+```
+]
+
+````
 
 ## bug
 
@@ -128,10 +150,16 @@ category:
 所以下面有人提供了[一个解法](https://github.com/typst/typst/issues/311#issuecomment-1678940781)：
 
 ```
-show heading: it =>  {
-  it
-  par()[#text(size:0.5em)[#h(0.0em)]]
+
+show heading: it => {
+it
+par()[#text(size:0.5em)[#h(0.0em)]]
 }
+
 ```
 
 > 我最早在知乎看到一个解法，但是有副作用。。
+
+```
+
+```

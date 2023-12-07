@@ -36,3 +36,7 @@ podman run -d ... # -d 表示后台运行
 podman rm <name>  # 删除容器
 podman logs <name>  # 查看输出(stdout + stderr)
 ```
+
+## 遇到的问题
+
+- podman 拉取镜像时可能不支持短名称（v4.3.1 是不能的），需要在名称前加 `docker.io/` 前缀。

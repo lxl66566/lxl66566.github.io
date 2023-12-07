@@ -196,8 +196,7 @@ VPS 的流量可以共享，并且可以赚点小钱([src](https://post.vpslog.o
   - 流量跑得慢，80M / 36h，不过至少可用
 - ~~[EarnFM](https://earn.fm/ref/LXZX43NC)~~，不可用：`Connection is halted because: This IP is a known proxy connection, therefore its not allowed.`
 - [repoket](https://link.repocket.co/cwYQ): 满 20$ 可提。不可用：`Too many devices on the same IPs.`
-- [traffmonetizer](https://traffmonetizer.com/?aff=1578168)
-  - `podman run -d --name tm traffmonetizer/cli_v2 start accept --token TOKEN`
+- ~~[traffmonetizer](https://traffmonetizer.com/?aff=1578168)~~,不可用。
 
 先挂着，到时候再看看收益。
 
