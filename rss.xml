@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 06 Dec 2023 15:35:29 GMT</pubDate>
-    <lastBuildDate>Wed, 06 Dec 2023 15:35:29 GMT</lastBuildDate>
+    <pubDate>Thu, 07 Dec 2023 16:00:07 GMT</pubDate>
+    <lastBuildDate>Thu, 07 Dec 2023 16:00:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -1338,11 +1338,7 @@ _ 在 <code>about:support</code> 中，点击 <em>配置文件夹 -&gt; 打开�
 </li>
 <li><s><a href="https://earn.fm/ref/LXZX43NC" target="_blank" rel="noopener noreferrer">EarnFM</a></s>，不可用：<code>Connection is halted because: This IP is a known proxy connection, therefore its not allowed.</code></li>
 <li><a href="https://link.repocket.co/cwYQ" target="_blank" rel="noopener noreferrer">repoket</a>: 满 20$ 可提。不可用：<code>Too many devices on the same IPs.</code></li>
-<li><a href="https://traffmonetizer.com/?aff=1578168" target="_blank" rel="noopener noreferrer">traffmonetizer</a>
-<ul>
-<li><code>podman run -d --name tm traffmonetizer/cli_v2 start accept --token TOKEN</code></li>
-</ul>
-</li>
+<li><s><a href="https://traffmonetizer.com/?aff=1578168" target="_blank" rel="noopener noreferrer">traffmonetizer</a></s>,不可用。</li>
 </ul>
 <p>先挂着，到时候再看看收益。</p>
 <h2> 遇到的问题</h2>
@@ -1594,7 +1590,11 @@ _ 在 <code>about:support</code> 中，点击 <em>配置文件夹 -&gt; 打开�
 <p>于是我转向了 <a href="https://docs.podman.io" target="_blank" rel="noopener noreferrer">podman</a>，这是一个 <strong>daemonless, open source</strong>（开源的、无守护进程的）容器工具，完美解决了我对 docker 的偏见。并且其兼容性也不错：<em>Most users can simply alias Docker to Podman (alias docker=podman) without any problems.</em></p>
 <h2> 基础</h2>
 <p>看看<a href="https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md" target="_blank" rel="noopener noreferrer">tutorial</a>。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr class="footnotes-sep">
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 遇到的问题</h2>
+<ul>
+<li>podman 拉取镜像时可能不支持短名称（v4.3.1 是不能的），需要在名称前加 <code>docker.io/</code> 前缀。</li>
+</ul>
+<hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="footnote1" class="footnote-item"><p>抽象层次与价值取向绑定。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
@@ -2095,9 +2095,9 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <p>代码不要直接写 <code>typ</code> 文件里。最好从外部引用，解耦，还方便扔 formatter。</p>
 <h4> 好看的边框</h4>
 <p>从 <a href="https://github.com/typst/typst/issues/1494#issuecomment-1591847881" target="_blank" rel="noopener noreferrer">#1494</a> 摸了个好看的代码块样式来，然后自己改改，就是下面的了。</p>
-<div class="language-typ line-numbers-mode" data-ext="typ"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。</p>
-<p>我去其他地方寻找解法，<a href="https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ" target="_blank" rel="noopener noreferrer">BUAA 的</a>用 figure 包的也会有这个问题，暂时无解。</p>
-<h2> bug</h2>
+<div class="language-typ line-numbers-mode" data-ext="typ"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。我去其他地方寻找解法，<a href="https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ" target="_blank" rel="noopener noreferrer">BUAA 的</a>用 figure 包的也会有这个问题。</p>
+<p>然后偷窥交流群发现，如果不需要 <code>name</code> 参数的话，简单用 <code>block</code> 包一下就能实现自动切割。抄来的代码用的是 <code>box</code>，因此才会自动换页。</p>
+<div class="language-typst line-numbers-mode" data-ext="typst"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> bug</h2>
 <p>这东西 bug 其实还真不少。。</p>
 <h3> 参考文献</h3>
 <p><a href="https://github.com/typst/typst/issues/2548" target="_blank" rel="noopener noreferrer">issue</a></p>
@@ -2111,10 +2111,10 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <p><a href="https://github.com/typst/typst/issues/311" target="_blank" rel="noopener noreferrer">issue</a></p>
 <p>中文等语言需要在每行开头缩进两个宽字符。typst 提供了 <code>par()</code> 控制缩进行为，但是在标题下面一行的文字却不会被缩进。。</p>
 <p>所以下面有人提供了<a href="https://github.com/typst/typst/issues/311#issuecomment-1678940781" target="_blank" rel="noopener noreferrer">一个解法</a>：</p>
-<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>我最早在知乎看到一个解法，但是有副作用。。</p>
 </blockquote>
-]]></content:encoded>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
       <title>NSFW</title>
