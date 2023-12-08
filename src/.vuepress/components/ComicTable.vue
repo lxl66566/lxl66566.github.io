@@ -67,6 +67,7 @@ const data = [
   { id: "447025", aScore: 8.4, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/C101-662KB-拾次-うへぇーしょうがないなぁ-ブルーアーカイブ-中国翻訳-08-01" },
   { id: "477903", aScore: 9, bScore: 5.7 },
   { id: "303996", aScore: 8, bScore: 4.1 },
+  { id: "477481", aScore: 3.7, bScore: 6.5, bak: "https://telegra.ph/Sakura-Suishou-Yozakura-Souki-Yua-Nightmare-Digital-12-06" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

@@ -67,6 +67,9 @@ git 在 windows 下的安装也算是一门学问，官方安装包一共十几�
    git config --global --add safe.directory '*'    # 取消目录安全警告
    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见页面底 external 1.
    git config --global init.defaultBranch main     # 更改默认分支为 main（linux 默认还是 master）
+   # 全局忽略
+   printf "node_modules\n__pycache__\n*.exe\n*.o\n" > ~/.gitignore_g
+   git config --global core.excludesfile ~/.gitignore_g
    ```
    - 参考[取消转义](#取消转义)
 4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用轻量级插件 `Git Graph` 以直观地查看 git 提交树与更改。
@@ -179,6 +182,10 @@ git push origin <branch> --force-with-lease # 建议使用此选项代替 -f，�
 开发时请务必将你的无关文件添加进 `.gitignore`。
 :::
 注意其语法与 linux 文件系统类似，`/` 开头的为根目录，别搞错了。
+
+#### 全局忽略
+
+`git config --global core.excludesfile <ignore_file>` 可以配置一个全局 ignore，假如忘记添加 `.gitignore`，全局命中也能避免上传无关内容。
 
 ### 自动化脚本
 

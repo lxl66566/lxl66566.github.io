@@ -13,22 +13,25 @@ tag:
 
 ## Windows 端记录软件使用时长
 
-我从 20220428 开始使用[Tai](../farraginous/recommend_packages.md#tai)记录 Windows 下的应用时长。直到在 20220729 了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。在此将比较它俩的一些特性。
+- 从 20220428 开始使用 [Tai](https://github.com/Planshit/Tai) 记录 Windows 下的应用时长。
+  - C# 写的，windows 下专用的软件。
+- 在 20220729 了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。
+  - 跨平台的时长记录软件，python 写的，基于浏览器 UI。
+  - 在 linux wayland 下表现差。~~我为了计时长特意换到 X11~~
 
-此处小小介绍一下`ActivityWatch`。相较于`Tai`，它拥有可视化程度 & 自由度更高的图表。~~（Tai 改版后也不差）~~ 但我最关心的还是我自己的使用体验。两者均为开源软件。
+两者均为开源软件。
 
-|    软件名     | 运行时内存 | 查询区间长 |
-| :-----------: | :--------: | :--------: |
-|      Tai      |   41.0M    |     年     |
-| ActivityWatch |   102.2M   |     月     |
+|    软件名     | 运行时内存 (windows) | 查询区间长 |
+| :-----------: | :------------------: | :--------: |
+|      Tai      |        41.0M         |     年     |
+| ActivityWatch |        102.2M        |     月     |
 
 结果很明显。
 
-1. 我追求简洁与直接性的数据，不需要优秀的界面。
-2. `ActivityWatch`核心采用 python 编写，高内存占用。
-3. 我对时长记录最大的要求，除了准确性外，就是**查询区间长**了。而`ActivityWatch`的表现（30days）无法达到预期。
+1. 我对时长记录最大的要求，除了准确性外，就是**查询区间长**了。而 `ActivityWatch` 的表现（30days）无法达到我的预期。
+2. `ActivityWatch` 的数据不方便备份。而 Tai 就只有图标和 sqlite 数据库，非常方便。
 
-我仍然选用`Tai`作为我的时长统计软件。_（顺带一提，这俩记录的时长有点区别，而我无法分辨哪个是正确的，因为 windows 没有官方的时长记录工具。Tai 目前改版至 1.4.0.0，可能具有偏差，但是不多）_
+我仍然选用 `Tai` 作为我的时长统计软件。而在 Linux 上使用 `ActivityWatch` 是无奈之举。
 
 ## Android 端记录软件使用时长
 

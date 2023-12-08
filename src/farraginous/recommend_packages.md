@@ -23,6 +23,71 @@ tag:
 
 :::
 
+## 跨平台
+
+### [raindrop.io](https://github.com/raindropio)
+
+第三方书签管理工具。云端存储，多设备访问，免费使用，支持书签分享。
+
+> 我曾经用过 [xbrowsersync](https://github.com/xbrowsersync/app) 书签同步器，但是很久没维护了，而且由于 manifest v2 不再受支持的原因，每隔一段时间就会[被浏览器杀掉扩展](../articles/browser/assess.md#edge)。因此找到了这个替代品。
+
+电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
+
+### [bitwarden](https://vault.bitwarden.com/#/login)
+
+多端密码管理服务，支持生物识别和自动填充。数据存在美国（或欧盟），自动同步。如果你不信任密码托管方，请使用 [KeePass 系列](#keepass-系列)。
+
+### 跨设备传输
+
+[localsend](https://github.com/localsend/localsend) 和 [LANDrop](https://github.com/LANDrop/LANDrop) 都是优秀的开源局域网多设备互传软件，体积都不大。
+
+我都用过了，更推荐 localsend，因为维护比较频繁（LANDrop 最后一次 commit 还在 2021 年），并且好看（flutter）。
+
+> 如果 localsend 在 Android 传输结束时报错，请试试打开 _所有文件访问权限_
+
+### [Anki](https://apps.ankiweb.net/)
+
+多平台开源记忆软件。拥有多端同步，遵循记忆曲线，高自由度制卡等特色。
+
+附有[使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)与[我的卡组](https://ankiweb.net/shared/info/772249450)。
+
+### [使用时间记录](../articles/time_record.md)
+
+### [mpv](https://mpv.io/)
+
+::: info 我的尝试
+在 _potplayer_, _VLC_, _mpv_ 中我选择 _mpv_。
+:::
+
+**轻量级**跨平台开源视频播放器，高度自定义化。手写配置对新人可能不友好，但我就喜欢这种高度自定义的感觉。
+
+这里是[我的 mpv 配置文件](https://github.com/lxl66566/config/blob/archlinux/.config/mpv/input.conf)。
+
+### RAM Disk
+
+RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。
+
+详情请见 [文章 - RAM Disk 横评](../articles/ramdisk.md)。
+
+### ADB
+
+电脑调试 Android 手机的必备工具，包括查询信息，备份，安装等常用功能。
+
+- [简易教程与下载](../articles/adb.md)
+
+### [yt-dlp](https://github.com/yt-dlp/yt-dlp)
+
+视频下载**命令行**工具。主要用于 bilibili, youtube 视频的下载。若不想用命令行请移步 [CoCoCut](#cococut)。
+
+简易教程（Windows）：
+
+1. 去 release 下载 `yt-dlp.exe` 并扔到 `C:\Windows\System32` 下[^2]。
+2. 默认下载为音视频分离。若需音视频合成，还需下载大名鼎鼎的 ffmpeg：使用 [scoop](#scoop) 一行完事：`scoop install ffmpeg`
+3. `yt-dlp <url>` 快速下载视频。
+4. 下载指定清晰度或仅音频：`yt-dlp -F <url>` 选择清晰度或音频资源；将选项 ID 填入 `yt-dlp -f <ID> <url>` 进行下载。
+
+[^2]: 可能需要提权。一个普通人更熟悉的方法是将 `yt-dlp.exe` 存放目录添加到环境变量（但是更麻烦）。
+
 ## Android
 
 ::: tip
@@ -59,10 +124,6 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 :::
 [官方项目地址](https://github.com/Lerist/FakeLocation) | [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 
-### [bitwarden](https://vault.bitwarden.com/#/login)
-
-多端密码管理服务，支持生物识别和自动填充。数据存在美国（或欧盟），自动同步。如果你不信任密码托管方，请使用 [KeePass 系列](#keepass-系列)。
-
 ### Adobe Scan
 
 扫描文档并转为 pdf。免费版就够用了。
@@ -70,22 +131,6 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 与[扫描全能王](https://w103.camscanner.com/)相比有如下优点：小（安装后，扫描全能王 591MB，Adobe Scan 114MB）；无水印。
 
 [谷歌商店下载](https://play.google.com/store/apps/details?id=com.adobe.scan.android&hl=zh&gl=US)
-
-### [raindrop.io](https://github.com/raindropio)
-
-第三方书签管理工具。云端存储，多设备访问，免费使用，支持书签分享。
-
-> 我曾经用过 [xbrowsersync](https://github.com/xbrowsersync/app) 书签同步器，但是很久没维护了，而且由于 manifest v2 不再受支持的原因，每隔一段时间就会被浏览器杀掉扩展。因此找到了这个替代品。
-
-电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
-
-### 多设备互传
-
-[localsend](https://github.com/localsend/localsend) 和 [LANDrop](https://github.com/LANDrop/LANDrop) 都是优秀的开源局域网多设备互传软件，体积都不大。
-
-我都用过了，更推荐 localsend，因为维护比较频繁。（LANDrop 最后一次 commit 还在 2021 年。。）
-
-> 如果 localsend 在传输结束时报错，请试试打开 _所有文件访问权限_
 
 ### [开源阅读](https://github.com/gedoor/legado)
 
@@ -98,6 +143,7 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 - 阅读时长统计
 - WebDAV 同步阅读进度
   - 将平板和手机的设备名称设为同一个，可以在多个设备间自动同步进度
+- 虽然没有 PC 版本，但可以开启 web 端口，只要手机和电脑在局域网下，就可以在电脑网页上读书。
 
 ### [Anything](https://www.xitmi.com/11378.html)
 
@@ -138,7 +184,11 @@ scoop update <name>     # 更新包，* 表示全部
 scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置，配合 RAM Disk
 ```
 
-### [Parsec](https://parsec.app/downloads)
+### 远程控制
+
+我以前用向日葵，现在用 parsec。向日葵比较适合协作（远控他人），parsec 适合控制自己电脑。
+
+#### [Parsec](https://parsec.app/downloads)
 
 **极低延迟**的远程控制软件，为游戏而生。P2P 连接。支持手机控制电脑。
 
@@ -152,10 +202,6 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
   - 需要自己解决驱动兼容性问题（如果有的话）
   - 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠
   - 早期版本可能会有音频撕裂问题
-
-### [Tai](https://github.com/Planshit/Tai)
-
-记录软件使用时长 ~~推 gal 神器~~，掌控自己的时间消耗
 
 ### 可视化磁盘空间
 
@@ -196,27 +242,6 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 1. _设置 - 解压_，打开 _一次性解压 TGZ..._ 下的 _即使是大体积的 TGZ..._ 选项
 2. 如果你使用 [RAM Disk](../articles/ramdisk.md)，可以在 _设置 - 高级_ 中，将临时文件夹设为 RAM Disk 路径
 
-### [mpv](https://mpv.io/)
-
-轻量级多端开源视频播放器，高度自定义化。我在尝试了 potplayer，VLC 后仍选择了 mpv。以下是[我的 mpv 配置文件](https://github.com/lxl66566/config/blob/archlinux/.config/mpv/input.conf)：
-
-```
-# C:\Users\<user name>\scoop\persist\mpv\portable_config
-# ~/.config/mpv
-
-d add speed .1
-a add speed -.1
-s set speed 1.0
-WHEEL_UP seek -10
-WHEEL_DOWN seek 10
-UP add volume 2
-DOWN add volume -2
-z seek -7
-x seek 7
-Ctrl+w quit
-e screenshot
-```
-
 ### [f.lux](https://justgetflux.com/)
 
 护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</span>
@@ -224,31 +249,13 @@ e screenshot
 - 可以在全屏游戏时护眼
 - 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）
 
-### RAM Disk
-
-RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。
-
-详情请见 [文章 - RAM Disk 横评](../articles/ramdisk.md)。
-
 ### [图吧工具箱](http://www.tbtool.cn/)
 
 集成了电脑及其外接设备测试所需的多数软件，集硬件测试，跑分，信息查询为一体。不过体积比较大。
 
-### ADB
-
-电脑调试 Android 手机的必备工具，包括查询信息，备份，安装等常用功能。
-
-- [简易教程与下载](../articles/adb.md)
-
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 
 开源的右键菜单管理器。高度自定义化。
-
-### [Anki](https://apps.ankiweb.net/)
-
-多平台开源记忆软件。拥有多端同步，遵循记忆曲线，高自由度制卡等特色。
-
-附有[使用技巧](https://github.com/lxl66566/wordsreciter/issues/1)与[我的卡组](https://ankiweb.net/shared/info/772249450)。
 
 ### [sandboxie](https://sandboxie-plus.com/downloads/)
 
@@ -282,19 +289,6 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
   ```
 
 [^5]: 浏览器复制汉字时会自动转义为 `%..` 格式，而不复制全（例如不复制第一个 `h`，只从 `ttp` 开始复制）可以保护这些汉字不被转义。
-
-### [yt-dlp](https://github.com/yt-dlp/yt-dlp)
-
-视频下载**命令行**工具。主要用于 bilibili, youtube 视频的下载。若不想用命令行请移步 [CoCoCut](#cococut)。
-
-简易教程（Windows）：
-
-1. 去 release 下载 `yt-dlp.exe` 并扔到 `C:\Windows\System32` 下[^2]。
-2. 默认下载为音视频分离。若需音视频合成，还需下载大名鼎鼎的 ffmpeg：使用 [scoop](#scoop) 一行完事：`scoop install ffmpeg`
-3. `yt-dlp <url>` 快速下载视频。
-4. 下载指定清晰度或仅音频：`yt-dlp -F <url>` 选择清晰度或音频资源；将选项 ID 填入 `yt-dlp -f <ID> <url>` 进行下载。
-
-[^2]: 可能需要提权。一个普通人更熟悉的方法是将 `yt-dlp.exe` 存放目录添加到环境变量（但是更麻烦）。
 
 ## Linux
 
@@ -444,7 +438,9 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 
 > 小提示，双击 exe 文件后，EnergyStar 将自动在后台运行，不会跳出提示与弹窗。
 
-我之前用了下，它会锁游戏帧率，而且没法通过应用管理器结束程序来放开限制。于是就不用了。
+我之前用了下，它会锁游戏帧率，而且没法通过应用管理器结束程序来放开限制，必需重启。于是就不用了。
+
+这玩意最后一次更新在 20220731，请注意时效。
 
 ### ~~IDM~~
 
@@ -466,13 +462,13 @@ use [xdm](#xdm) instead.
 
 [Keepass2Android 项目地址](https://github.com/PhilippC/keepass2android) | [KeePassXC 项目地址](https://github.com/keepassxreboot/keepassxc)
 
-> 为了方便，可以考虑使用 bitwarden 的服务，其支持多端同步密码。但是若你对云端存储感到不安全，还是使用无需联网的 Keepass 吧。
+> 为了方便，可以考虑使用 [bitwarden](#bitwarden) 的服务，其支持多端同步密码。但是若你对云端存储感到不安全，还是使用无需联网的 Keepass 吧。
 
 ### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
 
 快速启用禁用扩展。
 
-> 比较鸡肋，还吃我资源，因此弃用。
+比较鸡肋，还吃我资源，因此弃用。
 
 ### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
 
@@ -489,7 +485,7 @@ use [xdm](#xdm) instead.
 [官方地址?](https://picacg2022.com/) | [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
 :::
 
-现在看本子都用 nhentai.net 了。平时也就看看 tg 推荐，没了。
+现在看本子都用 `nhentai.net` 了。平时也就看看 tg 推荐，没了。顺带，[这里](../hobbies/NSFW/comic.md)是我的本子推荐。
 
 ### ~~[歌词适配](https://wwp.lanzouy.com/iH13D13tnaif)~~
 

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SortableTable from "./SortableTable.vue";
+import SortableTable from "./sortabletable.vue";
 
 const data = [
   { id: "shkd-999", aScore: 9.9, bScore: 11.1, u: true, name: "風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子" },
@@ -198,7 +198,13 @@ const data = [
   { id: "atid-519", aScore: 8, bScore: 8.8, u: true },
   { id: "shkd-986", aScore: 8.3, bScore: 9.8, u: true },
   { id: "rctd-526", aScore: 7.2, bScore: 8.5 },
-  { id: "fc2-ppv-2805736", aScore: 9.6, bScore: 4, otherlink: "https://njav.tv/zh/v/fc2-ppv-2805736" }
+  { id: "fc2-ppv-2805736", aScore: 9.6, bScore: 4, otherlink: "https://njav.tv/zh/v/fc2-ppv-2805736" },
+  { id: "royd-117", aScore: 7.3, bScore: 3.6, u: true },
+  { id: "ssis-070", aScore: 9, bScore: 8, u: true },
+  { id: "royd-146", aScore: 6.7, bScore: 3 },
+  { id: "angr-003", aScore: 6, bScore: 8.2 },
+  { id: "midv-158", aScore: 6.2, bScore: 3.3, u: true },
+  { id: "stars-621", aScore: 6.5, bScore: 7.1 },
 ];
 export default {
   name: "App",

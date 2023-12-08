@@ -305,6 +305,22 @@ static_assert(a < 0 && "error message"); // compile time
 assert(a < 0 && "error message");  // runtime
 ```
 
+### if constexpr
+
+编译期剪枝。可以用于类型判断。
+
+```cpp
+#include <type_traits>
+template <typename T>
+void f(T)
+{
+  if constexpr (std::is_same_v<T, int>)
+  {
+    static_assert(false);
+  }
+}
+```
+
 ## 程序计时
 
 程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) <span class="heimu" title="你知道的太多了">大佬能直接看汇编分析，但是太复杂还得 benchmark</span>
