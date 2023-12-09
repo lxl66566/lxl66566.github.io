@@ -34,7 +34,7 @@ tag:
 > 对于懒狗还有一些其他选择：[nvchad](https://nvchad.com/)  
 > [这里](https://www.reddit.com/r/neovim/comments/13pzwq6/comment/jlcbfzg/)有一些插件推荐，能够使 neovim 接近 vscode（笑）
 
-我的配置存放在 [github 仓库](https://github.com/lxl66566/config/tree/archlinux/.config/nvim)，直接替换 `~/.config/nvim` 然后启动 nvim 就能使用。首次启动会黑屏一阵，不要 Ctrl+c 终止，否则需要清理缓存重新配置。
+我的配置存放在 [github 仓库](https://github.com/lxl66566/dotfile/tree/archlinux/home/absolutex/.config/nvim)，直接替换 `~/.config/nvim` 然后启动 nvim 就能使用。首次启动会黑屏一阵，不要 Ctrl+c 终止，否则需要清理缓存重新配置。
 
 1. 迁移我原先的 keymaps。
 2. 禁用 Telescope 及其衍生插件，改为使用 [Neotree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)。

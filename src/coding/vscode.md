@@ -67,6 +67,10 @@ tag:
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型。
 - [Tabnine](https://www.tabnine.com/)：免费的补全较弱（_Short code completions (2 to 3 words)_）
 
+未来可能会尝试：
+
+- [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
+
 ## feature
 
 vscode 的特色：

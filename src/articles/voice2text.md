@@ -30,6 +30,8 @@ tag:
 
 对于需要输入音频输出 srt 字幕的场合，如果电脑算力足够，可以用下 [autosrt](https://github.com/asukaminato0721/autosrt) 跑本地模型，跨平台多语言，使用纯 CPU，对内存没有要求。有很多模型可以选择，越大的模型自然越慢。参考我用 large 跑了个 30min 的中文字幕，在 laptop i5-12500 上跑了接近 1h。
 
+## 云端
+
 ### [腾讯云](https://cloud.tencent.com/product/asr)
 
 每月 10h 免费时长，基本够用。
@@ -37,3 +39,7 @@ tag:
 ### whisper
 
 实际上上述 [autosrt](#autosrt) 就是使用 whisper 模型放本地跑，只不过用 python 写了个小前端而已。在 huggingface 上也可以[在线用](https://huggingface.co/spaces/sanchit-gandhi/whisper-jax)，不过速度比本地还要慢。（可以理解，又不是做慈善）
+
+### incredibly-fast-whisper
+
+基于 Whisper Large v3 模型。有一个[在线 demo](https://replicate.com/vaibhavs10/incredibly-fast-whisper) 可以用。

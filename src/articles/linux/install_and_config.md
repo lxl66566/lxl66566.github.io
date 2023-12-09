@@ -78,11 +78,19 @@ umount /mnt/windows
    - `gp`: `git pull`
    - `gfixup`: [git 奇技淫巧 # 自动化 squash](../../coding/Git.md#自动化-squash)
    - `docker`: `podman` [-> container](../../coding/container.md)
+   - `makepkg`：[抄来的](./package.md#测试) bwrap。
+     ```sh
+     alias makepkg='bwrap --unshare-all --share-net --die-with-parent \
+     --ro-bind /usr /usr --ro-bind /etc /etc --proc /proc --dev /dev \
+     --symlink usr/bin /bin --symlink usr/bin /sbin --symlink usr/lib /lib --symlink usr/lib /lib64 \
+     --bind $PWD /build/$PWD --ro-bind /var/lib/pacman /var/lib/pacman --ro-bind ~/.ccache ~/.ccache \
+     --bind ~/.cache/ccache ~/.cache/ccache --chdir /build/$PWD /usr/bin/makepkg'
+     ```
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
 3. 设置 `/etc/fstab`
    - [挂载 tmpfs](../ramdisk.md)
      - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了，可以调整容量。
-   - 添加 `noatime` 标识，即不带访问时间([ref](https://t.me/archlinuxcn_group/2900548))
+   - 添加 `noatime` 标识，即不带访问时间 ([ref](https://t.me/archlinuxcn_group/2900548))
    - 删除 `subvolid`，详见 [timeshift 引发的血案](./problem.md#timeshift-引发的血案)
      - 可以用 `sudo sed -i -E 's/(subvolid=[0-9]+,)|(,subvolid=[0-9]+)//g' /etc/fstab` 命令行删除。
 4. ~~[wayland 的 electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)（据说 wayland 对 electron 不太友好）~~
@@ -90,12 +98,12 @@ umount /mnt/windows
 5. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
 6. 设置 pacman：
    - 将某些不常用包和自更新包加入 IgnorePkg，例如 _chromium_ & xmake | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
-   - 更改缓存至 ramdisk （`CacheDir`）
-7. 更改 AUR Helper 缓存（ 参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
+   - 更改缓存至 ramdisk (`CacheDir`)
+7. 更改 AUR Helper 缓存（参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
    - yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
-   - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 [bind mount 同一个 tmpfs](https://github.com/lxl66566/config/blob/archlinux/etc/fstab)，这样就能够解决问题了。
-     - 然而这里还会出现权限问题，无法(?)解决，因此我 mount 到了另一个新的 tmpfs。（不 bind 了）
-   - 未测试：是否能够使用 `$PKGDEST` env 改变编译位置？([source](https://wiki.archlinuxcn.org/wiki/Makepkg#包输出))
+   - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 bind mount 同一个 tmpfs，这样就能够解决问题了。
+     - 然而这里还会出现权限问题，无法 (?) 解决，因此我 [mount 到了另一个新的 tmpfs](https://github.com/lxl66566/dotfile/blob/3c97b7cbad449d4a70100e132b775365951cf250/etc/fstab#L15)。（不 bind 了）
+   - [更改 makepkg 编译位置至 tmpfs](https://wiki.archlinux.org/title/makepkg#Building_from_files_in_memory)
 8. 设置 grub
    ```sh
    sudo -e /etc/default/grub
@@ -176,6 +184,7 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 11. _窗口管理 - 窗口行为_ 设置 _焦点跟随鼠标_
 12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
 13. [配置蓝牙](https://wiki.archlinuxcn.org/wiki/蓝牙)，安装 `bluedevil`
+14. 关闭文件索引 ([ref](https://zhuanlan.zhihu.com/p/493375508))
 
 ## 快照
 

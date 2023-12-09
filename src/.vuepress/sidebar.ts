@@ -63,7 +63,6 @@ export default sidebar({
 				"Android_ISA.md",
 				"minimize_exe.md",
 				"cli_compress.md",
-				"voice2text.md",
 			],
 		},
 		{
@@ -76,6 +75,8 @@ export default sidebar({
 				"ramdisk.md",
 				"note.md",
 				"reverse_proxy.md",
+				"voice2text.md",
+				"ocr.md",
 			],
 		},
 	],

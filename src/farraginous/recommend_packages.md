@@ -61,7 +61,7 @@ tag:
 
 **轻量级**跨平台开源视频播放器，高度自定义化。手写配置对新人可能不友好，但我就喜欢这种高度自定义的感觉。
 
-这里是[我的 mpv 配置文件](https://github.com/lxl66566/config/blob/archlinux/.config/mpv/input.conf)。
+这里是[我的 mpv 配置文件](https://github.com/lxl66566/dotfile/tree/archlinux/home/absolutex/.config/mpv)。
 
 ### RAM Disk
 

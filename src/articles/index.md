@@ -30,7 +30,6 @@ category:
 - [Android 查看手机 cpu 指令集](./Android_ISA.md)
 - [最小化二进制文件与 dll](./minimize_exe.md)
 - [命令行压缩](./cli_compress.md)
-- [音频转文字](./voice2text.md)
 
 ## 推荐
 
@@ -40,5 +39,7 @@ category:
 - [RAM Disk 横评](./ramdisk.md)
 - [Android 手写笔记软件横评](./note.md)
 - [反向代理](./reverse_proxy.md)
+- [音频转文字](./voice2text.md)
+- [OCR](./ocr.md)
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->

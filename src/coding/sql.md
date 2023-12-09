@@ -22,10 +22,11 @@ tag:
 常见的数据库：
 
 - 文件型大多是 SQLite，不过也有 [duckdb](https://duckdb.org/)。
-- 关系型优先 PostgreSQL / MariaDB(MySQL)[^1], 追求极致性能可以选 OracleDB。
+- 关系型优先 PostgreSQL / MariaDB(MySQL)[^1][^2], 追求极致性能可以选 OracleDB。
 - 非关系型 Redis, MongoDB，分布式就 Cassandra 等等。
 
 [^1]: MariaDB 是 MySQL 的分支，完全开源，而 MySQL 是商业产品，部分开源。([ref](https://aws.amazon.com/cn/compare/the-difference-between-mariadb-vs-mysql/))
+[^2]: ~~MySQL 已死：~~ _开源界一般用 mariadb，IT 公司一般用 percona-server。_ ——[依云](https://blog.lilydjwg.me)
 
 （反正都没用过，以上信息都是浅浅了解的）
 

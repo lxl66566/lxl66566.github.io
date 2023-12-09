@@ -60,17 +60,19 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 
 首先看看 arch wiki，很有用。[打包准则](https://wiki.archlinuxcn.org/zh/Arch_打包准则) | [创建软件包](https://wiki.archlinuxcn.org/wiki/创建软件包)
 
-我在先辈推动下，先接过了一个 `autocorrect-bin` 练手。
+我在先辈推动下，先接过了一个 `autocorrect-bin` 练手。后续也打了例如 `tdl-bin` 等。
 
 1. 首先，创建一个 AUR 账号，并[认证](https://wiki.archlinuxcn.org/wiki/AUR_提交准则#认证)
-2. 认领包，clone 到本地
-3. 改 PKGBUILD
+2. 认领包，clone 到本地。
+   - 如果是新创建的包，只需要 `git remote add remote ssh://aur@aur.archlinux.org/<package_name>.git && git fetch` 即可，无需像 github 创建仓库那样手动操作。
+3. 改 PKGBUILD 并测试。
 4. 更新 `.SRCINFO`: `makepkg --printsrcinfo > .SRCINFO`
 5. push。注意不要使用那些阻断 ssh 的代理。
 
-可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；`makepkg -f` 测试（`-f` 是覆盖下载）。
-
-`updpkgsums PKGBUILD`（`-f`）可以自动更新校验和。
+- 可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；
+- `makepkg -f` 本地测试（`-f` 是覆盖下载）。
+- `updpkgsums PKGBUILD`（`-f`）可以自动更新校验和。
+- `namcap PKGBUILD` 检查有没有语法错误。一般会报一个 `$CARCH` 的 warning，不用管。
 
 #### 测试
 
@@ -82,7 +84,7 @@ sudo pacstrap container base base-develsudo # 创建容器（使用主机密钥�
 sudo systemd-nspawn -D container  # 进入容器
 ```
 
-或许还可以找个机会试试 [bwrap](https://blog.lilydjwg.me/2021/8/12/using-bwrap.215869.html)？据说更轻量。我确实觉得为了打个包下载 200+MB 的东西有点浪费了。
+[bubblewrap](https://blog.lilydjwg.me/2021/8/12/using-bwrap.215869.html) 可以以较小的开销在虚拟环境内安全构建。
 
 ## 包使用
 
@@ -223,7 +225,7 @@ bash 语法：
 ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
 
 - 安装 zsh 时会问 set default shell, `y` 即可
-- [我的配置&插件](https://github.com/lxl66566/config/blob/archwsl/.zshrc)
+
 </p></details>
 
 ### [neovim](../../coding/vim.md)
@@ -246,7 +248,7 @@ tmux 的默认键位实在是过于诡异。后来了解了一下 [Zellij](https
 
 :::: details use Zellij instead of tmux
 
-- 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/archwsl/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
+- 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/bad37f53d84b8ab87dececd2e8616ed8f8596e29/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
 - 插件：不要用默认的插件管理器。。不好用。
 - copy-mode(vi): `Space` 进入选择，`Enter` 复制。（我觉得是假的 vi mode）
 - 默认启动 ([bash ref](http://129.226.226.195/post/28785.html) | [zsh ref](https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched) [ref2](https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell))：
@@ -313,3 +315,11 @@ waydroid show-full-ui
 > 挺想吐槽，waydroid 居然不能重连 session，所以如果 session activated，weston 窗口又关了，这时候只能 `waydroid session stop && waydroid show-full-ui` 重启。。
 
 更多踩坑可以看看[某位群友的心得](https://luoxu.archlinuxcn.org/#g=1031857103&q=这是我在waydroid上踩过的坑&sender=5958395317)
+
+### distrobox
+
+[archwiki](https://wiki.archlinux.org/title/Distrobox)；通过容器，模拟其他的发行版。
+
+注意，home 目录是共享的，不能当作沙盒使用。
+
+我试着安装了一个 ubuntu 22.04，占用空间 500M 左右。
