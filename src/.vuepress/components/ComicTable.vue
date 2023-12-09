@@ -68,6 +68,8 @@ const data = [
   { id: "477903", aScore: 9, bScore: 5.7 },
   { id: "303996", aScore: 8, bScore: 4.1 },
   { id: "477481", aScore: 3.7, bScore: 6.5, bak: "https://telegra.ph/Sakura-Suishou-Yozakura-Souki-Yua-Nightmare-Digital-12-06" },
+  { id: "(ex)", aScore: 8.1, bScore: 5.2, info: "#毛玉", otherlink: "https://exhentai.org/g/2496083/1f34d5f4ac/", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
+  { id: "305526", aScore: 8.9, bScore: 4.3 },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

@@ -71,3 +71,7 @@ anki 的云同步裸连很不稳，可能需要科学上网。
 我想，与其去看专门的英语教学，不如直接看我原本就感兴趣的英文流内容。于是乎，这里是我的一些拙见：
 
 - [ThePrimeTime](https://www.youtube.com/@ThePrimeTimeagen)：锐评他人视频/文章，编程领域。
+
+## external
+
+1. [A Programmer's Guide to English](https://a-programmers-guide-to-english.harryyu.me/)

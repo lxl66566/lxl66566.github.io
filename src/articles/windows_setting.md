@@ -141,6 +141,19 @@ tag:
 
 不过之后清理 WinSxS 的时候又没法用了。。
 
+## windows 下的链接
+
+windows 下也可以像 linux 一样创建硬链接和软连接。由于盘符即分区，硬链接是无法跨盘符的，所以以后使用 windows 还是不要分多个盘符比较好。
+
+软链接：
+
+- 不能使用 _创建快捷方式_ 的方法。快捷方式本质上是一个 `.lnk` 文件，与真正的软链接不同。
+- 不能在 wsl 内使用 `ln -s` 创建。这样创建的软链接不会被 windows 识别。
+
+软链接的创建方式：打开管理员终端，`mklink /D <destination> <source>`。`mklink` 默认为软链接，`<destination>` 与 `<source>` 的位置跟 `ln` 是相反的，并且必需要指定名字[^2]。
+
+[^2]: 例如，若有一个 `src` 目录，在 linux 下 `ln -s /mnt/d/src /mnt/d/tmp` 创建 `/mnt/d/tmp/src` 的软连接，则在 windows 上需要 `mklink /D D:\tmp\src D:\src` 指明 `src` 的名称。
+
 ## 遇到的问题
 
 ### 端口随机占用
