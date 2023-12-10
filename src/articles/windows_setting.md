@@ -90,6 +90,14 @@ tag:
 22. [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。
 23. 打开任务栏时间秒数显示：_任务栏设置 - 任务栏行为_
 24. 开启透明压缩。LZW 算法，效果只能说聊胜于无，非系统盘 208G 压到 183G。
+25. [设置 alias](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)。被 linux 驯化了，再回到没有 alias 的 windows 是真不习惯。
+    ```bat
+    @echo off
+    DOSKEY ls=dir $*
+    DOSKEY alias=notepad %USERPROFILE%\alias.cmd
+    DOSKEY gp=git pull
+    ```
+    如果有多行指令需求，那就是 `.cmd` 文件写进 `PATH` 里了。
 
 [^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 

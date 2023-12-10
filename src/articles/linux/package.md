@@ -70,6 +70,7 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 5. push。注意不要使用那些阻断 ssh 的代理。
 
 - 可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；
+- `ldd xxx` 可以看可执行文件的链接库，方便寻找依赖。
 - `makepkg -f` 本地测试（`-f` 是覆盖下载）。
 - `updpkgsums PKGBUILD`（`-f`）可以自动更新校验和。
 - `namcap PKGBUILD` 检查有没有语法错误。一般会报一个 `$CARCH` 的 warning，不用管。

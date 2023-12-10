@@ -9,7 +9,8 @@ category:
 
 # typst
 
-> [Typst](https://github.com/typst/typst) is a new markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.
+> [Typst](https://github.com/typst/typst) is a new markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.  
+> [非官方中文指南](https://typst-doc-cn.github.io/docs/chinese/)
 
 我不是很喜欢 latex，所以尝试使用 typst 作为我的论文排版工具。
 
@@ -40,11 +41,17 @@ category:
 
 [这里](https://typst-doc-cn.github.io/docs/chinese/#resources)有许多大学的毕业论文模版，~~多抄抄就会用了~~
 
-简单来说，`[]` 内是正文，`{}` 内是代码，`()` 是数组或列表，正文调用函数要加 `#`，代码里可以直接调。
+简单来说，`[]` 内是正文（`content`），`{}` 内是代码，`()` 是数组（`array`），正文调用函数要加 `#`，代码里可以直接调。
 
 关键字也就 `set` 和 `show` 常用，`set` 设置全局属性，`show` 设置某个组件的（外观）属性。
 
 剩下的 `let`，`if` 什么的都是 rust 的东西，这里不说（
+
+### 数组
+
+typst 没有 `list` 类型，只有 `array`。
+
+`("12")` 这样其实还是 string 类型，如果要数组类型需要 `("12",)`
 
 ## 数学
 
@@ -60,7 +67,7 @@ category:
 
 代码不要直接写 `typ` 文件里。最好从外部引用，解耦，还方便扔 formatter。
 
-#### 好看的边框
+### 好看的边框
 
 从 [#1494](https://github.com/typst/typst/issues/1494#issuecomment-1591847881) 摸了个好看的代码块样式来，然后自己改改，就是下面的了。
 
@@ -124,6 +131,10 @@ console.log("1")
 ]
 
 ````
+
+### 伪代码
+
+目前在用[algorithmic](https://github.com/typst/packages/tree/main/packages/preview/algorithmic/0.1.0)，并且修了个 bug。
 
 ## bug
 

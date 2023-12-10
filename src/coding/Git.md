@@ -72,6 +72,7 @@ git 在 windows 下的安装也算是一门学问，官方安装包一共十几�
    git config --global core.excludesfile ~/.gitignore_g
    ```
    - 参考[取消转义](#取消转义)
+   - [设置 autocrlf](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings)。（无论 Windows 还是 Linux 都要设！）
 4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用轻量级插件 `Git Graph` 以直观地查看 git 提交树与更改。
 
 [^6]: 需要使用 [Vim](./vim.md)。那篇文章有教两句 Vim 基础用法。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。
@@ -261,6 +262,15 @@ git checkout [commit_hash] -- <path/to/file>  # 从某个 HEAD 指针恢复文�
 git clone <gitrepo>  # 在当前目录下创建文件夹并克隆完整仓库
 git clone <gitrepo> --depth 1 # 仅克隆最新提交，减少大小
 git clone <gitrepo> --filter=tree:0 # 与上面一个大小相当，但是保留了提交 hash 记录
+```
+
+### 彻底删除提交
+
+在[深入](#深入)中有提到，一旦 commit 过后，此次修改就不会消失。那么如果我无论如何就是想要让此次修改消失呢？([src](https://www.cnblogs.com/my_life/articles/16141241.html))
+
+```sh
+git reflog expire --expire-unreachable=0 --all
+git gc --prune=0
 ```
 
 ## 深入
