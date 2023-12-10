@@ -1,8 +1,10 @@
 import { defineUserConfig } from "vuepress";
 import { searchProPlugin } from "vuepress-plugin-search-pro";
+import { getDirname, path } from "@vuepress/utils";
 import theme from "./theme.js";
 
-export default defineUserConfig({
+const __dirname = getDirname(import.meta.url);
+const temp = defineUserConfig({
 	base: "/",
 	lang: "zh-CN",
 	title: "绝对值_x的博客",
@@ -34,3 +36,8 @@ gtag('config', 'G-MKRDBH1ZP1');`,
 	],
 	shouldPrefetch: false,
 });
+temp.alias = {
+	"@AvTable": path.resolve(__dirname, "components/AvTable.vue"),
+	"@ComicTable": path.resolve(__dirname, "components/ComicTable.vue"),
+};
+export default temp;

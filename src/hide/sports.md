@@ -24,8 +24,8 @@ A. 延长寿命；应对危机；减少死亡概率。
 const 半俯冲轰炸机 = 1.3,
   错手俯卧撑 = 1.7,
   中式俯卧撑 = 2.0,
-  反手俯卧撑 = 3.0;
-宽距俯卧撑 = 1.3;
+  反手俯卧撑 = 3.0,
+  宽距俯卧撑 = 1.3;
 ```
 
 ## 以距离记
@@ -40,7 +40,7 @@ const 半俯冲轰炸机 = 1.3,
 
 <iframe frameborder="no" src="/charts/sports_time.html" width="100%" height="280" loading="lazy"></iframe>
 
-## 磨剑
+## 磨剑 interval
 
 磨剑也是一种运动。
 

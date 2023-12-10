@@ -59,3 +59,7 @@ tag:
 - [javlibrary.com](https://www.javlibrary.com/cn/)
 - [人脸识别](https://xslist.org/zh)
 - [av wiki](https://av-wiki.net/)
+
+<script setup lang="ts">
+import AvTable from "@AvTable";
+</script>

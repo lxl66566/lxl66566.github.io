@@ -615,6 +615,8 @@ gtag('config', 'G-xxxxxxxx');`,
 ...
 ```
 
+其实 cloudflare 是有自己的 _Web Analytics_ 的，但是我对比了一下，感觉还是 Google 的更先进点。
+
 ## 静态资源引用错误
 
 build 报错
@@ -626,3 +628,34 @@ build 报错
 > `build.rollupOptions.external`
 
 第二句提示报错，发现是 public 资源改位置了而文章里没改，没引用到。
+
+## 局部注册组件
+
+[主题文档](https://theme-hope.vuejs.press/zh/guide/customize/component.html#在-markdown-中使用-vue-语法与组件)是有描述如何局部注册组件的，但是我之前尝试了几次都失败了。
+
+第一个报错发生在 `import { getDirname, path } from "@vuepress/utils";` 时，系统提示找不到 `@vuepress/utils`。由于主题默认采用 _pnpm_，`node_modules` 的布局与传统的不同，因此确实无法找到 `@vuepress/utils`。后来自己手动装了才能用（`pnpm install`）。
+
+第二个问题是我的 `export default` 后面跟的是一个 `defineUserConfig({...})`，返回一个 `UserConfig` 对象。我尝试直接 `defineUserConfig({alias:{...},...})` 会报类型错误，毕竟是 ts，这个函数本来就不能接受未知参数。后来学了点 ts/js，发现只需要借助中间变量即可。
+
+```ts
+const temp = defineUserConfig({...});
+temp.alias = {...};
+export default temp;
+```
+
+## 尝试将 plot 放入 vue 组件
+
+这是一次失败的尝试，我将改动放在了 [_vueplotfailed1_ 分支](https://github.com/lxl66566/lxl66566.github.io/tree/vueplotfailed1)内。我本以为写了一些组件的我能够胜任这项任务，事实证明我还是太天真了。
+
+在经历了各种调试以后，我发现 `@antv/g2plot` 的官方调用方式是：
+
+```js
+const bar = new Bar("container", {
+  data,
+  xField: "sales",
+  yField: "year",
+  ...
+});
+```
+
+其中第二个参数（`option`） 是一个自定义的类型，而不是一个 `Object`；它的第一个参数是一个 Array，而后面却是一堆键值对。这就导致了我没法向第一个 data 传参：如果我用 `this.data`，则会被报错 `expected ':'`；如果我 `const temp = this.data;{data,...}`，`temp` 又不能跟随 `this.data` 的变化。

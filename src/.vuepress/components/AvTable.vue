@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SortableTable from "./sortabletable.vue";
+import SortableTable from "./SortableTable.vue";
 
 const data = [
   { id: "shkd-999", aScore: 9.9, bScore: 11.1, u: true, name: "風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子" },
@@ -207,7 +207,7 @@ const data = [
   { id: "stars-621", aScore: 6.5, bScore: 7.1 },
 ];
 export default {
-  name: "App",
+  name: "AvTable",
   components: {
     SortableTable,
   },
