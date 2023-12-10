@@ -44,7 +44,11 @@ const 半俯冲轰炸机 = 1.3,
 
 磨剑也是一种运动。
 
-<iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300" loading="lazy"></iframe>
+<!-- <iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300" loading="lazy"></iframe> -->
+
+<xxxgraph />
+
+<!-- <test /> -->
 
 ## 关于游泳
 
@@ -119,3 +123,8 @@ const 半俯冲轰炸机 = 1.3,
 |20230727|100 水 x29h12|
 |20230731|112.7 石头、货 *W移动*|
 |20230812|95? 树 x12|
+
+<script setup lang="ts">
+import xxxgraph from "@xxxgraph";
+import test from "@test";
+</script>
