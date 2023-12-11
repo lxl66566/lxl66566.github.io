@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 11 Dec 2023 16:05:52 GMT</pubDate>
-    <lastBuildDate>Mon, 11 Dec 2023 16:05:52 GMT</lastBuildDate>
+    <pubDate>Mon, 11 Dec 2023 16:53:32 GMT</pubDate>
+    <lastBuildDate>Mon, 11 Dec 2023 16:53:32 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -2549,6 +2549,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 
 </details>
 <p>代理软件需要开启局域网连接。测试时不要使用 <code>ping</code> 指令（其不走代理），用 <code>curl</code>。</p>
+<h3> 文件系统设置</h3>
+<p>如果按照上文推荐教程安装，那么默认只会创建两个 btrfs 子卷（<code>@</code>, <code>@home</code>）。但是 btrfs 的最佳实践其实是将易变化文件（日志，缓存，数据库，容器）全部放到单独子卷里（排出根子卷），以避免打快照时将其全部加入，增大空间消耗。</p>
+<p>如果在某位置新建子卷，该位置存在的文件将被覆盖。那么在需要保存文件前提下，如何新建子卷呢？答案是手动处理。(<a href="https://dev.to/klo2k/convert-directory-into-btrfs-subvolume-p98" target="_blank" rel="noopener noreferrer">src</a>)</p>
+
 <h3> kde 及其配套设施</h3>
 <p>我使用 kde 作为我的桌面（kde 爆杀 gnome!）。</p>
 <p>我安装的 kde 系列软件详见<a href="/articles/linux/package.html#kde-apps" target="blank">包管理与使用推荐</a>。</p>
