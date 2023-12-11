@@ -19,6 +19,7 @@ export default hopeTheme({
 			"/articles/vpn.html": ["2003"],
 			"/hobbies/NSFW/videos.html": ["0721"],
 			"/hobbies/NSFW/comic.html": ["0721"],
+			"/hobbies/NSFW/bangumi.html": ["0721"],
 			"/gossip/wish.html": ["2003"],
 		},
 	},

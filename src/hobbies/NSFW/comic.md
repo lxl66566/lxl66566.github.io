@@ -6,6 +6,7 @@ category:
   - 推荐
 tag:
   - 加密
+  - NSFW
 ---
 
 # 本子合集

@@ -26,6 +26,10 @@ tag:
 以下是正文，按时间倒序。
 :::
 
+## 关机等待 90s
+
+我先按照[这里](https://bbs.archlinux.org/viewtopic.php?pid=1608936#p1608936)的做了，把 timeout 改到 10s。
+
 ## waydroid 的问题
 
 ### 启动失败

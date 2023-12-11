@@ -106,7 +106,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`exa`|[`ls` 的代替](#exa)|
 |`fastfetch`|`neofetch` 的代替|
 |[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
-|`btop` / `htop` / `glances`|任务管理器，看性能，`top` 的代替|
+|`btop` & `mission-center` / `htop` / `glances`|任务管理器，看性能，`top` 的代替|
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
@@ -227,6 +227,12 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 - 安装 zsh 时会问 set default shell, `y` 即可
 
 </p></details>
+
+### 资源监视器
+
+- `btop`：制作精美的 TUI 资源监视器，跨平台（甚至能在 windows 上用）
+- `mission-center`<Badge text="archlinuxcn"/>：GUI，类似 windows 任务管理器
+- `htop`：top 加强，比较经典
 
 ### [neovim](../../coding/vim.md)
 

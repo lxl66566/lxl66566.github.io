@@ -43,14 +43,15 @@ tag:
 
 ### firefox
 
-firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company](https://www.mozilla.org/en-US/).在 Google 发癫时 mozilla 会跳出来骂，我还是很敬佩&庆幸的。
+firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company](https://www.mozilla.org/en-US/)，在 Google 发癫时 mozilla 会跳出来骂，我还是很敬佩 & 庆幸的。
 
-我在 linux 上使用 firefox (dev edition) 作为我的默认浏览器。
+一般我会用 _Firefox Developer Edition_ 代替 firefox 本体。
 
 - 由于 firefox 使用群体较少，扩展开发者不会优先适配它。
 - firefox 内核与 chrome 系不同，因此:
-  - 某些网页不支持（不多，但是让你电脑上还需要有 chromium 内核浏览器）
   - 许多 chrome 系插件不可用
+  - 某些网页不支持（不多，但是让你电脑上还需要有 chromium 内核浏览器）。下面列举一些在 ff 不支持 / 有 bug 的网站。
+    - 阿里云：无限登录
 - 没有我想要的垂直标签栏，只能用 Sidebery 模拟。
 - 自定义程度……例如我想隐去标题栏，并没有一个合理的配置项能够实现；需要手写 user css。自由度高，但是门槛也高。
 - firefox 在 linux 上对字体的支持比较好，而且有硬件解码。
@@ -77,6 +78,10 @@ firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company]
 当我遇到一个重大的问题后，我果断抛弃了 Vivaldi。我需要以 http 访问一个网址，而我一直被重定向到 https 并 error。我每次把 https 换成 http，一按回车，它又变成了 https。。没有开启 _始终使用安全连接_，没有 cookies，浪费我好多时间真是火大。。
 
 ![我的 VPS 反代连不上的罪魁祸首竟是！](/images/articles/browser/vivaldi_bug.gif)
+
+### [Floorp](https://floorp.app/)
+
+基于 firefox 的浏览器，支持原生侧边栏。数据可以直接从 firefox 同步。
 
 ### nyxt
 

@@ -518,7 +518,9 @@ pip install --upgrade --force-reinstall pipx -i https://pypi.tuna.tsinghua.edu.c
 
 - 正常的包管理器，例如 _pacman_，卸载时会将配置存为 `*.pacsave`
 - 路径不用环境变量存，就已经够奇怪了，更别说还保留 python 的绝对路径。。明明 python 自己有环境变量。
+- pipx 安装甚至没有进度条。。这对于包管理器来说不是最基本的吗？？
 - 实际上对于全局用 pip，虚拟环境开 poetry 的我来说，pipx 确实是一个没必要存在的东西
+  - 但是在 archlinux 上不允许全局使用 pip，除非 `--break-system-packages`。
 
 ### 找不到 pip
 

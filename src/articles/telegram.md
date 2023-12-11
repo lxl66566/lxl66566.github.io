@@ -109,8 +109,8 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 #### 科技新闻
 
-- [风向旗参考快讯](https://t.me/xhqcankao)
 - [Solidot](https://t.me/solidot)
+- [风向旗参考快讯](https://t.me/xhqcankao)
 - [每日消费电子观察](https://t.me/CE_Observe)
 - [Testflight 新闻投稿](https://t.me/TestFlightCN)
 
@@ -120,9 +120,10 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 - [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题，群规严格，风气良好 ~~（以及膜拜~~
 - [Rust 众](https://t.me/rust_zh)：讨论 Rust 问题 ~~（以及膜拜~~
-- [Java 编程语言](https://t.me/Javaer)：群里都是聊天的，没几个正经学习~~（java 怎么这么拉了）~~
-- [Python 中文交流](https://t.me/pythonzh)
 - [#archlinux-cn](https://t.me/archlinuxcn_group)
+- [NixOS 中文](https://t.me/nixos_zhcn)
+
+> 注：其他的交流群（python, java）氛围不太行，这里不推荐
 
 #### 外语
 
@@ -151,6 +152,12 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 - [安卓破解分享](https://t.me/apkrxwy)
 - [NEP.Anime | 动画仓库](https://t.me/AnimeNep)：动漫收藏搬运
 
+### 个人
+
+> 高质量个人频道
+
+- [gledos 的微型博客](https://t.me/gledos_microblogging)
+
 ### 乐
 
 - [美图与沙雕](https://t.me/shadiaotu)
@@ -162,17 +169,15 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 ### 闲聊
 
+- [#archlinux-cn-offtopic](https://t.me/archlinuxcn_offtopic)：_archlinux-cn_ 属群
 - [垃圾高校毁我青春](https://t.me/joinchat/Ytplgt-buepkYThl)：大学生闲聊群
 - [真红真红真](https://t.me/upsetGroup)：[失落小站](../hobbies/galgame.md#资源)属群
-- [Coder Offtopic 中文群](https://t.me/coder_ot)：技术 ot 群
-- [VPS 信号旗资讯本部](https://t.me/vps_xinhaoqi)：键政群
 
-### vps
+### bot
 
-vpn 建议去看初级科学上网页面，你可以在那些机场的官网找到 TG 群组链接。
-
-- [VPS log 官方讨论群](https://t.me/vpalogchat)
-- [IPv6 Server - Chinese](https://t.me/ipv6china)
+- [InstantViewBot](https://t.me/CorsaBot)：保存文章
+- [CloudMusicDownloader](https://t.me/Music163bot)：网易云音乐下载
+- [RSS](https://t.me/rss2tg_bot)：RSS 订阅
 
 ### 其他
 
