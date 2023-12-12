@@ -165,6 +165,34 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 
 代理软件需要开启局域网连接。测试时不要使用 `ping` 指令（其不走代理），用 `curl`。
 
+### 文件系统设置
+
+如果按照上文推荐教程安装，那么默认只会创建两个 btrfs 子卷（`@`, `@home`）。但是 btrfs 的最佳实践其实是将易变化文件（日志，缓存，数据库，容器）全部放到单独子卷里（排出根子卷），以避免打快照时将其全部加入，增大空间消耗。
+
+如果在某位置新建子卷，该位置存在的文件将被覆盖。那么在需要保存文件前提下，如何新建子卷呢？答案是手动处理。([src](https://dev.to/klo2k/convert-directory-into-btrfs-subvolume-p98))
+
+::: tabs
+@tab fish
+
+可能要注意一下，路径不能带空格。
+
+```sh
+function make_new_subvolume
+  set dir $argv
+  sudo mv $dir{,.bak}
+  sudo btrfs subvolume create $dir
+  sudo cp --archive --one-file-system --reflink=always $dir{.bak/*,}
+  sudo rm -r --one-file-system $dir'.bak'
+end
+# Usage
+make_new_subvolume /var/log
+```
+
+@tab bash
+
+参考 src。
+:::
+
 ### kde 及其配套设施
 
 我使用 kde 作为我的桌面（kde 爆杀 gnome!）。

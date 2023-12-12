@@ -361,11 +361,19 @@ git commit -m $(get-Date)
 
 但是这样也太丑了一点。
 
+#### 软链接方法
+
+cp 方法的一大缺点是无法反映**删除**的变化。这可以通过软链接解决。
+
+但是，git 只会将软链接识别成链接本身，而不是其指向的内容。并且这是无解的。
+
+因此我们只能将文件本体放在 git 仓库内，然后将文件软链接出去在其他地方用。这需要考虑软链接能否被其他应用正常使用。例如我将 galgame 存档链出去，有的游戏能读，有的游戏不能读，还是需要看运气的。
+
 #### git bare repo
 
 后来试了一下 [git bare repo](https://github.com/rodrigofrancisco/dotfiles#backup-technique)。
 
-linux 上倒是挺方便，但不清楚能否在 windows 下跨盘符使用。
+linux 上倒是挺方便，但估计不能在 windows 下跨盘符使用。
 
 ### 取消转义
 

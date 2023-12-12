@@ -7,6 +7,7 @@ category:
   - 主张
 tag:
   - 加密
+  - NSFW
 ---
 
 # 番号收藏

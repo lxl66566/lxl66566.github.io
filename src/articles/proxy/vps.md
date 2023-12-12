@@ -42,6 +42,12 @@ tag:
 
 :::
 
+### 学生优惠
+
+- 阿里云：免费服务器，每年 300 元优惠券，可以全额抵扣。
+  1. （需要 chromium 系浏览器）[university.aliyun.com](university.aliyun.com) 学生认证领券
+  2. 首页，_产品 - 计算 - 轻量应用服务器_ 下单即可。新加坡有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。
+
 ## 工具
 
 - [ping.pe](https://ping.pe/#)：连通性
@@ -86,6 +92,29 @@ Host <name>
 @tab 手动复制
 
 `cat ~/.ssh/id_*.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内。
+
+:::
+
+### 端口转发
+
+将来自端口 `<from>` 的流量转发到 `<to>`
+
+::: tabs
+@tab socat
+
+```sh
+socat TCP-LISTEN:<from>,reuseaddr,fork TCP:localhost:<to> # 最简型
+socat -dd -lf <log_file> TCP-LISTEN:<from>,reuseaddr,fork TCP:localhost:<to>  # 复杂型
+socat -dd -lf <log_file> -F port_forwarding.conf  # 泛用型
+```
+
+socat 默认在终端前台进行端口转发，需要后台运行的话可以[写个服务](https://unix.stackexchange.com/a/658320)。
+
+@tab firewalld
+
+```sh
+firewall-cmd --add-forward-port=port=<from>:proto=udp:toport=<to> --permanent
+```
 
 :::
 
@@ -159,10 +188,7 @@ GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 
 我使用如下方式降低封锁几率（**有没有用其实是不太清楚的**）：
 
 - 反代一个伪装主页，详见[反向代理](../reverse_proxy.md)。（然而 443 早就被封了，令人感慨）
-- 设置一个固定端口与一个活动端口，固定端口将流量转发到活动端口。
-  ```bash:no-line-numbers
-  firewall-cmd --add-forward-port=port=12138:proto=udp:toport=$trojan_port --permanent
-  ```
+- 设置一个固定端口与一个活动端口，固定端口将流量[转发](#端口转发)到活动端口。
 
 ### 清理僵尸进程
 

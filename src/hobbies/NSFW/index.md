@@ -6,6 +6,7 @@ category:
   - 爱好
 tag:
   - 二次元
+  - NSFW
 ---
 
 # NSFW
@@ -27,6 +28,9 @@ tag:
 
 <!-- prettier-ignore -->
 ## [本☆子☆合☆集](./comic.md)
+
+<!-- prettier-ignore -->
+## [里☆番☆简☆记](./bangumi.md)
 
 ## external
 

@@ -23,6 +23,7 @@ tag:
 | 按键 | 执行 |
 | :-: | :-: |
 | `<C-a>` | 移动光标到最前 |
+| `<C-LEFT>` & `<C-LEFT>` | 移动光标到上 / 下一个单词 |
 | `<C-w>` | 删除前一个单词 |
 | `<C-u>` | 清空光标前输入 |
 
@@ -67,12 +68,21 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 ### btrfs
 
-对于一个用惯 windows ntfs 的人来说，btrfs <span class="heimu" title="你知道的太多了">as well as 现代文件系统</span>一定能让他眼前一亮。（文章参考 [external](#external) 1.）我最爱 CoW(写时复制)，透明压缩。
+对于一个用惯 windows ntfs 的人来说，btrfs <span class="heimu" title="你知道的太多了">as well as 现代文件系统</span>一定能让他眼前一亮。（文章参考 [external](#external) 1.）
+
+1. CoW(写时复制)
+2. 透明压缩
+3. 快照
+4. 只有 btrfs 能 online shrink ([ref](https://t.me/archlinuxcn_group/2996595))
 
 使用 btrfs 有一些坑需要注意：
 
 1. 由于 CoW，使用 `du` 查看磁盘空间可能不准确，需要使用：`btrfs fi usage /`.
 2. 由于 CoW + 快照，操作数据库的时候需要小心，尽可能不要将数据库加入快照备份区（可以使用其他子卷存放）。
+
+#### 常用指令
+
+- `sudo btrfs scrub start /` && `btrfs scrub status /`：检查 checksum
 
 #### 工具
 

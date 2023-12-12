@@ -501,3 +501,4 @@ file.close();
 4. [Zig's New Relationship with LLVM](https://kristoff.it/blog/zig-new-relationship-llvm/)
 5. [C++ 用户定义 Ranges 算子](https://xr1s.me/2023/08/13/cxx-user-defined-range-adaptor/)
 6. C++23 特性总结 [上](https://zhuanlan.zhihu.com/p/562383157) | [下](https://zhuanlan.zhihu.com/p/562383556)，可以学到很多
+7. [C++ 移动语义](https://zhuanlan.zhihu.com/p/642214693)

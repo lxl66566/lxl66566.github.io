@@ -67,6 +67,10 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 
 :::
 
+### 其他
+
+- [Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
+
 ## [V2rayN](https://github.com/2dust/v2rayN)
 
 ### 简介
