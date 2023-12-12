@@ -341,12 +341,13 @@ for name in file.sheet_names:
 
 ## GUI
 
-一些 GUI 框架。（我都没用过）
+一些 GUI 框架。（大部分都没用过）
 
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+- [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)：真的很简单 / 简陋，but it works
 - [nicegui](https://github.com/zauberzeug/nicegui)：基于 web 的
 - [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
 - [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
 
 ### CustomTkinter
 

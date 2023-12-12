@@ -30,6 +30,7 @@ tag:
 |20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695)|San Jose|$10.28/yr|1000GB 1Gbps|768MB|10GB|1|<dtls>装了 Debian 10。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。</dtls>[^1]|
 |20230602 [vpslog](https://distribute.vpslog.net/)||free||64MB|||<dtls>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</dtls>|
 |20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>性价比高，代价是超售。提供 archlinux 镜像，很好。</dtls>
+|20231212 azure (stu free)|Korea Central|$9.xx/mo|unknown|1GB|30GB|1|<dtls>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtls>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
@@ -47,6 +48,10 @@ tag:
 - 阿里云：免费服务器，每年 300 元优惠券，可以全额抵扣。
   1. （需要 chromium 系浏览器）[university.aliyun.com](university.aliyun.com) 学生认证领券
   2. 首页，_产品 - 计算 - 轻量应用服务器_ 下单即可。新加坡有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。
+- Azure：每年 $100 优惠券
+  1. 先过学生认证
+  2. 服务器下单，配置那边按价格排序一下，选便宜的。
+  3. 开好以后如果 ping 不通，去 _网络设置_ 创建一个 _入站端口规则_，目标端口选成 `*`
 
 ## 工具
 

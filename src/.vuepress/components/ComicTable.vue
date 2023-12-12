@@ -71,7 +71,9 @@ const data = [
   { id: "(ex)", aScore: 8.1, bScore: 5.2, info: "#毛玉", otherlink: "https://exhentai.org/g/2496083/1f34d5f4ac/", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
   { id: "305526", aScore: 8.9, bScore: 4.3 },
   { id: "483079", aScore: 9.6, bScore: 6.5, info: "#兽耳 #纯爱", bak: "https://telegra.ph/コミティア143-林檎のなる木-木瀬樹-麦の恩返し--学生編--中国翻訳-08-01" },
-  { id: "(ex)", aScore: 4, bScore: 7.2, info: "", otherlink: "https://exhentai.org/g/2480501/a346125f42/", bak: "https://telegra.ph/大伴ヤキ-虎の春-COMIC-快楽天-2023年4月号-中国翻訳-DL版-08-01" },
+  { id: "(ex)", aScore: 3.7, bScore: 7.2, info: "#寸止", otherlink: "https://exhentai.org/g/2480501/a346125f42/", bak: "https://telegra.ph/大伴ヤキ-虎の春-COMIC-快楽天-2023年4月号-中国翻訳-DL版-08-01" },
+  { id: "(ex)", aScore: 7.8, bScore: 7.6, info: "#兄妹 #睡x", otherlink: "https://exhentai.org/g/2763933/9fa25f0ef2/", bak: "https://telegra.ph/Rev3-もんちゃんrev3-寝てる時は素直-中国翻訳-DL版-12-11" },
+  { id: "392293", aScore: 6.9, bScore: 7, info: "#日常崩坏", bak: "https://telegra.ph/Oomori-Tokui-Taishitsu-Bishoujo-Maniacs-夜空下的萝莉x真不可视汉化组-11-16" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

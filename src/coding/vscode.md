@@ -63,6 +63,7 @@ tag:
 <details><summary>点击展开前言</summary><p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 %TEMP% 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p></details>
 
 - [CodeGeeX](https://codegeex.cn/)：国产开源模型，对标 GitHub CoPilot，响应速度快
+  - 20231212 开始需要绑定手机号
 - [Codeium](https://codeium.com/)：免费，在线服务
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型。
 - [Tabnine](https://www.tabnine.com/)：免费的补全较弱（_Short code completions (2 to 3 words)_）

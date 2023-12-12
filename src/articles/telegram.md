@@ -139,8 +139,13 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 ### NSFW
 
-- [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，_绝对值\_x 精选，质量有保证！_
-- [美图与色图](https://t.me/setu_nsfw) & [everyday color photos](https://t.me/everydaycolorphoto) | [萌图交流](https://t.me/jialeleya2233) | [韵の小院 🍃ᴺˢᶠʷ](https://t.me/YunRan1314)：每日色图
+- 色图区，按照质量降序排行
+  - [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，_绝对值\_x 精选，质量有保证！_
+  - [馒头研究所](https://t.me/lolipussyhub)
+  - [everyday color photos](https://t.me/everydaycolorphoto)
+  - [萌图交流](https://t.me/jialeleya2233)
+  - [韵の小院 🍃ᴺˢᶠʷ](https://t.me/YunRan1314)
+  - [美图与色图](https://t.me/setu_nsfw)
 - [安利 (NSFW)](https://t.me/qingan567) | [ExLOLI - 每日萝莉本子](https://t.me/exlolicon)：来点本子
 - [(ゲーム CG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG**鉴赏**
 - [超高质量 R18 动画资源分享[NSFW]](https://t.me/acgr18)
