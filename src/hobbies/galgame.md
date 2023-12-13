@@ -76,6 +76,7 @@ tag:
   2. Tai **闪退**或未成功获取焦点。（闪退 bug 极为频繁，大约在 2022.11 后修复部分）
 - 打分皆为个人**主观**看法，得分上限不限于 10；分数可能会改变。
 - 未标注游戏平台的默认为 PC.
+  - <Badge text="linux" type="tip" vertical="bottom" /> 代表已通过测试，能够在 linux 平台 ([bottles](../articles/linux/package.md#bottles)) 运行
 
 :::
 
@@ -169,10 +170,10 @@ _（不排除早期缺漏）_
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
 |AliceInCradle|20231209|
-|初雪樱|20231206|
+|初雪樱 <Badge text="linux" type="tip" vertical="bottom" />|20231206|
 |[神聖昂燐ダクリュオン・ルナ](https://t.me/erogamecloud/2350)<OrderBadge order=3 />|20231118|?|4.5|3|
-|樱色之云 \* 绯色之恋|2023.10.27|7?|9.7|6.3|
-|提早绽放的黑百合 <Badge text="linux" vertical="bottom" />|
+|樱色之云 \* 绯色之恋 <Badge text="linux" type="tip" vertical="bottom" />|2023.10.27|7?|9.7|6.3|
+|提早绽放的黑百合 <Badge text="linux" type="tip" vertical="bottom" />|
 |战国兰斯|
 |家喵二三事|2023.08.10|3|7|3|
 |アンレス テルミナリア|2023.05.11|4.3|9.9|9.5|
@@ -192,7 +193,7 @@ _（不排除早期缺漏）_
   |家喵二三事|+0min|
   |樱色之云 \* 绯色之恋|-6min|
   |神聖昂燐ダクリュオン・ルナ|-3min|
-  |初雪樱|-1min|
+  |初雪樱|-2min|
 
 ## 我计划玩
 

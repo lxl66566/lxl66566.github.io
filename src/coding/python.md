@@ -208,6 +208,18 @@ printa(**l)
 
 `*` 是解 list，`**` 是解 dict。
 
+### yield
+
+返回 `Generator`，看成是暂停函数，在需要值时再执行。
+
+```py
+def a():
+  for i in range(1,5):
+    yield i
+b = a()
+print(next(b))
+```
+
 ## 语法糖
 
 ### map
@@ -236,6 +248,17 @@ with suppress(Exception):
 ### [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
 
 `if` 和 `while` 里创建临时变量用的。简单清晰，容易控制生命周期。
+
+### lru_cache
+
+非常好用的缓存。当函数入参相同时，重复利用缓存。
+
+```py
+from functools import lru_cache
+@lru_cache
+def a(i: int):
+  return i + 123
+```
 
 ## 自带模块
 
@@ -288,15 +311,17 @@ run("ls | grep py", shell=True) # shell=True 无需拆分命令，如果碰到�
 run("ls", "-al", capture_output=True, text=True).stdout # 以字符串获取输出
 ```
 
-### pathlib
+### [pathlib](https://docs.python.org/3/library/pathlib.html)
 
-也是写脚本必不可少的东西。操作文件。
+操作文件的高阶抽象。用过 pathlib 以后就再也回不去 os 了（）
 
 ```py
 from pathlib import Path
-Path("a.py").read_text(s: str, encoding="utf-8")  # 读取
-Path("a.py").write_text(s: str, encoding="utf-8") # 写入
+Path("xxx") / "asd" # 连接路径（理解为重载了 / 号）
+str(Path("xxx").absolute()) # 返回绝对路径字符串
+Path("a.py").read_text(s: str, encoding="utf-8")  # 读取，write_text 是写入
 Path("a.py").unlink()  # 删除
+# 也可以做到创建（touch），改权限（chown），链接（hardlink_to）等等，边用边搜。
 ```
 
 ### timeit

@@ -28,7 +28,16 @@ tag:
 
 ## 关机等待 90s
 
-我先按照[这里](https://bbs.archlinux.org/viewtopic.php?pid=1608936#p1608936)的做了，把 timeout 改到 10s。
+首先把 timeout 改到 10s。
+
+```sh
+set -Ux DEFAULT_TIMEOUT_SEC 10
+sudo -e /etc/systemd/system.conf
+# change this
+DefaultTimeoutStartSec={{DEFAULT_TIMEOUT_SEC}}s
+DefaultTimeoutStopSec={{DEFAULT_TIMEOUT_SEC}}s
+DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
+```
 
 ## waydroid 的问题
 

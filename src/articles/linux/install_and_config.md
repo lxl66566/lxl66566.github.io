@@ -167,7 +167,11 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 
 ### 文件系统设置
 
+#### 创建子卷至现有目录
+
 如果按照上文推荐教程安装，那么默认只会创建两个 btrfs 子卷（`@`, `@home`）。但是 btrfs 的最佳实践其实是将易变化文件（日志，缓存，数据库，容器）全部放到单独子卷里（排出根子卷），以避免打快照时将其全部加入，增大空间消耗。
+
+例如，`/var/cache`, `/var/tmp`, `/var/log`, `~/.cache` 等位置都应该建立单独子卷。
 
 如果在某位置新建子卷，该位置存在的文件将被覆盖。那么在需要保存文件前提下，如何新建子卷呢？答案是手动处理。([src](https://dev.to/klo2k/convert-directory-into-btrfs-subvolume-p98))
 

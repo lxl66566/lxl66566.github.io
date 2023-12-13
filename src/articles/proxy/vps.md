@@ -31,6 +31,7 @@ tag:
 |20230602 [vpslog](https://distribute.vpslog.net/)||free||64MB|||<dtls>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</dtls>|
 |20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>性价比高，代价是超售。提供 archlinux 镜像，很好。</dtls>
 |20231212 azure (stu free)|Korea Central|$9.xx/mo|unknown|1GB|30GB|1|<dtls>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtls>|
+|20231213 aliyun (stu free)|HK|288CNY/yr|1024 GB unknown||40GB|2|免费香港机，我想都不敢想|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
@@ -55,6 +56,7 @@ tag:
 
 ## 工具
 
+- [一键脚本](https://github.com/lxl66566/init-script)：不得不提我自己写的一键脚本，一键 hysteria + trojan-go + trojan
 - [ping.pe](https://ping.pe/#)：连通性
 - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
 
@@ -99,6 +101,16 @@ Host <name>
 `cat ~/.ssh/id_*.pub` 并复制，再粘贴到 vps 的 `~/.ssh/authorized_keys` 内。
 
 :::
+
+### 允许 root
+
+一般的 vps 都是允许 root 登录的，但是像 azure 这些“大厂”则不行。所以需要用户进去改 ssh 配置。
+
+```sh
+sudo vim /etc/ssh/sshd_config
+# 设置：PermitRootLogin yes, PasswordAuthentication yes
+sudo systemctl restart ssh
+```
 
 ### 端口转发
 

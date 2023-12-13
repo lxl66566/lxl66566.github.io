@@ -100,6 +100,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
   > ps. 上传修复了。
 - 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN) | [找脚本](http://zhaojiaoben.cn/)
 - 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/) | [Explore connected papers in a visual graph](https://www.connectedpapers.com/)
+- 漫画：[漫自由](https://mhx12.com/)
 
 ### 音乐
 
