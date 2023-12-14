@@ -190,9 +190,9 @@ firewall-cmd --zone=public --list-ports
 
 [^2]: 本来是想用 X-UI 的，然而[出了问题](#x-ui-does-not-work)
 
-随着后来自己也使用 linux，我对于一键脚本不够满意，因此开始自己写 trojan-go 的配置文件。
+随着后来自己也使用 linux，我对于一键脚本不够满意，因此开始[自己写 trojan/trojan-go 配置文件](./trojan-go.md)。也尝试了一下 hysteria 协议，并且写了个[教程](./hysteria.md)。
 
-也尝试了一下 hysteria 协议，并且写了个教程。
+评价起来就是，hysteria 延迟最低，trojan-go 小幅度落后，差得不多。trojan 延迟比较大，但是胜在兼容性强。而 hysteria 风险较大，没必要为了几十 ms 延迟去冒险，因此还是 trojan-go 适合我。
 
 ### WARP
 

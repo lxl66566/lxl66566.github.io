@@ -74,6 +74,11 @@ const data = [
   { id: "(ex)", aScore: 3.7, bScore: 7.2, info: "#寸止", otherlink: "https://exhentai.org/g/2480501/a346125f42/", bak: "https://telegra.ph/大伴ヤキ-虎の春-COMIC-快楽天-2023年4月号-中国翻訳-DL版-08-01" },
   { id: "(ex)", aScore: 7.8, bScore: 7.6, info: "#兄妹 #睡x", otherlink: "https://exhentai.org/g/2763933/9fa25f0ef2/", bak: "https://telegra.ph/Rev3-もんちゃんrev3-寝てる時は素直-中国翻訳-DL版-12-11" },
   { id: "392293", aScore: 6.9, bScore: 7, info: "#日常崩坏", bak: "https://telegra.ph/Oomori-Tokui-Taishitsu-Bishoujo-Maniacs-夜空下的萝莉x真不可视汉化组-11-16" },
+  { id: "256374", aScore: 7.2, bScore: 7.9, info: "#碧蓝航线", bak: "https://telegra.ph/COMIC114-PiyoPit-ぴよ寺むちゃ-イったらケッコンエイジャックス-アズールレーン-中国翻訳-08-03" },
+  { id: "324634", aScore: 8.2, bScore: 3, info: "#猫娘", bak: "https://telegra.ph/日本ケモ耳推奨委員会-よろず-けもみみ-きゅんきゅん-中国翻訳-DL版-進行中-08-03" },
+  { id: "471937", aScore: 3.4, bScore: 6.8, bak: "https://telegra.ph/天気輪-甘露アメ-イチャらぶセックスで100回イかないと出られない部屋-中国翻訳-DL版-09-06" },
+  { id: "(ex)", aScore: 5.5, bScore: 3.5, info: "#户外 #纯爱", otherlink: "https://exhentai.org/g/2658913/5fde2e3101/", bak: "https://telegra.ph/東横サーフライダー-ふみー-ぼくたちとあるなつの日-中国翻訳-DL版-08-30" },
+  { id: "482029", aScore: 6.3, bScore: 4, info: "#蔚蓝档案", bak: "https://telegra.ph/せんせーのアーカイブ10-七尾重工-ななお-ヒフミがいい匂いの本-ブルーアーカイブ-中国翻訳-11-18" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

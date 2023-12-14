@@ -51,7 +51,7 @@ export default sidebar({
 		},
 		{
 			text: "经历",
-			children: ["linux", "windows_setting.md", "mobile"],
+			children: ["linux", "windows_setting.md", "mobile", "browser"],
 		},
 		{
 			text: "教程",

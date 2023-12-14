@@ -233,7 +233,12 @@ utools vs diy my tools
 
 [^2]: [source](https://www.zhihu.com/question/315889356)
 
-## python 写的软件有多难用
+## python 有多难用
+
+- python module 看着很方便，实际上仍然过于粗暴，解决不了交叉引用的问题。
+- python 的高阶函数（`filter`, `map`, `reduce` 等）语法又非常变态，`func` 放前面，`self` 放后面，做个 UFCS 还得和其他函数分裂。
+
+### python 写的软件有多难用
 
 - 性能就不多说了，虽然 numpy 用 C 写了性能还行，但除开数值计算，其他方面就很阴间。
 - 打包阴间。不管是 pyinstaller 还是 nuitka 都贼拉，体积爆炸[^4]。

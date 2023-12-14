@@ -9,7 +9,7 @@ tag:
 
 # Python
 
-python 易学易用，使用广泛，生态完善，除了性能外没啥缺点。
+python 实际上并不简单，只不过生态比较好。[暴论：python 有多难用](../gossip/fuckxxx.md#python-有多难用)
 
 在经历了 bash 地狱般的折磨[^2]后，我选择 python 作为脚本语言。
 
