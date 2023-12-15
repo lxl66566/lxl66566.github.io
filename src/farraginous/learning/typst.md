@@ -152,6 +152,8 @@ console.log("1")
 
 其他大学模版的解法是用 python 写了个处理脚本，通过 CSL 解析，半自动加参考文献。
 
+后续：修了，0.10.0 正常。
+
 ### 缩进
 
 [issue](https://github.com/typst/typst/issues/311)
@@ -160,17 +162,9 @@ console.log("1")
 
 所以下面有人提供了[一个解法](https://github.com/typst/typst/issues/311#issuecomment-1678940781)：
 
-```
-
+```typst
 show heading: it => {
-it
-par()[#text(size:0.5em)[#h(0.0em)]]
+  it
+  par()[#text(size:0.5em)[#h(0.0em)]]
 }
-
-```
-
-> 我最早在知乎看到一个解法，但是有副作用。。
-
-```
-
 ```

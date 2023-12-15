@@ -237,6 +237,8 @@ utools vs diy my tools
 
 - python module 看着很方便，实际上仍然过于粗暴，解决不了交叉引用的问题。
 - python 的高阶函数（`filter`, `map`, `reduce` 等）语法又非常变态，`func` 放前面，`self` 放后面，做个 UFCS 还得和其他函数分裂。
+- python 不优化尾递归。
+- python lambda 只有一行。
 
 ### python 写的软件有多难用
 

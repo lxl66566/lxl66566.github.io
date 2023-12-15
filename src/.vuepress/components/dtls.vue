@@ -1,6 +1,6 @@
 <template>
   <details>
-    <summary>{{ alt ?? "点击展开" }}</summary>
+    <summary>{{ alt }}</summary>
     <slot></slot>
   </details>
 </template>
@@ -10,8 +10,9 @@ export default {
   props: {
     alt: {
       type: String,
-      required: false
-    }
-  }
+      required: false,
+      default: "点击展开",
+    },
+  },
 };
 </script>

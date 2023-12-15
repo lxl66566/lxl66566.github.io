@@ -27,11 +27,11 @@ tag:
 <!-- prettier-ignore -->
 |Host|location|Price|bandwidth|RAM|Storage|Core|saying|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695)|San Jose|$10.28/yr|1000GB 1Gbps|768MB|10GB|1|<dtls>装了 Debian 10。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。</dtls>[^1]|
+|20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695)|San Jose|$10.28/yr|1000GB 1Gbps|768MB|10GB|1|<dtls>装了 Debian 10（后来换成了 12）。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。[^1]</dtls>|
 |20230602 [vpslog](https://distribute.vpslog.net/)||free||64MB|||<dtls>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</dtls>|
-|20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>性价比高，代价是超售。提供 archlinux 镜像，很好。</dtls>
-|20231212 azure (stu free)|Korea Central|$9.xx/mo|unknown|1GB|30GB|1|<dtls>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtls>|
-|20231213 aliyun (stu free)|HK|288CNY/yr|1024 GB unknown||40GB|2|免费香港机，我想都不敢想|
+|20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>性价比高。提供 archlinux 镜像。</dtls>|
+|20231212 azure|Korea Central|~~$9.xx/mo~~ free|unknown|1GB|30GB|1|<dtls>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtls>|
+|20231213 aliyun|HK|~~288CNY/yr~~ free|1024 GB unknown|896MB|40GB|2|<dtls>香港地区无法使用 TG。免费的香港机我想都不敢想（）</dtls>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
@@ -45,6 +45,8 @@ tag:
 :::
 
 ### 学生优惠
+
+阿里云和 Azure 理论上都是不能当 VPN 用的，有封号风险 <heimu>阿里云实名，甚至需要考虑会不会被打电话</heimu>，自己偷偷跑点差不多得了。
 
 - 阿里云：免费服务器，每年 300 元优惠券，可以全额抵扣。
   1. （需要 chromium 系浏览器）[university.aliyun.com](university.aliyun.com) 学生认证领券
@@ -125,7 +127,7 @@ socat -dd -lf <log_file> TCP-LISTEN:<from>,reuseaddr,fork TCP:localhost:<to>  # 
 socat -dd -lf <log_file> -F port_forwarding.conf  # 泛用型
 ```
 
-socat 默认在终端前台进行端口转发，需要后台运行的话可以[写个服务](https://unix.stackexchange.com/a/658320)。
+socat 默认在终端前台进行端口转发，需要后台运行的话可以[写个服务](https://unix.stackexchange.com/a/658320)，或者[终端复用](../linux/package.md#tmux)。
 
 @tab firewalld
 

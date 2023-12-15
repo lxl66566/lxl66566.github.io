@@ -71,15 +71,13 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 
 - [Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
 
-## [V2rayN](https://github.com/2dust/v2rayN)
+## V2ray 系
 
-### 简介
+### [V2rayN](https://github.com/2dust/v2rayN)
 
-V2rayN 是 V2ray 的 windows 前端，支持自定义协议。
+V2rayN 是 V2ray 的 windows 前端，支持自定义协议，也可以更换内核。
 
 相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点+规则，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用 clash 配置文件。
-
-### 简易教程
 
 1. 前往 PC 客户端项目地址，下载
    - 可以选择下载 `v2rayN-With-Core.zip`，最为简单无脑。
@@ -96,45 +94,17 @@ V2rayN 是 V2ray 的 windows 前端，支持自定义协议。
 3. 一键测延迟/速度，选择节点双击激活。
 4. 同上方 4.
 
-### [NekoRay](https://github.com/MatsuriDayo/nekoray)
-
-基于 Qt 的代理软件。记得好像有停更过一阵子，仓库提交记录是 2022 开始的，找不到。
-
 ### V2rayNG
 
 v2ray 的 Android 前端。
 
-### sing-box 系
+### [NekoRay](https://github.com/MatsuriDayo/nekoray)
 
-_sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 _The universal proxy platform_。
+基于 Qt 的代理前端，支持 V2ray & sing-box 内核。
 
-- [NekoBox](https://github.com/MatsuriDayo/NekoBoxForAndroid)：Matsuri 的继任。
-- [Matsuri](https://github.com/MatsuriDayo/Matsuri)：项目已 archived。之前用过一阵，后面换回 V2rayNG 了。
-- [SagerNet](https://github.com/SagerNet)：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。
+> 记得好像有停更过一阵子，仓库提交记录是 2022 开始的，找不到。
 
-并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。
-
-#### [daed](https://github.com/daeuniverse/daed)
-
-> 根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多
-> ::: right
-> ——Au, [src](https://t.me/archlinuxcn_group/2912643)
-> :::
-
-网页面板的开源代理，dae 的前端。由于比较新，目前使用的人不多。
-
-```sh
-sudo pacman -S daed
-sudo systemctl enable --now daed
-```
-
-这样就开机自启，并可以 `localhost:2023` 进面板了。然后写节点，拖到 proxy 里就行。
-
-daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
-
-需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。
-
-#### v2raya
+### v2raya
 
 v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。（后面逃到 daed 了）
 
@@ -148,3 +118,37 @@ set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理�
 之后的操作都在网页上进行。使用系统代理端口为 `http://127.0.0.1:20172`，这个端口带自动分流。
 
 如果需要后台运行，开机自启，可以参考[文档](https://v2raya.org/docs/advanced-application/noroot/)：`systemctl --user enable --now v2raya-lite.service`
+
+## sing-box 系
+
+_sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 _The universal proxy platform_，以支持的协议多闻名。
+
+缺点就是 bug 也多。
+
+- [NekoBox](https://github.com/MatsuriDayo/NekoBoxForAndroid)：Matsuri 的继任，Android 端的好选择。
+- [Matsuri](https://github.com/MatsuriDayo/Matsuri)：项目已 archived。之前用过一阵，后面换回 V2rayNG 了。
+- [SagerNet](https://github.com/SagerNet)：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。
+
+并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。
+
+### [daed](https://github.com/daeuniverse/daed)
+
+> 根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多
+> ::: right
+> ——Au, [src](https://t.me/archlinuxcn_group/2912643)
+> :::
+
+daed 是网页面板的开源代理软件，dae 的前端，而 dae 仅支持 linux。由于比较新，目前使用的人不多。
+
+它是我目前用过的**最舒服**的代理软件，可以**维护一个节点池**，根据不同规则进行分流。例如香港不能用 tg，那就加一条规则就行。
+
+```sh
+sudo pacman -S daed
+sudo systemctl enable --now daed
+```
+
+这样就开机自启，并可以 `localhost:2023` 进面板了。然后写节点，拖到 proxy 里就行。
+
+daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
+
+需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。

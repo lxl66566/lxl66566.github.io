@@ -245,6 +245,8 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 `ls='exa --all --long --color-scale size --binary --header --time-style=long-iso'`
 
+需要 exa 到一定版本才能用。起码 _ubuntu 22.04_ 上的 0.10 是不可用的。
+
 ### tmux
 
 tmux 是一个 Terminal Multiplexers（终端复用）。支持多窗口，分屏，后台挂起，在**不使用图形界面**（服务器上）或有恢复 shell 需求时比较好用。
