@@ -79,6 +79,10 @@ const data = [
   { id: "471937", aScore: 3.4, bScore: 6.8, bak: "https://telegra.ph/天気輪-甘露アメ-イチャらぶセックスで100回イかないと出られない部屋-中国翻訳-DL版-09-06" },
   { id: "(ex)", aScore: 5.5, bScore: 3.5, info: "#户外 #纯爱", otherlink: "https://exhentai.org/g/2658913/5fde2e3101/", bak: "https://telegra.ph/東横サーフライダー-ふみー-ぼくたちとあるなつの日-中国翻訳-DL版-08-30" },
   { id: "482029", aScore: 6.3, bScore: 4, info: "#蔚蓝档案", bak: "https://telegra.ph/せんせーのアーカイブ10-七尾重工-ななお-ヒフミがいい匂いの本-ブルーアーカイブ-中国翻訳-11-18" },
+  { id: "483110", aScore: 7.5, bScore: 2.8, info: "#蔚蓝档案", bak: "https://telegra.ph/ほるもんカレー-鳶村-杏山カズサ-進捗4-ブルーアーカイブ-中国翻訳-DL版-11-26" },
+  { id: "468634", aScore: 3.2, bScore: 5.2, info: "#loli", bak: "https://telegra.ph/やみなべ-トライデント-123話-国語算数理科セックス-Chinese-甜族星人x草莓人山楂屋漢化-08-17" },
+  { id: "462114", aScore: 8.4, bScore: 9.6, info: "#触手 #史莱姆", bak: "https://telegra.ph/tete-a-tete-夕凪ショウ-ひみつのともだち-中国翻訳-DL版---Page-1-09-18" },
+  { id: "479763", aScore: 8.8, bScore: 6.1, info: "#露出 #制服", bak: "https://telegra.ph/caburibbon-caburi-SSSDI2-中国翻訳-DL版-10-30" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

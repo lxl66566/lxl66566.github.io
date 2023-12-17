@@ -1,0 +1,107 @@
+---
+date: 2023-12-17
+icon: code
+category:
+  - 编程
+  - 主张
+tag:
+  - 编程语言
+  - 哲学
+---
+
+# 编程语言哲学
+
+> 在编程领域我只能算一个 beginner，读书不够多，此处是一点**不成熟的拙见**，难免有误，欢迎批评。
+
+在接触了各种编程语言后，我常常思考如何构建自己的编程语言，这也是我了解、尝试各种语言的动力之一。
+
+编程语言是建立在抽象上的。从机器码到指令集，从汇编到高阶语言，从编译型到解释型，语言在抽象的同时也带来了巨大的开销。
+
+解耦是编程语言中重要的一环。后文有着更深入的描述。
+
+从编程语言哲学衍生出的抽象与解耦的概念，也是形成[我的价值观](../gossip/va_view.md)的重要因素之一。我将抽象与解耦的 _现实举例_ 放在了价值观页面，有兴趣可以跳转查看。
+
+## 抽象
+
+我们将每一条指令、一个数据看作一个点。
+
+### 函数
+
+我愿意说函数是最早的抽象。_函数_ 这个概念比 _编程_ 出现还早得多，因此说底层也不足怪。现代处理器的指令集本身就可以看成是电路操作的函数。
+
+很容易把函数想象成 pipe，一边输入，一边输出，因此函数是线级抽象。（真的吗？）
+
+- Question1: 假设 RISC 是 CISC 的解耦，那么 CISC 指令集是否还是函数层级抽象？
+
+### 结构
+
+结构是比函数高一阶的抽象（面级）。
+
+C 的 struct & union 可以组合任意数据类型。由于 function pointer 也是数据类型，因此也可以组合函数。
+
+那么为什么结构就比函数高阶呢？这确实不好解释，我放到后文来讲。
+
+### OOP
+
+最后才是 OOP 的天下。OOP 是比组合高阶的抽象（体级），优化了函数的组合语法，加了权限控制，继承关系等。其中的**继承关系**是关键，是抽象进阶的根源。
+
+所有类（包括抽象类）如果是单继承的，那么继承关系构成一颗（许多棵）树。
+
+#### interface & trait
+
+至于 interface 和 trait 就更复杂了，我一开始还不太清楚它们的抽象层级。它们看起来花里胡哨，把自己叫成 implement[^1] 而不是 inherit，实际上也可以直接看成多继承特性，交织的继承关系不再是树而是 DAG，但仍然没有维度上的突破。
+
+[^1]: implement 有一种在《三体》"蓝色空间"号上通过四维空间碎片（高阶抽象）支配三维空间（低阶抽象）的感觉。
+
+相比之下，trait 要比 interface 灵活一点。
+
+- interface 不提供方法实现，充其量只能算是多继承 dlc 而已。trait 则是拿着不同具体实现往 struct/dyn trait 上贴，
+- java 说 `(a class) implementing an interface`，是以 class 为主导的。而 rust 说 `impl(ement) trait for a struct`，以 trait 为主导。这种差异也导致我写 java 会先脑测好 interface，再用 class 去 implement，而写 rust 就刷刷刷，突然有想法就一拍脑袋拍出一个 trait 用。
+
+很难想象 interface 和 trait 是同一个抽象层次的东西，但它们确实是。
+
+### FP
+
+那么，前面介绍了那么多层的抽象来帮助程序员编写 strong code，为什么还有很多函数式（_Functional Programming_）语言流行并活跃，比如 Ocaml, Haskell 和 Lisp 呢？为什么只有一阶抽象的函数能有这么强的竞争力？
+
+FP 采用了不同的方式进行抽象，不进行继承，而是**组合**。组合不进行维度上的抽象，而是在同一维度构建所需要的一切。
+
+例如，SICP 第二章描绘了如何从 pair 通过组合抽象，构建出 list, filter, map 等（~~我只读到这里非常抱歉~~），后面还涉及到 lambda 演算和组合子[^2]，这些是构成 FP 的基础。
+
+[^2]: 有一篇可以拿来当组合子快速入门的文章在 [rust external 2.](./Rust.md#external)。
+
+其他 FP 锐评，还是等我多读点书再说吧。
+
+## 解耦
+
+（相关条目：[杂论 - 解耦论](../gossip/va_view.md#解耦论)）
+
+已经有部分语言开始自发地（或被迫地）解耦。
+
+- [external 3.](#external) 介绍了 JavaScript 普通函数和异步函数的解耦。
+- [external 4.](#external) 构想了数据类型和模块的解耦。
+
+- Question2: Trait 剥离了 OOP 的 inheritance，算不算一种解耦？
+
+### module
+
+模块化是很好的解耦实例。模块化把抽象出的结构包成黑箱，只留下外部 API 接口，能够方便代码复用，减轻程序员心智负担。
+
+模块化的另一个关键是组合（FP 不请自来）。将小模块组合成大模块，提供更高层次的抽象。
+
+例如 OOP 很好地实现了模块化的思想（权限控制）。
+
+#### 语言实现
+
+- C 这种底层语言没有模块化。可以理解。
+- C++ 的模块化做的稀烂，`#include` 只是简单地复制代码。之前一般用 `inline` 内联，C++ 20 以后才有了 module，但直到现在各方编译器的实现还不完善。
+- python 的模块[粒度不够细](../gossip/fuckxxx.md#python-有多难用)，无法实现交叉引用，本质只是复制代码（加强版）而已(?)。
+
+## 梦中情语
+
+## external
+
+1. [Lies we tell ourselves to keep using Golang](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang)
+2. [A decade of developing a programming language](https://yorickpeterse.com/articles/a-decade-of-developing-a-programming-language/)
+3. [What Color is Your Function?](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)
+4. [Object-Oriented Programming is Good\*](https://www.youtube.com/watch?v=0iyB0_qPvWk)
