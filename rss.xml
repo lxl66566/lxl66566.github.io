@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 15 Dec 2023 15:08:21 GMT</pubDate>
-    <lastBuildDate>Fri, 15 Dec 2023 15:08:21 GMT</lastBuildDate>
+    <pubDate>Sun, 17 Dec 2023 02:17:59 GMT</pubDate>
+    <lastBuildDate>Sun, 17 Dec 2023 02:17:59 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -2404,8 +2404,8 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p>分为硬链接和软链接。硬链接文件共享相同的 inode 值，指向同一份文件，因此是同步更新。软链接就是快捷方式。</p>
 <p>git 内添加链接指向的文件需要手动 <code>git add -f</code>。</p>
 <h2> 服务</h2>
-<p>与 windows <em>service</em> 的概念相通。有的 debian 系 distro 使用 <code>service</code> 指令，而 archlinux 使用 <code>systemctl</code> 进行服务管理。<a href="https://wiki.archlinux.org/title/systemd" target="_blank" rel="noopener noreferrer">archwiki</a></p>
-<p>查看服务的输出，一般在 status 里会有，也可以前往<a href="#%E6%97%A5%E5%BF%97">日志</a>查看。</p>
+<p>与 windows <em>service</em> 的概念相通。有的 debian 系 distro 使用 <code>service</code> 指令，而 archlinux 使用 <code>systemctl</code> 进行服务管理。<a href="https://wiki.archlinux.org/title/systemd" target="_blank" rel="noopener noreferrer">archwiki</a>。现在 <code>systemctl</code> 才是主流。</p>
+<p>查看服务的输出，一般在 status 里会有几条，也可以前往<a href="#%E6%97%A5%E5%BF%97">日志</a>查看。</p>
 <h3> 基本概念</h3>
 <p>每个服务（unit）是一个 <code>.service</code> 文件，存放在不同位置，其中由软件安装的服务在 <code>/usr/lib/systemd/system/</code> 下。</p>
 <ul>
@@ -2434,7 +2434,10 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <h2> .desktop</h2>
 <p>许多软件安装后可以在 krunner 中直接运行，实际上就是读取了 <em>.desktop file</em>。</p>
 <p><em>.desktop file</em> 理解为启动脚本。只要随便打开看一个就懂了。</p>
-<p><em>.desktop file</em> 保存在 <code>~/.local/share/applications</code>。</p>
+<p>软件的 <em>.desktop file</em> 一般保存在 <code>~/.local/share/applications</code>。</p>
+<h2> 文件传输</h2>
+<p>rsync 用于主机之间的文件传输，带有断点恢复等功能。</p>
+<p>我比较推荐 <code>rsync -aviuzP ...</code>。具体什么意思，这里不赘述。</p>
 <h2> external</h2>
 <ol>
 <li>了解一下 btrfs（注意时效）：<a href="https://www.mivm.cn/linux-btrfs-usage-guide" target="_blank" rel="noopener noreferrer">Linux Btrfs 文件系统使用指南</a></li>
@@ -2950,6 +2953,12 @@ xfs 比较适合数据库使用，并发写性能好 (<a href="https://t.me/arch
 <p><a href="https://wiki.archlinux.org/title/Distrobox" target="_blank" rel="noopener noreferrer">archwiki</a>；通过容器，模拟其他的发行版。</p>
 <p>注意，home 目录是共享的，不能当作沙盒使用。</p>
 <p>我试着安装了一个 ubuntu 22.04，占用空间 500M 左右。</p>
+<h3> 录音</h3>
+<p>其实 obs 就能录，但是有点重，我想试试其他的。</p>
+<p>我先尝试了一下 <code>krecorder</code>，但是使用体验不算好，完全无法录音。音源把能选的都选了一遍，录音还是无法开始。</p>
+<p>后来想用 <code>recordmydesktop</code>，结果 gtk 和 qt 前端都装不上，gtk 缺依赖包，qt 编译了半天，时间全花在输出 warning 了。</p>
+<p>然后从网上抄了一个 ffmpeg 代码，并改进了一下：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>it works.</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
