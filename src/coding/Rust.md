@@ -291,6 +291,15 @@ r = "run"
 
 ### [最小化二进制](https://github.com/johnthagen/min-sized-rust)
 
+一般这样够用了。~~我虽然敏感，但没有那么极端。~~
+
+```toml
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+```
+
 ## 测试
 
 assert 有 `assert!()` 和 `debug_assert!()` 之分，感觉对于应用开发，使用 `debug_assert!()` 会更妥当一些。

@@ -5,6 +5,8 @@ export default sidebar({
 			text: "闲聊",
 			link: "/gossip/",
 			children: [
+				"worldview.md",
+				"va_view.md",
 				"author.md",
 				"schedule.md",
 				"wish.md",
@@ -18,7 +20,6 @@ export default sidebar({
 				"chicken_soup.md",
 				"zero_fill.md",
 				"brainhole.md",
-				"va_view.md",
 			],
 		},
 	],
@@ -45,10 +46,6 @@ export default sidebar({
 	],
 	"/articles/browser/": ["index.md", "assess.md", "settings.md"],
 	"/articles/": [
-		{
-			text: "主张",
-			children: ["worldview.md"],
-		},
 		{
 			text: "经历",
 			children: ["linux", "windows_setting.md", "mobile", "browser"],

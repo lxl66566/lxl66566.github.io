@@ -18,7 +18,13 @@ tag:
 你国计算机教育就是一坨屎（我是说绝大多数的大学校）。思政课先不说，为什么要学大学物理，大物实验，数字电路？编程语言为什么还在用上古版本？
 :::
 
-编程领域，本人比较喜欢 ToC 软件开发，实用至上，自由主义。
+编程领域，本人比较喜欢 ToC 软件开发[^2]，实用至上，自由主义，热爱开源。
+
+[^2]: 深层原因可能是：[我太喜欢找茬辣！](../gossip/fuckxxx.md)
+
+## 我的思考
+
+1. [做白日梦——编程语言哲学构想](./dreaming_language.md)
 
 ## 语言有关
 
@@ -85,5 +91,3 @@ tag:
 1. [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 2. [经典技术书籍 PDF 文件](https://awesome-programming-books.github.io/)
    - [Modern Compiler Implementation in ( Java | ML | C )](https://www.cs.princeton.edu/~appel/modern/)
-3. [Lies we tell ourselves to keep using Golang](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang)
-4. [A decade of developing a programming language](https://yorickpeterse.com/articles/a-decade-of-developing-a-programming-language/)

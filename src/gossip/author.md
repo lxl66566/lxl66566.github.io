@@ -20,6 +20,7 @@ category:
 - 绝对有限理性
 - 节欲派
 - 激进派与自由主义
+- 解构派
 - 健忘者
 - 旋律党
 - 边缘二次元人
@@ -29,7 +30,7 @@ category:
 
 - 什么是意义党？
   - 个人定义`意义党`：`只做自认为有意义的事。`这会让我有一种充实感。我从高三开始初步形成这种思想，并在上大学后逐渐强化。现在则成为我的人生态度。
-- 为什么会成为意义党？ _关联[被害妄想](../hide/personal_details.md#深层性格)，[意义道](../articles/worldview.md#意义道)_
+- 为什么会成为意义党？ _关联[被害妄想](../hide/personal_details.md#深层性格)，[意义道](../gossip/worldview.md#意义道)_
   - 幻想自己死掉以后的种种。世界仍然在行进，我却没有意识感受这一切。这会让我感到恐惧。人生长则百年，短则随时都可能死亡。我需要做一些有意义的事来对抗幻想中的虚无。
 - 为什么 _非纯粹_ ？
   - 自控力差。明知道某些游戏没有任何意义，却还是忍不住玩下去。这与意义党的理念相悖。~~（虽然也有戒游戏成功的例子[^3]，但大体上还是摇摆不定的）~~
@@ -77,7 +78,7 @@ category:
 
 <iframe frameborder="no" src="/charts/sense_persentage_of_my_life.html" width="100%" height="280" loading="lazy"></iframe>
 
-也不妨看看[道论](../articles/worldview.md)。
+也不妨看看[道论](../gossip/worldview.md)。
 
 ## 我的爱好
 

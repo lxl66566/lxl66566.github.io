@@ -22,6 +22,10 @@ category:
 
 ## 2023
 
+### 20231217
+
+- 移动 _道论_ 至 _闲聊区_，并定义 _道论_ 与 _杂论_ 的关系。
+
 ### 20231210
 
 - 尝试将各种 lineplot 写成 vue 组件[失败](./withvuepress2.md#尝试将-plot-放入-vue-组件)
@@ -339,7 +343,7 @@ category:
 
 ### 20230328
 
-- **新增 [道论](../articles/worldview.md)**
+- **新增 [道论](../gossip/worldview.md)**
 
 ### 20230320
 

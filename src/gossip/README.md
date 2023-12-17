@@ -9,6 +9,13 @@ category:
 
 请选择你想进入的闲聊板块。
 
+## 观念
+
+1. [道论](./worldview.md)
+2. [杂论](./va_view.md)
+
+## 其他
+
 1. [关于作者](./author.md)
 2. [作者的日程库](./schedule.md)
 3. [社会愿望（加密）](./wish.md)
@@ -22,4 +29,3 @@ category:
 11. [鲜鸡汤](./chicken_soup.md)
 12. [「零化（Zero Fill）」](./zero_fill.md)
 13. [脑洞](./brainhole.md)
-14. [杂论](./va_view.md)

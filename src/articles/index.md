@@ -11,8 +11,6 @@ category:
 
 - 这里有一些[外部文章分享](./external.md)。
 
-## [道论](./worldview.md)
-
 ## [linux 相关](./linux/index.md)
 
 ## [手机相关](./mobile/index.md)
