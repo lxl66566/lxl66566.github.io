@@ -108,9 +108,9 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 
 ## 服务
 
-与 windows _service_ 的概念相通。有的 debian 系 distro 使用 `service` 指令，而 archlinux 使用 `systemctl` 进行服务管理。[archwiki](https://wiki.archlinux.org/title/systemd)
+与 windows _service_ 的概念相通。有的 debian 系 distro 使用 `service` 指令，而 archlinux 使用 `systemctl` 进行服务管理。[archwiki](https://wiki.archlinux.org/title/systemd)。现在 `systemctl` 才是主流。
 
-查看服务的输出，一般在 status 里会有，也可以前往[日志](#日志)查看。
+查看服务的输出，一般在 status 里会有几条，也可以前往[日志](#日志)查看。
 
 ### 基本概念
 
@@ -152,7 +152,13 @@ sudo python /usr/bin/systemctl <command>
 
 _.desktop file_ 理解为启动脚本。只要随便打开看一个就懂了。
 
-_.desktop file_ 保存在 `~/.local/share/applications`。
+软件的 _.desktop file_ 一般保存在 `~/.local/share/applications`。
+
+## 文件传输
+
+rsync 用于主机之间的文件传输，带有断点恢复等功能。
+
+我比较推荐 `rsync -aviuzP ...`。具体什么意思，这里不赘述。
 
 ## external
 

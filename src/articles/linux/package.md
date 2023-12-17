@@ -332,3 +332,19 @@ waydroid show-full-ui
 注意，home 目录是共享的，不能当作沙盒使用。
 
 我试着安装了一个 ubuntu 22.04，占用空间 500M 左右。
+
+### 录音
+
+其实 obs 就能录，但是有点重，我想试试其他的。
+
+我先尝试了一下 `krecorder`，但是使用体验不算好，完全无法录音。音源把能选的都选了一遍，录音还是无法开始。
+
+后来想用 `recordmydesktop`，结果 gtk 和 qt 前端都装不上，gtk 缺依赖包，qt 编译了半天，时间全花在输出 warning 了。
+
+然后从网上抄了一个 ffmpeg 代码，并改进了一下：
+
+```sh
+ffmpeg -f pulse -i 0 -c:a libmp3lame -b:a 128k -af "volume=0.04" pulse.mp3
+```
+
+it works.

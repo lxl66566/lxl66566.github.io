@@ -292,7 +292,7 @@ pprint(an_obj)  # <__main__.o object at 0x00000234DC0FAF60>
 
 ### configparser
 
-py 自带模块。configparser 做 config 对客户而言比较新手友好。如果对 config file 有很高兼容性要求可以用 json。
+configparser 做 config 对客户而言比较**新手友好**，至少不会像 json 那样多加 / 少加 `,`。不过 json 兼容性比较好。
 
 ```py
 from configparser import ConfigParser
@@ -303,6 +303,8 @@ config[section][option] = value             # 新增 / 修改
 with open("config.ini", "w") as configfile:
   config.write(configfile)                  # 写
 ```
+
+configparser 被设计成尽可能兼容所有 config，因此可以自定义分隔符，注释符等。
 
 ### [subprocess](https://docs.python.org/zh-cn/3/library/subprocess.html)
 

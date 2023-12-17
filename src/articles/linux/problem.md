@@ -31,13 +31,20 @@ tag:
 首先把 timeout 改到 10s。
 
 ```sh
-set -Ux DEFAULT_TIMEOUT_SEC 10
+sudo printf "DEFAULT_TIMEOUT_SEC=10\n" >> /etc/environment
+# 不能 set -Ux DEFAULT_TIMEOUT_SEC 10，因为不读 fish 环境变量
 sudo -e /etc/systemd/system.conf
 # change this
 DefaultTimeoutStartSec={{DEFAULT_TIMEOUT_SEC}}s
 DefaultTimeoutStopSec={{DEFAULT_TIMEOUT_SEC}}s
 DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 ```
+
+但是并没有什么卵用。
+
+后面多经历了几次，发现是由于 wine 程序导致的。（_SiglusEngine_ 引擎 fxxk u）
+
+因此在关机前执行 `wineserver -k` 即可。
 
 ## waydroid 的问题
 
