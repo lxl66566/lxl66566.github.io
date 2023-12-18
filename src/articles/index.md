@@ -29,7 +29,7 @@ category:
 - [最小化二进制文件与 dll](./minimize_exe.md)
 - [命令行压缩](./cli_compress.md)
 
-## 推荐
+## 推荐/横评
 
 - [电脑、手机端记录软件使用时长](./time_record.md)
 - [运动轨迹记录软件横评](./track_record.md)
@@ -39,5 +39,6 @@ category:
 - [反向代理](./reverse_proxy.md)
 - [音频转文字](./voice2text.md)
 - [OCR](./ocr.md)
+- [PDF 阅读器横评](./pdf_reader.md)
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->

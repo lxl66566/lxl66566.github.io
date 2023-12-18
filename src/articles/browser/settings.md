@@ -43,3 +43,7 @@ tag:
    _ 在 `about:support` 中，点击 _配置文件夹 -> 打开文件夹_（_Profile Folder -> Open Folder_），在此目录下新建名为 `chrome` 的文件夹，在新文件夹下新建 `userChrome.css`，写入[此处代码](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css)。
 6. `adons.mozilla.org` 对中国用户屏蔽了广告拦截扩展，因此我使用一个第三方的[扩展商店](https://www.crxsoso.com/firefox/category/extensions) 进行安装。
 7. [强制硬件加速](https://support.mozilla.org/zh-CN/kb/performance-settings)
+
+## edge
+
+1. _设置 - 隐私、搜索和服务 - 安全性_，关闭 _阻止可能不需要的应用_

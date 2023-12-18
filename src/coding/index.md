@@ -24,7 +24,7 @@ tag:
 
 ## 我的思考
 
-1. [做白日梦——编程语言哲学构想](./philosophy_of_PL.md.md)
+1. [胡言乱语——编程语言哲学构想](./philosophy_of_PL.md)
 
 ## 语言有关
 

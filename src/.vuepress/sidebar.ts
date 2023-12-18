@@ -74,10 +74,15 @@ export default sidebar({
 				"reverse_proxy.md",
 				"voice2text.md",
 				"ocr.md",
+				"pdf_reader.md",
 			],
 		},
 	],
 	"/coding/": [
+		{
+			text: "思考",
+			children: ["philosophy_of_PL.md"],
+		},
 		{
 			text: "语言",
 			children: [
