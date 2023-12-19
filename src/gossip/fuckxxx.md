@@ -8,7 +8,12 @@ tag:
   - 负面
 ---
 
-# xxx 有多难用
+# 暴论
+
+此页面虽然是暴论的合集，但是有部分暴论并未收录于此处，而是写在相关页面内。点击前往查看：
+
+- [音游暴论](../hobbies/rhythm_games.md#暴论-为什么你不该打音游)
+- [浏览器暴论](../articles/browser/assess.md)
 
 ## 通用
 
@@ -167,6 +172,8 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 - Github 强行推广的 app 一坨屎。
   - 无法下载 raw file。
   - 代码在小屏设备上的表现不好。例如长代码会自动换行，使用户无需横向滑动，只需纵向滑动。但是这样导致了稍长的代码可以占满大部分屏幕，对信息获取并不友好。并且因为英语断词格式，无用的空区域进一步增多。
+- Github PR 的 CI 如果 failed 了，并不会通知发起者。
+- Github 首次 PR 的 workflow 需要手动验证([src](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks))。。。不是，你们 CI 改没改 `.github` 不能特判一下？非得一棒子打死？
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 
@@ -179,31 +186,6 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 - 上传完成的歌曲并不在一个 playlist 中，而是以单曲形式出现，需要自行一个个添加
 - youtube music 网页版在我删除播放列表歌曲时出现了 bug，歌曲并未删除，在刷新之后仍然存在。
 - 各种 ui 逻辑不足，例如在单击右上角头像时，点击其他空白区域并不能关闭弹窗等。
-
-## OSU 有多难玩
-
-[OSU](../hobbies/rhythm_games.md#osu) 是一款开源游戏，但是实际上其运营依旧是盈利性质的。尤其现在 OSU (stable) 的开发极为保守，与开源精神相背甚远。lazer 无法与 stable 进行联机，种种不便也导致 stable 玩家不愿迁移至更新更好（maybe）的 lazer。
-
-- —令人难过的是，osu 并不支持任何低延迟音效组件(coreaudio/wasapi/asio)。[source](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md#42-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95)
-- OSU API 无法查询 osu!mania 歌曲的 key 数信息。因此目前我使用过的谱面下载器均无法选择 key 数下载。
-- 需要纵连任务栏图标才能打开的恶性 bug 几年了都没修。。还有 edit 闪退恶性 bug
-- 倍速 mod 只有 0.75x 和 1.5x 两个可选；而很多高难歌曲需要细致到 0.05x 的间距划分。
-  - 偶然间点开了最早的没有合并的 pull request，发现是个挺不错的任意倍速功能的前置功能：任意倍数计算 star 数的功能。接近 2 years 的不被合并的更改。
-- 20230507：恶性 bug，osu 打开便闪退，目录出现 `.require_update` 文件，再次打开 `osu!.exe` 或 `repair osu!` 均会下载替换 exe 并继续闪退，不断循环。
-- [20230508](https://t.me/withabsolutex/1054)：尝试下载 osu!lazer，然后自动安装到 c 盘并把我 20+G 的谱面文件夹复制了一份到 c 盘并塞满了。直接导致了我退坑 osu。
-- pp 设计不合理。同水平段的 6,7k 玩家比 4k 玩家的 pp 和排名要高。
-- 设计缺陷，windows 下声道合成的延迟极高。原生不支持 ASIO。
-  - 只能调一个 offset 的结果就是音押和目押没法兼顾。
-- 官方态度，stable 玩家不被支持，赶人去 lazer。而 lazer 非常难用。
-  - 安装时无法选择安装目录
-  - 谱面文件夹不公开
-  - 迁移后皮肤高度不适配
-  - 卡顿问题
-- 服务器缺陷：mania 下载歌曲时不能按 key 数筛选。而不同 key 数的 mania 基本相当于两个游戏。
-- feature：既然采用了玩家作曲的开放社区，那为什么不学习一下 github 等的代码管理经验，让玩家能够为谱面发 pr？
-
-我也被坑了几次[^1]。
-[^1]: [offset 机制](https://t.me/withabsolutex/1044)，[无限崩溃](https://t.me/withabsolutex/1051)，[lazer 缺陷](https://t.me/withabsolutex/1054)
 
 ## utools 有多难用
 

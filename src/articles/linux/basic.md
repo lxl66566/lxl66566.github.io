@@ -150,9 +150,20 @@ sudo python /usr/bin/systemctl <command>
 
 许多软件安装后可以在 krunner 中直接运行，实际上就是读取了 _.desktop file_。
 
+软件的 _.desktop file_ 一般保存在 `~/.local/share/applications`。
+
 _.desktop file_ 理解为启动脚本。只要随便打开看一个就懂了。
 
-软件的 _.desktop file_ 一般保存在 `~/.local/share/applications`。
+```
+[Desktop Entry]
+Name=evince
+Comment=evince pdf reader
+Type=Application
+Exec=evince -o
+Terminal=false
+```
+
+这里提供一个较小的 `.desktop` file 示例，若软件不自带，可以考虑自己写个。
 
 ## 文件传输
 

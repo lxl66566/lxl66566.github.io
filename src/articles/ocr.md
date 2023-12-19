@@ -37,7 +37,7 @@ windows 下的 OCR 我首推 [PixPin](../farraginous/recommend_packages.md#截�
 
 ## Linux
 
-我目前用的是 [NormCap](https://github.com/dynobo/normcap)，其本质上是基于 `Tesseract OCR` 的前端。
+有个 [NormCap](https://github.com/dynobo/normcap)，其本质上是基于 `Tesseract OCR` 的前端。
 
 在 archlinux 上安装：
 
@@ -47,4 +47,6 @@ paru -S normcap tesseract-data-chi_sim
 
 然后打开，右上角 _设置_ 的 _language_ 选择 `chi` 即可。
 
-这个离线模型大小 41M 左右，准确率比起 PixPin 要差。
+这个离线模型大小 41M 左右，准确率特别差，例如 PDF 扫描件 OCR。
+
+然后我实在是忍不了了，试了一下用 wine 装 [PixPin](#windows)，居然能用，就是没有快捷键，不过也无所谓了。

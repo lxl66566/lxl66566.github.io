@@ -32,6 +32,8 @@ tag:
 
 ## 暴论：为什么你不该打音游
 
+致想要入坑音游的新人：快跑！
+
 ### 延迟
 
 整个音游环境都被**高延迟**的乌云笼罩着。
@@ -68,7 +70,31 @@ tag:
 
 #### OSU
 
-OSU 的暴论太多，~~这里地方太小写不下~~。请移步 [fuckxxx](../gossip/fuckxxx.md#osu-有多难玩) 查看。
+[OSU](../hobbies/rhythm_games.md#osu) 是一款开源游戏，但是实际上其运营依旧是盈利性质的。尤其现在 OSU (stable) 的开发极为保守，与开源精神相背甚远。lazer 无法与 stable 进行联机，种种不便也导致 stable 玩家不愿迁移至更新更好（maybe）的 lazer。
+
+- 令人难过的是，osu 并不支持任何低延迟音效组件(coreaudio/wasapi/asio)。[source](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md#42-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95)
+  - 在延迟高的情况下，如果提供两个
+- OSU 分为几个游戏板块，但是在 mania 板块却不再细分。而不同 key 数的 mania 基本相当于两个游戏。以下问题的根源其实都是官方的这种态度：
+  - OSU API 无法查询 mania 歌曲的 key 数信息，因此目前我使用过的谱面下载器均无法选择特定 key 数下载。
+    - 专打 4k 的人（你猜是不是我）却要被下载一堆 7k 谱面，污染高难 ranked 池。可能你会说，下了再删掉不就行了，但是这种方式一点也不优雅，平添了许多磁盘与网络开销。（特别是 7k 的谱还非常多）
+  - 同水平段的 7k 玩家比 4k 玩家的 pp 和排名要高。我也听到了有社区发声说要为 4k 玩家的 pp 乘上补偿系数，但目前尚未实装。
+- 需要纵连任务栏图标才能打开的恶性 bug 几年了都没修。。还有 edit 闪退恶性 bug
+- 倍速 mod 只有 0.75x 和 1.5x 两个可选；而很多高难歌曲需要细致到 0.05x 的间距划分。
+  - 偶然间点开了最早的没有合并的 pull request，发现是个挺不错的任意倍速功能的前置功能：任意倍数计算 star 数的功能。接近 2 years 的不被合并的更改。
+- 20230507：恶性 bug，osu 打开便闪退，目录出现 `.require_update` 文件，再次打开 `osu!.exe` 或 `repair osu!` 均会下载替换 exe 并继续闪退，不断循环。
+- feature：既然采用了玩家作曲的开放社区，那为什么不学习一下 github 等的代码管理经验，让玩家能够为谱面发 pr？
+
+官方态度，stable 玩家不被支持，赶人去 lazer。而 lazer 非常难用。lazer：
+
+- [20230508](https://t.me/withabsolutex/1054)：尝试下载 osu!lazer，然后自动安装到 c 盘并把我 20+G 的谱面文件夹复制了一份到 c 盘并塞满了。直接导致了我退坑 osu。（虽然当时不知道跨盘符不能硬链接确实是我的知识不足）
+- 安装时无法选择安装目录，需要安装后跳过谱面选择阶段，然后进游戏改
+- 谱面文件夹不公开，所有文件全部用 hash 值存储。
+- 迁移后皮肤不适配（按键高度不对）
+- 卡顿问题
+
+这里这么多内容完全是我的血与泪[^2]。
+
+[^2]: [offset 机制](https://t.me/withabsolutex/1044)，[无限崩溃](https://t.me/withabsolutex/1051)，[lazer 缺陷](https://t.me/withabsolutex/1054)
 
 #### phigros
 

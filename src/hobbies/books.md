@@ -134,6 +134,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
+|编程的修炼 - Edsger W. Dijkstra|2023.12.19-<br/>在读|
 |大学刑法课|2023.11.13-<br/>在读|
 |[sicp-js](https://github.com/lxl66566/sicp-js-zh/)|2023.10.13-<br/>在读|
 |经济学原理 - N.Gregory Mankiw|2023.07.2?-<br/>在读|

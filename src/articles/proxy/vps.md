@@ -42,6 +42,11 @@ tag:
 - 2023 BF
   - [InfraveoCloud](https://zhujiwiki.com/35833/)，东京机 1T 月流量只要 $9/yr。然而我已经入手了一台东京灵车，因此没钱再买了。
 
+一般价
+
+- common
+  - [Digirdp](https://zhujiwiki.com/36114/)，10$/yr，虽然 HDD，但是跑流量也不影响。
+
 :::
 
 ### 学生优惠

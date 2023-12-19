@@ -29,3 +29,4 @@ tag:
 6. [是理想也是现实：一个清华博士的非洲选择｜文化纵横](https://telegra.ph/当一位清华本硕博放弃北京中产去往非洲-10-07)
 7. [为什么固态会掉盘？著名的 30 分钟大法修复是什么原理？](https://zhuanlan.zhihu.com/p/57617932)
 8. [看看中国法院是怎么对待 GPL 协议的](https://mp.weixin.qq.com/s/zj2j5jWULDEAJPVscrNWUg) | [bak](https://telegra.ph/看看中国法院是怎么对待GPL协议的-12-11)
+9. [MSRA 读博五年（三）地下挖矿机房与数字前任计划](https://zhuanlan.zhihu.com/p/652585863)
