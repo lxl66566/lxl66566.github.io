@@ -154,7 +154,9 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [Adobe 全家桶破解](https://pity.eu.org/OD4/Adobe/)
   - [2022](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 - [Office Tool Plus](https://otp.landian.vip/zh-cn/)
-- 在线画图演示：[EXCALIDRAW](https://excalidraw.com/) | [极简白板](https://github.com/zserge/awfice#drawing-app---327-bytes)
+- 在线白板画图：
+  - [tldraw](https://www.tldraw.com/)
+  - [EXCALIDRAW](https://excalidraw.com/)
 - 在线画流程图等各种图表：[Mermaid](https://mermaid.live/edit) | [draw.io](https://draw.io)
 - [GOSSIP](https://gossip.ink/)：在线制作、放映**简易的**幻灯片
 - [随机简易 PPT 背景](https://app.haikei.app/)
@@ -188,7 +190,10 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ### 标记格式相关
 
 - 一站式 pdf 处理：[smallpdf](https://smallpdf.com/)
-- 格式转换：[Pandoc](https://pandoc.org/try)，也可以安装软件使用
+- 格式转换：[Pandoc](https://pandoc.org/try)，也可以安装软件使用。example:
+  ```sh
+  pandoc <from_file> -f latex -t typst -s -o output.typ
+  ```
 - 生成方格纸：[mygraphpaper](https://www.mygraphpaper.com/index.php?lang=zh-hans)
 
 ### [字体相关](https://www.zitijia.com/)
