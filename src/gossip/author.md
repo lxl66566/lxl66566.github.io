@@ -78,8 +78,6 @@ category:
 
 <iframe frameborder="no" src="/charts/sense_persentage_of_my_life.html" width="100%" height="280" loading="lazy"></iframe>
 
-也不妨看看[道论](../gossip/worldview.md)。
-
 ## 我的爱好
 
 建议前往 _爱好_ 版块查看。
@@ -101,10 +99,11 @@ category:
 - [CS:GO](../hobbies/other_games/csgo.md)
 - 黎明杀机
 
-### 现在主要在玩
+### 现在喜欢
 
 - [纯剧情 galgame](../hobbies/galgame.md)
 - [以 **OSU!mania 4k/6k** 为主的音游](../hobbies/rhythm_games.md)
+- [CS:GO](../hobbies/other_games/csgo.md)
 
 <!-- ~~*终于熬到了上完课，双手激动地放上键盘，OSU!挥洒你的汗水。傍晚，为时5小时的夜生活开始，开始CSGO穿越枪林弹雨。经历大战后，在galgame老婆们的怀里沉沉睡去，这大概也算是一种幸福吧。*~~ -->
 

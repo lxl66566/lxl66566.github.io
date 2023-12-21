@@ -10,19 +10,23 @@ category:
 # typst
 
 > [Typst](https://github.com/typst/typst) is a new markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.  
-> [非官方中文指南](https://typst-doc-cn.github.io/docs/chinese/)
+> [非官方中文指南](https://typst-doc-cn.github.io/docs/chinese/)，我一般拿来快速找第三方包
 
 我不是很喜欢 latex，所以尝试使用 typst 作为我的论文排版工具。
 
 优点：
 
 - typst 使用 rust 语言编写，编译极快，几乎秒出
-- 语法是类 rust 的语法，看着非常亲切
+  - 据群聊天记录所传，latex 编译 30min 的 typst 只要 46s
+- 小，二进制也就数十 MB；第三方包只有源码，约等于不占空间
 
 缺点：
 
-- 新兴工具，bug 较多
-- 社区不够完善，网上模版/教程不多
+- 新兴工具，[bug](#bug) 较多
+- 社区不够完善，网上模版/教程不多，文档很烂
+  - 面向 user 的文档还行，但是面向 developer 的…一点没有。
+- 自创的 DSL 比较折磨（这是一个连标准输出都没有的弱类型语言([src](https://github.com/typst/typst/issues/1669))，debug 很容易红温）
+  - 要我说，还不如直接用 rust（但是这样二进制大小也压不下来）
 
 ## 安装与配置
 
@@ -37,13 +41,17 @@ category:
 
 然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。
 
+## 模板
+
+[我的模板](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/template.typ)
+
 ## 基础
 
 [这里](https://typst-doc-cn.github.io/docs/chinese/#resources)有许多大学的毕业论文模版，~~多抄抄就会用了~~
 
 简单来说，`[]` 内是正文（`content`），`{}` 内是代码，`()` 是数组（`array`），正文调用函数要加 `#`，代码里可以直接调。
 
-关键字也就 `set` 和 `show` 常用，`set` 设置全局属性，`show` 设置某个组件的（外观）属性。
+关键字也就 `set` 和 `show` 常用，`set` 设置作用域内的属性，`show` 相当于每次使用都调用某个函数。
 
 剩下的 `let`，`if` 什么的都是 rust 的东西，这里不说（
 
@@ -59,19 +67,58 @@ typst 没有 `list` 类型，只有 `array`。
 
 ## 表格
 
-建议直接使用 [tablem](https://github.com/typst/packages/tree/main/packages/preview/tablem/0.1.0)，大佬写的类 markdown 语法的表格。
-
-但是还存在着一些问题，例如无法通过 `\|` 转义打出 `|` 字符，没法控制居中，只能说还在起步阶段。
+- [tablem](https://github.com/typst/packages/tree/main/packages/preview/tablem/0.1.0)，类 markdown 语法的表格，简单快速，功能不强。
+  - 无法通过 `\|` 转义打出 `|` 字符
+  - 超出列数报错（与 markdown 行为不同；在 markdown 中会直接忽略）
+- [tablex](https://github.com/PgBiel/typst-tablex)，更麻烦但更强大的表格。
+  - [无法改粗体、斜体 cell 的风格](https://github.com/PgBiel/typst-tablex/issues/18)
 
 ## 代码
 
-代码不要直接写 `typ` 文件里。最好从外部引用，解耦，还方便扔 formatter。
+大段代码不要直接写 `typ` 文件里，最好从外部引用，解耦，还方便扔 formatter。小段就无所谓了。放个我的带边框代码块：
 
-### 好看的边框
+```typst
+// 带边框代码块
+#let frame(title: none, body) = {
+  let stroke = black + 1pt
+  let radius = 5pt
+  let name = block(
+                breakable: false,
+                fill: color.linear-rgb(0, 0, 0, 10),
+                stroke: stroke,
+                inset: 0.5em,
+                below: -1.5em,
+                radius: (top-right: radius, bottom-left: radius),
+                title,
+              )
+  set text(font: 字体.代码)
+  block(
+    stroke: stroke,
+    width: 100%,
+    inset: (rest: 0.5em),
+    radius: radius,
+  )[
+    #if title != none {
+      align(top + right, name)
+    }
+    #body
+  ]
+}
+// 引入外部代码块
+#let include_code(file_path) = {
+  let name = file_path.split("/").at(-1)
+  let lang = name.split(".").at(-1)
+  frame(title: name)[
+    #raw(read(file_path), lang: lang)
+  ]
+}
+```
+
+::: details 我的折腾历程
 
 从 [#1494](https://github.com/typst/typst/issues/1494#issuecomment-1591847881) 摸了个好看的代码块样式来，然后自己改改，就是下面的了。
 
-```typ
+```typst
 #let frame(title: none, body) = {
   let stroke = black + 1pt
   let radius = 5pt
@@ -132,13 +179,21 @@ console.log("1")
 
 ````
 
+:::
+
 ### 伪代码
 
 目前在用[algorithmic](https://github.com/typst/packages/tree/main/packages/preview/algorithmic/0.1.0)，并且修了个 bug。
 
+不过目前看来，还是[lovelace](https://github.com/typst/packages/tree/main/packages/preview/lovelace/0.1.0)更泛用一点。
+
 ## bug
 
 这东西 bug 其实还真不少。。
+
+### 中文粗体斜体
+
+广为诟病的一条了，typst 不支持伪粗体伪斜体。不过据说是会修。
 
 ### 参考文献
 
@@ -168,3 +223,5 @@ show heading: it => {
   par()[#text(size:0.5em)[#h(0.0em)]]
 }
 ```
+
+这个方法在上一行是 figure 啊，raw 啊什么的时候还是无法缩进，如果手动 `linebreak()` 的话又多出了不必要的间距，太丑了。

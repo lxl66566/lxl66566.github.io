@@ -35,6 +35,8 @@ pacman 是 linux 官方指定包管理器，好用，就是指令比较难记。
   termux-change-repo  # 虽然不是 pacman（
   ```
   :::
+- [pacman 删除孤立包](https://wiki.archlinuxcn.org/wiki/Pacman/提示和技巧#删除未使用的软件包（孤立软件包）)：先检查列表，将不用删除的包[加入显式安装列表](https://wiki.archlinuxcn.org/wiki/Pacman/提示和技巧#删除必需的软件包以外的所有软件包)。
+- 常见问题：[依赖冲突](./problem.md#更新破坏依赖)
 
 ### AUR
 
@@ -72,8 +74,12 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 - 可以 `paru -Gp <package>` 看看别人写的 PKGBUILD；
 - `ldd xxx` 可以看可执行文件的链接库，方便寻找依赖。
 - `makepkg -f` 本地测试（`-f` 是覆盖下载）。
-- `updpkgsums PKGBUILD`（`-f`）可以自动更新校验和。
+- `updpkgsums` 可以自动更新校验和。
 - `namcap PKGBUILD` 检查有没有语法错误。一般会报一个 `$CARCH` 的 warning，不用管。
+- 从 Asuka 先輩那里偷来的一键更新+测试：
+  ```sh
+  alias pack='shfmt -w PKGBUILD && updpkgsums && makepkg --printsrcinfo > .SRCINFO && makepkg -C -sf && namcap *.zst'
+  ```
 
 #### 测试
 
@@ -108,6 +114,8 @@ sudo systemd-nspawn -D container  # 进入容器
 |`fastfetch`|`neofetch` 的代替|
 |[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
 |`btop` & `mission-center` / `htop` / `glances`|任务管理器，看性能，`top` 的代替|
+|`xh`|`httpie` 的代替|
+|`bat`|`cat` 的代替|
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`mcfly`](https://github.com/cantino/mcfly)|智能 history|

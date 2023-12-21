@@ -86,6 +86,7 @@ umount /mnt/windows
      --bind $PWD /build/$PWD --ro-bind /var/lib/pacman /var/lib/pacman --ro-bind ~/.ccache ~/.ccache \
      --bind ~/.cache/ccache ~/.cache/ccache --chdir /build/$PWD /usr/bin/makepkg'
      ```
+   - `pack`: 偷来的[一键打包更新](./package.md#打包)
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
 3. 设置 `/etc/fstab`
    - [挂载 tmpfs](../ramdisk.md)
