@@ -142,3 +142,42 @@ IIR：$\displaystyle\frac{\sum^M_{i=0}b_iz^{-i}}{1-\sum^N_{i=0}a_iz^{-i}}$, $a_i
 FIR：没有极点，只有 IIR 的分子部分
 
 线性相位：$\displaystyle H(e^{j\omega})=|H(e^{j\omega})|e^{-j\omega\alpha}$
+
+设计巴特沃斯低通滤波器：算出阶数查表即可。公式不用背。
+
+### IIR 设计
+
+数字指标 ->（T=1，预畸）-> 模拟指标
+
+#### 脉冲相应不变法
+
+会混叠，只能用于低通或带通。
+
+$\displaystyle H(s)=\sum \frac{A_i}{s-s_i} \rightarrow H(z)=\sum\frac{TA_i}{1-e^{s_iT}z^{-1}} $
+
+T 的选取：$\displaystyle \Omega_{st}<\frac{\Omega_s}2,T<\frac{2\pi}{\Omega_s}$
+
+#### 双线性变换法
+
+预畸：$\displaystyle \Omega_0=\frac2T\cdot tan\frac{\omega_0}{2}$
+
+$\displaystyle s=\frac2T\cdot\frac{1-z^{-1}}{1+z^{-1}}$
+
+### FIR 设计
+
+线性相位的要求：
+
+- 一类（$\theta(\omega)=-\tau\omega$）：$h(n)$ 关于 $\tau$ 偶对称，$\tau=$ n 上下界中心（$\frac{N-1}2$）。
+- 二类（$\theta(\omega)=\beta_0-\tau\omega$）：~~偶对称~~ 奇对称，$\tau=$ n 上下界中心（$\frac{N}2$）
+
+讨论 $h(n)$ 偶对称的情况（一类）：
+
+- 奇数点：$\displaystyle H(\omega)=\sum_{n=0}^{\tau}a(n)cos(\omega n) \begin{cases} a(0)=h(\tau) \\ a(n)=2h(\tau-n) \end{cases}$
+- 偶数点：$\displaystyle H(\omega)=\sum_{n=0}^{\tau}b(n)cos(\omega (n-\frac12)),\ \ b(n)=2h(\tau-n)$
+
+讨论 $h(n)$ 奇对称的情况（二类）：
+
+- 奇数点：$\displaystyle H(\omega)=\sum_{n=1}^{\tau}c(n)sin(\omega n), \ \ c(n)=2h(\tau-n)$
+- 偶数点：$\displaystyle H(\omega)=\sum_{n=1}^{\tau}d(n)sin(\omega (n-\frac12)),\ \ d(n)=2h(\tau-n)$
+
+线性相位最小群延迟即为 $\tau$，N = 零点个数 + 1

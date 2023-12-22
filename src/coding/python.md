@@ -67,7 +67,7 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 
 ### poetry
 
-这是一种更为现代的 python 包管理器，看起来像抄的 npm，爆杀 pip，略胜 miniconda。
+这是一个更为现代的 python 包管理器，看起来像抄的 npm，爆杀 pip，略胜 miniconda。
 
 #### 安装
 
@@ -78,6 +78,40 @@ pip install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
 [^1]: [不读系统代理，不能配置代理，不做错误处理，不具有可读性](https://t.me/withabsolutex/1304)
+
+#### 配置
+
+1. poetry 默认在某个集中的位置（Windows：`C:`，Linux：`~/.cache/...`）创建虚拟环境。这不利于使用，特别是当在 vscode 中选择 python 解释器时。明明抄的 npm，为什么不像 npm 那样把依赖都放在项目下呢？
+2. poetry windows 默认在 C 盘缓存。空间吃紧的话可以把缓存转到其他盘。
+
+```sh
+poetry config virtualenvs.in-project true
+poetry config cache-dir D:\\poetry_enev
+```
+
+##### 换源
+
+身在中国，换源是很重要的（python 不走代理[^1]）。最好每次创建项目都换源，这样一起协作的其他人都无需手动换源。参考[文档](https://python-poetry.org/docs/repositories#project-configuration)。
+
+::: tabs
+@命令行换源
+
+```sh
+poetry source add tsinghua-pypi https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+@tab 手动换源
+
+编辑 `pyproject.toml`.
+
+```toml
+[[tool.poetry.source]]
+name = "tsinghua-pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "default"
+```
+
+:::
 
 #### 基本命令
 
@@ -90,22 +124,8 @@ pip install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
 - 安装依赖：`poetry install`，会自动新建虚拟环境
 - 虚拟环境
   - 激活：`poetry shell`（或在虚拟环境目录执行 `call activate.bat`）
+  - 删除：`poetry env remove --all`
 - 运行：`poetry run python <filename>.py`
-
-#### 换源
-
-参考[文档](https://python-poetry.org/docs/repositories#project-configuration)。
-
-```toml
-[[tool.poetry.source]]
-name = "tsinghua-pypi"
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-priority = "default"
-```
-
-#### 缓存
-
-poetry 默认把虚拟环境和包都装在 C 盘。若空间不足，可以考虑改缓存位置：`poetry config cache-dir D:\\poetry_enev`
 
 ### miniconda
 
@@ -179,6 +199,7 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
   - `import ./xxx` 是当前目录模块，不加 `./` 是顶层模块。
   - 模块不能循环导入，即模块引用结构需要是 DAG。
 - python 不支持重载。
+- python 的 OOP 是残缺的，即使可以靠一些[装饰器](#decorator)逼近。
 
 ### assert
 
@@ -249,20 +270,14 @@ with suppress(Exception):
 
 `if` 和 `while` 里创建临时变量用的。简单清晰，容易控制生命周期。
 
-### lru_cache
-
-非常好用的缓存。当函数入参相同时，重复利用缓存。
-
-```py
-from functools import lru_cache
-@lru_cache
-def a(i: int):
-  return i + 123
-```
-
 ### Decorator
 
 装饰器本质上是回调的语法糖。[external 3.](#external) 是一篇讲的很好的装饰器文章。
+
+[这篇文章](https://www.geeksforgeeks.org/top-python-built-in-decorators-that-optimize-python-code-significantly/)讲了一些常用的自带装饰器，主要是重载，OOP。
+
+- `functools.lru_cache`：当函数入参相同时，重复利用缓存。
+- [`dataclasses.dataclass`](https://docs.python.org/zh-cn/3/library/dataclasses.html)：自动生成函数，简化开发。
 
 ## 自带模块
 
@@ -355,6 +370,8 @@ with open("soup.test", "rb") as f:
     soup = pickle.load(f)   # deserialize
 ```
 
+可以用 pickle 实现[一个简单的 cache](https://github.com/lxl66566/init-script/blob/py/mycache.py)。
+
 ## 常用外部包
 
 ### pandas
@@ -370,6 +387,10 @@ for name in file.sheet_names:
         print(row["姓名"])
 ```
 
+### pytest
+
+测试。[tutorial](https://learning-pytest.readthedocs.io/zh/latest/doc/intro/getting-started.html)
+
 ## GUI
 
 一些 GUI 框架。（大部分都没用过）
@@ -377,8 +398,9 @@ for name in file.sheet_names:
 - [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
 - [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)：真的很简单 / 简陋，but it works
 - [nicegui](https://github.com/zauberzeug/nicegui)：基于 web 的
-- [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
 - [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
+- [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
+- [BeeWare](https://beeware.org/)（toga）：原生跨平台
 
 ### CustomTkinter
 
@@ -442,6 +464,18 @@ img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
 ```
 
 使用此内置函数进行高斯模糊将无法改变 sigma 的值。
+
+## ORM
+
+ORM (Object-relational mapping)，数据关系映射。此处特指 python 实现的数据库 ORM。
+
+最出名的 python ORM 应该是 sqlalchemy 吧。但是其文档比较烂，我觉得其设计并不哲学。所以我个人不喜欢这个。
+
+然后是 django 的基于 model 的内置 ORM，由于使用 django 的人较多，因此也比较有影响力。我在下面有[提到这个](#数据库)。
+
+读过 [pony](https://docs.ponyorm.org/) 的文档与 tutorial 后，我觉得这个设计不错。
+
+> 这些文章 ([1](https://nelsonslog.wordpress.com/2022/07/04/very-simple-python-orms/) [2](https://stackoverflow.com/questions/53428/what-are-some-good-python-orm-solutions)) 也介绍了一些其他 ORM。
 
 ## django
 

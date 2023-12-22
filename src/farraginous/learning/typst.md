@@ -10,7 +10,8 @@ category:
 # typst
 
 > [Typst](https://github.com/typst/typst) is a new markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.  
-> [非官方中文指南](https://typst-doc-cn.github.io/docs/chinese/)，我一般拿来快速找第三方包
+> [非官方中文指南](https://typst-doc-cn.github.io/docs/chinese/)，我一般拿来快速找第三方包  
+> typst 并没有一个给开发者的清晰的文档。。[examples book](https://sitandr.github.io/typst-examples-book/book/about.html)可以抄点东西。
 
 我不是很喜欢 latex，所以尝试使用 typst 作为我的论文排版工具。
 

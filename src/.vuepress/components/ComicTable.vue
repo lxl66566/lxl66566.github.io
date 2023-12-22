@@ -83,6 +83,7 @@ const data = [
   { id: "468634", aScore: 3.2, bScore: 5.2, info: "#loli", bak: "https://telegra.ph/やみなべ-トライデント-123話-国語算数理科セックス-Chinese-甜族星人x草莓人山楂屋漢化-08-17" },
   { id: "462114", aScore: 8.4, bScore: 9.6, info: "#触手 #史莱姆", bak: "https://telegra.ph/tete-a-tete-夕凪ショウ-ひみつのともだち-中国翻訳-DL版---Page-1-09-18" },
   { id: "479763", aScore: 8.8, bScore: 6.1, info: "#露出 #制服", bak: "https://telegra.ph/caburibbon-caburi-SSSDI2-中国翻訳-DL版-10-30" },
+  { id: "483252", aScore: 3.5, bScore: 5.6, info: "#loli #兄妹", bak: "https://telegra.ph/ふみー-にゃんにゃんぱにっく-中国翻訳-無修正-DL版-11-26-3" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
