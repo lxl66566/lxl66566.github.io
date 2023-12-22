@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 21 Dec 2023 15:57:11 GMT</pubDate>
-    <lastBuildDate>Thu, 21 Dec 2023 15:57:11 GMT</lastBuildDate>
+    <pubDate>Fri, 22 Dec 2023 17:17:46 GMT</pubDate>
+    <lastBuildDate>Fri, 22 Dec 2023 17:17:46 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -20,21 +20,6 @@
     <category>经历</category>
     <category>学习</category>
     <category>爱好</category>
-    <item>
-      <title>test</title>
-      <link>https://absx.pages.dev/hide/test.html</link>
-      <guid>https://absx.pages.dev/hide/test.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">test</source>
-      <description>test</description>
-      <pubDate>Thu, 21 Dec 2023 15:55:50 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> test</h1>
-<p>这是一个隐藏的测试页面，用于测试博客的一些新功能。</p>
-<p>::: chart test</p>
-<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>:::</p>
-<p>::: echarts title</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>:::</p>
-]]></content:encoded>
-    </item>
     <item>
       <title>PDF 阅读器横评</title>
       <link>https://absx.pages.dev/articles/pdf_reader.html</link>
@@ -2505,7 +2490,8 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
       <content:encoded><![CDATA[<h1> typst</h1>
 <blockquote>
 <p><a href="https://github.com/typst/typst" target="_blank" rel="noopener noreferrer">Typst</a> is a new markup-based typesetting system that is designed to be as powerful as LaTeX while being much easier to learn and use.<br>
-<a href="https://typst-doc-cn.github.io/docs/chinese/" target="_blank" rel="noopener noreferrer">非官方中文指南</a>，我一般拿来快速找第三方包</p>
+<a href="https://typst-doc-cn.github.io/docs/chinese/" target="_blank" rel="noopener noreferrer">非官方中文指南</a>，我一般拿来快速找第三方包<br>
+typst 并没有一个给开发者的清晰的文档。。<a href="https://sitandr.github.io/typst-examples-book/book/about.html" target="_blank" rel="noopener noreferrer">examples book</a>可以抄点东西。</p>
 </blockquote>
 <p>我不是很喜欢 latex，所以尝试使用 typst 作为我的论文排版工具。</p>
 <p>优点：</p>
@@ -2633,6 +2619,19 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <ol>
 <li><a href="https://wt.tepis.me/" target="_blank" rel="noopener noreferrer">可穿戴科技</a></li>
 </ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>番号收藏</title>
+      <link>https://absx.pages.dev/hobbies/NSFW/videos.html</link>
+      <guid>https://absx.pages.dev/hobbies/NSFW/videos.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">番号收藏</source>
+      <description>这里是我的番号收藏，希望你们会喜欢。 备注：最高分界：单科得分 &amp;gt;= 10 或总分 &amp;gt;= 18; IPX-964 1:33:20 极善; 额外 此处质量总体不如上面的，不过也值得一看。FXX-SM-24; FC2PPV 778927 01 (https://jp.xero.porn/video/z6jtbjln09icqbaj24440) 02...</description>
+      <category>推荐</category>
+      <category>主张</category>
+      <pubDate>Mon, 04 Jul 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 番号收藏</h1>
+<p>这里是我的番号收藏，希望你们会喜欢。</p>
 ]]></content:encoded>
     </item>
   </channel>
