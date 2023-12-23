@@ -81,7 +81,7 @@ tag:
 <!-- prettier-ignore -->
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: | :-: |
-|初雪樱 <Badge text="linux" type="note" vertical="bottom" />|9h9min+|2023.12.06-<br/>2023.12.22|9.5|7.6|7.5|
+|初雪樱 <Badge text="linux" type="note" vertical="bottom" />|25h28min|2023.12.06-<br/>2023.12.22|9.5|7.6|7.5|
 |樱色之云 \* 绯色之恋 <Badge text="linux" type="note" vertical="bottom" />|27h22min|2023.10.27-<br/>2023.12.19|8.5|9.6|5.9|
 |近月少女的礼仪<OrderBadge order=1 />|67h58min|2023.04.23-<br/>2023.11.26|5|5.5|6|
 |君と彼女と彼女の恋|10h16min|2023.08.04-<br/>2023.10.26|9.9|4.2|5.4|

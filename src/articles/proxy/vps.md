@@ -37,15 +37,17 @@ tag:
 
 ::: details 我想买的
 
+`RAM/存储`，`流量/端口速度`；默认 1C SSD
+
 想买但没买的超级好价
 
-- 2023 BF
-  - [InfraveoCloud](https://zhujiwiki.com/35833/)，东京机 1T 月流量只要 $9/yr。然而我已经入手了一台东京灵车，因此没钱再买了。
+- 2023 BF：[InfraveoCloud](https://zhujiwiki.com/35833/)，东京机 1T 月流量只要 $9/yr。然而我已经入手了一台东京灵车，因此没钱再买了。
+- [ColoCrossing](https://zhujiwiki.com/36155/)，$9/yr，2C2GRAM 不限流/1Gbps 洛杉矶
+- [Vision Cloud](https://t.me/visioncloud_notification/32)，$14/yr 1GB/6GB 1TB/1000Mbps JP
 
 一般价
 
-- common
-  - [Digirdp](https://zhujiwiki.com/36114/)，10$/yr，虽然 HDD，但是跑流量也不影响。
+- [Digirdp](https://zhujiwiki.com/36114/)，10$/yr 1GB/15GB 1TB/1Gbps 美国，虽然 HDD，但是跑流量也不影响。
 
 :::
 

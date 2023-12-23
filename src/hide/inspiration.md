@@ -58,6 +58,7 @@ tag:
 - [ ] ecust-survival, (with vuepress)
 - [ ] galgame engine
 - [ ] bin package manager
+- [ ] 音频振幅对齐
 
 ### Android
 
