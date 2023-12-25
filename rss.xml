@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 23 Dec 2023 16:34:14 GMT</pubDate>
-    <lastBuildDate>Sat, 23 Dec 2023 16:34:14 GMT</lastBuildDate>
+    <pubDate>Mon, 25 Dec 2023 15:22:13 GMT</pubDate>
+    <lastBuildDate>Mon, 25 Dec 2023 15:22:13 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -139,6 +139,7 @@
 <li>python 的模块<a href="/gossip/fuckxxx.html#python-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="blank">粒度不够细</a>，无法实现交叉引用，本质只是复制代码（加强版）而已(?)。</li>
 </ul>
 <h2> 梦中情语</h2>
+<p>maybe i will write it on github.</p>
 <h2> external</h2>
 <ol>
 <li><a href="https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang" target="_blank" rel="noopener noreferrer">Lies we tell ourselves to keep using Golang</a></li>
@@ -2551,13 +2552,17 @@ typst 并没有一个给开发者的清晰的文档。。<a href="https://sitand
 </li>
 <li><a href="https://github.com/PgBiel/typst-tablex" target="_blank" rel="noopener noreferrer">tablex</a>，更麻烦但更强大的表格。
 <ul>
-<li><a href="https://github.com/PgBiel/typst-tablex/issues/18" target="_blank" rel="noopener noreferrer">无法改粗体、斜体 cell 的风格</a></li>
+<li>如果表格中含有粗体斜体，批量处理就比较麻烦。(<a href="https://github.com/PgBiel/typst-tablex/issues/18" target="_blank" rel="noopener noreferrer">ex</a>) <a href="https://gist.github.com/lxl66566/30e309e696169829524ee04503b526db" target="_blank" rel="noopener noreferrer">我的解法，甚至还发现了个 bug?</a>
+<ul>
+<li>这个预计算是很难改的（源码访问 <code>at</code> 时的 <code>default</code> 已经是 <code>Option&lt;Value&gt;</code> 了）。说到底，根本问题还是 typst 选择自创的这个 DSL 的问题，你像 rust 那样 Option 套 <code>or_else</code> 哪有这么多事。</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <h2> 代码</h2>
 <p>大段代码不要直接写 <code>typ</code> 文件里，最好从外部引用，解耦，还方便扔 formatter。小段就无所谓了。放个我的带边框代码块：</p>
-<div class="language-typst line-numbers-mode" data-ext="typst"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="hint-container details"><summary>我的折腾历程</summary>
+<div class="language-typst line-numbers-mode" data-ext="typst"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="hint-container details"><summary>我的折腾历程</summary>
 <p>从 <a href="https://github.com/typst/typst/issues/1494#issuecomment-1591847881" target="_blank" rel="noopener noreferrer">#1494</a> 摸了个好看的代码块样式来，然后自己改改，就是下面的了。</p>
 <div class="language-typst line-numbers-mode" data-ext="typst"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样用 box 包的代码块有一个致命缺陷：若 box 高度大于剩余页面高度，则会自动换页；若 box 高度大于整个页面的高度，则超出部分不会显示。因此只适合用来引用小块代码，否则就别想要边框了。我去其他地方寻找解法，<a href="https://github.com/cherichy/BUAA-typst/blob/ab9bef8ecbdc55d4d0629c63ad96ffd5484b4f7c/functions/codeblock.typ" target="_blank" rel="noopener noreferrer">BUAA 的</a>用 figure 包的也会有这个问题。</p>
 <p>然后偷窥交流群发现，如果不需要 <code>name</code> 参数的话，简单用 <code>block</code> 包一下就能实现自动切割。抄来的代码用的是 <code>box</code>，因此才会自动换页。</p>
