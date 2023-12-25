@@ -7,8 +7,6 @@ category:
 
 # 数字信号处理
 
-教师：万永菁
-
 ## 实验
 
 见 [octave](../../coding/octave.md)
@@ -145,6 +143,8 @@ FIR：没有极点，只有 IIR 的分子部分
 
 设计巴特沃斯低通滤波器：算出阶数查表即可。公式不用背。
 
+FIR 滤波器的差分方程就是线性卷积表达式。直接写成 $x(n)=\sum_{k=0}^{N}h(k)x(n-k)$ 即可。
+
 ### IIR 设计
 
 数字指标 ->（T=1，预畸）-> 模拟指标
@@ -165,6 +165,8 @@ $\displaystyle s=\frac2T\cdot\frac{1-z^{-1}}{1+z^{-1}}$
 
 ### FIR 设计
 
+> 例子：学习通视频第二个末尾
+
 线性相位的要求：
 
 - 一类（$\theta(\omega)=-\tau\omega$）：$h(n)$ 关于 $\tau$ 偶对称，$\tau=$ n 上下界中心（$\frac{N-1}2$）。
@@ -173,11 +175,22 @@ $\displaystyle s=\frac2T\cdot\frac{1-z^{-1}}{1+z^{-1}}$
 讨论 $h(n)$ 偶对称的情况（一类）：
 
 - 奇数点：$\displaystyle H(\omega)=\sum_{n=0}^{\tau}a(n)cos(\omega n) \begin{cases} a(0)=h(\tau) \\ a(n)=2h(\tau-n) \end{cases}$
+  - $H(\omega)$ 偶对称
 - 偶数点：$\displaystyle H(\omega)=\sum_{n=0}^{\tau}b(n)cos(\omega (n-\frac12)),\ \ b(n)=2h(\tau-n)$
+  - $H(\omega)$ 奇对称
 
 讨论 $h(n)$ 奇对称的情况（二类）：
 
 - 奇数点：$\displaystyle H(\omega)=\sum_{n=1}^{\tau}c(n)sin(\omega n), \ \ c(n)=2h(\tau-n)$
+  - $H(\omega)$ 奇对称
 - 偶数点：$\displaystyle H(\omega)=\sum_{n=1}^{\tau}d(n)sin(\omega (n-\frac12)),\ \ d(n)=2h(\tau-n)$
+  - $H(\omega)$ 偶对称
 
 线性相位最小群延迟即为 $\tau$，N = 零点个数 + 1
+
+如果 $\omega=\pi$ 需要有值（高通、带阻），则 N 必须为奇数。
+
+## 采样
+
+- 下采样：先过抗混叠滤波器（宁缺毋滥），再抽取
+- 上采样：补 0，然后过抗影像滤波器

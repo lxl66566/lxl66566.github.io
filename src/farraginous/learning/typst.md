@@ -72,7 +72,8 @@ typst 没有 `list` 类型，只有 `array`。
   - 无法通过 `\|` 转义打出 `|` 字符
   - 超出列数报错（与 markdown 行为不同；在 markdown 中会直接忽略）
 - [tablex](https://github.com/PgBiel/typst-tablex)，更麻烦但更强大的表格。
-  - [无法改粗体、斜体 cell 的风格](https://github.com/PgBiel/typst-tablex/issues/18)
+  - 如果表格中含有粗体斜体，批量处理就比较麻烦。([ex](https://github.com/PgBiel/typst-tablex/issues/18)) [我的解法，甚至还发现了个 bug?](https://gist.github.com/lxl66566/30e309e696169829524ee04503b526db)
+    - 这个预计算是很难改的（源码访问 `at` 时的 `default` 已经是 `Option<Value>` 了）。说到底，根本问题还是 typst 选择自创的这个 DSL 的问题，你像 rust 那样 Option 套 `or_else` 哪有这么多事。
 
 ## 代码
 
@@ -83,6 +84,8 @@ typst 没有 `list` 类型，只有 `array`。
 #let frame(title: none, body) = {
   let stroke = black + 1pt
   let radius = 5pt
+  let txt = (font: 字体.代码)
+  set text(..txt)
   let name = block(
                 breakable: false,
                 fill: color.linear-rgb(0, 0, 0, 10),
@@ -92,7 +95,6 @@ typst 没有 `list` 类型，只有 `array`。
                 radius: (top-right: radius, bottom-left: radius),
                 title,
               )
-  set text(font: 字体.代码)
   block(
     stroke: stroke,
     width: 100%,
@@ -100,11 +102,12 @@ typst 没有 `list` 类型，只有 `array`。
     radius: radius,
   )[
     #if title != none {
-      align(top + right, name)
+      place(top + right, dx: radius + stroke.thickness, dy: -(radius + stroke.thickness), name)
     }
     #body
   ]
 }
+
 // 引入外部代码块
 #let include_code(file_path) = {
   let name = file_path.split("/").at(-1)

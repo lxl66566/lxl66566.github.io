@@ -42,9 +42,11 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 
 但是并没有什么卵用。
 
-后面多经历了几次，发现是由于 wine 程序导致的。（_SiglusEngine_ 引擎 fxxk u）
+后面多经历了几次，发现某些 wine 程序会导致这个问题。因此在关机前执行 `wineserver -k9`。
 
-因此在关机前执行 `wineserver -k` 即可。
+然后发现内核参数有个 `nowatchdog`，将此参数删除可能可以解决此问题。但是在 wiki 的性能优化中有提到，在桌面或笔记本个人电脑上没有必要开启 watchdog，我认为还是不要损失性能的更好。
+
+最后我的解法是 [sysrq 键 (13.)](./install_and_config.md#系统设置)，这是一组能直接与内核交互的键。当我关机时出现等待时，按下 `Alt + Sysrq + I` 即可对其他进程发出 `SYSKILL`，也就能够正常关机了。
 
 ## waydroid 的问题
 

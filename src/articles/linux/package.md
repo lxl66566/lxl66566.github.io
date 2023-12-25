@@ -119,13 +119,14 @@ sudo systemd-nspawn -D container  # 进入容器
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
-|`dust` & `ncdu` / `gdu`|磁盘容量查询|
+|`dust` & `ncdu`[^8] / `gdu`|磁盘容量查询|
 |`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
 |`neovim`|[文本编辑器](../../coding/vim.md)|
 |[`Zellij`](https://github.com/zellij-org/zellij) / `tmux`|终端复用，多窗口|
 
 [^6]: `yazi` 甚至能在 console 下查看图片。
+[^8]: `ncdu` 在 btrfs 下不准。([ref](https://wiki.archlinuxcn.org/wiki/Btrfs#显示已使用的/空闲空间))
 
 以上是本人体验总结的结果。若需要更多推荐，不如看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps)。
 
@@ -137,6 +138,7 @@ sudo systemd-nspawn -D container  # 进入容器
 - `yakuake`：下拉式终端，比起 konsole 的优点是快（预加载）。
   - 需要在 _系统设置 - 开机与关机_ 中将其加入开机自启。
   - [配置](https://wiki.archlinuxcn.org/wiki/Yakuake#Plasma_上的透明/模糊背景)
+- `kclock`：时钟，闹钟，秒表
 
 ### shell
 
@@ -361,3 +363,16 @@ ffmpeg -f pulse -i 0 -c:a libmp3lame -b:a 128k -af "volume=0.04" pulse.mp3
 ```
 
 it works.
+
+### 关于文档
+
+众所周知文档领域基本由微软的 office 独占，而三件套又基本由 windows 独占。
+
+在 linux 下，我尝试使用不同的替代品：
+
+1. LibreOffice（不可用）：word 排版不同，原本一页的可能会变成两页。
+2. WPS（不可用）：图片显示错误，还有广为诟病的粗体问题。
+   - 解法（据说）：`paru -S freetype2-wps libtiff5` ([ref](https://t.me/archlinuxcn_group/3016741))
+3. ONLYOFFICE：目前看来没啥太大毛病。
+
+我一般用 typst 等排版工具生成 pdf，如果实在不行再去 windows 上用 office。不过现在看来或许也能试试 ONLYOFFICE。

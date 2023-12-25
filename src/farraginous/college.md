@@ -249,11 +249,11 @@ tag:
 <!-- prettier-ignore -->
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
-|互联网 - 程华|3.5|<Badge text="电子版" />|
-|通信电子线路 - 凌小峰|4|<Badge text="限手机" />-|<details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details>|
+|互联网 - 程华|2|<Badge text="电子版" /> 作业不发答案；实践不教，纯纯自己查资料；后期每节课都点全班名|
+|通信电子线路 - 凌小峰|3|<Badge text="限手机" />实际上不管手机；作业多；实验遇到问题会手把手教|<details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details>|
 |DSP - 万永菁|8|线上下结合，课前给所有学生打印教学计划和作业；但是作业过多|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>
 |算法导论 - 吴粤|5|较现代，但是有些方面又觉得像在古代[^6]|<details><summary>点击展开</summary><p>Q:1769013250<br/>We:mathwuyue<br/>yuewu@ecust.edu.cn<br/>yue.wu@etalkai.com</p></details>|
-|人工智能基础 - 朱宏擎|3|几乎每节课都有课堂练习|
+|人工智能基础 - 朱宏擎|3|非常多的课堂练习；作业不许迟交|
 |王嵘 - 代信号实验|-1|我对其不会有半点尊敬。[^2][^3][^4]|
 |大物实验 - 顾晓艳|8|温和，讲解清楚，手把手教||
 |数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~，不过至少专业性没有问题；平时分高，哥几个都是 90+|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>

@@ -247,4 +247,7 @@ utools vs diy my tools
   - [insanely-fast-whisper](https://github.com/Vaibhavs10/insanely-fast-whisper)：访问模型时不读代理（而且是 eBPF 代理）
 
 [^3]: 遇到了不少 py 写的 install script，不读系统代理，不能配置代理，不做错误处理，不具有可读性。真的难绷 😅 ([src](https://t.me/withabsolutex/1304))
+
+    ps. python setuptools 可能只读环境变量（`HTTP_PROXY`）而不读 windows 下的系统代理。
+
 [^4]: 一个 customtkinter + matplotlib 项目，朋友遇到打包问题问我。pyinstaller 打出来 200M，运行不了，我教他用 nuitka，他在 windows 下打出了 **1.2G** 的好成绩。

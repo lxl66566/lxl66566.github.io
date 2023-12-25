@@ -142,12 +142,17 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 - 动效图标：[unicorn icons](https://unicornicons.com/)
 
+#### 工具
+
+- [regexper](https://regexper.com/)：正则可视化
+
 ### 数学/理科
 
 - [WolframAlpha](https://www.wolframalpha.com/)：在线高级计算
 - [在线工具 VIP](https://atool.vip/) [拟合](https://atool.vip/fitting/)：在线工具站，本人最常用的是数据拟合
 - [desmos](https://www.desmos.com/calculator?lang=zh-CN)：在线画函数图表（比 matlab 好看），一般需要配合拟合使用
 - [Octave Online](https://octave-online.net/)：在线 Octave 解释器。Octave 基本兼容 MATLAB 语法。
+- [mathcha](https://www.mathcha.io/editor)：在线写 latex 公式，自动补全与可视化
 
 ## 媒体创作
 

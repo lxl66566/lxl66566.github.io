@@ -105,7 +105,7 @@ umount /mnt/windows
    - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 bind mount 同一个 tmpfs，这样就能够解决问题了。
      - 然而这里还会出现权限问题，无法 (?) 解决，因此我 [mount 到了另一个新的 tmpfs](https://github.com/lxl66566/dotfile/blob/3c97b7cbad449d4a70100e132b775365951cf250/etc/fstab#L15)。（不 bind 了）
    - [更改 makepkg 编译位置至 tmpfs](https://wiki.archlinux.org/title/makepkg#Building_from_files_in_memory)
-8. 设置 grub
+8. 设置 grub（内核参数）
    ```sh
    sudo -e /etc/default/grub
    # after edit
@@ -122,8 +122,12 @@ umount /mnt/windows
 11. sysctl 相关。
     - [Tcp Fast Open](https://wiki.archlinux.org/title/sysctl#Enable_TCP_Fast_Open)
     - [bbr](https://wiki.archlinux.org/title/sysctl#Enable_BBR)
+    - [接收队列](https://wiki.archlinuxcn.org/wiki/Sysctl#增加接收队列的大小)
 12. system.conf
     - [调整 DefaultTimeoutStopSec](https://unix.stackexchange.com/a/297318)，使关机时不会被某些应用阻断长达 90s
+13. sysrq 相关。
+    - [开启 + 提早开启 sysrq](https://wiki.archlinuxcn.org/wiki/快捷键#内核)
+    - [开启 sysrq 全部功能](https://www.kernel.org/doc/html/v5.17/translations/zh_CN/admin-guide/sysrq.html)
 
 ### 输入法
 

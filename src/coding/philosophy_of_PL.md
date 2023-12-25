@@ -109,6 +109,8 @@ Rust 用引用的概念来代替指针，不过也保留了 unsafe 中的指针�
 
 ## 梦中情语
 
+maybe i will write it on github.
+
 ## external
 
 1. [Lies we tell ourselves to keep using Golang](https://fasterthanli.me/articles/lies-we-tell-ourselves-to-keep-using-golang)

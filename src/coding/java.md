@@ -15,41 +15,21 @@ tag:
 
 DBeaver 烂，JB 家一堆烂，Minecraft 烂，我接触到的 java 写成的玩意总能给我带来不悦。
 
-:::
-
-由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。
-
 在我看来 Java 的优势是跨平台，代码容易维护（方便 t 人）。但是作为带 GC 的语言，Java 的性能一般（强类型打不过弱类型）；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（其实某些方面可能还算优点），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（不过是通病，python 群也一样</span>。java 学到后期全是框架，不好玩，没意思（
 
 哦，顺带一提，Android 开发建议直接 [kotlin](./kotlin.md)，Google 官方推荐的语言，并且全兼容 java。~~反正学 java 用 gradle 也逃不过 kotlin 的制裁，不如立马开润（~~
 
-## 学习方法
+:::
+
+由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。由于不打算深入，因此只涉及语言基础，不涉及框架。
 
 根据其他语言学习经验，到处搜，用 Java 写点算法题，多写就完了。也可以问问 ChatGPT。
 
-Java 跟 C++ 语法挺像的。~~虽然对标的 C# 应该会更像，但我没学。~~
+大作业做了个[垃圾](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/java/实验代码/bank_gui.java)。<heimu>我校指定大作业必须做个银行管理系统 demo，不能自由选择课题。</heimu>
 
 ## 开发环境
 
-去官网下 sdk。**请尽可能下载最新版本。**（编程不激进还能干啥？
-
-### 原理
-
-`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序。
-
-### vscode
-
-首先假设已经装好了 JDK。
-
-在 vscode 扩展商店搜 `java`，直接装整个包：_Extension Pack for Java_，然后就能跑了。也可以自己选插件。
-
-包管理器（gradle）就 `scoop install gradle` 一行完事。
-
-## var
-
-Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
-
-## 运行环境
+去官网下 sdk。**请尽可能下载最新版本。**（激进派）
 
 在 archlinux 下，可以：
 
@@ -57,6 +37,22 @@ Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
 ls /usr/lib/jvm # 查看可用 jre 版本
 sudo archlinux-java set java-21-openjdk # 设置默认 jre 版本
 ```
+
+### 基础使用
+
+`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序。
+
+### vscode
+
+首先假设已经装好了 JDK。
+
+在 vscode 扩展商店搜 `java`，直接装整个包：_Extension Pack for Java_，然后就能跑了。也可以自己选插件，理论上只需要 LSP + Runner 即可。
+
+包管理器（gradle）就 `scoop install gradle` 一行完事。
+
+## var
+
+Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
 
 ## 数据结构
 
@@ -160,7 +156,7 @@ Optional.ofNullable(123).filter(u -> u < 150);   // 映射
 
 ## Serialize
 
-> java 的序列化真是方便啊。。其他语言需要自己写 json or configparser。
+> java 的序列化真是方便啊。没想到强类型语言也能这么轻松。
 
 序列化就理解为保存变量到文件，必要时也可以从文件里反序列化，读取变量。
 
