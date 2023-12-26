@@ -503,3 +503,4 @@ file.close();
 6. C++23 特性总结 [上](https://zhuanlan.zhihu.com/p/562383157) | [下](https://zhuanlan.zhihu.com/p/562383556)，可以学到很多
 7. [C++ 移动语义](https://zhuanlan.zhihu.com/p/642214693)
 8. [[Brief Talk] `auto`, `auto&`, `const auto&` 以及其它形式的 auto 变种在 for-range loop 的选择](https://zhuanlan.zhihu.com/p/25148592)
+9. [浅谈 C++ Undefined Behavior](https://zhuanlan.zhihu.com/p/391088391)

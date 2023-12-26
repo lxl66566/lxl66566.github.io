@@ -25,17 +25,19 @@ tag:
 
 特性阻抗 $\displaystyle \rho=\omega_0L=\frac1{\omega_0C}=\sqrt{\frac{L}C}$（谐振时的容/感抗）
 
+谐振时回路阻抗有最大值（谐振阻抗） $\displaystyle R_p=\frac L{rC}=Q \rho$
+
 矩形系数 $\displaystyle K_{r0.1}=\frac{f_{0.1}}{f_{0.7}}$ 表示接近理想曲线的程度
+
+失谐阻抗公式：$\displaystyle Z=\frac{R_p}{1+jQ\frac{2\Delta\omega}{\omega_0}}$，可以根据此公式计算幅频与相位
 
 抑制比 $\displaystyle d_n=\frac{A_{v0}}{A_{vn}}$
 
-## 谐振回路
-
 谐振曲线 $\displaystyle N(f)=\frac{\dot I}{\dot I_0}=\frac1{1+j\xi}$
 
-（通频）带宽 $\displaystyle B_0=2\Delta f_{0.7}$
+带宽 $\displaystyle B_0=2\Delta f_{0.7}$
 
-- 公式：$\displaystyle Q_0\cdot B=f_0$（常数）
+**$\displaystyle Q_0\cdot B=f_0$（常数）**
 
 ### 串联谐振
 
@@ -145,3 +147,9 @@ $I_{cmax}=g_cV_{bm}(1-cos(\theta_c))$
 [傅里叶级数展开求 $I_{c0},I_{cm1}$](https://www.bilibili.com/video/BV1hE411N79f/?p=31&t=637)
 
 最佳半导通角约为 70 度
+
+## 振幅调制
+
+不失真：$m_a\sqrt{1+\Omega^2C^2R_L^2}<1$
+
+$U_{AM}(t)=U_{CM}[1+m_acos\Omega t]cos\omega_c t$，前面是包络，后面是高频载波

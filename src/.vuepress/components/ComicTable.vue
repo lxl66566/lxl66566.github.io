@@ -84,6 +84,11 @@ const data = [
   { id: "462114", aScore: 8.4, bScore: 9.6, info: "#触手 #史莱姆", bak: "https://telegra.ph/tete-a-tete-夕凪ショウ-ひみつのともだち-中国翻訳-DL版---Page-1-09-18" },
   { id: "479763", aScore: 8.8, bScore: 6.1, info: "#露出 #制服", bak: "https://telegra.ph/caburibbon-caburi-SSSDI2-中国翻訳-DL版-10-30" },
   { id: "483252", aScore: 3.5, bScore: 5.6, info: "#loli #兄妹", bak: "https://telegra.ph/ふみー-にゃんにゃんぱにっく-中国翻訳-無修正-DL版-11-26-3" },
+  { id: "486039", aScore: 4.2, bScore: 2.1, info: "#兄妹", bak: "https://telegra.ph/starry-calm-鈴凪りか-お兄ちゃんは妹を躾けたい-中国翻訳-12-09" },
+  { id: "465141", aScore: 4.3, bScore: 5.1, info: "#蔚蓝档案" },
+  { id: "440308", aScore: 5.5, bScore: 4.1, info: "#蔚蓝档案" },
+  { id: "479895", aScore: 7.8, bScore: 6, info: "#蔚蓝档案" },
+  { id: "443893", aScore: 8.2, bScore: 9.5, info: "#触手 #魔法少女" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

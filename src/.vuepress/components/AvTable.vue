@@ -208,6 +208,7 @@ const data = [
   { id: "mudr-143", aScore: 7.7, bScore: 7.2 },
   { id: "mudr-059", aScore: 7.3, bScore: 6.5 },
   { id: "ssni-036", aScore: 6.7, bScore: 4.8, u: true },
+  { id: "midv-185", aScore: 7.6, bScore: 8.6, u: true },
 ];
 export default {
   name: "AvTable",
