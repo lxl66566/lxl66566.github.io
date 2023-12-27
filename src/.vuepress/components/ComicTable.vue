@@ -89,6 +89,8 @@ const data = [
   { id: "440308", aScore: 5.5, bScore: 4.1, info: "#蔚蓝档案" },
   { id: "479895", aScore: 7.8, bScore: 6, info: "#蔚蓝档案" },
   { id: "443893", aScore: 8.2, bScore: 9.5, info: "#触手 #魔法少女" },
+  { id: "other", aScore: 8.8, bScore: 7.5, info: "#兄妹", otherlink: "https://www.wnacg.com/photos-index-aid-182273.html" },
+  { id: "not found", aScore: 3.6, bScore: 8, info: "#强制", otherlink: "https://telegra.ph/Aomushi-Papakatsu-COMIC-Shitsurakuten-2022-06-Chinese-大鸟可不敢乱转汉化-Digital-05-27" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

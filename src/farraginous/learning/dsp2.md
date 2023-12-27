@@ -59,7 +59,7 @@ $\displaystyle H(e^{j\omega})=A\cdot e^{j\omega(N-M)}\frac{\prod^M e^{j\omega}-c
 
 归一化：滤波器最大值设为 1
 实系数：极点与零点最好关于 x 轴对称
-因果性：零点个数不要大于极点个数，在原点补零
+因果性：零点个数不要大于极点个数，在原点补极点
 
 在单位圆上转一圈，频率走完 $f_s$
 
@@ -101,9 +101,9 @@ DFS：$\displaystyle \widetilde X(k)=\sum_{n=0}^{N-1}\widetilde x(n)e^{-j\frac{2
 
 DFT：在 DFS 基础上只取主值，$\displaystyle X(k)=\sum_{n=0}^{N-1}x(n)W_N^{nk}, x(n)=\frac{1}{N}\sum_{n=0}^{N-1}X(k)W^{-nk}$
 
-圆周（循环移位）：~~相当于传送门~~，先周期延拓，再移位，再取主值。$\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)$
+圆周移位很简单，不解释。求圆周卷积：先求线性卷积，再求圆周移位（混叠）。
 
-想求圆周卷积，可以先求线性卷积，再求圆周移位。
+$\displaystyle DFT[x((n+m))_N]=W^{-km}_NX(k)$
 
 $DFT[R_N(n)]=N\delta(k)$（直流分量，重要！）
 
@@ -121,6 +121,8 @@ $DFT[R_N(n)]=N\delta(k)$（直流分量，重要！）
 - 重叠保留法：混叠发生在输入端，需要舍弃前 N-1 （可能要舍去后面）。
   1. 每段有效长度为 M，再取段前的 $N-1$ 个点一起循环卷积。
   2. 舍弃所有结果的前 $N-1$ 个点，相加。
+
+一般考点是在这两个方法下，[FFT](#fft) 的次数。注意重叠保留法次数 >= 重叠相加法（需要加上短序列长度再除 FFT 长度）。
 
 ### 频域采样定理
 
@@ -142,7 +144,12 @@ FIR：没有极点，只有 IIR 的分子部分
 
 线性相位：$\displaystyle H(e^{j\omega})=|H(e^{j\omega})|e^{-j\omega\alpha}$
 
-设计巴特沃斯低通滤波器：算出阶数查表即可。公式不用背。
+设计巴特沃斯低通滤波器：算出阶数查表即可。公式不用背。具体的：
+
+1. 转换技术指标，例如高通指标需要求倒数
+2. 由公式算出$N,\Omega_C$
+3. 查表得$H(p)$
+4. 代入求 $H_a(s)$
 
 FIR 滤波器的差分方程就是线性卷积表达式。直接写成 $x(n)=\sum_{k=0}^{N}h(k)x(n-k)$ 即可。
 
@@ -150,11 +157,11 @@ FIR 滤波器的差分方程就是线性卷积表达式。直接写成 $x(n)=\su
 
 数字指标 ->（T=1，预畸）-> 模拟指标
 
-#### 脉冲相应不变法
+#### 脉冲响应不变法
 
 会混叠，只能用于低通或带通。
 
-$\displaystyle H(s)=\sum \frac{A_i}{s-s_i} \rightarrow H(z)=\sum\frac{TA_i}{1-e^{s_iT}z^{-1}} $
+$\displaystyle H(s)=\sum \frac{A_i}{s-s_i} \rightarrow H(z)=\sum\frac{TA_i}{1-e^{s_iT}z^{-1}}$
 
 T 的选取：$\displaystyle \Omega_{st}<\frac{\Omega_s}2,T<\frac{2\pi}{\Omega_s}$
 
@@ -198,6 +205,15 @@ $\displaystyle s=\frac2T\cdot\frac{1-z^{-1}}{1+z^{-1}}$
 |带通滤波器|√|√|√|√|
 |高通滤波器|√|×|×|√|
 |带阻滤波器|√|×|×|×|
+
+### 设计
+
+窗函数设计法：
+
+1. 求指标
+2. 由 $\alpha_s$ 查表得窗类型和 N 值
+3. 求 $\displaystyle h_d(n)=\frac{sin(\omega_c(n-\tau))}{\pi(n-\tau)}, \tau=\frac{N-1}2$
+4. $h(n)=h_d(n)w(n)R_N(n)$
 
 ## 采样
 

@@ -37,6 +37,7 @@ tag:
 - [ ] ~~浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）~~
   - [ ] ~~基于 Chromium 内核（出于兼容性考虑），非商用，开源，**高度自定义化**~~ 难度过高，暂不考虑
 - [ ] CNM, ~~condition manager with Rust~~, a git-like distributed version manager
+  - maybe its name could be used in other stage...
   - [ ] 连续压缩
   - [ ] parts in a project, like how i use branch
   - [ ] 断点重传
