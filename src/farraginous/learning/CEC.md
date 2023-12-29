@@ -136,17 +136,28 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 
 ## 谐振功放
 
+<!-- prettier-ignore -->
+|$V_{bm}$|$V_{bz}$
+|---|---|
+|交流信号幅度|截止电压|
+
 基极反偏，截止区域 > 工作区域，因此是工作在丙类（效率高）。负载是谐振回路。
 
-电压利用系数 $\displaystyle\xi=\frac{V_{cm}}{V_{cc}}$，波形系数 $\displaystyle g_1(\theta_c)=\frac{I_{cm1}}{I_{c0}}$
+电压利用系数 $\displaystyle\xi=\frac{V_{cm}}{V_{cc}}$，波形系数 $\displaystyle g_1(\theta_c)=\frac{I_{cm1}}{I_{c0}}=\frac{\alpha_1}{\alpha_0}$
+
+输出功率$P_0=\frac12V_{cm}I_{cm1}$，直流功率$P_==V_{cc}I_{c0}$
 
 [效率](https://www.bilibili.com/video/BV1hE411N79f/?p=30&t=344) $\displaystyle\eta=\frac12\xi g_1(\theta_c)$
 
 $I_{cmax}=g_cV_{bm}(1-cos(\theta_c))$
 
-[傅里叶级数展开求 $I_{c0},I_{cm1}$](https://www.bilibili.com/video/BV1hE411N79f/?p=31&t=637)
+$\displaystyle cos\theta_c=\frac{V_{BB}+V_{BZ}}{V_{bm}}$
+
+[傅里叶级数展开求 $I_{c0},I_{cm1}$](https://www.bilibili.com/video/BV1hE411N79f/?p=31&t=637)：$I_{c0}=I_{cmax}\alpha_0, I_{cm1}=I_{cmax}\alpha_1$
 
 最佳半导通角约为 70 度
+
+负载特性：欠压恒流，过压恒压。关于效率：[曲线](https://www.bilibili.com/video/BV1hE411N79f/?p=37&t=946)
 
 ## 振幅调制
 

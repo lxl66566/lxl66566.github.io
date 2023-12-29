@@ -30,7 +30,9 @@ $R_k(n)$ 为 $[0,k)$ 上的全 1 序列
 
 $\omega$ 为数字角频率，$\Omega$ 为模拟角频率；$\omega n, \Omega t$
 
-$T_0$ 为原周期，$T$ 为采样周期；下标$_h$是截止频率，$_s$为 sampling.
+$\Omega = 2\pi f$
+
+$T_0$ 为原周期，$T$ 为采样周期；下标$_h$是截止频率，$_s$为 sampling.（事实上下标有很多种，没有一一对应关系，例如后面会用 $_{st}$表示截止）
 
 - 采样角频率：$\displaystyle\Omega_s=\frac{2\pi}{T}$，即为采样信号的频谱间隔
 - $\omega=\Omega T$，对同一下标成立。
@@ -138,7 +140,7 @@ $DFT[R_N(n)]=N\delta(k)$（直流分量，重要！）
 
 ## 滤波器
 
-IIR：$\displaystyle\frac{\sum^M_{i=0}b_iz^{-i}}{1-\sum^N_{i=0}a_iz^{-i}}$, $a_i$ 至少有一个不为 0
+IIR：$\displaystyle\frac{\sum^M_{i=0}b_iz^{-i}}{1-\sum^N_{i=1}a_iz^{-i}}$, $a_i$ 至少有一个不为 0
 
 FIR：没有极点，只有 IIR 的分子部分
 

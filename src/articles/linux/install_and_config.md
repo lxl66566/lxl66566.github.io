@@ -296,3 +296,11 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
    ```sh
    sudo pacman -S nvidia-dkms
    ```
+
+## 混成器
+
+我目前正在使用 X11。
+
+虽然现在大势所趋是 wayland，我一开始装了 arch 也是用的 wayland，但是它实在是太不自由[^1]了。
+
+[^1]: wayland 下其他应用无法获取当前窗口标题。而这对我来说是一个[刚需](../time_record.md)。[src](https://t.me/withabsolutex/1237)

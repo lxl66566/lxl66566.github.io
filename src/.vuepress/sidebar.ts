@@ -136,6 +136,7 @@ export default sidebar({
 				"signals_and_systems.md",
 				"Probab.Math.Stat.md",
 				"dsp.md",
+				"dsp2.md",
 				"CEC.md",
 				"network.md",
 				"foods.md",

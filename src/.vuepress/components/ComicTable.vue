@@ -91,6 +91,11 @@ const data = [
   { id: "443893", aScore: 8.2, bScore: 9.5, info: "#触手 #魔法少女" },
   { id: "other", aScore: 8.8, bScore: 7.5, info: "#兄妹", otherlink: "https://www.wnacg.com/photos-index-aid-182273.html" },
   { id: "not found", aScore: 3.6, bScore: 8, info: "#强制", otherlink: "https://telegra.ph/Aomushi-Papakatsu-COMIC-Shitsurakuten-2022-06-Chinese-大鸟可不敢乱转汉化-Digital-05-27" },
+  { id: "(ex)", aScore: 9.8, bScore: 3.2, info: "#泳衣 #loli", otherlink: "https://exhentai.org/g/2778492/3866aca117/", bak: "https://telegra.ph/C102-CANVASGARDEN-宮坂みゆ-あついひはすくみずで-中国翻訳-12-26" },
+  { id: "(ex)", aScore: 6.8, bScore: 7.1, info: "#百合 #媚药", otherlink: "https://exhentai.org/g/2775184/d9fb0c8ea1/", bak: "https://telegra.ph/桜ゆう-桜ゆう-返り討ち百合セクス2-中国翻訳-12-24" },
+  { id: "418196", aScore: 4.3, bScore: 4, info: "幼女先輩", bak: "https://telegra.ph/Grand-lemon-Tonari-Youjo-Senpai-20-omorashi-hen-Chinese-柠檬茶汉化组-Digital-04-21" },
+  { id: "(ex)", aScore: 8.9, bScore: 9, info: "#女仆 #强迫 #巨乳 #全彩", otherlink: "https://exhentai.org/g/2769498/16481904c1/", bak: "https://telegra.ph/富士やま-籠絡令嬢メイド堕ち-12-17-3" },
+  { id: "487758", aScore: 6.2, bScore: 8, info: "#loli #强迫 #合集 #长篇", bak: "https://telegra.ph/半里バード-わからせラブ-中国翻訳-DL版-08-01" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
