@@ -31,7 +31,7 @@ tag:
 |20230602 [vpslog](https://distribute.vpslog.net/)||free||64MB|||<dtls>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</dtls>|
 |20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>性价比高。提供 archlinux 镜像。</dtls>|
 |20231212 azure|Korea Central|~~$9.xx/mo~~ free|unknown|1GB|30GB|1|<dtls>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtls>|
-|20231213 aliyun|HK|~~288CNY/yr~~ free|1024 GB unknown|896MB|40GB|2|<dtls>香港地区无法使用 TG。免费的香港机我想都不敢想（）</dtls>|
+|20231213 aliyun|HK|~~288CNY/yr~~ free|1024 GB unknown|896MB|40GB|2|<dtls>香港地区 TG 时常抽风；免费的香港机我想都不敢想（）</dtls>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 

@@ -102,25 +102,40 @@ tag:
 
 ### after root
 
+通用：
+
 1. 不要在 Google Play 安装 QQ，无法开启深色模式 (fuck u)。
 2. 见[禁用软件](#禁用软件)。
 3. Google Play 可以通过蓝牙进行发送 - 接受软件，无需再次下载，不过只能传商店内的软件。
 4. Delta Chat 可以在源手机上点击 _设置 - 添加第二台设备_，然后用目标机扫码即可迁移**单个账户**。
-5. （一加）可以在开发者选项里关闭 5G，减少耗电。
+5. 可以在开发者选项里关闭 5G，减少耗电。
+
+一加：
+
+1. ColorOS 原生支持更换应用名称与图标，可以规避审查。
+   - 需要在 Google Play 安装[ColorOS 13 Icon pack](https://play.google.com/store/apps/details?id=com.akbon.coloros)
 
 ### 禁用软件
 
-[这里](https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a)可以看 MIUI 有哪些不能禁用的东西。
+前置条件：root
 
 我使用 [App Manager](./module_and_app.md#app) 进行软件的冻结操作。
 
 > _scene5/6_ 也可以，但是其为闭源商业软件，操作麻烦，不用它。<br/>_雹_ 也可以，但是主要用于禁止日常应用后台运行；无法冻结某些系统应用。
 
+#### MIUI
+
+[这里](https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a)可以看 MIUI 有哪些不能禁用的东西。
+
 #### EU MIUI
 
 - 禁用负一屏需要冻结 Google (`com.google.android.googlequicksearchbox`)。
 - Google 家的大多数都能冻
-- 不要冻 _媒体存储设备_(`com.google.android.providers.media.module`) ！！！[惨痛教训](#乱冻结)
+- 不要冻 _媒体存储设备_(`com.google.android.providers.media.module`) ！！！[惨痛教训](./problem.md#乱冻结)
+
+#### 一加
+
+- 不要冻 _应用包安装程_！！！！[惨痛教训，并附带了哪些东西能冻](./problem.md#一加无限重启)
 
 #### 禁用快应用中心
 

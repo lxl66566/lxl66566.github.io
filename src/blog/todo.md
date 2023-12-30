@@ -14,6 +14,7 @@ category:
 - [ ] tampermonkey
 - [x] author/p_d 网状图
 - [x] NSFW
+- [ ] how to ask
 
 ## 鸽了鸽了
 

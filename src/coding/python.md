@@ -609,3 +609,4 @@ python -m pip install --upgrade pip --user
 1. [The Right Way to Run Shell Commands From Python](https://martinheinz.dev/blog/98)
 2. [Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别](https://tryanswer.github.io/2018/05/17/py-int-confusing/)
 3. [Python 修饰器的函数式编程](https://coolshell.cn/articles/11265.html)
+4. [Python Type Hints 简明教程（基于 Python 3.12）](https://zhuanlan.zhihu.com/p/464979921)

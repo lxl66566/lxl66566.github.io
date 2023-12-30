@@ -77,16 +77,7 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 ### [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
-视频下载**命令行**工具。主要用于 bilibili, youtube 视频的下载。若不想用命令行请移步 [CoCoCut](#cococut)。
-
-简易教程（Windows）：
-
-1. 去 release 下载 `yt-dlp.exe` 并扔到 `C:\Windows\System32` 下[^2]。
-2. 默认下载为音视频分离。若需音视频合成，还需下载大名鼎鼎的 ffmpeg：使用 [scoop](#scoop) 一行完事：`scoop install ffmpeg`
-3. `yt-dlp <url>` 快速下载视频。
-4. 下载指定清晰度或仅音频：`yt-dlp -F <url>` 选择清晰度或音频资源；将选项 ID 填入 `yt-dlp -f <ID> <url>` 进行下载。
-
-[^2]: 可能需要提权。一个普通人更熟悉的方法是将 `yt-dlp.exe` 存放目录添加到环境变量（但是更麻烦）。
+视频下载**命令行**工具。移步[教程页面](../articles/yt-dlp.md)查看详情。
 
 ## Android
 
