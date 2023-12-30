@@ -6,20 +6,63 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 29 Dec 2023 16:45:58 GMT</pubDate>
-    <lastBuildDate>Fri, 29 Dec 2023 16:45:58 GMT</lastBuildDate>
+    <pubDate>Sat, 30 Dec 2023 17:51:34 GMT</pubDate>
+    <lastBuildDate>Sat, 30 Dec 2023 17:51:34 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
+    <category>教程</category>
     <category>评价</category>
     <category>编程</category>
     <category>主张</category>
     <category>生活</category>
-    <category>教程</category>
     <category>导航</category>
     <category>经历</category>
     <category>学习</category>
     <category>爱好</category>
+    <item>
+      <title>yt-dlp 使用教程</title>
+      <link>https://absx.pages.dev/articles/yt-dlp.html</link>
+      <guid>https://absx.pages.dev/articles/yt-dlp.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">yt-dlp 使用教程</source>
+      <description>yt-dlp 使用教程</description>
+      <category>推荐</category>
+      <category>教程</category>
+      <pubDate>Sat, 30 Dec 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> yt-dlp 使用教程</h1>
+<p><a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener noreferrer">yt-dlp</a> 是一个开源命令行视频/音频下载工具，远比那些闭源收费的视频下载扩展/软件好用。</p>
+<p>我主要用 yt-dlp 下载 youtube 与 bilibili 视频。与扩展插件不同，yt-dlp 不能下载任意网站的视频。要查看是否支持某网站，请直接搜 <a href="https://github.com/yt-dlp/yt-dlp/blob/master/Changelog.md" target="_blank" rel="noopener noreferrer">Changelog</a>。</p>
+<h2> 安装</h2>
+<p>linux 上可以使用包管理器安装。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>windows 上请：</p>
+<ol>
+<li>前往<a href="https://github.com/yt-dlp/yt-dlp/releases" target="_blank" rel="noopener noreferrer">其 github release</a>，下载以 <code>.exe</code> 结尾的可执行文件。</li>
+<li>放到 <code>C:\Windows\System32</code> 下。（比起操作环境变量，我更推荐这种方式）</li>
+<li>(recommended) 安装 ffmpeg 用于音视频合并。</li>
+</ol>
+<h2> 使用</h2>
+<p>以下例子中的视频仅做学习使用。</p>
+<h3> 基础下载</h3>
+<p><code>yt-dlp &lt;video-link&gt;</code></p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>其会自动调用 ffmpeg 进行合并。</p>
+<h3> 选择画质</h3>
+<p>+ <code>-F</code></p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后在弹出的列表中，选择你需要的项目 ID ，并交给 <code>-f &lt;ID&gt;</code>：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注意，一次只能传入一个 <code>-f</code>（多的以最后一个为准），如果要下载多个项目，需要使用多条指令。</p>
+<h3> 手动合并</h3>
+<p>当下载好（选择完画质的）视频后，可能需要手动合并音视频。此时需要用到 ffmpeg。</p>
+<h4> 单独合并</h4>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h4> 批量合并</h4>
+<p>linux 脚本，注意更改目标位置。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 下载大会员视频</h3>
+<p>你可能有下载 B 站版权保护视频（大会员专享）的需求，例如番剧、电视剧等。</p>
+<p>此时需要用到 <code>--cookies-from-browser &lt;browser&gt;</code>。例如使用 chromium 登录了 B 站的大会员账号，然后：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>其会自动读取 chromium 浏览器的 cookie。然后就能愉快下载了。</p>
+<blockquote>
+<p>在 linux 上这是可行的。但是在 windows 上读取 edge 浏览器 cookie 可能会出现 <em>Permission denied</em>，并且使用管理员终端无效，可能需要进行其他操作。（未测试）</p>
+</blockquote>
+]]></content:encoded>
+    </item>
     <item>
       <title>PDF 阅读器横评</title>
       <link>https://absx.pages.dev/articles/pdf_reader.html</link>
@@ -2396,24 +2439,39 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <li>关闭 Github Mobile 的默认打开网址。Github Mobile 因 2FA 需要使用，但使用其查看项目确实非常智障。幸好 MIUI14 提供了设置应用默认打开的功能：长按应用 - 应用信息 - 默认打开，调为拒绝。</li>
 </ol>
 <h3> after root</h3>
+<p>通用：</p>
 <ol>
 <li>不要在 Google Play 安装 QQ，无法开启深色模式 (fuck u)。</li>
 <li>见<a href="#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6">禁用软件</a>。</li>
 <li>Google Play 可以通过蓝牙进行发送 - 接受软件，无需再次下载，不过只能传商店内的软件。</li>
 <li>Delta Chat 可以在源手机上点击 <em>设置 - 添加第二台设备</em>，然后用目标机扫码即可迁移<strong>单个账户</strong>。</li>
-<li>（一加）可以在开发者选项里关闭 5G，减少耗电。</li>
+<li>可以在开发者选项里关闭 5G，减少耗电。</li>
+</ol>
+<p>一加：</p>
+<ol>
+<li>ColorOS 原生支持更换应用名称与图标，可以规避审查。
+<ul>
+<li>需要在 Google Play 安装<a href="https://play.google.com/store/apps/details?id=com.akbon.coloros" target="_blank" rel="noopener noreferrer">ColorOS 13 Icon pack</a></li>
+</ul>
+</li>
 </ol>
 <h3> 禁用软件</h3>
-<p><a href="https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a" target="_blank" rel="noopener noreferrer">这里</a>可以看 MIUI 有哪些不能禁用的东西。</p>
+<p>前置条件：root</p>
 <p>我使用 <a href="/articles/mobile/module_and_app.html#app" target="blank">App Manager</a> 进行软件的冻结操作。</p>
 <blockquote>
 <p><em>scene5/6</em> 也可以，但是其为闭源商业软件，操作麻烦，不用它。<br><em>雹</em> 也可以，但是主要用于禁止日常应用后台运行；无法冻结某些系统应用。</p>
 </blockquote>
+<h4> MIUI</h4>
+<p><a href="https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a" target="_blank" rel="noopener noreferrer">这里</a>可以看 MIUI 有哪些不能禁用的东西。</p>
 <h4> EU MIUI</h4>
 <ul>
 <li>禁用负一屏需要冻结 Google (<code>com.google.android.googlequicksearchbox</code>)。</li>
 <li>Google 家的大多数都能冻</li>
-<li>不要冻 <em>媒体存储设备</em>(<code>com.google.android.providers.media.module</code>) ！！！<a href="#%E4%B9%B1%E5%86%BB%E7%BB%93">惨痛教训</a></li>
+<li>不要冻 <em>媒体存储设备</em>(<code>com.google.android.providers.media.module</code>) ！！！<a href="/articles/mobile/problem.html#%E4%B9%B1%E5%86%BB%E7%BB%93" target="blank">惨痛教训</a></li>
+</ul>
+<h4> 一加</h4>
+<ul>
+<li>不要冻 <em>应用包安装程</em>！！！！<a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="blank">惨痛教训，并附带了哪些东西能冻</a></li>
 </ul>
 <h4> 禁用快应用中心</h4>
 <blockquote>
@@ -2622,19 +2680,6 @@ typst 并没有一个给开发者的清晰的文档。。<a href="https://sitand
 <ol>
 <li><a href="https://wt.tepis.me/" target="_blank" rel="noopener noreferrer">可穿戴科技</a></li>
 </ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>番号收藏</title>
-      <link>https://absx.pages.dev/hobbies/NSFW/videos.html</link>
-      <guid>https://absx.pages.dev/hobbies/NSFW/videos.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">番号收藏</source>
-      <description>这里是我的番号收藏，希望你们会喜欢。 备注：最高分界：单科得分 &amp;gt;= 10 或总分 &amp;gt;= 18; IPX-964 1:33:20 极善; 额外 此处质量总体不如上面的，不过也值得一看。FXX-SM-24; FC2PPV 778927 01 (https://jp.xero.porn/video/z6jtbjln09icqbaj24440) 02...</description>
-      <category>推荐</category>
-      <category>主张</category>
-      <pubDate>Mon, 04 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 番号收藏</h1>
-<p>这里是我的番号收藏，希望你们会喜欢。</p>
 ]]></content:encoded>
     </item>
   </channel>
