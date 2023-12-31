@@ -96,6 +96,7 @@ const data = [
   { id: "418196", aScore: 4.3, bScore: 4, info: "幼女先輩", bak: "https://telegra.ph/Grand-lemon-Tonari-Youjo-Senpai-20-omorashi-hen-Chinese-柠檬茶汉化组-Digital-04-21" },
   { id: "(ex)", aScore: 8.9, bScore: 9, info: "#女仆 #强迫 #巨乳 #全彩", otherlink: "https://exhentai.org/g/2769498/16481904c1/", bak: "https://telegra.ph/富士やま-籠絡令嬢メイド堕ち-12-17-3" },
   { id: "487758", aScore: 6.2, bScore: 8, info: "#loli #强迫 #合集 #长篇", bak: "https://telegra.ph/半里バード-わからせラブ-中国翻訳-DL版-08-01" },
+  { id: "488338", aScore: 2.9, bScore: 6, info: "#蔚蓝档案" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

@@ -185,3 +185,73 @@ $U_{AM}(t)=U_{CM}[1+m_acos\Omega t]cos\omega_c t$，前面是包络，后面是�
   - 缺点：波段覆盖范围窄，波形随频率变化大。
 - 西勒振荡电路，相比克拉泼振荡电路在电感两端并了一个可调电容
   - 优点：改进克拉泼
+
+如果是晶振，那么振荡频率就是晶振频率。
+
+## 幅度调制
+
+<!-- prettier-ignore -->
+|$V_\Omega(t)$|
+|---|
+|待调制信号|
+
+调幅指数：$\displaystyle m_a=\frac{k_a|V_{\Omega}(t)|_{max}}{V_0}$，若 $m_a>1$则会相位反转
+
+载波分量功率：$\displaystyle P_0=\frac{V_{cm}^2}{2R_L}$
+
+单边频功率：$P_{SSB}=\frac14m_a^2P_0$
+
+DSB-SC：抑制载波双边带调幅，直接相乘，相位反转
+
+SSB：单边带调幅
+
+### 检波
+
+包络检波：主要针对普通调幅。
+
+- 串联二极管，充电快，放电慢
+
+同步检波：输入信号需要同频同相。主要针对 DSB-SC 和 SSB。
+
+- 乘积型简单，相乘，再低通
+- 叠加型麻烦，是把同步检波转换为包络检波。
+
+### 混频
+
+将高频转为中频。
+
+[混频干扰图](https://www.bilibili.com/video/BV1hE411N79f/?p=80&t=16)
+
+- 交调干扰：一个干扰源
+- 互调干扰：两个干扰源，且不能同时听到
+
+## 角度调制
+
+调相：
+
+- $V_{PM}=V_0cos(\omega_0 t+k_pv_\Omega(t))$
+- 调相指数（最大相偏）：$m_p=k_p|v_\Omega(t)|_{max}$
+- 最大频偏（$\Delta\omega_m$）：上式对 t 求微分。在单频调制下，$\Delta\omega_m=m_p\Omega$
+
+调频：
+
+- $V_{FM}=V_0cos(\omega_0 t+m_fsin\Omega t)$
+- 调频指数（最大相偏）：$m_f=k_f|\int_0^tv_\Omega(t)dt|_{max}$
+
+调相指数与调频指数合称调制指数（$\Delta f_m$）。
+
+[调频与调相公式对比表格](https://www.bilibili.com/video/BV1hE411N79f/?p=85&t=548)
+
+有效频宽：$B=2(\Delta f_m+F)=2(m_p+1)F\text{（调相）}=2(m_f+F)\text{（调频）}$
+
+[直接调频优缺点](https://www.bilibili.com/video/BV1hE411N79f/?p=89&t=324)
+
+间接调频：优点：中心频率稳定性很高，缺点：频偏小
+
+- 矢量合成法：$v_{PM}(t)\approx V_0cos\omega_0 t-V_0k_pv_\Omega(t)sin\omega_0t$，需要掌握框图
+
+提升频偏：倍频同时提升频偏和中心频率，再混频降低中心频率
+
+### 鉴频
+
+- 相位鉴频器：波形变换（为调幅波）+ 包络检波
