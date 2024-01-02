@@ -18,7 +18,7 @@ category:
   pnpm i
   pnpm dev
   ```
-- 部署于 _Github Pages_ / _Cloudflare_ / _netlify_ / _vps + nginx_
+- 部署于 _Github Pages_ / _Cloudflare_ / _netlify_ / _vps + 反代_
 
 ## 文章
 
@@ -40,7 +40,14 @@ category:
 
 再后来经历了[依赖爆炸](#依赖爆炸)，换了主题。
 
-我写博客并在朋友间分享这件事也带动了朋友们写博客——甲朋友[^1]用的 vuepress 默认主题，乙[^2]用的 hexo，丙[^3]直接手搓 bootstrap，丁[^4]和我一样用 VuePress Theme Hope。不知不觉带动了整整四个人写，连我自己都很惊讶。
+我写博客并在朋友间分享这件事也带动了朋友们写博客——
+
+- 甲朋友[^1]用的 vuepress 默认主题
+- 乙[^2]和戊[^5]用的 hexo
+- 丙[^3]直接手搓 bootstrap
+- 丁[^4]和我一样用 VuePress Theme Hope
+
+不知不觉直接或间接地带动了这么多人写，连我自己都觉得惊讶。
 
 本人对存储空间敏感，因此博客的图片很少（越后期新增越少），且所有图片均压缩。
 
@@ -48,12 +55,13 @@ category:
 [^2]: [Lilic 的博客](https://lilic2233.github.io/)
 [^3]: [Perry Kum's Personal Blog](https://perrykum.github.io/)
 [^4]: [Sin 的博客](https://bear-sin.github.io/)
+[^5]: [Lry722 的博客](Lry722.github.io)
 
 ## 事迹
 
 ### 依赖爆炸
 
-20230712 由于依赖地狱把 node_modules 给崩了，重装、回档也救不回来。并且是在 lockfile 存在的情况下。
+20230712 node_modules 崩了，重装、回档也救不回来。并且是在 lockfile 存在的情况下（我也百思不得其解）。
 
 ## 主题选择
 

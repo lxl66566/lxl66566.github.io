@@ -58,8 +58,9 @@ tag:
   - [ ] if not english, test other languages
 - [ ] ecust-survival, (with vuepress)
 - [ ] galgame engine
-- [ ] bin package manager
+- [ ] bin package manager（release installer）
 - [ ] 音频振幅对齐
+- [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 
 ### Android
 

@@ -9,9 +9,15 @@ tag:
 
 # 通信电子线路
 
-我由于找不到好网课，这里的笔记由不同网课拼凑而成，质量很低，建议不看。。
+> 由于较难找到好的网课，这里的笔记由不同网课拼凑而成。不同网课的侧重点不同，也可能会漏考点。
 
-复习可以看[这里](https://www.bilibili.com/video/av594978092)，讲的很好。
+这门学科是信工大三上最抽象的课。建议先快速刷完基础概念，然后看复习，然后刷题。作业给的还挺多，因此考试考啥其实比较明确。
+
+- 基础概念：[华中科技大学通信（高频）电子线路精品公开课（附课件和知识体系图）](https://www.bilibili.com/video/BV1hE411N79f)，11.5h
+- 复习：[【知识点速通+习题讲解】通信(高频)电子线路【开荒实况】](https://www.bilibili.com/video/av594978092)，7h
+- 作业的复习补充：
+  - 传输线阻抗变换和魔 T 网络（视频，书上都没有）
+  - 调幅检波电路计算与失真（视频比较简略）
 
 ## 基础概念
 
@@ -21,11 +27,9 @@ tag:
 
 品质因数 $\displaystyle Q=\frac{\omega L}{R}$（感抗 / 损耗）= $2\pi\times$ 回路储能 / 每周期耗能
 
-> 回路品质因数是为谐振时的线圈品质因数。
-
 特性阻抗 $\displaystyle \rho=\omega_0L=\frac1{\omega_0C}=\sqrt{\frac{L}C}$（谐振时的容/感抗）
 
-谐振时回路阻抗有最大值（谐振阻抗） $\displaystyle R_p=\frac L{rC}=Q \rho$
+谐振时回路阻抗有最大值（谐振阻抗） $\displaystyle R_p=\frac L{rC}=Q_0 \rho$
 
 矩形系数 $\displaystyle K_{r0.1}=\frac{f_{0.1}}{f_{0.7}}$ 表示接近理想曲线的程度
 
@@ -88,9 +92,7 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 
 三要素：增益，品质因数，通频带
 
-电压增益：$\displaystyle \dot A_v=\frac{-p_1p_2y_{fe}}{g_\Sigma+j\omega C_\Sigma+\frac1{j\omega L}}$；关于公式理解可以看[视频](https://www.bilibili.com/video/BV1hE411N79f/?p=23&t=337)
-
-- 在谐振频率附近分母后两项可以舍去
+电压增益（谐振）：$\displaystyle \dot A_v=\frac{-p_1p_2|y_{fe}|}{g_\Sigma},g_\Sigma$ 为谐振电阻$R_p$+输入等效$p_1^2g_{oe}$+输出等效$p_2^2g_{ie}$
 
 电压增益 \* 通频带 = const
 
@@ -100,6 +102,7 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 
 - 增益：乘积
 - 通频带：（各级增益相同情况下）总通频带 = $\displaystyle\sqrt{2^{\frac1{m}}-1}\times$ 单级通频带
+- 噪声系数：$\displaystyle N_{F\Sigma}=N_{F1}+\frac{N_{F2}-1}{G_1}+\frac{N_{F3}-1}{G_1G_2}+...,\ \ G_x=A_{vx}^2$
 
 ### 自激
 
@@ -117,14 +120,10 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 - $\displaystyle g_{eo}=\frac1{Q_0\omega_0L}$
 - 知道抽头变换，$n_1$ 和 $n_2$ 的计算。
 
-## 滤波器
-
-- 石英晶体/陶瓷
-  - 接入系数小
-  - Q 很大（石英晶体 > 陶瓷）
-  - 并联谐振频率比串联大；在此二频率中间显感性，其他显容性
-
 ## 噪声
+
+<details>
+  <summary>不重要，大概不考，记一下上面的多级噪声系数就行</summary>
 
 - 串并联电阻噪声等于等效电阻噪声（均方值）
 - 并联谐振回路噪声约等于等效电阻产生的噪声
@@ -134,7 +133,11 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
   - 降低噪声系数可以提高系统灵敏度，但是灵敏度不是越高越好
 - 多级噪声：$\displaystyle N_F=N_{F1}+\frac{N_{F2}-1}{K_1}+\frac{N_{F3}-1}{K_1\cdot K_2}+...$，显然与第一级关系最大
 
+</details>
+
 ## 谐振功放
+
+> 注意 $g_c$（跨导）和 $g_{cr}$（临界线斜率）不是同一个东西，不要搞错了。
 
 <!-- prettier-ignore -->
 |$V_{bm}$|$V_{bz}$
@@ -149,21 +152,19 @@ $\displaystyle p=\frac{L_1}{L_1+L_2}=\frac{C_2}{C_1+C_2}$，1 在抽头内，需
 
 [效率](https://www.bilibili.com/video/BV1hE411N79f/?p=30&t=344) $\displaystyle\eta=\frac12\xi g_1(\theta_c)$
 
-$I_{cmax}=g_cV_{bm}(1-cos(\theta_c))$
+$I_{cmax}=g_cV_{bm}(1-cos(\theta_c))=g_{cr}(V_{cc}-V_{cm})$
 
 $\displaystyle cos\theta_c=\frac{V_{BB}+V_{BZ}}{V_{bm}}$
 
 [傅里叶级数展开求 $I_{c0},I_{cm1}$](https://www.bilibili.com/video/BV1hE411N79f/?p=31&t=637)：$I_{c0}=I_{cmax}\alpha_0, I_{cm1}=I_{cmax}\alpha_1$
 
+$\displaystyle V_{cm}=V_{cc}-\frac{i_{Cmax}}{g_{cr}}$
+
 最佳半导通角约为 70 度
 
-负载特性：欠压恒流，过压恒压。关于效率：[曲线](https://www.bilibili.com/video/BV1hE411N79f/?p=37&t=946)
+增大负载，$V_{bm}$ -> 过压，增大 $V_{cc}$ -> 欠压
 
-## 振幅调制
-
-不失真：$m_a\sqrt{1+\Omega^2C^2R_L^2}<1$
-
-$U_{AM}(t)=U_{CM}[1+m_acos\Omega t]cos\omega_c t$，前面是包络，后面是高频载波
+关于效率：临界效率最高。[曲线](https://www.bilibili.com/video/BV1hE411N79f/?p=37&t=946)
 
 ## 振荡器
 
@@ -173,37 +174,56 @@ $U_{AM}(t)=U_{CM}[1+m_acos\Omega t]cos\omega_c t$，前面是包络，后面是�
 
 - 互感耦合振荡器：应用于中短波，因为存在分布电容，稳定性差
 - 电感三点振荡器
+  - $f=1/2\pi\sqrt{(L_1+L_2+2M)C}$
   - 优点：容易起振，方便调节，不影响反馈系数
   - 缺点：高次谐波失真，频率不高
 - 电容三点振荡器
+  - $f=1/2\pi\sqrt{L(C_1C_2)/(C_1+C_2)}$
   - 优点：波形好，稳定，高频
   - 缺点：不方便调整（会改变反馈系数）。可以在 L 两端并联电容解决。
 - 克拉泼振荡电路，相比电容三点振荡器添加了一个 C3（远小于 C1，C2）
+  - $f=1/2\pi\sqrt{LC_3}$
+  - 反馈系数$F=C_1/C_2$
   - 优点：
     - 利于调节。振荡频率与反馈系数无关。
     - 接入系数减小，稳定。
-  - 缺点：波段覆盖范围窄，波形随频率变化大。
+  - 缺点：波段覆盖范围窄（频率覆盖系数小），波形随频率变化大，高频不易起振。
 - 西勒振荡电路，相比克拉泼振荡电路在电感两端并了一个可调电容
   - 优点：改进克拉泼
 
-如果是晶振，那么振荡频率就是晶振频率。
+$F\in(\frac18,\frac12)$ 用来判断稳定性
+
+石英晶振
+
+- 并联等效电感，串联等效导线
+- 振荡频率就是晶振频率！不用算 LC
+- 接入系数小
+- Q 很大（石英晶体 > 陶瓷）
 
 ## 幅度调制
 
 <!-- prettier-ignore -->
-|$V_\Omega(t)$|
-|---|
-|待调制信号|
+|$V_\Omega(t)$|$V_0(t)$|DSB-SC|SSB|
+|---|---|---|---|
+|待调制信号|载波|抑制载波双边带调幅|单边带调幅|
 
-调幅指数：$\displaystyle m_a=\frac{k_a|V_{\Omega}(t)|_{max}}{V_0}$，若 $m_a>1$则会相位反转
+$V_{AM}=V_0(1+m_acos\Omega t)cos\omega_0 t$
 
-载波分量功率：$\displaystyle P_0=\frac{V_{cm}^2}{2R_L}$
+调幅指数：$\displaystyle m_a=\frac{k_a|V_{\Omega}(t)|_{max}}{V_0}=\frac{V_{max}-V_0}{V_0}$（上半部分），若 $m_a>1$则会相位反转
+
+载波分量功率：$\displaystyle P_0=\frac{V_{0}^2}{2R_L}$
 
 单边频功率：$P_{SSB}=\frac14m_a^2P_0$
 
-DSB-SC：抑制载波双边带调幅，直接相乘，相位反转
+DSB-SC：直接相乘，相位反转
 
-SSB：单边带调幅
+调幅电路
+
+- 低电平调幅
+  - 平方律调幅：AM
+  - 平衡调幅（双二极管）：DSB
+  - 环形调幅
+- 高电平调幅：边调幅边功放
 
 ### 检波
 
@@ -216,12 +236,24 @@ SSB：单边带调幅
 - 乘积型简单，相乘，再低通
 - 叠加型麻烦，是把同步检波转换为包络检波。
 
+不产生失真的条件：
+
+- 无惰性失真：$\displaystyle RC\Omega_{max}<\frac{\sqrt{1-m_{amax}^2}}{m_{amax}}$
+- 无负峰切割失真：$\displaystyle m_a<\frac{R(\Omega)}{R}$（交流总电阻/直流电阻）
+
 ### 混频
 
 将高频转为中频。
 
-[混频干扰图](https://www.bilibili.com/video/BV1hE411N79f/?p=80&t=16)
+<!-- prettier-ignore -->
+|$f_c$|$f_1$|
+|---|---|
+|收听频率|中频频率，一般为 465kHz|
 
+- 哨声干扰：没有干扰源，$\displaystyle f_c\approx \frac{p\pm 1}{q-p}f_1$
+- 组合副波道干扰：$\displaystyle f_c=\frac{q}{p}f_n+\frac{p\pm 1}{p}f_1$
+  - p=0,q=1：中频干扰
+  - p=1,q=1：镜像干扰
 - 交调干扰：一个干扰源
 - 互调干扰：两个干扰源，且不能同时听到
 
@@ -242,7 +274,9 @@ SSB：单边带调幅
 
 [调频与调相公式对比表格](https://www.bilibili.com/video/BV1hE411N79f/?p=85&t=548)
 
-有效频宽：$B=2(\Delta f_m+F)=2(m_p+1)F\text{（调相）}=2(m_f+F)\text{（调频）}$
+有效频宽：$B=2(\Delta f_m+F)=2(m_p+1)F\text{（调相）}=2(m_f+F)\text{（调频）}$，F 是低频信号的频率。
+
+功率：等于载波功率
 
 [直接调频优缺点](https://www.bilibili.com/video/BV1hE411N79f/?p=89&t=324)
 

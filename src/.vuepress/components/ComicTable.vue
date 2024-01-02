@@ -97,6 +97,11 @@ const data = [
   { id: "(ex)", aScore: 8.9, bScore: 9, info: "#女仆 #强迫 #巨乳 #全彩", otherlink: "https://exhentai.org/g/2769498/16481904c1/", bak: "https://telegra.ph/富士やま-籠絡令嬢メイド堕ち-12-17-3" },
   { id: "487758", aScore: 6.2, bScore: 8, info: "#loli #强迫 #合集 #长篇", bak: "https://telegra.ph/半里バード-わからせラブ-中国翻訳-DL版-08-01" },
   { id: "488338", aScore: 2.9, bScore: 6, info: "#蔚蓝档案" },
+  { id: "441652", aScore: 7.8, bScore: 3.4, info: "#女仆 #纯爱", bak: "https://telegra.ph/半可通少女榎本尚吸血鬼様とちいさなメイドのみだりな吸血-08-01" },
+  { id: "442431", aScore: 7.6, bScore: 2, info: "#蔚蓝档案", order: 2, bak: "https://telegra.ph/NNL-メリサン-びゅるるアーカイブ2-ブルーアーカイブ-中国翻訳-DL版-08-01" },
+  { id: "(ex)", aScore: 3.5, bScore: 5, info: "#蔚蓝档案", otherlink: "https://exhentai.org/g/2783575/06a45e0ee6/", bak: "https://telegra.ph/らーめんらいす-らじー-発情セイアですまない-ブルーアーカイブ-中国翻訳-DL版-12-31" },
+  { id: "408727", aScore: 9.7, bScore: 8.2, info: "#玉之けだま", bak: "https://telegra.ph/玉之けだま-僕は小さな淫魔のしもべ-中国翻訳-無修正-DL版-12-31" },
+  { id: "482101", aScore: 2.7, bScore: 7, info: "#东方", bak: "https://telegra.ph/世捨人な漫画描き-ともきとものり-濡れる守矢神社-東方Project-中国翻訳-DL版-11-18" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

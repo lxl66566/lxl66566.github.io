@@ -504,3 +504,4 @@ file.close();
 7. [C++ 移动语义](https://zhuanlan.zhihu.com/p/642214693)
 8. [[Brief Talk] `auto`, `auto&`, `const auto&` 以及其它形式的 auto 变种在 for-range loop 的选择](https://zhuanlan.zhihu.com/p/25148592)
 9. [浅谈 C++ Undefined Behavior](https://zhuanlan.zhihu.com/p/391088391)
+10. [ELF 格式的 Symbol 及 C++ 的 inline 关键字](https://zhuanlan.zhihu.com/p/380982475)

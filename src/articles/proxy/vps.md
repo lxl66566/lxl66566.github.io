@@ -66,9 +66,10 @@ tag:
 
 ## 工具
 
-- [一键脚本](https://github.com/lxl66566/init-script)：不得不提我自己写的一键脚本，一键 hysteria + trojan-go + trojan
+- [一键脚本](https://github.com/lxl66566/init-script)：不得不提我自己写的一键脚本，一键常用软件 + 代理（hysteria + trojan-go + trojan）
 - [ping.pe](https://ping.pe/#)：连通性
 - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
+- `curl -sL network-speed.xyz | bash -s -- -r china` 也可以国内测速
 
 ### SSH
 

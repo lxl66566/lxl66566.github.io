@@ -110,7 +110,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |[`fd`](https://github.com/sharkdp/fd) & `plocate`|查找，faster `find`|
 |`tldr`|`man` 的代替|
 |`fex`|`cut` 的代替|
-|`exa`|[`ls` 的代替](#exa)|
+|`eza`|[`ls` 的代替](#eza)|
 |`fastfetch`|`neofetch` 的代替|
 |[`rip`](https://github.com/nivekuil/rip) / `trash-cli`|easier, safer `rm`|
 |`btop` & `mission-center` / `htop` / `glances`|任务管理器，看性能，`top` 的代替|
@@ -251,11 +251,11 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 快速搜索，其维护了一个数据库，使用 `sudo updatedb` 更新（默认开机时自动执行），搜索时不再遍历目录。
 
-### exa
+### eza
 
-`ls='exa --all --long --color-scale size --binary --header --time-style=long-iso'`
+`alias ls='eza --all --long --color-scale size --binary --header --time-style=long-iso'`
 
-需要 exa 到一定版本才能用。起码 _ubuntu 22.04_ 上的 0.10 是不可用的。
+原名 exa，现在活跃分支是 eza。注意该 alias 需要一定版本下才可正常工作。
 
 ### tmux
 
