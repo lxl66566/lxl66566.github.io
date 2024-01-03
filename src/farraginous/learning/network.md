@@ -41,7 +41,14 @@ RTT = Round Trip Time，往返时间
 
 平均吞吐量取决于瓶颈链路。
 
-## 协议层
+## 协议层（运输层）
+
+### RTT
+
+指数加权移动平均
+
+- EstimatedRTT = (1 − 𝛼) EstimatedRTT + 𝛼 SampleRTT
+- DevRTT = (1 − 𝛽) DevRTT + 𝛽 |SampleRTT − EstimatedRTT|
 
 ### RDT
 
@@ -61,6 +68,15 @@ RW > 1 时，发送的 ACK 序号等于接收到的。
 
 - RW = 1 时，若出错，将重传所有 SW 内的分组；
 - RW > 1 时，若出错，只重传出错分组。
+
+### 拥塞控制
+
+对于拥塞窗口大小（TCP Reno）：
+
+- 慢启动：从 1 开始每时刻 \* 2
+- 拥塞避免时：每时刻 + 1
+- 3 个冗余 ACK：减半
+- 超时：重设为 1
 
 ## external
 

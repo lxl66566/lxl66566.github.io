@@ -102,6 +102,10 @@ const data = [
   { id: "(ex)", aScore: 3.5, bScore: 5, info: "#蔚蓝档案", otherlink: "https://exhentai.org/g/2783575/06a45e0ee6/", bak: "https://telegra.ph/らーめんらいす-らじー-発情セイアですまない-ブルーアーカイブ-中国翻訳-DL版-12-31" },
   { id: "408727", aScore: 9.7, bScore: 8.2, info: "#玉之けだま", bak: "https://telegra.ph/玉之けだま-僕は小さな淫魔のしもべ-中国翻訳-無修正-DL版-12-31" },
   { id: "482101", aScore: 2.7, bScore: 7, info: "#东方", bak: "https://telegra.ph/世捨人な漫画描き-ともきとものり-濡れる守矢神社-東方Project-中国翻訳-DL版-11-18" },
+  { id: "282887", aScore: 4.9, bScore: 6.9, info: "#催眠 #全彩 #loli", order: 1, bak: "https://telegra.ph/C96-caburibbon-caburi-sss-スマート催眠セックス-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 5.1, bScore: 5.3, info: "#催眠 #全彩 #loli", order: 2, otherlink: "https://exhentai.org/g/1571279/d20d30ed97/", bak: "https://telegra.ph/caburibbon-caburi-sssh-中国翻訳-DL版-08-02" },
+  { id: "440151", aScore: 6.5, bScore: 6.2, info: "#原神", bak: "https://telegra.ph/saluky-派蒙啊加速时间吧-原神-中国語-08-01" },
+  { id: "446532", aScore: 9, bScore: 7.6, info: "#蔚蓝档案 #全彩", bak: "https://telegra.ph/FF40-山含-色色運動大會-ブルーアーカイブ-08-01" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

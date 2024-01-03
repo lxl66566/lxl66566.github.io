@@ -30,3 +30,4 @@ tag:
 7. [为什么固态会掉盘？著名的 30 分钟大法修复是什么原理？](https://zhuanlan.zhihu.com/p/57617932)
 8. [看看中国法院是怎么对待 GPL 协议的](https://mp.weixin.qq.com/s/zj2j5jWULDEAJPVscrNWUg) | [bak](https://telegra.ph/看看中国法院是怎么对待GPL协议的-12-11)
 9. [MSRA 读博五年（三）地下挖矿机房与数字前任计划](https://zhuanlan.zhihu.com/p/652585863)
+10. [10 Things Software Developers Should Learn about Learning](https://cacm.acm.org/magazines/2024/1/278891-10-things-software-developers-should-learn-about-learning/fulltext)
