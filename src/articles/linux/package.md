@@ -239,11 +239,58 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 </p></details>
 
+### 聊天软件
+
+[Telegram](../telegram.md) 当然是首推，多平台适配好，并且在官方仓库，甚至能直接用 web 版。
+
+但是只要在中国有原生家庭，就逃不开 QQ 和微信。
+
+- QQ 还好说，有 QQNT（`linuxqq` <Badge text="AUR" />）用。
+  - 不要安装 [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)。Archlinux 是滚动更新，而第三方为爱发电的注入基本上跟不上更新节奏。我试了 bin 包和 git 包都会闪退。
+- 微信就是垃圾的代名词，`wechat-uos` <Badge text="AUR" /> 在暗色模式下有 bug，并且进不了托盘。但是有原生我也不想用 wine。
+
 ### 资源监视器
 
 - `btop`：制作精美的 TUI 资源监视器，跨平台（甚至能在 windows 上用）
 - `mission-center`<Badge text="archlinuxcn"/>：GUI，类似 windows 任务管理器
 - `htop`：top 加强，比较经典
+
+### 游戏
+
+```sh
+paru -S --needed arch-gaming-meta
+```
+
+这个包里有很多好东西。
+
+### 录音
+
+其实 obs 就能录，但是有点重，我想试试其他的。
+
+我先尝试了一下 `krecorder`，但是使用体验不算好，完全无法录音。音源把能选的都选了一遍，录音还是无法开始。
+
+后来想用 `recordmydesktop`，结果 gtk 和 qt 前端都装不上，gtk 缺依赖包，qt 编译了半天，时间全花在输出 warning 了。
+
+然后从网上抄了一个 ffmpeg 代码，并改进了一下：
+
+```sh
+ffmpeg -f pulse -i 0 -c:a libmp3lame -b:a 128k -af "volume=0.04" pulse.mp3
+```
+
+it works.
+
+### 关于文档
+
+众所周知文档领域基本由微软的 office 独占，而三件套又基本由 windows 独占。
+
+在 linux 下，我尝试使用不同的替代品：
+
+1. LibreOffice（不可用）：word 排版不同，原本一页的可能会变成两页。
+2. WPS（不可用）：图片显示错误，还有广为诟病的粗体问题。
+   - 解法（据说）：`paru -S freetype2-wps libtiff5` ([ref](https://t.me/archlinuxcn_group/3016741))
+3. ONLYOFFICE：目前看来没啥太大毛病。
+
+我一般用 typst 等排版工具生成 pdf，如果实在不行再去 windows 上用 office。不过现在看来或许也能试试 ONLYOFFICE。
 
 ### [neovim](../../coding/vim.md)
 
@@ -347,32 +394,3 @@ waydroid show-full-ui
 注意，home 目录是共享的，不能当作沙盒使用。
 
 我试着安装了一个 ubuntu 22.04，占用空间 500M 左右。
-
-### 录音
-
-其实 obs 就能录，但是有点重，我想试试其他的。
-
-我先尝试了一下 `krecorder`，但是使用体验不算好，完全无法录音。音源把能选的都选了一遍，录音还是无法开始。
-
-后来想用 `recordmydesktop`，结果 gtk 和 qt 前端都装不上，gtk 缺依赖包，qt 编译了半天，时间全花在输出 warning 了。
-
-然后从网上抄了一个 ffmpeg 代码，并改进了一下：
-
-```sh
-ffmpeg -f pulse -i 0 -c:a libmp3lame -b:a 128k -af "volume=0.04" pulse.mp3
-```
-
-it works.
-
-### 关于文档
-
-众所周知文档领域基本由微软的 office 独占，而三件套又基本由 windows 独占。
-
-在 linux 下，我尝试使用不同的替代品：
-
-1. LibreOffice（不可用）：word 排版不同，原本一页的可能会变成两页。
-2. WPS（不可用）：图片显示错误，还有广为诟病的粗体问题。
-   - 解法（据说）：`paru -S freetype2-wps libtiff5` ([ref](https://t.me/archlinuxcn_group/3016741))
-3. ONLYOFFICE：目前看来没啥太大毛病。
-
-我一般用 typst 等排版工具生成 pdf，如果实在不行再去 windows 上用 office。不过现在看来或许也能试试 ONLYOFFICE。

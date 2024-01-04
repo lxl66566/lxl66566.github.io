@@ -20,7 +20,8 @@
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
           <td>
-            <details v-if="row.name">
+            <span v-if="row.name?.length < 20">{{ row.name }}</span>
+            <details v-if="row.name?.length >= 20">
               <summary>点击展开</summary>
               {{ row.name }}
             </details>

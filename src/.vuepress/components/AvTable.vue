@@ -209,6 +209,11 @@ const data = [
   { id: "mudr-059", aScore: 7.3, bScore: 6.5 },
   { id: "ssni-036", aScore: 6.7, bScore: 4.8, u: true },
   { id: "midv-185", aScore: 7.6, bScore: 8.6, u: true },
+  { id: "cawd-568", aScore: 8.5, bScore: 8.8, u: true },
+  { id: "miaa-843", aScore: 7, bScore: 2.1, u: true },
+  { id: "dasd-321", aScore: 4.3, bScore: 9.5, u: true, name: "#拘束" },
+  { id: "id-015-10", aScore: 5.5, bScore: 8.1, u: true, name: "#cosplay" },
+  { id: "abp-588", aScore: 5.2, bScore: 9, u: true, name: "#狂暴" },
 ];
 export default {
   name: "AvTable",

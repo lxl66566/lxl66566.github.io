@@ -50,6 +50,7 @@ Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的
 2. ColorOS 一些不错的 idea：
    - 双击空白处锁屏
 3. _手机管家_ 可以冻结
+4. 可以[更换应用图标与名字](./root_and_setting.md#after-root)
 
 坏:
 

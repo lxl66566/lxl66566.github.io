@@ -93,6 +93,7 @@ umount /mnt/windows
      ollama run llama2
      ```
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
+   - 我使用 `zram-generator` <Badge text="AUR" />。[这里](https://github.com/systemd/zram-generator/blob/main/zram-generator.conf.example)有一些 conf example.
 3. 设置 `/etc/fstab`
    - [挂载 tmpfs](../ramdisk.md)
      - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了，可以调整容量。

@@ -82,6 +82,7 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 #### 常用指令
 
+- `btrfs fi us /`：查看已用大小
 - `sudo btrfs scrub start /` && `btrfs scrub status /`：检查 checksum
 
 #### 工具

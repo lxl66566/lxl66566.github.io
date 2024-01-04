@@ -114,6 +114,7 @@ tag:
 
 1. ColorOS 原生支持更换应用名称与图标，可以规避审查。
    - 需要在 Google Play 安装[ColorOS 13 Icon pack](https://play.google.com/store/apps/details?id=com.akbon.coloros)
+2. [LuckyTool](./module_and_app.md#lsposed) 安装后在任务栏小部件有多出一些选项。其中的**极暗模式**是好东西。
 
 ### 禁用软件
 

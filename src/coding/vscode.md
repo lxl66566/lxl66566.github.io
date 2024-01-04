@@ -78,9 +78,15 @@ vscode 的特色：
 
 - 前文的插件系统不再赘述
 - **设置同步**，可以瞬间在其他平台搭好最适合自己的开发环境。（这也是小标题的由来）
-- 集成全文搜索；linux 下需要自己 `find` / `grep`
+- 集成全文搜索（ripgrep）；linux 下需要自己 `find` / `grep`
 - 集成 git 图形化界面，虽说我不用且功能不多，但是对不会用 git 的新手非常友好
 - 多光标支持
+
+## 正则匹配
+
+vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft/vscode/issues/39404#issuecomment-348710460)，因此可能无法使用某些正则语法。
+
+要匹配所有中文，请使用 `[一-龥]`。([ref](https://superuser.com/questions/983441/visual-studio-search-through-code-for-chinese-text))
 
 ## 其他评价
 
