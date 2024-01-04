@@ -93,13 +93,16 @@ umount /mnt/windows
      ollama run llama2
      ```
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
-   - 我使用 `zram-generator` <Badge text="AUR" />。[这里](https://github.com/systemd/zram-generator/blob/main/zram-generator.conf.example)有一些 conf example.
+   - 我使用 `zram-generator` <Badge text="AUR" />。
+     - [conf example](https://github.com/systemd/zram-generator/blob/main/zram-generator.conf.example)
+     - [我的 zram-generator 配置](https://github.com/lxl66566/dotfile/blob/archlinux/etc/systemd/zram-generator.conf)
 3. 设置 `/etc/fstab`
-   - [挂载 tmpfs](../ramdisk.md)
+   - ~~[挂载 tmpfs](../ramdisk.md)~~ 后来使用 zram <Badge text="2." /> 了。
      - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了，可以调整容量。
-   - 添加 `noatime` 标识，即不带访问时间 ([ref](https://t.me/archlinuxcn_group/2900548))
-   - 删除 `subvolid`，详见 [timeshift 引发的血案](./problem.md#timeshift-引发的血案)
+     - 添加 `noatime` 标识，即不带访问时间 ([ref](https://t.me/archlinuxcn_group/2900548))
+     - 删除 `subvolid`，详见 [timeshift 引发的血案](./problem.md#timeshift-引发的血案)
      - 可以用 `sudo sed -i -E 's/(subvolid=[0-9]+,)|(,subvolid=[0-9]+)//g' /etc/fstab` 命令行删除。
+   - 挂载 zram：只需在 `zram-generator.conf` 中新建一个 zram device，然后写 `mount-point = /tmp` 即可。
 4. ~~[wayland 的 electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)（据说 wayland 对 electron 不太友好）~~
    - > 无所谓，现在是 X11 人
 5. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)

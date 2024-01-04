@@ -37,7 +37,8 @@ tag:
 
 - 通用：
   - [AI 代码补全](#AI-补全)
-  - 更好的警告：_Error Lens_，_SonarLint_
+  - 更好的警告：_Error Lens_
+    - 不可否认 _SonarLint_ 很强，但是 java 写的，占用空间和 RAM 都很大。因此在使用了几年 _SonarLint_ 以后我选择分语言使用不同 linter。
   - 轻量级 Git 可视化：_Git Graph_
   - 代码格式化：_Prettier - Code formatter_（主要用于 markdown
   - 编辑器：_Vim_

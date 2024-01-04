@@ -205,6 +205,12 @@ firewall-cmd --zone=public --list-ports
 
 评价起来就是，hysteria 延迟最低，trojan-go 小幅度落后，差得不多。trojan 延迟比较大，但是胜在兼容性强。而 hysteria 风险较大，没必要为了几十 ms 延迟去冒险，因此还是 trojan-go 适合我。
 
+### 脚本
+
+- [我的一键脚本](https://github.com/lxl66566/init-script)：linux 常用工具，trojan-go, trojan, hysteria
+- [V2ray 脚本](https://github.com/233boy/v2ray)：融合怪，啥都有
+- [trojan 脚本](https://github.com/Jrohy/trojan)：仅 trojan
+
 ### WARP
 
 有的 IP 访问 Google 时会有机器人异常验证。可以用 [WARP 一键脚本](https://github.com/P3TERX/warp.sh)解决。

@@ -247,7 +247,15 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 - QQ 还好说，有 QQNT（`linuxqq` <Badge text="AUR" />）用。
   - 不要安装 [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)。Archlinux 是滚动更新，而第三方为爱发电的注入基本上跟不上更新节奏。我试了 bin 包和 git 包都会闪退。
-- 微信就是垃圾的代名词，`wechat-uos` <Badge text="AUR" /> 在暗色模式下有 bug，并且进不了托盘。但是有原生我也不想用 wine。
+- [微信](https://wiki.archlinuxcn.org/wiki/微信)就是垃圾的代名词，`wechat-uos` <Badge text="AUR" /> 在暗色模式下有 bug，并且进不了托盘。但是有原生我也不想用 wine。（反正我没有朋友圈、小程序需求）
+
+### 邮件
+
+我的需求挺简单，只是 IMAP 接收和多账号管理。
+
+Thunderbird (`thunderbird-i18n-zh-cn` <Badge text="extra" />) 是一个重量级的邮件客户端，支持收发，多账号。好用是挺好用，就是太重了（600+M RAM），于是我想寻找更轻量的邮件客户端。
+
+由于我桌面用的 kde，试了下 kmail，用不了，一直报 Akonadi 有问题，点 _详情_ 也点不开。我装了 `kde-pim` <Badge text="包组" /> 也无济于事。
 
 ### 资源监视器
 
@@ -262,6 +270,30 @@ paru -S --needed arch-gaming-meta
 ```
 
 这个包里有很多好东西。
+
+#### bottles
+
+基于 wine 运行 windows 软件/游戏，比 wine 更傻瓜式（只需要点鼠标，不用写配置）。
+
+::: code-tabs
+
+@tab 已安装 arch-gaming-meta
+
+```sh
+paru -S bottles
+```
+
+@tab 未安装 arch-gaming-meta
+
+```sh
+paru -S bottles wine wine-mono
+```
+
+:::
+
+然后打开 bottles，手动安装运行库，字体等。
+
+不能直接运行挂载在 windows ntfs 盘里的游戏，只能 copy 一份到 linux 下运行。
 
 ### 录音
 
@@ -349,19 +381,6 @@ sudo systemctl enable --now tlp
 ### activitywatch
 
 记录软件使用时长，参考[文章](../time_record.md)
-
-### bottles
-
-基于 wine 运行 windows 软件，比 wine 更傻瓜式（只需要点鼠标，不用写配置）。
-
-```sh
-paru -S bottles wine wine-mono
-# 然后打开 bottles，手动安装运行库，字体等。
-```
-
-但是试了一下，不能直接运行挂载 windows 盘里的游戏，只能 copy 一份到 linux 下运行。
-
-目前试了几个 galgame，都能正常运行。~~（来人，上点逆天的！）~~
 
 ### [waydroid](https://wiki.archlinuxcn.org/wiki/Waydroid)
 
