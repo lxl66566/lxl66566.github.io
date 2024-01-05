@@ -42,8 +42,8 @@ $('.language_button').click(function(e) {
     urlname[flag] = $(e.target).attr('id');
 });
 
-$.getJSON("https://cdn.staticaly.com/gh/lxl66566/wordsreciter/notebook/notebook.json",function(d){
-// $.getJSON("https://cdn.jsdelivr.net/gh/lxl66566/wordsreciter@notebook/notebook.json",function(d){
+// $.getJSON("https://cdn.staticaly.com/gh/lxl66566/wordsreciter/notebook/notebook.json",function(d){
+$.getJSON("https://cdn.jsdelivr.net/gh/lxl66566/wordsreciter@notebook/notebook.json",function(d){
     data = d;
 })
 $("#recite").click(function(){

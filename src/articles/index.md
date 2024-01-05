@@ -9,8 +9,6 @@ category:
 
 此处仅包含杂项文章。若需要阅读编程、爱好有关文章请前往对应版块。
 
-- 这里有一些[外部文章分享](./external.md)。
-
 ## [linux 相关](./linux/index.md)
 
 ## [手机相关](./mobile/index.md)
@@ -25,9 +23,9 @@ category:
 - [TG（telegram）教程](./telegram.md)
 - [ADB 教程与常用指令](./adb.md)
 - [Markdown 教程](./markdown.md)
-- [Android 查看手机 cpu 指令集](./Android_ISA.md)
-- [最小化二进制文件与 dll](./minimize_exe.md)
+- [压缩二进制文件与 dll](./minimize_exe.md)
 - [命令行压缩](./cli_compress.md)
+- [yt-dlp 使用教程](./yt-dlp.md)
 
 ## 推荐/横评
 
@@ -40,5 +38,7 @@ category:
 - [音频转文字](./voice2text.md)
 - [OCR](./ocr.md)
 - [PDF 阅读器横评](./pdf_reader.md)
+
+## [外部文章分享](./external.md)
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->

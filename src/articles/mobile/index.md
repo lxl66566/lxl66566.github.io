@@ -29,6 +29,10 @@ Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的
 
 ## [遇到的问题](./problem.md)
 
+## 其他文章
+
+- [Android 查看指令集](./Android_ISA.md)
+
 ## 选购
 
 1. 自由。需要 root。

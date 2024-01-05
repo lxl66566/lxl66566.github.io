@@ -324,6 +324,26 @@ it works.
 
 我一般用 typst 等排版工具生成 pdf，如果实在不行再去 windows 上用 office。不过现在看来或许也能试试 ONLYOFFICE。
 
+### 系统监视
+
+#### 资源监视
+
+linux 自带的是 `top`，由此衍生出了一堆 tui `*top`。我同时使用 `btop` 和 `htop`。
+
+还有一个 `mission-center` <Badge text="archlinuxcn" /> 是类似 windows 任务管理器的 GUI 监视器。比较重量级，我一般不用。
+
+#### 文件系统
+
+`inotify` 是一个强大的监视器。
+
+```sh
+sudo pacman -S inotify-tools
+```
+
+具体使用方法 RTFM。
+
+- `sudo inotifywait -m -r -e create --format '%w%f' /home/absolutex` 能监视目录下新创建的文件。
+
 ### [neovim](../../coding/vim.md)
 
 ### [locate](https://man7.org/linux/man-pages/man1/locate.1.html)

@@ -35,6 +35,7 @@ export default sidebar({
 		"root_and_setting.md",
 		"module_and_app.md",
 		"problem.md",
+		"Android_ISA.md",
 	],
 	"/articles/proxy/": [
 		"index.md",
@@ -57,9 +58,9 @@ export default sidebar({
 				"telegram.md",
 				"adb.md",
 				"markdown.md",
-				"Android_ISA.md",
 				"minimize_exe.md",
 				"cli_compress.md",
+				"yt-dlp.md",
 			],
 		},
 		{
@@ -68,7 +69,6 @@ export default sidebar({
 				"time_record.md",
 				"track_record.md",
 				"input_method",
-				"external.md",
 				"ramdisk.md",
 				"note.md",
 				"reverse_proxy.md",
@@ -76,6 +76,10 @@ export default sidebar({
 				"ocr.md",
 				"pdf_reader.md",
 			],
+		},
+		{
+			text: "外部文章分享",
+			link: "external.md",
 		},
 	],
 	"/coding/": [

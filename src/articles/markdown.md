@@ -7,6 +7,8 @@ category:
 
 # Markdown
 
+> 本文章写于早期，质量并不高，建议阅读其他教程。
+
 Markdown 是被广泛使用的轻量级标记语言。
 
 推荐教程：[younghz.github.io/Markdown/](http://younghz.github.io/Markdown/)

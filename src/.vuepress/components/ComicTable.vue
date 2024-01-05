@@ -106,6 +106,7 @@ const data = [
   { id: "(ex)", aScore: 5.1, bScore: 5.3, info: "#催眠 #全彩 #loli", order: 2, otherlink: "https://exhentai.org/g/1571279/d20d30ed97/", bak: "https://telegra.ph/caburibbon-caburi-sssh-中国翻訳-DL版-08-02" },
   { id: "440151", aScore: 6.5, bScore: 6.2, info: "#原神", bak: "https://telegra.ph/saluky-派蒙啊加速时间吧-原神-中国語-08-01" },
   { id: "446532", aScore: 9, bScore: 7.6, info: "#蔚蓝档案 #全彩", bak: "https://telegra.ph/FF40-山含-色色運動大會-ブルーアーカイブ-08-01" },
+  { id: "480146", aScore: 8, bScore: 9.3, info: "47 页开始 #逆转" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

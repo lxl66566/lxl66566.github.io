@@ -65,11 +65,11 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 
 请前往谷歌商店或[前往 github 下载](https://github.com/Kr328/ClashForAndroid/releases)。[私链](https://wwp.lanzout.com/iL6sD03mi0gf)
 
-:::
-
 ### 其他
 
 - [Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
+
+:::
 
 ## V2ray 系
 
@@ -131,24 +131,32 @@ _sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称�
 
 并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。
 
-### [daed](https://github.com/daeuniverse/daed)
+## [daed](https://github.com/daeuniverse/daed)
 
 > 根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多
 > ::: right
 > ——Au, [src](https://t.me/archlinuxcn_group/2912643)
 > :::
 
-daed 是网页面板的开源代理软件，dae 的前端，而 dae 仅支持 linux。由于比较新，目前使用的人不多。
+daed 是网页面板的开源代理软件，dae 的前端，而 dae 基于 eBPF[^1]，仅支持 linux。由于比较新，目前使用的人不多。
 
-它是我目前用过的**最舒服**的代理软件，可以**维护一个节点池**，根据不同规则进行分流。例如香港不能用 tg，那就加一条规则就行。
+[^1]: [What is eBPF?](https://ebpf.io/what-is-ebpf/)
 
-```sh
-sudo pacman -S daed
-sudo systemctl enable --now daed
-```
+这是我目前用过的**最舒服**的代理软件，可以**维护多个节点池**，对于池中节点取最小延迟使用，并能根据不同规则进行节点池分流。例如香港不能用 tg，那就多建一个节点池，加一条分流规则就行。
 
-这样就开机自启，并可以 `localhost:2023` 进面板了。然后写节点，拖到 proxy 里就行。
+1. 安装：
+   ```sh
+   sudo pacman -S daed
+   sudo systemctl enable --now daed # 启动，并设为开机自启
+   ```
+2. 浏览器进入 `localhost:2023`
+3. 一路确定。例如数据库后端使用默认值：`http://127.0.0.1:2023/graphql`，首次登录会要求设账号密码，设一个即可。
+4. 导入节点信息，拖拽到左侧 proxy 即可。
 
 daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
 
 需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。
+
+软件数据存储在 `/etc/daed/wing.db`（sqlite 数据库），如果需要备份、改账号密码，需要先给写权限，然后用数据库软件更改。
+
+daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 `journalctl -eu daed` 查看其日志，获取信息。

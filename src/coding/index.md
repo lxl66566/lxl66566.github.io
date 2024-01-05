@@ -91,3 +91,4 @@ tag:
 1. [计算机教育中缺失的一课](https://missing-semester-cn.github.io/)
 2. [经典技术书籍 PDF 文件](https://awesome-programming-books.github.io/)
    - [Modern Compiler Implementation in ( Java | ML | C )](https://www.cs.princeton.edu/~appel/modern/)
+3. [The yaml document from hell](https://ruudvanasseldonk.com/2023/01/11/the-yaml-document-from-hell)

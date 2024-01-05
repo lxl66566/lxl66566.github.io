@@ -19,7 +19,7 @@ tag:
 
 ## 一般
 
-能拓宽知识面，或者当故事看的文章。
+能一定程度上拓宽知识面，获取知识，或者当故事看的文章。
 
 1. [波士顿漫游指南](https://blog.zxh.io/post/2022/01/29/travel-to-boston/)
 2. [日本移居指南](https://guoyu.mirror.xyz/bPaDKAcrhJGUbaXu9BWDcdD-F46gBFATTvf_qwZ9Bso) | [bak](https://ctreaderbot.vercel.app/a/D05AAicCD7-5pMw.html)

@@ -408,6 +408,28 @@ for name in file.sheet_names:
 
 系统需要有 tkinter，例如 archlinux 需要安装 `tk`。
 
+## 爬虫与自动化
+
+我其实只会一点简单的爬虫。简单的就 `request` + `fake-useragent` + `BeautifulSoup4` html 解析，复杂一点的话直接模拟浏览器。
+
+### 模拟浏览器
+
+之前用过 `playright` 做一些疫情时的健康打卡相关（学长的项目），感觉一般。
+
+然后寻找其他框架，发现一个国人写的 [DrissionPage](https://github.com/g1879/DrissionPage)，虽然比较青涩，但是做一些简单的自动化非常简单。顺带提了个微小改进使用体验的 pr。
+
+以下是一个简单的样例，其中 `tag:input` 指示获取所有 `<input>` 元素。
+
+```py
+from DrissionPage import ChromiumPage
+page = ChromiumPage()
+page.get("https://public.ecustpt.eu.org/mybonus.php")
+buttons = page.eles("tag:input")
+i = buttons[0]
+if i.attr("value") == "1":
+    i.click()
+```
+
 ## 图像相关
 
 ### 从网站获取图片

@@ -93,11 +93,10 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 ## 资源搜索
 
-- 搜电子书：[zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
-  > 2022.11.04: 绝对值 x 悲哀道：z-library 暂时离开了我们。  
-  > 但天无绝自由之路。  
-  > zlib 下载挺好用的，但是上传死活传不上去。。  
-  > ps. 上传修复了。
+- 搜电子书：
+  - [zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
+    > 2022.11.04: 绝对值 x 悲哀道：z-library 暂时离开了我们。ps. 但天无绝自由之路。pps. zlib 下载挺好用的，但是上传死活传不上去。。ppps. 上传修复了。
+  - [annas-archive](https://annas-archive.org/)
 - 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN) | [找脚本](http://zhaojiaoben.cn/)
 - 搜学术文献：[iData](https://www.cn-ki.net/) | [Open Access Library](https://www.oalib.com/) | [Mendeley](https://www.mendeley.com/) | [Explore connected papers in a visual graph](https://www.connectedpapers.com/)
 - 漫画：[漫自由](https://mhx12.com/)
