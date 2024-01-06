@@ -376,7 +376,7 @@ with open("soup.test", "rb") as f:
 
 ### pandas
 
-读 xlsx/csv 神器，爆杀 openpyxl。
+简单的 xlsx 处理库。建议查看 [external 5. Fastest Way to Read Excel in Python](#external) 获取更多信息。
 
 ```py
 import pandas as pd
@@ -418,7 +418,9 @@ for name in file.sheet_names:
 
 然后寻找其他框架，发现一个国人写的 [DrissionPage](https://github.com/g1879/DrissionPage)，虽然比较青涩，但是做一些简单的自动化非常简单。顺带提了个微小改进使用体验的 pr。
 
-以下是一个简单的样例，其中 `tag:input` 指示获取所有 `<input>` 元素。
+DrissionPage 用的是自创的元素选择器，需要看[文档](http://g1879.gitee.io/drissionpagedocs/SessionPge/find_elements)。
+
+以下是一个简单的样例。
 
 ```py
 from DrissionPage import ChromiumPage
@@ -632,3 +634,4 @@ python -m pip install --upgrade pip --user
 2. [Python 小整数与大整数的处理机制以及整体解释与逐行解释的区别](https://tryanswer.github.io/2018/05/17/py-int-confusing/)
 3. [Python 修饰器的函数式编程](https://coolshell.cn/articles/11265.html)
 4. [Python Type Hints 简明教程（基于 Python 3.12）](https://zhuanlan.zhihu.com/p/464979921)
+5. [Fastest Way to Read Excel in Python](https://hakibenita.com/fast-excel-python)

@@ -107,6 +107,10 @@ const data = [
   { id: "440151", aScore: 6.5, bScore: 6.2, info: "#原神", bak: "https://telegra.ph/saluky-派蒙啊加速时间吧-原神-中国語-08-01" },
   { id: "446532", aScore: 9, bScore: 7.6, info: "#蔚蓝档案 #全彩", bak: "https://telegra.ph/FF40-山含-色色運動大會-ブルーアーカイブ-08-01" },
   { id: "480146", aScore: 8, bScore: 9.3, info: "47 页开始 #逆转" },
+  { id: "(ex)", aScore: 9.1, bScore: 7.3, info: "距離感バグの兎 #蔚蓝档案", otherlink: "https://exhentai.org/g/2782239/fb3c804f2d/", bak: "https://telegra.ph/一味三昧-13-距離感バグの兎-ブルーアーカイブ-中国翻訳-DL版-01-01" },
+  { id: "277557", aScore: 6.3, bScore: 3, info: "#偶像大师", bak: "https://telegra.ph/My-Best-Friends-12-Horizontal-World-またのんき-ももかよいつま-アイドルマスター-シンデレラガールズ-中国翻訳-01-03" },
+  { id: "489361", aScore: 6.7, bScore: 5.2, info: "#蔚蓝档案", bak: "https://telegra.ph/Horizontal-World-またのんき-伊ダ落-ブルーアーカイブ-中国翻訳-DL版-12-31" },
+  { id: "488568", aScore: 6.9, bScore: 1, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-Error-XXXX-is-not-defined-ブルーアーカイブ-中国翻訳-DL版-01-04" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

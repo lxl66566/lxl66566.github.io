@@ -44,6 +44,7 @@ tag:
 - 2023 BF：[InfraveoCloud](https://zhujiwiki.com/35833/)，东京机 1T 月流量只要 $9/yr。然而我已经入手了一台东京灵车，因此没钱再买了。
 - [ColoCrossing](https://zhujiwiki.com/36155/)，$9/yr，2C2GRAM 不限流/1Gbps 洛杉矶
 - [Vision Cloud](https://t.me/visioncloud_notification/32)，$14/yr 1GB/6GB 1TB/1000Mbps JP
+- [哇沃](https://zhujiwiki.com/36281/)，80 CNY/yr 1GB/20GB 2TB/500Mbps HK
 
 一般价
 

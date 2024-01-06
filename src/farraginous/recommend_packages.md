@@ -355,9 +355,10 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 过滤 Google & 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist[^3]。
 [^3]: 也可以用用[我的](<https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt>)；但是很抱歉，目前仓库是 private
 
-### [全平台自动答题脚本](https://greasyfork.org/zh-CN/scripts/451356-万能-全平台自动答题脚本)
+### 刷网课
 
-大学生的学习通答题神器，最好把匹配改下，不然在各种地方都会执行。。。
+- [OCS](https://docs.ocsjs.com/)
+- [全平台自动答题脚本](https://greasyfork.org/zh-CN/scripts/451356-万能-全平台自动答题脚本)：最好把匹配改下，不然在各种地方都会执行。。。
 
 ### B 站相关
 
