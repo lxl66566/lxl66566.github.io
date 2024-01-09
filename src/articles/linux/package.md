@@ -255,7 +255,7 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 Thunderbird (`thunderbird-i18n-zh-cn` <Badge text="extra" />) 是一个重量级的邮件客户端，支持收发，多账号。好用是挺好用，就是太重了（600+M RAM），于是我想寻找更轻量的邮件客户端。
 
-由于我桌面用的 kde，试了下 kmail，用不了，一直报 Akonadi 有问题，点 _详情_ 也点不开。我装了 `kde-pim` <Badge text="包组" /> 也无济于事。
+由于我桌面用的 kde，试了下 kmail，用不了，一直报 Akonadi 有问题，点 _详情_ 也点不开。我装了 `kde-pim` <Badge text="包组" /> 也无济于事。据说 kmail 添加 gmail 也[有问题](https://t.me/archlinuxcn_group/3030332)，因此放弃。
 
 ### 资源监视器
 

@@ -49,6 +49,7 @@ tag:
 一般价
 
 - [Digirdp](https://zhujiwiki.com/36114/)，10$/yr 1GB/15GB 1TB/1Gbps 美国，虽然 HDD，但是跑流量也不影响。
+- [BestVM](https://zhujiwiki.com/36288/)，15 CNY/mo 512MB/5GB 1T/1Gbps TW
 - [wap.ac](https://zhujiwiki.com/34105/)，1$/mo 256MB/5GB 500GB/1Gbps JP/HK
 
 :::

@@ -111,6 +111,10 @@ const data = [
   { id: "277557", aScore: 6.3, bScore: 3, info: "#偶像大师", bak: "https://telegra.ph/My-Best-Friends-12-Horizontal-World-またのんき-ももかよいつま-アイドルマスター-シンデレラガールズ-中国翻訳-01-03" },
   { id: "489361", aScore: 6.7, bScore: 5.2, info: "#蔚蓝档案", bak: "https://telegra.ph/Horizontal-World-またのんき-伊ダ落-ブルーアーカイブ-中国翻訳-DL版-12-31" },
   { id: "488568", aScore: 6.9, bScore: 1, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-Error-XXXX-is-not-defined-ブルーアーカイブ-中国翻訳-DL版-01-04" },
+  { id: "(ex)", aScore: 6, bScore: 6.7, info: "#制服", otherlink: "https://exhentai.org/g/2790930/b02a0fb008/", bak: "https://telegra.ph/みくろぺえじ-黒本君-JCわからせ性教育-中国翻訳-DL版-01-06" },
+  { id: "(ex)", aScore: 5.5, bScore: 4, info: "#蔚蓝档案", order: 2, otherlink: "https://exhentai.org/g/2790306/8db403ff37/", bak: "https://telegra.ph/C103-餃子ベビー-笑笑餃子-全身マッサージしようキサキ会長2-ブルーアーカイブ-中国翻訳-01-06" },
+  { id: "(ex)", aScore: 3.4, bScore: 6.1, info: "#女仆", order: 3, otherlink: "https://exhentai.org/g/2281625/892988db9a/", bak: "https://nhentai.net/search/?q=ギャルゆいなちゃんとえっち3" },
+  { id: "392122", aScore: 6, bScore: 7.1, info: "#触手" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

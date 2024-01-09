@@ -62,8 +62,9 @@ firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company]
 - firefox 内核与 chrome 系不同，因此:
   - 许多 chrome 系插件不可用
   - 某些网页不支持（不多，但是让你电脑上还需要有 chromium 内核浏览器）。下面列举一些在 ff 不支持 / 有 bug 的网站。
-    - 阿里云：无限登录
+    - 阿里云：无限登录（貌似已修复）
     - 学信网：无法登录
+    - bilibili：稍后再看无法显示（出现一次）
 - 没有我想要的垂直标签栏，只能用 Sidebery 模拟。
 - 自定义程度……例如我想隐去标题栏，并没有一个合理的配置项能够实现；需要手写 user css。自由度高，但是门槛也高。
 - firefox 在 linux 上对字体的支持比较好，而且有硬件解码。
