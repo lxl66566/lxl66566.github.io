@@ -39,6 +39,7 @@ category:
    - _Typst LSP_，Linter + watch
    - _vscode-pdf_ (optional)，viewer
    - 或：什么也不装，只要 `typst watch example.typ` 即可。
+   - 我为什么不推荐 _Typst Preview_？1. 曾经遇到过无法生成的 bug；2. 很慢，10 页的 pdf 就会卡了。
 
 然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。
 
