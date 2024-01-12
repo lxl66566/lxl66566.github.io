@@ -21,7 +21,6 @@ category:
 
 - [设置 windows](./windows_setting.md)
 - [TG（telegram）教程](./telegram.md)
-- [ADB 教程与常用指令](./adb.md)
 - [Markdown 教程](./markdown.md)
 - [压缩二进制文件与 dll](./minimize_exe.md)
 - [命令行压缩](./cli_compress.md)

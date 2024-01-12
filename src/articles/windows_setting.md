@@ -58,7 +58,7 @@ tag:
    - 打开安装好的 Windows Subsystem for Android™️，点击左侧 Developer，打开 Developer mode.（意味着在 `127.0.0.1:58526` 默认端口开启调试）
    - 在这里你可以使用两种方式安装软件：
      1. [WSA PacMan](https://github.com/alesimula/wsa_pacman)提供了便捷的图形化界面。
-     2. 使用[ADB](./adb.md)，输入 `adb connect 127.0.0.1:58526` 连接,`adb install ...`安装。
+     2. 使用[ADB](./mobile/adb.md)，输入 `adb connect 127.0.0.1:58526` 连接,`adb install ...`安装。
    - 关于网络受限问题：在虚拟机的 _设置 - Network&internet_ 中看到网络连接受限。win11 发出弹窗警告。
      解决方法（参考[来源](https://www.shenshanhongye.com/jc/2134.html)）：在 adb 成功连接后，输入：
      ```batch

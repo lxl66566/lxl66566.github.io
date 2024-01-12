@@ -93,7 +93,7 @@ tag:
    - 在 USB 调试版块，该放行放行，该关闭关闭。
    - 在最下方关闭 MIUI 优化。MIUI 优化可能会导致无法使用 adb install 安装软件。（报错 `INSTALL_FAILED_USER_RESTRICTED`）_顺带，这已经是一个持续至少 6 年的问题了。_
      - 关闭后刷新率会自动 120HZ，调回 60。
-2. [使用 ADB 卸载](../adb.md)一些包
+2. [使用 ADB 卸载](./adb.md)一些包
    - `com.miui.systemAdSolution`：广告
    - `com.miui.hybrid`：快应用，杂种；[为什么要卸载](#禁用快应用中心)
    - `com.sohu.inputmethod.sogou.xiaomi` & `com.iflytek.inputmethod.miui`：自带的 搜狗 讯飞 输入法，我用 gboard
@@ -149,8 +149,8 @@ tag:
 1. 查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到*快应用服务框架* 进入，点击右上角感叹号，查看应用包名。
    > 或：已知关键字可使用 `adb shell pm list package [<keyword>]` 在手机内以关键字查找包名。
    > 例：在 MIUI 12.5 中，快应用服务框架包名为`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>
-2. 连接手机并[开启 ADB 调试](../adb.md)。
-3. 禁用包：`adb shell pm disable-user com.miui.hybrid`，也可以直接卸载，详情参考 [ADB](../adb.md)
+2. 连接手机并[开启 ADB 调试](./adb.md)。
+3. 禁用包：`adb shell pm disable-user com.miui.hybrid`，也可以直接卸载，详情参考 [ADB](./adb.md)
 
 以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。
 

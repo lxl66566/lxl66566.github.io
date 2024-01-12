@@ -47,6 +47,14 @@ category:
 
 [我的模板](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/template.typ)
 
+## 编译导出
+
+```sh
+typst compile xxx.typ # 基础编译指令
+typst compile --root .. xxx.typ   # 如果需要 include 父级目录的文件，则需要指定 root
+typst compile --format svg xxx.typ '{n}.svg'  # 导出为 svg 格式
+```
+
 ## 基础
 
 [这里](https://typst-doc-cn.github.io/docs/chinese/#resources)有许多大学的毕业论文模版，~~多抄抄就会用了~~
@@ -191,6 +199,43 @@ console.log("1")
 目前在用[algorithmic](https://github.com/typst/packages/tree/main/packages/preview/algorithmic/0.1.0)，并且修了个 bug。
 
 不过目前看来，还是[lovelace](https://github.com/typst/packages/tree/main/packages/preview/lovelace/0.1.0)更泛用一点。
+
+### 目录
+
+众所周知，中文报告一般会要求页码遵循 `第 x 页，共 x 页` 的格式。这没问题，在 `set page(numbering: (..nums) => ...)` 即可。
+
+然而 typst 的目录（`outline`）默认使用页面的页码格式，也就是说，会出现这样的情况：
+
+![鬼畜页码](/images/farraginous/learning/typst/outline_err.svg)
+
+我尝试问群友，没人理；尝试看源码，发现写死了；最后在 repo 里乱搜，居然被我搜到了一个究极自定义方案，改一改就是解法：
+
+```typst
+#set text(lang: "zh", region: "cn")
+#set heading(numbering: "1.")
+#set page(
+  numbering: (..nums) => {
+    "第" + str(nums.pos().at(0)) + "页，共" + str(nums.pos().at(-1)) + "页"
+  },
+  number-align: center,
+)
+#show outline: ol => {
+  show heading: it => {
+    align(center, it)
+  }
+  ol
+}
+#show outline.entry: it => {
+  set text(size: 10pt)
+  let loc = it.element.location()
+  let num = str(..counter(page).at(loc))
+  link(loc, it.body)
+  box(width: 1fr, repeat[#it.fill.body;.])
+  link(loc, [#num])
+}
+#outline(indent: auto)
+= test
+```
 
 ## bug
 

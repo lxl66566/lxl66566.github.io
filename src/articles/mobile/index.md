@@ -32,6 +32,7 @@ Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的
 
 ## 其他文章
 
+- [ADB] 教程
 - [Android 查看指令集](./Android_ISA.md)
 
 ## 选购

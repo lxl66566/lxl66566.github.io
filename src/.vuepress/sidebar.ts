@@ -35,6 +35,7 @@ export default sidebar({
 		"root_and_setting.md",
 		"module_and_app.md",
 		"problem.md",
+		"adb.md",
 		"Android_ISA.md",
 	],
 	"/articles/proxy/": [
@@ -56,7 +57,6 @@ export default sidebar({
 			children: [
 				"proxy",
 				"telegram.md",
-				"adb.md",
 				"markdown.md",
 				"minimize_exe.md",
 				"cli_compress.md",

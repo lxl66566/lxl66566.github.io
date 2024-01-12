@@ -73,7 +73,7 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 电脑调试 Android 手机的必备工具，包括查询信息，备份，安装等常用功能。
 
-- [简易教程与下载](../articles/adb.md)
+- [简易教程与下载](../articles/mobile/adb.md)
 
 ### [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 

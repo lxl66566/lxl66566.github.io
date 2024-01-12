@@ -59,8 +59,10 @@ tag:
 - [ ] ecust-survival, (with vuepress)
 - [ ] galgame engine
 - [ ] bin package manager（release installer）
+  - depends on _lastversion_
 - [ ] 音频振幅对齐
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
+- [ ] osu beatmap downloader, support stable and lazer
 
 ### Android
 
