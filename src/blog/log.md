@@ -417,7 +417,7 @@ category:
 
 ### 20230124
 
-- 新增[文章 - ADB](../articles/adb.md)
+- 新增[文章 - ADB](../articles/mobile/adb.md)
 
 ### 20230123
 
@@ -770,7 +770,7 @@ category:
 
 ### 20220505
 
-- 新增 [杂项-我的文章#查看手机 cpu 指令集（现：文章-~）](../articles/Android_ISA.md)
+- 新增 [杂项-我的文章#查看手机 cpu 指令集（现：文章-关于手机-\~）](../articles/mobile/Android_ISA.md)
 - 更新 [主页](../index.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
 
 ### 20220504

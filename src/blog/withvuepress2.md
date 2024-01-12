@@ -659,3 +659,33 @@ const bar = new Bar("container", {
 ```
 
 其中第二个参数（`option`） 是一个自定义的类型，而不是一个 `Object`；它的第一个参数是一个 Array，而后面却是一堆键值对。这就导致了我没法向第一个 data 传参：如果我用 `this.data`，则会被报错 `expected ':'`；如果我 `const temp = this.data;{data,...}`，`temp` 又不能跟随 `this.data` 的变化。
+
+## 处理 darkmode
+
+起因是我在博客中放了一张黑色文字 svg，但是图片默认不反色，因此黑暗主题下完全看不到。因此我想写一点 css 使其在黑暗模式下自动反色。
+
+翻了点文档发现了个 scss [example](https://theme-hope.vuejs.press/zh/guide/customize/color.html#修改其他颜色)，对着其和 GPT 抄了以后发现无论如何都无法反色。（尝试了一堆邪道，`@if` 啊，`$isDarkmode` 啊，`#{hope-config.$dark-selector}` 啊）
+
+```scss
+img[type="image/svg+xml"] {
+  html[data-theme="dark"] {
+    filter: invert(1);
+  }
+}
+```
+
+后来进群问（没错，theme-hope 有群了），说 html 选择器要放外面。于是发现我抄漏了一个 `&`，这个符号就是指定父元素用的。
+
+然后加了 `&` 还是没用，我又尝试了一下其他 scss 官方示例，但是都是可以正常工作的。所以这一定是我的问题。
+
+然后发现这个 `type` 并不是 img 自带的属性。。我一直以为这选择器能自动判断 type 来着。后来就可以了。下面是最终的 scss：
+
+```scss
+img[src$=".svg"] {
+  html[data-theme="dark"] & {
+    filter: invert(1);
+  }
+}
+```
+
+带给我一个教训：折腾之前先系统学习（scss 语法）。
