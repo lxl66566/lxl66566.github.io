@@ -41,10 +41,15 @@ tag:
 
 想买但没买的超级好价
 
-- 2023 BF：[InfraveoCloud](https://zhujiwiki.com/35833/)，东京机 1T 月流量只要 $9/yr。然而我已经入手了一台东京灵车，因此没钱再买了。
-- [ColoCrossing](https://zhujiwiki.com/36155/)，$9/yr，2C2GRAM 不限流/1Gbps 洛杉矶
-- [Vision Cloud](https://t.me/visioncloud_notification/32)，$14/yr 1GB/6GB 1TB/1000Mbps JP
-- [哇沃](https://zhujiwiki.com/36281/)，80 CNY/yr 1GB/20GB 2TB/500Mbps HK
+<!-- prettier-ignore -->
+|Host|location|Price|bandwidth|RAM|Storage|
+| :-: | :-: | :-: | :-: | :-: | :-: |
+|2023 BF [InfraveoCloud](https://zhujiwiki.com/35833/)|JP|$9/yr|1T 1Gbps|-|20GB|
+|[ColoCrossing](https://zhujiwiki.com/36155/)|Los Angeles|$9/yr|不限流 1Gbps|2G|37GB|
+|[Vision Cloud](https://t.me/visioncloud_notification/32)|JP|$14/yr|1TB 1000Mbps|1GB|6GB|
+|[哇沃](https://zhujiwiki.com/36281/)|HK|￥80/yr|2TB 500Mbps|1GB|20GB|
+|[CHurros](https://zhujiwiki.com/36298/)|JP|￥6.3/mo|100GB 100Mbps|1GB|5GB|
+|~~[AKileCloud](https://akile.io/shop/server?type=traffic&areaId=3&nodeId=80&planId=448)~~ 无了|HK|￥60/yr|1TB 5000Mbps|1GB|5GB|
 
 一般价
 

@@ -356,13 +356,19 @@ sudo pacman -S inotify-tools
 
 原名 exa，现在活跃分支是 eza。注意该 alias 需要一定版本下才可正常工作。
 
-### tmux
+### 终端复用器
 
-tmux 是一个 Terminal Multiplexers（终端复用）。支持多窗口，分屏，后台挂起，在**不使用图形界面**（服务器上）或有恢复 shell 需求时比较好用。
+Terminal Multiplexer（终端复用器）并不是 linux 桌面的必需品（`konsole` / `yakuake` 都支持多标签），但是在纯命令行的服务器下，终端复用还是有点用的。主要作用是提供一组 key bindings，与持久运行的 sessions（允许 ssh 断连）。
 
-tmux 的默认键位实在是过于诡异。后来了解了一下 [Zellij](https://github.com/zellij-org/zellij)，我选择使用其代替 tmux。
+#### screen
 
-如果只想要简单的恢复 shell 功能，可以考虑一下 `screen`。
+> 要不是学校的服务器，我还不知道有 screen 这玩意。
+
+这是一个很古老的终端复用，主要作用就是 ssh 恢复，没啥其他功能。可以在低性能的服务器上用。
+
+#### tmux
+
+tmux 的默认键位实在是过于诡异。
 
 :::: details use Zellij instead of tmux
 
@@ -387,6 +393,16 @@ tmux 的默认键位实在是过于诡异。后来了解了一下 [Zellij](https
   :::
 
 ::::
+
+#### [Zellij](https://github.com/zellij-org/zellij)
+
+Zellij 使用 rust 写成，由于其简洁的 key bindings（有常驻提示的），我使用其代替 tmux。
+
+这玩意看提示就行，没必要配置。
+
+#### [tab-rs](https://github.com/austinjones/tab-rs)
+
+也是 rust 写的。screen 的替代品，专注简洁迅速。
 
 ### [tlp](https://wiki.archlinux.org/title/TLP)
 

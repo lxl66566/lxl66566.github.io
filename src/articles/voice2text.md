@@ -28,7 +28,28 @@ tag:
 
 ### autosrt
 
-对于需要输入音频输出 srt 字幕的场合，如果电脑算力足够，可以用下 [autosrt](https://github.com/asukaminato0721/autosrt) 跑本地模型，跨平台多语言，使用纯 CPU，对内存没有要求。有很多模型可以选择，越大的模型自然越慢。参考我用 large 跑了个 30min 的中文字幕，在 laptop i5-12500 上跑了接近 1h。
+对于需要输入音频，输出 **srt 字幕**的场合，可以用 [autosrt](https://github.com/asukaminato0721/autosrt) 跑本地模型。
+
+- 跨平台
+- 多语言支持
+- 使用纯 CPU，对内存没有要求
+- 有很多模型可以选择，越大的模型自然越慢，需要平衡准确率与速度。参考我用 large 跑了个 30min 的中文字幕，在 laptop i5-12500 上跑了接近 1h。
+
+autosrt 在 linux 下是一个不错的选择。具体地：
+
+::: code-tabs
+
+@tab archlinux
+
+```sh
+paru -S whisper.cpp ffmpeg  # 可执行文件在 `/usr/bin/whisper.cpp`
+git clone git@github.com:lxl66566/autosrt.git
+cd autosrt && python main.py
+```
+
+:::
+
+然后遵循 readme，下载一个模型（我选择了 `ggml-small-q5_1` 181.3 MB），填入 GUI 即可。
 
 ## 云端
 
