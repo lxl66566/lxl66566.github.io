@@ -154,10 +154,10 @@ umount /mnt/windows
 
 #### 使用 windows 代理
 
-:::: details archwsl 内容，点击展开
-我在 archwsl 中懒得重复下载，直接使用 windows 代理。[ref](https://zhuanlan.zhihu.com/p/153124468)
+archwsl 可以直接使用 windows 的代理。抄[这里](https://github.com/microsoft/WSL/issues/10753#issuecomment-1814839310)的 `.wslconfig` 即可。
 
-后来直接写了 [fish 脚本](https://github.com/lxl66566/config/blob/archwsl/.config/fish/functions/proxy_con.fish)，自用方便。
+:::: details 旧版解法，已废弃
+
 ::: code-tabs
 @tab bash
 
@@ -175,6 +175,9 @@ set -gx ALL_PROXY="http://$host_ip:<your_port>"  # fill your port
 ```
 
 :::
+
+后来写了 [fish 脚本](https://github.com/lxl66566/config/blob/archwsl/.config/fish/functions/proxy_con.fish)，自用方便。
+
 ::::
 
 代理软件需要开启局域网连接。测试时不要使用 `ping` 指令（其不走代理），用 `curl`。

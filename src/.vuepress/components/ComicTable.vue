@@ -115,6 +115,7 @@ const data = [
   { id: "(ex)", aScore: 5.5, bScore: 4, info: "#蔚蓝档案", order: 2, otherlink: "https://exhentai.org/g/2790306/8db403ff37/", bak: "https://telegra.ph/C103-餃子ベビー-笑笑餃子-全身マッサージしようキサキ会長2-ブルーアーカイブ-中国翻訳-01-06" },
   { id: "(ex)", aScore: 3.4, bScore: 6.1, info: "#女仆", order: 3, otherlink: "https://exhentai.org/g/2281625/892988db9a/", bak: "https://nhentai.net/search/?q=ギャルゆいなちゃんとえっち3" },
   { id: "392122", aScore: 6, bScore: 7.1, info: "#触手" },
+  { id: "490137", aScore: 7.5, bScore: 7, info: "#蔚蓝档案", bak: "https://telegra.ph/とうざいなんぼく-西ヤスアキ-この暖かさを知ってしまった-ブルーアーカイブ-中国翻訳-DL版-01-09" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

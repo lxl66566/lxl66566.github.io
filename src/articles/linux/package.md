@@ -118,7 +118,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`bat`|`cat` 的代替|
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
-|[`mcfly`](https://github.com/cantino/mcfly)|智能 history|
+|[`atuin`](https://github.com/atuinsh/atuin) / [`mcfly`](https://github.com/cantino/mcfly)|history 搜索|
 |`dust` & `ncdu`[^8] / `gdu`|磁盘容量查询|
 |`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
@@ -343,6 +343,17 @@ sudo pacman -S inotify-tools
 具体使用方法 RTFM。
 
 - `sudo inotifywait -m -r -e create --format '%w%f' /home/absolutex` 能监视目录下新创建的文件。
+
+### 命令行历史记录
+
+我之前一直在用 `mcfly`，它给的条数少，模糊匹配结果太差，我不满意。
+
+后来看到[大佬博文](https://blog.lilydjwg.me/posts/216770.html)推荐的 `atuin`，迅速去下了一个用，果真好用。
+
+```sh
+sudo pacman -S atuin
+atuin import auto
+```
 
 ### [neovim](../../coding/vim.md)
 
