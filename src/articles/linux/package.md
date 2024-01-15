@@ -353,7 +353,10 @@ sudo pacman -S inotify-tools
 ```sh
 sudo pacman -S atuin
 atuin import auto
+# then edit fish config manually
 ```
+
+基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行。
 
 ### [neovim](../../coding/vim.md)
 

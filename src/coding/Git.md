@@ -102,6 +102,7 @@ git init
 
 - 言简意赅，清楚描述自己这次提交的修改内容
 - 一般现在时
+- [Commitizen](https://github.com/commitizen/cz-cli) 是一个帮助写出规范的 commit message 的工具，在大项目里可以试试
 
 如果没有新增文件，可以将添加到暂存区和提交合成一条指令，`git commit -am "注释"`，即提交所有**已追踪文件**。
 
@@ -468,6 +469,19 @@ git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-
    exec /bin/bash
    ```
    关于分支与是否加 `-f` 需要根据情况判断。
+
+## 签名
+
+一般情况下，git 提交都是不需要签名的。但是面对大项目的协同开发，有时没办法，如果不签名，CI 都过不去。因此学习如何签名也是有必要的。
+
+```sh
+gpg --generate-key   # 然后填写与 git 提交一样的名字与邮箱。
+gpg --list-secret-keys --keyid-format=long   # 寻找私钥 ID 并复制
+gpg --armor --export 83D******** # 打印公钥，上传到 Github
+git config commit.gpgsign true   # 设置该仓库 commit 时自动签名
+```
+
+如果需要对已存在的 commit 签名，可以 `git rebase -i HEAD`，然后将其中的 `noop`(_no operation_) 改为 `exec git commit --amend --no-edit -S` 即可。
 
 ## 奇技淫巧
 
