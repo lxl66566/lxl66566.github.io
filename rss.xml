@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 15 Jan 2024 17:08:12 GMT</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2024 17:08:12 GMT</lastBuildDate>
+    <pubDate>Tue, 16 Jan 2024 16:01:56 GMT</pubDate>
+    <lastBuildDate>Tue, 16 Jan 2024 16:01:56 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -750,6 +750,10 @@
 <p>现在则是一个极其臃肿的、什么都集成但是大部分都要钱的傻逼玩意儿。</p>
 <h2> 结语</h2>
 <p>我相信未来会有更加友善高质量的浏览器出现。我也会继续积极尝试其他浏览器，1 丰富本博文的内容，2 满足我的尝新欲与好奇心。</p>
+<h2> external</h2>
+<ol>
+<li><a href="https://www.zhihu.com/question/546880481/answer/3363806621" target="_blank" rel="noopener noreferrer">mozilla 技术先进，为什么不挣钱？</a> | <a href="https://telegra.ph/mozilla%E6%8A%80%E6%9C%AF%E5%85%88%E8%BF%9B%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E6%8C%A3%E9%92%B1---%E7%9F%A5%E4%B9%8E-01-16" target="_blank" rel="noopener noreferrer">bak</a></li>
+</ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -2680,9 +2684,12 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 <ol>
 <li>查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到<em>快应用服务框架</em> 进入，点击右上角感叹号，查看应用包名。
 <blockquote>
-<p>或：已知关键字可使用 <code>adb shell pm list package [&lt;keyword&gt;]</code> 在手机内以关键字查找包名。
-例：在 MIUI 12.5 中，快应用服务框架包名为<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span></p>
+<p>或：已知关键字可使用 <code>adb shell pm list package [&lt;keyword&gt;]</code> 在手机内以关键字查找包名。</p>
 </blockquote>
+<ul>
+<li>MIUI 12.5：<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span></li>
+<li>HarmonyOS：<code>com.huawei.fastapp</code></li>
+</ul>
 </li>
 <li>连接手机并<a href="/articles/mobile/adb.html" target="blank">开启 ADB 调试</a>。</li>
 <li>禁用包：<code>adb shell pm disable-user com.miui.hybrid</code>，也可以直接卸载，详情参考 <a href="/articles/mobile/adb.html" target="blank">ADB</a></li>
