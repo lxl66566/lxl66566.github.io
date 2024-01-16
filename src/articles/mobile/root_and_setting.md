@@ -148,7 +148,8 @@ tag:
 
 1. 查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到*快应用服务框架* 进入，点击右上角感叹号，查看应用包名。
    > 或：已知关键字可使用 `adb shell pm list package [<keyword>]` 在手机内以关键字查找包名。
-   > 例：在 MIUI 12.5 中，快应用服务框架包名为`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>
+   - MIUI 12.5：`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>
+   - HarmonyOS：`com.huawei.fastapp`
 2. 连接手机并[开启 ADB 调试](./adb.md)。
 3. 禁用包：`adb shell pm disable-user com.miui.hybrid`，也可以直接卸载，详情参考 [ADB](./adb.md)
 

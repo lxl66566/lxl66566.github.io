@@ -116,6 +116,8 @@ const data = [
   { id: "(ex)", aScore: 3.4, bScore: 6.1, info: "#女仆", order: 3, otherlink: "https://exhentai.org/g/2281625/892988db9a/", bak: "https://nhentai.net/search/?q=ギャルゆいなちゃんとえっち3" },
   { id: "392122", aScore: 6, bScore: 7.1, info: "#触手" },
   { id: "490137", aScore: 7.5, bScore: 7, info: "#蔚蓝档案", bak: "https://telegra.ph/とうざいなんぼく-西ヤスアキ-この暖かさを知ってしまった-ブルーアーカイブ-中国翻訳-DL版-01-09" },
+  { id: "489246", aScore: 3.3, bScore: 7.5, info: "メイド教育", order: 6, bak: "https://telegra.ph/きょくちょ局-きょくちょ-メイド教育6没落貴族瑠璃川椿-中国翻訳-种植园汉化-01-02" },
+  { id: "476283", aScore: 4, bScore: 5, info: "#纯爱" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

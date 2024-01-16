@@ -347,7 +347,15 @@ assert 有 `assert!()` 和 `debug_assert!()` 之分，感觉对于应用开发�
 
 比起 GUI，rust 重心还是在 CLI 和 TUI 上。
 
-- [ratatui](https://github.com/ratatui-org/ratatui)：广泛使用的 TUI，教程不错。
+#### [ratatui](https://github.com/ratatui-org/ratatui)
+
+一个广泛使用的 TUI 框架，教程还不错。
+
+我读源码花了挺久时间。如果只想快速上手，建议狠狠抄[这个 example](https://github.com/ratatui-org/templates/tree/main/simple-async)。
+
+用着发现个 bug，顺带 pr 了几行[^2]。
+
+[^2]: [review 还挺严格的](https://t.me/withabsolutex/1441)，但是 member 说话又好听
 
 ## r18n
 
