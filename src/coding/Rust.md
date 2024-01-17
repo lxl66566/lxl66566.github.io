@@ -296,9 +296,21 @@ rust 唯一官方指定包管理器：`cargo`
 [alias]
 b = "build"
 c = "check"
-t = "test -- --show-output"
+t = "test -- --nocapture"
 r = "run"
 ```
+
+## 库
+
+有一些库几乎成为业界标准，必需掌握。
+
+| 库名       | 简介       |
+| ---------- | ---------- |
+| anyhow     | 错误处理   |
+| tokio      | 异步       |
+| serde_json | json       |
+| reqwest    | 简单网络   |
+| clap       | 命令行工具 |
 
 ## 打包
 

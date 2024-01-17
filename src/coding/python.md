@@ -32,7 +32,8 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
   - [配置技巧](https://stackoverflow.com/questions/75639719/decrease-mistake-severity-for-ruff-python-linter-in-vscode-extension)
   - ruff 的 formatter [几乎与 black 兼容](https://docs.astral.sh/ruff/faq/#is-the-ruff-linter-compatible-with-black)，因此可以放心用。
     - python 的代码风格非常统一，是一件好事。（反观隔壁 `.clang-format` 行数）
-  - ruff 的 highlighter 以白色居多，可能会让人误以为没有 highlighter。（pylance 用多了是这样(笑)）
+- **Pylance** - Microsoft，主要用它提供 inlay hints（比较重要，之前被坑过）
+  - inlay hints 默认关闭，需要手动开启。在设置里搜 `inlay hints`，把 Pylance 提供的四个都开起来。
 - (optional) **isort** - Microsoft：提供 import 排序，formatter
 - (optional) **Black Formatter** - Microsoft：formatter
 
