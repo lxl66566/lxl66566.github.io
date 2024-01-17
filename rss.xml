@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 16 Jan 2024 16:01:56 GMT</pubDate>
-    <lastBuildDate>Tue, 16 Jan 2024 16:01:56 GMT</lastBuildDate>
+    <pubDate>Wed, 17 Jan 2024 16:52:00 GMT</pubDate>
+    <lastBuildDate>Wed, 17 Jan 2024 16:52:00 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -66,6 +66,8 @@
       <category>随笔</category>
       <pubDate>Sat, 06 Jan 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 2024</h1>
+<h2> 20240117</h2>
+<p>拔完智齿后的痛是否也是一种幻肢痛？</p>
 <h2> 20240112</h2>
 <p>You can open multiple kde konsole on linux, and open multiple tabs on one konsole, and open multiple sessions (use terminal multiplexer) on one tab... <s>just for some keybindings</s>.</p>
 <h2> 20240111</h2>
