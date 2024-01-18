@@ -6,20 +6,666 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 17 Jan 2024 16:52:00 GMT</pubDate>
-    <lastBuildDate>Wed, 17 Jan 2024 16:52:00 GMT</lastBuildDate>
+    <pubDate>Thu, 18 Jan 2024 16:02:01 GMT</pubDate>
+    <lastBuildDate>Thu, 18 Jan 2024 16:02:01 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>教程</category>
-    <category>随笔</category>
     <category>推荐</category>
     <category>评价</category>
+    <category>教程</category>
+    <category>随笔</category>
     <category>编程</category>
     <category>主张</category>
     <category>生活</category>
     <category>导航</category>
     <category>经历</category>
     <category>学习</category>
+    <item>
+      <title>零食区</title>
+      <link>https://absx.pages.dev/gossip/snack.html</link>
+      <guid>https://absx.pages.dev/gossip/snack.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">零食区</source>
+      <description>零食区</description>
+      <category>推荐</category>
+      <category>评价</category>
+      <pubDate>Thu, 18 Jan 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 零食区</h1>
+<p>本人买的零食不少，平日也是 B 站<a href="https://space.bilibili.com/478691043" target="_blank" rel="noopener noreferrer">拉泽哥</a>粉丝，<s>之前 steam 用户名还是是 <em>.*恰小靈石</em></s>，本<s>地区零食先生</s>自然会有写一篇零食记录的想法（）。</p>
+<p>价格仅供参考。</p>
+<p>得分为 5 分制，仅代表个人喜好，不喜勿喷。</p>
+<h2> 总评</h2>
+<ul>
+<li>边角料一般不会更便宜。</li>
+<li>
+</li>
+<li>
+</li>
+</ul>
+<h2> 糖果类</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>薄荷糖（圈型压片）</td>
+<td>￥15/500g</td>
+<td>3</td>
+<td>以前挺爱带到学校吃的，不太甜</td>
+</tr>
+<tr>
+<td>薄荷糖（实心压片）</td>
+<td>-</td>
+<td>3.8</td>
+<td>罐装绿箭平替，还不错</td>
+</tr>
+<tr>
+<td>曼妥思充气糖</td>
+<td>￥8/110g</td>
+<td>4</td>
+<td>甜，爱吃</td>
+</tr>
+<tr>
+<td>瑞士糖</td>
+<td>￥5/500g</td>
+<td>2.6</td>
+<td>粘牙，还有包装纸总是会粘在糖上</td>
+</tr>
+<tr>
+<td>彩虹糖（原味+酸劲味）</td>
+<td>￥14/180g</td>
+<td>4</td>
+<td>遇上彩虹，吃定彩虹</td>
+</tr>
+<tr>
+<td>大白兔</td>
+<td>￥21/500g</td>
+<td>3.5</td>
+<td>以前爱吃，奶味很足</td>
+</tr>
+<tr>
+<td>嗨啾果汁糖</td>
+<td>￥30/9 条</td>
+<td>4.7</td>
+<td>充气糖果，青柠味满分，西柚及格，其他味我都不吃，就喜欢酸酸甜甜的感觉；一般一天吃一条（后来克制了）</td>
+</tr>
+<tr>
+<td>青柠夹心软糖</td>
+<td>￥15/500g</td>
+<td>1.7</td>
+<td></td>
+</tr>
+<tr>
+<td>真柠檬糖</td>
+<td>￥13/250g</td>
+<td>3.8</td>
+<td>硬，很有嚼劲，粘牙，能回味出真柠檬味</td>
+</tr>
+<tr>
+<td>海盐柠檬硬糖</td>
+<td>￥15/100 颗</td>
+<td>2.7</td>
+<td>味道倒是有点回事</td>
+</tr>
+</tbody>
+</table>
+<h2> 饼干/糕点类</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>夹心饼干</td>
+<td>￥6.5/500g</td>
+<td>3.4</td>
+<td>奥利奥平替</td>
+</tr>
+<tr>
+<td>夹心蛋卷</td>
+<td>-</td>
+<td>3.5</td>
+<td>便宜，易碎</td>
+</tr>
+<tr>
+<td>苏打</td>
+<td>-</td>
+<td>3.9</td>
+<td>脆的！</td>
+</tr>
+<tr>
+<td>雪花酥（软）</td>
+<td>￥6/200g</td>
+<td>4.5</td>
+<td>软软的很好吃</td>
+</tr>
+<tr>
+<td>雪花酥（硬）</td>
+<td>￥16/500g</td>
+<td>3.8</td>
+<td></td>
+</tr>
+<tr>
+<td>冰皮蛋糕</td>
+<td>-</td>
+<td>2</td>
+<td>冰皮一股子工业明胶味</td>
+</tr>
+<tr>
+<td>千层酥</td>
+<td>-</td>
+<td>4.3</td>
+<td>便宜又好吃。不过表面一层代可可脂巧克力比较容易腻</td>
+</tr>
+<tr>
+<td>纯奶沙琪玛</td>
+<td>￥23/830g</td>
+<td>4.1</td>
+<td>软软的好吃</td>
+</tr>
+<tr>
+<td>一般沙琪玛</td>
+<td>-</td>
+<td>0.6-3.4</td>
+<td><strong>不要买</strong>廉价沙琪玛，浓糖精味太重，粘牙又难吃。一般会黏住包装的沙琪玛我都不喜欢</td>
+</tr>
+<tr>
+<td>咸香饼</td>
+<td>￥8/500g</td>
+<td>4.8</td>
+<td>极善，内馅软糯，淡淡的咸味恰到好处</td>
+</tr>
+<tr>
+<td>芝士夹心包</td>
+<td>￥11/400g</td>
+<td>2.6</td>
+<td>芝士实际上是芝士味沙拉酱</td>
+</tr>
+<tr>
+<td>威化</td>
+<td>-</td>
+<td>3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>雪媚娘/大福</td>
+<td>￥16/500g</td>
+<td>2.5</td>
+<td></td>
+</tr>
+<tr>
+<td>鲜花饼</td>
+<td>￥13/30 个</td>
+<td>3.8</td>
+<td>皮酥，馅甜</td>
+</tr>
+</tbody>
+</table>
+<h2> 油炸类</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>薯条（半成品）</td>
+<td>￥28/2kg</td>
+<td>4</td>
+<td>与快餐店差不多，就是自己炸比较麻烦</td>
+</tr>
+<tr>
+<td>薯条（即食）</td>
+<td>￥15/500g</td>
+<td>3.1</td>
+<td>我只吃芝士黄油味，热量炸弹，但是塞牙 </td>
+</tr>
+<tr>
+<td>脆片薯片</td>
+<td>-</td>
+<td>4.1</td>
+<td></td>
+</tr>
+<tr>
+<td>小王子廉价薯片</td>
+<td>￥30/800g</td>
+<td>3.3</td>
+<td>厚片，宿舍快乐片，淀粉打击感很强</td>
+</tr>
+<tr>
+<td>贵州麻辣土豆片</td>
+<td>￥11/250</td>
+<td>0.5</td>
+<td>非常难吃，不脆，很硬，辣味很轻浮</td>
+</tr>
+<tr>
+<td>麻辣藕片</td>
+<td>￥12/200g</td>
+<td>4.2</td>
+<td>麻辣味很正</td>
+</tr>
+</tbody>
+</table>
+<h2> 辣味制品</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>盐津铺子麻辣包</td>
+<td>￥15/60包</td>
+<td>3.9</td>
+<td>这玩意惯例是好吃的（荤）少，不好吃的（素）多，包装越来越小。不过好吃。</td>
+</tr>
+<tr>
+<td>素肉</td>
+<td>-</td>
+<td>2.6</td>
+<td></td>
+</tr>
+<tr>
+<td>绝艺荤麻辣包</td>
+<td>-</td>
+<td>4.2</td>
+<td>纯荤更贵更好吃</td>
+</tr>
+<tr>
+<td>比比赞手撕豆皮</td>
+<td>-</td>
+<td>3.5</td>
+<td>包装渗油，辣味还行，有工业的气息</td>
+</tr>
+<tr>
+<td>泡椒笋</td>
+<td>￥17/500g</td>
+<td>3.5</td>
+<td>吃少挺清爽，吃多就只剩辣味</td>
+</tr>
+<tr>
+<td>碳烤鱿鱼/杏鲍菇</td>
+<td>-</td>
+<td>3.3</td>
+<td>这俩味道挺像的。便宜的话会有一点点科技味，不过比较吸料，够辣</td>
+</tr>
+<tr>
+<td>大包魔芋爽</td>
+<td>￥13/320g</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>伍滋味猪脆骨</td>
+<td>￥14/250g</td>
+<td>2.7</td>
+<td>够辣，但是有淡淡的工业辣油味</td>
+</tr>
+</tbody>
+</table>
+<h2> 肉蛋奶</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奶条/块/棒</td>
+<td>￥5/125g</td>
+<td>2.8</td>
+<td>粘牙</td>
+</tr>
+<tr>
+<td>奶粉</td>
+<td>-</td>
+<td>-</td>
+<td>千万<strong>不要买</strong>小牌子的奶粉，包括声称（澳洲/新西兰）进口但是很便宜的奶粉。问就是把坑踩完了，我大学吃了两年植脂末。</td>
+</tr>
+<tr>
+<td>光明奶粉</td>
+<td>￥36/800g</td>
+<td>-</td>
+<td>光明奶粉还不错</td>
+</tr>
+<tr>
+<td>鱿鱼丝/烤鱼片</td>
+<td>￥16/500g</td>
+<td>2.2</td>
+<td>适合少量吃，吃多了就不好吃了</td>
+</tr>
+<tr>
+<td>烤虾干</td>
+<td>-</td>
+<td>2.1</td>
+<td>连壳吃，要慢慢用口水感化它</td>
+</tr>
+<tr>
+<td>风干牛肉干</td>
+<td>￥16/&lt;250g</td>
+<td>3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>一般牛肉干</td>
+<td>-</td>
+<td>0.2</td>
+<td><strong>不要买</strong>普通的湿性牛肉干，吃不出是啥肉做的，碎肉合成很明显</td>
+</tr>
+<tr>
+<td>盐焗鸭翅根</td>
+<td>￥10/400g</td>
+<td>3.7</td>
+<td>虽然科技廉价蛋白质，但是还挺好吃</td>
+</tr>
+<tr>
+<td>卤蛋</td>
+<td>-</td>
+<td>2.1</td>
+<td>不是一个零食的好选择</td>
+</tr>
+<tr>
+<td>双汇热狗肠（香辣）</td>
+<td>￥24/40 根</td>
+<td>4.2</td>
+<td>我喜欢香辣，咸口。玉米肠是甜口。便宜又好吃。</td>
+</tr>
+<tr>
+<td>鸡胸肉</td>
+<td>￥18/500g</td>
+<td>3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>百吉福三角奶酪</td>
+<td>￥14/140g</td>
+<td>4.3</td>
+<td>奶酪算奢侈品。百吉福的不是纯奶，但是奶酪味足，也够便宜。</td>
+</tr>
+</tbody>
+</table>
+<h2> 蔬果制品</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>芒果干</td>
+<td>￥15?/500g</td>
+<td>3.5</td>
+<td>芒果干一般吃得比较快，贵，买的少。都甜。</td>
+</tr>
+<tr>
+<td>葡萄干</td>
+<td>-</td>
+<td>2.8</td>
+<td>甜，粘牙，会腻</td>
+</tr>
+<tr>
+<td>香蕉片</td>
+<td>-</td>
+<td>1.5</td>
+<td>有香蕉香精味，粘牙，太硬</td>
+</tr>
+<tr>
+<td>菠萝干</td>
+<td>￥11/500g</td>
+<td>2.5</td>
+<td>甜得发腻</td>
+</tr>
+<tr>
+<td>猕猴桃干</td>
+<td>￥11/500g</td>
+<td>3.1</td>
+<td>色素多，不过咬起来很有层次感，我喜欢咬中间硬的部分</td>
+</tr>
+<tr>
+<td>蓝莓干</td>
+<td>￥10/250g</td>
+<td>3.8</td>
+<td>酸酸甜甜</td>
+</tr>
+<tr>
+<td>糖渍椰子</td>
+<td>￥10/500g</td>
+<td>1.5</td>
+<td>甜腻，非常硬</td>
+</tr>
+<tr>
+<td>即食裙带菜</td>
+<td>￥9/800g</td>
+<td>2.8</td>
+<td>偏甜口，一般用于解腻而不是当零食</td>
+</tr>
+</tbody>
+</table>
+<h2> 坚果类</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>蚕豆</td>
+<td>￥8/500g</td>
+<td>2.2</td>
+<td></td>
+</tr>
+<tr>
+<td>碧根果</td>
+<td>￥14/500g</td>
+<td>3.7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2> 饮品</h2>
+<h3> 成品</h3>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>小作坊盐汽水</td>
+<td>￥1/L</td>
+<td>5</td>
+<td>神，当水喝都不贵，盐汽恰到好处</td>
+</tr>
+<tr>
+<td>康师傅冰红茶</td>
+<td>￥7.2/2L</td>
+<td>4.9</td>
+<td>我最常喝的饮料，请认准康师傅，不要喝统一</td>
+</tr>
+<tr>
+<td>果粒奶昔</td>
+<td>￥12/3.6L</td>
+<td>0.1</td>
+<td></td>
+</tr>
+<tr>
+<td>纯柠檬汁</td>
+<td>￥12/500g</td>
+<td>2.4</td>
+<td>冰袋保鲜。真的极酸，有股苦味，我是鬼迷了心窍才去买这个</td>
+</tr>
+</tbody>
+</table>
+<h3> 冲剂</h3>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>奶茶粉</td>
+<td>￥15/500g</td>
+<td>3.2</td>
+<td>各家奶茶粉都差不多，大袋更便宜。</td>
+</tr>
+<tr>
+<td>酥油奶茶</td>
+<td>￥17/400g</td>
+<td>3</td>
+<td>咸奶茶，脂肪含量高，好奇可以尝试，多喝容易腻</td>
+</tr>
+<tr>
+<td>江中金桔柠檬</td>
+<td>￥1/包</td>
+<td>2</td>
+<td>与实物不符，泡不出啥玩意</td>
+</tr>
+<tr>
+<td>进口 Super 柠檬茶</td>
+<td>￥17/20 包</td>
+<td>4</td>
+<td>红茶粉+砂糖粉，约等于低甜度冰红茶</td>
+</tr>
+<tr>
+<td>青提芦荟果酱</td>
+<td>￥13/240g</td>
+<td>2.7</td>
+<td>果酱请直接吃，不要泡水，泡水没味</td>
+</tr>
+<tr>
+<td>金桔柠檬果酱</td>
+<td>￥9/500g</td>
+<td>4</td>
+<td>比起泡水，发现抹在面包上更好吃</td>
+</tr>
+<tr>
+<td>柠檬伴侣/青柠果粉</td>
+<td>￥13/500g</td>
+<td>0.7</td>
+<td></td>
+</tr>
+<tr>
+<td>土豆泥粉</td>
+<td>￥15/9 包</td>
+<td>2.4</td>
+<td>没啥味道，最好用牛奶冲</td>
+</tr>
+<tr>
+<td>奇亚籽</td>
+<td>￥13/250g</td>
+<td>2.9</td>
+<td>约等于免煮西米</td>
+</tr>
+</tbody>
+</table>
+<h2> 速食食品</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>嗨吃家小桶酸辣粉</td>
+<td>￥10.5/6 桶</td>
+<td>2.5</td>
+<td>有我不喜欢的花生，量太少了，不如吃白象</td>
+</tr>
+<tr>
+<td>燕麦片+冻干酸奶/坚果</td>
+<td>￥19/1kg</td>
+<td>2.8</td>
+<td>大学吃了两年燕麦片+奶粉早餐，其实味道只是一般</td>
+</tr>
+<tr>
+<td>小桶兰州拉面</td>
+<td>￥12/6 桶</td>
+<td>2.8</td>
+<td>闻着不错，吃着面条太硬太死</td>
+</tr>
+<tr>
+<td>白象方便面</td>
+<td>￥50/24 包</td>
+<td>4</td>
+<td>注意！白象方便面有不同包装，一定要买 <em>汤好喝</em>，有的商家会掺普通的粉包方便面，那个很难吃 </td>
+</tr>
+</tbody>
+</table>
+<h2> 其他</h2>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>价格</th>
+<th>得分</th>
+<th>评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>龟苓膏</td>
+<td>￥1/200g</td>
+<td>3.4</td>
+<td>夏日美食</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+    </item>
     <item>
       <title>ADB</title>
       <link>https://absx.pages.dev/articles/mobile/adb.html</link>
@@ -2544,169 +3190,6 @@ Error: Activity not started, unable to resolve Intent { act=android.intent.actio
 </a><section class="footnotes"><a class="footnote-anchor" id="footnote-ref1">
 </a><ol class="footnotes-list"><a class="footnote-anchor" id="footnote-ref1">
 </a><li id="footnote1" class="footnote-item"><a class="footnote-anchor" id="footnote-ref1"></a><p><a class="footnote-anchor" id="footnote-ref1"></a><a href="https://t.me/withabsolutex/1165" target="_blank" rel="noopener noreferrer">source</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>root 与配置</title>
-      <link>https://absx.pages.dev/articles/mobile/root_and_setting.html</link>
-      <guid>https://absx.pages.dev/articles/mobile/root_and_setting.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">root 与配置</source>
-      <description>root 与配置</description>
-      <category>教程</category>
-      <category>生活</category>
-      <category>经历</category>
-      <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> root 与配置</h1>
-<h2> 刷机</h2>
-<p>使用 MIUI 刷机工具时，千万不要在右下角选择 lock（我一般直接删 <em>*lock.sh/bat</em>）；最好把 Configuration 中的 CheckPoint 删了。</p>
-<blockquote>
-<p>为了 <code>boot.img</code> 需要下载全量 ROM 真的很脑残。如果你需要 <code>dd ... of=/sdcard/boot.img</code>，你需要 root；因为需要 root 所以需要 <code>boot.img</code>。。</p>
-</blockquote>
-<h3> Redmi Note 10 pro</h3>
-<blockquote>
-<p>题外话：<s>高考结束后买的手机，当时还是一个普通人，自然不知道刷机解 bl root 这些东西，等我想解的时候已经太迟了，数据已经太多了。下一部手机必 root。</s> 然而等到了一个能够使我无视数据的契机。<br>
-<span class="heimu" title="你知道的太多了">忘了备份应用时间了，妈的；后来发现这东西没法备份。</span></p>
-</blockquote>
-<p>20230614 记一次失败的刷机（redmi note 10 pro, sweet）。</p>
-<ol>
-<li>解 BL 锁，等了 7days。</li>
-<li>刷入 twrp <a href="#%E5%88%B7%E5%85%A5-twrp-%E5%A4%B1%E8%B4%A5">失败</a>。</li>
-</ol>
-<p>没有第三方 recovery 就无法卡刷，而一些类原生例如 Havoc OS | Evolution OS 只提供了卡刷包，无法线刷。寄。<s>（据说有 python 脚本能把卡刷包转成线刷包，没试过，有生之年）</s></p>
-<p>退而求其次，想刷 EU 版 MIUI，<a href="#%E7%BA%BF%E5%88%B7-global-%E5%A4%B1%E8%B4%A5">失败 again</a>，寄。</p>
-<p>再退，用国行 MIUI (chopin)，不使用 twrp 刷入 magisk。（kernelSU 不支持：非 GKI 设备内核）</p>
-<ol>
-<li>安装 <a href="https://github.com/topjohnwu/Magisk/releases/latest" target="_blank" rel="noopener noreferrer">magisk</a>。</li>
-<li>从原生线刷包把 <code>boot.img</code> 拷到手机上。</li>
-<li>在 magisk 中，选择安装 magisk（修补一个文件），选择 <code>boot.img</code> 修补。</li>
-<li>再将修补后的 <code>magiskxxx.img</code> 拷回电脑，<code>fastboot flash boot magiskxxx.img &amp;&amp; fastboot reboot</code> 刷新 boot。</li>
-<li>好了，之后就是<a href="/articles/mobile/module_and_app.html#magisk" target="blank">另一个板块</a>了。</li>
-</ol>
-<h3> mipad 5</h3>
-<p>20230715，尝试刷我的小米平板 5（nabu）。</p>
-<p>折腾了一下 twrp，在 Github 下载了一个<a href="https://github.com/bm0x/twrp_device_xiaomi_nabu/releases" target="_blank" rel="noopener noreferrer">不明来源的 twrp</a> 刷入，又寄了，表现为闪屏无法启动。算了，这年头 VAB 分区的我再也不想再折腾 twrp 了。好在有了第一次的刷机经验，没有手忙脚乱，能进 fastboot 就能救。</p>
-<p>退而求其次，刷 EU。在<a href="https://xiaomirom.com/download/xiaomi-pad-5-nabu-stable-V14.0.4.0.TKXMIXM/#global-fastboot" target="_blank" rel="noopener noreferrer">这里</a>找了个欧版 ROM，这次倒是没出什么岔子，10min 后顺利刷入。那接下来的 root &amp; magisk 也是水到渠成了，这里按下不表。</p>
-<p>但是等我开始搞机，渐渐发现事情没我想象得那么简单。</p>
-<ol>
-<li>EU 的 Google 全家桶也是无法卸载（即使有些边角如 YT Music 能卸载，Play store 也会再悄悄给你下回来），近 20 个 Google 密密麻麻排着嘲笑我，数量甚至比国行还多；</li>
-<li>后台运行着好多叫不出名字的奇怪服务，有些我 Google 半天也搜不到是什么（例如 <code>com.qti.qcc</code>）；</li>
-<li>也间接导致了<a href="#%E4%B9%B1%E5%86%BB%E7%BB%93">之后的系统崩溃</a>。（我承认主要责任在我）</li>
-</ol>
-<p>然后使用 miflash 刷回国行；刷入失败。一重启就自动进 fastboot。由于<a href="https://xiaomirom.com/rom/mi-pad-5-nabu-china-fastboot-recovery-rom/" target="_blank" rel="noopener noreferrer">此 ROM 下载地址</a>没有 MD5，于是<a href="https://xiaomifirmwareupdater.com/archive/miui/nabu/" target="_blank" rel="noopener noreferrer">换了一个</a>重下，校验 MD5，没有任何问题。刷机工具 Configuration 设置 EraseAll，再刷，还是不行。然后刷欧版，就行了。。由于每次刷机都需要 10min 以上，我连着刷了 5 6 次，等待的时间确实紧张难熬。</p>
-<p>所以刷欧版是一件非常冒险的事：在只使用初级工具前提下<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，这一步没有后悔药，没法再刷回其他系统<sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">。</a></p><a class="footnote-anchor" id="footnote-ref2">
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a> Oneplus Ace Racing edition</h3>
-<p>这里是 <em>一加 Ace 竞速版</em> 的 root 过程。</p>
-<p>一加的教程基本都是 <em>daxiaamu</em> 的一键工具箱，让人 root 了以后却不知其所以然。这样是不好的。</p>
-<p>找了半天没找到这个机型如何刷 Oxygen OS，也没有提供线刷 ROM <span class="heimu" title="你知道的太多了">daxiaamu 自称官方</span>，怕出问题，还是将就用着并不喜欢的 ColorOS 吧。</p>
-<p>解 BL 的过程中，无法通过音量键选择 unlock。。甚至也无法长按开机键重启。用 <code>fastboot reboot</code> 试了一下，第二次还是一样。具体地：</p>
-<ul>
-<li>在 <em>fastboot</em> 界面，电脑执行 <code>fastboot flashing unlock</code>，手机出现文字且立刻 timeout，无法选择，无法解锁。</li>
-<li><code>... failed to record unlock state</code></li>
-<li>长按 <em>音量+</em> 键输入解锁指令，可成功解锁。</li>
-<li>或者长按 <em>音量-</em> 键输入解锁指令，此时不会弹出 timeout，再按 <em>音量+</em> 即可。</li>
-</ul>
-<p>莫名其妙。我测过音量键，并无问题。总之最终是解锁了。root 的折腾过程中也遇到了很多问题：</p>
-<p>下载 rom 包，解出一个 <code>payload.bin</code>；目的：从中提取出 <code>boot.img</code>。</p>
-<ol>
-<li>用不知哪下的 <code>payload_dumper.exe</code>（一眼 python 打包），发现不能自定义输入输出路径。勉为其难地把 rom 拷进同目录，运行闪退。</li>
-<li>去找 payload_dumper 的<a href="https://github.com/vm03/payload_dumper" target="_blank" rel="noopener noreferrer">源码</a>，搞环境<span class="heimu" title="你知道的太多了">由于前几天迁移 python 导致 <a href="/coding/python.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%AF%A5%E4%BD%BF%E7%94%A8-pipx" target="blank">pipx 及其安装的软件路径坏了</a>，</span>又搞了好久。运行，报错 <code>_lzma.LZMAError: Input format not supported by decoder</code>...</li>
-<li>我甚至还重新解压到 RAMDisk 然后 checksum 了一下，不出所料，并没有什么问题。</li>
-<li>在 <a href="https://github.com/vm03/payload_dumper/issues/47#issuecomment-1311973400" target="_blank" rel="noopener noreferrer">issue</a> 中找到另一个 go 版本，亲测可用，速度还快。</li>
-</ol>
-<p>得到了 <code>boot.img</code>，剩下的就是用 magisk 修补，刷入了。跟<a href="#redmi-note-10-pro">用小米时</a>一样，不再赘述。</p>
-<h2> 配置</h2>
-<h3> before root(MIUI)</h3>
-<ol>
-<li>开启开发者模式
-<ul>
-<li>在 USB 调试版块，该放行放行，该关闭关闭。</li>
-<li>在最下方关闭 MIUI 优化。MIUI 优化可能会导致无法使用 adb install 安装软件。（报错 <code>INSTALL_FAILED_USER_RESTRICTED</code>）<em>顺带，这已经是一个持续至少 6 年的问题了。</em>
-<ul>
-<li>关闭后刷新率会自动 120HZ，调回 60。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="/articles/mobile/adb.html" target="blank">使用 ADB 卸载</a>一些包
-<ul>
-<li><code>com.miui.systemAdSolution</code>：广告</li>
-<li><code>com.miui.hybrid</code>：快应用，杂种；<a href="#%E7%A6%81%E7%94%A8%E5%BF%AB%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BF%83">为什么要卸载</a></li>
-<li><code>com.sohu.inputmethod.sogou.xiaomi</code> &amp; <code>com.iflytek.inputmethod.miui</code>：自带的 搜狗 讯飞 输入法，我用 gboard</li>
-<li><code>com.miui.newhome</code>：内容中心，广告，好像不能卸载只能禁用</li>
-</ul>
-</li>
-<li>关闭 Github Mobile 的默认打开网址。Github Mobile 因 2FA 需要使用，但使用其查看项目确实非常智障。幸好 MIUI14 提供了设置应用默认打开的功能：长按应用 - 应用信息 - 默认打开，调为拒绝。</li>
-</ol>
-<h3> after root</h3>
-<p>通用：</p>
-<ol>
-<li>不要在 Google Play 安装 QQ，无法开启深色模式 (fuck u)。</li>
-<li>见<a href="#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6">禁用软件</a>。</li>
-<li>Google Play 可以通过蓝牙进行发送 - 接受软件，无需再次下载，不过只能传商店内的软件。</li>
-<li>Delta Chat 可以在源手机上点击 <em>设置 - 添加第二台设备</em>，然后用目标机扫码即可迁移<strong>单个账户</strong>。</li>
-<li>可以在开发者选项里关闭 5G，减少耗电。</li>
-<li>开启通话自动录音。</li>
-</ol>
-<p>一加：</p>
-<ol>
-<li>ColorOS 原生支持更换应用名称与图标，可以规避审查。
-<ul>
-<li>需要在 Google Play 安装<a href="https://play.google.com/store/apps/details?id=com.akbon.coloros" target="_blank" rel="noopener noreferrer">ColorOS 13 Icon pack</a></li>
-</ul>
-</li>
-<li><a href="/articles/mobile/module_and_app.html#lsposed" target="blank">LuckyTool</a> 安装后在任务栏小部件有多出一些选项。其中的<strong>极暗模式</strong>是好东西。</li>
-</ol>
-<h3> 禁用软件</h3>
-<p>前置条件：root</p>
-<p>我使用 <a href="/articles/mobile/module_and_app.html#app" target="blank">App Manager</a> 进行软件的冻结操作。</p>
-<blockquote>
-<p><em>scene5/6</em> 也可以，但是其为闭源商业软件，操作麻烦，不用它。<br><em>雹</em> 也可以，但是主要用于禁止日常应用后台运行；无法冻结某些系统应用。</p>
-</blockquote>
-<h4> MIUI</h4>
-<p><a href="https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a" target="_blank" rel="noopener noreferrer">这里</a>可以看 MIUI 有哪些不能禁用的东西。</p>
-<h4> EU MIUI</h4>
-<ul>
-<li>禁用负一屏需要冻结 Google (<code>com.google.android.googlequicksearchbox</code>)。</li>
-<li>Google 家的大多数都能冻</li>
-<li>不要冻 <em>媒体存储设备</em>(<code>com.google.android.providers.media.module</code>) ！！！<a href="/articles/mobile/problem.html#%E4%B9%B1%E5%86%BB%E7%BB%93" target="blank">惨痛教训</a></li>
-</ul>
-<h4> 一加</h4>
-<ul>
-<li>不要冻 <em>应用包安装程</em>！！！！<a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="blank">惨痛教训，并附带了哪些东西能冻</a></li>
-</ul>
-<h4> 禁用快应用中心</h4>
-<blockquote>
-<p>这是一篇久远的文章，是本页面中年龄最大的一篇。<br>
-快应用服务框架本意是好的，大家联合起来统一为一个标准，减少不必要的重复开发。（参考 browser）</p>
-</blockquote>
-<p>但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和<strong>家人</strong>的身心健康，建议禁用之：</p>
-<ol>
-<li>查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到<em>快应用服务框架</em> 进入，点击右上角感叹号，查看应用包名。
-<blockquote>
-<p>或：已知关键字可使用 <code>adb shell pm list package [&lt;keyword&gt;]</code> 在手机内以关键字查找包名。</p>
-</blockquote>
-<ul>
-<li>MIUI 12.5：<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span></li>
-<li>HarmonyOS：<code>com.huawei.fastapp</code></li>
-</ul>
-</li>
-<li>连接手机并<a href="/articles/mobile/adb.html" target="blank">开启 ADB 调试</a>。</li>
-<li>禁用包：<code>adb shell pm disable-user com.miui.hybrid</code>，也可以直接卸载，详情参考 <a href="/articles/mobile/adb.html" target="blank">ADB</a></li>
-</ol>
-<p>以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。</p>
-<h2> external</h2>
-<ol>
-<li><a href="https://dev.moe/2716" target="_blank" rel="noopener noreferrer">小米平板 5 Pro 刷入 GSI Android 教程</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>指 miflash + adb。我有考虑过使用<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=1655550" target="_blank" rel="noopener noreferrer">磁盘模式工具</a>甚至更底层的方法，但是尚未有收入的我还是无法承担飙升的刷砖风险。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p>暂不清楚是只是 <em>无法刷回国行</em> 还是 <em>无法刷成其他任一系统</em>。推测是刷 EU 的分区(?)更改比国行的多，导致刷回国行时未对额外分区进行更改。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
