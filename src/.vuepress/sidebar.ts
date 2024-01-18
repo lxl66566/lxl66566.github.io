@@ -20,6 +20,7 @@ export default sidebar({
 				"chicken_soup.md",
 				"zero_fill.md",
 				"brainhole.md",
+				"snack.md",
 			],
 		},
 	],
