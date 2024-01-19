@@ -233,13 +233,6 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 1. _设置 - 解压_，打开 _一次性解压 TGZ..._ 下的 _即使是大体积的 TGZ..._ 选项
 2. 如果你使用 [RAM Disk](../articles/ramdisk.md)，可以在 _设置 - 高级_ 中，将临时文件夹设为 RAM Disk 路径
 
-### [f.lux](https://justgetflux.com/)
-
-护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</span>
-
-- 可以在全屏游戏时护眼
-- 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）
-
 ### [图吧工具箱](http://www.tbtool.cn/)
 
 集成了电脑及其外接设备测试所需的多数软件，集硬件测试，跑分，信息查询为一体。不过体积比较大。
@@ -489,9 +482,18 @@ ps. 已经寄了。
 
 视频播放器。无广告，支持格式丰富，功能多样，自定义程度较高。
 
-然而我现在选择 [mpv](#mpv) 了。
+然而我现在选择 [mpv](#mpv) 了，更加轻量，更加强大，还是跨平台。只是写配置麻烦点罢了。
 
 - [关于 Potplayer 设置](../articles/potplayer_setting.md)
+
+### [f.lux](https://justgetflux.com/)
+
+护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<dtls>[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</dtls>
+
+- 可以在全屏游戏时护眼
+- 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）
+
+但是 windows11 自带色温调节（_显示 - 夜间模式_）也能做到这些，因此该软件的适用范围大大减小了。
 
 ## external
 

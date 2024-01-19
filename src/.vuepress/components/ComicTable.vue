@@ -119,6 +119,7 @@ const data = [
   { id: "489246", aScore: 3.3, bScore: 7.5, info: "メイド教育", order: 6, bak: "https://telegra.ph/きょくちょ局-きょくちょ-メイド教育6没落貴族瑠璃川椿-中国翻訳-种植园汉化-01-02" },
   { id: "476283", aScore: 4, bScore: 5, info: "#纯爱" },
   { id: "490166", aScore: 6.8, bScore: 4.2, info: "#魔法使" },
+  { id: "491964", aScore: 8.6, bScore: 8.1, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-だめなひ堂-だめなひと-兎穴に堕ちる-ブルーアーカイブ-中国翻訳-01-17" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
