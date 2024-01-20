@@ -58,6 +58,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
+|[Re0：从零开始的异世界生活](https://github.com/re-zero-khis/re0-web)|2024.01.20-<br/>卷3,在读|3h52min|
 |[我在末世捡到白狐](https://www.pixiv.net/novel/series/10523577) <Badge type="warning" text="爽" />|2023.08.29-<br/>23,等待连载|2h23min|
 |[加速世界](https://www.wenku8.net/book/381.htm)|2023.07.09-<br/>26,等待连载|21h33min 未包括前0.235|
 |[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126)|2023.0[34]-<br/>在读|-|

@@ -26,6 +26,8 @@ tag:
 
 于是我转向了 [podman](https://docs.podman.io)，这是一个 **daemonless, open source**（开源的、无守护进程的）容器工具，完美解决了我对 docker 的偏见。并且其兼容性也不错：_Most users can simply alias Docker to Podman (alias docker=podman) without any problems._
 
+可以前往 [external 1.](#external) 查看详细信息。
+
 ## 基础
 
 看看[tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
@@ -39,4 +41,8 @@ podman logs <name>  # 查看输出(stdout + stderr)
 
 ## 遇到的问题
 
-- podman 拉取镜像时可能不支持短名称（v4.3.1 是不能的），需要在名称前加 `docker.io/` 前缀。
+- podman 拉取镜像时可能不支持短名称，需要在名称前加 `docker.io/` 前缀，或者如 external 1. 所述：Open your `$HOME/.config/containers/registries.conf` file and paste the following contents: `unqualified-search-registries=["docker.io"]`
+
+## external
+
+1. [Exploring Podman: A More Secure Docker Alternative](https://betterstack.com/community/guides/scaling-docker/podman-vs-docker/)

@@ -175,7 +175,6 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 ### 闲聊
 
 - [#archlinux-cn-offtopic](https://t.me/archlinuxcn_offtopic)：_archlinux-cn_ 属群
-- [垃圾高校毁我青春](https://t.me/joinchat/Ytplgt-buepkYThl)：大学生闲聊群
 - [真红真红真](https://t.me/upsetGroup)：[失落小站](../hobbies/galgame.md#资源)属群
 
 ### bot

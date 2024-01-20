@@ -120,6 +120,8 @@ const data = [
   { id: "476283", aScore: 4, bScore: 5, info: "#纯爱" },
   { id: "490166", aScore: 6.8, bScore: 4.2, info: "#魔法使" },
   { id: "491964", aScore: 8.6, bScore: 8.1, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-だめなひ堂-だめなひと-兎穴に堕ちる-ブルーアーカイブ-中国翻訳-01-17" },
+  { id: "438645", aScore: 9.2, bScore: 3.9, info: "#全彩 #无H #兄妹", order: 3, bak: "https://telegra.ph/はまけん-妹が一日一回しか目を合わせてくれない-同人版3-DL版-08-02" },
+  { id: "492148", aScore: 6.2, bScore: 7.5, info: "#蔚蓝档案 #拘束", bak: "https://telegra.ph/C103あるるもらんどあるるも千鳥ミチルがメカ市民にされる話ブルーアーカイブ-中国翻訳-01-19-2" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

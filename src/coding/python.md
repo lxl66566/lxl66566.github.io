@@ -278,6 +278,7 @@ with suppress(Exception):
 [这篇文章](https://www.geeksforgeeks.org/top-python-built-in-decorators-that-optimize-python-code-significantly/)讲了一些常用的自带装饰器，主要是重载，OOP。
 
 - `functools.lru_cache`：当函数入参相同时，重复利用缓存。
+  - 也有一个 `functools.cache`，== `lru_cache(maxsize=None)` ([ref](https://stackoverflow.com/questions/70301475/))
 - [`dataclasses.dataclass`](https://docs.python.org/zh-cn/3/library/dataclasses.html)：自动生成函数，简化开发。
 
 ## 自带模块

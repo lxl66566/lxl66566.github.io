@@ -103,6 +103,8 @@ git init
 
 可以直接 `git add <file_path>`，但是一般的工程都会在主目录下使用 `.gitignore` 声明忽略的文件，然后直接 `git add -A`。
 
+> 小知识：git stage 是同义于 git add 的。[ref](https://wkevin.github.io/GitChat/gitchat.html#修改完了为什么不是直接提交而是-git-add)
+
 然后执行 `git commit -m "注释"` 提交。提交的注释有一定要求，如果是协作开发，请遵守。如果是个人项目，那随意。
 
 - 言简意赅，清楚描述自己这次提交的修改内容

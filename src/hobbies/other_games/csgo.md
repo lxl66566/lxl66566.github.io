@@ -206,3 +206,7 @@ ipconfig /flushdns
 
 有时候有用。
 ::::
+
+## external
+
+1. [A decade long Steam issue, is everyone just too fast for Valve?](https://blog.freudenjmp.com/posts/no-user-logon/)
