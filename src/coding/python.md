@@ -588,6 +588,39 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
 ## [代码混淆](https://pyob.oxyry.com/)
 
+## 发布
+
+把包发布到 pypi，就能被 `pip install` 了。
+
+1. 注册一个 pypi 账号。
+   - 需要 2FA，用 github 的肯定不陌生。
+   - 需要申请一个 API token：[account](https://pypi.org/manage/account/) 向下滑就有。
+2. 写 `setup.py`。~~可以用 GPT 生成，也可以去抄几份。~~
+3. 在 `$HOME/.pypirc` 下写入
+   ```toml
+   [pypi]
+   username = __token__
+   password = <API token>
+   ```
+4. 打包上传。
+   ::: code-tabs
+
+   @tab twine
+
+   ```sh
+   pipx install twine
+   python3 setup.py sdist bdist_wheel
+   twine upload dist/* --verbose
+   ```
+
+   @tab setup.py
+
+   ```sh
+   python3 setup.py sdist upload
+   ```
+
+   :::
+
 ## 一些问题
 
 ### 为什么不该使用 pipx

@@ -58,7 +58,7 @@ const data = [
   { id: "444199", aScore: 5.7, bScore: 3.1, info: "#BA", bak: "https://telegra.ph/Morelia-Standard-Shuruban-Mutsuki-to-Futari-de--與睦月的二人時光-Blue-Archive-Chinese-homolive漢化組-2023-01-05-03-18" },
   { id: "434419", aScore: 3.4, bScore: 3.6 },
   { id: "451160", aScore: 5.5, bScore: 2 },
-  { id: "415522", aScore: 9.9, bScore: 8.9, info: "#毛玉" },
+  { id: "415522", aScore: 9.9, bScore: 8.9, info: "#玉之けだま" },
   { id: "253872", aScore: 3.8, bScore: 6.8, info: "#强迫", order: 4, bak: "https://telegra.ph/C92-カナリヤバいカナリヤ-まゃ吾郎-アルマがアレコレされるのを眺める本4-神羅万象-中国翻訳-10-19" },
   { id: "248121", aScore: 9, bScore: 6, info: "#猫娘", order: 1, bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-中国語-DL版-10-19" },
   { id: "254892", aScore: 5.3, bScore: 7.4, bak: "https://telegra.ph/ぬんぬ-それいけパン工場-COMIC-BAVEL-2018年7月号-中国翻訳-DL版-10-19" },
@@ -68,7 +68,7 @@ const data = [
   { id: "477903", aScore: 9, bScore: 5.7 },
   { id: "303996", aScore: 8, bScore: 4.1 },
   { id: "477481", aScore: 3.7, bScore: 6.5, bak: "https://telegra.ph/Sakura-Suishou-Yozakura-Souki-Yua-Nightmare-Digital-12-06" },
-  { id: "(ex)", aScore: 8.1, bScore: 5.2, info: "#毛玉", otherlink: "https://exhentai.org/g/2496083/1f34d5f4ac/", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
+  { id: "(ex)", aScore: 8.1, bScore: 5.2, info: "#玉之けだま", otherlink: "https://exhentai.org/g/2496083/1f34d5f4ac/", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
   { id: "305526", aScore: 8.9, bScore: 4.3 },
   { id: "483079", aScore: 9.6, bScore: 6.5, info: "#兽耳 #纯爱", bak: "https://telegra.ph/コミティア143-林檎のなる木-木瀬樹-麦の恩返し--学生編--中国翻訳-08-01" },
   { id: "(ex)", aScore: 3.7, bScore: 7.2, info: "#寸止", otherlink: "https://exhentai.org/g/2480501/a346125f42/", bak: "https://telegra.ph/大伴ヤキ-虎の春-COMIC-快楽天-2023年4月号-中国翻訳-DL版-08-01" },
@@ -122,6 +122,9 @@ const data = [
   { id: "491964", aScore: 8.6, bScore: 8.1, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-だめなひ堂-だめなひと-兎穴に堕ちる-ブルーアーカイブ-中国翻訳-01-17" },
   { id: "438645", aScore: 9.2, bScore: 3.9, info: "#全彩 #无H #兄妹", order: 3, bak: "https://telegra.ph/はまけん-妹が一日一回しか目を合わせてくれない-同人版3-DL版-08-02" },
   { id: "492148", aScore: 6.2, bScore: 7.5, info: "#蔚蓝档案 #拘束", bak: "https://telegra.ph/C103あるるもらんどあるるも千鳥ミチルがメカ市民にされる話ブルーアーカイブ-中国翻訳-01-19-2" },
+  { id: "492336", aScore: 5.8, bScore: 6.1, info: "#蔚蓝档案" },
+  { id: "492253", aScore: 7.1, bScore: 7.5, info: "#玉之けだま" },
+  { id: "not found", aScore: 4.1, bScore: 9.2, info: "#兄妹", otherlink: "https://telegra.ph/おとなごっこ委員会-いちはや-妹の声がきこえる-僕らのCQC-中国翻訳-06-11" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

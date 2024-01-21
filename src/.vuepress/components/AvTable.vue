@@ -214,6 +214,7 @@ const data = [
   { id: "dasd-321", aScore: 4.3, bScore: 9.5, u: true, name: "#拘束" },
   { id: "id-015-10", aScore: 5.5, bScore: 8.1, u: true, name: "#cosplay" },
   { id: "abp-588", aScore: 5.2, bScore: 9, u: true, name: "#狂暴" },
+  { id: "ambi-131", aScore: 8.5, bScore: 7.7, name: "鬼畜父の性玩具 彼氏との仲を引き裂かれた制服美少女 早美れむ" },
 ];
 export default {
   name: "AvTable",
