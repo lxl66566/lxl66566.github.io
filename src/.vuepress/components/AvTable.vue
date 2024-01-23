@@ -215,6 +215,8 @@ const data = [
   { id: "id-015-10", aScore: 5.5, bScore: 8.1, u: true, name: "#cosplay" },
   { id: "abp-588", aScore: 5.2, bScore: 9, u: true, name: "#狂暴" },
   { id: "ambi-131", aScore: 8.5, bScore: 7.7, name: "鬼畜父の性玩具 彼氏との仲を引き裂かれた制服美少女 早美れむ" },
+  { id: "ssni-954", aScore: 7.3, bScore: 8.7, name: "手塩にかけた娘が俺の子じゃないと判明したので 羽咲みはる #父女" },
+  { id: "fsdss-281", aScore: 8.6, bScore: 8.3, u: true, name: "昏●ドラッグを飲まされ裸で助けを求めてきた社長の娘を追撃レ×プ 桃尻かなめ" },
 ];
 export default {
   name: "AvTable",

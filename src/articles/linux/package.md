@@ -257,12 +257,6 @@ Thunderbird (`thunderbird-i18n-zh-cn` <Badge text="extra" />) 是一个重量级
 
 由于我桌面用的 kde，试了下 kmail，用不了，一直报 Akonadi 有问题，点 _详情_ 也点不开。我装了 `kde-pim` <Badge text="包组" /> 也无济于事。据说 kmail 添加 gmail 也[有问题](https://t.me/archlinuxcn_group/3030332)，因此放弃。
 
-### 资源监视器
-
-- `btop`：制作精美的 TUI 资源监视器，跨平台（甚至能在 windows 上用）
-- `mission-center`<Badge text="archlinuxcn"/>：GUI，类似 windows 任务管理器
-- `htop`：top 加强，比较经典
-
 ### 游戏
 
 ```sh
@@ -291,9 +285,11 @@ paru -S bottles wine wine-mono
 
 :::
 
-然后打开 bottles，手动安装运行库，字体等。
+然后打开 bottles，在依赖中手动安装运行库，字体等。
 
-不能直接运行挂载在 windows ntfs 盘里的游戏，只能 copy 一份到 linux 下运行。
+- bottles 可以直接运行挂载的 windows ntfs 盘里的游戏。
+- 运行成功率与游戏发行时间相关：太老的游戏几乎无法游玩。
+- 游玩日文游戏，windows 上需要 _locale-emulator_ 的，需要用 `LANG="ja_JP.UTF8" bottles` 参数启动 bottles。
 
 ### 录音
 
@@ -326,11 +322,13 @@ it works.
 
 ### 系统监视
 
-#### 资源监视
+### 资源监视器
 
 linux 自带的是 `top`，由此衍生出了一堆 tui `*top`。我同时使用 `btop` 和 `htop`。
 
-还有一个 `mission-center` <Badge text="archlinuxcn" /> 是类似 windows 任务管理器的 GUI 监视器。比较重量级，我一般不用。
+- `btop`：制作精美的 TUI 资源监视器，跨平台（甚至能在 windows 上用）
+- `htop`：top 加强，比较经典
+- `mission-center`<Badge text="archlinuxcn"/>：GUI，类似 windows 任务管理器，重量级
 
 #### 文件系统
 

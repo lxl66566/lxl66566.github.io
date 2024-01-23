@@ -51,24 +51,23 @@ tag:
 
 我并未系统学习以下新生语言，只是想了解其设计理念，并获取一些语言设计的灵感。
 
-::: details 点击展开
+<dtls>
 
 - [V language](https://github.com/vlang/v)：基于 C 的注重性能的静态类型编译语言。语法比较像 go?
 - [Mun](https://github.com/mun-lang/mun)：基于 Rust 的静态类型语言，注重热重载 (hot reloading)。
 - [Mojo](https://docs.modular.com/mojo/)：python 的超集，注重性能，类型，兼容性，目标是 AI 领域。
+- [koka](https://koka-lang.github.io)：以 effect 为核心的函数式语言。有 [full UFCS](https://koka-lang.github.io/koka/doc/book.html#sec-dot) 特性。
 
-:::
+</dtls>
 
 ### 不计划学习
 
-我不会自发学习这些语言。
-
-::: details
+<dtls alt="我不会自发学习这些语言">
 
 - go
 - lua
 
-:::
+</dtls>
 
 ## 工具
 

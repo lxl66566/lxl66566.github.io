@@ -21,19 +21,31 @@ tag:
 
 两者均为开源软件。
 
+<!-- prettier-ignore -->
 |    软件名     | 运行时内存 (windows) | 查询区间长 |
 | :-----------: | :------------------: | :--------: |
 |      Tai      |        41.0M         |     年     |
-| ActivityWatch |        102.2M        | ~~月~~ 年  |
+| ActivityWatch |        102.2M        | ~~月~~ 任意  |
 
 结果很明显。
 
 1. 我对时长记录最大的要求，除了准确性外，就是**查询区间长**了。~~而 `ActivityWatch` 的表现（30days）无法达到我的预期。~~
-   - 现在 `ActivityWatch` 能够查任意区间。就是速度很慢。
-   - Tai 查询速度快的原因是额外维护了年月日的时长记录表。
+   - 实际上 `ActivityWatch` 能够查任意区间。
 2. `ActivityWatch` 的数据不方便备份。而 Tai 就只有图标和 sqlite 数据库，非常方便。
 
 我仍然选用 `Tai` 作为我的时长统计软件。而在 Linux 上使用 `ActivityWatch` 是无奈之举。
+
+### ActivityWatch
+
+ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数据。而在 Query 界面则可以查询任意时间长的数据。
+
+但是，ActivityWatch 的 query 就是一坨屎：
+
+1. 说了好多遍了，不要 DSL，连个注释符号都没有。。。
+   - ([from](https://github.com/ActivityWatch/aw-research/blob/master/queries/aw-development.awq): _We should really add support for comments_ lmao)
+2. 查询很慢，python debuff。
+   - Tai 查询速度快的原因是额外维护了年月日的时长记录表。
+3. 文档垃圾。[这里](https://docs.activitywatch.net/en/latest/examples/querying-data.html)是 query 的文档，示例没有解释，没有 `flood` 的说明，挂着 TODO，API 页面 404。。
 
 ## Android 端记录软件使用时长
 

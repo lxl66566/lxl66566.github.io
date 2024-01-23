@@ -125,6 +125,8 @@ const data = [
   { id: "492336", aScore: 5.8, bScore: 6.1, info: "#蔚蓝档案" },
   { id: "492253", aScore: 7.1, bScore: 7.5, info: "#玉之けだま" },
   { id: "not found", aScore: 4.1, bScore: 9.2, info: "#兄妹", otherlink: "https://telegra.ph/おとなごっこ委員会-いちはや-妹の声がきこえる-僕らのCQC-中国翻訳-06-11" },
+  { id: "436618", aScore: 7.7, bScore: 3, info: "#fate", bak: "https://telegra.ph/こいんとす-杏飴-もっとイリヤとおうちでえっちしたい-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-08-02" },
+  { id: "439079", aScore: 6.2, bScore: 6.4, info: "#魅魔 #初体验", bak: "https://telegra.ph/蒼色彼方-色谷あすか-無知っこサキュバス調教開発-中国翻訳-無修正-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

@@ -540,6 +540,18 @@ print(obj.id)           # 然后从 object 中取值
 
 取了值就可以爱干啥干啥了。我不太习惯高层次的抽象，因此类似求和啥的虽然 django 也提供了 `django.db.models.Sum`，但有查文档的功夫早都写好了，还是自己做吧。
 
+## 性能分析
+
+use `cProfile`:
+
+```py
+import pstats
+import cProfile
+cProfile.run("my_function()", "my_func_stats")
+p = pstats.Stats("my_func_stats")
+p.sort_stats("cumulative").print_stats()
+```
+
 ## 打包
 
 ### [nuitka](https://nuitka.net/)
@@ -586,8 +598,6 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
 不好用，文档一坨，编译还爆栈了。
 
-## [代码混淆](https://pyob.oxyry.com/)
-
 ## 发布
 
 把包发布到 pypi，就能被 `pip install` 了。
@@ -595,31 +605,47 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 1. 注册一个 pypi 账号。
    - 需要 2FA，用 github 的肯定不陌生。
    - 需要申请一个 API token：[account](https://pypi.org/manage/account/) 向下滑就有。
-2. 写 `setup.py`。~~可以用 GPT 生成，也可以去抄几份。~~
-3. 在 `$HOME/.pypirc` 下写入
-   ```toml
-   [pypi]
-   username = __token__
-   password = <API token>
-   ```
-4. 打包上传。
-   ::: code-tabs
+2. 使用工具构建并发布。
+   :::: tabs
 
-   @tab twine
+   @tab poetry
 
-   ```sh
-   pipx install twine
-   python3 setup.py sdist bdist_wheel
-   twine upload dist/* --verbose
-   ```
+   参考[此文](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)。
 
-   @tab setup.py
+   1. 写 `pyproject.toml`。
+      - poetry 还挺智能的，居然能够推断入口点。我没写 `packages=[{include="..."}]`，但是打包结果只包含了我想要的项。
+   2. build & upload
+      ```sh
+      poetry config pypi-token.pypi <API token>
+      poetry publish --build
+      ```
 
-   ```sh
-   python3 setup.py sdist upload
-   ```
+   @tab setuptools
 
-   :::
+   1. 写 `setup.py`。~~可以用 GPT 生成，也可以去抄几份。~~
+   2. 在 `$HOME/.pypirc` 下写入
+      ```toml
+      [pypi]
+      username = __token__
+      password = <API token>
+      ```
+   3. 打包上传，工具任选。
+      - twine:
+        ```sh
+        pipx install twine
+        python3 setup.py sdist bdist_wheel
+        twine upload dist/* --verbose
+        ```
+      - setuptools
+        ```sh
+        python3 setup.py sdist upload
+        ```
+
+   ::::
+
+## 其他工具
+
+- [代码混淆](https://pyob.oxyry.com/)
 
 ## 一些问题
 

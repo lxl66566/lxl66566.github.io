@@ -153,10 +153,13 @@ daed 是网页面板的开源代理软件，dae 的前端，而 dae 基于 eBPF[
 3. 一路确定。例如数据库后端使用默认值：`http://127.0.0.1:2023/graphql`，首次登录会要求设账号密码，设一个即可。
 4. 导入节点信息，拖拽到左侧 proxy 即可。
 
-daed 默认使用透明代理，没有 socks/http 的端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
+踩坑：
+
+1. daed 默认使用透明代理，没有 socks/http 端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
+2. 务必将 _配置 - global - 连接选项 - 拨号模式_ 设为 _ip_（默认值）。否则可能无法使用 chatgpt。
 
 需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。
 
-软件数据存储在 `/etc/daed/wing.db`（sqlite 数据库），如果需要备份、改账号密码，需要先给写权限，然后用数据库软件更改。
+软件数据存储在 `/etc/daed/wing.db`（sqlite 数据库），如果需要备份、改账号密码，需要先给 rw 权限，然后用数据库软件更改。
 
 daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 `journalctl -eu daed` 查看其日志，获取信息。
