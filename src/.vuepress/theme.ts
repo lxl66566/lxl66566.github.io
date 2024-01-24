@@ -41,6 +41,10 @@ export default hopeTheme({
 	},
 	plugins: {
 		blog: { excerptLength: 1 },
+		searchPro: {
+			indexContent: true,
+			autoSuggestions: true,
+		},
 		comment: {
 			provider: "Giscus",
 			repo: "lxl66566/lxl66566.github.io",

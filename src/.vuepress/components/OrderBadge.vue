@@ -7,7 +7,7 @@
 export default {
   props: {
     order: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

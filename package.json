@@ -11,11 +11,15 @@
     "update-package": "npx vp-update"
   },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.66",
-    "vue": "^3.3.4",
-    "vuepress": "2.0.0-beta.66",
-    "vuepress-plugin-search-pro": "^2.0.0-beta.234",
-    "vuepress-theme-hope": "2.0.0-beta.234"
+    "@vuepress/client": "2.0.0-rc.0",
+    "katex": "^0.16.9",
+    "mermaid": "^10.7.0",
+    "vue": "^3.4.15",
+    "vuepress": "2.0.0-rc.0",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.11",
+    "vuepress-plugin-pwa2": "2.0.0-rc.11",
+    "vuepress-plugin-search-pro": "2.0.0-rc.11",
+    "vuepress-theme-hope": "2.0.0-rc.11"
   },
   "dependencies": {
     "@vuepress/utils": "2.0.0-rc.0"

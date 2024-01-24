@@ -1,5 +1,4 @@
 import { defineUserConfig } from "vuepress";
-import { searchProPlugin } from "vuepress-plugin-search-pro";
 import { getDirname, path } from "@vuepress/utils";
 import theme from "./theme.js";
 
@@ -28,12 +27,6 @@ gtag('config', 'G-MKRDBH1ZP1');`,
 		],
 	],
 	theme,
-	plugins: [
-		searchProPlugin({
-			indexContent: true,
-			autoSuggestions: false,
-		}),
-	],
 	shouldPrefetch: false,
 });
 temp.alias = {
