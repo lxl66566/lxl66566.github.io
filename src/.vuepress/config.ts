@@ -39,5 +39,6 @@ gtag('config', 'G-MKRDBH1ZP1');`,
 temp.alias = {
 	"@AvTable": path.resolve(__dirname, "components/AvTable.vue"),
 	"@ComicTable": path.resolve(__dirname, "components/ComicTable.vue"),
+	"@GalExhibition": path.resolve(__dirname, "components/GalExhibition.vue"),
 };
 export default temp;

@@ -81,7 +81,8 @@ tag:
 <!-- prettier-ignore -->
 |游戏名|时长|游玩区间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: | :-: |
-|初雪樱|25h28min|2023.12.06-<br/>2023.12.22|9.5|7.6|7.5|
+|秽翼的尤斯蒂娅 <Badge text="nolinux" type="note" />|22h26min<br/>+15h?|2024.01.05-<br/>2024.01.24|9.6|7.5|0.5|
+|初雪樱|25h28min|2023.12.06-<br/>2023.12.22|9.3|7.6|7.5|
 |樱色之云 \* 绯色之恋|27h22min|2023.10.27-<br/>2023.12.19|8.5|9.6|5.9|
 |近月少女的礼仪<OrderBadge order=1 />|67h58min|2023.04.23-<br/>2023.11.26|5|5.5|6|
 |君と彼女と彼女の恋|10h16min|2023.08.04-<br/>2023.10.26|9.9|4.2|5.4|
@@ -169,7 +170,6 @@ _（不排除早期缺漏）_
 <!-- prettier-ignore -->
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
-|秽翼的尤斯蒂娅|2024.01.05|
 |AliceInCradle|20231209|
 |[神聖昂燐ダクリュオン・ルナ](https://t.me/erogamecloud/2350)<OrderBadge order=3 />|20231118|?|4.5|3|
 |提早绽放的黑百合 <Badge text="linux" type="note" vertical="bottom" />|2024.01.22|
@@ -257,28 +257,9 @@ _（不排除早期缺漏）_
 
 有感而发。
 
-<div width="inherit" style="overflow:auto;">
-<table width="740px">
-<thead><tr>
-<th style="text-align:center;">矛盾</th>
-<th style="text-align:center;">命运</th>
-<th style="text-align:center;">苦痛</th>
-<th style="text-align:center;">幻梦</th>
-</tr></thead>
-<tbody><tr>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="水葬銀貨のイストリア" src="/images/hobbies/galgame/suisouginka.jpg" class="medium-zoom-image" width=180px height=250px></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="ISLAND" src="/images/hobbies/galgame/island.jpg" class="medium-zoom-image" width=180px height=250px></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="euphoria" src="/images/hobbies/galgame/euphoria.jpg" class="medium-zoom-image" width=180px height=250px></td>
-<td style="text-align:center;overflow:auto;width:180px;max-height:274px;padding:0;"><img style="object-fit:cover;" alt="冥契的牧神节" src="/images/hobbies/galgame/meikeinoruperukaria.jpg" class="medium-zoom-image" width=180px height=250px></td>
-</tr></tbody>
-</table>
-</div>
-
-<!-- |矛盾|命运|苦痛|幻梦|
-| :-: | :-: | :-: | :-: |
-|<img style="object-fit:cover" alt="水葬銀貨のイストリア" src="http://lain.bgm.tv/pic/cover/l/db/44/202552_lwBMg.jpg" width=180px height=250px />|<img style="object-fit:cover" alt="ISLAND" src="http://lain.bgm.tv/pic/cover/l/69/62/150191_BtQpr.jpg" width=180px height=250px />|<img style="object-fit:cover" alt="euphoria" src="http://lain.bgm.tv/pic/cover/l/c5/3a/19385_Unjr9.jpg" width=180px height=250px />|<img style="object-fit:cover" alt="冥契的牧神节" src="http://lain.bgm.tv/pic/cover/l/d8/85/316637_34696.jpg" width=180px height=250px />| -->
-
 <!-- https://grid.pivotstudio.cn/gal/ -->
+
+<GalExhibition />
 
 ## 我的设置
 
@@ -322,7 +303,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
-|秽翼的尤斯蒂娅|字体上部被切割；快进打断语音；选择无动画会有瞬间黑屏；wine 下运行前半段随机出错，后半段必定出错；一些重复剧情无法在 _已读内容_ 下跳过|
+|秽翼的尤斯蒂娅|字体上部被切割；快进打断语音；选择无动画会有瞬间黑屏；wine 下运行前半段随机崩溃，后半段必定崩溃；一些重复剧情无法在 _已读内容_ 下跳过；存档加注释崩溃|
 |初雪樱|历史界面下滑无法返回；全屏窗口置顶写死|
 |樱色之云 \* 绯色之恋|点击快进打断语音|
 |牛顿与苹果树|最小化后黑屏；后台过久崩溃；常见，人名丢失（汉化锅?）；AfterStory 和 おまけ 不设保存|
@@ -366,7 +347,8 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 看了评价，说能找到人生的意义，于是去玩了。
   - 确实游戏以意义为主旋律；但是由于架空世界观，~~对现实没有什么帮助~~（当我想到后文的现实映射后，我撤回这句话）。
     - 游戏人物的极端性格在架空世界观中得以体现。
-- 同时也是关于抉择的拷问。**现在的我们，不也在牢獄中吗？**
+- 后半“众人皆醒我独醉”，同时也是关于抉择的拷问。**现在的我们，不也在牢獄中吗？** 加重的沉浸感让最后的落幕更加震撼。
+- 游玩顺序：艾莉丝 -> 柯蕾特 -> 莉西娅 -> 菲奥奈 -> 拉菲莉亚 -> 尤斯蒂娅
 - <dtls alt="简单摘抄">
 
   - 人生中最重要的事情，就是努力地经营自已的人生，然后去找到生存的意义。
@@ -627,3 +609,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 
 1. Uncover XP3 [前篇：認識基本 XP3 封包格式](https://galgamer.moe/article/20021) | [後篇：揭祕 XP3 封包中的的壓縮和加密技術](https://galgamer.moe/article/20022)
 2. [Summer Pockets 聖地考察指南 - 前篇](https://galgamer.moe/article/20024#)
+
+<script setup lang="ts">
+import GalExhibition from "@GalExhibition";
+</script>
