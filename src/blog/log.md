@@ -20,6 +20,13 @@ category:
 
 :::
 
+## 2024
+
+### 20240124
+
+- 新增组件 `ExhibitionTable` 与 `GalExhibitionTable`
+- 更新依赖
+
 ## 2023
 
 ### 20231217
