@@ -127,6 +127,9 @@ const data = [
   { id: "not found", aScore: 4.1, bScore: 9.2, info: "#兄妹", otherlink: "https://telegra.ph/おとなごっこ委員会-いちはや-妹の声がきこえる-僕らのCQC-中国翻訳-06-11" },
   { id: "436618", aScore: 7.7, bScore: 3, info: "#fate", bak: "https://telegra.ph/こいんとす-杏飴-もっとイリヤとおうちでえっちしたい-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-08-02" },
   { id: "439079", aScore: 6.2, bScore: 6.4, info: "#魅魔 #初体验", bak: "https://telegra.ph/蒼色彼方-色谷あすか-無知っこサキュバス調教開発-中国翻訳-無修正-DL版-08-02" },
+  { id: "436293", aScore: 5.7, bScore: 2.4, info: "#百合", bak: "https://telegra.ph/タマラン-シンダララランド-グランブルーファンタジー-中国翻訳-DL版-08-02" },
+  { id: "(pixiv)", aScore: 7.6, bScore: 2, info: "#兽耳", otherlink: "https://www.pixiv.net/artworks/107287599" },
+  { id: "(ex)", aScore: 6.1, bScore: 3, info: "#蔚蓝档案", otherlink: "https://exhentai.org/g/2796021/10ef64aa4e/", bak: "https://telegra.ph/イキスギ食堂-イキスギ食堂-対４用療法-ブルーアーカイブ-DL版中国翻訳-01-12" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

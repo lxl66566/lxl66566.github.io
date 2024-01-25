@@ -379,3 +379,4 @@ assert 有 `assert!()` 和 `debug_assert!()` 之分，感觉对于应用开发�
 
 1. [Rust Learning Smart Pointers](https://silente.top/posts/Rust-Learning-Smart-Pointers/)
 2. [Rust 中的闭包递归与 Y 组合子](https://nihil.cc/posts/rust_closure_and_y/)
+3. 随机 [Rust Quiz](https://dtolnay.github.io/rust-quiz/)：想成为语言律师吗？

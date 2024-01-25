@@ -122,7 +122,9 @@ priority = "default"
   - 添加包：`poetry add <package name>`
   - 移除包：`poetry remove <package name>`
   - 列出可用包：`poetry show`
-- 安装依赖：`poetry install`，会自动新建虚拟环境
+- 安装依赖
+  - 从现有 `pyproject.toml` 安装：`poetry install`，会自动新建虚拟环境
+  - 从 `requirements.txt` 安装（不够完善）：`cat requirements.txt | xargs -I % sh -c 'poetry add "%"'` ([ref](https://stackoverflow.com/questions/62764148/#comment125542108_62787881))
 - 虚拟环境
   - 激活：`poetry shell`（或在虚拟环境目录执行 `call activate.bat`）
   - 删除：`poetry env remove --all`

@@ -217,6 +217,7 @@ const data = [
   { id: "ambi-131", aScore: 8.5, bScore: 7.7, name: "鬼畜父の性玩具 彼氏との仲を引き裂かれた制服美少女 早美れむ" },
   { id: "ssni-954", aScore: 7.3, bScore: 8.7, name: "手塩にかけた娘が俺の子じゃないと判明したので 羽咲みはる #父女" },
   { id: "fsdss-281", aScore: 8.6, bScore: 8.3, u: true, name: "昏●ドラッグを飲まされ裸で助けを求めてきた社長の娘を追撃レ×プ 桃尻かなめ" },
+  { id: "midv-238", aScore: 8.8, bScore: 6.8, u: true, name: "いつも銭湯通いの巨乳隣人に風呂を貸したらGカップに発育した身体を覗き見してしまい濡れ髪のままビチョ濡れでヤリまくった！！ 水卜さくら" },
 ];
 export default {
   name: "AvTable",

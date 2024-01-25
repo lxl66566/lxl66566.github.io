@@ -131,6 +131,10 @@ async/await 模型是极力接近 FP 的体现，相当于给程序打点切割�
 - C++ 的模块化做的稀烂，`#include` 只是简单地复制代码。之前一般用 `inline` 内联，C++ 20 以后才有了 module，但直到现在各方编译器的实现还不完善。
 - python 的模块[粒度不够细](../gossip/fuckxxx.md#python-有多难用)，无法实现交叉引用，本质只是复制代码（加强版）而已(?)。
 
+## 细分
+
+优先级，未完待续
+
 ## 梦中情语
 
 maybe i will write it on github.

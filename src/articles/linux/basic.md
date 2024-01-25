@@ -13,7 +13,8 @@ tag:
 1. 我建议仔细看看 [The Missing](https://missing-semester-cn.github.io/)的前几章，比较到位，**免去了自己折腾之苦**（本人亲身体会）。
 2. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
 3. `[Y/n]` 可以直接回车表示确认。`Y` 大写表示默认。([ref](https://t.me/archlinuxcn_group/2950979))
-4. awk 是一门语言([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=awk+语言))，~~但我从不用 awk~~。
+4. awk 是一门（图灵完备的）语言([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=awk+语言))，~~但我从不用 awk~~。
+5. linux 可执行文件没有后缀；可以用 `detect-it-easy-bin` <Badge text="AUR" /> 查看任意文件的类型。
 
 ## [Terminal shortcuts](https://linuxhandbook.com/linux-shortcuts/)
 
