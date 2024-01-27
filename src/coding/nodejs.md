@@ -68,6 +68,12 @@ npm uninstall <package_name> [option] # 卸载包及其依赖
 很遗憾，目前我没有找到任何方法使我能够严格依照 lockfile 进行依赖安装：在冲突时使用 `--frozen-lockfile` 参数，npm 会直接忽略之并写入 lockfile，pnpm/yarn 会报错并终止。同样的，`npm init -y` | `npm-collect` 都无法完成此任务。
 [^2]: [惨痛教训](https://t.me/withabsolutex/1216)
 
+### npx
+
+npx 是一个执行脚本的 nodejs 附属物。其实际上做的是临时拉取某个 bin 包并执行，但是不太好用的样子。
+
+因此我们也可以 `pnpm/yarn install -g <bin> && <bin> ...` 安装到全局再执行，或者 install as dep 后，在 `./node_modules/.bin/<bin>` 下手动调用执行。
+
 ### 查询包大小
 
 查询 install size 可以使用 [Package Phobia](https://packagephobia.com/)。

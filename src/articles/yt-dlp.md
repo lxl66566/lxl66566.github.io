@@ -13,7 +13,10 @@ tag:
 
 [yt-dlp](https://github.com/yt-dlp/yt-dlp) 是一个开源命令行视频/音频下载工具，远比那些闭源收费的视频下载扩展/软件好用。
 
-我主要用 yt-dlp 下载 youtube 与 bilibili 视频。与扩展插件不同，yt-dlp 不能下载任意网站的视频。要查看是否支持某网站，请直接搜 [Changelog](https://github.com/yt-dlp/yt-dlp/blob/master/Changelog.md)。
+但是，yt-dlp 也有一些缺点：
+
+- 对于某些 B 站视频可能无法选择最高清晰度
+- yt-dlp 不能下载任意网站的视频。要查看是否支持某网站，请直接搜 [Changelog](https://github.com/yt-dlp/yt-dlp/blob/master/Changelog.md)。我主要用 yt-dlp 下载 youtube 与 bilibili 视频。
 
 ## 安装
 
@@ -66,7 +69,7 @@ yt-dlp https://www.bilibili.com/video/BV1wK41147Za -f 30216
 #### 单独合并
 
 ```sh
-ffmpeg -i input.mp4 -i input.m4a -c:v copy -c:a copy -strict experimental output.file
+ffmpeg -i input.mp4 -i input.m4a -c:v copy -c:a copy -strict experimental output.mp4
 ```
 
 #### 批量合并
