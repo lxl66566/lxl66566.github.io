@@ -63,6 +63,7 @@ git 在 windows 下的安装也算是一门学问，官方安装包一共十几�
 3. 其他全局设置
    ```sh
    git config --global push.default current    # 设置默认推送，简化 git push
+   git config --global push.autoSetupRemote true   # 默认设置上游，搭配上条
    git config --global core.quotepath false    # 取消中文转义，需要终端支持 utf-8
    git config --global --add safe.directory '*'    # 取消目录安全警告
    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见页面底 external 1.
@@ -202,6 +203,16 @@ git push origin <branch> --force-with-lease # 建议使用此选项代替 -f，�
 ::: tip
 脚本执行完成后将自动关闭窗口。若需使之不自动关闭，请添加`exec /bin/bash`指令至末行。
 :::
+
+### 设置
+
+在前面的章节中已经用到了 `git config`。git 的配置分为仓库配置与全局配置，两者都是 `.toml` 格式的文件。`git config xxx` 本质就是添加/修改配置文件中的条目。
+
+```sh
+git config --edit # 使用默认编辑器打开 local config 文件
+git config --global --edit # 相对的，打开 global 文件
+git config alias.p 'pull origin code'  # 向 alias.p 内写入值（添加命令别名）
+```
 
 ## 进阶
 
@@ -488,6 +499,16 @@ git config commit.gpgsign true   # 设置该仓库 commit 时自动签名
 ```
 
 如果需要对已存在的 commit 签名，可以 `git rebase -i HEAD`，然后将其中的 `noop`(_no operation_) 改为 `exec git commit --amend --no-edit -S` 即可。
+
+## 自建 git 托管
+
+有一些东西，不方便放在托管网站上（即便是 private），例如个人隐私，被 DMCA 的资源，等等。因此可以在 [VPS](../articles/proxy/vps.md) 上自建一个 git 托管解决。
+
+我的需求非常简单，保持同步即可。因此这里也不讲什么 Gitea，直接利用最原始的 ssh([ref](https://www.zzxworld.com/posts/4-ways-to-self-host-git-service))：在 VPS 上建一个 bare repo 就结束了！之后上传只要指定 host 和路径就行了。
+
+```sh
+git push <host>:<path>/<name>.git
+```
 
 ## 奇技淫巧
 

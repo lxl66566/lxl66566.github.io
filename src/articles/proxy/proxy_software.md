@@ -156,7 +156,7 @@ daed 是网页面板的开源代理软件，dae 的前端，而 dae 基于 eBPF[
 踩坑：
 
 1. daed 默认使用透明代理，没有 socks/http 端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
-2. 务必将 _配置 - global - 连接选项 - 拨号模式_ 设为 _ip_（默认值）。否则可能无法使用 chatgpt。
+2. ~~务必将 _配置 - global - 连接选项 - 拨号模式_ 设为 _ip_（默认值）。否则可能无法使用 chatgpt。~~ 经测试，非此问题。
 
 需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。
 

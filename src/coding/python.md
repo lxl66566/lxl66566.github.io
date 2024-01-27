@@ -395,6 +395,8 @@ for name in file.sheet_names:
 
 测试。[tutorial](https://learning-pytest.readthedocs.io/zh/latest/doc/intro/getting-started.html)
 
+- 测试某个函数：`pytest <relative_path>::<function_name>`
+
 ## GUI
 
 一些 GUI 框架。（大部分都没用过）

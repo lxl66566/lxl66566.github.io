@@ -63,6 +63,7 @@ tag:
 - [ ] 音频振幅对齐
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 - [ ] osu beatmap downloader, support stable and lazer
+- [ ] poetry plugin to import requirements.
 
 ### Android
 
