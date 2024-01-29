@@ -57,6 +57,7 @@ tag:
 - [Mun](https://github.com/mun-lang/mun)：基于 Rust 的静态类型语言，注重热重载 (hot reloading)。
 - [Mojo](https://docs.modular.com/mojo/)：python 的超集，注重性能，类型，兼容性，目标是 AI 领域。
 - [koka](https://koka-lang.github.io)：以 effect 为核心的函数式语言。有 [full UFCS](https://koka-lang.github.io/koka/doc/book.html#sec-dot) 特性。
+- [moonbit](https://www.moonbitlang.cn/)：从 rust 中学了很多的语言
 
 </dtls>
 

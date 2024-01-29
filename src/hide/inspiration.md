@@ -64,6 +64,11 @@ tag:
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 - [ ] osu beatmap downloader, support stable and lazer
 - [ ] poetry plugin to import requirements.
+- [ ] pyshell
+- [ ] 好用的 CLI 录音机
+  - 暂停与继续
+  - 降噪
+  - [ ] 智能限幅
 
 ### Android
 

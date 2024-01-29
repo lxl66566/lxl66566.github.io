@@ -293,11 +293,17 @@ paru -S bottles wine wine-mono
 
 ### 录音
 
+#### GUI
+
 其实 obs 就能录，但是有点重，我想试试其他的。
 
 我先尝试了一下 `krecorder`，但是使用体验不算好，完全无法录音。音源把能选的都选了一遍，录音还是无法开始。
 
 后来想用 `recordmydesktop`，结果 gtk 和 qt 前端都装不上，gtk 缺依赖包，qt 编译了半天，时间全花在输出 warning 了。
+
+`kwave` 也能录，但是它本职不是干这个的，操作上可能不够直观。
+
+#### CLI
 
 然后从网上抄了一个 ffmpeg 代码，并改进了一下：
 
@@ -306,6 +312,8 @@ ffmpeg -f pulse -i 0 -c:a libmp3lame -b:a 128k -af "volume=0.04" pulse.mp3
 ```
 
 it works.
+
+当然，也可以用 `alsa-utils`<Badge text="extra"/> 包：`arecord -f dat test.wav`，但是又不能改音量又不支持压缩格式，显然不如 ffmpeg。
 
 ### 关于文档
 
@@ -355,6 +363,8 @@ atuin import auto
 ```
 
 基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行。
+
+更多 keybindings 请前往 [doc](https://docs.atuin.sh/configuration/key-binding/#atuin-ui-shortcuts).
 
 ### [neovim](../../coding/vim.md)
 

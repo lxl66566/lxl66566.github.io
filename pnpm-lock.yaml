@@ -23,9 +23,6 @@ devDependencies:
   mermaid:
     specifier: ^10.7.0
     version: 10.7.0
-  nolyfill:
-    specifier: ^1.0.27
-    version: 1.0.27
   vue:
     specifier: ^3.4.15
     version: 3.4.15
@@ -4303,12 +4300,6 @@ packages:
 
   /node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
-    dev: true
-
-  /nolyfill@1.0.27:
-    resolution: {integrity: sha512-y/5zFFjDfBIZ2I3CXAbqzTUJgpvjXWOo8j+Q1JM/EVlQwcfXkHSww3CMeiiqjSYSk+QVkW0bkeDOqiS5KPQbpg==, tarball: https://registry.npmmirror.com/nolyfill/-/nolyfill-1.0.27.tgz}
-    engines: {node: '>=12.4.0'}
-    hasBin: true
     dev: true
 
   /non-layered-tidy-tree-layout@2.0.2:
