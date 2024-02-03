@@ -36,7 +36,7 @@ tag:
 插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里放出我使用的插件：
 
 - 通用：
-  - [AI 代码补全](#AI-补全)
+  - [AI 代码补全](#ai-补全)
   - 更好的警告：_Error Lens_
     - 不可否认 _SonarLint_ 很强，但是 java 写的，占用空间和 RAM 都很大。因此在使用了几年 _SonarLint_ 以后我选择分语言使用不同 linter。
   - 轻量级 Git 可视化：_Git Graph_
@@ -55,6 +55,7 @@ tag:
 - octave：_Octave_，_Octave Formatter_，详见[octave](./octave.md#ide)
 - Typst：_Typst LSP_
 - 数据库：_SQLite Viewer_
+- 协同：_Live Share_
 - 其他：_Chinese (Simplified)..._，_CodeSnap_
 
 ### AI 补全
@@ -88,6 +89,15 @@ vscode 的特色：
 vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft/vscode/issues/39404#issuecomment-348710460)，因此可能无法使用某些正则语法。
 
 要匹配所有中文，请使用 `[一-龥]`。([ref](https://superuser.com/questions/983441/visual-studio-search-through-code-for-chinese-text))
+
+## 协同编辑
+
+有时候需要帮别人处理代码时，协同编辑是一个非常不错的选择。
+
+1. 安装 _Live Share_
+2. 发送链接给对方
+3. 同意连接请求
+4. 给对方权限，例如读写，或终端执行代码
 
 ## 其他评价
 

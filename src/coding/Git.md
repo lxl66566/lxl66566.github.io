@@ -420,47 +420,56 @@ git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 ### 删除大文件
 
 删除大文件是必要的。即使你删除了某个文件，其仍会存在于仓库的提交记录内。
+
 ::: danger
+
 在删除之前请务必 commit 未提交的修改！！警钟长鸣！警钟长鸣！这里（20230312）是血的惨痛教训。
+
 :::
 
-- 查找大文件：
+1. 查找大文件：
+   ```sh
+   # 需要在 git bash 或其他类 unix 环境下运行
+   git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -15 | awk '{print$1}')"
+   # another edition
+   # git rev-list --all | xargs -rL1 git ls-tree -r --long | sort -uk3 | sort -rnk4 | head -15
+   ```
+   其中 `tail [-n]` 为显示的条目数。（疑难解答[^3]：_查找大文件时出现`Cannot open existing pack file '.git/objects/pack/_.idx'`错误\*）
+2. 清理。
+   ::: tabs
 
-```sh
-git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -15 | awk '{print$1}')"
-# another edition
-# git rev-list --all | xargs -rL1 git ls-tree -r --long | sort -uk3 | sort -rnk4 | head -15
-```
+   @tab filter-repo（推荐）
 
-其中 `tail [-n]` 为显示的条目数。（疑难解答[^3]：_查找大文件时出现`Cannot open existing pack file '.git/objects/pack/_.idx'`错误*）
+   [git-filter-repo](https://github.com/newren/git-filter-repo)
+
+   git 官方推荐的清理工具。需要额外安装，并且可能失效。
+
+   windows 下推荐使用 scoop 安装，安装过程详见仓库说明。（疑难解答[^4]：_运行 `git filter-repo` 出现 `name 'git' is not defined` 报错_）
+
+   关于使用方法，~~没人能看懂官方文档~~，建议直接找[教程](https://nyakku.moe/posts/2020/06/12/use-git-filter-repo-clean-git-history.html)。
+
+   ```sh:no-line-numbers
+   git filter-repo --invert-paths -f --path "<path/of/file>"
+   ```
+
+   @tab filter-branch
+
+   [ref](https://harttle.land/2016/03/22/purge-large-files-in-gitrepo.html)
+
+   不太推荐这种方式，比较慢（真的）。好处是无需安装，并且一定可用。
+
+   ```sh
+   git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-unmatch <path/of/file>' --tag-name-filter cat -- --all
+   # another edition:
+   # git filter-branch --tree-filter "rm -f <path/of/file>" -- --all
+   ```
+
+   :::
+
+3. 清理完成后请使用 `git gc --prune=now` 进行碎片收集，上传时需要 `git push -f` 强制覆盖。
+
 [^3]: 说明该项目并未触发 git 的 packfile 机制，无需删除大文件。若仍需查找，可以使用 `# another edition` 后的语句。
-
-- 清理完成后请使用 `git gc --prune=now` 进行碎片收集，上传时需要 `git push -f` 强制覆盖。
-
-#### [filter-repo](https://github.com/newren/git-filter-repo)（推荐）
-
-git 官方推荐的清理工具。
-
-我使用 `scoop` 安装，安装过程详见仓库说明。（疑难解答[^4]：_运行`git filter-repo`出现`name 'git' is not defined`报错_）关于使用方法，~~没人能看懂官方文档~~，建议直接找教程。
 [^4]: 根据[这里](https://github.com/newren/git-filter-repo/issues/360)的描述做就行了。
-
-```sh:no-line-numbers
-git filter-repo --invert-paths -f --path "<path/of/file>"
-```
-
-> [src](https://nyakku.moe/posts/2020/06/12/use-git-filter-repo-clean-git-history.html)
-
-#### filter-branch
-
-不太推荐这种方式，比较慢（真的）。
-
-```sh
-git filter-branch -f --prune-empty --index-filter 'git rm -rf --cached --ignore-unmatch <path/of/file>' --tag-name-filter cat -- --all
-# another edition:
-# git filter-branch --tree-filter "rm -f <path/of/file>" -- --all
-```
-
-> [References](https://harttle.land/2016/03/22/purge-large-files-in-gitrepo.html)
 
 ### 大文件上传
 

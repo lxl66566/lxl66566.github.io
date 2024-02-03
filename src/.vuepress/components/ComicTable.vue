@@ -131,6 +131,7 @@ const data = [
   { id: "(pixiv)", aScore: 7.6, bScore: 2, info: "#兽耳", otherlink: "https://www.pixiv.net/artworks/107287599" },
   { id: "(ex)", aScore: 6.1, bScore: 3, info: "#蔚蓝档案", otherlink: "https://exhentai.org/g/2796021/10ef64aa4e/", bak: "https://telegra.ph/イキスギ食堂-イキスギ食堂-対４用療法-ブルーアーカイブ-DL版中国翻訳-01-12" },
   { id: "492050", aScore: 4.6, bScore: 7.8, info: "#NTR" },
+  { id: "482078", aScore: 8.7, bScore: 9.1, info: "#乳首責め" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

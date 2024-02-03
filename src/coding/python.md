@@ -95,7 +95,8 @@ poetry config cache-dir D:\\poetry_enev
 身在中国，换源是很重要的（python 不走代理[^1]）。最好每次创建项目都换源，这样一起协作的其他人都无需手动换源。参考[文档](https://python-poetry.org/docs/repositories#project-configuration)。
 
 ::: tabs
-@命令行换源
+
+@tab 命令行换源
 
 ```sh
 poetry source add tsinghua-pypi https://pypi.tuna.tsinghua.edu.cn/simple
