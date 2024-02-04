@@ -78,7 +78,8 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 - `namcap PKGBUILD` 检查有没有语法错误。一般会报一个 `$CARCH` 的 warning，不用管。
 - 从 Asuka 先輩那里偷来的一键更新+测试：
   ```sh
-  alias pack='shfmt -w PKGBUILD && updpkgsums && makepkg --printsrcinfo > .SRCINFO && makepkg -C -sf && namcap *.zst'
+  alias pack='shfmt -w PKGBUILD && updpkgsums && makepkg --printsrcinfo > .SRCINFO && makepkg -C -sf && namcap *.zst && git clean -df'
+  # 注意，由于 git clean -df 的存在，此命令只能用来更新
   ```
 
 #### 测试
@@ -445,6 +446,7 @@ sudo systemctl enable --now tlp
 waydroid 是 linux 上的首选 android 模拟器。不过想用还是需要折腾一阵的。
 
 1. 切换为 zen 内核，参考[更换内核](./install_and_config.md#更换内核)
+   - 也可以用 linux-lily <Badge text="archlinuxcn" /> 内核
 2. 安装 waydroid，具体流程在 wiki 上有。
    - `pacman -S waydroid` 没有 Android 镜像，联网自动下载可能需要代理。
 

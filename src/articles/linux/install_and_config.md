@@ -233,7 +233,7 @@ make_new_subvolume /var/log
 11. _窗口管理 - 窗口行为_ 设置 _焦点跟随鼠标_
 12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
 13. [配置蓝牙](https://wiki.archlinuxcn.org/wiki/蓝牙)，安装 `bluedevil`
-14. 关闭文件索引 ([ref](https://zhuanlan.zhihu.com/p/493375508))
+14. 关闭文件索引（臭名昭著的 baloo）：`balooctl disable`。其不仅可能导致崩溃([ref](https://zhuanlan.zhihu.com/p/493375508))，还可能造成性能损失。
 
 ## 快照
 
