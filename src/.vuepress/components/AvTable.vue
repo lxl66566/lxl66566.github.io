@@ -222,6 +222,7 @@ const data = [
   { id: "sdab-260", aScore: 7.2, bScore: 5.2 },
   { id: "sqte-271", aScore: 9.8, bScore: 5.2, name: "第一个好看" },
   { id: "wanz-981", aScore: 9, bScore: 8, name: "田舎に帰ったら暇すぎて近所のオジさんとの緊縛セックスにどっぷりハマった夏休み。 つぼみ" },
+  { id: "midv-068", aScore: 9.2, bScore: 5 },
 ];
 export default {
   name: "AvTable",
