@@ -22,21 +22,31 @@ ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手�
 
 1. 下载并解压后，进入 ADB 目录，打开 cmd。
    > 推荐将 ADB 目录加入环境变量。这样就不仅限于在 ADB 目录下使用指令。
-2. 手机开启 USB 调试，并用数据线连接电脑。
-   - 开启开发者模式：（例：MIUI 12.5）设置 - 我的设备 - 全部参数 - 多次点击 _MIUI 版本_
-   - 在开发者选项中启用 _USB 调试_
-3. 执行 `adb devices`，出现以下代码即为连接成功：
+2. 手机开启开发者选项与 USB 调试。
+   ::: tabs
 
-```batch:no-line-numbers
-* daemon started successfully
-List of devices attached
-****************        device
-```
+   @tab 有线
+
+   使用数据线连接电脑与手机即可。
+
+   @tab 无线
+
+   1. 开启无线调试开关
+   2. 使用配对码配对设备，PC 端执行 `adb pair <ip>:<port>`
+   3. 连接设备，PC 端执行 `adb connect <ip>:<port>`（注意此时 port 与配对时不同）
+
+   :::
+
+3. 执行 `adb devices`，`List of devices attached` 下方有设备即为连接成功：
+   ```
+   List of devices attached
+   ****************        device
+   ```
 
 ## 常用指令
 
 ```sh
-adb devices # 开启端口，检测设备，请求匹配。
+adb devices # 开启端口，检测设备
 adb install <filepath>  # 安装应用。`<filepath>` 可以是相对 / 绝对路径。一般为 .apk 文件。
 adb shell pm list package [<keyword>]   # 根据包名查找包
 adb shell pm list packages | findstr <keyword>  # 同上
