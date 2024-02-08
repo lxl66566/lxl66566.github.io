@@ -290,18 +290,33 @@ sudo pacman -S lib32-libpipewire libpipewire pipewire-alsa pipewire-pulse pipewi
 
 ## 更换内核
 
-linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本。
+更换内核的目的一般是需要一些特性，例如 linux-lily 的 tty 中文字符支持。我目前使用 `linux-lily`，因为其中文支持、waydroid 支持和较低的更新频率。<heimu>我曾今用过 `linux`, lts, zen 和 lily，只有 lily 的更新频率低。那么为什么要更新频率低的呢，因为天天下载还要编译模块烦死了！</heimu>
 
-例如我想更换 `linux-zen` 内核（该内核在官方仓库无需编译），需要：
+linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本，甚至好多内核有已编译版本，下载就可用。
+
+::: tabs
+
+@tab lily
+
+`linux-lily` 需要确保添加了 <Badge text="archlinuxcn"/> 源。否则可能要从 aur 编译。
+
+```sh
+sudo pacman -S linux-lily linux-lily-headers
+```
+
+@tab zen
 
 ```sh
 sudo pacman -S linux-zen linux-zen-headers
-sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-即可。initramfs 会通过 pacman hook 自动生成，无需手动 `mkinitcpio -P`。
+:::
 
-首次更换内核还请注意：
+**下载完内核后记得 `sudo grub-mkconfig -o /boot/grub/grub.cfg` 生成启动选项**。
+
+至于 initramfs 和 dkms 模块都会通过 pacman hook 自动搞定，不需要人为介入。
+
+更换为 `linux` 以外的内核还请注意：
 
 1. 参考[系统设置](#系统设置) `8.` 的 grub 设置。
 2. 需要更换 NVIDIA 驱动至 dkms（如果有的话）：

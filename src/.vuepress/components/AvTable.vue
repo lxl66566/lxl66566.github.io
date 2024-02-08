@@ -1,5 +1,4 @@
 <template>
-  <h2 v-if="errorMessage">{{ errorMessage }}</h2>
   <h2>最高</h2>
   <div>
     <SortableTable :rows="data" />

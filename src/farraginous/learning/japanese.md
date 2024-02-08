@@ -57,6 +57,7 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 - 兎　的量词为 羽 ([source](https://japanknowledge.com/articles/kze/column_kaz_02.html))
 - [ごくありふれた](https://ja.hinative.com/questions/8252283)
 - [いわゆる vs すなわち](https://ja.hinative.com/questions/23858327)
+- [「薄い色」「浅い色」「淡い色」の違い](https://www.youtube.com/watch?v=OXufBWERqhM)
 
 ## 说两句
 

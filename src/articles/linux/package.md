@@ -450,7 +450,7 @@ waydroid 是 linux 上的首选 android 模拟器。不过想用还是需要折�
 2. 安装 waydroid，具体流程在 wiki 上有。
    - `pacman -S waydroid` 没有 Android 镜像，联网自动下载可能需要代理。
 
-这里主要说下在 X11 下用 waydroid：需要一个 wayland 模拟器，archwiki 的主站说用 cage，CN 站说用 weston，都没有讲具体用法。我用 weston 了。
+这里主要说下在 X11 下用 waydroid：需要一个 wayland 模拟器，archwiki 的主站说用 cage，CN 站说用 weston，都没有讲具体用法。我用 weston 了。后来尝试了一下 sway，结果与 nvidia 相性很差，不能正常使用。
 
 ```sh
 sudo pacman -S weston

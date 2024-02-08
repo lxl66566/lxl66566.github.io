@@ -75,6 +75,12 @@ conn.close()
 
 随便找个 [gpt](../farraginous/recommend_websites.md#ai-工具) 写吧。我目前看到有 rusqlite 和 sqlx 两套库可以选择。
 
+## duckdb
+
+duckdb 比 sqlite 具有更多的功能。
+
+python 版本还有一个[官方推荐的 orm](https://duckdb.org/docs/guides/python/ibis.html) 可用。
+
 ## mysql 运维
 
 我是一个完全不懂数据库的非计专业学生，但我需要为部门维护数据库（
