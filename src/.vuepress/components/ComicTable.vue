@@ -132,6 +132,10 @@ const data = [
   { id: "(ex)", aScore: 6.1, bScore: 3, info: "#蔚蓝档案", otherlink: "https://exhentai.org/g/2796021/10ef64aa4e/", bak: "https://telegra.ph/イキスギ食堂-イキスギ食堂-対４用療法-ブルーアーカイブ-DL版中国翻訳-01-12" },
   { id: "492050", aScore: 4.6, bScore: 7.8, info: "#NTR" },
   { id: "482078", aScore: 8.7, bScore: 9.1, info: "#乳首責め" },
+  { id: "495078", aScore: 8.4, bScore: 8.7, info: "#兄妹" },
+  { id: "488010", aScore: 9.8, bScore: 6, order: 2, info: "#后宫" },
+  { id: "485264", aScore: 9.8, bScore: 5, order: 1, info: "#兄妹" },
+  { id: "470633", aScore: 7.9, bScore: 9.7, info: "うちには幽霊さんがいます #合集", bak: "https://telegra.ph/甘露アメ-うちには幽霊さんがいます-中国翻訳-DL版-02-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

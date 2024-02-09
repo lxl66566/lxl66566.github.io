@@ -27,13 +27,27 @@ _Git is a free and open source distributed version control system designed to ha
 
 ### 安装（windows）
 
-git 在 windows 下的安装也算是一门学问，官方安装包一共十几个英文步骤选项极其折磨[^5]。实际上 git 官方会为电脑安装一个模拟 linux 的终端（msys2）。
+此处仅安装 Git Bash，不涉及 GUI。
 
-[^5]: 当然你也可以一路确定，没什么大问题，就是占用空间多一点罢了
+::: tabs
 
-这里推荐 [scoop](../farraginous/recommend_packages.md#scoop) 一行搞定：`scoop install git`。不过呢，使用 scoop 装完还建议手动在 _windows 设置 - 应用 - 默认应用_ 中为 `.sh` 文件添加默认打开方式，添加为 `...\scoop\apps\git\current\git-bash.exe`（填写实际路径）。否则无法直接双击 `*.sh` 文件直接运行。
+@tab scoop
 
-安装后在任意 shell 输入 `git`，测试安装是否成功。本文仅介绍 Git Bash 用法，不涉及 GUI 使用。
+使用 [scoop](../farraginous/recommend_packages.md#scoop) 可以一行搞定：`scoop install git`。
+
+建议手动在 _windows 设置 - 应用 - 默认应用_ 中为 `.sh` 文件添加默认打开方式，添加为 `...\scoop\apps\git\current\git-bash.exe`（填写实际路径）。否则无法直接双击 `*.sh` 文件直接运行。
+
+@tab git for windows
+
+> "Git for Windows SDK" is 5.33GB compared to "Git for Windows" 691MB compared to "Portable Git" 275MB.
+> ::: right
+> ——[pacman-for-git](https://github.com/mcgitty/pacman-for-git/blob/main/pacman-for-git.txt)
+> :::
+> git for windows 官方的安装包就是纯纯流氓。明明是 git 和 msys2 结合体，却不让安装其他软件。
+
+git for windows 的安装也算是一门学问，一共十几个英文步骤选项对新手极其折磨；当然你也可以一路确定，没什么大问题，就是占用空间多一点罢了。
+
+:::
 
 ### 配置
 
@@ -518,6 +532,17 @@ git config commit.gpgsign true   # 设置该仓库 commit 时自动签名
 ```sh
 git push <host>:<path>/<name>.git
 ```
+
+## 统计 git 分支大小
+
+用 gpt 写了个。
+
+```sh
+# 假设已 checkout 到此分支
+git ls-files | xargs -n1 du -h | awk '{print $1}' | paste -sd+ - | bc
+```
+
+可能需要安装 `bc`（`pacman -S bc`）。统计结果理论以 K 为单位。
 
 ## 奇技淫巧
 

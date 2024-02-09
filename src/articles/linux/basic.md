@@ -16,7 +16,7 @@ tag:
 4. awk 是一门（图灵完备的）语言([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=awk+语言))，~~但我从不用 awk~~。
 5. linux 可执行文件没有后缀；可以用 `detect-it-easy-bin` <Badge text="AUR" /> 查看任意文件的类型。
 
-## [Terminal shortcuts](https://linuxhandbook.com/linux-shortcuts/)
+## Terminal shortcuts
 
 `<C-a>` 代表 `Ctrl + a`.
 
@@ -27,6 +27,8 @@ tag:
 | `<C-LEFT>` & `<C-LEFT>` | 移动光标到上 / 下一个单词 |
 | `<C-w>` | 删除前一个单词 |
 | `<C-u>` | 清空光标前输入 |
+
+您还可以查看[本文](https://effective-shell.com/part-2-core-skills/fly-on-the-command-line)获取更多实用 shortcuts。
 
 ## POSIX 指令
 
