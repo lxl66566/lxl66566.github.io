@@ -392,11 +392,30 @@ for name in file.sheet_names:
         print(row["姓名"])
 ```
 
+## 测试
+
+### unittest
+
+我比较习惯 unittest，即将 test 函数与本身的定义写在一个文件里。因此可以直接使用最简单的 test 形式：
+
+```py
+if __name__ == "__main__":
+    def test_xxx():
+        pass
+    test_xxx()
+```
+
+当然，也可以用自带的 unittest 包装一下，可以获取测试时间等。unittest 基础使用非常简单，具体的可以看文档用例。
+
+但是 unittest 有个致命缺陷就是它支持 async function，但是不支持异步执行。。我非常无语。
+
 ### pytest
 
-测试。[tutorial](https://learning-pytest.readthedocs.io/zh/latest/doc/intro/getting-started.html)
+这是一个复杂的测试框架。[tutorial](https://learning-pytest.readthedocs.io/zh/latest/doc/intro/getting-started.html)
 
 - 测试某个函数：`pytest <relative_path>::<function_name>`
+
+感觉并不好用。
 
 ## GUI
 

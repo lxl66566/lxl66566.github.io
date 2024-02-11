@@ -5,7 +5,6 @@ category:
   - 主张
 tag:
   - 世界
-  - 正面
 ---
 
 # 鲜鸡汤
@@ -16,3 +15,4 @@ tag:
 2. [我如何用三个月入门日语](numbbbbb.com/2016/07/04/20160704_我如何用三个月入门日语/)
 3. [我的人生七年（一）](https://hurricane618.me/2022/11/27/seven-years-of-my-life1/)
 4. [roadmap.sh](https://roadmap.sh)
+5. [隐入尘烟](https://www.youtube.com/watch?v=Ezgc9GGVUQk)
