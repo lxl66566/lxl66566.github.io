@@ -87,7 +87,7 @@ pip install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 ```sh
 poetry config virtualenvs.in-project true
-poetry config cache-dir D:\\poetry_enev
+poetry config cache-dir Z:\
 ```
 
 ##### 换源

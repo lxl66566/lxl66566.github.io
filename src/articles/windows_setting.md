@@ -98,6 +98,8 @@ tag:
     DOSKEY gp=git pull
     ```
     如果有多行指令需求，那就是 `.cmd` 文件写进 `PATH` 里了。
+26. 禁用一些服务。
+    - Windows Font Cache Service
 
 [^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 

@@ -136,6 +136,7 @@ const data = [
   { id: "488010", aScore: 9.8, bScore: 6, order: 2, info: "#后宫" },
   { id: "485264", aScore: 9.8, bScore: 5, order: 1, info: "#兄妹" },
   { id: "470633", aScore: 7.9, bScore: 9.7, info: "うちには幽霊さんがいます #合集", bak: "https://telegra.ph/甘露アメ-うちには幽霊さんがいます-中国翻訳-DL版-02-02" },
+  { id: "451464", aScore: 3.5, bScore: 7.3, info: "#loli" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
