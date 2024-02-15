@@ -199,11 +199,16 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 - python 函数传参跟其他语言很像，基本类型是值传递，object, list, dict 是引用传递。
   - 深拷贝和浅拷贝，这个应该是编程基本概念而不是语言基本概念。
 - python 的类型标注只会报警告，运行时不检查。
-- 每个目录 / `.py` 文件都被视作一个模块。
-  - `import ./xxx` 是当前目录模块，不加 `./` 是顶层模块。
-  - 模块不能循环导入，即模块引用结构需要是 DAG。
 - python 不支持重载。
 - python 的 OOP 是残缺的，即使可以靠一些[装饰器](#decorator)逼近。
+
+### module
+
+每个目录 / `.py` 文件都被视作一个模块。目录模块要添加内容，要写在目录下的 `__init__.py`。
+
+`import xxx` 在顶层找模块，`import ./xxx` 是在当前目录找模块，`../` 在上一层找。后两者都是相对引用。使用相对引用时，不能直接 `python xxx.py` 执行代码，需要 `python -m <root_module>.<submodule>` 当成模块执行。否则报 `ImportError: attempted relative import with no known parent package`。
+
+`import` 和 `from import` 都会导入整个模块，即使只用 `from import` 导入了一个函数。模块不能循环导入（不能在 A 中 import B，在 B 中 import A），即模块引用结构需要是 DAG。
 
 ### assert
 
@@ -213,7 +218,9 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 assert need_be_true(), "error message"
 ```
 
-assert 的 error message 不是 & 不能改红色，让我很不爽。
+assert 的 error message 不是 & 不能改红色，还会打堆栈，让我很不爽。
+
+实际上在使用测试时基本上用的都是测试框架自己的 assert，优势是可以打印值。用系统 assert 一般只是拿来防御性编程。
 
 ### 解耦
 
@@ -247,13 +254,15 @@ print(next(b))
 
 ## 语法糖
 
-### map
+### map & filter
 
 ```py
 a = [1, 2, 3]
-b = [i**2 for i in a]
-# b = [1, 4, 9]
+b = [i**2 for i in a if i <= 2]
+# b = [1, 4]
 ```
+
+当然也有正经的 `map()` & `filter()`，不过还要转回 `list`，还要嵌套一堆括号，看着确实丑。
 
 ### supress
 
@@ -343,10 +352,13 @@ run("ls", "-al", capture_output=True, text=True).stdout # 以字符串获取输�
 
 ```py
 from pathlib import Path
+Path(Path("123"))   # 碰到不清楚是 str 还是 Path 的路径，可以无脑转为 Path
 Path("xxx") / "asd" # 连接路径（理解为重载了 / 号）
 str(Path("xxx").absolute()) # 返回绝对路径字符串
-Path("a.py").read_text(s: str, encoding="utf-8")  # 读取，write_text 是写入
-Path("a.py").unlink()  # 删除
+Path("a.py").read_text(encoding="utf-8")  # 读取，write_text 是写入
+Path("a.db").read_bytes()   # 读取，write_bytes 是写入
+Path("a.py").unlink()  # 删除文件
+Path("a.py").rmdir()   # 删除文件夹
 # 也可以做到创建（touch），改权限（chown），链接（hardlink_to）等等，边用边搜。
 ```
 
@@ -377,6 +389,23 @@ with open("soup.test", "rb") as f:
 
 可以用 pickle 实现[一个简单的 cache](https://github.com/lxl66566/init-script/blob/py/mycache.py)。
 
+### urllib
+
+不要手动处理 url！！请使用 urllib，否则会出现一些[很荒谬的 bug](https://t.me/withabsolutex/1479)。
+
+### tempfile
+
+跨平台获取临时文件夹。用来测试文件操作比较好用。
+
+```py
+from tempfile import TemporaryDirectory
+with TemporaryDirectory() as tmp_dir:
+    tmp_dir = Path(tmp_dir)   # tmp_dir 是 str
+# 离开作用域自动销毁
+```
+
+pytest 有内置 tmp_dir。
+
 ## 常用外部包
 
 ### pandas
@@ -394,9 +423,11 @@ for name in file.sheet_names:
 
 ## 测试
 
+python 测试的最佳实践是将测试写在模块外的 `tests/` 里，但我并不喜欢。
+
 ### unittest
 
-我比较习惯 unittest，即将 test 函数与本身的定义写在一个文件里。因此可以直接使用最简单的 test 形式：
+我比较习惯单元测试，即将 test 函数与本身的定义写在一个文件里。因此可以直接使用最简单的 test 形式：
 
 ```py
 if __name__ == "__main__":
@@ -405,17 +436,21 @@ if __name__ == "__main__":
     test_xxx()
 ```
 
-当然，也可以用自带的 unittest 包装一下，可以获取测试时间等。unittest 基础使用非常简单，具体的可以看文档用例。
+当然，最好用自带的 unittest 包装一下，可以获取测试时间等。unittest 基础使用非常简单，具体的可以看文档用例。
+
+```sh
+python -m unittest ./**/*.py  # 测试当前文件夹下所有 unittest，类似 `pytest .`
+```
 
 但是 unittest 有个致命缺陷就是它支持 async function，但是不支持异步执行。。我非常无语。
 
 ### pytest
 
-这是一个复杂的测试框架。[tutorial](https://learning-pytest.readthedocs.io/zh/latest/doc/intro/getting-started.html)
+[tutorial](https://learning-pytest.readthedocs.io/zh/latest/doc/intro/getting-started.html)
+
+这是一个复杂的测试框架。显然其支持异步执行测试用例，还有其他方便的特性。
 
 - 测试某个函数：`pytest <relative_path>::<function_name>`
-
-感觉并不好用。
 
 ## GUI
 
@@ -637,7 +672,12 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
    参考[此文](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)。
 
    1. 写 `pyproject.toml`。
-      - poetry 还挺智能的，居然能够推断入口点。我没写 `packages=[{include="..."}]`，但是打包结果只包含了我想要的项。
+      - poetry 能够自动推断需要打包的模块。如果 `name` 与 _module name_ 不同，需要 `packages=[{include="..."}]`。
+      - 如果目标是一个 binary，需要添加入口点。
+        ```toml
+        [tool.poetry.scripts]
+        <bin name> = '<module>:<function>'
+        ```
    2. build & upload
       ```sh
       poetry config pypi-token.pypi <API token>
@@ -696,7 +736,7 @@ pip install --upgrade --force-reinstall pipx -i https://pypi.tuna.tsinghua.edu.c
 - pipx 安装甚至没有进度条。。这对于包管理器来说不是最基本的吗？？
   - 感觉应该归于 setuptools 的问题吧。
 - 实际上对于全局用 pip，虚拟环境开 poetry 的我来说，pipx 确实是一个没必要存在的东西
-  - 但是在 archlinux 上不允许全局使用 pip，除非 `--break-system-packages`。
+  - 但是在 linux 上不允许全局使用 pip，除非 `--break-system-packages`。所以 pipx 还是有用武之地的。
 
 ### 找不到 pip
 
