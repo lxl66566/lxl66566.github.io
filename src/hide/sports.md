@@ -75,9 +75,7 @@ const 半俯冲轰炸机 = 1.3,
 
 另诉：游泳会带来不幸。。比如我的[暂时性耳聋](./memories.md#大学-大一后暑假)，关节疼痛和脱皮。
 
-<div class="image50" style="text-align: center;">
-<img alt="游泳会带来不幸" src="/images/hide/sports/1.jpg"/>
-</div>
+<ZoomedImg alt="游泳会带来不幸" src="/images/hide/sports/1.jpg" scale="50%" />
 
 ## 关于跑步
 

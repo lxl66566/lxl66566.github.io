@@ -414,7 +414,7 @@ Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件
 
 但是到了 Qt6，情况就完全不一样了。。Qt6 的打包不管使用 `windeployqt` 或 `windeployqt6` 打包后，程序都无法运行。重装 SDK 后也是如此。首先，使用 `windeployqt` 会缺失 `Qt6Core.dll`, `Qt6Gui.dll`, `Qt6Widgets.dll` 这老三样。其次，手动复制这三样后，测试还会出现 bug：
 
-<div class="image50" style="text-align: center; "><img alt="bug" src="/images/coding/cpp/windeployqt_bug.png" /></div>
+<ZoomedImg alt="bug" src="/images/coding/cpp/windeployqt_bug.png" scale="50%" />
 
 解法是将 Qt SDK 目录下的 `plugins` 文件夹复制到打包的 exe 目录下[^1]。。
 [^1]: 我找出这个问题[真的不容易](../gossip/difficulties.md#20230507qt6-项目构建失败)，还差点错怪 xmake。。主要是 `Plugins` 并不在我的环境变量中，但却能够跑起来，迷惑了我的判断。这个报错也基本上得不到信息，网上也找不到解法。

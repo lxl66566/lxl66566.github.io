@@ -29,7 +29,7 @@ tag:
 
 需要努力克服。
 
-<div style="text-align: right;font-style: italic;">——20231026</div>
+<dated date="20231026"/>
 
 ## 如何看待大小城市中的人
 
@@ -43,7 +43,7 @@ tag:
 
 偏科的同学要么是天才，要么是明确知道自己的喜好并愿意为之付出多于常人的努力。在我看来，偏科的甚至比全能的更为优秀。（本观点不适用于全科天才或全科都非常喜欢的特例）
 
-<div style="text-align: right;font-style: italic;">——20230704</div>
+<dated date="20230704"/>
 
 ## 专业与学校如何抉择
 
@@ -55,7 +55,7 @@ tag:
 
 还有不要想着一些专业名字听着很接近，感觉差不多，就。。。
 
-<div style="text-align: right;font-style: italic;">——20230630</div> -->
+<dated date="20230630"/> -->
 
 ## 如何看待大学班级
 
@@ -69,19 +69,19 @@ tag:
 - 不民主的班级，作出集体决定时由班委讨论决定而不是公投。众所周知班委一般都是现充，他们作出的决定很大程度上会伤害到鼠鼠我。
 - 财务管理不透明，班费去向不明。
 
-<div style="text-align: right;font-style: italic;">——20230306</div>
+<dated date="20230306"/>
 
 ## 如何看待关于 reactions 的讨论
 
 如图，
 
-<div class="image40">
-<img alt="shortcut" src="/images/gossip/consider/1.jpg"/>
-</div>
+<ZoomedImg alt="shortcut" src="/images/gossip/consider/1.jpg" scale="40%" />
 
-观点：**自由派**。人们有表达自己观点的自由，频道不应该通过关闭部分 reactions 来限制这种自由。
+观点：**自由派**。人们有表达自己观点的自由，频道不应该通过关闭部分甚至是全部 reactions 来限制这种自由。
 
-<div style="text-align: right;font-style: italic;">——20230219</div>
+<dated date="20230219"/>
+
+反面教材：[为什么 archlinuxcn 没有 reactions](https://t.me/archlinuxcn_group/3063323)
 
 ## 如何看待猫这种生物
 
@@ -95,7 +95,7 @@ tag:
 
 因此我对猫没什么感情（不如养狗）。
 
-<div style="text-align: right;font-style: italic;">——20230205</div>
+<dated date="20230205"/>
 
 ## 如何看待三体动画/电视剧
 
@@ -105,7 +105,7 @@ tag:
 
 ~~而且我是幻想家，不需要视觉作品来为我构建画面。~~
 
-<div style="text-align: right;font-style: italic;">——20230117</div>
+<dated date="20230117"/>
 
 ## 如何看待制作反 AI 的 License
 
@@ -113,7 +113,7 @@ tag:
 
 就我最近几天使用 [ChatGPT](https://gpt.chatapi.art/) 来写代码的体验来说，AI 学习代码是件好事，应该大力支持。感觉这个 License 完全违背了开源精神。
 
-<div style="text-align: right;font-style: italic;">——20221212</div>
+<dated date="20221212"/>
 
 ## 如何看待竞技游戏匹配机制
 
@@ -123,7 +123,7 @@ tag:
 
 我对此只想给出两个字：**傻\***。更为恶心的是，（我的印象中）还没有游戏厂商或平台开源匹配算法。~~开源是最好的文明！OSU 牛逼！~~
 
-<div style="text-align: right;font-style: italic;">——20221016</div>
+<dated date="20221016"/>
 
 ## 如何看待 NovelAI 侵权
 
@@ -131,7 +131,7 @@ tag:
 
 生成的图片被拿去干什么，取决于人而不是工具；而新技术总是会伴随着旧利益既得者的利益丧失，我认为是值得的。
 
-<div style="text-align: right;font-style: italic;">——20221016</div>
+<dated date="20221016"/>
 
 ## 如何看待算法竞赛不使用最新语言特性
 
@@ -141,4 +141,4 @@ tag:
 
 作为高中时期参加 noip 和 csp-s 的 oier，在那些连 C++11 都不被允许的竞赛中，我只想说：**R N M**. 编程领域需要更新更有活力的东西注入，算法竞赛也不该拘泥于手搓轮子，而是思维的构建。网上多数 OJ 都能爆杀 NOIP，蓝桥杯，ACM 等比赛。（多数 OJ 支持多种语言的最新特性）
 
-<div style="text-align: right;font-style: italic;">——20221016</div>
+<dated date="20221016"/>

@@ -92,7 +92,7 @@ tag:
 |哥哥，早上起床之前都要抱紧我哦！<OrderBadge order=1 />|>11h|2021.02.14?-<br/>2023.09.25|2|8.2|9|
 |Summer Pockets Reflection Blue|49h45min|2023.06.22-<br/>2023.08.03|10|8.6|<span class="heimu" title="如果不崩溃的话">9.</span>5|
 |真愿朦幻馆〜在的洋馆里追寻明天的羔羊们〜|28h2min|2022.12.30-2023.06.20|5|7.1|8.4|
-|抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？<OrderBadge order=1 />|39h53min|2023.04.11-<br/>2023.06.12|8|5|<text style="color:red;">0</text>|
+|抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？<OrderBadge order=1 /><Badge text="nolinux" type="note" />|39h53min|2023.04.11-<br/>2023.06.12|8|5|<text style="color:red;">0</text>|
 |[ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか](https://t.me/erogamecloud/3647)|3h10min|2023.05.27|2.4|9.4|1|
 |NEKOPARA vol.4 ネコとパティシエのノエル<OrderBadge order=5 />|8h43min|2023.03.11-<br/>2023.05.10|2.5|9.7|0.4|
 |終のステラ|8h15min|2023.04.09-<br/>2023.04.22|9.2|8.3|9.1|
@@ -172,6 +172,7 @@ _（不排除早期缺漏）_
 <!-- prettier-ignore -->
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
+|拔作岛2|
 |枯れない世界と終わる花|2024.02.13|
 |無限煉姦～恥辱にまみれし不死姫の輪舞～|2024.01.24|
 |AliceInCradle|20231209|
@@ -297,6 +298,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
+|枯れない世界と終わる花|<text style="color:red;">语音音量个别设定没法调</text>|
 |天津罪|缩放后点击位置错位；自动黑屏；automode 在当前非语音句时会无视语音播放直接跳过|
 |提早绽放的黑百合|鼠标自动移动过慢，无法被取消；无永久存档|
 |無限煉姦～恥辱にまみれし不死姫の輪舞～|全屏画面不缩放；打断语音|
@@ -342,8 +344,8 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 
 - 一蓮（レン）托生（ショウ）　即答！
 - 汉化的吐槽 `数学是体育老师所教系列`，呃，我要吐槽这个吐槽
-- 语音音量设定太捞了吧。。某角色 30 音量 > 摩耶 100 音量。
-- 剧情体量较小，感情铺垫不足。
+- 语音音量设定没法调。。
+- 剧情体量较小，感情铺垫全靠回忆，是否有点不足？
 - 逻辑非常谜语，要玩家去猜。
 
 ### 天津罪
@@ -451,7 +453,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
   - 玩过重置后，感觉 02 确实不太行。。
 - 03 | [攻略](https://www.bilibili.com/read/readlist/rl309546/)
   - 唯一有配音的 03 可谓兰斯神中神，把 Hscene 提升到了不应有的高度...重制的画风也是上佳水准。
-  - <div class="image60"><img alt="您要不看看您在说什么" src="/images/hobbies/galgame/rance03.jpg" /></div>
+  - <ZoomedImg alt="您要不看看您在说什么" src="/images/hobbies/galgame/rance03.jpg" scale="60%" />
     您要不看看您在说什么（.jpg
   - RPG 不能随时存档，但是这部 CV 实在是太顶了！我的好多好听的语音存不了啊啊啊啊啊！哭
 - 04：没有修改器；操作比较麻烦；不玩。
@@ -499,8 +501,9 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 明显是在 gal 里实现妄想
 - 剧本中下，唯一一个悬疑要素没有下文了
 
-### 住在下体升级岛上的贫乳该如何是好？
+### 住在下体升级岛上的贫乳该如何是好？系列
 
+- 老问题了，不能在 linux wine 上运行。
 - 在荒诞中寻找现实。前面的剧情幽默生草，后续又能引发对现实的思考；我赞同其部分观念。人设塑造很好，几条线衔接得也不错，剧情一般。
 - 游玩顺序：片桐 奈々瀬 -> 渡会 ヒナミ -> 畔 美岬 -> 琴寄 文乃
 - ~~玩拔作岛，练习自如地控制/锤炼姬儿！（误~~
@@ -508,15 +511,11 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 第一次做[语音收藏](https://github.com/lxl66566/Web-Materials-Library/tree/main/galgame/抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？)，，
 - 草啊！
 
-<div class="image60" style="text-align: center;">
-<img alt="我的也死了啊！" src="/images/hobbies/galgame/nukidashi_2.jpg" />
-</div>
+<ZoomedImg alt="我的也死了啊！" src="/images/hobbies/galgame/nukidashi_2.jpg" scale="60%" />
 
 - 你不是数学挂科了吗喂（
 
-<div class="image60" style="text-align: center;">
-<img alt="数学鬼才" src="/images/hobbies/galgame/nukidashi_1.jpg" />
-</div>
+<ZoomedImg alt="数学鬼才" src="/images/hobbies/galgame/nukidashi_1.jpg" scale="60%" />
 
 ### 終のステラ
 

@@ -21,9 +21,7 @@ comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；�
 
 ::: details 查看 atri(QQ) 的信息
 
-<div style="text-align: center;" class="image40">
-<img alt="atri" src="/images/farraginous/atri/atri.jpg"/>
-</div>
+<ZoomedImg alt="atri" src="/images/farraginous/atri/atri.jpg" scale="40%" />
 
 她的功能：
 

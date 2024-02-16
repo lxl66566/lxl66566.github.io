@@ -15,9 +15,7 @@ tag:
 
 为了确定您的~~老涩批资质~~，这里设置了一个非常简单的小测验：根据以下图片，猜出**四位数字**，即为下列所有文章的密码。
 
-<!-- <div class="image60" style="text-align: center; "> -->
 <img alt="綾地 寧々" src="/images/hobbies/NSFW/nene.jpg" />
-<!-- </div> -->
 
 > 这是一个非常出名的梗，在 galgame 圈等各种 NSFW 圈内均属于经典放送级别。
 

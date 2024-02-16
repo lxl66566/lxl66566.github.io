@@ -715,6 +715,8 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
 ### 为什么不该使用 pipx
 
+::: details 历史事件
+
 在一次迁移 python 的过程后，我再次使用 pipx 及其安装的软件，报错 _python not found_（指向我原先的 python 位置）。
 
 我纳闷了，我直接 `python` 能用，也把所有环境变量全改成了新 python 的位置，检查了好几次，为啥还是不能用？
@@ -733,8 +735,11 @@ pip install --upgrade --force-reinstall pipx -i https://pypi.tuna.tsinghua.edu.c
 
 - 正常的包管理器，例如 _pacman_，卸载时会将配置存为 `*.pacsave`
 - 路径不用环境变量存，就已经够奇怪了，更别说还保留 python 的绝对路径。。明明 python 自己有环境变量。
-- pipx 安装甚至没有进度条。。这对于包管理器来说不是最基本的吗？？
-  - 感觉应该归于 setuptools 的问题吧。
+
+:::
+
+- pipx 安装甚至没有进度条。虽然说责任在 setuptools。
+- pipx 只会为当前用户安装，而不是全局。
 - 实际上对于全局用 pip，虚拟环境开 poetry 的我来说，pipx 确实是一个没必要存在的东西
   - 但是在 linux 上不允许全局使用 pip，除非 `--break-system-packages`。所以 pipx 还是有用武之地的。
 

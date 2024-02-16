@@ -17,9 +17,7 @@ tag:
 本人不承担因使用以下推荐所带来的任何后果。
 :::
 
-<div class="image60" style="text-align: center; ">
-<img alt="meme" src="/images/articles/vpn/meme.png" />
-</div>
+<ZoomedImg alt="meme" src="/images/articles/vpn/meme.png" scale="60%" />
 
 ## 免费 VPN
 

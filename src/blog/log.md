@@ -22,6 +22,20 @@ category:
 
 ## 2024
 
+### 20240216
+
+- 新增组件 `ZoomedImg`, `dated`。替换正则：
+  ```
+  <div\s?class="image(\d+)"\s*style="text-align: center;\s*"\s*>\n?<img alt="(.*?)" src="(.*?)"\s?/\s?>\n?</div>
+  <ZoomedImg alt="$2" src="$3" scale="$1%" />
+  ---------------------
+  <div\s?class="image(\d+)"\s*style="text-align: center;\s*"\s*>\n?<img alt=".*?" src="(.*?)"\s?/\s?>\n?<div>\n?(.*?)\n?</div>\n?</div>
+  <ZoomedImg alt="$3" src="$2" scale="$1%" />
+  ---------------------
+  <div style="text-align: right;font-style: italic;">——(\d+)</div>
+  <dated date="$1"/>
+  ```
+
 ### 20240124
 
 - 新增组件 `ExhibitionTable` 与 `GalExhibitionTable`
@@ -51,7 +65,7 @@ category:
 
 ### 20231122
 
-- 新增组件：OrderBadge。替换正则表达式：
+- 新增组件：`OrderBadge`。替换正则表达式：
   ```
   \s?<Badge (type=".*" )?text="(\d)"\s?/>
   <OrderBadge order=$2 />

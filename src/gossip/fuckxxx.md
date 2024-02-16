@@ -208,12 +208,7 @@ ColorOS 是目前一加的默认系统。
 1. 剪贴板用 [Ditto](https://github.com/sabrogden/Ditto)
 2. 取色用 [ColorPicker](https://github.com/martinchrzan/ColorPicker) 随用随开
 
-<div class="image60" style="text-align: center; ">
-<img alt="utools vs noutools" src="/images/gossip/fuckxxx/fuckutools.png" />
-<div>
-utools vs diy my tools
-</div>
-</div>
+<ZoomedImg alt="utools vs diy my tools" src="/images/gossip/fuckxxx/fuckutools.png" scale="60%" />
 
 ## 批判微软
 
@@ -272,3 +267,10 @@ utools vs diy my tools
   - 限制十个宽字符，但是不提前声明。改完以后发现名字被截断了。
   - 然后想将错误名字改回来，提示 _不允许过于频繁地更改个人资料名称。请过几分钟后再试。_
   - 然后过了几个小时也无法改名。上网一搜发现大家说要几天。。
+
+## ubuntu 有多难用
+
+我本人入坑 linux 是直接 archlinux 的，但是朋友用的 ubuntu，而我经常要帮他解决问题（）
+
+- 首先喷 ubuntu 的 90% 都是喷 snap。确实，当我想要 btrfs defrag 时，看到一堆 readonly 的分区真是血压高。
+- 然后 ubuntu 的默认 shell 是 dash。。不支持 source 命令。

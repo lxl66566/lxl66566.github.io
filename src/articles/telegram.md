@@ -25,7 +25,8 @@ telegram 也有一些我认为的缺点，见[telegram 有多难用](../gossip/f
 
 ## 基础教程
 
-- 简体中文包：`tg://setlanguage?lang=classic-zh-cn`（复制，发送给任意用户，点击；PC 用户可直接在浏览器内打开
+- 简体中文包：`https://t.me/setlanguage/classic-zh-cn` 或者 `tg://setlanguage?lang=classic-zh-cn`
+  - （复制，发送给任意用户，点击；或直接在浏览器内打开
 
 :::danger 特别注意
 若您使用 +86 号码注册，请点击 _设置-隐私与安全-手机号码-谁可以通过我的手机号找到我_ ，将其改为*我的联系人* 。<br/>请务必保护好你和他人的隐私。

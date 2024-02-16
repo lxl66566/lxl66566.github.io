@@ -352,7 +352,7 @@ _（[此处附上证明](https://wwp.lanzout.com/iL6o8076zi2j)）_
 
 《别闹了，费曼先生》是一本很有意思的书，即使 Richard Feynman 是一个大物理学家，但这本书以幽默风趣的文风讲述了他的生活经历以及世界态度。20230802 读完了这本书后<span class="heimu" title="你知道的太多了">（事实上是读了 97%）</span>，我出去麦当劳喝个免费雪碧透透风，看到路边洒水车在漏水，我也想到了不同深度下的水压强与流速关系，可惜没有足够学问支持，我无法把它算下去。于是我知道了天才的出现条件是严苛的——不仅需要好奇和自动力，还需要不断学习积累。只有灵感是不够的。<span class="heimu" title="你知道的太多了">然后在路上看了两个一般的女孩，搬了箱预定的 14.4kg 盐汽水回家。汽水惊讶到我了：凭借其好喝的口感和不值运费的价格。</span>
 
-<!-- * <div class="image40" style="text-align: center;"><img alt="开始界面" src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f8376fe99e6c4bfa82dd01551c98bbfd~tplv-obj:1080:1925.image?from=post&x-expires=1682524800&x-signature=CjGGz8%2FoXM9JQaDlbTF%2BpRtHXWA%3D" /></div> -->
+<!-- * <ZoomedImg alt="开始界面" src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f8376fe99e6c4bfa82dd01551c98bbfd~tplv-obj:1080:1925.image?from=post&x-expires=1682524800&x-signature=CjGGz8%2FoXM9JQaDlbTF%2BpRtHXWA%3D" scale="40%" /> -->
 
 ## external
 

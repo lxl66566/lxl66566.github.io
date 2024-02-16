@@ -156,51 +156,16 @@ tag:
   - ~~黑客论：有牛逼的学生黑进了系统，将自己的卡变为 free 卡，插哪哪 free，但会撤销上一次的改变~~
 - 哈啰路障，不动如山。
 
-<div class="image60" style="text-align: center; ">
-<img alt="meme1" src="/images/farraginous/college/meme1.jpg" />
-<div>
-难绷
-</div>
-</div>
-<div class="image50" style="text-align: center; ">
-<img alt="fun1" src="/images/farraginous/college/fun1.jpg" />
-<div>
-大风起兮云飞扬，单车与草兮倒四方
-</div>
-</div>
-<div class="image50" style="text-align: center; ">
-<img alt="fun2" src="/images/farraginous/college/fun2.jpg" />
-<div>
-没空，忙着给树叶尖儿上色
-</div>
-</div>
-<div class="image50" style="text-align: center; ">
-<img alt="fun3" src="/images/farraginous/college/fun3.jpg" />
-<div>
-滥 车 充 数
-</div>
-</div>
-<div class="image50" style="text-align: center; ">
-<img alt="fun4" src="/images/farraginous/college/fun4.jpg" />
-<div>
-野生熊猫吃人事件
-</div>
-</div>
-<div class="image50" style="text-align: center; ">
-<img alt="fun5" src="/images/farraginous/college/fun5.jpg" />
-<div>
-食堂顶上的猫
-</div>
-</div>
+<ZoomedImg alt="难绷" src="/images/farraginous/college/meme1.jpg" scale="60%" />
+<ZoomedImg alt="大风起兮云飞扬，单车与草兮倒四方" src="/images/farraginous/college/fun1.jpg" scale="50%" />
+<ZoomedImg alt="没空，忙着给树叶尖儿上色" src="/images/farraginous/college/fun2.jpg" scale="50%" />
+<ZoomedImg alt="滥 车 充 数" src="/images/farraginous/college/fun3.jpg" scale="50%" />
+<ZoomedImg alt="野生熊猫吃人事件" src="/images/farraginous/college/fun4.jpg" scale="50%" />
+<ZoomedImg alt="食堂顶上的猫" src="/images/farraginous/college/fun5.jpg" scale="50%" />
 
 ## 校内迷惑行为大赏
 
-<div class="image50" style="text-align: center; ">
-<img alt="61" src="/images/farraginous/college/61.png" />
-<div>
-众所周知饮水机的重量大约是 1.5kg ...
-</div>
-</div>
+<ZoomedImg alt="众所周知饮水机的重量大约是 1.5kg ..." src="/images/farraginous/college/61.png" scale="50%" />
 
 ## 校内极限生存
 
