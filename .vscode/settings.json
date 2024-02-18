@@ -17,5 +17,7 @@
   "Codegeex.DisabledFor": {
     "markdown": "true"
   },
-  "autocorrect.enable": false
+  "autocorrect.enable": false,
+  "cSpell.language": "en-US",
+  "cSpell.enableFiletypes": ["bat", "ini", "lua"]
 }

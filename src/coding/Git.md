@@ -35,7 +35,9 @@ _Git is a free and open source distributed version control system designed to ha
 
 使用 [scoop](../farraginous/recommend_packages.md#scoop) 可以一行搞定：`scoop install git`。
 
-建议手动在 _windows 设置 - 应用 - 默认应用_ 中为 `.sh` 文件添加默认打开方式，添加为 `...\scoop\apps\git\current\git-bash.exe`（填写实际路径）。否则无法直接双击 `*.sh` 文件直接运行。
+注意安装完的提示，可以直接一行命令添加 `*.sh` 的键绑定。
+
+~~在 _windows 设置 - 应用 - 默认应用_ 中为 `.sh` 文件添加默认打开方式，添加为 `...\scoop\apps\git\current\git-bash.exe`（填写实际路径）。否则无法直接双击 `*.sh` 文件直接运行。~~ 现已无需手动添加。
 
 @tab git for windows
 

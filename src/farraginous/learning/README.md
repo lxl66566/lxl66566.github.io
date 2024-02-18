@@ -37,3 +37,4 @@ category:
 ## external
 
 1. [英语自学](https://bewaters.me/limxtop/2021/08/18/English-introduction/)
+2. [采样说](https://t.me/moeyukiquq/98)

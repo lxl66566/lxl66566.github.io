@@ -336,6 +336,10 @@ lto = true
 panic = "abort"
 ```
 
+## 发布
+
+如果只是想要用 Github CI 自动出 binary 放到 release，那么[这个 Action](https://github.com/marketplace/actions/build-and-upload-rust-binary-to-github-releases)专注于这一任务，非常好用。
+
 ## 测试
 
 assert 有 `assert!()` 和 `debug_assert!()` 之分，感觉对于应用开发，使用 `debug_assert!()` 会更妥当一些。

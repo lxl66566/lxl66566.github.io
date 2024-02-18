@@ -149,10 +149,11 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 ### [scoop](https://scoop.sh/)
 
 ::: right
-——scoop 比起 linux 上的包管理器还差的远呢，充其量只能叫做**安装器**[^6]。
+——scoop 比起 linux 上的包管理器还差的远呢[^6][^7]。
 :::
 
-[^6]: scoop 的宗旨是每个软件都携带其所有运行时依赖([ref](https://github.com/ScoopInstaller/Scoop/wiki/Dependencies))。这样的做法在 windows 上极为普遍，然而（我个人）对包管理器的**最基本要求**就是**依赖解析**。
+[^6]: scoop 的宗旨是每个软件都携带其所有运行库([ref](https://github.com/ScoopInstaller/Scoop/wiki/Dependencies))。这样的做法在 windows 上极为普遍，然而包管理器的基本要求就是减少重复依赖。
+[^7]: 我提的[恶性 bug](https://github.com/ScoopInstaller/Scoop/issues/5808)
 
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
 

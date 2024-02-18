@@ -56,10 +56,9 @@ tag:
 - [ ] windows volume locker
 - [ ] wd: info words online in cli, written in rust
   - [ ] if not english, test other languages
-- [ ] ecust-survival, (with vuepress)
+- [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
 - [ ] galgame engine
-- [ ] bin package manager（release installer）
-  - depends on _lastversion_
+- [x] [bin package manager（release installer）](https://github.com/lxl66566/bpm)
 - [ ] 音频振幅对齐
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 - [ ] osu beatmap downloader, support stable and lazer
@@ -69,6 +68,11 @@ tag:
   - 暂停与继续
   - 降噪
   - [ ] 智能限幅
+- [x] [urldecoder](https://github.com/lxl66566/urldecoder)
+
+### RIIR
+
+- [ ] scoop
 
 ### Android
 
