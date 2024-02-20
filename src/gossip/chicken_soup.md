@@ -16,3 +16,4 @@ tag:
 3. [我的人生七年（一）](https://hurricane618.me/2022/11/27/seven-years-of-my-life1/)
 4. [roadmap.sh](https://roadmap.sh)
 5. [隐入尘烟](https://www.youtube.com/watch?v=Ezgc9GGVUQk)
+6. [东京大学情报理工创造情报学（2021）夏入合格经验分享](https://zhuanlan.zhihu.com/p/407941658)

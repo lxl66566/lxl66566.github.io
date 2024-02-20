@@ -138,6 +138,14 @@ const data = [
   { id: "470633", aScore: 7.9, bScore: 9.7, info: "うちには幽霊さんがいます #合集", bak: "https://telegra.ph/甘露アメ-うちには幽霊さんがいます-中国翻訳-DL版-02-02" },
   { id: "451464", aScore: 3.5, bScore: 7.3, info: "#loli" },
   { id: "139128", aScore: 7.4, bScore: 9.7, info: "#兄妹 #3P" },
+  { id: "497045", aScore: 7.5, bScore: 4.2, info: "#碧蓝航线 #3P" },
+  { id: "433992", aScore: 9, bScore: 8.2, order: 2, info: "堕天計画", bak: "https://telegra.ph/234ド-イチリ-堕天計画2生意気天使をわからせて堕とす-中国翻訳-DL版-08-02" },
+  { id: "478380", aScore: 9, bScore: 7.5, order: 1, info: "堕天計画" },
+  { id: "472554", aScore: 9, bScore: 7.3, order: 3, info: "堕天計画" },
+  { id: "434338", aScore: 3.8, bScore: 8.5, info: "#合集", bak: "https://telegra.ph/フェチズムポケット-よろず-メスガキをわからせる本-中国翻訳-DL版-08-02" },
+  { id: "434923", aScore: 5.2, bScore: 8, info: "落ち葉日記", bak: "https://telegra.ph/灯色の研究室-灯問-落ち葉日記--夏芽苗編2--中国翻訳-DL版-ページ欠落-08-02" },
+  { id: "435029", aScore: 5, bScore: 8.6, info: "#蔚蓝档案 #全彩 #运动会", bak: "https://telegra.ph/山含運動會新刊-ブルーアーカイブ-08-02" },
+  { id: "436618", aScore: 6.7, bScore: 2, info: "#fate #兄妹", bak: "https://telegra.ph/こいんとす-杏飴-もっとイリヤとおうちでえっちしたい-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-08-02-2" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
