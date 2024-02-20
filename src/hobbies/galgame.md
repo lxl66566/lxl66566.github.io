@@ -60,7 +60,7 @@ tag:
 
   相比之下 vnr 依赖百度贴吧，资源 BT 失效，大多使用城通网盘，真让人火大。而小牛云平台免费额度给的也足够了。
 
-<!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame%EF%BC%88%E4%BC%9A%E7%A4%BE%EF%BC%89/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
+<!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame（会社）/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
 
 ## 我已玩完
 

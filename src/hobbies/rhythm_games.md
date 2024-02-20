@@ -76,7 +76,7 @@ tag:
 
 [OSU](../hobbies/rhythm_games.md#osu) 是一款开源游戏，但是实际上其运营依旧是盈利性质的。尤其现在 OSU (stable) 的开发极为保守，与开源精神相背甚远。lazer 无法与 stable 进行联机，种种不便也导致 stable 玩家不愿迁移至更新更好（maybe）的 lazer。
 
-- 令人难过的是，osu 并不支持任何低延迟音效组件(coreaudio/wasapi/asio)。[source](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md#42-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95)
+- 令人难过的是，osu 并不支持任何低延迟音效组件(coreaudio/wasapi/asio)。[source](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md#42-解决办法)
   - 在延迟高的情况下，如果提供两个
 - OSU 分为几个游戏板块，但是在 mania 板块却不再细分。而不同 key 数的 mania 基本相当于两个游戏。以下问题的根源其实都是官方的这种态度：
   - OSU API 无法查询 mania 歌曲的 key 数信息，因此目前我使用过的谱面下载器均无法选择特定 key 数下载。

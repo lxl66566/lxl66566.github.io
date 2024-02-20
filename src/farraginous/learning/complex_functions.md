@@ -41,7 +41,7 @@ Harmonic function: <span v-pre>$\displaystyle u(x,y) \ is \ harmonic \Leftrighta
 
 <span v-pre>$\displaystyle \int_{-\infty}^{+\infty}\frac{P(z)}{Q(z)}e^{i\alpha z}dz = 2\pi i\sum Res[\frac{P(z)}{Q(z)}e^{i\alpha z},z_k] \ \ \ \Leftarrow \ \ z_k$</span> 为上半平面奇点，Q(z) 比 P(z) 高至少一次，P(x),Q(x) 为有理函数
 
-### [儒歇定理](https://zh.m.wikipedia.org/zh/%E5%84%92%E6%AD%87%E5%AE%9A%E7%90%86)
+### [儒歇定理](https://zh.m.wikipedia.org/zh/儒歇定理)
 ## Fourier transform
 Fourier transform: <span v-pre>$\displaystyle F(\omega)=\mathscr{F}(f(t))=\int_{-\infty}^{+\infty}f(t)e^{-i\omega t}dt$</span>
 

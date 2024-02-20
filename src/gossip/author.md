@@ -91,7 +91,7 @@ category:
 
 ## 社交
 
-telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-%40ab5__x-blue?style=flat-square&logo=telegram" /></a>
+telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src="https://img.shields.io/badge/Telegram-@ab5__x-blue?style=flat-square&logo=telegram" /></a>
 
 [^2]: [什么是 telegram？](../articles/telegram.md)
 

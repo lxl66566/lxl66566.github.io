@@ -129,7 +129,7 @@ Ampère's circuital law: <span v-pre>$\displaystyle \oint_{L}\vec{B}\cdot d\vec{
 ### 偏振
 偏振片光强变化：<span v-pre>$\displaystyle I=I_0cos^2\theta$</span> ；自然光通过，光强减半。
 
-[Brewster's angle](https://zh.m.wikipedia.org/zh-cn/%E5%B8%83%E5%84%92%E6%96%AF%E7%89%B9%E8%A7%92): <span v-pre>$\displaystyle \theta_B=arctan(\frac{n_2}{n_1})$</span>
+[Brewster's angle](https://zh.m.wikipedia.org/zh-cn/布儒斯特角): <span v-pre>$\displaystyle \theta_B=arctan(\frac{n_2}{n_1})$</span>
 ## 狭义相对论
 ### 洛伦兹变换
 坐标系 K' 沿 Ox 方向以速度 u 匀速运动，则：β=u/c, y'=y, z'=z,

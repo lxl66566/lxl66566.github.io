@@ -38,7 +38,7 @@ Markdown 是被广泛使用的轻量级标记语言。
 ---
 
 代码块[^1]：（部分渲染器有语法高亮功能，可以在头部的 \`\`\` 后加上语言。）
-[^1]: 本博客的代码块功能颇多，详见[此处](https://theme-hope.vuejs.press/zh/cookbook/vuepress/markdown.html#%E4%BB%A3%E7%A0%81%E5%9D%97)
+[^1]: 本博客的代码块功能颇多，详见[此处](https://theme-hope.vuejs.press/zh/cookbook/vuepress/markdown.html#代码块)
 
 \```python<br/>
 print("123")<br/>

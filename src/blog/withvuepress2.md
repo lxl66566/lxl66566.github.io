@@ -167,9 +167,9 @@ export default defineUserConfig({
 
 <text style="color:red;font-weight:bold">未解决！</text>
 
-起因：不想全局添加 css。[官方说明](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E9%A1%B5%E9%9D%A2%E7%B1%BB)已尝试，无效。（该文档为 v1 文档，不适用于 v2）
+起因：不想全局添加 css。[官方说明](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#自定义页面类)已尝试，无效。（该文档为 v1 文档，不适用于 v2）
 
-最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-%E6%96%87%E4%BB%B6)中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。~~扩展名与文件无关！~~
+最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-文件)中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。~~扩展名与文件无关！~~
 
 ~~其实加的 css 也就这么几行，全局不全局的无所谓了~~
 
@@ -249,7 +249,7 @@ sidebar:{
 
 vuepress1 的配置有一点不一样。
 
-v1.x sidebar 工作机制为：**从上到下寻找该页面匹配的绝对路径前缀，若匹配则使用该 sidebar 对象**。这使我需要把多级 sidebar 放在前而根目录放在最后。还好[v1.x 文档对此有警告](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html#%E5%A4%9A%E4%B8%AA%E4%BE%A7%E8%BE%B9%E6%A0%8F)。
+v1.x sidebar 工作机制为：**从上到下寻找该页面匹配的绝对路径前缀，若匹配则使用该 sidebar 对象**。这使我需要把多级 sidebar 放在前而根目录放在最后。还好[v1.x 文档对此有警告](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html#多个侧边栏)。
 
 团队使用的[vuepress-theme-hope](https://vuepress-theme-hope.github.io/v1/zh/)主题中，sidebar 对象有以下字段：
 
@@ -355,7 +355,7 @@ head: [
 
 <text style="color:red;font-weight:bold">未解决！</text>
 
-使用此方法添加的 pangu.min.js 在 head 中被注入，存在加载次序问题，在浏览器上无法正常运行。我尝试使用 [`enhanceApp.js`](https://vuepress.vuejs.org/zh/guide/basic-config.html#%E5%BA%94%E7%94%A8%E7%BA%A7%E5%88%AB%E7%9A%84%E9%85%8D%E7%BD%AE) 将其添加到文档末尾解决这个问题：
+使用此方法添加的 pangu.min.js 在 head 中被注入，存在加载次序问题，在浏览器上无法正常运行。我尝试使用 [`enhanceApp.js`](https://vuepress.vuejs.org/zh/guide/basic-config.html#应用级别的配置) 将其添加到文档末尾解决这个问题：
 
 `.vuepress/enhanceApp.js`:
 
@@ -573,7 +573,7 @@ function sidebar() {
 <img src="image.jpg" onerror="this.src='other link'" />
 ```
 
-而 markdown 内的图片格式可以用[markdown enhancement: attr](https://theme-hope.vuejs.press/zh/guide/markdown/attrs.html#%E4%BD%BF%E7%94%A8)添加 attr。然后踩了坑：
+而 markdown 内的图片格式可以用[markdown enhancement: attr](https://theme-hope.vuejs.press/zh/guide/markdown/attrs.html#使用)添加 attr。然后踩了坑：
 
 1. 首先大括号 `{}` 需要紧跟在图片的 `)` 后，不能有空格。。（然而官网示例是给的空格）
 2. 其次，添加的 attr 不允许出现大写字母。。。（这确实是标准，但是一般浏览器遇到大写会自动纠正 ([ref](https://stackoverflow.com/questions/25033268/are-html5-data-attributes-case-insensitive))）

@@ -296,7 +296,7 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 - 全局锁死热键，可以在扩展窗口点类似 _关机_ 的按键临时关闭。
 - 建议开启 _幽灵模式_，强制加速例如学习通的视频。
 
-[官方项目地址](https://github.com/polywock/globalSpeed) | [edge 商店](https://microsoftedge.microsoft.com/addons/detail/global-speed-%E8%A7%86%E9%A2%91%E9%80%9F%E5%BA%A6%E6%8E%A7%E5%88%B6/mjhlabbcmjflkpjknnicihkfnmbdfced) | [私链](https://wwp.lanzout.com/i9LKF05ht3ni)
+[官方项目地址](https://github.com/polywock/globalSpeed) | [edge 商店](https://microsoftedge.microsoft.com/addons/detail/global-speed-视频速度控制/mjhlabbcmjflkpjknnicihkfnmbdfced) | [私链](https://wwp.lanzout.com/i9LKF05ht3ni)
 
 ### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
 
@@ -438,7 +438,7 @@ use [xdm](#xdm) instead.
 
 [官网](https://www.internetdownloadmanager.com/) | [破解](https://www.lanzouw.com/iYFgSw4lede)
 
-### [秒传链接提取](https://greasyfork.org/zh-CN/scripts/424574-%E7%A7%92%E4%BC%A0%E9%93%BE%E6%8E%A5%E6%8F%90%E5%8F%96)
+### [秒传链接提取](https://greasyfork.org/zh-CN/scripts/424574-秒传链接提取)
 
 秒传链接，百度网盘分享的一种优秀模式。
 
