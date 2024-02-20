@@ -97,7 +97,7 @@ root 以后，安装了个 [_神仙自动救砖_](./module_and_app.md#magisk) �
    3. `pm unsuspend com.google.android.providers.media.module`
    4. 三步开启权限后，退出 shell，重启，静·候·佳·音。
 
-然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装，前面全部白折腾。刚好我对 EU 挺失望的，想直接装回原国行系统，甚至还[失败了](#mipad-5)。
+然后就卡开机界面了。。这下没办法了，adb 已经寄了，只能重装，前面全部白折腾。刚好我对 EU 挺失望的，想直接装回原国行系统，甚至还[失败了](./root_and_setting.md#mipad-5)。
 
 这个故事告诉我：**root 后记得先刷救砖模块。**
 

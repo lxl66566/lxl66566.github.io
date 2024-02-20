@@ -38,7 +38,8 @@ ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手�
    :::
 
 3. 执行 `adb devices`，`List of devices attached` 下方有设备即为连接成功：
-   ```
+
+   ```text
    List of devices attached
    ****************        device
    ```

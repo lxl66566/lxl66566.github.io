@@ -28,7 +28,7 @@ Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台
 - 如果直接使用 `pnpm i` 安装依赖后运行报错（而在 npm/yarn 上表现良好），请使用 `pnpm i --shamefully-hoist` 安装依赖！[^1]
 - `npm init ...` == `pnpm create ...`
 
-[^1]: 感谢 Asuka Minato 解答
+[^1]: 感谢 Asuka Minato 解答；大概是有依赖不支持 pnpm 的目录模式。
 
 ### npm
 
@@ -48,6 +48,7 @@ npm uninstall <package_name> [option] # 卸载包及其依赖
 
 - 如果需要重装所有 `node_modules`，可在 bash 中：`rm -rf node_modules && npm cache clear --force`
 - 更新依赖([ref](https://juejin.cn/post/6844903827599015944))：
+
   ```sh
   npm i -g npm-check
   npm-check -u
@@ -125,13 +126,11 @@ nodejs 出错的报错基本上是没用的，因为一般出现玄学问题是�
 1. pnpm 安装 [koishi](./bot.md) 依赖的问题，dev 的时候遇到神秘报错，而使用 npm 安装却不会报错。需要使用 `--shamefully-hoist` 生成与 npm 一样的扁平化目录。
 2. [vuepress1 文档构建失败](https://github.com/DIYgod/RSSHub/issues/13007)：webpack 与 nodejs 之间的碰撞！我甚至想到了降级 nodejs 到 LTS，但没想到的是连 LTS v18 也不行，得降到 v17......
 
-[^1]: 大概是有依赖不支持 pnpm 的目录模式。
-
 ### 安装 sharp
 
 我想使用 sharp 作为图像处理库。而直接 `npm i sharp` 会报错：
 
-```
+```text
 npm ERR! code 1
 npm ERR! path D:\program\koishi-app\node_modules\sharp
 npm ERR! command failed
@@ -149,11 +148,14 @@ npm ERR! sharp: Installation error: Request timed out
    > Something went wrong installing the "sharp" module<br/>
    > Cannot find module '../build/Release/sharp-win32-x64.node'
 3. 尝试执行([ref](https://sharp.pixelplumbing.com/install#chinese-mirror))：
+
    ```shell
    npm config set sharp_binary_host "https://npmmirror.com/mirrors/sharp"
    npm config set sharp_libvips_binary_host "https://npmmirror.com/mirrors/sharp-libvips"
    ```
+
    报错
+
    > npm ERR! code ENOWORKSPACES<br/>
    > npm ERR! This command does not support workspaces.
 

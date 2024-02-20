@@ -52,66 +52,58 @@ pnpm i -g electron
 以 settingswidget 为例：
 
 1. settingswidget.ui
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
- <class>settingswidget</class>
- <widget class="QWidget" name="settingswidget">
-...
-```
-
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <ui version="4.0">
+   <class>settingswidget</class>
+   <widget class="QWidget" name="settingswidget">
+   ...
+   ```
 2. ui_settingswidget.h
-
-```cpp
-...
-namespace Ui {
-    class settingswidget: public Ui_settingswidget {};
-} // namespace Ui
-...
-```
-
+   ```cpp
+   ...
+   namespace Ui {
+       class settingswidget: public Ui_settingswidget {};
+   } // namespace Ui
+   ...
+   ```
 3. settingswidget.h
-
-```cpp
-namespace Ui
-{
-    class settingswidget;
-}
-class settingswidget : public QWidget
-{
-    ...
-    Ui::settingswidget *ui;
-    ...
-}
-```
-
+   ```cpp
+   namespace Ui
+   {
+       class settingswidget;
+   }
+   class settingswidget : public QWidget
+   {
+       ...
+       Ui::settingswidget *ui;
+       ...
+   }
+   ```
 4. settingswidget.cpp
-
-```cpp
-#include "settingswidget.h"
-#include "ui/ui_settingswidget.h"
-settingswidget::settingswidget(QWidget *parent) : QWidget(parent), ui(new Ui::settingswidget)
-{                                                                      // ^...不允许使用不完整的类型C/C++(70): namespace Ui
-    ui->setupUi(this);                                                 // invalid use of incomplete type 'class Ui::...'
-    ...
-}
-```
-
+   ```cpp
+   #include "settingswidget.h"
+   #include "ui/ui_settingswidget.h"
+   settingswidget::settingswidget(QWidget *parent) : QWidget(parent), ui(new Ui::settingswidget)
+   {                                                                      // ^...不允许使用不完整的类型C/C++(70): namespace Ui
+       ui->setupUi(this);                                                 // invalid use of incomplete type 'class Ui::...'
+       ...
+   }
+   ```
 5. CMakeLists.txt
-
-```
-...
-file(GLOB UI "${PROJECT_SOURCES}/ui/ui_(.*).h")
-set(PROJECT_SOURCES
-        ...h
-        ...cpp
-        ${UI}
-)
-...
-```
+   ```
+   ...
+   file(GLOB UI "${PROJECT_SOURCES}/ui/ui_(.*).h")
+   set(PROJECT_SOURCES
+           ...h
+           ...cpp
+           ${UI}
+   )
+   ...
+   ```
 
 :::
+
 现在想来，错误可能是没有生成 `compile_commands.json`，clangd 读不到导致的。
 
 ### xmake

@@ -106,6 +106,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 2. 搜了一阵，`uname -a` 显示我内核是 6.5.5，而回退到的时间点正在用内核 6.5.3，猜测是内核版本冲突。
 3. 去 archlinuxcn 群里问，果真，然后都在说是 timeshift 的锅。（本群又一个 timeshift 受害者）去 luoxu 找历史记录，出现回答 “_timeshift 不兼容 genfstab，生成出來的子卷掛載帶 subvolid= 參數的情況_” ([ref](https://t.me/archlinuxcn_group/2927677))
 4. 照着 13 天前另一个人的一模一样的问题走了一遍老路。具体的，进入 archiso 安装盘：
+
    ```sh
    # 挂载子卷 / 和 /boot（nvmexnxpx 填写实际驱动器号）
    mount -t btrfs -o subvol=/@,compress=zstd /dev/nvmexnxpx /mnt
@@ -161,7 +162,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 
 使用 `yay` 安装 `wine-stable` 时出现了一些问题。
 
-```
+```text
 -> 无法安装以下软件包, 需要手动介入处理:
 lib32-http-parser - exit status 4
 lib32-libheif - exit status 8
@@ -284,12 +285,15 @@ ps. 实际上 linux 下不明所以的 warning, error 好多的（详见 `journa
 
 1. 尝试执行 `pacman-key --refresh-keys`，但是效率感人
 2. [据此所述](https://www.reddit.com/r/archlinux/comments/sorhb1/how_long_does_a_pacmankey_refreshkeys_take/)：
+
    ```sh
    sudo mv /etc/pacman.d/gnupg{,.bak}
    sudo pacman-key --init
    sudo pacman-key --populate archlinux
    ```
+
    然而没什么软用，还是报相同错误
+
 3. 更新 `archlinux-keyring` 本身：`sudo pacman -Sy archlinux-keyring`，问题解决
 
 :::: tip

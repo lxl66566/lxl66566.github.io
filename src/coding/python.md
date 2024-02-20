@@ -159,24 +159,24 @@ conda list  # 查看环境内工具包
 
 #### 创建纯净环境
 
-我们使用[上述指令](#创建环境)创建环境后：
+我们使用[上述指令](#基本命令)创建环境后：
 
-<img alt="anaconda_list" src="/images/coding/python/anaconda_1.png"  width="65%" height="65%"/>
+<ZoomedImg alt="anaconda_list" src="/images/coding/python/anaconda_1.png" scale="65%" />
 
 可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
 
 这里给出一个解决方法：
 
-1. 在任意目录下新建 txt 文档，输入
+1. 在任意目录下新建 txt 文档，输
 
-```batch
-@EXPLICIT
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/python-3.9.7-h6244533_1.tar.bz2
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/pip-21.2.4-py39haa95532_0.tar.bz2
-https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4-py39haa95532_0.tar.bz2
-```
+   ```batch
+   @EXPLICIT
+   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/python-3.9.7-h6244533_1.tar.bz2
+   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/pip-21.2.4-py39haa95532_0.tar.bz2
+   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4-py39haa95532_0.tar.bz2
+   ```
 
-并保存为`env.txt`（名字不重要）
+   并保存为`env.txt`（名字不重要）
 
 2. 该目录下执行`conda create --name <name> --file env.txt`
 
@@ -209,6 +209,10 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4
 `import xxx` 在顶层找模块，`import ./xxx` 是在当前目录找模块，`../` 在上一层找。后两者都是相对引用。使用相对引用时，不能直接 `python xxx.py` 执行代码，需要 `python -m <root_module>.<submodule>` 当成模块执行。否则报 `ImportError: attempted relative import with no known parent package`。
 
 `import` 和 `from import` 都会导入整个模块，即使只用 `from import` 导入了一个函数。模块不能循环导入（不能在 A 中 import B，在 B 中 import A），即模块引用结构需要是 DAG。
+
+### print
+
+打印错误信息的时候记得加 `file=sys.stderr`，打到 `stderr`。很容易忘。
 
 ### assert
 
@@ -253,6 +257,20 @@ print(next(b))
 ```
 
 ## 语法糖
+
+### format string
+
+只要不是对向前兼容性要求非常高的程序，一般都使用 f-string (>=python 3.6)，而不是 `%` 这种老方法了。~~你喜欢 cout 还是 printf？~~
+
+不讲太多格式化，讲一个：
+
+```py
+a = 1
+print(f"{a = }")
+# a = 1
+```
+
+打日志挺方便的。
 
 ### map & filter
 
@@ -619,12 +637,15 @@ p.sort_stats("cumulative").print_stats()
 
 - 安装（[poetry](#poetry)）：`poetry add --group dev nuitka`
 - 我使用的打包指令：
+
   ```sh
   nuitka3 --run --follow-imports --prefer-source-code --clang --disable-console --noinclude-pytest-mode=nofollow --noinclude-setuptools-mode=nofollow --plugin-enable=upx main.py
   ```
+
   - `--clang` 是选择 C 编译器，不用 clang 的话就不指定。
   - `--disable-console`，因为我打包的是 GUI 程序。
   - `--plugin-enable=upx` 使用 [upx](../articles/minimize_exe.md) 插件能够压缩程序大小。需要已安装 upx。
+
 - 其他命令：自行 `nuitka3 --help` 查看
 
 ### Pyinstaller
@@ -672,13 +693,17 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
    参考[此文](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)。
 
    1. 写 `pyproject.toml`。
+
       - poetry 能够自动推断需要打包的模块。如果 `name` 与 _module name_ 不同，需要 `packages=[{include="..."}]`。
       - 如果目标是一个 binary，需要添加入口点。
+
         ```toml
         [tool.poetry.scripts]
         <bin name> = '<module>:<function>'
         ```
+
    2. build & upload
+
       ```sh
       poetry config pypi-token.pypi <API token>
       poetry publish --build
@@ -688,19 +713,25 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
    1. 写 `setup.py`。~~可以用 GPT 生成，也可以去抄几份。~~
    2. 在 `$HOME/.pypirc` 下写入
+
       ```toml
       [pypi]
       username = __token__
       password = <API token>
       ```
+
    3. 打包上传，工具任选。
+
       - twine:
+
         ```sh
         pipx install twine
         python3 setup.py sdist bdist_wheel
         twine upload dist/* --verbose
         ```
+
       - setuptools
+
         ```sh
         python3 setup.py sdist upload
         ```

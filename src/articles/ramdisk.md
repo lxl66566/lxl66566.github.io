@@ -26,7 +26,7 @@ archlinux 下的 ramdisk 非常简单，只需
 :::code-tabs
 @tab 自动
 
-```
+```sh
 # edit /etc/fstab, add the following line
 # 此处不要添加 `noexec`，否则 AUR Helper 无法编译软件包
 tmpfs /tmp tmpfs rw,size=10G,nodev,nosuid,noatime,mode=1777 0 0
@@ -50,7 +50,8 @@ sudo chmod -R 777 /mnt/tmp
 2. 安装 RAM Disk 软件并挂载。
 3. 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）
 4. 如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。[src](https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&utm_medium=web2x&context=3)，保存为 `.reg` 文件后双击
-   ```
+
+   ```toml
    Windows Registry Editor Version 5.00
    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
    "DiskCacheDir"="Z:\\EdgeCache"

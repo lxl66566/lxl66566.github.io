@@ -25,11 +25,11 @@ tag:
 20230614 记一次失败的刷机（redmi note 10 pro, sweet）。
 
 1. 解 BL 锁，等了 7days。
-2. 刷入 twrp [失败](#刷入-twrp-失败)。
+2. 刷入 twrp [失败](./problem.md#刷入-twrp-失败)。
 
 没有第三方 recovery 就无法卡刷，而一些类原生例如 Havoc OS | Evolution OS 只提供了卡刷包，无法线刷。寄。~~（据说有 python 脚本能把卡刷包转成线刷包，没试过，有生之年）~~
 
-退而求其次，想刷 EU 版 MIUI，[失败 again](#线刷-global-失败)，寄。
+退而求其次，想刷 EU 版 MIUI，[失败 again](./problem.md#线刷-global-失败)，寄。
 
 再退，用国行 MIUI (chopin)，不使用 twrp 刷入 magisk。（kernelSU 不支持：非 GKI 设备内核）
 
@@ -51,7 +51,7 @@ tag:
 
 1. EU 的 Google 全家桶也是无法卸载（即使有些边角如 YT Music 能卸载，Play store 也会再悄悄给你下回来），近 20 个 Google 密密麻麻排着嘲笑我，数量甚至比国行还多；
 2. 后台运行着好多叫不出名字的奇怪服务，有些我 Google 半天也搜不到是什么（例如 `com.qti.qcc`）；
-3. 也间接导致了[之后的系统崩溃](#乱冻结)。（我承认主要责任在我）
+3. 也间接导致了[之后的系统崩溃](./problem.md#乱冻结)。（我承认主要责任在我）
 
 然后使用 miflash 刷回国行；刷入失败。一重启就自动进 fastboot。由于[此 ROM 下载地址](https://xiaomirom.com/rom/mi-pad-5-nabu-china-fastboot-recovery-rom/)没有 MD5，于是[换了一个](https://xiaomifirmwareupdater.com/archive/miui/nabu/)重下，校验 MD5，没有任何问题。刷机工具 Configuration 设置 EraseAll，再刷，还是不行。然后刷欧版，就行了。。由于每次刷机都需要 10min 以上，我连着刷了 5 6 次，等待的时间确实紧张难熬。
 

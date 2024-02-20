@@ -25,7 +25,7 @@ category:
 ### 20240216
 
 - 新增组件 `ZoomedImg`, `dated`。替换正则：
-  ```
+  ```text
   <div\s?class="image(\d+)"\s*style="text-align: center;\s*"\s*>\n?<img alt="(.*?)" src="(.*?)"\s?/\s?>\n?</div>
   <ZoomedImg alt="$2" src="$3" scale="$1%" />
   ---------------------
@@ -66,7 +66,7 @@ category:
 ### 20231122
 
 - 新增组件：`OrderBadge`。替换正则表达式：
-  ```
+  ```text
   \s?<Badge (type=".*" )?text="(\d)"\s?/>
   <OrderBadge order=$2 />
   ```

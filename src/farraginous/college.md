@@ -56,7 +56,7 @@ tag:
   - [ecust electricity statistics](https://github.com/lxl66566/ecust-electricity-statistics)：（夹带私货）电费统计
 - 奉贤很小，主要生活区走路 5min 可达，因此非富裕则不需要买共享单车服务。（健康跑也无需买车，见下条）
 - 体育社团的活动能抵扣强制跑步的次数。可以参加多个体育社团，一个下午轮流去各社团打卡，可以短时间内拿完所有跑步的次数。
-  - 自弃用 _小步点_ 改用*华理健康*后，可使用 [fake location](./recommend_packages.md#fake-location) 代替跑步。**拒绝非个性化的不负责任的强制体育活动。**
+  - 自弃用 _小步点_ 改用 _华理健康_ 后，可使用 [fake location](./recommend_packages.md#fake-location) 代替跑步。**拒绝非个性化的不负责任的强制体育活动。**
 - 如果有平板的话，不要买书。自学的话教科书没有太大用处，而且基本上可以在 [zlib](./recommend_websites.md#资源搜索) 或 [alist](https://alist.世界百流大学.com)[^5] 上找到。而且类似形势与政策，军事理论等课是不用书的（头铁的话其他课也都能不用）。
 - 要打联机游戏的别看了，直接去开宿舍网，否则服务器都连不上（可以自己试试 csgo）。不要购买校园网的 20M 套餐。记好网络账号密码。
 - 尽快登录学生邮箱，首次登录修改密码记好。日后白嫖的地方很多。
@@ -230,7 +230,7 @@ tag:
 |体育篮球男 - 宣沁|6|现代化教学，会聊天；力量训练量不合理|
 |毛概 - 张驰|0.5|<Badge type="danger" text="限手机" /><Badge type="warning" text="限座位" /> 不能坐后四排；严肃，过于热情的粉红，一句话总要讲两遍，上课声大|
 |电路原理<Badge text="半开卷" /> - 黄如|3|<Badge type="danger" text="拖占课" /> 过于热情，讲课进度慢，复习资料漏知识点|
-|MATLAB - 陈宁|4|<Badge text="PPT" /> 没听说过 *MATLAB Online*|<details><summary>点击展开</summary><p>nchen@ecust.edu.cn<br/>13611758166</p></details>|
+|MATLAB - 陈宁|4|<Badge text="PPT" /> 没听说过 _MATLAB Online_|<details><summary>点击展开</summary><p>nchen@ecust.edu.cn<br/>13611758166</p></details>|
 |数据结构 - 蒋翠玲|3|<Badge type="warning" text="PPT" /><Badge type="warning" text="电子版" /> 比较好交流；堪忧，困扰于低级问题|<details><summary>点击展开</summary><p>cuilingjiang@ecust.edu.cn</p></details>|
 |毛概 - 徐国民|6|佛系，能够清晰地作出通知|
 |体育龙舟男 - 陈家云|4.5|给分明确，教学一般|

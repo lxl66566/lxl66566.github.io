@@ -11,16 +11,16 @@ feed: false
 
 ```json
 {
-	type: "line",
-	data: {
-		labels: [1,2],
-		datasets: [
-			{
-				label: "My First Dataset",
-				data: [3,4],
-			},
-		],
-	},
+  type: "line",
+  data: {
+    labels: [1,2],
+    datasets: [
+      {
+        label: "My First Dataset",
+        data: [3,4],
+      },
+    ],
+  },
 };
 ```
 

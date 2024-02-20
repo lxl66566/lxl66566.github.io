@@ -164,7 +164,7 @@ sudo python /usr/bin/systemctl <command>
 
 _.desktop file_ 理解为启动脚本。只要随便打开看一个就懂了。
 
-```
+```toml
 [Desktop Entry]
 Name=evince
 Comment=evince pdf reader

@@ -39,8 +39,8 @@ tag:
    - 使用系统滚轮设置：把 `mousewheel.system_scroll_override.enabled` 改成 `false`。
 4. 使用 [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) 实现纵向标签栏。
 5. 隐藏标题栏，书签栏，标签栏：
-   _ 在 `about:config` 中，将 `toolkit.legacyUserProfileCustomizations.stylesheets` 改为 true。（为了允许 firefox 加载自定义 css）
-   _ 在 `about:support` 中，点击 _配置文件夹 -> 打开文件夹_（_Profile Folder -> Open Folder_），在此目录下新建名为 `chrome` 的文件夹，在新文件夹下新建 `userChrome.css`，写入[此处代码](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css)。
+   - 在 `about:config` 中，将 `toolkit.legacyUserProfileCustomizations.stylesheets` 改为 true。（为了允许 firefox 加载自定义 css）
+   - 在 `about:support` 中，点击 _配置文件夹 -> 打开文件夹_（_Profile Folder -> Open Folder_），在此目录下新建名为 `chrome` 的文件夹，在新文件夹下新建 `userChrome.css`，写入[此处代码](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_toolbox.css)。
 6. `adons.mozilla.org` 对中国用户屏蔽了广告拦截扩展，因此我使用一个第三方的[扩展商店](https://www.crxsoso.com/firefox/category/extensions) 进行安装。
 7. [强制硬件加速](https://support.mozilla.org/zh-CN/kb/performance-settings)
 

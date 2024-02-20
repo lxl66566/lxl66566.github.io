@@ -179,7 +179,7 @@ Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 x
 4. [生成 compiler_commands.json](https://xmake.io/#/zh-cn/plugin/builtin_plugins?id=生成compiler_commands)，使 clangd 能够读取 includePath 等。一行：`xmake project -k compile_commands`
 5. `xmake && xmake r` 就能跑了。
 
-刚做完 2. 的时候会出现经典问题，clangd 报*找不到 `ui_mainwindow.h` 文件*… 因为它是编译期生成的。。用 cmake CLI 的时候可能需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，应该是 xmake 内置的 qt 规则起作用了。
+刚做完 2. 的时候会出现经典问题，clangd 报 _找不到 `ui_mainwindow.h` 文件_… 因为它是编译期生成的。。用 cmake CLI 的时候可能需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，应该是 xmake 内置的 qt 规则起作用了。
 
 需要注意，使用 xmake 构建的 Qt 程序无法在 stdout 输出字符，无论 release 还是 debug mode。（不知道是不是缺少了什么设置选项）
 

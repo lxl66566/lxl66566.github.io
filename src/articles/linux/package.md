@@ -27,14 +27,19 @@ pacman 是 linux 官方指定包管理器，好用，就是指令比较难记。
 - pacman 更换镜像
   ::: code-tabs
   @tab ArchWSL
+
   ```bash:no-line-numbers
   nvim /etc/pacman.d/mirrorlist
   ```
+
   @tab termux
+
   ```bash:no-line-numbers
   termux-change-repo  # 虽然不是 pacman（
   ```
+
   :::
+
 - [pacman 删除孤立包](https://wiki.archlinuxcn.org/wiki/Pacman/提示和技巧#删除未使用的软件包（孤立软件包）)：先检查列表，将不用删除的包[加入显式安装列表](https://wiki.archlinuxcn.org/wiki/Pacman/提示和技巧#删除必需的软件包以外的所有软件包)。
 - 常见问题：[依赖冲突](./problem.md#更新破坏依赖)
 
@@ -150,6 +155,7 @@ sudo systemd-nspawn -D container  # 进入容器
 - [Y/N 选择器](https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395)，以下是两个例子：
   ::: code-tabs
   @tab bash
+
   ```sh
   read -n 1 -p "Are you sure to clean git and push force? (y/N) " answer
   case ${answer:0:1} in
@@ -161,7 +167,9 @@ sudo systemd-nspawn -D container  # 进入容器
       ;;
   esac
   ```
+
   @tab fish
+
   ```sh
   # fish 的语法有些许差别。。例如 `-P` 大写
   read -n 1 -P 'Use tldr instead of man? (Y/n) ' answer
@@ -172,6 +180,7 @@ sudo systemd-nspawn -D container  # 进入容器
           tldr "$argv"
   end
   ```
+
   :::
 
 [^7]: 尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞 (`"${arr[@]}"`)。我的评价是还是**写点阳间语言**吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。
@@ -401,18 +410,22 @@ tmux 的默认键位实在是过于诡异。
 - 默认启动 ([bash ref](http://129.226.226.195/post/28785.html) | [zsh ref](https://unix.stackexchange.com/questions/41274/having-tmux-load-by-default-when-a-zsh-terminal-is-launched) [ref2](https://superuser.com/questions/253786/how-can-i-make-tmux-use-my-default-shell))：
   :::code-tabs
   @tab zsh
+
   ```sh
   # add on top of .zshrc
   if [ "$TMUX" = "" ]; then tmux; fi
   # add in .tmux.config
   set-option -g default-shell /bin/zsh
   ```
+
   @tab bash
+
   ```sh
   if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
   fi
   ```
+
   :::
 
 ::::

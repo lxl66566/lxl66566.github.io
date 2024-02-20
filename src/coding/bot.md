@@ -35,12 +35,10 @@ comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；�
 1. [使用 conda](../coding/python.md#创建环境)创建出所需环境（此处环境名为`atri`）：`conda create -n atri python=3.9`
    > nonebot2 需要在 python>=3.8 环境下运行
 2. 使用 pip 安装依赖：
-
-```sh
-pip install nb-cli
-pip install nonebot-adapter-onebot
-```
-
+   ```sh
+   pip install nb-cli
+   pip install nonebot-adapter-onebot
+   ```
 3. 参考[随笔中的启动脚本](../essay/2022.md#_20220506)
 
 :::
@@ -77,7 +75,7 @@ npm init koishi
 - telegram：本机没有公网 ip，因此选择 _polling_ 工作模式。代理用 http 好像不能用（这也是我第一次退坑 koishi 的理由），之后尝试用 socks 端口就可以了。
 - QQ：~~参考[论坛](https://forum.koishi.xyz/t/topic/2502)。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:~~
 
-  > 由用户 '\*' 发送的 session '\*' 缺失 username。插件处理可能出现问题。若要针对此问题进行反馈，请前往 https://k.ilharp.cc/2510 。错误码：2130
+  > 由用户 '\*' 发送的 session '\*' 缺失 username。插件处理可能出现问题。若要针对此问题进行反馈，请前往 <https://k.ilharp.cc/2510> 。错误码：2130
 
   ~~不影响使用，开发者也[说不用在意](https://forum.koishi.xyz/t/topic/2510/154)，那就不管了。~~
   chronocat 开发的 QQNT 适配器现已被下架。

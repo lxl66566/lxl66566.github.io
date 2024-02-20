@@ -20,7 +20,7 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 
 能有多简单呢，例如我需要部署一个静态站点（用于 vps 伪装），只需要在 `/etc/caddy/Caddyfile` 中写入：
 
-```
+```text
 <域名> {
   root * <(静态)资源路径>
   file_server
@@ -45,11 +45,11 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 
 caddy 默认将日志输出 stderr，可以用 `journalctl` 查看。但也可以将其输出至文件，或者按域名分流日志等。
 
-```
+```json
 {
-	log default {
-		output file <file_path>
-	}
+  log default {
+    output file <file_path>
+  }
 }
 ```
 

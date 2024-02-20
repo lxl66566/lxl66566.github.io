@@ -19,5 +19,14 @@
   },
   "autocorrect.enable": false,
   "cSpell.language": "en-US",
-  "cSpell.enableFiletypes": ["bat", "ini", "lua"]
+  "cSpell.enableFiletypes": ["bat", "ini", "lua"],
+  "markdownlint.config": {
+    "default": true,
+    "MD024": false,
+    "MD031": false,
+    "MD033": false,
+    "MD036": false,
+    "MD040": false,
+    "MD056": false
+  }
 }

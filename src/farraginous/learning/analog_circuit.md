@@ -106,7 +106,7 @@ N 沟道增强型/耗尽型 MOS 管转移特性方程：<span v-pre>$\displaysty
 
 ### 参数
 
-- 闭环放大倍数：<span v-pre>$\displaystyle \dot A_f=\frac{\dot A}{1+\dot A\dot F}	\approx\frac{1}{\dot F}$</span> &nbsp;&nbsp;&nbsp;(深度负反馈
+- 闭环放大倍数：<span v-pre>$\displaystyle \dot A_f=\frac{\dot A}{1+\dot A\dot F}\approx\frac{1}{\dot F}$</span> &nbsp;&nbsp;&nbsp;(深度负反馈
 - 反馈深度：|1+AF|
 
 ### 负反馈影响

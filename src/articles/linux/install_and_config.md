@@ -60,7 +60,7 @@ umount /mnt/windows
    - 手动在移动端环境创建目录
    - 手动安装一些包，例如 bsdtar
 3. 安装完成后为 pacman 添加镜像需要选择 arm 的而不是默认的 x86_64。
-   ```
+   ```toml
    Server = http://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/$arch/$repo
    Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
    Server = http://mirrors.stuhome.net/archlinuxarm/$arch/$repo
@@ -220,7 +220,7 @@ make_new_subvolume /var/log
 
 我安装的 kde 系列软件详见[包管理与使用推荐](./package.md#kde-apps)。
 
-1. enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在*系统设置 - 添加快捷键 - 火焰截图*，然后手动设置快捷键。
+1. enable flameshot：flameshot 默认无法使用 print 快捷键截图。需要在 _系统设置 - 添加快捷键 - 火焰截图_，然后手动设置快捷键。
 2. _输入设备_，将键盘的按键延迟改短。
 3. _外观_，黑色主题
 4. _开关机 - 桌面会话_，选择启动为空会话

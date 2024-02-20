@@ -131,7 +131,7 @@ export default defineUserConfig({
 
 然后我尝试了使用其他图床托管图片：[SM.MS](https://sm.ms/)，但是：
 
-1. 这个图床有*容量上限：5GB*和*单张图片上限：5MB*
+1. 这个图床有 _容量上限：5GB_ 和 _单张图片上限：5MB_
 2. 原有的每张图都需要手动替换，因为 src 是随机生成的
 3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
 4. 在[关于 SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](/images/blog/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
@@ -151,7 +151,7 @@ export default defineUserConfig({
 
 为 markdown-it 渲染器安装<span v-pre>$\displaystyle \LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
 
-由于`$...$`会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发[weak map key](#rendering-pages-failed问题) bug。
+由于`$...$`会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发[weak map key](#rendering-pages-failed-问题) bug。
 
 ## 图片无法比例缩放问题
 
@@ -185,7 +185,7 @@ export default defineUserConfig({
 
 ## 配置 sidebar 问题
 
-由于我一开始对 sidebar 的机制并不清楚，官方文档的教程也无法满足我的需求，于是就自己慢慢摸了几个小时…**此处只讲述如何*在不同子路径中使用不同的侧边栏* 这一泛用性广但示例少的解决方案。**
+由于我一开始对 sidebar 的机制并不清楚，官方文档的教程也无法满足我的需求，于是就自己慢慢摸了几个小时…**此处只讲述如何 _在不同子路径中使用不同的侧边栏_ 这一泛用性广但示例少的解决方案。**
 
 首先，sidebar 配置结构为 `绝对路径:sidebar对象` 这样的键值对。一个 sidebar 对象有：
 
@@ -289,50 +289,44 @@ sidebar: {
 目的：复用画图表的 html 文件。尝试：
 
 1. 给页面中的 iframe html 传参:
-
-```html:no-line-numbers
-<iframe src="/charts/animation.html?src=GBperprice"></iframe>
-```
-
+   ```html:no-line-numbers
+   <iframe src="/charts/animation.html?src=GBperprice"></iframe>
+   ```
 2. 然后在 html script 中处理参数:
-
-```js
-function getParams(key) {
-  var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
-  var r = window.location.search.substr(1).match(reg);
-  if (r != null) {
-    return unescape(r[2]);
-  }
-  return null;
-}
-const addr = "/charts/" + getParams("src") + ".js";
-```
-
+   ```js
+   function getParams(key) {
+     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if (r != null) {
+       return unescape(r[2]);
+     }
+     return null;
+   }
+   const addr = "/charts/" + getParams("src") + ".js";
+   ```
 3. 并引入`addr`参数位置的 .js 文件。
+   <text style="color:red;font-weight:bold">未解决！</text>
+   ::: code-tabs
+   @tab HTML
 
-<text style="color:red;font-weight:bold">未解决！</text>
+   ```html
+   ...
+   <!-- <script type="text/javascript" src=addr></script> 
+       无效。script 无法使用 JavaScript 变量。 -->
+   <script type="module">
+     // import {data} from addr; 报错，其将 addr 识别为 "addr" 而非 String 变量
+     import(addr); // 无效
+   </script>
+   ...
+   ```
 
-::: code-tabs
-@tab HTML
+   @tab JS
 
-```html
-...
-<!-- <script type="text/javascript" src=addr></script> 
-    无效。script 无法使用 JavaScript 变量。 -->
-<script type="module">
-  // import {data} from addr; 报错，其将 addr 识别为 "addr" 而非 String 变量
-  import(addr); // 无效
-</script>
-...
-```
+   ```js:no-line-numbers
+   export const data=[...]
+   ```
 
-@tab JS
-
-```js:no-line-numbers
-export const data=[...]
-```
-
-:::
+   :::
 
 ## pangu 插件安装失败
 

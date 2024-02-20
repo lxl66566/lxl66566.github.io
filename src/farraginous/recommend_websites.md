@@ -94,7 +94,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ## 资源搜索
 
 - 搜电子书：
-  - [zlibrary](https://singlelogin.me/) Tor: http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/
+  - [zlibrary](https://singlelogin.me/) Tor: <http://zlibrary24tuxziyiyfr7zd46ytefdqbqd2axkmxm4o5374ptpc52fad.onion/>
     > 2022.11.04: 绝对值 x 悲哀道：z-library 暂时离开了我们。ps. 但天无绝自由之路。pps. zlib 下载挺好用的，但是上传死活传不上去。。ppps. 上传修复了。
   - [annas-archive](https://annas-archive.org/)
 - 搜脚本：[Greasy Fork](https://greasyfork.org/zh-CN) | [找脚本](http://zhaojiaoben.cn/)
@@ -232,31 +232,21 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ::: details
 From: 花果山 - 大圣 的[视频](https://www.bilibili.com/video/BV1SL411C7B3)，可能能用到。。。
 
+```text
 纳瓦尔宝典作者的公司 https://www.angellist.com/
-
 电鸭远程工作者社区 : https://eleduck.com/
-
 阮一峰谁在招人 https://github.com/ruanyf/weekly/issues/2960
-
 Vercel 工作讨论区 https://github.com/vercel/next.js/discussions/44541
-
 Vuejobs 相关远程: vuejobs.com
-
 JavascriptJob : https://javascriptjob.xyz/
-
 远程工作 Jobs: remoteok.com
-
 欧洲远程工作 : justjoin.it
-
 web3 招聘相关 : https://abetterweb3.notion.site/
-
 创业公司招人: angel.co/jobs
-
 接个人项目: upwork.com
-
 高端 remote 工作 (号称只接受全球 top 3% freelancer)：toptal.com
-
 创业公司： https://startup.jobs/
-
 Bold Jobs: www.bolejobs.co
+```
+
 :::

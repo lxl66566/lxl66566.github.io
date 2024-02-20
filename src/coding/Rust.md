@@ -358,6 +358,10 @@ assert 有 `assert!()` 和 `debug_assert!()` 之分，感觉对于应用开发�
 
 `cargo test` 默认不打印 _stdout_ 输出，想打印需要 `cargo test -- --show-output`。
 
+### cargo bench
+
+rust 自带的 benchmark。可以参考[这篇文章](https://course.rs/test/benchmark.html)，讲的不错。
+
 ## 用户界面
 
 ### GUI

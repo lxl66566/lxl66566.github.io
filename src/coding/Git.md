@@ -171,14 +171,13 @@ ssh -T git@github.com   # 输入该命令验证是否成功
 
 [^1]: 可能是代理阻断了 ssh 22 端口造成。有两个解法：
 
-    1.  关闭代理。
-    2.  连接 GitHub 的 443 端口 ([ref](https://segmentfault.com/a/1190000041909858))。在 `~/.ssh/config` 中添加：
-
-        ```
-        Host github.com
-           Hostname ssh.github.com
-           Port 443
-        ```
+    1. 关闭代理。
+    2. 连接 GitHub 的 443 端口 ([ref](https://segmentfault.com/a/1190000041909858))。在 `~/.ssh/config` 中添加：
+       ```
+       Host github.com
+          Hostname ssh.github.com
+          Port 443
+       ```
 
 [^2]:
     > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.

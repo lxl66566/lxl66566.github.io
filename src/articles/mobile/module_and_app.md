@@ -52,7 +52,7 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
 通过 play 商店安装：
 
 - [shizuku](https://github.com/RikkaApps/Shizuku)
-- [雹](https://github.com/aistra0528/Hail)：冻结应用，详情参考[禁用软件](#禁用软件)章节。（拒绝使用同功能闭源商业化的 _冰箱_）
+- [雹](https://github.com/aistra0528/Hail)：冻结应用，详情参考[禁用软件](./root_and_setting.md#禁用软件)章节。（拒绝使用同功能闭源商业化的 _冰箱_）
 - App ops（**闭源！**）：权限管理。闭源功能有限，可使用 _App Manager_ 代替。（但是没有批量终究不方便）
 
 通过 Github 安装：

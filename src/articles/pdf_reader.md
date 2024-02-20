@@ -60,7 +60,7 @@ tag:
 
 在 archlinux 上安装则没有带 `.desktop` 文件，需要自己写一个最小 `.desktop`：
 
-```
+```toml
 [Desktop Entry]
 Name=evince
 Comment=evince pdf reader

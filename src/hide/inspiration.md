@@ -69,6 +69,7 @@ tag:
   - 降噪
   - [ ] 智能限幅
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
+- [ ] windows 工具包: alias, ls,
 
 ### RIIR
 
