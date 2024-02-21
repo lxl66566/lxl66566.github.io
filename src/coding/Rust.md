@@ -133,60 +133,56 @@ let num : Vec<i128> = s.trim().split(" ")
 
 _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角。_
 
+最主要的就是 `&str` 和 `String` 两种了，前者没有所有权，后者有。
+
 - Rust 字符串默认支持分行。使用 \ 可以使多行字符串不换行。
 - 原始字符串：`r#"\something"#`
-
-#### 字符串处理
-
-- 字符串转换：~~`to_owned()` or `to_string()` converts &str -> String.~~ But you'd better to use `into()`.
+- 字符串转换：`to_owned()` or `to_string()` converts `&str` -> `String`（造了一个所有权）。也可以用 `into()`，更简单，但是更不直观。
 - [字符串连接](https://iq.opengenus.org/rust-string-concat/)
+- `Option<String>` 要转 `&str`，不能直接 `.unwrap().as_str()`，因为 unwrap 会消耗所有权。可以用 `as_deref()` 转成 `Option<&str>` 再 unwrap。
 
 #### 字符串修改
 
 在 Rust 语言中，字符串采用 utf-8 编码，字符长度不一，因此 Rust 不提供下标查找字符串的方法。这让字符串的修改需要一点点的技巧。
 
 1. 转换为`Vec<char>`后修改
-
-C++程序员认为这种方式非常亲切。之后若有需要，还可将`Vec<char>`重新转换为字符串。注意，Rust 中的 `char` 为 4 字节，转为 Vec 后，可进行 O(1) 查找。
-
-```rust
-let s1:String = String::from("Hello我是绝对值_x");
-let mut a : Vec<char> = s1.chars().collect();
-a[5] = '你';
-let s2 = a.iter().collect::<String>();
-assert_eq!(s2,"Hello你是绝对值_x");
-```
-
+   C++程序员认为这种方式非常亲切。之后若有需要，还可将`Vec<char>`重新转换为字符串。注意，Rust 中的 `char` 为 4 字节，转为 Vec 后，可进行 O(1) 查找。
+   ```rust
+   let s1:String = String::from("Hello我是绝对值_x");
+   let mut a : Vec<char> = s1.chars().collect();
+   a[5] = '你';
+   let s2 = a.iter().collect::<String>();
+   assert_eq!(s2,"Hello你是绝对值_x");
+   ```
 2. replace_range 函数
-
-```rust
-let mut s1:String = String::from("Hello我是绝对值_x");
-s1.replace_range(5..=7,"你");
-assert_eq!(s1,"Hello你是绝对值_x");
-```
-
-请注意，若替换范围不在 utf-8 字符的分割点上将会导致程序抛出 panic，因此不适用于变字节数的未知字符串的替换。
-
+   ```rust
+   let mut s1:String = String::from("Hello我是绝对值_x");
+   s1.replace_range(5..=7,"你");
+   assert_eq!(s1,"Hello你是绝对值_x");
+   ```
+   请注意，若替换范围不在 utf-8 字符的分割点上将会导致程序抛出 panic，因此不适用于变字节数的未知字符串的替换。
 3. as_bytes_mut 方法(**unsafe**)
+   ```rust
+   let mut s1:String = String::from("Hello我是绝对值_x");
+   unsafe {
+     let s1_bytes: &mut [u8] = s1.as_bytes_mut();
+     let s2_bytes: &[u8] = "你".as_bytes();
+     for i in 0..3{
+       s1_bytes[i + 5] = s2_bytes[i]
+     }
+   }
+   assert_eq!(s1,"Hello你是绝对值_x");
+   ```
+   该方法异常繁琐，同样也不适用于变字节数的未知字符串的替换，但是若替换范围不在 utf-8 字符的分割点上并不会触发 panic.
+   例如，将第 6 行代码改为`s1_bytes[i + 6] = s2_bytes[i]`的运行结果：
+   ```rust:no-line-numbers
+   Hello�你��绝对值_x
+   ```
 
-```rust
-let mut s1:String = String::from("Hello我是绝对值_x");
-unsafe {
-  let s1_bytes: &mut [u8] = s1.as_bytes_mut();
-  let s2_bytes: &[u8] = "你".as_bytes();
-  for i in 0..3{
-    s1_bytes[i + 5] = s2_bytes[i]
-  }
-}
-assert_eq!(s1,"Hello你是绝对值_x");
-```
+#### 其他字符串
 
-该方法异常繁琐，同样也不适用于变字节数的未知字符串的替换，但是若替换范围不在 utf-8 字符的分割点上并不会触发 panic.
-例如，将第 6 行代码改为`s1_bytes[i + 6] = s2_bytes[i]`的运行结果：
-
-```rust:no-line-numbers
-Hello�你��绝对值_x
-```
+- `std::path::{Path, PathBuf}` 是路径字符串。`Path` 没有所有权，`PathBuf` 有所有权。
+- `url::Url` <Badge text="url"/> 是 url 字符串。
 
 ### 语法糖
 
@@ -321,6 +317,7 @@ r = "run"
 | 库名 | 简介 |
 | --- | --- |
 | memchr | 字符串查找 |
+| assert2 | 全兼容的好看的 assert |
 
 ## 打包
 
@@ -342,7 +339,9 @@ panic = "abort"
 
 ## 测试
 
-assert 有 `assert!()` 和 `debug_assert!()` 之分，感觉对于应用开发，使用 `debug_assert!()` 会更妥当一些。
+assert 有 `assert!()` 和 `debug_assert!()` 之分，前者在 release 下仍然会进行 assert，而后者不会。
+
+[assert2](https://github.com/de-vri-es/assert2-rs) 是一个全兼容 assert 的更好看的第三方库。
 
 ### cargo test
 

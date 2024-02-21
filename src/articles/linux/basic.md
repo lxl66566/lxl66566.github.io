@@ -110,9 +110,13 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 事实上，_winbtrfs_ 与 _ntfs-3g_ 都不能保证一定不会出问题（有一些群友被坑过）。所以建议都只读不写。
 
+还有，windows 蓝屏可能会炸硬盘，导致 windows 能读，linux 挂不上。ntfs 炸了就无脑用 chkdsk 修就行。
+
 ## 链接
 
 分为硬链接和软链接。硬链接文件共享相同的 inode 值，指向同一份文件，因此是同步更新。软链接就是快捷方式。
+
+> 软链接和快捷方式本质是相同的，但还有一些细微的差别，比如 lnk 还会存 description, icon...
 
 git 内添加链接指向的文件需要手动 `git add -f`。
 
@@ -126,6 +130,7 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 
 每个服务（unit）是一个 `.service` 文件，存放在不同位置，其中由软件安装的服务在 `/usr/lib/systemd/system/` 下。
 
+- systemd 是现在主流 linux 管理 service 的方式。
 - `xxx@.service` 是一个 template unit，不能直接启动，而是需要传入一个 string，作为 `xxx@something.service` 启动。string 的含义需要自己看 service 内容。
 
 ### 常用指令
@@ -150,11 +155,9 @@ sudo python /usr/bin/systemctl <command>
 
 ## 日志
 
-`journalctl` 用于查看系统日志。
-
-- `journalctl -u <service_name>` 查看服务日志
-
-`dmesg` 用于查看内核消息。
+- `journalctl` 用于查看系统日志。
+  - `journalctl -u <service_name>` 查看服务日志
+- `dmesg` 用于查看内核消息。
 
 ## .desktop
 
@@ -177,9 +180,9 @@ Terminal=false
 
 ## 文件传输
 
-rsync 用于主机之间的文件传输，带有断点恢复等功能。
+rsync 用于主机之间的文件传输，带有断点恢复等功能，吊打 scp 等。
 
-我比较推荐 `rsync -aviuzP ...`。具体什么意思，这里不赘述。
+我比较推荐 `rsync -aviuzP ...`。具体什么意思，这里不赘述（RTFM）。
 
 ## external
 

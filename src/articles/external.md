@@ -31,3 +31,4 @@ tag:
 8. [看看中国法院是怎么对待 GPL 协议的](https://mp.weixin.qq.com/s/zj2j5jWULDEAJPVscrNWUg) | [bak](https://telegra.ph/看看中国法院是怎么对待GPL协议的-12-11)
 9. [MSRA 读博五年（三）地下挖矿机房与数字前任计划](https://zhuanlan.zhihu.com/p/652585863)
 10. [10 Things Software Developers Should Learn about Learning](https://cacm.acm.org/magazines/2024/1/278891-10-things-software-developers-should-learn-about-learning/fulltext)
+11. [给互联网人的反侦查手册 2.0](https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&mid=2247512771&idx=1&sn=c92d486b7998a2e42f5e7980f019f348) | [bak](https://telegra.ph/给互联网人的反侦查手册-20-02-20-4)

@@ -17,8 +17,6 @@ tag:
 
 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。
 
-> 你可以直接[阅读`总结`](#总结)。
-
 ## 使用指南
 
 archlinux 下的 ramdisk 非常简单，只需
@@ -56,6 +54,12 @@ sudo chmod -R 777 /mnt/tmp
    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
    "DiskCacheDir"="Z:\\EdgeCache"
    ```
+
+::: tip
+
+以下为横评正文，您也可以直接[阅读`总结`](#总结)。
+
+:::
 
 ## ERAM
 

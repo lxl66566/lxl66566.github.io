@@ -409,7 +409,9 @@ with open("soup.test", "rb") as f:
 
 ### urllib
 
-不要手动处理 url！！请使用 urllib，否则会出现一些[很荒谬的 bug](https://t.me/withabsolutex/1479)。
+永远不要手动处理 url！！请使用 urllib，否则会出现一些[很荒谬的 bug](https://t.me/withabsolutex/1479)。
+
+构造 url 可以用 `posixpath.join()` + `urllib.parse.join()` ([ref](https://stackoverflow.com/questions/8223939))
 
 ### tempfile
 
