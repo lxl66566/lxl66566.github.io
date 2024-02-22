@@ -54,6 +54,10 @@ cd autosrt && python main.py
 
 然后遵循 readme，下载一个模型（我选择了 `ggml-small-q5_1` 181.3 MB），填入 GUI 即可。
 
+### [CapsWriter](https://github.com/HaujetZhao/CapsWriter)
+
+一款语音输入工具，但是使用它需要购买阿里云的 API。因此不推荐。
+
 ## 云端
 
 ### [腾讯云](https://cloud.tencent.com/product/asr)
