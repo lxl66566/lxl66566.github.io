@@ -146,6 +146,8 @@ const data = [
   { id: "434923", aScore: 5.2, bScore: 8, info: "落ち葉日記", bak: "https://telegra.ph/灯色の研究室-灯問-落ち葉日記--夏芽苗編2--中国翻訳-DL版-ページ欠落-08-02" },
   { id: "435029", aScore: 5, bScore: 8.6, info: "#蔚蓝档案 #全彩 #运动会", bak: "https://telegra.ph/山含運動會新刊-ブルーアーカイブ-08-02" },
   { id: "436618", aScore: 6.7, bScore: 2, info: "#fate #兄妹", bak: "https://telegra.ph/こいんとす-杏飴-もっとイリヤとおうちでえっちしたい-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-08-02-2" },
+  { id: "433069", aScore: 10, bScore: 9, order: 1, info: "ボクの理想の異世界生活 #合集 #穿越 #后宫 #猫娘", bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-総集編01-中国翻訳-無修正-DL版-08-02" },
+  { id: "332022", aScore: 4.6, bScore: 7.4, info: "#NTR", bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-総集編01-中国翻訳-無修正-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
