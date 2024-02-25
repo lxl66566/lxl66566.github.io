@@ -19,7 +19,6 @@ tag:
 ## 常见名词
 
 - UB：Undefined behavior，未定义行为，典型的有 `i = i++ + ++i`，一个容易被忽视的 UB 是 `a[i] = i++;`。([ref](https://en.cppreference.com/w/c/language/eval_order))
-  - 还有一些易忽视 UB：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，~~还有一些操作裸指针的~~ [src](https://zhuanlan.zhihu.com/p/391088391)
 
 ## 安装
 
@@ -266,11 +265,11 @@ C++ 允许多继承，菱形继承需要将中间类声明为虚类。（不要�
 
 ### variant
 
-本意是封装的 `union`，可以当成错误处理的一种实现，类似 rust `Result`.
+本意是封装的 `union`，可以当成错误处理的一种实现[^5]，类似 rust `Result`.
 
-c++23 请使用 `std::expected`.
-
-> [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato
+[^5]:
+    [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato
+    c++23 请使用 `std::expected`.
 
 获取值一般用 std::get + try catch，也可用 std::visit :
 

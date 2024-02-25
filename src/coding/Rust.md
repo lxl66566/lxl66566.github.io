@@ -13,28 +13,27 @@ tag:
 
 Rust 是一门系统编程语言，专注于安全，尤其是并发安全，支持函数式和命令式以及泛型等编程范式的多范式语言。Rust 在语法上和 C++类似，但是设计者想要在保证性能的同时提供更好的内存安全。——[百度百科](https://baike.baidu.com/item/Rust语言)
 
-[这里](https://github.com/sts10/rust-command-line-utilities)收录了许多 rust 写的优秀应用。如果你是 linux user，不妨来此处看看。
+rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 
-### 成果
-
-几年前 rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
-
-[Awesome Alternatives in Rust](https://github.com/TaKO8Ki/awesome-alternatives-in-rust) 有一些 rust 成果。主要是 linux cli 工具。
+[Awesome Alternatives in Rust](https://github.com/TaKO8Ki/awesome-alternatives-in-rust) | [A curated list of command-line utilities written in Rust](https://github.com/sts10/rust-command-line-utilities) 收录了一些 rust 优秀应用。主要是 linux cli 工具。
 
 ### 为什么推荐
 
 #### 优点
 
 - 高性能（系统级语言）
-- 函数多，模版丰富
 - 安全，生命周期与所有权机制
 - 开发社区激进，更新频繁，讨论环境良好（tg: [@rust_zh](https://t.me/rust_zh)）
-- 唯一指定顶级包管理器：cargo
+- 统一的代码格式、文档、测试、打包流程
+  - 唯一指定顶级包管理器：cargo
+- 易于打包
+- 静态检查给力，能过 = 能跑
 
 #### 缺点
 
 - 限制条件多，难以通过编译
 - 学习曲线陡峭
+- 开发周期长
 - GUI 库有待进步
 
 ### 如何学习
@@ -44,6 +43,7 @@ Rust 是一门系统编程语言，专注于安全，尤其是并发安全，支
 - [Rust 语言圣经](https://course.rs/about-book.html)：圣经，**文风**上乘，**质量**高。
 - [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式。
 - [rust by example](https://doc.rust-lang.org/rust-by-example/index.html)：注重例子。
+- [小宏书](https://zjp-cn.github.io/tlborm/introduction.html)：专门介绍 rust macro
 
 我在学习初期，先读资料，然后尝试用 Rust 去解 leetcode 上的[^1]题目，看题解以后去[文档](https://doc.rust-lang.org/std/index.html)进一步搜关键字和用法。中期就该做点项目了，遇到不会的就去 [Telegram 群](https://t.me/rust_zh)问。
 
@@ -69,6 +69,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 1. [使用 clippy](https://code.visualstudio.com/docs/languages/rust#_linting) 或者 [bacon](https://github.com/Canop/bacon) 作为 check 指令。
 2. 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
+   - <heimu>`rust-analyzer` 本身并不是很好用。经常卡。</heimu>
 
 ## 语言基础
 
@@ -76,13 +77,8 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 Rust 的 for 循环需要跟可迭代对象，例如：
 
-```rs:no-line-numbers
+```rs
 for i in 0..100 {} // i in [0,99]
-```
-
-若需要设置步长，可使用 `step_by()` ：
-
-```rs:no-line-numbers
 for i in 0..=100.step_by(2) {} // i in { 0,2,4,6...,98,100 }
 ```
 
@@ -98,6 +94,8 @@ loop{
 ### [输出](https://doc.rust-lang.org/rust-by-example/hello/print.html)
 
 `dbg!()` 宏可以在 `stderr` 中输出调试信息。
+
+`ln` 代表结束空行。常用的就 `print(ln)!` `eprint(ln)!`，没了。
 
 ### 输入
 
@@ -274,19 +272,30 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
   - 但是从其他模块调用 take 时需要 `use <mod_name>::Takable`。
 
+### 宏
+
+宏是很好用的东西。（我）主要用来写不定参数数量，不定参数类型的函数。
+
+学习宏，直接去看[如何学习](#如何学习)中提到的小宏书。
+
+一些心得：
+
+- 不加 `#[macro_export]` 的话，定义的宏仅在当前 mod 可用。
+- 可以定义同名宏重载系统宏，但是注意不能在同名宏里调用被重载的系统宏，否则递归。[example](https://github.com/Xavientois/die/pull/3/files)
+
 ### 其他
 
 可以显式调用 [`std::mem::drop()`](https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#通过-stdmemdrop-提早丢弃值) 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。[更多详细解释](https://xuanwo.io/reports/2022-41/)
 
 ## Cargo
 
-rust 唯一官方指定包管理器：`cargo`
+rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理中是顶级的。
 
 ### 获取 Cargo 根目录
 
 `env!("CARGO_MANIFEST_DIR")`
 
-### alias
+### 全局 alias
 
 创建 `~/.cargo/config` 并写入：
 
@@ -307,25 +316,26 @@ r = "run"
 <!-- prettier-ignore -->
 | 库名       | 简介       |
 | ---------- | ---------- |
-| anyhow / eyre    | 错误处理   |
+| anyhow / thiserror | 错误处理   |
 | tokio      | 异步       |
 | serde_json | json       |
 | reqwest    | 简单网络   |
 | clap       | 命令行工具 |
 
-另外一些库则是好用，但非必须。
+另外一些库则是我用过然后觉得好用。
 
 <!-- prettier-ignore -->
 | 库名 | 简介 |
 | --- | --- |
 | memchr | 字符串查找 |
 | assert2 | 全兼容的好看的 assert |
+| die-exit | 错误处理并退出，[我的 fork](https://github.com/lxl66566/die/tree/master) |
 
 ## 打包
 
 ### [最小化二进制](https://github.com/johnthagen/min-sized-rust)
 
-一般这样够用了。~~我虽然敏感，但没有那么极端。~~
+一般这样够用了。~~我虽然敏感，但没有 no-std 那么极端。~~
 
 ```toml
 [profile.release]
@@ -368,6 +378,8 @@ rust 自带的 benchmark。可以参考[这篇文章](https://course.rs/test/ben
 ## 用户界面
 
 ### GUI
+
+GUI 是 rust 日经问题了。
 
 一些 GUI 框架：
 

@@ -81,6 +81,10 @@ duckdb 比 sqlite 具有更多的功能。
 
 python 版本还有一个[官方推荐的 orm](https://duckdb.org/docs/guides/python/ibis.html) 可用。
 
+## Redis
+
+Redis 是一个非常简单的 KV (key-value) 数据库。
+
 ## mysql 运维
 
 我是一个完全不懂数据库的非计专业学生，但我需要为部门维护数据库（
@@ -160,6 +164,10 @@ MariaDB replaces mysql (( ([src](https://archlinux.org/news/mariadb-replaces-mys
 
 于是直接 `sed -i 's/utf8mb4_0900_ai_ci/uca1400_as_ci/g' test.sql` 再导入，问题解决。([ref](https://dba.stackexchange.com/a/314442))
 
+## PostgreSQL
+
+我看到了很多 pgsql 吹（[external 2.3.](#external)），被吹得有点心动。日后可能会尝试。
+
 ## 遇到的问题
 
 ### 安装 Mysql
@@ -220,3 +228,5 @@ sudo systemctl start mysql
 ## external
 
 1. [MySQL 和 PostgreSQL 有何区别？](https://aws.amazon.com/cn/compare/the-difference-between-mysql-vs-postgresql)
+2. [PostgreSQL is Enough](https://gist.github.com/cpursley/c8fb81fe8a7e5df038158bdfe0f06dbb)
+3. [Simplify: move code into database functions](https://sive.rs/pg)

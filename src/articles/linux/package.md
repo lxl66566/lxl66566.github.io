@@ -398,6 +398,13 @@ Terminal Multiplexer（终端复用器）并不是 linux 桌面的必需品（`k
 
 这是一个很古老的终端复用，主要作用就是 ssh 恢复，没啥其他功能。可以在低性能的服务器上用。
 
+```sh
+screen -S <name>  # 创建
+screen -r <name>  # 重连
+```
+
+两行就够用了。
+
 #### tmux
 
 tmux 的默认键位实在是过于诡异。
