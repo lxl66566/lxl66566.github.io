@@ -209,11 +209,14 @@ tag:
 - <Badge text="口音" /> 表示有口音
 - <Badge text="电子版" /> 表示支持电子版作业，<Badge type="warning" text="电子版" /> 表示支持但需要主动申请。一般来说需要看助教心情。
 - <Badge text="半开卷" /> 表示可携带部分资料考试
+- <Badge text="提问" /> 表示喜欢课上提问同学
 - 以颜色区分严重程度，从轻到重依次为 <Badge text="绿色" /> -> <Badge type="warning" text="黄色" /> -> <Badge type="danger" text="橙色" />
 
 <!-- prettier-ignore -->
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
+|集成电路 - 叶炯耀|4.1|<Badge text="提问" />爱聊天，有学识经验，废话有点||
+|电磁场 - 李钰|1.6|<Badge  type="danger"text="限座位" />后四排禁止|<dtls>liyu@ecust.edu.cn</dtls>|
 |互联网 - 程华|2|<Badge text="电子版" /> 作业不发答案；实践不教，纯纯自己查资料；后期每节课都点全班名|
 |通信电子线路 - 凌小峰|3|<Badge text="限手机" />实际上不管手机；作业多；实验遇到问题会手把手教|<details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details>|
 |DSP - 万永菁|8|线上下结合，课前给所有学生打印教学计划和作业；但是作业过多|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>

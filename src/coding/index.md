@@ -59,6 +59,7 @@ tag:
 - [koka](https://koka-lang.github.io)：以 effect 为核心的函数式语言。有 [full UFCS](https://koka-lang.github.io/koka/doc/book.html#sec-dot) 特性。
 - [moonbit](https://www.moonbitlang.cn/)：从 rust 中学了很多的语言
 - [odin](https://odin-lang.org/docs/overview/)：追求简单的、像 Go 的语言
+- [C3](https://c3-lang.org/)：C 的改进，解决 C 痛点
 
 </dtls>
 
