@@ -215,16 +215,18 @@ tag:
 <!-- prettier-ignore -->
 |信息|打分|评价|联系方式|
 | :--: | :--: | :--: | :--: |
-|集成电路 - 叶炯耀|4.1|<Badge text="提问" />爱聊天，有学识经验，废话有点||
-|电磁场 - 李钰|1.6|<Badge  type="danger"text="限座位" />后四排禁止|<dtls>liyu@ecust.edu.cn</dtls>|
+|操作系统 - 罗小娟|4.3|平等，活跃|<luoxj@ecust.edu.cn> 徐汇 19 817|
+|通信原理 - 袁伟娜|1.2|<Badge text="提问" />|<wnyuan@ecust.edu.cn>|
+|集成电路 - 叶炯耀|3.8|<Badge text="提问" />爱聊天，有学识经验，废话有点|q:1194678751 v:shkevino912|
+|电磁场 - 李钰|1.6|<Badge text="提问" /><Badge  type="danger"text="限座位" />后四排禁止|<dtls>liyu@ecust.edu.cn</dtls>|
 |互联网 - 程华|2|<Badge text="电子版" /> 作业不发答案；实践不教，纯纯自己查资料；后期每节课都点全班名|
 |通信电子线路 - 凌小峰|3|<Badge text="限手机" />实际上不管手机；作业多；实验遇到问题会手把手教|<details><summary>点击展开</summary><p>xfling@ecust.edu.cn</p></details>|
-|DSP - 万永菁|8|线上下结合，课前给所有学生打印教学计划和作业；但是作业过多|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>
+|DSP - 万永菁|8|线上下结合，课前给所有学生打印教学计划和作业；但是作业过多|<details><summary>点击展开</summary><p>13817781630<br/>Q:2447131015<br/>We:ecust_wyj<br/>wanyongjing@ecust.ecu.cn</p></details>|
 |算法导论 - 吴粤|5|较现代，但是有些方面又觉得像在古代[^6]|<details><summary>点击展开</summary><p>Q:1769013250<br/>We:mathwuyue<br/>yuewu@ecust.edu.cn<br/>yue.wu@etalkai.com</p></details>|
 |人工智能基础 - 朱宏擎|3|非常多的课堂练习；作业不许迟交|
 |王嵘 - 代信号实验|-1|我对其不会有半点尊敬。[^2][^3][^4]|
 |大物实验 - 顾晓艳|8|温和，讲解清楚，手把手教||
-|数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~，不过至少专业性没有问题；平时分高，哥几个都是 90+|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>
+|数字系统设计 - 木昌洪|2|<Badge type="danger" text="口音" /><Badge type="danger" text="占课" />废话贼多，教得很烂，~~遇到他算你们倒霉~~，不过至少专业性没有问题；平时分高，哥几个都是 90+|<details><summary>点击展开</summary><p>18017887078<br/>changhongmu@ecust.edu.cn</p></details>|
 |概率论<Badge text="半开卷" /> - 郭继明|4.5|<Badge type="warning" text="电子版" />温和，**然而**本人考勤 1/3，作业全交且几乎全 A，考试 82，平时分只有 80.我不是很认可。|<details><summary>点击展开</summary><p>jimingguo@hotmail.com</p></details>|
 |信号与系统 - 朱煜|7[^1]|<Badge text="电子版" /> 有学识，随和，懂新闻|<details><summary>点击展开</summary><p>13817566582</p></details>|
 |JAVA - 翟洁|2.5|<Badge type="warning" text="PPT" /> 喜欢提问，上课无聊，会让同学去讲解 ppt|
@@ -255,7 +257,7 @@ tag:
 
 [^1]: [课前上厕所时间做随堂练习](https://t.me/withabsolutex/945)
 [^2]: [讲得慢 + 不给 PPT，故意吊着学生](https://t.me/withabsolutex/1114)
-[^3]: [实验做完不放人，实验室器材不足不处理，强制大创团队报名*互联网+*](https://t.me/withabsolutex/1115)
+[^3]: [实验做完不放人，实验室器材不足不处理，强制大创团队报名 _互联网+_](https://t.me/withabsolutex/1115)
 [^4]: [自己不知道电解电容，还嘲讽别人](https://t.me/withabsolutex/1126)
 [^6]: _现代_ 指吹了几节课 rust，_古代_ 指他说 ssd 硬盘写速度 220kb/s 左右，内存是 5-10 倍；然后说 一块 3090 | 4090 三五千（2023.09
 

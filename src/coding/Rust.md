@@ -297,7 +297,7 @@ rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理�
 
 ### 全局 alias
 
-创建 `~/.cargo/config` 并写入：
+创建 `~/.cargo/config.toml` 并写入：
 
 ```toml
 [alias]
@@ -305,6 +305,7 @@ b = "build"
 c = "check"
 t = "test -- --nocapture"
 r = "run"
+u = "update"
 ```
 
 ## 库
@@ -353,7 +354,7 @@ panic = "abort"
 
 assert 有 `assert!()` 和 `debug_assert!()` 之分，前者在 release 下仍然会进行 assert，而后者不会。
 
-[assert2](https://github.com/de-vri-es/assert2-rs) 是一个全兼容 assert 的更好看的第三方库。
+[assert2](https://github.com/de-vri-es/assert2-rs) 是一个全兼容 assert 的更好看的第三方库，是 [pretty_assertions](https://crates.io/crates/pretty_assertions) 进化版。
 
 ### cargo test
 
@@ -413,3 +414,4 @@ GUI 是 rust 日经问题了。
 1. [Rust Learning Smart Pointers](https://silente.top/posts/Rust-Learning-Smart-Pointers/)
 2. [Rust 中的闭包递归与 Y 组合子](https://nihil.cc/posts/rust_closure_and_y/)
 3. 随机 [Rust Quiz](https://dtolnay.github.io/rust-quiz/)：想成为语言律师吗？
+4. [为什么 Rust 需要 Pin, Unpin ？（中文翻译）](https://zhuanlan.zhihu.com/p/404818051)
