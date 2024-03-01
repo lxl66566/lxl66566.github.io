@@ -54,6 +54,17 @@ cd autosrt && python main.py
 
 然后遵循 readme，下载一个模型（我选择了 `ggml-small-q5_1` 181.3 MB），填入 GUI 即可。
 
+### VSCode
+
+VSCode 居然支持语音输入了！([src](https://t.me/absxsgroup/6059))这是我没想到的。你需要：
+
+1. 安装插件 _VS Code Speech - Microsoft_ 和 _Chinese (Simplified, China) language support for VS Code Speech - Microsoft_
+2. 在设置中添加一行 `"accessibility.voice.speechLanguage": "zh-CN",`
+
+实测识别准确率还是不错的。这下 Linux 也有即开即用的 voice2text 了，而且由于我本身就用 vscode 写日记，所以还挺好的。
+
+唯一的问题是不方便多语言切换，得去设置里改。
+
 ### [CapsWriter](https://github.com/HaujetZhao/CapsWriter)
 
 一款语音输入工具，但是使用它需要购买阿里云的 API。因此不推荐。

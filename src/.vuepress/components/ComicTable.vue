@@ -149,6 +149,9 @@ const data = [
   { id: "433069", aScore: 10, bScore: 9, order: 1, info: "ボクの理想の異世界生活 #合集 #穿越 #后宫 #猫娘", bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-総集編01-中国翻訳-無修正-DL版-08-02" },
   { id: "332022", aScore: 4.6, bScore: 7.4, info: "#NTR", bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-総集編01-中国翻訳-無修正-DL版-08-02" },
   { id: "468394", aScore: 6.6, bScore: 3.5, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/HIGHLAND-Takashima-Shoa-Mikazuki-no-Pierce-Hole---Pierce-Hole-of-The-Cresent-Moon-Blue-Archive-Chinese-下江小春汉化组-Digital-01-19" },
+  { id: "497578", aScore: 4.2, bScore: 2, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-エッチなことはダメなのに-ブルーアーカイブ-DL版-02-21" },
+  { id: "479268", aScore: 4, bScore: 4.1, info: "#巨乳" },
+  { id: "470499", aScore: 6.5, bScore: 7.8, info: "#催眠 #制服 #露出" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

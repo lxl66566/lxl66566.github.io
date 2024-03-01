@@ -47,7 +47,18 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 
 - 六级备考：zlib 能下载到往年考卷（大学日语四六级考试指南与真题 (全国大学日语考试设计组) (Z-Library)）。听力在[这里](https://app.readoor.cn/app/dt/bi/1523326392/85264-8480865e855413)有免费免登录的。<span class="heimu" title="你知道的太多了">我校为数不多的好事</span>
 
-## 零碎的知识点
+## 知识点
+
+### 多音
+
+背单词的一大难点在汉字多音字。即使都是音读，排除常见音变，同一个汉字也可能发出许多不同的音。
+
+<!-- prettier-ignore -->
+|漢字|単語1|単語2|単語3|
+| :-: | :-: | :-: | :-: |
+|体|体育（たい）|世間体（てい）|
+
+### 零碎
 
 - [数数](https://learning-japanese.com/number-count/)
 - [ために　 vs 　ように](https://japanese.stackexchange.com/questions/12450/difference-between-ために-and-ように)

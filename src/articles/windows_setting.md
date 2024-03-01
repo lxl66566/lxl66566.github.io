@@ -100,6 +100,11 @@ tag:
     如果有多行指令需求，那就是 `.cmd` 文件写进 `PATH` 里了。
 26. 禁用一些服务。
     - Windows Font Cache Service
+27. 将 bash 设为默认 shell。由于需要从 _运行_ 和 cmd 中都能直接进 bash，所以一些步骤：
+    - 安装 bash（scoop + git 装玩以后就自带了，位置在 `scoop/shims/bash.exe`）
+    - 视情况，可能要删掉 `C:\Windows\System32\bash.exe`，这个应该是 WSL 给的。也是[改拥有者 + 改权限](#windows-下的权限控制)那一套。
+    - 创建一个 bash 快捷方式放到 `C:\Windows\System32`
+    - 创建一个 cmd 放到 `C:\Windows\System32`，内容参考[我在 bpm 里的写法](https://github.com/lxl66566/bpm/blob/5b1f30d583ad4a71759b4ad97c204faf172492bf/bpm/install/__init__.py#L369)。
 
 [^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 
