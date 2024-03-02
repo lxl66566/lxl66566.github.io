@@ -12,6 +12,7 @@
 <script>
 import SortableTable from "./SortableTable.vue";
 
+// aScore: 颜值分  bScore: 演技分
 const data = [
   { id: "shkd-999", aScore: 9.9, bScore: 11.1, u: true, name: "風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子" },
   { id: "ABW-087", aScore: 10, bScore: 10.8, u: true, name: "※胸糞NTR 最悪の鬱勃起映像 幸せを約束した大好きな彼女がおっさんに寝取られて、壊されました。 涼森れむ" },
@@ -27,7 +28,7 @@ const data = [
   { id: "STARS-190", aScore: 9.8, bScore: 8.8, name: "敏感微乳乳首の●気な美少女は変態性欲者の兄の性処理玩具として毎日犯●れている 永野いち夏" },
   { id: "STARS-256", aScore: 8, bScore: 10.5, name: "生まれたての子鹿の如く崩れ落とす 1日中超ピストン性交 永野いち夏" },
   { id: "PPPE-062", aScore: 9.7, bScore: 8.6, u: true, name: "彼女が友達と旅行中、俺になついてくる彼女の妹を肉オナホに調教してやった3日間の出来事 楪カレン" },
-  { id: "IPX-964", aScore: 9.3, bScore: 9, u: true, name: "「私、キメセクさせられました。。。」粘着型の元カレの嫉妬寝取り姦… 二葉エマ" },
+  { id: "IPX-964", aScore: 9.3, bScore: 9, u: true, name: "「私、キメセクさせられました。。。」粘着型の元カレの嫉妬寝取り姦… 二葉エマ ^1:33:20" },
   { id: "SNIS-991", aScore: 7.2, bScore: 11, name: "わたし、成績が悪くて今日も学校で固定されています。 夢乃あいか" },
   { id: "FSDSS-509", aScore: 10, bScore: 8, u: true, name: "新人 はにかむ、そして交わる 20歳 神木蘭 Avdebut" },
   { id: "NSFS-119", aScore: 5.7, bScore: 11.7, name: "投稿実話 妻がまわされた19 ～負けず嫌い格闘家妻の悲劇～ 三岳ゆうな" },
@@ -225,6 +226,16 @@ const data = [
   { id: "mdtm-769", aScore: 8, bScore: 6 },
   { id: "stars-377", aScore: 8.1, bScore: 4 },
   { id: "waaa-178", aScore: 7.6, bScore: 8.6, u: true },
+  { id: "IBW-905Z", aScore: 9.5, bScore: 9.7, otherlink: "https://njav.tv/zh/v/ibw-905z" },
+  { id: "GVH-501", aScore: 4.3, bScore: 6, u: true },
+  { id: "IBW-706Z", aScore: 7, bScore: 5, name: "#合集" },
+  { id: "IBW-697Z", aScore: 7, bScore: 9.5, name: "#合集 #ドスケベ" },
+  { id: "IBW-694Z", aScore: 6, bScore: 7, name: "#合集" },
+  { id: "IBW-572", aScore: 6.8, bScore: 7, name: "#入室 #合集 ^2" },
+  { id: "IBW-690Z", aScore: 7.3, bScore: 4.2, name: "親がいない日、僕は妹とむちゃくちゃSEXした。 泉りおん #兄妹 #制服" },
+  { id: "IBW-941", aScore: 7.5, bScore: 10.8, name: "#中小学安全教育纪录片 ^-1" },
+  { id: "IBW-863", aScore: 5.3, bScore: 9.6, name: "#絶叫" },
+  { id: "bda-170", aScore: 6, bScore: 6.7, name: "#捆绑" },
 ];
 export default {
   name: "AvTable",

@@ -96,8 +96,10 @@ export default sidebar({
 				"python.md",
 				"java.md",
 				"tsjs.md",
+				"html.md",
 				"csharp.md",
-				"kotlin",
+				"kotlin.md",
+				"mdx.md",
 			],
 		},
 		{

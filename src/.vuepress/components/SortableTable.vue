@@ -6,7 +6,7 @@
           <th>番号</th>
           <th>颜</th>
           <th>演</th>
-          <th>番名</th>
+          <th>备注</th>
         </tr>
       </thead>
       <tbody>

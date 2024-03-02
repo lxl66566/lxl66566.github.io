@@ -79,3 +79,4 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 1. [最好要记住的日语古代的读法](https://t.me/jp_study/2222)
 2. [我如何用三个月入门日语](http://numbbbbb.com/2016/07/04/20160704_我如何用三个月入门日语/)
 3. [TheMoeWay](https://learnjapanese.moe/)
+4. [日语口语——浊化规律](https://mike4ellis.github.io/2019/05/29/japanese-speak-change/)

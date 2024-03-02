@@ -76,10 +76,18 @@ tag:
 
 1. [Github](./github.md)：如何进行最基本的使用
 2. [Git](./Git.md)：版本控制系统
-3. [node.js](./nodejs.md)：js 运行时
-4. [Vim](./vim.md)：文件编辑器
-5. [数据库](./sql.md)
-6. [容器](./container.md)
+3. [Vim](./vim.md)：文件编辑器
+4. [数据库](./sql.md)
+5. [容器](./container.md)
+
+## 前端
+
+我不会前端且不打算卷前端，但在其最强的兼容性面前也被动接受了一点前端知识。目前只会写一些 nocss 的小玩具，加上比如本博客要用的 vue 组件而已。
+
+1. [node.js](./nodejs.md)
+2. [TypeScript & JavaScript](./tsjs.md)
+3. [html](./html.md)
+4. [MDX](./mdx.md)
 
 ## 其他
 

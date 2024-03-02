@@ -14,21 +14,15 @@ tag:
 
 这里是我的番号收藏，希望你们会喜欢。
 
-<AvTable />
-
-备注：
+::: details 解释说明
 
 - 最高分界：单科得分 >= 10 或总分 >= 18
-- IPX-964 1:33:20 极善
+- `^` 代表定位，可跟具体时间或第几幕
+- `#` 代表标签
 
-<!-- 替换正则表达式
-\|\[(.*)\]\(https://missav.*\)\|(\d+\.?\d*)\|(\d+\.?\d*)\|.*?<p>(.*?)</p>.*
-{id:"$1",aScore:$2,bScore:$3,name:"$4"},
+:::
 
-\|\[(.*)\]\(https://missav.*\)\|(\d+\.?\d*)\|(\d+\.?\d*)\|
-\|<av bg="(.*?)"\s?/>\|(\d+\.?\d*)\|(\d+\.?\d*)\|?
-{id:"$1",aScore:$2,bScore:$3},
--->
+<AvTable />
 
 ## 额外
 
@@ -60,6 +54,10 @@ tag:
 - [javlibrary.com](https://www.javlibrary.com/cn/)
 - [人脸识别](https://xslist.org/zh)
 - [av wiki](https://av-wiki.net/)
+
+## external
+
+1. [日本 AV 番号录](https://blog.wenxuecity.com/myblog/70246/202008/41208.html)
 
 <script setup lang="ts">
 import AvTable from "@AvTable";

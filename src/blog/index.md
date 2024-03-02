@@ -68,9 +68,11 @@ category:
 3. 一些个人喜好，排除 docsify, Docusaurus
 4. 尝试过迁移 Vitepress [失败](./withvuepress2.md#试图迁移至-vitepress)
 5. 还有一些等于自己写前端的
-   - nextra & Rspress：通过 mdx 加扩展性，上手更难
+   - nextra & Rspress[^6]：通过 mdx 加扩展性，上手更难
    - lume & zola：Single binary
      - zola 用的类似 django 的语法
+
+[^6]: Rspress 我尝试过一段时间，[我的评价是。。](https://t.me/withabsolutex/1501)
 
 那还剩下：
 
