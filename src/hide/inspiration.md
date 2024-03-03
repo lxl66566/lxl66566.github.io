@@ -55,7 +55,6 @@ tag:
 - [ ] windows electron lib(runtime)?
 - [ ] windows volume locker
 - [ ] wd: info words online in cli, written in rust
-  - [ ] if not english, test other languages
 - [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
 - [ ] galgame engine
 - [x] [bin package manager（release installer）](https://github.com/lxl66566/bpm)
@@ -63,7 +62,7 @@ tag:
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 - [ ] osu beatmap downloader, support stable and lazer
 - [ ] poetry plugin to import requirements.
-- [ ] pyshell
+- [ ] ~~pyshell~~ see [xonsh](https://github.com/xonsh/xonsh)?
 - [ ] 好用的 CLI 录音机
   - 暂停与继续
   - 降噪

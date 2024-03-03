@@ -152,6 +152,8 @@ const data = [
   { id: "497578", aScore: 4.2, bScore: 2, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-エッチなことはダメなのに-ブルーアーカイブ-DL版-02-21" },
   { id: "479268", aScore: 4, bScore: 4.1, info: "#巨乳" },
   { id: "470499", aScore: 6.5, bScore: 7.8, info: "#催眠 #制服 #露出" },
+  { id: "(not found)", aScore: 6.8, bScore: 0.4, info: "#兄妹 #fd", order: "x", otherlink: "https://telegra.ph/COMIC120-squeezecandyheaven-いちはや-妹とロックダウン-HELLorHEAVENのおまけ-中国翻訳-08-02" },
+  { id: "498376", aScore: 8, bScore: 6.4, info: "#按摩 #兽耳", bak: "https://telegra.ph/描き下ろしアイドルちゃんはとろけたい白杨X无糖联合汉化-02-26" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
