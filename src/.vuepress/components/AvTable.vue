@@ -242,6 +242,7 @@ const data = [
   { id: "ibw-916", aScore: 8.2, bScore: 10.5, name: "帰宅途中の美少女連れ去り野外集団輪●" },
   { id: "ibw-837", aScore: 7.6, bScore: 7, name: "#合集 #父女" },
   { id: "ibw-398z", aScore: 6.1, bScore: 8, name: "#野外" },
+  { id: "gvh-490", aScore: 8.3, bScore: 7, name: "#父女 #堕落" },
 ];
 export default {
   name: "AvTable",
