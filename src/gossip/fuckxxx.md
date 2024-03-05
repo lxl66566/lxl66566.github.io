@@ -183,6 +183,7 @@ ColorOS 是目前一加的默认系统。
   - 代码在小屏设备上的表现不好。例如长代码会自动换行，使用户无需横向滑动，只需纵向滑动。但是这样导致了稍长的代码可以占满大部分屏幕，对信息获取并不友好。并且因为英语断词格式，无用的空区域进一步增多。
 - Github PR 的 CI 如果 failed 了，并不会通知发起者。
 - Github 首次 PR 的 workflow 需要手动验证([src](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks))。。。不是，你们 CI 改没改 `.github` 不能特判一下？非得一棒子打死？
+- Github 在 commit message 中提到了其他仓库的 issue，然后删除 + force push 后，原先的 refer 不会移除。也就是说，我进行的 fixup 行为把别人 refer 了两次，感觉像 spam 了。。
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 

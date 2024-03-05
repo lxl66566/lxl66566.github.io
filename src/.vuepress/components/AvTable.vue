@@ -243,6 +243,7 @@ const data = [
   { id: "ibw-837", aScore: 7.6, bScore: 7, name: "#合集 #父女" },
   { id: "ibw-398z", aScore: 6.1, bScore: 8, name: "#野外" },
   { id: "gvh-490", aScore: 8.3, bScore: 7, name: "#父女 #堕落" },
+  { id: "sdde-686", aScore: 6.7, bScore: 7.3, name: "#时停" },
 ];
 export default {
   name: "AvTable",

@@ -204,6 +204,10 @@ match do_something_that_might_fail() {
 
 rust 提供 _async/await_ 模型和线程模型。
 
+在实际并发中可能会碰到运行时才知道数量的并行 Future，而 `join!` 是编译时，tokio 的 `JoinSet` 返回值是乱序的，我们如何获取顺序的并行 Future 返回值呢？
+
+答：用 `futures` crate 的 `futures::stream::FuturesOrdered`。具体使用方法比较难找，文档和测试代码都没有。我好不容易从 Github 搜到一个[用例](https://github.com/tensorlakeai/indexify/blob/5999be8514a4a6595aea72ec790cb526cc5ff0ac/src/blob_storage/disk.rs#L48)。
+
 ### mod
 
 rust 的 mod 确实会让人摸不着头脑。建议先搜几篇文章看看：
@@ -291,9 +295,10 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
 rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理中是顶级的。
 
-### 获取 Cargo 根目录
+### cargo envs
 
-`env!("CARGO_MANIFEST_DIR")`
+- cargo 根目录：`env!("CARGO_MANIFEST_DIR")`
+- cargo version：``
 
 ### 全局 alias
 
@@ -344,6 +349,13 @@ strip = true
 opt-level = "z"
 lto = true
 panic = "abort"
+```
+
+### 交叉编译
+
+```sh
+rustup target add x86_64-unknown-linux-musl
+cargo build --release --target x86_64-unknown-linux-musl
 ```
 
 ## 发布
