@@ -14,9 +14,9 @@ tag:
 
 ## 写在前面
 
-::: details 过激言论，谨慎查看
+<!-- ::: details 过激言论，谨慎查看
 你国计算机教育就是一坨屎（我是说绝大多数的大学校）。思政课先不说，为什么要学大学物理，大物实验，数字电路？编程语言为什么还在用上古版本？
-:::
+::: -->
 
 编程领域，本人比较喜欢 ToC 软件开发[^2]，实用至上，自由主义，热爱开源。
 
@@ -117,3 +117,4 @@ tag:
 2. [经典技术书籍 PDF 文件](https://awesome-programming-books.github.io/)
    - [Modern Compiler Implementation in ( Java | ML | C )](https://www.cs.princeton.edu/~appel/modern/)
 3. [The yaml document from hell](https://ruudvanasseldonk.com/2023/01/11/the-yaml-document-from-hell)
+4. [图解 Functor、Applicative、Monad](https://sxyz.blog/functors-applicatives-and-monads-in-pictures/)

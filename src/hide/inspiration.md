@@ -54,7 +54,7 @@ tag:
 - [ ] better sqlite_zstd
 - [ ] windows electron lib(runtime)?
 - [ ] windows volume locker
-- [ ] wd: info words online in cli, written in rust
+- [x] [wd: info words online in cli, written in rust](https://github.com/lxl66566/wordinfo)
 - [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
 - [ ] galgame engine
 - [x] [bin package manager（release installer）](https://github.com/lxl66566/bpm)

@@ -155,7 +155,8 @@ const data = [
   { id: "(not found)", aScore: 6.8, bScore: 0.4, info: "#兄妹 #fd", order: "x", otherlink: "https://telegra.ph/COMIC120-squeezecandyheaven-いちはや-妹とロックダウン-HELLorHEAVENのおまけ-中国翻訳-08-02" },
   { id: "498376", aScore: 8, bScore: 6.4, info: "#按摩 #兽耳", bak: "https://telegra.ph/描き下ろしアイドルちゃんはとろけたい白杨X无糖联合汉化-02-26" },
   { id: "498986", aScore: 6.9, bScore: 4.5, info: "#蔚蓝档案" },
-  { id: "485159", aScore: 4, bScore: 4.6, info: "# 兽耳", bak: "https://telegra.ph/ノアの方舟-ノア-きつねの嫁入り-中国翻訳-12-08-2" },
+  { id: "485159", aScore: 4, bScore: 4.6, info: "#兽耳", bak: "https://telegra.ph/ノアの方舟-ノア-きつねの嫁入り-中国翻訳-12-08-2" },
+  { id: "492191", aScore: 9, bScore: 5, info: "#纯爱 #蔚蓝档案" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
