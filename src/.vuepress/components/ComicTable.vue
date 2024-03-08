@@ -157,6 +157,8 @@ const data = [
   { id: "498986", aScore: 6.9, bScore: 4.5, info: "#蔚蓝档案" },
   { id: "485159", aScore: 4, bScore: 4.6, info: "#兽耳", bak: "https://telegra.ph/ノアの方舟-ノア-きつねの嫁入り-中国翻訳-12-08-2" },
   { id: "492191", aScore: 9, bScore: 5, info: "#纯爱 #蔚蓝档案" },
+  { id: "456379", aScore: 9, bScore: 7.6, info: "#雌小鬼" },
+  { id: "309766", aScore: 7.4, bScore: 2 },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

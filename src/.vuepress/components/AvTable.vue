@@ -244,6 +244,8 @@ const data = [
   { id: "ibw-398z", aScore: 6.1, bScore: 8, name: "#野外" },
   { id: "gvh-490", aScore: 8.3, bScore: 7, name: "#父女 #堕落" },
   { id: "sdde-686", aScore: 6.7, bScore: 7.3, name: "#时停" },
+  { id: "ipx-638", aScore: 8, bScore: 8.1, name: "#父女 死ぬほど嫌いな義父の大好物は女子○生のワタシでした… 何度も犯●れながらイカされる屈辱レ×プ 二葉エマ" },
+  { id: "waaa-174", aScore: 7.9, bScore: 7.3, u: true },
 ];
 export default {
   name: "AvTable",
