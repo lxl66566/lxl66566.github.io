@@ -134,7 +134,7 @@ sudo systemd-nspawn -D container  # 进入容器
 [^6]: `yazi` 甚至能在 console 下查看图片。
 [^8]: `ncdu` 在 btrfs 下不准。([ref](https://wiki.archlinuxcn.org/wiki/Btrfs#显示已使用的/空闲空间))
 
-以上是本人体验总结的结果。若需要更多推荐，不如看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps)。
+以上是本人体验总结的结果。若需要更多推荐，不如看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps) 和 [external 1.](#external)。
 
 ### kde apps
 
@@ -493,3 +493,7 @@ waydroid show-full-ui
 注意，home 目录是共享的，不能当作沙盒使用。
 
 我试着安装了一个 ubuntu 22.04，占用空间 500M 左右。
+
+## external
+
+1. [一些现代化的 linux 命令](https://www.entropy-tree.top/2023/07/24/modern-linux-commands/)

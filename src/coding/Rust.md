@@ -200,9 +200,14 @@ match do_something_that_might_fail() {
 
 ### 并发
 
-如果你对 _async/await_ 模型没有明确概念，可以看看[这篇文章](https://course.rs/advance/async/getting-started.html)入门。
+> 如果你对 _async/await_ 模型没有明确概念，可以看看[这篇文章](https://course.rs/advance/async/getting-started.html)入门。  
+> rust 提供 _async/await_ 模型和线程模型。
 
-rust 提供 _async/await_ 模型和线程模型。
+说到并发基本上离不开 tokio。一般加 `features = ["macros", "rt-multi-thread"]` 就够用了。
+
+- `tokio::spawn` 的 Future 是立即执行的。比 `std::thread::spawn` 更有优势。
+
+#### 解惑
 
 在实际并发中可能会碰到运行时才知道数量的并行 Future，而 `join!` 是编译时，tokio 的 `JoinSet` 返回值是乱序的，我们如何获取顺序的并行 Future 返回值呢？
 
