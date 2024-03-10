@@ -41,7 +41,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 [官网](https://www.rust-lang.org/zh-CN/)有详细的 QA 与你所需要的一切。资料方面，rust 的学习资料非常多，列举几个：
 
 - [Rust 语言圣经](https://course.rs/about-book.html)：圣经，**文风**上乘，**质量**高。
-- [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式。
+- [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式入门。
 - [rust by example](https://doc.rust-lang.org/rust-by-example/index.html)：注重例子。
 - [小宏书](https://zjp-cn.github.io/tlborm/introduction.html)：专门介绍 rust macro
 
@@ -93,13 +93,13 @@ loop{
 
 ### [输出](https://doc.rust-lang.org/rust-by-example/hello/print.html)
 
-`dbg!()` 宏可以在 `stderr` 中输出调试信息。
+`dbg!()` 宏可以在 `stderr` 中输出调试信息，会消耗所有权。
 
-`ln` 代表结束空行。常用的就 `print(ln)!` `eprint(ln)!`，没了。
+`ln` 代表结束空行。常用的就 `print(ln)!` `eprint(ln)!`，没了。`print` 系列宏不消耗所有权。
 
 ### 输入
 
-众所周知 rust 一般使用 `print!()` 或 `println!()` 进行输出。而输入需要使用标准库中的 std::io.（或者其他非标准库）
+输入需要使用标准库中的 `std::io`（或者其他非标准库），输入是字符串，需要手动处理。
 
 ```rust
 use std::io;
@@ -129,6 +129,14 @@ let num : Vec<i128> = s.trim().split(" ")
   - 使用 Rc + RefCell 实现（由于 RefCell 的限制，迭代器无法很好的实现）；
   - 使用 Unsafe 实现；
 
+### monad
+
+此处特指 `Option` 与 `Result` 两种。
+
+- 取出值就是 `unwrap()`，有几个变体。注意会消耗所有权。
+- 取出值的引用，可变就 `as_mut()`，不可变就 `as_ref()`。
+  - 字符串特殊一点，`Option<String>` 转 `Option<&str>` 需要 `as_deref()`。
+
 ### 字符串
 
 _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角。_
@@ -139,7 +147,6 @@ _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角�
 - 原始字符串：`r#"\something"#`
 - 字符串转换：`to_owned()` or `to_string()` converts `&str` -> `String`（造了一个所有权）。也可以用 `into()`，更简单，但是更不直观。
 - [字符串连接](https://iq.opengenus.org/rust-string-concat/)
-- `Option<String>` 要转 `&str`，不能直接 `.unwrap().as_str()`，因为 unwrap 会消耗所有权。可以用 `as_deref()` 转成 `Option<&str>` 再 unwrap。
 
 #### 字符串修改
 
@@ -203,6 +210,21 @@ match do_something_that_might_fail() {
 > 如果你对 _async/await_ 模型没有明确概念，可以看看[这篇文章](https://course.rs/advance/async/getting-started.html)入门。  
 > rust 提供 _async/await_ 模型和线程模型。
 
+关于 Send/Sync 可以看[这里](https://kaisery.github.io/trpl-zh-cn/ch16-04-extensible-concurrency-sync-and-send.html) 或者 [external 5.](#external)。做个总结（我想大家应该都看得懂）:
+
+| Struct              | Trait                                              |
+| ------------------- | -------------------------------------------------- |
+| Box<T>              | Send(T) -> Send, Sync(T) -> Sync                   |
+| Arc<T>              | (Send + Sync)(T) -> (Send + Sync)                  |
+| Mutex<T>            | Send(T) -> (Send + Sync)                           |
+| Rc                  | !Send + !Sync                                      |
+| Cell<T>, RefCell<T> | Send(T) -> Send, !Sync                             |
+| RwLock<T>           | (Send + Sync)(T) -> (Send + Sync), Send(T) -> Send |
+
+将这些类型列在一起，可以发现，没有任何包装可以将 `!Send` 转为 `Send`。
+
+#### tokio
+
 说到并发基本上离不开 tokio。一般加 `features = ["macros", "rt-multi-thread"]` 就够用了。
 
 - `tokio::spawn` 的 Future 是立即执行的。比 `std::thread::spawn` 更有优势。
@@ -212,6 +234,8 @@ match do_something_that_might_fail() {
 在实际并发中可能会碰到运行时才知道数量的并行 Future，而 `join!` 是编译时，tokio 的 `JoinSet` 返回值是乱序的，我们如何获取顺序的并行 Future 返回值呢？
 
 答：用 `futures` crate 的 `futures::stream::FuturesOrdered`。具体使用方法比较难找，文档和测试代码都没有。我好不容易从 Github 搜到一个[用例](https://github.com/tensorlakeai/indexify/blob/5999be8514a4a6595aea72ec790cb526cc5ff0ac/src/blob_storage/disk.rs#L48)。
+
+> 貌似也可以用最简单的 tokio::spawn 做（
 
 ### mod
 
@@ -332,6 +356,9 @@ u = "update"
 | serde_json | json       |
 | reqwest    | 简单网络   |
 | clap       | 命令行工具 |
+| once_cell[^3]  | 延迟创建 static 变量 |
+
+[^3]: `lazy_static` 已弃用，[LazyLock 未稳定](https://rustcc.cn/article?id=df28c941-5810-40df-99a4-759ea2476276)
 
 另外一些库则是我用过然后觉得好用。
 
@@ -341,6 +368,13 @@ u = "update"
 | memchr | 字符串查找 |
 | assert2 | 全兼容的好看的 assert |
 | die-exit | 错误处理并退出，[我的 fork](https://github.com/lxl66566/die/tree/master) |
+| temp_testdir | 目前我在用的临时目录实现 |
+
+### clap
+
+一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。
+
+clap 可以跟 lazy_static 一起使用，将 CLI 设为 static，可以免去到处传参之苦。带来的问题是写测试变得更加困难。
 
 ## 打包
 
@@ -432,3 +466,4 @@ GUI 是 rust 日经问题了。
 2. [Rust 中的闭包递归与 Y 组合子](https://nihil.cc/posts/rust_closure_and_y/)
 3. 随机 [Rust Quiz](https://dtolnay.github.io/rust-quiz/)：想成为语言律师吗？
 4. [为什么 Rust 需要 Pin, Unpin ？（中文翻译）](https://zhuanlan.zhihu.com/p/404818051)
+5. [如何理解 rust 中的 Sync、Send？](https://zhuanlan.zhihu.com/p/64699643)

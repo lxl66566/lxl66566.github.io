@@ -68,6 +68,8 @@ tag:
 
 ## 文件系统(fs)
 
+> 事实上文件系统的内容非常之大，这里主要还是偏向磁盘文件系统的应用方向的。
+
 ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我使用 btrfs，除此之外常用的文件系统还有 zfs, xfs, bcachefs 等。这里着重讲 btrfs。（其他的我都没用过啊
 
 > [有前辈说](https://t.me/archlinuxcn_group/2949935)了一些 zfs 的优势。
@@ -112,7 +114,7 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 还有，windows 蓝屏可能会炸硬盘，导致 windows 能读，linux 挂不上。ntfs 炸了就无脑用 chkdsk 修就行。
 
-## 链接
+### 链接
 
 分为硬链接和软链接。硬链接文件共享相同的 inode 值，指向同一份文件，因此是同步更新。软链接就是快捷方式。
 
