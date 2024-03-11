@@ -234,6 +234,7 @@ make_new_subvolume /var/log
 12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
 13. [配置蓝牙](https://wiki.archlinuxcn.org/wiki/蓝牙)，安装 `bluedevil`
 14. 关闭文件索引（臭名昭著的 baloo）：`balooctl disable`。其不仅可能导致崩溃([ref](https://zhuanlan.zhihu.com/p/493375508))，还可能造成性能损失。
+15. 更改动画速度，改得更快一点。
 
 ## 快照
 

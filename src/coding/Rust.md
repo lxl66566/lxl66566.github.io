@@ -38,12 +38,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 
 ### 如何学习
 
-[官网](https://www.rust-lang.org/zh-CN/)有详细的 QA 与你所需要的一切。资料方面，rust 的学习资料非常多，列举几个：
-
-- [Rust 语言圣经](https://course.rs/about-book.html)：圣经，**文风**上乘，**质量**高。
-- [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式入门。
-- [rust by example](https://doc.rust-lang.org/rust-by-example/index.html)：注重例子。
-- [小宏书](https://zjp-cn.github.io/tlborm/introduction.html)：专门介绍 rust macro
+[官网](https://www.rust-lang.org/zh-CN/)有详细的 QA 与你所需要的一切。资料方面，rust 的学习资料非常多，列举几个我读过的：[external - book](#external)
 
 我在学习初期，先读资料，然后尝试用 Rust 去解 leetcode 上的[^1]题目，看题解以后去[文档](https://doc.rust-lang.org/std/index.html)进一步搜关键字和用法。中期就该做点项目了，遇到不会的就去 [Telegram 群](https://t.me/rust_zh)问。
 
@@ -70,6 +65,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 1. [使用 clippy](https://code.visualstudio.com/docs/languages/rust#_linting) 或者 [bacon](https://github.com/Canop/bacon) 作为 check 指令。
 2. 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
    - <heimu>`rust-analyzer` 本身并不是很好用。经常卡。</heimu>
+3. 下载 [miri 组件](https://github.com/rust-lang/miri)：`rustup +nightly component add miri`，用于更严格的测试
 
 ## 语言基础
 
@@ -221,11 +217,15 @@ match do_something_that_might_fail() {
 | Cell<T>, RefCell<T> | Send(T) -> Send, !Sync                             |
 | RwLock<T>           | (Send + Sync)(T) -> (Send + Sync), Send(T) -> Send |
 
+> 此处暂不考虑 allocator.
+
 将这些类型列在一起，可以发现，没有任何包装可以将 `!Send` 转为 `Send`。
 
 #### tokio
 
-说到并发基本上离不开 tokio。一般加 `features = ["macros", "rt-multi-thread"]` 就够用了。
+说到并发基本上离不开 tokio。一般 `features = ["macros", "rt-multi-thread"]` 这两个是必加。
+
+关于 tokio 可以看[入门秘籍 13 章](https://rust-book.junmajinlong.com/ch100/01_understand_tokio_runtime.html)。
 
 - `tokio::spawn` 的 Future 是立即执行的。比 `std::thread::spawn` 更有优势。
 
@@ -407,19 +407,12 @@ assert 有 `assert!()` 和 `debug_assert!()` 之分，前者在 release 下仍�
 
 [assert2](https://github.com/de-vri-es/assert2-rs) 是一个全兼容 assert 的更好看的第三方库，是 [pretty_assertions](https://crates.io/crates/pretty_assertions) 进化版。
 
-### cargo test
+关于测试看[这一篇](https://course.rs/test/write-tests.html)就够了。小总结/补充：
 
-> 其实多读点源码就会了。
-
-首先看看[文档](https://doc.rust-lang.org/rust-by-example/testing.html)，了解一下不同测试的区别。
-
-然后，关于 `#[cfg(test)]` 与 `#[test]` 的区别：
-
-- `#[cfg(test)]` 指非 test 情况下**忽略代码**，不会被编译。后面一般接 `mod test{ use super::*; ...}`。
+- `#[cfg(test)]` 指非 test 情况下忽略代码，不会被编译。后面一般接 `mod test{ use super::*; ...}`。
 - `#[test]` 后接函数，名称随意，就是真正的测试函数。
 - 如果 target 是 bin，则写在 doc 中的测试不会被运行。
-
-`cargo test` 默认不打印 _stdout_ 输出，想打印需要 `cargo test -- --show-output`。
+- `cargo test` 默认不打印 _stdout_ 输出，想打印需要 `cargo test -- --show-output`。
 
 ### cargo bench
 
@@ -461,6 +454,16 @@ GUI 是 rust 日经问题了。
 我也找了一些看，包括 `rust-i18n`, `r18`, `i18n-embed`, `fluent-rs`，最后还是感觉 `rust-i18n` 文档清晰，模型简单，比较适合我的项目。
 
 ## external
+
+books:
+
+1. [Rust 语言圣经](https://course.rs/about-book.html)：圣经，**文风**上乘，**质量**高。
+2. [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式。
+3. [rust by example](https://doc.rust-lang.org/rust-by-example/index.html)：注重例子。
+4. [小宏书](https://zjp-cn.github.io/tlborm/introduction.html)：专门介绍 rust macro
+5. [Rust Atomics and Locks](https://marabos.nl/atomics/)：并发入门
+
+articles:
 
 1. [Rust Learning Smart Pointers](https://silente.top/posts/Rust-Learning-Smart-Pointers/)
 2. [Rust 中的闭包递归与 Y 组合子](https://nihil.cc/posts/rust_closure_and_y/)
