@@ -191,13 +191,30 @@ _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角�
 
 #### 问号
 
-目前本人所学到的问号主要用于 `Result` 的处理。
-`do_something_that_might_fail()?` 等价于
+问号主要用于方便的错误处理。`do_something_that_might_fail()?` 等价于
 
 ```rs
 match do_something_that_might_fail() {
   Ok(v) => v,
   Err(e) => return Err(e),
+}
+```
+
+#### impl Trait
+
+匿名泛型。
+
+```rs
+fn print(a: impl IntoIterator<Item = impl fmt::Display>) {
+    a.into_iter().for_each(|s| println!("{}", s));
+}
+// equals to:
+fn print<T>(a: T)
+where
+    T: IntoIterator,
+    T::Item: fmt::Display,
+{
+    a.into_iter().for_each(|s| println!("{}", s));
 }
 ```
 
@@ -470,3 +487,4 @@ articles:
 3. 随机 [Rust Quiz](https://dtolnay.github.io/rust-quiz/)：想成为语言律师吗？
 4. [为什么 Rust 需要 Pin, Unpin ？（中文翻译）](https://zhuanlan.zhihu.com/p/404818051)
 5. [如何理解 rust 中的 Sync、Send？](https://zhuanlan.zhihu.com/p/64699643)
+6. [Rust 的 Pin 与 Unpin](https://folyd.com/blog/rust-pin-unpin/)

@@ -159,6 +159,11 @@ const data = [
   { id: "492191", aScore: 9, bScore: 5, info: "#纯爱 #蔚蓝档案" },
   { id: "456379", aScore: 9, bScore: 7.6, info: "#雌小鬼" },
   { id: "309766", aScore: 7.4, bScore: 2 },
+  { id: "(ex)", aScore: 7, bScore: 5.7, info: "#短篇", otherlink: "https://exhentai.org/g/2390286/33fc284e28/", bak: "https://telegra.ph/木瀬樹-アイドルプランニング-epilogue-WEEKLY快楽天-2022No44-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 6, bScore: 6, info: "すずかのお勉強 #兄妹", otherlink: "https://exhentai.org/g/2386448/61f099dc55/", bak: "https://telegra.ph/ぴざぬこ-すずかのお勉強-コミックゼロス-99-中国翻訳-DL版-08-02" },
+  { id: "429399", aScore: 7.6, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/ひたかもや-ひたかも-ひみつのウィッシュリスト-ブルーアーカイブ-中国翻訳-DL版-08-02" },
+  { id: "498011", aScore: 9.2, bScore: 1, info: "#蔚蓝档案", bak: "https://telegra.ph/松竜太-ブルアカ子作り報告部-中国翻訳-進行中-08-02" },
+  { id: "428620", aScore: 4, bScore: 9.7, info: "#触手 #幻想", bak: "https://telegra.ph/imotare-moyori-アリス淫アリス-不思議の国のアリス-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
