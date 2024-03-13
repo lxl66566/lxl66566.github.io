@@ -164,6 +164,10 @@ const data = [
   { id: "429399", aScore: 7.6, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/ひたかもや-ひたかも-ひみつのウィッシュリスト-ブルーアーカイブ-中国翻訳-DL版-08-02" },
   { id: "498011", aScore: 9.2, bScore: 1, info: "#蔚蓝档案", bak: "https://telegra.ph/松竜太-ブルアカ子作り報告部-中国翻訳-進行中-08-02" },
   { id: "428620", aScore: 4, bScore: 9.7, info: "#触手 #幻想", bak: "https://telegra.ph/imotare-moyori-アリス淫アリス-不思議の国のアリス-中国翻訳-DL版-08-02" },
+  { id: "426478", aScore: 4.8, bScore: 7.9, info: "#兽耳", bak: "https://telegra.ph/ANCHOR-武藤まと-ねこみみ先輩は撮られたい-中国翻訳-DL版-08-02" },
+  { id: "426571", aScore: 6.6, bScore: 1.5, info: "#兽耳", order: 4, bak: "https://telegra.ph/のどまる日和-柚夏-もふもふる45-中国翻訳-08-02" },
+  { id: "426616", aScore: 4.6, bScore: 5.2, info: "#蔚蓝档案", bak: "https://telegra.ph/きつね屋-リーフィ-マリーのヒメゴト-ブルーアーカイブ-中国翻訳-DL版-08-02" },
+  { id: "(ex)", aScore: 5.7, bScore: 3, info: "#兄妹", bak: "https://telegra.ph/moyori-おさななじみるく-WEEKLY-快楽天-2022-No07-中国翻訳-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

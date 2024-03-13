@@ -66,6 +66,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 2. 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
    - <heimu>`rust-analyzer` 本身并不是很好用。经常卡。</heimu>
 3. 下载 [miri 组件](https://github.com/rust-lang/miri)：`rustup +nightly component add miri`，用于更严格的测试
+4. [开启注释自动换行](https://rust-lang.github.io/rustfmt/?version=v1.6.0&search=#wrap_comments)。由于其默认不开启且还停留在 unstable（五年啊！），因此需要自行写个 `rustfmt.toml` 开启。
 
 ## 语言基础
 
