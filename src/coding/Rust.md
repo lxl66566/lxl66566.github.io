@@ -419,6 +419,10 @@ cargo build --release --target x86_64-unknown-linux-musl
 
 如果只是想要用 Github CI 自动出 binary 放到 release，那么[这个 Action](https://github.com/marketplace/actions/build-and-upload-rust-binary-to-github-releases)专注于这一任务，非常好用。
 
+当然也有其他的，我以后可能会尝试：
+
+- [cross action](https://github.com/houseabsolute/actions-rust-cross)
+
 ## 测试
 
 assert 有 `assert!()` 和 `debug_assert!()` 之分，前者在 release 下仍然会进行 assert，而后者不会。

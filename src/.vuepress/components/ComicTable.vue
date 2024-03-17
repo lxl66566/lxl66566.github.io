@@ -168,6 +168,12 @@ const data = [
   { id: "426571", aScore: 6.6, bScore: 1.5, info: "#兽耳", order: 4, bak: "https://telegra.ph/のどまる日和-柚夏-もふもふる45-中国翻訳-08-02" },
   { id: "426616", aScore: 4.6, bScore: 5.2, info: "#蔚蓝档案", bak: "https://telegra.ph/きつね屋-リーフィ-マリーのヒメゴト-ブルーアーカイブ-中国翻訳-DL版-08-02" },
   { id: "(ex)", aScore: 5.7, bScore: 3, info: "#兄妹", bak: "https://telegra.ph/moyori-おさななじみるく-WEEKLY-快楽天-2022-No07-中国翻訳-08-02" },
+  { id: "500610", aScore: 5.6, bScore: 2.3, info: "#自慰", bak: "https://telegra.ph/東横サーフライダー-ふみー-こまちのきもちいい-中国翻訳-DL版-03-12" },
+  { id: "422356", aScore: 7, bScore: 3, info: "#兽耳 #妊娠 #无知", bak: "https://telegra.ph/アサツキミント-みんとあいす-にゃんここにゃんこ本気妊娠-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 7.3, bScore: 2, info: "#图集 醒醒，别做梦了", otherlink: "https://exhentai.org/g/2357614/8a7496eec8/", bak: "https://telegra.ph/Chihiro-いやそうはならんやろ-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 5.6, bScore: 9.7, info: "#学姐 #快楽天", otherlink: "https://exhentai.org/g/2360627/bccc227e62/", bak: "https://telegra.ph/ヤギコム-何だかんだ言いながら-COMIC-快楽天-2022年3月号-中国翻訳-DL版-08-02" },
+  { id: "425996", aScore: 6.4, bScore: 1.2, info: "#兽耳 #短篇", bak: "https://telegra.ph/ANCHOR-武藤まと-ちっちゃなねこみみギャルのれいにゃちゃん-中国翻訳-DL版-08-02" },
+  { id: "493797", aScore: 4.2, bScore: 5.3, info: "#蔚蓝档案" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
