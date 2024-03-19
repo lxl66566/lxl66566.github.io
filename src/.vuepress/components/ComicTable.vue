@@ -174,6 +174,12 @@ const data = [
   { id: "(ex)", aScore: 5.6, bScore: 9.7, info: "#学姐 #快楽天", otherlink: "https://exhentai.org/g/2360627/bccc227e62/", bak: "https://telegra.ph/ヤギコム-何だかんだ言いながら-COMIC-快楽天-2022年3月号-中国翻訳-DL版-08-02" },
   { id: "425996", aScore: 6.4, bScore: 1.2, info: "#兽耳 #短篇", bak: "https://telegra.ph/ANCHOR-武藤まと-ちっちゃなねこみみギャルのれいにゃちゃん-中国翻訳-DL版-08-02" },
   { id: "493797", aScore: 4.2, bScore: 5.3, info: "#蔚蓝档案" },
+  { id: "420424", aScore: 3.6, bScore: 7, info: "#兄妹 #无防备", bak: "https://telegra.ph/C100-INS-mode-天凪青磁-おやすみお兄ちゃん-中国翻訳-08-02" },
+  { id: "421533", aScore: 8.6, bScore: 7.1, info: "#玉之けだま #强迫", order: 2, bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだII-中国翻訳-無修正-DL版-08-02" },
+  { id: "422047", aScore: 0.2, bScore: 8.6, info: "#交换身体", bak: "https://telegra.ph/猫男爵-ボクがキミで-キミがボクで-COMIC-LO-2020年2月号-中国翻訳-DL版-08-02" },
+  { id: "422058", aScore: 6, bScore: 3.5, info: "#兽耳 #女仆", bak: "https://telegra.ph/C100-ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本3さつ目-中国翻訳-08-02" },
+  { id: "439492", aScore: 5.6, bScore: 1.3, info: "#蔚蓝档案", bak: "https://telegra.ph/あとりえひなた-ひなた悠-マリーとこっそり体操服えっち-ブルーアーカイブ-中国翻訳-DL版-03-07" },
+  { id: "434933", aScore: 3.2, bScore: 9, info: "#精灵 #巨乳 #触手" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
