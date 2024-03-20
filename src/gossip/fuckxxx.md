@@ -275,3 +275,10 @@ ColorOS 是目前一加的默认系统。
 
 - 首先喷 ubuntu 的 90% 都是喷 snap。确实，当我想要 btrfs defrag 时，看到一堆 readonly 的分区真是血压高。
 - 然后 ubuntu 的默认 shell 是 dash。。不支持 source 命令。
+
+## 四六级报名网有多难用
+
+- 首次打开网址黑屏，需要刷新才能显示
+- firefox 无法报名，必须使用 chrome 内核浏览器
+- 验证码输错一次，所有信息重新填
+- 报名和查分分裂，账号和密码不同

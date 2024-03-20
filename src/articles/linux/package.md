@@ -122,6 +122,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`btop` & `mission-center` / `htop` / `glances`|任务管理器，看性能，`top` 的代替|
 |`xh`|`httpie` 的代替|
 |`bat`|`cat` 的代替|
+|[`difftastic`](https://github.com/Wilfred/difftastic)|`diff` 的代替，与 git 集成|
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`atuin`](https://github.com/atuinsh/atuin) / [`mcfly`](https://github.com/cantino/mcfly)|history 搜索|

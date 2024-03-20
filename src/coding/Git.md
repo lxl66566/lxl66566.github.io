@@ -91,6 +91,9 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
    - 参考[取消转义](#取消转义)
    - [设置 autocrlf](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings)。（无论 Windows 还是 Linux 都要设！）
 4. vscode 插件：如果你使用 vscode 作为你的代码开发环境，那么推荐使用轻量级插件 `Git Graph` 以直观地查看 git 提交树与更改。
+5. 其他 git 插件
+   - [difftastic](https://difftastic.wilfred.me.uk/git.html#difftastic-by-default)
+   - [git-filter-repo](#删除大文件)
 
 [^6]: 需要使用 [Vim](./vim.md)。那篇文章有教两句 Vim 基础用法。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。
 

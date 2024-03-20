@@ -122,6 +122,20 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 git 内添加链接指向的文件需要手动 `git add -f`。
 
+## 混成器
+
+混成器是向实际屏幕绘制的抽象层，提供了接口供 UI 软件调用。更多混成器相关知识可以看 farseerfc 的两篇博文([1](https://farseerfc.me/zhs/brief-history-of-compositors-in-desktop-os.html) [2](https://farseerfc.me/zhs/compositor-in-X-and-compositext.html))。
+
+目前广泛使用的 linux 混成器有 X11 和 Wayland，其中 X11 已宣布停止维护。
+
+### 为什么我不使用 Wayland？
+
+现在谈到混成器，Wayland 几乎成为了“政治正确”的代言，许多发行版也将默认混成器换为 Wayland（例如 Fedora）。但是我一直都是坚定的 X11 人。
+
+- 最让我无法接受的是 Wayland 协议下无法获取当前窗口标题，这直接导致了 [activitywatch 无法使用](https://github.com/ActivityWatch/activitywatch/issues/92)。
+- 某些软件的 Wayland 协议适配差，例如 _腾讯会议_（摄像头无法使用）。
+  - 远程桌面基本上用不了。([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=wayland+远程桌面))
+
 ## 服务
 
 与 windows _service_ 的概念相通。有的 debian 系 distro 使用 `service` 指令，而 archlinux 使用 `systemctl` 进行服务管理。[archwiki](https://wiki.archlinux.org/title/systemd)。现在 `systemctl` 才是主流。

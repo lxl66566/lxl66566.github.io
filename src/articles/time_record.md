@@ -17,7 +17,7 @@ tag:
   - C# 写的，windows 下专用的软件。
 - 在 20220729 了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。
   - 跨平台的时长记录软件，python 写的，基于浏览器 UI。
-  - 在 linux wayland 下表现差。~~我为了计时长特意换到 X11~~
+  - 在 linux wayland 下[表现差](https://github.com/ActivityWatch/activitywatch/issues/92)。~~我为了计时长特意换到 X11~~
 
 两者均为开源软件。
 
