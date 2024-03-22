@@ -180,6 +180,7 @@ const data = [
   { id: "422058", aScore: 6, bScore: 3.5, info: "#兽耳 #女仆", bak: "https://telegra.ph/C100-ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本3さつ目-中国翻訳-08-02" },
   { id: "439492", aScore: 5.6, bScore: 1.3, info: "#蔚蓝档案", bak: "https://telegra.ph/あとりえひなた-ひなた悠-マリーとこっそり体操服えっち-ブルーアーカイブ-中国翻訳-DL版-03-07" },
   { id: "434933", aScore: 3.2, bScore: 9, info: "#精灵 #巨乳 #触手" },
+  { id: "419239", aScore: 4.6, bScore: 6, info: "#兄妹", order: 3, bak: "https://telegra.ph/タイガー-ゆーわくいもうと-3話-おもちゃ遊び-コミックリブート-Vol09-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
