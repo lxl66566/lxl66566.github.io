@@ -221,6 +221,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [Nazo Game](https://nazo.one-story.cn/)：网页解谜，一般
 - [Hackergame 2023](https://hack.lug.ustc.edu.cn)
 - [正则表达式小游戏](https://regexcrossword.com/)
+- [playok 在线围棋](https://www.playok.com/zh/go)：比较良心的在线围棋，免注册。但是没有自动点目。
 
 资源：
 
