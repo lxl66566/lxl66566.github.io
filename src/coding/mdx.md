@@ -9,9 +9,11 @@ tag:
 
 # MDX
 
-试用 MDX 的起因是想尝试基于 MDX 的文档，因为据说其与 vuepress 一样具有很高的可扩展性。但 [mdxjs](https://mdxjs.com/) 的文档非常傻逼，因此我将尝试按照我自己的观点来讲 MDX。
+试用 MDX 的起因是想尝试基于 MDX 的文档，因为据说其与基于 vue 的文档一样具有很高的可扩展性。但 [mdxjs](https://mdxjs.com/) 的文档[非常傻逼](https://t.me/withabsolutex/1501)，因此我将尝试按照我自己的观点来讲 MDX。
 
 说实话，MDX 里面的东西太少，甚至可能不足以开一篇博文专门介绍。。这个页面大概只是我的怨念凝聚吧。
+
+MDX 用的是类似 React 的语法。但是 React 本身并不够优秀（例如，没有原生 scoped css。[其他群友锐评](https://t.me/absxsgroup/6120)）。
 
 ## 几句话
 

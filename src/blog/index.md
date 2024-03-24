@@ -22,9 +22,9 @@ category:
 
 ## 文章
 
-1. [遇到的问题](./withvuepress2.md)
-2. [博客日志](./log.md)
-3. [博客日程](./todo.md)
+1. [**遇到的问题**](./withvuepress2.md)
+2. [**博客日志**](./log.md)
+3. [**博客日程**](./todo.md)
 
 ## 前言
 
@@ -32,17 +32,19 @@ category:
 
 建博客时我还是个小白，对前端与框架一窍不通，因此在搭建博客过程中遇到了很多麻烦。有些在现在的我看来已经不是问题，但仍有问题悬而未决。
 
-设想阶段，有很多博客工具可供选择，但我最终选择了 vuepress。个中缘由嘛…
+设想阶段，有[很多博客工具可供选择](#工具选择)，我最终选择了 vuepress。个中缘由嘛…
 
 1. ~~根本没了解多少博客工具啊！~~
-2. vuepress 的简洁和自定义程度是我欣赏的一个点，因为我并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>。
+2. （原版）vuepress 的简洁和自定义程度是我较为欣赏的一个点，因为我并不那么关注美感<span class="heimu" title="你知道的太多了">说实话我对我的审美本身就没什么自信</span>。
    - vuepress 官方也作出了[为什么推荐自己的说明](https://v2.vuepress.vuejs.org/zh/guide/introduction.html#为什么不是)，但对一个萌新而言这些理由~~显然看不懂~~…
 
 然后到了搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我（还不会用 google）被网上教程（多为 js 写成）与官方文档的 ts 搞得不明所以<span class="heimu" title="你知道的太多了">官方文档肯定正确，但是官方的说明显然不是面向新手的</span>。
 
-刚开始三个月写得不多。2022 暑假大爆发，写了很多文章，也踩了很多坑。之后一直保持“平常做点记录，偶尔一次大更新”的状态。
+刚开始三个月写得不多。2022 暑假大爆发，写了很多文章，也踩了很多坑。之后一直保持“平常做点记录，偶尔一次大更新”的状态。再后来 20230712 经历了依赖爆炸，于是换了主题。
 
-再后来 20230712 经历了依赖爆炸，于是换了主题。
+本人对存储空间敏感，因此博客的图片很少（越后期新增越少），且所有图片均压缩。
+
+## 友链
 
 我写博客并在朋友间分享这件事也带动了朋友们写博客——
 
@@ -52,8 +54,6 @@ category:
 - 丁[^4]和我一样用 VuePress Theme Hope
 
 不知不觉直接或间接地带动了这么多人写，连我自己都觉得惊讶。
-
-本人对存储空间敏感，因此博客的图片很少（越后期新增越少），且所有图片均压缩。
 
 [^1]: [dream_oyh 的 blog](https://dream-oyh.github.io/)
 [^2]: [Lilic 的博客](https://lilic2233.github.io/)
@@ -65,14 +65,15 @@ category:
 
 1. 静态博客，排除 Wordpress
 2. 需要足够的自定义化（手搓组件的那种），排除 mdbook & Gitbook
+   - 目前自定义化一般就 vue 组件和 [MDX](../coding/mdx.md) <heimu>暂先排除 svetlepress（</heimu>，后者我只能说是真的难用。。
 3. 一些个人喜好，排除 docsify, Docusaurus
 4. 尝试过迁移 Vitepress [失败](./withvuepress2.md#试图迁移至-vitepress)
 5. 还有一些等于自己写前端的
-   - nextra & Rspress[^6]：通过 mdx 加扩展性，上手更难
+   - nextra & Rspress[^6]：通过 [mdx](../coding/mdx.md) 加扩展性，上手更难
    - lume & zola：Single binary
-     - zola 用的类似 django 的语法
+     - zola 用的[类似 django 的语法](https://www.getzola.org/documentation/getting-started/overview/)
 
-[^6]: Rspress 我尝试过一段时间，[我的评价是。。](https://t.me/withabsolutex/1501)
+[^6]: Rspress 我尝试过一段时间，我的评价是。。[1](https://t.me/withabsolutex/1501) [2](https://t.me/withabsolutex/1526)
 
 那还剩下：
 

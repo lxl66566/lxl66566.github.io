@@ -70,6 +70,10 @@ tag:
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
 - [ ] ~~windows 工具包: alias, ls,~~ use bash instead.
 - [ ] yakuake on windows
+- [ ] 更好的静态博客/文档框架
+  - 数据是 markdown 的一部分，不是组件的一部分
+  - JSX/TSX 是好东西
+  - 组件与作用域
 
 ### RIIR
 

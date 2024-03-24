@@ -181,6 +181,13 @@ const data = [
   { id: "439492", aScore: 5.6, bScore: 1.3, info: "#蔚蓝档案", bak: "https://telegra.ph/あとりえひなた-ひなた悠-マリーとこっそり体操服えっち-ブルーアーカイブ-中国翻訳-DL版-03-07" },
   { id: "434933", aScore: 3.2, bScore: 9, info: "#精灵 #巨乳 #触手" },
   { id: "419239", aScore: 4.6, bScore: 6, info: "#兄妹", order: 3, bak: "https://telegra.ph/タイガー-ゆーわくいもうと-3話-おもちゃ遊び-コミックリブート-Vol09-中国翻訳-DL版-08-02" },
+  { id: "398593", aScore: 2, bScore: 9.1, info: "#触手 #哥布林", bak: "https://telegra.ph/konnyaku-VR一ノ瀬姉妹-中国翻訳-08-02" },
+  { id: "416917", aScore: 5.4, bScore: 4.3, info: "#全彩 #拘束", bak: "https://telegra.ph/こんにゃく-メイド和希先輩-中国翻訳-進行中-08-02" },
+  { id: "415689", aScore: 8.6, bScore: 7.5, info: "#さわやか鮫肌", order: 3, bak: "https://telegra.ph/C100-ドットエイト-さわやか鮫肌-ビカラちゃんといちゃいちゃする本3冊目-グランブルーファンタジー-中国翻訳-08-02" },
+  { id: "416377", aScore: 5.3, bScore: 6.8, info: "", bak: "https://telegra.ph/林檎のなる木-木瀬樹-はじめて名前で-To-LOVEる--とらぶる--中国翻訳-DL版-08-02" },
+  { id: "478383", aScore: 7.3, bScore: 6.4, info: "#名取纱那", bak: "https://telegra.ph/うつすみおんせん-空住キオ-ってなんでせんせえが-名取さな-中国翻訳-DL版-08-02" },
+  { id: "416810", aScore: 6.7, bScore: 2.2, info: "#纯爱", bak: "https://telegra.ph/秋葉原同人祭-第3回-東横サーフライダー-ふみー-ぼくたちにはまだ知らないトコがある-中国翻訳-08-02" },
+  { id: "417457", aScore: 7.8, bScore: 2.6, info: "#玉之けだま #全彩", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-甘リリス-中国翻訳-無修正-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

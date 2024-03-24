@@ -41,7 +41,7 @@ tag:
 <!-- prettier-ignore -->
 |级别|名字|
 |---|---|
-|T0|田屋沼屋(たぬま) 毛玉牛乳(玉之けだま)|
+|T0|田屋沼屋(たぬま) 毛玉牛乳(玉之けだま) さわやか鮫肌|
 
 <script setup lang="ts">
 import ComicTable from "@ComicTable";
