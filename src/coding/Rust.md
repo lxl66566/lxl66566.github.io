@@ -226,14 +226,14 @@ where
 
 关于 Send/Sync 可以看[这里](https://kaisery.github.io/trpl-zh-cn/ch16-04-extensible-concurrency-sync-and-send.html) 或者 [external 5.](#external)。做个总结（我想大家应该都看得懂）:
 
-| Struct              | Trait                                              |
-| ------------------- | -------------------------------------------------- |
-| Box<T>              | Send(T) -> Send, Sync(T) -> Sync                   |
-| Arc<T>              | (Send + Sync)(T) -> (Send + Sync)                  |
-| Mutex<T>            | Send(T) -> (Send + Sync)                           |
-| Rc                  | !Send + !Sync                                      |
-| Cell<T>, RefCell<T> | Send(T) -> Send, !Sync                             |
-| RwLock<T>           | (Send + Sync)(T) -> (Send + Sync), Send(T) -> Send |
+| Struct                  | Trait                                              |
+| ----------------------- | -------------------------------------------------- |
+| `Box<T>`                | Send(T) -> Send, Sync(T) -> Sync                   |
+| `Arc<T>`                | (Send + Sync)(T) -> (Send + Sync)                  |
+| `Mutex<T>`              | Send(T) -> (Send + Sync)                           |
+| `Rc`                    | !Send + !Sync                                      |
+| `Cell<T>`, `RefCell<T>` | Send(T) -> Send, !Sync                             |
+| `RwLock<T>`             | (Send + Sync)(T) -> (Send + Sync), Send(T) -> Send |
 
 > 此处暂不考虑 allocator.
 

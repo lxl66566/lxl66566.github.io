@@ -184,6 +184,7 @@ ColorOS 是目前一加的默认系统。
 - Github PR 的 CI 如果 failed 了，并不会通知发起者。
 - Github 首次 PR 的 workflow 需要手动验证([src](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks))。。。不是，你们 CI 改没改 `.github` 不能特判一下？非得一棒子打死？
 - Github 在 commit message 中提到了其他仓库的 issue，然后删除 + force push 后，原先的 refer 不会移除。也就是说，我进行的 fixup 行为把别人 refer 了两次，感觉像 spam 了。。
+- Github 移动端，右上角的 `...` 总是点不开
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 
@@ -276,9 +277,11 @@ ColorOS 是目前一加的默认系统。
 - 首先喷 ubuntu 的 90% 都是喷 snap。确实，当我想要 btrfs defrag 时，看到一堆 readonly 的分区真是血压高。
 - 然后 ubuntu 的默认 shell 是 dash。。不支持 source 命令。
 
-## 四六级报名网有多难用
+## neea 的网站有多难用
 
 - 首次打开网址黑屏，需要刷新才能显示
-- firefox 无法报名，必须使用 chrome 内核浏览器
+- 神奇的浏览器兼容性：
+  - 四六级 firefox 无法报名，必须使用 chrome 内核浏览器
+  - jlpt edge 无法预订座位，更换 firefox 后解决
 - 验证码输错一次，所有信息重新填
 - 报名和查分分裂，账号和密码不同
