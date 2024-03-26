@@ -188,6 +188,7 @@ const data = [
   { id: "478383", aScore: 7.3, bScore: 6.4, info: "#名取纱那", bak: "https://telegra.ph/うつすみおんせん-空住キオ-ってなんでせんせえが-名取さな-中国翻訳-DL版-08-02" },
   { id: "416810", aScore: 6.7, bScore: 2.2, info: "#纯爱", bak: "https://telegra.ph/秋葉原同人祭-第3回-東横サーフライダー-ふみー-ぼくたちにはまだ知らないトコがある-中国翻訳-08-02" },
   { id: "417457", aScore: 7.8, bScore: 2.6, info: "#玉之けだま #全彩", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-甘リリス-中国翻訳-無修正-DL版-08-02" },
+  { id: "499898", aScore: 8.4, bScore: 3.7, info: "#蔚蓝档案", bak: "https://telegra.ph/きのこむ神-きのこむし-ふたりは甘美な夜の秘宝-ブルーアーカイブ-中国翻訳-03-20" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

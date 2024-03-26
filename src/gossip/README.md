@@ -29,3 +29,4 @@ category:
 11. [鲜鸡汤](./chicken_soup.md)
 12. [「零化（Zero Fill）」](./zero_fill.md)
 13. [脑洞](./brainhole.md)
+14. [找实习经历](./interview.md)

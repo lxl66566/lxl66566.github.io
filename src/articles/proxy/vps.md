@@ -50,6 +50,7 @@ tag:
 |[哇沃](https://zhujiwiki.com/36281/)|HK|￥80/yr|2TB 500Mbps|1GB|20GB|
 |[CHurros](https://zhujiwiki.com/36298/)|JP|￥6.3/mo|100GB 100Mbps|1GB|5GB|
 |~~[AKileCloud](https://akile.io/shop/server?type=traffic&areaId=3&nodeId=80&planId=448)~~ 无了|HK|￥60/yr|1TB 5000Mbps|1GB|5GB|
+|[DigitalVirt](https://zhujiwiki.com/36771/)|HK|￥95/yr|1TB 200Mbps|1GB|10GB|
 
 一般价
 
@@ -77,6 +78,7 @@ tag:
 - [ping.pe](https://ping.pe/#)：连通性
 - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
 - `curl -sL network-speed.xyz | bash -s -- -r china` 也可以国内测速
+- <https://bgp.tools/>，ASN 信息
 
 ### SSH
 
