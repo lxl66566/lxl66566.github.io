@@ -1,6 +1,6 @@
 <template>
   <div>
-    ——<time :datetime="formattedDate">{{ date }}</time>
+    ——<time :datetime="formattedDate">{{ formattedDate }}</time>
   </div>
 </template>
 

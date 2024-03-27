@@ -23,7 +23,9 @@ gal 对于培养语感和听力来说挺有帮助。
 
 - 単語：
   - Anki deck：[JLPT (N1 ～ N5) 日语 中文](https://ankiweb.net/shared/info/34073638) | [Open Anki JLPT](https://ankiweb.net/shared/decks?search=Open%20anki%20JLPT)
-- 文法：[毎日のんびり日本語教師](https://nihongonosensei.net/)
+- 文法：
+  - Anki deck：[蓝宝书](https://ankiweb.net/shared/info/1959548600)
+  - [毎日のんびり日本語教師](https://nihongonosensei.net/)
 - 例文：[例文買取センター](https://reibuncnt.jp/)
 - 百科：[コトバンク](https://kotobank.jp/)
 - 见 [galgame](../../hobbies/galgame.md)
@@ -86,6 +88,7 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 - [ごくありふれた](https://ja.hinative.com/questions/8252283)
 - [いわゆる vs すなわち](https://ja.hinative.com/questions/23858327)
 - [「薄い色」「浅い色」「淡い色」の違い](https://www.youtube.com/watch?v=OXufBWERqhM)
+- 自动词使役对象用「を」，他动词使役对象用「に」
 
 ## 说两句
 
