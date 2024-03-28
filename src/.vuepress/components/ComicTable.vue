@@ -189,6 +189,9 @@ const data = [
   { id: "416810", aScore: 6.7, bScore: 2.2, info: "#纯爱", bak: "https://telegra.ph/秋葉原同人祭-第3回-東横サーフライダー-ふみー-ぼくたちにはまだ知らないトコがある-中国翻訳-08-02" },
   { id: "417457", aScore: 7.8, bScore: 2.6, info: "#玉之けだま #全彩", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-甘リリス-中国翻訳-無修正-DL版-08-02" },
   { id: "499898", aScore: 8.4, bScore: 3.7, info: "#蔚蓝档案", bak: "https://telegra.ph/きのこむ神-きのこむし-ふたりは甘美な夜の秘宝-ブルーアーカイブ-中国翻訳-03-20" },
+  { id: "407992", aScore: 7.8, bScore: 7.2, info: "#性转", bak: "https://telegra.ph/てとが-神様に女の子にされたのでセックスして呪いを解こうと思います-中国翻訳-08-02" },
+  { id: "408183", aScore: 4.8, bScore: 1.7, info: "#雌小鬼 #泳衣", bak: "https://telegra.ph/うなぎやさん-花宮なつか-そくおちめすがきちゃん-中国翻訳-DL版-08-02" },
+  { id: "501723", aScore: 4, bScore: 6.5, info: "#肉便器", bak: "https://telegra.ph/桜水晶-夜桜ソウキ-エピソードオブティナ-III-清楚な委員長がスク水着て電車やトイレで可哀想な事されるお話-中国翻訳-DL版-03-20" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
