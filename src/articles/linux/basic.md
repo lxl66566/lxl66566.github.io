@@ -208,3 +208,4 @@ rsync 用于主机之间的文件传输，带有断点恢复等功能，吊打 s
 4. A chapter of [PKGBUILD-cookbook](https://github.com/asukaminato0721/PKGBUILD-cookbook/blob/master/launch.md)
 5. [ZFS ── 瑞士军刀般的文件系统](https://www.eaimty.com/2020/zfs-file-system/)
 6. [使用 btrfs 提升 HDF5 透明压缩百倍性能](https://www.ducksoft.site/深度学习/fuck-hdf5-compression-using-btrfs.html)
+7. 深入原理：[Btrfs vs ZFS 实现 snapshot 的差异](https://farseerfc.me/zhs/btrfs-vs-zfs-difference-in-implementing-snapshots.html)

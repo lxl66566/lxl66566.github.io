@@ -60,6 +60,7 @@ tag:
 - [moonbit](https://www.moonbitlang.cn/)：从 rust 中学了很多的语言
 - [odin](https://odin-lang.org/docs/overview/)：追求简单的、像 Go 的语言
 - [C3](https://c3-lang.org/)：C 的改进，解决 C 痛点
+- [flix](https://flix.dev/)：JVM 上的、拥有许多函数式风格的语言。
 
 </dtls>
 
