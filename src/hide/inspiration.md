@@ -74,10 +74,12 @@ tag:
   - 数据是 markdown 的一部分，不是组件的一部分
   - JSX/TSX 是好东西
   - 组件与作用域
+- [ ] fuck, delete it! (windows)
 
 ### RIIR
 
 - [ ] scoop
+- [ ] bpm
 
 ### Android
 

@@ -311,6 +311,13 @@ with suppress(Exception):
   - 也有一个 `functools.cache`，== `lru_cache(maxsize=None)` ([ref](https://stackoverflow.com/questions/70301475/))
 - [`dataclasses.dataclass`](https://docs.python.org/zh-cn/3/library/dataclasses.html)：自动生成函数，简化开发。
 
+### match
+
+python 在 3.10 引入了 `match` 语法，并且可以在 case 中接 if。但是 match 有两个缺点：
+
+1. 3.10 对保守派是很高的要求。对于一些老库来说，为了兼容性考虑，它们往往不会选择 `match`。
+2. match 和 case 需要两个缩进，而 `if-elif` 链只需要一个缩进。
+
 ## 自带模块
 
 这里的模块都不需要额外安装。python 自带。

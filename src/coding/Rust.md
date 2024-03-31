@@ -62,10 +62,13 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 还有一些能够优化开发体验的选项：
 
-1. [使用 clippy](https://code.visualstudio.com/docs/languages/rust#_linting) 或者 [bacon](https://github.com/Canop/bacon) 作为 check 指令。
-2. 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
+1. [使用 clippy](https://code.visualstudio.com/docs/languages/rust#_linting) 作为 check 指令。
+2. 安装额外的 cargo 组件：
+   1. [miri](https://github.com/rust-lang/miri)：`rustup +nightly component add miri`，用于更严格的测试
+   2. [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)：Find out what takes most of the space in your executable.
+   3. [cargo-wizard](https://github.com/Kobzol/cargo-wizard)：提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。
+3. (Optional) 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
    - <heimu>`rust-analyzer` 本身并不是很好用。经常卡。</heimu>
-3. 下载 [miri 组件](https://github.com/rust-lang/miri)：`rustup +nightly component add miri`，用于更严格的测试
 4. [开启注释自动换行](https://rust-lang.github.io/rustfmt/?version=v1.6.0&search=#wrap_comments)。由于其默认不开启且还停留在 unstable（五年啊！），因此需要自行写个 `rustfmt.toml` 开启。
 
 ## 语言基础
@@ -407,6 +410,8 @@ opt-level = "z"
 lto = true
 panic = "abort"
 ```
+
+或者也可以看看 [cargo-wizard](#开发)。
 
 ### 交叉编译
 

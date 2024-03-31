@@ -192,6 +192,22 @@ const data = [
   { id: "407992", aScore: 7.8, bScore: 7.2, info: "#性转", bak: "https://telegra.ph/てとが-神様に女の子にされたのでセックスして呪いを解こうと思います-中国翻訳-08-02" },
   { id: "408183", aScore: 4.8, bScore: 1.7, info: "#雌小鬼 #泳衣", bak: "https://telegra.ph/うなぎやさん-花宮なつか-そくおちめすがきちゃん-中国翻訳-DL版-08-02" },
   { id: "501723", aScore: 4, bScore: 6.5, info: "#肉便器", bak: "https://telegra.ph/桜水晶-夜桜ソウキ-エピソードオブティナ-III-清楚な委員長がスク水着て電車やトイレで可哀想な事されるお話-中国翻訳-DL版-03-20" },
+  { id: "406564", aScore: 4, bScore: 4.8, info: "#受孕", order: 2, bak: "https://telegra.ph/みつ目のみつ豆-よいころがし-私だって男の人を惹きつけたい-2-中国翻訳-08-02" },
+  { id: "406431", aScore: 3.5, bScore: 6.6, info: "#浴衣 #3P", order: 2, bak: "https://telegra.ph/C97-知恵の原石-あずせ-アクサンシルコンフレックス2-アイドルマスター-シンデレラガールズ-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 8, bScore: 7.2, info: "#兄妹 手鞠 妹とロックダウン", bak: "https://telegra.ph/COMIC120-squeezecandyheaven-いちはや-妹とロックダウンhell-中国翻訳-08-02-2" },
+  { id: "405898", aScore: 2, bScore: 8.5, info: "#脑洞 #设定集 殺人兔娘", bak: "https://telegra.ph/殺人ウサギガールvsシリーズ-Chinese-08-02" },
+  { id: "405660", aScore: 9.9, bScore: 1.8, info: "#全彩 #舰队Collection", bak: "https://telegra.ph/Lapin-gris-灰葉-ひびきとあさまで-艦隊これくしょん-艦これ--中国翻訳-08-02" },
+  { id: "404748", aScore: 2, bScore: 9, info: "#强制 #监禁", bak: "https://telegra.ph/OXIDE-Lab-おきえん-鬼哭--鬼姫監禁淫蟲寄生--中国翻訳-DL版-08-02" },
+  { id: "404600", aScore: 6.7, bScore: 2.4, info: "#兽耳", bak: "https://telegra.ph/こしの-迷い猫の恩返しさんっ-COMIC-BAVEL-2022年7月号-中国翻訳-DL版-08-02" },
+  { id: "404529", aScore: 3, bScore: 7, info: "#全彩 #附身 #百合", bak: "https://telegra.ph/憑依はいる抜け道-あるべんと椎名悠輝-憑依汚染で百合えっち-中国翻訳-08-02" },
+  { id: "404033", aScore: 4.8, bScore: 6.7, info: "", bak: "https://telegra.ph/天気輪-甘露アメ-エンマは地獄のイき人形-中国翻訳-DL版-08-02" },
+  { id: "403610", aScore: 5, bScore: 3.6, info: "#眼镜娘 #兄妹", bak: "https://telegra.ph/きのもと杏-妹が一人で遊んでいたので-COMIC-LO-2022年5月号-中国翻訳-DL版-08-02" },
+  { id: "403386", aScore: 4.6, bScore: 4, info: "#fate #伊莉雅", bak: "https://telegra.ph/こいんとす-杏飴-イリヤともーっとキモチよくなろっ-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-08-02" },
+  { id: "(ex)", aScore: 8.2, bScore: 4.6, info: "#全彩 #爸爸活", otherlink: "https://exhentai.org/g/2221197/29a070a3a1/", bak: "https://telegra.ph/文月会-ぱぱかつドーるっ-その着せ替え人形は恋をする-中国翻訳-08-02" },
+  { id: "402975", aScore: 8.8, bScore: 9, info: "#拘束 #木瀬樹", bak: "https://telegra.ph/林檎のなる木-木瀬樹-知りたくなかった-中国翻訳-DL版-08-02" },
+  { id: "402847", aScore: 8.1, bScore: 7.6, info: "#合集 #兽耳", bak: "https://telegra.ph/C97-のどまる日和-柚夏-もっともふもふる総集編-中国翻訳-08-02" },
+  { id: "480058", aScore: 9, bScore: 7.5, info: "#合集 #兽耳 #纯爱" },
+  { id: "503344", aScore: 5.4, bScore: 4.5, info: "#蔚蓝档案 #媚药", bak: "https://telegra.ph/C103-ウサギBOSS-神奈弥沙-悟リの教示者梅花園-ブルーアーカイブ-中国翻訳-03-31" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
