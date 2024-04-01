@@ -437,7 +437,7 @@ pytest 有内置 tmp_dir。
 
 ### pandas
 
-简单的 xlsx 处理库。建议查看 [external 5. Fastest Way to Read Excel in Python](#external) 获取更多信息。
+数据表处理库，一般用来处理 ms 那堆玩意。
 
 ```py
 import pandas as pd
@@ -447,6 +447,12 @@ for name in file.sheet_names:
     for _, row in sheet.iterrows():
         print(row["姓名"])
 ```
+
+我个人是不喜欢用 pandas 的，因为它的语法过于晦涩诡异[^3]。如果需要读取 csv/xlsx，可以查看 [external 5. Fastest Way to Read Excel in Python](#external) 选择其他工具。
+
+[^3]: [我的一些抱怨](https://t.me/withabsolutex/1530)；如果要看优美的表处理语法，建议看看 [Pony ORM](https://ponyorm.org/)。
+
+一行代码更换 pandas 后端，可以大幅提升读取速度。([src](https://datapythonista.me/blog/how-fast-can-we-process-a-csv-file))
 
 ## 测试
 

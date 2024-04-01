@@ -123,6 +123,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`xh`|`httpie` 的代替|
 |`bat`|`cat` 的代替|
 |[`difftastic`](https://github.com/Wilfred/difftastic)|`diff` 的代替，与 git 集成|
+|[`mtr`](https://github.com/traviscross/mtr)|`traceroute` 的代替|
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`atuin`](https://github.com/atuinsh/atuin) / [`mcfly`](https://github.com/cantino/mcfly)|history 搜索|
@@ -377,6 +378,8 @@ atuin import auto
 基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行。
 
 更多 keybindings 请前往 [doc](https://docs.atuin.sh/configuration/key-binding/#atuin-ui-shortcuts).
+
+关于删除条目的讨论：[issue](https://github.com/atuinsh/atuin/issues/592)
 
 ### [neovim](../../coding/vim.md)
 

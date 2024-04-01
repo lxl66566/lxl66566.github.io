@@ -58,7 +58,10 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 ### 开发
 
-然后我使用 [vscode](./vscode.md) 作为 IDE。只需安装 `rust-analyzer` 插件即可。
+然后我使用 [vscode](./vscode.md) 作为 IDE。安装插件：
+
+- `rust-analyzer`，开发必备
+- (optional) `Rust Feature Toggler`，方便切换 features
 
 还有一些能够优化开发体验的选项：
 
@@ -67,9 +70,10 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
    1. [miri](https://github.com/rust-lang/miri)：`rustup +nightly component add miri`，用于更严格的测试
    2. [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)：Find out what takes most of the space in your executable.
    3. [cargo-wizard](https://github.com/Kobzol/cargo-wizard)：提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。
+   4. [cargo-expand](https://github.com/dtolnay/cargo-expand)：展开宏
 3. (Optional) 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
    - <heimu>`rust-analyzer` 本身并不是很好用。经常卡。</heimu>
-4. [开启注释自动换行](https://rust-lang.github.io/rustfmt/?version=v1.6.0&search=#wrap_comments)。由于其默认不开启且还停留在 unstable（五年啊！），因此需要自行写个 `rustfmt.toml` 开启。
+4. [开启注释自动换行](https://rust-lang.github.io/rustfmt/?version=v1.6.0&search=#wrap_comments)。由于其默认不开启且还停留在 unstable（五年啊！），因此需要自行写个 `rustfmt.toml` 开启。查看 [cargo](#cargo) 小节获取更多 rustfmt 信息。
 
 ## 语言基础
 
@@ -363,6 +367,10 @@ r = "run"
 u = "update"
 ```
 
+### fmt
+
+在 `rustfmt.toml` 里写代码的格式化选项。我一般只开 `wrap_comments`，不过也可以直接抄[前辈的](https://github.com/compio-rs/winio/blob/master/rustfmt.toml)。
+
 ## 库
 
 多看热门项目用的库，是发现好用的库的好方法。还有一个方法是水群。
@@ -455,8 +463,10 @@ GUI 是 rust 日经问题了。
 
 一些 GUI 框架：
 
-- [slint](https://github.com/slint-ui/slint)
-- [native-windows-gui](https://github.com/gabdube/native-windows-gui)
+- [slint](https://github.com/slint-ui/slint)：嗯写 DSL
+- [native-windows-gui](https://github.com/gabdube/native-windows-gui)：非跨平台
+- [dioxus](https://github.com/DioxusLabs/dioxus)：release 0.5.0 时火了一把
+- [winio](https://github.com/compio-rs/winio)：~~莓软的愚人节玩笑~~
 
 我早期尝试过一下 iced，用不明白，不用了。
 

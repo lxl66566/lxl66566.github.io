@@ -75,6 +75,7 @@ tag:
   - JSX/TSX 是好东西
   - 组件与作用域
 - [ ] fuck, delete it! (windows)
+- [ ] rust crate: select by arch
 
 ### RIIR
 
