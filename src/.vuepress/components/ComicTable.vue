@@ -208,6 +208,9 @@ const data = [
   { id: "402847", aScore: 8.1, bScore: 7.6, info: "#合集 #兽耳", bak: "https://telegra.ph/C97-のどまる日和-柚夏-もっともふもふる総集編-中国翻訳-08-02" },
   { id: "480058", aScore: 9, bScore: 7.5, info: "#合集 #兽耳 #纯爱" },
   { id: "503344", aScore: 5.4, bScore: 4.5, info: "#蔚蓝档案 #媚药", bak: "https://telegra.ph/C103-ウサギBOSS-神奈弥沙-悟リの教示者梅花園-ブルーアーカイブ-中国翻訳-03-31" },
+  { id: "315375", aScore: 5.7, bScore: 6.4, info: "#兽耳 #催眠" },
+  { id: "502827", aScore: 9.3, bScore: 9.4, info: "#生肉 #兄妹" },
+  { id: "500309", aScore: 8.7, bScore: 8.9, info: "#惩罚游戏 #师生" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

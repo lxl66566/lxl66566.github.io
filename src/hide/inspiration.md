@@ -76,6 +76,7 @@ tag:
   - 组件与作用域
 - [ ] fuck, delete it! (windows)
 - [ ] rust crate: select by arch
+- [ ] 代理
 
 ### RIIR
 

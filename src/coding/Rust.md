@@ -145,6 +145,8 @@ let num : Vec<i128> = s.trim().split(" ")
 
 _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角。_
 
+<ZoomedImg alt="Rust string meme" src="/images/coding/rust/string_meme.jpg" scale="80%" />
+
 最主要的就是 `&str` 和 `String` 两种了，前者没有所有权，后者有。
 
 - Rust 字符串默认支持分行。使用 \ 可以使多行字符串不换行。

@@ -71,11 +71,11 @@ tag:
 LLM：Large Language Models，大型语言模型。下述均为本人总结，可免费使用。
 
 - [BAI Chat](https://chatbot.theb.ai/)：GPT-3.5 模型。也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)。
-- [new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。坏处是被微软大削弱后，不会帮你写作业（
-  - 需要使用科学上网，若自动重定向到 `(cn).bing.com` 则需要：检查代理，清除 Cookies，并在 microsoft 账户设置中关闭严格搜索。
+- ~~[new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。~~ 已更名为 Copilot 并集成进 windows 11。
+  - ~~需要使用科学上网，若自动重定向到 `(cn).bing.com` 则需要：检查代理，清除 Cookies，并在 microsoft 账户设置中关闭严格搜索。~~
 - [Claude](https://www.anthropic.com/product)：据说是 OpenAI 独立出来的员工创办的。无法直接使用（需要美国身份），请[通过 slack bot 使用](https://slackbot.anthropic.com/slack/install)。
 - [wrtn.ai](https://wrtn.ai/)：韩国网站，免费的 GPT-4，无需科学上网；支持画图，但新政策不支持中文，需要先翻译再使用。
-- [Bard](bard.google.com)：Google 官方提供的 LLM。目前还在 Beta。
+- ~~[Bard](bard.google.com)：Google 的 LLM。~~ 已更名为 [Gemini](https://gemini.google.com/app)。
 - [perplexity](https://www.perplexity.ai/)
 - 搜索型工具，给出来源
   - [phind](https://www.phind.com/)：搜索编程有关问题
