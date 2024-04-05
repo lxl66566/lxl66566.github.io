@@ -43,6 +43,13 @@ tag:
 |---|---|
 |T0|田屋沼屋(たぬま) 毛玉牛乳(玉之けだま) さわやか鮫肌|
 
+### 剧情
+
+<!-- prettier-ignore -->
+|级别|名字|
+|---|---|
+|T1|いちはや|
+
 <script setup lang="ts">
 import ComicTable from "@ComicTable";
 </script>

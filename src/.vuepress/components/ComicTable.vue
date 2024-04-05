@@ -211,6 +211,17 @@ const data = [
   { id: "315375", aScore: 5.7, bScore: 6.4, info: "#兽耳 #催眠" },
   { id: "502827", aScore: 9.3, bScore: 9.4, info: "#生肉 #兄妹" },
   { id: "500309", aScore: 8.7, bScore: 8.9, info: "#惩罚游戏 #师生" },
+  { id: "(ex)", aScore: 8.5, bScore: 8.6, info: "理想の妹", otherlink: "https://exhentai.org/g/2209802/1909fd55ef/", bak: "https://telegra.ph/C99-squeezecandyheaven-いちはや-作ろう理想の妹-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 7.8, bScore: 7.6, info: "#兄妹 #谜语", otherlink: "https://exhentai.org/g/2209803/bff243ab20/", bak: "https://telegra.ph/C99-squeezecandyheaven-いちはや-妹とこんまぽんち-中国翻訳-08-02" },
+  { id: "not found", aScore: 8.2, bScore: 8.8, info: "#小红帽", bak: "https://telegra.ph/びんせん-赤ずきんと不死身の狼さん-前編-永遠娘-16-中国翻訳-DL版-04-02" },
+  { id: "436294", aScore: 8.2, bScore: 8.8, info: "#小红帽", bak: "https://telegra.ph/びんせん-赤ずきんと不死身の狼さん-前編-永遠娘-16-中国翻訳-DL版-04-02" },
+  { id: "311693", aScore: 5.7, bScore: 2.5, info: "#玩偶装", },
+  { id: "(ex)", aScore: 4.5, bScore: 5.6, info: "#fate #雌小鬼", otherlink: "https://exhentai.org/g/2210531/92fcd6559f/", bak: "https://telegra.ph/さくらがーでん-しろすず-マスターさんをこらしめ穴でおしおきしてあげまーす-FateGrand-Order-中国翻訳-DL版-08-02" },
+  { id: "172913", aScore: 8.6, bScore: 8.5, info: "#玩偶装 #纯爱", bak: "https://telegra.ph/シロウ-わんダーガール-COMIC-Kairakuten-BEAST-2013-06-中国翻訳-08-02" },
+  { id: "497013", aScore: 6.5, bScore: 4.5, order: 6, info: "#兽耳 #cosplay 人に見えない妖怪ならナニしても合法!?", bak: "https://telegra.ph/ストレートレモン果汁100-すとれも-人に見えない妖怪ならナニしても合法-6-中国翻訳-02-17" },
+  { id: "496747", aScore: 8.5, bScore: 7.6, order: 5, info: "#兽耳 #强制 人に見えない妖怪ならナニしても合法!?", bak: "https://telegra.ph/ストレートレモン果汁100-すとれも-人に見えない妖怪ならナニしても合法-5-中国翻訳-02-20" },
+  { id: "502416", aScore: 4.5, bScore: 6.3, info: "#异物 #蔚蓝档案", bak: "https://telegra.ph/イオタワークス-内海ι-ミユのお月様情事-ブルーアーカイブ-中国翻訳-DL版-03-25-3" },
+  { id: "258527", aScore: 5.6, bScore: 1.3, info: "#东方" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
