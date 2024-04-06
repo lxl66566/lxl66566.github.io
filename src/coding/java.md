@@ -29,16 +29,25 @@ DBeaver 烂，JB 家一堆烂，Minecraft 烂，sonarlint 烂，我接触到的 
 
 ## 开发环境
 
-去官网下 sdk。**请尽可能下载最新版本。**（激进派）
+### windows
 
-在 archlinux 下，可以：
+去官网下 sdk，尽可能下载最新版本（激进）。
+
+或者使用 [scoop](../farraginous/recommend_packages.md#scoop)：
 
 ```sh
-ls /usr/lib/jvm # 查看可用 jre 版本
-sudo archlinux-java set java-21-openjdk # 设置默认 jre 版本
+scoop bucket add java
+scoop install openjdk22
+# 写此段落时最新版本为 22
 ```
 
+### linux
+
+安装就不用多说了。arch 的 [jdk 与 jre 是冲突的](https://t.me/archlinuxcn/252)，请选择安装 jdk。
+
 ### 基础使用
+
+虽然有各种 eazy runner 帮忙跑程序，但是还是多了解点原理。
 
 `javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序。
 

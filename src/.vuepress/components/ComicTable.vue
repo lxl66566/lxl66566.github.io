@@ -220,6 +220,9 @@ const data = [
   { id: "496747", aScore: 8.5, bScore: 7.6, order: 5, info: "#兽耳 #强制 人に見えない妖怪ならナニしても合法!?", bak: "https://telegra.ph/ストレートレモン果汁100-すとれも-人に見えない妖怪ならナニしても合法-5-中国翻訳-02-20" },
   { id: "502416", aScore: 4.5, bScore: 6.3, info: "#异物 #蔚蓝档案", bak: "https://telegra.ph/イオタワークス-内海ι-ミユのお月様情事-ブルーアーカイブ-中国翻訳-DL版-03-25-3" },
   { id: "258527", aScore: 5.6, bScore: 1.3, info: "#东方" },
+  { id: "401324", aScore: 7.6, bScore: 2.4, info: "#魅魔 #兽角", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-異世界魔王サキュバス-中国翻訳-無修正-DL版-08-02" },
+  { id: "398397", aScore: 7.4, bScore: 1.8, info: "#魅魔 #兽角" },
+  { id: "(ex)", aScore: 7, bScore: 2.9, info: "#自慰 #纯爱", otherlink: "https://exhentai.org/g/2198626/5deeaec4c9/", bak: "https://telegra.ph/甘露アメ-愛し愛されおさなづま仮-後編-COMIC-LO-2022年4月号-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

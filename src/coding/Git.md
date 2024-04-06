@@ -280,9 +280,11 @@ git push origin -d <branch_name> # 删除远程分支
 
 - （疑难解答[^7]：_fatal: refusing to merge unrelated histories_）
 - （疑难解答[^8]：_unable to delete 'origin/main': remote ref does not exist_）
+- （疑难解答[^10]：`git push origin -d master` 时 github 拒绝删除分支）
 
 [^7]: 当本地与远程交集为空时会出现此情况。解法：`git pull origin main --allow-unrelated-histories`
-[^8]: 执行 `git fetch --prune`。([ref](https://stackoverflow.com/questions/35941566/git-says-remote-ref-does-not-exist-when-i-delete-remote-branch))
+[^8]: 当远程不存在分支而本地存在分支时会出现此情况。执行 `git fetch --prune`。([ref](https://stackoverflow.com/questions/35941566/git-says-remote-ref-does-not-exist-when-i-delete-remote-branch))
+[^10]: 这种情况一般是 Github 的默认分支保护机制。进入 repo _Settings_，将默认分支改为其他分支即可。
 
 ### 操作文件
 
