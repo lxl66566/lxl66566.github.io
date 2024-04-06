@@ -15,7 +15,7 @@
             <span v-if="!row.otherlink">
               <nhentai :id="row.id" />
             </span>
-            <span v-if="row.otherlink">
+            <span v-else>
               <a :href="row.otherlink" target="_blank">{{ row.id }}</a>
             </span>
             <span v-if="row.bak"> | <a :href="row.bak">bak</a></span>
@@ -24,20 +24,18 @@
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
           <td>
-            <span v-if="row.info?.length < 20">{{ row.info }}</span>
-            <details v-if="row.info?.length >= 20">
-              <summary>点击展开</summary>
-              {{ row.info }}
-            </details>
+            <dtlslong v-if="row.info" :text="row.info" noshort="20" />
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+  <dtlslong text="123" noshort="20" />
 </template>
 
 <script>
 import nhentai from "./nhentai.vue";
+import dtlslong from "./dtlslong.vue";
 const data = [
   { id: "429153", aScore: 9.4, bScore: 4, info: "今日から悪い子。続" },
   { id: "466069", aScore: 9.6, bScore: 4, info: "今日から悪い子。", bak: "https://telegra.ph/田屋沼屋-たぬま-今日から悪い子-中国翻訳-無修正-DL版-08-01" },
@@ -152,7 +150,7 @@ const data = [
   { id: "497578", aScore: 4.2, bScore: 2, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-エッチなことはダメなのに-ブルーアーカイブ-DL版-02-21" },
   { id: "479268", aScore: 4, bScore: 4.1, info: "#巨乳" },
   { id: "470499", aScore: 6.5, bScore: 7.8, info: "#催眠 #制服 #露出" },
-  { id: "(not found)", aScore: 6.8, bScore: 0.4, info: "#兄妹 #fd", order: "x", otherlink: "https://telegra.ph/COMIC120-squeezecandyheaven-いちはや-妹とロックダウン-HELLorHEAVENのおまけ-中国翻訳-08-02" },
+  { id: "(not found)", aScore: 6.8, bScore: 0.4, info: "#兄妹 #fd", order: -1, otherlink: "https://telegra.ph/COMIC120-squeezecandyheaven-いちはや-妹とロックダウン-HELLorHEAVENのおまけ-中国翻訳-08-02" },
   { id: "498376", aScore: 8, bScore: 6.4, info: "#按摩 #兽耳", bak: "https://telegra.ph/描き下ろしアイドルちゃんはとろけたい白杨X无糖联合汉化-02-26" },
   { id: "498986", aScore: 6.9, bScore: 4.5, info: "#蔚蓝档案" },
   { id: "485159", aScore: 4, bScore: 4.6, info: "#兽耳", bak: "https://telegra.ph/ノアの方舟-ノア-きつねの嫁入り-中国翻訳-12-08-2" },
@@ -230,7 +228,7 @@ const data = [
 });
 export default {
   name: "ComicTable",
-  components: { nhentai },
+  components: { nhentai, dtlslong },
   computed: {
     sortedRows() {
       return data;

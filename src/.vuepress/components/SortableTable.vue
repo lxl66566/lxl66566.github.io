@@ -14,17 +14,13 @@
           <td v-if="!row.otherlink">
             <av :bg="row.id" :u="row.u" />
           </td>
-          <td v-if="row.otherlink">
+          <td v-else>
             <a :href="row.otherlink">{{ row.id.toUpperCase() }}</a>
           </td>
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
           <td>
-            <span v-if="row.name?.length < 20">{{ row.name }}</span>
-            <details v-if="row.name?.length >= 20">
-              <summary>点击展开</summary>
-              {{ row.name }}
-            </details>
+            <dtlslong v-if="row.name" :text="row.name" noshort="20" />
           </td>
         </tr>
       </tbody>
@@ -34,9 +30,10 @@
 
 <script>
 import av from "./av.vue";
+import dtlslong from "./dtlslong.vue";
 export default {
   name: "SortableTable",
-  components: { av },
+  components: { av, dtlslong },
   props: {
     rows: {
       type: Array,

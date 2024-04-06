@@ -6,13 +6,13 @@
 export default {
   props: {
     id: {
-      type: Number,
+      type: String,
       required: true,
     },
   },
   methods: {
     generateLink() {
-      return `https://nhentai.net/g/${this.id.toString()}`;
+      return `https://nhentai.net/g/${this.id}`;
     },
   },
 };
