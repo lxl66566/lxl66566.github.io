@@ -121,7 +121,7 @@ xmake
 
 Qt sdk lib 里没有 `Qt6Gui.lib`，全是 `.prl` 文件（和 `.a`）。xmake 的资料太少，网上也缺少问题解法。
 
-之后使用 aqtinstaller 装了另一套 qt sdk，然后就能 `xmake && xmake r` 跑了。。但是程序用 windeployqt/windeployqt6 打包以后又寄了。。
+之后使用 aqtinstall 装了另一套 qt sdk，然后就能 `xmake && xmake r` 跑了。。但是程序用 windeployqt/windeployqt6 打包以后又寄了。。
 
 最终解决了，可以看 [C++ - Qt 打包](../coding/Cpp.md#打包)
 

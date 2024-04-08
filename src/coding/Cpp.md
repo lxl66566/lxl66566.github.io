@@ -38,7 +38,9 @@ linux 下用包管理器，配置环境应该是基础技能。这里写的主�
 
 [scoop](../farraginous/recommend_packages.md#scoop) 一行：`scoop install llvm`。
 
-安装 llvm 还会附带一些工具如 _clangd_, _clang-tidy_, _clang-format_。
+安装 llvm 还会附带 clang 前端工具如 _clangd_, _clang-tidy_, _clang-format_。
+
+注：llvm 本体貌似不带运行库，可以考虑 `scoop install mingw-winlibs-llvm`。
 
 @tab mingw
 
@@ -353,7 +355,7 @@ Qt 是一个成熟的跨平台，~~跨语言~~的 GUI 框架（不建议再使�
 > 推荐使用 CLI，快、用时短、空间占用小、无需登录
 
 - CLI: [aqtinstall](https://aqtinstall.readthedocs.io/en/latest/getting_started.html)
-  1. `scoop install aqtinstaller`
+  1. `scoop install aqtinstall`
   2. `aqt install-qt --outputdir D:\software\QtSDK windows desktop 6.6.0 win64_msvc2019_64`（我的示例，别抄，去读文档；安装大小是 1.46G，已经很不错了）
 - 官方 GUI: [qt.io](https://www.qt.io/zh-cn/download)。
   - 需要在 msvc/mingw 中选择其一(?)。如果不想装重量级的 Visual Studio (提供 msvc)，你可以尝试安装 mingw 的 sdk，占用空间小点，不过配置会稍微麻烦一点。

@@ -46,7 +46,7 @@ yt-dlp https://www.bilibili.com/video/BV1wK41147Za
 
 其会自动调用 ffmpeg 进行合并。
 
-### 选择画质
+### 选择画质/仅下载音频
 
 \+ `-F`
 
