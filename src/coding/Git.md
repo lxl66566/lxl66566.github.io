@@ -311,6 +311,15 @@ git reflog expire --expire-unreachable=0 --all
 git gc --prune=0
 ```
 
+### submodule
+
+若想在 git 仓库内包含子仓库，需要将子仓库转换为 submodule。submodule 本质上是一个 symbol link，指向一个本地或网络仓库位置。
+
+- 创建：`git submodule add <1> <2>`，添加一个现有仓库 `1` 到 位置 `2`。`1` 可以是本地位置或网络位置，而 `2` 一般是本仓库下的相对路径。
+- 拉取：
+  - 使用 clone 无法直接拉取 submodule，需要添加 `--recursive`。
+  - 对于 pull 或者已经拉取的仓库，单独拉取 submodule，需要 `git submodule update --init --recursive` ([ref](https://stackoverflow.com/questions/1030169/))
+
 ## 深入
 
 > 这里是原创内容，是我个人摸索/结合其他文章得出的、对提交树的理解。可能有误，需要自行辨认。
