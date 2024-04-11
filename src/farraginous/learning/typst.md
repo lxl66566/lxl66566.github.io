@@ -73,7 +73,8 @@ typst 没有 `list` 类型，只有 `array`。
 
 ## 数学
 
-[这里](https://github.com/brynne8/typst-undergradmath-zh/blob/main/undergradmath.pdf)有比较全的数学符号。
+- [数学符号速查表](https://github.com/brynne8/typst-undergradmath-zh/blob/main/undergradmath.pdf)
+- [Detypify](https://detypify.quarticcat.com/) 可以让你手写数学符号并识别结果。
 
 ## 表格
 

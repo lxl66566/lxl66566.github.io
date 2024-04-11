@@ -236,6 +236,7 @@ const data = [
   { id: "450544", aScore: 10, bScore: 6.2, order: 8, info: "ボクの理想の異世界生活 #后宫 #兽耳 #3P" },
   { id: "450716", aScore: 9.8, bScore: 7.9, order: 9, info: "ボクの理想の異世界生活 #后宫 #兽耳" },
   { id: "402135", aScore: 9.5, bScore: 6.1, order: 10, info: "ボクの理想の異世界生活 #后宫 #兽耳 #4P" },
+  { id: "397961", aScore: 4, bScore: 9, info: "#鬼族 #囚禁", info: "https://telegra.ph/かに村えびお-鬼を囚える-永遠娘-12-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

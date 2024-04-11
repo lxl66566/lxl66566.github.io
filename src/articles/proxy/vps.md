@@ -65,7 +65,7 @@ tag:
 阿里云和 Azure 理论上都是不能当 VPN 用的，有封号风险 <heimu>阿里云实名，甚至需要考虑会不会被打电话</heimu>，自己偷偷跑点差不多得了。
 
 - 阿里云：免费服务器，每年 300 元优惠券，可以全额抵扣。
-  1. （需要 chromium 系浏览器）[university.aliyun.com](university.aliyun.com) 学生认证领券
+  1. （需要 chromium 系浏览器）[university.aliyun.com](https://university.aliyun.com) 学生认证领券
   2. 首页，_产品 - 计算 - 轻量应用服务器_ 下单即可。新加坡有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。
 - Azure：每年 $100 优惠券
   1. 先过学生认证
@@ -252,6 +252,7 @@ top -b1 -n1 | grep Z    # Identify if the zombie processes have been killed
 1. 如果是自己的服务器，那肯定先把[常用工具](../../farraginous/recommend_packages.md#linux)下载好。
    - 公家服务器如果有权限安装软件，也可以装一些典型的/极大增加效率的。例如 fish, zoxide
 2. ssh 保活用的 screen 而不是 tmux。[一些基础命令](https://linuxize.com/post/how-to-use-linux-screen/)，加一个[删除命令](https://stackoverflow.com/a/1509764/18929691)，加一个 `<C-a> [` 进 copy mode 然后可以往上滚的命令。
+   - 当然不缺配置的话就用 zellij 了。
 
 ## 挂机
 
