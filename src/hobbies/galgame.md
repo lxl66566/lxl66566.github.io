@@ -51,7 +51,8 @@ tag:
 
 - 源站（按推荐优先级）：[失落小站](https://shinnku.com/) | [TG 频道](https://t.me/erogamecloud) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
-- 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor](https://dl.ghacg.com/s/67U9)
+- 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://www.616.ro/ty.html)
+  - krkr 已经很久没有维护了；Tyranor2 可以运行 krkr 的游戏，因此可以考虑直接抛弃 krkr。
 - 在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + [小牛云平台翻译](https://niutrans.com/)。个人认为，御坂翻译器有以下优点：
 
   1. 小，仅 44.3MB
@@ -253,6 +254,7 @@ _（不排除早期缺漏）_
 - 八剱伝
 - アンラベル・トリガー
 - 交汇协奏曲?
+- 死馆
 
 ## 一言
 

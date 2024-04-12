@@ -79,6 +79,7 @@ tag:
 - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
 - `curl -sL network-speed.xyz | bash -s -- -r china` 也可以国内测速
 - <https://bgp.tools/>，ASN 信息
+- [网络面板](https://net.ljxnet.cn/)流量消耗器
 
 ### SSH
 

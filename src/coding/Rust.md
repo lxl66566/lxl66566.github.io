@@ -69,7 +69,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 2. 安装额外的 cargo 组件：
    1. [miri](https://github.com/rust-lang/miri)：`rustup +nightly component add miri`，用于更严格的测试
    2. [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)：Find out what takes most of the space in your executable.
-   3. [cargo-wizard](https://github.com/Kobzol/cargo-wizard)：提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。
+   3. [cargo-wizard](https://github.com/Kobzol/cargo-wizard)：提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般。
    4. [cargo-expand](https://github.com/dtolnay/cargo-expand)：展开宏
 3. (Optional) 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
    - <heimu>`rust-analyzer` 本身并不是很好用。经常卡。</heimu>

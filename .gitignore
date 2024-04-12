@@ -4,3 +4,4 @@ src/.vuepress/.temp/
 src/.vuepress/dist/
 upload.sh
 # .github/
+/.history

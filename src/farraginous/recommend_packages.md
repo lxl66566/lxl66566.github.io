@@ -304,11 +304,10 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 
 - 推荐搭配[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Adblock-Rule)食用：复制订阅规则 URL（根据情况选择是否反代），粘贴到 _Adguard - 设置 - 过滤器 - 自定义 - 添加自定义过滤器_ 中。
 
-### [xdm](https://github.com/subhra74/xdm)
+### 下载器
 
-开源免费的多线程高速下载器，[idm](#idm) 替代品。截至 20230605，部分汉化缺失。
-
-20230614: 闪退 bug，重置无效。
+- [xdm](https://github.com/subhra74/xdm)：开源免费的多线程高速下载器，[idm](#idm) 替代品。截至 20230605 部分汉化缺失。20230614: 闪退 bug，重置无效。
+- [ndm](https://www.neatdownloadmanager.com/index.php/en/)：界面很古老，有崩溃记录。
 
 ### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
 

@@ -52,6 +52,10 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 
 - 六级备考：zlib 能下载到往年考卷（大学日语四六级考试指南与真题 (全国大学日语考试设计组) (Z-Library)）。听力在[这里](https://app.readoor.cn/app/dt/bi/1523326392/85264-8480865e855413)有免费免登录的。<span class="heimu" title="你知道的太多了">我校为数不多的好事</span>
 
+### jtest
+
+做过卷子，考察很泛。有一点需要写字的题型。阅读的文章差点意思。
+
 ## 单词
 
 ### 多音
@@ -98,6 +102,7 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 - [いわゆる vs すなわち](https://ja.hinative.com/questions/23858327)
 - [「薄い色」「浅い色」「淡い色」の違い](https://www.youtube.com/watch?v=OXufBWERqhM)
 - 自动词使役对象用「を」，他动词使役对象用「に」
+- [～がち，～気味ぎみ, ～っぽい](https://nihongonosato.com/jlpt/n2-grammar/n2-gachi/)
 
 ## 说两句
 
