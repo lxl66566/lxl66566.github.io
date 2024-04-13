@@ -239,6 +239,9 @@ const data = [
   { id: "397961", aScore: 4, bScore: 9, info: "#鬼族 #囚禁", bak: "https://telegra.ph/かに村えびお-鬼を囚える-永遠娘-12-中国翻訳-DL版-08-02" },
   { id: "500637", aScore: 4.2, bScore: 7.6, info: "#兄妹", bak: "https://telegra.ph/C95-妖RocknRoll-明石六浪-Trap-of-Love-03-12" },
   { id: "410850", aScore: 6.8, bScore: 4.1, info: "#玉之けだま", bak: "https://telegra.ph/ドロップアウトキャットガール-08-02" },
+  { id: "(ex)", aScore: 5.6, bScore: 8.9, info: "#甘露アメ #触手 #媚药", otherlink: "https://exhentai.org/g/2175457/4821c30aa5/", bak: "https://telegra.ph/甘露アメ-村淫習継承マニュアル-中国翻訳-08-02" },
+  { id: "396948", aScore: 5.6, bScore: 7.6, info: "#晒痕 #loli", bak: "https://telegra.ph/きのもと杏-あずなの夏休み-COMIC-LO-2022年1月号-中国翻訳-DL版-08-02" },
+  { id: "397246", aScore: 5.8, bScore: 9, info: "#全彩 #自慰", bak: "https://telegra.ph/C99-りとるはむれっと-きぃら-イキ顔見られたいミーヤちゃん-中国翻訳-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

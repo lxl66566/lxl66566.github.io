@@ -33,3 +33,11 @@ tag:
 10. [10 Things Software Developers Should Learn about Learning](https://cacm.acm.org/magazines/2024/1/278891-10-things-software-developers-should-learn-about-learning/fulltext)
 11. [给互联网人的反侦查手册 2.0](https://mp.weixin.qq.com/s?__biz=MzU3Mjk1OTQ0Ng==&mid=2247512771&idx=1&sn=c92d486b7998a2e42f5e7980f019f348) | [bak](https://telegra.ph/给互联网人的反侦查手册-20-02-20-4)
 12. [大脑为啥要删除 3 岁前的记忆？你小时候到底看见了啥？](https://www.zhihu.com/question/518355959/answer/3417398770) | [bak](https://telegra.ph/大脑为啥要删除-3-岁前的记忆你小时候到底看见了啥---知乎-03-09)
+
+## 杂
+
+<dtls alt="办卡类文章">
+
+- [日本浮生录：初来乍到，日本办卡指南](https://song.al/creditcard)
+
+</dtls>

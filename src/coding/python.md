@@ -811,3 +811,4 @@ python -m pip install --upgrade pip --user
 3. [Python 修饰器的函数式编程](https://coolshell.cn/articles/11265.html)
 4. [Python Type Hints 简明教程（基于 Python 3.12）](https://zhuanlan.zhihu.com/p/464979921)
 5. [Fastest Way to Read Excel in Python](https://hakibenita.com/fast-excel-python)
+6. [What the f\*ck Python! 🐍 一些有趣且鲜为人知的 Python 特性.](https://github.com/robertparley/wtfpython-cn)

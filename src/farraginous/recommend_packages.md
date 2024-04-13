@@ -307,7 +307,8 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 ### 下载器
 
 - [xdm](https://github.com/subhra74/xdm)：开源免费的多线程高速下载器，[idm](#idm) 替代品。截至 20230605 部分汉化缺失。20230614: 闪退 bug，重置无效。
-- [ndm](https://www.neatdownloadmanager.com/index.php/en/)：界面很古老，有崩溃记录。
+  - xdm 不太好用，比 idm 差。
+- [ndm](https://www.neatdownloadmanager.com/index.php/en/)：界面很古老，有崩溃记录；功能和逻辑都和 idm 差不多。
 
 ### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
 
