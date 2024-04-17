@@ -349,7 +349,14 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 ### [Google Hit Hider](https://greasyfork.org/scripts/1682)
 
 过滤 Google & 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist[^3]。
+
 [^3]: 也可以用用[我的](<https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt>)；但是很抱歉，目前仓库是 private
+
+### 论坛绿化
+
+- [CSDNGreener](https://greasyfork.org/zh-CN/scripts/378351)：专杀 CSDN
+- [知乎增强](https://greasyfork.org/zh-CN/scripts/419081)
+- [Open the F\*\*king URL Right Now](https://greasyfork.org/zh-CN/scripts/412612)：自动跳转某些网站不希望用户直达的外链
 
 ### 刷网课
 

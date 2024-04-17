@@ -242,6 +242,7 @@ const data = [
   { id: "(ex)", aScore: 5.6, bScore: 8.9, info: "#甘露アメ #触手 #媚药", otherlink: "https://exhentai.org/g/2175457/4821c30aa5/", bak: "https://telegra.ph/甘露アメ-村淫習継承マニュアル-中国翻訳-08-02" },
   { id: "396948", aScore: 5.6, bScore: 7.6, info: "#晒痕 #loli", bak: "https://telegra.ph/きのもと杏-あずなの夏休み-COMIC-LO-2022年1月号-中国翻訳-DL版-08-02" },
   { id: "397246", aScore: 5.8, bScore: 9, info: "#全彩 #自慰", bak: "https://telegra.ph/C99-りとるはむれっと-きぃら-イキ顔見られたいミーヤちゃん-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 10, bScore: 4.3, info: "#全彩 #蔚蓝档案 #18-", bak: "https://telegra.ph/C103-Luminocity-Kani-Biimu-Seishun-no-pants-no-monogatari-Blue-Archive-04-13" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

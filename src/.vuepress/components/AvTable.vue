@@ -249,6 +249,10 @@ const data = [
   { id: "midv-258", aScore: 8.2, bScore: 7, u: true },
   { id: "hunbl-122", aScore: 6.6, bScore: 6.5 },
   { id: "apns-305", aScore: 6.1, bScore: 6.8, u: true },
+  { id: "mukd-484", aScore: 9.3, bScore: 9.9, u: true },
+  { id: "sdam-093", aScore: 8.7, bScore: 9.1, u: true, name: "only ^1" },
+  { id: "dvdms-838", aScore: 8, bScore: 7.3, u: true, name: "#3P #母女" },
+  { id: "ibw-425z", aScore: 6.2, bScore: 6.1, name: "^1" },
 ];
 export default {
   name: "AvTable",

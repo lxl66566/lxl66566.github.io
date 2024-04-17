@@ -78,6 +78,11 @@ tag:
 - [ ] rust crate: select by arch
 - [ ] 代理
 - [ ] windows shell with everything:
+- [ ] openppp2 client
+  - [ ] 绕过路由
+- [ ] rust tui 脚本工具箱
+  - 转码，复制，参考我的 fish function
+  - 平台无关的 alias
 
 ### RIIR
 

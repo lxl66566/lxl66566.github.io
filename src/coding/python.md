@@ -485,6 +485,30 @@ python -m unittest ./**/*.py  # 测试当前文件夹下所有 unittest，类似
 
 - 测试某个函数：`pytest <relative_path>::<function_name>`
 
+### 兼容性测试
+
+有时候需要跨 python 版本进行测试。
+
+首先，最朴素的手动测试要求电脑上安装不同的 python 版本。一般的包管理器都不负责管理 python 版本，但是 poetry 可以通过 `poetry env use <binary>` 指定对应版本的可执行文件。至于安装：
+
+::: code-tabs
+
+@tab scoop
+
+windows 的 scoop 里有不同版本的 python。（`python35` - `python312`）
+
+@tab pacman
+
+archlinux 官方仓库只有最新版 python，但是 archlinuxcn 里有更低的版本。（`python37` - `python39`）
+
+@tab pyenv
+
+pyenv 是一个 python 版本管理工具。不算太好用，我不能一键切换，得去找它的安装位置的 python 可执行文件。不过至少能用。
+
+:::
+
+其次，如果有足够的 testcase，也可以考虑使用 nox，这是一个测试框架，不过我还没试用过。
+
 ## GUI
 
 一些 GUI 框架。（大部分都没用过）
@@ -708,17 +732,13 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
    参考[此文](https://www.digitalocean.com/community/tutorials/how-to-publish-python-packages-to-pypi-using-poetry-on-ubuntu-22-04)。
 
    1. 写 `pyproject.toml`。
-
       - poetry 能够自动推断需要打包的模块。如果 `name` 与 _module name_ 不同，需要 `packages=[{include="..."}]`。
       - 如果目标是一个 binary，需要添加入口点。
-
         ```toml
         [tool.poetry.scripts]
         <bin name> = '<module>:<function>'
         ```
-
    2. build & upload
-
       ```sh
       poetry config pypi-token.pypi <API token>
       poetry publish --build
@@ -728,25 +748,19 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
    1. 写 `setup.py`。~~可以用 GPT 生成，也可以去抄几份。~~
    2. 在 `$HOME/.pypirc` 下写入
-
       ```toml
       [pypi]
       username = __token__
       password = <API token>
       ```
-
    3. 打包上传，工具任选。
-
       - twine:
-
         ```sh
         pipx install twine
         python3 setup.py sdist bdist_wheel
         twine upload dist/* --verbose
         ```
-
       - setuptools
-
         ```sh
         python3 setup.py sdist upload
         ```

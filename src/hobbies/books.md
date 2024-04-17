@@ -136,11 +136,12 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
-|编程的修炼 - Edsger W. Dijkstra|2023.12.19-<br/>在读|
+|乌合之众|2024.04.17-<br/>在读|
 |大学刑法课|2023.11.13-<br/>在读|
 |[sicp-js](https://github.com/lxl66566/sicp-js-zh/)|2023.10.13-<br/>在读|
 |经济学原理 - N.Gregory Mankiw|2023.07.2?-<br/>在读|
 |Harry Potter 1 <Badge type="tip" text="Eng"/>|2023.0?.??-<br/>在读|
+|编程的修炼 - Edsger W. Dijkstra|2023.12.19-<br/>暂停|过于抽象|
 |Exercised: Why Something We Never Evolved to Do Is Healthy and Rewarding|2023.0?.??-<br/>2024.01.21|2h39min|提供一些锻炼的动力|
 |操作系统导论|2023.09.22-<br/>2023.12.12|9h13min|粗读|
 |耻 - 库切|20231107-<br/>20231108|2h3min|
