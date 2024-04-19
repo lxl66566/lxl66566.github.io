@@ -144,6 +144,12 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 
 [bak v1.3.22](https://wwkh.lanzout.com/iSZ7J1ecswha)
 
+### [termux](https://github.com/termux/termux-app)
+
+跑在 Android 上的命令行。用来远程连服务器，搞点轻度开发，或者干脆跑点 cli/tui 程序。我还会装 [TermuxArch](../articles/linux/install_and_config.md#termuxarch)。
+
+**不要在 Google Play 下载！** 请去 Github 或 F-Droid 下载。
+
 ## Windows
 
 ### [scoop](https://scoop.sh/)
@@ -282,6 +288,8 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 前往 [Linux - 包管理与使用](../articles/linux/package.md#包使用)
 
 ## 浏览器插件
+
+现在的谷歌、微软插件商店都对安装客户端限制非常严重，因此可以考虑第三方扩展商店（特别是在 kiwi browser 上安装扩展时）：[crxsoso](https://www.crxsoso.com/)。
 
 > _注：点击[绿色](#浏览器插件)标题即可添加插件至浏览器。_
 

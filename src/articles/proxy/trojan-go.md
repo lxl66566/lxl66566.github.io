@@ -60,7 +60,7 @@ trojan-go 的配置又是一个简洁的典范，几乎不逊色于 hysteria。
 
 由于 trojan 协议广泛使用，因此是个客户端基本都支持。
 
-而关于 trojan-go，在 Android 端可以用 [NekoBox](./proxy_software.md#sing-box-系)，不过需要[下载插件](https://f-droid.org/packages/io.nekohasekai.sagernet.plugin.trojan_go/)。
+而关于 trojan-go，在 Android 端可以用 [NekoBox](./proxy_software.md#sing-box-系)，不过需要[下载插件](https://matsuridayo.github.io/m-plugin/)。（F-Droid 下载地址已失效，插件不再更新）
 
 ## 遇到的问题
 

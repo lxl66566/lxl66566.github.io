@@ -24,7 +24,9 @@ Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的
 
 我是重度电脑使用者，手机没有游戏，这玩意只是我生活中可缺的一部分。但是我仍然愿意折腾。
 
-## [root 经历与手机配置](./root_and_setting.md)
+## [手机配置](./settings.md)
+
+## [刷机 & root](./root.md)
 
 ## [模块与软件推荐](./module_and_app.md)
 
@@ -56,7 +58,7 @@ Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的
 2. ColorOS 一些不错的 idea：
    - 双击空白处锁屏
 3. _手机管家_ 可以冻结
-4. 可以[更换应用图标与名字](./root_and_setting.md#after-root)
+4. 可以[更换应用图标与名字](./settings.md#after-root)
 
 坏:
 

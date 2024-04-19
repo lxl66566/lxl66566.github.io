@@ -33,7 +33,8 @@ export default sidebar({
 	],
 	"/articles/mobile/": [
 		"index.md",
-		"root_and_setting.md",
+		"settings.md",
+		"root.md",
 		"module_and_app.md",
 		"problem.md",
 		"adb.md",

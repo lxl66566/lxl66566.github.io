@@ -227,7 +227,7 @@ category:
 ### 20230715
 
 - 为图表添加 `loading="lazy"`
-- 再刷机一次，[设置手机](../articles/mobile/root_and_setting.md) 新增内容
+- 再刷机一次，[设置手机](../articles/mobile/settings.md) 新增内容
 - 音游新增 [pjsk](../hobbies/rhythm_games.md#pjsk)
 - [灭蟑记（六）](../essay/2023.md#_20230715)
 
@@ -273,7 +273,7 @@ category:
 ### 20230617
 
 - 新增 _学习笔记 - 日本語勉強_
-- 合并 _禁用快应用中心_ 到 [设置手机 - 禁用软件](../articles/mobile/root_and_setting.md#禁用软件)
+- 合并 _禁用快应用中心_ 到 [设置手机 - 禁用软件](../articles/mobile/settings.md#禁用软件)
 
 ### 20230615
 
@@ -281,7 +281,7 @@ category:
 
 ### 20230614
 
-- 新增 [设置手机 - 刷机](../articles/mobile/root_and_setting.md#刷机)
+- 新增 [设置手机 - 刷机](../articles/mobile/settings.md#刷机)
 
 ### 20230610
 
@@ -446,7 +446,7 @@ category:
 
 ### 20230122
 
-- 新增：文章 - 禁用手机快应用中心（迁移至[设置手机](../articles/mobile/root_and_setting.md#禁用快应用中心)）
+- 新增：文章 - 禁用手机快应用中心（迁移至[设置手机](../articles/mobile/settings.md#禁用快应用中心)）
 - 全局优化排版与语言逻辑，补充信息
 
 ### 20230117
