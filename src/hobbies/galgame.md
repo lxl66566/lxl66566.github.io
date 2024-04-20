@@ -255,6 +255,7 @@ _（不排除早期缺漏）_
 - アンラベル・トリガー
 - 交汇协奏曲?
 - 死馆
+- [RootDouble](https://t.me/erogamecloud/4350)
 
 ## 一言
 

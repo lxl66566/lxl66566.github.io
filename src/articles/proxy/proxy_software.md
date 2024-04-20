@@ -68,6 +68,7 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 ### 其他
 
 - [Yacd-meta](https://github.com/MetaCubeX/Yacd-meta)
+- [神秘模块](https://xrhexo.netlify.app/posts/1542838017/)：magisk module
 - [虚空代理](https://github.com/ModuleList/akashaProxy)：magisk/kernelsu module
 
 :::

@@ -74,7 +74,10 @@ tag:
 12. ~~启用睡眠。笔记本电脑有带着出门的需求，然而我的电脑无法进入睡眠（点击睡眠后，仅屏幕背光取消，一切元件照常运转）。估计是电脑品牌方的驱动阻止了系统睡眠。启用方法（[参考](https://zhuanlan.zhihu.com/p/336846460)）：在 regedit 中，将 `HKEY_LOCAL_MacHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power\AwayModeEnabled` 的值设为 0.~~  
     应该是休眠。而且现在的我已经禁用了休眠。
     - 休眠 == hibernate，原理是将内存写入磁盘。其会在 C 盘创建一块用于休眠的大块文件，并且每次休眠都会向硬盘中写入大量数据。我显然无法接受这一点<Badge text="参考 14."/>。
-13. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
+13. 卸载各种傻逼预装玩意。
+    1. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
+    2. [卸载 Minecraft Education Edition](https://aka.ms/meeremove) ([src](https://educommunity.minecraft.net/hc/en-us/community/posts/4410545727764))
+    3. 卸载 Your Phone：powershell `Get-AppxPackage Microsoft.YourPhone -AllUsers | Remove-AppxPackage`，但是 `C:\Program Files\WindowsApps` 的 Your Phone 文件并不会删除。
 14. **关闭快速启动**。
     1. 避免关机时自动保存 [RAM Disk](./ramdisk.md) 文件到固态盘；
     2. Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 _更新并重启_。[ref](https://t.me/withabsolutex/1193)
@@ -108,7 +111,7 @@ tag:
     - Windows Font Cache Service
 27. 将 bash 设为默认 shell。由于需要从 _运行_ 和 cmd 中都能直接进 bash，所以一些步骤：
     - 安装 bash（scoop + git 装玩以后就自带了，位置在 `scoop/shims/bash.exe`）
-    - 视情况，可能要删掉 `C:\Windows\System32\bash.exe`，这个应该是 WSL 给的。也是[改拥有者 + 改权限](#权限控制)那一套。
+    - 删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
     - 创建一个 bash 快捷方式放到 `C:\Windows\System32`
     - 创建一个 cmd 放到 `C:\Windows\System32`，内容参考[我在 bpm 里的写法](https://github.com/lxl66566/bpm/blob/5b1f30d583ad4a71759b4ad97c204faf172492bf/bpm/install/__init__.py#L369)。
 28. 开启 copilot：ms 在 2024.03-04 把 copilot 图标禁了，但 copilot 确实是个免费用的 gpt4。copilot 默认对中国用户不可用，可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。

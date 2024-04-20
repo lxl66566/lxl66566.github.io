@@ -281,7 +281,9 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
   return false
   ```
 
-[^5]: 浏览器复制汉字时会自动转义为 `%..` 格式，而不复制全（例如不复制第一个 `h`，只从 `ttp` 开始复制）可以保护这些汉字不被转义。
+[^5]:
+    浏览器复制汉字时会自动转义为 `%..` 格式，而不全复制（例如不复制第一个 `h`，只从 `ttp` 开始复制）可以保护这些汉字不被转义。
+    另外，我有一个工具（[urldecoder](https://github.com/lxl66566/urldecoder)）可以应对转义问题，从此我再也不需要复制网址时少复制一个 `h` 了。
 
 ## Linux
 
@@ -358,7 +360,7 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 
 过滤 Google & 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist[^3]。
 
-[^3]: 也可以用用[我的](<https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt>)；但是很抱歉，目前仓库是 private
+[^3]: 也可以用用[我的](<https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt>)
 
 ### 论坛绿化
 
