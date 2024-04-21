@@ -329,7 +329,7 @@ _（[此处附上证明](https://wwp.lanzout.com/iL6o8076zi2j)）_
 
 - 全球高武，星门（万族之劫上、下作）；
 - 就算没有外挂，也要在末日活下去
-- [大学刑法课](http://www.zhihuxs.com/zhxs.asp?id=7959667)
+- 漂流教室
 
 ## 说两句
 

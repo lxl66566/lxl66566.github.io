@@ -13,8 +13,8 @@ export default navbar([
 				text: "游戏",
 				prefix: "/hobbies/",
 				children: [
-					"rhythm_games.md",
 					"galgame.md",
+					"rhythm_games.md",
 					"Minecraft.md",
 					"other_games/",
 				],

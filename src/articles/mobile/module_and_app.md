@@ -45,7 +45,9 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
   - TeleSpeed
 - Bili 调速
 - [DarQ](https://github.com/KieronQuinn/DarQ)：强制暗黑模式。需要在启用模块中选中所有需要强制黑夜的应用。
-- [LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool)：一加的 ColorOS 必装。
+- [LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool)：一加的 ColorOS 必装。有了 LuckyTool，生活会轻松很多。
+- [拒绝强制亮度](https://github.com/Xposed-Modules-Repo/com.fankes.refusebrightness)
+- [AdClose](https://github.com/zjyzip/AdClose) + [秋风规则](https://awavenue.top/Sub.html#%E6%9B%B4%E5%A4%9A%E6%A0%BC%E5%BC%8F%E7%9A%84%E8%A7%84%E5%88%99)
 
 ## App
 

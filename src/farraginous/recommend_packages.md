@@ -65,6 +65,8 @@ tag:
 
 不得不提，这玩意的文档是**垃圾**的水平。我想实现的 globalspeed 里提供的功能，直接用 conf 是写不出来的，写 user script 又没有文档查。。。
 
+- 随机播放：[autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)读取当前文件夹所有文件为 playlist，然后[手动 shuffle](https://www.reddit.com/r/mpv/comments/blrpwa)
+
 ### RAM Disk
 
 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。

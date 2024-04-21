@@ -37,6 +37,8 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 - (optional) **isort** - Microsoft：提供 import 排序，formatter
 - (optional) **Black Formatter** - Microsoft：formatter
 
+> 至于 pylyzer 在 2024.04 还是野鸡状态，根本没法用，cargo install 都会炸，所以不推荐。
+
 ### 我的配置
 
 全局 `settings.json`:

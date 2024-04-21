@@ -35,6 +35,8 @@ ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手�
    2. 使用配对码配对设备，PC 端执行 `adb pair <ip>:<port>`
    3. 连接设备，PC 端执行 `adb connect <ip>:<port>`（注意此时 port 与配对时不同）
 
+   我用过的手机，很多都没法连上无线调试，不知道为啥。
+
    :::
 
 3. 执行 `adb devices`，`List of devices attached` 下方有设备即为连接成功：

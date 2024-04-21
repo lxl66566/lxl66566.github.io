@@ -62,6 +62,7 @@ tag:
 - [C3](https://c3-lang.org/)：C 的改进，解决 C 痛点
 - [flix](https://flix.dev/)：JVM 上的、拥有许多函数式风格的语言。
 - [borgo](https://borgo-lang.github.io/)：点进去就知道了
+- [dada](https://dada-lang.org/)：类 rust 的实验性语言，观点比较模糊（至少我没看出有哪些 feature）
 
 </dtls>
 

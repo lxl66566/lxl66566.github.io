@@ -465,9 +465,11 @@ GUI 是 rust 日经问题了。
 
 一些 GUI 框架：
 
+- [egui](https://github.com/emilk/egui)：原生 GUI，有[大项目](https://www.reddit.com/r/rust/comments/1c69mrj)，看起来不错。
+- tauri：electron 的竞品，但是很灵车（许多群友都说过了）。我连 example 都跑不过。
 - [slint](https://github.com/slint-ui/slint)：嗯写 DSL
+- [dioxus](https://github.com/DioxusLabs/dioxus)：也是嗯写 DSL。release 0.5.0 时火了一把
 - [native-windows-gui](https://github.com/gabdube/native-windows-gui)：非跨平台
-- [dioxus](https://github.com/DioxusLabs/dioxus)：release 0.5.0 时火了一把
 - [winio](https://github.com/compio-rs/winio)：~~莓软的愚人节玩笑~~
 
 我早期尝试过一下 iced，用不明白，不用了。
