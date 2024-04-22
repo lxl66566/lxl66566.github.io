@@ -12,12 +12,14 @@ category:
 1. **太大了**
 2. 早期语言，语法比较怪异
 3. 商业化，不自由
-4. 作为一个 IDE，matlab 显然是不够格的。
+4. matlab 的 IDE 显然也是不够格的。
 
-GNU Octave 是一个开源科学计算语言，拥有与 matlab 极其相似的语法（本科阶段的初级使用基本全兼容）。我使用 octave 作为 matlab 的替代。
+GNU Octave 是一个开源科学计算语言，拥有与 matlab 极其相似的语法，号称拥有 95% 兼容性。我使用 octave 作为 matlab 的替代。
 
 1. 小，本体安装后只有 64.07 MiB。（version 8.4.0）
 2. 模块化，例如抽离了信号处理的 signal 包。
+
+不过，octave 写代码还行，跑别人的代码就有可能出现兼容性问题了。
 
 ## 开发环境/工具
 
@@ -29,15 +31,16 @@ GNU Octave 是一个开源科学计算语言，拥有与 matlab 极其相似的�
 pacman -S octave
 ```
 
-如果要做信号处理相关工作，需要使用包管理器[^1]安装 signal 包(AUR)：
+为了与 matlab 函数更好的兼容性，需要使用包管理器[^1]安装一些包：
 
 [^1]: 若手动（在 octave 内）安装 signal 包，会出现无解的编译失败。
 
 ```sh
-paru -S octave-signal
+# from AUR
+paru -S octave-signal octave-statistics
 ```
 
-使用前需要在 octave 命令行 load：`pkg load signal`。
+使用前需要在 octave 命令行 load：`pkg load signal statistics`。
 
 ### 退化至 matlab
 

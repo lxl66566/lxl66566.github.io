@@ -83,6 +83,8 @@ tag:
 - [ ] rust tui 脚本工具箱
   - 转码，复制，参考我的 fish function
   - 平台无关的 alias
+- [ ] git-crypt-weak
+- [ ] dotfile backup script
 
 ### RIIR
 
