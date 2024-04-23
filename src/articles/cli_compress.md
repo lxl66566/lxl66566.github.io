@@ -43,4 +43,5 @@ linux 上安装 p7zip 即可。
 
 ```sh
 tar -xaf my.tmp --one-top-level=my  # --one-top-level 指明解压到的文件夹名称
+tar -caf xxx.tar.gz xxx             # 前面是输出，后面是输入
 ```

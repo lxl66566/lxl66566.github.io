@@ -114,7 +114,9 @@ tag:
     - 删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
     - 创建一个 bash 快捷方式放到 `C:\Windows\System32`
     - 创建一个 cmd 放到 `C:\Windows\System32`，内容参考[我在 bpm 里的写法](https://github.com/lxl66566/bpm/blob/5b1f30d583ad4a71759b4ad97c204faf172492bf/bpm/install/__init__.py#L369)。
-28. 开启 copilot：ms 在 2024.03-04 把 copilot 图标禁了，但 copilot 确实是个免费用的 gpt4。copilot 默认对中国用户不可用，可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。
+28. 设置 copilot：copilot 确实是个免费用的 gpt4，就是比较慢。
+    - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。
+    - 即使开着代理，用着用着也经常出现 _很抱歉，目前无法连接到服务。_。解法：在 edge 浏览器中改微软账户地区至其他地区。([src](https://www.bilibili.com/read/cv33602923/))
 
 [^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 

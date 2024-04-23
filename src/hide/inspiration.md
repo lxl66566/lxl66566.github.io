@@ -48,7 +48,7 @@ tag:
 - [ ] 流式分布式的视频软件?
 - [ ] 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）
 - [ ] pdf 无损图片压缩
-- [ ] 类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
+- [ ] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 - [ ] lzma 数据库，简易迁移，不依赖特定程序
 - [ ] 浏览器书签 & 历史数据库(rust cli / js)
 - [ ] better sqlite_zstd
@@ -78,13 +78,13 @@ tag:
 - [ ] rust crate: select by arch
 - [ ] 代理
 - [ ] windows shell with everything:
-- [ ] openppp2 client
+- [x] openppp2 client
   - [ ] 绕过路由
 - [ ] rust tui 脚本工具箱
   - 转码，复制，参考我的 fish function
   - 平台无关的 alias
-- [ ] git-crypt-weak
 - [ ] dotfile backup script
+- [ ] 脚本语言：强类型；方便的系统调用；无视空白；方便的函数式异步（go）；
 
 ### RIIR
 
@@ -97,6 +97,7 @@ tag:
 
 - [ ] 关于轨迹记录软件与应用时长记录软件<span class="heimu" title="你知道的太多了">时空刻录器</span>
 - [ ] Android opensource store, package manager（AUR-like）
+  - [ ] dependency
 - [ ] 录音机 app，抓住日常的每一个瞬间
   - [ ] 全天录音 to RAM，手动保存重放
 - [ ] Android task manager, \*top

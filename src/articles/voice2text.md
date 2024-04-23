@@ -81,6 +81,10 @@ VSCode 居然支持语音输入了！([src](https://t.me/absxsgroup/6059))这是
 
 实际上上述 [autosrt](#autosrt) 就是使用 whisper 模型放本地跑，只不过用 python 写了个小前端而已。在 huggingface 上也可以[在线用](https://huggingface.co/spaces/sanchit-gandhi/whisper-jax)，不过速度比本地还要慢。（可以理解，又不是做慈善）
 
+#### whisper.jax
+
+[在线演示](https://huggingface.co/spaces/sanchit-gandhi/whisper-jax)，据说比 whisper 快 70 倍
+
 ### incredibly-fast-whisper
 
 基于 Whisper Large v3 模型。有一个[在线 demo](https://replicate.com/vaibhavs10/incredibly-fast-whisper) 可以用。

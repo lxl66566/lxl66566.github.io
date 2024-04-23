@@ -176,6 +176,10 @@ ColorOS 是目前一加的默认系统。
 - 权限管理一坨屎。
   - private 仓库只能通过添加 collaborator 对个人开放，但 collaborator 意味着给出了读写权限。我经常想给别人读权限，但不给写权限。此时只能通过 organization 方式，而且无法自动同步仓库至 org，使用 org fork 个人 private 仓库，也无法进行 sync。
   - ssh 权限稀烂。Github 建议使用 ssh 进行传输，没有添加 ssh 密钥连某些 clone 都做不到，但添加了 ssh 密钥后，本机就对 Github 的所有仓库拥有了所有权限。我认为[^1]ssh 至少需要能够控制对不同仓库的访问权限与写入权限。这样开发者能够在可能不安全的主机上使用 ssh。
+- workflow 一坨屎。
+  - stay away from yaml!
+  - [apt 无法使用](https://t.me/withabsolutex/1588)
+  - [LF 变成 CRLF](https://t.me/withabsolutex/1590)
 - (2023) 强制 2FA
 - feat: fork 没有细分类型，例如为了推送上游或为了自立门户的。
 - 查看 history commit 的页面写的稀烂，只有 newer/older 两个按钮来翻页，无法快速跳转到我想要的时间。
@@ -185,7 +189,9 @@ ColorOS 是目前一加的默认系统。
 - Github PR 的 CI 如果 failed 了，并不会通知发起者。
 - Github 首次 PR 的 workflow 需要手动验证([src](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks))。。。不是，你们 CI 改没改 `.github` 不能特判一下？非得一棒子打死？
 - Github 在 commit message 中提到了其他仓库的 issue，然后删除 + force push 后，原先的 refer 不会移除。也就是说，我进行的 fixup 行为把别人 refer 了两次，感觉像 spam 了。。
-- Github 移动端，右上角的 `...` 总是点不开
+- ~~Github 移动端，右上角的 `...` 总是点不开~~（貌似修了）
+- Secret names must not start with `GITHUB_`.
+- release binary，无法删除并更换一个同名 binary
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 
