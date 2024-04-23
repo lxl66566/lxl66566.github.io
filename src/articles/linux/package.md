@@ -259,7 +259,9 @@ ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sys
 
 - QQ 还好说，有 QQNT（`linuxqq` <Badge text="AUR" />）用。
   - 不要安装 [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)。Archlinux 是滚动更新，而第三方为爱发电的注入基本上跟不上更新节奏。我试了 bin 包和 git 包都会闪退。
-- [微信](https://wiki.archlinuxcn.org/wiki/微信)就是垃圾的代名词，`wechat-uos` <Badge text="AUR" /> 在暗色模式下有 bug，并且进不了托盘。但是有原生我也不想用 wine。（反正我没有朋友圈、小程序需求）
+- [微信](https://wiki.archlinuxcn.org/wiki/微信)就是[垃圾的代名词](../../gossip/fuckxxx.md#微信有多难用)。我对微信的要求是不想用 wine，反正我没有朋友圈、小程序需求。
+  - 首推当然还是 `wechat-universal-bwrap` <Badge text="AUR" />，最 popular 的一集，还能防止拉屎。
+  - 也试过 `wechat-uos` <Badge text="AUR" />，在暗色模式下有 bug，并且进不了托盘。
   - [wechat-need-web](https://github.com/lqzhgood/wechat-need-web) 可以让你能够使用微信网页版。
 
 ### 邮件

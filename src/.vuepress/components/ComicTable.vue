@@ -68,7 +68,7 @@ const data = [
   { id: "477481", aScore: 3.7, bScore: 6.5, bak: "https://telegra.ph/Sakura-Suishou-Yozakura-Souki-Yua-Nightmare-Digital-12-06" },
   { id: "(ex)", aScore: 8.1, bScore: 5.2, info: "#玉之けだま", otherlink: "https://exhentai.org/g/2496083/1f34d5f4ac/", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
   { id: "305526", aScore: 8.9, bScore: 4.3 },
-  { id: "483079", aScore: 9.6, bScore: 6.5, info: "#兽耳 #纯爱", bak: "https://telegra.ph/コミティア143-林檎のなる木-木瀬樹-麦の恩返し--学生編--中国翻訳-08-01" },
+  { id: "483079", aScore: 9.6, bScore: 6.9, info: "#兽耳 #纯爱", bak: "https://telegra.ph/コミティア143-林檎のなる木-木瀬樹-麦の恩返し--学生編--中国翻訳-08-01" },
   { id: "(ex)", aScore: 3.7, bScore: 7.2, info: "#寸止", otherlink: "https://exhentai.org/g/2480501/a346125f42/", bak: "https://telegra.ph/大伴ヤキ-虎の春-COMIC-快楽天-2023年4月号-中国翻訳-DL版-08-01" },
   { id: "(ex)", aScore: 7.8, bScore: 7.6, info: "#兄妹 #睡x", otherlink: "https://exhentai.org/g/2763933/9fa25f0ef2/", bak: "https://telegra.ph/Rev3-もんちゃんrev3-寝てる時は素直-中国翻訳-DL版-12-11" },
   { id: "392293", aScore: 6.9, bScore: 7, info: "#日常崩坏", bak: "https://telegra.ph/Oomori-Tokui-Taishitsu-Bishoujo-Maniacs-夜空下的萝莉x真不可视汉化组-11-16" },
@@ -247,6 +247,12 @@ const data = [
   { id: "337624", aScore: 6.3, bScore: 6.8, info: "#兽耳 #纯爱" },
   { id: "346403", aScore: 3.6, bScore: 8.4, info: "#捆绑 #师生", bak: "https://telegra.ph/nikukyu-ききし-緊縛少女百合の花を手折る-中国翻訳-DL版-04-16" },
   { id: "505835", aScore: 6.2, bScore: 8.7, info: "#时停 #loli", order: 2, bak: "https://telegra.ph/C103-スパイシーラブスヘブン-かみ田-本当にいた時間停止おじさん2-中国翻訳-团子翻译器gpt35-04-17" },
+  { id: "395294", aScore: 7.3, bScore: 4.1, info: "#木瀬樹 #师生 #强制", bak: "https://telegra.ph/木瀬樹-負けるな絶倫先生-G-エッヂ-Vol014-中国翻訳-08-02" },
+  { id: "393479", aScore: 4, bScore: 2, info: "#loli", order: 2, bak: "https://telegra.ph/C93-あとりえひなた-ひなた悠-ロリまん売買日記-ふたりめ-中国翻訳-08-02" },
+  { id: "446975", aScore: 7.6, bScore: 4.6, info: "#兄妹 #女上位", bak: "https://telegra.ph/ちろたた-どーるぷれい-COMIC-失楽天-2022年2月号-中国翻訳-DL版-08-02" },
+  { id: "393433", aScore: 8.5, bScore: 5.1, info: "#艦これ #可爱 #榨乳", bak: "https://telegra.ph/C99-STEELACT-二条かため-時津風と一緒に-十壱-艦隊これくしょん--艦これ--中国翻訳-08-02" },
+  { id: "393253", aScore: 8.2, bScore: 4, info: "#百合", bak: "https://telegra.ph/凍咲しいな-都会のあそびかた-ロリおね百合えっち-ロリがお姉さんを攻めてもいいよねVol2-中国翻訳-DL版-08-02" },
+  { id: "431749", aScore: 6.1, bScore: 6.7, info: "#兄妹", order: 1, bak: "https://telegra.ph/あいらんどう-妹とノリでエッチした件-COMIC-LO-2021年10月号-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

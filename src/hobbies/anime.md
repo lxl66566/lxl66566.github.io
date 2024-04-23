@@ -18,7 +18,7 @@ tag:
 
 ## 资源
 
-[樱花动漫](https://www.yhdmp.live/) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/) | [acg.rip](https://acg.rip/) | [末日動漫資源庫](https://share.acgnx.se/) | [动漫花园](http://share.dmhy.org/) | [Tg 动画仓库](https://t.me/AnimeNep)
+[樱花动漫](https://www.yhmgo.com) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/) | [acg.rip](https://acg.rip/) | [末日動漫資源庫](https://share.acgnx.se/) | [动漫花园](http://share.dmhy.org/) | [Tg 动画仓库](https://t.me/AnimeNep)
 
 但是大部分都没用过
 
@@ -29,6 +29,7 @@ tag:
 <!-- prettier-ignore -->
 |番名 | 起止区间|
 | :--: | :--: |
+|Joker Game|2024.04.23-<br/>在看|
 |玻璃之花与崩坏的世界|2024.04.04|
 |紫罗兰永恒花园 剧场版|2024.02.17|
 |BanG Dream! It's MyGO!!!!!|2024.01.07-<br/>2024.01.08|
@@ -99,13 +100,13 @@ tag:
 ::: details
 
 - to love
-- 代号 D 机关
 - 女皇之刃
 - 剃须。然后捡到女高中生
 - 伪恋
 - 天使的 3p
 - 巨人
 - 魔禁
+- 小圆
 - fate0
 - 犬夜叉
 - 我立于百万生命之上
@@ -119,5 +120,8 @@ tag:
 - 新妹魔王的契约者
 - 校园的日子
 - 圣痕炼金士
+- 战斗员派遣中
+- 86-不存在的地域
+- 打了 300 年的史莱姆，不知不觉就练到了满级
 
 :::
