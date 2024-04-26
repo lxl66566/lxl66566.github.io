@@ -180,6 +180,7 @@ ColorOS 是目前一加的默认系统。
   - stay away from yaml!
   - [apt 无法使用](https://t.me/withabsolutex/1588)
   - [LF 变成 CRLF](https://t.me/withabsolutex/1590)
+  - 上传了 yml 但是读取不到 workflow
 - (2023) 强制 2FA
 - feat: fork 没有细分类型，例如为了推送上游或为了自立门户的。
 - 查看 history commit 的页面写的稀烂，只有 newer/older 两个按钮来翻页，无法快速跳转到我想要的时间。

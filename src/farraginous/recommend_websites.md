@@ -70,7 +70,8 @@ tag:
 
 LLM：Large Language Models，大型语言模型。下述均为本人总结，可免费使用。
 
-- [BAI Chat](https://chatbot.theb.ai/)：GPT-3.5 模型。也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)。
+- [BAI Chat](https://beta.theb.ai/)：多模型。
+  - 也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)，但是不能更改模型，而且比较笨。
 - ~~[new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。~~ 已更名为 Copilot 并集成进 windows 11。
   - ~~需要使用科学上网，若自动重定向到 `(cn).bing.com` 则需要：检查代理，清除 Cookies，并在 microsoft 账户设置中关闭严格搜索。~~
   - 想正常使用，请参考[设置 windows](../articles/windows_setting.md#对-win11-的设置) 28.
@@ -81,6 +82,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 搜索型工具，给出来源
   - [phind](https://www.phind.com/)：搜索编程有关问题
   - [devv](https://devv.ai/)
+- [coze](https://www.coze.com/home)：本意是创建 bot 的 AI，但是有免费 GPT4 的水平。
 
 ## pastebin
 

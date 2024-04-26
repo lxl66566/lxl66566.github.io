@@ -253,6 +253,7 @@ const data = [
   { id: "393433", aScore: 8.5, bScore: 5.1, info: "#艦これ #可爱 #榨乳", bak: "https://telegra.ph/C99-STEELACT-二条かため-時津風と一緒に-十壱-艦隊これくしょん--艦これ--中国翻訳-08-02" },
   { id: "393253", aScore: 8.2, bScore: 4, info: "#百合", bak: "https://telegra.ph/凍咲しいな-都会のあそびかた-ロリおね百合えっち-ロリがお姉さんを攻めてもいいよねVol2-中国翻訳-DL版-08-02" },
   { id: "431749", aScore: 6.1, bScore: 6.7, info: "#兄妹", order: 1, bak: "https://telegra.ph/あいらんどう-妹とノリでエッチした件-COMIC-LO-2021年10月号-中国翻訳-DL版-08-02" },
+  { id: "425899", aScore: 4.6, bScore: 8.4, info: "#魅魔 #反杀", bak: "https://telegra.ph/ソーダ畑-無敵ソーダ-淫魔お姉さんにはエッチなお仕置きで戦うんだよ-中国翻訳-DL版-04-24" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
