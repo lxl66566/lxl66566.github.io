@@ -98,3 +98,7 @@ tag:
 </dtls>
 
 得到了 `boot.img`，剩下的就是用 magisk 修补，刷入了。跟[用小米时](#redmi-note-10-pro)一样，不再赘述。
+
+## 关于 KernelSU
+
+在[浪费了两个小时](https://t.me/withabsolutex/1601)后，我想说：**如果你不是开发者，别碰 KernelSU**。

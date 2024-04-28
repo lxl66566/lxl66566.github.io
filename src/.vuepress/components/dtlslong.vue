@@ -3,7 +3,7 @@
     <summary>{{ alt }}</summary>
     <span>{{ text }}</span>
   </details>
-  <span v-if="!need">{{ text }}</span>
+  <span v-else>{{ text }}</span>
 </template>
 
 <script>
@@ -18,15 +18,15 @@ export default {
       type: String,
       required: true,
     },
-    noshort: {
+    fold: {
       type: String,
       required: false,
-      default: 0,
+      default: 20,
     },
   },
   computed: {
     need() {
-      return this.text.length > +this.noshort;
+      return this.text.length > +this.fold;
     },
   },
 };

@@ -204,6 +204,11 @@ conda list  # 查看环境内工具包
 - python 不支持重载。
 - python 的 OOP 是残缺的，即使可以靠一些[装饰器](#decorator)逼近。
 
+### 错误处理
+
+- py 错误处理偏向传统的异常处理。主要关键字是 `try`, `except`, `else`, `finally`。
+- `finally` 优先级比 `return` 和 `exit` 高。
+
 ### module
 
 每个目录 / `.py` 文件都被视作一个模块。目录模块要添加内容，要写在目录下的 `__init__.py`。
@@ -228,23 +233,26 @@ assert 的 error message 不是 & 不能改红色，还会打堆栈，让我很�
 
 实际上在使用测试时基本上用的都是测试框架自己的 assert，优势是可以打印值。用系统 assert 一般只是拿来防御性编程。
 
-### 解耦
+### 传参
 
-```py
-def printa(a, b, c):
-    print(a, b, c)
-
-l = {
-    "a": 1,
-    "b": 2,
-    "c": 3,
-}
-printa(**l)
-```
-
-但是要注意，使用条件很严格，参数不能多也不能少。我没有找到一个比较好的设置 default 的方法。
-
-`*` 是解 list，`**` 是解 dict。
+- 解耦：`*` 是解 list，`**` 是解 dict。
+  ```py
+  def fun(a, b):
+      print(a, b)
+  l = {
+      "a": 1,
+      "b": 2,
+  }
+  fun(**l)
+  ```
+  但是要注意，使用条件很严格，参数不能多也不能少。我没有找到一个比较好的设置 default 的方法。
+- 多参：类似的。这个倒是能较为简单地 set default。
+  ```py
+  def fun(*args, **kwargs):
+      kwargs.setdefault("c", 3)
+      pass
+  fun(1, 2, a=1, b=2)   # args: [1, 2]  kwargs: {"a": 1, "b": 2, "c": 3}
+  ```
 
 ### yield
 
@@ -828,3 +836,4 @@ python -m pip install --upgrade pip --user
 4. [Python Type Hints 简明教程（基于 Python 3.12）](https://zhuanlan.zhihu.com/p/464979921)
 5. [Fastest Way to Read Excel in Python](https://hakibenita.com/fast-excel-python)
 6. [What the f\*ck Python! 🐍 一些有趣且鲜为人知的 Python 特性.](https://github.com/robertparley/wtfpython-cn)
+7. [Python Gotcha: strip, lstrip, rstrip can remove more than expected](https://andrewwegner.com/python-gotcha-strip-functions-unexpected-behavior.html)

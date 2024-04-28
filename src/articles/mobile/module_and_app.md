@@ -34,16 +34,19 @@ root 手机的最大目的就是装模块与需要 root 权限的软件，获取
 LSPosed 模块挺多闭源的，这里就懒得标注了。
 
 - WeXposed
-- QXposed
-- ~~TSBattery~~
+- QQ
+  - [QAuxiliary](https://github.com/cinit/QAuxiliary)：强大的 QQ 自定义模块，比 QXposed 好用，必装
+  - ~~QXposed~~ 新版 QQ 不能用，久不更新，算是死了，
+  - [QQ 瘦身](https://github.com/KitsunePie/QQCleaner)
+- TSBattery
 - [核心破解](https://github.com/LSPosed/CorePatch/releases)
 - 哔哩漫游
-- [QQ 瘦身](https://github.com/KitsunePie/QQCleaner)
-- Telegram：
+- Telegram
+  - [TMoe](https://github.com/cinit/TMoe)：Telegram 自定义模块
   - Telegram UserID Viewer
-  - Killergram
-  - TeleSpeed
-- Bili 调速
+  - ~~Killergram~~
+  - ~~TeleSpeed~~ 被 _Bili 调速_ 上位替代
+- Bili 调速：支持为 _哔哩哔哩_, _twitter_, _Telegram_ 设置默认速度
 - [DarQ](https://github.com/KieronQuinn/DarQ)：强制暗黑模式。需要在启用模块中选中所有需要强制黑夜的应用。
 - [LuckyTool](https://github.com/Xposed-Modules-Repo/com.luckyzyx.luckytool)：一加的 ColorOS 必装。有了 LuckyTool，生活会轻松很多。
 - [拒绝强制亮度](https://github.com/Xposed-Modules-Repo/com.fankes.refusebrightness)

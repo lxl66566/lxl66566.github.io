@@ -58,12 +58,13 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
-|北方的天空|2024.01.31-<br/>在读|
+|[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>在读|
+|[北方的天空](https://t.me/absolutexsresource/3)|2024.01.31-<br/>2024.04.27|?|<dtlslong text="现实主义上世纪末背景黄书，少妇取向。作者想写出古典文学的苍凉之景，可惜黄色废料太多，有些喧宾夺主了。"/>|
 |<span class="heimu">[某 R18 内容](https://www.pixiv.net/novel/show.php?id=21329454)</span>|2024.01.31-<br/>2,等待连载|
 |[Re0：从零开始的异世界生活](https://github.com/re-zero-khis/re0-web)|2024.01.20-<br/>卷3,在读|3h52min|
 |[我在末世捡到白狐](https://www.pixiv.net/novel/series/10523577) <Badge type="warning" text="爽" />|2023.08.29-<br/>23,等待连载|2h23min|
 |[加速世界](https://www.wenku8.net/book/381.htm)|2023.07.09-<br/>26,等待连载|21h33min 未包括前0.235|
-|[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126)|2023.0[34]-<br/>在读|-|
+|[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126)|2023.0[34]-<br/>&lt;40&gt;章，放弃|-|<dtlslong text="除了设定其他都不太行，连贯性差"/>|
 |末世之黑暗召唤师 <Badge type="warning" text="爽" />|2023.07.14-<br/>2023.07.31|41h10min|<span class="heimu" title="你知道的太多了">垃圾人妻爽文，</span>后期写得比较水，还好结局发挥不差。世界设定较混乱，没有体系。|
 |知北游|2023.02.10-<br/>2023.02.18|18h16min|道的细节探索；关于选择与失去的遗憾。盗版文本阅读体验较差。|
 |空想之拳 <Badge type="danger" text="停更" />|2023.01.29-<br/>2023.02.06|21h17min|玩梗量大；开篇过于零碎，难以入门。|

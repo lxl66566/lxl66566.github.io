@@ -24,13 +24,13 @@
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
           <td>
-            <dtlslong v-if="row.info" :text="row.info" noshort="20" />
+            <dtlslong v-if="row.info" :text="row.info" fold="20" />
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <dtlslong text="123" noshort="20" />
+  <dtlslong text="123" fold="20" />
 </template>
 
 <script>
