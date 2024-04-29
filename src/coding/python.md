@@ -21,9 +21,11 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 
 ## 开发环境
 
-关于开发，我直接无脑 all in [vscode](./vscode.md)。
+查看 [external](#external) 8. 以进行参考。
 
 ### vscode 扩展
+
+关于开发，我直接无脑 all in [vscode](./vscode.md)。
 
 开发 python 前，强烈建议安装以下扩展：
 
@@ -190,7 +192,7 @@ conda list  # 查看环境内工具包
 
 ### 其他
 
-关于包管理器，除了 _poetry_ 和 _conda_ 外，还有例如 [_pdm_](https://github.com/pdm-project/pdm) 可以尝试使用。
+关于包管理器，除了 _poetry_ 和 _conda_ 外，还有例如 [_pdm_](https://github.com/pdm-project/pdm) 和 [_uv_](https://github.com/astral-sh/uv) 可以尝试使用。
 
 如果不使用现代包管理器（如果用 pip），需要在项目下导出一个 `requirements.txt` 用于声明项目依赖。可以用 pip 导出，也可以自己写模块。可以不写版本，只写每行一个模块名。
 
@@ -199,10 +201,11 @@ conda list  # 查看环境内工具包
 ### 基本概念
 
 - python 函数传参跟其他语言很像，基本类型是值传递，object, list, dict 是引用传递。
-  - 深拷贝和浅拷贝，这个应该是编程基本概念而不是语言基本概念。
+  - 不想传引用就有深拷贝和浅拷贝，这个应该是编程基本概念而不是语言基本概念。
 - python 的类型标注只会报警告，运行时不检查。
 - python 不支持重载。
 - python 的 OOP 是残缺的，即使可以靠一些[装饰器](#decorator)逼近。
+- 比较偏门的是，`else` 可以与 `try-catch` 或 _循环_ 一起使用。
 
 ### 错误处理
 
@@ -837,3 +840,4 @@ python -m pip install --upgrade pip --user
 5. [Fastest Way to Read Excel in Python](https://hakibenita.com/fast-excel-python)
 6. [What the f\*ck Python! 🐍 一些有趣且鲜为人知的 Python 特性.](https://github.com/robertparley/wtfpython-cn)
 7. [Python Gotcha: strip, lstrip, rstrip can remove more than expected](https://andrewwegner.com/python-gotcha-strip-functions-unexpected-behavior.html)
+8. [How I manage Python in 2024](https://outlore.dev/blog/python-dev-2024/)

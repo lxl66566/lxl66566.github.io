@@ -114,18 +114,13 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 ### 新闻
 
 - [竹新社](https://t.me/tnews365)：国内外新闻转载，较客观
-- [Disclose.tv](https://t.me/disclosetv)：英文新闻频道
-- [中国数字时代](https://t.me/cdtchinesefeed)：转载网评文章，较主观
-- [今读](https://t.me/today_read)：时评
-
-#### 科技新闻
-
 - [Solidot](https://t.me/solidot)
 - [风向旗参考快讯](https://t.me/xhqcankao)
 - [每日消费电子观察](https://t.me/CE_Observe)
-- [Testflight 新闻投稿](https://t.me/TestFlightCN)
 
 ### 学习
+
+- [速学与笔记管理艺术交流](https://t.me/anki_keeper/548)
 
 #### 编程及技术
 
