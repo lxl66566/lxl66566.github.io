@@ -48,7 +48,7 @@ tag:
 - [ ] 流式分布式的视频软件?
 - [ ] 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）
 - [ ] pdf 无损图片压缩
-- [ ] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
+- [x] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 - [ ] lzma 数据库，简易迁移，不依赖特定程序
 - [ ] 浏览器书签 & 历史数据库(rust cli / js)
 - [ ] better sqlite_zstd

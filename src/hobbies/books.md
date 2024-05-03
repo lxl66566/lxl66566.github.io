@@ -34,6 +34,8 @@ tag:
 ## 资源
 
 - [轻小说文库](https://www.wenku8.net/login.php)[^2]
+- [轻小说机翻机器人](https://books.fishhawk.top/)
+- [知轩藏书](https://zxcs.zip/)
 
 [^2]: [妈的，被骗啦](https://t.me/withabsolutex/1180)
 

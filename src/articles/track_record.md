@@ -52,3 +52,7 @@ tag:
 |Geo Tracker|56.74|✔|✖||
 
 总结：没有特别满意的。姑且用着 Wikiloc
+
+## external
+
+1. [Every map of China is wrong](https://medium.com/@anastasia.bizyayeva/every-map-of-china-is-wrong-bc2bce145db2)：解释了为什么很多国外的地图软件具有偏差值。

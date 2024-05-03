@@ -254,6 +254,13 @@ const data = [
   { id: "393253", aScore: 8.2, bScore: 4, info: "#百合", bak: "https://telegra.ph/凍咲しいな-都会のあそびかた-ロリおね百合えっち-ロリがお姉さんを攻めてもいいよねVol2-中国翻訳-DL版-08-02" },
   { id: "431749", aScore: 6.1, bScore: 6.7, info: "#兄妹", order: 1, bak: "https://telegra.ph/あいらんどう-妹とノリでエッチした件-COMIC-LO-2021年10月号-中国翻訳-DL版-08-02" },
   { id: "425899", aScore: 4.6, bScore: 8.4, info: "#魅魔 #反杀", bak: "https://telegra.ph/ソーダ畑-無敵ソーダ-淫魔お姉さんにはエッチなお仕置きで戦うんだよ-中国翻訳-DL版-04-24" },
+  { id: "487562", aScore: 8.7, bScore: 5.1, info: "#兽耳 #扶她", bak: "https://telegra.ph/Sakura-Yuu-Isekai-de-Yuri1-在异世界搞百合1-喵喵-Chinese-Digital-05-01" },
+  { id: "503105", aScore: 6.3, bScore: 8.5, info: "#雌小鬼 #魔女 #寸止", bak: "https://telegra.ph/はつやすみ-わがまま魔女と射精禁止生活-中国翻訳-05-02" },
+  { id: "389284", aScore: 6.3, bScore: 8, info: "#合集 #百合", order: 2, bak: "https://telegra.ph/アンソロジー-二次元コミックマガジン-メスガキvs優しいお姉さんVol2-中国翻訳-DL版-08-02" },
+  { id: "389474", aScore: 6.1, bScore: 6.6, info: "#泳装 #fate", bak: "https://telegra.ph/C99-Part-K-羊羽忍-チョロいカーマは面倒くさい-カワイイ-FateGrand-Order-中国翻訳-08-02" },
+  { id: "390241", aScore: 7, bScore: 8.3, info: "#全彩 #性转", bak: "https://telegra.ph/TSF妄想蓄積所-皆月ななな椎名悠輝-人生とりかえっこアプリ-中国翻訳-08-02" },
+  { id: "390831", aScore: 7.6, bScore: 3.5, info: "#兽尾 #项圈 #碧蓝幻想", bak: "https://telegra.ph/C99-タマラン-アンチララランドIII--おまけ-グランブルーファンタジー-中国翻訳-08-02" },
+  { id: "391519", aScore: 9.5, bScore: 3, info: "#百合 #请问您今天要来点兔子吗", bak: "https://telegra.ph/C99-あめうさぎ-飴玉コン-チノちゃんの可愛いところ見せて-ご注文はうさぎですか-中国翻訳-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

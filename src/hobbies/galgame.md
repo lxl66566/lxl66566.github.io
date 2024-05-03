@@ -61,6 +61,8 @@ tag:
 
   相比之下 vnr 依赖百度贴吧，资源 BT 失效，大多使用城通网盘，真让人火大。而小牛云平台免费额度给的也足够了。
 
+  - 也可以试试 [LunaTranslator](https://github.com/HIllya51/LunaTranslator)，简陋一点，但是也能用
+
 <!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame（会社）/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
 
 ## 我已玩完
@@ -307,6 +309,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
+|死に逝く君、館に芽吹く憎悪|_默示_ 汉化版随机崩溃|
 |樱之诗|从 backlog 返回切断语音；auto 打开时跳过当前语音；wine 上在某些语音处崩溃；启动时移出焦点可能无法再次进入全屏|
 |住在下体升级岛上的贫乳该如何是好？2|nolinux；backlog 切断语音|
 |枯れない世界と終わる花|<text style="color:red;">语音音量个别设定没法调</text>|
@@ -350,6 +353,11 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 一般来说，能打动我，能让我产生共鸣的 galgame，我都会打上比较高的剧情分（满足剧情党的喜好）。
 - 目前在我玩过的 gal 中，我认为的三幻神是 [ISLAND](#island)，[纸魔](#纸上魔法使)，[sprb](#summer-pockets-reflection-blue)。
 - 在这里打一些标签：<Badge text="精美" /> <Badge text="无 R18" type="tip" />
+
+### 死に逝く君、館に芽吹く憎悪
+
+- 和前面的 _無限煉姦_ 有异曲同工之妙
+- 文字是 _挥下右手。_，但是 CG 上是左手（
 
 ### 無限煉姦
 

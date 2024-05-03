@@ -253,6 +253,7 @@ const data = [
   { id: "sdam-093", aScore: 8.7, bScore: 9.1, u: true, name: "only ^1" },
   { id: "dvdms-838", aScore: 8, bScore: 7.3, u: true, name: "#3P #母女" },
   { id: "ibw-425z", aScore: 6.2, bScore: 6.1, name: "^1" },
+  { id: "stars-140", aScore: 6.4, bScore: 8.3, name: "#群P" },
 ];
 export default {
   name: "AvTable",

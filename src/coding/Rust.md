@@ -400,6 +400,7 @@ u = "update"
 | assert2 | 全兼容的好看的 assert |
 | die-exit | 错误处理并退出，[我的 fork](https://github.com/lxl66566/die/tree/master) |
 | temp_testdir | 目前我在用的临时目录实现 |
+| tap | 函数式工具，在链式中途拿取引用操作而不影响值 |
 
 ### clap
 
@@ -430,13 +431,19 @@ rustup target add x86_64-unknown-linux-musl
 cargo build --release --target x86_64-unknown-linux-musl
 ```
 
-## 发布
+### release
 
 如果只是想要用 Github CI 自动出 binary 放到 release，那么[这个 Action](https://github.com/marketplace/actions/build-and-upload-rust-binary-to-github-releases)专注于这一任务，非常好用。
 
 当然也有其他的，我以后可能会尝试：
 
-- [cross action](https://github.com/houseabsolute/actions-rust-cross)
+- [cross action](https://github.com/houseabsolute/actions-rust-cross)：使用 docker 容器进行 build，但是不提供压缩。
+
+还有，跑 Github CI 就不得不提万恶的 openssl，我已经[喷了无数次](https://t.me/withabsolutex/1609)。如果你编译时使用自定义 target，就会寄。我搞了半天，终于搞出了[可用的 CI](https://github.com/lxl66566/git-simple-encrypt)，放在这里供参考。
+
+## 发布
+
+将包发布到 crates.io 上也是极其方便的，我认为甚至根本不需要 CI。直接 `cargo publish` 即可。
 
 ## 测试
 
