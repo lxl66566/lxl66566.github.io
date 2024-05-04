@@ -519,3 +519,4 @@ articles:
 4. [为什么 Rust 需要 Pin, Unpin ？（中文翻译）](https://zhuanlan.zhihu.com/p/404818051)
 5. [如何理解 rust 中的 Sync、Send？](https://zhuanlan.zhihu.com/p/64699643)
 6. [Rust 的 Pin 与 Unpin](https://folyd.com/blog/rust-pin-unpin/)
+7. [static, const, let 声明变量有什么区别？](https://rustcc.cn/article?id=d3954670-a58a-427d-9c0c-6666051f5cc7)

@@ -66,7 +66,7 @@ const data = [
   { id: "477903", aScore: 9, bScore: 5.7 },
   { id: "303996", aScore: 8, bScore: 4.1 },
   { id: "477481", aScore: 3.7, bScore: 6.5, bak: "https://telegra.ph/Sakura-Suishou-Yozakura-Souki-Yua-Nightmare-Digital-12-06" },
-  { id: "(ex)", aScore: 8.1, bScore: 5.2, info: "#玉之けだま", otherlink: "https://exhentai.org/g/2496083/1f34d5f4ac/", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
+  { id: "387934", aScore: 8.1, bScore: 5.2, info: "#玉之けだま", order: 3, bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
   { id: "305526", aScore: 8.9, bScore: 4.3 },
   { id: "483079", aScore: 9.6, bScore: 6.9, info: "#兽耳 #纯爱", bak: "https://telegra.ph/コミティア143-林檎のなる木-木瀬樹-麦の恩返し--学生編--中国翻訳-08-01" },
   { id: "(ex)", aScore: 3.7, bScore: 7.2, info: "#寸止", otherlink: "https://exhentai.org/g/2480501/a346125f42/", bak: "https://telegra.ph/大伴ヤキ-虎の春-COMIC-快楽天-2023年4月号-中国翻訳-DL版-08-01" },
@@ -261,6 +261,12 @@ const data = [
   { id: "390241", aScore: 7, bScore: 8.3, info: "#全彩 #性转", bak: "https://telegra.ph/TSF妄想蓄積所-皆月ななな椎名悠輝-人生とりかえっこアプリ-中国翻訳-08-02" },
   { id: "390831", aScore: 7.6, bScore: 3.5, info: "#兽尾 #项圈 #碧蓝幻想", bak: "https://telegra.ph/C99-タマラン-アンチララランドIII--おまけ-グランブルーファンタジー-中国翻訳-08-02" },
   { id: "391519", aScore: 9.5, bScore: 3, info: "#百合 #请问您今天要来点兔子吗", bak: "https://telegra.ph/C99-あめうさぎ-飴玉コン-チノちゃんの可愛いところ見せて-ご注文はうさぎですか-中国翻訳-08-02" },
+  { id: "388113", aScore: 5.4, bScore: 2, info: "#兄妹 #纯爱", bak: "https://telegra.ph/C99-Rico-ba-Rico-義妹ちゃんは甘えんぼ-中国翻訳-08-02" },
+  { id: "388474", aScore: 7.5, bScore: 1.3, info: "#さわやか鮫肌 #兽耳", bak: "https://telegra.ph/C99-ドットエイト-さわやか鮫肌-ビカラちゃんといちゃいちゃする本2冊目-グランブルーファンタジー-中国翻訳-08-02" },
+  { id: "388718", aScore: 7.5, bScore: 7.1, info: "#无意识 #无职转生", bak: "https://telegra.ph/小糸創作所-ひなた睦月-エリスとするニャん-無職転生-異世界行ったら本気だす-中国翻訳-DL版-08-02" },
+  { id: "388860", aScore: 4.3, bScore: 2, info: "#碧蓝航线", bak: "https://telegra.ph/アズレン学園購買部7-メロメイト-ひな-しきかんだっこ-アズールレーン-中国翻訳-08-02" },
+  { id: "389075", aScore: 8.7, bScore: 7.5, info: "#无职转生 #自慰", bak: "https://telegra.ph/C99-サークルフィオレ-えかきびと-お嬢様も本気出す-無職転生-異世界行ったら本気だす-中国翻訳-08-02" },
+  { id: "507557", aScore: 4.5, bScore: 9.4, info: "#合集 #群P #强制", bak: "https://telegra.ph/友達-05-03" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
