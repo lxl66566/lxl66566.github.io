@@ -13,7 +13,7 @@ tag:
 
 ## meme 图集
 
-![meme1](/images/farraginous/college/meme1.jpg)
+![meme2](/images/gossip/memes/4.jpg)
 ![meme2](/images/gossip/memes/1.jpg)
 ![meme3](/images/gossip/memes/2.jpg)
 ![meme4](/images/gossip/memes/3.webp)

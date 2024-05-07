@@ -384,7 +384,8 @@ diff 增强插件，为 github 使用。
 - [Bilibili AntiBV](https://greasyfork.org/zh-CN/scripts/398499-bilibili-antibv)：BV 自动转 AV
 - [三相之力指示器](https://greasyfork.org/zh-CN/scripts/451150-新-三相之力指示器)：三相之力！B 站评论区自动标注三相玩家。
 - [哔哩哔哩自动连播](https://greasyfork.org/zh-CN/scripts/408516-哔哩哔哩自动连播)：跳过 bilibili 视频末尾的充电鸣谢
-- [Bilibili live enhance](https://greasyfork.org/zh-CN/scripts/474523-bilibili-live-enhance)：夹带私货，本人写的直播增强。
+- [Bilibili live enhance](https://greasyfork.org/zh-CN/scripts/474523-bilibili-live-enhance)：夹带私货，本人写的直播增强，主要是移除了礼物栏等。
+- [bilbili 界面美化](https://greasyfork.org/zh-CN/scripts/476704-bilbili界面美化)：自动网页全屏，移除弹幕栏，非常对我的胃口
 - [一些改善未登录下观看体验的脚本](https://greasyfork.org/zh-CN/users/675901-dd1969)
 
 ## 一些过时的推荐

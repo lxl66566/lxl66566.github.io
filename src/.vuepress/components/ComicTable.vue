@@ -19,7 +19,7 @@
               <a :href="row.otherlink" target="_blank">{{ row.id }}</a>
             </span>
             <span v-if="row.bak"> | <a :href="row.bak">bak</a></span>
-            <OrderBadge v-if="row.order" :order="row.order" />
+            <OrderBadge v-if="row.order" :order=row.order />
           </td>
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
