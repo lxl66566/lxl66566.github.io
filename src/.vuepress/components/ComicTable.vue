@@ -270,6 +270,7 @@ const data = [
   { id: "508329", aScore: 3.7, bScore: 9.2, info: "#葬送的芙莉莲 #NTR", bak: "https://telegra.ph/毒猫ノイル-フェルンに悪いことをする話-葬送のフリーレン-中国翻訳-05-05" },
   { id: "(ex)", aScore: 8, bScore: 9.8, info: "#いちはや #兄妹 #记忆丧失", bak: "https://telegra.ph/squeezecandyheaven-いちはや-お兄ちゃんは記憶喪失-中国翻訳-DL版-05-03-2" },
   { id: "147875", aScore: 6.2, bScore: 3.4, info: "#兽耳 #兄妹 #肛交", bak: "https://telegra.ph/日月ネコ-ペットな姉の躾け方-コミックグレープ-Vol24-中国翻訳-DL版-05-06" },
+  { id: "508479", aScore: 5.8, bScore: 9.5, info: "#触手 #兽耳 #催眠", bak: "https://telegra.ph/C103-あらと屋-あらと安里-ダヴィガキ理解らせっくす3-中国翻訳-05-06" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

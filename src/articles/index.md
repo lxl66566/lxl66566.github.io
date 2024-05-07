@@ -38,6 +38,10 @@ category:
 - [OCR](./ocr.md)
 - [PDF 阅读器横评](./pdf_reader.md)
 
+## 杂
+
+- [寄生虫认知与预防](./worm.md)
+
 ## [外部文章分享](./external.md)
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->
