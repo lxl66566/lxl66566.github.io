@@ -209,34 +209,9 @@ console.log("1")
 
 ![鬼畜页码](/images/farraginous/learning/typst/outline_err.svg)
 
-我尝试问群友，没人理；尝试看源码，发现写死了；最后在 repo 里乱搜，居然被我搜到了一个究极自定义方案，改一改就是解法：
+我尝试问群友，没人理 <heiemu>几个月后才又聊到这个话题</heiemu>；尝试看源码，发现写死了；最后在 repo 里乱搜，居然被我搜到了一个究极自定义方案，改一改就是[解法](https://typst.app/project/rdlQEoafiBzjiaF_mDBurK)。
 
-```typst
-#set text(lang: "zh", region: "cn")
-#set heading(numbering: "1.")
-#set page(
-  numbering: (..nums) => {
-    "第" + str(nums.pos().at(0)) + "页，共" + str(nums.pos().at(-1)) + "页"
-  },
-  number-align: center,
-)
-#show outline: ol => {
-  show heading: it => {
-    align(center, it)
-  }
-  ol
-}
-#show outline.entry: it => {
-  set text(size: 10pt)
-  let loc = it.element.location()
-  let num = str(..counter(page).at(loc))
-  link(loc, it.body)
-  box(width: 1fr, repeat[#it.fill.body;.])
-  link(loc, [#num])
-}
-#outline(indent: auto)
-= test
-```
+当然，这个做法还有的问题就是
 
 ## bug
 

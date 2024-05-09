@@ -351,10 +351,7 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
 rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理中是顶级的。
 
-### cargo envs
-
-- cargo 根目录：`env!("CARGO_MANIFEST_DIR")`
-- cargo version：``
+### [cargo envs](https://doc.rust-lang.org/cargo/reference/environment-variables.html)
 
 ### 全局 alias
 
@@ -372,6 +369,14 @@ u = "update"
 ### fmt
 
 在 `rustfmt.toml` 里写代码的格式化选项。我一般只开 `wrap_comments`，不过也可以直接抄[前辈的](https://github.com/compio-rs/winio/blob/master/rustfmt.toml)。
+
+### 构建
+
+cargo build 在全局获取包与依赖的源码，并编译到 target 里。rust 的包构建体积膨胀非常厉害，而且同一份源码的编译产物可能不同[^4]，因此没有全局缓存，还是需要为每个仓库都编出中间产物。
+
+[^4]: 哪怕同一个编译器同一个包 rust 的编译是有副作用的，比如 env 宏 build script 乃至 proc macro，都是能任意副作用的 ([ref](https://t.me/c/1264662201/550767))
+
+不过可以试试 [sccache](https://github.com/mozilla/sccache/) 全局缓存。
 
 ## 库
 
@@ -520,3 +525,4 @@ articles:
 5. [如何理解 rust 中的 Sync、Send？](https://zhuanlan.zhihu.com/p/64699643)
 6. [Rust 的 Pin 与 Unpin](https://folyd.com/blog/rust-pin-unpin/)
 7. [static, const, let 声明变量有什么区别？](https://rustcc.cn/article?id=d3954670-a58a-427d-9c0c-6666051f5cc7)
+8. [An introduction to advanced Rust traits and generics](https://www.shuttle.rs/blog/2024/04/18/using-traits-generics-rust)

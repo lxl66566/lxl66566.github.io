@@ -96,6 +96,7 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 
 只有零碎的一些知识点。
 
+- [动物](https://www.todaimae.com.hk/material/a_zoo.html)
 - [数数](https://learning-japanese.com/number-count/)
 - [ために　 vs 　ように](https://japanese.stackexchange.com/questions/12450/difference-between-ために-and-ように)
 - [ならでは](https://nihongokyoshi-net.com/2019/06/20/jlptn1-grammar-naradewa/)

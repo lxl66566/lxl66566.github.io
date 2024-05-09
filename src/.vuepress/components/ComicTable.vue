@@ -271,6 +271,11 @@ const data = [
   { id: "(ex)", aScore: 8, bScore: 9.8, info: "#いちはや #兄妹 #记忆丧失", bak: "https://telegra.ph/squeezecandyheaven-いちはや-お兄ちゃんは記憶喪失-中国翻訳-DL版-05-03-2" },
   { id: "147875", aScore: 6.2, bScore: 3.4, info: "#兽耳 #兄妹 #肛交", bak: "https://telegra.ph/日月ネコ-ペットな姉の躾け方-コミックグレープ-Vol24-中国翻訳-DL版-05-06" },
   { id: "508479", aScore: 5.8, bScore: 9.5, info: "#触手 #兽耳 #催眠", bak: "https://telegra.ph/C103-あらと屋-あらと安里-ダヴィガキ理解らせっくす3-中国翻訳-05-06" },
+  { id: "386817", aScore: 9.7, bScore: 3, info: "#合集 #蔚蓝档案", bak: "https://telegra.ph/あとりえひなた-ひなた悠-補習授業部性活記録-ブルーアーカイブ-中国翻訳-DL版-08-02" },
+  { id: "386938", aScore: 6, bScore: 4.7, info: "#东方 #loli", bak: "https://telegra.ph/あとりえひなた-ひなた悠-補習授業部性活記録-ブルーアーカイブ-中国翻訳-DL版-08-02" },
+  { id: "508369", aScore: 6.3, bScore: 4, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-ながしそうめん-ユウザキ-コハルの缐が性感带だった本-ブルーアーカイブ-中国翻訳-05-08" },
+  { id: "(ex)", aScore: 6.8, bScore: 7.2, info: "#正太 #纯爱", otherlink: "https://exhentai.org/g/2885024/6f55cab907/", bak: "https://telegra.ph/Morishima-Kon-sweet-and-spicy-COMIC-X-EROS-110-Chinese-Digital-05-08-2" },
+  { id: "420933", aScore: 5, bScore: 1.9, info: "#全彩 #偶像大师", bak: "https://telegra.ph/Mousou-Diary-05-05" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

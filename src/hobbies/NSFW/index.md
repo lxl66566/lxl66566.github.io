@@ -33,3 +33,4 @@ tag:
 ## external
 
 1. [可穿戴科技](https://wt.tepis.me/)
+2. [E 绅士里站访问教程——从注册账号到进入里站](https://nicebowl.fun/11)

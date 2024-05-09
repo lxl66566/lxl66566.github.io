@@ -168,8 +168,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 ## 媒体创作
 
-- [Adobe 全家桶破解](https://pity.eu.org/OD4/Adobe/)
-  - [2022](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
+- [Adobe 全家桶破解](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
 - [Office Tool Plus](https://otp.landian.vip/zh-cn/)
 - 在线白板画图：
   - [tldraw](https://www.tldraw.com/)
