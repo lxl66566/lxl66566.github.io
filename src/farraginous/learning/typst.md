@@ -35,17 +35,39 @@ category:
 
 1. 进 release 下载，解压后把 `typst.exe` 直接丢进 `C:\Windows\System32` 就行。
    - 或者也可以 `scoop install typst` 一行搞定。
-2. vscode 安装两个扩展，无需配置：
-   - _Typst LSP_，Linter + watch
-   - _vscode-pdf_ (optional)，viewer
+2. vscode 扩展：
+
+   - 使用 _vscode-pdf_ 查看 pdf。
+     - 我不推荐 _Typst Preview_。
+       1. 曾经遇到过无法生成的 bug；
+       2. 很慢，10 页的 pdf 就会卡了。
+   - LSP
+     ::: tabs
+
+     @tab 传统
+
+     官方插件：Typst LSP
+
+     - 缺点：慢，没有 formatter
+     - 优点：0 配置，懒人福音
+
+     @tab 新起之秀
+
+     1. 安装 _Tinymist Typst - Myriad Dreamin_
+     2. `ctrl + ,` 进入设置：
+        1. _Tinymist: ExportPdf_ 改为 _onSave_
+        2. _Tinymist: FormatterMode_ 改为 _typstyle_（也是一个新起之秀的 formatter）
+
+     :::
+
    - 或：什么也不装，只要 `typst watch example.typ` 即可。
-   - 我为什么不推荐 _Typst Preview_？1. 曾经遇到过无法生成的 bug；2. 很慢，10 页的 pdf 就会卡了。
 
 然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。
 
 ## 模板
 
-[我的模板](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/template.typ)
+- [nku 模板](https://github.com/Starlight0798/typst-nku-lab-template)
+- [我的模板](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/template.typ)
 
 ## 编译导出
 
@@ -84,6 +106,7 @@ typst 没有 `list` 类型，只有 `array`。
 - [tablex](https://github.com/PgBiel/typst-tablex)，更麻烦但更强大的表格。
   - 如果表格中含有粗体斜体，批量处理就比较麻烦。([ex](https://github.com/PgBiel/typst-tablex/issues/18)) [我的解法，甚至还发现了个 bug?](https://gist.github.com/lxl66566/30e309e696169829524ee04503b526db)
     - 这个预计算是很难改的（源码访问 `at` 时的 `default` 已经是 `Option<Value>` 了）。说到底，根本问题还是 typst 选择自创的这个 DSL 的问题，你像 rust 那样 Option 套 `or_else` 哪有这么多事。
+- [excel 表格转为 typst 表格](https://gist.github.com/lxl66566/cf29d98741a78a164d5ad2cfb4aa92a7)，支持合并的单元格，很好用。可惜 windows only。
 
 ## 代码
 
@@ -211,7 +234,13 @@ console.log("1")
 
 我尝试问群友，没人理 <heiemu>几个月后才又聊到这个话题</heiemu>；尝试看源码，发现写死了；最后在 repo 里乱搜，居然被我搜到了一个究极自定义方案，改一改就是[解法](https://typst.app/project/rdlQEoafiBzjiaF_mDBurK)。
 
-当然，这个做法还有的问题就是
+## box
+
+如果你想要好看的框（box），不需要自己写。
+
+- [showybox](https://typst.app/universe/package/showybox)：好看，强大
+- [typst-boxes](https://github.com/lkoehl/typst-boxes)：简易
+- [gentle-clues](https://typst.app/universe/package/gentle-clues/)：常用框
 
 ## bug
 

@@ -82,6 +82,7 @@ tag:
 - 文件不下载就不能转发。如果想通过收藏绕过下载，不好意思，收藏失败。
 - 电脑微信同步最近聊天记录，结果同步的又不够多。
 - [分享的链接带一大堆跟踪器](https://soaked.in/2020/08/wechat-platform-url/)，并且[转短链 API 已关闭](https://mp.weixin.qq.com/cgi-bin/announce?action=getannouncement&announce_id=11615366683l3hgk&version=63010043&lang=zh_CN&token=)
+- 公众号推荐未关注的账号，无法关闭功能
 
 ## B 站有多难用
 

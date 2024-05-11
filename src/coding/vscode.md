@@ -70,6 +70,7 @@ tag:
 - [Codeium](https://codeium.com/)：免费，在线服务
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型。
 - [Tabnine](https://www.tabnine.com/)：免费的补全较弱（_Short code completions (2 to 3 words)_）
+- [MarsCode](https://www.marscode.com/)：一直报 Network unstable，根本不可用，捞。
 
 未来可能会尝试：
 
