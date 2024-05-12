@@ -64,10 +64,13 @@ category:
 
 然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。
 
-## 模板
+## 资源
 
-- [nku 模板](https://github.com/Starlight0798/typst-nku-lab-template)
-- [我的模板](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/template.typ)
+- 学习
+  - [蓝书](https://github.com/typst-doc-cn/tutorial/releases)
+- 模板
+  - [nku 模板](https://github.com/Starlight0798/typst-nku-lab-template)
+  - [我的模板](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/template.typ)
 
 ## 编译导出
 
