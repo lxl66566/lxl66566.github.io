@@ -31,13 +31,12 @@ tag:
   - [ ] 合并转发与正常转发功能。（QQ）
   - [ ] 需要完美的上下文定位功能。（tg 这点做的很差）
   - [ ] 支持较好的全局搜索功能。 -->
-- [ ] 音乐播放器
-  - [ ] 跨平台，多端同步
-  - [ ] 自行导入歌曲，支持文件导入与 url 导入（即自定义音源，书源 like）
-- [ ] ~~浏览器。直到现在我还没找到一个满意的浏览器。（尝试：firefox, firefox developer edition, edge, edge dev）~~
+- [ ] ~~音乐播放器~~ 我现在使用 Telegram 频道作为云端音乐存储，保证同步。（问题是音乐缓存会被定期清理，需要将所有音乐保存到 Music 目录。）
+  - [ ] ~~跨平台，多端同步（WebDav）~~
+  - [ ] ~~自行导入歌曲，支持文件导入与 url 导入（即自定义音源，书源 like）~~
+- [ ] ~~浏览器。直到现在我还没找到一个满意的浏览器。（我尝试过的：[浏览器横评](../articles/browser/assess.md)）~~
   - [ ] ~~基于 Chromium 内核（出于兼容性考虑），非商用，开源，**高度自定义化**~~ 难度过高，暂不考虑
-- [ ] CNM, ~~condition manager with Rust~~, a git-like distributed version manager
-  - maybe its name could be used in other stage...
+- [ ] A git-like distributed version manager
   - [ ] 连续压缩
   - [ ] parts in a project, like how i use branch
   - [ ] 断点重传

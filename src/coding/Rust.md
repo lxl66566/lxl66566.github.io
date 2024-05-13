@@ -403,9 +403,10 @@ cargo build 在全局获取包与依赖的源码，并编译到 target 里。rus
 | --- | --- |
 | memchr | 字符串查找 |
 | assert2 | 全兼容的好看的 assert |
-| die-exit | 错误处理并退出，[我的 fork](https://github.com/lxl66566/die/tree/master) |
+| die-exit | 错误处理并退出 |
 | temp_testdir | 目前我在用的临时目录实现 |
 | tap | 函数式工具，在链式中途拿取引用操作而不影响值 |
+| enum-tools | 提供 enum 的常用方法 |
 
 ### clap
 

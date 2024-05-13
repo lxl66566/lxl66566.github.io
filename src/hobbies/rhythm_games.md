@@ -394,3 +394,4 @@ Sheriruth 10.1 pure memory
 ## external
 
 1. [我已经迫不及待地想给各位安利一项游戏音频新技术了](https://baijiahao.baidu.com/s?id=1704721336592372120)
+2. [Low-latency osu! on Linux](https://blog.thepoon.fr/osuLinuxAudioLatency/)

@@ -68,7 +68,7 @@ const data = [
   { id: "477481", aScore: 3.7, bScore: 6.5, bak: "https://telegra.ph/Sakura-Suishou-Yozakura-Souki-Yua-Nightmare-Digital-12-06" },
   { id: "387934", aScore: 8.1, bScore: 5.2, info: "#玉之けだま", order: 3, bak: "https://telegra.ph/毛玉牛乳-玉之けだま-全部君のせいだIII-中国翻訳-無修正-DL版-08-01" },
   { id: "305526", aScore: 8.9, bScore: 4.3 },
-  { id: "483079", aScore: 9.6, bScore: 6.9, info: "#兽耳 #纯爱", bak: "https://telegra.ph/コミティア143-林檎のなる木-木瀬樹-麦の恩返し--学生編--中国翻訳-08-01" },
+  { id: "483079", aScore: 9.6, bScore: 6.9, info: "#兽耳 #纯爱 #木瀬樹 麦の恩返し-学生編", bak: "https://telegra.ph/コミティア143-林檎のなる木-木瀬樹-麦の恩返し--学生編--中国翻訳-08-01" },
   { id: "(ex)", aScore: 3.7, bScore: 7.2, info: "#寸止", otherlink: "https://exhentai.org/g/2480501/a346125f42/", bak: "https://telegra.ph/大伴ヤキ-虎の春-COMIC-快楽天-2023年4月号-中国翻訳-DL版-08-01" },
   { id: "(ex)", aScore: 7.8, bScore: 7.6, info: "#兄妹 #睡x", otherlink: "https://exhentai.org/g/2763933/9fa25f0ef2/", bak: "https://telegra.ph/Rev3-もんちゃんrev3-寝てる時は素直-中国翻訳-DL版-12-11" },
   { id: "392293", aScore: 6.9, bScore: 7, info: "#日常崩坏", bak: "https://telegra.ph/Oomori-Tokui-Taishitsu-Bishoujo-Maniacs-夜空下的萝莉x真不可视汉化组-11-16" },
@@ -276,6 +276,9 @@ const data = [
   { id: "508369", aScore: 6.3, bScore: 4, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-ながしそうめん-ユウザキ-コハルの缐が性感带だった本-ブルーアーカイブ-中国翻訳-05-08" },
   { id: "(ex)", aScore: 6.8, bScore: 7.2, info: "#正太 #纯爱", otherlink: "https://exhentai.org/g/2885024/6f55cab907/", bak: "https://telegra.ph/Morishima-Kon-sweet-and-spicy-COMIC-X-EROS-110-Chinese-Digital-05-08-2" },
   { id: "420933", aScore: 5, bScore: 1.9, info: "#全彩 #偶像大师", bak: "https://telegra.ph/Mousou-Diary-05-05" },
+  { id: "509126", aScore: 9.9, bScore: 8, info: "#合集 #木瀬樹 #纯爱" },
+  { id: "427014", aScore: 6.4, bScore: 6.8, info: "#偶像大师 #纯爱", bak: "https://telegra.ph/一尺八寸-かまつか-good-bye-boundary-colors-アイドルマスターシャイニーカラーズ-中国翻訳-DL版-05-12" },
+  { id: "480777", aScore: 5.3, bScore: 8.7, info: "#师生 #悬疑", bak: "https://telegra.ph/ななめの-おそまつ-それは火に入る夏の虫-中国翻訳-DL版-05-12" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
