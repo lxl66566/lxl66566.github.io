@@ -364,6 +364,7 @@ c = "check"
 t = "test -- --nocapture"
 r = "run"
 u = "update"
+f = "fix --allow-dirty"
 ```
 
 ### fmt
@@ -516,6 +517,7 @@ books:
 3. [rust by example](https://doc.rust-lang.org/rust-by-example/index.html)：注重例子。
 4. [小宏书](https://zjp-cn.github.io/tlborm/introduction.html)：专门介绍 rust macro
 5. [Rust Atomics and Locks](https://marabos.nl/atomics/)：并发入门
+6. [Rust 入门秘籍](https://rust-book.junmajinlong.com/about.html)：一本既简洁又深入的书，非常值得一看（特别是 tokio 相关章节）。
 
 articles:
 
@@ -527,3 +529,4 @@ articles:
 6. [Rust 的 Pin 与 Unpin](https://folyd.com/blog/rust-pin-unpin/)
 7. [static, const, let 声明变量有什么区别？](https://rustcc.cn/article?id=d3954670-a58a-427d-9c0c-6666051f5cc7)
 8. [An introduction to advanced Rust traits and generics](https://www.shuttle.rs/blog/2024/04/18/using-traits-generics-rust)
+9. [[翻译] async: 什么是 blocking](https://bingowith.me/2021/05/09/translation-async-what-is-blocking/)

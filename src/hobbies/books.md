@@ -60,7 +60,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
-|[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>在读|
+|[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>2024.05.14|>60h|<dtlslong text="主角韩立；极为经典的修仙，“凡人”指没资质但有逆天宝物的。书算是半个烂尾，毕竟结局飞升仙界，至少还有 1/3 篇幅没写。"/>|
 |[北方的天空](https://t.me/absolutexsresource/3)|2024.01.31-<br/>2024.04.27|?|<dtlslong text="现实主义上世纪末背景黄书，少妇取向。作者想写出古典文学的苍凉之景，可惜黄色废料太多，有些喧宾夺主了。"/>|
 |<span class="heimu">[某 R18 内容](https://www.pixiv.net/novel/show.php?id=21329454)</span>|2024.01.31-<br/>2,等待连载|
 |[Re0：从零开始的异世界生活](https://github.com/re-zero-khis/re0-web)|2024.01.20-<br/>卷3,在读|3h52min|
