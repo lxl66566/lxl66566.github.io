@@ -152,7 +152,8 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
   - [萌图交流](https://t.me/jialeleya2233)
   - [韵の小院 🍃ᴺˢᶠʷ](https://t.me/YunRan1314)（80:1）
   - [美图与色图](https://t.me/setu_nsfw)
-- [安利 (NSFW)](https://t.me/qingan567) | [ExLOLI - 每日萝莉本子](https://t.me/exlolicon)：来点本子
+- 本子区：
+  - [ExLOLI - 每日萝莉本子](https://t.me/exlolicon)
 - [(ゲーム CG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG**鉴赏**
 - [超高质量 R18 动画资源分享[NSFW]](https://t.me/acgr18)
 - [每日精选](https://t.me/watchaveveryday) & [超清|中文字幕](https://t.me/CCTAV)...：三次元的，嗯，不用我介绍吧

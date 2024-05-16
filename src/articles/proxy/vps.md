@@ -42,14 +42,14 @@ tag:
 想买但没买的超级好价
 
 <!-- prettier-ignore -->
-|Host|location|Price|bandwidth|RAM|Storage|
-| :-: | :-: | :-: | :-: | :-: | :-: |
+|Host|location|Price|bandwidth|RAM|Storage|Note|
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |2023 BF [InfraveoCloud](https://zhujiwiki.com/35833/)|JP|$9/yr|1T 1Gbps|-|20GB|
 |[ColoCrossing](https://zhujiwiki.com/36155/)|Los Angeles|$9/yr|不限流 1Gbps|2G|37GB|
 |[Vision Cloud](https://t.me/visioncloud_notification/32)|JP|$14/yr|1TB 1000Mbps|1GB|6GB|
 |[哇沃](https://zhujiwiki.com/36281/)|HK|￥80/yr|2TB 500Mbps|1GB|20GB|
 |[CHurros](https://zhujiwiki.com/36298/)|JP|￥6.3/mo|100GB 100Mbps|1GB|5GB|
-|~~[AKileCloud](https://akile.io/shop/server?type=traffic&areaId=3&nodeId=80&planId=448)~~ 无了|HK|￥60/yr|1TB 5000Mbps|1GB|5GB|
+|[AKileCloud](https://akile.io/shop/server?type=traffic&areaId=3&nodeId=80&planId=448)|HK|￥60/yr|1TB 5000Mbps|1GB|5GB|<dtlslong text="这个容易抢光，但是常驻有 ￥10/mo 的香港机" />|
 |[DigitalVirt](https://zhujiwiki.com/36771/)|HK|￥95/yr|1TB 200Mbps|1GB|10GB|
 
 一般价

@@ -37,7 +37,7 @@ tag:
 插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里放出我使用的插件：
 
 - 通用：
-  - [AI 代码补全](#ai-补全)
+  - [AI 代码补全](#ai-代码补全)
   - 更好的警告：_Error Lens_
     - 不可否认 _SonarLint_ 很强，但是 java 写的，占用空间和 RAM 都很大。因此在使用了几年 _SonarLint_ 以后我选择分语言使用不同 linter。
   - 轻量级 Git 可视化：_Git Graph_
@@ -59,18 +59,20 @@ tag:
 - 协同：_Live Share_
 - 其他：_Chinese (Simplified)..._，_CodeSnap_
 
-### AI 补全
+### AI 代码补全
 
-本人目前在使用 _CodeGeeX_。
+此处均为免费。（考虑付费的话直接上 copilot 完事了）
 
 <details><summary>点击展开前言</summary><p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 %TEMP% 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p></details>
 
-- [CodeGeeX](https://codegeex.cn/)：国产开源模型，对标 GitHub CoPilot，响应速度快
+- [CodeGeeX](https://codegeex.cn/)：国产开源模型，响应速度快
   - 20231212 开始需要绑定手机号
-- [Codeium](https://codeium.com/)：免费，在线服务
+- [Codeium](https://codeium.com/)：在线服务
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型。
-- [Tabnine](https://www.tabnine.com/)：免费的补全较弱（_Short code completions (2 to 3 words)_）
+- [Tabnine](https://www.tabnine.com/)：补全较弱（_Short code completions (2 to 3 words)_）
 - [MarsCode](https://www.marscode.com/)：一直报 Network unstable，根本不可用，捞。
+- [fitten code](https://code.fittentech.com/)：国产
+  - 一个缺点是不读工作区 `.vscode` 配置
 
 未来可能会尝试：
 

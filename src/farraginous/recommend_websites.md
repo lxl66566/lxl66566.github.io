@@ -70,6 +70,7 @@ tag:
 
 LLM：Large Language Models，大型语言模型。下述均为本人总结，可免费使用。
 
+- [ChatGPT](https://chatgpt.com/?model=gpt-4o)：GPT 官方。此链接直接进入 _gpt-4o_ 模型，一个免费的 GPT-4 水平的 LLM，发布于 2024.05。
 - [BAI Chat](https://beta.theb.ai/)：多模型。
   - 也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)，但是不能更改模型，而且比较笨。
 - ~~[new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。~~ 已更名为 Copilot 并集成进 windows 11。
@@ -83,6 +84,8 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
   - [phind](https://www.phind.com/)：搜索编程有关问题
   - [devv](https://devv.ai/)
 - [coze](https://www.coze.com/home)：本意是创建 bot 的 AI，但是有免费 GPT4 的水平。
+- [cohere](https://coral.cohere.com/): do not support Chinese; normal ability, less than GPT-4.
+- [deepseek](https://chat.deepseek.com/coder)：国内的开源大模型，感觉一般。
 
 ## pastebin
 

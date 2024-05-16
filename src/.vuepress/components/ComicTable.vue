@@ -279,6 +279,12 @@ const data = [
   { id: "509126", aScore: 9.9, bScore: 8, info: "#合集 #木瀬樹 #纯爱" },
   { id: "427014", aScore: 6.4, bScore: 6.8, info: "#偶像大师 #纯爱", bak: "https://telegra.ph/一尺八寸-かまつか-good-bye-boundary-colors-アイドルマスターシャイニーカラーズ-中国翻訳-DL版-05-12" },
   { id: "480777", aScore: 5.3, bScore: 8.7, info: "#师生 #悬疑", bak: "https://telegra.ph/ななめの-おそまつ-それは火に入る夏の虫-中国翻訳-DL版-05-12" },
+  { id: "508705", aScore: 7.4, bScore: 4.8, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/C103-よねや俵太-シュレディンガー黒猫と-ブルーアーカイブ-中国翻訳-05-07" },
+  { id: "509315", aScore: 8.7, bScore: 7.9, info: "#催眠 #NTR", bak: "https://telegra.ph/ろこまに-真夏-彼氏持ちの世間知らずな先輩を催眠で狂わす-中国翻訳-DL版-05-12" },
+  { id: "509507", aScore: 6.5, bScore: 6.3, info: "#巨乳", bak: "https://telegra.ph/もふまんじゅう-ぴろまゆ-種付け日記学園編-中国翻訳-05-12" },
+  { id: "509701", aScore: 9.1, bScore: 5.4, info: "#舰队Collection #3P", bak: "https://telegra.ph/C103-たこ焼き畑-たこやきよし-だいろくリフレ-暁響ぬるぬるマッサージ-艦隊これくしょん--艦これ--中国翻訳-05-13-5" },
+  { id: "509697", aScore: 7, bScore: 6.9, info: "#蔚蓝档案 #自慰", bak: "https://telegra.ph/りゅうかくさんのどあめ-極太眉毛-先生一緒にお休みしませんか-ブルーアーカイブ-中国翻訳-DL版-05-13-4" },
+  { id: "504069", aScore: 5.5, bScore: 8.3, info: "#全彩 #强制性交 #邻居 #loli", bak: "https://telegra.ph/たまかけ屋-たまかけ-隣の柚葉ちゃん-中国翻訳-DL版-04-04" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
