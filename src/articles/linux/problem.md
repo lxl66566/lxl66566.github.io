@@ -309,8 +309,9 @@ ps. 实际上 linux 下不明所以的 warning, error 好多的（详见 `journa
 :::right
 ——farseerfc 😂, [src](https://t.me/archlinuxcn_group/2911740)
 :::
-~~所以这个问题还是挺玄学的，~~
 ::::
+
+所以遇到 keyring 问题就先装 keyring 准没错（也适用于 `archlinuxcn-keyring`）。
 
 ## [libcuda.so.1 is not a symbolic link](https://bbs.archlinuxcn.org/viewtopic.php?id=13402)
 
