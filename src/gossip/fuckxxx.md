@@ -300,3 +300,23 @@ ColorOS 是目前一加的默认系统。
   - jlpt edge 无法预订座位，更换 firefox 后解决
 - 验证码输错一次，所有信息重新填
 - 报名和查分分裂，账号和密码不同
+
+## Rust 有多难用
+
+- features stable 周期长，一般需要经历 5-7 年。而好用的东西全在 nightly。
+- const 和 static 非常弱，导致很难将计算搬到编译期。
+  - 理论上如果 const 够强，`const_str` 这个 crate 就不应该存在。
+- [过程宏无法定义在同一 crate 中](https://www.reddit.com/r/rust/comments/tuxawv/why_do_procedural_macros_have_to_be_defined_in_a/)，对于简单的代码替换复用复杂度过高；而声明宏又无法实现某些复杂需求（或者实现难度过大，魔法过多）。
+- `dbg!` 和 `log.debug!` 的设计[有问题](https://t.me/withabsolutex/1615)。
+- Trait 设计问题：
+  - 缺乏减法。
+  - Trait alias 还在 nightly，而且太弱了，无法达到我的预期。
+- `std::process::Command` 的设计中，command 和 args 一定要分开的，其只在内部进行组合；这就导致如果我要执行完整的语句，就要先 split 再 join，多此一举。
+- Unsafe 并不是那么自由：
+  - 无法改一个 not mut 的 static 变量。
+- 官方社区与开发者社区过于分裂
+  - 倾向于将新的 feature 做成 crate 而不是 merge 进 std。
+    - [Why not use d-ary heap inside rather than binary heap](https://internals.rust-lang.org/t/why-not-use-d-ary-heap-inside-rather-than-binary-heap/18765)
+    - 这也导致了很多看起来应该是 official 的功能被分散到 crate 里，并且水平参差不齐，甚至是 [API 不一致](https://t.me/withabsolutex/1608)。
+  - 很多东西理应在 std 实现，但是（目前）却没有
+    - Semaphore

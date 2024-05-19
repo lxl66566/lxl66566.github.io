@@ -27,7 +27,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 - 统一的代码格式、文档、测试、打包流程
   - 唯一指定顶级包管理器：cargo
 - 易于打包
-- 静态检查给力，能过 = 能跑
+- 静态检查给力，能过 $\approx$ 能跑
 
 #### 缺点
 
@@ -35,6 +35,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 - 学习曲线陡峭
 - 开发周期长
 - GUI 库有待进步
+- [我的其他个人暴论](../gossip/fuckxxx.md#rust-有多难用)
 
 ### 如何学习
 

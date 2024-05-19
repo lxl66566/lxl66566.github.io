@@ -285,6 +285,10 @@ const data = [
   { id: "509701", aScore: 9.1, bScore: 5.4, info: "#舰队Collection #3P", bak: "https://telegra.ph/C103-たこ焼き畑-たこやきよし-だいろくリフレ-暁響ぬるぬるマッサージ-艦隊これくしょん--艦これ--中国翻訳-05-13-5" },
   { id: "509697", aScore: 7, bScore: 6.9, info: "#蔚蓝档案 #自慰", bak: "https://telegra.ph/りゅうかくさんのどあめ-極太眉毛-先生一緒にお休みしませんか-ブルーアーカイブ-中国翻訳-DL版-05-13-4" },
   { id: "504069", aScore: 5.5, bScore: 8.3, info: "#全彩 #强制性交 #邻居 #loli", bak: "https://telegra.ph/たまかけ屋-たまかけ-隣の柚葉ちゃん-中国翻訳-DL版-04-04" },
+  { id: "381090", aScore: 7.5, bScore: 4.6, info: "#兄妹 #全彩", bak: "https://telegra.ph/CANVASGARDEN-宮坂みゆ-今日から地球人の妹になりました-中国翻訳-DL版-08-02" },
+  { id: "382354", aScore: 5.8, bScore: 4.7, info: "#兄妹", bak: "https://telegra.ph/武藤まと-ココちゃんの威力3倍アピールあたっく-COMIC-LO-2020年1月号-中国翻訳-DL版-08-02" },
+  { id: "384834", aScore: 5.6, bScore: 6.4, info: "#舰队Collection #反杀", bak: "https://telegra.ph/C96-パラレルエリア-くれ-理由をつけてもヴェールヌイは司令官にお仕置きしたい-艦隊これくしょん--艦これ--中国翻訳-08-02" },
+  { id: "386598", aScore: 8, bScore: 3, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/Trick-color-桐井ナオ-ホシの帰る場所-ブルーアーカイブ-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

@@ -78,9 +78,13 @@ tag:
 
 - [一键脚本](https://github.com/lxl66566/init-script)：不得不提我自己写的一键脚本，一键常用软件 + 代理（hysteria + trojan-go + trojan）
 - [ping.pe](https://ping.pe/#)：连通性
-- `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
-- `curl -sL network-speed.xyz | bash -s -- -r china` 也可以国内测速
+- 全球测速
+  - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
+- 国内测速
+  - `curl -sL network-speed.xyz | bash -s -- -r china`
+  - `bash <(curl -sL bash.icu/speedtest)`
 - <https://bgp.tools/>，ASN 信息
+- <https://ip.skk.moe/>，查 IP
 - [网络面板](https://net.ljxnet.cn/)流量消耗器
 
 ### SSH

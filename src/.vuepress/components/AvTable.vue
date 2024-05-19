@@ -264,6 +264,10 @@ const data = [
   { id: "EYAN-193", aScore: 5, bScore: 3.7, u: true },
   { id: "mgold-017", aScore: 6.5, bScore: 2.3, u: true },
   { id: "milk-166", aScore: 6.6, bScore: 7.5 },
+  { id: "mide-634", aScore: 9.6, bScore: 4, u: true },
+  { id: "sone-157", aScore: 8.2, bScore: 6.9, u: true },
+  { id: "ipx-321", aScore: 8.8, bScore: 5.5, u: true },
+  { id: "ssis-806", aScore: 8.4, bScore: 5, u: true, name: "^-1" },
 ];
 export default {
   name: "AvTable",
