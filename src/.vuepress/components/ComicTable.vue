@@ -289,6 +289,14 @@ const data = [
   { id: "382354", aScore: 5.8, bScore: 4.7, info: "#兄妹", bak: "https://telegra.ph/武藤まと-ココちゃんの威力3倍アピールあたっく-COMIC-LO-2020年1月号-中国翻訳-DL版-08-02" },
   { id: "384834", aScore: 5.6, bScore: 6.4, info: "#舰队Collection #反杀", bak: "https://telegra.ph/C96-パラレルエリア-くれ-理由をつけてもヴェールヌイは司令官にお仕置きしたい-艦隊これくしょん--艦これ--中国翻訳-08-02" },
   { id: "386598", aScore: 8, bScore: 3, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/Trick-color-桐井ナオ-ホシの帰る場所-ブルーアーカイブ-中国翻訳-DL版-08-02" },
+  { id: "453475", aScore: 8.8, bScore: 9, info: "#纯爱 #loli #泳装 #魅魔", bak: "https://telegra.ph/うつすみおんせん-空住キオ-ねぇりりむだけを見て-魔界ノりりむ-中国翻訳-DL版-08-02-3" },
+  { id: "374812", aScore: 3.3, bScore: 8.5, info: "#雌小鬼 #催眠", bak: "https://telegra.ph/るるえぱ-ナマイキ催眠ソープ-二次元コミックマガジン-メスガキ催眠制裁エッチVol1-中国翻訳-DL版-08-02" },
+  { id: "(ex)", aScore: 5.2, bScore: 7.7, otherlink: "https://exhentai.org/g/2022709/376224ec23/", info: "#兄妹 #neet #纯爱", bak: "https://telegra.ph/明石六露-めんどくさガール-COMIC-快楽天-2021年11月号-中国翻訳-DL版-08-02" },
+  { id: "375720", aScore: 8, bScore: 4.3, info: "#舰队Collection #loli 時津風と一緒に。", order: 10, bak: "https://telegra.ph/神戸かわさき造船これくしょん8-STEELACT-二条かため-時津風と一緒に-十-艦隊これくしょん--艦これ--中国翻訳-08-02" },
+  { id: "376387", aScore: 6.8, bScore: 7.3, info: "#兄妹 #睡x #假寐", bak: "https://telegra.ph/ねここや-かんな久-熱帯夜の部屋で寝ている妹をどうするか-中国翻訳-DL版-08-02" },
+  { id: "377637", aScore: 8.4, bScore: 2.3, info: "#兄妹 #短篇", bak: "https://telegra.ph/SIDE-EFFECTS-さえき北都-たんごのせっくＳ-中国翻訳-08-02" },
+  { id: "378625", aScore: 5.4, bScore: 5.8, info: "#发交 #美少女花骑士", bak: "https://telegra.ph/COMIC119-ActiveMover-有河サトル-Secret-Garden-VIII-フラワーナイトガール-中国翻訳-08-02" },
+  { id: "378855", aScore: 7.8, bScore: 1.4, info: "#原神 #偶像", bak: "https://telegra.ph/わさびもち-ももさわ-バーバラちゃんがえっちな治療をしてくれる本-原神-中国翻訳-08-02" },
   // next: 4.22 - 11.11
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

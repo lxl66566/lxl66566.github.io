@@ -30,6 +30,10 @@ gal 对于培养语感和听力来说挺有帮助。
 - 百科：[コトバンク](https://kotobank.jp/)
 - 见 [galgame](../../hobbies/galgame.md)
 
+### 工具
+
+- [yomichan](https://github.com/guoweihua1982/yomichan)：浏览器扩展，划词显示汉字读音
+
 ## 关于考试
 
 ### jlpt
