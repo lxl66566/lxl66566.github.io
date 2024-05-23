@@ -314,6 +314,7 @@ ColorOS 是目前一加的默认系统。
 - `std::process::Command` 的设计中，command 和 args 一定要分开的，其只在内部进行组合；这就导致如果我要执行完整的语句，就要先 split 再 join，多此一举。
 - Unsafe 并不是那么自由：
   - 无法改一个 not mut 的 static 变量。
+  - 无法 access 一个库的 private field。
 - 官方社区与开发者社区过于分裂
   - 倾向于将新的 feature 做成 crate 而不是 merge 进 std。
     - [Why not use d-ary heap inside rather than binary heap](https://internals.rust-lang.org/t/why-not-use-d-ary-heap-inside-rather-than-binary-heap/18765)

@@ -14,7 +14,7 @@ tag:
 
 ## caddy
 
-caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 https。
+caddy 是一个更年轻的工具，提供**非常简单**的语法和**自动 https**（自动签证书）。
 
 - [安装指南](https://caddyserver.com/docs/install)
 
@@ -40,6 +40,8 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和自动 htt
 - 如果只有一个域名，可以去掉大括号。（压行！现在只有三行了）
 - 自带 formatter：`caddy fmt --overwrite /etc/caddy/Caddyfile`
 - 自动证书存放位置是 `/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/<domain>`，可以 ln 到其他地方给其他软件用。
+
+caddy 最大的问题是性能，因此不适合在高并发环境下使用。
 
 ### 日志
 

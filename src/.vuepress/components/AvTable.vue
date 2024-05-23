@@ -269,6 +269,8 @@ const data = [
   { id: "ipx-321", aScore: 8.8, bScore: 5.5, u: true },
   { id: "ssis-806", aScore: 8.4, bScore: 5, u: true, name: "^-1" },
   { id: "hmn-485", aScore: 6.1, bScore: 6 },
+  { id: "SDMF-020", aScore: 7.6, bScore: 7.9 },
+  { id: "SDMF-018", aScore: 7.3, bScore: 8.4 },
 ];
 export default {
   name: "AvTable",

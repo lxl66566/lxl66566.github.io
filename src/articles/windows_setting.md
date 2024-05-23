@@ -117,6 +117,8 @@ tag:
 28. 设置 copilot：copilot 确实是个免费用的 gpt4，就是比较慢。
     - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。
     - 即使开着代理，用着用着也经常出现 _很抱歉，目前无法连接到服务。_。解法：在 edge 浏览器中改微软账户地区至其他地区。([src](https://www.bilibili.com/read/cv33602923/))
+29. [安装 winget](https://github.com/microsoft/winget-cli)。虽然我一般不用 ms 家的东西包括安装器，但有时候有脚本会调用 winget，因此还是装一下。
+    - 但是 winget 的文件夹内自带了两个 python3，我讨厌它的 python3，因此把它移出了 PATH。所以我在另外的 PATH 里写了个 cmd 脚本调用 winget。理论上也可以通过安排环境变量顺序达到屏蔽它的 python 的效果。
 
 [^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 
