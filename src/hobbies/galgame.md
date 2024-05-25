@@ -61,7 +61,8 @@ tag:
 
   相比之下 vnr 依赖百度贴吧，资源 BT 失效，大多使用城通网盘，真让人火大。而小牛云平台免费额度给的也足够了。
 
-  - 也可以试试 [LunaTranslator](https://github.com/HIllya51/LunaTranslator)，简陋一点，但是也能用
+  - 也可以试试 [LunaTranslator](https://github.com/HIllya51/LunaTranslator)，简陋一点，谜语多一点。但是占的位置小，不会太影响游戏体验。
+    - 学日语建议[装 MeCab](https://github.com/HIllya51/LunaTranslator/discussions/684#discussioncomment-9537595)。
 
 <!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame（会社）/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
 

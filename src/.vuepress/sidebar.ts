@@ -147,6 +147,8 @@ export default sidebar({
 				"dsp2.md",
 				"CEC.md",
 				"network.md",
+				"PoC.md",
+				"electromagnetic_wave.md",
 				"foods.md",
 			],
 		},

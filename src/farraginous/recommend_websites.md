@@ -20,7 +20,7 @@ tag:
 - [1paragraph](https://1paragraph.app/) | [EPUB Reader](https://epub-reader.online/)：在线网页 EPUB 阅读器
 - [代码高亮](https://romannurik.github.io/SlidesCodeHighlighter/)
 - [PageSpeed Insights](https://pagespeed.web.dev/)：测试静态网站的性能
-- [ReadPaper](https://readpaper.com/)：论文助手，翻译
+- [SimpleTex](https://simpletex.cn)：免费手写/图片公式识别，转 latex 格式。
 <!-- * [免费盐选](https://mfyx.top/)：免费看知乎盐选 -->
 
 ::: details 还有一些一般用不到的
@@ -28,7 +28,6 @@ tag:
 - [ImmuniWeb](https://www.immuniweb.com/websec/)：检测网址是否安全
 - [tunemymusic.com](https://app.tunemymusic.com/zh-CN/transfer)：歌单迁移
 - [CrackStation](https://crackstation.net/): Free Hash Cracker
-- [SimpleTex](https://simpletex.cn)：手写/图片公式识别，转 latex 格式。
 
 :::
 
@@ -86,6 +85,9 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [coze](https://www.coze.com/home)：本意是创建 bot 的 AI，但是有免费 GPT4 的水平。
 - [cohere](https://coral.cohere.com/): do not support Chinese; normal ability, less than GPT-4.
 - [deepseek](https://chat.deepseek.com/coder)：国内的开源大模型，感觉一般。
+- 论文助手，翻译：
+  - [kimi](https://kimi.moonshot.cn/)
+  - [ReadPaper](https://readpaper.com/)
 
 ## pastebin
 

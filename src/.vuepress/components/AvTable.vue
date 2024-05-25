@@ -271,6 +271,14 @@ const data = [
   { id: "hmn-485", aScore: 6.1, bScore: 6 },
   { id: "SDMF-020", aScore: 7.6, bScore: 7.9 },
   { id: "SDMF-018", aScore: 7.3, bScore: 8.4 },
+  { id: "same-022", aScore: 7, bScore: 4, u: true },
+  { id: "cawd-518", aScore: 6.2, bScore: 7.1, u: true },
+  { id: "dass-123", aScore: 6.8, bScore: 6.8, u: true },
+  { id: "midv-236", aScore: 8, bScore: 8, u: true },
+  { id: "miaa-795", aScore: 9, bScore: 4.9, u: true },
+  { id: "midv-307", aScore: 8.9, bScore: 4, u: true },
+  { id: "gvh-520", aScore: 9, bScore: 8.2, name: "彼女の妹はマゾ女 横宮七海" },
+  { id: "kam-179", aScore: 8.5, bScore: 4.8, name: "悪徳エロ医師盗撮 「嫌っ…あぁ…ダメぇ…何か変な気持ちに…」制服美少女わいせつ産婦人科診察 横宮七海" },
 ];
 export default {
   name: "AvTable",

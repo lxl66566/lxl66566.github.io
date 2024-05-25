@@ -29,6 +29,8 @@ category:
 8. [通信电子线路](./CEC.md)
 9. [数字信号处理](./dsp2.md)
 10. [计算机网络](./network.md)
+11. [通信原理](./PoC.md)
+12. [电磁场与电磁波](./electromagnetic_wave.md)
 
 ## 业余笔记
 

@@ -67,11 +67,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 还有一些能够优化开发体验的选项：
 
 1. [使用 clippy](https://code.visualstudio.com/docs/languages/rust#_linting) 作为 check 指令。
-2. 安装额外的 cargo 组件：
-   1. [miri](https://github.com/rust-lang/miri)：`rustup +nightly component add miri`，用于更严格的测试
-   2. [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)：Find out what takes most of the space in your executable.
-   3. [cargo-wizard](https://github.com/Kobzol/cargo-wizard)：提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般。
-   4. [cargo-expand](https://github.com/dtolnay/cargo-expand)：展开宏
+2. 安装[额外的 cargo 组件](#扩展)
 3. (Optional) 切换 vscode `rust-analyzer` 插件为**预发布版本**。否则对于 rust 这样的高速发展语言，跟不上进度，很容易误报。
    - <heimu>`rust-analyzer` 本身并不是很好用。经常卡。</heimu>
 4. [开启注释自动换行](https://rust-lang.github.io/rustfmt/?version=v1.6.0&search=#wrap_comments)。由于其默认不开启且还停留在 unstable（五年啊！），因此需要自行写个 `rustfmt.toml` 开启。查看 [cargo](#cargo) 小节获取更多 rustfmt 信息。
@@ -379,6 +375,20 @@ cargo build 在全局获取包与依赖的源码，并编译到 target 里。rus
 [^4]: 哪怕同一个编译器同一个包 rust 的编译是有副作用的，比如 env 宏 build script 乃至 proc macro，都是能任意副作用的 ([ref](https://t.me/c/1264662201/550767))
 
 不过可以试试 [sccache](https://github.com/mozilla/sccache/) 全局缓存。
+
+### 扩展
+
+cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文件都能视作 cargo 扩展。以下列举一些常用的 cargo 扩展应用。
+
+<!-- prettier-ignore -->
+| 名字       | 简介       |
+| ---------- | ---------- |
+| [miri](https://github.com/rust-lang/miri)|`rustup +nightly component add miri`，用于更严格的测试，检测内存泄漏与不安全，死锁等|
+| [cargo-binstall](https://github.com/cargo-bins/cargo-binstall) | 安装 binary，减少从源码编译 |
+| [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)|Find out what takes most of the space in your executable.|
+| [cargo-expand](https://github.com/dtolnay/cargo-expand)|展开宏|
+| [cargo-msrv](https://github.com/foresterre/cargo-msrv) | Find the minimum supported Rust version (MSRV) for your project |
+| [cargo-wizard](https://github.com/Kobzol/cargo-wizard)|提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般。|
 
 ## 库
 

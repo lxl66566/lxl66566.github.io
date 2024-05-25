@@ -235,14 +235,15 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。<span class="heimu" title="你知道的太多了">[私链](https://wwp.lanzout.com/icAdmharg2h)</span>
 
-### [Bandizip](http://www.bandisoft.com/)
+### 压缩软件
 
-闭源压缩与解压软件，较轻量，界面优秀，支持格式丰富。当然，若对开源有追求，请移步 [7zip](https://www.7-zip.org/) | [NanaZip](https://github.com/M2Team/NanaZip)。
+选择一个即可。
 
-初次使用前请按照如下教程设置（踩过坑了）：
-
-1. _设置 - 解压_，打开 _一次性解压 TGZ..._ 下的 _即使是大体积的 TGZ..._ 选项
-2. 如果你使用 [RAM Disk](../articles/ramdisk.md)，可以在 _设置 - 高级_ 中，将临时文件夹设为 RAM Disk 路径
+- [Bandizip](http://www.bandisoft.com/)：闭源较轻量压缩与解压软件，支持格式丰富，还自带一些 windows 小功能（右键第一菜单即可新建文件夹）。初次使用前请按照如下教程设置（踩过坑了）：
+  1. _设置 - 解压_，打开 _一次性解压 TGZ..._ 下的 _即使是大体积的 TGZ..._ 选项
+  2. 如果你使用 [RAM Disk](../articles/ramdisk.md)，可以在 _设置 - 高级_ 中，将临时文件夹设为 RAM Disk 路径
+- [NanaZip](https://github.com/M2Team/NanaZip)：开源，UI 很有 windows 风格，支持黑色主题。缺点是 msxi 打包，不好在老系统上用。
+- [7zip](https://www.7-zip.org/)
 
 ### [图吧工具箱](http://www.tbtool.cn/)
 

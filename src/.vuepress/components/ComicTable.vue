@@ -299,7 +299,9 @@ const data = [
   { id: "378855", aScore: 7.8, bScore: 1.4, info: "#原神 #偶像", bak: "https://telegra.ph/わさびもち-ももさわ-バーバラちゃんがえっちな治療をしてくれる本-原神-中国翻訳-08-02" },
   { id: "491002", aScore: 4.8, bScore: 7.9, info: "#雌小鬼 #催眠 #辣妹", bak: "https://telegra.ph/うこ-惑わせアイ-コミック-ジエス-04-中国翻訳-DL版-05-12" },
   { id: "248491", aScore: 9.3, bScore: 9.7, info: "#合集 #纯爱", bak: "https://telegra.ph/Hota-Love-Migoro---Lovely-Time-Chinese-10-22" },
-  // next: 4.22 - 11.11
+  { id: "510386", aScore: 8.8, bScore: 4.2, info: "#兽耳 #无H" },
+  { id: "(ex)", aScore: 7.6, bScore: 8.5, info: "#兄妹 #睡x", otherlink: "https://exhentai.org/g/2009078/1dd0f05049/", bak: "https://telegra.ph/第2回ウルトラサマーフェスタ-squeezecandyheaven-いちはや-妹と悪魔祓い--特典-中国翻訳-08-02" },
+  // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
   const bScore = b.aScore + b.bScore;

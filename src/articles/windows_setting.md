@@ -119,6 +119,7 @@ tag:
     - 即使开着代理，用着用着也经常出现 _很抱歉，目前无法连接到服务。_。解法：在 edge 浏览器中改微软账户地区至其他地区。([src](https://www.bilibili.com/read/cv33602923/))
 29. [安装 winget](https://github.com/microsoft/winget-cli)。虽然我一般不用 ms 家的东西包括安装器，但有时候有脚本会调用 winget，因此还是装一下。
     - 但是 winget 的文件夹内自带了两个 python3，我讨厌它的 python3，因此把它移出了 PATH。所以我在另外的 PATH 里写了个 cmd 脚本调用 winget。理论上也可以通过安排环境变量顺序达到屏蔽它的 python 的效果。
+30. 使用 [Win11Debloat](https://github.com/Raphire/Win11Debloat) 移除一些自带软件与组件。
 
 [^1]: 购入电脑 11 个月，固态盘写入量已达 10T。我平常一直很注意控制写入，大文件、下载缓存都存在移动硬盘上。
 
