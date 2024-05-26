@@ -323,3 +323,8 @@ ColorOS 是目前一加的默认系统。
     - 这也导致了很多看起来应该是 official 的功能被分散到 crate 里，并且水平参差不齐，甚至是 [API 不一致](https://t.me/withabsolutex/1608)。
   - 很多东西理应在 std 实现，但是（目前）却没有
     - Semaphore
+
+## Youtube 有多难用
+
+- 我不想看 shorts，但是点击关闭只能隐藏 30 天。
+- 推荐算法一般，感觉不如 B 站的。

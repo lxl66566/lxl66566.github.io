@@ -32,7 +32,7 @@ gal 对于培养语感和听力来说挺有帮助。
 
 ### 工具
 
-- [yomichan](https://github.com/guoweihua1982/yomichan)：浏览器扩展，划词显示汉字读音
+- [yomitan](https://github.com/themoeway/yomitan)：浏览器扩展，划词显示汉字读音，[yomichan 的后继者](https://foosoft.net/posts/passing-the-torch-to-yomitan/)
 
 ## 关于考试
 

@@ -15,6 +15,12 @@ python 实际上并不简单，只不过生态比较好。[暴论：python 有�
 
 [^2]: [喜欢我 `"${arr[@]}"` 吗？](https://t.me/withabsolutex/1374)
 
+## 学习
+
+python 入门非常快，简单看点 w3school 即可。进阶可以看一点 _码农高天_ 的视频，虽然有一点炒作，但是不可否认他确实很强（为数不多的 python maintainer）。
+
+最后，不管学习什么语言都必须要做大量的项目。我也做了不少，例如 [bpm](https://github.com/lxl66566/bpm) 和 [init-script](https://github.com/lxl66566/init-script)。还有更多其他小项目。
+
 ## 安装
 
 python 本身的安装应该不用我多说，windows [scoop](../farraginous/recommend_packages.md#scoop) / archlinux pacman 一行结束。不过注意，没有启用虚拟环境时，电脑中**最好只有一个 python**。
@@ -210,7 +216,7 @@ conda list  # 查看环境内工具包
 ### 错误处理
 
 - py 错误处理偏向传统的异常处理。主要关键字是 `try`, `except`, `else`, `finally`。
-- `finally` 优先级比 `return` 和 `exit` 高。
+- `finally` 能在 `return` 和 `exit` 时执行，但不能在 SYSTERM，`os._exit()` 时执行。[src](https://www.youtube.com/watch?v=lmhFLrdGQjo)
 
 ### module
 
@@ -316,7 +322,9 @@ with suppress(Exception):
 
 ### Decorator
 
-装饰器本质上是回调的语法糖。[external 3.](#external) 是一篇讲的很好的装饰器文章。
+装饰器本质上是回调的语法糖。[external 3.](#external) 是一篇讲的很好的装饰器文章。[external 9.](#external) 介绍了装饰器与 class 混杂使用的技巧。
+
+#### builtin decorators
 
 [这篇文章](https://www.geeksforgeeks.org/top-python-built-in-decorators-that-optimize-python-code-significantly/)讲了一些常用的自带装饰器，主要是重载，OOP。
 
@@ -841,3 +849,4 @@ python -m pip install --upgrade pip --user
 6. [What the f\*ck Python! 🐍 一些有趣且鲜为人知的 Python 特性.](https://github.com/robertparley/wtfpython-cn)
 7. [Python Gotcha: strip, lstrip, rstrip can remove more than expected](https://andrewwegner.com/python-gotcha-strip-functions-unexpected-behavior.html)
 8. [How I manage Python in 2024](https://outlore.dev/blog/python-dev-2024/)
+9. [如何在 class 内部定义一个装饰器？](https://www.youtube.com/watch?v=srSA-aiHf8Y)

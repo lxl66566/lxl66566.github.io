@@ -279,6 +279,8 @@ const data = [
   { id: "midv-307", aScore: 8.9, bScore: 4, u: true },
   { id: "gvh-520", aScore: 9, bScore: 8.2, name: "彼女の妹はマゾ女 横宮七海" },
   { id: "kam-179", aScore: 8.5, bScore: 4.8, name: "悪徳エロ医師盗撮 「嫌っ…あぁ…ダメぇ…何か変な気持ちに…」制服美少女わいせつ産婦人科診察 横宮七海" },
+  { id: "HMN-337", aScore: 4.5, bScore: 6.8 },
+  { id: "focs-071", aScore: 8.7, bScore: 5, name: "彼氏の前で理性崩壊エビ反り失禁潮吹き大噴射！！ 媚薬でNTRオイルエステ 上坂めい" },
 ];
 export default {
   name: "AvTable",
