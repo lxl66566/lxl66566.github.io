@@ -281,6 +281,9 @@ const data = [
   { id: "kam-179", aScore: 8.5, bScore: 4.8, name: "悪徳エロ医師盗撮 「嫌っ…あぁ…ダメぇ…何か変な気持ちに…」制服美少女わいせつ産婦人科診察 横宮七海" },
   { id: "HMN-337", aScore: 4.5, bScore: 6.8 },
   { id: "focs-071", aScore: 8.7, bScore: 5, name: "彼氏の前で理性崩壊エビ反り失禁潮吹き大噴射！！ 媚薬でNTRオイルエステ 上坂めい" },
+  { id: "ysn-616", aScore: 8.3, bScore: 7.3, name: "やべーほどカワイイ妹を貪りたい 横宮七海", u: true },
+  { id: "imo-023", aScore: 9, bScore: 6.5, name: "^1" },
+  { id: "yst-312", aScore: 9.2, bScore: 6.2, name: "義理の父に口マ●コとして扱われてるのにマン汁を滴らせる私は変態です。 横宮七海" },
 ];
 export default {
   name: "AvTable",

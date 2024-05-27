@@ -88,7 +88,7 @@ export default hopeTheme({
 		},
 		pwa: {
 			update: "force",
-			maxSize: 4096,
+			maxSize: 2048,
 			cacheHTML: true,
 		},
 	},
