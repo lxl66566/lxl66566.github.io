@@ -284,6 +284,7 @@ const data = [
   { id: "ysn-616", aScore: 8.3, bScore: 7.3, name: "やべーほどカワイイ妹を貪りたい 横宮七海", u: true },
   { id: "imo-023", aScore: 9, bScore: 6.5, name: "^1" },
   { id: "yst-312", aScore: 9.2, bScore: 6.2, name: "義理の父に口マ●コとして扱われてるのにマン汁を滴らせる私は変態です。 横宮七海" },
+  { id: "miaa-810", aScore: 7.6, bScore: 6, name: "", u: true },
 ];
 export default {
   name: "AvTable",

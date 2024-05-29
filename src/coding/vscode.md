@@ -25,10 +25,13 @@ tag:
 这里是我比较常用的快捷键。
 
 - `Ctrl + ,`：打开设置
+- `` Ctrl + ` ``：打开终端
 - `Ctrl + r`（资源管理器窗口）：选择打开最近项目
 - `Ctrl + p` / `Ctrl + e`：选择打开文件
 - `Ctrl + Shift + p`：操作面板
 - `Alt + 鼠标`：多光标模式，最重要的快捷键之一，可以和 vim 扩展共用，可以大幅提升效率
+
+你可以在[这里](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/KeyboardReferenceSheet.png)看到快捷键 cheetsheet。可以看出有很多从 vim 来的常见操作；并且在 vim 插件下这里的一些快捷键也会改变。
 
 ## 插件
 

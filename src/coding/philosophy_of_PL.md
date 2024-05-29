@@ -70,6 +70,41 @@ Java, JS, Python 等语言直接将指针的概念剥离了出去，使用较为
 
 Rust 用引用的概念来代替指针，不过也保留了 unsafe 中的指针操作。要注意的是 C++ 的引用概念应该相当于 Rust 的 Box，而不是引用（ans：引用的引用？）。
 
+### monad
+
+monad 是在函数式中的一个概念，可以理解成一种“包装”。Rust 中的 Option, Result 都是 monad。
+
+有一些语言不喜欢 monad 的抽象。最容易看出来的就是用函数接受 default 参数的语言：
+
+- python 的 getattr：
+  ```py
+  def getattr(
+      o: object,
+      name: str,
+      default: None,
+      /
+  ) -> (Any | None): ...
+  ```
+- typst
+  ```typst
+  #let values = (1, 7, 4, -3, 2,)
+  #values.at(6, default: values.at(-1))
+  ```
+
+这样就会出现诸如[求值顺序](https://github.com/typst/typst/issues/3052)，多层嵌套难看等各种问题。而一个好的解法是将返回值抽象为 monad，例如 rust：
+
+```rust
+fn xxx() -> Option<T> {}
+```
+
+`Option` 是一个 monad 抽象，其代表了“可能有值”。然后，再从 monad 中取出内部值：
+
+```rust
+let a = xxx().unwrap_or_else(|| 1);
+```
+
+取值部分，可以设 default，可以立刻求值，可以懒求值，可以方便地嵌套，具有非常高的灵活性。
+
 ## 组合
 
 常有人说，组合优于继承。一个现实的例子是，rust struct 无法继承，只能组合。

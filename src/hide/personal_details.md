@@ -33,6 +33,7 @@ flowchart LR
   节欲派 --> 性价比之奴
   效率至上 -.-> 泛而不精
   好奇心 --> 泛而不精 --> 模仿者 -.-> 多看少说
+  好奇心 --> 喜欢尝试新工具
   click 无归属感 "https://t.me/withabsolutex/774" _blank
 ```
 

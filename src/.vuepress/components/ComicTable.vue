@@ -301,6 +301,10 @@ const data = [
   { id: "248491", aScore: 9.3, bScore: 9.7, info: "#合集 #纯爱", bak: "https://telegra.ph/Hota-Love-Migoro---Lovely-Time-Chinese-10-22" },
   { id: "510386", aScore: 8.8, bScore: 4.2, info: "#兽耳 #无H" },
   { id: "(ex)", aScore: 7.6, bScore: 8.5, info: "#兄妹 #睡x", otherlink: "https://exhentai.org/g/2009078/1dd0f05049/", bak: "https://telegra.ph/第2回ウルトラサマーフェスタ-squeezecandyheaven-いちはや-妹と悪魔祓い--特典-中国翻訳-08-02" },
+  { id: "510873", aScore: 7.8, bScore: 5, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/C103-washoku屋-和食-見ちゃったなら-中国翻訳-05-27" },
+  { id: "510619", aScore: 9.2, bScore: 8.6, info: "#雌小鬼 #反杀 #出轨", bak: "https://telegra.ph/イトハナナ-イトハナ-シークレットライナーSR2便夜行バスの痴女-中国翻訳-DL版-05-27" },
+  { id: "(jm)", aScore: 7.3, bScore: 7.5, info: "#NTR", otherlink: "https://18comic.vip/photo/485945" },
+  { id: "(ex)", aScore: 8.4, bScore: 9.8, info: "#表兄妹 #将棋", otherlink: "https://exhentai.org/g/2933270/cce5617da1", bak: "https://telegra.ph/Kudaraji-Hatsuka-Tokaku-Ukiyowa-Mamanaranu-COMIC-Kairakuten-2024-02-Chinese-大鸟可不敢乱转汉化ampAlasika重嵌-Decensored-Digital-05-28" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

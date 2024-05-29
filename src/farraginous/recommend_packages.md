@@ -391,6 +391,23 @@ diff 增强插件，为 github 使用。
 - [bilbili 界面美化](https://greasyfork.org/zh-CN/scripts/476704-bilbili界面美化)：自动网页全屏，移除弹幕栏，非常对我的胃口
 - [一些改善未登录下观看体验的脚本](https://greasyfork.org/zh-CN/users/675901-dd1969)
 
+## 其他软件插件
+
+### [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)
+
+一个 QQNT 的插件。我很早就知道了，然而当时在 QQNT 最新版本上会炸，因此没有使用。20240529 因为一些契机再次尝试发现可用，于是写入此处。
+
+我安装的插件：
+
+- [轻量工具箱](https://github.com/xiyuesaves/LiteLoaderQQNT-lite_tools/tree/v4)，包含了防撤回
+- [Pangu](https://github.com/MisaLiu/LiteLoaderQQNT-Pangu)
+- [pURLfy](https://github.com/PRO-2684/LiteLoaderQQNT-pURLfy)
+- [media-local-view](https://github.com/xh321/LiteLoaderQQNT-Media-Local-View)
+- [Kill-Update](https://github.com/xh321/LiteLoaderQQNT-Kill-Update)
+- [Plugin-Brevity-btn](https://github.com/hacker-frok/LiteLoaderQQNT-Plugin-Brevity-btn)
+- [JustF5](https://github.com/xinyihl/LiteLoaderQQNT-JustF5)
+- [Markdown](https://github.com/d0j1a1701/LiteLoaderQQNT-Markdown)，但是只有本机能看
+
 ## 一些过时的推荐
 
 ::: warning
