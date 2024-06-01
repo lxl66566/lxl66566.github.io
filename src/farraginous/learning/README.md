@@ -31,6 +31,7 @@ category:
 10. [计算机网络](./network.md)
 11. [通信原理](./PoC.md)
 12. [电磁场与电磁波](./electromagnetic_wave.md)
+13. [图像处理](./image_processing.md)
 
 ## 业余笔记
 

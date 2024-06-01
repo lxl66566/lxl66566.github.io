@@ -285,6 +285,9 @@ const data = [
   { id: "imo-023", aScore: 9, bScore: 6.5, name: "^1" },
   { id: "yst-312", aScore: 9.2, bScore: 6.2, name: "義理の父に口マ●コとして扱われてるのにマン汁を滴らせる私は変態です。 横宮七海" },
   { id: "miaa-810", aScore: 7.6, bScore: 6, name: "", u: true },
+  { id: "ssis-708", aScore: 9.4, bScore: 9, u: true, name: "「全ては母のために…」再婚相手の性的虐●に耐え続けた早熟おっぱい少女 東雲みれい" },
+  { id: "ssis-656", aScore: 8.1, bScore: 8, u: true, name: "隣家のゴミ部屋の住人はかつて私を犯しクビになった堕落教師！10年越しの復讐追姦プレス 星宮一花" },
+  { id: "cawd-510", aScore: 9, bScore: 3, u: true, name: "" },
 ];
 export default {
   name: "AvTable",

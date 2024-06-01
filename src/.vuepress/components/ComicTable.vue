@@ -305,6 +305,14 @@ const data = [
   { id: "510619", aScore: 9.2, bScore: 8.6, info: "#雌小鬼 #反杀 #出轨", bak: "https://telegra.ph/イトハナナ-イトハナ-シークレットライナーSR2便夜行バスの痴女-中国翻訳-DL版-05-27" },
   { id: "(jm)", aScore: 7.3, bScore: 7.5, info: "#NTR", otherlink: "https://18comic.vip/photo/485945" },
   { id: "(ex)", aScore: 8.4, bScore: 9.8, info: "#表兄妹 #将棋", otherlink: "https://exhentai.org/g/2933270/cce5617da1", bak: "https://telegra.ph/Kudaraji-Hatsuka-Tokaku-Ukiyowa-Mamanaranu-COMIC-Kairakuten-2024-02-Chinese-大鸟可不敢乱转汉化ampAlasika重嵌-Decensored-Digital-05-28" },
+  { id: "327057", aScore: 6, bScore: 9.6, order: 1, info: "#强制性交 一週間で∞ループしてると気がついたから、校内にヤリ部屋作った！" },
+  { id: "368252", aScore: 6.4, bScore: 9.9, order: 2, info: "#强制性交 一週間で∞ループしてると気がついたから、校内にヤリ部屋作った！", bak: "https://telegra.ph/Art-Jam-Art-Jam-一週間でループしてると気がついたから校内にヤリ部屋作った２-中国翻訳-DL版-08-02" },
+  { id: "510477", aScore: 5.4, bScore: 9.7, order: 3, info: "#强制性交 一週間で∞ループしてると気がついたから、校内にヤリ部屋作った！" },
+  { id: "369498", aScore: 5.9, bScore: 4, info: "#碧蓝航线 #自慰", bak: "https://telegra.ph/COMIC115-ふなたいむ-幸奈ふな-ラフィーちゃんの発情期-アズールレーン-中国翻訳-08-02" },
+  { id: "369906", aScore: 6.6, bScore: 3.7, info: "#师生 #死库水", bak: "https://telegra.ph/サンクリ2018-Autumn-うなぎやさん-花宮なつか-なんでもするから単位くださいっ-中国翻訳-08-02" },
+  { id: "370593", aScore: 7.8, bScore: 2.5, info: "#醉酒", order: 5, bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-おんなのこのまゆ番外編-中国翻訳-DL版-08-02" },
+  { id: "370765", aScore: 5.7, bScore: 7.9, info: "#兄妹 #雌小鬼", bak: "https://telegra.ph/冬野みかん-peeing-はつじょう-がーるず-中国翻訳-08-02" },
+  { id: "371304", aScore: 5, bScore: 2.1, info: "#蔚蓝档案 #雌小鬼 #反杀", bak: "https://telegra.ph/PYPYworks-シャモナベ-ユメノナカデ-ブルーアーカイブ-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

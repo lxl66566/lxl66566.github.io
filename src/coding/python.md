@@ -17,7 +17,7 @@ python 实际上并不简单，只不过生态比较好。[暴论：python 有�
 
 ## 学习
 
-python 入门非常快，简单看点 w3school 即可。进阶可以看一点 _码农高天_ 的视频，虽然有一点炒作，但是不可否认他确实很强（为数不多的 python maintainer）。
+python 入门非常快，简单看点 w3school 即可。进阶可以看一点 _码农高天_ 的视频，虽然有一点炒作，但是不可否认他确实很强（为数不多的华人 python core dev）。
 
 最后，不管学习什么语言都必须要做大量的项目。我也做了不少，例如 [bpm](https://github.com/lxl66566/bpm) 和 [init-script](https://github.com/lxl66566/init-script)。还有更多其他小项目。
 

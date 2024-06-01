@@ -11,6 +11,8 @@ tag:
 
 这里的灵感请随便用。如果有人能实现我的想法，我会非常高兴的。
 
+猜你喜欢：[绝对值\_x 对 xxx 的希望](../gossip/hope.md)
+
 ## 游戏灵感
 
 - [ ] 双人智力竞技，边战斗边添加规则。触发规则则失败。在规则越来越多的情况下作出正确判断反应。
@@ -22,15 +24,6 @@ tag:
 
 ## 编程灵感
 
-- [ ] p2p 聊天软件，ui 与功能仿 tg，详见[此处](../gossip/hope.md#对聊天软件的希望)
-  - 是否在找：[manyverse](https://www.manyver.se/)，一个 p2p 社交网络
-- [ ] （接上条）或者，可以说开发一个优秀的消息传输协议
-  - [ ] 客户端：端到端加密压缩，节省服务器存储空间
-  - [ ] 服务端：一切 _大文件_ 均使用 hash
-  <!-- - [ ] 多取一功能：对群组内的一部分人@，而其中的任一一人回复，就会取消这个@对其他人的高亮提醒。
-  - [ ] 合并转发与正常转发功能。（QQ）
-  - [ ] 需要完美的上下文定位功能。（tg 这点做的很差）
-  - [ ] 支持较好的全局搜索功能。 -->
 - [ ] ~~音乐播放器~~ 我现在使用 Telegram 频道作为云端音乐存储，保证同步。（问题是音乐缓存会被定期清理，需要将所有音乐保存到 Music 目录。）
   - [ ] ~~跨平台，多端同步（WebDav）~~
   - [ ] ~~自行导入歌曲，支持文件导入与 url 导入（即自定义音源，书源 like）~~
@@ -48,6 +41,7 @@ tag:
 - [ ] 流式分布式的视频软件?
 - [ ] 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）
 - [ ] pdf 无损图片压缩
+  - [ ] wasm, static web
 - [x] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 - [ ] lzma 数据库，简易迁移，不依赖特定程序
 - [ ] 浏览器书签 & 历史数据库(rust cli / js)
@@ -58,12 +52,11 @@ tag:
 - [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
 - [ ] galgame engine
 - [x] [bin package manager（release installer）](https://github.com/lxl66566/bpm)
-- [ ] 音频振幅对齐
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 - [ ] osu beatmap downloader, support stable and lazer
 - [ ] poetry plugin to import requirements.
 - [ ] ~~pyshell~~ see [xonsh](https://github.com/xonsh/xonsh)?
-- [ ] 好用的 CLI 录音机
+- [ ] 好用的 CLI 录音机 + 音频处理
   - 暂停与继续
   - 降噪
   - [ ] 智能限幅
@@ -75,7 +68,6 @@ tag:
   - JSX/TSX 是好东西
   - 组件与作用域
 - [x] fuck, delete it! (windows)
-- [ ] rust crate: select by arch
 - [ ] 代理
 - [ ] windows shell with everything:
 - [x] openppp2 client
@@ -89,11 +81,15 @@ tag:
   - 颜色，当前行，变量值
   - [ ] 可选不打印堆栈
   - [ ] 分级，可禁用
+- [ ] RSS TUI
+  - [ ] filter
 
 ### RIIR
 
 - [ ] scoop
 - [ ] bpm
+  - [ ] rust crate: select by arch
+- [x] chnroutes
 
 ### Android
 
@@ -120,7 +116,6 @@ tag:
 - [ ] B 站 CC 字幕下载脚本
 - [ ] osu 谱面下载器（仅前端？）
 - [ ] 轻量级 pdf 演示 (pdf as ppt, in any browser)
-  - [ ] 结合表现力稍强一点的文本描述语言
 - [ ] b 站历史记录搜索
 - [ ] html compresser, <-> rss
   - [ ] 已找到同类项目 [sanitize-html](https://www.npmjs.com/package/sanitize-html)，但可以改进合并
@@ -149,7 +144,7 @@ tag:
 
 #### vscode
 
-- [ ] typst formatter
+- ~~typst formatter~~ [typstyle](https://github.com/Enter-tainer/typstyle)
 
 ## 实物创作灵感
 

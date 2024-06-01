@@ -156,10 +156,12 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 
 ColorOS 是目前一加的默认系统。
 
+- 不要冻 _应用包安装程_！！！！[惨痛教训，并附带了哪些东西能冻](./problem.md#一加无限重启)
 - 音量过高。最低音量都过高了。
   - [没法通过 `ro.config.media_vol_steps` 调](https://t.me/withabsolutex/1401)。
 - 亮度调节也非常不线性。
 - 不在接电话时，无法调节通话音量。
+- 声音与震动中**无法关闭震动**，只能在震动强度中拉到最小。这意味着想关震动得去一个个应用设置里关。
 
 ## Git 有多难用
 
@@ -306,13 +308,16 @@ ColorOS 是目前一加的默认系统。
 ## Rust 有多难用
 
 - features stable 周期长，一般需要经历 5-7 年。而好用的东西全在 nightly。
+  - `Duration::from_days`
 - const 和 static 非常弱，导致很难将计算搬到编译期。
   - 理论上如果 const 够强，`const_str` 这个 crate 就不应该存在。
 - [过程宏无法定义在同一 crate 中](https://www.reddit.com/r/rust/comments/tuxawv/why_do_procedural_macros_have_to_be_defined_in_a/)，对于简单的代码替换复用复杂度过高；而声明宏又无法实现某些复杂需求（或者实现难度过大，魔法过多）。
 - `dbg!` 和 `log.debug!` 的设计[有问题](https://t.me/withabsolutex/1615)。
-- Trait 设计问题：
+- Trait 是一个很好的设计，但是 Rust 的 Trait 太弱了：
   - 缺乏减法。
   - Trait alias 还在 nightly，而且太弱了，无法达到我的预期。
+  - `impl Trait` is not allowed in `fn` pointer return types，`impl Trait` is only allowed in arguments and return types of functions and methods.
+  - 经常容易搞出类型地狱，特别是沾上了 Future 的时候。
 - `std::process::Command` 的设计中，command 和 args 一定要分开的，其只在内部进行组合；这就导致如果我要执行完整的语句，就要先 split 再 join，多此一举。
 - Unsafe 并不是那么自由：
   - 无法改一个 not mut 的 static 变量。
@@ -323,6 +328,7 @@ ColorOS 是目前一加的默认系统。
     - 这也导致了很多看起来应该是 official 的功能被分散到 crate 里，并且水平参差不齐，甚至是 [API 不一致](https://t.me/withabsolutex/1608)。
   - 很多东西理应在 std 实现，但是（目前）却没有
     - Semaphore
+- [不能添加 bin dependencies](https://stackoverflow.com/questions/35711044/how-can-i-specify-binary-only-dependencies)。
 
 ## Youtube 有多难用
 

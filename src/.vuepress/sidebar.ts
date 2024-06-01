@@ -149,6 +149,7 @@ export default sidebar({
 				"network.md",
 				"PoC.md",
 				"electromagnetic_wave.md",
+				"image_processing.md",
 				"foods.md",
 			],
 		},
