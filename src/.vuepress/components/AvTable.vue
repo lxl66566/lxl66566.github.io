@@ -288,6 +288,8 @@ const data = [
   { id: "ssis-708", aScore: 9.4, bScore: 9, u: true, name: "「全ては母のために…」再婚相手の性的虐●に耐え続けた早熟おっぱい少女 東雲みれい" },
   { id: "ssis-656", aScore: 8.1, bScore: 8, u: true, name: "隣家のゴミ部屋の住人はかつて私を犯しクビになった堕落教師！10年越しの復讐追姦プレス 星宮一花" },
   { id: "cawd-510", aScore: 9, bScore: 3, u: true, name: "" },
+  { id: "same-107", aScore: 8, bScore: 8.6, name: "白石もも" },
+  { id: "sdmu-968", aScore: 7.7, bScore: 11.3, name: "さらば青春の光 森田哲矢 制作総指揮 ペンション殺人事件 川村ゆい" },
 ];
 export default {
   name: "AvTable",

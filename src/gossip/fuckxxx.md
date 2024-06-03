@@ -156,7 +156,7 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 
 ColorOS 是目前一加的默认系统。
 
-- 不要冻 _应用包安装程_！！！！[惨痛教训，并附带了哪些东西能冻](./problem.md#一加无限重启)
+- 不要冻 _应用包安装程_！！！！[惨痛教训，并附带了哪些东西能冻](../articles/mobile/problem.md#一加无限重启)
 - 音量过高。最低音量都过高了。
   - [没法通过 `ro.config.media_vol_steps` 调](https://t.me/withabsolutex/1401)。
 - 亮度调节也非常不线性。

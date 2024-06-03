@@ -313,6 +313,7 @@ const data = [
   { id: "370593", aScore: 7.8, bScore: 2.5, info: "#醉酒", order: 5, bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-おんなのこのまゆ番外編-中国翻訳-DL版-08-02" },
   { id: "370765", aScore: 5.7, bScore: 7.9, info: "#兄妹 #雌小鬼", bak: "https://telegra.ph/冬野みかん-peeing-はつじょう-がーるず-中国翻訳-08-02" },
   { id: "371304", aScore: 5, bScore: 2.1, info: "#蔚蓝档案 #雌小鬼 #反杀", bak: "https://telegra.ph/PYPYworks-シャモナベ-ユメノナカデ-ブルーアーカイブ-中国翻訳-DL版-08-02" },
+  { id: "511624", aScore: 6.2, bScore: 8.8, info: "异世界也要灌注永雏塔菲", bak: "https://telegra.ph/猫崎-葵异世界也要灌注永雏塔菲-05-29" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

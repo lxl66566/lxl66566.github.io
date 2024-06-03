@@ -47,6 +47,8 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 ## 静电磁场
 
+### 电场
+
 [大物基础](./physics.md#电学)
 
 [安培定律](./physics.md#磁场力)：$\displaystyle d\vec{F}=\frac{\mu_0}{4\pi}\frac{Id\vec{l}\times(I'd\vec{l}'\times\vec{R})}{R^3}$, $\vec{F}=\left(\oint_cId\vec{l}\right)\times\vec{B}$
@@ -59,8 +61,38 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 [静电场场方程](https://www.bilibili.com/video/BV1uV411H7xf/?p=60&t=106)（微分形式）：$\displaystyle\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon_0}, \nabla\times\vec{E}=\vec{0}$
 
-静磁场场方程：$\begin{aligned}&\nabla\cdot\vec{B}=0\\&\nabla\times\vec{B}=\mu_{0}\vec{J}\end{aligned}$ J 为体电流密度
+电位表达式 $\displaystyle\varphi(\vec{r})=\frac{1}{4\pi\varepsilon_{0}}\int_{V}\rho(\vec{r}^{\prime})\frac{1}{\left|\vec{r}-\vec{r}^{\prime}\right|}dV^{\prime}$
+
+### 磁场
+
+静磁场场方程：$\begin{aligned}&\nabla\cdot\vec{B}=0\\&\nabla\times\vec{B}=\mu_{0}\vec{J}\end{aligned}$ &emsp;J 为体电流密度。
+
+引入一个 $\vec{A}$ 称为磁矢位，则 $\vec{B}=\Delta\times\vec{A}$。
+
+（体）磁矢位方程：$\displaystyle\vec{A}(\vec{r})=\frac{\mu_{0}}{4\pi}\int_{V}\frac{\vec{J}}{\left|\vec{r}-\vec{r}^{\prime}\right|}dV^{\prime}$
 
 [泊松方程](https://zh.wikipedia.org/wiki/%E6%B3%8A%E6%9D%BE%E6%96%B9%E7%A8%8B)
 
-电位表达式 $\displaystyle\varphi(\vec{r})=\frac{1}{4\pi\varepsilon_{0}}\int_{V}\rho(\vec{r}^{\prime})\frac{1}{\left|\vec{r}-\vec{r}^{\prime}\right|}dV^{\prime}$
+### 偶极子
+
+偶极子条件 $r >> l$
+
+电偶极矩：$\vec{p}=q\vec{l}$，有电位 $\displaystyle\varphi=\frac{\vec{p}\cdot\vec{r}}{4\pi\varepsilon_{0}r^{3}}$，其中 $\vec{l}$ 是 -q 指向 +q，r 为电偶极子中心与待测点的距离。
+
+磁偶极矩：$\vec{m}=I\vec{S}$，有磁矢位 $\displaystyle\vec{A}=\vec{A}_{\phi}=\frac{\mu_{0}}{4\pi}\frac{\vec{m}\times\vec{r}}{r^{3}}$
+
+可以求得场方程
+
+$\displaystyle\vec{B}(r,\theta)=\frac{\mu_{0}m}{4\pi r^{3}}(2\cos\theta\vec{e}_{r}+\sin\theta\vec{e}_{\theta})\\\vec{E}(r,\theta)=\frac{p}{4\pi\varepsilon_{0}r^{3}}\Big(2\cos\theta\vec{e}_{r}+\sin\theta\vec{e}_{\theta}\Big)$
+
+### 介质中
+
+极化强度 P = 趋于无穷小体积内的电偶极矩之和
+
+极化电荷密度：$\left.\left\{\begin{array}{l}\rho_{ps}(\vec{r})=\vec{P}(\vec{r})\cdot\vec{n}\\\\\rho_{p}(\vec{r})=-\nabla\cdot\vec{P}(\vec{r})\end{array}\right.\right.$
+
+电位移矢量 $\vec{D}=\varepsilon_{0}\vec{E}+\vec{P}$
+
+在线性介质中，$\vec{P}=\varepsilon_0\chi_e\vec{E} ,\chi_e$ 称为极化率。$\varepsilon_{r}=1+\chi_{e}, \varepsilon=\varepsilon_{0}\varepsilon_{r}$ 称为介质介电常数。
+
+介质内场方程：$\displaystyle\nabla\cdot\vec{D}=\rho$，即 $\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon}$
