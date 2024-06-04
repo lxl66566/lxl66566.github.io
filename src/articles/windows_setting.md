@@ -95,6 +95,7 @@ tag:
     2. 服务：`services.msc` 里禁用 `Windows Update` 服务
     3. 任务计划程序关闭：_Microsoft > Windows > WindowsUpdate > 禁用 Scheduled Start_
     - 既然无需经常更新，那就[关闭传递优化](https://blog.51cto.com/u_13464709/2057007)，并且用 _磁盘清理_ 清一下这位占用的空间。
+    - 为什么要做这么多的工作呢，因为有 [Windows Update ignoring Group Policy](https://learn.microsoft.com/en-us/answers/questions/866036) 的先例。
 22. [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。
 23. 打开任务栏时间秒数显示：_任务栏设置 - 任务栏行为_
 24. 开启透明压缩。LZW 算法，效果只能说聊胜于无，非系统盘 208G 压到 183G。

@@ -63,6 +63,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 - `rust-analyzer`，开发必备
 - (optional) `Rust Feature Toggler`，方便切换 features
+- (optional) `crates`，更好管理依赖版本
 
 还有一些能够优化开发体验的选项：
 

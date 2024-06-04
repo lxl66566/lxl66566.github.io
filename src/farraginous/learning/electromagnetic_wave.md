@@ -45,6 +45,8 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 亥姆霍兹定理：场的分解。$\displaystyle\vec{F}=\vec{F_1}+\vec{F_2}=-\nabla\varphi+\nabla\times\vec{A}$；$F_1$ 无旋，$F_2$ 无源（无散）
 
+记住：散度转通量是面积分，旋度转环量是线积分。
+
 ## 静电磁场
 
 ### 电场
@@ -89,10 +91,22 @@ $\displaystyle\vec{B}(r,\theta)=\frac{\mu_{0}m}{4\pi r^{3}}(2\cos\theta\vec{e}_{
 
 极化强度 P = 趋于无穷小体积内的电偶极矩之和
 
-极化电荷密度：$\left.\left\{\begin{array}{l}\rho_{ps}(\vec{r})=\vec{P}(\vec{r})\cdot\vec{n}\\\\\rho_{p}(\vec{r})=-\nabla\cdot\vec{P}(\vec{r})\end{array}\right.\right.$
+极化电荷密度（体，面）：$\left.\left\{\begin{array}{l}\rho_{ps}(\vec{r})=\vec{P}(\vec{r})\cdot\vec{n}\\\\\rho_{p}(\vec{r})=-\nabla\cdot\vec{P}(\vec{r})\end{array}\right.\right.$
 
-电位移矢量 $\vec{D}=\varepsilon_{0}\vec{E}+\vec{P}$
+电位移矢量 $\vec{D}=\varepsilon_{0}\vec{E}+\vec{P}=\varepsilon\vec{E}$
 
 在线性介质中，$\vec{P}=\varepsilon_0\chi_e\vec{E} ,\chi_e$ 称为极化率。$\varepsilon_{r}=1+\chi_{e}, \varepsilon=\varepsilon_{0}\varepsilon_{r}$ 称为介质介电常数。
 
-介质内场方程：$\displaystyle\nabla\cdot\vec{D}=\rho$，即 $\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon}$
+介质内电场方程：$\displaystyle\nabla\cdot\vec{D}=\rho$，即 $\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon}$
+
+磁化强度 $\vec{M}$ 趋于无穷小体积内的磁偶极矩之和
+
+磁化电流密度（体，面）：$\begin{cases}\vec{J}_{ms}=\vec{M}\times\vec{n}\\\\\vec{J}_{m}=\nabla\times\vec{M}\end{cases}$
+
+磁场强度 $\displaystyle\vec{H}=\frac{\vec{B}}{\mu_{0}}-\vec{M}$
+
+介质内磁场方程：$\displaystyle\nabla\cdot\vec{H}=\vec{J}$
+
+类似的，有 $\vec{B}=\mu\vec{H}$，其中 $\vec{M}=\chi_m\vec{H}, \mu_{r}=1+\chi_{m}, \mu=\mu_0\mu_r$
+
+线性介质内的方程：$\nabla\times\vec{B}=\mu\vec{J}$
