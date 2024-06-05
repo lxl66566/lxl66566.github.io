@@ -291,6 +291,7 @@ const data = [
   { id: "same-107", aScore: 8, bScore: 8.6, name: "白石もも" },
   { id: "sdmu-968", aScore: 7.7, bScore: 11.3, name: "さらば青春の光 森田哲矢 制作総指揮 ペンション殺人事件 川村ゆい" },
   { id: "dass-124", aScore: 6.8, bScore: 4, u: true, name: "" },
+  { id: "svdvd-921", aScore: 8.2, bScore: 9 },
 ];
 export default {
   name: "AvTable",

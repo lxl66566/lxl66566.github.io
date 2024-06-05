@@ -13,22 +13,24 @@ tag:
 
 ## 数据库选择
 
-大概分为关系型和非关系型，分布式和非分布式...
+大概分为关系型和非关系型，分布式和非分布式，还有向量数据库等...
 
-首先有一个很重要的概念，有跟随程序分发到客户端的文件数据库，也有作为服务器端具有本地驱动的数据库。前者主要就是 SQLite，其他常见数据库基本都属于后者。所以在 java 连接 Mysql 时出现的 `jdbc:mysql://localhost:3306/mydatabase` 就是需要先启动数据库的服务驱动，在电脑上开个端口才能使用，不像 SQLite 直接读文件。
+首先有一个很重要的概念，有跟随程序分发到客户端的文件数据库（嵌入式数据库），也有作为服务器端具有本地驱动的数据库。前者主要就是 SQLite，其他常见数据库基本都属于后者。所以在 java 连接 Mysql 时出现的 `jdbc:mysql://localhost:3306/mydatabase` 就是需要先启动数据库的服务驱动，在电脑上开个端口才能使用，不像 SQLite 直接读文件。由于我初期不知道这个概念，走了很多弯路。（~~本人只是个臭写小玩意应用的，服务端数据库是什么，没听说过。~~）
 
-由于我初期不知道这个概念，走了很多弯路。（~~本人只是个臭写小玩意应用的，服务端数据库是什么，没听说过。~~）
+然后关系型和非关系型不多说，非关系型大部分都是 KV（key-value）数据库。
 
-常见的数据库：
+如何选择：
 
-- 文件型大多是 SQLite，不过也有 [duckdb](https://duckdb.org/)。
-- 关系型优先 PostgreSQL / MariaDB(MySQL)[^1][^2], 追求极致性能可以选 OracleDB。
-- 非关系型 Redis, MongoDB，分布式就 Cassandra 等等。
+1. 嵌入式
+   - 关系型大多是 SQLite，新兴的有 [duckdb](https://duckdb.org/)。
+   - KV 首选 rocksdb，据说性能高。
+2. 非嵌入式
+   - 关系型优先 PostgreSQL，这玩意非常全能，属于宗教级别。MySQL/MariaDB[^1][^2] 那些确实有点老了。
+   - 非关系型，纯内存的选 Redis
+   - 分布式 Cassandra
 
 [^1]: MariaDB 是 MySQL 的分支，完全开源，而 MySQL 是商业产品，部分开源。([ref](https://aws.amazon.com/cn/compare/the-difference-between-mariadb-vs-mysql/))
 [^2]: ~~MySQL 已死：~~ _开源界一般用 mariadb，IT 公司一般用 percona-server。_ ——[依云](https://blog.lilydjwg.me)
-
-（反正都没用过，以上信息都是浅浅了解的）
 
 ## 可视化工具
 
@@ -36,7 +38,7 @@ tag:
 
 用过 DBeaver，java 写的垃圾，bug 很多。
 
-后来换了 Beekeeper Studio，非常好用。
+后来换了 Beekeeper Studio，只读非常好用，写的话一般。
 
 ## SQLite
 
@@ -83,7 +85,7 @@ python 版本还有一个[官方推荐的 orm](https://duckdb.org/docs/guides/py
 
 ## Redis
 
-Redis 是一个非常简单的 KV (key-value) 数据库。
+Redis 是一个非常简单的内存 KV (key-value) 数据库，主要用来做缓存。
 
 ## mysql 运维
 

@@ -108,7 +108,7 @@ firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company]
 
 - 自定义程度低，比较小众，大多论坛都是英文，且 UI 与论坛早期截图也不一致，有很多问题找不到解法。
 - History, passwords, extensions, Favorites tabs, and Profiles will not Sync between devices. ([ref](https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync)) 我是很希望扩展能在设备间同步的，毕竟还有一个 Linux 系统。
-- 左上角点开 Settings，结果是一个简约的设置界面，需要 `arc://settings` 才能进真正的设置。。
+- 左上角点开 Settings，结果是一个简约的设置界面，需要 `arc://settings` 才能进真正的设置。。~~这么坏，学 win11 的？~~
 - 有些网站（例如 reddit）无法 login。经过测试，问题出在 Global Speed 扩展上，关闭扩展可正常登录。
   - 我尝试在 edge 浏览器上复现：安装相同版本的 Global Speed，清理 cookie，结果显示在 edge 上 reddit 并无问题。
 - 有些（Kiss translator）插件快捷键失效。

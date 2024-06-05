@@ -69,7 +69,7 @@ tag:
   - 组件与作用域
 - [x] fuck, delete it! (windows)
 - [ ] 代理
-- [ ] windows shell with everything:
+- [ ] ~~windows shell with everything:~~ everything SDK is hard to use, i can't ever compile a basic example code...
 - [x] openppp2 client
   - [ ] 绕过路由
 - [ ] rust tui 脚本工具箱
@@ -90,6 +90,7 @@ tag:
 - [ ] bpm
   - [ ] rust crate: select by arch
 - [x] chnroutes
+- [ ] fail2ban
 
 ### Android
 

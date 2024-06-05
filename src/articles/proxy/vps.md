@@ -170,7 +170,7 @@ firewall-cmd --add-forward-port=port=<from>:proto=udp:toport=<to> --permanent
 
 ## 安全性
 
-VPS 的公网 ip 一定会带来安全性问题。不容忽视。
+VPS 的公网 ip 会带来安全性问题，不过尝试登录的多，真正攻进去的也几乎没有。
 
 ### 自检
 
@@ -185,6 +185,7 @@ VPS 的公网 ip 一定会带来安全性问题。不容忽视。
 - 可以通过修改 `/etc/ssh/sshd_config` 中的内容进行限制，例如修改 `MaxAuthTries`。
 - 密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。
 - 限制登录 ip。修改 `/etc/hosts.allow` & `/etc/hosts.deny` 文件。
+- 尝试 fail2ban 等软件。（这个我不会用）
 
 #### 防火墙
 
@@ -212,7 +213,7 @@ firewall-cmd --zone=public --list-ports
 
 ### 协议
 
-网上小白教程比较多的是 vmess/vless + ws + tls 的方案，我选择 trojan，也是一个比较常见的方案。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在的 trojan 检测技术也比较成熟。
+网上小白教程比较多的是 vmess/vless + ws + tls 的方案，这些协议比较老，基本被打烂了。我选择 trojan，也是一个比较常见的方案，相对来说安全性更高。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在也存在着 trojan 检测技术。
 
 我最开始直接用 [trojan 一键脚本](https://github.com/Jrohy/trojan)[^2]。如[GFW 会主动对端口进行封禁](#对抗-gfw)，我的端口基本只能存活一天。（后来做了端口转发就基本没死了，偶尔会被 Qos(?)）
 
