@@ -47,7 +47,18 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 记住：散度转通量是面积分，旋度转环量是线积分。
 
-## 静电磁场
+### 介质
+
+- 线性介质：介质参数与场强大小无关
+- 各向同性介质：介质参数与场强方向无关
+- 均匀介质：介质参数与位置无关
+- 色散介质：介质参数与场的频率有关
+
+## 静电磁场/恒流场
+
+[公式大表](https://www.bilibili.com/video/BV1uV411H7xf/?p=137&t=29)
+
+[场方程大表](https://www.bilibili.com/video/BV1uV411H7xf/?p=154&t=320)
 
 ### 电场
 
@@ -110,3 +121,31 @@ $\displaystyle\vec{B}(r,\theta)=\frac{\mu_{0}m}{4\pi r^{3}}(2\cos\theta\vec{e}_{
 类似的，有 $\vec{B}=\mu\vec{H}$，其中 $\vec{M}=\chi_m\vec{H}, \mu_{r}=1+\chi_{m}, \mu=\mu_0\mu_r$
 
 线性介质内的方程：$\nabla\times\vec{B}=\mu\vec{J}$
+
+### 能量
+
+能量 $W=\int_V w dV$
+
+电场能量密度 $\displaystyle w_e=\frac{1}{2}\vec{E}\cdot\vec{D}=\frac{1}{2}\varepsilon|\vec{E}|^2$
+
+磁场能量密度 $\displaystyle w_m=\frac{1}{2}\vec{H}\cdot\vec{B}=\frac{1}{2}\mu|\vec{H}|^2$
+
+电场力 = $\vec{F}=\nabla W_e$
+
+### 恒定电流
+
+一般情况：$\displaystyle\nabla\cdot\vec{J}=-\frac{\partial\rho}{\partial t}$
+
+恒定电流时 $\displaystyle\nabla\cdot\vec{J}=0, \nabla\times\vec{E}=\vec{0}$
+
+边界条件；$\vec{n}\cdot(\vec{J}_{1}-\vec{J}_{2})=0\\\vec{n}\times(\vec{E}_{1}-\vec{E}_{2})=\vec{0}$
+
+功率密度：$p=\vec{J}\cdot\vec{E}=\sigma |\vec{E}|^2$
+
+$\sigma$ 电导率
+
+## 时变电磁场
+
+位移电流密度：$\displaystyle\vec{J}_d=\frac{\partial\vec{D}}{\partial t}$
+
+麦克斯韦方程组：$\begin{aligned}&\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\\&\nabla\times\vec{H}=\vec{J}+\frac{\partial\vec{D}}{\partial t}\\&\nabla\cdot\vec{D}=\rho\\&\nabla\cdot\vec{B}=0\end{aligned}$
