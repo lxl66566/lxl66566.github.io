@@ -157,3 +157,27 @@ DSB 和 SSB 的抗噪声性能是相同的。
 ### VSB
 
 残留边带调制是介于 SSB 与 DSB 之间的一种折中方式。残留边带滤波器在 $\omega_c$ 处必须具有互补对称（奇对称）特性。
+
+### 角度调制
+
+$s_m(t)=A\cos[ \omega_ct+\varphi(t)]$
+
+瞬时角频率：$\omega(t)=\mathrm{d}[\omega_\text{c}t+\varphi(t)]/\mathrm{d}t$
+
+瞬时角频偏：$\mathrm{d}\varphi(t)/\mathrm{d}t$
+
+#### FM
+
+$\varphi(t)=m_{f}\sin\omega_{m}t$
+
+其中，$\displaystyle m_{f}=\frac{K_{f}A_{m}}{\omega_{m}}=\frac{\Delta\omega}{\omega_m}=\frac{\Delta f}{f_m}$ 称为调频指数，表示最大相位偏移；$\Delta\omega$ 最大角频偏
+
+$\varphi(t)=K_{f}\int m(t)dt$， $K_f$ 为调频灵敏度
+
+带宽 $B_{FM}=2(\Delta f+f_m)=2(m_f+1)f_m$
+
+#### PM
+
+$\varphi(t)=m_{p}\cos\omega_{m}t=K_{_p}m(t)$，$K_p$ 为调相灵敏度
+
+$m_p=K_pA_m$ 称为调相指数，表示最大相位偏移

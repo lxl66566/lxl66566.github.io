@@ -337,3 +337,11 @@ ColorOS 是目前一加的默认系统。
 
 - 我不想看 shorts，但是点击关闭只能隐藏 30 天。
 - 推荐算法一般，感觉不如 B 站的。
+
+## Fuck annoying Sliders
+
+众所周知 slider（滑动条） 经常会成为不好的设计。此处收集了一些让我非常恼火的 slider 设计。
+
+- 边界范围设计失败：一般是没有给用户提供足够大的设置范围。
+  - [Cherrygram](https://github.com/arsLan4k1390/Cherrygram)：_贴纸大小_ 最小 50
+  - Battery Guru：_低于以下电量开启系统省电_ 最大 50

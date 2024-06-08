@@ -53,7 +53,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 
 ### 安装 rust
 
-rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行安装 rustup 及 rust。linux 也可以选择用包管理器，详见 [Archwiki](https://wiki.archlinuxcn.org/wiki/Rust)。
+rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行安装 rustup 及 rust。linux 也可以选择用包管理器，详见 [Archwiki](https://wiki.archlinuxcn.org/wiki/Rust)；但是最为推荐的还是 rustup，毕竟写 rust 会经常换工具链。
 
 使用 rustup 的好处是支持交叉编译；方便切换 nightly。坏处是不通过包管理器更新，容易忘。
 
@@ -397,6 +397,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-expand](https://github.com/dtolnay/cargo-expand)|展开宏|
 | [cargo-msrv](https://github.com/foresterre/cargo-msrv) | Find the minimum supported Rust version (MSRV) for your project |
 | [cargo-wizard](https://github.com/Kobzol/cargo-wizard)|提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般。|
+| [flamegraph](https://github.com/flamegraph-rs/flamegraph) | benchmark 火焰图 |
 
 ## 库
 

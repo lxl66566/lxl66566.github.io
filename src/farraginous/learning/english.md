@@ -79,6 +79,10 @@ anki 的云同步裸连很不稳，可能需要科学上网。
 - [ThePrimeTime](https://www.youtube.com/@ThePrimeTimeagen)：锐评他人视频/文章，编程领域。语速很快。
 - [Hacker News](https://news.ycombinator.com/)：友好的技术社区。
 
+还有一些其他的：
+
+- [听力理解练习](https://speechling.com/zh/listening/english)：短句精听，英 + 中
+
 ## external
 
 1. [A Programmer's Guide to English](https://a-programmers-guide-to-english.harryyu.me/)

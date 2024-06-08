@@ -316,6 +316,7 @@ const data = [
   { id: "511624", aScore: 6.2, bScore: 8.8, info: "异世界也要灌注永雏塔菲", bak: "https://telegra.ph/猫崎-葵异世界也要灌注永雏塔菲-05-29" },
   { id: "445392", aScore: 4.2, bScore: 6, info: "#雌小鬼 #肥宅", bak: "https://telegra.ph/かみしき-守月史貴-おにーさん私達とお茶しませんかぁ5-中国翻訳-DL版-06-07" },
   { id: "513222", aScore: 8.5, bScore: 10, order: 1, info: "#无R18 #师生 #loli", bak: "https://telegra.ph/竹下けんじろう-わたしの工口先生-1p目-わたしの面接-中国翻訳-06-06-3" },
+  { id: "273272", aScore: 3.3, bScore: 8.4, info: "#短发 #xp #女性主导" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
