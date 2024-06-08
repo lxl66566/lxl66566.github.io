@@ -77,10 +77,10 @@ tag:
   - 平台无关的 alias
 - [ ] dotfile backup script
 - [ ] 脚本语言：强类型；方便的系统调用；无视空白；方便的函数式异步（go）；
-- [ ] python beautiful assert
+- [x] python beautiful assert: [pretty-assert](https://github.com/lxl66566/pretty-assert)
   - 颜色，当前行，变量值
   - [ ] 可选不打印堆栈
-  - [ ] 分级，可禁用
+  - [x] 分级，可禁用 exit
 - [ ] RSS TUI
   - [ ] filter
 

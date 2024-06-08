@@ -314,6 +314,8 @@ const data = [
   { id: "370765", aScore: 5.7, bScore: 7.9, info: "#兄妹 #雌小鬼", bak: "https://telegra.ph/冬野みかん-peeing-はつじょう-がーるず-中国翻訳-08-02" },
   { id: "371304", aScore: 5, bScore: 2.1, info: "#蔚蓝档案 #雌小鬼 #反杀", bak: "https://telegra.ph/PYPYworks-シャモナベ-ユメノナカデ-ブルーアーカイブ-中国翻訳-DL版-08-02" },
   { id: "511624", aScore: 6.2, bScore: 8.8, info: "异世界也要灌注永雏塔菲", bak: "https://telegra.ph/猫崎-葵异世界也要灌注永雏塔菲-05-29" },
+  { id: "445392", aScore: 4.2, bScore: 6, info: "#雌小鬼 #肥宅", bak: "https://telegra.ph/かみしき-守月史貴-おにーさん私達とお茶しませんかぁ5-中国翻訳-DL版-06-07" },
+  { id: "513222", aScore: 8.5, bScore: 10, order: 1, info: "#无R18 #师生 #loli", bak: "https://telegra.ph/竹下けんじろう-わたしの工口先生-1p目-わたしの面接-中国翻訳-06-06-3" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

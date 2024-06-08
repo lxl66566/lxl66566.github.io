@@ -292,6 +292,16 @@ const data = [
   { id: "sdmu-968", aScore: 7.7, bScore: 11.3, name: "さらば青春の光 森田哲矢 制作総指揮 ペンション殺人事件 川村ゆい" },
   { id: "dass-124", aScore: 6.8, bScore: 4, u: true, name: "" },
   { id: "svdvd-921", aScore: 8.2, bScore: 9 },
+  { id: "stars-829", aScore: 6.5, bScore: 8.7, u: true, name: "世界で一番最悪な初恋 大好きなカレシが私とのSEX映像を知り合いに拡散！その結果、輪●されまくってしまいました。 工藤ゆら" },
+  { id: "stsk-042", aScore: 6, bScore: 7, name: "Wいじめ ～S県N区/強●性処理記録→校内保健室睡眠●・脅しイラマ・ノーパン散歩・強●レズ・服従3P姦～" },
+  { id: "fsdss-569", aScore: 6.1, bScore: 5.7, u: true, name: "隣のゴミ部屋キモオッサンに軟禁され絶倫チ〇ポで犯され続けた私 神木蘭" },
+  { id: "meyd-706", aScore: 5.4, bScore: 6.7, u: true, name: "学生だった私を強●したレ×プ魔が刑期を終え、人妻になった私を再び●す10年越し種付け追姦 初川みなみ" },
+  { id: "waaa-255", aScore: 6.1, bScore: 7.7, u: true, name: "嫌いな義父に夜●いされて… 倉本すみれ" },
+  { id: "sdde-653", aScore: 8.5, bScore: 9.2, name: "時間を止められる男は実在した！超THE REVIVAL※史上最多、被害者数9名―‘夏の青春’をしている部活女子○生たちに中出しレ○プ編―" },
+  { id: "ssis-747", aScore: 8.8, bScore: 8.2, u: true, name: "初めてサレた快感が忘れられず電車痴●にハマってしまった女子●生の末路 東雲みれい" },
+  { id: "ssis-578", aScore: 8.7, bScore: 6, u: true, name: "相部屋NTR 絶倫上司と新入社員が朝から晩まで、不倫セックスに明け暮れた出張先の夜 東雲みれい" },
+  { id: "ssis-522", aScore: 8.3, bScore: 4.4, u: true, name: "可愛い、優しい、エロい。いつでもどこでも即尺してくれるご奉仕ランジェリーメイド 東雲みれい" },
+  { id: "ssis-491", aScore: 8, bScore: 2.1, u: true, name: "教師の僕は巨乳生徒のノーブラ誘惑に理性ふき飛び何度も彼女に吐精してしまう。 東雲みれい" },
 ];
 export default {
   name: "AvTable",

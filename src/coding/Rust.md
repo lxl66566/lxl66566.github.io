@@ -533,11 +533,11 @@ GUI 是 rust 日经问题了。
 
 books:
 
-1. [Rust 语言圣经](https://course.rs/about-book.html)：圣经，**文风**上乘，**质量**高。
-2. [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式。
+1. [Rust 语言圣经](https://course.rs/about-book.html)：圣经，文风上乘，质量高。
+2. [tour of rust](https://tourofrust.com/00_zh-cn.html)：交互授课式，基础入门。
 3. [rust by example](https://doc.rust-lang.org/rust-by-example/index.html)：注重例子。
 4. [小宏书](https://zjp-cn.github.io/tlborm/introduction.html)：专门介绍 rust macro
-5. [Rust Atomics and Locks](https://marabos.nl/atomics/)：并发入门
+5. [Rust Atomics and Locks](https://marabos.nl/atomics/)：底层并发原理入门
 6. [Rust 入门秘籍](https://rust-book.junmajinlong.com/about.html)：一本既简洁又深入的书，非常值得一看（特别是 tokio 相关章节）。
 7. [Rust 编程第一课 - 陈天](https://learn.lianglianglee.com/专栏/陈天%20·%20Rust%20编程第一课/00%20开篇词%20让Rust成为你的下一门主力语言.md)：比较进阶的书，写得很好，着重讲述了难点和实战
 
@@ -552,3 +552,4 @@ articles:
 7. [static, const, let 声明变量有什么区别？](https://rustcc.cn/article?id=d3954670-a58a-427d-9c0c-6666051f5cc7)
 8. [An introduction to advanced Rust traits and generics](https://www.shuttle.rs/blog/2024/04/18/using-traits-generics-rust)
 9. [[翻译] async: 什么是 blocking](https://bingowith.me/2021/05/09/translation-async-what-is-blocking/)
+10. [Rust Runtime 设计与实现-科普篇](https://www.ihcblog.com/rust-runtime-design-1/) 及后续系列文章

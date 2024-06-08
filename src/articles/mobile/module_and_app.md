@@ -74,7 +74,8 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
   - > Scene5 功能均可替代，因此弃用之。
 - [Battery Guru(Premium Unlocked)](https://modyolo.com/battery-guru-battery-saver.html)（**闭源！**）：电池管理，省电。
 - [李跳跳](https://t.me/apkrxwy/927) | [bak](https://wwkh.lanzout.com/iokl61e21oha)（**闭源！**）：跳广告，比 AdAway 好用。软件离线使用，不再更新。~~腾讯封杀，必属精品~~
-- ~~[奇妙应用](​https://wwwh.lanzoul.co​m/s/MagicalApp)~~
+- ~~[奇妙应用](​https://wwwh.lanzoul.co​m/s/MagicalApp)~~：某个三方应用市场，没啥用，又不是破解论坛，该找不到还是找不到。。
+- [雪豹闭嘴](https://t.me/microblock_pub/310)：彻底静音扬声器
 
 ## external
 

@@ -152,6 +152,10 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 
 **不要在 Google Play 下载！** 请去 Github 或 F-Droid 下载。
 
+### 音乐播放器
+
+我听歌都是离线下载到手机里听，因此只需要离线播放器即可。APlayer 和 Salt Player 我用着都还行，体验也差不多，前者开源后者闭源，随便选吧。
+
 ## Windows
 
 ### [scoop](https://scoop.sh/)
@@ -376,6 +380,7 @@ diff 增强插件，为 github 使用。
 - [CSDNGreener](https://greasyfork.org/zh-CN/scripts/378351)：专杀 CSDN
 - [知乎增强](https://greasyfork.org/zh-CN/scripts/419081)
 - [Open the F\*\*king URL Right Now](https://greasyfork.org/zh-CN/scripts/412612)：自动跳转某些网站不希望用户直达的外链
+- [跳过知乎强制登录](http://pc-dos.scp-eq.org/skip-zhihu-forced-login)：202406 知乎的傻逼操作，但是没写死。
 
 ### 刷网课
 

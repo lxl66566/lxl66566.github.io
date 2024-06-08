@@ -84,6 +84,7 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
    git config --global --add safe.directory '*'    # 取消目录安全警告
    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见页面底 external 1.
    git config --global init.defaultBranch main     # 更改默认分支为 main（linux 默认还是 master）
+   git config --global rebase.autoSquash true      # 自动 squash
    # 全局忽略
    printf "node_modules\n__pycache__\n*.exe\n*.o\n" > ~/.gitignore_g
    git config --global core.excludesfile ~/.gitignore_g
