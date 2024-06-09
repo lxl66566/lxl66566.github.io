@@ -314,6 +314,7 @@ ColorOS 是目前一加的默认系统。
   - `Duration::from_days`
 - const 和 static 非常弱，导致很难将计算搬到编译期。
   - 理论上如果 const 够强，`const_str` 这个 crate 就不应该存在。
+  - rust 的 Regex 官方也不支持编译期构建。[这里](https://github.com/rust-lang/regex/discussions/1076)是一些解释，反正把锅推给了 const。
 - [过程宏无法定义在同一 crate 中](https://www.reddit.com/r/rust/comments/tuxawv/why_do_procedural_macros_have_to_be_defined_in_a/)，对于简单的代码替换复用复杂度过高；而声明宏又无法实现某些复杂需求（或者实现难度过大，魔法过多）。
 - `dbg!` 和 `log.debug!` 的设计[有问题](https://t.me/withabsolutex/1615)：行为不一致。
 - Trait 是一个很好的设计，但是 Rust 的 Trait 太弱了：

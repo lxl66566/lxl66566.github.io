@@ -81,7 +81,8 @@ tag:
   - 颜色，当前行，变量值
   - [ ] 可选不打印堆栈
   - [x] 分级，可禁用 exit
-- [ ] RSS TUI
+- [ ] RSS telegram bot
+  - [ ] using github actions
   - [ ] filter
 
 ### RIIR
