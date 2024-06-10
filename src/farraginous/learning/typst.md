@@ -235,7 +235,7 @@ console.log("1")
 
 ![鬼畜页码](/images/farraginous/learning/typst/outline_err.svg)
 
-我尝试问群友，没人理 <heiemu>几个月后才又聊到这个话题</heiemu>；尝试看源码，发现写死了；最后在 repo 里乱搜，居然被我搜到了一个究极自定义方案，改一改就是[解法](https://typst.app/project/rdlQEoafiBzjiaF_mDBurK)。
+我尝试问群友，没人理 <heimu>几个月后才又聊到这个话题</heimu>；尝试看源码，发现写死了；最后在 repo 里乱搜，居然被我搜到了一个究极自定义方案，改一改就是[解法](https://typst.app/project/rdlQEoafiBzjiaF_mDBurK)。
 
 ## box
 
