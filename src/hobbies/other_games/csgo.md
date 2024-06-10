@@ -1,6 +1,6 @@
 ---
 date: 2022-05-04
-icon: hot
+icon: gun
 category:
   - 爱好
 tag:

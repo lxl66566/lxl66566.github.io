@@ -1,6 +1,5 @@
 ---
-sidebar: heading
-icon: read
+icon: book-open-reader
 date: 2022-07-01
 category:
   - 爱好

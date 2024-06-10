@@ -1,6 +1,6 @@
 ---
 date: 2022-12-15
-icon: compare
+icon: code-compare
 category:
   - 生活
   - 评价

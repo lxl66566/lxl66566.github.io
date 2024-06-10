@@ -1,7 +1,6 @@
 ---
-# sidebar: heading
 date: 2023-06-15
-icon: emoji
+icon: face-grin-squint-tears
 category:
   - 生活
 tag:

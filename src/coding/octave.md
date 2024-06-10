@@ -1,6 +1,6 @@
 ---
 date: 2023-11-14
-icon: calculate
+icon: brands fa-octopus-deploy
 category:
   - 教程
 ---

@@ -1,6 +1,5 @@
 ---
-sidebar: heading
-icon: preview
+icon: graduation-cap
 date: 2022-09-11
 category:
   - 生活

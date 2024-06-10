@@ -1,6 +1,6 @@
 ---
 date: 2023-12-03
-icon: chrome
+icon: brands fa-firefox-browser
 category:
   - 导航
 tag:

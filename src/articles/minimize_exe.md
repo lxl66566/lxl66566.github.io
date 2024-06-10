@@ -1,6 +1,6 @@
 ---
 date: 2023-04-28
-icon: workingDirectory
+icon: minimize
 category:
   - 教程
 tag:

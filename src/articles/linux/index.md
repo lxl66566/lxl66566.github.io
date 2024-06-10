@@ -1,6 +1,6 @@
 ---
 date: 2023-04-17
-icon: linux
+icon: brands fa-linux
 category:
   - 导航
 tag:

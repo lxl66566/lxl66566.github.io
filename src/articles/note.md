@@ -1,6 +1,6 @@
 ---
 date: 2023-08-28
-icon: note
+icon: note-sticky
 category:
   - 推荐
 tag:

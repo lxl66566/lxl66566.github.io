@@ -1,6 +1,6 @@
 ---
 date: 2023-04-09
-icon: bit
+icon: wand-sparkles
 category:
   - 编程
   - 教程

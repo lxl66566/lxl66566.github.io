@@ -1,7 +1,6 @@
 ---
-sidebar: heading
 date: 2022-05-06
-icon: git
+icon: brands fa-git-alt
 category:
   - 编程
 tag:

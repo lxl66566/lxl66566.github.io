@@ -1,6 +1,6 @@
 ---
 date: 2023-10-20
-icon: html
+icon: brands fa-html5
 category:
   - 编程
 tag:

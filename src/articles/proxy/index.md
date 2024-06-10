@@ -1,6 +1,6 @@
 ---
 date: 2023-11-25
-icon: proxy
+icon: diagram-project
 category:
   - 导航
 tag:
@@ -15,6 +15,7 @@ tag:
 3. [VPS](./vps.md)
 4. [hysteria 协议的使用](./hysteria.md)
 5. [trojan-go 协议的使用](./trojan-go.md)
+6. [trojan 协议的使用](trojan.md)
 
 ## external
 

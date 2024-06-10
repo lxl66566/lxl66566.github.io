@@ -1,4 +1,4 @@
-import { defineClientConfig } from "@vuepress/client";
+import { defineClientConfig } from "vuepress/client";
 import TelegramLink from "./components/TelegramLink.js";
 import rssLink from "./components/rssLink.js";
 import OrderBadge from "./components/OrderBadge.vue";

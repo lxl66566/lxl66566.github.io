@@ -47,17 +47,23 @@ export default sidebar({
 		"proxy_software.md",
 		"hysteria.md",
 		"trojan-go.md",
+		"trojan.md",
 	],
 	"/articles/browser/": ["index.md", "assess.md", "settings.md"],
 	"/articles/": [
 		{
 			text: "经历",
-			children: ["linux", "windows_setting.md", "mobile", "browser"],
+			children: [
+				"linux/index.md",
+				"windows_setting.md",
+				"mobile/index.md",
+				"browser/index.md",
+			],
 		},
 		{
 			text: "教程",
 			children: [
-				"proxy",
+				"proxy/index.md",
 				"telegram.md",
 				"markdown.md",
 				"minimize_exe.md",

@@ -1,5 +1,4 @@
 ---
-sidebar: heading
 date: 2024-06-01
 icon: image
 category:

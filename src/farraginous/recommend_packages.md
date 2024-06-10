@@ -1,6 +1,5 @@
 ---
-sidebar: heading
-icon: install
+icon: cube
 date: 2022-05-04
 category:
   - 推荐

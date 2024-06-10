@@ -1,6 +1,5 @@
 ---
-sidebar: heading
-icon: page
+icon: earth-asia
 date: 2022-05-04
 category:
   - 推荐

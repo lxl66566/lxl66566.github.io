@@ -1,6 +1,6 @@
 ---
 date: 2022-06-11
-icon: call
+icon: face-grin-stars
 category:
   - 主张
   - 评价

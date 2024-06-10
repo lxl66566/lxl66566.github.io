@@ -1,6 +1,6 @@
 ---
 date: 2023-04-01
-icon: discover
+icon: gamepad
 category:
   - 爱好
   - 导航

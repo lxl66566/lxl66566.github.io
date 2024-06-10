@@ -7,7 +7,7 @@ export default navbar([
 	},
 	{
 		text: "爱好",
-		icon: "like",
+		icon: "heart",
 		children: [
 			{
 				text: "游戏",
@@ -29,7 +29,7 @@ export default navbar([
 	{
 		text: "杂项",
 		prefix: "/farraginous/",
-		icon: "categoryselected",
+		icon: "plus",
 		children: [
 			"recommend_packages.md",
 			"recommend_websites.md",
@@ -51,11 +51,11 @@ export default navbar([
 	{
 		text: "随笔",
 		link: "/essay/",
-		icon: "article",
+		icon: "newspaper",
 	},
 	{
 		text: "博客",
 		link: "/blog/",
-		icon: "vue",
+		icon: "blog",
 	},
 ]);

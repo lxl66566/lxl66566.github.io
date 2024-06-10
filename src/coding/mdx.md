@@ -1,6 +1,6 @@
 ---
 date: 2024-03-02
-icon: markdown
+icon: brands fa-markdown
 category:
   - 编程
 tag:

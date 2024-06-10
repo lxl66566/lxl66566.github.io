@@ -1,6 +1,6 @@
 ---
 date: 2022-05-04
-icon: python
+icon: brands fa-python
 category:
   - 编程
 tag:

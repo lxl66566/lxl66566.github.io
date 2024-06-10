@@ -1,6 +1,6 @@
 ---
 externalLinkIcon: false
-icon: write
+icon: book-tanakh
 date: 2023-11-11
 category:
   - 推荐

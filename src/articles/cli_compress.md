@@ -1,7 +1,7 @@
 ---
 date: 2022-10-10
 # 注：此日期不准确，是估计值
-icon: generic
+icon: compress
 category:
   - 教程
 tag:

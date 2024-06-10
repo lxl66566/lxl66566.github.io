@@ -1,6 +1,6 @@
 ---
 date: 2022-06-17
-icon: light
+icon: face-angry
 category:
   - 主张
   - 评价

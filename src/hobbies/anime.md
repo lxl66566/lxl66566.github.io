@@ -1,7 +1,6 @@
 ---
-sidebar: heading
 date: 2022-08-13
-icon: slides
+icon: play
 category:
   - 爱好
 tag:

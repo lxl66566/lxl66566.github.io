@@ -1,6 +1,5 @@
 ---
-sidebar: heading
-icon: launch
+icon: plane-slash
 date: 2022-06-13
 category:
   - 教程
@@ -14,7 +13,15 @@ tag:
 # 机场推荐
 
 :::danger 警告
+
 本人不承担因使用以下推荐所带来的任何后果。
+
+:::
+
+::: tip
+
+本人不再使用机场，此页停更。
+
 :::
 
 <ZoomedImg alt="meme" src="/images/articles/vpn/meme.png" scale="60%" />

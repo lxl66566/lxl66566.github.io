@@ -1,6 +1,6 @@
 ---
 externalLinkIcon: false
-icon: write
+icon: video
 date: 2023-12-11
 category:
   - 推荐

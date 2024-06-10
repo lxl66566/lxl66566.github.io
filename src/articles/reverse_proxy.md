@@ -1,6 +1,6 @@
 ---
 date: 2023-11-16
-icon: nginx
+icon: handshake-simple
 category:
   - 教程
   - 推荐

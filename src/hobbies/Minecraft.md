@@ -1,7 +1,6 @@
 ---
-sidebar: heading
 date: 2022-05-17
-icon: software
+icon: tree
 category:
   - 爱好
 tag:

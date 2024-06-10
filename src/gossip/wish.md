@@ -1,6 +1,6 @@
 ---
 date: 2022-05-26
-icon: return
+icon: person-walking-arrow-loop-left
 category:
   - 主张
 tag:

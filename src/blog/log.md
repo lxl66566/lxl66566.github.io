@@ -1,6 +1,5 @@
 ---
-# sidebar: heading
-headerDepth: 1
+# headerDepth: 1
 date: 2022-07-21
 icon: list
 category:

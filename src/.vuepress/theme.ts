@@ -5,7 +5,8 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
 	pure: true,
 	hostname: "https://absx.pages.dev",
-	iconAssets: "iconfont",
+	iconAssets: ["fontawesome-with-brands"],
+	iconPrefix: "fas fa-",
 	logo: "/logo.jpg",
 	repo: "https://github.com/lxl66566/lxl66566.github.io",
 	docsDir: "src",
@@ -84,11 +85,12 @@ export default hopeTheme({
 		},
 		feed: {
 			rss: true,
-			count: 30,
+			count: 20,
 		},
 		pwa: {
 			update: "force",
-			maxSize: 2048,
+			maxSize: 4096,
+			maxImageSize: 512,
 			cacheHTML: true,
 		},
 	},

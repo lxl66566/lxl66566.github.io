@@ -1,6 +1,6 @@
 ---
 date: 2023-04-09
-icon: typescript
+icon: code
 category:
   - 编程
 tag:

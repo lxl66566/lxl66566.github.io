@@ -1,5 +1,4 @@
 ---
-sidebar: heading
 date: 2022-06-17
 icon: keyboard
 category:
@@ -11,8 +10,6 @@ tag:
 # 音游
 
 至今我只打过移动端音游。本篇不含任何街机元素。
-
-[[toc]]
 
 ## 回忆
 

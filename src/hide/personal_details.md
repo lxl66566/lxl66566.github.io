@@ -1,5 +1,4 @@
 ---
-sidebar: heading
 date: 2022-07-20
 category:
   - 作者

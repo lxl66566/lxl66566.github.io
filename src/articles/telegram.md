@@ -1,7 +1,6 @@
 ---
-sidebar: heading
 date: 2022-12-31
-icon: community
+icon: brands fa-telegram
 category:
   - 教程
 tag:

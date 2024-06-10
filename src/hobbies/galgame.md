@@ -1,7 +1,6 @@
 ---
-sidebar: heading
 date: 2022-06-24
-icon: snow
+icon: plane
 category:
   - 爱好
 tag:

@@ -1,6 +1,6 @@
 ---
 date: 2023-03-17
-icon: java
+icon: brands fa-java
 category:
   - 编程
 tag:

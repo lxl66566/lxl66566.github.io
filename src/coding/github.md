@@ -1,6 +1,6 @@
 ---
 date: 2022-09-06
-icon: github
+icon: brands fa-github
 category:
   - 编程
   - 教程

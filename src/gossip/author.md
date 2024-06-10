@@ -1,6 +1,5 @@
 ---
-sidebar: heading
-icon: profile
+icon: at
 date: 2022-05-04
 category:
   - 作者

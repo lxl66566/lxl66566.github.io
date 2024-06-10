@@ -1,6 +1,6 @@
 ---
 date: 2022-08-13
-icon: debug
+icon: brands fa-fort-awesome-alt
 category:
   - 生活
 ---

@@ -1,6 +1,6 @@
 ---
 date: 2023-07-24
-icon: nodeJS
+icon: brands fa-node-js
 category:
   - 编程
 tag:

@@ -1,5 +1,4 @@
 ---
-sidebar: heading
 date: 2023-09-19
 category:
   - 学习

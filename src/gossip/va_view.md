@@ -1,6 +1,6 @@
 ---
 date: 2023-11-29
-icon: discover
+icon: pizza-slice
 category:
   - 主张
   - 生活
@@ -14,8 +14,6 @@ tag:
 这里主要是我的**价值观**。
 
 世界观、人生观请前往[道论](./worldview.md)。
-
-[[toc]]
 
 ## 总论
 

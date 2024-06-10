@@ -1,6 +1,6 @@
 ---
 date: 2023-07-29
-icon: "storage"
+icon: diagram-next
 category:
   - 推荐
   - 教程
