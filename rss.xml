@@ -6,21 +6,39 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 11 Jun 2024 06:38:27 GMT</pubDate>
-    <lastBuildDate>Tue, 11 Jun 2024 06:38:27 GMT</lastBuildDate>
+    <pubDate>Tue, 11 Jun 2024 16:07:23 GMT</pubDate>
+    <lastBuildDate>Tue, 11 Jun 2024 16:07:23 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>推荐</category>
+    <category>评价</category>
     <category>学习</category>
     <category>生命科学</category>
     <category>教程</category>
     <category>生活</category>
     <category>经历</category>
-    <category>评价</category>
     <category>编程</category>
-    <category>推荐</category>
     <category>随笔</category>
     <category>主张</category>
     <category>导航</category>
+    <item>
+      <title>下载器横评</title>
+      <link>https://absx.pages.dev/articles/downloaders.html</link>
+      <guid>https://absx.pages.dev/articles/downloaders.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">下载器横评</source>
+      <description>下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自带多线程下载功能，可以在 flags 里启用；但本人实测其下载速度仍要比下载器慢很多，因此下载器还是有必要的。 测试：（测试链接；关闭代理） 需要注意的是，这样的测试方法的波动还是相当大的，毕竟我校的网络就是一坨屎。 开启内置...</description>
+      <category>推荐</category>
+      <category>评价</category>
+      <pubDate>Tue, 11 Jun 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>下载器能够多线程下载网络资源，使带宽最大化。</p>
+<p>这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自带多线程下载功能，可以在 flags 里启用；但本人实测其下载速度仍要比下载器慢很多，因此下载器还是有必要的。</p>
+<p>测试：（<a href="https://gh.con.sh/https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v2.21.12/Waifu2x-Extension-GUI-v2.21.12-Portable.7z" target="_blank" rel="noopener noreferrer">测试链接</a>；关闭代理）</p>
+<p>需要注意的是，这样的测试方法的波动还是相当大的，毕竟我校的网络就是一坨屎。</p>
+<p>|         方式          | 下载速度（MB/s） |
+| :</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>图像处理</title>
       <link>https://absx.pages.dev/farraginous/learning/image_processing.html</link>
@@ -2080,13 +2098,13 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
       <link>https://absx.pages.dev/articles/browser/settings.html</link>
       <guid>https://absx.pages.dev/articles/browser/settings.html</guid>
       <source url="https://absx.pages.dev/rss.xml">浏览器设置</source>
-      <description>浏览器设置 缓存位置 我使用 ，拿到浏览器都会修改缓存位置。 一般的 chromium 内核浏览器都能通过加 --disk-cache-dir=&amp;quot;Z:\123&amp;quot; 启动参数更改缓存位置。Edge 浏览器也可以改注册表。firefox 修改设置项即可。 firefox 20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满...</description>
+      <description>浏览器设置 缓存位置 我使用 ，拿到浏览器都会修改缓存位置。 一般的 chromium 内核浏览器都能通过加 --disk-cache-dir=&amp;quot;Z:\123&amp;quot; 启动参数更改缓存位置(ref)。Edge 浏览器也可以改注册表。firefox 修改设置项即可。 firefox 20230214，我从 edge 用户转为了 firefox 用户。edge ...</description>
       <category>教程</category>
       <pubDate>Sun, 03 Dec 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <h2>缓存位置</h2>
 <p>我使用 <a href="/articles/ramdisk.html" target="_blank">RAMDisk</a>，拿到浏览器都会修改缓存位置。</p>
-<p>一般的 chromium 内核浏览器都能通过加 <code>--disk-cache-dir="Z:\123"</code> 启动参数更改缓存位置。Edge 浏览器也可以改注册表。firefox 修改设置项即可。</p>
+<p>一般的 chromium 内核浏览器都能通过加 <code>--disk-cache-dir="Z:\123"</code> 启动参数更改缓存位置(<a href="https://www.bilibili.com/read/cv12675669/" target="_blank" rel="noopener noreferrer">ref</a>)。Edge 浏览器也可以改注册表。firefox 修改设置项即可。</p>
 <h2>firefox</h2>
 <p>20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满足我的需求，甚至更加贴合我的个人需求（纵向标签栏，firefox 没有内置此功能），换浏览器大约只是我的心血来潮而已。为此我花了很多功夫设置 firefox。然而我还是于 20230304 换回了 edge。</p>
 <p>在朋友推荐下，我使用 <a href="https://www.mozilla.org/en-US/firefox/developer/" target="_blank" rel="noopener noreferrer">Firefox Developer Edition</a>（蓝狐狸）而不是原始 Firefox。</p>
@@ -2372,31 +2390,6 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
 <p>前一秒还正常使用的 hysteria 连接，立刻变得无法使用了。</p>
 <p>NekoBox 报错：<code>...cloudflare.com INTERNAL_ERROR(local):read udp ...: read: no route to host.</code>，客户端报 <code>FATAL failed to initialize client {"error": "connect error: timeout: no recent networkactivity"}</code>。并且我服务端没有任何收到连接消息。看着也不像是网络问题啊。</p>
 <p>重启服务无效，重启服务器有效。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>代理</title>
-      <link>https://absx.pages.dev/articles/proxy/</link>
-      <guid>https://absx.pages.dev/articles/proxy/</guid>
-      <source url="https://absx.pages.dev/rss.xml">代理</source>
-      <description>代理 external 如何正确地叫外卖 中国的防火长城是如何检测和封锁完全加密流量的 ChromeGo - Chrome 一键翻墙包</description>
-      <category>导航</category>
-      <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<ol>
-<li><a href="/articles/proxy/vpn.html" target="_blank">机场推荐</a></li>
-<li><a href="/articles/proxy/proxy_software.html" target="_blank">代理软件</a></li>
-<li><a href="/articles/proxy/vps.html" target="_blank">VPS</a></li>
-<li><a href="/articles/proxy/hysteria.html" target="_blank">hysteria 协议的使用</a></li>
-<li><a href="/articles/proxy/trojan-go.html" target="_blank">trojan-go 协议的使用</a></li>
-<li><a href="/articles/proxy/trojan.html" target="_blank">trojan 协议的使用</a></li>
-</ol>
-<h2>external</h2>
-<ol>
-<li><a href="https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/" target="_blank" rel="noopener noreferrer">如何正确地叫外卖</a></li>
-<li><a href="https://gfw.report/publications/usenixsecurity23/zh/" target="_blank" rel="noopener noreferrer">中国的防火长城是如何检测和封锁完全加密流量的</a></li>
-<li><a href="https://github.com/bannedbook/fanqiang" target="_blank" rel="noopener noreferrer">ChromeGo - Chrome 一键翻墙包</a></li>
-</ol>
 ]]></content:encoded>
     </item>
   </channel>
