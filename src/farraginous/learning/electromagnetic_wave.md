@@ -23,7 +23,7 @@ $\displaystyle\frac{\partial\varphi}{\partial l}|_M=\frac{\partial\varphi}{\part
 
 $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐标的分量是该坐标拉梅系数倒数，根据这个可以简单背下在柱/球坐标系下的散度定义式。
 
-[立体角](https://zh.wikipedia.org/wiki/%E7%AB%8B%E9%AB%94%E8%A7%92)：$\displaystyle \Omega =\iint _{S}{\frac {dA}{r^{2}}}=\iint _{S}{\frac {{\vec {r}}\cdot {\textrm {d}}{\vec {S}}}{\left|{\vec {r}}\right|\,r^{2}}}=\iint _{S}{\frac {{\vec {r}}\cdot {\textrm {d}}{\vec {S}}}{r^{3}}}$，封闭曲面的立体角 $= 4\pi$（求高斯定理使用）
+[立体角](https://zh.wikipedia.org/wiki/立體角)：$\displaystyle \Omega =\iint _{S}{\frac {dA}{r^{2}}}=\iint _{S}{\frac {{\vec {r}}\cdot {\textrm {d}}{\vec {S}}}{\left|{\vec {r}}\right|\,r^{2}}}=\iint _{S}{\frac {{\vec {r}}\cdot {\textrm {d}}{\vec {S}}}{r^{3}}}$，封闭曲面的立体角 $= 4\pi$（求高斯定理使用）
 
 ### 三个度
 
@@ -70,7 +70,7 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 电流密度（面积微元）：$\vec{J}=\operatorname*{lim}_{\Delta S\to0}\frac{\Delta I}{\Delta S}\vec{n}=\frac{dI}{dS}\vec{n}$，电流是电流密度的通量
 
-[高斯定理](https://zh.wikipedia.org/wiki/%E9%AB%98%E6%96%AF%E5%AE%9A%E5%BE%8B)：$\displaystyle \oint_S\vec{E}\cdot d\vec{S}=\frac q{\varepsilon_0}$
+[高斯定理](https://zh.wikipedia.org/wiki/高斯定律)：$\displaystyle \oint_S\vec{E}\cdot d\vec{S}=\frac q{\varepsilon_0}$
 
 [静电场场方程](https://www.bilibili.com/video/BV1uV411H7xf/?p=60&t=106)（微分形式）：$\displaystyle\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon_0}, \nabla\times\vec{E}=\vec{0}$
 
@@ -84,7 +84,7 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 （体）磁矢位方程：$\displaystyle\vec{A}(\vec{r})=\frac{\mu_{0}}{4\pi}\int_{V}\frac{\vec{J}}{\left|\vec{r}-\vec{r}^{\prime}\right|}dV^{\prime}$
 
-[泊松方程](https://zh.wikipedia.org/wiki/%E6%B3%8A%E6%9D%BE%E6%96%B9%E7%A8%8B)
+[泊松方程](https://zh.wikipedia.org/wiki/泊松方程)
 
 ### 偶极子
 

@@ -64,18 +64,25 @@ tag:
 
 ### AI 代码补全
 
-此处均为免费。（考虑付费的话直接上 copilot 完事了）
+我的刚需是：免费（考虑付费的话直接上 copilot 完事了），可部分禁用。
 
 <details><summary>点击展开前言</summary><p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 %TEMP% 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p></details>
 
-- [CodeGeeX](https://codegeex.cn/)：国产开源模型，响应速度快
-  - 20231212 开始需要绑定手机号
-- [Codeium](https://codeium.com/)：在线服务
-- [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型。
+非国产：
+
+- [Codeium](https://codeium.com/)：国外在线服务
+  - 下载会显示进度和大小，好评
+- [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型，不考虑
 - [Tabnine](https://www.tabnine.com/)：补全较弱（_Short code completions (2 to 3 words)_）
 - [MarsCode](https://www.marscode.com/)：一直报 Network unstable，根本不可用，捞。
-- [fitten code](https://code.fittentech.com/)：国产
-  - 一个缺点是不读工作区 `.vscode` 配置
+
+国产：
+
+- [fitten code](https://code.fittentech.com/)：国产，水平跟其他国产模型都差不多，不太聪明。
+  - 一个很大的缺点是不读工作区 `.vscode` 配置，也就是无法在某些项目（隐私项目如日记等）里禁用。
+- [CodeGeeX](https://codegeex.cn/)：国产开源模型，响应速度快
+  - 20231212 开始需要绑定手机号
+  - 比较扰民，会入侵 _快速修复_
 
 未来可能会尝试：
 

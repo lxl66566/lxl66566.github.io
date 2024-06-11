@@ -57,7 +57,7 @@ sudo chmod -R 777 /mnt/tmp
    ```
    此处假设你的 RAM Disk 内默认创建 Temp 文件夹。
 5. 将桌面设为 RAMDisk：每次打开 RAMDisk 还是需要两步（此电脑 - Z 盘），[我想到了](https://t.me/withabsolutex/1688)直接将桌面放入 RAMDisk，这样就可以把桌面当垃圾桶用了！
-   1. 把桌面上的东西移走。
+   1. 把桌面上的东西移走，并删除 _桌面_ 文件夹(`C:\Users\<Username>\Desktop`)。
    2. 软链接到 RAMDisk：`mklink /D "C:\Users\<Username>\Desktop" "Z:"`
    3. 由于现在桌面关机会自动清空，我们写一个脚本，将你想放到桌面上的东西在开机时自动放上去。（推荐只放一些快捷方式）
       1. 在硬盘里任意位置建一个文件夹，将你要放到桌面上的所有文件放进去
