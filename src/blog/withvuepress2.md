@@ -683,3 +683,26 @@ img[src$=".svg"] {
 ```
 
 带给我一个教训：折腾之前先系统学习（scss 语法）。
+
+## 更新依赖问题
+
+vuepress 及其 theme-hope 有着一大堆 peerDenepdencies，完全就是一副依赖地狱的场景。而我之前一直在使用的 pwa2 某次更新时爆了，我尝试更新都会提示 pwa2 需要的 vuepress 版本不满足。其他的依赖都依赖最新的 vuepress（2.0.0.rc13），而 pwa2 依赖更老的版本（2.0.0.rc7）。
+
+首先 pwa2 是必需留着的，否则已经加载过我博客的浏览器将永远不能收到博客更新。而且 remove-pwa 插件也尝试过了，并不能用。（这 pwa 跟屎一样，之前不小心安装了就跟狗皮膏药一样粘着我）因此这次我也没有往 pwa2 的角度思考问题。
+
+我尝试将所有其他的依赖都降级到它们依赖 vuepress 2.0.0.rc7，但是 pnpm 官方并没有提供一个好用的降级工具，我也找不到还有哪里有降级工具。
+而 npmjs 也不会显示某包的历史版本都依赖了哪些库的版本，我只能跳转到某个历史版本然后去 code 里找 `package.json`，非常痛苦。因此手动给每个依赖降级是不太现实的。
+
+于是更新依赖就被我拖了很久，直到我 20240610 发现我的 RSS 插件爆了。。这下是箭在弦上，不得不更新了！折腾了一下降级，又被劝退了。然后去翻文档，去 npmjs 到处走，突然发现——`vuepress-plugin-pwa2` 已经被标了 deprecated。于是问题解决，换成了新的 `@vuepress/plugin-pwa`，不会再出现依赖冲突问题了。回想起来发现我是真的傻（也可能是 `vuepress-plugin-pwa2` 在前几次折腾时还未标记弃用）这下功过后人评了。
+
+垂死病中惊坐起，千行变更改依赖。lockfile 改了两千多行，这甚至都会被 git 忠实记录下来然后无故增大仓库体积。
+
+然后又遇到了问题：根据 pnpm 提示，装了 `@vuepress/bundler-vite`，然而还是无法 build：`The bundler / theme option is missing`，引导我到[这个页面](https://v2.vuepress.vuejs.org/guide/troubleshooting.html#the-bundler-theme-option-is-missing)。这能看懂啥嘛！实在摸不着头脑，我又生成了一份能够正常 build 的 vuepress-theme-hope blog，并且把 `package.json` 拿来对照。结果发现依赖并无区别，定睛一看，才发现 build command 改了。。。从 `vuepress build src` 改到 `vuepress-vite build src` 了。。。
+
+升级了依赖，还有一些小问题：
+
+- 原来的 Iconfont 因为版权原因(?) 不再内置，因此我的图标全部挂了。于是我换到了文档推荐的 [Fontawesome](https://fontawesome.com/search?o=r&m=free)。给我的一百多篇博文重新挑选图标实在是一件痛苦的事，尤其是 Fontawesome 也没有好到哪里去，图标库大了一点，但是有些基础的商标反而没有，并且不同图标有不同的前缀，只用新图标规则的一个 `iconPrefix` 难以覆盖所有情况，于是很多图标还得手动处理。。。改图标就改了 1h+，人直接乏了。
+- frontmatter 里的 sidebar 只接受 bool 值了，原来控制不显示文件夹内其他文件的选项移到了 dir 里。我懒得管了，一个全局替换把 sidebar 项目都删了。
+- 现在页面过窄时也会默认显示文章目录，因此删了所有 `[[toc]]`。
+- rss 和 pwa 多了更多的可设置项。~~射！~~设！
+- 据传编译速度提升了，但我没有感觉，反倒感觉预览速度下降了。

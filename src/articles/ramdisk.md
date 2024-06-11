@@ -13,9 +13,11 @@ tag:
   - Windows
 ---
 
-# RAM Disk 横评
+# RAM Disk 横评与教程
 
 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。
+
+并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！
 
 ## 使用指南
 
@@ -42,18 +44,35 @@ sudo chmod -R 777 /mnt/tmp
 
 即可。
 
-因此后文介绍的皆为 Windows 系统上的 ramdisk。
+因此后文介绍的皆为 Windows 系统上的 ramdisk。假设我们将 RAMDisk 挂载到 Z 盘：
 
 1. 在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span>
 2. 安装 RAM Disk 软件并挂载。
 3. 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）
 4. 如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。[src](https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&utm_medium=web2x&context=3)，保存为 `.reg` 文件后双击
-
    ```toml
    Windows Registry Editor Version 5.00
    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
-   "DiskCacheDir"="Z:\\EdgeCache"
+   "DiskCacheDir"="Z:\\Temp\\EdgeCache"
    ```
+   此处假设你的 RAM Disk 内默认创建 Temp 文件夹。
+5. 将桌面设为 RAMDisk：每次打开 RAMDisk 还是需要两步（此电脑 - Z 盘），[我想到了](https://t.me/withabsolutex/1688)直接将桌面放入 RAMDisk，这样就可以把桌面当垃圾桶用了！
+   1. 把桌面上的东西移走。
+   2. 软链接到 RAMDisk：`mklink /D "C:\Users\<Username>\Desktop" "Z:"`
+   3. 由于现在桌面关机会自动清空，我们写一个脚本，将你想放到桌面上的东西在开机时自动放上去。（推荐只放一些快捷方式）
+      1. 在硬盘里任意位置建一个文件夹，将你要放到桌面上的所有文件放进去
+      2. `win + R` 输入 `shell:startup` 打开启动文件夹
+      3. 新建一个 `copy.ps1` 文件，右键编辑，输入（修改 `$sourceFolderPath` 的值为硬盘上的文件夹）：
+         ```ps1
+         $sourceFolderPath = "your_source_folder_path"
+         $destinationPath = "$Home\Desktop"
+         Get-ChildItem -Path $sourceFolderPath -Recurse |
+         ForEach-Object {
+             Copy-Item -Path $_.FullName -Destination $destinationPath
+         }
+         ```
+      4. 右键脚本，进入 _打开方式_，在里面找到 powershell 并设为默认。
+         - 如果找不到，浏览电脑上的文件，找 `pwsh.exe`/`powershell.exe` 的位置（可以用 everything 找）。
 
 ::: tip
 

@@ -13,7 +13,7 @@ tag:
 
 我使用 [RAMDisk](../ramdisk.md)，拿到浏览器都会修改缓存位置。
 
-一般的 chromium 内核浏览器都能通过加 `--disk-cache-dir="Z:\123"` 启动参数更改缓存位置。Edge 浏览器也可以改注册表。firefox 修改设置项即可。
+一般的 chromium 内核浏览器都能通过加 `--disk-cache-dir="Z:\123"` 启动参数更改缓存位置([ref](https://www.bilibili.com/read/cv12675669/))。Edge 浏览器也可以改注册表。firefox 修改设置项即可。
 
 ## firefox
 

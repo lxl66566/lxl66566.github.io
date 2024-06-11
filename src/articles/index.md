@@ -31,7 +31,7 @@ category:
 - [电脑、手机端记录软件使用时长](./time_record.md)
 - [运动轨迹记录软件横评](./track_record.md)
 - [输入法](./input_method.md)
-- [RAM Disk 横评](./ramdisk.md)
+- [RAM Disk 横评与使用](./ramdisk.md)
 - [Android 手写笔记软件横评](./note.md)
 - [反向代理](./reverse_proxy.md)
 - [音频转文字](./voice2text.md)
