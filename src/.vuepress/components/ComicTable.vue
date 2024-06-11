@@ -250,7 +250,7 @@ const data = [
   { id: "395294", aScore: 7.3, bScore: 4.1, info: "#木瀬樹 #师生 #强制", bak: "https://telegra.ph/木瀬樹-負けるな絶倫先生-G-エッヂ-Vol014-中国翻訳-08-02" },
   { id: "393479", aScore: 4, bScore: 2, info: "#loli", order: 2, bak: "https://telegra.ph/C93-あとりえひなた-ひなた悠-ロリまん売買日記-ふたりめ-中国翻訳-08-02" },
   { id: "446975", aScore: 7.6, bScore: 4.6, info: "#兄妹 #女上位", bak: "https://telegra.ph/ちろたた-どーるぷれい-COMIC-失楽天-2022年2月号-中国翻訳-DL版-08-02" },
-  { id: "393433", aScore: 8.5, bScore: 5.1, info: "#艦これ #可爱 #榨乳", bak: "https://telegra.ph/C99-STEELACT-二条かため-時津風と一緒に-十壱-艦隊これくしょん--艦これ--中国翻訳-08-02" },
+  { id: "393433", aScore: 8.5, bScore: 5.1, info: "#舰队Collection #可爱 #榨乳", bak: "https://telegra.ph/C99-STEELACT-二条かため-時津風と一緒に-十壱-艦隊これくしょん--艦これ--中国翻訳-08-02" },
   { id: "393253", aScore: 8.2, bScore: 4, info: "#百合", bak: "https://telegra.ph/凍咲しいな-都会のあそびかた-ロリおね百合えっち-ロリがお姉さんを攻めてもいいよねVol2-中国翻訳-DL版-08-02" },
   { id: "431749", aScore: 6.1, bScore: 6.7, info: "#兄妹", order: 1, bak: "https://telegra.ph/あいらんどう-妹とノリでエッチした件-COMIC-LO-2021年10月号-中国翻訳-DL版-08-02" },
   { id: "425899", aScore: 4.6, bScore: 8.4, info: "#魅魔 #反杀", bak: "https://telegra.ph/ソーダ畑-無敵ソーダ-淫魔お姉さんにはエッチなお仕置きで戦うんだよ-中国翻訳-DL版-04-24" },
@@ -317,6 +317,18 @@ const data = [
   { id: "445392", aScore: 4.2, bScore: 6, info: "#雌小鬼 #肥宅", bak: "https://telegra.ph/かみしき-守月史貴-おにーさん私達とお茶しませんかぁ5-中国翻訳-DL版-06-07" },
   { id: "513222", aScore: 8.5, bScore: 10, order: 1, info: "#无R18 #师生 #loli", bak: "https://telegra.ph/竹下けんじろう-わたしの工口先生-1p目-わたしの面接-中国翻訳-06-06-3" },
   { id: "273272", aScore: 3.3, bScore: 8.4, info: "#短发 #xp #女性主导" },
+  { id: "365018", aScore: 7.6, bScore: 8.5, info: "#兽耳 #兽尾 #巫女服 #神人", bak: "https://telegra.ph/どね-豊穣のおいのりさま-永遠娘-朧絵巻-玖-中国翻訳-08-02" },
+  { id: "365289", aScore: 8, bScore: 5, info: "#全彩 #师生", order: 2, bak: "https://telegra.ph/わたくび-笹井さじ-ナイショの個人指導2-そつぎょう編-中国翻訳-DL版-08-02" },
+  { id: "365632", aScore: 7.9, bScore: 7.5, info: "#兽耳 #长篇 #武藤まと #纯爱", order: 2, bak: "https://telegra.ph/武藤まと-齢200ちゃいお狐ちゃんとおしどり夫婦生活第2話-永遠娘-10-中国翻訳-DL版-08-02" },
+  { id: "365634", aScore: 7.3, bScore: 7.6, info: "#兽耳 #长篇 #武藤まと #纯爱", order: 3, bak: "https://telegra.ph/武藤まと-齢200ちゃいお狐ちゃんとおしどり夫婦生活-第3話-永遠娘-朧絵巻-玖-中国翻訳-08-02" },
+  { id: "382716", aScore: 5.6, bScore: 9.8, info: "#兄妹 #雌小鬼 #日常", bak: "https://telegra.ph/あいらんどう-ツンデレ妹との日常-中国翻訳-08-02-2" },
+  { id: "365977", aScore: 5.2, bScore: 8.1, info: "#loli", bak: "https://telegra.ph/佐波サトル-お花見-コミック-Mate-legend-Vol39-2021年6月号-中国翻訳-DL版-08-02" },
+  { id: "(ex)", aScore: 7.4, bScore: 9.7, otherlink: "https://exhentai.org/g/1960230/1c1792043f/", info: "#全彩 #雌小鬼 #无H #后宫", bak: "https://telegra.ph/tokunocin-徳之ゆいか-妹のメスガキぶりを治したい-中国翻訳-DL版-08-02" },
+  { id: "366313", aScore: 9.2, bScore: 8, info: "#fate #兄妹 #木瀬樹", bak: "https://telegra.ph/AC3-林檎のなる木-木瀬樹-お兄ちゃんイリヤとしよ-Fatekaleid-liner-プリズマイリヤ-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 6, bScore: 2.3, info: "#全彩 #兄妹", otherlink: "https://exhentai.org/g/1963638/386c135195/", bak: "https://telegra.ph/満開開花-家庭教師のお兄さんと校門でカーSEX-中国翻訳-08-02" },
+  { id: "367015", aScore: 7, bScore: 8.8, info: "#邻居 #loli", bak: "https://telegra.ph/ノラネコノタマ-雪野みなと-まろんちゃんちの事情-中国翻訳-DL版-08-02" },
+  { id: "367128", aScore: 7.1, bScore: 3, info: "#舰队Collection", bak: "https://telegra.ph/MBFes-TOKYO-inプラザマーム6月-KW-ささちん-これ着て響ちゃん-艦隊これくしょん--艦これ--中国翻訳-08-02" },
+  { id: "(ex)", aScore: 6.5, bScore: 4.6, info: "#cos #兄妹 #雌小鬼", otherlink: "https://exhentai.org/g/2946373/6209d948b8", bak: "https://telegra.ph/Pizanuko-Kore-no-Tame-ni-Ikiteiru-我为此而活-COMIC-X-EROS-101-Chinese-迟远个人汉化-Digital-06-09" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

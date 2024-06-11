@@ -354,7 +354,7 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
 rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理中是顶级的。
 
-- cargo 的 dep 版本中，`xxx = 1.2.1` 指的其实是 `>= 1.2.1, <2.0.0`，与 npm 中的 `^1.2.1` 一致。
+- cargo 的 dep 版本中，`xxx = 1.2.1` 指的其实是 `>= 1.2.1, <2.0.0`，与 npm 中的 `^1.2.1` 一致。([ref](https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#specifying-dependencies-from-cratesio))
 
 ### [cargo envs](https://doc.rust-lang.org/cargo/reference/environment-variables.html)
 
