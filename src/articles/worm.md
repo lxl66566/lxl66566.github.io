@@ -48,13 +48,15 @@ tag:
 
 相对来说蛔虫更无害，甚至从古至今都有人拿蛔虫减肥[^yszx]……理解不能。
 
-蛔虫的主要风险是会到处跑[^yszx]，可阻塞肠道，胆管或胰管，从而导致胆囊炎或胰腺炎[^msdhcpro]；繁殖能力强，蛔虫卵在土壤中能存活数年，成虫的寿命 1~2 年。[^msdhchome]
+蛔虫的主要风险是会到处跑[^yszx]，可阻塞肠道，胆管或胰管，从而导致胆囊炎或胰腺炎[^msdhcpro]，甚至可能钻入脑中[^with_snake]；繁殖能力强，蛔虫卵在土壤中能存活数年，成虫的寿命 1~2 年。[^msdhchome]
 
-蛔虫能在拉出的屎中看到，还是有一定震撼力的。这也是蛔虫感染最直接的证据。（说不定是线虫呢？）
+蛔虫能在拉出的屎中看到，还是有一定震撼力的[^holyshit]。这也是蛔虫感染最直接的证据。
 
 [^msdhchome]: [蛔虫病 - 默沙东诊疗手册家庭版](https://www.msdmanuals.cn/home/infections/parasitic-infections-nematodes-roundworms/ascariasis)
 [^msdhcpro]: [蛔虫病 - 默沙东诊疗手册专业版](https://www.msdmanuals.cn/professional/infectious-diseases/nematodes-roundworms/ascariasis)
 [^yszx]: [夺命胶囊 - 壹生资讯](https://www.cmtopdr.com/post/detail/936787e4-8b1c-4f66-bdc2-6f915cefeab4)
+[^with_snake]: [世界首例蛇蛔虫感染者](https://www.thepaper.cn/newsDetail_forward_24404386)
+[^holyshit]: 我看过几次了，也用手拔出来过（隔着卫生纸）；不过还从来没有看过离体后会动的，感谢现代医学，感谢苯并咪唑。
 
 ### 防治
 
@@ -63,20 +65,26 @@ tag:
 
 ## 药物
 
+虽然阿苯达唑占了 99%，但是我感觉阿苯达唑效果并不是非常好。从长时间来说，建议[轮换吃](../gossip/va_view.md#轮转论)，不要只吃一种。
+
 ### 苯并咪唑类
 
-据传有抗癌药效[^zhihu]。此类药致死上限非常高[^zhihu]，平常多吃点完全没有影响。
+据传有抗癌药效[^zhihu]。此类药耐受/致死上限非常高[^zhihu][^Mebendazole]，平常多吃点完全没有影响。唯一要注意的是可能带来的后遗症。
 
 代谢主要靠肝。肝不好的请遵医嘱。
 
-- 阿苯达唑：市面上最常见的广谱驱虫药，使寄生虫肠道退化，饿死[^Albendazole]。有可能使寄生虫产生抗药性。副作用较小，无持续效果。
+- 阿苯达唑：市面上**最常见**的广谱驱虫药，使寄生虫肠道退化，饿死[^Albendazole]。副作用较小，无持续效果。
   - 睡前吃，2 周后需要再吃一次，不要侥幸。
   - 阿苯达唑有一定抑制鼠类圆线虫卵发育的能力[^thesis1]。
-- 甲苯达唑：在中国是处方药，但是网购也能非常容易地买到。风险会比阿苯达唑更大一点点，碰到重度旋毛虫病则会有严重后果[^Mebendazole]，因此可以考虑作为二次驱虫使用。
+- 甲苯咪唑：
+  - 网传是处方药，但是网购能非常容易地买到安乐士，并且盒上标注 OTC，所以实际上是非处方药？
+  - 风险会比阿苯达唑更大一点点，碰到重度旋毛虫病则会有严重后果[^Mebendazole_wiki]（一般人也不会有这种吧），因此可以考虑作为备用。
+    - 副作用也更大，例如我服用后有头痛现象。
   - 据称，对蛲虫效果极好。
 
 [^Albendazole]: [阿苯达唑 - 维基百科](https://zh.wikipedia.org/wiki/阿苯达唑)
-[^Mebendazole]: [甲苯咪唑 - 维基百科](https://zh.wikipedia.org/wiki/甲苯咪唑)
+[^Mebendazole_wiki]: [甲苯咪唑 - 维基百科](https://zh.wikipedia.org/wiki/甲苯咪唑)
+[^Mebendazole]: [Mebendazole (Monograph)](https://www.drugs.com/monograph/mebendazole.html)
 [^zhihu]: [甲苯达唑，阿苯达唑，和芬苯达唑三种打虫药的抗癌研究总结](https://zhuanlan.zhihu.com/p/195233400)
 [^thesis1]: [体外杀灭寄生虫虫卵及其幼虫的研究](https://www.zgxfzz.com/CN/article/downloadArticleFile.do?attachType=PDF&id=8805)
 
