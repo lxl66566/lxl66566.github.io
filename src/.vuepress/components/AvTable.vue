@@ -284,7 +284,7 @@ const data = [
   { id: "ysn-616", aScore: 8.3, bScore: 7.3, name: "やべーほどカワイイ妹を貪りたい 横宮七海", u: true },
   { id: "imo-023", aScore: 9, bScore: 6.5, name: "^1" },
   { id: "yst-312", aScore: 9.2, bScore: 6.2, name: "義理の父に口マ●コとして扱われてるのにマン汁を滴らせる私は変態です。 横宮七海" },
-  { id: "miaa-810", aScore: 7.6, bScore: 6, name: "", u: true },
+  { id: "miaa-810", aScore: 7.6, bScore: 8, name: "#兄妹 #雌小鬼 #反杀 ニヤニヤからかってくる妹のま○こ食い込みパンチラに理性ぶっ飛び暴走ピストン 新井リマ", u: true },
   { id: "ssis-708", aScore: 9.4, bScore: 9, u: true, name: "「全ては母のために…」再婚相手の性的虐●に耐え続けた早熟おっぱい少女 東雲みれい" },
   { id: "ssis-656", aScore: 8.1, bScore: 8, u: true, name: "隣家のゴミ部屋の住人はかつて私を犯しクビになった堕落教師！10年越しの復讐追姦プレス 星宮一花" },
   { id: "cawd-510", aScore: 9, bScore: 3, u: true, name: "" },
@@ -305,6 +305,7 @@ const data = [
   { id: "ksjk-017", aScore: 6.3, bScore: 5.6, name: "「ねぇパパ、ララとママのおマ〇コどっちが気持ちいい？」 工藤ララ" },
   { id: "fskt-033", aScore: 7.8, bScore: 4, name: "#眼睛娘 幼なじみに久しぶりに会ったら地味なのにとても発育したおっぱいデカ実ちゃんで淫乱ビッチになっていたギャップに驚愕した件についてお話させてください。" },
   { id: "midv-420", aScore: 8.6, bScore: 5, u: true, name: "大切な彼女がクラスのDQN達に媚薬を使って犯●れキメセク堕ちしているのを見てクズ勃起 水卜さくら" },
+  { id: "mide-953", aScore: 6, bScore: 9.3, u: true, name: "#垃圾屋 会社をクビにされた中年オヤジが一年後、社長令嬢を監禁 一週間、真夏のゴミ部屋で汗だく巨漢プレス 高橋しょう子" },
 ];
 export default {
   name: "AvTable",

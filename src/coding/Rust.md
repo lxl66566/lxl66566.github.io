@@ -398,6 +398,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-msrv](https://github.com/foresterre/cargo-msrv) | Find the minimum supported Rust version (MSRV) for your project |
 | [cargo-wizard](https://github.com/Kobzol/cargo-wizard)|提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般。|
 | [flamegraph](https://github.com/flamegraph-rs/flamegraph) | benchmark 火焰图 |
+| [cargo-bisect-rustc](https://github.com/rust-lang/cargo-bisect-rustc) | 二分查找哪个 rustc nightly 版本引入了错误 |
 
 ## 库
 
@@ -410,12 +411,10 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | ---------- | ---------- |
 | anyhow / thiserror | 错误处理   |
 | tokio      | 异步       |
-| serde_json | json       |
+| serde | 序列化 |
 | reqwest[^5]  | 简单网络   |
 | clap       | 命令行工具 |
-| once_cell[^3]  | 延迟创建 static 变量 |
 
-[^3]: `lazy_static` 已弃用；LazyLock 已在 1.80 稳定，建议使用官方的。
 [^5]: 为避免傻逼 openssl 造成的影响，建议添加 `feature = ["rustls-tls"]`。
 
 另外一些库则是我用过然后觉得好用。
@@ -436,6 +435,16 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。
 
 clap 可以跟 lazy_static 一起使用，将 CLI 设为 static，可以免去到处传参之苦。带来的问题是写测试变得更加困难。
+
+### once_cell
+
+创建 Lazy 或 OnceCell 的 static 变量。在 rustc 1.80.0 以前这是 unstable，但是现已 stabilized（`std::sync::LazyLock`）。
+
+### thiserror
+
+轻量错误库，用来创建自定义的 error 类型；可以自动 derive From another error。
+
+不能在两个错误类型中同时 from 同一个 Error。如果确实需要，可能要手动再分 Enum 作为 suberror。
 
 ## 打包
 

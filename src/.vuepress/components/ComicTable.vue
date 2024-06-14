@@ -329,6 +329,9 @@ const data = [
   { id: "367015", aScore: 7, bScore: 8.8, info: "#邻居 #loli", bak: "https://telegra.ph/ノラネコノタマ-雪野みなと-まろんちゃんちの事情-中国翻訳-DL版-08-02" },
   { id: "367128", aScore: 7.1, bScore: 3, info: "#舰队Collection", bak: "https://telegra.ph/MBFes-TOKYO-inプラザマーム6月-KW-ささちん-これ着て響ちゃん-艦隊これくしょん--艦これ--中国翻訳-08-02" },
   { id: "(ex)", aScore: 6.5, bScore: 4.6, info: "#cos #兄妹 #雌小鬼", otherlink: "https://exhentai.org/g/2946373/6209d948b8", bak: "https://telegra.ph/Pizanuko-Kore-no-Tame-ni-Ikiteiru-我为此而活-COMIC-X-EROS-101-Chinese-迟远个人汉化-Digital-06-09" },
+  { id: "496340", aScore: 9.9, bScore: 9.6, info: "#常識改変 #师生 #露出", bak: "https://telegra.ph/にどDegree123-常識改変アプリケーション-中国翻訳-2024214進行中-06-12" },
+  { id: "512562", aScore: 8.6, bScore: 8, info: "#师生 #修女 #蔚蓝档案 伊ダ落" },
+  { id: "500510", aScore: 7.2, bScore: 8.7, info: "#蔚蓝档案 #雌小鬼 #反杀 #后宫 超人" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

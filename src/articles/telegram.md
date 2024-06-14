@@ -16,11 +16,17 @@ tag:
 - 多端，优秀的同步机制
 - 言论**基本**不受审查与限制
 
-也可使用 Telegram 第三方客户端 [NekoX](https://github.com/NekoX-Dev/NekoX)，内置代理，无需科学上网。缺点是带宽小和不稳定。
-
 telegram 也有一些我认为的缺点，见[telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
 
 > 紧急情况还请使用其他聊天软件。
+
+## 第三方客户端
+
+Telegram 多平台软件均为开源，并且开放了许多 api，因此出现了非常多第三方客户端，它们可以补足 telegram 的缺点。这里介绍一些我用过的。
+
+- [Nagram](https://github.com/NextAlone/Nagram)：非常好，我的刚需全覆盖，支持隐藏群组贴纸 + 忽略被屏蔽用户在群组内的消息 + 消息正则过滤。其也有内置代理。
+- [NekoX](https://github.com/NekoX-Dev/NekoX)（已过时）：内置代理，不过带宽较小，不稳定。疑似已停止开发。
+- [Cherrygram](https://github.com/arsLan4k1390/Cherrygram)：[骗](https://t.me/withabsolutex/1676)，声称 Blocking stickers 实际上不行。
 
 ## 基础教程
 
