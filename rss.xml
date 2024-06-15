@@ -6,10 +6,12 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 14 Jun 2024 07:32:46 GMT</pubDate>
-    <lastBuildDate>Fri, 14 Jun 2024 07:32:46 GMT</lastBuildDate>
+    <pubDate>Sat, 15 Jun 2024 16:43:16 GMT</pubDate>
+    <lastBuildDate>Sat, 15 Jun 2024 16:43:16 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>编程</category>
+    <category>应用</category>
     <category>推荐</category>
     <category>评价</category>
     <category>学习</category>
@@ -17,10 +19,71 @@
     <category>教程</category>
     <category>生活</category>
     <category>经历</category>
-    <category>编程</category>
     <category>随笔</category>
     <category>主张</category>
     <category>导航</category>
+    <item>
+      <title>Android</title>
+      <link>https://absx.pages.dev/coding/android.html</link>
+      <guid>https://absx.pages.dev/coding/android.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">Android</source>
+      <description>Android 因为一些契机，开始学习 Android 开发了。 学习 kotlin 请参考 ，这里不多讲。 B 站可以看看 扔物线，跟 python 领域的码农高天比较相似的存在，平常发零碎知识点，讲得也很现代。 Android Studio Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode，...</description>
+      <category>编程</category>
+      <category>应用</category>
+      <pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>因为一些契机，开始学习 Android 开发了。</p>
+<h2>学习</h2>
+<p>kotlin 请参考 <a href="/coding/kotlin.html" target="_blank">kotlin</a>，这里不多讲。</p>
+<p>B 站可以看看 <a href="https://space.bilibili.com/27559447" target="_blank" rel="noopener noreferrer">扔物线</a>，跟 python 领域的码农高天比较相似的存在，平常发零碎知识点，讲得也很现代。</p>
+<h2>Android Studio</h2>
+<p>Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode，然而 Android in vscode 简直寸步难行，甚至 kotlin 在 vscode 上都显得无力，因此我不得不克服对 Android Studio（以下简称 AS） 的恐惧，开始使用这个基于 IDEA 的重量级的 IDE。</p>
+<p>安装显然是装新不装旧，不多讲。代理也要准备好，它在编译项目时会到处拉依赖项，没有代理的话会奇慢无比。</p>
+<h3>使用技巧</h3>
+<ul>
+<li><code>Ctrl + f</code> 只有查找，<code>Ctrl + r</code> 才有替换</li>
+</ul>
+<h3>配置</h3>
+<ol>
+<li>插件：
+<ul>
+<li>禁用一些 Google 家的垃圾</li>
+<li>Key Promoter X</li>
+<li>CodeGlance Pro</li>
+<li>Rainbow Brackets</li>
+<li>Material UI Theme，先用 GitHub Dark (Material) 一段时间</li>
+<li>AI 插件
+<ul>
+<li>cody 完全不可用就不多说了</li>
+<li>codiumate 登录认证过不了，还会把 AS 卡死</li>
+<li>最后还是回到了 vscode 时的老朋友 Codeium</li>
+</ul>
+</li>
+<li>两个 json 插件：<em>JSON To Kotlin Class</em>，<em>GsonFormat</em></li>
+</ul>
+</li>
+<li><em>File - Settings - Tools - Actions on Save</em>，除了 Code Cleanup 全开。</li>
+</ol>
+<h3>编译运行</h3>
+<p>我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。</p>
+<h2>传统 UI</h2>
+<h3>更改按钮反馈</h3>
+<p>一般人肯定希望按钮按下时颜色会加深，能够出现按钮的反馈。加反馈很简单：在 drawable 里加一个 selector，然后在 layout 里给 background 用即可。</p>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> xmlns:android</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"http://schemas.android.com/apk/res/android"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:color</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"?attr/colorPrimary"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:state_pressed</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"true"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:color</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"?attr/colorOnSurface"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>难的是加的反馈要适应 day 和 night 的主题，所以颜色不能定死。不仅要同时修改 background 和 textColor，而且主题可能会更换颜色，此时按钮的颜色也需要跟随主题变换。</p>
+<p>我折腾许久，最后放弃使用颜色变换，而是使用 alpha，绕开了这个使我为难许久的问题。</p>
+<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;?</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">xml</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> version</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"1.0"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> encoding</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"utf-8"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">?&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> xmlns:android</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"http://schemas.android.com/apk/res/android"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:alpha</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"0.25"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:state_pressed</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"true"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:alpha</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"0.1"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>Jetpack Compose</h2>
+<p>这是一种新的 UI 写法，Google 强推的下一代 UI，在 kotlin 写前端，完全抛弃 xml。里面的组件全部是 kotlin 的函数。显然，必需使用 kotlin，不能使用 java。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>下载器横评</title>
       <link>https://absx.pages.dev/articles/downloaders.html</link>
@@ -2300,119 +2363,6 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
 <h2>遇到的问题</h2>
 <p>启动服务时报错 <code>trojan.service: Start request repeated too quickly.</code>。搜，按照 <a href="https://github.com/trojan-gfw/trojan/issues/387" target="_blank" rel="noopener noreferrer">issue 所述</a>改了用户组，无效。</p>
 <p>然后直接运行 <code>trojan /etc/trojan/config.json</code>，看到 error 是端口占用了。猜测 trojan 不会将报错信息输出到 stderr，因此无法直接 <code>systemctl status trojan</code> 查看报错信息。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Hysteria</title>
-      <link>https://absx.pages.dev/articles/proxy/hysteria.html</link>
-      <guid>https://absx.pages.dev/articles/proxy/hysteria.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">Hysteria</source>
-      <description>Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的很好，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能，。 劣势： 其 Brutal 拥塞控制算法非常凶猛霸道，容易被 IDC 警告，被本地网络 QOS，因为确实太像被攻击了。src 因此我使用 bbr ...</description>
-      <category>教程</category>
-      <pubDate>Fri, 17 Nov 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p><a href="https://v2.hysteria.network/zh/" target="_blank" rel="noopener noreferrer">Hysteria</a> 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。</p>
-<p>优势：</p>
-<ul>
-<li>这玩意文档写的<strong>很好</strong>，自己写配置也非常简单。</li>
-<li>自带了网页伪装、自动 <code>acme.sh</code> 签证书等功能，<s>即使不用代理也能当成<a href="/articles/reverse_proxy.html" target="_blank">反代</a>来用</s>。</li>
-</ul>
-<p>劣势：</p>
-<ul>
-<li>其 Brutal 拥塞控制算法<a href="https://v2.hysteria.network/zh/docs/misc/Hysteria-Brutal/#q-hysteria_1" target="_blank" rel="noopener noreferrer">非常凶猛霸道</a>，容易被 IDC 警告，被本地网络 QOS，因为确实太像被攻击了。<a href="https://www.youtube.com/watch?v=kTYfclAzy38" target="_blank" rel="noopener noreferrer">src</a>
-<ul>
-<li>因此我使用 bbr 而不是 Brutal。</li>
-</ul>
-</li>
-</ul>
-<h2>服务器配置</h2>
-<p>安装 hysteria2 后，编辑 <code>/etc/hysteria/config.yml</code>，写入配置。</p>
-<p>具体怎么写配置建议看文档，讲的挺详细的。这里给出我的配置，使用之前签过的证书，我的静态博客做伪装（）。然后国内(?)的 QUIC 网络环境非常差（亲测），因此设置 <code>obfs</code> 退化成了伪装 UDP。</p>
-<p>伪装的网页当然也是开启了 HTTP3 的。</p>
-<div class="language-yml line-numbers-mode" data-highlighter="shiki" data-ext="yml" data-title="yml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">listen</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">:12139</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">tls</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  cert</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/etc/hysteria/a.crt</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  key</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/etc/hysteria/a.key</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">auth</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">password</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  password</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">**********</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">masquerade</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">file</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  file</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">    dir</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">&lt;static_file_location&gt;</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  listenHTTP</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">:80</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  listenHTTPS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">:443</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  forceHTTPS</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">true</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">obfs</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">salamander</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  salamander</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">    password</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">***********</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后需要<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="_blank">启动</a> <code>hysteria-server</code> 服务，并检查是否启动成功。我在启动服务时遇到了一些问题。</p>
-<ol>
-<li>即使在 root 下运行，仍然提示权限不足无法读取证书文件。
-<ul>
-<li>尝试编辑 <code>.service</code> 文件，删除 <code>group</code>，将 <code>User</code> 改为 <code>root</code>，无效。</li>
-<li>尝试把证书移到 <code>/etc/hysteria</code> 下。</li>
-<li>后续又折腾一阵，发现需要 <code>chmod +rwx 证书文件</code> 才行。（只 <code>+x</code> 是不行的）</li>
-</ul>
-</li>
-<li>在 debian 上这样启动服务没啥问题，然而在 archlinux 上就不行了。
-<ul>
-<li>AUR 的 <code>hysteria-bin</code> 包安装的证书在 <code>/usr/lib/systemd/system</code>，名字是 <code>xxx@.service</code>，根据 <a href="https://wiki.archlinux.org/title/systemd#Using_units" target="_blank" rel="noopener noreferrer">wiki</a> 所述是模板文件，需要传参。直接 <code>systemctl start hysteria-server</code> 是不行的，只会提示 <em>unit not found</em>。因此需要自己读 service，理解那个传参的意思。</li>
-</ul>
-</li>
-</ol>
-<p>然后就是客户端了。</p>
-<h2>客户端使用</h2>
-<p>虽说可以按照官方教程启动一个客户端服务，但是一个黑窗口一直最小化运行比较丑。</p>
-<h3>Windows</h3>
-<p>V2rayN 以内核插件形式支持 hysteria。</p>
-<ol>
-<li>从 Release 下载 <code>.exe</code> 内核，放入 V2rayN 文件夹的 <code>bin/hysteria</code> 下。注意可能需要重命名为 <code>hysteria.exe</code>。</li>
-<li>打开 V2rayN，<em>添加自定义配置服务器</em>，<em>地址</em> 选择客户端的配置文件，<em>Core 类型</em> 选择 <code>hysteria</code>。</li>
-</ol>
-<p>然后就可以愉快地使用了。我的客户端配置文件参考：</p>
-<div class="language-yml line-numbers-mode" data-highlighter="shiki" data-ext="yml" data-title="yml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">server</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">&lt;url&gt;:&lt;port&gt;</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">auth</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">**********</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">socks5</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  listen</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">127.0.0.1:1080</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">http</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  listen</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">127.0.0.1:8000</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">obfs</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">salamander</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">  salamander</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">:</span></span>
-<span class="line"><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">    password</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">***********</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
-<p>ps. V2rayN v6.23 亲测可用；而 v6.30 虽然加入了官方 hysteria2 支持，但其使用 sing-box 内核，相同配置下测试不可用。<br>
-唉，偏偏要去用 sing-box</p>
-</blockquote>
-<h3>Linux</h3>
-<p>我在 linux 上使用 <a href="/articles/proxy/proxy_software.html#daed" target="_blank">daed</a>，然而其<a href="https://github.com/daeuniverse/dae/issues/48" target="_blank" rel="noopener noreferrer">尚未支持且不打算支持 hysteria 协议</a>。</p>
-<p>不过我们可以本地开一个 hysteria client，通过 http 或 socks5 再接入 daed。</p>
-<ol>
-<li>下载
-</li>
-<li>写好配置文件。</li>
-<li>启动 client 服务。
-</li>
-<li>在 daed 中手动添加 socks5 节点，使用配置文件端口。</li>
-</ol>
-<h3>Android</h3>
-<p>NekoBox (v1.2.9) 号称支持，<s>实测不可用</s>。windows 上测了能用的配置，放在 NekoBox 上用不了。</p>
-<p>后来我换了个 japan 的 vps，试了下，居然又能用了？？服务端版本相同，配置也没变，就改个服务器地址，我不好说。</p>
-<p>测了一下其他软件，SagerNet 安装了<a href="https://github.com/SagerNet/SagerNet/releases/tag/hysteria-plugin-1.3.5" target="_blank" rel="noopener noreferrer">插件</a>，然而 <em>专有设备供应商篡改了你的安卓系统，使该插件无法使用</em>，我又不好说了。</p>
-<h2>总结</h2>
-<ul>
-<li>这是我第一次直接写配置文件部署一个协议。（以前都是一键脚本）</li>
-<li>任何协议都吃第三方适配，hysteria 的适配在一众代理内算好的了。</li>
-<li>hysteria 在大陆不能发挥其全部实力，因为 QUIC 支持较弱。</li>
-<li>基于 QUIC 的代理协议挺多，hysteria 据说打不过 TUIC（<s>rust 写的，干掉 go 可以理解</s>），但是现在 TUIC 删库了（乐）。</li>
-</ul>
-<h2>遇到的问题</h2>
-<h3>no route to host</h3>
-<p>前一秒还正常使用的 hysteria 连接，立刻变得无法使用了。</p>
-<p>NekoBox 报错：<code>...cloudflare.com INTERNAL_ERROR(local):read udp ...: read: no route to host.</code>，客户端报 <code>FATAL failed to initialize client {"error": "connect error: timeout: no recent networkactivity"}</code>。并且我服务端没有任何收到连接消息。看着也不像是网络问题啊。</p>
-<p>重启服务无效，重启服务器有效。</p>
 ]]></content:encoded>
     </item>
   </channel>
