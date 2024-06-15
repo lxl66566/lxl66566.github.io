@@ -26,7 +26,7 @@ category:
 8. [家与学校生活环境对比（我为什么不愿意回家）](./compare_home_to_college.md)
 9. [绷不住了](./memes.md)
 10. [神评](./forward.md)
-11. [鲜鸡汤](./chicken_soup.md)
+11. [鸡汤](./chicken_soup.md)
 12. [「零化（Zero Fill）」](./zero_fill.md)
 13. [脑洞](./brainhole.md)
 14. [找实习经历](./interview.md)

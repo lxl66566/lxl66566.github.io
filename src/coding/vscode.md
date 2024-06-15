@@ -75,6 +75,7 @@ tag:
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型，不考虑
 - [Tabnine](https://www.tabnine.com/)：补全较弱（_Short code completions (2 to 3 words)_）
 - [MarsCode](https://www.marscode.com/)：一直报 Network unstable，根本不可用，捞。
+- [Cody](https://github.com/sourcegraph/cody)：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。
 
 国产：
 
