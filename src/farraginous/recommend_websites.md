@@ -153,6 +153,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [learnxinyminutes](https://learnxinyminutes.com/)：各种入门速成，适合学习能力强的
 - CS 自学：[CS 自学指南](https://csdiy.wiki/) | [学长的文章](https://honeysuckle-terrier-6c8.notion.site/CS-4b9f59acd3a64bf8916f834d0c7f25ea)
 - 算法刷题：[力扣](https://leetcode-cn.com/problemset/all/) | [洛谷](https://www.luogu.com.cn/)
+- 练习运维：[sadservers](https://sadservers.com/)
 
 #### 资源
 

@@ -410,6 +410,8 @@ diff 增强插件，为 github 使用。
 - [JustF5](https://github.com/xinyihl/LiteLoaderQQNT-JustF5)
 - [Markdown](https://github.com/d0j1a1701/LiteLoaderQQNT-Markdown)，但是只有本机能看
 
+关于插件安装：对于有 git 和 pnpm 的我来说，直接在 `QQNT/LiteLoaderQQNTx.x.x/plugins` 里执行 `git clone` + `pnpm i` 即可，简单省空间，还方便更新。
+
 ## 一些过时的推荐
 
 ::: warning

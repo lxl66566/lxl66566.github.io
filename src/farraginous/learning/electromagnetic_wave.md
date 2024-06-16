@@ -130,6 +130,8 @@ $\displaystyle\vec{B}(r,\theta)=\frac{\mu_{0}m}{4\pi r^{3}}(2\cos\theta\vec{e}_{
 
 磁场能量密度 $\displaystyle w_m=\frac{1}{2}\vec{H}\cdot\vec{B}=\frac{1}{2}\mu|\vec{H}|^2$
 
+恒定电流电场功率密度 $p=\vec{J}\cdot\vec{E}$
+
 电场力 = $\vec{F}=\nabla W_e$
 
 ### 恒定电流
@@ -149,3 +151,18 @@ $\sigma$ 电导率
 位移电流密度：$\displaystyle\vec{J}_d=\frac{\partial\vec{D}}{\partial t}$
 
 麦克斯韦方程组：$\begin{aligned}&\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\\&\nabla\times\vec{H}=\vec{J}+\frac{\partial\vec{D}}{\partial t}\\&\nabla\cdot\vec{D}=\rho\\&\nabla\cdot\vec{B}=0\end{aligned}$
+
+根据麦克斯韦方程组，可以推导出时变电磁场的边界条件：
+
+$\begin{aligned}
+&\bar{n}\times(\bar{E}_{1}-\bar{E}_{2})=\bar{0} \\
+&\vec{n}\times(\vec{H}_{1}-\vec{H}_{2})=\vec{J}_{s} \\
+&\vec{n}\cdot(\vec{D}_{1}-\vec{D}_{2})=\rho_{s} \\
+&{\vec{n}}\cdot({\vec{B}}_{1}-{\vec{B}}_{2})=0
+\end{aligned}$
+
+### 能量
+
+时变电磁场的功率流密度（坡印廷矢量）：$\vec{S}=\vec{E}\times\vec{H}$
+
+坡印廷定理：单位时间内，一定体积中电磁场能量减少的速率，等于场力所做的功与单位时间向外的净通量的和。

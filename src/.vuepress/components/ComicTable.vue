@@ -332,6 +332,11 @@ const data = [
   { id: "496340", aScore: 9.9, bScore: 9.6, info: "#常識改変 #师生 #露出", bak: "https://telegra.ph/にどDegree123-常識改変アプリケーション-中国翻訳-2024214進行中-06-12" },
   { id: "512562", aScore: 8.6, bScore: 8, info: "#师生 #修女 #蔚蓝档案 伊ダ落" },
   { id: "500510", aScore: 7.2, bScore: 8.7, info: "#蔚蓝档案 #雌小鬼 #反杀 #后宫 超人" },
+  { id: "365002", aScore: 9.8, bScore: 7.6, info: "#兄妹 #兽耳 #纯爱", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-ゆらぎの国のかさねちゃん-中国翻訳-DL版-08-02" },
+  { id: "364044", aScore: 6.7, bScore: 8.8, info: "#雌小鬼 #比试", bak: "https://telegra.ph/天気輪-甘露アメ-大人だから絶対に敗けないッ-中国翻訳-DL版-08-02" },
+  { id: "(ex)", aScore: 9.5, bScore: 7.3, info: "#请问您今天要来点兔子吗？ #画集 #全彩 #无H", otherlink: "https://exhentai.org/g/1939536/2069b42ce8/", bak: "https://telegra.ph/AC2-な-なむあーる-30億円の借金を返済するチノちゃん-ご注文はうさぎですか-中国翻訳-08-02" },
+  { id: "(ex)", aScore: 9.9, bScore: 7.9, info: "#青春 #画集 #制服 #无H", otherlink: "https://exhentai.org/g/1935281/4c96fdc89e/", bak: "https://telegra.ph/neka招人误解的JKChinese无糖漫画组-08-02" },
+  { id: "(ex)", aScore: 9.9, bScore: 5.3, info: "#纯爱 #画集", otherlink: "https://exhentai.org/g/1935277/fe02c0ecc6/", bak: "https://telegra.ph/おみなえし-こんな幼馴染がいてほしい-中国翻訳-08-02" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
