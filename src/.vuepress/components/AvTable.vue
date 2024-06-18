@@ -314,6 +314,7 @@ const data = [
   { id: "kam-162", aScore: 8.9, bScore: 7.8, name: "都内某コンビニエンスストア悪徳エロ店長による万引き制服美少女中出し折●動画 其の3 横宮七海" },
   { id: "mide-536", aScore: 8.5, bScore: 7.4, name: "#口 射精後のザーメンをチ●ポでかき回すイラマチーノ つぼみ" },
   { id: "neob-0017", aScore: 9, bScore: 10.2, name: "折磨到吐血，太拼了 美少女監禁 追撃鬼イラマ性交 横宮七海 1,190 15" },
+  { id: "sora-518", aScore: 9, bScore: 7.8, u: true, name: "#露出 実写版 生徒会長は真性露出狂 藍芽みずき" },
 ];
 export default {
   name: "AvTable",
