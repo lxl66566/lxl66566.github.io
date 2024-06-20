@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 19 Jun 2024 15:42:49 GMT</pubDate>
-    <lastBuildDate>Wed, 19 Jun 2024 15:42:49 GMT</lastBuildDate>
+    <pubDate>Thu, 20 Jun 2024 14:57:13 GMT</pubDate>
+    <lastBuildDate>Thu, 20 Jun 2024 14:57:13 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -107,13 +107,16 @@
       <link>https://absx.pages.dev/farraginous/learning/image_processing.html</link>
       <guid>https://absx.pages.dev/farraginous/learning/image_processing.html</guid>
       <source url="https://absx.pages.dev/rss.xml">图像处理</source>
-      <description>图像处理 图像处理的网课大家教的重点都不一样，并且让你掌握的不一定能让你过考试，因此还是看书重要。 像素：四邻域（十字）、D 邻域（四角）、八邻域（外围） 连通性：4 连通，8 连通，M 连通（q 在 p 的 4 邻域中，或 q 在 p 的对角邻域中且 q 的 4 邻域与 p 的 4 领域相交为空集） 直方图均衡：将概率累加值，和灰度级平分点作对比，映...</description>
+      <description>图像处理 图像处理的网课大家教的重点都不一样，并且让你掌握的不一定能让你过考试，因此还是看书重要。 像素：四邻域（十字）、D 邻域（四角）、八邻域（外围） 连通性：4 连通，8 连通，M 连通（q 在 p 的 4 邻域中，或 q 在 p 的对角邻域中且 q 的 4 邻域与 p 的 4 领域相交为空集） 最短路：4 通路，8 通路 直方图均衡：将概率累加...</description>
       <category>学习</category>
       <pubDate>Sat, 01 Jun 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>图像处理的网课大家教的重点都不一样，并且让你掌握的不一定能让你过考试，因此还是看书重要。</p>
-<p>像素：四邻域（十字）、D 邻域（四角）、八邻域（外围）
-连通性：4 连通，8 连通，M 连通（q 在 p 的 4 邻域中，或 q 在 p 的对角邻域中且 q 的 4 邻域与 p 的 4 领域相交为空集）</p>
+<ul>
+<li>像素：四邻域（十字）、D 邻域（四角）、八邻域（外围）</li>
+<li>连通性：4 连通，8 连通，M 连通（q 在 p 的 4 邻域中，或 q 在 p 的对角邻域中且 q 的 4 邻域与 p 的 4 领域相交为空集）</li>
+<li>最短路：4 通路，8 通路</li>
+</ul>
 <p>直方图均衡：将概率累加值，和灰度级平分点作对比，映射到最近的灰度级。</p>
 <p>直方图规定：一样，只不过映射到最近的规定累加值上。</p>
 <h2>运算</h2>
@@ -173,6 +176,8 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <li>高斯函数过傅里叶，仍然是高斯函数</li>
 </ul>
 </li>
+<li>梯形滤波，比起理想减弱了振铃现象</li>
+<li>指数低通：低频率衰减快，n = 2 时成为高斯</li>
 </ul>
 </li>
 <li>高通滤波：名字与前三个一样，特性也差不多</li>
@@ -199,9 +204,14 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>缩放特性：<span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mi>x</mi><mo separator="true">,</mo><mi>b</mi><mi>y</mi><mo stretchy="false">)</mo><mo>⇔</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">∣</mi><mi>a</mi><mi>b</mi><mi mathvariant="normal">∣</mi></mrow></mfrac><mi>F</mi><mo stretchy="false">(</mo><mi>u</mi><mi mathvariant="normal">/</mi><mi>a</mi><mo separator="true">,</mo><mi>v</mi><mi mathvariant="normal">/</mi><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(ax,by)\Leftrightarrow\frac{1}{|ab|}F(u/a,v/b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇔</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.3651em;vertical-align:-0.52em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∣</span><span class="mord mathnormal mtight">ab</span><span class="mord mtight">∣</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.52em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mord">/</span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord">/</span><span class="mord mathnormal">b</span><span class="mclose">)</span></span></span></span></p>
 <p>相关性：<span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>∘</mo><mi>h</mi><mo stretchy="false">(</mo><mi>x</mi><mo separator="true">,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>⇔</mo><msup><mi>F</mi><mo>∗</mo></msup><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo><mi>H</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(x,y)\circ h(x,y)\Leftrightarrow F^*(u,v)H(u,v)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">h</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">⇔</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6887em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mclose">)</span></span></span></span></p>
 <h2>图像恢复</h2>
-<p>噪声模型：乘性(相当于过系统函数 H(x, y))和加性。乘性如果是线性会比较好恢复。</p>
-<p>常见噪声：热噪声，闪烁噪声，发射噪声，有色噪声</p>
-<p>脉冲噪声也称椒盐噪声，由一个或两个冲激形成的密度函数，像椒盐粒洒在图上一样。</p>
+<p>图像退化：随机噪声，成像模糊，运动拖尾，失真</p>
+<p>通用退化模型：乘性(相当于过系统函数 H(x, y))和加性。乘性如果是线性会比较好恢复。</p>
+<p>噪声分类：</p>
+<ul>
+<li>高斯噪声：图像模糊，降低对比度</li>
+<li>均匀噪声：亮度变化，纹理失真</li>
+<li>脉冲噪声也称椒盐噪声，由一个或两个冲激形成的密度函数，像椒盐粒洒在图上一样，显著破坏图像质量。</li>
+</ul>
 <h3>滤波器</h3>
 <ul>
 <li>算数均值滤波器</li>
@@ -229,9 +239,10 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 </li>
 </ul>
 <h2>图像校正修补</h2>
-<p>仿射变换：线性 + 平移，本质是将图像沿两个互相垂直的方向缩放。</p>
+<p>仿射变换：<span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>v</mi><msup><mrow></mrow><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></msup><mo>=</mo><msub><mi>H</mi><mi>A</mi></msub><mi>v</mi><mo>=</mo><mrow><mo fence="true">[</mo><mtable rowspacing="0.16em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>A</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>t</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msup><mn mathvariant="bold">0</mn><mi mathvariant="normal">⊤</mi></msup></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mn>1</mn></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v^{'}=H_Av=\begin{bmatrix}A&amp;t\\\mathbf{0}^{\top}&amp;1\end{bmatrix}v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9425em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9425em;"><span style="top:-2.9425em;margin-right:0.05em;"><span class="pstrut" style="height:2.5795em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8278em;"><span style="top:-2.931em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0813em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">A</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4091em;vertical-align:-0.9546em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4546em;"><span style="top:-3.6146em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">A</span></span></span><span style="top:-2.4054em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathbf">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">⊤</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9546em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4546em;"><span style="top:-3.6146em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">t</span></span></span><span style="top:-2.4054em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9546em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span>，A 为 2x2，t 为 2x1</p>
 <p>一个三角形一定能通过仿射变换另一个三角形得到。</p>
-<p>相似变换，等距变换，欧式变换</p>
+<p>| 名称     | 特点                                                          |
+|</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -1834,10 +1845,12 @@ c-16-25.333-24-45-24-59z"></path></svg></span></span></span></span></span></span
       <link>https://absx.pages.dev/essay/2024.html</link>
       <guid>https://absx.pages.dev/essay/2024.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2024</source>
-      <description>2024 20240610 新的洞洞鞋比原来的小一号，穿着没有宽松的感觉了；但是走在路上不会进小石子。至于总体舒适度变化，我也不清楚。 20240608 Telegram 到处发贴纸的那些人，和校园广播站那种肆意泼洒自己主张的人没有区别。 我对于番剧和小说的态度从来都是 “不完本不看”，但对 galgame 的分割商法却格外宽容。究其原因，大概是 ga...</description>
+      <description>2024 20240620 帮我和舍友取晚饭，一个疏忽把频分复用传成了时分复用 20240610 新的洞洞鞋比原来的小一号，穿着没有宽松的感觉了；但是走在路上不会进小石子。至于总体舒适度变化，我也不清楚。 20240608 Telegram 到处发贴纸的那些人，和校园广播站那种肆意泼洒自己主张的人没有区别。 我对于番剧和小说的态度从来都是 “不完本不看...</description>
       <category>随笔</category>
       <pubDate>Sat, 06 Jan 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20240620</h2>
+<p>帮我和舍友取晚饭，一个疏忽把频分复用传成了时分复用</p>
 <h2>20240610</h2>
 <p>新的洞洞鞋比原来的小一号，穿着没有宽松的感觉了；但是走在路上不会进小石子。至于总体舒适度变化，我也不清楚。</p>
 <h2>20240608</h2>
