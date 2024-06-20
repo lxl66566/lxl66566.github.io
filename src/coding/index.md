@@ -61,6 +61,7 @@ tag:
 - [flix](https://flix.dev/)：JVM 上的、拥有许多函数式风格的语言。
 - [borgo](https://borgo-lang.github.io/)：点进去就知道了
 - [dada](https://dada-lang.org/)：类 rust 的实验性语言，观点比较模糊（至少我没看出有哪些 feature）
+- [Vale](https://github.com/ValeLang/Vale)：类 rust 的语言（所有权和泛型），但是更简单，限制更多（可变结构只能有一个引用）。开发者对内存回收，内存安全~~和玛雅文化~~有[独特的理解](https://verdagon.dev/home)。
 
 </dtls>
 

@@ -563,3 +563,4 @@ articles:
 8. [An introduction to advanced Rust traits and generics](https://www.shuttle.rs/blog/2024/04/18/using-traits-generics-rust)
 9. [[翻译] async: 什么是 blocking](https://bingowith.me/2021/05/09/translation-async-what-is-blocking/)
 10. [Rust Runtime 设计与实现-科普篇](https://www.ihcblog.com/rust-runtime-design-1/) 及后续系列文章
+11. [Using Rust Macros for Custom VTables](https://lucumr.pocoo.org/2024/5/16/macro-vtable-magic/)：如何创建一个 runtime object

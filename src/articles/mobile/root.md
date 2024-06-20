@@ -19,12 +19,16 @@ tag:
 ## 刷机工具
 
 - adb/fastboot 套，这个不多说，100% 必备。最方便的安装是 [scoop](../../farraginous/recommend_packages.md#scoop)：`scoop install adb`。
-- MIUI 刷机工具：小米官方提供的刷机工具。能用就是好的，至少小米一般不用太担心变砖，只要能进 fastboot 就能活。
-  - 使用 MIUI 刷机工具时，千万不要在右下角选择 lock（我选择直接删线刷包里的 _\*lock.sh/bat_）；最好把 Configuration 中的 CheckPoint 删了。
-  - 想想一加甚至没有刷全量包的工具。。开始羡慕起小米来了。
-- ~~MIUI 解锁工具~~ 时代结束了，现在的澎湃 OS 解锁要答题（
-- [FastbootEnhance](https://github.com/libxzr/FastbootEnhance)，提供一个 GUI 界面，解 `payload.bin` 很好用。但是对于刷入则不太行了，至少我 Oneplus 不行，启到 fastbootd 也卡在半中间。
-- ~~[payload-dumper-go](https://github.com/ssut/payload-dumper-go)：解 `payload.bin` 的另一个 CLI 工具~~，被 FastbootEnhance 上位替代了。payload-dumper 要解只能解全部，太傻了，不过至少能用。
+- 用来从 `payload.bin` 提取分区的。（按照推荐顺序排序）
+  - [5ec1cff/payload-dumper](https://github.com/5ec1cff/payload-dumper)：群友激情制作，可以从 URL 里提取部分分区，大幅减少了下载需求。
+  - [FastbootEnhance](https://github.com/libxzr/FastbootEnhance)，提供一个 GUI 界面，解 `payload.bin` 很好用。但是对于刷入则不太行了，至少我 Oneplus 不行，启到 fastbootd 也卡在半中间。
+  - ~~[payload-dumper-go](https://github.com/ssut/payload-dumper-go)：解 `payload.bin` 的另一个 CLI 工具~~，被 FastbootEnhance 上位替代了。payload-dumper 要解就只能解全部，太傻了，不过至少能用。
+- 小米/红米：
+  - MIUI 刷机工具：小米官方提供的刷机工具。能用就是好的，至少小米一般不用太担心变砖，只要能进 fastboot 就能活。
+    - 千万不要在右下角选择 lock（我选择直接删线刷包里的 _\*lock.sh/bat_）
+    - 最好把 Configuration 中的 CheckPoint 删了。
+    - 想想一加甚至没有刷全量包的工具。。开始羡慕起小米来了。
+  - ~~MIUI 解锁工具~~ 时代结束了，现在的澎湃 OS 解锁要答题（
 
 ## Redmi Note 10 pro
 
@@ -72,7 +76,7 @@ tag:
 
 这里是 _一加 Ace 竞速版_ 的 root 过程。
 
-一加的教程基本都是 _daxiaamu_ 的一键工具箱，让人 root 了以后却不知其所以然。这样是不好的。
+一加的教程基本都是 _daxiaamu_ 的一键工具箱，让人 root 了以后却不知其所以然。这样是不好的。再说了，这个工具箱也无法刷全量包。
 
 找了半天没找到这个机型如何刷 Oxygen OS，也没有提供线刷 ROM <span class="heimu" title="你知道的太多了">daxiaamu 自称官方</span>，怕出问题，还是将就用着并不喜欢的 ColorOS 吧。
 
@@ -94,6 +98,7 @@ tag:
 3. 我甚至还重新解压到 RAMDisk 然后 checksum 了一下，不出所料，并没有什么问题。
 4. 在 [issue](https://github.com/vm03/payload_dumper/issues/47#issuecomment-1311973400) 中找到另一个 go 版本，亲测可用，速度还快。
 5. 最后发现 FastbootEnhance 可以选择某些 img 解包。。
+6. 后来又发现一个 fork 版本可以仅下载某分区。
 
 </dtls>
 

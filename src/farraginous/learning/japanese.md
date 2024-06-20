@@ -20,8 +20,9 @@ gal 对于培养语感和听力来说挺有帮助。还有很重要的一点是�
 
 ### 资源
 
-- 単語：
-  - Anki deck：[JLPT (N1 ～ N5) 日语 中文](https://ankiweb.net/shared/info/34073638) | [Open Anki JLPT](https://ankiweb.net/shared/decks?search=Open%20anki%20JLPT)
+- Anki deck
+  - [JLPT (N1 ～ N5)单词 中日 新版](https://ankiweb.net/shared/info/832276382) | ~~[旧版](https://ankiweb.net/shared/info/34073638)~~
+  - [Open Anki JLPT](https://ankiweb.net/shared/decks?search=Open%20anki%20JLPT)
 - 文法：
   - Anki deck：[蓝宝书](https://ankiweb.net/shared/info/1959548600)
   - [毎日のんびり日本語教師](https://nihongonosensei.net/)
