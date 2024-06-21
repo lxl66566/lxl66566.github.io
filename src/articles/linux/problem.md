@@ -26,6 +26,16 @@ tag:
 以下是正文，按时间倒序。
 :::
 
+## NixOS-WSL
+
+这里收集一些 nix 的问题。我在考试周时间不足，因此先使用 NixOS-WSL 进行 NixOS 的尝试与熟悉。
+
+### 网络
+
+首先，装好 NixOS-WSL 后，无法 `sudo nix-channel --update`。查看环境变量发现没有设代理，于是[设了](https://nixos-cn.org/tutorials/installation/Networking.html#_3-使用代理工具加速访问-channels-跟-flake-inputs)，结果发现还是不行。然后想到 root 和 user 用的不是同一个 env，便进入 root 修改（需要用 `sudo -i` 进 root 而不是 `su`）。
+
+在 root 下，`/run/systemd/system/nix-daemon.service.d/override.conf` 并不能在 env 中生效，因此我只好手动 `export https_proxy=http://localhost:10450` 代理环境变量，成功 update + rebuild。~~然后一个更新就 5.6G 了~~
+
 ## KDE6
 
 KDE 在 20240306 左右释出了 KDE6，但是有一些需要手动处理的地方：

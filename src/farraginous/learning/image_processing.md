@@ -25,7 +25,7 @@ category:
 
 旋转：$\boldsymbol{R}_r=\begin{bmatrix}\cos\gamma&\sin\gamma&0\\-\sin\gamma&\cos\gamma&0\\0&0&1\end{bmatrix}$
 
-M 张图像叠加均值，可以将零均值噪声降低到 $\displaystyle\sqrt{\frac1M}$，如果是均值滤波，M=像素数。
+M 张图像叠加均值，可以将零均值噪声降低到 $\displaystyle\sqrt{\frac1M}$，M=像素数。
 
 ## 滤波
 
@@ -33,7 +33,7 @@ M 张图像叠加均值，可以将零均值噪声降低到 $\displaystyle\sqrt{
 
 - 低通滤波：图像平滑
   - 均值滤波：9\*1
-  - 高斯滤波：[1 2 1;2 4 2;1 2 1]/1）
+  - 高斯滤波：[1 2 1;2 4 2;1 2 1]/16
   - 中值滤波：效果最好，保留边缘，去除孤立点
 - 高通滤波：图像锐化
   - 一阶差分，二阶差分

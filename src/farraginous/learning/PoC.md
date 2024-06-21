@@ -63,7 +63,7 @@ $R_b = R_B \cdot H = R_B \cdot log_2M$（等概）
 
 （周期）功率信号自相关函数：$R(\tau)=\frac{1}{T}\int_{-T/2}^{T/2}s(t)s(t+\tau)dt$，傅里叶变换为功率谱密度$P(f)$。$R(0)=P$ (平均功率)
 
-计算可以用[帕斯瓦尔定理](https://zh.wikipedia.org/wiki/%E5%B8%95%E5%A1%9E%E7%93%A6%E5%B0%94%E5%AE%9A%E7%90%86#%E5%B8%95%E5%A1%9E%E7%93%A6%E5%B0%94%E5%AE%9A%E7%90%86%E7%9A%84%E9%99%88%E8%BF%B0)。
+计算可以用[帕斯瓦尔定理](https://zh.wikipedia.org/wiki/帕塞瓦尔定理#帕塞瓦尔定理的陈述)。
 
 ### 线性系统
 

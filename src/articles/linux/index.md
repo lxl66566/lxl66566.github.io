@@ -35,3 +35,4 @@ tag:
 ## external
 
 1. [【譯】Manjaro 的爭議](https://blog.origincode.me/manjaro-controversies/)
+2. [真的有人会用 Linux 打游戏吗？](https://sspai.com/post/89743)

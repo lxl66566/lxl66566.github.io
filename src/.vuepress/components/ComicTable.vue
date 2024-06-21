@@ -339,6 +339,7 @@ const data = [
   { id: "(ex)", aScore: 9.9, bScore: 5.3, info: "#纯爱 #画集", otherlink: "https://exhentai.org/g/1935277/fe02c0ecc6/", bak: "https://telegra.ph/おみなえし-こんな幼馴染がいてほしい-中国翻訳-08-02" },
   { id: "(eh)", aScore: 8, bScore: 8, info: "#天使 #巨乳 #大姐姐", otherlink: "https://e-hentai.org/g/2192123/d98359da5f/", bak: "https://telegra.ph/Croriin-Tenshi-no-Oshigoto-Isekai-Rakuten-Vol-8-Chinese-06-17" },
   { id: "(ex)", aScore: 8.9, bScore: 7.3, info: "#蔚蓝档案 #无H", otherlink: "https://exhentai.org/g/2812947/4252ef5f0b", bak: "https://telegra.ph/SAKURA-Kurihara-Sakura-Opantsu-Daisuki-Hifumi-chan-最喜欢胖次的日富美酱-Blue-Archive-Chinese-碧蓝档案百合组-Digital-06-19" },
+  { id: "513485", aScore: 8.9, bScore: 6.4, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/C103-Trick-Color-桐井ナオ-トリニティの性女たち-ブルーアーカイブ-中国翻訳-DL版-06-07" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
