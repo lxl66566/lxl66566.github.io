@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 20 Jun 2024 14:57:13 GMT</pubDate>
-    <lastBuildDate>Thu, 20 Jun 2024 14:57:13 GMT</lastBuildDate>
+    <pubDate>Fri, 21 Jun 2024 16:22:22 GMT</pubDate>
+    <lastBuildDate>Fri, 21 Jun 2024 16:22:22 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -143,14 +143,14 @@ v40H1014.6
 s-87.3,378.7,-272.6,1166c-185.3,787.3,-279.3,1182.3,-282,1185
 c-2,6,-10,9,-24,9
 c-8,0,-12,-0.7,-12,-2z M1001 80
-h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7884em;"><span></span></span></span></span></span></span></span></span>，如果是均值滤波，M=像素数。</p>
+h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7884em;"><span></span></span></span></span></span></span></span></span>，M=像素数。</p>
 <h2>滤波</h2>
 <h3>空间域</h3>
 <ul>
 <li>低通滤波：图像平滑
 <ul>
 <li>均值滤波：9*1</li>
-<li>高斯滤波：[1 2 1;2 4 2;1 2 1]/1）</li>
+<li>高斯滤波：[1 2 1;2 4 2;1 2 1]/16</li>
 <li>中值滤波：效果最好，保留边缘，去除孤立点</li>
 </ul>
 </li>
