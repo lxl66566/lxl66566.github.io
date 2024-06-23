@@ -181,7 +181,7 @@ const data = [
   { id: "MIDE-422", aScore: 5, bScore: 3 },
   { id: "ABW-018", aScore: 4, bScore: 4 },
   { id: "IPZZ-008", aScore: 4, bScore: 4, u: true },
-  { id: "STARS-250", aScore: 4, bScore: 4, u: true },
+  { id: "STARS-250", aScore: 4.3, bScore: 3, u: true },
   { id: "hnd-661", aScore: 8.9, bScore: 9, u: true, name: "睨まれても嫌がられても俺は平然と孕ませて犯ル 有坂深雪" },
   { id: "milk-189", aScore: 7.8, bScore: 7 },
   { id: "waaa-028", aScore: 8.8, bScore: 6 },
@@ -316,6 +316,8 @@ const data = [
   { id: "neob-0017", aScore: 9, bScore: 10.2, name: "折磨到吐血，太拼了 美少女監禁 追撃鬼イラマ性交 横宮七海 1,190 15" },
   { id: "sora-518", aScore: 9, bScore: 7.8, u: true, name: "#露出 実写版 生徒会長は真性露出狂 藍芽みずき" },
   { id: "jac-079", aScore: 6.7, bScore: 7, name: "【超18歳ド降臨×イキ過ぎ注意の最狂ドM】「SEXの基本ってSMじゃないの！？」とんだ大馬鹿野郎がヤって来た！狂った性癖で大暴走！ビンタに首絞め当たり前！制御不能の爆潮マ●コ！！これがエロ第7世代の実力！！やっぱりながい、100回イっても大丈夫の巻き！！【妄想ちゃん。14人目ながいさん】" },
+  { id: "mide-613", aScore: 8.2, bScore: 1.2, u: true, name: "女教師の巨乳チラリズムに我慢できない！ 水卜さくら" },
+  { id: "miaa-361", aScore: 1, bScore: 7.6, name: "修学旅行の夜…王様ゲームで全裸にさせられ生徒にハメられまくった巨乳担任教師 田中ねね" },
 ];
 export default {
   name: "AvTable",

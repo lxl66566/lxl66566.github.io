@@ -340,6 +340,8 @@ const data = [
   { id: "(eh)", aScore: 8, bScore: 8, info: "#天使 #巨乳 #大姐姐", otherlink: "https://e-hentai.org/g/2192123/d98359da5f/", bak: "https://telegra.ph/Croriin-Tenshi-no-Oshigoto-Isekai-Rakuten-Vol-8-Chinese-06-17" },
   { id: "(ex)", aScore: 8.9, bScore: 7.3, info: "#蔚蓝档案 #无H", otherlink: "https://exhentai.org/g/2812947/4252ef5f0b", bak: "https://telegra.ph/SAKURA-Kurihara-Sakura-Opantsu-Daisuki-Hifumi-chan-最喜欢胖次的日富美酱-Blue-Archive-Chinese-碧蓝档案百合组-Digital-06-19" },
   { id: "513485", aScore: 8.9, bScore: 6.4, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/C103-Trick-Color-桐井ナオ-トリニティの性女たち-ブルーアーカイブ-中国翻訳-DL版-06-07" },
+  { id: "419410", aScore: 7.4, bScore: 7.8, info: "#兄妹 #纯爱 #催眠", bak: "https://telegra.ph/Imouto-to-Saimin-Appli-wa-Tsukaiyou-妹妹和催眠APP的正確用法-06-21" },
+  { id: "(eh)", aScore: 8.3, bScore: 6.7, info: "#师生 #雌小鬼 #纯爱", otherlink: "https://e-hentai.org/g/1293370/b9583cbc41/", bak: "https://hanime1.me/watch?v=12489" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

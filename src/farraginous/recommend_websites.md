@@ -223,6 +223,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ## 生活
 
 - [居家简易食谱](https://cook.yunyoujun.cn/)
+- [有据 - 事实核查手册](https://chinafactcheck.com/)
 
 ## 游戏
 

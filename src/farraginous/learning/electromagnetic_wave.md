@@ -9,9 +9,15 @@ tag:
 
 # 电磁场与电磁波
 
-我看的网课是[这个](https://www.bilibili.com/video/av417507556)。
+我最早看的网课是[这个](https://www.bilibili.com/video/av417507556)。不过如评论所说，“这个视频里没有入射折射还有波导相关的章节，知识讲的很细，对速成不友好，对你写题帮助更是不大”。全篇讲证明，没有任何做题，并且是有读 PPT 的嫌疑的。不过物理也就是证明吸引人。
 
 ## 基础
+
+拉梅系数：
+
+| xyz   | $\rho\phi z$ | $r\theta\phi$ |
+| ----- | ------------ | ------------- |
+| 1,1,1 | 1,ρ,1        | 1,r,rsinθ     |
 
 叉乘：右手螺旋，三阶矢量算三阶行列式，注意中间的分量是负号。（+-+）
 
@@ -79,6 +85,8 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 ### 磁场
 
 静磁场场方程：$\begin{aligned}&\nabla\cdot\vec{B}=0\\&\nabla\times\vec{B}=\mu_{0}\vec{J}\end{aligned}$ &emsp;J 为体电流密度。
+
+一般用的多的是 $\oint_c\vec{B}d\vec{l}=\mu_0I$
 
 引入一个 $\vec{A}$ 称为磁矢位，则 $\vec{B}=\Delta\times\vec{A}$。
 
@@ -148,6 +156,10 @@ $\sigma$ 电导率
 
 ## 时变电磁场
 
+主要研究方法：研究正弦时变电磁场，并将其他所有分量通过傅里叶变换为正弦形式。
+
+无源：指 $\vec{J}=\vec{0}, \rho = 0$
+
 位移电流密度：$\displaystyle\vec{J}_d=\frac{\partial\vec{D}}{\partial t}$
 
 麦克斯韦方程组：$\begin{aligned}&\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\\&\nabla\times\vec{H}=\vec{J}+\frac{\partial\vec{D}}{\partial t}\\&\nabla\cdot\vec{D}=\rho\\&\nabla\cdot\vec{B}=0\end{aligned}$
@@ -155,7 +167,7 @@ $\sigma$ 电导率
 根据麦克斯韦方程组，可以推导出时变电磁场的边界条件：
 
 $\begin{aligned}
-&\bar{n}\times(\bar{E}_{1}-\bar{E}_{2})=\bar{0} \\
+&\vec{n}\times(\vec{E}_{1}-\vec{E}_{2})=\vec{0} \\
 &\vec{n}\times(\vec{H}_{1}-\vec{H}_{2})=\vec{J}_{s} \\
 &\vec{n}\cdot(\vec{D}_{1}-\vec{D}_{2})=\rho_{s} \\
 &{\vec{n}}\cdot({\vec{B}}_{1}-{\vec{B}}_{2})=0
@@ -166,3 +178,57 @@ $\begin{aligned}
 时变电磁场的功率流密度（坡印廷矢量）：$\vec{S}=\vec{E}\times\vec{H}$
 
 坡印廷定理：单位时间内，一定体积中电磁场能量减少的速率，等于场力所做的功与单位时间向外的净通量的和。
+
+### 复数
+
+转换为复振幅，消元 t，微分转乘法。
+
+$\begin{aligned}
+&\vec{E}(x,y,z,t)\leftrightarrow\dot{\vec{E}}(x,y,z) \\
+&\frac{\partial}{\partial t}\vec{E}(x,y,z,t)\leftrightarrow j\omega\dot{\vec{E}}_{xm}(x,y,z) \\
+&\vec{E}(x,y,z,t)=\mathrm{Re}[\dot{\vec{E}}(x,y,z)e^{j\omega t}]
+\end{aligned}$
+
+麦克斯韦方程复数形式：将对 t 偏导以 $j\omega$ 代替即可。
+
+瞬时坡印廷矢量复数：$\vec{S}(\vec{r},t)=\frac{1}{2}\mathrm{Re}[\vec{E}\times\vec{H}^{*}]+\frac{1}{2}\mathrm{Re}[\vec{E}\times\vec{H}e^{j2\omega t}]$
+
+平均坡印廷矢量复数：$\vec{S}(\vec{r})=\frac12\vec{E}\times\vec{H}^*$
+
+这种复数公式同样适用于 电/磁场能量密度等。
+
+### 波动方程
+
+#### 无源无耗
+
+复数方程：$\nabla^{2}\vec{E}+k^{2}\vec{E}=\vec{0}$，$\nabla^{2}\vec{H}+k^{2}\vec{H}=\vec{0}$，其中 $k^2=\mu\varepsilon\omega^2$
+
+波阻抗：$\displaystyle\eta=\frac{E_0}{H_0}=\sqrt{\frac{\mu}{\varepsilon}}$
+
+复数解为 $\begin{cases}\vec{E}(z)=E_{0m}e^{j\phi_0}e^{-jkz}\vec{e}_x\\\vec{H}(z)=H_{0m}e^{j\phi_0}e^{-jkz}\vec{e}_y=\frac{E_{0m}}{\eta}e^{j\phi_0}e^{-jkz}\vec{e}_y\end{cases}$
+
+实数解为 $\begin{cases}\vec{E}(z,t)=E_{0m}\cos(\omega t-kz+\phi_0)\vec{e}_x\\\vec{H}(z,t)=H_{0m}\cos(\omega t-kz+\phi_0)\vec{e}_y\end{cases}$
+
+任一时刻电杨能量密度和磁场能量密度相等，各为总电磁能量的一半
+
+#### 无源有耗
+
+只需用复介电常数：$\varepsilon_c=\varepsilon-j\frac{\sigma}{\omega}$ 代入所有 $\varepsilon$ 即可。
+
+用 $\gamma=\omega\sqrt{\mu\varepsilon_c}=\beta-j\alpha$ 替换 k
+
+瞬时解：$\begin{cases}\vec{E}(z,t)=E_{0m}e^{-\alpha z}\cos(\omega t-\beta z+\phi_{0})\vec{e}_{x}\\\vec{H}(z,t)=\frac{E_{0m}}{|\eta_{c}|}e^{-\alpha z}\cos(\omega t-\beta z+\phi_{0}-\theta)\vec{e}_{y}\end{cases}$, $\theta$ 是 $\eta_c$ 的相角
+
+任一时刻电场能量密度和磁场能量密度一般不相等
+
+### 位函数
+
+$\begin{aligned}&\vec{B}=\nabla\times\vec{A}\\&\vec{E}=-\nabla\varphi-\frac{\partial\vec{A}}{\partial t}\end{aligned}$
+
+$\nabla^{2}\vec{A}+k^{2}\vec{A}=-\mu\vec{J}\\\nabla^{2}\varphi+k^{2}\varphi=-\frac{\rho}{\varepsilon}$
+
+[位函数、洛仑兹规范位函数方程的实数复数表示小结](https://www.bilibili.com/video/BV1uV411H7xf/?p=191&t=505)
+
+### 导体
+
+良导体 $\displaystyle\frac{\sigma}{\omega\varepsilon}>>1$

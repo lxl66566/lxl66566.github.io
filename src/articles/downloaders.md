@@ -66,3 +66,9 @@ IDM 是一个付费软件，但是在中国的环境下大家用的都是盗版�
   - 软件本体分别叫 `HTTP_Downloader_64.zip`，`HTTP_Downloader_DM_64.zip`，`HTTP_Downloader_LS_64.zip`，我都下了以后发现 DM 是 darkmode 的意思，而 LS 就不知道了。
   - 浏览器插件需要下载仓库源码，然后把 `HTTP_Downloader_Chrome_Extension` 文件夹单独给浏览器加载。
 - 当然，最重要的问题是根本不可用。我用的是 darkmode 版的，安装了扩展，配置好了下载器，发现其根本不会接管浏览器的下载请求。
+
+## [Motrix](https://github.com/agalwood/Motrix)
+
+Github 高赞的仓库，支持 torrent 下载。界面做得很好看，但是也很重量级。已经[很久没有维护](https://github.com/agalwood/Motrix/issues/1379)了，作者 Github 也没有其他动态，疑似作者跑路或出事。
+
+用起来比浏览器开多线程下载稍快，可以算作误差。
