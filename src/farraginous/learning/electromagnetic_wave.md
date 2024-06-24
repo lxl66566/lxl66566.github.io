@@ -11,7 +11,15 @@ tag:
 
 我最早看的网课是[这个](https://www.bilibili.com/video/av417507556)。不过如评论所说，“这个视频里没有入射折射还有波导相关的章节，知识讲的很细，对速成不友好，对你写题帮助更是不大”。全篇讲证明，没有任何做题，并且是有读 PPT 的嫌疑的。不过物理也就是证明吸引人。
 
+而且，我校的电磁场考得还挺多的，从斜透射到波导，从传输线到偶极子天线，B 站很少有视频能全部讲到。因此我还是自己对照作业 + 书了。
+
+学了一阵子电磁波，发现为了应付考试没有必要去管推导。。那个视频里讲的东西几乎全部没用，笑死。
+
 ## 基础
+
+真空磁导率 $\mu_0=4\pi\times10^{-7} N·A^{−2}$
+
+$\displaystyle c=\frac1{\mu_0\varepsilon_0}$
 
 拉梅系数：
 
@@ -70,7 +78,7 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 [大物基础](./physics.md#电学)
 
-[安培定律](./physics.md#磁场力)：$\displaystyle d\vec{F}=\frac{\mu_0}{4\pi}\frac{Id\vec{l}\times(I'd\vec{l}'\times\vec{R})}{R^3}$, $\vec{F}=\left(\oint_cId\vec{l}\right)\times\vec{B}$
+[安培定律](./physics.md#磁场力)：$\displaystyle d\vec{F}=Id\vec{l}\times d\vec{B}$
 
 毕奥-萨法尔定律：$\displaystyle \vec{B}=\frac{\mu_{0}}{4\pi}\oint_{c'}\frac{I'd\vec{l}'\times\vec{R}}{R^{3}}$
 
@@ -152,7 +160,12 @@ $\displaystyle\vec{B}(r,\theta)=\frac{\mu_{0}m}{4\pi r^{3}}(2\cos\theta\vec{e}_{
 
 功率密度：$p=\vec{J}\cdot\vec{E}=\sigma |\vec{E}|^2$
 
-$\sigma$ 电导率
+$\vec{J}=\sigma\vec{E}$
+
+### 镜像法
+
+- 双垂直平面镜像：一个电荷镜像出三个，两个 -q，一个 +q
+- 球镜像：$-\frac adq$
 
 ## 时变电磁场
 
@@ -161,6 +174,8 @@ $\sigma$ 电导率
 无源：指 $\vec{J}=\vec{0}, \rho = 0$
 
 位移电流密度：$\displaystyle\vec{J}_d=\frac{\partial\vec{D}}{\partial t}$
+
+位移电流不需要导体；而传导电流只有在导体内才有。
 
 麦克斯韦方程组：$\begin{aligned}&\nabla\times\vec{E}=-\frac{\partial\vec{B}}{\partial t}\\&\nabla\times\vec{H}=\vec{J}+\frac{\partial\vec{D}}{\partial t}\\&\nabla\cdot\vec{D}=\rho\\&\nabla\cdot\vec{B}=0\end{aligned}$
 
@@ -173,6 +188,8 @@ $\begin{aligned}
 &{\vec{n}}\cdot({\vec{B}}_{1}-{\vec{B}}_{2})=0
 \end{aligned}$
 
+理想导体表面，有面电荷密度 $\rho_s=\vec{e_n}\cdot\vec{D}$
+
 ### 能量
 
 时变电磁场的功率流密度（坡印廷矢量）：$\vec{S}=\vec{E}\times\vec{H}$
@@ -184,24 +201,31 @@ $\begin{aligned}
 转换为复振幅，消元 t，微分转乘法。
 
 $\begin{aligned}
-&\vec{E}(x,y,z,t)\leftrightarrow\dot{\vec{E}}(x,y,z) \\
-&\frac{\partial}{\partial t}\vec{E}(x,y,z,t)\leftrightarrow j\omega\dot{\vec{E}}_{xm}(x,y,z) \\
+&\frac{\partial}{\partial t}\leftrightarrow j\omega \\
 &\vec{E}(x,y,z,t)=\mathrm{Re}[\dot{\vec{E}}(x,y,z)e^{j\omega t}]
 \end{aligned}$
 
 麦克斯韦方程复数形式：将对 t 偏导以 $j\omega$ 代替即可。
 
-瞬时坡印廷矢量复数：$\vec{S}(\vec{r},t)=\frac{1}{2}\mathrm{Re}[\vec{E}\times\vec{H}^{*}]+\frac{1}{2}\mathrm{Re}[\vec{E}\times\vec{H}e^{j2\omega t}]$
-
-平均坡印廷矢量复数：$\vec{S}(\vec{r})=\frac12\vec{E}\times\vec{H}^*$
+平均坡印廷矢量复数：$\vec{S}_c=\frac12\vec{E}\times\vec{H}^*$
 
 这种复数公式同样适用于 电/磁场能量密度等。
 
+## 平面波
+
 ### 波动方程
 
-#### 无源无耗
+无源波动方程：$\displaystyle\begin{cases}\nabla^2E-\mu\varepsilon \frac{\partial^2\boldsymbol{E}}{\partial t^2}=0\\\nabla^2H-\mu\varepsilon \frac{\partial^2\boldsymbol{H}}{\partial t^2}=0\end{cases}$
 
-复数方程：$\nabla^{2}\vec{E}+k^{2}\vec{E}=\vec{0}$，$\nabla^{2}\vec{H}+k^{2}\vec{H}=\vec{0}$，其中 $k^2=\mu\varepsilon\omega^2$
+达朗贝尔方程：$\displaystyle\begin{cases}{\nabla}^2{A} - \mu{\varepsilon} \frac{\partial^2{A}}{\partial t^2}=- \mu {J}\\{\nabla}^2{\varphi} - \mu{\varepsilon} \frac{\partial^2{\varphi}}{\partial t^2}=- \frac\rho\varepsilon\end{cases}$
+
+亥姆霍兹方程：$\displaystyle\begin{cases}\nabla^{2}\vec{E}+k^{2}\vec{E}=\vec{0}\\\nabla^{2}\vec{H}+k^{2}\vec{H}=\vec{0}\end{cases}$
+
+$k=\omega\sqrt{\mu\varepsilon}$
+
+平均坡印廷矢量：$\vec{S}_{av}=\frac12Re[\vec{E}\times\vec{H}^*]$
+
+#### 无源无耗
 
 波阻抗：$\displaystyle\eta=\frac{E_0}{H_0}=\sqrt{\frac{\mu}{\varepsilon}}$
 
@@ -225,10 +249,65 @@ $\begin{aligned}
 
 $\begin{aligned}&\vec{B}=\nabla\times\vec{A}\\&\vec{E}=-\nabla\varphi-\frac{\partial\vec{A}}{\partial t}\end{aligned}$
 
-$\nabla^{2}\vec{A}+k^{2}\vec{A}=-\mu\vec{J}\\\nabla^{2}\varphi+k^{2}\varphi=-\frac{\rho}{\varepsilon}$
-
 [位函数、洛仑兹规范位函数方程的实数复数表示小结](https://www.bilibili.com/video/BV1uV411H7xf/?p=191&t=505)
 
 ### 导体
 
 良导体 $\displaystyle\frac{\sigma}{\omega\varepsilon}>>1$
+
+弱导电媒质 $\displaystyle\frac{\sigma}{\omega\varepsilon}<<1$
+
+趋肤效应：良导体中电磁波衰减快，局限于导体表面附近的区域。趋肤深度 $\delta\approx\frac\lambda{2\pi}$
+
+### 极化
+
+- 线极化：$\phi=0, \pi$
+- 圆极化：$\phi_y-\phi_x=\pm\frac\pi 2$，振幅相等
+  - 右旋：Ex 超前 Ey
+  - 左旋：Ex 落后 Ey
+
+### 反射和透射
+
+理想导体没有透射
+
+反射系数 $\displaystyle\Gamma=\frac{E_{_{\mathrm{rm}}}}{E_{_{\mathrm{im}}}}=\frac{\eta_{_2}-\eta_{_1}}{\eta_{_2}+\eta_{_1}}$
+
+透射系数 $\displaystyle\tau=\frac{E_{\mathrm{tm}}}{E_{\mathrm{im}}}=\frac{2\eta_2}{\eta_2+\eta_1}$
+
+$\Gamma$ < 0 时反射波和入射波电场相差相位 $\pi$，称为半波损失
+
+## 应用
+
+### （矩形）波导
+
+均匀平面波是 TEM 波；TEM 波不能在空心导体波导内传播。
+
+截止波数 $k_{\text{c}mn}=\sqrt{\left(\frac{m\pi}a\right)^2+\left(\frac{n\pi}b\right)^2}$
+
+截止频率 $\displaystyle f_{\text{c}mn}=\frac{k_{\text{c}mn}}{2\pi\sqrt{\mu\varepsilon}}$
+
+截止波长 $\lambda_{\text{ c}mn}=\frac{2\pi}{k_{\text{ c}mn}}$
+
+相位常数 $\beta_{mn}=\sqrt{k^2-k_{\mathrm{c}mn}^2}$
+
+传播常数 $\gamma_{mn}=j\beta_{mn}$
+
+相速度 $v_{pmn}=\frac\omega{\beta_{mn}}$
+
+波导波长 $\lambda_{\text{ g}mn}=\frac{2\pi}{\beta_{mn}}$
+
+波阻抗 $Z_{TE}=\frac{\omega\mu}{\beta}$
+
+TE10 称为主模。主模开槽应在宽边中心，不切断管壁电流，不影响波导内电磁场。
+
+### 传输线
+
+输入阻抗 $Z_\text{in}(z)=Z_0\frac{Z_\text{L}+\text{j}Z_0\tan(\beta z)}{Z_0+\text{j}Z_\text{L}\tan(\beta z)}$ （不记）
+
+反射系数 $\Gamma=|\Gamma_2|\mathrm{e}^{-\mathrm{j}2\beta z}\mathrm{e}^{\mathrm{j}\phi_2}$（无耗），其中 $\Gamma_2=\frac{Z_\text{L}-Z_0}{Z_\text{L}+Z_0}$
+
+$Z_\text{in}{\left(\frac\lambda4\right)}=\frac{Z_0^2}{Z_\text{L}}$
+
+$Z_\text{in}{\left(\frac\lambda2\right)}=Z_\text{L}$
+
+$\lambda=\frac{2\pi}{k}$
