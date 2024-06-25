@@ -15,7 +15,9 @@ tag:
 
 下载器能够多线程下载网络资源，使带宽最大化。
 
-这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自带多线程下载功能，可以在 flags 里启用；但本人实测其下载速度仍要比下载器慢很多，因此下载器还是有必要的。
+写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。[这里](https://ochagavia.nl/blog/download-accelerator-async-rust-edition/)有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。
+
+这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自带多线程下载功能，可以在 flags 里启用；实测下来，其下载速度与下载器有差距但不算太大，理论上可以抛弃下载器。
 
 测试：（[测试链接](https://gh.con.sh/https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v2.21.12/Waifu2x-Extension-GUI-v2.21.12-Portable.7z)；关闭代理）
 

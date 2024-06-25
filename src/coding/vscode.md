@@ -99,6 +99,12 @@ vscode 的特色：
 - 集成 git 图形化界面，虽说我不用且功能不多，但是对不会用 git 的新手非常友好
 - 多光标支持
 
+## 主题
+
+得益于 electron，vscode 可以很容易地更换主题。`Ctrl + Shift + P` 输入 theme 选择即可。
+
+我个人喜欢用的是 _Monokai Dimmed_。我也曾试过一些其他主题，Nord 感觉对眼睛还是不够友好。
+
 ## 正则匹配
 
 vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft/vscode/issues/39404#issuecomment-348710460)，因此可能无法使用某些正则语法。

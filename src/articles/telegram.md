@@ -25,6 +25,9 @@ telegram 也有一些我认为的缺点，见[telegram 有多难用](../gossip/f
 Telegram 多平台软件均为开源，并且开放了许多 api，因此出现了非常多第三方客户端，它们可以补足 telegram 的缺点。这里介绍一些我用过的。
 
 - [Nagram](https://github.com/NextAlone/Nagram)：非常好，我的刚需全覆盖，支持隐藏群组贴纸 + 忽略被屏蔽用户在群组内的消息 + 消息正则过滤。其也有内置代理。
+  - Nagram 在[某次 commit](https://github.com/NextAlone/Nagram/commit/6094a82b979403e2b6ddb85414fcd042f42b84c6) 中默认隐藏了这些功能，想要启用需要重新编译。
+  - Nagram 加入群组可能出现问题，弹窗已达群组上限。
+- [AyuGram](https://github.com/AyuGram)：防撤回 + 屏蔽 block user，比起 nagram 总体改动不大。Android 需要自行编译，很麻烦；Desktop 还行。
 - [NekoX](https://github.com/NekoX-Dev/NekoX)（已过时）：内置代理，不过带宽较小，不稳定。疑似已停止开发。
 - [Cherrygram](https://github.com/arsLan4k1390/Cherrygram)：[骗](https://t.me/withabsolutex/1676)，声称 Blocking stickers 实际上不行。
 
@@ -99,6 +102,12 @@ tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创
 ## 找回账号
 
 如果我们之前已经在一台设备上登陆过自己的账号，那么如果再次登录的时候，TG 并不会把验证码以短信的方式发送到我们的设备上，而是通过电报站内信的方式发送消息给你的设备。若此唯一设备无法使用，那么就无法登录，进入了死循环。[src](https://t.me/apkrxwy/1019)
+
+## 进阶操作
+
+在使用[第三方 Telegram 客户端](#第三方客户端)时，可能需要自行提供 APP_ID 并编译 apk。
+
+这个 APP_ID 需要去 Telegram 申请，所使用的 IP 需要和手机号所在地区一致。我尝试注册，使用日本 IP 与香港 IP 均无法完成申请，而中国大陆 IP 又无法访问 telegram.org，只能望洋兴叹。如果你是 +86 手机号，建议直接打消这个注册的念头。
 
 ## 其他技巧
 

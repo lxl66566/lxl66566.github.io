@@ -145,14 +145,17 @@ Kiwi Browser 是我接触到的第一个能够装扩展的重量级浏览器。
 
 ### 狐猴浏览器
 
-一款国产商业浏览器，主打卖点就是扩展丰富，同时支持 chrome 和 edge 商店。
+一款国产商业浏览器，主打卖点就是扩展丰富，同时支持 chrome 和 edge 商店。有一些花里胡哨的功能，建议关了再用。
 
 - UI 是仿夸克浏览器的
 - **时常崩溃**
+- 下载路径在 `android/data` 下且无法更改。
 
 ### Firefox nightly
 
 没用过，不过我开始用 Kiwi Browser 的时候，这位还没有能装扩展的消息出现。
+
+现在能装，但是首先 firefox 的扩展就比 chromium 系少，其次它还进一步限制能安装的扩展。。([当前进度](https://blog.mozilla.org/addons/2023/11/28/open-extensions-on-firefox-for-android-debut-december-14-but-you-can-get-a-sneak-peek-today/))
 
 Firefox 倒是用过，没啥特别的，要功能没功能，还重量级，用了两天不用了。
 

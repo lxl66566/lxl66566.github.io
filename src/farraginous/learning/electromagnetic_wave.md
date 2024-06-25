@@ -55,7 +55,7 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 
 旋度定理（斯托克斯定理）：$\int_s\nabla\times\vec{A}\cdot d\vec{S}=\oint_c\vec{A}\cdot d\vec{l}$
 
-两个恒等式：标量场的梯度的旋度恒等于 0 矢量($\nabla\times(\nabla\varphi)=\vec{0}$)，矢量场的旋度的散度恒等于 0 标量($\nabla\cdot(\nabla\times\vec{A})=0$)。
+两个恒等式：标量场的梯度的旋度恒等于 0 矢量($\nabla\times(\nabla\varphi)=\vec{0}$)，矢量场的旋度的散度恒等于 0 标量($\nabla\cdot(\nabla\times\vec{A})=0$)。（梯无旋，旋无散）
 
 亥姆霍兹定理：场的分解。$\displaystyle\vec{F}=\vec{F_1}+\vec{F_2}=-\nabla\varphi+\nabla\times\vec{A}$；$F_1$ 无旋，$F_2$ 无源（无散）
 
@@ -101,18 +101,6 @@ $\nabla$ 算子运算法则与求导法则一致。$\nabla$ 算子在每个坐�
 （体）磁矢位方程：$\displaystyle\vec{A}(\vec{r})=\frac{\mu_{0}}{4\pi}\int_{V}\frac{\vec{J}}{\left|\vec{r}-\vec{r}^{\prime}\right|}dV^{\prime}$
 
 [泊松方程](https://zh.wikipedia.org/wiki/泊松方程)
-
-### 偶极子
-
-偶极子条件 $r >> l$
-
-电偶极矩：$\vec{p}=q\vec{l}$，有电位 $\displaystyle\varphi=\frac{\vec{p}\cdot\vec{r}}{4\pi\varepsilon_{0}r^{3}}$，其中 $\vec{l}$ 是 -q 指向 +q，r 为电偶极子中心与待测点的距离。
-
-磁偶极矩：$\vec{m}=I\vec{S}$，有磁矢位 $\displaystyle\vec{A}=\vec{A}_{\phi}=\frac{\mu_{0}}{4\pi}\frac{\vec{m}\times\vec{r}}{r^{3}}$
-
-可以求得场方程
-
-$\displaystyle\vec{B}(r,\theta)=\frac{\mu_{0}m}{4\pi r^{3}}(2\cos\theta\vec{e}_{r}+\sin\theta\vec{e}_{\theta})\\\vec{E}(r,\theta)=\frac{p}{4\pi\varepsilon_{0}r^{3}}\Big(2\cos\theta\vec{e}_{r}+\sin\theta\vec{e}_{\theta}\Big)$
 
 ### 介质中
 
@@ -213,6 +201,8 @@ $\begin{aligned}
 
 ## 平面波
 
+波的传播方向：$e^{-j\beta z}$ 代表 z 正向。
+
 ### 波动方程
 
 无源波动方程：$\displaystyle\begin{cases}\nabla^2E-\mu\varepsilon \frac{\partial^2\boldsymbol{E}}{\partial t^2}=0\\\nabla^2H-\mu\varepsilon \frac{\partial^2\boldsymbol{H}}{\partial t^2}=0\end{cases}$
@@ -221,13 +211,13 @@ $\begin{aligned}
 
 亥姆霍兹方程：$\displaystyle\begin{cases}\nabla^{2}\vec{E}+k^{2}\vec{E}=\vec{0}\\\nabla^{2}\vec{H}+k^{2}\vec{H}=\vec{0}\end{cases}$
 
-$k=\omega\sqrt{\mu\varepsilon}$
+波数 $k=\omega\sqrt{\mu\varepsilon}$
 
 平均坡印廷矢量：$\vec{S}_{av}=\frac12Re[\vec{E}\times\vec{H}^*]$
 
 #### 无源无耗
 
-波阻抗：$\displaystyle\eta=\frac{E_0}{H_0}=\sqrt{\frac{\mu}{\varepsilon}}$
+波阻抗：$\displaystyle\eta=\frac{E_0}{H_0}=\sqrt{\frac{\mu}{\varepsilon}}$，真空中为 120π
 
 复数解为 $\begin{cases}\vec{E}(z)=E_{0m}e^{j\phi_0}e^{-jkz}\vec{e}_x\\\vec{H}(z)=H_{0m}e^{j\phi_0}e^{-jkz}\vec{e}_y=\frac{E_{0m}}{\eta}e^{j\phi_0}e^{-jkz}\vec{e}_y\end{cases}$
 
@@ -239,11 +229,13 @@ $k=\omega\sqrt{\mu\varepsilon}$
 
 只需用复介电常数：$\varepsilon_c=\varepsilon-j\frac{\sigma}{\omega}$ 代入所有 $\varepsilon$ 即可。
 
-用 $\gamma=\omega\sqrt{\mu\varepsilon_c}=\beta-j\alpha$ 替换 k
+用 $\gamma=j\omega\sqrt{\mu\varepsilon_c}=\alpha+j\beta$ 替换 k，其中 α 称为衰减常数，β 称为相位常数
 
 瞬时解：$\begin{cases}\vec{E}(z,t)=E_{0m}e^{-\alpha z}\cos(\omega t-\beta z+\phi_{0})\vec{e}_{x}\\\vec{H}(z,t)=\frac{E_{0m}}{|\eta_{c}|}e^{-\alpha z}\cos(\omega t-\beta z+\phi_{0}-\theta)\vec{e}_{y}\end{cases}$, $\theta$ 是 $\eta_c$ 的相角
 
 任一时刻电场能量密度和磁场能量密度一般不相等
+
+相速度 $v_p=\frac\omega\beta$，若相速度与频率有关称为色散介质。
 
 ### 位函数
 
@@ -263,18 +255,26 @@ $\begin{aligned}&\vec{B}=\nabla\times\vec{A}\\&\vec{E}=-\nabla\varphi-\frac{\par
 
 - 线极化：$\phi=0, \pi$
 - 圆极化：$\phi_y-\phi_x=\pm\frac\pi 2$，振幅相等
-  - 右旋：Ex 超前 Ey
-  - 左旋：Ex 落后 Ey
+  - 右旋：Ex 超前 Ey，$\phi_y-\phi_x<0$
+  - 左旋：Ex 落后 Ey，$\phi_y-\phi_x>0$
 
 ### 反射和透射
 
 理想导体没有透射
 
+垂直射理想导体：$\begin{cases}E_{1}( z )=e_{x}E_{\mathrm{im}}( \mathrm{e}^{-\mathrm{j}\beta_{1}z}-\mathrm{e}^{\mathrm{j}\beta_{1}z} )=-e_{x}\mathrm{j}2E_{\mathrm{im}}\sin\beta_{1}z\\H_{1}(z)=e_{y} \frac{1}{\eta_{1}}E_{\mathrm{im}}( \mathrm{e}^{-\mathrm{j}\beta_{1}z}+\mathrm{e}^{\mathrm{j}\beta_{1}z} )=e_{y} \frac{2}{\eta_{1}}E_{\mathrm{im}}\mathrm{cos}\beta_{1}z\end{cases}$
+
 反射系数 $\displaystyle\Gamma=\frac{E_{_{\mathrm{rm}}}}{E_{_{\mathrm{im}}}}=\frac{\eta_{_2}-\eta_{_1}}{\eta_{_2}+\eta_{_1}}$
 
 透射系数 $\displaystyle\tau=\frac{E_{\mathrm{tm}}}{E_{\mathrm{im}}}=\frac{2\eta_2}{\eta_2+\eta_1}$
 
+驻波系数（驻波比） $S=\frac{1+|\Gamma|}{1-|\Gamma|}$
+
 $\Gamma$ < 0 时反射波和入射波电场相差相位 $\pi$，称为半波损失
+
+三层介质等效阻抗：$\displaystyle\eta_{\mathrm{ef}}=\eta_2\frac{\eta_3+\mathrm{j}\eta_2\tan(\beta_2d)}{\eta_2+\mathrm{j}\eta_3\tan(\beta_2d)}$
+
+全反射临界角 $\theta_c=arcsin(n_2/n_1)$
 
 ## 应用
 

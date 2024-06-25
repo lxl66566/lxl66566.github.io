@@ -32,7 +32,7 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
 
 1. 插件：
    - 禁用一些 Google 家的垃圾
-   - Key Promoter X
+   - ~~Key Promoter X~~ 不是纯键盘党，不用
    - CodeGlance Pro
    - Rainbow Brackets
    - Material UI Theme，先用 GitHub Dark (Material) 一段时间
