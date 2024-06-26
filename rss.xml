@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 26 Jun 2024 04:14:53 GMT</pubDate>
-    <lastBuildDate>Wed, 26 Jun 2024 04:14:53 GMT</lastBuildDate>
+    <pubDate>Wed, 26 Jun 2024 10:06:50 GMT</pubDate>
+    <lastBuildDate>Wed, 26 Jun 2024 10:06:50 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -1238,6 +1238,7 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <li>这会有一些 sideeffects，例如使某些终端乱码，win + R 失去记忆，等等。必需谨慎使用。</li>
 </ul>
 </li>
+<li>开启长路径：组策略编辑器（运行 <code>gpedit.msc</code>），“计算机配置” &gt; “管理模板” &gt; “系统” &gt; “文件系统” &gt; “启用 Win32 长路径”，选择“已启用”</li>
 </ol>
 <h2>软件</h2>
 <p>关于软件推荐请前往<a href="/farraginous/recommend_packages.html" target="_blank">杂项 - 软件汇总</a>页面。</p>
