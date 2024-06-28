@@ -23,14 +23,32 @@ tag:
 2. 干点什么之前，先去[落絮](https://luoxu.archlinuxcn.org/)搜一下关键词，看看别人有没有踩坑
 
 ::: tip
-以下是正文，按时间倒序。
+
+以下是正文，按时间倒序。越后面（越早）时犯的错越傻逼…
+
 :::
 
-## NixOS-WSL
+## EFI 空间不足
 
-这里收集一些 nix 的问题。我在考试周时间不足，因此先使用 NixOS-WSL 进行 NixOS 的尝试与熟悉。
+一些 Linux 新手（包括我）在第一次给 Linux 分区时都会将 EFI 分区分得过小。我分了 512M，之前在 Arch 最多也就同时用三个内核，而此次再加上了一堆 NixOS 的内核后终究是不堪重负，`no space left on device`。
 
-### 网络
+于是我考虑为其扩容。在我的硬盘上，EFI 是第一个分区，而第二个刚好是 19GB 的 swap，这非常有利，我完全不需要考虑数据问题。使用 cfdisk，直接缩小 swap 分区会从后方缩小，因此需要删除 swap 分区，在扩大 EFI 分区后，再在原位置建立 swap 分区。
+
+这还没完，EFI 分区扩大了，但是 filesystem 的大小是没变的（又被坑了一次，分完区还报错空间不足呢）。由于我的 Nixos 安装盘上并没有 fatresize（吐槽），并且系统进不去（说到底这个 bug 是我在解决另一个 bug 时出现的），所以只好使用笨办法，借用 swap 分区。
+
+首先，上 cfdisk 把 swap 改成正常分区，然后 `mkfs.ext4`，挂载后把 EFI 的东西全部 cp 进去，再对 EFI 分区 `mkfs.vfat`。最后把数据移回去，swap 改回去就大功告成了。听着就麻烦。后来我自己做了 NixOS iso 并且把 fatresize 加进去了，不过估计是用不到了。（现在 EFI 有 2G）
+
+## cfdisk 操作分区
+
+cfdisk 是一个非常好用的 TUI 分区工具，但是对于初次使用的人（其实不是初次，但是忘了），cfdisk 也可能成为一个坑。
+
+所有在 cfdisk 里的操作都是**模拟**。在完成操作后需要执行一次 `写入（Write）` 才会被真正应用。~~我说我怎么缩过的分区还会自己合起来的~~
+
+## 你的复制是真正的复制？
+
+在 windows 上将一个 2G 的镜像复制到 U 盘里要花上几分钟，而在 Archlinux 上是瞬间。而 U 盘的写入速度不可能超越瓶颈。很容易猜到后台有东西在对 U 盘进行写入。遂关机，发现 `A stop job is running for Disk Manager`，证毕。
+
+## NixOS-WSL 网络
 
 首先，装好 NixOS-WSL 后，无法 `sudo nix-channel --update`。查看环境变量发现没有设代理，于是[设了](https://nixos-cn.org/tutorials/installation/Networking.html#_3-使用代理工具加速访问-channels-跟-flake-inputs)，结果发现还是不行。然后想到 root 和 user 用的不是同一个 env，便进入 root 修改（需要用 `sudo -i` 进 root 而不是 `su`）。
 
@@ -293,7 +311,7 @@ ps. 实际上 linux 下不明所以的 warning, error 好多的（详见 `journa
 
 > Partitions or virtual mapping on device, not making file system. (use -I to override)
 
-然后尝试了 `-I`，结果分区全没了；对着 `nvme1n1` `mkswap`，分区又炸了（全盘格成了 swap）。最后才发现格式化是分区操作，而不是硬盘操作。。
+然后尝试了 `-I`，结果分区全没了；对着 `nvme1n1` `mkswap`，分区又炸了（全盘格成了 swap）。最后才发现格式化是分区操作，而不是硬盘操作。。非常的萌新非常的弱智。
 
 ## 更新 pacman keyring
 

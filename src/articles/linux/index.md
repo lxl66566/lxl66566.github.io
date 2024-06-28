@@ -26,7 +26,9 @@ tag:
 
 ## [基础](./basic.md)
 
-## [安装与配置](./install_and_config.md)
+## [安装与配置（Arch 篇）](./install_and_config.md)
+
+## [安装与配置（Nix 篇）](./nix.md)
 
 ## [包管理与使用推荐](./package.md)
 

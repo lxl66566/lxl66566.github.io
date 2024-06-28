@@ -122,6 +122,19 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 git 内添加链接指向的文件需要手动 `git add -f`。
 
+### 调整大小
+
+我们日常使用中可能会遇到需要调整分区大小的情况。实际上我们的意思一般是“调整分区和其上的 fs 大小，并保持调整后它们的大小仍然相等”。由于 fs 在分区上层，一般来说，我们需要：
+
+- 扩大容量：先扩大分区，再扩大 fs
+- 缩小容量：先缩小 fs，再缩小分区
+
+否则会发生数据丢失。
+
+还有一个注意点是分区的对齐。由于 fs 的元数据（superblock）一般在分区最前面，缩小 fs 和分区默认都是从后方缩小，可能缩小腾出的空间并没有办法给前方分区使用。
+
+对于 btrfs，我们可以很方便地在线调整 fs 大小，无需使用启动盘 mount。搜索 `btrfs fi resize` 获取教程。调整大小前建议先清理一下快照，跑一次 balance。
+
 ## 混成器
 
 混成器是向实际屏幕绘制的抽象层，提供了接口供 UI 软件调用。更多混成器相关知识可以看 farseerfc 的两篇博文([1](https://farseerfc.me/zhs/brief-history-of-compositors-in-desktop-os.html) [2](https://farseerfc.me/zhs/compositor-in-X-and-compositext.html))。
@@ -132,7 +145,7 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 
 现在谈到混成器，Wayland 几乎成为了“政治正确”的代言，许多发行版也将默认混成器换为 Wayland（例如 Fedora）。但是我一直都是坚定的 X11 人。
 
-- 最让我无法接受的是 Wayland 协议下无法获取当前窗口标题，这直接导致了 [activitywatch 无法使用](https://github.com/ActivityWatch/activitywatch/issues/92)。
+- 最让我无法接受的是 Wayland 协议下无法获取当前窗口标题，这直接导致了 [activitywatch 无法使用](https://github.com/ActivityWatch/activitywatch/issues/92)，而这是我的刚需。
 - 某些软件的 Wayland 协议适配差，例如 _腾讯会议_（摄像头无法使用）。
   - 远程桌面基本上用不了。([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=wayland+远程桌面))
 

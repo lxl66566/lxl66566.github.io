@@ -8,7 +8,7 @@ tag:
   - 桌面端
 ---
 
-# 安装与配置
+# 安装与配置（Arch 篇）
 
 ## 安装
 
@@ -327,8 +327,4 @@ sudo pacman -S linux-zen linux-zen-headers
 
 ## 混成器
 
-我目前正在使用 X11。
-
-虽然现在大势所趋是 wayland，我一开始装了 arch 也是用的 wayland，但是它实在是太不自由[^1]了。
-
-[^1]: wayland 下其他应用无法获取当前窗口标题。而这对我来说是一个[刚需](../time_record.md)。[src](https://t.me/withabsolutex/1237)
+我目前正在使用 X11。具体原因请移步 [basic](./basic.md#混成器)。

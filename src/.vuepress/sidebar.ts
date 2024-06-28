@@ -28,6 +28,7 @@ export default sidebar({
 		"index.md",
 		"basic.md",
 		"install_and_config.md",
+		"nix.md",
 		"package.md",
 		"problem.md",
 	],
