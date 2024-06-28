@@ -6,22 +6,97 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 27 Jun 2024 02:44:14 GMT</pubDate>
-    <lastBuildDate>Thu, 27 Jun 2024 02:44:14 GMT</lastBuildDate>
+    <pubDate>Fri, 28 Jun 2024 09:31:54 GMT</pubDate>
+    <lastBuildDate>Fri, 28 Jun 2024 09:31:54 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
     <category>编程</category>
     <category>应用</category>
     <category>推荐</category>
     <category>评价</category>
     <category>学习</category>
     <category>生命科学</category>
-    <category>教程</category>
     <category>生活</category>
     <category>经历</category>
     <category>随笔</category>
     <category>主张</category>
     <category>导航</category>
+    <item>
+      <title>安装与配置（NixOS 篇）</title>
+      <link>https://absx.pages.dev/articles/linux/nix.html</link>
+      <guid>https://absx.pages.dev/articles/linux/nix.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">安装与配置（NixOS 篇）</source>
+      <description>安装与配置（NixOS 篇） 早在去年我便说过我的下一个输入法很有可能是 NixOS。202405 的操作系统课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix 把我自己心吹得痒痒的。 在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL 里...</description>
+      <category>教程</category>
+      <pubDate>Fri, 28 Jun 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>早在去年我便说过我的下一个输入法很有可能是 NixOS。202405 的操作系统课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix 把我自己心吹得痒痒的。</p>
+<p>在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL 里尝尝鲜。而 WSL 终究无法发挥出 Nix 的特色。于是熬到了考完试当晚，我就开始安装 NixOS 了。</p>
+<h2>NixOS 安装</h2>
+<p>安装我看的是<a href="https://nixos-cn.org/tutorials/installation/Subsystem.html" target="_blank" rel="noopener noreferrer">NixOS 中文</a>。</p>
+<p>NixOS 的安装比我想象的要折磨得多。原以为装过 Arch 的我已经无惧困难，结果输得非常彻底。。一大原因是因为没有 Archlinux 那样的顶级文档，而另一个则是群友人数确实更少，解答问题的也更少。不过这些都是后话了。</p>
+<p>我是在还没有学习 nix 语言和特性的情况下装的系统，踩了不少坑。</p>
+<p>首先，我<a href="/articles/linux/basic.html#%E8%B0%83%E6%95%B4%E5%A4%A7%E5%B0%8F" target="_blank">缩了 ArchLinux 的分区大小</a>，踩了一次 <a href="/articles/linux/problem.html#cfdisk-%E6%93%8D%E4%BD%9C%E5%88%86%E5%8C%BA" target="_blank">cfdisk 的坑</a>。而后下载了 NixOS 的图形化安装程序，用 ventoy 引导启动，一切正常。然而在安装引导的分区时我发现，图形化界面没有提供 btrfs 分区，只提供 ext4。于是我停止使用图形化界面，改用里面的 konsole 终端。结果 channel update 时无法正常重启某些服务（<code>xe-daemon.service: NewCachedXenstore error: Cannot locate xenbus dev path...</code>）。我猜测这是图形界面导致的问题，于是我重新打开 arch，下载了 minimal iso，这里面还有一个<a href="/articles/linux/problem.html#%E4%BD%A0%E7%9A%84%E5%A4%8D%E5%88%B6%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%A4%8D%E5%88%B6%EF%BC%9F" target="_blank">好玩的小插曲</a>。</p>
+<p>果然进了 minimal <s>有一种回家的感觉</s>，并且确实没有重启服务失败的问题了。一番鼓捣，总结出一些重要规律：</p>
+<ul>
+<li>碰到 <code>http 200: error</code> 不要管，后台会重试。（说到底，code 200 还报 error 是我没想到的）</li>
+<li>如果 <code>denpendency fail to build</code>，换个源重新试。
+<ul>
+<li>如果换源后碰到同样的问题，把源换回去再试。</li>
+</ul>
+</li>
+<li>安装过程中遇到 <code>core dumped</code>。。。emmm，这有点脑残了，不过换了个源又好了，可能是因为没拉到缓存，构建时 core dump？</li>
+</ul>
+<p>就这样，两个源交替查缺补漏，总算是 install success 了。“最终退后三步朝电脑跪拜祈求它能正常开机，至此基本安装教程完毕。”——才怪，sddm 进去后，root 和我都无法登录（保证密码正确）。于是类似 Arch 那样重走挂载流程，<code>nixos-enter</code> 进去修。</p>
+<p>这进去一 rebuild 我就感觉不对劲，此处把报错贴出：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>sudo: PAM account management error: Authentication service cannot retrieve authentication info</span></span>
+<span class="line"><span>sudo: a password is required</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>求助群友，群友说 <code>nixos-install</code> 与 <code>nixos-rebuild</code> 效果基本是一样的，让我去外面用 install 试。效果确实差不多，不过每次在 livecd install 都相当于重装，无法用内部的缓存，全部重新下载，还是有点耗时的。install success 后再次 <code>nixos-enter</code> 试，还是一样的报错，只要用到 sudo 就会炸。鼓捣了大半天，reinstall 了好几次都无法解决，另一个管理发话了：在 <code>nixos-enter</code> 中这是<strong>正常现象，内核的表现是不一致的</strong>。我一直把 <code>nixos-enter</code> 当 <code>arch-chroot</code> 用，没想到这玩意这么捞。</p>
+<p>这回重启就正常了，也不知道是其中的哪次 install 尝试起了作用。于是我成功进入系统开始激情编辑配置。</p>
+<h3>后记</h3>
+<p>第二天学校有实践课加上 cs2 出新图，没怎么折腾系统，尝试给电脑<a href="">装了个 nvidia 驱动</a>和其他玩意就去睡觉了。</p>
+<p>第三天起床一开机，直接 dmesg 卡死无法切 tty。兄弟我还有课啊！于是带着去教室不听课，校园网认证还过不了，只好用手机开热点修。这次知道不能 <code>nixos-enter</code> 了，但是只能用小手机查资料，每次挂载输入一大串，用镜像输一大串，重新 install 等好久，试错成本偏高。加上我昨天配置改了很多，二分查找需要的次数也不可估量，因此还是非常慢的。（不能简单地放弃 NVIDIA 驱动，因为有 NixOS gaming 需求）</p>
+<p>二分查错过程中我发现每次 install 并不会重新写入 EFI 分区（配置里注释了启动项，但是 grub 菜单并没有消失），因此向群友提问。群友答日常 build 和 install 是不会擦除 EFI 的，只有 gc 时会。但是我并不在系统里，<code>nixos-enter</code> 如上文所述，并不能执行 gc 指令。</p>
+<p>后来终于发现原因了，我换了 zen 内核，按理需要用 dkms 的 NVIDIA 驱动，然而实际用的是 NVIDIA 闭源驱动。。nixos 没有任何提示，于是导致了此惨剧。然后换回原内核又发生了 <a href="/articles/linux/problem.html#efi-%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3" target="_blank">EFI 空间不足</a>的惨剧，又折腾许久。等我成功开机，都过了午饭时间了。然后一开机我就去定制了一个 iso，太折磨了。</p>
+<p>下午折腾中文拼音输入法。</p>
+<p><a href="https://medium.com/@realLanta/%E4%B8%80%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B0%B1%E8%83%BD%E5%9C%A8%E5%90%84%E4%B8%AA%E7%94%B5%E8%84%91%E8%A3%85%E4%B8%80%E6%A8%A1%E4%B8%80%E6%A0%B7%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%92%8C%E8%BD%AF%E4%BB%B6-%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E4%BD%A0%E8%BD%BB%E6%9D%BE%E6%8E%8C%E6%8F%A1nixos-7f026b539242" target="_blank" rel="noopener noreferrer">一个配置文件就能在各个电脑装一模一样的系统和软件？ — 保姆级教你轻松掌握 NixOS</a></p>
+<p><a href="https://www.reddit.com/r/NixOS/comments/1bmwky4/fcitx5_rime_pinyin_not_working/" target="_blank" rel="noopener noreferrer">Fcitx5 rime / pinyin not working</a></p>
+<p><a href="https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/" target="_blank" rel="noopener noreferrer">Gaming on nixos : r/NixOS</a></p>
+<h2>配置</h2>
+<h3>显卡驱动</h3>
+<p>官方给出了比较详细的 NixOS 显卡驱动教程(<a href="https://nixos.wiki/wiki/Nvidia" target="_blank" rel="noopener noreferrer">NixOS Manual - Nvidia</a>)，看就完了。我认为还存在一些缺点：</p>
+<ol>
+<li>有些复杂，例如双显卡需要手动查总线并写入 hardware-configuration.</li>
+<li>prime 功能有点残缺，官方给出的 example 里只有在启动时选择不同的启动项以应对外带和接电源两种情况，而不能动态调整性能模式：正常情况下应该是在游戏启动时启用显卡而在未游戏时关闭。</li>
+</ol>
+<h3>拼音输入法</h3>
+<p>用英文有点习惯，要不是我打开博客想写论文我都想不到中文输入法没装。</p>
+<p>我先尝试 arch 上用习惯的 fcitx5：</p>
+<div class="language-nix line-numbers-mode" data-highlighter="shiki" data-ext="nix" data-title="nix" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">i18n</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">defaultLocale</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "zh_CN.UTF-8"</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">i18n</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">inputMethod</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">  enabled</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "fcitx5"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">  fcitx5</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">addons</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> with</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> pkgs</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">; [</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    fcitx5-chinese-addons</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    fcitx5-mozc</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    fcitx5-gtk</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    fcitx5-rime</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    fcitx5-configtool</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ];</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然而这并不能使用，在输入法里切到了中文键盘，打出的一直都是英文。</p>
+<p>然后我尝试用了一下 ibus：</p>
+<div class="language-nix line-numbers-mode" data-highlighter="shiki" data-ext="nix" data-title="nix" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">i18n</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">defaultLocale</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "zh_CN.UTF-8"</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">i18n</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">inputMethod</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">  enabled</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "ibus"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">  ibus</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">engines</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> with</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> pkgs</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">ibus-engines</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">; [</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    rime</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    libpinyin</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ];</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>用倒是能用了，但是我并不清楚 ibus 如何支持双拼。而且</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Android</title>
       <link>https://absx.pages.dev/coding/android.html</link>
@@ -1492,28 +1567,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 </li>
 </ol>
 </section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Trojan</title>
-      <link>https://absx.pages.dev/articles/proxy/trojan.html</link>
-      <guid>https://absx.pages.dev/articles/proxy/trojan.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">Trojan</source>
-      <description>Trojan trojan 协议是一个广泛使用的，伪装成明确特征的 https 流量的协议，直接利用了现有的 tls 加密。 trojan repo 的上一次 commit 是 2020 年，大致能认为无人维护了。（并且 issue 区充斥着大量垃圾内容） 安装 配置文件在 /etc/trojan/config.json，内部已有一个模版，稍作修改即可...</description>
-      <category>教程</category>
-      <pubDate>Sun, 26 Nov 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>trojan 协议是一个广泛使用的，伪装成明确特征的 https 流量的协议，直接利用了现有的 tls 加密。</p>
-<p><a href="https://github.com/trojan-gfw/trojan" target="_blank" rel="noopener noreferrer">trojan</a> repo 的上一次 commit 是 2020 年，大致能认为无人维护了。（并且 issue 区充斥着大量垃圾内容）</p>
-<h2>安装</h2>
-
-<p>配置文件在 <code>/etc/trojan/config.json</code>，内部已有一个模版，<a href="https://trojan-gfw.github.io/trojan/config" target="_blank" rel="noopener noreferrer">稍作修改</a>即可使用。</p>
-<p>首次启动建议先 <code>trojan /etc/trojan/config.json</code> 测试配置文件是否正确。若正确，启动服务 <code>trojan.service</code> 即可。</p>
-<h2>客户端</h2>
-<p>不需要我多说。</p>
-<h2>遇到的问题</h2>
-<p>启动服务时报错 <code>trojan.service: Start request repeated too quickly.</code>。搜，按照 <a href="https://github.com/trojan-gfw/trojan/issues/387" target="_blank" rel="noopener noreferrer">issue 所述</a>改了用户组，无效。</p>
-<p>然后直接运行 <code>trojan /etc/trojan/config.json</code>，看到 error 是端口占用了。猜测 trojan 不会将报错信息输出到 stderr，因此无法直接 <code>systemctl status trojan</code> 查看报错信息。</p>
 ]]></content:encoded>
     </item>
   </channel>
