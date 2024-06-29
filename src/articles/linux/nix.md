@@ -68,7 +68,16 @@ sudo: a password is required
 
 一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
-还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config)
+还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config) [3](https://codeberg.org/shitpostalotl/nixos)
+
+### 搜索
+
+安装与配置中很重要的一环是学会搜索。即使 nixos 的文档比较内个，也有一些非常好用的网站用来查询所需信息。
+
+- <https://search.nixos.org/packages>：查找包。
+  - 主要也就看 Homepage 和 Source，分别对应项目 README 和 打包 nix 源码
+- <https://search.nixos.org/options>：查找设置项
+- <https://home-manager-options.extranix.com/>：查找 home-manager 中的设置项。人家做的多好，~~爆杀你们 manual~~
 
 ## 配置
 
@@ -146,8 +155,26 @@ extraLocaleSettings = {
 1. 假设滚挂了，方便 reinstall（把 import 注释掉即可；否则一个 `configuration.nix` 不好拆，我也不想一个 install 下载几十 GB）
 2. 有些配置文件确实不方便统一管，例如 KDE 的某些设置等。
 
-转移到 home manager 也不麻烦，[thiscute](#学习) 有很好的教程。
+从 `configuration.nix` 转移到 home manager 也不麻烦，[thiscute](#学习) 有很好的教程，并且它们的条目基本是兼容的。
+
+但是进一步定制各种配置文件就没那么简单了，因为 [home-manager 的 manual](https://nix-community.github.io/home-manager/index.xhtml) 就是一坨屎！建议直接用[第三方的 options 搜索](#搜索)。并且它的内置设置也是极度缺乏的，即使是 git 这种大众软件也没有多少可设置项，大多都还要自己写 source 甚至 text。
 
 ### Gaming
 
 [Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
+
+## 劝退
+
+最后来说说劝退。NixOS 自身的问题还是不小的：
+
+- 文档稀烂，缺乏条目
+  - google 比文档多，学习靠社区解答
+- 社区不合，drama 不断
+- 报错模糊
+
+我在使用过程中也有一些想吐槽的（其实上面就有很多）：
+
+- `/etc/nixos` 不允许建 `.git` 目录
+- 图形化安装界面垃圾
+- minimal 镜像缺功能
+- home manager 捞爆了
