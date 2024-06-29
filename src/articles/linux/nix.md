@@ -64,7 +64,12 @@ sudo: a password is required
 
 - [NixOS 中文](https://nixos-cn.org/tutorials/installation/Subsystem.html)：安装教程与初步使用
 - [NixOS 与 Flakes - thiscute](https://nixos-and-flakes.thiscute.world/zh/preface)：进阶好书
+- [Lan Tian @ Blog](https://lantian.pub/article/modify-website/nixos-why.lantian/)：打包与高级用法
 - [中文 discourse](https://discourse.nixos.org/c/learn/chinese/55) & [telegram group](https://t.me/nixos_zhcn)：可能可以来问问题
+<!-- - 还有些其他的：
+  ::: details 课外阅读
+
+  ::: -->
 
 一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
@@ -78,6 +83,7 @@ sudo: a password is required
   - 主要也就看 Homepage 和 Source，分别对应项目 README 和 打包 nix 源码
 - <https://search.nixos.org/options>：查找设置项
 - <https://home-manager-options.extranix.com/>：查找 home-manager 中的设置项。人家做的多好，~~爆杀你们 manual~~
+- <https://nur.nix-community.org/>：NUR 包
 
 ## 配置
 
@@ -165,7 +171,7 @@ extraLocaleSettings = {
 
 ### 快照
 
-NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，我猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。`nixos-enter` 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。
+NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，我猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，根目录下又都是符号链接，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。`nixos-enter` 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。
 
 在 nixos 上倒没有频繁打快照的必要，因为只要我有一个正常的快照，恢复后就可以从最新的配置文件 rebuild 回去（快照在这里起到的作用可能是 nixos-enter 的补充，使我能够使用盘里的缓存进行 rebuild），因此我选择不使用自动快照软件例如 snapper，而是手打。
 

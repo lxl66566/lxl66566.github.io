@@ -38,6 +38,8 @@ tag:
 
 首先，上 cfdisk 把 swap 改成正常分区，然后 `mkfs.ext4`，挂载后把 EFI 的东西全部 cp 进去，再对 EFI 分区 `mkfs.vfat`。最后把数据移回去，swap 改回去就大功告成了。听着就麻烦。后来我自己做了 NixOS iso 并且把 fatresize 加进去了，不过估计是用不到了。（现在 EFI 有 2G）
 
+改完千万别忘了调挂载里的 uuid。
+
 ## cfdisk 操作分区
 
 cfdisk 是一个非常好用的 TUI 分区工具，但是对于初次使用的人（其实不是初次，但是忘了），cfdisk 也可能成为一个坑。
