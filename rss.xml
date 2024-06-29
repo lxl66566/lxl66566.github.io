@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 28 Jun 2024 09:31:54 GMT</pubDate>
-    <lastBuildDate>Fri, 28 Jun 2024 09:31:54 GMT</lastBuildDate>
+    <pubDate>Sat, 29 Jun 2024 08:51:48 GMT</pubDate>
+    <lastBuildDate>Sat, 29 Jun 2024 08:51:48 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -40,7 +40,7 @@
 <p>首先，我<a href="/articles/linux/basic.html#%E8%B0%83%E6%95%B4%E5%A4%A7%E5%B0%8F" target="_blank">缩了 ArchLinux 的分区大小</a>，踩了一次 <a href="/articles/linux/problem.html#cfdisk-%E6%93%8D%E4%BD%9C%E5%88%86%E5%8C%BA" target="_blank">cfdisk 的坑</a>。而后下载了 NixOS 的图形化安装程序，用 ventoy 引导启动，一切正常。然而在安装引导的分区时我发现，图形化界面没有提供 btrfs 分区，只提供 ext4。于是我停止使用图形化界面，改用里面的 konsole 终端。结果 channel update 时无法正常重启某些服务（<code>xe-daemon.service: NewCachedXenstore error: Cannot locate xenbus dev path...</code>）。我猜测这是图形界面导致的问题，于是我重新打开 arch，下载了 minimal iso，这里面还有一个<a href="/articles/linux/problem.html#%E4%BD%A0%E7%9A%84%E5%A4%8D%E5%88%B6%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%A4%8D%E5%88%B6%EF%BC%9F" target="_blank">好玩的小插曲</a>。</p>
 <p>果然进了 minimal <s>有一种回家的感觉</s>，并且确实没有重启服务失败的问题了。一番鼓捣，总结出一些重要规律：</p>
 <ul>
-<li>碰到 <code>http 200: error</code> 不要管，后台会重试。（说到底，code 200 还报 error 是我没想到的）</li>
+<li>碰到 <code>HTTP error 200 (curl error: Stream error in the HTTP/2 framing layer)</code> 不要管，后台会重试。（说到底，code 200 还报 error 是我没想到的）</li>
 <li>如果 <code>denpendency fail to build</code>，换个源重新试。
 <ul>
 <li>如果换源后碰到同样的问题，把源换回去再试。</li>
@@ -61,15 +61,23 @@
 <p>后来终于发现原因了，我换了 zen 内核，按理需要用 dkms 的 NVIDIA 驱动，然而实际用的是 NVIDIA 闭源驱动。。nixos 没有任何提示，于是导致了此惨剧。然后换回原内核又发生了 <a href="/articles/linux/problem.html#efi-%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3" target="_blank">EFI 空间不足</a>的惨剧，又折腾许久。等我成功开机，都过了午饭时间了。然后一开机我就去定制了一个 iso，太折磨了。</p>
 <p>下午折腾中文拼音输入法。</p>
 <p><a href="https://medium.com/@realLanta/%E4%B8%80%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B0%B1%E8%83%BD%E5%9C%A8%E5%90%84%E4%B8%AA%E7%94%B5%E8%84%91%E8%A3%85%E4%B8%80%E6%A8%A1%E4%B8%80%E6%A0%B7%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%92%8C%E8%BD%AF%E4%BB%B6-%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E4%BD%A0%E8%BD%BB%E6%9D%BE%E6%8E%8C%E6%8F%A1nixos-7f026b539242" target="_blank" rel="noopener noreferrer">一个配置文件就能在各个电脑装一模一样的系统和软件？ — 保姆级教你轻松掌握 NixOS</a></p>
-<p><a href="https://www.reddit.com/r/NixOS/comments/1bmwky4/fcitx5_rime_pinyin_not_working/" target="_blank" rel="noopener noreferrer">Fcitx5 rime / pinyin not working</a></p>
-<p><a href="https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/" target="_blank" rel="noopener noreferrer">Gaming on nixos : r/NixOS</a></p>
+<h2>学习</h2>
+<p>如何学习 nix 呢？nix 没有强大的 wiki，遇到问题只能到处 google。但是也有一些好的资源。</p>
+<ul>
+<li><a href="https://nixos-cn.org/tutorials/installation/Subsystem.html" target="_blank" rel="noopener noreferrer">NixOS 中文</a>：安装教程与初步使用</li>
+<li><a href="https://nixos-and-flakes.thiscute.world/zh/preface" target="_blank" rel="noopener noreferrer">NixOS 与 Flakes - thiscute</a>：进阶好书</li>
+<li><a href="https://discourse.nixos.org/c/learn/chinese/55" target="_blank" rel="noopener noreferrer">中文 discourse</a> &amp; <a href="https://t.me/nixos_zhcn" target="_blank" rel="noopener noreferrer">telegram group</a>：可能可以来问问题</li>
+</ul>
+<p>一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。</p>
 <h2>配置</h2>
+<p><a href="https://github.com/lxl66566/nixos-config" target="_blank" rel="noopener noreferrer">我的配置仓库</a></p>
 <h3>显卡驱动</h3>
 <p>官方给出了比较详细的 NixOS 显卡驱动教程(<a href="https://nixos.wiki/wiki/Nvidia" target="_blank" rel="noopener noreferrer">NixOS Manual - Nvidia</a>)，看就完了。我认为还存在一些缺点：</p>
 <ol>
 <li>有些复杂，例如双显卡需要手动查总线并写入 hardware-configuration.</li>
 <li>prime 功能有点残缺，官方给出的 example 里只有在启动时选择不同的启动项以应对外带和接电源两种情况，而不能动态调整性能模式：正常情况下应该是在游戏启动时启用显卡而在未游戏时关闭。</li>
 </ol>
+<p>还有，<a href="#%E5%90%8E%E8%AE%B0">别改内核</a>。。。</p>
 <h3>拼音输入法</h3>
 <p>用英文有点习惯，要不是我打开博客想写论文我都想不到中文输入法没装。</p>
 <p>我先尝试 arch 上用习惯的 fcitx5：</p>
@@ -94,7 +102,23 @@
 <span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    libpinyin</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ];</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>用倒是能用了，但是我并不清楚 ibus 如何支持双拼。而且</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>用倒是能用了，但是我并不清楚 ibus 如何支持双拼。而且其自定义程度也不太行，切换输入法居然不能 <code>Ctrl + Shift</code> 而需要给实际键位，因此我还是折腾 fcitx。</p>
+<p>跑了一次 <code>fcitx5-diagnose</code>，发现 locale 里显示的不太对，怎么全都是 <code>en_US.UTF-8</code>？明明已经设了 <code>i18n.defaultLocale</code>...后续设成这样：</p>
+<div class="language-nix line-numbers-mode" data-highlighter="shiki" data-ext="nix" data-title="nix" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">defaultLocale</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "zh_CN.UTF-8"</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span>
+<span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">extraLocaleSettings</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">  LANG</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "en_SG.UTF-8"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">  LC_ALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> defaultLocale</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。</p>
+<h3>home manager</h3>
+<p>我本来是不想用 home manager 的，全写在 <code>configuration.nix</code> 里也不麻烦。但是后来还是用了：</p>
+<ol>
+<li>假设滚挂了，方便 reinstall（把 import 注释掉即可；否则一个 <code>configuration.nix</code> 不好拆，我也不想一个 install 下载几十 GB）</li>
+<li>有些配置文件确实不方便统一管，例如 KDE 的某些设置等。</li>
+</ol>
+<p>转移到 home manager 也不麻烦，<a href="#%E5%AD%A6%E4%B9%A0">thiscute</a> 有很好的教程。</p>
+<h3>Gaming</h3>
+<p><a href="https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/" target="_blank" rel="noopener noreferrer">Gaming on nixos : r/NixOS</a></p>
 ]]></content:encoded>
     </item>
     <item>
