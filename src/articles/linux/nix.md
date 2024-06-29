@@ -52,11 +52,11 @@ sudo: a password is required
 
 二分查错过程中我发现每次 install 并不会重新写入 EFI 分区（配置里注释了启动项，但是 grub 菜单并没有消失），因此向群友提问。群友答日常 build 和 install 是不会擦除 EFI 的，只有 gc 时会。但是我并不在系统里，`nixos-enter` 如上文所述，并不能执行 gc 指令。
 
-后来终于发现原因了，我换了 zen 内核，按理需要用 dkms 的 NVIDIA 驱动，然而实际用的是 NVIDIA 闭源驱动。。nixos 没有任何提示，于是导致了此惨剧。然后换回原内核又发生了 [EFI 空间不足](./problem.md#efi-空间不足)的惨剧，又折腾许久。等我成功开机，都过了午饭时间了。然后一开机我就去定制了一个 iso，太折磨了。
+后来怀疑是内核原因：我换了 zen 内核，按理需要用 dkms 的 NVIDIA 驱动，然而实际用的是 NVIDIA 闭源驱动。。换回原内核又发生了 [EFI 空间不足](./problem.md#efi-空间不足)的惨剧，又折腾许久。等我禁用了 NVIDIA 成功开机，都过了午饭时间了。然后一开机我就去定制了一个 iso，太折磨了。
 
-下午折腾中文拼音输入法。
+下午折腾中文双拼输入法，详见[输入法](#拼音输入法)。
 
-[一个配置文件就能在各个电脑装一模一样的系统和软件？ — 保姆级教你轻松掌握 NixOS](https://medium.com/@realLanta/一个配置文件就能在各个电脑装一模一样的系统和软件-保姆级教你轻松掌握nixos-7f026b539242)
+又过了一天，我想起来 NVIDIA 驱动一直没开，而此时我已经做好了万全的准备，btrfs 打了快照，grub 加了禁用 nvidia 的启动项，自制了启动盘，是时候挑战 NVIDIA 大 boss 了！于是我开启了显卡驱动，果然又卡 dmesg 了。从 grub 切换启动项进入系统，心情郁闷，难道我注定无法在 NixOS 上 Gaming 了吗？此时我<heimu>突然听见了神的声音，神说让我</heimu>把 `hardware.nvidia.open = false;` 改成 `true`，我改了，rebuild 重启发现活了！原来问题出在闭源驱动上！我悲喜交加，恍然大悟，写下了这段文字，~~请问读者能体会到我的心情吗？~~
 
 ## 学习
 
@@ -97,7 +97,7 @@ nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的�
 1. 有些复杂，例如双显卡需要手动查总线并写入 hardware-configuration.
 2. prime 功能有点残缺，官方给出的 example 里只有在启动时选择不同的启动项以应对外带和接电源两种情况，而不能动态调整性能模式：正常情况下应该是在游戏启动时启用显卡而在未游戏时关闭。
 
-还有，[别改内核](#后记)。。。
+还有我自己[折腾](#后记)后想说的注意事项：使用 `hardware.nvidia.open = true;`，使用官方内核。
 
 ### 拼音输入法
 
@@ -162,6 +162,19 @@ extraLocaleSettings = {
 ### Gaming
 
 [Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
+
+### 快照
+
+NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，我猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。`nixos-enter` 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。
+
+在 nixos 上倒没有频繁打快照的必要，因为只要我有一个正常的快照，恢复后就可以从最新的配置文件 rebuild 回去（快照在这里起到的作用可能是 nixos-enter 的补充，使我能够使用盘里的缓存进行 rebuild），因此我选择不使用自动快照软件例如 snapper，而是手打。
+
+```sh
+sudo mkdir /.snapshot
+sudo btrfs subvolume snapshot / /.snapshot/root_20240629
+```
+
+但是我还没有尝试过快照的恢复，等用到再更新吧。
 
 ## 劝退
 
