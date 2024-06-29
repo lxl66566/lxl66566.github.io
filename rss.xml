@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 29 Jun 2024 08:51:48 GMT</pubDate>
-    <lastBuildDate>Sat, 29 Jun 2024 08:51:48 GMT</lastBuildDate>
+    <pubDate>Sat, 29 Jun 2024 10:08:50 GMT</pubDate>
+    <lastBuildDate>Sat, 29 Jun 2024 10:08:50 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -37,7 +37,7 @@
 <p>安装我看的是<a href="https://nixos-cn.org/tutorials/installation/Subsystem.html" target="_blank" rel="noopener noreferrer">NixOS 中文</a>。</p>
 <p>NixOS 的安装比我想象的要折磨得多。原以为装过 Arch 的我已经无惧困难，结果输得非常彻底。。一大原因是因为没有 Archlinux 那样的顶级文档，而另一个则是群友人数确实更少，解答问题的也更少。不过这些都是后话了。</p>
 <p>我是在还没有学习 nix 语言和特性的情况下装的系统，踩了不少坑。</p>
-<p>首先，我<a href="/articles/linux/basic.html#%E8%B0%83%E6%95%B4%E5%A4%A7%E5%B0%8F" target="_blank">缩了 ArchLinux 的分区大小</a>，踩了一次 <a href="/articles/linux/problem.html#cfdisk-%E6%93%8D%E4%BD%9C%E5%88%86%E5%8C%BA" target="_blank">cfdisk 的坑</a>。而后下载了 NixOS 的图形化安装程序，用 ventoy 引导启动，一切正常。然而在安装引导的分区时我发现，图形化界面没有提供 btrfs 分区，只提供 ext4。于是我停止使用图形化界面，改用里面的 konsole 终端。结果 channel update 时无法正常重启某些服务（<code>xe-daemon.service: NewCachedXenstore error: Cannot locate xenbus dev path...</code>）。我猜测这是图形界面导致的问题，于是我重新打开 arch，下载了 minimal iso，这里面还有一个<a href="/articles/linux/problem.html#%E4%BD%A0%E7%9A%84%E5%A4%8D%E5%88%B6%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%A4%8D%E5%88%B6%EF%BC%9F" target="_blank">好玩的小插曲</a>。</p>
+<p>首先，我<a href="/articles/linux/basic.html#%E8%B0%83%E6%95%B4%E5%A4%A7%E5%B0%8F" target="_blank">缩了 ArchLinux 的分区大小</a>，踩了一次 <a href="/articles/linux/problem.html#cfdisk-%E6%93%8D%E4%BD%9C%E5%88%86%E5%8C%BA" target="_blank">cfdisk 的坑</a>。而后下载了 NixOS 的图形化安装程序，用 ventoy 引导启动，一切正常。然而在安装引导的分区时我发现，图形化界面没有提供 btrfs 分区，只提供 ext4。于是我停止使用图形化界面，改用里面的 konsole 终端。结果 channel update 时无法正常重启某些服务（<code>xe-daemon.service: NewCachedXenstore error: Cannot locate xenbus dev path...</code>）。我猜测这是图形界面导致的问题，于是我重新打开 arch，下载了 minimal iso，这里面还有一个<a href="/articles/linux/problem.html#%E4%BD%A0%E7%9A%84%E5%A4%8D%E5%88%B6%E6%98%AF%E7%9C%9F%E6%AD%A3%E7%9A%84%E5%A4%8D%E5%88%B6" target="_blank">好玩的小插曲</a>。</p>
 <p>果然进了 minimal <s>有一种回家的感觉</s>，并且确实没有重启服务失败的问题了。一番鼓捣，总结出一些重要规律：</p>
 <ul>
 <li>碰到 <code>HTTP error 200 (curl error: Stream error in the HTTP/2 framing layer)</code> 不要管，后台会重试。（说到底，code 200 还报 error 是我没想到的）</li>
@@ -69,8 +69,15 @@
 <li><a href="https://discourse.nixos.org/c/learn/chinese/55" target="_blank" rel="noopener noreferrer">中文 discourse</a> &amp; <a href="https://t.me/nixos_zhcn" target="_blank" rel="noopener noreferrer">telegram group</a>：可能可以来问问题</li>
 </ul>
 <p>一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。</p>
+<p>还有一个学习方法是多看别人的 configuration，<s>并且大量摘抄</s>。我的配置在<a href="#%E9%85%8D%E7%BD%AE">下面</a>，还有一些：<a href="https://github.com/TsubakiDev/nixos-config" target="_blank" rel="noopener noreferrer">1</a> <a href="https://github.com/ryan4yin/nix-config" target="_blank" rel="noopener noreferrer">2</a></p>
 <h2>配置</h2>
 <p><a href="https://github.com/lxl66566/nixos-config" target="_blank" rel="noopener noreferrer">我的配置仓库</a></p>
+<h3>linter / formatter</h3>
+<p>nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的过程。说到编程那肯定少不了 linter 和 formatter。而我是 all in vscode 人，我使用的插件如下：</p>
+<ul>
+<li><em>Nix IDE - Noortheen</em>：lsp，需要手动安装 pkgs.<code>nil</code></li>
+<li><em>nixfmt - brettm12345</em>：formatter，需要手动安装 pkgs.<code>nixfmt-rfc-style</code></li>
+</ul>
 <h3>显卡驱动</h3>
 <p>官方给出了比较详细的 NixOS 显卡驱动教程(<a href="https://nixos.wiki/wiki/Nvidia" target="_blank" rel="noopener noreferrer">NixOS Manual - Nvidia</a>)，看就完了。我认为还存在一些缺点：</p>
 <ol>
