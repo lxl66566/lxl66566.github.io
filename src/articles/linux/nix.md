@@ -22,7 +22,7 @@ NixOS 的安装比我想象的要折磨得多。原以为装过 Arch 的我已�
 
 我是在还没有学习 nix 语言和特性的情况下装的系统，踩了不少坑。
 
-首先，我[缩了 ArchLinux 的分区大小](./basic.md#调整大小)，踩了一次 [cfdisk 的坑](./problem.md#cfdisk-操作分区)。而后下载了 NixOS 的图形化安装程序，用 ventoy 引导启动，一切正常。然而在安装引导的分区时我发现，图形化界面没有提供 btrfs 分区，只提供 ext4。于是我停止使用图形化界面，改用里面的 konsole 终端。结果 channel update 时无法正常重启某些服务（`xe-daemon.service: NewCachedXenstore error: Cannot locate xenbus dev path...`）。我猜测这是图形界面导致的问题，于是我重新打开 arch，下载了 minimal iso，这里面还有一个[好玩的小插曲](./problem.md#你的复制是真正的复制？)。
+首先，我[缩了 ArchLinux 的分区大小](./basic.md#调整大小)，踩了一次 [cfdisk 的坑](./problem.md#cfdisk-操作分区)。而后下载了 NixOS 的图形化安装程序，用 ventoy 引导启动，一切正常。然而在安装引导的分区时我发现，图形化界面没有提供 btrfs 分区，只提供 ext4。于是我停止使用图形化界面，改用里面的 konsole 终端。结果 channel update 时无法正常重启某些服务（`xe-daemon.service: NewCachedXenstore error: Cannot locate xenbus dev path...`）。我猜测这是图形界面导致的问题，于是我重新打开 arch，下载了 minimal iso，这里面还有一个[好玩的小插曲](./problem.md#你的复制是真正的复制)。
 
 果然进了 minimal ~~有一种回家的感觉~~，并且确实没有重启服务失败的问题了。一番鼓捣，总结出一些重要规律：
 
@@ -68,9 +68,18 @@ sudo: a password is required
 
 一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
+还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config)
+
 ## 配置
 
 [我的配置仓库](https://github.com/lxl66566/nixos-config)
+
+### linter / formatter
+
+nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的过程。说到编程那肯定少不了 linter 和 formatter。而我是 all in vscode 人，我使用的插件如下：
+
+- _Nix IDE - Noortheen_：lsp，需要手动安装 pkgs.`nil`
+- _nixfmt - brettm12345_：formatter，需要手动安装 pkgs.`nixfmt-rfc-style`
 
 ### 显卡驱动
 
