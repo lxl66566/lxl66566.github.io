@@ -342,6 +342,13 @@ const data = [
   { id: "513485", aScore: 8.9, bScore: 6.4, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/C103-Trick-Color-桐井ナオ-トリニティの性女たち-ブルーアーカイブ-中国翻訳-DL版-06-07" },
   { id: "419410", aScore: 7.4, bScore: 7.8, info: "#兄妹 #纯爱 #催眠", bak: "https://telegra.ph/Imouto-to-Saimin-Appli-wa-Tsukaiyou-妹妹和催眠APP的正確用法-06-21" },
   { id: "(eh)", aScore: 8.3, bScore: 6.7, info: "#师生 #雌小鬼 #纯爱", otherlink: "https://e-hentai.org/g/1293370/b9583cbc41/", bak: "https://hanime1.me/watch?v=12489" },
+  { id: "455162", aScore: 8, bScore: 8.6, info: "#蔚蓝档案 #椎架ゆの", bak: "https://telegra.ph/C101-Chocolate-Synapse-椎架ゆの-うさぎのたまご-ブルーアーカイブ-中国翻訳-06-27" },
+  { id: "515552", aScore: 3.8, bScore: 7.8, info: "#惩罚", bak: "https://telegra.ph/同人誌-バイオレットフィクション-名仁川るい-がんじがらめなお嬢様の性処理彼氏になった話-第一話-オリジナル-06-28" },
+  { id: "512272", aScore: 7, bScore: 3, info: "#全彩 #兽耳 #白上フブキ", bak: "https://telegra.ph/とみょーかせいしじょう-とみょー-いちゃらぶきつね-白上フブキ-中国翻訳-DL版-06-27" },
+  { id: "(ex)", aScore: 8.2, bScore: 3, info: "#蔚蓝档案 #简图", otherlink: "https://exhentai.org/g/2964672/58423b1519/", bak: "https://telegra.ph/ねっこ-芹香白子-25P菜羽桃井汉化组-06-27" },
+  { id: "(eh)", aScore: 7.3, bScore: 7.9, info: "#异族 #湿身", otherlink: "https://e-hentai.org/g/2899805/fc09132361", bak: "https://telegra.ph/Eroi-Roe-Zetsumetsu-Kikikaihi-File-Flower-tail-no-Baai-灭绝危机回避记录-COMIC-Kairakuten-2024-06-Chinese-驴子汉化组x吗喽汉化组-Digital-06-26" },
+  { id: "516355", aScore: 0.6, bScore: 6.5, info: "#强制性交", bak: "https://telegra.ph/おとぎりふあ-穢されて壊されて-コミック-Mate-legend-Vol55-2024年2月号-Chinese-逃亡者真不可视汉化组-Digital-06-26" },
+  { id: "516356", aScore: 5.3, bScore: 4.2, info: "#兄妹 #精神创伤", bak: "https://telegra.ph/おとぎりふあ-拐われて誘われて-コミック-Mate-legend-Vol54-2023年12月号-Chinese-逃亡者真不可视汉化组-Digital-06-26" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

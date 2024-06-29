@@ -26,7 +26,7 @@ NixOS 的安装比我想象的要折磨得多。原以为装过 Arch 的我已�
 
 果然进了 minimal ~~有一种回家的感觉~~，并且确实没有重启服务失败的问题了。一番鼓捣，总结出一些重要规律：
 
-- 碰到 `http 200: error` 不要管，后台会重试。（说到底，code 200 还报 error 是我没想到的）
+- 碰到 `HTTP error 200 (curl error: Stream error in the HTTP/2 framing layer)` 不要管，后台会重试。（说到底，code 200 还报 error 是我没想到的）
 - 如果 `denpendency fail to build`，换个源重新试。
   - 如果换源后碰到同样的问题，把源换回去再试。
 - 安装过程中遇到 `core dumped`。。。emmm，这有点脑残了，不过换了个源又好了，可能是因为没拉到缓存，构建时 core dump？
@@ -56,13 +56,21 @@ sudo: a password is required
 
 下午折腾中文拼音输入法。
 
-[一个配置文件就能在各个电脑装一模一样的系统和软件？ — 保姆级教你轻松掌握 NixOS](https://medium.com/@realLanta/%E4%B8%80%E4%B8%AA%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%B0%B1%E8%83%BD%E5%9C%A8%E5%90%84%E4%B8%AA%E7%94%B5%E8%84%91%E8%A3%85%E4%B8%80%E6%A8%A1%E4%B8%80%E6%A0%B7%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%92%8C%E8%BD%AF%E4%BB%B6-%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E4%BD%A0%E8%BD%BB%E6%9D%BE%E6%8E%8C%E6%8F%A1nixos-7f026b539242)
+[一个配置文件就能在各个电脑装一模一样的系统和软件？ — 保姆级教你轻松掌握 NixOS](https://medium.com/@realLanta/一个配置文件就能在各个电脑装一模一样的系统和软件-保姆级教你轻松掌握nixos-7f026b539242)
 
-[Fcitx5 rime / pinyin not working](https://www.reddit.com/r/NixOS/comments/1bmwky4/fcitx5_rime_pinyin_not_working/)
+## 学习
 
-[Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
+如何学习 nix 呢？nix 没有强大的 wiki，遇到问题只能到处 google。但是也有一些好的资源。
+
+- [NixOS 中文](https://nixos-cn.org/tutorials/installation/Subsystem.html)：安装教程与初步使用
+- [NixOS 与 Flakes - thiscute](https://nixos-and-flakes.thiscute.world/zh/preface)：进阶好书
+- [中文 discourse](https://discourse.nixos.org/c/learn/chinese/55) & [telegram group](https://t.me/nixos_zhcn)：可能可以来问问题
+
+一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
 ## 配置
+
+[我的配置仓库](https://github.com/lxl66566/nixos-config)
 
 ### 显卡驱动
 
@@ -70,6 +78,8 @@ sudo: a password is required
 
 1. 有些复杂，例如双显卡需要手动查总线并写入 hardware-configuration.
 2. prime 功能有点残缺，官方给出的 example 里只有在启动时选择不同的启动项以应对外带和接电源两种情况，而不能动态调整性能模式：正常情况下应该是在游戏启动时启用显卡而在未游戏时关闭。
+
+还有，[别改内核](#后记)。。。
 
 ### 拼音输入法
 
@@ -106,4 +116,29 @@ i18n.inputMethod = {
 };
 ```
 
-用倒是能用了，但是我并不清楚 ibus 如何支持双拼。而且
+用倒是能用了，但是我并不清楚 ibus 如何支持双拼。而且其自定义程度也不太行，切换输入法居然不能 `Ctrl + Shift` 而需要给实际键位，因此我还是折腾 fcitx。
+
+跑了一次 `fcitx5-diagnose`，发现 locale 里显示的不太对，怎么全都是 `en_US.UTF-8`？明明已经设了 `i18n.defaultLocale`...后续设成这样：
+
+```nix
+defaultLocale = "zh_CN.UTF-8";
+extraLocaleSettings = {
+  LANG = "en_SG.UTF-8";
+  LC_ALL = defaultLocale;
+};
+```
+
+莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。
+
+### home manager
+
+我本来是不想用 home manager 的，全写在 `configuration.nix` 里也不麻烦。但是后来还是用了：
+
+1. 假设滚挂了，方便 reinstall（把 import 注释掉即可；否则一个 `configuration.nix` 不好拆，我也不想一个 install 下载几十 GB）
+2. 有些配置文件确实不方便统一管，例如 KDE 的某些设置等。
+
+转移到 home manager 也不麻烦，[thiscute](#学习) 有很好的教程。
+
+### Gaming
+
+[Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
