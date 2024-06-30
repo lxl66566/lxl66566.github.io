@@ -147,7 +147,7 @@ i18n.inputMethod = {
 ```nix
 defaultLocale = "zh_CN.UTF-8";
 extraLocaleSettings = {
-  LANG = "en_SG.UTF-8";
+  LANG = "zh_CN.UTF-8";
   LC_ALL = defaultLocale;
 };
 ```
@@ -197,3 +197,7 @@ sudo btrfs subvolume snapshot / /.snapshot/root_20240629
 - 图形化安装界面垃圾
 - minimal 镜像缺功能
 - home manager 捞爆了
+
+## external
+
+- [Why you don't need flake-utils](https://ayats.org/blog/no-flake-utils/)
