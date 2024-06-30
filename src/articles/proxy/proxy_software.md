@@ -106,13 +106,14 @@ v2ray 的 Android 前端。
 
 > 记得好像有停更过一阵子，仓库提交记录是 2022 开始的，找不到。
 
-### v2raya
+### v2rayA
 
-v2raya 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差）。但是目前还不想直接写内核配置文件（等契机），qv2ray 又停止维护，所以没得选。（后面逃到 daed 了）
+v2rayA 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差）。不过有一个易于使用的网页面板，对于初入 linux 的 user 是非常友好的。
 
 ```sh
 sudo pacman -S v2raya
-v2raya --lite
+sudo v2raya
+# 也可以不用 sudo：`v2raya --lite`
 # fishshell
 set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理无效
 ```
@@ -120,6 +121,12 @@ set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理�
 之后的操作都在网页上进行。使用系统代理端口为 `http://127.0.0.1:20172`，这个端口带自动分流。
 
 如果需要后台运行，开机自启，可以参考[文档](https://v2raya.org/docs/advanced-application/noroot/)：`systemctl --user enable --now v2raya-lite.service`
+
+用 sudo 和不用 sudo 的区别主要是透明代理的支持。显然 `--lite` 是不能开透明代理的。
+
+### qv2ray
+
+2017 年左右的很多油管教程都会推荐 qv2ray。qv2ray 停止维护过一段时间(?)，但是我在 2024 年看的时候是有人接手维护的。我没用过。
 
 ## sing-box 系
 
@@ -140,7 +147,7 @@ _sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称�
 > ——Au, [src](https://t.me/archlinuxcn_group/2912643)
 > :::
 
-daed 是网页面板的开源代理软件，dae 的前端，而 dae 基于 eBPF[^1]，仅支持 linux。由于比较新，目前使用的人不多。
+daed 是网页面板的开源代理软件，[dae](#dae) 的前端，而 dae 基于 eBPF[^1]，仅支持 linux。由于比较新，目前使用的人不多。
 
 [^1]: [What is eBPF?](https://ebpf.io/what-is-ebpf/)
 
@@ -165,3 +172,20 @@ daed 是网页面板的开源代理软件，dae 的前端，而 dae 基于 eBPF[
 软件数据存储在 `/etc/daed/wing.db`（sqlite 数据库），如果需要备份、改账号密码，需要先给 rw 权限，然后用数据库软件更改。
 
 daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 `journalctl -eu daed` 查看其日志，获取信息。
+
+## [dae](https://github.com/daeuniverse/dae)
+
+在 NixOS 上并没有 daed 的包，但是有 dae 能够直接使用。我已经用了很长一段时间的 daed，写 dae 配置文件可以说是非常简单；而且 dae 的官方教程确实非常不错，把 [example](https://github.com/daeuniverse/dae/blob/main/example.dae) 下载下来对着改就行，内含丰富注释。这里由于隐私问题，我并未把我的配置公开，而是加密后上传到 github。
+
+改完以后，直接在 `configuration.nix` 中写：
+
+```nix
+services.dae = {
+  enable = true;
+  configFile = <your/config/file/path>;
+};
+```
+
+rebuild 后重启即可（不直接生效，是 eBPF 的特性？）。这分流不比 v2rayA 爽多了？
+
+不过需要注意，example 可能新增一些选项，该选项在当前的最新 release 版本中尚未支持。不过读下报错也就解决了。

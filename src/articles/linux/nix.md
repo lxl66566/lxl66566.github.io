@@ -154,6 +154,10 @@ extraLocaleSettings = {
 
 莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。
 
+### 代理
+
+我最开始使用 [v2rayA](../proxy/proxy_software.md#v2raya) 过渡，然后就跑到 [dae](../proxy/proxy_software.md#dae) 了。
+
 ### home manager
 
 我本来是不想用 home manager 的，全写在 `configuration.nix` 里也不麻烦。但是后来还是用了：

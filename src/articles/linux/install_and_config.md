@@ -150,7 +150,7 @@ umount /mnt/windows
 
 ### 代理
 
-目前我使用 [daed](../proxy/proxy_software.md#daed) 作为 linux 下的代理软件。
+目前我使用 [daed](../proxy/proxy_software.md#daed) / [dae](../proxy/proxy_software.md#dae) 作为 linux 下的代理软件。
 
 #### 使用 windows 代理
 
