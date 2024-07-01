@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 30 Jun 2024 04:09:48 GMT</pubDate>
-    <lastBuildDate>Sun, 30 Jun 2024 04:09:48 GMT</lastBuildDate>
+    <pubDate>Mon, 01 Jul 2024 15:58:01 GMT</pubDate>
+    <lastBuildDate>Mon, 01 Jul 2024 15:58:01 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -55,12 +55,13 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>求助群友，群友说 <code>nixos-install</code> 与 <code>nixos-rebuild</code> 效果基本是一样的，让我去外面用 install 试。效果确实差不多，不过每次在 livecd install 都相当于重装，无法用内部的缓存，全部重新下载，还是有点耗时的。install success 后再次 <code>nixos-enter</code> 试，还是一样的报错，只要用到 sudo 就会炸。鼓捣了大半天，reinstall 了好几次都无法解决，另一个管理发话了：在 <code>nixos-enter</code> 中这是<strong>正常现象，内核的表现是不一致的</strong>。我一直把 <code>nixos-enter</code> 当 <code>arch-chroot</code> 用，没想到这玩意这么捞。</p>
 <p>这回重启就正常了，也不知道是其中的哪次 install 尝试起了作用。于是我成功进入系统开始激情编辑配置。</p>
 <h3>后记</h3>
-<p>第二天学校有实践课加上 cs2 出新图，没怎么折腾系统，尝试给电脑<a href="">装了个 nvidia 驱动</a>和其他玩意就去睡觉了。</p>
+<p>第二天学校有实践课加上 cs2 出新图，没怎么折腾系统，尝试给电脑<a href="#%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8">装了个 nvidia 驱动</a>和其他玩意就去睡觉了。</p>
 <p>第三天起床一开机，直接 dmesg 卡死无法切 tty。兄弟我还有课啊！于是带着去教室不听课，校园网认证还过不了，只好用手机开热点修。这次知道不能 <code>nixos-enter</code> 了，但是只能用小手机查资料，每次挂载输入一大串，用镜像输一大串，重新 install 等好久，试错成本偏高。加上我昨天配置改了很多，二分查找需要的次数也不可估量，因此还是非常慢的。（不能简单地放弃 NVIDIA 驱动，因为有 NixOS gaming 需求）</p>
 <p>二分查错过程中我发现每次 install 并不会重新写入 EFI 分区（配置里注释了启动项，但是 grub 菜单并没有消失），因此向群友提问。群友答日常 build 和 install 是不会擦除 EFI 的，只有 gc 时会。但是我并不在系统里，<code>nixos-enter</code> 如上文所述，并不能执行 gc 指令。</p>
 <p>后来怀疑是内核原因：我换了 zen 内核，按理需要用 dkms 的 NVIDIA 驱动，然而实际用的是 NVIDIA 闭源驱动。。换回原内核又发生了 <a href="/articles/linux/problem.html#efi-%E7%A9%BA%E9%97%B4%E4%B8%8D%E8%B6%B3" target="_blank">EFI 空间不足</a>的惨剧，又折腾许久。等我禁用了 NVIDIA 成功开机，都过了午饭时间了。然后一开机我就去定制了一个 iso，太折磨了。</p>
 <p>下午折腾中文双拼输入法，详见<a href="#%E6%8B%BC%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95">输入法</a>。</p>
-<p>又过了一天，我想起来 NVIDIA 驱动一直没开，而此时我已经做好了万全的准备，btrfs 打了快照，grub 加了禁用 nvidia 的启动项，自制了启动盘，是时候挑战 NVIDIA 大 boss 了！于是我开启了显卡驱动，果然又卡 dmesg 了。从 grub 切换启动项进入系统，心情郁闷，难道我注定无法在 NixOS 上 Gaming 了吗？此时我把 <code>hardware.nvidia.open = false;</code> 改成 <code>true</code>，我改了，rebuild 重启发现活了！原来问题出在闭源驱动上！我悲喜交加，恍然大悟，写下了这段文字，<s>请问读者能体会到我的心情吗？</s></p>
+<p>又过了一天，我想起来 NVIDIA 驱动一直没开，而此时我已经做好了万全的准备，btrfs 打了快照，grub 加了禁用 nvidia 的启动项，自制了启动盘，是时候挑战 NVIDIA 驱动了！于是我开启了显卡驱动，果然又卡 dmesg 了。从 grub 切换启动项进入系统，心情郁闷，难道我注定无法在 NixOS 上 Gaming 了吗？此时我把 <code>hardware.nvidia.open = false;</code> 改成 <code>true</code>，我改了，rebuild 重启发现活了！原来问题出在闭源驱动上！</p>
+<p>正当我高兴，一天后的 rebuild 又让我吸了口凉气，问题并没有解决。于是我重新思考了这些问题的“解决”，发现第一次重启可能会卡 dmesg，而第二次重启不会。</p>
 <h2>学习</h2>
 <p>如何学习 nix 呢？nix 没有强大的 wiki，遇到问题只能到处 google。但是也有一些好的资源。</p>
 <ul>
@@ -74,7 +75,7 @@
 
   ::: -->
 <p>一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。</p>
-<p>还有一个学习方法是多看别人的 configuration，<s>并且大量摘抄</s>。我的配置在<a href="#%E9%85%8D%E7%BD%AE">下面</a>，还有一些：<a href="https://github.com/TsubakiDev/nixos-config" target="_blank" rel="noopener noreferrer">1</a> <a href="https://github.com/ryan4yin/nix-config" target="_blank" rel="noopener noreferrer">2</a> <a href="https://codeberg.org/shitpostalotl/nixos" target="_blank" rel="noopener noreferrer">3</a></p>
+<p>还有一个学习方法是多看别人的 configuration，<s>并且大量摘抄</s>。我的配置在<a href="#%E9%85%8D%E7%BD%AE">下面</a>，还有一些：<a href="https://github.com/TsubakiDev/nixos-config" target="_blank" rel="noopener noreferrer">1</a> <a href="https://github.com/ryan4yin/nix-config" target="_blank" rel="noopener noreferrer">2</a> <a href="https://codeberg.org/shitpostalotl/nixos" target="_blank" rel="noopener noreferrer">3</a> <a href="https://github.com/wimpysworld/nix-config" target="_blank" rel="noopener noreferrer">4</a></p>
 <h3>搜索</h3>
 <p>安装与配置中很重要的一环是学会搜索。即使 nixos 的文档比较内个，也有一些非常好用的网站用来查询所需信息。</p>
 <ul>
@@ -136,6 +137,11 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。</p>
 <h3>代理</h3>
 <p>我最开始使用 <a href="/articles/proxy/proxy_software.html#v2raya" target="_blank">v2rayA</a> 过渡，然后就跑到 <a href="/articles/proxy/proxy_software.html#dae" target="_blank">dae</a> 了。</p>
+<h3>备份</h3>
+<p>nix 的配置显然用 git 备份的话非常舒适。起初我以为 <code>/etc/nixos</code> 不能放 <code>.git</code> 仓库。后来发现是不允许放未提交（dirty）的仓库。再后来我知道有配置可以强制 nixos 使用 dirty 仓库：</p>
+<div class="language-nix line-numbers-mode" data-highlighter="shiki" data-ext="nix" data-title="nix" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">nix</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">settings</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">warn-dirty</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit"> =</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> false</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>这下终于可以不用 copy 到其他地方备份了。</p>
+<p>至于备份加密，由于我的隐私文件并不算非常隐私，所以用的是我自己写的 <a href="https://github.com/lxl66566/git-simple-encrypt" target="_blank" rel="noopener noreferrer">git-simple-encrypt</a>，仅需一个密码即可解锁。如果你有更高的安全需求可以看看 sops-nix 或 agenix。</p>
 <h3>home manager</h3>
 <p>我本来是不想用 home manager 的，全写在 <code>configuration.nix</code> 里也不麻烦。但是后来还是用了：</p>
 <ol>
@@ -143,9 +149,13 @@
 <li>有些配置文件确实不方便统一管，例如 KDE 的某些设置等。</li>
 </ol>
 <p>从 <code>configuration.nix</code> 转移到 home manager 也不麻烦，<a href="#%E5%AD%A6%E4%B9%A0">thiscute</a> 有很好的教程，并且它们的条目基本是兼容的。</p>
-<p>但是进一步定制各种配置文件就没那么简单了，因为 <a href="https://nix-community.github.io/home-manager/index.xhtml" target="_blank" rel="noopener noreferrer">home-manager 的 manual</a> 就是一坨屎！建议直接用<a href="#%E6%90%9C%E7%B4%A2">第三方的 options 搜索</a>。并且它的内置设置也是极度缺乏的，即使是 git 这种大众软件也没有多少可设置项，大多都还要自己写 source 甚至 text。</p>
+<p>但是进一步定制各种配置文件就没那么简单了，因为 <a href="https://nix-community.github.io/home-manager/index.xhtml" target="_blank" rel="noopener noreferrer">home-manager 的 manual</a> 就是一坨屎！建议直接用<a href="#%E6%90%9C%E7%B4%A2">第三方的 options 搜索</a>。</p>
 <h3>Gaming</h3>
-<p><a href="https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/" target="_blank" rel="noopener noreferrer">Gaming on nixos : r/NixOS</a></p>
+<ul>
+<li><a href="https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/" target="_blank" rel="noopener noreferrer">Gaming on nixos : r/NixOS</a></li>
+<li><a href="https://github.com/fufexan/nix-gaming" target="_blank" rel="noopener noreferrer">github:fufexan/nix-gaming</a>：主要是 OSU 相关</li>
+</ul>
+<p>Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。</p>
 <h3>快照</h3>
 <p>NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，我猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，根目录下又都是符号链接，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。<code>nixos-enter</code> 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。</p>
 <p>在 nixos 上倒没有频繁打快照的必要，因为只要我有一个正常的快照，恢复后就可以从最新的配置文件 rebuild 回去（快照在这里起到的作用可能是 nixos-enter 的补充，使我能够使用盘里的缓存进行 rebuild），因此我选择不使用自动快照软件例如 snapper，而是手打。</p>
