@@ -46,7 +46,7 @@ sudo: a password is required
 
 ### 后记
 
-第二天学校有实践课加上 cs2 出新图，没怎么折腾系统，尝试给电脑[装了个 nvidia 驱动]()和其他玩意就去睡觉了。
+第二天学校有实践课加上 cs2 出新图，没怎么折腾系统，尝试给电脑[装了个 nvidia 驱动](#显卡驱动)和其他玩意就去睡觉了。
 
 第三天起床一开机，直接 dmesg 卡死无法切 tty。兄弟我还有课啊！于是带着去教室不听课，校园网认证还过不了，只好用手机开热点修。这次知道不能 `nixos-enter` 了，但是只能用小手机查资料，每次挂载输入一大串，用镜像输一大串，重新 install 等好久，试错成本偏高。加上我昨天配置改了很多，二分查找需要的次数也不可估量，因此还是非常慢的。（不能简单地放弃 NVIDIA 驱动，因为有 NixOS gaming 需求）
 
@@ -56,7 +56,9 @@ sudo: a password is required
 
 下午折腾中文双拼输入法，详见[输入法](#拼音输入法)。
 
-又过了一天，我想起来 NVIDIA 驱动一直没开，而此时我已经做好了万全的准备，btrfs 打了快照，grub 加了禁用 nvidia 的启动项，自制了启动盘，是时候挑战 NVIDIA 大 boss 了！于是我开启了显卡驱动，果然又卡 dmesg 了。从 grub 切换启动项进入系统，心情郁闷，难道我注定无法在 NixOS 上 Gaming 了吗？此时我<heimu>突然听见了神的声音，神说让我</heimu>把 `hardware.nvidia.open = false;` 改成 `true`，我改了，rebuild 重启发现活了！原来问题出在闭源驱动上！我悲喜交加，恍然大悟，写下了这段文字，~~请问读者能体会到我的心情吗？~~
+又过了一天，我想起来 NVIDIA 驱动一直没开，而此时我已经做好了万全的准备，btrfs 打了快照，grub 加了禁用 nvidia 的启动项，自制了启动盘，是时候挑战 NVIDIA 驱动了！于是我开启了显卡驱动，果然又卡 dmesg 了。从 grub 切换启动项进入系统，心情郁闷，难道我注定无法在 NixOS 上 Gaming 了吗？此时我<heimu>突然听见了神的声音，神说让我</heimu>把 `hardware.nvidia.open = false;` 改成 `true`，我改了，rebuild 重启发现活了！原来问题出在闭源驱动上！
+
+正当我高兴，一天后的 rebuild 又让我吸了口凉气，问题并没有解决。于是我重新思考了这些问题的“解决”，发现第一次重启可能会卡 dmesg，而第二次重启不会。
 
 ## 学习
 
@@ -73,7 +75,7 @@ sudo: a password is required
 
 一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
-还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config) [3](https://codeberg.org/shitpostalotl/nixos)
+还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config) [3](https://codeberg.org/shitpostalotl/nixos) [4](https://github.com/wimpysworld/nix-config)
 
 ### 搜索
 
@@ -158,6 +160,18 @@ extraLocaleSettings = {
 
 我最开始使用 [v2rayA](../proxy/proxy_software.md#v2raya) 过渡，然后就跑到 [dae](../proxy/proxy_software.md#dae) 了。
 
+### 备份
+
+nix 的配置显然用 git 备份的话非常舒适。起初我以为 `/etc/nixos` 不能放 `.git` 仓库。后来发现是不允许放未提交（dirty）的仓库。再后来我知道有配置可以强制 nixos 使用 dirty 仓库：
+
+```nix
+nix.settings.warn-dirty = false;
+```
+
+这下终于可以不用 copy 到其他地方备份了。
+
+至于备份加密，由于我的隐私文件并不算非常隐私，所以用的是我自己写的 [git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)，仅需一个密码即可解锁。如果你有更高的安全需求可以看看 sops-nix 或 agenix。
+
 ### home manager
 
 我本来是不想用 home manager 的，全写在 `configuration.nix` 里也不麻烦。但是后来还是用了：
@@ -167,11 +181,14 @@ extraLocaleSettings = {
 
 从 `configuration.nix` 转移到 home manager 也不麻烦，[thiscute](#学习) 有很好的教程，并且它们的条目基本是兼容的。
 
-但是进一步定制各种配置文件就没那么简单了，因为 [home-manager 的 manual](https://nix-community.github.io/home-manager/index.xhtml) 就是一坨屎！建议直接用[第三方的 options 搜索](#搜索)。并且它的内置设置也是极度缺乏的，即使是 git 这种大众软件也没有多少可设置项，大多都还要自己写 source 甚至 text。
+但是进一步定制各种配置文件就没那么简单了，因为 [home-manager 的 manual](https://nix-community.github.io/home-manager/index.xhtml) 就是一坨屎！建议直接用[第三方的 options 搜索](#搜索)。
 
 ### Gaming
 
-[Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
+- [Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
+- [github:fufexan/nix-gaming](https://github.com/fufexan/nix-gaming)：主要是 OSU 相关
+
+Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。
 
 ### 快照
 
