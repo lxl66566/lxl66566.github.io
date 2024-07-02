@@ -168,7 +168,7 @@ nix 的配置显然用 git 备份的话非常舒适。起初我以为 `/etc/nixo
 nix.settings.warn-dirty = false;
 ```
 
-这下终于可以不用 copy 到其他地方备份了。
+这下终于可以不用 copy 到其他地方备份了。但是有一点需要注意：在 rebuild 前一定记得把新增的文件 `git add` 到暂存区！！否则会报 _No such file or directory_。
 
 至于备份加密，由于我的隐私文件并不算非常隐私，所以用的是我自己写的 [git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)，仅需一个密码即可解锁。如果你有更高的安全需求可以看看 sops-nix 或 agenix。
 
@@ -183,22 +183,40 @@ nix.settings.warn-dirty = false;
 
 但是进一步定制各种配置文件就没那么简单了，因为 [home-manager 的 manual](https://nix-community.github.io/home-manager/index.xhtml) 就是一坨屎！建议直接用[第三方的 options 搜索](#搜索)。
 
+### [plasma manager](https://github.com/nix-community/plasma-manager)
+
+在 nixos 下，很多 kde plasma6 的设置都不能在 conf 或 home manager 中定义。例如我尝试在 `home.nix` 中使用 `services.random-background` 更换壁纸，结果开机会显示 0.5s 壁纸然后被换回 kde 默认壁纸；还有包括[锁屏时间设置](https://discourse.nixos.org/t/stop-screen-locking-in-plasma/15303/3)的问题等等等等。
+
+顾名思义，plasma manager 就是为了应对此情况出现的。它能保存的 kde 配置不算多，毕竟 kde 世界配置文件无穷无尽。但在一定程度上还是有用的。
+
 ### Gaming
 
 - [Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
 - [github:fufexan/nix-gaming](https://github.com/fufexan/nix-gaming)：主要是 OSU 相关
 
-Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。
+Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。不过平常玩点轻量级游戏问题不大，galgame，启动！你的下一台电脑又何必是游戏本！扯远了。
+
+steam 游戏都能够点击即玩，proton 还是牛逼的。一些小作坊汉化 galgame 有兼容性问题，无法在 wine 下正常运行，此时就需要安装虚拟机了。
+
+### 虚拟机
+
+参考我的配置中的 [`others/vm.nix`](https://github.com/lxl66566/nixos-config/blob/main/others/vm.nix) 安装 qemu kvm 及其运行库。
+
+至于镜像我在 win10 和 win11，ltsc 和 tiny 里纠结了一下，选择了 tiny 11 23H3。可以看看[教程](https://www.iplaysoft.com/tiny11.html)，里面还有中文字体包，反正我来者不拒。下载从 web archive 或教程给的地址任选，反正我用了前者。
+
+安装后，打开 `Virtual Machine Manager`，创建新虚拟机，选择下载的 iso 镜像。需要注意，如果 auto detect os 检测不到，需要在下面取消勾选 auto detect os 后自行输入 win11。反正这个 UI 逻辑是挺傻逼的。至于传文件，打开 USB 直通，我的移动硬盘可以分别在两端挂载，这样也不需要考虑太多。
 
 ### 快照
 
-NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，我猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，根目录下又都是符号链接，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。`nixos-enter` 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。
+NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，合理猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。`nixos-enter` 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。
 
 在 nixos 上倒没有频繁打快照的必要，因为只要我有一个正常的快照，恢复后就可以从最新的配置文件 rebuild 回去（快照在这里起到的作用可能是 nixos-enter 的补充，使我能够使用盘里的缓存进行 rebuild），因此我选择不使用自动快照软件例如 snapper，而是手打。
 
+nix 的根目录下都是符号链接，理论上有价值的快照理应是 nix 子卷快照而不是 root 快照。当然都打也可以。
+
 ```sh
-sudo mkdir /.snapshot
-sudo btrfs subvolume snapshot / /.snapshot/root_20240629
+sudo mkdir /nix/.snapshot
+sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 ```
 
 但是我还没有尝试过快照的恢复，等用到再更新吧。
@@ -219,6 +237,9 @@ sudo btrfs subvolume snapshot / /.snapshot/root_20240629
 - minimal 镜像缺功能
 - home manager 捞爆了
 
+我的资历尚浅，只能够发出如此感叹。如果你希望看到更多对 nixos 的评价，可以看看 [external 2.](#external)。
+
 ## external
 
-- [Why you don't need flake-utils](https://ayats.org/blog/no-flake-utils/)
+1. [Why you don't need flake-utils](https://ayats.org/blog/no-flake-utils/)
+2. [OS as Code - 我的 NixOS 使用体会 - thiscute](https://thiscute.world/posts/my-experience-of-nixos/)

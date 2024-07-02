@@ -507,3 +507,4 @@ file.close();
 9. [浅谈 C++ Undefined Behavior](https://zhuanlan.zhihu.com/p/391088391)
 10. [ELF 格式的 Symbol 及 C++ 的 inline 关键字](https://zhuanlan.zhihu.com/p/380982475)
 11. [Daily bit(e) of C++](https://simontoth.substack.com/archive)
+12. [Writing GUI apps for Windows is painful](https://tulach.cc/writing-gui-apps-for-windows-is-painful/)

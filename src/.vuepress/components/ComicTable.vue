@@ -352,6 +352,8 @@ const data = [
   { id: "516954", aScore: 6.1, bScore: 7.4, info: "#兽耳 #宫脱 #全彩", bak: "https://telegra.ph/BLVEFO9-800年の約束-世話やきキツネの仙狐さん-中国翻訳-無修正-06-29-2" },
   { id: "468554", aScore: 6.8, bScore: 3.3, info: "#碧蓝航线" },
   { id: "468750", aScore: 7.6, bScore: 3, info: "#蔚蓝档案" },
+  { id: "343872", aScore: 9, bScore: 8, info: "#兽耳 #纯爱 #报恩", bak: "https://telegra.ph/みみけっと43-日本ケモ耳推奨委員会-真白しらこ-キミといっしょ-けもけもみみみみ-中国翻訳-07-01" },
+  { id: "515914", aScore: 9.5, bScore: 8.7, info: "#兽耳 #堕天計画", order: 4, bak: "https://telegra.ph/コミティア148-234ド-イチリ-堕天計画-番外編--堕天後アイミュとバター犬プレイする本--中国翻訳-07-01" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
