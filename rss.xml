@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 02 Jul 2024 15:42:18 GMT</pubDate>
-    <lastBuildDate>Tue, 02 Jul 2024 15:42:18 GMT</lastBuildDate>
+    <pubDate>Wed, 03 Jul 2024 14:30:36 GMT</pubDate>
+    <lastBuildDate>Wed, 03 Jul 2024 14:30:36 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -27,11 +27,11 @@
       <link>https://absx.pages.dev/articles/linux/nix.html</link>
       <guid>https://absx.pages.dev/articles/linux/nix.html</guid>
       <source url="https://absx.pages.dev/rss.xml">安装与配置（NixOS 篇）</source>
-      <description>安装与配置（NixOS 篇） 早在去年我便说过我的下一个输入法很有可能是 NixOS。202405 的操作系统课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix 把我自己心吹得痒痒的。 在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL 里...</description>
+      <description>安装与配置（NixOS 篇） 早在去年我便说过我的下一个操作系统很有可能是 NixOS。202405 的 OS 课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix，把我自己心吹得痒痒的。 在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL ...</description>
       <category>教程</category>
       <pubDate>Fri, 28 Jun 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>早在去年我便说过我的下一个输入法很有可能是 NixOS。202405 的操作系统课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix 把我自己心吹得痒痒的。</p>
+<p>早在去年我便说过我的下一个操作系统很有可能是 NixOS。202405 的 OS 课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix，把我自己心吹得痒痒的。</p>
 <p>在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL 里尝尝鲜。而 WSL 终究无法发挥出 Nix 的特色。于是熬到了考完试当晚，我就开始安装 NixOS 了。</p>
 <h2>NixOS 安装</h2>
 <p>安装我看的是<a href="https://nixos-cn.org/tutorials/installation/Subsystem.html" target="_blank" rel="noopener noreferrer">NixOS 中文</a>。</p>
@@ -87,6 +87,10 @@
 <li><a href="https://search.nixos.org/options" target="_blank" rel="noopener noreferrer">https://search.nixos.org/options</a>：查找设置项</li>
 <li><a href="https://home-manager-options.extranix.com/" target="_blank" rel="noopener noreferrer">https://home-manager-options.extranix.com/</a>：查找 home-manager 中的设置项。人家做的多好，<s>爆杀你们 manual</s></li>
 <li><a href="https://nur.nix-community.org/" target="_blank" rel="noopener noreferrer">https://nur.nix-community.org/</a>：NUR 包</li>
+</ul>
+<h3>其他资源</h3>
+<ul>
+<li><a href="https://xtonix.tei.su/" target="_blank" rel="noopener noreferrer">x to nix</a>：将 json，xml，yaml 配置转为 nix 配置。</li>
 </ul>
 <h2>配置</h2>
 <p><a href="https://github.com/lxl66566/nixos-config" target="_blank" rel="noopener noreferrer">我的配置仓库</a></p>
@@ -171,6 +175,18 @@
 <div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" data-title="sh" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> mkdir</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /nix/.snapshot</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> btrfs</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> subvolume</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> snapshot</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /nix</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /nix/.snapshot/nix_20240629</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>但是我还没有尝试过快照的恢复，等用到再更新吧。</p>
+<h3>root on tmpfs</h3>
+<p>由于大部分内容都是软链接，nixos 上能玩一个很骚的操作：把 root 挂载成 tmpfs。好处是每次重启所有东西都会被清，可以随便运行一些喜欢到处拉屎的软件。</p>
+<p>我看的教程是<a href="https://lantian.pub/article/modify-computer/nixos-impermanence.lantian/" target="_blank" rel="noopener noreferrer">Lan Tian @ Blog NixOS 系列（四）：“无状态”操作系统</a>，结果还是踩了点坑。</p>
+<ol>
+<li>犯了<a href="https://nixos.wiki/wiki/Impermanence" target="_blank" rel="noopener noreferrer">官方文档中置顶标红</a>的大忌：<strong>没有设 user 密码</strong>。（之前的 defaultPassword 删掉了）于是进不去系统。快照打的是 <code>/nix</code>，但是密码在 <code>/etc/shadow</code> 并不归 <code>/nix</code> 管；也没法直接改挂载选项把原先的 <code>/</code> 挂上，因为 <code>nixos-enter</code> 进去<a href="#nixos-%E5%AE%89%E8%A3%85">无法 rebuild</a>，<code>--bootloader</code> 也是 <code>nixos-rebuild</code> 的，<code>nixos-install</code> 并没有。
+<ul>
+<li>最后还是改挂载选项重新 <code>nixos-install</code> 了，得益于使用 home-manager 把我的一大堆个人软件分开，本次 install 并没有花费太多时间。install 完至少能先进系统，再修配置，重启就结束了。</li>
+</ul>
+</li>
+<li>然后发现我的 <code>/etc/nixos</code> 配置本身没有被 impermanence。。。遂从原先的 <code>/</code> 里拷贝之，加入 impermanence，rebuild 即可。</li>
+</ol>
+<p>教程中把 <code>/var</code> 加入 impermanence，而我更喜欢用 btrfs 子卷管理。由于直接在 <code>/var</code> 创建子卷，子卷的 parent 会指向 <code>/</code>，所以我进了一次 live cd 创建子卷，保持 <code>var</code> 子卷与 <code>root</code>、<code>home</code> 等同级，然后把东西移过去，重启后写 <code>hardware-configuration.nix</code> 然后 rebuild 就行。</p>
 <h2>劝退</h2>
 <p>最后来说说劝退。NixOS 自身的问题还是不小的：</p>
 <ul>
