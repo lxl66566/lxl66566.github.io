@@ -10,7 +10,7 @@ tag:
 
 # 安装与配置（NixOS 篇）
 
-早在去年我便说过我的下一个输入法很有可能是 NixOS。202405 的操作系统课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix 把我自己心吹得痒痒的。
+早在去年我便说过我的下一个操作系统很有可能是 NixOS。202405 的 OS 课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix，把我自己心吹得痒痒的。
 
 在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL 里尝尝鲜。而 WSL 终究无法发挥出 Nix 的特色。于是熬到了考完试当晚，我就开始安装 NixOS 了。
 
@@ -86,6 +86,10 @@ sudo: a password is required
 - <https://search.nixos.org/options>：查找设置项
 - <https://home-manager-options.extranix.com/>：查找 home-manager 中的设置项。人家做的多好，~~爆杀你们 manual~~
 - <https://nur.nix-community.org/>：NUR 包
+
+### 其他资源
+
+- [x to nix](https://xtonix.tei.su/)：将 json，xml，yaml 配置转为 nix 配置。
 
 ## 配置
 
@@ -220,6 +224,18 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 ```
 
 但是我还没有尝试过快照的恢复，等用到再更新吧。
+
+### root on tmpfs
+
+由于大部分内容都是软链接，nixos 上能玩一个很骚的操作：把 root 挂载成 tmpfs。好处是每次重启所有东西都会被清，可以随便运行一些喜欢到处拉屎的软件。
+
+我看的教程是[Lan Tian @ Blog NixOS 系列（四）：“无状态”操作系统](https://lantian.pub/article/modify-computer/nixos-impermanence.lantian/)，结果还是踩了点坑。
+
+1. 犯了[官方文档中置顶标红](https://nixos.wiki/wiki/Impermanence)的大忌：**没有设 user 密码**。（之前的 defaultPassword 删掉了）于是进不去系统。快照打的是 `/nix`，但是密码在 `/etc/shadow` 并不归 `/nix` 管；也没法直接改挂载选项把原先的 `/` 挂上，因为 `nixos-enter` 进去[无法 rebuild](#nixos-安装)，`--bootloader` 也是 `nixos-rebuild` 的，`nixos-install` 并没有。
+   - 最后还是改挂载选项重新 `nixos-install` 了，得益于使用 home-manager 把我的一大堆个人软件分开，本次 install 并没有花费太多时间。install 完至少能先进系统，再修配置，重启就结束了。
+2. 然后发现我的 `/etc/nixos` 配置本身没有被 impermanence。。。遂从原先的 `/` 里拷贝之，加入 impermanence，rebuild 即可。
+
+教程中把 `/var` 加入 impermanence，而我更喜欢用 btrfs 子卷管理。由于直接在 `/var` 创建子卷，子卷的 parent 会指向 `/`，所以我进了一次 live cd 创建子卷，保持 `var` 子卷与 `root`、`home` 等同级，然后把东西移过去，重启后写 `hardware-configuration.nix` 然后 rebuild 就行。
 
 ## 劝退
 
