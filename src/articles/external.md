@@ -35,6 +35,8 @@ tag:
 12. [大脑为啥要删除 3 岁前的记忆？你小时候到底看见了啥？](https://www.zhihu.com/question/518355959/answer/3417398770) | [bak](https://telegra.ph/大脑为啥要删除-3-岁前的记忆你小时候到底看见了啥---知乎-03-09)
 13. [应对审讯](https://www.zhihu.com/question/391096153/answer/3026391968) | [bak](https://telegra.ph/为什么很多人一坐上审讯桌态度就不一样了-04-19)
 14. [如何看待北京十三号线西二旗站地铁里的拳击赛？](https://daily.zhihu.com/story/9771704) | [bak](https://telegra.ph/如何看待北京十三号线西二旗站地铁里的拳击赛---知乎日报-04-22-2)
+15. [那些选择退学的博士生们](https://telegra.ph/那些选择退学的博士生们-07-05-2)
+16. [两岸猿声啼不住，轻舟已过万重山——我的四分之一人生](https://thiscute.world/posts/a-quarter-of-the-way-through-life/)
 
 ## 杂
 

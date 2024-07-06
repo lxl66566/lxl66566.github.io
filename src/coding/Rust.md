@@ -124,12 +124,15 @@ let num: i32 = s.trim().parse().unwrap(); // 转换类型过程
   - [Why not use d-ary heap inside rather than binary heap](https://internals.rust-lang.org/t/why-not-use-d-ary-heap-inside-rather-than-binary-heap/18765)，因此工程实践中可以不用 BinaryHeap。
 - 字典 / Object / map（键值对）：[`std::collections::HashMap`](https://doc.rust-lang.org/std/collections/struct.HashMap.html)
 - 链表：[`std::collections::LinkedList`](https://doc.rust-lang.org/std/collections/struct.LinkedList.html)，但是其功能在所有权机制下被削弱了（例如，无法删除一个 iter 的值 (safe)）。rust 并不推荐使用链表，如果确实需要完整链表，可以~~自己写~~去 <https://crates.io> 多翻翻。[对于链表的实现，在 Rust 中有多种方式，比如：（摘自）](https://jasonkayzk.github.io/2022/02/20/使用Rust实现一个双向链表/)
-
   - 使用 Box 实现（由于 Box 本身的限制，基本只能实现单向链表）；
   - 使用 Rc + RefCell 实现（由于 RefCell 的限制，迭代器无法很好的实现）；
   - 使用 Unsafe 实现；
 
-    不得不说手写数据结构确实是一个学习 rust 的好方式，自己写一遍，什么 \*Cell 什么 Weak 全部都能吃透。
+不得不说手写数据结构确实是一个学习 rust 的好方式，自己写一遍，什么 \*Cell 什么 Weak 全部都能吃透。
+
+### container
+
+- [Rust Memory Container Cheat-sheet](https://github.com/usagi/rust-memory-container-cs)
 
 ### monad
 
@@ -345,6 +348,7 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
 - 不加 `#[macro_export]` 的话，定义的宏仅在当前 mod 可用。
 - 可以定义同名宏重载系统宏，但是注意不能在同名宏里调用被重载的系统宏，否则递归。[example](https://github.com/Xavientois/die/pull/3/files)
+- [A Note On Working With Cfg](https://docs.rs/safe_arch/latest/safe_arch/#a-note-on-working-with-cfg)
 
 ### 其他
 
@@ -399,6 +403,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-wizard](https://github.com/Kobzol/cargo-wizard)|提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般。|
 | [flamegraph](https://github.com/flamegraph-rs/flamegraph) | benchmark 火焰图 |
 | [cargo-bisect-rustc](https://github.com/rust-lang/cargo-bisect-rustc) | 二分查找哪个 rustc nightly 版本引入了错误 |
+| [cargo-machete](https://github.com/bnjbvr/cargo-machete) | Remove unused Rust dependencies |
 
 ## 库
 
@@ -565,3 +570,4 @@ articles:
 10. [Rust Runtime 设计与实现-科普篇](https://www.ihcblog.com/rust-runtime-design-1/) 及后续系列文章
 11. [Using Rust Macros for Custom VTables](https://lucumr.pocoo.org/2024/5/16/macro-vtable-magic/)：如何创建一个 runtime object
 12. [金枪鱼之夜：基于完成的 Rust 异步：compio 项目及其经验](https://www.youtube.com/live/P7wLTy59-f0)
+13. [用 Rust 搞科研的两年](https://zhuanlan.zhihu.com/p/670166312)

@@ -28,6 +28,14 @@ tag:
 
 :::
 
+## libvirt 虚拟机 Network not found
+
+我使用 libvirt + qemu kvm + Virtual Machine Manager (VMM) 进行虚拟机管理。然而在我用 archinstall 安装 arch 后，发现没装 dhcpcd，所有镜像的域名都无法解析。因此我需要再次挂载安装盘，进去装 dhcpcd。
+
+然后去实验室上课，带着电脑，到那边启动虚拟机发现报错：`error: Network not found: no network with matching name 'default'`。猜测是 active 的联网设备由网口变为 wifi 导致的。
+
+使用 `virsh net-autostart default` 启动 default 配置，报错 `error: Network not found: no network with matching name 'default'`。啊？然后去自定义一个 default：`sudo virsh net-define /var/lib/libvirt/qemu/networks/default.xml`（nixos 的默认路径）。然后再次 `virsh net-autostart default`，还是报一样的错误。我猜测是用了 sudo 的问题，define 的配置并不在当前用户上。因此我将此 xml 拷到 /tmp，更改 owner 和权限，不使用 sudo 进行 `virsh net-define` 并 start，成功。
+
 ## EFI 空间不足
 
 一些 Linux 新手（包括我）在第一次给 Linux 分区时都会将 EFI 分区分得过小。我分了 512M，之前在 Arch 最多也就同时用三个内核，而此次再加上了一堆 NixOS 的内核后终究是不堪重负，`no space left on device`。

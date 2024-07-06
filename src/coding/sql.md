@@ -232,3 +232,4 @@ sudo systemctl start mysql
 1. [MySQL 和 PostgreSQL 有何区别？](https://aws.amazon.com/cn/compare/the-difference-between-mysql-vs-postgresql)
 2. [PostgreSQL is Enough](https://gist.github.com/cpursley/c8fb81fe8a7e5df038158bdfe0f06dbb)
 3. [Simplify: move code into database functions](https://sive.rs/pg)
+4. [分布式数据库的一致性问题与共识算法](https://thiscute.world/posts/consistency-and-consensus-algorithm/)
