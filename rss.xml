@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 03 Jul 2024 14:30:36 GMT</pubDate>
-    <lastBuildDate>Wed, 03 Jul 2024 14:30:36 GMT</lastBuildDate>
+    <pubDate>Sat, 06 Jul 2024 13:09:22 GMT</pubDate>
+    <lastBuildDate>Sat, 06 Jul 2024 13:09:22 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -75,7 +75,7 @@
 
   ::: -->
 <p>一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。</p>
-<p>还有一个学习方法是多看别人的 configuration，<s>并且大量摘抄</s>。我的配置在<a href="#%E9%85%8D%E7%BD%AE">下面</a>，还有一些：<a href="https://github.com/TsubakiDev/nixos-config" target="_blank" rel="noopener noreferrer">1</a> <a href="https://github.com/ryan4yin/nix-config" target="_blank" rel="noopener noreferrer">2</a> <a href="https://codeberg.org/shitpostalotl/nixos" target="_blank" rel="noopener noreferrer">3</a> <a href="https://github.com/wimpysworld/nix-config" target="_blank" rel="noopener noreferrer">4</a></p>
+<p>还有一个学习方法是多看别人的 configuration，<s>并且大量摘抄</s>。我的配置在<a href="#%E9%85%8D%E7%BD%AE">下面</a>，还有一些：<a href="https://github.com/TsubakiDev/nixos-config" target="_blank" rel="noopener noreferrer">1</a> <a href="https://github.com/ryan4yin/nix-config" target="_blank" rel="noopener noreferrer">2</a> <a href="https://codeberg.org/shitpostalotl/nixos" target="_blank" rel="noopener noreferrer">3</a> <a href="https://github.com/wimpysworld/nix-config" target="_blank" rel="noopener noreferrer">4</a> <a href="https://github.com/jackdbd/nix-config" target="_blank" rel="noopener noreferrer">5</a></p>
 <h3>搜索</h3>
 <p>安装与配置中很重要的一环是学会搜索。即使 nixos 的文档比较内个，也有一些非常好用的网站用来查询所需信息。</p>
 <ul>
@@ -983,10 +983,17 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
       <link>https://absx.pages.dev/essay/2024.html</link>
       <guid>https://absx.pages.dev/essay/2024.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2024</source>
-      <description>2024 20240623 正因为不经常怀念过去，才更应该珍视怀念过去的机会。 20240622 NPL（No Pixelate License）：未经授权，禁止二次分发、翻译等直接素材复用场景对画面的主要部分（人物等）模糊/遮盖处理。 20240620 帮我和舍友取晚饭，一个疏忽把频分复用传成了时分复用 20240610 新的洞洞鞋比原来的小一号，穿...</description>
+      <description>2024 20240706 许多知识或者技能，都是可以通过正确的学习方法，加上短时间大量的练习，就能达到 60 分及格标准的。 ——ryan4yin 20240705 在考英语前疯狂输入日语，在考日语前疯狂输入英语，应该没有像我这么傻逼的人了吧。 20240623 正因为不经常怀念过去，才更应该珍视怀念过去的机会。 20240622 NPL（No Pi...</description>
       <category>随笔</category>
       <pubDate>Sat, 06 Jan 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20240706</h2>
+<p>许多知识或者技能，都是可以通过正确的学习方法，加上短时间大量的练习，就能达到 60 分及格标准的。</p>
+<div style="text-align:right">
+<p>——<a href="https://thiscute.world/posts/deliberate-practice/" target="_blank" rel="noopener noreferrer">ryan4yin</a></p>
+</div>
+<h2>20240705</h2>
+<p>在考英语前疯狂输入日语，在考日语前疯狂输入英语，应该没有像我这么傻逼的人了吧。</p>
 <h2>20240623</h2>
 <p>正因为不经常怀念过去，才更应该珍视怀念过去的机会。</p>
 <h2>20240622</h2>
