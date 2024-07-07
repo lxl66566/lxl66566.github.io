@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 06 Jul 2024 13:09:22 GMT</pubDate>
-    <lastBuildDate>Sat, 06 Jul 2024 13:09:22 GMT</lastBuildDate>
+    <pubDate>Sun, 07 Jul 2024 13:04:38 GMT</pubDate>
+    <lastBuildDate>Sun, 07 Jul 2024 13:04:38 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -139,6 +139,7 @@
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">  LC_ALL</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> =</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> defaultLocale</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。</p>
+<p>ps. 根据<a href="https://t.me/nixos_zhcn/477206" target="_blank" rel="noopener noreferrer">群友描述</a>，只需要将 KDE 配置文件删除即可，与 defaultLocale 无关。</p>
 <h3>代理</h3>
 <p>我最开始使用 <a href="/articles/proxy/proxy_software.html#v2raya" target="_blank">v2rayA</a> 过渡，然后就跑到 <a href="/articles/proxy/proxy_software.html#dae" target="_blank">dae</a> 了。</p>
 <h3>备份</h3>
@@ -983,7 +984,7 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
       <link>https://absx.pages.dev/essay/2024.html</link>
       <guid>https://absx.pages.dev/essay/2024.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2024</source>
-      <description>2024 20240706 许多知识或者技能，都是可以通过正确的学习方法，加上短时间大量的练习，就能达到 60 分及格标准的。 ——ryan4yin 20240705 在考英语前疯狂输入日语，在考日语前疯狂输入英语，应该没有像我这么傻逼的人了吧。 20240623 正因为不经常怀念过去，才更应该珍视怀念过去的机会。 20240622 NPL（No Pi...</description>
+      <description>2024 20240706 许多知识或者技能，都是可以通过正确的学习方法，加上短时间大量的练习，就能达到 60 分及格标准的。 ——ryan4yin 20240705 在考英语前疯狂输入日语，在考日语前疯狂输入英语，应该没有像我这么傻逼的人了吧。 想到此次课设间接让我浪费了几百块钱，不由得感到悲哀。 20240623 正因为不经常怀念过去，才更应该珍视...</description>
       <category>随笔</category>
       <pubDate>Sat, 06 Jan 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -994,6 +995,7 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 </div>
 <h2>20240705</h2>
 <p>在考英语前疯狂输入日语，在考日语前疯狂输入英语，应该没有像我这么傻逼的人了吧。</p>
+<p>想到此次课设间接让我浪费了几百块钱，不由得感到悲哀。</p>
 <h2>20240623</h2>
 <p>正因为不经常怀念过去，才更应该珍视怀念过去的机会。</p>
 <h2>20240622</h2>
