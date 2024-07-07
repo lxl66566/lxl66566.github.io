@@ -119,6 +119,7 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 - [「薄い色」「浅い色」「淡い色」の違い](https://www.youtube.com/watch?v=OXufBWERqhM)
 - 自动词使役对象用「を」，他动词使役对象用「に」
 - [～がち，～気味ぎみ, ～っぽい](https://nihongonosato.com/jlpt/n2-grammar/n2-gachi/)
+- [「ではないか」 V.S. 「のではないか」](https://colanekojp.com.tw/classroom_detail/208)
 
 ## 说两句
 

@@ -160,6 +160,8 @@ extraLocaleSettings = {
 
 莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。
 
+ps. 根据[群友描述](https://t.me/nixos_zhcn/477206)，只需要将 KDE 配置文件删除即可，与 defaultLocale 无关。
+
 ### 代理
 
 我最开始使用 [v2rayA](../proxy/proxy_software.md#v2raya) 过渡，然后就跑到 [dae](../proxy/proxy_software.md#dae) 了。

@@ -354,6 +354,8 @@ const data = [
   { id: "468750", aScore: 7.6, bScore: 3, info: "#蔚蓝档案" },
   { id: "343872", aScore: 9, bScore: 8, info: "#兽耳 #纯爱 #报恩", bak: "https://telegra.ph/みみけっと43-日本ケモ耳推奨委員会-真白しらこ-キミといっしょ-けもけもみみみみ-中国翻訳-07-01" },
   { id: "515914", aScore: 9.5, bScore: 8.7, info: "#兽耳 #堕天計画", order: 4, bak: "https://telegra.ph/コミティア148-234ド-イチリ-堕天計画-番外編--堕天後アイミュとバター犬プレイする本--中国翻訳-07-01" },
+  { id: "503378", aScore: 6.1, bScore: 7.5, info: "#史莱姆 #人格丧失 #束缚", bak: "https://telegra.ph/COMIC1-BS祭-スペシャル-ONEGROSS-いちよんよん-超昂淫膨-Beat-inflation-LV3-超昂天使エスカレイヤー中国翻訳-07-05" },
+  { id: "(eh)", aScore: 3.5, bScore: 9.2, info: "#NTR+", otherlink: "https://e-hentai.org/g/2777604/38e82a1044/" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
