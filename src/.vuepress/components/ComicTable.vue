@@ -356,6 +356,10 @@ const data = [
   { id: "515914", aScore: 9.5, bScore: 8.7, info: "#兽耳 #堕天計画", order: 4, bak: "https://telegra.ph/コミティア148-234ド-イチリ-堕天計画-番外編--堕天後アイミュとバター犬プレイする本--中国翻訳-07-01" },
   { id: "503378", aScore: 6.1, bScore: 7.5, info: "#史莱姆 #人格丧失 #束缚", bak: "https://telegra.ph/COMIC1-BS祭-スペシャル-ONEGROSS-いちよんよん-超昂淫膨-Beat-inflation-LV3-超昂天使エスカレイヤー中国翻訳-07-05" },
   { id: "(eh)", aScore: 3.5, bScore: 9.2, info: "#NTR+", otherlink: "https://e-hentai.org/g/2777604/38e82a1044/" },
+  { id: "490599", aScore: 7.5, bScore: 3.2, info: "#兽耳 #兽角 #3P #loli #武藤まと", bak: "https://telegra.ph/ANCHOR-武藤まと-魔王様魔族復活には子作りしかありません-中国翻訳-DL版-07-06" },
+  { id: "419609", aScore: 7, bScore: 6.2, info: "#兽耳 #loli #雌小鬼", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-ゆらぎの国のアリカちゃん-中国翻訳-DL版-07-05" },
+  { id: "508300", aScore: 3.7, bScore: 8.5, info: "#合订本 #巨乳 #幻想 #雌小鬼 #露出", bak: "https://telegra.ph/石見やそや-オホ声の響く街-中国翻訳-DL版-07-08" },
+  { id: "517889", aScore: 6.9, bScore: 7, info: "#百合 #植物人 #反杀", bak: "https://telegra.ph/春雨-森のえっちな植物さん-アンソロジー-二次元コミックマガジン-異種姦百合えっち-Vol-1-中国翻訳-07-07" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

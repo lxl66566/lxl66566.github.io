@@ -85,6 +85,7 @@ sudo: a password is required
   - 主要也就看 Homepage 和 Source，分别对应项目 README 和 打包 nix 源码
 - <https://search.nixos.org/options>：查找设置项
 - <https://home-manager-options.extranix.com/>：查找 home-manager 中的设置项。人家做的多好，~~爆杀你们 manual~~
+- <https://noogle.dev/>：nix 语言学习查找
 - <https://nur.nix-community.org/>：NUR 包
 
 ### 其他资源
