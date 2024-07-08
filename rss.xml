@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 07 Jul 2024 13:04:38 GMT</pubDate>
-    <lastBuildDate>Sun, 07 Jul 2024 13:04:38 GMT</lastBuildDate>
+    <pubDate>Mon, 08 Jul 2024 16:01:46 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Jul 2024 16:01:46 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -86,6 +86,7 @@
 </li>
 <li><a href="https://search.nixos.org/options" target="_blank" rel="noopener noreferrer">https://search.nixos.org/options</a>：查找设置项</li>
 <li><a href="https://home-manager-options.extranix.com/" target="_blank" rel="noopener noreferrer">https://home-manager-options.extranix.com/</a>：查找 home-manager 中的设置项。人家做的多好，<s>爆杀你们 manual</s></li>
+<li><a href="https://noogle.dev/" target="_blank" rel="noopener noreferrer">https://noogle.dev/</a>：nix 语言学习查找</li>
 <li><a href="https://nur.nix-community.org/" target="_blank" rel="noopener noreferrer">https://nur.nix-community.org/</a>：NUR 包</li>
 </ul>
 <h3>其他资源</h3>
