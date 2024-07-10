@@ -240,6 +240,14 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 
 教程中把 `/var` 加入 impermanence，而我更喜欢用 btrfs 子卷管理。由于直接在 `/var` 创建子卷，子卷的 parent 会指向 `/`，所以我进了一次 live cd 创建子卷，保持 `var` 子卷与 `root`、`home` 等同级，然后把东西移过去，重启后写 `hardware-configuration.nix` 然后 rebuild 就行。
 
+### 开发环境
+
+我一直使用 vscode，但是在 nixos 上，还是有点难用的。
+
+- vscode 全自动同步过程中，有部分插件没有同步过来。
+- 手动在 `home.nix` 里添加插件后，所有禁用的插件会被自动启用。
+- 某些插件在非 feh 环境下无法运行；feh 环境下无法在终端使用 sudo。
+
 ## 劝退
 
 最后来说说劝退。NixOS 自身的问题还是不小的：

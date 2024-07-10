@@ -68,3 +68,7 @@ Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的
 4. 省电模式下无法锁定应用。
 
 [^3]: 由于[一个测试](./problem.md#一加无限重启)，我重置系统近 10 次，每次都需要走一遍流程
+
+## external
+
+1. [各 Android 手机厂商 Bootloader 解锁 / 内核开源 / 解锁后保修情况](https://github.com/KHwang9883/MobileModels/blob/master/misc/bootloader-kernel-source.md)

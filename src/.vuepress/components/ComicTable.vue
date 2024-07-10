@@ -360,6 +360,12 @@ const data = [
   { id: "419609", aScore: 7, bScore: 6.2, info: "#兽耳 #loli #雌小鬼", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-ゆらぎの国のアリカちゃん-中国翻訳-DL版-07-05" },
   { id: "508300", aScore: 3.7, bScore: 8.5, info: "#合订本 #巨乳 #幻想 #雌小鬼 #露出", bak: "https://telegra.ph/石見やそや-オホ声の響く街-中国翻訳-DL版-07-08" },
   { id: "517889", aScore: 6.9, bScore: 7, info: "#百合 #植物人 #反杀", bak: "https://telegra.ph/春雨-森のえっちな植物さん-アンソロジー-二次元コミックマガジン-異種姦百合えっち-Vol-1-中国翻訳-07-07" },
+  { id: "505448", aScore: 8.5, bScore: 7.9, info: "#合订本 #loli #幽灵 #兄妹 #露出" },
+  { id: "(jm)", aScore: 6.8, bScore: 9.7, info: "#凌辱 #强制性交", otherlink: "https://18comic-erdtree.cc/photo/473107" },
+  { id: "473111", aScore: 8.3, bScore: 2.5, info: "#蔚蓝档案" },
+  { id: "518469", aScore: 9, bScore: 8, info: "#大小姐 #巨乳 #纯爱 #雌小鬼", bak: "https://telegra.ph/BRAVE-CHICKEN-あれっくす-メスガキお嬢様はわからせたい-DL版中国翻訳-07-10" },
+  { id: "(eh)", aScore: 8, bScore: 0.2, info: "#全彩 #差分", otherlink: "https://e-hentai.org/g/2402473/7304ac7d17", bak: "https://telegra.ph/Houkisei-Momoko-chan-1---Momoko-no-Souji-Chinese-386歪汉化-06-30" },
+  { id: "474925", aScore: 6.4, bScore: 7.6, info: "#全彩 #魔法少女 #母乳" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
