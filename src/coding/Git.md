@@ -525,6 +525,25 @@ git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
    ```
    关于分支与是否加 `-f` 需要根据情况判断。
 
+### reflog 查找
+
+我曾经遇到过文件丢失的情况，这个文件理论上应该永远是 Uncommited changes，不需要被提交。于是在某次 git 操作时文件丢失了。
+
+但是我记得我曾经有将此文件误提交的事情，虽然当时就 fixup 了。只要有提交过，文件就会在 reflog 中保留下来。这给了我恢复文件的可能性。
+
+那么要如何知道是哪个 commit 中引入的此文件呢？让 GPT 写一个脚本，稍作修改得到：
+
+```bash
+for reflogEntry in $(git reflog | grep commit | awk '{print $1}'); do
+   git show $reflogEntry -- $@
+   if [ $? -eq 0 ]; then
+      echo "Found in commit $reflogEntry"
+   fi
+done
+```
+
+然后就可以 `bash test.sh <file>` 了。
+
 ## 签名
 
 一般情况下，git 提交都是不需要签名的。但是面对大项目的协同开发，有时没办法，如果不签名，CI 都过不去。因此学习如何签名也是有必要的。

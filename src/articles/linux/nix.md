@@ -75,7 +75,7 @@ sudo: a password is required
 
 一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
-还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config) [3](https://codeberg.org/shitpostalotl/nixos) [4](https://github.com/wimpysworld/nix-config) [5](https://github.com/jackdbd/nix-config)
+还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config) [3](https://codeberg.org/shitpostalotl/nixos) [4](https://github.com/wimpysworld/nix-config) [5](https://github.com/jackdbd/nix-config) [6](https://github.com/nmasur/dotfiles)
 
 ### 搜索
 

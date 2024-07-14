@@ -200,7 +200,7 @@ const data = [
   { id: "rctd-526", aScore: 7.2, bScore: 8.5 },
   { id: "fc2-ppv-2805736", aScore: 9.6, bScore: 4, otherlink: "https://njav.tv/zh/v/fc2-ppv-2805736" },
   { id: "royd-117", aScore: 7.3, bScore: 3.6, u: true },
-  { id: "ssis-070", aScore: 9, bScore: 8, u: true },
+  { id: "ssis-070", aScore: 8, bScore: 8, u: true },
   { id: "royd-146", aScore: 6.7, bScore: 3 },
   { id: "angr-003", aScore: 6, bScore: 8.2 },
   { id: "midv-158", aScore: 6.2, bScore: 3.3, u: true },

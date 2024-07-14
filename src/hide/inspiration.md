@@ -141,6 +141,7 @@ tag:
   - [ ] 可添加排除，写入 cookie
 - [x] Google 翻译 x 次，网页 -> [成果](https://github.com/lxl66566/Google-translate-x-times)
 - [ ] PT 站，但是更低的门槛
+- [ ] open bilibili video in mpv
 
 ### 插件
 
