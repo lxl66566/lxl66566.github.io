@@ -63,7 +63,9 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 - `rust-analyzer`，开发必备
 - (optional) `Rust Feature Toggler`，方便切换 features
-- (optional) `crates`，更好管理依赖版本
+- (optional) ~~`crates`~~ （已改名为 `Dependi` [^crates]），更好管理依赖版本
+
+[^crates]: <https://t.me/QC_Grove/734>
 
 还有一些能够优化开发体验的选项：
 
@@ -571,3 +573,4 @@ articles:
 11. [Using Rust Macros for Custom VTables](https://lucumr.pocoo.org/2024/5/16/macro-vtable-magic/)：如何创建一个 runtime object
 12. [金枪鱼之夜：基于完成的 Rust 异步：compio 项目及其经验](https://www.youtube.com/live/P7wLTy59-f0)
 13. [用 Rust 搞科研的两年](https://zhuanlan.zhihu.com/p/670166312)
+14. [The missing parts in Cargo](https://weihanglo.tw/posts/2024/the-missing-parts-in-cargo/)

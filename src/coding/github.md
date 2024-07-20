@@ -152,3 +152,20 @@ on:
 ## external
 
 1. [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
+
+### dependabot
+
+可以开启 dependabot 让它帮你更新依赖。以 rust 项目为例，只需要在 `.github/dependabot.yml` （注意，不是 workflow 里）写：
+
+```yml
+version: 2
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+```
+
+即可。记得在 Security 里开启 dependabot。
+
+如果你的项目有完整的测试，还可以开启 auto merge，究极懒人了属于是。
