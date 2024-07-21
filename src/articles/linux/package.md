@@ -16,7 +16,7 @@ tag:
 
 ### pacman
 
-pacman 是 linux 官方指定包管理器，好用，就是指令比较难记。安装来源是 linux 官方仓库，基本上都是二进制。
+pacman 是 archlinux 官方指定包管理器，好用，就是指令比较难记。安装来源是 linux 官方仓库，基本上都是二进制。
 
 - “滚”指 `sudo pacman -Syu`，更新所有包。不要隔太久不滚，挂的概率会增加。（~~今日也无事可做~~）
   - 也可以直接 `yay` 或 `paru` 进行更新。（这俩不带参数默认执行 `-Syu`）
@@ -61,7 +61,19 @@ AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于
 - 疑难解答：
   - yay：疑难解答：[yay 安装问题](./problem.md#yay-安装问题) | [yay 换源问题](./problem.md#yay-换源问题) | [yay 权限错误](./problem.md#yay-权限错误)
 
-### 打包
+### Nix
+
+相对的，Nix 是 NixOS 的包管理器。整个 NixOS 是建立在 Nix 之上的。
+
+Nix 的包有 10w+，不过里面很多是编程语言的依赖包，有一定量水分，单论数量是没有 AUR 多的。
+
+但是 Nix 本身还是非常顶级的包管理器，使用 Nix 语言编写，这是一个纯函数式的图灵完备语言。现在是个现代编程语言都能爆杀 bash，显然 Nix 也是。
+
+如果在非 NixOS 系统上使用 Nix 包管理器可以用 `nix-env -iA <package>` 安装包，NixOS 就直接写配置然后 rebuild 即可。
+
+## 打包
+
+### AUR
 
 AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 
@@ -280,7 +292,23 @@ paru -S --needed arch-gaming-meta
 
 这个包里有很多好东西。
 
+#### wine
+
+我最初因为对命令行的恐惧而选择逃避，使用 [bottles](#bottles) 来运行 windows 应用，它实际上是一个对 wine 和 winetricks 的 GUI 包装。但是后来 bottles 出现了一些严重的问题[^2]，让我不得不回退到 wine，又发现 winetricks 很好用，所以便果断抛弃了 bottles。
+
+[^2]: 从[此处](https://t.me/absxsgroup/7461)往下翻
+
+安装 wine 并不难，archlinux 看两眼 wiki，nixos 就装 `wine` 和 `winetricks` 两个包就行。
+
+出于游戏目的，首次使用 wine 时，推荐用 winetricks 进行运行库的安装。如果没有环境隔离的需求就全部装到默认容器（`~/.wine`）里即可。先装字体（`cjkfonts`），再装运行库，可以参考 [AsukaMinato 的博客](https://asukaminato.notion.site/Play-Galgame-on-wine-385828919b3b482891a42fb82a1d8fbf)。同时 minato 给出了另一个更好的解法：先装 [K-Lite Codec Pack](https://codecguide.com/download_kl.htm)，就可以跳过所有解码器的安装，更快更便捷。然后就~~看谁顺眼装谁了~~，什么 VC++ 运行库，dxvk，这些也都是比较基础的就不多说了。
+
+使用 wine 运行某个 windows 应用，只需要 `wine <file>`，比我想的简单太多了。转区就设置 `LC_ALL="ja_JP.UTF-8"` 环境变量即可。
+
 #### bottles
+
+bottles 是 python 写的 wine 包装，现在维护力度并不大，有几百个 issue 没人去解决。并且我遭遇了恶性 bug，因此换回 [wine](#wine)。
+
+:::: details 不再使用
 
 基于 wine 运行 windows 软件/游戏，比 wine 更傻瓜式（只需要点鼠标，不用写配置）。
 
@@ -305,6 +333,8 @@ paru -S bottles wine wine-mono
 - bottles 可以直接运行挂载的 windows ntfs 盘里的游戏。
 - 运行成功率与游戏发行时间相关：太老的游戏几乎无法游玩。
 - 游玩日文游戏，windows 上需要 _locale-emulator_ 的，需要用 `LANG="ja_JP.UTF8" bottles` 参数启动 bottles。
+
+::::
 
 ### 录音
 
