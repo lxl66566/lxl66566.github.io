@@ -162,106 +162,9 @@ sudo systemd-nspawn -D container  # 进入容器
 
 ### shell
 
-最好装完系统就先装 shell。
+装完系统应该最先装 shell，否则手感一坨狗屎。至于装啥，请移步[shell script](../../coding/shell.md)。
 
-- 若使用 `chsh` 切换了其他的 shell，则 `.bashrc` & `.bash_profile` 将失效。
-- ~~bash 可以不用，但是需要会写。毕竟 default shell 的兼容性不是盖的。[脚本](https://wangdoc.com/bash/)~~ 我撤回我的话[^7]
-- [Y/N 选择器](https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395)，以下是两个例子：
-  ::: code-tabs
-  @tab bash
-
-  ```sh
-  read -n 1 -p "Are you sure to clean git and push force? (y/N) " answer
-  case ${answer:0:1} in
-      y|Y )
-          echo "Y"
-      ;;
-      * )
-          echo "do nothing"
-      ;;
-  esac
-  ```
-
-  @tab fish
-
-  ```sh
-  # fish 的语法有些许差别。。例如 `-P` 大写
-  read -n 1 -P 'Use tldr instead of man? (Y/n) ' answer
-  switch $answer
-      case n N
-          /usr/sbin/man "$argv"
-      case '*'
-          tldr "$argv"
-  end
-  ```
-
-  :::
-
-[^7]: 尝试写个大脚本，未果，几欲去世。数组做输入值和返回值各种妖魔鬼怪乱飞 (`"${arr[@]}"`)。我的评价是还是**写点阳间语言**吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。
-
-#### fishshell
-
-fishshell 语法自成一系，学习成本较高，但是补全太好用了，爆杀 zsh，所以我使用 fish。
-
-> fish 会自动从 man 生成补全 ([ref](https://t.me/archlinuxcn_group/2974806))
-
-- set fish as default
-  ::: code-tabs
-  @tab 侵入式
-
-  ```bash
-  # 侵入式就是直接设置默认 shell，包括启动时 (?)
-  chsh -s fish
-  ```
-
-  @tab 温和式
-
-  ```sh
-  # 温和式是先启动 bash，再将 shell 作为 bash 子进程启动
-  # edit ~/.bashrc
-  if [[ $(ps --no-header --pid=$PPID --format=cmd) != "fish" ]]
-  then
-      exec fish
-  fi
-  ```
-
-  :::
-
-  > 不建议通过 chsh 更换 shell，你可以使用 Konsole(如果是 KDE) 的 profile 改 shell——[@MkfsSion](https://t.me/archlinuxcn_group/2755963)
-
-- 语法：有个叫 [bass](https://github.com/edc/bass) 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。
-- 环境变量：[`set`](https://fishshell.com/docs/2.6/commands.html#set)，注意作用域与是否 export 的问题。
-- 函数
-  - 使用 function 新增函数后，可以使用 `funcsave <function>` 保存到配置文件夹下以便修改与备份，修改后需要重新 source：`. ~/.config/fish/config.fish`
-  - 当然，官方推荐的修改是使用 `funced <function>`。
-    - `funced` 默认是 interactive 编辑的。我建议设置 `$EDITOR` 环境变量，可以在喜欢的编辑器里修改。
-  - 删除函数 / 变量：`-e` == `--erase`
-  - fish 皆为函数，alias 也是函数
-- 美化：我使用 starship，零配置。如果需要更多自定义可以使用 [tide](https://github.com/IlanCosman/tide)。
-
-#### bash
-
-不会有人真的用 bash 做主 shell 吧。。
-
-bash 按 tab 也能补全，不过默认不显示候选项。
-
-bash 语法：
-
-- `xx1 && xx2` 在 xx1 成功后执行 xx2
-- `xx1 || xx2` 在 xx1 失败后执行 xx2
-
-#### [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)
-
-> 在尝试三大 shell 后我选择 fish 而不是 zsh. [why?](https://t.me/withabsolutex/1214)<br/>
-> 据说 omz 会有性能问题。[ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=omz&sender=313927976)
-
-<details><summary>archived</summary><p>
-
-ref: [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
-
-- 安装 zsh 时会问 set default shell, `y` 即可
-
-</p></details>
+- 美化：我使用 starship，跨平台，零配置，已经很好用了。[tide](https://github.com/IlanCosman/tide) 也是一个 fish 美化插件，不过没用过。
 
 ### 聊天软件
 
@@ -303,6 +206,12 @@ paru -S --needed arch-gaming-meta
 出于游戏目的，首次使用 wine 时，推荐用 winetricks 进行运行库的安装。如果没有环境隔离的需求就全部装到默认容器（`~/.wine`）里即可。先装字体（`cjkfonts`），再装运行库，可以参考 [AsukaMinato 的博客](https://asukaminato.notion.site/Play-Galgame-on-wine-385828919b3b482891a42fb82a1d8fbf)。同时 minato 给出了另一个更好的解法：先装 [K-Lite Codec Pack](https://codecguide.com/download_kl.htm)，就可以跳过所有解码器的安装，更快更便捷。然后就~~看谁顺眼装谁了~~，什么 VC++ 运行库，dxvk，这些也都是比较基础的就不多说了。
 
 使用 wine 运行某个 windows 应用，只需要 `wine <file>`，比我想的简单太多了。转区就设置 `LC_ALL="ja_JP.UTF-8"` 环境变量即可。
+
+其他：
+
+- wine 无法卸载已经安装的运行库，所以如果想要卸载，要么 override 要么开新容器。
+- `WINEPREFIX` 可以选择不同的 wine 容器。
+- `WINEDLLOVERRIDES` 可以重载不同的运行库，例如 `WINEDLLOVERRIDES="*d3d9,*d3d10,*d3d10_1,*d3d10core,*d3d11,*dxgi=b"`
 
 #### bottles
 

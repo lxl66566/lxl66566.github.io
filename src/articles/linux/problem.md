@@ -20,7 +20,8 @@ tag:
 踩了很多坑，总结了点通用经验：
 
 1. 干点什么之前，先备份（打快照）
-2. 干点什么之前，先去[落絮](https://luoxu.archlinuxcn.org/)搜一下关键词，看看别人有没有踩坑
+2. 干点什么之前，先去 [Arch 落絮](https://luoxu.archlinuxcn.org/)搜一下关键词，看看别人有没有踩坑
+   - nixos 也有 [Nix 落絮](https://luoxu.torus.icu/)
 
 ::: tip
 

@@ -366,6 +366,10 @@ const data = [
   { id: "518469", aScore: 9, bScore: 8, info: "#大小姐 #巨乳 #纯爱 #雌小鬼", bak: "https://telegra.ph/BRAVE-CHICKEN-あれっくす-メスガキお嬢様はわからせたい-DL版中国翻訳-07-10" },
   { id: "(eh)", aScore: 8, bScore: 0.2, info: "#全彩 #差分", otherlink: "https://e-hentai.org/g/2402473/7304ac7d17", bak: "https://telegra.ph/Houkisei-Momoko-chan-1---Momoko-no-Souji-Chinese-386歪汉化-06-30" },
   { id: "474925", aScore: 6.4, bScore: 7.6, info: "#全彩 #魔法少女 #母乳" },
+  { id: "362154", aScore: 6.8, bScore: 7.2, info: "#兄妹 #睡x", bak: "https://telegra.ph/きのもと杏-妹のぬくもり-COMIC-LO-2021年7月号-中国翻訳-DL版-08-03" },
+  { id: "362565", aScore: 2.5, bScore: 8.7, info: "#胁迫", bak: "https://telegra.ph/嶺本八美-けいじが好きな女の子-女のコはその指の動きに弱いんです-中国翻訳-DL版-08-02" },
+  { id: "520454", aScore: 7, bScore: 6.3, info: "#兽交" },
+  { id: "515562", aScore: 7.7, bScore: 3.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-3260-三郎-先生責任とってくれますよね-ブルーアーカイブ-中国翻訳---Page-1-07-23" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

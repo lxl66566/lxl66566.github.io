@@ -102,6 +102,7 @@ export default sidebar({
 				"Rust.md",
 				"Cpp.md",
 				"python.md",
+				"shell.md",
 				"java.md",
 				"tsjs.md",
 				"html.md",

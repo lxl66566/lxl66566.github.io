@@ -37,8 +37,9 @@ tag:
 1. [Rust](./Rust.md)
 2. [C++](./Cpp.md)
 3. [Python](./python.md)
-4. [Java](./java.md)
-5. [TypeScript & JavaScript](./tsjs.md)
+4. [shell script](./shell.md)
+5. [Java](./java.md)
+6. [TypeScript & JavaScript](./tsjs.md)
 
 ### 预学习阶段
 
@@ -122,3 +123,4 @@ tag:
    - [Modern Compiler Implementation in ( Java | ML | C )](https://www.cs.princeton.edu/~appel/modern/)
 3. [The yaml document from hell](https://ruudvanasseldonk.com/2023/01/11/the-yaml-document-from-hell)
 4. [图解 Functor、Applicative、Monad](https://sxyz.blog/functors-applicatives-and-monads-in-pictures/)
+5. [Parse, don’t validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)

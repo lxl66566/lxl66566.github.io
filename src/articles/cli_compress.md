@@ -45,3 +45,13 @@ linux 上安装 p7zip 即可。
 tar -xaf my.tmp --one-top-level=my  # --one-top-level 指明解压到的文件夹名称
 tar -caf xxx.tar.gz xxx             # 前面是输出，后面是输入
 ```
+
+## unrar
+
+rar 不是自由压缩格式，一般无法直接在 GNU 那批激进自由软件里解压。不过由于历史原因，用的人也非常多，特别是那些网盘仔。
+
+在 linux 上安装 `unrar`，其用法与 tar 差不多。
+
+```sh
+unrar x xxx.rar   # extract to current folder
+```
