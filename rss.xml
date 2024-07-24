@@ -6,12 +6,12 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 21 Jul 2024 10:05:46 GMT</pubDate>
-    <lastBuildDate>Sun, 21 Jul 2024 10:05:46 GMT</lastBuildDate>
+    <pubDate>Wed, 24 Jul 2024 15:27:30 GMT</pubDate>
+    <lastBuildDate>Wed, 24 Jul 2024 15:27:30 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>教程</category>
     <category>编程</category>
+    <category>教程</category>
     <category>应用</category>
     <category>推荐</category>
     <category>评价</category>
@@ -22,6 +22,93 @@
     <category>随笔</category>
     <category>主张</category>
     <category>导航</category>
+    <item>
+      <title>shell script</title>
+      <link>https://absx.pages.dev/coding/shell.html</link>
+      <guid>https://absx.pages.dev/coding/shell.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">shell script</source>
+      <description>shell script 说到 shell script，bash 绝对是 shell 界的王，几乎所有 linux 系统都使用 bash 作为默认 shell。因此其拥有最高的兼容性。 当然，bash 毕竟也是老编程语言，随着时代变化，其设计缺陷与难用部分也开始显现。至少我是非常不愿意[1]使用 bash 编写程序的。有许多脚本语言可以用来替代 ba...</description>
+      <category>编程</category>
+      <pubDate>Wed, 24 Jul 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>说到 shell script，bash 绝对是 shell 界的王，几乎所有 linux 系统都使用 bash 作为默认 shell。因此其拥有最高的兼容性。</p>
+<p>当然，bash 毕竟也是老编程语言，随着时代变化，其设计缺陷与难用部分也开始显现。至少我是非常不愿意<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">使用 bash 编写程序的。有许多脚本语言可以用来替代 bash，例如我已经用 <a href="/coding/python.html" target="_blank">python</a> 写脚本很久了。还有许多与 bash 竞争的 shell 本身也自带了一门脚本语言，例如 fish，nu 等，甚至 just 也能算一个 bash 的竞争者。这些脚本需要专门的解释器运行，我也会放在后面介绍。</a></p><a class="footnote-anchor" id="footnote-ref1">
+</a><p><a class="footnote-anchor" id="footnote-ref1">除此之外，还有人既想写出人类可读的代码，又想借用 bash 超高的兼容性，因此便开发了能够编译为 bash 的高阶语言，例如 </a><a href="https://pnut.sh/" target="_blank" rel="noopener noreferrer">pnut</a>，<a href="https://github.com/amber-lang/amber" target="_blank" rel="noopener noreferrer">amber</a>。</p>
+<h2><a class="header-anchor" href="#shebang"><span></span></a><a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" target="_blank" rel="noopener noreferrer">Shebang</a></h2>
+<p>放在脚本开头，以指示此脚本使用的解释器。因此如果写了 <code>#!/bin/bash</code>，则表示脚本是一个 bash 脚本，可以直接 <code>./filename</code> 执行。</p>
+<p>不过为了最佳的兼容性（NixOS 太怪胎了），可以写成 <code>#!/usr/bin/env bash</code>。</p>
+<h2>bash</h2>
+<p>bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种终端设备，windows（win10 开始内置 bash），macos（默认 zsh，兼容） 上执行 bash 脚本。基本上这个时代没有几个设备是不用 bash 的。</p>
+<p>此处不会涉及 bash 系统教学，只会零碎记一些知识点。系统学习可以看<a href="#external">external 1.</a>。</p>
+<ul>
+<li>bash 的要义是一切皆字符串。</li>
+<li>启动 bash 时会自动执行 <code>~/.bashrc</code>，这也是一个 bash 脚本。</li>
+<li>bash 按 tab 也能补全，不过默认不显示候选项。</li>
+<li><code>xx1 &amp;&amp; xx2</code> 在 xx1 成功后执行 xx2，<code>xx1 || xx2</code> 在 xx1 失败后执行 xx2</li>
+</ul>
+<h2>fish</h2>
+<p>一般来说三大 shell 指的是 bash, fish, zsh. 而 fish 不兼容 bash，在里面算是比较特立独行的。fish 语法自成一系，不过在一众 shell 里算是比较好学的，缺点是文档写的挺垃圾。fish 使用 rust 重写过一次，<s>搭上了语言原神的顺风车</s>，性能与安全性无需担忧。fish 是不兼容 windows 的，而在 msys2 里用 fish 又总感觉挺不爽的，我只好在 windows 上用其他 shell。</p>
+<p>fish 的语法在我看来算是对传统 shell 的反叛，但是没有叛彻底，还保留了很大一部分 bash 特点，导致 fish 写脚本也十分难写。</p>
+<p>吸引我使用 fish 的最大原因是补全太好用了，爆杀一切其他 shell。fishshell 甚至会自动从 man 生成补全 (<a href="https://t.me/archlinuxcn_group/2974806" target="_blank" rel="noopener noreferrer">ref</a>)。我一般开启 <code>bind \t forward-word</code>，配置文件只此一行足矣（加载其他软件的命令不算）。</p>
+<ul>
+<li>
+<p>set fish as default</p>
+
+</li>
+<li>
+<p>语法：有个叫 <a href="https://github.com/edc/bass" target="_blank" rel="noopener noreferrer">bass</a> 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。</p>
+</li>
+<li>
+<p>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。</p>
+</li>
+<li>
+<p>函数：fish 大把的指令（包括 alias）都是函数。</p>
+<ul>
+<li>使用 function 新增函数后，可以使用 <code>funcsave &lt;function&gt;</code> 保存到配置文件夹下以便修改与备份，修改后需要重新 source：<code>. ~/.config/fish/config.fish</code></li>
+<li>当然，官方推荐的修改是使用 <code>funced &lt;function&gt;</code>，最好设置 <code>$EDITOR</code> 环境变量，可以在喜欢的编辑器里修改。</li>
+<li>删除函数 / 变量：<code>-e</code> == <code>--erase</code></li>
+</ul>
+</li>
+<li>
+<p>插件：一般使用 <a href="https://github.com/jorgebucaran/fisher" target="_blank" rel="noopener noreferrer">fisher</a> 安装插件。不过我一个都没装，只能说看不上。</p>
+</li>
+</ul>
+<h2>zsh</h2>
+<p>zsh 是 bash 统治下的顺从者，其几乎全兼容 bash。zsh 是 macos 的 default shell，因此用户也非常多。</p>
+<p>我曾经尝鲜过一段时间 zsh（入坑作：<a href="#external">external 2.</a>），但是<a href="https://t.me/withabsolutex/1214" target="_blank" rel="noopener noreferrer">补全实在是太垃圾</a>，立刻扔掉了。</p>
+<p>用 zsh 基本离不开 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a>，但是这玩意有严重的性能问题(<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=omz&amp;sender=313927976" target="_blank" rel="noopener noreferrer">ref</a>)，已经在群里问过 N 次了。</p>
+<ul>
+<li>安装 zsh 时会问 set default shell</li>
+</ul>
+<h2>nushell</h2>
+<p>nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu 语言，并重载了许多 posix 指令（以便更好地展示执行结果）。nushell 也使用 rust 实现，性能与安全性无需担忧。nushell 是跨平台的，因此成为我在 windows 上的一个选择。可惜 nushell 补全只能从历史中补，手感还是挺差的。</p>
+<p>自己搓语言的基本上都有很高的学习成本，nushell 也不例外。nu 语言有对 rust 的借鉴和<a href="https://t.me/withabsolutex/1698" target="_blank" rel="noopener noreferrer">反叛</a>。</p>
+<p>不过 nushell 最劝退我的还是 <a href="https://t.me/withabsolutex/1700" target="_blank" rel="noopener noreferrer">rust 的一个 bug</a>，导致其无法在我的 RAMDisk 上工作。</p>
+<h2>xonsh</h2>
+<p>我一看到 xonsh 就把它加到了我的 👍 list 里。它不自创脚本语言，而是使用 python 作为其解释器。在 python 爆火的当下，xonsh 可能是一个不错的选择，它完全避开了高昂的学习成本和 bash 脚本的难用，还能借 python 优秀的跨平台能力为所欲为。</p>
+<p>虽然我还没开始用 xonsh，不过将来我一定会去试一试的。</p>
+<h2>amber</h2>
+<p>amber 是总论提到的编译到 bash 语言的一个高阶语言；它使用 rust 实现，并且有较为完善的文档和 tutorial。我也为这个项目发过 PR，不过是依赖相关，跟代码逻辑没什么关系。</p>
+<p>这个项目的代码我只能说真是一坨屎山。在用几乎最新的 rust 和 cargo 情况下，没有修 clippy issue 也就算了，连 rustfmt 都没过就有点过分了吧。。。屎山也就算了，我跑 <code>cargo test</code> 也跑不了，正常使用也用不了，这什么垃圾玩意。。</p>
+<h2>杂</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/n 选择器</a>
+</li>
+</ul>
+<h2>external</h2>
+<ol>
+<li><a href="https://wangdoc.com/bash/" target="_blank" rel="noopener noreferrer">bash 脚本教程</a></li>
+<li><a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>尝试写个大脚本，<a href="https://t.me/withabsolutex/1374" target="_blank" rel="noopener noreferrer">未果，几欲去世</a>。数组做输入值和返回值各种妖魔鬼怪乱飞 (<code>"${arr[@]}"</code>)。我的评价是还是<strong>写点阳间语言</strong>吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content:encoded>
+    </item>
     <item>
       <title>安装与配置（NixOS 篇）</title>
       <link>https://absx.pages.dev/articles/linux/nix.html</link>
@@ -1578,112 +1665,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <ol>
 <li><em>无障碍 - 强制启用缩放功能</em></li>
 </ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>杂论</title>
-      <link>https://absx.pages.dev/gossip/va_view.html</link>
-      <guid>https://absx.pages.dev/gossip/va_view.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">杂论</source>
-      <description>杂论 这里主要是我的价值观。 世界观、人生观请前往。 总论 价值观不分对错。 关于价值观的争端没有最优解。 关于价值观的输出和争吵是无意义的。 解耦论 解耦（或称解构），指降低事物的耦合度，将其拆成联系较小（或没有联系）的小块。这些小块组合后能实现原本的功能（根据组合方式不同，一般能实现比原先更多的功能）。 如今，解耦已然成为了我的价值导向，我的人生哲...</description>
-      <category>主张</category>
-      <category>生活</category>
-      <pubDate>Wed, 29 Nov 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>这里主要是我的<strong>价值观</strong>。</p>
-<p>世界观、人生观请前往<a href="/gossip/worldview.html" target="_blank">道论</a>。</p>
-<h2>总论</h2>
-<ol>
-<li>价值观不分对错。</li>
-<li>关于价值观的争端没有最优解。</li>
-<li>关于价值观的输出和争吵是无意义的。</li>
-</ol>
-<h2>解耦论</h2>
-<p>解耦（或称解构），指降低事物的耦合度，将其拆成联系较小（或没有联系）的小块。这些小块组合后能实现原本的功能（根据组合方式不同，一般能实现比原先更多的功能）。</p>
-<p>如今，解耦已然成为了我的价值导向，我的人生哲学。</p>
-<ol>
-<li>解耦是为了充分发挥优势，“集百家之长”。</li>
-<li>解耦是为了更方便的复用。
-<ul>
-<li>尽可能不写重复的代码。</li>
-</ul>
-</li>
-<li>解耦和自由非常合拍。</li>
-</ol>
-<p>我们在生活中去做一件抽象的事情，往往会将其解耦为几样具体的事情。这也可以叫做分化目标。</p>
-<h3>举例</h3>
-<p>符合解耦论的：</p>
-<ul>
-<li>微软搞的 LSP(Language Server Protocol)</li>
-<li>RISC 系列</li>
-<li>docker compose</li>
-</ul>
-<p>不符合解耦论的；</p>
-<ul>
-<li>移动端的各种 OS 与闭源生态</li>
-<li>小程序</li>
-<li>Adobe 系列</li>
-<li>各种下载器</li>
-</ul>
-<h2>tag 论</h2>
-<p><s>在严肃的价值观论中混入了奇怪的英文名词！我就喜欢这个词（）</s></p>
-<p>打 tag 这个观点诞生于我对学生管理软件的构思。彼时的我早已厌烦了班群、年级群和各学科群的高错误率、高延迟的转达机制，并思考有没有更方便的消息通知机制。于是我想到了更高阶的抽象——比起学生自带的属性，为什么不给学生打上不同 tag，借由 tag 完成消息通知呢？课程，班级、专业、年级、社团、实验组、学生团体，这些都是形容学生的维度，都能作为 tags。然后我想了权限管理，tag 继承，后面因为对互联网没兴趣，就不干了。</p>
-<p>tag 是高阶的抽象。我们可以简单地把 tag 理解为维度<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，在某个维度上所有事物被归类，而在另一维度上又被归于另一个类，不同维度之间，被归于哪个类没有任何联系。</a></p><a class="footnote-anchor" id="footnote-ref1">
-</a><p><a class="footnote-anchor" id="footnote-ref1">当然，tag 之间并不一定毫无关联，tags 也可以继承、互斥、互补<sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">。</a></p><a class="footnote-anchor" id="footnote-ref2">
-<p>理论上，tag 应该与事物本身属性的区别属于同一层级（也就是将属性抽象为 tag），但是现实中经常见到的是以属性区别为主，以 tag 分类为辅。</p>
-</a><h3><a class="footnote-anchor" id="footnote-ref2"></a><a class="header-anchor" href="#举例-1"><span>举例</span></a></h3>
-<p>符合 tag 论的：</p>
-<ul>
-<li>discord 频道</li>
-</ul>
-<h2>轮转论</h2>
-<p>不要在一棵树上吊死。——谚语</p>
-<p>即使是日常生活中需要用的常见物品或事件，也不要追求一致，而应该追求二者轮换或多样化。</p>
-<p>其中，相当一部分与生物适应力有关。轮转论可以对抗或利用这种适应力，并产生正向影响。</p>
-<h3>举例</h3>
-<ul>
-<li>洗发水交替用，去屑效果更好</li>
-<li>单一目的用药，轮换用药不容易产生耐药性</li>
-<li>长时间学习可以切换不同学科，减少腻烦和效率的降低</li>
-</ul>
-<h2>究其原理</h2>
-<ul>
-<li>近视的成因是晶状体调焦失灵<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup><a class="footnote-anchor" id="footnote-ref3">。
-<ul>
-<li>因此放松眼睛时需要<strong>尽力</strong>对焦不同距离的物体。</li>
-<li>放松时戴眼镜的效果比不戴眼镜更好。因为高度近视下不戴眼镜根本做不到对焦。</li>
-</ul>
-</a></li><a class="footnote-anchor" id="footnote-ref3">
-</a><li><a class="footnote-anchor" id="footnote-ref3">人的身体是具有一定适应能力的系统。
-</a><ul><a class="footnote-anchor" id="footnote-ref3">
-</a><li><a class="footnote-anchor" id="footnote-ref3">“三分饥<sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4">和寒”是扩大身体适应面，防止过度适应于现代人的精细脆弱的一种方式。
-<ul>
-<li>（在南方）反对开暖气。冬季在室外受冻，进入室内的气温刚刚好。开暖气还需要脱衣服，而且对某些群体<a href="/essay/2023.html#2023121x" target="_blank">不友好</a>。</li>
-<li>气候的不稳定（急剧降温再升温）会破坏人体的这种适应能力。</li>
-</ul>
-</a></li><a class="footnote-anchor" id="footnote-ref4">
-</a></ul><a class="footnote-anchor" id="footnote-ref4">
-</a></li><a class="footnote-anchor" id="footnote-ref4">
-</a></ul><a class="footnote-anchor" id="footnote-ref4">
-</a><h2><a class="footnote-anchor" id="footnote-ref4"></a><a class="header-anchor" href="#断言"><span>断言</span></a></h2>
-<ul>
-<li>人类的进化优势之一是能够克服生理本能。</li>
-<li>食堂中，拿着饭的比空手的享有更高优先级</li>
-<li>路上（不借助外力），走的快的人比走的慢的人享有更高优先级</li>
-</ul>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>思考一下线代的线性空间，矩阵的秩与线性相关性（） <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p>思考一下集合论。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote3" class="footnote-item"><p><a href="https://zh.wikipedia.org/wiki/%E8%BF%91%E8%A6%96" target="_blank" rel="noopener noreferrer">wikipedia</a>上并没有关于晶状体的描述，因此此结论来源未知，可能有错误。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote4" class="footnote-item"><p>间歇性禁食是有<a href="https://github.com/zijie0/HumanSystemOptimization#%E9%A5%AE%E9%A3%9F" target="_blank" rel="noopener noreferrer">依据</a>的。 <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 ]]></content:encoded>
     </item>
   </channel>
