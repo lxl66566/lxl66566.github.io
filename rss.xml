@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 24 Jul 2024 15:27:30 GMT</pubDate>
-    <lastBuildDate>Wed, 24 Jul 2024 15:27:30 GMT</lastBuildDate>
+    <pubDate>Fri, 26 Jul 2024 14:22:15 GMT</pubDate>
+    <lastBuildDate>Fri, 26 Jul 2024 14:22:15 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -163,6 +163,10 @@
   ::: -->
 <p>一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。</p>
 <p>还有一个学习方法是多看别人的 configuration，<s>并且大量摘抄</s>。我的配置在<a href="#%E9%85%8D%E7%BD%AE">下面</a>，还有一些：<a href="https://github.com/TsubakiDev/nixos-config" target="_blank" rel="noopener noreferrer">1</a> <a href="https://github.com/ryan4yin/nix-config" target="_blank" rel="noopener noreferrer">2</a> <a href="https://codeberg.org/shitpostalotl/nixos" target="_blank" rel="noopener noreferrer">3</a> <a href="https://github.com/wimpysworld/nix-config" target="_blank" rel="noopener noreferrer">4</a> <a href="https://github.com/jackdbd/nix-config" target="_blank" rel="noopener noreferrer">5</a> <a href="https://github.com/nmasur/dotfiles" target="_blank" rel="noopener noreferrer">6</a></p>
+<h2>工具</h2>
+<ul>
+<li><a href="https://github.com/nix-community/nix-index" target="_blank" rel="noopener noreferrer">nix-index</a>：找包位置</li>
+</ul>
 <h3>搜索</h3>
 <p>安装与配置中很重要的一环是学会搜索。即使 nixos 的文档比较内个，也有一些非常好用的网站用来查询所需信息。</p>
 <ul>
