@@ -316,11 +316,9 @@ atuin import auto
 # then edit fish config manually
 ```
 
-基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行。
+基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行；`<C-o><C-d>` 删除。
 
 更多 keybindings 请前往 [doc](https://docs.atuin.sh/configuration/key-binding/#atuin-ui-shortcuts).
-
-关于删除条目的讨论：[issue](https://github.com/atuinsh/atuin/issues/592)
 
 ### [neovim](../../coding/vim.md)
 

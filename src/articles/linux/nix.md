@@ -77,6 +77,10 @@ sudo: a password is required
 
 还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config) [3](https://codeberg.org/shitpostalotl/nixos) [4](https://github.com/wimpysworld/nix-config) [5](https://github.com/jackdbd/nix-config) [6](https://github.com/nmasur/dotfiles)
 
+## 工具
+
+- [nix-index](https://github.com/nix-community/nix-index)：找包位置
+
 ### 搜索
 
 安装与配置中很重要的一环是学会搜索。即使 nixos 的文档比较内个，也有一些非常好用的网站用来查询所需信息。

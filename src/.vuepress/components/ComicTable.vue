@@ -370,6 +370,8 @@ const data = [
   { id: "362565", aScore: 2.5, bScore: 8.7, info: "#胁迫", bak: "https://telegra.ph/嶺本八美-けいじが好きな女の子-女のコはその指の動きに弱いんです-中国翻訳-DL版-08-02" },
   { id: "520454", aScore: 7, bScore: 6.3, info: "#兽交" },
   { id: "515562", aScore: 7.7, bScore: 3.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-3260-三郎-先生責任とってくれますよね-ブルーアーカイブ-中国翻訳---Page-1-07-23" },
+  { id: "(ex)", aScore: 8.2, bScore: 3, info: "#师生", otherlink: "https://exhentai.org/g/2986798/ea57cfda3f/", bak: "https://telegra.ph/うなぎやさん-花宮なつか-BUKKAKEエモーション-中国翻訳-DL版-07-23" },
+  { id: "519958", aScore: 8, bScore: 8.9, info: "#催眠 #调教 魔砲少女シエスタ" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

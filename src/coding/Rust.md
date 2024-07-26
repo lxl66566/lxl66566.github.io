@@ -406,6 +406,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [flamegraph](https://github.com/flamegraph-rs/flamegraph) | benchmark 火焰图 |
 | [cargo-bisect-rustc](https://github.com/rust-lang/cargo-bisect-rustc) | 二分查找哪个 rustc nightly 版本引入了错误 |
 | [cargo-machete](https://github.com/bnjbvr/cargo-machete) | Remove unused Rust dependencies |
+| [cargo-nextest](https://github.com/nextest-rs/nextest) | 好用的 test 工具，有超时失败，log 筛选等特性 |
 
 ## 库
 

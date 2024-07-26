@@ -12,7 +12,7 @@ tag:
 
 我曾在约一年前强迫自己使用 vim 作为代码编辑器，并进行相关学习。但是 vscode vim 给了我极其惨痛的教训：混用 Ctrl + Z 和 u(undo) 打乱了我的代码，我只能从 git 中恢复，浪费了数小时的时间。因此弃用。
 
-此次重新启用，也大概是我的心血来潮吧。
+此次重新启用，也大概是我的心血来潮吧。不过现在用了好久，确实没有遇到类似的问题了，可能是因为我已经不用 u 了吧。
 
 其他同等级编辑器还有 emacs, helix 等，等有缘人去尝试吧。
 
@@ -27,11 +27,19 @@ tag:
 
 [此处](https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json)是我对 (vim for) vscode 的一些设置。
 
+## 设置(懒狗型)
+
+由于现在 vscode 是我的主要编辑器，因此无需折腾，配置简单的 vim 系编辑器也是不错的选择。
+
+- [lunarvim](https://www.lunarvim.org/zh-Hans/)
+- [AstroNvim](https://astronvim.com/)
+- [nvchad](https://nvchad.com/)
+
 ## 设置(neovim)
 
 在折腾了大段配置后，我决定使用 lazy.vim 代替 packer 进行插件管理。于是懒狗的我直接使用 [lazyvim](https://www.lazyvim.org/)，该仓库使用 lazy.vim 并预设了许多插件和 keybindings，非常方便。因此我就在此基础上再进行自定义。
 
-> 对于懒狗还有一些其他选择：[nvchad](https://nvchad.com/) | [AstroNvim](https://astronvim.com/) > [这里](https://www.reddit.com/r/neovim/comments/13pzwq6/comment/jlcbfzg/)有一些插件推荐，能够使 neovim 接近 vscode（笑）
+[这里](https://www.reddit.com/r/neovim/comments/13pzwq6/comment/jlcbfzg/)有一些插件推荐，能够使 neovim 接近 vscode（笑）
 
 我的配置存放在 [github 仓库](https://github.com/lxl66566/dotfile/tree/archlinux/home/absolutex/.config/nvim)，直接替换 `~/.config/nvim` 然后启动 nvim 就能使用。首次启动会黑屏一阵，不要 Ctrl+c 终止，否则需要清理缓存重新配置。
 

@@ -29,11 +29,12 @@ tag:
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695)|San Jose|$10.28/yr|1000GB 1Gbps|768MB|10GB|1|<dtls>装了 Debian 10（后来换成了 12）。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。[^1]</dtls>|
 |20230602 [vpslog](https://distribute.vpslog.net/)||free||64MB|||<dtls>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</dtls>|
-|20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>性价比高。提供 archlinux 镜像。</dtls>|
+|20231124 [silicloud](www.silicloud.com) (BF)|Tokyo|HK$128/yr|300GB 300Mbps|768MB|20GB|1|<dtls>提供 archlinux 镜像。没有 rescue。稳定性开始还行，半年后差不多烂完了。</dtls>|
 |20231212 azure|Korea Central|~~$9.xx/mo~~ free|unknown|1GB|30GB|1|<dtls>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtls>|
 |20231213 aliyun|HK|~~288CNY/yr~~ free|1024 GB unknown|896MB|40GB|2|<dtls>香港地区 TG 时常抽风；免费的香港机我想都不敢想（）</dtls>|
 |202403xx wawo|US|￥3.73/mo|unknown|512MB|unknown|1|<dtls>冲便宜买的，质量很捞，本来是用作测试的。结果半个月给我封了，莫名其妙。于是避雷 wawo 了。</dtls>|
 |20240518 Churros|JP|￥8.9/mo + ￥6 初装|200GB 100Mbps|1GB|5GB|1|<dtls>silicloud IP 寄了，换台 JP。这家是垃圾灵车，稳定性不够。</dtls>|
+|20240726 Lamhosting|TW|￥10.6/mo(coupon -￥2)|512GB 1000Mbps|512M|10GB|1|<dtls>有点灵，TW ping 都有 190ms…</dtls>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
