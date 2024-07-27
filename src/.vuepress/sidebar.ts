@@ -70,6 +70,7 @@ export default sidebar({
 				"minimize_exe.md",
 				"cli_compress.md",
 				"yt-dlp.md",
+				"speedup.md",
 			],
 		},
 		{

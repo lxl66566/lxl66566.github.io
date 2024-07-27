@@ -55,14 +55,15 @@ tag:
 - [V language](https://github.com/vlang/v)：基于 C 的注重性能的静态类型编译语言。语法比较像 go?
 - [Mun](https://github.com/mun-lang/mun)：基于 Rust 的静态类型语言，注重热重载 (hot reloading)。
 - [Mojo](https://docs.modular.com/mojo/)：python 的超集，注重性能，类型，兼容性，目标是 AI 领域。
-- [koka](https://koka-lang.github.io)：以 effect 为核心的函数式语言。有 [full UFCS](https://koka-lang.github.io/koka/doc/book.html#sec-dot) 特性。
-- [moonbit](https://www.moonbitlang.cn/)：从 rust 中学了很多的语言
+- [koka](https://koka-lang.github.io)：以 effect 为核心的函数式语言。有 [full UFCS](https://koka-lang.github.io/koka/doc/book.html#sec-dot) 特性。给一堆东西分类的感觉我比较喜欢。
+- [moonbit](https://www.moonbitlang.cn/)：国人开发，面向 WebAssembly，从 rust 中学了很多的语言
 - [odin](https://odin-lang.org/docs/overview/)：追求简单的、像 Go 的语言
 - [C3](https://c3-lang.org/)：C 的改进，解决 C 痛点
 - [flix](https://flix.dev/)：JVM 上的、拥有许多函数式风格的语言。
 - [borgo](https://borgo-lang.github.io/)：点进去就知道了
 - [dada](https://dada-lang.org/)：类 rust 的实验性语言，观点比较模糊（至少我没看出有哪些 feature）
 - [Vale](https://github.com/ValeLang/Vale)：类 rust 的语言（所有权和泛型），但是更简单，限制更多（可变结构只能有一个引用）。开发者对内存回收，内存安全~~和玛雅文化~~有[独特的理解](https://verdagon.dev/home)。
+- [gleam](https://gleam.run/)：基于 rust 的，一股 rua 味的语言，BEAM 系竞争者
 
 </dtls>
 

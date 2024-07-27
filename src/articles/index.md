@@ -25,6 +25,7 @@ category:
 - [压缩二进制文件与 dll](./minimize_exe.md)
 - [命令行压缩](./cli_compress.md)
 - [yt-dlp 使用教程](./yt-dlp.md)
+- [SPEED UP!](./speedup.md)
 
 ## 推荐/横评
 
