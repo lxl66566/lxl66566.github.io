@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 27 Jul 2024 16:01:10 GMT</pubDate>
-    <lastBuildDate>Sat, 27 Jul 2024 16:01:10 GMT</lastBuildDate>
+    <pubDate>Sun, 28 Jul 2024 09:50:24 GMT</pubDate>
+    <lastBuildDate>Sun, 28 Jul 2024 09:50:24 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -125,6 +125,9 @@
 <h3>libTAS</h3>
 <p>首先我尝试了 libTAS，这是一个泛目标开源 tas 库+软件，许多其他 TAS 生态是建立在 libTAS 上的。libTAS 只能使用 linux。libTAS 在 NixOS 上的打包不算太好，低了一个版本，也缺失了 libtas32.so 库导致没法运行 32 位 exe，需要手动用 <code>LIBTAS_SO_PATH</code> 拉；然后 libTAS 运行时会去找 libalsa，NixOS 的 dynamic link 管理又是混沌与邪恶的，因此我还需要大费周章手动用 <code>LD_LIBRARY_PATH</code> 把运行库拉进来。</p>
 <p>这一切做好以后，游戏还是打不开，显示 <em>HD 不是一个有效的 binary</em>… （HD 是游戏路径上的一个词）我怀疑它 parse 参数出了问题，但是我没有证据，它也不输出它用的启动指令。</p>
+<p>后来我自己打了 1.4.6 的 libTAS 包，然后自己打了一串超级长的启动指令：</p>
+<div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" data-title="sh" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">LD_LIBRARY_PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/tmp:/nix/store/1ry2s2jgqbl3w7w54b8biylwqdxy52zw-steam-fhs/usr/lib32/:LD_LIBRARY_PATH</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> LIBTAS_SO_PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/tmp/libtas.so</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> WINEPREFIX</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/home/absx/.local/share/wineprefixes/origin</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> libTAS</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>嗯，steam-fhs 还是好用的。现在我的游戏已经起来了，但是我发现我不会用 libTAS，无法调速。。反正 README 说的快捷键，TAB 和 V 这些都是用不了的。</p>
 <h3>hourglass</h3>
 <p>转战 windows，hourglass 也是一个泛用 TAS 工具，仅支持 win32，不过它已经非常老了。我只是想试试看，没想到 hourglass 真的可以让我的游戏跑起来，并且能够改变游戏音频速度！但是 hourglass 有一些致命的缺陷：</p>
 <ol>
@@ -299,9 +302,10 @@
 </ul>
 </li>
 <li><a href="https://search.nixos.org/options" target="_blank" rel="noopener noreferrer">https://search.nixos.org/options</a>：查找设置项</li>
-<li><a href="https://home-manager-options.extranix.com/" target="_blank" rel="noopener noreferrer">https://home-manager-options.extranix.com/</a>：查找 home-manager 中的设置项。人家做的多好，<s>爆杀你们 manual</s></li>
+<li><a href="https://home-manager-options.extranix.com/" target="_blank" rel="noopener noreferrer">https://home-manager-options.extranix.com/</a>：查找 home-manager 中的设置项</li>
 <li><a href="https://noogle.dev/" target="_blank" rel="noopener noreferrer">https://noogle.dev/</a>：nix 语言学习查找</li>
 <li><a href="https://nur.nix-community.org/" target="_blank" rel="noopener noreferrer">https://nur.nix-community.org/</a>：NUR 包</li>
+<li><a href="https://luoxu.torus.icu/" target="_blank" rel="noopener noreferrer">Nix 落絮</a></li>
 </ul>
 <h3>其他资源</h3>
 <ul>
@@ -312,8 +316,8 @@
 <h3>linter / formatter</h3>
 <p>nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的过程。说到编程那肯定少不了 linter 和 formatter。而我是 all in vscode 人，我使用的插件如下：</p>
 <ul>
-<li><em>Nix IDE - Noortheen</em>：lsp，需要手动安装 pkgs.<code>nil</code></li>
-<li><em>nixfmt - brettm12345</em>：formatter，需要手动安装 pkgs.<code>nixfmt-rfc-style</code></li>
+<li><em>Nix IDE - Noortheen</em>：lsp，需要手动安装 <code>pkgs.nil</code></li>
+<li><em>nixfmt - brettm12345</em>：formatter，需要手动安装 <code>pkgs.nixfmt-rfc-style</code></li>
 </ul>
 <h3>显卡驱动</h3>
 <p>官方给出了比较详细的 NixOS 显卡驱动教程(<a href="https://nixos.wiki/wiki/Nvidia" target="_blank" rel="noopener noreferrer">NixOS Manual - Nvidia</a>)，看就完了。我认为还存在一些缺点：</p>
@@ -355,6 +359,8 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。</p>
 <p>ps. 根据<a href="https://t.me/nixos_zhcn/477206" target="_blank" rel="noopener noreferrer">群友描述</a>，只需要将 KDE 配置文件删除即可，与 defaultLocale 无关。</p>
+<p>然后被 rime 党吹的有点心动，想试试 rime。刚好 ryan4yin 佬<a href="https://github.com/ryan4yin/nix-config/tree/main/overlays" target="_blank" rel="noopener noreferrer">就是 rime + 小鹤</a>，于是我便直接开抄配置。可能是 overlays 哪出了问题，rebuild 的时候并没有把数据移到 rimedata，我也百思不得其解。后来手动移过去试了一下，发现真难用啊（包括快捷键啥都不懂）。于是滚回了 fcitx5-chinese-addon。</p>
+<p><code>fcitx5-configtool</code> 里双拼键盘下的“管理自定义词组”是坏的，点不开。我也懒得修了，把以前 archlinux 位于 <code>~/.local/share/fcitx5/pinyin/customphrase</code> 的词库搬出来，拿到 home-manager 里 source 一下就好了（需要 <a href="https://wiki.archlinux.org/title/Fcitx5#Emoji_show_abnormally_in_the_candidate_box" target="_blank" rel="noopener noreferrer">重启 fcitx5</a>：在 bash 里跑 <code>kill `ps -A | grep fcitx5 | awk '{print $1}'` &amp;&amp; fcitx5&amp;</code>），也符合 nixos 的原则。</p>
 <h3>代理</h3>
 <p>我最开始使用 <a href="/articles/proxy/proxy_software.html#v2raya" target="_blank">v2rayA</a> 过渡，然后就跑到 <a href="/articles/proxy/proxy_software.html#dae" target="_blank">dae</a> 了。</p>
 <h3>备份</h3>
