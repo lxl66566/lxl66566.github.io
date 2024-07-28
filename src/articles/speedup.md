@@ -149,3 +149,35 @@ LD_LIBRARY_PATH=/tmp:/nix/store/1ry2s2jgqbl3w7w54b8biylwqdxy52zw-steam-fhs/usr/l
   - 不过也有一些 galgame 是使用 CD 的，我只能说保留尝试的可能性。
 - UniTAS：专门针对 unity 游戏，有的 galgame 使用 unity 引擎的可能可以尝试。不过真心不多。
 - Hourglass-Resurrection：一个 hourglass fork，但是也已经停更了。没有提供二进制，我尝试自己构建也失败了。（VS 除了点构建运行就啥也不会干了）
+
+### [libspeedhack](https://github.com/evg-zhabotinsky/libspeedhack)
+
+20240729：虽然很麻烦，但是我还是为了仅存的一点希望去尝试一下 libspeedhack。作者已经消失两年了。我按照说明直接用，不出意外地出了意外： `libspeedhack32.so: undefined symbol: floor`. 然后去瞄了下 issue，果然有一个一样的问题，并且别人也修了，开了 pr 在构建时加了个 `-lm` 参数。然后我很开心，拉下来想构建，结果：
+
+我们的 NixOS 实在是太棒啦！环境根本搞不起来，它的构建指令需要静态链接 + cross 32 位，什么 libclang，glibc_multi 的包直接加进去根本满足不了需求，再加上我根本不知道在 buildInputs 里能写哪些玩意，比如 glibc 就能写 `glibc.static`， glibc_multi 能写 `glibc_multi.dev`，这种有个点后面跟着啥玩意的我除了读 nix 源码也想不到要去哪查。
+
+然后去我的 debian 云服务器上尝试构建，东西都装好了，然后没有数学库：`ld: cannot find -lm: No such file or directory`。我又把 `libm.so` 拿出来装到 `LD_LIBRARY_PATH` 里，继续构建，又会得到：
+
+```
+/libc.a(malloc.o): relocation R_X86_64_TPOFF32 against 'tcache' can not be used when making a shared object; recompile with -fPIC
+ld: failed to set dynamic section sizes: bad value
+collect2: 错误：ld 返回 1
+```
+
+一度让我想放弃。问了下 gpt-4o，让我不要把 libm.so 在构建时链进去，应该在运行时加载。于是我最后的尝试成功，修改它给的启动脚本：
+
+```sh
+#!/usr/bin/env bash
+
+rm -f /tmp/speedhack_{pipe,log}
+mkfifo /tmp/speedhack_pipe
+
+_libdir=/home/absx/lib      # （我把东西存这里）
+LD_LIBRARY_PATH="${_libdir}/lib:${_libdir}/lib64:${_libdir}/lib32${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}" \
+LD_PRELOAD="libspeedhack.so:${_libdir}/libm.so:${_libdir}/libm32.so:${LD_PRELOAD:+:$LD_PRELOAD}" \
+exec "$@"
+```
+
+这样把 `libm.so` 作为 `LD_PRELOAD` 运行时加载进 `./start.sh wine xxx.exe` 即可。
+
+游戏打开了，但是……我加速呢？我 `echo 2.0 > /tmp/speedhack_pipe` 都要按冒烟了，所以我的加速呢？？不只声音，就连游戏本身也没有加速，就跟 libspeedhack 不存在一样地和谐。于是此次尝试又宣告失败，骂这个跑路项目也解决不了什么，还是不骂了。
