@@ -128,7 +128,7 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 
 ## Github Workflow
 
-Github 工作流，极为强大。可以理解为一个虚拟机。[官方文档](https://docs.github.com/cn/actions/using-workflows/about-workflows)
+Github 工作流，极为强大。可以理解为一个性能强悍的虚拟机帮你跑任务。[官方文档](https://docs.github.com/cn/actions/using-workflows/about-workflows)
 
 使用方法：在项目根目录下，新建 `.github/workflows/<name>.yml`.
 
@@ -149,13 +149,19 @@ on:
 
 手动任务：使用 `workflow_dispatch`；建议每个 workflow 都加一个方便调试。不要再使用 `on:push` 进行**手动运行控制**。
 
-## external
+### Powerful CI
 
-1. [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
+这里列出一些我常用的 CI。顺带一提，CI 就是 Continuous Integration，在每次代码操作后自动进行一系列检查或服务更新部署，简化操作流程。
 
-### dependabot
+写在这里的 CI 理论上应该是语言无关的。如果需要特定编程语言的 CI，可以去对应语言页面查看。
 
-可以开启 dependabot 让它帮你更新依赖。以 rust 项目为例，只需要在 `.github/dependabot.yml` （注意，不是 workflow 里）写：
+学习写 CI？不用学习，多看多抄，会用 template 就懂了。
+
+#### dependabot
+
+为你的项目自动更新依赖，非常好用。不过需要你项目有一个 check PR 的 test CI，因为 dependabot 靠提 PR 修改代码。项目的测试覆盖率越高越好，这样才不会在自动依赖更新时炸掉项目，自己还不知道。
+
+以 rust 项目为例，只需要在 `.github/dependabot.yml` （注意，不是 workflow 里）写：
 
 ```yml
 version: 2
@@ -168,4 +174,47 @@ updates:
 
 即可。记得在 Security 里开启 dependabot。
 
-如果你的项目有完整的测试，还可以开启 auto merge，究极懒人了属于是。
+如果你的项目测试覆盖率够高，还可以开启 auto merge，究极懒人了属于是。
+
+#### [typos](https://github.com/crate-ci/typos)
+
+检查你的英文水平（检查代码拼写错误）。rust 写的，速度极快，即使不用 CI 也可以在本地用，方便修复。
+
+```yml
+- name: Check Spelling
+  uses: crate-ci/typos@v1.23.3
+```
+
+本地用就
+
+```sh
+cargo binstall typos-cli
+typos     # 检查
+typos -w  # 纠正
+```
+
+#### [cache](https://github.com/actions/cache)
+
+缓存构建中的依赖项，加速 CI。比较适合大型项目，依赖很多，经常跑 CI 的那种。个人的小仓库就有点鸡肋了，不如不开 cahce，多花 10 秒钟构建省 300MB 空间，不为 Github 想想也得为 SSD 想想吧~~（虽然不是我的，但爱是平等的）~~。
+
+每个仓库免费 10 GB 的存储空间，应该是 Github 官方提供的(?)，真富啊。
+
+有问题去看官方文档，他这个写的还是不差的。这里随手举一个 rust 项目的例子。
+
+```yml
+- name: Cache dependencies installed with cargo
+  uses: actions/cache@v4
+  with:
+    path: |
+      ~/.cargo/bin/
+      ~/.cargo/registry/index/
+      ~/.cargo/registry/cache/
+      ~/.cargo/git/db/
+      target/
+    key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+    restore-keys: ${{ runner.os }}-cargo-
+```
+
+## external
+
+1. [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)

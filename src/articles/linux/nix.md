@@ -88,9 +88,10 @@ sudo: a password is required
 - <https://search.nixos.org/packages>：查找包。
   - 主要也就看 Homepage 和 Source，分别对应项目 README 和 打包 nix 源码
 - <https://search.nixos.org/options>：查找设置项
-- <https://home-manager-options.extranix.com/>：查找 home-manager 中的设置项。人家做的多好，~~爆杀你们 manual~~
+- <https://home-manager-options.extranix.com/>：查找 home-manager 中的设置项
 - <https://noogle.dev/>：nix 语言学习查找
 - <https://nur.nix-community.org/>：NUR 包
+- [Nix 落絮](https://luoxu.torus.icu/)
 
 ### 其他资源
 
@@ -104,8 +105,8 @@ sudo: a password is required
 
 nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的过程。说到编程那肯定少不了 linter 和 formatter。而我是 all in vscode 人，我使用的插件如下：
 
-- _Nix IDE - Noortheen_：lsp，需要手动安装 pkgs.`nil`
-- _nixfmt - brettm12345_：formatter，需要手动安装 pkgs.`nixfmt-rfc-style`
+- _Nix IDE - Noortheen_：lsp，需要手动安装 `pkgs.nil`
+- _nixfmt - brettm12345_：formatter，需要手动安装 `pkgs.nixfmt-rfc-style`
 
 ### 显卡驱动
 
@@ -166,6 +167,10 @@ extraLocaleSettings = {
 莫名奇妙就好了，在输入法设置里可以找到双拼键盘，开起来就行。
 
 ps. 根据[群友描述](https://t.me/nixos_zhcn/477206)，只需要将 KDE 配置文件删除即可，与 defaultLocale 无关。
+
+然后被 rime 党吹的有点心动，想试试 rime。刚好 ryan4yin 佬[就是 rime + 小鹤](https://github.com/ryan4yin/nix-config/tree/main/overlays)，于是我便直接开抄配置。可能是 overlays 哪出了问题，rebuild 的时候并没有把数据移到 rimedata，我也百思不得其解。后来手动移过去试了一下，发现真难用啊（包括快捷键啥都不懂）。于是滚回了 fcitx5-chinese-addon。
+
+`fcitx5-configtool` 里双拼键盘下的“管理自定义词组”是坏的，点不开。我也懒得修了，把以前 archlinux 位于 `~/.local/share/fcitx5/pinyin/customphrase` 的词库搬出来，拿到 home-manager 里 source 一下就好了（需要 [重启 fcitx5](https://wiki.archlinux.org/title/Fcitx5#Emoji_show_abnormally_in_the_candidate_box)：在 bash 里跑 `` kill `ps -A | grep fcitx5 | awk '{print $1}'` && fcitx5& ``），也符合 nixos 的原则。
 
 ### 代理
 
