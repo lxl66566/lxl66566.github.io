@@ -372,6 +372,8 @@ const data = [
   { id: "515562", aScore: 7.7, bScore: 3.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-3260-三郎-先生責任とってくれますよね-ブルーアーカイブ-中国翻訳---Page-1-07-23" },
   { id: "(ex)", aScore: 8.2, bScore: 3, info: "#师生", otherlink: "https://exhentai.org/g/2986798/ea57cfda3f/", bak: "https://telegra.ph/うなぎやさん-花宮なつか-BUKKAKEエモーション-中国翻訳-DL版-07-23" },
   { id: "519958", aScore: 8, bScore: 8.9, info: "#催眠 #调教 魔砲少女シエスタ" },
+  { id: "469072", aScore: 7.1, bScore: 9, info: "#NTR" },
+  { id: "140738", aScore: 4.4, bScore: 7.6, info: "#3P #姐妹 #出轨" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

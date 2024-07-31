@@ -407,6 +407,8 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-bisect-rustc](https://github.com/rust-lang/cargo-bisect-rustc) | 二分查找哪个 rustc nightly 版本引入了错误 |
 | [cargo-machete](https://github.com/bnjbvr/cargo-machete) | Remove unused Rust dependencies |
 | [cargo-nextest](https://github.com/nextest-rs/nextest) | 好用的 test 工具，有超时失败，log 筛选等特性 |
+| [cargo-audit](https://github.com/RustSec/rustsec/tree/main/cargo-audit) | 查依赖漏洞 |
+| [cargo-hakari](https://crates.io/crates/cargo-hakari) | 加速构建的黑科技 |
 
 ## 库
 
@@ -558,6 +560,7 @@ books:
 5. [Rust Atomics and Locks](https://marabos.nl/atomics/)：底层并发原理入门
 6. [Rust 入门秘籍](https://rust-book.junmajinlong.com/about.html)：一本既简洁又深入的书，非常值得一看（特别是 tokio 相关章节）。
 7. [Rust 编程第一课 - 陈天](https://learn.lianglianglee.com/专栏/陈天%20·%20Rust%20编程第一课/00%20开篇词%20让Rust成为你的下一门主力语言.md)：比较进阶的书，写得很好，着重讲述了难点和实战
+8. [Rust magic patterns](https://github.com/alexpusch/rust-magic-patterns)：针对某些狭小的知识点的深入分析
 
 articles:
 
