@@ -91,6 +91,7 @@ tag:
   - [ ] rust crate: select by arch
 - [x] chnroutes
 - [ ] fail2ban
+- [ ] Telegram marsbot
 
 ### Android
 

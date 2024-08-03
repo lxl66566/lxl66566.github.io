@@ -52,7 +52,7 @@ def list_audio_devices_and_return_vb_cable():
         print(
             f"Device ID: {i} - Name: {device_info.get('name')} - Input Channels: {device_info['maxInputChannels']}, Output Channels: {device_info['maxOutputChannels']}"
         )
-    return 0, 6
+    return 0, 6     # 直接返回 device id, for testing
 
 
 # 获取设备索引
@@ -120,7 +120,7 @@ except KeyboardInterrupt:
 
 ### libTAS
 
-首先我尝试了 libTAS，这是一个泛目标开源 tas 库+软件，许多其他 TAS 生态是建立在 libTAS 上的。libTAS 只能使用 linux。libTAS 在 NixOS 上的打包不算太好，低了一个版本，也缺失了 libtas32.so 库导致没法运行 32 位 exe，需要手动用 `LIBTAS_SO_PATH` 拉；然后 libTAS 运行时会去找 libalsa，NixOS 的 dynamic link 管理又是混沌与邪恶的，因此我还需要大费周章手动用 `LD_LIBRARY_PATH` 把运行库拉进来。
+首先我尝试了 libTAS，这是一个泛目标开源 tas 库+软件，许多其他 TAS 生态是建立在 libTAS 上的。libTAS 只能运行在 linux。libTAS 在 NixOS 上的打包不算太好，低了一个版本，也缺失了 libtas32.so 库导致没法运行 32 位 exe，需要手动用 `LIBTAS_SO_PATH` 拉；然后 libTAS 运行时会去找 libalsa，NixOS 的 dynamic link 管理又是混沌与邪恶的，因此我还需要大费周章手动用 `LD_LIBRARY_PATH` 把运行库拉进来。
 
 这一切做好以后，游戏还是打不开，显示 _HD 不是一个有效的 binary_… （HD 是游戏路径上的一个词）我怀疑它 parse 参数出了问题，但是我没有证据，它也不输出它用的启动指令。
 
@@ -130,7 +130,7 @@ except KeyboardInterrupt:
 LD_LIBRARY_PATH=/tmp:/nix/store/1ry2s2jgqbl3w7w54b8biylwqdxy52zw-steam-fhs/usr/lib32/:LD_LIBRARY_PATH LIBTAS_SO_PATH=/tmp/libtas.so WINEPREFIX=/home/absx/.local/share/wineprefixes/origin libTAS
 ```
 
-嗯，steam-fhs 还是好用的。现在我的游戏已经起来了，但是我发现我不会用 libTAS，无法调速。。反正 README 说的快捷键，TAB 和 V 这些都是用不了的。
+嗯，steam-fhs 还是好用的。现在我的游戏已经起来了，但是我发现我不会用 libTAS，无法调速。。反正 README 说的快捷键，TAB 和 V 这些都是用不了的，在 Qt GUI 窗口里设置速度也没有任何效果。
 
 ### hourglass
 
@@ -181,3 +181,55 @@ exec "$@"
 这样把 `libm.so` 作为 `LD_PRELOAD` 运行时加载进 `./start.sh wine xxx.exe` 即可。
 
 游戏打开了，但是……我加速呢？我 `echo 2.0 > /tmp/speedhack_pipe` 都要按冒烟了，所以我的加速呢？？不只声音，就连游戏本身也没有加速，就跟 libspeedhack 不存在一样地和谐。于是此次尝试又宣告失败，骂这个跑路项目也解决不了什么，还是不骂了。
+
+> ps. 事实上，通过源码也能知道，Github 上的这些 libspeedhack、[Letomaniy/Speed-Hack](https://github.com/Letomaniy/Speed-Hack)、[Hirtol/speedhack-rs](https://github.com/Hirtol/speedhack-rs) 等 speedhack 并不涉及音频 api 的修改，因此不可能有音频加速效果。妄图通过简单的一点点源码实现加速只能说是天方夜谭。
+
+## [Speed Gear](https://www.softking.com.tw/dl/17892/Speed%20Gear%207.2.html)
+
+一个简单点点点就能加速窗口的软件，比较电脑小白向。最高支持数千倍加速（还是拉条，你们 UI 设计者.jpg），体验还不错，但是也**不支持音频加速**。
+
+## 源码构建
+
+20240803：到了这一步，市面上的各种现有软件看起来已经是山穷水尽了，我开始把目光转向修改代码。
+
+一个选择是读 wine 的音频 api 然后写点 lib 注入。另一个选择看起来成功率更大一些，那就是直接修改 hourglass 的代码，毕竟人家的功能可行性已经通过了验证。
+
+hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。我之前从未用 vs 写过 C/C++ 代码，而且 C++ 构建本来就是一坨，还是去构建已经不再维护的代码，因此预感此次修改也不会顺利。
+
+### [Hourglass-Resurrection](https://github.com/lxl66566/Hourglass-Resurrection)
+
+这是一份 7 年前的代码，Hourglass 的重生版。不抱希望搜了下 fork，没啥大修改，因此开始 clone。
+
+想修改代码第一步就是跑过编译，因此我开始折腾编译。扔到 vs 2022，一编译，一大堆报错。这些报错还都挺抽象的，例如有个叫 `IDirectSoundSinkFactory` 的玩意找不到声明，但是我把它宏解了能看到声明。Google 也搜不到这玩意。
+
+我看 Hourglass-Resurrection 有一个 [7 年前跑的 CI](https://ci.appveyor.com/project/Warepire/hourglass-resurrection/branch/master) 是可以过构建的，用的是 msbuild。于是我下载 .Net sdk，发现：
+
+1. msbuild 本身不会在安装时被加入环境变量，要用绝对路径调用。
+2. windows sdk 版本不匹配，于是我去下载了 10.0.22621，重新 build。
+3. 报 `error MSB6001: “CL.exe”的命令行开关无效。` 猜测应该是本机的 clang 太新导致的。
+
+我也想过装老版本 vs，下载后发现不同版本 vs 不能共存。于是打消念头。
+
+不想再折腾本机，跑去写 Github CI。结果找的 install windows sdk CI 没一个能用的，我指定的 22621 version 要么找不到，要么就是脚本内部错误。然后我也不指定版本了，改用 `choco install visualstudio2022buildtools windows-sdk-10.0`，结果花了好几分钟安装后告诉我还是找不到 msbuild。。太经典了。
+
+又继续啃了一会，给一堆 struct 和 macro 移形换位，编译不报错了，取而代之是链接爆了一大堆 error：`LNK2001 无法解析的外部符号`。。这下我是真没辙了。
+
+### [hourglass-win32](https://github.com/TASEmulators/hourglass-win32)
+
+这个是原版 hourglass 代码，年代更加久远了，距今有足足 14 年的历史。
+
+用 vs 2022 打开，跑一次构建，没想到居然能够把 GUI 跑起来，已经很厉害了。不过逻辑是没有的，构建时出了挺多错误。
+
+这些 error 看起来比 Hourglass-Resurrection 好读多了，我猜测是 C++ 编译器标准太高导致的编译低版本不兼容的问题。尝试降低 C++ 编译器版本，vs 告诉我：我们接受指定的最低版本是 C++14 😅。
+
+## 自己写
+
+干到现在我已经不想再折腾构建了，不如干脆读代码，然后开抄，写一个自己的注入 lib。我的想法很简单，只加速音频播放，不加速游戏本身（如果想要两个都加速，那就再开一个 CE）。
+
+从读代码角度来说，Hourglass-Resurrection 还是比原版要好很多的，~~虽然 C++ 项目一直都很难读~~。最重要的显然是 `source\hooks\hooks\soundhooks.cpp`，它是整个音频加速的核心；并且可以看到文件在最后定义了注入/拦截（Intercept），将 waveOutWrite，PlaySoundA，PlaySoundW 等函数全部干掉了。
+
+### rust
+
+我不想碰 C++（即使已有代码作参考），先用 rust 碰碰壁再说。
+
+试了一下 [detour-rs](https://github.com/darfink/detour-rs)，一个 detour 的 rs 实现，但是拉下来发现编译不过。issue 看到了一个 fork 解决了这个问题，才发觉 detour-rs 已经断更三年了。所以使用此 fork 版本的 [retour-rs](https://github.com/Hpmason/retour-rs)。fork 版的文档也更详细，我用它的 example 配合文档推荐的 [dll-syringe](https://crates.io/crates/dll-syringe) 跑了一下，成功注入了 MessageBoxW，完成了新手教程。
