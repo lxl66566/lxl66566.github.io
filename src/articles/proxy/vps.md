@@ -56,6 +56,7 @@ tag:
 |[DigitalVirt](https://zhujiwiki.com/36771/)|HK|￥95/yr|1TB 200Mbps|1GB|10GB|
 |[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=124)|HK|￥40/yr|500GB 10Gbps|1GB|20GB|
 |[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=145)|HK|￥88/yr|1600GB 10Gbps|1GB|20GB|
+|[ASVM](https://asvm.net/billing/aff.php?aff=28&pid=18)|HK|$10/yr|2TB 1Gbps|1GB|10GB|
 
 一般价
 

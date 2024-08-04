@@ -376,6 +376,12 @@ const data = [
   { id: "140738", aScore: 4.4, bScore: 7.6, info: "#3P #姐妹 #出轨" },
   { id: "520076", aScore: 3.2, bScore: 8.3, info: "#触手 #怀孕", bak: "https://telegra.ph/切切枚-ゑぬ-Nursery-Room-中国翻訳-DL版-07-19" },
   { id: "468595", aScore: 3.5, bScore: 5.6, info: "#女仆 #纯爱" },
+  { id: "359150", aScore: 8, bScore: 7.8, info: "#东方 #雌小鬼", bak: "https://telegra.ph/てこめんち-てち-フランちゃんの思うがままに-東方Project-中国翻訳-DL版-08-03" },
+  { id: "359435", aScore: 7.7, bScore: 6.9, info: "#师生 #睡x", bak: "https://telegra.ph/AC3-きのこのみ-kino-睡眠学習感じすぎちゃう濡れ濡れ微乳少女-中国翻訳-08-03" },
+  { id: "359628", aScore: 5.2, bScore: 4.6, info: "#兽耳 #师生", bak: "https://telegra.ph/GW超同人祭-りとるはむれっと-きぃら-先生と私とネコミミパーカー-中国翻訳-08-03" },
+  { id: "(ex)", aScore: 7.2, bScore: 8.6, order: 2, info: "#师生", otherlink: "https://exhentai.org/g/1919494/beb3d13b2f/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-あの子は問題児2-中国翻訳-08-03" },
+  { ie: "(ex)", aScore: 9.9, bScore: 6.1, info: "#全彩 #日常 #无文字", otherlink: "https://exhentai.org/g/1926843/16d94a82a8/", bak: "https://telegra.ph/7gao-Rondo-neko-08-03" },
+  { id: "362085", aScore: 9, bScore: 5.7, order: 2, info: "#兽耳 #女仆 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本2さつ目-中国翻訳-DL版-08-03" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
