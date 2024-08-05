@@ -216,6 +216,13 @@ typos -w  # 纠正
     restore-keys: ${{ runner.os }}-cargo-
 ```
 
+#### [sccache-action](https://github.com/Mozilla-Actions/sccache-action)
+
+方便地使用 [sccache](https://github.com/mozilla/sccache/) 的 CI。这个和上面的 cache 不太一样，sccache 提供更智能的 cache 而不是暴力缓存 `./target`。
+
+使用也非常简单，对 rust 来说，设置两个 env，编译前 use 一下就行。编译后还可以打印。
+
 ## external
 
 1. [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
+2. [使用 sccache 加快 Rust 编译速度](https://xuanwo.io/reports/2022-45/)

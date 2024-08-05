@@ -374,6 +374,7 @@ const data = [
   { id: "519958", aScore: 8, bScore: 8.9, info: "#催眠 #调教 魔砲少女シエスタ" },
   { id: "469072", aScore: 7.1, bScore: 9, info: "#NTR" },
   { id: "140738", aScore: 4.4, bScore: 7.6, info: "#3P #姐妹 #出轨" },
+  { id: "(ex)", aScore: 7.5, bScore: 4.6, info: "#全彩 #兽耳 #3P #百合", otherlink: "https://exhentai.org/g/1929232/edce5c27f5/", bak: "https://telegra.ph/Under-Colony-みぬたち-みけじゃらし-ハイスクールフリート-中国翻訳-DL版-08-03" },
   { id: "520076", aScore: 3.2, bScore: 8.3, info: "#触手 #怀孕", bak: "https://telegra.ph/切切枚-ゑぬ-Nursery-Room-中国翻訳-DL版-07-19" },
   { id: "468595", aScore: 3.5, bScore: 5.6, info: "#女仆 #纯爱" },
   { id: "359150", aScore: 8, bScore: 7.8, info: "#东方 #雌小鬼", bak: "https://telegra.ph/てこめんち-てち-フランちゃんの思うがままに-東方Project-中国翻訳-DL版-08-03" },
@@ -382,6 +383,8 @@ const data = [
   { id: "(ex)", aScore: 7.2, bScore: 8.6, order: 2, info: "#师生", otherlink: "https://exhentai.org/g/1919494/beb3d13b2f/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-あの子は問題児2-中国翻訳-08-03" },
   { ie: "(ex)", aScore: 9.9, bScore: 6.1, info: "#全彩 #日常 #无文字", otherlink: "https://exhentai.org/g/1926843/16d94a82a8/", bak: "https://telegra.ph/7gao-Rondo-neko-08-03" },
   { id: "362085", aScore: 9, bScore: 5.7, order: 2, info: "#兽耳 #女仆 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本2さつ目-中国翻訳-DL版-08-03" },
+  { id: "384423", aScore: 5.1, bScore: 6.3, info: "#性转 #魅魔 #兄妹 #纯爱", bak: "https://telegra.ph/Story-Circle-隣-ダウナー系ゲーマー弟が兄さん好き好き妹サキュバスになるまで-中国翻訳-08-03" },
+  { id: "522495", aScore: 9.4, bScore: 9.2, info: "#蔚蓝档案 #3P", bak: "https://nhentai.net/g/521374/" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

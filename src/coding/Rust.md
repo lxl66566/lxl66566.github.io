@@ -409,6 +409,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-nextest](https://github.com/nextest-rs/nextest) | 好用的 test 工具，有超时失败，log 筛选等特性 |
 | [cargo-audit](https://github.com/RustSec/rustsec/tree/main/cargo-audit) | 查依赖漏洞 |
 | [cargo-hakari](https://crates.io/crates/cargo-hakari) | 加速构建的黑科技 |
+| [cargo-selector](https://github.com/lusingander/cargo-selector) | TUI 快速选择运行目标 |
 
 ## 库
 
@@ -578,3 +579,4 @@ articles:
 12. [金枪鱼之夜：基于完成的 Rust 异步：compio 项目及其经验](https://www.youtube.com/live/P7wLTy59-f0)
 13. [用 Rust 搞科研的两年](https://zhuanlan.zhihu.com/p/670166312)
 14. [The missing parts in Cargo](https://weihanglo.tw/posts/2024/the-missing-parts-in-cargo/)
+15. [Fast Rust Builds](https://matklad.github.io/2021/09/04/fast-rust-builds.html)
