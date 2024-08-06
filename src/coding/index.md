@@ -83,6 +83,7 @@ tag:
 3. [Vim](./vim.md)：文件编辑器
 4. [数据库](./sql.md)
 5. [容器](./container.md)
+6. [包管理器灵感](./package_manager.md)
 
 ## 前端
 

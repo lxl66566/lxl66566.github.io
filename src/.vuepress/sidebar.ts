@@ -122,6 +122,7 @@ export default sidebar({
 				"vim.md",
 				"sql.md",
 				"container.md",
+				"package_manager.md",
 			],
 		},
 		{

@@ -35,8 +35,7 @@ tag:
   - [ ] 断点重传
   - [ ] 软连接，可在目录外创建虚仓库，指向真实仓库
 - [ ] HDL 高阶语言，能将类 Rust 语法的语言编译成 verilog 或 VHDL。
-- [ ] 音频加速，硬件驱动层面上的音频调速。（已知 CE 无法改变音频流速）
-  - [ ] 从一次损坏声卡经历发现驱动可以改变音频播放速度（包括软件运行速度）
+- [ ] [音频加速](../articles/speedup.md)
 - [ ] 流式分布式的视频软件?
 - [ ] 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）
 - [ ] pdf 无损图片压缩
@@ -67,14 +66,14 @@ tag:
   - JSX/TSX 是好东西
   - 组件与作用域
 - [x] fuck, delete it! (windows)
-- [ ] 代理
+- [ ] 代理，自行设计协议，对称加密
 - [ ] ~~windows shell with everything:~~ everything SDK is hard to use, i can't ever compile a basic example code...
 - [x] openppp2 client
   - [ ] 绕过路由
 - [ ] rust tui 脚本工具箱
   - 转码，复制，参考我的 fish function
   - 平台无关的 alias
-- [ ] dotfile backup script
+  - [ ] dotfile backup script
 - [ ] 脚本语言：强类型；方便的系统调用；无视空白；方便的函数式异步（go）；
 - [x] python beautiful assert: [pretty-assert](https://github.com/lxl66566/pretty-assert)
   - 颜色，当前行，变量值
@@ -91,7 +90,7 @@ tag:
   - [ ] rust crate: select by arch
 - [x] chnroutes
 - [ ] fail2ban
-- [ ] Telegram marsbot
+- [x] Telegram marsbot
 
 ### Android
 

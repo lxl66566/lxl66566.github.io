@@ -385,6 +385,7 @@ const data = [
   { id: "362085", aScore: 9, bScore: 5.7, order: 2, info: "#兽耳 #女仆 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本2さつ目-中国翻訳-DL版-08-03" },
   { id: "384423", aScore: 5.1, bScore: 6.3, info: "#性转 #魅魔 #兄妹 #纯爱", bak: "https://telegra.ph/Story-Circle-隣-ダウナー系ゲーマー弟が兄さん好き好き妹サキュバスになるまで-中国翻訳-08-03" },
   { id: "522495", aScore: 9.4, bScore: 9.2, info: "#蔚蓝档案 #3P", bak: "https://nhentai.net/g/521374/" },
+  { id: "512909", aScore: 8.6, bScore: 7.2, order: 2, info: "#青梅竹马 #制服 ぼくたちは、恋をしてない", bak: "https://telegra.ph/C96-東横サーフライダー-ふみー-ぼくたちは恋をしてない-中国翻訳-06-03" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

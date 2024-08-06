@@ -146,7 +146,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |[`Zellij`](https://github.com/zellij-org/zellij) / `tmux`|终端复用，多窗口|
 
 [^6]: `yazi` 甚至能在 console 下查看图片。
-[^8]: `ncdu` 在 btrfs 下不准。([ref](https://wiki.archlinuxcn.org/wiki/Btrfs#显示已使用的/空闲空间))
+[^8]: `ncdu` 在 btrfs 下不准([ref](https://wiki.archlinuxcn.org/wiki/Btrfs#显示已使用的/空闲空间))。可以考虑用 [btdu](https://github.com/CyberShadow/btdu)，这是专门为 btrfs 设计的 du 工具。
 
 以上是本人体验总结的结果。若需要更多推荐，不如看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps) 和 [external 1.](#external)。
 
@@ -186,6 +186,10 @@ sudo systemd-nspawn -D container  # 进入容器
 Thunderbird (`thunderbird-i18n-zh-cn` <Badge text="extra" />) 是一个重量级的邮件客户端，支持收发，多账号。好用是挺好用，就是太重了（600+M RAM），于是我想寻找更轻量的邮件客户端。
 
 由于我桌面用的 kde，试了下 kmail，用不了，一直报 Akonadi 有问题，点 _详情_ 也点不开。我装了 `kde-pim` <Badge text="包组" /> 也无济于事。据说 kmail 添加 gmail 也[有问题](https://t.me/archlinuxcn_group/3030332)，因此放弃。
+
+### 文本编辑器
+
+详见[各种 vim 系 editor 的使用体验](../../coding/vim.md)。
 
 ### 游戏
 
@@ -275,7 +279,7 @@ it works.
 
 在 linux 下，我尝试使用不同的替代品：
 
-1. LibreOffice（不可用）：word 排版不同，原本一页的可能会变成两页。
+1. LibreOffice（不可用）：word 排版不同，原本一页的可能会变成两页。拿来只读还行，要写的话奉劝还是换一家。
 2. WPS（不可用）：图片显示错误，还有广为诟病的粗体问题。
    - 解法（据说）：`paru -S freetype2-wps libtiff5` ([ref](https://t.me/archlinuxcn_group/3016741))
 3. ONLYOFFICE：目前看来没啥太大毛病。
@@ -326,7 +330,11 @@ atuin import auto
 
 快速搜索，其维护了一个数据库，使用 `sudo updatedb` 更新（默认开机时自动执行），搜索时不再遍历目录。
 
+有 mlocate 和 plocate 两个常用实现。一般用后者。
+
 ### eza
+
+喜欢彩色的 ls 吗？
 
 `alias ls='eza --all --long --color-scale size --binary --header --time-style=long-iso'`
 
@@ -385,7 +393,9 @@ tmux 的默认键位实在是过于诡异。
 
 Zellij 使用 rust 写成，由于其简洁的 key bindings（有常驻提示的），我使用其代替 tmux。
 
-这玩意看提示就行，没必要配置。
+这玩意看提示就行，没必要配置。性能会比上面两个小点，好看是有代价的。
+
+然后我尝鲜[用得不爽，直接开喷](https://t.me/withabsolutex/1571)了。
 
 #### [tab-rs](https://github.com/austinjones/tab-rs)
 
@@ -400,6 +410,8 @@ paru -S tlp tlpui
 sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 sudo systemctl enable --now tlp
 ```
+
+效果其实挺一般的。毕竟涉及到硬件，又是像 linux 这种自由散漫的，厂家都不会主动适配。
 
 ### activitywatch
 
@@ -440,4 +452,5 @@ waydroid show-full-ui
 
 ## external
 
+1. [A curated list of command-line utilities written in Rust](https://github.com/sts10/rust-command-line-utilities)
 1. [一些现代化的 linux 命令](https://www.entropy-tree.top/2023/07/24/modern-linux-commands/)
