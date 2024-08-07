@@ -29,6 +29,16 @@ tag:
 
 :::
 
+## NixOS 调整风扇转速
+
+未解决！
+
+由于 [nix gaming](./nix.md#gaming) 的需求，需要调教性能。但是我的 nixos 的风扇就是转不起来，即使温度已经过 90 了。。。
+
+nixos 原生支持 [fancontrol service](https://search.nixos.org/options?channel=unstable&show=hardware.fancontrol.enable)，但是需要一个配置文件。这个配置基本上都是用 pwmconfig 生成的，我跑这指令只能得到 `There are no pwm-capable sensor modules installed`。搜了一圈，找不到解。尝试了包括内核参数 `acpi_enforce_resources=lax`，加载 `coretemp` 内核模块，无效。
+
+如果不使用 fancontrol，各种三方软件缺乏维护，也需要手写配置，还没有文档。反正总线地址是绕不开的。还有许多三方是针对特定 PC 型号的，联想华硕都是机上机，可惜我这台七彩虹不在五型之中。
+
 ## libvirt 虚拟机 Network not found
 
 我使用 libvirt + qemu kvm + Virtual Machine Manager (VMM) 进行虚拟机管理。然而在我用 archinstall 安装 arch 后，发现没装 dhcpcd，所有镜像的域名都无法解析。因此我需要再次挂载安装盘，进去装 dhcpcd。
@@ -344,10 +354,13 @@ ps. 实际上 linux 下不明所以的 warning, error 好多的（详见 `journa
 3. 更新 `archlinux-keyring` 本身：`sudo pacman -Sy archlinux-keyring`，问题解决
 
 :::: tip
+
 裝 `archlinux-keyring` 其實就是在跑 `pacman-key --populate archlinux`
+
 :::right
 ——farseerfc 😂, [src](https://t.me/archlinuxcn_group/2911740)
 :::
+
 ::::
 
 所以遇到 keyring 问题就先装 keyring 准没错（也适用于 `archlinuxcn-keyring`）。

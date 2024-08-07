@@ -210,9 +210,13 @@ nix.settings.warn-dirty = false;
 - [Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
 - [github:fufexan/nix-gaming](https://github.com/fufexan/nix-gaming)：主要是 OSU 相关
 
-Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。不过平常玩点轻量级游戏问题不大，galgame，启动！你的下一台电脑又何必是游戏本！扯远了。
+Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。不过据群友说，在 vulkan 编译完成后游戏可以大幅提高帧率。我暂时还未尝试。
 
-steam 游戏都能够点击即玩，proton 还是牛逼的。一些小作坊汉化 galgame 有兼容性问题，无法在 wine 下正常运行，此时就需要安装虚拟机了。
+不过平常玩点轻量级游戏问题不大，galgame，启动！你的下一台电脑又何必是游戏本！扯远了。
+
+steam 游戏都能够点击即玩，proton 还是牛逼的。一些傻逼引擎的 galgame 无法在 wine 下正常运行，此时就需要安装[虚拟机](#虚拟机)了。
+
+nix gaming 还有过不去的一关就是性能释放。。我这台电脑风扇总是不转，用了一些工具也调不了风扇转速，有点悲惨。风扇不转想打啥游戏都不行吧，立刻降频了。
 
 ### 虚拟机
 
@@ -221,6 +225,8 @@ steam 游戏都能够点击即玩，proton 还是牛逼的。一些小作坊汉�
 至于镜像我在 win10 和 win11，ltsc 和 tiny 里纠结了一下，选择了 tiny 11 23H3。可以看看[教程](https://www.iplaysoft.com/tiny11.html)，里面还有中文字体包，反正我来者不拒。下载从 web archive 或教程给的地址任选，反正我用了前者。
 
 安装后，打开 `Virtual Machine Manager`，创建新虚拟机，选择下载的 iso 镜像。需要注意，如果 auto detect os 检测不到，需要在下面取消勾选 auto detect os 后自行输入 win11。反正这个 UI 逻辑是挺傻逼的。至于传文件，打开 USB 直通，我的移动硬盘可以分别在两端挂载，这样也不需要考虑太多。
+
+后续：tiny 11 感觉也不 tiny。。。安装完占了我 17G 空间，感觉还是得 win10 吧。
 
 ### 快照
 
@@ -236,6 +242,8 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 ```
 
 但是我还没有尝试过快照的恢复，等用到再更新吧。
+
+ps. 理论上确实没必要为 `/nix` 打快照；我现在的解法是放一个 `minimal.nix` 作为崩溃的恢复，由于软件不多，重装也能快速装好。
 
 ### root on tmpfs
 
@@ -265,13 +273,13 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
   - google 比文档多，学习靠社区解答
 - 社区不合，drama 不断
 - 报错模糊
+- [包管理达不到预期](../../coding/package_manager.md#nix)
 
 我在使用过程中也有一些想吐槽的（其实上面就有很多）：
 
-- `/etc/nixos` 不允许建 `.git` 目录
 - 图形化安装界面垃圾
 - minimal 镜像缺功能
-- home manager 捞爆了
+- home manager 捞
 
 我的资历尚浅，只能够发出如此感叹。如果你希望看到更多对 nixos 的评价，可以看看 [external 2.](#external)。
 

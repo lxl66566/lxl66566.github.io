@@ -14,6 +14,8 @@ tag:
 
 ## 包管理
 
+> 关联文章：[包管理器吐槽与灵感](../../coding/package_manager.md)
+
 ### pacman
 
 pacman 是 archlinux 官方指定包管理器，好用，就是指令比较难记。安装来源是 linux 官方仓库，基本上都是二进制。
