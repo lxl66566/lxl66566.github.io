@@ -70,7 +70,7 @@ Arch 软件包需要自己关注版本更新，并且手动 update version。虽
 
 Nix 好一点，Nix 打包默认隔离环境，也就是所有系统上的 build 表现应该是一样的。因此上 nixpkgs 提交软件包只要跑过了 CI 就没啥问题。但是 PR 也都要人来合，不像 Arch AUR 归自己，想 push 就 push。因此也只能算是半自动。
 
-貌似也有一些 bot 提供了简单的全自动实现，例如 Arch 的 lilac，不过我没用过不清楚效果，nixpkgs 这里也不懂有没有 bot（应该得有吧）。
+貌似也有一些 bot 提供了简单的全自动实现，例如 Arch 的 lilac，不过我没用过不清楚效果，nixpkgs 这里也不懂有没有 update bot（应该得有吧），反正有个 nixpkgs-merge-bot。
 
 ## 我的灵感
 

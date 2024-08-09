@@ -37,7 +37,11 @@ tag:
 
 nixos 原生支持 [fancontrol service](https://search.nixos.org/options?channel=unstable&show=hardware.fancontrol.enable)，但是需要一个配置文件。这个配置基本上都是用 pwmconfig 生成的，我跑这指令只能得到 `There are no pwm-capable sensor modules installed`。搜了一圈，找不到解。尝试了包括内核参数 `acpi_enforce_resources=lax`，加载 `coretemp` 内核模块，无效。
 
+而其他调速软件例如 fan2go 也是基于 lm_sensors 的，显然无法使用。
+
 如果不使用 fancontrol，各种三方软件缺乏维护，也需要手写配置，还没有文档。反正总线地址是绕不开的。还有许多三方是针对特定 PC 型号的，联想华硕都是机上机，可惜我这台七彩虹不在五型之中。
+
+emm，最后还试了一下 wine 跑七彩虹的 game center，毫不意外地崩了。
 
 ## libvirt 虚拟机 Network not found
 

@@ -53,6 +53,12 @@ tag:
 - chrome （在某个时期）的槽点大概是吃内存非常恐怖。但是实际跟其他两家应该差不了多少。
 - chrome 的一些服务在国内无法使用，需要科学上网。
 
+### chromium
+
+在 linux 上我把 chromium 当成一个备选项，当遇到 firefox 无法打开的网站时就会用它。
+
+- chromium 和 chrome 一样不支持垂直标签页。。
+
 ### firefox
 
 firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company](https://www.mozilla.org/en-US/)，在 Google 发癫时 mozilla 会跳出来骂，我还是很敬佩 & 庆幸的。
@@ -67,6 +73,7 @@ firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company]
     - 学信网：无法登录
     - bilibili：稍后再看无法显示（出现一次）
 - 没有我想要的垂直标签栏，只能用 Sidebery 模拟。
+  - 202408 的 Firefox 131 加入了垂直标签栏… 但是用户早都流失完了。
 - 自定义程度……例如我想隐去标题栏，并没有一个合理的配置项能够实现；需要手写 user css。自由度高，但是门槛也高。
 - firefox 在 linux 上对字体的支持比较好，而且有硬件解码。
 - [部分元素在 firefox 上显示错误](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3259)。
@@ -121,6 +128,16 @@ firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company]
 ### [Floorp](https://floorp.app/)
 
 基于 firefox 的浏览器，支持原生侧边栏。数据可以直接从 firefox 同步。我个人认为是要比 firefox 好用的。（而且在滚动发行版上还能降低一点更新频率）
+
+坏处是崩溃频率也大了一点。
+
+### brave
+
+brave 是一个 chromium 内核，与广告和加密货币共生的浏览器。
+
+- 不支持云同步，只支持 P2P 数据转移。如果我一台电脑上的两个系统不能同时起来，那就歇菜了。
+- 自带的 Leo AI 好捞啊。。比 edge 带的 copilot 差的不是一点半点（废话，微软投了多少）。但是说中文用英文回答就很傻逼。代码能力也几乎为 0。
+- 加密货币，你国不能用，正常。
 
 ### nyxt
 

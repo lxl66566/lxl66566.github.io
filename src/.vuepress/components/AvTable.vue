@@ -326,6 +326,7 @@ const data = [
   { id: "mukd-510", aScore: 8, bScore: 9.8, name: "#强制性交 大好きな彼氏に弄ばれて…幸せから突き落とされる少女 彼氏裏切り制服切り裂きトラウマレ×プ 夢乃陽菜" },
   { id: "sone-257", aScore: 6.8, bScore: 5.3, name: "" },
   { id: "MIFD-070", aScore: 7.6, bScore: 4.2, name: "" },
+  { id: "MIDV-718", aScore: 9.1, bScore: 5.2, name: "#cos いつもクラスでボッチの地味っこ同級生は月に一度の卑猥コスでオフパコ配信やっている人気神乳コスプレイヤーだった。 水卜さくら" },
 ];
 export default {
   name: "AvTable",
