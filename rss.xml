@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 07 Aug 2024 10:17:04 GMT</pubDate>
-    <lastBuildDate>Wed, 07 Aug 2024 10:17:04 GMT</lastBuildDate>
+    <pubDate>Fri, 09 Aug 2024 07:40:59 GMT</pubDate>
+    <lastBuildDate>Fri, 09 Aug 2024 07:40:59 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -104,7 +104,7 @@
 <h3>更新</h3>
 <p>Arch 软件包需要自己关注版本更新，并且手动 update version。虽然有例如 updpkgsums 等东西帮我把其他的活干完，但这也只能算是半自动。而且如果不开隔离环境，打出来的包可能在其他人系统上跑不了，因为我有的依赖别人不一定有。</p>
 <p>Nix 好一点，Nix 打包默认隔离环境，也就是所有系统上的 build 表现应该是一样的。因此上 nixpkgs 提交软件包只要跑过了 CI 就没啥问题。但是 PR 也都要人来合，不像 Arch AUR 归自己，想 push 就 push。因此也只能算是半自动。</p>
-<p>貌似也有一些 bot 提供了简单的全自动实现，例如 Arch 的 lilac，不过我没用过不清楚效果，nixpkgs 这里也不懂有没有 bot（应该得有吧）。</p>
+<p>貌似也有一些 bot 提供了简单的全自动实现，例如 Arch 的 lilac，不过我没用过不清楚效果，nixpkgs 这里也不懂有没有 update bot（应该得有吧），反正有个 nixpkgs-merge-bot。</p>
 <h2>我的灵感</h2>
 <p>喷了一大通，总算来到了灵感环节。我夜里想到一个 <s>universal package manager</s> 的方案（名字被用了！）。可能有一些尚未考虑到的 cases，如果能帮我指出，我会非常感激。</p>
 <h3>前端</h3>
