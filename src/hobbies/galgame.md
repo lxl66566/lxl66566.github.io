@@ -270,6 +270,8 @@ _（不排除早期缺漏）_
 - Butterfly Seeker
 - ティンクル ☆ くるせいだーす
 - 恐怖美术馆
+- king exit, demons roots
+- anemoi
 
 ## 一言
 

@@ -33,8 +33,9 @@ tag:
 |20231212 azure|Korea Central|~~$9.xx/mo~~ free|unknown|1GB|30GB|1|<dtls>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtls>|
 |20231213 aliyun|HK|~~288CNY/yr~~ free|1024 GB unknown|896MB|40GB|2|<dtls>香港地区 TG 时常抽风；免费的香港机我想都不敢想（）</dtls>|
 |202403xx wawo|US|￥3.73/mo|unknown|512MB|unknown|1|<dtls>冲便宜买的，质量很捞，本来是用作测试的。结果半个月给我封了，莫名其妙。于是避雷 wawo 了。</dtls>|
-|20240518 Churros|JP|￥8.9/mo + ￥6 初装|200GB 100Mbps|1GB|5GB|1|<dtls>silicloud IP 寄了，换台 JP。这家是垃圾灵车，稳定性不够。</dtls>|
-|20240726 Lamhosting|TW|￥10.6/mo(coupon -￥2)|512GB 1000Mbps|512M|10GB|1|<dtls>有点灵，TW ping 都有 190ms…</dtls>|
+|20240518 Churros|JP|￥8.9/mo + ￥6 初装|200GB 100Mbps|1GB|5GB|1|<dtls>silicloud IP 寄了，换台 JP。这家是超级垃圾灵车，非常不稳定</dtls>|
+|20240714 Akile|HK|￥5/mo|200GB 1000Mbps|1GB|5GB|1|<dtls>akile 很灵车，不推荐。介于 Churros 和 Lamhosting 之间。</dtls>|
+|20240726 Lamhosting|TW|￥10.6/mo(coupon -￥2)|512GB 1000Mbps|512M|10GB|1|<dtls>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</dtls>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 

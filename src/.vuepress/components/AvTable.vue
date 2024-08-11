@@ -327,6 +327,8 @@ const data = [
   { id: "sone-257", aScore: 6.8, bScore: 5.3, name: "" },
   { id: "MIFD-070", aScore: 7.6, bScore: 4.2, name: "" },
   { id: "MIDV-718", aScore: 9.1, bScore: 5.2, name: "#cos いつもクラスでボッチの地味っこ同級生は月に一度の卑猥コスでオフパコ配信やっている人気神乳コスプレイヤーだった。 水卜さくら" },
+  { id: "MUKC-024", aScore: 7.2, bScore: 8.3, name: "#虐喉 裏切ったアイドルを誘拐監禁。 顔中オス汁まみれの喉奥蹂躙イラマチオ調教 橘ひなの" },
+  { id: "MUKC-043", aScore: 8.3, bScore: 7.6, u: true, name: "150cm Fカップ。今日も何でも言うこと聞きます。 このコスプレ少女、売り出し中。 専属 広瀬このみ" },
 ];
 export default {
   name: "AvTable",

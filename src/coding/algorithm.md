@@ -74,6 +74,12 @@ tag:
 
 区间求素数一般埃氏筛够用了，也很好写。素数判断可以使用 [Miller Rabin](https://zhuanlan.zhihu.com/p/349360074)。
 
+## 我出的题
+
+大一的时候来了兴致，随便出的一点。当乐子看吧（
+
+[download](https://github.com/lxl66566/lxl66566.github.io/releases/download/storate/AbsoluteX.s_confusion.pdf)
+
 ## external
 
 1. [信息学竞赛 (OI) 究竟发生了什么？](https://www.bilibili.com/video/BV1di421f7L5)

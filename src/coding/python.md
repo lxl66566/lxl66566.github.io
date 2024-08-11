@@ -57,9 +57,14 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
         "source.organizeImports": true
     }
 },
+"python.analysis.inlayHints.pytestParameters": true,
+"python.analysis.inlayHints.variableTypes": true,
+"python.analysis.inlayHints.functionReturnTypes": true,
+"python.analysis.inlayHints.callArgumentNames": "all",
+"python.analysis.typeCheckingMode": "standard",
 ```
 
-该配置在保存时自动格式化。
+该配置在保存时自动格式化，并开启一些有用的提示。
 
 ### 启用虚拟环境
 
@@ -846,3 +851,4 @@ python -m pip install --upgrade pip --user
 7. [Python Gotcha: strip, lstrip, rstrip can remove more than expected](https://andrewwegner.com/python-gotcha-strip-functions-unexpected-behavior.html)
 8. [How I manage Python in 2024](https://outlore.dev/blog/python-dev-2024/)
 9. [如何在 class 内部定义一个装饰器？](https://www.youtube.com/watch?v=srSA-aiHf8Y)
+10. [Dive-into-cpython](https://github.com/Chang-LeHung/dive-into-cpython)

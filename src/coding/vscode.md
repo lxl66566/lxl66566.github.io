@@ -120,6 +120,17 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 3. 同意连接请求
 4. 给对方权限，例如读写，或终端执行代码
 
+## 小技巧
+
+- 可以把某个关键字标成自己选择的颜色 ([ref](https://t.me/c/1264662201/584813))
+  ```json
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "*.unsafe:rust": "#eb5046"
+    }
+  },
+  ```
+
 ## 其他评价
 
 - vscode 的可自定义程度还不够高
