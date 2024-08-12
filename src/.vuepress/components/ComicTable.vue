@@ -389,6 +389,7 @@ const data = [
   { id: "355411", aScore: 3.5, bScore: 8, info: "#邻居 #自慰", bak: "https://telegra.ph/かみ田-rain-drops-COMIC-LO-2018年9月号-中国翻訳-DL版-08-03" },
   { id: "(ex)", aScore: 6.4, bScore: 9.5, info: "#租客 #loli", otherlink: "https://exhentai.org/g/1892708/75e14469a9/", bak: "https://telegra.ph/ヤギコム-モモノキ荘の住人-COMIC-快楽天-2021年5月号-中国翻訳-DL版-08-03" },
   { id: "(ex)", aScore: 7.6, bScore: 4, info: "#雌小鬼 #卫生间 #玉之けだま", otherlink: "https://exhentai.org/g/1896287/0c542b6c1c/", bak: "https://telegra.ph/玉之けだま-ドップアウトキャットガール-コミックゼロス-66-中国翻訳-DL版-08-03" },
+  { id: "517684", aScore: 8.5, bScore: 6.3, info: "#loli #纯爱 #巨乳", bak: "https://telegra.ph/えるぴーすたじお-江谷鏡-早熟カノジョは背伸びしたい-08-12" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

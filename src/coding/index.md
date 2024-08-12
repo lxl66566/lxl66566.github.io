@@ -45,6 +45,7 @@ tag:
 
 6. [C#](./csharp.md)
 7. [kotlin](./kotlin.md)
+8. [Clojure](./clojure.md)
 
 ### 新生语言
 
