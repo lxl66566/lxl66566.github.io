@@ -390,6 +390,15 @@ const data = [
   { id: "(ex)", aScore: 6.4, bScore: 9.5, info: "#租客 #loli", otherlink: "https://exhentai.org/g/1892708/75e14469a9/", bak: "https://telegra.ph/ヤギコム-モモノキ荘の住人-COMIC-快楽天-2021年5月号-中国翻訳-DL版-08-03" },
   { id: "(ex)", aScore: 7.6, bScore: 4, info: "#雌小鬼 #卫生间 #玉之けだま", otherlink: "https://exhentai.org/g/1896287/0c542b6c1c/", bak: "https://telegra.ph/玉之けだま-ドップアウトキャットガール-コミックゼロス-66-中国翻訳-DL版-08-03" },
   { id: "517684", aScore: 8.5, bScore: 6.3, info: "#loli #纯爱 #巨乳", bak: "https://telegra.ph/えるぴーすたじお-江谷鏡-早熟カノジョは背伸びしたい-08-12" },
+  { id: "(eh)", aScore: 9.3, bScore: 3, info: "#原神 #全彩 #百合 #短篇", otherlink: "https://e-hentai.org/g/2988761/a97e794034/" },
+  { id: "524158", aScore: 9.4, bScore: 9, info: "#蔚蓝档案" },
+  { id: "503455", aScore: 6.5, bScore: 9.9, order: 1, info: "#身体交换 #惊悚" },
+  { id: "524310", aScore: 7.5, bScore: 6.8, info: "#蔚蓝档案", bak: "https://telegra.ph/Horizontal-World-またのんき-ラブイットワンモア-ブルーアーカイブ-中国翻訳-DL版-08-12" },
+  { id: "353911", aScore: 5.7, bScore: 8.2, info: "#幽灵 #报恩 #纯爱", bak: "https://telegra.ph/小矢部亮-此方より彼方へ-永遠娘-10-中国翻訳-DL版-08-03" },
+  { id: "523931", aScore: 7.7, bScore: 8, info: "#蔚蓝档案 #百合", bak: "https://telegra.ph/NNL-Mary-san-Goudou-Hitori-Ecchi-no-Ojikan-Desu-Blue-Archive-Chinese-白杨汉化组-08-12" },
+  { id: "(ex)", aScore: 7.9, bScore: 8.8, info: "#姐弟", otherlink: "https://exhentai.org/g/1884361/8996b64175/", bak: "https://telegra.ph/もず-オトナになっちゃお-COMIC-快楽天ビースト-2021年2月号-中国翻訳-DL版-08-03" },
+  { id: "355144", aScore: 7.2, bScore: 6.5, order: 3, info: "#兄妹 #三上ミカ", bak: "https://telegra.ph/AC2-アクアドロップ-三上ミカ-おいわいせっくす-3-お兄ちゃん20歳の日-中国翻訳-08-03" },
+  { id: "466075", aScore: 7.9, bScore: 9.1, info: "#刀 #兔" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

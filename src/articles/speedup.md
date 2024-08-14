@@ -233,3 +233,9 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 我不想碰 C++（即使已有代码作参考），先用 rust 碰碰壁再说。
 
 试了一下 [detour-rs](https://github.com/darfink/detour-rs)，一个 detour 的 rs 实现，但是拉下来发现编译不过。issue 看到了一个 fork 解决了这个问题，才发觉 detour-rs 已经断更三年了。所以使用此 fork 版本的 [retour-rs](https://github.com/Hpmason/retour-rs)。fork 版的文档也更详细，我用它的 example 配合文档推荐的 [dll-syringe](https://crates.io/crates/dll-syringe) 跑了一下，成功注入了 MessageBoxW，完成了新手教程。
+
+接下来摆在面前的有几条路：
+
+1. 纯抄 Hourglass-Resurrection，玩 tick 魔法
+2. 看 api 时看出来：用 waveOutSetPlaybackRate 强改
+3. 学习前文 [pyaudio 经验](#pyaudio)，变换 buffer data

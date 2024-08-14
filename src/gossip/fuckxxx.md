@@ -185,8 +185,9 @@ ColorOS 是目前一加的默认系统。
   - stay away from yaml!
   - [apt 无法使用](https://t.me/withabsolutex/1588)
   - [LF 变成 CRLF](https://t.me/withabsolutex/1590)
-  - 上传了 yml 但是读取不到 workflow
+  - 自带工具挤占大量磁盘空间
 - (2023) 强制 2FA
+  - 甚至强制 2FA 后还会爆安全问题
 - feat: fork 没有细分类型，例如为了推送上游或为了自立门户的。
 - 查看 history commit 的页面写的稀烂，只有 newer/older 两个按钮来翻页，无法快速跳转到我想要的时间。
 - Github 强行推广的 app 一坨屎。
@@ -196,10 +197,11 @@ ColorOS 是目前一加的默认系统。
 - Github 首次 PR 的 workflow 需要手动验证([src](https://docs.github.com/en/actions/managing-workflow-runs/approving-workflow-runs-from-public-forks))。。。不是，你们 CI 改没改 `.github` 不能特判一下？非得一棒子打死？
 - Github 在 commit message 中提到了其他仓库的 issue，然后删除 + force push 后，原先的 refer 不会移除。也就是说，我进行的 fixup 行为把别人 refer 了两次，感觉像 spam 了。。
 - Github 移动端一坨屎。
-  - ~~右上角的 `...` 总是点不开~~（貌似修了）
+  - ~~右上角的 `...` 总是点不开~~（修了）
   - 202406 在 kiwi browser 上代码查看抽风，自动上下滑动，无法定位。其他浏览器没有问题。对照实验，排除插件影响。
 - Secret names must not start with `GITHUB_`.
-- release binary，无法删除并更换一个同名 binary
+- release binary，无法直接更换一个同名 binary
+- Github 支持 merge, squash merge, rebase merge，但是不支持 squash + rebase merge。。您不是 ci 都会 matrix 吗，这个 merge matrix 怎么就不会了
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 
@@ -240,6 +242,7 @@ ColorOS 是目前一加的默认系统。
       - 这一点与 linux 上的开源流行有关系。当发生依赖不匹配时，志愿者能够迅速修复。
 - 微软的应用在处理系统代理方面简直就是**垃圾中的战斗机**。例如 Microsoft Store 和 语音输入，你但凡走系统代理或者不走系统代理都能正常工作，你 tm 处于走和不走之间的叠加态，就是转圈圈用不了，我真的不好说了。
 - 微软商店如果有什么应用因为地区限制无法下载，能不能麻烦说明一下啊。。找了半天没找到下载按钮，地区限制也是我猜的。
+- [GetFinalPathNameByHandleW 在某些 RAMDisk 上会炸](https://t.me/withabsolutex/1683)
 
 ## Geforce Experience 有多难用
 
@@ -247,7 +250,7 @@ ColorOS 是目前一加的默认系统。
 
 - 有时候启动游戏时不会启动游戏内覆盖，需要重启游戏。
 - 游戏内覆盖窗口的鼠标灵敏度不同。
-- bug: 游戏内覆盖不起作用，尝试重启您的系统。而此错误与重启系统没啥关系。需要在软件卸载界面为所有的 Microsoft Visual C++点击卸载，选择修复[^2]。
+- bug: 游戏内覆盖不起作用，尝试重启您的系统。而此错误与重启系统没啥关系。需要在软件卸载界面为所有的 `Microsoft Visual C++` 点击卸载，选择修复[^2]。
 - bug: 游戏内覆盖窗口不显示，只显示鼠标。重装驱动都无法解决。
 
 [^2]: [source](https://www.zhihu.com/question/315889356)
@@ -333,6 +336,22 @@ ColorOS 是目前一加的默认系统。
   - 很多东西理应在 std 实现，但是（目前）却没有
     - Semaphore（信号量）
 - [不能添加 bin dependencies](https://stackoverflow.com/questions/35711044/how-can-i-specify-binary-only-dependencies)。
+
+### 一些流行的 Rust 的垃圾库
+
+**真 TM 难用**
+
+- teloxide：一坨大便。
+  - REPL 和 dispatcher 没有任何平衡，一个太弱一个太复杂，无法折中；
+  - 各种抽象 trait + 生命周期疯狂拒绝我的参数，struct Bot 不愿意做我的成员，进来就赖着 move 不动，clone 不出，还拿生命周期威胁它的爸爸类。
+  - dispatcher 就到处玩宏，到处都是非变量非函数根本不知道干嘛的 ident。
+  - from_env 该抛异常时抛 panic。
+  - 官方的 examples 也是要么太简单要么太复杂，没一个覆盖我的需求。去 github 找别人代码，全是 single function，没有用 struct 的。我生气了，不让我写 struct，那我就把所有成员全部扔到 LazyLock。
+- sea-orm & sea-query
+  - 貌似 sea-orm 不支持动态 table name，sea-query 支持有限动态 table name，必需是 derive 了 Iden 的 enum 才行。。。拿非有限用户输入当 table name 不是一个很正常的需求吗？
+- j4rs
+  - 该爆 args type not match 时爆 `Method xxx was not found`
+  - 各种输入用 `&[InvocationArg]` 包，结果包的 api 跟屎一样
 
 ## Youtube 有多难用
 

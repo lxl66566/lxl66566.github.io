@@ -82,6 +82,8 @@ tag:
 - [ ] RSS telegram bot
   - [ ] using github actions
   - [ ] filter
+- [x] rust release ci
+- [ ] kde spectacle ocr plugin
 
 ### RIIR
 
