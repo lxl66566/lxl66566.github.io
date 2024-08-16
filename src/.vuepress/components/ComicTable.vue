@@ -399,6 +399,11 @@ const data = [
   { id: "(ex)", aScore: 7.9, bScore: 8.8, info: "#姐弟", otherlink: "https://exhentai.org/g/1884361/8996b64175/", bak: "https://telegra.ph/もず-オトナになっちゃお-COMIC-快楽天ビースト-2021年2月号-中国翻訳-DL版-08-03" },
   { id: "355144", aScore: 7.2, bScore: 6.5, order: 3, info: "#兄妹 #三上ミカ", bak: "https://telegra.ph/AC2-アクアドロップ-三上ミカ-おいわいせっくす-3-お兄ちゃん20歳の日-中国翻訳-08-03" },
   { id: "466075", aScore: 7.9, bScore: 9.1, info: "#刀 #兔" },
+  { id: "524339", aScore: 7.8, bScore: 7.5, info: "#NTR", bak: "https://telegra.ph/Hiiro-no-Kenkyuushitsu-Hitoi-Enkou-Kanojo-to-Kengakukai-2-Chinese-無邪気漢化組-Digital-08-14" },
+  { id: "(eh)", aScore: 6.8, bScore: 5.6, info: "#3P", otherlink: "https://e-hentai.org/g/3019546/33a8b8772f", bak: "https://telegra.ph/Wantan-Meo-Otomodachi-COMIC-Kairakuten-2024-09-Chinese-Digital-08-14" },
+  { id: "(ex)", aScore: 9, bScore: 8.6, info: "#兄妹 #いちはや", otherlink: "https://exhentai.org/g/2894472/668e0d4efc/", bak: "https://telegra.ph/C101-squeezecandyheaven-いちはや-絶対に強姦する兄VS絶対に和姦にする妹-中国翻訳-04-20" },
+  { id: "352400", aScore: 4.3, bScore: 5, info: "#全彩 #兄妹", bak: "https://telegra.ph/こんにゃく-おねしょた和希先輩-中国翻訳-08-03" },
+  { id: "522000", aScore: 7.1, bScore: 7.6, order: 3, info: "#同学 #突入", bak: "https://telegra.ph/みちきんぐ-姉体験女学寮-3-COMIC-クアンスリウム-2017年11月号-中国翻訳-DL版-08-14" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

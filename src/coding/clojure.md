@@ -14,6 +14,9 @@ tag:
 ## 学习
 
 1. [learnxinyminutes](https://learnxinyminutes.com/docs/zh-cn/clojure-cn/)：学语言首选，并且它下面也推荐了几个其他网址，方便快速入门，我觉得挺好的。
+2. [official quickref](https://clojuredocs.org/quickref)：肯定少不了来这里查。可以学到许多 builtin functions。
+3. [Solving Problems the Clojure Way - Rafal Dittwald](https://www.youtube.com/watch?v=vK1DazRK_a0)：函数式思想入门，茅塞顿开
+4. [Clojure 风格指南](https://github.com/geekerzp/clojure-style-guide/blob/master/README-zhCN.md)
 
 ## 开发环境
 
@@ -25,12 +28,65 @@ vscode 安装 _Calva Spritz_ 即可。
 
 更多可以看[The Top 10 Calva Commands](https://calva.io/commands-top10/)。
 
-## basic
+## 语言基础
 
 零散知识点。
 
 - conj + list 是加到前面：`(conj '(2 3 4) 1)`，+ vec 是加到后面：`(conj [1 2] 3 4)`
 - `->` 和 `->>` 的区别：添加的位置不同。`->` 加到调用链每一环函数参数首位，`->>` 加到调用链每一环参数末尾。
+  ```clojure
+  (-> 1 (func x y)) ; (func 1 x y)
+  (->> 1 (func x y)) ; (func x y 1)
+  ```
+- apply 可以实现函数参数解包，例如
+  ```clojure
+  (defn wrap
+    [x y z]
+    (myfunc x y z))
+  (defn wrap
+    [& args]
+    (apply myfunc args))
+  ```
+  这两个是等价的。
+- [没有 zip function](https://stackoverflow.com/questions/2588227)，要自己写。
+  ```clojure
+  (defn transpose
+    "[1 2 3]
+     [4 5 6]
+    => [[1 4]
+        [2 5]
+        [3 6]"
+    [m]
+    (apply map vector m))
+  ```
+- if 内可以判断很多类型，常见的 `[]` `()` 都能判 false
+- peek 是 last 的高速代替
+
+和其他语言对比：
+
+- loop - recur 就是 for - continue
+- defprotocol 就是定义 interface，defrecord 就是 class
+- mapcat 就是 flatmap
+
+## 项目管理
+
+- filename 除去 `.clj` 后缀，不能包含 `.`。因为 ns 里的 `.` 代表多一层 dir `/`。
+- 导入另一个文件的函数：
+  ```clojure
+  (ns xxx.yyy)
+    (require '[xxx.zzz :as myalias])
+  ; 也可以这样写
+  (ns xxx.yyy
+    (:require [xxx.zzz :as myalias]))
+  (myalias/myfunc 123)
+  ```
+  想要运行这个需要用 `clj` 命令行，在 REPL 内运行只会报错。
+- 引用标准库：`use :only` 已经 deprecate 了，用 require。
+  ```clojure
+  (ns chapter2.2-37U
+    (:require [clojure.test :refer [deftest is]])
+    (:require [chapter2.2-36 :as acn]))
+  ```
 
 ## 打包
 
@@ -110,3 +166,5 @@ vscode 安装 _Calva Spritz_ 即可。
   ```
 
 运行 `clj -T:build clean && clj -T:build uber` 即可。（`clj -T:build jar` 是来凑数的不用管）
+
+## [劝退](../gossip/fuckxxx.md#clojure-有多难用)

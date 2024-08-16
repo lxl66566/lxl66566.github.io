@@ -43,6 +43,8 @@ nixos 原生支持 [fancontrol service](https://search.nixos.org/options?channel
 
 emm，最后还试了一下 wine 跑七彩虹的 game center，毫不意外地崩了。
 
+有群友建议我使用 tuxedo-rs，试了一下也不行，`input=AddError("Bus response error: org.freedesktop.DBus.Error.InvalidArgs: No fan found at requested index")`。
+
 ## libvirt 虚拟机 Network not found
 
 我使用 libvirt + qemu kvm + Virtual Machine Manager (VMM) 进行虚拟机管理。然而在我用 archinstall 安装 arch 后，发现没装 dhcpcd，所有镜像的域名都无法解析。因此我需要再次挂载安装盘，进去装 dhcpcd。

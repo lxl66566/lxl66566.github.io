@@ -202,6 +202,7 @@ ColorOS 是目前一加的默认系统。
 - Secret names must not start with `GITHUB_`.
 - release binary，无法直接更换一个同名 binary
 - Github 支持 merge, squash merge, rebase merge，但是不支持 squash + rebase merge。。您不是 ci 都会 matrix 吗，这个 merge matrix 怎么就不会了
+- 在 pr 里复制分支的格式是 `name:branch`，但是这个格式在哪都用不了。。git clone 需要 `name branch`，而 git checkout 需要 `name/branch`
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 
@@ -370,3 +371,14 @@ ColorOS 是目前一加的默认系统。
 
 - 大，太大了，我就要一个宏功能，驱动总共不到 10M，它安装后给我装了 1G Synapse3，喜欢我雷蛇全家桶吗
 - 流氓软件，在托盘退出后还有后台进程运行
+
+## Clojure 有多难用
+
+- ns 和文件名有各种映射关系，例如 `_` 和 `-`，`.` 和 `/`，导致写文件名限制重重，这个符号不能用，那个符号也不能用。被文件名坑了几次。
+- 报错模糊。根本看不出啥错误。感觉比 nix 还烂。
+- REPL 环境有问题。例如
+  - 没有 `load` 和 `load-file`，反正我用 bb 是没有的。
+  - 正常的 `:require` 代码，可以在 cli 执行的，在 REPL 里会 `Attempting to call unbounded fn`。并且也看不出错在哪。
+- 文档挺一般的，不能一下找到重点，整体也很散。
+- 用户交流方式也不行，搜问题排名靠前的居然一大堆 google group。很难将解决方法传承下去。
+  - 倒是有一个 [clojureverse](https://clojureverse.org/c/questions-help)，但是已经死了（最新帖子 2022.06），而且不在搜索引擎范围内，fw。
