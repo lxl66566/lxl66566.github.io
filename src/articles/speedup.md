@@ -9,7 +9,7 @@ tag:
 
 # SPEED UP！
 
-我打 [galgame](../hobbies/galgame.md) 已经有好几年了，共计接触了两部能够语音加速的游戏：_天津罪_ 和 _GINKA_。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame 让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加速方式。
+我打 [galgame](../hobbies/galgame.md) 已经有好几年了，共计接触了两部能够语音加速的游戏：_天津罪_ 和 _GINKA_。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加速方式。
 
 ## CE
 
@@ -132,6 +132,8 @@ LD_LIBRARY_PATH=/tmp:/nix/store/1ry2s2jgqbl3w7w54b8biylwqdxy52zw-steam-fhs/usr/l
 
 嗯，steam-fhs 还是好用的。现在我的游戏已经起来了，但是我发现我不会用 libTAS，无法调速。。反正 README 说的快捷键，TAB 和 V 这些都是用不了的，在 Qt GUI 窗口里设置速度也没有任何效果。
 
+尝试在 windows WSL2 里用 libTAS，结果还要起 wine，那跟我在 linux 没有任何区别。不测了。
+
 ### hourglass
 
 转战 windows，hourglass 也是一个泛用 TAS 工具，仅支持 win32，不过它已经非常老了。我只是想试试看，没想到 hourglass 真的可以让我的游戏跑起来，并且能够改变游戏音频速度！但是 hourglass 有一些致命的缺陷：
@@ -148,7 +150,7 @@ LD_LIBRARY_PATH=/tmp:/nix/store/1ry2s2jgqbl3w7w54b8biylwqdxy52zw-steam-fhs/usr/l
 - BizHawk：泛用 TAS 工具，但仅支持镜像加载，主要针对游戏机，不符合我的需求。
   - 不过也有一些 galgame 是使用 CD 的，我只能说保留尝试的可能性。
 - UniTAS：专门针对 unity 游戏，有的 galgame 使用 unity 引擎的可能可以尝试。不过真心不多。
-- Hourglass-Resurrection：一个 hourglass fork，但是也已经停更了。没有提供二进制，我尝试自己构建也失败了。（VS 除了点构建运行就啥也不会干了）
+- [Hourglass-Resurrection](#hourglass-resurrection)：一个 hourglass fork，但是也已经停更了。没有提供二进制，我尝试自己构建也失败了（VS 除了点构建运行就啥也不会干了）。后面有更详细的尝试过程。
 
 ### [libspeedhack](https://github.com/evg-zhabotinsky/libspeedhack)
 
@@ -226,7 +228,23 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 干到现在我已经不想再折腾构建了，不如干脆读代码，然后开抄，写一个自己的注入 lib。我的想法很简单，只加速音频播放，不加速游戏本身（如果想要两个都加速，那就再开一个 CE）。
 
-从读代码角度来说，Hourglass-Resurrection 还是比原版要好很多的，~~虽然 C++ 项目一直都很难读~~。最重要的显然是 `source\hooks\hooks\soundhooks.cpp`，它是整个音频加速的核心；并且可以看到文件在最后定义了注入/拦截（Intercept），将 waveOutWrite，PlaySoundA，PlaySoundW 等函数全部干掉了。
+从读代码角度来说，Hourglass-Resurrection 还是比原版要好很多的，~~虽然 C++ 项目一直都很难读~~。最重要的显然是 `source\hooks\hooks\soundhooks.cpp`，它是整个音频加速的核心；并且可以看到文件在最后定义了注入/拦截（Intercept），将以下函数全部干掉了：
+
+#### WinSound
+
+- PlaySound 系列：PlaySoundA, PlaySoundW
+  - 这是 windows 早期的简单音频播放 api，只需要提供文件名即可。W 和 A 指文件名的编码。由于我们不能直接获取到音频 buffer，因此只能将音频加速后保存到 temp 再调用函数。
+  - 但是 Hourglass-Resurrection 把这两个 api suppress 了，那我就干脆不管了，遇到问题再说。
+- waveOut 系列，包含 waveOutWrite, waveOutGetPosition, waveOutReset, waveOutOpen。这几个貌似就没法操作 buffer 了，毕竟这个 api 就是操作 tick 用的，可能只能用 tick 魔法了。不过理论上应该也不难。
+  - 保留用 waveOutSetPlaybackRate 强改的可能。
+- Beep 系列，MessageBeep 和 Beep。这也是 suppress 的，目的应该是 TAS 那边的，不用管。
+
+#### DirectSound
+
+- DirectSoundCreate(8), DirectSoundEnumerate(A/W), DirectSoundCaptureEnumerate(A/W)，这几个是重点。毕竟游戏应该都调用的是这个。
+  - 这些函数可就麻烦了，**Hourglass-Resurrection 自己写了一个 DirectSound 的音频驱动程序**，包括前面的 EmulatedDirectSoundBuffer 也是。我这才知道文件开头的一堆 magic number 是干什么用的。显然我没有自己写驱动水平。
+
+而起初我并没有发现这个问题，我先写了点操作 buffer 的代码……
 
 ### rust
 
@@ -234,8 +252,16 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 试了一下 [detour-rs](https://github.com/darfink/detour-rs)，一个 detour 的 rs 实现，但是拉下来发现编译不过。issue 看到了一个 fork 解决了这个问题，才发觉 detour-rs 已经断更三年了。所以使用此 fork 版本的 [retour-rs](https://github.com/Hpmason/retour-rs)。fork 版的文档也更详细，我用它的 example 配合文档推荐的 [dll-syringe](https://crates.io/crates/dll-syringe) 跑了一下，成功注入了 MessageBoxW，完成了新手教程。
 
-接下来摆在面前的有几条路：
+但接下来才是痛苦开始。[rust 音频处理生态](https://rust.audio/)本来就挺烂的。我先尝试的肯定是[rubato](https://crates.io/crates/rubato)，毕竟简介就是速率变换。结果这玩意并不咋样，几乎无文档，examples 里面几百行也没有解释。我把 wav 用 python 转成 f64 raw，跑一遍 example 再转回去，并不是一个可用的音频。
 
-1. 纯抄 Hourglass-Resurrection，玩 tick 魔法
-2. 看 api 时看出来：用 waveOutSetPlaybackRate 强改
-3. 学习前文 [pyaudio 经验](#pyaudio)，变换 buffer data
+### dll 调库
+
+退一万步，如果用现有的 dll 库呢？我尝试了一下行业用得比较多的 [soundtouch](https://codeberg.org/soundtouch/soundtouch.git)，[写了个 python 小脚本](https://gist.github.com/lxl66566/f7dc49be8a08f2746b4179ccd3b2b378)做测试。soundtouch 的 api 设计就要好得多，用户只需要 put 和 receive 就行了。但是我用 `receiveSamples` (处理 float 数组) 系列测试就返回值为 0（应该要返回数组长度），数组没有被改动；用 `putSamples_i16` 系函数（i16 系是 float 系的包装，包了一层转换）甚至有 bug，直接 internal `OSError: exception: integer divide by zero`。非常郁闷。
+
+### 直面原理
+
+音频处理其实并不算太复杂，说到底也是信号与系统那一套。最基础的就是把 trunk 加速打出去那一套，属于 _变速变调_。更高级一点的主要是 _变调不变速_ 和 _变速不变调_ 两种，有了这两种就可以组合出各种想要的效果了。实际使用中也可以只用一种，通过升降采样先 _变速变调_，对齐一个量，再通过一种算法改变另一个量即可。在这里我们当然关注 _变速不变调_。
+
+行业泛用的是 wsola (Waveform Similarity and Overlap Add)，例如 soundtouch 就用的这个。除此之外还有 PLOSA (Time-Domain Pitch-Synchronous Overlap and Add)，及其变体 TD-PSOLA 等。这一类的最大特点是需要找峰值，并保留峰值。
+
+现成的 crates 里，_wsola_ 是个脑残占名字的没有内容，而 [_tdpsola_ 有一个可用实现](https://codeberg.org/PieterPenninckx/tdpsola)。把仓库拉下来，example 里带了 wav 支持，不需要手动转 raw。然后试了一下，确实能够实现加速！让我非常开心。虽然只支持单声道 wav，我还需要手动转一次，但是没有什么难度。并且作者在 README 里给出了一个 documentation，里面的视频把 TD-PSOLA 原理讲得非常透彻。
