@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 16 Aug 2024 01:18:33 GMT</pubDate>
-    <lastBuildDate>Fri, 16 Aug 2024 01:18:33 GMT</lastBuildDate>
+    <pubDate>Sat, 17 Aug 2024 16:24:11 GMT</pubDate>
+    <lastBuildDate>Sat, 17 Aug 2024 16:24:11 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -296,11 +296,11 @@
       <link>https://absx.pages.dev/articles/speedup.html</link>
       <guid>https://absx.pages.dev/articles/speedup.html</guid>
       <source url="https://absx.pages.dev/rss.xml">SPEED UP！</source>
-      <description>SPEED UP！ 我打 已经有好几年了，共计接触了两部能够语音加速的游戏：天津罪 和 GINKA。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame 让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加速方式。 CE ...</description>
+      <description>SPEED UP！ 我打 已经有好几年了，共计接触了两部能够语音加速的游戏：天津罪 和 GINKA。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加...</description>
       <category>教程</category>
       <pubDate>Sat, 27 Jul 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有好几年了，共计接触了两部能够语音加速的游戏：<em>天津罪</em> 和 <em>GINKA</em>。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame 让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加速方式。</p>
+<p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有好几年了，共计接触了两部能够语音加速的游戏：<em>天津罪</em> 和 <em>GINKA</em>。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加速方式。</p>
 <h2>CE</h2>
 <p>Cheat Engine 想必大家都不陌生，我也会使用 CE 进行 RPG galgame 的加速（兰斯系列）。CE 中有一个变速精灵的功能非常好用，用鼠标点几次即可加速游戏。但是 CE 不能加速游戏音频，这也是它的最大败笔。因此我需要另寻出路。</p>
 <h2>解包与封包</h2>
@@ -397,6 +397,7 @@
 <p>后来我自己打了 1.4.6 的 libTAS 包，然后自己打了一串超级长的启动指令：</p>
 <div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" data-title="sh" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">LD_LIBRARY_PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/tmp:/nix/store/1ry2s2jgqbl3w7w54b8biylwqdxy52zw-steam-fhs/usr/lib32/:LD_LIBRARY_PATH</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> LIBTAS_SO_PATH</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/tmp/libtas.so</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> WINEPREFIX</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">/home/absx/.local/share/wineprefixes/origin</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> libTAS</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>嗯，steam-fhs 还是好用的。现在我的游戏已经起来了，但是我发现我不会用 libTAS，无法调速。。反正 README 说的快捷键，TAB 和 V 这些都是用不了的，在 Qt GUI 窗口里设置速度也没有任何效果。</p>
+<p>尝试在 windows WSL2 里用 libTAS，结果还要起 wine，那跟我在 linux 没有任何区别。不测了。</p>
 <h3>hourglass</h3>
 <p>转战 windows，hourglass 也是一个泛用 TAS 工具，仅支持 win32，不过它已经非常老了。我只是想试试看，没想到 hourglass 真的可以让我的游戏跑起来，并且能够改变游戏音频速度！但是 hourglass 有一些致命的缺陷：</p>
 <ol>
@@ -413,7 +414,7 @@
 </ul>
 </li>
 <li>UniTAS：专门针对 unity 游戏，有的 galgame 使用 unity 引擎的可能可以尝试。不过真心不多。</li>
-<li>Hourglass-Resurrection：一个 hourglass fork，但是也已经停更了。没有提供二进制，我尝试自己构建也失败了。（VS 除了点构建运行就啥也不会干了）</li>
+<li><a href="#hourglass-resurrection">Hourglass-Resurrection</a>：一个 hourglass fork，但是也已经停更了。没有提供二进制，我尝试自己构建也失败了（VS 除了点构建运行就啥也不会干了）。后面有更详细的尝试过程。</li>
 </ul>
 <h3><a class="header-anchor" href="#libspeedhack"><span></span></a><a href="https://github.com/evg-zhabotinsky/libspeedhack" target="_blank" rel="noopener noreferrer">libspeedhack</a></h3>
 <p>20240729：虽然很麻烦，但是我还是为了仅存的一点希望去尝试一下 libspeedhack。作者已经消失两年了。我按照说明直接用，不出意外地出了意外： <code>libspeedhack32.so: undefined symbol: floor</code>. 然后去瞄了下 issue，果然有一个一样的问题，并且别人也修了，开了 pr 在构建时加了个 <code>-lm</code> 参数。然后我很开心，拉下来想构建，结果：</p>
@@ -461,16 +462,41 @@
 <p>这些 error 看起来比 Hourglass-Resurrection 好读多了，我猜测是 C++ 编译器标准太高导致的编译低版本不兼容的问题。尝试降低 C++ 编译器版本，vs 告诉我：我们接受指定的最低版本是 C++14 😅。</p>
 <h2>自己写</h2>
 <p>干到现在我已经不想再折腾构建了，不如干脆读代码，然后开抄，写一个自己的注入 lib。我的想法很简单，只加速音频播放，不加速游戏本身（如果想要两个都加速，那就再开一个 CE）。</p>
-<p>从读代码角度来说，Hourglass-Resurrection 还是比原版要好很多的，<s>虽然 C++ 项目一直都很难读</s>。最重要的显然是 <code>source\hooks\hooks\soundhooks.cpp</code>，它是整个音频加速的核心；并且可以看到文件在最后定义了注入/拦截（Intercept），将 waveOutWrite，PlaySoundA，PlaySoundW 等函数全部干掉了。</p>
+<p>从读代码角度来说，Hourglass-Resurrection 还是比原版要好很多的，<s>虽然 C++ 项目一直都很难读</s>。最重要的显然是 <code>source\hooks\hooks\soundhooks.cpp</code>，它是整个音频加速的核心；并且可以看到文件在最后定义了注入/拦截（Intercept），将以下函数全部干掉了：</p>
+<h4>WinSound</h4>
+<ul>
+<li>PlaySound 系列：PlaySoundA, PlaySoundW
+<ul>
+<li>这是 windows 早期的简单音频播放 api，只需要提供文件名即可。W 和 A 指文件名的编码。由于我们不能直接获取到音频 buffer，因此只能将音频加速后保存到 temp 再调用函数。</li>
+<li>但是 Hourglass-Resurrection 把这两个 api suppress 了，那我就干脆不管了，遇到问题再说。</li>
+</ul>
+</li>
+<li>waveOut 系列，包含 waveOutWrite, waveOutGetPosition, waveOutReset, waveOutOpen。这几个貌似就没法操作 buffer 了，毕竟这个 api 就是操作 tick 用的，可能只能用 tick 魔法了。不过理论上应该也不难。
+<ul>
+<li>保留用 waveOutSetPlaybackRate 强改的可能。</li>
+</ul>
+</li>
+<li>Beep 系列，MessageBeep 和 Beep。这也是 suppress 的，目的应该是 TAS 那边的，不用管。</li>
+</ul>
+<h4>DirectSound</h4>
+<ul>
+<li>DirectSoundCreate(8), DirectSoundEnumerate(A/W), DirectSoundCaptureEnumerate(A/W)，这几个是重点。毕竟游戏应该都调用的是这个。
+<ul>
+<li>这些函数可就麻烦了，<strong>Hourglass-Resurrection 自己写了一个 DirectSound 的音频驱动程序</strong>，包括前面的 EmulatedDirectSoundBuffer 也是。我这才知道文件开头的一堆 magic number 是干什么用的。显然我没有自己写驱动水平。</li>
+</ul>
+</li>
+</ul>
+<p>而起初我并没有发现这个问题，我先写了点操作 buffer 的代码……</p>
 <h3>rust</h3>
 <p>我不想碰 C++（即使已有代码作参考），先用 rust 碰碰壁再说。</p>
 <p>试了一下 <a href="https://github.com/darfink/detour-rs" target="_blank" rel="noopener noreferrer">detour-rs</a>，一个 detour 的 rs 实现，但是拉下来发现编译不过。issue 看到了一个 fork 解决了这个问题，才发觉 detour-rs 已经断更三年了。所以使用此 fork 版本的 <a href="https://github.com/Hpmason/retour-rs" target="_blank" rel="noopener noreferrer">retour-rs</a>。fork 版的文档也更详细，我用它的 example 配合文档推荐的 <a href="https://crates.io/crates/dll-syringe" target="_blank" rel="noopener noreferrer">dll-syringe</a> 跑了一下，成功注入了 MessageBoxW，完成了新手教程。</p>
-<p>接下来摆在面前的有几条路：</p>
-<ol>
-<li>纯抄 Hourglass-Resurrection，玩 tick 魔法</li>
-<li>看 api 时看出来：用 waveOutSetPlaybackRate 强改</li>
-<li>学习前文 <a href="#pyaudio">pyaudio 经验</a>，变换 buffer data</li>
-</ol>
+<p>但接下来才是痛苦开始。<a href="https://rust.audio/" target="_blank" rel="noopener noreferrer">rust 音频处理生态</a>本来就挺烂的。我先尝试的肯定是<a href="https://crates.io/crates/rubato" target="_blank" rel="noopener noreferrer">rubato</a>，毕竟简介就是速率变换。结果这玩意并不咋样，几乎无文档，examples 里面几百行也没有解释。我把 wav 用 python 转成 f64 raw，跑一遍 example 再转回去，并不是一个可用的音频。</p>
+<h3>dll 调库</h3>
+<p>退一万步，如果用现有的 dll 库呢？我尝试了一下行业用得比较多的 <a href="https://codeberg.org/soundtouch/soundtouch.git" target="_blank" rel="noopener noreferrer">soundtouch</a>，<a href="https://gist.github.com/lxl66566/f7dc49be8a08f2746b4179ccd3b2b378" target="_blank" rel="noopener noreferrer">写了个 python 小脚本</a>做测试。soundtouch 的 api 设计就要好得多，用户只需要 put 和 receive 就行了。但是我用 <code>receiveSamples</code> (处理 float 数组) 系列测试就返回值为 0（应该要返回数组长度），数组没有被改动；用 <code>putSamples_i16</code> 系函数（i16 系是 float 系的包装，包了一层转换）甚至有 bug，直接 internal <code>OSError: exception: integer divide by zero</code>。非常郁闷。</p>
+<h3>直面原理</h3>
+<p>音频处理其实并不算太复杂，说到底也是信号与系统那一套。最基础的就是把 trunk 加速打出去那一套，属于 <em>变速变调</em>。更高级一点的主要是 <em>变调不变速</em> 和 <em>变速不变调</em> 两种，有了这两种就可以组合出各种想要的效果了。实际使用中也可以只用一种，通过升降采样先 <em>变速变调</em>，对齐一个量，再通过一种算法改变另一个量即可。在这里我们当然关注 <em>变速不变调</em>。</p>
+<p>行业泛用的是 wsola (Waveform Similarity and Overlap Add)，例如 soundtouch 就用的这个。除此之外还有 PLOSA (Time-Domain Pitch-Synchronous Overlap and Add)，及其变体 TD-PSOLA 等。这一类的最大特点是需要找峰值，并保留峰值。</p>
+<p>现成的 crates 里，<em>wsola</em> 是个脑残占名字的没有内容，而 <a href="https://codeberg.org/PieterPenninckx/tdpsola" target="_blank" rel="noopener noreferrer"><em>tdpsola</em> 有一个可用实现</a>。把仓库拉下来，example 里带了 wav 支持，不需要手动转 raw。然后试了一下，确实能够实现加速！让我非常开心。虽然只支持单声道 wav，我还需要手动转一次，但是没有什么难度。并且作者在 README 里给出了一个 documentation，里面的视频把 TD-PSOLA 原理讲得非常透彻。</p>
 ]]></content:encoded>
     </item>
     <item>
