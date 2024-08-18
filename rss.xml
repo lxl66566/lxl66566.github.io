@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 17 Aug 2024 16:24:11 GMT</pubDate>
-    <lastBuildDate>Sat, 17 Aug 2024 16:24:11 GMT</lastBuildDate>
+    <pubDate>Sun, 18 Aug 2024 16:00:43 GMT</pubDate>
+    <lastBuildDate>Sun, 18 Aug 2024 16:00:43 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -480,13 +480,18 @@
 </ul>
 <h4>DirectSound</h4>
 <ul>
-<li>DirectSoundCreate(8), DirectSoundEnumerate(A/W), DirectSoundCaptureEnumerate(A/W)，这几个是重点。毕竟游戏应该都调用的是这个。
+<li>DirectSoundCreate(8), DirectSoundEnumerate(A/W), DirectSoundCaptureEnumerate(A/W)，这几个是重点，毕竟游戏都调用的 DirectSound，因为可以叠加音频播放。
 <ul>
-<li>这些函数可就麻烦了，<strong>Hourglass-Resurrection 自己写了一个 DirectSound 的音频驱动程序</strong>，包括前面的 EmulatedDirectSoundBuffer 也是。我这才知道文件开头的一堆 magic number 是干什么用的。显然我没有自己写驱动水平。</li>
+<li>这些函数可就麻烦了，<strong>Hourglass-Resurrection 自己写了一个 DirectSound 的音频驱动程序</strong>，包括前面的 EmulatedDirectSoundBuffer 也是。我这才知道文件开头的一堆 magic number 是干什么用的。显然我没有自己写驱动水平。
+<ul>
+<li>所以如果不写驱动，那么需要 hook 的函数就不能是这些，这些函数是用于创建驱动用的。需要 hook 的应该是 <code>IDirectSoundBuffer::Lock/Unlock/SetFrequency</code> 等。</li>
+</ul>
+</li>
+<li>往细想下去就更不得了了：学它直接操作 tick 可能并不能实现不变调加速。或许我听到的 Hourglass 的音频加速只是破碎的 buffer 拼成的音频；10 倍速下确实听不出音频究竟还是否完整。</li>
 </ul>
 </li>
 </ul>
-<p>而起初我并没有发现这个问题，我先写了点操作 buffer 的代码……</p>
+<p>而起初我并没有发现这些问题，我先写了点操作 buffer 的代码……</p>
 <h3>rust</h3>
 <p>我不想碰 C++（即使已有代码作参考），先用 rust 碰碰壁再说。</p>
 <p>试了一下 <a href="https://github.com/darfink/detour-rs" target="_blank" rel="noopener noreferrer">detour-rs</a>，一个 detour 的 rs 实现，但是拉下来发现编译不过。issue 看到了一个 fork 解决了这个问题，才发觉 detour-rs 已经断更三年了。所以使用此 fork 版本的 <a href="https://github.com/Hpmason/retour-rs" target="_blank" rel="noopener noreferrer">retour-rs</a>。fork 版的文档也更详细，我用它的 example 配合文档推荐的 <a href="https://crates.io/crates/dll-syringe" target="_blank" rel="noopener noreferrer">dll-syringe</a> 跑了一下，成功注入了 MessageBoxW，完成了新手教程。</p>
@@ -497,6 +502,8 @@
 <p>音频处理其实并不算太复杂，说到底也是信号与系统那一套。最基础的就是把 trunk 加速打出去那一套，属于 <em>变速变调</em>。更高级一点的主要是 <em>变调不变速</em> 和 <em>变速不变调</em> 两种，有了这两种就可以组合出各种想要的效果了。实际使用中也可以只用一种，通过升降采样先 <em>变速变调</em>，对齐一个量，再通过一种算法改变另一个量即可。在这里我们当然关注 <em>变速不变调</em>。</p>
 <p>行业泛用的是 wsola (Waveform Similarity and Overlap Add)，例如 soundtouch 就用的这个。除此之外还有 PLOSA (Time-Domain Pitch-Synchronous Overlap and Add)，及其变体 TD-PSOLA 等。这一类的最大特点是需要找峰值，并保留峰值。</p>
 <p>现成的 crates 里，<em>wsola</em> 是个脑残占名字的没有内容，而 <a href="https://codeberg.org/PieterPenninckx/tdpsola" target="_blank" rel="noopener noreferrer"><em>tdpsola</em> 有一个可用实现</a>。把仓库拉下来，example 里带了 wav 支持，不需要手动转 raw。然后试了一下，确实能够实现加速！让我非常开心。虽然只支持单声道 wav，我还需要手动转一次，但是没有什么难度。并且作者在 README 里给出了一个 documentation，里面的视频把 TD-PSOLA 原理讲得非常透彻。</p>
+<h3>打击</h3>
+<p>此时我终于读懂了 Hourglass-Resurrection 的代码是自己写 DirectSound 的驱动，并且也发现操作 tick 并不能实现真正的音频加速，最终的道路一定是 buffer。于是我陷入了消沉：做一个音频加速的复杂度已经远超出了我的想象，即使知晓了音频加速原理，也很难面对一大坨 windows sound api。我目前摸索的这些知识在脑子里并不能合到一起。</p>
 ]]></content:encoded>
     </item>
     <item>
