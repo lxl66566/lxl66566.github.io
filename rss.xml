@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 18 Aug 2024 16:00:43 GMT</pubDate>
-    <lastBuildDate>Sun, 18 Aug 2024 16:00:43 GMT</lastBuildDate>
+    <pubDate>Tue, 20 Aug 2024 10:50:28 GMT</pubDate>
+    <lastBuildDate>Tue, 20 Aug 2024 10:50:28 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -37,6 +37,7 @@
 <li><a href="https://clojuredocs.org/quickref" target="_blank" rel="noopener noreferrer">official quickref</a>：肯定少不了来这里查。可以学到许多 builtin functions。</li>
 <li><a href="https://www.youtube.com/watch?v=vK1DazRK_a0" target="_blank" rel="noopener noreferrer">Solving Problems the Clojure Way - Rafal Dittwald</a>：函数式思想入门，茅塞顿开</li>
 <li><a href="https://github.com/geekerzp/clojure-style-guide/blob/master/README-zhCN.md" target="_blank" rel="noopener noreferrer">Clojure 风格指南</a></li>
+<li><a href="https://www.braveclojure.com/writing-macros/" target="_blank" rel="noopener noreferrer">Writing Macros - Clojure for the Brave and True</a></li>
 </ol>
 <h2>开发环境</h2>
 <p>vscode 安装 <em>Calva Spritz</em> 即可。</p>
@@ -46,7 +47,18 @@
 <h2>语言基础</h2>
 <p>零散知识点。</p>
 <ul>
-<li>conj + list 是加到前面：<code>(conj '(2 3 4) 1)</code>，+ vec 是加到后面：<code>(conj [1 2] 3 4)</code></li>
+<li>function 隐式命名规则：
+<ul>
+<li>后面加 v 指返回 vector（<code>[]</code>），例如 <code>filterv</code>, <code>mapv</code>。</li>
+</ul>
+</li>
+<li>list 和 vec 的区别：list 的尾部是前面，vec 尾部是后面。许多函数例如 <code>conj</code>, <code>peek</code>, <code>pop</code> 都遵循这个规律。正常人都会用 vector 吧。<div class="language-clojure line-numbers-mode" data-highlighter="shiki" data-ext="clojure" data-title="clojure" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">peek</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> '(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)) </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">; =&gt; 1</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">peek</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">])  </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">; =&gt; 2</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>但是有例外，<code>last</code> 不遵循此规律。。</li>
+</ul>
+<div class="language-clojure line-numbers-mode" data-highlighter="shiki" data-ext="clojure" data-title="clojure" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">last</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> '(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">1</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)) </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">; =&gt; 2</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div></li>
 <li><code>-&gt;</code> 和 <code>-&gt;&gt;</code> 的区别：添加的位置不同。<code>-&gt;</code> 加到调用链每一环函数参数首位，<code>-&gt;&gt;</code> 加到调用链每一环参数末尾。<div class="language-clojure line-numbers-mode" data-highlighter="shiki" data-ext="clojure" data-title="clojure" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">-&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">func</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> x</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> y</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)) </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">; (func 1 x y)</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">-&gt;&gt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">func</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> x</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> y</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)) </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">; (func x y 1)</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
@@ -57,7 +69,17 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  [&amp; </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">args</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">apply</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> myfunc</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> args</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>这两个是等价的。</li>
-<li><a href="https://stackoverflow.com/questions/2588227" target="_blank" rel="noopener noreferrer">没有 zip function</a>，要自己写。<div class="language-clojure line-numbers-mode" data-highlighter="shiki" data-ext="clojure" data-title="clojure" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">defn</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> transpose</span></span>
+<li>if 内可以判断很多类型，常见的 <code>[]</code> <code>()</code> 都能判 false</li>
+<li>peek 是 last 的高速代替</li>
+<li>identity 代表返回自身的函数，用于 filter 等。但是不允许用 <code>#(%)</code>。</li>
+</ul>
+<p>和其他语言对比：</p>
+<ul>
+<li>loop - recur 就是 for - continue</li>
+<li>defprotocol 就是定义 interface，defrecord 就是 class</li>
+<li>mapcat 就是 flatmap</li>
+<li>distinct 就是 unique 列表去重</li>
+<li><a href="https://stackoverflow.com/questions/2588227" target="_blank" rel="noopener noreferrer">没有 zip function</a>，要自己写。<div class="language-clojure line-numbers-mode" data-highlighter="shiki" data-ext="clojure" data-title="clojure" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">defn</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> zip</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  "[1 2 3]</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">   [4 5 6]</span></span>
 <span class="line"><span style="--shiki-light:#032F62;--shiki-dark:#98C379">  =&gt; [[1 4]</span></span>
@@ -66,14 +88,9 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  [</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">m</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">apply</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> map</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> vector</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> m</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-<li>if 内可以判断很多类型，常见的 <code>[]</code> <code>()</code> 都能判 false</li>
-<li>peek 是 last 的高速代替</li>
-</ul>
-<p>和其他语言对比：</p>
-<ul>
-<li>loop - recur 就是 for - continue</li>
-<li>defprotocol 就是定义 interface，defrecord 就是 class</li>
-<li>mapcat 就是 flatmap</li>
+<li>没有 filter-map function：<div class="language-clojure line-numbers-mode" data-highlighter="shiki" data-ext="clojure" data-title="clojure" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">defn</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> filter-map</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">f</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> coll</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">filter</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> identity</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">map</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> f</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> coll</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)))</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
 <h2>项目管理</h2>
 <ul>
@@ -84,7 +101,7 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ns</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> xxx.yyy</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  (</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">:require</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">xxx.zzz</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> :as</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> myalias</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]))</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">myalias/myfunc</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 123</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>想要运行这个需要用 <code>clj</code> 命令行，在 REPL 内运行只会报错。</li>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>想要运行这个需要用 <code>clj</code> 命令行，在 REPL 内运行只会报错。只有下面的 <code>:refer</code> 形式可以在 REPL 用，不会炸。</li>
 <li>引用标准库：<code>use :only</code> 已经 deprecate 了，用 require。<div class="language-clojure line-numbers-mode" data-highlighter="shiki" data-ext="clojure" data-title="clojure" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">ns</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> chapter2.2-37U</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  (</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">:require</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">clojure.test</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> :refer</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">deftest</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> is</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]])</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  (</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">:require</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">chapter2.2-36</span><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2"> :as</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> acn</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]))</span></span></code></pre>
