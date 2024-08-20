@@ -331,6 +331,8 @@ const data = [
   { id: "MUKC-043", aScore: 8.3, bScore: 7.6, u: true, name: "150cm Fカップ。今日も何でも言うこと聞きます。 このコスプレ少女、売り出し中。 専属 広瀬このみ" },
   { id: "HUNTB-317", aScore: 7.1, bScore: 4, u: true, name: "デリヘルでみつけたドM天使-実写版- 辻井ほのか 松本いちか 椿りか" },
   { id: "mds-836", aScore: 6.4, bScore: 3.6, name: "うしじまいい肉プロデュース アイドル原石 宅コスレイヤー 土屋あさみ" },
+  { id: "ssni-404", aScore: 3.1, bScore: 7.5 },
+  { id: "miaa-525", aScore: 8.5, bScore: 5 },
 ];
 export default {
   name: "AvTable",

@@ -404,6 +404,12 @@ const data = [
   { id: "(ex)", aScore: 9, bScore: 8.6, info: "#兄妹 #いちはや", otherlink: "https://exhentai.org/g/2894472/668e0d4efc/", bak: "https://telegra.ph/C101-squeezecandyheaven-いちはや-絶対に強姦する兄VS絶対に和姦にする妹-中国翻訳-04-20" },
   { id: "352400", aScore: 4.3, bScore: 5, info: "#全彩 #兄妹", bak: "https://telegra.ph/こんにゃく-おねしょた和希先輩-中国翻訳-08-03" },
   { id: "522000", aScore: 7.1, bScore: 7.6, order: 3, info: "#同学 #突入", bak: "https://telegra.ph/みちきんぐ-姉体験女学寮-3-COMIC-クアンスリウム-2017年11月号-中国翻訳-DL版-08-14" },
+  { id: "443138", aScore: 4.5, bScore: 4.1, info: "#全彩 #3P" },
+  { id: "384553", aScore: 6.1, bScore: 4, info: "#纯爱 #泳装" },
+  { id: "507371", aScore: 9, bScore: 5.5, info: "#蔚蓝档案 #兽耳" },
+  { id: "346807", aScore: 8.7, bScore: 6.3, info: "#兽耳 #さわやか鮫肌 #东方", bak: "https://telegra.ph/C96-ドットエイト-さわやか鮫肌-てゐちゃんとすけべする本-東方Project-中国翻訳-08-03" },
+  { id: "348919", aScore: 4.2, bScore: 4.5, info: "#短篇 #公主连结", bak: "https://telegra.ph/こみトレ35-ココアホリック-ユイザキカズヤ-セックスしないと出られない白い部屋にキョウカちゃんと一緒に閉じ込められたので思いっきり焦らしてみた-プリンセスコネクトReDive-中国翻訳-08-03" },
+  { id: "349496", aScore: 6.3, bScore: 9.2, info: "#魔女 #触手", bak: "https://telegra.ph/やみなべ-天才魔導少女の憂鬱-少女組曲-15-中国翻訳-DL版-08-03" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

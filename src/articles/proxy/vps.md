@@ -36,6 +36,7 @@ tag:
 |20240518 Churros|JP|￥8.9/mo + ￥6 初装|200GB 100Mbps|1GB|5GB|1|<dtls>silicloud IP 寄了，换台 JP。这家是超级垃圾灵车，非常不稳定</dtls>|
 |20240714 Akile|HK|￥5/mo|200GB 1000Mbps|1GB|5GB|1|<dtls>akile 很灵车，不推荐。介于 Churros 和 Lamhosting 之间。</dtls>|
 |20240726 Lamhosting|TW|￥10.6/mo(coupon -￥2)|512GB 1000Mbps|512M|10GB|1|<dtls>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</dtls>|
+|20240820 SurfCloud|HK|$1/mo|200GB 30Mbps|1G|40GB|1|<dtls>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</dtls>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 

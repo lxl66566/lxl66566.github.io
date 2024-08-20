@@ -17,6 +17,7 @@ tag:
 2. [official quickref](https://clojuredocs.org/quickref)：肯定少不了来这里查。可以学到许多 builtin functions。
 3. [Solving Problems the Clojure Way - Rafal Dittwald](https://www.youtube.com/watch?v=vK1DazRK_a0)：函数式思想入门，茅塞顿开
 4. [Clojure 风格指南](https://github.com/geekerzp/clojure-style-guide/blob/master/README-zhCN.md)
+5. [Writing Macros - Clojure for the Brave and True](https://www.braveclojure.com/writing-macros/)
 
 ## 开发环境
 
@@ -32,7 +33,17 @@ vscode 安装 _Calva Spritz_ 即可。
 
 零散知识点。
 
-- conj + list 是加到前面：`(conj '(2 3 4) 1)`，+ vec 是加到后面：`(conj [1 2] 3 4)`
+- function 隐式命名规则：
+  - 后面加 v 指返回 vector（`[]`），例如 `filterv`, `mapv`。
+- list 和 vec 的区别：list 的尾部是前面，vec 尾部是后面。许多函数例如 `conj`, `peek`, `pop` 都遵循这个规律。正常人都会用 vector 吧。
+  ```clojure
+  (peek '(1 2)) ; => 1
+  (peek [1 2])  ; => 2
+  ```
+  - 但是有例外，`last` 不遵循此规律。。
+  ```clojure
+  (last '(1 2)) ; => 2
+  ```
 - `->` 和 `->>` 的区别：添加的位置不同。`->` 加到调用链每一环函数参数首位，`->>` 加到调用链每一环参数末尾。
   ```clojure
   (-> 1 (func x y)) ; (func 1 x y)
@@ -48,9 +59,19 @@ vscode 安装 _Calva Spritz_ 即可。
     (apply myfunc args))
   ```
   这两个是等价的。
+- if 内可以判断很多类型，常见的 `[]` `()` 都能判 false
+- peek 是 last 的高速代替
+- identity 代表返回自身的函数，用于 filter 等。但是不允许用 `#(%)`。
+
+和其他语言对比：
+
+- loop - recur 就是 for - continue
+- defprotocol 就是定义 interface，defrecord 就是 class
+- mapcat 就是 flatmap
+- distinct 就是 unique 列表去重
 - [没有 zip function](https://stackoverflow.com/questions/2588227)，要自己写。
   ```clojure
-  (defn transpose
+  (defn zip
     "[1 2 3]
      [4 5 6]
     => [[1 4]
@@ -59,14 +80,11 @@ vscode 安装 _Calva Spritz_ 即可。
     [m]
     (apply map vector m))
   ```
-- if 内可以判断很多类型，常见的 `[]` `()` 都能判 false
-- peek 是 last 的高速代替
-
-和其他语言对比：
-
-- loop - recur 就是 for - continue
-- defprotocol 就是定义 interface，defrecord 就是 class
-- mapcat 就是 flatmap
+- 没有 filter-map function：
+  ```clojure
+  (defn filter-map [f coll]
+    (filter identity (map f coll)))
+  ```
 
 ## 项目管理
 
@@ -80,7 +98,7 @@ vscode 安装 _Calva Spritz_ 即可。
     (:require [xxx.zzz :as myalias]))
   (myalias/myfunc 123)
   ```
-  想要运行这个需要用 `clj` 命令行，在 REPL 内运行只会报错。
+  想要运行这个需要用 `clj` 命令行，在 REPL 内运行只会报错。只有下面的 `:refer` 形式可以在 REPL 用，不会炸。
 - 引用标准库：`use :only` 已经 deprecate 了，用 require。
   ```clojure
   (ns chapter2.2-37U

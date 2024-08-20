@@ -42,6 +42,7 @@ tag:
 - <Av bg="fc2-ppv-3518061" />
 - <Av bg="fc2-ppv-3277687" />
 - <Av bg="fc2-ppv-4409072" />
+- <Av bg="FC2-PPV-4067240" />
 
 ## 评优
 
