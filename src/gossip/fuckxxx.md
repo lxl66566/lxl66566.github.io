@@ -379,6 +379,14 @@ ColorOS 是目前一加的默认系统。
 - REPL 环境有问题。例如
   - 没有 `load` 和 `load-file`，反正我用 bb 是没有的。
   - 正常的 `:require` 代码，可以在 cli 执行的，在 REPL 里会 `Attempting to call unbounded fn`。并且也看不出错在哪。
+  - 这个 `Attempting to call unbounded fn` 非常灵车，我 rust ffi 到 clojure 天天报这个错，没有任何有效信息，调试几小时结果[发现跟 fn 完全没关系](https://t.me/withabsolutex/1877)……
 - 文档挺一般的，不能一下找到重点，整体也很散。
 - 用户交流方式也不行，搜问题排名靠前的居然一大堆 google group。很难将解决方法传承下去。
   - 倒是有一个 [clojureverse](https://clojureverse.org/c/questions-help)，但是已经死了（最新帖子 2022.06），而且不在搜索引擎范围内，fw。
+
+## vscode 有多难用
+
+- 关闭了某插件的弹窗通知权限后，该插件依然会弹窗通知。
+- 跨平台（跨系统）做得挺烂的。
+  - 不支持仅在某平台禁用部分插件
+  - 不支持仅在某平台修改任意设置项
