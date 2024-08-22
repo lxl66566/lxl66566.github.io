@@ -129,12 +129,12 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 - [竹新社](https://t.me/tnews365)：国内外新闻转载，较客观
 - [Solidot](https://t.me/solidot)
-- [风向旗参考快讯](https://t.me/xhqcankao)
 - [每日消费电子观察](https://t.me/CE_Observe)
 
 ### 学习
 
 - [速学与笔记管理艺术交流](https://t.me/anki_keeper/548)
+- [黑洞资源笔记](https://t.me/tieliu)：分享一些有价值的编程学习资料 / 卖课的
 
 #### 编程及技术
 
@@ -151,19 +151,15 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 - [【音声可能】日本語雑談部屋](https://t.me/onseizatudan) & [日本語雑談部屋](https://t.me/nihongo_practice) & [つぐみ喫茶店](https://t.me/nihongo_soudann)：聊天群，仅日语
 - [英日部屋](https://t.me/enjpchat)：聊天群，日语 | 英语
 - [日語學習小組](https://t.me/learn_ja_group) & [日本語研修](https://t.me/LearningJapaneseGroup)：中文交流的日语学习群
-- [Word Power Made Easy](https://t.me/pieroots)：英语单词词根起源探寻
-
-### 科技
-
-- [黑洞资源笔记](https://t.me/tieliu)：分享一些有价值的编程学习资料 / 卖课的
+- [Word Power Made Easy](https://t.me/pieroots)：英语单词词根起源探寻（已死）
 
 ### NSFW
 
 - 色图区
   - [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，_绝对值\_x 精选，质量有保证！_（1:1）
-  - [馒头研究所](https://t.me/lolipussyhub)（25:1）
-  - [everyday color photos](https://t.me/everydaycolorphoto)（50:1）
-  - [萌图交流](https://t.me/jialeleya2233)
+  - [馒头研究所](https://t.me/lolipussyhub)（35:1）
+  - [everyday color photos](https://t.me/everydaycolorphoto)（40:1）
+  - [萌图交流](https://t.me/jialeleya2233)（50:1）
   - [韵の小院 🍃ᴺˢᶠʷ](https://t.me/YunRan1314)（80:1）
   - [美图与色图](https://t.me/setu_nsfw)
 - 本子区：
@@ -178,12 +174,6 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 - [安卓破解分享](https://t.me/apkrxwy)
 - [NEP.Anime | 动画仓库](https://t.me/AnimeNep)：动漫收藏搬运
 
-### 个人
-
-> 高质量个人频道
-
-- [gledos 的微型博客](https://t.me/gledos_microblogging)
-
 ### 乐
 
 - [美图与沙雕](https://t.me/shadiaotu)
@@ -192,18 +182,16 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 ### 涉政
 
 - [知乎暴论](https://t.me/mightyflame)
+- 其他的我就不放出来了（
 
 ### 闲聊
 
 - [#archlinux-cn-offtopic](https://t.me/archlinuxcn_offtopic)：_archlinux-cn_ 属群
-- [真红真红真](https://t.me/upsetGroup)：[失落小站](../hobbies/galgame.md#资源)属群
+- 闲聊群巨多，没啥看的价值，这里不会再新增了。
 
 ### bot
 
 - [InstantViewBot](https://t.me/CorsaBot)：保存文章
 - [CloudMusicDownloader](https://t.me/Music163bot)：网易云音乐下载
 - [RSS](https://t.me/rss2tg_bot)：RSS 订阅
-
-### 其他
-
-- [Iyouport](https://t.me/iyouport)：教你如何保护自己
+  - 有服务器的还是推荐自己搭 rss，这些公用的用量太大，都不稳定

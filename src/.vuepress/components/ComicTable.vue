@@ -410,6 +410,10 @@ const data = [
   { id: "346807", aScore: 8.7, bScore: 6.3, info: "#兽耳 #さわやか鮫肌 #东方", bak: "https://telegra.ph/C96-ドットエイト-さわやか鮫肌-てゐちゃんとすけべする本-東方Project-中国翻訳-08-03" },
   { id: "348919", aScore: 4.2, bScore: 4.5, info: "#短篇 #公主连结", bak: "https://telegra.ph/こみトレ35-ココアホリック-ユイザキカズヤ-セックスしないと出られない白い部屋にキョウカちゃんと一緒に閉じ込められたので思いっきり焦らしてみた-プリンセスコネクトReDive-中国翻訳-08-03" },
   { id: "349496", aScore: 6.3, bScore: 9.2, info: "#魔女 #触手", bak: "https://telegra.ph/やみなべ-天才魔導少女の憂鬱-少女組曲-15-中国翻訳-DL版-08-03" },
+  { id: "524776", aScore: 9.6, bScore: 4.6, info: "#蔚蓝档案 #兽耳" },
+  { id: "525879", aScore: 8.3, bScore: 6.7, info: "#魅魔 #反杀", bak: "https://telegra.ph/C104-あんみつよもぎ亭-みちきんぐ-サキュバス性徒会シコシコ執行部-中国翻訳-08-20-3" },
+  { id: "346634", aScore: 8, bScore: 5.5, order: 1, info: "#全彩 #魅魔 #处女", bak: "https://telegra.ph/COMIC116-Come-Through-あづみ一樹-サキュバスデリバリー-中国翻訳-08-03" },
+  { id: "525373", aScore: 6, bScore: 7.3, info: "#魅魔 #纯爱 #同学" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
