@@ -414,6 +414,7 @@ const data = [
   { id: "525879", aScore: 8.3, bScore: 6.7, info: "#魅魔 #反杀", bak: "https://telegra.ph/C104-あんみつよもぎ亭-みちきんぐ-サキュバス性徒会シコシコ執行部-中国翻訳-08-20-3" },
   { id: "346634", aScore: 8, bScore: 5.5, order: 1, info: "#全彩 #魅魔 #处女", bak: "https://telegra.ph/COMIC116-Come-Through-あづみ一樹-サキュバスデリバリー-中国翻訳-08-03" },
   { id: "525373", aScore: 6, bScore: 7.3, info: "#魅魔 #纯爱 #同学" },
+  { id: "344014", aScore: 7.9, bScore: 4.1, info: "#兽耳 #后宫", bak: "https://telegra.ph/ふわてん-天壌りゅか-ケモミミパラダイス-中国翻訳-DL版-08-03" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

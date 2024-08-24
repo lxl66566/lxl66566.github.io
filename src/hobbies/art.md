@@ -23,5 +23,5 @@ tag:
 
 <!-- prettier-ignore -->
 | 名 | 时间 | 评价 |
-| [迷失东京](https://zh.wikipedia.org/wiki/%E8%BF%B7%E5%A4%B1%E4%B8%9C%E4%BA%AC) | 20240821 | <dtlslong text="本想看同名片，不小心看完了这部作品。平凡，且我对感情戏不算感冒。不过又有些向往。"/> |
+| [迷失东京](https://zh.wikipedia.org/wiki/迷失东京) | 20240821 | <dtlslong text="本想看同名片，不小心看完了这部作品。平凡，且我对感情戏不算感冒。不过又有些向往。"/> |
 | 隐入尘烟 | 20240626 |

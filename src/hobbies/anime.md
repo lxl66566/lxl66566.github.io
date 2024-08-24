@@ -20,15 +20,16 @@ tag:
 
 [樱花动漫](https://www.yhmgo.com) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/) | [acg.rip](https://acg.rip/) | [末日動漫資源庫](https://share.acgnx.se/) | [动漫花园](http://share.dmhy.org/) | [Tg 动画仓库](https://t.me/AnimeNep)
 
-但是大部分都没用过
+~~但是大部分都没用过~~
 
 ## 时间记录
 
 > 结束时间倒序。
 
 <!-- prettier-ignore -->
-|番名 | 起止区间|
+| 番名 | 起止区间 |
 | :--: | :--: |
+| Girls Band Cry | 2024.08.23-<br/>2024.08.24 |
 |Joker Game|2024.04.23-<br/>2024.04.24|
 |玻璃之花与崩坏的世界|2024.04.04|
 |紫罗兰永恒花园 剧场版|2024.02.17|
@@ -66,6 +67,12 @@ tag:
 |某科学的超电磁炮<OrderBadge order=1 />|<2020.02.14-<br/>烂尾|
 
 ## 说两句
+
+### GBC
+
+被高中朋友强推看的。我本身对少女乐队并无感，毕竟我自有国情，年龄，情感在此。音乐的话也差不多，OP 高潮还行，但是没有惊艳的、能让我放进频道的曲。少女摇滚肯定还是以歌词为主，旋律都欠打磨。
+
+感受：自由的青春，羡慕。
 
 ### [玻璃之花与崩坏的世界](https://www.bilibili.com/bangumi/play/ep96774)
 
