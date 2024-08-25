@@ -22,6 +22,9 @@
   "Codegeex.DisabledFor": {
     "markdown": "true"
   },
+  "Lingma.cloudModelEnable": false,
+  "Lingma.cloudModelAutoTriggerDisplayRule": false,
+  "Lingma.localMachineModel": false,
   "autocorrect.enable": false,
   "cSpell.language": "en-US",
   "cSpell.enableFiletypes": ["bat", "ini", "lua"],

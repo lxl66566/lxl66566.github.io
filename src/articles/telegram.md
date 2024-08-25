@@ -152,6 +152,7 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 - [英日部屋](https://t.me/enjpchat)：聊天群，日语 | 英语
 - [日語學習小組](https://t.me/learn_ja_group) & [日本語研修](https://t.me/LearningJapaneseGroup)：中文交流的日语学习群
 - [Word Power Made Easy](https://t.me/pieroots)：英语单词词根起源探寻（已死）
+- [Anki 日语频道](https://t.me/AnkiJapanChannel)
 
 ### NSFW
 

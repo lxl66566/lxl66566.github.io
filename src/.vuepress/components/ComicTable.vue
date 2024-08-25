@@ -415,6 +415,9 @@ const data = [
   { id: "346634", aScore: 8, bScore: 5.5, order: 1, info: "#全彩 #魅魔 #处女", bak: "https://telegra.ph/COMIC116-Come-Through-あづみ一樹-サキュバスデリバリー-中国翻訳-08-03" },
   { id: "525373", aScore: 6, bScore: 7.3, info: "#魅魔 #纯爱 #同学" },
   { id: "344014", aScore: 7.9, bScore: 4.1, info: "#兽耳 #后宫", bak: "https://telegra.ph/ふわてん-天壌りゅか-ケモミミパラダイス-中国翻訳-DL版-08-03" },
+  { id: "345150", aScore: 8, bScore: 7.1, info: "#舰队Collection #3P", bak: "https://telegra.ph/AC2-KW-ささちん-雷電ちゃん罰ゲーム-艦隊これくしょん--艦これ--中国翻訳-08-03" },
+  { id: "345263", aScore: 6, bScore: 7.3, info: "#loli #强制性交", bak: "https://telegra.ph/ネクサス工房-在誠舞あゆか-おじさんの女児遊び-中国翻訳-DL版-08-03" },
+  { id: "525937", aScore: 8.9, bScore: 9.3, info: "#触手 #身体占据 #惊悚 #非人类" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
