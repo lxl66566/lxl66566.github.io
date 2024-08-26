@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 25 Aug 2024 09:21:45 GMT</pubDate>
-    <lastBuildDate>Sun, 25 Aug 2024 09:21:45 GMT</lastBuildDate>
+    <pubDate>Mon, 26 Aug 2024 08:56:51 GMT</pubDate>
+    <lastBuildDate>Mon, 26 Aug 2024 08:56:51 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -662,7 +662,10 @@
 <p>这进去一 rebuild 我就感觉不对劲，此处把报错贴出：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>sudo: PAM account management error: Authentication service cannot retrieve authentication info</span></span>
 <span class="line"><span>sudo: a password is required</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>求助群友，群友说 <code>nixos-install</code> 与 <code>nixos-rebuild</code> 效果基本是一样的，让我去外面用 install 试。效果确实差不多，不过每次在 livecd install 都相当于重装，无法用内部的缓存，全部重新下载，还是有点耗时的。install success 后再次 <code>nixos-enter</code> 试，还是一样的报错，只要用到 sudo 就会炸。鼓捣了大半天，reinstall 了好几次都无法解决，另一个管理发话了：在 <code>nixos-enter</code> 中这是<strong>正常现象，内核的表现是不一致的</strong>。我一直把 <code>nixos-enter</code> 当 <code>arch-chroot</code> 用，没想到这玩意这么捞。</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>求助群友，群友说 <code>nixos-install</code> 与 <code>nixos-rebuild</code> 效果基本是一样的，让我去外面用 install 试。效果确实差不多，不过每次在 livecd install 都相当于重装，无法用内部的缓存，全部重新下载，还是有点耗时的。install success 后再次 <code>nixos-enter</code> 试，还是一样的报错，只要用到 sudo 就会炸。鼓捣了大半天，reinstall 了好几次都无法解决，另一个管理说，在 <code>nixos-enter</code> 中这是正常现象，内核的表现是不一致的。我一直把 <code>nixos-enter</code> 当 <code>arch-chroot</code> 用，没想到这玩意这么捞。</p>
+<ul>
+<li>日后刷到了<a href="https://blog.lzc256.com/posts/recovering-sudo-in-nixos/" target="_blank" rel="noopener noreferrer">一篇博文</a>，描述了另一个人是如何解决此问题的。我感觉这更像是 nixos 的 bug 而不是内核不一致。</li>
+</ul>
 <p>这回重启就正常了，也不知道是其中的哪次 install 尝试起了作用。于是我成功进入系统开始激情编辑配置。</p>
 <h3>后记</h3>
 <p>第二天学校有实践课加上 cs2 出新图，没怎么折腾系统，尝试给电脑<a href="#%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8">装了个 nvidia 驱动</a>和其他玩意就去睡觉了。</p>
@@ -1267,9 +1270,15 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <li>Google 家的大多数都能冻</li>
 <li>不要冻 <em>媒体存储设备</em>(<code>com.google.android.providers.media.module</code>) ！！！<a href="/articles/mobile/problem.html#%E4%B9%B1%E5%86%BB%E7%BB%93" target="_blank">惨痛教训</a></li>
 </ul>
-<h4>一加</h4>
+<h4>ColorOS</h4>
+<p>一加和 OPPO 的。</p>
 <ul>
-<li>不要冻 <em>应用包安装程</em>！！！！<a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="_blank">惨痛教训，并附带了哪些东西能冻</a></li>
+<li>不要冻 <em>应用包安装程序</em>！！！！<a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="_blank">惨痛教训，并附带了哪些东西能冻</a></li>
+<li><a href="https://bbs.oneplus.com/thread/6003405" target="_blank" rel="noopener noreferrer">这篇文章</a>指出了一些能卸载的包。
+<ul>
+<li>对于新系统，文章包名里的 <code>heytap</code> 基本都要换成 <code>coloros</code>，<code>oplus</code> 换成 <code>nearme</code>。</li>
+</ul>
+</li>
 </ul>
 <h4>禁用快应用中心</h4>
 <blockquote>
@@ -1278,19 +1287,20 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 </blockquote>
 <p>但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和<strong>家人</strong>的身心健康，建议禁用之：</p>
 <ol>
-<li>查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到<em>快应用服务框架</em> 进入，点击右上角感叹号，查看应用包名。
+<li>查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到 <em>快应用服务框架</em> 进入，点击右上角感叹号，查看应用包名。
 <blockquote>
 <p>或：已知关键字可使用 <code>adb shell pm list package [&lt;keyword&gt;]</code> 在手机内以关键字查找包名。</p>
 </blockquote>
 <ul>
-<li>MIUI 12.5：<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span></li>
+<li>MIUI 12.5：<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span>，可能还有 <code>.accessory</code> 后缀</li>
 <li>HarmonyOS：<code>com.huawei.fastapp</code></li>
+<li>ColorOS：<code>com.nearme.instant.platform</code></li>
+<li>vivo：<code>com.vivo.hybrid</code></li>
 </ul>
 </li>
 <li>连接手机并<a href="/articles/mobile/adb.html" target="_blank">开启 ADB 调试</a>。</li>
 <li>禁用包：<code>adb shell pm disable-user com.miui.hybrid</code>，也可以直接卸载，详情参考 <a href="/articles/mobile/adb.html" target="_blank">ADB</a></li>
 </ol>
-<p>以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。</p>
 <h2>external</h2>
 <ol>
 <li><a href="https://dev.moe/2716" target="_blank" rel="noopener noreferrer">小米平板 5 Pro 刷入 GSI Android 教程</a></li>
