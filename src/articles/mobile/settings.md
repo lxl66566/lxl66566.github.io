@@ -61,9 +61,13 @@ MIUI：
 - Google 家的大多数都能冻
 - 不要冻 _媒体存储设备_(`com.google.android.providers.media.module`) ！！！[惨痛教训](./problem.md#乱冻结)
 
-#### 一加
+#### ColorOS
 
-- 不要冻 _应用包安装程_！！！！[惨痛教训，并附带了哪些东西能冻](./problem.md#一加无限重启)
+一加和 OPPO 的。
+
+- 不要冻 _应用包安装程序_！！！！[惨痛教训，并附带了哪些东西能冻](./problem.md#一加无限重启)
+- [这篇文章](https://bbs.oneplus.com/thread/6003405)指出了一些能卸载的包。
+  - 对于新系统，文章包名里的 `heytap` 基本都要换成 `coloros`，`oplus` 换成 `nearme`。
 
 #### 禁用快应用中心
 
@@ -72,14 +76,14 @@ MIUI：
 
 但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和**家人**的身心健康，建议禁用之：
 
-1. 查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到*快应用服务框架* 进入，点击右上角感叹号，查看应用包名。
+1. 查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到 _快应用服务框架_ 进入，点击右上角感叹号，查看应用包名。
    > 或：已知关键字可使用 `adb shell pm list package [<keyword>]` 在手机内以关键字查找包名。
-   - MIUI 12.5：`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>
+   - MIUI 12.5：`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>，可能还有 `.accessory` 后缀
    - HarmonyOS：`com.huawei.fastapp`
+   - ColorOS：`com.nearme.instant.platform`
+   - vivo：`com.vivo.hybrid`
 2. 连接手机并[开启 ADB 调试](./adb.md)。
 3. 禁用包：`adb shell pm disable-user com.miui.hybrid`，也可以直接卸载，详情参考 [ADB](./adb.md)
-
-以上教程为 MIUI 下禁用快应用中心的步骤，不保证在其他操作系统上正常运作。
 
 ## external
 

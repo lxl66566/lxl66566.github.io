@@ -29,6 +29,10 @@ tag:
 
 :::
 
+## NixOS bootloader
+
+由于[一些原因](./nix.md#nixos-安装)，`nixos-enter` 后无法 rebuild。如果配置坏了那就只能 reinstall 了，但是如果只是 bootloader 坏了，还是有办法免安装救一下的，`nixos-enter` 后 `/nix/var/nix/profiles/system/bin/switch-to-configuration --install-bootloader` 即可。
+
 ## NixOS 调整风扇转速
 
 未解决！

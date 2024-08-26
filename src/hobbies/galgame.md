@@ -47,22 +47,32 @@ tag:
   - 代表言论：`单推xxx`；
     - Oborozu 2023.06.21 23:50:35：`主要不能接受看着女儿结婚`
 
+反正从这以后我就再也不表达看法/发言/看消息了，轻松。
+
 ## 资源
 
-- 源站（按推荐优先级）：[失落小站](https://shinnku.com/) | [TG 频道](https://t.me/erogamecloud) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
+- 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
 - 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://www.616.ro/ty.html)
   - krkr 已经很久没有维护了；Tyranor2 可以运行 krkr 的游戏，因此可以考虑直接抛弃 krkr。
-- 在线翻译器推荐：[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) + [小牛云平台翻译](https://niutrans.com/)。个人认为，御坂翻译器有以下优点：
 
-  1. 小，仅 44.3MB
-  2. 开源
-  3. 社区完善，依托于 github
+### 翻译器
 
-  相比之下 vnr 依赖百度贴吧，资源 BT 失效，大多使用城通网盘，真让人火大。而小牛云平台免费额度给的也足够了。
+我用过[御坂翻译器](https://github.com/hanmin0822/MisakaTranslator) 和 [LunaTranslator](https://github.com/HIllya51/LunaTranslator)，做个总结：
 
-  - 也可以试试 [LunaTranslator](https://github.com/HIllya51/LunaTranslator)，简陋一点，谜语多一点。但是占的位置小，不会太影响游戏体验。
-    - 学日语建议[装 MeCab](https://github.com/HIllya51/LunaTranslator/discussions/684#discussioncomment-9537595)。
+- 两者都是开源软件，都够简单，基础功能都够用。
+- 我一开始用的是 MisakaTranslator。C# 写的，更好看一点，但是功能更少，维护也少。
+- LunaTranslator 虽然用的 python + pyqt 界面简陋，但是功能非常惊艳：分词，点击查词，还能**一键记录单词到 anki**。支持的辞书和 api 也非常多。
+- 反正别去用 vnr 就行。这玩意依赖百度贴吧，资源 BT 失效，大多使用城通网盘，真让人火大。
+
+LunaTranslator 使用心得：
+
+- 记得[装 MeCab](https://github.com/HIllya51/LunaTranslator/discussions/684#discussioncomment-9537595)。
+
+### api
+
+- 我之前用的是 [小牛云平台翻译](https://niutrans.com/)。签到领额度，完全够用，甚至现在改成了免费额度，无需签到。
+- 后来用 google gemeni，毕竟大语言模型，翻译准确性比其他机翻高太多了。而且也是免费的。不过需要翻墙，并且不能用香港节点。
 
 <!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame（会社）/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
 

@@ -40,7 +40,9 @@ sudo: PAM account management error: Authentication service cannot retrieve authe
 sudo: a password is required
 ```
 
-求助群友，群友说 `nixos-install` 与 `nixos-rebuild` 效果基本是一样的，让我去外面用 install 试。效果确实差不多，不过每次在 livecd install 都相当于重装，无法用内部的缓存，全部重新下载，还是有点耗时的。install success 后再次 `nixos-enter` 试，还是一样的报错，只要用到 sudo 就会炸。鼓捣了大半天，reinstall 了好几次都无法解决，另一个管理发话了：在 `nixos-enter` 中这是**正常现象，内核的表现是不一致的**。我一直把 `nixos-enter` 当 `arch-chroot` 用，没想到这玩意这么捞。
+求助群友，群友说 `nixos-install` 与 `nixos-rebuild` 效果基本是一样的，让我去外面用 install 试。效果确实差不多，不过每次在 livecd install 都相当于重装，无法用内部的缓存，全部重新下载，还是有点耗时的。install success 后再次 `nixos-enter` 试，还是一样的报错，只要用到 sudo 就会炸。鼓捣了大半天，reinstall 了好几次都无法解决，另一个管理说，在 `nixos-enter` 中这是正常现象，内核的表现是不一致的。我一直把 `nixos-enter` 当 `arch-chroot` 用，没想到这玩意这么捞。
+
+- 日后刷到了[一篇博文](https://blog.lzc256.com/posts/recovering-sudo-in-nixos/)，描述了另一个人是如何解决此问题的。我感觉这更像是 nixos 的 bug 而不是内核不一致。
 
 这回重启就正常了，也不知道是其中的哪次 install 尝试起了作用。于是我成功进入系统开始激情编辑配置。
 

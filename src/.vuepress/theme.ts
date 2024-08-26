@@ -56,14 +56,19 @@ export default hopeTheme({
 			lightTheme: "light",
 			darkTheme: "transparent_dark",
 		},
-
 		mdEnhance: {
 			align: true,
+			alert: true,
 			codetabs: true,
 			// attrs: true,
 			imgLazyload: true,
+			imgSize: true,
+			imgMark: true,
 			figure: true,
+			include: true,
 			katex: { copy: true },
+			spoiler: true, // https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html
+			hint: true,
 			mark: true,
 			footnote: true,
 			tabs: true,
@@ -92,6 +97,14 @@ export default hopeTheme({
 			maxSize: 4096,
 			maxImageSize: 512,
 			cacheHTML: true,
+			manifest: {
+				icons: [
+					{
+						src: "/logo.jpg",
+						sizes: "706x706",
+					},
+				],
+			},
 		},
 	},
 });

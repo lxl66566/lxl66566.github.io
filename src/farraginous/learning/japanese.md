@@ -12,11 +12,15 @@ tag:
 
 ## 关于学习
 
-其实学日语可以不看教科书的。我现在的学习方式是**背单词 + 学语法 + 多听读** <span class="heimu" title="你知道的太多了">但是很惭愧，语法基本没学</span>，如果为了考试还得**刷题**。语言学习说到底也就那么点东西。
+入门的时候在学校图书馆借了新标日初级，后来大学看完了中级电子版。然后发现学日语完全不用看教科书的。
 
-也有推一点 galgame 生肉，例如 _アンレス テルミナリア_。会开着 Misaka/Luna Translator（这玩意比较适合学习），给出日文的注音，查词。详见[galgame - 资源](../../hobbies/galgame.md#资源)。~~（不过如果能开英文还是会开英文的，例如 _NekoMiko_ 和 _家喵二三事_~~
+我现在的学习方式是**背单词 + 学语法 + 多听读**（但是很惭愧，语法基本没学，因为确实日常都用不到），如果为了考试还得**刷题**。语言学习说到底也就那么点东西。
 
-gal 对于培养语感和听力来说挺有帮助。还有很重要的一点是推生肉，可以让我认识到自己有多菜，然后花更多时间学习和背单词，这是一个正向反馈，对我这种自制力不强的人来说非常重要。
+也有推一点 galgame 生肉，例如 _アンレス テルミナリア_。会开着 Luna Translator（这玩意真适合学习），给出日文的注音，查词。详见[galgame - 资源](../../hobbies/galgame.md#资源)。~~（不过如果能开英文还是会开英文的，例如 _NekoMiko_ 和 _家喵二三事_~~
+
+galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完全不够。应试的话还得多听其他东西。
+
+还有很重要的一点是推生肉，可以让我认识到自己有多菜，然后花更多时间学习和背单词，这是一个正向反馈，对我这种自制力不强的人来说非常重要。
 
 ### 资源
 
@@ -26,21 +30,22 @@ gal 对于培养语感和听力来说挺有帮助。还有很重要的一点是�
 - 文法：
   - Anki deck：[蓝宝书](https://ankiweb.net/shared/info/1959548600)
   - [毎日のんびり日本語教師](https://nihongonosensei.net/)
+- 阅读：[天声人語](https://www.douban.com/group/612024/)
 - 例文：[例文買取センター](https://reibuncnt.jp/)
 - 百科：[コトバンク](https://kotobank.jp/)
 - 见 [galgame](../../hobbies/galgame.md)
-
-### 工具
-
-- [yomitan](https://github.com/themoeway/yomitan)：浏览器扩展，划词显示汉字读音，[yomichan 的后继者](https://foosoft.net/posts/passing-the-torch-to-yomitan/)
+- 工具
+  - [yomichan](https://chromewebstore.google.com/detail/yomichan/nbfhegiidojdmnahegkphdoabohfmoof?hl=ja&authuser=0)：浏览器扩展，划词显示汉字读音。虽然官方宣布不再维护，让用户都去 [yomitan](https://github.com/themoeway/yomitan)，但是我用下来还是感觉 yomichan 好用多了（当然仅在 chromium 系浏览器上，因为 firefox 没有），装了就能用。而 yomitan 则是有一大堆设置项，结果都设完了还是不能用。
 
 ## 关于考试
 
 ### jlpt
 
-jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
+jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 的自信，否则我不考。（结果还是没有自信地考了）
 
-做了点 n1 卷子，这玩意要求的词汇量是真高。。而且很多词并不会在寻常 gal 里出现，直接抓瞎。
+![然后低分飘过了](/images/farraginous/learning/japanese/n1result.jpg =300x)
+
+做了点 n1 卷子，这玩意要求的词汇量/语法是真高，很多词/语法并不会在日常里出现，直接抓瞎。
 
 - 劣势：贵
 - 优势：全是选择题。
@@ -50,7 +55,7 @@ jlpt 死贵，除非有一次过 n1 的自信，否则我不考。
 
 而大学日语六级虽然没什么用，但是胜在便宜（25 元）[^1]而且除了作文 ~~_（没写过几个字，这 15 分我先扔为敬）_~~，其他的都没什么难度，作为练手或者学习动力是非常适合的。我 69.5 勉强过了，但在几乎没有学习的前提下，还是挺好的。
 
-六级的听力比 jlpt 可简单多了。
+六级听力比 jlpt n1 可简单太多了。
 
 [^1]: 考场人少，但试卷固定为 30 张一包，所以交的报名费还不一定有成本高，血赚。[source](https://t.me/withabsolutex/1129)
 
