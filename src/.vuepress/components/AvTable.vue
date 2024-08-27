@@ -336,6 +336,7 @@ const data = [
   { id: "midv-519", aScore: 9.7, bScore: 5.5, name: "担任教師の僕は生徒の誘惑に負けて放課後ラブホで何度も、何度も、セックスしてしまった… 九野ひなの" },
   { id: "midv-612", aScore: 7.5, bScore: 7.6, name: "" },
   { id: "start-125", aScore: 7.3, bScore: 5.2, u: true },
+  { id: "midv-229", aScore: 8.9, bScore: 7, u: true, name: "担任教師の僕は生徒の誘惑に負けて放課後ラブホで何度も、何度も、セックスしてしまった… 石川澪" },
 ];
 export default {
   name: "AvTable",

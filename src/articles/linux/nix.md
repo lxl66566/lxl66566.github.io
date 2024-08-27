@@ -58,9 +58,15 @@ sudo: a password is required
 
 下午折腾中文双拼输入法，详见[输入法](#拼音输入法)。
 
-又过了一天，我想起来 NVIDIA 驱动一直没开，而此时我已经做好了万全的准备，btrfs 打了快照，grub 加了禁用 nvidia 的启动项，自制了启动盘，是时候挑战 NVIDIA 驱动了！于是我开启了显卡驱动，果然又卡 dmesg 了。从 grub 切换启动项进入系统，心情郁闷，难道我注定无法在 NixOS 上 Gaming 了吗？此时我<heimu>突然听见了神的声音，神说让我</heimu>把 `hardware.nvidia.open = false;` 改成 `true`，我改了，rebuild 重启发现活了！原来问题出在闭源驱动上！
+又过了一天，我想起来 NVIDIA 驱动一直没开，而此时我已经做好了万全的准备，btrfs 打了快照，grub 加了禁用 nvidia 的启动项，自制了启动盘，是时候挑战 NVIDIA 驱动了！于是我开启了显卡驱动，果然又卡 dmesg 了。把 `hardware.nvidia.open = false;` 改成 `true` 以后又好了。正当我高兴，一天后的 rebuild 又让我吸了口凉气，问题并没有解决。
 
-正当我高兴，一天后的 rebuild 又让我吸了口凉气，问题并没有解决。于是我重新思考了这些问题的“解决”，发现第一次重启可能会卡 dmesg，而第二次重启不会。
+这个问题一放就是两个月，总结了一点规律：
+
+- X11 的锅，卡 dmesg 是 X11 起不来的表现
+- 从 windows 重启到 nixos 时卡住的概率更高
+- 如果不进 windows，只使用 nixos，则基本不会遇到此问题
+
+反正现在我摆烂了，看到卡 dmesg 就 sysrq 重启。
 
 ## 学习
 
@@ -81,7 +87,10 @@ sudo: a password is required
 
 ## 工具
 
-- [nix-index](https://github.com/nix-community/nix-index)：找包位置
+- [nix-index](https://github.com/nix-community/nix-index)：找包位置。**实际上并不好用**，因为
+  1. 需要查找的时候经常是刚安装完软件的时候，还没有 updatedb。而 nixos 的手动 updatedb 耗时极长。
+  2. 默认 locate 时也会搜索路径，nix 路径又基于 hash，因此会有很多 hash 污染搜索结果。
+  - 感觉真不如 `cd /nix/store && fd xxx`。
 
 ### 搜索
 
@@ -212,13 +221,13 @@ nix.settings.warn-dirty = false;
 - [Gaming on nixos : r/NixOS](https://www.reddit.com/r/NixOS/comments/1c7csct/gaming_on_nixos/)
 - [github:fufexan/nix-gaming](https://github.com/fufexan/nix-gaming)：主要是 OSU 相关
 
-Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。不过据群友说，在 vulkan 编译完成后游戏可以大幅提高帧率。我暂时还未尝试。
+Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 50 左右。不过据群友说，在 vulkan 着色器编译完成后游戏可以大幅提高帧率。我暂时还未尝试。
 
 不过平常玩点轻量级游戏问题不大，galgame，启动！你的下一台电脑又何必是游戏本！扯远了。
 
 steam 游戏都能够点击即玩，proton 还是牛逼的。一些傻逼引擎的 galgame 无法在 wine 下正常运行，此时就需要安装[虚拟机](#虚拟机)了。
 
-nix gaming 还有过不去的一关就是性能释放。。我这台电脑风扇总是不转，用了一些工具也调不了风扇转速，有点悲惨。风扇不转想打啥游戏都不行吧，立刻降频了。
+nix gaming 还有过不去的一关就是性能释放。。我这台电脑[风扇总是不转，无法调整风扇转速](./problem.md#nixos-调整风扇转速)，有点悲惨。风扇不转想打啥游戏都不行吧，立刻降频了。大量求助后仍然未果，所以立刻开寄。
 
 ### 虚拟机
 
@@ -228,7 +237,10 @@ nix gaming 还有过不去的一关就是性能释放。。我这台电脑风扇
 
 安装后，打开 `Virtual Machine Manager`，创建新虚拟机，选择下载的 iso 镜像。需要注意，如果 auto detect os 检测不到，需要在下面取消勾选 auto detect os 后自行输入 win11。反正这个 UI 逻辑是挺傻逼的。至于传文件，打开 USB 直通，我的移动硬盘可以分别在两端挂载，这样也不需要考虑太多。
 
-后续：tiny 11 感觉也不 tiny。。。安装完占了我 17G 空间，感觉还是得 win10 吧。
+感想：
+
+- tiny 11 感觉也不 tiny。。。安装完占了我 17G 空间，感觉还是得 win10 吧。
+- libvirt 也不好用，剪贴板和文件都没有傻瓜式解决方案。
 
 ### 快照
 
@@ -266,6 +278,7 @@ ps. 理论上确实没必要为 `/nix` 打快照；我现在的解法是放一�
 - vscode 全自动同步过程中，有部分插件没有同步过来。
 - 手动在 `home.nix` 里添加插件后，所有禁用的插件会被自动启用。
 - 某些插件在非 feh 环境下无法运行；feh 环境下无法在终端使用 sudo。
+- 无法使用 ssh 插件远程开发。
 
 ## 劝退
 
@@ -276,6 +289,8 @@ ps. 理论上确实没必要为 `/nix` 打快照；我现在的解法是放一�
 - 社区不合，drama 不断
 - 报错模糊
 - [包管理达不到预期](../../coding/package_manager.md#nix)
+- nix 开发，mkshell 实在是太烂了。
+  - 居然做不到 alias！
 
 我在使用过程中也有一些想吐槽的（其实上面就有很多）：
 

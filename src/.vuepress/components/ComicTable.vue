@@ -418,6 +418,23 @@ const data = [
   { id: "345150", aScore: 8, bScore: 7.1, info: "#舰队Collection #3P", bak: "https://telegra.ph/AC2-KW-ささちん-雷電ちゃん罰ゲーム-艦隊これくしょん--艦これ--中国翻訳-08-03" },
   { id: "345263", aScore: 6, bScore: 7.3, info: "#loli #强制性交", bak: "https://telegra.ph/ネクサス工房-在誠舞あゆか-おじさんの女児遊び-中国翻訳-DL版-08-03" },
   { id: "525937", aScore: 8.9, bScore: 9.3, info: "#触手 #身体占据 #惊悚 #非人类" },
+  { id: "519896", aScore: 7.8, bScore: 7.1, info: "#纯爱", bak: "https://telegra.ph/東横サーフライダー-ふみー-ぼくたちは恋をしてないはずだった-中国翻訳-08-03" },
+  { id: "(ex)", aScore: 7.7, bScore: 6.8, info: "#师生 #きょくちょ", otherlink: "https://exhentai.org/g/1758079/5d3abe764f/", bak: "https://telegra.ph/きょくちょ-らぶりーあいなちゃん-COMIC-BAVEL-2020年6月号-中国翻訳-DL版-08-03" },
+  { id: "334242", aScore: 8.7, bScore: 8, info: "#全彩 #魅魔", order: 2, bak: "https://telegra.ph/サンクリ2020-Autumn-Come-Through-あづみ一樹-サキュバスデリバリーS-中国翻訳-08-03" },
+  { id: "315541", aScore: 6.2, bScore: 7.9, info: "#兄妹 #夜袭 #苦恋", bak: "https://telegra.ph/C94-飴屋-アメヤキリカ-明日兄が結婚する-中国翻訳-08-03" },
+  { id: "296990", aScore: 8.5, bScore: 6.2, info: "#全彩 #师生", order: 1, bak: "https://telegra.ph/C97-わたくび-笹井さじ-ナイショの課外授業-にゅうもん編-中国翻訳-08-03" },
+  { id: "314766", aScore: 8.4, bScore: 5, info: "#全彩 #师生", order: 2 },
+  { id: "287375", aScore: 9.2, bScore: 3, info: "#全彩 #公主连结Re:Dive", order: 2, bak: "https://telegra.ph/C96-MIDDLY-みどりのちや-カラフルコネクト-2ndDive-プリンセスコネクトReDive-中国翻訳-08-03" },
+  { id: "281377", aScore: 6.3, bScore: 7.8, info: "#邻居 #loli", bak: "https://telegra.ph/ぴらそん-欧風幼性週間-COMIC-LO-2019年9月号-中国翻訳-DL版-08-03" },
+  { id: "(ex)", aScore: 8.3, bScore: 8.1, info: "#崩坏学园 #3P #兽尾", otherlink: "https://exhentai.org/g/1444870/e995373bac/", bak: "https://telegra.ph/长弓燧龍-Vuarukiri-no-yume-houkai-3rd-chinese-uncensored-08-03" },
+  { id: "273834", aScore: 8, bScore: 9.9, info: "#兄妹 #强制性交 #反抗", bak: "https://telegra.ph/プリーツたいむ-ぬんぬ-シスターブリーディング-義妹月宮せつな-おしおきエッチ編-中国翻訳-DL版-08-03" },
+  { id: "(ex)", aScore: 7.4, bScore: 8.5, info: "#兄妹 #いちはや", otherlink: "https://exhentai.org/g/1405951/22ad0fab48/", bak: "https://telegra.ph/サンクリ2019-Spring-squeezecandyheaven-いちはや-妹はかけ算ができる-中国翻訳-08-03" },
+  { id: "267349", aScore: 8.7, bScore: 5.3, info: "#百合 #请问您今天要来点兔子吗", order: 4, bak: "https://telegra.ph/C95-しらたまこ-しらたま-うさぎシンドローム4-ご注文はうさぎですか-中国翻訳-08-03" },
+  { id: "265116", aScore: 4.6, bScore: 9.7, info: "#援交 #连续高潮", bak: "https://telegra.ph/餅犬製作所-浅貝もっちぬ-不感少女がおじさんに負けた日-中国翻訳-DL版-08-03" },
+  { id: "417457", aScore: 9.5, bScore: 5.1, info: "#玉之けだま", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-甘リリス-中国翻訳-無修正-DL版-08-03" },
+  { id: "260767", aScore: 8, bScore: 4.1, info: "#东方 #さわやか鮫肌", bak: "https://telegra.ph/C95-ドットエイト-さわやか鮫肌-フランちゃんとすけべする本-東方Project-中国翻訳-08-03" },
+  { id: "260737", aScore: 9.4, bScore: 8.6, info: "#碧蓝航线", bak: "https://telegra.ph/C95-わさびもち-ももさわ-Little-Old-Lady-アズールレーン-中国翻訳-08-03" },
+  { id: "260460", aScore: 8.5, bScore: 7.9, info: "#东方 #さわやか鮫肌", bak: "https://telegra.ph/C95-ドットエイト-さわやか鮫肌-パチュリーちゃんとすけべする本-東方Project-中国翻訳-08-03" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

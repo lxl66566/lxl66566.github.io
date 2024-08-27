@@ -22,12 +22,14 @@ ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手�
 
 1. 下载并解压后，进入 ADB 目录，打开 cmd。
    > 推荐将 ADB 目录加入环境变量。这样就不仅限于在 ADB 目录下使用指令。
-2. 手机开启开发者选项与 USB 调试。
+2. 手机开启开发者选项与 USB 调试。（有的手机还需要开启文件传输）
    ::: tabs
 
    @tab 有线
 
    使用数据线连接电脑与手机即可。
+
+   请务必检查数据线是否能够传输数据，而不是只能充电！
 
    @tab 无线
 
@@ -35,7 +37,7 @@ ADB (Android Debug Bridge) 是强大的手机调试应用。由于 Android 手�
    2. 使用配对码配对设备，PC 端执行 `adb pair <ip>:<port>`
    3. 连接设备，PC 端执行 `adb connect <ip>:<port>`（注意此时 port 与配对时不同）
 
-   我用过的手机，很多都没法连上无线调试，不知道为啥。
+   无线调试一般来说是给 Android developer 的 Android Studio 使用的，直接连接连不上是正常情况。一般还是需要备一根数据线的。
 
    :::
 
