@@ -95,6 +95,12 @@ anki 的云同步裸连很不稳，可能需要科学上网。
 
 - [听力理解练习](https://speechling.com/zh/listening/english)：短句精听，英 + 中
 
+## 零散知识点
+
+### memes
+
+- motorway 不能通 motor
+
 ## external
 
 1. [A Programmer's Guide to English](https://a-programmers-guide-to-english.harryyu.me/)

@@ -435,6 +435,16 @@ const data = [
   { id: "260767", aScore: 8, bScore: 4.1, info: "#东方 #さわやか鮫肌", bak: "https://telegra.ph/C95-ドットエイト-さわやか鮫肌-フランちゃんとすけべする本-東方Project-中国翻訳-08-03" },
   { id: "260737", aScore: 9.4, bScore: 8.6, info: "#碧蓝航线", bak: "https://telegra.ph/C95-わさびもち-ももさわ-Little-Old-Lady-アズールレーン-中国翻訳-08-03" },
   { id: "260460", aScore: 8.5, bScore: 7.9, info: "#东方 #さわやか鮫肌", bak: "https://telegra.ph/C95-ドットエイト-さわやか鮫肌-パチュリーちゃんとすけべする本-東方Project-中国翻訳-08-03" },
+  { id: "338091", aScore: 8.2, bScore: 6, info: "#百合 #请问您今天要来点兔子吗", bak: "https://telegra.ph/秋葉原同人祭-第二回-fluffyfluffy-わき-ココアさんのこと考えちゃうんです-ご注文はうさぎですか-中国翻訳-08-03" },
+  { id: "339817", aScore: 4.6, bScore: 6, info: "#loli", bak: "https://telegra.ph/藤坂リリック-家出女児のパパになる-ぷらちな性徴期-中国翻訳-08-03" },
+  { id: "347146", aScore: 5, bScore: 5.7, info: "#兄妹", bak: "https://telegra.ph/ふみー-とろとろむちゅう-中国翻訳-進行中-DL版-08-03-2" },
+  { id: "342059", aScore: 6.5, bScore: 7.5, info: "#舰队Collection #loli #反杀 #黑丝", bak: "https://telegra.ph/AC2-学食亭-わたのん-小生意気な一人前のレディにおしおきセックス-艦隊これくしょん--艦これ--中国翻訳-08-03" },
+  { id: "342696", aScore: 5.7, bScore: 4.8, info: "#公主连结Re:Dive", bak: "https://telegra.ph/C97-Twilight-Road-ともー-コッコロちゃんとコネクトしたいっ-ReDive-プリンセスコネクトReDive-中国翻訳-08-03" },
+  { id: "343056", aScore: 7.5, bScore: 3.9, info: "#fate #兄妹", bak: "https://telegra.ph/こいんとす-杏飴-イリヤといっしょに温泉はいろ-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-08-03" },
+  { id: "343287", aScore: 6.1, bScore: 2, info: "#全彩 #师生", bak: "https://telegra.ph/AC2-わたくび-笹井さじ-ナイショの個人指導-しんきゅう編-中国翻訳-08-03" },
+  { id: "343607", aScore: 7.8, bScore: 1.4, info: "#原神 #偷腥", bak: "https://telegra.ph/长弓燧龙-芭芭拉-STARDUSH-原神-中国語-無修正-08-03" },
+  { id: "315569", aScore: 7.7, bScore: 6.8, info: "#师生 #3P #女子学校 #loli", order: 1 },
+  { id: "344818", aScore: 7.7, bScore: 6.3, info: "#师生 #3P #女子学校 #loli", order: 2, bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-双子ちゃんには逆らえないっ下巻-中国翻訳-DL版-08-03" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
