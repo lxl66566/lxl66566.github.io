@@ -445,6 +445,10 @@ const data = [
   { id: "343607", aScore: 7.8, bScore: 1.4, info: "#原神 #偷腥", bak: "https://telegra.ph/长弓燧龙-芭芭拉-STARDUSH-原神-中国語-無修正-08-03" },
   { id: "315569", aScore: 7.7, bScore: 6.8, info: "#师生 #3P #女子学校 #loli", order: 1 },
   { id: "344818", aScore: 7.7, bScore: 6.3, info: "#师生 #3P #女子学校 #loli", order: 2, bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-双子ちゃんには逆らえないっ下巻-中国翻訳-DL版-08-03" },
+  { id: "417764", aScore: 9, bScore: 8.7, info: "#VTuber #肉便器 #放送事故", order: 1 },
+  { id: "527191", aScore: 9.6, bScore: 9.3, info: "#同学 #VTuber #胁迫", order: 2 },
+  { id: "527220", aScore: 9.7, bScore: 7, info: "#小马拉大车 #兽耳 #巨乳" },
+  { id: "493689", aScore: 5.1, bScore: 8.4, info: "#胁迫 #巨乳" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

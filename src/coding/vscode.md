@@ -74,16 +74,18 @@ tag:
   - 下载会显示进度和大小，好评
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型，不考虑
 - [Tabnine](https://www.tabnine.com/)：补全较弱（_Short code completions (2 to 3 words)_）
-- [MarsCode](https://www.marscode.com/)：一直报 Network unstable，根本不可用，捞。
 - [Cody](https://github.com/sourcegraph/cody)：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。
 
 国产：
 
 - [fitten code](https://code.fittentech.com/)：国产，水平跟其他国产模型都差不多，不太聪明。
   - 一个很大的缺点是不读工作区 `.vscode` 配置，也就是无法在某些项目（隐私项目如日记等）里禁用。
+- [MarsCode](https://www.marscode.com/)：一直报 Network unstable，根本不可用，捞。
 - [CodeGeeX](https://codegeex.cn/)：国产开源模型，响应速度快
   - 20231212 开始需要绑定手机号
   - 比较扰民，会入侵 _快速修复_
+- [通义灵码](https://tongyi.aliyun.com/lingma)：阿里的，用起来还行，略逊于 Codeium 的水平。
+  - 这货也挺扰民的，每个函数间都会被插入一个通义的标志。插的位置还烂，rust 如果多行注释的话就会插在注释中间。。
 
 未来可能会尝试：
 
