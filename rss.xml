@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 30 Aug 2024 18:21:49 GMT</pubDate>
-    <lastBuildDate>Fri, 30 Aug 2024 18:21:49 GMT</lastBuildDate>
+    <pubDate>Sat, 31 Aug 2024 17:21:02 GMT</pubDate>
+    <lastBuildDate>Sat, 31 Aug 2024 17:21:02 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -27,24 +27,75 @@
       <link>https://absx.pages.dev/hobbies/art.html</link>
       <guid>https://absx.pages.dev/hobbies/art.html</guid>
       <source url="https://absx.pages.dev/rss.xml">其他艺术形式</source>
-      <description>其他艺术形式 一般是心血来潮才会看的作品形式。 漫画 | 名 | 时间 | 评价 | | 我将要支配你们的一切 | 20240822-在读 | | SEX&amp;迷宫！！~在我家地下出现了H次数=等级的迷宫！？~ | 20240622-2024062x | 见链接 | 电影 | 名 | 时间 | 评价 | | 迷失东京 | 20240821 | 纪录片/连续...</description>
+      <description>其他艺术形式 一般是心血来潮才会看的作品形式。 漫画 电影 纪录片/连续剧</description>
       <category>爱好</category>
       <pubDate>Fri, 23 Aug 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>一般是心血来潮才会看的作品形式。</p>
 <h2>漫画</h2>
 <!-- prettier-ignore -->
-<p>| 名 | 时间 | 评价 |
-| 我将要支配你们的一切 | 20240822-<br>在读 |
-| <a href="https://t.me/absolutexsH/2071" target="_blank" rel="noopener noreferrer">SEX&amp;迷宫！！~在我家地下出现了H次数=等级的迷宫！？~</a> | 20240622-<br>2024062x | 见链接 |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名</th>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">我将要支配你们的一切</td>
+<td style="text-align:center">2024.08.22-<br>2024.08.31，烂尾，15 话</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://t.me/absolutexsH/2071" target="_blank" rel="noopener noreferrer">SEX&amp;迷宫！！~在我家地下出现了H次数=等级的迷宫！？~</a></td>
+<td style="text-align:center">2024.06.22-<br>2024.06.2x</td>
+<td style="text-align:center">见链接</td>
+</tr>
+</tbody>
+</table>
 <h2>电影</h2>
 <!-- prettier-ignore -->
-<p>| 名 | 时间 | 评价 |
-| <a href="https://zh.wikipedia.org/wiki/%E8%BF%B7%E5%A4%B1%E4%B8%9C%E4%BA%AC" target="_blank" rel="noopener noreferrer">迷失东京</a> | 20240821 | </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名</th>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://zh.wikipedia.org/wiki/%E8%BF%B7%E5%A4%B1%E4%B8%9C%E4%BA%AC" target="_blank" rel="noopener noreferrer">迷失东京</a></td>
+<td style="text-align:center">2024.08.21</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">隐入尘烟</td>
+<td style="text-align:center">2024.06.26</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
 <h2>纪录片/连续剧</h2>
 <!-- prettier-ignore -->
-<p>| 名 | 时间 | 评价 |
-| 孤独的美食家 | 20231231-<br>在看 | 好饿~ |</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名</th>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">评价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">孤独的美食家</td>
+<td style="text-align:center">2023.12.31-<br>在看</td>
+<td style="text-align:center">好饿~</td>
+</tr>
+</tbody>
+</table>
 ]]></content:encoded>
     </item>
     <item>
