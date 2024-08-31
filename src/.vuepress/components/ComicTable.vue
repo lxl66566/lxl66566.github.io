@@ -467,6 +467,7 @@ const data = [
   { id: "468526", aScore: 6.5, bScore: 7.8, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/C102-むぎちょこストア-むぎちょこ-尾を振る兎は叩かれる-ブルーアーカイブ-中国翻訳-08-16" },
   { id: "468359", aScore: 9.2, bScore: 7.3, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/tete-a-tete-夕凪ショウ-光輪の小箱-ひかりのこばこ--ブルーアーカイブ-DL版-中国翻訳-08-16" },
   { id: "468678", aScore: 8.9, bScore: 6.4, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/ふるいどりきっど-ぬくい味汐-マリーが先生のご立派様をうっかり見てしまった結果-ブルーアーカイブ-DL版-中国翻訳-08-16" },
+  { id: "476289", aScore: 8.2, bScore: 9, info: "#修女 #NTR" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

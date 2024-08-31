@@ -367,7 +367,8 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
 ### 其他
 
-可以显式调用 [`std::mem::drop()`](https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#通过-stdmemdrop-提早丢弃值) 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。[更多详细解释](https://xuanwo.io/reports/2022-41/)
+- 可以显式调用 [`std::mem::drop()`](https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#通过-stdmemdrop-提早丢弃值) 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。[更多详细解释](https://xuanwo.io/reports/2022-41/)
+- 不知道结构体多大？rust-analyzer 有选项能直接看，将光标放在结构体上，（vscode 中 Ctrl + Shift + P）选择 _view memory layout_ 即可。
 
 ## Cargo
 
