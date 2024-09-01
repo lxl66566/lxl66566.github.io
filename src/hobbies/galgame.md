@@ -284,6 +284,8 @@ _（不排除早期缺漏）_
 - king exit, demons roots
 - anemoi
 - 玉响未来?
+- 旭光のマリアージュ
+- LUNARiA
 
 ## 一言
 

@@ -63,7 +63,10 @@ VSCode 居然支持语音输入了！([src](https://t.me/absxsgroup/6059))这是
 
 实测识别准确率还是不错的。这下 Linux 也有即开即用的 voice2text 了，而且由于我本身就用 vscode 写日记，所以还挺好的。
 
-唯一的问题是不方便多语言切换，得去设置里改。
+不过有几个问题：
+
+1. 不方便多语言切换，得去设置里改。
+2. 不支持 NixOS，因为 NixOS 不遵守 fhs，找不到 libasound。
 
 ### [CapsWriter](https://github.com/HaujetZhao/CapsWriter)
 

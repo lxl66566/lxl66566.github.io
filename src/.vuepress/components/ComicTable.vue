@@ -468,6 +468,15 @@ const data = [
   { id: "468359", aScore: 9.2, bScore: 7.3, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/tete-a-tete-夕凪ショウ-光輪の小箱-ひかりのこばこ--ブルーアーカイブ-DL版-中国翻訳-08-16" },
   { id: "468678", aScore: 8.9, bScore: 6.4, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/ふるいどりきっど-ぬくい味汐-マリーが先生のご立派様をうっかり見てしまった結果-ブルーアーカイブ-DL版-中国翻訳-08-16" },
   { id: "476289", aScore: 8.2, bScore: 9, info: "#修女 #NTR" },
+  { id: "(ex)", aScore: 8.3, bScore: 3.6, info: "#原神 #扶他 #年龄改变", otherlink: "https://exhentai.org/g/2647012/f3dab89fa6/", bak: "https://telegra.ph/C102-吉沢生活-狐ノ沢-八重神子とふたなり蛍がえっちする本-原神-中国翻訳-08-18" },
+  { id: "468900", aScore: 6, bScore: 6.2, info: "#自慰 #兄妹", bak: "https://telegra.ph/六丁の目-おりーぶ-お兄が見るだけって言ったのに-中国翻訳-08-18" },
+  { id: "468735", aScore: 7.2, bScore: 8.4, info: "#蔚蓝档案 #游戏 #触手 #感官屏蔽 #冒险", bak: "https://telegra.ph/C102-TrinkeTからあげ3-絶対にクリアしてみせますブルーアーカイブ-中国翻訳-愛莉絲不要再玩淫夢梗了漢化組-08-17" },
+  { id: "436784", aScore: 8, bScore: 7.9, info: "#温泉 #兽交" },
+  { id: "525223", aScore: 9.4, bScore: 7.6, info: "#偶像大师" },
+  { id: "469537", aScore: 7.3, bScore: 6.1, info: "#蔚蓝档案 #loli", bak: "https://telegra.ph/梅雨入り柿の種シュエリンに甘えたい-ブルーアーカイブ-中国翻訳-DL版-08-22" },
+  { id: "(ex)", aScore: 8.8, bScore: 9.3, info: "#いちはや #师生 #催眠 催眠失敗", otherlink: "https://exhentai.org/g/2651316/3e1ee22355/", bak: "https://telegra.ph/C100-squeezecandyheaven-いちはや-催眠失敗-中国翻訳-08-22" },
+  { id: "469418", aScore: 7, bScore: 5.6, info: "#蔚蓝档案 #水着", bak: "https://telegra.ph/C102-Part-K-羊羽-忍-スク水アズサと補習授業-ブルーアーカイブ-中国翻訳-08-24-2" },
+  { id: "495073", aScore: 7.2, bScore: 6.3, info: "#百合 #无插入 #迷子", bak: "https://telegra.ph/ぺどぺっとん-とらえたままで離さないで-中國翻訳-08-25" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
