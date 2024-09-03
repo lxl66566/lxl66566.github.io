@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 01 Sep 2024 05:08:23 GMT</pubDate>
-    <lastBuildDate>Sun, 01 Sep 2024 05:08:23 GMT</lastBuildDate>
+    <pubDate>Tue, 03 Sep 2024 11:46:42 GMT</pubDate>
+    <lastBuildDate>Tue, 03 Sep 2024 11:46:42 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -963,14 +963,31 @@
 </ul>
 </li>
 <li>两个 json 插件：<em>JSON To Kotlin Class</em>，<em>GsonFormat</em></li>
+<li><s>vim 插件：ideavim</s> 太捞了，不用
+<ol>
+<li>这个 vim 插件的所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 都干不了。</li>
+<li>无法与系统剪切板交互。</li>
+</ol>
+</li>
+<li><s>Settings Sync</s> 连登录都登录不了。</li>
 </ul>
 </li>
 <li><em>File - Settings - Tools - Actions on Save</em>，除了 Code Cleanup 全开。</li>
+<li>更改 KeyMap，改成熟悉的 vscode 系列：
+<ul>
+<li>Close Tab: <code>Ctrl + w</code></li>
+<li>Remove Closed Tab：<code>Ctrl + Shift + t</code></li>
+<li>Comment with line Comment: <code>Ctrl + /</code></li>
+</ul>
+</li>
 </ol>
 <h3>编译运行</h3>
 <p>我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。</p>
-<h2>传统 UI</h2>
-<h3>更改按钮反馈</h3>
+<h3>劝退</h3>
+<p><a href="/gossip/fuckxxx.html#android-studio-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="_blank">Android Studio 有多难用？</a></p>
+<h2>UI</h2>
+<h3>传统 UI</h3>
+<h4>更改按钮反馈</h4>
 <p>一般人肯定希望按钮按下时颜色会加深，能够出现按钮的反馈。加反馈很简单：在 drawable 里加一个 selector，然后在 layout 里给 background 用即可。</p>
 <div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> xmlns:android</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"http://schemas.android.com/apk/res/android"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:color</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"?attr/colorPrimary"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:state_pressed</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"true"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/&gt;</span></span>
@@ -983,8 +1000,25 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:alpha</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"0.25"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:state_pressed</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"true"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:alpha</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"0.1"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>Jetpack Compose</h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>Jetpack Compose</h3>
 <p>这是一种新的 UI 写法，Google 强推的下一代 UI，在 kotlin 写前端，完全抛弃 xml。里面的组件全部是 kotlin 的函数。显然，必需使用 kotlin，不能使用 java。</p>
+<p>Jetpack Compose 是数据驱动的，写法非常简单，我很喜欢。可以类比用 js 对象树模拟 DOM 的 <a href="/coding/html.html#%E5%B7%A5%E5%85%B7" target="_blank">vanjs</a> 等。</p>
+<p>我本来接触的项目是 openppp2，它用的是 java，上不了这个；但是大四上学校有一个实践，刚好是做 Android，那我可就不客气了，开写！</p>
+<h4>学习</h4>
+<p>Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些学习资料：</p>
+<ul>
+<li><a href="https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn" target="_blank" rel="noopener noreferrer">Compose 基础知识 - Google</a>：google 家官方的视频还不错</li>
+<li><a href="https://leobert-lan.github.io/Compose/index.html" target="_blank" rel="noopener noreferrer">leobert's blog</a>：有一些源码分析</li>
+</ul>
+<h2>Log</h2>
+<p>打 log 也是很重要的，android 一般在 Logcat 里打 log。</p>
+<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> android.util.Log</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">Log.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">w</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Mytag"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"message"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>然后在 Logcat 窗口 filter 里写 <code>tag:Mytag</code> 即可。</p>
+<p>还有一个小插曲，我之前明明打了 log 但是在 logcat 里怎么也看不到，莫名其妙，气死了。我直接在 Text 里打 log，结果发现 Text 里的字符也没变。一看，编译目标是那个 Composable Preview，不是 app。。。</p>
+<h2>Test</h2>
+<p>Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。</p>
+<p>新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 <em>Generate</em> 里选 <em>Test</em>，然后 <em>OK</em>，记得把 <em>show only existing source roots</em> 关了就行。</p>
 ]]></content:encoded>
     </item>
     <item>
