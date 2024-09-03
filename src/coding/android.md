@@ -41,15 +41,29 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
      - codiumate 登录认证过不了，还会把 AS 卡死
      - 最后还是回到了 vscode 时的老朋友 Codeium
    - 两个 json 插件：_JSON To Kotlin Class_，_GsonFormat_
+   - ~~vim 插件：ideavim~~ 太捞了，不用
+     1. 这个 vim 插件的所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 都干不了。
+     2. 无法与系统剪切板交互。
+   - ~~Settings Sync~~ 连登录都登录不了。
 2. _File - Settings - Tools - Actions on Save_，除了 Code Cleanup 全开。
+3. 更改 KeyMap，改成熟悉的 vscode 系列：
+   - Close Tab: `Ctrl + w`
+   - Remove Closed Tab：`Ctrl + Shift + t`
+   - Comment with line Comment: `Ctrl + /`
 
 ### 编译运行
 
 我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。
 
-## 传统 UI
+### 劝退
 
-### 更改按钮反馈
+[Android Studio 有多难用？](../gossip/fuckxxx.md#android-studio-有多难用)
+
+## UI
+
+### 传统 UI
+
+#### 更改按钮反馈
 
 一般人肯定希望按钮按下时颜色会加深，能够出现按钮的反馈。加反馈很简单：在 drawable 里加一个 selector，然后在 layout 里给 background 用即可。
 
@@ -72,6 +86,36 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
 </selector>
 ```
 
-## Jetpack Compose
+### Jetpack Compose
 
 这是一种新的 UI 写法，Google 强推的下一代 UI，在 kotlin 写前端，完全抛弃 xml。里面的组件全部是 kotlin 的函数。显然，必需使用 kotlin，不能使用 java。
+
+Jetpack Compose 是数据驱动的，写法非常简单，我很喜欢。可以类比用 js 对象树模拟 DOM 的 [vanjs](./html.md#工具) 等。
+
+我本来接触的项目是 openppp2，它用的是 java，上不了这个；但是大四上学校有一个实践，刚好是做 Android，那我可就不客气了，开写！
+
+#### 学习
+
+Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些学习资料：
+
+- [Compose 基础知识 - Google](https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn)：google 家官方的视频还不错
+- [leobert's blog](https://leobert-lan.github.io/Compose/index.html)：有一些源码分析
+
+## Log
+
+打 log 也是很重要的，android 一般在 Logcat 里打 log。
+
+```kotlin
+import android.util.Log
+Log.w("Mytag", "message")
+```
+
+然后在 Logcat 窗口 filter 里写 `tag:Mytag` 即可。
+
+还有一个小插曲，我之前明明打了 log 但是在 logcat 里怎么也看不到，莫名其妙，气死了。我直接在 Text 里打 log，结果发现 Text 里的字符也没变。一看，编译目标是那个 Composable Preview，不是 app。。。
+
+## Test
+
+Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。
+
+新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 _Generate_ 里选 _Test_，然后 _OK_，记得把 _show only existing source roots_ 关了就行。

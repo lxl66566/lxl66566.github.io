@@ -592,7 +592,7 @@ articles:
 
 1. [Rust Learning Smart Pointers](https://silente.top/posts/Rust-Learning-Smart-Pointers/)
 2. [Rust 中的闭包递归与 Y 组合子](https://nihil.cc/posts/rust_closure_and_y/)
-3. 随机 [Rust Quiz](https://dtolnay.github.io/rust-quiz/)：想成为语言律师吗？
+3. 随机 [Rust Quiz - dtolnay](https://dtolnay.github.io/rust-quiz/) / [Rust Quiz - boxyuwu](https://boxyuwu.github.io/rust-quiz/)：想成为语言律师吗？
 4. [为什么 Rust 需要 Pin, Unpin ？（中文翻译）](https://zhuanlan.zhihu.com/p/404818051)
 5. [如何理解 rust 中的 Sync、Send？](https://zhuanlan.zhihu.com/p/64699643)
 6. [Rust 的 Pin 与 Unpin](https://folyd.com/blog/rust-pin-unpin/)

@@ -399,3 +399,10 @@ ColorOS 是目前一加的默认系统。
 - 价格计算不透明。我买学生票 75 折，但是付款永远比 75 折要多。（393.5 的票，付钱付了 317？）
 - 性能差，查询车次会卡
 - 查询经停某站的所有车次时，不显示火车
+
+## Android Studio 有多难用
+
+- 自带的 Terminal 天天炸。我用的 atuin，这个 Terminal 一调 atuin 就报 `` Error: failed to create file `/etc/nixos/config/atuin.key ``，但是我在其他 IDE 的 terminal 就没有任何问题。
+- 插件垃圾。
+  - Vim 插件垃圾。只能调一点键冲突，没有其他选项。
+  - 设置同步依赖 Settings Sync 插件，但是甚至无法登录，localhost 端口没开。

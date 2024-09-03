@@ -477,6 +477,8 @@ const data = [
   { id: "(ex)", aScore: 8.8, bScore: 9.3, info: "#いちはや #师生 #催眠 催眠失敗", otherlink: "https://exhentai.org/g/2651316/3e1ee22355/", bak: "https://telegra.ph/C100-squeezecandyheaven-いちはや-催眠失敗-中国翻訳-08-22" },
   { id: "469418", aScore: 7, bScore: 5.6, info: "#蔚蓝档案 #水着", bak: "https://telegra.ph/C102-Part-K-羊羽-忍-スク水アズサと補習授業-ブルーアーカイブ-中国翻訳-08-24-2" },
   { id: "495073", aScore: 7.2, bScore: 6.3, info: "#百合 #无插入 #迷子", bak: "https://telegra.ph/ぺどぺっとん-とらえたままで離さないで-中國翻訳-08-25" },
+  { id: "527822", aScore: 8.2, bScore: 7.8, info: "#蔚蓝档案" },
+  { id: "528120", aScore: 8.6, bScore: 6, info: "#蔚蓝档案 #兽角 #尿液", bak: "https://telegra.ph/Rev3-Monchan-rev3-Ibukiha-Koukouseinanode-Ibushikomo-Monndainashi--因为伊吹是高中生了所以对伊吹爱爱也没有问题Chinese-牛肉牛肉丸X星辰的爱丽丝联合汉化-Digital-09-01" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

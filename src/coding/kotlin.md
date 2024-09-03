@@ -74,3 +74,7 @@ kotlin 没有官方推出的统一格式化工具，外加用的 jar + 虚拟机
 泛型和面向对象跟 java 基本一样，不过后者倒是添了很多新东西。
 
 有了上述基础概念，然后再看一些 kotlin 进阶的零碎内容，用于补全知识。
+
+## 杂
+
+- [如何写 doc comment](https://kotlinlang.org/docs/kotlin-doc.html)
