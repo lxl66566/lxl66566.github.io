@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 03 Sep 2024 11:46:42 GMT</pubDate>
-    <lastBuildDate>Tue, 03 Sep 2024 11:46:42 GMT</lastBuildDate>
+    <pubDate>Wed, 04 Sep 2024 17:26:49 GMT</pubDate>
+    <lastBuildDate>Wed, 04 Sep 2024 17:26:49 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -980,6 +980,11 @@
 <li>Comment with line Comment: <code>Ctrl + /</code></li>
 </ul>
 </li>
+<li>其他 KeyMap 设置：
+<ul>
+<li>Generate Compose Preview：<code>Ctrl + p</code> （虽然用不了）</li>
+</ul>
+</li>
 </ol>
 <h3>编译运行</h3>
 <p>我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。</p>
@@ -1010,6 +1015,19 @@
 <li><a href="https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn" target="_blank" rel="noopener noreferrer">Compose 基础知识 - Google</a>：google 家官方的视频还不错</li>
 <li><a href="https://leobert-lan.github.io/Compose/index.html" target="_blank" rel="noopener noreferrer">leobert's blog</a>：有一些源码分析</li>
 </ul>
+<h4>icons</h4>
+<p>显然我懒得找 icon 了，而 android material 有一套内置的，非常好用。</p>
+<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> androidx.compose.material.icons.Icons</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> androidx.compose.material.icons.filled.</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">NavigationBarItem</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  icon </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    Icon</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      imageVector </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Icons.Default.Home,</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      contentDescription </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "home"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>至于哪里能找到所有 icon，emmm，第一个当然是看 IDE 补全的提示。 <a href="https://fonts.google.com/icons" target="_blank" rel="noopener noreferrer">Google Fonts</a> 也可以看（<a href="https://slack-chats.kotlinlang.org/t/509025/is-there-list-of-icons-to-browse-for-jetpack-compose" target="_blank" rel="noopener noreferrer">ref</a>），但是 material 包里默认的 icon 数量相当少，只能看一部分。那么如何拿到更多的 icons 呢？答：可以用 <a href="https://stackoverflow.com/a/78616305" target="_blank" rel="noopener noreferrer">libs.androidx.material.icons.extended</a>，这下就全了。（记得要同步依赖）</p>
 <h2>Log</h2>
 <p>打 log 也是很重要的，android 一般在 Logcat 里打 log。</p>
 <div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> android.util.Log</span></span>
