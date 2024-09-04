@@ -50,6 +50,8 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
    - Close Tab: `Ctrl + w`
    - Remove Closed Tab：`Ctrl + Shift + t`
    - Comment with line Comment: `Ctrl + /`
+4. 其他 KeyMap 设置：
+   - Generate Compose Preview：`Ctrl + p` （虽然用不了）
 
 ### 编译运行
 
@@ -100,6 +102,25 @@ Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compos
 
 - [Compose 基础知识 - Google](https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn)：google 家官方的视频还不错
 - [leobert's blog](https://leobert-lan.github.io/Compose/index.html)：有一些源码分析
+
+#### icons
+
+显然我懒得找 icon 了，而 android material 有一套内置的，非常好用。
+
+```kotlin
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+NavigationBarItem(
+  icon = {
+    Icon(
+      imageVector = Icons.Default.Home,
+      contentDescription = "home"
+    )
+  }
+)
+```
+
+至于哪里能找到所有 icon，emmm，第一个当然是看 IDE 补全的提示。 [Google Fonts](https://fonts.google.com/icons) 也可以看（[ref](https://slack-chats.kotlinlang.org/t/509025/is-there-list-of-icons-to-browse-for-jetpack-compose)），但是 material 包里默认的 icon 数量相当少，只能看一部分。那么如何拿到更多的 icons 呢？答：可以用 [libs.androidx.material.icons.extended](https://stackoverflow.com/a/78616305)，这下就全了。（记得要同步依赖）
 
 ## Log
 

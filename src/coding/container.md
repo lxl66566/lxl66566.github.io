@@ -46,3 +46,4 @@ podman logs <name>  # 查看输出(stdout + stderr)
 ## external
 
 1. [Exploring Podman: A More Secure Docker Alternative](https://betterstack.com/community/guides/scaling-docker/podman-vs-docker/)
+2. [podman 踩坑记录 - Aya](https://note.aya1.de/#/22-podman) | [source code](https://github.com/Brx86/brx86.github.io/blob/5b03fc42683587be98bf6c72685a69d6d86b5c25/22-podman.md)
