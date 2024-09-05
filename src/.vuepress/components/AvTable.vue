@@ -339,6 +339,8 @@ const data = [
   { id: "midv-229", aScore: 8.9, bScore: 7, u: true, name: "担任教師の僕は生徒の誘惑に負けて放課後ラブホで何度も、何度も、セックスしてしまった… 石川澪" },
   { id: "piyo-186", aScore: 9, bScore: 10.2, name: "^1 #催眠 演的不像，但是还是好看 『絶対に俺の子を孕ませてやる！』ガンギマリ眠姦×中出し×レ●プ！" },
   { id: "MAAN-806", aScore: 7, bScore: 2, name: "有隆鼻" },
+  { id: "kmnl-006", aScore: 7.2, bScore: 8.1, name: "#睡x #雷霆" },
+  { id: "kmnl-001", aScore: 7, bScore: 7.7, name: "#睡x #雷霆" },
 ];
 export default {
   name: "AvTable",

@@ -39,19 +39,22 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
    - AI 插件
      - cody 完全不可用就不多说了
      - codiumate 登录认证过不了，还会把 AS 卡死
-     - 最后还是回到了 vscode 时的老朋友 Codeium
+     - 最后还是回到了 vscode 时的老朋友 **Codeium**
+       - 关掉 _Show Selection Toolbar_，这个很烦
    - 两个 json 插件：_JSON To Kotlin Class_，_GsonFormat_
    - ~~vim 插件：ideavim~~ 太捞了，不用
      1. 这个 vim 插件的所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 都干不了。
      2. 无法与系统剪切板交互。
    - ~~Settings Sync~~ 连登录都登录不了。
 2. _File - Settings - Tools - Actions on Save_，除了 Code Cleanup 全开。
-3. 更改 KeyMap，改成熟悉的 vscode 系列：
+3. 更改 KeyMap：
    - Close Tab: `Ctrl + w`
    - Remove Closed Tab：`Ctrl + Shift + t`
    - Comment with line Comment: `Ctrl + /`
-4. 其他 KeyMap 设置：
-   - Generate Compose Preview：`Ctrl + p` （虽然用不了）
+   - Refactor - Rename: `F2`
+   - Generate Compose Preview：`Ctrl + p`
+4. 更多 Inlay Hints：_Editor - Inlay Hints_，打开除了 _Code vision_ 和 _Annotations_ 的其他所有 Inlay Hints
+5. proxy: _auto-detect proxy settings_
 
 ### 编译运行
 
@@ -98,10 +101,32 @@ Jetpack Compose 是数据驱动的，写法非常简单，我很喜欢。可以�
 
 #### 学习
 
-Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些学习资料：
+Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些我认可的学习资料：
 
 - [Compose 基础知识 - Google](https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn)：google 家官方的视频还不错
 - [leobert's blog](https://leobert-lan.github.io/Compose/index.html)：有一些源码分析
+
+然后到 2024 年 9 月，GPT-4o 写 Jetpack Compose 的正确率还是比其他的 AI 高不少，建议用 GPT 写。
+
+#### Preview
+
+Compose 本来也应该能够像老式 xml 一样 preview 的，只要将 `@Compose` 函数加上 `@Preview` 即可。但是我从新建项目开始就无法 preview，点击 Android Studio 右上角的 _Split_ 或者 _Design_ 都**没反应**。找了一下，stackoverflow 说这是 bug，于是我都要去 run 来看效果。
+
+我从来没有怀疑过是 android studio 新建项目时 `build.gradle.kts` 的问题。然后某一天我刷到了[官方文档的这个页面](https://developer.android.com/develop/ui/compose/tooling?hl=zh-tw#individually)，发现这个好像跟 `build.gradle.kts` 里默认的不太一样。新建项目时自带的是：
+
+```
+implementation(libs.androidx.ui.tooling.preview)
+debugImplementation(libs.androidx.ui.tooling)
+```
+
+而我从文档里抄的是：
+
+```
+implementation(libs.ui.tooling.preview)
+debugImplementation(libs.ui.tooling)
+```
+
+换完后者以后就能 preview 了，生草。
 
 #### icons
 
@@ -121,6 +146,24 @@ NavigationBarItem(
 ```
 
 至于哪里能找到所有 icon，emmm，第一个当然是看 IDE 补全的提示。 [Google Fonts](https://fonts.google.com/icons) 也可以看（[ref](https://slack-chats.kotlinlang.org/t/509025/is-there-list-of-icons-to-browse-for-jetpack-compose)），但是 material 包里默认的 icon 数量相当少，只能看一部分。那么如何拿到更多的 icons 呢？答：可以用 [libs.androidx.material.icons.extended](https://stackoverflow.com/a/78616305)，这下就全了。（记得要同步依赖）
+
+#### 获取宽度
+
+我们可能需要手动获取某个 view 内部的宽度，以进行一些其他计算。这一点 jetpack compose 做的还是有待提高，现在还是有一点麻烦的：
+
+```kotlin
+val density = LocalDensity.current // 获取当前的 Density 实例
+val pxToDp = { px: Int -> with(density) { px.toDp() } }
+Row(
+  modifier = modifier
+    .onGloballyPositioned { coordinates ->
+      // 获取 Row 的宽度
+      widthDp = pxToDp(coordinates.size.width)
+    }
+) {
+  // 然后就能把 `widthDp` 拿来用了
+}
+```
 
 ## Log
 

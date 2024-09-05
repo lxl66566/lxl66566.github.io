@@ -75,6 +75,16 @@ kotlin 没有官方推出的统一格式化工具，外加用的 jar + 虚拟机
 
 有了上述基础概念，然后再看一些 kotlin 进阶的零碎内容，用于补全知识。
 
+## 泛型
+
+[Effective Kotlin](https://narenkmanoharan.gitbooks.io/effective-kotlin/content/chapter-4-generics.html) 讲的不错。
+
+kotlin 的泛型太弱了。
+
+- 添加多个约束必须用 where，比起 rust 直接 `+` 少了点糖。
+- 居然没有一个约束能让 `T + T` 成立？也就是没有一个 `Addable<T>`？
+- 没有 android 长度约束，例如限定 T 只能接受 Dp, Sp, Px 等。
+
 ## 杂
 
 - [如何写 doc comment](https://kotlinlang.org/docs/kotlin-doc.html)
