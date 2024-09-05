@@ -149,7 +149,7 @@ const data = [
   { id: "468394", aScore: 6.6, bScore: 3.5, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/HIGHLAND-Takashima-Shoa-Mikazuki-no-Pierce-Hole---Pierce-Hole-of-The-Cresent-Moon-Blue-Archive-Chinese-下江小春汉化组-Digital-01-19" },
   { id: "497578", aScore: 4.2, bScore: 2, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-エッチなことはダメなのに-ブルーアーカイブ-DL版-02-21" },
   { id: "479268", aScore: 4, bScore: 4.1, info: "#巨乳" },
-  { id: "470499", aScore: 6.5, bScore: 7.8, info: "#催眠 #制服 #露出" },
+  { id: "470499", aScore: 8.3, bScore: 9.2, info: "#催眠 #制服 #露出", bak: "https://telegra.ph/caburibbon-caburi-SSSDI-中国翻訳-無修正-DL版-08-28" },
   { id: "(not found)", aScore: 6.8, bScore: 0.4, info: "#兄妹 #fd", order: -1, otherlink: "https://telegra.ph/COMIC120-squeezecandyheaven-いちはや-妹とロックダウン-HELLorHEAVENのおまけ-中国翻訳-08-02" },
   { id: "498376", aScore: 8, bScore: 6.4, info: "#按摩 #兽耳", bak: "https://telegra.ph/描き下ろしアイドルちゃんはとろけたい白杨X无糖联合汉化-02-26" },
   { id: "498986", aScore: 6.9, bScore: 4.5, info: "#蔚蓝档案" },
@@ -479,6 +479,10 @@ const data = [
   { id: "495073", aScore: 7.2, bScore: 6.3, info: "#百合 #无插入 #迷子", bak: "https://telegra.ph/ぺどぺっとん-とらえたままで離さないで-中國翻訳-08-25" },
   { id: "527822", aScore: 8.2, bScore: 7.8, info: "#蔚蓝档案" },
   { id: "528120", aScore: 8.6, bScore: 6, info: "#蔚蓝档案 #兽角 #尿液", bak: "https://telegra.ph/Rev3-Monchan-rev3-Ibukiha-Koukouseinanode-Ibushikomo-Monndainashi--因为伊吹是高中生了所以对伊吹爱爱也没有问题Chinese-牛肉牛肉丸X星辰的爱丽丝联合汉化-Digital-09-01" },
+  { id: "527790", aScore: 7.9, bScore: 8.8, info: "#蔚蓝档案 #强制性交" },
+  { id: "(ex)", aScore: 8.3, bScore: 6.2, info: "#兄妹 #泳装 #露出 #東横サーフライダー", otherlink: "https://exhentai.org/g/2658913/5fde2e3101/", bak: "https://telegra.ph/東横サーフライダー-ふみー-ぼくたちとあるなつの日-中国翻訳-DL版-08-30" },
+  { id: "470118", aScore: 3.3, bScore: 6.8, info: "#强制", bak: "https://telegra.ph/おとぎりふあ-ワタシを買ったヒト-コミックメガストア-Vol6-中文翻譯-08-26" },
+  { id: "198343", aScore: 7.6, bScore: 8.1, info: "#しらたま #东方 #媚药", bak: "https://telegra.ph/例大祭14-毛玉牛乳-玉之けだま-ちいさいままがいい-東方Project-中国翻訳-08-26" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

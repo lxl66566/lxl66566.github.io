@@ -52,6 +52,10 @@ tag:
 - 卡常：不能指望编译器帮你优化。~~反正比赛评测机`-Og`也不优化~~
   - 该传引用传引用。
 
+## 基础
+
+- [快排原理](https://github.com/sisterAn/JavaScript-Algorithms/issues/70)
+
 ## 数据结构
 
 - STL 大法好，需要熟练运用 vector, deeue, priority_queue, unurdered_map, unordered_set 等。
