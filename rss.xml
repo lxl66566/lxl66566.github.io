@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 04 Sep 2024 17:26:49 GMT</pubDate>
-    <lastBuildDate>Wed, 04 Sep 2024 17:26:49 GMT</lastBuildDate>
+    <pubDate>Thu, 05 Sep 2024 12:19:44 GMT</pubDate>
+    <lastBuildDate>Thu, 05 Sep 2024 12:19:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -959,7 +959,11 @@
 <ul>
 <li>cody 完全不可用就不多说了</li>
 <li>codiumate 登录认证过不了，还会把 AS 卡死</li>
-<li>最后还是回到了 vscode 时的老朋友 Codeium</li>
+<li>最后还是回到了 vscode 时的老朋友 <strong>Codeium</strong>
+<ul>
+<li>关掉 <em>Show Selection Toolbar</em>，这个很烦</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>两个 json 插件：<em>JSON To Kotlin Class</em>，<em>GsonFormat</em></li>
@@ -973,18 +977,17 @@
 </ul>
 </li>
 <li><em>File - Settings - Tools - Actions on Save</em>，除了 Code Cleanup 全开。</li>
-<li>更改 KeyMap，改成熟悉的 vscode 系列：
+<li>更改 KeyMap：
 <ul>
 <li>Close Tab: <code>Ctrl + w</code></li>
 <li>Remove Closed Tab：<code>Ctrl + Shift + t</code></li>
 <li>Comment with line Comment: <code>Ctrl + /</code></li>
+<li>Refactor - Rename: <code>F2</code></li>
+<li>Generate Compose Preview：<code>Ctrl + p</code></li>
 </ul>
 </li>
-<li>其他 KeyMap 设置：
-<ul>
-<li>Generate Compose Preview：<code>Ctrl + p</code> （虽然用不了）</li>
-</ul>
-</li>
+<li>更多 Inlay Hints：<em>Editor - Inlay Hints</em>，打开除了 <em>Code vision</em> 和 <em>Annotations</em> 的其他所有 Inlay Hints</li>
+<li>proxy: <em>auto-detect proxy settings</em></li>
 </ol>
 <h3>编译运行</h3>
 <p>我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。</p>
@@ -1010,11 +1013,21 @@
 <p>Jetpack Compose 是数据驱动的，写法非常简单，我很喜欢。可以类比用 js 对象树模拟 DOM 的 <a href="/coding/html.html#%E5%B7%A5%E5%85%B7" target="_blank">vanjs</a> 等。</p>
 <p>我本来接触的项目是 openppp2，它用的是 java，上不了这个；但是大四上学校有一个实践，刚好是做 Android，那我可就不客气了，开写！</p>
 <h4>学习</h4>
-<p>Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些学习资料：</p>
+<p>Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些我认可的学习资料：</p>
 <ul>
 <li><a href="https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn" target="_blank" rel="noopener noreferrer">Compose 基础知识 - Google</a>：google 家官方的视频还不错</li>
 <li><a href="https://leobert-lan.github.io/Compose/index.html" target="_blank" rel="noopener noreferrer">leobert's blog</a>：有一些源码分析</li>
 </ul>
+<p>然后到 2024 年 9 月，GPT-4o 写 Jetpack Compose 的正确率还是比其他的 AI 高不少，建议用 GPT 写。</p>
+<h4>Preview</h4>
+<p>Compose 本来也应该能够像老式 xml 一样 preview 的，只要将 <code>@Compose</code> 函数加上 <code>@Preview</code> 即可。但是我从新建项目开始就无法 preview，点击 Android Studio 右上角的 <em>Split</em> 或者 <em>Design</em> 都<strong>没反应</strong>。找了一下，stackoverflow 说这是 bug，于是我都要去 run 来看效果。</p>
+<p>我从来没有怀疑过是 android studio 新建项目时 <code>build.gradle.kts</code> 的问题。然后某一天我刷到了<a href="https://developer.android.com/develop/ui/compose/tooling?hl=zh-tw#individually" target="_blank" rel="noopener noreferrer">官方文档的这个页面</a>，发现这个好像跟 <code>build.gradle.kts</code> 里默认的不太一样。新建项目时自带的是：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>implementation(libs.androidx.ui.tooling.preview)</span></span>
+<span class="line"><span>debugImplementation(libs.androidx.ui.tooling)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>而我从文档里抄的是：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>implementation(libs.ui.tooling.preview)</span></span>
+<span class="line"><span>debugImplementation(libs.ui.tooling)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>换完后者以后就能 preview 了，生草。</p>
 <h4>icons</h4>
 <p>显然我懒得找 icon 了，而 android material 有一套内置的，非常好用。</p>
 <div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> androidx.compose.material.icons.Icons</span></span>
@@ -1028,7 +1041,20 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  }</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>至于哪里能找到所有 icon，emmm，第一个当然是看 IDE 补全的提示。 <a href="https://fonts.google.com/icons" target="_blank" rel="noopener noreferrer">Google Fonts</a> 也可以看（<a href="https://slack-chats.kotlinlang.org/t/509025/is-there-list-of-icons-to-browse-for-jetpack-compose" target="_blank" rel="noopener noreferrer">ref</a>），但是 material 包里默认的 icon 数量相当少，只能看一部分。那么如何拿到更多的 icons 呢？答：可以用 <a href="https://stackoverflow.com/a/78616305" target="_blank" rel="noopener noreferrer">libs.androidx.material.icons.extended</a>，这下就全了。（记得要同步依赖）</p>
-<h2>Log</h2>
+<h4>获取宽度</h4>
+<p>我们可能需要手动获取某个 view 内部的宽度，以进行一些其他计算。这一点 jetpack compose 做的还是有待提高，现在还是有一点麻烦的：</p>
+<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> density </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> LocalDensity.current </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 获取当前的 Density 实例</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pxToDp </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { px: </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">Int</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> -&gt; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">with</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">density</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) { px.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">toDp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">() } }</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">Row</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  modifier </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> modifier</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">onGloballyPositioned</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { coordinates </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">-&gt;</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">      // 获取 Row 的宽度</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      widthDp </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> pxToDp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(coordinates.size.width)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">  // 然后就能把 `widthDp` 拿来用了</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>Log</h2>
 <p>打 log 也是很重要的，android 一般在 Logcat 里打 log。</p>
 <div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> android.util.Log</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">Log.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">w</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Mytag"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"message"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
