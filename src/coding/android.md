@@ -104,6 +104,7 @@ Jetpack Compose 是数据驱动的，写法非常简单，我很喜欢。可以�
 Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些我认可的学习资料：
 
 - [Compose 基础知识 - Google](https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn)：google 家官方的视频还不错
+- [Jetpack Compose 博物馆](https://jetpackcompose.cn/docs/)：中文社区的好文档，介绍了许多组件
 - [leobert's blog](https://leobert-lan.github.io/Compose/index.html)：有一些源码分析
 
 然后到 2024 年 9 月，GPT-4o 写 Jetpack Compose 的正确率还是比其他的 AI 高不少，建议用 GPT 写。
@@ -164,6 +165,75 @@ Row(
   // 然后就能把 `widthDp` 拿来用了
 }
 ```
+
+### 我的模板
+
+一些高度泛用，加速开发的模板代码。
+
+#### DropdownMenu on Enum
+
+::: details 从任意 enum class 创建 DropdownMenu
+
+```kotlin
+@Composable
+fun <T : Enum<T>> EnumDropdownMenu(
+  enumClass: Class<T>,
+  selectedEnum: T,
+  onEnumSelected: (T) -> Unit
+) {
+  var expanded by remember { mutableStateOf(false) } // 控制菜单展开状态
+
+  Box(
+    modifier = Modifier
+      .wrapContentSize(Alignment.TopStart)
+  ) {
+    TextButton(onClick = { expanded = true }) {
+      Text(text = selectedEnum.name) // 显示当前选中的 Enum 名称
+    }
+    DropdownMenu(
+      expanded = expanded,
+      onDismissRequest = { expanded = false }
+    ) {
+      // 使用 enumClass 获取所有枚举值
+      enumClass.enumConstants?.forEach { enumValue ->
+        DropdownMenuItem(text = { Text(text = enumValue.name) }, onClick = {
+          onEnumSelected(enumValue) // 选择逻辑
+          expanded = false // 关闭菜单
+        })
+      }
+    }
+  }
+}
+```
+
+使用方法：
+
+```kotlin
+@Preview
+@Composable
+fun MyScreen() {
+  var selectedEnum by remember { mutableStateOf(MyEnum.Option1) } // 默认选中 Option1
+
+  Column {
+    Text(text = "Selected: ${selectedEnum.name}")
+
+    // 传递 MyEnum::class.java 来指定枚举类
+    EnumDropdownMenu(
+      enumClass = MyEnum::class.java,
+      selectedEnum = selectedEnum,
+      onEnumSelected = { selectedEnum = it }
+    )
+  }
+}
+
+enum class MyEnum {
+  Option1,
+  Option2,
+  Option3
+}
+```
+
+:::
 
 ## Log
 
