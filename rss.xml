@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 05 Sep 2024 16:28:34 GMT</pubDate>
-    <lastBuildDate>Thu, 05 Sep 2024 16:28:34 GMT</lastBuildDate>
+    <pubDate>Fri, 06 Sep 2024 05:30:53 GMT</pubDate>
+    <lastBuildDate>Fri, 06 Sep 2024 05:30:53 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -1063,6 +1063,61 @@
 <h2>Test</h2>
 <p>Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。</p>
 <p>新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 <em>Generate</em> 里选 <em>Test</em>，然后 <em>OK</em>，记得把 <em>show only existing source roots</em> 关了就行。</p>
+<h2>Gradle</h2>
+<p>Gradle 是 android 也是 java 的广泛使用的包管理器，但是说它烂也是真的烂。</p>
+<ul>
+<li>这玩意是 java 写的，报错实在是不敢恭维。</li>
+<li>您猜猜 build.gradle 有多少种版本？即使在 kotlin DSL 的 <code>build.gradle.kts</code> 里都有多种不同的写法，例如 <code>ksp("androidx.room:room-compiler:2.5.0")</code> 和 <code>ksp(libs.androidx.room.room.compiler2)</code>，它们的区别在哪？</li>
+<li>您猜猜 <code>androidx.room.room.compiler</code>, <code>androidx.room.room.compiler2</code>, <code>androidx.room.compiler</code>, <code>room.compiler</code> 哪一个才是正确的依赖？</li>
+</ul>
+<p>20240906 我因为引入 Room 依赖的原因被 gradle 折磨了一个上午，最终被<a href="https://stackoverflow.com/questions/77665284" target="_blank" rel="noopener noreferrer">一篇 stackoverflow 回答</a>点拨了一下，终于看懂了 <code>build.gradle.kts</code> 是怎么工作的了。于是在此处写下记录。</p>
+<p>一个 Android 项目的 Gradle Scripts 下有几个重要的文件，一个是大家都会用的 Module app 层的 <code>build.gradle.kts</code>，还有一个是顶层 Project 层的 <code>build.gradle.kts</code>。然而这都不是最重要的，最重要的其实是 <code>libs.versions.toml</code>，这也是两个 <code>build.gradle.kts</code> 的根基。</p>
+<p>我们平时在 <code>build.gradle.kts</code> 里添加依赖，gradle sync 时就会自动把需要的东西 resolve 进 <code>libs.versions.toml</code>。然后这些 resolve 方式非常脏，会把 <code>libs.versions.toml</code> 弄得一团糟，比如 resolve Room 时堆了一堆 <em>room-common</em>，<em>room-compiler</em> 等等，然后这些 room package 的 version 也都是重复多余的；另一个例子是 ksp 引入时它的 version 跟 kotlin version 也不匹配，导致 gradle build 时直接爆炸。</p>
+<p>所以直接看 <code>libs.versions.toml</code>，<code>[versions]</code> 提供了 name 到 versions 的一个 alias，这个 alias 在后续每个条目的 <code>version.ref</code> 里使用。<code>[libraries]</code> 就是 APP 层 <code>build.gradle.kts</code> 的 <code>libs.xxx</code> 引用的玩意，<code>[plugins]</code> 就是两个 <code>build.gradle.kts</code> 里 plugins 块里引用的玩意，这样一来就清晰很多了。</p>
+<p>因此回到 Room 配置的问题，在 2024 年的 Android Studio + Kotlin 下，我们不能像 sb <a href="https://developer.android.com/training/data-storage/room?hl=zh-tw" target="_blank" rel="noopener noreferrer">官方文档</a>那样配置，而是应该：</p>
+<ol>
+<li>
+<p>编辑 <code>libs.versions.toml</code>，</p>
+<div class="language-toml line-numbers-mode" data-highlighter="shiki" data-ext="toml" data-title="toml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">versions</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"2.0.20"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"2.6.1"</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ksp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"2.0.20-1.0.25"</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">libraries</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-common</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-common"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-runtime</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-runtime"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-compiler</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-compiler"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-testing</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-testing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-ktx</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-ktx"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">plugins</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ksp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">id</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"com.google.devtools.ksp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"ksp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样写的依据是：</p>
+<ol>
+<li>所有 room 相关的包必须是同版本，无需多个 versions</li>
+<li>ksp 版本必须和 kotlin 版本一致</li>
+</ol>
+</li>
+<li>
+<p>然后就可以愉快地引用了。</p>
+<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 顶层</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">plugins</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  alias</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.plugins.ksp) apply </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">false</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// APP 层</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">plugins</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  alias</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.plugins.ksp)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">dependencies</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  implementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.common)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  implementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.runtime)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  annotationProcessor</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.compiler)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  ksp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.compiler)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  implementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.ktx)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  testImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.testing)</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
