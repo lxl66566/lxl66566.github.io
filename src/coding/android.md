@@ -183,3 +183,66 @@ Log.w("Mytag", "message")
 Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。
 
 新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 _Generate_ 里选 _Test_，然后 _OK_，记得把 _show only existing source roots_ 关了就行。
+
+## Gradle
+
+Gradle 是 android 也是 java 的广泛使用的包管理器，但是说它烂也是真的烂。
+
+- 这玩意是 java 写的，报错实在是不敢恭维。
+- 您猜猜 build.gradle 有多少种版本？即使在 kotlin DSL 的 `build.gradle.kts` 里都有多种不同的写法，例如 `ksp("androidx.room:room-compiler:2.5.0")` 和 `ksp(libs.androidx.room.room.compiler2)`，它们的区别在哪？
+- 您猜猜 `androidx.room.room.compiler`, `androidx.room.room.compiler2`, `androidx.room.compiler`, `room.compiler` 哪一个才是正确的依赖？
+
+20240906 我因为引入 Room 依赖的原因被 gradle 折磨了一个上午，最终被[一篇 stackoverflow 回答](https://stackoverflow.com/questions/77665284)点拨了一下，终于看懂了 `build.gradle.kts` 是怎么工作的了。于是在此处写下记录。
+
+一个 Android 项目的 Gradle Scripts 下有几个重要的文件，一个是大家都会用的 Module app 层的 `build.gradle.kts`，还有一个是顶层 Project 层的 `build.gradle.kts`。然而这都不是最重要的，最重要的其实是 `libs.versions.toml`，这也是两个 `build.gradle.kts` 的根基。
+
+我们平时在 `build.gradle.kts` 里添加依赖，gradle sync 时就会自动把需要的东西 resolve 进 `libs.versions.toml`。然后这些 resolve 方式非常脏，会把 `libs.versions.toml` 弄得一团糟，比如 resolve Room 时堆了一堆 _room-common_，_room-compiler_ 等等，然后这些 room package 的 version 也都是重复多余的；另一个例子是 ksp 引入时它的 version 跟 kotlin version 也不匹配，导致 gradle build 时直接爆炸。
+
+所以直接看 `libs.versions.toml`，`[versions]` 提供了 name 到 versions 的一个 alias，这个 alias 在后续每个条目的 `version.ref` 里使用。`[libraries]` 就是 APP 层 `build.gradle.kts` 的 `libs.xxx` 引用的玩意，`[plugins]` 就是两个 `build.gradle.kts` 里 plugins 块里引用的玩意，这样一来就清晰很多了。
+
+因此回到 Room 配置的问题，在 2024 年的 Android Studio + Kotlin 下，我们不能像 sb [官方文档](https://developer.android.com/training/data-storage/room?hl=zh-tw)那样配置，而是应该：
+
+1. 编辑 `libs.versions.toml`，
+
+   ```toml
+   [versions]
+   kotlin = "2.0.20"
+   room = "2.6.1"
+   ksp = "2.0.20-1.0.25"
+
+   [libraries]
+   room-common = { group = "androidx.room", name = "room-common", version.ref = "room" }
+   room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+   room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+   room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
+   room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+
+   [plugins]
+   ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+   ```
+
+   这样写的依据是：
+
+   1. 所有 room 相关的包必须是同版本，无需多个 versions
+   2. ksp 版本必须和 kotlin 版本一致
+
+2. 然后就可以愉快地引用了。
+
+   ```kotlin
+   // 顶层
+   plugins {
+     alias(libs.plugins.ksp) apply false
+   }
+   // APP 层
+   plugins {
+     alias(libs.plugins.ksp)
+   }
+   dependencies {
+     implementation(libs.room.common)
+     implementation(libs.room.runtime)
+     annotationProcessor(libs.room.compiler)
+     ksp(libs.room.compiler)
+     implementation(libs.room.ktx)
+     testImplementation(libs.room.testing)
+   }
+   ```

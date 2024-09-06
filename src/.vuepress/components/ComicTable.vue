@@ -483,6 +483,9 @@ const data = [
   { id: "(ex)", aScore: 8.3, bScore: 6.2, info: "#兄妹 #泳装 #露出 #東横サーフライダー", otherlink: "https://exhentai.org/g/2658913/5fde2e3101/", bak: "https://telegra.ph/東横サーフライダー-ふみー-ぼくたちとあるなつの日-中国翻訳-DL版-08-30" },
   { id: "470118", aScore: 3.3, bScore: 6.8, info: "#强制", bak: "https://telegra.ph/おとぎりふあ-ワタシを買ったヒト-コミックメガストア-Vol6-中文翻譯-08-26" },
   { id: "198343", aScore: 7.6, bScore: 8.1, info: "#しらたま #东方 #媚药", bak: "https://telegra.ph/例大祭14-毛玉牛乳-玉之けだま-ちいさいままがいい-東方Project-中国翻訳-08-26" },
+  { id: "470816", aScore: 7.2, bScore: 5.7, info: "#侄女 #纯爱", bak: "https://telegra.ph/red-miso-soup-赤だし-夏に帰るのは姪キミのため-中国翻訳-DL版-08-30" },
+  { id: "471271", aScore: 7.6, bScore: 7.6, info: "#病", bak: "https://telegra.ph/C102-TIES-タケイオーキ-サキュバス病の彼女の生活-中国翻訳-08-30" },
+  { id: "(ex)", aScore: 8.5, bScore: 9.2, info: "#いちはや #兄妹 #妄想", otherlink: "https://exhentai.org/g/2659690/127e6e45ef/", bak: "https://telegra.ph/C101-squeezecandyheaven-いちはや-いもうとのかわり-中国翻訳-08-30" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

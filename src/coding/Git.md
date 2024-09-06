@@ -610,3 +610,4 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash HEAD~2
 2. [Commits are snapshots, not diffs](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)
 3. file structure [inside .git](https://wizardzines.com/comics/inside-git/)
 4. [深入探討 Git 中的 Unreachable (無法到達的) 物件與清理方法](https://blog.miniasp.com/post/2024/06/18/How-to-Remove-Git-Unreachable-Objects)
+5. [一文讲透 Git 底层数据结构和原理](https://www.jiqizhixin.com/articles/2020-05-20-3)
