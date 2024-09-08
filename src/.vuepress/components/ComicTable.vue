@@ -486,6 +486,8 @@ const data = [
   { id: "470816", aScore: 7.2, bScore: 5.7, info: "#侄女 #纯爱", bak: "https://telegra.ph/red-miso-soup-赤だし-夏に帰るのは姪キミのため-中国翻訳-DL版-08-30" },
   { id: "471271", aScore: 7.6, bScore: 7.6, info: "#病", bak: "https://telegra.ph/C102-TIES-タケイオーキ-サキュバス病の彼女の生活-中国翻訳-08-30" },
   { id: "(ex)", aScore: 8.5, bScore: 9.2, info: "#いちはや #兄妹 #妄想", otherlink: "https://exhentai.org/g/2659690/127e6e45ef/", bak: "https://telegra.ph/C101-squeezecandyheaven-いちはや-いもうとのかわり-中国翻訳-08-30" },
+  { id: "(ex)", aScore: 8.5, bScore: 4.7, info: "#蔚蓝档案 #loli", otherlink: "https://exhentai.org/g/3050074/a5a06a0c16/" },
+  { id: "(ex)", aScore: 6.6, bScore: 9.7, info: "#触手 #战败 #怀孕", otherlink: "https://exhentai.org/g/2589029/1b37bf584c/" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
