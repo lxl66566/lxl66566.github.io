@@ -250,9 +250,18 @@ Log.w("Mytag", "message")
 
 ## Test
 
+Andriod 一共有两种测试，androidTest 和 test (unittest)。两个测试中使用的依赖要分别引入：
+
+```kotlin
+testImplementation(kotlin("test"))
+androidTestImplementation(kotlin("test"))
+```
+
 Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。
 
 新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 _Generate_ 里选 _Test_，然后 _OK_，记得把 _show only existing source roots_ 关了就行。
+
+在使用 assertEquals 中[我被坑了](https://t.me/withabsolutex/1954)，请务必用 `kotlin.test.assertEquals`。（把 message 放在前面的设计简直不是人。）
 
 ## Gradle
 

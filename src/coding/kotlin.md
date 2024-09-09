@@ -85,6 +85,11 @@ kotlin 的泛型太弱了。
 - 居然没有一个约束能让 `T + T` 成立？也就是没有一个 `Addable<T>`？
 - 没有 android 长度约束，例如限定 T 只能接受 Dp, Sp, Px 等。
 
+## 面向对象
+
+- kotlin 会自动为 public 成员生成 setter/getter。这样的本意是好的，但是如果你的 class 继承自一个 interface，而这个 interface 里的函数是 setter/getter 同名函数，那么实现 `override fun getXxx` 后编译就会报错 _The following declarations have the same JVM signature_，还是比较具有迷惑性的。如果你有这样的函数，记得把成员声明为 private。
+  - 最理想的应该是 kotlin 生成的 setter/getter 自动 impl 了这个 interface，可惜 kotlin 不这样干。这样必须 private 后自己重写一遍 setter/getter，还是很丑的。
+
 ## 杂
 
 - [如何写 doc comment](https://kotlinlang.org/docs/kotlin-doc.html)

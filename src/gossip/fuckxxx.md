@@ -403,6 +403,7 @@ ColorOS 是目前一加的默认系统。
 ## Android Studio 有多难用
 
 - 自带的 Terminal 天天炸。我用的 atuin，这个 Terminal 一调 atuin 就报 `` Error: failed to create file `/etc/nixos/config/atuin.key ``，但是我在其他 IDE 的 terminal 就没有任何问题。
+  - Terminal 是二等公民，例如我要用 `Ctrl + w` 删单词，结果 IDE 的快捷键优先，把 Terminal 窗口给我关了。
 - 插件垃圾。
   - Vim 插件垃圾。只能调一点键冲突，没有其他选项。
   - 设置同步依赖 Settings Sync 插件，但是甚至无法登录，localhost 端口没开。

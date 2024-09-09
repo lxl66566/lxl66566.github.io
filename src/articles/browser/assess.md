@@ -141,7 +141,8 @@ brave 是一个 chromium 内核，与广告和加密货币共生的浏览器。
 - 拖动文字/链接到垂直标签栏的最底下位置不能打开，要往上挪 2-3 个标签页位置才能打开。有病吧。
 - speedreader 还行，但仍有问题：
   - 有时会有图片重复。
-  - 对代码块的支持很差
+  - 对代码块的支持很差，没有高亮
+- 不支持清除特定网站的 cookies。。我尝试去 help 里看，看到[一篇教程](https://support.brave.com/hc/en-us/articles/360048833872-How-Do-I-Clear-Cookies-And-Site-Data-In-Brave#2)，但是根本没有 _Additional settings_ 设置项，甚至 `brave://settings/siteData` 都是空的。。笑死了。
 
 ### nyxt
 
