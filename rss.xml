@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 08 Sep 2024 01:48:39 GMT</pubDate>
-    <lastBuildDate>Sun, 08 Sep 2024 01:48:39 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Sep 2024 21:55:10 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Sep 2024 21:55:10 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -1119,8 +1119,12 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>然后在 Logcat 窗口 filter 里写 <code>tag:Mytag</code> 即可。</p>
 <p>还有一个小插曲，我之前明明打了 log 但是在 logcat 里怎么也看不到，莫名其妙，气死了。我直接在 Text 里打 log，结果发现 Text 里的字符也没变。一看，编译目标是那个 Composable Preview，不是 app。。。</p>
 <h2>Test</h2>
-<p>Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。</p>
+<p>Andriod 一共有两种测试，androidTest 和 test (unittest)。两个测试中使用的依赖要分别引入：</p>
+<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">testImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"test"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">androidTestImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"test"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。</p>
 <p>新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 <em>Generate</em> 里选 <em>Test</em>，然后 <em>OK</em>，记得把 <em>show only existing source roots</em> 关了就行。</p>
+<p>在使用 assertEquals 中<a href="https://t.me/withabsolutex/1954" target="_blank" rel="noopener noreferrer">我被坑了</a>，请务必用 <code>kotlin.test.assertEquals</code>。（把 message 放在前面的设计简直不是人。）</p>
 <h2>Gradle</h2>
 <p>Gradle 是 android 也是 java 的广泛使用的包管理器，但是说它烂也是真的烂。</p>
 <ul>
