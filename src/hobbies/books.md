@@ -59,6 +59,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
+|催眠王座 <Badge type="warning" text="爽" /><Badge type="danger" text="烂尾" />|2024.09.09-<br/>2024.09.11|6h16min|
 |[我就是神！](https://t.me/absolutexsresource/13)|2024.07.21-<br/>2024.09.08|62h51min|[^](#我就是神)|
 |[一周一次买下同班同学的那些事](https://www.linovelib.com/novel/3605.html)|2024.06.14-<br/>在读|
 |[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>2024.05.14|>60h|<dtlslong text="主角韩立；极为经典的修仙，“凡人”指没资质但有逆天宝物的。书算是半个烂尾，毕竟结局飞升仙界，至少还有 1/3 篇幅没写。"/>|

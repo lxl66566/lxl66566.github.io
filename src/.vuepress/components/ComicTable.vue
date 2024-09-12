@@ -488,6 +488,16 @@ const data = [
   { id: "(ex)", aScore: 8.5, bScore: 9.2, info: "#いちはや #兄妹 #妄想", otherlink: "https://exhentai.org/g/2659690/127e6e45ef/", bak: "https://telegra.ph/C101-squeezecandyheaven-いちはや-いもうとのかわり-中国翻訳-08-30" },
   { id: "(ex)", aScore: 8.5, bScore: 4.7, info: "#蔚蓝档案 #loli", otherlink: "https://exhentai.org/g/3050074/a5a06a0c16/" },
   { id: "(ex)", aScore: 6.6, bScore: 9.7, info: "#触手 #战败 #怀孕", otherlink: "https://exhentai.org/g/2589029/1b37bf584c/" },
+  { id: "471937", aScore: 7.6, bScore: 8.5, info: "#肛塞 #连续高潮 #天気輪 #甘露アメ", order: 2, bak: "https://telegra.ph/天気輪-甘露アメ-イチャらぶセックスで100回イかないと出られない部屋-中国翻訳-DL版-09-06" },
+  { id: "471316", aScore: 8.2, bScore: 2.7, info: "#短篇 #兽耳 #さわやか鮫肌", bak: "https://telegra.ph/C102-ドットエイト-さわやか鮫肌-C102会場限定本-グランブルーファンタジー-中国翻訳-09-02-3" },
+  { id: "473055", aScore: 8.9, bScore: 6.7, info: "#兽耳 #武藤まと #哄骗", bak: "https://telegra.ph/ANCHOR-武藤まと-すじ女神さまとうすい本-DL版-中国翻訳-09-02" },
+  { id: "470938", aScore: 9.2, bScore: 8.8, info: "#纯爱 #角色扮演", bak: "https://telegra.ph/C102-りとるはむれっと-きぃら-幼馴染とお医者さんごっこ-中国翻訳-09-02" },
+  { id: "472855", aScore: 6.4, bScore: 7.6, info: "#全彩 #蔚蓝档案", bak: "https://telegra.ph/山含-エロゲーム開発部-雙子篇-ブルーアーカイブ-中国語-DL版-09-01" },
+  { id: "491283", aScore: 8.5, bScore: 5, info: "#水着 #兄妹", bak: "https://telegra.ph/熱血ねずも塾-ねずも-競泳ななみずぎ-RIDDLE-JOKER-中国翻訳-DL版-01-10" },
+  { id: "495426", aScore: 7.1, bScore: 9.3, info: "#兄妹 #致郁", bak: "https://telegra.ph/はないろすぷーん-くっきおーれ-PULCHRE-BENE-RECTE-中国翻訳-DL版-02-08-2" },
+  { id: "472224", aScore: 5, bScore: 8.9, info: "#异世界 #冒险 #史莱姆 #催情", bak: "https://telegra.ph/MeltdoWN-COmet-雪雨こん-ニコとモブの異世界エロマンガ-中国翻訳-DL版-09-07" },
+  { id: "472155", aScore: 8.1, bScore: 6.8, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/さかえてないです-さかえ-私なんかでいいんですか-ブルーアーカイブ-中国翻訳-DL版-09-07" },
+  { id: "529434", aScore: 8.7, bScore: 5.5, info: "#全彩 #兄妹 #催眠" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
