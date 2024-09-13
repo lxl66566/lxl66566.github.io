@@ -343,6 +343,9 @@ const data = [
   { id: "kmnl-001", aScore: 7, bScore: 7.7, name: "#睡x #雷霆" },
   { id: "nsm-104", aScore: 6.8, bScore: 7.5, name: "#睡x #夜袭" },
   { id: "TCHB-020", aScore: 7.3, bScore: 7.8 },
+  { id: "sqte-135", aScore: 7, bScore: 8.5, name: "^1 强颜欢笑" },
+  { id: "mudr-208", aScore: 6, bScore: 2.3 },
+  { id: "same-071", aScore: 6.5, bScore: 6 },
 ];
 export default {
   name: "AvTable",

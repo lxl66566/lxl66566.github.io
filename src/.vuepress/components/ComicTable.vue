@@ -499,6 +499,15 @@ const data = [
   { id: "472155", aScore: 8.1, bScore: 6.8, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/さかえてないです-さかえ-私なんかでいいんですか-ブルーアーカイブ-中国翻訳-DL版-09-07" },
   { id: "529434", aScore: 8.7, bScore: 5.5, info: "#全彩 #兄妹 #催眠" },
   { id: "472398", aScore: 8, bScore: 6.8, info: "#蔚蓝档案", bak: "https://telegra.ph/Trick-Color-桐井ナオ-イロハごめん今日もヘイローに出させて-ブルーアーカイブ-中国翻訳-DL版-09-08" },
+  { id: "529231", aScore: 8.5, bScore: 9.1, info: "#触手 #反杀 #露出" },
+  { id: "529707", aScore: 7.6, bScore: 8.4, info: "#触手" },
+  { id: "528760", aScore: 7.8, bScore: 2.5, info: "#全彩 #教室" },
+  { id: "241450", aScore: 6.4, bScore: 7.6, info: "#师生 #loli #NTR" },
+  { id: "473378", aScore: 7.9, bScore: 8.4, info: "#しらたま #吸血鬼", order: 1, bak: "https://telegra.ph/毛玉牛乳-玉之けだま-血姫夜交-真祖の姫は発情しているっ--中国翻訳-無修正-DL版-09-14" },
+  { id: "473036", aScore: 7.3, bScore: 5.2, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/SignalViolet-紫信号-エデン条約のあとしまつ-ブルーアーカイブ-中国翻訳-無修正-DL版-09-12" },
+  { id: "484536", aScore: 7.7, bScore: 7.5, info: "#蔚蓝档案", bak: "https://telegra.ph/C102-ものくろサーキット-racer-ココナ教官の保健体育--C102限定特典ペーパー-ブルーアーカイブ-中国翻訳-09-12" },
+  { id: "472690", aScore: 8, bScore: 0, info: "#兽耳 #碧蓝幻想", bak: "https://telegra.ph/C102-ものくろサーキット-racer-ココナ教官の保健体育--C102限定特典ペーパー-ブルーアーカイブ-中国翻訳-09-12" },
+  { id: "467850", aScore: 8.4, bScore: 6.2, info: "#蔚蓝档案" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
