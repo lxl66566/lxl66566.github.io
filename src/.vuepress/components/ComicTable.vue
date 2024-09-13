@@ -498,6 +498,7 @@ const data = [
   { id: "472224", aScore: 5, bScore: 8.9, info: "#异世界 #冒险 #史莱姆 #催情", bak: "https://telegra.ph/MeltdoWN-COmet-雪雨こん-ニコとモブの異世界エロマンガ-中国翻訳-DL版-09-07" },
   { id: "472155", aScore: 8.1, bScore: 6.8, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/さかえてないです-さかえ-私なんかでいいんですか-ブルーアーカイブ-中国翻訳-DL版-09-07" },
   { id: "529434", aScore: 8.7, bScore: 5.5, info: "#全彩 #兄妹 #催眠" },
+  { id: "472398", aScore: 8, bScore: 6.8, info: "#蔚蓝档案", bak: "https://telegra.ph/Trick-Color-桐井ナオ-イロハごめん今日もヘイローに出させて-ブルーアーカイブ-中国翻訳-DL版-09-08" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

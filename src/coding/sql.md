@@ -40,6 +40,10 @@ tag:
 
 后来换了 Beekeeper Studio，只读非常好用，写的话一般。
 
+## SQL 语法基础
+
+- Android Sqlite，`CREATE TABLE` 内部不允许尾随逗号。
+
 ## SQLite
 
 SQLite 没有驱动，没有压缩，没有加密，非常简单的数据库，可以被分发。不过作为开发者，建议还是装一个驱动吧。

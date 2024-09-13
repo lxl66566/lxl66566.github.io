@@ -127,7 +127,22 @@ implementation(libs.ui.tooling.preview)
 debugImplementation(libs.ui.tooling)
 ```
 
-换完后者以后就能 preview 了，生草。
+换完后者以后点击 _Split_ 就能 preview 了，生草。
+
+#### remember
+
+Composable 中使用 remember 进行状态传递，这让其成为数据驱动的 UI，简单易懂。remember 变量被修改后，绑定的 UI 会自动重绘。
+
+有几种 remember 的用法：
+
+```kotlin
+// 1. mapVisible 是一个 Boolean，这是一个语法糖。可以直接用，方便。
+// 缺点是几乎不可能传给其他 Composable，只能在当前 Composable 用。
+val mapVisible by remember { mutableStateOf(true) } // 1
+
+// 2. mapVisible 是一个 MutableState<Boolean>，必须要 `.value` 才能拿到内部值。但是可以到处传。
+val mapVisible = remember { mutableStateOf(true) }  // 2
+```
 
 #### icons
 
@@ -166,9 +181,37 @@ Row(
 }
 ```
 
+#### 调用 Fragment
+
+有一个 `AndroidFragment` 能直接在 Composable 内渲染 Fragment。
+
+```kotlin
+class RT : Fragment() {}
+@Composable
+fun Test(){
+  val fragmentState = rememberFragmentState()
+  AndroidFragment<RT>(
+    modifier = Modifier.fillMaxSize(),
+    fragmentState = fragmentState
+  )
+}
+```
+
+局限性还是很大的，比如你的 `AndroidFragment` 必须在 `FragmentActivity()` 上下文使用，`class RT : Fragment()` 必须拥有空构造函数等。
+
+#### 劝退
+
+Jetpack Compose 的思想很好，开发效率很高，但是写起来还是有不少问题的。
+
+最大的问题还是**各种场景下对 Activity 的依赖**。Jetpack Compose 摆脱了界面对 Activity 的依赖，但是很多时候你的模块没有 Activity 还不行。然后 Jetpack Compose 对 Fragment 和 Activity 的耦合也不太行，导致开发效率都被踩坑踩完了。关键是这些 Activity 的问题还都是运行时崩溃，编译时根本不会提醒。Java 系的梦幻报错再赢一次。
+
+还有支持 Compose 的库还是不够稳定，例如 [Google Maps Compose](https://github.com/googlemaps/android-maps-compose/)，我刚入门就踩了个这玩意两年前的 [open issue](https://github.com/googlemaps/android-maps-compose/issues/105)。
+
+还有各种稀奇古怪的上下文与作用域规定，写得多了总会遇到。最简单的就是 `remember { mutableStateOf() }` 必须在 `@Composable` 内使用，这些中间状态如果还要分发到其他函数就必须使用
+
 ### 我的模板
 
-一些高度泛用，加速开发的模板代码。
+一些高度泛用，加速开发的模板（组件）代码。
 
 #### DropdownMenu on Enum
 
@@ -257,7 +300,7 @@ testImplementation(kotlin("test"))
 androidTestImplementation(kotlin("test"))
 ```
 
-Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。
+Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。而且还容易爆 `java.lang.NoClassDefFoundError`，原因不明，我至今未解决。
 
 新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 _Generate_ 里选 _Test_，然后 _OK_，记得把 _show only existing source roots_ 关了就行。
 
@@ -325,3 +368,9 @@ Gradle 是 android 也是 java 的广泛使用的包管理器，但是说它烂�
      testImplementation(libs.room.testing)
    }
    ```
+
+## 权限
+
+放眼 Android，最复杂，坑最多的地方莫归于权限了。不同的 API 版本有不同的权限处理方案，这些方案杂糅在一起，网上一大堆教程和 GPT 几乎全部作废。我几度被权限折磨得死去活来，并最终放弃 Android 开发。
+
+我刚开始写 Android 时还想着抽象一个 class PermissionManager 解决所有权限问题。显然我想得太简单了。各种需要缓存的中间对象，各种 Permission 需要的上下文都不同，这样只是死路一条。
