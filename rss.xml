@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 12 Sep 2024 01:16:28 GMT</pubDate>
-    <lastBuildDate>Thu, 12 Sep 2024 01:16:28 GMT</lastBuildDate>
+    <pubDate>Fri, 13 Sep 2024 10:15:50 GMT</pubDate>
+    <lastBuildDate>Fri, 13 Sep 2024 10:15:50 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -1028,8 +1028,17 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>而我从文档里抄的是：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>implementation(libs.ui.tooling.preview)</span></span>
 <span class="line"><span>debugImplementation(libs.ui.tooling)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>换完后者以后就能 preview 了，生草。</p>
-<h4>icons</h4>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>换完后者以后点击 <em>Split</em> 就能 preview 了，生草。</p>
+<h4>remember</h4>
+<p>Composable 中使用 remember 进行状态传递，这让其成为数据驱动的 UI，简单易懂。remember 变量被修改后，绑定的 UI 会自动重绘。</p>
+<p>有几种 remember 的用法：</p>
+<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 1. mapVisible 是一个 Boolean，这是一个语法糖。可以直接用，方便。</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 缺点是几乎不可能传给其他 Composable，只能在当前 Composable 用。</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> mapVisible </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">by</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> remember</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mutableStateOf</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">true</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) } </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 1</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 2. mapVisible 是一个 MutableState&lt;Boolean&gt;，必须要 `.value` 才能拿到内部值。但是可以到处传。</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> mapVisible </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> remember</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mutableStateOf</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">true</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) }  </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 2</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>icons</h4>
 <p>显然我懒得找 icon 了，而 android material 有一套内置的，非常好用。</p>
 <div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> androidx.compose.material.icons.Icons</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> androidx.compose.material.icons.filled.</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span></span>
@@ -1055,8 +1064,25 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) {</span></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">  // 然后就能把 `widthDp` 拿来用了</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>我的模板</h3>
-<p>一些高度泛用，加速开发的模板代码。</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>调用 Fragment</h4>
+<p>有一个 <code>AndroidFragment</code> 能直接在 Composable 内渲染 Fragment。</p>
+<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> RT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> : </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">Fragment</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">() {}</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">@Composable</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">fun</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> Test</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(){</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> fragmentState </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> rememberFragmentState</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  AndroidFragment</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">RT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;(</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    modifier </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Modifier.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">fillMaxSize</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(),</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    fragmentState </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> fragmentState</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  )</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>局限性还是很大的，比如你的 <code>AndroidFragment</code> 必须在 <code>FragmentActivity()</code> 上下文使用，<code>class RT : Fragment()</code> 必须拥有空构造函数等。</p>
+<h4>劝退</h4>
+<p>Jetpack Compose 的思想很好，开发效率很高，但是写起来还是有不少问题的。</p>
+<p>最大的问题还是<strong>各种场景下对 Activity 的依赖</strong>。Jetpack Compose 摆脱了界面对 Activity 的依赖，但是很多时候你的模块没有 Activity 还不行。然后 Jetpack Compose 对 Fragment 和 Activity 的耦合也不太行，导致开发效率都被踩坑踩完了。关键是这些 Activity 的问题还都是运行时崩溃，编译时根本不会提醒。Java 系的梦幻报错再赢一次。</p>
+<p>还有支持 Compose 的库还是不够稳定，例如 <a href="https://github.com/googlemaps/android-maps-compose/" target="_blank" rel="noopener noreferrer">Google Maps Compose</a>，我刚入门就踩了个这玩意两年前的 <a href="https://github.com/googlemaps/android-maps-compose/issues/105" target="_blank" rel="noopener noreferrer">open issue</a>。</p>
+<p>还有各种稀奇古怪的上下文与作用域规定，写得多了总会遇到。最简单的就是 <code>remember { mutableStateOf() }</code> 必须在 <code>@Composable</code> 内使用，这些中间状态如果还要分发到其他函数就必须使用</p>
+<h3>我的模板</h3>
+<p>一些高度泛用，加速开发的模板（组件）代码。</p>
 <h4>DropdownMenu on Enum</h4>
 <details class="hint-container details"><summary>从任意 enum class 创建 DropdownMenu</summary>
 <div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">@Composable</span></span>
@@ -1122,7 +1148,7 @@
 <p>Andriod 一共有两种测试，androidTest 和 test (unittest)。两个测试中使用的依赖要分别引入：</p>
 <div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">testImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"test"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">androidTestImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"test"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。而且还容易爆 <code>java.lang.NoClassDefFoundError</code>，原因不明，我至今未解决。</p>
 <p>新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 <em>Generate</em> 里选 <em>Test</em>，然后 <em>OK</em>，记得把 <em>show only existing source roots</em> 关了就行。</p>
 <p>在使用 assertEquals 中<a href="https://t.me/withabsolutex/1954" target="_blank" rel="noopener noreferrer">我被坑了</a>，请务必用 <code>kotlin.test.assertEquals</code>。（把 message 放在前面的设计简直不是人。）</p>
 <h2>Gradle</h2>
@@ -1180,6 +1206,9 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ol>
+<h2>权限</h2>
+<p>放眼 Android，最复杂，坑最多的地方莫归于权限了。不同的 API 版本有不同的权限处理方案，这些方案杂糅在一起，网上一大堆教程和 GPT 几乎全部作废。我几度被权限折磨得死去活来，并最终放弃 Android 开发。</p>
+<p>我刚开始写 Android 时还想着抽象一个 class PermissionManager 解决所有权限问题。显然我想得太简单了。各种需要缓存的中间对象，各种 Permission 需要的上下文都不同，这样只是死路一条。</p>
 ]]></content:encoded>
     </item>
     <item>
