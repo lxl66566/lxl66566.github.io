@@ -508,6 +508,7 @@ const data = [
   { id: "484536", aScore: 7.7, bScore: 7.5, info: "#蔚蓝档案", bak: "https://telegra.ph/C102-ものくろサーキット-racer-ココナ教官の保健体育--C102限定特典ペーパー-ブルーアーカイブ-中国翻訳-09-12" },
   { id: "472690", aScore: 8, bScore: 0, info: "#兽耳 #碧蓝幻想", bak: "https://telegra.ph/C102-ものくろサーキット-racer-ココナ教官の保健体育--C102限定特典ペーパー-ブルーアーカイブ-中国翻訳-09-12" },
   { id: "467850", aScore: 8.4, bScore: 6.2, info: "#蔚蓝档案" },
+  { id: "527689", aScore: 8.8, bScore: 7.6, info: "#魅魔 #兽角" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
