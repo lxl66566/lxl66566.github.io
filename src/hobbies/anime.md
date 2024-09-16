@@ -29,6 +29,7 @@ tag:
 <!-- prettier-ignore -->
 | 番名 | 起止区间 |
 | :--: | :--: |
+| 弹丸论破 <OrderBadge order=1 /> <Badge text="二刷" /> | 2024.09.15-<br/>2024.09.16 |
 | 弹丸论破 <OrderBadge order=3 /> 绝望篇 + 未来篇 | 2024.09.15 |
 | 魔法少女小圆 | 2024.09.05 |
 | Girls Band Cry | 2024.08.23-<br/>2024.08.24 |

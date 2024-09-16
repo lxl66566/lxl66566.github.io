@@ -88,6 +88,10 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
   - [kimi](https://kimi.moonshot.cn/)
   - [ReadPaper](https://readpaper.com/)
 
+### Other
+
+- [zerogpt](https://www.zerogpt.com/): AI text Detector tool
+
 ## pastebin
 
 网上分享一些日志 / 报错啥的，不要刷屏，用 pastebin 服务。

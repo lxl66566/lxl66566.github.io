@@ -77,6 +77,7 @@ kotlin 没有官方推出的统一格式化工具，外加用的 jar + 虚拟机
 
 - 类型转换有一堆 `.toXxx` 能用。但是不能直接 as。
 - [空安全](https://book.kotlincn.net/text/null-safety.html)：挺不错的语法糖，引起了我最初对 kotlin 的兴趣。但是实际上挺少，也就 `?.`, `?:`, `!!` 三个而已。
+- `Unit` type 就是 void
 
 ### 语法糖
 
