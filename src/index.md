@@ -70,4 +70,3 @@ category:
 
 - [asukaminato.notion.site](https://asukaminato.notion.site/asukaminato/Blog-3c0df75d3d8b471ab67e97ecc82e10a4)
 - [Xuanwo's Blog](https://xuanwo.io/)
-- [martinlwx.github.io](https://martinlwx.github.io/zh-cn/)
