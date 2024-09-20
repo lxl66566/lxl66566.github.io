@@ -42,22 +42,18 @@ tag:
 - 关于扩展：
   - 如果使用开发者模式安装了本地扩展，edge 会疯狂提醒移除此扩展。**没有关闭提醒的选项**，只能点两周后提醒，然后每两周被不断打扰。
   - 不支持 manifest v2，所谓的不支持的做法是：让你先用几天，然后悄无声息地把该扩展直接静默删除。
-- edge 在 linux 上就捞的一批了。。黑色主题下到处黑白分不清。。
+- edge 在 archlinux 上就捞的一批了。。黑色主题下到处黑白分不清。
+  - 不过也有可能是 kde 配得不太好，我在 nixos 上没看到这个问题。
 
-### chrome
+### chrome / chromium
 
-我对 chrome 一直都没什么好感，一方面 Google 吃相也极为难看[^1]，另一方面可能是我高中 4G 内存和钥匙扣 CPU 的破电脑带不动它。
+我对 chrome 一直都没什么好感，一方面 Google 吃相也极为难看[^1]，另一方面可能是我高中 4G 内存和钥匙扣 CPU 的破电脑带不动它。不过在我主 firefox 时，我还是会装一个 chromium 作为某些 chromium 系 only 网站的备选。
 
 [^1]: 关键词：`隐私沙盒` `Web Environment Integrity API`
 
 - chrome （在某个时期）的槽点大概是吃内存非常恐怖。但是实际跟其他两家应该差不了多少。
 - chrome 的一些服务在国内无法使用，需要科学上网。
-
-### chromium
-
-在 linux 上我把 chromium 当成一个备选项，当遇到 firefox 无法打开的网站时就会用它。
-
-- chromium 和 chrome 一样不支持垂直标签页。。
+- chrome / chromium 没有原生侧边栏。而网上的一大堆侧边栏插件要么不稳定容易崩溃，要么就自定义化程度过低，要么性能不够，总之我还是期待使用原生侧边栏的浏览器。
 
 ### firefox
 
@@ -142,7 +138,21 @@ brave 是一个 chromium 内核，与广告和加密货币共生的浏览器。
 - speedreader 还行，但仍有问题：
   - 有时会有图片重复。
   - 对代码块的支持很差，没有高亮
-- 不支持清除特定网站的 cookies。。我尝试去 help 里看，看到[一篇教程](https://support.brave.com/hc/en-us/articles/360048833872-How-Do-I-Clear-Cookies-And-Site-Data-In-Brave#2)，但是根本没有 _Additional settings_ 设置项，甚至 `brave://settings/siteData` 都是空的。。笑死了。
+- **不支持清除特定网站的 cookies**。。我尝试去 help 里看，看到[一篇教程](https://support.brave.com/hc/en-us/articles/360048833872-How-Do-I-Clear-Cookies-And-Site-Data-In-Brave#2)，但是根本没有 _Additional settings_ 设置项，甚至 `brave://settings/siteData` 都是空的。。笑死了。
+  - 这导致遇到问题根本没法排查。
+- 然后用了一段时间以后，莫名其妙**很多 js 和其他资源没法加载**。我用其他浏览器是可以的，排除了网络问题。
+
+### Opera
+
+因为实在没有顺手浏览器用，浅尝了一下 opera。也没有原生垂直标签栏，结果官方扩展五年没有更新，还 tm 限制最小宽度，笑死了。
+
+而且这玩意是自己的内核，扩展不通用，我用的扩展就没几个能在它的商店找到。那 Opera 还是滚一边玩去吧。
+
+### [ladybird](https://ladybird.org/)
+
+号称自研内核的浏览器，~~首页一看就是针对 brave 的~~。
+
+截至 202409，还是不可用状态，无法打开网页。表示理解，期待后续跟进。
 
 ### nyxt
 
