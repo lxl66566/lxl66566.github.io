@@ -1,4 +1,5 @@
 <template>
+  <div>番号总数：{{ dataLen }}</div>
   <h2>最高</h2>
   <div>
     <SortableTable :rows="data" />
@@ -361,12 +362,18 @@ export default {
   components: {
     SortableTable,
   },
-  // 最高判定：aScore + bScore >= 18 || aScore >= 10 || bScore >= 10
   data() {
+    // 最高判定：aScore + bScore >= 18 || aScore >= 10 || bScore >= 10
     return {
       data: data.filter(item => item.aScore + item.bScore >= 18 || item.aScore >= 10 || item.bScore >= 10),
       data2: data.filter(item => item.aScore + item.bScore < 18 && item.aScore < 10 && item.bScore < 10)
     };
+  },
+  computed: {
+    dataLen() {
+      return data.length;
+    },
   }
+
 };
 </script>

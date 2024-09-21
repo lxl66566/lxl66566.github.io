@@ -12,7 +12,7 @@ tag:
 
 # 本子合集
 
-本人佛系被动刷本，也不会看到好的画风而去专门找系列本子看（
+本人佛系被动刷本，也很少看到好的画风而去专门找画师本子看（
 
 ::: tip
 
@@ -53,6 +53,10 @@ tag:
 |级别|名字|
 |---|---|
 |T1|いちはや|
+
+## external
+
+1. [E 绅士里站访问教程——从注册账号到进入里站](https://nicebowl.fun/11)
 
 <script setup lang="ts">
 import ComicTable from "@ComicTable";

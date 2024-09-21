@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>本子总数：{{ dataLen }}</div>
     <table>
       <thead>
         <tr>
@@ -509,6 +510,8 @@ const data = [
   { id: "472690", aScore: 8, bScore: 0, info: "#兽耳 #碧蓝幻想", bak: "https://telegra.ph/C102-ものくろサーキット-racer-ココナ教官の保健体育--C102限定特典ペーパー-ブルーアーカイブ-中国翻訳-09-12" },
   { id: "467850", aScore: 8.4, bScore: 6.2, info: "#蔚蓝档案" },
   { id: "527689", aScore: 8.8, bScore: 7.6, info: "#魅魔 #兽角" },
+  { id: "(ex)", aScore: 7.4, bScore: 3, info: "#蔚蓝档案 #无R18", otherlink: "https://exhentai.org/g/2675592/d383fb7849/", bak: "https://telegra.ph/Sanctum-Archive-chapter3-雪解けハチノス-はちかり-アロナの隠し事--阿罗娜的小秘密-ブルーアーカイブ-中国翻訳-09-15" },
+  { id: "473039", aScore: 7.2, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/ふずめ-アヒトスソーフラント水着おしさんソーフ嬢12-ブルーアーカイブ-中国翻訳-03-08" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
@@ -522,6 +525,9 @@ export default {
     sortedRows() {
       return data;
     },
+    dataLen() {
+      return data.length;
+    }
   },
 };
 </script>
