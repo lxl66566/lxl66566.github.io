@@ -10,6 +10,8 @@ tag:
 
 # C++
 
+<div class="subtitle">——我从未懂过 C++</div>
+
 ## 一些工具
 
 - [cppinsights](https://cppinsights.io/)：显式指明代码中的隐式转换与中间变量。
@@ -306,6 +308,8 @@ static_assert(a < 0 && "error message"); // compile time
 assert(a < 0 && "error message");  // runtime
 ```
 
+至于 assert_eq 这种 std 就没有了，需要自己写宏或者引入 crpcut.hpp、GoogleTest 等框架。
+
 ### if constexpr
 
 编译期剪枝。可以用于类型判断。
@@ -321,6 +325,17 @@ void f(T)
   }
 }
 ```
+
+### ranges
+
+> &gt;= C++20
+
+ranges 是 C++ 在函数式方面的努力，C++20 的四大特性之一。简单的说就是把各类操作变换 chain 在一起，简化写法，不再需要 `(c.begin(), c.end(), ...)`。
+
+example 可以看 [cpp reference](https://en.cppreference.com/w/cpp/ranges)。
+
+- `std::views::transform` 就是 map
+- 直到 C++23 都没有一个可 chain 的 reduce ([std::ranges::fold_left](https://en.cppreference.com/w/cpp/algorithm/ranges/fold_left))
 
 ## 程序计时
 

@@ -26,6 +26,9 @@ tag:
 <!-- prettier-ignore -->
 | 名 | 时间 | 评价 |
 | :-: | :-: | :-: |
+| 金蝉脱壳 <OrderBadge order=1 /><OrderBadge text="三刷" order=3 /> | 2024.09.21 | 经典作品，把我的感觉还回来了 |
+| 金蝉脱壳2：冥府 <OrderBadge order=2 /> | 2024.09.21-<br/>观看中止 | 确实烂，[影评](https://movie.douban.com/review/9437758/)说得对 |
+| 天才计划 - 2020 | 2024.09.20 | <dtlslong text="有点简单 + 夸张。感觉比《金蝉脱壳》要差多了。"/> |
 | [迷失东京](https://zh.wikipedia.org/wiki/迷失东京) | 2024.08.21 | <dtlslong text="本想看同名片，不小心看完了这部作品。平凡，且我对感情戏不算感冒。不过又有些向往。"/> |
 | 隐入尘烟 | 2024.06.26 |
 

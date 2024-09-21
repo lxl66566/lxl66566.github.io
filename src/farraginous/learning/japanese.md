@@ -31,6 +31,7 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
   - 文法
     - [蓝宝书](https://ankiweb.net/shared/info/1959548600)
     - [毎日のんびり日本語教師の文法](https://ankiweb.net/shared/info/1365377701)
+    - [どんなときどう使う日本語文型](https://ankiweb.net/shared/info/1681155450)
 - 文法：
   - [毎日のんびり日本語教師](https://nihongonosensei.net/)
 - 阅读：[天声人語](https://www.douban.com/group/612024/)
@@ -129,6 +130,10 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 - 自动词使役对象用「を」，他动词使役对象用「に」
 - [～がち，～気味ぎみ, ～っぽい](https://nihongonosato.com/jlpt/n2-grammar/n2-gachi/)
 - [「ではないか」 V.S. 「のではないか」](https://colanekojp.com.tw/classroom_detail/208)
+
+## 杂
+
+- [部首の読み](https://atok.com/other/support/howtouse/mac/ap/pgs/ap_busyu_suijun2.htm)，有点超纲
 
 ## 说两句
 

@@ -246,7 +246,6 @@ _（不排除早期缺漏）_
 - 花鐘カナデグラム 系列?
 - Yuri
 - 瑠璃櫻
-- 变态监狱?
 - 终之空 re vs 素晴日?
 - CLANNAD?
 - daydream 白日梦
@@ -358,23 +357,23 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 |初雪樱|历史界面下滑无法返回；全屏窗口置顶写死|
 |樱色之云 \* 绯色之恋|点击快进打断语音|
 |牛顿与苹果树|最小化后黑屏；后台过久崩溃；常见，人名丢失（汉化锅?）；AfterStory 和 おまけ 不设保存|
-|兰斯 03|技能刷太多，自动战斗时搜索爆栈崩溃（这个自动的算法是真的拉）；首次前往 _废弃都市恐_ 时崩溃（前面不去某个地方就不会崩）；六星郁金香1号再升级崩溃![空指针](/images/hobbies/galgame/rance03_2.png)|
+|兰斯 03|技能刷太多，自动战斗时搜索爆栈崩溃（这个自动的算法是真的拉）；首次前往 _废弃都市恐_ 时崩溃（前面不去某个地方就不会崩）；六星郁金香1号再升级崩溃<br/>![空指针](/images/hobbies/galgame/rance03_2.png =400x)|
 |兰斯 02|小键盘混淆`2`/`0`|
 |兰斯 01|画像保存崩溃|
 |家喵二三事|`space`与小键盘`enter`键均无法使用；没有回跳；设置项太少了，不能跳转场|
-|Summer Pockets Reflection Blue|跟 _終のステラ_ 同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）![颜色错乱](/images/hobbies/galgame/sprb1.png)![崩溃](/images/hobbies/galgame/sprb2.png)|
+|Summer Pockets Reflection Blue|跟 _終のステラ_ 同一个引擎，所以有一样的问题（闪屏，颜色错乱，崩溃）<br/>![颜色错乱](/images/hobbies/galgame/sprb1.png =400x)<br/>![崩溃](/images/hobbies/galgame/sprb2.png =400x)|
 |近月少女的礼仪|有出现语句一闪而过丢失，没有语音和 backlog 的情况；背景音乐调到最小(10%)还是太大，又不想关|
-|終のステラ|闪屏，backlog 文字颜色错乱![颜色错乱](/images/hobbies/galgame/tsuinosutera_1.png)|
+|終のステラ|闪屏，backlog 文字颜色错乱<br/>![颜色错乱](/images/hobbies/galgame/tsuinosutera_1.png =400x)|
 |住在下体升级岛上的贫乳该如何是好？|<text style="color:red;">恶性 bug（善雅鸽汉化）：分辨率调整后黑屏，除了删档外无法解决；</text>出现点击无响应情况；贴图错位（系旧贴图未被刷新掉导致）；backlog 返回会切断语音；开 auto 切断当前语音；关 auto 后无法直接 backlog|
-|NEKOPARA vol.4|<text style="color:red;">恶性 bug：推进量达到某一阈值时则崩溃；游戏内打开其他全屏游戏时卡死</text>![贴图错误](/images/hobbies/galgame/nekopara4_1.png)![贴图错误](/images/hobbies/galgame/nekopara4_2.png)|
+|NEKOPARA vol.4|<text style="color:red;">恶性 bug：推进量达到某一阈值时则崩溃；游戏内打开其他全屏游戏时卡死</text><br/>![贴图错误](/images/hobbies/galgame/nekopara4_1.png =400x)<br/>![贴图错误](/images/hobbies/galgame/nekopara4_2.png =400x)|
 |Girl Fantasy|没有滚轮动作；语音切断；backlog 不自动更新|
 |水葬銀貨のイストリア|没有 backlog 跳转，没有 qsave & qload；退出 auto 会继续往下一句|
 |NekoMiko|无法关闭操作音效；backlog 与下一句都会切断语音|
 |真愿朦幻馆〜在时间暂停的洋馆里追寻明天的羔羊们〜|在播放语音时开启auto，会跳转下句，中断旧语音；无法分别设置是否开启 auto 下的 _单段显示后间隔时间_；backlog 混入奇怪的代码（-00001）|
 |ISLAND|backlog 无法回跳|
 |仰望夜空的星辰|自动模式速度标注反了；鼠标左右键均无法解除自动；<text style="color:red;">未阉割版的汉化无法正常启动（包括兼容模式）</text>|
-|灵感满溢的甜蜜创想|<text style="color:red;">恶性bug（民汉）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决；<br/>backlog bug（官中）：背景透明，头像变大，按钮消失，继而游戏黑屏无法打开；恢复存档无法恢复 save/load/语音收藏；鉴赏界面卡死，脱离聚焦后再聚焦出现疯狂神奇跳动</text>![贴图错误](/images/hobbies/galgame/hamidashi_error1.png)|
-|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；<br/><text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；<br/>快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有 _跳到下个选择支_ 按钮造成的</span> ![贴图错误](/images/hobbies/galgame/aokana_picture_error.png) ![程序崩溃](/images/hobbies/galgame/aokana_exe_collapse.jpg)|
+|灵感满溢的甜蜜创想|<text style="color:red;">恶性bug（民汉）：（每次）出现自动强制快进，没有任何办法取消，重启游戏均无法恢复正常。回档/删档无法解决；<br/>backlog bug（官中）：背景透明，头像变大，按钮消失，继而游戏黑屏无法打开；恢复存档无法恢复 save/load/语音收藏；鉴赏界面卡死，脱离聚焦后再聚焦出现疯狂神奇跳动</text><br/>![贴图错误](/images/hobbies/galgame/hamidashi_error1.png =400x)|
+|苍之彼方的四重奏|在播放语音（非auto）时开启auto，此时不会等待语音播放完成，而是直接进入之后的剧情，且新语音会中断旧语音；<br/><text style="color:red;">关闭游戏重开后收藏语音，旧语音书签将被从1号开始覆盖；<br/>快进时多次出现：**贴图错误，程序崩溃，画面卡死**（此时按钮全部失灵）</text><span class="heimu" title="你知道的太多了">说到底还是没有 _跳到下个选择支_ 按钮造成的</span><br/> ![贴图错误](/images/hobbies/galgame/aokana_picture_error.png =400x)<br/> ![程序崩溃](/images/hobbies/galgame/aokana_exe_collapse.jpg =400x)|
 |9-nine-新章 & 9-nine-雪色雪花雪余痕|使用 _オーバーロード_ 跳转分支时，右侧滑动条会被弹出的存档遮挡|
 |冥契的牧神节|<text style="color:red;">存档&删除存档时出现过序号错乱，错误覆盖（仅发生一次）；<br/>点击auto后按左键停止后会继续向下跳一页；</text><br/>读档后无法查看此位置前的历史记录|
 |鯨神のティアスティラ|在历史对话界面播放语音后，右键退出此界面，语音将自动终止|
@@ -394,9 +393,16 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 
 ### 变态监狱
 
+Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如果说拔作岛是在荒诞中寻找现实，那么变态监狱就是在不讲理中寻找艺术。
+
 - 拔作岛原班人马~~（又是拔作又是岛）~~，啊~好喜欢~
-  - 看到 _花丸蘭_ 的自述的时候，想道，果然是拔作岛
-- 读的有点字正腔圆了，反倒失去了味道。监狱里应该要多一点方言和模糊咬字的。
+  - 看到花丸客串的时候，绷不住了，果然是熟悉的感觉，，虽然这个角色客串一下以后也就没声音了。
+- 狱警 CV 读的有点字正腔圆了，反倒失去了味道。监狱里应该要多一点方言和模糊咬字的。
+- 背景配乐挺不错的，有 1.5 个我很喜欢的。
+- 在 galgame 里做 galgame！
+
+<!-- - <dtls alt="简单摘抄">
+</dtls> -->
 
 ### 未来广播与人工鸽
 
@@ -749,6 +755,8 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 但是画风很不错，看起来比较简洁的线条和上色居然这么有魅力。
 
 ### euphoria
+
+<Badge text="R18G" type="danger" />
 
 - 最后好精彩啊，我一时分不清善恶了。还有啊那个红色的停尸间能不能不要一直跳出来吓我啊，你妈. ..
 - 作为神器之一，应得那一份敬畏。

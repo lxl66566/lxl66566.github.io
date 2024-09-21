@@ -1,6 +1,6 @@
 <template>
   &thinsp;
-  <Badge :text="order.toString()" :type="getColor()" vertical="top" />
+  <Badge :text="text ?? order.toString()" :type="getColor()" vertical="top" />
 </template>
 
 <script>
@@ -10,6 +10,10 @@ export default {
       type: String,
       required: true,
     },
+    text: {
+      type: String,
+      required: false,
+    }
   },
   methods: {
     getColor() {

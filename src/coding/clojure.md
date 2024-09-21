@@ -106,6 +106,90 @@ vscode 安装 _Calva Spritz_ 即可。
     (:require [chapter2.2-36 :as acn]))
   ```
 
+### 包管理
+
+一般使用 `deps.edn` 作为包管理。`project.clj` 已经过时了。
+
+```clojure
+{:deps
+ {cheshire/cheshire {:mvn/version "5.11.0"}
+  org.clojure/data.json {:mvn/version "2.5.0"}}}
+```
+
+使用 `clj xxx.clj` 运行程序时会自动下载依赖。依赖通过 maven 管理，下载位置在 `~/.m2`。
+
+## 序列化
+
+如果只是需要 RPC，不涉及其他语言，可以用 [nippy](https://github.com/taoensso/nippy)，这是一个快速的 binary 序列化库。
+
+如果需要 json 等标准格式，可以用官方的 [clojure.data.json](https://github.com/clojure/data.json) 或者 [cheshire](https://github.com/dakrone/cheshire)。
+
+不过要注意，无论是 clojure.data.json 还是 cheshire，对 key type 的处理都是一坨大便。
+
+```clojure
+(ns test
+  (:require [clojure.data.json :as json]))
+(def my-data {:type :invoke, :f :txn, :value [[:w 2 1]], :time 3291485317, :process 0, :index 0})
+(println my-data)
+(def json-string (json/write-str my-data))
+(println json-string)
+(def deser-data (json/read-str json-string :key-fn keyword))
+(println deser-data)
+```
+
+输出：
+
+```
+{:type :invoke, :f :txn, :value [[:w 2 1]], :time 3291485317, :process 0, :index 0}
+{"type":"invoke","f":"txn","value":[["w",2,1]],"time":3291485317,"process":0,"index":0}
+{:type invoke, :f txn, :value [[w 2 1]], :time 3291485317, :process 0, :index 0}
+```
+
+冒号被丢失了！
+
+因此要解决这个问题，需要自行进行一些处理。
+
+```clojure
+(ns test
+  (:require [cheshire.core :as json])
+  (:require [clojure.walk :as walk]))
+
+(defn custom-serialize [data]
+  (json/generate-string
+    (walk/postwalk
+      (fn [x]
+        (if (keyword? x)
+          (str x)
+          x))
+      data)))
+
+(defn custom-deserialize [json-str]
+  (let [data (json/parse-string json-str)]
+    (walk/postwalk
+      (fn [x]
+        (if (string? x)
+          (if (.startsWith x ":")
+            (keyword (subs x 1))
+            x)
+          x))
+      data)))
+
+(def my-data {:type :invoke, :f :txn, :value [[:w 2 1]], :time 3291485317, :process 0, :index 0})
+(println my-data)
+(def json-string (custom-serialize my-data))
+(println json-string)
+(def deser-data (custom-deserialize json-string))
+(println deser-data)
+```
+
+输出：
+
+```
+{:type :invoke, :f :txn, :value [[:w 2 1]], :time 3291485317, :process 0, :index 0}
+{":type":":invoke",":f":":txn",":value":[[":w",2,1]],":time":3291485317,":process":0,":index":0}
+{:type :invoke, :f :txn, :value [[:w 2 1]], :time 3291485317, :process 0, :index 0}
+```
+
 ## 打包
 
 将 clojure 打包为 jar 文件，方便调用。

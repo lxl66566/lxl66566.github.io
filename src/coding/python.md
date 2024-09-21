@@ -25,7 +25,7 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 
 查看 [external](#external) 8. 以进行参考。
 
-### vscode 扩展
+### vscode
 
 关于开发，我直接无脑 all in [vscode](./vscode.md)。
 
@@ -43,9 +43,7 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 
 > 至于 pylyzer 在 2024.04 还是野鸡状态，根本没法用，cargo install 都会炸，所以不推荐。
 
-### 我的配置
-
-全局 `settings.json`:
+#### 我的配置
 
 ```json
 "[python]": {
@@ -66,7 +64,7 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 
 该配置在保存时自动格式化，并开启一些有用的提示。
 
-### 启用虚拟环境
+#### 启用虚拟环境
 
 创建虚拟环境并引入依赖后，代码仍会收到 vscode 的报错：
 
@@ -75,13 +73,43 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 解决方法：
 
 1. `Ctrl + Shift + P`打开命令面板，搜索`Python: Select Interpreter`
-2. 选中你的虚拟环境
+2. 选中你的虚拟环境。如果没有自动检测到，就手动打开路径，选择 `.venv/Scripts/python` 或 `.venv/bin/python`。
 
-### poetry
+### 包管理器
 
-这是一个更为现代的 python 包管理器，看起来像抄的 npm，爆杀 pip，略胜 miniconda。
+python 的包管理器可以说是百花齐放。
 
-#### 安装
+对于 python 包管理器，我的基本需求是：1. 帮我打包 + 上传 2. 支持 [PEP 621](https://peps.python.org/pep-0621/)。
+
+#### [uv](https://github.com/astral-sh/uv)
+
+新的，用 rust 写的包管理器。现在也就出了没两年，赶上了 RIIR 的热潮，引起了很多话题。
+
+2024.09 uv 在 v0.4.5 添加了 build 功能，于是我转向 uv。
+
+当然现在 uv 还存在一些问题，例如：
+
+1. 不能在中文目录下 `uv init`
+
+但是还是比 poetry 好用的。
+
+#### [pdm](https://github.com/pdm-project/pdm)
+
+据说很好用，除了性能以外没有其他问题。我还没用过，不过日后会尝试。
+
+#### poetry
+
+广泛使用的老牌 python 包管理器，指令抄的 npm。略胜 miniconda。
+
+poetry 可以说是我用的最久的 python 包管理器了。弃坑原因主要是因为：
+
+1. 其不兼容 [PEP 621](https://peps.python.org/pep-0621/)，因为 poetry 出道的时候 PEP 621 还没有出现呢。
+2. dep resolve 太慢了。
+3. 有更多更好的新兴包管理器。
+
+:::: details archived
+
+##### 安装
 
 这里是[官方教程](https://python-poetry.org/docs/#installation)。poetry 在 windows 上的 install script 可谓傻逼[^1]，开代理不能装，关代理不能装，scoop 用的也是官方 install script。只好使用 pip。
 
@@ -91,7 +119,7 @@ pip install poetry -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 [^1]: [不读系统代理，不能配置代理，不做错误处理，不具有可读性](https://t.me/withabsolutex/1304)
 
-#### 配置
+##### 配置
 
 1. poetry 默认在某个集中的位置（Windows：`C:`，Linux：`~/.cache/...`）创建虚拟环境。这不利于使用，特别是当在 vscode 中选择 python 解释器时。明明抄的 npm，为什么不像 npm 那样把依赖都放在项目下呢？
 2. poetry windows 默认在 C 盘缓存。空间吃紧的话可以把缓存转到其他盘。
@@ -101,7 +129,7 @@ poetry config virtualenvs.in-project true
 poetry config cache-dir Z:\
 ```
 
-##### 换源
+###### 换源
 
 身在中国，换源是很重要的（python 不走代理[^1]）。最好每次创建项目都换源，这样一起协作的其他人都无需手动换源。参考[文档](https://python-poetry.org/docs/repositories#project-configuration)。
 
@@ -126,7 +154,7 @@ priority = "default"
 
 :::
 
-#### 基本命令
+##### 基本命令
 
 - 新建项目：`poetry new <package name>`
   - 创建 .toml 文件：`poetry init`，然后跟着提示填入信息
@@ -142,15 +170,17 @@ priority = "default"
   - 删除：`poetry env remove --all`
 - 运行：`poetry run python <filename>.py`
 
-### miniconda
+::::
 
-提供 python 包管理与虚拟环境。我已弃用 miniconda，转向 poetry。
+#### miniconda
+
+提供 python 包管理与虚拟环境。我已弃用 miniconda。
 
 ::: details archived
 
 Anaconda 体积过于庞大（6G+），**强烈建议[安装 miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda 捆绑祸害了多少编程新人！（包括我）</span> windows 可以使用 [scoop](../farraginous/recommend_packages.md#scoop) 一行搞定。
 
-### 基本命令
+##### 基本命令
 
 ```sh
 conda create -n <name> python=<version> # 创建环境
@@ -162,46 +192,30 @@ conda remove -n <name> --all  # 删除环境，也可进入 conda 安装目录�
 conda list  # 查看环境内工具包
 ```
 
-### 高级技巧
+##### 高级技巧
 
-#### bat 文件中调用 conda 指令
-
-调用前加入`call activate.bat`指令
-
-#### 创建纯净环境
-
-我们使用[上述指令](#基本命令)创建环境后：
-
-<ZoomedImg alt="anaconda_list" src="/images/coding/python/anaconda_1.png" scale="65%" />
-
-可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
-
-这里给出一个解决方法：
-
-1. 在任意目录下新建 txt 文档，输
-
-   ```batch
-   @EXPLICIT
-   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/python-3.9.7-h6244533_1.tar.bz2
-   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/pip-21.2.4-py39haa95532_0.tar.bz2
-   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4-py39haa95532_0.tar.bz2
-   ```
-
-   并保存为`env.txt`（名字不重要）
-
-2. 该目录下执行`conda create --name <name> --file env.txt`
-
-![anaconda_pureenv](/images/coding/python/anaconda_2.png)
-
-这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller)进行打包前的准备。
+- bat 文件中调用 conda 指令：调用前加入`call activate.bat`指令
+- 创建纯净环境：我们使用[上述指令](#基本命令)创建环境后，可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
+  <ZoomedImg alt="anaconda_list" src="/images/coding/python/anaconda_1.png" scale="65%" />
+  这里给出一个解决方法：
+  1. 在任意目录下新建文件，输入以下内容并保存为 `env.txt`（名字不重要）。
+  ```batch
+  @EXPLICIT
+  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/python-3.9.7-h6244533_1.tar.bz2
+  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/pip-21.2.4-py39haa95532_0.tar.bz2
+  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4-py39haa95532_0.tar.bz2
+  ```
+  2. 该目录下执行`conda create --name <name> --file env.txt`
+     ![anaconda_pureenv](/images/coding/python/anaconda_2.png)
+     这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller)进行打包前的准备。
 
 :::
 
-### 其他
+#### pip
 
-关于包管理器，除了 _poetry_ 和 _conda_ 外，还有例如 [_pdm_](https://github.com/pdm-project/pdm) 和 [_uv_](https://github.com/astral-sh/uv) 可以尝试使用。
+python（windows 下）自带的包管理器。其使用一个全局环境，如果需要局部环境，需要与 venv 结合。
 
-如果不使用现代包管理器（如果用 pip），需要在项目下导出一个 `requirements.txt` 用于声明项目依赖。可以用 pip 导出，也可以自己写模块。可以不写版本，只写每行一个模块名。
+pip 使用 `requirements.txt` 用于声明项目依赖，使用时只需 `pip install -r requirements.txt` 即可。该文件可以用 pip 导出，也可以自己写模块。可以不写版本，只写每行一个模块名。
 
 ## 语言相关
 
