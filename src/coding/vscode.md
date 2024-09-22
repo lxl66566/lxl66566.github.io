@@ -33,6 +33,8 @@ tag:
 
 你可以在[这里](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/KeyboardReferenceSheet.png)看到快捷键 cheetsheet。可以看出有很多从 vim 来的常见操作；并且在 vim 插件下这里的一些快捷键也会改变。
 
+还有，许多编辑器用 `Ctrl + d` 克隆当前行，但是 vscode 默认不用这个键绑定。所以可以去设置里把这个动作改为 `Ctrl + d`。([ref](https://stackoverflow.com/questions/70120201))
+
 ## 插件
 
 编程需要有好用的工具，编程语言的流行离不开好用的 linter, highlighter, formatter。
