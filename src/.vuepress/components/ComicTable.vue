@@ -513,6 +513,11 @@ const data = [
   { id: "(ex)", aScore: 7.4, bScore: 3, info: "#蔚蓝档案 #无R18", otherlink: "https://exhentai.org/g/2675592/d383fb7849/", bak: "https://telegra.ph/Sanctum-Archive-chapter3-雪解けハチノス-はちかり-アロナの隠し事--阿罗娜的小秘密-ブルーアーカイブ-中国翻訳-09-15" },
   { id: "473039", aScore: 7.2, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/ふずめ-アヒトスソーフラント水着おしさんソーフ嬢12-ブルーアーカイブ-中国翻訳-03-08" },
   { id: "492148", aScore: 7.8, bScore: 8.1, info: "#蔚蓝档案 #催眠" },
+  { id: "474535", aScore: 8.6, bScore: 2.3, info: "#3P #无插入", bak: "https://telegra.ph/あめうさぎ-飴玉コン-後輩ちゃんとえちえちおうちでーと-DL版中国翻訳-09-22" },
+  { id: "474282", aScore: 7.7, bScore: 2, info: "#百合 #请问您今天要来点兔子吗", bak: "https://telegra.ph/あめうさぎ-飴玉コン-チノちゃんとおはよう朝えっち-ご注文はうさぎですか-DL版中国翻訳-09-20" },
+  { ie: "474035", aScore: 8.2, bScore: 5.7, info: "#舰队Collection #3P #loli", bak: "https://telegra.ph/C102-たこ焼き畑-たこやきよし-だいろくリフレ-雷電あわあわバスタイム-艦隊これくしょん--艦これ--中国翻訳-09-18" },
+  { ie: "(ex)", aScore: 5, bScore: 8.3, info: "#青梅竹马 #纯爱 #无H #社恐", otherlink: "https://exhentai.org/g/2667246/f212c6edb7/", bak: "https://telegra.ph/山本広大-りーちゃん--Fanboxおまけ-進行中-09-16" },
+  { ie: "473604", aScore: 5.6, bScore: 4, info: "#雌小鬼", bak: "https://telegra.ph/C102-もちむぎ畑-Mochimugi-小悪魔なメスガキに搾り取られる-DL版中国翻译-09-16" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
