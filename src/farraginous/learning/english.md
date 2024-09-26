@@ -97,6 +97,10 @@ anki 的云同步裸连很不稳，可能需要科学上网。
 
 ## 零散知识点
 
+### 单词
+
+- genius vs ingenious：都是 _天才的_，前者形容人(n.)，后者形容事物(adj.) [ref](https://www.quora.com/What-is-the-difference-between-genius-and-ingenious)
+
 ### memes
 
 - motorway 不能通 motor
