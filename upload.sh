@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euxof pipefail
+set -exof pipefail
 
 urldecoder -e src/.vuepress/.cache -e src/.vuepress/.temp -e src/.vuepress/dist --escape-space 'src/**/*.md' 'src/.vuepress/components/*'
 git add -A
