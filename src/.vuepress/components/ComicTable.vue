@@ -208,7 +208,7 @@ const data = [
   { id: "480058", aScore: 9, bScore: 7.5, info: "#合集 #兽耳 #纯爱" },
   { id: "503344", aScore: 5.4, bScore: 6, info: "#蔚蓝档案 #媚药 #雌小鬼", bak: "https://telegra.ph/C103-ウサギBOSS-神奈弥沙-悟リの教示者梅花園-ブルーアーカイブ-中国翻訳-03-31" },
   { id: "315375", aScore: 5.7, bScore: 6.4, info: "#兽耳 #催眠" },
-  { id: "502827", aScore: 9.3, bScore: 9.4, info: "#生肉 #兄妹" },
+  { id: "508057", aScore: 9.3, bScore: 9.4, info: "#兄妹 妹孕ませないと出られない島" },
   { id: "500309", aScore: 8.7, bScore: 8.9, info: "#惩罚游戏 #师生" },
   { id: "(ex)", aScore: 8.5, bScore: 8.6, info: "理想の妹", otherlink: "https://exhentai.org/g/2209802/1909fd55ef/", bak: "https://telegra.ph/C99-squeezecandyheaven-いちはや-作ろう理想の妹-中国翻訳-08-02" },
   { id: "(ex)", aScore: 7.8, bScore: 7.6, info: "#兄妹 #谜语", otherlink: "https://exhentai.org/g/2209803/bff243ab20/", bak: "https://telegra.ph/C99-squeezecandyheaven-いちはや-妹とこんまぽんち-中国翻訳-08-02" },
@@ -518,6 +518,8 @@ const data = [
   { ie: "474035", aScore: 8.2, bScore: 5.7, info: "#舰队Collection #3P #loli", bak: "https://telegra.ph/C102-たこ焼き畑-たこやきよし-だいろくリフレ-雷電あわあわバスタイム-艦隊これくしょん--艦これ--中国翻訳-09-18" },
   { ie: "(ex)", aScore: 5, bScore: 8.3, info: "#青梅竹马 #纯爱 #无H #社恐", otherlink: "https://exhentai.org/g/2667246/f212c6edb7/", bak: "https://telegra.ph/山本広大-りーちゃん--Fanboxおまけ-進行中-09-16" },
   { ie: "473604", aScore: 5.6, bScore: 4, info: "#雌小鬼", bak: "https://telegra.ph/C102-もちむぎ畑-Mochimugi-小悪魔なメスガキに搾り取られる-DL版中国翻译-09-16" },
+  { ie: "532457", aScore: 7.2, bScore: 4.6, info: "#师生", bak: "https://telegra.ph/青空少女-白根戴斗-地味子なんかに負けないもんっ-中国翻訳-DL版-09-27" },
+  { ie: "(ex)", aScore: 7.4, bScore: 6.5, info: "#いちはや #师生 #出轨 先生の愛人", otherlink: "https://exhentai.org/g/2909383/f2386ea5b1/", bak: "https://telegra.ph/COMIC124-squeezecandyheaven-いちはや-先生の愛人-中国翻訳-05-05" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

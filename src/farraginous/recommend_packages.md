@@ -149,7 +149,8 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 
 跑在 Android 上的命令行。用来远程连服务器，搞点轻度开发，或者干脆跑点 cli/tui 程序。我还会装 [TermuxArch](../articles/linux/install_and_config.md#termuxarch)。
 
-**不要在 Google Play 下载！** 请去 Github 或 F-Droid 下载。
+- **不要在 Google Play 下载！** 请去 Github 或 F-Droid 下载。
+- 国内用户可以尝试一下 [ZeroTermux](https://github.com/hanxinhao000/ZeroTermux)，一个改版，多了挺多方便的功能。
 
 ### 音乐播放器
 
@@ -399,9 +400,13 @@ diff 增强插件，为 github 使用。
 
 ## 其他软件插件
 
+### [better-qqnt](https://t.me/aa1078bb870c41c6b675624cd784)
+
+闭源的 QQNT 插件系统，使用更简单。
+
 ### [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)
 
-一个 QQNT 的插件。我很早就知道了，然而当时在 QQNT 最新版本上会炸，因此没有使用。20240529 因为一些契机再次尝试发现可用，于是写入此处。
+一个开源的 QQNT 插件系统。我很早就知道了，然而当时在 QQNT 最新版本上会炸，因此没有使用。20240529 因为一些契机再次尝试发现可用，于是写入此处。
 
 我安装的插件：
 
