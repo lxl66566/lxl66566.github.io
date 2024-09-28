@@ -56,22 +56,30 @@ export default hopeTheme({
 			lightTheme: "light",
 			darkTheme: "transparent_dark",
 		},
+		markdownHint: {
+			hint: true,
+			alert: true,
+		},
+		markdownMath: {
+			copy: true,
+		},
+		markdownImage: {
+			lazyload: true,
+			figure: true,
+			mark: true,
+			size: true,
+		},
+		markdownTab: {
+			codeTabs: true,
+			tabs: true,
+		},
 		mdEnhance: {
 			align: true,
-			alert: true,
-			codetabs: true,
 			// attrs: true,
-			imgLazyload: true,
-			imgSize: true,
-			imgMark: true,
-			figure: true,
 			include: true,
-			katex: { copy: true },
 			spoiler: true, // https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html
-			hint: true,
 			mark: true,
 			footnote: true,
-			tabs: true,
 			tasklist: true,
 			mermaid: true,
 			stylize: [
