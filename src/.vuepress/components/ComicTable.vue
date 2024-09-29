@@ -515,11 +515,14 @@ const data = [
   { id: "492148", aScore: 7.8, bScore: 8.1, info: "#蔚蓝档案 #催眠" },
   { id: "474535", aScore: 8.6, bScore: 2.3, info: "#3P #无插入", bak: "https://telegra.ph/あめうさぎ-飴玉コン-後輩ちゃんとえちえちおうちでーと-DL版中国翻訳-09-22" },
   { id: "474282", aScore: 7.7, bScore: 2, info: "#百合 #请问您今天要来点兔子吗", bak: "https://telegra.ph/あめうさぎ-飴玉コン-チノちゃんとおはよう朝えっち-ご注文はうさぎですか-DL版中国翻訳-09-20" },
-  { ie: "474035", aScore: 8.2, bScore: 5.7, info: "#舰队Collection #3P #loli", bak: "https://telegra.ph/C102-たこ焼き畑-たこやきよし-だいろくリフレ-雷電あわあわバスタイム-艦隊これくしょん--艦これ--中国翻訳-09-18" },
-  { ie: "(ex)", aScore: 5, bScore: 8.3, info: "#青梅竹马 #纯爱 #无H #社恐", otherlink: "https://exhentai.org/g/2667246/f212c6edb7/", bak: "https://telegra.ph/山本広大-りーちゃん--Fanboxおまけ-進行中-09-16" },
-  { ie: "473604", aScore: 5.6, bScore: 4, info: "#雌小鬼", bak: "https://telegra.ph/C102-もちむぎ畑-Mochimugi-小悪魔なメスガキに搾り取られる-DL版中国翻译-09-16" },
-  { ie: "532457", aScore: 7.2, bScore: 4.6, info: "#师生", bak: "https://telegra.ph/青空少女-白根戴斗-地味子なんかに負けないもんっ-中国翻訳-DL版-09-27" },
-  { ie: "(ex)", aScore: 7.4, bScore: 6.5, info: "#いちはや #师生 #出轨 先生の愛人", otherlink: "https://exhentai.org/g/2909383/f2386ea5b1/", bak: "https://telegra.ph/COMIC124-squeezecandyheaven-いちはや-先生の愛人-中国翻訳-05-05" },
+  { id: "474035", aScore: 8.2, bScore: 5.7, info: "#舰队Collection #3P #loli", bak: "https://telegra.ph/C102-たこ焼き畑-たこやきよし-だいろくリフレ-雷電あわあわバスタイム-艦隊これくしょん--艦これ--中国翻訳-09-18" },
+  { id: "(ex)", aScore: 5, bScore: 8.3, info: "#青梅竹马 #纯爱 #无H #社恐", otherlink: "https://exhentai.org/g/2667246/f212c6edb7/", bak: "https://telegra.ph/山本広大-りーちゃん--Fanboxおまけ-進行中-09-16" },
+  { id: "473604", aScore: 5.6, bScore: 4, info: "#雌小鬼", bak: "https://telegra.ph/C102-もちむぎ畑-Mochimugi-小悪魔なメスガキに搾り取られる-DL版中国翻译-09-16" },
+  { id: "532457", aScore: 7.2, bScore: 4.6, info: "#师生", bak: "https://telegra.ph/青空少女-白根戴斗-地味子なんかに負けないもんっ-中国翻訳-DL版-09-27" },
+  { id: "(ex)", aScore: 7.4, bScore: 6.5, info: "#いちはや #师生 #出轨 先生の愛人", otherlink: "https://exhentai.org/g/2909383/f2386ea5b1/", bak: "https://telegra.ph/COMIC124-squeezecandyheaven-いちはや-先生の愛人-中国翻訳-05-05" },
+  { id: "531267", aScore: 7.4, bScore: 8.8, info: "#蔚蓝档案 #雌小鬼 #巨乳" },
+  { id: "313322", aScore: 7, bScore: 6.4, info: "#调教 #束缚 #兽耳" },
+  { id: "532149", aScore: 8, bScore: 8.8, info: "#触手 #扶她 #长篇", bak: "https://telegra.ph/さき千鈴-触手エロ乳パーティー-中国翻訳-無修正-DL版-09-25" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

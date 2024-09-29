@@ -62,9 +62,10 @@ tag:
 
 这里是[我的 mpv 配置文件](https://github.com/lxl66566/dotfile/tree/archlinux/home/absolutex/.config/mpv)。
 
-不得不提，这玩意的文档是**垃圾**的水平。我想实现的 globalspeed 里提供的功能，直接用 conf 是写不出来的，写 user script 又没有文档查。。。
+- 首先建议装一个 [uosc](https://github.com/tomasklaen/uosc)，除了好看之外还提供了许多其他功能。
+- ~~随机播放：[autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)读取当前文件夹所有文件为 playlist，然后[手动 shuffle](https://www.reddit.com/r/mpv/comments/blrpwa)~~ uosc 内部有自带
 
-- 随机播放：[autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)读取当前文件夹所有文件为 playlist，然后[手动 shuffle](https://www.reddit.com/r/mpv/comments/blrpwa)
+不得不提，这玩意的文档是**垃圾**的水平。我想实现的 [globalspeed](#global-speed) 里提供的功能，直接用 conf 是写不出来的，写 user script 又没有文档查。。。
 
 ### RAM Disk
 

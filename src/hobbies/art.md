@@ -26,6 +26,7 @@ tag:
 <!-- prettier-ignore -->
 | 名 | 时间 | 评价 |
 | :-: | :-: | :-: |
+| No More Bets - 2023 | 2024.09.29 | 虽然剧情有点刻意，不过拍的不错 |
 | 金蝉脱壳 <OrderBadge order=1 /><OrderBadge text="三刷" order=3 /> | 2024.09.21 | 经典作品，把我的感觉还回来了 |
 | 金蝉脱壳2：冥府 <OrderBadge order=2 /> | 2024.09.21-<br/>观看中止 | 确实烂，[影评](https://movie.douban.com/review/9437758/)说得对 |
 | 天才计划 - 2020 | 2024.09.20 | <dtlslong text="有点简单 + 夸张。感觉比《金蝉脱壳》要差多了。"/> |
