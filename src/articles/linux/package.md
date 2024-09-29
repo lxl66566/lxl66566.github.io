@@ -326,13 +326,20 @@ atuin import auto
 
 更多 keybindings 请前往 [doc](https://docs.atuin.sh/configuration/key-binding/#atuin-ui-shortcuts).
 
+### 搜索
+
+文字搜索当然是用 ripgrep，如果嫌命令行难用也可以用 vscode 打开文件夹然后全局搜索即可。
+
+实时搜索当然是 fd，RIIR 的 find。
+
+主要难的是按文件名的全系统索引搜索，类似 windows everything 那样。
+
+- locate 能用，感觉还是差了点。
+  - nixos 的 locate 可以简单配自动更新，还不错
+- fsearch，怎么我第一次引入文件夹后就不能再往里添加路径了？
+- 这些应用都不能提供实时文件变化检测，比 everything 还是差了一个级别。
+
 ### [neovim](../../coding/vim.md)
-
-### [locate](https://man7.org/linux/man-pages/man1/locate.1.html)
-
-快速搜索，其维护了一个数据库，使用 `sudo updatedb` 更新（默认开机时自动执行），搜索时不再遍历目录。
-
-有 mlocate 和 plocate 两个常用实现。一般用后者。
 
 ### eza
 

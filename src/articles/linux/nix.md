@@ -271,6 +271,10 @@ ps. 理论上确实没必要为 `/nix` 打快照；我现在的解法是放一�
 
 教程中把 `/var` 加入 impermanence，而我更喜欢用 btrfs 子卷管理。由于直接在 `/var` 创建子卷，子卷的 parent 会指向 `/`，所以我进了一次 live cd 创建子卷，保持 `var` 子卷与 `root`、`home` 等同级，然后把东西移过去，重启后写 `hardware-configuration.nix` 然后 rebuild 就行。
 
+之后我还尝试了其他东西，踩了一些坑：
+
+1. 不要把 `/etc/shadow` 或 `/etc/passwd` 加入持久化。我加入以后开不了机，无法登录。
+
 ### 开发环境
 
 我一直使用 vscode，但是在 nixos 上，还是有点难用的。

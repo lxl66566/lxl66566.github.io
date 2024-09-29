@@ -152,6 +152,10 @@ tag:
 
 - ~~typst formatter~~ [typstyle](https://github.com/Enter-tainer/typstyle)
 
+### 文学创作灵感
+
+- 门是拥有“灵”的， 被打开只是因为无法抗拒钥匙。
+
 ## 实物创作灵感
 
 - [ ] 不压耳朵（开槽?）的侧睡枕

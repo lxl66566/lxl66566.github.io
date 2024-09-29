@@ -94,6 +94,7 @@ tag:
 2. [TypeScript & JavaScript](./tsjs.md)
 3. [html](./html.md)
 4. [MDX](./mdx.md)
+5. [配色方案](../farraginous/recommend_websites.md#资源)
 
 ## [Android 开发](./android.md)
 

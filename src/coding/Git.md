@@ -467,6 +467,10 @@ git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 2. 清理。
    ::: tabs
 
+   @tab bfg-repo-cleaner（推荐）
+
+   [bfg-repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 是我某天刷 nix store 时看到的，尝试了一下，也非常不错。
+
    @tab filter-repo（推荐）
 
    [git-filter-repo](https://github.com/newren/git-filter-repo)

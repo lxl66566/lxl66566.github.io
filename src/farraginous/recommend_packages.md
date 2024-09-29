@@ -326,6 +326,10 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 
 - 推荐搭配[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Adblock-Rule)食用：复制订阅规则 URL（根据情况选择是否反代），粘贴到 _Adguard - 设置 - 过滤器 - 自定义 - 添加自定义过滤器_ 中。
 
+### [B 站空降助手](https://github.com/hanydd/BilibiliSponsorBlock)
+
+跳过 B 站视频的广告片段！这个插件的构思非常好，让用户自行标记广告片段，一旦标记以后，其他人看视频都可以跳过广告。和手机骚扰来电标记有异曲同工之妙。
+
 ### 下载器
 
 参考 [下载器横评](../articles/downloaders.md)。

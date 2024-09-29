@@ -163,6 +163,9 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 #### 资源
 
 - 动效图标：[unicorn icons](https://unicornicons.com/)
+- 配色方案
+  - [material](https://m3.material.io/styles/color/static/baseline)
+  - [radix](https://www.radix-ui.com/colors/custom)
 
 #### 工具
 
