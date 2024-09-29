@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 29 Sep 2024 11:34:53 GMT</pubDate>
-    <lastBuildDate>Sun, 29 Sep 2024 11:34:53 GMT</lastBuildDate>
+    <pubDate>Sun, 29 Sep 2024 12:15:55 GMT</pubDate>
+    <lastBuildDate>Sun, 29 Sep 2024 12:15:55 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>爱好</category>
@@ -969,6 +969,10 @@
 <li>然后发现我的 <code>/etc/nixos</code> 配置本身没有被 impermanence。。。遂从原先的 <code>/</code> 里拷贝之，加入 impermanence，rebuild 即可。</li>
 </ol>
 <p>教程中把 <code>/var</code> 加入 impermanence，而我更喜欢用 btrfs 子卷管理。由于直接在 <code>/var</code> 创建子卷，子卷的 parent 会指向 <code>/</code>，所以我进了一次 live cd 创建子卷，保持 <code>var</code> 子卷与 <code>root</code>、<code>home</code> 等同级，然后把东西移过去，重启后写 <code>hardware-configuration.nix</code> 然后 rebuild 就行。</p>
+<p>之后我还尝试了其他东西，踩了一些坑：</p>
+<ol>
+<li>不要把 <code>/etc/shadow</code> 或 <code>/etc/passwd</code> 加入持久化。我加入以后开不了机，无法登录。</li>
+</ol>
 <h3>开发环境</h3>
 <p>我一直使用 vscode，但是在 nixos 上，还是有点难用的。</p>
 <ul>
@@ -2009,7 +2013,7 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
       <link>https://absx.pages.dev/essay/2024.html</link>
       <guid>https://absx.pages.dev/essay/2024.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2024</source>
-      <description>2024 20240928 嵌字守则上可以看到人们对艺术的执着。 20240927 找 bug 就是程序领域的海龟汤。 20240919 游戏平台应该与区块链结合。 20240829 灭蟑记（八） 夜寐一时辰而无眠。东瀛漫画，沉醉良久，下廷驳倒上廷者也。睡意全无，五更起而作也。 码思泉涌之时，余光现一活物暗影游动于书架上。敲山震之，逼于死角。速点灯视之...</description>
+      <description>2024 20240928 嵌字守则上可以看到人们对艺术的执着。 20240927 找 bug 就是程序领域的海龟汤。 20240926 可怕的不是选择了错误的道路，而是被命运选择而不自知 20240919 游戏平台应该与区块链结合。 20240829 灭蟑记（八） 夜寐一时辰而无眠。东瀛漫画，沉醉良久，下廷驳倒上廷者也。睡意全无，五更起而作也。 码思...</description>
       <category>随笔</category>
       <pubDate>Sat, 06 Jan 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -2017,6 +2021,8 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>嵌字守则上可以看到人们对艺术的执着。</p>
 <h2>20240927</h2>
 <p>找 bug 就是程序领域的海龟汤。</p>
+<h2>20240926</h2>
+<p>可怕的不是选择了错误的道路，而是被命运选择而不自知</p>
 <h2>20240919</h2>
 <p>游戏平台应该与区块链结合。</p>
 <h2>20240829</h2>
