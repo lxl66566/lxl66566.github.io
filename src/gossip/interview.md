@@ -35,7 +35,7 @@ category:
 
 ## 简历模板
 
-我用 [typst](../farraginous/learning/typst.md) 比较多，好久之前就盯上了 [OrangeX4 的简历模板](https://github.com/OrangeX4/Chinese-Resume-in-Typst)。字体可能要折腾一会儿，但是确实够好看。
+我用 [typst](../learning/typst.md) 比较多，好久之前就盯上了 [OrangeX4 的简历模板](https://github.com/OrangeX4/Chinese-Resume-in-Typst)。字体可能要折腾一会儿，但是确实够好看。
 
 ## 2024 春，实习
 

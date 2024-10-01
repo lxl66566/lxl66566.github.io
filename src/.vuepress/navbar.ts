@@ -43,6 +43,7 @@ export default navbar([
 		link: "/articles/",
 		icon: "blog",
 	},
+	{ text: "学习", link: "/learning/", icon: "pen" },
 	{
 		text: "闲聊",
 		link: "/gossip/",

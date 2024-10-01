@@ -139,7 +139,7 @@ export default sidebar({
 			children: ["2024", "2023.md", "2022.md", "earlier.md"],
 		},
 	],
-	"/farraginous/learning/": [
+	"/learning/": [
 		{
 			text: "学习笔记",
 			link: "/farraginous/learning/",
@@ -148,6 +148,7 @@ export default sidebar({
 				"english.md",
 				"ulpb.md",
 				"typst.md",
+				"ps.md",
 				"physics.md",
 				"complex_functions.md",
 				"circuit_analysis.md",

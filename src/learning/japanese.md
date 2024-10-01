@@ -8,7 +8,7 @@ tag:
 
 # 日本語勉強
 
-我也说不上玩 [galgame](../../hobbies/galgame.md) 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。
+我也说不上玩 [galgame](../hobbies/galgame.md) 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。
 
 ## 关于学习
 
@@ -16,7 +16,7 @@ tag:
 
 我现在的学习方式是**背单词 + 学语法 + 多听读**（但是很惭愧，语法基本没学，因为确实日常都用不到），如果为了考试还得**刷题**。语言学习说到底也就那么点东西。
 
-也有推一点 galgame 生肉，例如 _アンレス テルミナリア_。会开着 Luna Translator（这玩意真适合学习），给出日文的注音，查词。详见[galgame - 资源](../../hobbies/galgame.md#资源)。~~（不过如果能开英文还是会开英文的，例如 _NekoMiko_ 和 _家喵二三事_~~
+也有推一点 galgame 生肉，例如 _アンレス テルミナリア_。会开着 Luna Translator（这玩意真适合学习），给出日文的注音，查词。详见[galgame - 资源](../hobbies/galgame.md#资源)。~~（不过如果能开英文还是会开英文的，例如 _NekoMiko_ 和 _家喵二三事_~~
 
 galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完全不够。应试的话还得多听其他东西。
 
@@ -37,7 +37,7 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
 - 阅读：[天声人語](https://www.douban.com/group/612024/)
 - 例文：[例文買取センター](https://reibuncnt.jp/)
 - 百科：[コトバンク](https://kotobank.jp/)
-- 见 [galgame](../../hobbies/galgame.md)
+- 见 [galgame](../hobbies/galgame.md)
 - 工具
   - [yomichan](https://chromewebstore.google.com/detail/yomichan/nbfhegiidojdmnahegkphdoabohfmoof?hl=ja&authuser=0)：浏览器扩展，划词显示汉字读音。虽然官方宣布不再维护，让用户都去 [yomitan](https://github.com/themoeway/yomitan)，但是我用下来还是感觉 yomichan 好用多了（当然仅在 chromium 系浏览器上，因为 firefox 没有），装了就能用。而 yomitan 则是有一大堆设置项，结果都设完了还是不能用。
 
@@ -47,7 +47,7 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
 
 jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 的自信，否则我不考。（结果还是没有自信地考了）
 
-![然后低分飘过了](/images/farraginous/learning/japanese/n1result.jpg =300x)
+![然后低分飘过了](/images/learning/japanese/n1result.jpg =300x)
 
 做了点 n1 卷子，这玩意要求的词汇量/语法是真高，很多词/语法并不会在日常里出现，直接抓瞎。
 

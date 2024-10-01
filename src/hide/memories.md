@@ -72,7 +72,7 @@ feed: false
 - 编程产出减少，主要写了点 python。
   - 一键脚本
   - 协助做 GUI
-- 开始用 [typst](../farraginous/learning/typst.md) 并为社区做了点微小贡献
+- 开始用 [typst](../learning/typst.md) 并为社区做了点微小贡献
 
 分阶段：
 
@@ -141,7 +141,7 @@ feed: false
 - 经点醒，从第三周中期开始上课不听，课后 b 站自学。其后**开始翘课**。由于开摆原因，学习进度总体落后。
 - 开始每日早餐泡面，不上课就随便零食吃点
 - 退坑 [osu](../hobbies/rhythm_games.md#osu) 47 天，退坑黎明杀机
-- 开始使用[双拼](../farraginous/learning/ulpb.md)
+- 开始使用[双拼](../learning/ulpb.md)
 - 初步使用 ArchWSL，Debian 10 (VPS) 等 linux 系统
 - 购买 [VPS](../articles/proxy/vps.md)，自建节点
 - [root 与模块](../articles/mobile/settings.md#刷机)
