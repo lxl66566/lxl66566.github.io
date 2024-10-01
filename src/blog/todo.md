@@ -19,5 +19,5 @@ category:
 ## 鸽了鸽了
 
 - [ ] awesome Github repos (?)
-- [ ] 零食推荐 (?)
+- [x] 零食推荐 (?)
 - [ ] bilibili up 推荐 (?)

@@ -335,7 +335,7 @@ const data = [
   { id: "ssni-404", aScore: 3.1, bScore: 7.5 },
   { id: "miaa-525", aScore: 8.5, bScore: 5 },
   { id: "midv-519", aScore: 9.7, bScore: 5.5, name: "担任教師の僕は生徒の誘惑に負けて放課後ラブホで何度も、何度も、セックスしてしまった… 九野ひなの" },
-  { id: "midv-612", aScore: 7.5, bScore: 7.6, name: "" },
+  { id: "midv-612", aScore: 7.5, bScore: 7.6, name: "痴●チャンスデー 入試の朝…受験生は好き放題に犯●れても騒ぎに出来ない…！ 九野ひなの" },
   { id: "start-125", aScore: 7.3, bScore: 5.2, u: true },
   { id: "midv-229", aScore: 8.9, bScore: 7, u: true, name: "担任教師の僕は生徒の誘惑に負けて放課後ラブホで何度も、何度も、セックスしてしまった… 石川澪" },
   { id: "piyo-186", aScore: 9, bScore: 10.2, name: "^1 #催眠 演的不像，但是还是好看 『絶対に俺の子を孕ませてやる！』ガンギマリ眠姦×中出し×レ●プ！" },
@@ -359,6 +359,8 @@ const data = [
   { id: "ipx-565", aScore: 7.9, bScore: 7.6, u: true, name: "死ぬほど嫌いな義父の大好物は女子○生のワタシでした… 犯●れながら何度もイカされる屈辱レ×プ 桃乃木かな" },
   { id: "ipx-368", aScore: 8.2, bScore: 5.3, u: true, name: "萌える絶対領域 誘惑 挑発 小悪魔ニーハイ制服美少女 桃乃木かな" },
   { id: "HUNBL-158", aScore: 7, bScore: 6.2, name: "家出娘 監禁バスルーム連鎖レ×プ" },
+  { id: "midv-599", aScore: 7.5, bScore: 7, u: true, name: "電車で通学中のミニスカJ系を囲い込み集団痴● ハミ出しデカ尻を揉みまくりザーメンぶっかけ18発サイレント輪● 小野六花" },
+  { id: "ibw-740z", aScore: 8.4, bScore: 7.6, name: "故郷の純朴美少女 ～親には内緒の妹近親相姦中出し性交～ 永瀬ゆい" },
 ];
 export default {
   name: "AvTable",

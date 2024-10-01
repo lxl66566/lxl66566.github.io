@@ -16,6 +16,7 @@ category:
 2. [双拼](./ulpb.md)
 3. [typst](./typst.md)
 4. [English learning](./english.md)
+5. [PS](./ps.md)
 
 ## 大学课程
 

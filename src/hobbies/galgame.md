@@ -122,7 +122,7 @@ LunaTranslator 使用心得：
 |君と彼女と彼女の恋|10h16min|2023.08.04-<br/>2023.10.26|9.8|4.2|5.4|
 |牛顿与苹果树|18h9min|2023.10.03-<br/>2023.10.25|9.2|7|2|
 |哥哥，早上起床之前都要抱紧我哦！<OrderBadge order=1 />|>11h|2021.02.14?-<br/>2023.09.25|2|8.2|9|
-|Summer Pockets Reflection Blue|49h45min|2023.06.22-<br/>2023.08.03|10|8.6|<span class="heimu" title="如果不崩溃的话">9.</span>5|
+|Summer Pockets Reflection Blue|49h45min|2023.06.22-<br/>2023.08.03|<text style="color:blue;">10.9</text>|8.6|<span class="heimu" title="如果不崩溃的话">9.</span>5|
 |真愿朦幻馆〜在的洋馆里追寻明天的羔羊们〜|28h2min|2022.12.30-2023.06.20|5|7.1|8.4|
 |抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？<OrderBadge order=1 /><Badge text="nolinux" type="note" />|39h53min|2023.04.11-<br/>2023.06.12|8|5|<text style="color:red;">0</text>|
 |[ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか](https://t.me/erogamecloud/3647)|3h10min|2023.05.27|2.4|9.4|1|
@@ -140,7 +140,7 @@ LunaTranslator 使用心得：
 |常轨脱离Creative<OrderBadge order=1 />|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
 |euphoria|23h17min|2022.12.06-<br/>2022.12.23|9.8|4|3.2|
 |NEKOPARA Vol.3 ネコたちのアロマティゼ<OrderBadge order=4 />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|6|
-|冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|<text style="color:blue;">12</text>|5|2|
+|冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|<text style="color:blue;">10.5</text>|5|2|
 |堕落ロイヤル聖処女|2h2min+|2022.04.27-<br/>2022.10.01|0|3.7|<text style="color:red;">0</text>|
 |七音学园-旅行部-·箱根篇<OrderBadge order=2 />|<2h5min>|2022.09.22-<br/>2022.09.24|7.5|9.8|9|
 |七音学园-旅行部-·伊香保篇<OrderBadge order=1 />|<2h23min>|2022.09.18|7.7|9.8|9|
