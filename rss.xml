@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 01 Oct 2024 17:05:19 GMT</pubDate>
-    <lastBuildDate>Tue, 01 Oct 2024 17:05:19 GMT</lastBuildDate>
+    <pubDate>Wed, 02 Oct 2024 02:33:25 GMT</pubDate>
+    <lastBuildDate>Wed, 02 Oct 2024 02:33:25 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -23,8 +23,8 @@
     <category>随笔</category>
     <item>
       <title>修图嵌字</title>
-      <link>https://absx.pages.dev/farraginous/learning/ps.html</link>
-      <guid>https://absx.pages.dev/farraginous/learning/ps.html</guid>
+      <link>https://absx.pages.dev/learning/ps.html</link>
+      <guid>https://absx.pages.dev/learning/ps.html</guid>
       <source url="https://absx.pages.dev/rss.xml">修图嵌字</source>
       <description>修图嵌字 因为一些契机，开始学修图/嵌字。 此处内容肯定以 PS 为主。如果使用其他工具会先声明。 下载 PS：详见。我目前用的 2024 版。 常用快捷键 Ctrl + k 打开首选项（设置） 按住空格可拖动 x 交换前景色和背景色 Ctrl + d 取消选区 Ctrl + j 将选中区域/图层克隆为新图层 Alt + del 将选中区域填充为前景色...</description>
       <category>学习</category>
@@ -1374,8 +1374,8 @@
     </item>
     <item>
       <title>图像处理</title>
-      <link>https://absx.pages.dev/farraginous/learning/image_processing.html</link>
-      <guid>https://absx.pages.dev/farraginous/learning/image_processing.html</guid>
+      <link>https://absx.pages.dev/learning/image_processing.html</link>
+      <guid>https://absx.pages.dev/learning/image_processing.html</guid>
       <source url="https://absx.pages.dev/rss.xml">图像处理</source>
       <description>图像处理 图像处理的网课大家教的重点都不一样，并且让你掌握的不一定能让你过考试，因此还是看书重要。 像素：四邻域（十字）、D 邻域（四角）、八邻域（外围） 连通性：4 连通，8 连通，M 连通（q 在 p 的 4 邻域中，或 q 在 p 的对角邻域中且 q 的 4 邻域与 p 的 4 领域相交为空集） 最短路：4 通路，8 通路 直方图均衡：将概率累加...</description>
       <category>学习</category>
@@ -1517,8 +1517,8 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
     </item>
     <item>
       <title>电磁场与电磁波</title>
-      <link>https://absx.pages.dev/farraginous/learning/electromagnetic_wave.html</link>
-      <guid>https://absx.pages.dev/farraginous/learning/electromagnetic_wave.html</guid>
+      <link>https://absx.pages.dev/learning/electromagnetic_wave.html</link>
+      <guid>https://absx.pages.dev/learning/electromagnetic_wave.html</guid>
       <source url="https://absx.pages.dev/rss.xml">电磁场与电磁波</source>
       <description>电磁场与电磁波 我最早看的网课是这个。不过如评论所说，“这个视频里没有入射折射还有波导相关的章节，知识讲的很细，对速成不友好，对你写题帮助更是不大”。全篇讲证明，没有任何做题，并且是有读 PPT 的嫌疑的。不过物理也就是证明吸引人。 而且，我校的电磁场考得还挺多的，从斜透射到波导，从传输线到偶极子天线，B 站很少有视频能全部讲到。因此我还是自己对照作业...</description>
       <category>学习</category>
@@ -1754,8 +1754,8 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
     </item>
     <item>
       <title>通信原理</title>
-      <link>https://absx.pages.dev/farraginous/learning/PoC.html</link>
-      <guid>https://absx.pages.dev/farraginous/learning/PoC.html</guid>
+      <link>https://absx.pages.dev/learning/PoC.html</link>
+      <guid>https://absx.pages.dev/learning/PoC.html</guid>
       <source url="https://absx.pages.dev/rss.xml">通信原理</source>
       <description>通信原理 通信原理的网课质量普遍挺低的。。找了好久才找到一个我认为还不错的：学霸戴你飞，全是重点没有废话，时长只有 4.5h。 1 基础 通信原理中分贝是 10lgx 码元传输速率：RB​，信息传输速率：Rb​ 信息量：H=−log2​P(x) bit 信息熵（平均信息量）：H=∑−P(xi​)log2​P(xi​)≈m⋅H0​ bit/symbol ...</description>
       <category>学习</category>
@@ -1936,7 +1936,7 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>然后不论爱好，考虑我的技术栈，我感觉 <em>测试开发</em> 和 <em>Linux 运维</em> 挺适合我的，毕竟前者 python 用得烂熟，也鼓捣过几个爬虫和自动化项目，后者就纯粹是喜欢尝试创造新工具，写过脚本与包管理器。</p>
 <p>最后，由于喜欢开源和新技术，也写了几个 rust 程序。因此做了 rust 的简历。</p>
 <h2>简历模板</h2>
-<p>我用 <a href="/farraginous/learning/typst.html" target="_blank">typst</a> 比较多，好久之前就盯上了 <a href="https://github.com/OrangeX4/Chinese-Resume-in-Typst" target="_blank" rel="noopener noreferrer">OrangeX4 的简历模板</a>。字体可能要折腾一会儿，但是确实够好看。</p>
+<p>我用 <a href="/learning/typst.html" target="_blank">typst</a> 比较多，好久之前就盯上了 <a href="https://github.com/OrangeX4/Chinese-Resume-in-Typst" target="_blank" rel="noopener noreferrer">OrangeX4 的简历模板</a>。字体可能要折腾一会儿，但是确实够好看。</p>
 <h2>2024 春，实习</h2>
 <p>| 公司     | 岗位            | 渠道       | 时间     | 状态             |
 |</p>
