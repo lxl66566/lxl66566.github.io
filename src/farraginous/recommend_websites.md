@@ -69,15 +69,15 @@ tag:
 LLM：Large Language Models，大型语言模型。下述均为本人总结，可免费使用。
 
 - [ChatGPT](https://chatgpt.com/?model=gpt-4o)：GPT 官方。此链接直接进入 _gpt-4o_ 模型，一个免费的 GPT-4 水平的 LLM，发布于 2024.05。
-- [BAI Chat](https://beta.theb.ai/)：多模型。
-  - 也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)，但是不能更改模型，而且比较笨。
+- [Gemini](https://gemini.google.com/app)（前身 bard）：免费 api 无限用还是爽的
 - ~~[new bing](https://www.bing.com/new)：GPT-4 模型，好处是可以获取实时信息，会给出来源。~~ 已更名为 Copilot 并集成进 windows 11。
   - ~~需要使用科学上网，若自动重定向到 `(cn).bing.com` 则需要：检查代理，清除 Cookies，并在 microsoft 账户设置中关闭严格搜索。~~
   - 想正常使用，请参考[设置 windows](../articles/windows_setting.md#对-win11-的设置) 28.
 - [Claude](https://www.anthropic.com/product)：据说是 OpenAI 独立出来的员工创办的。无法直接使用（需要美国身份），请[通过 slack bot 使用](https://slackbot.anthropic.com/slack/install)。
-- [wrtn.ai](https://wrtn.ai/)：韩国网站，免费的 GPT-4，无需科学上网；支持画图，但新政策不支持中文，需要先翻译再使用。
-- ~~[Bard](bard.google.com)：Google 的 LLM。~~ 已更名为 [Gemini](https://gemini.google.com/app)。
+- [BAI Chat](https://beta.theb.ai/)：多模型，付费，基本上算一个镜像。
+  - 也可以[使用 Telegram 与其进行交流](https://t.me/littleb_gptBOT)，免费，但是不能更改模型，而且比较笨。
 - [perplexity](https://www.perplexity.ai/)
+- [wrtn.ai](https://wrtn.ai/)：韩国网站，免费的 GPT-4，无需科学上网；支持画图，但新政策不支持中文，需要先翻译再使用。
 - 搜索型工具，给出来源
   - [phind](https://www.phind.com/)：搜索编程有关问题
   - [devv](https://devv.ai/)
@@ -87,6 +87,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 论文助手，翻译：
   - [kimi](https://kimi.moonshot.cn/)
   - [ReadPaper](https://readpaper.com/)
+- [notebooklm](https://notebooklm.google.com/)：google 家的资料总结工具
 
 ### Other
 

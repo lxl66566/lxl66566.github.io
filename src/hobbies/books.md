@@ -59,6 +59,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
+|[我的风俗店打工生活](https://www.incnjp.com/thread-1153976-1-1.html)|2024.10.04|<30min|短篇，虚实结合|
 |最强杀手系统 <Badge type="warning" text="爽" />|2024.09.1x-<br/>2024.09.16, 28.5% 放弃|7h41min|<dtlslong text="写得很烂，系统文结果几乎没写啥系统，倒是天天 neta 共军，农村包围城市；废话太多。"/>|
 |催眠王座 <Badge type="warning" text="爽" /><Badge type="danger" text="烂尾" />|2024.09.09-<br/>2024.09.11|6h16min|
 |[我就是神！](https://t.me/absolutexsresource/13)|2024.07.21-<br/>2024.09.08|62h51min|[^](#我就是神)|

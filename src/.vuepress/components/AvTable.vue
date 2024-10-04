@@ -361,6 +361,7 @@ const data = [
   { id: "HUNBL-158", aScore: 7, bScore: 6.2, name: "家出娘 監禁バスルーム連鎖レ×プ" },
   { id: "midv-599", aScore: 7.5, bScore: 7, u: true, name: "電車で通学中のミニスカJ系を囲い込み集団痴● ハミ出しデカ尻を揉みまくりザーメンぶっかけ18発サイレント輪● 小野六花" },
   { id: "ibw-740z", aScore: 8.4, bScore: 7.6, name: "故郷の純朴美少女 ～親には内緒の妹近親相姦中出し性交～ 永瀬ゆい" },
+  { id: "midv-244", aScore: 8.8, bScore: 6, name: "爽やかな笑顔とはギャップすぎる濡れ染みパンチラで全力誘惑してくる小悪魔生徒会長 九野ひなの" },
 ];
 export default {
   name: "AvTable",

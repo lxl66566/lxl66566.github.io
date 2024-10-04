@@ -523,6 +523,12 @@ const data = [
   { id: "531267", aScore: 7.4, bScore: 8.8, info: "#蔚蓝档案 #雌小鬼 #巨乳" },
   { id: "313322", aScore: 7, bScore: 6.4, info: "#调教 #束缚 #兽耳" },
   { id: "532149", aScore: 8, bScore: 8.8, info: "#触手 #扶她 #长篇", bak: "https://telegra.ph/さき千鈴-触手エロ乳パーティー-中国翻訳-無修正-DL版-09-25" },
+  { id: "463943", aScore: 7.6, bScore: 1, info: "#蔚蓝档案 #短篇 #女上位" },
+  { id: "530267", aScore: 7.1, bScore: 6.3, info: "#蔚蓝档案 #纯爱" },
+  { id: "(ex)", aScore: 8.6, bScore: 7.5, info: "#师生 #雌小鬼", otherlink: "https://exhentai.org/g/3068727/ccc7ca8651/", bak: "https://telegra.ph/めんぼー-単位ください-WEEKLY快楽天-2024-No19-中国翻訳-09-25" },
+  { id: "(本人汉化)", aScore: 7.3, bScore: 2, info: "#公主联结 #雪明碳鐵", otherlink: "https://t.me/absolutexstranslation/4", bak: "https://telegra.ph/Fe3C-セメンタイト-唯一のユニ-プリンセスコネクトReDive-中国語-DL版-09-23" },
+  { id: "531852", aScore: 7, bScore: 2, info: "#公主联结 #雪明碳鐵", bak: "https://telegra.ph/Fe3C-セメンタイト-由仁いますか-プリンセスコネクトReDive-中国語--DL版-09-23" },
+  { id: "533529", aScore: 7.4, bScore: 7.1, info: "#蔚蓝档案", bak: "https://telegra.ph/Fe3C-セメンタイト-由仁いますか-プリンセスコネクトReDive-中国語--DL版-09-23" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
