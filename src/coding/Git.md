@@ -471,6 +471,8 @@ git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 
    [bfg-repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 是我某天刷 nix store 时看到的，尝试了一下，也非常不错。
 
+   主要用法就 `--delete-files`, `--delete-folders` 两个。这两个是 match 名字而不是路径。
+
    @tab filter-repo（推荐）
 
    [git-filter-repo](https://github.com/newren/git-filter-repo)

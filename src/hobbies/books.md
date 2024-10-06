@@ -144,6 +144,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
+| 當代學生生存手冊 | 2024.10.04-<br/>在读 |
 |[事实核查手册](https://t.me/absolutexsresource/12)|2024.06.22-<br/>在读|
 |[教育的浪费 - Bryan Caplan](https://t.me/absolutexsresource/4)|2024.06.08-<br/>在读|
 |大学刑法课|2023.11.13-<br/>在读|

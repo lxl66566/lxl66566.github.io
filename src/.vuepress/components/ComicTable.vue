@@ -529,6 +529,15 @@ const data = [
   { id: "(本人汉化)", aScore: 7.3, bScore: 2, info: "#公主联结 #雪明碳鐵", otherlink: "https://t.me/absolutexstranslation/4", bak: "https://telegra.ph/Fe3C-セメンタイト-唯一のユニ-プリンセスコネクトReDive-中国語-DL版-09-23" },
   { id: "531852", aScore: 7, bScore: 2, info: "#公主联结 #雪明碳鐵", bak: "https://telegra.ph/Fe3C-セメンタイト-由仁いますか-プリンセスコネクトReDive-中国語--DL版-09-23" },
   { id: "533529", aScore: 7.4, bScore: 7.1, info: "#蔚蓝档案", bak: "https://telegra.ph/Fe3C-セメンタイト-由仁いますか-プリンセスコネクトReDive-中国語--DL版-09-23" },
+  { id: "449759", aScore: 7.1, bScore: 9.2, info: "#NTR #痴汉 #合集 #调教" },
+  { id: "533225", aScore: 7.9, bScore: 9, info: "#百合 #合集 #调教" },
+  { id: "533475", aScore: 6.7, bScore: 7.7, info: "#蔚蓝档案 #全彩 #3P" },
+  { id: "533995", aScore: 4.6, bScore: 8, info: "#兄妹 #败犬", bak: "https://telegra.ph/imotare-moyori-ごめんね私にはお兄ちゃんがいるから中国翻訳-DL版-10-05" },
+  { id: "533954", aScore: 6.2, bScore: 4.3, info: "#师生", order: 8, bak: "https://telegra.ph/いもむや本舗---Singleton-あずまゆき-過ちは秘事のはじまり8-中国翻訳-DL版-10-05" },
+  { id: "533813", aScore: 6.6, bScore: 7.2, info: "#合集 #师生 #兄妹 #3P", bak: "https://telegra.ph/ちろたた-ふたりのオモチャ無修正漢化-10-05" },
+  { id: "533683", aScore: 7.9, bScore: 4, info: "#蔚蓝档案 #虚实 夢魔", bak: "https://telegra.ph/C102-へそのゴマ油-へこまん-夢魔-ブルーアーカイブ-中国翻訳-10-04" },
+  { id: "533601", aScore: 7.8, bScore: 3.6, info: "#蔚蓝档案 #loli", bak: "https://telegra.ph/あわや-えま-淑女の手引き-ブルーアーカイブ-中国翻訳-10-04" },
+  { id: "222986", aScore: 1, bScore: 10, info: "#长篇 #写实画风 #世界观 #强制性交 #多重插入 Implicity", order: 1, bak: "https://telegra.ph/東山翔-Implicity-中国翻訳-DL版-10-03" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
