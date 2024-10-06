@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 04 Oct 2024 09:27:38 GMT</pubDate>
-    <lastBuildDate>Fri, 04 Oct 2024 09:27:38 GMT</lastBuildDate>
+    <pubDate>Sun, 06 Oct 2024 18:30:21 GMT</pubDate>
+    <lastBuildDate>Sun, 06 Oct 2024 18:30:21 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -766,6 +766,12 @@
 <li>启动 bash 时会自动执行 <code>~/.bashrc</code>，这也是一个 bash 脚本。</li>
 <li>bash 按 tab 也能补全，不过默认不显示候选项。</li>
 <li><code>xx1 &amp;&amp; xx2</code> 在 xx1 成功后执行 xx2，<code>xx1 || xx2</code> 在 xx1 失败后执行 xx2</li>
+<li>传参：
+<ul>
+<li><code>$1</code> 代表第一个参数，类似的…</li>
+<li><code>$@</code> 代表把所有参数原封不动传入（多个参数的地方），而 <code>$*</code> 代表把所有参数合并当成一个字符串传入。</li>
+</ul>
+</li>
 </ul>
 <h2>fish</h2>
 <p>一般来说三大 shell 指的是 bash, fish, zsh. 而 fish 不兼容 bash，在里面算是比较特立独行的。fish 语法自成一系，不过在一众 shell 里算是比较好学的，缺点是文档写的挺垃圾。fish 使用 rust 重写过一次，<s>搭上了语言原神的顺风车</s>，性能与安全性无需担忧。fish 是不兼容 windows 的，而在 msys2 里用 fish 又总感觉挺不爽的，我只好在 windows 上用其他 shell。</p>
