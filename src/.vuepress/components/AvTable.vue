@@ -364,6 +364,7 @@ const data = [
   { id: "midv-244", aScore: 8.8, bScore: 6, name: "爽やかな笑顔とはギャップすぎる濡れ染みパンチラで全力誘惑してくる小悪魔生徒会長 九野ひなの" },
   { id: "ipzz-276", aScore: 7, bScore: 5.4, name: "#师生" },
   { id: "ssis-972", aScore: 7, bScore: 4.2, name: "#下药 #出差 #睡x" },
+  { id: "sora-494", aScore: 7, bScore: 8.9, name: "#下药 #睡x #强制性交 ガチ恋粘着ピーピング 西東京市 私立校N 発育期 バトミントン スレンダー 睡眠女3 肉オナホ 中出し 睡姦" },
 ];
 export default {
   name: "AvTable",
