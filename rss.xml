@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 08 Oct 2024 16:15:14 GMT</pubDate>
-    <lastBuildDate>Tue, 08 Oct 2024 16:15:14 GMT</lastBuildDate>
+    <pubDate>Wed, 09 Oct 2024 13:31:24 GMT</pubDate>
+    <lastBuildDate>Wed, 09 Oct 2024 13:31:24 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -82,11 +82,12 @@
       <link>https://absx.pages.dev/hobbies/art.html</link>
       <guid>https://absx.pages.dev/hobbies/art.html</guid>
       <source url="https://absx.pages.dev/rss.xml">其他艺术形式</source>
-      <description>其他艺术形式 一般是心血来潮才会看的作品形式。 漫画 电影 纪录片/连续剧</description>
+      <description>其他艺术形式 这里记录的是较少的，一般心血来潮才会看的作品形式。 主要的艺术形式记录请跳转对应页面（ | | ）。 漫画 电影 纪录片/连续剧</description>
       <category>爱好</category>
       <pubDate>Fri, 23 Aug 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>一般是心血来潮才会看的作品形式。</p>
+<p>这里记录的是较少的，一般心血来潮才会看的作品形式。</p>
+<p>主要的艺术形式记录请跳转对应页面（<a href="/hobbies/galgame.html" target="_blank">galgame</a> | <a href="/hobbies/anime.html" target="_blank">番剧</a> | <a href="/hobbies/books.html" target="_blank">小说</a>）。</p>
 <h2>漫画</h2>
 <!-- prettier-ignore -->
 <table>
@@ -98,6 +99,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:center"><a href="https://m.manhuagui.com/comic/44973/" target="_blank" rel="noopener noreferrer">傲娇女友心想刺成</a></td>
+<td style="text-align:center">2024.10.09</td>
+<td style="text-align:center">草！</td>
+</tr>
 <tr>
 <td style="text-align:center"><a href="https://copymanga.tv/comic/vryouxizhuanshengyishijietiaojiaomowangmeishaonvclothoutsaber/chapter/519b94f4-65e3-11e9-8bc8-024352452ce0" target="_blank" rel="noopener noreferrer">VRエロゲーやってたら異世界に転生したので、美少女魔王を奴隷化する</a></td>
 <td style="text-align:center">2024.10.025-<br>19 话，等待连载</td>
