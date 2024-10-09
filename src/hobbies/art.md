@@ -10,13 +10,16 @@ tag:
 
 # 其他艺术形式
 
-一般是心血来潮才会看的作品形式。
+这里记录的是较少的，一般心血来潮才会看的作品形式。
+
+主要的艺术形式记录请跳转对应页面（[galgame](./galgame.md) | [番剧](./anime.md) | [小说](./books.md)）。
 
 ## 漫画
 
 <!-- prettier-ignore -->
 | 名 | 时间 | 评价 |
 | :-: | :-: | :-: |
+| [傲娇女友心想刺成](https://m.manhuagui.com/comic/44973/) | 2024.10.09 | 草！ |
 | [VRエロゲーやってたら異世界に転生したので、美少女魔王を奴隷化する](https://copymanga.tv/comic/vryouxizhuanshengyishijietiaojiaomowangmeishaonvclothoutsaber/chapter/519b94f4-65e3-11e9-8bc8-024352452ce0) | 2024.10.025-<br/>19 话，等待连载 | <dtlslong text="画风不错，角色还行，也没有避讳"/> |
 | [最果てに惑う](https://mangabz.com/30986bz/) | 2024.09.15-<br/>Ch13.2，等待连载 |
 | 我将要支配你们的一切 | 2024.08.22-<br/>2024.08.31，烂尾，15 话 | <dtlslong text="暴力但不露点，神奇的幼态画风，草一群精神病人。没啥兴趣。"/> |

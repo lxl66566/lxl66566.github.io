@@ -538,6 +538,8 @@ const data = [
   { id: "533683", aScore: 7.9, bScore: 4, info: "#蔚蓝档案 #虚实 夢魔", bak: "https://telegra.ph/C102-へそのゴマ油-へこまん-夢魔-ブルーアーカイブ-中国翻訳-10-04" },
   { id: "533601", aScore: 7.8, bScore: 3.6, info: "#蔚蓝档案 #loli", bak: "https://telegra.ph/あわや-えま-淑女の手引き-ブルーアーカイブ-中国翻訳-10-04" },
   { id: "222986", aScore: 1, bScore: 10, info: "#长篇 #写实画风 #世界观 #强制性交 #多重插入 Implicity", order: 1, bak: "https://telegra.ph/東山翔-Implicity-中国翻訳-DL版-10-03" },
+  { id: "409041", aScore: 6.1, bScore: 7.6, info: "#催眠 #露出 #师生" },
+  { id: "(ex)", aScore: 9.9, bScore: 7.9, info: "#孤独摇滚 #百合 #无R18", otherlink: "https://exhentai.org/g/3083835/dc89c1ae3f", bak: "https://telegra.ph/空想舟くらげもどき-私泊まりに行くわ-ぼっちざろっく-中国翻訳-Preview-10-09" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
