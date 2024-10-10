@@ -853,6 +853,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 
 1. Uncover XP3 [前篇：認識基本 XP3 封包格式](https://galgamer.moe/article/20021) | [後篇：揭祕 XP3 封包中的的壓縮和加密技術](https://galgamer.moe/article/20022)
 2. [Summer Pockets 聖地考察指南 - 前篇](https://galgamer.moe/article/20024#)
+3. [关于我一年不到速通 N1 这件事——基于啃生肉 galgame 的日语学习攻略](https://galgame.dev/topic/639/关于我一年不到速通n1这件事-基于啃生肉galgame的日语学习攻略)
 
 <script setup lang="ts">
 import GalExhibition from "@GalExhibition";
