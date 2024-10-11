@@ -42,7 +42,13 @@ tag:
 
 ## SQL 语法基础
 
-- Android Sqlite，`CREATE TABLE` 内部不允许尾随逗号。
+现在 GPT 写 sql 已经很厉害了，写项目只需要能看懂即可；如果面试就得掌握了。
+
+学习 sql 语法其实很简单。分几步走：
+
+1. 基础：即单表查询，如何选表名，如何拿想要的字段并初步处理。
+2. 进阶：多表查询，可以看看 [这个视频](https://www.bilibili.com/video/av436892344/)，讲得还行。
+3. 性能：学习建立索引与索引的作用；其他性能优化。
 
 ## SQLite
 
@@ -51,6 +57,10 @@ SQLite 没有驱动，没有压缩，没有加密，非常简单的数据库，�
 - Windows: use [scoop](../farraginous/recommend_packages.md#scoop). `scoop install sqlite`
 
 基本使用，去看[菜鸟教程](https://www.runoob.com/sqlite/sqlite-commands.html)。
+
+### 注意事项
+
+- Android Sqlite，`CREATE TABLE` 内部不允许尾随逗号。
 
 ### 压缩
 
