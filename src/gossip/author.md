@@ -24,12 +24,13 @@ category:
 - 旋律党
 - 边缘二次元人
 - [剧情党](../hobbies/galgame.md#分类)
+- 无节日主义
 
-[前往 QA](../hide/personal_details.md#标签-qa)
+- [前往 QA 查看详解](../hide/personal_details.md#标签-qa)
 
 ## 生存意义
 
-<span class="heimu" title="你知道的太多了">活着就是为了\_\_\_\_\_\_\_\_</span>
+<span class="heimu" title="你知道的太多了">活着就是为了`________`</span>
 
 下列出自认为的生存意义占比及其变化趋势。
 
@@ -46,7 +47,7 @@ category:
 
 建议前往 _爱好_ 版块查看。
 
-重度电脑使用者，目前不玩任何非音游手游。
+重度电脑使用者，目前不玩任何手游。
 
 ### 以前曾喜欢
 
@@ -62,11 +63,11 @@ category:
 - 跑团
 - [CS:GO](../hobbies/other_games/csgo.md)
 - 黎明杀机
+- [以 **OSU!mania 4k/6k** 为主的音游](../hobbies/rhythm_games.md)
 
 ### 现在喜欢
 
 - [纯剧情 galgame](../hobbies/galgame.md)
-- [以 **OSU!mania 4k/6k** 为主的音游](../hobbies/rhythm_games.md)
 
 <!-- ~~*终于熬到了上完课，双手激动地放上键盘，OSU!挥洒你的汗水。傍晚，为时5小时的夜生活开始，开始CSGO穿越枪林弹雨。经历大战后，在galgame老婆们的怀里沉沉睡去，这大概也算是一种幸福吧。*~~ -->
 
@@ -78,7 +79,6 @@ category:
 - 在小说的影响下，（仅）敬畏内在性 强者。
 - 无意识地为周围事物寻找看起来合理，实际上是错误的解释。
 - 不擅长安慰他人。也不需要被别人安慰。<span class="heimu" title="你知道的太多了">只要发泄就够了</span>
-- 无节日主义者：反对节日带来的常轨脱离、额外开销与牺牲少数派利益的做法。
 
 ## 生活细节
 

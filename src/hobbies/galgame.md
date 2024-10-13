@@ -400,6 +400,14 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 目前在我玩过的 gal 中，我认为的三幻神是 [ISLAND](#island)，[纸魔](#纸上魔法使)，[sprb](#summer-pockets-reflection-blue)。
 - 在这里打一些标签：<Badge text="精美" /> <Badge text="无 R18" type="tip" />
 
+### サクラノ 詩
+
+<Badge text="生肉" type="tip" />
+
+- 樱之刻的续作，老早就在我的欲推名单上了。毕竟樱之刻做的确实好。
+- 難易度が高い！すがち、マジ芸術家だよ！
+- 反派画得好看啊，白发美少女中村麗華
+
 ### 流る星 -a Wish Star-
 
 <Badge text="生肉" type="tip" />

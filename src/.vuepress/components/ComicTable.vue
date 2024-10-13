@@ -541,6 +541,10 @@ const data = [
   { id: "409041", aScore: 6.1, bScore: 7.6, info: "#催眠 #露出 #师生" },
   { id: "(ex)", aScore: 9.9, bScore: 7.9, info: "#孤独摇滚 #百合 #无R18", otherlink: "https://exhentai.org/g/3083835/dc89c1ae3f", bak: "https://telegra.ph/空想舟くらげもどき-私泊まりに行くわ-ぼっちざろっく-中国翻訳-Preview-10-09" },
   { id: "534024", aScore: 9.2, bScore: 3.5, info: "#百合 #请问您今天要来点兔子吗", bak: "https://telegra.ph/C104-あめうさぎ-飴玉コン-とめられないココチノえっち-ご注文はうさぎですか-中国翻訳-10-06-2" },
+  { id: "534756", aScore: 7.3, bScore: 7.8, info: "#人偶 #强制性交", bak: "https://telegra.ph/海老天街道-TeMたす-無表情な人造天使も所詮はただのオナホール-10-12" },
+  { id: "534066", aScore: 7.2, bScore: 7.6, info: "#催眠 #cos #兽耳 #项圈", bak: "https://telegra.ph/C104-雪月楓花ねこ大福-本知そらねこのしろ-コスプレ彼女催眠済はかわいい中国翻訳-10-07" },
+  { id: "534598", aScore: 9, bScore: 8, info: "#蔚蓝档案 #loli #心理 #私奔", bak: "https://telegra.ph/C104-DOGYEAR-九条だんぼ-ネバーランドにとらわれて-ブルーアーカイブ-中国翻訳-10-06" },
+  { id: "521867", aScore: 6.4, bScore: 8.3, info: "#父女 #监禁 #精神失常" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

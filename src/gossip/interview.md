@@ -37,6 +37,8 @@ category:
 
 我用 [typst](../learning/typst.md) 比较多，好久之前就盯上了 [OrangeX4 的简历模板](https://github.com/OrangeX4/Chinese-Resume-in-Typst)。字体可能要折腾一会儿，但是确实够好看。
 
+typst 可能有些难，再不济至少也得用个 [markdown 简历模版](https://github.com/BingyanStudio/LapisCV) 吧。
+
 ## 2024 春，实习
 
 | 公司     | 岗位            | 渠道       | 时间     | 状态             |

@@ -185,6 +185,14 @@ windows 下也可以[像 linux 一样](../articles/linux/basic.md#链接)创建�
 
 ## 遇到的问题
 
+### 百度网盘图标
+
+偶然我有一次需要使用百度网盘，我将其安装在 [RAMDisk](./ramdisk.md) 里。结果重启后百度网盘留下了一大堆垃圾都没有清除。其中最烦的就是在 _此电脑_ 里留下的百度网盘图标，windows 11 的这个图标也不能右键删除，非常鸡肋。
+
+解法：注册表打开 `计算机\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace` 删除全部文件夹。
+
+顺带说一句，把软件安装在 RAMDisk 以后记得手动卸载。
+
 ### 端口随机占用
 
 win11 下有时代理软件端口突然无法使用，有时测试网站 localhost 端口无法使用，随机性很强。于是去搜了下[解法](https://www.cnblogs.com/fanqisoft/p/17071121.html)。

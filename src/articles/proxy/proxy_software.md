@@ -14,7 +14,8 @@ tag:
 
 ## Clash 系
 
-> 20231102-20231103 Clash 系几乎全部删库跑路。因此非必要不推荐使用。
+> 20231102-20231103 Clash 系几乎全部删库跑路。虽然也有一些 fork 版本接手就是了。  
+> 不过我不推荐使用，除非你用的是只提供 clash 配置的机场。
 
 ::: details
 
@@ -175,17 +176,51 @@ daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每
 
 ## [dae](https://github.com/daeuniverse/dae)
 
-在 NixOS 上并没有 daed 的包，但是有 dae 能够直接使用。我已经用了很长一段时间的 daed，写 dae 配置文件可以说是非常简单；而且 dae 的官方教程确实非常不错，把 [example](https://github.com/daeuniverse/dae/blob/main/example.dae) 下载下来对着改就行，内含丰富注释。这里由于隐私问题，我并未把我的配置公开，而是加密后上传到 github。
+在 NixOS 上 nixpkgs 没有 daed 的包，只有 dae 能够直接使用。而 dae 官方提供了一个 [flake.nix](https://github.com/daeuniverse/flake.nix) 配置（包含 dae 和 daed），我现在推荐使用此 flake，因为 flake 的版本更新，也包含了最新的 bug 修复；但是我之前[踩了这玩意一个坑](https://github.com/daeuniverse/flake.nix/issues/103)，因此在 bug 解决之前我还是回退到 nixpkgs 的 dae。
 
-改完以后，直接在 `configuration.nix` 中写：
+不使用 daed 还有一个原因：不符合 NixOS 的确定一切的思想。特定位置存的 sqlite 总归是不如用 git 管理配置文件的。
+
+我已经用了很长一段时间的 daed，写 dae 配置文件可以说是非常简单；而且 dae 的官方教程确实非常不错，把 [example](https://github.com/daeuniverse/dae/blob/main/example.dae) 下载下来对着改就行，内含丰富注释。这里由于隐私问题，我并未把我的配置公开，而是加密后上传到 github。
+
+改完配置以后，直接在 `configuration.nix` 中写：
 
 ```nix
 services.dae = {
   enable = true;
-  configFile = <your/config/file/path>;
+  configFile = "<your/config/file/path>";   # 必需是绝对路径字符串，看我的踩坑
+  assets = with pkgs; [
+    v2ray-geoip
+    v2ray-domain-list-community
+  ];
 };
 ```
 
 rebuild 后重启即可（不直接生效，是 eBPF 的特性？）。这分流不比 v2rayA 爽多了？
 
-不过需要注意，example 可能新增一些选项，该选项在当前的最新 release 版本中尚未支持。不过读下报错也就解决了。
+当然，如果你的配置主目录不一定在 `/etc/nixos` 下，使用绝对路径确实不算明智。这时候可以用一个比较脏的方法，监听 config 的改动，并且每次改动时将最新版本复制到特定绝对路径里。
+
+```nix
+# configuration.nix
+dae = {
+  enable = true;
+  # dae needs 0600 permission, but we cannot source file with permission.
+  # related issue: https://github.com/nix-community/home-manager/issues/3090
+  configFile = "/home/absx/.config/absx_.dae";
+  assets = with pkgs; [
+    v2ray-geoip
+    v2ray-domain-list-community
+  ];
+};
+
+# home.nix
+home.file = {
+  ".config/absx.dae" = {
+    source = ./config/absx.dae;
+    onChange = ''
+      rm -f ~/.config/absx_.dae
+      cp ~/.config/absx.dae ~/.config/absx_.dae
+      chmod 0640 ~/.config/absx_.dae
+    '';
+  };
+};
+```
