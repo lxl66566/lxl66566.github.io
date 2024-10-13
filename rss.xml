@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 11 Oct 2024 15:29:07 GMT</pubDate>
-    <lastBuildDate>Fri, 11 Oct 2024 15:29:07 GMT</lastBuildDate>
+    <pubDate>Sun, 13 Oct 2024 08:21:21 GMT</pubDate>
+    <lastBuildDate>Sun, 13 Oct 2024 08:21:21 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -1954,6 +1954,7 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>最后，由于喜欢开源和新技术，也写了几个 rust 程序。因此做了 rust 的简历。</p>
 <h2>简历模板</h2>
 <p>我用 <a href="/learning/typst.html" target="_blank">typst</a> 比较多，好久之前就盯上了 <a href="https://github.com/OrangeX4/Chinese-Resume-in-Typst" target="_blank" rel="noopener noreferrer">OrangeX4 的简历模板</a>。字体可能要折腾一会儿，但是确实够好看。</p>
+<p>typst 可能有些难，再不济至少也得用个 <a href="https://github.com/BingyanStudio/LapisCV" target="_blank" rel="noopener noreferrer">markdown 简历模版</a> 吧。</p>
 <h2>2024 春，实习</h2>
 <p>| 公司     | 岗位            | 渠道       | 时间     | 状态             |
 |</p>
