@@ -13,9 +13,9 @@ tag:
 
 ## 数据库选择
 
-大概分为关系型和非关系型，分布式和非分布式，还有向量数据库等...
+大概分为关系型和非关系型，分布式和非分布式，嵌入和非嵌入，还有向量数据库等...
 
-首先有一个很重要的概念，有跟随程序分发到客户端的文件数据库（嵌入式数据库），也有作为服务器端具有本地驱动的数据库。前者主要就是 SQLite，其他常见数据库基本都属于后者。所以在 java 连接 Mysql 时出现的 `jdbc:mysql://localhost:3306/mydatabase` 就是需要先启动数据库的服务驱动，在电脑上开个端口才能使用，不像 SQLite 直接读文件。由于我初期不知道这个概念，走了很多弯路。（~~本人只是个臭写小玩意应用的，服务端数据库是什么，没听说过。~~）
+首先有一个很重要的概念，有跟随程序分发到客户端的文件数据库（嵌入式数据库），也有作为服务器端具有本地驱动的数据库。前者的关系型主要就是 SQLite，其他常见数据库基本都属于后者。所以在 java 连接 Mysql 时出现的 `jdbc:mysql://localhost:3306/mydatabase` 就是需要先启动数据库的服务驱动，在电脑上开个端口才能使用，不像 SQLite 直接读文件。由于我初期不知道这个概念，走了很多弯路。（~~本人只是个臭写小玩意应用的，服务端数据库是什么，没听说过。~~）
 
 然后关系型和非关系型不多说，非关系型大部分都是 KV（key-value）数据库。
 
@@ -23,9 +23,12 @@ tag:
 
 1. 嵌入式
    - 关系型大多是 SQLite，新兴的有 [duckdb](https://duckdb.org/)。
-   - KV 首选 rocksdb，据说性能高。
+   - KV 首选 rocksdb，据说性能高。其他还有 redb (pure rust)。
 2. 非嵌入式
-   - 关系型优先 PostgreSQL，这玩意非常全能，属于宗教级别。MySQL/MariaDB[^1][^2] 那些确实有点老了。
+   - 关系型
+     - MySQL/MariaDB[^1][^2] 最为泛用，学习简单，但是确实有点老了。
+     - PostgreSQL 这玩意非常全能，属于宗教级别。
+     - Oracle 商用要买授权，但是挺多外企用这个的。复杂是复杂，不过非常强。
    - 非关系型，纯内存的选 Redis
    - 分布式 Cassandra
 
@@ -44,19 +47,21 @@ tag:
 
 现在 GPT 写 sql 已经很厉害了，写项目只需要能看懂即可；如果面试就得掌握了。
 
+### 学习路线
+
 学习 sql 语法其实很简单。分几步走：
 
-1. 基础：即单表查询，如何选表名，如何拿想要的字段并初步处理。
-2. 进阶：多表查询，可以看看 [这个视频](https://www.bilibili.com/video/av436892344/)，讲得还行。
-3. 性能：学习建立索引与索引的作用；其他性能优化。
+1. 基础：即单表查询，如何选表名，如何拿想要的字段并初步处理。[菜鸟教程](https://www.runoob.com/sqlite/sqlite-commands.html)
+2. 进阶：多表查询，可以看看 [这个视频](https://www.bilibili.com/video/av436892344/)。
+3. 性能：深入原理，学习索引的作用，查询技巧；其他性能优化（分表分库等）。
+   - 索引详解，可以看[这个视频](https://www.bilibili.com/video/av951719613)的前 11 p。
+4. 其他依赖于特定数据库的实现，例如隔离级别与锁。这些跟 SQL 语法本身就没什么关系了。
 
 ## SQLite
 
-SQLite 没有驱动，没有压缩，没有加密，非常简单的数据库，可以被分发。不过作为开发者，建议还是装一个驱动吧。
+SQLite 没有驱动，没有压缩，没有加密，非常简单的数据库，可以被分发。作为开发者，也可以装一个 CLI 驱动，方便调试。
 
 - Windows: use [scoop](../farraginous/recommend_packages.md#scoop). `scoop install sqlite`
-
-基本使用，去看[菜鸟教程](https://www.runoob.com/sqlite/sqlite-commands.html)。
 
 ### 注意事项
 
@@ -97,13 +102,27 @@ duckdb 比 sqlite 具有更多的功能。
 
 python 版本还有一个[官方推荐的 orm](https://duckdb.org/docs/guides/python/ibis.html) 可用。
 
+rust 没有 duckdb 的原生实现，需要 bind c。
+
 ## Redis
 
 Redis 是一个非常简单的内存 KV (key-value) 数据库，主要用来做缓存。
 
-## mysql 运维
+## MySQL 基础
 
-我是一个完全不懂数据库的非计专业学生，但我需要为部门维护数据库（
+- 存储引擎：
+  - InnoDB（默认）支持事务和外键，而 MyISAM 不支持。
+  - InnoDB 中一定有主键，主键一定是聚簇索引；MyISAM 使用的是非聚簇索引，没有聚簇索引。
+  - 大量数据的全表扫描，MyISM 空间性能更好。
+- 锁：
+  - InnoDB 提供表锁和行锁。
+    - 行锁：`SELECT ... LOCK IN SHARE MODE` 是读锁，`SELECT ... FOR UPDATE` 是写锁。
+    - 表锁：`LOCK TABLES table_name READ` 和 `LOCK TABLES table_name WRITE`。需要显式解锁：`UNLOCK TABLES`。
+  - MyISAM 虽然不支持事务，但是其 select 和 insert/update/delete 会自动加表读/写锁。
+
+## MySQL 运维
+
+虽然之前说 MySQL 已经老了，但是由于其比较简单，现在还有非常多的企业在用，面试也是高频考点。学习一些 MySQL 并不影响对其他关系型数据库的掌握。
 
 ### 键位
 

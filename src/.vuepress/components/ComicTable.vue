@@ -549,6 +549,9 @@ const data = [
   { id: "534598", aScore: 9, bScore: 8, info: "#蔚蓝档案 #loli #心理 #私奔", bak: "https://telegra.ph/C104-DOGYEAR-九条だんぼ-ネバーランドにとらわれて-ブルーアーカイブ-中国翻訳-10-06" },
   { id: "521867", aScore: 6.4, bScore: 8.3, info: "#父女 #监禁 #精神失常" },
   { id: "533899", aScore: 5.7, bScore: 5.5, info: "#精灵 #天真" },
+  { id: "471158", aScore: 6.4, bScore: 3.3, info: "#兽耳 #扶她 #发情" },
+  { id: "408130", aScore: 6.8, bScore: 9.2, info: "#穿越 #拘束 #榨精 #3P" },
+  { id: "(eh)", aScore: 7, bScore: 7.3, info: "#潜入 #反杀 #调教 #巨乳 #媚药", otherlink: "https://e-hentai.org/g/3087812/22447a5d1a/" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
