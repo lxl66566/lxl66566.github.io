@@ -548,6 +548,7 @@ const data = [
   { id: "534066", aScore: 7.2, bScore: 7.6, info: "#催眠 #cos #兽耳 #项圈", bak: "https://telegra.ph/C104-雪月楓花ねこ大福-本知そらねこのしろ-コスプレ彼女催眠済はかわいい中国翻訳-10-07" },
   { id: "534598", aScore: 9, bScore: 8, info: "#蔚蓝档案 #loli #心理 #私奔", bak: "https://telegra.ph/C104-DOGYEAR-九条だんぼ-ネバーランドにとらわれて-ブルーアーカイブ-中国翻訳-10-06" },
   { id: "521867", aScore: 6.4, bScore: 8.3, info: "#父女 #监禁 #精神失常" },
+  { id: "533899", aScore: 5.7, bScore: 5.5, info: "#精灵 #天真" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;
