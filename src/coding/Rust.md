@@ -553,6 +553,7 @@ GUI 是 rust 日经问题了。
 - [dioxus](https://github.com/DioxusLabs/dioxus)：也是嗯写 DSL。release 0.5.0 时火了一把
 - [native-windows-gui](https://github.com/gabdube/native-windows-gui)：非跨平台
 - [winio](https://github.com/compio-rs/winio)：~~莓软的愚人节玩笑~~
+- [sciter](https://docs.rs/sciter-rs/latest/sciter/)：web 界面渲染
 
 我早期尝试过一下 iced，用不明白，不用了。
 

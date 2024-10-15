@@ -151,25 +151,32 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 
 ## 服务
 
-与 windows _service_ 的概念相通。有的 debian 系 distro 使用 `service` 指令，而 archlinux 使用 `systemctl` 进行服务管理。[archwiki](https://wiki.archlinux.org/title/systemd)。现在 `systemctl` 才是主流。
+与 windows _service_ 的概念相通。
 
-查看服务的输出，一般在 status 里会有几条，也可以前往[日志](#日志)查看。
+- service 是由 [systemd](https://wiki.archlinux.org/title/systemd) 支持的，而现在几乎所有的发行版都基于 systemd，因此什么老发行版的 `service` 指令就不用看了，用 `systemctl` 就行了。
+- 查看服务的输出（stdout/stderr），一般在 status 里会有几条，也可以前往[日志](#日志)查看。
 
 ### 基本概念
 
-每个服务（unit）是一个 `.service` 文件，存放在不同位置，其中由软件安装的服务在 `/usr/lib/systemd/system/` 下。
+每个服务（unit）是一个 `.service` 文件，存放在不同位置：
 
-- systemd 是现在主流 linux 管理 service 的方式。
+- `/usr/lib/systemd/system/`：由软件安装的服务
+- `/etc/systemd/system`：系统用户写的服务（优先级最高）
+- `~/.config/systemd/user`：普通用户写的服务，需要 `--user`
+
 - `xxx@.service` 是一个 template unit，不能直接启动，而是需要传入一个 string，作为 `xxx@something.service` 启动。string 的含义需要自己看 service 内容。
 
 ### 常用指令
 
 `systemctl <operation> <service_name>`，无需打 `.service` 全名。
 
-- `start` & `stop`，不多说
+- `systemctl` 默认操作的是全局作用域（系统服务），加上 `--user` 是用户作用域。用户作用域服务不需要 root 权限。
+- `status` 是查看服务运行状态，用得最多的。
+- `start` & `stop`，启动和暂停，不多说
 - `enable` & `disable`，设置是否开机自启
-  - `enable --now` 为 `enable` + `start`
+  - `enable --now` == `enable` + `start`
 - `mask` （深度）禁用。
+- `edit` 是编辑服务，可以查看服务的代码。
 
 ### WSL2
 
@@ -186,6 +193,7 @@ sudo python /usr/bin/systemctl <command>
 
 - `journalctl` 用于查看系统日志。
   - `journalctl -u <service_name>` 查看服务日志
+  - 我个人喜欢用 `journalctl -exu <service_name>`，`-e` 是直接跳转到末尾（最新日志），`-x` 是显示更加详细的帮助信息，对 warning 和 error 比较友好。
 - `dmesg` 用于查看内核消息。
 
 ## .desktop
