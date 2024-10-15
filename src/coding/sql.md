@@ -55,6 +55,7 @@ tag:
 2. 进阶：多表查询，可以看看 [这个视频](https://www.bilibili.com/video/av436892344/)。
 3. 性能：深入原理，学习索引的作用，查询技巧；其他性能优化（分表分库等）。
    - 索引详解，可以看[这个视频](https://www.bilibili.com/video/av951719613)的前 11 p。
+   - [索引语法](https://www.runoob.com/mysql/mysql-index.html)
 4. 其他依赖于特定数据库的实现，例如隔离级别与锁。这些跟 SQL 语法本身就没什么关系了。
 
 ## SQLite
