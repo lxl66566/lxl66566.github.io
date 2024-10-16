@@ -91,3 +91,7 @@ VSCode 居然支持语音输入了！([src](https://t.me/absxsgroup/6059))这是
 ### incredibly-fast-whisper
 
 基于 Whisper Large v3 模型。有一个[在线 demo](https://replicate.com/vaibhavs10/incredibly-fast-whisper) 可以用。
+
+### [groq](https://console.groq.com/playground?model=whisper-large-v3-turbo)
+
+groq 有一定免费额度，是一个在线模型运行 playground。需要代理，不支持香港节点。

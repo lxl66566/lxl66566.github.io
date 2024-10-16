@@ -227,6 +227,12 @@ Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 x
 
 ~~在大片的构建系统篇幅后我们终于走到了语言基础，太悲哀了。~~
 
+### 数据结构
+
+- `<queue>`：
+  - 优先队列：`priority_queue<T, vector<T>, std::greater<T>>`
+    - 自定义比较函数；重载类的 `<` operator
+
 ### 值类型
 
 > \>= C++11
@@ -281,6 +287,10 @@ Raw string: `R""(some\text)""`
 ### template
 
 前往 [external 1.](#external)，讲得非常不错。
+
+### 内置模版比较函数
+
+算法竞赛常用的，例如优先队列会用到。签名是 class Compare。主要有：`std::greater`, `std::greater_equal`, `std::equal_to`, `std::not_equal_to`，再加上两个 greater 改成 less 的。
 
 ### variant
 

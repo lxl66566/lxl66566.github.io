@@ -60,13 +60,16 @@ tag:
 
 - STL 大法好，需要熟练运用 vector, deeue, priority_queue, unurdered_map, unordered_set 等。
   - vector 建议使用 `emplace_back()` 原地构造和使用 `resize()` 控制大小（注意 `resize()` != `reserve()`），初始化 `vector(int size,const t& value)` 和 initializer_list 构造。
+  - 优先队列有三个 template type，容易忘，但是很重要，很多算法都会用到。
 - 插入和查询有一个是区间：树状数组
 - 区间插入、区间查询：线段树（with lazy tag）
 - 树和图：我一般使用 struct + vector 建树/建图。一般不会有太大问题，性能卡得实在死的话可以考虑前向星存图 ~~这个我脑子总是转不过来所以不想用~~
 
 ## 图论
 
-- 最短路：dijkstra > SPFA + priority_queue（一般场景下没有负边权），我以前只用 SPFA 吃了亏。
+- 最短路：dijkstra > SPFA + priority_queue（dijkstra 不能用于负边权，但是一般场景下不会有），我以前只用 SPFA 吃了亏。
+  - [为什么用 SPFA 会吃亏？](https://zh.wikipedia.org/wiki/最短路径快速算法#最坏情况下的性能) 真有点没绷住
+  - 但是 dijkstra 老忘（一说蓝白点就想到<heimu>蓝白碗</heimu>）。注意，每次找离**源节点**距离最近的点更新。
 - 最小生成树：kruskal + priority_queue。考得不多。
 - lca：求树上距离的时候经常用。我学的是倍增法，有兴趣也可以看看 tarjan。
 
