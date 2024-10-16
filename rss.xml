@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 15 Oct 2024 16:35:19 GMT</pubDate>
-    <lastBuildDate>Tue, 15 Oct 2024 16:35:19 GMT</lastBuildDate>
+    <pubDate>Wed, 16 Oct 2024 16:55:48 GMT</pubDate>
+    <lastBuildDate>Wed, 16 Oct 2024 16:55:48 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -1955,8 +1955,13 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <h2>简历模板</h2>
 <p>我用 <a href="/learning/typst.html" target="_blank">typst</a> 比较多，好久之前就盯上了 <a href="https://github.com/OrangeX4/Chinese-Resume-in-Typst" target="_blank" rel="noopener noreferrer">OrangeX4 的简历模板</a>。字体可能要折腾一会儿，但是确实够好看。</p>
 <p>typst 可能有些难，再不济至少也得用个 <a href="https://github.com/BingyanStudio/LapisCV" target="_blank" rel="noopener noreferrer">markdown 简历模版</a> 吧。</p>
-<h2>2024 春，实习</h2>
-<p>| 公司     | 岗位            | 渠道       | 时间     | 状态             |
+<div class="hint-container tip">
+<p class="hint-container-title">提示</p>
+<p>以下记录时间 ↓ 由新至旧。</p>
+</div>
+<h2>2024 秋招</h2>
+<!-- prettier-ignore -->
+<p>| 公司 | 岗位 | 渠道 | 时间 | 状态 |
 |</p>
 ]]></content:encoded>
     </item>
