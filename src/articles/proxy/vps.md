@@ -15,6 +15,18 @@ tag:
 
 与 VPS 无关的 linux 问题请移步 [linux](./linux)
 
+## 地区选择
+
+买了一年机，好多地方全买过了。我现在有着极为明确的购机地点倾向：JP。
+
+我对延迟有着比较高的要求，因为需要刷 tg 看本子，如果图片出得慢，效率太低了。所以 US 全部 out。
+
+在东亚里，SG, KR, TW 的延迟也是垫底的，随便 ping 都上 200ms。所以 out。
+
+最后剩下 JP 和 HK，虽然 HK 延迟最低，但由于非常多的服务是屏蔽 HK 的（chatgpt，许多日本网站，gemini 和其他 google 家大模型），所以 JP 胜出。
+
+以后可能会尝试一下越南等地区。
+
 ## 购买
 
 ### 消息来源
@@ -37,6 +49,8 @@ tag:
 |20240714 Akile|HK|￥5/mo|200GB 1000Mbps|1GB|5GB|1|<dtls>akile 很灵车，不推荐。介于 Churros 和 Lamhosting 之间。</dtls>|
 |20240726 Lamhosting|TW|￥10.6/mo(coupon -￥2)|512GB 1000Mbps|512M|10GB|1|<dtls>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</dtls>|
 |20240820 SurfCloud|HK|$1/mo|200GB 30Mbps|1G|40GB|1|<dtls>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</dtls>|
+|20240911 YXVM|JP|$3/mo|1TB 500Mbps|768MB|5GB|1|<dtls>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</dtls>|
+|20241018 azure|JP|free|?|1G|30G|1|<dtls>微软，我的超人</dtls>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
@@ -68,17 +82,19 @@ tag:
 
 :::
 
-### 学生优惠
+### 学生白嫖
 
-阿里云和 Azure 理论上都是不能当 VPN 用的，有封号风险 <heimu>阿里云实名，甚至需要考虑会不会被打电话</heimu>，自己偷偷跑点差不多得了。
+阿里云和 Azure 理论上都是不能当代理机用的，不过真拿来跑，自用的话它们也不管。
 
 - 阿里云：免费服务器，每年 300 元优惠券，可以全额抵扣。
   1. （需要 chromium 系浏览器）[university.aliyun.com](https://university.aliyun.com) 学生认证领券
-  2. 首页，_产品 - 计算 - 轻量应用服务器_ 下单即可。新加坡有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。
-- Azure：每年 $100 优惠券
+  2. ~~首页，_产品 - 计算 - 轻量应用服务器_ 下单即可。 新加坡、日本有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。~~
+  - 学生优惠现在无法购买轻量。![现在已经寄了](/images/articles/vps/news.jpg)
+- Azure：每年 $100 优惠券，学生无限续。财大气粗！
   1. 先过学生认证
-  2. 服务器下单，配置那边按价格排序一下，选便宜的。
-  3. 开好以后如果 ping 不通，去 _网络设置_ 创建一个 _入站端口规则_，目标端口选成 `*`
+  2. 服务器下单，配置那边按价格排序一下，选便宜的，1C1G 够用了。
+  3. 开好机子，默认不能 root 登录。查看 [允许 root](#允许-root) 章节可解。
+  4. 默认是不放行其他端口的。去 _网络_，自己添加入站和出站规则，放开所有端口。
 
 ## 工具
 
@@ -142,7 +158,7 @@ Host <name>
 ```sh
 sudo vim /etc/ssh/sshd_config
 # 设置：PermitRootLogin yes, PasswordAuthentication yes
-sudo systemctl restart ssh
+sudo systemctl restart sshd
 ```
 
 ### 端口转发

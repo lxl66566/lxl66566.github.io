@@ -35,7 +35,6 @@ export default navbar([
 			"recommend_websites.md",
 			"college.md",
 			"reciter.md",
-			"learning/",
 		],
 	},
 	{
