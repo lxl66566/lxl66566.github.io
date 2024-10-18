@@ -5,6 +5,7 @@ category:
   - 编程
 tag:
   - 编程语言
+  - 前端
 ---
 
 # TypeScript
@@ -37,6 +38,7 @@ npm i node-ts -g
 
 - 重点是 `==` 和 `===` 的区别。
   - 不等号：`!=`,`!==`
+- 空数组转为 bool 是 true。判断数组是否为空，可以 `if (arr?.length)`。
 
 ### 变量声明
 

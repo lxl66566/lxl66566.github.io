@@ -89,13 +89,14 @@ tag:
 
 ## 前端
 
-我不会前端且不打算卷前端，但在其最强的兼容性面前也被动接受了一点前端知识。目前只会写一些 nocss 的小玩具，加上比如本博客要用的 vue 组件而已。
+我不会前端且不打算卷前端，但在其最强的兼容性面前也被动接受了一点前端知识。
 
 1. [node.js](./nodejs.md)
 2. [TypeScript & JavaScript](./tsjs.md)
-3. [html](./html.md)
-4. [MDX](./mdx.md)
-5. [配色方案](../farraginous/recommend_websites.md#资源)
+3. [vue](./vue.md)
+4. [html](./html.md)
+5. [MDX](./mdx.md)
+6. [配色方案](../farraginous/recommend_websites.md#资源)
 
 ## [Android 开发](./android.md)
 

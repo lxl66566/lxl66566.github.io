@@ -110,6 +110,7 @@ export default sidebar({
 				"csharp.md",
 				"kotlin.md",
 				"clojure.md",
+				"vue.md",
 				"mdx.md",
 			],
 		},
