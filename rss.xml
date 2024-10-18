@@ -6,13 +6,13 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 17 Oct 2024 16:29:28 GMT</pubDate>
-    <lastBuildDate>Thu, 17 Oct 2024 16:29:28 GMT</lastBuildDate>
+    <pubDate>Fri, 18 Oct 2024 18:00:30 GMT</pubDate>
+    <lastBuildDate>Fri, 18 Oct 2024 18:00:30 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>编程</category>
     <category>学习</category>
     <category>爱好</category>
-    <category>编程</category>
     <category>教程</category>
     <category>应用</category>
     <category>推荐</category>
@@ -21,6 +21,32 @@
     <category>生活</category>
     <category>经历</category>
     <category>随笔</category>
+    <item>
+      <title>Vue.js</title>
+      <link>https://absx.pages.dev/coding/vue.html</link>
+      <guid>https://absx.pages.dev/coding/vue.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">Vue.js</source>
+      <description>Vue.js 前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是博客主要学习的是 SFC 组件，因此我到现在对 Vue 的核心并不是非常了解。不过姑且也开一篇文章记录技巧和踩坑吧。 Vue 2 与 Vue 3 Vue 当前版本迭代到 Vue 3。但是如果上网问 GPT，给出的答案基本全是 Vue 2 的答案。截至 2024....</description>
+      <category>编程</category>
+      <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是博客主要学习的是 SFC 组件，因此我到现在对 Vue 的核心并不是非常了解。不过姑且也开一篇文章记录技巧和踩坑吧。</p>
+<h2>Vue 2 与 Vue 3</h2>
+<p>Vue 当前版本迭代到 Vue 3。但是如果上网问 GPT，给出的答案基本全是 Vue 2 的答案。截至 2024.10 的现在，本博客的所有组件仍然是 Vue 2 写成的。</p>
+<p>Vue 3 基本上兼容 Vue 2 的写法。当我尝试了一下 Vue 3 语法后我感觉确实不错，比 Vue 2 要灵活多了。</p>
+<h3>迁移到 Vue 3</h3>
+<p>Vue 3 的所有函数和导出全部写在 <code>setup()</code> 里，也可以使用 <code>&lt;script setup&gt;</code> 语法糖，免去两层嵌套和手动导出。</p>
+<p>Vue 2 使用大量的 <code>this.$set</code> 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 ref/reactive 即可。具体用法和 android 差不多，ref 必需取 <code>.value</code>，是浅层的变更追踪；reactive 主要用于各种对象与容器，是深层变更追踪，reactive 对象本身是一个 proxy 而不是原先的类型。</p>
+<h2>基础</h2>
+<p>每个 <code>.vue</code> 组件由 template, script, style 三部分组成。</p>
+<h3>template</h3>
+<ul>
+<li>template 里使用 <code>:</code> (v-bind) 进行函数调用。只写函数名则只调用，不拿返回值；加了括号是拿返回值。</li>
+</ul>
+<h3>style</h3>
+<p>请务必使用 <code>&lt;style scoped&gt;</code>！避免 css 污染其他样式。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>修图嵌字</title>
       <link>https://absx.pages.dev/learning/ps.html</link>
@@ -2177,56 +2203,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <blockquote>
 <p>在 linux 上这是可行的。但是在 windows 上读取 edge 浏览器 cookie 可能会出现 <em>Permission denied</em>，并且使用管理员终端无效，可能需要进行其他操作。（未测试）</p>
 </blockquote>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>PDF 阅读器横评</title>
-      <link>https://absx.pages.dev/articles/pdf_reader.html</link>
-      <guid>https://absx.pages.dev/articles/pdf_reader.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">PDF 阅读器横评</source>
-      <description>PDF 阅读器横评 一看到这个标题，肯定有人会说：嗨嗨嗨，浏览器自带的 PDF 阅读器不好吗，为啥要专门整一个阅读器呢？那是因为…… 已知：我的需求是，免费，能记阅读进度，能反色（dark mode），能划词翻译，很简单很基础吧。 浏览器 但是在浏览器中，这是很难实现的。 Dark Reader 插件能直接把浏览器自带的 PDF 阅读界面反色（dark...</description>
-      <category>推荐</category>
-      <category>评价</category>
-      <pubDate>Mon, 18 Dec 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>一看到这个标题，肯定有人会说：嗨嗨嗨，浏览器自带的 PDF 阅读器不好吗，为啥要专门整一个阅读器呢？那是因为……</p>
-<p>已知：我的需求是，免费，能记阅读进度，能反色（dark mode），能划词翻译，很简单很基础吧。</p>
-<h2>浏览器</h2>
-<p>但是在浏览器中，这是很难实现的。</p>
-<ol>
-<li>Dark Reader 插件能直接把浏览器自带的 PDF 阅读界面反色（dark mode）。
-<ul>
-<li>仅在 chromium 系下有效。firefox 强制所有扩展无法访问文件网址。</li>
-</ul>
-</li>
-<li>目前所有的（<em>沙拉查词</em>，<em>划词翻译</em>）划词翻译插件都不能在自带 PDF 阅读界面工作，需要插件自行用 pdf.js 维护一个页面。</li>
-<li>我尝试在其维护的 pdf.js 页面反色，error: 此页面受浏览器保护。</li>
-</ol>
-<h3>解法</h3>
-<p>在后续的尝试中，我发现可以在控制台输入：<code>viewer.style.filter = 'invert() brightness(80%)'</code> 来强制反色。(<a href="https://github.com/darkreader/darkreader/issues/374#issuecomment-850989619" target="_blank" rel="noopener noreferrer">src</a>)</p>
-<p>也可以建一个书签，免去了输指令：<code>javascript:void(viewer.style.filter = 'invert() brightness(80%)')</code>。</p>
-<h2>Adob​​e Acrobat Reader</h2>
-<p>这玩意我只在学校机房用过一次，当时它能做到离线 OCR，还是有点惊艳到我的。</p>
-<p>今天尝试安装，结果下载到 90% 卡死了，甚至关不掉，只能等超时。pass。</p>
-<p>（早都说了解耦，就是有人喜欢耦合，结果就是下载器也做不好，安装器也做不好，tmd 一坨大便。）</p>
-<h2>Foxit PDF Reader</h2>
-<p>福昕阅读器，据说是支持反色和划词翻译的。我下载的时候选的 English，当时也没太在意。</p>
-<p>装好以后 Darkmode 倒是好找，但是无法反色（更换背景）。怎么找也找不到。</p>
-<p>然后去看了下<a href="https://www.foxit.com/blog/how-to-add-backgrounds-to-pdfs/" target="_blank" rel="noopener noreferrer">官方教程</a>。好家伙，我根本找不到视频中的 <code>Organize</code> 的入口。</p>
-<p>并且我试了下，也不能划词翻译。pass。</p>
-<p>比较有意思的是我搜出来的中文教程的界面与英文的完全不同，这阅读器该不会是区别对待吧（）。</p>
-<h2>Evince</h2>
-<p>这玩意是开源的阅读器，官网只能找到 linux 系统的安装包。于是去<a href="https://evince.en.uptodown.com/windows/download" target="_blank" rel="noopener noreferrer">第三方平台</a>下载了 windows 版本（期间还在 Microsoft Store <a href="/gossip/fuckxxx.html#%E6%89%B9%E5%88%A4%E5%BE%AE%E8%BD%AF" target="_blank">碰了一次壁</a>）。安装不能自定义位置，扣分。</p>
-<p>轻量倒是轻量，也有反色，但是没有划词翻译。</p>
-<p>这个软件在 PDF 上选择单词时会忽视单词排版的间隙，而是自己再覆盖着打一遍单词，我也说不上是好是坏。</p>
-<p>在 archlinux 上安装则没有带 <code>.desktop</code> 文件，需要自己写一个最小 <code>.desktop</code>：</p>
-<div class="language-toml line-numbers-mode" data-highlighter="shiki" data-ext="toml" data-title="toml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">Desktop</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> Entry</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">Name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=e</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">vince</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">Comment</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=e</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">vince pdf reader</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">Type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=A</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">pplication</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">Exec</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=e</span><span style="--shiki-light:#B31D28;--shiki-dark:#FFFFFF;--shiki-light-font-style:italic;--shiki-dark-font-style:inherit">vince -o</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">Terminal</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">false</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>喂，你好歹是个官方 extra 仓库的应用。。到时候考虑邮件催一下打包者。</p>
 ]]></content:encoded>
     </item>
   </channel>
