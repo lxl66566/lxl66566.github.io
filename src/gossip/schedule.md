@@ -43,3 +43,4 @@ category:
 - [ ] build-my-own-language (?)
 - [ ] [灵感区](../hide/inspiration.md)：对任何东西灵光一闪的想法。希望能用得上。
 - [ ] 理论数学(?)
+- [ ] 调香<heimu>精</heimu>师

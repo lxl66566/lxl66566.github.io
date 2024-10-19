@@ -552,6 +552,10 @@ const data = [
   { id: "471158", aScore: 6.4, bScore: 3.3, info: "#兽耳 #扶她 #发情" },
   { id: "408130", aScore: 6.8, bScore: 9.2, info: "#穿越 #拘束 #榨精 #3P" },
   { id: "(eh)", aScore: 7, bScore: 7.3, info: "#潜入 #反杀 #调教 #巨乳 #媚药", otherlink: "https://e-hentai.org/g/3087812/22447a5d1a/" },
+  { id: "534976", aScore: 6.3, bScore: 2.7, info: "#全彩 #兽耳", bak: "https://telegra.ph/うなぎやさん-花宮なつか-きまぐれにゃんにゃんお-中国翻訳-DL版-10-13" },
+  { id: "535313", aScore: 7.8, bScore: 3.1, info: "#舰队Collection", bak: "https://telegra.ph/GW超同人祭-Angel-Bless-月路-キミの声は心に響く-艦隊これくしょん--艦これ--Adoscc-個人翻訳-10-16" },
+  { id: "535454", aScore: 4.2, bScore: 8.8, info: "#诱拐", bak: "https://telegra.ph/八代涼-しあわせになろうね-COMIC-LOE-VOL7-みにえるおー-2時間目-中国翻訳-10-17" },
+  { id: "(pixiv)", aScore: 9.3, bScore: 5.4, info: "#东方 #同人 #无R18", otherlink: "https://www.pixiv.net/artworks/123422915" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

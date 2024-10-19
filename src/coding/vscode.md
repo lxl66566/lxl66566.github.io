@@ -77,6 +77,8 @@ tag:
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型，不考虑
 - [Tabnine](https://www.tabnine.com/)：补全较弱（_Short code completions (2 to 3 words)_）
 - [Cody](https://github.com/sourcegraph/cody)：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。
+- [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
+- [Continue](https://www.continue.dev/)：需要自己提供 API KEY 或本地跑模型
 
 国产：
 
@@ -90,9 +92,10 @@ tag:
   - 这货也挺扰民的，每个函数间都会被插入一个通义的标志。插的位置还烂，rust 如果多行注释的话就会插在注释中间。。
   - 20240914 更新，出现双保存现象，即一次 `Ctrl + S` 后，文件仍然处于未保存状态。对照实验发现是通义灵码的问题。
 
-未来可能会尝试：
+关于 API：
 
-- [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
+- chat api，gemini 1.5 是免费的
+- code 补全 API 的话，deepseek api 比较便宜
 
 ## feature
 

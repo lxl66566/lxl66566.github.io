@@ -59,9 +59,44 @@ scoop install openjdk22
 
 包管理器（gradle）就 `scoop install gradle` 一行完事。
 
-## var
+## 语言基础
+
+### 循环
+
+JDK 5 引入了 `for (auto& element : collection) {}` 的循环，比 C++11 类似的功能早多了。
+
+### var
 
 Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
+
+## exception
+
+> java 错误处理挺不错的，至今也有人认为 java exception 优于 rust Result&lt;T,E&gt;.
+
+函数可以声明可能抛出的异常，则 throw exception 后会直接跳出这个函数。
+
+```java
+class X1Exception extends Exception{}
+class X2Exception extends Exception{}
+void t() throws Exception{
+    throw new X2Exception("...");
+    assert unreachable == true;
+}
+// ... main
+try { t(); } catch(X1Exception | X2Exception e) {
+    System.out.println(e.getMessage());
+}
+```
+
+## 断言
+
+使用非常简单，`assert expression`，不过呢，需要加入 JVM 参数 `-ea`：`java -ea Main.java`
+
+具体地，在 vscode 中，点击 _运行(R) - 添加配置..._，在你需要的文件项下加入 `"vmArgs": "-ea"`。
+
+## 其他关键字
+
+- native：表示函数是外部的，类似 C/rust 的 extern。
 
 ## 数据结构
 
@@ -85,25 +120,6 @@ private ArrayList<account> accounts = new ArrayList<>(List.of(new account("admin
 
 java 14 语法糖，快速创建一个拥有不可变成员的类，自带 toString 等。
 
-## exception
-
-> java 错误处理挺不错的，至今也有人认为 java exception 优于 rust Result&lt;T,E&gt;.
-
-函数可以声明可能抛出的异常，则 throw exception 后会直接跳出这个函数。
-
-```java
-class X1Exception extends Exception{}
-class X2Exception extends Exception{}
-void t() throws Exception{
-    throw new X2Exception("...");
-    assert unreachable == true;
-}
-// ... main
-try { t(); } catch(X1Exception | X2Exception e) {
-    System.out.println(e.getMessage());
-}
-```
-
 ## Stream
 
 stream (Java 8) 是 java 中很重要的一个概念，可以理解成迭代器（链表?）。类比 Rust 或 C++20 的 std::ranges。
@@ -117,21 +133,17 @@ stream (Java 8) 是 java 中很重要的一个概念，可以理解成迭代器�
 - 过滤：`filter`
 - 元素操作：`forEach(lambda)`
 
-### 流转数据结构
+### 常用方法
 
 ```java
 var list = Stream.of(1,2,3).collect(Collectors.toCollection(ArrayList::new));   // 为 Arraylist 赋值
-list.stream();  // Arraylist 转流
-```
-
-### 流计算
-
-```java
-Stream.of(1,2,3).mapToInt(Integer::intValue).max().getAsInt();  // 计算最大值
+list.stream();                                                                  // Arraylist 转流
+Stream.of(1,2,3).mapToInt(Integer::intValue).max().getAsInt();                  // 计算最大值
 // 对于 Arraylist, 更好的做法是 Collections.max(list)
-Stream.of(1,2,3).mapToInt(Integer::intValue).average().getAsDouble();   // 计算平均值
-Stream.of(1,2,3).sorted();  // 排序（升序）
-Stream.of(1,2,3).sorted(Comparator.reverseOrder()); // 排序（降序）
+
+Stream.of(1,2,3).mapToInt(Integer::intValue).average().getAsDouble();           // 计算平均值
+Stream.of(1,2,3).sorted();                                                      // 排序（升序）
+Stream.of(1,2,3).sorted(Comparator.reverseOrder());                             // 排序（降序）
 ```
 
 ### Intstream
@@ -139,31 +151,25 @@ Stream.of(1,2,3).sorted(Comparator.reverseOrder()); // 排序（降序）
 以这个结构为例了解其用法。
 
 ```java
-var temp1 = IntStream.rangeClosed(1, 3);// 生成闭区间流 1,2,3
-var temp2 = IntStream.range(1, 3);      // 生成左闭右开区间流 1,2
-var temp3 = temp1.boxed();              // Intstream 转为 Stream
+var temp1 = IntStream.rangeClosed(1, 3);    // 生成闭区间流 1,2,3
+var temp2 = IntStream.range(1, 3);          // 生成左闭右开区间流 1,2
+var temp3 = temp1.boxed();                  // Intstream 转为 Stream
 ```
-
-## 断言
-
-使用非常简单，`assert expression`，不过呢，需要加入 JVM 参数 `-ea`：`java -ea Main.java`
-
-具体地，在 vscode 中，点击 _运行(R) - 添加配置..._，在你需要的文件项下加入 `"vmArgs": "-ea"`。
 
 ## Optional
 
-option 思想，编程错误处理的重要思想。Java 8 新增的，还挺早的。
+Java 8 新增的 Optional，是编程中空处理的重要思想。还挺早的。（后来 [kotlin](./kotlin.md) 又把空安全发扬光大了）
 
 ```java
-Optional.of(value)          // 创建，value 不可为 null
-Optional.ofNullable(null)   // 创建，建议都使用此方法
+Optional.of(value)                                              // 创建，value 不可为 null
+Optional.ofNullable(null)                                       // 创建，建议都使用此方法
 Optional.ofNullable(123).ifPresent(u -> System.out.println(u)); // 操作值
-Optional.ofNullable(123).orElse(456);   // 取值
-Optional.ofNullable(123).map(u -> u + 2);   // 映射
-Optional.ofNullable(123).filter(u -> u < 150);   // 映射
+Optional.ofNullable(123).orElse(456);                           // 取值
+Optional.ofNullable(123).map(u -> u + 2);                       // 映射
+Optional.ofNullable(123).filter(u -> u < 150);                  // 映射
 ```
 
-## Serialize
+## 序列化
 
 > java 的序列化真是方便啊。没想到强类型语言也能这么轻松。
 
@@ -216,6 +222,22 @@ button.addActionListener(e -> {
     ...
 });
 ```
+
+## JVM 调优
+
+基础概念：
+
+- java8 有这些 GC：Serial GC, Parallel GC, CMS, G1
+  - 后二者将 GC 分为几个阶段，只在其中部分阶段 stop the world
+- java 的 gc 是从根节点开始扫描不可达对象。
+- JDK8 的 GC 是分两代，新生代和老年代。新生代里又有三个区（eden, Survivor（s1, s2））。在新生代 gc 叫 minor gc，gc 老年代 + 新生代叫 full gc。
+  - 每次 gc 会使新生代对象的 age + 1，当 age 超过一定值时将被移入老年代
+  - Survivor 区的对象总年龄超过 50% 时也会将部分年龄最大的移入老年代
+- java8 的几个 GC 都是 stop the world 的，调优目的就是减少 full gc，减少 stop the world。
+
+### 工具
+
+jvisualvm 是 jdk 里自带的 GUI 分析工具，可以追踪 GC 状况，日志，系统资源占用等。
 
 ### 一些问题
 
