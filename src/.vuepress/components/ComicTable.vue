@@ -556,6 +556,7 @@ const data = [
   { id: "535313", aScore: 7.8, bScore: 3.1, info: "#舰队Collection", bak: "https://telegra.ph/GW超同人祭-Angel-Bless-月路-キミの声は心に響く-艦隊これくしょん--艦これ--Adoscc-個人翻訳-10-16" },
   { id: "535454", aScore: 4.2, bScore: 8.8, info: "#诱拐", bak: "https://telegra.ph/八代涼-しあわせになろうね-COMIC-LOE-VOL7-みにえるおー-2時間目-中国翻訳-10-17" },
   { id: "(pixiv)", aScore: 9.3, bScore: 5.4, info: "#东方 #同人 #无R18", otherlink: "https://www.pixiv.net/artworks/123422915" },
+  { id: "501070", aScore: 9.4, bScore: 6.7, info: "#蔚蓝档案 #催眠", bak: "https://telegra.ph/みじ屋-ミコジン-ヴェリタス催眠本-ブルーアーカイブ-中国翻訳-カラー化-DL版---Page-1-03-15" },
   // next: 4.22 - 11.1
 ].sort((a, b) => {
   const aScore = a.aScore + a.bScore;

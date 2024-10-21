@@ -223,6 +223,18 @@ button.addActionListener(e -> {
 });
 ```
 
+## Spring
+
+Spring 算是 java 必修了，不过我们课上没学。Spring 是一个网络框架，使用它可以很轻松地编写后端项目。而 SpringBoot 是官方出的一个快速搭建 Spring 项目的组件，可以通过几行 yml 配置好所有设置。
+
+Spring 在 idea 运行时会自动起一个 tomcat 来运行服务。（tomcat 是一种网络容器，用它可以方便地部署网络应用）
+
+### 注解
+
+Spring 中大量使用注解进行业务包装，这是好文明。一些常用注解：
+
+- @RequestMapping：最常用的，处理路由的 request。可以再细分成 GET、POST、PUT 和 DELETE 请求。
+
 ## JVM 调优
 
 基础概念：
@@ -239,9 +251,9 @@ button.addActionListener(e -> {
 
 jvisualvm 是 jdk 里自带的 GUI 分析工具，可以追踪 GC 状况，日志，系统资源占用等。
 
-### 一些问题
+## 一些问题
 
-#### repaint
+#### swing repaint
 
 在 remove 后 add 组件，需要重绘。
 
