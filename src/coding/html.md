@@ -19,10 +19,13 @@ tag:
 缺点：
 
 - [跨域访问限制](./nodejs.md#cors-policy)
+- 性能差，浏览器里跑单线程比本机 python 代码慢多了。
 
 ## 工具
 
-作为 `<script>` 引入的 js 库，好用。
+现在我基本上都是引一个 vue.js，这些东西已经基本不再使用了。
+
+作为 `<script>` 引入的 js 库。十年前引 js 基本上全是 jquery，不过现在谁还用这玩意啊。
 
 - 界面构建，简化语法：
   - [vanjs](https://vanjs.org/)：reactive UI framework，不含 JSX。
@@ -38,3 +41,7 @@ tag:
 
 - [Google 翻译 x 次](https://github.com/lxl66566/Google-translate-x-times)
 - [table-sampling](https://github.com/lxl66566/table-sampling)：markdown 表格抽查器
+
+## external
+
+1. [you might not need jquery](https://youmightnotneedjquery.com/)

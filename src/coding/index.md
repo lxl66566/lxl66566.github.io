@@ -41,7 +41,7 @@ tag:
 5. [Java](./java.md)
 6. [TypeScript & JavaScript](./tsjs.md)
 
-### 预学习阶段
+### ~~预~~放弃学习阶段
 
 6. [C#](./csharp.md)
 7. [kotlin](./kotlin.md)

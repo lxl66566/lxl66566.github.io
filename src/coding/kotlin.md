@@ -81,7 +81,7 @@ kotlin 没有官方推出的统一格式化工具，外加用的 jar + 虚拟机
 
 ### 语法糖
 
-- 函数最后一个参数是 lambda 函数，可以吊在末尾。
+- 如果函数最后一个参数是 lambda 函数，可以吊在末尾。
 - [Scope functions](https://kotlinlang.org/docs/scope-functions.html)：`let`, `run`, `with`, `apply`, and `also`，~~包好吃的糖~~
   - 还有 `ifEmpty` 也是链式的。
 

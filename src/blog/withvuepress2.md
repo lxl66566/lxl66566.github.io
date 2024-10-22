@@ -1,6 +1,6 @@
 ---
 date: 2022-07-18
-icon: vue
+icon: circle-xmark
 category:
   - 博客
   - 教程
@@ -9,12 +9,22 @@ category:
 
 # 问题列表
 
+折腾此 Vuepress 博客时遇到的问题。Vuepress 本质上还是为 Vue 开发者准备的，如果在写博客之前能系统地学习 Vue 与其他前端技术，能够避开很多问题。
+
+后来我是学了，详见 [Vue](../coding/vue.md)。
+
 ::: tip
 
 - 以下问题可能不具有时效性与主题泛用性，请自行判断。
 - 按时间升序。
 
 :::
+
+## 博客搭建问题
+
+搭建之初阶段，由于 vuepress1.x 仅使用 config.js，而 2.x 改用 ts，这导致了我（还不会用 google）被网上教程（多为 js 写成）与官方文档的 ts 搞得不明所以。
+
+官方文档肯定正确，但是官方的说明显然是面向 Vue 开发者而不是面向新手的，所以我也看不懂。
 
 ## 字体颜色问题
 
@@ -175,13 +185,9 @@ export default defineUserConfig({
 
 ## html 转 vue 组件失败问题
 
-<text style="color:red;font-weight:bold">未解决！</text>
+用 html, js, css 三件套写了一个简陋的[背词器](../farraginous/reciter.md)出来，但是受制于 iframe 的固定大小，很容易出现超出边框的情况。_（曲线救国：预留大量位置）_ 于是想到了 vue 组件引入的方法。但是，遇到了大麻烦：vue 组件单文件（SFC）仅允许一个 `<script>` 标签的存在。而我的背词器中使用了两个 script：jquery 库与我自己写的 js。现在无法正常执行 js 脚本。
 
-用 html, js, css 三件套写了一个简陋的[背词器](../farraginous/reciter.md)出来，但是受制于 iframe 的固定大小，很容易出现超出边框的情况。_（曲线救国：预留大量位置）_ 于是想到了 vue 组件引入的方法。但是，遇到了~~前所未有~~的麻烦。vue 组件单文件（SFC）仅允许一个 `<script>` 标签的存在。而我的背词器中使用了两个 script：jquery 库与我自己写的 js。现在无法正常执行 js 脚本。
-
-> 学长提示：可使用另一种曲线解法：[you might not need jquery](https://youmightnotneedjquery.com/)（XD
-
-后来发现需要学习 Vue 而不是普通地套 html。。~~在学了在学了~~
+> emmm，现在我已经学习了 Vue，vue 里根本没必要用 jquery。
 
 ## 配置 sidebar 问题
 

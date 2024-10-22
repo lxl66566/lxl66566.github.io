@@ -125,7 +125,7 @@ java 14 语法糖，快速创建一个拥有不可变成员的类，自带 toStr
 
 ## Stream
 
-stream (Java 8) 是 java 中很重要的一个概念，可以理解成迭代器（链表?）。类比 Rust 或 C++20 的 std::ranges。
+Stream (Java 8) 是 java 中很重要的一个概念，可以理解成迭代器。类比 Rust iterator 或 C++20 的 std::ranges。Stream 提供了一组函数式链式操作。
 
 > 刚发现的写的不错的[参考](https://blog.csdn.net/zhiyuan263287/article/details/124540708)。
 

@@ -1,6 +1,6 @@
 ---
 date: 2023-11-04
-icon: format
+icon: font
 category:
   - 学习
   - 推荐

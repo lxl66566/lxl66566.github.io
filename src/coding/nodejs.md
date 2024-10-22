@@ -33,6 +33,10 @@ Node.js 是能够在服务器端运行 JavaScript 的开放源代码、跨平台
 
 ### npm
 
+我已不再使用 npm。npm 比起其他包管理器有太多不足了，除非公司强制使用，否则我不用。
+
+::: details archive
+
 #### 基本命令
 
 ```sh
@@ -59,11 +63,13 @@ npm uninstall <package_name> [option] # 卸载包及其依赖
 
 有时候会看到 `npm i xxx --save`，`--save` 是写入 `package.json` 的过程，而 npm 5 之后 install 会自动 save，不需要手动指定。一句话：**不用加**。
 
+:::
+
 ### 关于 lockfile
 
 > 对于不同的包管理器，lockfile 的名称不同。
 
-在 `package.json` 的包版本信息是使用[版本修饰符](https://eminoda.github.io/2021/01/29/npm-semver-strategy/)，允许上下浮动的。然而版本不同就有可能导致错误。此时就需要使用 lockfile 进行精确版本的指定。
+在 `package.json` 的包版本信息是使用[版本修饰符](https://eminoda.github.io/2021/01/29/npm-semver-strategy/)，允许上下浮动的。并且依赖、依赖的依赖……都可能不固定版本。然而版本不同就有可能导致错误，此时就需要使用 lockfile 进行精确版本的指定。
 
 若 lockfile 不存在，install/update 时会自动生成。若存在且 lockfile 版本符合 `package.json` 版本，则从 lockfile 中安装依赖。若 lockfile 不兼容 `package.json`，则 pnpm/npm 会直接更新 lockfile 或报错退出（因此，强烈建议将 lockfile 添加到 git 版本控制中[^2]）。
 

@@ -20,6 +20,7 @@ export default sidebar({
 				"chicken_soup.md",
 				"zero_fill.md",
 				"brainhole.md",
+				"interview.md",
 				"snack.md",
 			],
 		},
@@ -143,7 +144,7 @@ export default sidebar({
 	"/learning/": [
 		{
 			text: "学习笔记",
-			link: "/farraginous/learning/",
+			link: "/learning/",
 			children: [
 				"japanese.md",
 				"english.md",
@@ -215,7 +216,6 @@ export default sidebar({
 				"recommend_websites.md",
 				"college.md",
 				"reciter.md",
-				"learning/",
 			],
 		},
 		"essay/",

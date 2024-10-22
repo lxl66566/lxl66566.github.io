@@ -58,6 +58,41 @@ tag:
    - [索引语法](https://www.runoob.com/mysql/mysql-index.html)
 4. 其他依赖于特定数据库的实现，例如隔离级别与锁。这些跟 SQL 语法本身就没什么关系了。
 
+### 基础语句
+
+看例子就行了。
+
+```sql
+-- 简单增删改
+INSERT INTO tablename (name, xxx) VALUES ('Alice', 25);
+UPDATE tablename SET xxx = 26 WHERE email = 'alice@example.com';
+DELETE FROM users WHERE email = 'alice@example.com';
+
+-- 复杂查示例：
+
+SELECT
+    o.order_id,
+    c.customer_name,
+    o.order_date,
+    SUM(oi.quantity * p.price) AS total_amount,
+    COUNT(oi.product_id) AS total_items
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+WHERE o.order_date BETWEEN '2023-01-01' AND '2023-12-31'
+  AND c.region = 'North America'
+  AND p.category_id IN (
+      SELECT category_id
+      FROM categories
+      WHERE category_name LIKE '%Electronics%'
+  )
+GROUP BY o.order_id, c.customer_name, o.order_date
+HAVING total_amount > 500
+ORDER BY total_amount DESC, o.order_date ASC
+LIMIT 10 OFFSET 5;
+```
+
 ### 多表查询
 
 - [外键的创建](https://github.com/guobinhit/mysql-tutorial/blob/master/articles/foreign-key.md)：先创建一个正常数据（与关联的类型一致），再进行关联：`foreign key(外键字段) + references + 外部表名(主键字段);`
@@ -147,6 +182,14 @@ Redis 是一个非常简单的内存 KV (key-value) 数据库，主要用来做�
   - 语句前 + `explain` 分析此语句的详情，是否走索引。
   - `ANALYZE TABLE my_table;` 分析并存储表的关键字分布，用于优化查询。
   - `OPTIMIZE TABLE my_table;` 整理碎片。
+
+### 常用数据类型
+
+- 整数：TINYINT，SMALLINT，MEDIUMINT，INT，BIGINT；字节数分别 1 2 3 4 8
+- 小数：FLOAT（4），DOUBLE（8），DECIMAL（精确）
+- 时间：DATETIME，TIMESTAMP
+- 字符串：VARCHAR(M)（可调最大长度 1-65535）（一般不用 TEXT，因为 VARCHAR 能建索引，但是 TEXT 不行）
+- 二进制：VARBINARY(M)（可调最大长度 1-65535），BLOB（相当于 VARBINARY(65535)）
 
 ### 基础改查
 
