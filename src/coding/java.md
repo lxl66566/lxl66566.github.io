@@ -9,21 +9,24 @@ tag:
 
 # Java
 
-::: details 暴论
+::: details java 缺点 - 暴论
 
 入门 java，远离 java。
 
-DBeaver 烂，JB 家一堆烂，Minecraft 烂，sonarlint 烂，我接触到的 java 写成的玩意总能给我带来不悦。
-
-在我看来 Java 的优势是跨平台，代码容易维护（方便 t 人）。但是作为带 GC 的语言，Java 的性能一般（强类型打不过弱类型）；与其他 GC 语言相比，Java 编写的复杂度又更高。同时 Java 的自由度不高（其实某些方面可能还算优点），因此我对之并无好感。java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年），<span class="heimu" title="你知道的太多了">tg 其他群在讨论技术问题的时候 java 群总是在疯狂 ot（不过是通病，python 群也一样</span>。java 学到后期全是框架，不好玩，没意思（
+- DBeaver 烂，JB 家一堆烂，Minecraft 烂，sonarlint 烂，我接触到的 java 写成的玩意总能给我带来不悦。
+- 作为带 GC 的语言，Java 的性能一般（强类型打不过弱类型）；与其他 GC 语言相比，Java 编写的复杂度又更高。
+- java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年）。
+- java 学到后期全是业务框架，不好玩，没意思（
 
 哦，顺带一提，Android 开发建议直接 [kotlin](./kotlin.md)，Google 官方推荐的语言，并且全兼容 java。确实比 java 有意思多了。
 
 :::
 
-由于想混学分，选修了 Java，因此记录一下我学习 Java 的历程。由于不打算深入，因此只涉及语言基础，不涉及框架。
+虽然万年 java8 死气沉沉，但是不得不提，对于企业来说反而是一个优点：语法简单，可以快速培养人才，并且方便招人和后续的维护。所以现在国内外的就业环境里 java 还是后端主流，学一堆新玩意反而不好找工作。
 
-根据其他语言学习经验，到处搜，用 Java 写点算法题，多写就完了。也可以问问 ChatGPT。
+## 前言
+
+选修了 Java 混学分，由于是编程语言所以又自学了挺多东西。本来此篇只涉及语言而不涉及业务框架，但在找工作时还是了解了一部分后端框架概念。
 
 大作业做了个[垃圾](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/java/实验代码/bank_gui.java)。<heimu>我校指定大作业必须做个银行管理系统 demo，不能自由选择课题。</heimu>
 
@@ -223,7 +226,13 @@ button.addActionListener(e -> {
 });
 ```
 
+## JavaBean
+
+Bean 是一个业务中很常见的概念。Bean 就是数据类 + private 数据 + Setter/Getter 的类格式，实现了字段读写的控制，说它是约定好的开发风格可能更为贴切。
+
 ## Spring
+
+后端必备套件之一。
 
 Spring 算是 java 必修了，不过我们课上没学。Spring 是一个网络框架，使用它可以很轻松地编写后端项目。而 SpringBoot 是官方出的一个快速搭建 Spring 项目的组件，可以通过几行 yml 配置好所有设置。
 
@@ -234,6 +243,14 @@ Spring 在 idea 运行时会自动起一个 tomcat 来运行服务。（tomcat �
 Spring 中大量使用注解进行业务包装，这是好文明。一些常用注解：
 
 - @RequestMapping：最常用的，处理路由的 request。可以再细分成 GET、POST、PUT 和 DELETE 请求。
+
+## Mybatis
+
+后端必备套件之一。
+
+Mybatis 是一个轻量级 ORM。要我说的话它只能算是半个 ORM，毕竟要自己写 SQL 语句的 ORM 还是挺捞，跟我见过的其他 ORM 还是有不小的差距的[^1]。
+
+[^1]: 我在写 Android 时用过 room ORM，也需要在注解里手写 SQL。感觉是不是 Java 系的 ORM 都喜欢这样……
 
 ## JVM 调优
 

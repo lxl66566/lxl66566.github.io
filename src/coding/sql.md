@@ -58,6 +58,29 @@ tag:
    - [索引语法](https://www.runoob.com/mysql/mysql-index.html)
 4. 其他依赖于特定数据库的实现，例如隔离级别与锁。这些跟 SQL 语法本身就没什么关系了。
 
+### 多表查询
+
+- [外键的创建](https://github.com/guobinhit/mysql-tutorial/blob/master/articles/foreign-key.md)：先创建一个正常数据（与关联的类型一致），再进行关联：`foreign key(外键字段) + references + 外部表名(主键字段);`
+  - [级联](https://www.cnblogs.com/itjeff/p/11578721.html)：如果表 A 有 foreign key 关联到表 B，那么在 B 变动时可以让相关的 A 的行也变动。常用的有 `on delete cascade`（B 删除项时，A 也删除）
+- 直接 `select * from table1, table2` 出来的是两表的笛卡尔积
+- 内连接（显式）：`SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 连接条件...`
+- 左外连接（所有的表 1 数据 + 交集）：`SELECT 字段列表 FROM 表1 LEFT [OUTER] JOIN 表2 ON 条件`
+- 右外连接：一般转为左外形式
+- 自连接：给自己的表添加两个 alias，然后当成两张不相关的表用。
+
+### 集合操作
+
+对**多次**查询的结果取并集或交集的操作。
+
+- 联合查询：
+  - 两个 select 语句使用 `union all` 拼接：相当于两张表直接拼接。
+  - `union` 会去重。
+  - 双表列数必需一致，否则报错
+- 子查询：在首次查询的结果中继续查询。子句加 `()`。
+  - 子查询返回单个值：正常使用
+  - 子查询返回一行或一列：当成集合使用，一般有 `in`, `not in`, `any`, `all`
+  - 子查询返回一表：一般需要 `select ... where (A, B) in (select ...)` 的形式，代表满足子表中任意一行的要求
+
 ## SQLite
 
 SQLite 没有驱动，没有压缩，没有加密，非常简单的数据库，可以被分发。作为开发者，也可以装一个 CLI 驱动，方便调试。
@@ -120,14 +143,10 @@ Redis 是一个非常简单的内存 KV (key-value) 数据库，主要用来做�
     - 行锁：`SELECT ... LOCK IN SHARE MODE` 是读锁，`SELECT ... FOR UPDATE` 是写锁。
     - 表锁：`LOCK TABLES table_name READ` 和 `LOCK TABLES table_name WRITE`。需要显式解锁：`UNLOCK TABLES`。
   - MyISAM 虽然不支持事务，但是其 select 和 insert/update/delete 会自动加表读/写锁。
-
-## MySQL 运维
-
-虽然之前说 MySQL 已经老了，但是由于其比较简单，现在还有非常多的企业在用，面试也是高频考点。学习一些 MySQL 并不影响对其他关系型数据库的掌握。
-
-### 键位
-
-- `<C-d>` = 退出
+- 分析：
+  - 语句前 + `explain` 分析此语句的详情，是否走索引。
+  - `ANALYZE TABLE my_table;` 分析并存储表的关键字分布，用于优化查询。
+  - `OPTIMIZE TABLE my_table;` 整理碎片。
 
 ### 基础改查
 
@@ -141,20 +160,9 @@ delete from users where sID = 'xxx';
 update users set sBalance = 1000.00 where sID = '...';
 ```
 
-- 查看 sql 历史指令：`less ~/.mysql_history`
+## MySQL 运维
 
-### 备份与恢复
-
-mysqldump 是热备份，即无需关闭 mysql 服务。
-
-```sh
-# 备份
-sudo mysqldump -p <database name> > bak-time.sql
-rsync -avz <sshname>:<file_path> <destination_path>
-# 恢复
-create database <database_name>;
-mysql -u <user_name> -p <database name> < <dumpfile>
-```
+虽然之前说 MySQL 已经老了，但是由于其比较简单，现在还有非常多的企业在用，面试也是高频考点。学习一些 MySQL 并不影响对其他关系型数据库的掌握。
 
 ### 安装
 
@@ -171,7 +179,25 @@ sudo mysqld
 
 如果真的这么想，[那就大错特错了](#安装-mysql)。
 
-### 创建
+### 基础
+
+- `<C-d>` = 退出
+- 查看 sql 历史指令：`less ~/.mysql_history`
+
+### 备份与恢复
+
+mysqldump 是热备份，即无需关闭 mysql 服务。
+
+```sh
+# 备份
+sudo mysqldump -p <database name> > bak-time.sql
+rsync -avz <sshname>:<file_path> <destination_path>
+# 恢复
+create database <database_name>;
+mysql -u <user_name> -p <database name> < <dumpfile>
+```
+
+### 用户管理
 
 ```sql
 sudo mysql
