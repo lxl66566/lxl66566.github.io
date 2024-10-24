@@ -246,6 +246,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [正则表达式小游戏](https://regexcrossword.com/)
 - [playok 在线围棋](https://www.playok.com/zh/go)：比较良心的在线围棋，免注册。但是没有自动点目。
 - [FlowersVsZombies](https://xingye.me/game/FlowersVsZombies/)：小游戏
+- [GeoGuessr](https://www.geoguessr.com/free/start)：看全景图猜地理位置。每天免费三轮。
 
 资源：
 

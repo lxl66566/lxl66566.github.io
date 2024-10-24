@@ -11,6 +11,8 @@ tag:
 
 python 实际上并不简单，只不过生态比较好。[暴论：python 有多难用](../gossip/fuckxxx.md#python-有多难用)
 
+我被 python 坑了太多次，甚至做了个 [python-quiz](https://lxl66566.github.io/python-quiz/zh/)讲述我的经历。
+
 ## 学习
 
 python 入门非常快，简单看点 w3school 即可。进阶可以看一点 _码农高天_ 的视频，虽然有一点炒作，但是不可否认他确实很强（为数不多的华人 python core dev）。
