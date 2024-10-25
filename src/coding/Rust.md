@@ -607,3 +607,4 @@ articles:
 13. [用 Rust 搞科研的两年](https://zhuanlan.zhihu.com/p/670166312)
 14. [The missing parts in Cargo](https://weihanglo.tw/posts/2024/the-missing-parts-in-cargo/)
 15. [Fast Rust Builds](https://matklad.github.io/2021/09/04/fast-rust-builds.html)
+16. [幽灵索引类型与匿名结构体](https://nihil.cc/posts/phantom_index_type/)

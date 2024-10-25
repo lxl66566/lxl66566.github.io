@@ -12,6 +12,8 @@ tag:
 
 # 代理软件选择
 
+有关于各代理软件的性能 benchmark，请看[这里](https://docs.google.com/spreadsheets/d/1UaWU6nNho7edBNjNqC8dfGXLlW0-cm84MM7sH6Gp7UE/edit?pli=1&gid=1965963111#gid=1965963111)。
+
 ## Clash 系
 
 > 20231102-20231103 Clash 系几乎全部删库跑路。虽然也有一些 fork 版本接手就是了。  
