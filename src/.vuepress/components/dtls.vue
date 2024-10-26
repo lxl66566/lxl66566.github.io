@@ -1,18 +1,16 @@
 <template>
   <details>
-    <summary>{{ alt }}</summary>
+    <summary>{{ props.alt }}</summary>
     <slot></slot>
   </details>
 </template>
 
-<script>
-export default {
-  props: {
-    alt: {
-      type: String,
-      required: false,
-      default: "点击展开",
-    },
+<script lang="ts" setup>
+const props = defineProps({
+  alt: {
+    type: String,
+    required: false,
+    default: "点击展开",
   },
-};
+});
 </script>

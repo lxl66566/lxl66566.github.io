@@ -17,25 +17,26 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    items: {
-      type: Array,
-      required: true,
-    },
+<script lang="ts" setup>
+import { computed } from "vue";
+
+type ExhibitionItemType = { src: string; alt: string; text: string };
+
+const props = defineProps({
+  items: {
+    type: Array<ExhibitionItemType>,
+    required: true,
   },
-  computed: {
-    chunkedItems() {
-      const chunkSize = 4;
-      const result = [];
-      for (let i = 0; i < this.items.length; i += chunkSize) {
-        result.push(this.items.slice(i, i + chunkSize));
-      }
-      return result;
-    },
-  },
-};
+});
+
+const chunkedItems = computed(() => {
+  const chunkSize = 4;
+  const result: ExhibitionItemType[][] = [];
+  for (let i = 0; i < props.items.length; i += chunkSize) {
+    result.push(props.items.slice(i, i + chunkSize));
+  }
+  return result;
+});
 </script>
 
 <style scoped>

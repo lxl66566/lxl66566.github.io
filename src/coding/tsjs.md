@@ -230,13 +230,30 @@ Object 是无序的，（ES6 的）Map 和 Set 是有序的（插入顺序）。
 
 - 初始化：`Array(x)` 指定大小，但是没有元素。初始化元素需要 `fill`。
   ```ts
+  // 获取一个 range 数组
+  cosnt arr = Array.from({ length: 10000 }, (_, i) => i);
+  // 3x3 二维数组
   const arr: number[][] = Array(3)
     .fill(null)
-    .map(() => Array(3).fill(0)); // 3x3 二维数组
+    .map(() => Array(3).fill(0));
   // OR
   const arr = Array.from({ length: 3 }, () => Array(3).fill(0));
   ```
 - Array 可以使用 shift/unshift 模拟 Queue，这两个操作是把所有元素向前/后移动，`O(n)` 复杂度，不能当真正的 queue 用。
+
+### Generator
+
+ES6 可以使用 `function*` 定义一个生成器，在函数内可以使用 `yield` 生成一个值。
+
+## Benchmark
+
+前端代码也注重性能，特别是像我这种纯静态博客，有很多数据是要放到浏览器加载时处理的。
+
+很多时候由于对语言核心的不了解，我对代码性能有一些误判。此时就需要通过 benchmark 找到更好的解法，正所谓 bb is cheap, show me the benchmark。
+
+我使用 [Tinybench](https://github.com/tinylibs/tinybench)，这玩意确实好用。只需要 `pnpm add -D tinybench`，然后再把 README 里的示例一粘贴，诶，数据就出来了。
+
+这里还有一个 example，是我做的 [TypeScript partition array into two by condition](https://gist.github.com/lxl66566/4dbc102a72efcd64ecfb7df9d5a62970) 的 benchmark。
 
 ## external
 

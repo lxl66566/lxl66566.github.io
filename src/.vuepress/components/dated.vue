@@ -1,24 +1,19 @@
 <template>
   <div>
-    ——<time :datetime="formattedDate">{{ formattedDate }}</time>
+    ——<time :datetime="date">{{ date }}</time>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    date: {
-      type: String,
-      required: true,
-    },
+<script lang="ts" setup>
+const props = defineProps({
+  date: {
+    type: String,
+    required: true,
   },
-  computed: {
-    formattedDate() {
-      // 将输入日期字符串格式化为 "YYYY-MM-DD"
-      return this.date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
-    },
-  },
-};
+});
+
+// 将输入日期字符串格式化为 "YYYY-MM-DD"
+const date = props.date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
 </script>
 
 <style scoped>

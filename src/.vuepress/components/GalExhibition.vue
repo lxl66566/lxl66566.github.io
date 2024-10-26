@@ -3,20 +3,8 @@
   </ExhibitionTable>
 </template>
 
-<script>
+<script lang="ts" setup>
 import ExhibitionTable from './ExhibitionTable.vue';
-
-
-export default {
-  components: {
-    ExhibitionTable,
-  },
-  computed: {
-    data() {
-      return data;
-    },
-  },
-};
 
 const data = [
   { text: "矛盾", alt: "水葬銀貨のイストリア", src: "/images/hobbies/galgame/suisouginka.jpg" },

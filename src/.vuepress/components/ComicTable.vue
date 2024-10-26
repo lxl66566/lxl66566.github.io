@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>本子总数：{{ dataLen }}</div>
+    <div>本子总数：{{ data.length }}</div>
     <table>
       <thead>
         <tr>
@@ -11,9 +11,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="row in sortedRows" :key="row.id">
+        <tr v-for="row in data" :key="row.id">
           <td>
-            <span v-if="!row.otherlink">
+            <span v-if="!row.otherlink && row.id">
               <nhentai :id="row.id" />
             </span>
             <span v-else>
@@ -25,18 +25,20 @@
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
           <td>
-            <dtlslong v-if="row.info" :text="row.info" fold="20" />
+            <dtlslong v-if="row.info" :text="row.info" />
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  <dtlslong text="123" fold="20" />
+  <dtlslong text="123" />
 </template>
 
-<script>
+<script lang="ts" setup>
 import nhentai from "./nhentai.vue";
 import dtlslong from "./dtlslong.vue";
+import { TwoScoreCompare } from "../definition";
+
 const data = [
   { id: "429153", aScore: 9.4, bScore: 4, info: "今日から悪い子。続" },
   { id: "466069", aScore: 9.6, bScore: 4, info: "今日から悪い子。", bak: "https://telegra.ph/田屋沼屋-たぬま-今日から悪い子-中国翻訳-無修正-DL版-08-01" },
@@ -561,21 +563,6 @@ const data = [
   { id: "314313", aScore: 8.7, bScore: 8.1, info: "#同学 #兔女郎 #纯爱 #巨乳", bak: "https://hanime1.me/comic/18081" },
   { id: "518858", aScore: 7.1, bScore: 10.6, info: "#强制高潮 アクメ姫とオタク君の毒林檎", bak: "https://exhentai.org/g/2982830/cf4dbd4276" },
   // next: 4.22 - 11.1
-].sort((a, b) => {
-  const aScore = a.aScore + a.bScore;
-  const bScore = b.aScore + b.bScore;
-  return bScore - aScore || b.aScore - a.aScore;
-});
-export default {
-  name: "ComicTable",
-  components: { nhentai, dtlslong },
-  computed: {
-    sortedRows() {
-      return data;
-    },
-    dataLen() {
-      return data.length;
-    }
-  },
-};
+].sort(TwoScoreCompare);
+
 </script>

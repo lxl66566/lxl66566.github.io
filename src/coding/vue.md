@@ -24,7 +24,7 @@ Vue 3 的所有函数和导出全部写在 `setup()` 里，也可以使用 `<scr
 
 Vue 2 使用大量的 `this.$set` 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 ref/reactive 即可。具体用法和 android 差不多，ref 必需取 `.value`，是浅层的变更追踪；reactive 主要用于各种对象与容器，是深层变更追踪，reactive 对象本身是一个 proxy 而不是原先的类型。
 
-## 基础
+## 组件解析
 
 每个 `.vue` 组件由 template, script, style 三部分组成。
 
@@ -35,3 +35,21 @@ Vue 2 使用大量的 `this.$set` 进行组件状态更新和重新渲染；Vue 
 ### style
 
 请务必使用 `<style scoped>`！避免 css 污染其他样式。
+
+### script
+
+使用 `<script lang="ts">` 可以指定 ts 语法。
+
+## vue 类型与方法
+
+### computed
+
+Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出结果（），结果不是，computed 是用于追踪数据变化的。
+
+`computed()` 接受一个闭包，这个闭包一般会捕获外部变量。当此捕获变量被改变时，该闭包就会重新计算。它可以维护数据之间的依赖关系，而 computed 属性的计算顺序是基于依赖关系的树状结构。
+
+### props
+
+props 定义了组件的传入参数。
+
+vue2 中是 export default 中的 `props` object，到了 Vue3 就是在 setup 中 `const props = defineProps({});`，内部原样照搬进来即可。调用时，需要把 `this.` 改为 `props.`。不过在 template 里引用的值不加 `props.` 前缀也可以。

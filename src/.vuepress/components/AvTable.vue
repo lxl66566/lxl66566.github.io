@@ -1,8 +1,8 @@
 <template>
-  <div>番号总数：{{ dataLen }}</div>
+  <div>番号总数：{{ datalen }}</div>
   <h2>最高</h2>
   <div>
-    <SortableTable :rows="data" />
+    <SortableTable :rows="data1" />
   </div>
   <h2>普通</h2>
   <div>
@@ -10,8 +10,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts" setup>
 import SortableTable from "./SortableTable.vue";
+import { partitionInPlace } from "../utils/PartitionArray";
+import { TwoScoreCompare } from "../definition";
 
 // aScore: 颜值分  bScore: 演技分
 const data = [
@@ -370,24 +372,11 @@ const data = [
   { id: "ssis-404", aScore: 8.5, bScore: 4.2, u: true, name: "笑ってはしゃいでキスして無邪気にじゃれ合った後、ホテルでじっくりねっとり何度も何度も求め合う朝までハメまくりデート 東雲みれい" },
   { id: "ssis-377", aScore: 8.2, bScore: 3.4, u: true, name: "細くて、白くて、ちゃんと胸がある。東雲みれいの初イキ！ぜ～んぶ初・体・験めちゃいき3本番" },
   { id: "SVCAO-010", aScore: 8, bScore: 6.8, name: "野外撮影会痴●人気コスプレイヤーの弱みに付け込んでセクハラ羞恥写真撮影 強●透け乳首＆無理やり大量中出し追い撃ちアクメ" },
-];
-export default {
-  name: "AvTable",
-  components: {
-    SortableTable,
-  },
-  data() {
-    // 最高判定：aScore + bScore >= 18 || aScore >= 10 || bScore >= 10
-    return {
-      data: data.filter(item => item.aScore + item.bScore >= 18 || item.aScore >= 10 || item.bScore >= 10),
-      data2: data.filter(item => item.aScore + item.bScore < 18 && item.aScore < 10 && item.bScore < 10)
-    };
-  },
-  computed: {
-    dataLen() {
-      return data.length;
-    },
-  }
+].sort(TwoScoreCompare);
+// 同分则颜值分优先
 
-};
+const datalen = data.length
+// 最高判定：aScore + bScore >= 18 || aScore >= 10 || bScore >= 10
+const [data1, data2] = partitionInPlace(data, item => item.aScore + item.bScore >= 18 || item.aScore >= 10 || item.bScore >= 10);
+
 </script>

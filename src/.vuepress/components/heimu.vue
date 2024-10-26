@@ -4,16 +4,14 @@
   </span>
 </template>
 
-<script>
-export default {
-  props: {
-    alt: {
-      type: String,
-      required: false,
-      default: "你知道的太多了",
-    },
+<script lang="ts" setup>
+const props = defineProps({
+  alt: {
+    type: String,
+    required: false,
+    default: "你知道的太多了",
   },
-};
+});
 </script>
 
 <style scoped>

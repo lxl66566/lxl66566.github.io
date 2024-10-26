@@ -1,28 +1,30 @@
 <template>
-  <a :href="generateLink()" target="_blank">{{ formatText() }}</a>
+  <a :href="generateLink" target="_blank">{{ formattedText }}</a>
 </template>
 
-<script>
-export default {
-  props: {
-    bg: {
-      type: String,
-      required: true,
-    },
-    u: {
-      type: Boolean,
-      required: false,
-      default: false,
-    }
-  },
-  methods: {
-    generateLink() {
+<script lang="ts" setup>
+import { computed } from "vue";
 
-      return `https://missav.com/${this.bg}${this.u ? "-uncensored-leak" : ""}`;
-    },
-    formatText() {
-      return this.bg.toUpperCase();
-    },
+const props = defineProps({
+  /**
+   * bangumi，番号
+   */
+  bg: {
+    type: String,
+    required: true,
   },
-};
+  /**
+   * 是否 uncensored-leak
+   */
+  u: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
+});
+
+const generateLink = computed(
+  () => `https://missav.com/${props.bg}${props.u ? "-uncensored-leak" : ""}`,
+);
+const formattedText = computed(() => props.bg.toUpperCase());
 </script>

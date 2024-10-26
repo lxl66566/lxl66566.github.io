@@ -22,6 +22,10 @@ category:
 
 ## 2024
 
+### 20241026
+
+- 将所有组件使用 TS 和 Vue3 重写。
+
 ### 20240611
 
 - 更新了博客依赖，修复 RSS，更换图标源，修复了一些报错
@@ -72,7 +76,7 @@ category:
 - 新增组件：`OrderBadge`。替换正则表达式：
   ```text
   \s?<Badge (type=".*" )?text="(\d)"\s?/>
-  <OrderBadge order=$2 />
+  <OrderBadge :order=$2 />
   ```
   anime 页面特殊处理。
 

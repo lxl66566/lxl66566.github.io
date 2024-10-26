@@ -1,19 +1,16 @@
 <template>
-  <a :href="generateLink()" target="_blank">{{ id }}</a>
+  <a :href="link" target="_blank">{{ id }}</a>
 </template>
 
-<script>
-export default {
-  props: {
-    id: {
-      type: String,
-      required: true,
-    },
+<script lang="ts" setup>
+import { computed } from "vue";
+
+const props = defineProps({
+  id: {
+    type: String,
+    required: true,
   },
-  methods: {
-    generateLink() {
-      return `https://nhentai.net/g/${this.id}`;
-    },
-  },
-};
+});
+
+const link = computed(() => `https://nhentai.net/g/${props.id}`);
 </script>

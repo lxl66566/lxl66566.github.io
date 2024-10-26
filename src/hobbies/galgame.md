@@ -108,66 +108,66 @@ LunaTranslator 使用心得：
 |[铃色记忆](https://hoshinasuzu.cc/suzu-memory/)|&lt;20min&gt;|2024.05.30|3|8|1.6|
 |饿殍：明末千里行|5h52min|2024.05.14-<br/>2024.05.21|9|8.5|7.6|
 |月之少女、河中天使、成神之刻|3h3min|2024.05.12-<br/>2024.05.14|5.1|5.6|4.7|
-|死に逝く君、館に芽吹く憎悪 <OrderBadge order=1 />|7h9min|2024.04.26-<br/>2024.05.12|3|5.2|6.7|
-|抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？ <OrderBadge order=2 /><Badge text="nolinux" type="note" />|30h20min|2024.02.16-<br/>2024.05.10|5.1|5.3|2.4|
+|死に逝く君、館に芽吹く憎悪 <OrderBadge :order=1 />|7h9min|2024.04.26-<br/>2024.05.12|3|5.2|6.7|
+|抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？ <OrderBadge :order=2 /><Badge text="nolinux" type="note" />|30h20min|2024.02.16-<br/>2024.05.10|5.1|5.3|2.4|
 |拾われ愛して奉仕したい ～亜人娘とのイチャエロ生活|43min|2024.04.25|2|5.7|5.3|
 |樱之诗 <Badge text="nolinux" type="note" />|50h|2024.02.25-<br/>2024.04.21|9.8|8.3|3|
 |枯れない世界と終わる花|9h44min|2024.02.13-<br/>2024.02.22|6|10|6.2|
 |天津罪|18h26min|2024.01.31-<br/>2024.02.12|6.5|5.5|9.9|
-|[神聖昂燐ダクリュオン・ルナ](https://t.me/erogamecloud/2350)<OrderBadge order=3 />|20h26min|2023.11.18-<br/>2024.02.06|2.6|4.3|2.7|
+|[神聖昂燐ダクリュオン・ルナ](https://t.me/erogamecloud/2350)<OrderBadge :order=3 />|20h26min|2023.11.18-<br/>2024.02.06|2.6|4.3|2.7|
 |提早绽放的黑百合|14h28min|2024.01.22-<br/>2024.01.30|8.1|9.9|9.1|
 |秽翼的尤斯蒂娅 <Badge text="nolinux" type="note" />|22h26min<br/>+15h?|2024.01.05-<br/>2024.01.24|9.8|7.5|0.5|
 |初雪樱|25h28min|2023.12.06-<br/>2023.12.22|9.1|7.6|7.5|
 |樱色之云 \* 绯色之恋|27h22min|2023.10.27-<br/>2023.12.19|8.5|9.6|5.9|
-|近月少女的礼仪<OrderBadge order=1 />|67h58min|2023.04.23-<br/>2023.11.26|5|5.5|6|
+|近月少女的礼仪<OrderBadge :order=1 />|67h58min|2023.04.23-<br/>2023.11.26|5|5.5|6|
 |君と彼女と彼女の恋|10h16min|2023.08.04-<br/>2023.10.26|9.8|4.2|5.4|
 |牛顿与苹果树|18h9min|2023.10.03-<br/>2023.10.25|9.2|7|2|
-|哥哥，早上起床之前都要抱紧我哦！<OrderBadge order=1 />|>11h|2021.02.14?-<br/>2023.09.25|2|8.2|9|
+|哥哥，早上起床之前都要抱紧我哦！<OrderBadge :order=1 />|>11h|2021.02.14?-<br/>2023.09.25|2|8.2|9|
 |Summer Pockets Reflection Blue|49h45min|2023.06.22-<br/>2023.08.03|<text style="color:blue;">10.9</text>|8.6|<span class="heimu" title="如果不崩溃的话">9.</span>5|
 |真愿朦幻馆〜在的洋馆里追寻明天的羔羊们〜|28h2min|2022.12.30-2023.06.20|5|7.1|8.4|
-|抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？<OrderBadge order=1 /><Badge text="nolinux" type="note" />|39h53min|2023.04.11-<br/>2023.06.12|8|5|<text style="color:red;">0</text>|
+|抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？<OrderBadge :order=1 /><Badge text="nolinux" type="note" />|39h53min|2023.04.11-<br/>2023.06.12|8|5|<text style="color:red;">0</text>|
 |[ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか](https://t.me/erogamecloud/3647)|3h10min|2023.05.27|2.4|9.4|1|
-|NEKOPARA vol.4 ネコとパティシエのノエル<OrderBadge order=5 />|8h43min|2023.03.11-<br/>2023.05.10|2.5|9.7|0.4|
+|NEKOPARA vol.4 ネコとパティシエのノエル<OrderBadge :order=5 />|8h43min|2023.03.11-<br/>2023.05.10|2.5|9.7|0.4|
 |終のステラ|8h15min|2023.04.09-<br/>2023.04.22|9.2|8.3|9.1|
 |ISLAND|29h43min|2023.01.07-<br/>2023.04.08|<text style="color:blue;">13</text>|7.8|3.5|
-|竜姫ぐーたらいふ3<OrderBadge order=4 />|5h50min|2023.03.30-<br/>2023.04.04|2.8|10|6|
-|竜姫ぐーたらいふLOVE+PLUS<OrderBadge order=2 />|2h59min|2023.03.25-<br/>2023.03.28|2|9|6|
+|竜姫ぐーたらいふ3<OrderBadge :order=4 />|5h50min|2023.03.30-<br/>2023.04.04|2.8|10|6|
+|竜姫ぐーたらいふLOVE+PLUS<OrderBadge :order=2 />|2h59min|2023.03.25-<br/>2023.03.28|2|9|6|
 |水葬銀貨のイストリア|43h6min|2023.02.08-<br/>2023.03.26|8.2|7.3|3|
 |[NekoMiko](https://t.me/erogamecloud/2926)|5h47min|2023.02.03-<br/>2023.02.06|3.2|9.8|4|
-|仰望夜空的星辰<OrderBadge order=1 />|<39h40min>|2022.10.18-<br/>2023.02.02|8.2|5.7|4.5|
+|仰望夜空的星辰<OrderBadge :order=1 />|<39h40min>|2022.10.18-<br/>2023.02.02|8.2|5.7|4.5|
 |魔女的夜宴|-|2022.02.10-<br/>2023.01.27|7|7.5|9.3|
-|Fox Hime<OrderBadge order=1 />|29min|2023.01.15|0.4|4.6|<text style="color:red;">0</text>|
+|Fox Hime<OrderBadge :order=1 />|29min|2023.01.15|0.4|4.6|<text style="color:red;">0</text>|
 |PARQUET|8h38min|2023.01.03-<br/>2023.01.07|6.1|9|<text style="color:blue;">10</text>|
-|常轨脱离Creative<OrderBadge order=1 />|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
+|常轨脱离Creative<OrderBadge :order=1 />|<45h14min>|2022.10.04-<br/>2022.12.30|3|9.7|<text style="color:red;">0</text>|
 |euphoria|23h17min|2022.12.06-<br/>2022.12.23|9.8|4|3.2|
-|NEKOPARA Vol.3 ネコたちのアロマティゼ<OrderBadge order=4 />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|6|
+|NEKOPARA Vol.3 ネコたちのアロマティゼ<OrderBadge :order=4 />|<8h11min>|2022.08.20-<br/>2022.11.17|3.7|9|6|
 |冥契的牧神节|29h25min*|2022.06.26-<br/>2022.10.02|<text style="color:blue;">10.5</text>|5|2|
 |堕落ロイヤル聖処女|2h2min+|2022.04.27-<br/>2022.10.01|0|3.7|<text style="color:red;">0</text>|
-|七音学园-旅行部-·箱根篇<OrderBadge order=2 />|<2h5min>|2022.09.22-<br/>2022.09.24|7.5|9.8|9|
-|七音学园-旅行部-·伊香保篇<OrderBadge order=1 />|<2h23min>|2022.09.18|7.7|9.8|9|
-|苍之彼方的四重奏<OrderBadge order=1 />|<39h50min>|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
+|七音学园-旅行部-·箱根篇<OrderBadge :order=2 />|<2h5min>|2022.09.22-<br/>2022.09.24|7.5|9.8|9|
+|七音学园-旅行部-·伊香保篇<OrderBadge :order=1 />|<2h23min>|2022.09.18|7.7|9.8|9|
+|苍之彼方的四重奏<OrderBadge :order=1 />|<39h50min>|2022.07.25-<br/>2022.09.18|8.8|6.5|8|
 |鯨神のティアスティラ|<25h47min>|2022.06.21-<br/>2022.08.20|4.2|7.2|9.3|
-|9-nine-新章<OrderBadge order=5 />|<4h43min>|2022.07.20-<br/>2022.07.23|5|6.6|8|
+|9-nine-新章<OrderBadge :order=5 />|<4h43min>|2022.07.20-<br/>2022.07.23|5|6.6|8|
 |星光咖啡馆与死神之蝶|-|2020.10.15-<br/>2022.07.05|5.8|8.5|9.9|
-|9-nine-雪色雪花雪余痕<OrderBadge order=4 />|<13h54min>|2022.06.08-<br/>2022.07.05|10|6|9|
-|NEKOPARA Vol.2 姉妹ネコのシュクレ<OrderBadge order=3 />|-|2022.02.16-<br/>2022.07.01|4|9|6|
-|龍姬混~日子<OrderBadge order=1 />|-|2022.01.28-<br/>2022.06.28|2|9|6|
+|9-nine-雪色雪花雪余痕<OrderBadge :order=4 />|<13h54min>|2022.06.08-<br/>2022.07.05|10|6|9|
+|NEKOPARA Vol.2 姉妹ネコのシュクレ<OrderBadge :order=3 />|-|2022.02.16-<br/>2022.07.01|4|9|6|
+|龍姬混~日子<OrderBadge :order=1 />|-|2022.01.28-<br/>2022.06.28|2|9|6|
 |纸上魔法使|>36h27min|2022.03.22-<br/>2022.06.20|11|7|3|
-|9-nine-春色春恋春熙风<OrderBadge order=3 />|<11h46min>|2022.04.30-<br/>2022.06.07|7|6|8.5|
-|9-nine-天色天歌天籁音<OrderBadge order=2 />|-|2022.04.09-<br/>2022.04.28|7.5|6|8.5|
+|9-nine-春色春恋春熙风<OrderBadge :order=3 />|<11h46min>|2022.04.30-<br/>2022.06.07|7|6|8.5|
+|9-nine-天色天歌天籁音<OrderBadge :order=2 />|-|2022.04.09-<br/>2022.04.28|7.5|6|8.5|
 |氤氲之白|-|2022.04.19|1|4|1|
-|9-nine-九次九日九重色<OrderBadge order=1 />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
+|9-nine-九次九日九重色<OrderBadge :order=1 />|-|2022.04.01-<br/>2022.04.04|7|7|8.5|
 |星空列车与白的旅行|-|2022.03.08-<br/>2022.03.11|10|9|7|
-|仰望夜空的星辰 Interstellar Focus<OrderBadge order=3 />|-|2022.01.29-<br/>2022.02.06|3|5|3|
+|仰望夜空的星辰 Interstellar Focus<OrderBadge :order=3 />|-|2022.01.29-<br/>2022.02.06|3|5|3|
 |ATRI -My Dear Moments-|-|2022.01.02-<br/>2022.01.28|9.3|9|7|
-|龍姬混~日子2<OrderBadge order=3 />|-|2021.12.23-<br/>2022.01.27|2|10|5|
-|NEKOPARA Vol.1 ソレイユ開店しました！<OrderBadge order=2 />|-|2021.11.26-<br/>2021.12.20|4|9|6|
+|龍姬混~日子2<OrderBadge :order=3 />|-|2021.12.23-<br/>2022.01.27|2|10|5|
+|NEKOPARA Vol.1 ソレイユ開店しました！<OrderBadge :order=2 />|-|2021.11.26-<br/>2021.12.20|4|9|6|
 |猫神大人与七颗星星|-|2021.11.16-<br/>2021.11.23|7.9|9.7|?|
 |CURE GIRL|-|2021.10.10-<br/>2021.11.08|1|3.5|?|
-|NEKOPARA Vol.0 水無月ネコたちの日常！<OrderBadge order=1 /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
+|NEKOPARA Vol.0 水無月ネコたちの日常！<OrderBadge :order=1 /> <Badge type="warning" text="krkr" vertical="bottom" />|-|2021.08.14-<br/>2021.08.15|3|9|5|
 |真爱の百合は赤く染まる <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.21|?|3|?|
 |青空下的加缪 <Badge type="warning" text="krkr" vertical="bottom" />|-|?-<br/>2020.10.20|0|5|?|
-|Fox Hime Zero<OrderBadge order=2 /><Badge text="app" vertical="bottom" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
+|Fox Hime Zero<OrderBadge :order=2 /><Badge text="app" vertical="bottom" />|-|2020.08.12-<br/>2020.08.17|5|9|?|
 
 _（不排除早期缺漏）_
 
@@ -178,14 +178,14 @@ _（不排除早期缺漏）_
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | 汚部屋の姫 | 12min | 0 | 4.8 | 1.3 |
 |命に代えてもお守りします!|55min|2.5|6.6|3.4|
-|战国兰斯<OrderBadge order=7 />|11h27min|2024.03.30-<br/>2024.06.04|4.7|2|2|
+|战国兰斯<OrderBadge :order=7 />|11h27min|2024.03.30-<br/>2024.06.04|4.7|2|2|
 |借金地獄の俺が言いなり家出JKを拾った|1h36min|4|4.3|0|
 |妹安利日记|14min|20231111|0|0|0|崩了，不玩了|
-|兰斯06<OrderBadge order=6 />|12h49min|20231015-<br/>20231018|6|4.8|4.5|
-|兰斯5D<OrderBadge order=5 />|2h25min|2023.10.11|2|3|4.6|
-|兰斯03<OrderBadge order=3 />|27h25min|2023.09.14-<br/>2023.09.21|6.3|9.5|3|
-|兰斯02<OrderBadge order=2 />|2h10min|2023.09.13-<br/>2023.09.14|2.5|3.3|2|
-|[兰斯01重制](https://shinnku.com/api/download/03/win/兰斯01%20寻找小光%20重制版.7z)<OrderBadge order=1 />|8h3min|2023.09.12-<br/>2023.09.13|5.4|6|4|
+|兰斯06<OrderBadge :order=6 />|12h49min|20231015-<br/>20231018|6|4.8|4.5|
+|兰斯5D<OrderBadge :order=5 />|2h25min|2023.10.11|2|3|4.6|
+|兰斯03<OrderBadge :order=3 />|27h25min|2023.09.14-<br/>2023.09.21|6.3|9.5|3|
+|兰斯02<OrderBadge :order=2 />|2h10min|2023.09.13-<br/>2023.09.14|2.5|3.3|2|
+|[兰斯01重制](https://shinnku.com/api/download/03/win/兰斯01%20寻找小光%20重制版.7z)<OrderBadge :order=1 />|8h3min|2023.09.12-<br/>2023.09.13|5.4|6|4|
 |[Melia's Witch Test](https://t.me/LaiYinCangChu/2476)|46min|2023.06.07|0|3|0.1|
 |[melancholianna](https://melancholianna.pages.dev/)|30min?|2023.04.22|0.0|5|0.3|
 
@@ -211,12 +211,12 @@ _（不排除早期缺漏）_
 | :-: | :-: | :-: | :-: | :-: |
 | サクラノ 詩 -櫻の森の上を舞う- | 2024.10.11 |
 | 变态监狱 | 2024.09.18 |
-| 苍之彼方的四重奏 EXTRA1 <OrderBadge order=2 /> | 2024.09.15 |
+| 苍之彼方的四重奏 EXTRA1 <OrderBadge :order=2 /> | 2024.09.15 |
 |五彩斑斓的世界|2024.07.20|
 |無限煉姦～恥辱にまみれし不死姫の輪舞～|2024.01.24|
 |AliceInCradle|20231209|
 |アンレス テルミナリア|2023.05.11|4.3|9.9|9.5|
-|お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<OrderBadge order=2 />|
+|お兄ちゃん、朝までずっとギュッてして！ 夜までもっとエッチして！<OrderBadge :order=2 />|
 |灰色的果实|
 |DDLC <Badge text="steam" vertical="bottom" /> _(暂时不玩)_|2021.11.11|?|1.5|?|
 |千恋万花 <Badge type="warning" text="krkr" vertical="bottom" />|2021.06.21|6.8|8.5|9.1|
@@ -347,6 +347,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
+|サクラノ 詩|有的 CG 演出没有去掉原本的人物，变成双人场景|
 |流る星 -a Wish Star-|点击中断语音；文字速度标反；bgm 音量调整至半刻（1/20）仍然过高；视频糊|
 |变态监狱|backlog 中断语音；backlog 中鼠标移动到“登录语音”后再移回则无法点击播放语音；长期游玩后的立绘丢失，保存崩溃|
 |バカな妹を利口にするのは俺の××だけな件について|初期化设置没有确认；全屏崩溃|
