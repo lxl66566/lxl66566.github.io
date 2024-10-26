@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 26 Oct 2024 11:51:02 GMT</pubDate>
-    <lastBuildDate>Sat, 26 Oct 2024 11:51:02 GMT</lastBuildDate>
+    <pubDate>Sat, 26 Oct 2024 13:20:29 GMT</pubDate>
+    <lastBuildDate>Sat, 26 Oct 2024 13:20:29 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -54,6 +54,14 @@
 <h3>props</h3>
 <p>props 定义了组件的传入参数。</p>
 <p>vue2 中是 export default 中的 <code>props</code> object，到了 Vue3 就是在 setup 中 <code>const props = defineProps({});</code>，内部原样照搬进来即可。调用时，需要把 <code>this.</code> 改为 <code>props.</code>。不过在 template 里引用的值不加 <code>props.</code> 前缀也可以。</p>
+<h3>双向绑定</h3>
+<p>双向绑定指的是改值会影响页面渲染，用户操作页面也会影响值。<code>v-model</code> 是用于双向绑定的语法。</p>
+<p>举个例子，我希望一个 checkbox 和某个值建立联系，我改值可以控制 box 的 check 状态，用户点击 checkbox 也可以修改值，我就可以</p>
+<div class="language-vue line-numbers-mode" data-highlighter="shiki" data-ext="vue" data-title="vue" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> opendirectly</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">false</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">input</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"checkbox"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> value</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"newsletter"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> v-model</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">opendirectly</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此博客里的<a href="/farraginous/reciter.html" target="_blank">背词器</a>就是这么写的。</p>
 ]]></content:encoded>
     </item>
     <item>
