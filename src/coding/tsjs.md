@@ -97,8 +97,17 @@ JS 大部分语法跟其他语言挺像的。
   - 几乎是约定俗成的规矩。现在的 linter 如果不用后者就会爆 warning。
   - 不等号：`!=`,`!==`
 - 空数组转为 bool 是 true。判断数组是否为空，可以 `if (arr?.length)`。
+- 虽然 JS 的糖够多了，但是有一个关键的地方没有：在 if 语句中定义局部变量同时检查非空。例如我想实现这样的效果：
+  ```ts
+  // shift() 返回 T | undefined，因此需要判断来避免类型问题
+  if (const x = current_route.shift()) {
+    do_something(x);
+  }
+  ```
 
-### 变量声明
+### 变量
+
+#### 声明
 
 > [菜鸟教程的类型声明](https://www.runoob.com/typescript/ts-variables.html)全是 var，难绷，你都 ts 了怎么还不端上 ES6 啊（恼
 
@@ -156,6 +165,19 @@ const a: Readonly<{ a: string; b: string }> = {
 };
 ```
 
+#### 所有权
+
+JS/TS 的变量所有权与容器所有权有点乱。主要还是没有一个官方提供的 deepcopy 实现，否则也不会出现经典的 `JSON.parse(JSON.stringify(origin))`。。
+
+```ts
+// shallow copy Array
+const shallowCopy = [...original]; // 这样的 shallow copy 会丢失长度。如果要求定长数组，需要再 as 强转一下。
+const shallowCopy = Object.assign([], original);
+// shallow copy Object
+const shallowCopy = { ...original };
+const shallowCopy = Object.assign({}, original);
+```
+
 ### 遍历
 
 - 注意 `for (... in ...)` 和 `for (... of ...)` 的区别；前者遍历 key，后者遍历 value。
@@ -165,7 +187,7 @@ const a: Readonly<{ a: string; b: string }> = {
 
 两种定义函数的方法：`function xxx() {}` 和 `const xxx = () => {}`。前者是正常写法，后者是把 lambda 绑定到变量上的写法。至于用哪个，我认为都可以，没有孰优孰劣。
 
-js 的 lambda 函数是完全体，比 python 的傻逼单行 lambda 强多了。
+js 的 lambda 函数是完全体，比 python 的傻逼单行 lambda 强多了。而且 ts lambda 也可以加泛型，加在入参括号的前面。
 
 ### Promise
 
@@ -212,6 +234,8 @@ type OnlyNumberOrBoolean = Exclude<SomeTypes, string>; // 结果: number | boole
 type OnlyNameAndAge = Pick<Person, "name" | "age">;
 ```
 
+还有，在数据后加 `!` 是非空断言，可以将 `T | undefined` 强转为 `T`。但是在 biome linter 里，非空断言默认是禁用的。
+
 ### 数据类型
 
 这是 TS 基础中的基础。基础类型就不说了，容器有数组（Array），元组；TS 比起 JS 还多了 enum。
@@ -244,6 +268,27 @@ Object 是无序的，（ES6 的）Map 和 Set 是有序的（插入顺序）。
 ### Generator
 
 ES6 可以使用 `function*` 定义一个生成器，在函数内可以使用 `yield` 生成一个值。
+
+## 其他魔法
+
+### declare
+
+declare 用于声明一个编译期没有实现，但是运行期实现的对象，以消除编译错误。
+
+特别的，declare 还可以用来给内置类型添加成员函数。
+
+```ts
+declare global {
+  interface Array<T> {
+    fun(): void;
+  }
+}
+Array.prototype.fun = function () {
+  console.log("xxx", this);
+};
+```
+
+可惜的是不能为特定的 `Array<SomeType>` 添加函数，并且必需在 module 里才能用。
 
 ## Benchmark
 

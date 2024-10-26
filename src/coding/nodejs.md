@@ -14,7 +14,7 @@ tag:
 
 Node.js 是 js 运行时 + npm 包管理，前端开发必装。
 
-现在也出现了很多新的 js/ts 集成开发环境（你们 Rust 人…），如~~[swc](https://swc.rs/)~~（swc 是底层，不要直接用它）, [bun](https://bun.sh/), [deno](https://deno.com/) 等。可以酌情尝试使用。
+现在也出现了很多新的 js/ts 集成开发环境（你们 Rust 人…），如 ~~[swc](https://swc.rs/)~~（swc 是底层，不要直接用它）, [bun](https://bun.sh/), [deno](https://deno.com/) 等。可以酌情尝试使用。
 
 - 我在 2023 年就尝试过 bun 了。当时这位还处于早期阶段，不好用，至少在 windows 上就是一坨。
 - deno 是 2024 年尝试的，写写单文件算法题还行。

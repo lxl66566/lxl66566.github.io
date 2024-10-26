@@ -98,7 +98,7 @@ const japaneseOptions = [
   {
     label: "広辞苑無料検索",
     value:
-      "https://sakura-paris.org/dict/%E5%BA%83%E8%BE%9E%E8%8B%91/prefix/{}/",
+      "https://sakura-paris.org/dict/広辞苑/prefix/{}/",
   },
 ];
 const selectNum = ref(3);

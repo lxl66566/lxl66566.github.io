@@ -563,6 +563,6 @@ const data = [
   { id: "314313", aScore: 8.7, bScore: 8.1, info: "#同学 #兔女郎 #纯爱 #巨乳", bak: "https://hanime1.me/comic/18081" },
   { id: "518858", aScore: 7.1, bScore: 10.6, info: "#强制高潮 アクメ姫とオタク君の毒林檎", bak: "https://exhentai.org/g/2982830/cf4dbd4276" },
   // next: 4.22 - 11.1
-].sort(TwoScoreCompare);
+].sort((x, y) => -TwoScoreCompare(x, y));
 
 </script>

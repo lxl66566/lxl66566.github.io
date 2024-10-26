@@ -68,3 +68,5 @@ const opendirectly = ref(false);
 ```
 
 此博客里的[背词器](../farraginous/reciter.md)就是这么写的。
+
+v-model 本质上是 v-bind + v-on 的语法糖，等于是建立了两个单向绑定。
