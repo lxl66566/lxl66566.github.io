@@ -53,3 +53,18 @@ Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出
 props 定义了组件的传入参数。
 
 vue2 中是 export default 中的 `props` object，到了 Vue3 就是在 setup 中 `const props = defineProps({});`，内部原样照搬进来即可。调用时，需要把 `this.` 改为 `props.`。不过在 template 里引用的值不加 `props.` 前缀也可以。
+
+### 双向绑定
+
+双向绑定指的是改值会影响页面渲染，用户操作页面也会影响值。`v-model` 是用于双向绑定的语法。
+
+举个例子，我希望一个 checkbox 和某个值建立联系，我改值可以控制 box 的 check 状态，用户点击 checkbox 也可以修改值，我就可以
+
+```vue
+<script>
+const opendirectly = ref(false);
+</script>
+<input type="checkbox" value="newsletter" v-model="opendirectly" />
+```
+
+此博客里的[背词器](../farraginous/reciter.md)就是这么写的。

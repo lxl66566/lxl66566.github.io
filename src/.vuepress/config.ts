@@ -34,5 +34,6 @@ temp.alias = {
 	"@ComicTable": path.resolve(__dirname, "components/ComicTable.vue"),
 	"@GalExhibition": path.resolve(__dirname, "components/GalExhibition.vue"),
 	"@Av": path.resolve(__dirname, "components/av.vue"),
+	"@reciter": path.resolve(__dirname, "components/reciter.vue"),
 };
 export default temp;
