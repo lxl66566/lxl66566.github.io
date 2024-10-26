@@ -228,6 +228,14 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 ### [字体相关](https://www.zitijia.com/)
 
+### PPT
+
+我之前使用 typst 的 [touying](https://typst.app/universe/package/touying/) 做 PPT，但是这个方式基本上无法应用到其他人身上。想要做出好的 PPT，你必须对 typst 有足够了解，而这是一门比较难入门的语言。
+
+于是现在有一些其他选择：
+
+- [slidev](https://sli.dev/)：使用 markdown 制作 PPT。
+
 ## 生活
 
 - [居家简易食谱](https://cook.yunyoujun.cn/)

@@ -89,11 +89,11 @@ tag:
 
 ## 前端
 
-我不会前端且不打算卷前端，但在其最强的兼容性面前也被动接受了一点前端知识。
+我之前是靠着写博客和课设积累了一点微不足道的前端经验。后来舍友成为专业前端后，我也有了一点学习前端的兴趣。
 
-1. [node.js](./nodejs.md)
+1. [JS 运行时](./nodejs.md)
 2. [TypeScript & JavaScript](./tsjs.md)
-3. [vue](./vue.md)
+3. [Vue](./vue.md)
 4. [html](./html.md)
 5. [MDX](./mdx.md)
 6. [配色方案](../farraginous/recommend_websites.md#资源)

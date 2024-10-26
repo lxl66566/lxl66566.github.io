@@ -111,8 +111,6 @@ export default sidebar({
 				"csharp.md",
 				"kotlin.md",
 				"clojure.md",
-				"vue.md",
-				"mdx.md",
 			],
 		},
 		{
@@ -120,13 +118,16 @@ export default sidebar({
 			children: [
 				"github.md",
 				"Git.md",
-				"nodejs.md",
 				"vscode.md",
 				"vim.md",
 				"sql.md",
 				"container.md",
 				"package_manager.md",
 			],
+		},
+		{
+			text: "前端",
+			children: ["nodejs.md", "tsjs.md", "vue.md", "html.md", "mdx.md"],
 		},
 		{
 			text: "其他",
