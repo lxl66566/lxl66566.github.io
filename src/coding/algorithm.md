@@ -36,6 +36,10 @@ tag:
 
 打了几次蓝桥，几次 NOIP/CSP，算是有点小经验。
 
+- long long
+  ```cpp
+  typedef long long ll;
+  ```
 - 输入：快读好写，但我觉得没必要。。一般加点以下的就够用了。
   ```cpp
   std::ios::sync_with_stdio(false);
@@ -50,7 +54,7 @@ tag:
   - 暴力跑蓝桥填空题的时候记得开 `-O3`.（我一般比赛时常开的）
   - 别开 `-Wall`，~~警告能算错吗？~~
 - 卡常：不能指望编译器帮你优化。~~反正比赛评测机`-Og`也不优化~~
-  - 该传引用传引用。
+  - 该传引用传引用，该用 move 用 move。
 
 ## 基础
 
@@ -70,7 +74,7 @@ tag:
 - 最短路：dijkstra > SPFA + priority_queue（dijkstra 不能用于负边权，但是一般场景下不会有），我以前只用 SPFA 吃了亏。
   - [为什么用 SPFA 会吃亏？](https://zh.wikipedia.org/wiki/最短路径快速算法#最坏情况下的性能) 真有点没绷住
   - 但是 dijkstra 老忘（一说蓝白点就想到<heimu>蓝白碗</heimu>）。注意，每次找离**源节点**距离最近的点更新。
-- 最小生成树：kruskal + priority_queue。考得不多。
+- 最小生成树：考得不多。优先队列存边 + 并查集。
 - lca：求树上距离的时候经常用。我学的是倍增法，有兴趣也可以看看 tarjan。
 
 ## 数论
@@ -80,6 +84,146 @@ tag:
 素数实在是太重要了。每次比赛几乎必定涉及的考点。
 
 区间求素数一般埃氏筛够用了，也很好写。素数判断可以使用 [Miller Rabin](https://zhuanlan.zhihu.com/p/349360074)。
+
+## 模板
+
+一些常用模板，如果背下来的话可以省时间。
+
+### gcd
+
+C++17 后有 `std::gcd` 和 `std::lcm`，不过显然在做题时是没有 C++17 用的。
+
+```cpp
+ll gcd(ll a, ll b) { return b == 0 ? a : gcd(b, a % b); }
+```
+
+### permutation
+
+如果使用 \>=C++11 / Python，可以很简单地使用标准库：
+
+::: tabs
+
+@tab C++
+
+```cpp
+#include <algorithm>
+do
+{}
+while (std::next_permutation(s.begin(), s.end()));
+```
+
+@tab Python
+
+```py
+from itertools import permutations
+for p in permutations([1, 2, 3]):
+    print(p)
+```
+
+:::
+
+但是在其他语言就得手写 permutation 了。
+
+::: tabs
+
+@tab Rust
+
+```rust
+fn permute<T: std::fmt::Debug>(arr: &mut Vec<T>, start: usize) {
+    if start == arr.len() - 1 {
+        println!("{:?}", arr);
+    } else {
+        for i in start..arr.len() {
+            arr.swap(start, i);
+            permute(arr, start + 1);
+            arr.swap(start, i); // backtrack
+        }
+    }
+}
+fn main() {
+    let mut arr = vec![1, 2, 3];
+    permute(&mut arr, 0);
+}
+```
+
+@tab TypeScript
+
+```ts
+function permute<T>(arr: T[], callback: (arr: readonly T[]) => void) {
+  const backtrack = (start: number) => {
+    if (start === arr.length - 1) {
+      callback(arr);
+      return;
+    }
+    for (let i = start; i < arr.length; i++) {
+      [arr[start], arr[i]] = [arr[i], arr[start]]; // Swap
+      backtrack(start + 1);
+      [arr[start], arr[i]] = [arr[i], arr[start]]; // Backtrack
+    }
+  };
+  backtrack(0);
+}
+const arr = [1, 2, 3];
+permute(arr, console.log);
+```
+
+:::
+
+总之，如果不是竞赛，只是一个在线 OJ 笔试，那肯定是用越方便的语言越好。如果你很熟练，快速糊一个 permutation 也无妨。
+
+### 背包问题
+
+基础背包：
+
+```cpp
+for (int i = 0; i < n; ++i) {
+    for (int j = capacity; j >= weights[i]; --j) {
+        dp[j] = std::max(dp[j], dp[j - weights[i]] + values[i]);
+    }
+}
+```
+
+完全背包（仅需要修改遍历顺序）：
+
+```cpp
+for (int i = 0; i < n; ++i) {
+    for (int j = weights[i]; j <= capacity; ++j) {
+        dp[j] = std::max(dp[j], dp[j - weights[i]] + values[i]);
+    }
+}
+```
+
+而其他背包问题基本都是可拆的。
+
+### 树状数组
+
+单点加，区间和
+
+```cpp
+inline ll lowbit(ll x) { return x & (-x); }
+void add(ll x, ll k) {
+  for (int i = x; i <= n; i += lowbit(i))
+    s[i] += k;
+}
+ll sum(ll x) // [1, x]
+{
+  ll tmp = 0;
+  for (int i = x; i; i -= lowbit(i))
+    tmp += s[i];
+  return tmp;
+}
+```
+
+### 并查集
+
+```cpp
+int fa(int i) {
+  if (i == father[i])
+    return i;
+  else
+    return father[i] = fa(father[i]);
+}
+```
 
 ## 我出的题
 

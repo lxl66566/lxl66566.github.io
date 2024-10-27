@@ -562,6 +562,8 @@ const data = [
   { id: "501070", aScore: 9.4, bScore: 6.7, info: "#蔚蓝档案 #催眠", bak: "https://telegra.ph/みじ屋-ミコジン-ヴェリタス催眠本-ブルーアーカイブ-中国翻訳-カラー化-DL版---Page-1-03-15" },
   { id: "314313", aScore: 8.7, bScore: 8.1, info: "#同学 #兔女郎 #纯爱 #巨乳", bak: "https://hanime1.me/comic/18081" },
   { id: "518858", aScore: 7.1, bScore: 10.6, info: "#强制高潮 アクメ姫とオタク君の毒林檎", bak: "https://exhentai.org/g/2982830/cf4dbd4276" },
+  { id: "471300", aScore: 8.3, bScore: 3.5, info: "#蔚蓝档案 #全彩 #浴室" },
+  { id: "499117", aScore: 7.2, bScore: 5.4, info: "#蔚蓝档案 #反催眠 #恶魔", bak: "https://telegra.ph/Ci-en-イブキにいじめられる漫画-ブルーアーカイブ-中国翻訳-10-26" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
