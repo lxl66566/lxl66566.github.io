@@ -165,6 +165,29 @@ const a: Readonly<{ a: string; b: string }> = {
 };
 ```
 
+当然，typescript 中也可以使用 `Object.freeze`：
+
+```ts
+const a = Object.freeze({
+  a: "asd",
+  b: "123",
+});
+```
+
+但是 `Object.freeze` 只会对 object 的 shallow 值进行 readonly 处理，对于深层的嵌套 object 就不行了。这时候可以用终极法宝 `as const`：
+
+```ts
+const a = {
+  a: "asd",
+  b: "123",
+  deep: {
+    s: "asd",
+  },
+} as const;
+```
+
+这样所有的 deep 遍历的 object 都是不可变的。
+
 #### 所有权
 
 JS/TS 的变量所有权与容器所有权有点乱。主要还是没有一个官方提供的 deepcopy 实现，否则也不会出现经典的 `JSON.parse(JSON.stringify(origin))`。。
@@ -243,6 +266,20 @@ type OnlyNameAndAge = Pick<Person, "name" | "age">;
 ### Interface VS Type
 
 具体可以看 [I Cannot Believe TypeScript Recommends You Do This!](https://www.youtube.com/watch?v=oiFo2z8ILNo)及其评论区。我个人是认为，只要是 Object，有继承组合就用 Interface，其他就用 type。
+
+### 推断
+
+TS 有 typeof 关键字用于提取一个已有结构的类型。特别的，还有 keyof 可以从 Object 类型中提取出所有可能的 key 类型，例如
+
+```ts
+const a = {
+  a: 1,
+  b: 2,
+} as const;
+type MyType = keyof typeof a; // MyType = "a" | "b"
+// 于是我们甚至可以像这样用:
+type ValueType = (typeof a)[keyof typeof a]; // ValueType = 1 | 2
+```
 
 ## 数据结构
 
