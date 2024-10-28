@@ -20,9 +20,13 @@ Vue 3 基本上兼容 Vue 2 的写法。当我尝试了一下 Vue 3 语法后我
 
 ### 迁移到 Vue 3
 
-Vue 3 的所有函数和导出全部写在 `setup()` 里，也可以使用 `<script setup>` 语法糖，免去两层嵌套和手动导出。
+Vue3 的所有函数和导出全部写在 `setup()` 里，也可以使用 `<script setup>` 语法糖，免去两层嵌套和手动导出。
 
-Vue 2 使用大量的 `this.$set` 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 ref/reactive 即可。具体用法和 android 差不多，ref 必需取 `.value`，是浅层的变更追踪；reactive 主要用于各种对象与容器，是深层变更追踪，reactive 对象本身是一个 proxy 而不是原先的类型。
+Vue2 使用大量的 `this.$set` 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 `ref`/`reactive` 即可。具体用法和 android 差不多，ref 必需取 `.value`，是浅层的变更追踪；reactive 主要用于各种对象与容器，是深层变更追踪，reactive 对象本身是一个 proxy 而不是原先的类型。
+
+Vue3 本来还有个 `$ref()` 的语法糖可以将 ref 的 `.value` 给省掉，但是后来在 Vue3.4 废弃了。
+
+- 关于 props 修改：Vue2 的 `props` 可以整个直接复制到 Vue3 的 `defineProps` 里。调用时，需要把 `this.` 改为 `props.`。
 
 ## 组件解析
 
@@ -52,7 +56,40 @@ Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出
 
 props 定义了组件的传入参数。
 
-vue2 中是 export default 中的 `props` object，到了 Vue3 就是在 setup 中 `const props = defineProps({});`，内部原样照搬进来即可。调用时，需要把 `this.` 改为 `props.`。不过在 template 里引用的值不加 `props.` 前缀也可以。
+vue2 中是 export default 中的 `props` object，到了 Vue3 就是 `defineProps`。不过在 template 里引用的值不加 `props.` 前缀也可以。
+
+TS 和 JS 使用 `defineProps` 的方法不同，TS 是写在泛型参数里的：还有关于默认值的处理方式不同。
+
+::: tabs
+
+@tab TS
+
+```ts
+const props = withDefaults(
+  defineProps<{
+    boxData: Box[];
+    columnWidth: number;
+  }>(),
+  {
+    columnWidth: 20,
+  },
+);
+```
+
+@tab js
+
+```js
+const props = defineProps({
+  boxData: Array,
+  columnWidth: {
+    type: Number,
+    required: false,
+    default: 20,
+  },
+});
+```
+
+:::
 
 ### 双向绑定
 

@@ -21,7 +21,6 @@ export default sidebar({
 				"zero_fill.md",
 				"brainhole.md",
 				"interview.md",
-				"snack.md",
 			],
 		},
 	],

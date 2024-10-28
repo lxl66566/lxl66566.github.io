@@ -20,9 +20,14 @@ export default navbar([
 				],
 			},
 			{
-				text: "其他",
+				text: "艺术",
 				prefix: "/hobbies/",
 				children: ["books.md", "anime.md", "art.md", "NSFW/"],
+			},
+			{
+				text: "其他",
+				prefix: "/hobbies/",
+				children: ["snack.md"],
 			},
 		],
 	},

@@ -109,3 +109,4 @@ anki 的云同步裸连很不稳，可能需要科学上网。
 ## external
 
 1. [A Programmer's Guide to English](https://a-programmers-guide-to-english.harryyu.me/)
+2. [英语自学](https://bewaters.me/limxtop/2021/08/18/English-introduction/)

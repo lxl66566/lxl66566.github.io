@@ -3,6 +3,9 @@
     "rules": {
       "style": {
         "noNonNullAssertion": "off"
+      },
+      "complexity": {
+        "noForEach": "off"
       }
     }
   }

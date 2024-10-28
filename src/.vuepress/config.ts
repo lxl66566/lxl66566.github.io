@@ -35,5 +35,8 @@ temp.alias = {
 	"@GalExhibition": path.resolve(__dirname, "components/GalExhibition.vue"),
 	"@Av": path.resolve(__dirname, "components/av.vue"),
 	"@reciter": path.resolve(__dirname, "components/reciter.vue"),
+	"@MyArticles": path.resolve(__dirname, "components/MyArticles.vue"),
+	"@MyGossip": path.resolve(__dirname, "components/MyGossip.vue"),
+	"@MyLearning": path.resolve(__dirname, "components/MyLearning.vue"),
 };
 export default temp;
