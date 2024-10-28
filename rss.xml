@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 28 Oct 2024 09:39:15 GMT</pubDate>
-    <lastBuildDate>Mon, 28 Oct 2024 09:39:15 GMT</lastBuildDate>
+    <pubDate>Mon, 28 Oct 2024 13:39:56 GMT</pubDate>
+    <lastBuildDate>Mon, 28 Oct 2024 13:39:56 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -35,8 +35,12 @@
 <p>Vue 当前版本迭代到 Vue 3。但是如果上网问 GPT，给出的答案基本全是 Vue 2 的答案。截至 2024.10 的现在，本博客的所有组件仍然是 Vue 2 写成的。</p>
 <p>Vue 3 基本上兼容 Vue 2 的写法。当我尝试了一下 Vue 3 语法后我感觉确实不错，比 Vue 2 要灵活多了。</p>
 <h3>迁移到 Vue 3</h3>
-<p>Vue 3 的所有函数和导出全部写在 <code>setup()</code> 里，也可以使用 <code>&lt;script setup&gt;</code> 语法糖，免去两层嵌套和手动导出。</p>
-<p>Vue 2 使用大量的 <code>this.$set</code> 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 ref/reactive 即可。具体用法和 android 差不多，ref 必需取 <code>.value</code>，是浅层的变更追踪；reactive 主要用于各种对象与容器，是深层变更追踪，reactive 对象本身是一个 proxy 而不是原先的类型。</p>
+<p>Vue3 的所有函数和导出全部写在 <code>setup()</code> 里，也可以使用 <code>&lt;script setup&gt;</code> 语法糖，免去两层嵌套和手动导出。</p>
+<p>Vue2 使用大量的 <code>this.$set</code> 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 <code>ref</code>/<code>reactive</code> 即可。具体用法和 android 差不多，ref 必需取 <code>.value</code>，是浅层的变更追踪；reactive 主要用于各种对象与容器，是深层变更追踪，reactive 对象本身是一个 proxy 而不是原先的类型。</p>
+<p>Vue3 本来还有个 <code>$ref()</code> 的语法糖可以将 ref 的 <code>.value</code> 给省掉，但是后来在 Vue3.4 废弃了。</p>
+<ul>
+<li>关于 props 修改：Vue2 的 <code>props</code> 可以整个直接复制到 Vue3 的 <code>defineProps</code> 里。调用时，需要把 <code>this.</code> 改为 <code>props.</code>。</li>
+</ul>
 <h2>组件解析</h2>
 <p>每个 <code>.vue</code> 组件由 template, script, style 三部分组成。</p>
 <h3>template</h3>
@@ -53,7 +57,9 @@
 <p><code>computed()</code> 接受一个闭包，这个闭包一般会捕获外部变量。当此捕获变量被改变时，该闭包就会重新计算。它可以维护数据之间的依赖关系，而 computed 属性的计算顺序是基于依赖关系的树状结构。</p>
 <h3>props</h3>
 <p>props 定义了组件的传入参数。</p>
-<p>vue2 中是 export default 中的 <code>props</code> object，到了 Vue3 就是在 setup 中 <code>const props = defineProps({});</code>，内部原样照搬进来即可。调用时，需要把 <code>this.</code> 改为 <code>props.</code>。不过在 template 里引用的值不加 <code>props.</code> 前缀也可以。</p>
+<p>vue2 中是 export default 中的 <code>props</code> object，到了 Vue3 就是 <code>defineProps</code>。不过在 template 里引用的值不加 <code>props.</code> 前缀也可以。</p>
+<p>TS 和 JS 使用 <code>defineProps</code> 的方法不同，TS 是写在泛型参数里的：还有关于默认值的处理方式不同。</p>
+
 <h3>双向绑定</h3>
 <p>双向绑定指的是改值会影响页面渲染，用户操作页面也会影响值。<code>v-model</code> 是用于双向绑定的语法。</p>
 <p>举个例子，我希望一个 checkbox 和某个值建立联系，我改值可以控制 box 的 check 状态，用户点击 checkbox 也可以修改值，我就可以</p>
@@ -2105,8 +2111,8 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
     </item>
     <item>
       <title>零食区</title>
-      <link>https://absx.pages.dev/gossip/snack.html</link>
-      <guid>https://absx.pages.dev/gossip/snack.html</guid>
+      <link>https://absx.pages.dev/hobbies/snack.html</link>
+      <guid>https://absx.pages.dev/hobbies/snack.html</guid>
       <source url="https://absx.pages.dev/rss.xml">零食区</source>
       <description>零食区 本人买的零食不少，平日也是 B 站拉泽哥粉丝，，本自然会有写一篇零食记录的想法（）。 价格仅供参考。 得分为 5 分制，仅代表个人喜好，不喜勿喷。加粗为很喜欢，经常复购。 总评 边角料一般不会更便宜。 糖果类 饼干/糕点类 油炸类 辣味制品 肉蛋奶 蔬果制品 坚果类 饮品 成品 冲剂 速食食品 其他</description>
       <category>推荐</category>
