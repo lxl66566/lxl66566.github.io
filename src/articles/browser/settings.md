@@ -1,10 +1,11 @@
 ---
 date: 2023-12-03
-icon: config
+icon: gears
 category:
   - 教程
 tag:
   - 浏览器
+  - 桌面端
 ---
 
 # 浏览器设置

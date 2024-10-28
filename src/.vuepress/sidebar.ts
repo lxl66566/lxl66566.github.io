@@ -59,7 +59,6 @@ export default sidebar({
 				"linux/index.md",
 				"windows_setting.md",
 				"mobile/index.md",
-				"browser/index.md",
 			],
 		},
 		{

@@ -564,6 +564,9 @@ const data = [
   { id: "518858", aScore: 7.1, bScore: 10.6, info: "#强制高潮 アクメ姫とオタク君の毒林檎", bak: "https://exhentai.org/g/2982830/cf4dbd4276" },
   { id: "471300", aScore: 8.3, bScore: 3.5, info: "#蔚蓝档案 #全彩 #浴室" },
   { id: "499117", aScore: 7.2, bScore: 5.4, info: "#蔚蓝档案 #反催眠 #恶魔", bak: "https://telegra.ph/Ci-en-イブキにいじめられる漫画-ブルーアーカイブ-中国翻訳-10-26" },
+  { id: "536665", aScore: 7.6, bScore: 8.3, info: "#认知阻碍 #泳装 #群P", bak: "https://telegra.ph/INS-mode-天凪青磁-痴漢の存在しない素晴らしいセカイ--海編--中国翻訳-DL版-10-25-2" },
+  { id: "(ex)", aScore: 9, bScore: 7.8, info: "#いちはや #师生 #催眠", otherlink: "https://exhentai.org/g/3101677/82f3db6436/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-本当に正しい催眠術-萌意永久机翻DL版-10-25" },
+  { id: "536501", aScore: 8.9, bScore: 2.4, info: "#FD 堕天計画", order: 5, bak: "https://telegra.ph/C104-234ド-イチリ-堕天前シャロエがオトナのおもちゃに負ける本-中国翻訳-10-25" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

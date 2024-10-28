@@ -85,6 +85,34 @@ JS/TS 句末分号可加可不加，但是一个好的 formatter 都会帮你加
 
 这些 formatter 可以被安装到项目中作为一个 dev dependency，也可以只当成 vscode 插件使用。前者的好处是可以统一整个项目的代码风格，而后者就适合跨项目的个人应用。由于我基本没有与人协作开发经历，我使用 vscode biome 插件。
 
+### Linter
+
+拥有一个可配置的 linter 是比较重要的。
+
+::: tabs
+
+@tab biome
+
+biome 本身也是 linter。在项目根目录下放一个 `biome.json` 即可作为其配置。
+
+我习惯禁用一些 lint rules，这里是我的配置：
+
+```json
+{
+  "linter": {
+    "rules": {
+      "style": {
+        "noNonNullAssertion": "off"
+      }
+    }
+  }
+}
+```
+
+具体的 rules 在[这里](https://biomejs.dev/linter/rules/)。
+
+:::
+
 ## 语言基础
 
 我把某些 TS 语言特性也写在此处了。
@@ -231,9 +259,11 @@ ES6 正式支持了面向对象，给了一系列面向对象接口，跟 Java �
 - 支持单继承和抽象类，不支持多继承；类继承和实现接口都用 `extends`。
 - 可以方便地写 setter/getter，就是把 `function` 关键字换成 `set`/`get` 即可。调用时无需添加函数的括号，就类似 python `@property` 装饰。
 
-## TS 类型基础
+## TS 类型
 
 TS 的类型系统是**图灵完备**的。因此网上有一大堆 TS 类型体操天书，已经见怪不怪了。相比之下 Rust 的类型系统简直就是个弟弟，连 trait 相减和取补都做不到。
+
+### 基础
 
 类型遵循集合论。
 
@@ -241,31 +271,57 @@ TS 的类型系统是**图灵完备**的。因此网上有一大堆 TS 类型体
 type A = number | null; // 并集
 type A = { a: number } & { b: number }; // 交集
 
-// Omit 用于排除属性
 type Person = {
   name: string;
   age: number;
   address: string;
 };
+
+// Omit 用于排除属性类型
 type WithoutAddress = Omit<Person, "address">; // 结果: { name: string; age: number; }
-
-// Exclude 用于排除类型
-type SomeTypes = string | number | boolean;
-type OnlyNumberOrBoolean = Exclude<SomeTypes, string>; // 结果: number | boolean
-
-// Pick 用于仅包含类型
+// Pick 用于包含属性类型
 type OnlyNameAndAge = Pick<Person, "name" | "age">;
+
+type SomeTypes = string | number | boolean;
+// Exclude 用于排除类型（补集）
+type OnlyNumberOrBoolean = Exclude<SomeTypes, string>; // 结果: number | boolean
+// Extract 用于提取相同部分（交集）
+type StringOrNumber = Extract<SomeTypes, string | boolean | null>; // 结果: string | boolean
 ```
 
-还有，在数据后加 `!` 是非空断言，可以将 `T | undefined` 强转为 `T`。但是在 biome linter 里，非空断言默认是禁用的。
-
-### 数据类型
+#### 数据类型
 
 这是 TS 基础中的基础。基础类型就不说了，容器有数组（Array），元组；TS 比起 JS 还多了 enum。
 
-### Interface VS Type
+#### Interface VS Type
 
 具体可以看 [I Cannot Believe TypeScript Recommends You Do This!](https://www.youtube.com/watch?v=oiFo2z8ILNo)及其评论区。我个人是认为，只要是 Object，有继承组合就用 Interface，其他就用 type。
+
+### Wrappers
+
+上面已经出现了 `Readonly`, `Omit`, `Exclude` 和 `Pick`。实际上 TS 还有其他的好用 wrappers：
+
+- `Required<T>`：将类型 T 中的所有属性变为不可缺的。（单层，非递归）
+- `Partial<T>`：将类型 T 中的所有属性变为可选的。
+- `Record<K, T>`：用于创建一个对象类型，其中 K 是属性键的类型，T 是属性值的类型。
+- `NonNullable<T>`：排除类型中的 null 和 undefined。
+
+还有函数 parts 类型提取：
+
+```ts
+const fun = (a: number, b: number) => {
+  return a + b;
+};
+type Return = ReturnType<typeof fun>; // number
+type Params = Parameters<typeof fun>; // [number, number]
+```
+
+同样的还有提取构造函数类型，提取实例类型，提取 Promise parts 类型的，因为用的少，这里不说了。
+
+### 糖
+
+- 在数据后加 `!` 是非空断言，可以将 `T | undefined` 强转为 `T`。但是在 biome linter 里非空断言默认禁用。我个人还是希望允许非空断言的。
+  - 如果不能突破 linter，那就只能在实例后面加 `as T` 了。
 
 ### 推断
 
@@ -280,6 +336,15 @@ type MyType = keyof typeof a; // MyType = "a" | "b"
 // 于是我们甚至可以像这样用:
 type ValueType = (typeof a)[keyof typeof a]; // ValueType = 1 | 2
 ```
+
+### 类型魔法
+
+- 接收一个不可为空的数组：
+  ```ts
+  function f<Arr extends [number, ...number[]]>(arr: Arr) {}
+  f([]); // err
+  f([1, 2]); // ok
+  ```
 
 ## 数据结构
 

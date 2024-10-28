@@ -1,11 +1,13 @@
 ---
 date: 2023-11-15
-icon: window
+icon: compass
 category:
   - 推荐
 tag:
   - 横评
   - 浏览器
+  - 桌面端
+  - 移动端
 ---
 
 # 浏览器评价

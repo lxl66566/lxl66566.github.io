@@ -15,7 +15,10 @@ category:
 
 ## [代理](./proxy/index.md)
 
-## [浏览器](./browser/index.md)
+## 浏览器
+
+1. [主流浏览器横评](./browser/assess.md)
+2. [浏览器设置](./browser/settings.md)
 
 ## 教程
 
