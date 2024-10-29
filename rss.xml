@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 28 Oct 2024 13:39:56 GMT</pubDate>
-    <lastBuildDate>Mon, 28 Oct 2024 13:39:56 GMT</lastBuildDate>
+    <pubDate>Tue, 29 Oct 2024 08:51:31 GMT</pubDate>
+    <lastBuildDate>Tue, 29 Oct 2024 08:51:31 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -1978,30 +1978,24 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
       <link>https://absx.pages.dev/gossip/interview.html</link>
       <guid>https://absx.pages.dev/gossip/interview.html</guid>
       <source url="https://absx.pages.dev/rss.xml">找工作经历</source>
-      <description>找工作经历 首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。而在找工作时有实习经历是很重要的，因此我将大三下初期的找暑期实习视为一场战斗。 基本信息： 暑期实习的难度一般比日常实习要高，不过也提供更多的转正机会。 一般互联网实习都是线上面试 &amp; 笔试。 金三银四是真的，好的实习机会早点更多。 心得： 在如今的环境下，211 学...</description>
+      <description>找工作经历 首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。 定位 方向 我喜欢的是新技术，做小玩意，想给大家带来更好的使用体验。因此我一开始选择的是 客户端开发。但是实际上客户端指的大多数是移动端，基本没有专门的桌面软件开发。我之前写 Android 被折磨得非常痛苦，ios 也不会，因此放弃了这个方向。 后端方向基本全是 ...</description>
       <category>评价</category>
       <category>经历</category>
       <pubDate>Mon, 25 Mar 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。而<s>据说</s>在找工作时有实习经历是很重要的，因此我将大三下初期的找暑期实习视为一场战斗。</p>
-<p>基本信息：</p>
-<ul>
-<li>暑期实习的难度一般比日常实习要高，不过也提供更多的转正机会。</li>
-<li>一般互联网实习都是线上面试 &amp; 笔试。</li>
-<li>金三银四是真的，好的实习机会早点更多。</li>
-</ul>
-<p>心得：</p>
-<ul>
-<li>在如今的环境下，211 学历比我想象中更吃香。刷着帖子，切身感受到了学历的重要性，<s>把高考前的我抓来打</s>。</li>
-<li>信息来源，可以是用 app（牛客，实习僧，智联，boss），一般学校也会拉群给实习信息。后者档次就相对低一点，主要是学校合作企业和当地企业在招？</li>
-<li>小厂的笔试/面试体验比大厂好很多。</li>
-<li>互联网大厂，算法非常重要（也可以说大厂岗位就是给 OI 爷准备的）。</li>
-</ul>
+<p>首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。</p>
 <h2>定位</h2>
-<p>我喜欢的是新技术，做小玩意，想给大家带来更好的使用体验。因此我把目标主要放在 <em>客户端开发</em> 上。但是我对 Android 有挺大偏见，而客户端大多都是移动端开发，因此也基本投不了几个大厂。（凡是那些日常不做 PC 业务的都别想了，例如外卖、快递等）</p>
-<p>其次，语言我尽可能避开了 JAVA 和 C++ 这两个最多岗位的。。JAVA 的话我卷不过后端小子，学校更是啥都不教；C++ 我甚至不敢说我会写（怀抱着对《The Book of Modern C++》的恐惧）。</p>
-<p>然后不论爱好，考虑我的技术栈，我感觉 <em>测试开发</em> 和 <em>Linux 运维</em> 挺适合我的，毕竟前者 python 用得烂熟，也鼓捣过几个爬虫和自动化项目，后者就纯粹是喜欢尝试创造新工具，写过脚本与包管理器。</p>
-<p>最后，由于喜欢开源和新技术，也写了几个 rust 程序。因此做了 rust 的简历。</p>
+<h3>方向</h3>
+<p>我喜欢的是新技术，做小玩意，想给大家带来更好的使用体验。因此我一开始选择的是 <em>客户端开发</em>。但是实际上客户端指的大多数是移动端，基本没有专门的桌面软件开发。我之前写 Android 被折磨得非常痛苦，ios 也不会，因此放弃了这个方向。</p>
+<p>后端方向基本全是 Java/C++，偶尔会有一些 python 后端（Django, Flask）。我除了 Django 就没接触过其他框架，而且我并不喜欢后端。</p>
+<p>不论爱好，考虑我的技术栈，我感觉 <em>测试开发</em> 和 <em>Linux 运维</em> 挺适合我的，毕竟前者 python 用得烂熟，也鼓捣过几个爬虫和自动化项目，后者就纯粹是喜欢尝试创造新工具，写过脚本与包管理器。确实，测开的要求低很多，但是运维就麻烦了，各种 k8s，云原生的要求我是不太满足的。</p>
+<p>至于前端，我也写过不少前端的东西，会框架会 TS，但是基础（特别是 CSS）不牢。而且我并不看好前端的前景。</p>
+<h3>语言</h3>
+<ul>
+<li>我尽可能避开了 JAVA 和 C++ 这两个最多岗位的语言。。JAVA 的话我卷不过后端小子，框架也一点不熟；C++ 我甚至不敢说我会写（怀抱着对《The Book of Modern C++》的恐惧）。</li>
+<li>而 Rust 非常显然，几乎没有公司招；即使有一些量化要 rust，我也暂时没有考虑，因为使用 Rust 的实习经历给我带来了不小的心理创伤。</li>
+<li>最终还是 Python 岗位看得多一点，然而由于不想从事 Python 后端，我也只能投一点万金油。</li>
+</ul>
 <h2>简历模板</h2>
 <p>我用 <a href="/learning/typst.html" target="_blank">typst</a> 比较多，好久之前就盯上了 <a href="https://github.com/OrangeX4/Chinese-Resume-in-Typst" target="_blank" rel="noopener noreferrer">OrangeX4 的简历模板</a>。字体可能要折腾一会儿，但是确实够好看。</p>
 <p>typst 可能有些难，再不济至少也得用个 <a href="https://github.com/BingyanStudio/LapisCV" target="_blank" rel="noopener noreferrer">markdown 简历模版</a> 吧。</p>
