@@ -10,7 +10,11 @@ tag:
 
 # Vue.js
 
-前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是博客主要学习的是 SFC 组件，因此我到现在对 Vue 的核心并不是非常了解。不过姑且也开一篇文章记录技巧和踩坑吧。
+## 前言
+
+前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。
+
+在了解了其他框架后，我发现 Vue 关键字太多很难记这一点确实是对的。
 
 ## Vue 2 与 Vue 3
 
@@ -91,6 +95,10 @@ const props = defineProps({
 
 :::
 
+### slot
+
+我们也可以将标签作为 DOM 节点传入组件。组件中需要在 template 区域使用 `<slot></slot>` 调用。更多插槽的特性和用法可以看[文档](https://cn.vuejs.org/guide/components/slots)。
+
 ### 双向绑定
 
 双向绑定指的是改值会影响页面渲染，用户操作页面也会影响值。`v-model` 是用于双向绑定的语法。
@@ -107,3 +115,34 @@ const opendirectly = ref(false);
 此博客里的[背词器](../farraginous/reciter.md)就是这么写的。
 
 v-model 本质上是 v-bind + v-on 的语法糖，等于是建立了两个单向绑定。
+
+### 动态样式
+
+1. 我们可以将 DOM 元素整个绑定到 ref 上，然后手动修改样式，这样是非响应式的。
+   ```vue
+   <template>
+     <div ref="myElement">非响应式</div>
+   </template>
+   <script setup>
+   import { ref } from "vue";
+   const myElement = ref(null);
+   const changeStyle = () => {
+     if (myElement.value) {
+       myElement.value.style.padding = "20px";
+     }
+   };
+   </script>
+   ```
+2. 我们也可以将某个值绑定到 ref，这样是响应式的。
+   ```vue
+   <template>
+     <div :style="{ width: val + 'px' }">响应式</div>
+   </template>
+   <script setup>
+   import { ref } from "vue";
+   const val = ref(20);
+   const increaseWidth = () => {
+     val.value += 10;
+   };
+   </script>
+   ```

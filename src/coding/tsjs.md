@@ -81,9 +81,21 @@ node-ts xxx.ts
 
 JS/TS 句末分号可加可不加，但是一个好的 formatter 都会帮你加。
 
-业界常用的有 Prettier, ESLint, [Biome](https://github.com/biomejs/biome/blob/main/packages/@biomejs/biome/README.zh-CN.md)（原 Rome）等。ESLint 支持复杂的自定义化，而其他两个都是较为统一的风格。我目前使用 Biome，因为它 written in Rust。
+业界常用的有 Prettier, ESLint, [Biome](https://github.com/biomejs/biome/blob/main/packages/@biomejs/biome/README.zh-CN.md)（原 Rome）等。
 
-这些 formatter 可以被安装到项目中作为一个 dev dependency，也可以只当成 vscode 插件使用。前者的好处是可以统一整个项目的代码风格，而后者就适合跨项目的个人应用。由于我基本没有与人协作开发经历，我使用 vscode biome 插件。
+这些 formatter 可以被安装到项目中作为一个 dev dependency，也可以只当成 vscode 插件使用。前者的好处是可以统一整个项目的代码风格，而后者就适合跨项目的个人应用。由于我基本没有与人协作开发经历，我使用 vscode 插件。
+
+::: tabs
+
+@tab biome
+
+我目前使用 Biome，因为它 written in Rust，是 Rome 重生版。但是其默认的设置有一些霸道，我其实不太喜欢，这里举一些例子：默认用 tab 而不是 2space，windows 上也用 LF 而不是 CRLF。
+
+@tab ESLint
+
+ESLint 支持复杂的自定义化。不过我没用过。
+
+:::
 
 ### Linter
 
@@ -93,9 +105,9 @@ JS/TS 句末分号可加可不加，但是一个好的 formatter 都会帮你加
 
 @tab biome
 
-biome 本身也是 linter。在项目根目录下放一个 `biome.json` 即可作为其配置。
+biome 本身也是 linter。
 
-我习惯禁用一些 lint rules，这里是我的配置：
+在项目根目录下放一个 `biome.json` 即可作为其配置。我习惯禁用一些 lint rules，并且设置一些东西。这里是我的配置：
 
 ```json
 {
@@ -110,6 +122,8 @@ biome 本身也是 linter。在项目根目录下放一个 `biome.json` 即可�
 ```
 
 具体的 rules 在[这里](https://biomejs.dev/linter/rules/)。
+
+类似 Rust 的 `cargo fmt && clippy fix`，biome 也有一键对项目进行 format + fix 的指令，非常好用：`biome check --write --unsafe .`
 
 :::
 
@@ -239,6 +253,10 @@ const shallowCopy = Object.assign({}, original);
 两种定义函数的方法：`function xxx() {}` 和 `const xxx = () => {}`。前者是正常写法，后者是把 lambda 绑定到变量上的写法。至于用哪个，我认为都可以，没有孰优孰劣。
 
 js 的 lambda 函数是完全体，比 python 的傻逼单行 lambda 强多了。而且 ts lambda 也可以加泛型，加在入参括号的前面。
+
+### this
+
+this 指向的对象与声明位置无关，其总是指向调用对象；如果没有调用对象，就指向 window。
 
 ### Promise
 

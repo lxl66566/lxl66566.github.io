@@ -375,6 +375,7 @@ const data = [
   { id: "pred-475", aScore: 7, bScore: 4.3, u: true, name: "妻と倦怠期中の僕は梨穂（義妹）に誘惑されて何度も、何度も、中出しをしてしまった…。 松本梨穂" },
   { id: "mum-222", aScore: 6.3, bScore: 5.4, name: "^1 身体測定で出会った。成長途中の新入生たち。" },
   { id: "miab-009", aScore: 6, bScore: 6, u: true, name: "#眼镜 #媚药 極道の息子に体罰を与えた僕への復讐で最愛の婚約者が媚薬漬けレ×プされてしまった 森日向子" },
+  { id: "ngod-190", aScore: 7.3, bScore: 5.5, name: "連れ子NTR 母の再婚相手……義父の巨根で突かれた嫁入り前の娘 花狩まい" },
 ].sort((x, y) => -TwoScoreCompare(x, y));
 // 同分则颜值分优先
 
