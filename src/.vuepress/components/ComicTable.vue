@@ -567,6 +567,8 @@ const data = [
   { id: "536665", aScore: 7.6, bScore: 8.3, info: "#认知阻碍 #泳装 #群P", bak: "https://telegra.ph/INS-mode-天凪青磁-痴漢の存在しない素晴らしいセカイ--海編--中国翻訳-DL版-10-25-2" },
   { id: "(ex)", aScore: 9, bScore: 7.8, info: "#いちはや #师生 #催眠", otherlink: "https://exhentai.org/g/3101677/82f3db6436/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-本当に正しい催眠術-萌意永久机翻DL版-10-25" },
   { id: "536501", aScore: 8.9, bScore: 2.4, info: "#FD 堕天計画", order: 5, bak: "https://telegra.ph/C104-234ド-イチリ-堕天前シャロエがオトナのおもちゃに負ける本-中国翻訳-10-25" },
+  { id: "520178", aScore: 8.6, bScore: 2.3, info: "#鸣潮 #富士やま #短篇", bak: "https://telegra.ph/富士やま鳴潮-中国翻訳-10-28" },
+  { id: "496571", aScore: 5.8, bScore: 9.3, info: "#痴女 #同学 #纯爱结局 #精神创伤 #强制性交", bak: "https://telegra.ph/まめの木-豆六-相視相愛-中国翻訳-DL版-10-28" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

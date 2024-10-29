@@ -73,6 +73,12 @@ Nix 的包有 10w+，不过里面很多是编程语言的依赖包，有一定�
 
 如果在非 NixOS 系统上使用 Nix 包管理器可以用 `nix-env -iA <package>` 安装包，NixOS 就直接写配置然后 rebuild 即可。
 
+### apt
+
+apt 是 debian 系的 Linux 包管理器。用起来只能说还凑合。
+
+- api 会[自带 `apt-daily.service/timer` 和 `apt-daily-upgrade.service/timer`](https://askubuntu.com/questions/1038923)，挺流氓的，内网服务器建议直接 ban 了。
+
 ## 打包
 
 ### AUR
@@ -326,6 +332,13 @@ atuin import auto
 基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行；`<C-o><C-d>` 删除。
 
 更多 keybindings 请前往 [doc](https://docs.atuin.sh/configuration/key-binding/#atuin-ui-shortcuts).
+
+#### 过滤历史记录
+
+如果你的历史记录里已经有了敏感信息，例如密码，那么 atuin 带来的方便的搜索功能可能将你置于不利地位。所以你需要添加一个 filter，并且使用其 filter 一次 history。
+
+1. [添加 filter](https://docs.atuin.sh/configuration/config/#history_filter)：编辑 `~/.config/atuin/config.toml`。
+2. 执行 `atuin history prune`。
 
 ### 搜索
 

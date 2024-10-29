@@ -11,8 +11,8 @@
     "editor.defaultFormatter": "Vue.volar",
     "editor.formatOnSave": true
   },
-  "[typescript]": {
-    "editor.defaultFormatter": "rome.rome"
+  "[javascript][typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
   },
   "codeium.enableConfig": {
     "markdown": false,

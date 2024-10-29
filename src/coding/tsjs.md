@@ -259,6 +259,46 @@ ES6 正式支持了面向对象，给了一系列面向对象接口，跟 Java �
 - 支持单继承和抽象类，不支持多继承；类继承和实现接口都用 `extends`。
 - 可以方便地写 setter/getter，就是把 `function` 关键字换成 `set`/`get` 即可。调用时无需添加函数的括号，就类似 python `@property` 装饰。
 
+#### 内置 Trait
+
+因为 trait 就是 interface，实现我们自定义的 trait 就是 extends 一个 interface 完事。但是有一些系统内置 trait，例如 iterator，是不能通过 extends 实现的，例如 `Symbol.iterator`, `Symbol.asyncIterator`, `Symbol.toStringTag`。这时候需要用另一种写法实现，见下面的 [迭代器](#迭代器)。
+
+### 迭代器
+
+JS/TS 的迭代器实在是太弱了，基本只能 `for .. of`。但是[有一个 proposal](https://github.com/tc39/proposal-iterator-helpers) 可能会解决这个问题。
+
+为自己的 class 实现迭代器：
+
+```ts
+class Frame implements IterableIterator<number> {
+  public num = 5;
+  public next(): IteratorResult<number> {
+    if (this.num < 10) {
+      this.num++;
+      return {
+        done: false,
+        value: this.num,
+      };
+    }
+    return {
+      done: true,
+      value: undefined,
+    };
+  }
+  [Symbol.iterator]() {
+    return this;
+  }
+}
+
+const f = new Frame();
+console.log(f.next().value);
+for (const i of f) {
+  console.log(i);
+}
+```
+
+（吐槽一下，这个 `IteratorResult` 的类型有点大病，`done = true` 了还强制要求给出 `value`）
+
 ## TS 类型
 
 TS 的类型系统是**图灵完备**的。因此网上有一大堆 TS 类型体操天书，已经见怪不怪了。相比之下 Rust 的类型系统简直就是个弟弟，连 trait 相减和取补都做不到。
