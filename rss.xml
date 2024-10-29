@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 29 Oct 2024 08:51:31 GMT</pubDate>
-    <lastBuildDate>Tue, 29 Oct 2024 08:51:31 GMT</lastBuildDate>
+    <pubDate>Tue, 29 Oct 2024 17:56:07 GMT</pubDate>
+    <lastBuildDate>Tue, 29 Oct 2024 17:56:07 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -26,11 +26,13 @@
       <link>https://absx.pages.dev/coding/vue.html</link>
       <guid>https://absx.pages.dev/coding/vue.html</guid>
       <source url="https://absx.pages.dev/rss.xml">Vue.js</source>
-      <description>Vue.js 前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是博客主要学习的是 SFC 组件，因此我到现在对 Vue 的核心并不是非常了解。不过姑且也开一篇文章记录技巧和踩坑吧。 Vue 2 与 Vue 3 Vue 当前版本迭代到 Vue 3。但是如果上网问 GPT，给出的答案基本全是 Vue 2 的答案。截至 2024....</description>
+      <description>Vue.js 前言 前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。 在了解了其他框架后，我发现 Vue 关键字太多很难记这一点确实是对的。 Vue 2 与 Vue 3 Vue 当前版本迭代到 Vue...</description>
       <category>编程</category>
       <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是博客主要学习的是 SFC 组件，因此我到现在对 Vue 的核心并不是非常了解。不过姑且也开一篇文章记录技巧和踩坑吧。</p>
+<h2>前言</h2>
+<p>前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。</p>
+<p>在了解了其他框架后，我发现 Vue 关键字太多很难记这一点确实是对的。</p>
 <h2>Vue 2 与 Vue 3</h2>
 <p>Vue 当前版本迭代到 Vue 3。但是如果上网问 GPT，给出的答案基本全是 Vue 2 的答案。截至 2024.10 的现在，本博客的所有组件仍然是 Vue 2 写成的。</p>
 <p>Vue 3 基本上兼容 Vue 2 的写法。当我尝试了一下 Vue 3 语法后我感觉确实不错，比 Vue 2 要灵活多了。</p>
@@ -60,6 +62,8 @@
 <p>vue2 中是 export default 中的 <code>props</code> object，到了 Vue3 就是 <code>defineProps</code>。不过在 template 里引用的值不加 <code>props.</code> 前缀也可以。</p>
 <p>TS 和 JS 使用 <code>defineProps</code> 的方法不同，TS 是写在泛型参数里的：还有关于默认值的处理方式不同。</p>
 
+<h3>slot</h3>
+<p>我们也可以将标签作为 DOM 节点传入组件。组件中需要在 template 区域使用 <code>&lt;slot&gt;&lt;/slot&gt;</code> 调用。更多插槽的特性和用法可以看<a href="https://cn.vuejs.org/guide/components/slots" target="_blank" rel="noopener noreferrer">文档</a>。</p>
 <h3>双向绑定</h3>
 <p>双向绑定指的是改值会影响页面渲染，用户操作页面也会影响值。<code>v-model</code> 是用于双向绑定的语法。</p>
 <p>举个例子，我希望一个 checkbox 和某个值建立联系，我改值可以控制 box 的 check 状态，用户点击 checkbox 也可以修改值，我就可以</p>
@@ -69,6 +73,33 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">input</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> type</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"checkbox"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> value</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"newsletter"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> v-model</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">opendirectly</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此博客里的<a href="/farraginous/reciter.html" target="_blank">背词器</a>就是这么写的。</p>
 <p>v-model 本质上是 v-bind + v-on 的语法糖，等于是建立了两个单向绑定。</p>
+<h3>动态样式</h3>
+<ol>
+<li>我们可以将 DOM 元素整个绑定到 ref 上，然后手动修改样式，这样是非响应式的。<div class="language-vue line-numbers-mode" data-highlighter="shiki" data-ext="vue" data-title="vue" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"myElement"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;非响应式&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> setup</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> } </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "vue"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> myElement</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">null</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> changeStyle</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  if</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">myElement</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">value</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">    myElement</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">value</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">style</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">padding</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "20px"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">};</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>我们也可以将某个值绑定到 ref，这样是响应式的。<div class="language-vue line-numbers-mode" data-highlighter="shiki" data-ext="vue" data-title="vue" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> :</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66">style</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">{ </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">width</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">val</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> +</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'px'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;响应式&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">div</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">template</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> setup</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> } </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">from</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "vue"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B"> val</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">20</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> increaseWidth</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> () </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">  val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">value</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> +=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 10</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">};</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">script</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
