@@ -12,13 +12,14 @@
     "editor.formatOnSave": true
   },
   "[javascript][typescript]": {
-    "editor.defaultFormatter": "biomejs.biome"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "codeium.enableConfig": {
     "markdown": false,
     "vue": false,
     "*": true
   },
+  "oxc.enable": true,
   "Codegeex.DisabledFor": {
     "markdown": "true"
   },

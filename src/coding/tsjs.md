@@ -87,13 +87,13 @@ JS/TS 句末分号可加可不加，但是一个好的 formatter 都会帮你加
 
 ::: tabs
 
+@tab Prettier
+
+老牌 formatter 了，支持非常多的格式；风格也比较统一。
+
 @tab biome
 
-我目前使用 Biome，因为它 written in Rust，是 Rome 重生版。但是其默认的设置有一些霸道，我其实不太喜欢，这里举一些例子：默认用 tab 而不是 2space，windows 上也用 LF 而不是 CRLF。
-
-@tab ESLint
-
-ESLint 支持复杂的自定义化。不过我没用过。
+Biome 是 Rome 重生版，使用 Biome 的一大理由是 written in Rust。但是其默认的设置有一些霸道，我其实不太喜欢，这里举一些例子：默认用 tab 而不是 2space，windows 上也用 LF 而不是 CRLF。
 
 :::
 
@@ -102,6 +102,12 @@ ESLint 支持复杂的自定义化。不过我没用过。
 拥有一个可配置的 linter 是比较重要的。
 
 ::: tabs
+
+@tab oxlint
+
+oxlint 是一个比较新的 linter，[oxc](https://github.com/oxc-project/oxc) 的一部分。而 oxc 也是 rust 写的，据说比 biome 还快。在 vscode 使用只需要安装 oxc 插件即可。
+
+oxc 虽然说会支持 formatter，但毕竟还在开发早期，目前尚未实装。
 
 @tab biome
 
@@ -124,6 +130,10 @@ biome 本身也是 linter。
 具体的 rules 在[这里](https://biomejs.dev/linter/rules/)。
 
 类似 Rust 的 `cargo fmt && clippy fix`，biome 也有一键对项目进行 format + fix 的指令，非常好用：`biome check --write --unsafe .`
+
+@tab ESLint
+
+ESLint 支持复杂的自定义化。不过我没用过。
 
 :::
 
@@ -248,6 +258,16 @@ const shallowCopy = Object.assign({}, original);
 - 注意 `for (... in ...)` 和 `for (... of ...)` 的区别；前者遍历 key，后者遍历 value。
 - 当然，对于 Array 也可以使用 `forEach` 写成函数式调用。
 
+### 排序
+
+某个著名 meme 出自此处：
+
+```ts
+[-2, 5, -7, 1].sort(); //  result: [ -2, -7, 1, 5 ]
+```
+
+如果 sort 内不给参数，默认转为字符串排序。所以需要 `.sort((a, b) => a - b)` 才能得到正确结果。
+
 ### 函数
 
 两种定义函数的方法：`function xxx() {}` 和 `const xxx = () => {}`。前者是正常写法，后者是把 lambda 绑定到变量上的写法。至于用哪个，我认为都可以，没有孰优孰劣。
@@ -258,9 +278,23 @@ js 的 lambda 函数是完全体，比 python 的傻逼单行 lambda 强多了�
 
 this 指向的对象与声明位置无关，其总是指向调用对象；如果没有调用对象，就指向 window。
 
-### Promise
+### 异步
 
-异步，链式调用，异常处理，强大的语法。
+最早的 js 全靠回调函数实现异步，但是发现很多逻辑搅在一起，深层嵌套，非常混乱。称为回调地狱。
+
+现在使用 Promise 模型实现异步，具有链式调用与异常处理，比较方便。
+
+async/await 是一个对 Promise 的语法糖，不是一个全新的模型。不过 async/await 的思想已经应用到了许多现代编程语言上。
+
+#### async/await
+
+async 函数返回一个 Promise。await 只能在 async 函数中使用，其等待这个 Promise 执行完毕并获取返回值。
+
+如果需要捕获 async 函数中可能出现的 reject，则需要在外面套 try。我感觉这种方式还不如使用原始的 `Promise.then.catch`。
+
+#### 同时执行
+
+Promise 提供了一个非常便捷的方式同时执行一批异步函数：`Promise.all()`。并且直接调用一个 async function，无需 await 其就能开始执行，这也是区别于 rust 的一点。
 
 ### 语法糖
 
@@ -321,6 +355,8 @@ for (const i of f) {
 
 TS 的类型系统是**图灵完备**的。因此网上有一大堆 TS 类型体操天书，已经见怪不怪了。相比之下 Rust 的类型系统简直就是个弟弟，连 trait 相减和取补都做不到。
 
+我非常喜欢 TS 的类型系统，因为写得非常自然流畅。
+
 ### 基础
 
 类型遵循集合论。
@@ -350,6 +386,15 @@ type StringOrNumber = Extract<SomeTypes, string | boolean | null>; // 结果: st
 #### 数据类型
 
 这是 TS 基础中的基础。基础类型就不说了，容器有数组（Array），元组；TS 比起 JS 还多了 enum。
+
+- 元组实际上只是数组的一个特例；TS 对元组的数组操作是允许的，这意味着可以改变元组内实际的元素个数。我不喜欢这样。
+  ```ts
+  type a = [number, string];
+  const x: a = [1, "2"];
+  x.push(3); // [1, "2", 3]
+  x.pop();
+  ```
+- 函数：在 interface 中，函数的类型也可以写成两种形式，一般推荐使用箭头型。([reason](https://www.bilibili.com/video/av1850626922/))
 
 #### Interface VS Type
 
@@ -381,7 +426,7 @@ type Params = Parameters<typeof fun>; // [number, number]
 - 在数据后加 `!` 是非空断言，可以将 `T | undefined` 强转为 `T`。但是在 biome linter 里非空断言默认禁用。我个人还是希望允许非空断言的。
   - 如果不能突破 linter，那就只能在实例后面加 `as T` 了。
 
-### 推断
+### 提取
 
 TS 有 typeof 关键字用于提取一个已有结构的类型。特别的，还有 keyof 可以从 Object 类型中提取出所有可能的 key 类型，例如
 
@@ -395,6 +440,27 @@ type MyType = keyof typeof a; // MyType = "a" | "b"
 type ValueType = (typeof a)[keyof typeof a]; // ValueType = 1 | 2
 ```
 
+### 泛型
+
+泛型的语法很简单，这里跳过。lambda 也可以是泛型，只要在 `(..)` 前面添加 `<T>` 即可。
+
+TS 可以执行泛型约束，而且使用方式非常简单。例如约束某泛型需要能够拿到 `.length`，我们不必去查标准库中拥有 length 的 interface 是什么。只需要：
+
+```ts
+function test<T extends { length: number }>(x: T) {
+  return x.length;
+}
+// OK
+test([1, 2, 3]);
+test("123");
+test({ length: 3 });
+
+// ERR
+test(123);
+```
+
+这种类型处理方式其实非常符合我之前设计编程语言的想法：只需要声明“我想要什么样的类型”，而不是“我能使用什么类型”。
+
 ### 类型魔法
 
 - 接收一个不可为空的数组：
@@ -402,6 +468,11 @@ type ValueType = (typeof a)[keyof typeof a]; // ValueType = 1 | 2
   function f<Arr extends [number, ...number[]]>(arr: Arr) {}
   f([]); // err
   f([1, 2]); // ok
+  ```
+- 更多字符串约束：
+  ```ts
+  type a = `${string}xxx`; // 表示此类型的值只能是匹配 `.*xxx` 的字符串
+  const b: a = "asdxxx";
   ```
 
 ## 数据结构
@@ -449,6 +520,10 @@ Array.prototype.fun = function () {
 ```
 
 可惜的是不能为特定的 `Array<SomeType>` 添加函数，并且必需在 module 里才能用。
+
+## Test
+
+JS 的测试框架里，我比较喜欢 [Vitest](https://cn.vitest.dev/guide/)。毕竟文档不错，只看这一页基本就掌握了写单元测试的方式了。
 
 ## Benchmark
 

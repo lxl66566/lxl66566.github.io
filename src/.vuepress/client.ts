@@ -12,14 +12,14 @@ import "vuepress-theme-hope/presets/bounce-icon.scss";
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
 
 export default defineClientConfig({
-	enhance: ({ app }) => {
-		app.component("TelegramLink", TelegramLink);
-		app.component("rssLink", rssLink);
-		app.component("OrderBadge", OrderBadge);
-		app.component("dtls", dtls);
-		app.component("dtlslong", dtlslong);
-		app.component("heimu", heimu);
-		app.component("ZoomedImg", ZoomedImg);
-		app.component("dated", dated);
-	},
+  enhance: ({ app }) => {
+    app.component("TelegramLink", TelegramLink);
+    app.component("rssLink", rssLink);
+    app.component("OrderBadge", OrderBadge);
+    app.component("dtls", dtls);
+    app.component("dtlslong", dtlslong);
+    app.component("heimu", heimu);
+    app.component("ZoomedImg", ZoomedImg);
+    app.component("dated", dated);
+  },
 });

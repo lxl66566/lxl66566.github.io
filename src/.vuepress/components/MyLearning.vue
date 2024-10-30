@@ -40,6 +40,7 @@ const links: Box[] = [
       { text: "通信原理", url: "PoC" },
       { text: "电磁场与电磁波", url: "electromagnetic_wave" },
       { text: "图像处理", url: "image_processing" },
+      { text: "信息论", url: "information_theory" },
     ],
   },
 ];
