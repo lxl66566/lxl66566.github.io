@@ -55,6 +55,11 @@ tag:
   - 1234 是程度，直接 enter 默认是 3 的级别。
 - 如果有的卡片非常熟练，不要删除，请使用 _搁置_（快捷键 `-`）。如果删除卡片，当卡组有更新时就无法更新，否则会把卡片重新下载回来。
 
+#### 插件推荐
+
+- [FSRS Helper](https://ankiweb.net/shared/info/759844606)：在电脑上使用，可以把 AnkiDroid 上复习的卡按 FSRS 重排。
+- [Review Heatmap](https://ankiweb.net/shared/info/1771074083)
+
 ### [使用时间记录](../articles/time_record.md)
 
 ### [mpv](https://mpv.io/)

@@ -569,6 +569,7 @@ const data = [
   { id: "536501", aScore: 8.9, bScore: 2.4, info: "#FD 堕天計画", order: 5, bak: "https://telegra.ph/C104-234ド-イチリ-堕天前シャロエがオトナのおもちゃに負ける本-中国翻訳-10-25" },
   { id: "520178", aScore: 8.6, bScore: 2.3, info: "#鸣潮 #富士やま #短篇", bak: "https://telegra.ph/富士やま鳴潮-中国翻訳-10-28" },
   { id: "496571", aScore: 5.8, bScore: 9.3, info: "#痴女 #同学 #纯爱结局 #精神创伤 #强制性交", bak: "https://telegra.ph/まめの木-豆六-相視相愛-中国翻訳-DL版-10-28" },
+  { id: "369256", aScore: 5.5, bScore: 8.1, info: "#触手 #魔剑" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

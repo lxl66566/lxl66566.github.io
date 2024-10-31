@@ -50,7 +50,8 @@ tag:
 |20240726 Lamhosting|TW|￥10.6/mo(coupon -￥2)|512GB 1000Mbps|512M|10GB|1|<dtls>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</dtls>|
 |20240820 SurfCloud|HK|$1/mo|200GB 30Mbps|1G|40GB|1|<dtls>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</dtls>|
 |20240911 YXVM|JP|$3/mo|1TB 500Mbps|768MB|5GB|1|<dtls>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</dtls>|
-|20241018 azure|JP|free|?|1G|30G|1|<dtls>微软，我的超人</dtls>|
+|20241018 azure|JP|free|?|1G|30G|1|微软，我的超人|
+|20241031 [91idc](https://91idc.gg/index.php)|HK|￥10|20MBps|1G|10G|1|<dtlslong text="优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的" />|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 

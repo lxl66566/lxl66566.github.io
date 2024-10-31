@@ -30,7 +30,7 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
     - [JLPT (N1 ～ N5)单词 中日 新版](https://ankiweb.net/shared/info/832276382) | ~~[旧版](https://ankiweb.net/shared/info/34073638)~~
     - [Open Anki JLPT](https://ankiweb.net/shared/decks?search=Open%20anki%20JLPT)
   - 文法
-    - [蓝宝书](https://ankiweb.net/shared/info/1959548600)
+    - [蓝宝书白金版](https://ankiweb.net/shared/info/1748349244) | [蓝宝书](https://ankiweb.net/shared/info/1959548600)
     - [毎日のんびり日本語教師の文法](https://ankiweb.net/shared/info/1365377701)
     - [どんなときどう使う日本語文型](https://ankiweb.net/shared/info/1681155450)
   - 真题
