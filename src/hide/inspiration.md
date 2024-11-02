@@ -74,7 +74,7 @@ tag:
   - 转码，复制，参考我的 fish function
   - 平台无关的 alias
   - [ ] dotfile backup script
-- [ ] 脚本语言：强类型；方便的系统调用；无视空白；方便的函数式异步（go）；
+- [ ] ~~脚本语言~~ TS + bun？
 - [x] python beautiful assert: [pretty-assert](https://github.com/lxl66566/pretty-assert)
   - 颜色，当前行，变量值
   - [ ] 可选不打印堆栈
@@ -84,6 +84,7 @@ tag:
   - [ ] filter
 - [x] rust release ci
 - [ ] kde spectacle ocr plugin
+- [ ] 分布式服务器监控全栈
 
 ### RIIR
 

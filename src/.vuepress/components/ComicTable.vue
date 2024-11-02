@@ -570,6 +570,9 @@ const data = [
   { id: "520178", aScore: 8.6, bScore: 2.3, info: "#鸣潮 #富士やま #短篇", bak: "https://telegra.ph/富士やま鳴潮-中国翻訳-10-28" },
   { id: "496571", aScore: 5.8, bScore: 9.3, info: "#痴女 #同学 #纯爱结局 #精神创伤 #强制性交", bak: "https://telegra.ph/まめの木-豆六-相視相愛-中国翻訳-DL版-10-28" },
   { id: "369256", aScore: 5.5, bScore: 8.1, info: "#触手 #魔剑" },
+  { id: "(ex)", aScore: 6.5, bScore: 7.3, info: "#蔚蓝档案", order: 2, otherlink: "https://exhentai.org/g/3109355/de944dd883/", bak: "https://telegra.ph/ウサギBOSS炉研所-神奈弥沙-悟リの教示者-シッテムの箱篇-ブルーアーカイブ-中国翻訳-11-01-3" },
+  { id: "(ex)", aScore: 7.8, bScore: 6.2, info: "#いちはや", otherlink: "https://exhentai.org/g/3106965/04efafec58/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-JC性処理トレーニング-中国翻訳-DL版-10-31-4" },
+  { id: "535364", aScore: 8, bScore: 3.3, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/Be-QUieT-紅シラガ-コハルが他の先生とハグして先生が嫉妬しちゃうお話-ブルーアーカイブ-中国翻訳-DL版-10-31" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
