@@ -99,4 +99,16 @@ BSC 信道（二进制对称 DMC 信道）：$C=1-H(ε)$ bit （ε 为转移概�
 
 ## 高斯信道
 
-$Z_i\sim\mathcal{N}(0, N)$
+一般功率要求 $\frac1n\sum x_i^2\le P$
+
+高斯信道：$Z_i\sim\mathcal{N}(0, N)$
+
+$EX^2=P, EY^2=N$
+
+$h(Y)\le\frac12log2\pi e(P+N)$
+
+$h(Z)=\frac12log2\pi eN$
+
+$C=\frac12log(1+\frac{P}{N})$，最大值在 $X\sim\mathcal{N}(0, P)$
+
+并联高斯信道容量 = sum

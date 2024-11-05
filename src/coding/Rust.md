@@ -424,6 +424,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-audit](https://github.com/RustSec/rustsec/tree/main/cargo-audit) | 查依赖漏洞 |
 | [cargo-hakari](https://crates.io/crates/cargo-hakari) | 加速构建的黑科技 |
 | [cargo-selector](https://github.com/lusingander/cargo-selector) | TUI 快速选择运行目标 |
+| [cargo-sweep](https://github.com/holmgr/cargo-sweep) | 部分清理编译产物 |
 
 ## 库
 
