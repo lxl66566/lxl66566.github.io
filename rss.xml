@@ -6,12 +6,12 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 05 Nov 2024 16:39:46 GMT</pubDate>
-    <lastBuildDate>Tue, 05 Nov 2024 16:39:46 GMT</lastBuildDate>
+    <pubDate>Fri, 08 Nov 2024 05:06:03 GMT</pubDate>
+    <lastBuildDate>Fri, 08 Nov 2024 05:06:03 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>学习</category>
     <category>编程</category>
+    <category>学习</category>
     <category>爱好</category>
     <category>教程</category>
     <category>应用</category>
@@ -20,7 +20,24 @@
     <category>生命科学</category>
     <category>生活</category>
     <category>经历</category>
-    <category>随笔</category>
+    <item>
+      <title>后端</title>
+      <link>https://absx.pages.dev/coding/bagu.html</link>
+      <guid>https://absx.pages.dev/coding/bagu.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">后端</source>
+      <description>后端 本文内容大多是面试八股，写在这里只是加深记忆。至于内容确实没有太多看的价值，网上类似的可太多了。 关于、、等，我都放在了关联的文章内。只有找不到啥关联的后端八股才写在此处。 Redis 内存型 KV 数据库，用于缓存。 穿透，击穿，雪崩</description>
+      <category>编程</category>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>本文内容大多是面试八股，写在这里只是加深记忆。至于内容确实没有太多看的价值，网上类似的可太多了。</p>
+<p>关于<a href="/coding/algorithm.html" target="_blank">算法</a>、<a href="/coding/java.html" target="_blank">Java</a>、<a href="/coding/sql.html" target="_blank">数据库</a>等，我都放在了关联的文章内。只有找不到啥关联的后端八股才写在此处。</p>
+<h2>Redis</h2>
+<p>内存型 KV 数据库，用于缓存。</p>
+<ul>
+<li><a href="https://lry722.github.io/posts/redis-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="noopener noreferrer">穿透，击穿，雪崩</a></li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>信息论</title>
       <link>https://absx.pages.dev/learning/information_theory.html</link>
@@ -2240,54 +2257,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <!-- prettier-ignore -->
 <p>|名称|价格|得分|评价|
 |</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>2024</title>
-      <link>https://absx.pages.dev/essay/2024.html</link>
-      <guid>https://absx.pages.dev/essay/2024.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">2024</source>
-      <description>2024 20241030 我们所在的世界自由吗？国内早已丧失了；而日本禁止未打码作品发行，美国有反堕胎法案，很难把这些发达世界也看作是“自由”的。 20241028 实习损失了三个月，但是让我意识到时间的宝贵，于是之后的六个月时间利用率变为 150%，四舍五入等于没亏（ 20241025 「回顾人生就像是在拉动缩放轴，时间跨度越短细节越丰富，时间跨度...</description>
-      <category>随笔</category>
-      <pubDate>Sat, 06 Jan 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<h2>20241030</h2>
-<p>我们所在的世界自由吗？国内早已丧失了；而日本禁止未打码作品发行，美国有反堕胎法案，很难把这些发达世界也看作是“自由”的。</p>
-<h2>20241028</h2>
-<p>实习损失了三个月，但是让我意识到时间的宝贵，于是之后的六个月时间利用率变为 150%，四舍五入等于没亏（</p>
-<h2>20241025</h2>
-<p>「回顾人生就像是在拉动缩放轴，时间跨度越短细节越丰富，时间跨度越长，细节就越模糊。」
-「那我的人生是分形图呢？」</p>
-<h2>20241021</h2>
-<p>24 点后的时间是“时之隙”，在这段时间里做事就像白赚。于是熬夜得到了其魅力。</p>
-<h2>20240930</h2>
-<p>抽象的翻译背后一定有一个抽象的原文。</p>
-<h2>20240928</h2>
-<p>嵌字守则上可以看到人们对艺术的执着。</p>
-<h2>20240927</h2>
-<p>找 bug 就是程序领域的海龟汤。</p>
-<h2>20240926</h2>
-<p>可怕的不是选择了错误的道路，而是被命运选择而不自知</p>
-<h2>20240919</h2>
-<p>游戏平台应该与区块链结合。</p>
-<h2>20240829</h2>
-<p>灭蟑记（八）<a href="/essay/2023.html#_20230730" target="_blank">^</a></p>
-<p>夜寐一时辰而无眠。东瀛漫画，沉醉良久，下廷驳倒上廷者也。睡意全无，五更起而作也。</p>
-<p>码思泉涌之时，余光现一活物暗影游动于书架上。敲山震之，逼于死角。速点灯视之，大蟑也。摄其像，持鞋手中，欲移出杂物，惊此獠，瞬出而隐于架后，视之不得。其速也，无可击。</p>
-<p>叹气之时，其又现于桌上，作嘲讽态，游走于键鼠之上。惊之，藏于耳机之下。去其藏身所，又入死角，可观而无力杀之。</p>
-<p>天无绝人之路，吾灵感迸发，趁其伏于罐后之时，速掷罐于地。其曝于广阔，顷刻毙命于鞋下。返视其尸，方知今日万幸。</p>
-<h2>20240821</h2>
-<p>无机之糖</p>
-<h2>20240811</h2>
-<p>音域理论：素质人的社会观念是以音域为界的。素质人的音域更小，并且不愿意进入他人的音域。</p>
-<h2>20240804</h2>
-<p>直立是人类优越感与过去切割的产物。</p>
-<h2>20240802</h2>
-<p>永生陷阱：一阶段思维僵化</p>
-<h2>20240726</h2>
-<p>人类因为性快感而统治地球，也因为性快感而消亡世间。</p>
-<h2>20240714</h2>
-<p>换了校区，宿舍床非常烂。我：这床估计又要嘎吱嘎吱一晚上了。舍友：这就是胳肢窝。</p>
 ]]></content:encoded>
     </item>
   </channel>
