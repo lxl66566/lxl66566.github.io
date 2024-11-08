@@ -254,10 +254,16 @@ Mybatis 是一个轻量级 ORM。要我说的话它只能算是半个 ORM，毕�
 
 ## JVM 调优
 
-基础概念：
+### GC
 
-- java8 有这些 GC：Serial GC, Parallel GC, CMS, G1
+- java8 有这些 GC：Serial GC, Parallel GC, CMS (Concurrent Mark Sweep), G1 (Garbage-First)
   - 后二者将 GC 分为几个阶段，只在其中部分阶段 stop the world
+  - CMS（标记 - 清除，没有整理）：初始标记（停顿）-> 并发标记 -> 重新标记（停顿） -> 并发清除
+  - G1（标记 - 整理）：类似文件系统分块，新生代和老年代不再连续。优点：可预测，无内存碎片
+  - ZGC：全部都是 Full GC；动态分块
+    - 使用 Load Barriers，进行类似 CAS 的复制块访问
+    - 染色指针，有四位信息存在指针本身上
+    - 优点：吞吐量大，停顿短，不需要太多干预；缺点：CPU 占用高
 - java 的 gc 是从根节点开始扫描不可达对象。
 - JDK8 的 GC 是分两代，新生代和老年代。新生代里又有三个区（eden, Survivor（s1, s2））。在新生代 gc 叫 minor gc，gc 老年代 + 新生代叫 full gc。
   - 每次 gc 会使新生代对象的 age + 1，当 age 超过一定值时将被移入老年代

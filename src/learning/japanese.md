@@ -160,3 +160,4 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 4. [日语口语——浊化规律](https://mike4ellis.github.io/2019/05/29/japanese-speak-change/)
 5. [Anki 日语学习交流](https://anki-blog.pages.dev/)
 6. [向中国程序员介绍日本 IT](https://juryquinn.com/articles/向中国程序员介绍日本%20IT)
+7. [日语易错翻译对照表](https://docs.google.com/spreadsheets/d/1WvsPzbXq2ohwdXBqu4xqkfGvK_dMH_B1YbPZEWAPVkA/edit?gid=0#gid=0)

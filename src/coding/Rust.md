@@ -245,6 +245,15 @@ where
 > 如果你对 _async/await_ 模型没有明确概念，可以看看[这篇文章](https://course.rs/advance/async/getting-started.html)入门。  
 > rust 提供 _async/await_ 模型和线程模型。
 
+#### Future
+
+每个 async 函数返回的都是一个 `Future<Output = ...>`。Rust 的 Future 不像其他语言那样创建即执行，而是需要通过 poll 执行并推进。
+
+- 手写 Future 要注意，如果返回 `Poll::Pending`，必需要在前面调一次 wake。
+- 手动 `impl Future for Xxx` 比较复杂，要手写状态机，因此如果不是写底层库，一般就 `impl Xxx { async fn call() }`，虽然调用时不能直接 `.await` 而需要 `.call().await`，但是能够极大降低心智负担。
+
+#### Wrappers
+
 关于 Send/Sync 可以看[这里](https://kaisery.github.io/trpl-zh-cn/ch16-04-extensible-concurrency-sync-and-send.html) 或者 [external 5.](#external)。做个总结（我想大家应该都看得懂）:
 
 | Struct                  | Trait                                              |

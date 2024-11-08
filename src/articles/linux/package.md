@@ -340,6 +340,10 @@ atuin import auto
 1. [添加 filter](https://docs.atuin.sh/configuration/config/#history_filter)：编辑 `~/.config/atuin/config.toml`。
 2. 执行 `atuin history prune`。
 
+### 代码量统计
+
+[tokei](https://github.com/XAMPPRocky/tokei)
+
 ### 搜索
 
 文字搜索当然是用 ripgrep，如果嫌命令行难用也可以用 vscode 打开文件夹然后全局搜索即可。
