@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 08 Nov 2024 05:06:03 GMT</pubDate>
-    <lastBuildDate>Fri, 08 Nov 2024 05:06:03 GMT</lastBuildDate>
+    <pubDate>Sat, 09 Nov 2024 11:04:32 GMT</pubDate>
+    <lastBuildDate>Sat, 09 Nov 2024 11:04:32 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -261,7 +261,7 @@
       <link>https://absx.pages.dev/hobbies/art.html</link>
       <guid>https://absx.pages.dev/hobbies/art.html</guid>
       <source url="https://absx.pages.dev/rss.xml">其他艺术形式</source>
-      <description>其他艺术形式 这里记录的是较少的，一般心血来潮才会看的作品形式。 主要的艺术形式记录请跳转对应页面（ | | ）。 漫画 电影 纪录片/连续剧</description>
+      <description>其他艺术形式 这里记录的是较少的，一般心血来潮才会看的作品形式。 主要的艺术形式记录请跳转对应页面（ | | ）。 漫画 电影 纪录片/连续剧 稍后再看 漫画 今生恋人，前世冤家（等待连载）</description>
       <category>爱好</category>
       <pubDate>Fri, 23 Aug 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -278,6 +278,11 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:center"><a href="https://m.manhuagui.com/comic/53159/" target="_blank" rel="noopener noreferrer">我成了魔族的宠物</a></td>
+<td style="text-align:center">2024.11.09-<br>04，等待连载</td>
+<td style="text-align:center"></td>
+</tr>
 <tr>
 <td style="text-align:center"><a href="https://m.manhuagui.com/comic/44973/" target="_blank" rel="noopener noreferrer">傲娇女友心想刺成</a></td>
 <td style="text-align:center">2024.10.09</td>
@@ -366,6 +371,14 @@
 </tr>
 </tbody>
 </table>
+<h2>稍后再看</h2>
+<ul>
+<li>漫画
+<ul>
+<li><a href="https://18comic.vip/album/604146/%E4%BB%8A%E7%94%9F%E6%81%8B%E4%BA%BA-%E5%89%8D%E4%B8%96%E5%86%A4%E5%AE%B6-%E4%B8%8D%E5%92%95%E9%B8%9F%E6%B1%89%E5%8C%96%E7%BB%84-%E7%A6%81%E6%BC%AB%E5%A4%A9%E5%A0%82" target="_blank" rel="noopener noreferrer">今生恋人，前世冤家</a>（等待连载）</li>
+</ul>
+</li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>
