@@ -103,6 +103,51 @@ C++17 后有 `std::gcd` 和 `std::lcm`，不过显然在做题时是没有 C++17
 ll gcd(ll a, ll b) { return b == 0 ? a : gcd(b, a % b); }
 ```
 
+### 优先队列
+
+优先队列平常的使用还挺广泛的，具有较高的重要性。特别是对于自定义 struct 的优先队列需要特别注意。
+
+::: tabs
+
+@tab C++
+
+```cpp
+#include <queue>
+struct Point {
+  int x, y;
+  bool operator<(const Point &rhs) const { return x + y < rhs.x + rhs.y; }
+};
+auto q = std::priority_queue<Point>{};
+q.push({1, 2});
+auto p = q.top();
+q.pop();
+std::cout << p.x << " " << p.y << std::endl;
+```
+
+@tab Python
+
+```py
+import heapq
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __lt__(self, other):
+        return self.x + self.y < other.x + other.y
+
+    def __repr__(self) -> str:
+        return f"({self.x}, {self.y})"
+
+priority_queue = []
+
+heapq.heappush(priority_queue, Point(1, 2))
+print(heapq.heappop(priority_queue))
+```
+
+:::
+
 ### permutation
 
 如果使用 \>=C++11 / Python，可以很简单地使用标准库：

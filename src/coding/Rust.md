@@ -252,9 +252,13 @@ where
 - 手写 Future 要注意，如果返回 `Poll::Pending`，必需要在前面调一次 wake。
 - 手动 `impl Future for Xxx` 比较复杂，要手写状态机，因此如果不是写底层库，一般就 `impl Xxx { async fn call() }`，虽然调用时不能直接 `.await` 而需要 `.call().await`，但是能够极大降低心智负担。
 
-#### Wrappers
+#### Send/Sync
 
-关于 Send/Sync 可以看[这里](https://kaisery.github.io/trpl-zh-cn/ch16-04-extensible-concurrency-sync-and-send.html) 或者 [external 5.](#external)。做个总结（我想大家应该都看得懂）:
+关于 Send/Sync 可以看[这里](https://kaisery.github.io/trpl-zh-cn/ch16-04-extensible-concurrency-sync-and-send.html) 或者 [external articles 5.](#external)。
+
+- 另一个理解是：Send：对象的 &mut 和析构能在别的线程访问；Sync：对象的 & 能在别的线程访问 ——[包布丁](https://t.me/c/1264662201/571556)
+
+关于 Wrappers，看这里即可（我想大家应该都看得懂）:
 
 | Struct                  | Trait                                              |
 | ----------------------- | -------------------------------------------------- |

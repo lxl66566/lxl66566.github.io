@@ -147,6 +147,7 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 ## 杂
 
 - [部首の読み](https://atok.com/other/support/howtouse/mac/ap/pgs/ap_busyu_suijun2.htm)，有点超纲
+- [重箱読み vs 湯桶読み](https://zh.wikipedia.org/zh-cn/重箱讀法)
 
 ## 说两句
 

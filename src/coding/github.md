@@ -108,6 +108,7 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 |fork:|指定fork数范围|类比|
 |language:|指定程序语言|`language:c#`|
 |pushed:|指定最近更新时间范围|`pushed:>2022-01-01`|
+|path:|指定匹配文件名，例如 path:*.toml|
 
 在这里查看[代码搜索](https://docs.github.com/zh/search-github/github-code-search/understanding-github-code-search-syntax)的详细信息。
 

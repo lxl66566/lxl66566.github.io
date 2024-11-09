@@ -66,6 +66,7 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
     <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
 - [App Manager](https://github.com/MuntashirAkon/AppManager)：开源的 root 软件管理，可以查看运行中服务，可以冻结应用，控制权限。
 - [Neo Backup](https://github.com/NeoApplications/Neo-Backup)：批量备份，带数据，可定时
+- [HyperCeiler](https://github.com/ReChronoRain/HyperCeiler)：Make **HyperOS/MIUI** Great Again!
 
 通过其他来源安装：
 
