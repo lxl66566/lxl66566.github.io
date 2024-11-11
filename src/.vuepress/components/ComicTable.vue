@@ -575,6 +575,13 @@ const data = [
   { id: "535364", aScore: 8, bScore: 3.3, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/Be-QUieT-紅シラガ-コハルが他の先生とハグして先生が嫉妬しちゃうお話-ブルーアーカイブ-中国翻訳-DL版-10-31" },
   { id: "330268", aScore: 8.5, bScore: 7, info: "#兽耳 #合集 #生肉" },
   { id: "316191", aScore: 8.3, bScore: 4.2, order: 1, info: "#兽耳 #さわやか鮫肌 #纯爱", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本-中国翻訳-DL版-06-07-3" },
+  { id: "538285", aScore: 7, bScore: 4.5, info: "#NTR #露出 #3P", bak: "https://telegra.ph/しまじや-しまじ-教え子を寝取らせたらこんなに興奮するなんて-中国翻訳-DL版-11-08-2" },
+  { id: "(ex)", aScore: 7.8, bScore: 3.2, info: "#AI #扶她", otherlink: "https://exhentai.org/g/3116415/7074e764a9/", bak: "https://telegra.ph/NaitongSP2-欲求不满上-AI-Generated-11-08" },
+  { id: "491963", aScore: 7.8, bScore: 3.6, info: "#东方 #百合", order: 4, bak: "https://telegra.ph/例大祭14-Rainbow-Vanilla-祭唄-純真ファンシーハートブレイク-4-東方Project-中国翻訳-11-08" },
+  { id: "537996", aScore: 7.6, bScore: 9.3, info: "#合集 #百合", bak: "https://telegra.ph/強制発情百合アンソロジー-Vol1-中国語翻訳-DL版-11-07-2" },
+  { id: "538008", aScore: 7.5, bScore: 4.2, info: "#蔚蓝档案 #玩具 #自慰", bak: "https://telegra.ph/しまじや-しまじ-アダルトショップキヴォトス店のレヴュー漫画-ブルーアーカイブ-中国翻訳-DL版-11-07" },
+  { id: "537998", aScore: 6, bScore: 8.6, info: "#鬼娘 #传统 悠久のオイワド～鬼神さまの自堕落ライフ", bak: "https://telegra.ph/イシマリユウヤ-悠久のオイワド鬼神さまの自堕落ライフ-永遠娘-13-中国翻訳-DL版-11-07" },
+  { id: "(ex)", aScore: 8.6, bScore: 8.9, info: "#いちはや #兄妹 #废墟", otherlink: "https://exhentai.org/g/3112690/cc08c05918/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-妹とびっくりするほどユートピア-中国翻訳-DL版-11-05-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

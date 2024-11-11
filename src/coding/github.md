@@ -174,9 +174,13 @@ updates:
       interval: "weekly"
 ```
 
-即可。记得在 Security 里开启 dependabot。
+即可。首次启用记得在 Security 里开启 dependabot。
 
-如果你的项目测试覆盖率够高，还可以开启 auto merge，究极懒人了属于是。
+##### auto merge
+
+使用 dependabot 后，项目一多，容易被通知消息刷屏。我希望在有写 test 的项目中，能够通过测试自动 merge。
+
+我目前使用 [dependabot-auto-merger](https://github.com/marketplace/dependabot-auto-merger)。注意，你的每个仓库都需要手动开启 branch protection ruleset。
 
 #### [typos](https://github.com/crate-ci/typos)
 
@@ -222,6 +226,10 @@ typos -w  # 纠正
 方便地使用 [sccache](https://github.com/mozilla/sccache/) 的 CI。这个和上面的 cache 不太一样，sccache 提供更智能的 cache 而不是暴力缓存 `./target`。
 
 使用也非常简单，对 rust 来说，设置两个 env，编译前 use 一下就行。编译后还可以打印。
+
+#### 调试
+
+[action-tmate](https://github.com/mxschmitt/action-tmate) 提供了 ssh 进入 action 环境里调试的方法。
 
 ## external
 

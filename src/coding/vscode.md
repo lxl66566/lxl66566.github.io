@@ -68,7 +68,15 @@ tag:
 
 我的刚需是：免费（考虑付费的话直接上 copilot 完事了），可部分禁用。
 
-<details><summary>点击展开前言</summary><p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 %TEMP% 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p></details>
+<details>
+
+<summary>点击展开前言</summary>
+
+我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 `%TEMP%` 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。
+
+用久了感觉 CodeGeeX 不够智能，又尝试其他插件。
+
+</details>
 
 非国产：
 
@@ -79,6 +87,7 @@ tag:
 - [Cody](https://github.com/sourcegraph/cody)：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。
 - [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
 - [Continue](https://www.continue.dev/)：需要自己提供 API KEY 或本地跑模型
+- [supermaven](https://supermaven.com/)：免费补全
 
 国产：
 
@@ -96,6 +105,12 @@ tag:
 
 - chat api，gemini 1.5 是免费的
 - code 补全 API 的话，deepseek api 比较便宜
+
+#### AI IDE
+
+当然，现在除了开发 AI 插件，还有相当一部分 IDE 另辟蹊径，将 AI 作为自己的主要卖点，并且也可以安装 Vscode 的插件，快速抢占市场。这些编辑器有：
+
+- [Cursor](https://www.cursor.com/pricing)：免费限量补全，全兼容 Vscode
 
 ## feature
 
