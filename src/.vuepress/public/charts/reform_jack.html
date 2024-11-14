@@ -322,8 +322,8 @@
           {
             type: "line",
             id: "line",
-            start: ["20220530", "96"],
-            end: ["20221010", "96"],
+            start: [data[0].时刻, "96"],
+            end: [data[data.length - 1].时刻, "96"],
             text: {
               content: "pass",
               position: "left",
@@ -351,7 +351,7 @@
           position: "top",
         },
         slider: {
-          start: 0.4,
+          start: 0,
           end: 1,
         },
       });

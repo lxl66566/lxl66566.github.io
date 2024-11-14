@@ -157,13 +157,13 @@ _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<
 
 ### 我的记录
 
-以前很热衷于记录我的成绩与进步情况，并将其可视化。现在废了，懒得记了。
-
-:::: details
-
 - 我的 o!m 健身按键数 ~~（众所周知 osu 是健身游戏）~~
 
 <iframe frameborder="no" src="/charts/keysnum.html" width="100%" height="300" loading="lazy"></iframe>
+
+以前很热衷于记录我的成绩与进步情况，并将其可视化。现在废了，懒得记了。
+
+:::: details
 
 - 叠（Jack）：β, ex-4
 

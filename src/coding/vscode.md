@@ -161,3 +161,7 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 - 没法控制插件行为和权限
   - （比如某个看似没啥用的插件向我的 C 盘写入了 6GB 的缓存，说的就是你，_SonarLint_！）
   - （比如 java 的插件天天申请公共网络访问权限）
+
+## external
+
+1. [AI 编程助手测评：GitHub Copilot vs 豆包 MarsCode](https://www.ruanyifeng.com/blog/2024/07/copilot-vs-marscode.html)
