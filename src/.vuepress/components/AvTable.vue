@@ -377,6 +377,7 @@ const data = [
   { id: "miab-009", aScore: 6, bScore: 6, u: true, name: "#眼镜 #媚药 極道の息子に体罰を与えた僕への復讐で最愛の婚約者が媚薬漬けレ×プされてしまった 森日向子" },
   { id: "ngod-190", aScore: 7.3, bScore: 5.5, name: "連れ子NTR 母の再婚相手……義父の巨根で突かれた嫁入り前の娘 花狩まい" },
   { id: "tue-124", aScore: 6.2, bScore: 7.8, name: "女子●生睡眠薬レ●プ鬼畜犯罪映像集" },
+  { id: "IPZZ-236", aScore: 7.7, bScore: 8.5, name: "#连续高潮 私は拾ってもらった恩があるので媚薬の元締めのご主人様に一生尽くします 佐々木さき" },
 ].sort((x, y) => -TwoScoreCompare(x, y));
 // 同分则颜值分优先
 

@@ -72,6 +72,7 @@ tag:
 INSERT INTO tablename (name, xxx) VALUES ('Alice', 25);
 UPDATE tablename SET xxx = 26 WHERE email = 'alice@example.com';
 DELETE FROM users WHERE email = 'alice@example.com';
+SELECT DISTINCT users FROM tablename;   -- DISTINCT 表示只列出不同项目
 
 -- 复杂查示例：
 

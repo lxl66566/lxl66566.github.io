@@ -85,19 +85,19 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 <!-- prettier-ignore -->
 |漢字|単語1|単語2|単語3|
 | :-: | :-: | :-: | :-: |
-|体|体育（たい）|世間体（てい）|
-|人|人生（じん）|人情（にん）|
-|生|生活（せい）|生姜（しょう）|
-|堪|堪忍（かん）|堪能（たん）|
-|中|心中（じゅう）|中止（ちゅう）|
-|正|正体（しょう）|正論（せい）|
-|行|通行（こう）|行商（ぎょう）|
-|強|強調（きょう）|強引（ごう）|
-|平|平等（びょう）|平均（へい）|
-|重|重大（じゅう）|珍重（ちょう）|
-|地|地盤（じ）|地帯（ち）|
-|納|出納（とう）|滞納（のう）|
-|内|境内（だい）|内容（ない）|
+|体|<furigana f="たい">体</furigana>育|世間<furigana f="てい">体</furigana>|
+|人|<furigana f="じん">人</furigana>生|<furigana f="にん">人</furigana>情|
+|生|<furigana f="せい">生</furigana>活|<furigana f="しょう">生</furigana>姜|
+|堪|<furigana f="かん">堪</furigana>忍|<furigana f="たん">堪</furigana>能|
+|中|心<furigana f="じゅう">中</furigana>|<furigana f="ちゅう">中</furigana>止|
+|正|<furigana f="しょう">正</furigana>体|<furigana f="せい">正</furigana>論|
+|行|通<furigana f="こう">行</furigana>|<furigana f="ぎょう">行</furigana>商|
+|強|<furigana f="きょう">強</furigana>調|<furigana f="ごう">強</furigana>引|
+|平|<furigana f="びょう">平</furigana>等|<furigana f="へい">平</furigana>均|
+|重|<furigana f="じゅう">重</furigana>大|珍<furigana f="ちょう">重</furigana>|
+|地|<furigana f="じ">地</furigana>盤|<furigana f="ち">地</furigana>帯|
+|納|<furigana f="すいとう">出納</furigana>|滞<furigana f="のう">納</furigana>|
+|内|<furigana f="けいだい">境内</furigana>|<furigana f="ない">内</furigana>容|
 
 ### 叠词与拟声
 
@@ -109,19 +109,26 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 
 ### 易错
 
-- `手の甲` 不是指甲，是手背
-- `特種` 指独家新闻
-- `所以` 读作 `ゆえん`，表示的是原因
-- `新た` 读 `あらた`，而 `新しい` 读 `あたらしい`
-- `大家`（おおや） 意思是房东
-- `人見知り` 是怕生
-- `興行`（こうぎょう）读音完全反过来，有点过于傻逼了…
-- `アットホーム` 是 athome（自在，无拘束），不是 at home.
-- `暗算`（あんざん）是心算
-- `雰囲気` 读 `ふんいき`，我之前常读 `ふいんき`
-- `戦ぐ`（そよぐ） 是微风轻拂
-- `成就` 读 `じょうじゅ`
-- `バイク` 是摩托车。
+<!-- <furigana f=""></furigana> -->
+
+<!-- prettier-ignore -->
+| 词 | 误解 | 正解 |
+| :-: | :-: | :-: |
+| 手の甲 | 指甲 | 手背 |
+| <furigana f="とくだね">特種</furigana> | 特种 | 独家新闻 |
+| <furigana f="おおや">大家</furigana> | 大家 | 房东 |
+| <furigana f="ゆえん">所以</furigana> | 所以 | 原因 |
+| 人見知り | 认人 | 怕生 |
+| <furigana f="あんざん">暗算</furigana> | 暗算 | 心算 |
+| <furigana f="そよぐ">戦ぐ</furigana> | 战斗 | 微风轻拂 |
+| アットホーム | at home | athome（自在，无拘束） |
+| バイク | 自行车 | 摩托车 |
+| <furigana f="くみあい">組合</furigana> | 组合 | 工会 |
+
+- <furigana f="あらた">新た</furigana>　と　<furigana f="あたらしい">新しい</furigana>
+- <furigana f="こうぎょう">興行</furigana>　读音完全反过来，有点过于傻逼了…
+- <furigana f="ふんいき">雰囲気</furigana>、我之前常读 `ふいんき`
+- <furigana f="じょうじゅ">成就</furigana>
 
 ### 缩写
 

@@ -583,6 +583,9 @@ const data = [
   { id: "537998", aScore: 6, bScore: 8.6, info: "#鬼娘 #传统 悠久のオイワド～鬼神さまの自堕落ライフ", bak: "https://telegra.ph/イシマリユウヤ-悠久のオイワド鬼神さまの自堕落ライフ-永遠娘-13-中国翻訳-DL版-11-07" },
   { id: "(ex)", aScore: 8.6, bScore: 8.9, info: "#いちはや #兄妹 #废墟", otherlink: "https://exhentai.org/g/3112690/cc08c05918/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-妹とびっくりするほどユートピア-中国翻訳-DL版-11-05-2" },
   { id: "(eh)", aScore: 8, bScore: 9.1, info: "#调教 #纯爱", otherlink: "https://e-hentai.org/g/2763605/bde8e9eae0/" },
+  { id: "518456", aScore: 8.5, bScore: 4.2, info: "#全彩 #师生" },
+  { id: "(akumamoe)", aScore: 9, bScore: 7.4, info: "#小恶魔 不请自来小淫魔", otherlink: "https://akuma.moe/g/mmccx3ej" },
+  { id: "538584", aScore: 8.2, bScore: 4.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-ぽれの稲荷屋-ぽれのゐなり-散りゆく花は幸福のなかで-ブルーアーカイブ-中国翻訳-11-11" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
