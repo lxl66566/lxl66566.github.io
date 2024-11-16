@@ -586,6 +586,7 @@ const data = [
   { id: "518456", aScore: 8.5, bScore: 4.2, info: "#全彩 #师生" },
   { id: "(akumamoe)", aScore: 9, bScore: 7.4, info: "#小恶魔 不请自来小淫魔", otherlink: "https://akuma.moe/g/mmccx3ej" },
   { id: "538584", aScore: 8.2, bScore: 4.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-ぽれの稲荷屋-ぽれのゐなり-散りゆく花は幸福のなかで-ブルーアーカイブ-中国翻訳-11-11" },
+  { id: "(eh)", aScore: 7.1, bScore: 4.3, info: "#蔚蓝档案 #忍耐 在古书馆请保持安静哦", otherlink: "https://e-hentai.org/g/2382788/348d29dec3/" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

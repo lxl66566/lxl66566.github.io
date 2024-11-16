@@ -98,6 +98,7 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 |地|<furigana f="じ">地</furigana>盤|<furigana f="ち">地</furigana>帯|
 |納|<furigana f="すいとう">出納</furigana>|滞<furigana f="のう">納</furigana>|
 |内|<furigana f="けいだい">境内</furigana>|<furigana f="ない">内</furigana>容|
+|精|<furigana f="しょうじん">精進</furigana>|<furigana f="せい">精</furigana>子|
 
 ### 叠词与拟声
 
