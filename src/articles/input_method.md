@@ -15,11 +15,28 @@ windows 端我从初中就开始用 _手心输入法_，体验也还不错。但
 
 我的需求就是中日英三语，[小鹤双拼](../learning/ulpb.md)，没了。语音识别现在不是刚需，我有[其他的解决方法](./voice2text.md)。
 
+## Rime
+
+Rime 是一个高度自定义化、跨 Windows、Linux、macOS、Android 的输入法。
+
+我很早就知道了 Rime，不过这玩意上手门槛比较高，而且在 NixOS 上很麻烦，所以没搞。20241117，我终于忍受不了词频不同步，转向了 Rime 输入法。不过最开始是在 Window 上尝试的。经过了几个小时配置和迁移，我现在感觉这个输入法还是挺好用的。
+
+### 配置
+
+[这里](https://github.com/lxl66566/rime)是我的配置，我自己写了两个 python 脚本用来做 custom_phrase 的迁移和 formatter。使用方法：直接将该仓库内容 clone 到配置文件夹即可。
+
+- 配置文件夹：Linux `~/.local/share/fcitx5/rime/` Windows `C:\Users\...\AppData\Roaming\Rime`
+- 关闭[模糊音](https://github.com/rime/home/wiki/CustomizationGuide#模糊音)
+
+### 问题
+
+目前还存在一些问题，例如我的 `-=，。` 都无法翻页。只能 PageUp 和 PageDown。配置明明已经写对了。
+
 ## Windows
 
 ### 手心输入法
 
-这是陪伴我最久的一个输入法，轻量级，无广告，双拼方案多。
+这是陪伴我最久的一个输入法（2015 - 2024），轻量级，无广告，双拼方案多。不过早已停止维护，现在只是苟延残喘的暮年输入法了。
 
 ### 微软输入法
 
@@ -28,7 +45,7 @@ windows 自带的输入法，继承了微软一贯以来的毛病：**强迫你�
 1. 打开 regedit，在 `计算机\HKEY_CURRENT_USER\Software\Microsoft\InputMethod\Settings\CHS` 路径下添加字符串值，名称为 `UserDefinedDoublePinyinScheme0`，值为 `小鹤双拼 *2*^*iuvdjhcwfg^xmlnpbksqszxkrltvyovt`，注意空格。
 2. 在双拼方案中选择 _小鹤双拼_。
 
-不过微软输入法也有优点：其是我用过的输入法中**唯一**支持 _暗黑模式_ 的。这项对我来说也是刚需，只是平常都在忍受而已。
+不过微软输入法也有优点：其支持 _暗黑模式_，而手心输入法不支持。这项对我来说也是刚需，只是平常都在忍受而已。
 
 ### 讯飞输入法
 

@@ -53,12 +53,15 @@ tag:
 - 如何找卡组，可以去我的[语言学习](../learning/README.md)界面找。附有[我做的卡组](https://ankiweb.net/shared/info/772249450)（虽然质量不高）。
 - 桌面端可以用数字键盘快捷键，刷卡简直飞快。移动端也可以接入蓝牙键盘，可以调整键绑定。
   - 1234 是程度，直接 enter 默认是 3 的级别。
-- 如果有的卡片非常熟练，不要删除，请使用 _搁置_（快捷键 `-`）。如果删除卡片，当卡组有更新时就无法更新，否则会把卡片重新下载回来。
+- 如果有的卡片非常熟练，不要删除，不要搁置，请使用 _暂停_（快捷键 `@`）。
+  - 如果删除卡片，当卡组有更新时就无法更新，否则会把卡片重新下载回来。
+  - 搁置是放到第二天再学习。
 
 #### 插件推荐
 
 - [FSRS Helper](https://ankiweb.net/shared/info/759844606)：在电脑上使用，可以把 AnkiDroid 上复习的卡按 FSRS 重排。
 - [Review Heatmap](https://ankiweb.net/shared/info/1771074083)
+- [Custom Shortcuts for Anki](https://github.com/Liresol/anki-custom-shortcuts)：自定义快捷键。要重启生效。
 
 ### [使用时间记录](../articles/time_record.md)
 
