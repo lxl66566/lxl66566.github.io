@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 20 Nov 2024 07:48:36 GMT</pubDate>
-    <lastBuildDate>Wed, 20 Nov 2024 07:48:36 GMT</lastBuildDate>
+    <pubDate>Wed, 20 Nov 2024 17:45:35 GMT</pubDate>
+    <lastBuildDate>Wed, 20 Nov 2024 17:45:35 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -725,6 +725,10 @@
 </ul>
 <h3>基础设施</h3>
 <p>写一点 converter 把 AUR 和 Nix 那边的现有打包脚本偷来（）</p>
+<h2>external</h2>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/782348147" target="_blank" rel="noopener noreferrer">现代软件打包者的安全噩梦</a>，但是我不太赞同</li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>
