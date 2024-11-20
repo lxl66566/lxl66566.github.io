@@ -74,6 +74,14 @@ matlab online 的使用体验肯定是很差的，非必要的话尽量不用。
 
 如果需要 runner，可以安装 `Octave Language` 插件，但是使用 runner，画出的 figure 会闪退。因此我还是选择使用 Octave 本体运行代码，麻烦自己的右手动下鼠标。
 
+## 语言基础
+
+快速入门首选 [learnxinyminutes](https://learnxinyminutes.com/docs/zh-cn/matlab-cn/).
+
+- 逻辑非：`~`
+- 向量的下标索引从 1 开始。`x(2:3)` 切片是 both inclusive。
+- 老式写法 function 结尾不需要 `end`；虽然也能跑，但是推荐写 `end`。同时函数内还可以 `return` 提前返回。
+
 ### 工具
 
 - [function list](https://octave.sourceforge.io/list_functions.php)：查函数

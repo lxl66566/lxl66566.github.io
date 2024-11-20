@@ -135,11 +135,9 @@ Result 不是新兴语言的专利，C 语言的状态码也是 Result。非常�
 
 ## 并发
 
-接触得比较多的应该是线程模型和 async/await 模型。
+目前所有语言的并发基本都被 async/await 模型统一了。
 
-线程模型是从计算机系统结构出发的底层模型。其衍生出的线程同步，信号传递，都是为了解决实际问题而出现的。
-
-async/await 模型是极力接近 FP 的体现，相当于给程序打点切割，规定逻辑，并控制程序调度。
+async/await 模型是接近 FP 的体现，相当于把程序在 await 点切割，由一个/多个调度器控制程序调度。
 
 ## 解耦
 
@@ -166,13 +164,19 @@ async/await 模型是极力接近 FP 的体现，相当于给程序打点切割�
 - C++ 的模块化做的稀烂，`#include` 只是简单地复制代码。之前一般用 `inline` 内联，C++ 20 以后才有了 module，但直到现在各方编译器的实现还不完善。
 - python 的模块[粒度不够细](../gossip/fuckxxx.md#python-有多难用)，无法实现交叉引用，本质只是复制代码（加强版）而已(?)。
 
+## 特化
+
+特化（specialization）是在面对多个泛型匹配项时，编译器根据内置优先级规则进行选择的行为。C++ 模板以复杂的特化闻名，甚至 Rust 也[走上了特化的道路](https://github.com/rust-lang/rust/issues/31844)（min_specialization）。
+
+但是我非常不喜欢特化，它极大增加了语言的复杂性，给人脑造成了不小的记忆负担。我倾向于类型集合论，如果类型系统是集合论完备的，并且规定同一个对象的所有泛型不允许交叉，那就不会出现特化的问题，匹配项可以由程序员决定。
+
 ## 细分
 
 优先级，未完待续
 
 ## 梦中情语
 
-maybe i will write it on github.
+on [github (WIP)](https://github.com/lxl66566/DreamScript)
 
 ## external
 

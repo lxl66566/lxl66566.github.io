@@ -51,6 +51,7 @@ tag:
    - NixOS 管理整个系统，没什么好说。好处是可以玩一些 root on tmpfs 的骚操作，最大的问题是 NixOS 这样搞不支持 [FHS](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard) 标准，装个啥软件，找个啥 lib，搞个啥编程开发，全部都要自己去写 `shell.nix` 或 `flake.nix`。像我这种愣头青，还不会 nix 语法就直接莽上 NixOS 的就很难受，干个啥都相当于打包（文档还烂）。
      - nix 语言的学习曲线也是公认的陡峭；而且难的不是语言，而是 builtin functions/variables，查也查不到。例如我想看看 `wrapProgram` 的详细用法，结果到处搜不到文档，最后求助群友问哪里能看详细 manual，群友扔给我 Github 源码… 这种学习的 overheads 不可谓不高。
    - 我感觉坏处是比好处大的。
+5. 版本回退时会清空应用数据，例如 microsoft edge，telegram。回退其实比想象中要频繁，例如一发 rebuild 在后期失败了，再次回到 old conf 时就算是回退。于是我莫名其妙丢失了许多应用数据与 cookies。
 
 除了这些特性，还有一些表现：
 
