@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 19 Nov 2024 12:59:20 GMT</pubDate>
-    <lastBuildDate>Tue, 19 Nov 2024 12:59:20 GMT</lastBuildDate>
+    <pubDate>Wed, 20 Nov 2024 07:48:36 GMT</pubDate>
+    <lastBuildDate>Wed, 20 Nov 2024 07:48:36 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -669,6 +669,7 @@
 <li>我感觉坏处是比好处大的。</li>
 </ul>
 </li>
+<li>版本回退时会清空应用数据，例如 microsoft edge，telegram。回退其实比想象中要频繁，例如一发 rebuild 在后期失败了，再次回到 old conf 时就算是回退。于是我莫名其妙丢失了许多应用数据与 cookies。</li>
 </ol>
 <p>除了这些特性，还有一些表现：</p>
 <ol>
