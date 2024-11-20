@@ -106,3 +106,7 @@ Nix 好一点，Nix 打包默认隔离环境，也就是所有系统上的 build
 ### 基础设施
 
 写一点 converter 把 AUR 和 Nix 那边的现有打包脚本偷来（）
+
+## external
+
+- [现代软件打包者的安全噩梦](https://zhuanlan.zhihu.com/p/782348147)，但是我不太赞同

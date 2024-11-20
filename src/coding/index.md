@@ -23,6 +23,7 @@ tag:
 ## 我的思考
 
 1. [胡言乱语——编程语言哲学构想](./philosophy_of_PL.md)
+2. [包管理器灵感](./package_manager.md)
 
 ## 语言有关
 
@@ -85,7 +86,6 @@ tag:
 3. [Vim](./vim.md)：文件编辑器
 4. [数据库](./sql.md)
 5. [容器](./container.md)
-6. [包管理器灵感](./package_manager.md)
 
 ## 前端
 

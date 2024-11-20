@@ -587,6 +587,9 @@ const data = [
   { id: "(akumamoe)", aScore: 9, bScore: 7.4, info: "#小恶魔 不请自来小淫魔", otherlink: "https://akuma.moe/g/mmccx3ej" },
   { id: "538584", aScore: 8.2, bScore: 4.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-ぽれの稲荷屋-ぽれのゐなり-散りゆく花は幸福のなかで-ブルーアーカイブ-中国翻訳-11-11" },
   { id: "(eh)", aScore: 7.1, bScore: 4.3, info: "#蔚蓝档案 #忍耐 在古书馆请保持安静哦", otherlink: "https://e-hentai.org/g/2382788/348d29dec3/" },
+  { id: "539489", aScore: 9.2, bScore: 8.4, info: "#多P #精神异常 caburibbon", bak: "https://telegra.ph/caburibbon-caburi-淫祭-中国翻訳-無修正-DL版-11-18" },
+  { id: "463943", aScore: 8.7, bScore: 3.7, info: "#蔚蓝档案", bak: "https://telegra.ph/円つくも-キサキちゃんとえっち-ブルーアーカイブ-中国翻訳-11-19" },
+  { id: "539537", aScore: 6.5, bScore: 8.7, info: "#兽耳", bak: "https://telegra.ph/埋葬ノ底-丑露ムキ-私とおじさんのナカヨシ-中国翻訳-無修正-DL版-11-18" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
