@@ -154,6 +154,14 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
   },
   ```
 
+## 编写插件
+
+### 上传
+
+编写完插件以后需要发布到 market。
+
+我不爱用那些令牌啥的，因此我选择直接 <https://marketplace.visualstudio.com/manage>，然后把打出来的 .vsix 文件拖到这里即可。
+
 ## 其他评价
 
 - vscode 的可自定义程度还不够高

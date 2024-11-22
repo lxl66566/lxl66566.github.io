@@ -61,19 +61,16 @@ tag:
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
 - [ ] ~~windows 工具包: alias, ls,~~ use bash instead.
 - [ ] yakuake on windows
-- [ ] 更好的静态博客/文档框架
-  - 数据是 markdown 的一部分，不是组件的一部分
-  - JSX/TSX 是好东西
-  - 组件与作用域
+- [ ] ~~更好的静态博客/文档框架~~ 学了点前端发现 vuepress 也没有那么难用，暂时搁置
 - [x] fuck, delete it! (windows)
 - [ ] 代理，自行设计协议，对称加密
 - [ ] ~~windows shell with everything:~~ everything SDK is hard to use, i can't ever compile a basic example code...
 - [x] openppp2 client
   - [ ] 绕过路由
-- [ ] rust tui 脚本工具箱
-  - 转码，复制，参考我的 fish function
-  - 平台无关的 alias
-  - [ ] dotfile backup script
+- [ ] ~~rust tui 脚本工具箱~~ 做了一点尝试，意义不大，终止
+<!-- - 转码，复制，参考我的 fish function
+- 平台无关的 alias
+- [ ] dotfile backup script -->
 - [ ] ~~脚本语言~~ TS + bun？
 - [x] python beautiful assert: [pretty-assert](https://github.com/lxl66566/pretty-assert)
   - 颜色，当前行，变量值
@@ -85,15 +82,18 @@ tag:
 - [x] rust release ci
 - [ ] kde spectacle ocr plugin
 - [ ] 分布式服务器监控全栈
+- [ ] 半连接神经网络
+- [ ] matlab executor or translator
 
 ### RIIR
 
 - [ ] scoop
 - [ ] bpm
-  - [ ] rust crate: select by arch
+  - [x] rust crate: select by arch
 - [x] chnroutes
 - [ ] fail2ban
 - [x] Telegram marsbot
+- [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
 
 ### Android
 
@@ -145,7 +145,6 @@ tag:
 - [x] Google 翻译 x 次，网页 -> [成果](https://github.com/lxl66566/Google-translate-x-times)
 - [ ] PT 站，但是更低的门槛
 - [x] open bilibili video in mpv -> [成果](https://github.com/lxl66566/auto-play-in-mpv)
-- [ ] cross platform startup script
 
 ### 插件
 

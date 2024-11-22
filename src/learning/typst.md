@@ -33,8 +33,9 @@ category:
 
 基础用法是 CLI 使用，但我配合 [VSCode](../coding/vscode.md) 使用。
 
-1. 进 release 下载，解压后把 `typst.exe` 直接丢进 `C:\Windows\System32` 就行。
+1. CLI：进 release 下载，解压后把 `typst.exe` 直接丢进 `C:\Windows\System32` 就行。
    - 或者也可以 `scoop install typst` 一行搞定。
+   - 然后就可以 `typst watch example.typ`，自动生成 pdf。
 2. vscode 扩展：
 
    - 使用 _vscode-pdf_ 查看 pdf。
@@ -43,6 +44,12 @@ category:
        2. 很慢，10 页的 pdf 就会卡了。
    - LSP
      ::: tabs
+     @tab 新起之秀
+
+     1. 安装 _Tinymist Typst - Myriad Dreamin_
+     2. `ctrl + ,` 进入设置：
+        1. _Tinymist: ExportPdf_ 改为 _onSave_
+        2. _Tinymist: FormatterMode_ 改为 _typstyle_（也是一个新起之秀的 formatter）
 
      @tab 传统
 
@@ -51,16 +58,7 @@ category:
      - 缺点：慢，没有 formatter
      - 优点：0 配置，懒人福音
 
-     @tab 新起之秀
-
-     1. 安装 _Tinymist Typst - Myriad Dreamin_
-     2. `ctrl + ,` 进入设置：
-        1. _Tinymist: ExportPdf_ 改为 _onSave_
-        2. _Tinymist: FormatterMode_ 改为 _typstyle_（也是一个新起之秀的 formatter）
-
      :::
-
-   - 或：什么也不装，只要 `typst watch example.typ` 即可。
 
 然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。
 
@@ -90,16 +88,56 @@ typst compile --format svg xxx.typ '{n}.svg'  # 导出为 svg 格式
 
 剩下的 `let`，`if` 什么的都是 rust 的东西，这里不说（
 
-### 数组
+### [数组](https://typst.app/docs/reference/foundations/array/)
 
 typst 没有 `list` 类型，只有 `array`。
 
 `("12")` 这样其实还是 string 类型，如果要数组类型需要 `("12",)`
 
+## 字体字号
+
+我一般用：
+
+```typst
+#let 字号 = (
+  初号: 42pt,
+  小初: 36pt,
+  一号: 26pt,
+  小一: 24pt,
+  二号: 22pt,
+  小二: 18pt,
+  三号: 16pt,
+  小三: 15pt,
+  四号: 14pt,
+  中四: 13pt,
+  小四: 12pt,
+  五号: 10.5pt,
+  小五: 9pt,
+  六号: 7.5pt,
+  小六: 6.5pt,
+  七号: 5.5pt,
+  小七: 5pt,
+)
+
+#let 字体 = (
+  仿宋: ("Times New Roman", "FangSong"),
+  宋体: ("Times New Roman", "Songti SC", "Songti TC", "SimSun"),
+  黑体: ("Times New Roman", "SimHei"),
+  楷体: ("Times New Roman", "KaiTi"),
+  代码: ("Fira Code", "Consolas", "monospace", "WenQuanYi Zen Hei Mono", "FangSong"),
+)
+
+#let 中文数字(num) = {
+  ("零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十").at(int(num))
+}
+```
+
 ## 数学
 
 - [数学符号速查表](https://github.com/brynne8/typst-undergradmath-zh/blob/main/undergradmath.pdf)
 - [Detypify](https://detypify.quarticcat.com/) 可以让你手写数学符号并识别结果。
+
+基本上够用了。
 
 ## 表格
 
@@ -110,6 +148,76 @@ typst 没有 `list` 类型，只有 `array`。
   - 如果表格中含有粗体斜体，批量处理就比较麻烦。([ex](https://github.com/PgBiel/typst-tablex/issues/18)) [我的解法，甚至还发现了个 bug?](https://gist.github.com/lxl66566/30e309e696169829524ee04503b526db)
     - 这个预计算是很难改的（源码访问 `at` 时的 `default` 已经是 `Option<Value>` 了）。说到底，根本问题还是 typst 选择自创的这个 DSL 的问题，你像 rust 那样 Option 套 `or_else` 哪有这么多事。
 - [excel 表格转为 typst 表格](https://gist.github.com/lxl66566/cf29d98741a78a164d5ad2cfb4aa92a7)，支持合并的单元格，很好用。可惜 windows only。
+
+## heading
+
+heading 算是 typst 里比较重要的一个东西，平常用的真不少。
+
+### numbering
+
+默认的 numbering 会显示全路径，例如
+
+```typst
+= h1  // 1
+== h2  // 1.1
+=== h3  // 1.1.1
+```
+
+但是在中文语境下我们很可能不需要它显示全路径。这时可以使用这样的 pattern（抄来自己修改的）：
+
+```typst
+set heading(numbering: "1.1.1.1")
+show heading: it => locate(loc => {
+  set text(font: 字体.黑体)
+  set par(first-line-indent: 0pt)
+  let levels = counter(heading).at(loc)
+  let deepest = if levels != () {
+    levels.last()
+  } else {
+    1
+  }
+  if it.level == 1 {
+    set text(字号.四号)
+    if it.numbering != none {
+      numbering("一、", deepest)
+    }
+    it.body
+  } else if it.level == 2 {
+    set text(size: 字号.小四)
+    if it.numbering != none {
+      numbering("1.1 ", ..levels.slice(1))
+      h(3pt, weak: true)
+    }
+    it.body
+  } else if it.level == 3 {
+    set text(size: 字号.五号)
+    if it.numbering != none {
+      numbering("1.1.1 ", ..levels.slice(1))
+      h(3pt, weak: true)
+    }
+    it.body
+  }
+})
+```
+
+效果：
+
+```typst
+= h1  // 一、
+== h2  // 1
+=== h3  // 1.1
+```
+
+### 居中
+
+有时候我们需要换页，并将某个标题居中。我以前喜欢改 heading level == 1 的 show rules 来完成这件事，现在发现还是自己写一个 title 函数比较好。
+
+```typst
+#let title(title) = {
+  pagebreak(weak: true)
+  align(center)[#text(size: 字号.二号, font: 字体.黑体, title)]
+}
+```
 
 ## 代码
 

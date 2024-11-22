@@ -16,3 +16,4 @@ tag:
 ![meme2](/images/gossip/memes/1.jpg)
 ![meme3](/images/gossip/memes/2.jpg)
 ![meme4](/images/gossip/memes/3.webp)
+![meme5](/images/gossip/memes/no_pets.jpg)
