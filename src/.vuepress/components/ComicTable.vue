@@ -591,6 +591,7 @@ const data = [
   { id: "463943", aScore: 8.7, bScore: 3.7, info: "#蔚蓝档案", bak: "https://telegra.ph/円つくも-キサキちゃんとえっち-ブルーアーカイブ-中国翻訳-11-19" },
   { id: "539537", aScore: 6.5, bScore: 8.7, info: "#兽耳", bak: "https://telegra.ph/埋葬ノ底-丑露ムキ-私とおじさんのナカヨシ-中国翻訳-無修正-DL版-11-18" },
   { id: "527061", aScore: 7.5, bScore: 3.6, info: "#蔚蓝档案 #反杀", bak: "https://telegra.ph/C104-ぽよぽよスカイ-佐伯ソラ-ヘブンズブルー-ブルーアーカイブ-中国翻訳-11-24" },
+  { id: "330640", aScore: 6.7, bScore: 5.2 },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

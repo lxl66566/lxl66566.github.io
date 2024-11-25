@@ -522,9 +522,15 @@ python -m unittest ./**/*.py  # 测试当前文件夹下所有 unittest，类似
 
 ### pytest
 
-[tutorial](https://learning-pytest.readthedocs.io/zh/latest/doc/intro/getting-started.html)
-
 这是一个复杂的测试框架。显然其支持异步执行测试用例，还有其他方便的特性。
+
+使用 pytest 一般需要将测试代码放在其他文件里而不是代码所在文件，因为其对于 test 的文件名与函数名有特殊要求：代码文件名与函数名都需要以 `test_` 开头或以 `_test` 结尾才会被默认测试。
+
+::: tip
+
+Google 中文用户搜 pytest 出来的第一个文档是 [learning pytest](https://learning-pytest.readthedocs.io/zh/latest/doc/test-function/mark.html)，但是请不要看这个。比如它关于上述的 函数名/文件名限制 说的就是错的。
+
+:::
 
 - 测试某个函数：`pytest <relative_path>::<function_name>`
 

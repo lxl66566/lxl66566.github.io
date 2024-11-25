@@ -11,7 +11,7 @@ tag:
 
 # 输入法
 
-windows 端我从初中就开始用 _手心输入法_，体验也还不错。但我需要的语音输入在 _手心输入法_ 中并不自带，使用微软的语音输入识别率又极为感人，因此尝试了一些其他输入法，并把我对每个输入法的评价写于此文。
+windows 端我从初中就开始用 _手心输入法_，体验也还不错。但我需要的语音输入在 _手心输入法_ 中并不自带，使用微软的语音输入识别率又极为感人；而且手心输入法已经被废弃了，不再更新。因此我尝试了一些其他输入法，并把我对每个输入法的评价写于此文。
 
 我的需求就是中日英三语，[小鹤双拼](../learning/ulpb.md)，没了。语音识别现在不是刚需，我有[其他的解决方法](./voice2text.md)。
 
@@ -19,18 +19,17 @@ windows 端我从初中就开始用 _手心输入法_，体验也还不错。但
 
 Rime 是一个高度自定义化、跨 Windows、Linux、macOS、Android 的输入法。
 
-我很早就知道了 Rime，不过这玩意上手门槛比较高，而且在 NixOS 上很麻烦，所以没搞。20241117，我终于忍受不了词频不同步，转向了 Rime 输入法。不过最开始是在 Window 上尝试的。经过了几个小时配置和迁移，我现在感觉这个输入法还是挺好用的。
+我很早就知道了 Rime，不过这玩意上手门槛比较高，而且在 NixOS 上很麻烦，所以没搞。20241117，我终于忍受不了词频不同步，转向了 Rime 输入法。最开始是在 Window 上尝试的，经过了几个小时配置和迁移，我感觉这个输入法还是挺好用的。然后就又在 Linux 和 Andriod 用上了。
 
 ### 配置
 
-[这里](https://github.com/lxl66566/rime)是我的配置，我自己写了两个 python 脚本用来做 custom_phrase 的迁移和 formatter。使用方法：直接将该仓库内容 clone 到配置文件夹即可。
+[这里](https://github.com/lxl66566/rime)是我的配置。具体使用方法请看 README。
 
-- 配置文件夹：Linux `~/.local/share/fcitx5/rime/` Windows `C:\Users\...\AppData\Roaming\Rime`
-- 关闭[模糊音](https://github.com/rime/home/wiki/CustomizationGuide#模糊音)
+### 词库
 
-### 问题
+Rime 非常自由，也就是词库也需要自己准备。但是我认为现有的许多词库的质量都非常低（[src](https://t.me/withabsolutex/2106)）。因此我尝试制作自己的词库。
 
-目前还存在一些问题，例如我的 `-=，。` 都无法翻页。只能 PageUp 和 PageDown。配置明明已经写对了。
+所以我确实[做了几个词库](https://github.com/lxl66566/rime-dict2)，欢迎使用。
 
 ## Windows
 
