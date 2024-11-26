@@ -340,7 +340,7 @@ with suppress(Exception):
 
 ### [walrus operator](https://www.freecodecamp.org/chinese/news/introduction-to-the-walrus-operator-in-python/)
 
-`if` 和 `while` 里创建临时变量用的。简单清晰，容易控制生命周期。
+`if` 和 `while` 里创建临时变量用的。简单清晰，容易控制生命周期。可惜局限性还是挺大的。
 
 ### Decorator
 
@@ -389,7 +389,9 @@ pprint(an_obj)  # <__main__.o object at 0x00000234DC0FAF60>
 
 ### configparser
 
-configparser 做 config 对客户而言比较**新手友好**，至少不会像 json 那样多加 / 少加 `,`。不过 json 兼容性比较好。
+configparser 做 config 对客户而言比较**新手友好**，至少不会像 json 那样多加或少加尾随逗号 `,`。
+
+当然现在用自定义 ini 已经 out 了，否则兼容性非常差。尽可能使用 toml/json/yaml 等通用格式才是正道。特别是 toml 和大部分 ini 长得都挺像的，迁移也方便。
 
 ```py
 from configparser import ConfigParser
@@ -459,7 +461,7 @@ with open("soup.test", "rb") as f:
 
 ### urllib
 
-永远不要手动处理 url！！请使用 urllib，否则会出现一些[很荒谬的 bug](https://t.me/withabsolutex/1479)。
+处理 url 请使用 urllib，否则[怎么死的都不知道](https://t.me/withabsolutex/1479)。
 
 构造 url 可以用 `posixpath.join()` + `urllib.parse.join()` ([ref](https://stackoverflow.com/questions/8223939))
 
@@ -474,7 +476,7 @@ with TemporaryDirectory() as tmp_dir:
 # 离开作用域自动销毁
 ```
 
-pytest 有内置 tmp_dir。
+pytest 有[内置 tmp_dir](https://docs.pytest.org/en/stable/how-to/tmp_path.html)。
 
 ## 常用外部包
 
@@ -536,11 +538,29 @@ Google 中文用户搜 pytest 出来的第一个文档是 [learning pytest](http
 
 ### 兼容性测试
 
-有时候需要跨 python 版本进行测试。
+有时候需要跨 python 版本进行测试，或者找到最小支持的 Python 版本（Minimal supported Python version）。
 
-首先，最朴素的手动测试要求电脑上安装不同的 python 版本。一般的包管理器都不负责管理 python 版本，但是 poetry 可以通过 `poetry env use <binary>` 指定对应版本的可执行文件。至于安装：
+首先，最朴素的手动测试要求电脑上安装不同的 python 版本。很多包管理器都不负责管理 python 版本，但是有一些可以：
 
 ::: code-tabs
+
+@tab uv
+
+```sh
+uv python pin 3.12
+```
+
+@tab poetry
+
+```sh
+poetry env use <binary>
+```
+
+:::
+
+至于其他非 python 包管理器的工具也可以安装不同版本的 python。有一些是本机。
+
+::: tabs
 
 @tab scoop
 
@@ -621,6 +641,8 @@ img = ImageGrab.grab(bbox=(0, 0, 1920, 1080))   # 注意改为你需要截屏的
 
 ### 多图片转 pdf
 
+我现在使用 [typst](../learning/typst.md)，这个代码还是作废吧。
+
 ```py
 import img2pdf
 temp = [BytesIO(...), BytesIO(...)]
@@ -644,10 +666,6 @@ def img2Byte(img:Image) -> bytes:
 ```
 
 ### 高斯模糊
-
-::: warning
-请不要试图使用 cv2 对 Image 对象进行操作。(fuck cv2)
-:::
 
 ```python
 from PIL import Image,ImageFilter
@@ -678,7 +696,7 @@ django 的前后端是深度耦合的，前端大概只能使用传统三件套�
 
 > 由于我平常接触的不是 django 开发而是运维，所以这里主要讲讲数据库内容。
 
-django 做了 ORM。django 官方支持[这些数据库](https://docs.djangoproject.com/en/4.2/ref/databases/#databases)。
+django 做了自己的基于模型的 ORM。django 官方支持[这些数据库](https://docs.djangoproject.com/en/4.2/ref/databases/#databases)。
 
 首先进行数据库操作前需要选择 model（可以理解为选表）。具体看 `models.py` 的实现。
 
@@ -719,6 +737,12 @@ p.sort_stats("cumulative").print_stats()
 
 ## 打包
 
+实际上 python 写的东西就应该传源码。~~如果需要打包的话不妨考虑换个语言。~~
+
+::: tabs
+
+@tab nuitka
+
 ### [nuitka](https://nuitka.net/)
 
 这玩意文档只能说一般，甚至没有 `--help` 好用。
@@ -736,11 +760,10 @@ p.sort_stats("cumulative").print_stats()
 
 - 其他命令：自行 `nuitka3 --help` 查看
 
-### Pyinstaller
+@tab Pyinstaller
 
 简单粗暴的传统打包工具。
 
-::: details 不再使用
 Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟环境进行打包，参考 [poetry](#poetry) / [miniconda](#miniconda)。
 
 并且若需要减小打包体积，则需要考虑创建纯净环境。
@@ -760,11 +783,13 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 - `-w` 运行时不显示命令窗口
 - `-i <icon.ico>` 设置图标
 
-:::
+@tab cx_Freeze
 
-### [cx_Freeze](https://cx-freeze.readthedocs.io/en/latest/installation.html)
+[cx_Freeze](https://cx-freeze.readthedocs.io/en/latest/installation.html)
 
 不好用，文档一坨，编译还爆栈了。
+
+:::
 
 ## 发布
 
