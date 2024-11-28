@@ -592,6 +592,9 @@ const data = [
   { id: "539537", aScore: 6.5, bScore: 8.7, info: "#兽耳", bak: "https://telegra.ph/埋葬ノ底-丑露ムキ-私とおじさんのナカヨシ-中国翻訳-無修正-DL版-11-18" },
   { id: "527061", aScore: 7.5, bScore: 3.6, info: "#蔚蓝档案 #反杀", bak: "https://telegra.ph/C104-ぽよぽよスカイ-佐伯ソラ-ヘブンズブルー-ブルーアーカイブ-中国翻訳-11-24" },
   { id: "330640", aScore: 6.7, bScore: 5.2 },
+  { id: "540896", aScore: 7.2, bScore: 8.5, info: "#强制性交 #催眠 #多P #肉便器", bak: "https://telegra.ph/そらみる-生イキ魔法使いへの淫紋調教リベンジ-コミックアンリアル-2024年8月号-Vol110-中国翻訳-DL版-11-27" },
+  { id: "540773", aScore: 9.2, bScore: 4, info: "#全彩 #催眠 #兽耳", order: 2, bak: "https://telegra.ph/khorosho-chihiro-推し活2-中国翻訳-DL版-11-27" },
+  { id: "482228", aScore: 7, bScore: 4, info: "#全彩 #催眠 #地雷", order: 1 },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

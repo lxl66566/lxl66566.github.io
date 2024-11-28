@@ -31,6 +31,8 @@ Rime 非常自由，也就是词库也需要自己准备。但是我认为现有
 
 所以我确实[做了几个词库](https://github.com/lxl66566/rime-dict2)，欢迎使用。
 
+当然，如果你**并不在乎大小**，直接使用 [zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) 词库是最为简单舒心的选择。
+
 ## Windows
 
 ### 手心输入法

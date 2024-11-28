@@ -66,13 +66,16 @@ tag:
 - [dada](https://dada-lang.org/)：类 rust 的实验性语言，观点比较模糊（至少我没看出有哪些 feature）
 - [Vale](https://github.com/ValeLang/Vale)：类 rust 的语言（所有权和泛型），但是更简单，限制更多（可变结构只能有一个引用）。开发者对内存回收，内存安全~~和玛雅文化~~有[独特的理解](https://verdagon.dev/home)。
 - [gleam](https://gleam.run/)：基于 rust 的，一股 rua 味的语言，BEAM 系竞争者
-- [cangjie](https://developer.huawei.com/consumer/cn/cangjie/)：华为官方出品的编程语言，看起来挺像 ts 的，据说缝了挺多东西。我挺期待它的性能报告的。
+- [cangjie](https://developer.huawei.com/consumer/cn/cangjie/)([download](https://cangjie-lang.cn/download))：华为官方出品的编程语言，看起来挺像 ts 的，据说缝了挺多东西。我挺期待它的性能报告的。
+- [vala](https://docs.vala.dev/about.html)：语法与 java/C# 类似，但是无 runtime 而是用 C 原生实现。据称在 GTK 等 GUI 编程方面强悍。
 
 </dtls>
 
 ### 不计划学习
 
 <dtls alt="我不会自发学习这些语言">
+
+因为它们的设计确实烂。
 
 - go
 - lua
