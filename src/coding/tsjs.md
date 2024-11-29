@@ -400,6 +400,12 @@ type StringOrNumber = Extract<SomeTypes, string | boolean | null>; // 结果: st
 
 具体可以看 [I Cannot Believe TypeScript Recommends You Do This!](https://www.youtube.com/watch?v=oiFo2z8ILNo)及其评论区。我个人是认为，只要是 Object，有继承组合就用 Interface，其他就用 type。
 
+#### cast
+
+可以使用 as 转换类型，转换的类型之间需要有一些关联（重叠）。
+
+as 允许将具体类型转为更加非具体的类型，可能不是 expected 行为。如果要求必须是**完全相同**的类型转换，可以使用 [satisfies](https://tusharf5.com/posts/typescript-satisfies-operator/)。
+
 ### Wrappers
 
 上面已经出现了 `Readonly`, `Omit`, `Exclude` 和 `Pick`。实际上 TS 还有其他的好用 wrappers：

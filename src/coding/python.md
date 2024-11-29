@@ -578,6 +578,21 @@ pyenv 是一个 python 版本管理工具。不算太好用，我不能一键切
 
 其次，如果有足够的 testcase，也可以考虑使用 nox，这是一个测试框架，不过我还没试用过。
 
+## 选择器
+
+很多时候我们需要让用户在几个选项中选择一个。自己写 input 的话还需要处理许多边缘情况，不如直接用现成的库。为了用户方便，我们甚至可以使用 TUI 进行引导。我尝试了一些库，在这里做一个总结。
+
+- [questionary](https://github.com/tmbo/questionary)：完美匹配需求，建议直接用
+- [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu)：不支持 windows；返回值的 typing 爆炸
+- [console-menu](https://github.com/aegirhall/console-menu)：不支持 interactive，与需求不符
+- [PyConsoleMenu](https://github.com/BaggerFast/PyConsoleMenu)：打包炸了，没法安装；底层的 windows-curses 有 bug
+  - [PyConsoleMenu2](https://github.com/lxl66566/PyConsoleMenu2)：我自己 fork 了一个，解决打包问题，但是 windows-curses bug 还没解决，就是使用中文做标题/选项时在 windows 上会有奇怪的缩进。
+- [pymenu](https://github.com/luanws/pymenu)：极简 + full typing，但是只有颜色区分，不支持 prefix arrow，不直观
+
+## TUI
+
+- [rich](https://github.com/Textualize/rich) 一家独大。不过都用 python 了，为什么不直接上 GUI 呢？好用的 GUI 也很多。
+
 ## GUI
 
 一些 GUI 框架。（大部分都没用过）

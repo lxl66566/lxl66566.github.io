@@ -64,6 +64,7 @@ category:
 - [CS:GO](../hobbies/other_games/csgo.md)
 - 黎明杀机
 - [以 **OSU!mania 4k/6k** 为主的音游](../hobbies/rhythm_games.md)
+- 雀魂
 
 ### 现在喜欢
 
