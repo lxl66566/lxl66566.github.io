@@ -61,17 +61,17 @@ tag:
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
 |[我的风俗店打工生活](https://www.incnjp.com/thread-1153976-1-1.html)|2024.10.04|<30min|短篇，虚实结合|
-|最强杀手系统 <Badge type="warning" text="爽" />|2024.09.1x-<br/>2024.09.16, 28.5% 放弃|7h41min|<dtlslong text="写得很烂，系统文结果几乎没写啥系统，倒是天天 neta 共军，农村包围城市；废话太多。"/>|
+|最强杀手系统 <Badge type="warning" text="爽" />|2024.09.1x-<br/>2024.09.16, 28.5% 放弃|7h41min|<dtlslong>写得很烂，系统文结果几乎没写啥系统，倒是天天 neta 共军，农村包围城市；废话太多。</dtlslong>|
 |催眠王座 <Badge type="warning" text="爽" /><Badge type="danger" text="烂尾" />|2024.09.09-<br/>2024.09.11|6h16min|
 |[我就是神！](https://t.me/absolutexsresource/13)|2024.07.21-<br/>2024.09.08|62h51min|[^](#我就是神)|
 |[一周一次买下同班同学的那些事](https://www.linovelib.com/novel/3605.html)|2024.06.14-<br/>在读|
-|[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>2024.05.14|>60h|<dtlslong text="主角韩立；极为经典的修仙，“凡人”指没资质但有逆天宝物的。书算是半个烂尾，毕竟结局飞升仙界，至少还有 1/3 篇幅没写。"/>|
-|[北方的天空](https://t.me/absolutexsresource/3)|2024.01.31-<br/>2024.04.27|?|<dtlslong text="现实主义上世纪末背景黄书，少妇取向。作者想写出古典文学的苍凉之景，可惜黄色废料太多，有些喧宾夺主了。"/>|
+|[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>2024.05.14|>60h|<dtlslong>主角韩立；极为经典的修仙，“凡人”指没资质但有逆天宝物的。书算是半个烂尾，毕竟结局飞升仙界，至少还有 1/3 篇幅没写。</dtlslong>|
+|[北方的天空](https://t.me/absolutexsresource/3)|2024.01.31-<br/>2024.04.27|?|<dtlslong>现实主义上世纪末背景黄书，少妇取向。作者想写出古典文学的苍凉之景，可惜黄色废料太多，有些喧宾夺主了。</dtlslong>|
 |<span class="heimu">[某 R18 内容](https://www.pixiv.net/novel/show.php?id=21329454)</span>|2024.01.31-<br/>2,等待连载|
 |[Re0：从零开始的异世界生活](https://github.com/re-zero-khis/re0-web)|2024.01.20-<br/>卷 3,在读|3h52min|
 |[我在末世捡到白狐](https://www.pixiv.net/novel/series/10523577) <Badge type="warning" text="爽" />|2023.08.29-<br/>23,等待连载|2h23min|
 |[加速世界](https://www.wenku8.net/book/381.htm)|2023.07.09-<br/>26,等待连载|21h33min 未包括前 0.235|
-|[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126)|2023.0[34]-<br/>&lt;40&gt;章，放弃|-|<dtlslong text="除了设定其他都不太行，连贯性差"/>|
+|[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126)|2023.0[34]-<br/>&lt;40&gt;章，放弃|-|<dtlslong>除了设定其他都不太行，连贯性差</dtlslong>|
 |末世之黑暗召唤师 <Badge type="warning" text="爽" />|2023.07.14-<br/>2023.07.31|41h10min|<span class="heimu" title="你知道的太多了">垃圾人妻爽文，</span>后期写得比较水，还好结局发挥不差。世界设定较混乱，没有体系。|
 |知北游|2023.02.10-<br/>2023.02.18|18h16min|道的细节探索；关于选择与失去的遗憾。盗版文本阅读体验较差。|
 |空想之拳 <Badge type="danger" text="停更" />|2023.01.29-<br/>2023.02.06|21h17min|玩梗量大；开篇过于零碎，难以入门。|

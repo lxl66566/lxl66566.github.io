@@ -20,7 +20,7 @@
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
           <td>
-            <dtlslong v-if="row.name" :text="row.name" />
+            <dtlslong v-if="row.name">{{ row.name }}</dtlslong>
           </td>
         </tr>
       </tbody>

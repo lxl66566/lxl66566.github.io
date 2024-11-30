@@ -1,13 +1,29 @@
 <template>
-  <details v-if="needed">
+  <details v-if="textLength > +props.fold">
     <summary>{{ alt }}</summary>
-    <span>{{ text }}</span>
+    <span ref="slotContainer">
+      <slot></slot>
+    </span>
   </details>
-  <span v-else>{{ text }}</span>
+  <span v-else ref="slotContainer">
+    <slot></slot>
+  </span>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { onMounted, ref, watch, computed } from "vue";
+
+const slotContainer = ref<HTMLDivElement | null>(null);
+const textLength = ref(0);
+const calculateTextLength = () => {
+  if (slotContainer.value) {
+    textLength.value = slotContainer.value.textContent?.length || 0;
+  }
+};
+onMounted(() => {
+  calculateTextLength();
+});
+watch(slotContainer, calculateTextLength);
 
 const props = defineProps({
   alt: {
@@ -17,7 +33,7 @@ const props = defineProps({
   },
   text: {
     type: String,
-    required: true,
+    required: false,
   },
   fold: {
     type: Number,
@@ -25,6 +41,4 @@ const props = defineProps({
     default: 20,
   },
 });
-
-const needed = computed(() => props.text.length > +props.fold);
 </script>

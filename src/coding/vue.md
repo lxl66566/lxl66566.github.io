@@ -56,6 +56,22 @@ Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出
 
 `computed()` 接受一个闭包，这个闭包一般会捕获外部变量。当此捕获变量被改变时，该闭包就会重新计算。它可以维护数据之间的依赖关系，而 computed 属性的计算顺序是基于依赖关系的树状结构。
 
+类似的函数还有 watch，区别：
+
+| **特性**     | **computed**                           | **watch**                                     |
+| ------------ | -------------------------------------- | --------------------------------------------- |
+| **用途**     | 计算派生值                             | 处理副作用                                    |
+| **返回值**   | 返回一个值（通常是状态）               | 不返回值，只执行逻辑                          |
+| **自动更新** | 是（缓存结果）                         | 不会自动缓存，逻辑每次都会执行                |
+| **触发时机** | 依赖项的值改变时，且使用时才会重新计算 | 依赖项的值改变时立即执行                      |
+| **性能**     | 高效（有缓存，不会重复计算）           | 相对低效（每次变化都会触发回调）              |
+| **适合场景** | 简单值的派生计算                       | 异步操作、手动 DOM 操作、记录日志等副作用逻辑 |
+
+- **使用 `computed`**：
+  当你需要一个依赖其他响应式数据的 **值**，比如展示在模板中。
+- **使用 `watch`**：
+  当你需要在数据变化时执行一些 **逻辑操作**（如 API 调用、写日志、DOM 更新等）。
+
 ### props
 
 props 定义了组件的传入参数。
@@ -98,6 +114,34 @@ const props = defineProps({
 ### slot
 
 我们也可以将标签作为 DOM 节点传入组件。组件中需要在 template 区域使用 `<slot></slot>` 调用。更多插槽的特性和用法可以看[文档](https://cn.vuejs.org/guide/components/slots)。
+
+vue3 中使用 defineSlots 可以定义插槽的类型。
+
+如果需要在 script 中获取插槽内容并处理，需要在 onMounted 中调用：
+
+```vue
+<template>
+  <div ref="slotContainer">
+    <slot></slot>
+  </div>
+</template>
+<script setup lang="ts">
+import { onMounted, ref, watch } from "vue";
+const slotContainer = ref<HTMLDivElement | null>(null);
+const textLength = ref(0);
+const calculateTextLength = () => {
+  if (slotContainer.value) {
+    textLength.value = slotContainer.value.textContent?.length || 0;
+  }
+};
+onMounted(() => {
+  calculateTextLength();
+});
+watch(slotContainer, calculateTextLength);
+</script>
+```
+
+上述例子中是可以使用 `computed` 代替 `onMounted` 的，但是在本博客的 dtlslong 组件里不行，因为 textLength 会影响 slot，所以可能出现交替无限变化的情况。
 
 ### 双向绑定
 

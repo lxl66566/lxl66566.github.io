@@ -51,7 +51,7 @@ tag:
 |20240820 SurfCloud|HK|$1/mo|200GB 30Mbps|1G|40GB|1|<dtls>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</dtls>|
 |20240911 YXVM|JP|$3/mo|1TB 500Mbps|768MB|5GB|1|<dtls>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</dtls>|
 |20241018 azure|JP|free|?|1G|30G|1|微软，我的超人|
-|20241031 [91idc](https://91idc.gg/index.php)|HK|￥10|20MBps|1G|10G|1|<dtlslong text="优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的" />|
+|20241031 [91idc](https://91idc.gg/index.php)|HK|￥10|20MBps|1G|10G|1|<dtlslong>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</dtlslong>|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
@@ -69,7 +69,7 @@ tag:
 |[Vision Cloud](https://t.me/visioncloud_notification/32)|JP|$14/yr|1TB 1000Mbps|1GB|6GB|
 |[哇沃](https://zhujiwiki.com/36281/)|HK|￥80/yr|2TB 500Mbps|1GB|20GB|
 |[Churros](https://zhujiwiki.com/36298/)|JP|￥6.3/mo|100GB 100Mbps|1GB|5GB|
-|[AKileCloud](https://akile.io/shop/server?type=traffic&areaId=3&nodeId=80&planId=448)|HK|￥60/yr|1TB 5000Mbps|1GB|5GB|<dtlslong text="这个容易抢光，但是常驻有 ￥10/mo 的香港机" />|
+|[AKileCloud](https://akile.io/shop/server?type=traffic&areaId=3&nodeId=80&planId=448)|HK|￥60/yr|1TB 5000Mbps|1GB|5GB|<dtlslong>这个容易抢光，但是常驻有 ￥10/mo 的香港机</dtlslong>|
 |[DigitalVirt](https://zhujiwiki.com/36771/)|HK|￥95/yr|1TB 200Mbps|1GB|10GB|
 |[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=124)|HK|￥40/yr|500GB 10Gbps|1GB|20GB|
 |[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=145)|HK|￥88/yr|1600GB 10Gbps|1GB|20GB|
