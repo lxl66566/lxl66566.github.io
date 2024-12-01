@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 30 Nov 2024 03:47:43 GMT</pubDate>
-    <lastBuildDate>Sat, 30 Nov 2024 03:47:43 GMT</lastBuildDate>
+    <pubDate>Sun, 01 Dec 2024 15:40:44 GMT</pubDate>
+    <lastBuildDate>Sun, 01 Dec 2024 15:40:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -1874,7 +1874,12 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <li>需要在 Google Play 安装<a href="https://play.google.com/store/apps/details?id=com.akbon.coloros" target="_blank" rel="noopener noreferrer">ColorOS 13 Icon pack</a></li>
 </ul>
 </li>
-<li><a href="/articles/mobile/module_and_app.html#lsposed" target="_blank">LuckyTool</a> 安装后在任务栏小部件有多出一些选项。其中的<strong>极暗模式</strong>是好东西。</li>
+<li><a href="/articles/mobile/module_and_app.html#lsposed" target="_blank">LuckyTool</a> 安装后在任务栏小部件有多出一些选项。
+<ul>
+<li><strong>极暗模式</strong>是好东西。</li>
+<li>LuckeyTool 可以开启 ColorOS 隐藏的不息屏模式，这在双机位笔试时非常有用。（<em>LuckeyTool - 功能 - 设置 - 启用息屏永不超时</em>）</li>
+</ul>
+</li>
 </ol>
 <h3>禁用软件</h3>
 <p>我使用 <a href="/articles/mobile/module_and_app.html#app" target="_blank">App Manager</a> 进行软件的冻结操作。</p>
