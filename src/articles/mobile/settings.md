@@ -43,7 +43,9 @@ MIUI：
 
 1. ColorOS 原生支持更换应用名称与图标，可以规避审查。
    - 需要在 Google Play 安装[ColorOS 13 Icon pack](https://play.google.com/store/apps/details?id=com.akbon.coloros)
-2. [LuckyTool](./module_and_app.md#lsposed) 安装后在任务栏小部件有多出一些选项。其中的**极暗模式**是好东西。
+2. [LuckyTool](./module_and_app.md#lsposed) 安装后在任务栏小部件有多出一些选项。
+   - **极暗模式**是好东西。
+   - LuckeyTool 可以开启 ColorOS 隐藏的不息屏模式，这在双机位笔试时非常有用。（_LuckeyTool - 功能 - 设置 - 启用息屏永不超时_）
 
 ### 禁用软件
 

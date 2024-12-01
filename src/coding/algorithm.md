@@ -32,6 +32,8 @@ tag:
 
 有关我对 OJ 的评价请[跳转此处](../gossip/hope.md#对算法竞赛-oj-contest的希望)。
 
+自从我会用 Github 以来，我刷的题都会存到 Github 上。这里是[仓库链接](https://github.com/lxl66566/OJ)。
+
 ## 竞赛技巧
 
 打了几次蓝桥，几次 NOIP/CSP，算是有点小经验。

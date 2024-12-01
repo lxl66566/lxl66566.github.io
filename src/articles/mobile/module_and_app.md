@@ -59,6 +59,7 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
 - [shizuku](https://github.com/RikkaApps/Shizuku)
 - [雹](https://github.com/aistra0528/Hail)：冻结应用，详情参考[禁用软件](./settings.md#禁用软件)章节。（拒绝使用同功能闭源商业化的 _冰箱_）
 - App ops（**闭源！**）：权限管理。闭源功能有限，可使用 _App Manager_ 代替。（但是没有批量终究不方便）
+- 咖啡因：禁止手机自动息屏。如果是没有 root 的 ColorOS 的话可以用这个。
 
 通过 Github 安装：
 

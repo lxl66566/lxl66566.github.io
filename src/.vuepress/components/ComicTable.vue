@@ -596,6 +596,7 @@ const data = [
   { id: "482228", aScore: 7, bScore: 4, info: "#全彩 #催眠 #地雷", order: 1 },
   { id: "541119", aScore: 9.1, bScore: 6, info: "#田屋沼屋 #纯爱 #透明旗袍" },
   { id: "540761", aScore: 9.6, bScore: 7.9, info: "#富士やま #全彩 #巨乳 #捆绑" },
+  { id: "420047", aScore: 8.8, bScore: 6, info: "#蔚蓝档案 #汗味" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
