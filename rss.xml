@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 01 Dec 2024 15:40:44 GMT</pubDate>
-    <lastBuildDate>Sun, 01 Dec 2024 15:40:44 GMT</lastBuildDate>
+    <pubDate>Mon, 02 Dec 2024 16:24:41 GMT</pubDate>
+    <lastBuildDate>Mon, 02 Dec 2024 16:24:41 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -21,11 +21,11 @@
     <category>生活</category>
     <category>经历</category>
     <item>
-      <title>后端</title>
+      <title>八股</title>
       <link>https://absx.pages.dev/coding/bagu.html</link>
       <guid>https://absx.pages.dev/coding/bagu.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">后端</source>
-      <description>后端 本文内容大多是面试八股，写在这里只是加深记忆。至于内容确实没有太多看的价值，网上类似的可太多了。 关于、、等，我都放在了关联的文章内。只有找不到啥关联的后端八股才写在此处。 Redis 内存型 KV 数据库，用于缓存。 穿透，击穿，雪崩</description>
+      <source url="https://absx.pages.dev/rss.xml">八股</source>
+      <description>八股 本文内容大多是面试八股，写在这里只是加深记忆。至于内容确实没有太多看的价值，网上类似的可太多了。 关于、、等，我都放在了关联的文章内。只有找不到啥关联的后端八股才写在此处。 Redis 内存型 KV 数据库，用于缓存。 穿透，击穿，雪崩 external C/C++ 技术面试基础知识总结</description>
       <category>编程</category>
       <pubDate>Fri, 08 Nov 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -35,6 +35,10 @@
 <p>内存型 KV 数据库，用于缓存。</p>
 <ul>
 <li><a href="https://lry722.github.io/posts/redis-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" target="_blank" rel="noopener noreferrer">穿透，击穿，雪崩</a></li>
+</ul>
+<h2>external</h2>
+<ul>
+<li><a href="https://github.com/huihut/interview" target="_blank" rel="noopener noreferrer">C/C++ 技术面试基础知识总结</a></li>
 </ul>
 ]]></content:encoded>
     </item>
