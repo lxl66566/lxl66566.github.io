@@ -5,7 +5,7 @@ category:
   - 编程
 ---
 
-# 后端
+# 八股
 
 本文内容大多是面试八股，写在这里只是加深记忆。至于内容确实没有太多看的价值，网上类似的可太多了。
 
@@ -16,3 +16,7 @@ category:
 内存型 KV 数据库，用于缓存。
 
 - [穿透，击穿，雪崩](https://lry722.github.io/posts/redis-常见问题)
+
+## external
+
+- [C/C++ 技术面试基础知识总结](https://github.com/huihut/interview)

@@ -267,6 +267,23 @@ Raw string: `R""(some\text)""`
 
 ### 面向对象
 
+- 构造函数：
+  ```cpp
+  class MyClass {
+  public:
+      int* data;
+      // 默认构造函数
+      MyClass() : data(new int[100]) {}
+      // 拷贝构造函数
+      MyClass(const MyClass& other) : data(new int[100]) {
+          std::copy(other.data, other.data + 100, data);
+      }
+      // 移动构造函数
+      MyClass(MyClass&& other) noexcept : data(other.data) {
+          other.data = nullptr; // 将资源置为空，避免释放时出错
+      }
+  };
+  ```
 - protected：指能被子类访问，不能被外部访问的成员。
 - virtual：每个拥有虚对象的**类本身**都会有一个虚表，用来查询任何子类的某一特定重载。所以虚表对类是 static 的。
   - 虚函数查找表发生在运行时。
@@ -294,13 +311,9 @@ Raw string: `R""(some\text)""`
 
 ### variant
 
-本意是封装的 `union`，可以当成错误处理的一种实现[^5]，类似 rust `Result`.
+（C++17）本意是封装的 `union`，可以当成错误处理的一种实现[^5]，类似 rust `Result`. C++23 请使用 `std::expected`.
 
-[^5]:
-    [github.com/bitwizeshift/result](https://github.com/bitwizeshift/result) —— Asuka Minato
-    c++23 请使用 `std::expected`.
-
-获取值一般用 std::get + try catch，也可用 std::visit :
+获取值一般用 `std::get` + try catch，也可用 [`std::visit`](https://en.cppreference.com/w/cpp/utility/variant/visit):
 
 ```cpp
 std::variant<int,string> v;
@@ -323,8 +336,6 @@ std::visit(overloaded{
 }, v);
 ```
 
-（[src: std::visit](https://en.cppreference.com/w/cpp/utility/variant/visit)）
-
 ### assert
 
 ```cpp
@@ -334,6 +345,10 @@ assert(a < 0 && "error message");  // runtime
 ```
 
 至于 assert_eq 这种 std 就没有了，需要自己写宏或者引入 crpcut.hpp、GoogleTest 等框架。
+
+### explicit
+
+explicit 可以防止隐式转换；修饰构造函数时，还可以防止复制初始化。rust 人非常喜欢这个东西。
 
 ### if constexpr
 

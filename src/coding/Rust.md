@@ -569,7 +569,14 @@ GUI 是 rust 日经问题了。
 - [winio](https://github.com/compio-rs/winio)：~~莓软的愚人节玩笑~~
 - [sciter](https://docs.rs/sciter-rs/latest/sciter/)：web 界面渲染
 
+[这里](https://www.cnblogs.com/nolca/p/17795473.html)有一些 issue/star 数对比。
+
 我早期尝试过一下 iced，用不明白，不用了。
+
+_他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
+::: right
+——_[阿卡琳](https://github.com/magic-akari)_
+:::
 
 ### TUI
 
@@ -584,6 +591,14 @@ GUI 是 rust 日经问题了。
 用着发现个 bug，顺带 pr 了几行[^2]。
 
 [^2]: [review 还挺严格的](https://t.me/withabsolutex/1441)，但是 member 说话又好听
+
+## 嵌入向量数据库
+
+我需要 rust 侧的轻量嵌入式向量数据库解决方案，要求是 10,000,000 个向量内查最近邻。（每个向量还有附带额外信息）
+
+简单看了一下。我不希望将所有数据先加载到内存，最好的方案应该是 [DiskANN](https://www.oschina.net/news/304024)，不过这玩意目前还没有 rust 的实现。
+
+- [sqlite-vec](https://github.com/asg017/sqlite-vec)：sqlite 跨平台扩展，但是现在并不支持最近邻算法。
 
 ## r18n
 
