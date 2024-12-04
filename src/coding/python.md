@@ -740,7 +740,17 @@ print(obj.id)           # 然后从 object 中取值
 
 ## 性能分析
 
-use `cProfile`:
+::: tabs
+
+@tab viztracer
+
+[viztracer](https://github.com/gaogaotiantian/viztracer) 是国人（高天）开发的性能分析工具，类似火焰图，十分简单易用。
+
+1. 安装 viztracer 和 VizTracer VS Code 插件
+2. 右击代码文件，选择 `Trace with VizTracer`
+3. 在当前文件夹根目录找到 `result.json`，右击选择 `Open in VizTracer`
+
+@tab cProfile
 
 ```py
 import pstats
@@ -749,6 +759,8 @@ cProfile.run("my_function()", "my_func_stats")
 p = pstats.Stats("my_func_stats")
 p.sort_stats("cumulative").print_stats()
 ```
+
+:::
 
 ## 打包
 

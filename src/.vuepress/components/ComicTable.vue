@@ -597,6 +597,8 @@ const data = [
   { id: "541119", aScore: 9.1, bScore: 6, info: "#田屋沼屋 #纯爱 #透明旗袍" },
   { id: "540761", aScore: 9.6, bScore: 7.9, info: "#富士やま #全彩 #巨乳 #捆绑" },
   { id: "420047", aScore: 8.8, bScore: 6, info: "#蔚蓝档案 #汗味" },
+  { id: "541242", aScore: 8.9, bScore: 4.3, info: "#しらたま #小恶魔", bak: "https://telegra.ph/コミティア150-毛玉牛乳咲田書店-玉之けだまさきだ咲紀-orico2-中国翻訳-11-30" },
+  { id: "541195", aScore: 8, bScore: 6.6, info: "#师生 #无知", bak: "https://telegra.ph/志免ソカ-みあんのギャルちゃれんじ-COMIC-LO-2022年08月号-中国翻訳-DL版-11-29" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

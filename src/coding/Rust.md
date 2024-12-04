@@ -562,7 +562,9 @@ GUI 是 rust 日经问题了。
 一些 GUI 框架：
 
 - [egui](https://github.com/emilk/egui)：原生 GUI，有[大项目](https://www.reddit.com/r/rust/comments/1c69mrj)，看起来不错。
-- tauri：electron 的竞品，但是很灵车（许多群友都说过了）。我连 example 都跑不过。
+- tauri：electron 的竞品，但是很灵车（许多群友都说过了）。我连 example 都跑不过。这里有一些别人对 tauri 的实践：
+  - [得物商家客服从 Electron 迁移到 Tauri 的技术实践](https://mp.weixin.qq.com/s/UxmJxU4-fv9GeRxl2fzOGw)
+  - [tauri-bug-reproducer](https://github.com/yetone/tauri-bug-reproducer)，T 黑头子（
 - [slint](https://github.com/slint-ui/slint)：嗯写 DSL
 - [dioxus](https://github.com/DioxusLabs/dioxus)：也是嗯写 DSL。release 0.5.0 时火了一把
 - [native-windows-gui](https://github.com/gabdube/native-windows-gui)：非跨平台

@@ -87,7 +87,7 @@ tag:
 - [Cody](https://github.com/sourcegraph/cody)：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。
 - [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
 - [Continue](https://www.continue.dev/)：需要自己提供 API KEY 或本地跑模型
-- [supermaven](https://supermaven.com/)：免费补全
+- [supermaven](https://supermaven.com/)：免费补全，联想能力不错，但是 vscode 插件目前闭源。
 
 国产：
 

@@ -28,18 +28,66 @@ tag:
 
 可以前往 [external 1.](#external) 查看详细信息。
 
+::: tip
+
+本篇中 docker 和 podman 命令是混用的。
+
+:::
+
+## 安装
+
+Linux 安装简单，这里不说。
+
+WSL 上就折磨了，我用 ArchWSL，结果 docker 没有守护进程，podman 找不到 `/etc/subuid`，两个玩意都没法正常工作，评价是有点傻逼。
+
 ## 基础
 
 看看[tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
 
 ```sh
-podman ps   # 查看运行状态
-podman run -d ... # -d 表示后台运行
-podman rm <name>  # 删除容器
-podman logs <name>  # 查看输出(stdout + stderr)
+docker ps                                 # 查看运行状态
+docker run -d ...                         # -d 表示后台运行
+docker rm <name>                          # 删除容器
+docker logs <name>                        # 查看输出(stdout + stderr)
+docker pull <repository>:<tag>            # 拉取镜像到本地
+docker images                             # 查看镜像
+docker tag <image ID> <repository>:<tag>  # 重命名镜像
 ```
 
+## dockerhub mirror
+
+在 2024 年，中国大规模下架了 docker 镜像。所以现在想要使用 docker 仓库会有一些麻烦。[Using docker in China 2024](https://taogenjia.com/2024/08/19/Using-docker-in-China-2024/) 这篇文章介绍了一些方法，我尝试了 cloudflare 反代。不过反代的后果也是 UNAUTHORIZED。
+
+然后还踩了[应用镜像的坑](#无法应用镜像)。
+
+## 下载镜像到本地
+
+有时候我没有安装 docker，但是我需要下载镜像为 tar 文件，传给我的 VPS 使用。
+
+[docker-drag](https://github.com/NotGlop/docker-drag) 用不了，别看了。我用的算是官方的 moby 脚本吧。
+
+```sh
+wget https://raw.githubusercontent.com/moby/moby/master/contrib/download-frozen-image-v2.sh
+chmod +x download-frozen-image-v2.sh
+bash download-frozen-image-v2.sh reader hectorqin/reader:openj9-latest
+tar -cvaf reader.tar reader
+# 这样就把镜像下载并打成了 tar 包。
+```
+
+不过这个脚本在 20241204 时还有 bug，就是必须指定 image 的 tag，否则下载链接会 404。
+
 ## 遇到的问题
+
+### 无法应用镜像
+
+- 网上教程修改镜像都是 `/etc/docker/daemon.json`，改完重启 docker。但是我重启后并无法应用镜像。
+  - OS：iStoreOS
+
+解法：`ps | grep dockerd`，可以看到应用的 config 是 `--config-file=/tmp/dockerd/daemon.json`，根本就不是 `/etc/docker/daemon.json`。
+
+继续看 `/etc/init.d/dockerd`，可以发现其 config 是写在奇怪的地方，并且格式也是自定义格式。（[被我喷了](https://t.me/withabsolutex/2119)）
+
+### podman 指定 registry
 
 - podman 拉取镜像时可能不支持短名称，需要在名称前加 `docker.io/` 前缀，或者如 external 1. 所述：Open your `$HOME/.config/containers/registries.conf` file and paste the following contents: `unqualified-search-registries=["docker.io"]`
 

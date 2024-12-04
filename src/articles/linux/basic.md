@@ -156,6 +156,14 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 - service 是由 [systemd](https://wiki.archlinux.org/title/systemd) 支持的，而现在几乎所有的发行版都基于 systemd，因此什么老发行版的 `service` 指令就不用看了，用 `systemctl` 就行了。
 - 查看服务的输出（stdout/stderr），一般在 status 里会有几条，也可以前往[日志](#日志)查看。
 
+::: details 老版 service 命令内容
+
+虽然我这里说不用看，但是还是有一些傻逼发行版，比如 OpenWRT 会用。而且还带了很多坑。
+
+- 服务定义在 `/etc/init.d/xxx`，每个服务都是一个 bash 脚本。
+
+:::
+
 ### 基本概念
 
 每个服务（unit）是一个 `.service` 文件，存放在不同位置：
