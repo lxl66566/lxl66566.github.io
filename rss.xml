@@ -6,20 +6,55 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 04 Dec 2024 12:56:43 GMT</pubDate>
-    <lastBuildDate>Wed, 04 Dec 2024 12:56:43 GMT</lastBuildDate>
+    <pubDate>Wed, 04 Dec 2024 16:46:56 GMT</pubDate>
+    <lastBuildDate>Wed, 04 Dec 2024 16:46:56 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>推荐</category>
     <category>教程</category>
+    <category>评价</category>
     <category>编程</category>
     <category>学习</category>
     <category>爱好</category>
     <category>应用</category>
-    <category>推荐</category>
-    <category>评价</category>
     <category>生命科学</category>
     <category>生活</category>
     <category>经历</category>
+    <item>
+      <title>内网穿透</title>
+      <link>https://absx.pages.dev/articles/frp.html</link>
+      <guid>https://absx.pages.dev/articles/frp.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">内网穿透</source>
+      <description>内网穿透 在 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。因此我尝试了几个内网穿透工具，并在此做一个简单的评价。 需求：免费，稳定。 cloudflare tunnel（推荐） 折腾完了其他几个服务我才想到 cloudflare，一搜，果然有。 cloudflare 的内网穿透是部署最简单，使用体验最好的服务，杀死了所有其他 f...</description>
+      <category>推荐</category>
+      <category>教程</category>
+      <category>评价</category>
+      <pubDate>Wed, 04 Dec 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>在 <a href="/articles/linux/openwrt.html" target="_blank">iStoreOS</a> 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。因此我尝试了几个内网穿透工具，并在此做一个简单的评价。</p>
+<p>需求：免费，稳定。</p>
+<h2>cloudflare tunnel（推荐）</h2>
+<p>折腾完了其他几个服务我才想到 cloudflare，一搜，果然有。</p>
+<p>cloudflare 的内网穿透是部署最简单，使用体验最好的服务，杀死了所有其他 frp 玩家。</p>
+<ol>
+<li>前往 <a href="https://one.dash.cloudflare.com/" target="_blank" rel="noopener noreferrer">cloudflare zero trust</a>，左侧选择 <em>Networks - Tunnels</em>，创建一个新的 tunnel。</li>
+<li>根据提示在服务器上安装 cloudflared。提示中的 Linux 部分只包含了 rpm/deb 系，但是没有关系，直接到 <a href="https://github.com/cloudflare/cloudflared" target="_blank" rel="noopener noreferrer">Github cloudflared</a> 的 release 中下载对应架构 binary 文件。</li>
+<li>执行 cloudflare 步骤里带有 token 的命令。</li>
+</ol>
+<p>就这么简单，可以说一行命令完成内网穿透也不为过，而且重启后隧道会自动重连，不需要任何干预。而且你永远可以相信 cloudflare 的延迟和稳定性。</p>
+<h2>zerotier</h2>
+<p><a href="https://openwrt.org/docs/guide-user/services/vpn/zerotier" target="_blank" rel="noopener noreferrer">据说</a> openwrt 是有 zerotier 的软件包的，但是我在 iStoreOS 里一点也找不到，不知道是 iStoreOS 的 fork 问题还是 opkg 的问题。</p>
+<p>然后我想直接下载 binary，结果发现<a href="https://www.zerotier.com/download" target="_blank" rel="noopener noreferrer">下载页面</a>里只有 rpm/deb 系的，Github release 里也找不到 binary。合着其他发行版就不配装你的程序了？</p>
+<p>而且 zerotier 几个产品之间关系也比较混乱，一会儿把你推去 zerotier One，一会儿又踢回 zerotier，但是我没空，也没兴趣了解它们之间的关系。</p>
+<h2><a class="header-anchor" href="#rathole"><span></span></a><a href="https://github.com/rapiz1/rathole" target="_blank" rel="noopener noreferrer">rathole</a></h2>
+<p>rathole 是一个 Github 开源项目，本身并不提供内网穿透的服务器；它需要在一台有公网 IP 的服务器上部署转发程序（server），并在内网服务器上部署 client。其实也就是相当于部署一个代理了。不过好在它的配置非常简单，只要写端口就行；而且是 Rust 写的，有编程语言原神之力加持，所以我还是尝试了一下。</p>
+<p>程序很容易就跑起来了，唯一的问题是开机自启。公网服务器上是正常发行版（systemd），这个还好写，我之前做过一个 <a href="https://github.com/lxl66566/user-startup-rs" target="_blank" rel="noopener noreferrer">user-startup-rs</a>的程序，可以做到一键自启。但是 iStoreOS 用的是 procd，老式的 service 命令写服务，这 service 里还大量调用了 OpenWRT 的接口，学习成本和心智负担都不可忽视。</p>
+<p>service 写完，可以跑起来了，结果实际使用时还整天断连，稳定性非常低。我猜测是 service 写出了问题，然而这又不像 systemd 接 journal，没有日志输出，调试非常不便。</p>
+<p>同时因为我的公网服务器大多是月抛小鸡，每个月都要修改配置还是非常麻烦的，最后还是放弃了。</p>
+<h2>tailscale</h2>
+<p>很早以前用过，给我宿舍电脑做 ssh 穿透。感觉延迟还是有一点高的，稳定性也差了点。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>OpenWRT</title>
       <link>https://absx.pages.dev/articles/linux/openwrt.html</link>
@@ -2167,100 +2202,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>| 公司 | 岗位 | 渠道 | 时间 | 状态 |
 |</p>
 ]]></content:encoded>
-    </item>
-    <item>
-      <title>MDX</title>
-      <link>https://absx.pages.dev/coding/mdx.html</link>
-      <guid>https://absx.pages.dev/coding/mdx.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">MDX</source>
-      <description>MDX 试用 MDX 的起因是想尝试基于 MDX 的文档，因为据说其与基于 vue 的文档一样具有很高的可扩展性。但 mdxjs 的文档非常傻逼，因此我将尝试按照我自己的观点来讲 MDX。 说实话，MDX 里面的东西太少，甚至可能不足以开一篇博文专门介绍。。这个页面大概只是我的怨念凝聚吧。 MDX 用的是类似 React 的语法。但是 React 本身...</description>
-      <category>编程</category>
-      <pubDate>Sat, 02 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>试用 MDX 的起因是想尝试基于 MDX 的文档，因为据说其与基于 vue 的文档一样具有很高的可扩展性。但 <a href="https://mdxjs.com/" target="_blank" rel="noopener noreferrer">mdxjs</a> 的文档<a href="https://t.me/withabsolutex/1501" target="_blank" rel="noopener noreferrer">非常傻逼</a>，因此我将尝试按照我自己的观点来讲 MDX。</p>
-<p>说实话，MDX 里面的东西太少，甚至可能不足以开一篇博文专门介绍。。这个页面大概只是我的怨念凝聚吧。</p>
-<p>MDX 用的是类似 React 的语法。但是 React 本身并不够优秀（例如，没有原生 scoped css。<a href="https://t.me/absxsgroup/6120" target="_blank" rel="noopener noreferrer">其他群友锐评</a>）。</p>
-<h2>几句话</h2>
-<p>我尝试用几句话解释完 MDX。</p>
-<ol>
-<li>你可以在 MDX 正文里直接使用 <a href="/articles/markdown.html" target="_blank">markdown</a> 语法 &amp; jsx 语法。</li>
-<li>jsx 函数需要 export.
-<ul>
-<li>返回值的普通 js 函数：用花括号调用。</li>
-<li>返回 DOM 的 jsx 函数：用 DOM 标签调用，函数中参数和使用都需要花括号。</li>
-</ul>
-</li>
-<li>MDX 本身也可以被当成 DOM 组件调用。</li>
-</ol>
-<h2>example</h2>
-<h3>简单小例子</h3>
-<div class="language-jsx line-numbers-mode" data-highlighter="shiki" data-ext="jsx" data-title="jsx" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&lt;!--</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> 普通</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> js</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> 函数</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> --&gt;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> e</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">s</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> btoa</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">s</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">&lt;!--</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> jsx</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75"> 函数</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">，</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">开头需要大写</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2"> --&gt;</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> E2</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">({ </span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">s</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }) {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> &lt;&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">btoa</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">s</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/&gt;;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">##### </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">btoa</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">e</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"123456"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">E2</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> s</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"123456"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果：</p>
-<details class="hint-container details"><summary>详情</summary>
-<h5>btoa MTIzNDU2</h5>
-<p>MTIzNDU2</p>
-</details>
-<h3>现实使用</h3>
-<div class="language-jsx line-numbers-mode" data-highlighter="shiki" data-ext="jsx" data-title="jsx" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">export</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> MyTableComponent</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">({ </span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">data</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }) {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">table</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">thead</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">tr</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;名字&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;课程&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;打分&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;评价&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;联系方式&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">th</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        &lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">tr</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      &lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">thead</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">tbody</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">        {</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">data</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">map</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">((</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">item</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">index</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">=&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">tr</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> key</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">index</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">item</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">item</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">course</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">item</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">grade</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">item</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">evaluation</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">            &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E5C07B">item</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">contact</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">td</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          &lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">tr</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        ))</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      &lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">tbody</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">table</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  );</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"># </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">hello</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">MyTableComponent</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">  data</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">{</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    {</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"John Doe"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      course</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Mathematics"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      grade</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"A"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      evaluation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Excellent student"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      contact</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"123-456-7890"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    },</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    {</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Jane Smith"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      course</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Science"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      grade</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"B"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      evaluation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Good effort"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">      contact</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">: </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"987-654-3210"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    },</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ]</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
   </channel>
 </rss>
