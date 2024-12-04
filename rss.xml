@@ -6,20 +6,63 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 04 Dec 2024 08:04:17 GMT</pubDate>
-    <lastBuildDate>Wed, 04 Dec 2024 08:04:17 GMT</lastBuildDate>
+    <pubDate>Wed, 04 Dec 2024 12:56:43 GMT</pubDate>
+    <lastBuildDate>Wed, 04 Dec 2024 12:56:43 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
     <category>编程</category>
     <category>学习</category>
     <category>爱好</category>
-    <category>教程</category>
     <category>应用</category>
     <category>推荐</category>
     <category>评价</category>
     <category>生命科学</category>
     <category>生活</category>
     <category>经历</category>
+    <item>
+      <title>OpenWRT</title>
+      <link>https://absx.pages.dev/articles/linux/openwrt.html</link>
+      <guid>https://absx.pages.dev/articles/linux/openwrt.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">OpenWRT</source>
+      <description>OpenWRT 我之前买了一个 n1 盒子用来玩，上面已经刷了 iStoreOS，这是一个 OpenWRT 的分支。这里记录了一些我的折腾过程。 日后我可能会为其刷其他系统（Arch），不过现在还是先算了吧。 包管理 OpenWRT 用的包管理器是 opkg。虽然 OpenWRT 已经声称要转到 apt，但是还没转，并且 iStoreOS 应该还没有那...</description>
+      <category>教程</category>
+      <pubDate>Wed, 04 Dec 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>我之前买了一个 n1 盒子用来玩，上面已经刷了 iStoreOS，这是一个 OpenWRT 的分支。这里记录了一些我的折腾过程。</p>
+<p>日后我可能会为其刷其他系统（Arch），不过现在还是先算了吧。</p>
+<h2>包管理</h2>
+<p>OpenWRT 用的包管理器是 <code>opkg</code>。虽然 OpenWRT 已经声称要转到 apt，但是还没转，并且 iStoreOS 应该还没有那么快跟上。因此我不得不用这个不合格的包管理器。</p>
+<ul>
+<li>查找：help 里写 <code>opkg find &lt;regexp&gt;</code>，但是我使用 <code>opkg find 'python.*'</code> 并不能找到任何结果。我感觉这个 regexp 是假的。</li>
+<li>软件包本身也是残缺的，例如 vim 的 <code>si</code> 功能被砍了。</li>
+</ul>
+<h2>docker</h2>
+<p>iStoreOS 上啥都没有，但是有 docker。</p>
+<p>然而这个 docker 的配置是 OpenWRT 乱写的，需要去看 <code>/etc/init.d/dockerd</code> 才知道怎么配，配置文件在哪。网上的 docker 配置教程都废了。（<a href="https://t.me/withabsolutex/2119" target="_blank" rel="noopener noreferrer">开喷</a>）</p>
+<h2>代理</h2>
+<p>OpenWRT 的 Linux 内核是 5.10，iStoreOS 也<a href="https://github.com/istoreos/istoreos/issues/1386" target="_blank" rel="noopener noreferrer">遵循上游内核版本</a>。然而 dae 的最低内核要求是 5.17，因此我无法在 iStoreOS 上使用 dae 作为代理。</p>
+<h2>服务</h2>
+<p>OpenWRT 不支持 systemd，果然还是太重了吧。所以必须使用传统的 <a href="https://openwrt.org/docs/guide-developer/procd-init-scripts" target="_blank" rel="noopener noreferrer">procd init script</a>。</p>
+<ol>
+<li>在 <code>/etc/init.d/&lt;service name&gt;</code> 写入：<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" data-title="bash" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">#!/bin/sh /etc/rc.common</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">USE_PROCD</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">1</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">START</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">90</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">start_service</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">() {</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_open_instance</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> MyInstance</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> command</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">your</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> startup</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> comman</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">d</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&gt;</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> limits</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> nofile="unlimited"</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> respawn</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 300</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 5</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 10</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> stdout</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> stderr</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_close_instance</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>运行 <code>service &lt;service name&gt; enable</code>。</li>
+</ol>
+<p>（这里我关闭了输出到日志，为了避免体积膨胀）</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>八股</title>
       <link>https://absx.pages.dev/coding/bagu.html</link>
@@ -2218,33 +2261,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ]</span><span style="--shiki-light:#24292E;--shiki-dark:#C678DD">}</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/&gt;</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
-    </item>
-    <item>
-      <title>零食区</title>
-      <link>https://absx.pages.dev/hobbies/snack.html</link>
-      <guid>https://absx.pages.dev/hobbies/snack.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">零食区</source>
-      <description>零食区 本人买的零食不少，平日也是 B 站拉泽哥粉丝，，本自然会有写一篇零食记录的想法（）。 价格仅供参考。 得分为 5 分制，仅代表个人喜好，不喜勿喷。加粗为很喜欢，经常复购。 总评 边角料一般不会更便宜。 糖果类 饼干/糕点类 油炸类 辣味制品 肉蛋奶 蔬果制品 坚果类 饮品 成品 冲剂 速食食品 其他</description>
-      <category>推荐</category>
-      <category>评价</category>
-      <pubDate>Thu, 18 Jan 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>本人买的零食不少，平日也是 B 站<a href="https://space.bilibili.com/478691043" target="_blank" rel="noopener noreferrer">拉泽哥</a>粉丝，<s>之前 steam 用户名还是是 <em>.*恰小靈石</em></s>，本<s>地区零食先生</s>自然会有写一篇零食记录的想法（）。</p>
-<p>价格仅供参考。</p>
-<p>得分为 5 分制，仅代表个人喜好，不喜勿喷。加粗为很喜欢，经常复购。</p>
-<h2>总评</h2>
-<ul>
-<li>边角料一般不会更便宜。</li>
-<li>
-</li>
-<li>
-</li>
-</ul>
-<h2>糖果类</h2>
-<!-- prettier-ignore -->
-<p>|名称|价格|得分|评价|
-|</p>
-]]></content:encoded>
     </item>
   </channel>
 </rss>
