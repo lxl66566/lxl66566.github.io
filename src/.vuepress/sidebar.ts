@@ -24,7 +24,7 @@ export default sidebar({
       ],
     },
   ],
-  "/articles/linux/": ["index.md", "basic.md", "install_and_config.md", "nix.md", "package.md", "problem.md"],
+  "/articles/linux/": ["index.md", "basic.md", "install_and_config.md", "nix.md", "openwrt.md", "package.md", "problem.md"],
   "/articles/mobile/": ["index.md", "settings.md", "root.md", "module_and_app.md", "problem.md", "adb.md", "Android_ISA.md"],
   "/articles/proxy/": ["index.md", "vpn.md", "vps.md", "proxy_software.md", "hysteria.md", "trojan-go.md", "trojan.md"],
   "/articles/browser/": ["index.md", "assess.md", "settings.md"],

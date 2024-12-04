@@ -52,6 +52,9 @@ docker logs <name>                        # 查看输出(stdout + stderr)
 docker pull <repository>:<tag>            # 拉取镜像到本地
 docker images                             # 查看镜像
 docker tag <image ID> <repository>:<tag>  # 重命名镜像
+docker stop $(docker ps -aq)              # 停止所有容器
+docker rm $(docker ps -aq)                # 删除所有容器
+docker rmi $(docker images -q)            # 删除所有镜像
 ```
 
 ## dockerhub mirror
@@ -60,9 +63,36 @@ docker tag <image ID> <repository>:<tag>  # 重命名镜像
 
 然后还踩了[应用镜像的坑](#无法应用镜像)。
 
-## 下载镜像到本地
+## 为离线机器下载镜像
 
-有时候我没有安装 docker，但是我需要下载镜像为 tar 文件，传给我的 VPS 使用。
+假设我有无法联网的内网服务器，我需要使用其跑镜像。
+
+::: tabs
+
+@tab 使用 docker 导出
+
+如果你的电脑上安装了 docker，你应该优先选择这个方法。
+
+1. 使用 docker pull 拉取镜像。注意你的**目标架构**需要与服务器的架构相同。
+   ```sh
+   docker pull --platform linux/arm64 hectorqin/reader:openj9-latest
+   ```
+2. 使用 `docker save` 导出指定镜像。如果你有多个镜像，并且 docker 内所有镜像都需要导出，你可以用脚本批量导出：
+   ```sh
+   #!/bin/bash
+   output_dir="docker_images"
+   mkdir -p "$output_dir"
+   for image in $(docker images --format "{{.Repository}}:{{.Tag}}"); do
+       echo "Saving $image..."
+       file_name=$(echo "$image" | sed 's/[\/:]/_/g').tar
+       docker save -o "$output_dir/$file_name" "$image"
+   done
+   echo "All images saved to $output_dir/"
+   ```
+3. 通过 rsync 或者其他方法将所有 `.tar` 传输到目标机器上
+4. 使用 `docker load` 加载所有镜像。
+
+@tab 使用脚本下载（无法使用）
 
 [docker-drag](https://github.com/NotGlop/docker-drag) 用不了，别看了。我用的算是官方的 moby 脚本吧。
 
@@ -75,6 +105,14 @@ tar -cvaf reader.tar reader
 ```
 
 不过这个脚本在 20241204 时还有 bug，就是必须指定 image 的 tag，否则下载链接会 404。
+
+好不容易下载完了，结果打出的 tar 还不能直接被 docker load 加载，非常神奇。我不知道怎么办了。
+
+:::
+
+## docker-compose
+
+docker-compose 是 docker 的上一层抽象，一言：**一个 yaml 文件，指明了多个容器的参数**。实际上使用一个 bash 脚本也能做到 docker-compose 做的事。
 
 ## 遇到的问题
 

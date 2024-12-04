@@ -38,5 +38,8 @@
     "MD040": false,
     "MD056": false
   },
-  "continue.enableTabAutocomplete": false
+  "continue.enableTabAutocomplete": false,
+  "supermaven.enable": {
+    "markdown": false
+  }
 }
