@@ -39,7 +39,18 @@ export default sidebar({
     },
     {
       text: "推荐",
-      children: ["time_record.md", "track_record.md", "input_method", "ramdisk.md", "note.md", "reverse_proxy.md", "voice2text.md", "ocr.md", "pdf_reader.md"],
+      children: [
+        "time_record.md",
+        "track_record.md",
+        "input_method",
+        "ramdisk.md",
+        "note.md",
+        "reverse_proxy.md",
+        "voice2text.md",
+        "ocr.md",
+        "pdf_reader.md",
+        "frp.md",
+      ],
     },
     {
       text: "外部文章分享",

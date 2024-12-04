@@ -66,7 +66,7 @@ tag:
 ——[Perry Kum](https://t.me/ChubbyPerryKum)
 :::
 
-- 答案：<span class="heimu" title="你知道的太多了">激励式电流源和比例式电流源</span>
+- 答案：<span class="heimu" title="你知道的太多了">激励式恒流源和比例式恒流源</span>
 
 ## 20230601
 

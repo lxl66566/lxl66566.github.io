@@ -1,6 +1,6 @@
 ---
 date: 2024-06-28
-icon: linux
+icon: regular fa-snowflake
 category:
   - 教程
 tag:

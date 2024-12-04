@@ -26,7 +26,7 @@ category:
 - [剧情党](../hobbies/galgame.md#分类)
 - 无节日主义
 
-- [前往 QA 查看详解](../hide/personal_details.md#标签-qa)
+[前往 QA 查看详解](../hide/personal_details.md#标签-qa)
 
 ## 生存意义
 
@@ -71,6 +71,8 @@ category:
 - [纯剧情 galgame](../hobbies/galgame.md)
 
 <!-- ~~*终于熬到了上完课，双手激动地放上键盘，OSU!挥洒你的汗水。傍晚，为时5小时的夜生活开始，开始CSGO穿越枪林弹雨。经历大战后，在galgame老婆们的怀里沉沉睡去，这大概也算是一种幸福吧。*~~ -->
+
+你可以在[我的频道](#社交)搜索 `#爱好记录` 获取我的爱好动态。
 
 ## 性格
 

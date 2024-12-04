@@ -22,7 +22,7 @@ CS 自学：
 - [x] 操作系统
 - [ ] 编译原理
 - [x] 数据库
-- [ ] 基础前端
+- [x] 基础前端
 - [ ] ~~tauri or flask, to dev wordsreciter~~ wordsreciter not used
 - [x] koishi plugin, like atri bot
 - [ ] C# learning and pull request to Tai, ~~MisakaTranslator~~(not used)
@@ -40,7 +40,6 @@ CS 自学：
 - [ ] 钢琴
 - [ ] 绘画
 - [ ] 旅游（非国内）
-- [ ] ~~游戏引擎 (?)~~
 - [ ] build-my-own-language (?)
 - [ ] [灵感区](../hide/inspiration.md)：对任何东西灵光一闪的想法。希望能用得上。
 - [ ] 理论数学(?)

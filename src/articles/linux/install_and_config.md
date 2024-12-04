@@ -1,6 +1,6 @@
 ---
 date: 2023-10-28
-icon: linux
+icon: archway
 category:
   - 教程
 tag:

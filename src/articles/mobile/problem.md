@@ -1,6 +1,6 @@
 ---
 date: 2023-11-08
-icon: config
+icon: regular fa-circle-xmark
 category:
   - 经历
 tag:

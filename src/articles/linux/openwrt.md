@@ -1,6 +1,6 @@
 ---
 date: 2024-12-04
-icon: linux
+icon: wifi
 category:
   - 教程
 tag:

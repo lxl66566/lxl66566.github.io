@@ -73,6 +73,7 @@ const links: Box[] = [
       { text: "音频转文字", url: "voice2text" },
       { text: "OCR", url: "ocr" },
       { text: "PDF 阅读器横评", url: "pdf_reader" },
+      { text: "内网穿透", url: "frp" },
     ],
   },
   {

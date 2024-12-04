@@ -73,7 +73,7 @@ tag:
 
 ## 如何看待关于 reactions 的讨论
 
-如图，
+想法来源如图：
 
 <ZoomedImg alt="shortcut" src="/images/gossip/consider/1.jpg" scale="40%" />
 
@@ -132,6 +132,8 @@ tag:
 生成的图片被拿去干什么，取决于人而不是工具；而新技术总是会伴随着旧利益既得者的利益丧失，我认为是值得的。
 
 <dated date="20221016"/>
+
+（而且两年后的 AI 二次元图还过不了图灵测试。）<dated date="20241204"/>
 
 ## 如何看待算法竞赛不使用最新语言特性
 

@@ -1,6 +1,6 @@
 ---
 date: 2023-10-28
-icon: tool
+icon: cubes
 category:
   - 教程
   - 推荐
