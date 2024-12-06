@@ -50,6 +50,10 @@ Vue3 本来还有个 `$ref()` 的语法糖可以将 ref 的 `.value` 给省掉�
 
 ## vue 类型与方法
 
+### ref
+
+最基础的响应式，不多说了。用的时候需要 `.value`。
+
 ### computed
 
 Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出结果（），结果不是，computed 是用于追踪数据变化的。
@@ -71,6 +75,8 @@ Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出
   当你需要一个依赖其他响应式数据的 **值**，比如展示在模板中。
 - **使用 `watch`**：
   当你需要在数据变化时执行一些 **逻辑操作**（如 API 调用、写日志、DOM 更新等）。
+
+比起 ref，computed 还可以单独控制 setter 与 getter，更加精细。[src](https://cn.vuejs.org/api/reactivity-core#computed)
 
 ### props
 

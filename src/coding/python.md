@@ -285,9 +285,11 @@ assert 的 error message 不是 & 不能改红色，还会打堆栈，让我很�
   fun(1, 2, a=1, b=2)   # args: [1, 2]  kwargs: {"a": 1, "b": 2, "c": 3}
   ```
 
-### yield
+### Generator
 
-返回 `Generator`，看成是暂停函数，在需要值时再执行。
+Generator 其实是一个跨语言的概念，函数在执行到一半时可以先中断，将值传回，函数本身暂停；等到下次调用时再从中断处继续运行。
+
+在函数里使用 yield 中断并返回值，函数本身就变成了 Generator，可以通过 `next(gen)` 推动 generator 执行一次。
 
 ```py
 def a():
@@ -296,6 +298,21 @@ def a():
 b = a()
 print(next(b))
 ```
+
+python 的 Generator 还可以传入值。这个用的少，第一次见到也不容易读懂用法。
+
+```py
+def test():
+    while True:
+        x = yield 2
+        print(x)
+c = test()
+print(next(c))
+print(c.send(1))
+# 输出：2 1 2
+```
+
+首先 Generator 执行到 `yield 2`，返回 2；接着向其 send 一个 1，Generator 将 `(yield 2)` 本身作为 1，继续执行，打印出 1，并在下一次 `yield 2` 返回。相当于一个传值 + next。
 
 ## 语法糖
 

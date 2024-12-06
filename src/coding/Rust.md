@@ -571,7 +571,7 @@ GUI 是 rust 日经问题了。
 - [winio](https://github.com/compio-rs/winio)：~~莓软的愚人节玩笑~~
 - [sciter](https://docs.rs/sciter-rs/latest/sciter/)：web 界面渲染
 
-[这里](https://www.cnblogs.com/nolca/p/17795473.html)有一些 issue/star 数对比。
+[这里](https://www.cnblogs.com/nolca/p/17795473.html)有一些 issue/star 数对比。[Are we GUI Yet?](https://areweguiyet.com/)是更多 GUI 框架简介。
 
 我早期尝试过一下 iced，用不明白，不用了。
 

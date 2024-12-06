@@ -17,26 +17,40 @@ tag:
 
 我曾不得不读纸质书，但我更喜欢读电子书。
 
-- 无需做笔记的书使用 [开源阅读](../farraginous/recommend_packages.md#开源阅读)，可同步进度，支持 pdf, epub
-- 否则使用 [Notein](../articles/note.md)
-- 很遗憾，即使使用许多书源 + Google，仍有很多小说难以找到。[^1]
+- pdf 详见 [PDF 阅读器横评](../articles/pdf_reader.md)。
+- 大四开始自建 [reader](https://github.com/hectorqin/reader)。
+  - 好处是数据全在我的软路由，不用担心同步问题。
+  - 坏处是少了阅读时长统计。legado 用网页也无法统计时长，但是如果纯用 app 还是可以的。
 
-<details><summary>点击展开老工具</summary><p>
+::: details 我以前使用的阅读工具
 
-- pdf 格式的书（学术类）使用 _云记_ 阅读
-- 网络小说使用[永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，是一个盗版免费 app。
+- 我在大二、大三时使用 [legado 阅读 3.0](../farraginous/recommend_packages.md#开源阅读)。
+  - 导入书源
+    - 这里是[书源推荐](https://legado.aoaostar.com/)，也可去 Telegram 官方群寻找其他书源。
+  - txt, **pdf 与 epub 格式**的书籍
+    - pdf 格式有一些小 bug，需要在阅读界面 _右上角 -> 图片样式_ 选择 `DEFAULT`，然后翻页动画设为 `滚动`。
+  - 阅读时长统计
+  - WebDAV 同步阅读进度
+    - 将平板和手机的设备名称设为同一个，可以在多个设备间自动同步进度
+  - 最大的问题是没有 PC 版本，需要在手机上开启 web 端口，让手机和电脑在局域网下，然后在电脑网页上读书。而且手机还不能息屏。
+- 更早时我用过：
+  - [永久阅读器](../farraginous/recommend_packages.md#永久阅读器)，是一个盗版免费 app，内置书源。
+  - 番茄免费小说，一堆广告
+  - 电脑上曾经用过某个不知名 txt 阅读器。我还记得因为高中图书馆里的斗罗大陆缺了两册，所以只好用宝贵的玩电脑时间看电子版
 
-</p></details>
-
-[^1]: [吐槽一下](../essay/2023.md#20230713)
+:::
 
 ## 资源
 
-- [轻小说文库](https://www.wenku8.net/login.php)[^2]
+很遗憾，即使使用许多书源 + Google，仍有很多小说难以找到。[^1] 后来会用 Telegram 求助网友/求推荐，因此还不算窘迫。
+
+- [文库 8](https://www.wenku8.net/login.php)[^2]
 - [轻小说机翻机器人](https://books.fishhawk.top/)
 - [知轩藏书](https://zxcs.zip/)
-- [我的资源频道](https://t.me/absolutexsresource)（没啥用的）
+- [开心书库频道](https://t.me/happylibrary) 及其附属群组
+- ~~[我的资源频道](https://t.me/absolutexsresource)（没啥用的）~~
 
+[^1]: [吐槽一下](../essay/2023.md#20230713)
 [^2]: [妈的，被骗啦](https://t.me/withabsolutex/1180)
 
 ## 网络小说
@@ -50,8 +64,10 @@ tag:
 :::details 一些解释说明
 
 - <Badge type="warning" text="爽" /> 指垃圾小爽文。
+- <Badge type="warning" text="H" /> 指以性行为描写为主，但并非爽文的书。
 - <Badge text="无H" /> 指没有出现任何性暗示内容，适合一心修道不沾六欲的书友。
 - <Badge text="无R18" /> 指不进行性行为直接间接描写，劝退爽文书友。
+- <Badge type="tip" text="日轻" /> 日本轻小说
 
 :::
 
@@ -60,24 +76,26 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
+| 柴刀流恋爱日常 | 2024.12.06-<br/>在读 | - |
+| 我们的教室没有欺凌 - XPJbox <Badge type="tip" text="日轻" /> <Badge type="warning" text="H" /> | 2024.12.05-<br/>2024.12.06 | - | <dtlslong>没有剧情与逻辑可言的黄色废料。但是译者水平很高。</dtlslong> |
 |[我的风俗店打工生活](https://www.incnjp.com/thread-1153976-1-1.html)|2024.10.04|<30min|短篇，虚实结合|
 |最强杀手系统 <Badge type="warning" text="爽" />|2024.09.1x-<br/>2024.09.16, 28.5% 放弃|7h41min|<dtlslong>写得很烂，系统文结果几乎没写啥系统，倒是天天 neta 共军，农村包围城市；废话太多。</dtlslong>|
 |催眠王座 <Badge type="warning" text="爽" /><Badge type="danger" text="烂尾" />|2024.09.09-<br/>2024.09.11|6h16min|
 |[我就是神！](https://t.me/absolutexsresource/13)|2024.07.21-<br/>2024.09.08|62h51min|[^](#我就是神)|
-|[一周一次买下同班同学的那些事](https://www.linovelib.com/novel/3605.html)|2024.06.14-<br/>在读|
-|[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>2024.05.14|>60h|<dtlslong>主角韩立；极为经典的修仙，“凡人”指没资质但有逆天宝物的。书算是半个烂尾，毕竟结局飞升仙界，至少还有 1/3 篇幅没写。</dtlslong>|
+|[一周一次买下同班同学的那些事](https://www.linovelib.com/novel/3605.html) <Badge type="tip" text="日轻" />|2024.06.14-<br/>在读|
+|[凡人修仙传](https://zxcs.zip/book/1064.html)|2024.04.27-<br/>2024.05.14|>60h|<dtlslong>主角韩立；极为经典的修仙，“凡人”指没资质但有逆天宝物的。书算是半个烂尾，毕竟结局飞升仙界，至少还有 1/3 篇幅没写。<br/>不知为啥，前期刚入门我总会想到龟山公园下的破烂小菜地。</dtlslong>|
 |[北方的天空](https://t.me/absolutexsresource/3)|2024.01.31-<br/>2024.04.27|?|<dtlslong>现实主义上世纪末背景黄书，少妇取向。作者想写出古典文学的苍凉之景，可惜黄色废料太多，有些喧宾夺主了。</dtlslong>|
 |<span class="heimu">[某 R18 内容](https://www.pixiv.net/novel/show.php?id=21329454)</span>|2024.01.31-<br/>2,等待连载|
 |[Re0：从零开始的异世界生活](https://github.com/re-zero-khis/re0-web)|2024.01.20-<br/>卷 3,在读|3h52min|
 |[我在末世捡到白狐](https://www.pixiv.net/novel/series/10523577) <Badge type="warning" text="爽" />|2023.08.29-<br/>23,等待连载|2h23min|
 |[加速世界](https://www.wenku8.net/book/381.htm)|2023.07.09-<br/>26,等待连载|21h33min 未包括前 0.235|
-|[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126)|2023.0[34]-<br/>&lt;40&gt;章，放弃|-|<dtlslong>除了设定其他都不太行，连贯性差</dtlslong>|
+|[龍神の巫女](https://kakuyomu.jp/works/16816452219814553126) <Badge type="tip" text="日轻" /> <Badge type="tip" text="生肉" />|2023.0[34]-<br/>&lt;40&gt;章，放弃|-|<dtlslong>除了设定其他都不太行，连贯性差</dtlslong>|
 |末世之黑暗召唤师 <Badge type="warning" text="爽" />|2023.07.14-<br/>2023.07.31|41h10min|<span class="heimu" title="你知道的太多了">垃圾人妻爽文，</span>后期写得比较水，还好结局发挥不差。世界设定较混乱，没有体系。|
 |知北游|2023.02.10-<br/>2023.02.18|18h16min|道的细节探索；关于选择与失去的遗憾。盗版文本阅读体验较差。|
 |空想之拳 <Badge type="danger" text="停更" />|2023.01.29-<br/>2023.02.06|21h17min|玩梗量大；开篇过于零碎，难以入门。|
 |万族之劫 <Badge text="无H" />|2023.01.07-<br/>2023.01.26|103h57min|细节丰富，逻辑缜密（导致字数较多）；主人公具有一些与其他一般玄幻小说中的不同特质。|
 |学魔养成系统|2022.12.24-<br/>2022.12.28|19h36min|跟作者的观点很合得来，也让我回忆起了自己的高中时代的同学们。|
-|继母的拖油瓶是我的前女友 <Badge text="无R18" />|2022.12.17-<br/>2022.12.20|11h56min|双视角青春恋爱轻小说。|
+|继母的拖油瓶是我的前女友 <Badge type="tip" text="日轻" /> <Badge text="无R18" />|2022.12.17-<br/>2022.12.20|11h56min|双视角青春恋爱轻小说。|
 |与绿茶妹妹交换身体之后 <Badge type="warning" text="爽" />|2022.08.04-<br/>2022.08.05|50min\*|
 |星辰变|2022.07.07-<br/>2022.07.25|22h7min|
 |圣墟|2022.03.15-<br/>2022.05.13|83h45min|
@@ -92,7 +110,7 @@ tag:
 |抱歉有系统就是了不起 <Badge type="warning" text="爽" />|2021.06.11-<br/>2021.06.18|
 |独步天下|2021.01.10-<br/>2021.04.07|
 |都市之无赖弃少 <Badge type="warning" text="爽" />|2021.01.09-<br/>?|
-|拔刀狂想曲|2021.01.01-<br/>2021.01.07|
+|拔刀狂想曲 <Badge type="tip" text="日轻" />|2021.01.01-<br/>2021.01.07|
 |凌天传说 <Badge type="warning" text="爽" />|2020.12.14-<br/>2020.12.31|
 |走进修仙 <Badge text="二刷" />|2020.05.09-<br/>>2020.11.20||极为经典的科技玄幻文。很有意思。|
 |天道图书馆|2020.09.23-<br/>2020.10.08|

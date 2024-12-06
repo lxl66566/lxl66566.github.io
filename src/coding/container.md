@@ -34,12 +34,6 @@ tag:
 
 :::
 
-## 安装
-
-Linux 安装简单，这里不说。
-
-WSL 上就折磨了，我用 ArchWSL，结果 docker 没有守护进程，podman 找不到 `/etc/subuid`，两个玩意都没法正常工作，评价是有点傻逼。
-
 ## 基础
 
 看看[tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
@@ -128,6 +122,37 @@ docker-compose 是 docker 的上一层抽象，一言：**一个 yaml 文件，�
 ### podman 指定 registry
 
 - podman 拉取镜像时可能不支持短名称，需要在名称前加 `docker.io/` 前缀，或者如 external 1. 所述：Open your `$HOME/.config/containers/registries.conf` file and paste the following contents: `unqualified-search-registries=["docker.io"]`
+
+### /var/run/docker.sock: connect: permission denied
+
+这个也是常见问题了，守护进程运行在 root 下，普通用户无法访问。解法([ref](https://stackoverflow.com/questions/48568172))：
+
+```sh
+sudo usermod -aG docker $USER
+```
+
+然后重新登录。
+
+### 安装问题
+
+正常的 Linux 发行版的包管理器安装都不会出现问题。不过 WSL 就折磨了。我用 ArchWSL，结果 docker 没有守护进程，podman 爆 subuid 错误。
+
+#### docker
+
+ArchWSL 上没有 systemd 用，所以自然也不会自行启动 dockerd 守护进程。因此我必须要在另一个 console 上手动运行 `sudo dockerd` 才能正常使用 docker。
+
+#### podman
+
+在 ArchWSL 上 podman 找不到 `/etc/subuid`，报错。subuid 和 subgid 是用于 User Namespaces 的一部分，主要用于容器化软件，以创建特权分离的容器。
+
+运行指令：
+
+```sh
+sudo usermod --add-subuids 100000-165535 <user>
+sudo usermod --add-subgids 100000-165535 <user>
+```
+
+解决。
 
 ## external
 
