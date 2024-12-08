@@ -26,7 +26,13 @@ cloudflare 的内网穿透是部署最简单，使用体验最好的服务，杀
 2. 根据提示在服务器上安装 cloudflared。提示中的 Linux 部分只包含了 rpm/deb 系，但是没有关系，直接到 [Github cloudflared](https://github.com/cloudflare/cloudflared) 的 release 中下载对应架构 binary 文件。
 3. 执行 cloudflare 步骤里带有 token 的命令。
 
-就这么简单，可以说一行命令完成内网穿透也不为过，而且重启后隧道会自动重连，不需要任何干预。而且你永远可以相信 cloudflare 的延迟和稳定性。
+就这么简单，可以说一行命令完成内网穿透也不为过。而且你永远可以相信 cloudflare 的延迟和稳定性。
+
+不过 cloudflared 在 [procd](./linux/openwrt.md#服务) 系统上只会将 service 写入 `/etc/init.d/cloudflared`，并不会开机自启。如果需要开机自启，需要手动创建一个软链接：
+
+```sh
+cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
+```
 
 ## zerotier
 

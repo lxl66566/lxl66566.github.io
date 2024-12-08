@@ -51,6 +51,12 @@ docker rm $(docker ps -aq)                # 删除所有容器
 docker rmi $(docker images -q)            # 删除所有镜像
 ```
 
+## 代理
+
+[src](https://wiki.archlinuxcn.org/wiki/Docker#HTTP代理)
+
+简言之：守护进程和 docker 都需要配置，`	/etc/docker/daemon.json` 和 `~/.docker/config.json` 都需要写入代理内容。
+
 ## dockerhub mirror
 
 在 2024 年，中国大规模下架了 docker 镜像。所以现在想要使用 docker 仓库会有一些麻烦。[Using docker in China 2024](https://taogenjia.com/2024/08/19/Using-docker-in-China-2024/) 这篇文章介绍了一些方法，我尝试了 cloudflare 反代。不过反代的后果也是 UNAUTHORIZED。

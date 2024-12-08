@@ -602,6 +602,7 @@ const data = [
   { id: "542019", aScore: 9.5, bScore: 7.1, info: "#兽耳 #正太 #うさ城まに", bak: "https://telegra.ph/Usacastle-うさ城まに-やさしくてふかふかな桜ちゃんの話2-中国翻訳-DL版-12-04" },
   { id: "541729", aScore: 8.8, bScore: 4.5, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/あとりえひなた-ひなた悠-マリーとおくちえっち-ブルーアーカイブ-中国翻訳-DL版-12-02" },
   { id: "541730", aScore: 4, bScore: 8.6, info: "#面具 #强制性交 #睡x", bak: "https://telegra.ph/にゅう工房-チートアイテム管理局のお仕事EX-散々ヤラれた後だしどうせ全部忘れるから被害者つまみ食いしてもいいよね-中国翻訳-12-02" },
+  { id: "(pixiv)", aScore: 8.2, bScore: 3.2, info: "#生肉 #短篇", otherlink: "https://www.pixiv.net/artworks/124201522" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

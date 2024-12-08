@@ -377,6 +377,10 @@ example 可以看 [cpp reference](https://en.cppreference.com/w/cpp/ranges)。
 - `std::views::transform` 就是 map
 - 直到 C++23 都没有一个可 chain 的 reduce ([std::ranges::fold_left](https://en.cppreference.com/w/cpp/algorithm/ranges/fold_left))
 
+## [volatile](https://www.runoob.com/w3cnote/c-volatile-keyword.html)
+
+表示某个变量可能随时变化，不要优化此变量的操作。
+
 ## 程序计时
 
 程序计时可以用于分析代码效率。[代码参考](https://stackoverflow.com/questions/12883493/timing-the-execution-of-statements-c) <span class="heimu" title="你知道的太多了">大佬能直接看汇编分析，但是太复杂还得 benchmark</span>
