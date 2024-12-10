@@ -595,7 +595,7 @@ const data = [
   { id: "540773", aScore: 9.2, bScore: 4, info: "#全彩 #催眠 #兽耳", order: 2, bak: "https://telegra.ph/khorosho-chihiro-推し活2-中国翻訳-DL版-11-27" },
   { id: "482228", aScore: 7.6, bScore: 4, info: "#全彩 #催眠 #地雷", order: 1, bak: "https://telegra.ph/khorosho-chihiro-推し活-中国翻訳-DL版-12-04" },
   { id: "541119", aScore: 9.1, bScore: 6, info: "#田屋沼屋 #纯爱 #透明旗袍" },
-  { id: "540761", aScore: 9.6, bScore: 7.9, info: "#富士やま #全彩 #巨乳 #捆绑" },
+  { id: "540761", aScore: 9.6, bScore: 7.9, info: "#富士やま #全彩 #巨乳 #捆绑 迷い猫" },
   { id: "420047", aScore: 8.8, bScore: 6, info: "#蔚蓝档案 #汗味" },
   { id: "541242", aScore: 8.9, bScore: 4.3, info: "#しらたま #小恶魔", bak: "https://telegra.ph/コミティア150-毛玉牛乳咲田書店-玉之けだまさきだ咲紀-orico2-中国翻訳-11-30" },
   { id: "541195", aScore: 8, bScore: 6.6, info: "#师生 #无知", bak: "https://telegra.ph/志免ソカ-みあんのギャルちゃれんじ-COMIC-LO-2022年08月号-中国翻訳-DL版-11-29" },
@@ -603,6 +603,10 @@ const data = [
   { id: "541729", aScore: 8.8, bScore: 4.5, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/あとりえひなた-ひなた悠-マリーとおくちえっち-ブルーアーカイブ-中国翻訳-DL版-12-02" },
   { id: "541730", aScore: 4, bScore: 8.6, info: "#面具 #强制性交 #睡x", bak: "https://telegra.ph/にゅう工房-チートアイテム管理局のお仕事EX-散々ヤラれた後だしどうせ全部忘れるから被害者つまみ食いしてもいいよね-中国翻訳-12-02" },
   { id: "(pixiv)", aScore: 8.2, bScore: 3.2, info: "#生肉 #短篇", otherlink: "https://www.pixiv.net/artworks/124201522" },
+  { id: "542554", aScore: 7.3, bScore: 8.7, info: "#家出", bak: "https://telegra.ph/しぷおる-ずっと一緒にいてね-中国翻訳-DL版-12-07" },
+  { id: "542717", aScore: 6.3, bScore: 7.5, info: "#loli #多P #长篇", bak: "https://telegra.ph/創田ぐみ-少女世界僕だけ大人でモテモテハーレム-中国翻訳-12-08" },
+  { id: "528260", aScore: 8.2, bScore: 6.1, info: "#师生 #无插入 #SM ファムファタールの魔女", order: 1, bak: "https://telegra.ph/うこ-ファムファタールの魔女-コミック-エグゼ-50-中国翻訳-DL版-12-04" },
+  { id: "538679", aScore: 6.7, bScore: 8, info: "#师生 #SM ファムファタールの魔女", order: 2, bak: "https://telegra.ph/うこ-ファムファタールの魔女-2-コミック-エグゼ-52-中国翻訳-DL版-12-04" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

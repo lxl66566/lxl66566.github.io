@@ -76,7 +76,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
-| 柴刀流恋爱日常 | 2024.12.06-<br/>在读 | - |
+| 柴刀流恋爱日常 | 2024.12.06-<br/>在读 | - | <dtlslong>475 章手到底铐没铐着…</dtlslong> |
 | 我们的教室没有欺凌 - XPJbox <Badge type="tip" text="日轻" /> <Badge type="warning" text="H" /> | 2024.12.05-<br/>2024.12.06 | - | <dtlslong>没有剧情与逻辑可言的黄色废料。但是译者水平很高。</dtlslong> |
 |[我的风俗店打工生活](https://www.incnjp.com/thread-1153976-1-1.html)|2024.10.04|<30min|短篇，虚实结合|
 |最强杀手系统 <Badge type="warning" text="爽" />|2024.09.1x-<br/>2024.09.16, 28.5% 放弃|7h41min|<dtlslong>写得很烂，系统文结果几乎没写啥系统，倒是天天 neta 共军，农村包围城市；废话太多。</dtlslong>|
