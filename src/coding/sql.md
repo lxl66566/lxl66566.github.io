@@ -215,6 +215,10 @@ update users set sBalance = 1000.00 where sID = '...';
 
 ### 安装
 
+::: tabs
+
+@tab Linux
+
 有了 Mariadb 的[前车之鉴](#安装-mariadb)，安装 mysql 不再是问题——
 
 ```sh
@@ -227,6 +231,22 @@ sudo mysqld
 ```
 
 如果真的这么想，[那就大错特错了](#安装-mysql)。
+
+@tab Windows
+
+Windows 上安装 mysql 也少不了各种折腾。
+
+```sh
+scoop install mysql
+```
+
+然后在 `services.msc` 里启动 MySQL 服务，报错：_本地计算机上的 MySQL 服务启动后停止。某些服务在未由其他服务或程序使用时将自动停止。_
+
+根据[此博客](https://www.cnblogs.com/zhengdaojie/p/17374473.html)内容，解决问题。
+
+:::
+
+进去以后重置下密码：`ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';`。
 
 ### 基础
 
@@ -241,9 +261,14 @@ mysqldump 是热备份，即无需关闭 mysql 服务。
 # 备份
 sudo mysqldump -p <database name> > bak-time.sql
 rsync -avz <sshname>:<file_path> <destination_path>
-# 恢复
+# 恢复（Linux only）
 create database <database_name>;
 mysql -u <user_name> -p <database name> < <dumpfile>
+# 恢复（任意系统）
+mysql -u <user_name> -p             # 进入 mysql 环境
+create database <database_name>;
+use <database_name>;                # 必须先 use 数据库
+source <dumpfile>;
 ```
 
 ### 用户管理
@@ -295,7 +320,7 @@ init 阶段获取到了一个默认密码。[安装](#安装)后直接 `sudo mys
 
 吃了个晚饭，清空了下脑子的缓存，然后直接 `mysql -u root -p` 输入默认密码就好了。。这是我没想到的。
 
-进去以后重置下密码：`ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';`。
+进去以后重置下密码。
 
 ### 安装 MariaDB
 
