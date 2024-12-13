@@ -6,20 +6,124 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 11 Dec 2024 12:43:26 GMT</pubDate>
-    <lastBuildDate>Wed, 11 Dec 2024 12:43:26 GMT</lastBuildDate>
+    <pubDate>Fri, 13 Dec 2024 09:39:28 GMT</pubDate>
+    <lastBuildDate>Fri, 13 Dec 2024 09:39:28 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>编程</category>
     <category>推荐</category>
     <category>教程</category>
     <category>评价</category>
-    <category>编程</category>
     <category>学习</category>
     <category>爱好</category>
     <category>应用</category>
     <category>生命科学</category>
     <category>生活</category>
     <category>经历</category>
+    <item>
+      <title>CSS</title>
+      <link>https://absx.pages.dev/coding/css.html</link>
+      <guid>https://absx.pages.dev/coding/css.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">CSS</source>
+      <description>CSS 本人是 CSS 超级苦手，甚至以前都只会写 nocss 页面。但是如果要给别人做东西用，nocss 肯定不太行。当今所有主流 GUI 框架中没一个打得过前端设计，我也想在前端领域玩玩，因此学习一点 CSS 是有必要的。 预处理器 css 本身不带逻辑，处理嵌套也麻烦。因此有各种各样的预处理器可以允许我们写更强大、更有意思的扩展语法，然后由它们在...</description>
+      <category>编程</category>
+      <pubDate>Fri, 13 Dec 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>本人是 CSS 超级苦手，甚至以前都只会写 nocss 页面。但是如果要给别人做东西用，nocss 肯定不太行。当今所有主流 GUI 框架中没一个打得过前端设计，我也想在前端领域玩玩，因此学习一点 CSS 是有必要的。</p>
+<h2>预处理器</h2>
+<p>css 本身不带逻辑，处理嵌套也麻烦。因此有各种各样的预处理器可以允许我们写更强大、更有意思的扩展语法，然后由它们在编译器改成标准 css。</p>
+<ul>
+<li>scss：sass 3.0 的别名，我觉得最泛用的。</li>
+<li><a href="https://lesscss.org/" target="_blank" rel="noopener noreferrer">less</a>，朋友的公司在用</li>
+</ul>
+<p>上面两个预处理器都兼容原生 css。</p>
+<h2>框架</h2>
+<p>虽说写原生 CSS 也不是不行，但是有框架为什么不用呢。</p>
+<p>大多数框架都喜欢将 “写 css” 变为 “写 class”，免去了 html 和 css 之间切来切去的烦恼，用得熟练的话确实可以加快开发速度。对于初学者来说就是多了查文档的时间，如果文档烂的话还是挺烦人的。</p>
+<ul>
+<li><a href="https://unocss.dev/" target="_blank" rel="noopener noreferrer">UnoCSS</a>：新一代完全自定义化的 css 框架。</li>
+<li><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">tailwindcss</a>：一套预设的 class。目前广泛使用。</li>
+<li>Bootstrap：老一辈预设的 class，目前算是被 tailwindcss 取代了吧(?)</li>
+</ul>
+<h2>盒模型</h2>
+<p>前端基础概念了。</p>
+<ul>
+<li>标准盒模型：<code>box-sizing: content-box</code>，content = size；border 和 padding 向外扩展</li>
+<li>IE 盒模型：<code>box-sizing: border-box</code>，content = size - border - padding，可以从外部统一大小。</li>
+</ul>
+<div style="position: relative; width: 400px">
+  <!-- Margin Layer -->
+  <div style="background-color: #e8f4f8; padding: 20px; text-align: center; border: 2px dashed #a8d1dc">
+    <div style="
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 14px;
+      ">
+      margin
+    </div>
+    <!-- Border Layer -->
+    <div style="background-color: #ffb6b6; padding: 20px">
+      <div style="
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: white;
+          padding: 2px 8px;
+          border-radius: 4px;
+          font-size: 14px;
+        ">
+        border
+      </div>
+      <!-- Padding Layer -->
+      <div style="background-color: #e6ffe6; padding: 20px">
+        <div style="
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+          ">
+          padding
+        </div>
+        <!-- Content Layer -->
+        <div style="background-color: #fff2e6; padding: 20px; text-align: center">Content Area</div>
+      </div>
+    </div>
+  </div>
+</div>
+<h2>flex 布局</h2>
+<p>flex 布局是响应式的绝佳实践，而且对于前端初学者来说，flex 也非常符合界面直觉。</p>
+<p>关于版本：flex <a href="https://www.cnblogs.com/xiaohuochai/p/5323146.html" target="_blank" rel="noopener noreferrer">有多个版本</a>。2024 年了，不需要考虑 flex 兼容性，可以假定所有浏览器都支持最新版本 flex。</p>
+<p>无脑 flex：想要让内部的玩意水平垂直居中，可以直接无脑 flex：<code>display: flex; align-items: center; justify-content: center;</code></p>
+<p>flex 基础：</p>
+<ol>
+<li>主轴与交叉轴：主轴是元素排布的方向，交叉轴是与主轴垂直的方向。</li>
+<li>basis, <a href="https://juejin.cn/post/6844904016439148551" target="_blank" rel="noopener noreferrer">grow and shrink</a>
+<ul>
+<li>basis 是每个元素的基础长度。默认为 0，此时使用元素 width （或 height）。</li>
+<li>grow 是当所有元素填不满 flex 时，对于剩下的空间的瓜分策略。实际上就是按 grow 比例瓜分。</li>
+<li>shrink 是当所有元素超出 flex 时，对所有元素的压缩策略。每个元素被压缩的空间也是按 shrink 比例压缩。</li>
+</ul>
+</li>
+<li>对齐：
+<ul>
+<li>主轴：<code>justify-content</code>。一般常用的有 <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code></li>
+<li>交叉轴：一旦使用了 flex，所有元素就会在交叉轴上被拉到最大（由默认值 <code>align-items: stretch;</code> 控制），非常直觉。</li>
+</ul>
+</li>
+<li>超出自动换行：<code>flex-wrap: wrap;</code>；换行后又会引入行间对齐 <code>align-content</code>。</li>
+</ol>
+]]></content:encoded>
+    </item>
     <item>
       <title>内网穿透</title>
       <link>https://absx.pages.dev/articles/frp.html</link>
@@ -2175,42 +2279,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>门限效应：在小信噪比的情况（输入信号幅度远小于噪声幅度），输出信噪比急剧恶化。开始出现门限效应的输入信噪比称为门限值。<span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>f</mi></msub></mrow><annotation encoding="application/x-tex">m_f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7167em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal">m</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span></span></span></span> 越大，门限值越高，输出信噪比的改善越明显。
 降低门限值（也称门限扩展）的方法有很多，例如，可以采用锁相环解调器和负反馈解调器。还可以采用“预加重”和“去加重”技术来进一步改善调频解调器的输出信噪比，这也相当于改善了门限。</p>
 <p>| 方式 | 带宽          |
-|</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>找工作经历</title>
-      <link>https://absx.pages.dev/gossip/interview.html</link>
-      <guid>https://absx.pages.dev/gossip/interview.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">找工作经历</source>
-      <description>找工作经历 首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。 定位 方向 我喜欢的是新技术，做小玩意，想给大家带来更好的使用体验。因此我一开始选择的是 客户端开发。但是实际上客户端指的大多数是移动端，基本没有专门的桌面软件开发。我之前写 Android 被折磨得非常痛苦，ios 也不会，因此放弃了这个方向。 后端方向基本全是 ...</description>
-      <category>评价</category>
-      <category>经历</category>
-      <pubDate>Mon, 25 Mar 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。</p>
-<h2>定位</h2>
-<h3>方向</h3>
-<p>我喜欢的是新技术，做小玩意，想给大家带来更好的使用体验。因此我一开始选择的是 <em>客户端开发</em>。但是实际上客户端指的大多数是移动端，基本没有专门的桌面软件开发。我之前写 Android 被折磨得非常痛苦，ios 也不会，因此放弃了这个方向。</p>
-<p>后端方向基本全是 Java/C++，偶尔会有一些 python 后端（Django, Flask）。我除了 Django 就没接触过其他框架，而且我并不喜欢后端。</p>
-<p>不论爱好，考虑我的技术栈，我感觉 <em>测试开发</em> 和 <em>Linux 运维</em> 挺适合我的，毕竟前者 python 用得烂熟，也鼓捣过几个爬虫和自动化项目，后者就纯粹是喜欢尝试创造新工具，写过脚本与包管理器。确实，测开的要求低很多，但是运维就麻烦了，各种 k8s，云原生的要求我是不太满足的。</p>
-<p>至于前端，我也写过不少前端的东西，会框架会 TS，但是基础（特别是 CSS）不牢。而且我并不看好前端的前景。</p>
-<h3>语言</h3>
-<ul>
-<li>我尽可能避开了 JAVA 和 C++ 这两个最多岗位的语言。。JAVA 的话我卷不过后端小子，框架也一点不熟；C++ 我甚至不敢说我会写（怀抱着对《The Book of Modern C++》的恐惧）。</li>
-<li>而 Rust 非常显然，几乎没有公司招；即使有一些量化要 rust，我也暂时没有考虑，因为使用 Rust 的实习经历给我带来了不小的心理创伤。</li>
-<li>最终还是 Python 岗位看得多一点，然而由于不想从事 Python 后端，我也只能投一点万金油。</li>
-</ul>
-<h2>简历模板</h2>
-<p>我用 <a href="/learning/typst.html" target="_blank">typst</a> 比较多，好久之前就盯上了 <a href="https://github.com/OrangeX4/Chinese-Resume-in-Typst" target="_blank" rel="noopener noreferrer">OrangeX4 的简历模板</a>。字体可能要折腾一会儿，但是确实够好看。</p>
-<p>typst 可能有些难，再不济至少也得用个 <a href="https://github.com/BingyanStudio/LapisCV" target="_blank" rel="noopener noreferrer">markdown 简历模版</a> 吧。</p>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>以下记录时间 ↓ 由新至旧。</p>
-</div>
-<h2>2024 秋招</h2>
-<!-- prettier-ignore -->
-<p>| 公司 | 岗位 | 渠道 | 时间 | 状态 |
 |</p>
 ]]></content:encoded>
     </item>
