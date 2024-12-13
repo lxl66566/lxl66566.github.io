@@ -14,7 +14,7 @@ tag:
 
 说实话，MDX 里面的东西太少，甚至可能不足以开一篇博文专门介绍。。这个页面大概只是我的怨念凝聚吧。
 
-MDX 用的是类似 React 的语法。但是 React 本身并不够优秀（例如，没有原生 scoped css。[其他群友锐评](https://t.me/absxsgroup/6120)）。
+MDX 用的是 React 的 JSX/TSX 扩展。但是 React 本身并不够优秀（例如，没有原生 scoped css。[其他群友锐评](https://t.me/absxsgroup/6120)）。
 
 ## 几句话
 

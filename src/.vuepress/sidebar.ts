@@ -72,7 +72,7 @@ export default sidebar({
     },
     {
       text: "前端",
-      children: ["nodejs.md", "tsjs.md", "vue.md", "html.md", "mdx.md"],
+      children: ["nodejs.md", "tsjs.md", "vue.md", "css.md", "html.md", "mdx.md"],
     },
     {
       text: "其他",

@@ -227,6 +227,20 @@ Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 x
 
 ~~在大片的构建系统篇幅后我们终于走到了语言基础，太悲哀了。~~
 
+### range-based for loop
+
+> \>= C++11
+
+不用再写下标了。
+
+```cpp
+for(auto &i : vec){}
+```
+
+如果需要同时使用下标，可以用 [ranges enumerate](#ranges)（不过要 C++20）。
+
+而且，range-based for loop 还有[生命周期问题](https://www.reddit.com/r/cpp/comments/pye3iv/c_committee_dont_want_to_fix_rangebased_for_loop/)，10 年未修复。使用时应特别注意。
+
 ### 数据结构
 
 - `<queue>`：
@@ -374,8 +388,15 @@ ranges 是 C++ 在函数式方面的努力，C++20 的四大特性之一。简�
 
 example 可以看 [cpp reference](https://en.cppreference.com/w/cpp/ranges)。
 
-- `std::views::transform` 就是 map
+- `std::views` 和 `std::ranges::views` 是等价的。
+- `std::ranges::for_each(Range, func)` 不能用 `|` chain，我不明白为什么要这么设计，有点脑残。
+- `std::views::transform` 就是 map。
 - 直到 C++23 都没有一个可 chain 的 reduce ([std::ranges::fold_left](https://en.cppreference.com/w/cpp/algorithm/ranges/fold_left))
+- `std::views::zip` 和 `std::views::enumerate` 返回结果都是 tuple，要用 `std::get<0>(tuple)` 取值。
+- 遍历 zip 时必须用 `auto`，不能用 `auto &`：
+  ```cpp
+  for (auto [a, b] : std::ranges::views::zip(range_a, range_b)) {}
+  ```
 
 ## [volatile](https://www.runoob.com/w3cnote/c-volatile-keyword.html)
 

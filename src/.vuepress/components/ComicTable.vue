@@ -608,6 +608,7 @@ const data = [
   { id: "528260", aScore: 8.2, bScore: 6.1, info: "#师生 #无插入 #SM ファムファタールの魔女", order: 1, bak: "https://telegra.ph/うこ-ファムファタールの魔女-コミック-エグゼ-50-中国翻訳-DL版-12-04" },
   { id: "538679", aScore: 6.7, bScore: 8, info: "#师生 #SM ファムファタールの魔女", order: 2, bak: "https://telegra.ph/うこ-ファムファタールの魔女-2-コミック-エグゼ-52-中国翻訳-DL版-12-04" },
   { id: "542977", aScore: 7.3, bScore: 6.8, info: "#兽耳 #妖精 #纯爱", bak: "https://telegra.ph/COMIC125-備前式ロロップ-備前-ずんだもんには人権がない-VOICEROID-中国翻訳-12-10" },
+  { id: "487965", aScore: 4.5, bScore: 8.7, info: "#连续绝顶 #魔法 #虚空打靶", order: 1, bak: "https://telegra.ph/超斬開-TER-オナホ売りの少女-わるい子とパパのエロい漫画-中国翻訳-無修正-DL版-12-12" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
