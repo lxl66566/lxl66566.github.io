@@ -1,6 +1,6 @@
 import { defineClientConfig } from "vuepress/client";
-import TelegramLink from "./components/TelegramLink.js";
-import rssLink from "./components/rssLink.js";
+import TelegramLink from "./components/TelegramLink.vue";
+import RSSLink from "./components/RSSLink.vue";
 import OrderBadge from "./components/OrderBadge.vue";
 import dtls from "./components/dtls.vue";
 import dtlslong from "./components/dtlslong.vue";
@@ -15,7 +15,7 @@ import "vuepress-theme-hope/presets/shinning-feature-panel.scss";
 export default defineClientConfig({
   enhance: ({ app }) => {
     app.component("TelegramLink", TelegramLink);
-    app.component("rssLink", rssLink);
+    app.component("RSSLink", RSSLink);
     app.component("OrderBadge", OrderBadge);
     app.component("dtls", dtls);
     app.component("dtlslong", dtlslong);

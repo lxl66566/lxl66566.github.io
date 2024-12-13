@@ -38,7 +38,7 @@ export default hopeTheme({
   navbarLayout: {
     start: ["Brand"],
     center: ["Links"],
-    end: ["Repo", "TelegramLink", "rssLink", "Outlook", "Search"],
+    end: ["Repo", "TelegramLink", "RSSLink", "Outlook", "Search"],
   },
   plugins: {
     blog: { excerptLength: 1 },
