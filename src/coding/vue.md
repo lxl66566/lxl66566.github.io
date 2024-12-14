@@ -78,7 +78,9 @@ Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出
 
 比起 ref，computed 还可以单独控制 setter 与 getter，更加精细。[src](https://cn.vuejs.org/api/reactivity-core#computed)
 
-### props
+### 组件间传值
+
+#### props
 
 props 定义了组件的传入参数。
 
@@ -116,6 +118,39 @@ const props = defineProps({
 ```
 
 :::
+
+#### provide + inject
+
+provide 和 inject 用于跨越多层组件传值，属于祖先组件向后代组件传值的范畴。可以想象成一个 kv store，每个值用一个 key 做索引。
+
+```ts
+import { provide } from "vue";
+const theme = 123;
+provide("theme", theme); // 第一个参数为 key，第二个参数为要提供的值
+provide("theme", () => theme); // 或者使用函数
+// 子组件中：
+const theme = inject("theme"); // 使用 inject 来接收祖先组件提供的值
+```
+
+#### emit
+
+emit 用于子组件向父组件传值。
+
+```ts
+// 子组件：
+const emit = defineEmits(["customClick"]); // 定义可以触发的事件
+const handleClick = () => {
+  emit("customClick", "Hello from Child!"); // 第一个参数是事件名称，后面的参数是要传递的数据
+};
+// 父组件：
+// <template>
+// <ChildComponent @customClick="parentFun" />
+// ...
+// </template>
+const parentFun = (data) => {
+  message.value = data;
+};
+```
 
 ### slot
 

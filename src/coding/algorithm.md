@@ -287,3 +287,5 @@ int fa(int i) {
 ## external
 
 1. [信息学竞赛 (OI) 究竟发生了什么？](https://www.bilibili.com/video/BV1di421f7L5)
+2. [Advent of Code](https://adventofcode.com/)
+3. [sort_algorithms](https://crates.io/crates/sort_algorithms)：具有教学意义的一个排序实现库，实现了很多有趣的排序算法

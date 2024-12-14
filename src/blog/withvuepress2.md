@@ -109,6 +109,12 @@ export default defineUserConfig({
 
 创建 `.vuepress/styles/index.scss` 并写入 css。vuepress 会自动引入，无需写入配置。是通用解法，与主题无关。
 
+### 组件方法
+
+也可以把这个 css 抽成一个 [vue 组件](../coding/vue.md)，比样式派每次少写一些，还是不错的。
+
+目前我的博客是 `<heimu>` 组件和样式混用的。
+
 ## 图床衍生问题
 
 由于图片越来越多，博客更新频繁，这样占云端空间大，上传也慢。于是就直接就地开了个 images 分支当作图床。我一开始直接在 `.vuepress/public/images` 文件夹里创建仓库上传的，然后也能正常使用，到了发布博客的时候，编译也过了，上传也成功了，结果 Github 告诉我因为一个奇妙的问题构建不成功......此处放出错误信息：
@@ -530,9 +536,11 @@ function sidebar() {
 
 起因：想给导航栏添加一个 Telegram 的链接。由于 VuePress Theme Hope 就有，可以直接抄。
 
-1. 写（抄）一个[组件](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/components/TelegramLink.ts)，替换链接。
+1. 写（抄）一个[组件](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/0b04354dcfe6a2f7391029091da23c3df950a0e5/docs-shared/src/components/TelegramLink.ts)，替换链接。
 2. 在 `client.ts` 中[手动注册](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/main/docs-shared/src/client.ts)。
 3. 在 `theme.ts` 中[引入](https://github.com/vuepress-theme-hope/vuepress-theme-hope/blob/9baaa2ffac93f9952a244b39769e7dc6c598a611/docs-shared/src/theme-wrapper.ts#L48)。
+
+后来发现写一个这个 ts 实际上等价于写一个 vue 组件，而 vue 的写法可读性更好。因此我后来改成了 vue。
 
 ## 添加 rss 订阅
 
@@ -615,7 +623,7 @@ gtag('config', 'G-xxxxxxxx');`,
 ...
 ```
 
-其实 cloudflare 是有自己的 _Web Analytics_ 的，但是我对比了一下，感觉还是 Google 的更先进点。
+其实 cloudflare 是有自己的 _Web Analytics_ 的，但是我对比了一下，感觉还是 Google 的更准确点。
 
 ## 静态资源引用错误
 

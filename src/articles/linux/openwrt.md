@@ -50,6 +50,7 @@ OpenWRT 不支持 systemd，果然还是太重了吧。所以必须使用传统�
        procd_close_instance
    }
    ```
-2. 运行 `service <service name> enable`。
-
-（这里我关闭了输出到日志，为了避免体积膨胀）
+   （这里我关闭了输出到日志，为了避免体积膨胀）
+2. 添加权限：`chmod +x /etc/init.d/<service name>`
+3. 运行 `service <service name> enable`。
+4. 开机自启：`cd /etc/rc.d && ln -s ../init.d/<service> ./S99<service>`

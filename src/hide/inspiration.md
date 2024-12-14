@@ -58,6 +58,7 @@ tag:
   - 暂停与继续
   - 降噪
   - [ ] 智能限幅
+    - 参考阅读：<https://magiclen.org/ffmpeg-normalize/>
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
 - [ ] ~~windows 工具包: alias, ls,~~ use bash instead.
 - [ ] yakuake on windows

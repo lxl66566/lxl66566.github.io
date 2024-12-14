@@ -18,9 +18,9 @@ tag:
 
 ## 资源
 
-[樱花动漫](https://www.yhmgo.com) | [次元城动漫](https://www.cycdm01.top/) | [OmoFun](https://mockplus-static.oss-cn-hangzhou.aliyuncs.com/file/2022-10-21/95afa100-5142-11ed-9c1d-2fc86c50c1f5.html) | [異世界動漫](http://www.sbdm.net/) | [acg.rip](https://acg.rip/) | [末日動漫資源庫](https://share.acgnx.se/) | [动漫花园](http://share.dmhy.org/) | [Tg 动画仓库](https://t.me/AnimeNep)
-
-~~但是大部分都没用过~~
+- other hosted：[Tg 动画仓库](https://t.me/AnimeNep)
+- self hosted：[次元城动漫](https://www.cycdm01.top/)
+- 种子站：[动漫花园](http://share.dmhy.org/) | [nyaa](https://nyaa.land/)
 
 ## 时间记录
 

@@ -588,3 +588,7 @@ file.close();
 10. [ELF 格式的 Symbol 及 C++ 的 inline 关键字](https://zhuanlan.zhihu.com/p/380982475)
 11. [Daily bit(e) of C++](https://simontoth.substack.com/archive)
 12. [Writing GUI apps for Windows is painful](https://tulach.cc/writing-gui-apps-for-windows-is-painful/)
+
+books:
+
+1. [C++ 性能优化指南](https://github.com/weaiken/ebook/blob/master/01_programming/C++/C++性能优化指南.pdf)

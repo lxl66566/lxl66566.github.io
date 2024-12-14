@@ -28,6 +28,8 @@ tag:
 
 ## 电影
 
+- 资源来源：各大 PT 站 | [RARBG](https://wvw.rarbg.tw/)
+
 <!-- prettier-ignore -->
 | 名 | 时间 | 评价 |
 | :-: | :-: | :-: |

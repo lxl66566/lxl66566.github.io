@@ -153,6 +153,10 @@ on:
 
 手动任务：使用 `workflow_dispatch`；建议每个 workflow 都加一个方便调试。不要再使用 `on:push` 进行**手动运行控制**。
 
+### 杂
+
+- if 的外面会自动包 `${{ }}`，不需要手动包，否则会出现预料之外的行为。
+
 ### Powerful CI
 
 这里列出一些我常用的 CI。顺带一提，CI 就是 Continuous Integration，在每次代码操作后自动进行一系列检查或服务更新部署，简化操作流程。
@@ -231,7 +235,8 @@ typos -w  # 纠正
 
 #### 调试
 
-[action-tmate](https://github.com/mxschmitt/action-tmate) 提供了 ssh 进入 action 环境里调试的方法。
+- [action-tmate](https://github.com/mxschmitt/action-tmate) 提供了 ssh 进入 action 环境里调试的方法，不过这是违反使用协定的，有被封号的风险。
+- [act](https://github.com/nektos/act) 提供了 github action docker，可以在本地模拟 action 环境。
 
 ## external
 

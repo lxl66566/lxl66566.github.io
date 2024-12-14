@@ -161,6 +161,7 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 虽然我这里说不用看，但是还是有一些傻逼发行版，比如 OpenWRT 会用。而且还带了很多坑。
 
 - 服务定义在 `/etc/init.d/xxx`，每个服务都是一个 bash 脚本。
+  - bash 脚本里面可能会用一些发行版限定的函数。OpenWRT 的服务请跳转 [OpenWRT](./openwrt.md#服务)。
 
 :::
 
