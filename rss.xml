@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 13 Dec 2024 17:22:53 GMT</pubDate>
-    <lastBuildDate>Fri, 13 Dec 2024 17:22:53 GMT</lastBuildDate>
+    <pubDate>Sat, 14 Dec 2024 17:36:10 GMT</pubDate>
+    <lastBuildDate>Sat, 14 Dec 2024 17:36:10 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -198,10 +198,11 @@
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> stderr</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_close_instance</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>（这里我关闭了输出到日志，为了避免体积膨胀）</li>
+<li>添加权限：<code>chmod +x /etc/init.d/&lt;service name&gt;</code></li>
 <li>运行 <code>service &lt;service name&gt; enable</code>。</li>
+<li>开机自启：<code>cd /etc/rc.d &amp;&amp; ln -s ../init.d/&lt;service&gt; ./S99&lt;service&gt;</code></li>
 </ol>
-<p>（这里我关闭了输出到日志，为了避免体积膨胀）</p>
 ]]></content:encoded>
     </item>
     <item>
@@ -411,7 +412,7 @@
       <link>https://absx.pages.dev/hobbies/art.html</link>
       <guid>https://absx.pages.dev/hobbies/art.html</guid>
       <source url="https://absx.pages.dev/rss.xml">其他艺术形式</source>
-      <description>其他艺术形式 这里记录的是较少的，一般心血来潮才会看的作品形式。 主要的艺术形式记录请跳转对应页面（ | | ）。 漫画 电影 纪录片/连续剧 稍后再看 漫画 今生恋人，前世冤家（等待连载）</description>
+      <description>其他艺术形式 这里记录的是较少的，一般心血来潮才会看的作品形式。 主要的艺术形式记录请跳转对应页面（ | | ）。 漫画 电影 资源来源：各大 PT 站 | RARBG 纪录片/连续剧 稍后再看 漫画 今生恋人，前世冤家（等待连载）</description>
       <category>爱好</category>
       <pubDate>Fri, 23 Aug 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -461,6 +462,9 @@
 </tbody>
 </table>
 <h2>电影</h2>
+<ul>
+<li>资源来源：各大 PT 站 | <a href="https://wvw.rarbg.tw/" target="_blank" rel="noopener noreferrer">RARBG</a></li>
+</ul>
 <!-- prettier-ignore -->
 <table>
 <thead>
@@ -1128,6 +1132,14 @@
 <ul>
 <li><code>$1</code> 代表第一个参数，类似的…</li>
 <li><code>$@</code> 代表把所有参数原封不动传入（多个参数的地方），而 <code>$*</code> 代表把所有参数合并当成一个字符串传入。</li>
+</ul>
+</li>
+<li><code>${}</code> 不仅用于插值，还用于更多处理。
+<ul>
+<li><code>${var:-default}</code>，如果为空则使用默认值</li>
+<li><code>${#var}</code> 是取 len</li>
+<li><code>${var:1:3}</code> 是取 slice，两边都是闭区间，index 从 0 开始</li>
+<li><code>${var/pat/after}</code> 是字符串替换</li>
 </ul>
 </li>
 </ul>
