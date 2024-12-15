@@ -887,7 +887,9 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
 ## 其他工具
 
-- [代码混淆](https://pyob.oxyry.com/)
+- 混淆：
+  - [pyarmor](https://kingname.info/2024/07/29/pyarmor/)
+  - [Oxyry Python Obfuscator](https://pyob.oxyry.com/)
 
 ## 一些问题
 
