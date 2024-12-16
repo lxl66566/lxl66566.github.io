@@ -44,11 +44,13 @@ sudo chmod -R 777 /mnt/tmp
 
 即可。
 
-因此后文介绍的皆为 Windows 系统上的 ramdisk。假设我们将 RAMDisk 挂载到 Z 盘：
+因此后文介绍的皆为 Windows 系统上的 ramdisk。
+
+假设我们将 RAMDisk 挂载到 Z 盘：
 
 1. 在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span>
 2. 安装 RAM Disk 软件并挂载。
-3. 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，有的软件提供一键设置）
+3. 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，但是 imdisk 提供一键设置）
 4. 如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。[src](https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&utm_medium=web2x&context=3)，保存为 `.reg` 文件后双击
    ```toml
    Windows Registry Editor Version 5.00
@@ -59,7 +61,11 @@ sudo chmod -R 777 /mnt/tmp
 5. 将桌面设为 RAMDisk：每次打开 RAMDisk 还是需要两步（此电脑 - Z 盘），[我想到了](https://t.me/withabsolutex/1688)直接将桌面放入 RAMDisk，这样就可以把桌面当垃圾桶用了！
    1. 把桌面上的东西移走，并删除 _桌面_ 文件夹(`C:\Users\<Username>\Desktop`)。
    2. 软链接到 RAMDisk：`mklink /D "C:\Users\<Username>\Desktop" "Z:"`
-   3. 由于现在桌面关机会自动清空，我们写一个脚本，将你想放到桌面上的东西在开机时自动放上去。（推荐只放一些快捷方式）
+   3. 由于现在桌面关机会自动清空，我们需要一个方法，将我的文件（主要是快捷方式）开机时自动放到桌面。
+      ::: tabs
+      @tab imdisk
+      imdisk 自带挂载功能，可以将某个文件夹当成 ramdisk 的 “基”。非常方便。
+      @tab 脚本
       1. 在硬盘里任意位置建一个文件夹，将你要放到桌面上的所有文件放进去
       2. `win + R` 输入 `shell:startup` 打开启动文件夹
       3. 新建一个 `copy.ps1` 文件，右键编辑，输入（修改 `$sourceFolderPath` 的值为硬盘上的文件夹）：
