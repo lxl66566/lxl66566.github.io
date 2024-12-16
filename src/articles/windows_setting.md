@@ -27,13 +27,14 @@ tag:
 
 ### 安装时
 
-- 如果你是从 win11 官方 ISO 安装的，那你可就要小心了。初始化时登录微软帐号的那一步，**千万不要登录微软帐号**，否则你的 `C:/Users/` 下的用户文件夹名字就是你的邮箱前五位了。没有任何方法可以更改这个文件夹的名字，包括改注册表（`Profilelist` 里面根本没东西）、`netplwiz` 修改用户名（不影响文件夹名）。最终我尝试新建一个用户，然后把老的用户删掉，没想到更是[酿成大祸](https://t.me/withabsolutex/2136)，卡死无法开机，最终只能又一次重装，浪费很多时间。
+- 如果你的 windows 是从 win11 官方 ISO 安装的，那么初始化时登录微软帐号的那一步，**千万不要登录微软帐号**。[理由](#初始化登录微软帐号酿成的悲剧)
 
 ### 安装后（关键步骤）
 
 - 进行 windows 更新。
 - 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_ ，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
 - 关闭 Windows 安全中心。[为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419)
+  - 关闭安全中心前，请先在安全中心里关闭其中的一些项目。安全中心关闭后无法从设置中进入，而部分软件（例如 edge）仍然会读取安全中心设置。
   1. 法一（推荐）：[Defender Remover](https://github.com/ionuttbara/windows-defender-remover)，选择仅移除 Windows Defender 就行。
   2. 法二（[src](https://zhuanlan.zhihu.com/p/494923217)，但实测并不能完全关闭）：
      - _Windows 安全中心-病毒和威胁防护-管理设置_ ，关闭所有开关
@@ -49,6 +50,8 @@ tag:
        ```
      - 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
 - 关闭安全检查与防火墙：_控制面板 > 系统和安全 > 安全和维护_
+- 关闭 Windows Defender SmartScreen：Windows Defender SmartScreen 是 edge 下载 exe 提示有风险的元凶。
+  - 组策略编辑器（`gpedit.msc`）中，_管理模板 > Windows 组件 > Windows Defender SmartScreen > Microsoft Edge > 配置 Windows Defender SmartScreen_ 里禁用两个选项。
 - 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级 win11 专业版并激活。
   - 若对开源有需求，也可使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)激活。
 - [安装 Imdisk](./ramdisk.md#imdisk-toolkit) 并[配置](./ramdisk.md#使用指南)。
@@ -67,11 +70,19 @@ tag:
   Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
   ```
   - winget 会自带一个 python，记得用 everything 找出来，从 PATH 里把那个 path 删掉。
+- scoop `extras/vcredist2022` 只能下载单一版本的 VC++ 运行库，因此还需要下载其他的关键软件。这里没有链接，如果有可信来源、容易下载的链接可以联系我，贴在这里。
+  - [VC++ 全量包（从 2005 到 2022）](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
+  - [DirectX 修复工具](https://www.puresys.net/5055.html)
 - 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
-  - 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用，于是我会将 WSL bash 换成 git bash。
-    - 删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
-    - 创建一个 bash 快捷方式放到 `C:\Windows\System32`
-    - 创建一个 cmd 放到 `C:\Windows\System32`，内容参考[我在 bpm 里的写法](https://github.com/lxl66566/bpm/blob/5b1f30d583ad4a71759b4ad97c204faf172492bf/bpm/install/__init__.py#L369)。
+  1. 设置中搜索 _启用或关闭 Windows 功能_，打开 HyperV 选项。
+  2. 安装 wsl 与 archwsl。
+  ```powershell
+  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+  # 重启
+  wsl --update
+  scoop install archwsl
+  ```
+  3. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
 - 解决[端口随机占用](#端口随机占用)
 - [组织管理滚](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c)。
 - 关闭自动更新。
@@ -79,12 +90,13 @@ tag:
   2. 服务：`services.msc` 里禁用 `Windows Update` 服务
   3. 任务计划程序关闭：_Microsoft > Windows > WindowsUpdate > 禁用 Scheduled Start_
   - 既然无需经常更新，那就[关闭传递优化](https://blog.51cto.com/u_13464709/2057007)，并且用 _磁盘清理_ 清一下这位占用的空间。
-  - 为什么要做这么多的工作呢，因为有 [Windows Update ignoring Group Policy](https://learn.microsoft.com/en-us/answers/questions/866036) 的先例。
 - 开启长路径：组策略编辑器（运行 `gpedit.msc`），_计算机配置 > 管理模板 > 系统 > 文件系统 > 启用 Win32 长路径_ 选择已启用
 
 ### 安装后（推荐步骤）
 
-- 如果硬盘有分区，移动 _文档、图片、下载_ 等文件夹到新分区的 D 盘。
+- 分区设置：
+  - 如果硬盘有分区，移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
+  - 如果有移动硬盘，请在 _磁盘管理_ 中右键分区，手动指定驱动器号。固定驱动器号可以保证各个脚本运行正常。
 - 禁用休眠。休眠 == hibernate，原理是将内存写入磁盘。其会在 C 盘创建一块用于休眠的大块文件，并且每次休眠都会向硬盘中写入大量数据。我不喜欢这样，为什么不选择关机呢？
 - 网络设置：
   - 在 _高级网络设置 - Internet 选项 - 高级_ 中，打开 TLS 1.3
@@ -116,7 +128,6 @@ tag:
 :::: details 已失效设置项
 
 - ~~开启 Hyper-V 功能 ：_设置 - 应用 - 可选功能 - 更多 Windows 功能_ 打开 _Hyper-V_ 选项。~~ 开启 Hyper-V 原本是启用 WSA 的前置条件，但是 WSA 似了
-  - 提示，开启 WSL 并不需要 Hyper-V ([ref](https://github.com/MicrosoftDocs/WSL/issues/899#issuecomment-690753034))，但是 WSA 需要。
   - 由于我找不到 Hyper-V 选项，因此采用网上教程：将以下代码保存为 `.bat` 并管理员运行即可。
     ```batch
     pushd "%~dp0"
@@ -159,7 +170,6 @@ tag:
 
 我的 windows 开机自启动的托盘软件有：
 
-- [XDM](../farraginous/recommend_packages.md#xdm)
 - [Ditto](../farraginous/recommend_packages.md#ditto)
 - [parsec](../farraginous/recommend_packages.md#parsec)
 - V2rayN
@@ -175,7 +185,13 @@ tag:
 
 ## 自启动
 
-打开任务管理器，选择到 `启动` 进行修改。如果你需要让自己的软件自启动：`win + r` 打开运行面板，输入 `shell:startup` 打开启动文件夹，拖入需自启动的程序快捷方式即可。
+有几种方法可以在 windows 上进行自启动：
+
+1. 打开任务管理器，选择到 `启动` 进行修改。
+2. 在 _运行_ 中输入 `shell:startup` 打开启动文件夹，拖入需自启动的程序快捷方式。
+3. `services.msc` 中的服务可以设为自启动。
+
+如果你习惯命令行操作，也可以使用我写的 [user-startup-rs](https://github.com/lxl66566/user-startup-rs) 添加自启动命令。
 
 ## shell alias
 
@@ -239,6 +255,18 @@ windows 下也可以[像 linux 一样](../articles/linux/basic.md#链接)创建�
 [^2]: 例如，若有一个 `src` 目录，在 linux 下 `ln -s /mnt/d/src /mnt/d/tmp` 创建 `/mnt/d/tmp/src` 的软连接，则在 windows 上需要 `mklink /D D:\tmp\src D:\src` 指明 `src` 的名称。
 
 ## 遇到的问题
+
+### 初始化登录微软帐号酿成的悲剧
+
+20241215，我重装 windows，使用 Windows11 专业版官方镜像。
+
+安装完成后初始化阶段，我登录了我的微软帐号，并设置我的用户名，然而 `C:/Users/` 下的用户文件夹名字是我的邮箱前五位，而不是我设置的用户名。没有任何方法可以更改这个文件夹的名字，网上教程全部无效，包括改注册表（`Profilelist` 里面根本没东西）、`netplwiz` 修改用户名（不影响文件夹名）。
+
+最终我尝试新建一个用户，然后把老的用户删掉，这样成功将用户文件夹名字改成我想要的。接下来一次重启，windows 要求我设置 PIN 码，否则我必须使用邮箱验证码登录，我设置了。
+
+再次重启，登录界面的用户名是我已经删除的老用户的用户名；报错 Something happened and your PIN isn't available. Click to set up your PIN again. 只有一个按钮能够点击，点击后屏幕闪烁一次，仍然报错。按住 Shift 重启，进入启动选项，[清理 Ngc 文件夹](https://answers.microsoft.com/en-us/windows/forum/all/something-happened-and-your-pin-isnt-available/5365fc65-27a9-4ec6-b9c3-032b54da50f9)无效，安全模式启动无效。
+
+于是只好重装，我刚装好的系统已经配了一个小时，全部变成一场空。还好我有双系统，重装前还能备份一点点配好的东西。
 
 ### 百度网盘图标
 

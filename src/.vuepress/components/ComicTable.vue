@@ -610,6 +610,8 @@ const data = [
   { id: "542977", aScore: 7.3, bScore: 6.8, info: "#兽耳 #妖精 #纯爱", bak: "https://telegra.ph/COMIC125-備前式ロロップ-備前-ずんだもんには人権がない-VOICEROID-中国翻訳-12-10" },
   { id: "487965", aScore: 4.5, bScore: 8.7, info: "#连续绝顶 #魔法 #虚空打靶", order: 1, bak: "https://telegra.ph/超斬開-TER-オナホ売りの少女-わるい子とパパのエロい漫画-中国翻訳-無修正-DL版-12-12" },
   { id: "543020", aScore: 6.8, bScore: 7.9, info: "#父女 #强迫性交", bak: "https://telegra.ph/イオタワークス-内海ι-まなむすめ性徴狂記録-中国翻訳-DL版-12-11" },
+  { id: "543203", aScore: 9.6, bScore: 8.9, info: "#认知阻碍 #全彩" },
+  { id: "438598", aScore: 7.6, bScore: 9, info: "#异世界 #催情 #兽耳" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

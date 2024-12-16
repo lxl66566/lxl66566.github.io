@@ -92,11 +92,28 @@ zsh 是 bash 统治下的顺从者，其几乎全兼容 bash。zsh 是 macos 的
 
 ## nushell
 
-nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu 语言，并重载了许多 posix 指令（以便更好地展示执行结果）。nushell 也使用 rust 实现，性能与安全性无需担忧。nushell 是跨平台的，因此成为我在 windows 上的一个选择。可惜 nushell 补全只能从历史中补，手感还是挺差的。
+nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu 语言，并重载了许多 posix 指令（以便更好地展示执行结果）。nushell 也使用 rust 实现，性能与安全性无需担忧。nushell 是跨平台的，因此成为我在 windows 上的一个选择。可惜 nushell 补全只能从历史中补，手感还是打不过 fish。
 
 自己搓语言的基本上都有很高的学习成本，nushell 也不例外。nu 语言有对 rust 的借鉴和[反叛](https://t.me/withabsolutex/1698)。
 
 不过 nushell 最劝退我的还是 [rust 的一个 bug](https://t.me/withabsolutex/1700)，导致其无法在我的 RAMDisk 上工作。
+
+### 配置
+
+nushell 只有 winget 安装方法（`winget install nushell`），没有 scoop 安装。
+
+安装好后，在 nushell 中执行下面的语句：
+
+```nushell
+config env --default | save ($nu.default-config-dir | path join 'env.nu')
+config nu --default | save ($nu.default-config-dir | path join 'config.nu')
+```
+
+即可在配置文件夹生成默认配置。然后就是编辑配置即可，官方建议单独开一个 `custom.nu` 写自己的配置，然后 source 到主配置（`config.nu`）中。
+
+```nushell
+source ($nu.default-config-dir | path join 'custom.nu')
+```
 
 ## xonsh
 
