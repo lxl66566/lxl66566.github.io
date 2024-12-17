@@ -610,6 +610,27 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash HEAD~2
 > _Asuka Minato：用 ci 的 repo 为啥要在意提交次数，人家 cn 源的 bot 那次数都没人管_  
 > _AbsoluteX：话题结束，鉴定为吃太饱（_
 
+### 崭新出厂
+
+像我这种喜欢用 Git 备份一切的人，也会用 Git 备份一些经常变化的大二进制文件，代表性仓库是 [my-key-data](https://github.com/lxl66566/my-key-data)。久而久之，Git 仓库会越来越大，因此一段时间以后让 repo “恢复出厂设置” 以减小文件大小是有必要的。（我的备份场景下，并不在乎历史版本追溯）
+
+我之前用的一直是简单粗暴 `rm -rf .git && git init`，但是现在似乎也有了新的思路。
+
+```sh
+# 假设仓库已将最新修改 commit 到 main 分支
+git checkout -b new                    # 切换临时分支
+git branch -D main                     # 删除旧分支
+git checkout --orphan main             # 全新分支
+git add -A
+git commit --signoff -a -m "..."
+git push -f                            # 干掉 origin/HEAD 和 origin/main
+git branch -D new
+git reflog expire --expire=now --all   # 干掉所有引用
+git gc --prune=now --aggressive        # gc，删除 blob
+```
+
+这样就能得到一个船新的、与之前完全一致的、最小化空间占用的 repo 了。虽然这样做弯弯绕绕，咋一看还不如 `rm -rf .git`；但是这样有一个极大的好处，就是步骤中的 commit 的文件列表和之前的 commit 是一致的，`git push -f` 上传到 Github 时经过比对，实际上不需要上传数据。如果你的仓库大小上了 GB 甚至数十 GB，这一点操作能为你节约不少上传时间和流量。
+
 ## external
 
 1. [How different are different diff algorithms in Git?](https://link.springer.com/article/10.1007/s10664-019-09772-z)

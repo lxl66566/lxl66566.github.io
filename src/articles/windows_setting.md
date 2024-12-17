@@ -70,8 +70,8 @@ tag:
   Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
   ```
   - winget 会自带一个 python，记得用 everything 找出来，从 PATH 里把那个 path 删掉。
-- scoop `extras/vcredist2022` 只能下载单一版本的 VC++ 运行库，因此还需要下载其他的关键软件。这里没有链接，如果有可信来源、容易下载的链接可以联系我，贴在这里。
-  - [VC++ 全量包（从 2005 到 2022）](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/)
+- 还需要下载其他的关键软件。这里没有链接，如果有可信来源、容易下载的链接可以联系我，贴在这里。
+  - 在 extras bucket 里安装 `scoop search vcredist` 搜到的所有 C++ 运行库。
   - [DirectX 修复工具](https://www.puresys.net/5055.html)
 - 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
   1. 设置中搜索 _启用或关闭 Windows 功能_，打开 HyperV 选项。

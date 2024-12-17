@@ -220,6 +220,10 @@ python（windows 下）自带的包管理器。其使用一个全局环境，如
 
 pip 使用 `requirements.txt` 用于声明项目依赖，使用时只需 `pip install -r requirements.txt` 即可。该文件可以用 pip 导出，也可以自己写模块。可以不写版本，只写每行一个模块名。
 
+#### 其他
+
+还有一些 rewrite to rust 的包管理器，例如 rye, pixi，底层调用的都是 uv。它们也没有更多吸引我的 feature，因此只需要用 uv 就行了。
+
 ## 语言相关
 
 ### 基本概念

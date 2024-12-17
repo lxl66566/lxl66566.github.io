@@ -387,7 +387,9 @@ diff 增强插件，为 github 使用。
 ## 浏览器脚本
 
 ::: tip 提示
-请确保已经安装插件[Tampermonkey](#tampermonkey)。
+
+请确保已经安装插件 [Violentmonkey](https://violentmonkey.github.io/) 或 [Tampermonkey](#tampermonkey)。（前者是开源无广告，后者是老牌）
+
 :::
 
 ### [Google Hit Hider](https://greasyfork.org/scripts/1682)
