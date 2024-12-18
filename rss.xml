@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 17 Dec 2024 17:44:27 GMT</pubDate>
-    <lastBuildDate>Tue, 17 Dec 2024 17:44:27 GMT</lastBuildDate>
+    <pubDate>Wed, 18 Dec 2024 11:19:45 GMT</pubDate>
+    <lastBuildDate>Wed, 18 Dec 2024 11:19:45 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -121,6 +121,10 @@
 </ul>
 </li>
 <li>超出自动换行：<code>flex-wrap: wrap;</code>；换行后又会引入行间对齐 <code>align-content</code>。</li>
+</ol>
+<h2>external</h2>
+<ol>
+<li><a href="https://zh.learnlayout.com/" target="_blank" rel="noopener noreferrer">学习 CSS 布局</a></li>
 </ol>
 ]]></content:encoded>
     </item>
