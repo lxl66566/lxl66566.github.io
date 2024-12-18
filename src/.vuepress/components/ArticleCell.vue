@@ -58,6 +58,7 @@ const updateColumns = () => {
     Math.min(Math.floor(availableWidth / maxColumnWidth), props.boxData.length),
     1,
   );
+  containerRef.value.style.flexWrap = columnCount > 1 ? "nowrap" : "wrap";
   columns.value = Array.from({ length: columnCount }, () => ({
     boxes: [],
     height: 0,
@@ -89,8 +90,7 @@ watch(() => props.boxData, updateColumns);
 <style scoped lang="scss">
 .container {
   display: flex;
-  flex-wrap: nowrap;
-  width: 100%; // 确保占用最大宽度
+  max-width: 100%; // 确保占用最大宽度
   height: auto;
 }
 
@@ -98,6 +98,7 @@ watch(() => props.boxData, updateColumns);
   display: flex;
   flex-direction: column;
   flex: 1; // 平均分配宽度
+  max-width: 100%;
 }
 
 .box {
@@ -120,5 +121,10 @@ fieldset {
     color: var(--theme-color);
     font-size: 1.3rem;
   }
+}
+
+li {
+  white-space: normal;
+  /* 允许换行 */
 }
 </style>

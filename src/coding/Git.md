@@ -424,7 +424,7 @@ linux 上倒是挺方便，但估计不能在 windows 下跨盘符使用。
 
 ### 取消转义
 
-git 默认会将中文以 `\` 转义的方式显示。要取消，需要：
+git bash 默认会将中文以 `\` 转义的方式显示。要取消，需要：
 
 1. 右键 - Options - Text - Locale，选择 `zh-CN`，字符选择 `UTF-8`。
 2. `git config --global core.quotepath false`
@@ -629,7 +629,7 @@ git reflog expire --expire=now --all   # 干掉所有引用
 git gc --prune=now --aggressive        # gc，删除 blob
 ```
 
-这样就能得到一个船新的、与之前完全一致的、最小化空间占用的 repo 了。虽然这样做弯弯绕绕，咋一看还不如 `rm -rf .git`；但是这样有一个极大的好处，就是步骤中的 commit 的文件列表和之前的 commit 是一致的，`git push -f` 上传到 Github 时经过比对，实际上不需要上传数据。如果你的仓库大小上了 GB 甚至数十 GB，这一点操作能为你节约不少上传时间和流量。
+这样就能得到一个船新的、与之前完全一致的、最小化空间占用的 repo 了。虽然这样做弯弯绕绕，咋一看还不如 `rm -rf .git`；但是这样有一个极大的好处，就是步骤中的 commit 的文件列表和之前的 commit 是一致的，`git push -f` 上传到 Github 时经过比对，实际上不需要上传数据。如果你的仓库大小上了 GB 甚至数十 GB，这一点操作能为你节约不少上传时间和流量。而 git 仓库重建后的上传是需要全量上传的。
 
 ## external
 

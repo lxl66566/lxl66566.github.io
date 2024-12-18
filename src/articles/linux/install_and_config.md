@@ -12,7 +12,9 @@ tag:
 
 ## 安装
 
-### Archlinux
+:::: tabs
+
+@tab Archlinux
 
 20230819 收到购买的硬盘，正式安装 archlinux（双系统）。安装过程还挺坎坷的，在[问题区](./problem.md)可见一斑。
 
@@ -47,11 +49,23 @@ grub-mkconfig -o /boot/grub/grub.cfg
 umount /mnt/windows
 ```
 
-### ArchWSL
+@tab ArchWSL
 
-- 更新 ArchWSL：从[此处](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
+### [ArchWSL](https://github.com/yuk7/ArchWSL)
 
-### TermuxArch
+- 安装：
+  1. 设置中搜索 _启用或关闭 Windows 功能_，打开 HyperV 选项。
+  2. 安装 wsl 与 archwsl。
+  ```powershell
+  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+  # 重启
+  wsl --update
+  scoop install archwsl
+  ```
+  3. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
+- 更新 ArchWSL：从[wsldl](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
+
+@tab TermuxArch
 
 20230920 下午安装 TermuxArch，也踩了不少坑。
 
@@ -65,6 +79,8 @@ umount /mnt/windows
    Server = http://mirrors.ustc.edu.cn/archlinuxarm/$arch/$repo
    Server = http://mirrors.stuhome.net/archlinuxarm/$arch/$repo
    ```
+
+::::
 
 ## 配置
 

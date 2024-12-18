@@ -83,6 +83,10 @@ python 的包管理器可以说是百花齐放。
 
 对于 python 包管理器，我的基本需求是：1. 帮我打包 + 上传 2. 支持 [PEP 621](https://peps.python.org/pep-0621/)。
 
+:::: tabs
+
+@tab uv
+
 #### [uv](https://github.com/astral-sh/uv)
 
 新的，用 rust 写的包管理器。现在也就出了没两年，赶上了 RIIR 的热潮，引起了很多话题。
@@ -94,11 +98,27 @@ python 的包管理器可以说是百花齐放。
 1. 不能在中文目录下 `uv init`，但是可以 `uv init --name xxx` 绕过。
    - 不能用中文做 package name 是 PEP 621 的要求。对于拿包管理器但是不用来写一个 python package 的人来说不太友好。
 
+##### 使用
+
+uv 的使用与其他包管理器类似，也非常简单。
+
+```sh
+uv add <packages>       # 添加包
+uv remove <packages>    # 移除包
+uv sync                 # 更新 .venv
+uv run python xxx.py    # 运行某个 py 文件
+uv python pin 3.12      # 对当前项目使用某个 python 版本，如果没下载会自动下载
+```
+
+@tab pdm
+
 #### [pdm](https://github.com/pdm-project/pdm)
 
 国人开发，据说很好用，除了性能以外没有其他问题。我还没用过，不过日后会尝试。
 
-pdm 也不允许在中文目录下 init，并且没有方法绕过。好，我不尝试了。
+pdm 也不允许在中文目录下 init，并且没有类似 uv 的 `--name` 方法绕过。好，我不尝试了。
+
+@tab poetry
 
 #### poetry
 
@@ -109,8 +129,6 @@ poetry 可以说是我用的最久的 python 包管理器了。弃坑原因主�
 1. 其不兼容 [PEP 621](https://peps.python.org/pep-0621/)，因为 poetry 出道的时候 PEP 621 还没有出现呢。
 2. dep resolve 太慢了。
 3. 有更多更好的新兴包管理器。
-
-:::: details archived
 
 ##### 安装
 
@@ -136,26 +154,17 @@ poetry config cache-dir Z:\
 
 身在中国，换源是很重要的（python 不走代理[^1]）。最好每次创建项目都换源，这样一起协作的其他人都无需手动换源。参考[文档](https://python-poetry.org/docs/repositories#project-configuration)。
 
-::: tabs
-
-@tab 命令行换源
-
-```sh
-poetry source add tsinghua-pypi https://pypi.tuna.tsinghua.edu.cn/simple
-```
-
-@tab 手动换源
-
-编辑 `pyproject.toml`.
-
-```toml
-[[tool.poetry.source]]
-name = "tsinghua-pypi"
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
-priority = "default"
-```
-
-:::
+- 命令行换源
+  ```sh
+  poetry source add tsinghua-pypi https://pypi.tuna.tsinghua.edu.cn/simple
+  ```
+- 手动换源：编辑 `pyproject.toml`
+  ```toml
+  [[tool.poetry.source]]
+  name = "tsinghua-pypi"
+  url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+  priority = "default"
+  ```
 
 ##### 基本命令
 
@@ -173,13 +182,11 @@ priority = "default"
   - 删除：`poetry env remove --all`
 - 运行：`poetry run python <filename>.py`
 
-::::
+@tab miniconda
 
 #### miniconda
 
 提供 python 包管理与虚拟环境。我已弃用 miniconda。
-
-::: details archived
 
 Anaconda 体积过于庞大（6G+），**强烈建议[安装 miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda 捆绑祸害了多少编程新人！（包括我）</span> windows 可以使用 [scoop](../farraginous/recommend_packages.md#scoop) 一行搞定。
 
@@ -212,7 +219,7 @@ conda list  # 查看环境内工具包
      ![anaconda_pureenv](/images/coding/python/anaconda_2.png)
      这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller)进行打包前的准备。
 
-:::
+@tab pip
 
 #### pip
 
@@ -220,9 +227,11 @@ python（windows 下）自带的包管理器。其使用一个全局环境，如
 
 pip 使用 `requirements.txt` 用于声明项目依赖，使用时只需 `pip install -r requirements.txt` 即可。该文件可以用 pip 导出，也可以自己写模块。可以不写版本，只写每行一个模块名。
 
-#### 其他
+@tab 其他
 
 还有一些 rewrite to rust 的包管理器，例如 rye, pixi，底层调用的都是 uv。它们也没有更多吸引我的 feature，因此只需要用 uv 就行了。
+
+::::
 
 ## 语言相关
 

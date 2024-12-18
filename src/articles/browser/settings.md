@@ -25,6 +25,10 @@ tag:
 - [Side Space](https://chromewebstore.google.com/detail/side-space-vertical-tab-m/ipcmlnjbpgmnpahkkboglidcbkndekjj)，[Vertical Tabs](https://chromewebstore.google.com/detail/vertical-tabs/efobhjmgoddhfdhaflheioeagkcknoji)，[tabVertikal](https://chromewebstore.google.com/detail/tabvertikal-垂直选项卡/aahjeignibghcnabifeoclpebaleldkj)，[Tab Shelf](https://chromewebstore.google.com/detail/tab-shelf-side-panel-vert/gkiobnohamhihbaipacecjfljepjjlmg?hl=zh-CN)，[Thready](https://chromewebstore.google.com/detail/thready-vertical-tabs/aihcofnnndflfjbmlekiegncnahgmaik?hl=zh-CN&utm_source=ext_sidebar)：全部否决，太宽了。这些都是用的 chromium 侧边栏 api，但是这 api 就是**纯纯的脑瘫**，有 min width 限制。[相关讨论](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/xuk4ZuWTsBk)，反正我没看出什么诚意。
 - [Polychrome](https://chromewebstore.google.com/detail/polychrome-vertical-tab-g/pcdogalliibjgamnojnpbmbabghfijak?hl=zh-CN&utm_source=ext_sidebar)则是用的浮动窗口，更捞了。
 
+## 下载器
+
+我现在已经佛系了，不再使用下载器，而是[手动开启浏览器的多线程下载](../downloaders.md)。
+
 ## firefox
 
 20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满足我的需求，甚至更加贴合我的个人需求（纵向标签栏，firefox 没有内置此功能），换浏览器大约只是我的心血来潮而已。为此我花了很多功夫设置 firefox。然而我还是于 20230304 换回了 edge。

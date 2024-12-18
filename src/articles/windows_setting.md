@@ -73,16 +73,7 @@ tag:
 - 还需要下载其他的关键软件。这里没有链接，如果有可信来源、容易下载的链接可以联系我，贴在这里。
   - 在 extras bucket 里安装 `scoop search vcredist` 搜到的所有 C++ 运行库。
   - [DirectX 修复工具](https://www.puresys.net/5055.html)
-- 开 [ArchWSL](https://github.com/yuk7/ArchWSL)。
-  1. 设置中搜索 _启用或关闭 Windows 功能_，打开 HyperV 选项。
-  2. 安装 wsl 与 archwsl。
-  ```powershell
-  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-  # 重启
-  wsl --update
-  scoop install archwsl
-  ```
-  3. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
+- [安装 ArchWSL](./linux/install_and_config.md#安装)
 - 解决[端口随机占用](#端口随机占用)
 - [组织管理滚](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c)。
 - 关闭自动更新。
