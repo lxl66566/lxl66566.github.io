@@ -327,6 +327,28 @@ print(c.send(1))
 
 首先 Generator 执行到 `yield 2`，返回 2；接着向其 send 一个 1，Generator 将 `(yield 2)` 本身作为 1，继续执行，打印出 1，并在下一次 `yield 2` 返回。相当于一个传值 + next。
 
+### 并发
+
+多线程（threading）和多进程（multiprocessing）属于比较重的并发，用于计算密集型，不适用于网络 & IO。一般网络等使用 asyncio 进行协程并发。
+
+下面是一个用协程的例子。
+
+```py
+import asyncio
+async def xxx(i):
+    return i
+async def main():
+    a = []
+    for i in range(10):
+        a.append(xxx(i))
+    x = await asyncio.gather(*a)
+    print(x)
+asyncio.run(main())
+# 打印 1-10，表明 gather 的结果是有序的。
+```
+
+python 的 async/await 也具有染色性质，导致很多地方同一个代码要写 async 和非 async 两个版本，这是当前版本的一个痛点，[还没有优雅的解决方法](https://www.bilibili.com/video/av113593110502112/)。
+
 ## 语法糖
 
 ### format string
@@ -528,6 +550,25 @@ for name in file.sheet_names:
 [^3]: [我的一些抱怨](https://t.me/withabsolutex/1530)；如果要看优美的表处理语法，建议看看 [Pony ORM](https://ponyorm.org/)。
 
 一行代码更换 pandas 后端，可以大幅提升读取速度。([src](https://datapythonista.me/blog/how-fast-can-we-process-a-csv-file))
+
+## 调试
+
+python 自带一个 pdb 调试器，非常方便，功能也很强大。Python 3.11 - 3.13 里 pdb 有许多改进。
+
+使用：在程序中插入一个 `breakpoint()` 即可进入 pdb。
+
+常见 pdb 命令：
+
+<!-- prettier-ignore -->
+|命令|作用|
+| --- | --- |
+| c (continue) | 继续运行 |
+| n (next) | 下一步（不进入函数） |
+| s (step) | 下一步（进入函数） |
+| l (list) | 打印当前程序代码 |
+| p (print) | 打印 |
+| pp (pprint) | 美观打印 |
+| ! (!var=xxx) | 更改变量 |
 
 ## 测试
 

@@ -100,6 +100,7 @@ tag:
     - windows 的单击逻辑做的还是比 linux kde 好的，_悬浮选中_ 是单击逻辑中的重要组成部分。
   - 更改触摸板功能：三指左右划调节音量。实际上并不是很好用：我音量常年 20%，触摸板调节的话很容易拉得太大。
   - [shell alias](#shell-alias)
+  - 关闭鼠标的 “提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
 - 做减法：
   - 使用[O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10)禁用一些非必须功能。
   - 关闭搜索推荐&热门新闻：关闭 _设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点_ 。([ref](https://www.landiannews.com/archives/95045.html)，最新版 win11 可能没有此条设置)

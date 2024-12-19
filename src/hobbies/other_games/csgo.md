@@ -32,7 +32,7 @@ CS 能够带来短时大量的多巴胺，这样是不好的。多巴胺阈值�
 1. 将画面设为 4:3。CS2 原生提供了 4:3 的拉伸（必需使用全屏模式）。
 2. 在设置里可以直接改小地图缩放，无需通过控制台。我直接拉到了最低。
 3. 帧率显示：通过控制台显示帧率比较丑，建议用 steam 提供的接口：_Steam - 设置 - 游戏中 - 开启帧率显示 与高对比度_
-4. 绑定跳投指令：`steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg` 中新建 `<name>.cfg`，写入：
+4. ~~绑定跳投指令~~（最新版本已禁止跳投）：`steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg` 中新建 `<name>.cfg`，写入：
    ```
    +jump
    -attack
