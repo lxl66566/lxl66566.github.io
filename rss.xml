@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 19 Dec 2024 04:09:56 GMT</pubDate>
-    <lastBuildDate>Thu, 19 Dec 2024 04:09:56 GMT</lastBuildDate>
+    <pubDate>Sun, 22 Dec 2024 15:56:16 GMT</pubDate>
+    <lastBuildDate>Sun, 22 Dec 2024 15:56:16 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -1107,6 +1107,11 @@
 <p>现成的 crates 里，<em>wsola</em> 是个脑残占名字的没有内容，而 <a href="https://codeberg.org/PieterPenninckx/tdpsola" target="_blank" rel="noopener noreferrer"><em>tdpsola</em> 有一个可用实现</a>。把仓库拉下来，example 里带了 wav 支持，不需要手动转 raw。然后试了一下，确实能够实现加速！让我非常开心。虽然只支持单声道 wav，我还需要手动转一次，但是没有什么难度。并且作者在 README 里给出了一个 documentation，里面的视频把 TD-PSOLA 原理讲得非常透彻。</p>
 <h3>打击</h3>
 <p>此时我终于读懂了 Hourglass-Resurrection 的代码是自己写 DirectSound 的驱动，并且也发现操作 tick 并不能实现真正的音频加速，最终的道路一定是 buffer。于是我陷入了消沉：做一个音频加速的复杂度已经远超出了我的想象，即使知晓了音频加速原理，也很难面对一大坨 windows sound api。我目前摸索的这些知识在脑子里并不能合到一起。</p>
+<h2>external</h2>
+<p>目前这个项目暂时停滞了，我希望有一天能够重启这个项目。这里存一些可能用得上的资料。</p>
+<ul>
+<li><a href="https://shanewfx.github.io/blog/2013/08/14/caprure-audio-on-windows/" target="_blank" rel="noopener noreferrer">Windows 上的音频采集技术 - 思考的轨迹</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>
@@ -1125,7 +1130,7 @@
 <p>放在脚本开头，以指示此脚本使用的解释器。因此如果写了 <code>#!/bin/bash</code>，则表示脚本是一个 bash 脚本，可以直接 <code>./filename</code> 执行。</p>
 <p>不过为了最佳的兼容性（NixOS 太怪胎了），可以写成 <code>#!/usr/bin/env bash</code>。</p>
 <h2>bash</h2>
-<p>bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种终端设备，windows（win10 开始内置 bash），macos（默认 zsh，兼容） 上执行 bash 脚本。基本上这个时代没有几个设备是不用 bash 的。</p>
+<p>bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种终端设备，windows（通过 WSL 或 msys2），macos（默认 zsh，兼容） 上执行 bash 脚本。基本上这个时代没有几个设备是不用 bash 的。</p>
 <p>此处不会涉及 bash 系统教学，只会零碎记一些知识点。系统学习可以看<a href="#external">external 1.</a>。</p>
 <ul>
 <li>bash 的要义是一切皆字符串。</li>
