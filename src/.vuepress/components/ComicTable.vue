@@ -613,6 +613,11 @@ const data = [
   { id: "543203", aScore: 9.6, bScore: 8.9, info: "#认知阻碍 #全彩" },
   { id: "438598", aScore: 7.6, bScore: 9, info: "#异世界 #催情 #兽耳" },
   { id: "544162", aScore: 6.7, bScore: 6.3, info: "#雌小鬼", bak: "https://telegra.ph/ちぇるちぇるぱーく-れいちぇる-うちのメスガキ義妹は素直じゃない-中国翻訳-12-17-2" },
+  { id: "526258", aScore: 9, bScore: 9.1, info: "#合集 #xp #公共场合 #触手 みんなの性癖漫画", bak: "https://telegra.ph/ぬんぬ-みんなの性癖漫画-12-04" },
+  { id: "545029", aScore: 5.7, bScore: 4.2, info: "#比试 #败北 #媚药", bak: "https://telegra.ph/メメリスチャンネル-メメリスちゃんのえっちな合同誌-中国翻訳-12-21" },
+  { id: "544213", aScore: 4.2, bScore: 7.6, info: "#异世界 #色狼 #NTR #无插入 クロワリア", order: 1, bak: "https://telegra.ph/寝語屋-クロワリア-12-16" },
+  { id: "544300", aScore: 4.1, bScore: 6.2, info: "#异世界 #色狼 #NTR #无插入 #触手 クロワリア", order: 2, bak: "https://telegra.ph/寝語屋-クロワリア-2-12-17" },
+  { id: "544472", aScore: 4.3, bScore: 7.3, info: "#异世界 #色狼 #NTR #口交 #地陷 クロワリア", order: 3, bak: "https://telegra.ph/寝語屋-クロワリア-3-中国翻訳-12-18" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

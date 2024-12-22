@@ -10,9 +10,9 @@ tag:
   - 网络
 ---
 
-# 代理软件选择
+# 代理客户端选择
 
-有关于各代理软件的性能 benchmark，请看[这里](https://docs.google.com/spreadsheets/d/1UaWU6nNho7edBNjNqC8dfGXLlW0-cm84MM7sH6Gp7UE/edit?pli=1&gid=1965963111#gid=1965963111)。
+有关于各代理客户端的性能 benchmark，请看[这里](https://docs.google.com/spreadsheets/d/1UaWU6nNho7edBNjNqC8dfGXLlW0-cm84MM7sH6Gp7UE/edit?pli=1&gid=1965963111#gid=1965963111)。
 
 ## Clash 系
 
@@ -84,10 +84,7 @@ V2rayN 是 V2ray 的 windows 前端，支持自定义协议，也可以更换内
 
 相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点+规则，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用 clash 配置文件。
 
-1. 前往 PC 客户端项目地址，下载
-   - 可以选择下载 `v2rayN-With-Core.zip`，最为简单无脑。
-   - With Core 体积太大了，我选择自己配置内核。则需要在内核项目地址下载内核后，解压放入 `/v2rayN/bin/v2fly_v5` 下。
-     根据项目提示，我还下载了 [Xray-core](https://github.com/XTLS/Xray-core) 放入 `/v2rayN/bin/Xray`。<span class="heimu" title="你知道的太多了">应该不会有人把解压后的整个文件夹丢进去吧</span>
+1. 前往 PC 客户端项目地址，下载 `v2rayN-With-Core.zip`。（我以前是自己配内核的，但是后来发现问题太多了，还有跨版本兼容性，真不如 with core）
 2. 复制节点地址，按 `Ctrl+V` 导入，按 `Enter` 激活。
 3. 测试真连接延迟，确保节点有效。
 4. 下方 _系统代理_ 处选择 _自动配置系统代理_，开启代理。

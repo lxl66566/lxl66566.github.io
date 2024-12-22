@@ -60,9 +60,12 @@ umount /mnt/windows
   Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
   # 重启
   wsl --update
+  wsl --install --no-distribution
   scoop install archwsl
   ```
-  3. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
+  4. 拉一个 `.wslconfig`，例如[我的](https://github.com/lxl66566/my-key-data/blob/main/config/.wslconfig)。否则网络啥的可能会出问题。
+  5. 参照[官方文档](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/)使用 pacman。
+  6. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
 - 更新 ArchWSL：从[wsldl](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
 
 @tab TermuxArch
@@ -123,6 +126,16 @@ umount /mnt/windows
    - > 无所谓，现在是 X11 人
 5. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
 6. 设置 pacman：
+   - 修改 `/etc/pacman.d/mirrorlist`，添加镜像
+   - 添加 archlinuxcn：修改 `/etc/pacman.conf`，添加两行（[ref](https://www.archlinuxcn.org/archlinux-cn-repo-and-mirror/)）：
+     ```toml
+     [archlinuxcn]
+     Server = https://repo.archlinuxcn.org/$arch
+     ```
+   - 基础与添加 keyring：
+     ```sh
+     sudo pacman -Sy archlinux-keyring archlinuxcn-keyring
+     ```
    - 将某些不常用包和自更新包加入 IgnorePkg，例如 _chromium_ & xmake | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
    - 更改缓存至 ramdisk (`CacheDir`)
 7. 更改 AUR Helper 缓存（参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：

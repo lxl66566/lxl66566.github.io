@@ -271,3 +271,9 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 ### 打击
 
 此时我终于读懂了 Hourglass-Resurrection 的代码是自己写 DirectSound 的驱动，并且也发现操作 tick 并不能实现真正的音频加速，最终的道路一定是 buffer。于是我陷入了消沉：做一个音频加速的复杂度已经远超出了我的想象，即使知晓了音频加速原理，也很难面对一大坨 windows sound api。我目前摸索的这些知识在脑子里并不能合到一起。
+
+## external
+
+目前这个项目暂时停滞了，我希望有一天能够重启这个项目。这里存一些可能用得上的资料。
+
+- [Windows 上的音频采集技术 - 思考的轨迹](https://shanewfx.github.io/blog/2013/08/14/caprure-audio-on-windows/)

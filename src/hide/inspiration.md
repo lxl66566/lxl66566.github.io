@@ -20,6 +20,10 @@ tag:
 - [ ] 操纵世界上所有 npc 进行决定主角命运的行为
 - [ ] 你是一个监狱守备，一名囚犯买通了你，你需要协助他避开其他守卫越狱。
 - [ ] galgame 主题的 iwanna，素材来源于收藏的语音
+- [ ] 数据结构打怪，红黑树/平衡树
+  - 数组合成高维数组
+  - B 树 + 链表合成 = B+ 树
+- 超级鸡马 + 蔚蓝
 
 ## 编程灵感
 
@@ -85,6 +89,7 @@ tag:
 - [ ] 分布式服务器监控全栈
 - [ ] 半连接神经网络
 - [ ] matlab executor or translator
+- [ ] use excel-like editor to edit sql database
 
 ### RIIR
 

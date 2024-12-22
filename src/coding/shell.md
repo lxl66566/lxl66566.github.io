@@ -25,7 +25,7 @@ tag:
 
 ## bash
 
-bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种终端设备，windows（win10 开始内置 bash），macos（默认 zsh，兼容） 上执行 bash 脚本。基本上这个时代没有几个设备是不用 bash 的。
+bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种终端设备，windows（通过 WSL 或 msys2），macos（默认 zsh，兼容） 上执行 bash 脚本。基本上这个时代没有几个设备是不用 bash 的。
 
 此处不会涉及 bash 系统教学，只会零碎记一些知识点。系统学习可以看[external 1.](#external)。
 
