@@ -392,6 +392,8 @@ const data = [
   { id: "midv-459", aScore: 7.7, bScore: 4.2, u: true, name: "痴●の指マンがストライクすぎて…声も出せず糸引くほど愛液が溢れ出し堕とされた私 石川澪" },
   { id: "midv-835", aScore: 6.8, bScore: 4, u: true, name: "嫁の連れ子を1週間お貸しします。知らないオヤジと義父の肉棒で何度も何度もイってしまった私… 石川澪" },
   { id: "midv-639", aScore: 7.3, bScore: 3, u: true, name: "同窓会でネトラレてるのにいっぱいイッちゃった… 石川澪" },
+  { id: "stars-435", aScore: 5.8, bScore: 4.2, u: true },
+  { id: "miaa-828", aScore: 6.2, bScore: 7, u: true },
 ].sort((x, y) => -TwoScoreCompare(x, y));
 // 同分则颜值分优先
 

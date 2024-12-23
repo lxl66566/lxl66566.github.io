@@ -115,6 +115,12 @@ config nu --default | save ($nu.default-config-dir | path join 'config.nu')
 source ($nu.default-config-dir | path join 'custom.nu')
 ```
 
+## powershell
+
+一般的 windows 都自带 powershell 1.0。但是有的命令在老版本 powershell 上会执行失败，可以用 `scoop install pwsh` 安装最新版本的 powershell。
+
+- Windows 上难免会遇上带空格的可执行文件路径，但是直接使用双引号包裹并不能执行该命令。需要在双引号前添加 `&` 才可以将字符串视为可执行文件执行。
+
 ## xonsh
 
 我一看到 xonsh 就把它加到了我的 👍 list 里。它不自创脚本语言，而是使用 python 作为其解释器。在 python 爆火的当下，xonsh 可能是一个不错的选择，它完全避开了高昂的学习成本和 bash 脚本的难用，还能借 python 优秀的跨平台能力为所欲为。

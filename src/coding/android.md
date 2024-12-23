@@ -293,7 +293,7 @@ Log.w("Mytag", "message")
 
 ## Test
 
-Andriod 一共有两种测试，androidTest 和 test (unittest)。两个测试中使用的依赖要分别引入：
+Android 一共有两种测试，androidTest 和 test (unittest)。两个测试中使用的依赖要分别引入：
 
 ```kotlin
 testImplementation(kotlin("test"))

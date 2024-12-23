@@ -215,6 +215,7 @@ _（不排除早期缺漏）_
 <!-- prettier-ignore -->
 |游戏名|开始时间|评分(剧情)|评分(画风)|评分(程序)|
 | :-: | :-: | :-: | :-: | :-: |
+| eden* PLUS＋MOSAIC | 2024.12.23 |
 | 奇异恩典 -What color is your attribute?- | 2024.12.20 |
 | 青鸟 | 2024.11.17 |
 | 戦巫＜センナギ＞ ―穢れた契りと神ころも― | 2024.10.31 |
@@ -419,6 +420,13 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 - 一般来说，能打动我，能让我产生共鸣的 galgame，我都会打上比较高的剧情分（满足剧情党的喜好）。
 - 目前在我玩过的 gal 中，我认为的三幻神是 [ISLAND](#island)，[纸魔](#纸上魔法使)，[sprb](#summer-pockets-reflection-blue)。
 - 在这里打一些标签：<Badge text="精美" /> <Badge text="无 R18" type="tip" />
+
+### eden\*
+
+我一开始在 steam 冬促买的 eden* 本体。结果发现国区无法下载 eden* PLUS ＋ MOSAIC 补丁；各资源点也都遮遮掩掩，私聊才给。一怒之下我直接去 tg 频道下载了 eden\* PLUS ＋ MOSAIC 的 [bundle 全量版本](https://t.me/erogamecloud/3621)。
+
+- 老游戏不奢求程序做的多好，但是问题也是要指出来的。
+  - 角色声音不均衡，而且不能分别调整
 
 ### 奇异恩典 -What color is your attribute?-
 

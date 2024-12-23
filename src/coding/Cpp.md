@@ -113,11 +113,11 @@ all in one 类型的插件，我**不是很喜欢，不够自由**。
 
 ### 构建系统
 
-最广泛使用的是用 _Cmake_ 生成 makefile 然后再 make，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。我也尝试过 xmake，然而用的人少，出了 bug 找不到解决方案。不过姑且我还是用着 xmake 的。
+最广泛使用的是用 _Cmake_，然而我并不喜欢它。网上也有一些类似的想法：[Why CMake sucks?](https://twdev.blog/2021/08/cmake/)。
 
-有兴趣的话也可以看看[cmkr](https://github.com/build-cpp/cmkr)，基于 toml 生成 cmake 文件，三阶构建（cmkr -> cmakelists -> makefile）
+::: tabs
 
-#### xmake
+@tab xmake
 
 xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmake 使用 lua 脚本作为构建系统语言。**~~我真的不想再面对一团乱麻的 cmake 了！~~**
 
@@ -125,16 +125,17 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 - 开始使用：
   - use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install xmake` 一行安装。输入 `xmake -h` 了解更多。
   - 示例：`xmake create -l c++ -P ./cpp && cd cpp && xmake && xmake r`
+  - 一些 LSP 可能会需要 `compile_commands.json`：`xmake project -k compile_commands`
 - 一些预设
   ```lua
-  set_encodings("utf-8")  -- 没加会导致 Qt 中文乱码
+  set_encodings("utf-8")            -- 没加会导致 Qt 中文乱码
   set_policy("build.warning", true) -- 开启编译警告
-  set_languages("cxxlatest")  -- 设置 C++ 版本，或 `cxx20`
-  set_optimize("fastest")     -- 优化等级，不过 release 有默认
+  set_languages("cxxlatest")        -- 设置 C++ 版本
+  set_optimize("fastest")           -- 优化等级，不过 release 有默认
   add_requires("fmt")
-  target("test")              -- 添加 fmt 包
-    ...
-    add_packages("fmt")
+  target("test")
+    -- ...
+    add_packages("fmt")             -- 添加 fmt 包
   ```
 - 查找包（任选）：
   - 手动去 [xmake-repo](https://github.com/xmake-io/xmake-repo/) 找
@@ -142,13 +143,19 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 - 指定工具链
   - 在 target 中添加 `set_toolchains("clang")`
 
-#### cmake
+xmake 的主要缺点就是用的人少，出了 bug 找不到解决方案。不过由于我的个人项目简单，我姑且还是用着 xmake 的。
+
+@tab cmake
+
+cmake 内部原理是生成 makefile 然后再 make。
 
 实际上我也就写 Qt 接触了一下 cmake，后面很快转到 xmake 了，关于 cmake 的了解不算多。
 
-::: details archived
+- 安装：`scoop install cmake`，或者 VS 安装里也有，不过要自己加 PATH。
 
-`scoop install cmake`。
+@tab cmkr
+
+[cmkr](https://github.com/build-cpp/cmkr)，基于 toml 生成 cmake 文件，三阶构建（cmkr -> cmakelists -> makefile）
 
 :::
 

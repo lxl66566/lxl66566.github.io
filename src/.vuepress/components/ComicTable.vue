@@ -618,6 +618,8 @@ const data = [
   { id: "544213", aScore: 4.2, bScore: 7.6, info: "#异世界 #色狼 #NTR #无插入 クロワリア", order: 1, bak: "https://telegra.ph/寝語屋-クロワリア-12-16" },
   { id: "544300", aScore: 4.1, bScore: 6.2, info: "#异世界 #色狼 #NTR #无插入 #触手 クロワリア", order: 2, bak: "https://telegra.ph/寝語屋-クロワリア-2-12-17" },
   { id: "544472", aScore: 4.3, bScore: 7.3, info: "#异世界 #色狼 #NTR #口交 #地陷 クロワリア", order: 3, bak: "https://telegra.ph/寝語屋-クロワリア-3-中国翻訳-12-18" },
+  { id: "371835", aScore: 3.5, bScore: 7.8, info: "#异世界 #NTR クロワリア", order: 4, bak: "https://telegra.ph/寝語屋-クロワリア-4-中国翻訳-12-22" },
+  { id: "544908", aScore: 5.7, bScore: 8.5, info: "#异能 #禁锢 #调教" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
