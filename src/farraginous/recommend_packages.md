@@ -96,6 +96,12 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 视频下载**命令行**工具。移步[教程页面](../articles/yt-dlp.md)查看详情。
 
+### torrent 下载器
+
+很多 PT 站会限制只允许使用一些 torrent 下载器，其中一般会有 qBittorrent。而我目前使用 [qBittorrent-Enhanced-Edition](https://github.com/c0re100/qBittorrent-Enhanced-Edition)，比起原版新增了 tracker 订阅功能。
+
+对于普通 BT 站下载，需要添加 tracker，我使用 [XIU2/TrackersListCollection](https://github.com/XIU2/TrackersListCollection)。
+
 ## Android
 
 ::: tip
