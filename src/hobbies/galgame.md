@@ -316,7 +316,7 @@ _（不排除早期缺漏）_
 
 <!-- https://grid.pivotstudio.cn/gal/ -->
 
-<ExhibitionTable :items="exhibition_data"/>
+<GalExhibitionGrid :items="exhibition_data"/>
 
 ## 我的设置
 
@@ -996,7 +996,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 3. [关于我一年不到速通 N1 这件事——基于啃生肉 galgame 的日语学习攻略](https://galgame.dev/topic/639/关于我一年不到速通n1这件事-基于啃生肉galgame的日语学习攻略)
 
 <script setup lang="ts">
-import ExhibitionTable from "@ExhibitionTable";
+import GalExhibitionGrid from "@GalExhibitionGrid";
 const exhibition_data = [
   { text: "矛盾", alt: "水葬銀貨のイストリア", src: "/images/hobbies/galgame/suisouginka.jpg" },
   { text: "命运", alt: "ISLAND", src: "/images/hobbies/galgame/island.jpg" },

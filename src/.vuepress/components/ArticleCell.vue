@@ -16,20 +16,11 @@
 <script lang="ts" setup>
 import { ref, watch, onMounted } from "vue";
 import RouterJumper from "./RouterJumper.vue";
-
-interface Link {
-  text: string;
-  url: string;
-}
-
-export interface Box {
-  links: Link[];
-  field?: string;
-}
+import type { ArticleCellBoxType } from "../definition/types";
 
 const props = withDefaults(
   defineProps<{
-    boxData: Box[];
+    boxData: ArticleCellBoxType[];
     columnWidth: number;
   }>(),
   {
@@ -40,7 +31,7 @@ const props = withDefaults(
 /**
  * height 表示里面所有 boxes 的链接总数；每次新增 box 会新增在 height 最小的 column 上
  */
-const columns = ref<{ boxes: Box[]; height: number }[]>([]);
+const columns = ref<{ boxes: ArticleCellBoxType[]; height: number }[]>([]);
 const containerRef = ref<HTMLDivElement | null>(null);
 
 const textWidths = props.boxData.map(

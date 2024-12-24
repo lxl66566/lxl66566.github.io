@@ -7,8 +7,9 @@ category:
 
 # 闲聊
 
-<MyGossip/>
+<ArticleCell :box-data="links" />
 
 <script setup lang="ts">
-import MyGossip from "@MyGossip"
+import ArticleCell from "@ArticleCell";
+import links from "@@gossip";
 </script>

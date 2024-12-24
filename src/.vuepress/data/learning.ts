@@ -1,12 +1,6 @@
-<template>
-  <ArticleCell :box-data="links" />
-</template>
+import type { ArticleCellBoxType } from "../definition/types.js";
 
-<script lang="ts" setup>
-import ArticleCell from "./ArticleCell.vue";
-import type { Box } from "./ArticleCell.vue";
-
-const links: Box[] = [
+const links: ArticleCellBoxType[] = [
   {
     field: "授课外",
     links: [
@@ -44,4 +38,4 @@ const links: Box[] = [
     ],
   },
 ];
-</script>
+export default links;

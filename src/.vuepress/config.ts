@@ -29,14 +29,25 @@ gtag('config', 'G-MKRDBH1ZP1');`,
   theme,
   shouldPrefetch: false,
 });
+
+// 用于生成组件的别名，以便于直接在 .md 文件中使用组件
+const generateComponentsAlias = (list: string[]) => {
+  const temp = {};
+  list.forEach((item) => {
+    temp[`@${item}`] = path.resolve(__dirname, "components", item + ".vue");
+  });
+  return temp;
+};
+// 用于生成数据的别名，以便于直接在 .md 文件中使用数据
+const generateDataAlias = (list: string[]) => {
+  const temp = {};
+  list.forEach((item) => {
+    temp[`@@${item}`] = path.resolve(__dirname, "data", item + ".ts");
+  });
+  return temp;
+};
 temp.alias = {
-  "@AvTable": path.resolve(__dirname, "components/AvTable.vue"),
-  "@ComicTable": path.resolve(__dirname, "components/ComicTable.vue"),
-  "@ExhibitionTable": path.resolve(__dirname, "components/ExhibitionTable.vue"),
-  "@Av": path.resolve(__dirname, "components/av.vue"),
-  "@reciter": path.resolve(__dirname, "components/reciter.vue"),
-  "@MyArticles": path.resolve(__dirname, "components/MyArticles.vue"),
-  "@MyGossip": path.resolve(__dirname, "components/MyGossip.vue"),
-  "@MyLearning": path.resolve(__dirname, "components/MyLearning.vue"),
+  ...generateComponentsAlias(["AvTable", "ComicTable", "GalExhibitionGrid", "Av", "reciter", "ArticleCell"]),
+  ...generateDataAlias(["article", "gossip", "learning"]),
 };
 export default temp;

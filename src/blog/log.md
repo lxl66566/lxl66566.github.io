@@ -22,6 +22,11 @@ category:
 
 ## 2024
 
+### 20241224
+
+- 修改部分组件数据的引入方式
+- `ExhibitionTable` 改名为 `GalExhibitionGrid`
+
 ### 20241028
 
 - 使用自写组件，更换 _文章_，_学习_，_闲聊_ 的导航样式
@@ -51,7 +56,7 @@ category:
 
 ### 20240124
 
-- 新增组件 `ExhibitionTable` 与 `GalExhibitionTable`
+- 新增组件 `GalExhibitionGrid`
 - 更新依赖
 
 ## 2023

@@ -1,12 +1,6 @@
-<template>
-  <ArticleCell :box-data="links" />
-</template>
+import type { ArticleCellBoxType } from "../definition/types.js";
 
-<script lang="ts" setup>
-import ArticleCell from "./ArticleCell.vue";
-import type { Box } from "./ArticleCell.vue";
-
-const links: Box[] = [
+const links: ArticleCellBoxType[] = [
   {
     field: "Linux 相关",
     links: [
@@ -85,4 +79,5 @@ const links: Box[] = [
     links: [{ text: "点击前往", url: "external" }],
   },
 ];
-</script>
+
+export default links;

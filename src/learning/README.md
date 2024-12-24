@@ -10,8 +10,9 @@ category:
 
 记载我**编程以外**的学习的笔记。
 
-<MyLearning/>
+<ArticleCell :box-data="links" />
 
 <script setup lang="ts">
-import MyLearning from "@MyLearning"
+import ArticleCell from "@ArticleCell";
+import links from "@@learning";
 </script>

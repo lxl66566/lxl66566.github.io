@@ -253,6 +253,10 @@ const shallowCopy = { ...original };
 const shallowCopy = Object.assign({}, original);
 ```
 
+### object
+
+- 合并两个 object：`{...obj1, ...obj2}`
+
 ### 遍历
 
 - 注意 `for (... in ...)` 和 `for (... of ...)` 的区别；前者遍历 key，后者遍历 value。

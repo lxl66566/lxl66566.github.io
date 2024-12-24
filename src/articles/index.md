@@ -11,8 +11,9 @@ category:
 
 <!-- 7. [Potplayer 设置](./potplayer_setting.md) -->
 
-<MyArticles/>
+<ArticleCell :box-data="links" />
 
 <script setup lang="ts">
-import MyArticles from "@MyArticles"
+import ArticleCell from "@ArticleCell";
+import links from "@@article";
 </script>
