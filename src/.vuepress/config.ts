@@ -32,7 +32,7 @@ gtag('config', 'G-MKRDBH1ZP1');`,
 temp.alias = {
   "@AvTable": path.resolve(__dirname, "components/AvTable.vue"),
   "@ComicTable": path.resolve(__dirname, "components/ComicTable.vue"),
-  "@GalExhibition": path.resolve(__dirname, "components/GalExhibition.vue"),
+  "@ExhibitionTable": path.resolve(__dirname, "components/ExhibitionTable.vue"),
   "@Av": path.resolve(__dirname, "components/av.vue"),
   "@reciter": path.resolve(__dirname, "components/reciter.vue"),
   "@MyArticles": path.resolve(__dirname, "components/MyArticles.vue"),
