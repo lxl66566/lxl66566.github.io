@@ -1,0 +1,5 @@
+
+User-agent:*
+Disallow:
+
+Sitemap: https://absx.pages.dev/sitemap.xml

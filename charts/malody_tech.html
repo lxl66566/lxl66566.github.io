@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>techmap acc record</title>
+  </head>
+  <body>
+    <div id="container" style="width: 100%; height: 260px"></div>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"
+    ></script>
+    <script>
+      const { Line } = G2Plot;
+      const data = [
+{ name: "ex 1", 时刻: "20220821", acc: 93.92 },
+{ name: "ex 3", 时刻: "20220827", acc: 87.18 },
+{ name: "ex 1", 时刻: "20220828", acc: 95.41 },
+{ name: "ex 3", 时刻: "20220828", acc: 91.3 },
+{ name: "ex 3", 时刻: "20220829", acc: 91.69 },
+{ name: "ex 2", 时刻: "20220831", acc: 92.27 },
+{ name: "ex 3", 时刻: "20220831", acc: 88.86 },
+{ name: "ex 3", 时刻: "20220901", acc: 90.01 },
+{ name: "ex 3", 时刻: "20220903", acc: 91.58 },
+{ name: "reg 8", 时刻: "20220908", acc: 98.18 },
+{ name: "reg 10", 时刻: "20220908", acc: 93.61 },
+{ name: "ex 3", 时刻: "20220908", acc: 88.51 },
+{ name: "reg 9", 时刻: "20220909", acc: 94.58 },
+{ name: "ex 1", 时刻: "20220909", acc: 95.75 },
+{ name: "ex 3", 时刻: "20220909", acc: 92.22 },
+{ name: "reg 10", 时刻: "20220910", acc: 96.2 },
+{ name: "ex 2", 时刻: "20220911", acc: 93.76 },
+{ name: "ex 3", 时刻: "20220911", acc: 90.43 },
+{ name: "ex 3", 时刻: "20220913", acc: 90.88 },
+{ name: "ex 1", 时刻: "20220914", acc: 96.99 },
+{ name: "ex 3", 时刻: "20220914", acc: 89.95 },
+{ name: "ex 2", 时刻: "20220915", acc: 93.01 },
+{ name: "ex 3", 时刻: "20220915", acc: 89.44 },
+{ name: "ex 1", 时刻: "20220916", acc: 94.46 },
+{ name: "ex 2", 时刻: "20220916", acc: 92.66 },
+{ name: "ex 3", 时刻: "20220916", acc: 89.59 },
+{ name: "ex 3", 时刻: "20220920", acc: 94.25 },
+{ name: "reg 10", 时刻: "20220922", acc: 96.13 },
+{ name: "ex 3", 时刻: "20220922", acc: 91.0 },
+{ name: "reg 9", 时刻: "20220929", acc: 91.53 },
+{ name: "ex 1", 时刻: "20220929", acc: 95.41 },
+{ name: "ex 3", 时刻: "20220929", acc: 93.6 },
+{ name: "reg 10", 时刻: "20220930", acc: 97.17 },
+{ name: "ex 3", 时刻: "20221006", acc: 89.46 },
+{ name: "reg 10", 时刻: "20221006", acc: 96.17 },
+{ name: "ex 1", 时刻: "20221007", acc: 94.96 },
+{ name: "reg 10", 时刻: "20221010", acc: 95.82 },
+{ name: "ex 2", 时刻: "20221010", acc: 92.35 },
+{ name: "reg 10", 时刻: "20221013", acc: 94.32 },
+{ name: "reg 10", 时刻: "20221021", acc: 95.91 },
+{ name: "ex 3", 时刻: "20221023", acc: 91.62 },
+{ name: "reg 9", 时刻: "20221025", acc: 96.81 },
+{ name: "reg 10", 时刻: "20221025", acc: 93.33 },
+{ name: "ex 1", 时刻: "20221025", acc: 95.45 },
+{ name: "ex 2", 时刻: "20221027", acc: 93.98 },
+{ name: "ex 3", 时刻: "20221027", acc: 91.73 },
+{ name: "ex 7 HT", 时刻: "20221027", acc: 96.76 },
+{ name: "ex 3", 时刻: "20221029", acc: 93.6 },
+{ name: "reg 10", 时刻: "20221103", acc: 96.33 },
+{ name: "reg 10", 时刻: "20221105", acc: 93.05 },
+{ name: "ex 2", 时刻: "20221106", acc: 88.74 },
+{ name: "reg 10", 时刻: "20221112", acc: 93.97 },
+{ name: "ex 1", 时刻: "20221116", acc: 96.09 },
+{ name: "ex 2", 时刻: "20221116", acc: 92.63 },
+{ name: "ex 3", 时刻: "20221116", acc: 87.69 },
+{ name: "ex 1", 时刻: "20221118", acc: 94.83 },
+{ name: "ex 2", 时刻: "20221119", acc: 97.02 },
+{ name: "ex 3", 时刻: "20221119", acc: 94.88 },
+{ name: "reg 10", 时刻: "20221211", acc: 97.7 },
+{ name: "ex 2", 时刻: "20221211", acc: 96.94 },
+{ name: "ex 3", 时刻: "20221211", acc: 94.94 },
+{ name: "reg 10", 时刻: "20230103", acc: 97.34 },
+{ name: "ex 2", 时刻: "20230103", acc: 95.94 },
+{ name: "ex 3", 时刻: "20230103", acc: 92.4 },
+{ name: "ex 3", 时刻: "20230106", acc: 96.56 },
+{ name: "ex 4", 时刻: "20230106", acc: 94.76 },
+{ name: "ex 3", 时刻: "20230116", acc: 95.66 },
+{ name: "ex 4", 时刻: "20230116", acc: 93.48 },
+{ name: "ex 7 HT", 时刻: "20230116", acc: 98.3 },
+{ name: "ex 8 HT", 时刻: "20230116", acc: 92.68 },
+{ name: "ex 2", 时刻: "20230124", acc: 95.86 },
+{ name: "ex 4", 时刻: "20230124", acc: 92.19 },
+{ name: "ex 2", 时刻: "20230130", acc: 94.32 },
+{ name: "ex 3", 时刻: "20230130", acc: 91.14 },
+{ name: "ex 4", 时刻: "20230201", acc: 94.22 },
+{ name: "ex 1", 时刻: "20230204", acc: 97.38 },
+{ name: "ex 2", 时刻: "20230208", acc: 96.53 },
+{ name: "ex 3", 时刻: "20230208", acc: 93.93 },
+{ name: "ex 4", 时刻: "20230208", acc: 94.14 },
+{ name: "ex 3", 时刻: "20230221", acc: 95.76 },
+{ name: "ex 4", 时刻: "20230221", acc: 93.44 },
+{ name: "ex 1", 时刻: "20230226", acc: 96.9 },
+{ name: "ex 2", 时刻: "20230227", acc: 96.04 },
+{ name: "ex 3", 时刻: "20230227", acc: 92.37 },
+{ name: "ex 2", 时刻: "20230301", acc: 95.68 },
+{ name: "ex 3", 时刻: "20230305", acc: 90.71 },
+{ name: "ex 2", 时刻: "20230311", acc: 96.3 },
+{ name: "ex 3", 时刻: "20230311", acc: 94.45 },
+{ name: "ex 3", 时刻: "20230325", acc: 94.87 },
+{ name: "ex 3", 时刻: "20230402", acc: 93.3 },
+{ name: "ex 2", 时刻: "20230406", acc: 96.84 },
+{ name: "ex 4", 时刻: "20230411", acc: 94.94 },
+{ name: "ex 2", 时刻: "20230416", acc: 97.87 },
+{ name: "ex 4", 时刻: "20230416", acc: 95.52 },
+{ name: "ex 5", 时刻: "20230416", acc: 92.41 },
+{ name: "ex 2", 时刻: "20230710", acc: 94.94 },
+{ name: "ex 1", 时刻: "20230717", acc: 96.01 },
+{ name: "ex 3", 时刻: "20230724", acc: 94.16 },
+{ name: "ex 4", 时刻: "20230730", acc: 96.55 },
+{ name: "ex 5", 时刻: "20230730", acc: 92.24 },
+{ name: "ex 2", 时刻: "20230914", acc: 96.73 },
+{ name: "ex 3", 时刻: "20230914", acc: 95.63 },
+{ name: "ex 2", 时刻: "20230921", acc: 96.23 },
+{ name: "ex 4", 时刻: "20230921", acc: 92.87 },
+{ name: "ex 9 HT", 时刻: "20230921", acc: 94.72 },
+      ];
+      const linePlot = new Line("container", {
+        data,
+        xField: "时刻",
+        yField: "acc",
+        seriesField: "name",
+        useDeferredLabel: true,
+        connectNulls: false,
+        yAxis: {
+          min: 87,
+        },
+        annotations: [
+          {
+            type: "line",
+            id: "line",
+            start: [data[0].时刻, "96"],
+            end: [data[data.length - 1].时刻, "96"],
+            text: {
+              content: "pass",
+              position: "left",
+              offsetX: -15,
+              offsetY: 12,
+              style: {
+                textAlign: "left",
+                fill: "red",
+              },
+            },
+            style: {
+              stroke: "red",
+              lineWidth: 1.5,
+              lineDash: [4, 4],
+            },
+          },
+        ],
+        animation: {
+          appear: {
+            animation: "wave-in",
+            duration: 5000,
+          },
+        },
+        legend: {
+          position: "top",
+        },
+        slider: {
+          start: 0,
+          end: 1,
+        },
+      });
+
+      linePlot.render();
+    </script>
+  </body>
+</html>
+<style>
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #22272e;
+      color: white;
+    }
+  }
+</style>
