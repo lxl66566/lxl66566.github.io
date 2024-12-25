@@ -12,7 +12,7 @@
       <tbody>
         <tr v-for="row in props.rows" :key="row.id">
           <td v-if="!row.otherlink">
-            <av :bg="row.id" :u="row.u" />
+            <Av :bg="row.id" :u="row.u" />
           </td>
           <td v-else>
             <a :href="row.otherlink">{{ row.id.toUpperCase() }}</a>
@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import av from "./av.vue";
+import Av from "./Av.vue";
 import dtlslong from "./dtlslong.vue";
 import type { AvItemType } from "../definition";
 
