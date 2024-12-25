@@ -22,6 +22,82 @@ category:
 
 ## 2024
 
+### 20241225
+
+- galgame 页面大更新，通过点击列表展开 galgame 评价
+  - 新增 GalListItem，GalList，MyCheckBox 组件
+  - 将原有 markdown 转为 `galgamelist.ts` 数据
+
+::: details 部分处理脚本代码
+
+处理原始 markdown 字符串
+
+```ts
+content.replaceAll(/\d{4}\.\d{2}\.\d{2}/g, (date) => date.replaceAll(".", "-"));
+const cleanUndefined = (object: any) => JSON.parse(JSON.stringify(object));
+const list: GalItemType[] = [];
+for (const line of s
+  .split("\n")
+  .map((line) => line.trim())
+  .filter((line) => line)) {
+  let [name, use_time, duration, score_story, score_visual, score_program, comment] = line
+    .trim()
+    .replaceAll(/^\||\|$/g, "")
+    .split("|")
+    .map((item) => item.trim());
+  const du_split = duration
+    .split("-<br/>")
+    .map((item) => new Date(item.trim()))
+    .map((item) => (isNaN(item.getTime()) ? undefined : item.toISOString().slice(0, 10)));
+  const match = name.match(/\s*<OrderBadge\s*:order=(\d+)\s*\/>/);
+  const order = match ? parseInt(match[1]) : undefined;
+  if (match) {
+    name = name.replace(match[0], "").trim();
+  }
+  const item: GalItemType = {
+    name,
+    use_time,
+    order,
+    duration: {
+      start: du_split.at(0),
+      end: du_split.at(1),
+    },
+    score: {
+      story: parseFloat(score_story) || score_story,
+      visual: parseFloat(score_visual) || score_visual,
+      program: parseFloat(score_program) || score_program,
+    },
+    comment,
+  };
+  list.push(cleanUndefined(item));
+}
+console.log(list);
+```
+
+slot 别名
+
+```ts
+function sanitizeSlotName(str: string) {
+  // 正则表达式匹配所有非中文、日文、数字、字母的字符
+  const regex = /[^a-zA-Z0-9\u4e00-\u9fa5\u3040-\u30ff]/g;
+  return str.replace(regex, "");
+}
+const proc = original_list.map((item) => {
+  const new_name = sanitizeSlotName(item.name);
+  if (new_name == item.name) {
+    return item;
+  } else {
+    return {
+      ...item,
+      valid_name: new_name,
+    };
+  }
+});
+console.log(proc);
+```
+
+:::
+
 ### 20241224
 
 - 修改部分组件数据的引入方式

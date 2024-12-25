@@ -47,7 +47,7 @@ const generateDataAlias = (list: string[]) => {
   return temp;
 };
 temp.alias = {
-  ...generateComponentsAlias(["AvTable", "ComicTable", "GalExhibitionGrid", "Av", "reciter", "ArticleCell"]),
+  ...generateComponentsAlias(["AvTable", "ComicTable", "GalExhibitionGrid", "Av", "reciter", "ArticleCell", "GalList"]),
   ...generateDataAlias(["article", "gossip", "learning"]),
 };
 export default temp;

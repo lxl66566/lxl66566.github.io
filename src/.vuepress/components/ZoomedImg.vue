@@ -1,6 +1,7 @@
 <template>
-  <figure :style="{ maxWidth: scale }">
-    <img :alt="alt" :src="src" loading="lazy" />
+  <figure :style="{ maxWidth: `calc(${parseFloat(scale) / 100} * var(--content-width))` }">
+    <img :alt="alt" :src="src" loading="lazy"
+      :style="{ maxWidth: `calc(${parseFloat(scale) / 100} * var(--content-width))` }" />
     <figcaption v-if="alt">{{ alt }}</figcaption>
   </figure>
 </template>
@@ -22,7 +23,7 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 div {
   display: flex;
   justify-content: center;
