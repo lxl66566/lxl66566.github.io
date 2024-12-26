@@ -15,8 +15,7 @@
     <td>{{ use_time_string }}</td>
     <!-- 游玩区间 -->
     <td>
-      {{ props.item.duration?.start ?? "?" }} ~
-      {{ props.item.duration?.end ?? "?" }}
+      {{ duration_string }}
     </td>
     <!-- 评分 -->
     <td
@@ -44,7 +43,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, nextTick, onMounted, useSlots, computed } from "vue";
+import { ref, nextTick, onMounted, computed } from "vue";
 import { GalItemInputType } from "../definition";
 import "../utils/FormatDate";
 
@@ -85,6 +84,16 @@ const use_time_string = computed(() => {
     tmp = tmp ? tmp + "," + props.item.playing_status : props.item.playing_status;
   }
   return tmp;
+});
+
+const duration_string = computed(() => {
+  if (props.item.duration === undefined) {
+    return "?";
+  }
+  if (props.item.duration.start === props.item.duration.end && props.item.duration.start) {
+    return props.item.duration.start;
+  }
+  return (props.item.duration.start ?? "?") + " ~ " + (props.item.duration.end ?? "?");
 });
 
 // region 展开的逻辑

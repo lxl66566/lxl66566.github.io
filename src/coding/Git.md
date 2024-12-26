@@ -622,7 +622,7 @@ git checkout -b new                    # 切换临时分支
 git branch -D main                     # 删除旧分支
 git checkout --orphan main             # 全新分支
 git add -A
-git commit --signoff -a -m "..."
+git commit --signoff -a -m "init"
 git push -f                            # 干掉 origin/HEAD 和 origin/main
 git branch -D new
 git reflog expire --expire=now --all   # 干掉所有引用

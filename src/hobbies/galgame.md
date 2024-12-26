@@ -107,6 +107,7 @@ LunaTranslator 使用心得：
 
 - 老游戏不奢求程序做的多好，但是问题也是要指出来的。
   - 角色声音不均衡，而且不能分别调整
+- 感觉感情铺垫不太够，怎么就在菲利克斯那方以命相搏了？
 
 </template>
 <template v-slot:奇异恩典Whatcolorisyourattribute>
@@ -651,7 +652,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
   - 修改器放旁边，一旦有开卡状况（敌方连击）就立刻关直死。
   - 多 save。
 - 谦信线有点难进，前期推太快导致必定五破。所以不推了。
-- <ZoomedImg alt="结束" src="/images/hobbies/galgame/rance07.jpg" scale="60%" />
+- <ZoomedImg alt="结束" src="/images/hobbies/galgame/rance07.jpg" scale="80%" />
 
 </template>
 <template v-slot:七音学园旅行部伊香保篇>

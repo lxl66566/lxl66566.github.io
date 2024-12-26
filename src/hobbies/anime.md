@@ -20,7 +20,7 @@ tag:
 
 - other hosted：[Tg 动画仓库](https://t.me/AnimeNep)
 - self hosted：[次元城动漫](https://www.cycdm01.top/)
-- 种子站：[动漫花园](http://share.dmhy.org/) | [nyaa](https://nyaa.land/)
+- 种子站：[动漫花园](http://share.dmhy.org/) | [nyaa](https://nyaa.land/) | [蜜柑计划](https://mikanani.me/) | [acg.rip](https://acg.rip/)
 
 ## 时间记录
 
@@ -191,3 +191,4 @@ tag:
 - 86-不存在的地域
 - 寒蝉鸣泣之时
 - 未来日记
+- 日在校园

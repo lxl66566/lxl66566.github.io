@@ -90,6 +90,7 @@ tag:
 - [ ] 半连接神经网络
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
+- [ ] 射精记录 bot，cloudflare workers + d1
 
 ### RIIR
 

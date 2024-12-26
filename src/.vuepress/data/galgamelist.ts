@@ -1081,6 +1081,7 @@ const original_list: GalItemInputType[] = [
     name: "氤氲之白",
     all_ages: true,
     use_time: "-",
+    order: 1,
     score: {
       story: 1,
       visual: 4,

@@ -229,7 +229,7 @@ const data = [
   { id: "(ex)", aScore: 3.5, bScore: 9.8, info: "#触手 #脑洞 #精神控制 無数", otherlink: "https://exhentai.org/g/2283778/f94c7a0393/", bak: "https://telegra.ph/だんれんじ-無数-中国翻訳-07-28?_=1659244218" },
   { id: "(ex)", aScore: 5.5, bScore: 3.2, info: "#兽耳 #雌小鬼 #反杀 #3P", otherlink: "https://e-hentai.org/g/2149001/db1f860580/" },
   { id: "399643", aScore: 6.5, bScore: 7.6, info: "#催眠 #公共场合", bak: "https://telegra.ph/caburibbon-caburi-SSSX-中国翻訳-08-02" },
-  { id: "504253", aScore: 8.9, bScore: 1.5, info: "#兽耳 #富士やま #巨乳 桃桃酱" },
+  { id: "504253", aScore: 8.9, bScore: 1.5, order: 1, info: "#兽耳 #富士やま #巨乳 桃桃酱 ゲーミング彼女" },
   { id: "501615", aScore: 6, bScore: 6.4, info: "#纯爱" },
   { id: "450712", aScore: 10, bScore: 7.2, order: 5, info: "ボクの理想の異世界生活 #后宫 #兽耳" },
   { id: "450713", aScore: 9.9, bScore: 7, order: 6, info: "ボクの理想の異世界生活 #后宫 #兽耳" },
@@ -618,8 +618,14 @@ const data = [
   { id: "544213", aScore: 4.2, bScore: 7.6, info: "#异世界 #色狼 #NTR #无插入 クロワリア", order: 1, bak: "https://telegra.ph/寝語屋-クロワリア-12-16" },
   { id: "544300", aScore: 4.1, bScore: 6.2, info: "#异世界 #色狼 #NTR #无插入 #触手 クロワリア", order: 2, bak: "https://telegra.ph/寝語屋-クロワリア-2-12-17" },
   { id: "544472", aScore: 4.3, bScore: 7.3, info: "#异世界 #色狼 #NTR #口交 #地陷 クロワリア", order: 3, bak: "https://telegra.ph/寝語屋-クロワリア-3-中国翻訳-12-18" },
-  { id: "371835", aScore: 3.5, bScore: 7.8, info: "#异世界 #NTR クロワリア", order: 4, bak: "https://telegra.ph/寝語屋-クロワリア-4-中国翻訳-12-22" },
+  { id: "545252", aScore: 3.5, bScore: 7.8, info: "#异世界 #NTR クロワリア", order: 4, bak: "https://telegra.ph/寝語屋-クロワリア-4-中国翻訳-12-22" },
+  { id: "371834", aScore: 3.5, bScore: 7.8, info: "#异世界 #NTR クロワリア", order: 5, bak: "https://telegra.ph/寝語屋-クロワリア-5-中国翻訳-12-25" },
   { id: "544908", aScore: 5.7, bScore: 8.5, info: "#异能 #禁锢 #调教" },
+  { id: "510654", aScore: 6, bScore: 7.7, info: "#偶像大师 #自慰 #幻想", bak: "https://telegra.ph/にしえりあ-性悪-桃華ちゃんの汗とイケナイ汁-アイドルマスター-シンデレラガールズ-中国翻訳-DL版-12-25" },
+  { id: "545412", aScore: 7.9, bScore: 7.8, info: "#幽灵" },
+  { id: "545211", aScore: 7, bScore: 3.6, order: 1, info: "#蔚蓝档案 #丝袜 #微糖" },
+  { id: "545379", aScore: 6, bScore: 4, order: 2, info: "#蔚蓝档案 #丝袜 #微糖" },
+  { id: "525813", aScore: 8.7, bScore: 8.8, info: "#纯爱", bak: "https://telegra.ph/sakurawhite-結城リカ-長屋暮らし幼な妻-中国翻訳-DL版-08-20" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

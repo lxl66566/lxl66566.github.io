@@ -83,19 +83,23 @@ tag:
 
 :::
 
-### 学生白嫖
+### 白嫖
 
 阿里云和 Azure 理论上都是不能当代理机用的，不过真拿来跑，自用的话它们也不管。
 
-- 阿里云：免费服务器，**每年** 300 元优惠券，可以全额抵扣。
+- 阿里云学生：免费服务器，**每年** 300 元优惠券，可以全额抵扣。
   1. （需要 chromium 系浏览器）[university.aliyun.com](https://university.aliyun.com) 学生认证领券
   2. ~~首页，_产品 - 计算 - 轻量应用服务器_ 下单即可。 新加坡、日本有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。~~
-  - 学生优惠现在无法购买轻量；在领券页面下面只能购买国内 ECS，无法作为翻墙机使用，而且带宽很低。![现在已经寄了](/images/articles/vps/news.jpg)
+  - **学生优惠现在无法购买轻量**；在领券页面下面只能购买国内 ECS，无法作为翻墙机使用，而且带宽很低。![现在已经寄了](/images/articles/vps/news.jpg)
 - Azure：每年 $100 优惠券，学生无限续。财大气粗！
   1. 先过学生认证
   2. 服务器下单，配置那边按价格排序一下，选便宜的，1C1G 够用了。
   3. 开好机子，默认不能 root 登录。查看 [允许 root](#允许-root) 章节可解。
   4. 默认是不放行其他端口的。去 _网络_，自己添加入站和出站规则，放开所有端口。
+- Google Cloud：$300 体验金。
+  - Google Cloud 还是有点贵的，最便宜的 1c1g 每个月也要 $22。
+  - Google Cloud 控制台页面卡得要死。。连接 vps 最好用网页面板。如果想用本机 ssh，要把密钥传到 vps，使用 RESTAPI POST 还不行（没法两步验证），还得下载一个 gcloud cli 是最傻逼的([ref](https://cloud.google.com/compute/docs/connect/standard-ssh?hl=zh-cn#openssh-client))。所以我建议去网页面板自己[手操](#添加公钥)。
+  - Google Cloud 默认也是开启防火墙措施，无法在本机上访问 vps 的其他端口。要在左侧 _Cloud NGFW - 防火墙政策_ 里改一条规则，允许来源改成 `0.0.0.0/0`，并且将优先级调为 1000。
 
 ## 工具
 
@@ -152,13 +156,16 @@ Host <name>
 
 :::
 
-### 允许 root
+#### 允许 root
 
 一般的 vps 都是允许 root 登录的，但是像 azure 这些“大厂”则不行。所以需要用户进去改 ssh 配置。
 
 ```sh
 sudo vim /etc/ssh/sshd_config
-# 设置：PermitRootLogin yes, PasswordAuthentication yes
+# 设置：
+# PermitRootLogin yes
+# PasswordAuthentication yes
+# PubkeyAuthentication yes
 sudo systemctl restart sshd
 ```
 

@@ -88,7 +88,7 @@ vue2 中是 export default 中的 `props` object，到了 Vue3 就是 `definePro
 
 TS 和 JS 使用 `defineProps` 的方法不同，TS 是写在泛型参数里的：还有关于默认值的处理方式不同。
 
-::: tabs
+::: code-tabs
 
 @tab TS
 
@@ -152,13 +152,46 @@ const parentFun = (data) => {
 };
 ```
 
-### slot
+### [slots](https://cn.vuejs.org/guide/components/slots)
 
-我们也可以将标签作为 DOM 节点传入组件。组件中需要在 template 区域使用 `<slot></slot>` 调用。更多插槽的特性和用法可以看[文档](https://cn.vuejs.org/guide/components/slots)。
+我们也可以将标签作为 DOM 节点传入组件。组件调用时的“子元素”区域的内容会被插入 `<slot></slot>` 插槽。
 
-vue3 中使用 defineSlots 可以定义插槽的类型。
+我个人的理解，插槽的出现是为了解决 Vue 相对于 react JSX/TSX 的痛点，不能把一个 Node 当成对象随意进行构造与使用。props 传 js object 还行，一旦要传 Node 就费劲了。虽然有 `import { h } from 'vue'` 的这种构造方法，但还是非常麻烦的。
 
-如果需要在 script 中获取插槽内容并处理，需要在 onMounted 中调用：
+#### Named Slots
+
+我们也可以在组件里声明多个 slot 插槽，此时需要给每个插槽名字，成为具名插槽。在插入时，使用 template + v-slot 来将 DOM 插入指定的插槽。
+
+::: code-tabs
+
+@tab 子组件 Child.vue
+
+```vue
+<template>
+  <slot :name="props.item.name"></slot>
+  <template></template>
+</template>
+```
+
+@tab 父组件
+
+```vue
+<template>
+  <Child>
+    <template v-slot:[get_valid_name(item)]>
+      <div>这是我要插入的内容</div>
+    </template>
+  </Child>
+</template>
+```
+
+:::
+
+这里在父组件里使用了动态插槽名，方括号内可以是一个**不带空格**的表达式。
+
+#### 处理插槽
+
+如果使用 div ref 在 slot 外面包一层来获取插槽，需要在 onMounted 中获取：
 
 ```vue
 <template>
@@ -183,6 +216,22 @@ watch(slotContainer, calculateTextLength);
 ```
 
 上述例子中是可以使用 `computed` 代替 `onMounted` 的，但是在本博客的 dtlslong 组件里不行，因为 textLength 会影响 slot，所以可能出现交替无限变化的情况。
+
+还有一种方法是 `useSlots()`，可以直接 `useSlots()[slot_name]` 拿到插槽内容。
+
+#### 跨组件插槽
+
+假设我有父、子、孙三个组件，父组件提供内容，要插入到孙组件的 slot 里。这时候需要在子组件里做一次中转，也就是在子组件里是类似这样 template 包 slot 的写法：
+
+```vue
+<template>
+  <Grandson>
+    <template v-slot:[slot_name]>
+      <slot :name="slot_name"></slot>
+    </template>
+  </Grandson>
+</template>
+```
 
 ### 双向绑定
 

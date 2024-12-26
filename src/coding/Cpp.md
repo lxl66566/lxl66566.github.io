@@ -332,7 +332,7 @@ Raw string: `R""(some\text)""`
 
 ### variant
 
-（C++17）本意是封装的 `union`，可以当成错误处理的一种实现[^5]，类似 rust `Result`. C++23 请使用 `std::expected`.
+（C++17）本意是封装的 `union`，可以当成错误处理的一种实现，类似 rust `Result`. C++23 请使用 `std::expected`.
 
 获取值一般用 `std::get` + try catch，也可用 [`std::visit`](https://en.cppreference.com/w/cpp/utility/variant/visit):
 
