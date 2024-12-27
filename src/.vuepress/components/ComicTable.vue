@@ -230,6 +230,7 @@ const data = [
   { id: "(ex)", aScore: 5.5, bScore: 3.2, info: "#兽耳 #雌小鬼 #反杀 #3P", otherlink: "https://e-hentai.org/g/2149001/db1f860580/" },
   { id: "399643", aScore: 6.5, bScore: 7.6, info: "#催眠 #公共场合", bak: "https://telegra.ph/caburibbon-caburi-SSSX-中国翻訳-08-02" },
   { id: "504253", aScore: 8.9, bScore: 1.5, order: 1, info: "#兽耳 #富士やま #巨乳 桃桃酱 ゲーミング彼女" },
+  { id: "545469", aScore: 10, bScore: 7.2, order: 2, info: "#富士やま #雌小鬼 #纯爱 ゲーミング彼女" },
   { id: "501615", aScore: 6, bScore: 6.4, info: "#纯爱" },
   { id: "450712", aScore: 10, bScore: 7.2, order: 5, info: "ボクの理想の異世界生活 #后宫 #兽耳" },
   { id: "450713", aScore: 9.9, bScore: 7, order: 6, info: "ボクの理想の異世界生活 #后宫 #兽耳" },

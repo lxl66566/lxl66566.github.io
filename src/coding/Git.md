@@ -77,13 +77,14 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
    也可以将 `-H` 换为 `-S` 以使用 socks 代理，若 http 代理失效，可使用。([ref](https://hanyuzhou.com/2022/03/06/connect-with-ssh-through-a-proxy/))
 3. 其他全局设置
    ```sh
-   git config --global push.default current    # 设置默认推送，简化 git push
+   git config --global push.default current        # 设置默认推送，简化 git push
    git config --global push.autoSetupRemote true   # 默认设置上游，搭配上条
-   git config --global core.quotepath false    # 取消中文转义，需要终端支持 utf-8
+   git config --global core.quotepath false        # 取消中文转义，需要终端支持 utf-8
    git config --global --add safe.directory '*'    # 取消目录安全警告
    git config --global diff.algorithm histogram    # 更改默认 diff 算法，详见页面底 external 1.
    git config --global init.defaultBranch main     # 更改默认分支为 main（linux 默认还是 master）
    git config --global rebase.autoSquash true      # 自动 squash
+   git config --global core.ignorecase false       # （Windows）将文件名大小写改动也视为改动。https://t.me/withabsolutex/2156
    # 全局忽略
    printf "node_modules\n__pycache__\n*.exe\n*.o\n" > ~/.gitignore_g
    git config --global core.excludesfile ~/.gitignore_g

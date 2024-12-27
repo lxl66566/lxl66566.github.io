@@ -22,6 +22,10 @@ category:
 
 ## 2024
 
+### 20241227
+
+- 将点击列表展开的动作抽象为新的 ExpandableListItem 组件
+
 ### 20241225
 
 - galgame 页面大更新，通过点击列表展开 galgame 评价

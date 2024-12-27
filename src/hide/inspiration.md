@@ -71,7 +71,7 @@ tag:
 - [ ] 代理，自行设计协议，对称加密
 - [ ] ~~windows shell with everything:~~ everything SDK is hard to use, i can't ever compile a basic example code...
 - [x] openppp2 client
-  - [ ] 绕过路由
+  - [x] 绕过路由
 - [ ] ~~rust tui 脚本工具箱~~ 做了一点尝试，意义不大，终止
 <!-- - 转码，复制，参考我的 fish function
 - 平台无关的 alias
@@ -81,16 +81,17 @@ tag:
   - 颜色，当前行，变量值
   - [ ] 可选不打印堆栈
   - [x] 分级，可禁用 exit
-- [ ] RSS telegram bot
-  - [ ] using github actions
+- [ ] github actions RSS telegram bot
   - [ ] filter
 - [x] rust release ci
 - [ ] kde spectacle ocr plugin
 - [ ] 分布式服务器监控全栈
+- [ ] sync tools
 - [ ] 半连接神经网络
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
 - [ ] 射精记录 bot，cloudflare workers + d1
+- [ ] rust TUI easy_download
 
 ### RIIR
 

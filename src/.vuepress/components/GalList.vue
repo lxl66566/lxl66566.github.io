@@ -10,7 +10,7 @@
       <tbody :class="{ 'show-strict': show_strict }">
         <GalListItem v-for="item in original_list" :item="item"
           :expandable="useSlots()[get_valid_name(item)] != undefined">
-          <template v-slot:[get_valid_name(item)]>
+          <template #gal-list-item-content>
             <slot :name="get_valid_name(item)"></slot>
           </template>
         </GalListItem>
@@ -72,6 +72,12 @@ const headers = "游戏名 时长 游玩区间 剧情 画风 程序".split(" ");
 </script>
 
 <style scoped lang="scss">
+// 只显示严格定义的 galgame，样式穿透
+// show-strict 是本组件的 class，而 not-strict 是孙组件 class
+.show-strict :deep(.not-strict) {
+  display: none;
+}
+
 .high-score {
   color: green;
   font-weight: bolder;
