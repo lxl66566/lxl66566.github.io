@@ -25,6 +25,7 @@ category:
 ### 20241228
 
 - 将 ExpandableListItem 组件应用上 anime.md 的番剧列表
+- 更新[找工作记录](../gossip/job.md) 并且也应用了 ExpandableListItem。
 
 ### 20241227
 
@@ -34,7 +35,7 @@ category:
 
 - galgame 页面大更新，通过点击列表展开 galgame 评价
   - 新增 GalListItem，GalList，MyCheckBox 组件
-  - 将原有 markdown 转为 `galgamelist.ts` 数据
+  - 将原有 markdown 转为 `galgame_list.ts` 数据
 
 ::: details 部分处理脚本代码
 

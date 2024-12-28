@@ -150,9 +150,9 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 日日词典：[Weblio 辞書国語辞典](https://www.weblio.jp/) | [goo 辞書](https://dictionary.goo.ne.jp/) | [広辞苑無料検索](https://sakura-paris.org/dict/)
 - 英语词频查询：[Linggle](https://linggle.com/)
 - 语言学习站：[languageplayer](https://languageplayer.io/)：提供 Youtube 音视频文献推荐与词典查询。
-- [DeepL 翻译器](https://www.deepl.com/translator)：提供高质量的翻译
 - 英文润色：[Grammaly](https://app.grammarly.com/) | [QuillBot](https://quillbot.com/)
 - [反向词典](https://wantwords.net/)：可以根据输入的中文/英文给出近义词汇。
+- [pdf2zh](https://pdf2zh.com/)：pdf 翻译
 
 ### 计算机
 

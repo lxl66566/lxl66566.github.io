@@ -470,7 +470,8 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | pollster | 小而美，专注于 _在同步环境运行异步函数_ 一件事 |
 | expect-test | 自动更新 test 中 assert_eq 的期望值 |
 | indicatif | progress bar |
-| const-hex | Vec<u8> -> hex str |
+| const-hex | `Vec<u8>` -\> hex str |
+| constime | 计算编译期值，用一个非常简单易用的宏 |
 
 ### clap
 

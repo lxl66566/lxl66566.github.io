@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 import { ref, useSlots } from "vue";
 import MyCheckBox from "./MyCheckBox.vue";
-import original_list from "../data/galgamelist.js";
+import original_list from "../data/galgame_list.js";
 import "../utils/FormatDate.js";
 import GalListItem from "./GalListItem.vue";
 import { GalItemInputType } from "../definition";

@@ -156,8 +156,8 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 #### 编程及技术
 
-- [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题，群规严格，风气良好 ~~（以及膜拜~~
-- [Rust 众](https://t.me/rust_zh)：讨论 Rust 问题 ~~（以及膜拜~~
+- [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题，群规严格，风气良好
+- [Even Better Rust](https://t.me/even_better_rust_zh)：讨论 Rust 问题
 - [#archlinux-cn](https://t.me/archlinuxcn_group)
 - [NixOS 中文](https://t.me/nixos_zhcn)
 

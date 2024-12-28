@@ -33,7 +33,7 @@ const links: ArticleCellBoxType[] = [
         text: "家与学校生活环境对比（我为什么不愿意回家）",
         url: "compare_home_to_college",
       },
-      { text: "找工作经历", url: "interview" },
+      { text: "找工作经历", url: "job" },
     ],
   },
   {
