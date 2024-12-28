@@ -22,6 +22,10 @@ category:
 
 ## 2024
 
+### 20241228
+
+- 将 ExpandableListItem 组件应用上 anime.md 的番剧列表
+
 ### 20241227
 
 - 将点击列表展开的动作抽象为新的 ExpandableListItem 组件

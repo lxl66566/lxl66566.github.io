@@ -27,7 +27,7 @@ import "../utils/FormatDate.js";
 import GalListItem from "./GalListItem.vue";
 import { GalItemInputType } from "../definition";
 
-const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name
+const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name;
 
 // /**
 //  * 按照结束时间排倒序

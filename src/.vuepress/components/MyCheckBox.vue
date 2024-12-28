@@ -29,7 +29,7 @@ const props = defineProps<{
 const emit = defineEmits(["update:modelValue"]);
 
 // Local state for the checkbox
-const checked = ref(false);
+const checked = ref(props.modelValue);
 
 // Sync local state with `modelValue`
 watch(

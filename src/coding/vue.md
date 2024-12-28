@@ -30,7 +30,7 @@ Vue2 使用大量的 `this.$set` 进行组件状态更新和重新渲染；Vue 3
 
 Vue3 本来还有个 `$ref()` 的语法糖可以将 ref 的 `.value` 给省掉，但是后来在 Vue3.4 废弃了。
 
-- 关于 props 修改：Vue2 的 `props` 可以整个直接复制到 Vue3 的 `defineProps` 里。调用时，需要把 `this.` 改为 `props.`。
+- 关于 props 修改：Vue2 的 `props` 可以整个直接复制到 Vue3 的 `defineProps()` 括号里。调用时，需要把 `this.` 改为 `props.`。
 
 ## 组件解析
 
@@ -38,15 +38,18 @@ Vue3 本来还有个 `$ref()` 的语法糖可以将 ref 的 `.value` 给省掉�
 
 ### template
 
-- template 里使用 `:` (v-bind) 进行函数调用。只写函数名则只调用，不拿返回值；加了括号是拿返回值。
+- 在标签区域里使用 `:` (v-bind) 进行表达式调用，例如 `a="root"` 表示给 a 赋值为字符串 `"root"`，而 `:a="root"` 表示给 a 赋值为名为 root 的变量的值。
+  - vue2 中，只写函数名则只调用，不拿返回值；加了括号是拿返回值。
 
 ### style
 
-请务必使用 `<style scoped>`！避免 css 污染其他样式。
+请务必使用 `<style scoped>`！避免 css 污染其他样式。更常用的是 `<style lang="scss" scoped>`，可以同时使用 scss 语法。
+
+style scoped 里的样式默认会穿透到子组件里。
 
 ### script
 
-使用 `<script lang="ts">` 可以指定 ts 语法。
+使用 `<script lang="ts">` 可以指定 ts 语法。vue 3 里一般使用 `<script lang="ts" setup>`，setup 是一个语法糖。
 
 ## vue 类型与方法
 

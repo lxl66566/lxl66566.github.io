@@ -5,7 +5,7 @@
         <span>{{ props.item.name }}</span>
         <span v-if="props.item.order || props.item.all_ages || props.item.namaniku || props.item.intense">
           <span>&thinsp;</span>
-          <OrderBadge :order=props.item.order v-if="props.item.order" />
+          <OrderBadge :order="props.item.order" v-if="props.item.order" />
           <Badge type="tip" text="全年龄" v-if="props.item.all_ages" />
           <Badge type="tip" text="生肉" v-if="props.item.namaniku" />
           <Badge type="danger" text="重口" v-if="props.item.intense" />
@@ -47,11 +47,11 @@ const props = defineProps<{
   /**
    * 游戏信息
    */
-  item: GalItemInputType,
+  item: GalItemInputType;
   /**
    * 是否可以展开，也就是 markdown 里有没有给具名插槽喂 template
    */
-  expandable: boolean
+  expandable: boolean;
 }>();
 
 // 判断是否是高分
@@ -65,7 +65,7 @@ function isLowScore(score: number | undefined) {
 
 /**
  * 游玩时长字符串拼接，可能出现类似的几种情况：
- * 
+ *
  * `14min`
  * `14min,游玩中`
  * `14min,中止`

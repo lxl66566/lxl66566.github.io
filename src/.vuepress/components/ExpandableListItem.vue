@@ -34,11 +34,11 @@ const props = defineProps<{
   /**
    * 要添加到点击部分的 tr 里的 class
    */
-  extra_tr_class?: string[],
+  extra_tr_class?: string[];
   /**
    * 是否允许展开
    */
-  expandable: boolean,
+  expandable: boolean;
 }>();
 
 // region 展开的逻辑

@@ -6,6 +6,7 @@ import type { TwoScoreItemType } from "./types.js";
 
 export * from "./types.js";
 export * from "./gal_type.js";
+export * from "./anime_type.js";
 
 /**
  * 比较两个 TwoScoreItemType，用于 sort 的输入。
