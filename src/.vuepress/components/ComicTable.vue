@@ -627,6 +627,8 @@ const data = [
   { id: "545211", aScore: 7, bScore: 3.6, order: 1, info: "#蔚蓝档案 #丝袜 #微糖" },
   { id: "545379", aScore: 6, bScore: 4, order: 2, info: "#蔚蓝档案 #丝袜 #微糖" },
   { id: "525813", aScore: 8.7, bScore: 8.8, info: "#纯爱", bak: "https://telegra.ph/sakurawhite-結城リカ-長屋暮らし幼な妻-中国翻訳-DL版-08-20" },
+  { id: "545768", aScore: 7.1, bScore: 9.2, info: "#合集 #长篇 #多P #机械 #催眠", bak: "https://telegra.ph/ぬんぬ-ファンキーベイビー-中国翻訳-DL版-sakura-14b-iq4xs模型机翻-12-25" },
+  { id: "544710", aScore: 8.9, bScore: 8.6, info: "#后宫 #异世界 #兽耳" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
