@@ -68,13 +68,12 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
    ```
    还需要配置 ssh 的代理：执行 `vi ~/.ssh/config`，输入如下内容[^6]：
    ```
-   Host github.com
+   Host github.com   # "github.com" 匹配的是仓库的 remote host name, 可以通过 git remote -v 查看。
        User git
        Hostname ssh.github.com
        Port 443
-       ProxyCommand connect -H 127.0.0.1:<port> %h %p
+       # ProxyCommand connect -H 127.0.0.1:<port> %h %p  # 其实不需要这行也可以读系统代理
    ```
-   也可以将 `-H` 换为 `-S` 以使用 socks 代理，若 http 代理失效，可使用。([ref](https://hanyuzhou.com/2022/03/06/connect-with-ssh-through-a-proxy/))
 3. 其他全局设置
    ```sh
    git config --global push.default current        # 设置默认推送，简化 git push

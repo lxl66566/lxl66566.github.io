@@ -47,7 +47,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "五彩斑斓的世界",
-    use_time: "-1min",
+    use_time: "-2min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2024-07-20",
@@ -111,6 +111,20 @@ const original_list: GalItemInputType[] = [
       story: 5,
       visual: 8.7,
       program: 8,
+    },
+  },
+  {
+    name: "恶魔石板与被诅咒的犬公主",
+    use_time: "2h29min",
+    not_strict: true,
+    duration: {
+      start: "2024-12-29",
+      end: "2024-12-30",
+    },
+    score: {
+      story: 1.3,
+      visual: 4.9,
+      program: 4.5,
     },
   },
   {

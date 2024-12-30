@@ -473,6 +473,8 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | const-hex | `Vec<u8>` -\> hex str |
 | constime | 计算编译期值，用一个非常简单易用的宏 |
 
+[这里](https://blessed.rs/crates)还有一个常用库的列表可以参考。
+
 ### clap
 
 一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。

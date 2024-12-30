@@ -101,6 +101,22 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #恶魔石板与被诅咒的犬公主>
+
+我玩的 Android 版。两阶段，前半段是记忆翻牌，由于有个小养成加成，所以很简单。后半段是纯 H，通过 H 策略解锁不同结局。
+
+- 游戏帧率锁 10fps，很低。
+- 很多动画不能跳过，浪费时间；有些操作不好做。
+- 本质是调教游戏，要忍住不内射。
+
+</template>
+<template #五彩斑斓的世界>
+
+玩的 HD Re:GENERATION。
+
+- 语速好慢啊。我感觉我的生命在流逝……我最初的 [speed up](../articles/speedup.md) 想法就是这部作品导致的……
+
+</template>
 <template v-slot:edenPlusMosaic>
 
 我一开始在 steam 冬促买的 eden* 本体。结果发现国区无法下载 eden* PLUS ＋ MOSAIC 补丁；各资源点也都遮遮掩掩，私聊才给。一怒之下我直接去 tg 频道下载了 eden\* PLUS ＋ MOSAIC 的 [bundle 全量版本](https://t.me/erogamecloud/3621)。

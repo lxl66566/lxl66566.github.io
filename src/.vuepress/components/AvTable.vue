@@ -394,6 +394,9 @@ const data = [
   { id: "midv-639", aScore: 7.3, bScore: 3, u: true, name: "同窓会でネトラレてるのにいっぱいイッちゃった… 石川澪" },
   { id: "stars-435", aScore: 5.8, bScore: 4.2, u: true },
   { id: "miaa-828", aScore: 6.2, bScore: 7, u: true },
+  { id: "same-131", aScore: 7.5, bScore: 7.8, u: true, name: "#父女" },
+  { id: "DANDY-423", aScore: 6.2, bScore: 8.4, u: true, name: "#黑人 #大x" },
+  { id: "NHDTB-835", aScore: 7.8, bScore: 8.8, name: "#图书馆 #禁音" },
 ].sort((x, y) => -TwoScoreCompare(x, y));
 // 同分则颜值分优先
 
