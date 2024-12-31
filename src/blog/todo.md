@@ -11,7 +11,7 @@ category:
 
 - [x] vscode extensions recommendation
 - [x] koishi
-- [ ] tampermonkey
+- [x] 脚本
 - [x] author/p_d 网状图
 - [x] NSFW
 - [ ] how to ask

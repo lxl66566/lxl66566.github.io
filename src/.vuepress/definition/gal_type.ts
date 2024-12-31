@@ -1,5 +1,7 @@
 // 存放 galgame 相关的类型与方法
 
+import { DateDurationType } from "./types.js";
+
 export enum PlayingStatus {
   PLAYING = "游玩中",
   PAUSED = "中断",
@@ -47,10 +49,7 @@ export type GalItemInputType = {
   /**
    * 游玩起止日期
    */
-  duration?: {
-    start?: string;
-    end?: string;
-  };
+  duration?: DateDurationType;
   /**
    * 打分
    */

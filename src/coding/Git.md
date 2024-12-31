@@ -60,19 +60,18 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
    git config --global user.email "your-email@example.com"
    ```
    这里建议将 `Your Name` & `your-email@example.com` 设为 Github 注册用户名与邮箱，使 Github 能够统计你的 commits。
-2. 配置代理
-   由于众所周知的原因，最好使用代理上 Github。请在 `<port>` 处填写你的本地代理端口
+2. 配置代理：由于众所周知的原因，最好使用代理上 Github。请在 `<port>` 处填写你的本地代理端口：
    ```sh
    git config --global http.proxy http://127.0.0.1:<port>
    git config --global https.proxy http://127.0.0.1:<port>
    ```
-   还需要配置 ssh 的代理：执行 `vi ~/.ssh/config`，输入如下内容[^6]：
+   还需要配置 ssh 的代理：编辑 `~/.ssh/config`，输入如下内容[^6]：
    ```
    Host github.com   # "github.com" 匹配的是仓库的 remote host name, 可以通过 git remote -v 查看。
        User git
        Hostname ssh.github.com
        Port 443
-       # ProxyCommand connect -H 127.0.0.1:<port> %h %p  # 其实不需要这行也可以读系统代理
+       # ProxyCommand connect -H 127.0.0.1:<port> %h %p  # 如果你设置了 HTTP_PROXY 和 HTTPS_PROXY 环境变量，可以不写这行
    ```
 3. 其他全局设置
    ```sh
@@ -95,7 +94,7 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
    - [difftastic](https://difftastic.wilfred.me.uk/git.html#difftastic-by-default)
    - [git-filter-repo](#删除大文件)
 
-[^6]: 需要使用 [Vim](./vim.md)。那篇文章有教两句 Vim 基础用法。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。
+[^6]: 需要使用 [Vim](./vim.md)。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。
 
 ## 其他工具
 
@@ -163,33 +162,20 @@ git remote add origin https://github.com/yourgithubID/gitRepo.git
 首次使用 ssh 连接需要先配置 ssh 密钥。在 git bash 中输入下述指令：
 
 ```sh
-ssh-keygen  -C "youremail@example.com"    # 然后一路回车
-clip < ~/.ssh/id_*.pub    # 复制公钥内容至剪切板
-# 点击github右上角头像，进入Settings-SSH and GPG keys，新建你的 ssh key 并粘贴内容。标题随便写。
-ssh -T git@github.com   # 输入该命令验证是否成功
+ssh-keygen -t ed25519 -C "youremail@example.com"      # 这里的邮箱与你的 github 注册邮箱相同。
+# 然后一路回车
+cat ~/.ssh/id_ed25519.pub                             # 把这个文件的内容打印出来，然后复制到剪切板。或者你也可以用记事本打开，都行，只要拿到内容即可。
+# 点击github右上角头像，进入 Settings-SSH and GPG keys，新建你的 ssh key 并粘贴内容。标题随便写。
+ssh -T git@github.com   # 验证 ssh key 是否设置成功
 ```
 
-- （疑难解答[^1]：_ssh 密钥添加后出现`ssh: connect to host github.com port 22: Connection refused`错误_）
-- （疑难解答[^2]：_复制密钥时遇到`bash: clip: command not found`错误_）
+- （疑难解答[^1]：ssh 密钥添加后出现 `ssh: connect to host github.com port 22: Connection refused` 错误）
 
-[^1]: 可能是代理阻断了 ssh 22 端口造成。有两个解法：
-
-    1. 关闭代理。
-    2. 连接 GitHub 的 443 端口 ([ref](https://segmentfault.com/a/1190000041909858))。在 `~/.ssh/config` 中添加：
-       ```
-       Host github.com
-          Hostname ssh.github.com
-          Port 443
-       ```
-
-[^2]:
-    > `clip.exe` should be in `C:\Windows\System32\` or `C:\Windows\SysWOW64\`. You can check if those folders are in your path by doing `echo $PATH`. If they aren't (which would surprise me), you can add them.
-
-    不过这只是复制一个密钥的事，用不着那么麻烦。执行 `cat ~/.ssh/id_*.pub` 并手动复制你的密钥即可。
-
-请确保已[添加远程地址](#添加远程地址)。
+[^1]: 可能是代理阻断了 ssh 22 端口造成。你需要将 github 远程的端口改为 443，参考[配置 2.](#配置)。
 
 #### 推送
+
+请确保已[添加远程地址](#添加远程地址)。
 
 ```sh
 git push origin <branch>    # branch 为当前分支
@@ -638,3 +624,4 @@ git gc --prune=now --aggressive        # gc，删除 blob
 3. file structure [inside .git](https://wizardzines.com/comics/inside-git/)
 4. [深入探討 Git 中的 Unreachable (無法到達的) 物件與清理方法](https://blog.miniasp.com/post/2024/06/18/How-to-Remove-Git-Unreachable-Objects)
 5. [一文讲透 Git 底层数据结构和原理](https://www.jiqizhixin.com/articles/2020-05-20-3)
+6. [Get up to speed with partial clone and shallow clone](https://github.blog/open-source/git/get-up-to-speed-with-partial-clone-and-shallow-clone/)

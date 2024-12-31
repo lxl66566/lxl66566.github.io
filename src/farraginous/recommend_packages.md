@@ -354,10 +354,6 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 
 参考 [下载器横评](../articles/downloaders.md)。
 
-### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
-
-运行脚本。
-
 ### [简约翻译](https://github.com/fishjar/kiss-translator)
 
 从[沉浸式翻译](#沉浸式翻译)过来的，这个还带了划词翻译功能，速度也快，非常好用。缺点是暂时没法自定义快捷键。
@@ -376,7 +372,7 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 
 [前往 Github](https://github.com/vinta/pangu.js)
 
-> 也可以使用 Tampermonkey + 脚本方式，以便在 firefox 等非 chromium 系浏览器上使用。
+> 也可以使用脚本，以便在 firefox 等非 chromium 系浏览器上使用。
 
 ### [CoCoCut](https://microsoftedge.microsoft.com/addons/detail/视频下载扩展cococutvideo-down/npdhgjfiikhgncaacnnodpfchmelnchm)
 
@@ -585,6 +581,10 @@ ps. 已经寄了。
 爆杀 edge 翻译：支持双语对照；支持为翻译添加样式；可选择引擎。
 
 我经历了沉浸式翻译从免费到商业化再到[丑闻](https://www.v2ex.com/t/1042477)的过程，这事情做的跟之前的 [utools](#utools) 实在是太相似了。因此我换用非商业开源的 [kiss translator](#简约翻译)，还多了划词翻译功能。
+
+### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
+
+[被 Violentmonkey 爆杀](https://t.me/withabsolutex/2163)。
 
 ## external
 

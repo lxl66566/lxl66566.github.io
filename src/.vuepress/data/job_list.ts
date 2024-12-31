@@ -1,4 +1,4 @@
-import { JobItemInputType } from "../definition/index.js";
+import { DateCompare, JobItemInputType } from "../definition/index.js";
 
 const job_list_2024_autumn: JobItemInputType[] = [
   {
@@ -129,5 +129,8 @@ const job_list_2024_spring: JobItemInputType[] = [
     offer: true,
   },
 ];
+
+job_list_2024_spring.sort((x, y) => DateCompare(x.time, y.time));
+job_list_2024_autumn.sort((x, y) => DateCompare(x.time, y.time));
 
 export { job_list_2024_spring, job_list_2024_autumn };

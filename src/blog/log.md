@@ -22,6 +22,11 @@ category:
 
 ## 2024
 
+### 20241231
+
+- 新增 `Date` 组件
+- 对 galgame_list 和 job_list 排序
+
 ### 20241228
 
 - 将 ExpandableListItem 组件应用上 anime.md 的番剧列表

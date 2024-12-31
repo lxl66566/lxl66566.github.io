@@ -1,4 +1,5 @@
 import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
+import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
@@ -1405,4 +1406,33 @@ const original_list: GalItemInputType[] = [
   },
 ];
 
-export default original_list;
+// 1. 按照 PlayingStatus 分组
+const grouped = original_list.reduce((acc, item) => {
+  const key = item.playing_status ?? "null";
+  if (!acc[key]) {
+    acc[key] = [];
+  }
+  acc[key].push(item);
+  return acc;
+}, {} as Record<string, GalItemInputType[]>);
+
+// 2. 组间按照 "游玩中", "中断", "null", "已停止" 排序，组内按照 duration 降序排序
+const sortedGroups = ["游玩中", "中断", "null", "已停止"].map((key) => {
+  grouped[key]?.sort((x: GalItemInputType, y: GalItemInputType) => {
+    if (x.duration && y.duration) {
+      return -DateDurationCompare(x.duration, y.duration);
+    }
+    if (y.duration) {
+      return 1;
+    }
+    if (x.duration) {
+      return -1;
+    }
+    return 0;
+  });
+  return grouped[key] ?? [];
+});
+
+// 最终结果
+const result = sortedGroups.flatMap((group) => group);
+export default result;

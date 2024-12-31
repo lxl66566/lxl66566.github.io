@@ -2,7 +2,7 @@
  * 定义了一些组件内共用的类型和方法
  */
 
-import type { TwoScoreItemType } from "./types.js";
+import type { DateDurationType, DateType, TwoScoreItemType } from "./types.js";
 
 export * from "./types.js";
 export * from "./gal_type.js";
@@ -19,4 +19,24 @@ export function TwoScoreCompare(a: TwoScoreItemType, b: TwoScoreItemType): numbe
   const aScore = a.aScore + a.bScore;
   const bScore = b.aScore + b.bScore;
   return bScore - aScore || b.aScore - a.aScore;
+}
+
+export function DateCompare(a: DateType, b: DateType): number {
+  return a.localeCompare(b);
+}
+
+/**
+ * 比较两个 DateDurationType，用于 sort 的输入。按照 end 日期顺序排序。
+ */
+export function DateDurationCompare(a: DateDurationType, b: DateDurationType): number {
+  if (a.end && b.end) {
+    return a.end.localeCompare(b.end);
+  }
+  if (a.end) {
+    return -1;
+  }
+  if (b.end) {
+    return 1;
+  }
+  return 0;
 }

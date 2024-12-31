@@ -13,7 +13,9 @@
             <td>{{ item.name }}</td>
             <td>{{ item.job }}</td>
             <td>{{ item.by }}</td>
-            <td>{{ item.time }}</td>
+            <td>
+              <Date :date="item.time" />
+            </td>
             <td>{{ `${item.result}${item.offer ? " + offer" : ""}` }}</td>
           </template>
           <template #expanded-content>
@@ -27,6 +29,7 @@
 
 <script lang="ts" setup>
 import { useSlots } from "vue";
+import Date from "./Date.vue";
 import ExpandableListItem from "./ExpandableListItem.vue";
 import { JobItemInputType } from "../definition";
 

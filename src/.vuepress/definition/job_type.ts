@@ -1,3 +1,5 @@
+import { DateType } from "./types.js";
+
 export type JobItemInputType = {
   /**
    * 公司名字
@@ -14,7 +16,7 @@ export type JobItemInputType = {
   /**
    * 投递时间
    */
-  time: string;
+  time: DateType;
   /**
    * 投递结果
    */

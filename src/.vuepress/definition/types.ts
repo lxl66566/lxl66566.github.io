@@ -44,3 +44,16 @@ export interface ArticleCellBoxType {
   links: Link[];
   field?: string;
 }
+
+/**
+ * 所有日期数据类型均为 YYYY-MM-DD 格式。
+ */
+export type DateType = `${number}-${number}-${number}`;
+
+/**
+ * 日期区间
+ */
+export type DateDurationType = {
+  start?: DateType;
+  end?: DateType;
+};

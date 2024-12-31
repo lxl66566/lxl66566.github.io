@@ -1,16 +1,15 @@
 <template>
   <div>
-    ——<time :datetime="date">{{ date }}</time>
+    ——
+    <Date :date="date" />
   </div>
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  date: {
-    type: String,
-    required: true,
-  },
-});
+import Date from "./Date.vue";
+const props = defineProps<{
+  date: string;
+}>();
 
 // 将输入日期字符串格式化为 "YYYY-MM-DD"
 const date = props.date.replace(/(\d{4})(\d{2})(\d{2})/, "$1-$2-$3");
