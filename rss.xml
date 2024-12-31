@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 31 Dec 2024 04:05:32 GMT</pubDate>
-    <lastBuildDate>Tue, 31 Dec 2024 04:05:32 GMT</lastBuildDate>
+    <pubDate>Tue, 31 Dec 2024 19:23:46 GMT</pubDate>
+    <lastBuildDate>Tue, 31 Dec 2024 19:23:46 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>评价</category>
@@ -25,7 +25,7 @@
       <link>https://absx.pages.dev/gossip/job.html</link>
       <guid>https://absx.pages.dev/gossip/job.html</guid>
       <source url="https://absx.pages.dev/rss.xml">找工作经历</source>
-      <description>找工作经历 首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。 感想 经历了一次春招一次秋招，有一点感想。 谨慎投招聘网站上经常刷到的小公司。这么多毕业生，小公司又没有多少招人需求，那为什么一直都在招人呢？因为真的难过它们的面试，恨不得招的都是 ACM 金。 学校招聘会都是垃圾。给的少，大多要实习，这就是纯纯压榨，如果你会点技术...</description>
+      <description>找工作经历 首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。 感想 经历了一次春招一次秋招，有一点感想。 谨慎投招聘网站上经常刷到的小公司。这么多毕业生，小公司又没有多少招人需求，那为什么一直都在招人呢？因为真的难过它们的面试，恨不得招的都是 ACM 金。 而大厂面试也没有那么难，非常公式化。多看面经，多背八股，刷点基础算法即...</description>
       <category>评价</category>
       <category>经历</category>
       <pubDate>Mon, 25 Mar 2024 00:00:00 GMT</pubDate>
@@ -34,7 +34,11 @@
 <h2>感想</h2>
 <p>经历了一次春招一次秋招，有一点感想。</p>
 <ul>
-<li>谨慎投招聘网站上经常刷到的小公司。这么多毕业生，小公司又没有多少招人需求，那为什么一直都在招人呢？因为真的难过它们的面试，恨不得招的都是 ACM 金。</li>
+<li>谨慎投招聘网站上经常刷到的小公司。这么多毕业生，小公司又没有多少招人需求，那为什么一直都在招人呢？因为真的难过它们的面试，恨不得招的都是 ACM 金。
+<ul>
+<li>而大厂面试也没有那么难，非常公式化。多看面经，多背八股，刷点基础算法即可。</li>
+</ul>
+</li>
 <li>学校招聘会都是垃圾。给的少，大多要实习，这就是纯纯压榨，如果你会点技术还是去网上投吧。</li>
 </ul>
 <h2>关于我</h2>

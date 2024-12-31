@@ -1,0 +1,1 @@
+function c(e,r){const o=e.aScore+e.bScore;return r.aScore+r.bScore-o||r.aScore-e.aScore}function a(e,r){return e.localeCompare(r)}function t(e,r){return e.end&&r.end?e.end.localeCompare(r.end):e.end?-1:r.end?1:0}export{a as D,c as T,t as a};
