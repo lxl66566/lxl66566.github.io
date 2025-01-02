@@ -68,7 +68,7 @@ category:
 
 ### 现在喜欢
 
-- [纯剧情 galgame](../hobbies/galgame.md)
+- [剧情向 galgame](../hobbies/galgame.md)
 
 <!-- ~~*终于熬到了上完课，双手激动地放上键盘，OSU!挥洒你的汗水。傍晚，为时5小时的夜生活开始，开始CSGO穿越枪林弹雨。经历大战后，在galgame老婆们的怀里沉沉睡去，这大概也算是一种幸福吧。*~~ -->
 

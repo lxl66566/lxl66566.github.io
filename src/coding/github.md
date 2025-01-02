@@ -157,7 +157,12 @@ on:
 
 - if 的外面会自动包 `${{ }}`，不需要手动包，否则会出现预料之外的行为。
 
-### Powerful CI
+### 调试
+
+- [action-tmate](https://github.com/mxschmitt/action-tmate) 提供了 ssh 进入 action 环境里调试的方法，不过这是违反使用协定的，有被封号的风险。
+- [act](https://github.com/nektos/act) 提供了 github action docker，可以在本地模拟 action 环境。
+
+## Powerful CI
 
 这里列出一些我常用的 CI。顺带一提，CI 就是 Continuous Integration，在每次代码操作后自动进行一系列检查或服务更新部署，简化操作流程。
 
@@ -165,30 +170,7 @@ on:
 
 学习写 CI？不用学习，多看多抄，会用 template 就懂了。
 
-#### dependabot
-
-为你的项目自动更新依赖，非常好用。不过需要你项目有一个 check PR 的 test CI，因为 dependabot 靠提 PR 修改代码。项目的测试覆盖率越高越好，这样才不会在自动依赖更新时炸掉项目，自己还不知道。
-
-以 rust 项目为例，只需要在 `.github/dependabot.yml` （注意，不是 workflow 里）写：
-
-```yml
-version: 2
-updates:
-  - package-ecosystem: "cargo"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-```
-
-即可。首次启用记得在 Security 里开启 dependabot。
-
-##### auto merge
-
-使用 dependabot 后，项目一多，容易被通知消息刷屏。我希望在有写 test 的项目中，能够通过测试自动 merge。
-
-我目前使用 [dependabot-auto-merger](https://github.com/marketplace/dependabot-auto-merger)。注意，你的每个仓库都需要手动开启 branch protection ruleset。
-
-#### [typos](https://github.com/crate-ci/typos)
+### [typos](https://github.com/crate-ci/typos)
 
 检查你的英文水平（检查代码拼写错误）。rust 写的，速度极快，即使不用 CI 也可以在本地用，方便修复。
 
@@ -205,7 +187,7 @@ typos     # 检查
 typos -w  # 纠正
 ```
 
-#### [cache](https://github.com/actions/cache)
+### [cache](https://github.com/actions/cache)
 
 缓存构建中的依赖项，加速 CI。比较适合大型项目，依赖很多，经常跑 CI 的那种。个人的小仓库就有点鸡肋了，不如不开 cahce，多花 10 秒钟构建省 300MB 空间，不为 Github 想想也得为 SSD 想想吧~~（虽然不是我的，但爱是平等的）~~。
 
@@ -227,16 +209,68 @@ typos -w  # 纠正
     restore-keys: ${{ runner.os }}-cargo-
 ```
 
-#### [sccache-action](https://github.com/Mozilla-Actions/sccache-action)
+### [sccache-action](https://github.com/Mozilla-Actions/sccache-action)
 
 方便地使用 [sccache](https://github.com/mozilla/sccache/) 的 CI。这个和上面的 cache 不太一样，sccache 提供更智能的 cache 而不是暴力缓存 `./target`。
 
 使用也非常简单，对 rust 来说，设置两个 env，编译前 use 一下就行。编译后还可以打印。
 
-#### 调试
+## Powerful APPs
 
-- [action-tmate](https://github.com/mxschmitt/action-tmate) 提供了 ssh 进入 action 环境里调试的方法，不过这是违反使用协定的，有被封号的风险。
-- [act](https://github.com/nektos/act) 提供了 github action docker，可以在本地模拟 action 环境。
+Github APPs 是不同于 CI 的一种自动化功能，它们可以更加自由、更加灵活地帮你操作存储库。当然，并不是所有 APP 都是免费的（毕竟是 APP 提供的服务），你也只能使用 APP 本身有的功能，而不像 CI 那样可以自己写任意指令。
+
+### 自动更新依赖
+
+Github 仓库一多，就免不了自动升级依赖。Github 有一些 APP 可以帮你做到这一点。一般来说，项目还需要有测试能跑，并且测试覆盖率越高越好，这样才不会在自动依赖更新时炸掉项目，自己还不知道。
+
+我的要求是自动更新依赖 + 自动跑测试 + 自动合并，并且只有在测试通过时才能合并。
+
+::: tabs
+
+@tab renovate bot
+
+renovate bot 是一个更加强大的依赖管理 APP。据说是因为 dependabot 非常保守，不肯支持新的语言，它才出现的。renovate bot 自身就支持多语言的依赖升级 + 自动合并。
+
+但是 renovate bot 的文档简直就是一坨大便，我摸索了很久才得以一窥门道。
+
+1. renovate bot [支持引用其他配置文件](https://docs.renovatebot.com/config-presets/)。也就是我可以在一个单独的 Github 存储库里放一个通用配置，就可以在各个库里引用这同一份配置，这样比较好统一更改。
+2. renovate bot 的配置项 Reference 在[这里](https://docs.renovatebot.com/configuration-options)。当然这么多不可能每个都看一遍，只能去网上抄其他人的。这里是我的一个模板样例：
+   ```json
+   {
+     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+     "extends": ["config:base"],
+     "timezone": "Asia/Shanghai",
+     "semanticCommits": "enabled",
+     "schedule": ["on the first day of the week"],
+     "commitMessagePrefix": "chore(deps): ",
+     "automerge": true,
+     "automergeStrategy": "rebase",
+     "platformAutomerge": true,
+     "vulnerabilityAlerts": {
+       "enabled": true,
+       "automerge": true
+     }
+   }
+   ```
+
+@tab dependabot
+
+dependabot 是老牌的自动更新 APP 了，Github 官方推出的，还不错。
+
+以 rust 项目为例，只需要在 `.github/dependabot.yml` 写：
+
+```yml
+version: 2
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+```
+
+即可。首次启用记得在 Security 里开启 dependabot。
+
+至于 auto merge，我试过了 [dependabot-auto-merger](https://github.com/marketplace/dependabot-auto-merger)，但是其并不能正常合并。即使我已经设置了 branch protect rules 也不行。
 
 ## external
 

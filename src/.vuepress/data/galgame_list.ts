@@ -3,11 +3,20 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
-    name: "eden* PLUS＋MOSAIC",
+    name: "転性魔王さまは勇者に勝てない！",
+    playing_status: PlayingStatus.PLAYING,
+    namaniku: true,
+    duration: {
+      start: "2025-01-01",
+    },
+  },
+  {
+    name: "eden* PLUS + MOSAIC",
     valid_name: "edenPlusMosaic",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2024-12-23",
+      end: "2025-01-01",
     },
   },
   {
@@ -147,7 +156,7 @@ const original_list: GalItemInputType[] = [
     name: "流景之海的艾佩理雅",
     use_time: "26h35min",
     score: {
-      story: 9.8,
+      story: 9.9,
       visual: 4.2,
       program: 4,
     },

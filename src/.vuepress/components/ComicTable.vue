@@ -631,6 +631,11 @@ const data = [
   { id: "544710", aScore: 8.9, bScore: 8.6, info: "#后宫 #异世界 #兽耳" },
   { id: "544412", aScore: 6.8, bScore: 8.8, info: "#兄妹 #轮x" },
   { id: "546226", aScore: 7.2, bScore: 3.1, info: "#蔚蓝档案", bak: "https://telegra.ph/C105-星月夜-Zmikan-花翼少女の甘い期待--花翼少女的甘甜期待-ブルーアーカイブ-中国翻訳-12-28" },
+  { id: "546796", aScore: 7.4, bScore: 3.5, info: "#cos", bak: "https://telegra.ph/あるたな-薙派-めぐみんコスプレイヤーとオフパコごっこ-この素晴らしい世界に祝福を-中国翻訳-DL版-12-31" },
+  { id: "546909", aScore: 6.5, bScore: 3.9, info: "#灵魂 #雌小鬼", bak: "https://telegra.ph/110836iz翻譯Raikko9-不請自來的匕首小姐FREELOADING-DAGGER-Anya-Melfissa無修正-12-30" },
+  { id: "546794", aScore: 8, bScore: 3, info: "#蔚蓝档案", bak: "https://telegra.ph/みじ屋-ミコジン-ぷらな本-ブルーアーカイブ-中国翻訳-DL版-12-30" },
+  { id: "547143", aScore: 6, bScore: 6.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C105-うつすみおんせん-空住キオ-うそぶきとドーナッツを持って-ブルーアーカイブ-中国翻訳-DL版-12-29" },
+  { id: "547139", aScore: 8.7, bScore: 4, info: "#蔚蓝档案" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 
