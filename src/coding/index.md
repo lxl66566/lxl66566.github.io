@@ -93,15 +93,19 @@ tag:
 
 ## 前端
 
-我之前是靠着写博客和课设积累了一点微不足道的前端经验。后来舍友成为专业前端后，我也有了一点学习前端的兴趣。
+我之前是靠着博客摸索和课设积累了一点微不足道的前端经验。后来舍友成为专业前端后，聊着聊着也种下了学习前端的种子。再后来，因为博客、网站、GUI 的需求，开始系统学习前端。
 
 1. [JS 运行时](./nodejs.md)
 2. [TypeScript & JavaScript 语言](./tsjs.md)
-3. [Vue](./vue.md)
-4. [CSS](./css.md)
-5. [html](./html.md)
+3. [CSS](./css.md)
+4. [html](./html.md)
+5. 框架/组件库
+   1. [Vue](./vue.md)
+   2. [React](./react.md)
+   3. [SolidJS](./solidjs.md)
 6. ~~[MDX](./mdx.md)~~
-7. [配色方案](../farraginous/recommend_websites.md#资源)
+7. 其他
+   - [配色方案](../farraginous/recommend_websites.md#资源)
 
 ## [Android 开发](./android.md)
 

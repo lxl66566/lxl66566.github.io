@@ -29,6 +29,7 @@ const links: ArticleCellBoxType[] = [
       { text: "机场推荐", url: "./proxy/vpn" },
       { text: "代理软件", url: "./proxy/proxy_software" },
       { text: "VPS", url: "./proxy/vps" },
+      { text: "域名", url: "./proxy/domain" },
       { text: "Hysteria2 协议的使用", url: "./proxy/hysteria" },
       { text: "trojan-go 协议的使用", url: "./proxy/trojan-go" },
       { text: "trojan 协议的使用", url: "./proxy/trojan" },

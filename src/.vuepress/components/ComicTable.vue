@@ -636,6 +636,10 @@ const data = [
   { id: "546794", aScore: 8, bScore: 3, info: "#蔚蓝档案", bak: "https://telegra.ph/みじ屋-ミコジン-ぷらな本-ブルーアーカイブ-中国翻訳-DL版-12-30" },
   { id: "547143", aScore: 6, bScore: 6.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C105-うつすみおんせん-空住キオ-うそぶきとドーナッツを持って-ブルーアーカイブ-中国翻訳-DL版-12-29" },
   { id: "547139", aScore: 8.7, bScore: 4, info: "#蔚蓝档案" },
+  { id: "523760", aScore: 6.7, bScore: 3.6, info: "#V" },
+  { id: "547257", aScore: 9, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/Horizontal-World-またのんき-伊ナ落-ブルーアーカイブ-中国翻訳-DL版-01-01-2" },
+  { id: "546270", aScore: 7.2, bScore: 9.1, order: 2, info: "#雌小鬼 #公共场合", bak: "https://telegra.ph/餅屋-かろちー-メスガキリナちゃん-VOL-2-中国翻訳-DL版-01-01" },
+  { id: "547032", aScore: 8.6, bScore: 4.4, info: "#蔚蓝档案", bak: "https://telegra.ph/あとりえひなた-ひなた悠-マリーのひみつアイドルレッスン-ブルーアーカイブ-中国翻訳-DL版-01-02" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

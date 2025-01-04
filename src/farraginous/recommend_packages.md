@@ -283,7 +283,7 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 开源沙盒，隔离运行程序，有时候用得到。请务必使用沙盒运行未知来源的程序。
 
-### [Winaero Tweaker](https://winaero.com/)
+### [Winaero Tweaker](https://winaero.com/winaero-tweaker/#download)
 
 windows 设置小工具，集成了一些高级功能（特别对我这种被迫设置 win11 的人有点帮助）
 

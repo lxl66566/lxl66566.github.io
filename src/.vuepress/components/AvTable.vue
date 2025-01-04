@@ -397,6 +397,8 @@ const data = [
   { id: "same-131", aScore: 7.5, bScore: 7.8, u: true, name: "#父女" },
   { id: "DANDY-423", aScore: 6.2, bScore: 8.4, u: true, name: "#黑人 #大x" },
   { id: "NHDTB-835", aScore: 7.8, bScore: 8.8, name: "#图书馆 #禁音" },
+  { id: "SDMUA-010", aScore: 5.3, bScore: 6.4, name: "#摄影 #堕落 声優アイドルコスプレ撮影会の闇 キモヲタたちに囲まれ好き放題に姦される… 性処理ペット輪●撮影会 胡桃さくら" },
+  { id: "MOGI-013", aScore: 5.6, bScore: 4.4, name: "誰もが萌える激甘ボイスの声優を夢見て福井県から上京してきたヲタク美少女 3 本限定 AV debut 胡桃さくら 19 歳" },
 ].sort((x, y) => -TwoScoreCompare(x, y));
 // 同分则颜值分优先
 

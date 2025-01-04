@@ -92,6 +92,12 @@ tag:
 - [ ] use excel-like editor to edit sql database
 - [ ] 射精记录 bot，cloudflare workers + d1
 - [ ] rust TUI easy_download
+- [ ] GalgameManager
+  - [ ] 随机启动 计时
+  - [ ] 插件与启动链
+  - [ ] 计时
+  - [ ] 备份存档
+  - [ ] 优秀的用户交互（自动查找图片）
 
 ### RIIR
 

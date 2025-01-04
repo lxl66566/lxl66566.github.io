@@ -438,6 +438,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-hakari](https://crates.io/crates/cargo-hakari) | 加速构建的黑科技 |
 | [cargo-selector](https://github.com/lusingander/cargo-selector) | TUI 快速选择运行目标 |
 | [cargo-sweep](https://github.com/holmgr/cargo-sweep) | 部分清理编译产物 |
+| [cargo-depgraph](https://github.com/jplatte/cargo-depgraph) | 看依赖关系。比 cargo-tree 等等好用 |
 
 ## 库
 
@@ -568,7 +569,7 @@ GUI 是 rust 日经问题了。
 一些 GUI 框架：
 
 - [egui](https://github.com/emilk/egui)：原生 GUI，有[大项目](https://www.reddit.com/r/rust/comments/1c69mrj)，看起来不错。
-- tauri：electron 的竞品，但是很灵车（许多群友都说过了）。我连 example 都跑不过。这里有一些别人对 tauri 的实践：
+- tauri：electron 的竞品，但是很灵车（许多群友都说过了）。2022 年我连 example 都跑不过。这里有一些别人对 tauri 的实践：
   - [得物商家客服从 Electron 迁移到 Tauri 的技术实践](https://mp.weixin.qq.com/s/UxmJxU4-fv9GeRxl2fzOGw)
   - [tauri-bug-reproducer](https://github.com/yetone/tauri-bug-reproducer)，T 黑头子（
 - [slint](https://github.com/slint-ui/slint)：嗯写 DSL
