@@ -6,20 +6,124 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 02 Jan 2025 17:34:13 GMT</pubDate>
-    <lastBuildDate>Thu, 02 Jan 2025 17:34:13 GMT</lastBuildDate>
+    <pubDate>Sat, 04 Jan 2025 18:20:47 GMT</pubDate>
+    <lastBuildDate>Sat, 04 Jan 2025 18:20:47 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>评价</category>
-    <category>经历</category>
     <category>编程</category>
-    <category>推荐</category>
     <category>教程</category>
+    <category>经历</category>
+    <category>评价</category>
+    <category>推荐</category>
     <category>学习</category>
     <category>爱好</category>
     <category>应用</category>
-    <category>生命科学</category>
-    <category>生活</category>
+    <item>
+      <title>React</title>
+      <link>https://absx.pages.dev/coding/react.html</link>
+      <guid>https://absx.pages.dev/coding/react.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">React</source>
+      <description>React JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 &amp;lt;&amp;gt;&amp;lt;/&amp;gt; 空标签包围。 JSX 内插值（插表达式）使用单大括号。 JSX 里的 class 要改为 className。 JSX 里可以写内联 styl...</description>
+      <category>编程</category>
+      <pubDate>Sat, 04 Jan 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>JSX 基础</h2>
+<p>JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。</p>
+<ul>
+<li>多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 <code>&lt;&gt;&lt;/&gt;</code> 空标签包围。</li>
+<li>JSX 内插值（插表达式）使用单大括号。</li>
+<li>JSX 里的 class 要改为 className。</li>
+<li>JSX 里可以写内联 style，接受一个类似 CSS 的对象。</li>
+<li>JSX 里可以直接用 <code>&lt;div {...object} /&gt;</code> 进行 props 传入的解构，非常方便。</li>
+</ul>
+<p>JSX 能够非常灵活地组织组件，比 Vue 灵活太多了。</p>
+<h2>组件</h2>
+<p>一般来说只需要使用基于函数的 API。现在所有现代前端都在使用基于函数的 API，例如 Kotlin Compose UI，因为组合优于继承，灵活性非常强。</p>
+<ul>
+<li>React 每一个返回 JSX 对象的函数都是一个组件。</li>
+<li>函数的第一个入参是 props。</li>
+<li>如果要传递 JSX 给组件，默认传到 <code>props.children</code>。</li>
+<li>组件间传值：
+<ul>
+<li>父向子，props，没问题。</li>
+<li>子向父，回调函数。</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header-anchor" href="#react-hooks"><span></span></a><a href="https://zh-hans.react.dev/reference/react/hooks" target="_blank" rel="noopener noreferrer">React Hooks</a></h2>
+<p>Hooks 是响应式的基础。React 内置了许多 Hooks，但是平常最常用的也就 useState，useRef，useEffect。</p>
+<h3>useState</h3>
+<p>React 里最常用的响应式就是 useState 了。其返回两个值，<code>content</code> 是内容的引用 (getter)，<code>setContent</code> 是一个函数，用于改变内容 (setter)。这样可以比较明确地控制如何渲染 DOM 树。</p>
+<div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" data-title="js" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">content</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">setContent</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> useState</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"default content"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">);</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>useRef</h3>
+<p>跟 Vue 的 ref 有很大区别，useRef 这里的 ref 是不会触发渲染的。</p>
+<p>有一点跟 Vue 一样的就是 Vue 的 ref 需要 <code>.value</code> 获取内部值，而 useRef 需要 <code>.current</code> 获取。</p>
+<h3>useCallback</h3>
+<p>包装函数，让组件重新渲染时，该函数不会重新创建，也就是保持同一个对象。可以用于 <code>memo</code>。</p>
+<h2>external</h2>
+<ul>
+<li><a href="https://juejin.cn/post/7195513281228898363" target="_blank" rel="noopener noreferrer">2023 再看 React 状态管理库</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>SolidJS</title>
+      <link>https://absx.pages.dev/coding/solidjs.html</link>
+      <guid>https://absx.pages.dev/coding/solidjs.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">SolidJS</source>
+      <description>SolidJS SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks。后文假设读者已经熟悉了 React。 Hooks createSignal 就是 useState。 createContext 可以用来跨组件传输数据，不需要通过 props。 createResource 可以用来执...</description>
+      <category>编程</category>
+      <pubDate>Sat, 04 Jan 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks。后文假设读者已经熟悉了 React。</p>
+<h2>Hooks</h2>
+<h3>createSignal</h3>
+<p>就是 useState。</p>
+<h3>createContext</h3>
+<p>可以用来跨组件传输数据，不需要通过 props。</p>
+<h3>createResource</h3>
+<p>可以用来执行 async 函数。</p>
+<h3></h3>
+<h2>Router</h2>
+<p>使用 <a href="https://github.com/solidjs/solid-router" target="_blank" rel="noopener noreferrer">solid-router</a>，很简单。</p>
+<h2>Icons</h2>
+<p>SolidJS <a href="https://solid-icons.vercel.app/" target="_blank" rel="noopener noreferrer">自带了一个图标库</a>，图标非常全，使用也方便。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>域名</title>
+      <link>https://absx.pages.dev/articles/proxy/domain.html</link>
+      <guid>https://absx.pages.dev/articles/proxy/domain.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">域名</source>
+      <description>域名 很多时候你需要一个域名用来部署代理服务，因为基于 SSL 的代理（trojan 等）都需要域名来签发 https 证书。即使你不使用代理，也有可能需要部署自己的网站，用域名作为 IP 的助记。 一般域名的续费是很贵的，卖域名的就好这一口。所以如果是为了部署代理，完全没有必要续费域名，每年一换即可。 免费域名一般是二级域名，也就是到手至少是 xxx...</description>
+      <category>教程</category>
+      <category>经历</category>
+      <pubDate>Fri, 03 Jan 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>很多时候你需要一个域名用来部署代理服务，因为基于 SSL 的代理（trojan 等）都需要域名来签发 https 证书。即使你不使用代理，也有可能需要部署自己的网站，用域名作为 IP 的助记。</p>
+<ul>
+<li>一般域名的续费是很贵的，卖域名的就好这一口。所以如果是为了部署代理，完全没有必要续费域名，每年一换即可。</li>
+<li>免费域名一般是二级域名，也就是到手至少是 xxx.xx.xx 形式。（世界上真的存在一级免费域名大善人吗）</li>
+</ul>
+<h2>域名服务器</h2>
+<p>付费购买的域名一般都会提供域名服务器。而免费域名一般需要自己准备，这里就不得不提到赛博菩萨 cloudflare，它的域名服务器很稳定，添加也方便。</p>
+<p>一般来说，使用 cloudflare 的域名服务器需要以下步骤：</p>
+<ol>
+<li>在 cloudflare 里添加域</li>
+<li>点点点，所有步骤做完以后会给两个（或几个）dns 服务器地址，填写到域名提供商那里并 update。</li>
+<li>等待几个小时</li>
+</ol>
+<p>然后用 nslookup 就能查到了。</p>
+<h2>免费</h2>
+<ul>
+<li><a href="https://register.us.kg" target="_blank" rel="noopener noreferrer">us.kg</a>：可以托管到 cloudflare，注册还算不难。</li>
+</ul>
+<h2>付费</h2>
+<ul>
+<li><a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">namecheap</a>：买了两次，还算便宜。</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>找工作经历</title>
       <link>https://absx.pages.dev/gossip/job.html</link>
@@ -2007,250 +2111,6 @@ h400000v40h-400000z"></path></svg></span></span></span><span class="vlist-s">​
 <p>一个三角形一定能通过仿射变换另一个三角形得到。</p>
 <p>| 名称     | 特点                                                          |
 |</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>电磁场与电磁波</title>
-      <link>https://absx.pages.dev/learning/electromagnetic_wave.html</link>
-      <guid>https://absx.pages.dev/learning/electromagnetic_wave.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">电磁场与电磁波</source>
-      <description>电磁场与电磁波 我最早看的网课是这个。不过如评论所说，“这个视频里没有入射折射还有波导相关的章节，知识讲的很细，对速成不友好，对你写题帮助更是不大”。全篇讲证明，没有任何做题，并且是有读 PPT 的嫌疑的。不过物理也就是证明吸引人。 而且，我校的电磁场考得还挺多的，从斜透射到波导，从传输线到偶极子天线，B 站很少有视频能全部讲到。因此我还是自己对照作业...</description>
-      <category>学习</category>
-      <pubDate>Sat, 25 May 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>我最早看的网课是<a href="https://www.bilibili.com/video/av417507556" target="_blank" rel="noopener noreferrer">这个</a>。不过如评论所说，“这个视频里没有入射折射还有波导相关的章节，知识讲的很细，对速成不友好，对你写题帮助更是不大”。全篇讲证明，没有任何做题，并且是有读 PPT 的嫌疑的。不过物理也就是证明吸引人。</p>
-<p>而且，我校的电磁场考得还挺多的，从斜透射到波导，从传输线到偶极子天线，B 站很少有视频能全部讲到。因此我还是自己对照作业 + 书了。</p>
-<p>学了一阵子电磁波，发现为了应付考试没有必要去管推导。。那个视频里讲的东西几乎全部没用，笑死。</p>
-<h2>基础</h2>
-<p>真空磁导率 <span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>=</mo><mn>4</mn><mi>π</mi><mo>×</mo><mn>1</mn><msup><mn>0</mn><mrow><mo>−</mo><mn>7</mn></mrow></msup><mi>N</mi><mo separator="true">⋅</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\mu_0=4\pi\times10^{-7} N·A^{−2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">4</span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">7</span></span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
-<p><span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle scriptlevel="0" displaystyle="true"><mi>c</mi><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>μ</mi><mn>0</mn></msub><msub><mi>ε</mi><mn>0</mn></msub></mrow></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\displaystyle c=\frac1{\mu_0\varepsilon_0}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.2019em;vertical-align:-0.8804em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">μ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">ε</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8804em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
-<p>拉梅系数：</p>
-<p>| xyz   | <span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mi>ϕ</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\rho\phi z</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ρϕ</span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span> | <span v-pre="" class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>θ</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">r\theta\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal">θϕ</span></span></span></span> |
-|</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>寄生虫认知与预防</title>
-      <link>https://absx.pages.dev/articles/worm.html</link>
-      <guid>https://absx.pages.dev/articles/worm.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">寄生虫认知与预防</source>
-      <description>寄生虫认知与预防 我多年感染寄生虫，具有一定经验。此处是一些资料整合，还有我的感受。 共性 寄生虫一般产卵数量都是上万的。 蛲虫 蛲虫（náo）（threadworm）是一种仅寄生人类的寄生虫，极易感染，是分布最广泛的软体寄生虫。此虫在与人类数万年的对抗中，已经产生了非常恶毒的性质。 蛲虫在肠道交配后，母虫会爬到肛门处。当受到空气刺激[1]，母虫将在肛...</description>
-      <category>生命科学</category>
-      <pubDate>Tue, 07 May 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>我多年感染寄生虫，具有一定经验。此处是一些资料整合，还有我的感受。</p>
-<h2>共性</h2>
-<ul>
-<li>寄生虫一般产卵数量都是上万的。</li>
-</ul>
-<h2>蛲虫</h2>
-<p>蛲虫（náo）（threadworm）是一种仅寄生人类的寄生虫，极易感染，是分布最广泛的软体寄生虫。此虫在与人类数万年的对抗中，已经产生了非常恶毒的性质。</p>
-<p>蛲虫在肠道交配后，母虫会爬到肛门处。当受到空气刺激<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">，母虫将在肛门皮肤褶皱产下数万颗卵。一部分卵会牢牢粘在皮肤上，另一部分会跑到内裤中，掉到床上，如果你因为瘙痒而去抓皮炎，那么虫卵就会到指甲缝里，到一切你能看到的地方。虫卵大小为 50-60 微米，肉眼不可见，在体外能存活 2-3 周<sup class="footnote-ref"></sup></a><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2">。</a></p><a class="footnote-anchor" id="footnote-ref2">
-</a><p><a class="footnote-anchor" id="footnote-ref2">蛲虫还可能爬到的地方有阴道（输卵管）、尿道、肠壁肌层、盲肠、腹腔<sup class="footnote-ref"></sup></a><a href="#footnote2">[2:1]</a><a class="footnote-anchor" id="footnote-ref2:1">、阑尾<sup class="footnote-ref"></sup></a><a href="#footnote1">[1:1]</a><a class="footnote-anchor" id="footnote-ref1:1">。蛲虫卵如果被吸入肺部，可能引起哮喘<sup class="footnote-ref"></sup></a><a href="#footnote1">[1:2]</a><a class="footnote-anchor" id="footnote-ref1:2">；蛲虫卵进入眼睛，可能在眼部发育，导致结膜炎等<sup class="footnote-ref"></sup></a><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3">。</a></p><a class="footnote-anchor" id="footnote-ref3">
-</a><h3><a class="footnote-anchor" id="footnote-ref3"></a><a class="header-anchor" href="#自检"><span>自检</span></a></h3>
-<p>感染具体表现是肛门瘙痒，非常好辨认。夜间还能感到肛门处有物体蠢蠢欲动（）。</p>
-<h3>防治</h3>
-<p>（某些是我自己想的）</p>
-<ul>
-<li>药物：
-<ul>
-<li>甲苯达唑 &gt; 阿苯达唑。</li>
-</ul>
-</li>
-<li>老生常谈：多洗澡，每天换洗内裤，常洗床单被褥，吃东西前必定洗手。</li>
-<li>使用碘伏涂在可能有虫卵的地方，比如肛周<sup class="footnote-ref"><a href="#footnote1">[1:3]</a><a class="footnote-anchor" id="footnote-ref1:3"></a></sup><a class="footnote-anchor" id="footnote-ref1:3">。</a></li><a class="footnote-anchor" id="footnote-ref1:3">
-<li>控制好你的手：不要用手触碰肛门，搓眼睛。</li>
-</a><li><a class="footnote-anchor" id="footnote-ref1:3">
- <sup class="footnote-ref"></sup></a><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></li><a class="footnote-anchor" id="footnote-ref4">
-<li><s>别自慰，至少别穿着内裤自慰</s></li>
-</a></ul><a class="footnote-anchor" id="footnote-ref4">
-</a><h2><a class="footnote-anchor" id="footnote-ref4"></a><a class="header-anchor" href="#蛔虫"><span>蛔虫</span></a></h2>
-<p>相对来说蛔虫更无害，甚至从古至今都有人拿蛔虫减肥<sup class="footnote-ref"><a href="#footnote5">[5]</a><a class="footnote-anchor" id="footnote-ref5"></a></sup><a class="footnote-anchor" id="footnote-ref5">……理解不能。</a></p><a class="footnote-anchor" id="footnote-ref5">
-</a><p><a class="footnote-anchor" id="footnote-ref5">蛔虫的主要风险是会到处跑<sup class="footnote-ref"></sup></a><a href="#footnote5">[5:1]</a><a class="footnote-anchor" id="footnote-ref5:1">，可阻塞肠道，胆管或胰管，从而导致胆囊炎或胰腺炎<sup class="footnote-ref"></sup></a><a href="#footnote6">[6]</a><a class="footnote-anchor" id="footnote-ref6">，甚至可能钻入脑中<sup class="footnote-ref"></sup></a><a href="#footnote7">[7]</a><a class="footnote-anchor" id="footnote-ref7">；繁殖能力强，蛔虫卵在土壤中能存活数年，成虫的寿命 1~2 年。<sup class="footnote-ref"></sup></a><a href="#footnote8">[8]</a><a class="footnote-anchor" id="footnote-ref8"></a></p><a class="footnote-anchor" id="footnote-ref8">
-</a><p><a class="footnote-anchor" id="footnote-ref8">蛔虫能在拉出的屎中看到，还是有一定震撼力的<sup class="footnote-ref"></sup></a><a href="#footnote9">[9]</a><a class="footnote-anchor" id="footnote-ref9">。这也是蛔虫感染最直接的证据。</a></p><a class="footnote-anchor" id="footnote-ref9">
-</a><h3><a class="footnote-anchor" id="footnote-ref9"></a><a class="header-anchor" href="#防治-1"><span>防治</span></a></h3>
-<ul>
-<li>人能吃，虫不能吃的东西。
-<ul>
-<li>我曾在一天晚上吃了大量重辣蒜末韭菜，第二天早上拉出了几条蛔虫尸体。甚至菊花并没有太多疼痛，表明“药”效基本被蛔虫吸收了。这种方法有一定风险，请谨慎使用。</li>
-</ul>
-</li>
-</ul>
-<h2>药物</h2>
-<p>虽然阿苯达唑占了 99%，但是我感觉阿苯达唑效果并不是非常好。从长时间来说，建议<a href="/gossip/va_view.html#%E8%BD%AE%E8%BD%AC%E8%AE%BA" target="_blank">轮换吃</a>，不要只吃一种。</p>
-<h3>苯并咪唑类</h3>
-<p>据传有抗癌药效<sup class="footnote-ref"><a href="#footnote10">[10]</a><a class="footnote-anchor" id="footnote-ref10"></a></sup><a class="footnote-anchor" id="footnote-ref10">。此类药耐受/致死上限非常高<sup class="footnote-ref"></sup></a><a href="#footnote10">[10:1]</a><a class="footnote-anchor" id="footnote-ref10:1"><sup class="footnote-ref"></sup></a><a href="#footnote11">[11]</a><a class="footnote-anchor" id="footnote-ref11">，平常多吃点完全没有影响。唯一要注意的是可能带来的后遗症。</a></p><a class="footnote-anchor" id="footnote-ref11">
-<p>代谢主要靠肝。肝不好的请遵医嘱。</p>
-</a><ul><a class="footnote-anchor" id="footnote-ref11">
-</a><li><a class="footnote-anchor" id="footnote-ref11">阿苯达唑：市面上<strong>最常见</strong>的广谱驱虫药，使寄生虫肠道退化，饿死<sup class="footnote-ref"></sup></a><a href="#footnote12">[12]</a><a class="footnote-anchor" id="footnote-ref12">。副作用较小，无持续效果。
-</a><ul><a class="footnote-anchor" id="footnote-ref12">
-<li>睡前吃，2 周后需要再吃一次，不要侥幸。</li>
-</a><li><a class="footnote-anchor" id="footnote-ref12">阿苯达唑有一定抑制鼠类圆线虫卵发育的能力<sup class="footnote-ref"></sup></a><a href="#footnote13">[13]</a><a class="footnote-anchor" id="footnote-ref13">。</a></li><a class="footnote-anchor" id="footnote-ref13">
-</a></ul><a class="footnote-anchor" id="footnote-ref13">
-</a></li><a class="footnote-anchor" id="footnote-ref13">
-</a><li><a class="footnote-anchor" id="footnote-ref13">甲苯咪唑：
-</a><ul><a class="footnote-anchor" id="footnote-ref13">
-<li>网传是处方药，但是网购能非常容易地买到安乐士，并且盒上标注 OTC，所以实际上是非处方药？</li>
-</a><li><a class="footnote-anchor" id="footnote-ref13">风险会比阿苯达唑更大一点点，碰到重度旋毛虫病则会有严重后果<sup class="footnote-ref"></sup></a><a href="#footnote14">[14]</a><a class="footnote-anchor" id="footnote-ref14">（一般人也不会有这种吧），因此可以考虑作为备用。
-<ul>
-<li>副作用也更大，例如我服用后有头痛现象。</li>
-</ul>
-</a></li><a class="footnote-anchor" id="footnote-ref14">
-<li>据称，对蛲虫效果极好。</li>
-</a></ul><a class="footnote-anchor" id="footnote-ref14">
-</a></li><a class="footnote-anchor" id="footnote-ref14">
-</a></ul><a class="footnote-anchor" id="footnote-ref14">
-</a><h3><a class="footnote-anchor" id="footnote-ref14"></a><a class="header-anchor" href="#哌嗪类"><span>哌嗪类</span></a></h3>
-<p>宝塔糖属于这类，这玩意是使寄生虫无力化，随粪便排出，但是经常会拉出活蹦乱跳的蛔虫，还是有点恶心的。</p>
-<p>不要吃油腻。</p>
-<h3>阿维菌素类</h3>
-<ul>
-<li>伊维菌素（ivermectin）：可通过皮肤吸收或口服<sup class="footnote-ref"><a href="#footnote15">[15]</a><a class="footnote-anchor" id="footnote-ref15"></a></sup><a class="footnote-anchor" id="footnote-ref15">；在中国基本上都作为兽药出售，较难找到人用口服剂。</a></li><a class="footnote-anchor" id="footnote-ref15">
-</a></ul><a class="footnote-anchor" id="footnote-ref15">
-<hr class="footnotes-sep">
-</a><section class="footnotes"><a class="footnote-anchor" id="footnote-ref15">
-</a><ol class="footnotes-list"><a class="footnote-anchor" id="footnote-ref15">
-</a><li id="footnote1" class="footnote-item"><a class="footnote-anchor" id="footnote-ref15"></a><p><a class="footnote-anchor" id="footnote-ref15"></a><a href="https://www.hbcdc.cn/jkjy/jkzd/jbjs/n/1679.htm" target="_blank" rel="noopener noreferrer">蛲虫病 - 湖北疾控</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:1" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:2" class="footnote-backref">↩︎</a> <a href="#footnote-ref1:3" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p><a href="https://zh.wikipedia.org/wiki/%E8%9F%AF%E8%9F%B2" target="_blank" rel="noopener noreferrer">蛲虫 - 维基百科</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a> <a href="#footnote-ref2:1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote3" class="footnote-item"><p><a href="https://news.sina.cn/2017-11-30/detail-ifyphtze2728684.d.html?from=wap" target="_blank" rel="noopener noreferrer">3 岁男童眼睛里长虫</a> <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote4" class="footnote-item"><p><a href="/hobbies/books.html#%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4" target="_blank">《我们的教室没有欺凌》</a>有一章叫《大家的蛲虫检查》，真的这样干了…… <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote5" class="footnote-item"><p><a href="https://www.cmtopdr.com/post/detail/936787e4-8b1c-4f66-bdc2-6f915cefeab4" target="_blank" rel="noopener noreferrer">夺命胶囊 - 壹生资讯</a> <a href="#footnote-ref5" class="footnote-backref">↩︎</a> <a href="#footnote-ref5:1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote6" class="footnote-item"><p><a href="https://www.msdmanuals.cn/professional/infectious-diseases/nematodes-roundworms/ascariasis" target="_blank" rel="noopener noreferrer">蛔虫病 - 默沙东诊疗手册专业版</a> <a href="#footnote-ref6" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote7" class="footnote-item"><p><a href="https://www.thepaper.cn/newsDetail_forward_24404386" target="_blank" rel="noopener noreferrer">世界首例蛇蛔虫感染者</a> <a href="#footnote-ref7" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote8" class="footnote-item"><p><a href="https://www.msdmanuals.cn/home/infections/parasitic-infections-nematodes-roundworms/ascariasis" target="_blank" rel="noopener noreferrer">蛔虫病 - 默沙东诊疗手册家庭版</a> <a href="#footnote-ref8" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote9" class="footnote-item"><p>我看过几次了，也用手拔出来过（隔着卫生纸）；不过还从来没有看过离体后会动的，感谢现代医学，感谢苯并咪唑。 <a href="#footnote-ref9" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote10" class="footnote-item"><p><a href="https://zhuanlan.zhihu.com/p/195233400" target="_blank" rel="noopener noreferrer">甲苯达唑，阿苯达唑，和芬苯达唑三种打虫药的抗癌研究总结</a> <a href="#footnote-ref10" class="footnote-backref">↩︎</a> <a href="#footnote-ref10:1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote11" class="footnote-item"><p><a href="https://www.drugs.com/monograph/mebendazole.html" target="_blank" rel="noopener noreferrer">Mebendazole (Monograph)</a> <a href="#footnote-ref11" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote12" class="footnote-item"><p><a href="https://zh.wikipedia.org/wiki/%E9%98%BF%E8%8B%AF%E8%BE%BE%E5%94%91" target="_blank" rel="noopener noreferrer">阿苯达唑 - 维基百科</a> <a href="#footnote-ref12" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote13" class="footnote-item"><p><a href="https://www.zgxfzz.com/CN/article/downloadArticleFile.do?attachType=PDF&amp;id=8805" target="_blank" rel="noopener noreferrer">体外杀灭寄生虫虫卵及其幼虫的研究</a> <a href="#footnote-ref13" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote14" class="footnote-item"><p><a href="https://zh.wikipedia.org/wiki/%E7%94%B2%E8%8B%AF%E5%92%AA%E5%94%91" target="_blank" rel="noopener noreferrer">甲苯咪唑 - 维基百科</a> <a href="#footnote-ref14" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote15" class="footnote-item"><p><a href="https://zh.wikipedia.org/wiki/%E4%BC%8A%E7%B6%AD%E8%8F%8C%E7%B4%A0" target="_blank" rel="noopener noreferrer">伊维菌素 - 维基百科</a> <a href="#footnote-ref15" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>移动平台设置</title>
-      <link>https://absx.pages.dev/articles/mobile/settings.html</link>
-      <guid>https://absx.pages.dev/articles/mobile/settings.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">移动平台设置</source>
-      <description>移动平台设置 before root MIUI： 开启开发者模式 在 USB 调试版块，该放行放行，该关闭关闭。 在最下方关闭 MIUI 优化。MIUI 优化可能会导致无法使用 adb install 安装软件。（报错 INSTALL_FAILED_USER_RESTRICTED）顺带，这已经是一个持续至少 6 年的问题了。 关闭后刷新率会自动 120...</description>
-      <category>教程</category>
-      <category>生活</category>
-      <category>经历</category>
-      <pubDate>Sun, 22 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p><s>拿到手机第一件事肯定是 <a href="/articles/mobile/root.html" target="_blank">root</a> 啊..</s></p>
-<h2>before root</h2>
-<p>MIUI：</p>
-<ol>
-<li>开启开发者模式
-<ul>
-<li>在 USB 调试版块，该放行放行，该关闭关闭。</li>
-<li>在最下方关闭 MIUI 优化。MIUI 优化可能会导致无法使用 adb install 安装软件。（报错 <code>INSTALL_FAILED_USER_RESTRICTED</code>）<em>顺带，这已经是一个持续至少 6 年的问题了。</em>
-<ul>
-<li>关闭后刷新率会自动 120HZ，调回 60。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="/articles/mobile/adb.html" target="_blank">使用 ADB 卸载</a>一些包
-<ul>
-<li><code>com.miui.systemAdSolution</code>：广告</li>
-<li><code>com.miui.hybrid</code>：快应用，杂种；<a href="#%E7%A6%81%E7%94%A8%E5%BF%AB%E5%BA%94%E7%94%A8%E4%B8%AD%E5%BF%83">为什么要卸载</a></li>
-<li><code>com.sohu.inputmethod.sogou.xiaomi</code> &amp; <code>com.iflytek.inputmethod.miui</code>：自带的 搜狗 讯飞 输入法，我用 gboard</li>
-<li><code>com.miui.newhome</code>：内容中心，广告，好像不能卸载只能禁用</li>
-</ul>
-</li>
-<li>关闭 Github Mobile 的默认打开网址。Github Mobile 因 2FA 需要使用，但使用其查看项目确实非常智障。幸好 MIUI14 提供了设置应用默认打开的功能：长按应用 - 应用信息 - 默认打开，调为拒绝。</li>
-</ol>
-<h2>after root</h2>
-<p>通用：</p>
-<ol>
-<li>不要在 Google Play 安装 QQ，无法开启深色模式 (fuck u)。</li>
-<li>见<a href="#%E7%A6%81%E7%94%A8%E8%BD%AF%E4%BB%B6">禁用软件</a>。</li>
-<li>Google Play 可以通过蓝牙进行发送 - 接受软件，无需再次下载，不过只能传商店内的软件。</li>
-<li>Delta Chat 可以在源手机上点击 <em>设置 - 添加第二台设备</em>，然后用目标机扫码即可迁移<strong>单个账户</strong>。</li>
-<li>可以在开发者选项里关闭 5G，减少耗电。</li>
-<li>开启通话自动录音。</li>
-</ol>
-<p>一加：</p>
-<ol>
-<li>ColorOS 原生支持更换应用名称与图标，可以规避审查。
-<ul>
-<li>需要在 Google Play 安装<a href="https://play.google.com/store/apps/details?id=com.akbon.coloros" target="_blank" rel="noopener noreferrer">ColorOS 13 Icon pack</a></li>
-</ul>
-</li>
-<li><a href="/articles/mobile/module_and_app.html#lsposed" target="_blank">LuckyTool</a> 安装后在任务栏小部件有多出一些选项。
-<ul>
-<li><strong>极暗模式</strong>是好东西。</li>
-<li>LuckeyTool 可以开启 ColorOS 隐藏的不息屏模式，这在双机位笔试时非常有用。（<em>LuckeyTool - 功能 - 设置 - 启用息屏永不超时</em>）</li>
-</ul>
-</li>
-</ol>
-<h3>禁用软件</h3>
-<p>我使用 <a href="/articles/mobile/module_and_app.html#app" target="_blank">App Manager</a> 进行软件的冻结操作。</p>
-<blockquote>
-<p><em>scene5/6</em> 也可以，但是其为闭源商业软件，操作麻烦，不用它。<br><em>雹</em> 也可以，但是主要用于禁止日常应用后台运行；无法冻结某些系统应用。</p>
-</blockquote>
-<h4>MIUI</h4>
-<p><a href="https://gist.github.com/mcxiaoke/0a4c639d04e94c45eb6c787c0f98940a" target="_blank" rel="noopener noreferrer">这里</a>可以看 MIUI 有哪些不能禁用的东西。</p>
-<h4>EU MIUI</h4>
-<ul>
-<li>禁用负一屏需要冻结 Google (<code>com.google.android.googlequicksearchbox</code>)。</li>
-<li>Google 家的大多数都能冻</li>
-<li>不要冻 <em>媒体存储设备</em>(<code>com.google.android.providers.media.module</code>) ！！！<a href="/articles/mobile/problem.html#%E4%B9%B1%E5%86%BB%E7%BB%93" target="_blank">惨痛教训</a></li>
-</ul>
-<h4>ColorOS</h4>
-<p>一加和 OPPO 的。</p>
-<ul>
-<li>不要冻 <em>应用包安装程序</em>！！！！<a href="/articles/mobile/problem.html#%E4%B8%80%E5%8A%A0%E6%97%A0%E9%99%90%E9%87%8D%E5%90%AF" target="_blank">惨痛教训，并附带了哪些东西能冻</a></li>
-<li><a href="https://bbs.oneplus.com/thread/6003405" target="_blank" rel="noopener noreferrer">这篇文章</a>指出了一些能卸载的包。
-<ul>
-<li>对于新系统，文章包名里的 <code>heytap</code> 基本都要换成 <code>coloros</code>，<code>oplus</code> 换成 <code>nearme</code>。</li>
-</ul>
-</li>
-</ul>
-<h4>禁用快应用中心</h4>
-<blockquote>
-<p>这是一篇久远的文章，是本页面中年龄最大的一篇。<br>
-快应用服务框架本意是好的，大家联合起来统一为一个标准，减少不必要的重复开发。（参考 browser）</p>
-</blockquote>
-<p>但是到了现在，快应用已经成为了手机的毒瘤，垃圾的藏匿处。无数的广告弹窗在手机厂商纵容下疯狂攻击使用者。同时快应用服务框架本身违背了自由原则，无法在设置中卸载 | 禁用，只能收回权限，最多降低版本。为了您和<strong>家人</strong>的身心健康，建议禁用之：</p>
-<ol>
-<li>查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到 <em>快应用服务框架</em> 进入，点击右上角感叹号，查看应用包名。
-<blockquote>
-<p>或：已知关键字可使用 <code>adb shell pm list package [&lt;keyword&gt;]</code> 在手机内以关键字查找包名。</p>
-</blockquote>
-<ul>
-<li>MIUI 12.5：<code>com.miui.hybrid</code> <span class="heimu" title="你知道的太多了">杂种</span>，可能还有 <code>.accessory</code> 后缀</li>
-<li>HarmonyOS：<code>com.huawei.fastapp</code></li>
-<li>ColorOS：<code>com.nearme.instant.platform</code></li>
-<li>vivo：<code>com.vivo.hybrid</code></li>
-</ul>
-</li>
-<li>连接手机并<a href="/articles/mobile/adb.html" target="_blank">开启 ADB 调试</a>。</li>
-<li>禁用包：<code>adb shell pm disable-user com.miui.hybrid</code>，也可以直接卸载，详情参考 <a href="/articles/mobile/adb.html" target="_blank">ADB</a></li>
-</ol>
-<h2>external</h2>
-<ol>
-<li><a href="https://dev.moe/2716" target="_blank" rel="noopener noreferrer">小米平板 5 Pro 刷入 GSI Android 教程</a></li>
-</ol>
 ]]></content:encoded>
     </item>
   </channel>
