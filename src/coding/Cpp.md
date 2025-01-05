@@ -332,29 +332,35 @@ Raw string: `R""(some\text)""`
 
 ### variant
 
-（C++17）本意是封装的 `union`，可以当成错误处理的一种实现，类似 rust `Result`. C++23 请使用 `std::expected`.
+（C++17）
 
-获取值一般用 `std::get` + try catch，也可用 [`std::visit`](https://en.cppreference.com/w/cpp/utility/variant/visit):
+[external 14.](#external) 是对 variant 的深度评测，推荐阅读。
+
+variant 本意是封装的 `union`，可以当成错误处理的一种实现，类似 rust `Result`. C++23 请使用 `std::expected`.
+
+获取值可以用 `std::get` + try catch，可以用 `std::get_if`，也可用 [`std::visit`](https://en.cppreference.com/w/cpp/utility/variant/visit):
 
 ```cpp
-std::variant<int,string> v;
-try{
-    return std::get<int>(v);
-}catch (std::bad_variant_access&)
-{
-    return std::get<string>(v);
+// 1
+std::variant<int, string> v;
+try {
+  return std::get<int>(v);
+} catch (std::bad_variant_access &) {
+  return std::get<string>(v);
 }
-// std::visit([](auto&& arg) {
-//     using T = std::decay_t<decltype(arg)>;
-//     if constexpr (std::is_same_v<T, int>)
-//         std::cout << "int with value " << arg << '\n';
-//     else if constexpr (std::is_same_v<T, string>)
-//         std::cout << "errlog: " << arg << '\n';
-// });
-std::visit(overloaded{
-    [](auto arg) { std::cout << arg << ' '; },
-    [](const std::string& arg) { std::cout << std::quoted(arg) << ' '; }
-}, v);
+// 2
+if (auto pval = std::get_if<int>(&v))
+  return *pval;
+else
+  std::cerr << "failed to get value!" << '\n';
+// 3
+std::visit([](auto &&arg) {
+  using T = std::decay_t<decltype(arg)>;
+  if constexpr (std::is_same_v<T, int>)
+    std::cout << "int with value " << arg << '\n';
+  else if constexpr (std::is_same_v<T, string>)
+    std::cout << "errlog: " << arg << '\n';
+});
 ```
 
 ### assert
@@ -596,6 +602,7 @@ file.close();
 11. [Daily bit(e) of C++](https://simontoth.substack.com/archive)
 12. [Writing GUI apps for Windows is painful](https://tulach.cc/writing-gui-apps-for-windows-is-painful/)
 13. [hackingcpp](https://hackingcpp.com/)：提供语法的简洁 cheatsheet。
+14. [std::variant 很难用！](https://ykiko.me/zh-cn/articles/645810896/)
 
 books:
 

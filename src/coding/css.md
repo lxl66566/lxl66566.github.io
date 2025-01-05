@@ -20,16 +20,6 @@ css 本身不带逻辑，处理嵌套也麻烦。因此有各种各样的预处�
 
 上面两个预处理器都兼容原生 css。
 
-## 框架
-
-虽说写原生 CSS 也不是不行，但是有框架为什么不用呢。
-
-大多数框架都喜欢将 “写 css” 变为 “写 class”，免去了 html 和 css 之间切来切去的烦恼，用得熟练的话确实可以加快开发速度。对于初学者来说就是多了查文档的时间，如果文档烂的话还是挺烦人的。
-
-- [UnoCSS](https://unocss.dev/)：新一代完全自定义化的 css 框架。
-- [tailwindcss](https://tailwindcss.com/)：一套预设的 class。目前广泛使用。
-- Bootstrap：老一辈预设的 class，目前算是被 tailwindcss 取代了吧(?)
-
 ## 盒模型
 
 前端基础概念了。
@@ -99,7 +89,10 @@ flex 布局是响应式的绝佳实践，而且对于前端初学者来说，fle
 
 关于版本：flex [有多个版本](https://www.cnblogs.com/xiaohuochai/p/5323146.html)。2024 年了，不需要考虑 flex 兼容性，可以假定所有浏览器都支持最新版本 flex。
 
-无脑 flex：想要让内部的玩意水平垂直居中，可以直接无脑 flex：`display: flex; align-items: center; justify-content: center;`
+无脑 flex：
+
+1. 想要让内部的玩意水平垂直居中，可以直接无脑 flex：`display: flex; align-items: center; justify-content: center;`
+2. 想要让某个元素占满空间，可以给父元素设为 flex（不要设 align-items & justify-content），然后该元素设为 `flex: 1`。
 
 flex 基础：
 
@@ -112,6 +105,27 @@ flex 基础：
    - 主轴：`justify-content`。一般常用的有 `center`, `space-between`, `space-around`, `space-evenly`
    - 交叉轴：一旦使用了 flex，所有元素就会在交叉轴上被拉到最大（由默认值 `align-items: stretch;` 控制），非常直觉。
 4. 超出自动换行：`flex-wrap: wrap;`；换行后又会引入行间对齐 `align-content`。
+
+## 框架
+
+虽说写原生 CSS 也不是不行，但是有框架为什么不用呢。
+
+大多数框架都喜欢将 “写 css” 变为 “写 class”，免去了 html 和 css 之间切来切去的烦恼，用得熟练的话确实可以加快开发速度；特别是对基于 JSX 的前端框架非常有用。而写 vue 的话，css 框架对于初学者来说就是多了查文档的时间，如果文档烂的话还是挺烦人的。
+
+- [UnoCSS](https://unocss.dev/)：新一代完全自定义化的 css 框架。
+- [tailwindcss](https://tailwindcss.com/)：一套预设的 class。目前广泛使用。
+- Bootstrap：老一辈预设的 class，目前算是被 tailwindcss 取代了吧(?)
+
+### TailwindCSS
+
+[配色](https://tailwindcss.com/docs/customizing-colors)
+
+- TailwindCSS 只能写静态类名。所以不能写出 `bg-${color}-500` 这种插值，否则编译的时候不会编出这个 style，样式就丢失了。
+- 只有 `flex: 1` 可以写为 `flex-1`。其他 `flex: x` 要写为 `flex-[x]`。
+
+#### 插件
+
+- [tailwind-scrollbar-hide](https://github.com/reslear/tailwind-scrollbar-hide)：隐藏 scrollbar
 
 ## external
 

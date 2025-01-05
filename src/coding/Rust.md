@@ -439,6 +439,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-selector](https://github.com/lusingander/cargo-selector) | TUI 快速选择运行目标 |
 | [cargo-sweep](https://github.com/holmgr/cargo-sweep) | 部分清理编译产物 |
 | [cargo-depgraph](https://github.com/jplatte/cargo-depgraph) | 看依赖关系。比 cargo-tree 等等好用 |
+| [cargo-semver-checks](https://github.com/obi1kenobi/cargo-semver-checks) | 检查 API 是否遵循 semver 规范 |
 
 ## 库
 

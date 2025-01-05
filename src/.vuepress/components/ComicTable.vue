@@ -638,8 +638,12 @@ const data = [
   { id: "547139", aScore: 8.7, bScore: 4, info: "#蔚蓝档案" },
   { id: "523760", aScore: 6.7, bScore: 3.6, info: "#V" },
   { id: "547257", aScore: 9, bScore: 6, info: "#蔚蓝档案", bak: "https://telegra.ph/Horizontal-World-またのんき-伊ナ落-ブルーアーカイブ-中国翻訳-DL版-01-01-2" },
+  { id: "497617", aScore: 6.3, bScore: 9.3, order: 1, info: "#雌小鬼" },
   { id: "546270", aScore: 7.2, bScore: 9.1, order: 2, info: "#雌小鬼 #公共场合", bak: "https://telegra.ph/餅屋-かろちー-メスガキリナちゃん-VOL-2-中国翻訳-DL版-01-01" },
   { id: "547032", aScore: 8.6, bScore: 4.4, info: "#蔚蓝档案", bak: "https://telegra.ph/あとりえひなた-ひなた悠-マリーのひみつアイドルレッスン-ブルーアーカイブ-中国翻訳-DL版-01-02" },
+  { id: "525647", aScore: 9, bScore: 3, order: 1, info: "#兽耳 #多P 発情兎輪姦祭" },
+  { id: "546493", aScore: 8.8, bScore: 2.6, order: 2, info: "#兽耳 #多P 発情兎輪姦祭", bak: "https://e-hentai.org/g/3182524/075dfeb430/" },
+  { id: "544629", aScore: 7.4, bScore: 8.3, order: 1, info: "#五等分の花嫁", bak: "https://e-hentai.org/g/2561990/0b3d9995c0/" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

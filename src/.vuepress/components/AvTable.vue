@@ -399,6 +399,9 @@ const data = [
   { id: "NHDTB-835", aScore: 7.8, bScore: 8.8, name: "#图书馆 #禁音" },
   { id: "SDMUA-010", aScore: 5.3, bScore: 6.4, name: "#摄影 #堕落 声優アイドルコスプレ撮影会の闇 キモヲタたちに囲まれ好き放題に姦される… 性処理ペット輪●撮影会 胡桃さくら" },
   { id: "MOGI-013", aScore: 5.6, bScore: 4.4, name: "誰もが萌える激甘ボイスの声優を夢見て福井県から上京してきたヲタク美少女 3 本限定 AV debut 胡桃さくら 19 歳" },
+  { id: "nhdtb-743", aScore: 5.4, bScore: 7.7, name: "#图书馆 館内わいせつを邪魔する生意気な優等生が泣き出すほど膣奥メッタ突きFUCK3" },
+  { id: "nhdtb-519", aScore: 6.7, bScore: 8, name: "#图书馆 館内わいせつを邪魔する生意気な優等生が泣き出すほど膣奥メッタ突きFUCK" },
+  { id: "nhdtb-602", aScore: 6.8, bScore: 7.2, name: "#图书馆 館内わいせつを邪魔する生意気な優等生が泣き出すほど膣奥メッタ突きFUCK2" },
 ].sort((x, y) => -TwoScoreCompare(x, y));
 // 同分则颜值分优先
 
