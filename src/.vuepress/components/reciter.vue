@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>绝对值_x的背词器</h2>
+    <h2>绝对值_x 的背词器</h2>
     <fieldset>
       <legend>语言</legend>
       <RadioButtonGroup v-model="language" :options="languageOptions" />

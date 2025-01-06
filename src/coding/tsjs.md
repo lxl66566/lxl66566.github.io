@@ -368,6 +368,7 @@ TS 的类型系统是**图灵完备**的。因此网上有一大堆 TS 类型体
 ```ts
 type A = number | null; // 并集
 type A = { a: number } & { b: number }; // 交集
+type B = A & {}; // `{}` 代表不为 null 和 undefined 的其他类型
 
 type Person = {
   name: string;

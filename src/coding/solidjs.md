@@ -10,7 +10,7 @@ tag:
 
 # [SolidJS](https://www.solidjs.com/)
 
-SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks。后文假设读者已经熟悉了 React。
+SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。
 
 SolidJS 的哲学就是 small and simple。所以用起来可能没有那么方便舒服，有的地方需要自己手操逻辑。
 

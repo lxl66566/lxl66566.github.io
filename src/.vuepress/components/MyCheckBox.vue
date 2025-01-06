@@ -16,7 +16,7 @@ const isChecked = ref(false);
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits, ref, watch } from "vue";
+import { ref, watch } from "vue";
 
 // Props
 const props = defineProps<{

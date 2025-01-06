@@ -12,8 +12,10 @@ list 中的插槽名称为 list-content，展开后的内容插槽名称为 expa
 </ExpandableListItem>
 -->
 <template>
-  <tr @click="toggleExpand" class="list-item" :class="[isExpanded ? 'expanded' : '', ...(props.extra_tr_class || [])]"
-    :style="{ cursor: props.expandable ? 'pointer' : 'default' }">
+  <tr @click="toggleExpand" class="list-item" :class="[...(props.extra_tr_class || []), {
+    'expanded': isExpanded, // 在外部使用的属性
+    'expandable': props.expandable,
+  }]">
     <slot name="list-content"></slot>
   </tr>
   <transition name="expand">
@@ -76,6 +78,14 @@ onMounted(() => {
     text-align: center;
     vertical-align: middle;
   }
+}
+
+.expandable {
+  cursor: pointer;
+}
+
+.expandable:hover {
+  outline: solid 1px var(--theme-color);
 }
 
 .expanded-content {

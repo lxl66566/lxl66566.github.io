@@ -430,7 +430,7 @@ import mathjax3 from "markdown-it-mathjax3";
 const customElements = ["mjx-container"];
 export default defineConfig({
   lang: "zh-CN",
-  title: "绝对值_x的博客",
+  title: "绝对值_x 的博客",
   description: "没什么有价值的内容的，真的！",
   lastUpdated: true,
   ignoreDeadLinks: true,

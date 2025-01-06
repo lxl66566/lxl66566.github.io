@@ -13,10 +13,15 @@ const original_list: GalItemInputType[] = [
   {
     name: "eden* PLUS + MOSAIC",
     valid_name: "edenPlusMosaic",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "9h35min",
     duration: {
       start: "2024-12-23",
-      end: "2025-01-01",
+      end: "2025-01-06",
+    },
+    score: {
+      story: 5.8,
+      visual: 3.5,
+      program: 3.2,
     },
   },
   {
@@ -106,7 +111,7 @@ const original_list: GalItemInputType[] = [
       start: "2021-06-21",
     },
     score: {
-      story: 6.8,
+      story: 6.1,
       visual: 8.5,
       program: 9.1,
     },
@@ -118,7 +123,7 @@ const original_list: GalItemInputType[] = [
       start: "2020-10-29",
     },
     score: {
-      story: 5,
+      story: 4.2,
       visual: 8.7,
       program: 8,
     },
@@ -410,7 +415,7 @@ const original_list: GalItemInputType[] = [
     name: "枯れない世界と終わる花",
     use_time: "9h44min",
     score: {
-      story: 6,
+      story: 5.7,
       visual: 10,
       program: 6.2,
     },
