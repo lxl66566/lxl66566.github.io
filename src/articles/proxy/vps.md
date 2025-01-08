@@ -51,11 +51,12 @@ tag:
 |20240820 SurfCloud|HK|$1/mo|200GB 30Mbps|1G|40GB|1|<dtls>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</dtls>|
 |20240911 YXVM|JP|$3/mo|1TB 500Mbps|768MB|5GB|1|<dtls>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</dtls>|
 |20241018 azure|JP|free|?|1G|30G|1|微软，我的超人|
-|20241031 [91idc](https://91idc.gg/index.php)|HK|￥10|20MBps|1G|10G|1|<dtlslong>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</dtlslong>|
+|20241031 [91idc](https://91idc.gg/index.php)|HK|￥10/mo|666GB 20MBps|1G|10G|1|<dtlslong>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</dtlslong>|
+|20250107 [Sakura Clouds](https://portal.sakuraclouds.com/)|HK| ~~\$2.50/mo~~ \$2.20|2TB 1Gbps|1G|8G|1|速度还行，但是延迟和稳定性**超烂**，没有下次了。|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
-::: details 我想买的
+::: details 好价，未评测
 
 `RAM/存储`，`流量/端口速度`；默认 1C SSD
 
@@ -67,9 +68,6 @@ tag:
 |2023 BF [InfraveoCloud](https://zhujiwiki.com/35833/)|JP|$9/yr|1T 1Gbps|-|20GB|
 |[ColoCrossing](https://zhujiwiki.com/36155/)|Los Angeles|$9/yr|不限流 1Gbps|2G|37GB|
 |[Vision Cloud](https://t.me/visioncloud_notification/32)|JP|$14/yr|1TB 1000Mbps|1GB|6GB|
-|[哇沃](https://zhujiwiki.com/36281/)|HK|￥80/yr|2TB 500Mbps|1GB|20GB|
-|[Churros](https://zhujiwiki.com/36298/)|JP|￥6.3/mo|100GB 100Mbps|1GB|5GB|
-|[AKileCloud](https://akile.io/shop/server?type=traffic&areaId=3&nodeId=80&planId=448)|HK|￥60/yr|1TB 5000Mbps|1GB|5GB|<dtlslong>这个容易抢光，但是常驻有 ￥10/mo 的香港机</dtlslong>|
 |[DigitalVirt](https://zhujiwiki.com/36771/)|HK|￥95/yr|1TB 200Mbps|1GB|10GB|
 |[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=124)|HK|￥40/yr|500GB 10Gbps|1GB|20GB|
 |[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=145)|HK|￥88/yr|1600GB 10Gbps|1GB|20GB|
@@ -103,13 +101,16 @@ tag:
 
 ## 工具
 
-- [一键脚本](https://github.com/lxl66566/init-script)：不得不提我自己写的一键脚本，一键常用软件 + 代理（hysteria + trojan-go + trojan）
+- [一键代理脚本](https://github.com/lxl66566/init-script)：不得不提我自己写的一键脚本，一键常用软件 + 代理（hysteria + trojan-go + trojan）
 - [ping.pe](https://ping.pe/#)：连通性
+- 全面评测：
+  - [VPS 融合怪 - GO 重构版本](https://github.com/oneclickvirt/ecs)
 - 全球测速
   - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
 - 国内测速
   - `curl -sL network-speed.xyz | bash -s -- -r china`
   - `bash <(curl -sL bash.icu/speedtest)`
+- IP 质量：[IPQuality](https://github.com/xykt/IPQuality)
 - <https://bgp.tools/>，ASN 信息
 - <https://ip.skk.moe/>，查 IP
 - [网络面板](https://net.ljxnet.cn/)流量消耗器

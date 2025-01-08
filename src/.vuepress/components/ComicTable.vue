@@ -649,6 +649,7 @@ const data = [
   { id: "547388", aScore: 6.6, bScore: 7.3, info: "#蔚蓝档案 #肛x #注射" },
   { id: "546705", aScore: 9, bScore: 3.8, info: "#蔚蓝档案 #4P" },
   { id: "545910", aScore: 7.6, bScore: 5.5, order: 1, info: "#游戏 #大姐姐" },
+  { id: "547869", aScore: 7.3, bScore: 4.1, info: "#蔚蓝档案 #loli", bak: "https://telegra.ph/みるくプリン-ジャムしぃ-今日はイブキが遊んであげる-ブルーアーカイブ-中国翻訳-DL版-01-03" },
   // next: 4.22 - 11.1
 ].sort((x, y) => -TwoScoreCompare(x, y));
 

@@ -2,17 +2,17 @@ import type { ArticleCellBoxType } from "../definition/types.js";
 
 const links: ArticleCellBoxType[] = [
   {
-    field: "世界观",
-    links: [
-      { text: "道论", url: "worldview" },
-      { text: "杂论", url: "va_view" },
-    ],
-  },
-  {
     field: "关于我",
     links: [
       { text: "关于作者", url: "author" },
       { text: "作者的日程库", url: "schedule" },
+    ],
+  },
+  {
+    field: "核心观点",
+    links: [
+      { text: "道论", url: "worldview" },
+      { text: "杂论", url: "va_view" },
     ],
   },
   {
