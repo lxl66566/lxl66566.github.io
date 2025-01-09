@@ -10,6 +10,8 @@ tag:
 
 # React
 
+初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。
+
 ## JSX 基础
 
 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。

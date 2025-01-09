@@ -53,6 +53,7 @@ tag:
 |20241018 azure|JP|free|?|1G|30G|1|微软，我的超人|
 |20241031 [91idc](https://91idc.gg/index.php)|HK|￥10/mo|666GB 20MBps|1G|10G|1|<dtlslong>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</dtlslong>|
 |20250107 [Sakura Clouds](https://portal.sakuraclouds.com/)|HK| ~~\$2.50/mo~~ \$2.20|2TB 1Gbps|1G|8G|1|速度还行，但是延迟和稳定性**超烂**，没有下次了。|
+|20250109 [ClawCloud](https://claw.cloud/)|JP|~~\$36.00/yr~~ \$7.00/yr|500GB|1G|20G|1|阿里云“上游”，超级好价 + 超级稳定 + 低延迟，血赚|
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
