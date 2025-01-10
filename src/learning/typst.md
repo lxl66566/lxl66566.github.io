@@ -31,34 +31,32 @@ category:
 
 ## 安装与配置
 
-基础用法是 CLI 使用，但我配合 [VSCode](../coding/vscode.md) 使用。
+基础用法是 CLI 使用，但配合 [VSCode](../coding/vscode.md) 使用效果更佳。
 
 1. CLI：进 release 下载，解压后把 `typst.exe` 直接丢进 `C:\Windows\System32` 就行。
-   - 或者也可以 `scoop install typst` 一行搞定。
-   - 然后就可以 `typst watch example.typ`，自动生成 pdf。
-2. vscode 扩展：
+   - 或者也可以使用 [scoop](../farraginous/recommend_packages.md#scoop) `scoop install typst` 一行搞定。
+   - 然后就可以 `typst watch xxx.typ`，自动生成 pdf。可能要用 `--root xxx` 指定根目录。
+2. CLI 没有 vscode 扩展好用。使用 vscode 扩展不需要安装 CLI，只需要：
 
-   - 使用 _vscode-pdf_ 查看 pdf。
-     - 我不推荐 _Typst Preview_。
-       1. 曾经遇到过无法生成的 bug；
-       2. 很慢，10 页的 pdf 就会卡了。
-   - LSP
-     ::: tabs
-     @tab 新起之秀
+   1. 安装 LSP
+      ::: tabs
+      @tab 新起之秀
 
-     1. 安装 _Tinymist Typst - Myriad Dreamin_
-     2. `ctrl + ,` 进入设置：
-        1. _Tinymist: ExportPdf_ 改为 _onSave_
-        2. _Tinymist: FormatterMode_ 改为 _typstyle_（也是一个新起之秀的 formatter）
+      1. 安装 _Tinymist Typst - Myriad Dreamin_
+      2. `ctrl + ,` 进入设置： 1. _Tinymist: ExportPdf_ 改为 _onSave_ 2. _Tinymist: FormatterMode_ 改为 _typstyle_（也是一个新起之秀的 formatter）
 
-     @tab 传统
+      @tab 传统
+      官方插件：Typst LSP
 
-     官方插件：Typst LSP
+      - 缺点：慢，没有 formatter
+      - 优点：0 配置，懒人福音
 
-     - 缺点：慢，没有 formatter
-     - 优点：0 配置，懒人福音
+      :::
 
-     :::
+   2. （Optional）安装 _vscode-pdf_ 用于 pdf 查看。
+      - 我不推荐 _Typst Preview_：
+        1. 曾经遇到过无法生成的 bug；
+        2. 很慢，10 页的 pdf 就会卡了。
 
 然后就可以愉快地敲论文了。每次保存时会自动生成 pdf，拖到侧边就能看了。
 

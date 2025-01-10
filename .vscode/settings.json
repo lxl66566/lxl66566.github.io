@@ -19,7 +19,7 @@
     "vue": false,
     "*": true
   },
-  "oxc.enable": false,
+  "oxc.enable": true,
   "Codegeex.DisabledFor": {
     "markdown": "true"
   },

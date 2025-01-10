@@ -653,6 +653,6 @@ const data = [
   { id: "548716", aScore: 8.2, bScore: 3.2, info: "さわやか鮫肌", bak: "https://telegra.ph/C105-ドットエイト-さわやか鮫肌-ビカラちゃんといちゃいちゃする本12冊目-グランブルーファンタジー-中国翻訳-01-07" },
   { id: "548730", aScore: 9.7, bScore: 4, order: 4, info: "#兽耳 #FD 堕天計画描きおろし", bak: "https://telegra.ph/234ド-イチリ-堕天計画描きおろし-中国翻訳-DL版-01-07" },
   // next: 4.22 - 11.1
-].sort((x, y) => -TwoScoreCompare(x, y));
+].sort((x, y) => TwoScoreCompare(x, y));
 
 </script>
