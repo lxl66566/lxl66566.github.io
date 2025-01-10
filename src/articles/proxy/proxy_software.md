@@ -96,19 +96,14 @@ V2rayN 是 V2ray 的 windows 前端，支持自定义协议，也可以更换内
 3. 一键测延迟/速度，选择节点双击激活。
 4. 同上方 4.
 
-### V2rayNG
-
-v2ray 的 Android 前端。
-
-### [NekoRay](https://github.com/MatsuriDayo/nekoray)
-
-基于 Qt 的代理前端，支持 V2ray & sing-box 内核。
-
-> 记得好像有停更过一阵子，仓库提交记录是 2022 开始的，找不到。
-
 ### v2rayA
 
-v2rayA 的质量其实一般（感觉 v2ray 内核速度比我的 windows V2rayN 用的 [Xray 内核](https://xtls.github.io/)差）。不过有一个易于使用的网页面板，对于初入 linux 的 user 是非常友好的。
+v2rayA 是一个跨多平台的代理客户端。它有一个易于使用的网页面板，对于初入 linux 的 user 是非常友好的；它也支持透明代理、分流规则、订阅链接等。
+
+安装：
+
+::: tabs
+@tab archlinux
 
 ```sh
 sudo pacman -S v2raya
@@ -118,11 +113,27 @@ sudo v2raya
 set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理无效
 ```
 
-之后的操作都在网页上进行。使用系统代理端口为 `http://127.0.0.1:20172`，这个端口带自动分流。
+如果需要后台运行，开机自启，可以参考[文档](https://v2raya.org/docs/advanced-application/noroot/)：`systemctl --user enable --now v2raya-lite.service`。
 
-如果需要后台运行，开机自启，可以参考[文档](https://v2raya.org/docs/advanced-application/noroot/)：`systemctl --user enable --now v2raya-lite.service`
+用 sudo 和不用 sudo 的区别主要是透明代理的支持。显然 `--lite` （无需 sudo）是不能开透明代理的。
 
-用 sudo 和不用 sudo 的区别主要是透明代理的支持。显然 `--lite` 是不能开透明代理的。
+@tab OpenWRT
+
+<https://v2raya.org/docs/prologue/installation/openwrt/>，讲得非常清除。注意需要安装 `xray-core`。
+
+:::
+
+之后的操作都在网页上 (`127.0.0.1:2017`) 进行。代理端口最好使用 `http://127.0.0.1:20172`，这个端口带有分流。
+
+### V2rayNG
+
+v2ray 的 Android 前端。
+
+### [NekoRay](https://github.com/MatsuriDayo/nekoray)
+
+基于 Qt 的代理前端，支持 V2ray & sing-box 内核。
+
+> 记得好像有停更过一阵子，仓库提交记录是 2022 开始的，找不到。
 
 ### qv2ray
 

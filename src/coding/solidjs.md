@@ -37,10 +37,10 @@ SolidJS 也提供了一些内置组件，让写 Vue 的人倍感熟悉。
 - `<Show when={...}></Show>`，v-if
 - `<For each={...}></For>`，v-for
 
-## Router
+## 配套设施
 
-使用 [solid-router](https://github.com/solidjs/solid-router)，很简单。
+SolidJS 虽然相对小众，但仍有着完善的生态系统。
 
-## Icons
-
-SolidJS [自带了一个图标库](https://solid-icons.vercel.app/)，图标非常全，使用也方便。
+- 组件库：[SolidUI](https://github.com/stefan-karger/solid-ui)
+- Router：[solid-router](https://github.com/solidjs/solid-router)
+- 图标库：[Solid Icons](https://solid-icons.vercel.app/)

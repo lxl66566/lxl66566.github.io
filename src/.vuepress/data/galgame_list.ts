@@ -27,10 +27,15 @@ const original_list: GalItemInputType[] = [
   {
     name: "奇异恩典 -What color is your attribute?-",
     valid_name: "奇异恩典Whatcolorisyourattribute",
-    use_time: "-4min",
+    use_time: "-5min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2024-12-20",
+    },
+    score: {
+      story: 9.4,
+      visual: 9,
+      program: 6.6,
     },
   },
   {
@@ -124,7 +129,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 4.2,
-      visual: 8.7,
+      visual: 8.2,
       program: 8,
     },
   },
