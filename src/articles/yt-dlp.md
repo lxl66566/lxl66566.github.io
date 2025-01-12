@@ -17,6 +17,7 @@ tag:
 
 - 对于某些 B 站视频可能无法选择最高清晰度
 - yt-dlp 不能下载任意网站的视频。要查看是否支持某网站，请直接搜 [Changelog](https://github.com/yt-dlp/yt-dlp/blob/master/Changelog.md)。我主要用 yt-dlp 下载 youtube 与 bilibili 视频。
+- 2024 年后期 Youtube 和 Chrome 同时增强了限制，导致现在下载 Youtube 的视频显得稍有麻烦。
 
 ## 安装
 
@@ -82,7 +83,7 @@ find . -name "*.mp4" -exec bash -c 'file="{}"; ffmpeg -nostats -i "$file" -i "${
 
 ### 下载大会员视频
 
-你可能有下载 B 站版权保护视频（大会员专享）的需求，例如番剧、电视剧等。
+你可能有下载 B 站版权保护视频（大会员专享）的需求，例如番剧、电视剧等，或者在 Youtube 新政策后下载 Youtube 视频。
 
 此时需要用到 `--cookies-from-browser <browser>`。例如使用 chromium 登录了 B 站的大会员账号，然后：
 
@@ -92,4 +93,9 @@ yt-dlp https://www.bilibili.com/bangumi/play/ss27047 --cookies-from-browser chro
 
 其会自动读取 chromium 浏览器的 cookie。然后就能愉快下载了。
 
-> 在 linux 上这是可行的。但是在 windows 上读取 edge 浏览器 cookie 可能会出现 _Permission denied_，并且使用管理员终端无效，可能需要进行其他操作。（未测试）
+当然，现在 Chrome 系浏览器更新了 cookie 保护措施，第三方软件无法再直接读取 cookie。此时需要费一点事，参考[使用 cookie](#使用-cookie)
+
+### [使用 cookie](https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp)
+
+1. 使用 [Get cookies.txt LOCALLY](https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc) 导出 cookies 文件
+2. 使用参数 `--cookies <exported file path>`

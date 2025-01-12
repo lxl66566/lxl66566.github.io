@@ -402,6 +402,7 @@ const data = [
   { id: "nhdtb-743", aScore: 5.4, bScore: 7.7, name: "#图书馆 館内わいせつを邪魔する生意気な優等生が泣き出すほど膣奥メッタ突きFUCK3" },
   { id: "nhdtb-519", aScore: 6.7, bScore: 8, name: "#图书馆 館内わいせつを邪魔する生意気な優等生が泣き出すほど膣奥メッタ突きFUCK" },
   { id: "nhdtb-602", aScore: 6.8, bScore: 7.2, name: "#图书馆 館内わいせつを邪魔する生意気な優等生が泣き出すほど膣奥メッタ突きFUCK2" },
+  { id: "nhdtb-543", aScore: 5, bScore: 7.5, name: "#管闲事" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

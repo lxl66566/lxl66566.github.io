@@ -651,10 +651,12 @@ const data = [
   { id: "545910", aScore: 7.6, bScore: 5.5, order: 1, info: "#游戏 #大姐姐" },
   { id: "547869", aScore: 7.3, bScore: 4.1, info: "#蔚蓝档案 #loli", bak: "https://telegra.ph/みるくプリン-ジャムしぃ-今日はイブキが遊んであげる-ブルーアーカイブ-中国翻訳-DL版-01-03" },
   { id: "548716", aScore: 8.2, bScore: 3.2, info: "さわやか鮫肌", bak: "https://telegra.ph/C105-ドットエイト-さわやか鮫肌-ビカラちゃんといちゃいちゃする本12冊目-グランブルーファンタジー-中国翻訳-01-07" },
-  { id: "548730", aScore: 9.7, bScore: 4, order: 4, info: "#兽耳 #FD 堕天計画描きおろし", bak: "https://telegra.ph/234ド-イチリ-堕天計画描きおろし-中国翻訳-DL版-01-07" },
+  { id: "548730", aScore: 9.7, bScore: 4, order: 6, info: "#兽耳 #FD 堕天計画描きおろし", bak: "https://telegra.ph/234ド-イチリ-堕天計画描きおろし-中国翻訳-DL版-01-07" },
   { id: "548469", aScore: 7, bScore: 3.7, info: "#蔚蓝档案", bak: "https://telegra.ph/重役室-社長-ガールズアーカイブ-ブルーアーカイブ-中国翻訳-DL版-01-06" },
   { id: "(other)", aScore: 8.7, bScore: 9.9, info: "#蔚蓝档案 #草 キヴォトスで一番〇〇が似合う生徒", bak: "https://telegra.ph/C105-ヂュラクナ-ドロンタビ-キヴォトスで一番が似合う生徒-ブルーアーカイブ-中国翻訳-01-06" },
   { id: "(eh)", aScore: 6.8, bScore: 8, info: "#幽灵 #发情", otherlink: "https://e-hentai.org/g/2972783/180a8d5118", bak: "https://telegra.ph/Eroi-Roe-Hitori-ni-Shinaide-COMIC-Kairakuten-2024-08-Chinese-大鸟可不敢乱转汉化-Digital-11-10" },
+  { id: "548893", aScore: 9.3, bScore: 2.3, order: 4, info: "#堕天計画 #FD #书包 #超短篇", bak: "https://telegra.ph/234ド-イチリ-堕天後シャロエとあの鞄えっちする本---堕天計画総集編-中国翻訳-DL版-01-08" },
+  { id: "548894", aScore: 9.3, bScore: 2.8, order: 5, info: "#堕天計画 #FD #超短篇", bak: "https://telegra.ph/234ド-イチリ-堕天後シャロエとお茶会に参加する本-堕天計画総集編-中国翻訳-DL版-01-08" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
