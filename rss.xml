@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 12 Jan 2025 18:15:32 GMT</pubDate>
-    <lastBuildDate>Sun, 12 Jan 2025 18:15:32 GMT</lastBuildDate>
+    <pubDate>Tue, 14 Jan 2025 09:20:51 GMT</pubDate>
+    <lastBuildDate>Tue, 14 Jan 2025 09:20:51 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>随笔</category>
@@ -357,12 +357,12 @@
       <link>https://absx.pages.dev/articles/linux/openwrt.html</link>
       <guid>https://absx.pages.dev/articles/linux/openwrt.html</guid>
       <source url="https://absx.pages.dev/rss.xml">OpenWRT</source>
-      <description>OpenWRT 我之前买了一个 n1 盒子用来玩，上面已经刷了 iStoreOS，这是一个 OpenWRT 的分支。这里记录了一些我的折腾过程。 日后我可能会为其刷其他系统（Arch），不过现在还是先算了吧。 包管理 OpenWRT 用的包管理器是 opkg。虽然 OpenWRT 已经声称要转到 apt，但是还没转，并且 iStoreOS 应该还没有那...</description>
+      <description>OpenWRT 我之前买了一个 n1 盒子用来玩，上面已经刷了 iStoreOS，这是一个 OpenWRT 的分支。这里记录了一些我的折腾过程。 一句话：iStoreOS 非常垃圾，服务越开越多，用得越来越难受。20250114 跑了，刷成了 Arch Linux ARM。 包管理 OpenWRT 用的包管理器是 opkg。虽然 OpenWRT 已经声...</description>
       <category>教程</category>
       <pubDate>Wed, 04 Dec 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>我之前买了一个 n1 盒子用来玩，上面已经刷了 iStoreOS，这是一个 OpenWRT 的分支。这里记录了一些我的折腾过程。</p>
-<p>日后我可能会为其刷其他系统（Arch），不过现在还是先算了吧。</p>
+<p>一句话：iStoreOS 非常垃圾，服务越开越多，用得越来越难受。20250114 跑了，刷成了 Arch Linux ARM。</p>
 <h2>包管理</h2>
 <p>OpenWRT 用的包管理器是 <code>opkg</code>。虽然 OpenWRT 已经声称要转到 apt，但是还没转，并且 iStoreOS 应该还没有那么快跟上。因此我不得不用这个不合格的包管理器。</p>
 <ul>
@@ -381,15 +381,15 @@
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">USE_PROCD</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">1</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">START</span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">90</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">start_service</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">() {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_open_instance</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> MyInstance</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_open_instance</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">Instance</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> name</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 随便</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">取</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> command</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">your</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> startup</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> comman</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">d</span><span style="--shiki-light:#D73A49;--shiki-dark:#ABB2BF">&gt;</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> limits</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> nofile="unlimited"</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> respawn</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 300</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 5</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 10</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> stdout</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> stderr</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 0</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> stdout</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_set_param</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> stderr</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> 1</span></span>
 <span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    procd_close_instance</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>（这里我关闭了输出到日志，为了避免体积膨胀；startup command 可以不是绝对可执行路径）</li>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>（startup command 可以不是绝对可执行路径）</li>
 <li>添加权限：<code>chmod +x /etc/init.d/&lt;service name&gt;</code></li>
 <li>运行 <code>service &lt;service name&gt; enable</code>。</li>
 <li>开机自启：<code>cd /etc/rc.d &amp;&amp; ln -s ../init.d/&lt;service&gt; ./S99&lt;service&gt;</code></li>
