@@ -83,6 +83,14 @@ umount /mnt/windows
    Server = http://mirrors.stuhome.net/archlinuxarm/$arch/$repo
    ```
 
+@tab n1 盒子
+
+由于 [iStoreOS 太难用](./openwrt.md)，于是跑来 Arch。首先你的 n1 盒子需要能够从 U 盘启动，由于我盒子到手已经刷过 OS 了，所以免去了这一步。
+
+然后就是需要符合的镜像。n1 盒子太多人用，生态很不错，已经有大佬放出了[镜像与刷写脚本](https://github.com/LordPenguin666/Arch-Linux-N1)。只需要从 release 下载镜像，刷写到 U 盘（要用 Balena Etcher，不能用 ventoy），插上启动。进了 live cd 以后再执行 `./install.sh` 刷入 eMMC 即可，非常方便快捷。
+
+刷完以后默认有 ssh 的，已经可以直接连了。
+
 ::::
 
 ## 配置

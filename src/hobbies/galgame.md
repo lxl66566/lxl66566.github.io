@@ -117,6 +117,7 @@ LunaTranslator 使用心得：
 - 语速好慢啊。我感觉我的生命在流逝……我最初的 [speed up](../articles/speedup.md) 想法就是这部作品导致的……
 - X'moe 的翻译，一般：
   - スイカ割り -> 切西瓜？
+- 商人小镇那两只狐狸，event 圣体
 
 </template>
 <template v-slot:edenPlusMosaic>

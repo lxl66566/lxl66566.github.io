@@ -129,6 +129,7 @@ tag:
 - [ ] _kill MIUI restriction_
   - [ ] 10s countdown
   - [ ] 72h(24h in EU) unlock
+- [ ] 意图拦截，intent scheme blocking
 
 ### nodejs & tsjs
 

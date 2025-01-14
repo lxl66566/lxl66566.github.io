@@ -12,7 +12,7 @@ tag:
 
 我之前买了一个 n1 盒子用来玩，上面已经刷了 iStoreOS，这是一个 OpenWRT 的分支。这里记录了一些我的折腾过程。
 
-日后我可能会为其刷其他系统（Arch），不过现在还是先算了吧。
+一句话：iStoreOS 非常垃圾，服务越开越多，用得越来越难受。20250114 跑了，刷成了 Arch Linux ARM。
 
 ## 包管理
 
@@ -41,16 +41,16 @@ OpenWRT 不支持 systemd，果然还是太重了吧。所以必须使用传统�
    USE_PROCD=1
    START=90
    start_service() {
-       procd_open_instance MyInstance
+       procd_open_instance <Instance name 随便取>
        procd_set_param command <your startup command>
        procd_set_param limits nofile="unlimited"
        procd_set_param respawn 300 5 10
-       procd_set_param stdout 0
-       procd_set_param stderr 0
+       procd_set_param stdout 1
+       procd_set_param stderr 1
        procd_close_instance
    }
    ```
-   （这里我关闭了输出到日志，为了避免体积膨胀；startup command 可以不是绝对可执行路径）
+   （startup command 可以不是绝对可执行路径）
 2. 添加权限：`chmod +x /etc/init.d/<service name>`
 3. 运行 `service <service name> enable`。
 4. 开机自启：`cd /etc/rc.d && ln -s ../init.d/<service> ./S99<service>`
