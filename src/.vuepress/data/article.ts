@@ -69,6 +69,7 @@ const links: ArticleCellBoxType[] = [
       { text: "OCR", url: "ocr" },
       { text: "PDF 阅读器横评", url: "pdf_reader" },
       { text: "内网穿透", url: "frp" },
+      { text: "远程控制方案", url: "control" },
     ],
   },
   {

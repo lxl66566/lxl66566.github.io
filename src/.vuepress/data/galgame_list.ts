@@ -3,6 +3,27 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "魔法使之夜",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-01-17",
+    },
+  },
+  {
+    name: "圣女不死心",
+    all_ages: true,
+    use_time: "4h23min",
+    duration: {
+      start: "2025-01-16",
+      end: "2025-01-16",
+    },
+    score: {
+      story: 5,
+      visual: 9.8,
+      program: 8,
+    },
+  },
+  {
     name: "転性魔王さまは勇者に勝てない！",
     playing_status: PlayingStatus.PLAYING,
     namaniku: true,

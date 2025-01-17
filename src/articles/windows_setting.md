@@ -164,7 +164,6 @@ tag:
 我的 windows 开机自启动的托盘软件有：
 
 - [Ditto](../farraginous/recommend_packages.md#ditto)
-- [parsec](../farraginous/recommend_packages.md#parsec)
 - V2rayN
 - [everything](../farraginous/recommend_packages.md#everything)
 - [Tai](../farraginous/recommend_packages.md#tai)

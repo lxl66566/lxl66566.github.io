@@ -657,6 +657,8 @@ const data = [
   { id: "(eh)", aScore: 6.8, bScore: 8, info: "#幽灵 #发情", otherlink: "https://e-hentai.org/g/2972783/180a8d5118", bak: "https://telegra.ph/Eroi-Roe-Hitori-ni-Shinaide-COMIC-Kairakuten-2024-08-Chinese-大鸟可不敢乱转汉化-Digital-11-10" },
   { id: "548893", aScore: 9.3, bScore: 2.3, order: 4, info: "#堕天計画 #FD #书包 #超短篇", bak: "https://telegra.ph/234ド-イチリ-堕天後シャロエとあの鞄えっちする本---堕天計画総集編-中国翻訳-DL版-01-08" },
   { id: "548894", aScore: 9.3, bScore: 2.8, order: 5, info: "#堕天計画 #FD #超短篇", bak: "https://telegra.ph/234ド-イチリ-堕天後シャロエとお茶会に参加する本-堕天計画総集編-中国翻訳-DL版-01-08" },
+  { id: "549778", aScore: 7.2, bScore: 8.5, info: "#巨乳 #同学 #纯爱" },
+  { id: "546931", aScore: 9.3, bScore: 8, info: "#蔚蓝档案 #纯爱 #高嶋しょあ 恋人ごっこ", bak: "https://telegra.ph/HIGHLAND-高嶋しょあ-恋人ごっこ-ブルーアーカイブ-中国翻訳-DL版-01-09" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

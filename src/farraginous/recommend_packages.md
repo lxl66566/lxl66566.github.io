@@ -66,6 +66,8 @@ tag:
 
 ### [使用时间记录](../articles/time_record.md)
 
+### [远程控制方案](../articles/control.md)
+
 ### [mpv](https://mpv.io/)
 
 ::: info 我的尝试
@@ -211,25 +213,6 @@ scoop update <name>     # 更新包，* 表示全部
 ```sh
 scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置，配合 RAM Disk
 ```
-
-### 远程控制
-
-我以前用向日葵，现在用 parsec。向日葵比较适合协作（远控他人），parsec 适合控制自己电脑。
-
-#### [Parsec](https://parsec.app/downloads)
-
-**极低延迟**的远程控制软件，为游戏而生。P2P 连接。支持手机控制电脑。
-
-与向日葵相比：
-
-- 优点：
-  - 低延迟
-  - 性能占用极低
-- 缺点：
-  - 全英文
-  - 需要自己解决驱动兼容性问题（如果有的话）
-  - 手机端控制电脑不够友好（无法右击；无法像向日葵一样调出鼠标），建议自带轻便键鼠
-  - 早期版本可能会有音频撕裂问题
 
 ### 可视化磁盘空间
 

@@ -368,3 +368,4 @@ sudo systemctl start mysql
 3. [Simplify: move code into database functions](https://sive.rs/pg)
 4. [分布式数据库的一致性问题与共识算法](https://thiscute.world/posts/consistency-and-consensus-algorithm/)
 5. [MySQL 已死，PostgreSQL 当立](https://pigsty.cc/zh/blog/db/mysql-is-dead/)
+6. [PRQL (Pipelined Relational Query Language) is a modern language for transforming data](https://prql-lang.org/)
