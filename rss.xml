@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 17 Jan 2025 17:54:42 GMT</pubDate>
-    <lastBuildDate>Fri, 17 Jan 2025 17:54:42 GMT</lastBuildDate>
+    <pubDate>Sat, 18 Jan 2025 17:05:05 GMT</pubDate>
+    <lastBuildDate>Sat, 18 Jan 2025 17:05:05 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -71,12 +71,15 @@
 <li>在受控端上安装皎月连，建立帐号并登录；然后在服务端里开启组网模式，开启服务并设为自动开启。最后再让系统开机自启皎月连即可。</li>
 <li>在控制端安装皎月连，使用已有帐号登录，然后选中网络，连接即可。</li>
 </ul>
+<h4>Tailscale</h4>
+<p>Tailscale 与 其开源实现 headscale 都是老牌的虚拟组网工具。我没有深入使用过，以后有机会再试吧。</p>
 <h3>VNC</h3>
 <p>VNC 也是 Linux 乃至许多系统上的成熟远控方案。严格来说这是一套协议，服务端和客户端都可以任选。</p>
 <p>VNC 的缺点是传输的是屏幕图像的变化部分而不是视频流，因此不支持修改码率，可能会对带宽造成压力。</p>
 <ul>
 <li><a href="https://sourceforge.net/projects/tigervnc/files/stable/" target="_blank" rel="noopener noreferrer">TigerVNC</a>：用作 Windows 服务端还算合格，默认配置即可。</li>
 <li><a href="https://github.com/gujjwal00/avnc" target="_blank" rel="noopener noreferrer">avnc</a>：Android VNC 客户端。界面中看不中用，首先默认手势卡手，需要改设置；其次是有发现鼠标偏移的情况。</li>
+<li><a href="https://github.com/FreeRDP/" target="_blank" rel="noopener noreferrer">Remmina</a>：Linux GTK VNC 客户端。</li>
 </ul>
 <h3>sunshine + moonlight</h3>
 <p>这是一个广泛使用的游戏串流方案，也可以用到远控上。其中 sunshine 是被控端，moonlight 是主控端。二者之间还需要一个虚拟组网的内网穿透进行连接。（需要虚拟组网的原因是，sunshine 用了很多端口，写映射的话比较麻烦）</p>
