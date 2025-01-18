@@ -173,6 +173,8 @@ tag:
 - 寒蝉鸣泣之时
 - 未来日记
 - 日在校园
+- School Days
+- angel beats
 
 <script lang="ts" setup>
 import AnimeList from "@AnimeList";

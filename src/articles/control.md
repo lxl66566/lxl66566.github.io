@@ -69,6 +69,10 @@ tag:
 - 在受控端上安装皎月连，建立帐号并登录；然后在服务端里开启组网模式，开启服务并设为自动开启。最后再让系统开机自启皎月连即可。
 - 在控制端安装皎月连，使用已有帐号登录，然后选中网络，连接即可。
 
+#### Tailscale
+
+Tailscale 与 其开源实现 headscale 都是老牌的虚拟组网工具。我没有深入使用过，以后有机会再试吧。
+
 ### VNC
 
 VNC 也是 Linux 乃至许多系统上的成熟远控方案。严格来说这是一套协议，服务端和客户端都可以任选。
@@ -77,6 +81,7 @@ VNC 的缺点是传输的是屏幕图像的变化部分而不是视频流，因�
 
 - [TigerVNC](https://sourceforge.net/projects/tigervnc/files/stable/)：用作 Windows 服务端还算合格，默认配置即可。
 - [avnc](https://github.com/gujjwal00/avnc)：Android VNC 客户端。界面中看不中用，首先默认手势卡手，需要改设置；其次是有发现鼠标偏移的情况。
+- [Remmina](https://github.com/FreeRDP/)：Linux GTK VNC 客户端。
 
 ### sunshine + moonlight
 

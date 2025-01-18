@@ -69,6 +69,7 @@ tag:
 - [ ] ~~更好的静态博客/文档框架~~ 学了点前端发现 vuepress 也没有那么难用，暂时搁置
 - [x] fuck, delete it! (windows)
 - [ ] 代理，自行设计协议，对称加密
+  - [ ] 通过虚拟组网方式，各节点设置 inbound/outbound，动态选择路径
 - [ ] ~~windows shell with everything:~~ everything SDK is hard to use, i can't ever compile a basic example code...
 - [x] openppp2 client
   - [x] 绕过路由

@@ -25,6 +25,10 @@ tag:
 
 :::
 
+### 小工具
+
+- 在 b 站看到一个 [Windows11 轻松设置工具](https://wwkh.lanzout.com/iMb0v2ladkhe) ([src](https://www.bilibili.com/video/av113807439503289/))，一部分内容和下面我的设置是重合的，用这个工具可以进行快速便捷的设置，非常好用。
+
 ### 安装时
 
 - 如果你的 windows 是从 win11 官方 ISO 安装的，那么初始化时登录微软帐号的那一步，**千万不要登录微软帐号**。[理由](#初始化登录微软帐号酿成的悲剧)
@@ -33,10 +37,10 @@ tag:
 
 - 进行 windows 更新。
 - 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_ ，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
-- 关闭 Windows 安全中心。[为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419)
-  - 关闭安全中心前，请先在安全中心里关闭其中的一些项目。安全中心关闭后无法从设置中进入，而部分软件（例如 edge）仍然会读取安全中心设置。
-  1. 法一（推荐）：[Defender Remover](https://github.com/ionuttbara/windows-defender-remover)，选择仅移除 Windows Defender 就行。
-  2. 法二（[src](https://zhuanlan.zhihu.com/p/494923217)，但实测并不能完全关闭）：
+- 关闭 Windows 安全中心([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
+  1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。
+  2. [Defender Remover](https://github.com/ionuttbara/windows-defender-remover)，但是不好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。
+  3. 手动([src](https://zhuanlan.zhihu.com/p/494923217))，但实测并不能完全关闭
      - _Windows 安全中心-病毒和威胁防护-管理设置_ ，关闭所有开关
      - 使用组策略编辑器禁用 Windows Defender
      - `win + r`运行`gpedit.msc`，_计算机配置 - 管理模板-Windows 组件 - 关闭 Microsoft Defender 防病毒_ ，选择已启用
@@ -108,6 +112,7 @@ tag:
     1. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
     2. [卸载 Minecraft Education Edition](https://aka.ms/meeremove) ([src](https://educommunity.minecraft.net/hc/en-us/community/posts/4410545727764))
     3. 卸载 Your Phone：powershell `Get-AppxPackage Microsoft.YourPhone -AllUsers | Remove-AppxPackage`，但是 `C:\Program Files\WindowsApps` 的 Your Phone 文件并不会删除。
+    4. 卸载 PC Manager（微软电脑管家）、Microsoft Power BI，在设置 - 应用里可以直接卸载
   - 禁用一些服务。
     - Windows Font Cache Service
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))
