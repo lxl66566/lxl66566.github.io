@@ -47,7 +47,7 @@ tag:
 - [x] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
 - [ ] lzma 数据库，简易迁移，不依赖特定程序
 - [ ] 浏览器书签 & 历史数据库(rust cli / js)
-- [ ] better sqlite_zstd
+- [ ] ~~better sqlite_zstd~~ 要么手操要么透明压缩
 - [ ] windows electron lib(runtime)?
 - [ ] windows volume locker
 - [x] [wd: info words online in cli, written in rust](https://github.com/lxl66566/wordinfo)
@@ -82,7 +82,7 @@ tag:
   - 颜色，当前行，变量值
   - [ ] 可选不打印堆栈
   - [x] 分级，可禁用 exit
-- [ ] github actions RSS telegram bot
+- [x] [Telegram RSS bot on cloudflare workers](https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers)
   - [ ] filter
 - [x] rust release ci
 - [ ] kde spectacle ocr plugin
@@ -144,14 +144,9 @@ tag:
   - [ ] 弹幕区域取消，发送弹幕放在视频下方
   - [x] f 全屏
   - [x] 屏蔽无用组件
-- [ ] 类 markdown 方言, nmd (negative markdown)
-  - [ ] 换行问题
-  - [ ] 样式统一
-  - [ ] formatter
-  - [ ] 高亮与黑幕
-  - [ ] 双列阅读区支持
-- [ ] ~~better markdown formatter~~ just pull to _prettier_ if you don't like it.
-- [ ] 答题网，选择题实时反馈
+- [ ] ~~类 markdown 方言, nmd (negative markdown) 换行问题 样式统一 高亮与黑幕 双列阅读区支持~~ 不要让方言再多一个啦！
+- [ ] ~~better markdown formatter~~ just PR to _prettier_ if you don't like it.
+- [ ] 答题网模板，选择题实时反馈
 - [ ] SAVE MY LOCK FILE
 - [ ] gaussian blur lib
 - [ ] ~~koishi plugin:~~ （koishi 有关计划暂时搁置）

@@ -453,3 +453,8 @@ ColorOS 是目前一加的默认系统。
 
 1. 没设置 `$HOME` 就 panic
 2. 服务器部署后访问面板 503，无日志
+
+## [cursor](../coding/vscode.md#关于-cursor) 有多难用
+
+- 改完设置要重启才能应用
+- 魔改了 vscode 里本来很舒服的设计

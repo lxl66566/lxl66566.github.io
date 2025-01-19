@@ -107,14 +107,6 @@ tag:
 - chat api，gemini 1.5 是免费的
 - code 补全 API 的话，deepseek api 比较便宜
 
-#### AI IDE
-
-当然，现在除了开发 AI 插件，还有相当一部分 IDE 另辟蹊径，将 AI 作为自己的主要卖点，并且也可以安装 Vscode 的插件，快速抢占市场。这些编辑器有：
-
-- [Cursor](https://www.cursor.com/pricing)：免费限量补全，全兼容 Vscode
-
-总之我不看好这些东西，比起 VSCode + 补全插件完全没有竞争力。
-
 ### 插件管理
 
 - 分析：当插件数量多了以后，每次启动都耗时很久，甚至卡在某个插件的启动上。此时需要 `Ctrl + Shift + p` 打开操作面板，进入 _Developer: Show Running Extensions_，可以看到插件状态与启动用时。
@@ -170,11 +162,34 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 
 ## 编写插件
 
+我写过一个 [anyformatter](https://github.com/lxl66566/anyformatter-vscode)。
+
 ### 上传
 
 编写完插件以后需要发布到 market。
 
 我不爱用那些令牌啥的，因此我选择直接 <https://marketplace.visualstudio.com/manage>，然后把打出来的 .vsix 文件拖到这里即可。
+
+## 关于 cursor
+
+[Cursor](https://www.cursor.com/pricing) 是 AI 时代下的，基于 VSCode 的 IDE，其将 AI 深度集成到了编辑器内。Cursor 全兼容 VSCode，所以可以快速抢占市场。
+
+我曾今在早期用过一次 Cursor，用的提问 API 是 Gemini，补全 API 是 deepseek，感觉不太行。这也是因为模型本身不够聪明。第二次入坑是新号注册，这一段时间内 cursor 也把用户体验补起来了一点，并且我也免费（试）用 claude-3.5-sonnet，这下就感觉舒服多了。直接写了一个 [Telegram-RSS-Bot-on-Cloudflare-Workers](https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers)。虽然细微部分还是手改，但是确实好用很多，tab 补全也很智能。
+
+入坑 cursor 前，最好先去 b 站找个视频快速过一遍，自己摸索很容易丧失耐心。
+
+cursor 难用的地方，我写在[这里](../gossip/fuckxxx.md#cursor-有多难用)。
+
+### 设置
+
+cursor 基于 vscode，但是有些地方还是做了些修改，非常卡手。建议 vsc 人入坑 cursor 的时候进行这些设置：
+
+1. 恢复左侧纵向图标栏：`"workbench.activityBar.orientation": "vertical"` ([src](https://www.maemo.cc/2024/10/23/edit-cursor-activitybar-orientation.html))
+2. 终端允许 Ctrl + V 粘贴：`"terminal.integrated.sendKeybindingsToShell": false` （vscode 默认允许终端粘贴）
+
+### 无限续
+
+Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。
 
 ## 其他评价
 
