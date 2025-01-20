@@ -659,6 +659,12 @@ const data = [
   { id: "548894", aScore: 9.3, bScore: 2.8, order: 5, info: "#堕天計画 #FD #超短篇", bak: "https://telegra.ph/234ド-イチリ-堕天後シャロエとお茶会に参加する本-堕天計画総集編-中国翻訳-DL版-01-08" },
   { id: "549778", aScore: 7.2, bScore: 8.5, info: "#巨乳 #同学 #纯爱" },
   { id: "546931", aScore: 9.3, bScore: 8, info: "#蔚蓝档案 #纯爱 #高嶋しょあ 恋人ごっこ", bak: "https://telegra.ph/HIGHLAND-高嶋しょあ-恋人ごっこ-ブルーアーカイブ-中国翻訳-DL版-01-09" },
+  { id: "192284", aScore: 7, bScore: 8.9, info: "#loli #书包 #公共场合 #さわやか鮫肌", bak: "https://telegra.ph/さわやか鮫肌-ひまつぶし-COMIC-LO-2017年2月号-中国翻訳-DL版-10-19" },
+  { id: "550181", aScore: 6.5, bScore: 6.3, info: "#女仆" },
+  { id: "550769", aScore: 8, bScore: 4.2, order: 3, info: "#生肉" },
+  { id: "548200", aScore: 7.8, bScore: 8.6, info: "#战败 #凌辱", bak: "https://e-hentai.org/g/3184114/2d46ddee59/" },
+  { id: "531448", aScore: 7.6, bScore: 7, info: "#兽耳 #异瞳 最推しケモ耳少女を預かることになりました。", bak: "https://telegra.ph/こむぎばたけ-こむぎ-最推しケモ耳少女を預かることになりました-中国翻訳-DL版-09-21" },
+  { id: "549706", aScore: 3.6, bScore: 8.5, info: "#战败 召喚士ちゃん、敗れる。" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -33,7 +33,7 @@ Telegram 多平台软件均为开源，并且开放了许多 api，因此出现�
 
 ## 基础教程
 
-- 简体中文包：`https://t.me/setlanguage/classic-zh-cn` 或者 `tg://setlanguage?lang=classic-zh-cn`
+- 简体中文包：`https://t.me/setlanguage/zh-hans-beta` 或者 `https://t.me/setlanguage/classic-zh-cn`
   - （复制，发送给任意用户，点击；或直接在浏览器内打开
 
 :::danger 特别注意

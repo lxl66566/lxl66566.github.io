@@ -41,5 +41,7 @@
   "continue.enableTabAutocomplete": false,
   "supermaven.enable": {
     "markdown": false
-  }
+  },
+  "cursor.aipreview.enabled": true,
+  "cursor.cpp.disabledLanguages": ["markdown", "html", "vue"]
 }

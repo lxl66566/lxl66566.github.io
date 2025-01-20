@@ -12,9 +12,8 @@ tag:
 
 # 内网穿透
 
-在 [iStoreOS](./linux/openwrt.md) 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。因此我尝试了几个内网穿透工具，并在此做一个简单的评价。
-
-需求：免费，稳定。
+1. 在 [iStoreOS](./linux/openwrt.md) 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。需求：免费，稳定。
+2. 我希望使用自定义化的[远程控制](./control.md)方案。（高级）需求：虚拟组网，P2P
 
 ## cloudflare tunnel（推荐）
 
@@ -40,7 +39,11 @@ cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
 
 然后我想直接下载 binary，结果发现[下载页面](https://www.zerotier.com/download)里只有 rpm/deb 系的，Github release 里也找不到 binary。合着其他发行版就不配装你的程序了？
 
-而且 zerotier 几个产品之间关系也比较混乱，一会儿把你推去 zerotier One，一会儿又踢回 zerotier，但是我没空，也没兴趣了解它们之间的关系。
+zerotier 软件 UI 也都比较古老，网页不清晰，几个产品之间关系也比较混乱，一会儿把你推去 zerotier One，一会儿又踢回 zerotier，但是我没空，也没兴趣了解它们之间的关系。
+
+之后我在被控端和受控端安装了 Zerotier One，然后将几个节点加入网络，我居然还不能直接从 Android 节点拿到被控端的 IP，要我登录网页去看。网页里也不显示 hostname，分不清设备。然后发现如果用 private 网络，我的几个节点都过不了 auth，呃呃，软件里哪有 auth 功能。只好在面板里把网络设成 public。
+
+尝试远控，质量比 Tailscale 好点，但是还是达不到我的标准。码率不足，延迟 1s 以上。
 
 ## [rathole](https://github.com/rapiz1/rathole)
 
@@ -52,6 +55,14 @@ service 写完，可以跑起来了，结果实际使用时还整天断连，稳
 
 同时因为我的公网服务器大多是月抛小鸡，每个月都要修改配置还是非常麻烦的，最后还是放弃了。
 
-## tailscale
+## Tailscale
 
-很早以前用过，给我宿舍电脑做 ssh 穿透。感觉延迟还是有一点高的，稳定性也差了点。
+Tailscale 与 其开源实现 headscale 都是老牌的虚拟组网工具。Tailscale 免费版可以虚拟组网 100 台设备。安装很简单，对应平台下载安装包，登录就行。
+
+但是实测下来，串流效果很差，视频完全无法显示。我猜这个组网并不是 P2P 的，免费服务器的带宽不够，无法承载串流流量。
+
+Tailscale 还有一点不好用的地方，就是打开 Android APP 就要启动 VPN service，而不是手动点 connect 时启动。
+
+## NetBird
+
+官网看着很现代化，让我抱有了一丝不切实际的希望。结果连接稳定性极低，进去以后也是码率不足黑屏。并且和 zerotier 一样也是无法在 APP 内看 IP。
