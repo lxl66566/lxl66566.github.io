@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 20 Jan 2025 07:24:33 GMT</pubDate>
-    <lastBuildDate>Mon, 20 Jan 2025 07:24:33 GMT</lastBuildDate>
+    <pubDate>Tue, 21 Jan 2025 17:00:07 GMT</pubDate>
+    <lastBuildDate>Tue, 21 Jan 2025 17:00:07 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -65,6 +65,7 @@
 <p>由于企业级一体化方案基本没有 P2P（有也不能用），因此我将重心放到了分离式方案上。分离式指用户需要自己部署客户端、服务端、内网穿透等模块，具有复杂与高度自定义化的特点。</p>
 <h3>内网穿透</h3>
 <p>分离式方案要想实现 P2P，关键就在内网穿透这一步。如果我们使用支持 P2P 的虚拟组网内网穿透，就可以享受低延迟的快感。</p>
+<p>具体使用哪个，请前往<a href="/articles/frp.html" target="_blank">内网穿透</a>页面。</p>
 <h4>皎月连</h4>
 <p>是一个国内的免费（需要每日签到）内网穿透服务，支持 P2P 和虚拟组网。一般国内教程里都跟 sunshine + moonlight 配套出现。试了一下还行。</p>
 <ul>
