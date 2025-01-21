@@ -182,7 +182,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 ## 媒体创作
 
-- [Adobe 全家桶破解](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)
+- [Adobe 全家桶破解](https://pangdaxing.top/adobe)[^1] | [PR(Telegram)](https://t.me/absolutexsresource/16) | [PS(Telegram)](https://t.me/absolutexsresource/18)
 - [Office Tool Plus](https://otp.landian.vip/zh-cn/)
 - 在线白板画图：
   - [tldraw](https://www.tldraw.com/)
@@ -193,6 +193,8 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [WaifuLabs](https://waifulabs.com/)：用 AI 生成你的二次元头像！
 - [Sekai Stickers](https://st.ayaka.one/)：生成 pjsk 吊图
 - [ASCII art](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Generator)：Terminal 艺术字符
+
+[^1]: 最初链接是[这个](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)，123 盘不限速下载。到 2025 开始收费，所以换了一个，只有夸克网盘，下得非常慢。
 
 ### 图片相关
 

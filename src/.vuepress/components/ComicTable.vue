@@ -665,6 +665,7 @@ const data = [
   { id: "548200", aScore: 7.8, bScore: 8.6, info: "#战败 #凌辱", bak: "https://e-hentai.org/g/3184114/2d46ddee59/" },
   { id: "531448", aScore: 7.6, bScore: 7, info: "#兽耳 #异瞳 最推しケモ耳少女を預かることになりました。", bak: "https://telegra.ph/こむぎばたけ-こむぎ-最推しケモ耳少女を預かることになりました-中国翻訳-DL版-09-21" },
   { id: "549706", aScore: 3.6, bScore: 8.5, info: "#战败 召喚士ちゃん、敗れる。" },
+  { id: "550447", aScore: 9.8, bScore: 7.4, info: "#蔚蓝档案 #简笔", bak: "https://telegra.ph/DOGYEAR-九条だんぼ-ココナ本プレビュー版-ブルーアーカイブ-中国翻訳-01-17" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

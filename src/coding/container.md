@@ -114,6 +114,16 @@ tar -cvaf reader.tar reader
 
 docker-compose 是 docker 的上一层抽象，一言：**一个 yaml 文件，指明了多个容器的参数**。实际上使用一个 bash 脚本也能做到 docker-compose 做的事。
 
+## 关于开机自启动
+
+docker 容器非常方便，用 `--restart always`（总是自动重启）或 `--restart unless-stopped`（除非手动停止，否则总是自动重启）启动容器就行。
+
+但是 podman 是 rootless 的，没有一个守护进程去叫醒容器，`--restart` 参数对其无效。使用 systemd 用户服务的话，按照网上教程 `podman generate systemd` 又会发现 command deprecated，而且这样无法启动 podman-compose 生成的 pod。
+
+然后我又[折腾了一段时间](https://t.me/withabsolutex/2199)。遇到了太多无语的事情。
+
+最后我的解决方法：回归本源，每次开机时运行 `user-startup add '/usr/bin/podman pod start pod_root'` 来启动 pod。至于开机自启动命令，可以用我的 [user-startup](https://github.com/lxl66566/user-startup-rs)，一行搞定。
+
 ## 遇到的问题
 
 ### 无法应用镜像

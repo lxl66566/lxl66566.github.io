@@ -3,6 +3,13 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "空に刻んだパラレログラム",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-01-21",
+    },
+  },
+  {
     name: "魔法使之夜",
     playing_status: PlayingStatus.PLAYING,
     duration: {
@@ -25,10 +32,16 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "転性魔王さまは勇者に勝てない！",
-    playing_status: PlayingStatus.PLAYING,
     namaniku: true,
+    use_time: "5h47min",
     duration: {
       start: "2025-01-01",
+      end: "2025-01-21",
+    },
+    score: {
+      story: 3.8,
+      visual: 7.4,
+      program: 7,
     },
   },
   {
@@ -1366,6 +1379,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "主播女孩重度依赖",
     all_ages: true,
+    not_strict: true,
     use_time: "24min",
     playing_status: PlayingStatus.STOPPED,
     duration: {
@@ -1422,6 +1436,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "小白兔电商",
+    not_strict: true,
     all_ages: true,
     playing_status: PlayingStatus.STOPPED,
   },

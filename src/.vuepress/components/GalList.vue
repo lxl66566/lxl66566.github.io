@@ -1,5 +1,5 @@
 <template>
-  <MyCheckBox label="仅显示严格定义的 galgame" v-model="show_strict" hint="非严格定义的 galgame 指非视觉小说类 galgame，拥有除了选择支以外的其他玩法" />
+  <MyCheckBox label="仅显示严格定义的 galgame" v-model="show_strict" hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
   <div>
     <table>
       <thead>

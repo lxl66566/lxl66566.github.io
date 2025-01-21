@@ -58,11 +58,15 @@ tag:
 - [ ] osu beatmap downloader, support stable and lazer
 - [ ] poetry plugin to import requirements.
 - [ ] ~~pyshell~~ see [xonsh](https://github.com/xonsh/xonsh)?
-- [ ] 好用的 CLI 录音机 + 音频处理
+- [ ] 好用的麦克风录音机 + 音频处理
   - 暂停与继续
   - 降噪
   - [ ] 智能限幅
     - 参考阅读：<https://magiclen.org/ffmpeg-normalize/>
+- [ ] 系统音频录音机
+  - [ ] 比特率与采样率选择
+  - [ ] 录制结束后可裁切
+  - [ ] [有声音时开始保存数据，静音 X 秒后自动停止录音](https://autoclose.net/autoaudiorecorder.html)
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
 - [ ] ~~windows 工具包: alias, ls,~~ use bash instead.
 - [ ] yakuake on windows
@@ -99,7 +103,11 @@ tag:
   - [ ] 计时
   - [ ] 备份存档
   - [ ] 优秀的用户交互（自动查找图片）
-- [ ] AI 相册整理（超过目前产品）
+- [ ] AI 相册整理。核心：[tag 论](../gossip/va_view.md#tag-论)；不使用树状组织而是使用 tag 型数据库组织，快速查找。
+  - [ ] 移动端：做到比现有产品更好
+  - [ ] 桌面端：场景：一大堆杂乱的照片放在一大堆杂乱的文件夹里。
+    1. hash 去重。遇到重复照片，判断照片绝对路径的“熵”，保留更有意义的路径。并通过路径内包含的信息建立 tag。
+    2. 自动解压路径中遇到的压缩文件，当成目录处理。
 
 ### RIIR
 
