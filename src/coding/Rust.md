@@ -569,10 +569,14 @@ GUI 是 rust 日经问题了。
 
 一些 GUI 框架：
 
-- [egui](https://github.com/emilk/egui)：原生 GUI，有[大项目](https://www.reddit.com/r/rust/comments/1c69mrj)，看起来不错。
-- tauri：electron 的竞品，但是很灵车（许多群友都说过了）。2022 年我连 example 都跑不过。这里有一些别人对 tauri 的实践：
+- tauri：electron 的竞品，据说很灵车（许多群友都说过了）。
+  - 2022 年我试了一下，连 example 都跑不过。
+  - 2024 尝试，还不错。主要是前端工具链是 GUI 界最顶级的那一批，爆杀各类原生 UI。
   - [得物商家客服从 Electron 迁移到 Tauri 的技术实践](https://mp.weixin.qq.com/s/UxmJxU4-fv9GeRxl2fzOGw)
   - [tauri-bug-reproducer](https://github.com/yetone/tauri-bug-reproducer)，T 黑头子（
+- [egui](https://github.com/emilk/egui)：原生 GUI，有[大项目](https://www.reddit.com/r/rust/comments/1c69mrj)。
+  - [20250123 我用了一次 egui 0.3.0，太灵车了](https://t.me/withabsolutex/2203)，建议别用。
+  - 窗口 API，还有布局等等都很差，很多地方还要自己拿 size 算（还有缩放坑），太原始，前端一个 flex 全搞定了。而且 API 变化太大，AI 没法输出有效信息，这也是比较致命的。
 - [slint](https://github.com/slint-ui/slint)：嗯写 DSL
 - [dioxus](https://github.com/DioxusLabs/dioxus)：也是嗯写 DSL。release 0.5.0 时火了一把
 - [native-windows-gui](https://github.com/gabdube/native-windows-gui)：非跨平台

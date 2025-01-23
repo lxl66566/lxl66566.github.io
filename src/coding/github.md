@@ -65,13 +65,21 @@ A: 此处我假设会看此条目的都是 Windows&Android 用户。
 在此之前，你需要有一个 Github 账号，创建一个属于你自己的仓库。
 
 Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容请跳转[编程-工具-Git](./Git.md)。
-:::
 
 ## 下载仓库
 
 直接点击 _Download ZIP_ 仅下载仓库文件，不包含 `.git` 仓库。可以使用 CDN 加速：`https://codeload.github.com/<your name>/<repo name>/zip/<branch name>`
 
 在需要拉取 `.git` 仓库时，可以用 clone, pull, fetch 等拉取指令，一般使用 [clone](./Git.md#下载)。
+
+:::
+
+## 小工具
+
+有一些小工具可以增强 Github 的使用体验。
+
+- [Refined-github](https://github.com/refined-github/refined-github)：一些大杂烩功能。
+- [Github Pinned Repos](https://chromewebstore.google.com/detail/github-pinned-repos/abbhjbdacmekbbpflglmmbhfjgclobfh)：将仓库 pin 到首页
 
 ## markdown 增强
 

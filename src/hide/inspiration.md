@@ -108,6 +108,8 @@ tag:
   - [ ] 桌面端：场景：一大堆杂乱的照片放在一大堆杂乱的文件夹里。
     1. hash 去重。遇到重复照片，判断照片绝对路径的“熵”，保留更有意义的路径。并通过路径内包含的信息建立 tag。
     2. 自动解压路径中遇到的压缩文件，当成目录处理。
+  - 参考：[Qwen2-VL](https://github.com/QwenLM/Qwen2-VL)
+- [ ] rust-checkenizer: rust lsp based on cargo check. NO MORE RA NEEDED.
 
 ### RIIR
 
@@ -118,6 +120,7 @@ tag:
 - [ ] fail2ban
 - [x] Telegram marsbot
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
+- [ ] ddddocr
 
 ### Android
 
@@ -165,6 +168,7 @@ tag:
 - [x] Google 翻译 x 次，网页 -> [成果](https://github.com/lxl66566/Google-translate-x-times)
 - [ ] PT 站，但是更低的门槛
 - [x] open bilibili video in mpv -> [成果](https://github.com/lxl66566/auto-play-in-mpv)
+- [ ] AV 找片互助
 
 ### 插件
 

@@ -666,6 +666,18 @@ const data = [
   { id: "531448", aScore: 7.6, bScore: 7, info: "#兽耳 #异瞳 最推しケモ耳少女を預かることになりました。", bak: "https://telegra.ph/こむぎばたけ-こむぎ-最推しケモ耳少女を預かることになりました-中国翻訳-DL版-09-21" },
   { id: "549706", aScore: 3.6, bScore: 8.5, info: "#战败 召喚士ちゃん、敗れる。" },
   { id: "550447", aScore: 9.8, bScore: 7.4, info: "#蔚蓝档案 #简笔", bak: "https://telegra.ph/DOGYEAR-九条だんぼ-ココナ本プレビュー版-ブルーアーカイブ-中国翻訳-01-17" },
+  { id: "549404", aScore: 6.2, bScore: 7.8, info: "#蔚蓝档案 #4P", bak: "https://telegra.ph/銀色パーティー-DJ喜茶-顕現せぬ者をわからせ-ブルーアーカイブ-中国翻訳-01-11" },
+  { id: "549093", aScore: 5.7, bScore: 7.1, order: 3, info: "#催眠 #凌辱 #3P", bak: "https://telegra.ph/BRAVE-CHICKEN-あれっくす-メスガキ服従催眠3-中国翻訳-AI翻译-DL版-01-11" },
+  { id: "461841", aScore: 6.8, bScore: 7.9, order: 2, info: "#催眠 #凌辱", bak: "https://telegra.ph/BRAVE-CHICKEN-あれっくす-メスガキ服従催眠2-中国翻訳-DL版-01-19" },
+  { id: "549489", aScore: 8, bScore: 5.2, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/C105-モニャモニャ-せら少佐-おはようホシノ-ブルーアーカイブ-中国翻訳-01-11" },
+  { id: "549699", aScore: 7.3, bScore: 7.5, info: "#兽耳 #傲娇 #雌小鬼", bak: "https://telegra.ph/毒電波受信中-炉心-ちはやさんと楽しいハメ撮りH-中国翻訳-DL版-01-13" },
+  { id: "549753", aScore: 8.9, bScore: 8.8, info: "#蔚蓝档案 #兽耳 #隐秘性交 #loli #たこやき", bak: "https://telegra.ph/たこ焼き畑-たこやき-先生甘えても良いですか-ブルーアーカイブ-中国翻訳-DL版-01-13" },
+  { id: "550913", aScore: 5.5, bScore: 5, info: "#魅魔 #败北", bak: "https://telegra.ph/C105-魚ウサ王国-魚ウサ王-サキュバス界隈配信者リアルちん凸募集中灰羽社翻译-01-16" },
+  { id: "550608", aScore: 6.2, bScore: 4, order: 2, info: "#兽耳 #侵犯 #短篇", bak: "https://telegra.ph/C102-すずめねすと-雨美すずめ-街のねこが困っていたので犯してあげた-中国翻訳-01-18" },
+  { id: "550607", aScore: 6.2, bScore: 4.3, order: 1, info: "#兽耳 #侵犯 #短篇", bak: "https://telegra.ph/すずめねすと-雨美すずめ-公園のねこがかわいかったのでおかしあげた-中国翻訳-DL版-01-18" },
+  { id: "550606", aScore: 6.6, bScore: 6.8, info: "#兽耳 #女仆 #纯爱", bak: "https://telegra.ph/すずめねすと-雨美すずめ-ご注文はなんですか-中国翻訳-DL版-01-18" },
+  { id: "551221", aScore: 8, bScore: 8.7, info: "#蔚蓝档案 #loli #佐伯ソラ", bak: "https://telegra.ph/C105-ぽよぽよスカイ-佐伯ソラ-クジラはもう夢を見ない-ブルーアーカイブ-中国翻訳-01-21" },
+  { id: "551404", aScore: 7.8, bScore: 9.5, info: "#肛交 #催眠 #兄妹 #3P #调教", bak: "https://telegra.ph/nemuke-似せ-アナキメ1-中国翻訳-01-22" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
