@@ -120,7 +120,6 @@ tag:
 - [ ] fail2ban
 - [x] Telegram marsbot
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
-- [ ] ddddocr
 
 ### Android
 

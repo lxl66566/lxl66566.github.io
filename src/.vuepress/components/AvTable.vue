@@ -405,6 +405,7 @@ const data = [
   { id: "nhdtb-543", aScore: 5, bScore: 7.5, name: "#管闲事" },
   { id: "MIAD-970", aScore: 5, bScore: 8.2, name: "#双马尾 強●喉奥イラマチオハンドル 跡美しゅり" },
   { id: "GDTM-092", aScore: 5.7, bScore: 6.6, name: "#图书馆" },
+  { id: "stars-238", aScore: 6.9, bScore: 7.2, u: true, name: "#失神 恥汁まみれ 唾液・汗・潮・ヨダレだくだく敏感イキまくりエビ反りFUCK 朝比奈ななせ" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

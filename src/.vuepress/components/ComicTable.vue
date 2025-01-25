@@ -678,6 +678,9 @@ const data = [
   { id: "550606", aScore: 6.6, bScore: 6.8, info: "#兽耳 #女仆 #纯爱", bak: "https://telegra.ph/すずめねすと-雨美すずめ-ご注文はなんですか-中国翻訳-DL版-01-18" },
   { id: "551221", aScore: 8, bScore: 8.7, info: "#蔚蓝档案 #loli #佐伯ソラ", bak: "https://telegra.ph/C105-ぽよぽよスカイ-佐伯ソラ-クジラはもう夢を見ない-ブルーアーカイブ-中国翻訳-01-21" },
   { id: "551404", aScore: 7.8, bScore: 9.5, info: "#肛交 #催眠 #兄妹 #3P #调教", bak: "https://telegra.ph/nemuke-似せ-アナキメ1-中国翻訳-01-22" },
+  { id: "551472", aScore: 5, bScore: 8.2, info: "#触手 #战败", bak: "https://telegra.ph/C103-俎上の空欄-有魚-蝕監の堕ち手-1-2-灼眼のシャナ-中国翻訳-01-23" },
+  { id: "527573", aScore: 7.4, bScore: 5.5, order: 1, info: "#cos #青梅竹马 #教室" },
+  { id: "551505", aScore: 7.9, bScore: 6.4, order: 2, info: "#cos", bak: "https://telegra.ph/Grove-Grow-小森くづゆ-コスプレ部裏活動日誌2-中国翻訳-DL版-01-22-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
