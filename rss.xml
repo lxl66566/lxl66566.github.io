@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 23 Jan 2025 18:49:04 GMT</pubDate>
-    <lastBuildDate>Thu, 23 Jan 2025 18:49:04 GMT</lastBuildDate>
+    <pubDate>Sat, 25 Jan 2025 17:40:40 GMT</pubDate>
+    <lastBuildDate>Sat, 25 Jan 2025 17:40:40 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -1185,16 +1185,17 @@
       <link>https://absx.pages.dev/articles/speedup.html</link>
       <guid>https://absx.pages.dev/articles/speedup.html</guid>
       <source url="https://absx.pages.dev/rss.xml">SPEED UP！</source>
-      <description>SPEED UP！ 我打 已经有好几年了，共计接触了两部能够语音加速的游戏：天津罪 和 GINKA。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加...</description>
+      <description>SPEED UP！ 我打 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 GINKA。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。 之后的文章按照时间顺序排布。...</description>
       <category>教程</category>
       <pubDate>Sat, 27 Jul 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有好几年了，共计接触了两部能够语音加速的游戏：<em>天津罪</em> 和 <em>GINKA</em>。游玩这两部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，相当于 galgame 游玩量变为了 2 倍。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏加速方式。</p>
+<p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 <em>GINKA</em>。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，<s>相当于延长了一倍的生命</s>。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。</p>
+<p>之后的文章按照时间顺序排布。</p>
 <h2>CE</h2>
-<p>Cheat Engine 想必大家都不陌生，我也会使用 CE 进行 RPG galgame 的加速（兰斯系列）。CE 中有一个变速精灵的功能非常好用，用鼠标点几次即可加速游戏。但是 CE 不能加速游戏音频，这也是它的最大败笔。因此我需要另寻出路。</p>
+<p>Cheat Engine 想必大家都不陌生，我也会使用 CE 进行 RPG galgame（兰斯系列）或者动效太多（型月）gal 的加速。CE 中有一个变速精灵的功能非常好用，用鼠标点几次即可轻松修改程序速度。但是 CE 不能加速音频（因为音频播放是调用操作系统 API），这也是 CE 的最大败笔。因此我需要另寻出路。</p>
 <h2>解包与封包</h2>
 <p>20240720 我尝试了一个想法：将 galgame 音频文件解包，加速后再封包回去。由于我不会逆向，因此使用的是 GARbro，这是一个非常泛用的，多目标 galgame 资源提取器。我使用 いろとりどりのセカイ HD 尝试，这个游戏把 <code>voice.bin</code> 单文件放在根目录下，非常明显，我很轻易地就提取出了游戏的所有 ogg 格式的语音。</p>
-<p>那么我要如何将加速后的 ogg 封装回一个 <code>voice.bin</code> 呢？我被卡在了这一步下。GARbro 根据预设的解包规则检测出格式并解了包，但是却<strong>不告诉我这个包用的究竟是什么格式</strong>。Asuka Minato 也提醒：解包容易，但封包可能非常困难。因此我打消了这个想法。</p>
+<p>那么我要如何将加速后的 ogg 封装回一个 <code>voice.bin</code> 呢？我被卡在了这一步下。GARbro 根据预设的解包规则检测出格式并解了包，但是却<strong>不告诉我这个包用的究竟是什么格式</strong>。Asuka Minato 也提醒：解包容易，但封包可能非常困难。因此我暂时打消了这个想法。</p>
 <h2>pyaudio</h2>
 <p>20240724 我进行了初次尝试，写一个 python 脚本建立了一个系统音频合成器到扬声器的音频流，在中间使用脚本进行音频加速。</p>
 <p>首先安装一个 VB Cable，其作用是修改输入输出设备，防止音频合成器直接将音频输出到扬声器，覆盖掉我处理后的输入。然后脚本大概是这样：</p>
@@ -1328,7 +1329,7 @@
 <p>ps. 事实上，通过源码也能知道，Github 上的这些 libspeedhack、<a href="https://github.com/Letomaniy/Speed-Hack" target="_blank" rel="noopener noreferrer">Letomaniy/Speed-Hack</a>、<a href="https://github.com/Hirtol/speedhack-rs" target="_blank" rel="noopener noreferrer">Hirtol/speedhack-rs</a> 等 speedhack 并不涉及音频 api 的修改，因此不可能有音频加速效果。妄图通过简单的一点点源码实现加速只能说是天方夜谭。</p>
 </blockquote>
 <h2><a class="header-anchor" href="#speed-gear"><span></span></a><a href="https://www.softking.com.tw/dl/17892/Speed%20Gear%207.2.html" target="_blank" rel="noopener noreferrer">Speed Gear</a></h2>
-<p>一个简单点点点就能加速窗口的软件，比较电脑小白向。最高支持数千倍加速（还是拉条，你们 UI 设计者.jpg），体验还不错，但是也<strong>不支持音频加速</strong>。</p>
+<p>一个简单点点点就能加速窗口的软件，比较电脑小白向。最高支持数千倍加速（还是拉线性条，你们 UI 设计者.jpg），体验还不错，但是跟 CE 一样，也<strong>不支持音频加速</strong>。</p>
 <h2>源码构建</h2>
 <p>20240803：到了这一步，市面上的各种现有软件看起来已经是山穷水尽了，我开始把目光转向修改代码。</p>
 <p>一个选择是读 wine 的音频 api 然后写点 lib 注入。另一个选择看起来成功率更大一些，那就是直接修改 hourglass 的代码，毕竟人家的功能可行性已经通过了验证。</p>
@@ -1393,8 +1394,13 @@
 <p>现成的 crates 里，<em>wsola</em> 是个脑残占名字的没有内容，而 <a href="https://codeberg.org/PieterPenninckx/tdpsola" target="_blank" rel="noopener noreferrer"><em>tdpsola</em> 有一个可用实现</a>。把仓库拉下来，example 里带了 wav 支持，不需要手动转 raw。然后试了一下，确实能够实现加速！让我非常开心。虽然只支持单声道 wav，我还需要手动转一次，但是没有什么难度。并且作者在 README 里给出了一个 documentation，里面的视频把 TD-PSOLA 原理讲得非常透彻。</p>
 <h3>打击</h3>
 <p>此时我终于读懂了 Hourglass-Resurrection 的代码是自己写 DirectSound 的驱动，并且也发现操作 tick 并不能实现真正的音频加速，最终的道路一定是 buffer。于是我陷入了消沉：做一个音频加速的复杂度已经远超出了我的想象，即使知晓了音频加速原理，也很难面对一大坨 windows sound api。我目前摸索的这些知识在脑子里并不能合到一起。</p>
+<h2>二试封包</h2>
+<p>转眼过了半年来到 2025，我在推 <em>空に刻んだパラレログラム</em> 时看到 xp3 格式的文件，又忍不住想起了拆包封包的思路。由于 xp3 是老牌（20+years）的广泛使用的格式，网上的资料非常多，可谓是帮了大忙。我先尝试用 GARbro 拆包，接着用<a href="https://github.com/awaken1ng/krkr-xp3" target="_blank" rel="noopener noreferrer">网上找的脚本</a>封回去。封完的包比原先的大了十多 MB，心里还是有一些不安的。打开游戏，发现居然可行！！游戏可以读到音频文件！</p>
+<p>于是我激动得立刻开始 LLM 写脚本，用 ffmpeg 加速音频。写完运行，发现脚本解包有问题。我怀疑是这个 krkr-xp3 只支持 xp3 v1，而 galgame 用了 v2 打包。不过无伤大雅，我只需要封包能力即可，所以我利用 GARbro 解包后，<a href="https://github.com/lxl66566/krkr-xp3" target="_blank" rel="noopener noreferrer">改一下脚本</a>，将包封回 xp3 即可。实测可以正常游玩。</p>
+<p>上述操作让我可以以二倍速语音游玩所有具有 krkr 移植的 galgame，简直不要太爽。</p>
+<p>尝到甜头后，我又开始审视起我仓库中的其他 galgame。例如樱之刻，我一搜 Artemis Engine，出来<a href="https://www.bilibili.com/opus/568495301662731170" target="_blank" rel="noopener noreferrer">一篇文章</a>告诉我其实这个引擎不需要封包……实测了一下，果然如此。又解决了一个！不过不封包会导致 translator 的 hook 失效，估计是不封包就直接读 .ast 文本，不会再经过 hooked 函数了。</p>
 <h2>external</h2>
-<p>目前这个项目暂时停滞了，我希望有一天能够重启这个项目。这里存一些可能用得上的资料。</p>
+<p>这里存一些可能用得上的资料。</p>
 <ul>
 <li><a href="https://shanewfx.github.io/blog/2013/08/14/caprure-audio-on-windows/" target="_blank" rel="noopener noreferrer">Windows 上的音频采集技术 - 思考的轨迹</a></li>
 </ul>
