@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 25 Jan 2025 17:40:40 GMT</pubDate>
-    <lastBuildDate>Sat, 25 Jan 2025 17:40:40 GMT</lastBuildDate>
+    <pubDate>Mon, 27 Jan 2025 17:53:48 GMT</pubDate>
+    <lastBuildDate>Mon, 27 Jan 2025 17:53:48 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -1397,8 +1397,11 @@
 <h2>二试封包</h2>
 <p>转眼过了半年来到 2025，我在推 <em>空に刻んだパラレログラム</em> 时看到 xp3 格式的文件，又忍不住想起了拆包封包的思路。由于 xp3 是老牌（20+years）的广泛使用的格式，网上的资料非常多，可谓是帮了大忙。我先尝试用 GARbro 拆包，接着用<a href="https://github.com/awaken1ng/krkr-xp3" target="_blank" rel="noopener noreferrer">网上找的脚本</a>封回去。封完的包比原先的大了十多 MB，心里还是有一些不安的。打开游戏，发现居然可行！！游戏可以读到音频文件！</p>
 <p>于是我激动得立刻开始 LLM 写脚本，用 ffmpeg 加速音频。写完运行，发现脚本解包有问题。我怀疑是这个 krkr-xp3 只支持 xp3 v1，而 galgame 用了 v2 打包。不过无伤大雅，我只需要封包能力即可，所以我利用 GARbro 解包后，<a href="https://github.com/lxl66566/krkr-xp3" target="_blank" rel="noopener noreferrer">改一下脚本</a>，将包封回 xp3 即可。实测可以正常游玩。</p>
-<p>上述操作让我可以以二倍速语音游玩所有具有 krkr 移植的 galgame，简直不要太爽。</p>
-<p>尝到甜头后，我又开始审视起我仓库中的其他 galgame。例如樱之刻，我一搜 Artemis Engine，出来<a href="https://www.bilibili.com/opus/568495301662731170" target="_blank" rel="noopener noreferrer">一篇文章</a>告诉我其实这个引擎不需要封包……实测了一下，果然如此。又解决了一个！不过不封包会导致 translator 的 hook 失效，估计是不封包就直接读 .ast 文本，不会再经过 hooked 函数了。</p>
+<p>上述操作让我可以倍速语音游玩所有具有 krkr 移植的 galgame，简直不要太爽。</p>
+<p>尝到甜头后，我又开始审视起我仓库中的其他 galgame。下面的表格记录了我的游戏语音加速尝试与心得（时间顺序），可以点击对应条目查看详细内容。</p>
+
+<h3>二试封包总结</h3>
+<p>二试封包的成功确实给我带来了许多喜悦之情与实用价值。但是仍有一批引擎无法简单地通过这种方式进行加速。在面对它们使尽浑身解数仍无法战胜时，我内心里总有一股深深的无力感。因此我认为 <em>拆包-加速-封包</em> 只是旁门左道，只有注入才是正道。</p>
 <h2>external</h2>
 <p>这里存一些可能用得上的资料。</p>
 <ul>
