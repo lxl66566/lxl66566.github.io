@@ -120,6 +120,7 @@ tag:
 - 设置 copilot：copilot 确实是个免费用的 gpt4，就是比较慢。
   - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。
   - 即使开着代理，用着用着也经常出现 _很抱歉，目前无法连接到服务。_。解法：在 edge 浏览器中改微软账户地区至其他地区。([src](https://www.bilibili.com/read/cv33602923/))
+- 设置 Explorer：使用 [WinSetView](https://github.com/lesferch/WinSetView/) 将 _音乐_ 文件夹 view 设为小图标。否则当你打开一个装满音乐的文件夹时，Explorer 将会去读取所有文件的元数据，会导致卡顿。([src](https://answers.microsoft.com/en-us/windows/forum/windows_11-files/how-to-prevent-windows-explorer-from-reading/c123eab1-e5a5-4124-bf20-68f67a08e47b?messageId=b010aeba-a852-40e7-8732-8f67cb4fd1ed))
 
 ### 旧设置项
 

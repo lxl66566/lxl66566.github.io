@@ -681,6 +681,12 @@ const data = [
   { id: "551472", aScore: 5, bScore: 8.2, info: "#触手 #战败", bak: "https://telegra.ph/C103-俎上の空欄-有魚-蝕監の堕ち手-1-2-灼眼のシャナ-中国翻訳-01-23" },
   { id: "527573", aScore: 7.4, bScore: 5.5, order: 1, info: "#cos #青梅竹马 #教室" },
   { id: "551505", aScore: 7.9, bScore: 6.4, order: 2, info: "#cos", bak: "https://telegra.ph/Grove-Grow-小森くづゆ-コスプレ部裏活動日誌2-中国翻訳-DL版-01-22-2" },
+  { id: "551980", aScore: 8.2, bScore: 5.2, info: "#星穹铁道", bak: "https://telegra.ph/山辺製菓-怨面狐-青雀とナイショのセックス休暇-崩壊スターレイル-中国翻訳-DL版-01-26" },
+  { id: "551601", aScore: 7, bScore: 6.3, info: "#蔚蓝档案 #乳头穿孔 #公共场合", bak: "https://telegra.ph/C105-くれり亭-くれりて-秤アツコロイヤルTKBトレーニング-ブルーアーカイブ-中国翻訳-01-19" },
+  { id: "551037", aScore: 6.5, bScore: 7.1, info: "#东方 #无反应", bak: "https://telegra.ph/例大祭20-サルパッチョ-わいら-半霊ちゃん-東方Project-中国翻訳-01-26-2" },
+  { id: "551924", aScore: 5, bScore: 9.3, info: "#触手 #战斗 #强制高潮", bak: "https://telegra.ph/C105-灯夜工房灯ひでかず-淫魔ノカケラ-中国翻訳-01-26" },
+  { id: "(ex)", aScore: 7.8, bScore: 4.5, info: "#百合 #请问您今天要来点兔子吗", otherlink: "https://exhentai.org/g/3210221/03f7077671/", bak: "https://telegra.ph/C105-ウサギキャンディー-タク道-フユチノ仲良しごっこ-01-26" },
+  { id: "(ex)", aScore: 3.5, bScore: 7.2, info: "#触手 #调教 元魔法少女、調教済み", otherlink: "https://exhentai.org/g/3209356/22dd25f59f/", bak: "https://telegra.ph/Im-moralist-柳原ミツキきー子-肉棒魔羅ノ進-元魔法少女調教済み-オリジナル-中国翻訳-个人渣翻-01-25" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

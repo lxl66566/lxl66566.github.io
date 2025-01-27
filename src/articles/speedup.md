@@ -280,12 +280,147 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 于是我激动得立刻开始 LLM 写脚本，用 ffmpeg 加速音频。写完运行，发现脚本解包有问题。我怀疑是这个 krkr-xp3 只支持 xp3 v1，而 galgame 用了 v2 打包。不过无伤大雅，我只需要封包能力即可，所以我利用 GARbro 解包后，[改一下脚本](https://github.com/lxl66566/krkr-xp3)，将包封回 xp3 即可。实测可以正常游玩。
 
-上述操作让我可以以二倍速语音游玩所有具有 krkr 移植的 galgame，简直不要太爽。
+上述操作让我可以倍速语音游玩所有具有 krkr 移植的 galgame，简直不要太爽。
 
-尝到甜头后，我又开始审视起我仓库中的其他 galgame。例如樱之刻，我一搜 Artemis Engine，出来[一篇文章](https://www.bilibili.com/opus/568495301662731170)告诉我其实这个引擎不需要封包……实测了一下，果然如此。又解决了一个！不过不封包会导致 translator 的 hook 失效，估计是不封包就直接读 .ast 文本，不会再经过 hooked 函数了。
+尝到甜头后，我又开始审视起我仓库中的其他 galgame。下面的表格记录了我的游戏语音加速尝试与心得（时间顺序），可以点击对应条目查看详细内容。
+
+<SpeedupList>
+<template #krkr_xp3>
+
+使用我的 [fork repo](https://github.com/lxl66566/krkr-xp3)。脚本可能无法解包，需要使用 GARbro 解包后，再使用脚本进行音频加速与封包。
+
+</template>
+<template #Artemis>
+
+解包樱之刻，我一搜 Artemis Engine，出来[一篇文章](https://www.bilibili.com/opus/568495301662731170)告诉我其实这个引擎不需要封包……实测了一下，果然如此。只需要用 GARbro 解出来，批量加速后放到 exe 所在文件夹即可。又解决了一个！
+
+不过不封包会导致 translator 的 hook 失效，估计是不封包就直接读 .ast 文本，不会再经过 hooked 函数了。
+
+</template>
+<template #favorite>
+
+FAVORITE 的 .bin 格式也有 [fvp-tools](https://github.com/lxl66566/fvp-tools)。这是我的 fork 版本，修改了其对于解包后文件名的处理。
+
+因为不管是 GARbro 解出来的还是原版 fvp-tools 解出来的，直接封包都不行。它们对于文件名的处理不太行，本来应该是类似 `00000001` 的八位数文件名，原版 fvp-tools 解出来是 `0001_00000001`（添加序号），GARbro 解出来是 `00000001.ogg`（添加后缀），然而 fpv 引擎要求比较严格，不允许自己加这些乱七八糟的。
+
+总之，SPEED UP 的初衷就是干翻 FAVORITE，我的目的已经达成了。
+
+</template>
+<template #WOH>
+
+魔法使之夜的解包遇到了一点麻烦。首先一大堆 `data00000.hfa` 并不能看出哪里是语音，哪里是其他素材。其次，GARbro 没法解 hfa 存档，我的心已经凉了一半。
+
+然后在网上找了一个 [mahoyo_tools](https://github.com/loicfrance/mahoyo_tools)，但是这玩意只说能解图像和脚本，不包含音频。而且 star 数和 README 讲的都很糊，根本不会用。(不过代码质量倒是挺高的)
+
+</template>
+<template #ypf>
+
+尝试解包/封包一个 YU-RIS 引擎的游戏，这玩意也是个老牌引擎了。
+
+GARbro 打开 .ypf 时会提示猜测密钥，能够顺利解包。但是不得不骂，GARbro 并不会告诉我猜到的密钥是啥，并且封包的时候要求必须提供 8 位密钥。
+
+尝试其他工具：
+
+- [fengberd/YuRISTools](https://github.com/fengberd/YuRISTools) / [pre compiled](https://drive.google.com/file/d/1fDa4RaUz2oJUKO6cTLfSEqaAawNSQd3m/view) / [src](https://forums.fuwanovel.moe/topic/24704-a-complete-guide-to-unpack-and-repack-yu-ris-engine-files/)：能够免密钥打包，但是打出的结果不同，并且运行会爆炸。
+  - 如果我直接 unpack `vo.ypf` 会得到 `Unsupported YPF engine version: 500`，因此我得到了 engine version。但使用该 version 进行 pack 也是无效的。
+- [python-YU-RIS-package-file-unpacker](https://github.com/mwzzhang/python-YU-RIS-package-file-unpacker)：只能解包不能封包，而且在 RAMDisk 上运行会爆炸。
+- 根据 [ypf ファイル差し替え展開方法](https://wikiwiki.jp/mozanashi/ypfファイル差し替え展開方法)，将 pack 的 ypf 文件命名为 `update2.ypf` 放到 pac 里，提示 xxx.ogg 冲突。但是如果只保留 `update2.ypf` 而不保留原先的 `vo.ypf`，则又无法启动。
+
+受不了了，直接（用 LLM）读 GARbro 源码，找到它猜测密钥的方法，然后让 LLM 写一个同功能脚本：
+
+```py
+import struct
+import sys
+
+
+def guess_ypf_info(file_path):
+    with open(file_path, "rb") as f:
+        # 读取文件头
+        magic = f.read(4)
+        if magic != b"YPF\x00":
+            if magic == b"MZ\x90\x00":
+                # 这里简化处理，实际应该像C#代码一样查找YSER
+                print("这是一个EXE文件，需要查找内部的YPF数据")
+                return None
+            print("不是有效的YPF文件")
+            return None
+
+        # 读取版本号和文件数量
+        version = struct.unpack("<I", f.read(4))[0]
+        count = struct.unpack("<i", f.read(4))[0]
+        dir_size = struct.unpack("<I", f.read(4))[0]
+
+        print(f"YPF版本: {version}")
+
+        if count <= 0 or dir_size < count * 0x17:
+            print("无效的文件数量或目录大小")
+            return None
+
+        # 跳到目录开始位置(0x20)
+        f.seek(0x20)
+
+        # 读取第一个文件项
+        name_hash = struct.unpack("<I", f.read(4))[0]
+        name_length = (~struct.unpack("B", f.read(1))[0]) & 0xFF
+
+        if name_length < 4:
+            print("文件名长度过短，无法猜测密钥")
+            return None
+
+        # 读取加密的文件名
+        encrypted_name = f.read(name_length)
+
+        # 查找倒数第四个字节（应该是加密后的点号位置）
+        encrypted_dot = encrypted_name[-4]
+
+        # 计算密钥：加密的点号字节与实际的点号字符异或
+        key = encrypted_dot ^ ord(".")
+
+        print(f"猜测到的YPF密钥: 0x{key:02X}")
+
+        # 尝试解密第一个文件名来验证
+        decrypted_name = bytes(b ^ key for b in encrypted_name)
+        try:
+            decoded_name = decrypted_name.decode("cp932")
+            print(f"第一个文件名: {decoded_name}")
+        except:
+            print("警告: 文件名解码失败，密钥可能不正确")
+
+        return version, key
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("用法: python script.py <ypf文件路径>")
+        sys.exit(1)
+
+    guess_ypf_info(sys.argv[1])
+```
+
+得到密钥为 `0xC9`，version 为 500。使用 GARbro 指定密钥（“8 位密钥” 处要写 `C9`）与版本进行打包，放入游戏，报错。然后用 fengberd/YuRISTools 一读，好家伙，version 变成了 1280。我真觉得莫名其妙，什么傻逼打包啊。([然后提了个 issue，是我最后的仁慈](https://github.com/crskycode/GARbro/issues/79))
+
+继续找打包工具，找到 [crskycode/YPF_Tool](https://github.com/crskycode/YPF_Tool)，免密钥打包，放到游戏，能正常运行。人家的也是 C# 写的怎么爆杀你 GARbro 啊。
+
+结果发现语音文件能正常读取，但是没法播放。。搞不懂 YU-RIS 了，我猜每个语音文件或者整个 `vo.ypf` 在其他地方还有放校验。
+
+过程中的其他发现：
+
+- 如果 pac 文件夹里含有额外没用上的 `.ypf` 文件，游戏会无法启动。游戏根目录下的 .ypf 也会被读，影响游戏本体。
+- 在游戏根目录找到一个 `ysfchk.ini` 文件，里面记录着每个 ypf 对应的 CRC-32 校验 hash。该文件对运行游戏没有影响，但是如果用 `ファイル破損チェック.exe` 验证，本质上就是用这里的 hash 进行验证。
+
+</template>
+</SpeedupList>
+
+### 二试封包总结
+
+二试封包的成功确实给我带来了许多喜悦之情与实用价值。但是仍有一批引擎无法简单地通过这种方式进行加速。在面对它们使尽浑身解数仍无法战胜时，我内心里总有一股深深的无力感。因此我认为 _拆包-加速-封包_ 只是旁门左道，只有注入才是正道。
 
 ## external
 
 这里存一些可能用得上的资料。
 
 - [Windows 上的音频采集技术 - 思考的轨迹](https://shanewfx.github.io/blog/2013/08/14/caprure-audio-on-windows/)
+
+<script setup lang="ts">
+import SpeedupList from "@SpeedupList";
+</script>

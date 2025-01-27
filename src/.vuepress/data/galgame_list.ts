@@ -3,6 +3,13 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "天使☆嚣嚣RE-BOOT!",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-01-27",
+    },
+  },
+  {
     name: "空に刻んだパラレログラム",
     playing_status: PlayingStatus.PLAYING,
     duration: {
