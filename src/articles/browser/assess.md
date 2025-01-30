@@ -181,6 +181,12 @@ Kiwi Browser 是我接触到的第一个能够装扩展的重量级浏览器。
 - DNS 解析有问题(?还是我的问题?)，网页打开较慢。
 - 它的书签布局不太一样。这导致了 Xbrowsersync 同步书签的层次出现问题。
 
+### Microsoft Edge Canary
+
+2025 年初，kiwi browser 项目宣布 archived，并且推荐用户转去 Microsoft Edge Canary。于是我又尝试了一下。
+
+比起两年前，现在的 Android 浏览器能够安装扩展，会好一点。但是有一些扩展是特供版本，界面与桌面端扩展有差别，功能也砍了不少，达不到 kiwi browser 的完备性。
+
 ### 狐猴浏览器
 
 一款国产商业浏览器，主打卖点就是扩展丰富，同时支持 chrome 和 edge 商店。有一些花里胡哨的功能，建议关了再用。

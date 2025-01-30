@@ -113,7 +113,7 @@ tag:
   - `bash <(curl -sL bash.icu/speedtest)`
 - IP 质量：[IPQuality](https://github.com/xykt/IPQuality)
 - <https://bgp.tools/>，ASN 信息
-- <https://ip.skk.moe/>，查 IP
+- <https://ip.skk.moe/>，群友搭的查自己 IP 的面板
 - [网络面板](https://net.ljxnet.cn/)流量消耗器
 
 ### SSH

@@ -247,6 +247,7 @@ ColorOS 是目前一加的默认系统。
 - 微软的应用在处理系统代理方面简直就是**垃圾中的战斗机**。例如 Microsoft Store 和 语音输入，你但凡走系统代理或者不走系统代理都能正常工作，你 tm 处于走和不走之间的叠加态，就是转圈圈用不了，我真的不好说了。
 - 微软商店如果有什么应用因为地区限制无法下载，能不能麻烦说明一下啊。。找了半天没找到下载按钮，地区限制也是我猜的。
 - [GetFinalPathNameByHandleW 在某些 RAMDisk 上会炸](https://t.me/withabsolutex/1683)
+- 大力推广 copilot，一堆 copilot 图标，添加 copilot 按键等。但是 copilot 的智力在我用过的 LLM 里是垫底的。
 
 ## Geforce Experience 有多难用
 
