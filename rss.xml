@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 27 Jan 2025 17:53:48 GMT</pubDate>
-    <lastBuildDate>Mon, 27 Jan 2025 17:53:48 GMT</lastBuildDate>
+    <pubDate>Thu, 30 Jan 2025 17:20:58 GMT</pubDate>
+    <lastBuildDate>Thu, 30 Jan 2025 17:20:58 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -1191,6 +1191,12 @@
       <content:encoded><![CDATA[
 <p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 <em>GINKA</em>。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，<s>相当于延长了一倍的生命</s>。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。</p>
 <p>之后的文章按照时间顺序排布。</p>
+<h2>常见音频处理软件</h2>
+<p>音频处理领域很多软件都是商业非自由软件。并且我在其中找不到能做到音频加速的软件。（不过写在这里的只是一部分，之前试过的没记）</p>
+<ul>
+<li>Equalizer APO：提供了易于编辑的 GUI 界面，用户可以自己创建不同的效果器和 filter。不过无法做到音频加速或音量均衡。</li>
+<li>Fxsound：开源效果器，可以让游戏加强脚步声等。不过延迟有点高，而且无法实现音频加速。</li>
+</ul>
 <h2>CE</h2>
 <p>Cheat Engine 想必大家都不陌生，我也会使用 CE 进行 RPG galgame（兰斯系列）或者动效太多（型月）gal 的加速。CE 中有一个变速精灵的功能非常好用，用鼠标点几次即可轻松修改程序速度。但是 CE 不能加速音频（因为音频播放是调用操作系统 API），这也是 CE 的最大败笔。因此我需要另寻出路。</p>
 <h2>解包与封包</h2>
