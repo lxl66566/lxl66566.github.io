@@ -113,6 +113,13 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 :::
 
+### 包管理器
+
+Google Play 是最广泛使用的包管理器。但是这玩意太商业化了，并且收录的软件不算多。所以也有一些其他选择：
+
+- F-Droid：最知名的开源软件仓库。
+- [Obtainium](https://github.com/ImranR98/Obtainium)：可以从 Github release 里安装 apk 的包管理器。和我的 [bin-package-manager](https://github.com/lxl66566/bpm) 有异曲同工之妙，不过它做得更好看实用。
+
 ### ZArchiver
 
 Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）
@@ -178,7 +185,7 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 
 ### 音乐播放器
 
-我听歌都是离线下载到手机里听，因此只需要离线播放器即可。APlayer 和 Salt Player 我用着都还行，体验也差不多，前者开源后者闭源，随便选吧。
+我听歌都是离线下载到手机里听，因此只需要离线播放器即可。APlayer, Gramophone, Salt Player 我用着都还行，体验也差不多，前两者开源后者闭源，随便选吧。
 
 ## Windows
 

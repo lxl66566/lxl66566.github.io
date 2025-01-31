@@ -7,7 +7,11 @@ category:
 
 # 生活中遇到的困难
 
+::: danger
+
 **此页面几乎不再更新。请前往[我的频道](https://t.me/withabsolutex)搜索 tag: `#垃圾桶`。**
+
+:::
 
 有关博客写作的问题请跳转[VuePress2 与博客心得](../blog/withvuepress2.md)。
 

@@ -50,6 +50,7 @@ export default sidebar({
         "ocr.md",
         "pdf_reader.md",
         "frp.md",
+        "money.md",
       ],
     },
     {

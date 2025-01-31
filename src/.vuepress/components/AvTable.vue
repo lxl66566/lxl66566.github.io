@@ -407,6 +407,12 @@ const data = [
   { id: "GDTM-092", aScore: 5.7, bScore: 6.6, name: "#图书馆" },
   { id: "stars-238", aScore: 6.9, bScore: 7.2, u: true, name: "#失神 恥汁まみれ 唾液・汗・潮・ヨダレだくだく敏感イキまくりエビ反りFUCK 朝比奈ななせ" },
   { id: "mism-325", aScore: 5.5, bScore: 7.5, u: true, name: "#深喉 迷い込んだ未成熟。最狂服従イラマチオ エマ 二葉エマ" },
+  { id: "FSDSS-788", aScore: 9, bScore: 7, u: true, name: "彼女の妹にからかい誘惑され性欲だいばくはつ！何度射精しても復活する早漏絶倫チ○ポで後悔させるほどおかわりSEXした3日間 善場まみ（茉城まみ）" },
+  { id: "CAWD-244", aScore: 7.1, bScore: 7.4, u: true, name: "アオラレ 危険運転者に抜かずの連撃中出しされた免許取りたて女子大生の末路 桜もこ" },
+  { id: "mimk-188", aScore: 7.3, bScore: 2.1, u: true, name: "#巨根 実写版 私は毎晩グロチン家庭教師に…種付けされてます。 販売数80，000部超え！ 望月つぼみ" },
+  { id: "FSDSS-393", aScore: 6.6, bScore: 7.6, u: true, name: "ゴミ屋敷に住むキモい変態ストーカーに監禁されたが、最悪なことにチ●ポの相性はこの上ないほど最高。 橋本ありな - 橋本ありな (新ありな)" },
+  { id: "ABP-672", aScore: 6.6, bScore: 7.9, name: "人生初・トランス状態 激イキ絶頂セックス 41 絶頂しすぎてS字反りイキ 結まきな" },
+  { id: "sone-614", aScore: 6, bScore: 4, name: "新人NO.1 STYLE 最強ヒロイン瀬戸環奈AVデビュー" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 
