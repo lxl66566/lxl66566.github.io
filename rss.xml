@@ -6,19 +6,129 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 30 Jan 2025 17:20:58 GMT</pubDate>
-    <lastBuildDate>Thu, 30 Jan 2025 17:20:58 GMT</lastBuildDate>
+    <pubDate>Fri, 31 Jan 2025 17:11:50 GMT</pubDate>
+    <lastBuildDate>Fri, 31 Jan 2025 17:11:50 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>教程</category>
+    <category>经历</category>
     <category>推荐</category>
     <category>评价</category>
     <category>随笔</category>
     <category>编程</category>
-    <category>教程</category>
-    <category>经历</category>
     <category>学习</category>
     <category>爱好</category>
-    <category>应用</category>
+    <item>
+      <title>理财，加密货币与区块链</title>
+      <link>https://absx.pages.dev/articles/money.html</link>
+      <guid>https://absx.pages.dev/articles/money.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">理财，加密货币与区块链</source>
+      <description>理财，加密货币与区块链 或许跟我的教育有一些关系，我一直很重视金钱观念。这里将会放一些我的理财记录和加密货币心得。 历史 早期回忆 详情 小时候的我还挺悲惨的，压岁钱被大人拿去“保管”，零花钱也要做家务赚。不过这也促进了我的金钱观的形成。 最早接触理财是小学的时候，那时候还在用存折。一段时间后去银行存取钱，上面会打印一项“利息”，虽然只有几分钱，但是至...</description>
+      <category>教程</category>
+      <category>经历</category>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>或许跟我的教育有一些关系，我一直很重视金钱观念。这里将会放一些我的理财记录和加密货币心得。</p>
+<h2>历史</h2>
+<h3>早期回忆</h3>
+<details class="hint-container details"><summary>详情</summary>
+<p>小时候的我还挺悲惨的，压岁钱被大人拿去“保管”，零花钱也要做家务赚。不过这也促进了我的金钱观的形成。</p>
+<p>最早接触理财是小学的时候，那时候还在用存折。一段时间后去银行存取钱，上面会打印一项“利息”，虽然只有几分钱，但是至少让我知道，钱是会增值的。基于此现象，我也去了解了通货膨胀等概念。</p>
+<p>过了一阵子，小学开始搞“爱心账户”，鼓励家长存一笔钱到邮政银行，把利息当成捐款捐给有需要的人。家长给我存了 100，然后学校给捐款的小朋友公开发了证书。现在想起来自己也太善良了，而且小学这样的举动是隐式强迫，因为没有捐款的家庭&amp;孩子会无意识间被差别对待。</p>
+<p>然后就知道了活期存款利率很低，定期存款利率高，所以把自己平常存的钱存入了定期。小学的理财方式也就只有这些了。</p>
+<p>对了，想起来小学有一次校外活动，去郊区的中国银行参加了一个认识理财模拟投资的活动。就是那一次活动，让我认识到活期，定期，基金，股票，保险这五种理财名词及其特点。</p>
+</details>
+<h3>余额宝/零钱通</h3>
+<p>初中的时候让我爸给我开了一个支付宝帐号，然后钱存在余额宝。当时的中国经济正是飞速发展的时代，余额宝给的利率也高。</p>
+<p>从初中到现在大学毕业，我的余额宝里都有一笔不算多的钱，用作活期资金。支付宝开通了自动转入余额宝，我根本就不需要去管，非常自在。</p>
+<p>不过在大学期间，余额宝的收益率变化很大。我有几次更换产品，换到了其他利率更高的基金，结果发现每一个基金都不能长期维持高利率，一段时间后利率都会下跌。并且更换产品会丢失几天的利息，算下来甚至亏得更多，我很讨厌。</p>
+<p>并且这段时间余额宝的利率一直在降低。到了 2025 年，余额宝的利率已经降到了年化 1.2%，实在是太低了。因此我不再将余额宝作为一个理财方式。</p>
+<p>微信零钱通是后来模仿余额宝的同性质的产品。利率也都差不多，这里不再多说。</p>
+<h3>黄金</h3>
+<p>高中毕业的暑假，我使用支付宝购买黄金理财。支付宝啥都能买，确实方便。当时的金价才 366/g。之后俄乌战争时又加仓了一次，现在以 600+/g 的价格卖了，确实挺赚的。</p>
+<p>这几年的金价也算是机缘巧合吧，之后并不能保证金价像之前的房价一样一直涨下去。而且这属于长线理财，周期太长了。因此我选择退出。</p>
+<h3>基金</h3>
+<p>买入黄金的同时我也在尝试基金。凭着高中那点贫乏的认知和信息量，我买了一些“感觉有看头”的基金板块，然后没有任何悬念地亏了。于是我再也不碰基金。</p>
+<h3>债券</h3>
+<p>还是高中暑假，去开了个证券账户，专门用于认购新债和国债。因为收益和风险综合因素我并没有从事正常的债券交易。新债就是抽签认购，正式发行后卖掉，平均能拿到 20% 收益。不过抽签看概率，这玩意概率不算大，并且一次限量 1000 元，因此赚得不多。</p>
+<p>国债逆回购是我的处理“新债未中签的剩余资金”的手段，0 风险的债券，收益比余额宝高一点，大约年化 1% 左右。节假日前国债的收益会增多一些。</p>
+<p>然而后来疫情期间及其后，新债就变得非常少。同时，与余额宝利率下降相同，2025 年国债的利率也降低了许多；并且这玩意不像余额宝那样放着不用管：国债必须每个周期去手动买，也不能当活钱花。因此我退出。</p>
+<h2>加密货币交易</h2>
+<p>2025 年年初，因为国内环境利率下降得过于厉害，以 v2ex 一个帖子作为契机，我入坑了加密货币。</p>
+<p>从过往的投资经历来看，我个人还是非常保守的 。因此在加密货币投资初期我也使用了非常保守的策略。</p>
+<h3>前置知识</h3>
+<ul>
+<li>由于<a href="https://www.gov.cn/zhengce/zhengceku/2021-10/08/content_5641404.htm" target="_blank" rel="noopener noreferrer">中国将加密货币交易定为非法</a>，加密货币的兑换有一些困难。加密货币的充值与提现一般使用 C2C 交易，也就是找到一个和你意愿相反的人（你买他卖或反之）进行两手交易。一般情况下这是够的，但是数额过大时可能需要肉身出国，去香港/日本这些加密货币合法的国家或地区进行提现。网上有很多攻略，这里不再赘述。
+<ul>
+<li>虽然 C2C 理论上可以绕过监管，但是支付宝和微信在遇到疑似这样的 C2C 交易时会警告。因此尽量减少交易频率，极端的话应该将加密货币交易隐藏在多单普通转账之中。</li>
+</ul>
+</li>
+<li>USDT 是最广泛使用的稳定币，1:1 兑换美元，常常用来做加密货币交易的中间币种与合约本位。USDC 是另一家机构的稳定币，监管更好，安全性更高，但是推出时间靠后，市场流动性较低。</li>
+<li>加密货币价值来源于共识。因此不要投山寨币，因为他们的共识不够稳定，风险太大。包括感兴趣的话可以了解一下 Luna “算法稳定币”的暴雷历史。</li>
+</ul>
+<h3>交易所</h3>
+<p>对于买卖加密货币的普通玩家来说，使用中心化交易所是必须的。交易所在中国一般需要使用<a href="/articles/proxy/" target="_blank">科学上网</a>访问，这是没办法的。</p>
+<p>合适的交易所必须针对加密货币操作中不同的困难作出解决方案。这里我作出评判：</p>
+<ul>
+<li><a href="https://okx.com/join/48817502" target="_blank" rel="noopener noreferrer">OKX 欧易（推荐）</a>：全中文支持，C2C 支持支付宝和微信，优秀的前端 UI，还有深度技术的 web3 项目。</li>
+<li>币安：老牌交易所，但是自从赵长鹏出事后我就对其印象不佳。入坑加密货币后注册过，结果不支持日本 IP，更换 IP 后还说 IP 存在风险，无法开户合约账户，需要 KYC 验证。直接跑路。</li>
+<li>MEXC 交易所：费率很低，但是要求 KYC，不支持中国地区。</li>
+</ul>
+<h4>奖励与活动</h4>
+<p>交易所会经常发关于新币和活动的公告，可以关注一下：</p>
+<ul>
+<li><a href="https://www.okx.com/zh-hans/help/section/announcements-latest-announcements" target="_blank" rel="noopener noreferrer">OKX 公告</a></li>
+</ul>
+<h3>开始交易</h3>
+<p>交易前有一些基础知识，建议搜索学习。</p>
+<ul>
+<li>区块链与挖矿相关知识</li>
+<li>现货，合约与期权 概念+原理</li>
+<li>买入和卖出，杠杆、做多和做空</li>
+<li>术语：仓位相关</li>
+</ul>
+<p>新手建议：</p>
+<ul>
+<li>先玩小额小杠杆，摸一摸交易所的操作。别搞太大，并且要有亏的心理预期（一下亏好多还是有点难受的），保持理性。</li>
+<li>先玩 BTC, ETH, SOL 三大币，小币种再说。</li>
+<li>关注币圈资讯，了解最新动向。
+<ul>
+<li><a href="https://t.me/ChannelPANews" target="_blank" rel="noopener noreferrer">ChannelPANews</a></li>
+</ul>
+</li>
+</ul>
+<h4>现货 vs 合约</h4>
+<p>现货交易中不存在杠杆（其实有，不过杠杆是通过“借币”的形式实现的，而不是真正意义上的杠杆）。相比之下，合约交易允许使用杠杆，使得你可以用较少的资金撬动更大的利益。此外，现货交易的手续费通常是合约交易的两倍左右。因此，我建议主要进行合约交易。</p>
+<p>然而，现货交易在某些情况下具有优势，例如当你需要<strong>加密货币本身</strong>时。比如你可能需要 ETH 来进行质押，或者需要 SOL 来购买 NFT。不过，对于加密货币的新手和投机者，这些选项可以暂时不予考虑。</p>
+<h3>手动交易</h3>
+<p>手动交易的策略一搜一大把，网上太多高人指点了，自行分辨正确与否。一般人用得比较多的有：</p>
+<ul>
+<li>各种均线的组合。比较简单的有 MACD，复杂的有看 6、7 条均线之间的关系的。</li>
+</ul>
+<h4>止盈止损</h4>
+<p>手动交易里，为自己的每一笔订单设置止盈止损是很重要的 <s>（你也不想在呼呼大睡的时候爆仓吧）</s>。具体的止盈止损怎么划定，一般是看压力位 + 经验与手感 + 你想做长线还是短线。前期多投小额试水是有用的，可以积攒很多止盈止损的手感。</p>
+<p>我习惯 OKX 里直接在下单 K 线图上拖出止盈止损线，这样比较直观，也是我说“手感”的由来。</p>
+<h3>策略交易</h3>
+<p>如果你的风险承受能力很低，或者平常没有时间一直盯盘，一定要试试策略交易。一般交易所会提供一些开箱即用的免费策略。</p>
+<p>交易所策略里，我最喜欢的就是合约网格了。合约网格简直是永远的神，用最简单的算法捞到最强的收益/风险比。网格的原理很简单，向上突破则做空，向下跌破则做多，所以只要货币价格在一定范围内振荡，网格策略就一定会赚。</p>
+<ul>
+<li>根据网格的原理，我们需要投价格变动较大的币种。（不过所有加密货币币种变动其实都挺大的）</li>
+<li>OKX 的网格可以选择 <em>做空网格</em>，<em>做多网格</em> 和 <em>中性网格</em>。区别是入场时是否持有空仓/多仓。我一般会先预估持仓时间，然后看过去 x 天的价格区间，当前价格在区间中位就选中性，高位就做空，以此类推。</li>
+</ul>
+<p>玩策略不用太纠结于两三天的得失。我一般是做短期（20days），至少也得等 10 天后再看收益。当然，如果策略的杠杆开比较高（10x-20x），可以经常看看 <em>预估强平价</em>，跟币价波动做个对比，如果感觉怕了就补点保证金。</p>
+<h4>自定义量化策略</h4>
+<p>许多人脑子里可能都有一些未经测试的交易策略，写出并实现这些策略算是幻想家的浪漫。这时候可以考虑自定义策略。</p>
+<p>OKX 里不能自定义策略，我们需要借助第三方平台：<em>OKX - 更多 - 使用 TradingView 交易</em>。<a href="https://cn.tradingview.com/" target="_blank" rel="noopener noreferrer">TradingView</a> 是另一个公司的平台，提供了 pinescript 脚本的编写、运行和一键回测，我们可以编写并测试自己的策略的利率。</p>
+<p>我们也可以通过 webhook 将 TradingView 接入交易所以自动触发交易。不过，webhook 自动交易是要购买订阅的，一个月 $12.95。所以如果没有好策略 + 足够的本金，就没必要开自动交易。</p>
+<h3>炒新币</h3>
+<blockquote>
+<p>Trump 币发行时，我是第一次接触新币，亏了一点钱（后来通过策略赚回来了）。之后又经历了 Jambo 预报价和交易阶段，摸了两次新币。</p>
+</blockquote>
+<p>新币发行有一些规律（本人不保证正确性），就是一阵短期上涨，然后接很长的长跌。所以要么盯着初期做多超短线并且及时离场，要么就在顶点做大空。币的吸金程度不同，峰值来得也有快慢，例如 Trump 用了几个小时，Jambo 只用了几分钟，但是后面的长跌都是一致的。</p>
+<h2>区块链与合约</h2>
+<p>WIP</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>远控方案</title>
       <link>https://absx.pages.dev/articles/control.html</link>
@@ -288,7 +398,6 @@
 <p>只显示部分结果（有进度的）；点击列表可以查看详细内容，包括笔试/面试，公司业务和评价。</p>
 </div>
 
-<p>最后去了哪家，可以猜猜。</p>
 <h3>关于测评</h3>
 <ul>
 <li>携程和小米用的都是 ceping.com 提供的，这玩意非常烂。我见一次就想吐一次。
@@ -1768,292 +1877,6 @@
 <li><a href="https://ayats.org/blog/no-flake-utils/" target="_blank" rel="noopener noreferrer">Why you don't need flake-utils</a></li>
 <li><a href="https://thiscute.world/posts/my-experience-of-nixos/" target="_blank" rel="noopener noreferrer">OS as Code - 我的 NixOS 使用体会 - thiscute</a></li>
 </ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Android</title>
-      <link>https://absx.pages.dev/coding/android.html</link>
-      <guid>https://absx.pages.dev/coding/android.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">Android</source>
-      <description>Android 因为一些契机，开始学习 Android 开发了。 学习 kotlin 请参考 ，这里不多讲。 B 站可以看看 扔物线，跟 python 领域的码农高天比较相似的存在，平常发零碎知识点，讲得也很现代。 Android Studio Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode，...</description>
-      <category>编程</category>
-      <category>应用</category>
-      <pubDate>Sat, 15 Jun 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>因为一些契机，开始学习 Android 开发了。</p>
-<h2>学习</h2>
-<p>kotlin 请参考 <a href="/coding/kotlin.html" target="_blank">kotlin</a>，这里不多讲。</p>
-<p>B 站可以看看 <a href="https://space.bilibili.com/27559447" target="_blank" rel="noopener noreferrer">扔物线</a>，跟 python 领域的码农高天比较相似的存在，平常发零碎知识点，讲得也很现代。</p>
-<h2>Android Studio</h2>
-<p>Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode，然而 Android in vscode 简直寸步难行，甚至 kotlin 在 vscode 上都显得无力，因此我不得不克服对 Android Studio（以下简称 AS） 的恐惧，开始使用这个基于 IDEA 的重量级的 IDE。</p>
-<p>安装显然是装新不装旧，不多讲。代理也要准备好，它在编译项目时会到处拉依赖项，没有代理的话会奇慢无比。</p>
-<h3>使用技巧</h3>
-<ul>
-<li><code>Ctrl + f</code> 只有查找，<code>Ctrl + r</code> 才有替换</li>
-</ul>
-<h3>配置</h3>
-<ol>
-<li>插件：
-<ul>
-<li>禁用一些 Google 家的垃圾</li>
-<li><s>Key Promoter X</s> 不是纯键盘党，不用</li>
-<li>CodeGlance Pro</li>
-<li>Rainbow Brackets</li>
-<li>Material UI Theme，先用 GitHub Dark (Material) 一段时间</li>
-<li>AI 插件
-<ul>
-<li>cody 完全不可用就不多说了</li>
-<li>codiumate 登录认证过不了，还会把 AS 卡死</li>
-<li>最后还是回到了 vscode 时的老朋友 <strong>Codeium</strong>
-<ul>
-<li>关掉 <em>Show Selection Toolbar</em>，这个很烦</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>两个 json 插件：<em>JSON To Kotlin Class</em>，<em>GsonFormat</em></li>
-<li><s>vim 插件：ideavim</s> 太捞了，不用
-<ol>
-<li>这个 vim 插件的所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 都干不了。</li>
-<li>无法与系统剪切板交互。</li>
-</ol>
-</li>
-<li><s>Settings Sync</s> 连登录都登录不了。</li>
-</ul>
-</li>
-<li><em>File - Settings - Tools - Actions on Save</em>，除了 Code Cleanup 全开。</li>
-<li>更改 KeyMap：
-<ul>
-<li>Close Tab: <code>Ctrl + w</code></li>
-<li>Remove Closed Tab：<code>Ctrl + Shift + t</code></li>
-<li>Comment with line Comment: <code>Ctrl + /</code></li>
-<li>Refactor - Rename: <code>F2</code></li>
-<li>Generate Compose Preview：<code>Ctrl + p</code></li>
-</ul>
-</li>
-<li>更多 Inlay Hints：<em>Editor - Inlay Hints</em>，打开除了 <em>Code vision</em> 和 <em>Annotations</em> 的其他所有 Inlay Hints</li>
-<li>proxy: <em>auto-detect proxy settings</em></li>
-</ol>
-<h3>编译运行</h3>
-<p>我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。</p>
-<h3>劝退</h3>
-<p><a href="/gossip/fuckxxx.html#android-studio-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="_blank">Android Studio 有多难用？</a></p>
-<h2>UI</h2>
-<h3>传统 UI</h3>
-<h4>更改按钮反馈</h4>
-<p>一般人肯定希望按钮按下时颜色会加深，能够出现按钮的反馈。加反馈很简单：在 drawable 里加一个 selector，然后在 layout 里给 background 用即可。</p>
-<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> xmlns:android</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"http://schemas.android.com/apk/res/android"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:color</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"?attr/colorPrimary"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:state_pressed</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"true"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:color</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"?attr/colorOnSurface"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">/&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>难的是加的反馈要适应 day 和 night 的主题，所以颜色不能定死。不仅要同时修改 background 和 textColor，而且主题可能会更换颜色，此时按钮的颜色也需要跟随主题变换。</p>
-<p>我折腾许久，最后放弃使用颜色变换，而是使用 alpha，绕开了这个使我为难许久的问题。</p>
-<div class="language-xml line-numbers-mode" data-highlighter="shiki" data-ext="xml" data-title="xml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;?</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">xml</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> version</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"1.0"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> encoding</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"utf-8"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">?&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> xmlns:android</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"http://schemas.android.com/apk/res/android"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:alpha</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"0.25"</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:state_pressed</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"true"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    &lt;</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">item</span><span style="--shiki-light:#6F42C1;--shiki-dark:#D19A66"> android:alpha</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"0.1"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> /&gt;</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;/</span><span style="--shiki-light:#22863A;--shiki-dark:#E06C75">selector</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3>Jetpack Compose</h3>
-<p>这是一种新的 UI 写法，Google 强推的下一代 UI，在 kotlin 写前端，完全抛弃 xml。里面的组件全部是 kotlin 的函数。显然，必需使用 kotlin，不能使用 java。</p>
-<p>Jetpack Compose 是数据驱动的，写法非常简单，我很喜欢。可以类比用 js 对象树模拟 DOM 的 <a href="/coding/html.html#%E5%B7%A5%E5%85%B7" target="_blank">vanjs</a> 等。</p>
-<p>我本来接触的项目是 openppp2，它用的是 java，上不了这个；但是大四上学校有一个实践，刚好是做 Android，那我可就不客气了，开写！</p>
-<h4>学习</h4>
-<p>Jetpack Compose 的资料良莠不齐，比如 b 站上基本没有什么 compose 相关视频，并且有的那一小撮质量也很差。这里列举一些我认可的学习资料：</p>
-<ul>
-<li><a href="https://developer.android.com/courses/pathways/jetpack-compose-for-android-developers-1?hl=zh-cn" target="_blank" rel="noopener noreferrer">Compose 基础知识 - Google</a>：google 家官方的视频还不错</li>
-<li><a href="https://jetpackcompose.cn/docs/" target="_blank" rel="noopener noreferrer">Jetpack Compose 博物馆</a>：中文社区的好文档，介绍了许多组件</li>
-<li><a href="https://leobert-lan.github.io/Compose/index.html" target="_blank" rel="noopener noreferrer">leobert's blog</a>：有一些源码分析</li>
-</ul>
-<p>然后到 2024 年 9 月，GPT-4o 写 Jetpack Compose 的正确率还是比其他的 AI 高不少，建议用 GPT 写。</p>
-<h4>Preview</h4>
-<p>Compose 本来也应该能够像老式 xml 一样 preview 的，只要将 <code>@Compose</code> 函数加上 <code>@Preview</code> 即可。但是我从新建项目开始就无法 preview，点击 Android Studio 右上角的 <em>Split</em> 或者 <em>Design</em> 都<strong>没反应</strong>。找了一下，stackoverflow 说这是 bug，于是我都要去 run 来看效果。</p>
-<p>我从来没有怀疑过是 android studio 新建项目时 <code>build.gradle.kts</code> 的问题。然后某一天我刷到了<a href="https://developer.android.com/develop/ui/compose/tooling?hl=zh-tw#individually" target="_blank" rel="noopener noreferrer">官方文档的这个页面</a>，发现这个好像跟 <code>build.gradle.kts</code> 里默认的不太一样。新建项目时自带的是：</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>implementation(libs.androidx.ui.tooling.preview)</span></span>
-<span class="line"><span>debugImplementation(libs.androidx.ui.tooling)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>而我从文档里抄的是：</p>
-<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" data-title="" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span>implementation(libs.ui.tooling.preview)</span></span>
-<span class="line"><span>debugImplementation(libs.ui.tooling)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>换完后者以后点击 <em>Split</em> 就能 preview 了，生草。</p>
-<h4>remember</h4>
-<p>Composable 中使用 remember 进行状态传递，这让其成为数据驱动的 UI，简单易懂。remember 变量被修改后，绑定的 UI 会自动重绘。</p>
-<p>有几种 remember 的用法：</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 1. mapVisible 是一个 Boolean，这是一个语法糖。可以直接用，方便。</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 缺点是几乎不可能传给其他 Composable，只能在当前 Composable 用。</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> mapVisible </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">by</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> remember</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mutableStateOf</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">true</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) } </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 1</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 2. mapVisible 是一个 MutableState&lt;Boolean&gt;，必须要 `.value` 才能拿到内部值。但是可以到处传。</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> mapVisible </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> remember</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mutableStateOf</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">true</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) }  </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 2</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>icons</h4>
-<p>显然我懒得找 icon 了，而 android material 有一套内置的，非常好用。</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> androidx.compose.material.icons.Icons</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> androidx.compose.material.icons.filled.</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">*</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">NavigationBarItem</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  icon </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    Icon</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      imageVector </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Icons.Default.Home,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      contentDescription </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "home"</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    )</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>至于哪里能找到所有 icon，emmm，第一个当然是看 IDE 补全的提示。 <a href="https://fonts.google.com/icons" target="_blank" rel="noopener noreferrer">Google Fonts</a> 也可以看（<a href="https://slack-chats.kotlinlang.org/t/509025/is-there-list-of-icons-to-browse-for-jetpack-compose" target="_blank" rel="noopener noreferrer">ref</a>），但是 material 包里默认的 icon 数量相当少，只能看一部分。那么如何拿到更多的 icons 呢？答：可以用 <a href="https://stackoverflow.com/a/78616305" target="_blank" rel="noopener noreferrer">libs.androidx.material.icons.extended</a>，这下就全了。（记得要同步依赖）</p>
-<h4>获取宽度</h4>
-<p>我们可能需要手动获取某个 view 内部的宽度，以进行一些其他计算。这一点 jetpack compose 做的还是有待提高，现在还是有一点麻烦的：</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> density </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> LocalDensity.current </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 获取当前的 Density 实例</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> pxToDp </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { px: </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">Int</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> -&gt; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">with</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">density</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) { px.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">toDp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">() } }</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">Row</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  modifier </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> modifier</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">onGloballyPositioned</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { coordinates </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">-&gt;</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">      // 获取 Row 的宽度</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      widthDp </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> pxToDp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(coordinates.size.width)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) {</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">  // 然后就能把 `widthDp` 拿来用了</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4>调用 Fragment</h4>
-<p>有一个 <code>AndroidFragment</code> 能直接在 Composable 内渲染 Fragment。</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> RT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> : </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">Fragment</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">() {}</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">@Composable</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">fun</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> Test</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(){</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  val</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> fragmentState </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> rememberFragmentState</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">()</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  AndroidFragment</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">RT</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    modifier </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Modifier.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">fillMaxSize</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(),</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    fragmentState </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> fragmentState</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  )</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>局限性还是很大的，比如你的 <code>AndroidFragment</code> 必须在 <code>FragmentActivity()</code> 上下文使用，<code>class RT : Fragment()</code> 必须拥有空构造函数等。</p>
-<h4>劝退</h4>
-<p>Jetpack Compose 的思想很好，开发效率很高，但是写起来还是有不少问题的。</p>
-<p>最大的问题还是<strong>各种场景下对 Activity 的依赖</strong>。Jetpack Compose 摆脱了界面对 Activity 的依赖，但是很多时候你的模块没有 Activity 还不行。然后 Jetpack Compose 对 Fragment 和 Activity 的耦合也不太行，导致开发效率都被踩坑踩完了。关键是这些 Activity 的问题还都是运行时崩溃，编译时根本不会提醒。Java 系的梦幻报错再赢一次。</p>
-<p>还有支持 Compose 的库还是不够稳定，例如 <a href="https://github.com/googlemaps/android-maps-compose/" target="_blank" rel="noopener noreferrer">Google Maps Compose</a>，我刚入门就踩了个这玩意两年前的 <a href="https://github.com/googlemaps/android-maps-compose/issues/105" target="_blank" rel="noopener noreferrer">open issue</a>。</p>
-<p>还有各种稀奇古怪的上下文与作用域规定，写得多了总会遇到。最简单的就是 <code>remember { mutableStateOf() }</code> 必须在 <code>@Composable</code> 内使用，这些中间状态如果还要分发到其他函数就必须使用</p>
-<h3>我的模板</h3>
-<p>一些高度泛用，加速开发的模板（组件）代码。</p>
-<h4>DropdownMenu on Enum</h4>
-<details class="hint-container details"><summary>从任意 enum class 创建 DropdownMenu</summary>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">@Composable</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">fun</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> &lt;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">T</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> : </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">Enum</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">T</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;&gt; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">EnumDropdownMenu</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  enumClass: </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">Class</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">T</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">&gt;,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  selectedEnum: </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">T</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  onEnumSelected: (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">T</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) -&gt; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">Unit</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  var</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> expanded </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">by</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> remember</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mutableStateOf</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">false</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">) } </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 控制菜单展开状态</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  Box</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    modifier </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> Modifier</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      .</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">wrapContentSize</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(Alignment.TopStart)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  ) {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    TextButton</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(onClick </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { expanded </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> true</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }) {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">      Text</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(text </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> selectedEnum.name) </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 显示当前选中的 Enum 名称</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    }</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    DropdownMenu</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      expanded </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> expanded,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      onDismissRequest </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { expanded </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> false</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    ) {</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">      // 使用 enumClass 获取所有枚举值</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      enumClass.enumConstants?.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">forEach</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { enumValue </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">-&gt;</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">        DropdownMenuItem</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(text </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">Text</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(text </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> enumValue.name) }, onClick </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">          onEnumSelected</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(enumValue) </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 选择逻辑</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">          expanded </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> false</span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> // 关闭菜单</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">        })</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用方法：</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">@Preview</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B">@Composable</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">fun</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> MyScreen</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">() {</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">  var</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> selectedEnum </span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">by</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF"> remember</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">mutableStateOf</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(MyEnum.Option1) } </span><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 默认选中 Option1</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  Column</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    Text</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(text </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> "Selected: </span><span style="--shiki-light:#032F62;--shiki-dark:#C678DD">${</span><span style="--shiki-light:#032F62;--shiki-dark:#ABB2BF">selectedEnum.name</span><span style="--shiki-light:#032F62;--shiki-dark:#C678DD">}</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">    // 传递 MyEnum::class.java 来指定枚举类</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">    EnumDropdownMenu</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      enumClass </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> MyEnum::</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">class</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">.java,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      selectedEnum </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> selectedEnum,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">      onEnumSelected </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> { selectedEnum </span><span style="--shiki-light:#D73A49;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> it }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">    )</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">enum</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#E5C07B"> MyEnum</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  Option1,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  Option2,</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">  Option3</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
-<h2>Log</h2>
-<p>打 log 也是很重要的，android 一般在 Logcat 里打 log。</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">import</span><span style="--shiki-light:#6F42C1;--shiki-dark:#ABB2BF"> android.util.Log</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">Log.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">w</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"Mytag"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"message"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>然后在 Logcat 窗口 filter 里写 <code>tag:Mytag</code> 即可。</p>
-<p>还有一个小插曲，我之前明明打了 log 但是在 logcat 里怎么也看不到，莫名其妙，气死了。我直接在 Text 里打 log，结果发现 Text 里的字符也没变。一看，编译目标是那个 Composable Preview，不是 app。。。</p>
-<h2>Test</h2>
-<p>Android 一共有两种测试，androidTest 和 test (unittest)。两个测试中使用的依赖要分别引入：</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">testImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"test"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">androidTestImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"test"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">))</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>Android 虽然有单元测试，但是并不写在当前的代码里。这一点跟 pytest 等是一样的，但是我并不喜欢。而且还容易爆 <code>java.lang.NoClassDefFoundError</code>，原因不明，我至今未解决。</p>
-<p>新创建的空白项目中，Android studio 给了一个 Unittest 示例，照着抄就完了，非常简单。至于快速添加 test：右击 class，在 <em>Generate</em> 里选 <em>Test</em>，然后 <em>OK</em>，记得把 <em>show only existing source roots</em> 关了就行。</p>
-<p>在使用 assertEquals 中<a href="https://t.me/withabsolutex/1954" target="_blank" rel="noopener noreferrer">我被坑了</a>，请务必用 <code>kotlin.test.assertEquals</code>。（把 message 放在前面的设计简直不是人。）</p>
-<h2>Gradle</h2>
-<p>Gradle 是 android 也是 java 的广泛使用的包管理器，但是说它烂也是真的烂。</p>
-<ul>
-<li>这玩意是 java 写的，报错实在是不敢恭维。</li>
-<li>您猜猜 build.gradle 有多少种版本？即使在 kotlin DSL 的 <code>build.gradle.kts</code> 里都有多种不同的写法，例如 <code>ksp("androidx.room:room-compiler:2.5.0")</code> 和 <code>ksp(libs.androidx.room.room.compiler2)</code>，它们的区别在哪？</li>
-<li>您猜猜 <code>androidx.room.room.compiler</code>, <code>androidx.room.room.compiler2</code>, <code>androidx.room.compiler</code>, <code>room.compiler</code> 哪一个才是正确的依赖？</li>
-</ul>
-<p>20240906 我因为引入 Room 依赖的原因被 gradle 折磨了一个上午，最终被<a href="https://stackoverflow.com/questions/77665284" target="_blank" rel="noopener noreferrer">一篇 stackoverflow 回答</a>点拨了一下，终于看懂了 <code>build.gradle.kts</code> 是怎么工作的了。于是在此处写下记录。</p>
-<p>一个 Android 项目的 Gradle Scripts 下有几个重要的文件，一个是大家都会用的 Module app 层的 <code>build.gradle.kts</code>，还有一个是顶层 Project 层的 <code>build.gradle.kts</code>。然而这都不是最重要的，最重要的其实是 <code>libs.versions.toml</code>，这也是两个 <code>build.gradle.kts</code> 的根基。</p>
-<p>我们平时在 <code>build.gradle.kts</code> 里添加依赖，gradle sync 时就会自动把需要的东西 resolve 进 <code>libs.versions.toml</code>。然后这些 resolve 方式非常脏，会把 <code>libs.versions.toml</code> 弄得一团糟，比如 resolve Room 时堆了一堆 <em>room-common</em>，<em>room-compiler</em> 等等，然后这些 room package 的 version 也都是重复多余的；另一个例子是 ksp 引入时它的 version 跟 kotlin version 也不匹配，导致 gradle build 时直接爆炸。</p>
-<p>所以直接看 <code>libs.versions.toml</code>，<code>[versions]</code> 提供了 name 到 versions 的一个 alias，这个 alias 在后续每个条目的 <code>version.ref</code> 里使用。<code>[libraries]</code> 就是 APP 层 <code>build.gradle.kts</code> 的 <code>libs.xxx</code> 引用的玩意，<code>[plugins]</code> 就是两个 <code>build.gradle.kts</code> 里 plugins 块里引用的玩意，这样一来就清晰很多了。</p>
-<p>因此回到 Room 配置的问题，在 2024 年的 Android Studio + Kotlin 下，我们不能像 sb <a href="https://developer.android.com/training/data-storage/room?hl=zh-tw" target="_blank" rel="noopener noreferrer">官方文档</a>那样配置，而是应该：</p>
-<ol>
-<li>
-<p>编辑 <code>libs.versions.toml</code>，</p>
-<div class="language-toml line-numbers-mode" data-highlighter="shiki" data-ext="toml" data-title="toml" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">versions</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">kotlin</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"2.0.20"</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"2.6.1"</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ksp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"2.0.20-1.0.25"</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">libraries</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-common</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-common"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-runtime</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-runtime"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-compiler</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-compiler"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-testing</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-testing"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">room-ktx</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">group</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"androidx.room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">name</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room-ktx"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"room"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span>
-<span class="line"></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">plugins</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">]</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">ksp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = { </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">id</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"com.google.devtools.ksp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">version.ref</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#032F62;--shiki-dark:#98C379">"ksp"</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> }</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样写的依据是：</p>
-<ol>
-<li>所有 room 相关的包必须是同版本，无需多个 versions</li>
-<li>ksp 版本必须和 kotlin 版本一致</li>
-</ol>
-</li>
-<li>
-<p>然后就可以愉快地引用了。</p>
-<div class="language-kotlin line-numbers-mode" data-highlighter="shiki" data-ext="kotlin" data-title="kotlin" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// 顶层</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">plugins</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  alias</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.plugins.ksp) apply </span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66">false</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#7F848E;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">// APP 层</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">plugins</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  alias</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.plugins.ksp)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">dependencies</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> {</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  implementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.common)</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  implementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.runtime)</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  annotationProcessor</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.compiler)</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  ksp</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.compiler)</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  implementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.ktx)</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">  testImplementation</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">(libs.room.testing)</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
-</ol>
-<h2>权限</h2>
-<p>放眼 Android，最复杂，坑最多的地方莫归于权限了。不同的 API 版本有不同的权限处理方案，这些方案杂糅在一起，网上一大堆教程和 GPT 几乎全部作废。我几度被权限折磨得死去活来，并最终放弃 Android 开发。</p>
-<p>我刚开始写 Android 时还想着抽象一个 class PermissionManager 解决所有权限问题。显然我想得太简单了。各种需要缓存的中间对象，各种 Permission 需要的上下文都不同，这样只是死路一条。</p>
 ]]></content:encoded>
     </item>
   </channel>
