@@ -606,6 +606,8 @@ _他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
 
 [^2]: [review 还挺严格的](https://t.me/withabsolutex/1441)，但是 member 说话又好听
 
+然后 [tui-realm](https://github.com/veeso/tui-realm/) 是基于其做的一个高层 TUI 框架，或许可以一试。
+
 ## 嵌入向量数据库
 
 我需要 rust 侧的轻量嵌入式向量数据库解决方案，要求是 10,000,000 个向量内查最近邻。（每个向量还有附带额外信息）
