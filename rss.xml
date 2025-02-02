@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 01 Feb 2025 07:46:25 GMT</pubDate>
-    <lastBuildDate>Sat, 01 Feb 2025 07:46:25 GMT</lastBuildDate>
+    <pubDate>Sun, 02 Feb 2025 16:41:20 GMT</pubDate>
+    <lastBuildDate>Sun, 02 Feb 2025 16:41:20 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>教程</category>
@@ -65,6 +65,8 @@
 </li>
 <li>USDT 是最广泛使用的稳定币，1:1 兑换美元，常常用来做加密货币交易的中间币种与合约本位。USDC 是另一家机构的稳定币，监管更好，安全性更高，但是推出时间靠后，市场流动性较低。</li>
 <li>加密货币价值来源于共识。因此不要投山寨币，因为他们的共识不够稳定，风险太大。包括感兴趣的话可以了解一下 Luna “算法稳定币”的暴雷历史。</li>
+<li>加密货币交易是零和博弈，本质与赌博相近。千万不要犯了赌徒的忌讳。</li>
+<li>股市和加密货币的相关性：正相关，如果加密货币投资者受到股市惊吓，也会选择抛售。例如 Deepseek 爆火当天。</li>
 </ul>
 <h3>交易所</h3>
 <p>对于买卖加密货币的普通玩家来说，使用中心化交易所是必须的。交易所在中国一般需要使用<a href="/articles/proxy/" target="_blank">科学上网</a>访问，这是没办法的。</p>
@@ -117,7 +119,7 @@
 <p>交易所策略里，我最喜欢的就是合约网格了。合约网格简直是永远的神，用最简单的算法捞到最强的收益/风险比。网格的原理很简单，向上突破则做空，向下跌破则做多，所以只要货币价格在一定范围内振荡，网格策略就一定会赚。</p>
 <ul>
 <li>根据网格的原理，我们需要投价格变动较大的币种。（不过所有加密货币币种变动其实都挺大的）</li>
-<li>OKX 的网格可以选择 <em>做空网格</em>，<em>做多网格</em> 和 <em>中性网格</em>。区别是入场时是否持有空仓/多仓。我一般会先预估持仓时间，然后看过去 x 天的价格区间，当前价格在区间中位就选中性，高位就做空，以此类推。</li>
+<li>OKX 的网格可以选择 <em>做空网格</em>，<em>做多网格</em> 和 <em>中性网格</em>。区别是入场时是否持有空仓/多仓。一般来说选中性即可，做多和做空带有明确的倾向性，具有一定风险。</li>
 <li>网格碰上小币种说不定会亏，但是做三大币种几乎是稳赚。</li>
 </ul>
 <p>由于我一般做短期（20days），我的网格数量与区间一般设为日 k 线穿过挂单线 20 次以上，一日套利 10 次以上的值。玩策略不用太纠结于两三天的得失。至少也得等 10 天后再看收益。当然，如果策略的杠杆开比较高（10x-20x），可以经常看看 <em>预估强平价</em>，跟币价波动做个对比，如果感觉怕了就补点保证金。如果做小币种网格，还可以把等差网格换成等比网格，进一步降低风险。</p>
@@ -133,6 +135,11 @@
 <p>炒新币有着较高的风险；关于新币资质，能上交易所的新币一般都不会太差，不像 pump.fun 的土狗 meme 币，那个<a href="https://www.panewslab.com/zh/sqarticledetails/8sih61h5.html" target="_blank" rel="noopener noreferrer">纯纯庞氏骗局</a>，千万别碰。</p>
 <p>新币发行有一些规律（本人不保证正确性），就是一阵短期上涨，然后接很长的长跌。所以要么盯着初期做多超短线并且及时离场，要么就在顶点做大空。币的吸金程度不同，峰值来得也有快慢，例如 Trump 用了几个小时，Jambo 只用了几分钟，但是后面的长跌都是一致的。</p>
 <h2>区块链与合约</h2>
+<p>接下来的内容就不是关于如何赚钱的了，而是关于加密货币底层原理与技术的讨论。不过我也是新手，难免遇到错漏，还望指正。</p>
+<h3>学习资料</h3>
+<ul>
+<li><a href="https://yeasy.gitbook.io/blockchain_guide" target="_blank" rel="noopener noreferrer">yeasy/区块链技术指南</a></li>
+</ul>
 ]]></content:encoded>
     </item>
     <item>
