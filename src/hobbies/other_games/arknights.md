@@ -23,3 +23,14 @@ tag:
 从开始入坑到 2021 年末都极度沉迷。可在[回忆录](../../hide/memories.md#电脑室)内窥得一丝端倪 <span class="heimu" title="你知道的太多了">明日方舟所带给我的，也只剩下这些回忆了。</span> 2022 基本停止推进主线，放缓推进活动。2022.05 左右开始一周一登，仅打剿灭，并于 20220615 卸载，标志正式退坑。
 
 游玩方式 99.9% 为电脑模拟器（雷电模拟器 -> MuMu 模拟器 -> Bluestacks 蓝叠），并使用挂机脚本应对普通关卡、长关卡、剿灭等。仅在外情况使用手机游玩。
+
+## 回坑
+
+20250202：由于 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights/) 的走红，外加我因为其他事情有必要在 Windows 上安装一个 Android 模拟器，就顺手下载了方舟拿来挂机。
+
+1.9G 的安装包后还需要联网下载 6G 资源，啥时候膨胀得这么大了。。。。
+
+## 工具
+
+- [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights/)：一键挂机
+- [明日方舟一图流](https://ark.yituliu.cn/)：如何刷材料，如何逛商店

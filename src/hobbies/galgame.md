@@ -52,7 +52,7 @@ tag:
 
 - 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
-- 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://www.616.ro/ty.html)
+- 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://t.me/Tyranor)
   - krkr 已经很久没有维护了；Tyranor2 可以运行 krkr 的游戏，因此可以考虑直接抛弃 krkr。
 
 ### 翻译器
@@ -112,6 +112,7 @@ LunaTranslator 使用心得：
 - 柚子社的游戏，感觉太善良了，正派反派都是…
 - 打完两招就进个人线了，反派来搞笑的吧，主线还不如 PARQUET 剧情呢，至少没有直接告诉 last boss。总之就是剧情比之前更无脑了。
 - 星河辉耶线，我的兽耳！怎么没有下文了…
+- 天音：好久不玩仙女棒了… 无意之间我已经带上了黄色眼镜。
 
 <details><summary>翻译一般。</summary>
 
@@ -900,6 +901,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 - りりぃあんじぇ
 - 地雷系魔法少女サクラ
 - 幻想牢獄
+- 播种之谣
 
 ## 一言
 

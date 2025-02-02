@@ -115,6 +115,7 @@ tag:
 - <https://bgp.tools/>，ASN 信息
 - <https://ip.skk.moe/>，群友搭的查自己 IP 的面板
 - [网络面板](https://net.ljxnet.cn/)流量消耗器
+- [Live Proxy and VPN Detection](https://proxy.incolumitas.com/proxy_detect.html)
 
 ### SSH
 
