@@ -688,6 +688,8 @@ const data = [
   { id: "(ex)", aScore: 7.8, bScore: 4.5, info: "#百合 #请问您今天要来点兔子吗", otherlink: "https://exhentai.org/g/3210221/03f7077671/", bak: "https://telegra.ph/C105-ウサギキャンディー-タク道-フユチノ仲良しごっこ-01-26" },
   { id: "(ex)", aScore: 3.5, bScore: 7.2, info: "#触手 #调教 元魔法少女、調教済み", otherlink: "https://exhentai.org/g/3209356/22dd25f59f/", bak: "https://telegra.ph/Im-moralist-柳原ミツキきー子-肉棒魔羅ノ進-元魔法少女調教済み-オリジナル-中国翻訳-个人渣翻-01-25" },
   { id: "549696", aScore: 9.2, bScore: 4.5, info: "#百合", bak: "https://telegra.ph/あめうさぎ-飴玉コン-後輩ちゃんの誘惑メイドご奉仕編-中国翻訳-DL版-01-29" },
+  { id: "(ex)", aScore: 8, bScore: 2.6, info: "#fate #loli #羊羽忍", otherlink: "https://exhentai.org/g/3224615/254cf3dc0c/", bak: "https://telegra.ph/C105-Part-K-羊羽忍-逢い引きしたいメリュジーヌ-FateGrand-Order-中国翻訳-02-05" },
+  { id: "553939", aScore: 9, bScore: 8.1, info: "#3P #调教 #兄妹 屁穴瘾堕", order: 2, bak: "https://telegra.ph/nemuke-似せ-アナキメ2-中国翻訳-02-04" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
