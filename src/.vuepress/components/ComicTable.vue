@@ -41,7 +41,7 @@ import { TwoScoreCompare } from "../definition";
 const data = [
   { id: "429153", aScore: 9.4, bScore: 4, info: "今日から悪い子。続" },
   { id: "466069", aScore: 9.6, bScore: 4, info: "今日から悪い子。", bak: "https://telegra.ph/田屋沼屋-たぬま-今日から悪い子-中国翻訳-無修正-DL版-08-01" },
-  { id: "344642", aScore: 5, bScore: 7, info: "#调教", bak: "https://telegra.ph/caburibbon-caburi-sssMONO-Chinese-脸肿汉化组-12-22" },
+  { id: "554328", aScore: 6, bScore: 8, info: "#调教 #催眠 #caburibbon s.s.s.MONO", bak: "https://telegra.ph/caburibbon-caburi-sssMONO-Chinese-脸肿汉化组無修loli重嵌无修正80P-02-06" },
   { id: "436994", aScore: 9.5, bScore: 5.7, info: "#纯爱" },
   { id: "302512", aScore: 6.7, bScore: 2, info: "#百合" },
   { id: "468339", aScore: 1, bScore: 8.3, info: "#凌辱" },
@@ -679,8 +679,8 @@ const data = [
   { id: "551221", aScore: 8, bScore: 8.7, info: "#蔚蓝档案 #loli #佐伯ソラ", bak: "https://telegra.ph/C105-ぽよぽよスカイ-佐伯ソラ-クジラはもう夢を見ない-ブルーアーカイブ-中国翻訳-01-21" },
   { id: "551404", aScore: 7.8, bScore: 9.5, info: "#肛交 #催眠 #兄妹 #3P #调教", bak: "https://telegra.ph/nemuke-似せ-アナキメ1-中国翻訳-01-22" },
   { id: "551472", aScore: 5, bScore: 8.2, info: "#触手 #战败", bak: "https://telegra.ph/C103-俎上の空欄-有魚-蝕監の堕ち手-1-2-灼眼のシャナ-中国翻訳-01-23" },
-  { id: "527573", aScore: 7.4, bScore: 5.5, order: 1, info: "#cos #青梅竹马 #教室" },
-  { id: "551505", aScore: 7.9, bScore: 6.4, order: 2, info: "#cos", bak: "https://telegra.ph/Grove-Grow-小森くづゆ-コスプレ部裏活動日誌2-中国翻訳-DL版-01-22-2" },
+  { id: "527573", aScore: 7.4, bScore: 5.5, order: 1, info: "#cos #青梅竹马 #教室 コスプレ部裏活動日誌" },
+  { id: "551505", aScore: 7.9, bScore: 6.4, order: 2, info: "#cos コスプレ部裏活動日誌", bak: "https://telegra.ph/Grove-Grow-小森くづゆ-コスプレ部裏活動日誌2-中国翻訳-DL版-01-22-2" },
   { id: "551980", aScore: 8.2, bScore: 5.2, info: "#星穹铁道", bak: "https://telegra.ph/山辺製菓-怨面狐-青雀とナイショのセックス休暇-崩壊スターレイル-中国翻訳-DL版-01-26" },
   { id: "551601", aScore: 7, bScore: 6.3, info: "#蔚蓝档案 #乳头穿孔 #公共场合", bak: "https://telegra.ph/C105-くれり亭-くれりて-秤アツコロイヤルTKBトレーニング-ブルーアーカイブ-中国翻訳-01-19" },
   { id: "551037", aScore: 6.5, bScore: 7.1, info: "#东方 #无反应", bak: "https://telegra.ph/例大祭20-サルパッチョ-わいら-半霊ちゃん-東方Project-中国翻訳-01-26-2" },
@@ -690,6 +690,11 @@ const data = [
   { id: "549696", aScore: 9.2, bScore: 4.5, info: "#百合", bak: "https://telegra.ph/あめうさぎ-飴玉コン-後輩ちゃんの誘惑メイドご奉仕編-中国翻訳-DL版-01-29" },
   { id: "(ex)", aScore: 8, bScore: 2.6, info: "#fate #loli #羊羽忍", otherlink: "https://exhentai.org/g/3224615/254cf3dc0c/", bak: "https://telegra.ph/C105-Part-K-羊羽忍-逢い引きしたいメリュジーヌ-FateGrand-Order-中国翻訳-02-05" },
   { id: "553939", aScore: 9, bScore: 8.1, info: "#3P #调教 #兄妹 屁穴瘾堕", order: 2, bak: "https://telegra.ph/nemuke-似せ-アナキメ2-中国翻訳-02-04" },
+  { id: "427190", aScore: 6, bScore: 6.3, info: "#睡x #全彩 #冒险 #束缚 #巨乳" },
+  { id: "554128", aScore: 3.6, bScore: 9, order: 2, info: "#脑洞 #VR世界 #触手 #分身 #别当欧尼酱了！", bak: "https://telegra.ph/CHARAN-PORAN-猫乃またたび-どうせVRなんだからまひろちゃんを滅茶苦茶にしちゃってもイイよねっ-お兄ちゃんはおしまい-中国翻訳-DL版-02-05" },
+  { id: "553066", aScore: 5.8, bScore: 7.7, order: 1, info: "#母子 #精灵 #睡x", bak: "https://telegra.ph/縦縞キタ-ちっちゃなエルフママ-低身長エルフと禁断の母子生活-第1話-サイベリアplus-Vol-26-中国翻訳-01-31" },
+  { id: "553000", aScore: 6.7, bScore: 9, info: "#附身 #基友 #玩偶 #角色扮演", bak: "https://telegra.ph/猫男爵TSドールりりかちゃん中国翻訳-01-31" },
+  { id: "553501", aScore: 7.8, bScore: 9.8, info: "#蔚蓝档案 #SM #窒息", bak: "https://e-hentai.org/g/3220587/acc36a70da/" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

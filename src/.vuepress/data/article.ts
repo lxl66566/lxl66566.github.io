@@ -64,6 +64,7 @@ const links: ArticleCellBoxType[] = [
       { text: "输入法", url: "input_method" },
       { text: "RAM Disk 横评与使用", url: "ramdisk" },
       { text: "Android 手写笔记软件横评", url: "note" },
+      { text: "Android 音乐播放器横评", url: "android_player" },
       { text: "反向代理", url: "reverse_proxy" },
       { text: "音频转文字", url: "voice2text" },
       { text: "OCR", url: "ocr" },
