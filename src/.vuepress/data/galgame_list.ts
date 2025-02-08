@@ -18,9 +18,16 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "魔法使之夜",
-    playing_status: PlayingStatus.PLAYING,
+    all_ages: true,
+    use_time: "11h20min",
     duration: {
       start: "2025-01-17",
+      end: "2025-02-08",
+    },
+    score: {
+      story: 6,
+      visual: 9.5,
+      program: 6.5,
     },
   },
   {
