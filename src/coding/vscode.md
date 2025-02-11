@@ -187,6 +187,7 @@ cursor 基于 vscode，但是有些地方还是做了些修改，非常卡手。
 1. 恢复左侧纵向图标栏：`"workbench.activityBar.orientation": "vertical"` ([src](https://www.maemo.cc/2024/10/23/edit-cursor-activitybar-orientation.html))
 2. 终端允许 Ctrl + V 粘贴：`"terminal.integrated.sendKeybindingsToShell": false` （vscode 默认允许终端粘贴）
 3. 打开右侧 minimap：`"editor.minimap.enabled": true`
+4. 由于 cursor update [问题很多](https://github.com/getcursor/cursor/issues/2670)，需要设置 `"update.enableWindowsBackgroundUpdates": false` 关闭后台自动更新。
 
 ### 无限续
 

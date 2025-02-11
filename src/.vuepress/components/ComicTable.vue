@@ -695,6 +695,10 @@ const data = [
   { id: "553066", aScore: 5.8, bScore: 7.7, order: 1, info: "#母子 #精灵 #睡x", bak: "https://telegra.ph/縦縞キタ-ちっちゃなエルフママ-低身長エルフと禁断の母子生活-第1話-サイベリアplus-Vol-26-中国翻訳-01-31" },
   { id: "553000", aScore: 6.7, bScore: 9, info: "#附身 #基友 #玩偶 #角色扮演", bak: "https://telegra.ph/猫男爵TSドールりりかちゃん中国翻訳-01-31" },
   { id: "553501", aScore: 7.8, bScore: 9.8, info: "#蔚蓝档案 #SM #窒息", bak: "https://e-hentai.org/g/3220587/acc36a70da/" },
+  { id: "549101", aScore: 8.5, bScore: 7.5, info: "#NTR #调教 #教室" },
+  { id: "554446", aScore: 6.8, bScore: 3.5, info: "#蔚蓝档案 #巨乳", bak: "https://telegra.ph/ehentai-3227666-6cd4c91a91-02-09" },
+  { id: "439083", aScore: 6.7, bScore: 8.5, info: "#性转 #异世界 #纯爱" },
+  { id: "550260", aScore: 8.9, bScore: 7.8, info: "#无知 #ほうき星 #巨乳 #精灵 絶対服従 妊活" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
