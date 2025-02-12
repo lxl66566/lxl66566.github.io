@@ -28,6 +28,7 @@ category:
   - 面向 user 的文档还行，但是面向 developer 的…一点没有。
 - 自创的 DSL 比较折磨（这是一个连标准输出都没有的弱类型语言([src](https://github.com/typst/typst/issues/1669))，debug 很容易红温）
   - 要我说，还不如直接用 rust（但是这样二进制大小也压不下来）
+  - 网上资料很少，在 2025 年还是很难用 AI 生成正确的代码。
 
 ## 安装与配置
 
@@ -88,9 +89,13 @@ typst compile --format svg xxx.typ '{n}.svg'  # 导出为 svg 格式
 
 ### [数组](https://typst.app/docs/reference/foundations/array/)
 
-typst 没有 `list` 类型，只有 `array`。
+typst 数组是 `array`，没有 `list` 类型。
 
-`("12")` 这样其实还是 string 类型，如果要数组类型需要 `("12",)`
+`("12")` 这样其实还是 string 类型，如果要数组类型需要 `("12",)`。（之前被坑过一次，现在 `("12")` 会被 Tinymist 格式化成原始 `"12"`，还是很不错的）
+
+### 字符串
+
+字符串的 slice，len 方法全部是 unicode 意义下的。如果需要处理字符意义下的长度与切片（Rust: `.chars()`），需要用 `.codepoints()` 将其转为字符数组。
 
 ## 字体字号
 
@@ -329,9 +334,9 @@ console.log("1")
 
 ### 伪代码
 
-目前在用[algorithmic](https://github.com/typst/packages/tree/main/packages/preview/algorithmic/0.1.0)，并且修了个 bug。
+用过[algorithmic](https://github.com/typst/packages/tree/main/packages/preview/algorithmic/0.1.0)，并且修了个 bug。然而一年了，作者不合 pr，没办法。
 
-不过目前看来，还是[lovelace](https://github.com/typst/packages/tree/main/packages/preview/lovelace/0.1.0)更泛用一点。
+所以更推荐用[lovelace](https://github.com/typst/packages/tree/main/packages/preview/lovelace/0.1.0)，更泛用一点。
 
 ### 目录
 
@@ -388,4 +393,4 @@ show heading: it => {
 }
 ```
 
-这个方法在上一行是 figure 啊，raw 啊什么的时候还是无法缩进，如果手动 `linebreak()` 的话又多出了不必要的间距，太丑了。
+这个方法在上一行是 figure 啊，raw 啊什么的时候还是无法缩进，又得手动改 show rules。

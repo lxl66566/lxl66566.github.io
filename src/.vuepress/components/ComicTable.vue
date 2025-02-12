@@ -699,6 +699,7 @@ const data = [
   { id: "554446", aScore: 6.8, bScore: 3.5, info: "#蔚蓝档案 #巨乳", bak: "https://telegra.ph/ehentai-3227666-6cd4c91a91-02-09" },
   { id: "439083", aScore: 6.7, bScore: 8.5, info: "#性转 #异世界 #纯爱" },
   { id: "550260", aScore: 8.9, bScore: 7.8, info: "#无知 #ほうき星 #巨乳 #精灵 絶対服従 妊活" },
+  { id: "(eh)", aScore: 4, bScore: 8.5, info: "#兄妹 #作弊道具", otherlink: "https://e-hentai.org/g/3230870/083d419eb4/", bak: "https://telegra.ph/pz-x俺のARメガネは義妹の様々な数値が見える-02-10" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
