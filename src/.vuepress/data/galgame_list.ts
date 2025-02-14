@@ -3,6 +3,19 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "禁亲圣交苏菈",
+    use_time: "16min",
+    duration: {
+      start: "2025-02-14",
+      end: "2025-02-14",
+    },
+    score: {
+      story: 0,
+      visual: 4.4,
+      program: 1.3,
+    },
+  },
+  {
     name: "天使☆嚣嚣RE-BOOT!",
     playing_status: PlayingStatus.PLAYING,
     duration: {

@@ -700,6 +700,9 @@ const data = [
   { id: "439083", aScore: 6.7, bScore: 8.5, info: "#性转 #异世界 #纯爱" },
   { id: "550260", aScore: 8.9, bScore: 7.8, info: "#无知 #ほうき星 #巨乳 #精灵 絶対服従 妊活" },
   { id: "(eh)", aScore: 4, bScore: 8.5, info: "#兄妹 #作弊道具", otherlink: "https://e-hentai.org/g/3230870/083d419eb4/", bak: "https://telegra.ph/pz-x俺のARメガネは義妹の様々な数値が見える-02-10" },
+  { id: "546988", aScore: 6.1, bScore: 7.3, info: "#寄养 #堕落" },
+  { id: "421522", aScore: 6.3, bScore: 4, info: "#催眠 #4P" },
+  { id: "555552", aScore: 7.9, bScore: 6.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C105-Damier-Cookie-惟千茉鶴-甘いステージの誘惑--アイドルホシノの禁断ヒミツ-ブルーアーカイブ-中国翻訳-02-12" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
