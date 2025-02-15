@@ -703,6 +703,7 @@ const data = [
   { id: "546988", aScore: 6.1, bScore: 7.3, info: "#寄养 #堕落" },
   { id: "421522", aScore: 6.3, bScore: 4, info: "#催眠 #4P" },
   { id: "555552", aScore: 7.9, bScore: 6.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C105-Damier-Cookie-惟千茉鶴-甘いステージの誘惑--アイドルホシノの禁断ヒミツ-ブルーアーカイブ-中国翻訳-02-12" },
+  { id: "556195", aScore: 9.6, bScore: 3.3, info: "#蔚蓝档案 #3P #图集 #全彩", bak: "https://telegra.ph/C105-ミルクセーキ工房-ミルクセーキ-先生の抜き打ち訪問-ブルーアーカイブ-中国翻訳-02-14" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

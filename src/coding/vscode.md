@@ -192,7 +192,11 @@ cursor 基于 vscode，但是有些地方还是做了些修改，非常卡手。
 
 ### 无限续
 
-Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。
+Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。有一些需要注意的点：
+
+1. 2025.02 之后，cursor 无法再通过清除 machine id 的方式无限续，猜测它用了一些其他方法进行追踪。因此需要下载历史版本：<https://downloader.cursor.sh/builds/250103fqxdt5u9z/windows/installer/x64>，并关闭自动更新。
+2. cursor 清除 ID 的脚本，网上有很多（讽刺的是基本都是 Cursor 写的），例如 [cursor-reset](https://github.com/ultrasev/cursor-reset)，cursor-mate （闭源）等等。
+3. 邮箱无限续可以用 2925 无限邮。
 
 ## 其他评价
 
