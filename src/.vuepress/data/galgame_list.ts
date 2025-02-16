@@ -3,6 +3,13 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "廢村少女~誘惑迷離的籠之鄉~",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-02-16",
+    },
+  },
+  {
     name: "禁亲圣交苏菈",
     use_time: "16min",
     duration: {
@@ -20,6 +27,11 @@ const original_list: GalItemInputType[] = [
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-01-27",
+    },
+    score: {
+      story: 4.6,
+      visual: 9.6,
+      program: 9.2,
     },
   },
   {
@@ -39,7 +51,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 6,
-      visual: 9.5,
+      visual: 9.3,
       program: 6.5,
     },
   },

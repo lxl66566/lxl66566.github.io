@@ -188,6 +188,7 @@ cursor 基于 vscode，但是有些地方还是做了些修改，非常卡手。
 2. 终端允许 Ctrl + V 粘贴：`"terminal.integrated.sendKeybindingsToShell": false` （vscode 默认允许终端粘贴）
 3. 打开右侧 minimap：`"editor.minimap.enabled": true`
 4. 由于 cursor update [问题很多](https://github.com/getcursor/cursor/issues/2670)，需要设置 `"update.enableWindowsBackgroundUpdates": false` 关闭后台自动更新。
+   - 即使设置了此项，cursor 还是可能无视此设置仍然自动更新（骂人）。此时需要：清空文件夹 `C:\Users\<username>\AppData\Local\cursor-updater` 并将其权限修改为全部 deny。([ref](https://www.youtube.com/watch?v=oNe36xIsJ6g))
 5. 从 vscode 继承过去的中文插件可能失效，需要重新手动装一下。
 
 ### 无限续

@@ -79,6 +79,13 @@ const data: SpeedupItemType[] = [
     save_format: "ypf",
     speedupable: false,
   },
+  {
+    names: ["廢村少女~誘惑迷離的籠之鄉~"],
+    valid_name: "escude",
+    engine: "escude",
+    save_format: "bin",
+    speedupable: true,
+  },
 ];
 </script>
 

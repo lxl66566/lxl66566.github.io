@@ -416,6 +416,19 @@ if __name__ == "__main__":
 - 在游戏根目录找到一个 `ysfchk.ini` 文件，里面记录着每个 ypf 对应的 CRC-32 校验 hash。该文件对运行游戏没有影响，但是如果用 `ファイル破損チェック.exe` 验证，本质上就是用这里的 hash 进行验证。
 
 </template>
+<template #escude>
+
+escude 家的游戏是 bin 格式，GARbro 可解不可封。
+
+工具尝试：
+
+- [marcussacana/EscudeEditor](https://github.com/marcussacana/EscudeEditor)：可用。使用方法：
+  1. 打开 GUI，右击空白处，选择 _Packget -> extract_，将 voc.bin 提取。（默认提取到同文件夹下）
+  2. ffmpeg 批量语音加速
+  3. _Packget -> repack_
+- [cottony-vase-131 的工具](https://cottony-vase-131.notion.site/GameTools-7fea11732ecd4e398896414a31fef431)：专门处理脚本的工具，无法使用
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结
