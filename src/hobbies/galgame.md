@@ -100,6 +100,12 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #廢村少女1>
+
+- 兼顾实用性和剧情的 gal。escude，实用性的神。
+- 自慰和插入共用 CG，真能省。但是 _药师院_ 又是双 CG，好怪哦。
+
+</template>
 <template #天使☆嚣嚣RE-BOOT!>
 
 - 与网评一致，用还算可以的世界观写出了纯净的白开水。

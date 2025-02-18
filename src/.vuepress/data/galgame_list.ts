@@ -4,7 +4,9 @@ import { DateDurationCompare } from "../definition/index.js";
 const original_list: GalItemInputType[] = [
   {
     name: "廢村少女~誘惑迷離的籠之鄉~",
+    valid_name: "廢村少女1",
     playing_status: PlayingStatus.PLAYING,
+    use_time: "-2min",
     duration: {
       start: "2025-02-16",
     },

@@ -187,6 +187,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 在线白板画图：
   - [tldraw](https://www.tldraw.com/)
   - [EXCALIDRAW](https://excalidraw.com/)
+  - [drauu](https://drauu.netlify.app/)
 - 在线画流程图等各种图表：[Mermaid](https://mermaid.live/edit) | [draw.io](https://draw.io) | [processon（国内商业公司）](https://www.processon.com/)
 - [GOSSIP](https://gossip.ink/)：在线制作、放映**简易的**幻灯片
 - [随机简易 PPT 背景](https://app.haikei.app/)

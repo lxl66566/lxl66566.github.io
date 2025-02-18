@@ -107,3 +107,7 @@ tag:
 ## 关于 KernelSU
 
 在[浪费了两个小时](https://t.me/withabsolutex/1601)后，我想说：**如果你不是开发者，别碰 KernelSU**。
+
+## external
+
+- [一加 Ace 5 Pro 的 root 及其自定义玩法 - gledos](https://gledos.science/oneplus-ace-5-pro-superuser.html)

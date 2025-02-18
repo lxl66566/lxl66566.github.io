@@ -95,7 +95,7 @@ tag:
 - [ ] 半连接神经网络
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
-- [ ] 射精记录 bot，cloudflare workers + d1
+- [x] 射精记录 bot，cloudflare workers + d1
 - [ ] rust TUI easy_download
 - [ ] GalgameManager
   - [ ] 随机启动 计时
@@ -110,6 +110,7 @@ tag:
     2. 自动解压路径中遇到的压缩文件，当成目录处理。
   - 参考：[Qwen2-VL](https://github.com/QwenLM/Qwen2-VL)
 - [ ] rust-checkenizer: rust lsp based on cargo check. NO MORE RA NEEDED.
+- [ ] 加密货币实时币价悬浮窗，tauri
 
 ### RIIR
 
