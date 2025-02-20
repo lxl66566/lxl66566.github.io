@@ -15,6 +15,7 @@ tag:
 
 - 从 20220428 开始使用 [Tai](https://github.com/Planshit/Tai) 记录 Windows 下的应用时长。
   - C# 写的，windows 下专用的软件。
+  - Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 [有 bug](https://github.com/Planshit/Tai/issues/378)，第三方 fork 的 [Taix](https://github.com/NLick47/Taix) 目前还不成熟（有 bug），因此我建议使用 1.5.0.5 版本。
 - 在 20220729 了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。
   - 跨平台的时长记录软件，python 写的，基于浏览器 UI。
   - 在 linux wayland 下[表现差](https://github.com/ActivityWatch/activitywatch/issues/92)。~~我为了计时长特意换到 X11~~

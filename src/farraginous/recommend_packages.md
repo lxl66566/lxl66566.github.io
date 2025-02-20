@@ -120,6 +120,14 @@ Google Play 是最广泛使用的包管理器。但是这玩意太商业化了�
 - F-Droid：最知名的开源软件仓库。
 - [Obtainium](https://github.com/ImranR98/Obtainium)：可以从 Github release 里安装 apk 的包管理器。和我的 [bin-package-manager](https://github.com/lxl66566/bpm) 有异曲同工之妙，不过它做得更好看实用。
 
+### 去广告
+
+去广告软件很重要的一点就是规则持续更新，毕竟厂商的广告和应用也在不断更新。然而所有去广告规则开发者只要肉身在国内，项目就就活不长，说到底还是大厂后台太硬了。
+
+- [gkd](https://github.com/gkd-kit/gkd)：开源去广告，规则订阅制度，Material UI。看着不错，但是两个排名最前面的规则集在 20250210 archived 了，不再更新。
+- [李跳跳](https://t.me/apkrxwy/927) | [bak](https://wwkh.lanzout.com/iokl61e21oha)（**闭源！**）：跳广告，比 AdAway 好用。软件离线使用，不再更新。~~腾讯封杀，必属精品~~
+- [AdAway](https://github.com/AdAway/AdAway)：纯纯垃圾。
+
 ### ZArchiver
 
 Android 端压缩/解压缩软件。（注：官方也有 PC 端软件）

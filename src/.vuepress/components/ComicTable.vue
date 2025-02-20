@@ -705,6 +705,11 @@ const data = [
   { id: "555552", aScore: 7.9, bScore: 6.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C105-Damier-Cookie-惟千茉鶴-甘いステージの誘惑--アイドルホシノの禁断ヒミツ-ブルーアーカイブ-中国翻訳-02-12" },
   { id: "556195", aScore: 9.6, bScore: 3.3, info: "#蔚蓝档案 #3P #图集 #全彩", bak: "https://telegra.ph/C105-ミルクセーキ工房-ミルクセーキ-先生の抜き打ち訪問-ブルーアーカイブ-中国翻訳-02-14" },
   { id: "556511", aScore: 5.2, bScore: 9.8, info: "#强制性交 #陋习 #兽耳 #肛交 #悲剧", order: 2, bak: "https://telegra.ph/K2マンホール-P-ハートレス-2コドクの話-中国翻訳-02-16" },
+  { id: "556998", aScore: 7.4, bScore: 6.8, info: "#cos #loli", bak: "https://telegra.ph/RingringSouls-あすかたかとら-低身長童顔28歳がいけない方向でコスプレにハマっていく話-FateGrand-Order-中国翻訳-DL版-02-18" },
+  { id: "556594", aScore: 8.8, bScore: 5.5, info: "#loli", bak: "https://telegra.ph/毎日健康生活-ヘルシーマン-JC詩織ちゃんクズおじに買われる-中国翻訳-無修正-DL版-02-16" },
+  { id: "512102", aScore: 6.3, bScore: 7.9, info: "#loli #催眠 #报仇 #女仆" },
+  { id: "555972", aScore: 6.7, bScore: 8.4, info: "#cos #兽耳 #肛塞 #女仆 #耻辱play" },
+  { id: "556499", aScore: 5.4, bScore: 7.3, info: "#师生 #loli #自慰" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -413,6 +413,10 @@ const data = [
   { id: "FSDSS-393", aScore: 6.6, bScore: 7.6, u: true, name: "ゴミ屋敷に住むキモい変態ストーカーに監禁されたが、最悪なことにチ●ポの相性はこの上ないほど最高。 橋本ありな - 橋本ありな (新ありな)" },
   { id: "ABP-672", aScore: 6.6, bScore: 7.9, name: "人生初・トランス状態 激イキ絶頂セックス 41 絶頂しすぎてS字反りイキ 結まきな" },
   { id: "sone-614", aScore: 6, bScore: 4, name: "新人NO.1 STYLE 最強ヒロイン瀬戸環奈AVデビュー" },
+  { id: "mimk-187", aScore: 9.3, bScore: 7.6, u: true, name: "#催眠 ユメカウツツカ 早川希美編 日間1位 週間1位 月間2位 総販売数43，000本超えの超人気作をS級超単体女優で実写化！！ 佐々木さき - 春原未来" },
+  { id: "stars-245", aScore: 8, bScore: 6.1, u: true, name: "#多男主 誰にもバレないように校内でこっそりハメられちゃう押しに弱い制服美少女 白川ゆず" },
+  { id: "MIDV-631", aScore: 6.5, bScore: 6.2, u: true, name: "#3P" },
+  { id: "MIDV-567", aScore: 6.2, bScore: 7.7, u: true, name: "#监禁 #堕落 「あのクソガキJ●...俺をバカにしやがって！」 隣人の異常性欲オヤジが大量媚薬で汗だくキメセク中出し ゴミ部屋監禁でイイナリ肉便器に堕とされた3日間 三崎なな" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 
