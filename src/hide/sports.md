@@ -39,12 +39,6 @@ const 半俯冲轰炸机 = 1.3,
 
 <iframe frameborder="no" src="/charts/sports_time.html" width="100%" height="280" loading="lazy"></iframe>
 
-## 磨剑 interval
-
-磨剑也是一种运动。
-
-<iframe frameborder="no" src="/charts/xxx_interval.html" width="100%" height="300" loading="lazy"></iframe>
-
 ## 游泳
 
 由于肺活量限制，最擅长 50-100m 内的蛙泳。

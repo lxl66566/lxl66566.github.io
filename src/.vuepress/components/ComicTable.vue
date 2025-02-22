@@ -710,6 +710,8 @@ const data = [
   { id: "512102", aScore: 6.3, bScore: 7.9, info: "#loli #催眠 #报仇 #女仆" },
   { id: "555972", aScore: 6.7, bScore: 8.4, info: "#cos #兽耳 #肛塞 #女仆 #耻辱play" },
   { id: "556499", aScore: 5.4, bScore: 7.3, info: "#师生 #loli #自慰" },
+  { id: "557340", aScore: 7.7, bScore: 6.9, info: "#兄妹 #纯爱", bak: "https://telegra.ph/桜水晶-夜桜ソウキお兄ちゃんのことが大好きな妹が幸せになるお話-中国翻訳-DL版-02-20" },
+  { id: "551099", aScore: 7.1, bScore: 6.2, info: "#扶他 #姐妹 #巨乳" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

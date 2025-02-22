@@ -25,7 +25,7 @@ CS 自学：
 - [x] 基础前端
 - [ ] ~~tauri or flask, to dev wordsreciter~~ wordsreciter not used
 - [x] koishi plugin, like atri bot
-- [ ] C# learning and pull request to Tai, ~~MisakaTranslator~~(not used)
+- [ ] ~~C# learning and pull request to Tai, MisakaTranslator~~ (not used/maintained)
 - [x] tg 教务信息转发（通过 rss 实现）
 
 ## 日程库（不急）
@@ -44,3 +44,12 @@ CS 自学：
 - [ ] [灵感区](../hide/inspiration.md)：对任何东西灵光一闪的想法。希望能用得上。
 - [ ] 理论数学(?)
 - [ ] 调香<heimu>精</heimu>师
+
+## 我已尝试
+
+好奇心是非常强大的动力，而我本人的好奇心还是挺重的，喜欢尝试各类事物。下面列举一些我已经尝试过的：
+
+- 编程开发
+- 文档翻译贡献
+- 本子汉化（翻译 + 嵌字）
+- 加密货币

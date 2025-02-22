@@ -16,7 +16,7 @@ tag:
 
 comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；都有数据库的抽象层，比较易用；2023 开源之夏 nonebot2 也新增了图形界面。我感觉还是看写 python 还是写 ts 舒服来选平台比较合适。
 
-我建的 bot 有两个实例：一个是之前一直在用的 QQ bot `atri`（2433269451），另一个是后来使用 koishi 的 Telegram bot [`atri bot`](https://t.me/atri_absx_bot)。
+~~我建的 bot 有两个实例：一个是之前一直在用的 QQ bot `atri`（2433269451），另一个是后来使用 koishi 的 Telegram bot [`atri bot`](https://t.me/atri_absx_bot)。~~ 这两个 bot 现在都不再运行了；不过[后文](#telegram-bot-on-cloudflare-workers)的 serverless bot 还可以使用。
 
 ::: details 查看 atri(QQ) 的信息
 
@@ -84,3 +84,16 @@ npm init koishi
 我写了一个小玩具（[koishi-plugin-peek](https://github.com/lxl66566/koishi-plugin-peek)），大致涵盖了基本的开发指令。推荐在 github 上搜索其他源码广泛学习。
 
 - 关于发布插件：**`pub` 之前请一定记得 `build`！！切记！！**
+
+## Telegram Bot on Cloudflare Workers
+
+之后我的重心转到了 Telegram 上，而 Telegram 对 bot 的大力支持程度是国内平台根本比不了的。
+
+2024 年底 Asuka Minato 写了一个 serverless 的 [telegram-summary-bot](https://github.com/asukaminato0721/telegram-summary-bot)，这个 bot 使用 Cloudflare Workers 运行，Cloudflare d1 数据库做持久化存储。我看到了 Telegram bot 的新曙光，这样我就不需要使用专门的服务器来跑 bot 了，因为我的 VPS 稳定性和数据安全性都挺差的。
+
+于是抄他的源码，结合我第一次使用 Cursor，糊了一个 [Telegram-RSS-Bot-on-Cloudflare-Workers](https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers)，满足了我一直以来的愿望，也就是在聊天软件里接收 RSS 通知。（此前我一直使用 [iovxw/rssbot](https://github.com/iovxw/rssbot)，但它并不好用。我也经历了几次数据丢失，非常难受）
+
+后来就一发不可收拾，又写了：
+
+- [telegram-subscribe-bot](https://github.com/lxl66566/telegram-subscribe-bot)：订阅群组消息的 bot。实际上[并不好用](https://t.me/withabsolutex/2217)。
+- [telegram-shasei-bot](https://github.com/lxl66566/telegram-shasei-bot)：射精记录 bot。从此我再也不需要将数据手动记录到博客里了（）。

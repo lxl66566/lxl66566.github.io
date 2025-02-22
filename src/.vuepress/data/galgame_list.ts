@@ -6,7 +6,7 @@ const original_list: GalItemInputType[] = [
     name: "廢村少女~誘惑迷離的籠之鄉~",
     valid_name: "廢村少女1",
     playing_status: PlayingStatus.PLAYING,
-    use_time: "-2min",
+    use_time: "-3min",
     duration: {
       start: "2025-02-16",
     },
@@ -26,14 +26,15 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "天使☆嚣嚣RE-BOOT!",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "21h47min",
     duration: {
       start: "2025-01-27",
+      end: "2025-02-21",
     },
     score: {
-      story: 4.6,
-      visual: 9.6,
-      program: 9.2,
+      story: 4.4,
+      visual: 9.5,
+      program: 9.1,
     },
   },
   {

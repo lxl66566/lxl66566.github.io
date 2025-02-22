@@ -22,6 +22,10 @@ category:
 
 ## 2025
 
+### 20250222
+
+- 移除 xxx_interval 图表，数据已迁移到 [telegram-shasei-bot](https://github.com/lxl66566/telegram-shasei-bot)。
+
 ### 20250128
 
 - 将 ExpandableListItem 组件应用上 speedup.md 的加速列表
