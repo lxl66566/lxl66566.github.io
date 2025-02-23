@@ -3,6 +3,13 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "玉响未来",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-02-23",
+    },
+  },
+  {
     name: "廢村少女~誘惑迷離的籠之鄉~",
     valid_name: "廢村少女1",
     playing_status: PlayingStatus.PLAYING,

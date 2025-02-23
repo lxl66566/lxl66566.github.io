@@ -28,6 +28,8 @@ tag:
 | Gramophone | ✅ | ✅ | 4 | 89M |
 | Phocid | ✅ | ✅ | 2 | 77M |
 | Oto Music | ❌ | ✅ | 4 | 153M |
+| Phonograph Plus | ✅ | ✅ | 2 | 135M |
+| Powerramp | ❌ | ✅ | 3 | 327M |
 
 字段解释：
 
@@ -45,3 +47,7 @@ APlayer 在 Github 上很火，并且有一个叫 “随机播放全部” 的�
 Gramophone 和 Phocid 这俩都是 Material，非常相似，甚至播放进度条的样式都是一模一样的，使用手感也差不多。根据上表，我更倾向于 Phocid。
 
 Oto Music 也是 Material 的，优点是自带均衡器。
+
+Phonograph Plus 有出现文件夹点不开的 bug。
+
+Powerramp 是付费软件，可以下载限时试用。整体的 UI 设计真的是**非常惊艳**，比千篇一律的 material 好看/有个性多了。并且也有均衡器支持和侧边首字母选歌。它是列表中唯一一个不会自动扫盘找歌曲的软件，我可以自己选择让它读取的文件夹，从而避免录音等被放到播放列表中。因此列表中的 _播放点击数_ 就不再重要了。

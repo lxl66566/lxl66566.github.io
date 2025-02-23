@@ -45,7 +45,7 @@ type SpeedupItemType = {
 
 const data: SpeedupItemType[] = [
   {
-    names: ["空に刻んだパラレログラム"],
+    names: ["空に刻んだパラレログラム", "玉响未来"],
     valid_name: "krkr_xp3",
     engine: "krkr",
     save_format: "xp3",

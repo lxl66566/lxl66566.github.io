@@ -417,6 +417,11 @@ const data = [
   { id: "stars-245", aScore: 8, bScore: 6.1, u: true, name: "#多男主 誰にもバレないように校内でこっそりハメられちゃう押しに弱い制服美少女 白川ゆず" },
   { id: "MIDV-631", aScore: 6.5, bScore: 6.2, u: true, name: "#3P" },
   { id: "MIDV-567", aScore: 6.2, bScore: 7.7, u: true, name: "#监禁 #堕落 「あのクソガキJ●...俺をバカにしやがって！」 隣人の異常性欲オヤジが大量媚薬で汗だくキメセク中出し ゴミ部屋監禁でイイナリ肉便器に堕とされた3日間 三崎なな" },
+  { id: "NHDTC-007", aScore: 8.2, bScore: 6.1, name: "#女同 #百合 ナチュラルハイ25周年記念作品 全裸羞恥OK娘レズスペシャル サークル仲間の清純美少女を野外露出で興奮させて感じさせろ" },
+  { id: "MIDV-598", aScore: 7.6, bScore: 4, u: true, name: "#3P Portio G 点高潮冥想阴部发育文档阴道高潮大脑高潮中出 Acme Nana Misaki - 三崎なな" },
+  { id: "REAL-893", aScore: 9.3, bScore: 5.5, name: "#痴汉 失禁イキ痴●列車 塾帰りの電車の中、媚薬で徐々に改造され放尿・潮吹きが癖付いたJ〇をイカセ続ける。 皆瀬あかり" },
+  { id: "LOL-240", aScore: 8.4, bScore: 7, name: "#水手服 このあと…わたし、門限までセックスした…パイパン●学生あかり 皆瀬あかり" },
+  { id: "GVH-532", aScore: 8, bScore: 9.1, u: true, name: "優等生調教 濃厚中出し鬼畜孕ませ輪●合宿 皆瀬あかり" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

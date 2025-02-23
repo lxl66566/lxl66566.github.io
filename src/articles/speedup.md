@@ -294,7 +294,9 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 <SpeedupList>
 <template #krkr_xp3>
 
-使用我的 [fork repo](https://github.com/lxl66566/krkr-xp3)。脚本可能无法解包，需要使用 GARbro 解包后，再使用脚本进行音频加速与封包。
+使用我的 [fork repo](https://github.com/lxl66566/krkr-xp3)。这个 repo 解包貌似有些问题，需要使用 GARbro 解包后，再使用脚本进行音频加速与封包。（之后我会找找有没有其他可用的命令行解包工具）
+
+注意，xp3 引擎的游戏需要看一眼 `patch.xp3` 里有没有音频，那里面的音频也需要加速。
 
 </template>
 <template #Artemis>
