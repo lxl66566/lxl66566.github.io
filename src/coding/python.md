@@ -110,6 +110,8 @@ uv run python xxx.py    # 运行某个 py 文件
 uv python pin 3.12      # 对当前项目使用某个 python 版本，如果没下载会自动下载
 ```
 
+添加镜像：查看 [issues#6925](https://github.com/astral-sh/uv/issues/6925)
+
 @tab pdm
 
 #### [pdm](https://github.com/pdm-project/pdm)

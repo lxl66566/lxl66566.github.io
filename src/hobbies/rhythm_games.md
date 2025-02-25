@@ -281,12 +281,14 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 ### 其他推荐
 
-- 护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)
-  > 由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的 osu 皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu 运行时会自动屏蔽 win10 的夜间模式，但 f.lux 可以无视这个屏蔽（win10 不稳定，win11 稳定），强制护眼，我还是觉得很舒服的。平时玩电脑也是常开的。
-- 键盘/轴推荐：轴体以线性轴为佳;本人[根据经验推荐 ttc 快银轴](#键盘参数)。
+- ~~护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)~~
+  > 由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的 osu 皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu 运行时会自动屏蔽 win10 的夜间模式，但 f.lux 可以无视这个屏蔽（win10 不稳定，win11 稳定），强制护眼，我还是觉得很舒服的。平时玩电脑也是常开的。  
+  > 不过现在的 win 11 已经没有这个问题了，因此不需要。
+- 键盘/轴推荐：轴体以线性轴为佳；本人[根据经验推荐 ttc 快银轴](#键盘参数)。当然，如果你有钱能上磁轴键盘那肯定最好。
   > 随便找个你喜欢的热插拔轴的机械键盘，然后把 osu 键位的轴换成趁手的。这是最经济实惠的办法，没有必要整个键盘都是昂贵的轴。<br/> **不要买低端达尔优键盘！** 摸过两个百元价位的，主控问题很大，四键同时按会阻塞，丢响应。真的垃圾。
-- 谱面下载：[Ranked 地图下载器.exe](https://wwp.lanzout.com/ilX4V06l9yef)
-  > 按照 bp 列表下载会闪退。只能按 ranked 时间下载，且不可选择 key 数。但它已经是我用过的最好用的谱面下载器了。
+- 谱面下载：[Ranked 地图下载器.exe](https://osu.sayobot.cn/software)
+  > 只能按 ranked 时间下载，且不可选择 key 数。但它已经是我用过的最好用的谱面下载器了。  
+  > 仅限 legacy osu，lazer 下载器暂时未知。
 - 键数记录：[osu-kps](https://github.com/UnnamedOrange/osu-kps)，具有 kps 图表与键数记录。当然，它甚至还能在 osu 的 replay 中记录键数。
 - 夹带私货：我写的[自动调整 mania 皮肤水平位置](https://github.com/lxl66566/osu-ColumnStart-adjustor)的脚本。
 - 关于制谱：[MixMeister BPM Analyzer](https://wwp.lanzout.com/iuJPC06l9xje)：分析音频 bpm。
