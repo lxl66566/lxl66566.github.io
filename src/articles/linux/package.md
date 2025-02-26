@@ -147,7 +147,7 @@ sudo systemd-nspawn -D container  # 进入容器
 |`lsof`|[查端口占用](./problem.md#umount-failed)|
 |`zoxide`|智能 cd|
 |[`atuin`](https://github.com/atuinsh/atuin) / [`mcfly`](https://github.com/cantino/mcfly)|history 搜索|
-|`dust` & `ncdu`[^8] / `gdu`|磁盘容量查询|
+|`dust` & `ncdu`[^8] & [dua-cli](https://github.com/Byron/dua-cli) / `gdu`|磁盘容量查询|
 |`yazi`[^6] / `nnn` / `ranger`|文件浏览器|
 |`lsof`|查进程占用|
 |`neovim`|[文本编辑器](../../coding/vim.md)|

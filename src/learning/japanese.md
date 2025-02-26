@@ -83,6 +83,8 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 
 背单词的一大难点在汉字多音字。即使都是音读，排除常见音变，同一个汉字也可能发出许多不同的音。
 
+::: details 之前记，现在太多了懒得记了
+
 <!-- prettier-ignore -->
 |漢字|単語1|単語2|単語3|
 | :-: | :-: | :-: | :-: |
@@ -100,6 +102,8 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 |納|<furigana f="すいとう">出納</furigana>|滞<furigana f="のう">納</furigana>|
 |内|<furigana f="けいだい">境内</furigana>|<furigana f="ない">内</furigana>容|
 |精|<furigana f="しょうじん">精進</furigana>|<furigana f="せい">精</furigana>子|
+
+:::
 
 ### 叠词与拟声
 
@@ -176,3 +180,4 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 6. [向中国程序员介绍日本 IT](https://juryquinn.com/articles/向中国程序员介绍日本%20IT)
 7. [日语易错翻译对照表](https://docs.google.com/spreadsheets/d/1WvsPzbXq2ohwdXBqu4xqkfGvK_dMH_B1YbPZEWAPVkA/edit?gid=0#gid=0)
 8. [JLPT 备考平台](https://jlpt.nnde.de/zh)
+9. [饭团君的日语口语教室](https://aiueo.cc/pages/ch/grammars.php)

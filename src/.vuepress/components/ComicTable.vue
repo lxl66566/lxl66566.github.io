@@ -147,6 +147,8 @@ const data = [
   { id: "435029", aScore: 5, bScore: 8.6, info: "#蔚蓝档案 #全彩 #运动会", bak: "https://telegra.ph/山含運動會新刊-ブルーアーカイブ-08-02" },
   { id: "436618", aScore: 6.7, bScore: 2, info: "#fate #兄妹", bak: "https://telegra.ph/こいんとす-杏飴-もっとイリヤとおうちでえっちしたい-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-08-02-2" },
   { id: "433069", aScore: 10, bScore: 9, order: 1, info: "ボクの理想の異世界生活 #合集 #穿越 #后宫 #猫娘", bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-総集編01-中国翻訳-無修正-DL版-08-02" },
+  { id: "474034", aScore: 10, bScore: 9.6, order: 2, info: "ボクの理想の異世界生活 #合集 #穿越 #后宫 #兽耳", bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-総集編02-中国翻訳-09-18" },
+  { id: "558334", aScore: 10, bScore: 9.6, order: 3, info: "ボクの理想の異世界生活 #合集 #穿越 #后宫 #兽耳", bak: "https://telegra.ph/234ド-イチリ-ボクの理想の異世界生活-総集編03-中国翻訳-無修正-DL版-02-24" },
   { id: "332022", aScore: 4.6, bScore: 7.4, info: "#NTR" },
   { id: "468394", aScore: 6.6, bScore: 3.5, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/HIGHLAND-Takashima-Shoa-Mikazuki-no-Pierce-Hole---Pierce-Hole-of-The-Cresent-Moon-Blue-Archive-Chinese-下江小春汉化组-Digital-01-19" },
   { id: "497578", aScore: 4.2, bScore: 2, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-エッチなことはダメなのに-ブルーアーカイブ-DL版-02-21" },
@@ -712,6 +714,10 @@ const data = [
   { id: "556499", aScore: 5.4, bScore: 7.3, info: "#师生 #loli #自慰" },
   { id: "557340", aScore: 7.7, bScore: 6.9, info: "#兄妹 #纯爱", bak: "https://telegra.ph/桜水晶-夜桜ソウキお兄ちゃんのことが大好きな妹が幸せになるお話-中国翻訳-DL版-02-20" },
   { id: "551099", aScore: 7.1, bScore: 6.2, info: "#扶他 #姐妹 #巨乳" },
+  { id: "558463", aScore: 6.9, bScore: 5.7, info: "#兽耳 #媚药 #loli", bak: "https://telegra.ph/C105-A-icu-龍の巣-鳳凰モヤ-鳳凰ちゃんち物語-清池鳳啼篇-中国翻訳-02-25" },
+  { id: "558336", aScore: 7.6, bScore: 5.4, info: "#3P #loli #偷窥", bak: "https://telegra.ph/さくらがーでん-しろすず-ホ込み0円レイヤー2人付き-その着せ替え人形は恋をする-中国翻訳-無修正-DL版-02-24" },
+  { id: "558379", aScore: 6.6, bScore: 7.4, info: "#NTR #同学 #肉便器", bak: "https://telegra.ph/毎日健康生活-ヘルシーマン-好きな子に告白したらハメ撮り動画が送られてきた話-中国翻訳-無修正-DL版-02-24" },
+  { id: "(ex)", aScore: 8, bScore: 7.7, info: "#VTuber #魅魔", otherlink: "https://exhentai.org/g/3250653/8a006285c0/", bak: "https://telegra.ph/海通信-なまもななせ-VTuberシルカちゃんはちぽがお好き--ナマイキ姪を観察調教で堕とすまでシリーズ外伝-中国翻訳-DL版-02-24" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

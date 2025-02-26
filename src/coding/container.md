@@ -34,6 +34,10 @@ tag:
 
 :::
 
+## 工具
+
+- [lazydocker](https://github.com/jesseduffield/lazydocker)：lazygit 的同作者做的 docker TUI，不再需要背 docker 指令。
+
 ## 基础
 
 看看[tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
@@ -55,7 +59,7 @@ docker rmi $(docker images -q)            # 删除所有镜像
 
 [src](https://wiki.archlinuxcn.org/wiki/Docker#HTTP代理)
 
-简言之：守护进程和 docker 都需要配置，`	/etc/docker/daemon.json` 和 `~/.docker/config.json` 都需要写入代理内容。
+简言之：守护进程和 docker 都需要配置，`/etc/docker/daemon.json` 和 `~/.docker/config.json` 都需要写入代理内容。
 
 ## dockerhub mirror
 
