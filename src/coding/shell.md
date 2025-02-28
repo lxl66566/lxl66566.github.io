@@ -170,3 +170,4 @@ amber 是总论提到的编译到 bash 语言的一个高阶语言；它使用 r
 
 1. [bash 脚本教程](https://wangdoc.com/bash/)
 2. [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
+3. [Why doesn't set -e (or set -o errexit, or trap ERR) do what I expected?](https://mywiki.wooledge.org/BashFAQ/105)

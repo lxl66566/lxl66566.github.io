@@ -595,6 +595,7 @@ const data = [
   { id: "527061", aScore: 7.5, bScore: 3.6, info: "#蔚蓝档案 #反杀", bak: "https://telegra.ph/C104-ぽよぽよスカイ-佐伯ソラ-ヘブンズブルー-ブルーアーカイブ-中国翻訳-11-24" },
   { id: "330640", aScore: 6.7, bScore: 5.2 },
   { id: "540896", aScore: 7.2, bScore: 8.5, info: "#强制性交 #催眠 #多P #肉便器", bak: "https://telegra.ph/そらみる-生イキ魔法使いへの淫紋調教リベンジ-コミックアンリアル-2024年8月号-Vol110-中国翻訳-DL版-11-27" },
+  { id: "558255", aScore: 8.5, bScore: 4, info: "#全彩 #催眠 #偶像", order: 3 },
   { id: "540773", aScore: 9.2, bScore: 4, info: "#全彩 #催眠 #兽耳", order: 2, bak: "https://telegra.ph/khorosho-chihiro-推し活2-中国翻訳-DL版-11-27" },
   { id: "482228", aScore: 7.6, bScore: 4, info: "#全彩 #催眠 #地雷", order: 1, bak: "https://telegra.ph/khorosho-chihiro-推し活-中国翻訳-DL版-12-04" },
   { id: "541119", aScore: 9.1, bScore: 6, info: "#田屋沼屋 #纯爱 #透明旗袍" },
@@ -718,6 +719,7 @@ const data = [
   { id: "558336", aScore: 7.6, bScore: 5.4, info: "#3P #loli #偷窥", bak: "https://telegra.ph/さくらがーでん-しろすず-ホ込み0円レイヤー2人付き-その着せ替え人形は恋をする-中国翻訳-無修正-DL版-02-24" },
   { id: "558379", aScore: 6.6, bScore: 7.4, info: "#NTR #同学 #肉便器", bak: "https://telegra.ph/毎日健康生活-ヘルシーマン-好きな子に告白したらハメ撮り動画が送られてきた話-中国翻訳-無修正-DL版-02-24" },
   { id: "(ex)", aScore: 8, bScore: 7.7, info: "#VTuber #魅魔", otherlink: "https://exhentai.org/g/3250653/8a006285c0/", bak: "https://telegra.ph/海通信-なまもななせ-VTuberシルカちゃんはちぽがお好き--ナマイキ姪を観察調教で堕とすまでシリーズ外伝-中国翻訳-DL版-02-24" },
+  { id: "558768", aScore: 7, bScore: 8.5, info: "#虚拟现实", bak: "https://telegra.ph/caburibbon-caburi-ECH2Aエチエチアプリ-DL版-02-26" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
