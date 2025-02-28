@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 26 Feb 2025 16:34:51 GMT</pubDate>
-    <lastBuildDate>Wed, 26 Feb 2025 16:34:51 GMT</lastBuildDate>
+    <pubDate>Fri, 28 Feb 2025 17:34:39 GMT</pubDate>
+    <lastBuildDate>Fri, 28 Feb 2025 17:34:39 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -97,7 +97,11 @@
 <li>币安：老牌交易所，但是自从赵长鹏出事后我就对其印象不佳。入坑加密货币后注册过，结果不支持日本 IP，更换 IP 后还说 IP 存在风险，无法开户合约账户，需要 KYC 验证。直接跑路。</li>
 <li>MEXC 交易所：费率很低，但是要求 KYC，不支持中国地区。</li>
 <li>Gate.io：TradingView 不适配黑夜模式；有网页卡死的情况；身份验证中出现无法识别身份证，未知原因认证失败的情况。</li>
-<li>bybit：全球第二大的交易所，活动多，还有虚拟卡能用。但是不支持香港地区。</li>
+<li>bybit：全球第二大的交易所，活动多，还有虚拟卡能用。但是不支持香港地区。
+<ul>
+<li>2025 年初发生了 ETH 被盗事件。</li>
+</ul>
+</li>
 </ul>
 <h4>奖励与活动</h4>
 <p>交易所会经常发关于新币和活动的公告，可以关注一下：</p>
@@ -126,6 +130,7 @@
 <li><a href="https://t.me/ChannelPANews" target="_blank" rel="noopener noreferrer">ChannelPANews</a></li>
 </ul>
 </li>
+<li>注意投资的比例管理。经历了几次惨痛的教训后，我建议将大部分钱留在 0 风险的简单赚币里吃利息，只拿出 30% 左右的金额进行合约或现货买卖。一次性投入过多钱进行交易的后果就是遇到抄底机会时手头资金不足，错过机会。</li>
 </ul>
 <h4>现货 vs 合约</h4>
 <p>现货交易中不存在杠杆（其实有，不过杠杆是通过“借币”的形式实现的，而不是真正意义上的杠杆）。相比之下，合约交易允许使用杠杆，使得你可以用较少的资金撬动更大的利益。此外，现货交易的手续费通常是合约交易的两倍左右。因此，我建议主要进行合约交易。</p>
@@ -1751,6 +1756,7 @@
 <ol>
 <li><a href="https://wangdoc.com/bash/" target="_blank" rel="noopener noreferrer">bash 脚本教程</a></li>
 <li><a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></li>
+<li><a href="https://mywiki.wooledge.org/BashFAQ/105" target="_blank" rel="noopener noreferrer">Why doesn't set -e (or set -o errexit, or trap ERR) do what I expected?</a></li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
