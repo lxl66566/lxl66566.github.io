@@ -52,7 +52,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["樱之刻"],
+    names: ["樱之刻", "FLIP * FLOP 系列"],
     valid_name: "Artemis",
     engine: "Artemis Engine",
     save_format: "pfs",

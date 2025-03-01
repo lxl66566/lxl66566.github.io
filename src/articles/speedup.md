@@ -285,7 +285,7 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 转眼过了半年来到 2025，我在推 _空に刻んだパラレログラム_ 时看到 xp3 格式的文件，又忍不住想起了拆包封包的思路。由于 xp3 是老牌（20+years）的广泛使用的格式，网上的资料非常多，可谓是帮了大忙。我先尝试用 GARbro 拆包，接着用[网上找的脚本](https://github.com/awaken1ng/krkr-xp3)封回去。封完的包比原先的大了十多 MB，心里还是有一些不安的。打开游戏，发现居然可行！！游戏可以读到音频文件！
 
-于是我激动得立刻开始 LLM 写脚本，用 ffmpeg 加速音频。写完运行，发现脚本解包有问题。我怀疑是这个 krkr-xp3 只支持 xp3 v1，而 galgame 用了 v2 打包。不过无伤大雅，我只需要封包能力即可，所以我利用 GARbro 解包后，[改一下脚本](https://github.com/lxl66566/krkr-xp3)，将包封回 xp3 即可。实测可以正常游玩。
+于是我激动得立刻开始 LLM 写脚本，用 ffmpeg 加速音频。写完运行，发现脚本解包有问题。我怀疑是这个 krkr-xp3 只支持 xp3 v1，而 galgame 用了 v2 打包。不过无伤大雅，我只需要封包能力即可，所以我利用 GARbro 解包后，改一下脚本，将包封回 xp3 即可。实测可以正常游玩。（详细方法，请点击下方表格中 xp3 展开查看）
 
 上述操作让我可以倍速语音游玩所有具有 krkr 移植的 galgame，简直不要太爽。
 
@@ -294,7 +294,8 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 <SpeedupList>
 <template #krkr_xp3>
 
-使用我的 [fork repo](https://github.com/lxl66566/krkr-xp3)。这个 repo 解包貌似有些问题，需要使用 GARbro 解包后，再使用脚本进行音频加速与封包。（之后我会找找有没有其他可用的命令行解包工具）
+- ~~最初我先是 [fork 了一个 python 的 repo](https://github.com/lxl66566/krkr-xp3)。这个 repo 解包有些问题，需要使用 GARbro 解包后，再使用脚本进行音频加速与封包。~~
+- 后来我又用 rust 重写了一个 [xp3-audio-speedup](https://github.com/lxl66566/xp3-audio-speedup)，这个借助了 xp3 的 rust crate，解包封包没问题，并且可以并行化加速，充分利用 CPU。我让这个程序也能够处理非 xp3 的音频文件夹，所以可以将其用于其他格式的音频加速上。
 
 注意，xp3 引擎的游戏需要看一眼 `patch.xp3` 里有没有音频，那里面的音频也需要加速。
 

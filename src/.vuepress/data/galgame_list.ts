@@ -3,6 +3,16 @@ import { DateDurationCompare } from "../definition/index.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "FLIP * FLOP ~RAMBLING OVERRUN~",
+    valid_name: "FLIPFLOP2",
+    order: 2,
+    playing_status: PlayingStatus.PLAYING,
+    use_time: "-1min",
+    duration: {
+      start: "2025-03-01",
+    },
+  },
+  {
     name: "玉响未来",
     playing_status: PlayingStatus.PLAYING,
     duration: {
@@ -12,10 +22,15 @@ const original_list: GalItemInputType[] = [
   {
     name: "廢村少女~誘惑迷離的籠之鄉~",
     valid_name: "廢村少女1",
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "-3min",
+    use_time: "12h53min",
     duration: {
       start: "2025-02-16",
+      end: "2025-03-01",
+    },
+    score: {
+      story: 8.2,
+      visual: 7.9,
+      program: 7,
     },
   },
   {
@@ -232,7 +247,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "FLIP＊FLOP ~INNOCENCE OVERCLOCK~",
-    valid_name: "FLIPFLOPINNOCENCEOVERCLOCK",
+    valid_name: "FLIPFLOP1",
     order: 1,
     use_time: "5h55min",
     score: {
