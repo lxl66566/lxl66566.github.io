@@ -422,6 +422,8 @@ const data = [
   { id: "REAL-893", aScore: 9.3, bScore: 5.5, name: "#痴汉 失禁イキ痴●列車 塾帰りの電車の中、媚薬で徐々に改造され放尿・潮吹きが癖付いたJ〇をイカセ続ける。 皆瀬あかり" },
   { id: "LOL-240", aScore: 8.4, bScore: 7, name: "#水手服 このあと…わたし、門限までセックスした…パイパン●学生あかり 皆瀬あかり" },
   { id: "GVH-532", aScore: 8, bScore: 9.1, u: true, name: "優等生調教 濃厚中出し鬼畜孕ませ輪●合宿 皆瀬あかり" },
+  { id: "if-011-01", aScore: 8.5, bScore: 6.3, name: "もし放課後の学校でエッチしたら／Rem" },
+  { id: "sone-272", aScore: 7.3, bScore: 6.8, u: true, name: "年末年始、広い学生寮で女学生とおじさん管理人が2人きり… 禁断シチュに欲情した中年ち●ぽと寂しさ埋めたい若い少女おま●こは相性良すぎて合体し続けた。 浅野こころ" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

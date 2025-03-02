@@ -720,6 +720,7 @@ const data = [
   { id: "558379", aScore: 6.6, bScore: 7.4, info: "#NTR #同学 #肉便器", bak: "https://telegra.ph/毎日健康生活-ヘルシーマン-好きな子に告白したらハメ撮り動画が送られてきた話-中国翻訳-無修正-DL版-02-24" },
   { id: "(ex)", aScore: 8, bScore: 7.7, info: "#VTuber #魅魔", otherlink: "https://exhentai.org/g/3250653/8a006285c0/", bak: "https://telegra.ph/海通信-なまもななせ-VTuberシルカちゃんはちぽがお好き--ナマイキ姪を観察調教で堕とすまでシリーズ外伝-中国翻訳-DL版-02-24" },
   { id: "558768", aScore: 7, bScore: 8.5, info: "#虚拟现实", bak: "https://telegra.ph/caburibbon-caburi-ECH2Aエチエチアプリ-DL版-02-26" },
+  { id: "(eh)", aScore: 8, bScore: 0.3, info: "#碧蓝航线 #差分", otherlink: "https://e-hentai.org/g/3255698/874a53dffe/", bak: "https://telegra.ph/円つくも-長門との毎夜-アズールレーン-中国翻訳-03-01" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
