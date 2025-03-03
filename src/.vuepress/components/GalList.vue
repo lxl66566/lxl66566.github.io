@@ -4,11 +4,22 @@
     <table>
       <thead>
         <tr>
-          <th v-for="h in headers">{{ h }}</th>
+          <th>游戏名</th>
+          <th>时长</th>
+          <th>游玩区间</th>
+          <th>
+            <SortIndicator text="剧情" v-model="sortOrder_story" />
+          </th>
+          <th>
+            <SortIndicator text="画风" v-model="sortOrder_visual" />
+          </th>
+          <th>
+            <SortIndicator text="程序" v-model="sortOrder_program" />
+          </th>
         </tr>
       </thead>
       <tbody :class="{ 'show-strict': show_strict }">
-        <GalListItem v-for="item in original_list" :item="item"
+        <GalListItem v-for="item in sortedList" :key="item.name + item.order" :item="item"
           :expandable="useSlots()[get_valid_name(item)] != undefined">
           <template #gal-list-item-content>
             <slot :name="get_valid_name(item)"></slot>
@@ -20,55 +31,95 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, useSlots } from "vue";
+import { ref, useSlots, computed, watch, onMounted, nextTick } from "vue";
 import MyCheckBox from "./MyCheckBox.vue";
 import original_list from "../data/galgame_list.js";
+import SortIndicator from "./SortIndicator.vue";
 import "../utils/FormatDate.js";
 import GalListItem from "./GalListItem.vue";
-import { GalItemInputType } from "../definition";
+import { DateDurationCompare, GalItemInputType } from "../definition";
 
 const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name;
-
-// /**
-//  * 按照结束时间排倒序
-//  */
-// function sort_items(a: GalItemType, b: GalItemType) {
-//   function compare_date_or_undefined(a: Date | undefined, b: Date | undefined) {
-//     if (a && b) {
-//       return b.getTime() - a.getTime();
-//     }
-//     if (a) {
-//       return -1;
-//     }
-//     if (b) {
-//       return 1;
-//     }
-//     return undefined;
-//   }
-//   return compare_date_or_undefined(a.duration?.end, b.duration?.end)
-//     || compare_date_or_undefined(a.duration?.start, b.duration?.start) || 0;
-// }
-
 const show_strict = ref(false);
-const headers = "游戏名 时长 游玩区间 剧情 画风 程序".split(" ");
-// const galgame_list: ComputedRef<GalItemType[]> = computed(() => {
-//   /// 将 GalItemType 转换为 GalItemInputType（对 duration 字段进行转换）
-//   const list: GalItemType[] = original_list.map((item) => {
-//     const { duration, ...rest } = item;
-//     if (!duration) {
-//       return rest;
-//     }
-//     return {
-//       ...rest,
-//       duration: {
-//         start: duration.start ? new Date(duration.start) : undefined,
-//         end: duration.end ? new Date(duration.end) : undefined,
-//       },
-//     };
-//   });
-//   /// 根据 show_strict 是否选中，过滤并排序
-//   return (show_strict.value ? list.filter((item) => !item.not_strict) : list).sort(sort_items);
-// });
+
+// 三个排序组件状态
+const sortOrder_story = ref<"none" | "asc" | "desc">("none");
+const sortOrder_visual = ref<"none" | "asc" | "desc">("none");
+const sortOrder_program = ref<"none" | "asc" | "desc">("none");
+
+// 全局排序状态，记录当前排序的列和方向
+const currentSort = ref<{ column: "story" | "visual" | "program"; direction: "asc" | "desc" | "none" } | null>(null);
+
+// 监听排序状态变化，确保其他排序被重置为 'none'，并更新 currentSort
+const watchSortOrders = () => {
+  watch([sortOrder_story, sortOrder_visual, sortOrder_program], ([story, visual, program], [prevStory, prevVisual, prevProgram]) => {
+    // 确定哪个列发生了变化
+    if (story !== prevStory && story !== 'none') {
+      currentSort.value = { column: "story", direction: story };
+      sortOrder_visual.value = "none";
+      sortOrder_program.value = "none";
+    } else if (visual !== prevVisual && visual !== 'none') {
+      currentSort.value = { column: "visual", direction: visual };
+      sortOrder_story.value = "none";
+      sortOrder_program.value = "none";
+    } else if (program !== prevProgram && program !== 'none') {
+      currentSort.value = { column: "program", direction: program };
+      sortOrder_story.value = "none";
+      sortOrder_visual.value = "none";
+    } else if (story === 'none' && visual === 'none' && program === 'none') {
+      currentSort.value = null; // 默认无排序
+    }
+  });
+};
+watchSortOrders();
+
+// 默认排序函数
+const defaultSort = (inputList: GalItemInputType[]): GalItemInputType[] => {
+  // 1. 按照 PlayingStatus 分组
+  const grouped = inputList.reduce((acc, item) => {
+    const key = item.playing_status ?? "null";
+    if (!acc[key]) {
+      acc[key] = [];
+    }
+    acc[key].push(item);
+    return acc;
+  }, {} as Record<string, GalItemInputType[]>);
+
+  // 2. 组间按照 "游玩中", "中断", "null", "已停止" 排序，组内按照 duration 降序排序
+  const sortedGroups = ["游玩中", "中断", "null", "已停止"].map((key) => {
+    grouped[key]?.sort((x: GalItemInputType, y: GalItemInputType) => {
+      if (x.duration && y.duration) {
+        return -DateDurationCompare(x.duration, y.duration);
+      }
+      if (y.duration) {
+        return 1;
+      }
+      if (x.duration) {
+        return -1;
+      }
+      return 0;
+    });
+    return grouped[key] ?? [];
+  });
+  return sortedGroups.flatMap((group) => group);
+};
+
+const sortedList = computed(() => {
+  // 如果没有激活的排序并且有默认排序函数，使用默认排序
+  if (currentSort.value === null || currentSort.value.direction === "none") {
+    return defaultSort([...original_list]);
+  }
+  return [...original_list].sort((a, b) => {
+    const scoreKey = currentSort.value!.column;
+    const aScore = a.score?.[scoreKey];
+    const bScore = b.score?.[scoreKey];
+    // 处理 undefined 值
+    if (aScore == null && bScore == null) return 0;
+    if (aScore == null) return 1; // undefined 值放到末尾
+    if (bScore == null) return -1;
+    return currentSort.value?.direction === "asc" ? aScore - bScore : bScore - aScore;
+  });
+});
 </script>
 
 <style scoped lang="scss">
@@ -92,7 +143,6 @@ table {
   max-width: 100%;
   table-layout: fixed;
 }
-
 
 td {
   text-align: center;
