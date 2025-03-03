@@ -87,6 +87,13 @@ const headers = "游戏名 时长 游玩区间 剧情 画风 程序".split(" ");
   color: red;
 }
 
+table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+
 td {
   text-align: center;
   vertical-align: middle;

@@ -107,4 +107,8 @@ td {
   text-align: center;
   vertical-align: middle;
 }
+
+:slotted(img) {
+  max-width: 100% !important;
+}
 </style>

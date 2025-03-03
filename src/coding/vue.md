@@ -236,6 +236,10 @@ watch(slotContainer, calculateTextLength);
 </template>
 ```
 
+### components
+
+由于 Vue 分离了 html 和 js，没有 jsx 那么灵活，所以如果我们需要动态标签时，Vue 提供了 `<components>` 标签。这相当于一个万能标签，只要给它一个 `:is="'xxx'"`，它就可以变成那个标签。因此我们可以在遍历数据时再决定使用哪个标签。
+
 ### 双向绑定
 
 双向绑定指的是改值会影响页面渲染，用户操作页面也会影响值。`v-model` 是用于双向绑定的语法。

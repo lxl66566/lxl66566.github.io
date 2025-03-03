@@ -182,6 +182,7 @@ tag:
   - [ ] 全连接神经网络 + 随机突变进化
   - [ ] transformer
   - [ ] 预设算法 + 高频因子筛选
+  - [ ] [Merlion](https://github.com/salesforce/Merlion)
 - [ ] 回测平台（rust，自动收集数据，接口调用）
 - [ ] 发币（合约），构思一个尽可能公平，不会被土狗滥用的模式
 - [ ] 币价监视浮窗

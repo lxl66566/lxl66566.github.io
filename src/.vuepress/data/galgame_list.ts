@@ -6,10 +6,15 @@ const original_list: GalItemInputType[] = [
     name: "FLIP * FLOP ~RAMBLING OVERRUN~",
     valid_name: "FLIPFLOP2",
     order: 2,
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "-1min",
+    use_time: "4h28min",
     duration: {
       start: "2025-03-01",
+      end: "2025-03-03",
+    },
+    score: {
+      story: 2,
+      visual: 11,
+      program: 8,
     },
   },
   {
@@ -251,9 +256,9 @@ const original_list: GalItemInputType[] = [
     order: 1,
     use_time: "5h55min",
     score: {
-      story: 2.4,
+      story: 2.6,
       visual: 10,
-      program: 6.5,
+      program: 8,
     },
     duration: {
       start: "2024-12-12",
