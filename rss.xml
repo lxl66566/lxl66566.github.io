@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 03 Mar 2025 14:55:21 GMT</pubDate>
-    <lastBuildDate>Mon, 03 Mar 2025 14:55:21 GMT</lastBuildDate>
+    <pubDate>Wed, 05 Mar 2025 06:59:10 GMT</pubDate>
+    <lastBuildDate>Wed, 05 Mar 2025 06:59:10 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -90,24 +90,17 @@
 <li>股市和加密货币的相关性：正相关，如果加密货币投资者受到股市惊吓，也会选择抛售。例如 Deepseek 爆火当天，NVIDIA 暴跌带动加密货币小跌。（不过恢复得也很快）</li>
 </ul>
 <h3>交易所</h3>
-<p>对于买卖加密货币的普通玩家来说，使用中心化交易所是必须的。交易所在中国一般需要使用<a href="/articles/proxy/" target="_blank">科学上网</a>访问，这是没办法的。</p>
-<p>合适的交易所必须针对加密货币操作中不同的困难作出解决方案。这里我作出评判：</p>
-<ul>
-<li><a href="https://okx.com/join/48817502" target="_blank" rel="noopener noreferrer">OKX 欧易（推荐）</a>：全中文支持，C2C 支持支付宝和微信，优秀的前端 UI，还有深度技术的 web3 项目。</li>
-<li>币安：老牌交易所，但是自从赵长鹏出事后我就对其印象不佳。入坑加密货币后注册过，结果不支持日本 IP，更换 IP 后还说 IP 存在风险，无法开户合约账户，需要 KYC 验证。直接跑路。</li>
-<li>MEXC 交易所：费率很低，但是要求 KYC，不支持中国地区。</li>
-<li>Gate.io：TradingView 不适配黑夜模式；有网页卡死的情况；身份验证中出现无法识别身份证，未知原因认证失败的情况。</li>
-<li>bybit：全球第二大的交易所，活动多，还有虚拟卡能用。但是不支持香港地区。
-<ul>
-<li>2025 年初发生了 ETH 被盗事件。</li>
-</ul>
-</li>
-<li><a href="https://app.hyperliquid.xyz/" target="_blank" rel="noopener noreferrer">hyperliquid</a>：2024 年火爆的去中心化交易所，不适合新手使用；优点是费率低，并且可以高回报地跟单。有一些 bot 带单的我觉得非常值得尝试。（与其自己研究不如直接吃成果，对方拿分成，winwin）</li>
-</ul>
+<p>使用中心化交易所是必须的，只有中心化交易所才可以在法币（人民币）和加密货币中进行交换。在获得加密货币资产后，玩家就可以任意选择中心化（CEX）或去中心化（DEX）交易所了。</p>
+<p>所有交易所在中国一般需要使用<a href="/articles/proxy/" target="_blank">科学上网</a>访问，这是没办法的。</p>
+
 <h4>奖励与活动</h4>
 <p>交易所会经常发关于新币和活动的公告，可以关注一下：</p>
 <ul>
-<li><a href="https://www.okx.com/zh-hans/help/section/announcements-latest-announcements" target="_blank" rel="noopener noreferrer">OKX 公告</a></li>
+<li><a href="https://www.okx.com/zh-hans/help/section/announcements-latest-announcements" target="_blank" rel="noopener noreferrer">OKX 公告</a>
+<ul>
+<li>我自己用 RSSHub 做了 <a href="https://docs.rsshub.app/zh/routes/finance#%E6%AC%A7%E6%98%93-okx" target="_blank" rel="noopener noreferrer">OKX 的公告订阅</a>，欢迎使用。</li>
+</ul>
+</li>
 </ul>
 <h3>开始交易</h3>
 <p>交易前有一些基础知识，建议搜索学习。</p>
@@ -138,7 +131,7 @@
 <p>然而，现货交易在某些情况下具有优势，例如当你需要<strong>加密货币本身</strong>时。比如你可能需要 ETH 来进行质押，或者需要 SOL 来购买 NFT。不过，对于加密货币的新手和投机者，这些选项可以暂时不予考虑。</p>
 <p>合约交易时千万要记住：<strong>小心爆仓</strong>。由于整个币圈是恐惧与贪婪并存的，一旦遇上契机，暴涨/暴跌会被放大，价格变化远比想象中要大。因此一定要谨慎设置杠杆与止损，确保预估强平价是合理的。</p>
 <h4>做多 vs 做空</h4>
-<p>做空和做多看起来是平等的，但是做空的性价比实际上是不如做多的。</p>
+<p>做空和做多看起来平等，但是做空的性价比实际上是不如做多的。</p>
 <ol>
 <li>理论（不考虑杠杆）：做空最大盈利一倍，而做多最大盈利为正无穷。
 <ul>
@@ -237,7 +230,7 @@
 <li>还有，别忘了使用低延迟的代理。</li>
 </ol>
 <p>即使不做短期高频交易而是直接做大空，赚得也不算太多，因为币价波动太大，为了防止爆仓，杠杆不能开太高。那这时候要怎么办呢？还记得前面说网格策略适合交易波动性大的币种吗？刚好新币的波动性大，这时候狠狠上做空网格就行了。我一般会把 2x, 3x, 5x, 10x 的网格都套上，也算是分摊一些风险。包括马丁格尔策略也可以直接在新币上使用，毕竟我们知道了新币的总体趋势。这样就大概能把新币上的所有油水榨出来了。</p>
-<p>当然也并不是每个新币都必定会长跌，一些有潜力的 layer1 链可能会不跌反涨，把你的网格和马丁顶爆仓。</p>
+<p>当然也并不是每个新币都必定会长跌，一些有潜力的 layer1 链可能会不跌反涨，把你的网格和马丁顶爆仓，比如 IP 和 KAITO。</p>
 <h2>区块链与合约</h2>
 <p>接下来的内容就不是关于如何赚钱的了，而是关于加密货币底层原理与技术的讨论。不过我也是新手，难免遇到错漏，还望指正。</p>
 <h3>学习资料</h3>
