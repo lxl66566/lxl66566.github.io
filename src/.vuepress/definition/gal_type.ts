@@ -19,6 +19,10 @@ export type GalItemInputType = {
    */
   valid_name?: string;
   /**
+   * 资源或游戏链接
+   */
+  url?: string;
+  /**
    * 是否**不是**严格定义的 galgame
    */
   not_strict?: boolean;

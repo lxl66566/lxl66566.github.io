@@ -22,6 +22,14 @@ category:
 
 ## 2025
 
+### 20250305
+
+- 添加组件 Explain 用于节点提示，添加组件 CryptocurrencyExchangeList 用于展示交易所列表
+
+### 20250303
+
+- galgame_list 支持按照分数排序
+
 ### 20250222
 
 - 移除 xxx_interval 图表，数据已迁移到 [telegram-shasei-bot](https://github.com/lxl66566/telegram-shasei-bot)。

@@ -2,6 +2,22 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "淫獄の8番街・少女探偵ミオリの怪異ノート",
+    valid_name: "淫獄の8番街少女探偵ミオリの怪異ノート",
+    not_strict: true,
+    url: "https://t.me/absolutexsresource/21",
+    use_time: "<30min>",
+    duration: {
+      start: "2025-03-05",
+      end: "2025-03-05",
+    },
+    score: {
+      story: 0,
+      visual: 8.3,
+      program: 2.7,
+    },
+  },
+  {
     name: "FLIP * FLOP ~RAMBLING OVERRUN~",
     valid_name: "FLIPFLOP2",
     order: 2,

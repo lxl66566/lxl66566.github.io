@@ -76,23 +76,62 @@ tag:
 
 ### 交易所
 
-对于买卖加密货币的普通玩家来说，使用中心化交易所是必须的。交易所在中国一般需要使用[科学上网](./proxy/index.md)访问，这是没办法的。
+使用中心化交易所是必须的，只有中心化交易所才可以在法币（人民币）和加密货币中进行交换。在获得加密货币资产后，玩家就可以任意选择中心化（CEX）或去中心化（DEX）交易所了。
 
-合适的交易所必须针对加密货币操作中不同的困难作出解决方案。这里我作出评判：
+所有交易所在中国一般需要使用[科学上网](./proxy/index.md)访问，这是没办法的。
 
-- [OKX 欧易（推荐）](https://okx.com/join/48817502)：全中文支持，C2C 支持支付宝和微信，优秀的前端 UI，还有深度技术的 web3 项目。
-- 币安：老牌交易所，但是自从赵长鹏出事后我就对其印象不佳。入坑加密货币后注册过，结果不支持日本 IP，更换 IP 后还说 IP 存在风险，无法开户合约账户，需要 KYC 验证。直接跑路。
-- MEXC 交易所：费率很低，但是要求 KYC，不支持中国地区。
-- Gate.io：TradingView 不适配黑夜模式；有网页卡死的情况；身份验证中出现无法识别身份证，未知原因认证失败的情况。
-- bybit：全球第二大的交易所，活动多，还有虚拟卡能用。但是不支持香港地区。
-  - 2025 年初发生了 ETH 被盗事件。
-- [hyperliquid](https://app.hyperliquid.xyz/)：2024 年火爆的去中心化交易所，不适合新手使用；优点是费率低，并且可以高回报地跟单。有一些 bot 带单的我觉得非常值得尝试。（与其自己研究不如直接吃成果，对方拿分成，winwin）
+<CryptocurrencyExchangeList>
+<template #欧易>
+
+全中文支持，C2C 支持支付宝和微信，优秀的前端 UI，还有深度技术的 web3 项目。
+
+</template>
+<template #币安>
+
+- 老牌交易所，但是自从赵长鹏出事后我就对其印象不佳。
+- 入坑加密货币后注册过，结果不支持日本 IP，更换 IP 后还说 IP 存在风险，无法开通合约账户，需要 KYC 验证。直接跑路。
+
+</template>
+<template #MEXC>
+
+- 现货费率很低，但是要求 KYC，不支持中国地区。
+
+</template>
+<template #gateio>
+
+- TradingView 不适配黑夜模式
+- 有网页卡死的情况
+- 身份验证中出现无法识别身份证，未知原因认证失败的情况。
+
+</template>
+<template #bybit>
+
+- 全球第二大的交易所，活动多，还有虚拟卡能用。但是不支持香港地区。
+- 2025 年初发生了 ETH 被盗事件。
+
+</template>
+<template #htx>
+
+- 也对大陆用户友好，但是我个人没啥好感。
+- 页面优化稍差
+- 策略机器人只有网格，太少了
+
+</template>
+<template #hyperliquid>
+
+- 2024 年火爆的**去中心化**交易所。需要把法币换成 USDC，提币到钱包再转到 hyperliquid 内。
+- 优点是费率低，并且可以高回报地跟单。
+- 有一些 bot 带单的我觉得非常值得尝试。（与其自己研究不如直接吃成果，对方拿分成，winwin）
+
+</template>
+</CryptocurrencyExchangeList>
 
 #### 奖励与活动
 
 交易所会经常发关于新币和活动的公告，可以关注一下：
 
 - [OKX 公告](https://www.okx.com/zh-hans/help/section/announcements-latest-announcements)
+  - 我自己用 RSSHub 做了 [OKX 的公告订阅](https://docs.rsshub.app/zh/routes/finance#欧易-okx)，欢迎使用。
 
 ### 开始交易
 
@@ -123,7 +162,7 @@ tag:
 
 #### 做多 vs 做空
 
-做空和做多看起来是平等的，但是做空的性价比实际上是不如做多的。
+做空和做多看起来平等，但是做空的性价比实际上是不如做多的。
 
 1. 理论（不考虑杠杆）：做空最大盈利一倍，而做多最大盈利为正无穷。
    - 做空就是向交易所借货币而立即卖成钱，然后在币价下降时买入等量货币还给交易所。极限一点，币价跌到 0，无需还币给交易所，但是盈利也就只有借来的那么多钱。
@@ -213,7 +252,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 
 即使不做短期高频交易而是直接做大空，赚得也不算太多，因为币价波动太大，为了防止爆仓，杠杆不能开太高。那这时候要怎么办呢？还记得前面说网格策略适合交易波动性大的币种吗？刚好新币的波动性大，这时候狠狠上做空网格就行了。我一般会把 2x, 3x, 5x, 10x 的网格都套上，也算是分摊一些风险。包括马丁格尔策略也可以直接在新币上使用，毕竟我们知道了新币的总体趋势。这样就大概能把新币上的所有油水榨出来了。
 
-当然也并不是每个新币都必定会长跌，一些有潜力的 layer1 链可能会不跌反涨，把你的网格和马丁顶爆仓。
+当然也并不是每个新币都必定会长跌，一些有潜力的 layer1 链可能会不跌反涨，把你的网格和马丁顶爆仓，比如 IP 和 KAITO。
 
 ## 区块链与合约
 
@@ -223,3 +262,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 
 - [yeasy/区块链技术指南](https://yeasy.gitbook.io/blockchain_guide)
 - [The Solana Programming Model: An Introduction to Developing on Solana](https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana)
+
+<script setup lang="ts">
+import CryptocurrencyExchangeList from "@CryptocurrencyExchangeList";
+</script>

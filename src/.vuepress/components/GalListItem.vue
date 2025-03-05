@@ -2,7 +2,9 @@
   <ExpandableListItem :expandable="props.expandable" :extra_tr_class="props.item.not_strict ? ['not-strict'] : []">
     <template #list-content>
       <td>
-        <span>{{ props.item.name }}</span>
+        <span v-if="!props.item.url">{{ props.item.name }}</span>
+        <a v-else :href="props.item.url" target="_blank">{{ props.item.name }}</a>
+
         <span v-if="props.item.order || props.item.all_ages || props.item.namaniku || props.item.intense">
           <span>&thinsp;</span>
           <OrderBadge :order="props.item.order" v-if="props.item.order" />

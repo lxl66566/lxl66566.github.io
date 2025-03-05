@@ -181,3 +181,4 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 7. [日语易错翻译对照表](https://docs.google.com/spreadsheets/d/1WvsPzbXq2ohwdXBqu4xqkfGvK_dMH_B1YbPZEWAPVkA/edit?gid=0#gid=0)
 8. [JLPT 备考平台](https://jlpt.nnde.de/zh)
 9. [饭团君的日语口语教室](https://aiueo.cc/pages/ch/grammars.php)
+10. [日本“失落的三十年”：教育空心化与人才危机](https://t.me/c/2245001230/442)
