@@ -25,7 +25,7 @@ const sortOrder = ref<'none' | 'asc' | 'desc'>('none')
 </template>
 
 <script lang="ts" setup>
-import { ref, watch, defineProps, defineEmits } from 'vue'
+import { ref, watch } from 'vue'
 
 // 定义 props
 const props = defineProps<{

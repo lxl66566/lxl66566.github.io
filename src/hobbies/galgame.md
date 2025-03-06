@@ -982,6 +982,11 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 
 <GalExhibitionGrid :items="exhibition_data"/>
 
+其他“九宫格”：
+
+- 最好的时穿作：_ISLAND_（_流景之海的艾佩理雅_ 的时穿推理虽然精彩，但是（剧透内容：）<heimu>最后还是回归了缸中之脑的解释</heimu> 因此不敌 _ISLAND_）
+- 最冲爆：_FLIP \* FLOP ~RAMBLING OVERRUN~_
+
 ## 我的设置
 
 在游玩过程中逐渐形成了这样一套设置 & 习惯...开~~心~~新 gal 之后的首要任务就是设置。以下列出部分。
