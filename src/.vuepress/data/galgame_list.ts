@@ -158,10 +158,15 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "青鸟",
-    use_time: "-1min",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "12h58min",
     duration: {
       start: "2024-11-17",
+      end: "2025-03-06",
+    },
+    score: {
+      story: 5.9,
+      visual: 5.5,
+      program: 5.5,
     },
   },
   {
@@ -241,9 +246,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "少女领域",
-    playing_status: PlayingStatus.PAUSED,
     duration: {
       start: "2020-10-29",
+      end: "2024-05-12",
     },
     score: {
       story: 4.2,
@@ -272,7 +277,7 @@ const original_list: GalItemInputType[] = [
     use_time: "5h55min",
     score: {
       story: 2.6,
-      visual: 10,
+      visual: 10.2,
       program: 8,
     },
     duration: {
@@ -353,6 +358,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "聖光天使マリア 悪堕ち連鎖・狂い咲き",
     valid_name: "聖光天使マリア悪堕ち連鎖狂い咲き",
+    url: "https://t.me/absolutexsresource/14",
     use_time: "2h10min",
     score: {
       story: 0.2,
@@ -435,6 +441,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "铃色记忆",
+    url: "https://hoshinasuzu.cc/suzu-memory/",
     all_ages: true,
     use_time: "<20min>",
     score: {
@@ -467,7 +474,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "月之少女河中天使成神之刻",
     use_time: "3h3min",
     score: {
-      story: 5.1,
+      story: 5,
       visual: 5.6,
       program: 4.7,
     },
@@ -553,7 +560,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 6.5,
       visual: 5.5,
-      program: 9.9,
+      program: 7.8,
     },
     duration: {
       start: "2024-01-31",
@@ -607,7 +614,7 @@ const original_list: GalItemInputType[] = [
     name: "初雪樱",
     use_time: "25h28min",
     score: {
-      story: 9.1,
+      story: 8.9,
       visual: 7.6,
       program: 7.5,
     },
@@ -635,7 +642,7 @@ const original_list: GalItemInputType[] = [
     use_time: "67h58min",
     order: 1,
     score: {
-      story: 5,
+      story: 4,
       visual: 5.5,
       program: 6,
     },
@@ -648,7 +655,7 @@ const original_list: GalItemInputType[] = [
     name: "君と彼女と彼女の恋",
     use_time: "10h16min",
     score: {
-      story: 9.8,
+      story: 9.5,
       visual: 4.2,
       program: 5.4,
     },
@@ -834,6 +841,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "melancholianna",
+    url: "https://melancholianna.pages.dev/",
     not_strict: true,
     use_time: "30min?",
     score: {
@@ -1279,7 +1287,7 @@ const original_list: GalItemInputType[] = [
     order: 3,
     score: {
       story: 3,
-      visual: 5,
+      visual: 5.8,
       program: 3,
     },
     duration: {

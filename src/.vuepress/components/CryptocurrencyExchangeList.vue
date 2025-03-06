@@ -147,7 +147,8 @@ const data: CryptocurrencyExchangeListItemType[] = [
     },
   },
   {
-    name: "htx",
+    name: "火币 htx",
+    valid_name: "htx",
     url: "https://www.htx.com/invite/zh-cn/1f?invite_code=bwca9223",
     exchange_type: ExchangeType.CEX,
     大陆支付方式: true,

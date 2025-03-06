@@ -46,7 +46,7 @@ APlayer 在 Github 上很火，并且有一个叫 “随机播放全部” 的�
 
 Gramophone 和 Phocid 这俩都是 Material，非常相似，甚至播放进度条的样式都是一模一样的，使用手感也差不多。根据上表，我更倾向于 Phocid。
 
-Oto Music 也是 Material 的，优点是自带均衡器。
+Oto Music 也是 Material 的，优点是自带均衡器。[这里](https://t.me/xyxyspace/1746)有破解了高级版的。
 
 Phonograph Plus 有出现文件夹点不开的 bug。
 
