@@ -110,7 +110,7 @@ tag:
     2. 自动解压路径中遇到的压缩文件，当成目录处理。
   - 参考：[Qwen2-VL](https://github.com/QwenLM/Qwen2-VL)
 - [ ] rust-checkenizer: rust lsp based on cargo check. NO MORE RA NEEDED.
-- [ ] 加密货币实时币价悬浮窗，tauri
+- [ ] rust easy context like tokio/compio do.
 
 ### RIIR
 

@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "はるまで、くるる。",
+    valid_name: "はるまでくるる",
+    use_time: "-1min",
+    duration: {
+      start: "2025-03-06",
+    },
+  },
+  {
     name: "淫獄の8番街・少女探偵ミオリの怪異ノート",
     valid_name: "淫獄の8番街少女探偵ミオリの怪異ノート",
     not_strict: true,

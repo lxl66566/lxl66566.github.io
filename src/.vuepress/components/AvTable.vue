@@ -425,6 +425,9 @@ const data = [
   { id: "if-011-01", aScore: 8.5, bScore: 6.3, name: "もし放課後の学校でエッチしたら／Rem" },
   { id: "sone-272", aScore: 7.3, bScore: 6.8, u: true, name: "年末年始、広い学生寮で女学生とおじさん管理人が2人きり… 禁断シチュに欲情した中年ち●ぽと寂しさ埋めたい若い少女おま●こは相性良すぎて合体し続けた。 浅野こころ" },
   { id: "dass-075", aScore: 7.8, bScore: 8.5, u: true, name: "俺から逃げれると思うなよ 教師失格。教え子ゴチソウサマ。体液どろねちゃ卑劣調教 皆瀬あかり" },
+  { id: "stars-120", aScore: 7.6, bScore: 4.8, u: true, name: "#大乱交 #泳衣 SODstar 11 SEX BUBBLE PARTY 2019 〜プールで感度アゲアゲイキまくり編〜 - 紗倉まな" },
+  { id: "huntc-205", aScore: 6.8, bScore: 4, name: "学校で一軍女子のボクの義妹はエロ漫画なんか読まない！と思っていたら…義妹は家ではオタク兄のエロ漫画を読み漁り！エロ漫画で興奮しまくる…" },
+  { id: "GVH-531", aScore: 7.9, bScore: 5.3, name: "最初に絶対「ダメっ…」とOKしてくれないナチュラル敏感発育中連れ子を、中年オヤジの乳首マネジメント躾で育て上げ懇願淫語で欲してくるまでにスケベ雌犬化させた。 白夜みくる" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

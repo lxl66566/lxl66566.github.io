@@ -195,7 +195,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [Sekai Stickers](https://st.ayaka.one/)：生成 pjsk 吊图
 - [ASCII art](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Generator)：Terminal 艺术字符
 
-[^1]: 最初链接是[这个](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)，123 盘不限速下载。到 2025 开始收费，所以换了一个，只有夸克网盘，下得非常慢。
+[^1]: 最初链接是[这个](https://www.yuque.com/books/share/0724a9b2-dd68-45aa-8486-02525a30c775)，123 盘不限速下载。到 2025 开始收费，所以换了一个，只有[夸克网盘](https://pan.quark.cn/s/593405093bad#/list/share)，下得非常慢。
 
 ### 图片相关
 
