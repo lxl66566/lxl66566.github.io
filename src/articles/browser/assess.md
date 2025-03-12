@@ -55,7 +55,7 @@ tag:
 
 - chrome （在某个时期）的槽点大概是吃内存非常恐怖。但是实际跟其他两家应该差不了多少。
 - chrome 的一些服务在国内无法使用，需要科学上网。
-- chrome / chromium 没有原生侧边栏。而网上的一大堆侧边栏插件要么不稳定容易崩溃，要么就自定义化程度过低，要么性能不够，总之我还是期待使用原生侧边栏的浏览器。
+- chrome / chromium 没有原生垂直标签栏。而网上的一大堆垂直标签栏插件要么不稳定容易崩溃，要么就自定义化程度过低，要么性能不够，总之我还是期待使用原生垂直标签栏的浏览器。
 
 ### firefox
 
@@ -125,7 +125,7 @@ firefox 相对来说比较自由，毕竟 mozilla is [not a normal tech company]
 
 ### [Floorp](https://floorp.app/)
 
-基于 firefox 的浏览器，支持原生侧边栏。数据可以直接从 firefox 同步。我个人认为是要比 firefox 好用的。（而且在滚动发行版上还能降低一点更新频率）
+基于 firefox 的浏览器，支持原生垂直标签栏。数据可以直接从 firefox 同步。我个人认为是要比 firefox 好用的。（而且在滚动发行版上还能降低一点更新频率）
 
 坏处是崩溃频率也大了一点。
 
@@ -143,6 +143,10 @@ brave 是一个 chromium 内核，与广告和加密货币共生的浏览器。
 - **不支持清除特定网站的 cookies**。。我尝试去 help 里看，看到[一篇教程](https://support.brave.com/hc/en-us/articles/360048833872-How-Do-I-Clear-Cookies-And-Site-Data-In-Brave#2)，但是根本没有 _Additional settings_ 设置项，甚至 `brave://settings/siteData` 都是空的。。笑死了。
   - 这导致遇到问题根本没法排查。
 - 然后用了一段时间以后，莫名其妙**很多 js 和其他资源没法加载**。我用其他浏览器是可以的，排除了网络问题。
+
+### Librewolf
+
+也是 firefox 的 fork 版本，没有原生垂直标签栏，那么我为什么不用 floorp 呢？
 
 ### Opera
 

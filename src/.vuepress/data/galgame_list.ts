@@ -2,6 +2,21 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "女祭司之眼",
+    not_strict: true,
+    url: "https://t.me/Alice_In_Cradle/29369",
+    use_time: "<50min>",
+    duration: {
+      start: "2025-03-12",
+      end: "2025-03-12",
+    },
+    score: {
+      story: 0.1,
+      visual: 2.7,
+      program: 0,
+    },
+  },
+  {
     name: "はるまで、くるる。",
     valid_name: "はるまでくるる",
     use_time: "-1min",

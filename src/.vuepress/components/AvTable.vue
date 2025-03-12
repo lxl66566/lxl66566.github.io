@@ -428,6 +428,7 @@ const data = [
   { id: "stars-120", aScore: 7.6, bScore: 4.8, u: true, name: "#大乱交 #泳衣 SODstar 11 SEX BUBBLE PARTY 2019 〜プールで感度アゲアゲイキまくり編〜 - 紗倉まな" },
   { id: "huntc-205", aScore: 6.8, bScore: 4, name: "学校で一軍女子のボクの義妹はエロ漫画なんか読まない！と思っていたら…義妹は家ではオタク兄のエロ漫画を読み漁り！エロ漫画で興奮しまくる…" },
   { id: "GVH-531", aScore: 7.9, bScore: 5.3, name: "最初に絶対「ダメっ…」とOKしてくれないナチュラル敏感発育中連れ子を、中年オヤジの乳首マネジメント躾で育て上げ懇願淫語で欲してくるまでにスケベ雌犬化させた。 白夜みくる" },
+  { id: "HUNBL-122", aScore: 7.8, bScore: 9.6, name: "［失踪届］アカリ ボクの妹を探しています。" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

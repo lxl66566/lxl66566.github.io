@@ -723,6 +723,9 @@ const data = [
   { id: "(eh)", aScore: 8, bScore: 0.3, info: "#碧蓝航线 #差分", otherlink: "https://e-hentai.org/g/3255698/874a53dffe/", bak: "https://telegra.ph/円つくも-長門との毎夜-アズールレーン-中国翻訳-03-01" },
   { id: "560213", aScore: 6.4, bScore: 7.2, info: "#触手 #史莱姆 #精神失常", bak: "https://telegra.ph/夜の勉強会-ふみひろ-美遊と触手の本-Fatekaleid-liner-プリズマイリヤ-中国翻訳-DL版-03-05" },
   { id: "560130", aScore: 8.7, bScore: 9.4, info: "#兽耳 #正太 #父女 #多P", bak: "https://telegra.ph/Chirimen-Naoyuki-Naoyuki-Rorikko-Taisha-no-Kamikakushi-03-05" },
+  { id: "560705", aScore: 8, bScore: 8.9, info: "#VTuber", bak: "https://telegra.ph/NaCl-無糖しお-ASMR録音中-無糖しお-中国翻訳-DL版-03-07" },
+  { id: "560199", aScore: 6.4, bScore: 7.7, info: "#青梅竹马 #同学 #纯爱" },
+  { id: "561320", aScore: 7.4, bScore: 7.3, info: "#天然 #蔚蓝档案", bak: "https://telegra.ph/つるつるおでこ-で子-忍者少女のお勉強-ブルーアーカイブ-2024年1月15日-中国翻訳-DL版-03-10" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
