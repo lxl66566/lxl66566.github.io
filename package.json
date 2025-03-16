@@ -11,17 +11,21 @@
     "update-package": "npx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.13",
-    "@vuepress/plugin-feed": "2.0.0-rc.34",
-    "@vuepress/plugin-pwa": "2.0.0-rc.34",
-    "katex": "^0.16.10",
-    "mermaid": "^10.9.1",
-    "typescript": "^5.7.2",
-    "vue": "^3.4.27",
-    "vuepress": "2.0.0-rc.13",
-    "vuepress-plugin-md-enhance": "2.0.0-rc.48",
-    "vuepress-plugin-search-pro": "2.0.0-rc.48",
-    "vuepress-theme-hope": "2.0.0-rc.48"
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "@vuepress/plugin-feed": "2.0.0-rc.82",
+    "@vuepress/plugin-markdown-math": "2.0.0-rc.83",
+    "@vuepress/plugin-pwa": "2.0.0-rc.82",
+    "@vuepress/plugin-remove-pwa": "2.0.0-rc.79",
+    "@vuepress/plugin-slimsearch": "2.0.0-rc.82",
+    "katex": "0.16.21",
+    "mermaid": "11.5.0",
+    "nodejs-jieba": "^0.3.0",
+    "sass-embedded": "^1.85.1",
+    "typescript": "5.8.2",
+    "vue": "3.5.13",
+    "vuepress": "2.0.0-rc.20",
+    "vuepress-plugin-md-enhance": "2.0.0-rc.74",
+    "vuepress-theme-hope": "2.0.0-rc.74"
   },
   "pnpm": {
     "overrides": {

@@ -1,12 +1,12 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { cut } from "nodejs-jieba";
+import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
 
 export default hopeTheme({
   pure: true,
   hostname: "https://absx.pages.dev",
-  iconAssets: ["fontawesome-with-brands"],
-  iconPrefix: "fas fa-",
   logo: "/logo.jpg",
   repo: "https://github.com/lxl66566/lxl66566.github.io",
   docsDir: "src",
@@ -15,6 +15,43 @@ export default hopeTheme({
   editLink: false,
   contributors: false,
   breadcrumb: false,
+
+  markdown: {
+    align: true,
+    alert: true,
+    codeTabs: true,
+    // attrs: true,
+    imgLazyload: true,
+    imgSize: true,
+    imgMark: true,
+    figure: true,
+    math: {
+      type: "katex",
+      copy: true,
+      displayMode: true,
+    },
+    include: true,
+    spoiler: true, // https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html
+    hint: true,
+    mark: true,
+    footnote: true,
+    tabs: true,
+    tasklist: true,
+    mermaid: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+        },
+      },
+    ],
+  },
   encrypt: {
     config: {
       "/articles/vpn.html": ["2003"],
@@ -42,10 +79,23 @@ export default hopeTheme({
   },
   plugins: {
     blog: { excerptLength: 1 },
-    searchPro: {
-      indexContent: true,
-      autoSuggestions: true,
+    icon: {
+      assets: ["fontawesome-with-brands"],
+      prefix: "fas fa-",
     },
+    slimsearch: {
+      indexContent: true,
+      suggestion: true,
+      searchDelay: 500,
+      indexOptions: {
+        // 使用 nodejs-jieba 进行分词
+        tokenize: (text, fieldName) => (fieldName === "id" ? [text] : cut(text, true)),
+      },
+    },
+    // searchPro: {
+    //   indexContent: true,
+    //   autoSuggestions: true,
+    // },
     comment: {
       provider: "Giscus",
       repo: "lxl66566/lxl66566.github.io",
@@ -55,38 +105,6 @@ export default hopeTheme({
       mapping: "pathname",
       lightTheme: "light",
       darkTheme: "transparent_dark",
-    },
-    mdEnhance: {
-      align: true,
-      alert: true,
-      codetabs: true,
-      // attrs: true,
-      imgLazyload: true,
-      imgSize: true,
-      imgMark: true,
-      figure: true,
-      include: true,
-      katex: { copy: true },
-      spoiler: true, // https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html
-      hint: true,
-      mark: true,
-      footnote: true,
-      tabs: true,
-      tasklist: true,
-      mermaid: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
     },
     feed: {
       rss: true,
@@ -106,5 +124,6 @@ export default hopeTheme({
         ],
       },
     },
+    // removePwa: removePwaPlugin({}),
   },
 });

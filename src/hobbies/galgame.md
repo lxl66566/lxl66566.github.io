@@ -251,7 +251,7 @@ LunaTranslator 使用心得：
 结尾断章，等第二部。啊啊啊啊啊，我立志不读未完结小说，结果被 gal 坑了。
 
 </template>
-<template #転性魔王さまは勇者に勝てない！>
+<template #転性魔王さまは勇者に勝てない>
 
 <Badge text="性转"/>
 

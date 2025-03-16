@@ -85,7 +85,7 @@ onMounted(() => {
 }
 
 .expandable:hover {
-  outline: solid 1px var(--theme-color);
+  outline: solid 1px var(--vp-c-accent);
 }
 
 .expanded-content {

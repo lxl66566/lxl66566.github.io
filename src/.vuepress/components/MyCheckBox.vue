@@ -83,11 +83,11 @@ const toggle = () => {
   }
 
   &:hover {
-    border-color: var(--theme-color);
+    border-color: var(--vp-c-accent);
   }
 
   &.checked {
-    border-color: var(--theme-color);
+    border-color: var(--vp-c-accent);
   }
 
   &:hover .hint {
@@ -104,7 +104,7 @@ const toggle = () => {
 input[type="checkbox"] {
   width: 15px;
   height: 15px;
-  accent-color: var(--theme-color);
+  accent-color: var(--vp-c-accent);
   /* 设置 checkbox 选中时的颜色 */
   cursor: pointer;
   margin: 0;

@@ -94,12 +94,12 @@ watch(() => props.boxData, updateColumns);
 
 .box {
   margin: 5px;
-  border: 2px solid var(--theme-color);
+  border: 2px solid var(--vp-c-accent);
   border-radius: 5px;
 
   a {
     text-decoration: none;
-    color: var(--theme-color);
+    color: var(--vp-c-accent);
   }
 }
 
@@ -109,7 +109,7 @@ watch(() => props.boxData, updateColumns);
 
 fieldset {
   legend {
-    color: var(--theme-color);
+    color: var(--vp-c-accent);
     font-size: 1.3rem;
   }
 }

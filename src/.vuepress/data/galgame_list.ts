@@ -139,6 +139,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "転性魔王さまは勇者に勝てない！",
+    valid_name: "転性魔王さまは勇者に勝てない",
     namaniku: true,
     use_time: "5h47min",
     duration: {
