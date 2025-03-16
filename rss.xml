@@ -6,18 +6,77 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 12 Mar 2025 11:36:36 GMT</pubDate>
-    <lastBuildDate>Wed, 12 Mar 2025 11:36:36 GMT</lastBuildDate>
+    <pubDate>Sun, 16 Mar 2025 16:21:33 GMT</pubDate>
+    <lastBuildDate>Sun, 16 Mar 2025 16:21:33 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>推荐</category>
-    <category>教程</category>
     <category>经历</category>
+    <category>教程</category>
+    <category>推荐</category>
     <category>评价</category>
     <category>随笔</category>
     <category>编程</category>
     <category>学习</category>
     <category>爱好</category>
+    <item>
+      <title>装机</title>
+      <link>https://absx.pages.dev/gossip/pc_hardware.html</link>
+      <guid>https://absx.pages.dev/gossip/pc_hardware.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">装机</source>
+      <description>装机 背景 DIY 一台属于自己的电脑，可以说是大多数男生的梦想。我从高中开始混图拉丁吧，作为纯理论学家，一直梦想着配一台自己的主机，也陆陆续续给老家的电脑换了 CPU、内存、显卡、硬盘等，但是一直都没有真正经历一次完整的装机。终于在大四下学期，由于一些契机，我开始了我的首装。 工具 装机涉及对硬件的安装测试等，如果你主要是通过闲鱼购买配件进行装机，有...</description>
+      <category>经历</category>
+      <category>教程</category>
+      <pubDate>Sun, 16 Mar 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>背景</h2>
+<p>DIY 一台属于自己的电脑，可以说是大多数男生的梦想。我从高中开始混图拉丁吧，作为纯理论学家，一直梦想着配一台自己的主机，也陆陆续续给老家的电脑换了 CPU、内存、显卡、硬盘等，但是一直都没有真正经历一次完整的装机。终于在大四下学期，由于一些契机，我开始了我的首装。</p>
+<h2>工具</h2>
+<p>装机涉及对硬件的安装测试等，如果你主要是通过闲鱼购买配件进行装机，有一些好用的工具是很有必要的。这里推荐一些，必要的我会标出 <code>必备</code>。（虽然有些工具我目前还没有，但是作为男人的梦想，总有一天我会集齐，成为一个合格的装机佬的！）（现在我可以理解有些装机瘾犯了的装机佬上门装机只收路费的精神状态了）</p>
+<h3>硬件类</h3>
+<p>这里默认机子外设都齐全。</p>
+<ul>
+<li>螺丝刀（必备），大把 &amp; 小把都要，一般十字即可。为避免滑丝，务必选择合适的刀头。其实拧螺丝有点学问在的，可以看看 <a href="https://www.bilibili.com/video/BV1zMqsYNERc/" target="_blank" rel="noopener noreferrer">这么多年螺丝都拧错了！ - 4AM 居士</a>补充知识。</li>
+<li>装机 U 盘（必备）带系统 ISO 和 PE，这个不多说了。我用 ventoy + edgeless 还行，能带的系统挺多的，就是老电脑（例如 10 年前的 4G 内存及以下的电脑）兼容性会差一点。（你真的差这一点吗？）</li>
+<li>橡皮（必备）：用来擦金手指的，非常建议备一块。</li>
+<li>万用表：弱电工程师王道工具，可以测主板，测显卡等。</li>
+<li>电源测试器：专门测电脑电源的。带屏的 25CNY 左右可以显示实时电压，不带屏的 15CNY 左右只能显示是否正常。</li>
+<li>亮机卡：万一客户显卡出问题了，没有核显和板载……</li>
+<li>硅脂：消耗品。</li>
+<li>铝制散热鳍片：CPU/GPU 的核心升温是非常快的，基本上进个 bios 就能突破 80 度，再拖几秒就过热死机了。亮机测试时肯定不想装砖头散热器吧，而且不涂硅脂会刮花散热头，所以自己带个散热鳍片放上，并且注意测试时的时间比较明智。</li>
+</ul>
+<h3>软件类</h3>
+<ul>
+<li><a href="https://www.tbtool.cn/" target="_blank" rel="noopener noreferrer">图吧工具箱</a>（必备）：一堆有用小工具的集合。之后不会再赘述图吧工具箱里已有的工具了。</li>
+<li>鲁大师绿色版（必备）：综合跑分的。吾爱破解里有。</li>
+<li><a href="https://github.com/zbezj/HEU_KMS_Activator/releases" target="_blank" rel="noopener noreferrer">HEU_KMS_Activator</a>（必备）：客户要激活 windows，很正常的需求。</li>
+<li><a href="/articles/proxy/proxy_software.html" target="_blank">代理工具</a>：至少不会被下载速度和可访问性拦住，遇到事也能问问 google。</li>
+<li>驱动精灵绿色版：一键打驱动的。也可以换成其他的驱动工具，例如 360 驱动大师。</li>
+</ul>
+<h2>玩转闲鱼</h2>
+<p>国内最大二手交易平台，水挺深，购物需谨慎。</p>
+<ol start="0">
+<li><strong>不要场外交易</strong>，诱导去场外的一律视为骗子，不要侥幸。</li>
+<li>作为买家，一定要记得<strong>拍开箱视频</strong>；作为卖家，尽可能在发货前拍装箱视频，可以证明商品完好性和当前时间的。</li>
+<li>看到满意的货，先点对方头像看是个人还是贩子，评价如何。不是说一定要避开贩子，只是心理要有个底。</li>
+<li>交流时:
+<ul>
+<li>隐瞒瑕疵是商家的常用小计俩，如果有在意的地方一定要问清楚。</li>
+<li>如果对方避而不答，要注意。</li>
+<li>尽量把己方的诉求在聊天里写明白。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>也可以多玩玩小法庭，一个是确实优质下饭材料，另一个是可以看别人的判例，来规范自身的行为，增加警惕性和谈判技巧。</li>
+</ul>
+<h2>2025 首次装机</h2>
+<p>本次装机算是比较鲁莽的行动，在契机的推动下，我几乎是在一天之内定下了所有配置信息，这使得我的背景调查不够充足。</p>
+<h3>配置</h3>
+<p>| 配件     | 渠道           | 型号                                           | 价格 |
+|</p>
+]]></content:encoded>
+      <enclosure url="https://absx.pages.dev/images/gossip/pc_hardware/corsair_power.png" type="image/png"/>
+    </item>
     <item>
       <title>Android 音乐播放器横评</title>
       <link>https://absx.pages.dev/articles/android_player.html</link>
@@ -330,10 +389,17 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20250223 四年前我对世界与未来抱有的梦想，都变成了现在的无奈和妥协。 20250214 人类违背自然选择的举措会使基因劣化——但我才不会去关心死后的世界。 20250109 大众认可的美是艺术，只有自己认可并且坚信的美也是艺术。但是你要是拿自己的艺术强迫大众接受，那还是滚吧。 20250107</description>
+      <description>2025 20250315 寝室里衣服在动，要么是阴气太重，要么是阳气太重。 ——舍友 20250313 人最大 还是 规矩最大 会导致两种截然不同的社会形式。 20250223 四年前我对世界与未来抱有的梦想，都变成了现在的无奈和妥协。 20250214 人类违背自然选择的举措会使基因劣化——但我才不会去关心死后的世界。 20250109 大众认可的...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20250315</h2>
+<p>寝室里衣服在动，要么是阴气太重，要么是阳气太重。</p>
+<div style="text-align:right">
+<p>——舍友</p>
+</div>
+<h2>20250313</h2>
+<p><em>人最大</em> 还是 <em>规矩最大</em> 会导致两种截然不同的社会形式。</p>
 <h2>20250223</h2>
 <p>四年前我对世界与未来抱有的梦想，都变成了现在的无奈和妥协。</p>
 <h2>20250214</h2>
@@ -457,7 +523,11 @@
 <p>然后用 nslookup 就能查到了。</p>
 <h2>免费</h2>
 <ul>
-<li><a href="https://register.us.kg" target="_blank" rel="noopener noreferrer">us.kg</a>：可以托管到 cloudflare，注册还算不难。</li>
+<li><a href="https://register.us.kg" target="_blank" rel="noopener noreferrer">us.kg</a>：可以托管到 cloudflare，注册还算不难。
+<ul>
+<li>2025.03，us.kg 两次被停止解析，稳定性挺差的，还是别用了吧。</li>
+</ul>
+</li>
 </ul>
 <h2>付费</h2>
 <ul>
@@ -1644,120 +1714,6 @@
 <ul>
 <li><a href="https://shanewfx.github.io/blog/2013/08/14/caprure-audio-on-windows/" target="_blank" rel="noopener noreferrer">Windows 上的音频采集技术 - 思考的轨迹</a></li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>shell script</title>
-      <link>https://absx.pages.dev/coding/shell.html</link>
-      <guid>https://absx.pages.dev/coding/shell.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">shell script</source>
-      <description>shell script 说到 shell script，bash 绝对是 shell 界的王，几乎所有 linux 系统都使用 bash 作为默认 shell。因此其拥有最高的兼容性。 当然，bash 毕竟也是老编程语言，随着时代变化，其设计缺陷与难用部分也开始显现。至少我是非常不愿意[1]使用 bash 编写程序的。有许多脚本语言可以用来替代 ba...</description>
-      <category>编程</category>
-      <pubDate>Wed, 24 Jul 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>说到 shell script，bash 绝对是 shell 界的王，几乎所有 linux 系统都使用 bash 作为默认 shell。因此其拥有最高的兼容性。</p>
-<p>当然，bash 毕竟也是老编程语言，随着时代变化，其设计缺陷与难用部分也开始显现。至少我是非常不愿意<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup><a class="footnote-anchor" id="footnote-ref1">使用 bash 编写程序的。有许多脚本语言可以用来替代 bash，例如我已经用 <a href="/coding/python.html" target="_blank">python</a> 写脚本很久了。还有许多与 bash 竞争的 shell 本身也自带了一门脚本语言，例如 fish，nu 等，甚至 just 也能算一个 bash 的竞争者。这些脚本需要专门的解释器运行，我也会放在后面介绍。</a></p><a class="footnote-anchor" id="footnote-ref1">
-</a><p><a class="footnote-anchor" id="footnote-ref1">除此之外，还有人既想写出人类可读的代码，又想借用 bash 超高的兼容性，因此便开发了能够编译为 bash 的高阶语言，例如 </a><a href="https://pnut.sh/" target="_blank" rel="noopener noreferrer">pnut</a>，<a href="https://github.com/amber-lang/amber" target="_blank" rel="noopener noreferrer">amber</a>。</p>
-<h2><a class="header-anchor" href="#shebang"><span></span></a><a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" target="_blank" rel="noopener noreferrer">Shebang</a></h2>
-<p>放在脚本开头，以指示此脚本使用的解释器。因此如果写了 <code>#!/bin/bash</code>，则表示脚本是一个 bash 脚本，可以直接 <code>./filename</code> 执行。</p>
-<p>不过为了最佳的兼容性（NixOS 太怪胎了），可以写成 <code>#!/usr/bin/env bash</code>。</p>
-<h2>bash</h2>
-<p>bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种终端设备，windows（通过 WSL 或 msys2），macos（默认 zsh，兼容） 上执行 bash 脚本。基本上这个时代没有几个设备是不用 bash 的。</p>
-<p>此处不会涉及 bash 系统教学，只会零碎记一些知识点。系统学习可以看<a href="#external">external 1.</a>。</p>
-<ul>
-<li>bash 的要义是一切皆字符串。</li>
-<li>启动 bash 时会自动执行 <code>~/.bashrc</code>，这也是一个 bash 脚本。</li>
-<li>bash 按 tab 也能补全，不过默认不显示候选项。</li>
-<li><code>xx1 &amp;&amp; xx2</code> 在 xx1 成功后执行 xx2，<code>xx1 || xx2</code> 在 xx1 失败后执行 xx2</li>
-<li>传参：
-<ul>
-<li><code>$1</code> 代表第一个参数，类似的…</li>
-<li><code>$@</code> 代表把所有参数原封不动传入（多个参数的地方），而 <code>$*</code> 代表把所有参数合并当成一个字符串传入。</li>
-</ul>
-</li>
-<li><code>${}</code> 不仅用于插值，还用于更多处理。
-<ul>
-<li><code>${var:-default}</code>，如果为空则使用默认值</li>
-<li><code>${#var}</code> 是取 len</li>
-<li><code>${var:1:3}</code> 是取 slice，两边都是闭区间，index 从 0 开始</li>
-<li><code>${var/pat/after}</code> 是字符串替换</li>
-</ul>
-</li>
-</ul>
-<h2>fish</h2>
-<p>一般来说三大 shell 指的是 bash, fish, zsh. 而 fish 不兼容 bash，在里面算是比较特立独行的。fish 语法自成一系，不过在一众 shell 里算是比较好学的，缺点是文档写的挺垃圾。fish 使用 rust 重写过一次，<s>搭上了语言原神的顺风车</s>，性能与安全性无需担忧。fish 是不兼容 windows 的，而在 msys2 里用 fish 又总感觉挺不爽的，我只好在 windows 上用其他 shell。</p>
-<p>fish 的语法在我看来算是对传统 shell 的反叛，但是没有叛彻底，还保留了很大一部分 bash 特点，导致 fish 写脚本也十分难写。</p>
-<p>吸引我使用 fish 的最大原因是补全太好用了，爆杀一切其他 shell。fishshell 甚至会自动从 man 生成补全 (<a href="https://t.me/archlinuxcn_group/2974806" target="_blank" rel="noopener noreferrer">ref</a>)。我一般开启 <code>bind \t forward-word</code>，配置文件只此一行足矣（加载其他软件的命令不算）。</p>
-<ul>
-<li>
-<p>set fish as default</p>
-
-</li>
-<li>
-<p>语法：有个叫 <a href="https://github.com/edc/bass" target="_blank" rel="noopener noreferrer">bass</a> 的可以在 fish 里用 bash 语法。不过我觉得不如快速查下鱼文档。</p>
-</li>
-<li>
-<p>环境变量：<a href="https://fishshell.com/docs/2.6/commands.html#set" target="_blank" rel="noopener noreferrer"><code>set</code></a>，注意作用域与是否 export 的问题。</p>
-</li>
-<li>
-<p>函数：fish 大把的指令（包括 alias）都是函数。</p>
-<ul>
-<li>使用 function 新增函数后，可以使用 <code>funcsave &lt;function&gt;</code> 保存到配置文件夹下以便修改与备份，修改后需要重新 source：<code>. ~/.config/fish/config.fish</code></li>
-<li>当然，官方推荐的修改是使用 <code>funced &lt;function&gt;</code>，最好设置 <code>$EDITOR</code> 环境变量，可以在喜欢的编辑器里修改。</li>
-<li>删除函数 / 变量：<code>-e</code> == <code>--erase</code></li>
-</ul>
-</li>
-<li>
-<p>插件：一般使用 <a href="https://github.com/jorgebucaran/fisher" target="_blank" rel="noopener noreferrer">fisher</a> 安装插件。不过我一个都没装，只能说看不上。</p>
-</li>
-</ul>
-<h2>zsh</h2>
-<p>zsh 是 bash 统治下的顺从者，其几乎全兼容 bash。zsh 是 macos 的 default shell，因此用户也非常多。</p>
-<p>我曾经尝鲜过一段时间 zsh（入坑作：<a href="#external">external 2.</a>），但是<a href="https://t.me/withabsolutex/1214" target="_blank" rel="noopener noreferrer">补全实在是太垃圾</a>，立刻扔掉了。</p>
-<p>用 zsh 基本离不开 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki" target="_blank" rel="noopener noreferrer">Oh My Zsh</a>，但是这玩意有严重的性能问题(<a href="https://luoxu.archlinuxcn.org/#g=1031857103&amp;q=omz&amp;sender=313927976" target="_blank" rel="noopener noreferrer">ref</a>)，已经在群里问过 N 次了。</p>
-<ul>
-<li>安装 zsh 时会问 set default shell</li>
-</ul>
-<h2>nushell</h2>
-<p>nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu 语言，并重载了许多 posix 指令（以便更好地展示执行结果）。nushell 也使用 rust 实现，性能与安全性无需担忧。nushell 是跨平台的，因此成为我在 windows 上的一个选择。可惜 nushell 补全只能从历史中补，手感还是打不过 fish。</p>
-<p>自己搓语言的基本上都有很高的学习成本，nushell 也不例外。nu 语言有对 rust 的借鉴和<a href="https://t.me/withabsolutex/1698" target="_blank" rel="noopener noreferrer">反叛</a>。</p>
-<p>不过 nushell 最劝退我的还是 <a href="https://t.me/withabsolutex/1700" target="_blank" rel="noopener noreferrer">rust 的一个 bug</a>，导致其无法在我的 RAMDisk 上工作。</p>
-<h3>配置</h3>
-<p>nushell 只有 winget 安装方法（<code>winget install nushell</code>），没有 scoop 安装。</p>
-<p>安装好后，在 nushell 中执行下面的语句：</p>
-<div class="language-nushell line-numbers-mode" data-highlighter="shiki" data-ext="nushell" data-title="nushell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">config env</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> --</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">default</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> |</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> save</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">$nu</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">.default-config-dir</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> |</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> path join</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'env.nu'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span>
-<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">config nu</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic"> --</span><span style="--shiki-light:#E36209;--shiki-dark:#E06C75;--shiki-light-font-style:inherit;--shiki-dark-font-style:italic">default</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> |</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> save</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">$nu</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">.default-config-dir</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> |</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> path join</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'config.nu'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>即可在配置文件夹生成默认配置。然后就是编辑配置即可，官方建议单独开一个 <code>custom.nu</code> 写自己的配置，然后 source 到主配置（<code>config.nu</code>）中。</p>
-<div class="language-nushell line-numbers-mode" data-highlighter="shiki" data-ext="nushell" data-title="nushell" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD">source</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> (</span><span style="--shiki-light:#005CC5;--shiki-dark:#E5C07B">$nu</span><span style="--shiki-light:#24292E;--shiki-dark:#E06C75">.default-config-dir</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> |</span><span style="--shiki-light:#D73A49;--shiki-dark:#C678DD"> path join</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> 'custom.nu'</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF">)</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>powershell</h2>
-<p>一般的 windows 都自带 powershell 1.0。但是有的命令在老版本 powershell 上会执行失败，可以用 <code>scoop install pwsh</code> 安装最新版本的 powershell。</p>
-<ul>
-<li>Windows 上难免会遇上带空格的可执行文件路径，但是直接使用双引号包裹并不能执行该命令。需要在双引号前添加 <code>&amp;</code> 才可以将字符串视为可执行文件执行。</li>
-</ul>
-<h2>xonsh</h2>
-<p>我一看到 xonsh 就把它加到了我的 👍 list 里。它不自创脚本语言，而是使用 python 作为其解释器。在 python 爆火的当下，xonsh 可能是一个不错的选择，它完全避开了高昂的学习成本和 bash 脚本的难用，还能借 python 优秀的跨平台能力为所欲为。</p>
-<p>虽然我还没开始用 xonsh，不过将来我一定会去试一试的。</p>
-<h2>amber</h2>
-<p>amber 是总论提到的编译到 bash 语言的一个高阶语言；它使用 rust 实现，并且有较为完善的文档和 tutorial。我也为这个项目发过 PR，不过是依赖相关，跟代码逻辑没什么关系。</p>
-<p>这个项目的代码我只能说真是一坨屎山。在用几乎最新的 rust 和 cargo 情况下，没有修 clippy issue 也就算了，连 rustfmt 都没过就有点过分了吧。。。屎山也就算了，我跑 <code>cargo test</code> 也跑不了，正常使用也用不了，这什么垃圾玩意。。</p>
-<h2>杂</h2>
-<ul>
-<li><a href="https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395" target="_blank" rel="noopener noreferrer">Y/n 选择器</a>
-</li>
-</ul>
-<h2>external</h2>
-<ol>
-<li><a href="https://wangdoc.com/bash/" target="_blank" rel="noopener noreferrer">bash 脚本教程</a></li>
-<li><a href="https://sysin.org/blog/linux-zsh/" target="_blank" rel="noopener noreferrer">Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境</a></li>
-<li><a href="https://mywiki.wooledge.org/BashFAQ/105" target="_blank" rel="noopener noreferrer">Why doesn't set -e (or set -o errexit, or trap ERR) do what I expected?</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="footnote1" class="footnote-item"><p>尝试写个大脚本，<a href="https://t.me/withabsolutex/1374" target="_blank" rel="noopener noreferrer">未果，几欲去世</a>。数组做输入值和返回值各种妖魔鬼怪乱飞 (<code>"${arr[@]}"</code>)。我的评价是还是<strong>写点阳间语言</strong>吧，就算是 fish 都比 bash 好看多了。python 也很泛用的，而且比起 lua 更好写。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 ]]></content:encoded>
     </item>
   </channel>
