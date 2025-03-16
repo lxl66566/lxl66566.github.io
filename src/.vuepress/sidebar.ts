@@ -14,6 +14,7 @@ export default sidebar({
         "difficulties.md",
         "consider.md",
         "hope.md",
+        "pc_hardware.md",
         "compare_home_to_college.md",
         "memes.md",
         "forward.md",
@@ -86,7 +87,7 @@ export default sidebar({
     {
       text: "随笔",
       link: "/essay/",
-      children: ["2024", "2023.md", "2022.md", "earlier.md"],
+      children: ["2025", "2024", "2023.md", "2022.md", "earlier.md"],
     },
   ],
   "/learning/": [

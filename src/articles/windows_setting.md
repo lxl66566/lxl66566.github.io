@@ -27,11 +27,12 @@ tag:
 
 ### 小工具
 
-- 在 b 站看到一个 [Windows11 轻松设置工具](https://wwkh.lanzout.com/iMb0v2ladkhe) ([src](https://www.bilibili.com/video/av113807439503289/))，一部分内容和下面我的设置是重合的，用这个工具可以进行快速便捷的设置，非常好用。
+- 在 b 站看到一个 [Windows11 轻松设置工具](https://wwkh.lanzout.com/iMb0v2ladkhe) ([src](https://www.bilibili.com/video/av113807439503289/))，和下一部分内容面我的设置是重合的，用这个工具可以进行快速便捷的设置，非常好用。
 
 ### 安装时
 
 - 如果你的 windows 是从 win11 官方 ISO 安装的，那么初始化时登录微软帐号的那一步，**千万不要登录微软帐号**。[理由](#初始化登录微软帐号酿成的悲剧)
+  - 最好直接断网安装：在强制需要联网的那一步按 `Shift + F10`，执行 `oobe\bypassnro`，重启后就会显示 _没有 lnternet 连接_ 选项。
 
 ### 安装后（关键步骤）
 
@@ -106,7 +107,7 @@ tag:
   - [shell alias](#shell-alias)
   - 关闭鼠标的 “提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
 - 做减法：
-  - 使用[O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10)禁用一些非必须功能。
+  - 禁用 _用户账户控制 UAC_，让你打开应用时不再受到烦人的弹窗困扰。
   - 关闭搜索推荐&热门新闻：关闭 _设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点_ 。([ref](https://www.landiannews.com/archives/95045.html)，最新版 win11 可能没有此条设置)
   - 卸载各种傻逼预装玩意。
     1. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
@@ -123,6 +124,8 @@ tag:
 - 设置 Explorer：
   - 使用 [WinSetView](https://github.com/lesferch/WinSetView/) 将 _音乐_ 文件夹 view 设为小图标。否则当你打开一个装满音乐的文件夹时，Explorer 将会去读取所有文件的元数据，会导致卡顿。([src](https://answers.microsoft.com/en-us/windows/forum/windows_11-files/how-to-prevent-windows-explorer-from-reading/c123eab1-e5a5-4124-bf20-68f67a08e47b?messageId=b010aeba-a852-40e7-8732-8f67cb4fd1ed))
   - 安装 [svg-explorer-extension](https://github.com/tibold/svg-explorer-extension) 插件，让 Explorer 可以预览 svg。
+- 输入法：详见 [输入法](./input_method.md) 文章。要把微软拼音禁用，需要在 _语言和区域_ 的语言中进入 _简体中文_ 的 _语言选项_，在里面删除键盘。
+- 小键盘：如果你的 windows 启动不会自动打开 numslock，需要在注册表中找到 `计算机\HKEY_USERS\.DEFAULT\Control Panel\Keyboard`，将 `InitialKeyboardIndicators` 改为 2。
 
 ### 旧设置项
 
@@ -160,6 +163,7 @@ tag:
 - ~~开启全局 UTF-8：_设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8..._~~ 实测会导致一些 galgame 乱码。
 - ~~使用 [Win11Debloat](https://github.com/Raphire/Win11Debloat) 移除一些自带软件与组件。~~
   - 这会有一些 sideeffects，例如使某些终端乱码，win + R 失去记忆，等等。必需谨慎使用。
+- 使用[O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10)禁用一些非必须功能。但是它的大部分设置项都是没用的，剩下的有用的 [windows 11 轻松设置工具](#小工具) 也能做。
 
 ::::
 

@@ -28,6 +28,7 @@ const links: ArticleCellBoxType[] = [
   {
     field: "我的遭遇",
     links: [
+      { text: "装机", url: "pc_hardware" },
       { text: "生活中遇到的困难", url: "difficulties" },
       {
         text: "家与学校生活环境对比（我为什么不愿意回家）",

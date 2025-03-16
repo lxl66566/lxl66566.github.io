@@ -726,6 +726,9 @@ const data = [
   { id: "560705", aScore: 8, bScore: 8.9, info: "#VTuber", bak: "https://telegra.ph/NaCl-無糖しお-ASMR録音中-無糖しお-中国翻訳-DL版-03-07" },
   { id: "560199", aScore: 6.4, bScore: 7.7, info: "#青梅竹马 #同学 #纯爱" },
   { id: "561320", aScore: 7.4, bScore: 7.3, info: "#天然 #蔚蓝档案", bak: "https://telegra.ph/つるつるおでこ-で子-忍者少女のお勉強-ブルーアーカイブ-2024年1月15日-中国翻訳-DL版-03-10" },
+  { id: "561824", aScore: 3.3, bScore: 8.7, info: "#时停 #1", bak: "https://telegra.ph/C100-えろり屋-たまちゆき-ふたりきりの停止世界-中文机翻-03-13" },
+  { id: "561656", aScore: 7, bScore: 8.5, info: "#蔚蓝档案 #触手 #电击 #调教", bak: "https://telegra.ph/C105-星月夜幼月月-エロティルズサガクロニクル-ゲーム開発部のエロRPGゲーム大冒険-Blue-Archive-Chinese-03-12" },
+  { id: "561109", aScore: 7.4, bScore: 7, info: "#逆推 #巨乳loli #纯爱" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

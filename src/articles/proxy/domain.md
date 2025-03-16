@@ -28,6 +28,7 @@ category:
 ## 免费
 
 - [us.kg](https://register.us.kg)：可以托管到 cloudflare，注册还算不难。
+  - 2025.03，us.kg 两次被停止解析，稳定性挺差的，还是别用了吧。
 
 ## 付费
 
