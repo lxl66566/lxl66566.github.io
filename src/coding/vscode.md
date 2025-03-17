@@ -197,7 +197,8 @@ Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。有一些需�
 
 1. 2025.02 之后，cursor 无法再通过清除 machine id 的方式无限续，猜测它用了一些其他方法进行追踪。因此需要下载历史版本：<https://downloader.cursor.sh/builds/250103fqxdt5u9z/windows/installer/x64>，并关闭自动更新。
 2. cursor 清除 ID 的脚本，网上有很多（讽刺的是基本都是 Cursor 写的），例如 [cursor-reset](https://github.com/ultrasev/cursor-reset)，cursor-mate（闭源）、[go-cursor-help](https://github.com/yuaotian/go-cursor-help) 等等。
-3. 邮箱无限续可以用 2925 无限邮。
+3. ~~邮箱无限续可以用 2925 无限邮。~~
+   - 2025.03 之后，2925 无限邮和一些滥用邮箱被彻底禁用，爆 [_User is unauthorized_](https://forum.cursor.com/t/user-is-unauthorized/43042/79)。这里建议买一个域名托管到 Cloudflare，然后用这个域名开一堆子域的邮箱。
 
 ## 其他评价
 
