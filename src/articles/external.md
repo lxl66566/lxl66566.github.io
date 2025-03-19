@@ -38,11 +38,3 @@ tag:
 15. [那些选择退学的博士生们](https://telegra.ph/那些选择退学的博士生们-07-05-2)
 16. [两岸猿声啼不住，轻舟已过万重山——我的四分之一人生](https://thiscute.world/posts/a-quarter-of-the-way-through-life/)
 17. [The difference between China and US AQI?](https://www.iqair.com/us/newsroom/what-is-the-difference-between-china-us-aqi) | [空气质量指数美国标准和中国标准差别](https://www.cnblogs.com/tiandi/p/6158576.html)
-
-## 杂
-
-<dtls alt="办卡类文章">
-
-- [日本浮生录：初来乍到，日本办卡指南](https://song.al/creditcard)
-
-</dtls>

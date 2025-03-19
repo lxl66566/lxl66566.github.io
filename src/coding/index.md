@@ -103,8 +103,7 @@ tag:
    1. [Vue](./vue.md)
    2. [React](./react.md)
    3. [SolidJS](./solidjs.md)
-6. ~~[MDX](./mdx.md)~~
-7. 其他
+6. 其他
    - [配色方案](../farraginous/recommend_websites.md#资源)
 
 ## [Android 开发](./android.md)
@@ -129,7 +128,9 @@ tag:
 
 ### 字体
 
-[top-programming-fonts](https://github.com/hbin/top-programming-fonts/)，随便选。反正我用 Fira Code。
+- 我以前是不在意字体的。
+- 后来看到都在用 Fira Code，就用了两年，感觉还不错。Fira Code 最大的问题就是中文:英文不是 2:1。
+- 我后来又尝试了 [Maple Mono](https://font.subf.dev/zh-cn/)，它的中文:英文是 2:1。但是在 vscode 里的支持很差，写个 markdown，每个自动换行的长度都不一样，不管我的 `editor.wordWrap` 设成啥，效果都不行。不如 Fira Code。
 
 ## external
 
@@ -139,3 +140,4 @@ tag:
 3. [The yaml document from hell](https://ruudvanasseldonk.com/2023/01/11/the-yaml-document-from-hell)
 4. [图解 Functor、Applicative、Monad](https://sxyz.blog/functors-applicatives-and-monads-in-pictures/)
 5. [Parse, don’t validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/)
+6. [top-programming-fonts](https://github.com/hbin/top-programming-fonts/)

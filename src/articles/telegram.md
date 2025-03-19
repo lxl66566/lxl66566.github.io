@@ -158,10 +158,11 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 - [C++ 中文交流](https://t.me/cpluspluszh)：讨论 C++ 问题，群规严格，风气良好
 - [Even Better Rust](https://t.me/even_better_rust_zh)：讨论 Rust 问题
+- [Python 交流群](https://t.me/py_zh_real)：~~依云 fork~~ 的一个 python 群，氛围更好
 - [#archlinux-cn](https://t.me/archlinuxcn_group)
 - [NixOS 中文](https://t.me/nixos_zhcn)
 
-> 注：其他的交流群（python, java）氛围不太行，这里不推荐
+> 注：部分其他的交流群氛围不太行，这里不推荐
 
 #### 外语
 
