@@ -27,7 +27,7 @@ tag:
 
 如果使用 windows 10/11，当然选择微软自家的语音输入，按 `Win + H` 即可（通过调输入法选择语言）。中文识别准确率在 2022 之前较一般，现在不错。
 
-这里有一个 [trick](https://www.appinn.com/speech-to-text-windows10-and-11/)，可以用微软语音转文字转音频。
+这里有一个 [trick](https://www.appinn.com/speech-to-text-windows10-and-11/)，可以用它识别音频。
 
 ### autosrt
 

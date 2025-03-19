@@ -97,7 +97,7 @@ telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src
 
 [^2]: [什么是 telegram？](../articles/telegram.md)
 
-[我的哔哩哔哩账号](https://space.bilibili.com/346365047)
+[我的哔哩哔哩账号](https://space.bilibili.com/346365047)，平常不看私信不要再发啦
 
 [我的 osu 账号](https://osu.ppy.sh/users/25751103)
 

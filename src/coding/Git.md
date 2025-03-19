@@ -93,6 +93,7 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
 5. 其他 git 插件
    - [difftastic](https://difftastic.wilfred.me.uk/git.html#difftastic-by-default)
    - [git-filter-repo](#删除大文件)
+6. 然后当你了解了 git 的更多知识后，可以去看看 [external 7.](#external)。
 
 [^6]: 需要使用 [Vim](./vim.md)。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。
 
@@ -625,3 +626,4 @@ git gc --prune=now --aggressive        # gc，删除 blob
 4. [深入探討 Git 中的 Unreachable (無法到達的) 物件與清理方法](https://blog.miniasp.com/post/2024/06/18/How-to-Remove-Git-Unreachable-Objects)
 5. [一文讲透 Git 底层数据结构和原理](https://www.jiqizhixin.com/articles/2020-05-20-3)
 6. [Get up to speed with partial clone and shallow clone](https://github.blog/open-source/git/get-up-to-speed-with-partial-clone-and-shallow-clone/)
+7. [How Core Git Developers Configure Git](https://blog.gitbutler.com/how-git-core-devs-configure-git/)，非常好的文章
