@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 19 Mar 2025 16:42:25 GMT</pubDate>
-    <lastBuildDate>Wed, 19 Mar 2025 16:42:25 GMT</lastBuildDate>
+    <pubDate>Sat, 22 Mar 2025 04:06:40 GMT</pubDate>
+    <lastBuildDate>Sat, 22 Mar 2025 04:06:40 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -289,6 +289,13 @@
 </ol>
 <p>即使不做短期高频交易而是直接做大空，赚得也不算太多，因为币价波动太大，为了防止爆仓，杠杆不能开太高。那这时候要怎么办呢？还记得前面说网格策略适合交易波动性大的币种吗？刚好新币的波动性大，这时候狠狠上做空网格就行了。我一般会把 2x, 3x, 5x, 10x 的网格都套上，也算是分摊一些风险。包括马丁格尔策略也可以直接在新币上使用，毕竟我们知道了新币的总体趋势。这样就大概能把新币上的所有油水榨出来了。</p>
 <p>当然也并不是每个新币都必定会长跌，一些有潜力的 layer1 链可能会不跌反涨，把你的网格和马丁顶爆仓，比如 IP 和 KAITO。</p>
+<h2>挖矿</h2>
+<p>不一定亲自挖，但至少得对挖矿有一定了解。这里主要是关于 PoW 的币种，其他方式暂时不在考虑范围内。</p>
+<p>挖矿前的调研：</p>
+<ol>
+<li>能赚吗，能赚多少？<a href="https://minerstat.com/coins?lang=zh" target="_blank" rel="noopener noreferrer">挖矿收益计算器</a></li>
+<li>用什么矿池？<a href="https://miningpoolstats.stream/" target="_blank" rel="noopener noreferrer">MiningPoolStats</a></li>
+</ol>
 <h2>区块链与合约</h2>
 <p>接下来的内容就不是关于如何赚钱的了，而是关于加密货币底层原理与技术的讨论。不过我也是新手，难免遇到错漏，还望指正。</p>
 <h3>学习资料</h3>
@@ -389,10 +396,12 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20250317 显卡挡板就是机箱的处女膜。 如果群接龙比起问卷的全部意义就是提醒大家不要忘记填写，那为什么不让填写完毕的人不会再收到接龙消息通知呢？ 20250315 寝室里衣服在动，要么是阴气太重，要么是阳气太重。 ——舍友 20250313 人最大 还是 规矩最大 会导致两种截然不同的社会形式。 20250223 四年前我对世界与未来抱...</description>
+      <description>2025 20250321 雨露均沾 - 风尘遍布 20250317 显卡挡板就是机箱的处女膜。 如果群接龙比起问卷的全部意义就是提醒大家不要忘记填写，那为什么不让填写完毕的人不会再收到接龙消息通知呢？ 20250315 寝室里衣服在动，要么是阴气太重，要么是阳气太重。 ——舍友 20250313 人最大 还是 规矩最大 会导致两种截然不同的社会形式。...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20250321</h2>
+<p>雨露均沾 - 风尘遍布</p>
 <h2>20250317</h2>
 <p>显卡挡板就是机箱的处女膜。</p>
 ]]></content:encoded>
