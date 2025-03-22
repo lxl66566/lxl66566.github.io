@@ -603,6 +603,7 @@ file.close();
 12. [Writing GUI apps for Windows is painful](https://tulach.cc/writing-gui-apps-for-windows-is-painful/)
 13. [hackingcpp](https://hackingcpp.com/)：提供语法的简洁 cheatsheet。
 14. [std::variant 很难用！](https://ykiko.me/zh-cn/articles/645810896/)
+15. [附录：C++ 未定义行为成因列表](https://github.com/Qihoo360/safe-rules/blob/main/cpp-ub-list.md)
 
 books:
 

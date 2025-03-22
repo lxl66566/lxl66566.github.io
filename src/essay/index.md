@@ -14,6 +14,8 @@ tag:
 <div class="subtitle">——谜语人的处所，闷声者的温巢。</div>
 <div class="subtitle">谜，侃，思，叹，道</div>
 
+总之就是想到啥写啥。
+
 [前往我的频道](https://t.me/withabsolutex)查看更多随笔。
 
 - [2025](./2025.md)
