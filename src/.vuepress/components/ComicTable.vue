@@ -167,7 +167,7 @@ const data = [
   { id: "498011", aScore: 9.2, bScore: 1, info: "#蔚蓝档案", bak: "https://telegra.ph/松竜太-ブルアカ子作り報告部-中国翻訳-進行中-08-02" },
   { id: "428620", aScore: 4, bScore: 9.7, info: "#触手 #幻想", bak: "https://telegra.ph/imotare-moyori-アリス淫アリス-不思議の国のアリス-中国翻訳-DL版-08-02" },
   { id: "426478", aScore: 4.8, bScore: 7.9, info: "#兽耳", bak: "https://telegra.ph/ANCHOR-武藤まと-ねこみみ先輩は撮られたい-中国翻訳-DL版-08-02" },
-  { id: "426571", aScore: 6.6, bScore: 1.5, info: "#兽耳", order: 4, bak: "https://telegra.ph/のどまる日和-柚夏-もふもふる45-中国翻訳-08-02" },
+  { id: "426571", aScore: 7.5, bScore: 1.5, info: "#兽耳", order: 1, bak: "https://telegra.ph/のどまる日和-柚夏-もふもふる45-中国翻訳-08-02" },
   { id: "426616", aScore: 4.6, bScore: 5.2, info: "#蔚蓝档案", bak: "https://telegra.ph/きつね屋-リーフィ-マリーのヒメゴト-ブルーアーカイブ-中国翻訳-DL版-08-02" },
   { id: "(ex)", aScore: 5.7, bScore: 3, info: "#兄妹", bak: "https://telegra.ph/moyori-おさななじみるく-WEEKLY-快楽天-2022-No07-中国翻訳-08-02" },
   { id: "500610", aScore: 5.6, bScore: 2.3, info: "#自慰", bak: "https://telegra.ph/東横サーフライダー-ふみー-こまちのきもちいい-中国翻訳-DL版-03-12" },
@@ -729,6 +729,12 @@ const data = [
   { id: "561824", aScore: 3.3, bScore: 8.7, info: "#时停 #1", bak: "https://telegra.ph/C100-えろり屋-たまちゆき-ふたりきりの停止世界-中文机翻-03-13" },
   { id: "561656", aScore: 7, bScore: 8.5, info: "#蔚蓝档案 #触手 #电击 #调教", bak: "https://telegra.ph/C105-星月夜幼月月-エロティルズサガクロニクル-ゲーム開発部のエロRPGゲーム大冒険-Blue-Archive-Chinese-03-12" },
   { id: "561109", aScore: 7.4, bScore: 7, info: "#逆推 #巨乳loli #纯爱" },
+  { id: "548011", aScore: 8.4, bScore: 4.5, info: "#玉之けだま 全部君のせいだ", order: 4, bak: "https://telegra.ph/全部都是你的錯-03-16" },
+  { id: "486682", aScore: 7.2, bScore: 7.1, info: "#NTR #多P #体操服" },
+  { id: "550627", aScore: 10, bScore: 8.8, info: "#蔚蓝档案" },
+  { id: "479659", aScore: 7.2, bScore: 4.3, info: "#兽耳", order: 2 },
+  { id: "563419", aScore: 7.3, bScore: 7.8, info: "#魅魔 #纯爱" },
+  { id: "563280", aScore: 6.2, bScore: 8, info: "#时停 #公共场合 #精神失常", bak: "https://telegra.ph/C105-スパイシーラブスヘブン-かみ田-本当にいた時間停止おじさん3-中国翻訳-03-19" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

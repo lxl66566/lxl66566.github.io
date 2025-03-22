@@ -120,11 +120,14 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 
 在这里查看[代码搜索](https://docs.github.com/zh/search-github/github-code-search/understanding-github-code-search-syntax)的详细信息。
 
-不过，对于代码搜索，我建议使用第三方提供的 [grep app](https://grep.app/)，这玩意是真的快。
-
 - fork 项目默认不出现在搜索页面。而 `fork:only` 仅搜索其 fork 项目，非常好用。
   - 也可以用第三方的工具：[active-forks](https://techgaun.github.io/active-forks/index.html) 进行搜索。
 - 如何查看最新的一次提交记录？([src](https://www.cnblogs.com/saysmy/p/7292177.html))（github 的翻页做的真的垃圾。）
+
+### 其他搜索工具
+
+- [grep app](https://grep.app/)，号称是最快的 Github 搜索工具，搜源码比较好用
+- [Githubhunt](https://githubhunt.top/)，AI github search engine，自然语言搜索
 
 ## 批量下载 Release
 

@@ -111,6 +111,7 @@ tag:
   - 参考：[Qwen2-VL](https://github.com/QwenLM/Qwen2-VL)
 - [ ] rust-checkenizer: rust lsp based on cargo check. NO MORE RA NEEDED.
 - [ ] rust easy context like tokio/compio do.
+- [ ] 明日方舟视频自动去暂停
 
 ### RIIR
 
@@ -121,6 +122,7 @@ tag:
 - [ ] fail2ban
 - [x] Telegram marsbot
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
+- [ ] reader
 
 ### Android
 

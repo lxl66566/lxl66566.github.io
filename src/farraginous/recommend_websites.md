@@ -87,6 +87,13 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [notebooklm](https://notebooklm.google.com/)：google 家的免费资料总结工具
 - [Grok](https://x.com/i/grok)：马斯克的免费 AI，还是比较有诚意的。
 
+### 前端助手
+
+在 LLM 和 AI 代码生成发展了几年后，终于有一些现成工具可以直接将设计稿转换为前端代码了。虽然基本都是付费使用。
+
+- [readdy](https://readdy.ai/)
+- [We0](https://we0.ai/zh-CN)
+
 ### Other
 
 - [zerogpt](https://www.zerogpt.com/): AI text Detector tool
