@@ -432,6 +432,57 @@ escude 家的游戏是 bin 格式，GARbro 可解不可封。
 - [cottony-vase-131 的工具](https://cottony-vase-131.notion.site/GameTools-7fea11732ecd4e398896414a31fef431)：专门处理脚本的工具，无法使用
 
 </template>
+<template #unity>
+
+尝试解包 _旭光のマリアージュ_。用 bandizip 打开 .dat 文件，显示是一个 zip 压缩包。文件名没有加密，可以看到语音（sound）在 `data_05.dat` 和 `data_06.dat` 里。解压，需要密码。找密码，在[别人的博客](https://blog.chenx221.cyou/2021/09/04/galgame-%E6%B8%B8%E6%88%8F%E8%A7%A3%E5%8C%85%E8%AE%B0%E5%BD%95/)找到密码为 `IrsysPack_CipherKey`。于是提取成功。
+
+加速完（注意避开 se 和 bgm），准备封包，结果 bandizip 打出的 zip 用不了，开游戏有出场动画，但是进不去标题，黑屏。无论开不开压缩级别都是这样。
+
+查看源 dat，随便开了个[格式识别](https://rivers.chaitin.cn/tools/file)，显示 _Zip archive data, at least v2.0 to extract, compression method=deflate_。然后我又用了 7z 命令行，指定了 `-tzip -mm=Deflate -pIrsysPack_CipherKey`，再次打包，也不行。尝试 zip command，也不行。于是我不得不打开 imhex，看看这两个打出来的 dat 有什么区别。一看，发现打包的 header 和文件顺序不同，为了打出尽可能相同的 dat，我提取了文件顺序并喂给 7z：
+
+```py
+import subprocess
+import zipfile
+from dataclasses import dataclass
+from pathlib import Path
+
+
+@dataclass
+class Task:
+    original_zipfile_name: str
+    speedup_folder: str
+
+
+process = [
+    Task(
+        "data_05.dat.bak",
+        "data_05",
+    ),
+    Task(
+        "data_06.dat.bak",
+        "data_06",
+    ),
+]
+
+for task in process:
+    with zipfile.ZipFile(task.original_zipfile_name, "r") as zip_ref:
+        Path("test.txt").write_text(
+            "\n".join(map(lambda x: x.filename, zip_ref.infolist()))
+        )
+
+    subprocess.run(
+        f"""7z a -tzip -mm=Deflate -pIrsysPack_CipherKey ../{task.speedup_folder}.dat @../test.txt""",
+        shell=True,
+        check=True,
+        cwd=task.speedup_folder,
+    )
+
+Path("test.txt").unlink()
+```
+
+然后就可以用了。实在是太神奇了。
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结

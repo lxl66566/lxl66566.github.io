@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "旭光のマリアージュ",
+    namaniku: true,
+    duration: {
+      start: "2025-03-23",
+    },
+  },
+  {
     name: "女祭司之眼",
     not_strict: true,
     url: "https://t.me/Alice_In_Cradle/29369",

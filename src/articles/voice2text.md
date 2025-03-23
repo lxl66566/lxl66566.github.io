@@ -74,6 +74,8 @@ VSCode 居然支持语音输入了！([src](https://t.me/absxsgroup/6059))这是
 
 ## 云端
 
+### [通义听悟](https://tingwu.aliyun.com/)
+
 ### [腾讯云](https://cloud.tencent.com/product/asr)
 
 每月 10h 免费时长，基本够用。

@@ -86,6 +86,13 @@ const data: SpeedupItemType[] = [
     save_format: "bin",
     speedupable: true,
   },
+  {
+    names: ["旭光のマリアージュ"],
+    valid_name: "unity",
+    engine: "unity",
+    save_format: "dat",
+    speedupable: true,
+  },
 ];
 </script>
 

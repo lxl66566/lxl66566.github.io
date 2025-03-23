@@ -75,9 +75,13 @@ tag:
   Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
   ```
   - winget 会自带一个 python，记得用 everything 找出来，从 PATH 里把那个 path 删掉。
-- 还需要下载其他的关键软件。这里没有链接，如果有可信来源、容易下载的链接可以联系我，贴在这里。
-  - 在 extras bucket 里安装 `scoop search vcredist` 搜到的所有 C++ 运行库。
-  - [DirectX 修复工具](https://www.puresys.net/5055.html)
+  - 关键软件如下：
+    ```sh
+    scoop install uutils-coreutils            # 让我可以在 windows 上用 linux busybox 指令
+    ```
+- 还需要下载其他的关键软件。
+  - 在 extras bucket 里安装所有 C++ 运行库：`scoop install vcredist2005 vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist2022`
+  - [DirectX 修复工具](https://www.puresys.net/5055.html)，图吧工具箱里也有。
 - [安装 ArchWSL](./linux/install_and_config.md#安装)
 - 解决[端口随机占用](#端口随机占用)
 - [组织管理滚](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c)。
