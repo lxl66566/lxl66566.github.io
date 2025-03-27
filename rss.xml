@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 23 Mar 2025 17:25:14 GMT</pubDate>
-    <lastBuildDate>Sun, 23 Mar 2025 17:25:14 GMT</lastBuildDate>
+    <pubDate>Thu, 27 Mar 2025 15:55:45 GMT</pubDate>
+    <lastBuildDate>Thu, 27 Mar 2025 15:55:45 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -724,7 +724,9 @@
 <p>就这么简单，可以说一行命令完成内网穿透也不为过。而且你永远可以相信 cloudflare 的延迟和稳定性。</p>
 <p>不过 cloudflared 在 <a href="/articles/linux/openwrt.html#%E6%9C%8D%E5%8A%A1" target="_blank">procd</a> 系统上只会将 service 写入 <code>/etc/init.d/cloudflared</code>，并不会开机自启。如果需要开机自启，需要手动创建一个软链接：</p>
 <div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" data-title="sh" style="--shiki-light:#24292e;--shiki-dark:#abb2bf;--shiki-light-bg:#fff;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes github-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> /etc/rc.d</span><span style="--shiki-light:#24292E;--shiki-dark:#ABB2BF"> &amp;&amp; </span><span style="--shiki-light:#6F42C1;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#005CC5;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ../init.d/cloudflared</span><span style="--shiki-light:#032F62;--shiki-dark:#98C379"> ./S99cloudflared</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2>zerotier</h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2><a class="header-anchor" href="#easytier"><span></span></a><a href="https://easytier.cn/" target="_blank" rel="noopener noreferrer">easytier</a></h2>
+<p>类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。我没有用过，不过可以 mark 一下。</p>
+<h2>zerotier</h2>
 <p><a href="https://openwrt.org/docs/guide-user/services/vpn/zerotier" target="_blank" rel="noopener noreferrer">据说</a> openwrt 是有 zerotier 的软件包的，但是我在 iStoreOS 里一点也找不到，不知道是 iStoreOS 的 fork 问题还是 opkg 的问题。</p>
 <p>然后我想直接下载 binary，结果发现<a href="https://www.zerotier.com/download" target="_blank" rel="noopener noreferrer">下载页面</a>里只有 rpm/deb 系的，Github release 里也找不到 binary。合着其他发行版就不配装你的程序了？</p>
 <p>zerotier 软件 UI 也都比较古老，网页不清晰，几个产品之间关系也比较混乱，一会儿把你推去 zerotier One，一会儿又踢回 zerotier，但是我没空，也没兴趣了解它们之间的关系。</p>
@@ -1711,6 +1713,7 @@
 <li><a href="https://shanewfx.github.io/blog/2013/08/14/caprure-audio-on-windows/" target="_blank" rel="noopener noreferrer">Windows 上的音频采集技术 - 思考的轨迹</a></li>
 </ul>
 ]]></content:encoded>
+      <enclosure url="https://absx.pages.dev/images/articles/speedup/arc1.png" type="image/png"/>
     </item>
   </channel>
 </rss>
