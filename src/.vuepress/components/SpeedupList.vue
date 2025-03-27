@@ -93,6 +93,13 @@ const data: SpeedupItemType[] = [
     save_format: "dat",
     speedupable: true,
   },
+  {
+    names: ["千の刃涛、桃花染の皇姫"],
+    valid_name: "bgi",
+    engine: "bgi",
+    save_format: "arc",
+    speedupable: true,
+  },
 ];
 </script>
 

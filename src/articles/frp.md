@@ -33,6 +33,10 @@ cloudflare 的内网穿透是部署最简单，使用体验最好的服务，杀
 cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
 ```
 
+## [easytier](https://easytier.cn/)
+
+类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。我没有用过，不过可以 mark 一下。
+
 ## zerotier
 
 [据说](https://openwrt.org/docs/guide-user/services/vpn/zerotier) openwrt 是有 zerotier 的软件包的，但是我在 iStoreOS 里一点也找不到，不知道是 iStoreOS 的 fork 问题还是 opkg 的问题。

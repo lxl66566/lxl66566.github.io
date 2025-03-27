@@ -118,6 +118,7 @@ tag:
     2. [卸载 Minecraft Education Edition](https://aka.ms/meeremove) ([src](https://educommunity.minecraft.net/hc/en-us/community/posts/4410545727764))
     3. 卸载 Your Phone：powershell `Get-AppxPackage Microsoft.YourPhone -AllUsers | Remove-AppxPackage`，但是 `C:\Program Files\WindowsApps` 的 Your Phone 文件并不会删除。
     4. 卸载 PC Manager（微软电脑管家）、Microsoft Power BI，在设置 - 应用里可以直接卸载
+    5. 在 _设置 - 可选功能_ 里，卸载 Windows Powershell ISE，windows 这编辑器太捞了。
   - 禁用一些服务。
     - Windows Font Cache Service
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))

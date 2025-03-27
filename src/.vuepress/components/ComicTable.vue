@@ -376,7 +376,7 @@ const data = [
   { id: "520454", aScore: 7, bScore: 6.3, info: "#兽交" },
   { id: "515562", aScore: 7.7, bScore: 3.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-3260-三郎-先生責任とってくれますよね-ブルーアーカイブ-中国翻訳---Page-1-07-23" },
   { id: "(ex)", aScore: 8.2, bScore: 3, info: "#师生", otherlink: "https://exhentai.org/g/2986798/ea57cfda3f/", bak: "https://telegra.ph/うなぎやさん-花宮なつか-BUKKAKEエモーション-中国翻訳-DL版-07-23" },
-  { id: "519958", aScore: 8, bScore: 8.9, info: "#催眠 #调教 魔砲少女シエスタ" },
+  { id: "519958", aScore: 8, bScore: 8.9, info: "#催眠 #调教 魔砲少女シエスタ", bak: "https://telegra.ph/まゃ吾郎-魔砲少女シエスタ-第1-2話-中国翻訳-DL版-03-23" },
   { id: "469072", aScore: 7.1, bScore: 9, info: "#NTR" },
   { id: "140738", aScore: 4.4, bScore: 7.6, info: "#3P #姐妹 #出轨" },
   { id: "(ex)", aScore: 7.5, bScore: 4.6, info: "#全彩 #兽耳 #3P #百合", otherlink: "https://exhentai.org/g/1929232/edce5c27f5/", bak: "https://telegra.ph/Under-Colony-みぬたち-みけじゃらし-ハイスクールフリート-中国翻訳-DL版-08-03" },
@@ -735,6 +735,7 @@ const data = [
   { id: "479659", aScore: 7.2, bScore: 4.3, info: "#兽耳", order: 2 },
   { id: "563419", aScore: 7.3, bScore: 7.8, info: "#魅魔 #纯爱" },
   { id: "563280", aScore: 6.2, bScore: 8, info: "#时停 #公共场合 #精神失常", bak: "https://telegra.ph/C105-スパイシーラブスヘブン-かみ田-本当にいた時間停止おじさん3-中国翻訳-03-19" },
+  { id: "559506", aScore: 7.1, bScore: 6.5, info: "#冒险 #触手 #魔法 #自慰" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

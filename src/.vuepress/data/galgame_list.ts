@@ -4,6 +4,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "旭光のマリアージュ",
     namaniku: true,
+    use_time: "-1min",
     duration: {
       start: "2025-03-23",
     },

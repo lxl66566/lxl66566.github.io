@@ -438,6 +438,7 @@ const data = [
   { id: "MUKD-502", aScore: 5.1, bScore: 7.5, u: true, name: "盗撮、睡眠輪●、襲撃中出しレ×プ、集団リ×チ… 狙われた新人女子マネージャー。3泊4日、悲惨すぎる地獄のトラウマ合宿。 小島みこ" },
   { id: "PPPD-433", aScore: 5.6, bScore: 8.4, u: true, name: "#常识崩坏 近親相姦が当たり前の家庭に育った巨乳の私 小さい頃、養子として貰われた家庭は私以外男だらけ。家族と毎日エッチをするのが当たり前と教えられて育ちました… 稀夕らら" },
   { id: "MUDR-249", aScore: 8, bScore: 8.6, u: true, name: "#捆绑 #SM あの日からずっと…。 緊縛調教中出しされる制服美少女 藤田こずえ" },
+  { id: "BIG-103", aScore: 8.3, bScore: 9.4, name: "#凌辱 りこ" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

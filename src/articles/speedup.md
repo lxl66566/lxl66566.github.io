@@ -434,7 +434,7 @@ escude 家的游戏是 bin 格式，GARbro 可解不可封。
 </template>
 <template #unity>
 
-尝试解包 _旭光のマリアージュ_。用 bandizip 打开 .dat 文件，显示是一个 zip 压缩包。文件名没有加密，可以看到语音（sound）在 `data_05.dat` 和 `data_06.dat` 里。解压，需要密码。找密码，在[别人的博客](https://blog.chenx221.cyou/2021/09/04/galgame-%E6%B8%B8%E6%88%8F%E8%A7%A3%E5%8C%85%E8%AE%B0%E5%BD%95/)找到密码为 `IrsysPack_CipherKey`。于是提取成功。
+尝试解包 _旭光のマリアージュ_。用 bandizip 打开 .dat 文件，显示是一个 zip 压缩包。文件名没有加密，可以看到语音（sound）在 `data_05.dat` 和 `data_06.dat` 里。解压，需要密码。找密码，在[别人的博客](https://blog.chenx221.cyou/2021/09/04/galgame-游戏解包记录/)找到密码为 `IrsysPack_CipherKey`。于是提取成功。
 
 加速完（注意避开 se 和 bgm），准备封包，结果 bandizip 打出的 zip 用不了，开游戏有出场动画，但是进不去标题，黑屏。无论开不开压缩级别都是这样。
 
@@ -481,6 +481,36 @@ Path("test.txt").unlink()
 ```
 
 然后就可以用了。实在是太神奇了。
+
+</template>
+<template #bgi>
+
+首先，用 GARbro 是可以解 arc 的。不过需要勾选将音频转为常见格式。我想找一个命令行自动化解包 arc 的工具：
+
+- [exoozoarc](http://asmodean.reverse.net/pages/exoozoarc.html)：傻逼玩意，运行后显示 _This application has requested the Runtime to terminate it in an unusual way. Please contact the application's support team for more information._
+- [AllanZyne/bgi_tools](https://github.com/AllanZyne/bgi_tools)：内置了一个 arc.dll，然后在 python 脚本里加载。但是这个 dll 无法在 win11 上跑，_OSError: cannot load library 'xxx/arc.dll': error 0xc1_。这货的 dll 说不定是 32 位的呢。
+  - 然后我去重新编译它的 dll，又改 build.py（不要再用 `cl.exe` 了！），各种 malloc 没有 cast `void *` 又要帮他擦屁股。好不容易编完了 `arc.dll`，一启动，_不能识别该文件！_ 给我气笑了。
+- [vn-tools/arc_unpacker](https://github.com/vn-tools/arc_unpacker/releases)：使用 `--dec=bgi/arc` 后，报错 `not recognized by any decoder`。不是哥们，你名字都叫 arc_unpacker，2016 年 release 的包连 2013 年的 arc 都解不了，有点丢人了吧。
+- [galgametools 里的两个 BGI 工具](https://github.com/000ylop/galgametools/tree/master/BGI解包/BGI解包器)
+  - fxckBGI：这玩意不是解 arc 的，是注入 `BGI.exe` 的，而且不是命令行，我不喜欢。
+  - BGIunpack\*0.1.1.rar：是命令行，但是必须用 GUI 选择。然后 _打开 ARC 文件失败！_
+- [soratane/BGIscript_V1.0](https://github.com/soratane/BGIscript_V1.0)：基本没有使用方法（README 我信你个鬼！），仓库里的几个 exe 运行没有输出。
+- [galgametools/AnimED](https://github.com/000ylop/galgametools/tree/master/AnimED)：看不懂，不会用，没有说明。
+- [minirop/arc-reader](https://github.com/minirop/arc-reader)：据称支持 arc2 的格式。由于我不想装 libpng12 折腾 C++ 那边的傻逼环境，我直接让 claude-3.7 写了一个 [rust 版本](https://github.com/lxl66566/arc-reader-rs)的，效果出奇地好！！非常好 AI，干烂了傻逼 C 的编译。
+
+至于封包，[AllanZyne/bgi_tools](https://github.com/AllanZyne/bgi_tools) 里有一个非常短小精悍的封包脚本，并且不依赖于任何 dll/C/C++ 代码，激起了我的尝试欲望。嗯，虽然打出来的包和原先的有一些差别，不过至少能给那些 ogg 自动加上 headers，可以说是看起来挺先进的。结果不出意外地失败了：播放第一句语音时，_指定されたファイル [ data04xxx.arc : sen010100010 ] の登録中に致命的なエラーが発生しました_。
+
+然后我尝试用 GARbro 自带的封包，采用 ARC/WillV2 格式。当然，此时的 `.ogg` 文件并没有经过处理。再次进入游戏，这回是弹窗提示错误，而不是直接闪退，说明 GARbro 的封包功能很可能是正常的。现在距离成功只差如何处理 `.ogg` 的 headers 了。
+
+一共 40 bytes 的 headers，在同一个 .arc 中对比了几个文件后，发现只有 00000000 \[08, 0F\] 的 bytes 是有变化的。跟原 .ogg 做对比，很容易看出 \[08, 09\] LE 刚好是 `.ogg` 文件的 bytes 数。\[0A, 0B\] 都是 00 暂且跳过，只有剩下的 00000000 \[0C, 0F\] 我完全不知道是啥意思。在求助了 grok3 后，它指出，\[0C, 0F\] LE 有可能是该音频的帧数（持续时间 \* 采样率 44100Hz）。不过这里的帧数普遍比实际帧数高一些，误差 < 0.01s。所以我又想，这有没有可能是 ogg 的什么跟时长/大小相关的特征。
+
+继续了解，发现 ogg 的 Vorbis 编码并不是定长帧，而是一个个的不定长 packet 组成的。当我打印出一个 ogg 的所有 packet 的 length 之和以后，神奇的事情发生了，这个 sum 的值刚好就等于 \[0C, 0F\] LE 的值！于是 ogg 封包就这样破解了。
+
+![.ogg headers 示意图](/images/articles/speedup/arc1.png)
+
+然后后来又花了亿点点时间优化 [arc-reader-rs](https://github.com/lxl66566/arc-reader-rs) 的代码，添加封包功能，添加测试。最后再用脚本一跑，轻松秒杀。
+
+抬头一看，怎么一天的时间已经过去了。。。
 
 </template>
 </SpeedupList>
