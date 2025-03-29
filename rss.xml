@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 27 Mar 2025 15:55:45 GMT</pubDate>
-    <lastBuildDate>Thu, 27 Mar 2025 15:55:45 GMT</lastBuildDate>
+    <pubDate>Sat, 29 Mar 2025 16:57:17 GMT</pubDate>
+    <lastBuildDate>Sat, 29 Mar 2025 16:57:17 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -347,6 +347,8 @@
 <p>跟向日葵差不多，都是中心化连接。UI 会好看一点，但是我感觉没有向日葵好用。</p>
 <h3>TeamViewer</h3>
 <p>很早之前试过一次，感觉难用，不用了。这玩意国外用得应该更广泛一些。</p>
+<h3><a class="header-anchor" href="#连连控"><span></span></a><a href="https://www.asklink.com/download" target="_blank" rel="noopener noreferrer">连连控</a></h3>
+<p>一个相对的国产方案，免费版也支持 4k 传输。控制是通过国内线路中转的，不是 P2P，不过国内的延迟应该也不算高。</p>
 <h2>分离式方案</h2>
 <p>由于企业级一体化方案基本没有 P2P（有也不能用），因此我将重心放到了分离式方案上。分离式指用户需要自己部署客户端、服务端、内网穿透等模块，具有复杂与高度自定义化的特点。</p>
 <h3>内网穿透</h3>
