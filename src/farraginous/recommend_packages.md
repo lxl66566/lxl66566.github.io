@@ -316,6 +316,12 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 
 [EnergyStar](#energystar) 有人接手，这个做的还不错，有 GUI，并且能自动在不插电时启用。
 
+### [TrafficMonitor](https://github.com/zhongyang219/TrafficMonitor)
+
+[教程](https://www.bilibili.com/video/BV1RkXmYPE8s/)
+
+可以在任务栏显示流量、CPU/GPU/内存/硬盘的实时占用和温度。我以前在 kde 的时候就很喜欢它的任务栏显示实时占用的小组件，现在 windows 上也可以得到相似的体验。
+
 ## Linux
 
 前往 [Linux - 包管理与使用](../articles/linux/package.md#包使用)

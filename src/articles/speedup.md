@@ -498,6 +498,8 @@ Path("test.txt").unlink()
 - [galgametools/AnimED](https://github.com/000ylop/galgametools/tree/master/AnimED)：看不懂，不会用，没有说明。
 - [minirop/arc-reader](https://github.com/minirop/arc-reader)：据称支持 arc2 的格式。由于我不想装 libpng12 折腾 C++ 那边的傻逼环境，我直接让 claude-3.7 写了一个 [rust 版本](https://github.com/lxl66566/arc-reader-rs)的，效果出奇地好！！非常好 AI，干烂了傻逼 C 的编译。
 
+对 _千の刃涛、桃花染の皇姫_ 来说，只需要解包 `data04` 开头的 .arc file 就行了。其他的要么是 bgm 要么是 system effect，不用管。
+
 至于封包，[AllanZyne/bgi_tools](https://github.com/AllanZyne/bgi_tools) 里有一个非常短小精悍的封包脚本，并且不依赖于任何 dll/C/C++ 代码，激起了我的尝试欲望。嗯，虽然打出来的包和原先的有一些差别，不过至少能给那些 ogg 自动加上 headers，可以说是看起来挺先进的。结果不出意外地失败了：播放第一句语音时，_指定されたファイル [ data04xxx.arc : sen010100010 ] の登録中に致命的なエラーが発生しました_。
 
 然后我尝试用 GARbro 自带的封包，采用 ARC/WillV2 格式。当然，此时的 `.ogg` 文件并没有经过处理。再次进入游戏，这回是弹窗提示错误，而不是直接闪退，说明 GARbro 的封包功能很可能是正常的。现在距离成功只差如何处理 `.ogg` 的 headers 了。

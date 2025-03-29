@@ -120,6 +120,7 @@ tag:
 - 2024 年火爆的**去中心化**交易所。需要把法币换成 USDC，提币到钱包再转到 hyperliquid 内。
 - 优点是费率低，并且可以高回报地跟单。
 - 有一些 bot 带单的我觉得非常值得尝试。（与其自己研究不如直接吃成果，对方拿分成，winwin）
+- 去中心化交易所还是有点问题，2025 年初[两次被攻击](https://www.panewslab.com/zh/sqarticledetails/kbpj88hq.html)。
 
 </template>
 </CryptocurrencyExchangeList>

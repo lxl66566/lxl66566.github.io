@@ -2,9 +2,16 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "千の刃涛、桃花染の皇姫",
+    use_time: "-1min",
+    duration: {
+      start: "2025-03-28",
+    },
+  },
+  {
     name: "旭光のマリアージュ",
     namaniku: true,
-    use_time: "-1min",
+    use_time: "-2min",
     duration: {
       start: "2025-03-23",
     },

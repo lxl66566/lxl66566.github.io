@@ -76,6 +76,7 @@ tag:
 <!-- prettier-ignore -->
 |书名|读书区间|读书时长|说两句|
 |:--:|:--:|:--:|:--:|
+| 圣女修道院 <Badge type="warning" text="爽" /> | 2025.03.28-<br/>在读 | - |
 | 死人经 | 2024.12.12-<br/>在读 | - | <dtlslong>emmm，死人经不就是电鳗……</dtlslong> |
 | 柴刀流恋爱日常 | 2024.12.06-<br/>2024.12.11 | - | <dtlslong>国人、日系、恋爱后宫文。<br/>475 章手到底铐没铐着…</dtlslong> |
 | 我们的教室没有欺凌 - XPJbox <Badge type="tip" text="日轻" /> <Badge type="warning" text="H" /> | 2024.12.05-<br/>2024.12.06 | - | <dtlslong>没有剧情与逻辑可言的黄色废料。但是译者水平很高。</dtlslong> |
