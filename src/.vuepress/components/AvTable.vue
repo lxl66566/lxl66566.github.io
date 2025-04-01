@@ -439,6 +439,8 @@ const data = [
   { id: "PPPD-433", aScore: 5.6, bScore: 8.4, u: true, name: "#常识崩坏 近親相姦が当たり前の家庭に育った巨乳の私 小さい頃、養子として貰われた家庭は私以外男だらけ。家族と毎日エッチをするのが当たり前と教えられて育ちました… 稀夕らら" },
   { id: "MUDR-249", aScore: 8, bScore: 8.6, u: true, name: "#捆绑 #SM あの日からずっと…。 緊縛調教中出しされる制服美少女 藤田こずえ" },
   { id: "BIG-103", aScore: 8.3, bScore: 9.4, name: "#凌辱 りこ" },
+  { id: "CSCT-006", aScore: 6.4, bScore: 7, name: "#cos #战败 膣の勇者の反り上がり 飛鳥りん" },
+  { id: "mide-776", aScore: 6.8, bScore: 7.2, u: true, name: "禁欲32年の聖女は強●魔に犯●れて性の目覚めを知った… つぼみ" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

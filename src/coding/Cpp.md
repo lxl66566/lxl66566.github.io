@@ -608,3 +608,4 @@ file.close();
 books:
 
 1. [C++ 性能优化指南](https://github.com/weaiken/ebook/blob/master/01_programming/C++/C++性能优化指南.pdf)
+2. [Compiler Options Hardening Guide for C and C++](https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html)

@@ -739,6 +739,7 @@ const data = [
   { id: "559506", aScore: 7.1, bScore: 6.5, info: "#冒险 #触手 #魔法 #自慰" },
   { id: "564299", aScore: 5.2, bScore: 6.8, info: "#魔法少女", bak: "https://telegra.ph/はとめ本舗-魔法少女の魔力補給-中国翻訳-DL版-03-26" },
   { id: "563509", aScore: 6.6, bScore: 5.3, info: "#兽耳 #催眠 ^2", bak: "https://telegra.ph/C94-セカンドカラー-たいぷはてな-ロリハーレム主人公に催眠でなってみた-りゅうおうのおしごと-中国翻訳-無修正-03-23" },
+  { id: "564642", aScore: 6.7, bScore: 8.6, info: "#手绘 #生草", bak: "https://telegra.ph/Eternal-frost-阿米娅跟触手博士的交配游戏-明日方舟-中国語-03-28" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

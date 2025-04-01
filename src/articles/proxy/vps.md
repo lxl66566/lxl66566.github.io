@@ -79,6 +79,7 @@ tag:
 - [Digirdp](https://zhujiwiki.com/36114/)，10$/yr 1GB/15GB 1TB/1Gbps 美国，虽然 HDD，但是跑流量也不影响。
 - [BestVM](https://zhujiwiki.com/36288/)，15 CNY/mo 512MB/5GB 1T/1Gbps TW
 - [wap.ac](https://zhujiwiki.com/34105/)，1$/mo 256MB/5GB 500GB/1Gbps JP/HK
+- [Nube](https://tyo-console.nube.sh/zh-cn/10006131/10006953/vm/place-order)，pay as you go，1c1g 100GB/月大约 \$1 吧。主要是一次最少得充 $10，沉没成本有点高。看起来延迟挺低的。
 
 :::
 

@@ -653,3 +653,4 @@ articles:
 14. [The missing parts in Cargo](https://weihanglo.tw/posts/2024/the-missing-parts-in-cargo/)
 15. [Fast Rust Builds](https://matklad.github.io/2021/09/04/fast-rust-builds.html)
 16. [幽灵索引类型与匿名结构体](https://nihil.cc/posts/phantom_index_type/)
+17. [Rust 中常见的有关生命周期的误解](https://github.com/pretzelhammer/rust-blog/blob/master/posts/translations/zh-hans/common-rust-lifetime-misconceptions.md)
