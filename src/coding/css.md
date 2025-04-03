@@ -148,3 +148,4 @@ flex 基础：
 ## external
 
 1. [学习 CSS 布局](https://zh.learnlayout.com/)
+2. [纯 CSS blur](https://leanrada.com/notes/css-only-lqip/)
