@@ -119,6 +119,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "空に刻んだパラレログラム",
+    use_time: "-2min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-01-21",
