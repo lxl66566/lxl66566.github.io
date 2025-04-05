@@ -108,12 +108,12 @@ tag:
 - [ping.pe](https://ping.pe/#)：连通性
 - 全面评测：
   - [VPS 融合怪 - GO 重构版本](https://github.com/oneclickvirt/ecs)
+  - 一键网络质量：[NetQuality](https://github.com/xykt/NetQuality)
 - 全球测速
   - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
 - 国内测速
   - `curl -sL network-speed.xyz | bash -s -- -r china`
   - `bash <(curl -sL bash.icu/speedtest)`
-- IP 质量：[IPQuality](https://github.com/xykt/IPQuality)
 - <https://bgp.tools/>，ASN 信息
 - <https://ip.skk.moe/>，群友搭的查自己 IP 的面板
 - [网络面板](https://net.ljxnet.cn/)流量消耗器
