@@ -55,6 +55,7 @@ temp.alias = {
     "reciter",
     "ArticleCell",
     "GalList",
+    "BookList",
     "AnimeList",
     "JobList",
     "SpeedupList",
