@@ -32,7 +32,7 @@ import { BookItemInputType, BookDuration } from "../definition";
 const get_valid_name = (item: BookItemInputType): string => item.valid_name ?? item.name;
 const show_network = ref(true);
 
-const pattern = new RegExp(`^[<>=\\?]+|[<>=\\?]+$`, 'g');
+const pattern = new RegExp(`^[<>=\\?]+|[<>=\\?]+$`, "g");
 
 const BookDurationCompare = (a: BookDuration, b: BookDuration): number => {
   if (typeof a === "string" && typeof b === "string") {
@@ -64,7 +64,7 @@ const BookDurationCompare = (a: BookDuration, b: BookDuration): number => {
     return -1;
   }
   return 0;
-}
+};
 
 // 默认排序函数
 const defaultSort = (inputList: BookItemInputType[]): BookItemInputType[] => {

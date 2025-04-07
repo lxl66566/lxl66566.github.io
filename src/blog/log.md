@@ -22,6 +22,10 @@ category:
 
 ## 2025
 
+### 20250405
+
+- 添加组件 BookList 和 BookListItem 用于书籍列表的展开
+
 ### 20250305
 
 - 添加组件 Explain 用于节点提示，添加组件 CryptocurrencyExchangeList 用于展示交易所列表

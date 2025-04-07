@@ -18,7 +18,7 @@ export type BookDuration =
 export enum HLevel {
   // 无任何 R18 内容
   NONE = "无",
-  // 无任何 R18 细节描写，且在文中是微量的可有可无的部分
+  // 无任何 R18 细节描写，且 R18 场景在文中是微量的可有可无的部分
   LITE = "普通",
   // 不以 R18 内容为主
   LOW = "轻度",

@@ -80,7 +80,7 @@ const duration_string = computed(() => {
   if (props.item.duration.start === props.item.duration.end && props.item.duration.start) {
     return props.item.duration.start;
   }
-  return (props.item.duration.start ?? "?") + " ~ " + (props.item.duration.end ?? "?");
+  return (props.item.duration.start ?? "?") + "~\n" + (props.item.duration.end ?? "?");
 });
 </script>
 

@@ -605,7 +605,7 @@ const original_list: BookItemInputType[] = [
   },
   {
     name: "事实核查手册",
-    url: "https://t.me/absolutexsresource/12",
+    url: "https://chinafactcheck.com/?p=11465",
     reading_status: {
       kind: "已放弃",
     },
