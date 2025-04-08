@@ -742,6 +742,7 @@ const data = [
   { id: "564642", aScore: 6.7, bScore: 8.6, info: "#手绘 #生草", bak: "https://telegra.ph/Eternal-frost-阿米娅跟触手博士的交配游戏-明日方舟-中国語-03-28" },
   { id: "565133", aScore: 9.5, bScore: 9, info: "#圣女 #天然 #异世界", bak: "https://telegra.ph/INS-mode-天凪青磁-異世界セイカンセラピスト-中国翻訳-lin6個人漢化-無修正-DL版-04-06" },
   { id: "566404", aScore: 7.1, bScore: 8.6, info: "#家出少女", bak: "https://telegra.ph/しぷおる-ずっと一緒にいてね-中国翻訳-DL版-無修正-04-05" },
+  { id: "544769", aScore: 5.5, bScore: 7.1, info: "#魔法少女 #触手" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

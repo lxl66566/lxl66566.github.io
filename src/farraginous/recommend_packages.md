@@ -322,6 +322,14 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 
 可以在任务栏显示流量、CPU/GPU/内存/硬盘的实时占用和温度。我以前在 kde 的时候就很喜欢它的任务栏显示实时占用的小组件，现在 windows 上也可以得到相似的体验。
 
+### [Flow Launcher](https://www.flowlauncher.com/)
+
+如果你在用 [utools](#utools) 或 powertoys 类似物，你一定要尝试一下 Flow Launcher。
+
+Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、搜索资料、有插件系统等等。不过跟垃圾 utools 不同，它是免费开源的。
+
+- 有 everything 集成，可以方便搜文件。
+
 ## Linux
 
 前往 [Linux - 包管理与使用](../articles/linux/package.md#包使用)

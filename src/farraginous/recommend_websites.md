@@ -111,6 +111,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - [pb.nichi.co](https://pb.nichi.co/)：仅支持 paste from cli，极极简
 - [bin.outv.im](https://bin.outv.im/)：注重加密
 - <https://netcut.cn/>：最长 3 年，有敏感词检测
+- <https://pb.moku.llk.moe/>：[编程语言原神](../coding/Rust.md)写的，支持语法高亮。
 
 然后还有[终端录制](https://asciinema.org/)。。虽然我不喜欢这样引入不必要的体积膨胀，但还是做个记录。
 

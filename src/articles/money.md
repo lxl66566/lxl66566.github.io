@@ -83,6 +83,11 @@ tag:
 
 全中文支持，C2C 支持支付宝和微信，优秀的前端 UI，还有深度技术的 web3 项目。
 
+说几句坏话：
+
+- 欧易的 bug 反馈跟没有一样。我遇到的一个策略交易 bug 反馈了一点回应都没有。
+- 欧易的 C2C 交易认证比较傻逼，会自动将你的系统音量开到最大。所以建议搭配 [VolumeLockr](https://github.com/jonathanklee/VolumeLockr) 锁系统音量，实测可用。
+
 </template>
 <template #币安>
 
@@ -110,9 +115,13 @@ tag:
 </template>
 <template #htx>
 
-- 也对大陆用户友好，但是我个人没啥好感。
+- 不支持美国和加拿大 IP，对大陆用户友好。
+- 我个人没啥好感。
 - 页面优化稍差
 - 策略机器人只有网格，太少了
+- C2C 做得挺烂的，盘口少，而且验证单太多。
+- 现货交易，下限价单必须 >=10 USDT，否则就只能下市价单。莫名其妙的规矩。
+- htx 提供了年化 8% 的无风险稳定币赚币，但使用的是 USDD 算法稳定币，具体的算法可以看 [external 1.](#external)。
 
 </template>
 <template #hyperliquid>
@@ -272,7 +281,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
    - 我现在用 7950x 挖 XMR。
    - 有尝试过一下 Qubic，是一个训练 AI 的项目，不过当前发展还是太早期了，前端页面都做不好，收益计算也很迷，没啥意义，玩了一晚上不玩了。
 4. 带宽/流量挖矿：
-   - 在尝试挖 grass，通俗来说就是做 AI 公司的爬虫肉鸡。不过 grass desktop 做得挺烂，经常断连，并且并没有一个官方的 CLI 导致我无法在 VPS 上用。尝试了许多第三方 CLI 全部用不了。
+   - 在尝试挖 [grass](https://app.getgrass.io/register/?referralCode=O_g4T-ohcn5w9fj)，通俗来说就是做 AI 公司的爬虫代理池。不过 grass desktop 做得挺烂，经常断连，并且并没有一个官方的 CLI 导致我无法在 VPS 上用。尝试了许多第三方 CLI 全部用不了。
 
 ### XMR
 
@@ -294,6 +303,10 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 
 - [yeasy/区块链技术指南](https://yeasy.gitbook.io/blockchain_guide)
 - [The Solana Programming Model: An Introduction to Developing on Solana](https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana)
+
+## external
+
+1. [孙哥的「算稳梦」：波联储与 USDD](https://zhuanlan.zhihu.com/p/512615005)
 
 <script setup lang="ts">
 import CryptocurrencyExchangeList from "@CryptocurrencyExchangeList";
