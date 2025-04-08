@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 07 Apr 2025 16:51:26 GMT</pubDate>
-    <lastBuildDate>Mon, 07 Apr 2025 16:51:26 GMT</lastBuildDate>
+    <pubDate>Tue, 08 Apr 2025 16:50:22 GMT</pubDate>
+    <lastBuildDate>Tue, 08 Apr 2025 16:50:22 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -308,7 +308,7 @@
 </li>
 <li>带宽/流量挖矿：
 <ul>
-<li>在尝试挖 grass，通俗来说就是做 AI 公司的爬虫肉鸡。不过 grass desktop 做得挺烂，经常断连，并且并没有一个官方的 CLI 导致我无法在 VPS 上用。尝试了许多第三方 CLI 全部用不了。</li>
+<li>在尝试挖 <a href="https://app.getgrass.io/register/?referralCode=O_g4T-ohcn5w9fj" target="_blank" rel="noopener noreferrer">grass</a>，通俗来说就是做 AI 公司的爬虫代理池。不过 grass desktop 做得挺烂，经常断连，并且并没有一个官方的 CLI 导致我无法在 VPS 上用。尝试了许多第三方 CLI 全部用不了。</li>
 </ul>
 </li>
 </ol>
@@ -333,6 +333,10 @@
 <li><a href="https://yeasy.gitbook.io/blockchain_guide" target="_blank" rel="noopener noreferrer">yeasy/区块链技术指南</a></li>
 <li><a href="https://www.helius.dev/blog/the-solana-programming-model-an-introduction-to-developing-on-solana" target="_blank" rel="noopener noreferrer">The Solana Programming Model: An Introduction to Developing on Solana</a></li>
 </ul>
+<h2>external</h2>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/512615005" target="_blank" rel="noopener noreferrer">孙哥的「算稳梦」：波联储与 USDD</a></li>
+</ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
