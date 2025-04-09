@@ -252,7 +252,6 @@ const data = [
   { id: "midv-258", aScore: 8.2, bScore: 7, u: true },
   { id: "hunbl-122", aScore: 6.6, bScore: 6.5 },
   { id: "apns-305", aScore: 6.1, bScore: 6.8, u: true },
-  { id: "mukd-484", aScore: 9.3, bScore: 9.9, u: true },
   { id: "sdam-093", aScore: 8.7, bScore: 9.1, u: true, name: "only ^1" },
   { id: "dvdms-838", aScore: 8, bScore: 7.3, u: true, name: "#3P #母女" },
   { id: "ibw-425z", aScore: 6.2, bScore: 6.1, name: "^1" },
@@ -383,7 +382,7 @@ const data = [
   { id: "hhf-009", aScore: 7, bScore: 7.3, name: "#睡x 母親のおかげで色々な女性と毎日エッチなことをしています。ひきこもりの息子の命令に絶対服従する母。眠らされてヤラれまくった美人総集編" },
   { id: "miab-008", aScore: 8.4, bScore: 8.7, name: "#多P 合宿レ×プ輪● 憧れの女子マネージャーが絶倫部員達の激ピストン連続中出しでおま○こブリブリ精子逆流アクメ 柏木こなつ" },
   { id: "NCYF-032", aScore: 5.3, bScore: 7.3, name: "#7P #大乱交 #白毛" },
-  { id: "mukd-484", aScore: 9, bScore: 9.2, u: true, name: "#睡x #强制性交 盗撮、睡眠輪●、襲撃中出しレ×プ、集団リ×チ… 狙われた新人女子マネージャー。3泊4日、悲惨すぎる地獄のトラウマ合宿。 皆月ひかる" },
+  { id: "mukd-484", aScore: 931, bScore: 9.5, u: true, name: "#睡x #强制性交 盗撮、睡眠輪●、襲撃中出しレ×プ、集団リ×チ… 狙われた新人女子マネージャー。3泊4日、悲惨すぎる地獄のトラウマ合宿。 皆月ひかる" },
   { id: "MTALL-084", aScore: 8.3, bScore: 8.6, name: "#自慰 #引诱 床オナぐせのある妹がマンズリでお兄ちゃんを釘付けにするガン見クリしこ誘惑 松本いちか" },
   { id: "MIGD-745", aScore: 5.2, bScore: 4.3 },
   { id: "VRTM-481", aScore: 7, bScore: 5.8, name: "#3P 私たち姉妹は洗脳され、義父の性玩具になりました… 2 - 冬愛ことね" },
@@ -444,6 +443,12 @@ const data = [
   { id: "milk-199", aScore: 7.6, bScore: 10.6, u: true, name: "街で見つけた制服天使を強○イラマで黙らせて集団○○○ 快楽を植え付けて絶倫チ○ポの性処理肉便器に仕立て上げた 百咲みいろ" },
   { id: "milk-177", aScore: 6.5, bScore: 8.5, name: "学園のアイドルを強○イラマで黙らせて集団輪○ 快楽を植え付けて絶倫チ○ポの性処理係に仕立て上げた 鈴音杏夏" },
   { id: "mukd-504", aScore: 8, bScore: 9.4, name: "#3P W喉奥肉便器 残酷非道イラマレ×プの標的にされ奴●堕ちした少女達 天乃のあ 百咲みいろ" },
+  { id: "DVAJ-669", aScore: 8.7, bScore: 8.4, name: "登下校パンチラ着替えトイレ風呂etc.1年間ずっと盗撮していた女子校生に彼氏ができて嫉妬を抑えきれず追跡拉致レ●プ抵抗しなくなるまで何度も生中出ししまくった 皆月ひかる" },
+  { id: "MILK-221", aScore: 7.1, bScore: 6, name: "痴● ●撮 尾行 家宅●入 純真無垢な女子●生を性奴●化 イキ狂い絶対服●性交 円井萌華" },
+  { id: "ROYD-127", aScore: 6, bScore: 6.6, u: true, name: "#绿帽 女子○生NTR 隣のAV騒音オヤジに彼女を寝取られても気付かなかったボク 円井萌華" },
+  { id: "milk-232", aScore: 5.5, bScore: 7.5, name: "#4P 喉奥肉便器×2 冷酷無残イラマ輪〇の標的にされた仲良しメイド はるな＆れい - 河合陽菜" },
+  { id: "mudr-285", aScore: 4.3, bScore: 6.7, u: true, name: "魁！！喉凹イラマ塾 鬱憤晴らし・ストレス発散・成績アップのために犯され輪姦され続けた進学肉便器 水本葉" },
+  { id: "MIAA-589", aScore: 5.2, bScore: 8.1, u: true, name: "この子のクチとマ○コ、だれでも定額で挿れ放題！ クラスの不良女子にイラマチオ円交させられた制服少女 七宮ゆりあ" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

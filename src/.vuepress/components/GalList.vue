@@ -142,6 +142,7 @@ table {
   width: 100%;
   max-width: 100%;
   table-layout: fixed;
+  overflow: visible !important;
 }
 
 td {

@@ -69,4 +69,8 @@ td {
   text-align: center;
   vertical-align: middle;
 }
+
+table {
+  overflow: visible !important;
+}
 </style>

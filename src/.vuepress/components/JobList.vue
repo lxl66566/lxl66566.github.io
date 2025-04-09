@@ -49,4 +49,8 @@ td {
     color: green;
   }
 }
+
+table {
+  overflow: visible !important;
+}
 </style>
