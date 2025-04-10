@@ -2,6 +2,7 @@ import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
 import theme from "./theme.js";
 import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 
 const __dirname = getDirname(import.meta.url);
 const temp = defineUserConfig({
@@ -9,26 +10,14 @@ const temp = defineUserConfig({
   lang: "zh-CN",
   title: "绝对值_x 的博客",
   description: "没什么有价值的内容的，真的！",
-  head: [
-    [
-      "script",
-      {
-        async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1",
-      },
-    ],
-    [
-      "script",
-      {},
-      `<!-- Google tag (gtag.js) -->
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-MKRDBH1ZP1');`,
-    ],
-  ],
+  head: [],
   theme,
-  plugins: [removePwaPlugin({})],
+  plugins: [
+    removePwaPlugin({}),
+    googleAnalyticsPlugin({
+      id: "G-MKRDBH1ZP1",
+    }),
+  ],
   shouldPrefetch: false,
 });
 

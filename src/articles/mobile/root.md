@@ -1,6 +1,6 @@
 ---
 date: 2023-01-22
-icon: android
+icon: brands fa-usb
 category:
   - 教程
   - 经历

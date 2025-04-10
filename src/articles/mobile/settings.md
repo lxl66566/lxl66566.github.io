@@ -1,6 +1,6 @@
 ---
 date: 2023-01-22
-icon: android
+icon: gear
 category:
   - 教程
   - 生活

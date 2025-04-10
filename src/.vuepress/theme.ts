@@ -2,7 +2,6 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { cut } from "nodejs-jieba";
-import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
 
 const passwords = {
   general: {
@@ -126,5 +125,6 @@ export default hopeTheme({
       rss: true,
       count: 20,
     },
+    seo: true,
   },
 });
