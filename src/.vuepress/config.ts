@@ -1,6 +1,7 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
 import theme from "./theme.js";
+import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
 
 const __dirname = getDirname(import.meta.url);
 const temp = defineUserConfig({
@@ -27,6 +28,7 @@ gtag('config', 'G-MKRDBH1ZP1');`,
     ],
   ],
   theme,
+  plugins: [removePwaPlugin({})],
   shouldPrefetch: false,
 });
 

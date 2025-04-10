@@ -2,7 +2,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { cut } from "nodejs-jieba";
-// import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
+import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
 
 const passwords = {
   general: {
@@ -126,20 +126,5 @@ export default hopeTheme({
       rss: true,
       count: 20,
     },
-    pwa: {
-      update: "force",
-      maxSize: 4096,
-      maxImageSize: 512,
-      cacheHTML: true,
-      manifest: {
-        icons: [
-          {
-            src: "/logo.jpg",
-            sizes: "706x706",
-          },
-        ],
-      },
-    },
-    // removePwa: removePwaPlugin({}),
   },
 });
