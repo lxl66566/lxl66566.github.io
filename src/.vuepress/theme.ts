@@ -14,7 +14,7 @@ export default hopeTheme({
   sidebar,
   editLink: false,
   contributors: false,
-  breadcrumb: false,
+  breadcrumb: true,
   encrypt: {
     config: {
       "/articles/vpn.html": ["2003"],
@@ -41,7 +41,10 @@ export default hopeTheme({
     end: ["Repo", "TelegramLink", "RSSLink", "Outlook", "Search"],
   },
   plugins: {
-    blog: { excerptLength: 1 },
+    activeHeaderLinks: false, // 禁用滚动自动更新 url anchor，以支持 #:~:text=xxx 的链接格式
+    blog: {
+      excerptLength: 1,
+    },
     searchPro: {
       indexContent: true,
       autoSuggestions: true,
