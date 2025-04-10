@@ -1,12 +1,23 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
+import { cut } from "nodejs-jieba";
+// import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
+
+const passwords = {
+  general: {
+    password: "2003",
+    hint: "作者生年",
+  },
+  h: {
+    password: "0721",
+    hint: "返回上一页查看提示",
+  },
+};
 
 export default hopeTheme({
   pure: true,
   hostname: "https://absx.pages.dev",
-  iconAssets: ["fontawesome-with-brands"],
-  iconPrefix: "fas fa-",
   logo: "/logo.jpg",
   repo: "https://github.com/lxl66566/lxl66566.github.io",
   docsDir: "src",
@@ -15,13 +26,51 @@ export default hopeTheme({
   editLink: false,
   contributors: false,
   breadcrumb: true,
+
+  markdown: {
+    align: true,
+    alert: true,
+    codeTabs: true,
+    // attrs: true,
+    imgLazyload: true,
+    imgSize: true,
+    imgMark: true,
+    figure: true,
+    math: {
+      type: "katex",
+      copy: true,
+      displayMode: true,
+    },
+    include: true,
+    spoiler: true, // https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html
+    hint: true,
+    mark: true,
+    footnote: true,
+    tabs: true,
+    tasklist: true,
+    mermaid: true,
+    stylize: [
+      {
+        matcher: "Recommended",
+        replacer: ({ tag }) => {
+          if (tag === "em")
+            return {
+              tag: "Badge",
+              attrs: { type: "tip" },
+              content: "Recommended",
+            };
+          return undefined;
+        },
+      },
+    ],
+  },
   encrypt: {
     config: {
-      "/articles/vpn.html": ["2003"],
-      "/hobbies/NSFW/videos.html": ["0721"],
-      "/hobbies/NSFW/comic.html": ["0721"],
-      "/hobbies/NSFW/bangumi.html": ["0721"],
-      "/gossip/wish.html": ["2003"],
+      "/articles/vpn.html": passwords.general,
+      "/gossip/wish.html": passwords.general,
+      "/hobbies/NSFW/videos.html": passwords.h,
+      "/hobbies/NSFW/comic.html": passwords.h,
+      "/hobbies/NSFW/bangumi.html": passwords.h,
     },
   },
   blog: {
@@ -45,10 +94,24 @@ export default hopeTheme({
     blog: {
       excerptLength: 1,
     },
-    searchPro: {
+    slimsearch: {
       indexContent: true,
-      autoSuggestions: true,
+      suggestion: true,
+      searchDelay: 500,
+      indexOptions: {
+        // 使用 nodejs-jieba 进行分词
+        tokenize: (text, fieldName) => (fieldName === "id" ? [text] : cut(text, true)),
+      },
     },
+    photoSwipe: true,
+    icon: {
+      assets: "fontawesome-with-brands",
+      prefix: "fas fa-",
+    },
+    // searchPro: {
+    //   indexContent: true,
+    //   autoSuggestions: true,
+    // },
     comment: {
       provider: "Giscus",
       repo: "lxl66566/lxl66566.github.io",
@@ -58,38 +121,6 @@ export default hopeTheme({
       mapping: "pathname",
       lightTheme: "light",
       darkTheme: "transparent_dark",
-    },
-    mdEnhance: {
-      align: true,
-      alert: true,
-      codetabs: true,
-      // attrs: true,
-      imgLazyload: true,
-      imgSize: true,
-      imgMark: true,
-      figure: true,
-      include: true,
-      katex: { copy: true },
-      spoiler: true, // https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html
-      hint: true,
-      mark: true,
-      footnote: true,
-      tabs: true,
-      tasklist: true,
-      mermaid: true,
-      stylize: [
-        {
-          matcher: "Recommended",
-          replacer: ({ tag }) => {
-            if (tag === "em")
-              return {
-                tag: "Badge",
-                attrs: { type: "tip" },
-                content: "Recommended",
-              };
-          },
-        },
-      ],
     },
     feed: {
       rss: true,
@@ -109,5 +140,6 @@ export default hopeTheme({
         ],
       },
     },
+    // removePwa: removePwaPlugin({}),
   },
 });

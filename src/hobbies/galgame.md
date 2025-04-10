@@ -106,7 +106,7 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
-<template #千の刃涛、桃花染の皇姫>
+<template #千の刃涛桃花染の皇姫>
 
 - 又是一个因为音乐入坑的 gal，OP 真好听！
 - 画了很多各方向看去的面部立绘，质量还不错，但不是全部。
@@ -292,7 +292,7 @@ LunaTranslator 使用心得：
 结尾断章，等第二部。啊啊啊啊啊，我立志不读未完结小说，结果被 gal 坑了。
 
 </template>
-<template #転性魔王さまは勇者に勝てない！>
+<template #転性魔王さまは勇者に勝てない>
 
 <Badge text="性转"/>
 

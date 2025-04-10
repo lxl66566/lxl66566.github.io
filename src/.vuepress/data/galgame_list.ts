@@ -3,6 +3,7 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 const original_list: GalItemInputType[] = [
   {
     name: "千の刃涛、桃花染の皇姫",
+    valid_name: "千の刃涛桃花染の皇姫",
     use_time: "-1min",
     duration: {
       start: "2025-03-28",
@@ -160,6 +161,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "転性魔王さまは勇者に勝てない！",
+    valid_name: "転性魔王さまは勇者に勝てない",
     namaniku: true,
     use_time: "5h47min",
     duration: {

@@ -117,35 +117,37 @@ DIY 一台属于自己的电脑，可以说是大多数男生的梦想。我从�
 现在就漫无目的的试。看别人装机视频，怀疑是 8+4 pin CPU 供电只插了 8pin 所致（虽然理论上只插 8pin 在低负载下也能用，不过万一呢？）。然而我买的电源只有一根 8pin CPU 供电线，没有另一根（唉二手电源的弊端）。去楼下电脑店里找线，老板说供电线看着一样，实际上线序区别可能很大。好不容易找到一根 CPU 供电线跟我手上挺像，看着应该是原厂线，结果发现标的 _type3_，和手里的 _type4_ 不同。老板怕我用这线把 CPU 烧了，我说没事，我先回去用万用表测测线序再决定。于是花了 15CNY 买下了线，又找同学借了个万用表测。测出的线序确实抽象，_type3_ 线序就是一一对应挺正常的，而 _type4_ 是真的莫名其妙：
 
 <table>
-  <tr>
-    <th colspan="8" style="text-align: center;">
-      Type 4 线序
-    </th>
-  </tr>
-  <tr>
-    <th colspan="4" style="text-align: center;">CPU 端编号</th>
-    <th colspan="4" style="text-align: center;">电源端编号</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>3</td>
-    <td>1</td>
-    <td>4</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>6</td>
-    <td>7</td>
-    <td>8</td>
-    <td>6</td>
-    <td>7</td>
-    <td>5</td>
-    <td>8</td>
-  </tr>
+  <tbody>
+    <tr>
+      <th colspan="8" style="text-align: center;">
+        Type 4 线序
+      </th>
+    </tr>
+    <tr>
+      <th colspan="4" style="text-align: center;">CPU 端编号</th>
+      <th colspan="4" style="text-align: center;">电源端编号</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>3</td>
+      <td>1</td>
+      <td>4</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>6</td>
+      <td>7</td>
+      <td>8</td>
+      <td>6</td>
+      <td>7</td>
+      <td>5</td>
+      <td>8</td>
+    </tr>
+  </tbody>
 </table>
 
 海盗船官网对线材版本的解释挺模糊的，看不懂。抓了个卖海盗船线材的客服才知道，type 3 和 type 4 只在主板 24pin 供电上有区别，在 CPU 8pin 上是没有区别可以混用的。为了确保正确率，我又抓了两个别店的客服，回答都是一样的。终于松了一口气，总算是没有走到爆炸的那一步。插满 12pin，激动的心，颤抖的手，开机！然而还是一样的问题。

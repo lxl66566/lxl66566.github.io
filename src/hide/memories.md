@@ -113,7 +113,7 @@ feed: false
 - 早起跑步
 - 在多多买菜买了一个暑假零食，然后才认清它假冒伪劣的本质。
 
-<details><summary>点击展开：更换身份证</summary><p>
+<details><summary>点击展开：更换身份证</summary>
 
 > cost: 35（照相）+ 40（费用）+ 16（邮寄）
 
@@ -134,7 +134,7 @@ feed: false
 - 结束：邮寄成功后还需去派出所激活。就像是打完 boss 发现还有二周目。
 - 总结：心疼我的钱和时间。希望这辈子不用再去换证了（好的意义上）。
 
-</p></details>
+</details>
 
 ### 大二下
 
@@ -150,12 +150,12 @@ feed: false
 - 开始坚持无氧锻炼；近视可能加深
 - 蓝桥省赛、国赛，日语六级
 
-<details><summary>点击展开：更加啰嗦的</summary><p>
+<details><summary>点击展开：更加啰嗦的</summary>
 
 - 放弃华莱士选择美团外卖炸鸡（频率：1.8/week）；发现[全素吃法](https://t.me/withabsolutex/1088)并经常吃；
 - ~~《学会呼吸》~~；
 
-</p></details>
+</details>
 
 #### 轶事：戒 B 行动
 

@@ -87,6 +87,7 @@ const original_list: BookItemInputType[] = [
   },
   {
     name: "我就是神！",
+    valid_name: "我就是神",
     h_level: HLevel.NONE,
     use_time: "62h51min",
     url: "https://t.me/absolutexsresource/13",
@@ -813,6 +814,7 @@ const original_list: BookItemInputType[] = [
   },
   {
     name: "别闹了，费曼先生",
+    valid_name: "别闹了费曼先生",
     author: "Richard Feynman",
     use_time: "4h16min",
     tags: {

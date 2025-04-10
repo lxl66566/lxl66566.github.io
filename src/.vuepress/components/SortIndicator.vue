@@ -99,7 +99,7 @@ const toggleSort = () => {
   border-bottom: 4px solid #999;
 
   &.active {
-    border-bottom-color: var(--theme-color);
+    border-bottom-color: var(--vp-c-accent);
   }
 }
 
@@ -108,7 +108,7 @@ const toggleSort = () => {
   border-top: 4px solid #999;
 
   &.active {
-    border-top-color: var(--theme-color);
+    border-top-color: var(--vp-c-accent);
   }
 }
 </style>
