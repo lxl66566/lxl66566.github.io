@@ -46,7 +46,7 @@ jobs:
             ${{ steps.pnpm-store-path.outputs.STORE_PATH }}
             **/node_modules
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-pnpm-
+          restore-keys: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: 构建文档
         env:
