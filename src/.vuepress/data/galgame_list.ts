@@ -2,6 +2,22 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "NOIR:NOAH",
+    valid_name: "NOIRNOAH",
+    not_strict: true,
+    intense: true,
+    use_time: "1h1min",
+    duration: {
+      start: "2025-04-11",
+      end: "2025-04-11",
+    },
+    score: {
+      story: 6.3,
+      visual: 6.5,
+      program: 6.8,
+    },
+  },
+  {
     name: "千の刃涛、桃花染の皇姫",
     valid_name: "千の刃涛桃花染の皇姫",
     use_time: "-1min",
@@ -35,6 +51,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "はるまで、くるる。",
     valid_name: "はるまでくるる",
+    order: 1,
     use_time: "-1min",
     duration: {
       start: "2025-03-06",
@@ -81,6 +98,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "廢村少女~誘惑迷離的籠之鄉~",
     valid_name: "廢村少女1",
+    order: 1,
     use_time: "12h53min",
     duration: {
       start: "2025-02-16",
@@ -218,11 +236,17 @@ const original_list: GalItemInputType[] = [
   {
     name: "戦巫＜センナギ＞ ―穢れた契りと神ころも―",
     valid_name: "戦巫センナギ穢れた契りと神ころも",
+    not_strict: true,
     namaniku: true,
     use_time: "-3min",
-    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2024-10-31",
+      end: "2025-04-11",
+    },
+    score: {
+      story: 7,
+      visual: 7.6,
+      program: 7,
     },
   },
   {
@@ -236,7 +260,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "五彩斑斓的世界",
-    use_time: "-2min",
+    use_time: "-4min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2024-07-20",
@@ -1001,7 +1025,7 @@ const original_list: GalItemInputType[] = [
     name: "魔女的夜宴",
     use_time: "-",
     score: {
-      story: 7,
+      story: 7.6,
       visual: 7.5,
       program: 9.3,
     },

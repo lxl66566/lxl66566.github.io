@@ -87,6 +87,7 @@ tag:
 
 - 欧易的 bug 反馈跟没有一样。我遇到的一个策略交易 bug 反馈了一点回应都没有。
 - 欧易的 C2C 交易认证比较傻逼，会自动将你的系统音量开到最大。所以建议搭配 [VolumeLockr](https://github.com/jonathanklee/VolumeLockr) 锁系统音量，实测可用。
+- 欧易的公告太慢了，经常是上币后才发公告，错过时机。
 
 </template>
 <template #币安>

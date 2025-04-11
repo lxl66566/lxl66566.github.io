@@ -91,12 +91,11 @@ python 的包管理器可以说是百花齐放。
 
 新的，用 rust 写的包管理器。现在也就出了没两年，赶上了 RIIR 的热潮，引起了很多话题。
 
-2024.09 uv 在 v0.4.5 添加了 build 功能，于是我转向 uv。
-
-当然现在 uv 还存在一些问题，但是还是比 poetry 好用的。
+2024.09 uv 在 v0.4.5 添加了 build 功能，于是我转向 uv。当然现在 uv 还存在一些问题，但是还是比 poetry 好用的。最大的优点就是快，并行下载安装实在是好用。
 
 1. 不能在中文目录下 `uv init`，但是可以 `uv init --name xxx` 绕过。
    - 不能用中文做 package name 是 PEP 621 的要求。对于拿包管理器但是不用来写一个 python package 的人来说不太友好。
+2. 如果需要安装 pytorch，例如 pytorch 官方给的指令是 `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/test/xpu`，我们要使用 `uv add torch torchvision torchaudio --index pytorch=https://download.pytorch.org/whl/test/xpu`，不要用 `uv pip install ...`，那样的话不会写入 `pyproject.toml`，在 `uv run` 的时候还是会被 uninstall。
 
 ##### 使用
 

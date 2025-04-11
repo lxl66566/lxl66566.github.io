@@ -29,6 +29,8 @@ tag:
 
 此处质量总体不如上面的，不过也值得一看。
 
+FC2 系列的颜值平均值较低，方差较小；然而基本没有演技可言，因此我不太喜欢。
+
 - FXX-SM-24
 - FC2PPV 778927 [01](https://jp.xero.porn/video/z6jtbjln09icqbaj24440) [02](https://www.tokyomotion.net/video/592838/無修正-fc2ppv-778927-ちゅぱ王-ことり19歳icup-超s級-神乳-02)
 - HAKC-010
