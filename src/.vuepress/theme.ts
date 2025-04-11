@@ -24,7 +24,7 @@ export default hopeTheme({
   sidebar,
   editLink: false,
   contributors: false,
-  breadcrumb: true,
+  breadcrumb: false,
 
   markdown: {
     align: true,
