@@ -56,7 +56,7 @@ tag:
 
 ## 资源
 
-- 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
+- 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [鲲 Galgame](https://www.kungal.com/galgame) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
 - 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://t.me/Tyranor)
   - krkr 已经很久没有维护了；Tyranor2 可以运行 krkr 的游戏，因此可以考虑直接抛弃 krkr。
@@ -106,6 +106,12 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #きまぐれテンプテーション>
+
+- bgm 听着有点耳熟啊。
+- 第一次玩的 [魅魔星奏 汉化 1.04](https://t.me/ElysiumButter/9785)，非常垃圾，玩一半乱码然后无法打开。然后去下载了 _萌你妹汉化组_ 的，人家做得可真好啊。
+
+</template>
 <template #NOIRNOAH>
 
 [攻略](https://www.bilibili.com/opus/892045178214285334)
@@ -411,7 +417,8 @@ H 情节挺多的，质量还行，有我喜欢的触手和史莱姆（
 
 吐槽：
 
-- 这白毛……（吸溜）换我我也不杀（但是一周目怎么没有白毛 CG？😡
+- 这 boss 白毛……（吸溜）换我我也不杀
+  - 但是怎么没有白毛 H scene？以为一周目没有，结果翻了全 CG 存档也没有，escude 你不是人 😡
 - 最后的交流感觉不够感人。只用三寸之舌把敌人说到叛变，怎么就讲了点桜舞大义，我最喜欢的姐妹之情都没出现呢？合着前面铺垫全部没用上，都用来复活了是吧。
 - 结尾有点潦草，并且有一段没有 BGM，感觉意境不太够。
 
@@ -1022,7 +1029,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
   - 装甲恶鬼村正
   - EVER17
   - 石头门 （2025 重制）
-- 2022 十大: 白日梦的构想图，ふゆから、くるる（SF 四季），_樱花，萌放_
+- 2022 十大: 白日梦的构想图，_樱花，萌放_
 - 探灵直播?
 - RE:D Cherish
 - 幻のディストピア
@@ -1033,7 +1040,6 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 - 死馆 2
 - [RootDouble](https://t.me/erogamecloud/4350)
 - Unravel Trigger
-- 間宮くんちの五つ子事情
 - スカイコード
 - 新宿葬命
 - Butterfly Seeker
@@ -1041,7 +1047,6 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 - 恐怖美术馆
 - king exit, demons roots
 - anemoi
-- 旭光のマリアージュ
 - きまぐれテンプテーション 1 2
 - 7 Years From Now
 - 罚抄

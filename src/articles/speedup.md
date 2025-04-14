@@ -515,6 +515,21 @@ Path("test.txt").unlink()
 抬头一看，怎么一天的时间已经过去了。。。
 
 </template>
+<template #silky>
+
+- GARbro：可解不可封
+- [TesterTesterov/SilkyArcTool](https://github.com/TesterTesterov/SilkyArcTool)：首先我用 GUI 选文件（夹）无效，报 _ValueError: path is on mount 'Z:', start on mount 'C:'_。手动输入路径，可解可封，打开游戏不崩溃，但是播放语音时无声。还说 _Tested on Kimagure Temptation 18+ Patch_……我信你个鬼。
+  - 比较好笑的是 pack compress 比不 compress 还要大，这 lzss 什么垃圾算法。
+  - 这我怎么忍得了，直接 Claude 3.5 sonnet 重写为 rust！但是逻辑相同，不能用的还是不能用。
+- 同作者的 [AI6WINArcTool](https://github.com/TesterTesterov/AI6WINArcTool) 也是同样的问题。
+
+忍不了了，由于 SilkyArcTool 的解包是好的，我重新用 _Gemini 2.5 Pro Preview 03-25_ 写了解包代码，并让它根据解包代码反推封包代码，不要按原样写。结果真的能用！！于是结束了。
+
+不过注意，pack 语音时不能用 compress flag，否则在对应语音会 `return error[ogg_sync_pageout()]`。
+
+代码：[lxl66566/SilkyArcTool-rs](https://github.com/lxl66566/SilkyArcTool-rs)
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结

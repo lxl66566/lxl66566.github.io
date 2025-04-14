@@ -32,7 +32,7 @@ category:
 
 ## Rendering pages failed 问题
 
-显示的错误信息是 Vuepress 的底层问题，无法直接看出问题所在。且 `docs:dev` 本地预览完全不受影响。之后不断比对各处编译，发现是引入未知 html 标签导致的。（初次为 `<font>` 标签，之后还有：自定义组件的标签，被识别成组件的语法）<span class="heimu" title="你知道的太多了">_（感谢[dream 同学](https://dream-oyh.github.io/)重蹈覆辙，提供**完全一致**的错误信息，如下所示。）_ 原本因为时隔太久且当时没有博客心得，因此没有记录，没想到有笨比（</span>
+显示的错误信息是 Vuepress 的底层问题，无法直接看出问题所在。且 `dev` 本地预览完全不受影响。之后不断比对各处编译，发现是引入未知 html 标签导致的。（初次为 `<font>` 标签，之后还有：自定义组件的标签，被识别成组件的语法）
 
 > TypeError: Invalid value used as weak map key<br/>
 > at WeakMap.set (\<anonymous\>)<br/>
@@ -60,7 +60,23 @@ category:
 
 其实就是添加全局 css。
 
-在`.vuepress/public`下任意位置新建`head.css`（名字不重要），输入：
+::: tabs
+
+@tab theme hope
+
+theme hope 新版本已经[原生支持黑幕](https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html)。
+
+@tab 使用组件
+
+把这个 css 抽成一个 [vue 组件](https://github.com/lxl66566/lxl66566.github.io/blob/code/src/.vuepress/components/heimu.vue)，比样式派每次少写一些，还是不错的。
+
+@tab 全局 css
+
+创建 `.vuepress/styles/index.scss` 并[写入 css](https://github.com/lxl66566/lxl66566.github.io/blob/code/src/.vuepress/styles/index.scss)。vuepress 会自动引入，无需写入配置。是通用解法，与主题无关。
+
+@tab public 引入 css（老方法已弃用）
+
+在 `.vuepress/public` 下任意位置新建 `head.css`（名字不重要），输入：
 
 ```css
 .heimu,
@@ -105,15 +121,7 @@ export default defineUserConfig({
 
 然后就可以在 .md 文件中使用黑幕了：`<span class="heimu" title="你知道的太多了">你想说的话</span>` 效果：<span class="heimu" title="你知道的太多了">比如这样</span>
 
-### 另一个方法
-
-创建 `.vuepress/styles/index.scss` 并写入 css。vuepress 会自动引入，无需写入配置。是通用解法，与主题无关。
-
-### 组件方法
-
-也可以把这个 css 抽成一个 [vue 组件](../coding/vue.md)，比样式派每次少写一些，还是不错的。
-
-目前我的博客是 `<heimu>` 组件和样式混用的。
+:::
 
 ## 图床衍生问题
 
@@ -169,6 +177,8 @@ export default defineUserConfig({
 
 由于`$...$`会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发[weak map key](#rendering-pages-failed-问题) bug。
 
+不过现在 theme-hope 已经有集成 katex，不用这样折腾，可以直接用。
+
 ## 图片无法比例缩放问题
 
 实际上，在[之前](#图床国内无法解析问题)已经出现过此问题，当时只会使用绝对大小解决。而这次，当我向图床中添加第一张手机照片时，玄学问题出现了。
@@ -177,23 +187,31 @@ export default defineUserConfig({
 
 解决方法：
 
-- 在全局 css 中新增类选择器`.ClassName img{width: 60% !important; height:auto !important;}`或`.ClassName img{max-width: 60%;}`，并在 md 中以`<div class="ClassName"><img src="..."/></div>`使用。
+::: tabs
+
+@tab 使用组件
+
+写了个 [ZoomedImg](https://github.com/lxl66566/lxl66566.github.io/blob/code/src/.vuepress/components/ZoomedImg.vue) 组件用于图片缩放。
+
+@tab 全局 css（已弃用）
+
+在全局 css 中新增类选择器`.ClassName img{width: 60% !important; height:auto !important;}`或`.ClassName img{max-width: 60%;}`，并在 md 中以`<div class="ClassName"><img src="..."/></div>`使用。
+
+:::
 
 ## 为单一页面添加 css
 
-<text style="color:red;font-weight:bold">未解决！</text>
-
 起因：不想全局添加 css。[官方说明](https://vuepress.vuejs.org/zh/theme/default-theme-config.html#自定义页面类)已尝试，无效。（该文档为 v1 文档，不适用于 v2）
 
-最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-文件)中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。~~扩展名与文件无关！~~
+最新发现：[官方在此处的声明](https://v2.vuepress.vuejs.org/zh/reference/default-theme/styles.html#style-文件)中，style 文件类型从 .styl 改为 .scss。有机会的话可以尝试。
 
-~~其实加的 css 也就这么几行，全局不全局的无所谓了~~
+其实加的 css 也就这么几行，全局不全局的无所谓了，再说了最好直接用 vue 组件的 style scoped。
 
 ## html 转 vue 组件失败问题
 
 用 html, js, css 三件套写了一个简陋的[背词器](../farraginous/reciter.md)出来，但是受制于 iframe 的固定大小，很容易出现超出边框的情况。_（曲线救国：预留大量位置）_ 于是想到了 vue 组件引入的方法。但是，遇到了大麻烦：vue 组件单文件（SFC）仅允许一个 `<script>` 标签的存在。而我的背词器中使用了两个 script：jquery 库与我自己写的 js。现在无法正常执行 js 脚本。
 
-> emmm，现在我已经学习了 Vue，vue 里根本没必要用 jquery。
+不过现在我已经学习了 Vue，Vue 里根本没必要用 jquery，并且各种绑定有着更简单的写法。于是现在我的背词器是[单个 Vue 组件](https://github.com/lxl66566/lxl66566.github.io/blob/code/src/.vuepress/components/reciter.vue)了。
 
 ## 配置 sidebar 问题
 
@@ -209,53 +227,7 @@ export default defineUserConfig({
 
 另外，若需要为文件夹做一个向导，应在文件夹内部添加 `README.md` 主页。指向该主页的路径为文件夹名称。使指定页面覆盖配置，自动生成 sidebar 需要在该页面顶部添加[sidebar frontmatter](https://v2.vuepress.vuejs.org/zh/reference/default-theme/frontmatter.html#sidebar)。
 
-下面是我的 sidebar 配置参考。
-
-```ts
-sidebar:{
-    '/gossip/': [
-    {
-        text : '闲聊',
-        link : '/gossip/',
-        children: ['author.md',...],
-    },
-    ],
-    '/articles/': [
-    {
-        text : '我的文章',
-        link : '/articles/',
-        children: ['windows_setting.md',...],
-    },
-    ],
-    '/': [
-    '../index.md',
-    {
-        text : '闲聊',
-        link : '/gossip/',
-        children: ['/gossip/author.md',...],
-    },
-    {
-        text : '我的文章',
-        link : '/articles/',
-        children: ['/articles/windows_setting.md',...],
-    },
-    {
-        text : '编程',
-        children: ['/coding/Rust.md',...],
-    },
-    {
-        text : '爱好',
-        children: ['/hobbies/rhythm_games.md',...],
-    },
-    {
-        text : '杂项',
-        children: ['/farraginous/recommend_packages.md',...],
-    },
-    ],
-},
-```
-
-17 行写的是`'../index.md'`而不是`'/index.md'`，是因为我需要让某些二级页面也能显示主页的侧边栏，为此提供索引。主页已经在顶层目录下，无法向前回退。
+[这里](https://github.com/lxl66566/lxl66566.github.io/blob/code/src/.vuepress/sidebar.ts)是我的 sidebar 配置参考。
 
 ### vuepress v1.x 的要求
 
@@ -554,14 +526,12 @@ function sidebar() {
 
 ## 自动部署
 
-- 已提 [issue](https://github.com/vuepress-theme-hope/vuepress-theme-hope/issues/3332)
-
 使用 pnpm 指令 `pnpm create vuepress-theme-hope my-docs` 创建模版项目后，自动生成的 _.github/workflows/deploy-docs.yml_ 并不能在 Github actions 中成功构建，报错：
 
 > Error: Error: No pnpm version is specified.<br/>
 > Please specify it by one of the following ways:<br/> - in the GitHub Action config with the key "version"
 
-解法可以参考 [pnpm 文档](https://pnpm.io/zh/continuous-integration#github-actions)，加一条 `version: 8` 即可。
+解法可以参考 [pnpm 文档](https://pnpm.io/zh/continuous-integration#github-actions)，加一条 `version: 8` 即可。不过在 2025 年已经不会有这个问题了，现在 pnpm 会自动在 `package.json` 里写入自己的版本和 hash，CI 里会自动读取这个版本。
 
 ## hope theme template build error
 
@@ -624,6 +594,8 @@ gtag('config', 'G-xxxxxxxx');`,
 ```
 
 其实 cloudflare 是有自己的 _Web Analytics_ 的，但是我对比了一下，感觉还是 Google 的更准确点。
+
+ps. 现在 theme hope 提供了一个[插件](https://ecosystem.vuejs.press/plugins/analytics/google-analytics.html)可以帮你添加这些东西。
 
 ## 静态资源引用错误
 
@@ -700,7 +672,9 @@ img[src$=".svg"] {
 
 ## 更新依赖问题
 
-vuepress 及其 theme-hope 有着一大堆 peerDenepdencies，完全就是一副依赖地狱的场景。而我之前一直在使用的 pwa2 某次更新时爆了，我尝试更新都会提示 pwa2 需要的 vuepress 版本不满足。其他的依赖都依赖最新的 vuepress（2.0.0.rc13），而 pwa2 依赖更老的版本（2.0.0.rc7）。
+vuepress 及其 theme-hope 有着一大堆 peerDenepdencies，完全就是一副依赖地狱的场景。虽说官方提供了一个 `pnpm dlx vp-update` 指令用来更新依赖，但是我试过，屁用没有，还会让你 unmeet peer，因此还是纯手操比较好。
+
+而我之前一直在使用的 pwa2 某次更新时爆了，我尝试更新都会提示 pwa2 需要的 vuepress 版本不满足。其他的依赖都依赖最新的 vuepress（2.0.0.rc13），而 pwa2 依赖更老的版本（2.0.0.rc7）。
 
 首先 pwa2 是必需留着的，否则已经加载过我博客的浏览器将永远不能收到博客更新。而且 remove-pwa 插件也尝试过了，并不能用。（这 pwa 跟屎一样，之前不小心安装了就跟狗皮膏药一样粘着我）因此这次我也没有往 pwa2 的角度思考问题。
 
@@ -720,3 +694,9 @@ vuepress 及其 theme-hope 有着一大堆 peerDenepdencies，完全就是一副
 - 现在页面过窄时也会默认显示文章目录，因此删了所有 `[[toc]]`。
 - rss 和 pwa 多了更多的可设置项。~~射！~~设！
 - 据传编译速度提升了，但我没有感觉，反倒感觉预览速度下降了。
+
+## 从 pwa 引出的思考
+
+由于 [remove pwa 组件](https://ecosystem.vuejs.press/plugins/pwa/remove-pwa.html) 的官方样例是将其放到 plugins array 里，但是我在 theme.ts 里的 plugins 是一个 object，怎么找也找不到放进去的方法。于是只好搁置，这一搁置就是大半年。
+
+然后我继续尝试，才发现 vuepress 有好几个引入 plugins 的地方，这个组件应该在 `config.ts` 里引入而不是 `theme.ts`。于是问题解决。

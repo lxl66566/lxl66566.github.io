@@ -100,6 +100,13 @@ const data: SpeedupItemType[] = [
     save_format: "arc",
     speedupable: true,
   },
+  {
+    names: ["きまぐれテンプテーション"],
+    valid_name: "silky",
+    engine: "Silky’s engine",
+    save_format: "arc",
+    speedupable: true,
+  },
 ];
 </script>
 

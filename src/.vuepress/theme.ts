@@ -2,6 +2,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { cut } from "nodejs-jieba";
+import { path } from "vuepress/utils";
 
 const passwords = {
   general: {
@@ -40,7 +41,12 @@ export default hopeTheme({
       copy: true,
       displayMode: true,
     },
-    include: true,
+    include: {
+      resolvePath: (file) => {
+        if (file.startsWith("@src")) return file.replace("@src", path.resolve(__dirname, ".."));
+        return file;
+      },
+    },
     spoiler: true, // https://theme-hope.vuejs.press/zh/guide/markdown/stylize/spoiler.html
     hint: true,
     mark: true,

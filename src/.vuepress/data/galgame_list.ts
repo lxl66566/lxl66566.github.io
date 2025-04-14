@@ -2,6 +2,12 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "きまぐれテンプテーション",
+    duration: {
+      start: "2025-04-12",
+    },
+  },
+  {
     name: "NOIR:NOAH",
     valid_name: "NOIRNOAH",
     not_strict: true,
@@ -238,7 +244,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "戦巫センナギ穢れた契りと神ころも",
     not_strict: true,
     namaniku: true,
-    use_time: "-3min",
+    use_time: "20h41min",
     duration: {
       start: "2024-10-31",
       end: "2025-04-11",
@@ -359,7 +365,7 @@ const original_list: GalItemInputType[] = [
     name: "流景之海的艾佩理雅",
     use_time: "26h35min",
     score: {
-      story: 9.9,
+      story: 10,
       visual: 4.2,
       program: 4,
     },
