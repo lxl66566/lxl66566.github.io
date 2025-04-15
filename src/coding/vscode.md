@@ -81,14 +81,15 @@ tag:
 
 非国产：
 
-- [Codeium](https://codeium.com/)：国外在线服务
+- [windsurf（原 Codeium）](https://windsurf.com/)：国外在线服务，我转 cursor 前最常用。
   - 下载会显示进度和大小，好评
-- [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型，不考虑
+- [Cline]：需要自己提供 API KEY 或本地跑模型。它支持 Gemini 2.5 支持得很快，因此我用它做 Chat/MCP agent。
 - [Tabnine](https://www.tabnine.com/)：补全较弱（_Short code completions (2 to 3 words)_）
-- [Cody](https://github.com/sourcegraph/cody)：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。
-- [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
-- [Continue](https://www.continue.dev/)：需要自己提供 API KEY 或本地跑模型
 - [supermaven](https://supermaven.com/)：免费补全，联想能力不错，但是 vscode 插件目前闭源。
+- [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
+- [Continue](https://www.continue.dev/)：需要自己提供 API KEY 或本地跑模型。支持得太慢，一个月后都没法用 Gemini 2.5，直接抛弃。
+- [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型，不考虑
+- [Cody](https://github.com/sourcegraph/cody)：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。
 
 国产：
 
@@ -104,7 +105,7 @@ tag:
 
 关于 API：
 
-- chat api，gemini 1.5 是免费的
+- chat api，gemini 一直都是免费的
 - code 补全 API 的话，deepseek api 比较便宜
 
 ### 插件管理
@@ -196,7 +197,11 @@ cursor 基于 vscode，但是有些地方还是做了些修改，非常卡手。
 Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。有一些需要注意的点：
 
 1. 2025.02 之后，cursor 无法再通过清除 machine id 的方式无限续，猜测它用了一些其他方法进行追踪。因此需要下载历史版本：<https://downloader.cursor.sh/builds/250103fqxdt5u9z/windows/installer/x64>，并关闭自动更新。
-2. cursor 清除 ID 的脚本，网上有很多（讽刺的是基本都是 Cursor 写的），例如 [cursor-reset](https://github.com/ultrasev/cursor-reset)，cursor-mate（闭源）、[go-cursor-help](https://github.com/yuaotian/go-cursor-help) 等等。
+2. cursor 清除 ID 的脚本，网上有很多（讽刺的是基本都是 Cursor 写的）。
+   - [go-cursor-help](https://github.com/yuaotian/go-cursor-help)
+   - [cursor-free-vip](https://github.com/yeongpin/cursor-free-vip)
+   - [cursor-reset](https://github.com/ultrasev/cursor-reset)
+   - cursor-mate（闭源）
 3. ~~邮箱无限续可以用 2925 无限邮。~~
    - 2025.03 之后，2925 无限邮和一些滥用邮箱被彻底禁用，爆 [_User is unauthorized_](https://forum.cursor.com/t/user-is-unauthorized/43042/79)。这里建议买一个域名托管到 Cloudflare，然后用这个域名开一堆子域的邮箱。
 

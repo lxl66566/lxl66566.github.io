@@ -159,6 +159,18 @@ cmake 内部原理是生成 makefile 然后再 make。
 
 :::
 
+### 包管理
+
+#### windows
+
+虽然有的构建系统（例如 xmake）有 xrepo 帮你解决了包管理问题，但是大部分项目仍然需要使用专门的包管理器管理依赖，更有甚者需要手动摸索依赖。vcpkg 是 windows msvc 体系里最常用的包管理器。你甚至可以在各种 rust 库里看到要求使用 vcpkg 安装的依赖，例如 libarchive。
+
+vcpkg [有两个工作模式](https://learn.microsoft.com/zh-cn/vcpkg/concepts/classic-mode)，_经典模式_ 和 _清单模式_，其实就是 global 和 per-project 的区别。如果你使用的是 Visual Studio 自带的 vcpkg，其默认运行在 _清单模式_；但是很多时候（比如上述的 rust 编译需要调用 vcpkg）时，直接用 `vcpkg install xxx` 会[报错 _Could not locate a manifest_](https://learn.microsoft.com/zh-cn/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli#cannot-install-packages-using-classic-mode)，我们更需要 _经典模式_ 的全局包，因此用 scoop 再 install 一个独立的 vcpkg 是很有必要的。
+
+#### linux
+
+linux 上各种包一般依赖于系统包管理器与 pkgconfig 的 .pc 文件。系统包安装后自带了一个 .pc 文件用于指示包的位置、版本、依赖等信息。构建系统会通过 pkg-config 命令读取这些 .pc 文件来获取编译所需的信息。
+
 ### Qt 开发环境
 
 Qt 是一个 C++ 框架，主要是做 GUI 用的。[查看介绍](#qt)。不用的话可以不装。

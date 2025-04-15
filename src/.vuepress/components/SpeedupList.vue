@@ -107,6 +107,13 @@ const data: SpeedupItemType[] = [
     save_format: "arc",
     speedupable: true,
   },
+  {
+    names: ["想要传达给你的爱恋"],
+    valid_name: "softpal",
+    engine: "SOFTPAL ADV SYSTEM",
+    save_format: "pac",
+    speedupable: true,
+  },
 ];
 </script>
 

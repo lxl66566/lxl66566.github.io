@@ -98,6 +98,13 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 - [zerogpt](https://www.zerogpt.com/): AI text Detector tool
 
+## 传文件
+
+我对传文件的网页需求是 P2P，即无需将文件存储在云端服务器。
+
+- [FilePizza](https://file.pizza/)
+- [TransferFiles](https://share-anything.vercel.app/)
+
 ## pastebin
 
 网上分享一些日志 / 报错啥的，不要刷屏，用 pastebin 服务。

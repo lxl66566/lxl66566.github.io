@@ -302,9 +302,11 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 </template>
 <template #Artemis>
 
-解包樱之刻，我一搜 Artemis Engine，出来[一篇文章](https://www.bilibili.com/opus/568495301662731170)告诉我其实这个引擎不需要封包……实测了一下，果然如此。只需要用 GARbro 解出来，批量加速后放到 exe 所在文件夹即可。又解决了一个！
+解封包工具：[sakarie9/pfs_rs](https://github.com/sakarie9/pfs_rs)，这也是一个使用 rust 写的的解包封包工具，我对 rust 工具天生具有好感，项目的质量也不错。
 
-不过不封包会导致 translator 的 hook 失效，估计是不封包就直接读 .ast 文本，不会再经过 hooked 函数了。
+解包樱之刻，我一搜 Artemis Engine，出来[一篇文章](https://www.bilibili.com/opus/568495301662731170)告诉我其实这个引擎不需要封包……实测了一下，果然如此。只需要用 GARbro/其他解封包工具解出来，批量加速后放到 exe 所在文件夹即可。
+
+不过不封包会导致 luna translator 的 hook 失效，估计是不封包就直接读 .ast 文本，不会再经过 hooked 函数了。因此我们可以把 script 重新封回 pfs archive，这样就可以让 luna translator 读到文本。封包时要注意，pfs_rs 会把 input 的所有子文件/文件夹封到 pfs archive 的根下，因此不能直接 `pfs pack scripts root.pfs`，需要先建一个 test dir，把 scripts 移进去再 `pfs pack test root.pfs`。
 
 </template>
 <template #favorite>
@@ -528,6 +530,13 @@ Path("test.txt").unlink()
 不过注意，pack 语音时不能用 compress flag，否则在对应语音会 `return error[ogg_sync_pageout()]`。
 
 代码：[lxl66566/SilkyArcTool-rs](https://github.com/lxl66566/SilkyArcTool-rs)
+
+</template>
+<template #softpal>
+
+网上有[一篇文章](https://www.bilibili.com/read/cv25442292)讲了 softpal `.pac` 的格式探索，非常不错。
+
+可知 softpal 引擎优先读取文件夹，所以实际上无需封包。softpal 是目前为止 speed up 最简单的格式，只需要用 GARbro 将 `voice.pac` 提到同名文件夹，加速即可。全程只需两步。
 
 </template>
 </SpeedupList>

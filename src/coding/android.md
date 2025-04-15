@@ -46,19 +46,22 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
      1. 这个 vim 插件的所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 都干不了。
      2. 无法与系统剪切板交互。
    - ~~Settings Sync~~ 连登录都登录不了。
-2. _File - Settings - Tools - Actions on Save_，除了 Code Cleanup 全开。
+2. 设置里 _Tools - Actions on Save_，除了 Code Cleanup 全开。
 3. 更改 KeyMap：
    - Close Tab: `Ctrl + w`
-   - Remove Closed Tab：`Ctrl + Shift + t`
-   - Comment with line Comment: `Ctrl + /`
+   - Reopen Closed Tab：`Ctrl + Shift + t`
+   - ~~Comment with line Comment: `Ctrl + /`~~ 已经是默认
    - Refactor - Rename: `F2`
    - Generate Compose Preview：`Ctrl + p`
 4. 更多 Inlay Hints：_Editor - Inlay Hints_，打开除了 _Code vision_ 和 _Annotations_ 的其他所有 Inlay Hints
-5. proxy: _auto-detect proxy settings_
+5. ~~proxy: _auto-detect proxy settings_~~ 已经是默认
+6. _Languages & Frameworks - Kotlin - enable K2 mode_
 
 ### 编译运行
 
-我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。
+我试了虚拟设备，但是每次运行都会报错 Error Creating AVD。感觉不如 wireless adb 连自己手机。后续重装的 win11 倒是没有这个问题了。
+
+不过有时候虚拟系统不能干某些事，必须连自己手机，例如 VPN 与定位等。
 
 ### 劝退
 

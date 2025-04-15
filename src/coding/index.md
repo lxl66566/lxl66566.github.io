@@ -38,7 +38,7 @@ tag:
 1. [Rust](./Rust.md)
 2. [C++](./Cpp.md)
 3. [Python](./python.md)
-4. [shell script](./shell.md)
+4. [general shell script](./shell.md)
 5. [Java](./java.md)
 6. [TypeScript & JavaScript](./tsjs.md)
 
@@ -87,9 +87,10 @@ tag:
 
 1. [Github](./github.md)：从基础到进阶
 2. [Git](./Git.md)：现代唯一指定版本控制系统
-3. [Vim](./vim.md)：文件编辑器
-4. [数据库](./sql.md)
-5. [容器](./container.md)
+3. ~~[Vim](./vim.md)：文件编辑器~~
+4. [VSCode / Cursor](./vscode.md)：IDE
+5. [数据库](./sql.md)
+6. [容器](./container.md)
 
 ## 前端
 
