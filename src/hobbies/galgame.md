@@ -73,14 +73,21 @@ tag:
 LunaTranslator 使用心得：
 
 - 记得[装 MeCab](https://github.com/HIllya51/LunaTranslator/discussions/684#discussioncomment-9537595)。
+- LunaTranslator 可以使用 ollama server 跑的模型，只要在 通用模型接口 里填写信息即可。不过目前还是有点小 [bug](https://github.com/HIllya51/LunaTranslator/issues/1455)。
 
 ### api
 
 - 我之前用的是 [小牛云平台翻译](https://niutrans.com/)。签到领额度，完全够用，甚至现在改成了免费额度，无需签到。
 - 后来用 google gemeni，毕竟大语言模型，翻译准确性比其他机翻高太多了。而且也是免费的。不过需要翻墙，并且不能用香港节点。使用体验（延迟）直接取决于节点质量，如果用机场的话还是算了。
 - 现在我选择本地跑一个大模型，专为 galgame 做的 [SakuraLLM](https://github.com/SakuraLLM/SakuraLLM)。
-  - 部署很简单，跟着文档就行。模型最好放在固态盘，否则加载太慢了。
-  - 模型的话，我 GPU 是 RTX 3050 laptop，尝试了一下 7B，准确性完全没问题，就是慢了点，得等 5s 才能出结果。所以换了 1.8B，秒出，正确率也不错。
+  - 部署很简单，跟着文档就行。
+    - 我后续换了 I 卡，没有 cuda 用，所以得自己摸索部署方法。去 llama.cpp 下载预编译的 llama-b4948-bin-win-sycl-x64（版本无所谓），然后建一个 `.ps1` 脚本即可：
+      ```sh
+      ./llama-b4948-bin-win-sycl-x64/llama-server.exe -m sakura-1b8-qwen2beta-v0.9.1-fp16.gguf -c 2048 -ngl 999 -a sakura-1b8-qwen2beta-v0.9.1-fp16 --host 127.0.0.1 --port 8080
+      ```
+      实际上不管啥显卡都可以用这个方法自行用 llama 跑，只要下载到正确的 binary 即可。
+  - 模型最好放在固态盘，否则加载太慢了。
+  - 关于模型选择：我一直用的是 sakura-1b8-qwen2beta-v0.9.1-fp16，翻译速度快（秒出），效果还行。现在虽然 SakuraLLM 出了 sakura-1.5b-qwen2.5-v1.0，虽然都是 1.5b，但实测翻译速度还是要慢上许多的（等 1s）。至于 7B 我就不想了，我的 3050 和 A750 显卡跑 7B 都得等好久。反正我对速度要求高，但对质量要求不高。
   - 还需要看看[这个 issue](https://github.com/HIllya51/LunaTranslator/issues/896)。
 
 <!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame（会社）/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
@@ -106,6 +113,12 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #想要传达给你的爱恋>
+
+- X'moe 汉化组
+  - 设置 UI 里的静音按钮怎么翻译成 _音量调节_ 啊。。
+
+</template>
 <template #きまぐれテンプテーション>
 
 - bgm 听着有点耳熟啊。
@@ -337,9 +350,11 @@ H 情节挺多的，质量还行，有我喜欢的触手和史莱姆（
   - 玩着总有一股朦朦胧胧的梦幻之感。
 - X'moe 的翻译，一般：
   - スイカ割り -> 切西瓜？
+  - 「食毕了当作晚饭的烤蛋糕。」并不是不能这样翻……不知道为什么，看到这句很想笑
 - 商人小镇那两只狐狸，event 圣体，，加奈是血压圣体。
-- 镜：「能够容许的事情最多也就是马赛克的存在了。」唉日本人的容忍度还是有点高，我连马赛克也忍不了！
 - 加奈线有感：我认为生死观是世界观的很重要的一个部分。然而现实就是大家的生死观好像都不太足，包括加奈。
+- 司线的 first H 的 CG 光影太有感觉了，头上橱柜是暗部，可以幻视成猫耳（（
+  - 司没有来到一个充满小额高利贷的国度真是太好了……~~不然本作就要变成 R18G 了~~
 - 攻略顺序：澪 -> 镜 -> 加奈 -> 司 -> 真红
 
 ::: details 剧透内容
@@ -351,7 +366,11 @@ H 情节挺多的，质量还行，有我喜欢的触手和史莱姆（
 
 :::
 
+简单吐槽：
+
+- 镜：「能够容许的事情最多也就是马赛克的存在了。」唉日本人的容忍度还是有点高，我连马赛克也忍不了！
 - 加奈「……兴趣是幼女啊」悠马「……难道说，是在夸奖我？」
+- 真红「就算世界末日来了，学业也不能荒废。因为人啊，是一种一旦失去了进取心，就会很容易不知不觉地忘记了自己还“活着”的生物。」（日本的上学观；不过后面半句怎么这么有道理）
 
 </template>
 <template v-slot:edenPlusMosaic>
@@ -1125,6 +1144,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
+| 想要传达给你的爱恋 | backlog 打断语音 |
 | 千の刃涛、桃花染の皇姫 | backlog 放语音要点滚轮；没有区分系统效果音和普通效果音；进入 backlog 时若鼠标不移动则激活的句子是最下面的而不是鼠标指着的 |
 | 旭光のマリアージュ | 动画过渡过长；跳转需要长加载时间 |
 | はるまで、くるる。 | _显示效果_ 设为 _瞬间显示_ 后，幕间文字被直接跳过；可能滚轮失效；文字窗口透明度的 slider 是假的无法调整；<text style="color:red;">使用 Direct3D 绘制时全屏黑屏，无法切回窗口，被迫删档：_An exception occured at mainwindow.tjs(3035)[(function) internalStoreFlags], VM ip = 738_</text> |

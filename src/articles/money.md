@@ -308,6 +308,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 ## external
 
 1. [孙哥的「算稳梦」：波联储与 USDD](https://zhuanlan.zhihu.com/p/512615005)
+2. [只用“稳定币”，能参与哪些项目的空投？](https://www.panewslab.com/zh/articledetails/r1mr2jc4.html)
 
 <script setup lang="ts">
 import CryptocurrencyExchangeList from "@CryptocurrencyExchangeList";

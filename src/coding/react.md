@@ -47,6 +47,12 @@ React 里最常用的响应式就是 useState 了。其返回两个值，`conten
 const [content, setContent] = useState("default content");
 ```
 
+### useContext
+
+用于跨任意层组件向子组件方向传数据。随便看一个 [usage](https://zh-hans.react.dev/reference/react/useContext#usage) 就会了。
+
+React 19 后，可以用简化写法 `<Context>` 替代 `<Context.Provider>`。
+
 ### useRef
 
 跟 Vue 的 ref 有很大区别，useRef 这里的 ref 是不会触发渲染的。
@@ -56,6 +62,10 @@ const [content, setContent] = useState("default content");
 ### useCallback
 
 包装函数，让组件重新渲染时，该函数不会重新创建，也就是保持同一个对象。可以用于 `memo`。
+
+### useReducer
+
+useReducer 和 useState 很像，只不过可以把状态更新逻辑从事件处理函数中移动到组件外部。[src](https://zh-hans.react.dev/reference/react/useReducer#adding-a-reducer-to-a-component)
 
 ## external
 

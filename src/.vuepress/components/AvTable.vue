@@ -453,6 +453,8 @@ const data = [
   { id: "mukd-489", aScore: 7, bScore: 7.6, u: true, name: "#3P Wアイドル研修生を極悪イラマレ×プで絶望屈伏・中出し管理するクズ事務所の闇映像 日向ゆら 如月ゆの" },
   { id: "mukd-495", aScore: 5.8, bScore: 7, u: true, name: "#3P W喉奥肉便器 クズな家庭教師に残酷非道イラマレ×プの標的にされ奴●堕ちした美少女姉妹 加賀美さら 二之宮りえな" },
   { id: "same-104", aScore: 6.7, bScore: 7.7, u: true, name: "【閲覧注意】車中レ●プ。 皆月ひかる" },
+  { id: "MIAB-102", aScore: 8.3, bScore: 7, u: true, name: "#睡死 薬で眠らせた娘を異常絶倫のオヤジ達に売ってます。 （1時間/ピル服用済/現金のみ/各種オプション相談） 皆月ひかる" },
+  { id: "SORA-536", aScore: 6, bScore: 6, u: true, name: "「清楚J系？どうせP活してんだろw」下校中の県立校生を眠剤拉致 抵抗したらビンタとイラマで失禁するまで再教育！半グレ集団輪● 皆月ひかる" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

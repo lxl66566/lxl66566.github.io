@@ -2,6 +2,12 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "想要传达给你的爱恋",
+    duration: {
+      start: "2025-04-16",
+    },
+  },
+  {
     name: "きまぐれテンプテーション",
     duration: {
       start: "2025-04-12",
