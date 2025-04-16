@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 15 Apr 2025 18:00:14 GMT</pubDate>
-    <lastBuildDate>Tue, 15 Apr 2025 18:00:14 GMT</lastBuildDate>
+    <pubDate>Wed, 16 Apr 2025 17:13:09 GMT</pubDate>
+    <lastBuildDate>Wed, 16 Apr 2025 17:13:09 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -336,6 +336,7 @@
 <h2>external</h2>
 <ol>
 <li><a href="https://zhuanlan.zhihu.com/p/512615005" target="_blank" rel="noopener noreferrer">孙哥的「算稳梦」：波联储与 USDD</a></li>
+<li><a href="https://www.panewslab.com/zh/articledetails/r1mr2jc4.html" target="_blank" rel="noopener noreferrer">只用“稳定币”，能参与哪些项目的空投？</a></li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
@@ -439,10 +440,12 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20250413 其实学校就是一个服务机构，就应该让学生与教师自治。想必老师和学生都能好受很多吧。 20250411 每日爆睡，不省人事…… 小城市/乡下十字路，没有红绿灯，没有让行牌，双方都是直行相撞，定责。我想，相撞时谁最接近 20km/h 谁不负责，这不也挺好的吗。 20250410 蓝光对眼睛不好，在放松时的蓝移对眼睛也不好。 202...</description>
+      <description>2025 20250416 新时代的学习方式是蒸馏 20250413 其实学校就是一个服务机构，就应该让学生与教师自治。想必老师和学生都能好受很多吧。 20250411 每日爆睡，不省人事…… 小城市/乡下十字路，没有红绿灯，没有让行牌，双方都是直行相撞，定责。我想，相撞时谁最接近 20km/h 谁不负责，这不也挺好的吗。 20250410 蓝光对眼睛...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20250416</h2>
+<p>新时代的学习方式是蒸馏</p>
 <h2>20250413</h2>
 <p>其实学校就是一个服务机构，就应该让学生与教师自治。想必老师和学生都能好受很多吧。</p>
 <h2>20250411</h2>
@@ -487,11 +490,16 @@
 <h3>useState</h3>
 <p>React 里最常用的响应式就是 useState 了。其返回两个值，<code>content</code> 是内容的引用 (getter)，<code>setContent</code> 是一个函数，用于改变内容 (setter)。这样可以比较明确地控制如何渲染 DOM 树。</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">content</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">setContent</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">] </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> useState</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"default content"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>useRef</h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>useContext</h3>
+<p>用于跨任意层组件向子组件方向传数据。随便看一个 <a href="https://zh-hans.react.dev/reference/react/useContext#usage" target="_blank" rel="noopener noreferrer">usage</a> 就会了。</p>
+<p>React 19 后，可以用简化写法 <code>&lt;Context&gt;</code> 替代 <code>&lt;Context.Provider&gt;</code>。</p>
+<h3>useRef</h3>
 <p>跟 Vue 的 ref 有很大区别，useRef 这里的 ref 是不会触发渲染的。</p>
 <p>有一点跟 Vue 一样的就是 Vue 的 ref 需要 <code>.value</code> 获取内部值，而 useRef 需要 <code>.current</code> 获取。</p>
 <h3>useCallback</h3>
 <p>包装函数，让组件重新渲染时，该函数不会重新创建，也就是保持同一个对象。可以用于 <code>memo</code>。</p>
+<h3>useReducer</h3>
+<p>useReducer 和 useState 很像，只不过可以把状态更新逻辑从事件处理函数中移动到组件外部。<a href="https://zh-hans.react.dev/reference/react/useReducer#adding-a-reducer-to-a-component" target="_blank" rel="noopener noreferrer">src</a></p>
 <h2>external</h2>
 <ul>
 <li><a href="https://juejin.cn/post/7195513281228898363" target="_blank" rel="noopener noreferrer">2023 再看 React 状态管理库</a></li>
