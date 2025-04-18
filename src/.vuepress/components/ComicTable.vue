@@ -745,6 +745,8 @@ const data = [
   { id: "544769", aScore: 5.5, bScore: 7.1, info: "#魔法少女 #触手", bak: "https://telegra.ph/桜水晶-夜桜ソウキ-変身しちゃいました-中国翻訳-04-07" },
   { id: "(ex)", aScore: 5.2, bScore: 6, info: "#精灵 #媚药 #师生 #堕落", otherlink: "https://exhentai.org/g/3307705/7abb5d7929/", bak: "https://telegra.ph/海通信-なまもななせ-媚薬で始める異世界JSエルフ調教-中国翻訳-DL版-04-08" },
   { id: "567631", aScore: 7.2, bScore: 7.7, info: "#师生 #宠物 #露出", bak: "https://telegra.ph/MIKICREATE-うのみき-私はもう大人です2-中国翻訳-DL版-04-11" },
+  { id: "(ex)", aScore: 8.5, bScore: 9.2, info: "#长篇 #后宫 #强制性交 #纯爱", otherlink: "https://exhentai.org/g/3317537/0c0dfac2d5/", bak: "https://telegra.ph/長瀬徹-青春コンプレックスタイムリープでエロ無双1-中国翻訳-無修正-DL版-04-16" },
+  { id: "568482", aScore: 9.3, bScore: 5.4, info: "#偶像大师 #援交", bak: "https://telegra.ph/C105-ココアホリック-ユイザキカズヤ-ことね-ソープランド-学園アイドルマスター-中国翻訳-04-16-3" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

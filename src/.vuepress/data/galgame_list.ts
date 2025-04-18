@@ -9,8 +9,16 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "きまぐれテンプテーション",
+    intense: true,
+    use_time: "4h19min",
     duration: {
       start: "2025-04-12",
+      end: "2025-04-18",
+    },
+    score: {
+      story: 7.7,
+      visual: 9.5,
+      program: 5.4,
     },
   },
   {
