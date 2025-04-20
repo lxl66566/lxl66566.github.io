@@ -153,7 +153,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 4.4,
       visual: 9.5,
-      program: 9.1,
+      program: 9.5,
     },
   },
   {
@@ -235,7 +235,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-01-12",
     },
     score: {
-      story: 9.3,
+      story: 9.5,
       visual: 8.9,
       program: 6.4,
     },
@@ -280,10 +280,16 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "五彩斑斓的世界",
-    use_time: "-4min",
-    playing_status: PlayingStatus.PLAYING,
+    order: 1,
+    use_time: "23h17min",
     duration: {
       start: "2024-07-20",
+      end: "2025-04-20",
+    },
+    score: {
+      story: 8.9,
+      visual: 8.2,
+      program: 9.1,
     },
   },
   {
@@ -331,7 +337,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 6.1,
       visual: 8.5,
-      program: 9.1,
+      program: 9,
     },
   },
   {
@@ -745,7 +751,7 @@ const original_list: GalItemInputType[] = [
     name: "君と彼女と彼女の恋",
     use_time: "10h16min",
     score: {
-      story: 9.5,
+      story: 9.3,
       visual: 4.2,
       program: 5.4,
     },
@@ -1204,7 +1210,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 4.2,
       visual: 7.2,
-      program: 9.3,
+      program: 7.3,
     },
     duration: {
       start: "2022-06-21",

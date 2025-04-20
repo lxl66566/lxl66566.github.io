@@ -78,6 +78,7 @@ tag:
 - 阿苯达唑：市面上**最常见**的广谱驱虫药，使寄生虫肠道退化，饿死[^Albendazole]。副作用较小，无持续效果。
   - 睡前吃，2 周后需要再吃一次，不要侥幸。
   - 阿苯达唑有一定抑制鼠类圆线虫卵发育的能力[^thesis1]。
+  - 阿苯达唑在治疗寄生虫以外的地方貌似有一些其他的特性[^csuthesis]。
 - 甲苯咪唑：
   - 网传是处方药，但是网购能非常容易地买到安乐士，并且盒上标注 OTC，所以实际上是非处方药？
   - 风险会比阿苯达唑更大一点点，碰到重度旋毛虫病则会有严重后果[^Mebendazole_wiki]（一般人也不会有这种吧），因此可以考虑作为备用。
@@ -89,6 +90,7 @@ tag:
 [^Mebendazole]: [Mebendazole (Monograph)](https://www.drugs.com/monograph/mebendazole.html)
 [^zhihu]: [甲苯达唑，阿苯达唑，和芬苯达唑三种打虫药的抗癌研究总结](https://zhuanlan.zhihu.com/p/195233400)
 [^thesis1]: [体外杀灭寄生虫虫卵及其幼虫的研究](https://www.zgxfzz.com/CN/article/downloadArticleFile.do?attachType=PDF&id=8805)
+[^csuthesis]: [中南大学生命科学学院等合作揭示阿苯达唑增强抗肿瘤免疫的新机制](https://life.csu.edu.cn/copy_2_nr.jsp?urltype=news.NewsContentUrl&wbtreeid=1746&wbnewsid=3986)
 
 ### 哌嗪类
 
