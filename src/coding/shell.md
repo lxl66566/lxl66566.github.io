@@ -92,13 +92,18 @@ zsh 是 bash 统治下的顺从者，其几乎全兼容 bash。zsh 是 macos 的
 
 ## nushell
 
-nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu 语言，并重载了许多 posix 指令（以便更好地展示执行结果）。nushell 也使用 rust 实现，性能与安全性无需担忧。nushell 是跨平台的，因此成为我在 windows 上的一个选择。可惜 nushell 补全只能从历史中补，手感还是打不过 fish。
+nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu 语言，并重载了许多 posix 指令（以便更好地展示执行结果）。nushell 也使用 rust 实现，性能与安全性无需担忧。nushell 是跨平台的，因此成为我在 windows 上的一个选择。
 
 自己搓语言的基本上都有很高的学习成本，nushell 也不例外。nu 语言有对 rust 的借鉴和[反叛](https://t.me/withabsolutex/1698)。
 
 不过 nushell 最劝退我的还是 [rust 的一个 bug](https://t.me/withabsolutex/1700)，导致其无法在我的 RAMDisk 上工作。
 
-### 配置
+### 缺点
+
+- nushell 补全只是对 history 的拙劣参考，手感比 fish 差多了。
+- 类型系统垃圾
+
+### shell 配置
 
 nushell 只有 winget 安装方法（`winget install nushell`），没有 scoop 安装。
 
@@ -114,6 +119,12 @@ config nu --default | save ($nu.default-config-dir | path join 'config.nu')
 ```nushell
 source ($nu.default-config-dir | path join 'custom.nu')
 ```
+
+### 类型
+
+nushell 的[类型系统](https://github.com/nushell/nushell/issues/11108)可以说是尚未起步的。没有联合类型算什么 type system。
+
+- 其他语言的空概念在 nushell 里叫 `nothing`。哈哈，就是要自己造词。
 
 ## powershell
 

@@ -473,7 +473,7 @@ for task in process:
         )
 
     subprocess.run(
-        f"""7z a -tzip -mm=Deflate -pIrsysPack_CipherKey ../{task.speedup_folder}.dat @../test.txt""",
+        f"""7z a -tzip -mm=Deflate -pIrsysPack_CipherKey {task.speedup_folder}.dat @test.txt""",
         shell=True,
         check=True,
         cwd=task.speedup_folder,
@@ -519,17 +519,27 @@ Path("test.txt").unlink()
 </template>
 <template #silky>
 
+### きまぐれテンプテーション
+
 - GARbro：可解不可封
 - [TesterTesterov/SilkyArcTool](https://github.com/TesterTesterov/SilkyArcTool)：首先我用 GUI 选文件（夹）无效，报 _ValueError: path is on mount 'Z:', start on mount 'C:'_。手动输入路径，可解可封，打开游戏不崩溃，但是播放语音时无声。还说 _Tested on Kimagure Temptation 18+ Patch_……我信你个鬼。
   - 比较好笑的是 pack compress 比不 compress 还要大，这 lzss 什么垃圾算法。
   - 这我怎么忍得了，直接 Claude 3.5 sonnet 重写为 rust！但是逻辑相同，不能用的还是不能用。
 - 同作者的 [AI6WINArcTool](https://github.com/TesterTesterov/AI6WINArcTool) 也是同样的问题。
 
-忍不了了，由于 SilkyArcTool 的解包是好的，我重新用 _Gemini 2.5 Pro Preview 03-25_ 写了解包代码，并让它根据解包代码反推封包代码，不要按原样写。结果真的能用！！于是结束了。
+忍不了了，由于 SilkyArcTool 的解包是好的，我重新用 _Gemini 2.5 Pro Preview 03-25_ 写了解包代码 [lxl66566/SilkyArcTool-rs](https://github.com/lxl66566/SilkyArcTool-rs)，并让它根据解包代码反推封包代码，不要按原样写。结果真的能用！！于是结束了。
 
-不过注意，pack 语音时不能用 compress flag，否则在对应语音会 `return error[ogg_sync_pageout()]`。
+不过注意，pack 语音时不能用 compress flag，否则在对应语音会 `return error[ogg_sync_pageout()]`。并且语音 pack 产物无法在 GARbro 里打开。
 
-代码：[lxl66566/SilkyArcTool-rs](https://github.com/lxl66566/SilkyArcTool-rs)
+### Butterfly Seeker
+
+解 arc 也是非常顺利，加速均衡一气呵成，结果封包回去进入游戏发现并不能播放语音。
+
+排查程序，对比同一个 `voice.arc` unpack + pack 结果，发现我的 lxl66566/SilkyArcTool-rs v0.2.0 有一个 bug，`metadata_block_size` 计算错误多了 4。于是修了。
+
+进入游戏发现还是没法播放语音。然后注意到我的音量均衡 v0.1.2 会把大写 `.OGG` 变成小写。于是改完大小写就行了。
+
+所以 Silky’s engine 对 header 还是蛮宽容的，即使值偏差了 4 也可以正常进游戏，导致玩了好久都没发现这个 bug，吐了。
 
 </template>
 <template #softpal>

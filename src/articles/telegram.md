@@ -177,11 +177,10 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 - 色图区
   - [Absolutex's H storage](https://t.me/absolutexsH)：夹带私货，是我自己的涩涩仓库，_绝对值\_x 精选，质量有保证！_（1:1）
+  - [β-H’s ロリ Collection](https://t.me/Loli_daily)（5:1）
   - [馒头研究所](https://t.me/lolipussyhub)（35:1）
   - [everyday color photos](https://t.me/everydaycolorphoto)（40:1）
   - [萌图交流](https://t.me/jialeleya2233)（50:1）
-  - [韵の小院 🍃ᴺˢᶠʷ](https://t.me/YunRan1314)（80:1）
-  - [美图与色图](https://t.me/setu_nsfw)
 - 本子区：
   - [ExLOLI - 每日萝莉本子](https://t.me/exlolicon)
 - [(ゲーム CG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG**鉴赏**

@@ -747,6 +747,8 @@ const data = [
   { id: "567631", aScore: 7.2, bScore: 7.7, info: "#师生 #宠物 #露出", bak: "https://telegra.ph/MIKICREATE-うのみき-私はもう大人です2-中国翻訳-DL版-04-11" },
   { id: "(ex)", aScore: 8.5, bScore: 9.2, info: "#长篇 #后宫 #强制性交 #纯爱", otherlink: "https://exhentai.org/g/3317537/0c0dfac2d5/", bak: "https://telegra.ph/長瀬徹-青春コンプレックスタイムリープでエロ無双1-中国翻訳-無修正-DL版-04-16" },
   { id: "568482", aScore: 9.3, bScore: 5.4, info: "#偶像大师 #援交", bak: "https://telegra.ph/C105-ココアホリック-ユイザキカズヤ-ことね-ソープランド-学園アイドルマスター-中国翻訳-04-16-3" },
+  { id: "568814", aScore: 7.3, bScore: 7.9, info: "#壁尻 #甘露アメ", bak: "https://telegra.ph/甘露アメ-バイト先の壁尻屋で自分に最適化魔法かけて自滅する低級白魔ちゃんの話-Adoscc-個人翻訳-04-18" },
+  { id: "(ex)", aScore: 8, bScore: 8.2, info: "#长篇 #催眠", otherlink: "https://exhentai.org/g/3319496/bafbdf34f0/", bak: "https://telegra.ph/満開開花-催眠コンビニ-アナタと交尾で孕みーマート-無修正-中国翻訳-PepeRabi個人漢化-04-18" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

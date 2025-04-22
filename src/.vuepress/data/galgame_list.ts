@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "Butterfly Seeker",
+    valid_name: "ButterflySeeker",
+    duration: {
+      start: "2025-04-22",
+    },
+  },
+  {
     name: "想要传达给你的爱恋",
     duration: {
       start: "2025-04-16",
@@ -11,6 +18,7 @@ const original_list: GalItemInputType[] = [
     name: "きまぐれテンプテーション",
     intense: true,
     use_time: "4h19min",
+    order: 1,
     duration: {
       start: "2025-04-12",
       end: "2025-04-18",
@@ -341,7 +349,8 @@ const original_list: GalItemInputType[] = [
     },
   },
   {
-    name: "少女领域",
+    name: "少女＊领域",
+    valid_name: "少女领域",
     duration: {
       start: "2020-10-29",
       end: "2024-05-12",

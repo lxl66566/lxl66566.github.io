@@ -111,6 +111,15 @@ uv python pin 3.12      # 对当前项目使用某个 python 版本，如果没�
 
 添加镜像：查看 [issues#6925](https://github.com/astral-sh/uv/issues/6925)
 
+##### 我的配置
+
+`~/uv.toml`:
+
+```toml
+index-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"  # 全局换源
+prerelease = "allow"                                                # 不再禁止 prerelease 包
+```
+
 @tab pdm
 
 #### [pdm](https://github.com/pdm-project/pdm)
