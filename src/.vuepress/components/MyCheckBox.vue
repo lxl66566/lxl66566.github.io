@@ -61,7 +61,7 @@ const toggle = () => {
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--vp-c-text);
   border-radius: 12px;
   cursor: pointer;
   transition: border-color 0.2s;

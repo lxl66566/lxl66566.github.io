@@ -1015,3 +1015,4 @@ python -m pip install --upgrade pip --user
 9. [如何在 class 内部定义一个装饰器？](https://www.youtube.com/watch?v=srSA-aiHf8Y)
 10. [Dive-into-cpython](https://github.com/Chang-LeHung/dive-into-cpython)
 11. [再也别问 Singleton 了好吗？](https://frostming.com/2025/singleton/)
+12. [14 Advanced Python Features - Edward Li's Blog](https://blog.edward-li.com/tech/advanced-python-features/)

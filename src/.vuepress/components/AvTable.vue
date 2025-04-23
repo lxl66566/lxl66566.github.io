@@ -457,6 +457,8 @@ const data = [
   { id: "SORA-536", aScore: 6, bScore: 6, u: true, name: "「清楚J系？どうせP活してんだろw」下校中の県立校生を眠剤拉致 抵抗したらビンタとイラマで失禁するまで再教育！半グレ集団輪● 皆月ひかる" },
   { id: "REAL-848", aScore: 6.8, bScore: 7.9, u: true, name: "J●配信者レ×プ キモイ中年親父に狙われる美少女ライバーひかるちゃん 偶然の出会いからストーキングされ家凸レ×プ 恥辱の強●SEX生配信 皆月ひかる" },
   { id: "ROYD-208", aScore: 7.5, bScore: 7, u: true, name: "#睡死 媚薬漬け女子○生 昏眠レ×プ 悪徳医師に未熟な体を弄ばれ痙攣する膣に何度も中出しされた少女が壊れるまでの診療記録 皆月ひかる" },
+  { id: "hmn-069", aScore: 6, bScore: 6.1, u: true, name: "俺を冤罪でクビに追い込んだ生意気な教え子を種付けプレスで犯し続けた3日間 皆月ひかる" },
+  { id: "ANKK-005", aScore: 5, bScore: 5, u: true, name: "（仮）暗黒005さん" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

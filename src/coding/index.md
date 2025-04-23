@@ -106,6 +106,7 @@ tag:
    3. [SolidJS](./solidjs.md)
 6. 其他
    - [配色方案](../farraginous/recommend_websites.md#资源)
+   - [clipboard (external)](https://zhul.in/2025/04/21/how-we-copy-text-to-clipboard-with-js-in-2025/)
 
 ## [Android 开发](./android.md)
 
