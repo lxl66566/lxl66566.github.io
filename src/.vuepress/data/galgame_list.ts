@@ -4,14 +4,22 @@ const original_list: GalItemInputType[] = [
   {
     name: "Butterfly Seeker",
     valid_name: "ButterflySeeker",
+    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-04-22",
     },
   },
   {
     name: "想要传达给你的爱恋",
+    use_time: "12h18min",
     duration: {
       start: "2025-04-16",
+      end: "2025-04-24",
+    },
+    score: {
+      story: 8.8,
+      visual: 7,
+      program: 3,
     },
   },
   {
@@ -41,13 +49,14 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 6.3,
-      visual: 6.5,
+      visual: 6,
       program: 6.8,
     },
   },
   {
     name: "千の刃涛、桃花染の皇姫",
     valid_name: "千の刃涛桃花染の皇姫",
+    playing_status: PlayingStatus.PLAYING,
     use_time: "-1min",
     duration: {
       start: "2025-03-28",
@@ -57,6 +66,7 @@ const original_list: GalItemInputType[] = [
     name: "旭光のマリアージュ",
     namaniku: true,
     use_time: "-2min",
+    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-03-23",
     },
@@ -79,6 +89,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "はるまで、くるる。",
     valid_name: "はるまでくるる",
+    playing_status: PlayingStatus.PLAYING,
     order: 1,
     use_time: "-1min",
     duration: {
@@ -319,7 +330,7 @@ const original_list: GalItemInputType[] = [
       start: "2023-05-11",
     },
     score: {
-      story: 4.3,
+      story: 3.7,
       visual: 9.4,
       program: 8,
     },
@@ -421,7 +432,7 @@ const original_list: GalItemInputType[] = [
     name: "变态监狱",
     use_time: "45h53min",
     score: {
-      story: 9.1,
+      story: 9.3,
       visual: 5,
       program: 7,
     },
@@ -436,7 +447,7 @@ const original_list: GalItemInputType[] = [
     order: 2,
     score: {
       story: 1.2,
-      visual: 6.1,
+      visual: 6.6,
       program: 8,
     },
     duration: {
@@ -634,12 +645,13 @@ const original_list: GalItemInputType[] = [
     valid_name: "拾われ愛して奉仕したい亜人娘とのイチャエロ生活",
   },
   {
-    name: "樱之诗",
+    name: "樱之诗-在樱花之森上飞舞-",
+    valid_name: "樱之诗",
     use_time: "50h",
     score: {
       story: 9.8,
       visual: 8.3,
-      program: 3,
+      program: 3.7,
     },
     duration: {
       start: "2024-02-25",
@@ -719,7 +731,7 @@ const original_list: GalItemInputType[] = [
     name: "初雪樱",
     use_time: "25h28min",
     score: {
-      story: 8.9,
+      story: 8.6,
       visual: 7.6,
       program: 7.5,
     },
@@ -760,7 +772,7 @@ const original_list: GalItemInputType[] = [
     name: "君と彼女と彼女の恋",
     use_time: "10h16min",
     score: {
-      story: 9.3,
+      story: 9.1,
       visual: 4.2,
       program: 5.4,
     },
@@ -774,7 +786,7 @@ const original_list: GalItemInputType[] = [
     use_time: "18h9min",
     score: {
       story: 9.2,
-      visual: 7,
+      visual: 6,
       program: 2,
     },
     duration: {
@@ -891,7 +903,7 @@ const original_list: GalItemInputType[] = [
     use_time: "39h53min",
     order: 1,
     score: {
-      story: 8,
+      story: 8.1,
       visual: 5,
       program: 0,
     },
@@ -980,7 +992,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 13,
       visual: 7.8,
-      program: 3.5,
+      program: 3.8,
     },
     duration: {
       start: "2023-01-07",
@@ -1117,7 +1129,7 @@ const original_list: GalItemInputType[] = [
     intense: true,
     use_time: "23h17min",
     score: {
-      story: 9.7,
+      story: 9.6,
       visual: 4,
       program: 3.2,
     },
@@ -1204,8 +1216,8 @@ const original_list: GalItemInputType[] = [
     use_time: "<39h50min>",
     order: 1,
     score: {
-      story: 8.8,
-      visual: 6.5,
+      story: 8.5,
+      visual: 6.7,
       program: 8,
     },
     duration: {
@@ -1232,7 +1244,7 @@ const original_list: GalItemInputType[] = [
     order: 5,
     score: {
       story: 5,
-      visual: 6.6,
+      visual: 7,
       program: 8,
     },
     duration: {
@@ -1247,7 +1259,7 @@ const original_list: GalItemInputType[] = [
     order: 4,
     score: {
       story: 10,
-      visual: 6,
+      visual: 7,
       program: 9,
     },
     duration: {
@@ -1319,7 +1331,7 @@ const original_list: GalItemInputType[] = [
     order: 3,
     score: {
       story: 7,
-      visual: 6,
+      visual: 7,
       program: 8.5,
     },
     duration: {
@@ -1334,7 +1346,7 @@ const original_list: GalItemInputType[] = [
     order: 2,
     score: {
       story: 7.5,
-      visual: 6,
+      visual: 7,
       program: 8.5,
     },
     duration: {
@@ -1364,7 +1376,7 @@ const original_list: GalItemInputType[] = [
     order: 1,
     score: {
       story: 7,
-      visual: 7,
+      visual: 7.2,
       program: 8.5,
     },
     duration: {

@@ -63,6 +63,7 @@ tag:
 - [FSRS Helper](https://ankiweb.net/shared/info/759844606)：在电脑上使用，可以把 AnkiDroid 上复习的卡按 FSRS 重排。
 - [Review Heatmap](https://ankiweb.net/shared/info/1771074083)
 - [Custom Shortcuts for Anki](https://github.com/Liresol/anki-custom-shortcuts)：自定义快捷键。要重启生效。
+- [Remove Duplicate Cards（移除重复卡片）](https://ankiweb.net/shared/info/95590040)
 
 ### [使用时间记录](../articles/time_record.md)
 
