@@ -59,15 +59,15 @@ category:
 ## 关于博客
 
 - 本站地址（按推荐顺序）[^4]：[absx.pages.dev](https://absx.pages.dev) | [absx.netlify.app](https://absx.netlify.app) | [lxl66566.github.io](https://lxl66566.github.io)
-- 本博客原创文章遵循 MIT 协议，可任意修改、转载、再发布，甚至不注明来源转载。
+- 本博客原创文章遵循我的自定义声明：可任意修改、转载、再发布；对于非商业用途，转载可以不注明来源；商业用途则需要标注来源。
 
 [^4]: github.io 较慢，且**可能**无法加载图片，参考[图床国内无法解析](./blog/withvuepress2.md#图床国内无法解析问题)。
 
 更多详细信息请前往[关于博客](./blog/index.md)页。
 
-## 友链与外链
+## 单方外链
 
-> 单方面引用的公开博客。
+> 单方面引用的公开博客。（本站不接受传统意义上的友链）
 
-- [asukaminato.notion.site](https://asukaminato.notion.site/asukaminato/Blog-3c0df75d3d8b471ab67e97ecc82e10a4)
+- [asukaminato.notion.site](https://asukaminato.notion.site)
 - [Xuanwo's Blog](https://xuanwo.io/)

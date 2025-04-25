@@ -459,6 +459,10 @@ const data = [
   { id: "ROYD-208", aScore: 7.5, bScore: 7, u: true, name: "#睡死 媚薬漬け女子○生 昏眠レ×プ 悪徳医師に未熟な体を弄ばれ痙攣する膣に何度も中出しされた少女が壊れるまでの診療記録 皆月ひかる" },
   { id: "hmn-069", aScore: 6, bScore: 6.1, u: true, name: "俺を冤罪でクビに追い込んだ生意気な教え子を種付けプレスで犯し続けた3日間 皆月ひかる" },
   { id: "ANKK-005", aScore: 5, bScore: 5, u: true, name: "（仮）暗黒005さん" },
+  { id: "SUJI-243", aScore: 6.3, bScore: 6.4, name: "#合集 ^1 ●学生レ●プ 尾行・待伏せ・騙し強●媚薬・連れ込み・拉致監●輪●" },
+  { id: "SUJI-069", aScore: 5, bScore: 6, name: "#合集 文字に出来ない危険な映像 少女孕ませ強●" },
+  { id: "AVOP-170", aScore: 5.7, bScore: 9.9, u: true, name: "4 ミッシング少女 - 有本紗世" },
+  { id: "MIAB-254", aScore: 6.9, bScore: 9.5, u: true, name: "キモイからどっかいけよ、じじい 更生指導員の絶対的パワーと肉棒で非力な不良少女どもを徹底服従させるメスガキおま○こ更生プログラム" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 
