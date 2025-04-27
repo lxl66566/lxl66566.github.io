@@ -561,6 +561,176 @@ for name in file.sheet_names:
 
 一行代码更换 pandas 后端，可以大幅提升读取速度。([src](https://datapythonista.me/blog/how-fast-can-we-process-a-csv-file))
 
+## 第三方包推荐
+
+### 命令行参数
+
+- python 自带了一个 argparse 模块用于命令行 parse。虽然由于有官方支持，这个包是命令行参数 parse 中最泛用的一个，但是用起来还是不够顺手，语法也比较丑。[这里](https://github.com/lxl66566/bpm/blob/d4063a31b8132c6ce19263f16d6f8b959a797017/bpm/cli.py)是一个例子（我写的 bin-package-manager 用的 argparse），足以看出其不直观之处。
+- [click](https://click-docs-zh-cn.readthedocs.io/zh/latest/) 是一个专门用于命令行参数 parse 的库，它使用装饰器嵌套的方式实现简洁直观的语法，我很喜欢，优先推荐。
+- 此外还有 [cappa](https://github.com/dancardin/cappa) 库使用 dataclass 进行命令行 parse，模仿的是 rust 的 clap derived。这个方式同样也非常直观，不过该库在 2025 年还处于开发早期阶段，暂时不建议使用。
+
+### 命令行交互
+
+很多时候我们需要让用户在几个选项中选择一个。自己写 input 的话还需要处理许多边缘情况，不如直接用现成的库。为了用户方便，我们甚至可以使用 TUI 进行引导。我尝试了一些库，在这里做一个总结。
+
+- [questionary](https://github.com/tmbo/questionary)：完美匹配需求，建议直接用
+- [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu)：不支持 windows；返回值的 typing 爆炸
+- [console-menu](https://github.com/aegirhall/console-menu)：不支持 interactive，与需求不符
+- [PyConsoleMenu](https://github.com/BaggerFast/PyConsoleMenu)：打包炸了，没法安装；底层的 windows-curses 有 bug
+  - [PyConsoleMenu2](https://github.com/lxl66566/PyConsoleMenu2)：我自己 fork 了一个，解决打包问题，但是 windows-curses bug 还没解决，就是使用中文做标题/选项时在 windows 上会有奇怪的缩进。
+- [pymenu](https://github.com/luanws/pymenu)：极简 + full typing，但是只有颜色区分，不支持 prefix arrow，不直观
+
+### TUI
+
+- [rich](https://github.com/Textualize/rich) 一家独大。不过都用 python 了，为什么不直接上 GUI 呢？好用的 GUI 也很多。
+
+### GUI
+
+一些 GUI 框架。（大部分都没用过）
+
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
+- [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)：真的很简单 / 简陋，but it works
+- [nicegui](https://github.com/zauberzeug/nicegui)：基于 web 的
+- [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
+- [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
+- [BeeWare](https://beeware.org/)（toga）：原生跨平台
+
+#### CustomTkinter
+
+用过，文档没搜索功能，该有回调的地方不给回调，关联变量只能 get 不能 set。。。
+
+系统需要有 tkinter，例如 archlinux 需要安装 `tk`。
+
+### 爬虫与自动化
+
+我其实只会一点简单的爬虫。简单的就 `request` + `fake-useragent` + `BeautifulSoup4` html 解析，复杂一点的话直接模拟浏览器。
+
+#### 模拟浏览器
+
+之前用过 `playright` 做一些疫情时的健康打卡相关（学长的项目），感觉一般。
+
+然后寻找其他框架，发现一个国人写的 [DrissionPage](https://github.com/g1879/DrissionPage)，虽然比较青涩，但是做一些简单的自动化非常简单。顺带提了个微小改进使用体验的 pr。
+
+DrissionPage 用的是自创的元素选择器，需要看[文档](http://g1879.gitee.io/drissionpagedocs/SessionPge/find_elements)。
+
+以下是一个简单的样例。
+
+```py
+from DrissionPage import ChromiumPage
+page = ChromiumPage()
+page.get("https://public.ecustpt.eu.org/mybonus.php")
+buttons = page.eles("tag:input")
+i = buttons[0]
+if i.attr("value") == "1":
+    i.click()
+```
+
+## 图像相关
+
+### 从网站获取图片
+
+```python
+import requests
+from PIL import Image
+from io import BytesIO
+response = requests.get(src)
+image = Image.open(BytesIO(response.content))
+image.show()
+```
+
+### 截屏
+
+```python
+from PIL import ImageGrab
+img = ImageGrab.grab(bbox=(0, 0, 1920, 1080))   # 注意改为你需要截屏的分辨率
+```
+
+### 多图片转 pdf
+
+我现在使用 [typst](../learning/typst.md)，这个代码还是作废吧。
+
+```py
+import img2pdf
+temp = [BytesIO(...), BytesIO(...)]
+# temp 也可以是字符串数组，包含本地图片路径
+with open('第二册答案.pdf', "wb") as f:
+    write_content = img2pdf.convert(temp)
+    f.write(write_content)
+```
+
+### Image 对象转为 bytes
+
+有时候需要对图片对象转为字节码以在不同函数间流通。（不统一对象的坏处）
+
+```python
+import io
+def img2Byte(img:Image) -> bytes:
+    imgByte=io.BytesIO()
+    img.save(imgByte,format='JPEG')
+    byte_res=imgByte.getvalue()
+    return byte_res
+```
+
+### 高斯模糊
+
+```python
+from PIL import Image,ImageFilter
+img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
+```
+
+使用此内置函数进行高斯模糊将无法改变 sigma 的值。
+
+## ORM
+
+ORM (Object-relational mapping)，数据关系映射。此处特指 python 实现的数据库 ORM。
+
+最出名的 python ORM 应该是 sqlalchemy 吧。但是其文档比较烂，我觉得其设计并不哲学。所以我个人不喜欢这个。
+
+然后是 django 的基于 model 的内置 ORM，由于使用 django 的人较多，因此也比较有影响力。我在下面有[提到这个](#数据库)。
+
+读过 [pony](https://docs.ponyorm.org/) 的文档与 tutorial 后，我觉得这个设计不错。
+
+> 这些文章 ([1](https://nelsonslog.wordpress.com/2022/07/04/very-simple-python-orms/) [2](https://stackoverflow.com/questions/53428/what-are-some-good-python-orm-solutions)) 也介绍了一些其他 ORM。
+
+## 后端框架
+
+### django
+
+django 能够快速搭建一个网站。
+
+django 的前后端是深度耦合的，前端大概只能使用传统三件套（但是据说可以用 GraphQL 做中间层与框架式前端进行交互，没试过），后端自然就是 python 了。
+
+#### 数据库
+
+> 由于我平常接触的不是 django 开发而是运维，所以这里主要讲讲数据库内容。
+
+django 做了自己的基于模型的 ORM。django 官方支持[这些数据库](https://docs.djangoproject.com/en/4.2/ref/databases/#databases)。
+
+首先进行数据库操作前需要选择 model（可以理解为选表）。具体看 `models.py` 的实现。
+
+```py
+from Djangoxxx.models import <module_name>
+```
+
+然后根据需求选出 object 或者 queryset.
+
+```py
+qs = <module_name>.objects.all()
+obj = <module_name>.objects.get(id='xxx')
+qs = <module_name>.objects.filter(FinishTime__range=[datetime(2023, 1, 1, 00, 00),datetime(2023, 11, 5, 00, 00)])  # 区间筛选 datetime
+```
+
+再进行进一步处理。
+
+```py
+c = qs.values_list('price', flat=True)  # 获取某一列(colume)
+print(c[0])             # 然后类似 list 形式操作取值
+obj = qs.get(id='xxx')  # 可以从 queryset 中取 object
+print(obj.id)           # 然后从 object 中取值
+```
+
+取了值就可以爱干啥干啥了。我不太习惯高层次的抽象，因此类似求和啥的虽然 django 也提供了 `django.db.models.Sum`，但有查文档的功夫早都写好了，还是自己做吧。
+
 ## 调试
 
 python 自带一个 pdb 调试器，非常方便，功能也很强大。Python 3.11 - 3.13 里 pdb 有许多改进。
@@ -658,166 +828,6 @@ pyenv 是一个 python 版本管理工具。不算太好用，我不能一键切
 :::
 
 其次，如果有足够的 testcase，也可以考虑使用 nox，这是一个测试框架，不过我还没试用过。
-
-## 选择器
-
-很多时候我们需要让用户在几个选项中选择一个。自己写 input 的话还需要处理许多边缘情况，不如直接用现成的库。为了用户方便，我们甚至可以使用 TUI 进行引导。我尝试了一些库，在这里做一个总结。
-
-- [questionary](https://github.com/tmbo/questionary)：完美匹配需求，建议直接用
-- [simple-term-menu](https://github.com/IngoMeyer441/simple-term-menu)：不支持 windows；返回值的 typing 爆炸
-- [console-menu](https://github.com/aegirhall/console-menu)：不支持 interactive，与需求不符
-- [PyConsoleMenu](https://github.com/BaggerFast/PyConsoleMenu)：打包炸了，没法安装；底层的 windows-curses 有 bug
-  - [PyConsoleMenu2](https://github.com/lxl66566/PyConsoleMenu2)：我自己 fork 了一个，解决打包问题，但是 windows-curses bug 还没解决，就是使用中文做标题/选项时在 windows 上会有奇怪的缩进。
-- [pymenu](https://github.com/luanws/pymenu)：极简 + full typing，但是只有颜色区分，不支持 prefix arrow，不直观
-
-## TUI
-
-- [rich](https://github.com/Textualize/rich) 一家独大。不过都用 python 了，为什么不直接上 GUI 呢？好用的 GUI 也很多。
-
-## GUI
-
-一些 GUI 框架。（大部分都没用过）
-
-- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
-- [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)：真的很简单 / 简陋，but it works
-- [nicegui](https://github.com/zauberzeug/nicegui)：基于 web 的
-- [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
-- [Flet](https://github.com/flet-dev/flet)：跨平台 Flutter 应用
-- [BeeWare](https://beeware.org/)（toga）：原生跨平台
-
-### CustomTkinter
-
-用过，文档没搜索功能，该有回调的地方不给回调，关联变量只能 get 不能 set。。。
-
-系统需要有 tkinter，例如 archlinux 需要安装 `tk`。
-
-## 爬虫与自动化
-
-我其实只会一点简单的爬虫。简单的就 `request` + `fake-useragent` + `BeautifulSoup4` html 解析，复杂一点的话直接模拟浏览器。
-
-### 模拟浏览器
-
-之前用过 `playright` 做一些疫情时的健康打卡相关（学长的项目），感觉一般。
-
-然后寻找其他框架，发现一个国人写的 [DrissionPage](https://github.com/g1879/DrissionPage)，虽然比较青涩，但是做一些简单的自动化非常简单。顺带提了个微小改进使用体验的 pr。
-
-DrissionPage 用的是自创的元素选择器，需要看[文档](http://g1879.gitee.io/drissionpagedocs/SessionPge/find_elements)。
-
-以下是一个简单的样例。
-
-```py
-from DrissionPage import ChromiumPage
-page = ChromiumPage()
-page.get("https://public.ecustpt.eu.org/mybonus.php")
-buttons = page.eles("tag:input")
-i = buttons[0]
-if i.attr("value") == "1":
-    i.click()
-```
-
-## 图像相关
-
-### 从网站获取图片
-
-```python
-import requests
-from PIL import Image
-from io import BytesIO
-response = requests.get(src)
-image = Image.open(BytesIO(response.content))
-image.show()
-```
-
-### 截屏
-
-```python
-from PIL import ImageGrab
-img = ImageGrab.grab(bbox=(0, 0, 1920, 1080))   # 注意改为你需要截屏的分辨率
-```
-
-### 多图片转 pdf
-
-我现在使用 [typst](../learning/typst.md)，这个代码还是作废吧。
-
-```py
-import img2pdf
-temp = [BytesIO(...), BytesIO(...)]
-# temp 也可以是字符串数组，包含本地图片路径
-with open('第二册答案.pdf', "wb") as f:
-    write_content = img2pdf.convert(temp)
-    f.write(write_content)
-```
-
-### Image 对象转为 bytes
-
-有时候需要对图片对象转为字节码以在不同函数间流通。（不统一对象的坏处）
-
-```python
-import io
-def img2Byte(img:Image) -> bytes:
-    imgByte=io.BytesIO()
-    img.save(imgByte,format='JPEG')
-    byte_res=imgByte.getvalue()
-    return byte_res
-```
-
-### 高斯模糊
-
-```python
-from PIL import Image,ImageFilter
-img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
-```
-
-使用此内置函数进行高斯模糊将无法改变 sigma 的值。
-
-## ORM
-
-ORM (Object-relational mapping)，数据关系映射。此处特指 python 实现的数据库 ORM。
-
-最出名的 python ORM 应该是 sqlalchemy 吧。但是其文档比较烂，我觉得其设计并不哲学。所以我个人不喜欢这个。
-
-然后是 django 的基于 model 的内置 ORM，由于使用 django 的人较多，因此也比较有影响力。我在下面有[提到这个](#数据库)。
-
-读过 [pony](https://docs.ponyorm.org/) 的文档与 tutorial 后，我觉得这个设计不错。
-
-> 这些文章 ([1](https://nelsonslog.wordpress.com/2022/07/04/very-simple-python-orms/) [2](https://stackoverflow.com/questions/53428/what-are-some-good-python-orm-solutions)) 也介绍了一些其他 ORM。
-
-## django
-
-django 能够快速搭建一个网站。
-
-django 的前后端是深度耦合的，前端大概只能使用传统三件套（但是据说可以用 GraphQL 做中间层与框架式前端进行交互，没试过），后端自然就是 python 了。
-
-### 数据库
-
-> 由于我平常接触的不是 django 开发而是运维，所以这里主要讲讲数据库内容。
-
-django 做了自己的基于模型的 ORM。django 官方支持[这些数据库](https://docs.djangoproject.com/en/4.2/ref/databases/#databases)。
-
-首先进行数据库操作前需要选择 model（可以理解为选表）。具体看 `models.py` 的实现。
-
-```py
-from Djangoxxx.models import <module_name>
-```
-
-然后根据需求选出 object 或者 queryset.
-
-```py
-qs = <module_name>.objects.all()
-obj = <module_name>.objects.get(id='xxx')
-qs = <module_name>.objects.filter(FinishTime__range=[datetime(2023, 1, 1, 00, 00),datetime(2023, 11, 5, 00, 00)])  # 区间筛选 datetime
-```
-
-再进行进一步处理。
-
-```py
-c = qs.values_list('price', flat=True)  # 获取某一列(colume)
-print(c[0])             # 然后类似 list 形式操作取值
-obj = qs.get(id='xxx')  # 可以从 queryset 中取 object
-print(obj.id)           # 然后从 object 中取值
-```
-
-取了值就可以爱干啥干啥了。我不太习惯高层次的抽象，因此类似求和啥的虽然 django 也提供了 `django.db.models.Sum`，但有查文档的功夫早都写好了，还是自己做吧。
 
 ## 性能分析
 

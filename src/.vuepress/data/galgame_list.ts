@@ -4,6 +4,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "Butterfly Seeker",
     valid_name: "ButterflySeeker",
+    use_time: "-1min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-04-22",

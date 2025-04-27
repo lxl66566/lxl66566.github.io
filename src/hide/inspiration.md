@@ -95,7 +95,6 @@ tag:
 - [x] rust release ci
 - [ ] kde spectacle ocr plugin
 - [ ] 分布式服务器监控全栈
-- [ ] sync tools
 - [ ] 半连接神经网络
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
@@ -116,6 +115,7 @@ tag:
 - [ ] rust-checkenizer: rust lsp based on cargo check. NO MORE RA NEEDED.
 - [ ] rust easy context like tokio/compio do.
 - [ ] 明日方舟视频自动去暂停
+- [ ] SNP's Not Pydantic，回归原始，拒绝[隐性假设](https://t.me/withabsolutex/2338)
 
 ### RIIR
 
@@ -127,6 +127,7 @@ tag:
 - [x] Telegram marsbot
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
 - [ ] reader
+- [ ] sync tools
 
 ### Android
 
