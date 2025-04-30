@@ -117,6 +117,11 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #ジュエリー・ハーツ・アカデミア>
+
+- 生肉难度也是有点高的，主要是片假太多。
+
+</template>
 <template #ButterflySeeker>
 
 - Silky Plus 的悬疑作品。他们社主打的就是悬疑，质量肯定是有保证的。
@@ -1198,6 +1203,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
+| ジュエリー・ハーツ・アカデミア | 分辨率太低并且不能拉伸窗口 |
 | Butterfly Seeker | auto 开始和结束时都会无视语音向下跳一页；线索选择界面无法 quick save |
 | 想要传达给你的爱恋 | backlog 打断语音 |
 | 千の刃涛、桃花染の皇姫 | backlog 放语音要点滚轮；没有区分系统效果音和普通效果音；进入 backlog 时若鼠标不移动则激活的句子是最下面的而不是鼠标指着的 |

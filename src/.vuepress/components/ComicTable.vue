@@ -749,6 +749,8 @@ const data = [
   { id: "568482", aScore: 9.3, bScore: 5.4, info: "#偶像大师 #援交", bak: "https://telegra.ph/C105-ココアホリック-ユイザキカズヤ-ことね-ソープランド-学園アイドルマスター-中国翻訳-04-16-3" },
   { id: "568814", aScore: 7.3, bScore: 7.9, info: "#壁尻 #甘露アメ", bak: "https://telegra.ph/甘露アメ-バイト先の壁尻屋で自分に最適化魔法かけて自滅する低級白魔ちゃんの話-Adoscc-個人翻訳-04-18" },
   { id: "(ex)", aScore: 8, bScore: 8.2, info: "#长篇 #催眠", otherlink: "https://exhentai.org/g/3319496/bafbdf34f0/", bak: "https://telegra.ph/満開開花-催眠コンビニ-アナタと交尾で孕みーマート-無修正-中国翻訳-PepeRabi個人漢化-04-18" },
+  { id: "479532", aScore: 9.5, bScore: 7.6, info: "#兽耳 #女仆 #3P" },
+  { id: "485475", aScore: 7.7, bScore: 9.4, order: 2, info: "#百合 #催眠 #反杀", bak: "https://telegra.ph/ぐつとま-タチ-みんなでえっちな百合活アプリ-ええこの中にかかってない娘がいる2-中国翻訳-DL版-Preview-12-12" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

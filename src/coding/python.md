@@ -93,23 +93,28 @@ python 的包管理器可以说是百花齐放。
 
 2024.09 uv 在 v0.4.5 添加了 build 功能，于是我转向 uv。当然现在 uv 还存在一些问题，但是还是比 poetry 好用的。最大的优点就是快，并行下载安装实在是好用。
 
-1. 不能在中文目录下 `uv init`，但是可以 `uv init --name xxx` 绕过。
-   - 不能用中文做 package name 是 PEP 621 的要求。对于拿包管理器但是不用来写一个 python package 的人来说不太友好。
-2. 如果需要安装 pytorch，例如 pytorch 官方给的指令是 `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/test/xpu`，我们要使用 `uv add torch torchvision torchaudio --index pytorch=https://download.pytorch.org/whl/test/xpu`，不要用 `uv pip install ...`，那样的话不会写入 `pyproject.toml`，在 `uv run` 的时候还是会被 uninstall。
-
 ##### 使用
 
 uv 的使用与其他包管理器类似，也非常简单。
 
 ```sh
+uv init                 # 新建项目
 uv add <packages>       # 添加包
 uv remove <packages>    # 移除包
-uv sync                 # 更新 .venv
-uv run python xxx.py    # 运行某个 py 文件
+uv sync                 # 更新 .venv，相当于 npm install
+uv run python xxx.py    # 使用该环境运行某个 py 文件
 uv python pin 3.12      # 对当前项目使用某个 python 版本，如果没下载会自动下载
 ```
 
-添加镜像：查看 [issues#6925](https://github.com/astral-sh/uv/issues/6925)
+1. 不能在中文目录下 `uv init`，但是可以 `uv init --name xxx` 绕过。
+   - 不能用中文做 package name 是 PEP 621 的要求。对于拿包管理器但是不用来写一个 python package 的人来说不太友好。
+2. 添加镜像：查看 [issues#6925](https://github.com/astral-sh/uv/issues/6925)
+3. 如果需要安装 pytorch，例如 pytorch 官方给的指令是 `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/test/xpu`，我们要使用 `uv add torch torchvision torchaudio --index pytorch=https://download.pytorch.org/whl/test/xpu`，不要用 `uv pip install ...`，那样的话不会写入 `pyproject.toml`，在 `uv run` 的时候还是会被 uninstall。
+4. build 时默认会把目录下所有文件都放进来。如果需要选择性放入文件，可以用
+   ```toml
+   [tool.hatch.build]
+   include = ["*.py"]
+   ```
 
 ##### 我的配置
 
@@ -124,9 +129,11 @@ prerelease = "allow"                                                # 不再禁�
 
 #### [pdm](https://github.com/pdm-project/pdm)
 
-国人开发，据说很好用，除了性能以外没有其他问题。我还没用过，不过日后会尝试。
+国人开发，据说很好用，除了性能以外没有其他问题。
 
-pdm 也不允许在中文目录下 init，并且没有类似 uv 的 `--name` 方法绕过。好，我不尝试了。
+主要开发者是 frostming，非常活跃并积极解决问题。
+
+之前 pdm 不允许在中文目录下 init，并且没有类似 uv 的 `--name` 方法绕过。[我在论坛上提了一嘴，然后被看到了，就修了。](https://t.me/withabsolutex/2320)
 
 @tab poetry
 

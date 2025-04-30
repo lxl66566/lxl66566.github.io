@@ -516,6 +516,26 @@ Path("test.txt").unlink()
 
 抬头一看，怎么一天的时间已经过去了。。。
 
+多 arc 加速代码示例：
+
+```py
+from pathlib import Path
+from subprocess import run
+
+arcs = Path("Z:/voices")
+
+def rc(cmd):
+    run(cmd, shell=True, check=True)
+
+for arc in arcs.glob("*.arc"):
+    print(arc)
+    rc(f"arc-reader unpack {arc}")
+    unpacked = arc.with_suffix("")
+    rc(f"audio-speedup -s 1.95 {unpacked}")
+    rc(f"loudness-normalize --target-lufs=-14 {unpacked}")  # 这里指定 lufs 是为了跨音频文件也能音量均衡。-14 是针对某一个音频组算出来的。
+    rc(f"arc-reader pack {unpacked}")
+```
+
 </template>
 <template #silky>
 

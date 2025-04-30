@@ -164,9 +164,12 @@ on:
 
 手动任务：使用 `workflow_dispatch`；建议每个 workflow 都加一个方便调试。不要再使用 `on:push` 进行**手动运行控制**。
 
-### 杂
+### 心得
 
 - if 的外面会自动包 `${{ }}`，不需要手动包，否则会出现预料之外的行为。
+- 前端项目部署到 github pages 注意事项
+  - setup pnpm 要在 setup node 之前。
+  - 注意要在 vite config 里设 base！
 
 ### 调试
 

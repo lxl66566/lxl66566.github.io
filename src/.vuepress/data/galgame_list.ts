@@ -2,6 +2,15 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "ジュエリー・ハーツ・アカデミア -We will wing wonder world-",
+    valid_name: "ジュエリー・ハーツ・アカデミ",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-04-30",
+    },
+    namaniku: true,
+  },
+  {
     name: "Butterfly Seeker",
     valid_name: "ButterflySeeker",
     use_time: "-1min",
