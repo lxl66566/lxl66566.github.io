@@ -575,6 +575,7 @@ for name in file.sheet_names:
 - python 自带了一个 argparse 模块用于命令行 parse。虽然由于有官方支持，这个包是命令行参数 parse 中最泛用的一个，但是用起来还是不够顺手，语法也比较丑。[这里](https://github.com/lxl66566/bpm/blob/d4063a31b8132c6ce19263f16d6f8b959a797017/bpm/cli.py)是一个例子（我写的 bin-package-manager 用的 argparse），足以看出其不直观之处。
 - [click](https://click-docs-zh-cn.readthedocs.io/zh/latest/) 是一个专门用于命令行参数 parse 的库，它使用装饰器嵌套的方式实现简洁直观的语法，我很喜欢，优先推荐。
 - 此外还有 [cappa](https://github.com/dancardin/cappa) 库使用 dataclass 进行命令行 parse，模仿的是 rust 的 clap derived。这个方式同样也非常直观，不过该库在 2025 年还处于开发早期阶段，暂时不建议使用。
+- [python-fire](https://github.com/google/python-fire) 是 Google 官方的命令行工具，它致力于“把任何函数或其他东西变成命令行工具”。但是我认为它的语义设计本来就有问题，主打简单的结果就是扩展性差，很多时候没法清晰地表达我的复杂诉求。
 
 ### 命令行交互
 

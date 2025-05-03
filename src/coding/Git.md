@@ -537,7 +537,7 @@ done
 
 然后就可以 `bash test.sh <file>` 了。
 
-## 签名
+### 签名
 
 一般情况下，git 提交都是不需要签名的。但是面对大项目的协同开发，有时没办法，如果不签名，CI 都过不去。因此学习如何签名也是有必要的。
 
@@ -550,17 +550,7 @@ git config commit.gpgsign true   # 设置该仓库 commit 时自动签名
 
 如果需要对已存在的 commit 签名，可以 `git rebase -i HEAD`，然后将其中的 `noop`(_no operation_) 改为 `exec git commit --amend --no-edit -S` 即可。
 
-## 自建 git 托管
-
-有一些东西，不方便放在托管网站上（即便是 private），例如个人隐私，被 DMCA 的资源，等等。因此可以在 [VPS](../articles/proxy/vps.md) 上自建一个 git 托管解决。
-
-我的需求非常简单，保持同步即可。因此这里也不讲什么 Gitea，直接利用最原始的 ssh([ref](https://www.zzxworld.com/posts/4-ways-to-self-host-git-service))：在 VPS 上建一个 bare repo 就结束了！之后上传只要指定 host 和路径就行了。
-
-```sh
-git push <host>:<path>/<name>.git
-```
-
-## 统计 git 分支大小
+### 统计 git 分支大小
 
 用 gpt 写了个。
 
@@ -617,6 +607,38 @@ git gc --prune=now --aggressive        # gc，删除 blob
 ```
 
 这样就能得到一个船新的、与之前完全一致的、最小化空间占用的 repo 了。虽然这样做弯弯绕绕，咋一看还不如 `rm -rf .git`；但是这样有一个极大的好处，就是步骤中的 commit 的文件列表和之前的 commit 是一致的，`git push -f` 上传到 Github 时经过比对，实际上不需要上传数据。如果你的仓库大小上了 GB 甚至数十 GB，这一点操作能为你节约不少上传时间和流量。而 git 仓库重建后的上传是需要全量上传的。
+
+## Git 插件
+
+与 cargo 类似，`git xxx` 实际上会在系统里调用名为 `git-xxx` 的可执行文件。这里有一些插件，未给出链接的请自行搜索：
+
+- git-cliff：自动生成 changelog
+- git-absorb：将当前更改合并到某个 commit 内。
+  - 我不太喜欢它，我选择用我自己的脚本：
+    ```nushell
+    # Creates a fixup commit for a specific commit and autosquashes it via interactive rebase.
+    #
+    # Usage:
+    #   gfixup           # Creates a fixup commit for the current HEAD and rebases
+    #   gfixup <hash>    # Creates a fixup commit for <hash> and rebases
+    #
+    def gfixup [commit_hash?: string = 'HEAD'] {
+       git commit -a --fixup $commit_hash
+       let rebase_target = if $commit_hash == 'HEAD' { 'HEAD~2' } else { ($commit_hash | str trim) + "~1" }
+       GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $rebase_target
+    }
+    ```
+- git-se：[git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)，用于仓库加解密
+
+## 自建 git 托管
+
+有一些东西，不方便放在托管网站上（即便是 private），例如个人隐私，被 DMCA 的资源，等等。因此可以在 [VPS](../articles/proxy/vps.md) 上自建一个 git 托管解决。
+
+我的需求非常简单，保持同步即可。因此这里也不讲什么 Gitea，直接利用最原始的 ssh([ref](https://www.zzxworld.com/posts/4-ways-to-self-host-git-service))：在 VPS 上建一个 bare repo 就结束了！之后上传只要指定 host 和路径就行了。
+
+```sh
+git push <host>:<path>/<name>.git
+```
 
 ## external
 

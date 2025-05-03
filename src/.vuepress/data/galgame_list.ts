@@ -13,10 +13,15 @@ const original_list: GalItemInputType[] = [
   {
     name: "Butterfly Seeker",
     valid_name: "ButterflySeeker",
-    use_time: "-1min",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "12h29min",
     duration: {
       start: "2025-04-22",
+      end: "2025-05-03",
+    },
+    score: {
+      story: 9.5,
+      visual: 5.6,
+      program: 4.5,
     },
   },
   {
@@ -264,7 +269,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-01-12",
     },
     score: {
-      story: 9.5,
+      story: 9.6,
       visual: 8.9,
       program: 6.4,
     },
