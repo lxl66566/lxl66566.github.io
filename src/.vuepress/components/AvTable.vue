@@ -466,6 +466,7 @@ const data = [
   { id: "MUDR-166", aScore: 6.7, bScore: 5.6, name: "放課後。 押しに弱そうな女の子を強引に連れ込んで、オジサン達が輪になって囲んで、何度も、何度も、しつこく精液をぶっかけ汚し続けた…。 皆月ひかる" },
   { id: "STARS-558", aScore: 8.8, bScore: 6, u: true, name: "大嫌いなイジメっこが大切にしている巨乳妹を…催●洗脳してベタ惚れ従順ペットのボク専用肉便器！ 朝田ひまり" },
   { id: "scr-305", aScore: 5.7, bScore: 9.5, name: "^2 女子●学生拉致監●4時間～現実を受け入れられない辛い出来事があった日～" },
+  { id: "SUJI-184", aScore: 6.1, bScore: 7, name: "^-2 ●学生レ●プ・尾行・侵入・待伏せ・痴●失禁・拉致輪●" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

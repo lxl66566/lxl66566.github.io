@@ -35,4 +35,5 @@ tag:
 ## 工具
 
 - [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights/)：一键长草挂机。说 MAA 是方舟史上最伟大的发明也不为过。
+  - 不过开发者并不算是尊重用户反馈，我开的 issue 被 not planed 了。
 - [明日方舟一图流](https://ark.yituliu.cn/)：如何刷材料，如何逛商店

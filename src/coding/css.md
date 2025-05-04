@@ -93,6 +93,8 @@ css 本身不带逻辑，处理嵌套也麻烦。因此有各种各样的预处�
 | fixed    | 元素相对于浏览器窗口进行定位                                     |
 | sticky   | 元素在跨越特定阈值前（屏幕内）表现为相对定位，之后表现为固定定位 |
 
+需要注意，使用 sticky 的同时必须指定 top、bottom、left、right 其中之一，并且在其任意级父元素上都不能出现 `overflow: auto` 和 `overflow: hidden`。
+
 ## 自适应布局
 
 ### flex
@@ -117,6 +119,8 @@ flex 基础：
    - 主轴：`justify-content`。一般常用的有 `center`, `space-between`, `space-around`, `space-evenly`
    - 交叉轴：一旦使用了 flex，所有元素就会在交叉轴上被拉到最大（由默认值 `align-items: stretch;` 控制），非常直觉。
 4. 超出自动换行：`flex-wrap: wrap;`；换行后又会引入行间对齐 `align-content`。
+
+flex 容易带来的问题：由于 flex 元素没有特定位置和大小，如果其子元素使用了百分比高度/宽度，生成的样式可能不是你所希望的。（是我的问题，不是 flex 的问题）
 
 ### grid
 

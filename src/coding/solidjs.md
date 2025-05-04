@@ -38,7 +38,7 @@ createResource 可以跟 Suspence 组件[配合使用](https://docs.solidjs.com/
 
 SolidJS 也提供了一些内置组件，让写 Vue 的人倍感熟悉。
 
-- `<Show when={...}></Show>`，v-if
+- `<Show when={...} fallback={...}></Show>`，v-if + v-else
 - `<For each={...}></For>`，v-for
 
 ## 配套设施
@@ -48,3 +48,6 @@ SolidJS 虽然相对小众，但仍有着完善的生态系统。
 - 组件库：[SolidUI](https://github.com/stefan-karger/solid-ui)
 - Router：[solid-router](https://github.com/solidjs/solid-router)
 - 图标库：[Solid Icons](https://solid-icons.vercel.app/)
+- Markdown 渲染：[solid-markdown](https://github.com/andi23rosca/solid-markdown)
+
+但是很可惜，solid 用的人较少，导致很多库的 bug 都[没人修](https://t.me/withabsolutex/2343)。
