@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 03 May 2025 12:19:22 GMT</pubDate>
-    <lastBuildDate>Sat, 03 May 2025 12:19:22 GMT</lastBuildDate>
+    <pubDate>Sun, 04 May 2025 18:11:21 GMT</pubDate>
+    <lastBuildDate>Sun, 04 May 2025 18:11:21 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -534,7 +534,7 @@
 <h2>components</h2>
 <p>SolidJS 也提供了一些内置组件，让写 Vue 的人倍感熟悉。</p>
 <ul>
-<li><code>&lt;Show when={...}&gt;&lt;/Show&gt;</code>，v-if</li>
+<li><code>&lt;Show when={...} fallback={...}&gt;&lt;/Show&gt;</code>，v-if + v-else</li>
 <li><code>&lt;For each={...}&gt;&lt;/For&gt;</code>，v-for</li>
 </ul>
 <h2>配套设施</h2>
@@ -543,7 +543,9 @@
 <li>组件库：<a href="https://github.com/stefan-karger/solid-ui" target="_blank" rel="noopener noreferrer">SolidUI</a></li>
 <li>Router：<a href="https://github.com/solidjs/solid-router" target="_blank" rel="noopener noreferrer">solid-router</a></li>
 <li>图标库：<a href="https://solid-icons.vercel.app/" target="_blank" rel="noopener noreferrer">Solid Icons</a></li>
+<li>Markdown 渲染：<a href="https://github.com/andi23rosca/solid-markdown" target="_blank" rel="noopener noreferrer">solid-markdown</a></li>
 </ul>
+<p>但是很可惜，solid 用的人较少，导致很多库的 bug 都<a href="https://t.me/withabsolutex/2343" target="_blank" rel="noopener noreferrer">没人修</a>。</p>
 ]]></content:encoded>
     </item>
     <item>
