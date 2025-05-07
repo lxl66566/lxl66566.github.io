@@ -26,9 +26,13 @@ tag:
 
 ## 回坑
 
-20250202：由于 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights/) 的走红，外加我因为其他事情有必要在 Windows 上安装一个 Android 模拟器，就顺手下载了方舟拿来挂机。（蓝叠[问题很多](../../gossip/fuckxxx.md#蓝叠模拟器有多难用)，我用一天就换了 Mumu。）
+20250202：由于 [MAA](https://github.com/MaaAssistantArknights/MaaAssistantArknights/) 的走红，外加我因为其他事情有必要在 Windows 上安装一个 Android 模拟器，就顺手下载了方舟拿来挂机。1.9G 的安装包后还需要联网下载 6G 资源，啥时候膨胀得这么大了。。。。
 
-1.9G 的安装包后还需要联网下载 6G 资源，啥时候膨胀得这么大了。。。。
+关于模拟器：
+
+- 蓝叠[问题很多](../../gossip/fuckxxx.md#蓝叠模拟器有多难用)
+- Mumu 还行，有些小问题但能跑
+- 雷电模拟器运行方舟闪退。
 
 然后方舟的数值膨胀实在是太厉害了，我在 b 站看攻略组都看不到几个认识的干员，活动关卡也打不过。
 

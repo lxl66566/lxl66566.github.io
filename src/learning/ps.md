@@ -19,7 +19,7 @@ tag:
 
 ## 下载
 
-- PS：详见[网址汇总](../farraginous/recommend_websites.md#媒体创作)。我目前用的 2024 版。
+- PS：详见[网址汇总](../farraginous/recommend_websites.md#媒体创作)。
 
 ## 常用快捷键
 

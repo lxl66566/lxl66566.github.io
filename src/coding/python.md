@@ -109,8 +109,9 @@ uv python pin 3.12      # 对当前项目使用某个 python 版本，如果没�
 1. 不能在中文目录下 `uv init`，但是可以 `uv init --name xxx` 绕过。
    - 不能用中文做 package name 是 PEP 621 的要求。对于拿包管理器但是不用来写一个 python package 的人来说不太友好。
 2. 添加镜像：查看 [issues#6925](https://github.com/astral-sh/uv/issues/6925)
-3. 如果需要安装 pytorch，例如 pytorch 官方给的指令是 `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/test/xpu`，我们要使用 `uv add torch torchvision torchaudio --index pytorch=https://download.pytorch.org/whl/test/xpu`，不要用 `uv pip install ...`，那样的话不会写入 `pyproject.toml`，在 `uv run` 的时候还是会被 uninstall。
-4. build 时默认会把目录下所有文件都放进来。如果需要选择性放入文件，可以用
+3. 不要同时使用 `uv pip install` 和 `uv add`，pip 安装的不会写入 toml，在 `uv run` 时会自动 sync 导致 pip 安装的包丢失。
+4. uv 官方其实有[安装 pytorch 的教程](https://docs.astral.sh/uv/guides/integration/pytorch/)。
+5. build 时默认会把目录下所有文件都放进来。如果需要选择性放入文件，可以用
    ```toml
    [tool.hatch.build]
    include = ["*.py"]
