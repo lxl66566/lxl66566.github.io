@@ -19,7 +19,6 @@ tag:
 - [1paragraph](https://1paragraph.app/) | [EPUB Reader](https://epub-reader.online/)：在线网页 EPUB 阅读器
 - [代码高亮](https://romannurik.github.io/SlidesCodeHighlighter/)
 - [PageSpeed Insights](https://pagespeed.web.dev/)：测试静态网站的性能
-- [SimpleTex](https://simpletex.cn)：免费手写/图片公式识别，转 latex 格式。
 <!-- * [免费盐选](https://mfyx.top/)：免费看知乎盐选 -->
 
 ::: details 还有一些一般用不到的
@@ -97,6 +96,13 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ### Other
 
 - [zerogpt](https://www.zerogpt.com/): AI text Detector tool
+
+### 公式识别
+
+现在的公式识别已经被 AI 统治了。你当然可以使用一些 VLM + 提示词进行公式识别；不过这里也提供一些其他的特化方式：
+
+- [SimpleTex](https://simpletex.cn)：免费手写/图片公式识别。模型不开源，而在线 API 比较火爆，可能需要排队。
+- [Doc AI](https://doc.bitwsd.com/doc_ai/)：VLM 识别系统，准确率高。
 
 ## 传文件
 
