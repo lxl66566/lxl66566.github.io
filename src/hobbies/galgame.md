@@ -120,7 +120,9 @@ LunaTranslator 使用心得：
 <template #JewelryHeartsAcademia>
 
 - 生肉难度也是有点高的，主要是片假太多。
-- 意志 -> 石（いし），这也能双关。不过文中用的是 ジェム。
+  - 甚至还有考试，还要做一堆片假题目，太变态了。
+- 意志 -> 石（いし），这也能双关。虽然形容宝石用的是 ジェム。
+- 插入曲不错。
 
 </template>
 <template #ButterflySeeker>

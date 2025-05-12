@@ -469,6 +469,7 @@ const data = [
   { id: "SUJI-184", aScore: 6.1, bScore: 7, name: "^-2 ●学生レ●プ・尾行・侵入・待伏せ・痴●失禁・拉致輪●" },
   { id: "STARS-232", aScore: 9.1, bScore: 6.2, u: true, name: "永野いち夏 夢みるカノジョの想い出 AV女優になりたい彼女とセックスの練習のためにハメまくったある冬の記憶。" },
   { id: "STARS-376", aScore: 7.7, bScore: 7.1, name: "キメセク相部屋NTR 大嫌いで最低最悪な絶倫元カレに…媚薬を飲まされ…×××。 宮島めい" },
+  { id: "SUJI-074", aScore: 6.6, bScore: 9, name: "文字に出来ない危険な映像 少女押し込み強●" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

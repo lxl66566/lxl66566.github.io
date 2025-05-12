@@ -3,14 +3,13 @@ import { BookItemInputType, HLevel } from "../definition/book_type.js";
 const original_list: BookItemInputType[] = [
   {
     name: "雪国的青梅四重奏",
-    reading_status: {
-      kind: "在读",
-    },
     tags: {
       japanese: true,
     },
+    h_level: HLevel.LOW,
     duration: {
       start: "2025-04-09",
+      end: "2025-05-12",
     },
   },
   {
