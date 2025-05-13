@@ -52,7 +52,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["樱之刻", "FLIP * FLOP 系列"],
+    names: ["樱之刻", "FLIP * FLOP 系列", "终之空Remake"],
     valid_name: "Artemis",
     engine: "Artemis Engine",
     save_format: "pfs",
@@ -94,10 +94,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: [
-      "千の刃涛、桃花染の皇姫",
-      "ジュエリー・ハーツ・アカデミア",
-    ],
+    names: ["千の刃涛、桃花染の皇姫", "ジュエリー・ハーツ・アカデミア"],
     valid_name: "bgi",
     engine: "bgi",
     save_format: "arc",

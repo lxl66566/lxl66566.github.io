@@ -2,9 +2,17 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "终之空Remake",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-05-13",
+    },
+  },
+  {
     name: "ジュエリー・ハーツ・アカデミア -We will wing wonder world-",
     valid_name: "JewelryHeartsAcademia",
     playing_status: PlayingStatus.PLAYING,
+    use_time: "-2min",
     duration: {
       start: "2025-04-30",
     },
@@ -71,10 +79,15 @@ const original_list: GalItemInputType[] = [
   {
     name: "千の刃涛、桃花染の皇姫",
     valid_name: "千の刃涛桃花染の皇姫",
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "-1min",
+    use_time: "13h48min",
     duration: {
       start: "2025-03-28",
+      end: "2025-05-13",
+    },
+    score: {
+      story: 5.1,
+      visual: 7.2,
+      program: 8.7,
     },
   },
   {
@@ -185,7 +198,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-02-21",
     },
     score: {
-      story: 4.4,
+      story: 4.7,
       visual: 9.5,
       program: 9.5,
     },
@@ -198,7 +211,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-04-10",
     },
     score: {
-      story: 4.9,
+      story: 4.6,
       visual: 3.1,
       program: 0.8,
     },
@@ -903,7 +916,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "真愿朦幻馆在的洋馆里追寻明天的羔羊们",
     use_time: "28h2min",
     score: {
-      story: 5,
+      story: 5.5,
       visual: 7.1,
       program: 8.4,
     },
@@ -1088,7 +1101,7 @@ const original_list: GalItemInputType[] = [
     use_time: "-",
     score: {
       story: 7.6,
-      visual: 7.5,
+      visual: 7.9,
       program: 9.3,
     },
     duration: {
