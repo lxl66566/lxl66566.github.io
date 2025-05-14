@@ -3,9 +3,15 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 const original_list: GalItemInputType[] = [
   {
     name: "终之空Remake",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "6h35min",
     duration: {
       start: "2025-05-13",
+      end: "2025-05-14",
+    },
+    score: {
+      story: 7.2,
+      visual: 5.8,
+      program: 4.3,
     },
   },
   {
