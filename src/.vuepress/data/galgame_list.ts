@@ -326,6 +326,7 @@ const original_list: GalItemInputType[] = [
     name: "サクラノ刻 -櫻の森の下を歩む-",
     valid_name: "サクラノ刻櫻の森の下を歩む",
     namaniku: true,
+    use_time: "-2min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2024-10-11",

@@ -227,7 +227,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 - 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
 - 素材：
   - 图片：[Pexels](https://www.pexels.com/zh-cn/)
-  - SVG：[SVG 在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/) | [iconbuddy](https://iconbuddy.app/)
+  - SVG：[SVG 在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/) | [iconbuddy](https://iconbuddy.app/) | [Hyvector](https://www.hyvector.com/)
 
 ### 视频相关
 

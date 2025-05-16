@@ -2,6 +2,12 @@ import { BookItemInputType, HLevel } from "../definition/book_type.js";
 
 const original_list: BookItemInputType[] = [
   {
+    name: "术师手册",
+    duration: {
+      start: "2025-05-16",
+    },
+  },
+  {
     name: "雪国的青梅四重奏",
     tags: {
       japanese: true,
