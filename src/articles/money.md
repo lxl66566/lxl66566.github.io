@@ -289,7 +289,8 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 现在挖 XMR 还是能跑赢电费的，在一众币种里已经是比较好的了。由于挖 XMR 会让 CPU FAN 满速运转，比较吵，我都是在舍友不在的时候挖，赚的是少了点。
 
 - XMR 的变现可以使用 htx 交易所，其他的例如 binance, okx 都不支持 XMR 交易。
-- XMR 有官方的钱包应用 [Monero GUI Wallet](https://www.getmonero.org/downloads/)，你也可以直接用 htx 充币的钱包地址，这样变现时可以少一次转账手续费。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR，因此如果你在矿池里直接用 htx 钱包地址，一定要设置矿池的提现阈值大于 0.01 + 手续费。
+- XMR 有官方的钱包应用 [Monero GUI Wallet](https://www.getmonero.org/downloads/)，你也可以直接用 htx 充币的钱包地址，这样变现时可以少一次转账手续费。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR。
+  - **血的教训**：不要直接用 CEX 充币地址用来挖矿！！！某次 [htx 悄悄改了地址](https://www.htx.com.de/zh-cn/support/84999701653073)（我不知道），结果提现未到账。在此 fuck htx。
 - 矿池我选择使用 [c3pool](https://c3pool.com/)，对中国用户的支持还不错，可以直连挖矿。地址：`auto.c3pool.org:19999`
 - 挖矿软件用 [xmrig](https://github.com/xmrig/xmrig)。软件本身的预编译包会有 1% 的抽成，我选择自己改源码编译以避免抽成。改源码[很简单](https://github.com/xmrig/xmrig/blob/f9e990d0f0167c92d09334213ac6950033bbbba1/src/donate.h#L40-L41)，编译也有[教程](https://xmrig.com/docs/miner/build/windows)，不难。
   - 如果 xmrig 启动有报什么 warnings，记得去解决，可能可以提高挖矿效率。

@@ -64,6 +64,9 @@ tag:
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
 - 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://t.me/Tyranor)
   - krkr 已经很久没有维护了；Tyranor2 可以运行 krkr 的游戏，因此可以考虑直接抛弃 krkr。
+- 转区：大名鼎鼎 [Locale Emulator](https://github.com/xupefei/Locale-Emulator)，虽然已经 archived 了。
+  - 不要去尝试 NTLEA，这玩意更早就 archived 了，而且质量低，会崩溃。
+  - 有个新的还在维护的 [Locale_Remulator](https://github.com/InWILL/Locale_Remulator/)，但是[打不开 YSPac](../articles/speedup.md#:~:text=ypf)，算是功能残缺，就不用了。
 
 ### 翻译器
 

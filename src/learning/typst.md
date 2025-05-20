@@ -127,7 +127,7 @@ typst 数组是 `array`，没有 `list` 类型。
   宋体: ("Times New Roman", "Songti SC", "Songti TC", "SimSun"),
   黑体: ("Times New Roman", "SimHei"),
   楷体: ("Times New Roman", "KaiTi"),
-  代码: ("Fira Code", "Consolas", "monospace", "WenQuanYi Zen Hei Mono", "FangSong"),
+  代码: ("Consolas", "SimSun"),
 )
 
 #let 中文数字(num) = {
