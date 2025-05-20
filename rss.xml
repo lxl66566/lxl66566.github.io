@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 16 May 2025 18:31:04 GMT</pubDate>
-    <lastBuildDate>Fri, 16 May 2025 18:31:04 GMT</lastBuildDate>
+    <pubDate>Tue, 20 May 2025 18:50:42 GMT</pubDate>
+    <lastBuildDate>Tue, 20 May 2025 18:50:42 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -316,7 +316,11 @@
 <p>现在挖 XMR 还是能跑赢电费的，在一众币种里已经是比较好的了。由于挖 XMR 会让 CPU FAN 满速运转，比较吵，我都是在舍友不在的时候挖，赚的是少了点。</p>
 <ul>
 <li>XMR 的变现可以使用 htx 交易所，其他的例如 binance, okx 都不支持 XMR 交易。</li>
-<li>XMR 有官方的钱包应用 <a href="https://www.getmonero.org/downloads/" target="_blank" rel="noopener noreferrer">Monero GUI Wallet</a>，你也可以直接用 htx 充币的钱包地址，这样变现时可以少一次转账手续费。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR，因此如果你在矿池里直接用 htx 钱包地址，一定要设置矿池的提现阈值大于 0.01 + 手续费。</li>
+<li>XMR 有官方的钱包应用 <a href="https://www.getmonero.org/downloads/" target="_blank" rel="noopener noreferrer">Monero GUI Wallet</a>，你也可以直接用 htx 充币的钱包地址，这样变现时可以少一次转账手续费。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR。
+<ul>
+<li><strong>血的教训</strong>：不要直接用 CEX 充币地址用来挖矿！！！某次 <a href="https://www.htx.com.de/zh-cn/support/84999701653073" target="_blank" rel="noopener noreferrer">htx 悄悄改了地址</a>（我不知道），结果提现未到账。在此 fuck htx。</li>
+</ul>
+</li>
 <li>矿池我选择使用 <a href="https://c3pool.com/" target="_blank" rel="noopener noreferrer">c3pool</a>，对中国用户的支持还不错，可以直连挖矿。地址：<code>auto.c3pool.org:19999</code></li>
 <li>挖矿软件用 <a href="https://github.com/xmrig/xmrig" target="_blank" rel="noopener noreferrer">xmrig</a>。软件本身的预编译包会有 1% 的抽成，我选择自己改源码编译以避免抽成。改源码<a href="https://github.com/xmrig/xmrig/blob/f9e990d0f0167c92d09334213ac6950033bbbba1/src/donate.h#L40-L41" target="_blank" rel="noopener noreferrer">很简单</a>，编译也有<a href="https://xmrig.com/docs/miner/build/windows" target="_blank" rel="noopener noreferrer">教程</a>，不难。
 <ul>
