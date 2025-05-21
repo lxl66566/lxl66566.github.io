@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 20 May 2025 18:50:42 GMT</pubDate>
-    <lastBuildDate>Tue, 20 May 2025 18:50:42 GMT</lastBuildDate>
+    <pubDate>Wed, 21 May 2025 18:09:26 GMT</pubDate>
+    <lastBuildDate>Wed, 21 May 2025 18:09:26 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -1769,6 +1769,7 @@
 <p>于是我激动得立刻开始 LLM 写脚本，用 ffmpeg 加速音频。写完运行，发现脚本解包有问题。我怀疑是这个 krkr-xp3 只支持 xp3 v1，而 galgame 用了 v2 打包。不过无伤大雅，我只需要封包能力即可，所以我利用 GARbro 解包后，改一下脚本，将包封回 xp3 即可。实测可以正常游玩。（详细方法，请点击下方表格中 xp3 展开查看）</p>
 <p>上述操作让我可以倍速语音游玩所有具有 krkr 移植的 galgame，简直不要太爽。</p>
 <p>尝到甜头后，我又开始审视起我仓库中的其他 galgame。下面的表格记录了我的游戏语音加速尝试与心得（时间顺序），可以点击对应条目查看详细内容。</p>
+<p>因为我的每个 galgame 都会折腾一番音频加速，因此也写了不少工具。这些工具可以在我的 <a href="https://github.com/lxl66566" target="_blank" rel="noopener noreferrer">Github profile</a> 下方展开 <em>Galgame tools</em> 查看。</p>
 
 <h3>二试封包总结</h3>
 <p>二试封包的成功确实给我带来了许多喜悦之情与实用价值。但是仍有一批引擎无法简单地通过这种方式进行加速。在面对它们使尽浑身解数仍无法战胜时，我内心里总有一股深深的无力感。因此我认为 <em>拆包-加速-封包</em> 只是旁门左道，只有注入才是正道。</p>
