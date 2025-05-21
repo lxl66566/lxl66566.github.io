@@ -114,6 +114,13 @@ const data: SpeedupItemType[] = [
     save_format: "pac",
     speedupable: true,
   },
+  {
+    names: ["装甲恶鬼村正"],
+    valid_name: "npa",
+    engine: "Nitro+",
+    save_format: "npa",
+    speedupable: true,
+  },
 ];
 </script>
 

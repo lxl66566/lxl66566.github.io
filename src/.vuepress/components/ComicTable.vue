@@ -753,6 +753,9 @@ const data = [
   { id: "485475", aScore: 7.7, bScore: 9.4, order: 2, info: "#百合 #催眠 #反杀", bak: "https://telegra.ph/ぐつとま-タチ-みんなでえっちな百合活アプリ-ええこの中にかかってない娘がいる2-中国翻訳-DL版-Preview-12-12" },
   { id: "571306", aScore: 9, bScore: 6, info: "#蔚蓝档案 #短篇 #纯爱 #兽耳" },
   { id: "(wnacg)", aScore: 9, bScore: 9, otherlink: "https://www.wnacg.com/photos-slist-aid-299404.html", info: "#异世界 #性转 #天使 #强制高潮 #败北" },
+  { id: "572421", aScore: 7.6, bScore: 8, info: "#兽耳", bak: "https://telegra.ph/ノアの方舟-ノア-きつねの嫁入り--中国翻訳-05-09" },
+  { id: "559070", aScore: 7.2, bScore: 7.6, info: "#雌小鬼 #惩罚 #多人 #地雷", bak: "https://telegra.ph/うこ-承認ジャンキー-コミック-エグゼ-55-中国翻訳-DL版-05-08" },
+  { id: "573225", aScore: 6.6, bScore: 7.6, info: "#奴隶 #诱惑" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

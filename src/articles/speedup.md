@@ -291,11 +291,13 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 尝到甜头后，我又开始审视起我仓库中的其他 galgame。下面的表格记录了我的游戏语音加速尝试与心得（时间顺序），可以点击对应条目查看详细内容。
 
+因为我的每个 galgame 都会折腾一番音频加速，因此也写了不少工具。这些工具可以在我的 [Github profile](https://github.com/lxl66566) 下方展开 _Galgame tools_ 查看。
+
 <SpeedupList>
 <template #krkr_xp3>
 
 - ~~最初我先是 [fork 了一个 python 的 repo](https://github.com/lxl66566/krkr-xp3)。这个 repo 解包有些问题，需要使用 GARbro 解包后，再使用脚本进行音频加速与封包。~~
-- 后来我又用 rust 重写了一个 [xp3-audio-speedup](https://github.com/lxl66566/xp3-audio-speedup)，这个借助了 xp3 的 rust crate，解包封包没问题，并且可以并行化加速，充分利用 CPU。我让这个程序也能够处理非 xp3 的音频文件夹，所以可以将其用于其他格式的音频加速上。
+- 后来我又用 rust 重写了一个 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack)，这个借助了 xp3 crate。
 
 注意，xp3 引擎的游戏需要看一眼 `patch.xp3` 里有没有音频，那里面的音频也需要加速。
 
@@ -569,6 +571,18 @@ for arc in arcs.glob("*.arc"):
 网上有[一篇文章](https://www.bilibili.com/read/cv25442292)讲了 softpal `.pac` 的格式探索，非常不错。
 
 可知 softpal 引擎优先读取文件夹，所以实际上无需封包。softpal 是目前为止 speed up 最简单的格式，只需要用 GARbro 将 `voice.pac` 提到同名文件夹，加速即可。全程只需两步。
+
+</template>
+<template #npa>
+
+- [exnpa](http://asmodean.reverse.net/pages/exnpa.html)：需要再下载一个 32 位的 zlib1.dll 才能用。这个工具只能解包，不能封包。
+- [FuckGalEngine](https://github.com/Inori/FuckGalEngine/tree/master/Nitro+) 的工具集：
+  - `exsgnpa` 没法使用。
+  - `S;G解包封包工具.7z` 里有 pksgnpa.cpp 源码（有些编译错误需要修复），编译后在测试的含有单文件的文件夹里可以打包 npa，但在我的音频文件夹上会 `failed(-1073741819)`。
+    - LLM 重写为 rust，可打包，但是打的包不能用。一看 hex，好家伙，全错。鉴于 exsgnpa 的源码也没法用，估计这个包只能用于 Steins;Gate 的解封包。
+- [nipa](https://github.com/Wilhansen/nipa)：可解可封，非常好用。
+
+然后老的 `voice.npa` 要记得改后缀，不然会被读到。
 
 </template>
 </SpeedupList>
