@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "装甲恶鬼村正",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-05-22",
+    },
+  },
+  {
     name: "终之空Remake",
     use_time: "6h35min",
     duration: {

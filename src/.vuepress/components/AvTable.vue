@@ -471,6 +471,8 @@ const data = [
   { id: "STARS-376", aScore: 7.7, bScore: 7.1, name: "キメセク相部屋NTR 大嫌いで最低最悪な絶倫元カレに…媚薬を飲まされ…×××。 宮島めい" },
   { id: "SUJI-074", aScore: 6.6, bScore: 9, name: "文字に出来ない危険な映像 少女押し込み強●" },
   { id: "SUJI-069", aScore: 7.9, bScore: 9.3, name: "文字に出来ない危険な映像 少女孕ませ強●" },
+  { id: "HSRM-023", aScore: 4.2, bScore: 5 },
+  { id: "NPJB-101", aScore: 7.6, bScore: 7.8, name: "睡姦サークル白昼夢制服女子4人無許可中出しBEST" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

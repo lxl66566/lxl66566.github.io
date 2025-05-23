@@ -45,6 +45,8 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
 - 工具
   - [yomichan](https://chromewebstore.google.com/detail/yomichan/nbfhegiidojdmnahegkphdoabohfmoof?hl=ja&authuser=0)：浏览器扩展，划词显示汉字读音。虽然官方宣布不再维护，让用户都去 [yomitan](https://github.com/themoeway/yomitan)，但是我用下来还是感觉 yomichan 好用多了（当然仅在 chromium 系浏览器上，因为 firefox 没有），装了就能用。而 yomitan 则是有一大堆设置项，结果都设完了还是不能用。
   - [FuriganaMaker](https://github.com/aiktb/FuriganaMaker)：浏览器扩展，自动给汉字加假名注音。
+- 题：
+  - [毎日一問日本語 N1](https://t.me/daily_jlptn1)，tg 投票
 
 ## 关于考试
 

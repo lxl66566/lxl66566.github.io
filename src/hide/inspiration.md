@@ -100,7 +100,7 @@ tag:
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
 - [ ] rust TUI easy_download
-- [ ] GalgameManager
+- [ ] ~~GalgameManager~~ <https://github.com/GoldenPotato137/PotatoVN> ?
   - [ ] 随机启动 计时
   - [ ] 插件与启动链
   - [ ] 计时

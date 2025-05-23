@@ -56,6 +56,7 @@ tag:
        ```
      - 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
 - 关闭安全检查与防火墙：_控制面板 > 系统和安全 > 安全和维护_
+- 禁用 _用户账户控制 UAC_[^3]，让你打开应用时不再受到烦人的弹窗困扰。
 - 关闭 Windows Defender SmartScreen：Windows Defender SmartScreen 是 edge 下载 exe 提示有风险的元凶。
   - 组策略编辑器（`gpedit.msc`）中，_管理模板 > Windows 组件 > Windows Defender SmartScreen > Microsoft Edge > 配置 Windows Defender SmartScreen_ 里禁用两个选项。
 - 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级 win11 专业版并激活。
@@ -93,6 +94,8 @@ tag:
   - 既然无需经常更新，那就[关闭传递优化](https://blog.51cto.com/u_13464709/2057007)，并且用 _磁盘清理_ 清一下这位占用的空间。
 - 开启长路径：组策略编辑器（运行 `gpedit.msc`），_计算机配置 > 管理模板 > 系统 > 文件系统 > 启用 Win32 长路径_ 选择已启用
 
+[^3]: _Windows11 轻松设置工具_ 里的禁用 UAC 并不是彻底禁用，只是取消了弹窗；但是如果修改注册表(`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System] "EnableLUA"=dword:00000000` 然后重启)彻底禁用，又会让你的 shell 和运行都默认以管理员身份进行，会导致很多问题，我更不能接受。因此还是别想着彻底禁用吧。
+
 ### 安装后（推荐步骤）
 
 - 分区设置：
@@ -112,7 +115,6 @@ tag:
   - [shell alias](#shell-alias)
   - 关闭鼠标的 “提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
 - 做减法：
-  - 禁用 _用户账户控制 UAC_，让你打开应用时不再受到烦人的弹窗困扰。
   - 关闭搜索推荐&热门新闻：关闭 _设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点_ 。([ref](https://www.landiannews.com/archives/95045.html)，最新版 win11 可能没有此条设置)
   - 卸载各种傻逼预装玩意。
     1. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。

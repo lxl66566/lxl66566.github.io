@@ -64,6 +64,7 @@ tag:
 - [Review Heatmap](https://ankiweb.net/shared/info/1771074083)
 - [Custom Shortcuts for Anki](https://github.com/Liresol/anki-custom-shortcuts)：自定义快捷键。要重启生效。
 - [Remove Duplicate Cards（移除重复卡片）](https://ankiweb.net/shared/info/95590040)
+- [Autosync 2.1](https://ankiweb.net/shared/info/1726633659)：自动同步
 
 ### [使用时间记录](../articles/time_record.md)
 

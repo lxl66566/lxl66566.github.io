@@ -110,7 +110,9 @@ sudo chmod -R 777 /mnt/tmp
 - UI 很老，win11 下有 bug（标题栏被挤没）
 - 无中文翻译。
 
-## [ImDisk Toolkit](https://sourceforge.net/projects/imdisk-toolkit/)
+## [ImDisk](https://github.com/DavidXanatos/ImDisk)
+
+上面的链接是一个 fork 版本，添加了 windows 24H2 的修复，推荐用这个。
 
 - **本横评中唯一一个带有动态内存分配功能的软件！** 动态内存分配指的是往 RAM Disk 里放多少东西就吃多少内存，而不是一般的，开多少空间就吃多少内存。会慢一点，但胜在内存自由。
 - 非常好，有关闭电源计划的提示。

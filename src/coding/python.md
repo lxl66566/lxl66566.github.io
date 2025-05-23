@@ -435,18 +435,6 @@ python 在 3.10 引入了 `match` 语法，并且可以在 case 中接 if。但�
 
 这里的模块都不需要额外安装。python 自带。
 
-### [logging](https://docs.python.org/zh-cn/3/howto/logging.html)
-
-使用 logging（py 自带） 进行能够控制等级的输出。基本用法：
-
-```py
-import logging
-logging.basicConfig(level=logging.INFO)
-logging.info("nexturl: %s", nexturl)
-# 如果要保存到文件：
-logging.basicConfig(filename='...', encoding='utf-8')
-```
-
 ### [pprint](https://docs.python.org/3/library/pprint.html)
 
 pretty-print，打印嵌套数据结构比较好看。**pprint 不能打印 object 信息。**
@@ -571,6 +559,10 @@ for name in file.sheet_names:
 
 ## 第三方包推荐
 
+### log
+
+虽然 python 有自带的 logging，但是用得多了，每次写项目前起手一长串配置确实有点烦人。所以我现在用 [loguru](https://github.com/Delgan/loguru)，直接 `from loguru import logger` 然后正常用就行，自带彩色输出，配置起来也简单。
+
 ### 命令行参数
 
 - python 自带了一个 argparse 模块用于命令行 parse。虽然由于有官方支持，这个包是命令行参数 parse 中最泛用的一个，但是用起来还是不够顺手，语法也比较丑。[这里](https://github.com/lxl66566/bpm/blob/d4063a31b8132c6ce19263f16d6f8b959a797017/bpm/cli.py)是一个例子（我写的 bin-package-manager 用的 argparse），足以看出其不直观之处。
@@ -634,9 +626,20 @@ if i.attr("value") == "1":
     i.click()
 ```
 
+### 图表绘制
+
+用得最多的肯定是 matplotlib，但是它是从 matlab 过来的，而 matlab 的 API 设计是真的捞，写起来难受。所以有一些新的库可以尝试：
+
+- [plotly](https://github.com/plotly/plotly.py)：star 数比 seaborn 高，API 看着还行。
+- [seaborn](https://seaborn.pydata.org/tutorial.html)：基于 matplotlib 包装的高级 API。
+
 ## 图像相关
 
-### 从网站获取图片
+图像相关基本就是 PIL 和 opencv 的天下了。不过能用 PIL 的我都不会用 opencv，因为 opencv binding API 本来就抽象，typing 一坨大便，打包还麻烦。
+
+::: tabs
+
+@tab 从网站获取图片
 
 ```python
 import requests
@@ -647,14 +650,14 @@ image = Image.open(BytesIO(response.content))
 image.show()
 ```
 
-### 截屏
+@tab 截屏
 
 ```python
 from PIL import ImageGrab
 img = ImageGrab.grab(bbox=(0, 0, 1920, 1080))   # 注意改为你需要截屏的分辨率
 ```
 
-### 多图片转 pdf
+@tab 多图片转 pdf
 
 我现在使用 [typst](../learning/typst.md)，这个代码还是作废吧。
 
@@ -667,7 +670,7 @@ with open('第二册答案.pdf', "wb") as f:
     f.write(write_content)
 ```
 
-### Image 对象转为 bytes
+@tab Image 对象转为 bytes
 
 有时候需要对图片对象转为字节码以在不同函数间流通。（不统一对象的坏处）
 
@@ -680,7 +683,7 @@ def img2Byte(img:Image) -> bytes:
     return byte_res
 ```
 
-### 高斯模糊
+@tab 高斯模糊
 
 ```python
 from PIL import Image,ImageFilter
@@ -688,6 +691,8 @@ img = img.filter(ImageFilter.GaussianBlur(radius=1.5))
 ```
 
 使用此内置函数进行高斯模糊将无法改变 sigma 的值。
+
+:::
 
 ## ORM
 
