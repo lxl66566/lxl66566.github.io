@@ -78,6 +78,7 @@ tag:
 [OSU](../hobbies/rhythm_games.md#osu) 是一款开源游戏，但是实际上其运营依旧是盈利性质的。尤其现在 OSU (stable) 的开发极为保守，与开源精神相背甚远。lazer 无法与 stable 进行联机，种种不便也导致 stable 玩家不愿迁移至更新更好（maybe）的 lazer。
 
 - 令人难过的是，osu 并不支持任何低延迟音效组件(coreaudio/wasapi/asio)。[source](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md#42-解决办法)
+- 没有客户端音量均衡，而很多谱师上传的音量差距很大。
 - 需要纵连任务栏图标才能打开的恶性 bug 几年了都没修。。还有 edit 闪退恶性 bug
 - 倍速 mod 只有 0.75x 和 1.5x 两个可选；而很多高难歌曲需要细致到 0.05x 的间距划分。
   - 偶然间点开了最早的没有合并的 pull request，发现是个挺不错的任意倍速功能的前置功能：任意倍数计算 star 数的功能。接近 2 years 的不被合并的更改。
@@ -121,6 +122,7 @@ tag:
 - std 由于开各种 mod 都会加倍率，所以你可以看到排行榜上全是卷 HD HR 的。~~大家都在吃屎，你不吃是不是显得不合群？~~ 反观 mania 不加倍率显得非常正常。
 - std 容易死。std 的血条是不击打就会自己掉的，对准度要求太高。而且二维游戏就是容易 miss，光标没挪到位说啥都没用，mania 乱按至少也能糊个 50/100 吧。
   - 然后由于 AR 原因我又整天越级，因此只能一直开 no fail。
+- std 喜欢藏 hit。谱师把一个 hit 藏在另一个 hit/slide 的下面（**完全重合**）是相当常见的做法，但是我觉得这除了暴打初见以外没什么用，算不得好谱。
 
 #### phigros
 

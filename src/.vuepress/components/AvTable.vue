@@ -473,6 +473,7 @@ const data = [
   { id: "SUJI-069", aScore: 7.9, bScore: 9.3, name: "文字に出来ない危険な映像 少女孕ませ強●" },
   { id: "HSRM-023", aScore: 4.2, bScore: 5 },
   { id: "NPJB-101", aScore: 7.6, bScore: 7.8, name: "睡姦サークル白昼夢制服女子4人無許可中出しBEST" },
+  { id: "SUJI-149", aScore: 7, bScore: 8.7, name: "^3 ^4 ●学生レ●プ 尾行・侵入・連れ込み・ストーキング・脅迫失禁" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

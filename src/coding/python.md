@@ -800,6 +800,7 @@ Google 中文用户搜 pytest 出来的第一个文档是 [learning pytest](http
 :::
 
 - 测试某个函数：`pytest <relative_path>::<function_name>`
+- 永远显示 stdout 输出（包括 pass 时）：`-s`
 
 ### 兼容性测试
 
