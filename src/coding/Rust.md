@@ -281,6 +281,8 @@ where
 
 - 立即执行 Future 需要用 `spawn`。否则只会在 await 时执行。
 - 计算密集型任务请用 `spawn_blocking`，性能提升巨大。spawn_blocking 的默认最大线程数也是很高的（[约 512](https://github.com/tokio-rs/tokio/discussions/3858#discussioncomment-869878)），必要时也可以调小 blocking 池的大小，将任务更合理地分配给 physical thread。
+  - 也可以换用 [rayon](#rayon)。
+- `tokio::fs` 比 `std::fs` 要慢很多（10 倍以上），如果你没有高并发 IO 需求请尽可能用 std::fs。
 
 #### 简单批处理
 
@@ -391,6 +393,11 @@ rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理�
 
 ### [cargo envs](https://doc.rust-lang.org/cargo/reference/environment-variables.html)
 
+### 常用 cargo 指令
+
+- `cargo clippy --fix --all-targets --all-features --allow-staged --allow-dirty`：用于自动修复 clippy 问题的终极命令。
+- `cargo tree -i xxx`：查询某个依赖的路径，弄清引入它的罪魁祸首。
+
 ### 全局 alias
 
 创建 `~/.cargo/config.toml` 并写入：
@@ -402,12 +409,22 @@ c = "check"
 t = "test -- --nocapture"
 r = "run"
 u = "update"
-f = "fix --allow-dirty"
+f = "clippy --fix --all-targets --all-features --allow-staged --allow-dirty"
 ```
 
 ### fmt
 
-在 `rustfmt.toml` 里写代码的格式化选项。我一般只开 `wrap_comments`，不过也可以直接抄[前辈的](https://github.com/compio-rs/winio/blob/master/rustfmt.toml)。
+在 `rustfmt.toml` 里写代码的格式化选项。我一般会开这些：
+
+```toml
+group_imports       = "StdExternalCrate"
+imports_granularity = "Crate"
+merge_derives       = true
+unstable_features   = true
+wrap_comments       = true
+```
+
+懒的话也可以直接抄[前辈的](https://github.com/compio-rs/winio/blob/master/rustfmt.toml)。
 
 ### 构建
 
@@ -456,6 +473,8 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | reqwest[^5]  | 简单网络 |
 | clap       | 命令行工具 |
 | tempfile | 创建自动销毁的临时文件夹 |
+| rayon | CPU 负载并发 |
+| indicatif | progress bar |
 
 [^5]: 为避免傻逼 openssl 造成的影响，建议添加 `feature = ["rustls-tls"]`。
 
@@ -466,12 +485,11 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | --- | --- |
 | memchr | 字符串查找 |
 | assert2 / pretty_assertions | 全兼容的好看的 assert |
-| die-exit | 错误处理并退出 |
+| ~~die-exit~~ | ~~错误处理并退出~~，不过我现在不用了 |
 | tap | 函数式工具，在链式中途拿取引用操作而不影响返回值 |
 | enum-tools | 提供 enum 的常用方法 |
-| pollster | 小而美，专注于 _在同步环境运行异步函数_ 一件事 |
+| pollster | 小而美，专注于 _在同步环境运行异步函数_ 一件事，打破同步与异步间隔，**强烈推荐** |
 | expect-test | 自动更新 test 中 assert_eq 的期望值 |
-| indicatif | progress bar |
 | const-hex | `Vec<u8>` -\> hex str |
 | constime | 计算编译期值，用一个非常简单易用的宏 |
 | inquire | 用户命令行交互 |
@@ -483,7 +501,9 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 
 一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。
 
-clap derive 一般都会将 Cli 实例设为 static，可以免去到处传参之苦。带来的问题是写测试变得更加困难，所以如果 rust 有一个好用的 context 实践的话就好了。
+clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到处传参之苦。带来的问题是写测试变得更加困难，因为不同的测试可能有不同的初始参数，而测试是并发的，没法表达不同的 Cli 状态（而且 LazyLock 的话就是只读了）。所以如果 rust 有一个好用的 context 实践的话就好了。
+
+我们可能对命令行有更多自定义的验证，这时候最好 impl Cli 添加自定义的 `fn validate(&self)`，并且在 parse 后调用。不要用 clap 自带的 `value_parser`，[那个是一坨大便](https://t.me/withabsolutex/2367)。
 
 ### once_cell
 
@@ -502,6 +522,30 @@ clap derive 一般都会将 Cli 实例设为 static，可以免去到处传参�
 - `#[serde(rename = "xx")]` 和 `#[serde(rename_all = "kebab-case")]`，自定义序列化的名称与格式。更多宏可以看[doc Field attributes](https://serde.rs/field-attrs.html)。
 - 对于需要在缺失时使用 empty 的容器对象，`#[serde(default)]` 是个不错的选择。
 - 如果有的结构需要手写 parser，可以顺带实现 serialize trait，代码不会太多。
+
+### rayon
+
+rayon 现在已经几乎统治了 rust CPU 负载型的并发。使用 rayon 可以非常方便地写出多线程程序，榨干你的 CPU，并且无需引用任何异步运行时。
+
+rayon 的基础示例可以读 doc 或让 AI 给 example，不再赘述。
+
+rayon 的生态也不错，一个常用的是 indicatif (`features = ["rayon"]`)，它可以让 rayon 并发处理时显示易于阅读的进度条，这在一般耗时较长的 CPU 负载场景下是非常好用的。
+
+```rust
+use indicatif::{ParallelProgressIterator, ProgressBar, ProgressStyle};
+let process_pb = ProgressBar::new(files.len() as u64);
+process_pb.set_style(
+    ProgressStyle::default_bar()
+        .template("{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos}/{len} ({eta}) {msg}")
+        .expect("Internal Error: Failed to set progress bar style")
+        .progress_chars("#>-"),
+);
+files
+    .into_par_iter()
+    .progress_with(process_pb.clone())
+    .for_each(|entry| {...});
+process_pb.finish_with_message("Processing complete!");
+```
 
 ## 打包
 

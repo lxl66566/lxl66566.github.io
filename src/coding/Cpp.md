@@ -140,6 +140,7 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 - 查找包（任选）：
   - 手动去 [xmake-repo](https://github.com/xmake-io/xmake-repo/) 找
   - 命令行：`xrepo search <package_name>...`，可用 `*` 作为通配符
+  - [microblock 群友做的第三方网页](https://xmake.microblock.cc/)
 - 指定工具链
   - 在 target 中添加 `set_toolchains("clang")`
 
