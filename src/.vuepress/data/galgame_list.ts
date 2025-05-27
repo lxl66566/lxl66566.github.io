@@ -170,9 +170,15 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "玉响未来",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "12h1min",
     duration: {
       start: "2025-02-23",
+      end: "2025-05-27",
+    },
+    score: {
+      story: 4.5,
+      visual: 9.6,
+      program: 8.8,
     },
   },
   {
@@ -211,7 +217,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-02-21",
     },
     score: {
-      story: 4.7,
+      story: 4.9,
       visual: 9.5,
       program: 9.5,
     },
@@ -224,7 +230,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-04-10",
     },
     score: {
-      story: 4.6,
+      story: 4.3,
       visual: 3.1,
       program: 0.8,
     },
@@ -1020,7 +1026,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 9.2,
       visual: 8.3,
-      program: 9.1,
+      program: 8.5,
     },
     duration: {
       start: "2023-04-09",

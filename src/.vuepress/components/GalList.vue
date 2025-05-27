@@ -1,4 +1,7 @@
 <template>
+  <div class="before-info">
+    条目数：{{ items_num }}
+  </div>
   <MyCheckBox label="仅显示严格定义的 galgame" v-model="show_strict" hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
   <div>
     <table>
@@ -31,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, useSlots, computed, watch, onMounted, nextTick } from "vue";
+import { ref, useSlots, computed, watch } from "vue";
 import MyCheckBox from "./MyCheckBox.vue";
 import original_list from "../data/galgame_list.js";
 import SortIndicator from "./SortIndicator.vue";
@@ -120,6 +123,9 @@ const sortedList = computed(() => {
     return currentSort.value?.direction === "asc" ? aScore - bScore : bScore - aScore;
   });
 });
+
+
+const items_num = computed(() => show_strict.value ? sortedList.value.filter((item) => !item.not_strict).length : sortedList.value.length);
 </script>
 
 <style scoped lang="scss">
@@ -148,5 +154,9 @@ table {
 td {
   text-align: center;
   vertical-align: middle;
+}
+
+.before-info {
+  margin-bottom: 1rem;
 }
 </style>

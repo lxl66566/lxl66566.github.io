@@ -14,7 +14,12 @@
         </span>
       </td>
       <!-- 时长 -->
-      <td>{{ use_time_string }}</td>
+      <td>
+        {{ props.item.use_time ?? "" }}
+        <span v-if="props.item.playing_status">
+          <Badge :type="status_badge_type_map(props.item.playing_status)" :text="props.item.playing_status" />
+        </span>
+      </td>
       <!-- 游玩区间 -->
       <td>
         {{ duration_string }}
@@ -41,7 +46,7 @@
 
 <script lang="ts" setup>
 import { ref, nextTick, onMounted, computed } from "vue";
-import { GalItemInputType } from "../definition";
+import { GalItemInputType, PlayingStatus } from "../definition";
 import ExpandableListItem from "./ExpandableListItem.vue";
 import "../utils/FormatDate";
 
@@ -65,24 +70,17 @@ function isLowScore(score: number | undefined) {
   return typeof score === "number" && score <= 0;
 }
 
-/**
- * 游玩时长字符串拼接，可能出现类似的几种情况：
- *
- * `14min`
- * `14min,游玩中`
- * `14min,中止`
- * `已停止`
- */
-const use_time_string = computed(() => {
-  let tmp: string = "";
-  if (props.item.use_time) {
-    tmp = props.item.use_time;
+
+const status_badge_type_map = (s: PlayingStatus) => {
+  switch (s) {
+    case PlayingStatus.PLAYING:
+      return "tip";
+    case PlayingStatus.PAUSED:
+      return "warning";
+    case PlayingStatus.STOPPED:
+      return "danger";
   }
-  if (props.item.playing_status) {
-    tmp = tmp ? tmp + "," + props.item.playing_status : props.item.playing_status;
-  }
-  return tmp;
-});
+};
 
 const duration_string = computed(() => {
   if (props.item.duration === undefined) {
