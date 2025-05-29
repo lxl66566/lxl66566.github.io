@@ -95,7 +95,7 @@ tag:
 - [x] rust release ci
 - [ ] kde spectacle ocr plugin
 - [ ] 分布式服务器监控全栈
-- [ ] 半连接神经网络
+- [ ] 半连接时序神经网络
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
@@ -111,11 +111,11 @@ tag:
   - [ ] 桌面端：场景：一大堆杂乱的照片放在一大堆杂乱的文件夹里。
     1. hash 去重。遇到重复照片，判断照片绝对路径的“熵”，保留更有意义的路径。并通过路径内包含的信息建立 tag。
     2. 自动解压路径中遇到的压缩文件，当成目录处理。
-  - 参考：[Qwen2-VL](https://github.com/QwenLM/Qwen2-VL)
 - [ ] rust-checkenizer: rust lsp based on cargo check. NO MORE RA NEEDED.
 - [ ] rust easy context like tokio/compio do.
 - [ ] 明日方舟视频自动去暂停
 - [ ] SNP's Not Pydantic，回归原始，拒绝[隐性假设](https://t.me/withabsolutex/2338)
+- [ ] fish commit
 
 ### RIIR
 

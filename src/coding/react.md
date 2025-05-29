@@ -47,6 +47,8 @@ React 里最常用的响应式就是 useState 了。其返回两个值，`conten
 const [content, setContent] = useState("default content");
 ```
 
+和 SolidJS 不同，setContent 只有在实际值发生改变（`Object.is` 比较）时才会重新渲染。这或许在性能方面有优势，但对框架来说算是增加了（需要关注的）隐藏复杂度。
+
 ### useContext
 
 用于跨任意层组件向子组件方向传数据。随便看一个 [usage](https://zh-hans.react.dev/reference/react/useContext#usage) 就会了。

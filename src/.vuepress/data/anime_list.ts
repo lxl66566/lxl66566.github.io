@@ -2,8 +2,14 @@ import { AnimeItemInputType } from "../definition/anime_type.js";
 
 const original_list: AnimeItemInputType[] = [
   {
+    name: "天才麻将少女",
+    order: 1,
+    duration: {
+      start: "2025-05-29",
+    },
+  },
+  {
     name: "赛马娘",
-    valid_name: "赛马娘2",
     order: 2,
     duration: {
       start: "2024-12-02",
@@ -153,7 +159,6 @@ const original_list: AnimeItemInputType[] = [
   },
   {
     name: "赛马娘",
-    valid_name: "赛马娘1",
     order: 1,
     duration: {
       start: "2022-05-15",

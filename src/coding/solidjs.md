@@ -12,13 +12,15 @@ tag:
 
 SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。
 
-SolidJS 的哲学就是 small and simple。所以用起来可能没有那么方便舒服，有的地方需要自己手操逻辑。
+SolidJS 的哲学就是 small and simple。所以 React 高手用起来肯定没有那么方便舒服，很多地方需要自己手操低级逻辑。但是对新手来说是一件好事，SolidJS 的隐含条件少，不容易被框架坑。要说它的唯一缺点可能就是生态了，SolidJS 的包数量和可用性都要比 React 差上许多 ([ref](https://t.me/withabsolutex/2343))。
 
 ## Hooks
 
 ### createSignal
 
-就是 useState。
+就是 useState，最基本的响应式组成部分。
+
+每一次调用 `setState` 都会触发重新渲染。如果需要像 React 那样在值变化时才渲染，需要配合 `createMemo`。
 
 ### createContext
 

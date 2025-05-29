@@ -137,6 +137,32 @@ ESLint 支持复杂的自定义化。不过我没用过。
 
 :::
 
+如果写的是 TS，项目根目录会有一个 `tsconfig.json` 存放 TS 相关的配置。既然我们已经关注类型安全了，那么不如再更安全一些（做个彻底 M），这里给出一个建议附加到 tsconfig 的额外约束表：
+
+```json
+{
+  "compilerOptions": {
+    "alwaysStrict": true, // 在代码中强制使用严格模式（自动添加 "use strict"）
+    "declaration": true, // 生成对应的 .d.ts 声明文件（配合 isolatedDeclarations 使用）
+    "exactOptionalPropertyTypes": true, // 精确的可选属性类型检查（区分 undefined 和缺失值）
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致性（避免大小写问题导致的模块导入错误）
+    "isolatedDeclarations": true, // 强制所有导出内容必须显式声明类型（有性能要求时建议关闭）
+    "noFallthroughCasesInSwitch": true, // 禁止 switch 语句中 case 的穿透（必须使用 break/return）
+    "noImplicitAny": true, // 禁止隐式的 any 类型（必须显式声明类型）
+    "noImplicitOverride": true, // 禁止隐式覆盖（派生类覆盖基类成员必须使用 override 修饰符）
+    "noImplicitReturns": true, // 禁止隐式返回（函数必须显式返回所有路径的值）
+    "noImplicitThis": true, // 禁止隐式 any 类型的 this（必须显式声明 this 类型）
+    "noPropertyAccessFromIndexSignature": true, // 禁止通过点符号访问索引签名属性（强制使用 obj['key'] 语法）
+    "strict": true, // 启用所有严格类型检查选项
+    "strictBindCallApply": true, // 严格检查 bind/call/apply 方法的参数类型
+    "strictFunctionTypes": true, // 严格检查函数类型（禁用函数参数的双变行为）
+    "strictNullChecks": true, // 严格的 null/undefined 检查（避免空值错误）
+    "useUnknownInCatchVariables": true, // 将 catch 子句变量类型设为 unknown（替代 any 更安全）
+    "verbatimModuleSyntax": true // 使用严格的模块语法（推荐所有 TS 项目开启）
+  }
+}
+```
+
 ## 语言基础
 
 我把某些 TS 语言特性也写在此处了。
@@ -545,6 +571,8 @@ JS 的测试框架里，我比较喜欢 [Vitest](https://cn.vitest.dev/guide/)�
 我使用 [Tinybench](https://github.com/tinylibs/tinybench)，这玩意确实好用。只需要 `pnpm add -D tinybench`，然后再把 README 里的示例一粘贴，诶，数据就出来了。
 
 这里还有一个 example，是我做的 [TypeScript partition array into two by condition](https://gist.github.com/lxl66566/4dbc102a72efcd64ecfb7df9d5a62970) 的 benchmark。
+
+还有 [mitata](https://github.com/evanwashere/mitata)，结果展示挺好看的，但是我还没用过，等一个机会入坑。
 
 ## external
 

@@ -756,6 +756,12 @@ const data = [
   { id: "572421", aScore: 7.6, bScore: 8, info: "#兽耳", bak: "https://telegra.ph/ノアの方舟-ノア-きつねの嫁入り--中国翻訳-05-09" },
   { id: "559070", aScore: 7.2, bScore: 7.6, info: "#雌小鬼 #惩罚 #多人 #地雷", bak: "https://telegra.ph/うこ-承認ジャンキー-コミック-エグゼ-55-中国翻訳-DL版-05-08" },
   { id: "573225", aScore: 6.6, bScore: 7.6, info: "#奴隶 #诱惑" },
+  { id: "575591", aScore: 9, bScore: 6.1, info: "#纯爱 #浴衣", order: 2, bak: "https://telegra.ph/瓦尼瓦尼个人汉化C105-sakurawhite-结城リカ-长屋暮らし幼な妻-15-二人暮らしの夜半の春-オリジナル-DL版中国翻訳-05-28" },
+  { id: "574468", aScore: 8.7, bScore: 8.3, info: "#催眠 #3P", order: 3, bak: "https://telegra.ph/KAROMIX-karory-妹と催眠でイチャイチャする本3-中国翻訳-無修正-DL版-05-21-2" },
+  { id: "(ex)", aScore: 8, bScore: 5.6, info: "#纯爱 #女上位 #快楽天", otherlink: "https://exhentai.org/g/3368510/4bb4c13cbd/", bak: "https://telegra.ph/すずしも-しあんのほか-COMIC-快楽天ビースト-2025年5月号-中国翻訳-DL版-05-25-2" },
+  { id: "492512", aScore: 8.4, bScore: 1, info: "#泳装 #全彩 #短篇" },
+  { id: "574778", aScore: 7.5, bScore: 1, info: "#泳装 #全彩 #短篇", order: 2, bak: "https://telegra.ph/モノ手紙-かるたも-えっちなおなかかんさつおなか水着-2-中国翻訳-無修正-DL版-05-23" },
+  { id: "574887", aScore: 7, bScore: 6, info: "#东方 #束缚 #智力独特", bak: "https://telegra.ph/C103-夢見里-ばくP-その瞳には何も映らない-東方Project-中国翻訳-05-24" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
