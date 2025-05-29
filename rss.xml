@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 27 May 2025 12:52:31 GMT</pubDate>
-    <lastBuildDate>Tue, 27 May 2025 12:52:31 GMT</lastBuildDate>
+    <pubDate>Thu, 29 May 2025 17:21:14 GMT</pubDate>
+    <lastBuildDate>Thu, 29 May 2025 17:21:14 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -502,7 +502,8 @@
 <h3>useState</h3>
 <p>React 里最常用的响应式就是 useState 了。其返回两个值，<code>content</code> 是内容的引用 (getter)，<code>setContent</code> 是一个函数，用于改变内容 (setter)。这样可以比较明确地控制如何渲染 DOM 树。</p>
 <div class="language-js line-numbers-mode" data-highlighter="shiki" data-ext="js" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">const</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">content</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">setContent</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">] </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> useState</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"default content"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">);</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h3>useContext</h3>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>和 SolidJS 不同，setContent 只有在实际值发生改变（<code>Object.is</code> 比较）时才会重新渲染。这或许在性能方面有优势，但对框架来说算是增加了（需要关注的）隐藏复杂度。</p>
+<h3>useContext</h3>
 <p>用于跨任意层组件向子组件方向传数据。随便看一个 <a href="https://zh-hans.react.dev/reference/react/useContext#usage" target="_blank" rel="noopener noreferrer">usage</a> 就会了。</p>
 <p>React 19 后，可以用简化写法 <code>&lt;Context&gt;</code> 替代 <code>&lt;Context.Provider&gt;</code>。</p>
 <h3>useRef</h3>
@@ -523,15 +524,16 @@
       <link>https://absx.pages.dev/coding/solidjs.html</link>
       <guid>https://absx.pages.dev/coding/solidjs.html</guid>
       <source url="https://absx.pages.dev/rss.xml">SolidJS</source>
-      <description>SolidJS SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。 SolidJS 的哲学就是 small and simple。所以用起来可能没有那么方便舒服，有的地方需要自己手操逻辑。 H...</description>
+      <description>SolidJS SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。 SolidJS 的哲学就是 small and simple。所以 React 高手用起来肯定没有那么方便舒服，很多地方需要...</description>
       <category>编程</category>
       <pubDate>Sat, 04 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。</p>
-<p>SolidJS 的哲学就是 small and simple。所以用起来可能没有那么方便舒服，有的地方需要自己手操逻辑。</p>
+<p>SolidJS 的哲学就是 small and simple。所以 React 高手用起来肯定没有那么方便舒服，很多地方需要自己手操低级逻辑。但是对新手来说是一件好事，SolidJS 的隐含条件少，不容易被框架坑。要说它的唯一缺点可能就是生态了，SolidJS 的包数量和可用性都要比 React 差上许多 (<a href="https://t.me/withabsolutex/2343" target="_blank" rel="noopener noreferrer">ref</a>)。</p>
 <h2>Hooks</h2>
 <h3>createSignal</h3>
-<p>就是 useState。</p>
+<p>就是 useState，最基本的响应式组成部分。</p>
+<p>每一次调用 <code>setState</code> 都会触发重新渲染。如果需要像 React 那样在值变化时才渲染，需要配合 <code>createMemo</code>。</p>
 <h3>createContext</h3>
 <p>可以用来跨组件传输数据，不需要通过 props。</p>
 <h3>createResource</h3>
