@@ -460,7 +460,6 @@ const data = [
   { id: "hmn-069", aScore: 6, bScore: 6.1, u: true, name: "俺を冤罪でクビに追い込んだ生意気な教え子を種付けプレスで犯し続けた3日間 皆月ひかる" },
   { id: "ANKK-005", aScore: 5, bScore: 5, u: true, name: "（仮）暗黒005さん" },
   { id: "SUJI-243", aScore: 6.3, bScore: 6.4, name: "#合集 ^1 ●学生レ●プ 尾行・待伏せ・騙し強●媚薬・連れ込み・拉致監●輪●" },
-  { id: "SUJI-069", aScore: 5, bScore: 6, name: "#合集 文字に出来ない危険な映像 少女孕ませ強●" },
   { id: "AVOP-170", aScore: 5.7, bScore: 9.9, u: true, name: "4 ミッシング少女 - 有本紗世" },
   { id: "MIAB-254", aScore: 6.9, bScore: 9.5, u: true, name: "キモイからどっかいけよ、じじい 更生指導員の絶対的パワーと肉棒で非力な不良少女どもを徹底服従させるメスガキおま○こ更生プログラム" },
   { id: "MUDR-166", aScore: 6.7, bScore: 5.6, name: "放課後。 押しに弱そうな女の子を強引に連れ込んで、オジサン達が輪になって囲んで、何度も、何度も、しつこく精液をぶっかけ汚し続けた…。 皆月ひかる" },
@@ -470,10 +469,12 @@ const data = [
   { id: "STARS-232", aScore: 9.1, bScore: 6.2, u: true, name: "永野いち夏 夢みるカノジョの想い出 AV女優になりたい彼女とセックスの練習のためにハメまくったある冬の記憶。" },
   { id: "STARS-376", aScore: 7.7, bScore: 7.1, name: "キメセク相部屋NTR 大嫌いで最低最悪な絶倫元カレに…媚薬を飲まされ…×××。 宮島めい" },
   { id: "SUJI-074", aScore: 6.6, bScore: 9, name: "文字に出来ない危険な映像 少女押し込み強●" },
-  { id: "SUJI-069", aScore: 7.9, bScore: 9.3, name: "文字に出来ない危険な映像 少女孕ませ強●" },
+  { id: "SUJI-069", aScore: 7.5, bScore: 9.3, name: "文字に出来ない危険な映像 少女孕ませ強●" },
   { id: "HSRM-023", aScore: 4.2, bScore: 5 },
   { id: "NPJB-101", aScore: 7.6, bScore: 7.8, name: "睡姦サークル白昼夢制服女子4人無許可中出しBEST" },
   { id: "SUJI-149", aScore: 7, bScore: 8.7, name: "^3 ^4 ●学生レ●プ 尾行・侵入・連れ込み・ストーキング・脅迫失禁" },
+  { id: "SUJI-197", aScore: 6.4, bScore: 9, name: "^1 雨が降りしきる日、音が消される為レイパーが犯行に及ぶ" },
+  { id: "SUJI-099", aScore: 5.3, bScore: 7, name: "女子●生自宅訪問わいせつ記録" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

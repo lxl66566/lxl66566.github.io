@@ -3,8 +3,10 @@ import { BookItemInputType, HLevel } from "../definition/book_type.js";
 const original_list: BookItemInputType[] = [
   {
     name: "术师手册",
+    h_level: HLevel.LOW,
     duration: {
       start: "2025-05-16",
+      end: "2025-05-31",
     },
   },
   {

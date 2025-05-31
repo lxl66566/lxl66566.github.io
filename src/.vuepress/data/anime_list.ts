@@ -6,6 +6,7 @@ const original_list: AnimeItemInputType[] = [
     order: 1,
     duration: {
       start: "2025-05-29",
+      end: "2025-05-30",
     },
   },
   {
@@ -83,6 +84,7 @@ const original_list: AnimeItemInputType[] = [
     name: "弹丸论破 绝望篇 + 未来篇",
     valid_name: "弹丸论破绝望篇未来篇",
     order: 3,
+    watch_times: 2,
     duration: {
       start: "2024-09-15",
     },
