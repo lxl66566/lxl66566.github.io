@@ -180,9 +180,17 @@ Redis 是一个非常简单的内存 KV (key-value) 数据库，主要用来做�
   - InnoDB 中一定有主键，主键一定是聚簇索引；MyISAM 使用的是非聚簇索引，没有聚簇索引。
   - 大量数据的全表扫描，MyISM 空间性能更好。
 - 锁：
-  - InnoDB 提供表锁和行锁。
-    - 行锁：`SELECT ... LOCK IN SHARE MODE` 是读锁，`SELECT ... FOR UPDATE` 是写锁。
-    - 表锁：`LOCK TABLES table_name READ` 和 `LOCK TABLES table_name WRITE`。需要显式解锁：`UNLOCK TABLES`。
+  - 表锁（服务器层）：`LOCK TABLES table_name READ` 和 `LOCK TABLES table_name WRITE`。需要显式解锁：`UNLOCK TABLES`。
+    - 在 InnoDB 中通常使用行锁而不是 LOCK TABLES。
+  - InnoDB 额外提供行锁。行锁必须在事务中使用。
+    ```sql
+    START TRANSACTION;
+    SELECT * FROM table1 FOR UPDATE;          -- 写锁
+    UPDATE table1 SET xxx = xxx + 1;
+    SELECT * FROM table1 LOCK IN SHARE MODE;  -- 读锁
+    SELECT * FROM table1 FOR SHARE;           -- 读锁，MySQL 8.0+ 新写法
+    COMMIT;
+    ```
   - MyISAM 虽然不支持事务，但是其 select 和 insert/update/delete 会自动加表读/写锁。
 - 分析：
   - 语句前 + `explain` 分析此语句的详情，是否走索引。

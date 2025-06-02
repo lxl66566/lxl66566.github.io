@@ -98,9 +98,22 @@ tag:
 
 ### 安装后（推荐步骤）
 
-- 分区设置：
+- 磁盘设置：
   - 如果硬盘有分区，移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
   - 如果有移动硬盘，请在 _磁盘管理_ 中右键分区，手动指定驱动器号。固定驱动器号可以保证各个脚本运行正常。
+  - NTFS 优化([ref](https://t.me/kenvixmeow/8))：先导入注册表项，再用管理员终端执行命令。
+    ```reg
+    Windows Registry Editor Version 5.00
+    [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+    "NtfsDisable8dot3NameCreation"=dword:00000001
+    "NtfsMftZoneReservation"=dword:00000003
+    [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+    "LargeSystemCache"=dword:00000001
+    ```
+    ```sh
+    fsutil behavior set disablelastaccess 1
+    set-mmagent -MaxOperationAPIFiles 8192
+    ```
 - 禁用休眠。休眠 == hibernate，原理是将内存写入磁盘。其会在 C 盘创建一块用于休眠的大块文件，并且每次休眠都会向硬盘中写入大量数据。我不喜欢这样，为什么不选择关机呢？
 - 网络设置：
   - 在 _高级网络设置 - Internet 选项 - 高级_ 中，打开 TLS 1.3

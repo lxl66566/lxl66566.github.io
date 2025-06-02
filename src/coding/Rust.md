@@ -497,6 +497,14 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 
 [这里](https://blessed.rs/crates)还有一个常用库的列表可以参考。
 
+当然，也有一些**避雷条目，千万不要用下表中的库！**
+
+<!-- prettier-ignore -->
+| 库名 | 吐槽 |
+| --- | --- |
+| teloxide | Telegram bot 库，但是没有文档，只有一点最简单的 example；遇到各种问题没有解决方法；API 经常 break 并且设计得很丑 |
+| rusqlite | 绑定了 openssl！不要用它，要玩 sqlite 请左转 [sqlx](#sqlx) |
+
 ### clap
 
 一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。
@@ -546,6 +554,12 @@ files
     .for_each(|entry| {...});
 process_pb.finish_with_message("Processing complete!");
 ```
+
+### sqlx
+
+如果你写 SQL 比较熟练，不需 ORM，那么 sqlx 就非常适合你。尤其是在当前 Rust 还没有任何特别好用的 ORM 的环境下，sqlx 更是一个不差的选择。
+
+说到 sqlx 就不得不提，它是强制类型的，因此在编译时就需要获取数据库表信息，例如 sqlite 情况下用户需要为其提供一个模板 sqlite。但是（假设用户没有装 sqlite cli）创建一个 sqlite 本身就需要 sqlx，就遇到了鸡/蛋问题。而且修改 schema.sql 也有可能忘记重新构建模板 sqlite。这时候就要用一个 build.rs 在 schema 初始化或改变时自动更新模板 sqlite。这个 build.rs 我写在了[这里](https://gist.github.com/lxl66566/85de8095cd6644396a901440af2e10f8)。
 
 ## 打包
 
