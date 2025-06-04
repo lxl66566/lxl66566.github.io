@@ -476,6 +476,8 @@ const data = [
   { id: "SUJI-197", aScore: 6.4, bScore: 9, name: "^1 雨が降りしきる日、音が消される為レイパーが犯行に及ぶ" },
   { id: "SUJI-099", aScore: 5.3, bScore: 7, name: "女子●生自宅訪問わいせつ記録" },
   { id: "SUJI-106", aScore: 8.3, bScore: 9.6, name: "^1 ^2 少●誘導強●連れ込み生ハメ中出し無理やり挿れられる無残な女子●生" },
+  { id: "SUJI-161", aScore: 8.5, bScore: 9.7, name: "^1 ^-2 女子●学生監●調教レ●プ 自由を失った少●たちの下半身崩壊映像" },
+  { id: "SUJI-257", aScore: 5.2, bScore: 5, name: "あの時、あのおじさんの事を信じていなければ…思春期を壊されたセーラー服少●たち" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

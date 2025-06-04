@@ -585,6 +585,11 @@ for arc in arcs.glob("*.arc"):
 然后老的 `voice.npa` 要记得改后缀，不然会被读到。
 
 </template>
+<template #AKABEiSOFT3>
+
+没有汉化只有机翻补丁，GARbro 打不开，网上搜不到任何信息。无解，除非去做整套 crack 流程。
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结

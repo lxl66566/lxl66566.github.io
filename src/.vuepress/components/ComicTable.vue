@@ -759,6 +759,7 @@ const data = [
   { id: "(ex)", aScore: 9, bScore: 7.5, info: "#纯爱 #快楽天 #短发 #可爱 #初体验", otherlink: "https://exhentai.org/g/3379451/d4ec66d481/", bak: "https://telegra.ph/多紋サカキ-こたえあわせ-COMIC-快楽天-2025年7月号-中国翻訳-DL版-06-01-3" },
   { id: "(ex)", aScore: 8.7, bScore: 7, info: "#蔚蓝档案 #偶像 #隐蔽性交 #兽耳 #发情", otherlink: "https://exhentai.org/g/3380420/a0dfeb6379/", bak: "https://telegra.ph/C105-きのこむ神-きのこむし-発情マリーと祈りの形-ブルーアーカイブ-中国翻訳-06-02-2" },
   { id: "576131", aScore: 8.5, bScore: 7.8, info: "#雌小鬼 #大小姐 #纯爱 #巨乳", bak: "https://telegra.ph/BRAVE-CHICKEN-あれっくす-メスガキお嬢様はわからせたい-中国翻訳-無修正-DL版-05-30-3" },
+  { id: "494163", aScore: 9.3, bScore: 5.2, info: "#纯爱 #浴衣" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

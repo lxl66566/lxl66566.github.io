@@ -284,10 +284,13 @@ git checkout [commit_hash] -- <path/to/file>  # 从某个 HEAD 指针恢复文�
 ### 下载
 
 ```sh
-git clone <gitrepo>  # 在当前目录下创建文件夹并克隆完整仓库
-git clone <gitrepo> --depth 1 # 仅克隆最新提交，减少大小
-git clone <gitrepo> --filter=tree:0 # 与上面一个大小相当，但是保留了提交 hash 记录
+git clone <gitrepo>                       # 在当前目录下创建文件夹并克隆完整仓库
+git clone <gitrepo> --depth 1             # 仅克隆最新提交，减少大小
+git clone <gitrepo> --filter=blob:none    # Blobless clones
+git clone <gitrepo> --filter=tree:0       # Treeless clones
 ```
+
+关于 Blobless clones 和 Treeless clones 可以查看 [external 6.](#external)。简单概括，Treeless clones 是下载量最少的 clone 方式。
 
 ### 彻底删除提交
 

@@ -107,7 +107,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "旭光のマリアージュ",
     namaniku: true,
-    use_time: "-2min",
+    use_time: "-4min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-03-23",

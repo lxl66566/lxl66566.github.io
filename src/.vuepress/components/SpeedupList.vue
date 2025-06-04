@@ -121,6 +121,13 @@ const data: SpeedupItemType[] = [
     save_format: "npa",
     speedupable: true,
   },
+  {
+    names: ["まほ×ろば -Witches spiritual home-"],
+    valid_name: "AKABEiSOFT3",
+    engine: "Yaneurao/unknown",
+    save_format: "dat",
+    speedupable: false
+  }
 ];
 </script>
 

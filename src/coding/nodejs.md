@@ -66,11 +66,12 @@ nodejs 常见的就 npm, yarn, pnpm 三件套，现在的框架文档也基本�
 #### 基本命令
 
 ```sh
-npm search <package_name>   # 查找包
-npm install <package_name> [option] # 安装包
-npm list -g --depth=0   # 列出全局包，不包含依赖
-npm update -g   # Update all global
-npm uninstall <package_name> [option] # 卸载包及其依赖
+npm search <package_name>                 # 查找包
+npm install <package_name> [option]       # 安装包
+npm list -g --depth=0                     # 列出全局包，不包含依赖
+npm update -g                             # Update all global
+npm uninstall <package_name> [option]     # 卸载包及其依赖
+npx <command>                             # npm 的脚本运行器，可以自动下载脚本并运行
 ```
 
 - [镜像](https://www.runoob.com/w3cnote/npm-switch-repo.html)
@@ -102,15 +103,10 @@ npm uninstall <package_name> [option] # 卸载包及其依赖
 很遗憾，目前我没有找到任何方法使我能够严格依照 lockfile 进行依赖安装：在冲突时使用 `--frozen-lockfile` 参数，npm 会直接忽略之并写入 lockfile，pnpm/yarn 会报错并终止。同样的，`npm init -y` | `npm-collect` 都无法完成此任务。
 [^2]: [惨痛教训](https://t.me/withabsolutex/1216)
 
-### npx
+### 一些查询
 
-npx 是一个执行脚本的 nodejs 附属物。其实际上做的是临时拉取某个 bin 包并执行，但是不太好用的样子。
-
-因此我们也可以 `pnpm/yarn install -g <bin> && <bin> ...` 安装到全局再执行，或者 install as dep 后，在 `./node_modules/.bin/<bin>` 下手动调用执行。
-
-### 查询包大小
-
-查询 install size 可以使用 [Package Phobia](https://packagephobia.com/)。
+- 查询包的 install size 可以使用 [Package Phobia](https://packagephobia.com/)。
+- 在前端项目中查询未使用的依赖可以用 depcheck：`pnpm i -g depcheck && depcheck`
 
 ## 运行时特性
 
@@ -176,11 +172,21 @@ for (const line of res.stdout.toString().split("\n")) {
 
 :::
 
+## 构建包
+
+如果开发了一个库，需要将其上传到 npmjs 上，这时候可以使用专门用于构建与上传的包，可以省去很多烦恼。
+
+有许多包可以做到这件事，例如 [unbuild](https://github.com/unjs/unbuild)，[bunchee](https://github.com/huozhi/bunchee)和[pkgroll](https://github.com/privatenumber/pkgroll)。阅读 README 后我更倾向于使用 pkgroll，虽然我都没试过。
+
 ## 遇到的问题
 
 > 时间倒序
 
-## 标准输入
+### fetch 爆炸
+
+nodejs 跑 ofetch 一直爆炸，然而我的测试脚本都是用 `bun xxx.ts` 跑的，而测试脚本运行完好。debug 许久发现是 nodejs 的 fetch 有问题 ([src](https://t.me/withabsolutex/2234))。。
+
+### 标准输入
 
 nodejs 想实现在 terminal 内的标准输入甚至需要对 async/await 模型有一点了解。
 
@@ -200,7 +206,9 @@ for (const element of data) {
 
 才能让 `pre()` 与 `after()` 都呈现阻塞的效果。
 
-## 脚本调库
+当然，如果你可以使用 npmjs 包还可以用 [Inquirer](https://github.com/SBoudrias/Inquirer.js)；如果不使用 nodejs 运行时也能享受到其他运行时的 prompt API 设计，没必要硬吃 nodejs 这坨屎。至于 [prompt API 也是一坨屎](https://t.me/withabsolutex/2047)……那没救了。
+
+### 脚本调库
 
 有时我们可能会想在简单的脚本中调用第三方 nodejs 库。但使用包管理器后，又带来了不必要的复杂度。
 
