@@ -279,6 +279,23 @@ windows 下也可以[像 linux 一样](../articles/linux/basic.md#链接)创建�
 
 [^2]: 例如，若有一个 `src` 目录，在 linux 下 `ln -s /mnt/d/src /mnt/d/tmp` 创建 `/mnt/d/tmp/src` 的软连接，则在 windows 上需要 `mklink /D D:\tmp\src D:\src` 指明 `src` 的名称。
 
+## 日版 Windows 10
+
+20250604 由于一些契机，装了个日版 windows 10 LTSC 2021 用，结果血压飙升。。
+
+- 日版系统没法访问我的中文 win11 系统的系统盘；但是我在中文系统可以访问日版系统盘。NTFS 不可能有这样的 breaking change，应该是 win11 系统盘开了透明压缩导致的，哈哈。
+- 开机后有个傻逼 `AppX Deployment Service (AppXSVC)` 服务一直吃我的 CPU 单核，风扇狂转，重启无效，服务里没法禁用，甚至进了安全模式都没法禁用服务。最后改注册表才弄好。不给权限就是纯纯的流氓行为。
+  ```reg
+  Windows Registry Editor Version 5.00
+  [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\AppXSvc]
+  "Start"=dword:00000004
+  ```
+- 安装时遇到登录微软帐号，我本来想用 OOBE 绕过，结果日区的反斜杠在微软默认的日语输入法下打不出来，要按住 Alt + 小键盘 `92` 才能打。实际上微软日区输入法改了很多键，标点符号跟随机排布差不多。
+  - 而且 OOBE 还无法绕过，根本找不到。所以只能用 `start ms-cxh:localonly` 跳。
+  - 进系统后**输入法全部炸烂**，反正微软日文输入法、装了中文语言和微软中文输入法都没法显示候选框；甚至我用中文系统的同一套 Rime 配置都没法正常使用，烂完了。
+- scoop bucket 不能正常使用，extras 不被认为是一个 git 仓库。。。
+- 还有一些我个人原因，比如用惯了 win11 已经不会用 win10 了，非常硌手。
+
 ## 遇到的问题
 
 ### 初始化登录微软帐号酿成的悲剧

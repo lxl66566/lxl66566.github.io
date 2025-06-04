@@ -255,6 +255,7 @@ ColorOS 是目前一加的默认系统。
 - 微软商店如果有什么应用因为地区限制无法下载，能不能麻烦说明一下啊。。找了半天没找到下载按钮，地区限制也是我猜的。
 - [GetFinalPathNameByHandleW 在某些 RAMDisk 上会炸](https://t.me/withabsolutex/1683)
 - 大力推广 copilot，一堆 copilot 图标，添加 copilot 按键等。但是 copilot 的智力在我用过的 LLM 里是垫底的。
+- 在不同硬盘上装了两个 windows，它们会使用同一个盘上的引导；在主板 logo 结束后进入切换系统界面，切换后居然还要重启才能进系统？
 
 ## Geforce Experience 有多难用
 

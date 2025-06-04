@@ -424,6 +424,10 @@ if __name__ == "__main__":
 - 在游戏根目录找到一个 `ysfchk.ini` 文件，里面记录着每个 ypf 对应的 CRC-32 校验 hash。该文件对运行游戏没有影响，但是如果用 `ファイル破損チェック.exe` 验证，本质上就是用这里的 hash 进行验证。
 - python-YU-RIS-package-file-unpacker 给了 ypf 的文件定义，但是没有解释说明。用 LLM 写的逆向 packer 的输出和源文件不同，每个 file_entry 的 body_ofs 四个字节都错了。
 
+后来我又[装了个日版 windows](./windows_setting.md#日版-windows-10)，尝试了一下最后的希望，也就是用 YSPac 封包。结果 <http://yu-ris.net/> 的都测过一遍，要么 gal 崩溃要么无声。打开 ypf 版本一看，YU-RIS β4.8 2025/04/30 打出来的 ypf 版本还是 492，还没有本游戏的 500 高。而这游戏已经是三年前的了。属实是活全家引擎。
+
+所以，要么再等几年等 YU-RIS 发新包，要么就直接 quit 下桌不玩。
+
 </template>
 <template #escude>
 
