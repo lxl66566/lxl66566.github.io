@@ -120,7 +120,10 @@ flex 基础：
    - 交叉轴：一旦使用了 flex，所有元素就会在交叉轴上被拉到最大（由默认值 `align-items: stretch;` 控制），非常直觉。
 4. 超出自动换行：`flex-wrap: wrap;`；换行后又会引入行间对齐 `align-content`。
 
-flex 容易带来的问题：由于 flex 元素没有特定位置和大小，如果其子元素使用了百分比高度/宽度，生成的样式可能不是你所希望的。（是我的问题，不是 flex 的问题）
+flex 容易带来的问题：
+
+1. 由于 flex 元素没有特定位置和大小，如果其子元素使用了百分比高度/宽度，生成的样式可能不是你所希望的。（是我的问题，不是 flex 的问题）
+2. flex 并不保证元素不超过其边界，例如 shrink=0 的情况。
 
 ### grid
 
@@ -142,8 +145,11 @@ flex 容易带来的问题：由于 flex 元素没有特定位置和大小，如
 
 [配色](https://tailwindcss.com/docs/customizing-colors)
 
+- 如果能用 TailwindCSS 4.x 就不要用 3.x。4.x 的安装方式简单很多，不像 3.x 还要装 postcss 然后写一堆乱七八糟的东西。
 - TailwindCSS 只能写静态类名。所以不能写出 `bg-${color}-500` 这种插值，否则编译的时候不会编出这个 style，样式就丢失了。
+- TailwindCSS 的距离单位，例如 `w-96` 等是离散的，并不是什么值都有样式。~~不服的话去用 UnoCSS（）~~
 - 只有 `flex: 1` 可以写为 `flex-1`。其他 `flex: x` 要写为 `flex-[x]`。
+  - 同理，`max-width: 100vh` 要写成 `max-w-[100vh]`，并没有 `max-w-screen`。
 
 #### 插件
 

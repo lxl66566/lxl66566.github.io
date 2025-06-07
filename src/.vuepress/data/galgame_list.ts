@@ -4,7 +4,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "装甲恶鬼村正",
     playing_status: PlayingStatus.PLAYING,
-    use_time: "-1min",
+    use_time: "-2min",
     duration: {
       start: "2025-05-22",
     },

@@ -760,6 +760,9 @@ const data = [
   { id: "(ex)", aScore: 8.7, bScore: 7, info: "#蔚蓝档案 #偶像 #隐蔽性交 #兽耳 #发情", otherlink: "https://exhentai.org/g/3380420/a0dfeb6379/", bak: "https://telegra.ph/C105-きのこむ神-きのこむし-発情マリーと祈りの形-ブルーアーカイブ-中国翻訳-06-02-2" },
   { id: "576131", aScore: 8.5, bScore: 7.8, info: "#雌小鬼 #大小姐 #纯爱 #巨乳", bak: "https://telegra.ph/BRAVE-CHICKEN-あれっくす-メスガキお嬢様はわからせたい-中国翻訳-無修正-DL版-05-30-3" },
   { id: "494163", aScore: 9.3, bScore: 5.2, info: "#纯爱 #浴衣" },
+  { id: "502101", aScore: 6.5, bScore: 6.1, info: "#纯爱 #辣妹 #实妹" },
+  { id: "577224", aScore: 7.8, bScore: 6.5, info: "#纯爱 #恶魔 #魔女", bak: "https://telegra.ph/パンダが一匹-コミズミコ-孕ませ悪魔と無垢の魔法使い-中国翻訳-DL版-06-05" },
+  { id: "577070", aScore: 8.5, bScore: 6, info: "#超能力 #短篇 浅羽的日记本" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

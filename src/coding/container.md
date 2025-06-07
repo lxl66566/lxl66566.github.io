@@ -37,16 +37,21 @@ tag:
 ## 工具
 
 - [lazydocker](https://github.com/jesseduffield/lazydocker)：lazygit 的同作者做的 docker TUI，不再需要背 docker 指令。
+  - 实际上 docker 的 cli 确实很傻逼，很多地方依赖 hash。
 
 ## 基础
 
 看看[tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
 
+**容器**和**镜像**是两个概念，可以类比为系统和系统盘。
+
 ```sh
 docker ps                                 # 查看运行状态
+docker ps -a                              # 查看所有容器状态
 docker run -d ...                         # -d 表示后台运行
 docker rm <name>                          # 删除容器
-docker logs <name>                        # 查看输出(stdout + stderr)
+docker logs <name>                        # 查看输出 (stdout + stderr)
+docker logs -f <name>                     # 持续查看输出 (stdout + stderr)
 docker pull <repository>:<tag>            # 拉取镜像到本地
 docker images                             # 查看镜像
 docker tag <image ID> <repository>:<tag>  # 重命名镜像
@@ -55,17 +60,80 @@ docker rm $(docker ps -aq)                # 删除所有容器
 docker rmi $(docker images -q)            # 删除所有镜像
 ```
 
+### 调试
+
+- 我可以从一个 image 新建一个容器，忽略 CMD 而直接进 `/bin/bash` 进行 image 调试：`docker run -it <image> /bin/bash`
+- 我也可以进入一个正在运行的容器的主进程：`docker attach <container>`
+- 但是我不能对一个运行中或已退出的容器**新开一个 bash 进程**进行调试，这是非常致命的。只能用 `docker exec`。
+
+```sh
+docker run -it --entrypoint /bin/bash <image>     # 从 image 创建容器并进入（作为调试用）
+docker build .                                    # 构建容器镜像（需要先下载 docker-buildx，否则会吃一个 deprecated。
+                                                  # 下载完后，docker build 相当于 docker buildx build 的 alias）
+docker system prune                               # 清理所有缓存、非运行中的镜像
+docker builder prune -a                           # 清理构建缓存
+```
+
 ## 代理
 
 [src](https://wiki.archlinuxcn.org/wiki/Docker#HTTP代理)
 
 简言之：守护进程和 docker 都需要配置，`/etc/docker/daemon.json` 和 `~/.docker/config.json` 都需要写入代理内容。
 
+而且注意，容器内部无法直接通过 localhost，127.0.0.1 访问宿主机代理端口，解法在[容器中访问宿主机服务](#容器中访问宿主机服务)。
+
+如果你的容器有指定虚拟子网，记得将互相的容器名加入 `NO_PROXY`，否则可能出现通信错误。
+
 ## dockerhub mirror
 
 在 2024 年，中国大规模下架了 docker 镜像。所以现在想要使用 docker 仓库会有一些麻烦。[Using docker in China 2024](https://taogenjia.com/2024/08/19/Using-docker-in-China-2024/) 这篇文章介绍了一些方法，我尝试了 cloudflare 反代。不过反代的后果也是 UNAUTHORIZED。
 
 然后还踩了[应用镜像的坑](#无法应用镜像)。
+
+## 容器中访问宿主机服务
+
+最佳解法：使用宿主机的局域网 ip，并且关掉防火墙。
+
+其他办法都挺麻烦的，例如 `host.docker.internal` 只在 Docker Desktop 上能用，而 linux `ip addr show docker0` 的 `172.17.0.1` 试过了用不了。
+
+## Dockerfile
+
+如果你需要制作一个镜像，那么本质上就是写一个 Dockerfile 用来描述镜像。
+
+<!-- prettier-ignore -->
+| 指令 | 解释 |
+| --- | --- |
+| ENV | 设置环境变量。对所有之后的指令生效，可以多次覆盖。 |
+| COPY | 将外部文件复制到容器内。了解更多请阅读[坑](#坑)。 |
+
+每个 `ADD`，`COPY`，`RUN` 指令会为 image 创建一个只读 UnionFS layer。layer 是用于缓存的，当修改了 Dockerfile 的某一行后，系统只会构建此行和所有之后的指令，之前的 layer 可以被跳过构建。也正是因为 layer 的存在，尽可能不要写紧邻的 `RUN` 语句，如果每个 command 都分配一个 `RUN` 语句会导致 layer 过多，影响存储和性能。
+
+### 坑
+
+Dockerfile 的坑实在是太多了，真是他妈的屎一样的设计。
+
+- 类似 .gitignore，Docker 也有 .dockerignore 用于在 COPY 时忽略文件/文件夹。但是它和 .gitignore 不一致的地方很多：
+  1. .gitignore 可以放在任意子目录下，.dockerignore 只能放在你的 build 目录下，否则不生效。
+  2. .gitignore 里的内容可以匹配任意层子目录下的文件名，而 .dockerfile 只能匹配 build 目录下的路径。相当于 .gitignore 里的 `xxx` 在 .dockerfile 里都要写成 `**/xxx` 或者绝对路径 `/aaa/bbb/xxx`。
+- `COPY a b` 命令指的是将 `a` 目录**下的所有文件** copy 到 `b` 目录里，而不是将 `a` 目录本身 copy 到 `b` 目录里。这跟 `cp -r` 的表现又不一样。
+
+## 网络
+
+docker 网络有四种模式，Host（和宿主共用网卡 IP 端口）, Container（和其他容器共用网卡 IP 端口）, None, Bridge（虚拟子网）。
+
+一般容器间通信可以用 Container 也可以用 Bridge，Container 不用额外配置，Bridge 则更灵活。
+
+Bridge 组网大致如下：
+
+```sh
+docker network create xxx                                           # 先创建虚拟子网
+# 通过 --network (--net) 指定虚拟子网
+docker run -d --name AAA -p 8000:8000 --network xxx <image>         # 假设这是一个提供服务的容器
+docker run -it --name BBB -p 8000:8000 --network xxx <image> sh     # 假设这是一个访问服务的容器
+NO_PROXY=AAA curl -v http://AAA:8000                                # 访问 AAA 的服务。如果你设置了代理，要保证虚拟子网内的请求不走代理。
+```
+
+可以看出，Bridge 需要修改容器内程序的源码或 env 以适配新的 base url，还是有一些麻烦的。好处是可以加新的容器到子网，或者随便更换服务提供容器都行。
 
 ## 为离线机器下载镜像
 
