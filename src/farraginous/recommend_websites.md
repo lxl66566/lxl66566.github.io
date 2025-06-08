@@ -222,12 +222,12 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 - 在线 PS：[稿定](https://ps.gaoding.com/#/) | [Photopea](https://www.photopea.com/)
 - 图片超分辨率：[bigjpg](https://bigjpg.com/) | ~~[Final2x](https://github.com/Tohrusky/Final2x)~~（本地应用）
-- 背景消除：[removebg](https://www.remove.bg/zh) | [BgSub](https://bgsub.cn/)
 - 什么都能消除：[ZMO](https://remover.zmo.ai/) | [MAGIC ERASER](https://www.magiceraser.io/)（付费下载，建议消除后直接截图）
 - 一站式图片处理：[imagesTool](https://imagestool.com/zh_CN/) | [在线图片拼接（包含其他工具）](http://www.zuohaotu.com/image-merge.aspx)
 - 素材：
   - 图片：[Pexels](https://www.pexels.com/zh-cn/)
   - SVG：[SVG 在线编辑器](https://c.runoob.com/more/svgeditor/) | [SVG SILH](https://svgsilh.com/zh/) | [iconbuddy](https://iconbuddy.app/) | [Hyvector](https://www.hyvector.com/)
+- 背景消除：有一些例如 removebg 等网站是需要付费下载的，直接排除。免费下载的可以用 [iloveimg](https://www.iloveimg.com/zh-cn/remove-background)。如果你不要求在线，也可以用 PhotoShop 较新版本，其内置了 AI 背景移除功能。
 
 ### 视频相关
 

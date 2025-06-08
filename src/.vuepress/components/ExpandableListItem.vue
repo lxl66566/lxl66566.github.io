@@ -12,16 +12,19 @@ list 中的插槽名称为 list-content，展开后的内容插槽名称为 expa
 </ExpandableListItem>
 -->
 <template>
-  <tr @click="toggleExpand" class="list-item" :class="[...(props.extra_tr_class || []), {
-    'expanded': isExpanded, // 在外部使用的属性
-    'expandable': props.expandable,
-  }]">
+  <tr @click="toggleExpand" class="list-item" :class="[
+    ...(props.extra_tr_class || []),
+    {
+      expanded: isExpanded, // 在外部使用的属性
+      expandable: props.expandable,
+    },
+  ]" ref="trRef">
     <slot name="list-content"></slot>
   </tr>
   <transition name="expand">
     <tr v-if="isExpanded" class="expanded-content" :style="{ height: expandedHeight + 'px' }">
-      <td colspan="99">
-        <div ref="expandContentRef" class="expand-content-inner">
+      <td colspan="99" :style="{ maxWidth: calculatedMaxWidth, overflow: 'scroll', boxSizing: 'border-box' }">
+        <div ref="expandContentRef">
           <slot name="expanded-content"></slot>
         </div>
       </td>
@@ -31,6 +34,7 @@ list 中的插槽名称为 list-content，展开后的内容插槽名称为 expa
 
 <script lang="ts" setup>
 import { ref, nextTick, onMounted } from "vue";
+import debounce from "./utils/debounce";
 
 const props = defineProps<{
   /**
@@ -42,6 +46,10 @@ const props = defineProps<{
    */
   expandable: boolean;
 }>();
+
+// 宽度限制
+const trRef = ref<HTMLTableElement | null>(null);
+const calculatedMaxWidth = ref("none"); // 存储计算出的 max-width
 
 // region 展开的逻辑
 const isExpanded = ref(false);
@@ -63,12 +71,23 @@ const toggleExpand = async () => {
   }
 };
 
-onMounted(() => {
-  if (isExpanded.value) {
-    nextTick(() => {
-      expandedHeight.value = expandContentRef.value?.offsetHeight || 0;
-    });
+const handleResize = debounce(() => {
+  // 计算宽度
+  if (trRef.value) {
+    const tableWidth = trRef.value.offsetWidth;
+    // console.log(tableWidth);
+    calculatedMaxWidth.value = `${tableWidth}px`;
   }
+}, 500);
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+  nextTick(() => {
+    if (isExpanded.value) {
+      expandedHeight.value = expandContentRef.value?.offsetHeight || 0;
+    }
+    handleResize();
+  });
 });
 </script>
 
@@ -90,10 +109,6 @@ onMounted(() => {
 
 .expanded-content {
   max-width: var(--content-width);
-}
-
-.expand-content-inner {
-  max-width: inherit;
 }
 
 // 展开动画

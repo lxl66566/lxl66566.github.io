@@ -124,6 +124,18 @@ flex 容易带来的问题：
 
 1. 由于 flex 元素没有特定位置和大小，如果其子元素使用了百分比高度/宽度，生成的样式可能不是你所希望的。（是我的问题，不是 flex 的问题）
 2. flex 并不保证元素不超过其边界，例如 shrink=0 的情况。
+3. 对于一个 `flex: 1` 项，我们通常不希望其内部的子元素将该项撑开，导致其比 flex 容器分配给它的空间更大。但是又无法直接设置 width，此时需要使用多种手段。
+   ```css
+   .flex-1-div {
+     flex: 1;
+     overflow: hidden;
+     min-width: 0; /* 或 min-height: 0; */
+   }
+   .flex-1-div > * {
+     max-width: 100%;
+     box-sizing: border-box;
+   }
+   ```
 
 ### grid
 
@@ -143,17 +155,26 @@ flex 容易带来的问题：
 
 ### TailwindCSS
 
-[配色](https://tailwindcss.com/docs/customizing-colors)
+把 TailwindCSS 放在前面是因为即使直接上手其他 CSS 框架，也至少需要一点 TailwindCSS 基础。
 
+- [配色](https://tailwindcss.com/docs/customizing-colors)
 - 如果能用 TailwindCSS 4.x 就不要用 3.x。4.x 的安装方式简单很多，不像 3.x 还要装 postcss 然后写一堆乱七八糟的东西。
 - TailwindCSS 只能写静态类名。所以不能写出 `bg-${color}-500` 这种插值，否则编译的时候不会编出这个 style，样式就丢失了。
-- TailwindCSS 的距离单位，例如 `w-96` 等是离散的，并不是什么值都有样式。~~不服的话去用 UnoCSS（）~~
+- TailwindCSS 的距离单位，例如 `w-96` 等是**离散**的，并不是什么值都有样式，例如 `w-97` 就不行。~~不服的话去用 UnoCSS（）~~
 - 只有 `flex: 1` 可以写为 `flex-1`。其他 `flex: x` 要写为 `flex-[x]`。
   - 同理，`max-width: 100vh` 要写成 `max-w-[100vh]`，并没有 `max-w-screen`。
 
 #### 插件
 
 - [tailwind-scrollbar-hide](https://github.com/reslear/tailwind-scrollbar-hide)：隐藏 scrollbar
+
+### UnoCSS
+
+[UnoCSS](https://unocss.net/) 是一个可自定义化程度非常高的 CSS 框架。可以设置任意类名 -> 样式的映射和匹配规则，非常强大，并且可以无缝衔接 TailwindCSS，因此我现在已经转向 UnoCSS。
+
+无缝衔接的条件是需要[导入 TailwindCSS 的预设](https://unocss.dev/presets/wind4)。我可以在此预设之上添加一些个人的 rules。
+
+不过这玩意也不是完全没有缺点，比如文档里好多 404 的链接没人维护，比如 VSCode 插件不如 TailwindCSS 的插件强大等。
 
 ## external
 

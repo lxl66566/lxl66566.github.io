@@ -763,6 +763,7 @@ const data = [
   { id: "502101", aScore: 6.5, bScore: 6.1, info: "#纯爱 #辣妹 #实妹" },
   { id: "577224", aScore: 7.8, bScore: 6.5, info: "#纯爱 #恶魔 #魔女", bak: "https://telegra.ph/パンダが一匹-コミズミコ-孕ませ悪魔と無垢の魔法使い-中国翻訳-DL版-06-05" },
   { id: "577070", aScore: 8.5, bScore: 6, info: "#超能力 #短篇 浅羽的日记本" },
+  { id: "435260", aScore: 4.3, bScore: 8.7, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/きつね屋-リーフィ-モモイロのカタオモイ-ブルーアーカイブ-中国翻訳-DL版-08-02" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

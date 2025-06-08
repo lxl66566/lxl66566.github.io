@@ -127,7 +127,14 @@ const data: SpeedupItemType[] = [
     engine: "Yaneurao/unknown",
     save_format: "dat",
     speedupable: false
-  }
+  },
+  {
+    names: ["無限煉姦～恥辱にまみれし不死姫の輪舞～"],
+    valid_name: "LCSE",
+    engine: "LC-ScriptEngine",
+    save_format: "lst,_",
+    speedupable: true
+  },
 ];
 </script>
 

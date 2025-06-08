@@ -594,6 +594,20 @@ for arc in arcs.glob("*.arc"):
 没有汉化只有机翻补丁，GARbro 打不开，网上搜不到任何信息。无解，除非去做整套 crack 流程。
 
 </template>
+<template #LCSE>
+
+工具：[cqjjjzr/LCSELocalizationTools](https://github.com/cqjjjzr/LCSELocalizationTools)
+
+```sh
+# unpack
+java -jar LCSEPackageUtility-rv4.jar --unpack -l SoundPackSEVo.lst --package SoundPackSEVo -o -d "./extracted" --key 02
+# pack
+java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package SoundPackSEVo -o -d "./patched" --patch-dir "./extracted" --key 02
+```
+
+能用，不过吐槽一下，这个 patch 而不是 pack 的形式非常慢，1w5 的音频跑了几十分钟（
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结
