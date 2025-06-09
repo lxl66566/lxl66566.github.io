@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 08 Jun 2025 09:48:24 GMT</pubDate>
-    <lastBuildDate>Sun, 08 Jun 2025 09:48:24 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Jun 2025 14:31:26 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Jun 2025 14:31:26 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>经历</category>
@@ -444,10 +444,12 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20250607 记错 hire 意思的我：哦，原来 hire 和 fire 就差一个字母欸。 舍友：这很 hifi。 20250515 把电钢琴和震动器/电击器结合起来应该是一个不错的组合。 20250514 神应根据其欲望水平划分阶段。 20250512 AIGC 率有感：人类一直致力于让 AI 说话像人类，又要让人类说话不像 AI，实在...</description>
+      <description>2025 20250609 我很讨厌下拉列表会被滚轮切换这个 UI 设计，滑动页面时经常误触。设计出这玩意的得下地狱。 20250607 记错 hire 意思的我：哦，原来 hire 和 fire 就差一个字母欸。 舍友：这很 hifi。 20250515 把电钢琴和震动器/电击器结合起来应该是一个不错的组合。 20250514 神应根据其欲望水平划分...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20250609</h2>
+<p>我很讨厌下拉列表会被滚轮切换这个 UI 设计，滑动页面时经常误触。设计出这玩意的得下地狱。</p>
 <h2>20250607</h2>
 <p>记错 hire 意思的我：哦，原来 hire 和 fire 就差一个字母欸。</p>
 <p>舍友：这很 hifi。</p>
@@ -975,11 +977,10 @@
 <p>前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。</p>
 <p>在了解了其他框架后，我发现 Vue 关键字太多很难记这一点确实是对的。</p>
 <h2>Vue 2 与 Vue 3</h2>
-<p>Vue 当前版本迭代到 Vue 3。但是如果上网问 GPT，给出的答案基本全是 Vue 2 的答案。截至 2024.10 的现在，本博客的所有组件仍然是 Vue 2 写成的。</p>
-<p>Vue 3 基本上兼容 Vue 2 的写法。当我尝试了一下 Vue 3 语法后我感觉确实不错，比 Vue 2 要灵活多了。</p>
+<p>Vue 当前版本迭代到 Vue 3。但是如果在 2024 年左右上网问 GPT，给出的答案基本全是 Vue 2 的答案。真正用过 Vue 3 以后才知道好用，因此后来本博客的组件全部迁移了 Vue 3，并且我强烈建议所有项目迁移 Vue 3，不要再写 Vue 2 了。</p>
 <h3>迁移到 Vue 3</h3>
-<p>Vue3 的所有函数和导出全部写在 <code>setup()</code> 里，也可以使用 <code>&lt;script setup&gt;</code> 语法糖，免去两层嵌套和手动导出。</p>
-<p>Vue2 使用大量的 <code>this.$set</code> 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 <code>ref</code>/<code>reactive</code> 即可。具体用法和 android 差不多，ref 必需取 <code>.value</code>，是浅层的变更追踪；reactive 主要用于各种对象与容器，是深层变更追踪，reactive 对象本身是一个 proxy 而不是原先的类型。</p>
+<p>Vue3 的所有函数和导出全部写在 <code>setup()</code> 里，一般都使用 <code>&lt;script setup&gt;</code> 语法糖，免去两层嵌套和手动导出。</p>
+<p>Vue2 使用大量的 <code>this.$set</code> 进行组件状态更新和重新渲染；Vue 3 只需要把变量声明为 <code>ref</code>/<code>reactive</code> 即可。</p>
 <p>Vue3 本来还有个 <code>$ref()</code> 的语法糖可以将 ref 的 <code>.value</code> 给省掉，但是后来在 Vue3.4 废弃了。</p>
 <ul>
 <li>关于 props 修改：Vue2 的 <code>props</code> 可以整个直接复制到 Vue3 的 <code>defineProps()</code> 括号里。调用时，需要把 <code>this.</code> 改为 <code>props.</code>。</li>
@@ -1001,10 +1002,14 @@
 <p>使用 <code>&lt;script lang="ts"&gt;</code> 可以指定 ts 语法。vue 3 里一般使用 <code>&lt;script lang="ts" setup&gt;</code>，setup 是一个语法糖。</p>
 <h2>vue 类型与方法</h2>
 <h3>ref</h3>
-<p>最基础的响应式，不多说了。用的时候需要 <code>.value</code>。</p>
+<p>最基础的响应式，不多说了。用的时候需要 <code>.value</code>（在 template 和某些地方会自动解包，不需要写 <code>.value</code>，不过写了也没啥问题）。</p>
+<p>ref 是浅层的变更追踪，类似于浅拷贝的概念。如果需要达到类似深拷贝的效果，需要 reactive。</p>
+<h3>reactive</h3>
+<p>reactive 主要用于各种对象与容器，不能用于基本类型，是深层变更追踪。reactive 对象本身是一个 proxy（理解为套了一层壳）而不是原先的类型。</p>
+<p>如果一个 ref 被赋给 reactive object 的属性，则其会自动解包；如果被赋给 reactive container（Array, Map 等） 则不会自动解包。</p>
 <h3>computed</h3>
 <p>Vue2 与 Vue3 中都有 computed。我最开始以为是在编译期就计算出结果（），结果不是，computed 是用于追踪数据变化的。</p>
-<p><code>computed()</code> 接受一个闭包，这个闭包一般会捕获外部变量。当此捕获变量被改变时，该闭包就会重新计算。它可以维护数据之间的依赖关系，而 computed 属性的计算顺序是基于依赖关系的树状结构。</p>
+<p><code>computed()</code> 接受一个闭包，这个闭包一般会捕获外部变量。当此捕获变量被改变时，该闭包就会重新计算，看着挺像 React 的 useEffect。它可以维护数据之间的依赖关系，而 computed 属性的计算顺序是基于依赖关系的树状结构。</p>
 <p>类似的函数还有 watch，区别：</p>
 <p>| <strong>特性</strong>     | <strong>computed</strong>                           | <strong>watch</strong>                                     |
 |</p>
