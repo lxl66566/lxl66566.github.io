@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "心之形心之色心之声",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-06-09",
+    },
+  },
+  {
     name: "装甲恶鬼村正",
     playing_status: PlayingStatus.PLAYING,
     use_time: "-2min",

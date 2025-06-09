@@ -135,6 +135,13 @@ const data: SpeedupItemType[] = [
     save_format: "lst,_",
     speedupable: true
   },
+  {
+    names: ["心之形心之色心之声"],
+    valid_name: "krkr_xp3_enc",
+    engine: "krkr",
+    save_format: "xp3(encrypted)",
+    speedupable: true
+  },
 ];
 </script>
 

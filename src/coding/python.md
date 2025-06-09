@@ -98,12 +98,13 @@ python 的包管理器可以说是百花齐放。
 uv 的使用与其他包管理器类似，也非常简单。
 
 ```sh
-uv init                 # 新建项目
-uv add <packages>       # 添加包
-uv remove <packages>    # 移除包
-uv sync                 # 更新 .venv，相当于 npm install
-uv run python xxx.py    # 使用该环境运行某个 py 文件
-uv python pin 3.12      # 对当前项目使用某个 python 版本，如果没下载会自动下载
+uv init                                       # 新建项目
+uv add <packages>                             # 添加包
+uv remove <packages>                          # 移除包
+uv sync                                       # 更新 .venv，相当于 npm install
+uv run python xxx.py                          # 使用该环境运行某个 py 文件
+uv python pin 3.12                            # 对当前项目使用某个 python 版本，如果没下载会自动下载
+uv lock --upgrade && uv sync                  # 更新所有依赖
 ```
 
 1. 不能在中文目录下 `uv init`，但是可以 `uv init --name xxx` 绕过。

@@ -172,7 +172,7 @@ brave 是一个 chromium 内核，与广告和加密货币共生的浏览器。
 
 我对手机浏览器的要求也“不高”，能审查元素，能装扩展就行。当然如果够**轻量**，即使没有这些功能，我也会考虑将其作为第二浏览器安装到手机上。
 
-Android 端浏览器我经历了 _夸克 -> Via -> m 浏览器 -> Kiwi Browser -> 狐猴浏览器_ 的转变，我自认为还是有一些心得的。
+Android 端浏览器我经历了 _夸克 -> Via -> m 浏览器 -> Kiwi Browser -> 狐猴浏览器 -> Edge_ 的转变，我自认为还是有一些心得的。
 
 ### Kiwi Browser
 
@@ -185,9 +185,11 @@ Kiwi Browser 是我接触到的第一个能够装扩展的重量级浏览器。
 - DNS 解析有问题(?还是我的问题?)，网页打开较慢。
 - 它的书签布局不太一样。这导致了 Xbrowsersync 同步书签的层次出现问题。
 
+用了几年，结果宣布项目 archived 了。所以我转到了 edge。
+
 ### Microsoft Edge Canary
 
-2025 年初，kiwi browser 项目宣布 archived，并且推荐用户转去 Microsoft Edge Canary。于是我又尝试了一下。
+2025 年初，kiwi browser 项目宣布 archived，并且推荐用户转去 Microsoft Edge Canary。于是我又尝试了一下，并且这次就定居下来了。
 
 比起两年前，现在的 Android 浏览器能够安装扩展，会好一点。但是有一些扩展是特供版本，界面与桌面端扩展有差别，功能也砍了不少，达不到 kiwi browser 的完备性。
 

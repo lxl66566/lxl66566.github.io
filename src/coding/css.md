@@ -158,6 +158,7 @@ flex 容易带来的问题：
 把 TailwindCSS 放在前面是因为即使直接上手其他 CSS 框架，也至少需要一点 TailwindCSS 基础。
 
 - [配色](https://tailwindcss.com/docs/customizing-colors)
+- 建议使用 [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) 对 tailwindcss class 进行排序。该插件也可以用于 UnoCSS。
 - 如果能用 TailwindCSS 4.x 就不要用 3.x。4.x 的安装方式简单很多，不像 3.x 还要装 postcss 然后写一堆乱七八糟的东西。
 - TailwindCSS 只能写静态类名。所以不能写出 `bg-${color}-500` 这种插值，否则编译的时候不会编出这个 style，样式就丢失了。
 - TailwindCSS 的距离单位，例如 `w-96` 等是**离散**的，并不是什么值都有样式，例如 `w-97` 就不行。~~不服的话去用 UnoCSS（）~~
@@ -180,3 +181,4 @@ flex 容易带来的问题：
 
 1. [学习 CSS 布局](https://zh.learnlayout.com/)
 2. [纯 CSS blur](https://leanrada.com/notes/css-only-lqip/)
+3. [Tailwind CSS 基础概念、配置、常见问题和使用笔记](https://heibaimeng.com/post/218)

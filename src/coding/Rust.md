@@ -467,7 +467,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 <!-- prettier-ignore -->
 | 库名       | 简介       |
 | ---------- | ---------- |
-| anyhow / thiserror | 错误处理   |
+| anyhow / thiserror | 错误处理，anyhow 用于 bin，thiserror 用于 lib  |
 | tokio      | 异步       |
 | serde | 序列化 |
 | reqwest[^5]  | 简单网络 |
@@ -475,6 +475,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | tempfile | 创建自动销毁的临时文件夹 |
 | rayon | CPU 负载并发 |
 | indicatif | progress bar |
+| colored / simply-colored | 命令行颜色输出，后者更适合用于 no_std |
 
 [^5]: 为避免傻逼 openssl 造成的影响，建议添加 `feature = ["rustls-tls"]`。
 
@@ -530,6 +531,7 @@ clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到�
 - `#[serde(rename = "xx")]` 和 `#[serde(rename_all = "kebab-case")]`，自定义序列化的名称与格式。更多宏可以看[doc Field attributes](https://serde.rs/field-attrs.html)。
 - 对于需要在缺失时使用 empty 的容器对象，`#[serde(default)]` 是个不错的选择。
 - 如果有的结构需要手写 parser，可以顺带实现 serialize trait，代码不会太多。
+- serde 提供了 [remote derive](https://serde.rs/remote-derive.html)，也就是为第三方 crate 里的 struct derive(Serialize, Deserialize)。
 
 ### rayon
 

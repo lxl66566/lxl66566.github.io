@@ -608,6 +608,11 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 能用，不过吐槽一下，这个 patch 而不是 pack 的形式非常慢，1w5 的音频跑了几十分钟（
 
 </template>
+<template #krkr_xp3_enc>
+
+加密的 xp3 就没法直接用 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack) 解封包了。不过 GARbro 可以解封加密的 xp3，只要游戏有被收录到密钥列表里就行，这里列举的游戏都属于此类。
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结

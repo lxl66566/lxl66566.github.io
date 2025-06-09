@@ -764,6 +764,10 @@ const data = [
   { id: "577224", aScore: 7.8, bScore: 6.5, info: "#纯爱 #恶魔 #魔女", bak: "https://telegra.ph/パンダが一匹-コミズミコ-孕ませ悪魔と無垢の魔法使い-中国翻訳-DL版-06-05" },
   { id: "577070", aScore: 8.5, bScore: 6, info: "#超能力 #短篇 浅羽的日记本" },
   { id: "435260", aScore: 4.3, bScore: 8.7, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/きつね屋-リーフィ-モモイロのカタオモイ-ブルーアーカイブ-中国翻訳-DL版-08-02" },
+  { id: "257360", aScore: 7, bScore: 7.7, order: 2, info: "#义妹 #白毛 #自慰", bak: "https://telegra.ph/プリーツたいむ-ぬんぬ-シスターブリーディング2-義妹月宮みらい-アオカン調教編-中国翻訳-DL版-06-06-2" },
+  { id: "243693", aScore: 6.4, bScore: 8.7, order: 1, info: "#义妹 #强制性交" },
+  { id: "577073", aScore: 7.3, bScore: 5.7, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/量子オオカミ-垂狼-嫉妬深いカズサ-ブルーアーカイブ-中国翻訳-DL版-06-05" },
+  { id: "577165", aScore: 9.4, bScore: 8.5, info: "#短篇 #百合 #足交 #露出 全裸登校", bak: "https://telegra.ph/咲凛玖-全裸登校漫画-中国翻訳-06-05-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
