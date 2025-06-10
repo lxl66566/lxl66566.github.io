@@ -9,9 +9,7 @@ tag:
 
 # 容器
 
-其实我一直不喜欢容器，我认为处理复杂依赖是包管理器的职责，推给 container 是比较粗暴浪费的做法。
-
-然而看到虚拟机以后，我感觉容器还是有它的价值的[^3]。:(
+其实我一直不喜欢容器，我认为处理复杂依赖是包管理器的职责，推给 container 是比较粗暴浪费空间的做法。然而比起虚拟机，容器的开销确实小多了，还是有一定价值的[^3]。
 
 [^3]: 抽象层次与价值取向绑定。
 
@@ -24,9 +22,13 @@ tag:
 
 我也尝试在 wsl2 上部署了一下 docker，然而由于没有 systemctl 而无法启动其守护进程。[docker-systemctl-replacement](https://github.com/gdraheim/docker-systemctl-replacement) 不可用，需要 nohup 启动 `dockerd`。我的 wsl2 只有纯命令行，折腾许久，浪费了许多时间。
 
-于是我转向了 [podman](https://docs.podman.io)，这是一个 **daemonless, open source**（开源的、无守护进程的）容器工具，完美解决了我对 docker 的偏见。并且其兼容性也不错：_Most users can simply alias Docker to Podman (alias docker=podman) without any problems._
+于是我转向了 [podman](https://docs.podman.io)，这是一个 **daemonless, open source**（开源的、无守护进程的）容器工具，解决了我对 docker 的偏见。并且其兼容性也不错：_Most users can simply alias Docker to Podman (alias docker=podman) without any problems._。不过 podman 也有缺点，例如[开机自启](#关于开机自启动)要麻烦一些。可以前往 [external 1.](#external) 查看详细信息。
 
-可以前往 [external 1.](#external) 查看详细信息。
+再说说平台兼容性：
+
+- Linux 随便选啥都行，而且跑容器是没有性能损失的。
+- Windows 上如果懒人就使用 Docker Desktop 一键配置（也是基于 WSL 的运行方式），想折腾就开 WSL，在 WSL 里装个发行版然后当 linux 用。
+- MacOS 有 [apple/container](https://github.com/apple/container) 用，当然也可以装 Docker Desktop，不过有原生的话可能没啥必要。
 
 ::: tip
 

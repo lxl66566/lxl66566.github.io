@@ -3,13 +3,21 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 const original_list: GalItemInputType[] = [
   {
     name: "心之形心之色心之声",
-    playing_status: PlayingStatus.PLAYING,
+    other_names: ["ココロのカタチとイロとオト"],
+    use_time: "1h52min",
     duration: {
       start: "2025-06-09",
+      end: "2025-06-10",
+    },
+    score: {
+      story: 3.5,
+      visual: 9.1,
+      program: 9.3,
     },
   },
   {
     name: "装甲恶鬼村正",
+    other_names: ["装甲悪鬼村正"],
     playing_status: PlayingStatus.PLAYING,
     use_time: "-2min",
     duration: {
@@ -18,13 +26,14 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "终之空Remake",
+    other_names: ["終ノ空 remake"],
     use_time: "6h35min",
     duration: {
       start: "2025-05-13",
       end: "2025-05-14",
     },
     score: {
-      story: 7.2,
+      story: 7.3,
       visual: 5.8,
       program: 4.3,
     },
@@ -32,6 +41,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "ジュエリー・ハーツ・アカデミア -We will wing wonder world-",
     valid_name: "JewelryHeartsAcademia",
+    other_names: ["宝石心学院"],
     playing_status: PlayingStatus.PLAYING,
     use_time: "-2min",
     duration: {
@@ -42,6 +52,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "Butterfly Seeker",
     valid_name: "ButterflySeeker",
+    other_names: ["寻蝶者"],
     use_time: "12h29min",
     duration: {
       start: "2025-04-22",
@@ -55,6 +66,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "想要传达给你的爱恋",
+    other_names: ["恋×シンアイ彼女"],
     use_time: "12h18min",
     duration: {
       start: "2025-04-16",
@@ -68,6 +80,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "きまぐれテンプテーション",
+    other_names: ["异想魅惑"],
     intense: true,
     use_time: "4h19min",
     order: 1,
@@ -99,6 +112,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "千の刃涛、桃花染の皇姫",
+    other_names: ["千之刃涛、桃花染之皇姬"],
     valid_name: "千の刃涛桃花染の皇姫",
     use_time: "13h48min",
     duration: {
@@ -113,6 +127,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "旭光のマリアージュ",
+    other_names: ["旭光的婚礼"],
     namaniku: true,
     use_time: "-4min",
     playing_status: PlayingStatus.PLAYING,
@@ -137,6 +152,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "はるまで、くるる。",
+    other_names: ["春开，意遥遥"],
     valid_name: "はるまでくるる",
     playing_status: PlayingStatus.PLAYING,
     order: 1,
@@ -147,6 +163,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "淫獄の8番街・少女探偵ミオリの怪異ノート",
+    other_names: ["淫狱的8番街·少女侦探美织的怪异笔记"],
     valid_name: "淫獄の8番街少女探偵ミオリの怪異ノート",
     not_strict: true,
     url: "https://t.me/absolutexsresource/21",
@@ -178,6 +195,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "玉响未来",
+    other_names: ["タマユラミライ"],
     use_time: "12h1min",
     duration: {
       start: "2025-02-23",
@@ -191,6 +209,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "廢村少女~誘惑迷離的籠之鄉~",
+    other_names: ["废村少女~诱惑迷离的笼之乡~"],
     valid_name: "廢村少女1",
     order: 1,
     use_time: "12h53min",
@@ -206,6 +225,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "禁亲圣交苏菈",
+    other_names: ["禁親聖交スゥラ～実娘ロリオナホ誘い受けADV～"],
     use_time: "16min",
     duration: {
       start: "2025-02-14",
@@ -219,6 +239,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "天使☆嚣嚣RE-BOOT!",
+    other_names: ["天使☆騒々RE-BOOT!"],
     use_time: "21h47min",
     duration: {
       start: "2025-01-27",
@@ -232,6 +253,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "空に刻んだパラレログラム",
+    other_names: ["印刻天际的Parallelogram"],
     use_time: "15h53min",
     duration: {
       start: "2025-01-21",
@@ -245,6 +267,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "魔法使之夜",
+    other_names: ["魔法使いの夜"],
     all_ages: true,
     use_time: "11h20min",
     duration: {
@@ -259,6 +282,10 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "圣女不死心",
+    other_names: [
+      "圣女不死心～不受欢迎形单影只的死灵法师转生成为圣女，努力结交新的朋友～",
+      "ホーリーアンデッド～非モテでぼっちの死霊術士が、聖女に転生してお友達を増やします～",
+    ],
     all_ages: true,
     use_time: "4h23min",
     duration: {
@@ -273,6 +300,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "転性魔王さまは勇者に勝てない！",
+    other_names: ["性转魔王敌不过勇者"],
     valid_name: "転性魔王さまは勇者に勝てない",
     namaniku: true,
     use_time: "5h47min",
@@ -302,6 +330,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "奇异恩典 -What color is your attribute?-",
+    other_names: ["Amazing Grace", "アメイジング・グレイス -What color is your attribute?-"],
     valid_name: "奇异恩典Whatcolorisyourattribute",
     use_time: "21h3min",
     duration: {
@@ -316,6 +345,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "青鸟",
+    other_names: ["アオイトリ"],
     use_time: "12h58min",
     duration: {
       start: "2024-11-17",
@@ -345,16 +375,23 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "サクラノ刻 -櫻の森の下を歩む-",
+    other_names: ["樱之刻 －在樱花之森下漫步－"],
     valid_name: "サクラノ刻櫻の森の下を歩む",
     namaniku: true,
-    use_time: "-2min",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "47h52min",
     duration: {
       start: "2024-10-11",
+      end: "2025-06-10",
+    },
+    score: {
+      story: 6.4,
+      visual: 8,
+      program: 7.9,
     },
   },
   {
     name: "五彩斑斓的世界",
+    other_names: ["いろとりどりのセカイ"],
     order: 1,
     use_time: "23h17min",
     duration: {
@@ -369,6 +406,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "無限煉姦～恥辱にまみれし不死姫の輪舞～",
+    other_names: ["无限炼奸~不死舞姬的凌辱轮舞曲~"],
     valid_name: "無限煉姦恥辱にまみれし不死姫の輪舞",
     playing_status: PlayingStatus.PLAYING,
     duration: {
@@ -378,6 +416,7 @@ const original_list: GalItemInputType[] = [
 
   {
     name: "アンレス テルミナリア",
+    other_names: ["Unless Terminalia"],
     valid_name: "アンレステルミナリア",
     namaniku: true,
     use_time: "+3h",
@@ -404,7 +443,8 @@ const original_list: GalItemInputType[] = [
     },
   },
   {
-    name: "千恋万花",
+    name: "千恋＊万花",
+    valid_name: "千恋万花",
     playing_status: PlayingStatus.PAUSED,
     duration: {
       start: "2021-06-21",
@@ -417,7 +457,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "少女＊领域",
+    other_names: ["オトメ＊ドメイン"],
     valid_name: "少女领域",
+    use_time: "-",
     duration: {
       start: "2020-10-29",
       end: "2024-05-12",
@@ -459,6 +501,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "流景之海的艾佩理雅",
+    other_names: ["景の海のアペイリア"],
     use_time: "26h35min",
     score: {
       story: 10,
@@ -486,6 +529,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "变态监狱",
+    other_names: ["ヘンタイ・プリズン"],
     use_time: "45h53min",
     score: {
       story: 9.3,
@@ -499,6 +543,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "苍之彼方的四重奏 EXTRA1",
+    other_names: ["蒼の彼方のフォーリズムEXTRA1"],
+    valid_name: "苍之彼方的四重奏EXTRA1",
     use_time: "4h39min",
     order: 2,
     score: {
@@ -510,10 +556,10 @@ const original_list: GalItemInputType[] = [
       start: "2024-09-15",
       end: "2024-10-31",
     },
-    valid_name: "苍之彼方的四重奏EXTRA1",
   },
   {
     name: "流る星 -a Wish Star-",
+    other_names: ["流星"],
     valid_name: "流る星aWishStar",
     namaniku: true,
     use_time: "5h27min",
@@ -544,6 +590,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "未来广播与人工鸽",
+    other_names: ["未来ラジオと人工鳩"],
     use_time: "12h4min",
     score: {
       story: 6.8,
@@ -557,6 +604,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "LOOPERS",
+    other_names: ["时廻者"],
     all_ages: true,
     use_time: "6h7min",
     score: {
@@ -571,6 +619,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "家喵二三事",
+    other_names: ["ウチのペット事情"],
     use_time: "8h56min",
     score: {
       story: 2.9,
@@ -598,6 +647,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "战国兰斯",
+    other_names: ["戦国ランス"],
     not_strict: true,
     use_time: "11h27min",
     order: 7,
@@ -642,7 +692,7 @@ const original_list: GalItemInputType[] = [
     },
   },
   {
-    name: "月之少女、河中天使、成神之刻",
+    name: "月之少女、河中天使、成神之刻。",
     valid_name: "月之少女河中天使成神之刻",
     use_time: "3h3min",
     score: {
@@ -657,6 +707,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "死に逝く君、館に芽吹く憎悪",
+    other_names: ["濒死轮回的卿于馆中萌生的憎恶", "死馆"],
     valid_name: "死に逝く君館に芽吹く憎悪",
     intense: true,
     use_time: "7h9min",
@@ -673,6 +724,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？",
+    other_names: ["住在拔作岛上的贫乳应该如何是好？", "ぬきたし"],
     valid_name: "抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか2",
     use_time: "30h20min",
     order: 2,
@@ -688,6 +740,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "拾われ愛して奉仕したい ～亜人娘とのイチャエロ生活",
+    valid_name: "拾われ愛して奉仕したい亜人娘とのイチャエロ生活",
+    other_names: ["捡到亚人少女~开启幸福生活~"],
     use_time: "43min",
     score: {
       story: 2,
@@ -698,10 +752,10 @@ const original_list: GalItemInputType[] = [
       start: "2024-04-25",
       end: "2024-04-25",
     },
-    valid_name: "拾われ愛して奉仕したい亜人娘とのイチャエロ生活",
   },
   {
     name: "樱之诗-在樱花之森上飞舞-",
+    other_names: ["サクラノ詩 -櫻の森の上を舞う-"],
     valid_name: "樱之诗",
     use_time: "50h",
     score: {
@@ -716,6 +770,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "枯れない世界と終わる花",
+    other_names: ["永不枯萎的世界与终结之花"],
     use_time: "9h44min",
     score: {
       story: 5.7,
@@ -729,6 +784,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "天津罪",
+    other_names: ["アマツツミ"],
     use_time: "18h26min",
     score: {
       story: 6.5,
@@ -758,6 +814,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "提早绽放的黑百合",
+    other_names: ["早咲きのくろゆり"],
     all_ages: true,
     use_time: "14h28min",
     score: {
@@ -772,6 +829,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "秽翼的尤斯蒂娅",
+    other_names: ["穢翼のユースティア"],
     use_time: "37h26min?",
     score: {
       story: 10.2,
@@ -785,6 +843,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "初雪樱",
+    other_names: ["はつゆきさくら"],
     use_time: "25h28min",
     score: {
       story: 8.6,
@@ -798,6 +857,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "樱色之云 * 绯色之恋",
+    other_names: ["さくらの雲＊スカアレットの恋"],
     valid_name: "樱色之云绯色之恋",
     use_time: "27h22min",
     score: {
@@ -812,6 +872,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "近月少女的礼仪",
+    other_names: ["月に寄りそう乙女の作法"],
     use_time: "67h58min",
     order: 1,
     score: {
@@ -826,6 +887,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "君と彼女と彼女の恋",
+    other_names: ["君与彼女与彼女之恋", "君彼"],
     use_time: "10h16min",
     score: {
       story: 9.1,
@@ -839,6 +901,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "牛顿与苹果树",
+    other_names: ["ニュートンと林檎の樹"],
     use_time: "18h9min",
     score: {
       story: 9.2,
@@ -852,6 +915,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "兰斯5D",
+    other_names: ["ランス5D -ひとりぼっちの女の子"],
     not_strict: true,
     use_time: "2h25min",
     order: 5,
@@ -867,6 +931,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "哥哥，早上起床之前都要抱紧我哦！",
+    other_names: ["お兄ちゃん、朝までずっとギュッてして！"],
     valid_name: "哥哥早上起床之前都要抱紧我哦",
     use_time: ">11h",
     order: 1,
@@ -882,6 +947,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "兰斯03",
+    other_names: ["ランス03 リーザス陥落"],
     not_strict: true,
     use_time: "27h25min",
     order: 3,
@@ -897,6 +963,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "兰斯02",
+    other_names: ["ランス2 はんぎゃくのしょうじょたち"],
     not_strict: true,
     use_time: "2h10min",
     order: 2,
@@ -912,6 +979,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "兰斯01重制",
+    other_names: ["ランス01 光をもとめて"],
     not_strict: true,
     use_time: "8h3min",
     order: 1,
@@ -927,6 +995,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "Summer Pockets Reflection Blue",
+    other_names: ["SPRB", "夏日口袋"],
     valid_name: "SummerPocketsReflectionBlue",
     use_time: "49h45min",
     score: {
@@ -941,6 +1010,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "真愿朦幻馆〜在的洋馆里追寻明天的羔羊们〜",
+    other_names: ["ゆまほろめ～時を停めた館で明日を探す迷子たち～"],
     valid_name: "真愿朦幻馆在的洋馆里追寻明天的羔羊们",
     use_time: "28h2min",
     score: {
@@ -955,11 +1025,12 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？",
+    other_names: ["住在拔作岛上的贫乳应该如何是好？", "ぬきたし"],
     valid_name: "抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか1",
     use_time: "39h53min",
     order: 1,
     score: {
-      story: 8.1,
+      story: 8.3,
       visual: 5,
       program: 0,
     },
@@ -970,6 +1041,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "Melia's Witch Test",
+    valid_name: "MeliasWitchTest",
     not_strict: true,
     use_time: "46min",
     score: {
@@ -981,10 +1053,10 @@ const original_list: GalItemInputType[] = [
       start: "2023-06-07",
       end: "2023-06-07",
     },
-    valid_name: "MeliasWitchTest",
   },
   {
     name: "ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか",
+    other_names: ["为主人献上圣罗的甜蜜侍奉"],
     valid_name: "ご主人様セイラに夢みたいないちゃラブご奉仕させていただけますか",
     use_time: "3h10min",
     score: {
@@ -999,6 +1071,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "NEKOPARA vol.4 ネコとパティシエのノエル",
+    other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
+    valid_name: "NEKOPARAvol4ネコとパティシエのノエル",
     use_time: "8h43min",
     order: 5,
     score: {
@@ -1010,7 +1084,6 @@ const original_list: GalItemInputType[] = [
       start: "2023-03-11",
       end: "2023-05-10",
     },
-    valid_name: "NEKOPARAvol4ネコとパティシエのノエル",
   },
   {
     name: "melancholianna",
@@ -1029,6 +1102,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "終のステラ",
+    other_names: ["星之终途"],
     all_ages: true,
     use_time: "8h15min",
     score: {
@@ -1057,6 +1131,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "竜姫ぐーたらいふ3",
+    other_names: ["龙姬混~日子3"],
     use_time: "5h50min",
     order: 4,
     score: {
@@ -1071,6 +1146,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "竜姫ぐーたらいふLOVE+PLUS",
+    other_names: ["龙姬混~日子LOVE+PLUS"],
+    valid_name: "竜姫ぐーたらいふLOVEPLUS",
     use_time: "2h59min",
     order: 2,
     score: {
@@ -1082,10 +1159,10 @@ const original_list: GalItemInputType[] = [
       start: "2023-03-25",
       end: "2023-03-28",
     },
-    valid_name: "竜姫ぐーたらいふLOVEPLUS",
   },
   {
     name: "水葬銀貨のイストリア",
+    other_names: ["水葬银币的伊斯特里亚", "水葬银货"],
     use_time: "43h6min",
     score: {
       story: 8.2,
@@ -1099,6 +1176,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "NekoMiko",
+    other_names: ["神社里的猫巫女"],
     use_time: "5h47min",
     score: {
       story: 3.2,
@@ -1112,6 +1190,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "仰望夜空的星辰",
+    other_names: ["見上げてごらん、夜空の星を"],
     use_time: "<39h40min>",
     order: 1,
     score: {
@@ -1126,6 +1205,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "魔女的夜宴",
+    other_names: ["サノバウィッチ"],
     use_time: "-",
     score: {
       story: 7.6,
@@ -1139,6 +1219,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "Fox Hime",
+    other_names: ["狐姬"],
     use_time: "29min",
     order: 1,
     score: {
@@ -1168,6 +1249,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "常轨脱离Creative",
+    other_names: ["ハミダシクリエイティブ"],
     use_time: "<45h14min>",
     order: 1,
     score: {
@@ -1196,6 +1278,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "NEKOPARA Vol.3 ネコたちのアロマティゼ",
+    other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
+    valid_name: "NEKOPARAVol3ネコたちのアロマティゼ",
     use_time: "<8h11min>",
     order: 4,
     score: {
@@ -1207,10 +1291,10 @@ const original_list: GalItemInputType[] = [
       start: "2022-08-20",
       end: "2022-11-17",
     },
-    valid_name: "NEKOPARAVol3ネコたちのアロマティゼ",
   },
   {
     name: "冥契的牧神节",
+    other_names: ["冥契のルペルカリア"],
     use_time: "29h25min*",
     score: {
       story: 10.5,
@@ -1224,6 +1308,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "堕落ロイヤル聖処女",
+    other_names: ["堕落皇家圣处女"],
     use_time: "2h2min+",
     score: {
       story: 0,
@@ -1237,6 +1322,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "七音学园-旅行部-·箱根篇",
+    other_names: ["七ヶ音学園 旅行部"],
     valid_name: "七音学园旅行部箱根篇",
     all_ages: true,
     use_time: "<2h5min>",
@@ -1253,6 +1339,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "七音学园-旅行部-·伊香保篇",
+    other_names: ["七ヶ音学園 旅行部"],
     valid_name: "七音学园旅行部伊香保篇",
     all_ages: true,
     use_time: "<2h23min>",
@@ -1269,6 +1356,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "苍之彼方的四重奏",
+    other_names: ["蒼の彼方のフォーリズム"],
     use_time: "<39h50min>",
     order: 1,
     score: {
@@ -1283,6 +1371,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "鯨神のティアスティラ",
+    other_names: ["鲸神的Tearstilla"],
     use_time: "<25h47min>",
     score: {
       story: 4.2,
@@ -1311,6 +1400,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "9-nine-雪色雪花雪余痕",
+    other_names: ["9-nine-ゆきいろゆきはなゆきのあと"],
+    valid_name: "9nine雪色雪花雪余痕",
     use_time: "<13h54min>",
     order: 4,
     score: {
@@ -1322,10 +1413,10 @@ const original_list: GalItemInputType[] = [
       start: "2022-06-08",
       end: "2022-07-05",
     },
-    valid_name: "9nine雪色雪花雪余痕",
   },
   {
     name: "星光咖啡馆与死神之蝶",
+    other_names: ["喫茶ステラと死神の蝶"],
     use_time: "-",
     score: {
       story: 5.8,
@@ -1339,6 +1430,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "NEKOPARA Vol.2 姉妹ネコのシュクレ",
+    other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
+    valid_name: "NEKOPARAVol2姉妹ネコのシュクレ",
     use_time: "-",
     order: 3,
     score: {
@@ -1350,10 +1443,11 @@ const original_list: GalItemInputType[] = [
       start: "2022-02-16",
       end: "2022-07-01",
     },
-    valid_name: "NEKOPARAVol2姉妹ネコのシュクレ",
   },
   {
     name: "龍姬混~日子",
+    other_names: ["竜姫ぐーたらいふ"],
+    valid_name: "龍姬混日子",
     use_time: "-",
     order: 1,
     score: {
@@ -1365,10 +1459,10 @@ const original_list: GalItemInputType[] = [
       start: "2022-01-28",
       end: "2022-06-28",
     },
-    valid_name: "龍姬混日子",
   },
   {
     name: "纸上魔法使",
+    other_names: ["紙の上の魔法使い"],
     use_time: ">36h27min",
     score: {
       story: 11,
@@ -1382,6 +1476,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "9-nine-春色春恋春熙风",
+    other_names: ["9-nine-はるいろはるこいはるのかぜ"],
     valid_name: "9nine春色春恋春熙风",
     use_time: "<11h46min>",
     order: 3,
@@ -1397,6 +1492,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "9-nine-天色天歌天籁音",
+    other_names: ["9-nine-そらいろそらうたそらのおと"],
     valid_name: "9nine天色天歌天籁音",
     use_time: "-",
     order: 2,
@@ -1412,6 +1508,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "氤氲之白",
+    other_names: ["SMOKY WHITE"],
     all_ages: true,
     use_time: "-",
     order: 1,
@@ -1427,6 +1524,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "9-nine-九次九日九重色",
+    other_names: ["9-nine-ここのつここのかここのいろ"],
     valid_name: "9nine九次九日九重色",
     use_time: "-",
     order: 1,
@@ -1442,6 +1540,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "星空列车与白的旅行",
+    other_names: ["星空鉄道とシロの旅"],
     all_ages: true,
     use_time: "-",
     score: {
@@ -1456,6 +1555,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "仰望夜空的星辰 Interstellar Focus",
+    other_names: ["見上げてごらん、夜空の星を"],
+    valid_name: "仰望夜空的星辰InterstellarFocus",
     use_time: "-",
     order: 3,
     score: {
@@ -1467,10 +1568,10 @@ const original_list: GalItemInputType[] = [
       start: "2022-01-29",
       end: "2022-02-06",
     },
-    valid_name: "仰望夜空的星辰InterstellarFocus",
   },
   {
     name: "ATRI -My Dear Moments-",
+    other_names: ["亚托莉 -我挚爱的时光-"],
     use_time: "-",
     score: {
       story: 9.3,
@@ -1485,6 +1586,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "龍姬混~日子2",
+    other_names: ["竜姫ぐーたらいふ"],
+    valid_name: "龍姬混日子2",
     use_time: "-",
     order: 3,
     score: {
@@ -1496,10 +1599,11 @@ const original_list: GalItemInputType[] = [
       start: "2021-12-23",
       end: "2022-01-27",
     },
-    valid_name: "龍姬混日子2",
   },
   {
     name: "NEKOPARA Vol.1 ソレイユ開店しました！",
+    other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
+    valid_name: "NEKOPARAVol1ソレイユ開店しました",
     use_time: "-",
     order: 2,
     score: {
@@ -1511,10 +1615,10 @@ const original_list: GalItemInputType[] = [
       start: "2021-11-26",
       end: "2021-12-20",
     },
-    valid_name: "NEKOPARAVol1ソレイユ開店しました",
   },
   {
     name: "猫神大人与七颗星星",
+    other_names: ["ネコ神さまと、ななつぼし"],
     use_time: "-",
     score: {
       story: 7.9,
@@ -1540,6 +1644,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "NEKOPARA Vol.0 水無月ネコたちの日常！",
+    other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
+    valid_name: "NEKOPARAVol0水無月ネコたちの日常",
     all_ages: true,
     use_time: "-",
     order: 1,
@@ -1552,10 +1658,10 @@ const original_list: GalItemInputType[] = [
       start: "2021-08-14",
       end: "2021-08-15",
     },
-    valid_name: "NEKOPARAVol0水無月ネコたちの日常",
   },
   {
     name: "真爱の百合は赤く染まる",
+    other_names: ["真爱的百合被染成红色", "真爱百合"],
     intense: true,
     use_time: "-",
     score: {
@@ -1567,6 +1673,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "青空下的加缪",
+    other_names: ["青い空のカミュ"],
     use_time: "-",
     score: {
       story: 0,
@@ -1578,6 +1685,8 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "Fox Hime Zero",
+    other_names: ["狐姬"],
+    valid_name: "FoxHimeZero",
     use_time: "-",
     order: 2,
     score: {
@@ -1588,7 +1697,6 @@ const original_list: GalItemInputType[] = [
       start: "2020-08-12",
       end: "2020-08-17",
     },
-    valid_name: "FoxHimeZero",
   },
   {
     name: "汚部屋の姫",
@@ -1601,13 +1709,14 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "バカな妹を利口にするのは俺の××だけな件について",
+    other_names: ["笨蛋妹"],
+    valid_name: "バカな妹を利口にするのは俺のだけな件について",
     use_time: "10min",
     score: {
       story: 0,
       visual: 1,
       program: 3,
     },
-    valid_name: "バカな妹を利口にするのは俺のだけな件について",
   },
   {
     name: "命に代えてもお守りします!",
@@ -1632,6 +1741,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "兰斯06",
+    other_names: ["ランス06 ゼス崩壊"],
     not_strict: true,
     use_time: "12h49min",
     order: 6,
@@ -1643,6 +1753,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "主播女孩重度依赖",
+    other_names: ["NEEDY GIRL OVERDOSE"],
     all_ages: true,
     not_strict: true,
     use_time: "24min",
@@ -1657,6 +1768,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "妹安利日记",
+    other_names: ["ヲーターメイド妹"],
     use_time: "14min",
     playing_status: PlayingStatus.STOPPED,
     duration: {
@@ -1714,7 +1826,8 @@ const original_list: GalItemInputType[] = [
     },
   },
   {
-    name: "DDLC",
+    name: "心跳文学部",
+    other_names: ["DDLC", "Doki Doki Literature Club!"],
     playing_status: PlayingStatus.STOPPED,
     namaniku: true,
     duration: {

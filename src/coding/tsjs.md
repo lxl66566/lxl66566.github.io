@@ -147,6 +147,7 @@ ESLint 支持复杂的自定义化。不过我没用过。
     "exactOptionalPropertyTypes": true, // 精确的可选属性类型检查（区分 undefined 和缺失值）
     "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致性（避免大小写问题导致的模块导入错误）
     "isolatedDeclarations": true, // 强制所有导出内容必须显式声明类型（有性能要求时建议关闭）
+    "isolatedModules": true, // 要求每个文件必须是独立的模块（能单独编译），避免因类型导入或跨文件类型依赖导致编译错误
     "noFallthroughCasesInSwitch": true, // 禁止 switch 语句中 case 的穿透（必须使用 break/return）
     "noImplicitAny": true, // 禁止隐式的 any 类型（必须显式声明类型）
     "noImplicitOverride": true, // 禁止隐式覆盖（派生类覆盖基类成员必须使用 override 修饰符）

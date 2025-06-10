@@ -19,6 +19,10 @@ export type GalItemInputType = {
    */
   valid_name?: string;
   /**
+   * 该游戏的其他可能名称，用于搜索
+   */
+  other_names?: string[];
+  /**
    * 资源或游戏链接
    */
   url?: string;

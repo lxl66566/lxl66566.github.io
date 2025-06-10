@@ -617,6 +617,7 @@ file.close();
 13. [hackingcpp](https://hackingcpp.com/)：提供语法的简洁 cheatsheet。
 14. [std::variant 很难用！](https://ykiko.me/zh-cn/articles/645810896/)
 15. [附录：C++ 未定义行为成因列表](https://github.com/Qihoo360/safe-rules/blob/main/cpp-ub-list.md)
+16. [Incrementing Vectors](https://travisdowns.github.io/blog/2019/08/26/vector-inc.html) 探讨了 `vector<uint8_t>` 存在的问题。
 
 books:
 

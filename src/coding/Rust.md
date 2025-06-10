@@ -476,6 +476,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | rayon | CPU 负载并发 |
 | indicatif | progress bar |
 | colored / simply-colored | 命令行颜色输出，后者更适合用于 no_std |
+| rand / smallrand | 随机数，后者更适合用于 no_std |
 
 [^5]: 为避免傻逼 openssl 造成的影响，建议添加 `feature = ["rustls-tls"]`。
 
