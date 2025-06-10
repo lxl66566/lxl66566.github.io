@@ -77,7 +77,7 @@ const toggle = () => {
     position: absolute;
     z-index: 100;
     bottom: 125%;
-    left: 25%;
+    right: 0%;
     opacity: 0;
     transition: opacity 0.2s, visibility 0.2s;
   }

@@ -1,39 +1,41 @@
 <template>
-  <div class="before-info">
-    条目数：{{ items_num }}
-  </div>
-  <div style="display: flex; gap: 1.5rem;">
-    <input type="text" v-model="searchText" placeholder="搜索游戏名称..." class="search-input" />
-    <MyCheckBox class="mycheckbox" label="仅显示严格定义的 galgame" v-model="show_strict"
-      hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
-  </div>
-  <div>
-    <table>
-      <thead>
-        <tr>
-          <th>游戏名</th>
-          <th>时长</th>
-          <th>游玩区间</th>
-          <th>
-            <SortIndicator text="剧情" v-model="sortOrder_story" />
-          </th>
-          <th>
-            <SortIndicator text="画风" v-model="sortOrder_visual" />
-          </th>
-          <th>
-            <SortIndicator text="程序" v-model="sortOrder_program" />
-          </th>
-        </tr>
-      </thead>
-      <tbody :class="{ 'show-strict': show_strict }">
-        <GalListItem v-for="item in filteredItems" :key="item.name + item.order" :item="item"
-          :expandable="useSlots()[get_valid_name(item)] != undefined">
-          <template #gal-list-item-content>
-            <slot :name="get_valid_name(item)"></slot>
-          </template>
-        </GalListItem>
-      </tbody>
-    </table>
+  <div style="width: 100%; box-sizing: border-box;">
+    <div class="before-info">
+      条目数：{{ items_num }}
+    </div>
+    <div style="display: flex; gap: 1.5rem; width: 100%; flex-wrap: wrap;">
+      <input type="text" v-model="searchText" placeholder="搜索游戏名称..." class="search-input" />
+      <MyCheckBox class="mycheckbox" label="仅显示严格定义的 galgame" v-model="show_strict"
+        hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
+    </div>
+    <div style="overflow-x: auto; min-width: 0;">
+      <table>
+        <thead>
+          <tr>
+            <th>游戏名</th>
+            <th>时长</th>
+            <th>游玩区间</th>
+            <th>
+              <SortIndicator text="剧情" v-model="sortOrder_story" />
+            </th>
+            <th>
+              <SortIndicator text="画风" v-model="sortOrder_visual" />
+            </th>
+            <th>
+              <SortIndicator text="程序" v-model="sortOrder_program" />
+            </th>
+          </tr>
+        </thead>
+        <tbody :class="{ 'show-strict': show_strict }">
+          <GalListItem v-for="item in filteredItems" :key="item.name + item.order" :item="item"
+            :expandable="useSlots()[get_valid_name(item)] != undefined">
+            <template #gal-list-item-content>
+              <slot :name="get_valid_name(item)"></slot>
+            </template>
+          </GalListItem>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -221,7 +223,7 @@ td {
   border: 2px solid var(--vp-c-text);
   border-radius: 12px;
   box-sizing: border-box;
-
+  min-width: 1rem;
 }
 
 .search-input:focus {
