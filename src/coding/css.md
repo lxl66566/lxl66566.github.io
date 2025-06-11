@@ -143,6 +143,10 @@ flex 容易带来的问题：
 
 这时候就要用到 grid，grid 可以保证所有元素在自适应布局的同时还是对齐的。
 
+### vh
+
+一般的响应式布局从获取屏幕宽高（100vw，100vh）开始。然而，100vh 在 safari，chrome 等 Android 浏览器上可能出现问题，因为 100vh 包括了被标题栏遮挡的区域。此时可以使用 svh。类似的新单位可以参考 [Demystifying VH, DVH, SVH, and LVH in CSS](https://learnbricksbuilder.com/demystifying-vh-dvh-svh-and-lvh-in-css/)。
+
 ## 框架
 
 虽说写原生 CSS 也不是不行，但是有框架为什么不用呢。

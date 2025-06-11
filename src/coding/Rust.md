@@ -292,42 +292,21 @@ where
 
 ### mod
 
-rust 的 mod 确实会让人摸不着头脑。建议先搜几篇文章看看：
+rust 的 mod 确实会让初学者摸不着头脑。建议先搜几篇文章看看，例如[Rust 模块和文件 - [译]](https://zhuanlan.zhihu.com/p/73544030)，也可以问 AI。多写几次就完全掌握了。
 
-- [Rust 模块和文件 - [译]](https://zhuanlan.zhihu.com/p/73544030)
+1. 每一个 **`.rs` 文件**、**`mod` 块** 和 **带有 `mod.rs` 的文件夹** 都是模块。
+2. `lib.rs`（如果不是 lib target 则为 `main.rs`）是顶层模块(`crate`)，其他模块层级即为**文件目录层级**。
+3. 整个模块结构是一颗树。
+   - 初始时，只有 `lib.rs` 在模块树内，其他文件都在树外。
+   - 我们需要使用 `mod xxx` 将模块添加到模块树内。只有在模块树内的模块才会参与编译。
+   - 添加到模块树后，在某个模块使用另一个模块的定义需要用 `use xxx`。这里的 xxx 可以是模块树中的“绝对路径”（也就是从顶层模块开始查找，`crate::sub1::xxx`），也可以是“相对路径”（从当前模块开始查找，`super::sub2::xxx`）。
 
-然后以下是我的一些浅薄理解，可能不正确，请自行分辨：
+### 其他
 
-1. 每一个 **`.rs`文件** 和 **带有 `mod.rs` 的文件夹** 都是模块。
-2. `main.rs` 是顶层模块(`crate`)，其他模块层级即为**文件目录层级**。
-3. mod 后若不跟代码块，则**声明当前模块与==低层级==模块的依赖关系**；若跟代码块，则**在当前模块中声明定义一个子模块**。
+- 可以显式调用 [`std::mem::drop()`](https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#通过-stdmemdrop-提早丢弃值) 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。[更多详细解释](https://xuanwo.io/reports/2022-41/)
+- 不知道结构体多大？rust-analyzer 有选项能直接看，将光标放在结构体上，（vscode 中 Ctrl + Shift + P）选择 _view memory layout_ 即可。
 
-例如我有一个文件结构：
-
-```
-.
-|-- config.rs
-|-- core
-|   |-- cambridge_en_zh.rs
-|   `-- mod.rs
-|-- main.rs
-`-- request.rs
-```
-
-则 `main.rs` 为 0 级模块，`config.rs` & `request.rs` & `core` 为 1 级模块，`cambridge_en_zh.rs` 为 2 级模块。
-
-在某个模块中使用 `mod` 语句只能声明**更低级**的模块关系。例如，我不能在 `request.rs` 中使用 `mod core;`，因为它俩同级（1 级）。
-
-那我们怎样在 `request.rs` 中使用 `core` 的内容呢？这就要通过更高级的模块进行中转：
-
-```rs
-// main.rs
-mod request;
-mod core;
-
-// request.rs
-use crate::core;  // or `use super::core;`
-```
+## 进阶
 
 ### trait
 
@@ -380,10 +359,82 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 - 有几个标签类型可以被重解释（`ident`, `tt` 等），非常强大。
 - 匹配写不出来就上 `$(tt)*`，啥都能匹配。但是由于 tt 太强，需要注意边界条件，否则把所有 token 全吃了。
 
-### 其他
+### 生命周期
 
-- 可以显式调用 [`std::mem::drop()`](https://kaisery.github.io/trpl-zh-cn/ch15-03-drop.html#通过-stdmemdrop-提早丢弃值) 释放值，不过一般使用代码块，让变量自动销毁，会更加清晰。[更多详细解释](https://xuanwo.io/reports/2022-41/)
-- 不知道结构体多大？rust-analyzer 有选项能直接看，将光标放在结构体上，（vscode 中 Ctrl + Shift + P）选择 _view memory layout_ 即可。
+待续
+
+- [协变逆变速查表](https://doc.rust-lang.org/nomicon/subtyping.html#variance)
+
+## 杂谈
+
+::: details 嵌入外部资源
+
+有时候我们要将外部文件/可执行程序嵌入代码二进制中。[rust-embed](https://crates.io/crates/rust-embed) 比较麻烦而且文档不太行，我决定用我自己的方式，带有 zstd 压缩（因为 zstd 解压快，可以尽可能减小运行时开销）。
+
+引入一个 build-dependencies：
+
+```toml
+[build-dependencies]
+zstd = "0.13"
+```
+
+然后写 `build.rs`，编译时将这些文件压缩为 zstd 包：
+
+```rs
+use std::{env, fs::File, io::Write, path::Path};
+use zstd::stream::write::Encoder;
+
+fn main() {
+    println!("cargo:rerun-if-changed=build.rs");
+    println!("cargo:rerun-if-changed=dwarfs-0.12.4.exe");
+    println!("cargo:rerun-if-changed=winfsp-x64-2.1.25156.dll");
+    let out_dir = env::var("OUT_DIR").unwrap();
+
+    let dest_path = Path::new(&out_dir).join("dwarfs.exe.zst");
+    compress_to(include_bytes!("dwarfs-0.12.4.exe"), dest_path);
+
+    let dest_path = Path::new(&out_dir).join("winfsp-x64.dll.zst");
+    compress_to(include_bytes!("winfsp-x64-2.1.25156.dll"), dest_path);
+}
+
+fn compress_to(input: &[u8], output: impl AsRef<Path>) {
+    let f = File::create(output).unwrap();
+    let mut encoder = Encoder::new(f, 19).unwrap();
+    encoder.write_all(input).unwrap();
+    encoder.finish().unwrap();
+}
+```
+
+在程序中使用宏引入（因为 include_bytes! 必须接受 literal，所以不能用 fn 传入 path）：
+
+```rs
+/// decompress the prebuilt zst file and write to a temp file.
+macro_rules! write_prebuilt_zstd {
+    ($zst_filename:expr, $output_path:expr) => {{
+        let compressed_bytes = include_bytes!(concat!(env!("OUT_DIR"), "/", $zst_filename));
+        let file = std::fs::File::create(&$output_path).expect("create temp file failed");
+        let mut decoder = zstd::stream::Decoder::new(std::io::Cursor::new(compressed_bytes))
+            .expect("zstd decoder create failed");
+        let mut writer = std::io::BufWriter::new(file);
+        std::io::copy(&mut decoder, &mut writer).map(|_| $output_path)
+    }};
+}
+write_prebuilt_zstd!("dwarfs.exe.zst", my_path)?;
+```
+
+这样就可以把嵌入进二进制里的内容解出来了。
+
+:::
+
+::: details 你不该用 Rust 做...
+
+有些东西就是大坑，劝你别往坑里跳。
+
+- 音频：虽然有万能解码器 [Symphonia](https://github.com/pdeljanov/Symphonia)，但是编码器这块缺的可太多了，除了 wav 这种简单格式有 pure rust 的 hound，大部分编码器都还只有 bindings。
+- 视频：就连音频都还是那个鸟样，还想要 pure rust 的视频编解码库？洗洗睡吧，老实滚回去用 ffmpeg。
+- 加密：加密算法太多了！而且依赖于加密领域的专业知识。
+
+:::
 
 ## Cargo
 
@@ -394,6 +445,8 @@ rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理�
 ### [cargo envs](https://doc.rust-lang.org/cargo/reference/environment-variables.html)
 
 ### 常用 cargo 指令
+
+太常用的就不说了。
 
 - `cargo clippy --fix --all-targets --all-features --allow-staged --allow-dirty`：用于自动修复 clippy 问题的终极命令。
 - `cargo tree -i xxx`：查询某个依赖的路径，弄清引入它的罪魁祸首。
@@ -436,7 +489,7 @@ cargo build 在全局获取包与依赖的源码，并编译到 target 里。rus
 
 ### 扩展
 
-cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文件都能视作 cargo 扩展。以下列举一些常用的 cargo 扩展应用。
+cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文件都能视作 cargo 扩展。这些扩展与 cargo 一起组成了整个**优秀的** rust 工具链生态。以下列举一些常用的 cargo 扩展应用。
 
 <!-- prettier-ignore -->
 | 名字       | 简介       |
@@ -455,7 +508,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-hakari](https://crates.io/crates/cargo-hakari) | 加速构建的黑科技 |
 | [cargo-selector](https://github.com/lusingander/cargo-selector) | TUI 快速选择运行目标 |
 | [cargo-sweep](https://github.com/holmgr/cargo-sweep) | 部分清理编译产物 |
-| [cargo-depgraph](https://github.com/jplatte/cargo-depgraph) | 看依赖关系。比 cargo-tree 等等好用 |
+| [cargo-depgraph](https://github.com/jplatte/cargo-depgraph) | 看依赖关系。比 cargo tree 等等好用 |
 | [cargo-semver-checks](https://github.com/obi1kenobi/cargo-semver-checks) | 检查 API 是否遵循 semver 规范 |
 
 ## 库
@@ -566,7 +619,9 @@ process_pb.finish_with_message("Processing complete!");
 
 ## 打包
 
-说到打包就不得不提万恶的 openssl，我已经[喷了无数次](https://t.me/withabsolutex/1609)，[无数次](https://t.me/withabsolutex/1859)…。很多库会提供 rustls feature 来绕过 openssl，例如 reqwest；但是也有库根本不提供，例如 rusqlite。所以 openssl 的问题还是得去解决。
+说到打包就不得不提万恶的 openssl，我已经[喷了无数次](https://t.me/withabsolutex/1609)，[无数次](https://t.me/withabsolutex/1859)，无数次[^6]…。很多库会提供 rustls feature 来绕过 openssl，例如 reqwest；但是也有库根本不提供，例如 rusqlite。所以 openssl 的问题还是得去解决。
+
+[^6]: openssl 不仅编译的工具链垃圾，性能也垃圾，打不过 pure rust 的 rustls，打不过[手写的 simd](https://gist.github.com/lxl66566/073843cce77477ef61be8b9260e0ccf1)。这种垃圾还有什么存在的必要吗？
 
 ### [最小化二进制](https://github.com/johnthagen/min-sized-rust)
 
@@ -580,7 +635,7 @@ lto = true
 panic = "abort"
 ```
 
-或者也可以看看 [cargo-wizard](#开发)。
+或者也可以看看 [cargo-wizard](#扩展)。
 
 ### 交叉编译
 
@@ -589,7 +644,7 @@ rustup target add x86_64-unknown-linux-musl
 cargo build --release --target x86_64-unknown-linux-musl
 ```
 
-我也写过 [rust release CI](https://github.com/lxl66566/rust-simple-release)，深知交叉编译在 link 阶段很容易出问题。解法有两个，一个是用工具链对应的链接器，还有一个就是 cargo-zigbuild，蛮好用的。不过 windows 上不能用 cargo-zigbuild。
+我也写过 [rust release CI](https://github.com/lxl66566/rust-simple-release)，深知交叉编译在 link 阶段很容易出问题。解法有两个，一个是用工具链对应的链接器，还有一个就是 cargo-zigbuild，蛮好用的。不过注意，windows 和 macos 不能用 cargo-zigbuild；然后这玩意也经常出问题，要做好心理预期，我也骂了很多次。
 
 ### release
 
@@ -651,9 +706,10 @@ GUI 是 rust 日经问题了。
 
 [这里](https://www.cnblogs.com/nolca/p/17795473.html)有一些 issue/star 数对比。[Are we GUI Yet?](https://areweguiyet.com/)是更多 GUI 框架简介。
 
-我早期尝试过一下 iced，用不明白，不用了。
+我早期尝试过一下 iced，用不明白，不用了。反正自从我开始[写前端](./index.md#前端)后我就不再写其他非前端 GUI 了，实在是太 naive 太难受了。
 
 _他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
+
 ::: right
 ——_[阿卡琳](https://github.com/magic-akari)_
 :::

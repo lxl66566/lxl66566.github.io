@@ -265,8 +265,12 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 选择一个即可。
 
-- [NanaZip](https://github.com/M2Team/NanaZip)：开源，UI 很有 windows 风格，支持黑色主题。缺点是 msxi 打包，不好在老系统上用。
-- [7zip](https://www.7-zip.org/)
+- [7-Zip](https://www.7-zip.org/)：正统老牌轻量压缩工具。
+- [NanaZip](https://github.com/M2Team/NanaZip)：开源，UI 有 windows 风格，支持黑色主题。缺点：
+  - msxi 打包，不好在老系统上用。
+  - 支持的格式没有 7-Zip 多。
+
+举一个比较小众的例子，dwarfs 格式在 7-Zip 上可以打开但是文件夹会识别为文件；在 Bandizip 和 NanaZip 上无法打开。
 
 ### [图吧工具箱](http://www.tbtool.cn/)
 

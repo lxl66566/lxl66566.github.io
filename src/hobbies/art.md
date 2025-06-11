@@ -19,6 +19,7 @@ tag:
 <!-- prettier-ignore -->
 | 名 | 时间 | 评价 |
 | :-: | :-: | :-: |
+| 虽然我成为了圣骑士但是团长的欧派厉害过头没法保持心灵纯洁 | 2025.06.10-<br/>在读 |
 | [我成了魔族的宠物](https://m.manhuagui.com/comic/53159/) | 2024.11.09-<br/>04，等待连载 |
 | [傲娇女友心想刺成](https://m.manhuagui.com/comic/44973/) | 2024.10.09 | 草！ |
 | [VRエロゲーやってたら異世界に転生したので、美少女魔王を奴隷化する](https://copymanga.tv/comic/vryouxizhuanshengyishijietiaojiaomowangmeishaonvclothoutsaber/chapter/519b94f4-65e3-11e9-8bc8-024352452ce0) | 2024.10.025-<br/>19 话，等待连载 | <dtlslong>画风不错，角色还行，也没有避讳。</dtlslong> |

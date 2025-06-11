@@ -203,7 +203,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 ## 媒体创作
 
-- [Adobe 全家桶破解](https://pangdaxing.top/adobe)[^1] | [PR(Telegram)](https://t.me/absolutexsresource/16) | [PS(Telegram)](https://t.me/absolutexsresource/18)
+- [Adobe 全家桶破解](https://pangdaxing.top/adobe)[^1] | [PR(Telegram)](https://t.me/absolutexsresource/16) | [PS(Telegram)](https://t.me/absolutexsresource/18) | [m0nkrus(Telegram)](https://t.me/m0nkrus)
 - [Office Tool Plus](https://otp.landian.vip/zh-cn/)
 - 在线白板画图：
   - [tldraw](https://www.tldraw.com/)

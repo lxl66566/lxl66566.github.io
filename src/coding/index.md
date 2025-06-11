@@ -59,6 +59,7 @@ tag:
 - [Mojo](https://docs.modular.com/mojo/)：python 的超集，注重性能，类型，兼容性，目标是 AI 领域。
 - [koka](https://koka-lang.github.io)：以 effect 为核心的函数式语言。有 [full UFCS](https://koka-lang.github.io/koka/doc/book.html#sec-dot) 特性。给一堆东西分类的感觉我比较喜欢。
 - [moonbit](https://www.moonbitlang.cn/)：国人开发，面向 WebAssembly，从 rust 中学了很多的语言
+  - 貌似很火很有潜力，也有 Telegram 认识的 PL 大佬在里面工作过
 - [odin](https://odin-lang.org/docs/overview/)：追求简单的、像 Go 的语言
 - [C3](https://c3-lang.org/)：C 的改进，解决 C 痛点
 - [flix](https://flix.dev/)：JVM 上的、拥有许多函数式风格的语言。
