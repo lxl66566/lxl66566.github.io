@@ -368,6 +368,8 @@ asyncio.run(main())
 
 python 的 async/await 也具有染色性质，导致很多地方同一个代码要写 async 和非 async 两个版本，这是当前版本的一个痛点，[还没有优雅的解决方法](https://www.bilibili.com/video/av113593110502112/)。
 
+也有一些第三方库，例如 anyio 和 trio，可以用于并发，但是我觉得那些 API 的设计都不算太好，asyncio 就够用了。
+
 ## 语法糖
 
 ### format string

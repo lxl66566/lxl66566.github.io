@@ -169,6 +169,19 @@ flex 容易带来的问题：
 - 只有 `flex: 1` 可以写为 `flex-1`。其他 `flex: x` 要写为 `flex-[x]`。
   - 同理，`max-width: 100vh` 要写成 `max-w-[100vh]`，并没有 `max-w-screen`。
 
+进阶一些的技巧有：
+
+- class alias：将一系列预设赋予一个别名，然后使用。在任意 css 中写入：
+  ```css
+  @layer utilities {
+    .btn-primary {
+      @apply bg-green-500 text-white py-2 px-4 rounded-lg;
+    }
+  }
+  ```
+  然后在组件里 import 该 css，将 `btn-primary` 当成新的 class 使用即可。
+  `@layer utilities` 指的是预设优先级，`utilities` > `components` > `base`。
+
 #### 插件
 
 - [tailwind-scrollbar-hide](https://github.com/reslear/tailwind-scrollbar-hide)：隐藏 scrollbar
@@ -180,6 +193,8 @@ flex 容易带来的问题：
 无缝衔接的条件是需要[导入 TailwindCSS 的预设](https://unocss.dev/presets/wind4)。我可以在此预设之上添加一些个人的 rules。
 
 不过这玩意也不是完全没有缺点，比如文档里好多 404 的链接没人维护，比如 VSCode 插件不如 TailwindCSS 的插件强大等。
+
+- UnoCSS 没有 TailwindCSS 的 `@apply` alias 用；但是话又说回来，我们可以直接在 `unocss.config.ts` 写 rules 为什么要写 CSS based 的 alias。
 
 ## external
 

@@ -94,7 +94,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["千の刃涛、桃花染の皇姫", "ジュエリー・ハーツ・アカデミア"],
+    names: ["千の刃涛、桃花染の皇姫", "ジュエリー・ハーツ・アカデミア", "大图书馆的牧羊人", "大图书馆的牧羊人 -Dreaming Sheep-"],
     valid_name: "bgi",
     engine: "bgi",
     save_format: "arc",
@@ -126,21 +126,21 @@ const data: SpeedupItemType[] = [
     valid_name: "AKABEiSOFT3",
     engine: "Yaneurao/unknown",
     save_format: "dat",
-    speedupable: false
+    speedupable: false,
   },
   {
     names: ["無限煉姦～恥辱にまみれし不死姫の輪舞～"],
     valid_name: "LCSE",
     engine: "LC-ScriptEngine",
     save_format: "lst,_",
-    speedupable: true
+    speedupable: true,
   },
   {
     names: ["心之形心之色心之声"],
     valid_name: "krkr_xp3_enc",
     engine: "krkr",
     save_format: "xp3(encrypted)",
-    speedupable: true
+    speedupable: true,
   },
 ];
 </script>

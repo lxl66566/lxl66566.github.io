@@ -2,6 +2,26 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "大图书馆的牧羊人",
+    other_names: ["大図書館の羊飼い"],
+    valid_name: "大图书馆的牧羊人",
+    playing_status: PlayingStatus.PLAYING,
+    order: 1,
+    duration: {
+      start: "2025-06-12",
+    },
+  },
+  {
+    name: "大图书馆的牧羊人 -Dreaming Sheep-",
+    other_names: ["大図書館の羊飼い -Dreaming Sheep-"],
+    valid_name: "大图书馆的牧羊人",
+    playing_status: PlayingStatus.PAUSED,
+    order: 2,
+    duration: {
+      start: "2025-06-12",
+    },
+  },
+  {
     name: "心之形心之色心之声",
     other_names: ["ココロのカタチとイロとオト"],
     use_time: "1h52min",

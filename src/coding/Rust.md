@@ -451,19 +451,39 @@ rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理�
 - `cargo clippy --fix --all-targets --all-features --allow-staged --allow-dirty`：用于自动修复 clippy 问题的终极命令。
 - `cargo tree -i xxx`：查询某个依赖的路径，弄清引入它的罪魁祸首。
 
-### 全局 alias
+### 我的配置
 
 创建 `~/.cargo/config.toml` 并写入：
 
 ```toml
+# 一些好用的 alias
 [alias]
-b = "build"
+b = "build --release"
 c = "check"
 t = "test -- --nocapture"
 r = "run"
 u = "update"
 f = "clippy --fix --all-targets --all-features --allow-staged --allow-dirty"
+i = "install --profile installation"
+bi = "binstall -y"
+
+# 使用 sccache 缓存编译结果（需要安装 sccache）
+[build]
+rustc-wrapper = "sccache"
+
+# 使用 cargo install 使用的命令
+[profile.installation]
+lto = true
+inherits = "release"
+codegen-units = 1
+rustflags = ["-C", "target-cpu=native"]
+
+# 默认不带调试符号，减小编译大小
+[profile.dev]
+debug = false
 ```
+
+然后由于现在大家都用 CI release，因此 `[profile.release]` 要写在项目里而不能写全局。
 
 ### fmt
 
