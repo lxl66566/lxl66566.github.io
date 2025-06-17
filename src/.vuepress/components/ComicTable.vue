@@ -768,6 +768,15 @@ const data = [
   { id: "243693", aScore: 6.4, bScore: 8.7, order: 1, info: "#义妹 #强制性交" },
   { id: "577073", aScore: 7.3, bScore: 5.7, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/量子オオカミ-垂狼-嫉妬深いカズサ-ブルーアーカイブ-中国翻訳-DL版-06-05" },
   { id: "577165", aScore: 9.4, bScore: 8.5, info: "#短篇 #百合 #足交 #露出 全裸登校", bak: "https://telegra.ph/咲凛玖-全裸登校漫画-中国翻訳-06-05-2" },
+  { id: "525537", aScore: 6, bScore: 7.7, info: "#引诱 #巨乳 #乡下", bak: "https://telegra.ph/豆六-ヒメごと-中国翻訳-06-07-2" },
+  { id: "577843", aScore: 6.6, bScore: 3.9, info: "#醉酒 #NTR #原神 #全彩", order: 1 },
+  { id: "577860", aScore: 7.5, bScore: 4.2, info: "#醉酒 #NTR #原神 #全彩", order: 2, bak: "https://telegra.ph/毒猫ノイル-胡桃に悪いことをする話後編-原神焚心绚华绘赞助-06-09-2" },
+  { id: "577670", aScore: 6.9, bScore: 5.3, info: "#蔚蓝档案", bak: "https://telegra.ph/sugar-coat-ざらめ-先生修復完了です-ブルーアーカイブ-中国翻訳-DL版-06-08-3" },
+  { id: "577549", aScore: 9.6, bScore: 5.5, info: "#蔚蓝档案 #巨乳 #宝宝play", bak: "https://telegra.ph/プレスドグラス-かきど-水羽ミモリと子育て練習-ブルーアーカイブ-中国翻訳-DL版-06-08-2" },
+  { id: "572605", aScore: 6.6, bScore: 8, info: "#魅魔 #百合", order: 1, bak: "https://telegra.ph/ざんどろ-サキュバスマッサージ-オトコもオンナも異種族もイカせる女第1話サイベリアplus-Vol28-06-08-2" },
+  { id: "572806", aScore: 7, bScore: 6.2, info: "#兽耳", order: 2, bak: "https://telegra.ph/ざんどろ-サキュバスマッサージ-オトコもオンナも異種族もイカせる女第2話-サイベリアplus-Vol-30-06-08-2" },
+  { id: "573577", aScore: 6.1, bScore: 7.2, info: "#魅魔 #反杀", order: 3, bak: "https://telegra.ph/ざんどろ-サキュバスマッサージ-オトコもオンナも異種族もイカせる女第3話-サイベリアplus-Vol-32-中国翻訳-06-08-2" },
+  { id: "577535", aScore: 7.2, bScore: 6, info: "#蔚蓝档案 #简笔 #纯爱", bak: "https://telegra.ph/C105-ANNO-あるせーぬおぱんっ-大人になった私と-ブルーアーカイブ-中国翻訳-06-07-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

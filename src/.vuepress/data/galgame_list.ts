@@ -440,7 +440,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "アンレステルミナリア",
     namaniku: true,
     use_time: "+3h",
-    playing_status: PlayingStatus.PLAYING,
+    playing_status: PlayingStatus.PAUSED,
     duration: {
       start: "2023-05-11",
     },

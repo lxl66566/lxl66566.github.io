@@ -111,9 +111,8 @@ tag:
   - 一键网络质量：[NetQuality](https://github.com/xykt/NetQuality)
 - 全球测速
   - `curl -Lso- bench.sh | bash`：VPS 信息，全球测速
-- 国内测速
-  - `curl -sL network-speed.xyz | bash -s -- -r china`
-  - `bash <(curl -sL bash.icu/speedtest)`
+- 国内三网测速
+  - [ecsspeed](https://github.com/spiritLHLS/ecsspeed): `bash <(wget -qO- --no-check-certificate https://github.com/spiritLHLS/ecsspeed/raw/main/script/ecsspeed-net.sh)`
 - <https://bgp.tools/>，ASN 信息
 - <https://ip.skk.moe/>，群友搭的查自己 IP 的面板
 - [网络面板](https://net.ljxnet.cn/)流量消耗器
