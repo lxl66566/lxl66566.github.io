@@ -769,7 +769,7 @@ const data = [
   { id: "577073", aScore: 7.3, bScore: 5.7, info: "#蔚蓝档案 #兽耳", bak: "https://telegra.ph/量子オオカミ-垂狼-嫉妬深いカズサ-ブルーアーカイブ-中国翻訳-DL版-06-05" },
   { id: "577165", aScore: 9.4, bScore: 8.5, info: "#短篇 #百合 #足交 #露出 全裸登校", bak: "https://telegra.ph/咲凛玖-全裸登校漫画-中国翻訳-06-05-2" },
   { id: "525537", aScore: 6, bScore: 7.7, info: "#引诱 #巨乳 #乡下", bak: "https://telegra.ph/豆六-ヒメごと-中国翻訳-06-07-2" },
-  { id: "577843", aScore: 6.6, bScore: 3.9, info: "#醉酒 #NTR #原神 #全彩", order: 1 },
+  { id: "577843", aScore: 6.6, bScore: 3.9, info: "#醉酒 #NTR #原神 #全彩", order: 1, bak: "https://telegra.ph/毒猫ノイル-胡桃に悪いことをする話前編-原神-中国翻訳-06-09-2" },
   { id: "577860", aScore: 7.5, bScore: 4.2, info: "#醉酒 #NTR #原神 #全彩", order: 2, bak: "https://telegra.ph/毒猫ノイル-胡桃に悪いことをする話後編-原神焚心绚华绘赞助-06-09-2" },
   { id: "577670", aScore: 6.9, bScore: 5.3, info: "#蔚蓝档案", bak: "https://telegra.ph/sugar-coat-ざらめ-先生修復完了です-ブルーアーカイブ-中国翻訳-DL版-06-08-3" },
   { id: "577549", aScore: 9.6, bScore: 5.5, info: "#蔚蓝档案 #巨乳 #宝宝play", bak: "https://telegra.ph/プレスドグラス-かきど-水羽ミモリと子育て練習-ブルーアーカイブ-中国翻訳-DL版-06-08-2" },
@@ -777,6 +777,9 @@ const data = [
   { id: "572806", aScore: 7, bScore: 6.2, info: "#兽耳", order: 2, bak: "https://telegra.ph/ざんどろ-サキュバスマッサージ-オトコもオンナも異種族もイカせる女第2話-サイベリアplus-Vol-30-06-08-2" },
   { id: "573577", aScore: 6.1, bScore: 7.2, info: "#魅魔 #反杀", order: 3, bak: "https://telegra.ph/ざんどろ-サキュバスマッサージ-オトコもオンナも異種族もイカせる女第3話-サイベリアplus-Vol-32-中国翻訳-06-08-2" },
   { id: "577535", aScore: 7.2, bScore: 6, info: "#蔚蓝档案 #简笔 #纯爱", bak: "https://telegra.ph/C105-ANNO-あるせーぬおぱんっ-大人になった私と-ブルーアーカイブ-中国翻訳-06-07-2" },
+  { id: "561252", aScore: 10, bScore: 9.6, info: "#兽耳 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-キキーモラまんが2025-中国翻訳-DL版-06-10-2" },
+  { id: "578113", aScore: 8.7, bScore: 5.8, info: "#堕天計画 堕天前アイミュを洗ってあげる本", bak: "https://telegra.ph/コミティア145-234ド-イチリ-堕天前アイミュを洗ってあげる本-中国翻訳-06-10-2" },
+  { id: "(ex)", aScore: 6.6, bScore: 6, info: "#精灵 #巨乳", otherlink: "https://exhentai.org/g/3391598/dce3df08f8/", bak: "https://telegra.ph/Croriin-花蜜の庭-異世快楽天-Vol46-中国翻訳-06-10-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

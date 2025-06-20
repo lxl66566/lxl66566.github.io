@@ -29,6 +29,10 @@ tag:
     - 玩家可以在任意时刻操作开关，以产生感应电流/电压。
   - 场上可预设：运算放大器 扬声器（彩蛋）
 
+### galgame
+
+- 想把中式传统玄幻结合到 galgame 一次。至今玩了挺多西式奇幻 gal，但是感觉还是缺了点什么。
+
 ## 编程灵感
 
 - [ ] ~~音乐播放器~~ 我现在使用 Telegram 频道作为云端音乐存储，保证同步。（问题是音乐缓存会被定期清理，需要将所有音乐保存到 Music 目录。）
@@ -130,6 +134,7 @@ tag:
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
 - [ ] reader
 - [ ] sync tools
+- [ ] diskann
 
 ### Android
 

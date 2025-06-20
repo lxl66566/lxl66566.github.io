@@ -332,6 +332,11 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
 Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、搜索资料、有插件系统等等。不过跟垃圾 utools 不同，它是免费开源的。
 
 - 有 everything 集成，可以方便搜文件。
+- 缺点是内存占用偏大。C# 的 web 渲染还不如 electron 呢。
+
+### [OneCommander](https://onecommander.com/)
+
+第三方的文件管理器，双栏，自定义化较好。虽然免费版缺失了部分功能，但是还是够用的。特别是在 win10 上强烈推荐安装，因为 win10 资源管理器没有标签页。
 
 ## Linux
 

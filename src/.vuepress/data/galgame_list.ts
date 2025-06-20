@@ -5,6 +5,7 @@ const original_list: GalItemInputType[] = [
     name: "大图书馆的牧羊人",
     other_names: ["大図書館の羊飼い"],
     valid_name: "大图书馆的牧羊人",
+    use_time: "-1min",
     playing_status: PlayingStatus.PLAYING,
     order: 1,
     duration: {
@@ -39,7 +40,7 @@ const original_list: GalItemInputType[] = [
     name: "装甲恶鬼村正",
     other_names: ["装甲悪鬼村正"],
     playing_status: PlayingStatus.PLAYING,
-    use_time: "-2min",
+    use_time: "-4min",
     duration: {
       start: "2025-05-22",
     },
@@ -149,7 +150,7 @@ const original_list: GalItemInputType[] = [
     name: "旭光のマリアージュ",
     other_names: ["旭光的婚礼"],
     namaniku: true,
-    use_time: "-4min",
+    use_time: "-5min",
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-03-23",
@@ -296,7 +297,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 6,
-      visual: 9.3,
+      visual: 9,
       program: 6.5,
     },
   },

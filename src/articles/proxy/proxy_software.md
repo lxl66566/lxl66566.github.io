@@ -155,6 +155,7 @@ _sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称�
 - [NekoBox](https://github.com/MatsuriDayo/NekoBoxForAndroid)：Matsuri 的继任，Android 端的好选择。
 - [Matsuri](https://github.com/MatsuriDayo/Matsuri)：项目已 archived。之前用过一阵，后面换回 V2rayNG 了。
 - [SagerNet](https://github.com/SagerNet)：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。
+  - 2024 年 archived 后也出了很多 fork。
 - [husi](https://github.com/xchacha20-poly1305/husi)：内置各种小众协议插件的 NekoBox。
 
 并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。
