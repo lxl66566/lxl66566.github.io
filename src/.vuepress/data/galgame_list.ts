@@ -2,6 +2,16 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "NEKOPARA After",
+    other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
+    valid_name: "NEKOPARAAfter",
+    playing_status: PlayingStatus.PLAYING,
+    order: 6,
+    duration: {
+      start: "2025-06-21",
+    },
+  },
+  {
     name: "大图书馆的牧羊人",
     other_names: ["大図書館の羊飼い"],
     valid_name: "大图书馆的牧羊人",

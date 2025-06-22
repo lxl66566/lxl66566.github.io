@@ -118,6 +118,8 @@ uv lock --upgrade && uv sync                  # 更新所有依赖
    include = ["*.py"]
    ```
 
+使用 [uv-migrator](https://github.com/stvnksslr/uv-migrator) 可以将其他大部分包管理器的配置无缝迁移到 uv。
+
 ##### 我的配置
 
 `~/uv.toml`:
