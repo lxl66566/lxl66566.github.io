@@ -479,6 +479,7 @@ const data = [
   { id: "SUJI-161", aScore: 8.5, bScore: 9.7, name: "^1 ^-2 女子●学生監●調教レ●プ 自由を失った少●たちの下半身崩壊映像" },
   { id: "SUJI-257", aScore: 5.2, bScore: 5, name: "あの時、あのおじさんの事を信じていなければ…思春期を壊されたセーラー服少●たち" },
   { id: "SDAB-292", aScore: 8.5, bScore: 4.8 },
+  { id: "STARS-507", aScore: 8, bScore: 4, name: "「ごめんなさい、パパ、ママ。」学校サボって19時まで、大好きな絶倫担任に私の巨乳を滅茶苦茶に犯●れに行ってきます。 朝田ひまり" },
 ].sort((x, y) => -TwoScoreCompare(x, y)); // 因为 partitionInPlace 会 reverse 一次，这里的 sort 也需要反转
 // 同分则颜值分优先
 

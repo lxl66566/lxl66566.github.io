@@ -37,6 +37,8 @@ cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
 
 类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。我没有用过，不过可以 mark 一下。
 
+> 和 zerotier、tailscale 故意区分了不同端相比，easytier 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch
+
 ## zerotier
 
 [据说](https://openwrt.org/docs/guide-user/services/vpn/zerotier) openwrt 是有 zerotier 的软件包的，但是我在 iStoreOS 里一点也找不到，不知道是 iStoreOS 的 fork 问题还是 opkg 的问题。

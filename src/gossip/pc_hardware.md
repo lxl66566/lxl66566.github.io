@@ -198,6 +198,7 @@ DIY 一台属于自己的电脑，可以说是大多数男生的梦想。我从�
 4. 开启 XMP，免费的内存频率提升。然而我的内存开启 XMP DOCP1 后，系统稳定性受到了影响，有时候切换窗口会卡一阵子，此时 GPU 并没有吃满。所以为了稳定性考虑还是用 DOCP2 吧[^1]。如果 DOCP2 还有问题[^2]，可能就需要手动超，或者干脆放弃超内存了。
    - 开启 XMP 后，记得同时 enable _Memory Context Restore_ 和 _Power Down Enable_ 选项，否则每次开机都会在 DRAM 自检卡很久[^3]。
 5. I 卡有待机功耗问题，需要[一些设置](https://www.cnbeta.com.tw/articles/tech/1328533.htm)。
+6. 华硕这个 sb 主板的 wifi 驱动要安装 `Realtek` 开头的驱动。。在 _无线网络驱动程序_ 里要点击 _查看更多_，最下面那个才是。其他的没法装，点击 exe 是没有反应的。
 
 [^1]: 激进程度；DOCP2 < DOCP1 < DOCP tweaked。ref: [DOCP 1, 2, or tweaked](https://www.reddit.com/r/overclocking/comments/1b4f2sw/docp_1_2_or_tweaked/)
 [^2]: [惨痛教训](https://t.me/withabsolutex/2284)
