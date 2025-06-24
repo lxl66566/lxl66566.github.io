@@ -67,7 +67,7 @@ export default sidebar({
     },
     {
       text: "语言",
-      children: ["Rust.md", "python.md", "Cpp.md", "shell.md", "java.md", "tsjs.md", "html.md", "csharp.md", "kotlin.md", "clojure.md"],
+      children: ["Rust.md", "python.md", "Cpp.md", "shell.md", "java.md", "tsjs.md", "html.md", "csharp.md", "kotlin.md", "clojure.md", "octave.md"],
     },
     {
       text: "工具",
@@ -79,7 +79,7 @@ export default sidebar({
     },
     {
       text: "其他",
-      children: ["bagu.md", "android.md", "algorithm.md", "bot.md", "octave.md"],
+      children: ["bagu.md", "android.md", "algorithm.md", "bot.md", "audio.md"],
     },
   ],
   "/blog/": ["index.md", "withvuepress2.md", "log.md", "todo.md"],

@@ -47,6 +47,7 @@ tag:
 6. [C#](./csharp.md)
 7. [kotlin](./kotlin.md)
 8. [Clojure](./clojure.md)
+9. [Octave (FUCK MATLAB)](./octave.md)
 
 ### 新生语言
 
@@ -122,7 +123,7 @@ tag:
 1. [算法](./algorithm.md)
 2. [搭建 bot](./bot.md)
 3. [SICP learning](https://github.com/lxl66566/sicp-learning)
-4. [FUCK MATLAB](./octave.md)
+4. [音频处理](./audio.md)
 
 ## 杂项
 
