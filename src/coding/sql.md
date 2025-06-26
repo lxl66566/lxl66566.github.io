@@ -26,7 +26,7 @@ tag:
    - KV 首选 rocksdb，据说性能高。其他还有 redb (pure rust)。
 2. 非嵌入式
    - 关系型
-     - MySQL/MariaDB[^1][^2] 最为泛用，学习简单，但是确实有点老了。
+     - MySQL/MariaDB[^1][^2] 最为泛用，学习简单，但是确实有点老了，而且[具有多种缺陷](https://www.youtube.com/watch?v=ConMAwL-cmk)，不建议在 202x 年使用。
      - PostgreSQL 这玩意非常全能，属于宗教级别。
      - Oracle 商用要买授权，但是挺多外企用这个的。复杂是复杂，不过非常强。
    - 非关系型，纯内存的选 Redis

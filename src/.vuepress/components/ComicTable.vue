@@ -780,6 +780,7 @@ const data = [
   { id: "561252", aScore: 10, bScore: 9.6, info: "#兽耳 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-キキーモラまんが2025-中国翻訳-DL版-06-10-2" },
   { id: "578113", aScore: 8.7, bScore: 5.8, info: "#堕天計画 堕天前アイミュを洗ってあげる本", bak: "https://telegra.ph/コミティア145-234ド-イチリ-堕天前アイミュを洗ってあげる本-中国翻訳-06-10-2" },
   { id: "(ex)", aScore: 6.6, bScore: 6, info: "#精灵 #巨乳", otherlink: "https://exhentai.org/g/3391598/dce3df08f8/", bak: "https://telegra.ph/Croriin-花蜜の庭-異世快楽天-Vol46-中国翻訳-06-10-2" },
+  { id: "580255", aScore: 8.2, bScore: 7.6, info: "#纯爱", bak: "https://telegra.ph/いっきづか-きづかかずき-こんやはお楽しみです中国翻訳-DL版-06-22-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

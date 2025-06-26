@@ -49,10 +49,15 @@ const original_list: GalItemInputType[] = [
   {
     name: "装甲恶鬼村正",
     other_names: ["装甲悪鬼村正"],
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "-5min",
+    use_time: "45h19min",
     duration: {
       start: "2025-05-22",
+      end: "2025-06-26",
+    },
+    score: {
+      story: 10.6,
+      visual: 2.5,
+      program: 0,
     },
   },
   {

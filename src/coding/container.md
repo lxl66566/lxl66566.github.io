@@ -40,6 +40,7 @@ tag:
 
 - [lazydocker](https://github.com/jesseduffield/lazydocker)：lazygit 的同作者做的 docker TUI，不再需要背 docker 指令。
   - 实际上 docker 的 cli 确实很傻逼，很多地方依赖 hash。
+- [dpanel](https://github.com/donknap/dpanel)：更高级的 docker 管理 GUI。
 
 ## 基础
 

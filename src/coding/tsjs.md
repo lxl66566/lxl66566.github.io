@@ -131,6 +131,8 @@ biome 本身也是 linter。
 
 类似 Rust 的 `cargo fmt && clippy fix`，biome 也有一键对项目进行 format + fix 的指令，非常好用：`biome check --write --unsafe .`
 
+- biome 的 type check 是自行实现的，可能会推断错误([ref](https://zenn.dev/uhyo/articles/biome-v2-type-inference))。
+
 @tab ESLint
 
 ESLint 支持复杂的自定义化。不过我没用过。

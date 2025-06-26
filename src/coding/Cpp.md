@@ -62,16 +62,6 @@ windows 上不想装 msvc 的话可以考虑使用 mingw。
 
 :::: tabs
 
-@tab Clang-Tidy + Clang-Format
-
-> Clang-Tidy 比 clangd 要**慢很多**（功能也更多）。并且 [clangd 尊重 clang-tidy 的设置](https://discourse.llvm.org/t/list-of-clang-tidy-checks-supported-in-clangd/61013)，因此非解耦需求下还是用 clangd 比较好。
-
-为什么选这个组合呢，因为解耦：我不喜欢让一个扩展完成所有任务，我希望 linter 和 formatter 分离[^4]，这样是自由度最高的方案。
-
-[^4]: 例如我在嵌入式课用 vscode 写码，我需要一个 formatter 减少我的精神负担，但是由于嵌入式开发 Keil 使用自己的构建系统，因此我希望关闭 linter，否则 linter 读不出项目的结构，会满屏红色报错。
-
-Clang-Tidy 在 vscode 扩展里的名字叫 _CS 128 Clang-Tidy_。
-
 @tab clangd
 
 调用外部的 linter + formatter，非常快速。
@@ -91,6 +81,16 @@ Clang-Tidy 在 vscode 扩展里的名字叫 _CS 128 Clang-Tidy_。
 可能需要自己填一个 `clang-format.exe` 的位置，去 llvm 安装位置找，或者用 [everything](../farraginous/recommend_packages.md#everything) 搜一下。
 
 - `clang-format.exe -style=llvm -dump-config > .clang-format` 可以导出设置，一般不需要。
+
+@tab Clang-Tidy + Clang-Format
+
+> Clang-Tidy 比 clangd 要**慢很多**（功能也更多）。并且 [clangd 尊重 clang-tidy 的设置](https://discourse.llvm.org/t/list-of-clang-tidy-checks-supported-in-clangd/61013)，因此非解耦需求下还是用 clangd 比较好。
+
+为什么选这个组合呢，因为解耦：我不喜欢让一个扩展完成所有任务，我希望 linter 和 formatter 分离[^4]，这样是自由度最高的方案。
+
+[^4]: 例如我在嵌入式课用 vscode 写码，我需要一个 formatter 减少我的精神负担，但是由于嵌入式开发 Keil 使用自己的构建系统，因此我希望关闭 linter，否则 linter 读不出项目的结构，会满屏红色报错。
+
+Clang-Tidy 在 vscode 扩展里的名字叫 _CS 128 Clang-Tidy_。
 
 @tab Microsoft C/C++
 
