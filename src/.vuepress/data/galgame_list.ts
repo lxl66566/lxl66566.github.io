@@ -5,17 +5,23 @@ const original_list: GalItemInputType[] = [
     name: "NEKOPARA After",
     other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
     valid_name: "NEKOPARAAfter",
-    playing_status: PlayingStatus.PLAYING,
     order: 6,
+    use_time: "1h30min",
     duration: {
       start: "2025-06-21",
+      end: "2025-06-27",
+    },
+    score: {
+      story: 1.4,
+      visual: 9.9,
+      program: 6,
     },
   },
   {
     name: "大图书馆的牧羊人",
     other_names: ["大図書館の羊飼い"],
     valid_name: "大图书馆的牧羊人",
-    use_time: "-4min",
+    use_time: "-6min",
     playing_status: PlayingStatus.PLAYING,
     order: 1,
     duration: {
@@ -444,9 +450,15 @@ const original_list: GalItemInputType[] = [
     name: "無限煉姦～恥辱にまみれし不死姫の輪舞～",
     other_names: ["无限炼奸~不死舞姬的凌辱轮舞曲~"],
     valid_name: "無限煉姦恥辱にまみれし不死姫の輪舞",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "6h48min",
     duration: {
       start: "2024-01-24",
+      end: "2025-06-28",
+    },
+    score: {
+      story: 6.2,
+      visual: 0,
+      program: 1.2,
     },
   },
 

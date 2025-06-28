@@ -195,6 +195,7 @@ DIY 一台属于自己的电脑，可以说是大多数男生的梦想。我从�
 2. 在挖 XMR 时出现了 [`FAILED TO APPLY MSR MOD, HASHRATE WILL BE LOW` 问题](https://github.com/xmrig/xmrig/issues/2626)。调了挺久，Windows Defender 到处关到处点，禁用启用了好几次。最后在 BIOS CPU advanced settings 里关了 _NX mode_ 就好了。
 3. **降频使用**。CPU 默认值 100% 负载时会跑到 95 度撞墙降频，我也不希望 CPU 长时间保持在高温度影响寿命。7950x 本身的性能足够我使用，因此我尝试降频使用。在 AMD Ryzen Master 里先进入高级页面，选到 _Profile1_，调成 _节能模式_ 105W，其他都默认就行，然后应用。就这样，我居然用 65% 功耗跑了 94% 性能（94% 鲁大师得分），满载温度从 95 度 降到了 76 度！满载风扇声也小了很多。
    - 但是千万不要再继续降频到 65W 了[^2]。
+   - AMD Ryzen Master 的设置是系统级的([ref](https://www.reddit.com/r/AMDHelp/comments/jiu5ol/are_ryzen_master_overclocks_permanentchange_bios/))，也就是我无法期望在 windows 限制功耗后 linux 上也达到限制功耗效果。
 4. 开启 XMP，免费的内存频率提升。然而我的内存开启 XMP DOCP1 后，系统稳定性受到了影响，有时候切换窗口会卡一阵子，此时 GPU 并没有吃满。所以为了稳定性考虑还是用 DOCP2 吧[^1]。如果 DOCP2 还有问题[^2]，可能就需要手动超，或者干脆放弃超内存了。
    - 开启 XMP 后，记得同时 enable _Memory Context Restore_ 和 _Power Down Enable_ 选项，否则每次开机都会在 DRAM 自检卡很久[^3]。
 5. I 卡有待机功耗问题，需要[一些设置](https://www.cnbeta.com.tw/articles/tech/1328533.htm)。

@@ -91,6 +91,10 @@ JS/TS 句末分号可加可不加，但是一个好的 formatter 都会帮你加
 
 老牌 formatter 了，支持非常多的格式；风格也比较统一。
 
+这里建议一些插件：
+
+- [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports)
+
 @tab biome
 
 Biome 是 Rome 重生版，使用 Biome 的一大理由是 written in Rust。但是其默认的设置有一些霸道，我其实不太喜欢，这里举一些例子：默认用 tab 而不是 2space，windows 上也用 LF 而不是 CRLF。

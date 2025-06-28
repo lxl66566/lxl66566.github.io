@@ -69,6 +69,11 @@ React 19 后，可以用简化写法 `<Context>` 替代 `<Context.Provider>`。
 
 useReducer 和 useState 很像，只不过可以把状态更新逻辑从事件处理函数中移动到组件外部。[src](https://zh-hans.react.dev/reference/react/useReducer#adding-a-reducer-to-a-component)
 
+## Router
+
+- React 最常用的 router 是 [React Router](https://github.com/remix-run/react-router)。
+- 如果你不使用高级功能，只是进行简单切换，也可以使用 [wouter](https://github.com/molefrog/wouter)，更精简。
+
 ## external
 
 - [2023 再看 React 状态管理库](https://juejin.cn/post/7195513281228898363)

@@ -194,7 +194,8 @@ flex 容易带来的问题：
 
 不过这玩意也不是完全没有缺点，比如文档里好多 404 的链接没人维护，比如 VSCode 插件不如 TailwindCSS 的插件强大等。
 
-- UnoCSS 没有 TailwindCSS 的 `@apply` alias 用；但是话又说回来，我们可以直接在 `unocss.config.ts` 写 rules 为什么要写 CSS based 的 alias。
+- UnoCSS 的 alias 比 TailwindCSS 还更简单，只需要在 `uno.config.ts` 里加 `shortcuts: {...}` 即可。key 是别名，value 是类名。
+- [preflights](https://unocss.dev/config/preflights) 用于注入全局 CSS，例如[暗色滚动条](https://github.com/lxl66566/super24points/blob/dee6e28a74b1b2ebe966446f3e52f4d91ff579e1/uno.config.ts#L13C4-L40)等。
 
 ## external
 
