@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "白日梦的构想图",
+    other_names: ["白昼夢の青写真"],
+    duration: {
+      start: "2025-06-30",
+    },
+  },
+  {
     name: "NEKOPARA After",
     other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
     valid_name: "NEKOPARAAfter",

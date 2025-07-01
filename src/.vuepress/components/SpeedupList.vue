@@ -142,6 +142,13 @@ const data: SpeedupItemType[] = [
     save_format: "xp3(encrypted)",
     speedupable: true,
   },
+  {
+    names: ["白昼夢の青写真"],
+    valid_name: "CatSystem2",
+    engine: "CatSystem2",
+    save_format: "int",
+    speedupable: true,
+  },
 ];
 </script>
 

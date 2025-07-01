@@ -121,7 +121,8 @@ tag:
 - [ ] 明日方舟视频自动去暂停
 - [ ] SNP's Not Pydantic，回归原始，拒绝[隐性假设](https://t.me/withabsolutex/2338)
 - [ ] fish commit
-- [x] [windows simple zstd](https://github.com/lxl66566/windows-simple-zstd)
+- [x] ~~windows simple zstd~~ 遇到了[亿些麻烦](https://t.me/withabsolutex/2378)。后来基于更好的 dwarfs 写了个 ([windows-dwarfs-tools](https://github.com/lxl66566/windows-dwarfs-tools))
+- [ ] strdb，基于 string 的关系型 db，git 友好。
 
 ### RIIR
 

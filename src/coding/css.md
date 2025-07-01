@@ -24,8 +24,10 @@ css 本身不带逻辑，处理嵌套也麻烦。因此有各种各样的预处�
 
 前端基础概念了。
 
-- 标准盒模型：`box-sizing: content-box`，content = size；border 和 padding 向外扩展
-- IE 盒模型：`box-sizing: border-box`，content = size - border - padding，可以从外部统一大小。
+- 标准盒模型：`box-sizing: content-box`，content = size；border 和 padding 向外扩展，浏览器默认值。
+- IE 盒模型：`box-sizing: border-box`，content = size - border - padding，可以从外部统一大小，直观，方便编排。
+
+现在有一种实践是全局所有组件全部使用 IE 盒模型，我觉得还是比较有道理的，特别是前端初学者可以通过 IE 盒避开不少坑。
 
 <div style="position: relative; width: 400px">
   <!-- Margin Layer -->
@@ -118,7 +120,7 @@ flex 基础：
 3. 对齐：
    - 主轴：`justify-content`。一般常用的有 `center`, `space-between`, `space-around`, `space-evenly`
    - 交叉轴：一旦使用了 flex，所有元素就会在交叉轴上被拉到最大（由默认值 `align-items: stretch;` 控制），非常直觉。
-4. 超出自动换行：`flex-wrap: wrap;`；换行后又会引入行间对齐 `align-content`。
+4. 超出自动换行：`flex-wrap: wrap;` 换行后又会引入行间对齐问题，使用 `align-content` 解决。
 
 flex 容易带来的问题：
 

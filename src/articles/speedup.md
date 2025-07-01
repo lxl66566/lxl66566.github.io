@@ -614,6 +614,181 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 加密的 xp3 就没法直接用 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack) 解封包了。不过 GARbro 可以解封加密的 xp3，只要游戏有被收录到密钥列表里就行，这里列举的游戏都属于此类。
 
 </template>
+<template #CatSystem2>
+
+`.int` 类型的封包。直接放到 GARbro 里还需要给出压缩文件参数，密码 + 密钥，可以通过 exe 路径提取。
+
+我尝试使用原版 `白昼夢の青写真.exe` 提取参数，失败；使用 `cs2.exe` 或 `cs2_cn.exe` 提取成功，密钥为 `D9A3FB64`。成功解包后，前 105 个文件是 `.ogg`，后面有各种后缀的文件，例如 phh 等，但是二进制都以 `OggS` 开头，所以文件名像是还套了一层凯撒密码。这倒是无所谓，我的音量均衡是靠抓二进制的 header 判断文件类型的，而加速也可以自定义各种后缀，要匹配上都是没问题的。
+
+问题出在 GARbro 没法封包 int 类型存档：_尚不支持创建加密压缩文件。_ 因此最好还是另寻出路。
+
+#### [CatSystem2-Simple-Translating-Tools](https://github.com/Wolverator/CatSystem2-Simple-Translating-Tools)
+
+这玩意属于是把饭喂到嘴边，专为翻译人准备的，python 脚本解包也只是把文本提取出来，中间产物全部删掉，或者不解（pcm_xxx.int 都跳过了）。但是我不是为了翻译，因此还是需要读源码。
+
+解包很简单，它使用 `exkifint_v3.exe` 直接解包 `.int`，效果比 GARbro 解包的效果还要好，可以全部都解成 .ogg。（也可以用 [FuckGalEngine](https://github.com/Inori/FuckGalEngine/blob/master/CatSystem2/exkifint.zip) 的）（还有，这货解压是把一堆文件塞到和 `.int` 的同级目录下，我红温了）。
+
+但是这玩意的封包用了一个 `mc.exe`，这玩意称为 Message Compiler for CatSystem2，一眼就不是用来正常打包的，它甚至都没有接受密钥。因此现在还需要另行寻找封包方法。
+
+#### [TriggersTools.CatSystem2](https://github.com/trigger-segfault/TriggersTools.CatSystem2)
+
+看起来像是一个资源统合站，并且有一个比较详细的 wiki，介绍了 [MakeInt.exe](https://github.com/trigger-segfault/TriggersTools.CatSystem2/wiki/Tool:-MakeInt.exe) 工具和 [KIF Archive（也就是 .int）封包的格式](https://github.com/trigger-segfault/TriggersTools.CatSystem2/wiki/KIF-Archive)。KIF Archive 的介绍等于是个兜底，即使最后没找到现成工具也大致可以照猫画虎搞一个出来。
+
+在给出的[CatSystem2 首页](https://cs2.suki.jp/download)下载了开发包后，进入 cs2_core_v401/マスター作成，执行 `MakeInt.exe output.int xxx/*.ogg`，可以看到所有的 .ogg 确实被打包了。虽然没有密钥，GARbro 可以直接认出来。
+
+总之最重要的是先试一试，搞个脚本把所有音频解包后重新封进去：
+
+```py
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+# exkifint_v3.exe 的完整路径
+EXKIFINT_EXE_PATH = Path(r"./exkifint_v3.exe")
+
+# 游戏主程序的完整路径
+GAME_EXE_PATH = Path(r"C:\game\galgame\白日梦的构想图\cs2.exe")
+
+# 存放 .int 文件的目标文件夹
+TARGET_FOLDER = Path(r"Z:/test")
+
+# extracted 文件夹的路径
+EXTRACTED_DIR = Path("./extracted")
+EXTRACTED_DIR.mkdir(exist_ok=True)
+print(f"Created or found directory: {EXTRACTED_DIR}")
+
+# --- 准备工作：验证路径是否存在 ---
+if not EXKIFINT_EXE_PATH.is_file():
+    print(f"错误：工具路径不存在或不是一个文件 -> {EXKIFINT_EXE_PATH}")
+    sys.exit(1)
+if not GAME_EXE_PATH.is_file():
+    print(f"错误：游戏EXE路径不存在或不是一个文件 -> {GAME_EXE_PATH}")
+    sys.exit(1)
+if not TARGET_FOLDER.is_dir():
+    print(f"错误：目标文件夹不存在或不是一个目录 -> {TARGET_FOLDER}")
+    sys.exit(1)
+
+# --- 1. 搜索文件夹下的所有 .int 文件 ---
+int_files = list(TARGET_FOLDER.glob("*.int"))
+if not int_files:
+    print("在目标文件夹中没有找到 .int 文件，脚本结束。")
+    exit(0)
+
+print(f"Found {len(int_files)} .int file(s):")
+for f in int_files:
+    print(f"  - {f.name}")
+print("")
+
+# --- 2. 复制工具到 extracted 文件夹 ---
+print("--- Step 2: Setting up the 'extracted' directory ---")
+
+# 定义工具在 'extracted' 目录中的路径
+exkifint_in_extracted = EXTRACTED_DIR / EXKIFINT_EXE_PATH.name
+
+# 复制工具
+shutil.copy(EXKIFINT_EXE_PATH, exkifint_in_extracted)
+print(f"Copied {EXKIFINT_EXE_PATH.name} to {EXTRACTED_DIR}\n")
+
+# 使用 try...finally 确保无论成功还是失败，清理步骤都会执行
+try:
+    # --- 3. 处理每一个 .int 文件 ---
+    print("--- Step 3: Processing each .int file ---")
+    for int_file_path in int_files:
+        int_filename = int_file_path.name
+        print(f"Processing {int_filename}...")
+
+        # 移动 .int 文件到 extracted 目录
+        dest_int_path = EXTRACTED_DIR / int_filename
+        shutil.move(int_file_path, dest_int_path)
+        print(f"  - Moved {int_filename} to {EXTRACTED_DIR}")
+
+        # 准备并执行命令
+        # 命令格式: exkifint_v3.exe xxx.int 游戏.exe
+        # 使用 shell=False 时，命令应为列表形式
+        command = [
+            str(exkifint_in_extracted),
+            str(dest_int_path.name),  # 在 extracted 目录中执行，所以用相对文件名
+            str(GAME_EXE_PATH),
+        ]
+
+        print(f"  - Running command: {' '.join(command)}")
+
+        # 在 extracted 目录中执行命令，这样工具更容易找到文件
+        # check=True 会在命令返回非零退出码时抛出异常
+        result = subprocess.run(
+            command,
+            shell=False,
+            check=True,
+            cwd=EXTRACTED_DIR,  # 设置工作目录为 extracted
+            capture_output=True,  # 捕获输出
+            text=True,  # 以文本形式解码输出
+        )
+
+        print(f"  - Command output:\n{result.stdout}")
+        print(f"Successfully processed {int_filename}.\n")
+
+except FileNotFoundError as e:
+    print(f"\n错误：命令执行失败，找不到程序。请检查路径。 {e}")
+except subprocess.CalledProcessError as e:
+    print(f"\n错误：处理文件时发生错误。工具返回了非零退出码 {e.returncode}")
+    print(f"  - 命令: {' '.join(e.cmd)}")
+    print(f"  - 输出:\n{e.stdout}")
+    print(f"  - 错误输出:\n{e.stderr}")
+except Exception as e:
+    print(f"\n发生未知错误: {e}")
+finally:
+    # --- 4. 清理工作 ---
+    print("\n--- Step 4: Cleaning up ---")
+
+    # 将所有 .int 文件移回原位
+    # 再次搜索 extracted 目录以防万一
+    processed_int_files = list(EXTRACTED_DIR.glob("*.int"))
+    if processed_int_files:
+        print("Moving .int files back to original location...")
+        for int_file in processed_int_files:
+            original_path = TARGET_FOLDER / int_file.name
+            shutil.move(int_file, original_path)
+            print(f"  - Moved {int_file.name} back to {TARGET_FOLDER}")
+
+    # 删除复制的 exkifint_v3.exe
+    if exkifint_in_extracted.exists():
+        exkifint_in_extracted.unlink()  # unlink 用于删除文件
+        print(f"Deleted temporary tool: {exkifint_in_extracted}")
+
+    # 尝试删除 extracted 文件夹（如果为空）
+    try:
+        EXTRACTED_DIR.rmdir()  # rmdir 用于删除空目录
+        print(f"Deleted empty directory: {EXTRACTED_DIR}")
+    except OSError:
+        print(f"Warning: Directory {EXTRACTED_DIR} is not empty and was not deleted.")
+        print("         (This might be normal if the tool created new files).")
+```
+
+然后祈祷 CatSystem2 引擎可以识别不加密的 `.int` 了。由于懒的拆 `pcm_xxx`，因此尝试直接把所有音频都封成一个 `update04.int`（因为 update 数字越大优先级越高），然后很华丽地失败了：_找不到游戏所需的文件。请将游戏光碟放入光驱并重新启动。_ 因此只好按照原路径封回去：
+
+```sh
+set -euxo pipefail
+
+mkdir -p output
+makeint="Z:/cs2_core_v401_1280x720/マスター作成/MakeInt.exe"
+extracted="Z:/test/extracted"
+
+# 循环从 a 到 z 的所有小写字母
+for letter in {a..z}; do
+    # ${letter} 是小写字母 (例如: a)
+    # ${letter^^} 是将其转换为大写 (例如: A)
+    "$makeint" "output/pcm_${letter}.int" "${extracted}/${letter^^}_*.ogg"
+done
+
+$makeint output/pcm_xx.int "$extracted/XX_*.ogg"
+$makeint output/pcm_yy.int "$extracted/YY_*.ogg"
+$makeint output/pcm_tag.int "$extracted/*.tag"
+```
+
+怀着忐忑的心打开游戏，成功！CatSystem2 引擎可以识别不加密的 `.int`！那么 CatSystem2 引擎的语音加速就算是完成了。
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结
