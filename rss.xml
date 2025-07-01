@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 29 Jun 2025 02:35:39 GMT</pubDate>
-    <lastBuildDate>Sun, 29 Jun 2025 02:35:39 GMT</lastBuildDate>
+    <pubDate>Tue, 01 Jul 2025 02:20:52 GMT</pubDate>
+    <lastBuildDate>Tue, 01 Jul 2025 02:20:52 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>原理</category>
@@ -776,9 +776,10 @@
 <h2>盒模型</h2>
 <p>前端基础概念了。</p>
 <ul>
-<li>标准盒模型：<code>box-sizing: content-box</code>，content = size；border 和 padding 向外扩展</li>
-<li>IE 盒模型：<code>box-sizing: border-box</code>，content = size - border - padding，可以从外部统一大小。</li>
+<li>标准盒模型：<code>box-sizing: content-box</code>，content = size；border 和 padding 向外扩展，浏览器默认值。</li>
+<li>IE 盒模型：<code>box-sizing: border-box</code>，content = size - border - padding，可以从外部统一大小，直观，方便编排。</li>
 </ul>
+<p>现在有一种实践是全局所有组件全部使用 IE 盒模型，我觉得还是比较有道理的，特别是前端初学者可以通过 IE 盒避开不少坑。</p>
 <div style="position: relative; width: 400px">
   <!-- Margin Layer -->
   <div style="background-color: #e8f4f8; padding: 20px; text-align: center; border: 2px dashed #a8d1dc">
