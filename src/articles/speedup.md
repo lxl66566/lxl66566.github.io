@@ -618,6 +618,8 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 
 `.int` 类型的封包。直接放到 GARbro 里还需要给出压缩文件参数，密码 + 密钥，可以通过 exe 路径提取。
 
+### 白昼夢の青写真
+
 我尝试使用原版 `白昼夢の青写真.exe` 提取参数，失败；使用 `cs2.exe` 或 `cs2_cn.exe` 提取成功，密钥为 `D9A3FB64`。成功解包后，前 105 个文件是 `.ogg`，后面有各种后缀的文件，例如 phh 等，但是二进制都以 `OggS` 开头，所以文件名像是还套了一层凯撒密码。这倒是无所谓，我的音量均衡是靠抓二进制的 header 判断文件类型的，而加速也可以自定义各种后缀，要匹配上都是没问题的。
 
 问题出在 GARbro 没法封包 int 类型存档：_尚不支持创建加密压缩文件。_ 因此最好还是另寻出路。
@@ -641,7 +643,6 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 ```py
 import shutil
 import subprocess
-import sys
 from pathlib import Path
 
 # exkifint_v3.exe 的完整路径
@@ -656,54 +657,28 @@ TARGET_FOLDER = Path(r"Z:/test")
 # extracted 文件夹的路径
 EXTRACTED_DIR = Path("./extracted")
 EXTRACTED_DIR.mkdir(exist_ok=True)
-print(f"Created or found directory: {EXTRACTED_DIR}")
 
-# --- 准备工作：验证路径是否存在 ---
-if not EXKIFINT_EXE_PATH.is_file():
-    print(f"错误：工具路径不存在或不是一个文件 -> {EXKIFINT_EXE_PATH}")
-    sys.exit(1)
-if not GAME_EXE_PATH.is_file():
-    print(f"错误：游戏EXE路径不存在或不是一个文件 -> {GAME_EXE_PATH}")
-    sys.exit(1)
-if not TARGET_FOLDER.is_dir():
-    print(f"错误：目标文件夹不存在或不是一个目录 -> {TARGET_FOLDER}")
-    sys.exit(1)
+assert (
+    EXKIFINT_EXE_PATH.is_file() and GAME_EXE_PATH.is_file() and TARGET_FOLDER.is_dir()
+)
 
 # --- 1. 搜索文件夹下的所有 .int 文件 ---
 int_files = list(TARGET_FOLDER.glob("*.int"))
-if not int_files:
-    print("在目标文件夹中没有找到 .int 文件，脚本结束。")
-    exit(0)
+assert int_files, "在目标文件夹中没有找到 .int 文件，脚本结束。"
+print(f"Found {len(int_files)} .int file(s)")
 
-print(f"Found {len(int_files)} .int file(s):")
-for f in int_files:
-    print(f"  - {f.name}")
-print("")
-
-# --- 2. 复制工具到 extracted 文件夹 ---
-print("--- Step 2: Setting up the 'extracted' directory ---")
-
-# 定义工具在 'extracted' 目录中的路径
-exkifint_in_extracted = EXTRACTED_DIR / EXKIFINT_EXE_PATH.name
-
-# 复制工具
-shutil.copy(EXKIFINT_EXE_PATH, exkifint_in_extracted)
-print(f"Copied {EXKIFINT_EXE_PATH.name} to {EXTRACTED_DIR}\n")
-
-# 使用 try...finally 确保无论成功还是失败，清理步骤都会执行
-try:
-    # --- 3. 处理每一个 .int 文件 ---
-    print("--- Step 3: Processing each .int file ---")
-    for int_file_path in int_files:
+def unpack_int_to(int_file_path: Path, dest_dir: Path):
+    exkifint_in_extracted = dest_dir / EXKIFINT_EXE_PATH.name
+    try:
+        # 复制工具到文件夹
+        shutil.copy(EXKIFINT_EXE_PATH, exkifint_in_extracted)
         int_filename = int_file_path.name
         print(f"Processing {int_filename}...")
 
-        # 移动 .int 文件到 extracted 目录
-        dest_int_path = EXTRACTED_DIR / int_filename
+        # 移动 .int 文件到目录
+        dest_int_path = dest_dir / int_filename
         shutil.move(int_file_path, dest_int_path)
-        print(f"  - Moved {int_filename} to {EXTRACTED_DIR}")
 
-        # 准备并执行命令
         # 命令格式: exkifint_v3.exe xxx.int 游戏.exe
         # 使用 shell=False 时，命令应为列表形式
         command = [
@@ -711,63 +686,39 @@ try:
             str(dest_int_path.name),  # 在 extracted 目录中执行，所以用相对文件名
             str(GAME_EXE_PATH),
         ]
-
-        print(f"  - Running command: {' '.join(command)}")
-
         # 在 extracted 目录中执行命令，这样工具更容易找到文件
         # check=True 会在命令返回非零退出码时抛出异常
-        result = subprocess.run(
+        subprocess.run(
             command,
             shell=False,
             check=True,
-            cwd=EXTRACTED_DIR,  # 设置工作目录为 extracted
-            capture_output=True,  # 捕获输出
-            text=True,  # 以文本形式解码输出
+            cwd=dest_dir,
         )
+    except Exception as e:
+        print(f"\n发生错误: {e}")
+    finally:
+        # 将所有 .int 文件移回原位
+        # 再次搜索 extracted 目录以防万一
+        processed_int_files = list(dest_dir.glob("*.int"))
+        if processed_int_files:
+            print("Moving .int files back to original location...")
+            for int_file in processed_int_files:
+                original_path = TARGET_FOLDER / int_file.name
+                shutil.move(int_file, original_path)
 
-        print(f"  - Command output:\n{result.stdout}")
-        print(f"Successfully processed {int_filename}.\n")
+        # 删除复制的 exkifint_v3.exe
+        if exkifint_in_extracted.exists():
+            exkifint_in_extracted.unlink()  # unlink 用于删除文件
+            print(f"Deleted temporary tool: {exkifint_in_extracted}")
 
-except FileNotFoundError as e:
-    print(f"\n错误：命令执行失败，找不到程序。请检查路径。 {e}")
-except subprocess.CalledProcessError as e:
-    print(f"\n错误：处理文件时发生错误。工具返回了非零退出码 {e.returncode}")
-    print(f"  - 命令: {' '.join(e.cmd)}")
-    print(f"  - 输出:\n{e.stdout}")
-    print(f"  - 错误输出:\n{e.stderr}")
-except Exception as e:
-    print(f"\n发生未知错误: {e}")
-finally:
-    # --- 4. 清理工作 ---
-    print("\n--- Step 4: Cleaning up ---")
-
-    # 将所有 .int 文件移回原位
-    # 再次搜索 extracted 目录以防万一
-    processed_int_files = list(EXTRACTED_DIR.glob("*.int"))
-    if processed_int_files:
-        print("Moving .int files back to original location...")
-        for int_file in processed_int_files:
-            original_path = TARGET_FOLDER / int_file.name
-            shutil.move(int_file, original_path)
-            print(f"  - Moved {int_file.name} back to {TARGET_FOLDER}")
-
-    # 删除复制的 exkifint_v3.exe
-    if exkifint_in_extracted.exists():
-        exkifint_in_extracted.unlink()  # unlink 用于删除文件
-        print(f"Deleted temporary tool: {exkifint_in_extracted}")
-
-    # 尝试删除 extracted 文件夹（如果为空）
-    try:
-        EXTRACTED_DIR.rmdir()  # rmdir 用于删除空目录
-        print(f"Deleted empty directory: {EXTRACTED_DIR}")
-    except OSError:
-        print(f"Warning: Directory {EXTRACTED_DIR} is not empty and was not deleted.")
-        print("         (This might be normal if the tool created new files).")
+for int_file_path in int_files:
+    unpack_int_to(int_file_path, EXTRACTED_DIR)
 ```
 
 然后祈祷 CatSystem2 引擎可以识别不加密的 `.int` 了。由于懒的拆 `pcm_xxx`，因此尝试直接把所有音频都封成一个 `update04.int`（因为 update 数字越大优先级越高），然后很华丽地失败了：_找不到游戏所需的文件。请将游戏光碟放入光驱并重新启动。_ 因此只好按照原路径封回去：
 
 ```sh
+# 使用该脚本的前提是 ogg 音频和 pcm 文件名有对应关系。
 set -euxo pipefail
 
 mkdir -p output
@@ -787,6 +738,14 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 ```
 
 怀着忐忑的心打开游戏，成功！CatSystem2 引擎可以识别不加密的 `.int`！那么 CatSystem2 引擎的语音加速就算是完成了。
+
+> 后面的 [ISLAND](#island) 语音加速实践中陈述了一个更简单的封包方法。
+
+### ISLAND
+
+同样一套流程，但是 ISLAND 的 `pcm_?.int` 和其中的 ogg 没有对应关系，所以还是改改程序，把每个 pcm 封包的音频都隔离开来比较好。
+
+**吗？** CatSystem2 启动会检测各种 `pcm_?.int`，并不意味着 `updatexx.int` 就不能用啊。于是我在保留 pcm 的前提下将所有加速后语音打成了 `updatexx.int`，打开游戏，语音成功加速了！这样编程的难度又降低了。
 
 </template>
 </SpeedupList>

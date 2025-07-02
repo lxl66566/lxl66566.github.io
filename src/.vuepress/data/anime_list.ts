@@ -2,6 +2,12 @@ import { AnimeItemInputType } from "../definition/anime_type.js";
 
 const original_list: AnimeItemInputType[] = [
   {
+    name: "死亡笔记",
+    duration: {
+      start: "2025-07-02",
+    },
+  },
+  {
     name: "天才麻将少女",
     order: 1,
     duration: {
@@ -118,6 +124,7 @@ const original_list: AnimeItemInputType[] = [
     name: "玻璃之花与崩坏的世界",
     duration: {
       start: "2024-04-04",
+      end: "2024-04-04",
     },
   },
   {

@@ -31,6 +31,11 @@ tag:
 :::
 
 <AnimeList>
+<template #死亡笔记>
+
+- 2 集，笔记的机关有汽油，而汽油点燃需要混合氧气所以无法密封，肯定会挥发到空气中，这样反而让刑警更容易找到。
+
+</template>
 <template #天才麻将少女>
 
 ### 1
@@ -192,6 +197,10 @@ tag:
 - 日在校园
 - School Days
 - angel beats
+- 夏日重现
+- 来自新世界
+- 钢之炼金术师
+- 比宇宙更远的地方
 
 <script lang="ts" setup>
 import AnimeList from "@AnimeList";

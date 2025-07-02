@@ -61,6 +61,7 @@ tag:
 - [x] [wd: info words online in cli, written in rust](https://github.com/lxl66566/wordinfo)
 - [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
 - [ ] galgame engine
+  - [ ] 自动生成可视化线路攻略
 - [x] [bin package manager（release installer）](https://github.com/lxl66566/bpm)
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 - [ ] osu beatmap downloader, support stable and lazer

@@ -52,6 +52,13 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
+    names: ["心之形心之色心之声"],
+    valid_name: "krkr_xp3_enc",
+    engine: "krkr",
+    save_format: "xp3(encrypted)",
+    speedupable: true,
+  },
+  {
     names: ["樱之刻", "FLIP * FLOP 系列", "终之空Remake"],
     valid_name: "Artemis",
     engine: "Artemis Engine",
@@ -136,14 +143,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["心之形心之色心之声"],
-    valid_name: "krkr_xp3_enc",
-    engine: "krkr",
-    save_format: "xp3(encrypted)",
-    speedupable: true,
-  },
-  {
-    names: ["白昼夢の青写真"],
+    names: ["白昼夢の青写真", "ISLAND"],
     valid_name: "CatSystem2",
     engine: "CatSystem2",
     save_format: "int",

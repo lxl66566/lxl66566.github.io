@@ -22,12 +22,15 @@ root 手机的最大目的就是装模块与需要 root 权限的软件，获取
 
 安装后可以先隐藏自身，装一下推荐的 _Systemless Hosts_ 模块。
 
+- [BuiltIn-BusyBox](https://github.com/Magisk-Modules-Alt-Repo/BuiltIn-BusyBox)：你也不想进了 root shell 后发现什么都干不了吧。
 - [LSPosed](https://github.com/LSPosed/LSPosed/releases/latest) (Zygisk)
 - [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases)：隐藏 root。
 - [uperf](https://github.com/yc9559/uperf)：性能调度。设为 powersave 模式。
   - 在 `perapp_powermode.txt` 中添加音游等游戏性能调度为 `fast`，**然后需要在 `cur_powermode.txt` 中设为 `auto` 才会启用**。
   - 可能会对音游造成影响。不要安装其推荐的两个模块；需要在 `/sdcard/Android/yc/uperf/uperf.json` 中设置 `sfanalysis` 为 `"enable": false`
 - [神仙自动救砖](https://wwkh.lanzout.com/iWtRC1e7q9wf) | [bak](https://drive.google.com/file/d/14yctRZDZRrN-PaNsnnRn6d9uzbnMYglo/view?usp=sharing)（**闭源！**）：不好找，做了私链备份
+- [AndroidZram](https://github.com/lxl66566/AndroidZram)：我写（改）的模块，为系统提供 zram 内存压缩，使可用内存增大。
+- [TrickyStore](https://github.com/5ec1cff/TrickyStore)：用于抵抗 root 检测。[相关文章](https://www.reddit.com/r/Magisk/comments/1gegtr4/tutorial_using_trickystore_with_zygisk_next_for/)
 
 ## LSPosed
 
@@ -35,6 +38,7 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
 
 - WeXposed
 - QQ
+  - **注意！** QQ 在 2024-2025 实施了更加严格的模块检测，使用这些模块有被强制登出甚至封号风险！
   - [QAuxiliary](https://github.com/cinit/QAuxiliary)：强大的 QQ 自定义模块，比 QXposed 好用，必装
   - ~~QXposed~~ 新版 QQ 不能用，久不更新，算是死了，
   - [QQ 瘦身](https://github.com/KitsunePie/QQCleaner)
@@ -56,18 +60,18 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
 
 通过 play 商店安装：
 
-- [shizuku](https://github.com/RikkaApps/Shizuku)
 - [雹](https://github.com/aistra0528/Hail)：冻结应用，详情参考[禁用软件](./settings.md#禁用软件)章节。（拒绝使用同功能闭源商业化的 _冰箱_）
 - App ops（**闭源！**）：权限管理。闭源功能有限，可使用 _App Manager_ 代替。（但是没有批量终究不方便）
 - 咖啡因：禁止手机自动息屏。如果是没有 root 的 ColorOS 的话可以用这个。
 
 通过 Github 安装：
 
-- [AdAway](https://github.com/AdAway/AdAway)：改 host 屏蔽广告。经常需要手动添加屏蔽项。
-    <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
+- [shizuku](https://github.com/RikkaApps/Shizuku)
 - [App Manager](https://github.com/MuntashirAkon/AppManager)：开源的 root 软件管理，可以查看运行中服务，可以冻结应用，控制权限。
 - [Neo Backup](https://github.com/NeoApplications/Neo-Backup)：批量备份，带数据，可定时
 - [HyperCeiler](https://github.com/ReChronoRain/HyperCeiler)：Make **HyperOS/MIUI** Great Again!
+- [一些去广告应用](../../farraginous/recommend_packages.md#去广告)
+- [代理应用](../proxy/proxy_software.md#sing-box-系)
 
 通过其他来源安装：
 

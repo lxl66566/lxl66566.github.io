@@ -781,6 +781,10 @@ const data = [
   { id: "578113", aScore: 8.7, bScore: 5.8, info: "#堕天計画 堕天前アイミュを洗ってあげる本", bak: "https://telegra.ph/コミティア145-234ド-イチリ-堕天前アイミュを洗ってあげる本-中国翻訳-06-10-2" },
   { id: "(ex)", aScore: 6.6, bScore: 6, info: "#精灵 #巨乳", otherlink: "https://exhentai.org/g/3391598/dce3df08f8/", bak: "https://telegra.ph/Croriin-花蜜の庭-異世快楽天-Vol46-中国翻訳-06-10-2" },
   { id: "580255", aScore: 8.2, bScore: 7.6, info: "#纯爱", bak: "https://telegra.ph/いっきづか-きづかかずき-こんやはお楽しみです中国翻訳-DL版-06-22-2" },
+  { id: "580989", aScore: 8.8, bScore: 7.3, info: "#合集 #兄妹 #夜袭" },
+  { id: "518209", aScore: 7.6, bScore: 8.4, info: "#鬼畜 #天然 #睡x" },
+  { id: "573763", aScore: 6.6, bScore: 9.2, order: 1, info: "#异种族 #纯爱" },
+  { id: "581441", aScore: 6.6, bScore: 7.5, order: 2, info: "#异种族 #纯爱" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

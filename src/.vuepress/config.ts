@@ -19,6 +19,9 @@ const temp = defineUserConfig({
     }),
   ],
   shouldPrefetch: false,
+  markdown: {
+    anchor: false,
+  },
 });
 
 // 用于生成组件的别名，以便于直接在 .md 文件中使用组件

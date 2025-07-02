@@ -29,10 +29,10 @@ const original_list: GalItemInputType[] = [
     other_names: ["大図書館の羊飼い"],
     valid_name: "大图书馆的牧羊人",
     use_time: "-6min",
-    playing_status: PlayingStatus.PLAYING,
     order: 1,
     duration: {
       start: "2025-06-12",
+      end: "2025-07-02",
     },
   },
   {
