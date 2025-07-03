@@ -1,1 +1,0 @@
-function t(r){const s=["零","一","二","三","四","五","六","七","八","九"];return Array.from(Array(r).keys()).reduce((e,n)=>{const o=r%10;return o!==0&&e.push(s[o]),r=Math.floor(r/10),e},[]).reverse().join("")}export{t as n};
