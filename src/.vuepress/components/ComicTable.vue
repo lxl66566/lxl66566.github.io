@@ -785,6 +785,7 @@ const data = [
   { id: "518209", aScore: 7.6, bScore: 8.4, info: "#鬼畜 #天然 #睡x" },
   { id: "573763", aScore: 6.6, bScore: 9.2, order: 1, info: "#异种族 #纯爱" },
   { id: "581441", aScore: 6.6, bScore: 7.5, order: 2, info: "#异种族 #纯爱" },
+  { id: "582081", aScore: 8.9, bScore: 4, info: "#蔚蓝档案 #4P #loli", bak: "https://telegra.ph/円つくも-山海経巫女たちの神事が気持ち良すぎる話-ブルーアーカイブ-中国翻訳-07-02" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

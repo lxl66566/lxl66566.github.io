@@ -47,6 +47,10 @@ export type GalItemInputType = {
    */
   order?: number;
   /**
+   * 第几次游玩
+   */
+  nth_time?: number;
+  /**
    * 游玩时长
    */
   use_time?: string;

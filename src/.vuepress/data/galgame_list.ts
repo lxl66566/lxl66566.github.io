@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "ISLAND",
+    all_ages: true,
+    nth_time: 2,
+    duration: {
+      start: "2025-07-02",
+    },
+  },
+  {
     name: "白日梦的构想图",
     other_names: ["白昼夢の青写真"],
     duration: {
@@ -33,6 +41,11 @@ const original_list: GalItemInputType[] = [
     duration: {
       start: "2025-06-12",
       end: "2025-07-02",
+    },
+    score: {
+      story: 4.3,
+      visual: 7.8,
+      program: 5.9,
     },
   },
   {
@@ -1476,7 +1489,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 5.8,
       visual: 8.5,
-      program: 9.9,
+      program: 9.5,
     },
     duration: {
       start: "2020-10-15",
