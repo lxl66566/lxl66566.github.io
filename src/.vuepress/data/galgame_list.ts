@@ -4,6 +4,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "ISLAND",
     all_ages: true,
+    playing_status: PlayingStatus.PLAYING,
     nth_time: 2,
     duration: {
       start: "2025-07-02",
@@ -12,6 +13,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "白日梦的构想图",
     other_names: ["白昼夢の青写真"],
+    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-06-30",
     },
@@ -216,11 +218,16 @@ const original_list: GalItemInputType[] = [
     name: "はるまで、くるる。",
     other_names: ["春开，意遥遥"],
     valid_name: "はるまでくるる",
-    playing_status: PlayingStatus.PLAYING,
     order: 1,
     use_time: "-1min",
     duration: {
       start: "2025-03-06",
+      end: "2025-07-04",
+    },
+    score: {
+      story: 7.1,
+      visual: 4.8,
+      program: 0,
     },
   },
   {
@@ -601,7 +608,7 @@ const original_list: GalItemInputType[] = [
     use_time: "45h53min",
     score: {
       story: 9.3,
-      visual: 5,
+      visual: 5.2,
       program: 7,
     },
     duration: {
@@ -1549,7 +1556,7 @@ const original_list: GalItemInputType[] = [
     use_time: "<11h46min>",
     order: 3,
     score: {
-      story: 7,
+      story: 7.3,
       visual: 7,
       program: 8.5,
     },
@@ -1565,7 +1572,7 @@ const original_list: GalItemInputType[] = [
     use_time: "-",
     order: 2,
     score: {
-      story: 7.5,
+      story: 7.7,
       visual: 7,
       program: 8.5,
     },
@@ -1597,7 +1604,7 @@ const original_list: GalItemInputType[] = [
     use_time: "-",
     order: 1,
     score: {
-      story: 7,
+      story: 7.4,
       visual: 7.2,
       program: 8.5,
     },

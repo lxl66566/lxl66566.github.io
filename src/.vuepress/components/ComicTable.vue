@@ -36,9 +36,9 @@
 <script lang="ts" setup>
 import nhentai from "./nhentai.vue";
 import dtlslong from "./dtlslong.vue";
-import { TwoScoreCompare } from "../definition";
+import { TwoScoreCompare, ComicItemType } from "../definition";
 
-const data = [
+const data: ComicItemType[] = [
   { id: "429153", aScore: 9.4, bScore: 4, info: "今日から悪い子。続" },
   { id: "466069", aScore: 9.6, bScore: 4, info: "今日から悪い子。", bak: "https://telegra.ph/田屋沼屋-たぬま-今日から悪い子-中国翻訳-無修正-DL版-08-01" },
   { id: "554328", aScore: 6, bScore: 8, info: "#调教 #催眠 #caburibbon s.s.s.MONO", bak: "https://telegra.ph/caburibbon-caburi-sssMONO-Chinese-脸肿汉化组無修loli重嵌无修正80P-02-06" },
@@ -383,7 +383,7 @@ const data = [
   { id: "359435", aScore: 7.7, bScore: 6.9, info: "#师生 #睡x", bak: "https://telegra.ph/AC3-きのこのみ-kino-睡眠学習感じすぎちゃう濡れ濡れ微乳少女-中国翻訳-08-03" },
   { id: "359628", aScore: 5.2, bScore: 4.6, info: "#兽耳 #师生", bak: "https://telegra.ph/GW超同人祭-りとるはむれっと-きぃら-先生と私とネコミミパーカー-中国翻訳-08-03" },
   { id: "(ex)", aScore: 7.2, bScore: 8.6, order: 2, info: "#师生", otherlink: "https://exhentai.org/g/1919494/beb3d13b2f/", bak: "https://telegra.ph/squeezecandyheaven-いちはや-あの子は問題児2-中国翻訳-08-03" },
-  { ie: "(ex)", aScore: 9.9, bScore: 6.1, info: "#全彩 #日常 #无文字", otherlink: "https://exhentai.org/g/1926843/16d94a82a8/", bak: "https://telegra.ph/7gao-Rondo-neko-08-03" },
+  { id: "(ex)", aScore: 9.9, bScore: 6.1, info: "#全彩 #日常 #无文字", otherlink: "https://exhentai.org/g/1926843/16d94a82a8/", bak: "https://telegra.ph/7gao-Rondo-neko-08-03" },
   { id: "362085", aScore: 9, bScore: 5.7, order: 2, info: "#兽耳 #女仆 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本2さつ目-中国翻訳-DL版-08-03" },
   { id: "384423", aScore: 5.1, bScore: 6.3, info: "#性转 #魅魔 #兄妹 #纯爱", bak: "https://telegra.ph/Story-Circle-隣-ダウナー系ゲーマー弟が兄さん好き好き妹サキュバスになるまで-中国翻訳-08-03" },
   { id: "522495", aScore: 9.4, bScore: 9.2, info: "#蔚蓝档案 #3P", bak: "https://nhentai.net/g/521374/" },
@@ -786,6 +786,10 @@ const data = [
   { id: "573763", aScore: 6.6, bScore: 9.2, order: 1, info: "#异种族 #纯爱" },
   { id: "581441", aScore: 6.6, bScore: 7.5, order: 2, info: "#异种族 #纯爱" },
   { id: "582081", aScore: 8.9, bScore: 4, info: "#蔚蓝档案 #4P #loli", bak: "https://telegra.ph/円つくも-山海経巫女たちの神事が気持ち良すぎる話-ブルーアーカイブ-中国翻訳-07-02" },
+  { id: "(ex)", aScore: 7.5, bScore: 6, info: "#纯爱", otherlink: "https://exhentai.org/g/3395107/23b4684db3/", bak: "https://telegra.ph/灯恋堂クール系無口な彼女が俺の前でだけエロすぎる中国翻訳-DL版-06-12-2" },
+  { id: "578266", aScore: 6.3, bScore: 7.2, info: "#兽耳 #觉醒 #反杀 #淫魔 #反差 #侍酒", bak: "https://telegra.ph/ひょこ道-ひょころー-ミュカちゃんは断われない-中国翻訳-無修正-DL版-06-11-2" },
+  { id: "578216", aScore: 9.1, bScore: 9.8, info: "#兽耳 #忍者 #捆绑 #调教 #连续绝顶 #武藤まと", bak: "https://telegra.ph/ANCHOR-武藤まと-くのいち狐は主さまに逆らえない-中国翻訳-DL版-06-11-2" },
+  { id: "(ex)", aScore: 8.2, bScore: 4.7, info: "#泳装 #隐蔽性交", otherlink: "https://exhentai.org/g/3425826/7f7e1603d8/", bak: "https://telegra.ph/百済児廿日-処女の微熱-猛暑-中国翻訳-07-03" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

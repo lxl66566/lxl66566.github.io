@@ -122,15 +122,15 @@ const sortedList = computed(() => {
   if (currentSort.value === null || currentSort.value.direction === "none") {
     return defaultSort([...original_list]);
   }
-  return [...original_list].sort((a, b) => {
+  return [...original_list].sort((x, y) => {
     const scoreKey = currentSort.value!.column;
-    const aScore = a.score?.[scoreKey];
-    const bScore = b.score?.[scoreKey];
+    const xScore = x.score?.[scoreKey];
+    const yScore = y.score?.[scoreKey];
     // 处理 undefined 值
-    if (aScore == null && bScore == null) return 0;
-    if (aScore == null) return 1; // undefined 值放到末尾
-    if (bScore == null) return -1;
-    return currentSort.value?.direction === "asc" ? aScore - bScore : bScore - aScore;
+    if (xScore == null && yScore == null) return 0;
+    if (xScore == null) return 1; // undefined 值放到末尾
+    if (yScore == null) return -1;
+    return currentSort.value?.direction === "asc" ? xScore - yScore : yScore - xScore;
   });
 });
 const items_num = computed(() => show_strict.value ? filteredItems.value.filter((item) => !item.not_strict).length : filteredItems.value.length);
