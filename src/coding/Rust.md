@@ -544,7 +544,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | tokio      | 异步       |
 | serde | 序列化 |
 | reqwest[^5]  | 简单网络 |
-| clap       | 命令行工具 |
+| clap / palc | 命令行工具，后者是为了减小二进制体积而使用的 |
 | tempfile | 创建自动销毁的临时文件夹 |
 | rayon | CPU 负载并发 |
 | indicatif | progress bar |

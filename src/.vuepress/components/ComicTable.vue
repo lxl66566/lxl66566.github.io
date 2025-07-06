@@ -790,6 +790,8 @@ const data: ComicItemType[] = [
   { id: "578266", aScore: 6.3, bScore: 7.2, info: "#兽耳 #觉醒 #反杀 #淫魔 #反差 #侍酒", bak: "https://telegra.ph/ひょこ道-ひょころー-ミュカちゃんは断われない-中国翻訳-無修正-DL版-06-11-2" },
   { id: "578216", aScore: 9.1, bScore: 9.8, info: "#兽耳 #忍者 #捆绑 #调教 #连续绝顶 #武藤まと", bak: "https://telegra.ph/ANCHOR-武藤まと-くのいち狐は主さまに逆らえない-中国翻訳-DL版-06-11-2" },
   { id: "(ex)", aScore: 8.2, bScore: 4.7, info: "#泳装 #隐蔽性交", otherlink: "https://exhentai.org/g/3425826/7f7e1603d8/", bak: "https://telegra.ph/百済児廿日-処女の微熱-猛暑-中国翻訳-07-03" },
+  { id: "582622", aScore: 6.6, bScore: 3.6, info: "#还童 #羊羽忍", bak: "https://telegra.ph/Part-K-羊羽忍-ロウヒはムッコとモイモイする-中国翻訳-07-05" },
+  { id: "498376", aScore: 8.9, bScore: 6.3, info: "#兽耳 #按摩 #破处 #武藤まと", bak: "https://telegra.ph/描き下ろしアイドルちゃんはとろけたい白杨X无糖联合汉化-02-26" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -29,6 +29,7 @@ root 手机的最大目的就是装模块与需要 root 权限的软件，获取
   - 在 `perapp_powermode.txt` 中添加音游等游戏性能调度为 `fast`，**然后需要在 `cur_powermode.txt` 中设为 `auto` 才会启用**。
   - 可能会对音游造成影响。不要安装其推荐的两个模块；需要在 `/sdcard/Android/yc/uperf/uperf.json` 中设置 `sfanalysis` 为 `"enable": false`
 - [神仙自动救砖](https://wwkh.lanzout.com/iWtRC1e7q9wf) | [bak](https://drive.google.com/file/d/14yctRZDZRrN-PaNsnnRn6d9uzbnMYglo/view?usp=sharing)（**闭源！**）：不好找，做了私链备份
+- 阿尔法面具一键隐藏模块：[张力丰哒](https://space.bilibili.com/286681435) 的闭源模块。安装该模块会自动安装 Shamiko, Tricky Store, Tricky Store Assistant, Tricky_store 自动更新包名列表, Zygisk Next, Zygisk Maphide 等其他模块。
 - [AndroidZram](https://github.com/lxl66566/AndroidZram)：我写（改）的模块，为系统提供 zram 内存压缩，使可用内存增大。
 - [TrickyStore](https://github.com/5ec1cff/TrickyStore)：用于抵抗 root 检测。[相关文章](https://www.reddit.com/r/Magisk/comments/1gegtr4/tutorial_using_trickystore_with_zygisk_next_for/)
 

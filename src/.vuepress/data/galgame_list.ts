@@ -38,7 +38,7 @@ const original_list: GalItemInputType[] = [
     name: "大图书馆的牧羊人",
     other_names: ["大図書館の羊飼い"],
     valid_name: "大图书馆的牧羊人",
-    use_time: "-6min",
+    use_time: "17h5min",
     order: 1,
     duration: {
       start: "2025-06-12",
