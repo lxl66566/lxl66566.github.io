@@ -67,7 +67,7 @@ export default sidebar({
     },
     {
       text: "语言",
-      children: ["Rust.md", "python.md", "Cpp.md", "shell.md", "java.md", "tsjs.md", "html.md", "csharp.md", "kotlin.md", "clojure.md", "octave.md"],
+      children: ["Rust.md", "Cpp.md", "python.md", "shell.md", "java.md", "tsjs.md", "lua.md", "csharp.md", "kotlin.md", "clojure.md", "octave.md"],
     },
     {
       text: "工具",

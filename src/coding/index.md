@@ -41,13 +41,14 @@ tag:
 4. [general shell script](./shell.md)
 5. [Java](./java.md)
 6. [TypeScript & JavaScript](./tsjs.md)
+7. [lua](./lua.md)
 
 ### ~~预~~放弃学习阶段
 
-6. [C#](./csharp.md)
-7. [kotlin](./kotlin.md)
-8. [Clojure](./clojure.md)
-9. [Octave (FUCK MATLAB)](./octave.md)
+8. [C#](./csharp.md)
+9. [kotlin](./kotlin.md)
+10. [Clojure](./clojure.md)
+11. [Octave (FUCK MATLAB)](./octave.md)
 
 ### 新生语言
 

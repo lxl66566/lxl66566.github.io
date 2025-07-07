@@ -569,6 +569,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | constime | 计算编译期值，用一个非常简单易用的宏 |
 | inquire | 用户命令行交互 |
 | samply | profiler (support flamegraph, [tutorial video](https://www.youtube.com/watch?v=M_EniM_IfnQ&t=210s)) |
+| binrw | 二进制内容的序列化 / 反序列化 [src](https://www.zhihu.com/question/604594191/answer/3121708902) |
 
 [这里](https://blessed.rs/crates)还有一个常用库的列表可以参考。
 
