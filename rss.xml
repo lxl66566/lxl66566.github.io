@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 07 Jul 2025 15:02:45 GMT</pubDate>
-    <lastBuildDate>Mon, 07 Jul 2025 15:02:45 GMT</lastBuildDate>
+    <pubDate>Tue, 08 Jul 2025 15:05:43 GMT</pubDate>
+    <lastBuildDate>Tue, 08 Jul 2025 15:05:43 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -24,11 +24,11 @@
       <link>https://absx.pages.dev/coding/lua.html</link>
       <guid>https://absx.pages.dev/coding/lua.html</guid>
       <source url="https://absx.pages.dev/rss.xml">lua</source>
-      <description>lua 其实我一直不喜欢 lua，感觉很多设计都是一坨屎。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Stylua 包管理器：luarocks，用法和 scoop 相似 其他设置： Stylua 默认使用 tab 作为缩进。要把它改成空格，需要在...</description>
+      <description>lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Stylua 包管理器：luarocks，用法和 scoop 相似 配置： Stylua 默认使用 tab 作为缩进。要把它改成空格，...</description>
       <category>编程</category>
       <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>其实我一直不喜欢 lua，感觉很多设计都是一坨屎。但是现在是工作，不得不学了。</p>
+<p>其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 <a href="/gossip/fuckxxx.html#lua-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="_blank">lua 有多难用</a>。但是现在是工作，不得不学了。</p>
 <h2>安装</h2>
 <ul>
 <li>解释器：lua 或 luajit</li>
@@ -40,9 +40,10 @@
 </li>
 <li>包管理器：luarocks，用法和 scoop 相似</li>
 </ul>
-<p>其他设置：</p>
+<p>配置：</p>
 <ul>
 <li><em>Stylua</em> 默认使用 tab 作为缩进。要把它改成空格，<a href="https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection" target="_blank" rel="noopener noreferrer">需要</a>在项目下创建 <code>.stylua.toml</code>，并写入 <code>indent_type = "Spaces"</code>。</li>
+<li>luarocks 默认将包安装到全局。想要使用其安装的 lua 包，你还需要额外设置一些环境变量：执行 <code>luarocks path --bin</code>，并将 <code>LUA_PATH</code>, <code>LUA_CPATH</code>, <code>PATH</code> 三个环境变量设为输出的值。</li>
 </ul>
 <h2>基础</h2>
 <ul>
@@ -58,7 +59,7 @@
 <li>在交互式 lua 环境中，每一行语句（&gt; 开头）都是一个代码块。也就是说在这些交互式环境中使用 local 定义的变量在后续是访问不了的，因为其生命周期已经结束。</li>
 </ul>
 </li>
-<li>模块化：在某个 lua 文件里最后使用 <code>return xxx</code> 即可暴露变量（可以暴露 local）。然后在其他文件里 <code>local mod = require("filename")</code> 即可，不要包含 <code>.lua</code> 后缀。
+<li>模块化：在某个 lua 文件里最后使用 <code>return xxx</code> 即可暴露变量（可以暴露 local）。然后在其他文件里 <code>local mod = require("folder.filename")</code> 即可，不要包含 <code>.lua</code> 后缀。
 <ul>
 <li>一般常用的模块写法习惯如下（主要取决于团队）：<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">local</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> _M</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = {</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">version</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">0.1</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> _M</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">xxx</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
@@ -68,6 +69,7 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
 </ul>
 </li>
+<li>赋值：lua 默认使用引用赋值。所以就不得不提浅拷贝和深拷贝的概念，在 lua 中要怎么做呢？答：没有这些函数，要自己写。</li>
 </ul>
 <h3>数据类型</h3>
 <p>string, function, boolean, number, nil, table</p>
@@ -92,9 +94,10 @@
 </li>
 <li>table 就是 key-value pairs，里面的值可以没有 key，没 key 的默认从 number 1 开始，类似 Object + Array 结合体。后续将 kv 的 table 称为 map table，数组称为 array table。
 <ul>
+<li>正因为底层是 table，所以下标越界不会报错而是给出 nil。</li>
 <li><code>ipairs(x)</code> 和 <code>pairs(x)</code> 用于取 table 的迭代器。<code>ipairs</code> 专用于迭代数组 table，会忽略所有非 number 的 key。而 <code>pairs</code> 是迭代所有 kv，顺序不定，而且比较慢。</li>
 <li><code>table.unpack(some_table, start, end)</code> 用于解包一个 array table，可以给函数参数或变量赋值。start, end 是 optional，如果不指定就到碰到的第一个 nil 为止。而 <code>table.pack</code> 是反向，还会多加一个 <code>n=length</code> 的 kv。</li>
-<li><code>table.insert(x, [pos ,] value)</code> 用于插入，<code>table.remove(x [, pos])</code> 用于删除， <code>table.concat(x, " ")</code> 用于字符串连接。
+<li><code>table.insert(x, [pos ,] value)</code> 用于插入，<code>table.remove(x [, pos])</code> 用于删除， <code>table.concat(x, " ")</code> 用于字符串连接（只拼值，跳过 kv 对）。
 <ul>
 <li>lua 的 string 是 immutable 的，通过这样可以动态构造 string。</li>
 </ul>
@@ -128,14 +131,22 @@
 <li>字符串连接符 <code>..</code>，数字和 nil 会转为字符串</li>
 </ol>
 </li>
+<li>迭代器：请使用 <a href="https://github.com/luafun/luafun" target="_blank" rel="noopener noreferrer">luafun</a> 三方库。luafun 提供了函数式和对象式的迭代器类型，方便使用。</li>
 </ul>
-<h3>文件操作</h3>
-<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">io.open</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"test.txt"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"r"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
-<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">for</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> line</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> in</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">lines</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">do</span></span>
+<h3>fs 与文件操作</h3>
+<p>文件 io：</p>
+<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">infile</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">io.open</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"input.txt"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"r"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">for</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> line</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> in</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> infile</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">lines</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">() </span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">do</span></span>
 <span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">   print</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">line</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">end</span></span>
-<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">file</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">close</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2>高级</h2>
+<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">infile</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">close</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">local</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> outfile</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">err</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">io.open</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"output.txt"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"w"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">) </span><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- 可以加错误处理</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">if</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> not </span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">outfile</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> then</span></span>
+<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">  outfile</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">write</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">\n</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">end</span></span>
+<span class="line"><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">outfile</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">close</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">()</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>fs：使用 luafilesystem 库。</p>
+<h2>高级</h2>
 <ul>
 <li><code>setmetatable(var1, {__add = myfunc})</code> 可以重写内置的方法
 <ul>
@@ -162,6 +173,25 @@
 </li>
 </ul>
 </li>
+<li>反射：用 debug 库，不过会影响性能。</li>
+<li>协程：lua 的协程依赖于 <code>coroutine.create</code>, <code>coroutine.resume</code>, <code>coroutine.yield</code>，yield 就相当于是 await 点交出控制权一样。
+<ul>
+<li>协程是单线程的，任何时候不会有两个协程同时执行。</li>
+<li>lua 5.2 支持 yield C 函数，5.4 引入协程取消机制。</li>
+<li>没有自带的一个 async 运行时，需要自己手写调度器。如果在用 openresty 等，也可以使用这些框架里的成熟调度器，<code>ngx.thread.spawn</code> 和 <code>ngx.thread.wait</code> 好用多了。</li>
+</ul>
+</li>
+</ul>
+<h3>gc</h3>
+<p>lua 5.4 之前使用的是增量 gc，使用较为细化的标记-清除过程。5.4 添加了分代特性，减少了老年代的扫描频次。</p>
+<p>释放数据的标准做法是将其设为 nil，以便在下一次 gc 将其清理。</p>
+<p>lua 可以通过下面的方式设置弱引用表，弱引用的部分不持有所有权：</p>
+<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic">-- __mode = "k", "v" 或 "kv"，代表哪部份是弱引用</span></span>
+<span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">local</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> weakTable</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">setmetatable</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">({}, {</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">__mode</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"k"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">})</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div><p>根据这些 gc 机制，可以针对性注意，提升性能：</p>
+<ul>
+<li>避免在循环或频繁调用的函数中创建闭包或表</li>
+<li>及时释放</li>
 </ul>
 <h2>typing</h2>
 <p>lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 <a href="https://github.com/andremm/typedlua" target="_blank" rel="noopener noreferrer">typedlua</a> 和一些 fork 到新的 <a href="https://github.com/teal-language/tl" target="_blank" rel="noopener noreferrer">teal</a> 都有。这些 typed 版本都受 ts 启发，语法比较相似。</p>
