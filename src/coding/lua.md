@@ -9,7 +9,7 @@ tag:
 
 # lua
 
-其实我一直不喜欢 lua，感觉很多设计都是一坨屎。但是现在是工作，不得不学了。
+其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 [lua 有多难用](../gossip/fuckxxx.md#lua-有多难用)。但是现在是工作，不得不学了。
 
 ## 安装
 
@@ -19,9 +19,10 @@ tag:
   - Formatter: _Stylua_
 - 包管理器：luarocks，用法和 scoop 相似
 
-其他设置：
+配置：
 
 - _Stylua_ 默认使用 tab 作为缩进。要把它改成空格，[需要](https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection)在项目下创建 `.stylua.toml`，并写入 `indent_type = "Spaces"`。
+- luarocks 默认将包安装到全局。想要使用其安装的 lua 包，你还需要额外设置一些环境变量：执行 `luarocks path --bin`，并将 `LUA_PATH`, `LUA_CPATH`, `PATH` 三个环境变量设为输出的值。
 
 ## 基础
 
@@ -34,7 +35,7 @@ tag:
 - goto：通过 `::somelabel::` 打标签，然后 `goto somelabel`。
 - 作用域：local 是局部变量关键字。创建的变量的生命周期和作用域仅限于它所在的那个代码块。
   - 在交互式 lua 环境中，每一行语句（> 开头）都是一个代码块。也就是说在这些交互式环境中使用 local 定义的变量在后续是访问不了的，因为其生命周期已经结束。
-- 模块化：在某个 lua 文件里最后使用 `return xxx` 即可暴露变量（可以暴露 local）。然后在其他文件里 `local mod = require("filename")` 即可，不要包含 `.lua` 后缀。
+- 模块化：在某个 lua 文件里最后使用 `return xxx` 即可暴露变量（可以暴露 local）。然后在其他文件里 `local mod = require("folder.filename")` 即可，不要包含 `.lua` 后缀。
   - 一般常用的模块写法习惯如下（主要取决于团队）：
     ```lua
     local _M = {version = 0.1}
@@ -43,6 +44,7 @@ tag:
     end
     return _M
     ```
+- 赋值：lua 默认使用引用赋值。所以就不得不提浅拷贝和深拷贝的概念，在 lua 中要怎么做呢？答：没有这些函数，要自己写。
 
 ### 数据类型
 
@@ -67,9 +69,10 @@ string, function, boolean, number, nil, table
     当然，如果需要更进一步控制 split 的次数，那就需要手动 find 了。
   - slice: `string.sub`
 - table 就是 key-value pairs，里面的值可以没有 key，没 key 的默认从 number 1 开始，类似 Object + Array 结合体。后续将 kv 的 table 称为 map table，数组称为 array table。
+  - 正因为底层是 table，所以下标越界不会报错而是给出 nil。
   - `ipairs(x)` 和 `pairs(x)` 用于取 table 的迭代器。`ipairs` 专用于迭代数组 table，会忽略所有非 number 的 key。而 `pairs` 是迭代所有 kv，顺序不定，而且比较慢。
   - `table.unpack(some_table, start, end)` 用于解包一个 array table，可以给函数参数或变量赋值。start, end 是 optional，如果不指定就到碰到的第一个 nil 为止。而 `table.pack` 是反向，还会多加一个 `n=length` 的 kv。
-  - `table.insert(x, [pos ,] value)` 用于插入，`table.remove(x [, pos])` 用于删除， `table.concat(x, " ")` 用于字符串连接。
+  - `table.insert(x, [pos ,] value)` 用于插入，`table.remove(x [, pos])` 用于删除， `table.concat(x, " ")` 用于字符串连接（只拼值，跳过 kv 对）。
     - lua 的 string 是 immutable 的，通过这样可以动态构造 string。
   - slice：lua 没有 table 取 slice 的方法，需要自己循环 insert。
   - 通过 `#` 获取 table/string 长度。对于含有 nil 的 table，获取的长度是[未定义的](https://www.runoob.com/w3cnote/lua-table-length.html)！
@@ -86,16 +89,26 @@ string, function, boolean, number, nil, table
 - 隐式转换：
   1. 算数运算中，字符串，bool 和 nil 会转为数字
   2. 字符串连接符 `..`，数字和 nil 会转为字符串
+- 迭代器：请使用 [luafun](https://github.com/luafun/luafun) 三方库。luafun 提供了函数式和对象式的迭代器类型，方便使用。
 
-### 文件操作
+### fs 与文件操作
+
+文件 io：
 
 ```lua
-file = io.open("test.txt", "r")
-for line in file:lines() do
+infile = io.open("input.txt", "r")
+for line in infile:lines() do
    print(line)
 end
-file:close()
+infile:close()
+local outfile, err = io.open("output.txt", "w") -- 可以加错误处理
+if not outfile then
+  outfile:write("\n")
+end
+outfile:close()
 ```
+
+fs：使用 luafilesystem 库。
 
 ## 高级
 
@@ -118,6 +131,29 @@ file:close()
   ```
   - 对于实例，使用 `.` 则只是获取 static 的函数本身，而可以用 `:` 代表调用其成员函数，这是一个语法糖。
     - 但是内置类型的函数，例如 `table.remove` 不能直接用 `t:remove` 这样调用！究其原因，table 不是类，而是一个内置库。如果需要用 `:`，要设置元表：`setmetatable(t, { __index = table })`。
+- 反射：用 debug 库，不过会影响性能。
+- 协程：lua 的协程依赖于 `coroutine.create`, `coroutine.resume`, `coroutine.yield`，yield 就相当于是 await 点交出控制权一样。
+  - 协程是单线程的，任何时候不会有两个协程同时执行。
+  - lua 5.2 支持 yield C 函数，5.4 引入协程取消机制。
+  - 没有自带的一个 async 运行时，需要自己手写调度器。如果在用 openresty 等，也可以使用这些框架里的成熟调度器，`ngx.thread.spawn` 和 `ngx.thread.wait` 好用多了。
+
+### gc
+
+lua 5.4 之前使用的是增量 gc，使用较为细化的标记-清除过程。5.4 添加了分代特性，减少了老年代的扫描频次。
+
+释放数据的标准做法是将其设为 nil，以便在下一次 gc 将其清理。
+
+lua 可以通过下面的方式设置弱引用表，弱引用的部分不持有所有权：
+
+```lua
+-- __mode = "k", "v" 或 "kv"，代表哪部份是弱引用
+local weakTable = setmetatable({}, {__mode = "k"})
+```
+
+根据这些 gc 机制，可以针对性注意，提升性能：
+
+- 避免在循环或频繁调用的函数中创建闭包或表
+- 及时释放
 
 ## typing
 

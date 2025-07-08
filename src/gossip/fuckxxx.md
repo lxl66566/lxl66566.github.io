@@ -515,3 +515,27 @@ ColorOS 是目前一加的默认系统。
 - 闲鱼小法庭加载慢，有每日限额，并且限额的应用是在看完案件，打完字审判完成后，提交前弹出，等于是白看了一个案件。
 - 反馈的选项不够多。
 - 各种恶意标价不卖的，没有提供反制措施。
+
+## lua 有多难用
+
+语言设计：
+
+- lua 很多细节要另辟蹊径，不用常规编程语言的那一套。
+- 写 end 太丑了，不如写 `{}`
+- 动态 require，有人就会构造运行时字符串进行 require，把静态分析的工具全部炸烂
+- nil 有一大堆的坑，比如最经典的 array table 设 nil 在计算长度时会爆炸
+- 没有可用的 typing
+- std 里缺了非常多的函数
+
+包管理：
+
+- 虽然包管理器是唯一的 luarocks，但是整个包管理方式也是一坨大便。
+  - 很多包是 C 动态库，需要当场编译；但是又没使用任何可复现构建导致一大堆基础包构建都是失败的。例如本人亲历 [luasocket issue](https://github.com/lunarmodules/luasocket/issues/429)。
+  - 还有的包依赖莫名其妙的东西，例如有的包依赖整个几百 MB 的 openssl。。
+  - [feat] luarocks 在 windows 上不会自动改 path，想正常用需要自己去写环境变量。但是 windows 人已经习惯让软件给自己设好变量了。
+
+## openresty 有多难用
+
+- 安装：
+  - windows：`resty -e "..."` 指令必须在 openresty 安装目录执行，不能在任意目录执行。否则会报 `nginx: [alert] failed to load the 'resty.core' module (https://github.com/openresty/lua-resty-core); ensure you are using an OpenResty release from https://openresty.org/en/download.html (reason: ...luarocks\current\rocks\share\lua\5.4\resty\core\base.lua:31: ngx_stream_lua_module 0.0.7 required) in Z:\Temp\ZTUSK4zJCF/conf/nginx.conf:105`
+  - linux：`pacman -S openresty` 安装后，/usr/bin 里甚至找不到任何相关可执行文件。（不过这应该算打包者的锅，不是它的）

@@ -3,6 +3,7 @@ date: 2023-10-11
 icon: regular fa-circle-xmark
 category:
   - 经历
+  - 问题
 tag:
   - 桌面端
   - 工具
