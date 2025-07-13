@@ -16,13 +16,30 @@ tag:
 - 解释器：lua 或 luajit
 - Vscode 插件：
   - lsp: _Lua - sumneko_
-  - Formatter: _Stylua_
+  - Formatter: _Lua - sumneko_ 或 _Stylua_
 - 包管理器：luarocks，用法和 scoop 相似
 
 配置：
 
-- _Stylua_ 默认使用 tab 作为缩进。要把它改成空格，[需要](https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection)在项目下创建 `.stylua.toml`，并写入 `indent_type = "Spaces"`。
 - luarocks 默认将包安装到全局。想要使用其安装的 lua 包，你还需要额外设置一些环境变量：执行 `luarocks path --bin`，并将 `LUA_PATH`, `LUA_CPATH`, `PATH` 三个环境变量设为输出的值。
+- _Lua - sumneko_：sumneko 是神。
+  - 开启所有能开的 type/hint：
+    ```json
+    "Lua.hint.enable": true,
+    "Lua.hint.arrayIndex": "Enable",
+    "Lua.hint.await": true,
+    "Lua.hint.setType": true,
+    "Lua.hint.paramName": "All",
+    "Lua.hint.paramType": true,
+    "Lua.hint.awaitPropagate": true,
+    "Lua.type.checkTableShape": true,
+    "Lua.type.inferParamType": true,
+    "Lua.type.weakNilCheck": false,
+    "Lua.type.weakUnionCheck": false,
+    ```
+    可惜的是这里面不支持 if 语句的表达式进行 inlay hint，我觉得这还是比较重要的，因为 lua 比较算符会执行隐式转换。
+  - 如果你在用其他提供 lua 库的框架（例如 OpenResty），可以[安装插件](https://github.com/LuaLS/lua-language-server/wiki/Addons)，以提供更好的 type hint。最简单的插件安装是 `Ctrl + P` 打开 `Lua: Open Addon Manager`，然后点点点即可。
+- _Stylua_ 默认使用 tab 作为缩进。要把它改成空格，[需要](https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection)在项目下创建 `.stylua.toml`，并写入 `indent_type = "Spaces"`。
 
 ## 基础
 
@@ -136,6 +153,8 @@ fs：使用 luafilesystem 库。
   - 协程是单线程的，任何时候不会有两个协程同时执行。
   - lua 5.2 支持 yield C 函数，5.4 引入协程取消机制。
   - 没有自带的一个 async 运行时，需要自己手写调度器。如果在用 openresty 等，也可以使用这些框架里的成熟调度器，`ngx.thread.spawn` 和 `ngx.thread.wait` 好用多了。
+- 没有 RAII，所以各种 cosocket 都要手动关，否则就泄漏。
+- 错误处理：正常来说使用 `pcall(func, ...args)` 进行包装，相当于一个 try-catch。或者直接使用 safe 库，不要抛出错误而是正常返回错误，例如 `cjson.safe`。
 
 ### gc
 
