@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 13 Jul 2025 15:03:28 GMT</pubDate>
-    <lastBuildDate>Sun, 13 Jul 2025 15:03:28 GMT</lastBuildDate>
+    <pubDate>Thu, 17 Jul 2025 15:04:51 GMT</pubDate>
+    <lastBuildDate>Thu, 17 Jul 2025 15:04:51 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -24,7 +24,7 @@
       <link>https://absx.pages.dev/coding/lua.html</link>
       <guid>https://absx.pages.dev/coding/lua.html</guid>
       <source url="https://absx.pages.dev/rss.xml">lua</source>
-      <description>lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 包管理器：luarocks，用法和 scoop 相似 配置： luarocks 默认将包...</description>
+      <description>lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko（优先）或 Stylua 包管理器：luarocks，用法和 scoop 相似 配置： luarocks 默...</description>
       <category>编程</category>
       <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -35,7 +35,7 @@
 <li>Vscode 插件：
 <ul>
 <li>lsp: <em>Lua - sumneko</em></li>
-<li>Formatter: <em>Lua - sumneko</em> 或 <em>Stylua</em></li>
+<li>Formatter: <em>Lua - sumneko</em>（优先）或 <em>Stylua</em></li>
 </ul>
 </li>
 <li>包管理器：luarocks，用法和 scoop 相似</li>
@@ -93,6 +93,8 @@
 <ul>
 <li>string：
 <ul>
+<li>lua string 包含了长度信息，获取长度是 O1 的。</li>
+<li>字符串不可变。</li>
 <li><code>[[ xxx ]]</code> 为 raw string，更高级的还有 <code>[=[ [[ xxx ]] ]=]</code></li>
 <li>split:<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">function</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> split</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#ABB2BF;--shiki-dark-font-style:italic">str</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#383A42;--shiki-light-font-style:inherit;--shiki-dark:#ABB2BF;--shiki-dark-font-style:italic">sep</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">)</span></span>
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  if</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> sep</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> == </span><span style="--shiki-light:#986801;--shiki-dark:#D19A66">nil</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> then</span></span>
@@ -112,6 +114,7 @@
 <li>table 就是 key-value pairs，里面的值可以没有 key，没 key 的默认从 number 1 开始，类似 Object + Array 结合体。后续将 kv 的 table 称为 map table，数组称为 array table。
 <ul>
 <li>正因为底层是 table，所以下标越界不会报错而是给出 nil。</li>
+<li>table 初始化可以使用 <code>local a = { b = 5, }</code>，但是如果 key 不是一个合法的变量字符串就需要用 <code>["asd,123"]</code> 这种形式，中括号 + 引号。</li>
 <li><code>ipairs(x)</code> 和 <code>pairs(x)</code> 用于取 table 的迭代器。<code>ipairs</code> 专用于迭代数组 table，会忽略所有非 number 的 key。而 <code>pairs</code> 是迭代所有 kv，顺序不定，而且比较慢。</li>
 <li><code>table.unpack(some_table, start, end)</code> 用于解包一个 array table，可以给函数参数或变量赋值。start, end 是 optional，如果不指定就到碰到的第一个 nil 为止。而 <code>table.pack</code> 是反向，还会多加一个 <code>n=length</code> 的 kv。</li>
 <li><code>table.insert(x, [pos ,] value)</code> 用于插入，<code>table.remove(x [, pos])</code> 用于删除， <code>table.concat(x, " ")</code> 用于字符串连接（只拼值，跳过 kv 对）。
@@ -168,6 +171,7 @@
 <li><code>setmetatable(var1, {__add = myfunc})</code> 可以重写内置的方法
 <ul>
 <li>在所有方法里，<code>__index</code> 又是最常用的一个，这就相当于用 <code>var1.xxx</code> 时就会拿到 key 为 xxx 的 value。</li>
+<li>让 table 变为 readonly 可以加一个 <code>__newindex = function() error("no modification allowed") end</code>。</li>
 </ul>
 </li>
 <li>面向对象：高级的 table<div class="language-lua line-numbers-mode" data-highlighter="shiki" data-ext="lua" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">local</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> MyClass</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> = {}</span></span>
@@ -200,6 +204,7 @@
 </li>
 <li>没有 RAII，所以各种 cosocket 都要手动关，否则就泄漏。</li>
 <li>错误处理：正常来说使用 <code>pcall(func, ...args)</code> 进行包装，相当于一个 try-catch。或者直接使用 safe 库，不要抛出错误而是正常返回错误，例如 <code>cjson.safe</code>。</li>
+<li>很多实践中会在 lua 文件最上方声明很多 local 函数，这个做法的目的是将 _G 表中的函数变为局部变量，以达到更快的调用，也可以防止不小心修改了全局变量。</li>
 </ul>
 <h3>gc</h3>
 <p>lua 5.4 之前使用的是增量 gc，使用较为细化的标记-清除过程。5.4 添加了分代特性，减少了老年代的扫描频次。</p>
@@ -211,6 +216,13 @@
 <ul>
 <li>避免在循环或频繁调用的函数中创建闭包或表</li>
 <li>及时释放</li>
+</ul>
+<h3>ffi</h3>
+<p>lua 的 ffi 开销比想象的要小。lua 不同类型的开销如下：</p>
+<ul>
+<li>number：几乎为 0</li>
+<li>string：传入几乎为 0，接收需要一次拷贝</li>
+<li>table：不能直接传，需要手动构建成 C struct。该构建阶段有开销。</li>
 </ul>
 <h2>typing</h2>
 <p>lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 <a href="https://github.com/andremm/typedlua" target="_blank" rel="noopener noreferrer">typedlua</a> 和一些 fork 到新的 <a href="https://github.com/teal-language/tl" target="_blank" rel="noopener noreferrer">teal</a> 都有。这些 typed 版本都受 ts 启发，语法比较相似。</p>
