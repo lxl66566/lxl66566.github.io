@@ -81,6 +81,10 @@ caddy 默认将日志输出 stderr，可以用 `journalctl` 查看。但也可�
 
 Nginx 采用 Master-Worker 模型，唯一的 Master 线程控制所有 Worker 线程对数据进行处理。每个 Worker 内部都有一个基于 event loop 的 async runtime，可以对大量连接进行处理。
 
+## [Angie](https://github.com/webserver-llc/angie)
+
+Nginx 的 fork，支持 HTTP/3 和自动 acme 更新 证书。
+
 ## 遇到的问题
 
 ### caddy 无法建立连接

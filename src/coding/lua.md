@@ -16,7 +16,7 @@ tag:
 - 解释器：lua 或 luajit
 - Vscode 插件：
   - lsp: _Lua - sumneko_
-  - Formatter: _Lua - sumneko_ 或 _Stylua_
+  - Formatter: _Lua - sumneko_（优先）或 _Stylua_
 - 包管理器：luarocks，用法和 scoop 相似
 
 配置：
@@ -68,6 +68,8 @@ tag:
 string, function, boolean, number, nil, table
 
 - string：
+  - lua string 包含了长度信息，获取长度是 O1 的。
+  - 字符串不可变。
   - `[[ xxx ]]` 为 raw string，更高级的还有 `[=[ [[ xxx ]] ]=]`
   - split:
     ```lua
@@ -87,6 +89,7 @@ string, function, boolean, number, nil, table
   - slice: `string.sub`
 - table 就是 key-value pairs，里面的值可以没有 key，没 key 的默认从 number 1 开始，类似 Object + Array 结合体。后续将 kv 的 table 称为 map table，数组称为 array table。
   - 正因为底层是 table，所以下标越界不会报错而是给出 nil。
+  - table 初始化可以使用 `local a = { b = 5, }`，但是如果 key 不是一个合法的变量字符串就需要用 `["asd,123"]` 这种形式，中括号 + 引号。
   - `ipairs(x)` 和 `pairs(x)` 用于取 table 的迭代器。`ipairs` 专用于迭代数组 table，会忽略所有非 number 的 key。而 `pairs` 是迭代所有 kv，顺序不定，而且比较慢。
   - `table.unpack(some_table, start, end)` 用于解包一个 array table，可以给函数参数或变量赋值。start, end 是 optional，如果不指定就到碰到的第一个 nil 为止。而 `table.pack` 是反向，还会多加一个 `n=length` 的 kv。
   - `table.insert(x, [pos ,] value)` 用于插入，`table.remove(x [, pos])` 用于删除， `table.concat(x, " ")` 用于字符串连接（只拼值，跳过 kv 对）。
@@ -131,6 +134,7 @@ fs：使用 luafilesystem 库。
 
 - `setmetatable(var1, {__add = myfunc})` 可以重写内置的方法
   - 在所有方法里，`__index` 又是最常用的一个，这就相当于用 `var1.xxx` 时就会拿到 key 为 xxx 的 value。
+  - 让 table 变为 readonly 可以加一个 `__newindex = function() error("no modification allowed") end`。
 - 面向对象：高级的 table
   ```lua
   local MyClass = {}
@@ -155,6 +159,7 @@ fs：使用 luafilesystem 库。
   - 没有自带的一个 async 运行时，需要自己手写调度器。如果在用 openresty 等，也可以使用这些框架里的成熟调度器，`ngx.thread.spawn` 和 `ngx.thread.wait` 好用多了。
 - 没有 RAII，所以各种 cosocket 都要手动关，否则就泄漏。
 - 错误处理：正常来说使用 `pcall(func, ...args)` 进行包装，相当于一个 try-catch。或者直接使用 safe 库，不要抛出错误而是正常返回错误，例如 `cjson.safe`。
+- 很多实践中会在 lua 文件最上方声明很多 local 函数，这个做法的目的是将 \_G 表中的函数变为局部变量，以达到更快的调用，也可以防止不小心修改了全局变量。
 
 ### gc
 
@@ -173,6 +178,14 @@ local weakTable = setmetatable({}, {__mode = "k"})
 
 - 避免在循环或频繁调用的函数中创建闭包或表
 - 及时释放
+
+### ffi
+
+lua 的 ffi 开销比想象的要小。lua 不同类型的开销如下：
+
+- number：几乎为 0
+- string：传入几乎为 0，接收需要一次拷贝
+- table：不能直接传，需要手动构建成 C struct。该构建阶段有开销。
 
 ## typing
 

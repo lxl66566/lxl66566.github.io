@@ -42,11 +42,9 @@ const original_list: BookItemInputType[] = [
   {
     name: "死人经",
     h_level: HLevel.LITE,
-    reading_status: {
-      kind: "在读",
-    },
     duration: {
       start: "2024-12-12",
+      end: "2025-07-17",
     },
   },
   {

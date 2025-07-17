@@ -68,6 +68,7 @@ umount /mnt/windows
   6. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
 - 更新 ArchWSL：从[wsldl](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
 - 更新内核：WSL 的内核版本较低，可以通过 [WSL2-Linux-Kernel-Rolling](https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling) 更换更高版本内核。
+  - 这里更推荐 [xanmod-kernel-WSL2](https://github.com/Locietta/xanmod-kernel-WSL2) 这个内核，有 zswap 支持。zswap 的开启方法可以参考 [this comment](https://github.com/microsoft/WSL/discussions/10862#discussioncomment-13504238)。
 
 @tab TermuxArch
 
