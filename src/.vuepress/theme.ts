@@ -96,8 +96,7 @@ export default hopeTheme({
   },
   plugins: {
     // 禁用滚动自动更新 url anchor，以支持 #:~:text=xxx 的链接格式
-    // 但是代价是没有 toc 目录，我无法接受
-    // activeHeaderLinks: true,
+    activeHeaderLinks: true,
     blog: {
       excerptLength: 1,
     },
