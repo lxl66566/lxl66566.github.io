@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 18 Jul 2025 15:49:23 GMT</pubDate>
-    <lastBuildDate>Fri, 18 Jul 2025 15:49:23 GMT</lastBuildDate>
+    <pubDate>Tue, 22 Jul 2025 15:16:27 GMT</pubDate>
+    <lastBuildDate>Tue, 22 Jul 2025 15:16:27 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -205,6 +205,7 @@
 <li>没有 RAII，所以各种 cosocket 都要手动关，否则就泄漏。</li>
 <li>错误处理：正常来说使用 <code>pcall(func, ...args)</code> 进行包装，相当于一个 try-catch。或者直接使用 safe 库，不要抛出错误而是正常返回错误，例如 <code>cjson.safe</code>。</li>
 <li>很多实践中会在 lua 文件最上方声明很多 local 函数，这个做法的目的是将 _G 表中的函数变为局部变量，以达到更快的调用，也可以防止不小心修改了全局变量。</li>
+<li>lua 支持尾递归，只要是 <code>return func(...);</code> 的形式。</li>
 </ul>
 <h3>gc</h3>
 <p>lua 5.4 之前使用的是增量 gc，使用较为细化的标记-清除过程。5.4 添加了分代特性，减少了老年代的扫描频次。</p>
@@ -698,10 +699,15 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20250702 后日谈只有日，After 只有 f 20250609 我很讨厌下拉列表会被滚轮切换这个 UI 设计，滑动页面时经常误触。设计出这玩意的得下地狱。 20250607 记错 hire 意思的我：哦，原来 hire 和 fire 就差一个字母欸。 舍友：这很 hifi。 20250515 把电钢琴和震动器/电击器结合起来应该是一个...</description>
+      <description>2025 20250722 我们每一秒都完全地拥有自由意志，每一分钟都看似拥有自由意志，每一小时都比较拥有自由意志，而到了每一天，每个星期，似乎又不怎么拥有自由意志了。 ——edmond 20250702 后日谈只有日，After 只有 f 20250609 我很讨厌下拉列表会被滚轮切换这个 UI 设计，滑动页面时经常误触。设计出这玩意的得下地狱。 2...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20250722</h2>
+<p>我们每一秒都完全地拥有自由意志，每一分钟都看似拥有自由意志，每一小时都比较拥有自由意志，而到了每一天，每个星期，似乎又不怎么拥有自由意志了。</p>
+<div style="text-align:right">
+<p>——<a href="https://www.zhihu.com/question/19888447/answer/1930799480401293785" target="_blank" rel="noopener noreferrer">edmond</a></p>
+</div>
 <h2>20250702</h2>
 <p>后日谈只有日，After 只有 f</p>
 <h2>20250609</h2>
