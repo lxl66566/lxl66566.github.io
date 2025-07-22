@@ -1047,3 +1047,4 @@ python -m pip install --upgrade pip --user
 10. [Dive-into-cpython](https://github.com/Chang-LeHung/dive-into-cpython)
 11. [再也别问 Singleton 了好吗？](https://frostming.com/2025/singleton/)
 12. [14 Advanced Python Features - Edward Li's Blog](https://blog.edward-li.com/tech/advanced-python-features/)
+13. [fstrings.wtf](https://fstrings.wtf/)：python fstring quiz

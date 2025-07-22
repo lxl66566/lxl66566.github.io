@@ -335,6 +335,8 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
   ```
   - 但是从其他模块调用 take 时需要 `use <mod_name>::Takable`。
 - [TAIT](https://juejin.cn/post/7302359255330504739)：Trait alias.
+- AFIT：Async Functions in Traits，Rust 1.75 实现了这个语法糖，可以直接在 trait 里使用 async 函数，在 1.75 之前需要用 async-traits crate。
+  - 但是这并不意味着对于 rust >= 1.75 就可以直接去掉 async-traits，因为 AFIT 的 trait 不能用于创建 dyn object。AFIT 解糖后的结果是 `-> impl Future<...>`，其返回值大小未知，违反了 dyn object 需要 Object safe 的原则。而 async-traits 宏的输出是 `Pin<Box<dyn Future>>`，这是大小已知的。
 
 ### dyn object
 
@@ -697,11 +699,27 @@ assert 有 `assert!()` 和 `debug_assert!()` 之分，前者在 release 下仍�
 - 测试中常用的库：
   - serial_test：让指定的测试串行运行。
 
-### cargo bench
+## benchmark
 
-rust 自带的 benchmark。可以参考[这篇文章](https://course.rs/test/benchmark.html)，讲的不错。
+cargo bench 是 rust 自带的 benchmark，但是还在 nightly 阶段。学习可以参考[这篇文章](https://course.rs/test/benchmark.html)，讲的不错。
 
-感觉 `criterion.rs` 并不好用。。毕竟不能写在文件内部做 unit bench，单独出来做成跟 pytest 那样了，我不喜欢。
+criterion 是 rust 界最知名的第三方 benchmark 库，它可以在 stable 下使用，并且有更多的功能，例如其默认自带 3s 的 warming up，随机抽样和稳定的耗时，比 cargo bench 好用。不过也有些缺点，例如不能写在文件内部做 unit bench。一个 criterion 的例子：
+
+```rust
+use criterion::{Criterion, black_box, criterion_group, criterion_main};
+use sha2::{Digest, Sha256};
+fn bench_md5(c: &mut Criterion) {
+    let data = b"hello world";
+    c.bench_function("md5", |b| {
+        b.iter(|| {
+            black_box(md5::compute(data));
+        })
+    });
+}
+fn bench_sha256(c: &mut Criterion) {...}
+criterion_group!(benches, bench_md5, bench_sha256);
+criterion_main!(benches);
+```
 
 ## 用户界面
 

@@ -160,6 +160,7 @@ fs：使用 luafilesystem 库。
 - 没有 RAII，所以各种 cosocket 都要手动关，否则就泄漏。
 - 错误处理：正常来说使用 `pcall(func, ...args)` 进行包装，相当于一个 try-catch。或者直接使用 safe 库，不要抛出错误而是正常返回错误，例如 `cjson.safe`。
 - 很多实践中会在 lua 文件最上方声明很多 local 函数，这个做法的目的是将 \_G 表中的函数变为局部变量，以达到更快的调用，也可以防止不小心修改了全局变量。
+- lua 支持尾递归，只要是 `return func(...);` 的形式。
 
 ### gc
 
