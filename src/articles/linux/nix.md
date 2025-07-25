@@ -14,7 +14,13 @@ tag:
 
 在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL 里尝尝鲜。而 WSL 终究无法发挥出 Nix 的特色。于是熬到了考完试当晚，我就开始安装 NixOS 了。
 
+之后由于换台式机，有半年没有再用过 NixOS；后来由于有在多个设备上安装 Linux 的需求，就在 7 月中下旬又捡起了 NixOS，并且大幅改了配置。
+
 ## NixOS 安装
+
+::: tabs
+
+@tab 首次安装
 
 安装我看的是[NixOS 中文](https://nixos-cn.org/tutorials/installation/Subsystem.html)。
 
@@ -24,7 +30,7 @@ NixOS 的安装比我想象的要折磨得多。原以为装过 Arch 的我已�
 
 首先，我[缩了 ArchLinux 的分区大小](./basic.md#调整大小)，踩了一次 [cfdisk 的坑](./problem.md#cfdisk-操作分区)。而后下载了 NixOS 的图形化安装程序，用 ventoy 引导启动，一切正常。然而在安装引导的分区时我发现，图形化界面没有提供 btrfs 分区，只提供 ext4。于是我停止使用图形化界面，改用里面的 konsole 终端。结果 channel update 时无法正常重启某些服务（`xe-daemon.service: NewCachedXenstore error: Cannot locate xenbus dev path...`）。我猜测这是图形界面导致的问题，于是我重新打开 arch，下载了 minimal iso，这里面还有一个[好玩的小插曲](./problem.md#你的复制是真正的复制)。
 
-果然进了 minimal ~~有一种回家的感觉~~，并且确实没有重启服务失败的问题了。一番鼓捣，总结出一些重要规律：
+果然进了 minimal iso ~~有一种回家的感觉~~，并且确实没有重启服务失败的问题了。一番鼓捣，总结出一些规律：
 
 - 碰到 `HTTP error 200 (curl error: Stream error in the HTTP/2 framing layer)` 不要管，后台会重试。（说到底，code 200 还报 error 是我没想到的）
 - 如果 `denpendency fail to build`，换个源重新试。
@@ -45,6 +51,14 @@ sudo: a password is required
 - 日后刷到了[一篇博文](https://blog.lzc256.com/posts/recovering-sudo-in-nixos/)，描述了另一个人是如何解决此问题的。我感觉这更像是 nixos 的 bug 而不是内核不一致。
 
 这回重启就正常了，也不知道是其中的哪次 install 尝试起了作用。于是我成功进入系统开始激情编辑配置。
+
+@tab NixOS-WSL
+
+由于许多配置都在 NixOS，而上班必须用 WSL（问就是某个公司软件不提供 Linux 版，而项目要用 Linux 跑），之前用 ArchWSL 不够爽，因此试着用一下 NixOS-WSL。（刚好摸摸鱼）
+
+经过了配置 feature 化改造，现在想要筛选出不需要在我的这个设备上的配置非常简单。
+
+:::
 
 ### 后记
 
@@ -85,6 +99,21 @@ sudo: a password is required
 
 还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[1](https://github.com/TsubakiDev/nixos-config) [2](https://github.com/ryan4yin/nix-config) [3](https://codeberg.org/shitpostalotl/nixos) [4](https://github.com/wimpysworld/nix-config) [5](https://github.com/jackdbd/nix-config) [6](https://github.com/nmasur/dotfiles) [7](https://github.com/oo-infty/nixos-configurations) [8](https://github.com/ccicnce113424/nixos-config) [9](https://github.com/sn0wm1x/os)
 
+### 基础
+
+2025 年 AI 已经非常强大，语法问题完全可以开 online search 问 AI。
+
+- `inherit x y;` = `x=x;y=y;`
+- `//` 用于两个配置的合并，**右边覆盖左边**。
+- 最常用的一些判断条件：`mkDefault` 和 `mkForce` 修改合并优先级，`mkBefore` `mkAfter` 修改 list 合并顺序，`mkIf` 条件控制某些属性的有和无，`optional` 根据条件返回 null 或 `[x]`，而 `optionals` 返回 null 或 x。
+
+### 常用命令
+
+```sh
+nix-prefetch-url <url>                  # fetch 并输出 sha256。在打包时经常用到。
+nix-collect-garbage -d                  # 删除所有配置的所有旧版本，并 GC。（彻底清理）
+```
+
 ## 工具
 
 - [nix-index](https://github.com/nix-community/nix-index)：找包位置。**实际上并不好用**，因为
@@ -100,17 +129,19 @@ sudo: a password is required
   - 主要也就看 Homepage 和 Source，分别对应项目 README 和 打包 nix 源码
 - <https://search.nixos.org/options>：查找设置项
 - <https://home-manager-options.extranix.com/>：查找 home-manager 中的设置项
-- <https://noogle.dev/>：nix 语言学习查找
+- ~~<https://noogle.dev/>：nix 语言学习查找~~（其实很多定义都缺了，很捞）
 - <https://nur.nix-community.org/>：NUR 包
 - [Nix 落絮](https://luoxu.torus.icu/)
 
-### 其他资源
+### 其他
 
-- [x to nix](https://xtonix.tei.su/)：将 json，xml，yaml 配置转为 nix 配置。
+- [x to nix](https://xtonix.tei.su/)：将 json，xml，yaml 配置转为 nix 配置。（但是没啥必要，因为可以通过 `lib.importJSON` 或者其他相关函数自动转。已经有 json 就真没必要硬塞到 nix 里吧。）
 
 ## 配置
 
 [我的配置仓库](https://github.com/lxl66566/nixos-config)
+
+202507 第二次入坑 NixOS 时，我将整个配置重新拆成类似 Rust feature gate 的形式，符合我的 [tag 论](../../gossip/va_view.md#tag-论)。这样我就可以在各种系统上方便地组合 feature，以定制最符合我的需求的配置。
 
 ### linter / formatter
 
@@ -121,12 +152,18 @@ nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的�
 
 ### 显卡驱动
 
+::: tabs
+
+@tab NVIDIA
+
 官方给出了比较详细的 NixOS 显卡驱动教程([NixOS Manual - Nvidia](https://nixos.wiki/wiki/Nvidia))，看就完了。我认为还存在一些缺点：
 
 1. 有些复杂，例如双显卡需要手动查总线并写入 hardware-configuration.
 2. prime 功能有点残缺，官方给出的 example 里只有在启动时选择不同的启动项以应对外带和接电源两种情况，而不能动态调整性能模式：正常情况下应该是在游戏启动时启用显卡而在未游戏时关闭。
 
 还有我自己[折腾](#后记)后想说的注意事项：使用 `hardware.nvidia.open = true;`，使用官方内核。
+
+:::
 
 ### 拼音输入法
 
@@ -182,6 +219,8 @@ ps. 根据[群友描述](https://t.me/nixos_zhcn/477206)，只需要将 KDE 配�
 然后被 rime 党吹的有点心动，想试试 rime。刚好 ryan4yin 佬[就是 rime + 小鹤](https://github.com/ryan4yin/nix-config/tree/main/overlays)，于是我便直接开抄配置。可能是 overlays 哪出了问题，rebuild 的时候并没有把数据移到 rimedata，我也百思不得其解。后来手动移过去试了一下，发现真难用啊（包括快捷键啥都不懂）。于是滚回了 fcitx5-chinese-addon。
 
 `fcitx5-configtool` 里双拼键盘下的“管理自定义词组”是坏的，点不开。我也懒得修了，把以前 archlinux 位于 `~/.local/share/fcitx5/pinyin/customphrase` 的词库搬出来，拿到 home-manager 里 source 一下就好了（需要 [重启 fcitx5](https://wiki.archlinux.org/title/Fcitx5#Emoji_show_abnormally_in_the_candidate_box)：在 bash 里跑 `` kill `ps -A | grep fcitx5 | awk '{print $1}'` && fcitx5& ``），也符合 nixos 的原则。
+
+后来我不再使用任何 overlays，并且完全 fork 了自己的配置，才正式入坑了 Rime。[相关文章](../input_method.md#rime)
 
 ### 代理
 
@@ -244,6 +283,8 @@ nix gaming 还有过不去的一关就是性能释放。。我这台电脑[风�
 
 ### 快照
 
+::: detalis archived
+
 NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，合理猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。`nixos-enter` 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。
 
 在 nixos 上倒没有频繁打快照的必要，因为只要我有一个正常的快照，恢复后就可以从最新的配置文件 rebuild 回去（快照在这里起到的作用可能是 nixos-enter 的补充，使我能够使用盘里的缓存进行 rebuild），因此我选择不使用自动快照软件例如 snapper，而是手打。
@@ -257,7 +298,9 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 
 但是我还没有尝试过快照的恢复，等用到再更新吧。
 
-ps. 理论上确实没必要为 `/nix` 打快照；我现在的解法是放一个 `minimal.nix` 作为崩溃的恢复，由于软件不多，重装也能快速装好。
+:::
+
+理论上确实没必要为 `/nix` 打快照；我现在的解法是放一个 `minimal.nix` 作为崩溃的恢复，由于软件不多，重装也能快速装好。
 
 ### root on tmpfs
 
