@@ -283,7 +283,7 @@ nix gaming 还有过不去的一关就是性能释放。。我这台电脑[风�
 
 ### 快照
 
-::: detalis archived
+::: details archived
 
 NixOS 官方的图形界面安装镜像并没有提供 btrfs 的选项，合理猜测大部分人安装都是用的 ext4 分区，因此 btrfs 的资料应该不多。况且 NixOS 本身就是一个强可复现系统，按理来说并不需要快照作为保护系统的手段。然而可复现是一回事，可复现的难易度又是一回事。`nixos-enter` 的缺陷、 minimal 镜像的折磨、外加 NVIDIA 驱动频繁崩溃，促使我用快照保护系统的安全。
 

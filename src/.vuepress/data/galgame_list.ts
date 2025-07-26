@@ -14,6 +14,7 @@ const original_list: GalItemInputType[] = [
     name: "白日梦的构想图",
     other_names: ["白昼夢の青写真"],
     playing_status: PlayingStatus.PLAYING,
+    use_time: "-1h",
     duration: {
       start: "2025-06-30",
     },

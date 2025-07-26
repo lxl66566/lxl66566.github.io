@@ -11,7 +11,7 @@ category:
 
 ## 简介
 
-上海在读大学生，热爱编程，更爱摆烂
+上海~~在读大学生~~互联网牛马，热爱编程，更爱摆烂
 
 ## 个人标签
 
@@ -45,9 +45,7 @@ category:
 
 ## 我的爱好
 
-建议前往 _爱好_ 版块查看。
-
-重度电脑使用者，目前不玩任何手游。
+建议前往导航栏 _爱好_ 版块查看。
 
 ### 以前曾喜欢
 
@@ -88,8 +86,7 @@ category:
 - 一般情况，不愿意打电话吵别人，也不喜欢被响铃打扰。
 - 夜行者，电子设备常年低亮度 + 黑夜模式。
 - 喜欢吃糖与吃辣。
-
-更多细节参见[详细回答](#更详细回答)。
+- [其他](#更详细回答)
 
 ## 社交
 
@@ -101,8 +98,6 @@ telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src
 
 ## 音乐
 
-[我的音乐频道](https://t.me/absolutexsmusic) | [我的网易云音乐歌单（out of date）](https://music.163.com/playlist?id=3098200457&userid=2061039950) <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span>
-
-主张切割歌单与好听的音游曲：但是在我的音乐频道中是混合的。
+[我的音乐频道](https://t.me/absolutexsmusic) | ~~[我的网易云音乐歌单（out of date）](https://music.163.com/playlist?id=3098200457&userid=2061039950)~~ <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span>
 
 ##### [更详细回答](../hide/personal_details.md)

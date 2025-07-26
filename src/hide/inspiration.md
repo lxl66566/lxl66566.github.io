@@ -121,7 +121,7 @@ tag:
 - [ ] rust easy context like tokio/compio do.
 - [ ] 明日方舟视频自动去暂停
 - [ ] SNP's Not Pydantic，回归原始，拒绝[隐性假设](https://t.me/withabsolutex/2338)
-- [ ] fish commit
+- [x] touchfish commit
 - [x] ~~windows simple zstd~~ 遇到了[亿些麻烦](https://t.me/withabsolutex/2378)。后来基于更好的 dwarfs 写了个 ([windows-dwarfs-tools](https://github.com/lxl66566/windows-dwarfs-tools))
 - [ ] strdb，基于 string 的关系型 db，git 友好。
 
@@ -202,7 +202,7 @@ tag:
 - [ ] 回测平台（rust，自动收集数据，接口调用）
 - [ ] 发币（合约），构思一个尽可能公平，不会被土狗滥用的模式
 - [ ] 币价监视浮窗
-- [ ] Trump X.com 监视，AI 判断加密货币相关性与积极性，并据此下单。
+- [ ] Trump X.com 监视，LLM 判断加密货币相关性与积极性，并据此下单。
   - 可用 OCR 或支持图片输入的大模型。
 
 ## 文学创作灵感

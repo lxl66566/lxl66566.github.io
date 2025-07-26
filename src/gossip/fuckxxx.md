@@ -526,6 +526,7 @@ ColorOS 是目前一加的默认系统。
 - nil 有一大堆的坑，比如最经典的 array table 设 nil 在计算长度时会爆炸
 - 没有可用的 typing
 - std 里缺了非常多的函数
+- 实践里的错误处理跟 go 一样丑
 
 包管理：
 
@@ -539,3 +540,4 @@ ColorOS 是目前一加的默认系统。
 - 安装：
   - windows：`resty -e "..."` 指令必须在 openresty 安装目录执行，不能在任意目录执行。否则会报 `nginx: [alert] failed to load the 'resty.core' module (https://github.com/openresty/lua-resty-core); ensure you are using an OpenResty release from https://openresty.org/en/download.html (reason: ...luarocks\current\rocks\share\lua\5.4\resty\core\base.lua:31: ngx_stream_lua_module 0.0.7 required) in Z:\Temp\ZTUSK4zJCF/conf/nginx.conf:105`
   - linux：`pacman -S openresty` 安装后，/usr/bin 里甚至找不到任何相关可执行文件。（不过这应该算打包者的锅，不是它的）
+- 虽然以前的性能可能挺好，但是在现在 luajit 打不过 v8 jit 的时代，它的性能并不出众。

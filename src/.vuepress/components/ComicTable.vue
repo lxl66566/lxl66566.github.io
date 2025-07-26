@@ -797,6 +797,15 @@ const data: ComicItemType[] = [
   { id: "583047", aScore: 6.9, bScore: 7, info: "#蔚蓝档案 #婴儿play #隐蔽性交", bak: "https://telegra.ph/COMIC124-HUNGRRRRYqNdEbASeR-棕榈ノ慾-滴ル跫音-ブルーアーカイブ-中国翻訳-07-07" },
   { id: "579077", aScore: 4.1, bScore: 7.8, info: "#触手 #捆绑 #哥布林 #机械奸 #百合", order: 1, bak: "https://telegra.ph/おもちのもち屋-ぬまもち-最強ウィッチが雑魚モンスター達に敗北する話-中国翻訳-06-16-3" },
   { id: "(ex)", aScore: 8.5, bScore: 7.6, info: "#勇者 #冒险 #药物 #巨乳 #快楽天", otherlink: "https://exhentai.org/g/3402734/56091a788a/", bak: "https://telegra.ph/つかこ-ファンタスティックサーガ-COMIC-快楽天ビースト-2025年7月号-中国翻訳-DL版-06-18-2" },
+  { id: "585101", aScore: 9, bScore: 7.8, info: "#偶像大师 #纯爱", bak: "https://telegra.ph/かに家-かにゃぴぃ-ことねハッピーセット-学園アイドルマスター-中国翻訳-DL版-07-19" },
+  { id: "584859", aScore: 6.8, bScore: 5.7, info: "#蔚蓝档案 #温泉 #纯爱", bak: "https://telegra.ph/C105-イキスギ食堂-ツキダシ-ブルーアーカイブ-中国翻訳-07-18" },
+  { id: "585234", aScore: 7.6, bScore: 6.2, info: "#巨乳 #纯爱 #同学 #竞争" },
+  { id: "584354", aScore: 7.6, bScore: 9.8, info: "#触手 #全彩 #反杀 #纯爱", bak: "https://telegra.ph/木葉のあ-Tangled-触手の潜む森-07-15" },
+  { id: "584087", aScore: 8.1, bScore: 9.5, info: "#SM #纯爱", bak: "https://telegra.ph/眉山-ざん-生意気合法ロリ一琉はかなりマゾ-中国翻訳-DL版-07-13" },
+  { id: "526250", aScore: 8.8, bScore: 5.4, info: "#蔚蓝档案 #3P #兽耳" },
+  { id: "579367", aScore: 7, bScore: 8.1, info: "#巨乳 #熟人相认 #异世界 #风俗", bak: "https://telegra.ph/65535あべぬー-赤人-異世界のえっちなお店に来たら元クラスメイトの聖騎士が出てきた話-中国翻訳-DL版-06-18-2" },
+  { id: "574595", aScore: 8.7, bScore: 7.1, order: 3, info: "#富士やま #全彩 #兽耳 #纯爱 ゲーミング彼女" },
+  { id: "543018", aScore: 8.7, bScore: 8, info: "#异世界 #淫魔 #4P" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

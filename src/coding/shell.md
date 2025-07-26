@@ -41,6 +41,7 @@ bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种
   - `${#var}` 是取 len
   - `${var:1:3}` 是取 slice，两边都是闭区间，index 从 0 开始
   - `${var/pat/after}` 是字符串替换
+- bash 的 wildcard 里，`*` 是不会匹配 `.` 开头的隐藏文件的！被坑了。
 
 ## fish
 

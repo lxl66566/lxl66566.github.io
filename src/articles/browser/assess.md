@@ -46,6 +46,7 @@ tag:
   - 不支持 manifest v2，所谓的不支持的做法是：让你先用几天，然后悄无声息地把该扩展直接静默删除。
 - edge 在 archlinux 上就捞的一批了。。黑色主题下到处黑白分不清。
   - 不过也有可能是 kde 配得不太好，我在 nixos 上没看到这个问题。
+- edge 的同步问题很大。随便 google 一下，ms answer 网站上一大堆同步丢数据的，本人也**有幸**[丢过一次重要数据](https://t.me/withabsolutex/2421)。
 
 ### chrome / chromium
 

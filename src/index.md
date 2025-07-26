@@ -38,7 +38,7 @@ category:
 - 图表均带有可拖动时间轴，同时也可聚焦某一曲线以改善观感。
 - 多数页面末尾有 `external` 条目，可以理解为**推荐阅读**
 
-[^2]: _不推荐使用移动端的原因_：大表格观感较差；不支持**加粗字体**；目录不直观；在 [PageSpeed Insights](./farraginous/recommend_websites.md#工具) 上移动端性能得分只有 57，而桌面端为 99；移动端的各类 Webview 浏览器无法享受 PWA 的离线缓存 & 高速加载。
+[^2]: _不推荐使用移动端的原因_：大表格观感较差；不支持**加粗字体**；目录不直观；在 [PageSpeed Insights](./farraginous/recommend_websites.md#工具) 上移动端性能得分只有 57，而桌面端为 99。
 
 ::: details 其他解释说明
 
@@ -59,9 +59,9 @@ category:
 ## 关于博客
 
 - 本站地址（按推荐顺序）[^4]：[absx.pages.dev](https://absx.pages.dev) | [absx.netlify.app](https://absx.netlify.app) | [lxl66566.github.io](https://lxl66566.github.io)
-- 本博客原创文章遵循我的自定义声明：可任意修改、转载、再发布；对于非商业用途，转载可以不注明来源；商业用途则需要标注来源。
+- 本博客原创文章遵循我的自定义声明：**可任意修改、转载、再发布；对于非商业用途，转载可以不注明来源；商业用途则需要标注来源。**
 
-[^4]: github.io 较慢，且**可能**无法加载图片，参考[图床国内无法解析](./blog/withvuepress2.md#图床国内无法解析问题)。
+[^4]: github.io 较慢，且**可能**无法加载图片，参考[图床国内无法解析](./blog/withvuepress2.md#图床国内无法解析问题)。（虽然 cloudflare 也挺慢的）
 
 更多详细信息请前往[关于博客](./blog/index.md)页。
 

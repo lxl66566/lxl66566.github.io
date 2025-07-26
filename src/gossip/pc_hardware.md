@@ -196,7 +196,7 @@ DIY 一台属于自己的电脑，可以说是大多数男生的梦想。我从�
 3. **降频使用**。CPU 默认值 100% 负载时会跑到 95 度撞墙降频，我也不希望 CPU 长时间保持在高温度影响寿命。7950x 本身的性能足够我使用，因此我尝试降频使用。在 AMD Ryzen Master 里先进入高级页面，选到 _Profile1_，调成 _节能模式_ 105W，其他都默认就行，然后应用。就这样，我居然用 65% 功耗跑了 94% 性能（94% 鲁大师得分），满载温度从 95 度 降到了 76 度！满载风扇声也小了很多。
    - 但是千万不要再继续降频到 65W 了[^2]。
    - Curve Optimize 跑了两个小时，给我的 per core OC 居然敢调到 -26，基本都要撞墙了。然后我一重启发现果然又炸了，进系统蓝屏，BIOS 没法动，又只能扣电池。后来乱搞乱搞进了 BIOS 把 Curve Optimize 又调回去了，这才成功开机。**不要碰 AMD Ryzen Master 会变得不幸。**
-   - 一说，AMD Ryzen Master 的设置是系统级的([ref](https://www.reddit.com/r/AMDHelp/comments/jiu5ol/are_ryzen_master_overclocks_permanentchange_bios/))，无法期望在 windows 限制功耗后 linux 上也达到限制功耗效果；但是有一些部分又是可观测可持久的，例如 Curve Optimize 完后可以在 bios 里观测到。
+   - 一说，AMD Ryzen Master 的设置是系统级的([ref](https://www.reddit.com/r/AMDHelp/comments/jiu5ol/are_ryzen_master_overclocks_permanentchange_bios/))，无法期望在 windows 限制功耗后 linux 上也达到限制功耗效果；但是有一些部分又是可观测可持久的，例如 Curve Optimize 完后可以在 bios 里观测到。经过我亲身验证，确认 ryzen master 的设置是硬件级的，换到 linux 后设置仍然生效。因此只要我在某个 AU 硬件上第一次装机我就一定会先装 windows 调参（）
 4. 开启 XMP，免费的内存频率提升。然而我的内存开启 XMP DOCP1 后，系统稳定性受到了影响，有时候切换窗口会卡一阵子，此时 GPU 并没有吃满。所以为了稳定性考虑还是用 DOCP2 吧[^1]。如果 DOCP2 还有问题[^2]，可能就需要手动超，或者干脆放弃超内存了。
    - 开启 XMP 后，记得同时 enable _Memory Context Restore_ 和 _Power Down Enable_ 选项，否则每次开机都会在 DRAM 自检卡很久[^3]。
 5. I 卡有待机功耗问题，需要[一些设置](https://www.cnbeta.com.tw/articles/tech/1328533.htm)。
