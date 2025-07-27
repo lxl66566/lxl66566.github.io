@@ -185,7 +185,7 @@ tag:
   - 默认情况美观度还不错，但是在全屏窗口下反而很丑。
 - ~~开启全局 UTF-8：_设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8..._~~ 实测会导致一些 galgame 乱码。
 - ~~使用 [Win11Debloat](https://github.com/Raphire/Win11Debloat) 移除一些自带软件与组件。~~
-  - 这会有一些 sideeffects，例如使某些终端乱码，win + R 失去记忆，等等。必需谨慎使用。
+  - 这会有一些 sideeffects，例如使某些终端乱码，win + R 失去记忆，等等。必需谨慎使用，或者你知道如何恢复。
 - 使用[O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10)禁用一些非必须功能。但是它的大部分设置项都是没用的，剩下的有用的 [windows 11 轻松设置工具](#小工具) 也能做。
 
 ::::

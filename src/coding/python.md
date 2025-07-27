@@ -568,6 +568,14 @@ for name in file.sheet_names:
 
 虽然 python 有自带的 logging，但是用得多了，每次写项目前起手一长串配置确实有点烦人。所以我现在用 [loguru](https://github.com/Delgan/loguru)，直接 `from loguru import logger` 然后正常用就行，自带彩色输出，配置起来也简单。
 
+### 网络
+
+python 界最常用的网络库 requests 是不支持 async 的！然而网络不能没有 async，因此建议大家可以直接抛弃 request 换用其他的库，这样也符合解耦论。
+
+一个选择是大声对标 requests 的 [grequests](https://github.com/spyoungtech/grequests)，但是我看了一下 README 里的 API，内部 async 但是不在外部暴露，虽然 99% 的网络需求都能通过 batch process 解决，但是不暴露 async 还是不够解耦不够自由。
+
+aiohttp 是一个真正的 async 网络库，甚至同时支持 server/client mode。它暴露所有 async 接口，并且与 python 标准的 asyncio 配合，拥有较高的可扩展性，可以实现复杂需求。要我说缺点的话，那就是线程池 session 对用户不是无感知的，比全局 context poll 要差。
+
 ### 命令行参数
 
 - python 自带了一个 argparse 模块用于命令行 parse。虽然由于有官方支持，这个包是命令行参数 parse 中最泛用的一个，但是用起来还是不够顺手，语法也比较丑。[这里](https://github.com/lxl66566/bpm/blob/d4063a31b8132c6ce19263f16d6f8b959a797017/bpm/cli.py)是一个例子（我写的 bin-package-manager 用的 argparse），足以看出其不直观之处。
@@ -641,7 +649,7 @@ if i.attr("value") == "1":
 
 ## 图像相关
 
-图像相关基本就是 PIL 和 opencv 的天下了。不过能用 PIL 的我都不会用 opencv，因为 opencv binding API 本来就抽象，typing 一坨大便，打包还麻烦。
+图像相关基本就是 PIL 和 opencv 的天下了。不过能用 PIL 的我都不会用 opencv，因为 opencv binding API 本来就抽象，typing 一坨大便，打包还麻烦。把 PIL 的 Image 当成是标准的图像对象是一个符合工程实践的操作。
 
 ::: tabs
 

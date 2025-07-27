@@ -575,7 +575,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 
 [这里](https://blessed.rs/crates)还有一个常用库的列表可以参考。
 
-当然，也有一些**避雷条目，千万不要用下表中的库！**
+当然，也有一些**避雷条目一生黑**：
 
 <!-- prettier-ignore -->
 | 库名 | 吐槽 |
@@ -585,7 +585,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 
 ### clap
 
-一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。
+一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。~~[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。~~
 
 clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到处传参之苦。带来的问题是写测试变得更加困难，因为不同的测试可能有不同的初始参数，而测试是并发的，没法表达不同的 Cli 状态（而且 LazyLock 的话就是只读了）。所以如果 rust 有一个好用的 context 实践的话就好了。
 
@@ -595,11 +595,15 @@ clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到�
 
 创建 Lazy 或 OnceCell 的 static 变量。在 rustc 1.80.0 以前这是 unstable，但是现已 stabilized（`std::sync::LazyLock`）。
 
-### thiserror
+### 错误处理
 
-轻量错误库，用来创建自定义的 error 类型；可以自动 derive From another error。
+rust 界流传着 _bin 用 anyhow，lib 用 thiserror_ 的谚语。它们两个的目的是完全相反的。一个是细化，一个是归一。
 
-不能在两个错误类型中同时 from 同一个 Error。如果确实需要，可能要手动再分 Enum 作为 suberror。
+- anyhow 可以将所有错误归为一类往外抛，并且还有额外信息（context）支持。
+  - anyhow 比较“重”，会增大你的二进制大小。如果你不需要用它的一些额外特性（例如 context），也可以 `type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;`。
+- thiserror 比较轻量，用来细分自定义的 error 类型，可以自动 derive From another error。
+  - 不能在两个错误类型中同时 from 同一个 Error。如果确实需要，可能要手动再分 Enum 作为 suberror。
+- 还有一个比较新的竞争者是 snafu，它的目的类似于 thiserror，但是对于需要 context 的错误外抛具有更简便的写法。
 
 ### serde
 

@@ -10,15 +10,23 @@ tag:
 
 # 安装与配置（NixOS 篇）
 
+::: details 前言
+
 早在去年我便说过我的下一个操作系统很有可能是 NixOS。202405 的 OS 课需要做 PPT 汇报，我的选题是包管理器杂谈，又吹了一波 nix，把我自己心吹得痒痒的。
 
 在考试期间由于压抑的氛围和不情愿的学习，平常想做的事的欲望会被放大许多。但是我预料到 NixOS 的安装肯定会非常折磨（好预测！），所以只在 WSL 里尝尝鲜。而 WSL 终究无法发挥出 Nix 的特色。于是熬到了考完试当晚，我就开始安装 NixOS 了。
 
 之后由于换台式机，有半年没有再用过 NixOS；后来由于有在多个设备上安装 Linux 的需求，就在 7 月中下旬又捡起了 NixOS，并且大幅改了配置。
 
+:::
+
+NixOS 绝对不适合 Linux 新手使用，如果你想尝试 NixOS，请务必对 Linux 的启动流程有一定了解，并具有稳定的代理/网络环境后再尝试。
+
 ## NixOS 安装
 
 ::: tabs
+
+@tab 默认隐藏，切 tab 查看
 
 @tab 首次安装
 
@@ -52,14 +60,6 @@ sudo: a password is required
 
 这回重启就正常了，也不知道是其中的哪次 install 尝试起了作用。于是我成功进入系统开始激情编辑配置。
 
-@tab NixOS-WSL
-
-由于许多配置都在 NixOS，而上班必须用 WSL（问就是某个公司软件不提供 Linux 版，而项目要用 Linux 跑），之前用 ArchWSL 不够爽，因此试着用一下 NixOS-WSL。（刚好摸摸鱼）
-
-经过了配置 feature 化改造，现在想要筛选出不需要在我的这个设备上的配置非常简单。
-
-:::
-
 ### 后记
 
 第二天学校有实践课加上 cs2 出新图，没怎么折腾系统，尝试给电脑[装了个 nvidia 驱动](#显卡驱动)和其他玩意就去睡觉了。
@@ -68,7 +68,7 @@ sudo: a password is required
 
 二分查错过程中我发现每次 install 并不会重新写入 EFI 分区（配置里注释了启动项，但是 grub 菜单并没有消失），因此向群友提问。群友答日常 build 和 install 是不会擦除 EFI 的，只有 gc 时会。但是我并不在系统里，`nixos-enter` 如上文所述，并不能执行 gc 指令。
 
-后来怀疑是内核原因：我换了 zen 内核，按理需要用 dkms 的 NVIDIA 驱动，然而实际用的是 NVIDIA 闭源驱动。。换回原内核又发生了 [EFI 空间不足](./problem.md#efi-空间不足)的惨剧，又折腾许久。等我禁用了 NVIDIA 成功开机，都过了午饭时间了。然后一开机我就去定制了一个 iso，太折磨了。
+后来怀疑是内核原因：我换了 zen 内核，按理需要用 dkms 的 NVIDIA 驱动，然而实际用的是 NVIDIA 闭源驱动。。换回原内核又发生了 [EFI 空间不足](./problem.md#efi-空间不足)的惨剧，又折腾许久。等我禁用了 NVIDIA 成功开机，都过了午饭时间了。然后一开机我就去[定制了一个 iso](#iso-制作)，太折磨了。
 
 下午折腾中文双拼输入法，详见[输入法](#拼音输入法)。
 
@@ -82,6 +82,26 @@ sudo: a password is required
 
 反正现在我摆烂了，看到卡 dmesg 就 sysrq 重启。
 
+@tab 二次入坑
+
+自从我装台式后就没有再用过 NixOS，因为 1. 之前的安装给我带来了很大的心理阴影 2. NixOS 安装需要多次 bootstrap，即使有声明式配置也一点都不简单 3. 大四下我正在享受最后的青春，天天在 windows galgame，确实没有装 NixOS 的动力。因此就这样过了半年。
+
+202507 由于我买了家庭服务器，想装成 nixos 用，于是就重新先在我的主力机上回坑 nixos，调完配置再搞。那台服务器暂时先装了个 windows 调完 Ryzen Master 参数先跑着（）
+
+我先是用我原先的同款配置，果然 nixos-install 时整天报网络 error；不过好在有了经验，知道国内几个镜像源要轮换着用，加之我的回坑大概过了半年不算太久，intel 显卡也不需要什么配置，于是就还算顺利地在主力机上装好了。
+
+但是这是我第一次考虑使用一份配置安装多个 NixOS 主机，原先的屎山配置肯定是要拆的。然后我一咬牙，就花了几天时间把我的 [tag 论](../../gossip/va_view.md#tag-论)设想在我的配置里实现了。拆配置是痛苦的，拆完的成就感是满的；我甚至天天在公司摸鱼读文档拆配置，晚上带回家 rebuild 解决报错，小日子过得还不错。
+
+然后 20250726 把新配置写得差不多了，就在服务器上装好了 NixOS。期间也是切到主力机上改配置改了很多次，因为发现了各种各样的问题，包括 iso 也重做了很多次，笑死。总之没有遇到太多问题。
+
+@tab NixOS-WSL
+
+由于许多配置都在 NixOS，而上班必须用 WSL（问就是某个公司软件不提供 Linux 版，而项目要用 Linux 跑），之前用 ArchWSL 不够爽，因此试着用一下 NixOS-WSL。（刚好摸摸鱼）
+
+经过了配置 feature 化改造，现在想要筛选出不需要在我的这个设备上的配置非常简单。
+
+:::
+
 ## 学习
 
 如何学习 nix 呢？nix 没有强大的 wiki，遇到问题只能到处 google。但是也有一些好的资源。
@@ -90,10 +110,7 @@ sudo: a password is required
 - [NixOS 与 Flakes - thiscute](https://nixos-and-flakes.thiscute.world/zh/preface)：进阶好书
 - [Lan Tian @ Blog](https://lantian.pub/article/modify-website/nixos-why.lantian/)：打包与高级用法
 - [中文 discourse](https://discourse.nixos.org/c/learn/chinese/55) & [telegram group](https://t.me/nixos_zhcn)：可能可以来问问题
-<!-- - 还有些其他的：
-  ::: details 课外阅读
-
-  ::: -->
+- [awesome-nix](https://github.com/nix-community/awesome-nix)：里面也有 for tutorials / developers 的链接。
 
 一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
@@ -104,7 +121,8 @@ sudo: a password is required
 2025 年 AI 已经非常强大，语法问题完全可以开 online search 问 AI。
 
 - `inherit x y;` = `x=x;y=y;`
-- `//` 用于两个配置的合并，**右边覆盖左边**。
+- function 的 `@` 绑定：`bargs@{a, b, ...}:` is equivalent to `{a, b, ...}@bargs:`
+- `//` 用于两个 attrset 的合并，**右边覆盖左边**。
 - 最常用的一些判断条件：`mkDefault` 和 `mkForce` 修改合并优先级，`mkBefore` `mkAfter` 修改 list 合并顺序，`mkIf` 条件控制某些属性的有和无，`optional` 根据条件返回 null 或 `[x]`，而 `optionals` 返回 null 或 x。
 
 ### 常用命令
@@ -306,17 +324,44 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 
 由于大部分内容都是软链接，nixos 上能玩一个很骚的操作：把 root 挂载成 tmpfs。好处是每次重启所有东西都会被清，可以随便运行一些喜欢到处拉屎的软件。
 
-我看的教程是[Lan Tian @ Blog NixOS 系列（四）：“无状态”操作系统](https://lantian.pub/article/modify-computer/nixos-impermanence.lantian/)，结果还是踩了点坑。
+这里面最重要的东西是 impermanence，它就是一个 “mount mount 小工具”，可以将指定文件/文件夹 mount 到指定位置，这样它的修改也会同步到 source，并且比起 softlink 还可以跨子卷/分区。我看的教程是[Lan Tian @ Blog NixOS 系列（四）：“无状态”操作系统](https://lantian.pub/article/modify-computer/nixos-impermanence.lantian/)，结果还是踩了亿点坑。
 
 1. 犯了[官方文档中置顶标红](https://nixos.wiki/wiki/Impermanence)的大忌：**没有设 user 密码**。（之前的 defaultPassword 删掉了）于是进不去系统。快照打的是 `/nix`，但是密码在 `/etc/shadow` 并不归 `/nix` 管；也没法直接改挂载选项把原先的 `/` 挂上，因为 `nixos-enter` 进去[无法 rebuild](#nixos-安装)，`--bootloader` 也是 `nixos-rebuild` 的，`nixos-install` 并没有。
    - 最后还是改挂载选项重新 `nixos-install` 了，得益于使用 home-manager 把我的一大堆个人软件分开，本次 install 并没有花费太多时间。install 完至少能先进系统，再修配置，重启就结束了。
 2. 然后发现我的 `/etc/nixos` 配置本身没有被 impermanence。。。遂从原先的 `/` 里拷贝之，加入 impermanence，rebuild 即可。
+3. 不要把 `/etc/shadow` 或 `/etc/passwd` 加入持久化。我加入以后开不了机，无法登录。
 
 教程中把 `/var` 加入 impermanence，而我更喜欢用 btrfs 子卷管理。由于直接在 `/var` 创建子卷，子卷的 parent 会指向 `/`，所以我进了一次 live cd 创建子卷，保持 `var` 子卷与 `root`、`home` 等同级，然后把东西移过去，重启后写 `hardware-configuration.nix` 然后 rebuild 就行。
 
-之后我还尝试了其他东西，踩了一些坑：
+impermanence 在 NixOS 安装过程中是一个硬性的 bootstrap 来源；你必须成功安装 NixOS 后，才能获取原始的文件，进行持久化。然后教程里你需要手动将对应文件复制到 `/nix/impermanence` 下，这一步在 bootstraping 时也太麻烦了点，我思考以后想出一个好办法：在开启 root on tmpfs 时，将老的 `/` (root) 子卷挂到随便一个什么 `/fakeroot` 上；然后就可以用 impermanence 从 `/fakeroot` 里 mount 文件了，这样省去了手动 copy 文件的这一步骤，在我的配置中只需要修改一个 bool 值就可以自动切 root on tmpfs，将工作量降到了最低，非常舒服。
 
-1. 不要把 `/etc/shadow` 或 `/etc/passwd` 加入持久化。我加入以后开不了机，无法登录。
+### ISO 制作
+
+官方的 ISO（不论 minimal 或图形界面的）都是一坨狗屎，图形界面安装没有 btrfs 而且 rebuild 会 fail，minimal 则是缺少工具（efibootmgr）并且无法匹配我的个人设置（手动挂一大堆 btrfs 子卷实在是有点折磨），所以还是自己做 iso 比较好。我自己做的 iso 有这些需求：
+
+1. 代理支持。如果正常安装 NixOS 的 flake，是没有办法在没有代理的环境成功安装的，如果 iso 没有代理的话就要用 minimal 配置进行一次 bootstrap。有代理的话就可以一次性解决了。
+2. btrfs 相关脚本。我在所有机器上使用同一份 btrfs 配置，但是手动 mount 一大堆子卷实在是太麻烦，因此需要内置一些脚本帮我快速创建并 mount 子卷，这样也方便滚挂了以后进 livecd 修。
+   - 使用 disko 一键分区是方便，但是如果你要在一块盘上装双系统不就挂比了吗？
+3. 其他实用工具，例如 fish shell 等。
+
+制作 iso 可以用下面的方法将本机文件拷贝到镜像系统里：
+
+```
+isoImage.contents = [
+    {
+      source = ./config/absx.dae;
+      target = "/config.dae";
+    }
+];
+```
+
+但是这里有个坑，就是拷贝到的 `/` 位置在镜像里其实是独立的 `/iso` 文件夹，导致了我的 dae service fail。后来将 `dae.configFile = "/iso/config.dae";` 设置后代理才能正常启动。
+
+还有关于 btrfs 脚本，我最开始时是直接写在 fishshell 的 interactiveShellInit 里；但是后来发现脚本写锅了需要修改时，整个 iso 里没有地方可以找到这个脚本内容并修改，这是 fishshell 的问题。没办法，我只好写好 bash 脚本并 source 到 /iso 下的指定位置；后来我直接使用 `pkgs.writeShellApplication` 做成 derivation 了，方便调用，脚本内容也可以在 iso 里 fd 出来修改。
+
+最后我还在构建 iso 时，将整个本机的 nixos 文件夹 source 到了镜像内，方便在 dae 挂了没法 git clone 的时候也可以拿到我的配置（虽然可能过时）进行安装。这里也有 source 时需要排除 .git 文件夹和其他文件夹的问题，免得增加 iso 镜像大小。
+
+做完了这些，现在我的 iso 就得心应手了。iso 定义可以[在配置里找到](https://github.com/lxl66566/nixos-config/blob/main/iso.nix)。
 
 ### 开发环境
 
