@@ -806,6 +806,14 @@ const data: ComicItemType[] = [
   { id: "579367", aScore: 7, bScore: 8.1, info: "#巨乳 #熟人相认 #异世界 #风俗", bak: "https://telegra.ph/65535あべぬー-赤人-異世界のえっちなお店に来たら元クラスメイトの聖騎士が出てきた話-中国翻訳-DL版-06-18-2" },
   { id: "574595", aScore: 8.7, bScore: 7.1, order: 3, info: "#富士やま #全彩 #兽耳 #纯爱 ゲーミング彼女" },
   { id: "543018", aScore: 8.7, bScore: 8, info: "#异世界 #淫魔 #4P" },
+  { id: "586411", aScore: 8.4, bScore: 7.8, info: "#纯爱 #巨乳 #射精管理 #学妹" },
+  { id: "586114", aScore: 7.2, bScore: 9.4, order: 1, info: "#无漏点 #长篇 #异世界 #奇幻 神隠しの楽園" },
+  { id: "585132", aScore: 8.3, bScore: 8.7, info: "#反杀 #3P #浴衣" },
+  { id: "585425", aScore: 8.7, bScore: 8, info: "#兽耳 #纯爱 #师生 #loli #天然 #武藤まと お狐ギャルと家庭教師", bak: "https://telegra.ph/武藤まと-お狐ギャルと家庭教師-永遠娘-朧絵巻-17-中国翻訳-07-20" },
+  { id: "579661", aScore: 9, bScore: 7, info: "#精灵 #巨乳 #天然", bak: "https://telegra.ph/Starship-ほうき星-絶対服従-妊活-中国翻訳-無修正-DL版-06-19-2" },
+  { id: "579748", aScore: 7.2, bScore: 3.2, info: "#制服", bak: "https://telegra.ph/TIES-タケイオーキ-ひきこもり幼馴染に襲われたのでヤり返してみた-中国翻訳-DL版-06-20-3" },
+  { id: "579535", aScore: 6.4, bScore: 7, info: "#3P #后宫", bak: "https://telegra.ph/桃汁庭園-桃雲-美術部ハーレム活動日誌-先輩のスランプ解消に協力したら勢いで3Pすることになった話-中国翻訳-DL版-06-19-2" },
+  { id: "579597", aScore: 7, bScore: 3.4, info: "#妮姬", bak: "https://telegra.ph/C105-蒼き星-全白-紅蓮絢爛-勝利の女神NIKKE-中国翻訳-06-19-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
