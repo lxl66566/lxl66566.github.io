@@ -22,3 +22,4 @@ tag:
 1. [如何正确地叫外卖](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/)
 2. [中国的防火长城是如何检测和封锁完全加密流量的](https://gfw.report/publications/usenixsecurity23/zh/)
 3. [ChromeGo - Chrome 一键翻墙包](https://github.com/bannedbook/fanqiang)
+4. [揭示并绕过中国防火长城基于 SNI 的 QUIC 封锁机制](https://gfw.report/publications/usenixsecurity25/zh/)

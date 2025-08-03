@@ -528,12 +528,14 @@ ColorOS 是目前一加的默认系统。
 - std 里缺了非常多的函数
 - 实践里的错误处理跟 go 一样丑
 
-包管理：
+生态：
 
 - 虽然包管理器是唯一的 luarocks，但是整个包管理方式也是一坨大便。
   - 很多包是 C 动态库，需要当场编译；但是又没使用任何可复现构建导致一大堆基础包构建都是失败的。例如本人亲历 [luasocket issue](https://github.com/lunarmodules/luasocket/issues/429)。
   - 还有的包依赖莫名其妙的东西，例如有的包依赖整个几百 MB 的 openssl。。
   - [feat] luarocks 在 windows 上不会自动改 path，想正常用需要自己去写环境变量。但是 windows 人已经习惯让软件给自己设好变量了。
+  - luarocks 在 Windows 上不吃代理，或者是我明明能访问 luarocks.org 但是还是 _Failed downloading https://luarocks.org/manifest-5.4_
+- formatter 一坨大便。sumneko LSP 的 formatter 就跟没有一样很多错不会纠正；Stylua 比较强硬，可选项很少，但是最让我气愤的是它的 column_width 只是一个不强制的建议值！我设了 80 甚至 70，结果一 fmt 还有一大堆超过 80 的，真的难绷。
 
 ## openresty 有多难用
 

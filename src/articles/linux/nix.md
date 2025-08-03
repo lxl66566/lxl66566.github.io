@@ -120,6 +120,7 @@ sudo: a password is required
 
 2025 年 AI 已经非常强大，语法问题完全可以开 online search 问 AI。
 
+- 先阅读 [NixOS 中文 - Nix 语言快速入门](https://nixos-cn.org/tutorials/lang/QuickOverview.html)。
 - `inherit x y;` = `x=x;y=y;`
 - function 的 `@` 绑定：`bargs@{a, b, ...}:` is equivalent to `{a, b, ...}@bargs:`
 - `//` 用于两个 attrset 的合并，**右边覆盖左边**。
