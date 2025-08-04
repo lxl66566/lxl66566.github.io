@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 04 Aug 2025 02:34:09 GMT</pubDate>
-    <lastBuildDate>Mon, 04 Aug 2025 02:34:09 GMT</lastBuildDate>
+    <pubDate>Mon, 04 Aug 2025 16:00:11 GMT</pubDate>
+    <lastBuildDate>Mon, 04 Aug 2025 16:00:11 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -24,7 +24,7 @@
       <link>https://absx.pages.dev/coding/lua.html</link>
       <guid>https://absx.pages.dev/coding/lua.html</guid>
       <source url="https://absx.pages.dev/rss.xml">lua</source>
-      <description>lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko（优先）或 Stylua 包管理器：luarocks，用法和 scoop 相似 配置： luarocks 默...</description>
+      <description>lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua。lua 没有好用的 formatter，详见 。 包管理器：luarocks，用法和 s...</description>
       <category>编程</category>
       <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -35,10 +35,10 @@
 <li>Vscode 插件：
 <ul>
 <li>lsp: <em>Lua - sumneko</em></li>
-<li>Formatter: <em>Lua - sumneko</em>（优先）或 <em>Stylua</em></li>
+<li>Formatter: <em>Lua - sumneko</em> 或 <em>Stylua</em>。lua 没有好用的 formatter，详见 <a href="/gossip/fuckxxx.html#lua-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8" target="_blank">fuckxxx</a>。</li>
 </ul>
 </li>
-<li>包管理器：luarocks，用法和 scoop 相似</li>
+<li>包管理器：luarocks，用法和 scoop 相似，不过也挺难用。</li>
 </ul>
 <p>配置：</p>
 <ul>
@@ -596,6 +596,7 @@
 <li><a href="https://zhuanlan.zhihu.com/p/512615005" target="_blank" rel="noopener noreferrer">孙哥的「算稳梦」：波联储与 USDD</a></li>
 <li><a href="https://www.panewslab.com/zh/articledetails/r1mr2jc4.html" target="_blank" rel="noopener noreferrer">只用“稳定币”，能参与哪些项目的空投？</a></li>
 <li><a href="https://www.panewslab.com/zh/articles/tubnlzao" target="_blank" rel="noopener noreferrer">CEX 与 DEX 的合约算法之战</a></li>
+<li><a href="https://www.panewslab.com/zh/articles/jd80of15" target="_blank" rel="noopener noreferrer">你以为的盈亏，可能都是永续合约算法制造的幻觉</a></li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
