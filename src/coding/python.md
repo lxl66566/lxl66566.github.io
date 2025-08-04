@@ -644,7 +644,7 @@ if i.attr("value") == "1":
 
 用得最多的肯定是 matplotlib，但是它是从 matlab 过来的，而 matlab 的 API 设计是真的捞，写起来难受。所以有一些新的库可以尝试：
 
-- [plotly](https://github.com/plotly/plotly.py)：star 数比 seaborn 高，API 看着还行。
+- [plotly](https://github.com/plotly/plotly.py)：star 数比 seaborn 高，API 看着还行。但是这玩意是基于前端的，图片导出麻烦。
 - [seaborn](https://seaborn.pydata.org/tutorial.html)：基于 matplotlib 包装的高级 API。
 
 ## 图像相关

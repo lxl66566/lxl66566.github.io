@@ -515,6 +515,9 @@ ColorOS 是目前一加的默认系统。
 - 闲鱼小法庭加载慢，有每日限额，并且限额的应用是在看完案件，打完字审判完成后，提交前弹出，等于是白看了一个案件。
 - 反馈的选项不够多。
 - 各种恶意标价不卖的，没有提供反制措施。
+- 寄件只能从住址寄，不能人在公司然后不修改地址的情况下定位寄件。
+- 填写寄件信息（使用菜鸟快递）后，想要修改信息，结果会跳到菜鸟的界面，此时地址簿是菜鸟的，与闲鱼不共用。
+- 上门取件无法给快递员自定义文字备注！只有一些简单选项式寄件要求，无法满足其他需求。
 
 ## lua 有多难用
 
@@ -543,3 +546,4 @@ ColorOS 是目前一加的默认系统。
   - windows：`resty -e "..."` 指令必须在 openresty 安装目录执行，不能在任意目录执行。否则会报 `nginx: [alert] failed to load the 'resty.core' module (https://github.com/openresty/lua-resty-core); ensure you are using an OpenResty release from https://openresty.org/en/download.html (reason: ...luarocks\current\rocks\share\lua\5.4\resty\core\base.lua:31: ngx_stream_lua_module 0.0.7 required) in Z:\Temp\ZTUSK4zJCF/conf/nginx.conf:105`
   - linux：`pacman -S openresty` 安装后，/usr/bin 里甚至找不到任何相关可执行文件。（不过这应该算打包者的锅，不是它的）
 - 虽然以前的性能可能挺好，但是在现在 luajit 打不过 v8 jit 的时代，它的性能并不出众。
+- 测试用的是 perl 那坨屎山，perl 生态又是更大的一坨

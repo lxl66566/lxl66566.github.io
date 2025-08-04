@@ -16,8 +16,8 @@ tag:
 - 解释器：lua 或 luajit
 - Vscode 插件：
   - lsp: _Lua - sumneko_
-  - Formatter: _Lua - sumneko_（优先）或 _Stylua_
-- 包管理器：luarocks，用法和 scoop 相似
+  - Formatter: _Lua - sumneko_ 或 _Stylua_。lua 没有好用的 formatter，详见 [fuckxxx](../gossip/fuckxxx.md#lua-有多难用)。
+- 包管理器：luarocks，用法和 scoop 相似，不过也挺难用。
 
 配置：
 
