@@ -4,10 +4,10 @@ const original_list: GalItemInputType[] = [
   {
     name: "ISLAND",
     all_ages: true,
-    playing_status: PlayingStatus.PLAYING,
     nth_time: 2,
     duration: {
       start: "2025-07-02",
+      end: "2025-08-01",
     },
   },
   {

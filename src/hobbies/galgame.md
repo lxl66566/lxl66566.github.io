@@ -130,6 +130,8 @@ LunaTranslator 使用心得：
 - 总感觉语音像糊住了一样，不知道是不是我的错觉。。
   - 出云 不会说话就不要说……
 - case 3 刚开始那个废弃机场鸽子 CG，太眼熟了，沿用人工鸽世界观。
+- case 0 草，什么煤纹病。而且有点扯，为什么不能长期待在室内，为什么不能夜行，一定要到地下。
+- case 0 又 call 了下牛顿苹果树，哈哈。
 - 汉化跟大便一样，整天玩到一半随机跳一句日文出来。然后 H 部分没有汉化，找了个 B 站排名高的[文章](https://www.bilibili.com/opus/789864934278168592)说自己搞的[H 补丁](https://github.com/KBplayEnthusiast/-Cyanotype_Daydream_H_part_Chinesize)，结果全是机翻，还是非 AI 的上古低质量机翻，作者又不会编程又不会日语，笑了。
   - 我之前也[研究过一点 CatSystem2](../articles/speedup.md#解包与封包)，感觉网上的资料不少，没有理由做得这么烂。
 
