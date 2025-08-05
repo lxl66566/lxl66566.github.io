@@ -131,6 +131,7 @@ sudo: a password is required
 ```sh
 nix-prefetch-url <url>                  # fetch 并输出 sha256。在打包时经常用到。
 nix-collect-garbage -d                  # 删除所有配置的所有旧版本，并 GC。（彻底清理）
+nix flake update <input>                # update flake 想必大家天天用，但是 update 一个特定 input 应该用得很少吧
 ```
 
 ## 工具

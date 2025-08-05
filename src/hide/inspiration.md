@@ -53,8 +53,8 @@ tag:
 - [ ] pdf 无损图片压缩
   - [ ] wasm, static web
 - [x] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
-- [ ] lzma 数据库，简易迁移，不依赖特定程序
-- [ ] 浏览器书签 & 历史数据库(rust cli / js)
+- [ ] ~~lzma 数据库，简易迁移，不依赖特定程序~~
+- [ ] ~~浏览器书签 & 历史数据库(rust cli / js)~~ History Trends Unlimited?
 - [ ] ~~better sqlite_zstd~~ 要么手操要么透明压缩
 - [ ] windows electron lib(runtime)?
 - [ ] windows volume locker
@@ -185,6 +185,8 @@ tag:
 - [ ] PT 站，但是更低的门槛
 - [x] open bilibili video in mpv -> [成果](https://github.com/lxl66566/auto-play-in-mpv)
 - [ ] AV 找片互助
+- [ ] virtual network cluster，分布式理论同步
+  - [ ] tag 论分区
 
 ### 插件
 
