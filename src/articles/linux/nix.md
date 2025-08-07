@@ -121,6 +121,9 @@ sudo: a password is required
 2025 年 AI 已经非常强大，语法问题完全可以开 online search 问 AI。
 
 - 先阅读 [NixOS 中文 - Nix 语言快速入门](https://nixos-cn.org/tutorials/lang/QuickOverview.html)。
+- 条件判断：一般接触多的是 `if..then..else` 和 `lib.mkIf`。
+  - 两个 if 里条件只能是 bool，不能是其它类型。
+  - `lib.mkIf` 和 `if..then..else null;` 是不一样的！`lib.mkIf` 求值时会被转换成类似 `{ _type = "if"; condition = ...; content = ...; }` 的形式，方便求值时验证和 lazy。
 - `inherit x y;` = `x=x;y=y;`
 - function 的 `@` 绑定：`bargs@{a, b, ...}:` is equivalent to `{a, b, ...}@bargs:`
 - `//` 用于两个 attrset 的合并，**右边覆盖左边**。
