@@ -19,6 +19,126 @@ tag:
 
 - Android 软件凡是不使用系统输入法，而是自己提供输入法的，都是**一坨屎**。特指银行 APP。
   - 最痛恨的是这些输入法不能按快，否则会丢键。
+- 人脸识别：
+  - 国内人脸识别都靠调整手机屏幕背光计算脸部光线漫反射，来识别是否为真人。然而我的手机背光不够亮，即使拉到最高，在到处都是灯的公司里或者白天街上也没法通过识别；
+  - 人脸 API 可能也比较贵，多失败几次就会被调用方封禁一段时间。
+  - 人脸会自动拉高背光，这在晚上被窝里看手机时是致命的。我被搞过几次，晚上蹭蹭不小心就点到了人脸识别。。
+
+## 编程语言系列
+
+### Rust 有多难用
+
+- features stable 周期长，一般需要经历 5-7 年。而好用的东西全在 nightly。
+  - `Duration::from_days`
+- const 和 static 非常弱，导致很难将计算搬到编译期。
+  - 理论上如果 const 够强，`const_str` 这个 crate 就不应该存在。
+  - rust 的 Regex 官方也不支持编译期构建。[这里](https://github.com/rust-lang/regex/discussions/1076)是一些解释，反正把锅推给了 const。
+- [过程宏无法定义在同一 crate 中](https://www.reddit.com/r/rust/comments/tuxawv/why_do_procedural_macros_have_to_be_defined_in_a/)，对于简单的代码替换复用复杂度过高；而声明宏又无法实现某些复杂需求（或者实现难度过大，魔法过多）。
+- `dbg!` 和 `log.debug!` 的设计[有问题](https://t.me/withabsolutex/1615)：行为不一致。
+- Trait 是一个很好的设计，但是 Rust 的 Trait 太弱了：
+  - 缺乏集合运算：只能取交集。不能取反：`impl<T: !Sized> for xxx<T>`；不能取并；不能取补，导致一大堆 conflict，例如同时 impl 同一个 trait for `FnOnce() -> T + Send` 和 `Future<Output = T> + Send` 结果是 conflict，目前无解。
+  - auto trait unstable.
+  - Trait alias 还是 unstable; trait aliases cannot be auto，这二者不能共存。
+  - `impl Trait` is not allowed in `fn` pointer return types，`impl Trait` is only allowed in arguments and return types of functions and methods.
+- `std::process::Command` 的设计中，command 和 args 一定要分开的，其只在内部进行组合；这就导致如果我要执行完整的语句，就要先 split 再 join，多此一举。
+- Unsafe 并不是那么自由：
+  - 无法改一个 not mut 的 static 变量。
+  - 无法 access 一个库的 private field。
+- 官方社区与开发者社区过于分裂
+  - 倾向于将新的 feature 做成 crate 而不是 merge 进 std。
+    - [Why not use d-ary heap inside rather than binary heap](https://internals.rust-lang.org/t/why-not-use-d-ary-heap-inside-rather-than-binary-heap/18765)
+    - 这也导致了很多看起来应该是 official 的功能被分散到 crate 里，并且水平参差不齐，甚至是 [API 不一致](https://t.me/withabsolutex/1608)。
+  - 很多东西理应在 std 实现，但是（目前）却没有
+    - Semaphore（信号量）
+- [不能添加 bin dependencies](https://stackoverflow.com/questions/35711044/how-can-i-specify-binary-only-dependencies)。
+
+#### 一些流行的 Rust 的垃圾库
+
+**真 TM 难用**
+
+- teloxide：一坨大便。
+  - REPL 和 dispatcher 没有任何平衡，一个太弱一个太复杂，无法折中；
+  - 各种抽象 trait + 生命周期疯狂拒绝我的参数，struct Bot 不愿意做我的成员，进来就赖着 move 不动，clone 不出，还拿生命周期威胁它的爸爸类。
+  - dispatcher 就到处玩宏，到处都是非变量非函数根本不知道干嘛的 ident。
+  - from_env 该抛异常时抛 panic。
+  - 官方的 examples 也是要么太简单要么太复杂，没一个覆盖我的需求。去 github 找别人代码，全是 single function，没有用 struct 的。我生气了，不让我写 struct，那我就把所有成员全部扔到 LazyLock。
+- sea-orm & sea-query
+  - 貌似 sea-orm 不支持动态 table name，sea-query 支持有限动态 table name，必需是 derive 了 Iden 的 enum 才行。。。拿非有限用户输入当 table name 不是一个很正常的需求吗？
+- j4rs
+  - 该爆 args type not match 时爆 `Method xxx was not found`
+  - 各种输入用 `&[InvocationArg]` 包，结果包的 api 跟屎一样
+
+### python 有多难用
+
+- python module 看着很方便，实际上仍然过于粗暴，解决不了交叉引用的问题。
+- python 的高阶函数（`filter`, `map`, `reduce` 等）语法又非常变态，`func` 放前面，`self` 放后面，做个 UFCS 还得和其他函数分裂。
+- python 不优化尾递归。
+- python 自由度太低。
+  - 不能写宏。参考 PEP 638。
+  - 不能为 builtin class 添加方法。
+  - python lambda 只有一行。
+
+#### python 写的软件有多难用
+
+- 性能就不多说了，虽然 numpy 用 C 写了性能还行，但除开数值计算，其他方面就很阴间。
+- 打包阴间。不管是 pyinstaller 还是 nuitka 都贼拉，体积爆炸[^4]。
+- 代理问题[^3]
+  - poetry：install script 不读代理
+  - [insanely-fast-whisper](https://github.com/Vaibhavs10/insanely-fast-whisper)：访问模型时不读代理（而且是 eBPF 代理）
+
+[^3]: 遇到了不少 py 写的 install script，不读系统代理，不能配置代理，不做错误处理，不具有可读性。真的难绷 😅 ([src](https://t.me/withabsolutex/1304))
+
+    ps. python setuptools 可能只读环境变量（`HTTP_PROXY`）而不读 windows 下的系统代理。
+
+[^4]: 一个 customtkinter + matplotlib 项目，朋友遇到打包问题问我。pyinstaller 打出来 200M，运行不了，我教他用 nuitka，他在 windows 下打出了 **1.2G** 的好成绩。
+
+### Clojure 有多难用
+
+- ns 和文件名有各种映射关系，例如 `_` 和 `-`，`.` 和 `/`，导致写文件名限制重重，这个符号不能用，那个符号也不能用。被文件名坑了几次。
+- 报错模糊。根本看不出啥错误。感觉比 nix 还烂。
+- REPL 环境有问题。例如
+  - 没有 `load` 和 `load-file`，反正我用 bb 是没有的。
+  - 正常的 `:require` 代码，可以在 cli 执行的，在 REPL 里会 `Attempting to call unbounded fn`。并且也看不出错在哪。
+  - 这个 `Attempting to call unbounded fn` 非常灵车，我 rust ffi 到 clojure 天天报这个错，没有任何有效信息，调试几小时结果[发现跟 fn 完全没关系](https://t.me/withabsolutex/1877)……
+- 文档挺一般的，不能一下找到重点，整体也很散。
+- 用户交流方式也不行，搜问题排名靠前的居然一大堆 google group。很难将解决方法传承下去。
+  - 倒是有一个 [clojureverse](https://clojureverse.org/c/questions-help)，但是已经死了（最新帖子 2022.06），而且不在搜索引擎范围内，fw。
+
+### lua 有多难用
+
+语言设计：
+
+- lua 很多细节要另辟蹊径，不用常规编程语言的那一套。
+- 写 end 太丑了，不如写 `{}`
+- 动态 require，有人就会构造运行时字符串进行 require，把静态分析的工具全部炸烂
+- nil 有一大堆的坑，比如最经典的 array table 设 nil 在计算长度时会爆炸
+- 没有可用的 typing
+- std 里缺了非常多的函数
+- 实践里的错误处理跟 go 一样丑
+
+生态：
+
+- 虽然包管理器是唯一的 luarocks，但是整个包管理方式也是一坨大便。
+  - 很多包是 C 动态库，需要当场编译；但是又没使用任何可复现构建导致一大堆基础包构建都是失败的。例如本人亲历 [luasocket issue](https://github.com/lunarmodules/luasocket/issues/429)。
+  - 还有的包依赖莫名其妙的东西，例如有的包依赖整个几百 MB 的 openssl。。
+  - [feat] luarocks 在 windows 上不会自动改 path，想正常用需要自己去写环境变量。但是 windows 人已经习惯让软件给自己设好变量了。
+  - luarocks 在 Windows 上不吃代理，或者是我明明能访问 luarocks.org 但是还是 _Failed downloading https://luarocks.org/manifest-5.4_
+- formatter 一坨大便。sumneko LSP 的 formatter 就跟没有一样很多错不会纠正；Stylua 比较强硬，可选项很少，但是最让我气愤的是它的 column_width 只是一个不强制的建议值！我设了 80 甚至 70，结果一 fmt 还有一大堆超过 80 的，真的难绷。
+
+#### openresty 有多难用
+
+也归到 lua 下吧。
+
+- 安装：
+  - windows：`resty -e "..."` 指令必须在 openresty 安装目录执行，不能在任意目录执行。否则会报 `nginx: [alert] failed to load the 'resty.core' module (https://github.com/openresty/lua-resty-core); ensure you are using an OpenResty release from https://openresty.org/en/download.html (reason: ...luarocks\current\rocks\share\lua\5.4\resty\core\base.lua:31: ngx_stream_lua_module 0.0.7 required) in Z:\Temp\ZTUSK4zJCF/conf/nginx.conf:105`
+  - linux：`pacman -S openresty` 安装后，/usr/bin 里甚至找不到任何相关可执行文件。（不过这应该算打包者的锅，不是它的）
+- 虽然以前的性能可能挺好，但是在现在 luajit 打不过 v8 jit 的时代，它的性能并不出众。
+- 测试用的是 perl 那坨屎山，perl 生态又是更大的一坨
+
+### go 有多难用
+
+- 语法丑，很丑啊。人家 lua 丑是因为简单，std 东西很少。go 这么重还这么丑真说不过去。
+- [构建系统一坨大便](https://t.me/absxsgroup/10597)
 
 ## QQ 有多难用
 
@@ -268,30 +388,6 @@ ColorOS 是目前一加的默认系统。
 
 [^2]: [source](https://www.zhihu.com/question/315889356)
 
-## python 有多难用
-
-- python module 看着很方便，实际上仍然过于粗暴，解决不了交叉引用的问题。
-- python 的高阶函数（`filter`, `map`, `reduce` 等）语法又非常变态，`func` 放前面，`self` 放后面，做个 UFCS 还得和其他函数分裂。
-- python 不优化尾递归。
-- python 自由度太低。
-  - 不能写宏。参考 PEP 638。
-  - 不能为 builtin class 添加方法。
-  - python lambda 只有一行。
-
-### python 写的软件有多难用
-
-- 性能就不多说了，虽然 numpy 用 C 写了性能还行，但除开数值计算，其他方面就很阴间。
-- 打包阴间。不管是 pyinstaller 还是 nuitka 都贼拉，体积爆炸[^4]。
-- 代理问题[^3]
-  - poetry：install script 不读代理
-  - [insanely-fast-whisper](https://github.com/Vaibhavs10/insanely-fast-whisper)：访问模型时不读代理（而且是 eBPF 代理）
-
-[^3]: 遇到了不少 py 写的 install script，不读系统代理，不能配置代理，不做错误处理，不具有可读性。真的难绷 😅 ([src](https://t.me/withabsolutex/1304))
-
-    ps. python setuptools 可能只读环境变量（`HTTP_PROXY`）而不读 windows 下的系统代理。
-
-[^4]: 一个 customtkinter + matplotlib 项目，朋友遇到打包问题问我。pyinstaller 打出来 200M，运行不了，我教他用 nuitka，他在 windows 下打出了 **1.2G** 的好成绩。
-
 ## steam 有多难用
 
 - 交易垃圾。
@@ -333,48 +429,6 @@ ColorOS 是目前一加的默认系统。
 - 验证码输错一次，所有信息重新填
 - 报名和查分分裂，账号和密码不同
 
-## Rust 有多难用
-
-- features stable 周期长，一般需要经历 5-7 年。而好用的东西全在 nightly。
-  - `Duration::from_days`
-- const 和 static 非常弱，导致很难将计算搬到编译期。
-  - 理论上如果 const 够强，`const_str` 这个 crate 就不应该存在。
-  - rust 的 Regex 官方也不支持编译期构建。[这里](https://github.com/rust-lang/regex/discussions/1076)是一些解释，反正把锅推给了 const。
-- [过程宏无法定义在同一 crate 中](https://www.reddit.com/r/rust/comments/tuxawv/why_do_procedural_macros_have_to_be_defined_in_a/)，对于简单的代码替换复用复杂度过高；而声明宏又无法实现某些复杂需求（或者实现难度过大，魔法过多）。
-- `dbg!` 和 `log.debug!` 的设计[有问题](https://t.me/withabsolutex/1615)：行为不一致。
-- Trait 是一个很好的设计，但是 Rust 的 Trait 太弱了：
-  - 缺乏集合运算：只能取交集。不能取反：`impl<T: !Sized> for xxx<T>`；不能取并；不能取补，导致一大堆 conflict，例如同时 impl 同一个 trait for `FnOnce() -> T + Send` 和 `Future<Output = T> + Send` 结果是 conflict，目前无解。
-  - auto trait unstable.
-  - Trait alias 还是 unstable; trait aliases cannot be auto，这二者不能共存。
-  - `impl Trait` is not allowed in `fn` pointer return types，`impl Trait` is only allowed in arguments and return types of functions and methods.
-- `std::process::Command` 的设计中，command 和 args 一定要分开的，其只在内部进行组合；这就导致如果我要执行完整的语句，就要先 split 再 join，多此一举。
-- Unsafe 并不是那么自由：
-  - 无法改一个 not mut 的 static 变量。
-  - 无法 access 一个库的 private field。
-- 官方社区与开发者社区过于分裂
-  - 倾向于将新的 feature 做成 crate 而不是 merge 进 std。
-    - [Why not use d-ary heap inside rather than binary heap](https://internals.rust-lang.org/t/why-not-use-d-ary-heap-inside-rather-than-binary-heap/18765)
-    - 这也导致了很多看起来应该是 official 的功能被分散到 crate 里，并且水平参差不齐，甚至是 [API 不一致](https://t.me/withabsolutex/1608)。
-  - 很多东西理应在 std 实现，但是（目前）却没有
-    - Semaphore（信号量）
-- [不能添加 bin dependencies](https://stackoverflow.com/questions/35711044/how-can-i-specify-binary-only-dependencies)。
-
-### 一些流行的 Rust 的垃圾库
-
-**真 TM 难用**
-
-- teloxide：一坨大便。
-  - REPL 和 dispatcher 没有任何平衡，一个太弱一个太复杂，无法折中；
-  - 各种抽象 trait + 生命周期疯狂拒绝我的参数，struct Bot 不愿意做我的成员，进来就赖着 move 不动，clone 不出，还拿生命周期威胁它的爸爸类。
-  - dispatcher 就到处玩宏，到处都是非变量非函数根本不知道干嘛的 ident。
-  - from_env 该抛异常时抛 panic。
-  - 官方的 examples 也是要么太简单要么太复杂，没一个覆盖我的需求。去 github 找别人代码，全是 single function，没有用 struct 的。我生气了，不让我写 struct，那我就把所有成员全部扔到 LazyLock。
-- sea-orm & sea-query
-  - 貌似 sea-orm 不支持动态 table name，sea-query 支持有限动态 table name，必需是 derive 了 Iden 的 enum 才行。。。拿非有限用户输入当 table name 不是一个很正常的需求吗？
-- j4rs
-  - 该爆 args type not match 时爆 `Method xxx was not found`
-  - 各种输入用 `&[InvocationArg]` 包，结果包的 api 跟屎一样
-
 ## Youtube 有多难用
 
 - 我不想看 shorts，但是点击关闭只能隐藏 30 天。
@@ -392,18 +446,6 @@ ColorOS 是目前一加的默认系统。
 
 - 大，太大了，我就要一个宏功能，驱动总共不到 10M，它安装后给我装了 1G Synapse3，喜欢我雷蛇全家桶吗
 - 流氓软件，在托盘退出后还有后台进程运行
-
-## Clojure 有多难用
-
-- ns 和文件名有各种映射关系，例如 `_` 和 `-`，`.` 和 `/`，导致写文件名限制重重，这个符号不能用，那个符号也不能用。被文件名坑了几次。
-- 报错模糊。根本看不出啥错误。感觉比 nix 还烂。
-- REPL 环境有问题。例如
-  - 没有 `load` 和 `load-file`，反正我用 bb 是没有的。
-  - 正常的 `:require` 代码，可以在 cli 执行的，在 REPL 里会 `Attempting to call unbounded fn`。并且也看不出错在哪。
-  - 这个 `Attempting to call unbounded fn` 非常灵车，我 rust ffi 到 clojure 天天报这个错，没有任何有效信息，调试几小时结果[发现跟 fn 完全没关系](https://t.me/withabsolutex/1877)……
-- 文档挺一般的，不能一下找到重点，整体也很散。
-- 用户交流方式也不行，搜问题排名靠前的居然一大堆 google group。很难将解决方法传承下去。
-  - 倒是有一个 [clojureverse](https://clojureverse.org/c/questions-help)，但是已经死了（最新帖子 2022.06），而且不在搜索引擎范围内，fw。
 
 ## vscode 有多难用
 
@@ -524,32 +566,3 @@ ColorOS 是目前一加的默认系统。
 - 寄件只能从住址寄，不能人在公司然后不修改地址的情况下定位寄件。
 - 填写寄件信息（使用菜鸟快递）后，想要修改信息，结果会跳到菜鸟的界面，此时地址簿是菜鸟的，与闲鱼不共用。
 - 上门取件无法给快递员自定义文字备注！只有一些简单选项式寄件要求，无法满足其他需求。
-
-## lua 有多难用
-
-语言设计：
-
-- lua 很多细节要另辟蹊径，不用常规编程语言的那一套。
-- 写 end 太丑了，不如写 `{}`
-- 动态 require，有人就会构造运行时字符串进行 require，把静态分析的工具全部炸烂
-- nil 有一大堆的坑，比如最经典的 array table 设 nil 在计算长度时会爆炸
-- 没有可用的 typing
-- std 里缺了非常多的函数
-- 实践里的错误处理跟 go 一样丑
-
-生态：
-
-- 虽然包管理器是唯一的 luarocks，但是整个包管理方式也是一坨大便。
-  - 很多包是 C 动态库，需要当场编译；但是又没使用任何可复现构建导致一大堆基础包构建都是失败的。例如本人亲历 [luasocket issue](https://github.com/lunarmodules/luasocket/issues/429)。
-  - 还有的包依赖莫名其妙的东西，例如有的包依赖整个几百 MB 的 openssl。。
-  - [feat] luarocks 在 windows 上不会自动改 path，想正常用需要自己去写环境变量。但是 windows 人已经习惯让软件给自己设好变量了。
-  - luarocks 在 Windows 上不吃代理，或者是我明明能访问 luarocks.org 但是还是 _Failed downloading https://luarocks.org/manifest-5.4_
-- formatter 一坨大便。sumneko LSP 的 formatter 就跟没有一样很多错不会纠正；Stylua 比较强硬，可选项很少，但是最让我气愤的是它的 column_width 只是一个不强制的建议值！我设了 80 甚至 70，结果一 fmt 还有一大堆超过 80 的，真的难绷。
-
-## openresty 有多难用
-
-- 安装：
-  - windows：`resty -e "..."` 指令必须在 openresty 安装目录执行，不能在任意目录执行。否则会报 `nginx: [alert] failed to load the 'resty.core' module (https://github.com/openresty/lua-resty-core); ensure you are using an OpenResty release from https://openresty.org/en/download.html (reason: ...luarocks\current\rocks\share\lua\5.4\resty\core\base.lua:31: ngx_stream_lua_module 0.0.7 required) in Z:\Temp\ZTUSK4zJCF/conf/nginx.conf:105`
-  - linux：`pacman -S openresty` 安装后，/usr/bin 里甚至找不到任何相关可执行文件。（不过这应该算打包者的锅，不是它的）
-- 虽然以前的性能可能挺好，但是在现在 luajit 打不过 v8 jit 的时代，它的性能并不出众。
-- 测试用的是 perl 那坨屎山，perl 生态又是更大的一坨

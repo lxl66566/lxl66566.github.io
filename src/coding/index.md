@@ -79,7 +79,7 @@ tag:
 
 <dtls alt="我不会自发学习这些语言">
 
-因为它们的设计确实烂。
+因为它们的各方面[都很烂](../gossip/fuckxxx.md)。
 
 - go
 - lua
