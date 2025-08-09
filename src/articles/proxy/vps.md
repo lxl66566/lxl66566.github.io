@@ -53,8 +53,9 @@ tag:
 |20241018 azure|JP|free|?|1G|30G|1|微软，我的超人|
 |20241031 [91idc](https://91idc.gg/index.php)|HK|￥10/mo|666GB 20MBps|1G|10G|1|<dtlslong>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</dtlslong>|
 |20250107 [Sakura Clouds](https://portal.sakuraclouds.com/)|HK| ~~\$2.50/mo~~ \$2.20|2TB 1Gbps|1G|8G|1|速度还行，但是延迟和稳定性**超烂**，没有下次了。|
-|20250109 [ClawCloud](https://claw.cloud/)|JP|~~\$36.00/yr~~ \$7.00/yr|500GB|1G|20G|1|<dtlslong>阿里云“上游”，超级好价 + 稳定 + 高速，血赚。用了几个月，IP 开始脏了，每次被 Google 和 Youtube 要求验证。不过总体来说还是非常好的。</dtlslong> |
+| 20250109 [ClawCloud](https://claw.cloud/) | JP |~~\$36.00/yr~~ \$7.00/yr | 500GB | 1G | 20G | 1 | <dtlslong>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。</dtlslong> |
 | 20250404 [nube.sh](nube.sh) | JP | $0.0012/h + $0.0031/GB | 不限 | 1GB | 10GB | 1 | [测评](http://hpaste.spiritlhl.net/#/show/bp0wd.txt)；<dtlslong>前端好评；一次最少充 $10，试错成本挺高；延迟一般，特别是联通很烂。<br/>用了一个月，连通性差了很多，基本是不可用状态，纯纯狗屎</dtlslong> |
+| 20250805 [skystroll](https://skystroll.net/store) | JP | $2.49/mo | 1T 500Mbps | 512M | 5GB | 1 | <dtlslong>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</dtlslong> |
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
@@ -104,6 +105,12 @@ tag:
 
 ## 工具
 
+- 记得禁用 ipv6！！！不然机子会出现各种 google 墙，youtube 墙，网页打开慢等各种问题。
+  ```sh
+  echo "net.ipv6.conf.all.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
+  echo "net.ipv6.conf.default.disable_ipv6 = 1" | sudo tee -a /etc/sysctl.conf
+  sudo sysctl -p
+  ```
 - [一键代理脚本](https://github.com/lxl66566/init-script)：不得不提我自己写的一键脚本，一键常用软件 + 代理（hysteria + trojan-go + trojan）
 - [ping.pe](https://ping.pe/#)：连通性
 - 全面评测：

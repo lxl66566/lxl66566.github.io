@@ -80,11 +80,11 @@ const data: SpeedupItemType[] = [
     speedupable: false,
   },
   {
-    names: ["アンレス テルミナリア"],
+    names: ["アンレス テルミナリア", "猫忍えくすはーと 全系列"],
     valid_name: "ypf",
     engine: "Yu-Ris",
     save_format: "ypf",
-    speedupable: false,
+    speedupable: true,
   },
   {
     names: ["廢村少女~誘惑迷離的籠之鄉~", "戦巫＜センナギ＞ ―穢れた契りと神ころも―"],

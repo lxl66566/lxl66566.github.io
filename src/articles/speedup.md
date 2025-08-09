@@ -329,6 +329,8 @@ FAVORITE 的 .bin 格式也有 [fvp-tools](https://github.com/lxl66566/fvp-tools
 </template>
 <template #ypf>
 
+### 首次尝试：失败
+
 尝试解包/封包一个 YU-RIS 引擎的游戏，这玩意也是个老牌引擎了。
 
 GARbro 打开 .ypf 时会提示猜测密钥，能够顺利解包。但是不得不骂，GARbro 并不会告诉我猜到的密钥是啥，并且封包的时候要求必须提供 8 位密钥。
@@ -406,7 +408,7 @@ def guess_ypf_info(file_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("用法: python script.py <ypf文件路径>")
+        print(f"用法: python {sys.argv[0]} <ypf文件路径>")
         sys.exit(1)
 
     guess_ypf_info(sys.argv[1])
@@ -427,6 +429,21 @@ if __name__ == "__main__":
 后来我又[装了个日版 windows](./windows_setting.md#日版-windows-10)，尝试了一下最后的希望，也就是用 YSPac 封包。结果 <http://yu-ris.net/> 的都测过一遍，要么 gal 崩溃要么无声。打开 ypf 版本一看，YU-RIS β4.8 2025/04/30 打出来的 ypf 版本还是 492，还没有本游戏的 500 高。而这游戏已经是三年前的了。属实是活全家引擎。
 
 所以，要么再等几年等 YU-RIS 发新包，要么就直接 quit 下桌不玩。
+
+### update1
+
+下载猫忍之心，也是 ypf 引擎，打印出版本也是 500，心已经凉了一半。不死心，再次尝试封 ypf，找到一篇 [flamecho 的文章](https://www.flamecho.top/posts/47.html)介绍了两个 ypf 工具，其中一个是 YPF_Manager_Tool，源码貌似是 [Xorboth/YPF-Manager](https://github.com/Xorboth/YPF-Manager) 的。抱着一丝微弱的希望尝试了一下，没想到啊没想到，它居然真的能封出可用的包！！！千古（6 个月）难题迎刃而解，还是有点激动的。
+
+```sh
+# 假设把 YPF Manager 重命名为 y.exe
+./y.exe -e vo.ypf
+... # SPEED UP!
+./y.exe -c vo -v 500
+```
+
+另一个程序好像是专门用于文本提取翻译的，这里不再尝试了。
+
+然后我 [fork 了 YPF-Manager 的源码](https://github.com/lxl66566/YPF-Manager)，并且写了一个 github CI 来 build binary。
 
 </template>
 <template #escude>

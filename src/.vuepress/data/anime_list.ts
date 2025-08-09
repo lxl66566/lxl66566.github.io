@@ -5,6 +5,7 @@ const original_list: AnimeItemInputType[] = [
     name: "死亡笔记",
     duration: {
       start: "2025-07-02",
+      end: "2025-08-09",
     },
   },
   {

@@ -814,6 +814,10 @@ const data: ComicItemType[] = [
   { id: "579748", aScore: 7.2, bScore: 3.2, info: "#制服", bak: "https://telegra.ph/TIES-タケイオーキ-ひきこもり幼馴染に襲われたのでヤり返してみた-中国翻訳-DL版-06-20-3" },
   { id: "579535", aScore: 6.4, bScore: 7, info: "#3P #后宫", bak: "https://telegra.ph/桃汁庭園-桃雲-美術部ハーレム活動日誌-先輩のスランプ解消に協力したら勢いで3Pすることになった話-中国翻訳-DL版-06-19-2" },
   { id: "579597", aScore: 7, bScore: 3.4, info: "#妮姬", bak: "https://telegra.ph/C105-蒼き星-全白-紅蓮絢爛-勝利の女神NIKKE-中国翻訳-06-19-2" },
+  { id: "581862", aScore: 8.3, bScore: 7.4, info: "#师生 #NTR #堕落", order: 3, bak: "https://telegra.ph/ピロコボ-Piro-化学準備室の罪3--堕ちていくふたり--中国翻訳-06-24-2" },
+  { id: "580198", aScore: 8, bScore: 6.2, info: "#3P #兽耳 #马娘 #温泉", bak: "https://telegra.ph/阿猥-妹と妹と温泉-ウマ娘プリティーダービー-中国翻訳-無修正-06-23-2" },
+  { id: "580216", aScore: 7.4, bScore: 7.3, info: "#蔚蓝档案 #催眠", bak: "https://telegra.ph/C99-きのこむ神-きのこむし-先生は私とせっくすシたくなる-ブルーアーカイブ-中国翻訳-06-23-2" },
+  { id: "580223", aScore: 8.5, bScore: 9.2, info: "#恶魔", bak: "https://telegra.ph/不可不可-関谷あさみ-理緒ちゃんとおまじないの悪魔-中国翻訳-無修正-DL版-06-23-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

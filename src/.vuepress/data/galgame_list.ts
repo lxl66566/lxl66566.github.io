@@ -2,12 +2,43 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "猫忍之心",
+    order: 2,
+    other_names: ["猫忍えくすはーと", "NEKO-NIN"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-08-09",
+    },
+  },
+  {
+    name: "猫忍之心",
+    order: 1,
+    other_names: ["猫忍えくすはーと", "NEKO-NIN"],
+    use_time: "1h18min",
+    all_ages: true,
+    duration: {
+      start: "2025-08-08",
+      end: "2025-08-09",
+    },
+    score: {
+      story: 2.6,
+      visual: 9.4,
+      program: 3,
+    },
+  },
+  {
     name: "ISLAND",
     all_ages: true,
     nth_time: 2,
+    use_time: ">10h",
     duration: {
       start: "2025-07-02",
       end: "2025-08-01",
+    },
+    score: {
+      story: 13,
+      visual: 7.8,
+      program: 2,
     },
   },
   {
@@ -70,8 +101,8 @@ const original_list: GalItemInputType[] = [
       end: "2025-06-10",
     },
     score: {
-      story: 3.5,
-      visual: 9.1,
+      story: 3.4,
+      visual: 9,
       program: 9.3,
     },
   },
@@ -789,7 +820,7 @@ const original_list: GalItemInputType[] = [
     use_time: "7h9min",
     order: 1,
     score: {
-      story: 3,
+      story: 3.6,
       visual: 5.2,
       program: 6.7,
     },
@@ -879,7 +910,7 @@ const original_list: GalItemInputType[] = [
     namaniku: true,
     order: 3,
     score: {
-      story: 2.6,
+      story: 2.9,
       visual: 4.1,
       program: 2.7,
     },
