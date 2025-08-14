@@ -128,6 +128,8 @@ sudo: a password is required
 - function 的 `@` 绑定：`bargs@{a, b, ...}:` is equivalent to `{a, b, ...}@bargs:`
 - `//` 用于两个 attrset 的合并，**右边覆盖左边**。
 - 最常用的一些判断条件：`mkDefault` 和 `mkForce` 修改合并优先级，`mkBefore` `mkAfter` 修改 list 合并顺序，`mkIf` 条件控制某些属性的有和无，`optional` 根据条件返回 null 或 `[x]`，而 `optionals` 返回 null 或 x。
+- 数据类型：
+  - 数组：list。判断元素是否存在：`builtins.elem elem list`。
 
 ### 常用命令
 

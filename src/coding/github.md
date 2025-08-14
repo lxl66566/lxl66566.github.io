@@ -175,6 +175,7 @@ on:
 
 - [action-tmate](https://github.com/mxschmitt/action-tmate) 提供了 ssh 进入 action 环境里调试的方法，不过这是违反使用协定的，有被封号的风险。
 - [act](https://github.com/nektos/act) 提供了 github action docker，可以在本地模拟 action 环境。
+- [wrkflw](https://github.com/bahdotsh/wrkflw) 另一个本地模拟 action 容器的工具。
 
 ## Powerful CI
 
