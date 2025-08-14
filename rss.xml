@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 09 Aug 2025 17:26:21 GMT</pubDate>
-    <lastBuildDate>Sat, 09 Aug 2025 17:26:21 GMT</lastBuildDate>
+    <pubDate>Thu, 14 Aug 2025 15:35:44 GMT</pubDate>
+    <lastBuildDate>Thu, 14 Aug 2025 15:35:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -290,7 +290,7 @@
 <p>这里默认机子外设都齐全。</p>
 <ul>
 <li>螺丝刀（必备），大把 &amp; 小把都要，一般十字即可。为避免滑丝，务必选择合适的刀头。其实拧螺丝有点学问在的，可以看看 <a href="https://www.bilibili.com/video/BV1zMqsYNERc/" target="_blank" rel="noopener noreferrer">这么多年螺丝都拧错了！ - 4AM 居士</a>补充知识。</li>
-<li>装机 U 盘（必备）带系统 ISO 和 PE，这个不多说了。我用 ventoy + edgeless 还行，能带的系统挺多的，就是老电脑（例如 10 年前的 4G 内存及以下的电脑）兼容性会差一点。（你真的差这一点吗？）</li>
+<li>装机 U 盘（必备）带系统 ISO（和 PE，可选），这个不多说了。我用 ventoy，它的兼容性很不错，并且可以在一个 U 盘里装多个系统。</li>
 <li>橡皮（必备）：用来擦金手指的，非常建议备一块。</li>
 <li>万用表：弱电工程师王道工具，可以测主板，测显卡等。</li>
 <li>电源测试器：专门测电脑电源的。带屏的 25CNY 左右可以显示实时电压，不带屏的 15CNY 左右只能显示是否正常。</li>
@@ -323,11 +323,8 @@
 <ul>
 <li>也可以多玩玩小法庭，一个是确实优质下饭材料，另一个是可以看别人的判例，来规范自身的行为，增加警惕性和谈判技巧。</li>
 </ul>
-<h2>2025 首次装机</h2>
-<p>本次装机算是比较鲁莽的行动，在契机的推动下，我几乎是在一天之内定下了所有配置信息，这使得我的背景调查不够充足。</p>
-<h3>配置</h3>
-<p>| 配件     | 渠道           | 型号                                           | 价格 |
-|</p>
+<h2>装机经历</h2>
+
 ]]></content:encoded>
       <enclosure url="https://absx.pages.dev/images/gossip/pc_hardware/corsair_power.png" type="image/png"/>
     </item>
