@@ -2,6 +2,19 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "挑战勇者试炼时被诱惑的我",
+    not_strict: true,
+    duration: {
+      start: "2025-08-11",
+      end: "2025-08-12",
+    },
+    score: {
+      story: 2,
+      visual: 9.1,
+      program: 3.5,
+    },
+  },
+  {
     name: "猫忍之心",
     order: 2,
     other_names: ["猫忍えくすはーと", "NEKO-NIN"],

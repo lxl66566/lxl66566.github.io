@@ -818,6 +818,7 @@ const data: ComicItemType[] = [
   { id: "580198", aScore: 8, bScore: 6.2, info: "#3P #兽耳 #马娘 #温泉", bak: "https://telegra.ph/阿猥-妹と妹と温泉-ウマ娘プリティーダービー-中国翻訳-無修正-06-23-2" },
   { id: "580216", aScore: 7.4, bScore: 7.3, info: "#蔚蓝档案 #催眠", bak: "https://telegra.ph/C99-きのこむ神-きのこむし-先生は私とせっくすシたくなる-ブルーアーカイブ-中国翻訳-06-23-2" },
   { id: "580223", aScore: 8.5, bScore: 9.2, info: "#恶魔", bak: "https://telegra.ph/不可不可-関谷あさみ-理緒ちゃんとおまじないの悪魔-中国翻訳-無修正-DL版-06-23-2" },
+  { id: "586324", aScore: 9.5, bScore: 9.1, info: "#触手 #虚拟主播", bak: "https://telegra.ph/餃子ベビー-笑笑餃子-触手触手Inaのボインボインが暴れた-がうるぐら一伊那尓栖ワトソンアメリア-中国翻訳-DL版-07-26" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
