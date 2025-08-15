@@ -45,11 +45,11 @@ bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种
 
 ## fish
 
-一般来说三大 shell 指的是 bash, fish, zsh. 而 fish 不兼容 bash，在里面算是比较特立独行的。fish 语法自成一系，不过在一众 shell 里算是比较好学的，缺点是文档写的挺垃圾。fish 使用 rust 重写过一次，~~搭上了语言原神的顺风车~~，性能与安全性无需担忧。fish 是不兼容 windows 的，而在 msys2 里用 fish 又总感觉挺不爽的，我只好在 windows 上用其他 shell。
+一般来说三大 shell 指的是 bash, fish, zsh。而 fish 不兼容 bash，语法自成一系，在 shell 中算是比较特立独行的。fish 使用 rust 重写过一次，~~搭上了语言原神的顺风车~~，性能与安全性无需担忧。fish 是不兼容 windows 的，而在 msys2 里用 fish 又总感觉挺不爽的，我只好在 windows 上用[其他 shell](#nushell)。
 
-fish 的语法在我看来算是对传统 shell 的反叛，但是没有叛彻底，还保留了很大一部分 bash 特点，导致 fish 写脚本也十分难写。
+fish 的语法在我看来算是对传统 shell 的反叛，但是没有叛彻底，还保留了很大一部分 bash 特点，导致 fish 写脚本也十分难写，文档也垃圾，作为一门脚本语言来说 fish 是失败的。
 
-吸引我使用 fish 的最大原因是补全太好用了，爆杀一切其他 shell。fishshell 甚至会自动从 man 生成补全 ([ref](https://t.me/archlinuxcn_group/2974806))。我一般开启 `bind \t forward-word`，配置文件只此一行足矣（加载其他软件的命令不算）。
+但我还是离不开 fish，唯一原因是 **补全太好用了，爆杀一切其他 shell**。fishshell 可以自动检测 path，甚至会自动从 man 生成补全 ([ref](https://t.me/archlinuxcn_group/2974806))，一旦用过就再也离不开了。我一般开启 `bind \t forward-word`，配置文件只此一行足矣（加载其他软件的命令和 alias 不算），fish 的默认配置已经足够好用，没有必要再去搞什么 oh-my-fish。
 
 - set fish as default
   ::: code-tabs
@@ -87,7 +87,7 @@ zsh 是 bash 统治下的顺从者，其几乎全兼容 bash。zsh 是 macos 的
 
 我曾经尝鲜过一段时间 zsh（入坑作：[external 2.](#external)），但是[补全实在是太垃圾](https://t.me/withabsolutex/1214)，立刻扔掉了。
 
-用 zsh 基本离不开 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)，但是这玩意有严重的性能问题([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=omz&sender=313927976))，已经在群里问过 N 次了。
+经常会有人推荐 [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh/wiki)，但是这玩意有严重的性能问题([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=omz&sender=313927976))，已经在群里问过 N 次了。新人不如尝试一下 [zinit](https://github.com/zdharma-continuum/zinit)。
 
 - 安装 zsh 时会问 set default shell
 
