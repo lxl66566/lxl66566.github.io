@@ -2,6 +2,21 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "星辰密文",
+    other_names: ["StellarCode"],
+    all_ages: true,
+    use_time: "2h44min",
+    duration: {
+      start: "2025-08-16",
+      end: "2025-08-16",
+    },
+    score: {
+      story: 9.7,
+      visual: 8.3,
+      program: 7.6,
+    },
+  },
+  {
     name: "挑战勇者试炼时被诱惑的我",
     not_strict: true,
     duration: {
@@ -28,7 +43,6 @@ const original_list: GalItemInputType[] = [
     order: 1,
     other_names: ["猫忍えくすはーと", "NEKO-NIN"],
     use_time: "1h18min",
-    all_ages: true,
     duration: {
       start: "2025-08-08",
       end: "2025-08-09",
@@ -57,10 +71,15 @@ const original_list: GalItemInputType[] = [
   {
     name: "白日梦的构想图",
     other_names: ["白昼夢の青写真"],
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "-1h",
+    use_time: "9h9min",
     duration: {
       start: "2025-06-30",
+      end: "2025-08-16",
+    },
+    score: {
+      story: 8.4,
+      visual: 4.7,
+      program: 7.9,
     },
   },
   {
@@ -493,6 +512,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "サクラノ刻櫻の森の下を歩む",
     namaniku: true,
     use_time: "47h52min",
+    order: 2,
     duration: {
       start: "2024-10-11",
       end: "2025-06-10",
@@ -653,7 +673,7 @@ const original_list: GalItemInputType[] = [
     use_time: "45h53min",
     score: {
       story: 9.3,
-      visual: 5.2,
+      visual: 5.3,
       program: 7,
     },
     duration: {
@@ -714,7 +734,7 @@ const original_list: GalItemInputType[] = [
     use_time: "12h4min",
     score: {
       story: 6.8,
-      visual: 5.1,
+      visual: 5.2,
       program: 7,
     },
     duration: {
@@ -878,9 +898,10 @@ const original_list: GalItemInputType[] = [
     other_names: ["サクラノ詩 -櫻の森の上を舞う-"],
     valid_name: "樱之诗",
     use_time: "50h",
+    order: 1,
     score: {
       story: 9.8,
-      visual: 8.3,
+      visual: 8.5,
       program: 3.7,
     },
     duration: {
@@ -981,7 +1002,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "樱色之云绯色之恋",
     use_time: "27h22min",
     score: {
-      story: 8.5,
+      story: 8.6,
       visual: 9.6,
       program: 5.9,
     },
@@ -1151,7 +1172,7 @@ const original_list: GalItemInputType[] = [
     order: 1,
     score: {
       story: 8.3,
-      visual: 5,
+      visual: 5.3,
       program: 0,
     },
     duration: {
@@ -1480,7 +1501,7 @@ const original_list: GalItemInputType[] = [
     use_time: "<39h50min>",
     order: 1,
     score: {
-      story: 8.5,
+      story: 8.7,
       visual: 6.7,
       program: 8,
     },

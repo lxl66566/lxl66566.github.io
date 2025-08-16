@@ -819,6 +819,10 @@ const data: ComicItemType[] = [
   { id: "580216", aScore: 7.4, bScore: 7.3, info: "#蔚蓝档案 #催眠", bak: "https://telegra.ph/C99-きのこむ神-きのこむし-先生は私とせっくすシたくなる-ブルーアーカイブ-中国翻訳-06-23-2" },
   { id: "580223", aScore: 8.5, bScore: 9.2, info: "#恶魔", bak: "https://telegra.ph/不可不可-関谷あさみ-理緒ちゃんとおまじないの悪魔-中国翻訳-無修正-DL版-06-23-2" },
   { id: "586324", aScore: 9.5, bScore: 9.1, info: "#触手 #虚拟主播", bak: "https://telegra.ph/餃子ベビー-笑笑餃子-触手触手Inaのボインボインが暴れた-がうるぐら一伊那尓栖ワトソンアメリア-中国翻訳-DL版-07-26" },
+  { id: "589674", aScore: 5.2, bScore: 7.5, info: "#泳装 #3P #认知阻碍", bak: "https://telegra.ph/かみか堂-銀曜ハル阿部かわもち-スパカイラクーア-中国翻訳-無修正-08-13" },
+  { id: "590185", aScore: 6.2, bScore: 8.6, info: "#fate #睡x #调教 #loli", bak: "https://telegra.ph/サルパッチョ-わいら-メリュ子はぐいぐい来るが交尾がド下手FateGrand-Order-中国翻訳-DL版-08-15-2" },
+  { id: "542621", aScore: 5.8, bScore: 8.9, order: 1, info: "#隐蔽性交 #痴汉" },
+  { id: "577989", aScore: 6.6, bScore: 8.1, order: 2, info: "#束缚 #纯爱 #捆绑 #录像" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

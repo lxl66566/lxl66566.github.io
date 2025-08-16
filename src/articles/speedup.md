@@ -756,6 +756,8 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 怀着忐忑的心打开游戏，成功！CatSystem2 引擎可以识别不加密的 `.int`！那么 CatSystem2 引擎的语音加速就算是完成了。
 
+这个游戏还有一堆 update0x.int 也需要解包。
+
 > 后面的 [ISLAND](#island) 语音加速实践中陈述了一个更简单的封包方法。
 
 ### ISLAND
