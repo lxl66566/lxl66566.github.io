@@ -582,6 +582,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | --- | --- |
 | teloxide | Telegram bot 库，但是没有文档，只有一点最简单的 example；遇到各种问题没有解决方法；API 经常 break 并且设计得很丑 |
 | rusqlite | 绑定了 openssl！不要用它，要玩 sqlite 请左转 [sqlx](#sqlx) |
+| listeners | 巨 tmd 慢，比随便糊的 C [慢 1600 倍不止](https://github.com/GyulyVGC/listeners/issues/25)！！ |
 
 ### clap
 

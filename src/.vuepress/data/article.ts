@@ -26,7 +26,6 @@ const links: ArticleCellBoxType[] = [
   {
     field: "代理与 VPS",
     links: [
-      { text: "机场推荐", url: "./proxy/vpn" },
       { text: "代理软件", url: "./proxy/proxy_software" },
       { text: "VPS", url: "./proxy/vps" },
       { text: "域名", url: "./proxy/domain" },

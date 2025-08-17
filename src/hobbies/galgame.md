@@ -1391,7 +1391,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 - 夏空的英仙座
 - VenusBlood VALKYRIE
 - Animal☆Panic?
-- 星辰密文
+- 传述之魔女
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 

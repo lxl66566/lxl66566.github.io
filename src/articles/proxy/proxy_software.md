@@ -157,49 +157,33 @@ _sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称�
 - [SagerNet](https://github.com/SagerNet)：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。
   - 2024 年 archived 后也出了很多 fork。
 - [husi](https://github.com/xchacha20-poly1305/husi)：内置各种小众协议插件的 NekoBox。
+- [karing](https://github.com/KaringX/karing)：跨平台的国产开源代理，主要面向小白，易用。
 
 并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。
 
-## [daed](https://github.com/daeuniverse/daed)
+## dae 系
 
-> 根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多
-> ::: right
-> ——Au, [src](https://t.me/archlinuxcn_group/2912643)
-> :::
+dae 是一个基于 eBPF 的代理内核，性能高。这是我目前用过的**最舒服**的代理软件，可以**维护多个节点池**，对于每个池中的节点，都可以自动选择最小延迟的节点进行使用，并能根据不同规则进行节点池分流。缺点是只能用于 linux 系统，并且支持的协议比起其他代理软件偏少。
 
-daed 是网页面板的开源代理软件，[dae](#dae) 的前端，而 dae 基于 eBPF[^1]，仅支持 linux。由于比较新，目前使用的人不多。
+dae 是命令行与配置文件的，而 daed 是 web 前端。如果你刚刚接触 dae 系代理或者不喜欢写配置文件，可以使用 daed。否则我还是比较推荐 dae 的。
 
-[^1]: [What is eBPF?](https://ebpf.io/what-is-ebpf/)
-
-这是我目前用过的**最舒服**的代理软件，可以**维护多个节点池**，对于池中节点取最小延迟使用，并能根据不同规则进行节点池分流。例如香港不能用 tg，那就多建一个节点池，加一条分流规则就行。
-
-1. 安装：
-   ```sh
-   sudo pacman -S daed
-   sudo systemctl enable --now daed # 启动，并设为开机自启
-   ```
-2. 浏览器进入 `localhost:2023`
-3. 一路确定。例如数据库后端使用默认值：`http://127.0.0.1:2023/graphql`，首次登录会要求设账号密码，设一个即可。
-4. 导入节点信息，拖拽到左侧 proxy 即可。
-
-踩坑：
-
-1. daed 默认使用透明代理，没有 socks/http 端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
-2. ~~务必将 _配置 - global - 连接选项 - 拨号模式_ 设为 _ip_（默认值）。否则可能无法使用 chatgpt。~~ 经测试，非此问题。
-
-需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。
-
-软件数据存储在 `/etc/daed/wing.db`（sqlite 数据库），如果需要备份、改账号密码，需要先给 rw 权限，然后用数据库软件更改。
-
-daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 `journalctl -eu daed` 查看其日志，获取信息。
-
-## [dae](https://github.com/daeuniverse/dae)
-
-在 NixOS 上 nixpkgs 没有 daed 的包，只有 dae 能够直接使用。而 dae 官方提供了一个 [flake.nix](https://github.com/daeuniverse/flake.nix) 配置（包含 dae 和 daed），我现在推荐使用此 flake，因为 flake 的版本更新，也包含了最新的 bug 修复；但是我之前[踩了这玩意一个坑](https://github.com/daeuniverse/flake.nix/issues/103)，因此在 bug 解决之前我还是回退到 nixpkgs 的 dae。
-
-不使用 daed 还有一个原因：不符合 NixOS 的确定一切的思想。特定位置存的 sqlite 总归是不如用 git 管理配置文件的。
+### [dae](https://github.com/daeuniverse/dae)
 
 我已经用了很长一段时间的 daed，写 dae 配置文件可以说是非常简单；而且 dae 的官方教程确实非常不错，把 [example](https://github.com/daeuniverse/dae/blob/main/example.dae) 下载下来对着改就行，内含丰富注释。这里由于隐私问题，我并未把我的配置公开，而是加密后上传到 github。
+
+::: tabs
+
+@tab NixOS
+
+#### 前言
+
+2024 年在 NixOS 上 nixpkgs 没有 daed 的包，只有 dae 能够直接使用（不使用 daed 还有一个原因：不符合 NixOS 的确定一切的思想。特定位置存的 sqlite 总归是不如用 git 管理配置文件的）。
+
+dae 官方提供了一个 [flake.nix](https://github.com/daeuniverse/flake.nix) 配置（包含 dae 和 daed），因为 flake 的版本包含了最新的 bug 修复因此我使用的是 flake；但是我之前[踩了这玩意一个坑](https://github.com/daeuniverse/flake.nix/issues/103)，因此在 bug 解决之前我还是回退到 nixpkgs 的 dae。
+
+2025 年，dae 已经更新到 1.0 版本，bug 少了很多，并且 nixpkgs 也已经有了 dae 与 daed 可以自由选择。
+
+#### 安装
 
 改完配置以后，直接在 `configuration.nix` 中写：
 
@@ -215,6 +199,8 @@ services.dae = {
 ```
 
 rebuild 后重启即可（不直接生效，是 eBPF 的特性？）。这分流不比 v2rayA 爽多了？
+
+#### 改进
 
 当然，如果你的配置主目录不一定在 `/etc/nixos` 下，使用绝对路径确实不算明智。这时候可以用一个比较脏的方法，监听 config 的改动，并且每次改动时将最新版本复制到特定绝对路径里。
 
@@ -243,3 +229,38 @@ home.file = {
   };
 };
 ```
+
+但是这样写起来还是挺丑的。最好的办法是[使用一个函数](https://github.com/lxl66566/nixos-config/blob/9ac3045d98d956ea9c007a24fae288bca39fcb28/overlays/default.nix#L15)，可以在 rebuild 时自动将配置拷贝到 nix store 并设置好权限。
+
+:::
+
+### [daed](https://github.com/daeuniverse/daed)
+
+> 根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多
+> ::: right
+> ——Au, [src](https://t.me/archlinuxcn_group/2912643)
+> :::
+
+daed 是网页面板的开源代理软件，[dae](#dae) 的前端，而 dae 基于 eBPF[^1]，仅支持 linux。由于比较新，目前使用的人不多。
+
+[^1]: [What is eBPF?](https://ebpf.io/what-is-ebpf/)
+
+1. 安装：
+   ```sh
+   sudo pacman -S daed
+   sudo systemctl enable --now daed # 启动，并设为开机自启
+   ```
+2. 浏览器进入 `localhost:2023`
+3. 一路确定。例如数据库后端使用默认值：`http://127.0.0.1:2023/graphql`，首次登录会要求设账号密码，设一个即可。
+4. 导入节点信息，拖拽到左侧 proxy 即可。
+
+踩坑：
+
+1. daed 默认使用透明代理，没有 socks/http 端口。如果有设置 `ALL_PROXY` 等系统代理变量记得取消；firefox 需要在代理设置中设为 _自动探测网络环境_。
+2. ~~务必将 _配置 - global - 连接选项 - 拨号模式_ 设为 _ip_（默认值）。否则可能无法使用 chatgpt。~~ 经测试，非此问题。
+
+需要写规则可以参考[这里](https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522)。
+
+软件数据存储在 `/etc/daed/wing.db`（sqlite 数据库），如果需要备份、改账号密码，需要先给 rw 权限，然后用数据库软件更改。
+
+daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 `journalctl -eu daed` 查看其日志，获取信息。
