@@ -16,16 +16,19 @@ const passwords = {
 };
 
 export default hopeTheme({
-  pure: true,
+  breadcrumb: false,
+  contributors: false,
+  docsDir: "src",
+  editLink: false,
+  focus: false,
+  fullscreen: true,
   hostname: "https://absx.pages.dev",
   logo: "/logo.jpg",
-  repo: "https://github.com/lxl66566/lxl66566.github.io",
-  docsDir: "src",
   navbar,
+  print: false,
+  pure: true,
+  repo: "https://github.com/lxl66566/lxl66566.github.io",
   sidebar,
-  editLink: false,
-  contributors: false,
-  breadcrumb: false,
 
   markdown: {
     align: true,

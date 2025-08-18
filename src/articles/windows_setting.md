@@ -19,9 +19,11 @@ tag:
 
 我最初入坑 win11 是由于入手了 12500H，有大小核，即使很不想使用 win11，也只能硬上了。
 
-后来用了两年，因为毛病越积越多，20241216 我又重装了一次 win11，也算是小有心得。
+后来用了两年，因为毛病越积越多，20241216 我又重装了一次 win11。
 
-下面是我两次装 win11 的心得汇总。
+202503 购买台式机，又装一次。
+
+总之我也在使用 windows 的过程中持续记录心得，经验丰富。
 
 :::
 
@@ -33,15 +35,16 @@ tag:
 
 - 如果你的 windows 是从 win11 官方 ISO 安装的，那么初始化时登录微软帐号的那一步，**千万不要登录微软帐号**。[理由](#初始化登录微软帐号酿成的悲剧)
   - 最好直接断网安装：在强制需要联网的那一步按 `Shift + F10`，执行 `oobe\bypassnro`，重启后就会显示 _没有 lnternet 连接_ 选项。
-    - 2025 微软把这指令禁用了，所以建议装机之前先把 `C:\Windows\System32\oobe\BypassNRO.cmd` 拷到 U 盘里，装完机就可以直接执行脚本了。
+    - 2025 微软把这指令禁用了，所以建议装机之前先把 `C:\Windows\System32\oobe\BypassNRO.cmd` 拷到 U 盘里，装完机就可以直接执行脚本了。（本质上是修改一个注册表）
 
 ### 安装后（关键步骤）
 
-- 进行 windows 更新。
+- 进行 windows 更新。（需要看情况，关注一下最近的 windows 更新补丁有没有出过什么大问题）
+  - 本次更新将会成为我的 Windows 系统的最后一次更新。
 - 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_ ，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
 - 关闭 Windows 安全中心([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
   1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。
-  2. [Defender Remover](https://github.com/ionuttbara/windows-defender-remover)，但是不好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。
+  2. [Defender Remover](https://github.com/ionuttbara/windows-defender-remover)。该工具之前还不太好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。不过 2025 年后也可以尝试。
   3. 手动([src](https://zhuanlan.zhihu.com/p/494923217))，但实测并不能完全关闭
      - _Windows 安全中心-病毒和威胁防护-管理设置_ ，关闭所有开关
      - 使用组策略编辑器禁用 Windows Defender

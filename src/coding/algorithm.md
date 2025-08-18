@@ -238,7 +238,7 @@ for (int i = 0; i < n; ++i) {
 
 完全背包（仅需要修改遍历顺序）：
 
-```cpp
+```cpp {2}
 for (int i = 0; i < n; ++i) {
     for (int j = weights[i]; j <= capacity; ++j) {
         dp[j] = std::max(dp[j], dp[j - weights[i]] + values[i]);
