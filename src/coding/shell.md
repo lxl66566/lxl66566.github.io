@@ -99,10 +99,7 @@ nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu
 
 不过 nushell 最劝退我的还是 [rust 的一个 bug](https://t.me/withabsolutex/1700)，导致其无法在我的 RAMDisk 上工作。
 
-### 缺点
-
-- nushell 补全只是对 history 的拙劣参考，手感比 fish 差多了。
-- 类型系统垃圾
+其他缺点详见 [fuckxxx](../gossip/fuckxxx.md#nushell)
 
 ### shell 配置
 

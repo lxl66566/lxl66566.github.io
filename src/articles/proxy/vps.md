@@ -56,6 +56,7 @@ tag:
 | 20250109 [ClawCloud](https://claw.cloud/) | JP |~~\$36.00/yr~~ \$7.00/yr | 500GB | 1G | 20G | 1 | <dtlslong>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。</dtlslong> |
 | 20250404 [nube.sh](nube.sh) | JP | $0.0012/h + $0.0031/GB | 不限 | 1GB | 10GB | 1 | [测评](http://hpaste.spiritlhl.net/#/show/bp0wd.txt)；<dtlslong>前端好评；一次最少充 $10，试错成本挺高；延迟一般，特别是联通很烂。<br/>用了一个月，连通性差了很多，基本是不可用状态，纯纯狗屎</dtlslong> |
 | 20250805 [skystroll](https://skystroll.net/store) | JP | $2.49/mo | 1T 500Mbps | 512M | 5GB | 1 | <dtlslong>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</dtlslong> |
+| 20250820 [RFCHOST](https://my.rfchost.com/) | JP | $29.99/yr + ￥45 | 1T 不限 | 512M | 10GB | 1 | <dtlslong>看评测挺不错的，延迟很低，价格也合适，于是在 nodeseek 上蹲了几天蹲到一个。溢价还是有点高，因为第二天就有更合适的出现了，不过也不用在乎这么多。</dtlslong> |
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 

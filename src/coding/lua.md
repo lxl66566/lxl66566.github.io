@@ -62,6 +62,7 @@ tag:
     return _M
     ```
 - 赋值：lua 默认使用引用赋值。所以就不得不提浅拷贝和深拷贝的概念，在 lua 中要怎么做呢？答：没有这些函数，要自己写。
+- lua 里没有三元运算符，并且[不能使用 `and .. or` 当成三元运算符](https://www.runoob.com/w3cnote/trinocular-operators-in-lua.html)！！！
 
 ### 数据类型
 
