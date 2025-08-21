@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 18 Aug 2025 15:23:18 GMT</pubDate>
-    <lastBuildDate>Mon, 18 Aug 2025 15:23:18 GMT</lastBuildDate>
+    <pubDate>Thu, 21 Aug 2025 15:21:39 GMT</pubDate>
+    <lastBuildDate>Thu, 21 Aug 2025 15:21:39 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>编程</category>
@@ -87,6 +87,7 @@
 </ul>
 </li>
 <li>赋值：lua 默认使用引用赋值。所以就不得不提浅拷贝和深拷贝的概念，在 lua 中要怎么做呢？答：没有这些函数，要自己写。</li>
+<li>lua 里没有三元运算符，并且<a href="https://www.runoob.com/w3cnote/trinocular-operators-in-lua.html" target="_blank" rel="noopener noreferrer">不能使用 <code>and .. or</code> 当成三元运算符</a>！！！</li>
 </ul>
 <h3>数据类型</h3>
 <p>string, function, boolean, number, nil, table</p>
