@@ -823,6 +823,19 @@ const data: ComicItemType[] = [
   { id: "590185", aScore: 6.2, bScore: 8.6, info: "#fate #睡x #调教 #loli", bak: "https://telegra.ph/サルパッチョ-わいら-メリュ子はぐいぐい来るが交尾がド下手FateGrand-Order-中国翻訳-DL版-08-15-2" },
   { id: "542621", aScore: 5.8, bScore: 8.9, order: 1, info: "#隐蔽性交 #痴汉" },
   { id: "577989", aScore: 6.6, bScore: 8.1, order: 2, info: "#束缚 #纯爱 #捆绑 #录像" },
+  { id: "590442", aScore: 8.6, bScore: 6.3, info: "#蔚蓝档案 #纯爱 #loli", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-プラナは甘やかしたい-ブルーアーカイブ-中国翻訳-DL版-08-16" },
+  { id: "590420", aScore: 7.7, bScore: 4.3, info: "#蔚蓝档案 #兔女郎 #1v1", bak: "https://telegra.ph/Panda-Boxing-エコ-師の詭弁-下限は降り-叶えられ-ブルーアーカイブ-中国翻訳-DL版-08-16" },
+  { id: "590320", aScore: 7, bScore: 4, order: 2, info: "#蔚蓝档案 #全彩 #合集 #睡x", bak: "https://telegra.ph/きんのかみ-すかーふぃ-すやすやArchives2-ブルーアーカイブ-中国翻訳-DL版-08-16" },
+  { id: "590278", aScore: 9.1, bScore: 7.4, info: "#蔚蓝档案 #3P #竞争 #たこ焼き畑 #惩罚", bak: "https://telegra.ph/たこ焼き畑-たこやきよし-先生どちらのレディーがお好みですか-ブルーアーカイブ-中国翻訳-DL版-08-16-2" },
+  { id: "590370", aScore: 7.8, bScore: 9.6, order: 3, info: "#蔚蓝档案 #触手 #忍耐", bak: "https://telegra.ph/波乗りネイビー-エビネイビー-マリー触手堕ち-III-萌芽-ブルーアーカイブ-中国翻訳-DL版-08-17" },
+  { id: "591168", aScore: 7.9, bScore: 7.3, info: "#明日方舟 #兽耳 #课堂 #天然loli #中出", bak: "https://telegra.ph/餃子屋さんゆなち私だってお姉さんなんですからアークナイツDL版中國翻訳-08-19-2" },
+  { id: "591500", aScore: 8.3, bScore: 7.5, info: "#偶像 #大叔 #女主动", bak: "https://telegra.ph/ねこのみみ-Thalia-小悪魔系な僕のシオリちゃん-中国翻訳-DL版-08-20" },
+  { id: "591583", aScore: 7.4, bScore: 5.7, info: "#短篇 #公主 #纯爱 #偶像大师", bak: "https://telegra.ph/Horizontal-World-またのんき-悠久ももかよいつま-アイドルマスター-シンデレラガールズ-中国翻訳-DL版-08-20" },
+  { id: "591400", aScore: 7.2, bScore: 7.6, info: "#蔚蓝档案 #女主动 #推倒 #旗袍", bak: "https://telegra.ph/C105-つくてん-円つくも-煽情妃誘惑されて押し倒されて-ブルーアーカイブ-中国翻訳-無修正-08-20-3" },
+  { id: "591287", aScore: 7.8, bScore: 8.7, info: "#蔚蓝档案 #合集 #性冷淡 #多女主 #恶作剧", bak: "https://telegra.ph/山含-出差百夜堂萬事通-ブルーアーカイブ-中国語-無修正-DL版-08-19-3" },
+  { id: "591047", aScore: 7.6, bScore: 6.5, info: "#蔚蓝档案 #自慰 #乳头 #兽耳", bak: "https://telegra.ph/みじ屋-ミコジン-マリーの乳首の本-ブルーアーカイブ-中国翻訳-DL版-08-18-2" },
+  { id: "590718", aScore: 8.2, bScore: 6, info: "#蔚蓝档案 #4P", bak: "https://telegra.ph/N7747ますく堂-いせぽんMasco-ドキドキ夜ノティーパーティー-ブルーアーカイブ-中国翻訳-DL版-08-17-3" },
+  { id: "590696", aScore: 7.6, bScore: 9, order: 2, info: "#魅魔 #梦境 #正太 #魔女", bak: "https://telegra.ph/ちりめんなおゆき-なおゆき-ロリっ娘サキュバス搾精日記無口で無表情なあの娘がサキュバスだった-中国翻訳-DL版-08-17" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
