@@ -145,6 +145,7 @@ nix flake update <input>                # update flake 想必大家天天用，�
   1. 需要查找的时候经常是刚安装完软件的时候，还没有 updatedb。而 nixos 的手动 updatedb 耗时极长。
   2. 默认 locate 时也会搜索路径，nix 路径又基于 hash，因此会有很多 hash 污染搜索结果。
   - 感觉真不如 `cd /nix/store && fd xxx`。
+- [nix-tree](https://github.com/utdemir/nix-tree)：交互式的依赖寻找，非常好用。打开以后按 `/` 查找。
 
 ### 搜索
 
@@ -378,6 +379,24 @@ isoImage.contents = [
 - 手动在 `home.nix` 里添加插件后，所有禁用的插件会被自动启用。
 - 某些插件在非 feh 环境下无法运行；feh 环境下无法在终端使用 sudo。
 - 无法使用 ssh 插件远程开发。
+
+## 问题解决
+
+### 太大了
+
+我要在 VPS 上安装我的 flake。但是太大了，VPS 被塞爆了，并且我在 copy path 时观察到一些例如 llvm，rustc 等我根本没有手动安装的软件，于是需要查哪些傻卵打包者引入了这些依赖。但是问题是我需要在不实际安装的情况下进行查询。
+
+求助群友后，[@wElmForest](https://t.me/wElmForest) 给出了一个解法：
+
+```sh
+nix why-depends .#nixosConfigurations.<hostname>.config.system.build.toplevel nixpkgs#<依赖>
+# or
+nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel
+```
+
+实测是需要先使用 `nix why-depends` 进行 build 后，再用 `nix-tree` 进行查询，否则会爆 `nix-tree: user error (Invalid path: ... Make sure that it is built, or pass '--derivation' if you want to work on the derivation.)`。不过抛开这个 bug 不谈，nix-tree 还是好用的。
+
+找到了一个占用 3G 多的罪魁祸首 prettybat，直接把它干掉了。
 
 ## 劝退
 

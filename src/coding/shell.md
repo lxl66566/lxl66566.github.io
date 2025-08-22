@@ -142,6 +142,18 @@ amber 是总论提到的编译到 bash 语言的一个高阶语言；它使用 r
 
 这个项目的代码我只能说真是一坨屎山。在用几乎最新的 rust 和 cargo 情况下，没有修 clippy issue 也就算了，连 rustfmt 都没过就有点过分了吧。。。屎山也就算了，我跑 `cargo test` 也跑不了，正常使用也用不了，这什么垃圾玩意。。
 
+## Makefile
+
+~~谁说 Makefile 就不是一种 shell script 了？~~
+
+一般把 Makefile 理解成一堆 bash 函数即可。然后 make 命令行提供了函数间依赖关系，和单独执行某一个函数的功能，还有杂七杂八基本用不到的功能。反正只要把 Makefile 理解成 bash 执行器即可。
+
+- makefile 一个核心功能是，target 这个路径如果存在文件，该 target 就不会再执行。然后 `.PHONY xxx` 的意思就是即使 xxx 存在文件，这个 target 也会再次执行。一般需要将纯指令，例如 clean，all，install 等加入 `.PHONY`。
+- 要在一个 Makefile 里对子 Makefile 进行执行，使用 `$(MAKE) -C xxxdir args`。相当于 `cd xxxdir && make args && cd -`。
+- 插值 `$()` 和 `${}` 完全一致。
+- `:=` 和 `=` 都是变量赋值，其中 `=` 是延迟展开，`:=` 是立即计算。
+- 如果要把值给子 Makefile 使用，直接 `export value`.
+
 ## 杂
 
 - [Y/n 选择器](https://stackoverflow.com/questions/226703/how-do-i-prompt-for-yes-no-cancel-input-in-a-linux-shell-script/27875395#27875395)
