@@ -630,6 +630,13 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 
 加密的 xp3 就没法直接用 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack) 解封包了。不过 GARbro 可以解封加密的 xp3，只要游戏有被收录到密钥列表里就行，这里列举的游戏都属于此类。
 
+GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试试。还有路径压缩就没必要开了，~~只会影响我试错的速度~~。
+
+<!-- prettier-ignore -->
+| 游戏 | xp3 版本 |
+| ---- | -------- |
+| Deep One | Z |
+
 </template>
 <template #CatSystem2>
 
@@ -765,6 +772,17 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 同样一套流程，但是 ISLAND 的 `pcm_?.int` 和其中的 ogg 没有对应关系，所以还是改改程序，把每个 pcm 封包的音频都隔离开来比较好。
 
 **吗？** CatSystem2 启动会检测各种 `pcm_?.int`，并不意味着 `updatexx.int` 就不能用啊。于是我在保留 pcm 的前提下将所有加速后语音打成了 `updatexx.int`，打开游戏，语音成功加速了！这样编程的难度又降低了。
+
+</template>
+<template #QLIE>
+
+解美少女万华镜 1。尝试：
+
+- [hz86/filepack](https://github.com/hz86/filepack)，无法使用，成功退出但是未解压任何东西。
+- [Aobanana-chan/UnpackQlie](https://github.com/Aobanana-chan/UnpackQlie)，这玩意太扭曲了文件名要从 stdin 输入……最后无法使用，FilePackVer 签名验证失败。
+- GARbro：如果点 _将音频转换为常规格式_ 则会报错 _无法读取音频格式。_ 如果不点，解出来的 .ogg 也都是加密的，无法直接读取。而且 GARbro 没有提供 QLIE 封包功能。
+
+感觉还是得研究其原理。
 
 </template>
 </SpeedupList>

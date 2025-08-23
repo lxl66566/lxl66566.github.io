@@ -52,7 +52,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["心之形心之色心之声"],
+    names: ["心之形心之色心之声", "Deep One"],
     valid_name: "krkr_xp3_enc",
     engine: "krkr",
     save_format: "xp3(encrypted)",
@@ -148,6 +148,13 @@ const data: SpeedupItemType[] = [
     engine: "CatSystem2",
     save_format: "int",
     speedupable: true,
+  },
+  {
+    names: ["美少女万华镜 系列"],
+    valid_name: "QLIE",
+    engine: "QLIE",
+    save_format: "pack",
+    speedupable: false,
   },
 ];
 </script>

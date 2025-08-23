@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "Deep One",
+    valid_name: "DeepOne",
+    other_names: ["Deep One -ディープワン"],
+    duration: {
+      start: "2025-08-22",
+    },
+  },
+  {
     name: "星辰密文",
     other_names: ["StellarCode"],
     all_ages: true,
@@ -33,9 +41,10 @@ const original_list: GalItemInputType[] = [
     name: "猫忍之心",
     order: 2,
     other_names: ["猫忍えくすはーと", "NEKO-NIN"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "1h28min",
     duration: {
       start: "2025-08-09",
+      end: "2025-08-22",
     },
   },
   {
