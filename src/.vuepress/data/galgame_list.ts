@@ -5,6 +5,7 @@ const original_list: GalItemInputType[] = [
     name: "Deep One",
     valid_name: "DeepOne",
     other_names: ["Deep One -ディープワン"],
+    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-08-22",
     },
@@ -45,6 +46,11 @@ const original_list: GalItemInputType[] = [
     duration: {
       start: "2025-08-09",
       end: "2025-08-22",
+    },
+    score: {
+      story: 1.5,
+      visual: 9.7,
+      program: 3,
     },
   },
   {

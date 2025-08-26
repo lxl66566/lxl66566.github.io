@@ -137,6 +137,7 @@ tag:
 - [ ] reader
 - [ ] sync tools
 - [ ] diskann
+- [ ] bubblewrap
 
 ### Android
 

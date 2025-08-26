@@ -27,7 +27,7 @@
           </tr>
         </thead>
         <tbody :class="{ 'show-strict': show_strict }">
-          <GalListItem v-for="item in filteredItems" :key="item.name + item.order" :item="item"
+          <GalListItem v-for="item in filteredResults" :key="item.name + item.order + item.nth_time" :item="item"
             :expandable="useSlots()[get_valid_name(item)] != undefined">
             <template #gal-list-item-content>
               <slot :name="get_valid_name(item)"></slot>
@@ -53,7 +53,6 @@ import debounce from "./utils/debounce";
 const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name;
 const show_strict = ref(false);
 const searchText = ref('');
-const filteredItems = ref<GalItemInputType[]>([]); // 用于存储搜索结果，这也是最终的显示结果
 
 // 三个排序组件状态
 const sortOrder_story = ref<"none" | "asc" | "desc">("none");
@@ -116,13 +115,15 @@ const defaultSort = (inputList: GalItemInputType[]): GalItemInputType[] => {
   });
   return sortedGroups.flatMap((group) => group);
 };
+// 经过默认排序后的数据，不应该被改变，会在每次还原时被使用
+const default_list = defaultSort([...original_list]);
 
 const sortedList = computed(() => {
   // 如果没有激活的排序并且有默认排序函数，使用默认排序
   if (currentSort.value === null || currentSort.value.direction === "none") {
-    return defaultSort([...original_list]);
+    return default_list
   }
-  return [...original_list].sort((x, y) => {
+  return [...default_list].sort((x, y) => {
     const scoreKey = currentSort.value!.column;
     const xScore = x.score?.[scoreKey];
     const yScore = y.score?.[scoreKey];
@@ -133,7 +134,6 @@ const sortedList = computed(() => {
     return currentSort.value?.direction === "asc" ? xScore - yScore : yScore - xScore;
   });
 });
-const items_num = computed(() => show_strict.value ? filteredItems.value.filter((item) => !item.not_strict).length : filteredItems.value.length);
 
 // 搜索
 // 更多配置请参考 Fuse.js 文档: https://fusejs.io/api/options.html
@@ -150,21 +150,13 @@ const fuseOptions: IFuseOptions<GalItemInputType> = {
 };
 let fuseInstance: Fuse<GalItemInputType>;
 
+const query = ref('');
+const filteredResults = computed(() => {
+  return query.value.trim() ? fuseInstance.search(query.value).map(result => result.item) : sortedList.value;
+});
+
 const debouncedSearch = debounce(() => {
-  const query = searchText.value.trim();
-  if (!query) {
-    // 如果搜索查询为空，显示所有排序后的项目
-    filteredItems.value = [...sortedList.value]; // 创建副本以避免直接修改 sortedList
-    return;
-  }
-  if (!fuseInstance) {
-    // 如果 Fuse 实例还未初始化（例如 sortedList 初始为空），则不执行搜索
-    // 或者可以根据 sortedList 的当前状态决定是否显示空列表
-    filteredItems.value = sortedList.value.length > 0 ? [] : [...sortedList.value];
-    return;
-  }
-  const results = fuseInstance.search(query);
-  filteredItems.value = results.map(result => result.item);
+  query.value = searchText.value.trim();
 }, 400);
 
 
@@ -182,6 +174,8 @@ watch(sortedList, (newItems) => {
 watch(searchText, () => {
   debouncedSearch();
 });
+
+const items_num = computed(() => show_strict.value ? filteredResults.value.filter((item) => !item.not_strict).length : filteredResults.value.length);
 </script>
 
 <style scoped lang="scss">
