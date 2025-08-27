@@ -119,13 +119,13 @@ all in one 类型的插件，我**不是很喜欢，不够自由**。
 
 @tab xmake
 
-xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmake 使用 lua 脚本作为构建系统语言。**~~我真的不想再面对一团乱麻的 cmake 了！~~**
+xmake 是~~向下兼容 cmake~~ 的构建工具，拥有较为简洁的语法。xmake 使用 lua 脚本作为构建系统语言。
 
 - [新手教程](https://zhuanlan.zhihu.com/p/640701847)，由于我自己摸索而不是看教程，多走了许多弯路。因此推荐看看。
 - 开始使用：
   - use [scoop](../farraginous/recommend_packages.md#scoop), `scoop install xmake` 一行安装。输入 `xmake -h` 了解更多。
   - 示例：`xmake create -l c++ -P ./cpp && cd cpp && xmake && xmake r`
-  - 一些 LSP 可能会需要 `compile_commands.json`：`xmake project -k compile_commands`
+  - 一些 LSP （clangd）需要 `compile_commands.json` 来进行正确的 lint，此时需要执行一次 `xmake project -k compile_commands`，然后重启 LSP。
 - 一些预设
   ```lua
   set_encodings("utf-8")            -- 没加会导致 Qt 中文乱码
@@ -144,7 +144,45 @@ xmake 是向下兼容 cmake 的构建工具，拥有极度简洁的语法。xmak
 - 指定工具链
   - 在 target 中添加 `set_toolchains("clang")`
 
-xmake 的主要缺点就是用的人少，出了 bug 找不到解决方案。不过由于我的个人项目简单，我姑且还是用着 xmake 的。
+#### 其他技巧
+
+将动态库复制到构建目录：有的第三方库是 GPL license，如果静态链接的话会违规，只能用动态链接；所以最好能把动态库的 dll 给自动 copy 到构建目录，方便打包或执行。
+
+```lua
+add_packages("soundtouch")
+after_build(function(target)
+	-- 1. 获取目标的所有依赖包
+	local pkgs = target:pkgs()
+	if pkgs then
+		-- 2. 遍历所有包，找到我们需要的 'soundtouch'
+		for _, pkg in pairs(pkgs) do
+			if pkg:name() == "soundtouch" then
+				-- 3. 获取包的安装路径下的 bin 目录 (通常存放 dll)
+				local dll_dir = path.join(pkg:installdir("bin"), "bin")
+				print("SoundTouch DLL dir: %s", dll_dir)
+				-- 4. 检查目录是否存在且其中有文件
+				if os.isdir(dll_dir) and #os.files(path.join(dll_dir, "*.dll")) > 0 then
+					-- 5. 将该目录下的所有 dll 文件拷贝到当前目标的输出目录
+					print("Copying DLL to %s", target:targetdir())
+					os.cp(path.join(dll_dir, "*.dll"), target:targetdir())
+				end
+			end
+		end
+	end
+end)
+```
+
+#### 评价
+
+优点：
+
+- xmake 算是 C++ 构建系统里的一股清流，我真的不想再面对一团乱麻的 cmake 了！
+- xmake 引入三方包是真的方便！`add_requires` `add_packages` 两行终结了写 C++ 的造轮子焦虑。
+
+缺点：
+
+- 用的人少，出了 bug 不好找解决方案。不过随着 xmake 包越来越多，生态越来越好，我现在还是愿意在个人项目里用 xmake 的。
+- [lua 本身是一坨屎](./lua.md)，`xmake.lua` 没有 typing 和 lsp，这方面的生态是欠缺的。
 
 @tab cmake
 
@@ -153,6 +191,8 @@ cmake 内部原理是生成 makefile 然后再 make。
 实际上我也就写 Qt 接触了一下 cmake，后面很快转到 xmake 了，关于 cmake 的了解不算多。
 
 - 安装：`scoop install cmake`，或者 VS 安装里也有，不过要自己加 PATH。
+
+我很不喜欢 cmake，感觉还不如回归本源 Makefile。
 
 @tab cmkr
 

@@ -4,11 +4,10 @@ const original_list: BookItemInputType[] = [
   {
     name: "一生悬命",
     author: "陆春吾",
-    reading_status: {
-      kind: "在读",
-    },
+    h_level: HLevel.NONE,
     duration: {
       start: "2025-08-22",
+      end: "2025-08-27",
     },
   },
   {
