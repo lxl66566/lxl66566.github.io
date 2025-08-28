@@ -836,6 +836,11 @@ const data: ComicItemType[] = [
   { id: "591047", aScore: 7.6, bScore: 6.5, info: "#蔚蓝档案 #自慰 #乳头 #兽耳", bak: "https://telegra.ph/みじ屋-ミコジン-マリーの乳首の本-ブルーアーカイブ-中国翻訳-DL版-08-18-2" },
   { id: "590718", aScore: 8.2, bScore: 6, info: "#蔚蓝档案 #4P", bak: "https://telegra.ph/N7747ますく堂-いせぽんMasco-ドキドキ夜ノティーパーティー-ブルーアーカイブ-中国翻訳-DL版-08-17-3" },
   { id: "590696", aScore: 7.6, bScore: 9, order: 2, info: "#魅魔 #梦境 #正太 #魔女", bak: "https://telegra.ph/ちりめんなおゆき-なおゆき-ロリっ娘サキュバス搾精日記無口で無表情なあの娘がサキュバスだった-中国翻訳-DL版-08-17" },
+  { id: "593090", aScore: 8.8, bScore: 9.5, info: "#3P #催眠 #蔚蓝档案 #感官共享", bak: "https://telegra.ph/20NT-ふけまち-プラナちゃん催眠のお時間です-ブルーアーカイブ-中国翻訳-DL版-08-26" },
+  { id: "590442", aScore: 7.3, bScore: 7, info: "#蔚蓝档案 #纯爱 #loli", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-プラナは甘やかしたい-ブルーアーカイブ-中国翻訳-DL版-08-16" },
+  { id: "591967", aScore: 9.9, bScore: 9.6, info: "#堕天計画", bak: "https://telegra.ph/234ド-イチリ-堕天計画-もう一人の守護者編-中国翻訳-無修正-DL版-08-22" },
+  { id: "561776", aScore: 7.6, bScore: 9.5, info: "#触手 #冒险者" },
+  { id: "591953", aScore: 8.7, bScore: 8.6, info: "#玉之けだま #淫魔", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-先生がエロすぎてようちえん留年しそうな件-中国翻訳-無修正-DL版-08-22" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

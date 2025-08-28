@@ -784,6 +784,8 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 感觉还是得研究其原理。
 
+不过在尝试过程中，用 Process Monitor 监视发现进程会去读游戏目录下的一些文件夹的 ogg，于是猜想该游戏可以免打包读取音频。尝试将 ogg 扔到 Voice 下发现可以读取并播放，验证了免封包的猜想。因此只剩下了最后一个难关：将 ogg 解密，即可实现加速。
+
 </template>
 </SpeedupList>
 

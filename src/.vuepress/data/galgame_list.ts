@@ -27,6 +27,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "挑战勇者试炼时被诱惑的我",
+    use_time: "4h37min",
     not_strict: true,
     duration: {
       start: "2025-08-11",
