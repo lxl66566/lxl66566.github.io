@@ -841,6 +841,8 @@ const data: ComicItemType[] = [
   { id: "591967", aScore: 9.9, bScore: 9.6, info: "#堕天計画", bak: "https://telegra.ph/234ド-イチリ-堕天計画-もう一人の守護者編-中国翻訳-無修正-DL版-08-22" },
   { id: "561776", aScore: 7.6, bScore: 9.5, info: "#触手 #冒险者" },
   { id: "591953", aScore: 8.7, bScore: 8.6, info: "#玉之けだま #淫魔", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-先生がエロすぎてようちえん留年しそうな件-中国翻訳-無修正-DL版-08-22" },
+  { id: "592192", aScore: 8, bScore: 7.9, info: "#兽角 #睡x #正太", bak: "https://telegra.ph/ヒーリアイネン-サンタツキ-あわい先生の完璧な作戦-竜崎あわい-中国翻訳-DL版-08-23" },
+  { id: "592452", aScore: 7, bScore: 7.2, order: 2, info: "#cos #兽耳 #排尿 #拘束 #发情", bak: "https://telegra.ph/こむぎばたけ-こむぎ-もっとおりこうさん-中国翻訳-DL版-08-23" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
