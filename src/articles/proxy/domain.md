@@ -33,3 +33,4 @@ category:
 ## 付费
 
 - [namecheap](https://www.namecheap.com/)：买了两次，还算便宜。
+  - 6 位数字 xyz 真牛逼啊，几块钱一年 续费同价，我可以用到死。

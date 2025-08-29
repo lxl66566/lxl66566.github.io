@@ -15,24 +15,22 @@ tag:
 
 与 VPS 无关的 linux 问题请移步 [linux](./linux)
 
-## 地区选择
+## 个人偏好
 
-买了一年机，好多地方全买过了。我现在有着极为明确的购机地点倾向：JP。
-
-我对延迟有着比较高的要求，因为需要刷 tg 看本子，如果图片出得慢，效率太低了。所以 US 全部 out。
-
-在东亚里，SG, KR, TW 的延迟也是垫底的，随便 ping 都上 200ms。所以 out。
-
-最后剩下 JP 和 HK，虽然 HK 延迟最低，但由于非常多的服务是屏蔽 HK 的（chatgpt，许多日本网站，gemini 和其他 google 家大模型），所以 JP 胜出。
-
-以后可能会尝试一下越南等地区。
+- 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。
+- 地点偏好：我有明确的地点偏好：JP。
+  - 我对延迟有一定要求，所以 US 全部 out。不过由于 US 机便宜，有时也会搞个当备用垫底。
+  - 在东亚里，SG, KR, TW 的延迟也是垫底的，随便 ping 都上 200ms。所以 out。
+  - 最后剩下 JP 和 HK，虽然 HK 延迟最低，但由于非常多的服务是屏蔽 HK 的（chatgpt，许多日本网站，gemini 和其他 google 家大模型），所以 JP 胜出。
 
 ## 购买
 
 ### 消息来源
 
-- [lowendbox](https://lowendbox.com/)
 - [主机百科](https://zhujiwiki.com)
+- [nodeseek](https://www.nodeseek.com/)
+- [lowendbox](https://lowendbox.com/)
+- [Runaway](https://runaway.rip/) 避坑
 
 ### 我买到的
 

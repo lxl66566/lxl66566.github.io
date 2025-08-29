@@ -24,3 +24,5 @@ I'm very sensitive to file size. And 20230428 I found a nice guy to minimize my 
 `upx --best --lzma <yourfile.exe>`
 
 or you want to minimize the whole package folder including dlls, replace `<yourfile.exe>` with `<yourfolder>/*`
+
+but upx will increase the runtime memory usage, I think it's not worth it.

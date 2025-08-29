@@ -778,15 +778,16 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 解美少女万华镜 1。尝试：
 
-- [hz86/filepack](https://github.com/hz86/filepack)，无法使用，成功退出但是未解压任何东西。
-- [Aobanana-chan/UnpackQlie](https://github.com/Aobanana-chan/UnpackQlie)，没有 README，这玩意太扭曲了文件名要从 stdin 输入……最后无法使用，FilePackVer 签名验证失败。
+- [hz86/filepack](https://github.com/hz86/filepack)，无法使用，输出到 unpack file end 但是未解压任何东西。看了下好像只适用于 FilePackVer3.1。
+- [Aobanana-chan/UnpackQlie](https://github.com/Aobanana-chan/UnpackQlie)，没有 README，这玩意太扭曲了文件名要从 stdin 输入……最后无法使用，FilePackVer 签名验证失败，也是只适用于 FilePackVer3.1 的。
 - GARbro：如果点 _将音频转换为常规格式_ 则会报错 _无法读取音频格式。_ 如果不点，解出来的 .ogg 也都是加密的，无法直接读取。而且 GARbro 没有提供 QLIE 封包功能。
+- [arc_conv](https://github.com/amayra/arc_conv)：也没有 readme，在[某论坛看到用法](https://www.ai2.moe/topic/32383-请问大佬qlie较古早的版本怎么封包/)，试了下解封包都没有任何反应。
 
 感觉还是得研究其原理。
 
 不过在尝试过程中，用 Process Monitor 监视发现进程会去读游戏目录下的一些文件夹的 ogg，于是猜想该游戏可以免打包读取音频。尝试将 ogg 扔到 Voice 下发现可以读取并播放，验证了免封包的猜想。因此只剩下了最后一个难关：将 ogg 解密，即可实现加速。
 
-在 52pojie 上看到一篇[超详细!解包某知名 Galgame(万华镜 5)引擎——Galgame 汉化中的逆向#Qlie 引擎](https://www.52pojie.cn/thread-1500700-1-1.html) 是上面的 Aobanana-chan 写的，大佬讲得是真详细啊。里面也有说到文件解密逻辑，不如去看看他的源码吧。
+搜索引擎上经常被 [超详细!解包某知名 Galgame(万华镜 5)引擎——Galgame 汉化中的逆向#Qlie 引擎](https://www.52pojie.cn/thread-1500700-1-1.html) 这篇文章刷屏，是上面 Github 的 Aobanana-chan 写的，看着是挺详细的，实际上对我解包没有贡献什么信息。我又去读了他的源码，一堆 mmx 指令集也不具备可读性。
 
 </template>
 </SpeedupList>
