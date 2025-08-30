@@ -2,6 +2,39 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "春音Alice＊Gram",
+    valid_name: "春音AliceGram",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-08-30",
+    },
+  },
+  {
+    name: "美少女万华镜1-被诅咒之传说少女",
+    valid_name: "美少女万华镜1",
+    other_names: ["美少女万華鏡"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-08-30",
+    },
+  },
+  {
+    name: "スターライトBLUE～幼なじみで推しの娘が知らないうちに開発されていた～",
+    use_time: "1h52min",
+    valid_name: "starlightblue",
+    other_names: ["starlight blue"],
+    namaniku: true,
+    duration: {
+      start: "2025-08-29",
+      end: "2025-08-30",
+    },
+    score: {
+      story: 1.7,
+      visual: 8.7,
+      program: 2.5,
+    },
+  },
+  {
     name: "Deep One",
     valid_name: "DeepOne",
     other_names: ["Deep One -ディープワン"],

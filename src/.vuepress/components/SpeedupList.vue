@@ -45,7 +45,7 @@ type SpeedupItemType = {
 
 const data: SpeedupItemType[] = [
   {
-    names: ["空に刻んだパラレログラム", "玉响未来", "NEKOPARA"],
+    names: ["空に刻んだパラレログラム", "玉响未来", "NEKOPARA", "春音Alice＊Gram", "白恋SAKURA＊GRAM"],
     valid_name: "krkr_xp3",
     engine: "krkr",
     save_format: "xp3",
@@ -154,7 +154,14 @@ const data: SpeedupItemType[] = [
     valid_name: "QLIE",
     engine: "QLIE",
     save_format: "pack",
-    speedupable: false,
+    speedupable: true,
+  },
+  {
+    names: ["スターライトBLUE～幼なじみで推しの娘が知らないうちに開発されていた～"],
+    valid_name: "LiLiM",
+    engine: "-",
+    save_format: "aos",
+    speedupable: true,
   },
 ];
 </script>

@@ -71,7 +71,7 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
        User git
        Hostname ssh.github.com
        Port 443
-       # ProxyCommand connect -H 127.0.0.1:<port> %h %p  # 如果你设置了 HTTP_PROXY 和 HTTPS_PROXY 环境变量，可以不写这行
+       ProxyCommand connect -H 127.0.0.1:<port> %h %p # 如果你有系统 http 代理，请加上这行
    ```
 3. 其他全局设置
    ```sh

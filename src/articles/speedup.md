@@ -776,6 +776,8 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 </template>
 <template #QLIE>
 
+### FilePackVer3.0
+
 解美少女万华镜 1。尝试：
 
 - [hz86/filepack](https://github.com/hz86/filepack)，无法使用，输出到 unpack file end 但是未解压任何东西。看了下好像只适用于 FilePackVer3.1。
@@ -783,11 +785,30 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 - GARbro：如果点 _将音频转换为常规格式_ 则会报错 _无法读取音频格式。_ 如果不点，解出来的 .ogg 也都是加密的，无法直接读取。而且 GARbro 没有提供 QLIE 封包功能。
 - [arc_conv](https://github.com/amayra/arc_conv)：也没有 readme，在[某论坛看到用法](https://www.ai2.moe/topic/32383-请问大佬qlie较古早的版本怎么封包/)，试了下解封包都没有任何反应。
 
-感觉还是得研究其原理。
-
 不过在尝试过程中，用 Process Monitor 监视发现进程会去读游戏目录下的一些文件夹的 ogg，于是猜想该游戏可以免打包读取音频。尝试将 ogg 扔到 Voice 下发现可以读取并播放，验证了免封包的猜想。因此只剩下了最后一个难关：将 ogg 解密，即可实现加速。
 
 搜索引擎上经常被 [超详细!解包某知名 Galgame(万华镜 5)引擎——Galgame 汉化中的逆向#Qlie 引擎](https://www.52pojie.cn/thread-1500700-1-1.html) 这篇文章刷屏，是上面 Github 的 Aobanana-chan 写的，看着是挺详细的，实际上对我解包没有贡献什么信息。我又去读了他的源码，一堆 mmx 指令集也不具备可读性。
+
+imhex 打开拉到末尾发现格式是 `FilePackVer3.0`。通过这个搜出关键词 `exfp3`，直接在 github 搜 `path:exfp3.cpp` 找到 [FuckGalEngine](https://github.com/Inori/FuckGalEngine) 及其 forks。FuckGalEngine 没有给出二进制，只好研究下源码，发现也是一堆 mmx 指令集。将 mmx 指令集用 LLM 移除后，c++17 以上编译又会报一堆错误。好不容易编译出来了，如果还开着默认的 `#define FP3_FLAVOR 31` 就 `Can't find key from exe file`；如果使用 `#define FP3_FLAVOR 3` 开关会多需要一个 `key.fkey`，这个玩意在 DLL 目录下。执行文件后会在当前文件夹提取出两个图片乱码文件夹和一个坏的 `pack_keyfile_kfueheish15538fa9or.key`。
+
+为了排除 LLM 移除 mmx 指令集把代码逻辑搞坏的影响，我又去网上找编译好的二进制。在 [asmodean-tools](https://github.com/hiroshil/asmodean-tools/blob/main/exfp3/exfp3_v3.exe) archive 里找到了预编译的 `exfp3_v3.exe`，测试后可用。于是终于可以愉快加速了。
+
+</template>
+<template #LiLiM>
+
+LiLiM DARKNESS 社的引擎，资料有点少。
+
+GARbro 可解，procmon 扫一遍不能免封，于是需要找封包工具。
+
+- [vn-tools/arc_unpacker](https://github.com/vn-tools/arc_unpacker) 的 Release 里看到了对 LiLiM DARKNESS 一些游戏的支持，下载下来用用，果然能解。但是 arc_unpacker 明确说了不支持封包。
+- [google archive - aos-tools](https://code.google.com/archive/p/aos-tools/source/default/source)：虽然有 pack 和 unpack，但是看起来不像是这个 aos 格式，好像是 Archive Operating System 啊草。
+- [000ylop/galgametools](https://github.com/000ylop/galgametools/tree/master/asmodean/asmodean%20tools/exaos) 的 `exaosv2.exe` 可解包（又是解在当前文件夹下啊啊啊把桌面渲染炸了）。虽然它没有封包功能，但是它有给出源码啊！直接~~逆向~~反向操作。
+
+看了下，这个 aos 的封包格式是真的简单。。实际上只要随便用 imhex 打开看看就能发现一大堆的裸 ogg 文件名和 `OggS` 头，我之前怎么没搞呢。于是 LLM RIIR 瞬秒了。
+
+当然事情并不会如此顺利，在 exaosv2.cpp 里对 5 - 8 字节是直接当废弃字节跳过的。结果封包回去并不能正常运行游戏，在语音处会弹窗报错。所以我猜这四个字节也是有用的。跟上次 BGI 的封包一样寻找蛛丝马迹，盲猜和文件数量有关（懒得去拉所有 ogg 的 frame 总和，先猜个数量再说），还真猜对了，这四个字节就是 _文件头大小_ + _目录表总大小_ = 273 + 文件数 \* 40。于是瞬秒，打开游戏测试，语音加速正常。
+
+仓库地址：<https://github.com/lxl66566/aos_up>
 
 </template>
 </SpeedupList>
