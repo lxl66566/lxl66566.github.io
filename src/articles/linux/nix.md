@@ -250,7 +250,35 @@ ps. 根据[群友描述](https://t.me/nixos_zhcn/477206)，只需要将 KDE 配�
 
 ### 代理
 
-我最开始使用 [v2rayA](../proxy/proxy_software.md#v2raya) 过渡，然后就跑到 [dae](../proxy/proxy_software.md#dae) 了。
+详见 [代理客户端](../proxy/proxy_software.md)。我最开始使用 [v2rayA](../proxy/proxy_software.md#v2raya) 过渡，然后就跑到 [dae](../proxy/proxy_software.md#dae) 了。
+
+但是在 NixOS-WSL 上，dae 无法使用；而用 v2rayA 又很丑，我希望使用 Windows 下的代理软件，此时即使设置了 `HTTP_PROXY` 等环境变量，在 NixOS 去 fetch github 时也无法生效。因为此时实际上去 fetch 的是 nix-daemon，而这玩意是不吃终端的代理的。解决方法是修改 nix-daemon service，有一个临时方案和一个永久方案。
+
+::: tabs
+
+@tab 永久方案
+
+```nix
+systemd.services.nix-daemon.serviceConfig = {
+  Environment = "https_proxy=" + proxy;
+};
+```
+
+@tab 临时方案
+
+```sh
+sudo mkdir -p /run/systemd/system/nix-daemon.service.d/
+sudo tee /run/systemd/system/nix-daemon.service.d/override.conf << EOF
+[Service]
+Environment="https_proxy=http://localhost:10450"
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart nix-daemon
+```
+
+([ref](https://nixos-cn.org/tutorials/installation/Networking.html#_3-%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE-channels-%E8%B7%9F-flake-inputs))
+
+:::
 
 ### 备份
 
@@ -398,22 +426,20 @@ nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel
 
 找到了一个占用 3G 多的罪魁祸首 prettybat，直接把它干掉了。
 
-## 劝退
+## 优势与劝退
 
-最后来说说劝退。NixOS 自身的问题还是不小的：
+我认为 NixOS 的优点有：
 
-- 文档稀烂，缺乏条目
-  - google 比文档多，学习靠社区解答
-- 社区不合，drama 不断
-- 报错模糊
+- Nix 语言作为一个配置语言本身设计得不错，支持复杂逻辑，考虑了配置合并与覆盖优先级与递归，支持动态类型和类型检查，支持字段描述，函数式与 std 分离等……
+- 由于 NixOS 的可复现性，NixOS 可以让人敢于也愿意去尝试更多的新东西（毕竟不太需要担心它 break 你的系统或者在你的目录里拉屎）。
+
+不过也不得不说 NixOS 自身的问题还是不小的：
+
+- 文档稀烂，缺乏条目，遇到问题主要靠社区解答
+- 报错模糊，定位问题困难，nom 都救不回来。
 - [包管理达不到预期](../../coding/package_manager.md#nix)
-- nix 开发，mkshell 实在是太烂了。
-  - 居然做不到 alias！
-
-我在使用过程中也有一些想吐槽的（其实上面就有很多）：
-
-- 图形化安装界面垃圾
-- minimal 镜像缺功能
+- ~~社区不合，drama 不断~~（虽然跟普通用户没啥关系）
+- 图形化安装界面垃圾，minimal 镜像缺功能
 - home manager 捞
 
 我的资历尚浅，只能够发出如此感叹。如果你希望看到更多对 nixos 的评价，可以看看 [external 2.](#external)。

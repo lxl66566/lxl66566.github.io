@@ -287,16 +287,39 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 
 ### XMR
 
-现在挖 XMR 还是能跑赢电费的，在一众币种里已经是比较好的了。由于挖 XMR 会让 CPU FAN 满速运转，比较吵，我都是在舍友不在的时候挖，赚的是少了点。
+现在挖 XMR 还是能跑赢电费的，在一众币种里已经是比较好的了。由于挖 XMR 会让 CPU FAN 满速运转，比较吵，我都是在舍友不在的时候挖，赚的是少了点。后来开始工作以后就买了 local server 在家里挖。由于租房电费有分峰谷，因此晚上最好活用谷电。
+
+我本身也喜欢折腾硬件，所以用多个设备跑过 XMR hash，现在（202508）做个总结：
+
+- 挖矿最重要的是能效平衡而不是超频。因此对 CPU 的体质要求没有非常高，并且需要去 curve optimizer 降压，然后 PBO 调整一下功耗。
+- 7950x 算是比较平衡的设备。如果你追求极致性价比，可以用 7950x ES，还是相当便宜的。
+- 性价比最高的设备是用移动端 CPU 组 modt，比如我的一块天邦 7945hx 二手只要 1900，但是可以在整机 150W，CPU 100W 功耗下跑出 18000 的 hash rate！移动端设备优秀的能耗比绝对是挖矿的理想设备。
+- 9950x 别买，价格几乎是 7950x ES 的两倍，但是 hash rate 提升太小了基本可以忽略。9950x 强在单核性能而不是多核，对挖矿没啥帮助。
+- 5950x 的话性价比太低了。而且 DDR4 的内存带宽太低了，跑 XMR 完全没有优势，能上 DDR5 还是上 DDR5 比较好。
+- 可以把挖矿当成爱好，但不要想着能赚太多钱。现在 XMR 回本周期都是两年起步，民电还是不够便宜；如果你想多加设备，又会让阶梯电价上升一级，反而不划算。
+
+其他的 XMR 必知：
 
 - XMR 的变现可以使用 htx 交易所，其他的例如 binance, okx 都不支持 XMR 交易。
-- XMR 有官方的钱包应用 [Monero GUI Wallet](https://www.getmonero.org/downloads/)，你也可以直接用 htx 充币的钱包地址，这样变现时可以少一次转账手续费。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR。
+- XMR 有官方的钱包应用 [Monero GUI Wallet](https://www.getmonero.org/downloads/)。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR。
   - **血的教训**：不要直接用 CEX 充币地址用来挖矿！！！某次 [htx 悄悄改了地址](https://www.htx.com.de/zh-cn/support/84999701653073)（我不知道），结果提现未到账。在此 fuck htx。
 - 矿池我选择使用 [c3pool](https://c3pool.com/)，对中国用户的支持还不错，可以直连挖矿。地址：`auto.c3pool.org:19999`
+  - 拒绝 qubic 矿池。qubic 在 202507 对 Monero 发起过 51% 攻击，我对其没有任何好感。
 - 挖矿软件用 [xmrig](https://github.com/xmrig/xmrig)。软件本身的预编译包会有 1% 的抽成，我选择自己改源码编译以避免抽成。改源码[很简单](https://github.com/xmrig/xmrig/blob/f9e990d0f0167c92d09334213ac6950033bbbba1/src/donate.h#L40-L41)，编译也有[教程](https://xmrig.com/docs/miner/build/windows)，不难。
-  - 如果 xmrig 启动有报什么 warnings，记得去解决，可能可以提高挖矿效率。
+  - 如果 xmrig 启动有报什么 warnings，记得去解决，说不定可以提高挖矿效率。
   - 内存频率会小幅度影响挖矿效率，我开启了内存 XMP 后 hashrate 提升了 6%。
   - 如果真的不断全核工作，CPU 占用 100%，对日常使用影响挺大的，所以建议留几个线程自己用。
+  - Windows 因为不能开启 1GB pages，挖矿效率比 Linux 稍差，大概差 3% 左右。主要问题是 Windows 挖矿受影响太大了，比如开过 Android 模拟器、跑过本地 AI，都会对之后的挖矿产生影响。如果你的设备只用来挖矿，一定要上 Linux。
+  - 如果你使用 NixOS，官方的 xmrig 就是 patch 过的就支持 0 donate，无需修改。
+
+## 链上保本理财
+
+在炒币亏了一些钱后，重新审视自身，发现我已经忘了我的初心：我本意就是理财，追求的应该是更高的稳定年化收益。因此我应该将重心放在保本理财上而不是去想炒币策略啥的。
+
+推荐看看 [external 5.](#external)，还是有点用的。
+
+- Morpho：链上顶流借贷平台，风险低，可以随时赎回跳车。赚取的 morpho 代币可以在各大交易所交易为 USDT，有深度和流动性。年化利率 8% 左右。
+- katana：新的基建链，当前增长期的年化据说能接近 50%，非常恐怖；但是目前的 reward 还是 KATTOKEN 不能方便地 swap，还需要等发展。
 
 ## 区块链与合约
 
@@ -313,6 +336,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 2. [只用“稳定币”，能参与哪些项目的空投？](https://www.panewslab.com/zh/articledetails/r1mr2jc4.html)
 3. [CEX 与 DEX 的合约算法之战](https://www.panewslab.com/zh/articles/tubnlzao)
 4. [你以为的盈亏，可能都是永续合约算法制造的幻觉](https://www.panewslab.com/zh/articles/jd80of15)
+5. [月入 50 万美元，平均年化 78%，我的稳定币收益策略全解析 ​​](https://www.panewslab.com/zh/articles/ee13100b-a06f-4e1b-99b9-a456da475d0d)
 
 <script setup lang="ts">
 import CryptocurrencyExchangeList from "@CryptocurrencyExchangeList";

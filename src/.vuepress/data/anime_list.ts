@@ -2,6 +2,12 @@ import { AnimeItemInputType } from "../definition/anime_type.js";
 
 const original_list: AnimeItemInputType[] = [
   {
+    name: "比宇宙更遥远的地方",
+    duration: {
+      start: "2025-08-31",
+    },
+  },
+  {
     name: "死亡笔记",
     duration: {
       start: "2025-07-02",
