@@ -778,6 +778,10 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 ### FilePackVer3.0
 
+包含的游戏：
+
+- 美少女万华镜 1-2
+
 解美少女万华镜 1。尝试：
 
 - [hz86/filepack](https://github.com/hz86/filepack)，无法使用，输出到 unpack file end 但是未解压任何东西。看了下好像只适用于 FilePackVer3.1。
