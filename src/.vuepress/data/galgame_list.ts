@@ -27,6 +27,11 @@ const original_list: GalItemInputType[] = [
       start: "2025-08-30",
       end: "2025-09-01",
     },
+    score: {
+      story: 0.4,
+      visual: 6.1,
+      program: 6.8,
+    },
   },
   {
     name: "スターライトBLUE～幼なじみで推しの娘が知らないうちに開発されていた～",

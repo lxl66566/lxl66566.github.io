@@ -178,6 +178,7 @@ sing-box 的一个特点是会打开致死量的本地端口，大约 2000 个�
   - 2024 年 archived 后也出了很多 fork。
 - [husi](https://github.com/xchacha20-poly1305/husi)：内置各种小众协议插件的 NekoBox。
 - [karing](https://github.com/KaringX/karing)：跨平台的国产开源代理，主要面向小白，易用。
+- [hiddify](https://github.com/hiddify/hiddify-app)：又一个跨平台国产 sing-box 代理。这玩意的 v2.0.5 在我的 windows 上甚至无法打开，比较垃圾。
 
 并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。或许与其打开的大量端口有一些联系。
 
