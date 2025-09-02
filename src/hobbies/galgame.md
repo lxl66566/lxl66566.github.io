@@ -1431,6 +1431,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 - Animal☆Panic?
 - 传述之魔女
 - カタネガイ
+- AIR
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 
