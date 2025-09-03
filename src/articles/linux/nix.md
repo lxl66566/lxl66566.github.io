@@ -100,6 +100,14 @@ sudo: a password is required
 
 经过了配置 feature 化改造，现在想要筛选出不需要在我的这个设备上的配置非常简单。
 
+@tab 远程安装
+
+- nixos-anywhere 需要[魔法咏唱](https://t.me/nixos_zhcn/687180)，挺麻烦的我不太感兴趣
+- [lantian 佬的 dd 镜像](https://lantian.pub/article/modify-computer/nixos-low-ram-vps.lantian/)：用过几次，但是这个示例依赖 systemd 管理网络，我曾经遇到过 dd 完后服务器连不上的情况。
+- 最后我还是用了 [bin456789/reinstall](https://github.com/bin456789/reinstall)，一键重装实在太方便了，除了强制用 ext4 以外没有缺点。
+
+用 reinstall 重装后，再 `nixos-rebuild boot --flake .#xxx --target-host xxx` 即可。
+
 :::
 
 ## 学习

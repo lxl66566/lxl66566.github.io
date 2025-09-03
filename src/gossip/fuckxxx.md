@@ -139,6 +139,9 @@ tag:
 
 - 语法丑，很丑啊。人家 lua 丑是因为简单，std 东西很少。go 这么重还这么丑真说不过去。
 - [构建系统一坨大便](https://t.me/absxsgroup/10597)
+- workspace 一坨大便。
+  - `go work vendor` 会将老的所有 vendor 都删掉，然后再写入新的 vendor。
+  - go 1.20 无法使用 `-mod=vendor` 在 workspace 内进行编译；但是如果不使用这个 `-mod=vendor` flag，编译时它又会去请求网络。
 
 ## QQ 有多难用
 
