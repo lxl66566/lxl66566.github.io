@@ -5,14 +5,22 @@ const original_list: GalItemInputType[] = [
     name: "美少女万华镜2-勿忘草与永远的少女",
     valid_name: "美少女万华镜2",
     other_names: ["美少女万華鏡"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "1h48min",
+    order: 2,
     duration: {
       start: "2025-09-01",
+      end: "2025-09-03",
+    },
+    score: {
+      story: 6.6,
+      visual: 5.8,
+      program: 7.4,
     },
   },
   {
     name: "春音Alice＊Gram",
     valid_name: "春音AliceGram",
+    order: 1,
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2025-08-30",
@@ -23,6 +31,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "美少女万华镜1",
     other_names: ["美少女万華鏡"],
     use_time: "2h2min",
+    order: 1,
     duration: {
       start: "2025-08-30",
       end: "2025-09-01",

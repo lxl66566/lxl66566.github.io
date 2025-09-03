@@ -150,7 +150,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["美少女万华镜 系列"],
+    names: ["美少女万华镜 1, 2"],
     valid_name: "QLIE",
     engine: "QLIE",
     save_format: "pack",

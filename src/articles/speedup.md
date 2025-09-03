@@ -507,7 +507,9 @@ for task in process:
 Path("test.txt").unlink()
 ```
 
-然后就可以用了。实在是太神奇了。
+然后就可以用了。
+
+ps. 后来发现用 7-zip 的仅存储打出来也是可以用的，都怪 bandizip！😡
 
 </template>
 <template #bgi>
@@ -796,6 +798,12 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 imhex 打开拉到末尾发现格式是 `FilePackVer3.0`。通过这个搜出关键词 `exfp3`，直接在 github 搜 `path:exfp3.cpp` 找到 [FuckGalEngine](https://github.com/Inori/FuckGalEngine) 及其 forks。FuckGalEngine 没有给出二进制，只好研究下源码，发现也是一堆 mmx 指令集。将 mmx 指令集用 LLM 移除后，c++17 以上编译又会报一堆错误。好不容易编译出来了，如果还开着默认的 `#define FP3_FLAVOR 31` 就 `Can't find key from exe file`；如果使用 `#define FP3_FLAVOR 3` 开关会多需要一个 `key.fkey`，这个玩意在 DLL 目录下。执行文件后会在当前文件夹提取出两个图片乱码文件夹和一个坏的 `pack_keyfile_kfueheish15538fa9or.key`。
 
 为了排除 LLM 移除 mmx 指令集把代码逻辑搞坏的影响，我又去网上找编译好的二进制。在 [asmodean-tools](https://github.com/hiroshil/asmodean-tools/blob/main/exfp3/exfp3_v3.exe) archive 里找到了预编译的 `exfp3_v3.exe`，测试后可用。于是终于可以愉快加速了。
+
+#### 美少女万华镜 3
+
+_美少女万华镜 3_ 也是 FilePackVer3.0，然而 `exfp3_v3.exe` 解它的时候失败了，`Could not open ??剀犰殂鞍氨珑 (Invalid argument)`，更换日文环境也不行（日文环境下报错乱码不同，很可能是编码问题，但是 chcp 无法解决，跟当前终端代码页无关）。从官方 iso 里搞出来的 data2.pack 和 fkey 也是一样的报错。
+
+网上一搜，发现[也有人](https://forums.fuwanovel.moe/profile/13945-awvnx/)遇到相同的问题，而且下面的音频补档链接已经没了，fuck you mediafire。
 
 </template>
 <template #LiLiM>
