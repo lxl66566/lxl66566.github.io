@@ -2,8 +2,17 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "美少女万华镜3-神明所创造的少女们",
+    valid_name: "美少女万华镜",
+    other_names: ["美少女万華鏡"],
+    order: 3,
+    duration: {
+      start: "2025-09-03",
+    },
+  },
+  {
     name: "美少女万华镜2-勿忘草与永远的少女",
-    valid_name: "美少女万华镜2",
+    valid_name: "美少女万华镜",
     other_names: ["美少女万華鏡"],
     use_time: "1h48min",
     order: 2,
@@ -28,7 +37,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "美少女万华镜1-被诅咒之传说少女",
-    valid_name: "美少女万华镜1",
+    valid_name: "美少女万华镜",
     other_names: ["美少女万華鏡"],
     use_time: "2h2min",
     order: 1,

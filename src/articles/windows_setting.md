@@ -65,7 +65,7 @@ tag:
 - 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级 win11 专业版并激活。
   - 若对开源有需求，也可使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)激活。
 - [安装 Imdisk](./ramdisk.md#imdisk-toolkit) 并[配置](./ramdisk.md#使用指南)。
-- **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。
+- **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。如果没有此开关，需要运行 `powercfg /h on` 后再查看。
   1. 避免关机时自动保存 [RAM Disk](./ramdisk.md) 文件到固态盘；
   2. Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 _更新并重启_。[ref](https://t.me/withabsolutex/1193)
   3. 事实上快速启动的关机[其实是 hibernate](https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail#more-information)，是固态写入量的**最大贡献者**[^1]。
@@ -101,6 +101,9 @@ tag:
 
 ### 安装后（推荐步骤）
 
+- 驱动：
+  - 如果你使用 AMD 显卡，需要安装显卡驱动，并且不在乎游戏即时重放等功能，请不要安装 _AMD Software: Adrenalin Edition_，这玩意会携带**大量流氓傻逼组件**，还有 AMD 著名的弹一个黑框框 Updater 但是什么也不做。因此最好不要安装它的全量版本，而是在安装时选择 `Driver only`。
+    - 悲伤的是，即使选择 `Driver only`，也会有一堆流氓组件被安装。在此先 amd fuck you。
 - 磁盘设置：
   - 如果硬盘有分区，移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
   - 如果有移动硬盘，请在 _磁盘管理_ 中右键分区，手动指定驱动器号。固定驱动器号可以保证各个脚本运行正常。
