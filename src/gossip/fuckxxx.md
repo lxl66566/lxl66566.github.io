@@ -594,4 +594,5 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - 根本没有人关心 canonicalize，nushell 在 RAMDisk 上就是用不了的。
 - 每次更新都是 breaking change，都要改配置
 - 0.104 - 0.106.1 的某次更新不允许 `cd Z:`：_Cannot set $env.PWD to a prefix-only path_。有病吗？
+  - 更新后不允许 `./test.sh` 执行脚本：_'.' 不是内部或外部命令，也不是可运行的程序或批处理文件。_ 有病吗？
 - 类型系统垃圾

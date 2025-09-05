@@ -39,6 +39,7 @@ tag:
 2. [C++](./Cpp.md)
 3. [Python](./python.md)
 4. [general shell script](./shell.md)
+   - [snipets](./snipets.md)
 5. [Java](./java.md)
 6. [TypeScript & JavaScript](./tsjs.md)
 7. [lua](./lua.md)

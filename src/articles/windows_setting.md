@@ -228,18 +228,15 @@ tag:
 
 ## shell alias
 
-[ref](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)。被 linux 驯化了，再回到没有 alias 的 windows 是真不习惯。
+[ref](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)。被 linux 驯化了，再回到没有 alias 的 windows 是真不习惯。而且微软的 shell 确实傻逼[^4]。
+
+[^4]: [powershell 笑话一则](https://t.me/withabsolutex/2473)。
 
 ::: tabs
 
 @tab 更换其他 shell
 
-最简单也是更好的方法是换 shell，我用 bash 和 nushell 都挺顺手的。
-
-```sh
-scoop install git
-winget install nushell
-```
+最简单也是更好的方法是[换其他 shell](../coding/shell.md)。我在 windows 上比较喜欢用 bash。
 
 @tab cmd
 

@@ -71,7 +71,7 @@ export default sidebar({
     },
     {
       text: "工具",
-      children: ["github.md", "Git.md", "vscode.md", "vim.md", "sql.md", "container.md", "package_manager.md"],
+      children: ["github.md", "Git.md", "vscode.md", "vim.md", "sql.md", "container.md", "package_manager.md", "snipets.md"],
     },
     {
       text: "前端",

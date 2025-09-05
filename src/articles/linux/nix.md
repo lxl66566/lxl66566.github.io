@@ -177,6 +177,16 @@ nix flake update <input>                # update flake 想必大家天天用，�
 
 202507 第二次入坑 NixOS 时，我将整个配置重新拆成类似 Rust feature gate 的形式，符合我的 [tag 论](../../gossip/va_view.md#tag-论)。这样我就可以在各种系统上方便地组合 feature，以定制最符合我的需求的配置。
 
+### 配置的组织结构
+
+nix 非常自由，你可以自由组织自己的配置结构。我目前见过的或者用过的有如下几种：
+
+- 乱放型：基于 flake.nix, configuration.nix 和 home.nix 构建的配置，所有东西全部乱放。一般在 nix 早期，配置较少，还不熟悉 nix 语言和结构的时候使用。
+- 开关型：有了多主机部署的要求，每台主机有着不同特点，因此原来的乱放型不适用了。开关型指的是在 flake.nix 中定义一些开关，通过 specialArgs 传到各个模块中，控制模块内部的配置。
+- Dendritic Pattern：每个文件都是一个 flake-parts 模块，拥有完整的配置。这样可以组织非常庞大的配置结构，并且具有相当高的自由度。Dendritic Pattern 只是这样一个比较笼统的概念，你可以在此基础上任意衍生。
+
+我的看法：随着配置越来越多，尝试各种不同的组织结构来管理大量配置是一件非常自然的事情。如果你刚入坑 nix，看到复杂的组织结构被吓到也是很正常的。我觉得没必要一上来就抄复杂配置，在大量模块中迷失自我；从乱放慢慢过渡到复杂结构也是一个比较有意思的过程。
+
 ### linter / formatter
 
 nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的过程。说到编程那肯定少不了 linter 和 formatter。而我是 all in vscode 人，我使用的插件如下：

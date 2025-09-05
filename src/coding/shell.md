@@ -27,6 +27,17 @@ tag:
 
 bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种终端设备，windows（通过 WSL 或 msys2），macos（默认 zsh，兼容） 上执行 bash 脚本。基本上这个时代没有几个设备是不用 bash 的。
 
+### 在 Windows 上使用 bash
+
+1. 使用 [scoop](../farraginous/recommend_packages.md#scoop) 安装 git：`scoop install git`
+2. 进入 `scoop/shims` （默认位置在 `C:\Users\<username>\scoop\shims`）
+3. 为 `scoop/shims/bash.exe` 创建一个快捷方式，重命名为 `bash`（本质上是 `bash.lnk`，windows11 不显示快捷方式的扩展名），扔到 `C:\WINDOWS\System32`
+4. 编辑系统环境变量，把 `C:\Users\<username>\scoop\shims` 和 `C:\WINDOWS\System32` 放到靠前的位置。
+
+这样你就可以在 `Win+R` 的运行或者任意 cmd 里使用 `bash` 打开 bash 了，并且不会开一个新窗口。
+
+### 随笔
+
 此处不会涉及 bash 系统教学，只会零碎记一些知识点。系统学习可以看[external 1.](#external)。
 
 - bash 的要义是一切皆字符串。
@@ -42,6 +53,8 @@ bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种
   - `${var:1:3}` 是取 slice，两边都是闭区间，index 从 0 开始
   - `${var/pat/after}` 是字符串替换
 - bash 的 wildcard 里，`*` 是不会匹配 `.` 开头的隐藏文件的！被坑了。
+
+关于 ble.sh：经常会有文章（例如 atuin 的 installation）会推荐 ble.sh，但是我尝试以后发现，不好用！只要你快速输入内容并且穿插多按几次 tab，你就能被 ble.sh 的 bug 坑到；而且 ble.sh 的启动很慢。因此我只能忍受没有补全提示的 bash —— windows 上还是这样将就着用吧。
 
 ## fish
 
@@ -99,7 +112,7 @@ nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu
 
 不过 nushell 最劝退我的还是 [rust 的一个 bug](https://t.me/withabsolutex/1700)，导致其无法在我的 RAMDisk 上工作。
 
-其他缺点详见 [fuckxxx](../gossip/fuckxxx.md#nushell)
+其他缺点详见 [fuckxxx](../gossip/fuckxxx.md#nushell)。总之我已经不再使用它了。
 
 ### shell 配置
 
@@ -196,3 +209,4 @@ amber 是总论提到的编译到 bash 语言的一个高阶语言；它使用 r
 1. [bash 脚本教程](https://wangdoc.com/bash/)
 2. [Linux Zsh 使用 oh-my-zsh 打造高效便捷的 shell 环境](https://sysin.org/blog/linux-zsh/)
 3. [Why doesn't set -e (or set -o errexit, or trap ERR) do what I expected?](https://mywiki.wooledge.org/BashFAQ/105)
+4. Online book: [Effective Shell](https://effective-shell.com/) (about bash)
