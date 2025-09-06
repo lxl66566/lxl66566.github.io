@@ -146,6 +146,7 @@ tag:
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))
   - 如果你安装了 MS Office，那大概率还会被装上一个 Office PLUS，这是一个傻逼国内代理广告，会污染你的 office 菜单和右键菜单。建议用 everything 搜到 officeplus 的安装文件夹，然后点击 uninst.exe 卸载。
   - AMD 用户不要装 AMD Software: Adrenalin Edition。这个傻逼软件会定期弹一个 update 黑窗口然后什么也不做。
+  - 搜索 _任务计划程序_，禁用一些用不到的任务，例如 AMD auto update, OneDrive 等。
 - 开启 _运行_ 历史记录：_设置 - 隐私和安全性 - 常规 - 允许 Windows 跟踪应用启动以改进“开始"和搜索结果_。此设置项默认开启的，之前不小心被某个脚本关了。
 - 设置 copilot：copilot 确实是个免费用的 gpt4，就是比较慢。
   - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。

@@ -845,6 +845,13 @@ const data: ComicItemType[] = [
   { id: "592452", aScore: 7, bScore: 7.2, order: 2, info: "#cos #兽耳 #排尿 #拘束 #发情", bak: "https://telegra.ph/こむぎばたけ-こむぎ-もっとおりこうさん-中国翻訳-DL版-08-23" },
   { id: "593037", aScore: 8, bScore: 7.7, info: "#蔚蓝档案 #3P #泳装 #loli", bak: "https://telegra.ph/C106-つくてん-円つくも-知らないの最強からは逃げられないブルーアーカイブ-中国翻訳-08-27" },
   { id: "592567", aScore: 7, bScore: 8.3, info: "#媚药 #反杀 #兽耳 #多P #孕肚", bak: "https://telegra.ph/昇天天使-スコヤ-ス-捕まえた女盗賊を薬でメス堕ちさせて孕ませたらめっちゃ懐かれた-オリジナル-08-24" },
+  { id: "593208", aScore: 8.5, bScore: 5, info: "#全彩 #乱交 #约会大作战 #药物", bak: "https://telegra.ph/イワシの部屋R-イワシR-DATE-A-LIVE-超HAREM-A-LIVE-デートアライブ-中国翻訳-DL版-08-28" },
+  { id: "593421", aScore: 9.2, bScore: 6.5, info: "堕天計画ex #修女 #天然 #堕落", bak: "https://telegra.ph/234ド-イチリ-堕天計画-癒しの聖女編-中国翻訳-DL版-08-29-2" },
+  { id: "581921", aScore: 7.8, bScore: 9.3, info: "#表兄妹 #纯爱", bak: "https://telegra.ph/ラインアウトきいろいたまご-夜な夜なふたりはわるいこと-中国翻訳-08-29" },
+  { id: "593611", aScore: 8, bScore: 5.7, info: "#泳装 #3P #蔚蓝档案", bak: "https://telegra.ph/C106Two-Drops-of-Rain-08-30-3" },
+  { id: "593960", aScore: 8.9, bScore: 4.2, info: "#明日方舟 #连裤袜 #纯爱", bak: "https://telegra.ph/充气薯独属于我的光ArknightsChinese-08-31" },
+  { id: "595054", aScore: 7.6, bScore: 8.6, info: "#电话自慰 #蔚蓝档案", bak: "https://telegra.ph/たらたまご-tarako-ウツミダレ-ブルーアーカイブ-中国翻訳-DL版-09-04" },
+  { id: "593234", aScore: 9.8, bScore: 7.7, info: "#蔚蓝档案 #幻境" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -2,9 +2,20 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "赫雷斯的角斗场",
+    order: 1,
+    not_strict: true,
+    use_time: "1h24min",
+    duration: {
+      start: "2025-09-06",
+      end: "2025-09-06",
+    },
+  },
+  {
     name: "美少女万华镜3-神明所创造的少女们",
     valid_name: "美少女万华镜",
     other_names: ["美少女万華鏡"],
+    playing_status: PlayingStatus.PLAYING,
     order: 3,
     duration: {
       start: "2025-09-03",
@@ -642,7 +653,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "アンレステルミナリア",
     namaniku: true,
     use_time: "+3h",
-    playing_status: PlayingStatus.PAUSED,
+    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2023-05-11",
     },
