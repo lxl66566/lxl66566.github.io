@@ -278,9 +278,11 @@ pip 使用 `requirements.txt` 用于声明项目依赖，使用时只需 `pip in
 
 每个目录 / `.py` 文件都被视作一个模块。目录模块要添加内容，要写在目录下的 `__init__.py`。
 
-`import xxx` 在顶层找模块，`import ./xxx` 是在当前目录找模块，`../` 在上一层找。后两者都是相对引用。使用相对引用时，不能直接 `python xxx.py` 执行代码，需要 `python -m <root_module>.<submodule>` 当成模块执行。否则报 `ImportError: attempted relative import with no known parent package`。
+`import xxx` 在顶层找模块，`import .xxx` 是在当前目录找模块，`..xxx` 是在上一层找，`...xxx` 以此类推。以 `import .` 开头的模块引用都是相对引用。使用相对引用时，不能直接 `python xxx.py` 执行代码，需要 `python -m <root_module>.<submodule>` 当成模块执行。否则报 `ImportError: attempted relative import with no known parent package`。
 
 `import` 和 `from import` 都会导入整个模块，即使只用 `from import` 导入了一个函数。模块不能循环导入（不能在 A 中 import B，在 B 中 import A），即模块引用结构需要是 DAG。
+
+`import .xxx.yyy` 不会引用到 xxx。
 
 ### print
 
@@ -297,6 +299,8 @@ assert need_be_true(), "error message"
 assert 的 error message 不是 & 不能改红色，还会打堆栈，让我很不爽。
 
 实际上在使用测试时基本上用的都是测试框架自己的 assert，优势是可以打印值。用系统 assert 一般只是拿来防御性编程。
+
+我写过一个 [pretty-assert](https://github.com/lxl66566/pretty-assert)，可以打出 assert diff，不过貌似有点小问题，不建议在生产环境使用。
 
 ### 传参
 
@@ -568,6 +572,8 @@ for name in file.sheet_names:
 
 虽然 python 有自带的 logging，但是用得多了，每次写项目前起手一长串配置确实有点烦人。所以我现在用 [loguru](https://github.com/Delgan/loguru)，直接 `from loguru import logger` 然后正常用就行，自带彩色输出，配置起来也简单。
 
+- `logger.add(filepath)` 会 copy 一份输出 append 到文件。
+
 ### 网络
 
 python 界最常用的网络库 requests 是不支持 async 的！然而网络不能没有 async，因此建议大家可以直接抛弃 request 换用其他的库，这样也符合解耦论。
@@ -626,19 +632,34 @@ aiohttp 是一个真正的 async 网络库，甚至同时支持 server/client mo
 
 然后寻找其他框架，发现一个国人写的 [DrissionPage](https://github.com/g1879/DrissionPage)，虽然比较青涩，但是做一些简单的自动化非常简单。顺带提了个微小改进使用体验的 pr。
 
-DrissionPage 用的是自创的元素选择器，需要看[文档](http://g1879.gitee.io/drissionpagedocs/SessionPge/find_elements)。
+DrissionPage 用的是自创的元素选择器，需要看文档。这里有一个[速查](https://drissionpage.cn/browser_control/get_elements/sheet)。一些需要注意的点：
 
-以下是一个简单的样例。
+- `@class=` 后面必须接上所有 class 包括空格，否则无法匹配。
+- `@text()=` 可以匹配深层子元素的 text。
+
+以下是一个样例：
 
 ```py
-from DrissionPage import ChromiumPage
-page = ChromiumPage()
-page.get("https://public.ecustpt.eu.org/mybonus.php")
-buttons = page.eles("tag:input")
-i = buttons[0]
-if i.attr("value") == "1":
-    i.click()
+from DrissionPage import Chromium, ChromiumOptions
+
+options = (
+    ChromiumOptions()
+    .set_argument("--remote-debugging-port=8888")
+    .set_user_data_path(r"Z:/chrome_tmp_data")
+    .set_local_port(8888)
+    .headless(False)
+    .set_browser_path(r"C:\Users\lxl\scoop\apps\ungoogled-chromium\current\chrome.exe")
+)
+
+browser = Chromium(options)
+tab = browser.latest_tab
+tab.get("https://public.ecustpt.eu.org/mybonus.php")
+button = tab.ele("tag:input")
+button.click()
 ```
+
+- 使用一个固定端口进行控制，而不是自动端口，因为 sing-box 高位端口开得多，自动端口可能会撞。
+- set_user_data_path 让你重复运行浏览器脚本时可以保留 cookie 等数据，不需要重新登录。
 
 ### 图表绘制
 
@@ -947,6 +968,21 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
    - 需要申请一个 API token：[account](https://pypi.org/manage/account/) 向下滑就有。
 2. 使用工具构建并发布。
    :::: tabs
+
+   @tab uv
+
+   用 uv 打包一般会推荐使用 hatching（uv 不自己处理打包，而是用第三方库提供的打包功能）:
+
+   ```toml
+   [build-system]
+   build-backend = "hatchling.build"
+   requires = ["hatchling"]
+   [tool.hatch.build]
+   include = ["myprojectsrc/**"]
+   packages = ["myprojectsrc"]
+   ```
+
+   然后 uv build 就行了
 
    @tab poetry
 

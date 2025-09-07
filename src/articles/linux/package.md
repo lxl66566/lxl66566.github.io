@@ -331,9 +331,9 @@ atuin import auto
 # then edit fish config manually
 ```
 
-基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行；`<C-o><C-d>` 删除。
-
-更多 keybindings 请前往 [doc](https://docs.atuin.sh/configuration/key-binding/#atuin-ui-shortcuts).
+- 如果在 bash 使用 atuin，务必安装 bash-preexec（ble.sh 比较难用），否则[新命令将无法记录](https://forum.atuin.sh/t/atuin-bash-and-ble-sh/175)。
+- 基础使用：`↑` 打开历史菜单，`Enter` 执行，`Tab` 上屏不执行；`<C-o><C-d>` 删除。
+- 更多 keybindings 请前往 [doc](https://docs.atuin.sh/configuration/key-binding/#atuin-ui-shortcuts).
 
 #### 过滤历史记录
 
@@ -369,7 +369,7 @@ atuin import auto
 
 原名 exa，现在活跃分支是 eza。注意该 alias 需要一定版本下才可正常工作。
 
-### 终端复用器
+### multiplexer
 
 Terminal Multiplexer（终端复用器）并不是 linux 桌面的必需品（`konsole` / `yakuake` 都支持多标签），但是在纯命令行的服务器下，终端复用还是有点用的。主要作用是提供一组 key bindings，与持久运行的 sessions（允许 ssh 断连）。
 

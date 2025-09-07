@@ -25,13 +25,13 @@ tag:
 
 ```sh
 set -euxo pipefail
-commit_hash="''${1:-HEAD}"
+commit_hash="${1:-HEAD}"
 git commit -a --fixup "$commit_hash"
 
 if [ "$commit_hash" = "HEAD" ]; then
   rebase_target="HEAD~2"
 else
-  rebase_target="''${commit_hash}~1"
+  rebase_target="${commit_hash}~1"
 fi
 GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$rebase_target"
 ```
@@ -128,13 +128,13 @@ for ((i=1; i<=MAX_ATTEMPTS; i++)); do
   echo "第 $i 次尝试: 正在执行 '$@'"
   "$@"
   exit_code=$?
-  if [ ''${exit_code} -ne 0 ]; then
+  if [ ${exit_code} -ne 0 ]; then
     echo "---"
-    echo "命令在第 $i 次尝试时失败，退出码为 ''${exit_code}。脚本已停止。"
-    exit ''${exit_code}
+    echo "命令在第 $i 次尝试时失败，退出码为 ${exit_code}。脚本已停止。"
+    exit ${exit_code}
   fi
 done
-echo "命令成功执行了 ''${MAX_ATTEMPTS} 次而未失败。"
+echo "命令成功执行了 ${MAX_ATTEMPTS} 次而未失败。"
 ```
 
 :::

@@ -51,38 +51,13 @@ tag:
 |  20241018 azure | JP | free | ? | 1G | 30G | 1 | 微软，我的超人 |
 |  20241031 [91idc](https://91idc.gg/index.php) | HK | ￥10/mo | 666GB 20MBps | 1G | 10G | 1 | <dtlslong>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</dtlslong> |
 |  20250107 [Sakura Clouds](https://portal.sakuraclouds.com/) | HK |  ~~\$2.50/mo~~ \$2.20 | 2TB 1Gbps | 1G | 8G | 1 | <dtlslong>速度还行，但是延迟和稳定性**超烂**，没有下次了。</dtlslong> |
-| 20250109 [ClawCloud](https://claw.cloud/) | JP  | ~~\$36.00/yr~~ \$7.00/yr | 500GB | 1G | 20G | 1 | <dtlslong>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。</dtlslong> |
+| 20250109 [ClawCloud](https://claw.cloud/) | JP  | ~~\$36.00/yr~~ \$7.00/yr | 500GB | 1G | 20G | 1 | <dtlslong>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。爽用了 9 个月，之后开始出现稳定性下降、延迟增大等问题。</dtlslong> |
 | 20250404 [nube.sh](nube.sh) | JP | $0.0012/h + $0.0031/GB | 不限 | 1GB | 10GB | 1 | [测评](http://hpaste.spiritlhl.net/#/show/bp0wd.txt)；<dtlslong>前端好评；一次最少充 $10，试错成本挺高；延迟一般，特别是联通很烂。<br/>用了一个月，连通性差了很多，基本是不可用状态，纯纯狗屎</dtlslong> |
 | 20250805 [skystroll](https://skystroll.net/store) | JP | $2.49/mo | 1T 500Mbps | 512M | 5GB | 1 | <dtlslong>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</dtlslong> |
 | 20250820 [RFCHOST](https://my.rfchost.com/) | JP | $29.99/yr + ￥45 | 1T 不限 | 512M | 10GB | 1 | <dtlslong>看评测挺不错的，延迟很低，价格也合适，于是在 nodeseek 上蹲了几天蹲到一个。溢价还是有点高，因为第二天就有更合适的出现了，不过也不用在乎这么多。</dtlslong> |
-| 20250827 [dedirock](https://billing.dedirock.com/index.php) | US (LA) | $7/yr | 2T 1Gbps | 2G | 30G | 1 | <dtlslong>手上只有 JP 机确实让我感受到一些限制，~~例如禁漫就没法登上去~~。刚好看到便宜美西机，所以搞了个，延迟就无所谓了。注意 paypal 付款会被自动订阅一个续费需要去取消掉。这家的官网贼慢，但是机子还挺不错。</dtlslong> |
+| 20250827 [dedirock](https://billing.dedirock.com/index.php) | US (LA) | $7/yr | 2T 1Gbps | 2G | 30G | 1 | <dtlslong>手上只有 JP 机确实让我感受到一些限制，~~例如禁漫就没法登上去~~。刚好看到便宜美西机，所以搞了个，延迟就无所谓了。注意 paypal 付款会被自动订阅一个续费需要去取消掉。这家的官网从 JP 加载贼慢，但是机子还挺不错。延迟不会超过 200ms，已经算好了。</dtlslong> |
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
-
-::: details 好价，未评测
-
-`RAM/存储`，`流量/端口速度`；默认 1C SSD
-
-想买但没买的超级好价
-
-<!-- prettier-ignore -->
-|Host|location|Price|bandwidth|RAM|Storage|Note|
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|2023 BF [InfraveoCloud](https://zhujiwiki.com/35833/)|JP|$9/yr|1T 1Gbps|-|20GB|
-|[ColoCrossing](https://zhujiwiki.com/36155/)|Los Angeles|$9/yr|不限流 1Gbps|2G|37GB|
-|[Vision Cloud](https://t.me/visioncloud_notification/32)|JP|$14/yr|1TB 1000Mbps|1GB|6GB|
-|[DigitalVirt](https://zhujiwiki.com/36771/)|HK|￥95/yr|1TB 200Mbps|1GB|10GB|
-|[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=124)|HK|￥40/yr|500GB 10Gbps|1GB|20GB|
-|[碳云](https://www.coalcloud.net/aff.php?aff=63&pid=145)|HK|￥88/yr|1600GB 10Gbps|1GB|20GB|
-|[ASVM](https://asvm.net/billing/aff.php?aff=28&pid=18)|HK|$10/yr|2TB 1Gbps|1GB|10GB|
-
-一般价
-
-- [Digirdp](https://zhujiwiki.com/36114/)，10$/yr 1GB/15GB 1TB/1Gbps 美国，虽然 HDD，但是跑流量也不影响。
-- [BestVM](https://zhujiwiki.com/36288/)，15 CNY/mo 512MB/5GB 1T/1Gbps TW
-- [wap.ac](https://zhujiwiki.com/34105/)，1$/mo 256MB/5GB 500GB/1Gbps JP/HK
-
-:::
 
 ### 白嫖
 

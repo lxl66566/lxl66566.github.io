@@ -20,13 +20,19 @@ tag:
 
 :::
 
+::: warning
+
 NixOS 绝对不适合 Linux 新手使用，如果你想尝试 NixOS，请务必对 Linux 的启动流程有一定了解，并具有稳定的代理/网络环境后再尝试。
+
+:::
 
 ## NixOS 安装
 
 ::: tabs
 
-@tab 默认隐藏，切 tab 查看
+@tab 隐藏
+
+### 默认隐藏，请切 tab 查看
 
 @tab 首次安装
 
@@ -153,7 +159,7 @@ nix flake update <input>                # update flake 想必大家天天用，�
   1. 需要查找的时候经常是刚安装完软件的时候，还没有 updatedb。而 nixos 的手动 updatedb 耗时极长。
   2. 默认 locate 时也会搜索路径，nix 路径又基于 hash，因此会有很多 hash 污染搜索结果。
   - 感觉真不如 `cd /nix/store && fd xxx`。
-- [nix-tree](https://github.com/utdemir/nix-tree)：交互式的依赖寻找，非常好用。打开以后按 `/` 查找。
+- [nix-tree](https://github.com/utdemir/nix-tree)：交互式的依赖寻找，非常好用。打开以后按 `/` 查找。关于具体的查找依赖，可以参考[这里](https://nixos-and-flakes.thiscute.world/zh/nixos-with-flakes/other-useful-tips#why-some-packages-are-installed)。
 
 ### 搜索
 
@@ -187,6 +193,8 @@ nix 非常自由，你可以自由组织自己的配置结构。我目前见过�
 
 我的看法：随着配置越来越多，尝试各种不同的组织结构来管理大量配置是一件非常自然的事情。如果你刚入坑 nix，看到复杂的组织结构被吓到也是很正常的。我觉得没必要一上来就抄复杂配置，在大量模块中迷失自我；从乱放慢慢过渡到复杂结构也是一个比较有意思的过程。
 
+有一些教程会使用 flake-parts，但是这玩意绝不是必须的，比如 ryan4yin 佬的[巨大无比配置](https://github.com/ryan4yin/nix-config)也没有用到它。flake-parts 官方的文档跟狗屎一样，即使我有心入坑也没有任何头绪，而且这玩意有很多隐藏的复杂度，因此还是算了吧。
+
 ### linter / formatter
 
 nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的过程。说到编程那肯定少不了 linter 和 formatter。而我是 all in vscode 人，我使用的插件如下：
@@ -207,13 +215,33 @@ nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的�
 
 还有我自己[折腾](#后记)后想说的注意事项：使用 `hardware.nvidia.open = true;`，使用官方内核。
 
+@tab Intel
+
+I 卡的驱动实在是太简单了，赞美 intel。
+
+```nix
+{ pkgs, ... }:
+{
+  # for intel Arc A750 GPU
+  hardware.graphics = {
+    extraPackages = with pkgs; [
+      vpl-gpu-rt
+    ];
+  };
+}
+```
+
 :::
 
 ### 拼音输入法
 
 用英文有点习惯，要不是我打开博客想写论文我都想不到中文输入法没装。
 
-我先尝试 arch 上用习惯的 fcitx5：
+::: tabs
+
+@tab fcitx5-chinese
+
+我先尝试 arch 上用习惯的 fcitx5-chinese：
 
 ```nix
 i18n.defaultLocale = "zh_CN.UTF-8";
@@ -260,11 +288,19 @@ extraLocaleSettings = {
 
 ps. 根据[群友描述](https://t.me/nixos_zhcn/477206)，只需要将 KDE 配置文件删除即可，与 defaultLocale 无关。
 
-然后被 rime 党吹的有点心动，想试试 rime。刚好 ryan4yin 佬[就是 rime + 小鹤](https://github.com/ryan4yin/nix-config/tree/main/overlays)，于是我便直接开抄配置。可能是 overlays 哪出了问题，rebuild 的时候并没有把数据移到 rimedata，我也百思不得其解。后来手动移过去试了一下，发现真难用啊（包括快捷键啥都不懂）。于是滚回了 fcitx5-chinese-addon。
-
 `fcitx5-configtool` 里双拼键盘下的“管理自定义词组”是坏的，点不开。我也懒得修了，把以前 archlinux 位于 `~/.local/share/fcitx5/pinyin/customphrase` 的词库搬出来，拿到 home-manager 里 source 一下就好了（需要 [重启 fcitx5](https://wiki.archlinux.org/title/Fcitx5#Emoji_show_abnormally_in_the_candidate_box)：在 bash 里跑 `` kill `ps -A | grep fcitx5 | awk '{print $1}'` && fcitx5& ``），也符合 nixos 的原则。
 
-后来我不再使用任何 overlays，并且完全 fork 了自己的配置，才正式入坑了 Rime。[相关文章](../input_method.md#rime)
+@tab rime
+
+然后被 rime 党吹的有点心动，想试试 rime。刚好 ryan4yin 佬[就是 rime + 小鹤](https://github.com/ryan4yin/nix-config/tree/main/overlays)，于是我便直接开抄配置。可能是 overlays 哪出了问题，rebuild 的时候并没有把数据移到 rimedata，我也百思不得其解。后来手动移过去试了一下，发现真难用啊（包括快捷键啥都不懂）。于是滚回了 fcitx5-chinese-addon。
+
+后来因为实在有一些多系统共用输入法的问题，然后先在 windows 上入坑了 rime，先把配置和快捷键吃明白。[相关文章](../input_method.md#rime)
+
+然后再在 NixOS 上使用 Rime，这回我**不再使用任何 overlays**，并且已经有了自己的配置仓库，所以没遇到啥问题。
+
+教训：不要学其他 NixOS 人洁癖，啥都必须给 NixOS 管。Rime 配置本身就是一个 home 里的文件夹，自己跟 Github 上的仓库维护同步即可。
+
+:::
 
 ### 代理
 
@@ -308,18 +344,17 @@ nix.settings.warn-dirty = false;
 
 这下终于可以不用 copy 到其他地方备份了。但是有一点需要注意：在 rebuild 前一定记得把新增的文件 `git add` 到暂存区！！否则会报 _No such file or directory_。
 
-至于备份加密，由于我的隐私文件并不算非常隐私，所以用的是我自己写的 [git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)，仅需一个密码即可解锁。如果你有更高的安全需求可以看看 sops-nix 或 agenix。
+至于备份加密，我不喜欢用密钥管理，我就是喜欢单密码，因此用的是我自己写的 [git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)（在 [nur](https://nur.nix-community.org/repos/lxl66566/) 上可用）。如果你有更高的安全需求可以看看 sops-nix 或 agenix。
 
 ### home manager
 
-我本来是不想用 home manager 的，全写在 `configuration.nix` 里也不麻烦。但是后来还是用了：
-
-1. 假设滚挂了，方便 reinstall（把 import 注释掉即可；否则一个 `configuration.nix` 不好拆，我也不想一个 install 下载几十 GB）
-2. 有些配置文件确实不方便统一管，例如 KDE 的某些设置等。
+我本来是不想用 home manager 的，全写在 `configuration.nix` 里也不麻烦。但是后来还是用了，因为有些配置文件确实不方便统一管，例如 KDE 的某些设置等。
 
 从 `configuration.nix` 转移到 home manager 也不麻烦，[thiscute](#学习) 有很好的教程，并且它们的条目基本是兼容的。
 
 但是进一步定制各种配置文件就没那么简单了，因为 [home-manager 的 manual](https://nix-community.github.io/home-manager/index.xhtml) 就是一坨屎！建议直接用[第三方的 options 搜索](#搜索)。
+
+home manager 的一个缺点是引用方式是独立模块，我目前还没找到 home manager 配置和系统配置放在同一个 nix 文件里的方法。
 
 ### [plasma manager](https://github.com/nix-community/plasma-manager)
 
@@ -336,11 +371,17 @@ Linux 上游戏还是不太行。。。cs2 fps windows 140+，在 nix 上只有 
 
 不过平常玩点轻量级游戏问题不大，galgame，启动！你的下一台电脑又何必是游戏本！扯远了。
 
-steam 游戏都能够点击即玩，proton 还是牛逼的。一些傻逼引擎的 galgame 无法在 wine 下正常运行，此时就需要安装[虚拟机](#虚拟机)了。
+steam 游戏都能够点击即玩，proton 还是牛逼的。一些傻逼引擎的 galgame 无法在 wine 下正常运行，此时就需要安装[虚拟机](#虚拟机)了。（某大佬：[因为没法在 wine 上玩 gal 于是啃掉一本《软件安全与逆向分析》然后开始做逆向](https://asukaminato.notion.site/gal-4f4db9c5affe4836a58ae0a44f47d5f6#4f4db9c5affe4836a58ae0a44f47d5f6)，学不来实在是学不来）
 
 nix gaming 还有过不去的一关就是性能释放。。我这台电脑[风扇总是不转，无法调整风扇转速](./problem.md#nixos-调整风扇转速)，有点悲惨。风扇不转想打啥游戏都不行吧，立刻降频了。大量求助后仍然未果，所以立刻开寄。
 
 ### 虚拟机
+
+::: tip
+
+2025 年当下，最好的办法是基于 windows docker 的解决方案，例如 [winboat](https://github.com/TibixDev/winboat)，而不是虚拟机。
+
+:::
 
 参考我的配置中的 [`others/vm.nix`](https://github.com/lxl66566/nixos-config/blob/main/others/vm.nix) 安装 qemu kvm 及其运行库。
 
@@ -372,7 +413,7 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 
 :::
 
-理论上确实没必要为 `/nix` 打快照；我现在的解法是放一个 `minimal.nix` 作为崩溃的恢复，由于软件不多，重装也能快速装好。
+理论上确实没必要为 `/nix` 打快照；之前解法是放一个 `minimal.nix` 作为崩溃的恢复，由于软件不多，重装也能快速装好。后来稳定下来以后发现根本就没有重装 nix 的机会。
 
 ### root on tmpfs
 
@@ -400,7 +441,7 @@ impermanence 在 NixOS 安装过程中是一个硬性的 bootstrap 来源；你�
 
 制作 iso 可以用下面的方法将本机文件拷贝到镜像系统里：
 
-```
+```nix
 isoImage.contents = [
     {
       source = ./config/absx.dae;
@@ -440,7 +481,7 @@ nix why-depends .#nixosConfigurations.<hostname>.config.system.build.toplevel ni
 nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel
 ```
 
-实测是需要先使用 `nix why-depends` 进行 build 后，再用 `nix-tree` 进行查询，否则会爆 `nix-tree: user error (Invalid path: ... Make sure that it is built, or pass '--derivation' if you want to work on the derivation.)`。不过抛开这个 bug 不谈，nix-tree 还是好用的。
+实测是需要先使用 `nix why-depends` 进行 build 后，再用 `nix-tree` 进行查询，否则会爆 `nix-tree: user error (Invalid path: ... Make sure that it is built, or pass '--derivation' if you want to work on the derivation.)`。因为我是远程的配置，还没安装呢！当然没 build 过。不过抛开这个特性不谈，nix-tree 还是好用的。
 
 找到了一个占用 3G 多的罪魁祸首 prettybat，直接把它干掉了。
 
