@@ -852,6 +852,13 @@ const data: ComicItemType[] = [
   { id: "593960", aScore: 8.9, bScore: 4.2, info: "#明日方舟 #连裤袜 #纯爱", bak: "https://telegra.ph/充气薯独属于我的光ArknightsChinese-08-31" },
   { id: "595054", aScore: 7.6, bScore: 8.6, info: "#电话自慰 #蔚蓝档案", bak: "https://telegra.ph/たらたまご-tarako-ウツミダレ-ブルーアーカイブ-中国翻訳-DL版-09-04" },
   { id: "593234", aScore: 9.8, bScore: 7.7, info: "#蔚蓝档案 #幻境" },
+  { id: "595031", aScore: 7.7, bScore: 9.4, info: "#触手 #忍耐 #3P", bak: "https://telegra.ph/木葉のあ-Mevius図書館の淫獣-中国翻訳-09-05-2" },
+  { id: "595492", aScore: 8.2, bScore: 6.7, info: "#催眠 #精灵" },
+  { id: "587660", aScore: 9.1, bScore: 7.6, order: 1, info: "#妹妹 #3P #女装 #后庭 #白毛 女装王子はわからせたい" },
+  { id: "595557", aScore: 8.5, bScore: 8.9, order: 2, info: "#妹妹 #女装 女装王子はわからせたい", bak: "https://telegra.ph/TJ-studio-冬至-女装王子はわからせたいep2-きまぐれ妹はあまえたい-中国翻訳-09-07" },
+  { id: "595692", aScore: 9.1, bScore: 5, info: "#蔚蓝档案 #自慰 #loli", bak: "https://telegra.ph/もえもえぷ-もえぷ-イブキはじめての性教育-ブルーアーカイブ-中国翻訳-DL版-09-07-3" },
+  { id: "595428", aScore: 8.6, bScore: 9, info: "#合集 #师生 #乱交 #6P #破处", bak: "https://telegra.ph/創田ぐみ-ハーレム処女学級教え子はS級少女たち-中国翻訳-DL版-09-06" },
+  { id: "595690", aScore: 7.8, bScore: 6.8, info: "#孕肚 #堕落 #催眠 #星穹铁道", bak: "https://telegra.ph/とんずら道中-かざわ-雲璃を眠して繁殖の運命を歩みたい-崩壊スターレイル-中国翻訳-DL版-09-07-3" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

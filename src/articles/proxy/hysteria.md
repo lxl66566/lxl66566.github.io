@@ -30,6 +30,17 @@ tag:
 
 最容易利用的豁免机制是 **源端口 <= 目标端口**。只需要使用 nftables 或其他流量转发机制，将 VPS 的高位端口 inbound 转发到 hysteria2 的真实低位端口，即可实现双向 QUIC 流量均被豁免。由于代理软件通常也使用高位端口，因此 VPS 上的端口号需要设成极端的高（我使用 65533）；而 hysteria2 的低位端口最好也要设得更低。
 
+```nftables
+table inet nat {
+  chain prerouting {
+    type nat hook prerouting priority -100; policy accept;
+    # 将外部流入的流量从 65533 端口重定向到 5497 端口
+    tcp dport 65533 redirect to :5497
+    udp dport 65533 redirect to :5497
+  }
+}
+```
+
 ## 服务器配置
 
 安装 hysteria2 后，随便创一个 json 或 yaml，写入配置。具体怎么写配置建议看文档，讲的挺详细的。
@@ -133,21 +144,24 @@ NekoBox (v1.2.9) 号称支持，~~实测不可用~~。windows 上测了能用的
 
 :::
 
-2025 年了，[sing-box 系](./proxy_software.md#sing-box-系)的全都支持 hysteria2 了。
+2025 年了，[sing-box 系](./proxy_software.md#sing-box-系)的全都原生支持 hysteria2 了。
 
 ## 总结
 
-- 这是我第一次直接写配置文件部署一个协议。（以前都是一键脚本）
-- 任何协议都吃第三方适配，hysteria 的适配在一众代理内算好的了。
-- hysteria 在大陆不能发挥其全部实力，因为 QUIC 支持较弱。
+- 这是我第一次直接写配置文件部署一个协议，以前都是一键脚本。
+- 任何协议都吃代理软件支持，hysteria 的适配在一众代理内算比较出众的。2024-2025 年 hysteria2 的可用性比起两年前上升了很多。
 - 基于 QUIC 的代理协议挺多，hysteria 据说打不过 TUIC，但是现在 TUIC 跑路了（乐）。
 
 ## 遇到的问题
+
+### too many open streams
+
+此事在 [issue](https://github.com/apernet/hysteria/issues/1073) 中均有记载。由于 sing-box 会开大量端口进行通信，很容易超过 hysteria2 默认的 `maxIncomingStreams: 1024` 限制，因此需要在服务端将此值调大。
 
 ### no route to host
 
 前一秒还正常使用的 hysteria 连接，立刻变得无法使用了。
 
-NekoBox 报错：`...cloudflare.com INTERNAL_ERROR(local):read udp ...: read: no route to host.`，客户端报 `FATAL failed to initialize client {"error": "connect error: timeout: no recent networkactivity"}`。并且我服务端没有任何收到连接消息。看着也不像是网络问题啊。
+NekoBox 报错：`...cloudflare.com INTERNAL_ERROR(local):read udp ...: read: no route to host.`，客户端报 `FATAL failed to initialize client {"error": "connect error: timeout: no recent networkactivity"}`。
 
-重启服务无效，重启服务器有效。
+重启服务器就行了。感觉可能是网络波动吧。

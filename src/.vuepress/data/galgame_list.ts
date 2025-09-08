@@ -10,12 +10,18 @@ const original_list: GalItemInputType[] = [
       start: "2025-09-06",
       end: "2025-09-06",
     },
+    score: {
+      story: 0,
+      visual: 6.7,
+      program: 3.5,
+    },
   },
   {
     name: "美少女万华镜3-神明所创造的少女们",
     valid_name: "美少女万华镜",
     other_names: ["美少女万華鏡"],
     playing_status: PlayingStatus.PLAYING,
+    use_time: "-1min",
     order: 3,
     duration: {
       start: "2025-09-03",
