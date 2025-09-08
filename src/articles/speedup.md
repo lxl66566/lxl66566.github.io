@@ -809,6 +809,8 @@ _美少女万华镜 3_ 也是 FilePackVer3.0，然而 `exfp3_v3.exe` 解它的�
 
 继续网上冲浪，看到 [乜都讲 D 的博客](https://blog.ztjal.info/acg/acg-data/galgame-unpack-record-2015-sangatsu-shigatsu) 提到了关键信息 `exfp3_update_v3.1.4.7z`，据传是国人改的。那么这个玩意要怎么搞呢？废物 google 搜不到东西，Github 搜 `exfp3_update_v3.1.4` 出来一些论坛 archive，[其中一篇](https://github.com/silas1037/clip/blob/539b4fd2e55254ef05310a815319ab0bad3d135e/汉化破解研讨室/2019-10-14-1570983566/index.html#L295)就是该代码的作者福音佬的 post。果然这些解包方法都是佬们早就讨论过的东西。虽然在工位不好逛 galgame 论坛，但是几年前的度盘链接居然还能用。于是下载完毕，试用完毕，福音时代乱杀了。
 
+[`exfp3_update_v3.1.4.7z` 备用下载地址](https://t.me/absolutexsresource/82)
+
 </template>
 <template #LiLiM>
 

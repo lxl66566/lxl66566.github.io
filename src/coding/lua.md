@@ -41,6 +41,10 @@ tag:
   - 如果你在用其他提供 lua 库的框架（例如 OpenResty），可以[安装插件](https://github.com/LuaLS/lua-language-server/wiki/Addons)，以提供更好的 type hint。最简单的插件安装是 `Ctrl + P` 打开 `Lua: Open Addon Manager`，然后点点点即可。
 - _Stylua_ 默认使用 tab 作为缩进。要把它改成空格，[需要](https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection)在项目下创建 `.stylua.toml`，并写入 `indent_type = "Spaces"`。
 
+其他：
+
+- [emmylua](https://github.com/EmmyLuaLs/emmylua-analyzer-rust/) 是一个 rust 写的 lua lsp，如果你不使用 openresty 等三方 addons，可以尝试。
+
 ## 基础
 
 - array table 下标从 1 开始！！！

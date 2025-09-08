@@ -124,7 +124,7 @@ V2rayN v6.30 后原生支持 hysteria2 协议。虽然在初期有些问题，�
 3. 启动 client 服务。
    ::: tabs
    @tab AUR
-   从 AUR 安装 hysteria 是服务端和客户端一体的，因此会安装两个**服务模板**，使用时需要传入字符串指定配置文件。例如，我需要使用 `/etc/hysteria/server.yaml` 则需要 `systemctl enable --now hysteria-server@server`。
+   从 AUR 安装 hysteria 是服务端和客户端一体的，因此会安装两个**服务模板**，使用时需要传入字符串指定配置文件。例如，我需要使用 `/etc/hysteria/server.yaml` 则需要 `systemctl enable --now hysteria-server@server`。要用 client 同理。
    @tab 使用脚本
    `systemctl enable --now hysteria-server`
    :::
@@ -134,7 +134,7 @@ V2rayN v6.30 后原生支持 hysteria2 协议。虽然在初期有些问题，�
 
 ### Android
 
-::: archived
+::: details archived
 
 NekoBox (v1.2.9) 号称支持，~~实测不可用~~。windows 上测了能用的配置，放在 NekoBox 上用不了。
 

@@ -14,7 +14,7 @@ trojan-go 是 trojan 的 go 实现，兼容原版。
 
 ## [服务端配置](https://p4gefau1t.github.io/trojan-go/basic/config/)
 
-trojan-go 的配置又是一个简洁的典范，几乎不逊色于 hysteria。
+trojan-go 的配置又是一个简洁的典范。
 
 1. 安装。
    ::: code-tabs
@@ -58,10 +58,10 @@ trojan-go 的配置又是一个简洁的典范，几乎不逊色于 hysteria。
 
 ## 客户端
 
-由于 trojan 协议广泛使用，因此是个客户端基本都支持。
+由于 trojan 协议广泛使用，因此是个客户端基本都支持。trojan-go 本身是兼容 trojan 协议的。
 
 而关于 trojan-go，在 Android 端可以用 [NekoBox](./proxy_software.md#sing-box-系)，不过需要[下载插件](https://matsuridayo.github.io/m-plugin/)。（F-Droid 下载地址已失效，插件不再更新）
 
 ## 遇到的问题
 
-一觉醒来，trojan-go 寄了。
+trojan-go 已经不再维护，虽然没有 archived，但也差不多了。

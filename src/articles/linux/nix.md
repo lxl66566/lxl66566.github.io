@@ -128,7 +128,7 @@ sudo: a password is required
 
 一个要点是理清 nix 的 一些事实标准，例如 flake， home manager，他们是什么，有什么用。好在那本 thiscute 的书完美解决了此问题。
 
-还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[ryan4yin's config](https://github.com/ryan4yin/nix-config) [nyancat](https://git.ny4.dev/nyancat/flake/src/branch/master) [wimpysworld](https://github.com/wimpysworld/nix-config) [jackdbd](https://github.com/jackdbd/nix-config) [nmasur](https://github.com/nmasur/dotfiles) [oo-infty](https://github.com/oo-infty/nixos-configurations)
+还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[ryan4yin's config](https://github.com/ryan4yin/nix-config) [nyancat](https://git.ny4.dev/nyancat/flake/src/branch/master) [wimpysworld](https://github.com/wimpysworld/nix-config) [jackdbd](https://github.com/jackdbd/nix-config) [nmasur](https://github.com/nmasur/dotfiles) [oo-infty](https://github.com/oo-infty/nixos-configurations) [AsterisMono](https://github.com/AsterisMono/flake)
 
 ### 基础
 

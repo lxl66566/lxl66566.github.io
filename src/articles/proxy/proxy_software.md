@@ -141,7 +141,18 @@ set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理�
 
 @tab OpenWRT
 
-<https://v2raya.org/docs/prologue/installation/openwrt/>，讲得非常清除。注意需要安装 `xray-core`。
+<https://v2raya.org/docs/prologue/installation/openwrt/>，讲得非常清楚。注意需要安装 `xray-core`。
+
+@tab Windows
+
+[使用 scoop 安装](https://github.com/v2rayA/v2raya-scoop)
+
+```sh
+scoop bucket add v2raya https://github.com/v2rayA/v2raya-scoop
+scoop install v2raya
+```
+
+不过那个 v2ray-rules-dat 好像没啥用，装完以后还是需要联网去下载 dat 文件。
 
 :::
 
@@ -149,6 +160,7 @@ set -Ux ALL_PROXY "http://127.0.0.1:20172"  # 必须加 -x, 否则系统代理�
 
 - 如果你不开透明代理，则代理端口最好使用 `http://127.0.0.1:20172`，这个端口带有分流。
 - 如果你开启透明代理，可以将分流规则选成 [RoutingA](https://v2raya.org/docs/manual/routinga/)，然后透明代理分流与端口分流一致。这样方便自定义直连或代理的规则。
+  - v2rayA 的 RoutingA 咋一看和 dae 配置挺像，其实还是有挺大不同的，比 dae 更严格，例如不允许在括号中间换行。
 
 ### V2rayNG
 
