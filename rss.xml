@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 08 Sep 2025 02:39:34 GMT</pubDate>
-    <lastBuildDate>Mon, 08 Sep 2025 02:39:34 GMT</lastBuildDate>
+    <pubDate>Mon, 08 Sep 2025 15:10:19 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Sep 2025 15:10:19 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -86,6 +86,10 @@
 </ul>
 </li>
 <li><em>Stylua</em> 默认使用 tab 作为缩进。要把它改成空格，<a href="https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection" target="_blank" rel="noopener noreferrer">需要</a>在项目下创建 <code>.stylua.toml</code>，并写入 <code>indent_type = "Spaces"</code>。</li>
+</ul>
+<p>其他：</p>
+<ul>
+<li><a href="https://github.com/EmmyLuaLs/emmylua-analyzer-rust/" target="_blank" rel="noopener noreferrer">emmylua</a> 是一个 rust 写的 lua lsp，如果你不使用 openresty 等三方 addons，可以尝试。</li>
 </ul>
 <h2>基础</h2>
 <ul>
