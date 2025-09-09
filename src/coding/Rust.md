@@ -589,11 +589,11 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 
 ### clap
 
-一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。~~[wordinfo](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs) 的 Cli 简直是我的 clap 毕生所学（，折腾了非常久。~~
+一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。这是一个 [clap 配置例子](https://github.com/lxl66566/wordinfo/blob/main/src/cli.rs)，这玩意就是得多用才能熟练。
 
 clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到处传参之苦。带来的问题是写测试变得更加困难，因为不同的测试可能有不同的初始参数，而测试是并发的，没法表达不同的 Cli 状态（而且 LazyLock 的话就是只读了）。所以如果 rust 有一个好用的 context 实践的话就好了。
 
-我们可能对命令行有更多自定义的验证，这时候最好 impl Cli 添加自定义的 `fn validate(&self)`，并且在 parse 后调用。不要用 clap 自带的 `value_parser`，[那个是一坨大便](https://t.me/withabsolutex/2367)。
+我们可能对命令行有更多自定义的验证，这时候最好 impl Cli 添加自定义的 `fn validate(&self)`，并且在 parse 后调用。不要用 clap 自带的 `value_parser`，[那个是一坨大便](https://t.me/withabsolutex/2367)；或者可以使用某个 serde_inline_default 宏，但是代码这里不好给出，可以私聊我。
 
 ### once_cell
 

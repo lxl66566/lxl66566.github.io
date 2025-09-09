@@ -386,9 +386,9 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 
 - ([src](https://t.me/withabsolutex/2469)) 编程时出现 bug，排查半天，发现我的文件进入了存在与不存在的量子叠加态：
   ```sh
-  ❯ cp -f libdecodeutils.so ../../yak/lib/libdecodeutils.so || ls -ld ../../yak/lib/libdecodeutils.so
-  cp: cannot create regular file '../../yak/lib/libdecodeutils.so': File exists
-  "../../yak/lib/libdecodeutils.so": No such file or directory (os error 2)
+  ❯ cp -f libdecodeutils.so ../../xxx/lib/libdecodeutils.so || ls -ld ../../xxx/lib/libdecodeutils.so
+  cp: cannot create regular file '../../xxx/lib/libdecodeutils.so': File exists
+  "../../xxx/lib/libdecodeutils.so": No such file or directory (os error 2)
   ```
   然后 wsl --shutdown 再重启就好了，WSL 我操你吗
 - ([src](https://t.me/withabsolutex/2450)) 20250812，我卸载 WSL 的其中一个发行版（ArchWSL），结果再进 wsl 就报错 0x80041001。无法重装，因为在 `wsl --update` 里会显示某个服务没有运行无法 update，它也不说是哪个服务没运行。我的 windows update 等服务是开的，都没用。最后靠系统还原点还原解了。

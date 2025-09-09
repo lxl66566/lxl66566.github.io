@@ -617,20 +617,7 @@ git gc --prune=now --aggressive        # gc，删除 blob
 
 - git-cliff：自动生成 changelog
 - git-absorb：将当前更改合并到某个 commit 内。
-  - 我不太喜欢它，我选择用我自己的脚本：
-    ```nushell
-    # Creates a fixup commit for a specific commit and autosquashes it via interactive rebase.
-    #
-    # Usage:
-    #   gfixup           # Creates a fixup commit for the current HEAD and rebases
-    #   gfixup <hash>    # Creates a fixup commit for <hash> and rebases
-    #
-    def gfixup [commit_hash?: string = 'HEAD'] {
-       git commit -a --fixup $commit_hash
-       let rebase_target = if $commit_hash == 'HEAD' { 'HEAD~2' } else { ($commit_hash | str trim) + "~1" }
-       GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $rebase_target
-    }
-    ```
+  - 我不太喜欢它，我选择用我自己的[脚本](./snipets.md#gfixup)。
 - git-se：[git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)，用于仓库加解密
 
 ## 自建 git 托管
