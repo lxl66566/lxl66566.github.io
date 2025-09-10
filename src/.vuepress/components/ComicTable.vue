@@ -859,6 +859,9 @@ const data: ComicItemType[] = [
   { id: "595692", aScore: 9.1, bScore: 5, info: "#蔚蓝档案 #自慰 #loli", bak: "https://telegra.ph/もえもえぷ-もえぷ-イブキはじめての性教育-ブルーアーカイブ-中国翻訳-DL版-09-07-3" },
   { id: "595428", aScore: 8.6, bScore: 9, info: "#合集 #师生 #乱交 #6P #破处", bak: "https://telegra.ph/創田ぐみ-ハーレム処女学級教え子はS級少女たち-中国翻訳-DL版-09-06" },
   { id: "595690", aScore: 7.8, bScore: 6.8, info: "#孕肚 #堕落 #催眠 #星穹铁道", bak: "https://telegra.ph/とんずら道中-かざわ-雲璃を眠して繁殖の運命を歩みたい-崩壊スターレイル-中国翻訳-DL版-09-07-3" },
+  { id: "594852", aScore: 9.2, bScore: 4.7, info: "#星穹铁道 #纯爱 #巨乳" },
+  { id: "568073", aScore: 8.1, bScore: 6.2, info: "#蔚蓝档案 #百合 #无插入 #兽耳" },
+  { id: "595859", aScore: 7.5, bScore: 7.4, order: 3, info: "#星穹铁道 #催眠 #陷阱", bak: "https://telegra.ph/multiplication-33-ピノコニー裏-Ver参-崩壊-スターレイル-中国翻訳-DL版-09-09-3" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

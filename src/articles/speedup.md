@@ -811,6 +811,10 @@ _美少女万华镜 3_ 也是 FilePackVer3.0，然而 `exfp3_v3.exe` 解它的�
 
 [`exfp3_update_v3.1.4.7z` 备用下载地址](https://t.me/absolutexsresource/82)
 
+### FilePackVer3.1
+
+这个就简单了，GARbro 可以直接解出音频来，上述的 hz86/filepack 估计也可以用吧，懒的试了。
+
 </template>
 <template #LiLiM>
 
