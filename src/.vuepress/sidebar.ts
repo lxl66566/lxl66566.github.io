@@ -143,7 +143,7 @@ export default sidebar({
     {
       text: "爱好",
       prefix: "/hobbies/",
-      children: ["rhythm_games.md", "galgame.md", "Minecraft.md", "books.md", "anime.md", "other_games/"],
+      children: ["rhythm_games.md", "galgame.md", "books.md", "anime.md", "other_games/"],
     },
     {
       text: "杂项",

@@ -925,7 +925,7 @@ console.log(proc);
 
 ### 20220517
 
-- 新增 [游戏-我的世界](../hobbies/Minecraft.md)
+- 新增 [游戏-我的世界](../hobbies/other_games/Minecraft.md)
 
 ### 20220516
 

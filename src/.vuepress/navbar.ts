@@ -12,7 +12,7 @@ export default navbar([
       {
         text: "游戏",
         prefix: "/hobbies/",
-        children: ["galgame.md", "rhythm_games.md", "Minecraft.md", "other_games/"],
+        children: ["galgame.md", "rhythm_games.md", "other_games/"],
       },
       {
         text: "艺术",

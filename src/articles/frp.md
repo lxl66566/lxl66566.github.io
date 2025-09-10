@@ -35,9 +35,11 @@ cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
 
 ## [easytier](https://easytier.cn/)
 
-类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。我没有用过，不过可以 mark 一下。
+类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。
 
 > 和 zerotier、tailscale 故意区分了不同端相比，easytier 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch
+
+实际用起来的话，感受是文档非常不清楚，没有一个 full config example，全是命令行。并且默认情况下它会将你的服务器连到大网络里，消耗你的流量；除非你开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。
 
 ## zerotier
 

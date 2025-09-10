@@ -44,3 +44,10 @@ It's a `set`.
 - 乐器精通（2 年）
 - R18(G)（不宜过久，有精神损伤风险）
 - 人生百态（1 年）
+
+## your X is not your X
+
+一切复杂性的隐藏对 hardcore user 来说都有隐式的心智负担。
+
+- X = windows: 连接工作或学校帐户；其中一些设置由你的组织管理
+- X = cache: [小米云控开启的 RescuePartyPlus 自动删除第三方应用数据](https://t.me/DimoleSaidWTF/642)
