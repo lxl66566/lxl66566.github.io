@@ -130,6 +130,7 @@ tag:
 - [x] ~~windows simple zstd~~ 遇到了[亿些麻烦](https://t.me/withabsolutex/2378)。后来基于更好的 dwarfs 写了个 ([windows-dwarfs-tools](https://github.com/lxl66566/windows-dwarfs-tools))
 - [ ] strbase，基于 string 的关系型 db，git 友好。
 - [ ] minix, mini nix lang
+- [ ] bash compitable modern shell
 
 ### RIIR
 

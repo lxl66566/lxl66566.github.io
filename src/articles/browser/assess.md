@@ -47,6 +47,7 @@ tag:
 - edge 在 archlinux 上就捞的一批了。。黑色主题下到处黑白分不清。
   - 不过也有可能是 kde 配得不太好，我在 nixos 上没看到这个问题。
 - edge 的同步问题很大。随便 google 一下，ms answer 网站上一大堆同步丢数据的，本人也**有幸**[丢过一次重要数据](https://t.me/withabsolutex/2421)。
+- 安装扩展出现 _包无效。详细信息: Couldn't load icon assets/images/128.png specified in browser_action_。但是同样的 crx 扩展在 Chromium 上安装，没有问题。
 
 ### chrome / chromium
 

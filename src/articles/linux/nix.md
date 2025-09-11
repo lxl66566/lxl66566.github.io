@@ -189,7 +189,9 @@ nix 非常自由，你可以自由组织自己的配置结构。我目前见过�
 
 - 乱放型：基于 flake.nix, configuration.nix 和 home.nix 构建的配置，所有东西全部乱放。一般在 nix 早期，配置较少，还不熟悉 nix 语言和结构的时候使用。
 - 开关型：有了多主机部署的要求，每台主机有着不同特点，因此原来的乱放型不适用了。开关型指的是在 flake.nix 中定义一些开关，通过 specialArgs 传到各个模块中，控制模块内部的配置。
-- Dendritic Pattern：每个文件都是一个 flake-parts 模块，拥有完整的配置。这样可以组织非常庞大的配置结构，并且具有相当高的自由度。Dendritic Pattern 只是这样一个比较笼统的概念，你可以在此基础上任意衍生。
+- Dendritic Pattern：每个文件都是一个 flake-parts 模块，拥有完整的配置。这样可以组织非常庞大的配置结构，并且具有相当高的自由度。
+  - Dendritic Pattern 只是这样一个比较笼统的概念，你可以在此基础上任意衍生。
+  - [Arcohol/nix-config](https://github.com/Arcohol/nix-config) 是一个非常好的 Dendritic Pattern 例子。
 
 我的看法：随着配置越来越多，尝试各种不同的组织结构来管理大量配置是一件非常自然的事情。如果你刚入坑 nix，看到复杂的组织结构被吓到也是很正常的。我觉得没必要一上来就抄复杂配置，在大量模块中迷失自我；从乱放慢慢过渡到复杂结构也是一个比较有意思的过程。
 
@@ -330,7 +332,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart nix-daemon
 ```
 
-([ref](https://nixos-cn.org/tutorials/installation/Networking.html#_3-%E4%BD%BF%E7%94%A8%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AE-channels-%E8%B7%9F-flake-inputs))
+([ref](https://nixos-cn.org/tutorials/installation/Networking.html#_3-使用代理工具加速访问-channels-跟-flake-inputs))
 
 :::
 
@@ -354,7 +356,7 @@ nix.settings.warn-dirty = false;
 
 但是进一步定制各种配置文件就没那么简单了，因为 [home-manager 的 manual](https://nix-community.github.io/home-manager/index.xhtml) 就是一坨屎！建议直接用[第三方的 options 搜索](#搜索)。
 
-home manager 的一个缺点是引用方式是独立模块，我目前还没找到 home manager 配置和系统配置放在同一个 nix 文件里的方法。
+一般的 home manager 教程都会把 home manager modules 和 config modules 分开放。但是如果要将这两个 config 放在一起呢？答：只需要使用 `home-manager.users."${username}" = {...};` 即可，它们是可以放在同一个文件里的。
 
 ### [plasma manager](https://github.com/nix-community/plasma-manager)
 

@@ -580,6 +580,8 @@ python 界最常用的网络库 requests 是不支持 async 的！然而网络�
 
 一个选择是大声对标 requests 的 [grequests](https://github.com/spyoungtech/grequests)，但是我看了一下 README 里的 API，内部 async 但是不在外部暴露，虽然 99% 的网络需求都能通过 batch process 解决，但是不暴露 async 还是不够解耦不够自由。
 
+[httpx](https://www.python-httpx.org/quickstart/) 拥有更简洁的 API 和一个 cli 用于快速测试；虽然其默认是同步 API 但也支持异步，用 asyncio 或 trio 作为异步运行时。
+
 aiohttp 是一个真正的 async 网络库，甚至同时支持 server/client mode。它暴露所有 async 接口，并且与 python 标准的 asyncio 配合，拥有较高的可扩展性，可以实现复杂需求。要我说缺点的话，那就是线程池 session 对用户不是无感知的，比全局 context poll 要差。
 
 ### 命令行参数
