@@ -556,7 +556,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | colored / simply-colored | 命令行颜色输出，后者更适合用于 no_std |
 | rand / smallrand | 随机数，后者更适合用于 no_std |
 
-[^5]: 为避免傻逼 openssl 造成的影响，建议添加 `feature = ["rustls-tls"]`。
+[^5]: 为避免傻逼 openssl 造成的影响，一般建议起手 `reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "http2", "charset", "system-proxy"] }`。
 
 另外一些库则是我用过然后觉得好用。
 

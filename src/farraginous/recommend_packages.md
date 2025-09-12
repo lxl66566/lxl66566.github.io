@@ -107,6 +107,10 @@ RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存�
 
 对于普通 BT 站下载，需要添加 tracker，我使用 [XIU2/TrackersListCollection](https://github.com/XIU2/TrackersListCollection)。
 
+### 抓包
+
+虽然很多人可能没有抓包的需求，不过如果你是搞技术的，那我还是要推荐一下 [mitmproxy](https://www.mitmproxy.org/) 的。只要安装一个它提供的根证书，抓 https 就跟透明的一样，而且有一个网页界面可以方便地查看结果。
+
 ## Android
 
 ::: tip

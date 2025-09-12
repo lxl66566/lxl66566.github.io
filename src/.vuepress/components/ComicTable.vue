@@ -862,6 +862,7 @@ const data: ComicItemType[] = [
   { id: "594852", aScore: 9.2, bScore: 4.7, info: "#星穹铁道 #纯爱 #巨乳" },
   { id: "568073", aScore: 8.1, bScore: 6.2, info: "#蔚蓝档案 #百合 #无插入 #兽耳" },
   { id: "595859", aScore: 7.5, bScore: 7.4, order: 3, info: "#星穹铁道 #催眠 #陷阱", bak: "https://telegra.ph/multiplication-33-ピノコニー裏-Ver参-崩壊-スターレイル-中国翻訳-DL版-09-09-3" },
+  { id: "596172", aScore: 6, bScore: 7.8, info: "#催眠笔记 #JK #师生" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
