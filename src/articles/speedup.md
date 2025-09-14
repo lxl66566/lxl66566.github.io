@@ -457,6 +457,7 @@ escude 家的游戏是 bin 格式，GARbro 可解不可封。
   2. ffmpeg 批量语音加速
   3. _Packget -> repack_
 - [cottony-vase-131 的工具](https://cottony-vase-131.notion.site/GameTools-7fea11732ecd4e398896414a31fef431)：专门处理脚本的工具，无法使用
+- [TheVNConnoisseur/Bincude](https://github.com/TheVNConnoisseur/Bincude)：202508 才出的新工具，mark，未尝试
 
 </template>
 <template #unity>
@@ -612,6 +613,14 @@ for arc in arcs.glob("*.arc"):
 <template #AKABEiSOFT3>
 
 没有汉化只有机翻补丁，GARbro 打不开，网上搜不到任何信息。无解，除非去做整套 crack 流程。
+
+然后尝试了下 [GARbro Mod](https://github.com/crskycode/GARbro/releases/tag/GARbro-Mod-1.0.1.6)，能打开并且能正常提取音频。按照惯例，procmon 看下能不能免封包，很遗憾，不能。接下来只要解决封包即可。
+
+AKABEiSOFT3 官网没有给出任何工具下载；GARbro Mod 里有创建 `DAT/EGO/1` 格式的选项，但是打出来扫一眼格式明显不对，这里的 DAT 肯定是其他引擎的封包格式，肯定是指望不上了。[Hikarinagi 的一篇帖子](https://www.hikarinagi.xyz/p/14857)提到是 2dfan 里的大佬帮他封包，然而 2dfan 做的垃圾导致帖子可见范围非常小，许多帖子被删除且无法搜索。后来发现该游戏（_空色イノセント_）也是引擎检测不通过，具体看后文。。
+
+Github 搜关键词，有效的只搜到一个 [akabeisoft3Danshi 汉化.md](https://github.com/beef-potato/beefpotatoBlog/blob/595e062579ff416784afedd5b0476664fbbc48de/docs/akabeisoft3Danshi汉化.md)，里面说到 _手垢塗れの堕天使_ 使用的引擎是 krkrz。。emmm，确实，虽然同为 AKABEiSOFT3 但是它们的引擎确实是不一样的，参考 vndb，让我白高兴一场。
+
+既然 AKABEiSOFT3 引擎各种各样，那就不能用它做关键词。使用 yaneurao 搜索，定位到其当前官网，这是一个开源引擎，并且提供了[工具下载](https://bm98.yaneu.com/infoseek/yaneSDK2nd/)。尝试下载了 yanePack101 和 yanePackEx102 用来打包，首先它的输入只能是文件而不是文件夹，其次打出来的包跟游戏里的 voice.dat 也不太像啊，一堆 80 都没有出现。
 
 </template>
 <template #LCSE>
@@ -831,6 +840,39 @@ GARbro 可解，procmon 扫一遍不能免封，于是需要找封包工具。
 当然事情并不会如此顺利，在 exaosv2.cpp 里对 5 - 8 字节是直接当废弃字节跳过的。结果封包回去并不能正常运行游戏，在语音处会弹窗报错。所以我猜这四个字节也是有用的。跟上次 BGI 的封包一样寻找蛛丝马迹，盲猜和文件数量有关（懒得去拉所有 ogg 的 frame 总和，先猜个数量再说），还真猜对了，这四个字节就是 _文件头大小_ + _目录表总大小_ = 273 + 文件数 \* 40。于是瞬秒，打开游戏测试，语音加速正常。
 
 仓库地址：<https://github.com/lxl66566/aos_up>
+
+</template>
+<template #AVG32>
+
+AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的第一眼我就觉得我要秒杀了。然后就被狠狠打脸，这个 .wav 容器根本不是 PCM 编码，imhex 看二进制更像是 mp3；但是它又不是一个正常的 mp3，至少 ffmpeg 重编码会报错：
+
+```
+[mp3float @ 000001de063ff5c0] Header missing
+[aist#0:0/mp3 @ 000001de063da780] [dec:mp3float @ 000001de063fee00] Error submitting packet to decoder: Invalid data found when processing input
+[mp3float @ 000001de063ff5c0] Header missing
+[aist#0:0/mp3 @ 000001de063da780] [dec:mp3float @ 000001de063fee00] Error submitting packet to decoder: Invalid data found when processing input
+```
+
+我的 loudness-normalize 用的 symphonia 更是会直接 panic。
+
+但是 ffmpeg 重编码是可以编出一个正常的结果的。于是尝试 batch 重编码，还[踩了一个 python multiprocessing 的坑](https://t.me/withabsolutex/2494)。最后用 fd 跑了一遍：`fd -e wav -x cmd /c "ffmpeg -hide_banner -loglevel error -err_detect ignore_err -i {} {.}_tmp.wav && move /Y {.}_tmp.wav {}"`。
+
+跑出来就不是 mp3 类似物而是真正的 wav 了，共计 4.88GB 是真没绷住。先不管啥编码，捞到游戏里跑一遍再说，还真能播放。于是加速结束。
+
+后来从 [inmm](https://cryo.jp/_inmm/avg32tools_readme.php) 处了解到，这些 wav 应该是 KOE 格式。文章还说可以用 koeunpac.exe 转为 wav 格式，但是我尝试了发现并没有什么卵用，会报错 _レジストリ Software\KEY\AIR を開けません。_ 感觉又要用日文系统才能进行格式转换了；而且我这也不是光盘版的，这个路径看起来得在符合 CD 的文件夹路径里才能进行转换吧。
+
+感慨一下，在那个音频编码没有统一标准，mp3 要收费的时代，搞点游戏音频确实不太容易。虽然 KOE 这玩意吧看起来就跟 mp3 差不多，有可能就是为了避免专利费而进行的小改造……
+
+### 其他问题
+
+1. 这样进行加速后的某些音频在开始时可能会有一个爆音……因为我使用 ffmpeg 硬转 wav，刚开始还以为有一些 metadata 也被当成音频数据放进去了。多听一下，发现应该是一小段音频被切掉了……那这也没啥办法，就这样吧，又不是不能听。
+2. 因为程序 bug，无法调节各个部分的音量。于是我想着能不能直接用 loudness-normalize 调整其 LUFS，结果发现调整后的音频再进游戏就无法播放了…… rust hound 编码器也是个 jb。我又懒得再多过一遍 ffmpeg 重编码。然后想到，如果我不把人声调大，那我把 BGM 调小不就行了。BGM 里倒还真都是正常的 WAV，直接
+   ```sh
+   for f in *.wav; do
+     ffmpeg -i "$f" -af "volume=-7dB" "temp-$f" && mv "temp-$f" "$f"
+   done
+   ```
+   即可。
 
 </template>
 </SpeedupList>

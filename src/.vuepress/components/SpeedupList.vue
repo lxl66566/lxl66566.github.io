@@ -131,7 +131,7 @@ const data: SpeedupItemType[] = [
   {
     names: ["まほ×ろば -Witches spiritual home-"],
     valid_name: "AKABEiSOFT3",
-    engine: "Yaneurao/unknown",
+    engine: "Yaneurao",
     save_format: "dat",
     speedupable: false,
   },
@@ -161,6 +161,13 @@ const data: SpeedupItemType[] = [
     valid_name: "LiLiM",
     engine: "-",
     save_format: "aos",
+    speedupable: true,
+  },
+  {
+    names: ["AIR"],
+    valid_name: "AVG32",
+    engine: "AVG32",
+    save_format: "-,audio:KOE",
     speedupable: true,
   },
 ];

@@ -863,6 +863,8 @@ const data: ComicItemType[] = [
   { id: "568073", aScore: 8.1, bScore: 6.2, info: "#蔚蓝档案 #百合 #无插入 #兽耳" },
   { id: "595859", aScore: 7.5, bScore: 7.4, order: 3, info: "#星穹铁道 #催眠 #陷阱", bak: "https://telegra.ph/multiplication-33-ピノコニー裏-Ver参-崩壊-スターレイル-中国翻訳-DL版-09-09-3" },
   { id: "596172", aScore: 6, bScore: 7.8, info: "#催眠笔记 #JK #师生" },
+  { id: "580804", aScore: 6.1, bScore: 9.7, info: "#长篇 #冒险者 #天然 #loli #气功", bak: "https://telegra.ph/性文化研-柳田史太-かわいい-かわいい-かわいい-中国翻訳-06-26-2" },
+  { id: "596395", aScore: 9, bScore: 3.2, info: "#雀宫すずめ #兽耳 #强迫", bak: "https://telegra.ph/もえぷ-雀宫すずめ的日常-09-11" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
