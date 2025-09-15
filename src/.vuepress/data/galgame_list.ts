@@ -28,6 +28,11 @@ const original_list: GalItemInputType[] = [
       start: "2025-09-09",
       end: "2025-09-14",
     },
+    score: {
+      story: 6.7,
+      visual: 6.2,
+      program: 6.2,
+    },
   },
   {
     name: "赫雷斯的角斗场",

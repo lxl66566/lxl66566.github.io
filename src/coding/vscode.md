@@ -65,6 +65,11 @@ tag:
 - 协同：_Live Share_
 - 其他：_Chinese (Simplified)..._，_CodeSnap_
 
+### 插件管理
+
+- 分析：当插件数量多了以后，每次启动都耗时很久，甚至卡在某个插件的启动上。此时需要 `Ctrl + Shift + p` 打开操作面板，进入 _Developer: Show Running Extensions_，可以看到插件状态与启动用时。
+- 禁用内置插件：虽然[无法在 config 里禁用内置插件](https://github.com/microsoft/vscode/issues/40239)，但是我们可以在扩展里搜索 `@Builtin`，然后禁用那些用不到的，可以减小 vscode 内存占用。([ref](https://github.com/microsoft/vscode/issues/58600#issuecomment-420992831))
+
 ### AI 代码补全
 
 我的刚需是：免费（考虑付费的话直接上 copilot 完事了），可部分禁用。
@@ -107,11 +112,6 @@ tag:
 
 - chat api，gemini 一直都是免费的
 - code 补全 API 的话，deepseek api 比较便宜
-
-### 插件管理
-
-- 分析：当插件数量多了以后，每次启动都耗时很久，甚至卡在某个插件的启动上。此时需要 `Ctrl + Shift + p` 打开操作面板，进入 _Developer: Show Running Extensions_，可以看到插件状态与启动用时。
-- 禁用内置：[想屁吃，根本没有](https://github.com/microsoft/vscode/issues/40239)
 
 ### 插件黑名单
 

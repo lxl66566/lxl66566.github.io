@@ -564,6 +564,12 @@ git ls-files | xargs -n1 du -h | awk '{print $1}' | paste -sd+ - | bc
 
 可能需要安装 `bc`（`pacman -S bc`）。统计结果理论以 K 为单位。
 
+### 批量修改 committer 和 signoff
+
+重新 git config --local user.name 和 user.email 后，执行
+
+`git rebase -i HEAD~N --exec 'git commit --amend --reset-author --signoff -m "$(git log -1 --pretty=%B | grep -v "Signed-off-by")"'`
+
 ## 奇技淫巧
 
 ### 自动化 squash
