@@ -2,6 +2,16 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "美少女万华镜5-理与迷宫的少女",
+    valid_name: "美少女万华镜",
+    playing_status: PlayingStatus.PLAYING,
+    other_names: ["美少女万華鏡"],
+    order: 5,
+    duration: {
+      start: "2025-09-15",
+    },
+  },
+  {
     name: "AIR",
     playing_status: PlayingStatus.PLAYING,
     duration: {

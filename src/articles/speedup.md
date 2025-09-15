@@ -824,6 +824,23 @@ _美少女万华镜 3_ 也是 FilePackVer3.0，然而 `exfp3_v3.exe` 解它的�
 
 这个就简单了，GARbro 可以直接解出音频来，上述的 hz86/filepack 估计也可以用吧，懒的试了。
 
+#### 美少女万华镜 5
+
+不知道为什么，5 不能免封包读取音频，会弹报错。
+
+```
+[script error]
+thread:system
+[load]GameData\Data9\script\log\main.s(47line)@@!voice
+[now ]GameData\Data9\script\log\main.s(167line)@@!voiceplay
+[ERROR]:加载文件失败。
+[ERROR]:script:\l,f
+[ERROR]:param:"ボイス\kare0001.ogg"
+ ※使用ctrl + c将内容复制到剪贴板。
+```
+
+但是 FilePackVer3.1 工具多，直接封回去就好了。
+
 </template>
 <template #LiLiM>
 

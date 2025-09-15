@@ -865,6 +865,8 @@ const data: ComicItemType[] = [
   { id: "596172", aScore: 6, bScore: 7.8, info: "#催眠笔记 #JK #师生" },
   { id: "580804", aScore: 6.1, bScore: 9.7, info: "#长篇 #冒险者 #天然 #loli #气功", bak: "https://telegra.ph/性文化研-柳田史太-かわいい-かわいい-かわいい-中国翻訳-06-26-2" },
   { id: "596395", aScore: 9, bScore: 3.2, info: "#雀宫すずめ #兽耳 #强迫", bak: "https://telegra.ph/もえぷ-雀宫すずめ的日常-09-11" },
+  { id: "525966", aScore: 8, bScore: 9.9, order: 1, info: "#触手 #战败 #女3P #史莱姆 #冒险 #异世界 百浊之塔", bak: "https://telegra.ph/Ochichio-osisio-Hyakudaku-no-Tou--Ichi--Kunoichi-vs-Slime-Hen-Chinese-09-11" },
+  { id: "585664", aScore: 8, bScore: 10.5, order: 2, info: "#触手 #淫纹 #战败 #梦境 #女3P #史莱姆 #喷乳 #菊 #堕落 百浊之塔", bak: "https://telegra.ph/Ochichio-Nyuugyou-osisio-Hyakudaku-no-Tou--Ni--Kengen-Seshi-Jahen-百浊之塔-贰-邪祟显现篇-Chinese-白杨汉化组-09-11" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
