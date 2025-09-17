@@ -144,6 +144,7 @@ sudo: a password is required
 - 最常用的一些判断条件：`mkDefault` 和 `mkForce` 修改合并优先级，`mkBefore` `mkAfter` 修改 list 合并顺序，`mkIf` 条件控制某些属性的有和无，`optional` 根据条件返回 null 或 `[x]`，而 `optionals` 返回 null 或 x。
 - 数据类型：
   - 数组：list。判断元素是否存在：`builtins.elem elem list`。
+- nix config 里，attrset to INI 的类型要求必须有 section。但是实际 ini 配置可能有些条目没有 section ，所以必须使用一个伪 section: main。例如 `xxx = 1` 需要写成 `main = { xxx = 1;};`，什么脑残设计 😅
 
 ### 常用命令
 
