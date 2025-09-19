@@ -332,3 +332,113 @@ amd ryzen master 无法在使用 es 的 cpu 上安装， 真是天杀的 amd 啊
 所以现在二手 MODT 才是做服务器的优选，本体是 ITX 哪都能放，然后性能又高，能效还高，还便宜，这是我捡过的最满意的破烂。
 
 ::::
+
+## CPU benchmark
+
+这是我在 windows 上使用 Ryzen Master 限制 CPU 功耗后跑 xmrig 的 benchmark 结果。
+
+此处的 9950x 的得分大幅低于预期，可能是因为 xmrig 对它的支持还不够好，或者其在 windows 平台表现不佳。
+
+7945HX 是 Linux 上的分数，而且是降压调优过的，放到这里比可能不太公平。。但是我没有测裸的 7945HX 的曲线，所以只好把当前跑分放进来了。
+
+::: echarts
+
+```js
+const option = {
+  legend: {
+    data: ["5950X", "9950X", "7945HX"],
+  },
+  tooltip: {
+    trigger: "axis",
+  },
+  dataset: {
+    source: [
+      ["product", "CPU 功耗", "randomx hashrate"],
+      ["5950X", 154, 11650],
+      ["5950X", 163, 12900],
+      ["5950X", 181, 13900],
+      ["5950X", 194, 14150],
+      ["5950X", 206, 14400],
+      ["5950X", 219, 14550],
+      ["5950X", 233, 14630],
+      ["5950X", 246, 14730],
+      ["5950X", 259, 14800],
+      ["5950X", 273, 14870],
+      ["9950X", 145, 15300],
+      ["9950X", 159, 16175],
+      ["9950X", 173, 16800],
+      ["9950X", 188, 17556],
+      ["9950X", 203, 17972],
+      ["9950X", 218, 18412],
+      ["7945HX", 100, 18000],
+    ],
+  },
+  xAxis: {
+    type: "value",
+    name: "CPU 功耗 (w)",
+    scale: true,
+  },
+  yAxis: {
+    type: "value",
+    name: "randomx hashrate (h)",
+    scale: true,
+  },
+  series: [
+    {
+      name: "5950X",
+      type: "line",
+      smooth: true,
+      encode: {
+        x: "CPU 功耗",
+        y: "randomx hashrate",
+      },
+      // 自定义筛选逻辑
+      data: [
+        [90, 11650],
+        [100, 12900],
+        [110, 13900],
+        [120, 14150],
+        [130, 14400],
+        [140, 14550],
+        [150, 14630],
+        [160, 14730],
+        [170, 14800],
+        [180, 14870],
+      ],
+    },
+    {
+      name: "9950X",
+      type: "line",
+      smooth: true,
+      encode: {
+        x: "CPU 功耗",
+        y: "randomx hashrate",
+      },
+      data: [
+        [90, 15300],
+        [100, 16175],
+        [110, 16800],
+        [120, 17556],
+        [130, 17972],
+        [140, 18412],
+      ],
+    },
+    {
+      name: "7945HX(Linux,Opt)",
+      type: "line",
+      smooth: true,
+      symbol: "circle", // 只有一个数据点，为了显示出来，我们给他一个样式
+      symbolSize: 10,
+      encode: {
+        x: "CPU 功耗",
+        y: "randomx hashrate",
+      },
+      data: [[100, 18000]],
+    },
+  ],
+};
+
+const height = 500;
+```
+
+:::

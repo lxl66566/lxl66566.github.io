@@ -481,5 +481,5 @@ waydroid show-full-ui
 
 ## external
 
-1. [A curated list of command-line utilities written in Rust](https://github.com/sts10/rust-command-line-utilities)
-1. [一些现代化的 linux 命令](https://www.entropy-tree.top/2023/07/24/modern-linux-commands/)
+1. [A curated list of command-line utilities written in Rust](https://github.com/sts10/rust-command-line-utilities) | [awesome-rewrite-it-in-rust](https://github.com/j-m-hoffmann/awesome-rewrite-it-in-rust)
+2. [一些现代化的 linux 命令](https://www.entropy-tree.top/2023/07/24/modern-linux-commands/)

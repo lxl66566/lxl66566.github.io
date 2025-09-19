@@ -34,6 +34,7 @@ export default hopeTheme({
     align: true,
     alert: true,
     codeTabs: true,
+    echarts: true,
     // attrs: true,
     imgLazyload: true,
     imgSize: true,

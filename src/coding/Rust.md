@@ -455,37 +455,14 @@ rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理�
 
 ### 我的配置
 
-创建 `~/.cargo/config.toml` 并写入：
-
-```toml
-# 一些好用的 alias
-[alias]
-b = "build --release"
-c = "check"
-t = "test -- --nocapture"
-r = "run"
-u = "update"
-f = "clippy --fix --all-targets --all-features --allow-staged --allow-dirty"
-i = "install --profile installation"
-bi = "binstall -y"
-
-# 使用 sccache 缓存编译结果（需要安装 sccache）
-[build]
-rustc-wrapper = "sccache"
-
-# 使用 cargo install 使用的命令
-[profile.installation]
-lto = true
-inherits = "release"
-codegen-units = 1
-rustflags = ["-C", "target-cpu=native"]
-
-# 默认不带调试符号，减小编译大小
-[profile.dev]
-debug = false
-```
+创建 `~/.cargo/config.toml`，参考[我的配置](https://github.com/lxl66566/nixos-config/blob/main/config/cargo.toml)。
 
 然后由于现在大家都用 CI release，因此 `[profile.release]` 要写在项目里而不能写全局。
+
+一些解释：
+
+- [Book: Optimizing Build Performance](https://github.com/Kobzol/cargo/blob/performance-guide/src/doc/src/guide/build-performance.md)
+- [checksum-freshness](https://doc.rust-lang.org/cargo/reference/unstable.html#checksum-freshness)：正常情况下 cargo 按 mtime 进行编译缓存，也就是即使不修改文件内容，只要按了保存，就要重新编译此 package 及所有依赖其的项。使用 checksum-freshness 可以根据文件 hash 进行编译缓存，也就是疯狂按保存而不修改内容是不会触发缓存失效的。
 
 ### fmt
 
@@ -567,7 +544,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | assert2 / pretty_assertions | 全兼容的好看的 assert |
 | ~~die-exit~~ | ~~错误处理并退出~~，不过我现在不用了 |
 | tap | 函数式工具，在链式中途拿取引用操作而不影响返回值 |
-| enum-tools / strum + strum_macros | 提供 enum 的常用方法 |
+| enum-tools / strum_macros | 提供 enum 的常用方法 |
 | pollster | 小而美，专注于 _在同步环境运行异步函数_ 一件事，打破同步与异步间隔，**强烈推荐** |
 | expect-test | 自动更新 test 中 assert_eq 的期望值 |
 | const-hex | `Vec<u8>` -\> hex str |

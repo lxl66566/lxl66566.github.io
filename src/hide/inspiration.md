@@ -56,12 +56,12 @@ tag:
 - [ ] 流式分布式的视频软件?
 - [ ] 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）
 - [ ] pdf 无损图片压缩
-  - [ ] wasm, static web
-- [x] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。
+  - [ ] wasm, static web （see [imagequant](https://juejin.cn/post/7421938677770829878)?）
+- [x] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。 done: [git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)
 - [ ] ~~lzma 数据库，简易迁移，不依赖特定程序~~
 - [ ] ~~浏览器书签 & 历史数据库(rust cli / js)~~ History Trends Unlimited?
 - [ ] ~~better sqlite_zstd~~ 要么手操要么透明压缩
-- [ ] windows electron lib(runtime)?
+- [ ] ~~windows electron lib(runtime)?~~ no，please use webview; or some dedup method on windows.
 - [ ] windows volume locker
 - [x] [wd: info words online in cli, written in rust](https://github.com/lxl66566/wordinfo)
 - [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
@@ -82,7 +82,7 @@ tag:
   - [ ] 录制结束后可裁切
   - [ ] [有声音时开始保存数据，静音 X 秒后自动停止录音](https://autoclose.net/autoaudiorecorder.html)
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
-- [ ] ~~windows 工具包: alias, ls,~~ use bash instead.
+- [ ] ~~windows 工具包: alias, ls,~~ use bash instead, and my [snipets](../coding/snipets.md)
 - [ ] yakuake on windows
 - [ ] ~~更好的静态博客/文档框架~~ 学了点前端发现 vuepress 也没有那么难用，暂时搁置
 - [x] fuck, delete it! (windows)
@@ -151,8 +151,7 @@ tag:
 <!-- - [ ] 绝对值下载器，贯彻小而美（same as appstore） -->
 
 - [ ] 关于轨迹记录软件与应用时长记录软件<span class="heimu" title="你知道的太多了">时空刻录器</span>
-- [ ] Android opensource store, package manager（AUR-like）
-  - [ ] dependency
+- [ ] ~~Android opensource store, package manager（AUR-like）~~ **Obtainium** is good.
 - [ ] 录音机 app，抓住日常的每一个瞬间
   - [ ] 全天录音 to RAM，手动保存重放
 - [ ] Android task manager, \*top
@@ -172,7 +171,7 @@ tag:
 - [ ] B 站 CC 字幕下载脚本
 - [ ] osu 谱面下载器（仅前端？）
 - [ ] 轻量级 pdf 演示 (pdf as ppt, in any browser)
-- [ ] b 站历史记录搜索
+- [ ] ~~b 站历史记录搜索~~ _Bilibili 无限历史记录_
 - [ ] html compresser, <-> rss
   - [ ] 已找到同类项目 [sanitize-html](https://www.npmjs.com/package/sanitize-html)，但可以改进合并
 - [x] B 站直播增强
@@ -182,7 +181,6 @@ tag:
 - [ ] ~~类 markdown 方言, nmd (negative markdown) 换行问题 样式统一 高亮与黑幕 双列阅读区支持~~ 不要让方言再多一个啦！
 - [ ] ~~better markdown formatter~~ just PR to _prettier_ if you don't like it.
 - [ ] 答题网模板，选择题实时反馈
-- [ ] SAVE MY LOCK FILE
 - [ ] gaussian blur lib
 - [ ] ~~koishi plugin:~~ （koishi 有关计划暂时搁置）
   - [ ] ~~advanced: wordle game~~

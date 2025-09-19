@@ -139,6 +139,21 @@ echo "命令成功执行了 ${MAX_ATTEMPTS} 次而未失败。"
 
 :::
 
+## record
+
+record 本质上只算是 script 的一个 alias，用于保存输出到日志。1. record 指令不会影响终端本身输出，并且可以附加一份到日志；2. 如果有一些程序输出不是通过 stdout 或 stderr 的，record 也可以记录下来。
+
+::: code-tabs
+
+@tab bash
+
+```sh
+cmd=$(printf '%q ' "$@")
+script -q -c "$cmd" test.log
+```
+
+:::
+
 ## audiofmt
 
 将任意格式的音频转为固定大小（默认 5MB）的 opus 音频，选择 opus 是因为该格式拥有优秀的压缩比，详见[音频处理](./audio.md)。主要用于无损格式音频的有损压缩，依赖 ffmpeg。
