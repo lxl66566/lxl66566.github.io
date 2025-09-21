@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 21 Sep 2025 02:38:05 GMT</pubDate>
-    <lastBuildDate>Sun, 21 Sep 2025 02:38:05 GMT</lastBuildDate>
+    <pubDate>Sun, 21 Sep 2025 15:22:10 GMT</pubDate>
+    <lastBuildDate>Sun, 21 Sep 2025 15:22:10 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -751,10 +751,12 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20250913 为什么上海闪电的雷声都很小或者没有？ 20250911 如果你想要合法发泄自己的控制欲，你可以去捐一所中学。 20250902 越是疯狂内推的公司，越要谨慎其潜在的压榨事件。 当前许多色图频道被厨力统治，厨力角色的色图即使画得没有那么好，也会被转载到频道里。我是完美主义并且没有偏袒的角色，我反对这种行为。 20250722 ...</description>
+      <description>2025 20250921 我一向很讨厌软件对文件扩展名做出的假设。比如我用 gcc xxx.go，它会给我报一个 gcc.exe: error: 1.go: Go compiler not installed on this system。你凭什么说我的源码就不是 C 源码？还不如 python 呢，至少 python xxx.go 真的可以执行。 ...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20250921</h2>
+<p>我一向很讨厌软件对文件扩展名做出的假设。比如我用 <code>gcc xxx.go</code>，它会给我报一个 <code>gcc.exe: error: 1.go: Go compiler not installed on this system</code>。你凭什么说我的源码就不是 C 源码？还不如 python 呢，至少 <code>python xxx.go</code> 真的可以执行。</p>
 <h2>20250913</h2>
 <p>为什么上海闪电的雷声都很小或者没有？</p>
 <h2>20250911</h2>
