@@ -51,6 +51,8 @@ tag:
   - 很多东西理应在 std 实现，但是（目前）却没有
     - Semaphore（信号量）
 - [不能添加 bin dependencies](https://stackoverflow.com/questions/35711044/how-can-i-specify-binary-only-dependencies)。
+- `std::fs::canonicalize`：**rust 史上极恶函数之一**。这个函数在 Windows 上的第三方 fs、RAMDisk 等地方用就会返回 error（[ex](https://github.com/rust-lang/rustup/issues/682)），但是各种应用和库的开发者不知道这些，导致这个函数被广泛用于各种 rust 程序上，比较知名的例如 nushell, ouch 等。
+  - 虽然这个问题的根源要怪傻逼微软的 `GetFinalPathNameByHandleW`，但是 rust 也不是一点错都没有，凭什么其他语言（C/Python/Go）去拿 real path 都不会有这个问题，就你 rust 有？
 
 #### 一些流行的 Rust 的垃圾库
 
@@ -332,7 +334,8 @@ ColorOS 是目前一加的默认系统。
 - Github 移动端一坨屎。
   - ~~右上角的 `...` 总是点不开~~（修了）
   - 202406 在 kiwi browser 上代码查看抽风，自动上下滑动，无法定位。其他浏览器没有问题。对照实验，排除插件影响。
-- Secret names must not start with `GITHUB_`.
+- Secret names must not start with `GITHUB_`. 所有之前的 actions 及其依赖全部爆炸。甚至还有一些 action 隐性依赖 `GITHUB_TOKEN`，又不知道 break 了多少仓库。
+  - 更重要的是这破坏了 github action 的可复现性，只要之前的仓库使用了 `GITHUB_`，当前就一定无法复现。
 - release binary，无法直接更换一个同名 binary
 - Github 支持 merge, squash merge, rebase merge，但是不支持 squash + rebase merge。。您不是 ci 都会 matrix 吗，这个 merge matrix 怎么就不会了
 - 在 pr 里复制分支的格式是 `name:branch`，但是这个格式在哪都用不了。。git clone 需要 `name branch`，而 git checkout 需要 `name/branch`

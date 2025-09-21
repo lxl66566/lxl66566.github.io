@@ -131,6 +131,7 @@ tag:
 - [ ] strbase，基于 string 的关系型 db，git 友好。
 - [ ] minix, mini nix lang
 - [ ] bash compitable modern shell
+- [ ] telegram index bot, no ads and reviewed by human
 
 ### RIIR
 
