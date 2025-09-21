@@ -867,6 +867,8 @@ const data: ComicItemType[] = [
   { id: "596395", aScore: 9, bScore: 3.2, info: "#雀宫すずめ #兽耳 #强迫", bak: "https://telegra.ph/もえぷ-雀宫すずめ的日常-09-11" },
   { id: "525966", aScore: 8, bScore: 9.9, order: 1, info: "#触手 #战败 #女3P #史莱姆 #冒险 #异世界 百浊之塔", bak: "https://telegra.ph/Ochichio-osisio-Hyakudaku-no-Tou--Ichi--Kunoichi-vs-Slime-Hen-Chinese-09-11" },
   { id: "585664", aScore: 8, bScore: 10.5, order: 2, info: "#触手 #淫纹 #战败 #梦境 #女3P #史莱姆 #喷乳 #菊 #堕落 百浊之塔", bak: "https://telegra.ph/Ochichio-Nyuugyou-osisio-Hyakudaku-no-Tou--Ni--Kengen-Seshi-Jahen-百浊之塔-贰-邪祟显现篇-Chinese-白杨汉化组-09-11" },
+  { id: "598165", aScore: 8.3, bScore: 3.3, info: "#蔚蓝档案 #合集 #全彩 #loli", bak: "https://telegra.ph/禁漫漢化組-C106-ミルクセーキ工房ミルクセーキ-先生身体が熱くてどうしたらいいの-ブルーアーカイブ-中国翻訳-09-20-2" },
+  { id: "597355", aScore: 7.2, bScore: 6.5, info: "#触手 #隐蔽性交 #3P #堕落 #修女 #全彩", bak: "https://telegra.ph/木葉のあ-シスターと触手の懺悔室-中国翻訳-無修正-09-16-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

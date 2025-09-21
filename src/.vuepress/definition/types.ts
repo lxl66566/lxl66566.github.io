@@ -32,6 +32,10 @@ export interface AvItemType extends TwoScoreItemType {
    * 是否跳转到另一个非默认链接
    */
   otherlink?: string;
+  /**
+   * 评价
+   */
+  say?: string;
 }
 
 interface Link {

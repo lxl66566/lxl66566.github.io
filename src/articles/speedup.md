@@ -310,6 +310,8 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 不过不封包会导致 luna translator 的 hook 失效，估计是不封包就直接读 .ast 文本，不会再经过 hooked 函数了。因此我们可以把 script 重新封回 pfs archive，这样就可以让 luna translator 读到文本。封包时要注意，pfs_rs 会把 input 的所有子文件/文件夹封到 pfs archive 的根下，因此不能直接 `pfs pack scripts root.pfs`，需要先建一个 test dir，把 scripts 移进去再 `pfs pack test root.pfs`。
 
+ps. 也可以 GARbro 直解，反正不用封包。
+
 </template>
 <template #favorite>
 
@@ -872,7 +874,7 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
 
 我的 loudness-normalize 用的 symphonia 更是会直接 panic。
 
-但是 ffmpeg 重编码是可以编出一个正常的结果的。于是尝试 batch 重编码，还[踩了一个 python multiprocessing 的坑](https://t.me/withabsolutex/2494)。最后用 fd 跑了一遍：`fd -e wav -x cmd /c "ffmpeg -hide_banner -loglevel error -err_detect ignore_err -i {} {.}_tmp.wav && move /Y {.}_tmp.wav {}"`。
+但是 ffmpeg 重编码是可以编出一个正常的结果的。于是尝试 batch 重编码，还[踩了一个 python multiprocessing 的坑](https://t.me/withabsolutex/2494)。最后在 cmd 里用 fd 跑了一遍：`fd -e wav -j 32 -x ffmpeg -hide_banner -loglevel error -err_detect ignore_err -i {} {.}_tmp.wav && move /Y {.}_tmp.wav {}`。
 
 跑出来就不是 mp3 类似物而是真正的 wav 了，共计 4.88GB 是真没绷住。先不管啥编码，捞到游戏里跑一遍再说，还真能播放。于是加速结束。
 

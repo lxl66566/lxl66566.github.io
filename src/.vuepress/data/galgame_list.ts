@@ -2,6 +2,15 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "流星·世界演绎者",
+    valid_name: "流星世界演绎者",
+    playing_status: PlayingStatus.PLAYING,
+    other_names: ["WorldActor"],
+    duration: {
+      start: "2025-09-20",
+    },
+  },
+  {
     name: "美少女万华镜5-理与迷宫的少女",
     valid_name: "美少女万华镜",
     playing_status: PlayingStatus.PLAYING,
