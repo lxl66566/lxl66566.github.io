@@ -472,6 +472,10 @@ isoImage.contents = [
 
 ## 问题解决
 
+### env 不生效
+
+在 WSL 上修改了 `environment.variables`，rebuild 后重启终端，env 仍然不生效。然后发现需要重启 WSL 才能生效。
+
 ### 太大了
 
 我要在 VPS 上安装我的 flake。但是太大了，VPS 被塞爆了，并且我在 copy path 时观察到一些例如 llvm，rustc 等我根本没有手动安装的软件，于是需要查哪些傻卵打包者引入了这些依赖。但是问题是我需要在不实际安装的情况下进行查询。

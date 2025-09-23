@@ -363,6 +363,10 @@ _remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成
 
 ## 其他技巧
 
+### 减少 rebase 冲突
+
+git rebase 远没有想象中的智能。如果你认为本次 rebase 一定不会有问题，或者在 rebase 中有**优先保证某一个分支不变**的需求，可以使用 `-X ours` 或 `-X theirs` arg。可以将 -X 理解为“以某一方为主”，`ours` 指代 base 分支，`theirs` 指代你的当前分支（也就是 HEAD=theirs; git rebase base），这个语义看似有些反直觉，需要注意一下。
+
 ### 将注释设为当前时间
 
 一般不建议，但如果个人项目实在想不到写啥，可以这样。

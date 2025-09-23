@@ -772,6 +772,16 @@ _他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
 
 我也找了一些看，包括 `rust-i18n`, `r18`, `i18n-embed`, `fluent-rs`，最后还是感觉 `rust-i18n` 文档清晰，模型简单，比较适合我的项目。
 
+## 奇技淫巧
+
+### nightly on stable
+
+古语云：async 就像海洋，只有打开 nightly 的人才能到达彼岸。——[Sherlock Holo](https://t.me/Sherlock_Holo)
+
+Rust nightly 有许多好用的东西，然而 nightly 工具链只有日期，没有版本，导致想要下载一个特定版本 nightly 工具链还需要去了解 rust release 流程，十分不友好。[fuk](../gossip/fuckxxx.md#rust-有多难用)
+
+但是有一扇窗为 nightly 打开，那就是 `RUSTC_BOOTSTRAP=1`。只要开了这个环境变量，就可以不需要重装任何工具链，纵享丝滑 unstable feature[ref](https://www.reddit.com/r/learnrust/comments/1hcnnvf/rust_need_nightly_1x0_how_do_i_do_that/)。
+
 ## external
 
 books:

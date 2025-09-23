@@ -53,6 +53,7 @@ tag:
 - [不能添加 bin dependencies](https://stackoverflow.com/questions/35711044/how-can-i-specify-binary-only-dependencies)。
 - `std::fs::canonicalize`：**rust 史上极恶函数之一**。这个函数在 Windows 上的第三方 fs、RAMDisk 等地方用就会返回 error（[ex](https://github.com/rust-lang/rustup/issues/682)），但是各种应用和库的开发者不知道这些，导致这个函数被广泛用于各种 rust 程序上，比较知名的例如 nushell, ouch 等。
   - 虽然这个问题的根源要怪傻逼微软的 `GetFinalPathNameByHandleW`，但是 rust 也不是一点错都没有，凭什么其他语言（C/Python/Go）去拿 real path 都不会有这个问题，就你 rust 有？
+- nightly 工具链不允许指定版本，只能指定日期，而对 rust 了解不够的人根本不知道要下载哪个日期的工具链，也没有任何官方的查询页面/工具。`RUSTC_BOOTSTRAP=1` 是 rust 最后的仁慈。
 
 #### 一些流行的 Rust 的垃圾库
 
