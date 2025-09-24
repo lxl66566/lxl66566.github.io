@@ -869,6 +869,15 @@ const data: ComicItemType[] = [
   { id: "585664", aScore: 8, bScore: 10.5, order: 2, info: "#触手 #淫纹 #战败 #梦境 #女3P #史莱姆 #喷乳 #菊 #堕落 百浊之塔", bak: "https://telegra.ph/Ochichio-Nyuugyou-osisio-Hyakudaku-no-Tou--Ni--Kengen-Seshi-Jahen-百浊之塔-贰-邪祟显现篇-Chinese-白杨汉化组-09-11" },
   { id: "598165", aScore: 8.3, bScore: 3.3, info: "#蔚蓝档案 #合集 #全彩 #loli", bak: "https://telegra.ph/禁漫漢化組-C106-ミルクセーキ工房ミルクセーキ-先生身体が熱くてどうしたらいいの-ブルーアーカイブ-中国翻訳-09-20-2" },
   { id: "597355", aScore: 7.2, bScore: 6.5, info: "#触手 #隐蔽性交 #3P #堕落 #修女 #全彩", bak: "https://telegra.ph/木葉のあ-シスターと触手の懺悔室-中国翻訳-無修正-09-16-2" },
+  { id: "598344", aScore: 6.2, bScore: 6.7, info: "#女上位 #厕所 #loli", bak: "https://telegra.ph/ShaDraw-かげみや-お困り女子に犯された-中国翻訳-DL版-09-21-4" },
+  { id: "321192", aScore: 6.5, bScore: 6.8, info: "#魅魔 #loli" },
+  { id: "597662", aScore: 8, bScore: 8, info: "#巨乳 #梦境" },
+  { id: "587618", aScore: 7.7, bScore: 7.8, info: "#修女 #纯爱 #异世界 #升级" },
+  { id: "548300", aScore: 9.5, bScore: 6.3, info: "#翅膀 #童颜巨乳 #邻居 #天然" },
+  { id: "395109", aScore: 7.8, bScore: 7.6, order: 1, info: "#按摩 #感度提升 秘孔整体" },
+  { id: "569216", aScore: 8.5, bScore: 7.9, info: "#蔚蓝档案 #兽耳 #发情 #连体泳装", bak: "https://telegra.ph/Horizontal-World-またのんき-ラブイットワンモア-ブルーアーカイブ-中国翻訳-無修正-DL版-09-21" },
+  { id: "581817", aScore: 7.7, bScore: 8.8, info: "#大小姐 #捆绑 #巨乳 #异世界", bak: "https://telegra.ph/うなハウス-うなっち-お嬢様完全敗北大切に育てられた貴族娘が自分から庶民おちぽおねだりするまで-中国翻訳-無修正-DL版-07-01-2" },
+  { id: "531078", aScore: 9, bScore: 6.5, info: "#孤独摇滚 #百合" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

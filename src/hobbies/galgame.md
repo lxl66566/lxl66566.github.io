@@ -128,6 +128,7 @@ LunaTranslator 使用心得：
 我是买的 steam 的，需要下载一个 [R18 补丁](https://www.johren.games/games/download/meteorworldactorbd--dlcen-zh)。
 
 - 这玩意虽然用的 Artemis 引擎，但是程序做得是真烂啊。。
+- H 完全是赠送的。。画风崩完了，剧情也没有，只是为了做而做。
 
 </template>
 <template #AIR>
@@ -218,7 +219,7 @@ LunaTranslator 使用心得：
 <template #DeepOne>
 
 - 一部压缩后 13G 多的 galgame，然而语音只有 8k 多条，打开一阵子后：《魔法使之夜》既视感，包括动画和西幻。
-  - 但是很多地方比魔夜粗糙，很多刻意的转场还有偷工减料的动画。
+  - 但是很多地方比魔夜粗糙，很多刻意的转场还有偷工减料的动画。它想要学魔夜做出好的特效，但是由于各种原因，做出来观感并不好，远不如魔夜精致细腻。
   - 都喜欢住在山上是吧
   - 还有一些掉 san 小特效
 - 没有旁白配音啊，好不容易搞出来的沉浸感直接大崩溃了。
