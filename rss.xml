@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 24 Sep 2025 02:40:02 GMT</pubDate>
-    <lastBuildDate>Wed, 24 Sep 2025 02:40:02 GMT</lastBuildDate>
+    <pubDate>Thu, 25 Sep 2025 05:02:34 GMT</pubDate>
+    <lastBuildDate>Thu, 25 Sep 2025 05:02:34 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -751,10 +751,12 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20250921 我一向很讨厌软件对文件扩展名做出的假设。比如我用 gcc xxx.go，它会给我报一个 gcc.exe: error: 1.go: Go compiler not installed on this system。你凭什么说我的源码就不是 C 源码？还不如 python 呢，至少 python xxx.go 真的可以执行。 ...</description>
+      <description>2025 20250924 走得慢不那么可怕，可怕的是走得慢 + 蛇行不确定性走位 20250921 我一向很讨厌软件对文件扩展名做出的假设。比如我用 gcc xxx.go，它会给我报一个 gcc.exe: error: 1.go: Go compiler not installed on this system。你凭什么说我的源码就不是 C 源码？还...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20250924</h2>
+<p>走得慢不那么可怕，可怕的是走得慢 + 蛇行不确定性走位</p>
 <h2>20250921</h2>
 <p>我一向很讨厌软件对文件扩展名做出的假设。比如我用 <code>gcc xxx.go</code>，它会给我报一个 <code>gcc.exe: error: 1.go: Go compiler not installed on this system</code>。你凭什么说我的源码就不是 C 源码？还不如 python 呢，至少 <code>python xxx.go</code> 真的可以执行。</p>
 <h2>20250913</h2>
