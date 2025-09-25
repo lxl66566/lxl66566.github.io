@@ -27,7 +27,7 @@ tag:
 
 ## 下载器
 
-我现在已经佛系了，不再使用下载器，而是[手动开启浏览器的多线程下载](../downloaders.md)。
+详见[下载器横评](../downloaders.md)。
 
 ## firefox
 
@@ -61,6 +61,11 @@ tag:
 ## edge
 
 1. _设置 - 隐私、搜索和服务 - 安全性_，关闭 _阻止可能不需要的应用_
+2. [关闭部分快捷键](https://learn.microsoft.com/en-us/answers/questions/2360286/disable-keyboard-shortcuts-in-edge?forum=microsoftedge-all&referrer=answers)。sb 微软各种没用的东西占用我的快捷键，真忍不了。
+   ```reg
+   [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+   "ConfigureKeyboardShortcuts"="{\"disabled\":[\"paste_and_go\",\"send_feedback\",\"focus_inactive_notification\"]}"
+   ```
 
 ## kiwi browser
 
