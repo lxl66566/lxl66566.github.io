@@ -6,18 +6,41 @@ const original_list: GalItemInputType[] = [
     valid_name: "流星世界演绎者",
     playing_status: PlayingStatus.PLAYING,
     other_names: ["WorldActor"],
+    order: 1,
+    duration: {
+      start: "2025-09-27",
+    },
+  },
+  {
+    name: "流星·世界演绎者 Badge & Dagger",
+    valid_name: "流星世界演绎者",
+    other_names: ["WorldActor"],
+    order: 2,
+    use_time: "4h29min",
     duration: {
       start: "2025-09-20",
+      end: "2025-09-27",
+    },
+    score: {
+      story: 5.1,
+      visual: 5,
+      program: 4,
     },
   },
   {
     name: "美少女万华镜5-理与迷宫的少女",
     valid_name: "美少女万华镜",
-    playing_status: PlayingStatus.PLAYING,
     other_names: ["美少女万華鏡"],
     order: 5,
+    use_time: "6h52min",
     duration: {
       start: "2025-09-15",
+      end: "2025-09-27",
+    },
+    score: {
+      story: 7.4,
+      visual: 6.2,
+      program: 7,
     },
   },
   {
@@ -1015,7 +1038,7 @@ const original_list: GalItemInputType[] = [
     use_time: "30h20min",
     order: 2,
     score: {
-      story: 5.1,
+      story: 5.2,
       visual: 5.3,
       program: 2.4,
     },
@@ -1301,7 +1324,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "真愿朦幻馆在的洋馆里追寻明天的羔羊们",
     use_time: "28h2min",
     score: {
-      story: 5.5,
+      story: 5.7,
       visual: 7.1,
       program: 8.4,
     },
@@ -1964,7 +1987,7 @@ const original_list: GalItemInputType[] = [
     use_time: "-",
     score: {
       story: 0,
-      visual: 5,
+      visual: 4.8,
     },
     duration: {
       end: "2020-10-20",

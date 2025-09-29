@@ -312,6 +312,10 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 ps. 也可以 GARbro 直解，反正不用封包。
 
+其他心得：
+
+- 如果游戏（流星·世界演绎者系列）不提供关闭系统语音的功能，可以直接把 sysse 解出来换成 `none.ogg`（随便一个空音频）即可。
+
 </template>
 <template #favorite>
 
@@ -804,7 +808,7 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 不过在尝试过程中，用 Process Monitor 监视发现进程会去读游戏目录下的一些文件夹的 ogg，于是猜想该游戏可以免打包读取音频。尝试将 ogg 扔到 Voice 下发现可以读取并播放，验证了免封包的猜想。因此只剩下了最后一个难关：将 ogg 解密，即可实现加速。
 
-搜索引擎上经常被 [超详细!解包某知名 Galgame(万华镜 5)引擎——Galgame 汉化中的逆向#Qlie 引擎](https://www.52pojie.cn/thread-1500700-1-1.html) 这篇文章刷屏，是上面 Github 的 Aobanana-chan 写的，看着是挺详细的，实际上对我解包没有贡献什么信息。我又去读了他的源码，一堆 mmx 指令集也不具备可读性。
+搜索引擎上经常被 [超详细!解包某知名 Galgame(万华镜 5)引擎——Galgame 汉化中的逆向#Qlie 引擎](https://www.52pojie.cn/thread-1500700-1-1.html) 这篇文章刷屏，是上面 Github 的 Aobanana-chan 写的，看着是挺详细的，实际上对我解包没有贡献什么信息。我又去读了他的源码，一堆 mmx 指令集也不具备可读性。正如 [Dir-A 对此文的评价](https://github.com/Dir-A/Dir-A_Essays_MD/blob/eb87f07ee39e1d026901867169df7d7d43113ee3/Reverse/[QLIE]%20文件系统分析/[QLIE]%20文件系统分析%20[P1准备].md)，不对胃口。
 
 imhex 打开拉到末尾发现格式是 `FilePackVer3.0`。通过这个搜出关键词 `exfp3`，直接在 github 搜 `path:exfp3.cpp` 找到 [FuckGalEngine](https://github.com/Inori/FuckGalEngine) 及其 forks。FuckGalEngine 没有给出二进制，只好研究下源码，发现也是一堆 mmx 指令集。将 mmx 指令集用 LLM 移除后，c++17 以上编译又会报一堆错误。好不容易编译出来了，如果还开着默认的 `#define FP3_FLAVOR 31` 就 `Can't find key from exe file`；如果使用 `#define FP3_FLAVOR 3` 开关会多需要一个 `key.fkey`，这个玩意在 DLL 目录下。执行文件后会在当前文件夹提取出两个图片乱码文件夹和一个坏的 `pack_keyfile_kfueheish15538fa9or.key`。
 
@@ -842,6 +846,12 @@ thread:system
 ```
 
 但是 FilePackVer3.1 工具多，直接封回去就好了。
+
+#### 美少女万華鏡異聞 雪おんな
+
+这一作封包也是 FilePackVer3.1，但是 GARbro 和 hz86/filepack 是解不了的，估计又是哪里做了小改动。挺莫名其妙的，为啥网上某些博客搜出来都说 GARbro 可用。。
+
+尝试下 Dir-A 贡献过的 [RxQLIE](https://github.com/ZQF-ReVN/RxQLIE)，Release 里的 dll 太早了而且试了下不可用（随便输入一个 Sequence 会直接崩溃）。想自己编译。虽说看到 xmake.lua 感觉非常亲切，以为这次编译不用花太多功夫了，结果直接 xmake 还是报错，找不到已存在的某个 .h。即使添加了 `add_includedirs("src/Core")`，最后又会报找不到 `ZxMem/ZxMem.h`。至于 cmake 那就更是一坨，进 build && cmake .. 生成一堆没用的东西。懒得再折腾构建系统了，遂放弃。
 
 </template>
 <template #LiLiM>

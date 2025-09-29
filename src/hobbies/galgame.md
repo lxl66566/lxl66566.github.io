@@ -125,10 +125,15 @@ LunaTranslator 使用心得：
 <GalList>
 <template #流星世界演绎者>
 
-我是买的 steam 的，需要下载一个 [R18 补丁](https://www.johren.games/games/download/meteorworldactorbd--dlcen-zh)。
+### 流星·世界演绎者 Badge & Dagger
 
+要问为什么我先打的第二部。。牛逼，打通了一搜才发现这是 FD。这已经是我不知道多少次被 FD 背刺了，他妈的发游戏都不能标上序号吗我请问了。而且因为剧情完全没有 callback 本篇导致根本看不出来是 FD，结尾又是断章，实在是有点难绷。
+
+- 我是买的 steam 的，需要下载一个 [R18 补丁](https://www.johren.games/games/download/meteorworldactorbd--dlcen-zh)。
 - 这玩意虽然用的 Artemis 引擎，但是程序做得是真烂啊。。
-- H 完全是赠送的。。画风崩完了，剧情也没有，只是为了做而做。
+- H 完全是赠送的没有必要存在。。画风崩完了，剧情也没有，只是为了做而做。
+
+### 流星·世界演绎者
 
 </template>
 <template #AIR>
@@ -168,6 +173,7 @@ LunaTranslator 使用心得：
 - 一句“无罪推定”写了一大段话，无语了
 - 反派实在是有点蠢，废话也很多，感觉像是子供向 galgame。
 - infernalApis 草
+- 进了个人线以后感觉感情发展还是太快了点。
 - 翻译：
   - 雪：「遠慮しておく。」 翻成 「不用那么客气了」？
 
@@ -207,6 +213,14 @@ LunaTranslator 使用心得：
 
 - 这个在电梯里做然后把所有楼层都按一遍，hso，想出来的简直是天才。
 - 初!音!未!来!
+
+### 5
+
+万华镜系列里最有剧情的一作，感情描写比 4 好很多，高潮段剧本各种手法都比较经典。
+
+H Scene 不再是主旋律而只是点缀，大量 H 集中到一处实在有些过饱和；而且意境上也比前几作差了许多。还好成年莲华救了一下，让嘴臭艺能不至于失传。
+
+- 恐怖 CG 吓人！感受到了原画恶趣味。莲华那个恐怖 CG 可以和异想魅惑坐一桌了。
 
 </template>
 <template #starlightblue>
