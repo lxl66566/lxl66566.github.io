@@ -59,7 +59,7 @@ tag:
 
 #### 插件推荐
 
-- [AnkiConnect](https://foosoft.net/projects/anki-connect/)：用于第三方软件向 anki 添加卡片，必装
+- [AnkiConnect](https://ankiweb.net/shared/info/2055492159)：用于第三方软件向 anki 添加卡片，必装
 - [FSRS Helper](https://ankiweb.net/shared/info/759844606)：在电脑上使用，可以把 AnkiDroid 上复习的卡按 FSRS 重排。
 - [Review Heatmap](https://ankiweb.net/shared/info/1771074083)
 - [Custom Shortcuts for Anki](https://github.com/Liresol/anki-custom-shortcuts)：自定义快捷键。要重启生效。

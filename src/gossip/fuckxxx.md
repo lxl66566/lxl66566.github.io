@@ -55,6 +55,10 @@ tag:
   - 虽然这个问题的根源要怪傻逼微软的 `GetFinalPathNameByHandleW`，但是 rust 也不是一点错都没有，凭什么其他语言（C/Python/Go）去拿 real path 都不会有这个问题，就你 rust 有？
 - nightly 工具链不允许指定版本，只能指定日期，而对 rust 了解不够的人根本不知道要下载哪个日期的工具链，也没有任何官方的查询页面/工具。`RUSTC_BOOTSTRAP=1` 是 rust 最后的仁慈。
 
+#### 工具链与包管理
+
+- _Blocking waiting for file lock on the registry index_，经典 cli 和 rust-analyzer clippy 抢锁，结果抢着抢着就死锁了。[解决方法](https://stackoverflow.com/questions/47565203)
+
 #### 一些流行的 Rust 的垃圾库
 
 **真 TM 难用**

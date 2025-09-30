@@ -563,6 +563,9 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | teloxide | Telegram bot 库，但是没有文档，只有一点最简单的 example；遇到各种问题没有解决方法；API 经常 break 并且设计得很丑 |
 | rusqlite | 绑定了 openssl！不要用它，要玩 sqlite 请左转 [sqlx](#sqlx) |
 | listeners | 有严重的性能问题 [ref](https://github.com/GyulyVGC/listeners/issues/25) |
+| crossbeam-channel | 该暴露的方法不暴露，该设计的 trait 不设计 trait，该实现的功能没有实现，性能还不如 crossfire 一根毛([ref](https://github.com/frostyplanet/crossfire-rs/wiki/benchmark-v2.1.0-vs-v2.0.26-2025‐09‐21)) |
+| pingora | issue 爱理不理，trait 设计糟糕，大公司开源但不是真正意义上的开源 |
+| tracing 系 | 性能不如 [fasttrace](https://github.com/fast/fastrace) 一根，tracing-appender 代码写得一坨狗屎，众望所归的 feat pr 都喂到嘴边了就是不合 |
 
 ### clap
 

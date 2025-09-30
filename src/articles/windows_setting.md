@@ -39,12 +39,20 @@ tag:
 
 ### 安装后（关键步骤）
 
+- 对所有 NTFS 硬盘开启透明压缩。LZW 算法，效果只能说聊胜于无，非系统盘 208G 压到 183G，但有总比没有好。这一步需要尽可能早地做，否则等配置完，硬盘变大很多以后再搞就有点蠢了。
 - 进行 windows 更新。（需要看情况，关注一下最近的 windows 更新补丁有没有出过什么大问题）
   - 本次更新将会成为我的 Windows 系统的最后一次更新。
 - 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_ ，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
+- **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。如果没有此开关，需要运行 `powercfg /h on` 后再查看。
+  1. 避免关机时自动保存 [RAM Disk](./ramdisk.md) 文件到固态盘；
+  2. Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 _更新并重启_。[ref](https://t.me/withabsolutex/1193)
+  3. 事实上快速启动的关机[其实是 hibernate](https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail#more-information)，原理是将内存写入磁盘。其会在 C 盘创建一块用于休眠的大块文件，并且每次休眠都会向硬盘中写入大量数据，是固态写入量的**最大贡献者**[^1]。
+  4. 热知识：为什么安装 linux 双系统时要关闭快速启动？因为挂载在 hibernate 状态的硬盘几乎必炸（double mount）。
+  5. 禁用 hibernate：`powercfg /h off`。
 - 关闭 Windows 安全中心([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
-  1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。
-  2. [Defender Remover](https://github.com/ionuttbara/windows-defender-remover)。该工具之前还不太好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。不过 2025 年后也可以尝试。
+  1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。使用它关闭安全中心是可恢复的。
+  2. [Windows Defender Remover](https://github.com/ionuttbara/windows-defender-remover)。该工具之前还不太好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。
+     - 注意，使用此工具有无法再次打开 Windows 安全中心的风险！
   3. 手动([src](https://zhuanlan.zhihu.com/p/494923217))，但实测并不能完全关闭
      - _Windows 安全中心-病毒和威胁防护-管理设置_ ，关闭所有开关
      - 使用组策略编辑器禁用 Windows Defender
@@ -58,19 +66,13 @@ tag:
        pause
        ```
      - 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
-- 关闭安全检查与防火墙：_控制面板 > 系统和安全 > 安全和维护_
+  4. 如果你因为一些理由不得不打开 Windows 安全中心（例如公司电脑），请到安全中心里关闭所有能看得见的开关，并且[关闭其不重要的通知](https://learn.microsoft.com/zh-cn/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-hide-notifications#use-group-policy-to-hide-noncritical-notifications)。
+- 关闭安全检查与防火墙：_控制面板 > 系统和安全_
 - 禁用 _用户账户控制 UAC_[^3]，让你打开应用时不再受到烦人的弹窗困扰。
-- 关闭 Windows Defender SmartScreen：Windows Defender SmartScreen 是 edge 下载 exe 提示有风险的元凶。
-  - 组策略编辑器（`gpedit.msc`）中，_管理模板 > Windows 组件 > Windows Defender SmartScreen > Microsoft Edge > 配置 Windows Defender SmartScreen_ 里禁用两个选项。
+- 关闭 Windows Defender SmartScreen：Windows Defender SmartScreen 是 edge 下载 exe 提示有风险的元凶。在组策略编辑器（`gpedit.msc`）中，_管理模板 > Windows 组件 > Windows Defender SmartScreen > Microsoft Edge > 配置 Windows Defender SmartScreen_ 里禁用两个选项。
 - 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级 win11 专业版并激活。
   - 若对开源有需求，也可使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)激活。
 - [安装 Imdisk](./ramdisk.md#imdisk-toolkit) 并[配置](./ramdisk.md#使用指南)。
-- **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。如果没有此开关，需要运行 `powercfg /h on` 后再查看。
-  1. 避免关机时自动保存 [RAM Disk](./ramdisk.md) 文件到固态盘；
-  2. Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 _更新并重启_。[ref](https://t.me/withabsolutex/1193)
-  3. 事实上快速启动的关机[其实是 hibernate](https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail#more-information)，是固态写入量的**最大贡献者**[^1]。
-  4. 热知识：为什么安装 linux 双系统时要关闭快速启动？因为挂载在 hibernate 状态的硬盘几乎必炸（double mount）。
-- 开启透明压缩。LZW 算法，效果只能说聊胜于无，非系统盘 208G 压到 183G。
 - 安装 scoop 与 winget，并通过其安装一些常用软件。
   ```sh
   # scoop
@@ -82,12 +84,14 @@ tag:
   - winget 会自带一个 python，记得用 everything 找出来，从 PATH 里把那个 path 删掉。
   - 关键软件如下：
     ```sh
+    scoop install git                         # 必执行，scoop 依赖 git
+    scoop bucket add extras                   # 必执行，有很多好用软件在 extras 里
     scoop install uutils-coreutils            # 让我可以在 windows 上用 linux busybox 指令
+    scoop install vcredist2005 vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist2022                              # 所有版本的 C++ 运行库
     ```
 - 还需要下载其他的关键软件。
-  - 在 extras bucket 里安装所有 C++ 运行库：`scoop install vcredist2005 vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist2022`
   - [DirectX 修复工具](https://www.puresys.net/5055.html)，图吧工具箱里也有。
-- [安装 ArchWSL](./linux/install_and_config.md#安装)
+- [安装 WSL](./linux/install_and_config.md#安装)
 - 解决[端口随机占用](#端口随机占用)
 - [组织管理滚](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c)。
 - 关闭自动更新。
@@ -95,7 +99,7 @@ tag:
   2. 服务：`services.msc` 里禁用 `Windows Update` 服务
   3. 任务计划程序关闭：_Microsoft > Windows > WindowsUpdate > 禁用 Scheduled Start_
   - 既然无需经常更新，那就[关闭传递优化](https://blog.51cto.com/u_13464709/2057007)，并且用 _磁盘清理_ 清一下这位占用的空间。
-- 开启长路径：组策略编辑器（运行 `gpedit.msc`），_计算机配置 > 管理模板 > 系统 > 文件系统 > 启用 Win32 长路径_ 选择已启用
+    - 貌似最新 win11 设置里已经无法彻底关闭传递优化，而只能对其设置限额。
 
 [^3]: _Windows11 轻松设置工具_ 里的禁用 UAC 并不是彻底禁用，只是取消了弹窗；但是如果修改注册表(`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System] "EnableLUA"=dword:00000000` 然后重启)彻底禁用，又会让你的 shell 和运行都默认以管理员身份进行，会导致很多问题，我更不能接受。因此还是别想着彻底禁用吧。
 
@@ -105,7 +109,7 @@ tag:
   - 如果你使用 AMD 显卡，需要安装显卡驱动，并且不在乎游戏即时重放等功能，请不要安装 _AMD Software: Adrenalin Edition_，这玩意会携带**大量流氓傻逼组件**，还有 AMD 著名的弹一个黑框框 Updater 但是什么也不做。因此最好不要安装它的全量版本，而是在安装时选择 `Driver only`。
     - 悲伤的是，即使选择 `Driver only`，也会有一堆流氓组件被安装。在此先 amd fuck you。
 - 磁盘设置：
-  - 如果硬盘有分区，移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
+  - 如果你的硬盘有分多个区，可以移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
   - 如果有移动硬盘，请在 _磁盘管理_ 中右键分区，手动指定驱动器号。固定驱动器号可以保证各个脚本运行正常。
   - NTFS 优化([ref](https://t.me/kenvixmeow/8))：先导入注册表项，再用管理员终端执行命令。
     ```reg
@@ -120,23 +124,20 @@ tag:
     fsutil behavior set disablelastaccess 1
     set-mmagent -MaxOperationAPIFiles 8192
     ```
-- 禁用休眠。休眠 == hibernate，原理是将内存写入磁盘。其会在 C 盘创建一块用于休眠的大块文件，并且每次休眠都会向硬盘中写入大量数据。我不喜欢这样，为什么不选择关机呢？
 - 网络设置：
-  - 在 _高级网络设置 - Internet 选项 - 高级_ 中，打开 TLS 1.3
-  - [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。
-- 外观设置：
-  - 打开任务栏时间秒数显示：_任务栏设置 - 任务栏行为_
+  - [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)，也可以使用[轻松设置](#小工具)：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。
 - 习惯设置：
-  - 关闭所有系统提示音。
+  - 关闭所有系统提示音。_系统 - 声音 - 更多声音设置_
   - 文件夹与文件改为单击。我个人不喜欢双击。
     - windows 的单击逻辑做的还是比 linux kde 好的，_悬浮选中_ 是单击逻辑中的重要组成部分。
+  - _控制面板 - 时钟和区域 - 区域_ 中，将短日期调整为 `yyyyMMdd`。([我的习惯](../index.md#使用指南))
   - 更改触摸板功能：三指左右划调节音量。实际上并不是很好用：我音量常年 20%，触摸板调节的话很容易拉得太大。
   - [shell alias](#shell-alias)
   - 关闭鼠标的 “提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
 - 做减法：
   - 关闭搜索推荐&热门新闻：关闭 _设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点_ 。([ref](https://www.landiannews.com/archives/95045.html)，最新版 win11 可能没有此条设置)
   - 卸载各种傻逼预装玩意。
-    1. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
+    1. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`，也可以使用[轻松设置](#小工具)。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
     2. [卸载 Minecraft Education Edition](https://aka.ms/meeremove) ([src](https://educommunity.minecraft.net/hc/en-us/community/posts/4410545727764))
     3. 卸载 Your Phone：powershell `Get-AppxPackage Microsoft.YourPhone -AllUsers | Remove-AppxPackage`，但是 `C:\Program Files\WindowsApps` 的 Your Phone 文件并不会删除。
     4. 卸载 PC Manager（微软电脑管家）、Microsoft Power BI，在设置 - 应用里可以直接卸载
@@ -145,12 +146,8 @@ tag:
     - Windows Font Cache Service
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))
   - 如果你安装了 MS Office，那大概率还会被装上一个 Office PLUS，这是一个傻逼国内代理广告，会污染你的 office 菜单和右键菜单。建议用 everything 搜到 officeplus 的安装文件夹，然后点击 uninst.exe 卸载。
-  - AMD 用户不要装 AMD Software: Adrenalin Edition。这个傻逼软件会定期弹一个 update 黑窗口然后什么也不做。
   - 搜索 _任务计划程序_，禁用一些用不到的任务，例如 AMD auto update, OneDrive 等。
 - 开启 _运行_ 历史记录：_设置 - 隐私和安全性 - 常规 - 允许 Windows 跟踪应用启动以改进“开始"和搜索结果_。此设置项默认开启的，之前不小心被某个脚本关了。
-- 设置 copilot：copilot 确实是个免费用的 gpt4，就是比较慢。
-  - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。
-  - 即使开着代理，用着用着也经常出现 _很抱歉，目前无法连接到服务。_。解法：在 edge 浏览器中改微软账户地区至其他地区。([src](https://www.bilibili.com/read/cv33602923/))
 - 设置 Explorer：
   - 使用 [WinSetView](https://github.com/lesferch/WinSetView/) 将 _音乐_ 文件夹 view 设为小图标。否则当你打开一个装满音乐的文件夹时，Explorer 将会去读取所有文件的元数据，会导致卡顿。([src](https://answers.microsoft.com/en-us/windows/forum/windows_11-files/how-to-prevent-windows-explorer-from-reading/c123eab1-e5a5-4124-bf20-68f67a08e47b?messageId=b010aeba-a852-40e7-8732-8f67cb4fd1ed))
   - 安装 [svg-explorer-extension](https://github.com/tibold/svg-explorer-extension) 插件，让 Explorer 可以预览 svg。
@@ -194,6 +191,13 @@ tag:
 - ~~使用 [Win11Debloat](https://github.com/Raphire/Win11Debloat) 移除一些自带软件与组件。~~
   - 这会有一些 sideeffects，例如使某些终端乱码，win + R 失去记忆，等等。必需谨慎使用，或者你知道如何恢复。
 - 使用[O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10)禁用一些非必须功能。但是它的大部分设置项都是没用的，剩下的有用的 [windows 11 轻松设置工具](#小工具) 也能做。
+- ~~开启长路径：组策略编辑器（运行 `gpedit.msc`），_计算机配置 > 管理模板 > 系统 > 文件系统 > 启用 Win32 长路径_ 选择已启用~~ 已没有此设置
+- ~~在 _高级网络设置 - Internet 选项 - 高级_ 中，打开 TLS 1.3~~ 当前版本已经默认打开
+- 外观设置：
+  - ~~打开任务栏时间秒数显示：_任务栏设置 - 任务栏行为_~~ win11 更新后不再允许打开秒级任务栏。。。
+- 设置 copilot：之前我会使用它，但是在 2025 年 copilot 已经完全不够看了，也有其他更好的免费平替。这玩意是真的笨比。
+  - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。
+  - 即使开着代理，用着用着也经常出现 _很抱歉，目前无法连接到服务。_。解法：在 edge 浏览器中改微软账户地区至其他地区。([src](https://www.bilibili.com/read/cv33602923/))
 
 ::::
 
