@@ -2,13 +2,27 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "魔王城的隐居参谋",
+    use_time: "2h9min",
+    duration: {
+      start: "2025-10-05",
+      end: "2025-10-05",
+    },
+  },
+  {
     name: "流星·世界演绎者",
     valid_name: "流星世界演绎者",
-    playing_status: PlayingStatus.PLAYING,
     other_names: ["WorldActor"],
     order: 1,
+    use_time: "14h13min",
     duration: {
       start: "2025-09-27",
+      end: "2025-10-04",
+    },
+    score: {
+      story: 7,
+      visual: 5.2,
+      program: 3,
     },
   },
   {
@@ -24,7 +38,7 @@ const original_list: GalItemInputType[] = [
     score: {
       story: 5.1,
       visual: 5,
-      program: 4,
+      program: 3,
     },
   },
   {

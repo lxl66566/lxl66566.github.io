@@ -881,10 +881,15 @@ const data: ComicItemType[] = [
   { id: "599250", aScore: 9, bScore: 6.1, info: "#4P #蔚蓝档案", bak: "https://telegra.ph/C106-美少女おじさん-びしょおじ-ハイランダーしゅぽしゅぽ連結事件-ブルーアーカイブ-中国翻訳-09-25-2" },
   { id: "580112", aScore: 7.2, bScore: 8.2, info: "#Fate #榨精 #房间", bak: "https://telegra.ph/ひるなぎ-しないと出られない部屋-FateGrand-Order-中国翻訳-DL版-07-05-2" },
   { id: "598266", aScore: 6.3, bScore: 8.1, info: "#自杀未遂 #纯爱 #野战" },
-  { id: "599406", aScore: 7.9, bScore: 8.5, info: "#loli #性奴隶 #裸体围裙", bak: "https://telegra.ph/caburibbon-caburi-私が飼われた日-中国翻訳-DL版-09-26-2" },
+  { id: "599406", aScore: 8.2, bScore: 8.9, info: "#loli #性奴隶 #裸体围裙 #催眠", bak: "https://telegra.ph/caburibbon-caburi-私が飼われた日-中国翻訳-DL版-09-26-2" },
   { id: "(eh)", aScore: 9.3, bScore: 9.6, info: "#全彩 #女仆 #惩罚 #合集 #拘束", order: 2, otherlink: "https://e-hentai.org/g/3556254/0bcc0c2507/" },
   { id: "599016", aScore: 8.7, bScore: 7.1, info: "#触手 #百合 #精灵 #loli" },
   { id: "510619", aScore: 8.3, bScore: 6.5, info: "#地雷系 #夜班车 #出轨", bak: "https://telegra.ph/イトハナナ-イトハナ-シークレットライナーSR2便夜行バスの痴女-中国翻訳-無修正-DL版-07-10" },
+  { id: "599979", aScore: 8.9, bScore: 4.7, info: "#蔚蓝档案 #全彩 #合集", bak: "https://telegra.ph/FLZN去码C106-ミルクセーキ工房ミルクセーキ-先生身体が熱くてどうしたらいいの-ブルーアーカイブ-中国翻訳-09-29" },
+  { id: "599919", aScore: 9, bScore: 5.6, info: "#玉之けだま #3P #温泉 #全彩 #浴衣", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-りりすぱ-中国翻訳-無修正-DL版-09-28" },
+  { id: "599873", aScore: 8, bScore: 8.2, info: "#合集 #长篇 #单行本 #晒痕 #loli", bak: "https://telegra.ph/八代涼-発育ざかりの少女たち中国翻訳-DL版-09-28" },
+  { id: "600674", aScore: 9.6, bScore: 3.4, order: 2, info: "#纯爱 按理来说应该是一个长篇作品的一本，没有做剧情衔接。看后记说是剧情还挺好的，找时间去补下吧", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-くうそうかがくしょうじょ-描き下ろし-中国翻訳-DL版-10-02" },
+  { id: "584367", aScore: 9.1, bScore: 7.5, info: "#纯爱 #青梅 #闷骚 #巨乳 #loli", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-無表情系カノジョの発情スイッチ-中国翻訳-DL版-07-15-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

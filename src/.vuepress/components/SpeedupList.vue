@@ -115,7 +115,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["想要传达给你的爱恋"],
+    names: ["想要传达给你的爱恋", "神明的选择！老师超适合当女孩子！"],
     valid_name: "softpal",
     engine: "SOFTPAL ADV SYSTEM",
     save_format: "pac",
