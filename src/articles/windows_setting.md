@@ -300,6 +300,7 @@ windows 下也可以[像 linux 一样](../articles/linux/basic.md#链接)创建�
   [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\AppXSvc]
   "Start"=dword:00000004
   ```
+  这个服务在非日版系统上也有，但是没有出 bug，之前也就没管。
 - 安装时遇到登录微软帐号，我本来想用 OOBE 绕过，结果日区的反斜杠在微软默认的日语输入法下打不出来，要按住 Alt + 小键盘 `92` 才能打。实际上微软日区输入法改了很多键，标点符号跟随机排布差不多。
   - 而且 OOBE 还无法绕过，根本找不到。所以只能用 `start ms-cxh:localonly` 跳。
   - 进系统后**输入法全部炸烂**，反正微软日文输入法、装了中文语言和微软中文输入法都没法显示候选框；甚至我用中文系统的同一套 Rime 配置都没法正常使用，烂完了。

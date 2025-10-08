@@ -170,6 +170,13 @@ const data: SpeedupItemType[] = [
     save_format: "-,audio:KOE",
     speedupable: true,
   },
+  {
+    names: ["传述之魔女"],
+    valid_name: "TyranoScript",
+    engine: "TyranoScript:electron",
+    save_format: "asar",
+    speedupable: true,
+  },
 ];
 </script>
 

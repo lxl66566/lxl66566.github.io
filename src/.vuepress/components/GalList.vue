@@ -4,7 +4,7 @@
       条目数：{{ items_num }}
     </div>
     <div style="display: flex; gap: 1.5rem; width: 100%; flex-wrap: wrap;">
-      <input type="text" v-model="searchText" placeholder="搜索游戏原名/译名/俗名..." class="search-input" />
+      <input type="text" v-model="searchText" placeholder="搜索游戏原名/译名/俗名...（部分匹配）" class="search-input" />
       <MyCheckBox class="mycheckbox" label="仅显示严格定义的 galgame" v-model="show_strict"
         hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
     </div>

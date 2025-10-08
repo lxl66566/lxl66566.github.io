@@ -2,11 +2,28 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "传述之魔女",
+    other_names: ["イハナシの魔女"],
+    playing_status: PlayingStatus.PLAYING,
+    all_ages: true,
+    use_time: "-1min",
+    duration: {
+      start: "2025-10-06",
+    },
+  },
+  {
     name: "魔王城的隐居参谋",
+    other_names: ["魔王城の隠居参謀"],
     use_time: "2h9min",
     duration: {
       start: "2025-10-05",
       end: "2025-10-05",
+    },
+    not_strict: true,
+    score: {
+      story: 0.6,
+      visual: 8.4,
+      program: 1,
     },
   },
   {
@@ -60,6 +77,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "AIR",
     playing_status: PlayingStatus.PLAYING,
+    use_time: "-2min",
     duration: {
       start: "2025-09-12",
     },
@@ -147,7 +165,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-09-01",
     },
     score: {
-      story: 0.4,
+      story: 2.4,
       visual: 6.1,
       program: 6.8,
     },

@@ -7,7 +7,13 @@ tag:
   - Windows
 ---
 
-# SPEED UP！
+# SPEED UP！与 galgame 解封包
+
+::: tip
+
+阅览 galgame 解封包可快速跳转[此章节](#二试封包)
+
+:::
 
 我打 [galgame](../hobbies/galgame.md) 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 _GINKA_。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，~~相当于延长了一倍的生命~~。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。
 
@@ -902,6 +908,15 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
    done
    ```
    即可。
+
+</template>
+<template #TyranoScript>
+
+没想到真的有用 electron 做的 galgame，让我感动了一秒钟。
+
+直接解 resources/app.asar：`asar extract app.asar app`，然后加速后，将 app 文件夹整个放到 resources 里，免封即可。
+
+多看了一眼，传述之魔女用的其实是 [TyranoScript](https://github.com/ShikemokuMK/tyranoscript)，这个引擎是基于 electron 的。
 
 </template>
 </SpeedupList>

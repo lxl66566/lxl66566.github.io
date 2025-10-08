@@ -52,7 +52,7 @@ const links: ArticleCellBoxType[] = [
       { text: "命令行压缩", url: "cli_compress" },
       { text: "Potplayer 设置", url: "potplayer_setting" },
       { text: "yt-dlp 使用教程", url: "yt-dlp" },
-      { text: "SPEED UP!", url: "speedup" },
+      { text: "SPEED UP!（与 galgame 解封包）", url: "speedup" },
     ],
   },
   {
