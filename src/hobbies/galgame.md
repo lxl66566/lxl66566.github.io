@@ -1577,6 +1577,7 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 - [魔法少女的魔女审判](https://www.kungal.com/galgame/3271)
 - セヴンデイズ あなたとすごす七日間 Refine
 - CRACK≡TRICK!
+- 雪境迷途遇仙踪
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 

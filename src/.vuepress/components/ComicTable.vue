@@ -890,6 +890,10 @@ const data: ComicItemType[] = [
   { id: "599873", aScore: 8, bScore: 8.2, info: "#合集 #长篇 #单行本 #晒痕 #loli", bak: "https://telegra.ph/八代涼-発育ざかりの少女たち中国翻訳-DL版-09-28" },
   { id: "600674", aScore: 9.6, bScore: 3.4, order: 2, info: "#纯爱 按理来说应该是一个长篇作品的一本，没有做剧情衔接。看后记说是剧情还挺好的，找时间去补下吧", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-くうそうかがくしょうじょ-描き下ろし-中国翻訳-DL版-10-02" },
   { id: "584367", aScore: 9.1, bScore: 7.5, info: "#纯爱 #青梅 #闷骚 #巨乳 #loli", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-無表情系カノジョの発情スイッチ-中国翻訳-DL版-07-15-2" },
+  { id: "602054", aScore: 3.6, bScore: 9, info: "#全彩 #无插入 #搞笑 #强制绝顶 #兄妹 #游戏 非常生草", bak: "https://telegra.ph/あるぱかくらぶ-プロゲーマーお兄ちゃんの絶頂RTA中国翻訳-10-08-2" },
+  { id: "602056", aScore: 6.3, bScore: 7.8, info: "#蔚蓝档案 #制服", bak: "https://telegra.ph/らーめんらいす-らじー-イチゴはレモンとミルクを-ブルーアーカイブ-中国翻訳-DL版-10-08" },
+  { id: "599388", aScore: 7.8, bScore: 4, info: "#summerpocket #后宫 #5P 有点草", bak: "https://telegra.ph/黒猫亭-チビのん-さまーばけーしょん-Summer-Pockets-中国翻訳DL版-09-27" },
+  { id: "585041", aScore: 7.6, bScore: 8.1, order: 1, info: "#冒险 #JK #巨乳" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
