@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 10 Oct 2025 02:37:45 GMT</pubDate>
-    <lastBuildDate>Fri, 10 Oct 2025 02:37:45 GMT</lastBuildDate>
+    <pubDate>Fri, 10 Oct 2025 15:13:40 GMT</pubDate>
+    <lastBuildDate>Fri, 10 Oct 2025 15:13:40 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -649,6 +649,7 @@
 <li><a href="https://www.panewslab.com/zh/articles/tubnlzao" target="_blank" rel="noopener noreferrer">CEX 与 DEX 的合约算法之战</a></li>
 <li><a href="https://www.panewslab.com/zh/articles/jd80of15" target="_blank" rel="noopener noreferrer">你以为的盈亏，可能都是永续合约算法制造的幻觉</a></li>
 <li><a href="https://www.panewslab.com/zh/articles/ee13100b-a06f-4e1b-99b9-a456da475d0d" target="_blank" rel="noopener noreferrer">月入 50 万美元，平均年化 78%，我的稳定币收益策略全解析 ​​</a></li>
+<li><a href="https://pawelurbanek.com/rust-mev-bot" target="_blank" rel="noopener noreferrer">How I've built an unprofitable Crypto MEV Bot in Rust</a></li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
