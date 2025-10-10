@@ -202,11 +202,18 @@ cmake 内部原理是生成 makefile 然后再 make。
 
 ### 包管理
 
-#### windows
+虽然有的构建系统（例如 xmake 有 xrepo）帮你解决了包管理问题 <heimu>插一句，xrepo 实在是太方便了，热泪盈眶</heimu>，但是大部分项目仍然需要使用专门的包管理器管理依赖，有时甚至需要手动摸索依赖。
 
-虽然有的构建系统（例如 xmake）有 xrepo 帮你解决了包管理问题，但是大部分项目仍然需要使用专门的包管理器管理依赖，更有甚者需要手动摸索依赖。vcpkg 是 windows msvc 体系里最常用的包管理器。你甚至可以在各种 rust 库里看到要求使用 vcpkg 安装的依赖，例如 libarchive。
+#### windows（vcpkg）
 
-vcpkg [有两个工作模式](https://learn.microsoft.com/zh-cn/vcpkg/concepts/classic-mode)，_经典模式_ 和 _清单模式_，其实就是 global 和 per-project 的区别。如果你使用的是 Visual Studio 自带的 vcpkg，其默认运行在 _清单模式_；但是很多时候（比如上述的 rust 编译需要调用 vcpkg）时，直接用 `vcpkg install xxx` 会[报错 _Could not locate a manifest_](https://learn.microsoft.com/zh-cn/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli#cannot-install-packages-using-classic-mode)，我们更需要 _经典模式_ 的全局包，因此用 scoop 再 install 一个独立的 vcpkg 是很有必要的。
+vcpkg 是 windows msvc 体系里最常用的包管理器。你甚至可以在各种 rust 库里看到要求使用 vcpkg 安装的依赖，例如 libarchive。
+
+- vcpkg [有两个工作模式](https://learn.microsoft.com/zh-cn/vcpkg/concepts/classic-mode)，_经典模式_ 和 _清单模式_，其实就是 global 和 per-project 的区别。如果你使用的是 Visual Studio 自带的 vcpkg，其默认运行（并且只能运行）在 _清单模式_；但是很多时候（比如上述的 rust 编译需要调用 vcpkg 时），直接用 `vcpkg install xxx` 会[报错 _Could not locate a manifest_](https://learn.microsoft.com/zh-cn/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli#cannot-install-packages-using-classic-mode)，我们更需要 _经典模式_ 的全局包，因此用 scoop 再 install 一个独立的 vcpkg 是很有必要的。自己安装的 vcpkg 就可以工作在经典模式下了。
+- 在 _清单模式_ 下，使用 `vcpkg new --application` 生成默认的 vcpkg.json 和 vcpkg-configuration.json，使用 `vcpkg add port xxx` 添加包，最后要调用 `vcpkg install` 安装所有添加的包。
+- scoop 安装的 vcpkg 可以同时工作在两个模式下，但是它们共用一个 vcpkg 仓库。所以如果你的系统 vcpkg 仓库太老，没有 manifest 里指定的 commit 就会报错，需要找到仓库（`~/scoop/persist/vcpkg` 下的某个文件夹）手动 `git fetch`。
+- 只有指定 `VCPKG_DEFAULT_TRIPLET=x64-windows-static` env 或者使用 `--triplet=x64-windows-static` 才能安装静态库版本。
+
+晕了吗？
 
 #### linux
 

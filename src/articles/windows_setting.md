@@ -339,3 +339,7 @@ netsh int ipv6 set dynamic tcp start=53536 num=12000
 net stop winnat
 net start winnat
 ```
+
+## external
+
+- [Install Windows the Arch Linux Way](https://christitus.com/install-windows-the-arch-linux-way/)

@@ -575,6 +575,8 @@ clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到�
 
 我们可能对命令行有更多自定义的验证，这时候最好 impl Cli 添加自定义的 `fn validate(&self)`，并且在 parse 后调用。不要用 clap 自带的 `value_parser`，[那个是一坨大便](https://t.me/withabsolutex/2367)；或者可以使用某个 serde_inline_default 宏，但是代码这里不好给出，可以私聊我。
 
+- clap 默认不允许 `-` 开头的 value，如果需要，用户可以用 `xxx=-xxx`，开发者可以考虑 [allow_hyphen_values](https://docs.rs/clap/latest/clap/struct.Arg.html#method).
+
 ### once_cell
 
 创建 Lazy 或 OnceCell 的 static 变量。在 rustc 1.80.0 以前这是 unstable，但是现已 stabilized（`std::sync::LazyLock`）。

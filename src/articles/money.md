@@ -338,6 +338,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 3. [CEX 与 DEX 的合约算法之战](https://www.panewslab.com/zh/articles/tubnlzao)
 4. [你以为的盈亏，可能都是永续合约算法制造的幻觉](https://www.panewslab.com/zh/articles/jd80of15)
 5. [月入 50 万美元，平均年化 78%，我的稳定币收益策略全解析 ​​](https://www.panewslab.com/zh/articles/ee13100b-a06f-4e1b-99b9-a456da475d0d)
+6. [How I've built an unprofitable Crypto MEV Bot in Rust](https://pawelurbanek.com/rust-mev-bot)
 
 <script setup lang="ts">
 import CryptocurrencyExchangeList from "@CryptocurrencyExchangeList";
