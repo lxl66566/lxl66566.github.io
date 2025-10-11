@@ -2,6 +2,14 @@ import { BookItemInputType, HLevel } from "../definition/book_type.js";
 
 const original_list: BookItemInputType[] = [
   {
+    name: "魅魔学院的反逆者",
+    author: "听雨",
+    h_level: HLevel.HIGH,
+    duration: {
+      start: "2025-10-11",
+    },
+  },
+  {
     name: "一生悬命",
     author: "陆春吾",
     h_level: HLevel.NONE,
