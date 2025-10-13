@@ -177,6 +177,13 @@ const data: SpeedupItemType[] = [
     save_format: "asar",
     speedupable: true,
   },
+  {
+    names: ["魔法少女的魔女审判"],
+    valid_name: "unity2",
+    engine: "unity2",
+    save_format: "bundle",
+    speedupable: false,
+  },
 ];
 </script>
 

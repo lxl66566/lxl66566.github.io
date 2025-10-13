@@ -21,9 +21,9 @@ tag:
 
 后来用了两年，因为毛病越积越多，20241216 我又重装了一次 win11。
 
-202503 购买台式机，又装一次。
+202503 购买台式机，又装一次。上班以后又装了好多次。
 
-总之我也在使用 windows 的过程中持续记录心得，经验丰富。
+总之我也在使用 windows 的过程中持续记录心得，经验丰富。甚至有点想写个程序用来一键设置这些。
 
 :::
 
@@ -93,7 +93,6 @@ tag:
   - [DirectX 修复工具](https://www.puresys.net/5055.html)，图吧工具箱里也有。
 - [安装 WSL](./linux/install_and_config.md#安装)
 - 解决[端口随机占用](#端口随机占用)
-- [组织管理滚](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c)。
 - 关闭自动更新。
   1. [组策略编辑器](https://answers.microsoft.com/zh-hans/windows/forum/all/要彻底关闭win11/3c448d50-2e7f-42df-9fdb-f7f9aa9820ec)内关闭
   2. 服务：`services.msc` 里禁用 `Windows Update` 服务
@@ -256,6 +255,41 @@ DOSKEY alias=notepad %USERPROFILE%\alias.cmd
 如果有 alias 多行指令需求，那就得写 `.cmd` 文件并写进 `PATH` 里了。
 
 :::
+
+## 组织管理
+
+Windows 的最大后门是微软自己。组织管理是一种以不正常方式控制你的个人电脑的行为，我非常反感这一行为。
+
+正常来说个人电脑不应该出现组织管理。如果出现，请立刻删除：
+
+1. _设置 - 账户 - 登录工作或学校帐户_ 里自查，是否有登录账户。
+2. 终端管理员执行([ref](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c))：
+   ```bat
+   RD /S /Q "%WinDir%\System32\GroupPolicyUsers"
+   RD /S /Q "%WinDir%\System32\GroupPolicy"
+   gpupdate /force
+   ```
+   然后重启。
+3. 清除所有注册表组织策略：终端管理员执行
+   ```bat
+   reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies" /f
+   reg delete "HKCU\Software\Policies" /f
+   reg delete "HKLM\Software\Microsoft\Policies" /f
+   reg delete "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies" /f
+   reg delete "HKLM\Software\WOW6432Node\Microsoft\Policies" /f
+   reg delete "HKLM\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Policies" /f
+   ```
+4. 注册表修改，不允许 Azuer AD 组织管理的询问弹窗([ref](https://www.reddit.com/r/Intune/comments/14cgova/how_to_disable_or_turn_off_the_allow_my/))。
+   ```reg
+   Windows Registry Editor Version 5.00
+   [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin]
+   "BlockAADWorkplaceJoin"=dword:00000001
+   ```
+
+然而对我的公司来说，无论我怎么折腾，只要我运行了公司的软件，它就会给我的 windows 账户加入组织管理，前面的这些方法对它一点用都没有。所以说微软是 Windows 的最大后门，如果碰上这种情况还是放弃吧。
+（这也是为什么我司只提供 Windows 和 MacOS 的办公软件，因为方便 MDM 组织管理，Linux 因为太自由了没有合法的方法控制，所以不会被纳入考虑范围。）
+
+在这种情况下，怎么对某个不得不运行的软件抓包，用改 host 的方式阻断 MDM 相关域名，这又是另一个话题了。
 
 ## BIOS 密码重置
 

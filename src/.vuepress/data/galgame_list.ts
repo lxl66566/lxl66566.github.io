@@ -4,11 +4,16 @@ const original_list: GalItemInputType[] = [
   {
     name: "传述之魔女",
     other_names: ["イハナシの魔女"],
-    playing_status: PlayingStatus.PLAYING,
     all_ages: true,
-    use_time: "-1min",
+    use_time: "6h",
     duration: {
       start: "2025-10-06",
+      end: "2025-10-12",
+    },
+    score: {
+      story: 8.8,
+      visual: 9.6,
+      program: 2.8,
     },
   },
   {

@@ -894,6 +894,7 @@ const data: ComicItemType[] = [
   { id: "602056", aScore: 6.3, bScore: 7.8, info: "#蔚蓝档案 #制服", bak: "https://telegra.ph/らーめんらいす-らじー-イチゴはレモンとミルクを-ブルーアーカイブ-中国翻訳-DL版-10-08" },
   { id: "599388", aScore: 7.8, bScore: 4, info: "#summerpocket #后宫 #5P 有点草", bak: "https://telegra.ph/黒猫亭-チビのん-さまーばけーしょん-Summer-Pockets-中国翻訳DL版-09-27" },
   { id: "585041", aScore: 7.6, bScore: 8.1, order: 1, info: "#冒险 #JK #巨乳" },
+  { id: "(ex)", aScore: 8.4, bScore: 9.2, info: "#合订本 #捆绑! #触手 #百合 #强制绝顶 #原神", otherlink: "https://exhentai.org/g/3580435/ba022bc31d/", bak: "https://telegra.ph/雪ノ嵐异端丶-漫画合辑-10-11" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

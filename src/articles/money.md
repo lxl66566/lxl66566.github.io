@@ -143,6 +143,14 @@ tag:
 - [OKX 公告](https://www.okx.com/zh-hans/help/section/announcements-latest-announcements)
   - 我自己用 RSSHub 做了 [OKX 的公告订阅](https://docs.rsshub.app/zh/routes/finance#欧易-okx)，欢迎使用。
 
+### 出金
+
+指的是将加密货币换成法币。交易所 C2C 出金有风险，首先支付宝/微信容易被盯上，其次可能涉及洗钱。一般大额是最好不要走 C2C 出金的。
+
+最好最安全的方法是开一些好用的银行卡，然后直接使用加密货币消费。例如 bybit 卡，SafePal 卡等。
+
+- SafePal 开卡可以参考[这篇教程](https://zhuanlan.zhihu.com/p/14025369553)。熟人可以用我的邀请码 736387 赞助我一下。
+
 ### 开始交易
 
 交易前有一些基础知识，建议搜索学习。

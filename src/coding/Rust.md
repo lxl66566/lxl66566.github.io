@@ -555,7 +555,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 
 [这里](https://blessed.rs/crates)还有一个常用库的列表可以参考。
 
-当然，也有一些**避雷条目一生黑**：
+当然，也有一些**避雷条目一生黑**（不仅限于 lib）：
 
 <!-- prettier-ignore -->
 | 库名 | 吐槽 |
@@ -566,6 +566,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | crossbeam-channel | 该暴露的方法不暴露，该设计的 trait 不设计 trait，该实现的功能没有实现，性能还不如 crossfire 一根毛([ref](https://github.com/frostyplanet/crossfire-rs/wiki/benchmark-v2.1.0-vs-v2.0.26-2025‐09‐21)) |
 | pingora | issue 爱理不理，trait 设计糟糕，大公司开源但不是真正意义上的开源 |
 | tracing 系 | 性能不如 [fasttrace](https://github.com/fast/fastrace) 一根，tracing-appender 代码写得一坨狗屎，众望所归的 feat pr 都喂到嘴边了就是不合 |
+| xq | 跟 jq cli 不兼容；纯纯傻逼玩具，性能垃圾，打一个 1G json，jq 和 jaq 峰值内存都用不了 6G，xq 吃了 20G 都打不出来 |
 
 ### clap
 

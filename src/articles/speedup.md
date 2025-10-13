@@ -919,6 +919,70 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
 多看了一眼，传述之魔女用的其实是 [TyranoScript](https://github.com/ShikemokuMK/tyranoscript)，这个引擎是基于 electron 的。
 
 </template>
+<template #unity2>
+
+- 使用 [UABEA](https://github.com/nesrak1/UABEA)，它可以把一个 .bundle 拆成两部分，一部分是元数据，另一部分是 .resource 真实数据文件。但是我没有找到它的进一步功能，即继续解包 .resource。
+- 由于 .bundle 也有很多，我更倾向于使用脚本进行解封包操作。尝试使用 [UnityPy](https://github.com/K0lb3/UnityPy) 编写脚本，成功将 wav 音频导出。但是 README 中并没有音频保存并封包的示例，只能硬着头皮试试了。
+
+```py
+import shutil
+import subprocess
+from pathlib import Path
+
+import UnityPy
+from UnityPy.classes.generated import AudioClip
+
+OUTPUT_DIR = Path("output")
+OUTPUT_DIR.mkdir(exist_ok=True)
+
+
+def deal_bundle(bundle: Path | str):
+    bundle = Path(bundle)
+    tmp_dir = Path("tmp")
+    tmp_dir.mkdir(exist_ok=True)
+
+    print(f"extracting {bundle}...")
+    env = UnityPy.load(str(bundle.absolute()))
+    for obj in env.objects:
+        if obj.type.name != "AudioClip":
+            continue
+        clip: AudioClip = obj.read()
+        for name, data in clip.samples.items():
+            with open(tmp_dir / name, "wb") as f:
+                f.write(data)
+    subprocess.run(
+        f"loudness-normalize {tmp_dir.absolute()} --target-lufs=-16",
+        check=True,
+        shell=True,
+    )
+    subprocess.run(
+        f"abs -s 1.7 {tmp_dir.absolute()}",
+        check=True,
+        shell=True,
+    )
+    print("changing samples to speeduped...")
+    for obj in env.objects:
+        if obj.type.name != "AudioClip":
+            continue
+        clip: AudioClip = obj.read()
+        for name, _ in clip.samples.items():
+            with open(tmp_dir / name, "rb") as f:
+                data = f.read()
+            clip.samples[name] = data
+        clip.save()
+    print(f"saving bundle to {OUTPUT_DIR}...")
+    (OUTPUT_DIR / bundle.name).write_bytes(env.file.save())
+    # env.save(pack="lz4", out_path=str(OUTPUT_DIR))
+    shutil.rmtree(tmp_dir)
+
+
+for bundle in Path("Z:/test").glob("*.bundle"):
+    deal_bundle(bundle)
+```
+
+然而并没有什么卵用。再看看源码，clip.samples 只是一个 `AudioClip.samples = property(_AudioClip_samples)`，直接修改确实没有好果子吃。
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结
