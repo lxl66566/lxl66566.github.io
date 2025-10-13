@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 11 Oct 2025 12:28:42 GMT</pubDate>
-    <lastBuildDate>Sat, 11 Oct 2025 12:28:42 GMT</lastBuildDate>
+    <pubDate>Mon, 13 Oct 2025 02:37:45 GMT</pubDate>
+    <lastBuildDate>Mon, 13 Oct 2025 02:37:45 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -440,6 +440,12 @@
 <li>我自己用 RSSHub 做了 <a href="https://docs.rsshub.app/zh/routes/finance#%E6%AC%A7%E6%98%93-okx" target="_blank" rel="noopener noreferrer">OKX 的公告订阅</a>，欢迎使用。</li>
 </ul>
 </li>
+</ul>
+<h3>出金</h3>
+<p>指的是将加密货币换成法币。交易所 C2C 出金有风险，首先支付宝/微信容易被盯上，其次可能涉及洗钱。一般大额是最好不要走 C2C 出金的。</p>
+<p>最好最安全的方法是开一些好用的银行卡，然后直接使用加密货币消费。例如 bybit 卡，SafePal 卡等。</p>
+<ul>
+<li>SafePal 开卡可以参考<a href="https://zhuanlan.zhihu.com/p/14025369553" target="_blank" rel="noopener noreferrer">这篇教程</a>。熟人可以用我的邀请码 736387 赞助我一下。</li>
 </ul>
 <h3>开始交易</h3>
 <p>交易前有一些基础知识，建议搜索学习。</p>
