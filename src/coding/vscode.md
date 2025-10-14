@@ -18,7 +18,7 @@ tag:
 
 ## 使用
 
-在 _设置_ 页右上角可以 `打开设置（json）`，我经常需要直接编辑配置文件。[这里](https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json)是我的全局配置文件。
+在 _设置_ 页右上角可以 `打开设置（json）`，我经常需要直接编辑配置文件。[这里](https://github.com/lxl66566/backup/blob/main/config/vscode/settings.json)是我的全局配置文件。
 
 ### 快捷键
 

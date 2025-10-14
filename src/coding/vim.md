@@ -25,7 +25,7 @@ tag:
 
 ## 设置(vscode)
 
-[此处](https://github.com/lxl66566/my-key-data/blob/main/config/vscode/settings.json)是我对 (vim for) vscode 的一些设置。
+直接看[我的 vscode settings.json](https://github.com/lxl66566/backup/blob/main/config/vscode/settings.json) 吧。
 
 ## 设置(懒狗型)
 

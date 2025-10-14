@@ -63,7 +63,7 @@ umount /mnt/windows
   wsl --install --no-distribution
   scoop install archwsl
   ```
-  4. 拉一个 `.wslconfig`，例如[我的](https://github.com/lxl66566/my-key-data/blob/main/config/.wslconfig)。其中最重要的是 `networkingMode=mirrored`，否则网络啥的可能会出问题。
+  4. 抄一个 `.wslconfig`（[ex](https://github.com/lxl66566/backup/blob/main/config/.wslconfig)）。这里可配置的东西还是挺多而且挺重要的。
   5. 参照[官方文档](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/)使用 pacman。
   6. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
 - 更新 ArchWSL：从[wsldl](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。

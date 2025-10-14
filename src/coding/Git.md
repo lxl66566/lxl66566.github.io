@@ -602,7 +602,7 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash HEAD~2
 
 ### 崭新出厂
 
-像我这种喜欢用 Git 备份一切的人，也会用 Git 备份一些经常变化的大二进制文件，代表性仓库是 [my-key-data](https://github.com/lxl66566/my-key-data)。久而久之，Git 仓库会越来越大，因此一段时间以后让 repo “恢复出厂设置” 以减小文件大小是有必要的。（我的备份场景下，并不在乎历史版本追溯）
+像我这种喜欢用 Git 备份一切的人，也会用 Git 备份一些经常变化的大二进制文件，代表性仓库是 [backup](https://github.com/lxl66566/backup)。久而久之，Git 仓库会越来越大，因此一段时间以后让 repo “恢复出厂设置” 以减小文件大小是有必要的。（我的备份场景下，并不在乎历史版本追溯）
 
 我之前用的一直是简单粗暴 `rm -rf .git && git init`，但是现在似乎也有了新的思路。
 

@@ -222,7 +222,7 @@ tag:
 - 夏日重现
 - 来自新世界
 - 钢之炼金术师
-- 比宇宙更远的地方
+- 暗杀教室
 
 <script lang="ts" setup>
 import AnimeList from "@AnimeList";

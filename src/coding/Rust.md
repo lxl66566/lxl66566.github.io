@@ -716,6 +716,12 @@ criterion_group!(benches, bench_md5, bench_sha256);
 criterion_main!(benches);
 ```
 
+### allocator
+
+rust 的默认 allocator 并不好用([ref](https://news.ycombinator.com/item?id=38459571))；只需要 3 行代码更换一个 global allocator 即可获得免费的性能提升。
+
+之前比较广泛使用的 allocator 是 jemalloc，但是现在它已经[似了](https://github.com/jemalloc/jemalloc)。目前最热的是 mimalloc，可以看看它的[性能测试](https://news.ycombinator.com/item?id=38459571)，建议使用。
+
 ## 用户界面
 
 ### GUI

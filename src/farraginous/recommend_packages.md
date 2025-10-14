@@ -418,9 +418,7 @@ diff 增强插件，为 github 使用。
 
 ### [Google Hit Hider](https://greasyfork.org/scripts/1682)
 
-过滤 Google & 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist[^3]。
-
-[^3]: 也可以用用[我的](<https://github.com/lxl66566/my-key-data/blob/main/Browser/blocklist(Google%20Hit%20Hider%20by%20Domain).txt>)
+过滤 Google & 百度 搜索结果，不要让垃圾网站污染眼睛。需要手动维护自己的 blocklist，也可以直接抄[我的](https://github.com/lxl66566/backup/blob/c22a2b88caed361525424aa232892f86986f9a7f/Browser/uBlacklist-20250706.txt)。（该链接可能过时）
 
 ### 论坛绿化
 

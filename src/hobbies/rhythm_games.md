@@ -352,6 +352,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 同品牌手机可以用自带的换机工具转移。（例：小米换机）
 
 :::details 老方法失效，archived
+
 此处给出另一应用范围更广的 phigros 数据转移方法：
 
 1. 移动设备打开 USB 调试并与电脑端连接。
@@ -360,6 +361,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 3. 恢复：`adb restore NAME.ab`
 
 [这里（Phigros 2.4.1）](https://github.com/lxl66566/my-key-data/releases/tag/backup)是我的用户数据，data 充足，AT 全解锁，有需要可以自取。
+
 :::
 
 现在有在线存档了，请使用在线存档转移。而且能否下载到老版本也是个问题。
