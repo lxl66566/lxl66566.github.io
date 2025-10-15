@@ -50,6 +50,7 @@ tag:
   - 编辑器：_Vim_
     - [添加如下配置](https://github.com/microsoft/vscode/issues/75627#issuecomment-1114048271)可以降低 vim 插件的延迟。
   - 跨语言依赖更新：_Dependi_
+  - Ansi Colors：用来看带有颜色符号的日志的，ctrl+shift+p 然后点 _ANSI Text: Open Preview_ 即可。
 - markdown：_Markdown Preview Enhanced_
 - 前端：_Auto Rename Tag_，_Oxc_
   - Vue: _Vue - Official_
@@ -153,7 +154,6 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 ## 小技巧
 
 - vscode 自带了许多好用的小工具，可以通过 Ctrl + Shift + p 打开菜单，搜索就能用。我推荐下面这些：
-  - _ANSI Text: Open Preview_：如果你使用 [script 命令](./snipets.md#)或者其他记录日志的工具，那么输出的日志中有很多 ansi 颜色符号夹杂在日志中使其可读性极低。这个功能就是给日志准备的，可以将这些颜色符号还原。
   - _Sort Lines Ascending_：选中一段文本，然后按升序排列。在写一些 list 代码或文档时比较有用。
 - 可以把某个关键字标成自己选择的颜色 ([ref](https://t.me/c/1264662201/584813))
   ```json
