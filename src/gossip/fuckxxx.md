@@ -119,7 +119,7 @@ tag:
 - 写 end 太丑了，不如写 `{}`
 - 动态 require，有人就会构造运行时字符串进行 require，把静态分析的工具全部炸烂
 - nil 有一大堆的坑，比如最经典的 array table 设 nil 在计算长度时会爆炸
-- 没有可用的 typing
+- 没有可用的 typing。typedlua 已经死了，luau 勉强算一个吧，但是生态呢。。
 - std 里缺了非常多的函数
 - 实践里的错误处理跟 go 一样丑
 
