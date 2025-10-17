@@ -777,7 +777,7 @@ const data: ComicItemType[] = [
   { id: "572806", aScore: 7, bScore: 6.2, info: "#兽耳", order: 2, bak: "https://telegra.ph/ざんどろ-サキュバスマッサージ-オトコもオンナも異種族もイカせる女第2話-サイベリアplus-Vol-30-06-08-2" },
   { id: "573577", aScore: 6.1, bScore: 7.2, info: "#魅魔 #反杀", order: 3, bak: "https://telegra.ph/ざんどろ-サキュバスマッサージ-オトコもオンナも異種族もイカせる女第3話-サイベリアplus-Vol-32-中国翻訳-06-08-2" },
   { id: "577535", aScore: 7.2, bScore: 6, info: "#蔚蓝档案 #简笔 #纯爱", bak: "https://telegra.ph/C105-ANNO-あるせーぬおぱんっ-大人になった私と-ブルーアーカイブ-中国翻訳-06-07-2" },
-  { id: "561252", aScore: 10, bScore: 9.6, info: "#兽耳 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-キキーモラまんが2025-中国翻訳-DL版-06-10-2" },
+  { id: "603735", aScore: 10.4, bScore: 9.8, info: "#兽耳 #纯爱 #さわやか鮫肌", bak: "https://telegra.ph/ドットエイト-さわやか鮫肌-キキーモラまんが2025-中国翻訳-DL版-10-15" },
   { id: "578113", aScore: 8.7, bScore: 5.8, info: "#堕天計画 堕天前アイミュを洗ってあげる本", bak: "https://telegra.ph/コミティア145-234ド-イチリ-堕天前アイミュを洗ってあげる本-中国翻訳-06-10-2" },
   { id: "(ex)", aScore: 6.6, bScore: 6, info: "#精灵 #巨乳", otherlink: "https://exhentai.org/g/3391598/dce3df08f8/", bak: "https://telegra.ph/Croriin-花蜜の庭-異世快楽天-Vol46-中国翻訳-06-10-2" },
   { id: "580255", aScore: 8.2, bScore: 7.6, info: "#纯爱", bak: "https://telegra.ph/いっきづか-きづかかずき-こんやはお楽しみです中国翻訳-DL版-06-22-2" },
