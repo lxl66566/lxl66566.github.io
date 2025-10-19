@@ -33,6 +33,8 @@ Rime 非常自由，也就是词库也需要自己准备。但是我认为现有
 
 当然，如果你**并不在乎大小**，直接使用 [zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) 词库是最为~~简单舒心~~的选择。（ps. zhwiki 里有很多用不到的人名，有可能还会增添麻烦）
 
+### [喷几句](../gossip/fuckxxx.md#rime-有多难用)
+
 ## Windows
 
 ### 手心输入法

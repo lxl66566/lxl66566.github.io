@@ -20,11 +20,6 @@ tag:
 
 [^2]: 深层原因可能是：[我太喜欢找茬辣！](../gossip/fuckxxx.md)
 
-## 我的思考
-
-1. [胡言乱语——编程语言哲学构想](./philosophy_of_PL.md)
-2. [包管理器灵感](./package_manager.md)
-
 ## 语言有关
 
 我的编程语言学习属于多而不精的类型。多语言学习者能在短时间内掌握一门新的语言，但这也意味着基础不够扎实，缺乏经验等。因此需要多做项目以降低劣势。
@@ -126,6 +121,9 @@ tag:
 2. [搭建 bot](./bot.md)
 3. [SICP learning](https://github.com/lxl66566/sicp-learning)
 4. [音频处理](./audio.md)
+5. 我的思考
+   1. [胡言乱语——编程语言哲学构想](./philosophy_of_PL.md)
+   2. [包管理器灵感](./package_manager.md)
 
 ## 杂项
 

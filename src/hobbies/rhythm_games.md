@@ -351,16 +351,14 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 同品牌手机可以用自带的换机工具转移。（例：小米换机）
 
-:::details 老方法失效，archived
-
-此处给出另一应用范围更广的 phigros 数据转移方法：
+::: details 已过时多年，archived
 
 1. 移动设备打开 USB 调试并与电脑端连接。
 2. 备份：`adb backup -f NAME.ab -noapk -noshared -nosystem com.PigeonGames.Phigros`
    - `NAME`最好包括游戏名、版本、备份时间等信息。
 3. 恢复：`adb restore NAME.ab`
 
-[这里（Phigros 2.4.1）](https://github.com/lxl66566/my-key-data/releases/tag/backup)是我的用户数据，data 充足，AT 全解锁，有需要可以自取。
+[这里（Phigros 2.4.1）](https://github.com/lxl66566/backup/releases/tag/games)是我的用户数据，data 充足，AT 全解锁，有需要可以自取。
 
 :::
 
