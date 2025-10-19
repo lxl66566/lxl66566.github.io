@@ -990,6 +990,27 @@ for bundle in Path("Z:/test").glob("*.bundle"):
 - [unity-asset](https://crates.io/crates/unity-asset)：一个新 rust 库，但是 _Emphasis on parsing and data extraction rather than manipulation_。
 
 </template>
+<template #lucasystem>
+
+GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
+
+看了下 [LuckSystem](https://github.com/wetor/LuckSystem)，感觉文档有点简略。而且只能替换不能解封包的设计感觉很屎啊。
+
+看源码不复杂，直接让 gemini 帮我 vibe 一个 RIIR 版本抽奖。vibe 出来的加速完，满怀期待地打开游戏，结果语音全部乱序，之后数轮修改还会让问题扩大化，尝试了许久遂放弃。
+
+老实用 LuckSystem 吧：
+
+```sh
+./l.exe pak extract -i VOICE0.PAK -o test.txt --all VOICE0
+# 这里还踩了一个坑，必须使用 -i test.txt 传入的 manifest，否则直接用 ./l.exe pak replace -s VOICE0.PAK -o test.pak -i VOICE0 打包会 panic 爆炸。
+./l.exe pak replace -s VOICE0.PAK -o test.pak -i test.txt --list
+```
+
+打开游戏，确实可以实现加速，已老实。
+
+但是不得不吐槽，这种 replace 写得就是很屎啊，我加速后音频大小只有 1/3，但是 replace 后还是一样大小，合着根本不改数据块 offset 啊。而且实际游玩时偶尔也有几句语音没法播放，这玩意写得还是有点问题。我尝试用大序号（voice2.pak）覆盖掉原有语音，想着对这些加速失败的语音能不能走到 fallback，结果也是不行。
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结

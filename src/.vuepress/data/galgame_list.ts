@@ -2,6 +2,16 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "恋狱～月狂病～《REBIRTH FHD SIZE EDITION》",
+    valid_name: "恋狱月狂病",
+    other_names: ["恋狱月狂病", "カルタグラ～ツキ狂イノ病～"],
+    intense: true,
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-10-18",
+    },
+  },
+  {
     name: "传述之魔女",
     other_names: ["イハナシの魔女"],
     all_ages: true,

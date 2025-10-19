@@ -181,8 +181,15 @@ const data: SpeedupItemType[] = [
     names: ["魔法少女的魔女审判"],
     valid_name: "unity2",
     engine: "unity2",
-    save_format: "bundle",
+    save_format: "UnityFS",
     speedupable: false,
+  },
+  {
+    names: ["恋狱～月狂病～《REBIRTH FHD SIZE EDITION》"],
+    valid_name: "lucasystem",
+    engine: "	Luca System",
+    save_format: "PAK",
+    speedupable: true,
   },
 ];
 </script>

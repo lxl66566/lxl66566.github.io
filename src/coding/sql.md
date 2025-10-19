@@ -58,11 +58,6 @@ tag:
    - [索引语法](https://www.runoob.com/mysql/mysql-index.html)
 4. 其他依赖于特定数据库的实现，例如隔离级别与锁。这些跟 SQL 语法本身就没什么关系了。
 
-### 引号
-
-- 反引号主要用于库名和表名，可以让关键字失效。例如：`user` 是关键字必需用反引号。
-- 字符串使用单引号，MySQL 使用双引号等价
-
 ### 基础语句
 
 看例子就行了。
@@ -98,6 +93,13 @@ HAVING total_amount > 500
 ORDER BY total_amount DESC, o.order_date ASC
 LIMIT 10 OFFSET 5;
 ```
+
+其他：
+
+- LIMIT 必须在 ORDER 后面。
+- 引号
+  - 反引号主要用于库名和表名，可以让关键字失效。例如：`user` 是关键字必需用反引号。
+  - 字符串使用单引号，MySQL 使用双引号等价
 
 ### 多表查询
 

@@ -5,6 +5,7 @@ const original_list: AnimeItemInputType[] = [
     name: "比宇宙更遥远的地方",
     duration: {
       start: "2025-08-31",
+      end: "2025-10-18",
     },
   },
   {
