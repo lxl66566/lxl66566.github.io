@@ -79,7 +79,7 @@ tag:
 
 - python module 看着很方便，实际上仍然过于粗暴，解决不了交叉引用的问题。
 - python 的高阶函数（`filter`, `map`, `reduce` 等）语法又非常变态，`func` 放前面，`self` 放后面，做个 UFCS 还得和其他函数分裂。
-- python 不优化尾递归。
+- ~~python 不优化尾递归。~~ python 3.14 introduces optional Tail Call Interpreter
 - python 自由度太低。
   - 不能写宏。参考 PEP 638。
   - 不能为 builtin class 添加方法。
@@ -149,6 +149,31 @@ tag:
 - workspace 一坨大便。
   - `go work vendor` 会将老的所有 vendor 都删掉，然后再写入新的 vendor。
   - go 1.20 无法使用 `-mod=vendor` 在 workspace 内进行编译；但是如果不使用这个 `-mod=vendor` flag，编译时它又会去请求网络。
+
+## 文本编辑器系列
+
+### vscode 有多难用
+
+- 关闭了某插件的弹窗通知权限后，该插件依然会弹窗通知。
+- 跨平台（跨系统）做得挺烂的。
+  - 不支持仅在某平台禁用部分插件
+  - 不支持仅在某平台修改任意设置项
+- 推自家的 copilot 真是推死马了，每次打开新项目都会弹出侧栏。
+- 打开 vscode 时如果你的 CPU 负载很高，弹出的终端就有可能是 powershell，即使你已经设置了 `"terminal.integrated.defaultProfile.windows": "Nushell"` ([src](https://t.me/withabsolutex/2157))。这个 bug 从 2021 年开始就已存在。
+- 无法打开 1GB 的文本。这是 chromium based 编辑器的限制。
+- linux 下某次更新后，每次打开都会被 kwallet 提示输密码跳脸，疑似自动连接 ssh-agent。
+- vscode 在用 range 格式化 _包含 emoji 作为行开头_ 的 range 时，有概率让 emoji 爆炸（消失或 �）([src](https://t.me/withabsolutex/2459)，1.9x 行为，当前已修复)
+- vscode wsl 是靠读终端文字内容来提醒用户某某端口可用的，非常脑残。([src](https://t.me/withabsolutex/2436))
+- [符号双击与字符替换问题](https://github.com/microsoft/vscode/issues/251608) ([src](https://t.me/withabsolutex/2392))
+
+### [cursor](../coding/vscode.md#关于-cursor) 有多难用
+
+- 改完设置要重启才能应用
+- 魔改了 vscode 里本来很舒服的设计
+- 占用 vscode 2-3 倍的内存。。
+- 某日启动，报错 main.js not found，只能重装。后来发现是 [updater 的问题](https://github.com/getcursor/cursor/issues/2670)。
+- Cursor 0.45 后无法再无限续。而 0.44 即使设置了不要更新（`"update.enableWindowsBackgroundUpdates": false`），也会被强制更新到 0.45。
+- Cursor 在未知情况下会主动处理我的 `settings.json`，并且导致注释丢失和格式改变（可以看出是用普通的 json parser 改的，而不是 vscode 自定义的那个）。
 
 ## QQ 有多难用
 
@@ -373,6 +398,8 @@ ColorOS 是目前一加的默认系统。
 
 ## 批判微软
 
+不更新系统我有可能被黑客攻击，更新系统我天天被微软工程师攻击。
+
 简单看了一下[《开源世界旅行》](https://i.linuxtoy.org/docs/guide/index.html)，比较老的一本书，作者是国人，对微软批判非常辛辣。我借用赞同的观点。
 
 - Office 是恶心的垄断，它庞大（占用以 G 计），混乱（甚至 2021 版都经常出现无法删除空行，无法对齐，保存崩溃），打开还慢。
@@ -387,6 +414,7 @@ ColorOS 是目前一加的默认系统。
 - [GetFinalPathNameByHandleW 在某些 RAMDisk 上会炸](https://t.me/withabsolutex/1683)
 - 大力推广 copilot，一堆 copilot 图标，添加 copilot 按键等。但是 copilot 的智力在我用过的 LLM 里是垫底的。
 - 在不同硬盘上装了两个 windows，它们会使用同一个盘上的引导；在主板 logo 结束后进入切换系统界面，切换后居然还要重启才能进系统？
+- 2025 年 10 月微软连续爆出 T0 bugs，每天都在蓝点网刷屏。
 
 ### WSL 有多难用
 
@@ -472,13 +500,6 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - 大，太大了，我就要一个宏功能，驱动总共不到 10M，它安装后给我装了 1G Synapse3，喜欢我雷蛇全家桶吗
 - 流氓软件，在托盘退出后还有后台进程运行
 
-## vscode 有多难用
-
-- 关闭了某插件的弹窗通知权限后，该插件依然会弹窗通知。
-- 跨平台（跨系统）做得挺烂的。
-  - 不支持仅在某平台禁用部分插件
-  - 不支持仅在某平台修改任意设置项
-
 ## 12306 有多难用
 
 - 只能看 30 天的车票。
@@ -529,15 +550,6 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 
 1. 没设置 `$HOME` 就 panic
 2. 服务器部署后访问面板 503，无日志
-
-## [cursor](../coding/vscode.md#关于-cursor) 有多难用
-
-- 改完设置要重启才能应用
-- 魔改了 vscode 里本来很舒服的设计
-- 占用 vscode 2-3 倍的内存。。
-- 某日启动，报错 main.js not found，只能重装。后来发现是 [updater 的问题](https://github.com/getcursor/cursor/issues/2670)。
-- Cursor 0.45 后无法再无限续。而 0.44 即使设置了不要更新（`"update.enableWindowsBackgroundUpdates": false`），也会被强制更新到 0.45。
-- Cursor 在未知情况下会主动处理我的 `settings.json`，并且导致注释丢失和格式改变（可以看出是用普通的 json parser 改的，而不是 vscode 自定义的那个）。
 
 ## 夸克有多难用
 

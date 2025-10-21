@@ -254,8 +254,10 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
   - 支持上传到图床，获取分享 url
   - windows 下有一定延迟
   - 在 wayland 分数缩放下工作较差（请使用 [kde spectacle](https://apps.kde.org/zh-cn/spectacle/)）
+  - 在 linux scaled DE 上工作可能有问题
 - PixPin
   - 支持**离线 OCR**，我非常喜欢
+  - 界面交互非常流畅
   - 无法设置 _PrintSc_ 和两键以上的快捷键
 
 ### [Everything](https://www.voidtools.com/zh-cn/downloads/)
@@ -277,13 +279,15 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 举一个比较小众的例子，dwarfs 格式在 7-Zip 上可以打开但是文件夹会识别为文件；在 Bandizip 和 NanaZip 上无法打开。
 
+> 之前[我是 Bandizip 老用户](#bandizip)，但是现在它的广告吃相太难看了，就不用了。
+
 ### [图吧工具箱](http://www.tbtool.cn/)
 
 集成了电脑及其外接设备测试所需的多数软件，集硬件测试，跑分，信息查询为一体。不过体积比较大。
 
 ### [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 
-开源的右键菜单管理器。高度自定义化。
+开源的右键菜单管理器。高度自定义化。不过这个项目已经久不维护了，可能有不稳定的情况。
 
 ### [sandboxie](https://sandboxie-plus.com/downloads/)
 
@@ -376,9 +380,19 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 
 参考 [下载器横评](../articles/downloaders.md)。
 
-### [简约翻译](https://github.com/fishjar/kiss-translator)
+### 翻译插件
 
-从[沉浸式翻译](#沉浸式翻译)过来的，这个还带了划词翻译功能，速度也快，非常好用。缺点是暂时没法自定义快捷键。
+翻译插件基本爆杀浏览器自带的翻译功能，非常重要，可以大幅提升浏览外语网站的体验；翻译插件支持双语对照，对学习外语也有一定帮助。
+
+翻译插件的基本要求：支持双语对照；支持为翻译文本添加样式；可选择不同翻译引擎。
+
+- [沉浸式翻译](https://github.com/immersive-translate/immersive-translate)
+  - 我经历了沉浸式翻译从免费到商业化再到[丑闻](https://www.v2ex.com/t/1042477)的过程，这事情做的跟之前的 [utools](#utools) 实在是太相似了。
+  - 但是不可否认，沉浸式翻译仍然是现存最强大的翻译插件，简约翻译还有很长的路要走。如果你不使用 AI 翻译，这个商业化模式对你也没什么太大影响，可以继续用。
+- [简约翻译](https://github.com/fishjar/kiss-translator)：从[沉浸式翻译](#沉浸式翻译)过来的，还带了划词翻译功能，速度也快。
+  - 缺点是：暂时没法自定义快捷键；对翻译区域的选择还不完善，很多地方会漏选。
+
+由于翻译插件实在是太好用了，经常会养成看到英文就起手 Alt + A 打开翻译的习惯，然后再也不看原文。这样对语言学习没有什么帮助，需要时刻提醒自己不要过度依赖它。
 
 ### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
 
@@ -386,7 +400,19 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 
 ### [DARK READER](https://darkreader.org/)
 
-浏览器强制夜间模式，效果不错。
+最著名的浏览器强制深色插件，效果不错，对大部分的网站都能生效。
+
+### Bionic Reading
+
+研究显示在英文单词的前半部分加粗可以加快英语的阅读速度，被称为 Bionic Reading。
+
+Bionic Reading 的插件很多，官方的根本不可用，所以只能使用第三方插件。
+
+存在海量的第三方插件，但是质量差距很大。
+
+我当前正在使用 [BIONIC Reads](https://chromewebstore.google.com/detail/bionic-reads/cmgbhilenphccembeijmdccogelmcngf)。
+
+使用 Bionic Reading 插件还需要注意一点：这会略微影响你使用的[翻译类插件](#翻译插件)。（换个角度想，Bionic Reading 本来就是为了提升英语阅读速度，这样还可以略微摆脱对翻译插件的依赖）
 
 ### [为什么你们就是不能加个空格呢？](https://chrome.google.com/webstore/detail/paphcfdffjnbcgkokihcdjliihicmbpd)
 
@@ -400,19 +426,21 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 
 在遇到 [yt-dlp](#yt-dlp) 不支持的网站时，另一个可用的视频下载工具就显得尤为重要。CoCoCut 在支持抓取媒体的基础上，还能够下载 m3u8 流视频，甚至能通过录制方式下载。
 
+当然，如果你[使用 downloader](../articles/downloaders.md) 拦截下载事件，那么这些 downloader 可能已经可以嗅探到视频资源并弹出下载按钮了。
+
 ### [MergeEase](https://mergease.com/)
 
 diff 增强插件，为 github 使用。
 
 ### History Trends Unlimited
 
-无限制记录浏览历史，可以搜索、备份。缺点是无法导入，更换浏览器后数据无法转移。
+无限制记录浏览历史，可以搜索、备份。
 
 ## 浏览器脚本
 
 ::: tip 提示
 
-请确保已经安装插件 [Violentmonkey](https://violentmonkey.github.io/) 或 [Tampermonkey](#tampermonkey)。（前者是开源无广告，后者是老牌）
+请确保已经安装插件 [Violentmonkey](https://violentmonkey.github.io/) 或 [Tampermonkey](#tampermonkey)。（前者是开源无广告，后者是老牌，我推荐使用前者。）
 
 :::
 
@@ -443,6 +471,8 @@ diff 增强插件，为 github 使用。
 
 ## 其他软件插件
 
+::: details 当前不建议安装任何 qq 插件，有封号风险。
+
 ### [better-qqnt](https://t.me/aa1078bb870c41c6b675624cd784)
 
 闭源的 QQNT 插件系统，使用更简单。
@@ -463,6 +493,8 @@ diff 增强插件，为 github 使用。
 - [Directly-Jump](https://github.com/xh321/LiteLoaderQQNT-Directly-Jump)
 
 关于插件安装：对于有 git 和 pnpm 的我来说，直接在 `QQNT/LiteLoaderQQNTx.x.x/plugins` 里执行 `git clone` + `pnpm i` 即可，简单省空间，还方便更新。
+
+:::
 
 ## 一些过时的推荐
 
@@ -595,12 +627,6 @@ ps. 已经寄了。
 - 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）
 
 但是 windows11 自带色温调节（_显示 - 夜间模式_）也能做到这些，因此该软件的适用范围大大减小了。
-
-### [沉浸式翻译](https://github.com/immersive-translate/immersive-translate)
-
-爆杀 edge 翻译：支持双语对照；支持为翻译添加样式；可选择引擎。
-
-我经历了沉浸式翻译从免费到商业化再到[丑闻](https://www.v2ex.com/t/1042477)的过程，这事情做的跟之前的 [utools](#utools) 实在是太相似了。因此我换用非商业开源的 [kiss translator](#简约翻译)，还多了划词翻译功能。
 
 ### [Tampermonkey](https://microsoftedge.microsoft.com/addons/detail/iikmkjmpaadaobahmlepeloendndfphd)
 

@@ -133,6 +133,7 @@ tag:
   - 更改触摸板功能：三指左右划调节音量。实际上并不是很好用：我音量常年 20%，触摸板调节的话很容易拉得太大。
   - [shell alias](#shell-alias)
   - 关闭鼠标的 “提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
+  - 使用 [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) 修改右键菜单。
 - 做减法：
   - 关闭搜索推荐&热门新闻：关闭 _设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点_ 。([ref](https://www.landiannews.com/archives/95045.html)，最新版 win11 可能没有此条设置)
   - 卸载各种傻逼预装玩意。
