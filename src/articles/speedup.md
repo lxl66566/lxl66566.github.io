@@ -987,7 +987,8 @@ for bundle in Path("Z:/test").glob("*.bundle"):
 - 尝试修改 UnityPy 源码，添加回写功能，失败告终。
 - 尝试使用 [UnityAssetReplacer](https://github.com/Skyluker4/UnityAssetReplacer)，这玩意教程做得挺唬人，几个视频一套一套的，结果一实操 `ERROR: Could not open the asset bundle!`。如果再用其他方法尝试就完全爆炸，直接打 C# stacktrace。
 - [AssetRipper](https://github.com/AssetRipper/AssetRipper) 更新挺勤快，但是同样只支持在线查看 bundle 功能，没有替换，甚至导出还不是免费功能。
-- [unity-asset](https://crates.io/crates/unity-asset)：一个新 rust 库，但是 _Emphasis on parsing and data extraction rather than manipulation_。
+- [unity-asset](https://crates.io/crates/unity-asset)：一个新 rust 库，质量还是相当高的，但是 _Emphasis on parsing and data extraction rather than manipulation_。
+- _魔法少女的魔女审判_ 用的是 il2cpp 后端，使用 [Il2CppDumper](https://github.com/Perfare/Il2CppDumper/releases) 会报 _Can't use auto mode to process file, try manual mode._
 
 </template>
 <template #lucasystem>
