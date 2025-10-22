@@ -980,15 +980,15 @@ for bundle in Path("Z:/test").glob("*.bundle"):
     deal_bundle(bundle)
 ```
 
-然而并没有什么卵用。再看看源码，clip.samples 只是一个 `AudioClip.samples = property(_AudioClip_samples)`，直接修改确实没有好果子吃。
+然而并没有什么卵用。再看看源码，clip.samples 只是一个 `AudioClip.samples = property(_AudioClip_samples)`，直接修改确实没有好果子吃。进一步地，即使为 AudioClip 添加 setter，在保存时也无法将音频封回 bundle，因为音频处理那块调用了 fmod-toolkit 的 raw_to_wav，这个库本身也不具备 PCM 编码的能力。（顺带吐槽一下这个库无法在没有音频驱动的系统上使用，我解个二进制跟 tm 音频驱动扯上啥关系了还）
 
 继续：
 
-- 尝试修改 UnityPy 源码，添加回写功能，失败告终。
 - 尝试使用 [UnityAssetReplacer](https://github.com/Skyluker4/UnityAssetReplacer)，这玩意教程做得挺唬人，几个视频一套一套的，结果一实操 `ERROR: Could not open the asset bundle!`。如果再用其他方法尝试就完全爆炸，直接打 C# stacktrace。
 - [AssetRipper](https://github.com/AssetRipper/AssetRipper) 更新挺勤快，但是同样只支持在线查看 bundle 功能，没有替换，甚至导出还不是免费功能。
-- [unity-asset](https://crates.io/crates/unity-asset)：一个新 rust 库，质量还是相当高的，但是 _Emphasis on parsing and data extraction rather than manipulation_。
+- [unity-asset](https://crates.io/crates/unity-asset)：一个新 rust 库，质量相当的高，但是 _Emphasis on parsing and data extraction rather than manipulation_，其本身就没有实现 UnityObject 的 serialize 等方法。
 - _魔法少女的魔女审判_ 用的是 il2cpp 后端，使用 [Il2CppDumper](https://github.com/Perfare/Il2CppDumper/releases) 会报 _Can't use auto mode to process file, try manual mode._
+  - il2cpp 也不像 mono 后端可以比较方便地注入改 pitch。
 
 </template>
 <template #lucasystem>
@@ -1027,12 +1027,6 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 于是立刻开整。由于我 hook 公司软件，使用 rust retour 测试有点问题（字符串的问题），于是我这次使用了 C++。首先 vibe 了一个用 detours 的音频 API 注入 dll，然后再搞一个 injector。过程中发现 xmake 引三方包真的太好用了，之前编译 detours 那些指令可以全部扬掉，直接在 xmake 里 require 就行。于是又用 ftxui 给 injector vibe 了一个 TUI 界面方便选进程。repo: [AudioSpeedHack](https://github.com/lxl66566/AudioSpeedHack)。
 
 但是回到家测试，实测并不能成功注入音频 API，我也不清楚为啥。我后来又自己搞了一个 debugger，注入音频 API 专门打日志用的，也没有任何输出，不管是游戏还是手写的调 dsound 播放音频的小脚本，都没有打出信息，也就是没有成功 hook 到。感觉还是不熟注入和过于依赖 vibe coding 的锅，但是目前的我也没有这方面的能力。
-
-## external
-
-这里存一些可能用得上的资料。
-
-- [Windows 上的音频采集技术 - 思考的轨迹](https://shanewfx.github.io/blog/2013/08/14/caprure-audio-on-windows/)
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
