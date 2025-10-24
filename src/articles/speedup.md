@@ -857,7 +857,9 @@ thread:system
 
 这一作封包也是 FilePackVer3.1，但是 GARbro 和 hz86/filepack 是解不了的，估计又是哪里做了小改动。挺莫名其妙的，为啥网上某些博客搜出来都说 GARbro 可用。。
 
-尝试下 Dir-A 贡献过的 [RxQLIE](https://github.com/ZQF-ReVN/RxQLIE)，Release 里的 dll 太早了而且试了下不可用（随便输入一个 Sequence 会直接崩溃）。想自己编译。虽说看到 xmake.lua 感觉非常亲切，以为这次编译不用花太多功夫了，结果直接 xmake 还是报错，找不到已存在的某个 .h。即使添加了 `add_includedirs("src/Core")`，最后又会报找不到 `ZxMem/ZxMem.h`。至于 cmake 那就更是一坨，进 build && cmake .. 生成一堆没用的东西。懒得再折腾构建系统了，遂放弃。
+尝试下 Dir-A 贡献过的 [RxQLIE](https://github.com/ZQF-ReVN/RxQLIE)，Release 里的 dll 太早了而且试了下不可用（随便输入一个 Sequence 会直接崩溃）。想自己编译。虽说看到 xmake.lua 感觉非常亲切，以为这次编译不用花太多功夫了，结果直接 xmake 还是报错，找不到已存在的某个 .h。即使添加了 `add_includedirs("src/Core")`，最后又会报找不到 `ZxMem/ZxMem.h`。它的 CmakeLists.txt 也是一坨，没有声明 C++ 版本导致编译失败，需要手动加一下 `set(CMAKE_CXX_STANDARD 23)` 才能编成功。xmake + C++23 的仓库这个质量，确实让我感觉怪怪的。
+
+待续。
 
 </template>
 <template #LiLiM>
@@ -1027,6 +1029,26 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 于是立刻开整。由于我 hook 公司软件，使用 rust retour 测试有点问题（字符串的问题），于是我这次使用了 C++。首先 vibe 了一个用 detours 的音频 API 注入 dll，然后再搞一个 injector。过程中发现 xmake 引三方包真的太好用了，之前编译 detours 那些指令可以全部扬掉，直接在 xmake 里 require 就行。于是又用 ftxui 给 injector vibe 了一个 TUI 界面方便选进程。repo: [AudioSpeedHack](https://github.com/lxl66566/AudioSpeedHack)。
 
 但是回到家测试，实测并不能成功注入音频 API，我也不清楚为啥。我后来又自己搞了一个 debugger，注入音频 API 专门打日志用的，也没有任何输出，不管是游戏还是手写的调 dsound 播放音频的小脚本，都没有打出信息，也就是没有成功 hook 到。感觉还是不熟注入和过于依赖 vibe coding 的锅，但是目前的我也没有这方面的能力。
+
+关于其他 hook lib：
+
+- [PolyHook2](https://github.com/stevemk14ebr/PolyHook_2_0)：这货基本没有文档，蒜鸟蒜鸟。
+
+## dll wrapper
+
+沿用之前思路。如果不好 hook 音频，那么就直接改源码，编出一个 dsound wrapper 用会怎么样呢？
+
+当前有这些常见 dsound wrapper：
+
+- [dsoal](https://github.com/kcat/dsoal)
+- [IndirectSound](https://www.indirectsound.com/)
+- Creative ALchemy
+
+它们主要是用来强制开启 windows 环绕声和其他音效的。其中只有 dsoal 是开源的，因此只能选择改它。
+
+[fork 了一个 dsoal](https://github.com/lxl66566/dsoal)，改了两个 frequency 值，然后 `cd build && cmake .. && cmake build .` 把 `dsound.dll` 编译出来。项目质量也确实不错，一次编译过，少有的不需要折腾构建的 C++ 项目。
+
+可能还需要用 [DSWRP](https://github.com/ThreeDeeJay/DSWRP/blob/main/DirectSound%20Wrapper%20Registry%20Patcher.cmd)（改注册表的脚本）让游戏可以从同目录加载 `dsound.dll`。
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
