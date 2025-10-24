@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 22 Oct 2025 15:14:26 GMT</pubDate>
-    <lastBuildDate>Wed, 22 Oct 2025 15:14:26 GMT</lastBuildDate>
+    <pubDate>Fri, 24 Oct 2025 12:19:44 GMT</pubDate>
+    <lastBuildDate>Fri, 24 Oct 2025 12:19:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -573,6 +573,7 @@
 <p>OKX 里不能自定义策略，我们需要借助第三方平台：<em>OKX - 更多 - 使用 TradingView 交易</em>。<a href="https://cn.tradingview.com/" target="_blank" rel="noopener noreferrer">TradingView</a> 是另一个公司的平台，提供了 pinescript 脚本的编写、运行和一键回测，我们可以编写并测试自己的策略的利率。</p>
 <p>我们也可以通过 webhook 将 TradingView 接入交易所以自动触发交易。不过，webhook 自动交易是要购买订阅的，$12.95/month。所以如果没有好策略 + 足够的本金，还是见仁见智吧。</p>
 <h3>炒新币</h3>
+<details class="hint-container details"><summary>archived</summary>
 <blockquote>
 <p>Trump 币发行时，我是第一次接触新币，亏了一点钱。之后又摸了几次新币，有了点经验。</p>
 </blockquote>
@@ -603,6 +604,7 @@
 </ol>
 <p>即使不做短期高频交易而是直接做大空，赚得也不算太多，因为币价波动太大，为了防止爆仓，杠杆不能开太高。那这时候要怎么办呢？还记得前面说网格策略适合交易波动性大的币种吗？刚好新币的波动性大，这时候狠狠上做空网格就行了。我一般会把 2x, 3x, 5x, 10x 的网格都套上，也算是分摊一些风险。</p>
 <p>当然也并不是每个新币都必定会长跌，一些有潜力的 layer1 链可能会不跌反涨，把你的网格和马丁顶爆仓，比如 IP 和 KAITO。</p>
+</details>
 <h3>借贷</h3>
 <p>由于加密市场的匿名性，加密货币借贷必须使用抵押品，并且必须在任何时刻都保证抵押品价值大于借入资金，这一点和传统的信用借贷有一些区别。</p>
 <p>加密借贷有一定吸引力，这是把手上囤积的现货活用的一种方法。</p>
