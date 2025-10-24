@@ -165,6 +165,7 @@ tag:
 - vscode 在用 range 格式化 _包含 emoji 作为行开头_ 的 range 时，有概率让 emoji 爆炸（消失或 �）([src](https://t.me/withabsolutex/2459)，1.9x 行为，当前已修复)
 - vscode wsl 是靠读终端文字内容来提醒用户某某端口可用的，非常脑残。([src](https://t.me/withabsolutex/2436))
 - [符号双击与字符替换问题](https://github.com/microsoft/vscode/issues/251608) ([src](https://t.me/withabsolutex/2392))
+- [在 NVIDIA GPU 下使用有偶发黑屏问题](https://github.com/microsoft/vscode/issues/35527)，issue close 了，但是我还是天天遇到。这个问题已经存在了 8 年。
 
 ### [cursor](../coding/vscode.md#关于-cursor) 有多难用
 

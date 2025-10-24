@@ -66,7 +66,10 @@ tag:
        pause
        ```
      - 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
-  4. 如果你因为一些理由不得不打开 Windows 安全中心（例如公司电脑），请到安全中心里关闭所有能看得见的开关，并且[关闭其不重要的通知](https://learn.microsoft.com/zh-cn/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-hide-notifications#use-group-policy-to-hide-noncritical-notifications)。
+  4. 如果你因为一些理由不得不打开 Windows 安全中心（例如公司电脑），请：
+     - 到安全中心里关闭所有能看得见的开关
+     - [关闭不重要的通知](https://learn.microsoft.com/zh-cn/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-hide-notifications#use-group-policy-to-hide-noncritical-notifications)
+     - 在 _任务计划程序 - 任务计划程序库 - Microsoft - Windows - Windows Defender_ 里关闭所有计划。
 - 关闭安全检查与防火墙：_控制面板 > 系统和安全_
 - 禁用 _用户账户控制 UAC_[^3]，让你打开应用时不再受到烦人的弹窗困扰。
 - 关闭 Windows Defender SmartScreen：Windows Defender SmartScreen 是 edge 下载 exe 提示有风险的元凶。在组策略编辑器（`gpedit.msc`）中，_管理模板 > Windows 组件 > Windows Defender SmartScreen > Microsoft Edge > 配置 Windows Defender SmartScreen_ 里禁用两个选项。
