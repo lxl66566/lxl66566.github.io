@@ -896,6 +896,16 @@ const data: ComicItemType[] = [
   { id: "585041", aScore: 7.6, bScore: 8.1, order: 1, info: "#冒险 #JK #巨乳" },
   { id: "(ex)", aScore: 8.4, bScore: 9.2, info: "#合订本 #捆绑! #触手 #百合 #强制绝顶 #原神", otherlink: "https://exhentai.org/g/3580435/ba022bc31d/", bak: "https://telegra.ph/雪ノ嵐异端丶-漫画合辑-10-11" },
   { id: "584874", aScore: 7.6, bScore: 8, info: "#同学 #纯爱 #一见钟情", bak: "https://telegra.ph/Clear-Doll-水白しずく-Restart-中国翻訳-DL版-07-18-2" },
+  { id: "506086", aScore: 6.3, bScore: 8.2, info: "#侄女 #loli #纯爱 #睡x", bak: "https://telegra.ph/ワンワンサワー-秋隣-04-19-2" },
+  { id: "602595", aScore: 7.8, bScore: 8.3, info: "#自慰 #水手服 #同学 表现力很强" },
+  { id: "592518", aScore: 8.4, bScore: 7.5, order: 6, info: "#家庭教师 #睡x #巨乳 睡眠学習" },
+  { id: "313253", aScore: 7.3, bScore: 6.7, info: "#睡x #巨乳 #保健室 #醒来 #kino 睡眠学習" },
+  { id: "318005", aScore: 7.6, bScore: 7, order: 1, info: "#睡x #巨乳 #家庭教师 #短篇 #kino 睡眠学習" },
+  { id: "326100", aScore: 7.1, bScore: 7.1, order: 2, info: "#睡x #巨乳 #家庭教师 #短篇 #kino 睡眠学習" },
+  { id: "343425", aScore: 7.7, bScore: 6.5, order: 3, info: "#巨乳 #认知阻碍 #kino 睡眠学習" },
+  { id: "343426", aScore: 7.6, bScore: 6.8, order: 4, info: "#巨乳 #睡x #装睡 #纯爱 #kino 睡眠学習" },
+  { id: "359435", aScore: 8, bScore: 7.1, order: 5, info: "#巨乳 #纯爱 #家庭教师 #kino 睡眠学習" },
+  { id: "588201", aScore: 4.6, bScore: 7.7, info: "#巨乳 #同学 #睡x 睡眠学習" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -153,6 +153,14 @@ tag:
 - 可以高回报地跟单（Vaults）。有一些 bot 带单的我觉得非常值得尝试。（与其自己研究不如直接吃成果，对方拿分成，winwin）
 - 可以参与做市商（HLP vault），赚取收益。
 - 去中心化交易所还是有点问题，2025 年初[两次被攻击](https://www.panewslab.com/zh/sqarticledetails/kbpj88hq.html)。
+- hyperliquid 还限制了某些国家/地区的 ip，那你去中心化了个 jb
+
+</template>
+<template #bitget>
+
+- 不支持中国地区。
+- 不支持美国 IP。
+- 印象里是资金费率竞技场，他家的资金费率可以打到 15%，真牛逼。
 
 </template>
 </CryptocurrencyExchangeList>

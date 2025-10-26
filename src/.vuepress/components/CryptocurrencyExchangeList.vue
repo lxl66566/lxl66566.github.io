@@ -36,7 +36,7 @@
             <td>{{ boolToString(item.允许大陆KYC) }}</td>
             <td>{{ boolToString(item.TradingView) }}</td>
             <td>{{ item.海外节点兼容性 }}</td>
-            <td>{{ item.基础合约手续费.挂单 + "%" + " ~ " + item.基础合约手续费.吃单 + "%" }}</td>
+            <td>{{ (item.基础合约手续费.挂单 ?? "-") + "%" + " ~ " + (item.基础合约手续费.吃单 ?? "-") + "%" }}</td>
           </template>
           <template #expanded-content>
             <slot :name="item.valid_name ?? item.name"></slot>
@@ -70,8 +70,8 @@ type CryptocurrencyExchangeListItemType = {
   TradingView: boolean;
   海外节点兼容性: string;
   基础合约手续费: {
-    挂单: number;
-    吃单: number;
+    挂单: number | null;
+    吃单: number | null;
   }
 };
 const boolToString = (bool: boolean | undefined) => {
@@ -171,7 +171,19 @@ const data: CryptocurrencyExchangeListItemType[] = [
       挂单: 0.01,
       吃单: 0.035,
     },
-  }
+  },
+  {
+    name: "bitget",
+    url: "https://www.bitget.com/",
+    exchange_type: ExchangeType.CEX,
+    大陆支付方式: false,
+    TradingView: true,
+    海外节点兼容性: "一般",
+    基础合约手续费: {
+      挂单: 0.01,
+      吃单: 0.035,
+    },
+  },
 ];
 </script>
 

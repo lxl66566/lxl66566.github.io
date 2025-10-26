@@ -1038,6 +1038,8 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 沿用之前思路。如果不好 hook 音频，那么就直接改源码，编出一个 dsound wrapper 用会怎么样呢？
 
+### dsound.dll
+
 当前有这些常见 dsound wrapper：
 
 - [dsoal](https://github.com/kcat/dsoal)
@@ -1046,9 +1048,46 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 它们主要是用来强制开启 windows 环绕声和其他音效的。其中只有 dsoal 是开源的，因此只能选择改它。
 
-[fork 了一个 dsoal](https://github.com/lxl66566/dsoal)，改了两个 frequency 值，然后 `cd build && cmake .. && cmake build .` 把 `dsound.dll` 编译出来。项目质量也确实不错，一次编译过，少有的不需要折腾构建的 C++ 项目。
+[fork 了一个 dsoal](https://github.com/lxl66566/dsoal)，[改了两个 frequency 值](https://github.com/lxl66566/dsoal/commit/3d378aab9bc797e73eae043e1431f11ee2a99bb2?diff=split)，然后 `cd build && cmake .. && cmake build .` 把 `dsound.dll` 编译出来。项目质量也确实不错，一次编译过，少有的不需要折腾构建的 C++ 项目。
 
 可能还需要用 [DSWRP](https://github.com/ThreeDeeJay/DSWRP/blob/main/DirectSound%20Wrapper%20Registry%20Patcher.cmd)（改注册表的脚本）让游戏可以从同目录加载 `dsound.dll`。
+
+找了一些明确加载 dsound.dll 的游戏，按照 dsoal README 尝试，并没有什么卵用：游戏优先找 `C:\Windows\SysWOW64\dsound.dll`，强制其优先加载本地（同目录下） dsound.dll 需要把系统的 dll 改名。加载本地 dll 后游戏无法播放音频，也没有观察到 DSOAL_LOGFILE 的创建。
+
+怀疑是编出来的 dll 有问题，用 dsoul 的 CI 编译了一下，看到出来 Win32 和 Win64 的两个产物，怀疑是游戏调的不是 64 位的 dll 的问题。把 Win32 产物放到游戏文件夹下，打开游戏，发现音频可以播放，速度和音高变为之前的 2 倍！符合预期。
+
+然后就是编写程序将音高降回去。我先在前文 [pyaudio](#pyaudio) 的基础上尝试，使用 librosa 降低音高：
+
+```py
+RATE = 44100
+def callback(in_data, frame_count, time_info, status):
+    audio_data = input_stream.read(frame_count, exception_on_overflow=False)
+    audio_array = np.frombuffer(audio_data, dtype=np.int16)
+    # i16 转 f32
+    audio_float = audio_array.astype(np.float32) / 32768.0
+    # 使用 librosa 降低一个八度（-12个半音）
+    shifted_audio_float = librosa.effects.pitch_shift(
+        y=audio_float,
+        sr=RATE,
+        n_steps=-12,  # 负数表示降低音调，-12个半音即一个八度
+    )
+    # f32 转回 int16
+    shifted_audio_int16 = (shifted_audio_float * 32767).astype(np.int16)
+    # 转换回字节流
+    out_data = shifted_audio_int16.tobytes()
+    return (out_data, pyaudio.paContinue)
+```
+
+音高确实降回去了，加速是完全可行的！！但是在 chunk 之间还是有许多割裂的部分（无声或噪音部分），对于 galgame 游玩体验的影响很大。我也尝试过缓冲区，但是仍然会出现割裂，只能归结于 librosa 降调后的数据点有问题，要么就是性能不够。
+
+尝试 vibe 调研 + 抽奖一个 RIIR 版本，抽了几次抽到了一个使用 [pitch_shift](https://github.com/NathanRoyer/pitch_shift/blob/main/src/lib.rs) 实现的音调降低、没有任何割裂的 rust 版本。这个版本还有一些小问题，比如音频有点失真，但是比起初版音频割裂要好太多了，至少是个能玩的水平了。然后就是调参，我把 pitch_shift 的 `WINDOW_DURATION_MS: usize` 从 50 调成 18，失真也减缓了很多，这个音质我感觉已经可以接受了。很高兴，去楼下买了手撕鸡吃（午饭 + 晚饭），回来[发了一篇频道](https://t.me/withabsolutex/2522)庆祝。
+
+然后就是漫长的程序优化了。
+
+- 我希望这个程序是傻瓜式的，可以帮人自动判断游戏是否调用了 dsound.dll，但是……尝试了下发现挺困难的，静态分析基本没辙，好多汉化组的 patch 可是会 spawn 其他 galgame 进程的。至于动态分析那又是 windows api on rust 那一套，感觉我能写一年，这个优化先放着。
+- 为了同时支持不同的倍速，我可以提前编好一堆 dll，然后根据用户的选择释放出某一个。这要求这些 dll 在我的二进制里是整体压缩的，否则这个大小我无法接受。当然使用 [include_assets](https://docs.rs/include_assets/latest/include_assets/) 是可以，这玩意强调了它是唯一一个做了 solid 压缩并且还支持 zstd 的。但是我又不想把所有 dll 存在 git 里，否则这个 git 仓库的大小我又不能接受；而且 include_assets 也说了它的缺陷是运行时会全部解压到内存……想来想去还是直接全程用 zip 比较好，这样仓库也不会太大，运行时也不需要全部解压。
+  - 然而 deflate 字典太小，压缩率实在是太差，被 zstd 和 lzma 爆杀了。想了想，还是用 include_assets 吧。
+- 程序同时支持 cli 和 tui，tui 的话我有思考过要不要用 ratatui 做，后面想想这个可以慢慢来，先用 terminal-menu 糊一个。
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";

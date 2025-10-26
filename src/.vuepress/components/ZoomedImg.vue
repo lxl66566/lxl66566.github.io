@@ -1,5 +1,5 @@
 <template>
-  <figure :style="{ maxWidth: `calc(${parseFloat(scale) / 100} * var(--content-width))` }">
+  <figure>
     <img :alt="alt" :src="src" loading="lazy"
       :style="{ maxWidth: `calc(${parseFloat(scale) / 100} * var(--content-width))` }" />
     <figcaption v-if="alt">{{ alt }}</figcaption>
@@ -24,10 +24,13 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
-div {
-  display: flex;
-  justify-content: center;
+figure {
+  max-width: max-content;
+  display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
