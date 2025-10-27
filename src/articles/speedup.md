@@ -1038,6 +1038,8 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 沿用之前思路。如果不好 hook 音频，那么就直接改源码，编出一个 dsound wrapper 用会怎么样呢？
 
+这些音频 API 都是闭源的，但是有一些开源第三方实现可以使用。
+
 ### dsound.dll
 
 当前有这些常见 dsound wrapper：
@@ -1088,6 +1090,11 @@ def callback(in_data, frame_count, time_info, status):
 - 为了同时支持不同的倍速，我可以提前编好一堆 dll，然后根据用户的选择释放出某一个。这要求这些 dll 在我的二进制里是整体压缩的，否则这个大小我无法接受。当然使用 [include_assets](https://docs.rs/include_assets/latest/include_assets/) 是可以，这玩意强调了它是唯一一个做了 solid 压缩并且还支持 zstd 的。但是我又不想把所有 dll 存在 git 里，否则这个 git 仓库的大小我又不能接受；而且 include_assets 也说了它的缺陷是运行时会全部解压到内存……想来想去还是直接全程用 zip 比较好，这样仓库也不会太大，运行时也不需要全部解压。
   - 然而 deflate 字典太小，压缩率实在是太差，被 zstd 和 lzma 爆杀了。想了想，还是用 include_assets 吧。
 - 程序同时支持 cli 和 tui，tui 的话我有思考过要不要用 ratatui 做，后面想想这个可以慢慢来，先用 terminal-menu 糊一个。
+  - 糊出来发现还挺好用的，这玩意有对 Vec<&str> 专门做过优化，用起来还不错。
+
+最终糊出了初版的 [AudioSpeedHack v0.1.0](https://github.com/lxl66566/AudioSpeedHack)。
+
+### XAudio2
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
