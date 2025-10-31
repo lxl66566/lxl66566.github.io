@@ -143,6 +143,8 @@ xmake 是~~向下兼容 cmake~~ 的构建工具，拥有较为简洁的语法。
   - [microblock 群友做的第三方网页](https://xmake.microblock.cc/)
 - 指定工具链
   - 在 target 中添加 `set_toolchains("clang")`
+- 指定架构
+  - 编译 win32：`xmake f -p windows -a x86`
 
 #### 其他技巧
 
@@ -191,8 +193,7 @@ cmake 内部原理是生成 makefile 然后再 make。
 实际上我也就写 Qt 接触了一下 cmake，后面很快转到 xmake 了，关于 cmake 的了解不算多。
 
 - 安装：`scoop install cmake`，或者 VS 安装里也有，不过要自己加 PATH。
-
-我很不喜欢 cmake，感觉还不如回归本源 Makefile。
+- 构建：常用的几板斧就是 `mkdir build && cd build && cmake .. && cmake build .`，没什么好说的。
 
 @tab cmkr
 

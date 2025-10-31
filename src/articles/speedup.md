@@ -1050,7 +1050,7 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 它们主要是用来强制开启 windows 环绕声和其他音效的。其中只有 dsoal 是开源的，因此只能选择改它。
 
-[fork 了一个 dsoal](https://github.com/lxl66566/dsoal)，[改了两个 frequency 值](https://github.com/lxl66566/dsoal/commit/3d378aab9bc797e73eae043e1431f11ee2a99bb2?diff=split)，然后 `cd build && cmake .. && cmake build .` 把 `dsound.dll` 编译出来。项目质量也确实不错，一次编译过，少有的不需要折腾构建的 C++ 项目。
+[fork 了一个 dsoal](https://github.com/lxl66566/dsoal)，[改了两个 frequency 值](https://github.com/lxl66566/dsoal/commit/3d378aab9bc797e73eae043e1431f11ee2a99bb2?diff=split)，然后把 `dsound.dll` 编译出来。项目质量也确实不错，一次编译过，少有的不需要折腾构建的 C++ 项目。
 
 可能还需要用 [DSWRP](https://github.com/ThreeDeeJay/DSWRP/blob/main/DirectSound%20Wrapper%20Registry%20Patcher.cmd)（改注册表的脚本）让游戏可以从同目录加载 `dsound.dll`。
 

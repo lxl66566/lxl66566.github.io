@@ -150,7 +150,7 @@ tag:
   - `go work vendor` 会将老的所有 vendor 都删掉，然后再写入新的 vendor。
   - go 1.20 无法使用 `-mod=vendor` 在 workspace 内进行编译；但是如果不使用这个 `-mod=vendor` flag，编译时它又会去请求网络。
 
-## 文本编辑器系列
+## IDE 系列
 
 ### vscode 有多难用
 
@@ -175,6 +175,16 @@ tag:
 - 某日启动，报错 main.js not found，只能重装。后来发现是 [updater 的问题](https://github.com/getcursor/cursor/issues/2670)。
 - Cursor 0.45 后无法再无限续。而 0.44 即使设置了不要更新（`"update.enableWindowsBackgroundUpdates": false`），也会被强制更新到 0.45。
 - Cursor 在未知情况下会主动处理我的 `settings.json`，并且导致注释丢失和格式改变（可以看出是用普通的 json parser 改的，而不是 vscode 自定义的那个）。
+
+### Visual Studio
+
+- 解决方案或项目自动版本迁移可能失败。
+  - 我用 LLM 改完 CMakeLists 可能可以通过编译，但是 VS 改十几年前的 .vcxproj 好像从来没有成功过。
+- 交互一坨屎。
+  - 构建中如何取消构建？
+- VS insider 退出会自动更新，并且取消按钮是灰的。
+- 自带的 vcpkg 是清单模式，这个模式对于初学者来说相当难用，并且无法按照网上的资料进行构建。（网上资料大多是运行在经典模式的）
+- 如果你安装了 VS insider，那么其他依赖 vs 的程序可能找不到 vs，于是要你重新安装一个。
 
 ## QQ 有多难用
 
