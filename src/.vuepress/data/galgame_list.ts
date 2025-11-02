@@ -2,11 +2,20 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "魔法少女的魔女审判",
+    other_names: ["manosaba", "魔法少女ノ魔女裁判", "魔裁"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-11-02",
+    },
+  },
+  {
     name: "恋狱～月狂病～《REBIRTH FHD SIZE EDITION》",
     valid_name: "恋狱月狂病",
     other_names: ["恋狱月狂病", "カルタグラ～ツキ狂イノ病～"],
     intense: true,
     playing_status: PlayingStatus.PLAYING,
+    use_time: "-1min",
     duration: {
       start: "2025-10-18",
     },

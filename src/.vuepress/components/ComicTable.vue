@@ -906,6 +906,11 @@ const data: ComicItemType[] = [
   { id: "343426", aScore: 7.6, bScore: 6.8, order: 4, info: "#巨乳 #睡x #装睡 #纯爱 #kino 睡眠学習" },
   { id: "359435", aScore: 8, bScore: 7.1, order: 5, info: "#巨乳 #纯爱 #家庭教师 #kino 睡眠学習" },
   { id: "588201", aScore: 4.6, bScore: 7.7, info: "#巨乳 #同学 #睡x 睡眠学習" },
+  { id: "604258", aScore: 8.5, bScore: 9.6, info: "#纯爱 #合集 #同学" },
+  { id: "561361", aScore: 9.2, bScore: 6.4, info: "#巨乳loli" },
+  { id: "605503", aScore: 7.8, bScore: 6.5, info: "#loli #纯爱 #甘露アメ", bak: "https://telegra.ph/甘露アメ-愛し愛されおさなづま仮-前編-COMIC-LO-2022年3月号-中国翻訳-DL版-10-24" },
+  { id: "605262", aScore: 7, bScore: 8.1, info: "#角 #媚药 #东方", bak: "https://telegra.ph/筆置製作所-鯖野筆置-鬼の萃香さんが快楽堕ちなんてする訳がない-東方project-中国翻訳-DL版-10-22" },
+  { id: "606561", aScore: 9.2, bScore: 5.4, info: "#蔚蓝档案 #合集 #多女主 #loli", bak: "https://telegra.ph/C106-つくてん-円つくも-生徒とのが気持ち良すぎる話-ブルーアーカイブ-中国翻訳-10-30" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
