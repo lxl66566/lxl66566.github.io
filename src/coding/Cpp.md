@@ -128,11 +128,13 @@ xmake 是~~向下兼容 cmake~~ 的构建工具，拥有较为简洁的语法。
   - 一些 LSP （clangd）需要 `compile_commands.json` 来进行正确的 lint，此时需要执行一次 `xmake project -k compile_commands`，然后重启 LSP。
 - 一些预设
   ```lua
-  set_encodings("utf-8")            -- 没加会导致 Qt 中文乱码
+  -- 全局设置
+  set_encodings("utf-8")            -- 建议添加：https://github.com/xmake-io/xmake/issues/2471。没加会导致 Qt 中文乱码。
   set_policy("build.warning", true) -- 开启编译警告
   set_languages("cxxlatest")        -- 设置 C++ 版本
   set_optimize("fastest")           -- 优化等级，不过 release 有默认
   add_requires("fmt")
+  -- 每个编译目标的分别设置
   target("test")
     -- ...
     add_packages("fmt")             -- 添加 fmt 包

@@ -120,8 +120,9 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 
 在这里查看[代码搜索](https://docs.github.com/zh/search-github/github-code-search/understanding-github-code-search-syntax)的详细信息。
 
-- fork 项目默认不出现在搜索页面。而 `fork:only` 仅搜索其 fork 项目，非常好用。
+- fork 项目默认不出现在搜索页面。`fork:only` 仅搜索其 fork 项目。
   - 也可以用第三方的工具：[active-forks](https://techgaun.github.io/active-forks/index.html) 进行搜索。
+  - 如果是 code search 是会搜出 fork 的，这时候取消 fork 的搜索结果可以用 `-is:fork`。
 - 如何查看最新的一次提交记录？([src](https://www.cnblogs.com/saysmy/p/7292177.html))（github 的翻页做的真的垃圾。）
 
 ### 其他搜索工具

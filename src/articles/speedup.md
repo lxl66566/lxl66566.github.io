@@ -1092,9 +1092,19 @@ def callback(in_data, frame_count, time_info, status):
 - 程序同时支持 cli 和 tui，tui 的话我有思考过要不要用 ratatui 做，后面想想这个可以慢慢来，先用 terminal-menu 糊一个。
   - 糊出来发现还挺好用的，这玩意有对 Vec<&str> 专门做过优化，用起来还不错。
 
-最终糊出了初版的 [AudioSpeedHack v0.1.0](https://github.com/lxl66566/AudioSpeedHack)。
+最终糊出了初版的 [AudioSpeedHack v0.1.0](https://github.com/lxl66566/AudioSpeedHack)。不过实际测下来问题还是挺多，详见 issue 与 TODO。
 
-### XAudio2
+基于 dsound.dll 的游戏虽然不少，但占比也绝不算大，这玩意已经是 30 年前的产物了，现在许多新引擎都不会使用 dsound。SPEEDUP 仍有很长的路要走。
+
+### MMDevAPI.dll
+
+于是我把目光投向了 unity 使用的 MMDevAPI.dll 上。这是因为 unity 目前还没有办法通过脚本封包，无法进行 SPEEDUP；而使用 unity 引擎制作的《魔法少女的魔女审判》是我一直很想推的 galgame。
+
+微软实在是可恶，这个 dll 不像 dsound 有 dsoal，xaudio 有 faudio，它没有现成的 wrapper 源码。经过一番搜索，我决定参考 wine 的 MMDevAPI 进行修改。wine 的源码虽然不能直接编译成 windows x64/x86 dll 无缝替换，但是我可以丢给 LLM 参考和抽奖。我尝试使用 [wrap_dll](https://github.com/mavenlin/wrap_dll) 导出 dll wrapper，然后将更改后的源码、所有导出的内容一起喂给 LLM，几轮对话通过编译。
+
+编出的 dll 拿来测试，但是 unity 始终不会加载同目录下的 MMDevAPI.dll，估计是有什么安全机制。尝试把系统 System32 里的 MMDevAPI.dll 替换掉，打开游戏，成功观察到音频加速！再打开我的音高处理软件，就可以愉快游玩 SPEEDUP 版《魔法少女的魔女审判》了！！
+
+这对我来说又是一次鼓舞：因为我之前折腾 [unity 封包](#二试封包)一直受挫，在深刻体会到解封包的局限性和无力感后，能找到一个可行的方向，实在是……意义党逢意义。
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
