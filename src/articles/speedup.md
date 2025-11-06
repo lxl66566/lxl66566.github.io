@@ -1106,6 +1106,20 @@ def callback(in_data, frame_count, time_info, status):
 
 这对我来说又是一次鼓舞：因为我之前折腾 [unity 封包](#二试封包)一直受挫，在深刻体会到解封包的局限性和无力感后，能找到一个可行的方向，实在是……意义党逢意义。
 
+### 遇到的问题
+
+#### 音质下降问题
+
+实际测试发现，AudioSpeedHack 每运行 20 分钟左右音质都会大幅下降，人声都带上了“钢管音”，需要重启。
+
+一开始我想直接一步到位，因为 dll wrapper 的可行性已经确定，而之前阻碍我的一直是 hook 失败而不是加速算法有问题。然后我就尝试 vibe 了一个使用 soundtouch 直接对音频数据进行加速的 dll wrapper，可惜的是其无法正常使用。
+
+dll wrapper 修改的逻辑不多，应该不是那里面的问题，那就只可能是我的音高降低程序的问题了。审查发现是 pitch_shift 库里的 f32 精度丢失问题，打了个 patch。
+
+#### MMDevAPI.dll 加载问题
+
+这个也是老大难了，
+
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
 </script>

@@ -354,7 +354,7 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
 调试宏可以用 [cargo-expand](#扩展)，不需要通过编译就能展开宏。注意！cargo-expand 不保证展开后的运行结果与原代码一致！
 
-- 不加 `#[macro_export]` 的话，定义的宏仅在当前 mod 可用。
+- 不加 `#[macro_export]` 的话，定义的宏仅在当前 mod 可用。加了 `#[macro_export]` 并且当前模块存在于模块树中，则这个宏归属于整个 crate，crate 内使用可以不加模块树前缀。
 - 在其他宏里调非卫生宏不能直接用，需要加 `$crate` 显式指定路径。
 - 可以定义同名宏重载系统宏，但是注意不能在同名宏里调用被重载的系统宏，否则递归。[example](https://github.com/Xavientois/die/pull/3/files)
 - [A Note On Working With Cfg](https://docs.rs/safe_arch/latest/safe_arch/#a-note-on-working-with-cfg)

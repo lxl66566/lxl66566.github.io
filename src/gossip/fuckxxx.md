@@ -633,3 +633,13 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 
 - Rime 标榜自由，但绝非想象中的那么自由。随便看几个 issue 就能发现某些开发者固执己见，拒绝讨论。不过还好也有愿意合并修复的开发者。
 - rime 有一个默认行为就是在全角中文下，数字后加符号会变成半角（[issue#972](https://github.com/rime/librime/issues/972)）。我觉得非常不正常，理论上我在哪个模式下输入就应该是原汁原味的；就算不支持，也需要做一个开关让用户自由切换，而不是到了 2025 年再来修这个 bug。
+
+## sccache 有多难用
+
+[src1](https://t.me/withabsolutex/2491)
+
+- 喜欢我 `sccache: caused by: 远程主机强迫关闭了一个现有的连接。 (os error 10054)` 吗？（0.10.0 观测到此现象，更新后未出现）
+- 文档一坨，想找个 env 的 reference 找半天发现藏在 docs/Configuration.md，首页 readme 没有任何链接指向这个页面。
+- WSL 开了 mirrord，windows 上的 sccache 和 WSL sccache 的会抢端口打架。
+- `SCCACHE_SERVER_PORT` 是一个 undocumented env
+- Permission denied 即使我已经把相关文件夹设了 nixos:users 777。最后设了个 SCCACHE_DIRECT=0 编译才正常。
