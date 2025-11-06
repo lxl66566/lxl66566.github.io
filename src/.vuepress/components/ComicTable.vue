@@ -911,6 +911,8 @@ const data: ComicItemType[] = [
   { id: "605503", aScore: 7.8, bScore: 6.5, info: "#loli #纯爱 #甘露アメ", bak: "https://telegra.ph/甘露アメ-愛し愛されおさなづま仮-前編-COMIC-LO-2022年3月号-中国翻訳-DL版-10-24" },
   { id: "605262", aScore: 7, bScore: 8.1, info: "#角 #媚药 #东方", bak: "https://telegra.ph/筆置製作所-鯖野筆置-鬼の萃香さんが快楽堕ちなんてする訳がない-東方project-中国翻訳-DL版-10-22" },
   { id: "606561", aScore: 9.2, bScore: 5.4, info: "#蔚蓝档案 #合集 #多女主 #loli", bak: "https://telegra.ph/C106-つくてん-円つくも-生徒とのが気持ち良すぎる話-ブルーアーカイブ-中国翻訳-10-30" },
+  { id: "585935", aScore: 6.7, bScore: 6.5, info: "#乳头责 #魔法少女 #前男友 #无插入 #连续绝顶", bak: "https://telegra.ph/もみ子さん-もみ子-敵幹部は元彼マゾ魔法天使-中国翻訳-07-24-2" },
+  { id: "586113", aScore: 8, bScore: 9.2, order: 2, info: "#催眠 #爆肛 #堕落", bak: "https://telegra.ph/ショーソン-幼馴染は闇堕ち聖女2-中国翻訳-DL版-07-25-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
