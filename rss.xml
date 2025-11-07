@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 06 Nov 2025 14:13:58 GMT</pubDate>
-    <lastBuildDate>Thu, 06 Nov 2025 14:13:58 GMT</lastBuildDate>
+    <pubDate>Fri, 07 Nov 2025 12:05:15 GMT</pubDate>
+    <lastBuildDate>Fri, 07 Nov 2025 12:05:15 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -440,7 +440,7 @@
 <ul>
 <li><a href="https://www.okx.com/zh-hans/help/section/announcements-latest-announcements" target="_blank" rel="noopener noreferrer">OKX 公告</a>
 <ul>
-<li>我自己用 RSSHub 做了 <a href="https://docs.rsshub.app/zh/routes/finance#%E6%AC%A7%E6%98%93-okx" target="_blank" rel="noopener noreferrer">OKX 的公告订阅</a>，欢迎使用。</li>
+<li>我自己用 RSSHub 做了 <a href="https://docs.rsshub.app/zh/routes/finance#%E6%AC%A7%E6%98%93-okx" target="_blank" rel="noopener noreferrer">OKX 的公告订阅</a>，欢迎使用。但是话又说回来，OKX 的公告基本都是“事后公告”，也就是先上了币才发公告，所以没什么用，不如去 APP 里看活动。</li>
 </ul>
 </li>
 </ul>
@@ -1023,10 +1023,7 @@
 <p>typst 可能有些难，再不济至少也得用个 <a href="https://github.com/BingyanStudio/LapisCV" target="_blank" rel="noopener noreferrer">markdown 简历模版</a> 吧。</p>
 <p>如果你跟我很熟，可以把 Github 用户名告诉我，我给你开权限看我的简历与招聘全记录。</p>
 <h2>2024 秋招</h2>
-<div class="hint-container tip">
-<p class="hint-container-title">提示</p>
-<p>只显示部分结果（有进度的）；点击列表可以查看详细内容，包括笔试/面试，公司业务和评价。</p>
-</div>
+<p>只展示有进度的部分结果。</p>
 
 <h3>关于测评</h3>
 <ul>
