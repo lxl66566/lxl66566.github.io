@@ -170,7 +170,7 @@ tag:
 交易所会经常发关于新币和活动的公告，可以关注一下：
 
 - [OKX 公告](https://www.okx.com/zh-hans/help/section/announcements-latest-announcements)
-  - 我自己用 RSSHub 做了 [OKX 的公告订阅](https://docs.rsshub.app/zh/routes/finance#欧易-okx)，欢迎使用。
+  - 我自己用 RSSHub 做了 [OKX 的公告订阅](https://docs.rsshub.app/zh/routes/finance#欧易-okx)，欢迎使用。但是话又说回来，OKX 的公告基本都是“事后公告”，也就是先上了币才发公告，所以没什么用，不如去 APP 里看活动。
 
 ### 出金
 

@@ -9,15 +9,9 @@ tag:
 
 # SPEED UP！与 galgame 解封包
 
-::: tip
-
-目前本文的主要内容在 galgame 解封包，[点击跳转](#二试封包)
-
-:::
+本文主要包含了我对 galgame 语音加速的探索全过程。各章节大致按照时间顺序排布。
 
 我打 [galgame](../hobbies/galgame.md) 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 _GINKA_。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，~~相当于延长了一倍的生命~~。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。
-
-之后的文章按照时间顺序排布。
 
 ## 常见音频处理软件
 
@@ -920,6 +914,8 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
 
 多看了一眼，传述之魔女用的其实是 [TyranoScript](https://github.com/ShikemokuMK/tyranoscript)，这个引擎是基于 electron 的。
 
+虽然用的 electron，但是程序写得很烂。
+
 </template>
 <template #unity2>
 
@@ -992,6 +988,8 @@ for bundle in Path("Z:/test").glob("*.bundle"):
 - _魔法少女的魔女审判_ 用的是 il2cpp 后端，使用 [Il2CppDumper](https://github.com/Perfare/Il2CppDumper/releases) 会报 _Can't use auto mode to process file, try manual mode._
   - il2cpp 也不像 mono 后端可以比较方便地注入改 pitch。
 
+折腾了好久都没搞出来，后面用 dll 注入实现加速了。
+
 </template>
 <template #lucasystem>
 
@@ -1020,9 +1018,11 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 二试封包的成功确实给我带来了许多喜悦之情与实用价值。但是仍有一批引擎无法简单地通过这种方式进行加速。在面对它们使尽浑身解数仍无法战胜时，我内心里总有一股深深的无力感。因此我认为 _拆包-加速-封包_ 只是旁门左道，只有注入才是正道。
 
+不过由于能力不足，在接近一年的时间内，我的研究重心全部放在了解封包上。毕竟这对目前的我来说是唯一能实现语音加速的方法。
+
 ## 音频 API hook
 
-公司某些傻逼软件促使我去 hook 它们，成为了此次尝试的契机。
+公司某些傻逼软件促使我去 hook 它们，这次 hook 经验便成为了此次尝试的契机。
 
 重新回到 [pyaudio](#pyaudio) 章节，当前面临的最主要问题就是没法控制游戏本身往音频缓冲区里写入的速度。那我就想了，如果我使用 hook 注入音频 API，人为调整音频 API 的播放速率（可以通过调整播放 sample rate 达到目的），再用软件处理音高，这不就能实现音频加速了？
 
@@ -1052,7 +1052,7 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 [fork 了一个 dsoal](https://github.com/lxl66566/dsoal)，[改了两个 frequency 值](https://github.com/lxl66566/dsoal/commit/3d378aab9bc797e73eae043e1431f11ee2a99bb2?diff=split)，然后把 `dsound.dll` 编译出来。项目质量也确实不错，一次编译过，少有的不需要折腾构建的 C++ 项目。
 
-可能还需要用 [DSWRP](https://github.com/ThreeDeeJay/DSWRP/blob/main/DirectSound%20Wrapper%20Registry%20Patcher.cmd)（改注册表的脚本）让游戏可以从同目录加载 `dsound.dll`。
+可能还需要用 [DSWRP](https://github.com/ThreeDeeJay/DSWRP/blob/main/DirectSound%20Wrapper%20Registry%20Patcher.cmd)（改注册表的脚本）让游戏可以从同目录加载 `dsound.dll`。不设可能也行，可以先尝试一下。
 
 找了一些明确加载 dsound.dll 的游戏，按照 dsoal README 尝试，并没有什么卵用：游戏优先找 `C:\Windows\SysWOW64\dsound.dll`，强制其优先加载本地（同目录下） dsound.dll 需要把系统的 dll 改名。加载本地 dll 后游戏无法播放音频，也没有观察到 DSOAL_LOGFILE 的创建。
 
@@ -1108,17 +1108,23 @@ def callback(in_data, frame_count, time_info, status):
 
 ### 遇到的问题
 
+在开发 dll wrapper 的时候也遇到了许多问题，这里可以记录一下。
+
 #### 音质下降问题
 
 实际测试发现，AudioSpeedHack 每运行 20 分钟左右音质都会大幅下降，人声都带上了“钢管音”，需要重启。
 
 一开始我想直接一步到位，因为 dll wrapper 的可行性已经确定，而之前阻碍我的一直是 hook 失败而不是加速算法有问题。然后我就尝试 vibe 了一个使用 soundtouch 直接对音频数据进行加速的 dll wrapper，可惜的是其无法正常使用。
 
-dll wrapper 修改的逻辑不多，应该不是那里面的问题，那就只可能是我的音高降低程序的问题了。审查发现是 pitch_shift 库里的 f32 精度丢失问题，打了个 patch。
+dll wrapper 修改的逻辑不多，应该不是那里面的问题，那就只可能是我的音高降低程序的问题了。审查发现是 pitch_shift 库里的 f32 精度丢失问题，[打了个 patch](https://github.com/NathanRoyer/pitch_shift/pull/3)。
 
 #### MMDevAPI.dll 加载问题
 
-这个也是老大难了，
+这个也是老大难了，MMDevAPI 有 windows 系统保护，不会加载当前目录的 dll。
+
+本来我以为保护在 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs` 里，但是这里面并没有找到。然后我尝试写了一个 hook，hook 掉程序的 LoadLibraryA/W，但是也没用，所以这个 dll 的系统保护涉及到更底层的机制。
+
+注册表里搜 mmdevapi，搜出几个结果，然后我尝试把它们修改后搬到 HKEY_CURRENT_USER 表里，然后就可以用了。
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";

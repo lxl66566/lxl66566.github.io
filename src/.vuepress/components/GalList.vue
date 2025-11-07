@@ -9,32 +9,34 @@
         hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
     </div>
     <div style="overflow-x: auto; min-width: 0;">
-      <table>
-        <thead>
-          <tr>
-            <th>游戏名</th>
-            <th>时长</th>
-            <th>游玩区间</th>
-            <th>
-              <SortIndicator text="剧情" v-model="sortOrder_story" />
-            </th>
-            <th>
-              <SortIndicator text="画风" v-model="sortOrder_visual" />
-            </th>
-            <th>
-              <SortIndicator text="程序" v-model="sortOrder_program" />
-            </th>
-          </tr>
-        </thead>
-        <tbody :class="{ 'show-strict': show_strict }">
-          <GalListItem v-for="item in filteredResults" :key="item.name + item.order + item.nth_time" :item="item"
-            :expandable="useSlots()[get_valid_name(item)] != undefined">
-            <template #gal-list-item-content>
-              <slot :name="get_valid_name(item)"></slot>
-            </template>
-          </GalListItem>
-        </tbody>
-      </table>
+      <ExpandableHint hint-text="点击表格项目可以展开详细内容哦！">
+        <table>
+          <thead>
+            <tr>
+              <th>游戏名</th>
+              <th>时长</th>
+              <th>游玩区间</th>
+              <th>
+                <SortIndicator text="剧情" v-model="sortOrder_story" />
+              </th>
+              <th>
+                <SortIndicator text="画风" v-model="sortOrder_visual" />
+              </th>
+              <th>
+                <SortIndicator text="程序" v-model="sortOrder_program" />
+              </th>
+            </tr>
+          </thead>
+          <tbody :class="{ 'show-strict': show_strict }">
+            <GalListItem v-for="item in filteredResults" :key="item.name + item.order + item.nth_time" :item="item"
+              :expandable="useSlots()[get_valid_name(item)] != undefined">
+              <template #gal-list-item-content>
+                <slot :name="get_valid_name(item)"></slot>
+              </template>
+            </GalListItem>
+          </tbody>
+        </table>
+      </ExpandableHint>
     </div>
   </div>
 </template>
@@ -49,6 +51,7 @@ import GalListItem from "./GalListItem.vue";
 import { DateDurationCompare, GalItemInputType } from "../definition";
 import Fuse, { IFuseOptions } from "fuse.js";
 import debounce from "./utils/debounce";
+import ExpandableHint from "./ExpandableHint.vue";
 
 const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name;
 const show_strict = ref(false);

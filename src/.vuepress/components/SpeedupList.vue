@@ -1,36 +1,39 @@
 <template>
   <div>
-    <table>
-      <thead>
-        <tr>
-          <th v-for="h in '游戏名 游戏引擎 存档格式 成功拆包加速'.split(' ')">{{ h }}</th>
-        </tr>
-      </thead>
-      <tbody>
-        <ExpandableListItem v-for="item in data" :expandable="useSlots()[item.valid_name] != undefined">
-          <template #list-content>
-            <td>
-              <span v-for="(name, index) in item.names">
-                {{ name }}
-                <br v-if="index < item.names.length - 1" />
-              </span>
-            </td>
-            <td>{{ item.engine ?? "-" }}</td>
-            <td>{{ item.save_format ?? "-" }}</td>
-            <td>{{ item.speedupable ? "✅" : "❌" }}</td>
-          </template>
-          <template #expanded-content>
-            <slot :name="item.valid_name"></slot>
-          </template>
-        </ExpandableListItem>
-      </tbody>
-    </table>
+    <ExpandableHint hint-text="点击表格项目可以展开详细内容哦！">
+      <table>
+        <thead>
+          <tr>
+            <th v-for="h in '游戏名 游戏引擎 存档格式 成功拆包加速'.split(' ')">{{ h }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ExpandableListItem v-for="item in data" :expandable="useSlots()[item.valid_name] != undefined">
+            <template #list-content>
+              <td>
+                <span v-for="(name, index) in item.names">
+                  {{ name }}
+                  <br v-if="index < item.names.length - 1" />
+                </span>
+              </td>
+              <td>{{ item.engine ?? "-" }}</td>
+              <td>{{ item.save_format ?? "-" }}</td>
+              <td>{{ item.speedupable ? "✅" : "❌" }}</td>
+            </template>
+            <template #expanded-content>
+              <slot :name="item.valid_name"></slot>
+            </template>
+          </ExpandableListItem>
+        </tbody>
+      </table>
+    </ExpandableHint>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { useSlots } from "vue";
 import ExpandableListItem from "./ExpandableListItem.vue";
+import ExpandableHint from "./ExpandableHint.vue";
 
 type SpeedupItemType = {
   names: string[];

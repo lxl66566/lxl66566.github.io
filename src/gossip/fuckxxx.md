@@ -166,6 +166,7 @@ tag:
 - vscode wsl 是靠读终端文字内容来提醒用户某某端口可用的，非常脑残。([src](https://t.me/withabsolutex/2436))
 - [符号双击与字符替换问题](https://github.com/microsoft/vscode/issues/251608) ([src](https://t.me/withabsolutex/2392))
 - [在 NVIDIA GPU 下使用有偶发黑屏问题](https://github.com/microsoft/vscode/issues/35527)，issue close 了，但是我还是天天遇到。这个问题已经存在了 8 年。
+- vscode 有一个机制是如果在打开窗口的情况下关机，开机后启动 vscode 会恢复这些窗口。这个机制本身是好的，但是恢复窗口以后这些窗口的相对位置可能发生改变，可能倒序、乱序，这又是什么意思。。而且 win11 是不允许调整窗口顺序的。
 
 ### [cursor](../coding/vscode.md#关于-cursor) 有多难用
 
@@ -633,6 +634,7 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 
 - Rime 标榜自由，但绝非想象中的那么自由。随便看几个 issue 就能发现某些开发者固执己见，拒绝讨论。不过还好也有愿意合并修复的开发者。
 - rime 有一个默认行为就是在全角中文下，数字后加符号会变成半角（[issue#972](https://github.com/rime/librime/issues/972)）。我觉得非常不正常，理论上我在哪个模式下输入就应该是原汁原味的；就算不支持，也需要做一个开关让用户自由切换，而不是到了 2025 年再来修这个 bug。
+- 各种性能问题就不用多说了吧。。我有时候打字快点就可能卡住。不过也有可能是 im 协议的问题而不是 rime 问题就是了。
 
 ## sccache 有多难用
 

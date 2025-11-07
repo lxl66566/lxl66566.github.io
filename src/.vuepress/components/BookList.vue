@@ -1,23 +1,25 @@
 <template>
   <MyCheckBox label="显示网络小说" v-model="show_network" />
   <div>
-    <table>
-      <thead>
-        <tr>
-          <th>书名与作者</th>
-          <th>阅读区间</th>
-          <th>时长</th>
-        </tr>
-      </thead>
-      <tbody :class="{ 'not-show-network': !show_network }">
-        <BookListItem v-for="item in defaultSort(original_list)" :key="item.name + item.order + item.nth_time"
-          :item="item" :expandable="useSlots()[get_valid_name(item)] != undefined">
-          <template #book-list-item-content>
-            <slot :name="get_valid_name(item)"></slot>
-          </template>
-        </BookListItem>
-      </tbody>
-    </table>
+    <ExpandableHint hint-text="点击表格项目可以展开详细内容哦！">
+      <table>
+        <thead>
+          <tr>
+            <th>书名与作者</th>
+            <th>阅读区间</th>
+            <th>时长</th>
+          </tr>
+        </thead>
+        <tbody :class="{ 'not-show-network': !show_network }">
+          <BookListItem v-for="item in defaultSort(original_list)" :key="item.name + item.order + item.nth_time"
+            :item="item" :expandable="useSlots()[get_valid_name(item)] != undefined">
+            <template #book-list-item-content>
+              <slot :name="get_valid_name(item)"></slot>
+            </template>
+          </BookListItem>
+        </tbody>
+      </table>
+    </ExpandableHint>
   </div>
 </template>
 
@@ -28,6 +30,7 @@ import original_list from "../data/book_list.js";
 import "../utils/FormatDate.js";
 import BookListItem from "./BookListItem.vue";
 import { BookItemInputType, BookDuration } from "../definition";
+import ExpandableHint from "./ExpandableHint.vue";
 
 const get_valid_name = (item: BookItemInputType): string => item.valid_name ?? item.name;
 const show_network = ref(true);
