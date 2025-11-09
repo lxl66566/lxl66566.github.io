@@ -150,12 +150,20 @@ tag:
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))
   - 如果你安装了 MS Office，那大概率还会被装上一个 Office PLUS，这是一个傻逼国内代理广告，会污染你的 office 菜单和右键菜单。建议用 everything 搜到 officeplus 的安装文件夹，然后点击 uninst.exe 卸载。
   - 搜索 _任务计划程序_，禁用一些用不到的任务，例如 AMD auto update, OneDrive 等。
+  - 修改一些注册表项。
+    ```reg
+    Windows Registry Editor Version 5.00
+    ; https://learn.microsoft.com/zh-cn/answers/questions/2379006/edge-msn
+    [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet]
+    "EnableActiveProbing"=dword:00000000
+    ```
 - 开启 _运行_ 历史记录：_设置 - 隐私和安全性 - 常规 - 允许 Windows 跟踪应用启动以改进“开始"和搜索结果_。此设置项默认开启的，之前不小心被某个脚本关了。
 - 设置 Explorer：
   - 使用 [WinSetView](https://github.com/lesferch/WinSetView/) 将 _音乐_ 文件夹 view 设为小图标。否则当你打开一个装满音乐的文件夹时，Explorer 将会去读取所有文件的元数据，会导致卡顿。([src](https://answers.microsoft.com/en-us/windows/forum/windows_11-files/how-to-prevent-windows-explorer-from-reading/c123eab1-e5a5-4124-bf20-68f67a08e47b?messageId=b010aeba-a852-40e7-8732-8f67cb4fd1ed))
   - 安装 [svg-explorer-extension](https://github.com/tibold/svg-explorer-extension) 插件，让 Explorer 可以预览 svg。
 - 输入法：详见 [输入法](./input_method.md) 文章。要把微软拼音禁用，需要在 _语言和区域_ 的语言中进入 _简体中文_ 的 _语言选项_，在里面删除键盘。
 - 小键盘：如果你的 windows 启动不会自动打开 numslock，需要在注册表中找到 `计算机\HKEY_USERS\.DEFAULT\Control Panel\Keyboard`，将 `InitialKeyboardIndicators` 改为 2。
+- 浏览器：参考 [浏览器设置](./browser/settings.md)
 
 ### 旧设置项
 

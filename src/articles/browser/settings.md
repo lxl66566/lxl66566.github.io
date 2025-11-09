@@ -63,9 +63,11 @@ tag:
 1. _设置 - 隐私、搜索和服务 - 安全性_，关闭 _阻止可能不需要的应用_
 2. [关闭部分快捷键](https://learn.microsoft.com/en-us/answers/questions/2360286/disable-keyboard-shortcuts-in-edge?forum=microsoftedge-all&referrer=answers)。sb 微软各种没用的东西占用我的快捷键，真忍不了。
    ```reg
+   Windows Registry Editor Version 5.00
    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
    "ConfigureKeyboardShortcuts"="{\"disabled\":[\"paste_and_go\",\"send_feedback\",\"focus_inactive_notification\"]}"
    ```
+3. _系统和性能/系统_ 中，关闭 _启动增强_ 和 _关闭 Microsoft Edge 后继续运行后台扩展和应用_。
 
 ## kiwi browser
 
