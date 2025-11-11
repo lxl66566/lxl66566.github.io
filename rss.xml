@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 09 Nov 2025 15:04:28 GMT</pubDate>
-    <lastBuildDate>Sun, 09 Nov 2025 15:04:28 GMT</lastBuildDate>
+    <pubDate>Tue, 11 Nov 2025 15:11:12 GMT</pubDate>
+    <lastBuildDate>Tue, 11 Nov 2025 15:11:12 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -1174,6 +1174,7 @@
 <p>和 zerotier、tailscale 故意区分了不同端相比，easytier 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch</p>
 </blockquote>
 <p>实际用起来的话，感受是文档非常不清楚，没有一个 full config example，全是命令行。并且默认情况下它会将你的服务器连到大网络里，消耗你的流量；除非你开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。</p>
+<p>easytier 的一个非常致命的问题是其没有过墙能力，而我的 VPS 全都在国外，所以还是御免了。</p>
 <h2>zerotier</h2>
 <p><a href="https://openwrt.org/docs/guide-user/services/vpn/zerotier" target="_blank" rel="noopener noreferrer">据说</a> openwrt 是有 zerotier 的软件包的，但是我在 iStoreOS 里一点也找不到，不知道是 iStoreOS 的 fork 问题还是 opkg 的问题。</p>
 <p>然后我想直接下载 binary，结果发现<a href="https://www.zerotier.com/download" target="_blank" rel="noopener noreferrer">下载页面</a>里只有 rpm/deb 系的，Github release 里也找不到 binary。合着其他发行版就不配装你的程序了？</p>
