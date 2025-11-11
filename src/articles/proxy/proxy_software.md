@@ -164,7 +164,7 @@ scoop install v2raya
 
 ### V2rayNG
 
-v2ray 的 Android 前端。
+v2ray 的 Android 前端。不太好用。
 
 ### [NekoRay](https://github.com/MatsuriDayo/nekoray)
 

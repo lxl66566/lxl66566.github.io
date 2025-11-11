@@ -111,7 +111,7 @@ tag:
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
 - [ ] rust TUI easy_download
-- [ ] ~~GalgameManager~~ <https://github.com/GoldenPotato137/PotatoVN> ?
+- [ ] ~~GalgameManager~~ <https://github.com/GoldenPotato137/PotatoVN> + <https://github.com/mcthesw/game-save-manager> ?
   - [ ] 随机启动 计时
   - [ ] 插件与启动链
   - [ ] 计时
@@ -133,6 +133,9 @@ tag:
 - [ ] bash compitable modern shell
 - [ ] telegram index bot, no ads and reviewed by human
 - [ ] windows fast settings，[Windows11 轻松设置工具](../articles/windows_setting.md#小工具) 的增强版，添加我需要的功能。
+- [ ] rewrite of easytier
+  - [ ] Raft supported by [hiqlite](https://github.com/sebadob/hiqlite)
+  - [ ] ability to bypass GFW
 
 ### RIIR
 

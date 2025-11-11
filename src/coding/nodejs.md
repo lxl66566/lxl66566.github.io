@@ -31,6 +31,7 @@ bun 是 Rust 写的 js 运行时，自带包管理器，并且比 deno 快。
 [bun 的一些 API 设计](https://bun.sh/guides/runtime)非常对我的胃口，特别是 system command。
 
 - 不过跨平台差了点。我在 2023 年就尝试过 bun 了。当时刚宣布支持 windows，结果疯狂 crash，就是一坨。不过现在倒是稳定了许多，即使现在还是有很多 crash 报告。
+- bun 1.3 后可以使用 [isolated installs](https://bun.com/docs/pm/cli/install#isolated-installs) 模拟 pnpm 的软链接特性。
 
 @tab deno
 

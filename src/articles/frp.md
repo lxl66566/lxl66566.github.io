@@ -41,6 +41,8 @@ cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
 
 实际用起来的话，感受是文档非常不清楚，没有一个 full config example，全是命令行。并且默认情况下它会将你的服务器连到大网络里，消耗你的流量；除非你开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。
 
+easytier 的一个非常致命的问题是其没有过墙能力，而我的 VPS 全都在国外，所以还是御免了。
+
 ## zerotier
 
 [据说](https://openwrt.org/docs/guide-user/services/vpn/zerotier) openwrt 是有 zerotier 的软件包的，但是我在 iStoreOS 里一点也找不到，不知道是 iStoreOS 的 fork 问题还是 opkg 的问题。
