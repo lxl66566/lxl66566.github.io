@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 11 Nov 2025 15:11:12 GMT</pubDate>
-    <lastBuildDate>Tue, 11 Nov 2025 15:11:12 GMT</lastBuildDate>
+    <pubDate>Fri, 14 Nov 2025 12:42:32 GMT</pubDate>
+    <lastBuildDate>Fri, 14 Nov 2025 12:42:32 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -363,10 +363,11 @@
       <link>https://absx.pages.dev/articles/android_player.html</link>
       <guid>https://absx.pages.dev/articles/android_player.html</guid>
       <source url="https://absx.pages.dev/rss.xml">Android 音乐播放器横评</source>
-      <description>Android 音乐播放器横评 播放器这个赛道虽然已经卷得要死，但各种产品看起来总是大同小异，并且总有些我不满意的地方。 许多 material 风格，许多产品只注重外观，而不注重用户交互体验。 每个播放器都会扫描全局音频，然后在播放器首页把我的音乐和录音和其他奇奇怪怪的音频全部混在一起。 因此，听音乐需要划定一个范围，一般使用文件夹模式。然而有的播放...</description>
+      <description>Android 音乐播放器横评 友情提醒：对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！() 播放器这个赛道虽然已经卷得要死，但各种产品看起来总是大同小异，并且总有些我不满意的地方。 许多 material 风格，许多产品只注重外观，而不注重用户交互体验。 每个播放器都会扫描全局音频，然后在播放器首页把我的音乐和录音和其他奇奇怪怪的音...</description>
       <category>推荐</category>
       <pubDate>Fri, 07 Feb 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<p>友情提醒：对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！(<a href="/articles/mobile/settings.html#before-root" target="_blank">src</a>)</p>
 <p>播放器这个赛道虽然已经卷得要死，但各种产品看起来总是大同小异，并且总有些我不满意的地方。</p>
 <ol>
 <li>许多 material 风格，许多产品只注重外观，而不注重用户交互体验。</li>
