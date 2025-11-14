@@ -38,13 +38,12 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
   - [配置技巧](https://stackoverflow.com/questions/75639719/decrease-mistake-severity-for-ruff-python-linter-in-vscode-extension)
   - ruff 的 formatter [几乎与 black 兼容](https://docs.astral.sh/ruff/faq/#is-the-ruff-linter-compatible-with-black)，因此可以放心用。
     - python 的代码风格非常统一，是一件好事。（反观隔壁 `.clang-format` 行数）
-- **Pylance** - Microsoft，主要用于提供 inlay hints 和 type checker。
-  - inlay hints 比较重要，可以提早发现问题。之前被坑过
-  - inlay hints 默认关闭，需要手动开启。在设置里搜 `inlay hints`，把 Pylance 提供的四个都开起来。
+- **Pyrefly** - meta，python linter，平替 Pylance 而且还快。
+- ~~**Pylance** - Microsoft，主要用于提供 inlay hints 和 type checker。~~
+  - ~~inlay hints 比较重要，可以提早发现问题。之前被坑过。inlay hints 默认关闭，需要手动开启。在设置里搜 `inlay hints`，把 Pylance 提供的四个都开起来。~~
 - 其他扩展可选：
-  - 2025 年了，python 的 type checker 发展迅速，也可以使用 pyrefly 替换 pylance，优点是快速。
-- ~~(optional) **isort** - Microsoft：提供 import 排序，formatter。~~ 如果用 ruff 就不需要这个了
-- ~~(optional) **Black Formatter** - Microsoft：formatter~~ 如果用 ruff 就不需要这个了
+  - ~~(optional) **isort** - Microsoft：提供 import 排序，formatter。~~ 如果用 ruff 就不需要这个了
+  - ~~(optional) **Black Formatter** - Microsoft：formatter~~ 如果用 ruff 就不需要这个了
 
 #### 我的配置
 
