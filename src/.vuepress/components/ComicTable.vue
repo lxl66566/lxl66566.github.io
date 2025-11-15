@@ -153,7 +153,6 @@ const data: ComicItemType[] = [
   { id: "479268", aScore: 4, bScore: 4.1, info: "#巨乳" },
   { id: "470499", aScore: 8.3, bScore: 9.2, info: "#催眠 #制服 #露出", bak: "https://telegra.ph/caburibbon-caburi-SSSDI-中国翻訳-無修正-DL版-08-28" },
   { id: "(not found)", aScore: 6.8, bScore: 0.4, info: "#兄妹 #fd", order: -1, otherlink: "https://telegra.ph/COMIC120-squeezecandyheaven-いちはや-妹とロックダウン-HELLorHEAVENのおまけ-中国翻訳-08-02" },
-  { id: "498376", aScore: 8, bScore: 6.4, info: "#按摩 #兽耳", bak: "https://telegra.ph/描き下ろしアイドルちゃんはとろけたい白杨X无糖联合汉化-02-26" },
   { id: "498986", aScore: 6.9, bScore: 4.5, info: "#蔚蓝档案" },
   { id: "485159", aScore: 4, bScore: 4.6, info: "#兽耳", bak: "https://telegra.ph/ノアの方舟-ノア-きつねの嫁入り-中国翻訳-12-08-2" },
   { id: "492191", aScore: 9, bScore: 5, info: "#纯爱 #蔚蓝档案" },
@@ -913,6 +912,7 @@ const data: ComicItemType[] = [
   { id: "606561", aScore: 9.2, bScore: 5.4, info: "#蔚蓝档案 #合集 #多女主 #loli", bak: "https://telegra.ph/C106-つくてん-円つくも-生徒とのが気持ち良すぎる話-ブルーアーカイブ-中国翻訳-10-30" },
   { id: "585935", aScore: 6.7, bScore: 6.5, info: "#乳头责 #魔法少女 #前男友 #无插入 #连续绝顶", bak: "https://telegra.ph/もみ子さん-もみ子-敵幹部は元彼マゾ魔法天使-中国翻訳-07-24-2" },
   { id: "586113", aScore: 8, bScore: 9.2, order: 2, info: "#催眠 #爆肛 #堕落", bak: "https://telegra.ph/ショーソン-幼馴染は闇堕ち聖女2-中国翻訳-DL版-07-25-2" },
+  { id: "608201", aScore: 6.4, bScore: 9, info: "#纯爱 #巨乳 #魔王 #同学" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -4,9 +4,17 @@ const original_list: GalItemInputType[] = [
   {
     name: "魔法少女的魔女审判",
     other_names: ["manosaba", "魔法少女ノ魔女裁判", "魔裁"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "17h20min",
+    intense: true,
+    all_ages: true,
     duration: {
       start: "2025-11-02",
+      end: "2025-11-14",
+    },
+    score: {
+      story: 9,
+      visual: 9.5,
+      program: 5.1,
     },
   },
   {
@@ -482,10 +490,15 @@ const original_list: GalItemInputType[] = [
     name: "旭光のマリアージュ",
     other_names: ["旭光的婚礼"],
     namaniku: true,
-    use_time: "-5min",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "21h29min",
     duration: {
       start: "2025-03-23",
+      end: "2025-11-15",
+    },
+    score: {
+      story: 6.8,
+      visual: 6.5,
+      program: 7.8,
     },
   },
   {
@@ -1153,7 +1166,7 @@ const original_list: GalItemInputType[] = [
     other_names: ["アマツツミ"],
     use_time: "18h26min",
     score: {
-      story: 6.5,
+      story: 6.7,
       visual: 5.5,
       program: 7.8,
     },
