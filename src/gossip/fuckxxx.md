@@ -645,3 +645,16 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - WSL 开了 mirrord，windows 上的 sccache 和 WSL sccache 的会抢端口打架。
 - `SCCACHE_SERVER_PORT` 是一个 undocumented env
 - Permission denied 即使我已经把相关文件夹设了 nixos:users 777。最后设了个 SCCACHE_DIRECT=0 编译才正常。
+
+## 蓝牙耳机有多难用
+
+[src](https://t.me/withabsolutex/2546)
+
+- 一切的元凶：绝对音量模式（默认开）。假设实际音量是系统音量（SV）与设备音量（DV）的乘积，绝对音量模式会让你**只能调整 SV 而无法调整 DV**。
+  - 如果 SV 与 DV 范围均为 1-10，而 DV 出厂即设为 10，则实际音量最小就是 10。这就导致即使系统音量调到最低，耳机声音仍然偏高。
+  - 该模式会导致：**首次连接设备时，系统音量自动拉到设备预设值（50 或 100），损伤听力。** 我已经被坑了两次了。
+  - 关闭：Windows `reg add HKLM\SYSTEM\ControlSet001\Control\Bluetooth\Audio\AVRCP\CT /v DisableAbsoluteVolume /t REG_DWORD /d 1 /f`，Android 在开发者模式里关闭。
+  - 请使用 [volume-locker](https://github.com/felipecrs/volume-locker) 锁定音量，避免被自动调整。
+- 我不明白为什么这些耳机的响度水平都是按照外放去做的，手机调 60% 以上就完全是工作在外放模式，有人买蓝牙耳机是为了外放广场舞曲吗？
+- Android 应用都有自由调整音量的权限，没有产品关心用户的听力，没有开发者从 O 泡事件中吸取了教训。
+- 蓝牙耳机为了降低重量，耳罩一般都会做得又小又闷，带上去真的很难受。

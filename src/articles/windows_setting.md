@@ -156,6 +156,9 @@ tag:
     ; https://learn.microsoft.com/zh-cn/answers/questions/2379006/edge-msn
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet]
     "EnableActiveProbing"=dword:00000000
+    ; 禁用蓝牙绝对音量，非常重要：https://t.me/withabsolutex/2546
+    [HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Bluetooth\Audio\AVRCP\CT]
+    "DisableAbsoluteVolume"=dword:00000001
     ```
 - 开启 _运行_ 历史记录：_设置 - 隐私和安全性 - 常规 - 允许 Windows 跟踪应用启动以改进“开始"和搜索结果_。此设置项默认开启的，之前不小心被某个脚本关了。
 - 设置 Explorer：

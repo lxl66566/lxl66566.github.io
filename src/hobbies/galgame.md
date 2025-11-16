@@ -7,6 +7,7 @@ tag:
   - 二次元
   - 游戏
   - 艺术
+  - Galgame
 ---
 
 # galgame

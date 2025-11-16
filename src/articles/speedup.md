@@ -3,13 +3,19 @@ date: 2024-07-27
 icon: gamepad
 category:
   - 教程
+  - 探索
 tag:
   - Windows
+  - Galgame
+  - 游戏
+  - 音频
 ---
 
 # SPEED UP！与 galgame 解封包
 
 本文主要包含了我对 galgame 语音加速的探索全过程。各章节大致按照时间顺序排布。
+
+主要内容在：[二试封包](#二试封包) 和 [dll wrapper](#dll-wrapper)
 
 我打 [galgame](../hobbies/galgame.md) 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 _GINKA_。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，~~相当于延长了一倍的生命~~。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。
 
@@ -1036,6 +1042,8 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 ## dll wrapper
 
+成果请看 [AudioSpeedHack](https://github.com/lxl66566/AudioSpeedHack)。
+
 沿用之前思路。如果不好 hook 音频，那么就直接改源码，编出一个 dsound wrapper 用会怎么样呢？
 
 这些音频 API 都是闭源的，但是有一些开源第三方实现可以使用。
@@ -1094,7 +1102,7 @@ def callback(in_data, frame_count, time_info, status):
 
 最终糊出了初版的 [AudioSpeedHack v0.1.0](https://github.com/lxl66566/AudioSpeedHack)。不过实际测下来问题还是挺多，详见 issue 与 TODO。
 
-基于 dsound.dll 的游戏虽然不少，但占比也绝不算大，这玩意已经是 30 年前的产物了，现在许多新引擎都不会使用 dsound。SPEEDUP 仍有很长的路要走。
+后来根据 MMDevAPI 的 hook 经验，又折腾出了不基于 OpenAL 的 dsound wrapper，相比之下体积更小。
 
 ### MMDevAPI.dll
 
@@ -1108,7 +1116,7 @@ def callback(in_data, frame_count, time_info, status):
 
 ### 遇到的问题
 
-在开发 dll wrapper 的时候也遇到了许多问题，这里可以记录一下。
+在开发 dll wrapper 的时候也遇到了许多问题，这里记录一下。
 
 #### 音质下降问题
 
@@ -1125,6 +1133,34 @@ dll wrapper 修改的逻辑不多，应该不是那里面的问题，那就只�
 本来我以为保护在 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs` 里，但是这里面并没有找到。然后我尝试写了一个 hook，hook 掉程序的 LoadLibraryA/W，但是也没用，所以这个 dll 的系统保护涉及到更底层的机制。
 
 注册表里搜 mmdevapi，搜出几个结果，然后我尝试把它们修改后搬到 HKEY_CURRENT_USER 表里，然后就可以用了。
+
+#### dsound 在 2 倍速以上循环播放
+
+使用 dsoal 修改而来的 dsound 会出现 2 倍速以上语音重复播放的问题，某一段 buffer 的语音会被重放，而且倍速越高，重放的频率越大，这几乎肯定是应用的音频数据填充 buffer 的速率不足的原因。查看 OpenAL 代码发现 AL_PITCH 有一个硬性限制：
+
+```c
+/**
+ * Source pitch.
+ * Type:    ALfloat
+ * Range:   [0.5 - 2.0]
+ * Default: 1.0
+ *
+ * A multiplier for the sample rate of the source's buffer.
+ */
+#define AL_PITCH                                 0x1003
+```
+
+emmm，难道要我再改 OpenAL 代码吗？
+
+后来不再基于 OpenAL，直接 hook dsound，结果还是发现有这个问题，原来这是 dsound 本身的限制啊。
+
+有试过手动降采样，直接硬去掉一半数据点肯定不行，有混叠；用 speex 库做降采样吧，然后发现降采样后程序给的音频数据仍然是以 2.0 速率给出，说明这是一个比直接操作 buffer 还要更底层的限制。那我真没辙了。
+
+#### MMDevAPI 特定倍速无声
+
+最初版的 MMDevAPI 在 1.5 和 2.0 倍速下可以正常工作，但是 1.7 或 1.8 倍速就无声了。
+
+LLM 提出应该是一些小数计算导致采样率没对上。然后增加了四舍五入机制，1.7、1.8 倍速就可以使用了；但是仍然有一些倍速，例如 2.3 倍速仍然无声，可能是程序还有一些问题。
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
