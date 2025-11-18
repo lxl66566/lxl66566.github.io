@@ -913,6 +913,7 @@ const data: ComicItemType[] = [
   { id: "585935", aScore: 6.7, bScore: 6.5, info: "#乳头责 #魔法少女 #前男友 #无插入 #连续绝顶", bak: "https://telegra.ph/もみ子さん-もみ子-敵幹部は元彼マゾ魔法天使-中国翻訳-07-24-2" },
   { id: "586113", aScore: 8, bScore: 9.2, order: 2, info: "#催眠 #爆肛 #堕落", bak: "https://telegra.ph/ショーソン-幼馴染は闇堕ち聖女2-中国翻訳-DL版-07-25-2" },
   { id: "608201", aScore: 6.4, bScore: 9, info: "#纯爱 #巨乳 #魔王 #同学" },
+  { id: "547654", aScore: 9, bScore: 9, info: "#蔚蓝档案 #兽耳 #礼服 #纯爱" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
