@@ -523,15 +523,16 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | ---------- | ---------- |
 | anyhow / thiserror | 错误处理，anyhow 用于 bin，thiserror 用于 lib  |
 | arc_swap | 高性能的读多写少并发容器 |
-| tokio      | 异步       |
-| serde | 序列化 |
-| reqwest[^5]  | 简单网络 |
+| tokio | 异步运行时 |
+| serde | 序列化与反序列化 |
+| reqwest[^5]  | 高层次的 Http Client |
 | clap / palc | 命令行工具，后者是为了减小二进制体积而使用的 |
-| tempfile | 创建自动销毁的临时文件夹 |
-| rayon | CPU 负载并发 |
+| tempfile | 创建自动销毁的临时文件/文件夹 |
+| rayon | 易于使用的线程级并发库，针对 CPU 负载任务 |
 | indicatif | progress bar |
 | colored / simply-colored | 命令行颜色输出，后者更适合用于 no_std |
 | rand / smallrand | 随机数，后者更适合用于 no_std |
+| parking_lot | 一个解锁分配更公平的、没有 poison 的互斥锁 |
 
 [^5]: 为避免傻逼 openssl 造成的影响，一般建议起手 `reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "http2", "charset", "system-proxy"] }`。
 
@@ -827,3 +828,4 @@ articles:
 15. [Fast Rust Builds](https://matklad.github.io/2021/09/04/fast-rust-builds.html)
 16. [幽灵索引类型与匿名结构体](https://nihil.cc/posts/phantom_index_type/)
 17. [Rust 中常见的有关生命周期的误解](https://github.com/pretzelhammer/rust-blog/blob/master/posts/translations/zh-hans/common-rust-lifetime-misconceptions.md)
+18. [Inside Rust's std and parking_lot mutexes - who wins?](https://blog.cuongle.dev/p/inside-rusts-std-and-parking-lot-mutexes-who-win)

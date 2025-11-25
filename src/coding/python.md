@@ -749,11 +749,15 @@ ORM (Object-relational mapping)，数据关系映射。此处特指 python 实�
 
 ## 后端框架
 
+### FastAPI
+
+FastAPI 是 python 里非常常用的 RESTful API 框架。我在我的毕设里也选用了这个框架。
+
+FastAPI 并不 fast，不要被名字骗了。主要还是因为 asyncio 比较慢吧，人家以快著称的框架例如 [FastWSGI](https://github.com/jamesroberts/fastwsgi) 已经抛弃 asyncio，转用 libuv 了。
+
 ### django
 
-django 能够快速搭建一个网站。
-
-django 的前后端是深度耦合的，前端大概只能使用传统三件套（但是据说可以用 GraphQL 做中间层与框架式前端进行交互，没试过），后端自然就是 python 了。
+django 的前后端是深度耦合的，前端大概只能使用传统三件套（但是据说可以用 GraphQL 做中间层与框架式前端进行交互，没试过），后端自然就是 python 了。前后端耦合的设计在之前还挺受欢迎的，因为建站快。但是在后 AI 时代这个优势已经被磨平了。
 
 #### 数据库
 
