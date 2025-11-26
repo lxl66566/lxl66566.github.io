@@ -1040,9 +1040,7 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 - [PolyHook2](https://github.com/stevemk14ebr/PolyHook_2_0)：这货基本没有文档，蒜鸟蒜鸟。
 
-## dll wrapper
-
-成果请看 [AudioSpeedHack](https://github.com/lxl66566/AudioSpeedHack)。
+## dll wrapper V0
 
 沿用之前思路。如果不好 hook 音频，那么就直接改源码，编出一个 dsound wrapper 用会怎么样呢？
 
@@ -1100,9 +1098,7 @@ def callback(in_data, frame_count, time_info, status):
 - 程序同时支持 cli 和 tui，tui 的话我有思考过要不要用 ratatui 做，后面想想这个可以慢慢来，先用 terminal-menu 糊一个。
   - 糊出来发现还挺好用的，这玩意有对 Vec<&str> 专门做过优化，用起来还不错。
 
-最终糊出了初版的 [AudioSpeedHack v0.1.0](https://github.com/lxl66566/AudioSpeedHack)。不过实际测下来问题还是挺多，详见 issue 与 TODO。
-
-后来根据 MMDevAPI 的 hook 经验，又折腾出了不基于 OpenAL 的 dsound wrapper，相比之下体积更小。
+最终糊出了初版的 [AudioSpeedHack v0.1.0](https://github.com/lxl66566/AudioSpeedHack/releases/tag/v0.1.0)。不过实际测下来问题还是挺多，详见 issue 与 TODO。
 
 ### MMDevAPI.dll
 
@@ -1161,6 +1157,46 @@ emmm，难道要我再改 OpenAL 代码吗？
 最初版的 MMDevAPI 在 1.5 和 2.0 倍速下可以正常工作，但是 1.7 或 1.8 倍速就无声了。
 
 LLM 提出应该是一些小数计算导致采样率没对上。然后增加了四舍五入机制，1.7、1.8 倍速就可以使用了；但是仍然有一些倍速，例如 2.3 倍速仍然无声，可能是程序还有一些问题。
+
+暂时先放着了，现在全身心投入到 V1 的开发中。
+
+## dll wrapper V1
+
+V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是比较大的。
+
+最大的问题还是音质，即使修了[音质下降](#音质下降问题)问题，pitch_shift 还是难担加速重任，其使用的算法比较初级，在处理人声时效果较差，表现就是我推 gal 基本都无法开外放，只能戴耳机，隔绝环境音拯救一下音质。
+
+于是我又一次（已经数不清是第几次）将目光投向了 SoundTouch 上。如果我直接拿到 buffer 数据然后用 ST 对原始数据进行不变调加速呢？WSOLA 的效果还是相当值得信任的，毕竟天天解封包然后 ffmpeg 加速也是用的 WSOLA。
+
+恰逢 Gemini 出了 3 pro，我便乘着 LLM 升级的西风开始了 V1 的迁移工作。
+
+### dsound.dll
+
+由于有了 V0 的 code base，我不必从 0 开始让 LLM 生成，直接把 V0 code 和需求喂给它即可。经过几轮 review 和性能优化，直接成功加速。顺带分析了一下 APP 可能调用的函数，增大 hook 覆盖面，解决掉了 [issue #3](https://github.com/lxl66566/AudioSpeedHack/issues/3)。Gemini 3 pro，神！
+
+### MMDevAPI.dll
+
+首先将 dsound.dll 里使用的 SoundTouch 提取成一个单独的 AudioProcessor.h，方便复用。然后如法炮制。但是这次则没有 dsound.dll 那么好的运气了，这样写出的 dll 有两个问题：
+
+1. 魔裁的背景音乐没问题，但是人声断续
+2. 在 _恋狱～月狂病～_/_ふゆから、くるる。_ 上均有不同程度的卡顿、音量飘忽不定或静音问题。
+
+第一个问题好解决，随便尝试了下，给 ST 到声卡加了个缓冲区就解决了，甚至没有正经排查过。（根据后续日志，可以认为原因是 ST 会攒一定数据才会跑一次加速，默认参数 ST 的单次输出数据量可能超出声卡缓冲区大小。）
+
+第二个问题就太棘手了，搞了好几天都查不出问题；即使给出 log，LLM 也会在几个错误解法上反复横跳。我尝试了很多方向：
+
+- 双缓冲，input 侧也放了一个 RingBuf。（后来发现完全没用，SoundTouch 内部已经有缓冲区了，自己会攒一定数据才进行一次加速。）
+- 修改 input 缓冲的驱动数据量。（也没用，理由同上）
+- 发现这个问题有点复杂，做个 logger 吧，把 APP 喂音频时，缓冲区状态和声卡状态都打出来。后续还加了更多打印的日志，比如 ST 每次处理的输入和输出量（然后才发现 ST 的工作逻辑）。
+- Backpressure 策略，GetCurrentPadding 不能进入“长时间一直返回 0”的循环，否则应用会快速输出数据顶爆 RingBuf。目前的策略是根据 output RingBuf 做二值化。
+- 当前架构是专门开一个 Worker 线程，其一个职责是把输出缓冲区的数据喂给声卡。Worker 线程处理完数据后，因为系统调度原因实际 sleep 得比较久，硬件缓冲区就会见底导致卡顿。本来 Worker 线程是靠 sleep 处理的，这个精度太差了，16ms 够声卡爆炸好几次了。先优化成 timeBeginPeriod(1)，后来直接改成靠声卡的 event 驱动。
+- 给 ST 的 output 加了一个写数据到 WAV 的过程用于调试。这时候的音频是连续非卡顿的，但也有高糊、音量不定问题。
+
+然而所有这些修改都没有解决问题。
+
+直到我把 ST 的 input 也打到 WAV 里，发现从 input 开始音频就已经不对劲，然后才定位到问题根因：初始化 IAudioClient 时如果使用的是 `WAVEFORMATEXTENSIBLE` 而非 `WAVEFORMATEX`，则真正的格式信息存储在扩展部分的 SubFormat 中。当前 AudioProcessor 的格式处理错了，然后跟 ST 对异常响度处理的内部机制混在一起，导致问题不明显。
+
+问题解决后，再做一下 dsound 兼容、调参平衡延迟和稳定性，就可以投入使用了。~~立刻开打《ふゆから、くるる。》！不对我怎么还要上班 T_T~~
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";

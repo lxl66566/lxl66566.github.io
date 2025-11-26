@@ -25,6 +25,8 @@ Rime 是一个高度自定义化、跨 Windows、Linux、macOS、Android 的输�
 
 [这里](https://github.com/lxl66566/rime)是我的配置。具体使用方法请看 README。
 
+我的配置里最大的不同点就是关闭了 userdb，这点在 README 里有提到。
+
 ### 词库
 
 Rime 非常自由，也就是词库也需要自己准备。但是我认为现有的许多词库的质量都非常低（[src](https://t.me/withabsolutex/2106)）。因此我尝试制作自己的词库。
