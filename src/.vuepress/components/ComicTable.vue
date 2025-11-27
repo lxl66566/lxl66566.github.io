@@ -914,6 +914,9 @@ const data: ComicItemType[] = [
   { id: "586113", aScore: 8, bScore: 9.2, order: 2, info: "#催眠 #爆肛 #堕落", bak: "https://telegra.ph/ショーソン-幼馴染は闇堕ち聖女2-中国翻訳-DL版-07-25-2" },
   { id: "608201", aScore: 6.4, bScore: 9, info: "#纯爱 #巨乳 #魔王 #同学" },
   { id: "547654", aScore: 9, bScore: 9, info: "#蔚蓝档案 #兽耳 #礼服 #纯爱" },
+  { id: "603712", aScore: 6, bScore: 10, info: "#鬼 #老者 #轮回 #强制性交 #NTR? #孕肚 稗堕" },
+  { id: "611363", aScore: 8.8, bScore: 6, info: "#小恶魔 #泳装 #巨乳" },
+  { id: "611648", aScore: 9, bScore: 5.7, info: "#hololive #傲娇" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

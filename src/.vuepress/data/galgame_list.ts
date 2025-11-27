@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "ふゆから、くるる。",
+    valid_name: "ふゆからくるる",
+    other_names: ["冬滚滚"],
+    duration: {
+      start: "2025-11-26",
+    },
+  },
+  {
     name: "魔法少女的魔女审判",
     other_names: ["manosaba", "魔法少女ノ魔女裁判", "魔裁"],
     use_time: "17h20min",
