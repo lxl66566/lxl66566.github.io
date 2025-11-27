@@ -33,7 +33,6 @@ CS 自学：
 - [ ] [开发各类应用](../hide/inspiration.md#编程灵感)
 - [x] osu reform β pass
 - [ ] 算法类(?)
-- [ ] CTF(?)
 
 ## 有生之年
 

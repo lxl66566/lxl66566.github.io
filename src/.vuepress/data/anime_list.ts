@@ -337,7 +337,10 @@ const original_list: AnimeItemInputType[] = [
   },
   {
     name: "某科学的超电磁炮",
-    valid_name: "某科学的超电磁炮1",
+    order: 2,
+  },
+  {
+    name: "某科学的超电磁炮",
     order: 1,
     duration: {
       start: "2020-02-14",

@@ -498,7 +498,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-bloat](https://github.com/RazrFalcon/cargo-bloat)|Find out what takes most of the space in your executable.|
 | [cargo-expand](https://github.com/dtolnay/cargo-expand)|展开宏|
 | [cargo-msrv](https://github.com/foresterre/cargo-msrv) | Find the minimum supported Rust version (MSRV) for your project |
-| [cargo-wizard](https://github.com/Kobzol/cargo-wizard)|提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般。|
+| [cargo-wizard](https://github.com/Kobzol/cargo-wizard)|提供编译模板以配置为最大性能、快速编译时间或最小二进制大小。感觉一般，对于新手还行，老手不都有自己的模板吗。|
 | [flamegraph](https://github.com/flamegraph-rs/flamegraph) | benchmark 火焰图 |
 | [cargo-bisect-rustc](https://github.com/rust-lang/cargo-bisect-rustc) | 二分查找哪个 rustc nightly 版本引入了错误 |
 | [cargo-shear](https://github.com/Boshen/cargo-shear) / [cargo-machete](https://github.com/bnjbvr/cargo-machete) | Remove unused Rust dependencies |
