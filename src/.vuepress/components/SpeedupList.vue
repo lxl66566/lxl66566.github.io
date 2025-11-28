@@ -111,7 +111,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["きまぐれテンプテーション", "Butterfly Seeker"],
+    names: ["きまぐれテンプテーション", "Butterfly Seeker", "ふゆから、くるる。"],
     valid_name: "silky",
     engine: "Silky’s engine",
     save_format: "arc",

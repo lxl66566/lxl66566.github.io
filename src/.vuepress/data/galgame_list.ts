@@ -5,6 +5,7 @@ const original_list: GalItemInputType[] = [
     name: "ふゆから、くるる。",
     valid_name: "ふゆからくるる",
     other_names: ["冬滚滚"],
+    use_time: "+3min",
     duration: {
       start: "2025-11-26",
     },

@@ -600,6 +600,12 @@ for arc in arcs.glob("*.arc"):
 
 所以 Silky’s engine 对 header 还是蛮宽容的，即使值偏差了 4 也可以正常进游戏，导致玩了好久都没发现这个 bug，吐了。
 
+### ふゆから、くるる。
+
+已经研究出 [dll wrapper v1](#dll-wrapper-v1) 了，本来已经没有必要解封包；但是这一作的语音音量非常不均衡，只好再拆开进行一次 loudness normalize。好在我写的工具没有再出问题，一遍过。
+
+封完包，惊讶地发现 voice.arc 的大小从 2.13 GB 减小到 807 MB，但是我并没有改变任何速度。喂！你的 ogg 到底是怎么编码的啊！
+
 </template>
 <template #softpal>
 
