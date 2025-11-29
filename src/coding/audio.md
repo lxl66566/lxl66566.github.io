@@ -59,3 +59,42 @@ Bilibili 在 2024 年实装了 _音量动态均衡_ 功能，具体算法未公�
 Youtube 会对高于 -14 LUFS 的音频进行负增益调至 -14 LUFS，对小于 -14 LUFS 的音频不作处理（来源请求）。不过也有[一些帖子](https://gearspace.com/board/mastering-forum/1374443-chasing-after-12-lufs-youtube.html)认为 Youtube 的增益算法有一些问题，其调整并不严格。
 
 [APU Dynamics Optimizer](https://apu.software/optimizer/) 是一款专业的高级调音软件，它可以让用户预设一条“动态范围曲线”，曲线规定了音频中不同 LUFS 的时长“占比”，超出该比例的音频片段则会被 [APU Loudness Compressor](https://apu.software/compressor/) 进行压缩/扩展。这种方式可以看成一种特殊的、更加自由的分段增益，具体效果取决于 APU Loudness Compressor 的检测与压缩方式：貌似其结合了 EBU R.128 与 RMS 进行连续的 LUFS 检测，而 Limiter 的压缩较为复杂，原理暂时未知。（描述可能存在错误，欢迎指出） 根据 APU Dynamics Optimizer 首页给出的视频演示，这个软件在高动态范围的纯音乐上效果非常好。可惜软件本身是付费的。
+
+## 变速与变调
+
+变速与变调是相辅相成的。我们有仅变速、仅变调、变速变调的算法，将它们自由组合起来可以玩出很多花样。
+
+### 仅变速
+
+行业泛用的是 WSOLA (Waveform Similarity and Overlap Add)，例如 soundtouch 就用的这个（严格来说是 WSOLA-like time-stretching routines）。除此之外还有 PLOSA (Time-Domain Pitch-Synchronous Overlap and Add)，及其变体 TD-PSOLA 等。这一类的最大特点是需要找峰值，并保留峰值。
+
+Rust 的现成 crates 里，_wsola_ 是个脑残占名字的没有内容，而 [_tdpsola_ 有一个可用实现](https://codeberg.org/PieterPenninckx/tdpsola)。把仓库拉下来，example 里带了 wav 支持，不需要手动转 raw。虽然只支持单声道 wav，我还需要手动转一次，但是没有什么难度。并且作者在 README 里给出了一个 documentation，里面的视频把 TD-PSOLA 原理讲得非常透彻。
+
+### 仅变调
+
+我试过使用 [pitch_shift (bugfix fork)](https://github.com/lxl66566/pitch_shift) 进行声调变换。这玩意是个经典 Phase Vocoder（相位声码器），大致流程如下：
+
+1. 分帧（Framing）：把音频流切成重叠片段。
+2. 加窗（Windowing）：Hanning Window，给每个片段边缘做淡入淡出。
+3. FFT：转为频域信号。
+4. 变调处理（Pitch Shifting）：移动频率的位置，并修正相位。
+5. IFFT：把变后的频率信号变回时间信号。
+6. 重叠相加：把处理好的片段重新拼起来。
+
+做 FFT/IFFT 的是 rustfft，realfft 这俩 crate，它们好像都有 simd 优化，性能还是很不错的。
+
+不过这种相位声码器的音质就有点不尽人意，至少离我对人声音频的期望质量还是差了一点，有金属感。
+
+至于更高级的仅变调算法，还没研究过，不过大概率也是纯时域算法效果要好些。
+
+### 变速变调
+
+变速变调其实算是生活中最常见到的类型。例如我有单声道 88200 个 sample 需要在 1 秒之内在 44100Hz 的声卡上播放完；由于声卡播放的音频 sample 数量是一定不会改变的 44100，此时就会触发音频 dll 的自动降采样。最终播放出的声音会带上 “Chipmunk Effect”，也就是听起来更尖。
+
+升采样和降采样总称为重采样（SRC），都是改变 sample 个数的操作。虽然现代 dll 已经帮我们做了重采样，但其中也是有算法在的。
+
+如果我们要将音频降采样到 0.5 倍，每隔 2 个数据点就扔掉一个是不行的：根据离散信号系统，原信号的频谱会被拉伸为 2 倍，而大于 2π 的频谱会被折叠回 \[0-2π\] 区间发生混叠，进而导致音频质量下降。（我曾在把《信号与系统》全部还给大学老师以后尝试过一次这样的降采样，然后就记住了）
+
+## external
+
+1. [如何用 FFmpeg 将声音范式(Audio Normalization)？](https://magiclen.org/ffmpeg-normalize/)

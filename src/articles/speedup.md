@@ -17,9 +17,11 @@ tag:
 
 我打 [galgame](../hobbies/galgame.md) 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 _GINKA_（后来还玩了更多不一一列举了）。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，~~相当于延长了一倍的生命~~。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。
 
-## 常见音频处理软件
+## 音频处理软件
 
-音频处理领域很多软件都是商业非自由软件。并且我在其中找不到能做到音频加速的软件。（不过写在这里的只是一部分，之前试过的没记）
+音频处理领域很多软件都是商业非自由软件，要交钱的，毕竟音频处理本身也是天坑。而我找不到能对其他 APP 进行音频加速的软件。
+
+写在这里的只是我试过的一部分：
 
 - Equalizer APO：提供了易于编辑的 GUI 界面，用户可以自己创建不同的效果器和 filter。不过无法做到音频加速或音量均衡。
 - Fxsound：开源效果器，可以让游戏加强脚步声等。不过延迟有点高，而且无法实现音频加速。
@@ -199,9 +201,9 @@ exec "$@"
 
 > ps. 事实上，通过源码也能知道，Github 上的这些 libspeedhack、[Letomaniy/Speed-Hack](https://github.com/Letomaniy/Speed-Hack)、[Hirtol/speedhack-rs](https://github.com/Hirtol/speedhack-rs) 等 speedhack 并不涉及音频 api 的修改，因此不可能有音频加速效果。妄图通过简单的一点点源码实现加速只能说是天方夜谭。
 
-## [Speed Gear](https://www.softking.com.tw/dl/17892/Speed%20Gear%207.2.html)
+## [Speedy](https://github.com/game1024/Speedy)
 
-一个简单点点点就能加速窗口的软件，比较电脑小白向。最高支持数千倍加速（还是拉线性条，你们 UI 设计者.jpg），体验还不错，但是跟 CE 一样，也**不支持音频加速**。
+一个简单点点点就能加速窗口的国人开源软件，比较电脑小白向。最高支持数千倍加速，体验还不错，但是跟 CE 一样，[也不支持音频加速](https://github.com/game1024/Speedy/issues/151)。
 
 ## 源码构建
 
@@ -272,14 +274,6 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 ### dll 调库
 
 退一万步，如果用现有的 dll 库呢？我尝试了一下行业用得比较多的 [soundtouch](https://codeberg.org/soundtouch/soundtouch.git)，[写了个 python 小脚本](https://gist.github.com/lxl66566/f7dc49be8a08f2746b4179ccd3b2b378)做测试。soundtouch 的 api 设计就要好得多，用户只需要 put 和 receive 就行了。但是我用 `receiveSamples` (处理 float 数组) 系列测试就返回值为 0（应该要返回数组长度），数组没有被改动；用 `putSamples_i16` 系函数（i16 系是 float 系的包装，包了一层转换）甚至有 bug，直接 internal `OSError: exception: integer divide by zero`。非常郁闷。
-
-### 直面原理
-
-音频处理其实并不算太复杂，说到底也是信号与系统那一套。最基础的就是把 trunk 加速打出去那一套，属于 _变速变调_。更高级一点的主要是 _变调不变速_ 和 _变速不变调_ 两种，有了这两种就可以组合出各种想要的效果了。实际使用中也可以只用一种，通过升降采样先 _变速变调_，对齐一个量，再通过一种算法改变另一个量即可。在这里我们当然关注 _变速不变调_。
-
-行业泛用的是 wsola (Waveform Similarity and Overlap Add)，例如 soundtouch 就用的这个。除此之外还有 PLOSA (Time-Domain Pitch-Synchronous Overlap and Add)，及其变体 TD-PSOLA 等。这一类的最大特点是需要找峰值，并保留峰值。
-
-现成的 crates 里，_wsola_ 是个脑残占名字的没有内容，而 [_tdpsola_ 有一个可用实现](https://codeberg.org/PieterPenninckx/tdpsola)。把仓库拉下来，example 里带了 wav 支持，不需要手动转 raw。然后试了一下，确实能够实现加速！让我非常开心。虽然只支持单声道 wav，我还需要手动转一次，但是没有什么难度。并且作者在 README 里给出了一个 documentation，里面的视频把 TD-PSOLA 原理讲得非常透彻。
 
 ### 打击
 
@@ -1168,7 +1162,7 @@ LLM 提出应该是一些小数计算导致采样率没对上。然后增加了�
 
 V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是比较大的。
 
-最大的问题还是音质，即使修了[音质下降](#音质下降问题)问题，pitch_shift 还是难担加速重任，其使用的算法比较初级，在处理人声时效果较差，表现就是我推 gal 基本都无法开外放，只能戴耳机，隔绝环境音拯救一下音质。
+最大的问题还是音质，即使修了[音质下降](#音质下降问题)问题，pitch_shift 还是难担加速重任，其使用的经典相位声码器比较初级，在处理人声时效果较差，表现就是钢管音，我推 gal 基本都无法开外放，只能戴耳机，隔绝环境音拯救一下音质。
 
 于是我又一次（已经数不清是第几次）将目光投向了 SoundTouch 上。如果我直接拿到 buffer 数据然后用 ST 对原始数据进行不变调加速呢？WSOLA 的效果还是相当值得信任的，毕竟天天解封包然后 ffmpeg 加速也是用的 WSOLA。
 
@@ -1202,7 +1196,7 @@ V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是�
 
 问题解决后，再做一下 dsound 兼容、调参平衡延迟和稳定性，就可以投入使用了。~~立刻开打《ふゆから、くるる。》！不对我怎么还要上班 T_T~~
 
-回家一测试，AudioSpeedHack 在我硬盘上的所有 18 个 galgame 的加速成功率是 **100%**。然后我还发现新版的 MMDevAPI 真的非常牛逼，只 MMDevAPI.dll 一个就实现了 100% 覆盖率。dsound 可有可无，不过可以作为叠加加速的工具，还是有用武之地的。
+回家一测试，AudioSpeedHack 在我硬盘上的所有 18 个 galgame 的加速成功率是 **100%**。然后我还发现新版的 MMDevAPI 真的非常牛逼，只 MMDevAPI.dll 一个就实现了 100% 覆盖率，它就是 WASAPI 的化身。dsound 可有可无，不过可以作为叠加加速的工具，还是有用武之地的。
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";

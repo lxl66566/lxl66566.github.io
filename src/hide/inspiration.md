@@ -46,13 +46,13 @@ tag:
 - [ ] ~~浏览器。直到现在我还没找到一个满意的浏览器。（我尝试过的：[浏览器横评](../articles/browser/assess.md)）~~
   - [ ] ~~Chromium 内核，开源，**高度自定义化**~~ 难度过高，暂不考虑
   - [ ] ~~sync cookies~~
-- [ ] A git-like distributed version manager
+- [ ] ~~A git-like distributed version manager~~ 算了没必要，git 已经是编程界基石了，任何不兼容 git 本身的 VCS 都活不下去的
   - [ ] 连续压缩
   - [ ] parts in a project, like how i use branch
   - [ ] 断点重传
   - [ ] 软连接，可在目录外创建虚仓库，指向真实仓库
 - [ ] HDL 高阶语言，能将类 Rust 语法的语言编译成 verilog 或 VHDL。
-- [ ] [音频加速](../articles/speedup.md)
+- [x] [音频加速](../articles/speedup.md)
 - [ ] 流式分布式的视频软件?
 - [ ] 响应式计算机设计与编程（与轮询式相对，主要切入点是屏幕）
 - [ ] pdf 无损图片压缩
@@ -62,27 +62,29 @@ tag:
 - [ ] ~~浏览器书签 & 历史数据库(rust cli / js)~~ History Trends Unlimited?
 - [ ] ~~better sqlite_zstd~~ 要么手操要么透明压缩
 - [ ] ~~windows electron lib(runtime)?~~ no，please use webview; or some dedup method on windows.
-- [ ] windows volume locker
+- [ ] ~~windows volume locker~~ see <https://github.com/felipecrs/volume-locker>
 - [x] [wd: info words online in cli, written in rust](https://github.com/lxl66566/wordinfo)
 - [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
-- [ ] galgame engine
+- [ ] **Galgame engine**
   - [ ] 自动生成可视化线路攻略
+  - [ ] 内置多语言与翻译支持
+  - [ ] 跨平台
+  - [ ] 通过 config file 可修改所有设置项
 - [x] [bin package manager（release installer）](https://github.com/lxl66566/bpm)
 - [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
 - [ ] osu beatmap downloader, support stable and lazer
-- [ ] poetry plugin to import requirements.
+- [ ] ~~poetry plugin to import requirements.~~ 我不再使用 poetry；而 uv 有 [uv-migrator](https://github.com/stvnksslr/uv-migrator)
 - [ ] ~~pyshell~~ see [xonsh](https://github.com/xonsh/xonsh)?
-- [ ] 好用的麦克风录音机 + 音频处理
+- [ ] 好用的麦克风录音机 + [音频处理](../coding/audio.md)
   - 暂停与继续
   - 降噪
   - [ ] 智能限幅
-    - 参考阅读：<https://magiclen.org/ffmpeg-normalize/>
 - [ ] 系统音频录音机
   - [ ] 比特率与采样率选择
   - [ ] 录制结束后可裁切
   - [ ] [有声音时开始保存数据，静音 X 秒后自动停止录音](https://autoclose.net/autoaudiorecorder.html)
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
-- [ ] ~~windows 工具包: alias, ls,~~ use bash instead, and my [snipets](../coding/snipets.md)
+- [ ] ~~windows 工具包: alias, ls,~~ use shell function instead, and my [snipets](../coding/snipets.md)
 - [ ] yakuake on windows
 - [ ] ~~更好的静态博客/文档框架~~ 学了点前端发现 vuepress 也没有那么难用，暂时搁置
 - [x] fuck, delete it! (windows)
@@ -126,7 +128,7 @@ tag:
 - [ ] rust easy context like tokio/compio do.
 - [ ] 明日方舟视频自动去暂停
 - [ ] SNP's Not Pydantic，回归原始，拒绝[隐性假设](https://t.me/withabsolutex/2338)
-- [x] touchfish commit
+- [x] [touchfish commit](https://github.com/lxl66566/git-touchfish-commit)
 - [x] ~~windows simple zstd~~ 遇到了[亿些麻烦](https://t.me/withabsolutex/2378)。后来基于更好的 dwarfs 写了个 ([windows-dwarfs-tools](https://github.com/lxl66566/windows-dwarfs-tools))
 - [ ] strbase，基于 string 的关系型 db，git 友好。
 - [ ] minix, mini nix lang
@@ -189,7 +191,7 @@ tag:
 - [ ] gaussian blur lib
 - [ ] ~~koishi plugin:~~ （koishi 有关计划暂时搁置）
   - [ ] ~~advanced: wordle game~~
-- [ ] 今天吃什么 project
+- [ ] ~~今天吃什么 project~~ 这个想法是有时效性的：已毕业。
   - [ ] 分食堂，自动根据图片目录生成
   - [ ] 可添加排除，写入 cookie
 - [x] Google 翻译 x 次，网页 -> [成果](https://github.com/lxl66566/Google-translate-x-times)

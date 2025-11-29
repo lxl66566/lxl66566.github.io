@@ -292,3 +292,4 @@ updates:
 
 1. [约定式提交](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
 2. [使用 sccache 加快 Rust 编译速度](https://xuanwo.io/reports/2022-45/)
+3. [Common pitfalls of GitHub Actions](https://ashishb.net/programming/common-pitfalls-of-github-actions/)，介绍了一些有用的 Github action snipets
