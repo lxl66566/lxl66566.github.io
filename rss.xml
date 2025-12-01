@@ -6,18 +6,18 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 30 Nov 2025 02:39:09 GMT</pubDate>
-    <lastBuildDate>Sun, 30 Nov 2025 02:39:09 GMT</lastBuildDate>
+    <pubDate>Mon, 01 Dec 2025 12:33:32 GMT</pubDate>
+    <lastBuildDate>Mon, 01 Dec 2025 12:33:32 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
     <category>编程</category>
     <category>原理</category>
+    <category>学习</category>
     <category>经历</category>
     <category>教程</category>
     <category>评价</category>
     <category>随笔</category>
-    <category>学习</category>
     <category>爱好</category>
     <item>
       <title>snipets</title>
@@ -270,6 +270,8 @@
       <source url="https://absx.pages.dev/rss.xml">音频处理</source>
       <description>音频处理 音频处理是编程界的几大天坑之一。 容器 类似 7z，音频文件大多数情况下只是容器，一般由元数据和各种编码的音频数据组成，而编码才是音频文件的本质。 有的容器只支持一种编码格式（容器名就是编码名），例如 MP3 和 FLAC。而有的容器支持多种，例如 OGG 支持 Vorbis、Opus、FLAC。 编码 最原始的 raw 音频也就是一串 f3...</description>
       <category>原理</category>
+      <category>学习</category>
+      <category>编程</category>
       <pubDate>Tue, 24 Jun 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>音频处理是编程界的几大天坑之一。</p>
@@ -322,6 +324,27 @@
 <p>变速变调其实算是生活中最常见到的类型。例如我有单声道 88200 个 sample 需要在 1 秒之内在 44100Hz 的声卡上播放完；由于声卡播放的音频 sample 数量是一定不会改变的 44100，此时就会触发音频 dll 的自动降采样。最终播放出的声音会带上 “Chipmunk Effect”，也就是听起来更尖。</p>
 <p>升采样和降采样总称为重采样（SRC），都是改变 sample 个数的操作。虽然现代 dll 已经帮我们做了重采样，但其中也是有算法在的。</p>
 <p>如果我们要将音频降采样到 0.5 倍，每隔 2 个数据点就扔掉一个是不行的：根据离散信号系统，原信号的频谱会被拉伸为 2 倍，而大于 2π 的频谱会被折叠回 [0-2π] 区间发生混叠，进而导致音频质量下降。（我曾在把《信号与系统》全部还给大学老师以后尝试过一次这样的降采样，然后就记住了）</p>
+<h2>人声判定</h2>
+<p>有一些需求是区分人声和背景音乐，也就是 input = 一段音频数据，output: bool = 是否为人声。</p>
+<p>人声的特征还是比较明显的。</p>
+<ul>
+<li>时域分析：
+<ul>
+<li>人声具有明显的音节结构，能量变化大，低能量帧较多。</li>
+</ul>
+</li>
+<li>频域分析：
+<ul>
+<li>人声的主要能量集中在 300Hz - 4000Hz。</li>
+<li>人声的基频不稳定；而音乐由于十二平均律的存在，基频相对稳定。</li>
+</ul>
+</li>
+</ul>
+<p>通过这些指标可以大致作为人声和音乐的判据。根据应用场景，有时还会有一些额外判据，例如在 galgame 场景下，时长也是一个重要判据。</p>
+<p>不过如果不只是区分人声和背景音乐，而是有更高精度要求、更多背景干扰的场景，或者需求变为“提取人声”，那么这些简单的判断可能会造成较大的误差。此时就需要更高级的分析方法了。</p>
+<p>比较常用的是 MFCC（Mel-Frequency Cepstral Coefficients），它主要基于人耳对频率感知的对数关系，在低频处使用更多滤波器进行特征提取，因此在人声领域应用广泛。内部具体实现暂先不论，总之 MFCC 每一帧音频的输出都是一个向量，具体取多少维度可以根据实际情况考虑，常用的是取 13 维。一段音频的输出是一个 MFCC 矩阵，可以直接转换为图像，称为梅尔频谱图，如果再过一次 DCT 就是梅尔倒频谱。</p>
+<p>至于后续分析基本都是机器学习的活了。MFCC 矩阵包含的信息非常丰富，通过一些模型，可以直接还原为人声音频信号，可以解析出这段音频对应的句子。如果只是进行人声判定，其实只需要简单训练一个判别器，将 MFCC 矩阵的一些统计特征、传统分析方法里的指标全部扔进去即可。</p>
+<p>当然对于这些高级分析方法，我也只是稍作了解，并没有做这种复杂机器学习的打算；在我的场景下用传统判据就好了。</p>
 <h2>external</h2>
 <ol>
 <li><a href="https://magiclen.org/ffmpeg-normalize/" target="_blank" rel="noopener noreferrer">如何用 FFmpeg 将声音范式(Audio Normalization)？</a></li>
