@@ -3,7 +3,10 @@
     <table v-for="items in chunkedItems">
       <thead>
         <tr>
-          <th v-for="item in items">{{ item.text }}</th>
+          <th v-for="item in items">
+            <a :href="item.lnk" target="_blank">{{ item.text }}</a>
+          </th>
+
         </tr>
       </thead>
       <tbody>
@@ -20,7 +23,7 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 
-type ExhibitionItemType = { src: string; alt: string; text: string };
+type ExhibitionItemType = { src: string; alt: string; text: string; lnk: string };
 
 const props = defineProps({
   items: {

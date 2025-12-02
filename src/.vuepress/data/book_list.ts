@@ -6,6 +6,7 @@ const original_list: BookItemInputType[] = [
     author: "爱潜水的乌贼",
     duration: {
       start: "2025-10-20",
+      end: "2025-12-02",
     },
   },
   {

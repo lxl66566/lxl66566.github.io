@@ -1812,11 +1812,12 @@ import GalExhibitionGrid from "@GalExhibitionGrid";
 import GalList from "@GalList";
 
 const exhibition_data = [
-  { text: "矛盾", alt: "水葬銀貨のイストリア", src: "/images/hobbies/galgame/suisouginka.jpg" },
-  { text: "命运", alt: "ISLAND", src: "/images/hobbies/galgame/island.jpg" },
-  { text: "苦痛", alt: "euphoria", src: "/images/hobbies/galgame/euphoria.jpg" },
-  { text: "幻梦", alt: "冥契的牧神节", src: "/images/hobbies/galgame/meikeinoruperukaria.jpg" },
-  { text: "意义", alt: "秽翼的尤斯蒂娅", src: "/images/hobbies/galgame/Aiyoku_no_Eustia.jpg" },
+  { text: "矛盾", alt: "水葬銀貨のイストリア", lnk: "https://vndb.org/v20471", src: "https://t.vndb.org/cv.t/98/116698.jpg" },
+  { text: "命运", alt: "ISLAND", lnk: "https://vndb.org/v18498", src: "https://t.vndb.org/cv.t/39/75939.jpg" },
+  { text: "苦痛", alt: "euphoria", lnk: "https://vndb.org/v6540", src: "https://t.vndb.org/cv.t/77/88077.jpg" },
+  { text: "幻梦", alt: "冥契的牧神节", lnk: "https://vndb.org/v29383", src: "https://t.vndb.org/cv.t/94/90194.jpg" },
+  { text: "意义", alt: "秽翼的尤斯蒂娅", lnk: "https://vndb.org/v3770", src: "https://t.vndb.org/cv.t/78/79678.jpg" },
+  { text: "最好的配乐", alt: "变态监狱", lnk: "https://vndb.org/v31055", src: "https://t.vndb.org/cv.t/10/94410.jpg" },
 ];
 const show_strict = ref(false);
 </script>

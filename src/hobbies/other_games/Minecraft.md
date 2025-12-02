@@ -26,7 +26,7 @@ tag:
 
 ### 数据包
 
-[bingo 1.16 - 1.18](https://www.mcbbs.net/thread-1269608-1-1.html) | [bingo 1.19](https://www.flytre.net/bingo) | [不要做挑战](https://github.com/KunoSayo/donotdo) | [猎人游戏（未测试）](https://www.bilibili.com/video/BV1Ta411M72R) | [我下载的数据包私链](https://wwp.lanzout.com/b00vy0h9c)，密码:boc3 | [数据包网站](../farraginous/recommend_websites.md#其他游戏) | [Minegames pvp 小游戏（未测试）](https://www.minecraftmaps.com/pvp-maps/minegames) | [Gold Rush PvP](https://www.planetminecraft.com/project/gold-rush-pvp/)
+[bingo 1.16 - 1.18](https://www.mcbbs.net/thread-1269608-1-1.html) | [bingo 1.19](https://www.flytre.net/bingo) | [不要做挑战](https://github.com/KunoSayo/donotdo) | [猎人游戏（未测试）](https://www.bilibili.com/video/BV1Ta411M72R) | [我下载的数据包私链](https://wwp.lanzout.com/b00vy0h9c)，密码:boc3 | [数据包网站](../../farraginous/recommend_websites.md#游戏) | [Minegames pvp 小游戏（未测试）](https://www.minecraftmaps.com/pvp-maps/minegames) | [Gold Rush PvP](https://www.planetminecraft.com/project/gold-rush-pvp/)
 
 ### 地图
 
