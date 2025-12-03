@@ -6,13 +6,14 @@
         <a v-else :href="props.item.url" target="_blank">{{ props.item.name }}</a>
 
         <span
-          v-if="props.item.order || props.item.all_ages || props.item.namaniku || props.item.intense || props.item.nth_time">
+          v-if="props.item.order  || props.item.nth_time || props.item.namaniku || props.item.tag?.all_ages || props.item.tag?.intense || props.item.tag?.thrill">
           <span>&thinsp;</span>
           <OrderBadge :order="props.item.order" v-if="props.item.order" />
           <OrderBadge :order="item.nth_time" :text="`${numberToChinese(item.nth_time)}刷`" v-if="item.nth_time" />
-          <Badge type="tip" text="全年龄" v-if="props.item.all_ages" />
           <Badge type="tip" text="生肉" v-if="props.item.namaniku" />
-          <Badge type="danger" text="重口" v-if="props.item.intense" />
+          <Badge type="tip" text="全年龄" v-if="props.item.tag?.all_ages" />
+          <Badge type="warning" text="惊悚" v-if="props.item.tag?.thrill" />
+          <Badge type="danger" text="重口" v-if="props.item.tag?.intense" />
         </span>
       </td>
       <!-- 时长 -->

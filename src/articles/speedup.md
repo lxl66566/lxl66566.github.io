@@ -1223,6 +1223,8 @@ MMDevAPI 基本是无法完成这个需求的，因为 MMDevAPI 拿到的一般�
 
 - 最大的问题其实是 APP 给音频的逻辑，给出的一些语音会在中间插入一段较长的静音，这点也是我 dump WAV 才发现的。我尝试了很多方法都无法解决这个问题，只好在入队时多做一次去 0 的处理。
 
+然后在 Artemis 上跑通以后，Krkr 又出了问题。。。这时候我已经隐约感觉到了，搞语音不中断其实比加速还难。
+
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
 </script>

@@ -27,21 +27,9 @@ export type GalItemInputType = {
    */
   url?: string;
   /**
-   * 是否**不是**严格定义的 galgame
-   */
-  not_strict?: boolean;
-  /**
    * 推的是否生肉
    */
   namaniku?: boolean;
-  /**
-   * 是否全年龄（没有露点与插入）
-   */
-  all_ages?: boolean;
-  /**
-   * 是否重口（R18G）
-   */
-  intense?: boolean;
   /**
    * 作品系列中的次序
    */
@@ -62,6 +50,27 @@ export type GalItemInputType = {
    * 游玩起止日期
    */
   duration?: DateDurationType;
+  /*
+   * 作品本身属性
+   */
+  tag?: {
+    /**
+     * 是否**不是**严格定义的 galgame
+     */
+    not_strict?: boolean;
+    /**
+     * 是否全年龄（没有露点与插入）
+     */
+    all_ages?: boolean;
+    /**
+     * 是否重口（R18G）
+     */
+    intense?: boolean;
+    /**
+     * 是否惊悚
+     */
+    thrill?: boolean;
+  };
   /**
    * 打分
    */

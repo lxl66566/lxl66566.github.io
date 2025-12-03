@@ -15,8 +15,10 @@ const original_list: GalItemInputType[] = [
     name: "魔法少女的魔女审判",
     other_names: ["manosaba", "魔法少女ノ魔女裁判", "魔裁"],
     use_time: "17h20min",
-    intense: true,
-    all_ages: true,
+    tag: {
+      thrill: true,
+      all_ages: true,
+    },
     duration: {
       start: "2025-11-02",
       end: "2025-11-14",
@@ -31,7 +33,9 @@ const original_list: GalItemInputType[] = [
     name: "恋狱～月狂病～《REBIRTH FHD SIZE EDITION》",
     valid_name: "恋狱月狂病",
     other_names: ["恋狱月狂病", "カルタグラ～ツキ狂イノ病～"],
-    intense: true,
+    tag: {
+      intense: true,
+    },
     playing_status: PlayingStatus.PLAYING,
     use_time: "-1min",
     duration: {
@@ -41,7 +45,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "传述之魔女",
     other_names: ["イハナシの魔女"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "6h",
     duration: {
       start: "2025-10-06",
@@ -61,7 +67,9 @@ const original_list: GalItemInputType[] = [
       start: "2025-10-05",
       end: "2025-10-05",
     },
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     score: {
       story: 0.6,
       visual: 8.4,
@@ -143,7 +151,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "赫雷斯的角斗场",
     order: 1,
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "1h24min",
     duration: {
       start: "2025-09-06",
@@ -240,7 +250,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "星辰密文",
     other_names: ["StellarCode"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "2h44min",
     duration: {
       start: "2025-08-16",
@@ -255,7 +267,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "挑战勇者试炼时被诱惑的我",
     use_time: "4h37min",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     duration: {
       start: "2025-08-11",
       end: "2025-08-12",
@@ -298,7 +312,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "ISLAND",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     nth_time: 2,
     use_time: ">10h",
     duration: {
@@ -361,7 +377,7 @@ const original_list: GalItemInputType[] = [
     name: "大图书馆的牧羊人 -Dreaming Sheep-",
     other_names: ["大図書館の羊飼い -Dreaming Sheep-"],
     valid_name: "大图书馆的牧羊人",
-    playing_status: PlayingStatus.PAUSED,
+    playing_status: PlayingStatus.STOPPED,
     order: 2,
     duration: {
       start: "2025-06-12",
@@ -452,7 +468,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "きまぐれテンプテーション",
     other_names: ["异想魅惑"],
-    intense: true,
+    tag: {
+      thrill: true,
+    },
     use_time: "4h19min",
     order: 1,
     duration: {
@@ -468,8 +486,10 @@ const original_list: GalItemInputType[] = [
   {
     name: "NOIR:NOAH",
     valid_name: "NOIRNOAH",
-    not_strict: true,
-    intense: true,
+    tag: {
+      not_strict: true,
+      intense: true,
+    },
     use_time: "1h1min",
     duration: {
       start: "2025-04-11",
@@ -513,12 +533,14 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "女祭司之眼",
-    not_strict: true,
     url: "https://t.me/Alice_In_Cradle/29369",
     use_time: "<50min>",
     duration: {
       start: "2025-03-12",
       end: "2025-03-12",
+    },
+    tag: {
+      not_strict: true,
     },
     score: {
       story: 0.1,
@@ -546,9 +568,11 @@ const original_list: GalItemInputType[] = [
     name: "淫獄の8番街・少女探偵ミオリの怪異ノート",
     other_names: ["淫狱的8番街·少女侦探美织的怪异笔记"],
     valid_name: "淫獄の8番街少女探偵ミオリの怪異ノート",
-    not_strict: true,
     url: "https://t.me/absolutexsresource/21",
     use_time: "<30min>",
+    tag: {
+      not_strict: true,
+    },
     duration: {
       start: "2025-03-05",
       end: "2025-03-05",
@@ -649,7 +673,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "魔法使之夜",
     other_names: ["魔法使いの夜"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "11h20min",
     duration: {
       start: "2025-01-17",
@@ -667,7 +693,9 @@ const original_list: GalItemInputType[] = [
       "圣女不死心～不受欢迎形单影只的死灵法师转生成为圣女，努力结交新的朋友～",
       "ホーリーアンデッド～非モテでぼっちの死霊術士が、聖女に転生してお友達を増やします～",
     ],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "4h23min",
     duration: {
       start: "2025-01-16",
@@ -741,9 +769,11 @@ const original_list: GalItemInputType[] = [
   {
     name: "戦巫＜センナギ＞ ―穢れた契りと神ころも―",
     valid_name: "戦巫センナギ穢れた契りと神ころも",
-    not_strict: true,
     namaniku: true,
     use_time: "20h41min",
+    tag: {
+      not_strict: false, // 主要其实还是以剧情为主的。
+    },
     duration: {
       start: "2024-10-31",
       end: "2025-04-11",
@@ -861,7 +891,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "恶魔石板与被诅咒的犬公主",
     use_time: "2h29min",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     duration: {
       start: "2024-12-29",
       end: "2024-12-30",
@@ -903,7 +935,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "LUNARiA",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "4h49min",
     score: {
       story: 8.3,
@@ -993,7 +1027,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "LOOPERS",
     other_names: ["时廻者"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "6h7min",
     score: {
       story: 8.2,
@@ -1021,7 +1057,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "GINKA",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: ">6h45min",
     score: {
       story: 7.8,
@@ -1036,7 +1074,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "战国兰斯",
     other_names: ["戦国ランス"],
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "11h27min",
     order: 7,
     score: {
@@ -1052,7 +1092,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "铃色记忆",
     url: "https://hoshinasuzu.cc/suzu-memory/",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "<20min>",
     score: {
       story: 3,
@@ -1067,7 +1109,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "饿殍：明末千里行",
     valid_name: "饿殍明末千里行",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "5h52min",
     score: {
       story: 9,
@@ -1097,7 +1141,9 @@ const original_list: GalItemInputType[] = [
     name: "死に逝く君、館に芽吹く憎悪",
     other_names: ["濒死轮回的卿于馆中萌生的憎恶", "死馆"],
     valid_name: "死に逝く君館に芽吹く憎悪",
-    intense: true,
+    tag: {
+      intense: true,
+    },
     use_time: "7h9min",
     order: 1,
     score: {
@@ -1204,7 +1250,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "提早绽放的黑百合",
     other_names: ["早咲きのくろゆり"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "14h28min",
     score: {
       story: 8.1,
@@ -1305,7 +1353,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "兰斯5D",
     other_names: ["ランス5D -ひとりぼっちの女の子"],
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "2h25min",
     order: 5,
     score: {
@@ -1337,7 +1387,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "兰斯03",
     other_names: ["ランス03 リーザス陥落"],
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "27h25min",
     order: 3,
     score: {
@@ -1353,7 +1405,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "兰斯02",
     other_names: ["ランス2 はんぎゃくのしょうじょたち"],
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "2h10min",
     order: 2,
     score: {
@@ -1369,7 +1423,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "兰斯01重制",
     other_names: ["ランス01 光をもとめて"],
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "8h3min",
     order: 1,
     score: {
@@ -1431,7 +1487,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "Melia's Witch Test",
     valid_name: "MeliasWitchTest",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "46min",
     score: {
       story: 0,
@@ -1477,7 +1535,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "melancholianna",
     url: "https://melancholianna.pages.dev/",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "30min?",
     score: {
       story: 0,
@@ -1492,7 +1552,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "終のステラ",
     other_names: ["星之终途"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "8h15min",
     score: {
       story: 9.2,
@@ -1506,7 +1568,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "ISLAND",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "29h43min",
     score: {
       story: 13,
@@ -1624,7 +1688,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "PARQUET",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "8h38min",
     score: {
       story: 6.1,
@@ -1653,7 +1719,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "euphoria",
-    intense: true,
+    tag: {
+      intense: true,
+    },
     use_time: "23h17min",
     score: {
       story: 9.6,
@@ -1713,7 +1781,9 @@ const original_list: GalItemInputType[] = [
     name: "七音学园-旅行部-·箱根篇",
     other_names: ["七ヶ音学園 旅行部"],
     valid_name: "七音学园旅行部箱根篇",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "<2h5min>",
     order: 2,
     score: {
@@ -1730,7 +1800,9 @@ const original_list: GalItemInputType[] = [
     name: "七音学园-旅行部-·伊香保篇",
     other_names: ["七ヶ音学園 旅行部"],
     valid_name: "七音学园旅行部伊香保篇",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "<2h23min>",
     order: 1,
     score: {
@@ -1898,7 +1970,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "氤氲之白",
     other_names: ["SMOKY WHITE"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "-",
     order: 1,
     score: {
@@ -1930,7 +2004,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "星空列车与白的旅行",
     other_names: ["星空鉄道とシロの旅"],
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "-",
     score: {
       story: 10,
@@ -2035,7 +2111,9 @@ const original_list: GalItemInputType[] = [
     name: "NEKOPARA Vol.0 水無月ネコたちの日常！",
     other_names: ["草猫", "巧克力与香子兰", "猫娘乐园", "ネコぱら"],
     valid_name: "NEKOPARAVol0水無月ネコたちの日常",
-    all_ages: true,
+    tag: {
+      all_ages: true,
+    },
     use_time: "-",
     order: 1,
     score: {
@@ -2051,7 +2129,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "真爱の百合は赤く染まる",
     other_names: ["真爱的百合被染成红色", "真爱百合"],
-    intense: true,
+    tag: {
+      intense: true,
+    },
     use_time: "-",
     score: {
       visual: 3,
@@ -2089,7 +2169,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "汚部屋の姫",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "12min",
     score: {
       story: 4.8,
@@ -2109,7 +2191,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "命に代えてもお守りします!",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "55min",
     score: {
       story: 2.5,
@@ -2120,7 +2204,9 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "借金地獄の俺が言いなり家出JKを拾った",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "1h36min",
     score: {
       story: 4,
@@ -2131,7 +2217,9 @@ const original_list: GalItemInputType[] = [
   {
     name: "兰斯06",
     other_names: ["ランス06 ゼス崩壊"],
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     use_time: "12h49min",
     order: 6,
     score: {
@@ -2143,8 +2231,10 @@ const original_list: GalItemInputType[] = [
   {
     name: "主播女孩重度依赖",
     other_names: ["NEEDY GIRL OVERDOSE"],
-    all_ages: true,
-    not_strict: true,
+    tag: {
+      all_ages: true,
+      not_strict: true,
+    },
     use_time: "24min",
     playing_status: PlayingStatus.STOPPED,
     duration: {
@@ -2202,13 +2292,17 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "小白兔电商",
-    not_strict: true,
-    all_ages: true,
+    tag: {
+      all_ages: true,
+      not_strict: true,
+    },
     playing_status: PlayingStatus.STOPPED,
   },
   {
     name: "AliceInCradle",
-    not_strict: true,
+    tag: {
+      not_strict: true,
+    },
     playing_status: PlayingStatus.STOPPED,
     duration: {
       start: "2023-12-09",
