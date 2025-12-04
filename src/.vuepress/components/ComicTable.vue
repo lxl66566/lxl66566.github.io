@@ -917,6 +917,8 @@ const data: ComicItemType[] = [
   { id: "603712", aScore: 6, bScore: 10, info: "#鬼 #老者 #轮回 #强制性交 #NTR? #孕肚 稗堕" },
   { id: "611363", aScore: 8.8, bScore: 6, info: "#小恶魔 #泳装 #巨乳" },
   { id: "611648", aScore: 9, bScore: 5.7, info: "#hololive #傲娇" },
+  { id: "611468", aScore: 8.5, bScore: 7, info: "#兄妹 #睡x #纯爱" },
+  { id: "612908", aScore: 8, bScore: 3.3, info: "#师生 #兽耳 #短篇" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
