@@ -27,7 +27,7 @@ tag:
 
 ## Nix
 
-一个月前我从 Archlinux 叛逃到了 NixOS，因为 Nix 宣传的特性确实很吸引我。然而现在我只觉得上了贼船，很多宣称的优势达不到我的心理预期。（这里先不谈 [NixOS 的其他缺陷](../articles/linux/nix.md#劝退)，单谈 Nix 包管理）
+一个月前我从 Archlinux 叛逃到了 NixOS，因为 Nix 宣传的特性确实很吸引我。然而现在我只觉得上了贼船，很多宣称的优势达不到我的心理预期。（这里先不谈 [NixOS 的其他缺陷](../gossip/fuckxxx.md#nixos)，单谈 Nix 包管理）
 
 1. Nix 的包多。
    - 有点扯。虽然 [repology](https://repology.org/repositories/packages) 上 Nix 的数据很好看，但是

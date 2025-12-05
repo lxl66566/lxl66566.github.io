@@ -483,9 +483,9 @@ isoImage.contents = [
 求助群友后，[@wElmForest](https://t.me/wElmForest) 给出了一个解法：
 
 ```sh
-nix why-depends .#nixosConfigurations.<hostname>.config.system.build.toplevel nixpkgs#<依赖>
+nix why-depends .#nixosConfigurations.<hostname>.config.system.build.toplevel nixpkgs#<依赖> --impure
 # or
-nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel
+nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel --impure
 ```
 
 实测是需要先使用 `nix why-depends` 进行 build 后，再用 `nix-tree` 进行查询，否则会爆 `nix-tree: user error (Invalid path: ... Make sure that it is built, or pass '--derivation' if you want to work on the derivation.)`。因为我是远程的配置，还没安装呢！当然没 build 过。不过抛开这个特性不谈，nix-tree 还是好用的。
@@ -499,14 +499,7 @@ nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel
 - Nix 语言作为一个配置语言本身设计得不错，支持复杂逻辑，考虑了配置合并与覆盖优先级与递归，支持动态类型和类型检查，支持字段描述，函数式与 std 分离等……
 - 由于 NixOS 的可复现性，NixOS 可以让人敢于也愿意去尝试更多的新东西（毕竟不太需要担心它 break 你的系统或者在你的目录里拉屎）。
 
-不过也不得不说 NixOS 自身的问题还是不小的：
-
-- 文档稀烂，缺乏条目，遇到问题主要靠社区解答
-- 报错模糊，定位问题困难，nom 都救不回来。
-- [包管理达不到预期](../../coding/package_manager.md#nix)
-- ~~社区不合，drama 不断~~（虽然跟普通用户没啥关系）
-- 图形化安装界面垃圾，minimal 镜像缺功能
-- home manager 捞
+不过也不得不说 NixOS 自身的问题还是不小的，详见 [狂喷 nixos](../../gossip/fuckxxx.md#nixos) 和 [包管理器杂谈](../../coding/package_manager.md)。
 
 我的资历尚浅，只能够发出如此感叹。如果你希望看到更多对 nixos 的评价，可以看看 [external 2.](#external)。
 
@@ -514,3 +507,4 @@ nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel
 
 1. [Why you don't need flake-utils](https://ayats.org/blog/no-flake-utils/)
 2. [OS as Code - 我的 NixOS 使用体会 - thiscute](https://thiscute.world/posts/my-experience-of-nixos/)
+3. [Minimizing NixOS images](https://nixcademy.com/posts/minimizing-nixos-images/)

@@ -154,19 +154,27 @@ tag:
 
 ### vscode 有多难用
 
+- vscode 是出了名的逃避问题。已经被 issue 淹没了。
+- 官方插件太臃肿了，例如 _python_，_C/C++_。
 - 关闭了某插件的弹窗通知权限后，该插件依然会弹窗通知。
 - 跨平台（跨系统）做得挺烂的。
   - 不支持仅在某平台禁用部分插件
   - 不支持仅在某平台修改任意设置项
-- 推自家的 copilot 真是推死马了，每次打开新项目都会弹出侧栏。
-- 打开 vscode 时如果你的 CPU 负载很高，弹出的终端就有可能是 powershell，即使你已经设置了 `"terminal.integrated.defaultProfile.windows": "Nushell"` ([src](https://t.me/withabsolutex/2157))。这个 bug 从 2021 年开始就已存在。
-- 无法打开 1GB 的文本。这是 chromium based 编辑器的限制。
+- 有一些默认启用的垃圾内置插件。。
+  - 推自家的 copilot 真是推死马了，每次打开新项目都会弹出侧栏。
+- 没法控制插件行为和权限。
+  - 某个看似没啥用的插件向我的 C 盘写入了 6GB 的缓存，说的就是你，_SonarLint_！
+  - java 的插件天天申请公共网络访问权限，即使我不需要联网。
+- **恶性 bug**：打开 vscode 时首次弹出的终端是 powershell，即使你已经设置了默认使用其他 shell：`"terminal.integrated.defaultProfile.windows": "Nushell"` ([src](https://t.me/withabsolutex/2157))。这个 bug 从 2021 年开始就已存在。
+- 无法打开 1GB 的文本。这是所有 chromium based 编辑器的限制。
 - linux 下某次更新后，每次打开都会被 kwallet 提示输密码跳脸，疑似自动连接 ssh-agent。
 - vscode 在用 range 格式化 _包含 emoji 作为行开头_ 的 range 时，有概率让 emoji 爆炸（消失或 �）([src](https://t.me/withabsolutex/2459)，1.9x 行为，当前已修复)
 - vscode wsl 是靠读终端文字内容来提醒用户某某端口可用的，非常脑残。([src](https://t.me/withabsolutex/2436))
 - [符号双击与字符替换问题](https://github.com/microsoft/vscode/issues/251608) ([src](https://t.me/withabsolutex/2392))
 - [在 NVIDIA GPU 下使用有偶发黑屏问题](https://github.com/microsoft/vscode/issues/35527)，issue close 了，但是我还是天天遇到。这个问题已经存在了 8 年。
 - vscode 有一个机制是如果在打开窗口的情况下关机，开机后启动 vscode 会恢复这些窗口。这个机制本身是好的，但是恢复窗口以后这些窗口的相对位置可能发生改变，可能倒序、乱序，这又是什么意思。。而且 win11 是不允许调整窗口顺序的。
+- vscode 的 remote 允许把文件直接拖进去。这很方便。但是文件不能拖出来到其他工作区。[src](https://t.me/withabsolutex/2530) [issue](https://github.com/microsoft/vscode/issues/93599)
+- **恶性 bug**：（偶发）终端滚动滚轮，会卡一下，然后自动跳转到终端顶部，也就是最早的消息处。
 
 ### [cursor](../coding/vscode.md#关于-cursor) 有多难用
 
@@ -186,6 +194,23 @@ tag:
 - VS insider 退出会自动更新，并且取消按钮是灰的。
 - 自带的 vcpkg 是清单模式，这个模式对于初学者来说相当难用，并且无法按照网上的资料进行构建。（网上资料大多是运行在经典模式的）
 - 如果你安装了 VS insider，那么其他依赖 vs 的程序可能找不到 vs，于是要你重新安装一个。
+
+## 包管理器系列
+
+### uv
+
+- 无法安装 pytho <= 3.7 的版本，不合格。
+
+## 操作系统系列
+
+### NixOS
+
+- 文档稀烂，缺乏条目，遇到问题主要靠社区解答，而 discourse 又是一千个人在一千个场景下有一百万个回答。
+- 报错模糊，定位问题困难，并且当前 nom/nh 的各种尝试都无法帮助定位问题。
+- [包管理达不到预期](../../coding/package_manager.md#nix)
+- ~~社区不合，drama 不断~~（虽然跟普通用户没啥关系）
+- 图形化安装界面垃圾，minimal 镜像缺功能
+- home manager 很捞，breaking changes 多。
 
 ## QQ 有多难用
 

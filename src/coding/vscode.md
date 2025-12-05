@@ -12,9 +12,11 @@ tag:
 
 <div class="subtitle">——neovim 死里配，不如 vscode 同步一根毛</div>
 
-我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实强大且开箱即用。_（据说是优化得很好的电子垃圾，来源请求）_
+我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。
 
-在 linux 端我曾尝试抛弃 vscode，转向 neovim，但是几天后即放弃。
+在 linux 我曾尝试转向 neovim，但是数日后即放弃。
+
+不过 vscode 也绝非完美。前往 [xxx 有多难用](../gossip/fuckxxx.md#vscode-有多难用)，看我狂喷 vscode。
 
 ## 使用
 
@@ -75,15 +77,13 @@ tag:
 
 我的刚需是：免费（考虑付费的话直接上 copilot 完事了），可部分禁用。
 
-<details>
+目前我正在使用 supermaven。
 
-<summary>点击展开前言</summary>
+::: details AI 相关信息推荐早就过时了，这里没啥看的价值
 
 我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 `%TEMP%` 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。
 
 用久了感觉 CodeGeeX 不够智能，又尝试其他插件。
-
-</details>
 
 非国产：
 
@@ -113,6 +113,8 @@ tag:
 
 - chat api，gemini 一直都是免费的
 - code 补全 API 的话，deepseek api 比较便宜
+
+:::
 
 ### 插件黑名单
 
@@ -166,7 +168,7 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 
 ## 编写插件
 
-我写过一个 [anyformatter](https://github.com/lxl66566/anyformatter-vscode)。
+我写过两个 formatter，[anyformatter](https://github.com/lxl66566/anyformatter-vscode) 和 [rime formatter](https://github.com/lxl66566/rime-formatter)，有些照猫画虎的心得。
 
 ### 上传
 
@@ -207,14 +209,6 @@ Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。有一些需�
    - cursor-mate（闭源）
 3. ~~邮箱无限续可以用 2925 无限邮。~~
    - 2025.03 之后，2925 无限邮和一些滥用邮箱被彻底禁用，爆 [_User is unauthorized_](https://forum.cursor.com/t/user-is-unauthorized/43042/79)。这里建议买一个域名托管到 Cloudflare，然后用这个域名开一堆子域的邮箱。
-
-## 其他评价
-
-- vscode 的可自定义程度还不够高
-- 有一些官方插件太臃肿了（例如 _python_，_C/C++_）
-- 没法控制插件行为和权限
-  - （比如某个看似没啥用的插件向我的 C 盘写入了 6GB 的缓存，说的就是你，_SonarLint_！）
-  - （比如 java 的插件天天申请公共网络访问权限）
 
 ## external
 

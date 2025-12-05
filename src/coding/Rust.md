@@ -829,3 +829,4 @@ articles:
 16. [幽灵索引类型与匿名结构体](https://nihil.cc/posts/phantom_index_type/)
 17. [Rust 中常见的有关生命周期的误解](https://github.com/pretzelhammer/rust-blog/blob/master/posts/translations/zh-hans/common-rust-lifetime-misconceptions.md)
 18. [Inside Rust's std and parking_lot mutexes - who wins?](https://blog.cuongle.dev/p/inside-rusts-std-and-parking-lot-mutexes-who-win)
+19. [Making a const version of Rust's array::from_fn - How hard can it be?](https://gendignoux.com/blog/2024/06/17/const-array-from-fn.html)，图码文并茂
