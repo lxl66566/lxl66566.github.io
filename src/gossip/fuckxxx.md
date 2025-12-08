@@ -212,6 +212,10 @@ tag:
 - 图形化安装界面垃圾，minimal 镜像缺功能
 - home manager 很捞，breaking changes 多。
 
+Nix 语言本身：
+
+- 配置合并不支持 list 减法；不支持撤销某个 config.xxx 设置项。不支持减法是我 nixos 配置高耦合度、高复杂度的罪魁祸首之一。
+
 ## QQ 有多难用
 
 实在受不了了，来细数 QQ 的罪状 _~~（可以当作对比 telegram~~_

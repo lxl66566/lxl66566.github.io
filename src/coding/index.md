@@ -68,6 +68,7 @@ tag:
 - [cangjie](https://developer.huawei.com/consumer/cn/cangjie/)([download](https://cangjie-lang.cn/download))：华为官方出品的编程语言，看起来挺像 ts 的，据说缝了挺多东西。我挺期待它的性能报告的。
 - [vala](https://docs.vala.dev/about.html)：语法与 java/C# 类似，但是无 runtime 而是用 C 原生实现。据称在 GTK 等 GUI 编程方面强悍。
 - [rune](https://github.com/rune-rs/rune)：模仿 rust 的动态类型嵌入语言。看起来还行，解决了一些 rust 的痛点，不过没有静态类型检查也属实烦人。但是说是嵌入，zip 还有 41MB，不算小。
+- [otterlang](https://github.com/Ottrlang/otterlang)：基于 rust、模仿 python 的语言，希望与 rust 语言生态互相调用。感觉一般，许多语法需要额外记忆，是一层负担，而且当前互相调用仍然相当初级。
 
 </dtls>
 

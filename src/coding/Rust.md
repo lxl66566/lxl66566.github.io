@@ -533,6 +533,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | colored / simply-colored | 命令行颜色输出，后者更适合用于 no_std |
 | rand / smallrand | 随机数，后者更适合用于 no_std |
 | parking_lot | 一个解锁分配更公平的、没有 poison 的互斥锁 |
+| enum_dispatch | 基于 enum 实现的高性能 trait "object" |
 
 [^5]: 为避免傻逼 openssl 造成的影响，一般建议起手 `reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "http2", "charset", "system-proxy"] }`。
 

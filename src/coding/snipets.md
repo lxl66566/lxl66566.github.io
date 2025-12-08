@@ -73,7 +73,7 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $rebase_target
 
 ## revertversion
 
-将当前 git 仓库指定 tag 移动到 HEAD（本地 + remote）
+将当前 git 仓库指定 tag 移动到 HEAD（本地 + remote）。主要是我有一堆 action 是 tag 触发的，有时候代码有瑕疵，修完以后需要 rerun，就用这个脚本。
 
 用法：`rv <tag>`，rv 是 revertversion 的 alias
 

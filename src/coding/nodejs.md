@@ -8,7 +8,7 @@ tag:
   - 前端
 ---
 
-# JS 运行时
+# JS 生态
 
 > _（js/ts 语言有关请[跳转 JavaScript/TypeScript](./tsjs.md)）_
 
@@ -108,6 +108,29 @@ npx <command>                             # npm 的脚本运行器，可以自�
 
 - 查询包的 install size 可以使用 [Package Phobia](https://packagephobia.com/)。
 - 在前端项目中查询未使用的依赖可以用 depcheck：`pnpm i -g depcheck && depcheck`
+
+## 三方包记录
+
+几乎成为行业标准，必须掌握：
+
+<!-- prettier-ignore -->
+| 库名 | 简介 |
+| --- | --- |
+| zod | type validator |
+
+我用过然后觉得好用：
+
+<!-- prettier-ignore -->
+| 库名 | 简介 |
+| --- | --- |
+| tinybench | code snipets benchmark tool |
+
+**避雷条目一生黑**：
+
+<!-- prettier-ignore -->
+| 库名 | 吐槽 |
+| --- | --- |
+| node-pre-gyp | 为了好看，超过终端宽度的行都用 `...` 截断，但是又不给完整 log [src](https://t.me/withabsolutex/2521) |
 
 ## 运行时特性
 

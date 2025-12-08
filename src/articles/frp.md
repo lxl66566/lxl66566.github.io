@@ -33,6 +33,8 @@ cloudflare 的内网穿透是部署最简单，使用体验最好的服务，杀
 cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
 ```
 
+实际使用 cloudflare tunnel 代理我的 reader server 时，出现过上传失败的问题。我不太确定是 server 锅还是 tunnel 锅。
+
 ## [easytier](https://easytier.cn/)
 
 类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。

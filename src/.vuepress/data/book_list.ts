@@ -9,8 +9,10 @@ const original_list: BookItemInputType[] = [
       japanese: true,
       namaniku: true,
     },
+    h_level: HLevel.LITE,
     duration: {
       start: "2025-12-04",
+      end: "2025-12-08",
     },
   },
   {
