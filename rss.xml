@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 08 Dec 2025 02:34:23 GMT</pubDate>
-    <lastBuildDate>Mon, 08 Dec 2025 02:34:23 GMT</lastBuildDate>
+    <pubDate>Mon, 08 Dec 2025 15:08:02 GMT</pubDate>
+    <lastBuildDate>Mon, 08 Dec 2025 15:08:02 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -35,7 +35,7 @@
 <p>用法：<code>gfixup [git_commit]</code></p>
 
 <h2>revertversion</h2>
-<p>将当前 git 仓库指定 tag 移动到 HEAD（本地 + remote）</p>
+<p>将当前 git 仓库指定 tag 移动到 HEAD（本地 + remote）。主要是我有一堆 action 是 tag 触发的，有时候代码有瑕疵，修完以后需要 rerun，就用这个脚本。</p>
 <p>用法：<code>rv &lt;tag&gt;</code>，rv 是 revertversion 的 alias</p>
 
 <h2>repeat</h2>
@@ -283,6 +283,7 @@
 <p>最简单的编码就是 WAV 容器使用的 “PCM 编码”。实际上 PCM 本身是脉冲编码调制（Pulse Code Modulation），目的是将模拟信号转换为数字信号，这其中经过了采样、量化、编码的步骤。而 WAV 就直接将 PCM 后的数字信号塞到容器里，不做任何压缩，所以 WAV 一般都挺大的。因为容易处理，编码器好写，经常作为音频处理教学使用。</p>
 <p>生活中最常见的 MP3 本身就是一种有损编码方式，MP3 容器只是对该编码的包装。它主要做了两件事，（1）舍弃 PCM 音频中人耳不敏感部分（FFT 到频域处理）（2）通过 Huffman 编码、动态比特率<strong>等</strong>各种手段减小音频数据大小。MP3 具有相当大的<a href="https://zh.wikipedia.org/zh-cn/MP3#MP3%E7%9A%84%E8%AE%BE%E8%AE%A1%E9%99%90%E5%88%B6" target="_blank" rel="noopener noreferrer">技术限制</a>，并且放在今天 MP3 编码算法也算不上多先进，因此还是尽量少用。</p>
 <p>Vorbis 编码被称为 Open-source alternative to MP3，是 OGG 容器中占有最主要地位的编码，常用于游戏中。我在 <a href="/articles/speedup.html" target="_blank">galgame 音频处理</a>时跟 Vorbis 打了很多交道。Vorbis 基于 MDCT 和熵编码，能达到比 MP3 更高的压缩率。</p>
+<p>opus 是新一代音频编码，具有高压缩率、低延迟、高音质、完全开放的特点。我非常喜欢，我希望能把所有音频格式都统一成 opus，并且我自己的音乐<a href="/coding/snipets.html#audiofmt" target="_blank">已经在进行这一步骤</a>。</p>
 <p>MP3 和 Vorbis 都是有损编码，而在高品质音乐中最常用的无损编码是 FLAC。它在无损界基本是唯一选择，因为它有许多很棒的特性，例如快速解码、流式、可定位、可调压缩等级(<a href="https://zh.wikipedia.org/zh-cn/FLAC#%E6%8A%80%E8%A1%93" target="_blank" rel="noopener noreferrer">ref</a>)等。</p>
 <h2>响度与均衡</h2>
 <p><em>峰值电平</em> 并不严格等同于 <em>响度</em>：响度是人耳对声音强度的主观感知，会受到多种因素影响。</p>
@@ -292,6 +293,7 @@
 <p>EBU R.128 基于三种不同长度区间内的响度进行截尾综合决策：Momentary loudness（400ms），Short-Term loudness（3s）和 Integrated loudness（长期）。更具体的可以阅读<a href="https://www.bilibili.com/opus/437135530799763720" target="_blank" rel="noopener noreferrer">这篇文章</a>。</p>
 <p>EBU R.128 本身并不具备响度标准化的能力；一般的响度标准化会用 EBU R.128 测出 LUFS 后，为音频叠加一种增益模式使其达到 target LUFS。这一点将在后文展开。</p>
 <h3>增益</h3>
+<p>增益是放大或衰减音频信号强度的过程，也就是调整响度。</p>
 <p>最简单的增益模式就是全局增益。然而经过我的一些原型验证，这样的处理具有较为显著的缺点：</p>
 <ul>
 <li><a href="https://github.com/lxl66566/Loudness-Normalization-tauri-app" target="_blank" rel="noopener noreferrer">Loudness-Normalization-tauri-app</a> 是<strong>流式场景</strong>下的响度标准化应用。在人声占据主导地位的场合下，人声的第一个字会爆音，因为基于之前的非人声音频流计算出的增益过高。</li>
@@ -1209,7 +1211,8 @@
 <p>就这么简单，可以说一行命令完成内网穿透也不为过。而且你永远可以相信 cloudflare 的延迟和稳定性。</p>
 <p>不过 cloudflared 在 <a href="/articles/linux/openwrt.html#%E6%9C%8D%E5%8A%A1" target="_blank">procd</a> 系统上只会将 service 写入 <code>/etc/init.d/cloudflared</code>，并不会开机自启。如果需要开机自启，需要手动创建一个软链接：</p>
 <div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/rc.d</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &amp;&amp; </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ../init.d/cloudflared</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ./S99cloudflared</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><h2><a class="header-anchor" href="#easytier"><span></span></a><a href="https://easytier.cn/" target="_blank" rel="noopener noreferrer">easytier</a></h2>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>实际使用 cloudflare tunnel 代理我的 reader server 时，出现过上传失败的问题。我不太确定是 server 锅还是 tunnel 锅。</p>
+<h2><a class="header-anchor" href="#easytier"><span></span></a><a href="https://easytier.cn/" target="_blank" rel="noopener noreferrer">easytier</a></h2>
 <p>类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。</p>
 <blockquote>
 <p>和 zerotier、tailscale 故意区分了不同端相比，easytier 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch</p>
