@@ -25,6 +25,7 @@ category:
 - 边缘二次元人
 - [剧情党](../hobbies/galgame.md#分类)
 - 无节日主义
+- 非善
 
 [前往 QA 查看详解](../hide/personal_details.md#标签-qa)
 

@@ -36,7 +36,7 @@
 <script lang="ts" setup>
 import nhentai from "./nhentai.vue";
 import dtlslong from "./dtlslong.vue";
-import { TwoScoreCompare, ComicItemType } from "../definition";
+import { TwoScoreCompare, ComicItemType } from "../definition/index.js";
 
 const data: ComicItemType[] = [
   { id: "429153", aScore: 9.4, bScore: 4, info: "今日から悪い子。続" },
@@ -919,6 +919,9 @@ const data: ComicItemType[] = [
   { id: "611648", aScore: 9, bScore: 5.7, info: "#hololive #傲娇" },
   { id: "611468", aScore: 8.5, bScore: 7, info: "#兄妹 #睡x #纯爱" },
   { id: "612908", aScore: 8, bScore: 3.3, info: "#师生 #兽耳 #短篇" },
+  { id: "587757", aScore: 9, bScore: 5.8, info: "#NIKKE #巨乳 #纯爱", bak: "https://telegra.ph/C106-蒼き星-全白-紅蓮燦爛-勝利の女神NIKKE386歪汉化-08-03-2" },
+  { id: "600518", aScore: 9.2, bScore: 7.6, info: "#蔚蓝档案 #合集", bak: "https://telegra.ph/ぷ玉-Fanbox汉化合集-ブルーアーカイブ-中国翻訳-07-31" },
+  { id: "416711", aScore: 5.7, bScore: 7.9, info: "#3P #扶她 #强制性交 #全彩 #女仆 #雌小鬼 #反杀", bak: "https://telegra.ph/ピリオデストラクション-ぴりぷん-申し訳ございませんアイリス様-中国翻訳-07-29-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
