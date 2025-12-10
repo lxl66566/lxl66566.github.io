@@ -205,9 +205,9 @@ tag:
 
 ### NixOS
 
+- [包管理达不到预期](../coding/package_manager.md#nix)，这里面的吐槽非常多。
 - 文档稀烂，缺乏条目，遇到问题主要靠社区解答，而 discourse 又是一千个人在一千个场景下有一百万个回答。
 - 报错模糊，定位问题困难，并且当前 nom/nh 的各种尝试都无法帮助定位问题。
-- [包管理达不到预期](../../coding/package_manager.md#nix)
 - ~~社区不合，drama 不断~~（虽然跟普通用户没啥关系）
 - 图形化安装界面垃圾，minimal 镜像缺功能
 - home manager 很捞，breaking changes 多。
@@ -215,6 +215,19 @@ tag:
 Nix 语言本身：
 
 - 配置合并不支持 list 减法；不支持撤销某个 config.xxx 设置项。不支持减法是我 nixos 配置高耦合度、高复杂度的罪魁祸首之一。
+
+## niri 有多难用
+
+niri 是一个平铺 Desktop Env。
+
+- 配置依赖 KDL，然而这个结构化语言是一坨大便。
+  1. 世界上的标记语言已经够多了，而 KDL 在其中是比较烂的一个
+  2. KDL 挺复杂的，不好上手
+  3. 没有一个可用的 formatter 和 LSP
+  4. 说是对标 yaml，那你的 alias 呢
+  5. 0.2 和 0 有类型区别，不会自动转换
+- niri flake 难用
+  - bug：
 
 ## QQ 有多难用
 

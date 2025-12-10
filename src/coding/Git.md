@@ -99,7 +99,7 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
 
 ## 其他工具
 
-- [gitui](https://github.com/extrawurst/gitui)：TUI git 工具
+- [gitui](https://github.com/extrawurst/gitui)：TUI git 工具，虽然我是命令党。no lazygit please.
 - [Commitizen](https://github.com/commitizen/cz-cli)：帮助写出规范的 commit message
 
 ## 基础

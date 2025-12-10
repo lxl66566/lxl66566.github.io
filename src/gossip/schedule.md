@@ -17,13 +17,12 @@ category:
 - [ ] 英语 IELTS / TOEFL (without a target score)
 - [x] try NixOS
 
-CS 自学：
+CS 相关：
 
 - [x] 操作系统
 - [ ] 编译原理
 - [x] 数据库
 - [x] 基础前端
-- [ ] ~~tauri or flask, to dev wordsreciter~~ wordsreciter not used
 - [x] koishi plugin, like atri bot
 - [ ] ~~C# learning and pull request to Tai, MisakaTranslator~~ (not used/maintained)
 - [x] tg 教务信息转发（通过 rss 实现）

@@ -1603,6 +1603,22 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 </template>
 </GalList>
 
+## 一言
+
+<!-- https://grid.pivotstudio.cn/gal/ -->
+
+vndb 的图片，没有专门处理，随便看看吧。
+
+<GalExhibitionGrid :items="exhibition_data"/>
+
+xx 之最：
+
+<GalExhibitionGrid :items="exhibition_data2"/>
+
+- 最好的时穿作：_ISLAND_（_流景之海的艾佩理雅_ 的时穿推理虽然精彩，但是（剧透内容：）<heimu>最后还是回归了缸中之脑的解释</heimu> 因此不敌 _ISLAND_）
+- 最好的结尾：_秽翼的尤斯蒂娅_。我本人不太喜欢结尾硬做 happy end，而 _秽翼的尤斯蒂娅_ 结尾相对折中，情绪渲染到位的前提下也没有抛弃废萌群体，设计得还是不错的。
+- 最好的配音：_冥契的牧神节_。作品本身以戏剧为主题，非常考验配音技术，而声优发挥得也非常好，配音绝对是碾压级的水平。
+
 ## 我计划玩
 
 排名不分先后。
@@ -1666,22 +1682,6 @@ Qruppo 的作品总是能传达出一些制作人想要传达出的东西。如�
 - 虹彩都市
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
-
-## 一言
-
-有感而发。
-
-<!-- https://grid.pivotstudio.cn/gal/ -->
-
-<GalExhibitionGrid :items="exhibition_data"/>
-
-其他一番评价：
-
-- 最好的时穿作：_ISLAND_（_流景之海的艾佩理雅_ 的时穿推理虽然精彩，但是（剧透内容：）<heimu>最后还是回归了缸中之脑的解释</heimu> 因此不敌 _ISLAND_）
-- 最冲爆：_FLIP \* FLOP ~RAMBLING OVERRUN~_
-- 最好的结尾：_秽翼的尤斯蒂娅_。我本人不太喜欢结尾硬做 happy end，而 _秽翼的尤斯蒂娅_ 结尾相对折中，情绪渲染到位的前提下也没有抛弃废萌群体，设计得还是不错的。
-- 最好的配音：_冥契的牧神节_。作品本身以戏剧为主题，非常考验配音技术，而声优发挥得也非常好，配音绝对是碾压级的水平。
-- 最好的特效：_魔法使之夜（重制）_。
 
 ## 我的设置
 
@@ -1826,7 +1826,14 @@ const exhibition_data = [
   { text: "苦痛", alt: "euphoria", lnk: "https://vndb.org/v6540", src: "https://t.vndb.org/cv.t/77/88077.jpg" },
   { text: "幻梦", alt: "冥契的牧神节", lnk: "https://vndb.org/v29383", src: "https://t.vndb.org/cv.t/94/90194.jpg" },
   { text: "意义", alt: "秽翼的尤斯蒂娅", lnk: "https://vndb.org/v3770", src: "https://t.vndb.org/cv.t/78/79678.jpg" },
+];
+const exhibition_data2 = [
+  { text: "最好的时穿", alt: "ISLAND", lnk: "https://vndb.org/v18498", src: "https://t.vndb.org/cv.t/39/75939.jpg" },
+  { text: "最冲爆", alt: "FLIP * FLOP ~RAMBLING OVERRUN~", lnk: "https://vndb.org/v39197", src: "https://t.vndb.org/cv.t/73/88873.jpg" },
+  { text: "最好的结尾", alt: "秽翼的尤斯蒂娅", lnk: "https://vndb.org/v3770", src: "https://t.vndb.org/cv.t/78/79678.jpg" },
+  { text: "最好的配音", alt: "冥契的牧神节", lnk: "https://vndb.org/v29383", src: "https://t.vndb.org/cv.t/94/90194.jpg" },
   { text: "最好的配乐", alt: "变态监狱", lnk: "https://vndb.org/v31055", src: "https://t.vndb.org/cv.t/10/94410.jpg" },
+  { text: "最好的特效", alt: "魔法使之夜（重制）", lnk: "https://vndb.org/v777", src: "https://t.vndb.org/cv.t/24/85324.jpg" },
 ];
 const show_strict = ref(false);
 </script>

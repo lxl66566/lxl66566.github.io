@@ -130,7 +130,7 @@ sudo: a password is required
 
 还有一个学习方法是多看别人的 configuration，~~并且大量摘抄~~。我的配置在[下面](#配置)，还有一些：[ryan4yin's config](https://github.com/ryan4yin/nix-config) [nyancat](https://git.ny4.dev/nyancat/flake/src/branch/master) [wimpysworld](https://github.com/wimpysworld/nix-config) [jackdbd](https://github.com/jackdbd/nix-config) [nmasur](https://github.com/nmasur/dotfiles) [oo-infty](https://github.com/oo-infty/nixos-configurations) [AsterisMono](https://github.com/AsterisMono/flake)
 
-### 基础
+### 语言基础
 
 2025 年 AI 已经非常强大，语法问题完全可以开 online search 问 AI。
 
@@ -142,9 +142,18 @@ sudo: a password is required
 - function 的 `@` 绑定：`bargs@{a, b, ...}:` is equivalent to `{a, b, ...}@bargs:`
 - `//` 用于两个 attrset 的合并，**右边覆盖左边**。
 - 最常用的一些判断条件：`mkDefault` 和 `mkForce` 修改合并优先级，`mkBefore` `mkAfter` 修改 list 合并顺序，`mkIf` 条件控制某些属性的有和无，`optional` 根据条件返回 null 或 `[x]`，而 `optionals` 返回 null 或 x。
+  - config 只能设置，不能取消。如果你需要取消已有的设置，只能去查一下默认值然后使用 mkForce (默认值)。并且如果版本更迭，默认值发生改变，配置就出现了不一致行为。
 - 数据类型：
-  - 数组：list。判断元素是否存在：`builtins.elem elem list`。
+  - 数组：list。
+    - 判断元素是否存在：`builtins.elem elem list`。
+    - 删除元素只能用 filter。
 - nix config 里，attrset to INI 的类型要求必须有 section。但是实际 ini 配置可能有些条目没有 section ，所以必须使用一个伪 section: main。例如 `xxx = 1` 需要写成 `main = { xxx = 1;};`，什么脑残设计 😅
+
+### OS 基础
+
+- NixOS 应用配置分三步：eval, build, apply。
+- NixOS module 里有一些 top level attribute，例如 `imports`, `options`, `config`，还有 `disabledModules`。其他非 top level 的项默认会包在 `config = {...}` 里面。
+  - disabledModules 在求值时可以取消 imports 引入的模块。因为 list 在 merge 时不能移除元素，所以很多人会分非常多的模块（例如一行 `systemPackage = ...` 也分一个模块），然后使用 disabledModules 控制不同 host 下**排除**某些包。说到底还是 Nix 的设计缺陷。
 
 ### 常用命令
 
@@ -358,6 +367,8 @@ nix.settings.warn-dirty = false;
 但是进一步定制各种配置文件就没那么简单了，因为 [home-manager 的 manual](https://nix-community.github.io/home-manager/index.xhtml) 就是一坨屎！建议直接用[第三方的 options 搜索](#搜索)。
 
 一般的 home manager 教程都会把 home manager modules 和 config modules 分开放。但是如果要将这两个 config 放在一起呢？答：只需要使用 `home-manager.users."${username}" = {...};` 即可，它们是可以放在同一个文件里的。
+
+注意，如果在这种 home manager 块里使用其他 flake 的 homeModules 等会更改 config/lib 的操作，记得写成函数形式以将 system config 透进来，例如 `home-manager.users."${username}" = { config, lib, ... }: {...};`。否则会出一些奇奇怪怪的问题。
 
 ### [plasma manager](https://github.com/nix-community/plasma-manager)
 
