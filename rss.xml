@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 08 Dec 2025 15:08:02 GMT</pubDate>
-    <lastBuildDate>Mon, 08 Dec 2025 15:08:02 GMT</lastBuildDate>
+    <pubDate>Wed, 10 Dec 2025 15:37:38 GMT</pubDate>
+    <lastBuildDate>Wed, 10 Dec 2025 15:37:38 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -850,10 +850,13 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20251207 我可以很轻易地断言 过度自信是人类所有认知偏差中最危险的一种。——Don A. Moore 20251202 每次读完一本精彩的小说我都会想，要是能让优秀的小说家来写 galgame 就好了。剧本就是真的“剧本”，需要让小说的文字“动起来”，并通过小互动来凸显人物性格；而主笔负责控制剧情的走向、伏笔的回收、感情的起伏等。当然...</description>
+      <description>2025 20251210 cloudflare 崩了两次，网上骂声一片。我寻思人家公开事故报告已经很给面子了，而且第二次崩溃的这错误也不是容易发现的那种，换我来看也挑不出啥毛病。 啊，不过 React/Next.js CVE 是该骂啊，我这辈子不会碰 ts/js 写的后端的。 20251207 我可以很轻易地断言 过度自信是人类所有认知偏差中最危险的...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20251210</h2>
+<p>cloudflare 崩了两次，网上骂声一片。我寻思人家公开事故报告已经很给面子了，而且第二次崩溃的这错误也不是容易发现的那种，换我来看也挑不出啥毛病。</p>
+<p>啊，不过 React/Next.js CVE 是该骂啊，我这辈子不会碰 ts/js 写的后端的。</p>
 <h2>20251207</h2>
 <p>我可以很轻易地断言 过度自信是人类所有认知偏差中最危险的一种。——Don A. Moore</p>
 <h2>20251202</h2>
