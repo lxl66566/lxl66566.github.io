@@ -50,6 +50,7 @@ CS 相关：
 ### 工作后
 
 - cs2 炼金
+- [蓝纹奶酪](https://t.me/withabsolutex/2574)
 
 ### 大学
 

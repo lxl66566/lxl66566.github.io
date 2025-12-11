@@ -922,6 +922,14 @@ const data: ComicItemType[] = [
   { id: "587757", aScore: 9, bScore: 5.8, info: "#NIKKE #巨乳 #纯爱", bak: "https://telegra.ph/C106-蒼き星-全白-紅蓮燦爛-勝利の女神NIKKE386歪汉化-08-03-2" },
   { id: "600518", aScore: 9.2, bScore: 7.6, info: "#蔚蓝档案 #合集", bak: "https://telegra.ph/ぷ玉-Fanbox汉化合集-ブルーアーカイブ-中国翻訳-07-31" },
   { id: "416711", aScore: 5.7, bScore: 7.9, info: "#3P #扶她 #强制性交 #全彩 #女仆 #雌小鬼 #反杀", bak: "https://telegra.ph/ピリオデストラクション-ぴりぷん-申し訳ございませんアイリス様-中国翻訳-07-29-2" },
+  { id: "588883", aScore: 7.9, bScore: 7.8, order: 2, info: "#兽耳 #异世界 #禁欲", bak: "https://telegra.ph/箸置き-おてもと-ホンネを聞かせて2-中国翻訳-08-10-2" },
+  { id: "588689", aScore: 7.5, bScore: 9, order: 1, info: "#父女 #NTR #出轨 #强制性交 #堕落 托卵の娘", bak: "https://telegra.ph/太郎プロジェクト-俺太郎-托卵の娘-中国翻訳-08-09-2" },
+  { id: "588843", aScore: 7.5, bScore: 8.1, order: 2, info: "#父女 #露出 #M 托卵の娘", bak: "https://telegra.ph/太郎プロジェクト-俺太郎-托卵の娘-2-中国翻訳-08-09-2" },
+  { id: "588626", aScore: 6.8, bScore: 6.1, info: "#纯爱 #青梅 #裸体素描", bak: "https://telegra.ph/ことらっく-柔らかな幼なじみを抱いた日-中国翻訳-08-08-2" },
+  { id: "587949", aScore: 7.4, bScore: 6.6, info: "#纯爱 #义妹 #治愈", bak: "https://telegra.ph/ことらっく-雨が降る夜にだけ義妹を抱く話-中国翻訳-08-04-2" },
+  { id: "556534", aScore: 6.7, bScore: 8.6, info: "#合集 #巨乳 #纯爱 #青梅 #师生 #旗袍 #cos #狂暴 #雌小鬼" },
+  { id: "614532", aScore: 7.7, bScore: 7.9, info: "#纯爱 #巨乳 #欲求不满" },
+  { id: "589360", aScore: 6.2, bScore: 8, info: "#崩坏 #睡x", bak: "https://telegra.ph/Uncensoredheart-汐吹あくめ-フォフォちゃんと睡眠えっち-崩壊スターレイル-中国翻訳-DL版-08-12-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -210,9 +210,10 @@ const original_list: GalItemInputType[] = [
     name: "春音Alice＊Gram",
     valid_name: "春音AliceGram",
     order: 1,
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "22h56min",
     duration: {
       start: "2025-08-30",
+      end: "2025-12-10",
     },
   },
   {
