@@ -6,19 +6,69 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 11 Dec 2025 03:38:28 GMT</pubDate>
-    <lastBuildDate>Thu, 11 Dec 2025 03:38:28 GMT</lastBuildDate>
+    <pubDate>Fri, 12 Dec 2025 13:35:25 GMT</pubDate>
+    <lastBuildDate>Fri, 12 Dec 2025 13:35:25 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>学习</category>
+    <category>工作</category>
     <category>推荐</category>
     <category>编程</category>
     <category>原理</category>
-    <category>学习</category>
     <category>经历</category>
     <category>教程</category>
     <category>评价</category>
     <category>随笔</category>
     <category>爱好</category>
+    <item>
+      <title>计算机网络（专业）</title>
+      <link>https://absx.pages.dev/learning/network_biz.html</link>
+      <guid>https://absx.pages.dev/learning/network_biz.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">计算机网络（专业）</source>
+      <description>计算机网络（专业） 这里的内容比起，会更加偏向于技术细节。 HTTP 历史：HTTP/0.9, HTTP/1.0, HTTP/1.1, HTTP/2, HTTP/3 (QUIC). HTTP/1.0：添加状态码、header、content-type。 HTTP/1.1：复用同一个 tcp 连接，chunked encoding，Pipelining。...</description>
+      <category>学习</category>
+      <category>工作</category>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<p>这里的内容比起<a href="/learning/network.html" target="_blank">大学授课 - 计算机网络</a>，会更加偏向于技术细节。</p>
+<h2>HTTP</h2>
+<p>历史：HTTP/0.9, HTTP/1.0, HTTP/1.1, HTTP/2, HTTP/3 (QUIC).</p>
+<ul>
+<li>HTTP/1.0：添加状态码、header、content-type。</li>
+<li>HTTP/1.1：复用同一个 tcp 连接，chunked encoding，Pipelining。</li>
+<li>HTTP/2：多路复用，帧和流，二进制传输，Server Push。</li>
+</ul>
+<p>公司内部一般使用 HTTP/1.1。之后的 section 若未指明，默认为 HTTP/1.1。</p>
+<h3>HTTP/1.0</h3>
+<ul>
+<li>每个请求都<strong>必须</strong>新建一个 tcp 连接。</li>
+</ul>
+<h3>HTTP 1.1</h3>
+<p><strong>建议阅读 <a href="https://www.rfc-editor.org/rfc/rfc9113" target="_blank" rel="noopener noreferrer">RFC 9113 HTTP/1.1</a></strong>。主要内容在 RFC 里都有，这里随便做点笔记。</p>
+<ul>
+<li>HTTP/1.1 可以在同一个 TCP 连接（连接复用）上<strong>连续</strong>发送<strong>多个请求</strong>，不用等待前一个请求的响应返回（Pipelining）。</li>
+<li>响应的返回顺序必须与请求的发送顺序严格一致。只要发送顺序一致，tcp 协议层会保证接收顺序也一致。</li>
+<li>Host header 是必须有的，如果没有，server 必须返回 400。</li>
+<li>Header 是一个 map，其中 key 不分大小写，不能有下划线。</li>
+<li>chunked:
+<ul>
+<li><code>Transfer-Encoding: chunked</code> 时，Content-Length 将被忽略。</li>
+<li>chunked 是 HTTP/1.1 唯一的应用层分块机制，除此之外就只能靠 tcp 分包了。chunked 对每个块的大小没有限制。</li>
+</ul>
+</li>
+</ul>
+<h3>HTTP/2</h3>
+<p>HTTP/2（2015）是 HTTP 1.1（1997）以来的一个重大更新。</p>
+<ul>
+<li>所有 header 都<strong>必须</strong>被 HPACK 算法压缩。Body (DATA) 不强制压缩，一般由应用自行实现。</li>
+</ul>
+<h2>TCP</h2>
+<ul>
+<li>MTU：Maximum Transmission Unit，单数据包的可传输最大数据量，受到现实网络设备限制，一般为 1500。</li>
+<li>MSS：Maximum Segment Size，TCP segment 的最大长度，一般为 MTU - 40（20 IP header, 20 TCP header）。</li>
+</ul>
+]]></content:encoded>
+    </item>
     <item>
       <title>snipets</title>
       <link>https://absx.pages.dev/coding/snipets.html</link>
@@ -1031,6 +1081,7 @@
       <description>找工作经历 首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。 感想 经历了一次春招一次秋招，有一点感想。 谨慎投招聘网站上经常刷到的小公司。这么多毕业生，小公司又没有多少招人需求，那为什么一直都在招人呢？因为真的难过它们的面试，恨不得招的都是 ACM 金。 而大厂面试也没有那么难，非常公式化。多看面经，多背八股，刷点基础算法即...</description>
       <category>评价</category>
       <category>经历</category>
+      <category>工作</category>
       <pubDate>Mon, 25 Mar 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>首先本精神自由人的定位非常清楚：不考研，不考公。因此找工作是我的唯一选择。</p>
@@ -1493,151 +1544,6 @@
 </ol>
 <h2>字体</h2>
 <p>我去嵌字教程里下过<a href="https://t.me/absolutexsresource/15" target="_blank" rel="noopener noreferrer">字体包</a>。该教程强推华康，这系列的字体虽然多，但只有繁中，不能用于简中。而我是希望能使用简中字体的。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>其他艺术形式</title>
-      <link>https://absx.pages.dev/hobbies/art.html</link>
-      <guid>https://absx.pages.dev/hobbies/art.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">其他艺术形式</source>
-      <description>其他艺术形式 这里记录的是较少的，一般心血来潮才会看的作品形式。 主要的艺术形式记录请跳转对应页面（ | | ）。 漫画 不太喜欢，剧情一坨，好多漫故意向 sex 方向引诱但是又不干，不如看长篇本子。 电影 资源来源：各大 PT 站 | RARBG 纪录片/连续剧 稍后再看 漫画 今生恋人，前世冤家（等待连载） 电影 《这个男人来自地球》 《蝴蝶效应》</description>
-      <category>爱好</category>
-      <pubDate>Fri, 23 Aug 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>这里记录的是较少的，一般心血来潮才会看的作品形式。</p>
-<p>主要的艺术形式记录请跳转对应页面（<a href="/hobbies/galgame.html" target="_blank">galgame</a> | <a href="/hobbies/anime.html" target="_blank">番剧</a> | <a href="/hobbies/books.html" target="_blank">小说</a>）。</p>
-<h2>漫画</h2>
-<p>不太喜欢，剧情一坨，好多漫故意向 sex 方向引诱但是又不干，不如看长篇本子。</p>
-<!-- prettier-ignore -->
-<table>
-<thead>
-<tr>
-<th style="text-align:center">名</th>
-<th style="text-align:center">时间</th>
-<th style="text-align:center">评价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"><a href="https://www.manhuagui.com/comic/51315/" target="_blank" rel="noopener noreferrer">虽然我成为了圣骑士但是团长的欧派厉害过头没法保持心灵纯洁</a></td>
-<td style="text-align:center">2025.06.10-<br>21，等待连载</td>
-<td style="text-align:center">sb 处男漫</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://manhuagui.com/comic/53159/" target="_blank" rel="noopener noreferrer">我成了魔族的宠物</a></td>
-<td style="text-align:center">2024.11.09-<br>04，等待连载</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://manhuagui.com/comic/44973/" target="_blank" rel="noopener noreferrer">傲娇女友心想刺成</a></td>
-<td style="text-align:center">2024.10.09</td>
-<td style="text-align:center">草！</td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://copymanga.tv/comic/vryouxizhuanshengyishijietiaojiaomowangmeishaonvclothoutsaber/chapter/519b94f4-65e3-11e9-8bc8-024352452ce0" target="_blank" rel="noopener noreferrer">VRエロゲーやってたら異世界に転生したので、美少女魔王を奴隷化する</a></td>
-<td style="text-align:center">2024.10.025-<br>19 话，等待连载</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://mangabz.com/30986bz/" target="_blank" rel="noopener noreferrer">最果てに惑う</a></td>
-<td style="text-align:center">2024.09.15-<br>Ch13.2，等待连载</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">我将要支配你们的一切</td>
-<td style="text-align:center">2024.08.22-<br>2024.08.31，烂尾，15 话</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://t.me/absolutexsH/2071" target="_blank" rel="noopener noreferrer">SEX&amp;迷宫！！~在我家地下出现了H次数=等级的迷宫！？~</a></td>
-<td style="text-align:center">2024.06.22-<br>2024.06.2x</td>
-<td style="text-align:center">见链接</td>
-</tr>
-</tbody>
-</table>
-<h2>电影</h2>
-<ul>
-<li>资源来源：各大 PT 站 | <a href="https://wvw.rarbg.tw/" target="_blank" rel="noopener noreferrer">RARBG</a></li>
-</ul>
-<!-- prettier-ignore -->
-<table>
-<thead>
-<tr>
-<th style="text-align:center">名</th>
-<th style="text-align:center">时间</th>
-<th style="text-align:center">评价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">盗梦空间 </td>
-<td style="text-align:center">2024.12.11</td>
-<td style="text-align:center">留白，有意思</td>
-</tr>
-<tr>
-<td style="text-align:center">No More Bets - 2023</td>
-<td style="text-align:center">2024.09.29</td>
-<td style="text-align:center">虽然剧情有点刻意，不过拍的不错</td>
-</tr>
-<tr>
-<td style="text-align:center">金蝉脱壳 </td>
-<td style="text-align:center">2024.09.21</td>
-<td style="text-align:center">经典作品，把我的感觉还回来了</td>
-</tr>
-<tr>
-<td style="text-align:center">金蝉脱壳2：冥府 </td>
-<td style="text-align:center">2024.09.21-<br>观看中止</td>
-<td style="text-align:center">确实烂，<a href="https://movie.douban.com/review/9437758/" target="_blank" rel="noopener noreferrer">影评</a>说得对</td>
-</tr>
-<tr>
-<td style="text-align:center">天才计划 - 2020</td>
-<td style="text-align:center">2024.09.20</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center"><a href="https://zh.wikipedia.org/wiki/%E8%BF%B7%E5%A4%B1%E4%B8%9C%E4%BA%AC" target="_blank" rel="noopener noreferrer">迷失东京</a></td>
-<td style="text-align:center">2024.08.21</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">隐入尘烟</td>
-<td style="text-align:center">2024.06.26</td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<h2>纪录片/连续剧</h2>
-<!-- prettier-ignore -->
-<table>
-<thead>
-<tr>
-<th style="text-align:center">名</th>
-<th style="text-align:center">时间</th>
-<th style="text-align:center">评价</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">孤独的美食家</td>
-<td style="text-align:center">2023.12.31-<br>7 季，已暂停</td>
-<td style="text-align:center">好饿~</td>
-</tr>
-</tbody>
-</table>
-<h2>稍后再看</h2>
-<ul>
-<li>漫画
-<ul>
-<li><a href="https://18comic.vip/album/604146/%E4%BB%8A%E7%94%9F%E6%81%8B%E4%BA%BA-%E5%89%8D%E4%B8%96%E5%86%A4%E5%AE%B6-%E4%B8%8D%E5%92%95%E9%B8%9F%E6%B1%89%E5%8C%96%E7%BB%84-%E7%A6%81%E6%BC%AB%E5%A4%A9%E5%A0%82" target="_blank" rel="noopener noreferrer">今生恋人，前世冤家</a>（等待连载）</li>
-</ul>
-</li>
-<li>电影
-<ul>
-<li>《这个男人来自地球》</li>
-<li>《蝴蝶效应》</li>
-</ul>
-</li>
-</ul>
 ]]></content:encoded>
     </item>
   </channel>
