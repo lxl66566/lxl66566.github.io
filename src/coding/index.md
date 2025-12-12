@@ -39,7 +39,7 @@ tag:
 6. [TypeScript & JavaScript](./tsjs.md)
 7. [lua](./lua.md)
 
-### 预<heimu>放弃</heimu>学习阶段
+### 放弃阶段
 
 8. [C#](./csharp.md)
 9. [kotlin](./kotlin.md)

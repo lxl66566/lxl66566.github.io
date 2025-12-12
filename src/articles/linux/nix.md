@@ -112,7 +112,7 @@ sudo: a password is required
 - [lantian 佬的 dd 镜像](https://lantian.pub/article/modify-computer/nixos-low-ram-vps.lantian/)：用过几次，但是这个示例依赖 systemd 管理网络，我曾经遇到过 dd 完后服务器连不上的情况。
 - 最后我还是用了 [bin456789/reinstall](https://github.com/bin456789/reinstall)，一键重装实在太方便了，除了强制用 ext4 以外没有缺点。
 
-用 reinstall 重装后，再 `nixos-rebuild boot --flake .#xxx --target-host xxx` 即可。
+用 reinstall 重装后，再 `nixos-rebuild switch --flake .#<host> --target-host <host> --build-host <host>` 即可。
 
 :::
 
@@ -138,7 +138,7 @@ sudo: a password is required
 - 条件判断：一般接触多的是 `if..then..else` 和 `lib.mkIf`。
   - 两个 if 里条件只能是 bool，不能是其它类型。
   - `lib.mkIf` 和 `if..then..else null;` 是不一样的！`lib.mkIf` 求值时会被转换成类似 `{ _type = "if"; condition = ...; content = ...; }` 的形式，方便求值时验证和 lazy。
-- `inherit x y;` = `x=x;y=y;`
+- `inherit x y;` = `x=x;y=y;`，就是用来透传的。
 - function 的 `@` 绑定：`bargs@{a, b, ...}:` is equivalent to `{a, b, ...}@bargs:`
 - `//` 用于两个 attrset 的合并，**右边覆盖左边**。
 - 最常用的一些判断条件：`mkDefault` 和 `mkForce` 修改合并优先级，`mkBefore` `mkAfter` 修改 list 合并顺序，`mkIf` 条件控制某些属性的有和无，`optional` 根据条件返回 null 或 `[x]`，而 `optionals` 返回 null 或 x。
@@ -147,21 +147,46 @@ sudo: a password is required
   - 数组：list。
     - 判断元素是否存在：`builtins.elem elem list`。
     - 删除元素只能用 filter。
-- nix config 里，attrset to INI 的类型要求必须有 section。但是实际 ini 配置可能有些条目没有 section ，所以必须使用一个伪 section: main。例如 `xxx = 1` 需要写成 `main = { xxx = 1;};`，什么脑残设计 😅
+- nix config 里，attrset to INI 的类型要求必须有 section。但是实际 ini 配置可能有些条目没有 section ，所以必须使用一个伪 section: main。例如 `xxx = 1` 需要写成 `main = { xxx = 1;};`。
+- 有的配置只支持 string type，不支持 path。这时候我们需要把一个文件弄到 store 里并返回 store 的路径。可以使用 `"${./path/to/file}"`。
+  - 我以前不知道这事，写了许多麻烦的函数：
+    ```nix
+    configToStore =
+      configFile:
+      toString (self.writeText (builtins.baseNameOf configFile) (self.lib.fileContents configFile));
+    binaryToStore =
+      binaryFile:
+      super.runCommand (builtins.baseNameOf binaryFile)
+        {
+          nativeBuildInputs = [ super.coreutils ];
+        }
+        ''
+          cp ${binaryFile} $out
+          chmod +x $out
+        '';
+    ```
+  - 如果路径里本身就含有变量呢？此时需要利用 `path + str = path` 的特性，使用 `"${./. + "/${var}/file"}"`。
 
 ### OS 基础
 
 - NixOS 应用配置分三步：eval, build, apply。
 - NixOS module 里有一些 top level attribute，例如 `imports`, `options`, `config`，还有 `disabledModules`。其他非 top level 的项默认会包在 `config = {...}` 里面。
   - disabledModules 在求值时可以取消 imports 引入的模块。因为 list 在 merge 时不能移除元素，所以很多人会分非常多的模块（例如一行 `systemPackage = ...` 也分一个模块），然后使用 disabledModules 控制不同 host 下**排除**某些包。说到底还是 Nix 的设计缺陷。
+- nar 是 NixOS 的归档格式，具有确定性。[RFC 的 nar](https://nix.dev/manual/nix/2.22/protocols/nix-archive) 写得有点蠢。
 
-### 常用命令
+### nix command
+
+常用命令：
 
 ```sh
 nix-prefetch-url <url>                  # fetch 并输出 sha256。在打包时经常用到。
 nix-collect-garbage -d                  # 删除所有配置的所有旧版本，并 GC。（彻底清理）
 nix flake update <input>                # update flake 想必大家天天用，但是 update 一个特定 input 应该用得很少吧
 ```
+
+其他：
+
+- 最简单的填 hash 方法是先乱填一个，rebuild 报错后再从报错信息里拿真 hash 加上去。因为 nix hash 是有坑的，默认的 nix-hash xxx 算的是 nar hash。请务必添加 `--flat`，这样才能算 file hash。
 
 ## 工具
 
@@ -346,6 +371,8 @@ sudo systemctl restart nix-daemon
 
 :::
 
+然而一个更大的问题是 WSL2 的 mirrord 网络问题太多了，其中最大的问题是 tcp 建连关闭端口本来应该收到 RST，结果现在收不到 RST 而直接 timeout ([issue](https://github.com/microsoft/WSL/issues/10855))。被这个问题坑了很多次，忍无可忍，最终我还是回到了原始的 v2raya。
+
 ### 备份
 
 nix 的配置显然用 git 备份的话非常舒适。起初我以为 `/etc/nixos` 不能放 `.git` 仓库。后来发现是不允许放未提交（dirty）的仓库。再后来我知道有配置可以强制 nixos 使用 dirty 仓库：
@@ -501,7 +528,7 @@ nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel --impure
 
 实测是需要先使用 `nix why-depends` 进行 build 后，再用 `nix-tree` 进行查询，否则会爆 `nix-tree: user error (Invalid path: ... Make sure that it is built, or pass '--derivation' if you want to work on the derivation.)`。因为我是远程的配置，还没安装呢！当然没 build 过。不过抛开这个特性不谈，nix-tree 还是好用的。
 
-找到了一个占用 3G 多的罪魁祸首 prettybat，直接把它干掉了。
+找到了一个占用 3G 多的罪魁祸首 prettybat，直接把它干掉了。后续也找到 yazi 引入 ffmpeg 占用了 1.1G，也干掉了。
 
 ## 优势与劝退
 

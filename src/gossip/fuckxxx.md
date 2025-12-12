@@ -423,6 +423,8 @@ ColorOS 是目前一加的默认系统。
 - release binary，无法直接更换一个同名 binary
 - Github 支持 merge, squash merge, rebase merge，但是不支持 squash + rebase merge。。您不是 ci 都会 matrix 吗，这个 merge matrix 怎么就不会了
 - 在 pr 里复制分支的格式是 `name:branch`，但是这个格式在哪都用不了。。git clone 需要 `name branch`，而 git checkout 需要 `name/branch`
+- 官方的 upload-artifact 会自动加一层 zip，而且没有方法禁用这种行为 ([issue](https://github.com/actions/upload-artifact/issues/426))。这玩意充满了 anti pattern，把压缩和上传放到同一个步骤里就是不对的，更别说还在用 zip。既然叫 upload-artifact，那其他功能都只应该为 upload 的核心功能服务。还有 4.7MB js，对 issue 的态度等，感觉太 💩 了。
+  - upload-artifact 还花了一堆篇幅来讲自己 wildcard pattern 的反常行为，既然会给用户带来误解，还不如不做。
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 
@@ -483,6 +485,7 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
   然后 wsl --shutdown 再重启就好了，WSL 我操你吗
 - ([src](https://t.me/withabsolutex/2450)) 20250812，我卸载 WSL 的其中一个发行版（ArchWSL），结果再进 wsl 就报错 0x80041001。无法重装，因为在 `wsl --update` 里会显示某个服务没有运行无法 update，它也不说是哪个服务没运行。我的 windows update 等服务是开的，都没用。最后靠系统还原点还原解了。
 - [神人翻译](https://t.me/withabsolutex/2448)
+- `networkingMode=mirrored` 有**非常严重的 bug**。[issue](https://github.com/microsoft/WSL/issues/10855)
 
 ## Geforce Experience 有多难用
 

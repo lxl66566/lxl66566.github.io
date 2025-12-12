@@ -343,6 +343,14 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 - 有 everything 集成，可以方便搜文件。
 - 缺点是内存占用偏大。C# 的 web 渲染还不如 electron 呢。
 
+### 其他调试工具
+
+这里是一些给开发者使用的妙妙小工具。
+
+- [Process Monitor](https://learn.microsoft.com/en-us/sysinternals/downloads/procmon)：监控所有进程的行为，非常强大。
+- [DebugView++](https://github.com/CobaltFusion/DebugViewPP)：可以看系统的 debug log，比原版 DebugView 好用很多。
+- [FileActivityWatch](https://www.nirsoft.net/utils/file_activity_watch.html)：实时监控所有进程的文件操作。
+
 ## Linux
 
 前往 [Linux - 包管理与使用](../articles/linux/package.md#包使用)

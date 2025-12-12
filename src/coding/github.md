@@ -178,6 +178,12 @@ on:
 - [act](https://github.com/nektos/act) 提供了 github action docker，可以在本地模拟 action 环境。
 - [wrkflw](https://github.com/bahdotsh/wrkflw) 另一个本地模拟 action 容器的工具。
 
+### artifacts
+
+artifacts 算是一种不稳定构建缓存，可以在 action 中上传任意内容到 artifacts，保留 90 天。
+
+- 可以使用 [nightly.link](https://nightly.link/) 获取稳定的链接，指向最新 action 的 artifact。
+
 ## Powerful CI
 
 这里列出一些我常用的 CI。顺带一提，CI 就是 Continuous Integration，在每次代码操作后自动进行一系列检查或服务更新部署，简化操作流程。

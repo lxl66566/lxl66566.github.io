@@ -37,5 +37,9 @@ const links: ArticleCellBoxType[] = [
       { text: "信息论", url: "information_theory" },
     ],
   },
+  {
+    field: "工作",
+    links: [{ text: "计算机网络（专业）", url: "network_biz" }],
+  },
 ];
 export default links;

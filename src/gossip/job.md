@@ -4,6 +4,7 @@ icon: briefcase
 category:
   - 评价
   - 经历
+  - 工作
 ---
 
 <script lang="ts" setup>
