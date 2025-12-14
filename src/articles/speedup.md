@@ -910,6 +910,13 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
    即可。
 
 </template>
+<template #renpy>
+
+开源的引擎，解封包应该不会有什么问题。
+
+浏览一下，发现 voice 根本就没有打包，直接放在文件夹里了。感动。
+
+</template>
 <template #TyranoScript>
 
 没想到真的有用 electron 做的 galgame，让我感动了一秒钟。

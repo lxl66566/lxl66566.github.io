@@ -69,9 +69,9 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["五彩斑斓的世界(HD 4K重置版)"],
+    names: ["五彩斑斓的世界(HD 4K重置版)", "樱花，萌放"],
     valid_name: "favorite",
-    engine: "FPV",
+    engine: "FVP",
     save_format: "bin",
     speedupable: true,
   },
@@ -190,8 +190,15 @@ const data: SpeedupItemType[] = [
   {
     names: ["恋狱～月狂病～《REBIRTH FHD SIZE EDITION》"],
     valid_name: "lucasystem",
-    engine: "	Luca System",
+    engine: "Luca System",
     save_format: "PAK",
+    speedupable: true,
+  },
+  {
+    names: ["CHAOS;HEAD NOAH"],
+    valid_name: "renpy",
+    engine: "Ren'Py",
+    save_format: "",
     speedupable: true,
   },
 ];

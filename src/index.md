@@ -70,4 +70,4 @@ category:
 > 单方面引用的公开博客。（本站不接受传统意义上的友链）
 
 - [asukaminato.notion.site](https://asukaminato.notion.site)
-- [Xuanwo's Blog](https://xuanwo.io/)
+- [夜天之书](https://www.tisonkun.org/)

@@ -825,7 +825,7 @@ const data: ComicItemType[] = [
   { id: "590442", aScore: 8.6, bScore: 6.3, info: "#蔚蓝档案 #纯爱 #loli", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-プラナは甘やかしたい-ブルーアーカイブ-中国翻訳-DL版-08-16" },
   { id: "590420", aScore: 7.7, bScore: 4.3, info: "#蔚蓝档案 #兔女郎 #1v1", bak: "https://telegra.ph/Panda-Boxing-エコ-師の詭弁-下限は降り-叶えられ-ブルーアーカイブ-中国翻訳-DL版-08-16" },
   { id: "590320", aScore: 7, bScore: 4, order: 2, info: "#蔚蓝档案 #全彩 #合集 #睡x", bak: "https://telegra.ph/きんのかみ-すかーふぃ-すやすやArchives2-ブルーアーカイブ-中国翻訳-DL版-08-16" },
-  { id: "590278", aScore: 9.1, bScore: 7.4, info: "#蔚蓝档案 #3P #竞争 #たこ焼き畑 #惩罚", bak: "https://telegra.ph/たこ焼き畑-たこやきよし-先生どちらのレディーがお好みですか-ブルーアーカイブ-中国翻訳-DL版-08-16-2" },
+  { id: "590278", aScore: 9.7, bScore: 8, info: "#蔚蓝档案 #3P #竞争 #たこ焼き畑 #惩罚", bak: "https://telegra.ph/たこ焼き畑-たこやきよし-先生どちらのレディーがお好みですか-ブルーアーカイブ-中国翻訳-DL版-08-16-2" },
   { id: "590370", aScore: 7.8, bScore: 9.6, order: 3, info: "#蔚蓝档案 #触手 #忍耐", bak: "https://telegra.ph/波乗りネイビー-エビネイビー-マリー触手堕ち-III-萌芽-ブルーアーカイブ-中国翻訳-DL版-08-17" },
   { id: "591168", aScore: 7.9, bScore: 7.3, info: "#明日方舟 #兽耳 #课堂 #天然loli #中出", bak: "https://telegra.ph/餃子屋さんゆなち私だってお姉さんなんですからアークナイツDL版中國翻訳-08-19-2" },
   { id: "591500", aScore: 8.3, bScore: 7.5, info: "#偶像 #大叔 #女主动", bak: "https://telegra.ph/ねこのみみ-Thalia-小悪魔系な僕のシオリちゃん-中国翻訳-DL版-08-20" },
@@ -930,6 +930,14 @@ const data: ComicItemType[] = [
   { id: "556534", aScore: 6.7, bScore: 8.6, info: "#合集 #巨乳 #纯爱 #青梅 #师生 #旗袍 #cos #狂暴 #雌小鬼" },
   { id: "614532", aScore: 7.7, bScore: 7.9, info: "#纯爱 #巨乳 #欲求不满" },
   { id: "589360", aScore: 6.2, bScore: 8, info: "#崩坏 #睡x", bak: "https://telegra.ph/Uncensoredheart-汐吹あくめ-フォフォちゃんと睡眠えっち-崩壊スターレイル-中国翻訳-DL版-08-12-2" },
+  { id: "589675", aScore: 7.8, bScore: 8.2, order: 1, info: "#反常 #肉便器 女性の権利が失われた国", bak: "https://telegra.ph/mokataki-works-もかたき-女性の権利が失われた国-中国翻訳-08-14-2" },
+  { id: "589620", aScore: 7, bScore: 7.7, info: "#挠痒 #拘束 #魔女 #反杀", bak: "https://telegra.ph/サメ工房-魔女とくすぐり魔術ショー-中国翻訳-08-13-2" },
+  { id: "590243", aScore: 9.2, bScore: 9.4, order: 2, info: "#猫娘 #魔法 #媚药 魔法学院の落ちこぼれ", bak: "https://telegra.ph/あいがも堂-あやかわりく-魔法学院の落ちこぼれ2-猫耳少女の秘密を握っておっぱいを揉んでみた-中国翻訳-DL版-08-16-2" },
+  { id: "590266", aScore: 8.2, bScore: 6.7, info: "#蔚蓝档案 #训练 #束缚 #短篇", bak: "https://telegra.ph/モアビート-あきのじ-耐久訓練-ブルーアーカイブ-中国翻訳-DL版-08-16-3" },
+  { id: "590080", aScore: 8.7, bScore: 7.2, info: "#蔚蓝档案 #纯爱 #甜 #loli", bak: "https://telegra.ph/七尾重工-ななお-門主様は甘えたい-ブルーアーカイブ-中国翻訳-DL版-08-16-3" },
+  { id: "590114", aScore: 7.9, bScore: 8.9, info: "#蔚蓝档案 #伪装 #认知障碍 #伪NTR #催眠 #loli", bak: "https://telegra.ph/るなばれ-棗麗-カヤといちゃいちゃする方法-ブルーアーカイブ-中国翻訳-DL版-08-16-3" },
+  { id: "590030", aScore: 6.7, bScore: 8.6, info: "#Fate #龙娘 #攻守互换", bak: "https://telegra.ph/サルパッチョ-わいら-メリュ子はぐいぐい来るが交尾がド下手FateGrand-Order-中国翻訳-DL版-08-16-3" },
+  { id: "590205", aScore: 5.7, bScore: 7.8, info: "#兄妹 #拍摄 #发情", bak: "https://telegra.ph/GlowMercury-すこやかグミ-パエトーンの金策-あっち系AVビデオ撮影-ゼンレスゾーンゼロ-中国翻訳-DL版-08-16-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

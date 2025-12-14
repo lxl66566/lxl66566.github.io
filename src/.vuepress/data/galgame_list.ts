@@ -2,6 +2,24 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "CHAOS;HEAD NOAH",
+    valid_name: "CHAOSHEADNOAH",
+    other_names: ["混沌之脑：诺亚"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-12-13",
+    },
+  },
+  {
+    name: "樱花，萌放",
+    valid_name: "樱花萌放",
+    other_names: ["樱花摸鱼", "さくら、もゆ。"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2025-12-13",
+    },
+  },
+  {
     name: "美少女万華鏡異聞 雪おんな",
     valid_name: "美少女万华镜",
     other_names: ["美少女万華鏡", "异闻雪女"],
@@ -33,7 +51,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-11-14",
     },
     score: {
-      story: 9,
+      story: 8.7,
       visual: 9.5,
       program: 5.1,
     },
@@ -96,7 +114,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-10-04",
     },
     score: {
-      story: 7,
+      story: 7.4,
       visual: 5.2,
       program: 3,
     },
@@ -215,6 +233,11 @@ const original_list: GalItemInputType[] = [
       start: "2025-08-30",
       end: "2025-12-10",
     },
+    score: {
+      story: 5.3,
+      visual: 5.7,
+      program: 3.1,
+    },
   },
   {
     name: "美少女万华镜1-被诅咒之传说少女",
@@ -252,9 +275,15 @@ const original_list: GalItemInputType[] = [
     name: "Deep One",
     valid_name: "DeepOne",
     other_names: ["Deep One -ディープワン"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "13h12min",
     duration: {
       start: "2025-08-22",
+      end: "2025-12-12",
+    },
+    score: {
+      story: 5.5,
+      visual: 6.5,
+      program: 6.6,
     },
   },
   {
@@ -813,7 +842,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "五彩斑斓的世界",
-    other_names: ["いろとりどりのセカイ"],
+    other_names: ["いろとりどりのセカイ", "色鸟鸟"],
     order: 1,
     use_time: "23h17min",
     duration: {
@@ -821,7 +850,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-04-20",
     },
     score: {
-      story: 8.9,
+      story: 9,
       visual: 8.2,
       program: 9.1,
     },
@@ -878,7 +907,7 @@ const original_list: GalItemInputType[] = [
       start: "2021-06-21",
     },
     score: {
-      story: 6.1,
+      story: 6.4,
       visual: 8.5,
       program: 9,
     },
@@ -934,7 +963,7 @@ const original_list: GalItemInputType[] = [
     other_names: ["景の海のアペイリア"],
     use_time: "26h35min",
     score: {
-      story: 10,
+      story: 10.1,
       visual: 4.2,
       program: 4,
     },
@@ -964,8 +993,8 @@ const original_list: GalItemInputType[] = [
     other_names: ["ヘンタイ・プリズン"],
     use_time: "45h53min",
     score: {
-      story: 9.3,
-      visual: 5.3,
+      story: 9.4,
+      visual: 5.5,
       program: 7,
     },
     duration: {
@@ -981,7 +1010,7 @@ const original_list: GalItemInputType[] = [
     order: 2,
     score: {
       story: 1.2,
-      visual: 6.6,
+      visual: 6.7,
       program: 8,
     },
     duration: {
@@ -1218,7 +1247,7 @@ const original_list: GalItemInputType[] = [
     other_names: ["永不枯萎的世界与终结之花"],
     use_time: "9h44min",
     score: {
-      story: 5.7,
+      story: 5.6,
       visual: 10,
       program: 6.2,
     },
@@ -1293,7 +1322,7 @@ const original_list: GalItemInputType[] = [
     other_names: ["はつゆきさくら"],
     use_time: "25h28min",
     score: {
-      story: 8.6,
+      story: 8.3,
       visual: 7.6,
       program: 7.5,
     },
@@ -1485,7 +1514,7 @@ const original_list: GalItemInputType[] = [
     use_time: "39h53min",
     order: 1,
     score: {
-      story: 8.3,
+      story: 8.6,
       visual: 5.3,
       program: 0,
     },
@@ -1832,7 +1861,7 @@ const original_list: GalItemInputType[] = [
     order: 1,
     score: {
       story: 8.7,
-      visual: 6.7,
+      visual: 6.8,
       program: 8,
     },
     duration: {

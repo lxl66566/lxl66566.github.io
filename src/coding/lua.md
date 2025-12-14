@@ -195,7 +195,7 @@ lua 的 ffi 开销比想象的要小。lua 不同类型的开销如下：
 
 ## typing
 
-lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 [typedlua](https://github.com/andremm/typedlua) 和一些 fork 到新的 [teal](https://github.com/teal-language/tl) 都有。这些 typed 版本都受 ts 启发，语法比较相似。
+lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 [typedlua](https://github.com/andremm/typedlua) 和一些 fork 到新的 [teal](https://github.com/teal-language/tl)，再到重新实现的 [luau](https://luau.org/) 都有。这些 typed 版本都受 ts 启发，语法比较相似。
 
 ## external
 
