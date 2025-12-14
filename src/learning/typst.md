@@ -37,6 +37,13 @@ category:
 1. CLI：进 release 下载，解压后把 `typst.exe` 直接丢进 `C:\Windows\System32` 就行。
    - 或者也可以使用 [scoop](../farraginous/recommend_packages.md#scoop) `scoop install typst` 一行搞定。
    - 然后就可以 `typst watch xxx.typ`，自动生成 pdf。可能要用 `--root xxx` 指定根目录。
+   - 编译导出
+     ```sh
+     typst compile xxx.typ # 基础编译指令
+     typst compile --root .. xxx.typ   # 如果需要 include 父级目录的文件，则需要指定 root
+     typst compile --format svg xxx.typ '{n}.svg'  # 导出为 svg 格式
+     ```
+   - 用 CLI 还要解决**字体问题**，比较麻烦。
 2. CLI 没有 vscode 扩展好用。使用 vscode 扩展不需要安装 CLI，只需要：
 
    1. 安装 LSP
@@ -69,17 +76,11 @@ category:
   - [nku 模板](https://github.com/Starlight0798/typst-nku-lab-template)
   - [我的模板](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/template.typ)
 
-## 编译导出
-
-```sh
-typst compile xxx.typ # 基础编译指令
-typst compile --root .. xxx.typ   # 如果需要 include 父级目录的文件，则需要指定 root
-typst compile --format svg xxx.typ '{n}.svg'  # 导出为 svg 格式
-```
-
 ## 基础
 
-[这里](https://typst-doc-cn.github.io/docs/chinese/#resources)有许多大学的毕业论文模版，~~多抄抄就会用了~~
+> 现在 typst 发展越来越好，教程很多，以下内容价值有所降低。
+
+[这里](https://typst.dev/docs/chinese/#resources)有许多大学的毕业论文模版，~~多抄抄就会用了~~
 
 简单来说，`[]` 内是正文（`content`），`{}` 内是代码，`()` 是数组（`array`），正文调用函数要加 `#`，代码里可以直接调。
 
@@ -150,7 +151,7 @@ typst 数组是 `array`，没有 `list` 类型。
 - [tablex](https://github.com/PgBiel/typst-tablex)，更麻烦但更强大的表格。
   - 如果表格中含有粗体斜体，批量处理就比较麻烦。([ex](https://github.com/PgBiel/typst-tablex/issues/18)) [我的解法，甚至还发现了个 bug?](https://gist.github.com/lxl66566/30e309e696169829524ee04503b526db)
     - 这个预计算是很难改的（源码访问 `at` 时的 `default` 已经是 `Option<Value>` 了）。说到底，根本问题还是 typst 选择自创的这个 DSL 的问题，你像 rust 那样 Option 套 `or_else` 哪有这么多事。
-- [excel 表格转为 typst 表格](https://gist.github.com/lxl66566/cf29d98741a78a164d5ad2cfb4aa92a7)，支持合并的单元格，很好用。可惜 windows only。
+- [excel 表格转为 typst 表格](https://gist.github.com/lxl66566/cf29d98741a78a164d5ad2cfb4aa92a7)，从 QQ 群友聊天记录抄来的，支持合并的单元格，很好用。可惜 windows only。
 
 ## heading
 

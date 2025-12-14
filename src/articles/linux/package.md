@@ -373,7 +373,19 @@ atuin import auto
 
 Terminal Multiplexer（终端复用器）并不是 linux 桌面的必需品（`konsole` / `yakuake` 都支持多标签），但是在纯命令行的服务器下，终端复用还是有点用的。主要作用是提供一组 key bindings，与持久运行的 sessions（允许 ssh 断连）。
 
-#### screen
+:::: tabs
+
+@tab Zellij
+
+[Zellij](https://github.com/zellij-org/zellij)
+
+Zellij 使用 rust 写成，由于其简洁的 key bindings（有常驻提示的），我使用其代替 tmux。
+
+这玩意看提示用就行，没必要配置。性能会比 screen 和 tmux 差一点点，好看是有代价的。
+
+虽然也有一些[其他问题](https://t.me/withabsolutex/1571)，不过现在还是优先用这个，毕竟也够用。
+
+@tab screen
 
 > 要不是学校的服务器，我还不知道有 screen 这玩意。
 
@@ -386,11 +398,9 @@ screen -r <name>  # 重连
 
 两行就够用了。
 
-#### tmux
+@tab tmux
 
 tmux 的默认键位实在是过于诡异。
-
-:::: details use Zellij instead of tmux
 
 - 配置：[`~/.tmux.conf`](https://github.com/lxl66566/config/blob/bad37f53d84b8ab87dececd2e8616ed8f8596e29/.tmux.conf)，初始时没有，需要自己创建。编辑后需要重新载入：`tmux source ~/.tmux.conf` or `prefix`+`:source ~/.tmux.conf`
 - 插件：不要用默认的插件管理器。。不好用。
@@ -416,19 +426,13 @@ tmux 的默认键位实在是过于诡异。
 
   :::
 
-::::
+@tab tab-rs
 
-#### [Zellij](https://github.com/zellij-org/zellij)
-
-Zellij 使用 rust 写成，由于其简洁的 key bindings（有常驻提示的），我使用其代替 tmux。
-
-这玩意看提示就行，没必要配置。性能会比上面两个小点，好看是有代价的。
-
-然后我尝鲜[用得不爽，直接开喷](https://t.me/withabsolutex/1571)了。
-
-#### [tab-rs](https://github.com/austinjones/tab-rs)
+[tab-rs](https://github.com/austinjones/tab-rs)
 
 也是 rust 写的。screen 的替代品，专注简洁迅速。
+
+::::
 
 ### [tlp](https://wiki.archlinux.org/title/TLP)
 
