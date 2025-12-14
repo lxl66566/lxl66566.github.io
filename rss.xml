@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 12 Dec 2025 13:35:25 GMT</pubDate>
-    <lastBuildDate>Fri, 12 Dec 2025 13:35:25 GMT</lastBuildDate>
+    <pubDate>Sun, 14 Dec 2025 02:31:49 GMT</pubDate>
+    <lastBuildDate>Sun, 14 Dec 2025 02:31:49 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -306,7 +306,7 @@
 <li>table：不能直接传，需要手动构建成 C struct。该构建阶段有开销。</li>
 </ul>
 <h2>typing</h2>
-<p>lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 <a href="https://github.com/andremm/typedlua" target="_blank" rel="noopener noreferrer">typedlua</a> 和一些 fork 到新的 <a href="https://github.com/teal-language/tl" target="_blank" rel="noopener noreferrer">teal</a> 都有。这些 typed 版本都受 ts 启发，语法比较相似。</p>
+<p>lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 <a href="https://github.com/andremm/typedlua" target="_blank" rel="noopener noreferrer">typedlua</a> 和一些 fork 到新的 <a href="https://github.com/teal-language/tl" target="_blank" rel="noopener noreferrer">teal</a>，再到重新实现的 <a href="https://luau.org/" target="_blank" rel="noopener noreferrer">luau</a> 都有。这些 typed 版本都受 ts 启发，语法比较相似。</p>
 <h2>external</h2>
 <ol>
 <li><a href="https://zhuanlan.zhihu.com/p/494191824" target="_blank" rel="noopener noreferrer">理解 Lua 的闭包机制</a></li>
