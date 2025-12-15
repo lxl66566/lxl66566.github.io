@@ -61,8 +61,6 @@ tag:
 
 #### 一些流行的 Rust 的垃圾库
 
-**真 TM 难用**
-
 - teloxide：一坨大便。
   - REPL 和 dispatcher 没有任何平衡，一个太弱一个太复杂，无法折中；
   - 各种抽象 trait + 生命周期疯狂拒绝我的参数，struct Bot 不愿意做我的成员，进来就赖着 move 不动，clone 不出，还拿生命周期威胁它的爸爸类。
@@ -92,11 +90,9 @@ tag:
 - 代理问题[^3]
   - poetry：install script 不读代理
   - [insanely-fast-whisper](https://github.com/Vaibhavs10/insanely-fast-whisper)：访问模型时不读代理（而且是 eBPF 代理）
+  - ps. python setuptools 可能只读环境变量（`HTTP_PROXY`）而不读 windows 下的系统代理。
 
 [^3]: 遇到了不少 py 写的 install script，不读系统代理，不能配置代理，不做错误处理，不具有可读性。真的难绷 😅 ([src](https://t.me/withabsolutex/1304))
-
-    ps. python setuptools 可能只读环境变量（`HTTP_PROXY`）而不读 windows 下的系统代理。
-
 [^4]: 一个 customtkinter + matplotlib 项目，朋友遇到打包问题问我。pyinstaller 打出来 200M，运行不了，我教他用 nuitka，他在 windows 下打出了 **1.2G** 的好成绩。
 
 ### Clojure 有多难用
@@ -178,6 +174,7 @@ tag:
 - **恶性 bug**：（偶发）终端滚动滚轮，会卡一下，然后自动跳转到终端顶部，也就是最早的消息处。
 - 连接到 WSL 后，如果 wsl shutdown 了，就再也无法连接到 WSL 的工作区，重新连接无效，除非关闭窗口重启。
 - 使用 `code` 命令启动 vscode 时，命令行窗口有概率不会自动退出。
+- WSL2 的 GUI，WSLg，延迟巨高，根本是不能用的水平。
 
 ### [cursor](../coding/vscode.md#关于-cursor) 有多难用
 

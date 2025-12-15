@@ -112,7 +112,7 @@ sudo: a password is required
 - [lantian 佬的 dd 镜像](https://lantian.pub/article/modify-computer/nixos-low-ram-vps.lantian/)：用过几次，但是这个示例依赖 systemd 管理网络，我曾经遇到过 dd 完后服务器连不上的情况。
 - 最后我还是用了 [bin456789/reinstall](https://github.com/bin456789/reinstall)，一键重装实在太方便了，除了强制用 ext4 以外没有缺点。
 
-用 reinstall 重装后，再 `nixos-rebuild switch --flake .#<host> --target-host <host> --build-host <host>` 即可。
+用 reinstall 重装后，再 `nixos-rebuild switch --flake .#<host> --target-host <host> --build-host <host>` 即可。这个指令可以在本地 eval 后，只将较小的 drv 传给 remote，并且有 drv 去重。remote 收到 drv 后只要下载，rebuild 即可。
 
 :::
 
@@ -181,7 +181,13 @@ sudo: a password is required
 ```sh
 nix-prefetch-url <url>                  # fetch 并输出 sha256。在打包时经常用到。
 nix-collect-garbage -d                  # 删除所有配置的所有旧版本，并 GC。（彻底清理）
-nix flake update <input>                # update flake 想必大家天天用，但是 update 一个特定 input 应该用得很少吧
+nix flake update <input>                # update 一个特定 input
+
+# nix eval .#nixosConfigurations.<host>.config.xxx  # 查看 eval 后的某个配置值（flake，需要查询所有 input，比较慢）
+nix repl .                              # 进入 repl 交互命令模式。
+nix-repl> :lf .                         # load flake
+nix-repl> nixosConfigurations.<host>.config.xxx # 这时候查询配置就比较快了
+nix-repl> builtins.toJSON nixosConfigurations.<host>.config.xxx # 默认会折叠，可以 toJson 展开
 ```
 
 其他：

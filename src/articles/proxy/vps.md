@@ -56,7 +56,7 @@ tag:
 | 20250805 [skystroll](https://skystroll.net/store) | JP | $2.49/mo | 1T 500Mbps | 512M | 5GB | 1 | <dtlslong>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</dtlslong> |
 | 20250820 [RFCHOST](https://my.rfchost.com/) | JP | $29.99/yr + ￥45 | 1T 不限 | 512M | 10GB | 1 | <dtlslong>看评测挺不错的，延迟很低，价格也合适，于是在 nodeseek 上蹲了几天蹲到一个。溢价还是有点高，因为第二天就有更合适的出现了，不过也不用在乎这么多。</dtlslong> |
 | 20250827 [dedirock](https://billing.dedirock.com/index.php) | US (LA) | $7/yr | 2T 1Gbps | 2G | 30G | 1 | <dtlslong>手上只有 JP 机确实让我感受到一些限制，~~例如禁漫就没法登上去~~。刚好看到便宜美西机，所以搞了个，延迟就无所谓了。注意 paypal 付款会被自动订阅一个续费需要去取消掉。这家的官网从 JP 加载贼慢，但是机子还挺不错。延迟不会超过 200ms，已经算好了。</dtlslong> |
-| 20251205 [ACCKCloud](https://acck.io/) | JP | ￥14.88/mo | 500GB 500Mbps | 512M | 8G | 1 | <dtlslong>IIJ，到上海电信延迟非常不错（40ms）。最可惜的是 IP 有点脏，解不了 Gemini。</dtlslong> |
+| 20251205 [ACCKCloud](https://acck.io/) | JP | ￥14.88/mo | 500GB 500Mbps | 512M | 8G | 1 | <dtlslong>IIJ，到上海电信延迟非常不错（40ms）。最可惜的是 IP 有点脏，在 Google Gemini、nhentai、garnix 都会被拦，我不太能接受。</dtlslong> |
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 

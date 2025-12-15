@@ -317,9 +317,11 @@ ps. 也可以 GARbro 直解，反正不用封包。
 </template>
 <template #favorite>
 
-FAVORITE 的 .bin 格式也有 [fvp-tools](https://github.com/lxl66566/fvp-tools)。这是我的 fork 版本，修改了其对于解包后文件名的处理。
+FAVORITE 的 .bin 格式比较简单，也有工具 [Leticiel/fvp-tools](https://github.com/Leticiel/fvp-tools) (Pytho) 和 [Nikaidou-Shinku/fvp-unpacker](https://github.com/Nikaidou-Shinku/fvp-unpacker) (Rust) （这个比较全能，可以解不同资源类型。看在它用了 rayon 的份上，就承认它的 blazing fast 吧）。
 
-因为不管是 GARbro 解出来的还是原版 fvp-tools 解出来的，直接封包都不行。它们对于文件名的处理不太行，本来应该是类似 `00000001` 的八位数文件名，原版 fvp-tools 解出来是 `0001_00000001`（添加序号），GARbro 解出来是 `00000001.ogg`（添加后缀），然而 fpv 引擎要求比较严格，不允许自己加这些乱七八糟的。
+然而有些工具解出来的 filename 有点问题：本来应该是类似 `00000001` 的八位数文件名，原版 fvp-tools 解出来是 `0001_00000001`（添加序号），GARbro 解出来是 `00000001.ogg`（添加后缀），然而 fpv 引擎要求比较严格，不允许修改文件名。至于 Nikaidou-Shinku/fvp-unpacker 则是不提供封包功能。
+
+我先 fork 了一个 [fvp-tools](https://github.com/lxl66566/fvp-tools)，保证解封包是对偶的（八位数文件名）。过了一阵子，让 LLM 写了个 Rust 版本 [fvp-rs](https://github.com/lxl66566/fvp-rs)，允许自动添加/删除后缀。这里推荐使用 fvp-rs。
 
 总之，SPEED UP 的初衷就是干翻 FAVORITE，我的目的已经达成了。
 

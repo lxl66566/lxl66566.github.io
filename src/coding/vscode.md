@@ -138,6 +138,19 @@ vscode 的特色：
 
 我个人喜欢用的是 _Monokai Dimmed_。我也曾试过一些其他主题，Nord 感觉对眼睛还是不够友好。
 
+如果你喜欢花哨一些、对比度更低一些的，可以试试 catppuccin mocha：
+
+```json
+{
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "catppuccin.accentColor": "mauve",
+  "editor.semanticHighlighting.enabled": true,
+  "terminal.integrated.minimumContrastRatio": 1,
+  "window.titleBarStyle": "custom",
+  "workbench.iconTheme": "catppuccin-mocha"
+}
+```
+
 ## 正则匹配
 
 vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft/vscode/issues/39404#issuecomment-348710460)，因此可能无法使用某些正则语法。
