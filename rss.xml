@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 16 Dec 2025 02:38:12 GMT</pubDate>
-    <lastBuildDate>Tue, 16 Dec 2025 02:38:12 GMT</lastBuildDate>
+    <pubDate>Tue, 16 Dec 2025 15:16:08 GMT</pubDate>
+    <lastBuildDate>Tue, 16 Dec 2025 15:16:08 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>学习</category>
@@ -900,10 +900,12 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20251210 cloudflare 崩了两次，网上骂声一片。我寻思人家公开事故报告已经很给面子了，而且第二次崩溃的这错误也不是容易发现的那种，换我来看也挑不出啥毛病。 啊，不过 React/Next.js CVE 是该骂啊，我这辈子不会碰 ts/js 写的后端的。 20251207 我可以很轻易地断言 过度自信是人类所有认知偏差中最危险的...</description>
+      <description>2025 20251216 每一个 anubis，每一个 public block list，都是世界 ipv4 数量短缺的元凶。 20251210 cloudflare 崩了两次，网上骂声一片。我寻思人家公开事故报告已经很给面子了，而且第二次崩溃的这错误也不是容易发现的那种，换我来看也挑不出啥毛病。 啊，不过 React/Next.js CVE 是该...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20251216</h2>
+<p>每一个 anubis，每一个 public block list，都是世界 ipv4 数量短缺的元凶。</p>
 <h2>20251210</h2>
 <p>cloudflare 崩了两次，网上骂声一片。我寻思人家公开事故报告已经很给面子了，而且第二次崩溃的这错误也不是容易发现的那种，换我来看也挑不出啥毛病。</p>
 <p>啊，不过 React/Next.js CVE 是该骂啊，我这辈子不会碰 ts/js 写的后端的。</p>
@@ -1244,7 +1246,7 @@
       <link>https://absx.pages.dev/articles/frp.html</link>
       <guid>https://absx.pages.dev/articles/frp.html</guid>
       <source url="https://absx.pages.dev/rss.xml">内网穿透</source>
-      <description>内网穿透 在 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。需求：免费，稳定。 我希望使用自定义化的方案。（高级）需求：虚拟组网，P2P cloudflare tunnel（推荐） 折腾完了其他几个服务我才想到 cloudflare，一搜，果然有。 cloudflare 的内网穿透是部署最简单，使用体验最好的服务，杀死了所有其他 ...</description>
+      <description>内网穿透 在 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。需求：免费，稳定。 我希望使用自定义化的方案。（高级）需求：虚拟组网，P2P easytier 新时代的虚拟组网软件，国人用 Rust 编写，有国内公益 server 做转发/rpc；跨多平台，有 GUI。除了文档垃圾一点，没有其他缺点了。 我的配置 和 zerotier...</description>
       <category>推荐</category>
       <category>教程</category>
       <category>评价</category>
@@ -1254,7 +1256,16 @@
 <li>在 <a href="/articles/linux/openwrt.html" target="_blank">iStoreOS</a> 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。需求：免费，稳定。</li>
 <li>我希望使用自定义化的<a href="/articles/control.html" target="_blank">远程控制</a>方案。（高级）需求：虚拟组网，P2P</li>
 </ol>
-<h2>cloudflare tunnel（推荐）</h2>
+<h2><a class="header-anchor" href="#easytier"><span></span></a><a href="https://easytier.cn/" target="_blank" rel="noopener noreferrer">easytier</a></h2>
+<p>新时代的虚拟组网软件，国人用 Rust 编写，有国内公益 server 做转发/rpc；跨多平台，有 GUI。除了文档垃圾一点，没有其他缺点了。</p>
+<p><a href="https://github.com/lxl66566/nixos-config/blob/6c540a241c4344d23fc070526debed885e7f91cb/others/network/easytier.nix" target="_blank" rel="noopener noreferrer">我的配置</a></p>
+<ul>
+<li>和 zerotier、tailscale 故意区分了不同端相比，easytier peer 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch</li>
+<li>easytier 的文档非常大便，没有一个 full config example，全是命令行，那个配置生成器很难用而且有 bug。包括我刚需的 <em>peer 间 quic 通信</em> 是 undocumented 的。</li>
+<li>默认情况下它会将你的服务器连到大网络里，消耗你的流量；需要注意开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。</li>
+<li>easytier 默认是<strong>没有过墙能力</strong>的，但是如果把入端口搞得足够小，流量就可以走到 <a href="/articles/proxy/#external" target="_blank">quic 豁免</a>。（easytier 也可以接 socks5 代理但是我懒得搞）。所以 quic 对我来说是刚需，然而文档里的 quic 是子网代理 quic 而不是 peer 通信 quic，确实把我迷惑了一阵。要让 peer 走 quic，只要把 scheme 改为 <code>quic</code>，选一个小端口，然后配置里添加 <code>flags.default_protocol = "quic";</code> 即可。</li>
+</ul>
+<h2>cloudflare tunnel</h2>
 <p>折腾完了其他几个服务我才想到 cloudflare，一搜，果然有。</p>
 <p>cloudflare 的内网穿透是部署最简单，使用体验最好的服务，杀死了所有其他 frp 玩家。</p>
 <ol>
@@ -1266,13 +1277,6 @@
 <p>不过 cloudflared 在 <a href="/articles/linux/openwrt.html#%E6%9C%8D%E5%8A%A1" target="_blank">procd</a> 系统上只会将 service 写入 <code>/etc/init.d/cloudflared</code>，并不会开机自启。如果需要开机自启，需要手动创建一个软链接：</p>
 <div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">cd</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> /etc/rc.d</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> &amp;&amp; </span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">ln</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -s</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ../init.d/cloudflared</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> ./S99cloudflared</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div></div></div><p>实际使用 cloudflare tunnel 代理我的 reader server 时，出现过上传失败的问题。我不太确定是 server 锅还是 tunnel 锅。</p>
-<h2><a class="header-anchor" href="#easytier"><span></span></a><a href="https://easytier.cn/" target="_blank" rel="noopener noreferrer">easytier</a></h2>
-<p>类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。</p>
-<blockquote>
-<p>和 zerotier、tailscale 故意区分了不同端相比，easytier 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch</p>
-</blockquote>
-<p>实际用起来的话，感受是文档非常不清楚，没有一个 full config example，全是命令行。并且默认情况下它会将你的服务器连到大网络里，消耗你的流量；除非你开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。</p>
-<p>easytier 的一个非常致命的问题是其没有过墙能力，而我的 VPS 全都在国外，所以还是御免了。</p>
 <h2>zerotier</h2>
 <p><a href="https://openwrt.org/docs/guide-user/services/vpn/zerotier" target="_blank" rel="noopener noreferrer">据说</a> openwrt 是有 zerotier 的软件包的，但是我在 iStoreOS 里一点也找不到，不知道是 iStoreOS 的 fork 问题还是 opkg 的问题。</p>
 <p>然后我想直接下载 binary，结果发现<a href="https://www.zerotier.com/download" target="_blank" rel="noopener noreferrer">下载页面</a>里只有 rpm/deb 系的，Github release 里也找不到 binary。合着其他发行版就不配装你的程序了？</p>
