@@ -514,7 +514,23 @@ isoImage.contents = [
 - 某些插件在非 feh 环境下无法运行；feh 环境下无法在终端使用 sudo。
 - 无法使用 ssh 插件远程开发。
 
+### WebDAV
+
+我想部署一个 WebDAV 服务，用于存放我的 galgame 存档([game-save-manager](https://github.com/mcthesw/game-save-manager))。然后还可以通过反代把这个 url 和端口暴露出来。
+
+这是我[使用 webdav-server-rs 的配置](https://github.com/lxl66566/nixos-config/blob/6c540a241c4344d23fc070526debed885e7f91cb/others/webdav.nix)，日常内存占用 10MB，我很满意。
+
 ## 问题解决
+
+### 内网 server 失联
+
+在我搭好 [easytier 虚拟组网实现内网穿透](../frp.md#easytier)后，我可以异地连到我的内网 server。
+
+此时我在异地修改了 easytier 配置，想在内网 server rebuild 一次。我提前想到了假如配置有问题会导致 server 失联，于是先在我的公网 VPS 上 rebuild 了一次，确保配置有效。
+
+但是我忘记了，nixos rebuild 是会 stop 相关 service 的，一旦 stop，ssh 就会断开，本次 rebuild 就会被强行终止，导致失联。然后我错估了操作的风险，没有开 multiplexer，于是就被坑了。
+
+后续我采取 [timer 强制保活](./basic.md#服务)，保证 easytier 即使被 stop 也会自动拉起。
 
 ### env 不生效
 

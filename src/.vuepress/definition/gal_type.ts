@@ -87,6 +87,10 @@ export type GalItemInputType = {
      * 程序分
      */
     program?: number;
+    /**
+     * 感染力
+     */
+    thrill?: number;
   };
 };
 

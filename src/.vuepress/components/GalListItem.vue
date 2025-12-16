@@ -6,7 +6,7 @@
         <a v-else :href="props.item.url" target="_blank">{{ props.item.name }}</a>
 
         <span
-          v-if="props.item.order  || props.item.nth_time || props.item.namaniku || props.item.tag?.all_ages || props.item.tag?.intense || props.item.tag?.thrill">
+          v-if="props.item.order || props.item.nth_time || props.item.namaniku || props.item.tag?.all_ages || props.item.tag?.intense || props.item.tag?.thrill">
           <span>&thinsp;</span>
           <OrderBadge :order="props.item.order" v-if="props.item.order" />
           <OrderBadge :order="item.nth_time" :text="`${numberToChinese(item.nth_time)}刷`" v-if="item.nth_time" />
@@ -39,6 +39,10 @@
       <td
         :class="{ 'high-score': isHighScore(props.item.score?.program), 'low-score': isLowScore(props.item.score?.program) }">
         {{ props.item.score?.program ?? "-" }}
+      </td>
+      <td
+        :class="{ 'high-score': isHighScore(props.item.score?.thrill), 'low-score': isLowScore(props.item.score?.thrill) }">
+        {{ props.item.score?.thrill ?? "-" }}
       </td>
     </template>
     <template #expanded-content>
@@ -73,7 +77,6 @@ function isHighScore(score: number | undefined) {
 function isLowScore(score: number | undefined) {
   return typeof score === "number" && score <= 0;
 }
-
 
 const status_badge_type_map = (s: PlayingStatus) => {
   switch (s) {

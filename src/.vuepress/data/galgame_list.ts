@@ -28,6 +28,12 @@ const original_list: GalItemInputType[] = [
       start: "2025-12-03",
       end: "2025-12-15",
     },
+    score: {
+      story: 5.6,
+      visual: 7.1,
+      program: 6.9,
+      thrill: 4.7,
+    },
   },
   {
     name: "ふゆから、くるる。",
@@ -37,6 +43,9 @@ const original_list: GalItemInputType[] = [
     use_time: "+5min",
     duration: {
       start: "2025-11-26",
+    },
+    score: {
+      thrill: 2,
     },
   },
   {
@@ -55,6 +64,7 @@ const original_list: GalItemInputType[] = [
       story: 8.7,
       visual: 9.5,
       program: 5.1,
+      thrill: 4.5,
     },
   },
   {
@@ -85,6 +95,7 @@ const original_list: GalItemInputType[] = [
       story: 8.8,
       visual: 9.6,
       program: 2.8,
+      thrill: 7.8,
     },
   },
   {
@@ -118,6 +129,7 @@ const original_list: GalItemInputType[] = [
       story: 7.4,
       visual: 5.2,
       program: 3,
+      thrill: 7.8,
     },
   },
   {
@@ -134,6 +146,7 @@ const original_list: GalItemInputType[] = [
       story: 5.1,
       visual: 5,
       program: 3,
+      thrill: 6.3,
     },
   },
   {
@@ -148,8 +161,9 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 7.4,
-      visual: 6.2,
+      visual: 6.4,
       program: 7,
+      thrill: 4.5,
     },
   },
   {
@@ -158,6 +172,9 @@ const original_list: GalItemInputType[] = [
     use_time: "-2min",
     duration: {
       start: "2025-09-12",
+    },
+    score: {
+      thrill: 3,
     },
   },
   {
@@ -207,6 +224,7 @@ const original_list: GalItemInputType[] = [
       story: 6,
       visual: 6.4,
       program: 6.8,
+      thrill: 6,
     },
   },
   {
@@ -238,6 +256,7 @@ const original_list: GalItemInputType[] = [
       story: 5.3,
       visual: 5.7,
       program: 3.1,
+      thrill: 0.3,
     },
   },
   {
@@ -285,6 +304,7 @@ const original_list: GalItemInputType[] = [
       story: 5.5,
       visual: 6.5,
       program: 6.6,
+      thrill: 0,
     },
   },
   {
@@ -302,6 +322,7 @@ const original_list: GalItemInputType[] = [
       story: 9.7,
       visual: 8.3,
       program: 7.6,
+      thrill: 9,
     },
   },
   {
@@ -365,6 +386,7 @@ const original_list: GalItemInputType[] = [
       story: 13,
       visual: 7.8,
       program: 2,
+      thrill: 8.2,
     },
   },
   {
@@ -379,6 +401,7 @@ const original_list: GalItemInputType[] = [
       story: 8.4,
       visual: 4.7,
       program: 7.9,
+      thrill: 3.7,
     },
   },
   {
@@ -435,6 +458,7 @@ const original_list: GalItemInputType[] = [
       story: 3.4,
       visual: 9,
       program: 9.3,
+      thrill: 3.1,
     },
   },
   {
@@ -449,6 +473,7 @@ const original_list: GalItemInputType[] = [
       story: 10.6,
       visual: 2.5,
       program: 0,
+      thrill: 10,
     },
   },
   {
@@ -463,6 +488,7 @@ const original_list: GalItemInputType[] = [
       story: 7.3,
       visual: 5.8,
       program: 4.3,
+      thrill: 3.9,
     },
   },
   {
@@ -489,6 +515,7 @@ const original_list: GalItemInputType[] = [
       story: 9.5,
       visual: 5.6,
       program: 4.5,
+      thrill: 5.5,
     },
   },
   {
@@ -503,6 +530,7 @@ const original_list: GalItemInputType[] = [
       story: 8.8,
       visual: 7,
       program: 3,
+      thrill: 6.3,
     },
   },
   {
@@ -518,7 +546,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-04-18",
     },
     score: {
-      story: 7.7,
+      story: 8,
       visual: 9.5,
       program: 5.4,
     },
@@ -554,6 +582,7 @@ const original_list: GalItemInputType[] = [
       story: 5.1,
       visual: 7.2,
       program: 8.7,
+      thrill: 3.5,
     },
   },
   {
@@ -569,6 +598,7 @@ const original_list: GalItemInputType[] = [
       story: 6.8,
       visual: 6.5,
       program: 7.8,
+      thrill: 4,
     },
   },
   {
@@ -650,6 +680,7 @@ const original_list: GalItemInputType[] = [
       story: 4.5,
       visual: 9.6,
       program: 8.8,
+      thrill: 0,
     },
   },
   {
@@ -666,6 +697,7 @@ const original_list: GalItemInputType[] = [
       story: 8.2,
       visual: 7.9,
       program: 7,
+      thrill: 3.9,
     },
   },
   {
@@ -708,6 +740,7 @@ const original_list: GalItemInputType[] = [
       story: 4.3,
       visual: 3.1,
       program: 0.8,
+      thrill: 0.1,
     },
   },
   {
@@ -725,6 +758,7 @@ const original_list: GalItemInputType[] = [
       story: 6,
       visual: 9,
       program: 6.5,
+      thrill: 1.8,
     },
   },
   {
@@ -745,6 +779,7 @@ const original_list: GalItemInputType[] = [
       story: 5,
       visual: 9.8,
       program: 8,
+      thrill: 7.7,
     },
   },
   {
@@ -775,6 +810,7 @@ const original_list: GalItemInputType[] = [
       story: 5.8,
       visual: 3.5,
       program: 3.2,
+      thrill: 6,
     },
   },
   {
@@ -804,6 +840,7 @@ const original_list: GalItemInputType[] = [
       story: 5.9,
       visual: 5.5,
       program: 5.5,
+      thrill: 3,
     },
   },
   {
@@ -822,6 +859,7 @@ const original_list: GalItemInputType[] = [
       story: 7,
       visual: 7.6,
       program: 7,
+      thrill: 6.5,
     },
   },
   {
@@ -839,6 +877,7 @@ const original_list: GalItemInputType[] = [
       story: 6.4,
       visual: 8,
       program: 7.9,
+      thrill: 3.5,
     },
   },
   {
@@ -854,6 +893,7 @@ const original_list: GalItemInputType[] = [
       story: 9,
       visual: 8.2,
       program: 9.1,
+      thrill: 7.8,
     },
   },
   {
@@ -866,7 +906,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-06-28",
     },
     score: {
-      story: 6.2,
+      story: 6.7,
       visual: 0,
       program: 1.2,
     },
@@ -886,6 +926,7 @@ const original_list: GalItemInputType[] = [
       story: 3.7,
       visual: 9.4,
       program: 8,
+      thrill: 0,
     },
   },
   {
@@ -967,6 +1008,7 @@ const original_list: GalItemInputType[] = [
       story: 10.1,
       visual: 4.2,
       program: 4,
+      thrill: 6.9,
     },
     duration: {
       start: "2024-11-22",
@@ -991,12 +1033,13 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "变态监狱",
-    other_names: ["ヘンタイ・プリズン"],
+    other_names: ["ヘンタイ・プリズン", "hentai prison"],
     use_time: "45h53min",
     score: {
-      story: 9.4,
+      story: 9,
       visual: 5.5,
       program: 7,
+      thrill: 10,
     },
     duration: {
       start: "2024-09-18",
@@ -1026,9 +1069,10 @@ const original_list: GalItemInputType[] = [
     namaniku: true,
     use_time: "5h27min",
     score: {
-      story: 5.8,
+      story: 5.9,
       visual: 8.7,
       program: 4,
+      thrill: 5.3,
     },
     duration: {
       start: "2024-09-27",
@@ -1058,6 +1102,7 @@ const original_list: GalItemInputType[] = [
       story: 6.8,
       visual: 5.2,
       program: 7,
+      thrill: 3,
     },
     duration: {
       start: "2024-08-31",
@@ -1075,6 +1120,7 @@ const original_list: GalItemInputType[] = [
       story: 8.2,
       visual: 7,
       program: 8,
+      thrill: 6.7,
     },
     duration: {
       start: "2024-08-24",
@@ -1206,6 +1252,7 @@ const original_list: GalItemInputType[] = [
       story: 5.2,
       visual: 5.3,
       program: 2.4,
+      thrill: 3.8,
     },
     duration: {
       start: "2024-02-16",
@@ -1237,6 +1284,7 @@ const original_list: GalItemInputType[] = [
       story: 9.8,
       visual: 8.5,
       program: 3.7,
+      thrill: 7.4,
     },
     duration: {
       start: "2024-02-25",
@@ -1251,6 +1299,7 @@ const original_list: GalItemInputType[] = [
       story: 5.6,
       visual: 10,
       program: 6.2,
+      thrill: 5.8,
     },
     duration: {
       start: "2024-02-13",
@@ -1312,6 +1361,7 @@ const original_list: GalItemInputType[] = [
       story: 10.2,
       visual: 7.5,
       program: 0.5,
+      thrill: 10,
     },
     duration: {
       start: "2024-01-05",
@@ -1326,6 +1376,7 @@ const original_list: GalItemInputType[] = [
       story: 8.3,
       visual: 7.6,
       program: 7.5,
+      thrill: 6,
     },
     duration: {
       start: "2023-12-06",
@@ -1367,9 +1418,10 @@ const original_list: GalItemInputType[] = [
     other_names: ["君与彼女与彼女之恋", "君彼"],
     use_time: "10h16min",
     score: {
-      story: 9.1,
+      story: 9.2,
       visual: 4.2,
       program: 5.4,
+      thrill: 4,
     },
     duration: {
       start: "2023-08-04",
@@ -1487,6 +1539,7 @@ const original_list: GalItemInputType[] = [
       story: 10.9,
       visual: 8.6,
       program: 5,
+      thrill: 10,
     },
     duration: {
       start: "2023-06-22",
@@ -1499,9 +1552,10 @@ const original_list: GalItemInputType[] = [
     valid_name: "真愿朦幻馆在的洋馆里追寻明天的羔羊们",
     use_time: "28h2min",
     score: {
-      story: 5.7,
-      visual: 7.1,
+      story: 5.9,
+      visual: 6.7,
       program: 8.4,
+      thrill: 6.2,
     },
     duration: {
       start: "2022-12-02",
@@ -1518,6 +1572,7 @@ const original_list: GalItemInputType[] = [
       story: 8.6,
       visual: 5.3,
       program: 0,
+      thrill: 9.7,
     },
     duration: {
       start: "2023-04-11",
@@ -1690,6 +1745,7 @@ const original_list: GalItemInputType[] = [
       story: 8.9,
       visual: 5.7,
       program: 4.5,
+      thrill: 9.2,
     },
     duration: {
       start: "2022-10-18",
@@ -1767,6 +1823,7 @@ const original_list: GalItemInputType[] = [
       story: 9.6,
       visual: 4,
       program: 3.2,
+      thrill: 9.1,
     },
     duration: {
       start: "2022-12-06",
@@ -1864,6 +1921,7 @@ const original_list: GalItemInputType[] = [
       story: 8.7,
       visual: 6.8,
       program: 8,
+      thrill: 4.4,
     },
     duration: {
       start: "2022-07-25",
@@ -1909,6 +1967,7 @@ const original_list: GalItemInputType[] = [
       story: 10,
       visual: 7,
       program: 9,
+      thrill: 9.5,
     },
     duration: {
       start: "2022-06-08",
@@ -1969,6 +2028,7 @@ const original_list: GalItemInputType[] = [
       story: 11,
       visual: 7,
       program: 3,
+      thrill: 9,
     },
     duration: {
       start: "2022-03-22",
@@ -2052,6 +2112,7 @@ const original_list: GalItemInputType[] = [
       story: 10,
       visual: 9,
       program: 7,
+      thrill: 10,
     },
     duration: {
       start: "2022-03-08",

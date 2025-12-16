@@ -1,14 +1,12 @@
 <template>
-  <div style="width: 100%; box-sizing: border-box;">
-    <div class="before-info">
-      条目数：{{ items_num }}
-    </div>
-    <div style="display: flex; gap: 1.5rem; width: 100%; flex-wrap: wrap;">
+  <div style="width: 100%; box-sizing: border-box">
+    <div class="before-info">条目数：{{ items_num }}</div>
+    <div style="display: flex; gap: 1.5rem; width: 100%; flex-wrap: wrap">
       <input type="text" v-model="searchText" placeholder="搜索游戏原名/译名/俗名...（部分匹配）" class="search-input" />
       <MyCheckBox class="mycheckbox" label="仅显示严格定义的 galgame" v-model="show_strict"
         hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
     </div>
-    <div style="overflow-x: auto; min-width: 0;">
+    <div style="overflow-x: auto; min-width: 0">
       <ExpandableHint hint-text="点击表格项目可以展开详细内容哦！">
         <table>
           <thead>
@@ -24,6 +22,9 @@
               </th>
               <th>
                 <SortIndicator text="程序" v-model="sortOrder_program" />
+              </th>
+              <th>
+                <SortIndicator text="感染力" v-model="sortOrder_thrill" />
               </th>
             </tr>
           </thead>
@@ -55,36 +56,48 @@ import ExpandableHint from "./ExpandableHint.vue";
 
 const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name;
 const show_strict = ref(false);
-const searchText = ref('');
+const searchText = ref("");
 
-// 三个排序组件状态
+// 排序组件状态
 const sortOrder_story = ref<"none" | "asc" | "desc">("none");
 const sortOrder_visual = ref<"none" | "asc" | "desc">("none");
 const sortOrder_program = ref<"none" | "asc" | "desc">("none");
+const sortOrder_thrill = ref<"none" | "asc" | "desc">("none");
 
 // 全局排序状态，记录当前排序的列和方向
-const currentSort = ref<{ column: "story" | "visual" | "program"; direction: "asc" | "desc" | "none" } | null>(null);
+const currentSort = ref<{ column: "story" | "visual" | "program" | "thrill"; direction: "asc" | "desc" | "none" } | null>(null);
 
 // 监听排序状态变化，确保其他排序被重置为 'none'，并更新 currentSort
 const watchSortOrders = () => {
-  watch([sortOrder_story, sortOrder_visual, sortOrder_program], ([story, visual, program], [prevStory, prevVisual, prevProgram]) => {
-    // 确定哪个列发生了变化
-    if (story !== prevStory && story !== 'none') {
-      currentSort.value = { column: "story", direction: story };
-      sortOrder_visual.value = "none";
-      sortOrder_program.value = "none";
-    } else if (visual !== prevVisual && visual !== 'none') {
-      currentSort.value = { column: "visual", direction: visual };
-      sortOrder_story.value = "none";
-      sortOrder_program.value = "none";
-    } else if (program !== prevProgram && program !== 'none') {
-      currentSort.value = { column: "program", direction: program };
-      sortOrder_story.value = "none";
-      sortOrder_visual.value = "none";
-    } else if (story === 'none' && visual === 'none' && program === 'none') {
-      currentSort.value = null; // 默认无排序
-    }
-  });
+  watch(
+    [sortOrder_story, sortOrder_visual, sortOrder_program, sortOrder_thrill],
+    ([story, visual, program, thrill], [prevStory, prevVisual, prevProgram, prevThrill]) => {
+      // 确定哪个列发生了变化
+      if (story !== prevStory && story !== "none") {
+        currentSort.value = { column: "story", direction: story };
+        sortOrder_visual.value = "none";
+        sortOrder_program.value = "none";
+        sortOrder_thrill.value = "none";
+      } else if (visual !== prevVisual && visual !== "none") {
+        currentSort.value = { column: "visual", direction: visual };
+        sortOrder_story.value = "none";
+        sortOrder_program.value = "none";
+        sortOrder_thrill.value = "none";
+      } else if (program !== prevProgram && program !== "none") {
+        currentSort.value = { column: "program", direction: program };
+        sortOrder_story.value = "none";
+        sortOrder_visual.value = "none";
+        sortOrder_thrill.value = "none";
+      } else if (thrill !== prevThrill && thrill !== "none") {
+        currentSort.value = { column: "thrill", direction: thrill };
+        sortOrder_story.value = "none";
+        sortOrder_visual.value = "none";
+        sortOrder_program.value = "none";
+      } else if (story === "none" && visual === "none" && program === "none" && thrill === "none") {
+        currentSort.value = null; // 默认无排序
+      }
+    },
+  );
 };
 watchSortOrders();
 
@@ -124,7 +137,7 @@ const default_list = defaultSort([...original_list]);
 const sortedList = computed(() => {
   // 如果没有激活的排序并且有默认排序函数，使用默认排序
   if (currentSort.value === null || currentSort.value.direction === "none") {
-    return default_list
+    return default_list;
   }
   return [...default_list].sort((x, y) => {
     const scoreKey = currentSort.value!.column;
@@ -141,10 +154,7 @@ const sortedList = computed(() => {
 // 搜索
 // 更多配置请参考 Fuse.js 文档: https://fusejs.io/api/options.html
 const fuseOptions: IFuseOptions<GalItemInputType> = {
-  keys: [
-    'name',
-    'other_names',
-  ],
+  keys: ["name", "other_names"],
   includeScore: true, // 可以用于调试或设置更精确的阈值
   threshold: 0.4, // 匹配阈值，0.0 表示完全匹配，1.0 表示任意匹配。可以调整此值以获得期望的模糊度。
   ignoreLocation: true, // 忽略匹配位置，使得在字符串中任何位置的匹配都被认为是有效的
@@ -153,32 +163,35 @@ const fuseOptions: IFuseOptions<GalItemInputType> = {
 };
 let fuseInstance: Fuse<GalItemInputType>;
 
-const query = ref('');
+const query = ref("");
 const filteredResults = computed(() => {
-  return query.value.trim() ? fuseInstance.search(query.value).map(result => result.item) : sortedList.value;
+  return query.value.trim() ? fuseInstance.search(query.value).map((result) => result.item) : sortedList.value;
 });
 
 const debouncedSearch = debounce(() => {
   query.value = searchText.value.trim();
 }, 400);
 
-
-watch(sortedList, (newItems) => {
-  if (fuseInstance) {
-    fuseInstance.setCollection(newItems);
-  } else {
-    fuseInstance = new Fuse(newItems, fuseOptions);
-  }
-  // 重新执行一次搜索
-  debouncedSearch();
-}, { immediate: true })
+watch(
+  sortedList,
+  (newItems) => {
+    if (fuseInstance) {
+      fuseInstance.setCollection(newItems);
+    } else {
+      fuseInstance = new Fuse(newItems, fuseOptions);
+    }
+    // 重新执行一次搜索
+    debouncedSearch();
+  },
+  { immediate: true },
+);
 
 // 监听搜索文本的变化
 watch(searchText, () => {
   debouncedSearch();
 });
 
-const items_num = computed(() => show_strict.value ? filteredResults.value.filter((item) => !item.not_strict).length : filteredResults.value.length);
+const items_num = computed(() => (show_strict.value ? filteredResults.value.filter((item) => !item.not_strict).length : filteredResults.value.length));
 </script>
 
 <style scoped lang="scss">

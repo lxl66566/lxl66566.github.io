@@ -15,7 +15,18 @@ tag:
 1. 在 [iStoreOS](./linux/openwrt.md) 软路由上部署了应用后，我需要一个内网穿透让我在任何地点都能连上应用。需求：免费，稳定。
 2. 我希望使用自定义化的[远程控制](./control.md)方案。（高级）需求：虚拟组网，P2P
 
-## cloudflare tunnel（推荐）
+## [easytier](https://easytier.cn/)
+
+新时代的虚拟组网软件，国人用 Rust 编写，有国内公益 server 做转发/rpc；跨多平台，有 GUI。除了文档垃圾一点，没有其他缺点了。
+
+[我的配置](https://github.com/lxl66566/nixos-config/blob/6c540a241c4344d23fc070526debed885e7f91cb/others/network/easytier.nix)
+
+- 和 zerotier、tailscale 故意区分了不同端相比，easytier peer 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch
+- easytier 的文档非常大便，没有一个 full config example，全是命令行，那个配置生成器很难用而且有 bug。包括我刚需的 _peer 间 quic 通信_ 是 undocumented 的。
+- 默认情况下它会将你的服务器连到大网络里，消耗你的流量；需要注意开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。
+- easytier 默认是**没有过墙能力**的，但是如果把入端口搞得足够小，流量就可以走到 [quic 豁免](./proxy/index.md#external)。（easytier 也可以接 socks5 代理但是我懒得搞）。所以 quic 对我来说是刚需，然而文档里的 quic 是子网代理 quic 而不是 peer 通信 quic，确实把我迷惑了一阵。要让 peer 走 quic，只要把 scheme 改为 `quic`，选一个小端口，然后配置里添加 `flags.default_protocol = "quic";` 即可。
+
+## cloudflare tunnel
 
 折腾完了其他几个服务我才想到 cloudflare，一搜，果然有。
 
@@ -34,16 +45,6 @@ cd /etc/rc.d && ln -s ../init.d/cloudflared ./S99cloudflared
 ```
 
 实际使用 cloudflare tunnel 代理我的 reader server 时，出现过上传失败的问题。我不太确定是 server 锅还是 tunnel 锅。
-
-## [easytier](https://easytier.cn/)
-
-类似 zerotier 等的组网软件，免费，对国内有优化。而且是 rust 写的。
-
-> 和 zerotier、tailscale 故意区分了不同端相比，easytier 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch
-
-实际用起来的话，感受是文档非常不清楚，没有一个 full config example，全是命令行。并且默认情况下它会将你的服务器连到大网络里，消耗你的流量；除非你开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。
-
-easytier 的一个非常致命的问题是其没有过墙能力，而我的 VPS 全都在国外，所以还是御免了。
 
 ## zerotier
 

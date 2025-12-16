@@ -156,7 +156,7 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 - service 是由 [systemd](https://wiki.archlinux.org/title/systemd) 支持的，而现在几乎所有的发行版都基于 systemd，因此什么老发行版的 `service` 指令就不用看了，用 `systemctl` 就行了。
 - 查看服务的输出（stdout/stderr），一般在 status 里会有几条，也可以前往[日志](#日志)查看。
 
-::: details 老版 service 命令内容
+::: details 老版 init.d 内容
 
 虽然我这里说不用看，但是还是有一些傻逼发行版，比如 OpenWRT 会用。而且还带了很多坑。
 
@@ -167,13 +167,32 @@ git 内添加链接指向的文件需要手动 `git add -f`。
 
 ### 基本概念
 
-每个服务（unit）是一个 `.service` 文件，存放在不同位置：
+每个服务是一个 `.service` 文件，存放在不同位置：
 
 - `/usr/lib/systemd/system/`：由软件安装的服务
 - `/etc/systemd/system`：系统用户写的服务（优先级最高）
 - `~/.config/systemd/user`：普通用户写的服务，需要 `--user`
 
+杂：
+
 - `xxx@.service` 是一个 template unit，不能直接启动，而是需要传入一个 string，作为 `xxx@something.service` 启动。string 的含义需要自己看 service 内容。
+- `Type=oneshot` 的 service 是只启动一次的。
+- 除了 `.service` unit，systemd 还有一大堆 unit 类型。第二常用的应该是 `.timer` 定时器。timer 必须搭配同名的 service 使用。
+  ::: code-tabs
+  @tab 服务保活-NixOS
+  ```nix
+  # 此保活的优势：即使服务被 systemctl stop 了也可以自动拉起
+  systemd.timers.service-name = {
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      # 开机 30s 后先检查/启动一次
+      OnBootSec = "30s";
+      # 当服务进入 "Inactive" (停止) 状态后，计时 30s，然后再次启动它。
+      OnUnitInactiveSec = "30s";
+    };
+  };
+  ```
+  :::
 
 ### 常用指令
 
@@ -202,7 +221,7 @@ sudo python /usr/bin/systemctl <command>
 
 - `journalctl` 用于查看系统日志。
   - `journalctl -u <service_name>` 查看服务日志
-  - 我个人喜欢用 `journalctl -exu <service_name>`，`-e` 是直接跳转到末尾（最新日志），`-x` 是显示更加详细的帮助信息，对 warning 和 error 比较友好。
+  - 我个人喜欢用 `journalctl -xefu <service_name>`，`-e` 是直接跳转到末尾（最新日志），`-x` 是显示更加详细的帮助信息，对 warning 和 error 比较友好，`-f` 是自动刷新。
 - `dmesg` 用于查看内核消息。
 
 ## .desktop
