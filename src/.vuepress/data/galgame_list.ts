@@ -23,9 +23,10 @@ const original_list: GalItemInputType[] = [
     name: "美少女万華鏡異聞 雪おんな",
     valid_name: "美少女万华镜",
     other_names: ["美少女万華鏡", "异闻雪女"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "3h15min",
     duration: {
       start: "2025-12-03",
+      end: "2025-12-15",
     },
   },
   {

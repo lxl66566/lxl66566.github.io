@@ -375,8 +375,8 @@ windows 下也可以[像 linux 一样](../articles/linux/basic.md#链接)创建�
 win11 下有时代理软件端口突然无法使用，有时测试网站 localhost 端口无法使用，随机性很强。于是去搜了下[解法](https://www.cnblogs.com/fanqisoft/p/17071121.html)。
 
 ```shell
-netsh int ipv4 set dynamic tcp start=53536 num=12000
-netsh int ipv6 set dynamic tcp start=53536 num=12000
+netsh int ipv4 set dynamic tcp start=53530 num=12000
+netsh int ipv6 set dynamic tcp start=53530 num=12000
 net stop winnat
 net start winnat
 ```

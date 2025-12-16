@@ -833,7 +833,7 @@ const data: ComicItemType[] = [
   { id: "591400", aScore: 7.2, bScore: 7.6, info: "#蔚蓝档案 #女主动 #推倒 #旗袍", bak: "https://telegra.ph/C105-つくてん-円つくも-煽情妃誘惑されて押し倒されて-ブルーアーカイブ-中国翻訳-無修正-08-20-3" },
   { id: "591287", aScore: 7.8, bScore: 8.7, info: "#蔚蓝档案 #合集 #性冷淡 #多女主 #恶作剧", bak: "https://telegra.ph/山含-出差百夜堂萬事通-ブルーアーカイブ-中国語-無修正-DL版-08-19-3" },
   { id: "591047", aScore: 7.6, bScore: 6.5, info: "#蔚蓝档案 #自慰 #乳头 #兽耳", bak: "https://telegra.ph/みじ屋-ミコジン-マリーの乳首の本-ブルーアーカイブ-中国翻訳-DL版-08-18-2" },
-  { id: "590718", aScore: 8.2, bScore: 6, info: "#蔚蓝档案 #4P", bak: "https://telegra.ph/N7747ますく堂-いせぽんMasco-ドキドキ夜ノティーパーティー-ブルーアーカイブ-中国翻訳-DL版-08-17-3" },
+  { id: "590718", aScore: 9, bScore: 7.2, info: "#蔚蓝档案 #4P", bak: "https://telegra.ph/N7747ますく堂-いせぽんMasco-ドキドキ夜ノティーパーティー-ブルーアーカイブ-中国翻訳-DL版-08-17-3" },
   { id: "590696", aScore: 7.6, bScore: 9, order: 2, info: "#魅魔 #梦境 #正太 #魔女", bak: "https://telegra.ph/ちりめんなおゆき-なおゆき-ロリっ娘サキュバス搾精日記無口で無表情なあの娘がサキュバスだった-中国翻訳-DL版-08-17" },
   { id: "593090", aScore: 8.8, bScore: 9.5, info: "#3P #催眠 #蔚蓝档案 #感官共享", bak: "https://telegra.ph/20NT-ふけまち-プラナちゃん催眠のお時間です-ブルーアーカイブ-中国翻訳-DL版-08-26" },
   { id: "590442", aScore: 7.3, bScore: 7, info: "#蔚蓝档案 #纯爱 #loli", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-プラナは甘やかしたい-ブルーアーカイブ-中国翻訳-DL版-08-16" },
@@ -938,6 +938,18 @@ const data: ComicItemType[] = [
   { id: "590114", aScore: 7.9, bScore: 8.9, info: "#蔚蓝档案 #伪装 #认知障碍 #伪NTR #催眠 #loli", bak: "https://telegra.ph/るなばれ-棗麗-カヤといちゃいちゃする方法-ブルーアーカイブ-中国翻訳-DL版-08-16-3" },
   { id: "590030", aScore: 6.7, bScore: 8.6, info: "#Fate #龙娘 #攻守互换", bak: "https://telegra.ph/サルパッチョ-わいら-メリュ子はぐいぐい来るが交尾がド下手FateGrand-Order-中国翻訳-DL版-08-16-3" },
   { id: "590205", aScore: 5.7, bScore: 7.8, info: "#兄妹 #拍摄 #发情", bak: "https://telegra.ph/GlowMercury-すこやかグミ-パエトーンの金策-あっち系AVビデオ撮影-ゼンレスゾーンゼロ-中国翻訳-DL版-08-16-2" },
+  { id: "591200", aScore: 6.7, bScore: 8, info: "#睡x #东方 #暴露", bak: "https://telegra.ph/C91-背徳漢-背徳漢-東方睡姦3-本居小鈴-東方Project-中国翻訳-08-19-3" },
+  { id: "591200", aScore: 6.7, bScore: 8, order: 3, info: "#睡x #东方 #暴露", bak: "https://telegra.ph/C91-背徳漢-背徳漢-東方睡姦3-本居小鈴-東方Project-中国翻訳-08-19-3" },
+  { id: "590821", aScore: 8.8, bScore: 6.7, order: 2, info: "#蔚蓝档案 #纯爱 #兽耳 #纵欲", bak: "https://telegra.ph/HIGHLAND-高嶋しょあ-メルティシュガードロップ2-空色アンコール-ブルーアーカイブ-中国翻訳-DL版-08-18-2" },
+  { id: "590844", aScore: 8.3, bScore: 7.6, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/HIGHLAND-高嶋しょあ-ラブルセット-ブルーアーカイブ-中国翻訳-DL版-08-18-2" },
+  { id: "590977", aScore: 6.7, bScore: 6.9, info: "#蔚蓝档案 #痴汉 #巨乳", bak: "https://telegra.ph/碧猫-みどり-わるい子5-ブルーアーカイブ-中国翻訳-DL版-08-18-2" },
+  { id: "590752", aScore: 5.7, bScore: 6.8, order: 2, info: "#父女 #堕落 #乱伦 雌ノ家", bak: "https://telegra.ph/AMAM-雨あられ-雌ノ家II妻ハ乱レ奪ワレル-中国翻訳-DL版-08-17-2" },
+  { id: "579323", aScore: 8, bScore: 7.1, info: "#社团 #3P #学姐 #青春", bak: "https://telegra.ph/桃汁庭園-桃雲-美術部ハーレム活動日誌-中国翻訳-DL版-08-17-2" },
+  { id: "(ex)", aScore: 6.8, bScore: 8.5, info: "#玩具 #束缚 #水手服", otherlink: "https://exhentai.org/g/3488244/f6ad1970b2/", bak: "https://telegra.ph/鶴賀-NG-COMIC-失楽天-2025年7月号-中国翻訳-DL版-08-17-2" },
+  { id: "590259", aScore: 7, bScore: 8.6, order: 3, info: "#蔚蓝档案 #触手 マリー触手堕ち", bak: "https://telegra.ph/波乗りネイビー-エビネイビー-マリー触手堕ち-III-萌芽-ブルーアーカイブ-中国翻訳-DL版-08-17-2" },
+  { id: "513967", aScore: 7.9, bScore: 9, info: "#长篇 #合集 #异世界 #催淫 #道具 #魔法 #NTR #精灵 #巨乳", bak: "https://telegra.ph/あいがもあいがも堂-あやかわりく-異世界エルフ発情の魔眼-08-17-2" },
+  { id: "591326", aScore: 7, bScore: 7.8, order: 1, info: "#魔法少女 #战败 #NTR #大叔", bak: "https://telegra.ph/Anission-renard-poire-魔法少女ミオちゃんをNTR悪いおじさん怪人の誘拐敗北-中国翻訳-08-20-2" },
+  { id: "591379", aScore: 6.8, bScore: 6.4, info: "#fate #乱交 #泳装", bak: "https://telegra.ph/ろいやるびっち-haruhisky-セイバーさん-ヤリモクナンパ待ち-プール編-Fatestay-night-中国翻訳-DL版-08-20-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
