@@ -174,6 +174,18 @@ sudo: a password is required
   - disabledModules 在求值时可以取消 imports 引入的模块。因为 list 在 merge 时不能移除元素，所以很多人会分非常多的模块（例如一行 `systemPackage = ...` 也分一个模块），然后使用 disabledModules 控制不同 host 下**排除**某些包。说到底还是 Nix 的设计缺陷。
 - nar 是 NixOS 的归档格式，具有确定性。[RFC 的 nar](https://nix.dev/manual/nix/2.22/protocols/nix-archive) 写得有点蠢。
 
+### flake 基础
+
+flake 是一种 nixos config 组织形式，虽然现在还是 experiment feature，但是已经成为了**事实上的标准**。许多软件包懒得合进 nixpkgs，或者不满足条件，都会在 Github 根目录下提供一个 flake.nix 代表自己软件的依赖、配置等。如果需要使用此软件包，就需要通过 flake input 引入。
+
+flake 是顶层结构，所有 nixos flake 配置的入口都应该是 flake.nix。flake.nix 里指定了所有的 input，在 pure eval 下（如果不指定 --impure，默认就是 pure eval），你使用的所有内容都必须从 input 里推导；而 input 的唯一性是由 flake.lock 锁定的。因此使用 flake + pure eval 可以确保可复现性。
+
+flake 模式下需要自备代理，因为 flake input 一般都需要去 Github 上拉取。如果你在中国大陆且初始安装 NixOS 就直接使用 flake 配置，需要有代理流量过墙的能力。
+
+- flake 保证可复现性的情况下也带来了一些开销：如果你引入了许多软件包的 flake，而这些 flake 又引入了不同版本的 nixpkgs，那么这些 nixpkgs 就会在你的 OS 上共存，并且占用很多空间（每个 nixpkgs 大约 42MB，软件内部依赖的 pkg 也会单独占用空间）。因此我们需要用 `inputs.<xxx>.inputs.nixpkgs.follows = "nixpkgs";` 将 input 里引入的 nixpkgs 换成我们自己的 nixpkgs 版本，减小空间占用。这样虽然不再保证“引入的这个软件包必定是可用的”，但是可复现性不受影响，且出问题的概率较小，比起节省的空间，我觉得还是可以妥协的。
+  - 除了 nixpkgs 这种每个 flake 都有的东西，外部的 flake 也可能有一些其他依赖。所以引入 flake 的时候最好检查一下它的源码，把全部 input 都 follows 到统一的版本。
+- 降级 flake input 到某个特定版本（例：nixpkgs）：`nix flake update nixpkgs --override-input nixpkgs github:NixOS/nixpkgs/<commit-hash>`。至于 commit hash 怎么查，可以看看 [搜索技巧](../../coding/github.md#搜索技巧)。
+
 ### nix command
 
 常用命令：
@@ -214,6 +226,14 @@ nix-repl> builtins.toJSON nixosConfigurations.<host>.config.xxx # 默认会折�
 - <https://nur.nix-community.org/>：NUR 包
 - [Nix 落絮](https://luoxu.torus.icu/)
 
+### linter / formatter
+
+写 nixos config 就是编程的过程，说到编程那肯定少不了 linter 和 formatter。我是 all in vscode 人，使用的插件如下：
+
+- _Nix IDE - Noortheen_：lsp，需要手动安装 `pkgs.nil`
+- formatter，需要手动安装 `pkgs.nixfmt-rfc-style`
+  - formatter 的插件可以使用 _nixfmt - brettm12345_，也可以使用我的 _anyformatter - lxl66566_。
+
 ### 其他
 
 - [x to nix](https://xtonix.tei.su/)：将 json，xml，yaml 配置转为 nix 配置。（但是没啥必要，因为可以通过 `lib.importJSON` 或者其他相关函数自动转。已经有 json 就真没必要硬塞到 nix 里吧。）
@@ -237,13 +257,6 @@ nix 非常自由，你可以自由组织自己的配置结构。我目前见过�
 我的看法：随着配置越来越多，尝试各种不同的组织结构来管理大量配置是一件非常自然的事情。如果你刚入坑 nix，看到复杂的组织结构被吓到也是很正常的。我觉得没必要一上来就抄复杂配置，在大量模块中迷失自我；从乱放慢慢过渡到复杂结构也是一个比较有意思的过程。
 
 有一些教程会使用 flake-parts，但是这玩意绝不是必须的，比如 ryan4yin 佬的[巨大无比配置](https://github.com/ryan4yin/nix-config)也没有用到它。flake-parts 官方的文档跟狗屎一样，即使我有心入坑也没有任何头绪，而且这玩意有很多隐藏的复杂度，因此还是算了吧。
-
-### linter / formatter
-
-nix 是一门图灵完备的函数式语言，写 nixos config 就是编程的过程。说到编程那肯定少不了 linter 和 formatter。而我是 all in vscode 人，我使用的插件如下：
-
-- _Nix IDE - Noortheen_：lsp，需要手动安装 `pkgs.nil`
-- _nixfmt - brettm12345_：formatter，需要手动安装 `pkgs.nixfmt-rfc-style`
 
 ### 显卡驱动
 

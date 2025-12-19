@@ -163,6 +163,8 @@ tag:
 - 开启 _运行_ 历史记录：_设置 - 隐私和安全性 - 常规 - 允许 Windows 跟踪应用启动以改进“开始"和搜索结果_。此设置项默认开启的，之前不小心被某个脚本关了。
 - 设置 Explorer：
   - 使用 [WinSetView](https://github.com/lesferch/WinSetView/) 将 _音乐_ 文件夹 view 设为小图标。否则当你打开一个装满音乐的文件夹时，Explorer 将会去读取所有文件的元数据，会导致卡顿。([src](https://answers.microsoft.com/en-us/windows/forum/windows_11-files/how-to-prevent-windows-explorer-from-reading/c123eab1-e5a5-4124-bf20-68f67a08e47b?messageId=b010aeba-a852-40e7-8732-8f67cb4fd1ed))
+- 小工具：
+  - [右键菜单里添加 hash](https://github.com/namazso/OpenHashTab)
   - 安装 [svg-explorer-extension](https://github.com/tibold/svg-explorer-extension) 插件，让 Explorer 可以预览 svg。
 - 输入法：详见 [输入法](./input_method.md) 文章。要把微软拼音禁用，需要在 _语言和区域_ 的语言中进入 _简体中文_ 的 _语言选项_，在里面删除键盘。
 - 小键盘：如果你的 windows 启动不会自动打开 numslock，需要在注册表中找到 `计算机\HKEY_USERS\.DEFAULT\Control Panel\Keyboard`，将 `InitialKeyboardIndicators` 改为 2。

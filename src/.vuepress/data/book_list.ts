@@ -2,6 +2,13 @@ import { BookItemInputType, HLevel } from "../definition/book_type.js";
 
 const original_list: BookItemInputType[] = [
   {
+    name: "十日终焉",
+    author: "杀虫队队员",
+    duration: {
+      start: "2025-12-16",
+    },
+  },
+  {
     name: "流石にもう死に戻りたくない",
     author: "Tena",
     url: "https://n.novelia.cc/novel/hameln/238287",
