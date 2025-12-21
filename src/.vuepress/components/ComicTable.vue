@@ -950,6 +950,16 @@ const data: ComicItemType[] = [
   { id: "513967", aScore: 7.9, bScore: 9, info: "#长篇 #合集 #异世界 #催淫 #道具 #魔法 #NTR #精灵 #巨乳", bak: "https://telegra.ph/あいがもあいがも堂-あやかわりく-異世界エルフ発情の魔眼-08-17-2" },
   { id: "591326", aScore: 7, bScore: 7.8, order: 1, info: "#魔法少女 #战败 #NTR #大叔", bak: "https://telegra.ph/Anission-renard-poire-魔法少女ミオちゃんをNTR悪いおじさん怪人の誘拐敗北-中国翻訳-08-20-2" },
   { id: "591379", aScore: 6.8, bScore: 6.4, info: "#fate #乱交 #泳装", bak: "https://telegra.ph/ろいやるびっち-haruhisky-セイバーさん-ヤリモクナンパ待ち-プール編-Fatestay-night-中国翻訳-DL版-08-20-2" },
+  { id: "591681", aScore: 7.8, bScore: 7.9, info: "#东方 #战败 #巨乳 #凌辱 #触手 #大姐姐", bak: "https://telegra.ph/ぜのさいど-是乃-もこねーちゃんとエロトラップダンジョン-東方Project-中国翻訳-DL版-08-21-2" },
+  { id: "591491", aScore: 7.2, bScore: 8, info: "#蔚蓝档案 #禁欲 #狂暴 #浴室", bak: "https://telegra.ph/NNL-メリサン-ユウカちゃんソープランド-ブルーアーカイブ-中国翻訳-DL版-08-21" },
+  { id: "591537", aScore: 7.8, bScore: 6.7, info: "#蔚蓝档案 #3P #泳装 #大海 #偷腥 #猫耳 猫の海乱", bak: "https://telegra.ph/NikomiC-Ramen-日常-猫の海乱-ブルーアーカイブ-中国翻訳-DL版-08-21-2" },
+  { id: "591414", aScore: 8.9, bScore: 7.6, info: "#卖春 #loli #巨乳", bak: "https://telegra.ph/揚げナス仮-長瀬徹-初対面の男にダマされてヤリモクパーティーに参加した話中国翻訳-08-20-2" },
+  { id: "615580", aScore: 8.5, bScore: 7.8, info: "#星街すいせい #禁欲 #cos #闷骚", bak: "https://telegra.ph/C106-trickamptreat-とりえす-天体観測-星街すいせい-中国翻訳-無修正-12-15" },
+  { id: "591313", aScore: 7.6, bScore: 3.3, info: "#图书馆 #少女", bak: "https://telegra.ph/芽の里めりーべ-文学少女は従順に-中国翻訳-DL版-08-20-2" },
+  { id: "559578", aScore: 9.8, bScore: 6.2, info: "#偶像大师" },
+  { id: "591907", aScore: 9, bScore: 6.8, info: "#蔚蓝档案 #泳装 #纯爱 #月兎花火", bak: "https://telegra.ph/C106-Sandrop-KiTA-月兎花火-ブルーアーカイブ-中国翻訳-08-22-2" },
+  { id: "591748", aScore: 5.7, bScore: 7.6, info: "#青梅竹马 #纯爱", bak: "https://telegra.ph/砂肝ショートケーキ-成瀬みやび-大好きだよユキちゃん--15年間片想いしてる幼馴染と夢で色々する話--中国翻訳-DL版-08-22-2" },
+  { id: "(ex)", aScore: 7.8, bScore: 9.5, info: "#亡国公主 #陷阱 #强制高潮 #束缚 Reboot Code", otherlink: "https://exhentai.org/g/3496992/6aa0b0292d/", bak: "https://telegra.ph/おもち-Reboot-Code-異世快楽天-Vol48-中国翻訳-08-22-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
