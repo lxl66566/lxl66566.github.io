@@ -960,6 +960,18 @@ const data: ComicItemType[] = [
   { id: "591907", aScore: 9, bScore: 6.8, info: "#蔚蓝档案 #泳装 #纯爱 #月兎花火", bak: "https://telegra.ph/C106-Sandrop-KiTA-月兎花火-ブルーアーカイブ-中国翻訳-08-22-2" },
   { id: "591748", aScore: 5.7, bScore: 7.6, info: "#青梅竹马 #纯爱", bak: "https://telegra.ph/砂肝ショートケーキ-成瀬みやび-大好きだよユキちゃん--15年間片想いしてる幼馴染と夢で色々する話--中国翻訳-DL版-08-22-2" },
   { id: "(ex)", aScore: 7.8, bScore: 9.5, info: "#亡国公主 #陷阱 #强制高潮 #束缚 Reboot Code", otherlink: "https://exhentai.org/g/3496992/6aa0b0292d/", bak: "https://telegra.ph/おもち-Reboot-Code-異世快楽天-Vol48-中国翻訳-08-22-2" },
+  { id: "592236", aScore: 7.2, bScore: 6, info: "#蔚蓝档案 #巨乳 #纯爱", bak: "https://telegra.ph/ぽんたろ家-ぽんたろ-星に染められた夜の記憶-ブルーアーカイブ-中国翻訳-DL版-08-24-2" },
+  { id: "593423", aScore: 3.7, bScore: 8.7, info: "#蔚蓝档案 #调教 #强制性交 #束缚 #凌辱 #loli #兽耳 #爆肛", bak: "https://telegra.ph/ダルゾデサデハーイ-ダル-ココナ人権破壊無慈悲調教録-ブルーアーカイブ-中国翻訳-DL版-08-29-2" },
+  { id: "593060", aScore: 8.2, bScore: 7.8, info: "#蔚蓝档案 #下药 #睡x", bak: "https://telegra.ph/トテモヨイ-トテモイイ-ウイにすやすやえっちするのってダメですか-ブルーアーカイブ-中国翻訳-DL版-08-27-2" },
+  { id: "507268", aScore: 7.9, bScore: 8, order: 1, info: "#小恶魔 #巨乳 #cos #合集", bak: "https://telegra.ph/ヤモセブン-あゆま紗由-小悪魔ちゃんのこうげき1-6-08-26-2" },
+  { id: "592791", aScore: 6.9, bScore: 5.7, order: 8, info: "#小恶魔 #巨乳", bak: "https://telegra.ph/ヤモセブン-あゆま紗由-小悪魔ちゃんのこうげき8-おまけ本DL版中国翻译-08-26" },
+  { id: "592814", aScore: 7, bScore: 5.7, info: "#偶像大师 #纯爱", bak: "https://telegra.ph/イタリアン七草-秋永なお-うめ花笑み-学園アイドルマスター-中国翻訳-DL版-08-26-2" },
+  { id: "592579", aScore: 7.1, bScore: 8, info: "#舰队Collection #连续高潮 #比赛", bak: "https://telegra.ph/えろはむちゃん-ななはむ-大井のはよわくないっ-艦隊これくしょん--艦これ--中国翻訳-DL版-08-25-2" },
+  { id: "592585", aScore: 8.2, bScore: 4.2, order: 9, info: "#媚药 #师生 #巨乳 #纯爱 #逆推", bak: "https://telegra.ph/むらさきいろのよる-むらさき-先生これは2人だけのヒミツですよぬるぬるの秘密-中国翻訳-DL版-08-25-2" },
+  { id: "592334", aScore: 6.4, bScore: 6.7, info: "#长篇 #合集 #自慰 #cos #loli 発情季節", bak: "https://telegra.ph/鈴月あこに-発情季節-中国翻訳-無修正-DL版-08-24-2" },
+  { id: "592344", aScore: 7.8, bScore: 6.4, info: "#蔚蓝档案 #纯爱 #发情 #酒店", bak: "https://telegra.ph/MMU2000-みしまひろじ-HOTELサンクトゥム-潜入作戦-ブルーアーカイブ-中国翻訳-DL版-08-24-2" },
+  { id: "591699", aScore: 8.3, bScore: 7.6, info: "#绝区零 #按摩", bak: "https://telegra.ph/あとりえひなた-ひなた悠-ルーシーとおうちデートでマッサージ-ゼンレスゾーンゼロ-中国翻訳-DL版-08-24-2" },
+  { id: "591311", aScore: 9, bScore: 9.8, info: "#VTuber #暴露 #堕落", bak: "https://telegra.ph/French-letter-藤崎ひかり-アイドル神絵師Vtuberのエロ裏垢活動-しぐれうい-中国翻訳-DL版-08-20-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 
