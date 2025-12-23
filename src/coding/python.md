@@ -117,6 +117,7 @@ uv lock --upgrade && uv sync                  # 更新所有依赖
    [tool.hatch.build]
    include = ["*.py"]
    ```
+6. 永远不要在 CI 或其他地方使用 `--locked`。([src](https://t.me/withabsolutex/2588))
 
 使用 [uv-migrator](https://github.com/stvnksslr/uv-migrator) 可以将其他大部分包管理器的配置无缝迁移到 uv。
 

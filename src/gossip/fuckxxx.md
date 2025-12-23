@@ -200,6 +200,8 @@ tag:
 ### uv
 
 - 无法安装 pytho <= 3.7 的版本，不合格。
+- [Configuration files （20251221）](https://docs.astral.sh/uv/concepts/configuration-files/) 里的陈述：_uv will also discover uv.toml configuration files in the user- and system-level configuration directories, e.g., user-level configuration in ~/.config/uv/uv.toml, and system-level configuration at /etc/uv/uv.toml on macOS and Linux._ 这个陈述**完全不合格**，听着像是 _~/.config/uv/uv.toml_ 是全平台通用的，而 _/etc/uv/uv.toml_ 是 macOS and Linux only 的。实际上 uv 在 Windows 上是不会去读 _~/.config/uv/uv.toml_ 的。uv 文档误导了 windows 用户以后，把实际的 path 放到了[另一个没人会点进去的页面里](https://docs.astral.sh/uv/reference/storage/#configuration-directories)，并且这个页面也比较抽象，还需要用户再点到另一个页面才能看到真实的位置。
+- uv lockfile `revision = 3` 会将系统的 user config 也记录进 lockfile；然后如果 CI 里用了 `uv sync --locked` 就会爆炸。
 
 ## 操作系统系列
 

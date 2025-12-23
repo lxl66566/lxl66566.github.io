@@ -80,6 +80,8 @@ docker builder prune -a                           # 清理构建缓存
 
 ## 代理
 
+docker 代理需要特殊配置的原因是它访问网络的部分是以 systemd service 形式跑的 daemon ，它拿不到你在 shell 环境设置的代理相关的环境变量，群友推荐 podman 是因为它没有 daemon ，直接在你调用命令的进程里访问网络，就不需要特别地配置代理了。——DDoSolitary
+
 [src](https://wiki.archlinuxcn.org/wiki/Docker#HTTP代理)
 
 简言之：守护进程和 docker 都需要配置，`/etc/docker/daemon.json` 和 `~/.docker/config.json` 都需要写入代理内容。

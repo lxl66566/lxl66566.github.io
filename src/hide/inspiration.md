@@ -113,7 +113,7 @@ tag:
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
 - [ ] rust TUI easy_download
-- [ ] ~~GalgameManager~~ <https://github.com/GoldenPotato137/PotatoVN> + <https://github.com/mcthesw/game-save-manager> ?
+- [ ] GalgameManager
   - [ ] 随机启动 计时
   - [ ] 插件与启动链
   - [ ] 计时
@@ -200,6 +200,10 @@ tag:
 - [ ] AV 找片互助
 - [ ] virtual network cluster，分布式理论同步
   - [ ] tag 论分区
+- [ ] Galgame 汉化平台。当前在线翻译协作已经非常成熟，但是 Galgame 界的汉化还是封闭的。
+  - 对他人的翻译进行反馈
+  - 路线图
+  - 下载最优翻译包
 
 ### 插件
 

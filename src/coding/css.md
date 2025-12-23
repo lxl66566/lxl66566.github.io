@@ -108,6 +108,7 @@ flex 布局是自适应的绝佳实践，而且对于前端初学者来说，fle
 无脑 flex：
 
 1. 想要让内部的玩意水平垂直居中，可以直接无脑 flex：`display: flex; align-items: center; justify-content: center;`
+   - 注意该元素需要有一定宽高。
 2. 想要让某个元素占满空间，可以给父元素设为 flex（不要设 align-items & justify-content），然后该元素设为 `flex: 1`。
 
 flex 基础：
