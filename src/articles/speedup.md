@@ -1102,6 +1102,7 @@ def callback(in_data, frame_count, time_info, status):
 - 我希望这个程序是傻瓜式的，可以帮人自动判断游戏是否调用了 dsound.dll，但是……尝试了下发现挺困难的，静态分析基本没辙，好多汉化组的 patch 可是会 spawn 其他 galgame 进程的。至于动态分析那又是 windows api on rust 那一套，感觉我能写一年，这个优化先放着。
 - 为了同时支持不同的倍速，我可以提前编好一堆 dll，然后根据用户的选择释放出某一个。这要求这些 dll 在我的二进制里是整体压缩的，否则这个大小我无法接受。当然使用 [include_assets](https://docs.rs/include_assets/latest/include_assets/) 是可以，这玩意强调了它是唯一一个做了 solid 压缩并且还支持 zstd 的。但是我又不想把所有 dll 存在 git 里，否则这个 git 仓库的大小我又不能接受；而且 include_assets 也说了它的缺陷是运行时会全部解压到内存……想来想去还是直接全程用 zip 比较好，这样仓库也不会太大，运行时也不需要全部解压。
   - 然而 deflate 字典太小，压缩率实在是太差，被 zstd 和 lzma 爆杀了。想了想，还是用 include_assets 吧。
+  - 再想想？再想想？为啥要编一大堆 dll 出来，直接用环境变量就行了（笑）。我怎么一开始没想到呢。
 - 程序同时支持 cli 和 tui，tui 的话我有思考过要不要用 ratatui 做，后面想想这个可以慢慢来，先用 terminal-menu 糊一个。
   - 糊出来发现还挺好用的，这玩意有对 Vec<&str> 专门做过优化，用起来还不错。
 
@@ -1109,7 +1110,7 @@ def callback(in_data, frame_count, time_info, status):
 
 ### MMDevAPI.dll
 
-于是我把目光投向了 unity 使用的 MMDevAPI.dll 上。这是因为 unity 目前还没有办法通过脚本封包，无法进行 SPEEDUP；而使用 unity 引擎制作的《魔法少女的魔女审判》是我一直很想推的 galgame。
+hook dsound.dll 只能在一部分引擎上使用，对于较新引擎的 galgame 仍然无法加速。当务之急是 hook 掉更多的 dll，于是我把目光投向了 unity 使用的 MMDevAPI.dll 上。这是因为 unity 目前还没有办法通过脚本封包，无法进行 SPEEDUP；而使用 unity 引擎制作的《魔法少女的魔女审判》是我一直很想推的 galgame。
 
 微软实在是可恶，这个 dll 不像 dsound 有 dsoal，xaudio 有 faudio，它没有现成的 wrapper 源码。经过一番搜索，我决定参考 wine 的 MMDevAPI 进行修改。wine 的源码虽然不能直接编译成 windows x64/x86 dll 无缝替换，但是我可以丢给 LLM 参考和抽奖。我尝试使用 [wrap_dll](https://github.com/mavenlin/wrap_dll) 导出 dll wrapper，然后将更改后的源码、所有导出的内容一起喂给 LLM，几轮对话通过编译。
 
@@ -1173,7 +1174,7 @@ V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是�
 
 最大的问题还是音质，即使修了[音质下降](#音质下降问题)问题，pitch_shift 还是难担加速重任，其使用的经典相位声码器比较初级，在处理人声时效果较差，表现就是钢管音，我推 gal 基本都无法开外放，只能戴耳机，隔绝环境音拯救一下音质。
 
-于是我又一次（已经数不清是第几次）将目光投向了 SoundTouch 上。如果我直接拿到 buffer 数据然后用 ST 对原始数据进行不变调加速呢？WSOLA 的效果还是相当值得信任的，毕竟天天解封包然后 ffmpeg 加速也是用的 WSOLA。
+于是我又一次（已经数不清是第几次）将目光投向了 SoundTouch 上。如果我直接拿到 buffer 数据然后用 ST 对原始数据进行不变调加速呢？WSOLA 的效果还是相当值得信任的，毕竟天天解封包然后 ffmpeg 加速也是用的 WSOLA（严格来说[不是](../coding/audio.md)），质量有保证。
 
 恰逢 Gemini 出了 3 pro，我便乘着 LLM 升级的西风开始了 V1 的迁移工作。
 
@@ -1205,7 +1206,7 @@ V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是�
 
 问题解决后，再做一下 dsound 兼容、调参平衡延迟和稳定性，就可以投入使用了。~~立刻开打《ふゆから、くるる。》！不对我怎么还要上班 T_T~~
 
-回家一测试，AudioSpeedHack 在我硬盘上的所有 18 个 galgame 的加速成功率是 **100%**。然后我还发现新版的 MMDevAPI 真的非常牛逼，只 MMDevAPI.dll 一个就实现了 100% 覆盖率，它就是 WASAPI 的化身。dsound 可有可无，不过可以作为叠加加速的工具，还是有用武之地的。
+回家一测试，AudioSpeedHack 在我硬盘上的所有 18 个 galgame 的加速成功率是 **100%**。然后我还发现新版的 MMDevAPI 真的非常牛逼，只 MMDevAPI.dll 一个就实现了 100% 覆盖率，它就是 WASAPI 的化身，我为了它付出的时间都是值得的。dsound 可有可无，不过可以作为叠加加速的工具，还是有用武之地的。
 
 ## 番外篇：galgame 语音不中断
 

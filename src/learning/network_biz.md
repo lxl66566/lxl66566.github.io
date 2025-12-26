@@ -44,5 +44,11 @@ HTTP/2（2015）是 HTTP 1.1（1997）以来的一个重大更新。
 
 ## TCP
 
+- 简记：三次握手：SYN，SYN-ACK，ACK；四次挥手：FIN，ACK （进入半连接），FIN，ACK。
 - MTU：Maximum Transmission Unit，单数据包的可传输最大数据量，受到现实网络设备限制，一般为 1500。
 - MSS：Maximum Segment Size，TCP segment 的最大长度，一般为 MTU - 40（20 IP header, 20 TCP header）。
+
+### 内核参数
+
+- `net.ipv4.tcp_syn_retries`：建连阶段 SYN 包的重传最大次数，默认为 6。重传有指数退避，走到 timeout 的耗时为 127s。
+- `net.ipv4.tcp_retries2`：在已建连的 TCP 连接上重传的次数参考，默认为 15。实际重传耗时取决于 RTO，默认为大约 15 分钟。

@@ -9,6 +9,9 @@ const original_list: GalItemInputType[] = [
     duration: {
       start: "2025-12-13",
     },
+    score: {
+      program: -2,
+    },
   },
   {
     name: "樱花，萌放",
@@ -1347,6 +1350,7 @@ const original_list: GalItemInputType[] = [
       story: 8.1,
       visual: 9.9,
       program: 9.1,
+      thrill: 7.5,
     },
     duration: {
       start: "2024-01-22",
