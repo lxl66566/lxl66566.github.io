@@ -847,7 +847,7 @@ const data: ComicItemType[] = [
   { id: "593208", aScore: 8.5, bScore: 5, info: "#全彩 #乱交 #约会大作战 #药物", bak: "https://telegra.ph/イワシの部屋R-イワシR-DATE-A-LIVE-超HAREM-A-LIVE-デートアライブ-中国翻訳-DL版-08-28" },
   { id: "593421", aScore: 9.2, bScore: 6.5, info: "堕天計画ex #修女 #天然 #堕落", bak: "https://telegra.ph/234ド-イチリ-堕天計画-癒しの聖女編-中国翻訳-DL版-08-29-2" },
   { id: "581921", aScore: 7.8, bScore: 9.3, info: "#表兄妹 #纯爱", bak: "https://telegra.ph/ラインアウトきいろいたまご-夜な夜なふたりはわるいこと-中国翻訳-08-29" },
-  { id: "593611", aScore: 8, bScore: 5.7, info: "#泳装 #3P #蔚蓝档案", bak: "https://telegra.ph/C106Two-Drops-of-Rain-08-30-3" },
+  { id: "593611", aScore: 7.5, bScore: 6.4, info: "#泳装 #3P #蔚蓝档案", bak: "https://telegra.ph/C106Two-Drops-of-Rain-08-30-3" },
   { id: "593960", aScore: 8.9, bScore: 4.2, info: "#明日方舟 #连裤袜 #纯爱", bak: "https://telegra.ph/充气薯独属于我的光ArknightsChinese-08-31" },
   { id: "595054", aScore: 7.6, bScore: 8.6, info: "#电话自慰 #蔚蓝档案", bak: "https://telegra.ph/たらたまご-tarako-ウツミダレ-ブルーアーカイブ-中国翻訳-DL版-09-04" },
   { id: "593234", aScore: 9.8, bScore: 7.7, info: "#蔚蓝档案 #幻境" },
@@ -972,6 +972,16 @@ const data: ComicItemType[] = [
   { id: "592344", aScore: 7.8, bScore: 6.4, info: "#蔚蓝档案 #纯爱 #发情 #酒店", bak: "https://telegra.ph/MMU2000-みしまひろじ-HOTELサンクトゥム-潜入作戦-ブルーアーカイブ-中国翻訳-DL版-08-24-2" },
   { id: "591699", aScore: 8.3, bScore: 7.6, info: "#绝区零 #按摩", bak: "https://telegra.ph/あとりえひなた-ひなた悠-ルーシーとおうちデートでマッサージ-ゼンレスゾーンゼロ-中国翻訳-DL版-08-24-2" },
   { id: "591311", aScore: 9, bScore: 9.8, info: "#VTuber #暴露 #堕落", bak: "https://telegra.ph/French-letter-藤崎ひかり-アイドル神絵師Vtuberのエロ裏垢活動-しぐれうい-中国翻訳-DL版-08-20-2" },
+  { id: "525394", aScore: 9.9, bScore: 3, info: "#合集 満開開花劇場", bak: "https://telegra.ph/満開開花-満開開花劇場-無修正-中国翻訳-PepeRabi个人汉化-進行中-08-30" },
+  { id: "593072", aScore: 5.8, bScore: 7.6, order: 1, info: "#胁迫 #师生 #录像", bak: "https://telegra.ph/あいいろさくら-相川りょう-美柑のえっちなほん-To-LOVEる--とらぶる--中国翻訳-DL版-08-30-2" },
+  { id: "593455", aScore: 7.5, bScore: 6.4, info: "#蔚蓝档案 #草图 #自慰 #师生 #纯爱 #孕肚 #捆绑 共同性犯", bak: "https://telegra.ph/くへんリパブリック-クヘン拾-共同性犯-ブルーアーカイブ-中国翻訳-DL版-08-30" },
+  { id: "593451", aScore: 9, bScore: 5.2, info: "#偶像大师 #媚药 #短篇 #合集", bak: "https://telegra.ph/OrangeMaru-JP06-初星エクササイズ-学園アイドルマスター-中国翻訳-DL版-08-30" },
+  { id: "593885", aScore: 7.7, bScore: 6, info: "#蔚蓝档案 #束缚 #babyplay #强制性交", bak: "https://telegra.ph/えだまめ亭-うこ-バぶタス-ブルーアーカイブ-中国翻訳-DL版-08-31-3" },
+  { id: "593897", aScore: 8.2, bScore: 6.5, info: "#偶像大师 #巨乳 #女上 #暴露", bak: "https://telegra.ph/REIs-ROOM-REI-美鈴が突然部屋に現れた件-学園アイドルマスター-中国翻訳-DL版-08-31" },
+  { id: "594098", aScore: 7.3, bScore: 7.6, info: "#蔚蓝档案 #纯爱 #角", bak: "https://telegra.ph/Trick-color-桐井ナオ-パパラチアサファイア-ブルーアーカイブ-中国翻訳-DL版-09-01-2" },
+  { id: "594120", aScore: 7, bScore: 7.3, order: 3, info: "#3P #蚀把米 #闺密", bak: "https://telegra.ph/MIKICREATE-うのみき-私はもう大人です3-中国翻訳-DL版-09-01-2" },
+  { id: "582398", aScore: 7, bScore: 8.6, info: "#直播 #邻居 #胁迫 #合集 隣人は有名配信者", bak: "https://telegra.ph/隣人は有名配信者-1-5番外-08-31-2" },
+  { id: "503640", aScore: 6.5, bScore: 8.5, info: "#偶像 #按摩 #摄影 #堕落" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -42,13 +42,16 @@ const original_list: GalItemInputType[] = [
     name: "ふゆから、くるる。",
     valid_name: "ふゆからくるる",
     other_names: ["冬滚滚", "冬暮川滚滚"],
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "+5min",
+    use_time: "13h42min",
     duration: {
       start: "2025-11-26",
+      end: "2025-12-27",
     },
     score: {
-      thrill: 2,
+      story: 7.8,
+      visual: 10,
+      program: 7.3,
+      thrill: 2.3,
     },
   },
   {
@@ -929,7 +932,7 @@ const original_list: GalItemInputType[] = [
       story: 3.7,
       visual: 9.4,
       program: 8,
-      thrill: 0,
+      thrill: 0.1,
     },
   },
   {
