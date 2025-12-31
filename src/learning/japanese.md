@@ -27,7 +27,7 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
 
 - Anki deck
   - 单词
-    - [JLPT (N1 ～ N5)单词 中日 新版](https://ankiweb.net/shared/info/832276382) | ~~[旧版](https://ankiweb.net/shared/info/34073638)~~
+    - [JLPT (N1 ～ N5)单词 中日 新版](https://github.com/5mdld/anki-jlpt-decks)
     - [Open Anki JLPT](https://ankiweb.net/shared/decks?search=Open%20anki%20JLPT)
     - [オノマトペ・擬音語・擬態語](https://ankiweb.net/shared/info/1883048818)
   - 文法

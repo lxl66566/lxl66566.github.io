@@ -127,7 +127,8 @@ tag:
     set-mmagent -MaxOperationAPIFiles 8192
     ```
 - 网络设置：
-  - [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)，也可以使用[轻松设置](#小工具)：bbr 在弱网环境下表现异常优异，是 linux 内核的一部分。不过可能有着强网络下流量消耗增大的缺陷。
+  - [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)，也可以使用[轻松设置](#小工具)：bbr 是新一代拥塞控制算法，在弱网环境下表现异常优异。
+  - 调高 ipv4 优先级：`netsh interface ipv6 set prefixpolicy ::ffff:0:0/96 60 4` ([src](https://github.com/oven-sh/bun/issues/4938#issuecomment-3043953860))
 - 习惯设置：
   - 关闭所有系统提示音。_系统 - 声音 - 更多声音设置_
   - 文件夹与文件改为单击。我个人不喜欢双击。

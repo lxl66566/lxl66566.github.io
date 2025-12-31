@@ -534,6 +534,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | rand / smallrand | 随机数，后者更适合用于 no_std |
 | parking_lot | 一个解锁分配更公平的、没有 poison 的互斥锁 |
 | enum_dispatch | 基于 enum 实现的高性能 trait "object" |
+| walkdir | 递归访问文件系统 |
 
 [^5]: 为避免傻逼 openssl 造成的影响，一般建议起手 `reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "http2", "charset", "system-proxy"] }`。
 
@@ -573,6 +574,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | tracing 系 | 性能不如 [fasttrace](https://github.com/fast/fastrace) 一根，tracing-appender 代码写得一坨狗屎，众望所归的 feat pr 都喂到嘴边了就是不合 |
 | xq | 跟 jq cli 不兼容；纯纯傻逼玩具，性能垃圾，打一个 1G json，jq 和 jaq 峰值内存都用不了 6G，xq 吃了 20G 都打不出来 |
 | tauri_specta | [2.0.0-rc.21](https://docs.rs/tauri-specta/2.0.0-rc.21/tauri_specta/) 的指令是错的，cargo add 会版本冲突；有些第三方可以 serde 的类型没有实现 `derive(specta::Type)`，例如 chrono::*；很多第三方 error 类型也没有实现 serde/Type，没法用。建议只用 ts-rs 做 struct 结构生成，事件还是用 tauri 那一套。 |
+| tauri-plugin-http | 这是它的 [issue 区](https://github.com/tauri-apps/plugins-workspace/issues?q=sort:updated-desc%20is:issue%20is:open%20label:"plugin:%20http")，低级问题太多了，不知道一个 client 为什么能做得这么屎。还容易遇到权限问题。 |
 
 ### clap
 
