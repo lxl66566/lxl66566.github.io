@@ -6,10 +6,11 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 31 Dec 2025 13:22:41 GMT</pubDate>
-    <lastBuildDate>Wed, 31 Dec 2025 13:22:41 GMT</lastBuildDate>
+    <pubDate>Fri, 02 Jan 2026 19:21:42 GMT</pubDate>
+    <lastBuildDate>Fri, 02 Jan 2026 19:21:42 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>随笔</category>
     <category>学习</category>
     <category>工作</category>
     <category>推荐</category>
@@ -18,8 +19,21 @@
     <category>经历</category>
     <category>教程</category>
     <category>评价</category>
-    <category>随笔</category>
-    <category>爱好</category>
+    <item>
+      <title>2026</title>
+      <link>https://absx.pages.dev/essay/2026.html</link>
+      <guid>https://absx.pages.dev/essay/2026.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">2026</source>
+      <description>2026 20260102 其实我觉得不用 agentic ai 可以促进大脑思考。 一个是提问必须过脑子，然后必须把所有关联信息都筛选出来给 ai。给出的回答不能直接用，要理解意思，然后慢慢改代码应用上去。有时候还得先跟着 ai 学习缺失的知识，然后才能理解为啥这样写。 「AI 太好用了，所以得给人类找点苦吃。」</description>
+      <category>随笔</category>
+      <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<h2>20260102</h2>
+<p>其实我觉得不用 agentic ai 可以促进大脑思考。</p>
+<p>一个是提问必须过脑子，然后必须把所有关联信息都筛选出来给 ai。给出的回答不能直接用，要理解意思，然后慢慢改代码应用上去。有时候还得先跟着 ai 学习缺失的知识，然后才能理解为啥这样写。</p>
+<p>「AI 太好用了，所以得给人类找点苦吃。」</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>计算机网络（专业）</title>
       <link>https://absx.pages.dev/learning/network_biz.html</link>
@@ -906,10 +920,18 @@
       <link>https://absx.pages.dev/essay/2025.html</link>
       <guid>https://absx.pages.dev/essay/2025.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2025</source>
-      <description>2025 20251216 每一个 anubis，每一个 public block list，都是世界 ipv4 数量短缺的元凶。 20251210 cloudflare 崩了两次，网上骂声一片。我寻思人家公开事故报告已经很给面子了，而且第二次崩溃的这错误也不是容易发现的那种，换我来看也挑不出啥毛病。 啊，不过 React/Next.js CVE 是该...</description>
+      <description>2025 总结 点击展开 2025 年的时间统计意义不大，从 7 月份开始有断崖式下跌，因为开始上班了。。入职然后一睁眼就到了 2026。 上半年除了毕设就没有其他事了，实现了我的每日爽玩梦想，然而快乐的时光不会在记忆里留下什么。下半年上班的麻木时光更不会激起我一丝一毫的回忆。 这就是我的 -1y 啊。 PC 用时统计（按月） PC 用时统计（按应用）...</description>
       <category>随笔</category>
       <pubDate>Tue, 07 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>总结</h2>
+<details class="hint-container details"><summary>点击展开</summary>
+<p>2025 年的时间统计意义不大，从 7 月份开始有断崖式下跌，因为开始上班了。。入职然后一睁眼就到了 2026。</p>
+<p>上半年除了毕设就没有其他事了，实现了我的每日爽玩梦想，然而快乐的时光不会在记忆里留下什么。下半年上班的麻木时光更不会激起我一丝一毫的回忆。</p>
+<p>这就是我的 -1y 啊。</p>
+<p><img src="/images/essay/2025/pc1.png" alt="PC 用时统计（按月）" loading="lazy">
+<img src="/images/essay/2025/pc2.png" alt="PC 用时统计（按应用）" loading="lazy"></p>
+</details>
 <h2>20251216</h2>
 <p>每一个 anubis，每一个 public block list，都是世界 ipv4 数量短缺的元凶。</p>
 <h2>20251210</h2>
@@ -920,6 +942,7 @@
 <h2>20251202</h2>
 <p>每次读完一本精彩的小说我都会想，要是能让优秀的小说家来写 galgame 就好了。剧本就是真的“剧本”，需要让小说的文字“动起来”，并通过小互动来凸显人物性格；而主笔负责控制剧情的走向、伏笔的回收、感情的起伏等。当然基于日轻的 galgame 是有，但是我感觉还是不太适合。。日轻那种行文我感觉在宏大叙事上比中式要差多了。</p>
 ]]></content:encoded>
+      <enclosure url="https://absx.pages.dev/images/essay/2025/pc1.png" type="image/png"/>
     </item>
     <item>
       <title>React</title>
@@ -986,16 +1009,16 @@
       <link>https://absx.pages.dev/coding/solidjs.html</link>
       <guid>https://absx.pages.dev/coding/solidjs.html</guid>
       <source url="https://absx.pages.dev/rss.xml">SolidJS</source>
-      <description>SolidJS SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。 SolidJS 的哲学就是 small and simple。所以 React 高手用起来肯定没有那么方便舒服，很多地方需要...</description>
+      <description>SolidJS SolidJS 是一个高性能轻量前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。 SolidJS 的哲学就是 small and simple。所以 React 高手用起来肯定没有那么方便舒服，很多地方...</description>
       <category>编程</category>
       <pubDate>Sat, 04 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>SolidJS 是一个轻量级前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。</p>
+<p>SolidJS 是一个高性能轻量前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。</p>
 <p>SolidJS 的哲学就是 small and simple。所以 React 高手用起来肯定没有那么方便舒服，很多地方需要自己手操低级逻辑。但是对新手来说是一件好事，SolidJS 的隐含条件少，不容易被框架坑。要说它的唯一缺点可能就是生态了，SolidJS 的包数量和可用性都要比 React 差上许多 (<a href="https://t.me/withabsolutex/2343" target="_blank" rel="noopener noreferrer">ref</a>)。</p>
-<h2>props</h2>
+<h2>props 与响应性</h2>
 <p>在 React 中，有一个核心理念：<code>UI = f(state)</code>。这意味着整个组件的输出（UI）被看作是其当前 state 和 props 的一个函数。当 state 或 props 改变时，React 的做法不是去找到是哪个具体的值变了，而是重新执行整个组件函数，生成一个新的 Virtual DOM，然后通过比对新旧 VDOM，最后只把差异部分更新到真实的 DOM 上。</p>
 <p>然而，<strong>SolidJS 的组件函数本身永远只运行一次</strong>。要让子组件随父组件的 signal 改变而重新渲染，需要传入 <code>Accessor&lt;T&gt;</code> 保持响应性。但是在任何一层子组件使用 <code>const { ... } = props</code> 解构，都会丢失 props 的响应性，导致子组件无法正确重新渲染。</p>
-<p>要在保证响应性的同时结构 props，需要使用 SolidJS 提供的 <code>splitProps</code>。举个例子：</p>
+<p>要在保证响应性的同时解构 props，需要使用 SolidJS 提供的 <code>splitProps</code>。举个例子：</p>
 <div class="language-tsx line-numbers-mode" data-highlighter="shiki" data-ext="tsx" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">interface</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B"> ButtonProps</span><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD"> extends</span><span style="--shiki-light:#50A14F;--shiki-dark:#E5C07B"> JSX</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">ButtonHTMLAttributes</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&lt;</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">HTMLButtonElement</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">&gt; {</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">  children</span><span style="--shiki-light:#0184BC;--shiki-dark:#C678DD">?</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#E5C07B"> JSX</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">.</span><span style="--shiki-light:#C18401;--shiki-dark:#E5C07B">Element</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">  variant</span><span style="--shiki-light:#0184BC;--shiki-dark:#C678DD">?</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">:</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "primary"</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF"> |</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "secondary"</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF"> |</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "square"</span><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF"> |</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "operator"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">;</span></span>
@@ -1006,18 +1029,35 @@
 <span class="line"><span style="--shiki-light:#A626A4;--shiki-dark:#C678DD">  const</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF"> [</span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">local</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#986801;--shiki-dark:#E5C07B">rest</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">] </span><span style="--shiki-light:#0184BC;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> splitProps</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">(</span><span style="--shiki-light:#383A42;--shiki-dark:#E06C75">props</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, [</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"children"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">, </span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">"variant"</span><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">]);</span></span>
 <span class="line"><span style="--shiki-light:#0184BC;--shiki-dark:#ABB2BF">  ...</span></span>
 <span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">}</span></span></code></pre>
-<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果你在调试 SolidJS 项目时发现子组件没有正确渲染，请优先检查 props 解构。</p>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果你在调试 SolidJS 项目时发现子组件没有正确渲染，请优先检查响应性。</p>
 <h2>Hooks</h2>
 <h3>createSignal</h3>
 <p>就是 useState，最基本的响应式组成部分。</p>
-<p>每一次调用 <code>setState</code> 都会触发重新渲染。如果需要像 React 那样在值变化时才渲染，需要配合 <code>createMemo</code>。</p>
-<h3>createContext</h3>
-<p>可以用来跨组件传输数据，不需要通过 props。</p>
-<h3>createResource</h3>
-<p>可以用来执行 async 函数。SolidJS 对 async 支持算不上好，这可能是唯一的 async 执行器。</p>
+<ul>
+<li>每一次调用 <code>setState</code> 都会触发重新渲染。如果需要像 React 那样在值变化时才渲染，需要配合 <code>createMemo</code>。</li>
+</ul>
+<h3><a class="header-anchor" href="#createstore"><span></span></a><a href="https://docs.solidjs.com/reference/store-utilities/create-store" target="_blank" rel="noopener noreferrer">createStore</a></h3>
+<p>创建一个深层响应式对象，实现细粒度响应性（修改深层属性只会影响依赖了这个属性的节点）。一般用来存一些生命周期比较长、贯穿多个页面的东西，例如全局配置。</p>
+<ul>
+<li>由于该对象任何部分也都是响应式的，实际使用数据本身时要去掉这层 proxy，需要使用 <code>unwrap</code> 函数。</li>
+</ul>
+<h3><a class="header-anchor" href="#createcontext"><span></span></a><a href="https://docs.solidjs.com/reference/component-apis/create-context" target="_blank" rel="noopener noreferrer">createContext</a></h3>
+<p>用来跨组件传输数据，不需要通过 props。只要在 provider 内都能拿到 context。</p>
+<ul>
+<li>一般可以配合 createStore 实现全局状态管理：createStore 负责响应式，createContext 负责让其他组件能拿到数据。
+<ul>
+<li>一般的 i18n，theme 都是这样实现的。</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header-anchor" href="#createresource"><span></span></a><a href="https://docs.solidjs.com/reference/basic-reactivity/create-resource" target="_blank" rel="noopener noreferrer">createResource</a></h3>
+<p>一个 async 执行器的简单包装，可以跟踪执行状态。当然直接用 signal + 回调也是没有任何问题的。好像现在更多还是直接 signal，并没有太麻烦，还能减少学习成本。就是代码乱一些。</p>
 <p>createResource 可以跟 Suspence 组件<a href="https://docs.solidjs.com/reference/components/suspense" target="_blank" rel="noopener noreferrer">配合使用</a>。其实就是包装了一下 <code>res.loading</code> 的判断而已。</p>
 <h3>onMount</h3>
 <p>因为每个组件函数只会执行一次，你可以直接将相关逻辑放在组件里；当然 SolidJS 也提供了 onMount hook 用于分离逻辑。</p>
+<ul>
+<li>其实还是有一些细微区别的，如果你要访问浏览器 API/DOM 信息，就得写在 onMount 里。</li>
+</ul>
 <h2>杂</h2>
 <ul>
 <li>SolidJS 的组件导出必须使用大写字母开头，否则 tsx 不会将其识别为组件。</li>
@@ -1031,11 +1071,13 @@
 <h2>配套设施</h2>
 <p>SolidJS 虽然相对小众，但仍有着完善的生态系统。</p>
 <ul>
-<li>组件库：<a href="https://github.com/stefan-karger/solid-ui" target="_blank" rel="noopener noreferrer">SolidUI</a></li>
+<li>组件库：<a href="https://github.com/stefan-karger/solid-ui" target="_blank" rel="noopener noreferrer">SolidUI</a>，虽然我不太喜欢这个组件库的风格。</li>
 <li>Router：<a href="https://github.com/solidjs/solid-router" target="_blank" rel="noopener noreferrer">solid-router</a></li>
 <li>图标库：<a href="https://solid-icons.vercel.app/" target="_blank" rel="noopener noreferrer">Solid Icons</a></li>
+<li>toast：<a href="https://github.com/ardeora/solid-toast" target="_blank" rel="noopener noreferrer">solid-toast</a></li>
 <li>Markdown 渲染：<a href="https://github.com/andi23rosca/solid-markdown" target="_blank" rel="noopener noreferrer">solid-markdown</a></li>
 </ul>
+<p>这些基本都是事实标准，意味着如果你发现需要啥东西，不需要纠结用哪家的实现，用就完了。</p>
 <p>但是很可惜，solid 用的人较少，导致很多库的 bug 都<a href="https://t.me/withabsolutex/2343" target="_blank" rel="noopener noreferrer">没人修</a>。</p>
 ]]></content:encoded>
     </item>
@@ -1454,13 +1496,12 @@
       <link>https://absx.pages.dev/coding/vue.html</link>
       <guid>https://absx.pages.dev/coding/vue.html</guid>
       <source url="https://absx.pages.dev/rss.xml">Vue.js</source>
-      <description>Vue.js 前言 前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。 在了解了其他前端框架后，我发现 Vue 关键字太多很难记这一点确实是对的。而且 Vue 有很多隐式的坑，还是比较劝退新人的。 Vu...</description>
+      <description>Vue.js 前言 前端技术栈里，我最熟悉的肯定就是 vue 了[1]，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。 Vue 2 与 Vue 3 Vue 当前版本迭代到 Vue 3。但是如果在 2024 年左右上网问 GPT，给出的答案基本全...</description>
       <category>编程</category>
       <pubDate>Fri, 18 Oct 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <h2>前言</h2>
-<p>前端技术栈里，我最熟悉的肯定就是 vue 了，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。</p>
-<p>在了解了其他前端框架后，我发现 Vue 关键字太多很难记这一点确实是对的。而且 Vue 有很多隐式的坑，还是比较劝退新人的。</p>
+<p>前端技术栈里，我最熟悉的肯定就是 vue 了<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>，这两年折腾博客不是白折腾的。但是之前主要学习的还都是 Vue2 语法，并且伴随着摸索的痛苦。现在由于一些契机，我开始较为系统地学习前端，因此有了这一篇文章。</p>
 <h2>Vue 2 与 Vue 3</h2>
 <p>Vue 当前版本迭代到 Vue 3。但是如果在 2024 年左右上网问 GPT，给出的答案基本全是 Vue 2 的答案。真正用过 Vue 3 以后才知道好用，因此后来本博客的组件全部迁移了 Vue 3，并且我强烈建议所有项目迁移 Vue 3，不要再写 Vue 2 了。</p>
 <h3>迁移到 Vue 3</h3>
@@ -1498,62 +1539,13 @@
 <p>类似的函数还有 watch，区别：</p>
 <p>| <strong>特性</strong>     | <strong>computed</strong>                           | <strong>watch</strong>                                     |
 |</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>修图嵌字</title>
-      <link>https://absx.pages.dev/learning/ps.html</link>
-      <guid>https://absx.pages.dev/learning/ps.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">修图嵌字</source>
-      <description>修图嵌字 因为一些契机，开始学修图/嵌字。 此处内容肯定以 PS 为主。如果使用其他工具会先声明。 下载 PS：详见。 常用快捷键 Ctrl + k 打开首选项（设置） 按住空格可拖动 x 交换前景色和背景色 Ctrl + d 取消选区 Ctrl + j 将选中区域/图层克隆为新图层 Alt + del 将选中区域填充为前景色 配置 首选项配置： 选中...</description>
-      <category>学习</category>
-      <category>爱好</category>
-      <pubDate>Mon, 30 Sep 2024 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>因为一些契机，开始学修图/嵌字。</p>
-<p>此处内容肯定以 PS 为主。如果使用其他工具会先声明。</p>
-<h2>下载</h2>
-<ul>
-<li>PS：详见<a href="/farraginous/recommend_websites.html#%E5%AA%92%E4%BD%93%E5%88%9B%E4%BD%9C" target="_blank">网址汇总</a>。</li>
-</ul>
-<h2>常用快捷键</h2>
-<ul>
-<li><code>Ctrl + k</code> 打开首选项（设置）</li>
-<li>按住空格可拖动</li>
-<li><code>x</code> 交换前景色和背景色</li>
-<li><code>Ctrl + d</code> 取消选区</li>
-<li><code>Ctrl + j</code> 将选中区域/图层克隆为新图层</li>
-<li><code>Alt + del</code> 将选中区域填充为前景色</li>
-</ul>
-<h2>配置</h2>
-<p>首选项配置：</p>
-<ol>
-<li>选中 <em>工具 - 用滚轮缩放</em></li>
-<li>取消选中 <em>工具 - 启用轻击平移</em></li>
-</ol>
-<p>其他配置：</p>
-<ol>
-<li>关闭 <em>视图 - 对齐</em>，否则元素吸附太多，移动受限。</li>
-</ol>
-<h2>基础</h2>
-<ul>
-<li>旋转
-<ul>
-<li>文本框旋转：需要先 <em>栅格化文本</em>，再选中后 <code>Ctrl + t</code> <em>自由变换</em> 然后旋转。</li>
-<li>提取元素并旋转：框选，建个新的图层，旋转该图层</li>
-</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="footnote1" class="footnote-item"><p>我变心了，现在我最熟的是 JSX based 的框架了。Vue 的缺点比较明显，关键字太多很难记、有很多响应式和隐式假设的坑，心智负担比较重。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
-</ul>
-<h2>嵌字技巧</h2>
-<h3>去字留背景</h3>
-<p>背景指的是非纯色较复杂的图案。有几种方法可以做到。</p>
-<ol>
-<li>选区后，<code>Shift + F5</code> 打开填充，选择 <em>内容识别</em>（默认），直接确定。这个方法可能会去除一些背景，需要用仿制图章再画回来。</li>
-<li>直接用移除工具，根据情况可能需要画多次。对于简单背景的效果很好。</li>
-<li>选区，然后 <em>编辑 - 内容识别填充</em>。这种方法也可能损背景。</li>
 </ol>
-<h2>字体</h2>
-<p>我去嵌字教程里下过<a href="https://t.me/absolutexsresource/15" target="_blank" rel="noopener noreferrer">字体包</a>。该教程强推华康，这系列的字体虽然多，但只有繁中，不能用于简中。而我是希望能使用简中字体的。</p>
+</section>
 ]]></content:encoded>
     </item>
   </channel>
