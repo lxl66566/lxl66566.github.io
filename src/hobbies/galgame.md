@@ -60,6 +60,8 @@ tag:
 
 ## 资源
 
+首先给我开发的[语音加速器 _SPEED UP!_](../articles/speedup.md) 和[游戏启动器 _GalgameManager_](https://github.com/lxl66566/GalgameManager) 打个广告。
+
 - 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [鲲 Galgame](https://www.kungal.com/galgame) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
 - 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://t.me/Tyranor)
@@ -98,10 +100,6 @@ LunaTranslator 使用心得：
   - 还需要看看[这个 issue](https://github.com/HIllya51/LunaTranslator/issues/896)。
 
 <!-- - 下载：[ネコパラ专页](https://n0099.net/res/) | [yuzusoft 合集](<https://11eyes.top/Galgame（会社）/Yuzu-Soft(%E6%9F%9A%E5%AD%90%E7%A4%BE)/>) | [十二神魔器](https://pan.cangshui.net/) _密码：god_ -->
-
-### 语音加速器
-
-[SPEED UP!](../articles/speedup.md)
 
 ## 游玩列表
 
@@ -220,9 +218,12 @@ LunaTranslator 使用心得：
 - 凛有丝丝子几分神韵。
 - 凛失踪的场景和 Butterfly Seeker 也太像了吧，只不过 CG 要惊悚很多。
 - 作品的 H 也挺凑数的，主要还是看剧情。
+- 男主的声优实在是有点捞，感觉整部作品就没有好好讲过话，嬉皮笑脸的。
 - 关于画风：CG 量挺大，但是质量不行啊。
+  - 虽然量大，但是都集中在 HS 上了，日常 CG 不算太多。
+  - 画风偏向写实的，光影不错。
   - 双子 BE 的那画的啥 CG 啊我受不了了。
-  - 初音的瞳孔缩小的 CG 我也实在不能接受……这种 CG 出来还以为是反派暗示呢。
+  - 许多女主都有瞳孔缩小的 CG，我实在不能接受……画得跟反派暗示一样。
 
 </template>
 <template #传述之魔女>
@@ -1782,7 +1783,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 | ふゆから、くるる。 | 记住窗口大小但却无法记住缩放；存档时放到 001，其他存档序号会顺延 |
 | 美少女万華鏡異聞 雪おんな | 无法调整 BGV；backlog 重播语音不降低 bgm 音量 |
 | 魔法少女的魔女审判 | 四审后出现游戏无响应崩溃，导致整场审判进度丢失；审判时文字过多超出边界则无法看到；推完没有音乐回顾 |
-| 恋狱～月狂病～《REBIRTH FHD SIZE EDITION》 | 特效掉帧；经常按钮点击事件丢失；启动窗口位置自动设为左上 |
+| 恋狱～月狂病～《REBIRTH FHD SIZE EDITION》 | 特效掉帧；经常按钮点击事件丢失；启动窗口位置自动设为左上；每条线最后的谢幕不能跳；skip 仍然播放语音 |
 | 传述之魔女 | 按下 win 键会进入跳过模式，并且无法回跳；过场无法跳过；auto 速度调最高仍然太慢；打开游戏时语音音量可能回到非当前值；<text style="color:red;">存档爆炸</text>（虽然删除 Roming 下的 storage 不会影响游戏存档）<br/>![存档爆炸](/images/hobbies/galgame/ihanashi_boom.png =400x) |
 | 流星·世界演绎者 系列 | 无法调整字体；无法调整系统语音；无法调整每个项目的确认框是否出现；不会记住窗口大小和状态；backlog 打断语音；backlog 时鼠标本身位置的文本无法点击；语音加速后 auto 等待时间有不自然随机延长，疑似在等特效；片尾音乐黑屏 |
 | AIR | <text style="color:red;">音量设置无反应，所有我重视的音量相关设置项全部无法调整，语音被打断；没有 backlog</text>；默认全屏模式爆改系统分辨率；滚轮无绑定；背景色调整无透明度，无法恢复最初状态；某些时候（佳乃线结尾）会吃满 CPU 单核，风扇狂转，卡死一阵子 |

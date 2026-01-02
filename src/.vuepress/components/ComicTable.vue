@@ -982,6 +982,19 @@ const data: ComicItemType[] = [
   { id: "594120", aScore: 7, bScore: 7.3, order: 3, info: "#3P #蚀把米 #闺密", bak: "https://telegra.ph/MIKICREATE-うのみき-私はもう大人です3-中国翻訳-DL版-09-01-2" },
   { id: "582398", aScore: 7, bScore: 8.6, info: "#直播 #邻居 #胁迫 #合集 隣人は有名配信者", bak: "https://telegra.ph/隣人は有名配信者-1-5番外-08-31-2" },
   { id: "503640", aScore: 6.5, bScore: 8.5, info: "#偶像 #按摩 #摄影 #堕落" },
+  { id: "594630", aScore: 5.1, bScore: 9.1, info: "#蔚蓝档案 #玩具 #束缚 #强制绝顶", bak: "https://telegra.ph/ロクエクシーズ-ロクエさん-陰核絶頂教育レポート-対象犯罪コンサルタント-ブルーアーカイブ-中国翻訳-DL版-09-03-2" },
+  { id: "594373", aScore: 7, bScore: 6.7, info: "#蔚蓝档案 #睡x #反杀 #纯爱", bak: "https://telegra.ph/紺色果実-紺菓-先生だけのもんだいじ-ブルーアーカイブ-中国翻訳-DL版-09-02-3" },
+  { id: "595070", aScore: 9.4, bScore: 8.6, info: "#青梅竹马 #AV #偷看 #顺势", bak: "https://telegra.ph/しとろんの杜-柚子奈ひよ-幼馴染の君が積極的になった日中国翻訳-DL版-09-05-2" },
+  { id: "611649", aScore: 6.6, bScore: 7, info: "#兄妹 #自慰" },
+  { id: "619645", aScore: 8, bScore: 6, info: "#蔚蓝档案 #loli #天気海苔", bak: "https://telegra.ph/C107-SeaweeD-天気海苔-れっつどっきんぐ-ブルーアーカイブ-中国翻訳-01-01-4" },
+  { id: "619607", aScore: 8.1, bScore: 5.5, info: "#蔚蓝档案 #loli #女性主导 #天気海苔", bak: "https://telegra.ph/C106-SeaweeD-天気海苔-どうなっても知らないよ-ブルーアーカイブ-中国翻訳-01-01-3" },
+  { id: "619544", aScore: 8.5, bScore: 7.9, info: "#蔚蓝档案 #loli #睡x #假寐", bak: "https://telegra.ph/とるにたらない-茶彩なこと-寝たふりをするホシノを好き放題する話-ブルーアーカイブ-中国翻訳-DL版-01-01-6" },
+  { id: "595428", aScore: 8.3, bScore: 9.6, info: "#合集 #师生 #淫趴 #破处 #束缚 #图书馆 #保健室 #偶像 #后宫 #創田ぐみ ハーレム処女学級～教え子はS級少女たち～", bak: "https://telegra.ph/創田ぐみ-ハーレム処女学級教え子はS級少女たち-中国翻訳-DL版-09-07-2" },
+  { id: "595337", aScore: 7.6, bScore: 7, info: "#辣妹 #巨乳 #女性主导 #cos", bak: "https://telegra.ph/だにまるstudio-だにまる-一晩泊めてよオタクくん-中国翻訳-DL版-09-06-2" },
+  { id: "595492", aScore: 8.5, bScore: 9, info: "#催眠 #精灵 #控制", bak: "https://telegra.ph/タイ同人誌同好会-Anjaku112-エルフちゃんの催眠指輪物語-中国翻訳-09-06-2" },
+  { id: "595230", aScore: 6.2, bScore: 6.8, info: "#蔚蓝档案 #黑皮 #禁欲", bak: "https://telegra.ph/C106-みらくるしろっぷ-七味鈴-30日間禁欲しているイオリと-ブルーアーカイブ-中国翻訳-09-06-3" },
+  { id: "595209", aScore: 6.8, bScore: 8, info: "#蔚蓝档案 #触手 #泳装 #3P", bak: "https://telegra.ph/猫の抹茶パフェ-ちょうせつ-夏晴れ高波に注意先生-ブルーアーカイブ-中国翻訳-DL版-09-06" },
+  { id: "595174", aScore: 7.7, bScore: 6, info: "#蔚蓝档案 #浴衣 #纯爱 月雪の宿", bak: "https://telegra.ph/Pixel-Cot-羽原メグル-月雪の宿-ブルーアーカイブ-中国翻訳-DL版-09-05-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

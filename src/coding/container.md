@@ -10,9 +10,7 @@ tag:
 
 # 容器
 
-其实我一直不喜欢容器，我认为处理复杂依赖是包管理器的职责，推给 container 是比较粗暴浪费空间的做法。然而比起虚拟机，容器的开销确实小多了，还是有一定价值的[^3]。
-
-[^3]: 抽象层次与价值取向绑定。
+其实我一直不喜欢容器，我认为处理复杂依赖是包管理器和打包者的职责，推给 container 是比较粗暴的做法。然而比起虚拟机，容器的性能开销足够小，空间开销换可复现性可以接受，并且在微服务架构下单元化的优势确实很大。对于这种已经成为了事实标准的东西，还是有必要去学习了解一下的。
 
 ## 选择
 
@@ -21,7 +19,7 @@ tag:
 [^1]: Docker 向所有 Docker Hub 用户发去邮件，如果他们是以组织的名义创建账号，那么他们的账号将被删除，所有镜像也将一并删除，除非他们升级到一个付费的团队方案——其年费为 420 美元。[src: solidot](https://www.solidot.org/story?sid=74406)
 [^2]: Docker 公司将限制其 Docker Desktop 工具仅供个人或小企业免费使用，大企业将需要[付费订阅](https://www.theregister.com/2021/08/31/docker_desktop_no_longer_free/)。该公司要求员工人数在 250 人以上或年收入超过一千万美元的企业如果需要使用 Docker Desktop 那么就必须付费订阅。[src: solidot](https://www.solidot.org/story?sid=68775)
 
-我也尝试在 wsl2 上部署了一下 docker，然而由于没有 systemctl 而无法启动其守护进程。[docker-systemctl-replacement](https://github.com/gdraheim/docker-systemctl-replacement) 不可用，需要 nohup 启动 `dockerd`。我的 wsl2 只有纯命令行，折腾许久，浪费了许多时间。
+我也尝试在 wsl2 上部署了一下 docker，然而由于 ArchWSL 没有 systemctl 而无法启动其守护进程。[docker-systemctl-replacement](https://github.com/gdraheim/docker-systemctl-replacement) 不可用，需要 nohup 启动 `dockerd`。我的 wsl2 只有纯命令行，折腾许久，浪费了许多时间。
 
 于是我转向了 [podman](https://docs.podman.io)，这是一个 **daemonless, open source**（开源的、无守护进程的）容器工具，解决了我对 docker 的偏见。并且其兼容性也不错：_Most users can simply alias Docker to Podman (alias docker=podman) without any problems._。不过 podman 也有缺点，例如[开机自启](#关于开机自启动)要麻烦一些。可以前往 [external 1.](#external) 查看详细信息。
 
@@ -90,7 +88,7 @@ docker 代理需要特殊配置的原因是它访问网络的部分是以 system
 
 如果你的容器有指定虚拟子网，记得将互相的容器名加入 `NO_PROXY`，否则可能出现通信错误。
 
-## dockerhub mirror
+### dockerhub mirror
 
 在 2024 年，中国大规模下架了 docker 镜像。所以现在想要使用 docker 仓库会有一些麻烦。[Using docker in China 2024](https://taogenjia.com/2024/08/19/Using-docker-in-China-2024/) 这篇文章介绍了一些方法，我尝试了 cloudflare 反代。不过反代的后果也是 UNAUTHORIZED。
 
@@ -122,6 +120,7 @@ Dockerfile 的坑实在是太多了，真是他妈的屎一样的设计。
   1. .gitignore 可以放在任意子目录下，.dockerignore 只能放在你的 build 目录下，否则不生效。
   2. .gitignore 里的内容可以匹配任意层子目录下的文件名，而 .dockerfile 只能匹配 build 目录下的路径。相当于 .gitignore 里的 `xxx` 在 .dockerfile 里都要写成 `**/xxx` 或者绝对路径 `/aaa/bbb/xxx`。
 - `COPY a b` 命令指的是将 `a` 目录**下的所有文件** copy 到 `b` 目录里，而不是将 `a` 目录本身 copy 到 `b` 目录里。这跟 `cp -r` 的表现又不一样。
+- Dockerfile build 的可复现性是依赖外部环境来保证的，可复现性全看编写者水平。
 
 ## 网络
 
@@ -200,7 +199,7 @@ docker 容器非常方便，用 `--restart always`（总是自动重启）或 `-
 
 然后我又[折腾了一段时间](https://t.me/withabsolutex/2199)。遇到了太多无语的事情。
 
-最后我的解决方法：回归本源，每次开机时运行 `user-startup add '/usr/bin/podman pod start pod_root'` 来启动 pod。至于开机自启动命令，可以用我的 [user-startup](https://github.com/lxl66566/user-startup-rs)，一行搞定。
+最后我的解决方法：回归本源，每次开机时运行 `/usr/bin/podman pod start pod_root` 来启动 pod。至于开机自动执行命令，可以用我的 [user-startup](https://github.com/lxl66566/user-startup-rs)，一行搞定。
 
 ## 遇到的问题
 

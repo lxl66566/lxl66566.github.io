@@ -9,7 +9,9 @@ tag:
 
 # 日本語勉強
 
-我也说不上玩 [galgame](../hobbies/galgame.md) 是为了学日语，还是学日语是为了玩 galgame，就这样吧，两者一起推进也挺好的。
+> 最初学日语的契机是高中想唱日语歌，想着五十音浅尝辄止，然后不小心学多了。
+
+现在我也说不上玩 [galgame](../hobbies/galgame.md) 是为了学日语，还是学日语是为了玩 galgame，无所谓了。
 
 ## 关于学习
 
@@ -44,9 +46,10 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
 - 见 [galgame](../hobbies/galgame.md)
 - 工具
   - [yomichan](https://chromewebstore.google.com/detail/yomichan/nbfhegiidojdmnahegkphdoabohfmoof?hl=ja&authuser=0)：浏览器扩展，划词显示汉字读音。虽然官方宣布不再维护，让用户都去 [yomitan](https://github.com/themoeway/yomitan)，但是我用下来还是感觉 yomichan 好用多了（当然仅在 chromium 系浏览器上，因为 firefox 没有），装了就能用。而 yomitan 则是有一大堆设置项，结果都设完了还是不能用。
+    - 这玩意貌似设置好了非常强大，看到好多人在推它。
   - [FuriganaMaker](https://github.com/aiktb/FuriganaMaker)：浏览器扩展，自动给汉字加假名注音。
 - 题：
-  - [毎日一問日本語 N1](https://t.me/daily_jlptn1)，tg 投票
+  - [毎日一問日本語 N1](https://t.me/daily_jlptn1)，每日小测验，tg 投票
 
 ## 关于考试
 
@@ -141,7 +144,7 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 
 ### 缩写
 
-日语爱缩写也是广受诟病的一点。当背到 `ワープロ` 的时候还以为是什么 “哇，专家！” 然后点开才知道是 `ワードプロセッサ` word processor...
+日语爱缩写也是广受诟病的一点。当背到 `ワープロ` 的时候还以为是什么 “哇，专家！” 然后点开才知道是 <furigana f="ワードプロセッサ">word processor</furigana>...
 
 还有符号省略（国字），例如[〆](https://zh.wiktionary.org/wiki/〆)，一般来说挺少见的。
 

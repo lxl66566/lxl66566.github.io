@@ -156,9 +156,9 @@ flex 容易带来的问题：
 
 大多数框架都喜欢将 “写 css” 变为 “写 class”，免去了 html 和 css 之间切来切去的烦恼，用得熟练的话确实可以加快开发速度；特别是对基于 JSX 的前端框架非常有用。而写 vue 的话，css 框架对于初学者来说就是多了查文档的时间，如果文档烂的话还是挺烦人的。
 
-- [UnoCSS](https://unocss.dev/)：新一代完全自定义化的 css 框架。
+- [UnoCSS](https://unocss.dev/)：新一代完全自定义化的 css 框架。我目前使用 UnoCSS + TailwindCSS preset。
 - [tailwindcss](https://tailwindcss.com/)：一套预设的 class。目前广泛使用。
-- Bootstrap：老一辈预设的 class，目前算是被 tailwindcss 取代了吧(?)
+- Bootstrap：老一辈预设的 class，目前算是被 tailwindcss 取代了吧
 
 ### TailwindCSS
 

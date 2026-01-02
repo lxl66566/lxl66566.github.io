@@ -49,10 +49,12 @@ node --experimental-strip-types example.ts
 
 越激进的运行时，对 ts 的支持越好。毕竟 ts 本来就是激进的人去使用的。
 
-- deno：deno 自带了对 ts 的支持。
-  ```shell
-  deno xxx.ts
-  ```
+deno 和 bun 默认支持 ts。
+
+```shell
+deno xxx.ts
+bun xxx.ts
+```
 
 @tab 编译后运行
 
@@ -79,7 +81,7 @@ node-ts xxx.ts
 
 ### Formatter
 
-JS/TS 句末分号可加可不加，但是一个好的 formatter 都会帮你加。
+> JS/TS 句末分号可加可不加，具体看项目配置和个人心情。
 
 业界常用的有 Prettier, ESLint, [Biome](https://github.com/biomejs/biome/blob/main/packages/@biomejs/biome/README.zh-CN.md)（原 Rome）等。
 
@@ -111,7 +113,7 @@ Biome 是 Rome 重生版，使用 Biome 的一大理由是 written in Rust。但
 
 oxlint 是一个比较新的 linter，[oxc](https://github.com/oxc-project/oxc) 的一部分。而 oxc 也是 rust 写的，据说比 biome 还快。在 vscode 使用只需要安装 oxc 插件即可。
 
-oxc 虽然说会支持 formatter，但毕竟还在开发早期，目前尚未实装。
+~~oxc 虽然说会支持 formatter，但毕竟还在开发早期，目前尚未实装。~~ 有 oxfmt 了。
 
 @tab biome
 
@@ -169,6 +171,8 @@ ESLint 支持复杂的自定义化。不过我没用过。
   }
 }
 ```
+
+有两个 false 是因为对正常开发影响太大了，麻烦 > 收益。
 
 ## 语言基础
 
