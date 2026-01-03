@@ -22,7 +22,7 @@ tag:
 
 - 其 Brutal 拥塞控制算法[非常凶猛霸道](https://v2.hysteria.network/zh/docs/misc/Hysteria-Brutal/#q-hysteria_1)，容易被 IDC 警告，被本地网络 QOS，因为确实太像被攻击了。[src](https://www.youtube.com/watch?v=kTYfclAzy38)
   - 因此我使用 bbr 而不是 Brutal。
-- QUIC 和 UDP 流在中国不稳定，容易被丢包。
+- 不只是拥塞控制算法，UDP 本身也容易被丢包。
 
 ## QUIC 豁免
 

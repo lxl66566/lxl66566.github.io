@@ -1,19 +1,19 @@
 <template>
-  <ExpandableListItem :expandable="props.expandable" :extra_tr_class="props.item.not_strict ? ['not-strict'] : []">
+  <ExpandableListItem :expandable="props.expandable" :extra_tr_class="props.item.tag?.not_strict ? ['not-strict'] : []">
     <template #list-content>
       <td>
         <span v-if="!props.item.url">{{ props.item.name }}</span>
         <a v-else :href="props.item.url" target="_blank">{{ props.item.name }}</a>
 
-        <span
-          v-if="props.item.order || props.item.nth_time || props.item.namaniku || props.item.tag?.all_ages || props.item.tag?.intense || props.item.tag?.thrill">
+        <span v-if="props.item.order || props.item.nth_time || props.item.namaniku || props.item.tag">
           <span>&thinsp;</span>
           <OrderBadge :order="props.item.order" v-if="props.item.order" />
           <OrderBadge :order="item.nth_time" :text="`${numberToChinese(item.nth_time)}刷`" v-if="item.nth_time" />
           <Badge type="tip" text="生肉" v-if="props.item.namaniku" />
-          <Badge type="tip" text="全年龄" v-if="props.item.tag?.all_ages" />
+          <Badge type="tip" text="无H" v-if="props.item.tag?.all_ages" />
           <Badge type="warning" text="惊悚" v-if="props.item.tag?.thrill" />
-          <Badge type="danger" text="重口" v-if="props.item.tag?.intense" />
+          <Badge type="warning" text="血腥" v-if="props.item.tag?.blood" />
+          <Badge type="danger" text="猎奇重口" v-if="props.item.tag?.bizarre" />
         </span>
       </td>
       <!-- 时长 -->
@@ -53,10 +53,10 @@
 
 <script lang="ts" setup>
 import { computed } from "vue";
-import { GalItemInputType, PlayingStatus } from "../definition";
+import { GalItemInputType, PlayingStatus } from "../definition/index.js";
 import ExpandableListItem from "./ExpandableListItem.vue";
 import "../utils/FormatDate";
-import { numberToChinese } from "../utils/NumberToChinese";
+import { numberToChinese } from "../utils/NumberToChinese.js";
 
 const props = defineProps<{
   /**

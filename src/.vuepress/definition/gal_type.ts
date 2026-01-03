@@ -63,9 +63,13 @@ export type GalItemInputType = {
      */
     all_ages?: boolean;
     /**
-     * 是否重口（R18G）
+     * 是否血腥（轻度 R18G）
      */
-    intense?: boolean;
+    blood?: boolean;
+    /**
+     * 是否猎奇（重度 R18G）
+     */
+    bizarre?: boolean;
     /**
      * 是否惊悚
      */

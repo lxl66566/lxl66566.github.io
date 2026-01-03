@@ -995,6 +995,12 @@ const data: ComicItemType[] = [
   { id: "595230", aScore: 6.2, bScore: 6.8, info: "#蔚蓝档案 #黑皮 #禁欲", bak: "https://telegra.ph/C106-みらくるしろっぷ-七味鈴-30日間禁欲しているイオリと-ブルーアーカイブ-中国翻訳-09-06-3" },
   { id: "595209", aScore: 6.8, bScore: 8, info: "#蔚蓝档案 #触手 #泳装 #3P", bak: "https://telegra.ph/猫の抹茶パフェ-ちょうせつ-夏晴れ高波に注意先生-ブルーアーカイブ-中国翻訳-DL版-09-06" },
   { id: "595174", aScore: 7.7, bScore: 6, info: "#蔚蓝档案 #浴衣 #纯爱 月雪の宿", bak: "https://telegra.ph/Pixel-Cot-羽原メグル-月雪の宿-ブルーアーカイブ-中国翻訳-DL版-09-05-2" },
+  { id: "595924", aScore: 5.7, bScore: 6.8, info: "#天使☆騒々 #NTR #巨乳 #绿帽癖", bak: "https://telegra.ph/C106-夕凪プロムナード-カラミティ-天使騒々-寝取らせ彼女-天使騒々-RE-BOOT-中国翻訳-09-09-2" },
+  { id: "595744", aScore: 6.3, bScore: 7.7, order: 3, info: "#时停 #3P #兄妹 #母女 #返老还童", bak: "https://telegra.ph/角煮煮-人間操作リモコン3-中国翻訳-DL版-09-08-2" },
+  { id: "595238", aScore: 7.1, bScore: 6.3, info: "#泳装 #明日方舟 #比基尼 #巨乳", bak: "https://telegra.ph/C106-しるべ湯-ゆべしる-シーと水着エッチする本-アークナイツ-中国翻訳-09-08-2" },
+  { id: "595659", aScore: 6.5, bScore: 6, info: "#蔚蓝档案 #触手", bak: "https://telegra.ph/C106-栗芋操舵-栗芋パイ-行政官のいちばん長い休日-ブルーアーカイブ-中国翻訳-09-07-2" },
+  { id: "595662", aScore: 8.5, bScore: 7.9, info: "#蔚蓝档案 #纯爱 #雨后小故事", bak: "https://telegra.ph/C106-モニャモニャ-せら少佐-さらにRABBITの熱CHU症対策-ブルーアーカイブ-中国翻訳-09-07-2" },
+  { id: "619966", aScore: 7.8, bScore: 8.6, info: "#蔚蓝档案 #感官遮断 #纯爱 #玩脱了", bak: "https://telegra.ph/バトルキセツ-どでかうなぎ-竜とき蝶花は靡かず退かず-ブルーアーカイブ-中国翻訳-DL版-01-02-4" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

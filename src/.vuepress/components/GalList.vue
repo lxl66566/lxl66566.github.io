@@ -191,7 +191,7 @@ watch(searchText, () => {
   debouncedSearch();
 });
 
-const items_num = computed(() => (show_strict.value ? filteredResults.value.filter((item) => !item.not_strict).length : filteredResults.value.length));
+const items_num = computed(() => (show_strict.value ? filteredResults.value.filter((item) => !item.tag?.not_strict).length : filteredResults.value.length));
 </script>
 
 <style scoped lang="scss">

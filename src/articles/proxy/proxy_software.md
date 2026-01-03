@@ -185,7 +185,7 @@ _sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称�
 sing-box 的一个特点是会打开致死量的本地端口，大约 2000 个。这样的优点是抗干扰，在公司内网环境下容易绕过封锁；缺点则是会导致本机端口扫描变慢、与其他占用端口的程序冲突概率变大等。
 
 - [NekoBox](https://github.com/MatsuriDayo/NekoBoxForAndroid)：Matsuri 的继任，Android 端的好选择。
-- [Matsuri](https://github.com/MatsuriDayo/Matsuri)：项目已 archived。之前用过一阵，后面换回 V2rayNG 了。
+- [Matsuri](https://github.com/MatsuriDayo/Matsuri)：项目已 archived。
 - [SagerNet](https://github.com/SagerNet)：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。
   - 2024 年 archived 后也出了很多 fork。
 - [husi](https://github.com/xchacha20-poly1305/husi)：内置各种小众协议插件的 NekoBox。
@@ -269,11 +269,6 @@ home.file = {
 
 ### [daed](https://github.com/daeuniverse/daed)
 
-> 根据 dae 的官方测试，（与 v2raya 相比）确实是基于 eBPF 的 dae 速度更快，但不是快特别多
-> ::: right
-> ——Au, [src](https://t.me/archlinuxcn_group/2912643)
-> :::
-
 daed 是网页面板的开源代理软件，[dae](#dae) 的前端，而 dae 基于 eBPF[^1]，仅支持 linux。由于比较新，目前使用的人不多。
 
 [^1]: [What is eBPF?](https://ebpf.io/what-is-ebpf/)
@@ -297,3 +292,11 @@ daed 是网页面板的开源代理软件，[dae](#dae) 的前端，而 dae 基�
 软件数据存储在 `/etc/daed/wing.db`（sqlite 数据库），如果需要备份、改账号密码，需要先给 rw 权限，然后用数据库软件更改。
 
 daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 `journalctl -eu daed` 查看其日志，获取信息。
+
+## Android Modules
+
+如果你使用 Android 设备且已 root，也可以尝试一些 Modules。Modules 相比于 APP 的好处是支持透明代理、自动后台运行、可代理热点/USB 网络流量，不过本身有一层 root 的门槛在，应用范围更窄。
+
+如果你已经有 root 设备且想尝试，可以看看：
+
+- [NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)

@@ -4,13 +4,21 @@ const original_list: GalItemInputType[] = [
   {
     name: "CHAOS;HEAD NOAH",
     valid_name: "CHAOSHEADNOAH",
-    other_names: ["混沌之脑：诺亚"],
-    playing_status: PlayingStatus.PLAYING,
+    other_names: ["混沌之脑：诺亚", "混沌头"],
+    use_time: "14h16min",
+    tag: {
+      all_ages: true,
+      blood: true,
+    },
     duration: {
       start: "2025-12-13",
+      end: "2026-01-04",
     },
     score: {
+      story: 8,
+      visual: 4,
       program: -2,
+      thrill: 9.2,
     },
   },
   {
@@ -70,7 +78,7 @@ const original_list: GalItemInputType[] = [
       story: 8.7,
       visual: 9.5,
       program: 5.1,
-      thrill: 4.5,
+      thrill: 6.3,
     },
   },
   {
@@ -78,7 +86,8 @@ const original_list: GalItemInputType[] = [
     valid_name: "恋狱月狂病",
     other_names: ["恋狱月狂病", "カルタグラ～ツキ狂イノ病～"],
     tag: {
-      intense: true,
+      blood: true,
+      bizarre: true,
     },
     playing_status: PlayingStatus.PLAYING,
     use_time: "-1min",
@@ -230,7 +239,7 @@ const original_list: GalItemInputType[] = [
       story: 6,
       visual: 6.4,
       program: 6.8,
-      thrill: 6,
+      thrill: 5.5,
     },
   },
   {
@@ -562,7 +571,7 @@ const original_list: GalItemInputType[] = [
     valid_name: "NOIRNOAH",
     tag: {
       not_strict: true,
-      intense: true,
+      blood: true,
     },
     use_time: "1h1min",
     duration: {
@@ -854,9 +863,9 @@ const original_list: GalItemInputType[] = [
     valid_name: "戦巫センナギ穢れた契りと神ころも",
     namaniku: true,
     use_time: "20h41min",
-    tag: {
-      not_strict: false, // 主要其实还是以剧情为主的。
-    },
+    // tag: {
+    //   not_strict: false, // 主要其实还是以剧情为主的。
+    // },
     duration: {
       start: "2024-10-31",
       end: "2025-04-11",
@@ -1234,7 +1243,8 @@ const original_list: GalItemInputType[] = [
     other_names: ["濒死轮回的卿于馆中萌生的憎恶", "死馆"],
     valid_name: "死に逝く君館に芽吹く憎悪",
     tag: {
-      intense: true,
+      blood: true,
+      bizarre: true,
     },
     use_time: "7h9min",
     order: 1,
@@ -1823,7 +1833,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "euphoria",
     tag: {
-      intense: true,
+      bizarre: true,
     },
     use_time: "23h17min",
     score: {
@@ -2238,7 +2248,7 @@ const original_list: GalItemInputType[] = [
     name: "真爱の百合は赤く染まる",
     other_names: ["真爱的百合被染成红色", "真爱百合"],
     tag: {
-      intense: true,
+      bizarre: true,
     },
     use_time: "-",
     score: {
