@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 02 Jan 2026 19:21:42 GMT</pubDate>
-    <lastBuildDate>Fri, 02 Jan 2026 19:21:42 GMT</lastBuildDate>
+    <pubDate>Sat, 03 Jan 2026 18:30:30 GMT</pubDate>
+    <lastBuildDate>Sat, 03 Jan 2026 18:30:30 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>随笔</category>
@@ -24,10 +24,12 @@
       <link>https://absx.pages.dev/essay/2026.html</link>
       <guid>https://absx.pages.dev/essay/2026.html</guid>
       <source url="https://absx.pages.dev/rss.xml">2026</source>
-      <description>2026 20260102 其实我觉得不用 agentic ai 可以促进大脑思考。 一个是提问必须过脑子，然后必须把所有关联信息都筛选出来给 ai。给出的回答不能直接用，要理解意思，然后慢慢改代码应用上去。有时候还得先跟着 ai 学习缺失的知识，然后才能理解为啥这样写。 「AI 太好用了，所以得给人类找点苦吃。」</description>
+      <description>2026 20260103 人类记忆天生支持随机访问，然而也会产生很多碎片。 20260102 其实我觉得不用 agentic ai 可以促进大脑思考。 一个是提问必须过脑子，然后必须把所有关联信息都筛选出来给 ai。给出的回答不能直接用，要理解意思，然后慢慢改代码应用上去。有时候还得先跟着 ai 学习缺失的知识，然后才能理解为啥这样写。 「AI 太好...</description>
       <category>随笔</category>
       <pubDate>Fri, 02 Jan 2026 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
+<h2>20260103</h2>
+<p>人类记忆天生支持随机访问，然而也会产生很多碎片。</p>
 <h2>20260102</h2>
 <p>其实我觉得不用 agentic ai 可以促进大脑思考。</p>
 <p>一个是提问必须过脑子，然后必须把所有关联信息都筛选出来给 ai。给出的回答不能直接用，要理解意思，然后慢慢改代码应用上去。有时候还得先跟着 ai 学习缺失的知识，然后才能理解为啥这样写。</p>
