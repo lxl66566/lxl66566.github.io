@@ -1001,6 +1001,9 @@ const data: ComicItemType[] = [
   { id: "595659", aScore: 6.5, bScore: 6, info: "#蔚蓝档案 #触手", bak: "https://telegra.ph/C106-栗芋操舵-栗芋パイ-行政官のいちばん長い休日-ブルーアーカイブ-中国翻訳-09-07-2" },
   { id: "595662", aScore: 8.5, bScore: 7.9, info: "#蔚蓝档案 #纯爱 #雨后小故事", bak: "https://telegra.ph/C106-モニャモニャ-せら少佐-さらにRABBITの熱CHU症対策-ブルーアーカイブ-中国翻訳-09-07-2" },
   { id: "619966", aScore: 7.8, bScore: 8.6, info: "#蔚蓝档案 #感官遮断 #纯爱 #玩脱了", bak: "https://telegra.ph/バトルキセツ-どでかうなぎ-竜とき蝶花は靡かず退かず-ブルーアーカイブ-中国翻訳-DL版-01-02-4" },
+  { id: "620648", aScore: 7.8, bScore: 5.7, info: "#蔚蓝档案 #loli 龍が好く", bak: "https://telegra.ph/C107-タマラン-龍が好く--ミニルミ-ブルーアーカイブ-中国翻訳-DL版-無修正-01-03-2" },
+  { id: "620560", aScore: 7.9, bScore: 6.5, info: "#仿生人 #母性 #溺爱", bak: "https://telegra.ph/ちりめんなおゆき-なおゆき-ロリっ娘アンドロイド-ママになる-中国翻訳-DL版-01-04" },
+  { id: "620331", aScore: 7, bScore: 8.7, info: "#fgo #魅惑 #玩脱 #loli #强制性交", bak: "https://telegra.ph/C96-Pico-Martel-DoReMi-女神と一日-FateGrand-Order-01-03" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

@@ -201,6 +201,13 @@ const data: SpeedupItemType[] = [
     save_format: "",
     speedupable: true,
   },
+  {
+    names: ["虹彩都市"],
+    valid_name: "SiglusEngine",
+    engine: "SiglusEngine",
+    save_format: "ovk",
+    speedupable: false,
+  },
 ];
 </script>
 
