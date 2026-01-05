@@ -120,6 +120,12 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #虹彩都市>
+
+- 总感觉 key 最近作品很多科学幻想系列都是比较肤浅的妄想，可能是刚好之前那些小短篇获得了成功吧。这种作品在注重剧情和逻辑的人眼里简直是灾难。
+- 游戏引擎也是不思进取啊。SiglusEngine 也是够老的了，bug 不算少，还把 quic save 砍掉了，什么毛病。
+
+</template>
 <template #CHAOSHEADNOAH>
 
 本作感觉叫「科学」ADV 不太恰当，只能算伪科学，比艾佩理雅差了太多。wikipedia 说这玩意的「99%の科学」是有点想笑的，只能说期待系列续作表现。

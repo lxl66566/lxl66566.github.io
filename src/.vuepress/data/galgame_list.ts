@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "虹彩都市",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-01-05",
+    },
+  },
+  {
     name: "CHAOS;HEAD NOAH",
     valid_name: "CHAOSHEADNOAH",
     other_names: ["混沌之脑：诺亚", "混沌头"],

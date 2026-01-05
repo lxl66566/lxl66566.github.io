@@ -71,6 +71,7 @@ tag:
 - [vala](https://docs.vala.dev/about.html)：语法与 java/C# 类似，但是无 runtime 而是用 C 原生实现。据称在 GTK 等 GUI 编程方面强悍。
 - [rune](https://github.com/rune-rs/rune)：模仿 rust 的动态类型嵌入语言。看起来还行，解决了一些 rust 的痛点，不过没有静态类型检查也属实烦人。但是说是嵌入，zip 还有 41MB，不算小。
 - [otterlang](https://github.com/Ottrlang/otterlang)：基于 rust、模仿 python 的语言，希望与 rust 语言生态互相调用。感觉一般，许多语法需要额外记忆，是一层负担，而且当前互相调用仍然相当初级。
+- [rue](https://github.com/rue-language/rue)：又是一个高仿 rust 的语言，但是是 rust 核心贡献者写的。这是真的高仿。
 
 </dtls>
 

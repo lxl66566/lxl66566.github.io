@@ -692,6 +692,7 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - WSL 开了 mirrord，windows 上的 sccache 和 WSL sccache 的会抢端口打架。
 - `SCCACHE_SERVER_PORT` 是一个 undocumented env
 - Permission denied 即使我已经把相关文件夹设了 nixos:users 777。最后设了个 SCCACHE_DIRECT=0 编译才正常。
+- 鲁棒性非常差。因为 rust-analyzer 自己经常需要重启，跟 sccache 的通信很可能中断，然后 sccache server 内部有时就会出问题，强迫关闭所有远程连接，并且拒绝新连接。
 
 ## 蓝牙耳机有多难用
 

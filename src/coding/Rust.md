@@ -49,6 +49,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 其他资料：
 
 - [Rust new libraries and applications](https://lib.rs/new)
+- [Rust Language Cheat Sheet](https://cheats.rs/)
 
 ## 开发环境
 
@@ -56,7 +57,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 
 rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行安装 rustup 及 rust。linux 也可以选择用包管理器，详见 [Archwiki](https://wiki.archlinuxcn.org/wiki/Rust)；但是最为推荐的还是 rustup，毕竟写 rust 会经常换工具链。
 
-使用 rustup 的好处是支持交叉编译；方便切换 nightly。坏处是不通过包管理器更新，容易忘。
+我目前日常使用 nightly，仅在必要的时候使用 stable。修改全局默认工具链为 `rustup default nightly`，在项目内更改当前项目默认工具链为 `rustup override set nightly`。
 
 ### 开发
 
