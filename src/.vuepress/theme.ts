@@ -76,6 +76,7 @@ export default hopeTheme({
   encrypt: {
     config: {
       "/articles/vpn.html": passwords.general,
+      "/articles/telegram.html": passwords.general,
       "/gossip/wish.html": passwords.general,
       "/hobbies/NSFW/videos.html": passwords.h,
       "/hobbies/NSFW/comic.html": passwords.h,

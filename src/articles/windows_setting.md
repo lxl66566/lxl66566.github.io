@@ -31,6 +31,12 @@ tag:
 
 - 在 b 站看到一个 [Windows11 轻松设置工具](https://wwkh.lanzout.com/iMb0v2ladkhe) ([src](https://www.bilibili.com/video/av113807439503289/))，和下一部分内容面我的设置是重合的，用这个工具可以进行快速便捷的设置，非常好用。
 
+### 安装前
+
+首先是选择安装镜像。虽然大部分人都会直接使用最新版本（因为微软只提供最新版本），但是我更倾向于使用 24H2 的初期版本，因为有任务栏秒级时间这种被微软砍掉的功能，也不会引入 2025 年下旬微软的 SSD bug。
+
+下载历史版本 iso 可以参考[这篇文章](https://www.winhelponline.com/blog/download-older-version-windows-iso/)。（如果你喜欢折腾的话）
+
 ### 安装时
 
 - 如果你的 windows 是从 win11 官方 ISO 安装的，那么初始化时登录微软帐号的那一步，**千万不要登录微软帐号**。[理由](#初始化登录微软帐号酿成的悲剧)
@@ -40,7 +46,8 @@ tag:
 ### 安装后（关键步骤）
 
 - 对所有 NTFS 硬盘开启透明压缩。LZW 算法，效果只能说聊胜于无，非系统盘 208G 压到 183G，但有总比没有好。这一步需要尽可能早地做，否则等配置完，硬盘变大很多以后再搞就有点蠢了。
-- 进行 windows 更新。（需要看情况，关注一下最近的 windows 更新补丁有没有出过什么大问题）
+- 进行 windows 更新（可选，如果使用旧版镜像安装请跳过这一步）。
+  - 需要看情况，关注一下近期 windows 更新补丁有没有出过什么大问题。
   - 本次更新将会成为我的 Windows 系统的最后一次更新。
 - 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_ ，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
 - **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。如果没有此开关，需要运行 `powercfg /h on` 后再查看。
@@ -49,6 +56,13 @@ tag:
   3. 事实上快速启动的关机[其实是 hibernate](https://learn.microsoft.com/en-us/troubleshoot/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail#more-information)，原理是将内存写入磁盘。其会在 C 盘创建一块用于休眠的大块文件，并且每次休眠都会向硬盘中写入大量数据，是固态写入量的**最大贡献者**[^1]。
   4. 热知识：为什么安装 linux 双系统时要关闭快速启动？因为挂载在 hibernate 状态的硬盘几乎必炸（double mount）。
   5. 禁用 hibernate：`powercfg /h off`。
+- 关闭启动延迟，[参考](https://learn.microsoft.com/en-us/answers/questions/4059183/startup-apps-artificially-delayed-on-windows-11)
+  ```reg
+  Windows Registry Editor Version 5.00
+  [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize]
+  "StartupDelayInMSec"=dword:00000000
+  "WaitForIdleState"=dword:00000000
+  ```
 - 关闭 Windows 安全中心([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
   1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。使用它关闭安全中心是可恢复的。
   2. [Windows Defender Remover](https://github.com/ionuttbara/windows-defender-remover)。该工具之前还不太好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。
@@ -72,9 +86,9 @@ tag:
      - 在 _任务计划程序 - 任务计划程序库 - Microsoft - Windows - Windows Defender_ 里关闭所有计划。
 - 关闭安全检查与防火墙：_控制面板 > 系统和安全_
 - 禁用 _用户账户控制 UAC_[^3]，让你打开应用时不再受到烦人的弹窗困扰。
+- 升级专业版：使用 [HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator) 升级 win11 专业版并激活。
+  - 若希望使用开源激活软件，可用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) 激活。
 - 关闭 Windows Defender SmartScreen：Windows Defender SmartScreen 是 edge 下载 exe 提示有风险的元凶。在组策略编辑器（`gpedit.msc`）中，_管理模板 > Windows 组件 > Windows Defender SmartScreen > Microsoft Edge > 配置 Windows Defender SmartScreen_ 里禁用两个选项。
-- 升级专业版：使用[HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator)升级 win11 专业版并激活。
-  - 若对开源有需求，也可使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)激活。
 - [安装 Imdisk](./ramdisk.md#imdisk-toolkit) 并[配置](./ramdisk.md#使用指南)。
 - 安装 scoop 与 winget，并通过其安装一些常用软件。
   ```sh
