@@ -73,6 +73,7 @@ createResource 可以跟 Suspence 组件[配合使用](https://docs.solidjs.com/
 ## 杂
 
 - SolidJS 的组件导出必须使用大写字母开头，否则 tsx 不会将其识别为组件。
+- SolidJS 的 createEffect、onCleanup 等必须在同步的组件构建阶段或父级 Effect 中执行，才能正确绑定。不允许在 async 函数中执行。
 
 ## components
 

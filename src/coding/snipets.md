@@ -33,7 +33,7 @@ if [ "$commit_hash" = "HEAD" ]; then
 else
   rebase_target="${commit_hash}~1"
 fi
-GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$rebase_target"
+GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash --committer-date-is-author-date "$rebase_target"
 ```
 
 @tab nushell
@@ -48,7 +48,7 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash "$rebase_target"
 def gfixup [commit_hash?: string = 'HEAD'] {
     git commit -a --fixup $commit_hash
     let rebase_target = if $commit_hash == 'HEAD' { 'HEAD~2' } else { ($commit_hash | str trim) + "~1" }
-    GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $rebase_target
+    GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash --committer-date-is-author-date $rebase_target
 }
 ```
 
@@ -66,7 +66,7 @@ if test $commit_hash = 'HEAD'
 else
     set rebase_target (string trim -- "$commit_hash")~1
 end
-GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash $rebase_target
+GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash --committer-date-is-author-date $rebase_target
 ```
 
 :::

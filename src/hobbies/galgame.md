@@ -127,6 +127,7 @@ LunaTranslator 使用心得：
 - 游戏引擎也是不思进取啊。SiglusEngine 也是够老的了，bug 不算少，还把 quic save 砍掉了，什么毛病。
 - 某个特效由影视飓风友情赞助.jpg
 - 岛可梦真又没绷住了，夏日口袋怎么你了
+- 薄野尾花的声优配音挺帅的，平常声线和认真起来的声线反差很大，有意思
 
 </template>
 <template #CHAOSHEADNOAH>
