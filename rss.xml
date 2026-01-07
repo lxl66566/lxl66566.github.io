@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 07 Jan 2026 02:42:52 GMT</pubDate>
-    <lastBuildDate>Wed, 07 Jan 2026 02:42:52 GMT</lastBuildDate>
+    <pubDate>Wed, 07 Jan 2026 15:17:09 GMT</pubDate>
+    <lastBuildDate>Wed, 07 Jan 2026 15:17:09 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>随笔</category>
@@ -1063,6 +1063,7 @@
 <h2>杂</h2>
 <ul>
 <li>SolidJS 的组件导出必须使用大写字母开头，否则 tsx 不会将其识别为组件。</li>
+<li>SolidJS 的 createEffect、onCleanup 等必须在同步的组件构建阶段或父级 Effect 中执行，才能正确绑定。不允许在 async 函数中执行。</li>
 </ul>
 <h2>components</h2>
 <p>SolidJS 也提供了一些内置组件，让写 Vue 的人倍感熟悉。</p>
