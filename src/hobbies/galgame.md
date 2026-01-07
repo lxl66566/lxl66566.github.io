@@ -126,6 +126,7 @@ LunaTranslator 使用心得：
   - 但是不得不说 key 是懂得写故事的，~~套公式的故事也是故事~~，这些对于新人来说是很有吸引力的。
 - 游戏引擎也是不思进取啊。SiglusEngine 也是够老的了，bug 不算少，还把 quic save 砍掉了，什么毛病。
 - 某个特效由影视飓风友情赞助.jpg
+- 岛可梦真又没绷住了，夏日口袋怎么你了
 
 </template>
 <template #CHAOSHEADNOAH>
