@@ -96,8 +96,9 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
 7. 我的建议：
    - 不要设置 fetch.pruneTags！这个选项非常危险，每一次 git fetch 都会把你的 local tag 清掉，很难找回。
    - 不要使用 difftastic，除非你一定要在命令行看 diff。否则导出 patch 的时候不是正常的格式，我也不想每次导出都手写 `--no-ext-diff`。而且现在谁还在命令行看 diff 啊。
+   - 不要设置 pull.rebase，参考[提交时间](#提交时间)。
 
-[^6]: 需要使用 [Vim](./vim.md)。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。
+[^6]: 需要使用 [Vim](./vim.md)。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。但是不要将 `EDITOR` 设为 vscode，vscode 在 2025 年还没法作为默认编辑器处理 git 的编辑请求。
 
 ## 其他工具
 
@@ -369,28 +370,11 @@ _remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成
 
 git rebase 远没有想象中的智能。如果你认为本次 rebase 一定不会有问题，或者在 rebase 中有**优先保证某一个分支不变**的需求，可以使用 `-X ours` 或 `-X theirs` arg。可以将 -X 理解为“以某一方为主”，`ours` 指代 base 分支，`theirs` 指代你的当前分支（也就是 HEAD=theirs; git rebase base），这个语义看似有些反直觉，需要注意一下。
 
-### 将注释设为当前时间
+### 提交时间
 
-一般不建议，但如果个人项目实在想不到写啥，可以这样。
+每一个 commit 都有两个时间戳，一个是 Author Date，一个是 Committer Date。其中 Author Date 一般不会再次改变，但是 Committer Date 经常变，如果你 rebase 了（无论是 move 还是 squash），只要产生了新的 commit，那么 Committer Date 就会变为你更改的那个时刻。
 
-::: code-tabs
-@tab bash
-
-```sh
-# use only in bash
-git commit -m $(date "+%Y%m%d-%H:%M:%S")
-# result: 20220613-11:34:59
-```
-
-@tab powershell
-
-```shell
-# use only in powershell
-git commit -m $(get-Date)
-# result: 06/17/2023 21:05:13
-```
-
-:::
+我个人是很不喜欢这种行为的，我希望无论怎么移动怎么吸收，commit 中的时间信息不变。git rebase 提供了一个超长的 arg `--committer-date-is-author-date` 来达到 rebase 时不修改 Committer Date 的目的。然而这个名称又长又不合适，因为它的实际行为是「不改变 Committer Date」，而不是「让 Committer Date 与 Author Date 相同」。并且在 `git pull --rebase` 时就没有任何办法可以阻止其修改 Committer Date 了，实在有点无语。
 
 ### 用于备份
 

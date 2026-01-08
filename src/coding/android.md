@@ -47,10 +47,7 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
      2. 无法与系统剪切板交互。
    - ~~Settings Sync~~ 连登录都登录不了。
 2. 设置里 _Tools - Actions on Save_，除了 Code Cleanup 全开。
-3. 更改 KeyMap：
-   - Close Tab: `Ctrl + w`
-   - Reopen Closed Tab：`Ctrl + Shift + t`
-   - ~~Comment with line Comment: `Ctrl + /`~~ 已经是默认
+3. 更改 KeyMap：使用 vscode KeyMap。
    - Refactor - Rename: `F2`
    - Generate Compose Preview：`Ctrl + p`
 4. 更多 Inlay Hints：_Editor - Inlay Hints_，打开除了 _Code vision_ 和 _Annotations_ 的其他所有 Inlay Hints
