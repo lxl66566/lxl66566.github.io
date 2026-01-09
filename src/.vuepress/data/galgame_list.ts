@@ -3,9 +3,19 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 const original_list: GalItemInputType[] = [
   {
     name: "虹彩都市",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "4h58min",
+    tag: {
+      all_ages: true,
+    },
     duration: {
       start: "2026-01-05",
+      end: "2026-01-09",
+    },
+    score: {
+      story: 5.7,
+      visual: 8,
+      program: 5,
+      thrill: 2.1,
     },
   },
   {
@@ -987,7 +997,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 4.2,
-      visual: 8.2,
+      visual: 8,
       program: 8,
     },
   },

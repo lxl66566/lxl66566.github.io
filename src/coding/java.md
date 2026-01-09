@@ -16,51 +16,58 @@ tag:
 - DBeaver 烂，JB 家一堆烂，Minecraft 烂，sonarlint 烂，我接触到的 java 写成的玩意总能给我带来不悦。
 - 作为带 GC 的语言，Java 的性能一般（强类型打不过弱类型）；与其他 GC 语言相比，Java 编写的复杂度又更高。
 - java 社区相较而言也死气沉沉，到处是 java 8（今夕是何年）。
-- java 学到后期全是业务框架，不好玩，没意思（
+- java 学到后期全是业务框架，不好玩，没意思。对于喜欢做小项目的我，java 的业务抽象反而是额外的复杂度，也不能让代码可读性和易用性更强。
 
 哦，顺带一提，Android 开发建议直接 [kotlin](./kotlin.md)，Google 官方推荐的语言，并且全兼容 java。确实比 java 有意思多了。
 
 :::
 
-虽然万年 java8 死气沉沉，但是不得不提，对于企业来说反而是一个优点：语法简单，可以快速培养人才，并且方便招人和后续的维护。所以现在国内外的就业环境里 java 还是后端主流，学一堆新玩意反而不好找工作。
-
-## 前言
-
-选修了 Java 混学分，由于是编程语言所以又自学了挺多东西。本来此篇只涉及语言而不涉及业务框架，但在找工作时还是了解了一部分后端框架概念。
-
-大作业做了个[垃圾](https://github.com/lxl66566/my-college-files/blob/main/信息科学与工程学院/java/实验代码/bank_gui.java)。<heimu>我校指定大作业必须做个银行管理系统 demo，不能自由选择课题。</heimu>
+然而现在国内的 java 就业需求仍然是最高的，如果为了就业的话就不得不学了。
 
 ## 开发环境
 
-### windows
+### jdk
 
-去官网下 sdk，尽可能下载最新版本（激进）。
-
-或者使用 [scoop](../farraginous/recommend_packages.md#scoop)：
+Windows：使用 [scoop](../farraginous/recommend_packages.md#scoop)，或者去官网下载。Linux：不多说了。
 
 ```sh
 scoop bucket add java
+# 然后根据你需要的版本安装对应 jdk。
 scoop install openjdk22
-# 写此段落时最新版本为 22
+scoop install corretto8-jdk
 ```
 
-### linux
+几个不同提供方：
 
-安装就不用多说了。arch 的 [jdk 与 jre 是冲突的](https://t.me/archlinuxcn/252)，请选择安装 jdk。
+- corretto\* 是 Amazon 维护的免费、生产级 OpenJDK 8 发行版，支持周期长，包含安全修复。
+- temurin\* 是社区和其他厂商维护的版本，更改少点。
+- openjdk\* 是 oracle 自家的原味版本。注意 openjdk 已经没有 java 8 了。
 
-### 基础使用
-
-虽然有各种 eazy runner 帮忙跑程序，但是还是多了解点原理。
-
-`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序。
+如果你是为了兴趣学习，安装最新版本 jdk；如果是工作，安装 java 8。
 
 ### vscode
 
-首先假设已经装好了 JDK。
+如果只是写一些 java 单文件，跑跑学校的课程，vscode 是完全够用的。`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序就行。
 
-在 vscode 扩展商店搜 `java`，直接装整个包：_Extension Pack for Java_，然后就能跑了。也可以自己选插件，理论上只需要 LSP + Runner 即可。
+在 vscode 扩展商店搜 `java`，直接装整个捆绑包：_Extension Pack for Java_，然后就能跑了。也可以不全部安装，自己选扩展，理论上只需要 LSP 即可。
 
 包管理器（gradle）就 `scoop install gradle` 一行完事。
+
+### idea
+
+vscode 的 java 扩展很弱鸡的，没法满足复杂的开发需求。如果是已有的 java 项目或者需要进行复杂项目开发，那么 idea 就是必要的了。idea 有社区版，这个是免费的，不需要破解，理论上也够用，没必要给 jb 送钱。
+
+我习惯了 vscode，我比较希望将键位等都改成 vscode 上的习惯。idea 可以导入当前计算机上已有的 vscode 配置，不过算是聊胜于无。。这里有一些我的配置心得。
+
+1. 因为 jb 家的东西都差不多，之前[配 Android Studio 的经验](./android.md#android-studio)也可以套用一点。
+2. 继续删除/禁用那些没用的插件。idea 的社区版会预装很多 ultimate 的插件，然后不让你用。。
+3. 调整 KeyMap
+   - 即使把 vscode 的 vim 插件同步过来，vscode 的 vim 配置也不会同步到 ideavim。很多键位也是需要改的，比如我保留了许多编辑器自己的行为而不是 vim 行为。然后还需要修改 `~/.ideavimrc` 的设置。
+     ```
+     " 双引号是注释
+     set clipboard+=unnamedplus " 复制粘贴时同时复制到剪贴板
+     vnoremap <C-c> "+y " 将 Visual 模式下的 Ctrl+c 映射为复制到系统剪贴板
+     ```
 
 ## 语言基础
 
@@ -74,9 +81,9 @@ Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
 
 ## exception
 
-> java 错误处理挺不错的，至今也有人认为 java exception 优于 rust Result&lt;T,E&gt;.
+> java 错误处理挺不错的，至今也有人认为 java exception 优于 rust `Result<T, E>`.
 
-函数可以声明可能抛出的异常，则 throw exception 后会直接跳出这个函数。
+函数可以声明可能抛出的异常，则 throw exception 后会直接跳出这个函数。只有受检异常（非 RuntimeException）必须声明 throws 抛出；RuntimeException 和 Error 是隐式抛出的，不需要声明。
 
 ```java
 class X1Exception extends Exception{}
@@ -93,35 +100,41 @@ try { t(); } catch(X1Exception | X2Exception e) {
 
 ## 断言
 
-使用非常简单，`assert expression`，不过呢，需要加入 JVM 参数 `-ea`：`java -ea Main.java`
+使用非常简单，`assert expression`。默认不启用检查，需要加入 JVM 参数 `-ea` 才会触发运行时检查：`java -ea Main.java`。
 
-具体地，在 vscode 中，点击 _运行(R) - 添加配置..._，在你需要的文件项下加入 `"vmArgs": "-ea"`。
+## 关键字
 
-## 其他关键字
-
+- final：不可变，immutable。不需要同步，性能高。
 - native：表示函数是外部的，类似 C/rust 的 extern。
+- record：java 14 语法糖，快速创建一个拥有不可变成员的类，自带 toString 等。
+- volatile：用于多线程的关键字，强制数据在内存和 CPU cache 里同步，所有线程看到的变量都是最新的。volatile 不等于加锁。
+- synchronized：互斥锁，同一时间只能有一个线程访问此资源。
 
 ## 数据结构
 
-### 动态数组
+- 动态数组：
+  - Arraylist 和 Vector，后者是线程安全的，更慢。
+    ```java:no-line-numbers
+    private ArrayList<account> accounts = new ArrayList<>(List.of(new account("admin", "admin")));
+    ```
+- Hashmap：哈希表，不多说。
+- LinkedHashMap：有序的 HashMap，按照添加顺序
 
-Arraylist 和 Vector，后者是线程安全的，更慢。没有多线程需求建议直接用前者。
+## 包装类
 
-```java:no-line-numbers
-private ArrayList<account> accounts = new ArrayList<>(List.of(new account("admin", "admin")));
-```
+基本类型例如 bool，包装类 Boolean。
 
-### Hashmap
+- 一般尽可能用基本类型，性能好，还有非空保证。但有时候不得不用包装类，比如需要 nullable，或者泛型等。
+- java 中只要是包装类，就有可能是 null，一旦在逻辑判断中直接当做基本类型用（自动拆箱），就会 NPE。比较难防。
+  - 这时候需要一些额外操作，例如使用第三方包 org.apache.commons.lang3.BooleanUtils。就是一个默认会判空的 Boolean 判断条件。
 
-搜吧，懒得再讲了
+## lambda
 
-### LinkedHashMap
+java 8 引入的匿名函数。`(parameter1, parameter2) -> expression`，expression 也可以是一个花括号 code block。
 
-有序的 HashMap，按照添加顺序
+## 泛型
 
-### record
-
-java 14 语法糖，快速创建一个拥有不可变成员的类，自带 toString 等。
+泛型在实现上基于类型擦除。泛型不支持基本类型，只能用包装类。
 
 ## Stream
 
@@ -161,20 +174,20 @@ var temp3 = temp1.boxed();                  // Intstream 转为 Stream
 
 ## Optional
 
-Java 8 新增的 Optional，是编程中空处理的重要思想。还挺早的。（后来 [kotlin](./kotlin.md) 又把空安全发扬光大了）
+java 8 新增的 Optional，是编程中空安全的重要思想，这也是 java 8 里为数不多好用的玩意之一。（后来 [kotlin](./kotlin.md) 又把空安全发扬光大了）
 
 ```java
 Optional.of(value)                                              // 创建，value 不可为 null
-Optional.ofNullable(null)                                       // 创建，建议都使用此方法
+Optional.ofNullable(null)                                       // 创建
 Optional.ofNullable(123).ifPresent(u -> System.out.println(u)); // 操作值
 Optional.ofNullable(123).orElse(456);                           // 取值
 Optional.ofNullable(123).map(u -> u + 2);                       // 映射
 Optional.ofNullable(123).filter(u -> u < 150);                  // 映射
 ```
 
-## 序列化
+由于 java 泛型不能为基本类型，这里的 Optional 都会自动装箱。为了避免装箱性能损耗，java 8 还额外提供了 OptionalInt、OptionalLong 和 OptionalDouble 三个类型，建议使用。（没有 OptionalBoolean，因为 Boolean 本身就可以表示可空）
 
-> java 的序列化真是方便啊。没想到强类型语言也能这么轻松。
+## 序列化
 
 序列化就理解为保存变量到文件，必要时也可以从文件里反序列化，读取变量。
 
@@ -202,12 +215,11 @@ try (var fis = new FileInputStream("account.data");
 
 ## swing
 
-java GUI，跟 Qt 相比肯定是很拉的，但是也有一些优点：
+java GUI。原生自带，无需下载其他组件，无需构建系统，单文件就能跑。但是在前端设计上，swing 是不合格的，纯靠布局真的是非常噩梦的体验，没人用。
 
-- 原生自带，无需下载其他组件
-- 无需构建系统，单文件就能跑
+要不是学校的 java 课要用 swing 做东西，我也不会去用它。
 
-但是纯靠布局真的是非常噩梦的体验...
+::: details 默认折叠，点击展开 swing 相关内容。
 
 ### 组件
 
@@ -215,6 +227,13 @@ java GUI，跟 Qt 相比肯定是很拉的，但是也有一些优点：
 - JLable
   - 设置字号/字体/效果：`lable.setFont(new Font(Font.SERIF, Font.BOLD, 18));`
 - JPasswordField：密码输入框。`getText()` 不安全会被警告，`getPassword()` 则返回 char[] 需要自行处理。
+
+需要注意，在 remove 后 add 组件，需要重绘。
+
+```java
+panel.revalidate();
+panel.repaint();
+```
 
 ### 事件
 
@@ -226,21 +245,45 @@ button.addActionListener(e -> {
 });
 ```
 
-## JavaBean
+:::
 
-Bean 是一个业务中很常见的概念。Bean 就是数据类 + private 数据 + Setter/Getter 的类格式，实现了字段读写的控制，说它是约定好的开发风格可能更为贴切。
+## 业务内容
 
-## Spring
+前面的基础结束，现在是业务内容。工作中的 java 业务一般有着一套固定的流程和约定，这里又是一大堆东西。
+
+### 基础名词
+
+- Bean 是一种约定的特殊 class，所有属性 private，通过 getter setter 读取/修改，有一个无参构造函数。各种框架可以根据这样的约定来操作这个类及其实例。
+- DTO（Data transfer object）就相当于 python dataclass。
+- DI（Dependency Injection）：依赖注入，之后 Spring 会提到。
+- AOP（Aspect-Oriented Programming）：面向切面编程，类似注入的概念，在运行时将一段逻辑注入到对象里。Spring 的 AOP 是动态代理，在运行期生成一个代理对象。
+
+### Lombok
+
+Lombok 是一个业务开发必备库，作用是在编译时通过注解自动生成代码，跟 rust 的 proc macro 差不多。
+
+常用的注解有：
+
+- `@Getter` / `@Setter`: 生成字段的 get 和 set 方法。
+- `@ToString`: 生成 toString() 方法。
+- `@EqualsAndHashCode`: 生成 hashCode() 和 equals() 方法。
+- `@Data`: 相当于同时使用了 @Getter、@Setter、@ToString、@EqualsAndHashCode 和 @RequiredArgsConstructor。
+- `@Slf4j`：生成日志对象，可以在代码中用 `log.info` 啥的。
+- `@RequiredArgsConstructor`：为所有 final 字段或 @NonNull 字段生成一个 Constructor。
+- `@NoArgsConstructor`：生成一个什么也不做的 Constructor。不允许在有 final 字段的类里使用；如果要使用需要用 `@NoArgsConstructor(force = true)`，可以将其初始化为 default 值。
+- `@AllArgsConstructor`：生成一个包含类中所有字段作为参数的 Constructor。字面意思。
+
+### Spring
 
 后端必备套件之一。
 
-Spring 算是 java 必修了，不过我们课上没学。Spring 是一个网络框架，使用它可以很轻松地编写后端项目。而 SpringBoot 是官方出的一个快速搭建 Spring 项目的组件，可以通过几行 yml 配置好所有设置。
+- IoC（Inversion of Control）概念：Spring 启动时其会创建一个巨大的全局对象池，称为容器；并且其为每个 @Service 类在容器里创建一个单例对象。使用时只需通过 @Autowired 即可从对象池里拿到这个实例。
+
+在 Spring 语境下，“Bean” 特指被 Spring 容器管理的对象。
 
 Spring 在 idea 运行时会自动起一个 tomcat 来运行服务。（tomcat 是一种网络容器，用它可以方便地部署网络应用）
 
-### 注解
-
-Spring 中大量使用注解进行业务包装，这是好文明。一些常用注解：
+#### 常用注解
 
 - @RequestMapping：最常用的，处理路由的 request。可以再细分成 GET、POST、PUT 和 DELETE 请求。
 
@@ -256,7 +299,7 @@ Mybatis 是一个轻量级 ORM。要我说的话它只能算是半个 ORM，毕�
 
 ### GC
 
-- java8 有这些 GC：Serial GC, Parallel GC, CMS (Concurrent Mark Sweep), G1 (Garbage-First)
+- java 8 有这些 GC：Serial GC, Parallel GC, CMS (Concurrent Mark Sweep), G1 (Garbage-First)
   - 后二者将 GC 分为几个阶段，只在其中部分阶段 stop the world
   - CMS（标记 - 清除，没有整理）：初始标记（停顿）-> 并发标记 -> 重新标记（停顿） -> 并发清除
   - G1（标记 - 整理）：类似文件系统分块，新生代和老年代不再连续。优点：可预测，无内存碎片
@@ -268,19 +311,8 @@ Mybatis 是一个轻量级 ORM。要我说的话它只能算是半个 ORM，毕�
 - JDK8 的 GC 是分两代，新生代和老年代。新生代里又有三个区（eden, Survivor（s1, s2））。在新生代 gc 叫 minor gc，gc 老年代 + 新生代叫 full gc。
   - 每次 gc 会使新生代对象的 age + 1，当 age 超过一定值时将被移入老年代
   - Survivor 区的对象总年龄超过 50% 时也会将部分年龄最大的移入老年代
-- java8 的几个 GC 都是 stop the world 的，调优目的就是减少 full gc，减少 stop the world。
+- java 8 的几个 GC 都是 stop the world 的，调优目的就是减少 full gc，减少 stop the world。
 
 ### 工具
 
 jvisualvm 是 jdk 里自带的 GUI 分析工具，可以追踪 GC 状况，日志，系统资源占用等。
-
-## 一些问题
-
-#### swing repaint
-
-在 remove 后 add 组件，需要重绘。
-
-```java
-panel.revalidate();
-panel.repaint();
-```
