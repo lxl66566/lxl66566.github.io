@@ -651,6 +651,14 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 </template>
 <template #krkr_xp3_enc>
 
+总结：
+
+- 心之形心之色心之声 ✅
+- Deep One ✅
+- 死に逝く騎士、異世界に響く断末魔 ❌
+
+---
+
 加密的 xp3 就没法直接用 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack) 解封包了。不过 GARbro 可以解封加密的 xp3，只要游戏有被收录到密钥列表里就行，这里列举的游戏都属于此类。
 
 GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试试。还有路径压缩就没必要开了，~~只会影响我试错的速度~~。
@@ -659,6 +667,8 @@ GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试�
 | 游戏 | xp3 版本 |
 | ---- | -------- |
 | Deep One | Z |
+
+至于上述那些不行的……那当然是因为 GARbro 不更新了，并且其他的大部分 fork/mod 都没有添加这些加密方式，因此没法解。虽然用 KrkrExtract 也可以，但是工作量太大，而且会被剧透，因此不干。
 
 </template>
 <template #CatSystem2>
@@ -798,6 +808,13 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 </template>
 <template #QLIE>
+
+总结：
+
+- 美少女万华镜 1-5 ✅
+- 美少女万華鏡異聞 雪おんな ❌
+
+---
 
 ### FilePackVer3.0
 
@@ -1043,6 +1060,13 @@ GARbro 可解不可封，因此还是得想别的办法。imhex 打开一看，�
 二试封包的成功确实给我带来了许多喜悦之情与实用价值。但是仍有一批引擎无法简单地通过这种方式进行加速。在面对它们使尽浑身解数仍无法战胜时，我内心里总有一股深深的无力感。因此我认为 _拆包-加速-封包_ 只是旁门左道，只有注入才是正道。
 
 不过由于能力不足，在接近一年的时间内，我的研究重心全部放在了解封包上。毕竟这对目前的我来说是唯一能实现语音加速的方法。
+
+### GARbro 相关
+
+解包过程中大部分都是用 GARbro，真的很无脑，一键直解；但是 GARbro 主仓库（morkt）已经不更新了，对于新出的游戏和加密算法，可能也需要寻找其他的 GARbro fork 实现才能解包。这里有一些备选项：
+
+- crskycode/GARbro：最流行的一个 GARbro fork，但是 2025 年作者删库删帐号了。
+- [nanami5270/GARbro-Mod](https://github.com/nanami5270/GARbro-Mod)：一个活跃的 GARbro fork，但是目前没有提供 Release。
 
 ## 音频 API hook
 

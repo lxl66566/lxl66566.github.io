@@ -2,6 +2,16 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "死に逝く騎⼠、異世界に響く断末魔",
+    valid_name: "死馆",
+    other_names: ["濒死的骑士，于异世界中响彻的绝唱", "死馆"],
+    order: 2,
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-01-09",
+    },
+  },
+  {
     name: "虹彩都市",
     use_time: "4h58min",
     tag: {

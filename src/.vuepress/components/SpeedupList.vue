@@ -18,7 +18,7 @@
               </td>
               <td>{{ item.engine ?? "-" }}</td>
               <td>{{ item.save_format ?? "-" }}</td>
-              <td>{{ item.speedupable ? "✅" : "❌" }}</td>
+              <td>{{ item.speedupable === true ? "✅" : item.speedupable === false ? "❌" : "❔" }}</td>
             </template>
             <template #expanded-content>
               <slot :name="item.valid_name"></slot>
@@ -43,7 +43,7 @@ type SpeedupItemType = {
   valid_name: string;
   engine?: string;
   save_format?: string;
-  speedupable: boolean;
+  speedupable: boolean | null;
 };
 
 const data: SpeedupItemType[] = [
@@ -55,11 +55,11 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["心之形心之色心之声", "Deep One"],
+    names: ["心之形心之色心之声", "Deep One", "死に逝く騎士、異世界に響く断末魔"],
     valid_name: "krkr_xp3_enc",
     engine: "krkr",
     save_format: "xp3(encrypted)",
-    speedupable: true,
+    speedupable: null,
   },
   {
     names: ["樱之刻", "FLIP * FLOP 系列", "终之空Remake", "流星·世界演绎者 系列"],
@@ -153,11 +153,11 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["美少女万华镜 1-5"],
+    names: ["美少女万华镜 系列"],
     valid_name: "QLIE",
     engine: "QLIE",
     save_format: "pack",
-    speedupable: true,
+    speedupable: null,
   },
   {
     names: ["スターライトBLUE～幼なじみで推しの娘が知らないうちに開発されていた～"],
