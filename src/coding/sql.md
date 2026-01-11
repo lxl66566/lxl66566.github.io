@@ -210,10 +210,11 @@ Redis 是一个非常简单的内存 KV (key-value) 数据库，主要用来做�
 ### 基础改查
 
 ```sql
-mysql -p  # 登录
+mysql -p            -- 登录
 show databases;
 use xxx;
 show tables;
+desc xxxtablename;  -- 查看某个表的所有数据类型定义
 select * from users where sID = 'xxx';
 delete from users where sID = 'xxx';
 update users set sBalance = 1000.00 where sID = '...';

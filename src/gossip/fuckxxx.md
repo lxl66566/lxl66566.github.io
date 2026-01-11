@@ -195,6 +195,14 @@ tag:
 - 自带的 vcpkg 是清单模式，这个模式对于初学者来说相当难用，并且无法按照网上的资料进行构建。（网上资料大多是运行在经典模式的）
 - 如果你安装了 VS insider，那么其他依赖 vs 的程序可能找不到 vs，于是要你重新安装一个。
 
+### JetBrains 系列
+
+以 idea 为例。
+
+- conflict solve 界面一坨屎，不能最大化，三列的设计不如 vscode 的左右下设计。
+- ideavim 垃圾，所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 啥的都得写 `~/.ideavimrc`。
+  - reload 得用 idea 打开 `~/.ideavimrc` 才能 reload。
+
 ## 包管理器系列
 
 ### uv

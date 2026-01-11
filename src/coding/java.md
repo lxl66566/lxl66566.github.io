@@ -66,8 +66,14 @@ vscode 的 java 扩展很弱鸡的，没法满足复杂的开发需求。如果�
      ```
      " 双引号是注释
      set clipboard+=unnamedplus " 复制粘贴时同时复制到剪贴板
+     set nocompatible " 关闭vi兼容模式
      vnoremap <C-c> "+y " 将 Visual 模式下的 Ctrl+c 映射为复制到系统剪贴板
+     " select mode 相关
+     set selectmode+=mouse
+     set keymodel^=startsel
+     set selectmode+=key
      ```
+4. 如果 idea 以管理员运行，则插件也会获得管理员权限，而插件的行为不是我们能控制的，所以最好不要以管理员运行 idea。
 
 ## 语言基础
 
@@ -79,7 +85,7 @@ JDK 5 引入了 `for (auto& element : collection) {}` 的循环，比 C++11 类�
 
 Java 10 语法糖，类型推断。like C++: `auto`, but not so powerful.
 
-## exception
+### exception
 
 > java 错误处理挺不错的，至今也有人认为 java exception 优于 rust `Result<T, E>`.
 
@@ -98,11 +104,13 @@ try { t(); } catch(X1Exception | X2Exception e) {
 }
 ```
 
-## 断言
+java 7 之后还可以使用 [try-with-resource](https://github.com/Jueee/effective-Java/blob/master/ch02创建和销毁对象/09.使用try-with-resources语句替代try-finally语句.md) 以自动释放资源。
+
+### 断言
 
 使用非常简单，`assert expression`。默认不启用检查，需要加入 JVM 参数 `-ea` 才会触发运行时检查：`java -ea Main.java`。
 
-## 关键字
+### 关键字
 
 - final：不可变，immutable。不需要同步，性能高。
 - native：表示函数是外部的，类似 C/rust 的 extern。
@@ -110,7 +118,7 @@ try { t(); } catch(X1Exception | X2Exception e) {
 - volatile：用于多线程的关键字，强制数据在内存和 CPU cache 里同步，所有线程看到的变量都是最新的。volatile 不等于加锁。
 - synchronized：互斥锁，同一时间只能有一个线程访问此资源。
 
-## 数据结构
+### 数据结构
 
 - 动态数组：
   - Arraylist 和 Vector，后者是线程安全的，更慢。
@@ -120,7 +128,13 @@ try { t(); } catch(X1Exception | X2Exception e) {
 - Hashmap：哈希表，不多说。
 - LinkedHashMap：有序的 HashMap，按照添加顺序
 
-## 包装类
+### 面向对象
+
+基础的就不说了。这里随便记一些。
+
+- 类代码块：class 里可以写一段 `static { ... }` 静态代码块，内部的代码会在类初始化时执行（构造之前、访问 static 成员之前），有一点点像 Rust LazyLock。如果写 `{ ... }` 就是实例代码块，每次创建实例时都执行。
+
+### 包装类
 
 基本类型例如 bool，包装类 Boolean。
 
@@ -128,28 +142,30 @@ try { t(); } catch(X1Exception | X2Exception e) {
 - java 中只要是包装类，就有可能是 null，一旦在逻辑判断中直接当做基本类型用（自动拆箱），就会 NPE。比较难防。
   - 这时候需要一些额外操作，例如使用第三方包 org.apache.commons.lang3.BooleanUtils。就是一个默认会判空的 Boolean 判断条件。
 
-## lambda
+### lambda
 
 java 8 引入的匿名函数。`(parameter1, parameter2) -> expression`，expression 也可以是一个花括号 code block。
 
-## 泛型
+### 泛型
 
-泛型在实现上基于类型擦除。泛型不支持基本类型，只能用包装类。
+泛型在实现上基于类型擦除，是因为泛型出现时大量的代码没有使用泛型，需要保证和老代码的可交互性。
 
-## Stream
+- 泛型不支持基本类型，只能用包装类。
+
+### Stream
 
 Stream (Java 8) 是 java 中很重要的一个概念，可以理解成迭代器。类比 Rust iterator 或 C++20 的 std::ranges。Stream 提供了一组函数式链式操作。
 
 > 刚发现的写的不错的[参考](https://blog.csdn.net/zhiyuan263287/article/details/124540708)。
 
-### 基本操作
+#### 基本操作
 
 - 连接流：`Stream.concat(stream1,stream2)`
 - 映射：`map`
 - 过滤：`filter`
 - 元素操作：`forEach(lambda)`
 
-### 常用方法
+#### 常用方法
 
 ```java
 var list = Stream.of(1,2,3).collect(Collectors.toCollection(ArrayList::new));   // 为 Arraylist 赋值
@@ -162,7 +178,7 @@ Stream.of(1,2,3).sorted();                                                      
 Stream.of(1,2,3).sorted(Comparator.reverseOrder());                             // 排序（降序）
 ```
 
-### Intstream
+#### Intstream
 
 以这个结构为例了解其用法。
 
@@ -172,7 +188,7 @@ var temp2 = IntStream.range(1, 3);          // 生成左闭右开区间流 1,2
 var temp3 = temp1.boxed();                  // Intstream 转为 Stream
 ```
 
-## Optional
+### Optional
 
 java 8 新增的 Optional，是编程中空安全的重要思想，这也是 java 8 里为数不多好用的玩意之一。（后来 [kotlin](./kotlin.md) 又把空安全发扬光大了）
 
@@ -187,7 +203,7 @@ Optional.ofNullable(123).filter(u -> u < 150);                  // 映射
 
 由于 java 泛型不能为基本类型，这里的 Optional 都会自动装箱。为了避免装箱性能损耗，java 8 还额外提供了 OptionalInt、OptionalLong 和 OptionalDouble 三个类型，建议使用。（没有 OptionalBoolean，因为 Boolean 本身就可以表示可空）
 
-## 序列化
+### 序列化
 
 序列化就理解为保存变量到文件，必要时也可以从文件里反序列化，读取变量。
 
@@ -212,6 +228,8 @@ try (var fis = new FileInputStream("account.data");
     c.printStackTrace();
 }
 ```
+
+实践中，建议为每一个 implements Serializable 的类都添加一个 `private static final long serialVersionUID` 成员，用于序列化的兼容检查。反序列化时，如果该 id 不匹配则会抛出异常。
 
 ## swing
 
@@ -251,12 +269,14 @@ button.addActionListener(e -> {
 
 前面的基础结束，现在是业务内容。工作中的 java 业务一般有着一套固定的流程和约定，这里又是一大堆东西。
 
+java 业务开发一般遵守分层架构：Controller 层是对外交互的接口，Service 层是最主要的逻辑区域，Mapper 层是数据库的交互。
+
 ### 基础名词
 
 - Bean 是一种约定的特殊 class，所有属性 private，通过 getter setter 读取/修改，有一个无参构造函数。各种框架可以根据这样的约定来操作这个类及其实例。
 - DTO（Data transfer object）就相当于 python dataclass。
 - DI（Dependency Injection）：依赖注入，之后 Spring 会提到。
-- AOP（Aspect-Oriented Programming）：面向切面编程，类似注入的概念，在运行时将一段逻辑注入到对象里。Spring 的 AOP 是动态代理，在运行期生成一个代理对象。
+- AOP（Aspect-Oriented Programming）：面向切面编程，类似注入的概念，在运行时将一段逻辑注入到对象里。业务层对 AOP 是无感知的。Spring 的 AOP 是动态代理，在运行期生成一个代理对象。AspectJ 主要是直接修改字节码，功能更强，可以切入构造函数、静态方法、私有方法。
 
 ### Lombok
 
@@ -273,6 +293,8 @@ Lombok 是一个业务开发必备库，作用是在编译时通过注解自动�
 - `@NoArgsConstructor`：生成一个什么也不做的 Constructor。不允许在有 final 字段的类里使用；如果要使用需要用 `@NoArgsConstructor(force = true)`，可以将其初始化为 default 值。
 - `@AllArgsConstructor`：生成一个包含类中所有字段作为参数的 Constructor。字面意思。
 
+注解中再包含其他注解需要使用 `@__` 语法。一个最常用的例子是 `@RequiredArgsConstructor(onConstructor = @__({@Autowired}))`，在生成 Constructor 的同时将其标为 `@Autowired`。
+
 ### Spring
 
 后端必备套件之一。
@@ -283,17 +305,35 @@ Lombok 是一个业务开发必备库，作用是在编译时通过注解自动�
 
 Spring 在 idea 运行时会自动起一个 tomcat 来运行服务。（tomcat 是一种网络容器，用它可以方便地部署网络应用）
 
-#### 常用注解
+#### uri 相关注解
 
-- @RequestMapping：最常用的，处理路由的 request。可以再细分成 GET、POST、PUT 和 DELETE 请求。
+uri 一般是 `/{context-path}/{Class-Mapping}/{Method-Mapping}` 形式。
 
-## Mybatis
+- context-path：一个全局前缀，用的比较少。直接搜 `context-path` 即可。
+- Class-Mapping：class 上定义的 `@RequestMapping` 注解。
+- Method-Mapping：类的方法的注解，可以是 `@GetMapping` 等。
+
+### Swagger
+
+用于自动生成 RESTful API 文档的工具。只需要注解即可生成。
+
+Swagger 有 v2 和 v3 两个版本，看 import 能看出项目使用的是哪个版本。v3 版本在 import 语句里一定包含 `v3.` 字样。
+
+这里简单列举几个常用的，其他的搜吧。
+
+- `@ApiModel`：将 class 或 enum 设为请求参数 / 响应类型。
+- `@ApiModelProperty`：修饰 ApiModel 的成员。
+
+### Mybatis
 
 后端必备套件之一。
 
-Mybatis 是一个轻量级 ORM。要我说的话它只能算是半个 ORM，毕竟要自己写 SQL 语句的 ORM 还是挺捞，跟我见过的其他 ORM 还是有不小的差距的[^1]。
+Mybatis 是一个数据库操作套件，用于把数据库操作集成到代码中。我不认为其是一个 ORM，毕竟也需要自己写 SQL。
 
-[^1]: 我在写 Android 时用过 room ORM，也需要在注解里手写 SQL。感觉是不是 Java 系的 ORM 都喜欢这样……
+Mybatis 有两种模式，注解模式和 XML Mapper 模式。注解模式是在注解中写 SQL 语句，Mapper 模式相当于是一个 DSL。对于复杂查询或者大型项目，用 Mapper 模式的更多。
+
+- 如果不想学 Mapper 模式的 DSL，可以让 AI 写或者翻译 SQL 到 Mapper。
+- Mapper 模式下有 `<mapper namespace="com.xxx.xxx">`，这里的 namespace 必须是一个 xxx.java 模块的完整路径；在这个模块里写一个 `public interface XXXMapper`，然后声明每一个接口方法即可。XML 标签的 id 必须与 java 接口的方法名一致。
 
 ## JVM 调优
 

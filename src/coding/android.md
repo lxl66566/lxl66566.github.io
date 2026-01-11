@@ -42,9 +42,7 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
      - 最后还是回到了 vscode 时的老朋友 **Codeium**
        - 关掉 _Show Selection Toolbar_，这个很烦
    - 两个 json 插件：_JSON To Kotlin Class_，_GsonFormat_
-   - vim 插件：ideavim
-     - 这个 vim 插件的所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 啥的都得写 `~/.ideavimrc`。
-     1. 与系统剪切板交互：`set clipboard+=unnamedplus`
+   - vim 插件：ideavim。详细配置见 [java](./java.md#idea)。
    - ~~Settings Sync~~ 连登录都登录不了。
 2. 设置里 _Tools - Actions on Save_，除了 Code Cleanup 全开。
 3. 更改 KeyMap：使用 vscode KeyMap。
