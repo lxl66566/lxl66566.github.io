@@ -202,6 +202,7 @@ tag:
 - conflict solve 界面一坨屎，不能最大化，三列的设计不如 vscode 的左右下设计。
 - ideavim 垃圾，所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 啥的都得写 `~/.ideavimrc`。
   - reload 得用 idea 打开 `~/.ideavimrc` 才能 reload。
+- idea 总是想接管我的快捷键。我打开终端想按 Ctrl + w，Ctrl + c，这些默认都不会被发给终端。。。我就算在 _keymap：插件 -> 终端_ 里把终端快捷键全部取消，也没法在 Ctrl + w 时不关闭终端。
 
 ## 包管理器系列
 

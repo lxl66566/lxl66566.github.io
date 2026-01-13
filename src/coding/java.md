@@ -61,7 +61,8 @@ vscode 的 java 扩展很弱鸡的，没法满足复杂的开发需求。如果�
 
 1. 因为 jb 家的东西都差不多，之前[配 Android Studio 的经验](./android.md#android-studio)也可以套用一点。
 2. 继续删除/禁用那些没用的插件。idea 的社区版会预装很多 ultimate 的插件，然后不让你用。。
-3. 调整 KeyMap
+3. _编辑器 > 常规 > 编辑器标签页_，勾选 _标记已修改_。非常重要，被坑了几次。。。
+4. 调整 KeyMap
    - 即使把 vscode 的 vim 插件同步过来，vscode 的 vim 配置也不会同步到 ideavim。很多键位也是需要改的，比如我保留了许多编辑器自己的行为而不是 vim 行为。然后还需要修改 `~/.ideavimrc` 的设置。
      ```
      " 双引号是注释
@@ -72,8 +73,10 @@ vscode 的 java 扩展很弱鸡的，没法满足复杂的开发需求。如果�
      set selectmode+=mouse
      set keymodel^=startsel
      set selectmode+=key
+     snoremap <LeftMouse> <LeftMouse>i " 在 Select 模式下点击鼠标 -> 进入 Insert 模式
      ```
-4. 如果 idea 以管理员运行，则插件也会获得管理员权限，而插件的行为不是我们能控制的，所以最好不要以管理员运行 idea。
+   - 取消绑定所有 Ctrl + w，只保留 `窗口 -> 编辑器标签页 -> 编辑器关闭操作 -> 关闭标签页`。否则在终端里使用 Ctrl + w 会关闭终端。
+5. 如果 idea 以管理员运行，则插件也会获得管理员权限，而插件的行为不是我们能控制的，所以最好不要以管理员运行 idea。
 
 ## 语言基础
 
@@ -148,7 +151,7 @@ java 8 引入的匿名函数。`(parameter1, parameter2) -> expression`，expres
 
 ### 泛型
 
-泛型在实现上基于类型擦除，是因为泛型出现时大量的代码没有使用泛型，需要保证和老代码的可交互性。
+泛型在实现上基于类型擦除，是因为泛型出现时大量的代码没有使用泛型，需要保证和老代码的可交互性。这意味着泛型只在编译期存在，运行期不存在，使用 Jackson 等进行反序列化的时候需要添加 TypeReference。
 
 - 泛型不支持基本类型，只能用包装类。
 
@@ -190,7 +193,7 @@ var temp3 = temp1.boxed();                  // Intstream 转为 Stream
 
 ### Optional
 
-java 8 新增的 Optional，是编程中空安全的重要思想，这也是 java 8 里为数不多好用的玩意之一。（后来 [kotlin](./kotlin.md) 又把空安全发扬光大了）
+Optional 的作用是强制调用方处理空值。
 
 ```java
 Optional.of(value)                                              // 创建，value 不可为 null
@@ -203,33 +206,23 @@ Optional.ofNullable(123).filter(u -> u < 150);                  // 映射
 
 由于 java 泛型不能为基本类型，这里的 Optional 都会自动装箱。为了避免装箱性能损耗，java 8 还额外提供了 OptionalInt、OptionalLong 和 OptionalDouble 三个类型，建议使用。（没有 OptionalBoolean，因为 Boolean 本身就可以表示可空）
 
+当然，在没有强制性要求处理空值的地方（内部调用等），或者对性能敏感的地方，用 `@Nullable` 注解即可。如果是 Spring 开发场景，优先使用 `org.springframework.lang.Nullable`。
+
 ### 序列化
 
-序列化就理解为保存变量到文件，必要时也可以从文件里反序列化，读取变量。
+序列化可以将一个 class 进行结构化表示，Jackson 或其他库可以利用这个结构表示将类转换成其他东西，例如 json。
 
 ```java
 class account implements Serializable {}    // 继承接口
-private ArrayList<account> accounts;    // 可以直接序列化对象数组
-// serilize
-try (FileOutputStream fos = new FileOutputStream("account.data");   // 存在执行目录下
-        ObjectOutputStream oos = new ObjectOutputStream(fos);) {
-    oos.writeObject(accounts);
-} catch (Exception e) {
-    System.out.println("write to file failed");
-}
-// deserilize
-try (var fis = new FileInputStream("account.data");
-    var ois = new ObjectInputStream(fis);) {
-    accounts = (ArrayList<account>) ois.readObject();
-} catch (IOException ioe) { // 如果文件不存在
-    accounts = new ArrayList<>();   // 默认值
-} catch (Exception c) {
-    System.out.println("unknown exception");
-    c.printStackTrace();
-}
 ```
 
 实践中，建议为每一个 implements Serializable 的类都添加一个 `private static final long serialVersionUID` 成员，用于序列化的兼容检查。反序列化时，如果该 id 不匹配则会抛出异常。
+
+#### Jackson
+
+最常用的 json 序列化库，Spring 默认。
+
+- 自定义序列化函数：使用 `@JsonValue` 自定义序列化过程，使用 `@JsonCreator` 自定义反序列化过程。对于 enum，这个是比较常用的。
 
 ## swing
 
@@ -284,6 +277,7 @@ Lombok 是一个业务开发必备库，作用是在编译时通过注解自动�
 
 常用的注解有：
 
+- `@NonNull`：可以修饰入参和出参对象。如果为空会 NPE。Lombok 会**插入运行时检查 null 的代码**。
 - `@Getter` / `@Setter`: 生成字段的 get 和 set 方法。
 - `@ToString`: 生成 toString() 方法。
 - `@EqualsAndHashCode`: 生成 hashCode() 和 equals() 方法。
@@ -295,15 +289,21 @@ Lombok 是一个业务开发必备库，作用是在编译时通过注解自动�
 
 注解中再包含其他注解需要使用 `@__` 语法。一个最常用的例子是 `@RequiredArgsConstructor(onConstructor = @__({@Autowired}))`，在生成 Constructor 的同时将其标为 `@Autowired`。
 
+#### Slf4j
+
+可以在 `@Slf4j` 的 class 内部使用 log.xxx 进行日志打印（xxx=info, error, ...）。
+
+- 首个参数可以是一个 fmt string，之后可以接 args。
+  - args 可以比 fmt 里的坑多一个 Throwable，这样打印的日志后面可以接这个 Throwable 的调用栈。这是很常见的用法。
+
 ### Spring
 
-后端必备套件之一。
+后端必备套件之一。Spring 的核心是自动管理单例，因为在后端开发场景中单例实在是太多了，用 Spring 可以省去自己创建和取对象的麻烦。
 
 - IoC（Inversion of Control）概念：Spring 启动时其会创建一个巨大的全局对象池，称为容器；并且其为每个 @Service 类在容器里创建一个单例对象。使用时只需通过 @Autowired 即可从对象池里拿到这个实例。
+  - 在 Spring 语境下，“Bean” 特指被 Spring 容器管理的对象。
 
-在 Spring 语境下，“Bean” 特指被 Spring 容器管理的对象。
-
-Spring 在 idea 运行时会自动起一个 tomcat 来运行服务。（tomcat 是一种网络容器，用它可以方便地部署网络应用）
+Spring 在运行时会自动起一个 tomcat 来运行服务。（tomcat 是一种网络容器，用它可以方便地部署网络应用）
 
 #### uri 相关注解
 
