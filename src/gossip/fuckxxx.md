@@ -41,6 +41,7 @@ tag:
   - Trait alias 还是 unstable; trait aliases cannot be auto，这二者不能共存。
   - `impl Trait` is not allowed in `fn` pointer return types，`impl Trait` is only allowed in arguments and return types of functions and methods.
 - `std::process::Command` 的设计中，command 和 args 一定要分开的，其只在内部进行组合；这就导致如果我要执行完整的语句，就要先 split 再 join，多此一举。
+  - 而且 shell 命令这种东西不能随便 split-join，不然碰到引号字符串不就炸了吗。只能用 shlex 这种第三方 parser 搞。
 - Unsafe 并不是那么自由：
   - 无法改一个 not mut 的 static 变量。
   - 无法 access 一个库的 private field。
@@ -201,14 +202,18 @@ tag:
 
 - conflict solve 界面一坨屎，不能最大化，三列的设计不如 vscode 的左右下设计。
 - ideavim 垃圾，所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 啥的都得写 `~/.ideavimrc`。
-  - reload 得用 idea 打开 `~/.ideavimrc` 才能 reload。
-- idea 总是想接管我的快捷键。我打开终端想按 Ctrl + w，Ctrl + c，这些默认都不会被发给终端。。。我就算在 _keymap：插件 -> 终端_ 里把终端快捷键全部取消，也没法在 Ctrl + w 时不关闭终端。
+  - reload 得用 idea 打开 `~/.ideavimrc` 才能 reload。没有其他的 GUI 方法。
+  - 在 select 状态下单击鼠标，没法保持在 insert，会直接跳回 normal。我尝试了各种各样的 `.ideavimrc` 配置都无法改变这个行为。
+- Terminal 大便一坨。
+  - NixOS 上调 atuin 就报 `` Error: failed to create file `/etc/nixos/config/atuin.key` ``，但是我在其他 IDE 的 terminal 就没有任何问题。
+  - 我打开终端想按 Ctrl + w，Ctrl + c，这些默认都不会被发给终端。。。我就算在 _keymap：插件 -> 终端_ 里把终端快捷键全部取消，也没法在 Ctrl + w 时不关闭终端。
+  - 没懂为啥这些 IDE 都喜欢把 Terminal 当二等公民，当成一个插件。。vscode Terminal 也是垃圾，JB 更垃圾一点，都有各种各样的问题。
 
 ## 包管理器系列
 
 ### uv
 
-- 无法安装 pytho <= 3.7 的版本，不合格。
+- 无法安装 python <= 3.7 的版本，不合格。
 - [Configuration files （20251221）](https://docs.astral.sh/uv/concepts/configuration-files/) 里的陈述：_uv will also discover uv.toml configuration files in the user- and system-level configuration directories, e.g., user-level configuration in ~/.config/uv/uv.toml, and system-level configuration at /etc/uv/uv.toml on macOS and Linux._ 这个陈述**完全不合格**，听着像是 _~/.config/uv/uv.toml_ 是全平台通用的，而 _/etc/uv/uv.toml_ 是 macOS and Linux only 的。实际上 uv 在 Windows 上是不会去读 _~/.config/uv/uv.toml_ 的。uv 文档误导了 windows 用户以后，把实际的 path 放到了[另一个没人会点进去的页面里](https://docs.astral.sh/uv/reference/storage/#configuration-directories)，并且这个页面也比较抽象，还需要用户再点到另一个页面才能看到真实的位置。
 - uv lockfile `revision = 3` 会将系统的 user config 也记录进 lockfile；然后如果 CI 里用了 `uv sync --locked` 就会爆炸。
 
@@ -237,8 +242,7 @@ niri 是一个平铺 Desktop Env。
   3. 没有一个可用的 formatter 和 LSP
   4. 说是对标 yaml，那你的 alias 呢
   5. 0.2 和 0 有类型区别，不会自动转换
-- niri flake 难用
-  - bug：
+- niri flake 难用，这个在 NixOS CN 里是一个共识，很多 KDL 里支持的合法 niri 语法在 niri flake 里甚至都配不出来。
 
 ## QQ 有多难用
 
@@ -313,6 +317,7 @@ B 站你**什么时候\***啊?
   - 反复推荐同一个没看的视频。（我要是喜欢我会不看？不喜欢了还一直推送？）
 - 直播抽成高，退款机制傻逼。（未成年退款扣除的比收益还多，详情@KL_qiqi）
 - 年报垃圾。（2022 为例）连最基本的 _看视频总时长_ 的数据都没有。
+  - 后来有了。
 - 不氪金锁 30 帧。吃相难看。
 - 番剧删减。
 - 没有登录无法查看评论，无法查看 480P 以上的清晰度，引诱登录。
@@ -323,12 +328,12 @@ B 站你**什么时候\***啊?
 B 站歧视网页版用户。可能是因为：网页版用户不是核心群体；网页版被一大堆插件针对，挡着叔叔财路了. ..
 
 - 网页版无法查看：UP 主荣誉周报，创作者报告，年度报告等。
-- 网页版无法点踩。网页版剥夺了表达“不喜欢”的权利。
+- **网页版无法点踩。网页版剥夺了表达“不喜欢”的权利。**
   - 2025 年，bilibili 首页可以表示对推送不感兴趣，是一点小进步。但是比起手机的反馈还是缺了不少，只有内容不感兴趣和 UP 主不感兴趣两个反馈，导致我即使反馈多次仍然会给我推荐分区内容。
   - 不喜欢某个 UP 主，点击 “对此 UP 不感兴趣” 是下策，应该进主页直接加入黑名单。
 - 手机网页版连个大图都看不了，硬引到 app。
 - 网页版直播间无法参与活动。
-- 简介无空格的文字过长则被截断。[例子](https://www.bilibili.com/video/BV1UR4y1V7Ry/)
+- ~~简介无空格的文字过长则被截断。[例子](https://www.bilibili.com/video/BV1UR4y1V7Ry/)~~ 后来修复了
 - 在播放合集时，切换视频后，URL 不会自动更换。此时如果遇到被下架的视频，页面会直接刷新，跳转到最开始时播放的那个视频。
 
 ### 移动端
@@ -388,7 +393,7 @@ MIUI 代码就是一坨屎山，不关 MIUI 优化，adb 连不上；关了 MIUI
 
 ColorOS 是目前一加的默认系统。
 
-- 不要冻 _应用包安装程_！！！！[惨痛教训，并附带了哪些东西能冻](../articles/mobile/problem.md#一加无限重启)
+- 不要冻 _应用包安装程序_！！！！[惨痛教训，并附带了哪些东西能冻](../articles/mobile/problem.md#一加无限重启)
 - 音量过高。最低音量都过高了。
   - [没法通过 `ro.config.media_vol_steps` 调](https://t.me/withabsolutex/1401)。
 - 亮度调节也非常不线性。
@@ -404,7 +409,7 @@ ColorOS 是目前一加的默认系统。
 我想 clone 一个 >10G 的大仓库，由于一些原因，总是传一半断开。**而作为一个现代的系统，git clone/fetch 居然都没有断点续传的功能，很是令我失望。**（不确定是 Git 还是 Github 的锅）
 
 - git diff 算法仍有待进步。（本人只用过 `Myers` & `Histogram`）
-  - 会出现未修改代码，却被标记成变动的情况
+  - ~~会出现未修改代码，却被标记成变动的情况~~ 一般不是 Git 的问题。
   - 以行为单位（check `--word-diff-regex`）
 - 压缩率一般
 - ~~无法通过链接添加仓库外的文件（需要将仓库目录设为根目录）~~ git bare repo
@@ -501,7 +506,9 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - [神人翻译](https://t.me/withabsolutex/2448)
 - `networkingMode=mirrored` 有**非常严重的 bug**。[issue](https://github.com/microsoft/WSL/issues/10855)
 
-## Geforce Experience 有多难用
+## NVIDIA, FUCK YOU
+
+### Geforce Experience 有多难用
 
 众所周知 NVIDIA 显卡的游戏支持是 Geforce Experience，其提供了一系列硬件级游戏功能扩展，如游戏滤镜，录制与推流，重放等。但是程序本身 bug 一堆，拉的要死。
 
@@ -579,15 +586,6 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - 价格计算不透明。我买学生票 75 折，但是付款永远比 75 折要多。（393.5 的票，付钱付了 317？）
 - 性能差，查询车次会卡
 - 查询经停某站的所有车次时，不显示火车
-
-## Android Studio 有多难用
-
-- 自带的 Terminal 天天炸。我用的 atuin，这个 Terminal 一调 atuin 就报 `` Error: failed to create file `/etc/nixos/config/atuin.key ``，但是我在其他 IDE 的 terminal 就没有任何问题。
-  - Terminal 是二等公民，例如我要用 `Ctrl + w` 删单词，结果 IDE 的快捷键优先，把 Terminal 窗口给我关了。
-- 插件垃圾。
-  - Vim 插件垃圾。只能调一点键冲突，没有其他选项。
-  - 设置同步依赖 Settings Sync 插件，但是甚至无法登录，localhost 端口没开。
-- 污染依赖。喜欢我 gradle 自动解析自动 import 然后把环境搞炸吗？我还好，毕竟已经习惯了；其他不会用 git 的同学就惨了，没有 diff，炸了代码就废了。
 
 ## 批判华为
 
