@@ -1007,6 +1007,16 @@ const data: ComicItemType[] = [
   { id: "621429", aScore: 9.2, bScore: 7.8, info: "#兽耳 #兽尾 #巫女服 #loli #许愿", bak: "https://telegra.ph/Usacastle-うさ城まに-お願いいなば様-中国翻訳-DL版-01-08-2" },
   { id: "621302", aScore: 8.8, bScore: 7.2, info: "#蔚蓝档案 #纯爱 #浴室", bak: "https://telegra.ph/愛をこめて-イブ-この夜花は染まり-ブルーアーカイブ-中国翻訳-DL版-01-07-2" },
   { id: "621230", aScore: 8, bScore: 6.1, info: "#蔚蓝档案 #纯爱 #loli", bak: "https://telegra.ph/糖分過多-やみめ-恋人ホシノとあまとろえっちする本-ブルーアーカイブ-中国翻訳-DL版-01-07" },
+  { id: "589549", aScore: 7.5, bScore: 8, info: "#蔚蓝档案 #疯狂 #魅惑 #兽耳" },
+  { id: "596564", aScore: 6.5, bScore: 8.9, info: "#长篇 #纯爱 #魔王 #帅哥 #狂暴 #魅魔", bak: "https://telegra.ph/サゲジョー-sageジョー-ワケアリ退魔師は転生サキュバスと死を賭けた恋をする-中国翻訳-DL版-09-12-2" },
+  { id: "596161", aScore: 6.9, bScore: 8.1, info: "#触手 #出包王女 #短篇 #きょくちょ局", bak: "https://telegra.ph/サゲジョー-sageジョー-ワケアリ退魔師は転生サキュバスと死を賭けた恋をする-中国翻訳-DL版-09-12-2" },
+  { id: "495430", aScore: 6.8, bScore: 7.9, info: "#出包王女 #短篇 #きょくちょ局", bak: "https://telegra.ph/きょくちょ局-きょくちょ-えっちぃのは嫌いです-To-LOVEる-ダークネス-中国翻訳-DL版-09-10-2" },
+  { id: "595986", aScore: 7.6, bScore: 6.7, info: "#蔚蓝档案 #百合 #翅膀", bak: "https://telegra.ph/やわらかトゲロボット-うみわし-羽根の重なるふたりの距離-ブルーアーカイブ-中国翻訳-DL版-09-09" },
+  { id: "621808", aScore: 8.6, bScore: 8.3, info: "#蔚蓝档案 #媚药 #反杀", bak: "https://telegra.ph/和泉都-和水ややど-ニヤニヤ教授に敗北するかと思ったらそうでもない本-ブルーアーカイブ-中国翻訳-DL版-01-09" },
+  { id: "621764", aScore: 8.1, bScore: 8, info: "#兄妹 #loli", bak: "https://telegra.ph/創攻線-ぴざぬこ-妹とその兄による二重奏-中国翻訳-DL版-01-09" },
+  { id: "621512", aScore: 6.5, bScore: 7.9, info: "#蔚蓝档案 #媚药", bak: "https://telegra.ph/うねうねするぞ-ぢう-今世でも愛して-ブルーアーカイブ-中国翻訳-DL版-01-08" },
+  { id: "80828", aScore: 5, bScore: 9.8, info: "#简笔 #不幸 #兄妹 #写实", bak: "https://telegra.ph/コミティア101-性文化研-柳田史太-ゴツゴウ相姦-中国翻訳-01-06-2" },
+  { id: "596617", aScore: 7.3, bScore: 8, info: "#催眠 #泳装 #自慰 #优等生", bak: "https://telegra.ph/みけねこ-simao-催眠されちゃった私-中国翻訳-DL版-09-12-2" },
   // next: 4.22 - 11.1
 ].sort((x, y) => TwoScoreCompare(x, y));
 

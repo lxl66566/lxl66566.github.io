@@ -78,6 +78,7 @@ export default hopeTheme({
       "/articles/vpn.html": passwords.general,
       "/articles/telegram.html": passwords.general,
       "/gossip/wish.html": passwords.general,
+      "/hide/memories.html": passwords.general,
       "/hobbies/NSFW/videos.html": passwords.h,
       "/hobbies/NSFW/comic.html": passwords.h,
       "/hobbies/NSFW/bangumi.html": passwords.h,

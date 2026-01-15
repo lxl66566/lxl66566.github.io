@@ -6,9 +6,20 @@ const original_list: GalItemInputType[] = [
     valid_name: "死馆",
     other_names: ["濒死的骑士，于异世界中响彻的绝唱", "死馆"],
     order: 2,
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "5h2min",
+    tag: {
+      blood: true,
+      bizarre: true,
+    },
     duration: {
       start: "2026-01-09",
+      end: "2026-01-14",
+    },
+    score: {
+      story: 5,
+      visual: 8.9,
+      program: 8.8,
+      thrill: 3.8,
     },
   },
   {
@@ -866,7 +877,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 9.6,
-      visual: 8.9,
+      visual: 8.7,
       program: 6.4,
     },
   },
