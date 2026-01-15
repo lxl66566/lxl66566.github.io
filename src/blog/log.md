@@ -20,6 +20,13 @@ category:
 
 :::
 
+## 2026
+
+### 20260115
+
+- 移动 `AvTable.vue`、`ComicTable.vue` 的数据到 data 里（单独 ts file）。这是因为 vue official vscode 插件的性能较差，在编辑大 vue 文件时出现了瓶颈。
+- 添加 `.prettierrc`
+
 ## 2025
 
 ### 20251216
@@ -101,7 +108,15 @@ for (const line of s
   .split("\n")
   .map((line) => line.trim())
   .filter((line) => line)) {
-  let [name, use_time, duration, score_story, score_visual, score_program, comment] = line
+  let [
+    name,
+    use_time,
+    duration,
+    score_story,
+    score_visual,
+    score_program,
+    comment,
+  ] = line
     .trim()
     .replaceAll(/^\||\|$/g, "")
     .split("|")
@@ -109,7 +124,9 @@ for (const line of s
   const du_split = duration
     .split("-<br/>")
     .map((item) => new Date(item.trim()))
-    .map((item) => (isNaN(item.getTime()) ? undefined : item.toISOString().slice(0, 10)));
+    .map((item) =>
+      isNaN(item.getTime()) ? undefined : item.toISOString().slice(0, 10)
+    );
   const match = name.match(/\s*<OrderBadge\s*:order=(\d+)\s*\/>/);
   const order = match ? parseInt(match[1]) : undefined;
   if (match) {

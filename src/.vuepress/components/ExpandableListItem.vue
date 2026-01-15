@@ -34,7 +34,7 @@ list 中的插槽名称为 list-content，展开后的内容插槽名称为 expa
 
 <script lang="ts" setup>
 import { ref, nextTick, onMounted } from "vue";
-import debounce from "./utils/debounce";
+import debounce from "../utils/debounce";
 
 const props = defineProps<{
   /**

@@ -1,0 +1,11 @@
+{
+  "printWidth": 80,
+  "overrides": [
+    {
+      "files": ["src/.vuepress/data/comic.ts", "src/.vuepress/data/av.ts"],
+      "options": {
+        "printWidth": 10000
+      }
+    }
+  ]
+}

@@ -51,7 +51,7 @@ import "../utils/FormatDate.js";
 import GalListItem from "./GalListItem.vue";
 import { DateDurationCompare, GalItemInputType } from "../definition";
 import Fuse, { IFuseOptions } from "fuse.js";
-import debounce from "./utils/debounce";
+import debounce from "../utils/debounce";
 import ExpandableHint from "./ExpandableHint.vue";
 
 const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name;
