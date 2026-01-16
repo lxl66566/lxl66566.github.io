@@ -2,6 +2,21 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "カタネガイ",
+    other_names: ["片方的祈愿"],
+    use_time: "48min",
+    duration: {
+      start: "2026-01-15",
+      end: "2026-01-15",
+    },
+    score: {
+      story: 3.1,
+      visual: 8,
+      program: 0,
+      thrill: 0,
+    },
+  },
+  {
     name: "死に逝く騎⼠、異世界に響く断末魔",
     valid_name: "死馆",
     other_names: ["濒死的骑士，于异世界中响彻的绝唱", "死馆"],
@@ -868,7 +883,10 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "奇异恩典 -What color is your attribute?-",
-    other_names: ["Amazing Grace", "アメイジング・グレイス -What color is your attribute?-"],
+    other_names: [
+      "Amazing Grace",
+      "アメイジング・グレイス -What color is your attribute?-",
+    ],
     valid_name: "奇异恩典Whatcolorisyourattribute",
     use_time: "21h3min",
     duration: {
@@ -1654,7 +1672,8 @@ const original_list: GalItemInputType[] = [
   {
     name: "ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか",
     other_names: ["为主人献上圣罗的甜蜜侍奉"],
-    valid_name: "ご主人様セイラに夢みたいないちゃラブご奉仕させていただけますか",
+    valid_name:
+      "ご主人様セイラに夢みたいないちゃラブご奉仕させていただけますか",
     use_time: "3h10min",
     score: {
       story: 2.4,
