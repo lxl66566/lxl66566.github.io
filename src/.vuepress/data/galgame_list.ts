@@ -2,6 +2,12 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "Ever17",
+    duration: {
+      start: "2026-01-16",
+    },
+  },
+  {
     name: "カタネガイ",
     other_names: ["片方的祈愿"],
     use_time: "48min",
@@ -140,7 +146,7 @@ const original_list: GalItemInputType[] = [
     other_names: ["恋狱月狂病", "カルタグラ～ツキ狂イノ病～"],
     tag: {
       blood: true,
-      bizarre: true,
+      thrill: true,
     },
     playing_status: PlayingStatus.PLAYING,
     use_time: "-1min",

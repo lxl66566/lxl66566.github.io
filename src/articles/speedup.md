@@ -1274,6 +1274,8 @@ MMDevAPI 基本是无法完成这个需求的，因为 MMDevAPI 拿到的一般�
 - krkr 里 SE 的判定也比较难，之前的时域分析会将其判为 voice；而在 buffer 延长的机制下要通过时长判断 SE 更加困难。
 - 在 krkr 的场合，SPEEDUP 效果无法达到预期，最多只能进行 2x 播放（这是已知问题，之前 dsound 的加速上限就是 2。）。所以一段 10s 的语音要等 5s 才能播放出来，如果此时跳转下一句就又被切断了。这是无法接受的。
 
+在 Ever17（MAGES. Engine 引擎）里，每个语音都会经历 SetVolume(-10000)（静音）、Play()、恢复音量的过程。这样的话原先的方案又用不了了。
+
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";
 </script>
