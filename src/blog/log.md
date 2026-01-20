@@ -22,6 +22,10 @@ category:
 
 ## 2026
 
+### 20260120
+
+- 搜索接入 algolia
+
 ### 20260115
 
 - 移动 `AvTable.vue`、`ComicTable.vue` 的数据到 data 里（单独 ts file）。这是因为 vue official vscode 插件的性能较差，在编辑大 vue 文件时出现了瓶颈。

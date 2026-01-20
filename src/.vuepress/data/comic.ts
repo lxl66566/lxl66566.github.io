@@ -979,5 +979,7 @@ export default [
   { id: "621512", aScore: 6.5, bScore: 7.9, info: "#蔚蓝档案 #媚药", bak: "https://telegra.ph/うねうねするぞ-ぢう-今世でも愛して-ブルーアーカイブ-中国翻訳-DL版-01-08" },
   { id: "80828", aScore: 5, bScore: 9.8, info: "#简笔 #不幸 #兄妹 #写实", bak: "https://telegra.ph/コミティア101-性文化研-柳田史太-ゴツゴウ相姦-中国翻訳-01-06-2" },
   { id: "596617", aScore: 7.3, bScore: 8, info: "#催眠 #泳装 #自慰 #优等生", bak: "https://telegra.ph/みけねこ-simao-催眠されちゃった私-中国翻訳-DL版-09-12-2" },
+  { id: "624262", aScore: 8.7, bScore: 8, info: "#全彩 #侄女", bak: "https://telegra.ph/ミルクセーキ工房-ミルクセーキ-悪い子との不器用でえっちな共同生活-中国翻訳-DL版-01-19-3" },
+  { id: "624080", aScore: 8.7, bScore: 9.7, info: "#长篇 #蔚蓝档案 #药物 #长发 #旗袍 契薬交唇", bak: "https://telegra.ph/C107-鳩小屋-鳩春-契薬交唇-ブルーアーカイブ-中国翻訳-01-19-7" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

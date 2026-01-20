@@ -256,6 +256,8 @@ ipconfig /flushdns
 
 ## 炼金
 
+> 2025 年末期以后，不建议任何玩家炼金。V 社吃相难看，且饰品为 V 社一言堂，风险过高。
+
 和开箱一样，炼金也是一个运气游戏，但是炼金的期望是正的，因此更多地受到理性玩家的追捧。
 
 因为 V 社的脑残限制，玩炼金在购入材料后需要等待 8 天，也就是等待“丹成”的时间。这里又会出现问题：对于一个好的配方，8 天后其原材料价格很可能上涨。所以在正式开炉之前，还需要重新评估一次原材料和产物的价格，重新计算期望/成本比。这样也诞生了另一个玩法，就是狂收材料以后去配方广场/B 站/QQ 群发布配方，等原材料上涨后再出手，赚的就是其他炼金师的钱，也是相当有意思的。
@@ -265,6 +267,58 @@ ipconfig /flushdns
 炼金遵循一个固定的公式，所有产物都是确定性的。
 
 BUFF 上有汰换模拟功能，可以比较方便地计算收益；甚至还有配方广场可以看别人的配方，虽然配方广场大部分都是垃圾。BUFF 也没有出一个屏蔽发布者的功能，还是比较遗憾的。
+
+之前想做一个自动分析炼金配方的系统，卡在了数据收集上（炼金计算需要每个饰品的精确磨损数据，这个非常重要，但是几乎所有的 API 都无法批量查询饰品磨损）。后来退坑就不做了。
+
+## 奇技淫巧
+
+我曾使用 AHK 脚本，边打 csgo 边推 galgame。将 galgame 窗口放在第二块屏幕中间，游戏里按 F 键就可以推进 galgame 进度。当然由于这样没法用我的 GalgameManager 统计时长，后来就放弃了，Alt + Tab 切屏我也能接受。
+
+```ahk
+#Requires AutoHotkey v2.0
+
+; 按下 F 键时触发
+
+^f::
++f::
+!+f::
+~f:: {
+    ; 1. 检查是否有第二个显示器
+    if MonitorGetCount() < 2 {
+        ToolTip("未检测到第二个显示器")
+        SetTimer () => ToolTip(), -2000
+        return
+    }
+
+    ; 2. 获取第二个显示器的边界坐标
+    ; 通常主屏是 1，副屏是 2
+    MonitorGet(2, &Left, &Top, &Right, &Bottom)
+
+    ; 3. 计算中心点坐标 (屏幕坐标系)
+    CenterX := Left + (Right - Left) // 2
+    CenterY := Top + (Bottom - Top) // 2
+
+    ; 4. 获取该坐标点下的窗口句柄 (HWND)
+    ; WindowFromPoint 需要将坐标打包成一个 64 位整数
+    Point := (CenterY << 32) | (CenterX & 0xFFFFFFFF)
+    hWnd := DllCall("WindowFromPoint", "Int64", Point, "Ptr")
+
+    if !hWnd
+        return
+
+    ; 5. 将屏幕绝对坐标转换为相对于该窗口的坐标
+    ; 因为 ControlClick 在后台模式下通常使用窗口相对坐标
+    WinGetPos(&WinX, &WinY, , , "ahk_id " hWnd)
+    RelX := CenterX - WinX
+    RelY := CenterY - WinY
+
+    ; 6. 发送后台点击
+    ; "NA" 参数非常重要：它告诉系统不要激活该窗口
+    try {
+        ControlClick("x" RelX " y" RelY, "ahk_id " hWnd, , "LEFT", 1, "NA")
+    }
+}
+```
 
 ## external
 
