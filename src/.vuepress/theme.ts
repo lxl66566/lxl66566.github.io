@@ -1,4 +1,3 @@
-import { cut } from "nodejs-jieba";
 import { hopeTheme } from "vuepress-theme-hope";
 import { path } from "vuepress/utils";
 import navbar from "./navbar.js";
@@ -107,15 +106,20 @@ export default hopeTheme({
     blog: {
       excerptLength: 1,
     },
-    slimsearch: {
-      indexContent: true,
-      suggestion: true,
-      searchDelay: 500,
-      indexOptions: {
-        // 使用 nodejs-jieba 进行分词
-        tokenize: (text, fieldName) => (fieldName === "id" ? [text] : cut(text, true)),
-      },
+    docsearch: {
+      appId: "UMGMTUUIFU",
+      apiKey: "6e1820d0f954590466468855790a2440",
+      indexName: "algolia",
     },
+    // slimsearch: {
+    //   indexContent: true,
+    //   suggestion: true,
+    //   searchDelay: 500,
+    //   indexOptions: {
+    //     // 使用 nodejs-jieba 进行分词
+    //     // tokenize: (text, fieldName) => (fieldName === "id" ? [text] : cut(text, true)),
+    //   },
+    // },
     photoSwipe: true,
     icon: {
       assets: "fontawesome-with-brands",

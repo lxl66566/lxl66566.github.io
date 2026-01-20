@@ -10,7 +10,9 @@ const temp = defineUserConfig({
   lang: "zh-CN",
   title: "绝对值_x 的博客",
   description: "没什么有价值的内容的，真的！",
-  head: [],
+  head: [
+    ["meta", { name: "algolia-site-verification", content: "AECBB8F3F5B248CE" }],
+  ],
   theme,
   plugins: [
     removePwaPlugin({}),
