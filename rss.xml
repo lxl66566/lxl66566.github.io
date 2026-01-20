@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 18 Jan 2026 02:43:44 GMT</pubDate>
-    <lastBuildDate>Sun, 18 Jan 2026 02:43:44 GMT</lastBuildDate>
+    <pubDate>Tue, 20 Jan 2026 15:22:08 GMT</pubDate>
+    <lastBuildDate>Tue, 20 Jan 2026 15:22:08 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>随笔</category>
@@ -664,11 +664,7 @@
 <ul>
 <li>玩策略不用太纠结于两三天的得失，至少也得等 10 天后再看收益。当然，如果策略的杠杆开比较高（10x-20x），可以经常看看 <em>预估强平价</em>，跟币价波动做个对比，如果感觉怕了就补点保证金。</li>
 <li>如果做小币种网格，还可以把等差网格换成等比网格，进一步降低风险。</li>
-<li>
-<blockquote>
-<p>20250203 ETH 暴跌 30%，把我爆了。所以之后我更加注意杠杆倍率和网格区间，更愿意做小倍率宽区间网格，并且配合马丁格尔预设兜底回血。</p>
-</blockquote>
-</li>
+<li>20250203 ETH 暴跌 30%，把我爆了。所以之后我更加注意杠杆倍率和网格区间，更愿意做小倍率宽区间网格，并且配合马丁格尔预设兜底回血。</li>
 </ul>
 </li>
 </ul>
@@ -1435,10 +1431,10 @@
   <!-- 圆 X -->
   <circle cx="100" cy="100" r="60" fill="skyblue" fill-opacity="0.5"></circle>
   <text x="60" y="100" font-size="12" fill="red">H(X|Y)</text>
-  <!-- 圆 Y -->
-<circle cx="160" cy="100" r="60" fill="orange" fill-opacity="0.5"></circle><text x="180" y="100" font-size="12" fill="red">H(Y|X)</text>  <!-- 重叠区域 I(X; Y) -->
-<text x="125" y="100" font-size="12" fill="red">I(X;Y)</text>  <!-- 联合熵 H(X, Y) -->
-<text x="120" y="40" font-size="12" fill="red">H(X, Y)</text>  <!-- 条件熵 H(X|Y) 和 H(Y|X) -->
+<!-- 圆 Y -->
+<circle cx="160" cy="100" r="60" fill="orange" fill-opacity="0.5"></circle><text x="180" y="100" font-size="12" fill="red">H(Y|X)</text><!-- 重叠区域 I(X; Y) -->
+<text x="125" y="100" font-size="12" fill="red">I(X;Y)</text><!-- 联合熵 H(X, Y) -->
+<text x="120" y="40" font-size="12" fill="red">H(X, Y)</text><!-- 条件熵 H(X|Y) 和 H(Y|X) -->
 <text x="50" y="150" font-size="12" fill="red">H(X)</text><text x="180" y="150" font-size="12" fill="red">H(Y)</text></svg>
 <h2>信道</h2>
 <h3>模型</h3>
