@@ -6,6 +6,12 @@
       "options": {
         "printWidth": 10000
       }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "parser": "markdown"
+      }
     }
   ]
 }

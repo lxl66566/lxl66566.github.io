@@ -47,13 +47,24 @@ scoop install corretto8-jdk
 
 ### vscode
 
-如果只是写一些 java 单文件，跑跑学校的课程，vscode 是完全够用的。`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序就行。
+如果只是写一些小项目，比如跑跑学校的课程，并且不需要多人协作，vscode 是完全够用的。`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序就行。
 
-在 vscode 扩展商店搜 `java`，直接装整个捆绑包：_Extension Pack for Java_，然后就能跑了。也可以不全部安装，自己选扩展，理论上只需要 LSP 即可。
+在 vscode 扩展商店搜 `java`，直接装 _Language Support for Java(TM) by Red Hat_ 即可，这是最老牌、兼容性最好的 java 插件，用来分析大项目也是没啥问题的。
 
-包管理器（gradle）就 `scoop install gradle` 一行完事。
+- 不要装 Apache NetBeans，这玩意不是生产可用的。
+- Red Hat 这个插件在跳转的时候会比 idea慢一些，我猜测它是 lazy 的，打开项目时不会提前建立索引，而是在跳转时才分析。
+
+#### formatter
+
+使用 vscode 做 java 大项目的一大痛点是 formatter。别人都在用 idea 进行格式化，而 idea 的 formatter 是闭源的，如果用自己的 formatter，代码风格和别人的无法兼容。
+
+目前来说，和 idea formatter 兼容性最高的还是原生 _Language Support for Java(TM) by Red Hat_，但是需要让使用 idea 的其他开发把 code format 导出为 Eclipse XML Profile，然后在 vscode 插件里指定。（）
+
+- [a-havrysh/vscode-intellij-code-formatter](https://github.com/a-havrysh/vscode-intellij-code-formatter) 是个新代码库，到我写出这段文字的时候该仓库还是 0 star。~~看到 commit 信息里有名为 claude 菊花我就浑身难受~~，试用了下，果然难受，即使我指定了 idea 导出的 XML 格式化文件，它的格式化行为也和 idea 是不一致的。
 
 ### idea
+
+> 但凡有半点选择，我都不会用 idea，因为它作为一个编辑器实在是[太烂了](../gossip/fuckxxx.md#jetbrains-系列)。。。
 
 vscode 的 java 扩展很弱鸡的，没法满足复杂的开发需求。如果是已有的 java 项目或者需要进行复杂项目开发，那么 idea 就是必要的了。idea 有社区版，这个是免费的，不需要破解，理论上也够用，没必要给 jb 送钱。
 
@@ -66,20 +77,41 @@ vscode 的 java 扩展很弱鸡的，没法满足复杂的开发需求。如果�
    - 即使把 vscode 的 vim 插件同步过来，vscode 的 vim 配置也不会同步到 ideavim。很多键位也是需要改的，比如我保留了许多编辑器自己的行为而不是 vim 行为。然后还需要修改 `~/.ideavimrc` 的设置。
      ```
      " 双引号是注释
+     set nocompatible           " 关闭vi兼容模式
      set clipboard+=unnamedplus " 复制粘贴时同时复制到剪贴板
-     set nocompatible " 关闭vi兼容模式
+     set incsearch              " 搜索时实时高亮
+     set hlsearch               " 高亮搜索结果
+     set ignorecase             " 搜索忽略大小写
+     set smartcase              " 如果搜索包含大写，则不忽略大小写
      vnoremap <C-c> "+y " 将 Visual 模式下的 Ctrl+c 映射为复制到系统剪贴板
+     " 删除相关
+     nnoremap x "_x
+     vnoremap x "_x
+     snoremap x <C-g>"_x
+     nnoremap d "_d
+     vnoremap d "_d
+     snoremap d <C-g>"_d
+     nnoremap D "_D
      " select mode 相关
-     set selectmode+=mouse
      set keymodel^=startsel
-     set selectmode+=key
-     snoremap <LeftMouse> <LeftMouse>i " 在 Select 模式下点击鼠标 -> 进入 Insert 模式
+     set selectmode+=mouse,key
+     set idearefactormode=keep
+     vnoremap <BS> "_c
+     snoremap <BS> <C-g>"_c
+     vnoremap <Del> "_c
+     snoremap <Del> <C-g>"_c
      ```
    - 取消绑定所有 Ctrl + w，只保留 `窗口 -> 编辑器标签页 -> 编辑器关闭操作 -> 关闭标签页`。否则在终端里使用 Ctrl + w 会关闭终端。
 5. 为所有文件开启软换行。
 6. 关闭 _分支切换时还原工作区_，没啥必要，又没开几个面板
 
 如果 idea 以管理员运行，则插件也会获得管理员权限，而插件的行为不是我们能控制的，所以最好不要以管理员运行 idea。
+
+### gradle
+
+`scoop install gradle` 一行完事。
+
+- 但是很多项目有自己的 gradle 版本要求。如果运行 `./gradlew build`，脚本会帮你下载对应版本，而且下载得还贼慢。。。<heimu>不会做下载器就别做。</heimu> 此时需要自己下载，然后把整个 zip 放到 `C:\Users\<用户名>\.gradle\wrapper\dists\gradle-版本-bin\<一串随机乱码>\` 下。
 
 ## 语言基础
 
@@ -141,6 +173,9 @@ java 7 之后还可以使用 [try-with-resource](https://github.com/Jueee/effect
 基础的就不说了。这里随便记一些。
 
 - 类代码块：class 里可以写一段 `static { ... }` 静态代码块，内部的代码会在类初始化时执行（构造之前、访问 static 成员之前），有一点点像 Rust LazyLock。如果写 `{ ... }` 就是实例代码块，每次创建实例时都执行。
+- 如果要处理 interface，downcast 到不同的 class：
+  - java 8 只能 if (xxx instanceof xxx) 判断然后强转。
+  - java 21 可以 switch。
 
 ### 包装类
 
@@ -159,6 +194,7 @@ java 8 引入的匿名函数。`(parameter1, parameter2) -> expression`，expres
 泛型在实现上基于类型擦除，是因为泛型出现时大量的代码没有使用泛型，需要保证和老代码的可交互性。这意味着泛型只在编译期存在，运行期不存在，使用 Jackson 等进行反序列化的时候需要添加 TypeReference。
 
 - 泛型不支持基本类型，只能用包装类。
+- 泛型不可变，比如我不能将 `List<T>` 转为 `List<I>`，即使 T implements I。必须新建一个 List，然后强转过去（构造函数强转）。
 
 ### Stream
 
@@ -185,6 +221,8 @@ Stream.of(1,2,3).mapToInt(Integer::intValue).average().getAsDouble();           
 Stream.of(1,2,3).sorted();                                                      // 排序（升序）
 Stream.of(1,2,3).sorted(Comparator.reverseOrder());                             // 排序（降序）
 ```
+
+- `collect(Collectors.toMap(...))` 是超级大坑，toMap 不允许 Value 为 null，否则会直接报 NPE。如果可能为空，需要用 `collect(HashMap::new, (m, v) -> m.put(v.getId(), v.getNote()), HashMap::putAll);`。
 
 #### Intstream
 
@@ -228,6 +266,15 @@ class account implements Serializable {}    // 继承接口
 最常用的 json 序列化库，Spring 默认。
 
 - 自定义序列化函数：使用 `@JsonValue` 自定义序列化过程，使用 `@JsonCreator` 自定义反序列化过程。对于 enum，这个是比较常用的。
+- 如果希望一个 json object 根据其 keys，可以反序列化到两种不同的 class：使用一个 interface 和 deduction。
+  ```java
+  @JsonTypeInfo(use = JsonTypeInfo.Id.DEDUCTION)
+  @JsonSubTypes({
+      @JsonSubTypes.Type(value = Class1.class),
+      @JsonSubTypes.Type(value = Class2.class)
+  })
+  public interface ObjectItem {}
+  ```
 
 ## swing
 
@@ -291,6 +338,8 @@ Lombok 是一个业务开发必备库，作用是在编译时通过注解自动�
 - `@RequiredArgsConstructor`：为所有 final 字段或 @NonNull 字段生成一个 Constructor。
 - `@NoArgsConstructor`：生成一个什么也不做的 Constructor。不允许在有 final 字段的类里使用；如果要使用需要用 `@NoArgsConstructor(force = true)`，可以将其初始化为 default 值。
 - `@AllArgsConstructor`：生成一个包含类中所有字段作为参数的 Constructor。字面意思。
+- `@Builder`：builder 模式，不多说。
+- `@SuperBuilder(toBuilder = true)`：如果父类实现了 `@SuperBuilder`，则子类也可以用 builder。注意不能和 `@Builder` 混用。
 
 注解中再包含其他注解需要使用 `@__` 语法。一个最常用的例子是 `@RequiredArgsConstructor(onConstructor = @__({@Autowired}))`，在生成 Constructor 的同时将其标为 `@Autowired`。
 
@@ -324,10 +373,14 @@ uri 一般是 `/{context-path}/{Class-Mapping}/{Method-Mapping}` 形式。
 
 Swagger 有 v2 和 v3 两个版本，看 import 能看出项目使用的是哪个版本。v3 版本在 import 语句里一定包含 `v3.` 字样。
 
-这里简单列举几个常用的，其他的搜吧。
+#### v2
 
+随便记点。
+
+- 对于 `@XXX("xxx")`，一般等价于 `@XXX(value = "xxx")`。如果括号内有多个 kv，必须显式写 `value =`。
 - `@ApiModel`：将 class 或 enum 设为请求参数 / 响应类型。
 - `@ApiModelProperty`：修饰 ApiModel 的成员。
+- swagger v2 对 interface 的支持不太好，例如两个 class 实现了同一个接口，然后对这个接口做反序列化，swagger 不会自动关联到这两个类。有点致命。
 
 ### Mybatis
 

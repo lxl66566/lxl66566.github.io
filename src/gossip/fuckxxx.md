@@ -94,6 +94,7 @@ tag:
   - ps. python setuptools 可能只读环境变量（`HTTP_PROXY`）而不读 windows 下的系统代理。
 
 [^3]: 遇到了不少 py 写的 install script，不读系统代理，不能配置代理，不做错误处理，不具有可读性。真的难绷 😅 ([src](https://t.me/withabsolutex/1304))
+
 [^4]: 一个 customtkinter + matplotlib 项目，朋友遇到打包问题问我。pyinstaller 打出来 200M，运行不了，我教他用 nuitka，他在 windows 下打出了 **1.2G** 的好成绩。
 
 ### Clojure 有多难用
@@ -203,7 +204,7 @@ tag:
 - conflict solve 界面一坨屎，不能最大化，三列的设计不如 vscode 的左右下设计。
 - ideavim 垃圾，所有设置项就只有解决与 IDE 快捷键冲突的了。。什么加 bindings 啥的都得写 `~/.ideavimrc`。
   - reload 得用 idea 打开 `~/.ideavimrc` 才能 reload。没有其他的 GUI 方法。
-  - 在 select 状态下单击鼠标，没法保持在 insert，会直接跳回 normal。我尝试了各种各样的 `.ideavimrc` 配置都无法改变这个行为。
+  - 从 insert 模式用鼠标进入 select，然后单击鼠标，没法保持在 insert，会直接跳回 normal。这个是 ideavim 最恶心最卡手的地方，我尝试了各种各样的 `.ideavimrc` 配置都无法改变这个行为。
 - Terminal 大便一坨。
   - NixOS 上调 atuin 就报 `` Error: failed to create file `/etc/nixos/config/atuin.key` ``，但是我在其他 IDE 的 terminal 就没有任何问题。
   - 我打开终端想按 Ctrl + w，Ctrl + c，这些默认都不会被发给终端。。。我就算在 _keymap：插件 -> 终端_ 里把终端快捷键全部取消，也没法在 Ctrl + w 时不关闭终端。

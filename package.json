@@ -8,7 +8,8 @@
     "build": "vuepress-vite build src",
     "clean-dev": "vuepress-vite dev src --clean-cache",
     "dev": "vuepress-vite dev src",
-    "update-package": "npx vp-update"
+    "update-package": "npx vp-update",
+    "format": "prettier --write \"**/*.{js,ts,tsx,md,json,html,css,less,scss,gql,graphql}\""
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.20",
@@ -24,6 +25,7 @@
     "katex": "0.16.22",
     "mermaid": "11.6.0",
     "nodejs-jieba": "^0.3.0",
+    "prettier": "^3.8.0",
     "sass-embedded": "^1.86.3",
     "typescript": "5.8.3",
     "vue": "3.5.13",
@@ -36,8 +38,8 @@
       "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest"
     }
   },
-  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
   "dependencies": {
     "fuse.js": "^7.1.0"
-  }
+  },
+  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
 }
