@@ -9,7 +9,7 @@
     "clean-dev": "vuepress-vite dev src --clean-cache",
     "dev": "vuepress-vite dev src",
     "update-package": "npx vp-update",
-    "format": "prettier --write \"**/*.{js,ts,tsx,md,json,html,css,less,scss,gql,graphql}\""
+    "format": "prettier --write \"**/*.{js,ts,tsx,md,json,css,less,scss,gql,graphql}\""
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.20",
