@@ -7,7 +7,7 @@ declare global {
   }
 }
 
-Date.prototype.formatDate = function (): string {
+Date.prototype.formatDate = function(): string {
   return this.toISOString().slice(0, 10);
 };
 

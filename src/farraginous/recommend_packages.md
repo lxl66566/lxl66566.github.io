@@ -142,7 +142,7 @@ Google Play 是最广泛使用的包管理器。但是这玩意太商业化了�
 - [gkd](https://github.com/gkd-kit/gkd)：开源去广告，规则订阅制度，Material UI。看着不错，但是两个排名最前面的规则集在 20250210 archived 了，不再更新。
 - [李跳跳](https://t.me/apkrxwy/927) | [bak](https://wwkh.lanzout.com/iokl61e21oha)（**闭源！**）：跳广告，比 AdAway 好用。软件离线使用，不再更新。~~腾讯封杀，必属精品~~
 - ~~[AdAway](https://github.com/AdAway/AdAway)：改 host 屏蔽广告。经常需要手动添加屏蔽项，而且经常无法触发，纯纯垃圾。~~
-    <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
+  <!-- * 可以在 *首选项 - 基于 root... - 安装自签名证书*，以避免 Android 系统的 WIFI 认证 -->
 
 ### ZArchiver
 
@@ -220,6 +220,7 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 :::
 
 [^6]: scoop 的宗旨是每个软件都携带其所有运行库([ref](https://github.com/ScoopInstaller/Scoop/wiki/Dependencies))。这样的做法在 windows 上极为普遍，然而包管理器的基本要求就是减少重复依赖。
+
 [^7]: 我提的[恶性 bug](https://github.com/ScoopInstaller/Scoop/issues/5808)
 
 说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
@@ -330,8 +331,7 @@ windows 设置小工具，集成了一些高级功能（特别对我这种被迫
   return false
   ```
 
-[^5]:
-    浏览器复制汉字时会自动转义为 `%..` 格式，而不全复制（例如不复制第一个 `h`，只从 `ttp` 开始复制）可以保护这些汉字不被转义。
+[^5]: 浏览器复制汉字时会自动转义为 `%..` 格式，而不全复制（例如不复制第一个 `h`，只从 `ttp` 开始复制）可以保护这些汉字不被转义。
     另外，我有一个工具（[urldecoder](https://github.com/lxl66566/urldecoder)）可以应对转义问题，从此我再也不需要复制网址时少复制一个 `h` 了。
 
 ### [EnergyStarX](https://github.com/JasonWei512/EnergyStarX)
@@ -541,6 +541,7 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 ### [Seal](https://github.com/JunkFood02/Seal)
 
 开源的视频下载 app，Android 端的选择。但是它的内核就是 [yt-dlp](#yt-dlp)，为什么不用电脑的 yt-dlp 呢？[^1]
+
 [^1]: 毕竟我是重度电脑使用者
 
 ### [HiNative](https://zh.hinative.com/)
@@ -609,6 +610,7 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 ### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
 
 强大的数据监视/性能修改应用。建议配合 ADB & root 食用。但是呢，该应用是商业化的收费闭源软件，不充值是无法使用 root 后的功能的。目前其**全功能**均可使用其他软件替代[^4]。因此弃用。
+
 [^4]: [log](https://t.me/withabsolutex/1260)
 
 - 如若确实需要，可以找它的最后一个免费版本使用。

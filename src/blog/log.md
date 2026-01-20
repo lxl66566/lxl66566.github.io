@@ -104,10 +104,12 @@ category:
 content.replaceAll(/\d{4}\.\d{2}\.\d{2}/g, (date) => date.replaceAll(".", "-"));
 const cleanUndefined = (object: any) => JSON.parse(JSON.stringify(object));
 const list: GalItemType[] = [];
-for (const line of s
-  .split("\n")
-  .map((line) => line.trim())
-  .filter((line) => line)) {
+for (
+  const line of s
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line)
+) {
   let [
     name,
     use_time,
@@ -124,9 +126,7 @@ for (const line of s
   const du_split = duration
     .split("-<br/>")
     .map((item) => new Date(item.trim()))
-    .map((item) =>
-      isNaN(item.getTime()) ? undefined : item.toISOString().slice(0, 10)
-    );
+    .map((item) => isNaN(item.getTime()) ? undefined : item.toISOString().slice(0, 10));
   const match = name.match(/\s*<OrderBadge\s*:order=(\d+)\s*\/>/);
   const order = match ? parseInt(match[1]) : undefined;
   if (match) {
@@ -673,7 +673,7 @@ console.log(proc);
 ### 20221129
 
 - 更新 _初级科学上网_ [（现 VPN）](../articles/proxy/vpn.md) 并更改排版
-- 维护*我的回忆录-大二*
+- 维护_我的回忆录-大二_
 - 小维护：[关于作者](../gossip/author.md)及其子页面、[编程-Git](../coding/Git.md)页面
 
 ### 20221125
@@ -721,7 +721,7 @@ console.log(proc);
 
 ### 20221003
 
-- 新增[编程-Python](../coding/python.md)页面，且整合了原*其他工具* 页面并更改排版。
+- 新增[编程-Python](../coding/python.md)页面，且整合了原_其他工具_ 页面并更改排版。
 
 ### 20220930
 
@@ -782,7 +782,7 @@ console.log(proc);
 
 ### 20220827
 
-- 将博客内*长日期格式* 从`2022/08/27`统一为`20220827`样式
+- 将博客内_长日期格式_ 从`2022/08/27`统一为`20220827`样式
 
 ### 20220824
 
@@ -922,7 +922,7 @@ console.log(proc);
 
 ### 20220617
 
-- 新增 [游戏-音游](../hobbies/rhythm_games.md)、闲聊#QQ 有多难用（已合并为*xxx 有多难用*）
+- 新增 [游戏-音游](../hobbies/rhythm_games.md)、闲聊#QQ 有多难用（已合并为_xxx 有多难用_）
 
 ### 20220616
 

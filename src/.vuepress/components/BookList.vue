@@ -11,8 +11,12 @@
           </tr>
         </thead>
         <tbody :class="{ 'not-show-network': !show_network }">
-          <BookListItem v-for="item in defaultSort(original_list)" :key="item.name + item.order + item.nth_time"
-            :item="item" :expandable="useSlots()[get_valid_name(item)] != undefined">
+          <BookListItem
+            v-for="item in defaultSort(original_list)"
+            :key="item.name + item.order + item.nth_time"
+            :item="item"
+            :expandable="useSlots()[get_valid_name(item)] != undefined"
+          >
             <template #book-list-item-content>
               <slot :name="get_valid_name(item)"></slot>
             </template>
@@ -25,11 +29,11 @@
 
 <script lang="ts" setup>
 import { ref, useSlots } from "vue";
-import MyCheckBox from "./MyCheckBox.vue";
 import original_list from "../data/book_list.js";
+import MyCheckBox from "./MyCheckBox.vue";
 import "../utils/FormatDate.js";
+import { BookDuration, BookItemInputType } from "../definition";
 import BookListItem from "./BookListItem.vue";
-import { BookItemInputType, BookDuration } from "../definition";
 import ExpandableHint from "./ExpandableHint.vue";
 
 const get_valid_name = (item: BookItemInputType): string => item.valid_name ?? item.name;

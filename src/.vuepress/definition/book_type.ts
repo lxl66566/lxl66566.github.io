@@ -9,9 +9,9 @@ export type ReadingStatus =
 
 export type BookDuration =
   | {
-      start?: string;
-      end?: string;
-    }
+    start?: string;
+    end?: string;
+  }
   | string;
 
 // 黄色程度

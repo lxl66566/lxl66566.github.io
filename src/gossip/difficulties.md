@@ -150,6 +150,7 @@ ps. 后续：不用 pt 站了，也不用 clash for windows 而改用 clash verg
 
 尝试 1：在 clash Mixin Yaml 中添加：
 
+<!-- prettier-ignore -->
 ```yaml
 mixin:
   ipv6: true
@@ -168,6 +169,7 @@ mixin:
 
 尝试 2：在 clash - Settings - System Proxy - Bypass Domain/IPNet 中添加：
 
+<!-- prettier-ignore -->
 ```yaml
 bypass:
   - pt6.neko2022.com
@@ -192,7 +194,6 @@ bypass:
   ![fuckhyperv](/images/gossip/difficulties/fuckhyperv.png)
 
   尝试：
-
   - 使用其他系统 iso ：出现`Start PXE over IPv4`，键盘仍然无法使用。
   - 使用`vmguest.iso`：同上。
   - 关闭安全启动、关闭网络、其他设置：无效。

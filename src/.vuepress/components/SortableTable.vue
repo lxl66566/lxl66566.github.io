@@ -29,15 +29,14 @@
 </template>
 
 <script lang="ts" setup>
+import type { AvItemType } from "../definition";
 import Av from "./Av.vue";
 import dtlslong from "./dtlslong.vue";
-import type { AvItemType } from "../definition";
 
 const props = defineProps({
   rows: {
     type: Array<AvItemType>,
     required: true,
   },
-})
-
+});
 </script>

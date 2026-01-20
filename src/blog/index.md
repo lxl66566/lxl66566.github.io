@@ -54,9 +54,13 @@ category:
 不知不觉直接或间接地带动了这么多人写，连我自己都觉得惊讶。
 
 [^1]: [dream_oyh 的 blog](https://dream-oyh.github.io/)
+
 [^2]: [Lilic 的博客](https://lilic2233.github.io/)
+
 [^3]: [Perry Kum's Personal Blog](https://perrykum.github.io/)
+
 [^4]: [Sin 的博客](https://bear-sin.github.io/)
+
 [^5]: [Lry722 的博客](Lry722.github.io)
 
 ## 工具选择

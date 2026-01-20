@@ -320,10 +320,10 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 ### 其他推荐
 
 - ~~护眼软件：[f.lux](../farraginous/recommend_packages.md#flux)~~
-  > 由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的 osu 皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu 运行时会自动屏蔽 win10 的夜间模式，但 f.lux 可以无视这个屏蔽（win10 不稳定，win11 稳定），强制护眼，我还是觉得很舒服的。平时玩电脑也是常开的。  
+  > 由于我在家的房间采光极差，白天跟傍晚的光线差不多，而我用的 osu 皮肤是蓝白钉皮，非常刺眼，因此我使用这款护眼软件。osu 运行时会自动屏蔽 win10 的夜间模式，但 f.lux 可以无视这个屏蔽（win10 不稳定，win11 稳定），强制护眼，我还是觉得很舒服的。平时玩电脑也是常开的。\
   > 不过现在的 win 11 已经没有这个问题了，因此不需要。
 - 谱面下载：[Ranked 地图下载器.exe](https://osu.sayobot.cn/software)
-  > 只能按 ranked 时间下载，且不可选择 key 数。但它已经是我用过的最好用的谱面下载器了。  
+  > 只能按 ranked 时间下载，且不可选择 key 数。但它已经是我用过的最好用的谱面下载器了。\
   > 仅限 legacy osu，lazer 下载器暂时未知。
 - 键数记录：[osu-kps](https://github.com/UnnamedOrange/osu-kps)，具有 kps 图表与键数记录。当然，它甚至还能在 osu 的 replay 中记录键数。
 - 夹带私货：我写的[自动调整 mania 皮肤水平位置](https://github.com/lxl66566/osu-ColumnStart-adjustor)的脚本。

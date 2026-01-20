@@ -1,0 +1,11 @@
+{
+  "lineWidth": 10000,
+  "typescript": {
+    "indentWidth": 2
+  },
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.95.13.wasm",
+    "https://plugins.dprint.dev/g-plane/malva-v0.15.2.wasm",
+    "https://plugins.dprint.dev/g-plane/markup_fmt-v0.25.3.wasm"
+  ]
+}

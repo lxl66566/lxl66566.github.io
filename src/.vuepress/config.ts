@@ -1,8 +1,8 @@
+import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
+import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
 import theme from "./theme.js";
-import { removePwaPlugin } from "@vuepress/plugin-remove-pwa";
-import { googleAnalyticsPlugin } from "@vuepress/plugin-google-analytics";
 
 const __dirname = getDirname(import.meta.url);
 const temp = defineUserConfig({

@@ -1678,8 +1678,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "ご主人様、セイラに夢みたいないちゃラブご奉仕させていただけますか",
     other_names: ["为主人献上圣罗的甜蜜侍奉"],
-    valid_name:
-      "ご主人様セイラに夢みたいないちゃラブご奉仕させていただけますか",
+    valid_name: "ご主人様セイラに夢みたいないちゃラブご奉仕させていただけますか",
     use_time: "3h10min",
     score: {
       story: 2.4,

@@ -20,7 +20,7 @@
               <a :href="row.otherlink" target="_blank">{{ row.id }}</a>
             </span>
             <span v-if="row.bak"> | <a :href="row.bak" target="_blank">bak</a></span>
-            <OrderBadge v-if="row.order" :order=row.order />
+            <OrderBadge v-if="row.order" :order="row.order" />
           </td>
           <td>{{ row.aScore }}</td>
           <td>{{ row.bScore }}</td>
@@ -34,10 +34,10 @@
 </template>
 
 <script lang="ts" setup>
-import nhentai from "./nhentai.vue";
-import dtlslong from "./dtlslong.vue";
-import { TwoScoreCompare, ComicItemType } from "../definition/index.js";
 import comicData from "../data/comic.js";
+import { ComicItemType, TwoScoreCompare } from "../definition/index.js";
+import dtlslong from "./dtlslong.vue";
+import nhentai from "./nhentai.vue";
 
 const data = comicData.sort((x, y) => TwoScoreCompare(x, y));
 

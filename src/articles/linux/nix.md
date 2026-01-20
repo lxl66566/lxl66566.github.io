@@ -344,7 +344,7 @@ extraLocaleSettings = {
 
 ps. 根据[群友描述](https://t.me/nixos_zhcn/477206)，只需要将 KDE 配置文件删除即可，与 defaultLocale 无关。
 
-`fcitx5-configtool` 里双拼键盘下的“管理自定义词组”是坏的，点不开。我也懒得修了，把以前 archlinux 位于 `~/.local/share/fcitx5/pinyin/customphrase` 的词库搬出来，拿到 home-manager 里 source 一下就好了（需要 [重启 fcitx5](https://wiki.archlinux.org/title/Fcitx5#Emoji_show_abnormally_in_the_candidate_box)：在 bash 里跑 `` kill `ps -A | grep fcitx5 | awk '{print $1}'` && fcitx5& ``），也符合 nixos 的原则。
+`fcitx5-configtool` 里双拼键盘下的“管理自定义词组”是坏的，点不开。我也懒得修了，把以前 archlinux 位于 `~/.local/share/fcitx5/pinyin/customphrase` 的词库搬出来，拿到 home-manager 里 source 一下就好了（需要 [重启 fcitx5](https://wiki.archlinux.org/title/Fcitx5#Emoji_show_abnormally_in_the_candidate_box)：在 bash 里跑 ``kill `ps -A | grep fcitx5 | awk '{print $1}'` && fcitx5&``），也符合 nixos 的原则。
 
 @tab rime
 

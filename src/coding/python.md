@@ -126,8 +126,8 @@ uv lock --upgrade && uv sync                  # 更新所有依赖
 `~/uv.toml`:
 
 ```toml
-index-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"  # 全局换源
-prerelease = "allow"                                                # 不再禁止 prerelease 包
+index-url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple" # 全局换源
+prerelease = "allow" # 不再禁止 prerelease 包
 ```
 
 @tab pdm

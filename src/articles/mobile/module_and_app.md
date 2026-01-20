@@ -78,7 +78,7 @@ LSPosed 模块挺多闭源的，这里就懒得标注了。
 
 - ~~Scene5（**闭源！**）：注意，scene5 ROOT 后的功能为试用，到期需**付费**，正在寻找开源免费替代品。~~
   - ~~目前依赖其任务管理，控制性能与冻结应用。~~
-  - > Scene5 功能均可替代，因此弃用之。
+  - Scene5 功能均可替代，因此弃用之。
 - [Battery Guru(Premium Unlocked)](https://modyolo.com/battery-guru-battery-saver.html)（**闭源！**）：电池管理，省电。
 - ~~[奇妙应用](​https://wwwh.lanzoul.co​m/s/MagicalApp)~~：某个三方应用市场，没啥用，又不是破解论坛，该找不到还是找不到。。
 - [雪豹闭嘴](https://t.me/microblock_pub/310)：彻底静音扬声器

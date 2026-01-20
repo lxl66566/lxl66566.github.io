@@ -1,7 +1,11 @@
 <template>
   <figure>
-    <img :alt="alt" :src="src" loading="lazy"
-      :style="{ maxWidth: `calc(${parseFloat(scale) / 100} * var(--content-width))` }" />
+    <img
+      :alt="alt"
+      :src="src"
+      loading="lazy"
+      :style="{ maxWidth: `calc(${parseFloat(scale) / 100} * var(--content-width))` }"
+    />
     <figcaption v-if="alt">{{ alt }}</figcaption>
   </figure>
 </template>

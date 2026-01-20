@@ -25,7 +25,9 @@ tag:
 蛲虫还可能爬到的地方有阴道（输卵管）、尿道、肠壁肌层、盲肠、腹腔[^wiki]、阑尾[^hb]。蛲虫卵如果被吸入肺部，可能引起哮喘[^hb]；蛲虫卵进入眼睛，可能在眼部发育，导致结膜炎等[^sina]。
 
 [^hb]: [蛲虫病 - 湖北疾控](https://www.hbcdc.cn/jkjy/jkzd/jbjs/n/1679.htm)
+
 [^wiki]: [蛲虫 - 维基百科](https://zh.wikipedia.org/wiki/蟯蟲)
+
 [^sina]: [3 岁男童眼睛里长虫](https://news.sina.cn/2017-11-30/detail-ifyphtze2728684.d.html?from=wap)
 
 ### 自检
@@ -55,9 +57,13 @@ tag:
 蛔虫能在拉出的屎中看到，还是有一定震撼力的[^holyshit]。这也是蛔虫感染最直接的证据。
 
 [^msdhchome]: [蛔虫病 - 默沙东诊疗手册家庭版](https://www.msdmanuals.cn/home/infections/parasitic-infections-nematodes-roundworms/ascariasis)
+
 [^msdhcpro]: [蛔虫病 - 默沙东诊疗手册专业版](https://www.msdmanuals.cn/professional/infectious-diseases/nematodes-roundworms/ascariasis)
+
 [^yszx]: [夺命胶囊 - 壹生资讯](https://www.cmtopdr.com/post/detail/936787e4-8b1c-4f66-bdc2-6f915cefeab4)
+
 [^with_snake]: [世界首例蛇蛔虫感染者](https://www.thepaper.cn/newsDetail_forward_24404386)
+
 [^holyshit]: 我看过几次了，也用手拔出来过（隔着卫生纸）；不过还从来没有看过离体后会动的，感谢现代医学，感谢苯并咪唑。
 
 ### 防治
@@ -86,10 +92,15 @@ tag:
   - 据称，对蛲虫效果极好。
 
 [^Albendazole]: [阿苯达唑 - 维基百科](https://zh.wikipedia.org/wiki/阿苯达唑)
+
 [^Mebendazole_wiki]: [甲苯咪唑 - 维基百科](https://zh.wikipedia.org/wiki/甲苯咪唑)
+
 [^Mebendazole]: [Mebendazole (Monograph)](https://www.drugs.com/monograph/mebendazole.html)
+
 [^zhihu]: [甲苯达唑，阿苯达唑，和芬苯达唑三种打虫药的抗癌研究总结](https://zhuanlan.zhihu.com/p/195233400)
+
 [^thesis1]: [体外杀灭寄生虫虫卵及其幼虫的研究](https://www.zgxfzz.com/CN/article/downloadArticleFile.do?attachType=PDF&id=8805)
+
 [^csuthesis]: [中南大学生命科学学院等合作揭示阿苯达唑增强抗肿瘤免疫的新机制](https://life.csu.edu.cn/copy_2_nr.jsp?urltype=news.NewsContentUrl&wbtreeid=1746&wbnewsid=3986)
 
 ### 哌嗪类

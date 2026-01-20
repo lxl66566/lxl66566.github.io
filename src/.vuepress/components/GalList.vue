@@ -2,9 +2,18 @@
   <div style="width: 100%; box-sizing: border-box">
     <div class="before-info">条目数：{{ items_num }}</div>
     <div style="display: flex; gap: 1.5rem; width: 100%; flex-wrap: wrap">
-      <input type="text" v-model="searchText" placeholder="搜索游戏原名/译名/俗名...（部分匹配）" class="search-input" />
-      <MyCheckBox class="mycheckbox" label="仅显示严格定义的 galgame" v-model="show_strict"
-        hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。" />
+      <input
+        type="text"
+        v-model="searchText"
+        placeholder="搜索游戏原名/译名/俗名...（部分匹配）"
+        class="search-input"
+      />
+      <MyCheckBox
+        class="mycheckbox"
+        label="仅显示严格定义的 galgame"
+        v-model="show_strict"
+        hint="非严格定义的 galgame 指非视觉小说类，不以选择支作为主要玩法的 galgame。"
+      />
     </div>
     <div style="overflow-x: auto; min-width: 0">
       <ExpandableHint hint-text="点击表格项目可以展开详细内容哦！">
@@ -29,8 +38,12 @@
             </tr>
           </thead>
           <tbody :class="{ 'show-strict': show_strict }">
-            <GalListItem v-for="item in filteredResults" :key="item.name + item.order + item.nth_time" :item="item"
-              :expandable="useSlots()[get_valid_name(item)] != undefined">
+            <GalListItem
+              v-for="item in filteredResults"
+              :key="item.name + item.order + item.nth_time"
+              :item="item"
+              :expandable="useSlots()[get_valid_name(item)] != undefined"
+            >
               <template #gal-list-item-content>
                 <slot :name="get_valid_name(item)"></slot>
               </template>
@@ -43,16 +56,16 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, useSlots, computed, watch } from "vue";
-import MyCheckBox from "./MyCheckBox.vue";
+import { computed, ref, useSlots, watch } from "vue";
 import original_list from "../data/galgame_list.js";
+import MyCheckBox from "./MyCheckBox.vue";
 import SortIndicator from "./SortIndicator.vue";
 import "../utils/FormatDate.js";
-import GalListItem from "./GalListItem.vue";
-import { DateDurationCompare, GalItemInputType } from "../definition";
 import Fuse, { IFuseOptions } from "fuse.js";
+import { DateDurationCompare, GalItemInputType } from "../definition";
 import debounce from "../utils/debounce";
 import ExpandableHint from "./ExpandableHint.vue";
+import GalListItem from "./GalListItem.vue";
 
 const get_valid_name = (item: GalItemInputType): string => item.valid_name ?? item.name;
 const show_strict = ref(false);
@@ -65,7 +78,9 @@ const sortOrder_program = ref<"none" | "asc" | "desc">("none");
 const sortOrder_thrill = ref<"none" | "asc" | "desc">("none");
 
 // 全局排序状态，记录当前排序的列和方向
-const currentSort = ref<{ column: "story" | "visual" | "program" | "thrill"; direction: "asc" | "desc" | "none" } | null>(null);
+const currentSort = ref<
+  { column: "story" | "visual" | "program" | "thrill"; direction: "asc" | "desc" | "none" } | null
+>(null);
 
 // 监听排序状态变化，确保其他排序被重置为 'none'，并更新 currentSort
 const watchSortOrders = () => {
@@ -165,7 +180,9 @@ let fuseInstance: Fuse<GalItemInputType>;
 
 const query = ref("");
 const filteredResults = computed(() => {
-  return query.value.trim() ? fuseInstance.search(query.value).map((result) => result.item) : sortedList.value;
+  return query.value.trim()
+    ? fuseInstance.search(query.value).map((result) => result.item)
+    : sortedList.value;
 });
 
 const debouncedSearch = debounce(() => {
@@ -191,7 +208,11 @@ watch(searchText, () => {
   debouncedSearch();
 });
 
-const items_num = computed(() => (show_strict.value ? filteredResults.value.filter((item) => !item.tag?.not_strict).length : filteredResults.value.length));
+const items_num = computed(
+  () => (show_strict.value
+    ? filteredResults.value.filter((item) => !item.tag?.not_strict).length
+    : filteredResults.value.length),
+);
 </script>
 
 <style scoped lang="scss">

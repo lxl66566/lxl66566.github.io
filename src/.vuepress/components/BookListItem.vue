@@ -1,5 +1,8 @@
 <template>
-  <ExpandableListItem :expandable="expandable" :extra_tr_class="item.tags?.not_network ? [] : ['network']">
+  <ExpandableListItem
+    :expandable="expandable"
+    :extra_tr_class="item.tags?.not_network ? [] : ['network']"
+  >
     <template #list-content>
       <td>
         <span v-if="!item.url">{{ name_and_author }}</span>
@@ -8,7 +11,11 @@
         <span v-if="item.order || item.tags || item.h_level || item.nth_time">
           <span>&thinsp;</span>
           <OrderBadge :order="item.order" v-if="item.order" />
-          <OrderBadge :order="item.nth_time" :text="`${numberToChinese(item.nth_time)}刷`" v-if="item.nth_time" />
+          <OrderBadge
+            :order="item.nth_time"
+            :text="`${numberToChinese(item.nth_time)}刷`"
+            v-if="item.nth_time"
+          />
           <Badge type="tip" text="无H" v-if="item.h_level === HLevel.NONE" />
           <Badge type="warning" text="黄文" v-if="item.h_level === HLevel.HIGH" />
           <Badge type="info" text="日轻" v-if="item.tags?.japanese" />
@@ -32,9 +39,9 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import { BookItemInputType } from "../definition";
-import ExpandableListItem from "./ExpandableListItem.vue";
 import { HLevel } from "../definition/book_type";
 import { numberToChinese } from "../utils/NumberToChinese";
+import ExpandableListItem from "./ExpandableListItem.vue";
 
 const props = defineProps<{
   /**

@@ -562,7 +562,7 @@ declare global {
     fun(): void;
   }
 }
-Array.prototype.fun = function () {
+Array.prototype.fun = function() {
   console.log("xxx", this);
 };
 ```

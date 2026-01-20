@@ -12,18 +12,26 @@ list 中的插槽名称为 list-content，展开后的内容插槽名称为 expa
 </ExpandableListItem>
 -->
 <template>
-  <tr @click="toggleExpand" class="list-item" :class="[
-    ...(props.extra_tr_class || []),
-    {
-      expanded: isExpanded, // 在外部使用的属性
-      expandable: props.expandable,
-    },
-  ]" ref="trRef">
+  <tr
+    @click="toggleExpand"
+    class="list-item"
+    :class="[
+      ...(props.extra_tr_class || []),
+      {
+        expanded: isExpanded, // 在外部使用的属性
+        expandable: props.expandable,
+      },
+    ]"
+    ref="trRef"
+  >
     <slot name="list-content"></slot>
   </tr>
   <transition name="expand">
     <tr v-if="isExpanded" class="expanded-content" :style="{ height: expandedHeight + 'px' }">
-      <td colspan="99" :style="{ maxWidth: calculatedMaxWidth, overflow: 'visable', boxSizing: 'border-box' }">
+      <td
+        colspan="99"
+        :style="{ maxWidth: calculatedMaxWidth, overflow: 'visable', boxSizing: 'border-box' }"
+      >
         <div ref="expandContentRef">
           <slot name="expanded-content"></slot>
         </div>
@@ -33,7 +41,7 @@ list 中的插槽名称为 list-content，展开后的内容插槽名称为 expa
 </template>
 
 <script lang="ts" setup>
-import { ref, nextTick, onMounted } from "vue";
+import { nextTick, onMounted, ref } from "vue";
 import debounce from "../utils/debounce";
 
 const props = defineProps<{
@@ -93,7 +101,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .list-item {
-  &>td {
+  & > td {
     text-align: center;
     vertical-align: middle;
   }

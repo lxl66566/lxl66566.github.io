@@ -106,5 +106,4 @@ export function MyTableComponent({ data }) {
     },
   ]}
 />
-
 ```

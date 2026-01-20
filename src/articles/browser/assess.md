@@ -35,6 +35,8 @@ tag:
 
 目前我在 windows 上使用 edge 作为我的默认浏览器。
 
+<!-- dprint-ignore-start -->
+
 - edge 的自定义程度不差，我可以隐藏标题栏，干掉我不想要的图标，自定义新标签页等等。
   - 但也说不上好。我不能自定义快捷键。
 - edge 的一大槽点是（微软）非常喜欢干它的用户群体。
@@ -48,6 +50,8 @@ tag:
   - 不过也有可能是 kde 配得不太好，我在 nixos 上没看到这个问题。
 - edge 的同步问题很大。随便 google 一下，ms answer 网站上一大堆同步丢数据的，本人也**有幸**[丢过一次重要数据](https://t.me/withabsolutex/2421)。
 - 安装扩展出现 _包无效。详细信息: Couldn't load icon assets/images/128.png specified in browser_action_。但是同样的 crx 扩展在 Chromium 上安装，没有问题。
+
+<!-- dprint-ignore-end -->
 
 ### chrome / chromium
 

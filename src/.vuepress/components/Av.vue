@@ -23,6 +23,8 @@ const props = defineProps({
   },
 });
 
-const generateLink = computed(() => `https://missav.ai/${props.bg}${props.u ? "-uncensored-leak" : ""}`);
+const generateLink = computed(() =>
+  `https://missav.ai/${props.bg}${props.u ? "-uncensored-leak" : ""}`
+);
 const formattedText = computed(() => props.bg.toUpperCase());
 </script>

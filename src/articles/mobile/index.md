@@ -20,6 +20,7 @@ tag:
 Android 虽说 AOSP 开源，但一直都不自由并且有进一步不自由的趋势[^2][^4]。
 
 [^2]: Google 要剥离原生 Android 的电话功能；三星有熔断锁；国内通过法律逐步收紧 root 限制，各大厂“自研”系统……
+
 [^4]: 20240108-09，[LSPosed](https://github.com/lsposed/lsposed) & [KernelSU](https://github.com/tiann/KernelSU) Public Archived
 
 我是重度电脑使用者，手机没有游戏，这玩意只是我生活中可缺的一部分。但是我仍然愿意折腾。

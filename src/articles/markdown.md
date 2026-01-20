@@ -33,11 +33,12 @@ Markdown 是被广泛使用的轻量级标记语言。
 
 > 一级引用
 >
-> > 二级引用
+>> 二级引用
 
 ---
 
 代码块[^1]：（部分渲染器有语法高亮功能，可以在头部的 \`\`\` 后加上语言。）
+
 [^1]: 本博客的代码块功能颇多，详见[此处](https://theme-hope.vuejs.press/zh/cookbook/vuepress/markdown.html#代码块)
 
 \```python<br/>

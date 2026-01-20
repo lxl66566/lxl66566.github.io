@@ -227,7 +227,7 @@ tag:
 - 外观设置：
   - ~~打开任务栏时间秒数显示：_任务栏设置 - 任务栏行为_~~ win11 更新后不再允许打开秒级任务栏。。。
 - 设置 copilot：之前我会使用它，但是在 2025 年 copilot 已经完全不够看了，也有其他更好的免费平替。这玩意是真的笨比。
-  - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN", ` 删掉。需要[获取权限](#权限控制)。
+  - ms 在 2024.03-04 把 copilot 图标对中国用户禁了。可以重新启用：编辑 `C:\Windows\System32\IntegratedServicesRegionPolicySet.json`，在最下面将 _Show Copilot on taskbar..._ 项的 disabled 里把 `"CN",` 删掉。需要[获取权限](#权限控制)。
   - 即使开着代理，用着用着也经常出现 _很抱歉，目前无法连接到服务。_。解法：在 edge 浏览器中改微软账户地区至其他地区。([src](https://www.bilibili.com/read/cv33602923/))
 
 ::::

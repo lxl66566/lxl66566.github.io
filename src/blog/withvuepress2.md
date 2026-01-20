@@ -397,8 +397,8 @@ vitepress 其实是 VuePress 的一个分支，其具有更快的渲染速度与
 ::: details 最后附上我尝试的 config.ts 代码留念 x
 
 ```ts
-import { defineConfig } from "vitepress";
 import mathjax3 from "markdown-it-mathjax3";
+import { defineConfig } from "vitepress";
 const customElements = ["mjx-container"];
 export default defineConfig({
   lang: "zh-CN",

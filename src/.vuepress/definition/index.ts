@@ -4,12 +4,12 @@
 
 import type { DateDurationType, DateType, TwoScoreItemType } from "./types.js";
 
-export * from "./types.js";
-export * from "./gal_type.js";
 export * from "./anime_type.js";
-export * from "./job_type.js";
 export * from "./book_type.js";
 export * from "./comic_item.js";
+export * from "./gal_type.js";
+export * from "./job_type.js";
+export * from "./types.js";
 
 /**
  * 比较两个 TwoScoreItemType，用于 sort 的输入。

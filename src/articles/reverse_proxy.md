@@ -95,7 +95,7 @@ Nginx 的 fork，支持 HTTP/3 和自动 acme 更新 证书。
 
 ### ERR_ADDRESS_UNREACHABLE
 
-用 caddy 和 nginx 都试了一遍，浏览器访问 ERR*ADDRESS_UNREACHABLE，本地访问 403，说明不是防火墙的问题。nginx 有报错 \_13: Permission denied*，然后搜一下发现需要 `chmod +x <root>`。加了以后还是没用，原来 _root_ 的全路径都需要 `chmod +x`。。问题解决。
+用 caddy 和 nginx 都试了一遍，浏览器访问 `ERR_ADDRESS_UNREACHABLE`，本地访问 403，说明不是防火墙的问题。nginx 有报错 `13: Permission denied`，然后搜一下发现需要 `chmod +x <root>`。加了以后还是没用，原来 _root_ 的全路径都需要 `chmod +x`。。问题解决。
 
 ## external
 

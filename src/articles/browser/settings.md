@@ -37,7 +37,7 @@ tag:
 
 - 优点：
   - firefox 在 bilibili 等网站的表现较差，放开权限后子页面仍无法读取 cookies。Firefox Developer Edition 无此问题。
-  - > 只有这个可以安装 ruffle —— Asuka Minato（虽然这不是我的刚需）
+  - 只有这个可以安装 ruffle —— Asuka Minato（虽然这不是我的刚需）
 
 设置步骤如下：
 

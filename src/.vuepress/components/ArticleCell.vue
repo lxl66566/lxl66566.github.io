@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch, onMounted } from "vue";
-import RouterJumper from "./RouterJumper.vue";
+import { onMounted, ref, watch } from "vue";
 import type { ArticleCellBoxType } from "../definition/types";
+import RouterJumper from "./RouterJumper.vue";
 
 const props = withDefaults(
   defineProps<{

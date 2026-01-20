@@ -1,13 +1,13 @@
 import { defineClientConfig } from "vuepress/client";
-import TelegramLink from "./components/TelegramLink.vue";
-import RSSLink from "./components/RSSLink.vue";
-import OrderBadge from "./components/OrderBadge.vue";
+import dated from "./components/dated.vue";
 import dtls from "./components/dtls.vue";
 import dtlslong from "./components/dtlslong.vue";
-import heimu from "./components/heimu.vue";
-import ZoomedImg from "./components/ZoomedImg.vue";
-import dated from "./components/dated.vue";
 import furigana from "./components/furigana.vue";
+import heimu from "./components/heimu.vue";
+import OrderBadge from "./components/OrderBadge.vue";
+import RSSLink from "./components/RSSLink.vue";
+import TelegramLink from "./components/TelegramLink.vue";
+import ZoomedImg from "./components/ZoomedImg.vue";
 
 import "vuepress-theme-hope/presets/bounce-icon.scss";
 import "vuepress-theme-hope/presets/shinning-feature-panel.scss";

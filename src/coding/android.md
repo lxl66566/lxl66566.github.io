@@ -72,8 +72,8 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
 
 ```xml
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="?attr/colorPrimary" android:state_pressed="true"/>
-    <item android:color="?attr/colorOnSurface"/>
+  <item android:color="?attr/colorPrimary" android:state_pressed="true" />
+  <item android:color="?attr/colorOnSurface" />
 </selector>
 ```
 
@@ -84,8 +84,8 @@ Android 开发官方唯一 IDE：Android Studio。我曾经是个 all in vscode�
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:alpha="0.25" android:state_pressed="true" />
-    <item android:alpha="0.1" />
+  <item android:alpha="0.25" android:state_pressed="true" />
+  <item android:alpha="0.1" />
 </selector>
 ```
 

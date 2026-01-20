@@ -1,14 +1,23 @@
 <template>
-  <ExpandableListItem :expandable="props.expandable" :extra_tr_class="props.item.tag?.not_strict ? ['not-strict'] : []">
+  <ExpandableListItem
+    :expandable="props.expandable"
+    :extra_tr_class="props.item.tag?.not_strict ? ['not-strict'] : []"
+  >
     <template #list-content>
       <td>
         <span v-if="!props.item.url">{{ props.item.name }}</span>
         <a v-else :href="props.item.url" target="_blank">{{ props.item.name }}</a>
 
-        <span v-if="props.item.order || props.item.nth_time || props.item.namaniku || props.item.tag">
+        <span
+          v-if="props.item.order || props.item.nth_time || props.item.namaniku || props.item.tag"
+        >
           <span>&thinsp;</span>
           <OrderBadge :order="props.item.order" v-if="props.item.order" />
-          <OrderBadge :order="item.nth_time" :text="`${numberToChinese(item.nth_time)}刷`" v-if="item.nth_time" />
+          <OrderBadge
+            :order="item.nth_time"
+            :text="`${numberToChinese(item.nth_time)}刷`"
+            v-if="item.nth_time"
+          />
           <Badge type="tip" text="生肉" v-if="props.item.namaniku" />
           <Badge type="tip" text="无H" v-if="props.item.tag?.all_ages" />
           <Badge type="warning" text="惊悚" v-if="props.item.tag?.thrill" />
@@ -20,7 +29,10 @@
       <td>
         {{ props.item.use_time ?? "" }}
         <span v-if="props.item.playing_status">
-          <Badge :type="status_badge_type_map(props.item.playing_status)" :text="props.item.playing_status" />
+          <Badge
+            :type="status_badge_type_map(props.item.playing_status)"
+            :text="props.item.playing_status"
+          />
         </span>
       </td>
       <!-- 游玩区间 -->
@@ -29,19 +41,35 @@
       </td>
       <!-- 评分 -->
       <td
-        :class="{ 'high-score': isHighScore(props.item.score?.story), 'low-score': isLowScore(props.item.score?.story) }">
+        :class="{
+          'high-score': isHighScore(props.item.score?.story),
+          'low-score': isLowScore(props.item.score?.story),
+        }"
+      >
         {{ props.item.score?.story ?? "-" }}
       </td>
       <td
-        :class="{ 'high-score': isHighScore(props.item.score?.visual), 'low-score': isLowScore(props.item.score?.visual) }">
+        :class="{
+          'high-score': isHighScore(props.item.score?.visual),
+          'low-score': isLowScore(props.item.score?.visual),
+        }"
+      >
         {{ props.item.score?.visual ?? "-" }}
       </td>
       <td
-        :class="{ 'high-score': isHighScore(props.item.score?.program), 'low-score': isLowScore(props.item.score?.program) }">
+        :class="{
+          'high-score': isHighScore(props.item.score?.program),
+          'low-score': isLowScore(props.item.score?.program),
+        }"
+      >
         {{ props.item.score?.program ?? "-" }}
       </td>
       <td
-        :class="{ 'high-score': isHighScore(props.item.score?.thrill), 'low-score': isLowScore(props.item.score?.thrill) }">
+        :class="{
+          'high-score': isHighScore(props.item.score?.thrill),
+          'low-score': isLowScore(props.item.score?.thrill),
+        }"
+      >
         {{ props.item.score?.thrill ?? "-" }}
       </td>
     </template>

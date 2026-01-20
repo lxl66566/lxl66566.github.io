@@ -65,7 +65,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 - `rust-analyzer`，开发必备
 - (optional) `Rust Feature Toggler`，方便切换 features
-- (optional) ~~`crates`~~ （已改名为 `Dependi` [^crates]），更好管理依赖版本
+- (optional) ~~`crates`~~ （已改名为 `Dependi`[^crates]），更好管理依赖版本
 
 [^crates]: <https://t.me/QC_Grove/734>
 
@@ -243,7 +243,7 @@ where
 
 ### 并发
 
-> 如果你对 _async/await_ 模型没有明确概念，可以看看[这篇文章](https://course.rs/advance/async/getting-started.html)入门。  
+> 如果你对 _async/await_ 模型没有明确概念，可以看看[这篇文章](https://course.rs/advance/async/getting-started.html)入门。\
 > rust 提供 _async/await_ 模型和线程模型。
 
 #### Future
@@ -334,6 +334,7 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
     }
   }
   ```
+
   - 但是从其他模块调用 take 时需要 `use <mod_name>::Takable`。
 - [TAIT](https://juejin.cn/post/7302359255330504739)：Trait alias.
 - AFIT：Async Functions in Traits，Rust 1.75 实现了这个语法糖，可以直接在 trait 里使用 async 函数，在 1.75 之前需要用 async-traits crate。
@@ -471,6 +472,7 @@ rust 唯一官方指定包管理器：`cargo`，而且在一众语言包管理�
 
 在 `rustfmt.toml` 里写代码的格式化选项。我一般会开这些：
 
+<!-- prettier-ignore -->
 ```toml
 group_imports       = "StdExternalCrate"
 imports_granularity = "Crate"

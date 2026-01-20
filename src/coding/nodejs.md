@@ -103,6 +103,7 @@ npx <command>                             # npm 的脚本运行器，可以自�
 若 lockfile 不存在，install/update 时会自动生成。若存在且 lockfile 版本符合 `package.json` 版本，则从 lockfile 中安装依赖。若 lockfile 不兼容 `package.json`，则 pnpm/npm 会直接更新 lockfile 或报错退出（因此，强烈建议将 lockfile 添加到 git 版本控制中[^2]）。
 
 很遗憾，目前我没有找到任何方法使我能够严格依照 lockfile 进行依赖安装：在冲突时使用 `--frozen-lockfile` 参数，npm 会直接忽略之并写入 lockfile，pnpm/yarn 会报错并终止。同样的，`npm init -y` | `npm-collect` 都无法完成此任务。
+
 [^2]: [惨痛教训](https://t.me/withabsolutex/1216)
 
 ### 一些查询

@@ -71,6 +71,7 @@ flowchart LR
   - 反对节日带来的常轨脱离、额外开销与牺牲少数派利益的做法。
 
 [^2]: [特定范围内的二次元文化](../hobbies/anime.md)
+
 [^3]: 成功戒掉了 [csgo](../hobbies/other_games/csgo.md)（不含 cs2）
 
 ## [我的回忆录](./memories.md)

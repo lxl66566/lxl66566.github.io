@@ -4,11 +4,14 @@
       <table>
         <thead>
           <tr>
-            <th v-for="h in '游戏名 游戏引擎 存档格式 成功拆包加速'.split(' ')">{{ h }}</th>
+            <th v-for='h in "游戏名 游戏引擎 存档格式 成功拆包加速".split(" ")'>{{ h }}</th>
           </tr>
         </thead>
         <tbody>
-          <ExpandableListItem v-for="item in data" :expandable="useSlots()[item.valid_name] != undefined">
+          <ExpandableListItem
+            v-for="item in data"
+            :expandable="useSlots()[item.valid_name] != undefined"
+          >
             <template #list-content>
               <td>
                 <span v-for="(name, index) in item.names">
@@ -18,7 +21,9 @@
               </td>
               <td>{{ item.engine ?? "-" }}</td>
               <td>{{ item.save_format ?? "-" }}</td>
-              <td>{{ item.speedupable === true ? "✅" : item.speedupable === false ? "❌" : "❔" }}</td>
+              <td>
+                {{ item.speedupable === true ? "✅" : item.speedupable === false ? "❌" : "❔" }}
+              </td>
             </template>
             <template #expanded-content>
               <slot :name="item.valid_name"></slot>
@@ -32,8 +37,8 @@
 
 <script lang="ts" setup>
 import { useSlots } from "vue";
-import ExpandableListItem from "./ExpandableListItem.vue";
 import ExpandableHint from "./ExpandableHint.vue";
+import ExpandableListItem from "./ExpandableListItem.vue";
 
 type SpeedupItemType = {
   names: string[];
@@ -48,7 +53,13 @@ type SpeedupItemType = {
 
 const data: SpeedupItemType[] = [
   {
-    names: ["空に刻んだパラレログラム", "玉响未来", "NEKOPARA", "春音Alice＊Gram", "白恋SAKURA＊GRAM"],
+    names: [
+      "空に刻んだパラレログラム",
+      "玉响未来",
+      "NEKOPARA",
+      "春音Alice＊Gram",
+      "白恋SAKURA＊GRAM",
+    ],
     valid_name: "krkr_xp3",
     engine: "krkr",
     save_format: "xp3",
@@ -104,7 +115,12 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["千の刃涛、桃花染の皇姫", "ジュエリー・ハーツ・アカデミア", "大图书馆的牧羊人", "大图书馆的牧羊人 -Dreaming Sheep-"],
+    names: [
+      "千の刃涛、桃花染の皇姫",
+      "ジュエリー・ハーツ・アカデミア",
+      "大图书馆的牧羊人",
+      "大图书馆的牧羊人 -Dreaming Sheep-",
+    ],
     valid_name: "bgi",
     engine: "bgi",
     save_format: "arc",

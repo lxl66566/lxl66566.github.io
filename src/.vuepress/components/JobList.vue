@@ -4,12 +4,15 @@
       <table>
         <thead>
           <tr>
-            <th v-for="h in '公司 岗位 渠道 投递时间 状态'.split(' ')">{{ h }}</th>
+            <th v-for='h in "公司 岗位 渠道 投递时间 状态".split(" ")'>{{ h }}</th>
           </tr>
         </thead>
         <tbody>
-          <ExpandableListItem v-for="item in props.data" :expandable="useSlots()[item.name] != undefined"
-            :extra_tr_class="item.offer ? ['offer'] : []">
+          <ExpandableListItem
+            v-for="item in props.data"
+            :expandable="useSlots()[item.name] != undefined"
+            :extra_tr_class="item.offer ? ['offer'] : []"
+          >
             <template #list-content>
               <td>{{ item.name }}</td>
               <td>{{ item.job }}</td>
@@ -31,10 +34,10 @@
 
 <script lang="ts" setup>
 import { useSlots } from "vue";
-import Date from "./Date.vue";
-import ExpandableListItem from "./ExpandableListItem.vue";
 import { JobItemInputType } from "../definition";
+import Date from "./Date.vue";
 import ExpandableHint from "./ExpandableHint.vue";
+import ExpandableListItem from "./ExpandableListItem.vue";
 
 const props = defineProps<{
   data: JobItemInputType[];

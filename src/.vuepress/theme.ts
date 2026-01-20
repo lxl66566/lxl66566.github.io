@@ -1,8 +1,8 @@
+import { cut } from "nodejs-jieba";
 import { hopeTheme } from "vuepress-theme-hope";
+import { path } from "vuepress/utils";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { cut } from "nodejs-jieba";
-import { path } from "vuepress/utils";
 
 const passwords = {
   general: {
@@ -62,12 +62,13 @@ export default hopeTheme({
       {
         matcher: "Recommended",
         replacer: ({ tag }) => {
-          if (tag === "em")
+          if (tag === "em") {
             return {
               tag: "Badge",
               attrs: { type: "tip" },
               content: "Recommended",
             };
+          }
           return undefined;
         },
       },

@@ -6,7 +6,6 @@
           <th v-for="item in items">
             <a :href="item.lnk" target="_blank">{{ item.text }}</a>
           </th>
-
         </tr>
       </thead>
       <tbody>

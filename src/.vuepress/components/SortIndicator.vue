@@ -25,42 +25,42 @@ const sortOrder = ref<'none' | 'asc' | 'desc'>('none')
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { ref, watch } from "vue";
 
 // 定义 props
 const props = defineProps<{
-  modelValue: 'none' | 'asc' | 'desc' // 组件的状态（未排序、正序、倒序）
-  text: string // 显示的文字
-}>()
+  modelValue: "none" | "asc" | "desc"; // 组件的状态（未排序、正序、倒序）
+  text: string; // 显示的文字
+}>();
 
 // 定义 emits
-const emit = defineEmits(['update:modelValue'])
+const emit = defineEmits(["update:modelValue"]);
 
 // 内部状态，同步 props 的 modelValue
-const sortState = ref(props.modelValue)
+const sortState = ref(props.modelValue);
 
 // 监听外部的 modelValue 变化
 watch(() => props.modelValue, (newValue) => {
-  sortState.value = newValue
-})
+  sortState.value = newValue;
+});
 
 // 点击切换排序状态
 const toggleSort = () => {
-  let newState: 'none' | 'asc' | 'desc'
+  let newState: "none" | "asc" | "desc";
   switch (sortState.value) {
-    case 'none':
-      newState = 'desc'
-      break
-    case 'desc':
-      newState = 'asc'
-      break
-    case 'asc':
-      newState = 'none'
-      break
+    case "none":
+      newState = "desc";
+      break;
+    case "desc":
+      newState = "asc";
+      break;
+    case "asc":
+      newState = "none";
+      break;
   }
-  sortState.value = newState
-  emit('update:modelValue', newState) // 触发双向绑定的更新
-}
+  sortState.value = newState;
+  emit("update:modelValue", newState); // 触发双向绑定的更新
+};
 </script>
 
 <style lang="scss" scoped>

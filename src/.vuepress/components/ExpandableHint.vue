@@ -13,8 +13,8 @@ defineProps({
   hintText: {
     type: String,
     required: true,
-    default: '这是一个可以操作的区域哦！'
-  }
+    default: "这是一个可以操作的区域哦！",
+  },
 });
 </script>
 
@@ -49,7 +49,7 @@ defineProps({
 
 /* 步骤1: 创建三角形的 "边框" */
 .speech-bubble::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -12px;
   /* 位置要比填充三角形更靠外 1px */
@@ -65,7 +65,7 @@ defineProps({
 }
 
 .speech-bubble::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 30px;

@@ -7,7 +7,7 @@ category:
 
 # 信息论
 
-## [熵](<https://zh.wikipedia.org/wiki/熵_(%E4%BF%A1%E6%81%AF%E8%AE%BA)>)
+## [熵](https://zh.wikipedia.org/wiki/熵_(%E4%BF%A1%E6%81%AF%E8%AE%BA))
 
 信源熵（平均不确定度）：${\displaystyle H_{s}=-\sum _{i=1}^{n}p_{i}\log _{d}p_{i}}$
 
@@ -29,20 +29,23 @@ ${\displaystyle I(X;Y)=\sum _{y\in Y}\sum _{x\in X}p(x,y)\log {\left({\frac {p(x
   <!-- 圆 X -->
   <circle cx="100" cy="100" r="60" fill="skyblue" fill-opacity="0.5" />
   <text x="60" y="100" font-size="12" fill="red">H(X|Y)</text>
-  
-  <!-- 圆 Y -->
-  <circle cx="160" cy="100" r="60" fill="orange" fill-opacity="0.5" />
+
+<!-- 圆 Y -->
+<circle cx="160" cy="100" r="60" fill="orange" fill-opacity="0.5" />
   <text x="180" y="100" font-size="12" fill="red">H(Y|X)</text>
-  
-  <!-- 重叠区域 I(X; Y) -->
-  <text x="125" y="100" font-size="12" fill="red">I(X;Y)</text>
-  
-  <!-- 联合熵 H(X, Y) -->
-  <text x="120" y="40" font-size="12" fill="red">H(X, Y)</text>
-  
-  <!-- 条件熵 H(X|Y) 和 H(Y|X) -->
-  <text x="50" y="150" font-size="12" fill="red">H(X)</text>
-  <text x="180" y="150" font-size="12" fill="red">H(Y)</text>
+
+<!-- 重叠区域 I(X; Y) -->
+
+<text x="125" y="100" font-size="12" fill="red">I(X;Y)</text>
+
+<!-- 联合熵 H(X, Y) -->
+
+<text x="120" y="40" font-size="12" fill="red">H(X, Y)</text>
+
+<!-- 条件熵 H(X|Y) 和 H(Y|X) -->
+
+<text x="50" y="150" font-size="12" fill="red">H(X)</text>
+<text x="180" y="150" font-size="12" fill="red">H(Y)</text>
 </svg>
 
 ## 信道

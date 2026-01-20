@@ -260,7 +260,7 @@ Nyquist frequency: 2wm
 
 - 线性
 - 移位性质：$\displaystyle x[n-n_0] \rightarrow X(z)z^{-n_0}$，收敛域可能变（在 0, ∞ 点）
-- > [单边移位公式](https://www.bilibili.com/video/BV1g94y1Q76G/?p=60&t=3258)
+- [单边移位公式](https://www.bilibili.com/video/BV1g94y1Q76G/?p=60&t=3258)
 - z 域微分性质：<span v-pre>$\displaystyle nx[n] \rightarrow -zX'(z)$</span>，收敛域不变
 - 序列指数加权：<span v-pre>$\displaystyle a^nx[n] \rightarrow X(z/a)$</span>，收敛域扩大 a 倍
 - 时域扩展：$\displaystyle x_{(k)}[n] \rightarrow X(z^k)$，收敛域 $R^{1/k}$

@@ -17,7 +17,7 @@ tag:
 
 除此之外，还有人既想写出人类可读的代码，又想借用 bash 超高的兼容性，因此便开发了能够编译为 bash 的高阶语言，例如 [pnut](https://pnut.sh/)，[amber](https://github.com/amber-lang/amber)。
 
-## [Shebang](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)
+## [Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
 
 放在脚本开头，以指示此脚本使用的解释器。因此如果写了 `#!/bin/bash`，则表示脚本是一个 bash 脚本，可以直接 `./filename` 执行。
 

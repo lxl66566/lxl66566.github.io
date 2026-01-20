@@ -55,9 +55,6 @@ importers:
       nodejs-jieba:
         specifier: ^0.3.0
         version: 0.3.0(encoding@0.1.13)
-      prettier:
-        specifier: ^3.8.0
-        version: 3.8.0
       sass-embedded:
         specifier: ^1.86.3
         version: 1.86.3
@@ -72,7 +69,7 @@ importers:
         version: 2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@20.14.2)(sass-embedded@1.86.3)(terser@5.31.1)(typescript@5.8.3)(yaml@2.4.5))(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3))
       vuepress-theme-hope:
         specifier: 2.0.0-rc.79
-        version: 2.0.0-rc.79(fjfpxzrprz2s7aeqfe6cssobzy)
+        version: 2.0.0-rc.79(08a9017bf701381b8cc2ea2709f90d2a)
 
 packages:
 
@@ -3011,11 +3008,6 @@ packages:
   postcss@8.5.3:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
-
-  prettier@3.8.0:
-    resolution: {integrity: sha512-yEPsovQfpxYfgWNhCfECjG5AQaO+K3dp6XERmOepyPDVqcJm+bjyCVO3pmU+nAPe0N5dDvekfGezt/EIiRe1TA==}
-    engines: {node: '>=14'}
-    hasBin: true
 
   pretty-bytes@5.6.0:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
@@ -7445,8 +7437,6 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier@3.8.0: {}
-
   pretty-bytes@5.6.0:
     optional: true
 
@@ -8123,7 +8113,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  vuepress-theme-hope@2.0.0-rc.79(fjfpxzrprz2s7aeqfe6cssobzy):
+  vuepress-theme-hope@2.0.0-rc.79(08a9017bf701381b8cc2ea2709f90d2a):
     dependencies:
       '@vuepress/helper': 2.0.0-rc.92(typescript@5.8.3)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@20.14.2)(sass-embedded@1.86.3)(terser@5.31.1)(typescript@5.8.3)(yaml@2.4.5))(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)))
       '@vuepress/plugin-active-header-links': 2.0.0-rc.86(typescript@5.8.3)(vuepress@2.0.0-rc.20(@vuepress/bundler-vite@2.0.0-rc.20(@types/node@20.14.2)(sass-embedded@1.86.3)(terser@5.31.1)(typescript@5.8.3)(yaml@2.4.5))(typescript@5.8.3)(vue@3.5.13(typescript@5.8.3)))

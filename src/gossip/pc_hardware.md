@@ -206,7 +206,9 @@ DIY 一台属于自己的电脑，可以说是大多数男生的梦想。我从�
 6. 华硕这个 sb 主板的 wifi 驱动要安装 `Realtek` 开头的驱动。。在 _无线网络驱动程序_ 里要点击 _查看更多_，最下面那个才是。其他的没法装，点击 exe 是没有反应的。
 
 [^1]: 激进程度；DOCP2 < DOCP1 < DOCP tweaked。ref: [DOCP 1, 2, or tweaked](https://www.reddit.com/r/overclocking/comments/1b4f2sw/docp_1_2_or_tweaked/)
+
 [^2]: [惨痛教训](https://t.me/withabsolutex/2284)
+
 [^3]: [开新帖说明 AM5 开机自检慢的解决方法](https://www.chiphell.com/thread-2504587-1-1.html) & [正确打开 ASUS 的 AM5 Memory Context Restore 功能](https://www.chiphell.com/forum.php?mod=viewthread&tid=2518856&extra=page=1&ordertype=2&mobile=no)
 
 ![总之，这就是我装完机的效果啦！](/images/gossip/pc_hardware/result1.jpg)

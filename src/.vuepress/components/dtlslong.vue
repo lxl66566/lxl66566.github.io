@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onUpdated, onBeforeUnmount, computed } from 'vue';
+import { computed, onBeforeUnmount, onMounted, onUpdated, ref } from "vue";
 
 // 是否已展开
 const isExpanded = ref(false);
@@ -73,16 +73,16 @@ onBeforeUnmount(() => {
 
 // 动态计算根元素的 class
 const containerClasses = computed(() => ({
-  'expandable-text': true,
-  'is-foldable': isFoldable.value,
-  'is-expanded': isExpanded.value,
+  "expandable-text": true,
+  "is-foldable": isFoldable.value,
+  "is-expanded": isExpanded.value,
 }));
 
 // 动态计算内容包裹器的 class
 const contentWrapperClasses = computed(() => ({
-  'content-wrapper': true,
+  "content-wrapper": true,
   // 只有在未展开时，才应用折叠样式
-  'is-collapsed': !isExpanded.value,
+  "is-collapsed": !isExpanded.value,
 }));
 </script>
 
@@ -107,7 +107,7 @@ const contentWrapperClasses = computed(() => ({
 
 /* 只有当 JS 确认了内容确实溢出时，才显示渐变遮罩 */
 .expandable-text.is-foldable:not(.is-expanded)::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;

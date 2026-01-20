@@ -102,10 +102,9 @@ export type GalItemInputType = {
  * 用于机器的 GalItemType
  */
 export type GalItemType = {
-  [K in keyof GalItemInputType]: K extends "duration"
-    ? {
-        start?: Date;
-        end?: Date;
-      }
+  [K in keyof GalItemInputType]: K extends "duration" ? {
+      start?: Date;
+      end?: Date;
+    }
     : GalItemType[K];
 };

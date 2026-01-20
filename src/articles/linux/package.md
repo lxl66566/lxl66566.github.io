@@ -156,7 +156,9 @@ sudo systemd-nspawn -D container  # 进入容器
 |[`navi`](https://github.com/denisidoro/navi)|常用命令 cheatsheet|
 
 [^6]: `yazi` 甚至能在 console 下查看图片。
+
 [^8]: `ncdu` 在 btrfs 下不准([ref](https://wiki.archlinuxcn.org/wiki/Btrfs#显示已使用的/空闲空间))。可以考虑用 [btdu](https://github.com/CyberShadow/btdu)，这是专门为 btrfs 设计的 du 工具。
+
 [^9]: `tldr` 有很多实现，这里推荐 Rust 的实现 [tealdeer](https://github.com/tealdeer-rs/tealdeer)。
 
 以上是本人体验总结的结果。若需要更多推荐，不如看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps) 和 [external 1.](#external)。

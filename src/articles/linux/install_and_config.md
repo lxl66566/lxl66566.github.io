@@ -133,7 +133,7 @@ umount /mnt/windows
      - 可以用 `sudo sed -i -E 's/(subvolid=[0-9]+,)|(,subvolid=[0-9]+)//g' /etc/fstab` 命令行删除。
    - 挂载 zram：只需在 `zram-generator.conf` 中新建一个 zram device，然后写 `mount-point = /tmp` 即可。
 4. ~~[wayland 的 electron 支持](https://wiki.archlinuxcn.org/wiki/Wayland#Electron)（据说 wayland 对 electron 不太友好）~~
-   - > 无所谓，现在是 X11 人
+   - 无所谓，现在是 X11 人
 5. [激活启动时 numlock](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#SDDM)
 6. 设置 pacman：
    - 修改 `/etc/pacman.d/mirrorlist`，添加镜像

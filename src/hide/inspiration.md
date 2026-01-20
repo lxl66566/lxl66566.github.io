@@ -95,9 +95,6 @@ tag:
 - [x] openppp2 client
   - [x] 绕过路由
 - [ ] ~~rust tui 脚本工具箱~~ 做了一点尝试，意义不大，终止
-<!-- - 转码，复制，参考我的 fish function
-- 平台无关的 alias
-- [ ] dotfile backup script -->
 - [ ] ~~脚本语言~~ TS + bun？
 - [x] python beautiful assert: [pretty-assert](https://github.com/lxl66566/pretty-assert)
   - 颜色，当前行，变量值
@@ -138,6 +135,10 @@ tag:
 - [ ] rewrite of easytier
   - [ ] Raft supported by [hiqlite](https://github.com/sebadob/hiqlite)
   - [ ] ability to bypass GFW
+
+<!-- - 转码，复制，参考我的 fish function
+- 平台无关的 alias
+- [ ] dotfile backup script -->
 
 ### RIIR
 

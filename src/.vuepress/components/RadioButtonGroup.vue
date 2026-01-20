@@ -1,9 +1,17 @@
 <template>
   <div class="radio-group">
     <div>
-      <label v-for="option in options" :key="option.value"
-        :class="['radio-option', { 'radio-option--selected': option.value === modelValue }]">
-        <input type="radio" :value="option.value" v-model="internalValue" @change="updateValue(option.value)" />
+      <label
+        v-for="option in options"
+        :key="option.value"
+        :class="['radio-option', { 'radio-option--selected': option.value === modelValue }]"
+      >
+        <input
+          type="radio"
+          :value="option.value"
+          v-model="internalValue"
+          @change="updateValue(option.value)"
+        />
         {{ option.label }}
       </label>
     </div>

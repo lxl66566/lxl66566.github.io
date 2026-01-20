@@ -158,7 +158,7 @@ git remote add origin https://github.com/yourgithubID/gitRepo.git
 
 :::
 
-> 优先使用 ssh，不过需要配置，如果不想配置可以使用 https。  
+> 优先使用 ssh，不过需要配置，如果不想配置可以使用 https。\
 > 可以理解为给 git 地址起了个别名，方便记忆。一般都用 `origin`。
 
 #### 配置 ssh
@@ -273,7 +273,9 @@ git push origin -d <branch_name> # 删除远程分支
 - （疑难解答[^10]：`git push origin -d master` 时 github 拒绝删除分支）
 
 [^7]: 当本地与远程交集为空时会出现此情况。解法：`git pull origin main --allow-unrelated-histories`
+
 [^8]: 当远程不存在分支而本地存在分支时会出现此情况。执行 `git fetch --prune`。([ref](https://stackoverflow.com/questions/35941566/git-says-remote-ref-does-not-exist-when-i-delete-remote-branch))
+
 [^10]: 这种情况一般是 Github 的默认分支保护机制。进入 repo _Settings_，将默认分支改为其他分支即可。
 
 ### 操作文件
@@ -382,8 +384,8 @@ git rebase 远没有想象中的智能。如果你认为本次 rebase 一定不�
 
 有了 `.sh` 脚本后，可以用 `cp -rfu` 将所需文件复制到仓库再提交上传，进行备份。
 
-> -r：递归地复制目录。  
-> -f：强制 cp 命令在不提示的情况下覆盖现有文件。  
+> -r：递归地复制目录。\
+> -f：强制 cp 命令在不提示的情况下覆盖现有文件。\
 > -u：仅在目标文件不存在或目标文件比源文件旧时才复制文件。
 
 但是这样也太丑了一点。
@@ -484,6 +486,7 @@ git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 3. 清理完成后请使用 `git gc --prune=now` 进行碎片收集，上传时需要 `git push -f` 强制覆盖。
 
 [^3]: 说明该项目并未触发 git 的 packfile 机制，无需删除大文件。若仍需查找，可以使用 `# another edition` 后的语句。
+
 [^4]: 根据[这里](https://github.com/newren/git-filter-repo/issues/360)的描述做就行了。
 
 ### 大文件上传
@@ -583,7 +586,7 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash HEAD~2
 
 总结：
 
-> _Asuka Minato：用 ci 的 repo 为啥要在意提交次数，人家 cn 源的 bot 那次数都没人管_  
+> _Asuka Minato：用 ci 的 repo 为啥要在意提交次数，人家 cn 源的 bot 那次数都没人管_\
 > _AbsoluteX：话题结束，鉴定为吃太饱（_
 
 ### 崭新出厂

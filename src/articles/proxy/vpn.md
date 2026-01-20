@@ -151,10 +151,11 @@ _（采用 Trojan 协议）_
 <details><summary>archived</summary>
 
 [官网](https://www.startrip.top)
-|月付|￥ 1.00|无限期（已取消）|￥ 1.00|
-| :----: | :----: | :----: | :----: |
-|流量|60G|流量|15G|
-|限速|50Mbps|限速|无限制|
+
+| 月付 | ￥ 1.00 | 无限期（已取消） | ￥ 1.00 |
+| :--: | :-----: | :--------------: | :-----: |
+| 流量 |   60G   |       流量       |   15G   |
+| 限速 | 50Mbps  |       限速       | 无限制  |
 
 _（旧版表格）_
 
@@ -162,7 +163,7 @@ _（旧版表格）_
 
 ### [貓貓互聯](https://neko.services/)
 
- <!-- | [邀请链接](https://neko.services/#/register?code=xjZ5356D) -->
+<!-- | [邀请链接](https://neko.services/#/register?code=xjZ5356D) -->
 
 |   月付   | 流量 | 限速 |
 | :------: | :--: | :--: |
@@ -226,7 +227,7 @@ _（旧版表格）_
 
 [魔戒](https://www.mojie.link/)，仅有**不限时流量**出售，稳定但贵。
 
- <!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
+<!-- | [邀请链接](https://www.mojie.link/#/register?code=7uanBL3Z) -->
 
 <details><summary>查看</summary>
 

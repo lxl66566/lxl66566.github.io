@@ -52,7 +52,10 @@ table inet nat {
   "auth": { "password": "xxx", "type": "password" },
   "ignoreClientBandwidth": true,
   "listen": ":5497",
-  "masquerade": { "proxy": { "rewriteHost": true, "url": "https://absx.pages.dev" }, "type": "proxy" },
+  "masquerade": {
+    "proxy": { "rewriteHost": true, "url": "https://absx.pages.dev" },
+    "type": "proxy"
+  },
   "quic": { "maxIncomingStreams": 50000 },
   "tls": { "cert": "/var/cert/xxx.crt", "key": "/var/cert/xxx.key" }
 }

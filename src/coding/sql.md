@@ -33,6 +33,7 @@ tag:
    - 分布式 Cassandra
 
 [^1]: MariaDB 是 MySQL 的分支，完全开源，而 MySQL 是商业产品，部分开源。([ref](https://aws.amazon.com/cn/compare/the-difference-between-mariadb-vs-mysql/))
+
 [^2]: ~~MySQL 已死：~~ _开源界一般用 mariadb，IT 公司一般用 percona-server。_ ——[依云](https://blog.lilydjwg.me)
 
 ## 可视化工具
@@ -302,7 +303,7 @@ MariaDB replaces mysql (( ([src](https://archlinux.org/news/mariadb-replaces-mys
 
 安装后，可以将 mysql 看成 mariadb 的 alias。有的 mysql 指令直接用会报 deprecate warning，无所 x 谓。
 
-> 我原以为 mariadb 这么高的兼容度完全可以直接用，没想到被 django 打脸。  
+> 我原以为 mariadb 这么高的兼容度完全可以直接用，没想到被 django 打脸。\
 > 真的吗？
 
 ### 从 mysql 导入
@@ -321,8 +322,8 @@ MariaDB replaces mysql (( ([src](https://archlinux.org/news/mariadb-replaces-mys
 
 init 阶段获取到了一个默认密码。[安装](#安装)后直接 `sudo mysqld`，提示：
 
-> 2023-10-21T10:21:00.659995Z 0 [ERROR] [MY-010123] [Server] Fatal error: Please read "Security" section of the manual to find out how to run mysqld as root!  
-> 2023-10-21T10:21:00.660021Z 0 [ERROR] [MY-010119] [Server] Aborting  
+> 2023-10-21T10:21:00.659995Z 0 [ERROR] [MY-010123] [Server] Fatal error: Please read "Security" section of the manual to find out how to run mysqld as root!\
+> 2023-10-21T10:21:00.660021Z 0 [ERROR] [MY-010119] [Server] Aborting\
 > 2023-10-21T10:21:00.660109Z 0 [System] [MY-010910] [Server] /usr/bin/mysqld: Shutdown complete (mysqld 8.0.34) Source distribution.
 
 `sudo mysqladmin -u root -p login`：_error: 'Your password has expired. To log in you must change it using a client that supports expired passwords.'_
@@ -346,18 +347,18 @@ sudo pacman -S mariadb libmariadbclient mariadb-clients
 
 没有启动服务，启动之：`sudo systemctl start mariadb`，报：
 
-> Job for mariadb.service failed because the control process exited with error code.  
+> Job for mariadb.service failed because the control process exited with error code.\
 > See "systemctl status mariadb.service" and "journalctl -xeu mariadb.service" for details.
 
 `sudo journalctl -u mariadb.service`，log 显示
 
-> [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.  
-> [Note] Plugin 'wsrep-provider' is disabled.  
-> [ERROR] Could not open mysql.plugin table: "Table 'mysql.plugin' doesn't exist". Some plugins may be not loaded  
-> [ERROR] Unknown/unsupported storage engine: InnoDB  
-> [ERROR] Aborting  
-> mariadb.service: Main process exited, code=exited, status=1/FAILURE  
-> mariadb.service: Failed with result 'exit-code'.  
+> [ERROR] Plugin 'InnoDB' registration as a STORAGE ENGINE failed.\
+> [Note] Plugin 'wsrep-provider' is disabled.\
+> [ERROR] Could not open mysql.plugin table: "Table 'mysql.plugin' doesn't exist". Some plugins may be not loaded\
+> [ERROR] Unknown/unsupported storage engine: InnoDB\
+> [ERROR] Aborting\
+> mariadb.service: Main process exited, code=exited, status=1/FAILURE\
+> mariadb.service: Failed with result 'exit-code'.\
 > Failed to start MariaDB 11.1.2 database server.
 
 麻了，尝试 `sudo mysql_install_db --user=mysql --ldata=/var/lib/mysql/`，一样报错。提示 `/usr/bin/mysql_install_db --defaults-file=~/.my.cnf`，结果根本没有 `~/.my.cnf`。

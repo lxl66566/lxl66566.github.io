@@ -140,7 +140,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 
 但是，我找不到子卷的位置。
 
-> \> sudo timeshift --list  
+> \> sudo timeshift --list\
 > Mounted '/dev/nvme1n1p3' at '/run/timeshift/36810/backup'
 
 `/run/timeshift` 文件夹是空的。后来又找到了[其他人相同的遭遇](https://bbs.archlinux.org/viewtopic.php?id=287094)。That's STICKY！
@@ -210,7 +210,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 
 装完后没有 `osu-wine` 被添加到环境变量，不能直接执行；`osu-wine` 脚本在 `git clone` 那个目录，使用绝对路径即可。
 
-这样用 wine 装好的 osu 游戏时只能跑到 170 帧（windows 上 1k+ fps），使用 `nvtop` 查看，果然跑在核显上，需要 `prime-run`。这个 `prime-run` 还不是随便加的，我在 krunner 里加了以后帧率没有变化，但是 `nvtop` 是有输出的。我一直以为有什么其他问题，直到我看到了[这个](<https://github.com/NelloKudo/osu-winello/wiki/(Possibly)-optimize-your-game:-Gamemode#installing-gamemode>)，我才发现加错了位置，需要加到 `~/.local/bin/osu-wine` 脚本里。（对，这是个脚本）
+这样用 wine 装好的 osu 游戏时只能跑到 170 帧（windows 上 1k+ fps），使用 `nvtop` 查看，果然跑在核显上，需要 `prime-run`。这个 `prime-run` 还不是随便加的，我在 krunner 里加了以后帧率没有变化，但是 `nvtop` 是有输出的。我一直以为有什么其他问题，直到我看到了[这个](https://github.com/NelloKudo/osu-winello/wiki/(Possibly)-optimize-your-game:-Gamemode#installing-gamemode)，我才发现加错了位置，需要加到 `~/.local/bin/osu-wine` 脚本里。（对，这是个脚本）
 
 现在又出现了音频问题，pipewire 下无法正常播放，唉。
 
@@ -289,6 +289,7 @@ make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
 > -> 查找 AUR 软件包失败： ttf-ms-win11-auto-zh_cn:1 error occurred:<br/> \* response decoding failed: invalid character '<' looking for beginning of value
 
 并且换回官方源仍然相同报错。换源过去然后发现换不回来，堪比刷小米 EU[^1].
+
 [^1]: 参考[刷机](../mobile_setting#mipad-5)
 
 之后发现，在 `~/.config/yay/config.json` 中有一个 `aurrpcurl` 字段，会保留上一个换源的结果(?) 并且不会自动更换回去。于是我删除该条，重新执行 `yay --aururl "https://aur.archlinux.org" --save`，问题得解。如果一次不行就两次，一定能解(?)。

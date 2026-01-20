@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import RadioButtonGroup from "./RadioButtonGroup.vue";
 
 /**
@@ -78,8 +78,7 @@ const englishOptions = [
   },
   {
     label: "Oxford Advanced American Dictionary",
-    value:
-      "https://www.oxfordlearnersdictionaries.com/definition/american_english/{}",
+    value: "https://www.oxfordlearnersdictionaries.com/definition/american_english/{}",
   },
   {
     label: "Merriam Webster",
@@ -97,8 +96,7 @@ const japaneseOptions = [
   { label: "goo 辞書", value: "https://dictionary.goo.ne.jp/srch/jn/{}/m6u/" },
   {
     label: "広辞苑無料検索",
-    value:
-      "https://sakura-paris.org/dict/広辞苑/prefix/{}/",
+    value: "https://sakura-paris.org/dict/広辞苑/prefix/{}/",
   },
 ];
 const selectNum = ref(3);
@@ -128,10 +126,9 @@ function clickRecite() {
   for (let i = 0; i < selectNum.value; ++i) {
     console.log(notebook, language.value);
     const word = get_random<string>(notebook.value[language.value].default);
-    const url =
-      (language.value === "english"
-        ? englishWebsite.value
-        : japaneseWebsite.value).replaceAll("{}", word);
+    const url = (language.value === "english"
+      ? englishWebsite.value
+      : japaneseWebsite.value).replaceAll("{}", word);
     answer.value.push({
       word,
       url,
@@ -143,6 +140,6 @@ function clickRecite() {
 
 <style scoped>
 .pd {
-  padding: 0.3rem
+  padding: 0.3rem;
 }
 </style>
