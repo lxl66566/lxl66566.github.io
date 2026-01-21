@@ -56,7 +56,7 @@ const links: ArticleCellBoxType[] = [
     ],
   },
   {
-    field: "横评与推荐",
+    field: "横评、推荐与踩坑",
     links: [
       { text: "跨端使用时长记录软件横评", url: "time_record" },
       { text: "运动轨迹记录软件横评", url: "track_record" },
@@ -71,6 +71,7 @@ const links: ArticleCellBoxType[] = [
       { text: "内网穿透", url: "frp" },
       { text: "远程控制方案", url: "control" },
       { text: "理财，加密货币与区块链", url: "money" },
+      { text: "各种尝鲜体验", url: "userexp" },
     ],
   },
   {

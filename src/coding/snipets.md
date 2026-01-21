@@ -164,7 +164,7 @@ script -q -c "$cmd" test.log
 
 @tab python
 
-```py
+```py :collapsed-lines
 import argparse
 import os
 import subprocess

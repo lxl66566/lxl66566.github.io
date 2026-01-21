@@ -35,6 +35,7 @@ scoop bucket add java
 # 然后根据你需要的版本安装对应 jdk。
 scoop install openjdk22
 scoop install corretto8-jdk
+scoop install liberica8-full-jdk
 ```
 
 几个不同提供方：
@@ -43,26 +44,188 @@ scoop install corretto8-jdk
 - temurin\* 是社区和其他厂商维护的版本，更改少点。
 - openjdk\* 是 oracle 自家的原味版本。注意 openjdk 已经没有 java 8 了。
 
-如果你是为了兴趣学习，安装最新版本 jdk；如果是工作，安装 java 8。
+如果你是为了兴趣学习，安装最新版本 jdk；如果是工作，根据不同要求可以选择安装 java 8 或 java 17。
 
-### vscode
+### IDE
 
-如果只是写一些小项目，比如跑跑学校的课程，并且不需要多人协作，vscode 是完全够用的。`javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序就行。
+::: tabs
 
-在 vscode 扩展商店搜 `java`，直接装 _Language Support for Java(TM) by Red Hat_ 即可，这是最老牌、兼容性最好的 java 插件，用来分析大项目也是没啥问题的。
+@tab vscode
 
+如果只是写一些小项目，比如跑跑学校的课程，并且不需要多人协作，vscode 是完全够用的。
+
+对于大型项目，强行使用 vscode 可能需要付出一些代价，但也绝非不可能，我一直在研究这方面的解决方法，并且有一些小心得。
+
+#### 扩展
+
+分析器：
+
+- 在 vscode 扩展商店搜 `java`，直接装 _Language Support for Java(TM) by Red Hat_ 即可，这是最老牌、兼容性最好的 java 插件，用来分析大项目也是没啥问题的。
+  - Red Hat 这个插件在跳转的时候会比 idea 慢一些，我猜测它是 lazy 的，打开项目时不会提前建立索引，而是在跳转时才分析。
 - 不要装 Apache NetBeans，这玩意不是生产可用的。
-- Red Hat 这个插件在跳转的时候会比 idea慢一些，我猜测它是 lazy 的，打开项目时不会提前建立索引，而是在跳转时才分析。
+
+运行/调试器：
+
+- 对于小型项目，例如单文件，直接 `javac xx.java` 生成 `.class` 字节码。`java xx` 执行程序就行。
+- 对于中大型项目，安装微软的 _Debugger for Java_。然后写一个 `.vscode/launch.json`，具体内容可以从 idea 导出 XML 配置后，再让 AI 生成。然后就可以在左侧边栏找到 debugger 图标，运行或调试了。这里是我的 example。
+  ```json
+  {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "XXX",
+        "request": "launch",
+        "mainClass": "com.xxx.yyy.zzz",
+        "projectName": "yyy",
+        "shortenCommandLine": "jarmanifest",
+        "vmArgs": "-Dfile.encoding=UTF-8 -Dxxx.xxx=xxx",
+        "env": {
+          "k": "v"
+        }
+      }
+    ]
+  }
+  ```
 
 #### formatter
 
-使用 vscode 做 java 大项目的一大痛点是 formatter。别人都在用 idea 进行格式化，而 idea 的 formatter 是闭源的，如果用自己的 formatter，代码风格和别人的无法兼容。
+使用 vscode 做 java 大项目的一大痛点是 formatter。别人都在用 idea 进行格式化，而 idea 的 formatter 目前没有可用的第三方实现，如果用自己的 formatter，代码风格和别人的无法兼容。
 
-目前来说，和 idea formatter 兼容性最高的还是原生 _Language Support for Java(TM) by Red Hat_，但是需要让使用 idea 的其他开发把 code format 导出为 Eclipse XML Profile，然后在 vscode 插件里指定。（）
+- 目前来说，和 idea formatter 兼容性最高的还是原生 _Language Support for Java(TM) by Red Hat_，但是需要让使用 idea 的其他开发把 code format 导出为 Eclipse XML Profile，然后在 vscode 插件里指定。不过即使这样也没法完全复刻 idea 的 formatter，只能做到相对来说风格相似，仍会有一些行为是不一致的。
+- [a-havrysh/vscode-intellij-code-formatter](https://github.com/a-havrysh/vscode-intellij-code-formatter) 是个新代码库，到我写出这段文字的时候该仓库还是 0 star。~~看到 commit 信息里有名为 claude 的菊花我就浑身难受~~，试用了下，果然不出意外地难用，即使我指定了 idea 导出的 XML 格式化文件，它的格式化行为也和 idea 是不一致的。
 
-- [a-havrysh/vscode-intellij-code-formatter](https://github.com/a-havrysh/vscode-intellij-code-formatter) 是个新代码库，到我写出这段文字的时候该仓库还是 0 star。~~看到 commit 信息里有名为 claude 菊花我就浑身难受~~，试用了下，果然难受，即使我指定了 idea 导出的 XML 格式化文件，它的格式化行为也和 idea 是不一致的。
+然后我想出了一个最终邪道：通过 commit hook **直接调用 idea** 进行 format，本质上是起了个无窗口 idea。
 
-### idea
+注意执行这个脚本的时候 idea 不能正在运行，因为同一时间只能有一个 idea 实例。由于 idea 在 format 完还会干很多别的事，例如加载插件等，所以我在 format 结束后就立刻 kill 掉了。
+
+```py :collapsed-lines
+#!/usr/bin/env python
+
+import os
+import platform
+import subprocess
+import sys
+import time
+
+STYLE_XML_PATH = r"C:\programs\work\LarkAdmin.xml"
+
+IDEA_BIN_PATHS = {
+    "Windows": r"C:\software\IDEA\bin\format.bat",
+    "Darwin": "/Applications/IntelliJ IDEA.app/Contents/bin/format.sh",
+    "Linux": "/opt/intellij-idea/bin/format.sh",
+}
+
+ALLOWED_REPOS = [
+    "your_folder_name"
+]
+
+
+def get_platform_idea_bin():
+    system = platform.system()
+    path = IDEA_BIN_PATHS.get(system)
+
+    if not path:
+        print(f"[Error] Unsupported OS: {system}")
+        sys.exit(1)
+
+    if not os.path.exists(path):
+        print(f"[Error] IDEA formatter not found at: {path}")
+        print("Please update the path in 'idea_format.py' to match your installation.")
+        sys.exit(1)
+
+    return path
+
+
+def get_staged_java_files():
+    try:
+        # --diff-filter=ACMR: Added, Copied, Modified, Renamed
+        cmd = ["git", "diff", "--cached", "--name-only", "--diff-filter=ACMR"]
+        result = subprocess.check_output(cmd).decode("utf-8")
+        files = [f.strip() for f in result.splitlines() if f.strip().endswith(".java")]
+        return files
+    except subprocess.CalledProcessError:
+        print("[Error] Failed to get staged files.")
+        sys.exit(1)
+
+
+def main():
+    if not os.path.exists(STYLE_XML_PATH):
+        print(f"[Error] Style XML not found: {STYLE_XML_PATH}")
+        sys.exit(1)
+
+    files = get_staged_java_files()
+    if not files:
+        sys.exit(0)
+
+    idea_bin = get_platform_idea_bin()
+
+    print(f"Found {len(files)} staged Java files.")
+    print("Running IntelliJ IDEA Formatter (this may take a few seconds)...")
+
+    abs_style_path = os.path.abspath(STYLE_XML_PATH)
+    cmd = [idea_bin, "-s", abs_style_path] + files
+
+    try:
+        process = subprocess.Popen(
+            cmd,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            encoding="gbk" if platform.system() == "Windows" else "utf-8",
+            errors="ignore",
+        )
+
+        formatted_success = False
+        while True:
+            line = process.stdout.readline()
+            if not line and process.poll() is not None:
+                break
+            if line:
+                line_content = line.strip()
+                print(f"  [IDEA] {line_content}")
+
+                if (
+                    "file(s) formatted" in line_content
+                    or "files formatted" in line_content
+                ):
+                    print(
+                        "Formatting detected. Killing IDEA process to skip plugin errors..."
+                    )
+                    formatted_success = True
+                    time.sleep(0.1)
+                    process.terminate()
+                    break
+
+                if "Only one instance" in line_content:
+                    print("\nError: IDEA is running. Please close it first.")
+                    process.kill()
+                    sys.exit(1)
+
+        if process.poll() is None:
+            process.kill()
+
+        if not formatted_success:
+            pass
+
+    except Exception as e:
+        print(f"[Error] Execution failed: {e}")
+        sys.exit(1)
+
+    print("Re-staging files...")
+    subprocess.check_call(["git", "add"] + files)
+
+
+if __name__ == "__main__":
+    repo_dir = os.path.basename(os.getcwd())
+    print(f"Current directory: {repo_dir}")
+    if repo_dir not in ALLOWED_REPOS:
+        print(f"repo not in {ALLOWED_REPOS}, skipping formatting for {repo_dir}")
+        sys.exit(0)
+    main()
+```
+
+@tab idea
 
 > 但凡有半点选择，我都不会用 idea，因为它作为一个编辑器实在是[太烂了](../gossip/fuckxxx.md#jetbrains-系列)。。。
 
@@ -73,39 +236,45 @@ vscode 的 java 扩展很弱鸡的，没法满足复杂的开发需求。如果�
 1. 因为 jb 家的东西都差不多，之前[配 Android Studio 的经验](./android.md#android-studio)也可以套用一点。
 2. 继续删除/禁用那些没用的插件。idea 的社区版会预装很多 ultimate 的插件，然后不让你用。。
 3. _编辑器 > 常规 > 编辑器标签页_，勾选 _标记已修改_。非常重要，被坑了几次。。。
-4. 调整 KeyMap
-   - 即使把 vscode 的 vim 插件同步过来，vscode 的 vim 配置也不会同步到 ideavim。很多键位也是需要改的，比如我保留了许多编辑器自己的行为而不是 vim 行为。然后还需要修改 `~/.ideavimrc` 的设置。
-     ```
-     " 双引号是注释
-     set nocompatible           " 关闭vi兼容模式
-     set clipboard+=unnamedplus " 复制粘贴时同时复制到剪贴板
-     set incsearch              " 搜索时实时高亮
-     set hlsearch               " 高亮搜索结果
-     set ignorecase             " 搜索忽略大小写
-     set smartcase              " 如果搜索包含大写，则不忽略大小写
-     vnoremap <C-c> "+y " 将 Visual 模式下的 Ctrl+c 映射为复制到系统剪贴板
-     " 删除相关
-     nnoremap x "_x
-     vnoremap x "_x
-     snoremap x <C-g>"_x
-     nnoremap d "_d
-     vnoremap d "_d
-     snoremap d <C-g>"_d
-     nnoremap D "_D
-     " select mode 相关
-     set keymodel^=startsel
-     set selectmode+=mouse,key
-     set idearefactormode=keep
-     vnoremap <BS> "_c
-     snoremap <BS> <C-g>"_c
-     vnoremap <Del> "_c
-     snoremap <Del> <C-g>"_c
-     ```
+4. 调整 KeyMap：前提是把 vscode 的 KeyMap 同步过来。
    - 取消绑定所有 Ctrl + w，只保留 `窗口 -> 编辑器标签页 -> 编辑器关闭操作 -> 关闭标签页`。否则在终端里使用 Ctrl + w 会关闭终端。
-5. 为所有文件开启软换行。
-6. 关闭 _分支切换时还原工作区_，没啥必要，又没开几个面板
+   - 即使把 vscode 的 vim 插件同步过来，vscode 的 vim 配置也不会同步到 ideavim。很多键位也是需要改的，比如我保留了许多编辑器自己的行为而不是 vim 行为。
+5. 配置 ideavim。
+   ```vim
+   " 双引号是注释
+   set nocompatible           " 关闭vi兼容模式
+   set clipboard+=unnamedplus " 复制粘贴时同时复制到剪贴板
+   set incsearch              " 搜索时实时高亮
+   set hlsearch               " 高亮搜索结果
+   set ignorecase             " 搜索忽略大小写
+   set smartcase              " 如果搜索包含大写，则不忽略大小写
+   vnoremap <C-c> "+y " 将 Visual 模式下的 Ctrl+c 映射为复制到系统剪贴板
+   " 删除相关
+   nnoremap x "_x
+   vnoremap x "_x
+   snoremap x <C-g>"_x
+   nnoremap d "_d
+   vnoremap d "_d
+   snoremap d <C-g>"_d
+   nnoremap D "_D
+   " select mode 相关
+   set keymodel^=startsel
+   set selectmode+=mouse,key
+   set idearefactormode=keep
+   vnoremap <BS> "_c
+   snoremap <BS> <C-g>"_c
+   vnoremap <Del> "_c
+   snoremap <Del> <C-g>"_c
+   ```
+   - ideavim 其他常用操作：
+     - `gd` 是 go definition，就是鼠标 ctrl + 左键单击。
+     - `<C-o>` 是返回，`<C-i>` 是前进，相当于两个鼠标侧键。
+6. 为所有文件开启软换行。
+7. 关闭 _分支切换时还原工作区_，没啥必要，又没开几个面板
 
 如果 idea 以管理员运行，则插件也会获得管理员权限，而插件的行为不是我们能控制的，所以最好不要以管理员运行 idea。
+
+:::
 
 ### gradle
 
@@ -160,6 +329,9 @@ java 7 之后还可以使用 [try-with-resource](https://github.com/Jueee/effect
 
 ### 数据结构
 
+- 创建临时数组：
+  - \>= java 9：使用 `List.of`，创建不可变的数组。
+  - java 8：使用 `Arrays.asList`。
 - 动态数组：
   - Arraylist 和 Vector，后者是线程安全的，更慢。
     ```java:no-line-numbers
@@ -251,6 +423,12 @@ Optional.ofNullable(123).filter(u -> u < 150);                  // 映射
 
 当然，在没有强制性要求处理空值的地方（内部调用等），或者对性能敏感的地方，用 `@Nullable` 注解即可。如果是 Spring 开发场景，优先使用 `org.springframework.lang.Nullable`。
 
+### 注解
+
+java 5 （2004 年）引入了注解，非常早。注解现在已经成了业务开发中不可或缺的一部分。注解可以在编译期或运行期被读取，并且改变代码的行为，跟 rust 的 proc macro 还是有一些区别的。之后的 [业务内容](#业务内容) 会更详细地介绍一些框架注解。
+
+- Java 注解的属性值必须是编译期常量。
+
 ### 序列化
 
 序列化可以将一个 class 进行结构化表示，Jackson 或其他库可以利用这个结构表示将类转换成其他东西，例如 json。
@@ -325,7 +503,7 @@ java 业务开发一般遵守分层架构：Controller 层是对外交互的接�
 
 ### Lombok
 
-Lombok 是一个业务开发必备库，作用是在编译时通过注解自动生成代码，跟 rust 的 proc macro 差不多。
+Lombok 是一个业务开发必备库，作用是在编译时通过注解自动生成代码。
 
 常用的注解有：
 

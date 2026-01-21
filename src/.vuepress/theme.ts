@@ -35,6 +35,10 @@ export default hopeTheme({
     codeTabs: true,
     echarts: true,
     // attrs: true,
+    highlighter: {
+      type: "shiki",
+      collapsedLines: true,
+    },
     imgLazyload: true,
     imgSize: true,
     imgMark: true,

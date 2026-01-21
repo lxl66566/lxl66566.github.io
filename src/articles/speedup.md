@@ -42,7 +42,7 @@ Cheat Engine 想必大家都不陌生，我也会使用 CE 进行 RPG galgame（
 
 首先安装一个 VB Cable，其作用是修改输入输出设备，防止音频合成器直接将音频输出到扬声器，覆盖掉我处理后的输入。然后脚本大概是这样：
 
-```py
+```py :collapsed-lines
 import time
 import pyaudio
 
