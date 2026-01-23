@@ -56,6 +56,10 @@ nodejs 常见的就 npm, yarn, pnpm 三件套，现在的框架文档也基本�
 - 如果直接使用 `pnpm i` 安装依赖后运行报错（而在 npm/yarn 上表现良好），请使用 `pnpm i --shamefully-hoist` 安装依赖！[^1]
 - `npm init ...` == `pnpm create ...`
 - 现在 pnpm 会往 `package.json` 里加一个 `packageManager` 字段，包含 pnpm 版本和 hash。如果要更新这个版本，请使用 `corepack use pnpm@latest`。
+- 我的其他设置：
+  ```sh
+  pnpm config set -g verifyDepsBeforeRun=warn
+  ```
 
 [^1]: 感谢 Asuka Minato 解答；大概是有依赖不支持 pnpm 的目录模式。
 
