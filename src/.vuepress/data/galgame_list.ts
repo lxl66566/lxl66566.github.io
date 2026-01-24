@@ -2,6 +2,31 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "灵缘 ～化谜解咒，缘影交织～",
+    valid_name: "灵缘",
+    other_names: ["霊縁 ～穢れを祓い、交わる欲縁～"],
+    duration: {
+      start: "2026-01-24",
+    },
+  },
+  {
+    name: "小镇的牧场生活",
+    tag: {
+      not_strict: true,
+    },
+    duration: {
+      start: "2026-01-24",
+      end: "2026-01-24",
+    },
+  },
+  {
+    name: "箱庭ロジック",
+    other_names: ["箱庭的逻辑", "箱庭逻辑", "The logic of the miniature garden"],
+    duration: {
+      start: "2026-01-24",
+    },
+  },
+  {
     name: "Ever17",
     duration: {
       start: "2026-01-16",

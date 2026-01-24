@@ -224,6 +224,13 @@ const data: SpeedupItemType[] = [
     save_format: "ovk",
     speedupable: false,
   },
+  {
+    names: ["箱庭ロジック"],
+    valid_name: "箱庭ロジック",
+    engine: "-",
+    save_format: "v",
+    speedupable: true,
+  },
 ];
 </script>
 

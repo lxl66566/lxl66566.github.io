@@ -135,6 +135,7 @@ tag:
 - [ ] rewrite of easytier
   - [ ] Raft supported by [hiqlite](https://github.com/sebadob/hiqlite)
   - [ ] ability to bypass GFW
+- [ ] TUI renamer, because fd + mv is too slow. use regex like vscode string replace.
 
 <!-- - 转码，复制，参考我的 fish function
 - 平台无关的 alias

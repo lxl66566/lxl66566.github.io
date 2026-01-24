@@ -1053,6 +1053,13 @@ SiglusEngine 公认的工具是 [xmoezzz/SiglusExtract](https://github.com/xmoez
 GARbro 可解不可封，因此还是得想别的办法。imhex 打开一看，里面 OggS 是直接打进去未变换的，那么最后就剩下了解 header 的含义了。
 
 </template>
+<template #箱庭ロジック>
+
+这游戏还挺小众的，连引擎叫啥都没查到。
+
+随便摸一摸，发现音频大概是在 res/s/v 里。所有文件都是以 `.v` 结尾，先看一下 hex，好家伙全是 `OggS` 开头，99.9% 的概率所有的音频都是 raw ogg，直接批量重命名就可以加速了。加速完再把扩展名改回去即可。
+
+</template>
 </SpeedupList>
 
 ### 二试封包总结
