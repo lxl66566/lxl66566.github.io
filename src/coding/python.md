@@ -228,7 +228,7 @@ conda list  # 查看环境内工具包
 
 - bat 文件中调用 conda 指令：调用前加入`call activate.bat`指令
 - 创建纯净环境：我们使用[上述指令](#基本命令)创建环境后，可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
-  <ZoomedImg alt="anaconda_list" src="/images/coding/python/anaconda_1.png" scale="65%" />
+  <ZoomedImg alt="预装了很多实际上没什么用的包" src="/images/coding/python/anaconda_1.png" scale="65%" />
   这里给出一个解决方法：
   1. 在任意目录下新建文件，输入以下内容并保存为 `env.txt`（名字不重要）。
   ```batch

@@ -83,6 +83,7 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
    git config --global init.defaultBranch main     # 更改默认分支为 main（linux 默认还是 master）
    git config --global rebase.autoSquash true      # 自动 squash
    git config --global core.ignorecase false       # （Windows）将文件名大小写改动也视为改动。https://t.me/withabsolutex/2156
+   git config --global merge.conflictstyle zdiff3  # 使用更智能的 diff 算法
    # 全局忽略
    printf "node_modules\n__pycache__\n*.exe\n*.o\n" > ~/.gitignore_g
    git config --global core.excludesfile ~/.gitignore_g
@@ -95,8 +96,8 @@ git for windows 的安装也算是一门学问，一共十几个英文步骤选�
 6. 然后当你了解了 git 的更多知识后，可以去看看 [external 7.](#external)。
 7. 我的建议：
    - 不要设置 fetch.pruneTags！这个选项非常危险，每一次 git fetch 都会把你的 local tag 清掉，很难找回。
-   - 不要使用 difftastic，除非你一定要在命令行看 diff。否则导出 patch 的时候不是正常的格式，我也不想每次导出都手写 `--no-ext-diff`。而且现在谁还在命令行看 diff 啊。
    - 不要设置 pull.rebase，参考[提交时间](#提交时间)。
+   - 如果你一定要用 diff pager，导出 patch 时记得要肌肉记忆 `git -P diff`。
 
 [^6]: 需要使用 [Vim](./vim.md)。你也可以修改环境变量 `EDITOR` 的值指定其他编辑器。但是不要将 `EDITOR` 设为 vscode，vscode 在 2025 年还没法作为默认编辑器处理 git 的编辑请求。
 

@@ -14,6 +14,7 @@ const original_list: GalItemInputType[] = [
     tag: {
       not_strict: true,
     },
+    use_time: "25min",
     duration: {
       start: "2026-01-24",
       end: "2026-01-24",

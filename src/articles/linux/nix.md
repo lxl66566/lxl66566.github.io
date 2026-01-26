@@ -183,7 +183,7 @@ flake 是顶层结构，所有 nixos flake 配置的入口都应该是 flake.nix
 flake 模式下需要自备代理，因为 flake input 一般都需要去 Github 上拉取。如果你在中国大陆且初始安装 NixOS 就直接使用 flake 配置，需要有代理流量过墙的能力。
 
 - flake 保证可复现性的情况下也带来了一些开销：如果你引入了许多软件包的 flake，而这些 flake 又引入了不同版本的 nixpkgs，那么这些 nixpkgs 就会在你的 OS 上共存，并且占用很多空间（每个 nixpkgs 大约 42MB，软件内部依赖的 pkg 也会单独占用空间）。因此我们需要用 `inputs.<xxx>.inputs.nixpkgs.follows = "nixpkgs";` 将 input 里引入的 nixpkgs 换成我们自己的 nixpkgs 版本，减小空间占用。这样虽然不再保证“引入的这个软件包必定是可用的”，但是可复现性不受影响，且出问题的概率较小，比起节省的空间，我觉得还是可以妥协的。
-  - 除了 nixpkgs 这种每个 flake 都有的东西，外部的 flake 也可能有一些其他依赖。所以引入 flake 的时候最好检查一下它的源码，把全部 input 都 follows 到统一的版本。
+  - 除了 nixpkgs 这种每个 flake 都有的东西，外部的 flake 也可能有一些其他依赖（stylix：是在说我吗v\_v）。所以引入 flake 的时候最好检查一下它的源码，把全部 input 都 follows 到统一的版本；并且需要在 rebuild 后检查 flake.lock，如果发现了 `_2` 字样那就意味着你的不同 input 已经引入了同一个 flake 的不同版本。我有洁癖，我希望将其统一到一个版本。
 - 降级 flake input 到某个特定版本（例：nixpkgs）：`nix flake update nixpkgs --override-input nixpkgs github:NixOS/nixpkgs/<commit-hash>`。至于 commit hash 怎么查，可以看看 [搜索技巧](../../coding/github.md#搜索技巧)。
 
 ### nix command

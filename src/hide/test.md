@@ -10,3 +10,5 @@ feed: false
 <dtlslong>这是短句</dtlslong>
 
 <dtlslong>这是长长长长长长长长长长长长长长长长长长长长长长长长长长句</dtlslong>
+
+<ZoomedImg alt="aaa" src="/images/coding/python/anaconda_1.png" :mask="true" />

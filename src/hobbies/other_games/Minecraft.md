@@ -1,4 +1,3 @@
-<!-- dprint-ignore-file -->
 ---
 date: 2022-05-17
 icon: tree
@@ -36,6 +35,8 @@ tag:
 ## 我的世界 bingo 速查（1.19.4）
 
 > 这玩意是我之前沉迷 mc 的时候写的，属实有点吃太饱，看个乐呵算了。
+
+<!-- dprint-ignore-start -->
 
 ### 高炉
 
@@ -299,3 +300,5 @@ tag:
 ||||
 ||||
 -->
+
+<!-- dprint-ignore-end -->
