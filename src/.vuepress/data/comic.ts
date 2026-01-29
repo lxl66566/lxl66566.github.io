@@ -994,5 +994,6 @@ export default [
   { id: "597027", aScore: 7, bScore: 6.4, info: "#蔚蓝档案 #纯爱 #护士", bak: "https://telegra.ph/うらうみ屋-裏科-心のままにそして傍に-ブルーアーカイブ-中国翻訳-DL版-09-15-2" },
   { id: "596962", aScore: 7.9, bScore: 4.5, info: "#蔚蓝档案 #护士 #比基尼", bak: "https://telegra.ph/桃色インテーク-ふるーれ-薄明に満たされて-愛と救護と献身を-ブルーアーカイブ-中国翻訳-DL版-09-14-4" },
   { id: "625122", aScore: 8.7, bScore: 9.7, order: 2, info: "#血姫夜交 #史莱姆 #玉之けだま #催淫", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-血姫夜交2-変態スライムなんかに負けるわけないっ-中国翻訳-無修正-DL版-01-23-3" },
+  { id: "625793", aScore: 8.3, bScore: 8.7, info: "#蔚蓝档案 #催眠 #快感延迟 #loli", bak: "https://telegra.ph/C107-つくてん-円つくも-妃咲キ乱レ-ブルーアーカイブ-中国翻訳-01-26-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
