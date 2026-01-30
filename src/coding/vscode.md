@@ -175,6 +175,24 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 3. 同意连接请求
 4. 给对方权限，例如读写，或终端执行代码
 
+## Git
+
+我的一些设置，可能过时。
+
+```json
+{
+  "git-graph.date.type": "Commit Date",
+  "git.autofetch": false,
+  "git.blame.editorDecoration.enabled": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "never"
+}
+```
+
+- 官方的 Git 和 gitlens 都不好用，我比较喜欢轻量的 _Git Graph_，看起来也很直观。
+  - 选中一个 commit，然后按住 ctrl 单击另一个 commit，即可查看二者之间的 diff。
+
 ## 小技巧
 
 - vscode 自带了许多好用的小工具，可以通过 Ctrl + Shift + p 打开菜单，搜索就能用。我推荐下面这些：

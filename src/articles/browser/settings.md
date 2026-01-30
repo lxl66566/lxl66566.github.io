@@ -29,6 +29,18 @@ tag:
 
 详见[下载器横评](../downloaders.md)。
 
+## 实验性选项
+
+进入 edge://flags/，进行一些设置。chrome 系的都可以进类似的 flags。
+
+不要相信 _By enabling these features, you could lose browser data or compromise your security or privacy_，因为~~即使不开也会丢数据~~。
+
+一些比较关键的：
+
+1. _Auto Dark Mode for Web Contents_。比起 [Dark Reader](../../farraginous/recommend_packages.md#dark-reader)，这个 Dark 不会向网页里插入 css（某些~~脑残的~~网页会检测 Dark Reader）。
+   - 问题是不容易启用和禁用（修改状态需要重启浏览器）。如果遇到某些网页在 dark 下的异常，就不好切回去，或者排除网页。所以开不开还是看心情。
+2. Experimental QUIC protocol 和 TLS 1.3 Early Data，都是新协议的性能改进，就不多说了。
+
 ## firefox
 
 20230214，我从 edge 用户转为了 firefox 用户。edge 并不是不满足我的需求，甚至更加贴合我的个人需求（纵向标签栏，firefox 没有内置此功能），换浏览器大约只是我的心血来潮而已。为此我花了很多功夫设置 firefox。然而我还是于 20230304 换回了 edge。

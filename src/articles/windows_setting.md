@@ -162,6 +162,8 @@ tag:
     5. 在 _设置 - 可选功能_ 里，卸载 Windows Powershell ISE，windows 这编辑器太捞了。
   - 禁用一些服务。
     - Windows Font Cache Service
+  - 禁用一些设备。
+    - 如果是 intel CPU，禁用 [_Intel(R) Management Engine Interface #1_](https://www.reddit.com/r/hardware/comments/1hfp2gs)，P 用没有，还有额外风险。为什么我需要一个如此高权限的玩意来让我的电脑增加不确定性？
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))
   - 如果你安装了 MS Office，那大概率还会被装上一个 Office PLUS，这是一个傻逼国内代理广告，会污染你的 office 菜单和右键菜单。建议用 everything 搜到 officeplus 的安装文件夹，然后点击 uninst.exe 卸载。
   - 搜索 _任务计划程序_，禁用一些用不到的任务，例如 AMD auto update, OneDrive 等。
