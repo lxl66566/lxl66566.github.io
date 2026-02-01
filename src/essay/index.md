@@ -12,12 +12,12 @@ tag:
 # 随笔
 
 <div class="subtitle">——谜语人的处所，闷声者的温巢。</div>
-<div class="subtitle">谜，侃，思，叹，道</div>
 
 总之就是想到啥写啥。
 
 [前往我的频道](https://t.me/withabsolutex)查看更多随笔。
 
+- [2026](./2026.md)
 - [2025](./2025.md)
 - [2024](./2024.md)
 - [2023](./2023.md)

@@ -140,7 +140,7 @@ export default sidebar({
     {
       text: "随笔",
       link: "/essay/",
-      children: ["2025", "2024", "2023.md", "2022.md", "earlier.md"],
+      children: ["2026", "2025", "2024", "2023", "2022", "earlier"],
     },
   ],
   "/learning/": [

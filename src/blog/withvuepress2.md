@@ -471,14 +471,18 @@ function sidebar() {
 
 ## 尝试更好的搜索
 
-[如上所述](#试图迁移至-vitepress)，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方服务（algolia）需要经过严格审查。因此我看到了能够本地索引的[flexsearch](https://github.com/nextapps-de/flexsearch)，继续找到了：
+[如上所述](#试图迁移至-vitepress)，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方服务（algolia）需要经过严格审查。因此我看到了能够本地索引的[flexsearch](https://github.com/nextapps-de/flexsearch)，继续找到了[^搜索参考]：
 
 - [vuepress-plugin-flexsearch](https://github.com/z3by/vuepress-plugin-flexsearch)，此插件已经两年未维护，依赖包的安全漏洞数十个，甚至连 [example 都未能执行](https://github.com/z3by/vuepress-plugin-flexsearch/issues/85)。。在 vuepress 2.x 上无法使用。
 - [vuepress-plugin-fulltext-search](https://github.com/leo-buneev/vuepress-plugin-fulltext-search)，我更愿意将其看成 _vuepress-plugin-flexsearch_ 的一个 fork，同样的两年未维护，同样的无法使用，同样的安全漏洞。/流汗
 - [Run your own docsearch](https://docsearch.algolia.com/docs/legacy/run-your-own)，文章也两年未更新了，而且也需要借助 algolia 的 API 服务，免费最高支持 10k 条(?)，总之不是一个好选择。
 - [vuepress-plugin-full-text-search2](https://github.com/ota-meshi/vuepress-plugin-full-text-search2)：testing
 
-参考：[liuli-moe/to-the-stars](https://github.com/liuli-moe/to-the-stars/issues/22)
+[^搜索参考]: 参考：[liuli-moe/to-the-stars](https://github.com/liuli-moe/to-the-stars/issues/22)
+
+自从[更换主题](#更换主题)后，我就一直用主题提供的 slimsearch + nodejs-jieba 分词进行本地索引的搜索。转眼来到了 2026 年，nodejs-jieba 已经很久没有维护，没法用了，并且在某次 node/pnpm 升级后爆炸了。因此我抛弃了 slimsearch 转向 algolia。
+
+algolia 在搜索和用户体验上做的很好，但是在接入和 dashboard 上会差一些：dashboard 加载相当慢，页面上一堆 AI 和自以为是的“优质引导”内容，反倒找不到我需要的功能。由于本站在许多地方都有部署，我希望所有站点都使用同一个索引，但是 algolia 并没有提示这一点。最后我才自己摸索出来，只要用了同一个 meta 的页面，就会被关联到同一个 algolia 应用下，共用索引。
 
 ## 更换主题
 

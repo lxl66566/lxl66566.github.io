@@ -58,6 +58,18 @@ tag:
 
 1. Nix 每次更新下载全量 nixpkgs metadata，是一个经典的 40+M 的 `.tar.gz`，里面包的啥玩意没拆过不知道，但是这量还是有点大的。看看隔壁 Arch，人家 binary 数据库也就 10M 左右。（emmm，不过人家 core 包量级确实小，好像也没得说）
 
+### flake
+
+flake 作为一个实验性功能，现在已经成了事实标准。这里随便聊聊 flake 吧。
+
+我可以直接说，flake 就完全是另一套包管理方式。nixpkgs 是单一的版本，所有软件的版本都被锁在唯一 version；而 flake 的最大特征是可嵌套、可独立锁定版本，跟现代编程语言的包管理器比较像。
+
+但是当前 flake 已经暴露出了许多痛点。每个 NixOS 用户的 flake 第一课就是 `nixpkgs.follows = "nixpkgs";`，如果没有这行，你的 input 就出现了多个 nixpkgs，而每个 nixpkgs 会占用 42MB 的空间（这还是在不计算从这个 pkgs 安装的包的前提下）。并且 nixpkgs 并不是 flake 的唯一 input，有的 flake 有几十个 input，那么你就要写几十次 follows。幸好有 nixpkgs 在自由度方面作出了一些妥协，换来了嵌套层数较少的、行为相对统一的 flake，否则 flake 的最终结果就是被 follows 淹没。
+
+当然 flake 也解决了一些问题：
+
+- 由于 flake 严格的 input/output 策略，你能自由 follows 所有子 flake、孙 flake... 的 input。这点是编程语言的包管理器所不具备的，它们只会警告你不要手动编辑 lock 文件。
+
 ## 打包
 
 ### 语言

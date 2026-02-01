@@ -11,11 +11,11 @@ tag:
 
 # NSFW
 
-欢迎来到 _绝对值\_x_ 的 NSFW 区。在这里推荐一下[本人的 NSFW 频道](https://t.me/absolutexsH)。
+欢迎来到 _绝对值\_x_ 的 NSFW 区。在这里先推荐一下[本人的 NSFW 频道](https://t.me/absolutexsH)，不定期转发各种符合本人 XP 的 NSFW 内容。
 
 为了确定您的~~老涩批资质~~，这里设置了一个非常简单的小测验：根据以下图片，猜出**四位数字**，即为下列所有文章的密码。
 
-<ZoomedImg alt="綾地 寧々" src="/images/hobbies/NSFW/nene.jpg" :mask="true" />
+<ZoomedImg src="/images/hobbies/NSFW/nene.jpg" scale="100%" :mask="true" />
 
 > 这是一个非常出名的梗，在 galgame 圈等各种 NSFW 圈内均属于经典放送级别。
 
