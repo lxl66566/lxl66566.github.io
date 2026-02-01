@@ -5,12 +5,21 @@ const original_list: GalItemInputType[] = [
     name: "灵缘 ～化谜解咒，缘影交织～",
     valid_name: "灵缘",
     other_names: ["霊縁 ～穢れを祓い、交わる欲縁～"],
+    use_time: "2h57min",
     duration: {
       start: "2026-01-24",
+      end: "2026-01-30",
+    },
+    score: {
+      story: 4.7,
+      visual: 8.4,
+      program: 5.8,
+      thrill: 1.1,
     },
   },
   {
     name: "小镇的牧场生活",
+    playing_status: PlayingStatus.STOPPED,
     tag: {
       not_strict: true,
     },
@@ -19,16 +28,21 @@ const original_list: GalItemInputType[] = [
       start: "2026-01-24",
       end: "2026-01-24",
     },
+    score: {
+      program: 0.1,
+    },
   },
   {
     name: "箱庭ロジック",
     other_names: ["箱庭的逻辑", "箱庭逻辑", "The logic of the miniature garden"],
+    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2026-01-24",
     },
   },
   {
     name: "Ever17",
+    playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2026-01-16",
     },
@@ -172,12 +186,17 @@ const original_list: GalItemInputType[] = [
     other_names: ["恋狱月狂病", "カルタグラ～ツキ狂イノ病～"],
     tag: {
       blood: true,
-      thrill: true,
     },
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "-1min",
+    use_time: "9h5min",
     duration: {
       start: "2025-10-18",
+      end: "2026-01-31",
+    },
+    score: {
+      story: 6.2,
+      visual: 5.8,
+      program: 3.7,
+      thrill: 0,
     },
   },
   {
@@ -840,7 +859,7 @@ const original_list: GalItemInputType[] = [
       story: 4.3,
       visual: 3.1,
       program: 0.8,
-      thrill: 0.1,
+      thrill: 0,
     },
   },
   {

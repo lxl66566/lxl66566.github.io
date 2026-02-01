@@ -11,7 +11,7 @@ category:
 
 ## 简介
 
-上海~~在读大学生~~互联网牛马，热爱编程，更爱摆烂
+上海~~男大~~社畜，爱摆烂。
 
 ## 个人标签
 
@@ -25,9 +25,6 @@ category:
 - 边缘二次元人
 - [剧情党](../hobbies/galgame.md#分类)
 - 无节日主义
-- 非善
-
-[前往 QA 查看详解](../hide/personal_details.md#标签-qa)
 
 ## 生存意义
 
@@ -91,4 +88,6 @@ telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src
 
 [我的音乐频道](https://t.me/absolutexsmusic) | ~~[我的网易云音乐歌单（out of date）](https://music.163.com/playlist?id=3098200457&userid=2061039950)~~ <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span>
 
-##### [更详细回答](../hide/personal_details.md)
+## 其他
+
+如果你有耐心看到这里，可以前往[关于我的更详细回答](../hide/personal_details.md)。
