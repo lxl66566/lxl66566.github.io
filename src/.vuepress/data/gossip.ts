@@ -35,6 +35,7 @@ const links: ArticleCellBoxType[] = [
         url: "compare_home_to_college",
       },
       { text: "找工作经历", url: "job" },
+      { text: "各种尝鲜体验", url: "userexp" },
     ],
   },
   {

@@ -834,7 +834,7 @@ export default [
   { id: "321192", aScore: 6.5, bScore: 6.8, info: "#魅魔 #loli" },
   { id: "597662", aScore: 8, bScore: 8, info: "#巨乳 #梦境" },
   { id: "587618", aScore: 7.7, bScore: 7.8, info: "#修女 #纯爱 #异世界 #升级" },
-  { id: "548300", aScore: 9.5, bScore: 6.3, info: "#翅膀 #童颜巨乳 #邻居 #天然" },
+  { id: "548300", aScore: 9.1, bScore: 6.3, info: "#翅膀 #童颜巨乳 #邻居 #天然 #vtuber", bak: "https://telegra.ph/C105-Mint-nium-緑風マルト-隣の天使と秘密の一日-中国翻訳-01-29" },
   { id: "395109", aScore: 7.8, bScore: 7.6, order: 1, info: "#按摩 #感度提升 秘孔整体" },
   { id: "569216", aScore: 8.5, bScore: 7.9, info: "#蔚蓝档案 #兽耳 #发情 #连体泳装", bak: "https://telegra.ph/Horizontal-World-またのんき-ラブイットワンモア-ブルーアーカイブ-中国翻訳-無修正-DL版-09-21" },
   { id: "581817", aScore: 7.7, bScore: 8.8, info: "#大小姐 #捆绑 #巨乳 #异世界", bak: "https://telegra.ph/うなハウス-うなっち-お嬢様完全敗北大切に育てられた貴族娘が自分から庶民おちぽおねだりするまで-中国翻訳-無修正-DL版-07-01-2" },
@@ -995,5 +995,9 @@ export default [
   { id: "596962", aScore: 7.9, bScore: 4.5, info: "#蔚蓝档案 #护士 #比基尼", bak: "https://telegra.ph/桃色インテーク-ふるーれ-薄明に満たされて-愛と救護と献身を-ブルーアーカイブ-中国翻訳-DL版-09-14-4" },
   { id: "625122", aScore: 8.7, bScore: 9.7, order: 2, info: "#血姫夜交 #史莱姆 #玉之けだま #催淫", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-血姫夜交2-変態スライムなんかに負けるわけないっ-中国翻訳-無修正-DL版-01-23-3" },
   { id: "625793", aScore: 8.3, bScore: 8.7, info: "#蔚蓝档案 #催眠 #快感延迟 #loli", bak: "https://telegra.ph/C107-つくてん-円つくも-妃咲キ乱レ-ブルーアーカイブ-中国翻訳-01-26-2" },
+  { id: "282157", aScore: 6.2, bScore: 8, info: "#合集 #巨乳 #NTR（部分）", bak: "https://telegra.ph/ユズハ-とろけてとける-中国翻訳-09-17-2" },
+  { id: "596955", aScore: 8.1, bScore: 8.8, order: 6, info: "#直播 #邻居 #大姐姐", bak: "https://telegra.ph/菖蒲-隣人は有名配信者6人目-中国翻訳-DL版-09-17-3" },
+  { id: "548300", aScore: 8.1, bScore: 8.8, order: 6, info: "#直播 #邻居 #大姐姐", bak: "https://telegra.ph/菖蒲-隣人は有名配信者6人目-中国翻訳-DL版-09-17-3" },
+  { id: "626369", aScore: 7, bScore: 7.8, info: "#炼金术 #自慰 #触手", bak: "https://telegra.ph/amefurasy-harino646-とある錬金術師の孤高の叡智研究録-中国翻訳-DL版-01-29" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

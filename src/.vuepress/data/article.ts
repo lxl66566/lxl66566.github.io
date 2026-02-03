@@ -71,7 +71,6 @@ const links: ArticleCellBoxType[] = [
       { text: "内网穿透", url: "frp" },
       { text: "远程控制方案", url: "control" },
       { text: "理财，加密货币与区块链", url: "money" },
-      { text: "各种尝鲜体验", url: "userexp" },
     ],
   },
   {

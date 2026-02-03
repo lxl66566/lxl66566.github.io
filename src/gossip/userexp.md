@@ -13,6 +13,19 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [UniGetUI](https://github.com/marticliment/UniGetUI)
+
+- 为什么这玩意打开要让我下载 scoop-search 和 cargo-update，后者甚至是从源码编译。假设用户一定有 rust 工具链吗？看到源码编译我就要开始捂鼻了。
+  - 然后安装完 scoop-search 和 cargo-update 以后，重启软件居然没读到，还要我再安装一次？恶性 bug 直接卸载了。
+
+<dated date="20260202"/>
+
+## [Files](https://github.com/files-community/Files)
+
+不懂只提供微软商店链接，没有离线安装包/压缩包的软件是什么毛病。被微软收购了？
+
+<dated date="20260202"/>
+
 ## [InputTip](https://github.com/abgox/InputTip)
 
 在 b 站看到宣传，感觉这个灵感挺不错的。试用了一下，感觉我不一定需要这个。
