@@ -656,6 +656,7 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 - 心之形心之色心之声 ✅
 - Deep One ✅
 - 死に逝く騎士、異世界に響く断末魔 ❌
+- 瑠璃櫻 ❌
 
 ---
 

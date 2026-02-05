@@ -2,6 +2,24 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "瑠璃樱",
+    other_names: ["瑠璃桜", "瑠璃櫻"],
+    use_time: "47min",
+    tag: {
+      all_ages: true,
+    },
+    duration: {
+      start: "2026-02-04",
+      end: "2026-02-04",
+    },
+    score: {
+      story: 0.5,
+      visual: 7.6,
+      program: 8,
+      thrill: 0,
+    },
+  },
+  {
     name: "灵缘 ～化谜解咒，缘影交织～",
     valid_name: "灵缘",
     other_names: ["霊縁 ～穢れを祓い、交わる欲縁～"],
@@ -117,7 +135,7 @@ const original_list: GalItemInputType[] = [
       story: 8,
       visual: 4,
       program: -2,
-      thrill: 9.2,
+      thrill: 9.3,
     },
   },
   {
@@ -1087,7 +1105,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 4.2,
-      visual: 8,
+      visual: 7.8,
       program: 8,
     },
   },

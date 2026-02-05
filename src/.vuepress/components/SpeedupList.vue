@@ -66,7 +66,7 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["心之形心之色心之声", "Deep One", "死に逝く騎士、異世界に響く断末魔"],
+    names: ["心之形心之色心之声", "Deep One", "死に逝く騎士、異世界に響く断末魔", "瑠璃櫻"],
     valid_name: "krkr_xp3_enc",
     engine: "krkr",
     save_format: "xp3(encrypted)",
