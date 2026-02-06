@@ -431,6 +431,7 @@ ColorOS 是目前一加的默认系统。
   - 以行为单位（check `--word-diff-regex`）
 - 压缩率一般
 - ~~无法通过链接添加仓库外的文件（需要将仓库目录设为根目录）~~ git bare repo
+- 删除远端 branch/tag 居然是 push 操作，会吃 push hook。
 
 ## Github 有多难用
 

@@ -90,6 +90,7 @@ scoop install liberica8-full-jdk
 
 - 其他可选：
   - Mybatis 跳转：_Mybatis Helper - Greenplumwine_，可以在 Mapper java 和 xml 之间互相跳转。这玩意 fork 了好几版，这个是目前还有人在维护的一版。
+  - Test Runner for Java，如果你的项目有用到单测的话可以装一下，还是非常方便的，不用手写 `launch.json`。跑完单测，stdout 输出的结果在 _调试控制台_ 这个 tab 下。
 
 #### formatter
 
@@ -425,10 +426,11 @@ var temp3 = temp1.boxed();                  // Intstream 转为 Stream
 Optional 的作用是强制调用方处理空值。
 
 ```java
+Optional.ofNullable(A).orElse(B);                               // 最常用的 Optional 用法，相当于 A != null ? A : B
+Optional.ofNullable(A).orElseGet(() -> B.fun());                // 如果 else 里是一个比较复杂的函数，使用 orElseGet 可以延迟执行该函数，提高性能
 Optional.of(value)                                              // 创建，value 不可为 null
 Optional.ofNullable(null)                                       // 创建
 Optional.ofNullable(123).ifPresent(u -> System.out.println(u)); // 操作值
-Optional.ofNullable(123).orElse(456);                           // 取值
 Optional.ofNullable(123).map(u -> u + 2);                       // 映射
 Optional.ofNullable(123).filter(u -> u < 150);                  // 映射
 ```
@@ -459,6 +461,12 @@ class account implements Serializable {}    // 继承接口
 最常用的 json 序列化库，Spring 默认。
 
 - 自定义序列化函数：使用 `@JsonValue` 自定义序列化过程，使用 `@JsonCreator` 自定义反序列化过程。对于 enum，这个是比较常用的。
+- 忽略
+  - 忽略单个字段：`@JsonIgnore` 修饰字段。
+  - 忽略多个字段：`@JsonIgnoreProperties({"xxx", "yyy"})` 修饰类。
+  - 忽略多余字段：`@JsonIgnoreProperties(ignoreUnknown = true)` 修饰类。
+- 默认值：直接 `private xxx = xxx` 即可。
+- 将成员类“展平”，类似 rust `#[serde(flatten)]`：`@JsonUnwrapped`
 - 如果希望一个 json object 根据其 keys，可以反序列化到两种不同的 class：使用一个 interface 和 deduction。
   ```java
   @JsonTypeInfo(use = JsonTypeInfo.Id.DEDUCTION)
