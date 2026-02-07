@@ -87,6 +87,7 @@ scoop install liberica8-full-jdk
     ]
   }
   ```
+  - _Debugger for Java_ 还有一个非常好用的地方是可以 hot fix，也就是调试过程中本地修改的代码可以直接生效，无需重启后端。这对于一个光是启动就要两分钟的 java 项目来说，是非常节省时间的。
 
 - 其他可选：
   - Mybatis 跳转：_Mybatis Helper - Greenplumwine_，可以在 Mapper java 和 xml 之间互相跳转。这玩意 fork 了好几版，这个是目前还有人在维护的一版。

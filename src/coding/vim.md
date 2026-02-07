@@ -10,11 +10,7 @@ tag:
 
 # vim
 
-我曾在约一年前强迫自己使用 vim 作为代码编辑器，并进行相关学习。但是 vscode vim 给了我极其惨痛的教训：混用 Ctrl + Z 和 u(undo) 打乱了我的代码，我只能从 git 中恢复，浪费了数小时的时间。因此弃用。
-
-此次重新启用，也大概是我的心血来潮吧。不过现在用了好久，确实没有遇到类似的问题了，可能是因为我已经不用 u 了吧。
-
-其他同等级编辑器还有 emacs, helix 等，等有缘人去尝试吧。
+vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 [#总结](#总结)。
 
 ## for beginner
 
@@ -117,24 +113,65 @@ vscode vim 特有：
    }
    ```
 
-:::
-
 ### 我的插件
 
 - Neotree
 
-## 一些想法
+:::
 
-用 vim for vscode 用了一周，感觉有些欠缺，因此进行了一些自定义化。以下阐述我的自定义化的一些构思。
+## 中文用户专栏
 
-- visual 下按 `(`,`[` 等括号类可直接为选中区域添加闭合括号。
-- 保留非 vim 的 Ctrl 组合键功能，例如复制粘贴等。
-- 删除选中区域时不复制到剪贴板。
+vim 也有很多缺点。
 
-而以下是我对纯 vim （无插件）无法实现功能的更多构想：
+最大的缺点是它没有考虑到中文用户 —— 1. 输入法跟 vim 天生就不搭，2. 在中文段落里想要定位也不是一件简单的事情。也难怪 vim 在国人这里流行不起来了，有时候切换输入法去做一些操作可能还真不如把手移到鼠标上操作来得快。包括我是 windows 用户，平常切个窗口、操作些浏览器都是需要动鼠标的，我的手也经常离开键盘，因此对 vim 没有太多的感觉。vim 还是比较适合只用 WM 的 linux user，只有配合 WM 才能尽可能减少鼠标的使用。
 
-- 更改指令查找替换方式（太麻烦了），直接搜索高亮，然后选择其中的一些或全部，进行直观替换
-- 增加 _保持光标_ 与 _新建光标_ 功能，并可任意移动任一光标，方便随机修改。
+### 关于切换输入法
+
+业界其实有一个 im-select 的方案，并且 vscode vim 也[提供了一些配置](https://github.com/VSCodeVim/Vim#input-method)用于切换输入法。
+
+但是，im-select 已经很久不维护了，并且没有一个公认的优秀 fork；而 vscode vim 目前的切换方案是切换系统输入法，这跟我的理念不合，我希望切换的是 rime 内部的中英文开关，而不是系统的英文键盘。然而我调研许久，目前还没有任何外部切换 rime 中英文模式的方法。
+
+- [PEMessage/im-select-imm](https://github.com/PEMessage/im-select-imm)：这个 fork 实现可以切换输入法内部的中英文开关（IME mode），但是实测在 rime 上无法切换 mode，最终一定是中文。
+- [rime 的某个 issue](https://github.com/rime/squirrel/issues/164)：从这里我们可以看到许多第三方的 lua 脚本实现，但是这些实现都是切换的系统输入法，而不是 rime mode。
+
+所以目前看来，用户必须接受系统输入法的切换。接受输入法切换的话就简单了，使用上面的 im-select-imm：
+
+```json
+"vim.autoSwitchInputMethod.enable": true,
+"vim.autoSwitchInputMethod.defaultIM": "1033-513",
+"vim.autoSwitchInputMethod.obtainIMCmd": "C:/run/im-select-imm.exe",
+"vim.autoSwitchInputMethod.switchIMCmd": "C:/run/im-select-imm.exe {im}",
+```
+
+注意：这里的两个 Cmd 必须使用 `.exe` 的绝对路径，而不能只是 `im-select-imm` 这样的 bin name，否则无法完成切换。我估计是 vscode vim 是 split 命令后直接 spawn 这个进程，而不是在终端里执行。
+
+### 关于中文跳转
+
+一般来说，vim 内进行复杂的跳转可以使用 easymotion，这玩意 vscode vim 是自带的，只要一行 `"vim.easymotion": true,` 就能开。不过还是建议使用下面的 keybindings 简化 easymotion 的激活。
+
+```json
+"vim.normalModeKeyBindings": [
+  {
+    "before": ["s"],
+    "after": ["<leader>", "<leader>", "s"],
+  },
+]
+```
+
+但是 easymotion 并不能解决中文跳转问题，它还是只能支持英文。尝试寻找一些其他方案：
+
+- [zzhirong/vim-easymotion-zh](https://github.com/zzhirong/vim-easymotion-zh)：看起来挺有意思的，支持小鹤双拼的 easymotion。但是问题是这是原生 vim plugin，vscode vim 并不能使用。
+- [zzhirong/hop-zh-by-flypy](https://github.com/zzhirong/hop-zh-by-flypy)：同一个作者的 nvim 插件，基于 hop.nvim（archived）。但是这要求在本地安装 neovim 和 vscode-neovim 插件，等于是两套不同的 vim 实现。我对 neovim 没什么好感，所以不打算使用。
+
+然后我看了眼 vscodevim 的 easymotion 实现，发现核心部分也没几行，直接 vibe 了一个能搜中文全拼前缀的 [vim-lxl66566 fork](https://github.com/lxl66566/VSCodeVim)。于是问题解决。至于要不好给上游提 PR，我感觉为了一个比较小众的功能去给所有 VSCodeVim user 引入一个 tiny-pinyin 依赖不一定能过，因此还是暂时先不提。
+
+## 总结
+
+我个人并不遵循 「vim 之禅」（指能用更少键实现的操作就不会用更多的键）。这跟输入法的原理一样，需要平衡效率和记忆量，而我选择了折中。
+
+- 其他编辑器
+
+其他类似的编辑方式还有 emacs, helix 等。但是我不太建议去使用这些编辑方式，emacs 比较扭曲（对小拇指来说），helix 虽然吹自己键位更自然，但是其实没有好多少，都离不开死记硬背，而且功能还没 vim 丰富（至少对我常用的 vim 功能，helix 的支持堪忧）。
 
 ## external
 

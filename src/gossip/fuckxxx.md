@@ -179,6 +179,11 @@ tag:
 - WSL2 的 GUI，WSLg，延迟巨高，根本是不能用的水平。
 - **恶性 bug**：以 `NO_PROXY='*' code xxx` 启动 vscode，插件无法读取到 NO_PROXY env。以 `NO_PROXY='*' code` 启动 vscode，再打开文件夹，则插件可以读取到 env。([src](https://t.me/withabsolutex/2624))
 
+#### 基于 vscode 的开发
+
+- 当前 vsce 打包[强制使用 yarn/npm](https://github.com/microsoft/vscode-vsce/issues/421)，并且他们非常固执，不愿意修改。打包本来就应该不依赖包管理器，而且还是 yarn 这种大便玩意。
+  - 还好有大佬构建了 [yyyanghj/vsce-pnpm](https://github.com/yyyanghj/vsce-pnpm)，实测可用。
+
 ### [cursor](../coding/vscode.md#关于-cursor) 有多难用
 
 - 改完设置要重启才能应用

@@ -2,6 +2,23 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "セヴンデイズ 見知らぬJKと密室生活",
+    valid_name: "七日密室",
+    other_names: ["七日密室"],
+    use_time: "3h39min",
+    namaniku: true,
+    duration: {
+      start: "2026-02-05",
+      end: "2026-02-07",
+    },
+    score: {
+      story: 8.9,
+      visual: 9.9,
+      program: 5.7,
+      thrill: 7.9,
+    },
+  },
+  {
     name: "瑠璃樱",
     other_names: ["瑠璃桜", "瑠璃櫻"],
     use_time: "47min",

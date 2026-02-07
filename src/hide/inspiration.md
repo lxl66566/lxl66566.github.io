@@ -152,7 +152,7 @@ tag:
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
 - [ ] reader
 - [ ] sync tools
-- [ ] diskann
+- [ ] ~~diskann~~ has been rewriten
 - [ ] bubblewrap
 
 ### Android

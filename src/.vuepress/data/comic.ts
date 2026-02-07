@@ -999,5 +999,8 @@ export default [
   { id: "596955", aScore: 8.1, bScore: 8.8, order: 6, info: "#直播 #邻居 #大姐姐", bak: "https://telegra.ph/菖蒲-隣人は有名配信者6人目-中国翻訳-DL版-09-17-3" },
   { id: "548300", aScore: 8.1, bScore: 8.8, order: 6, info: "#直播 #邻居 #大姐姐", bak: "https://telegra.ph/菖蒲-隣人は有名配信者6人目-中国翻訳-DL版-09-17-3" },
   { id: "626369", aScore: 7, bScore: 7.8, info: "#炼金术 #自慰 #触手", bak: "https://telegra.ph/amefurasy-harino646-とある錬金術師の孤高の叡智研究録-中国翻訳-DL版-01-29" },
+  { id: "598152", aScore: 6.8, bScore: 7.3, info: "#师生 #催眠 #实验室", bak: "https://telegra.ph/放学后化学同好会-Chinese-白杨汉化组-09-21-2" },
+  { id: "468870", aScore: 7.6, bScore: 6.2, info: "#短篇 #全彩 #虚拟主播", bak: "https://telegra.ph/とみょーかせいしじょう-とみょー-推しをえっちな目で見るな-白上フブキ天音かなた-中国翻訳-DL版-09-19-7" },
+  { id: "not found", aScore: 7.5, bScore: 6.8, info: "#いちはや #偶像 妹はアイドル", bak: "https://telegra.ph/C107-squeezecandyheaven-いちはや-妹はアイドル-中国翻訳-01-26-3" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
