@@ -228,7 +228,7 @@ git config alias.p 'pull origin code'  # 向 alias.p 内写入值（添加命令
 ### 提交
 
 - 撤销上次 commit：`git reset --soft HEAD~1`，其中 `--soft` 表示保留代码与 `git add` 的暂存区
-- 修改注释：`git commit --amend`，(git bash 下) 需要使用 [Vim](../coding/vim.md)，需要强制推送。
+- 修改上次 commit 代码内容：`git commit --amend`，仅修改 commit message：`git commit --amend --no-edit`
 - 还有比较常用的，回到上一个 commit 的状态，去除所有多余文件和改动：`git reset --hard HEAD && git clean -f -d`
 
 ### 远程

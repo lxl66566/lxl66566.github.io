@@ -81,6 +81,7 @@ SolidJS 也提供了一些内置组件，让写 Vue 的人倍感熟悉。
 
 - `<Show when={...} fallback={...}></Show>`，v-if + v-else
 - `<For each={...}></For>`，v-for
+- `<ErrorBoundary fallback={(err, reset) => <div></div>}></ErrorBoundary>`，内层如果抛出错误，可以用这个组件显示另一些错误信息。
 
 ## 配套设施
 

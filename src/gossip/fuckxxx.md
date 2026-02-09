@@ -530,6 +530,14 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - [神人翻译](https://t.me/withabsolutex/2448)
 - `networkingMode=mirrored` 有**非常严重的 bug**。[issue](https://github.com/microsoft/WSL/issues/10855)
 
+## scoop 有多难用
+
+大号 powershell 脚本罢了。
+
+- scoop search 卡死
+- 没明白这玩意搞个 cache 有什么意义。又不能断点重传；我安装一个软件后，啥情况需要重新安装一次同版本？
+- 某次更新后，scoop 安装 git 不会再将 bash.exe 放入 shims，破坏了我的文件结构。
+
 ## NVIDIA, FUCK YOU
 
 ### Geforce Experience 有多难用
