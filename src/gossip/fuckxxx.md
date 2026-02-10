@@ -538,9 +538,17 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - 没明白这玩意搞个 cache 有什么意义。又不能断点重传；我安装一个软件后，啥情况需要重新安装一次同版本？
 - 某次更新后，scoop 安装 git 不会再将 bash.exe 放入 shims，破坏了我的文件结构。
 
-## NVIDIA, FUCK YOU
+## 批判硬件厂商及其周边
+
+现代玩家可能已经习惯了窗口渲染撕裂、游戏画面撕裂、卡死等。
+
+然而，这些驱动本就该是完美无缺的，对于任意负载、主流图形 API、任意的窗口交叠和快速移动、任意的窗口切换都必须能够保持正确而稳定的渲染。
+
+做不到这些的厂商，只能认为是对用户的不负责。
 
 ### Geforce Experience 有多难用
+
+NVIDIA, FUCK YOU。
 
 众所周知 NVIDIA 显卡的游戏支持是 Geforce Experience，其提供了一系列硬件级游戏功能扩展，如游戏滤镜，录制与推流，重放等。但是程序本身 bug 一堆，拉的要死。
 
@@ -550,6 +558,25 @@ WSL 就是你妈的垃圾屎山，傻逼 powershell 脚本，和 scoop 坐一桌
 - bug: 游戏内覆盖窗口不显示，只显示鼠标。重装驱动都无法解决。
 
 [^2]: [source](https://www.zhihu.com/question/315889356)
+
+### AMD, FUCK YOU
+
+bugs:
+
+- AMD 著名的 bug 之一：弹一个黑框框 Updater，但是什么也不做。
+- AMD 著名的 bug 之二：在 msedge、vscode 等开启硬件渲染的软件上，会出现渲染卡半屏的情况，上半屏卡死不再渲染，下半屏正常。可能持续不到一秒，也可能持续数十秒。拖拽窗口改变大小，触发重新渲染后解除。
+  - [关闭 MPO](../articles/windows_setting.md#安装后推荐步骤) 后可以解决。
+- 使用 AMD 显卡游玩 cs2 时，会出现其他程序（如 anki）渲染进程卡死、快速切屏后 cs2 停止响应等问题。本质上是给 cs 开洞开出的问题。
+- AMD Ryzen Master 的问题：
+  1. 千万不要用它超内存。详见 [装机](./pc_hardware.md#装机后-1)。
+  2. 一个经典问题是在跑全核或 per core 的 Curve Optimize 的时候，理论上重启后应该自动打开 Ryzen Master 继续，但是经常重启后不会自启动 Ryzen Master，需要手动干预。per core 一跑就是四五小时，还要手动干预，谁受得了。
+
+在 AMD GPU 有如此多的 bug 现状下，AMD 还不去解决，而是把精力花在营销和怎么让用户更恶心上：
+
+- _AMD Software: Adrenalin Edition_ 会携带**大量流氓傻逼组件**，根本无法手动卸载干净，只能使用 AMD 的 Cleaner 进安全模式卸载。
+  - 即使安装时选择 `Driver only`，也会有多个流氓组件被安装。
+  - Adrenalin Edition 还有大量的推广内容，在体积庞大的同时（跟雷蛇的雷云有得一拼），操作也不顺畅。
+- AMD Ryzen Master 对不同的 CPU 分级，最新版无法在 9000 系之前的 CPU 上运行，并且无法在 ES 上使用。这是赤裸裸的歧视，因为不同版本的 Ryzen Master 的功能并无不同，CPU 本身也支持。
 
 ## steam 有多难用
 

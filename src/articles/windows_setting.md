@@ -9,7 +9,7 @@ tag:
   - Windows
 ---
 
-# 设置 Windows
+# Windows 设置指南
 
 好的设置能够在未来降低血压，并大幅提高工作效率。
 
@@ -122,8 +122,13 @@ tag:
 ### 安装后（推荐步骤）
 
 - 驱动：
-  - 如果你使用 AMD 显卡，需要安装显卡驱动，并且不在乎游戏即时重放等功能，请不要安装 _AMD Software: Adrenalin Edition_，这玩意会携带**大量流氓傻逼组件**，还有 AMD 著名的弹一个黑框框 Updater 但是什么也不做。因此最好不要安装它的全量版本，而是在安装时选择 `Driver only`。
-    - 悲伤的是，即使选择 `Driver only`，也会有一堆流氓组件被安装。在此先 amd fuck you。
+  - 如果你使用 AMD 显卡，需要安装显卡驱动，并且不在乎游戏即时重放等功能，请务必选择 `Driver only`。[why?](../gossip/fuckxxx.md#amd-fuck-you)
+  - [关闭 MPO](https://nvidia.custhelp.com/app/answers/detail/a_id/5157)：
+    ```reg
+    Windows Registry Editor Version 5.00
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+    "OverlayTestMode"=dword:00000005
+    ```
 - 磁盘设置：
   - 如果你的硬盘有分多个区，可以移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
   - 如果有移动硬盘，请在 _磁盘管理_ 中右键分区，手动指定驱动器号。固定驱动器号可以保证各个脚本运行正常。
