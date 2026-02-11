@@ -31,10 +31,11 @@ bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种
 
 1. 使用 [scoop](../farraginous/recommend_packages.md#scoop) 安装 git：`scoop install git`
 2. 进入 `scoop/shims` （默认位置在 `C:\Users\<username>\scoop\shims`）
-3. 为 `scoop/shims/bash.exe` 创建一个快捷方式，重命名为 `bash`（本质上是 `bash.lnk`，windows11 不显示快捷方式的扩展名），扔到 `C:\WINDOWS\System32`
-4. 编辑系统环境变量，把 `C:\Users\<username>\scoop\shims` 和 `C:\WINDOWS\System32` 放到靠前的位置。
+3. 编辑系统环境变量，把 `C:\Users\<username>\scoop\shims` 放到 `C:\WINDOWS\System32` 之前。（要让 scoop 的 bash 比 WSL 的 bash 优先级更高[^nobash]）
 
-这样你就可以在 `Win+R` 的运行或者任意 cmd 里使用 `bash` 打开 bash 了，并且不会开一个新窗口。
+这样你就可以在 `Win+R` 的运行或者任意 cmd 里使用 `sh` 打开 bash 了，并且不会开一个新窗口。
+
+[^nobash]: scoop Main 的[一次更新](https://github.com/ScoopInstaller/Main/commit/6d251f7ec72138b31dba26b950256b740f447233?diff=split#diff-ee5c7dea359dcb2d038cbeb23fb76e2b3f227926b6c0548a167bd6d63fd6f61cL40)把 `bash.exe` 从 shims 里去掉了并且[说了不会加上](https://github.com/ScoopInstaller/Main/issues/7620)，所以要么用 `sh` 代替 `bash`，要么把 `C:\Users\<username>\scoop\apps\git\current\bin` 也加入 PATH。
 
 ### 随笔
 

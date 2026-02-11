@@ -94,6 +94,86 @@ scoop install liberica8-full-jdk
 - Mybatis 跳转：_Mybatis Helper - Greenplumwine_，可以在 Mapper java 和 xml 之间互相跳转。这玩意 fork 了好几版，这个是目前还有人在维护的一版。
 - Test Runner for Java，如果你的项目有用到单测的话可以装一下，还是非常方便的，不用手写 `launch.json`。跑完单测，stdout 输出的结果在 _调试控制台_ 这个 tab 下。
 
+#### 相关配置
+
+环境相关配置也非常恶心，_Language Support for Java(TM) by Red Hat_ 插件、项目本身、gradle 需要的 java 版本可能都不同，但是新手并不知道哪些配置读的是 JAVA_HOME，哪些配置读的是 vscode settings，哪些配置是继承的其他配置等等。
+
+一般来说 PC 上可以安装两个 java，一个是最新的 openjdk 用来跑 vscode 插件（如果不用 vscode 就没必要了），一个是项目要求的 java 版本，例如我们的是 liberica8-full-jdk。对于 scoop 安装的 java，openjdk 路径指的是 `<scoop>/apps/openjdk/current`，其他同理。
+
+对于 gradle 版本，我建议使用自己安装的而不是项目里的。否则启动 gradle daemon 时可能遇到很多奇奇怪怪的问题，例如[这个](https://github.com/redhat-developer/vscode-java/issues/1671)。gradle 的不同版本可以在 scoop 里安装，至于配置的话可以放到项目下 `.vscode/settings.json`，方便每个不同项目使用不同版本。
+
+这是我的项目配置：
+
+```json
+{
+  "java.settings.url": ".vscode/settings.json",
+  "java.cleanup.actions": [],
+  "java.format.enabled": false, // 参考 formatter 章节
+  "java.import.gradle.wrapper.enabled": false, // 必须在这里设为 false，后面的两个配置才有用！！
+  "java.import.gradle.home": "C:/Users/lxl/scoop/apps/gradle4/current", // 设置 gradle 位置。对于 java8 项目应该使用 gradle4。
+  "java.import.gradle.java.home": "C:/Users/lxl/scoop/apps/liberica8-full-jdk/current" // gradle 本身使用的 jdk，需要和 gradle 版本匹配。这里使用 java8。
+}
+```
+
+我的用户配置：
+
+```json
+{
+  "java.autobuild.enabled": true, // 这个是要开的，不然跳转会卡得要死。开启后可能导致 git 切分支的时候触发 rebuild，会比较卡，不过都是值得的。
+  "java.codeGeneration.addFinalForNewDeclaration": "all",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.completion.chain.enabled": true,
+  "java.completion.filteredTypes": [
+    // 不要自动补全这些玩意
+    "java.awt.*",
+    "com.sun.*",
+    "jdk.*",
+    "sun.*",
+    "org.omg.*",
+    "java.sql.Date"
+  ],
+  "java.completion.importOrder": [
+    // 设置自动 Import 的分组顺序
+    "java",
+    "javax",
+    "org",
+    "com"
+  ],
+  "java.completion.postfix.enabled": true,
+  "java.configuration.runtimes": [
+    {
+      "default": true,
+      "name": "JavaSE-25",
+      "path": "C:/Users/lxl/scoop/apps/openjdk/current"
+    },
+    {
+      "name": "JavaSE-1.8",
+      "path": "C:/Users/lxl/scoop/apps/liberica8-full-jdk/current"
+    }
+  ],
+  "java.configuration.workspaceCacheLimit": 30,
+  "java.debug.settings.hotCodeReplace": "auto",
+  "java.import.exclusions": [
+    "**/node_modules/**",
+    "**/.git/**",
+    "**/target/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.idea/**"
+  ],
+  "java.import.gradle.enabled": true,
+  "java.inlayHints.parameterNames.enabled": "all",
+  "java.inlayHints.variableTypes.enabled": true,
+  "java.jdt.ls.java.home": "C:/Users/lxl/scoop/apps/openjdk/current",
+  "java.jdt.ls.javac.enabled": "off", // 使用 ecj
+  "java.jdt.ls.vmargs": "-Xms2g -Xmx4g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -XX:GCTimeRatio=9 -XX:AdaptiveSizePolicyWeight=90 -Xverify:none -noverify -XX:+AlwaysPreTouch -XX:+UseCompressedOops -XX:+DisableExplicitGC", // jvm 调优（需要根据 PC 特性和项目体量进行调整）
+  "java.project.importOnFirstTimeStartup": "interactive",
+  "java.quickfix.showAt": "problem",
+  "java.referencesCodeLens.enabled": false,
+  "java.sharedIndexes.enabled": "on" // 共享索引
+}
+```
+
 #### formatter
 
 使用 vscode 做 java 大项目的一大痛点是 formatter。别人都在用 idea 进行格式化，而 idea 的 formatter 目前没有可用的第三方实现，如果用自己的 formatter，代码风格和别人的无法兼容。

@@ -215,6 +215,7 @@ tag:
   - NixOS 上调 atuin 就报 `` Error: failed to create file `/etc/nixos/config/atuin.key` ``，但是我在其他 IDE 的 terminal 就没有任何问题。
   - 我打开终端想按 Ctrl + w，Ctrl + c，这些默认都不会被发给终端。。。我就算在 _keymap：插件 -> 终端_ 里把终端快捷键全部取消，也没法在 Ctrl + w 时不关闭终端。
   - 没懂为啥这些 IDE 都喜欢把 Terminal 当二等公民，当成一个插件。。vscode Terminal 也是垃圾，JB 更垃圾一点，都有各种各样的问题。
+- 在运行或调试大型 java 程序的时候，点击停止，程序不会立刻停止而是需要等待数秒停止。为啥我不能直接 kill 一个进程，非得等它自然退出？
 
 ## 包管理器系列
 
