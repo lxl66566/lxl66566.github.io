@@ -13,6 +13,25 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [opencode](https://github.com/anomalyco/opencode)
+
+现在 AI 时代 AI 相关的东西 100k star 真是随便拿啊。
+
+朋友一直在推，用了一下。
+
+- 简陋的首页，下载方式没说 scoop，没有标注出使用文档，不如 GitHub README 和真正的文档。
+- 界面根本没有引导，进去就三个键盘按键，不知道做什么用的，没有 help，必须读文档才知道。
+- 免费模型跟没有脑子一样，虽然本来也没啥指望。
+- 你居然把 node_modules 放在 `~/.config/opencode` 里？对于洁癖的人来说，在 `~/.config` 里放这种东西是大忌。
+- <https://opencode.ai/docs/zh-tw/models> 里没有说明如何使用自定义 API，即使它支持自定义 API。支持的模型很多，不够成不用说明如何支持自定义 API 的理由，因为 API 提供方永远列举不完。
+- TUI 其实可以做滚动条，但是它没做。这么长 context 我也没法直接滚，只能 /export。
+- 没有 chat mode，只能当 agent 用。其实我有一些需求是开一个 chat window，有时候懒得搜索让它帮我搜。这个显然没做到。
+- 不同文件夹下打开 opencode，session 不共用，我还以为 session 丢了。
+
+总的来说，opencode 作为一个 agent，基本功能还行。但是在使用体验上仍需改进。
+
+然后用 agent 记得一定要找个有缓存的 API 提供方。
+
 ## [UniGetUI](https://github.com/marticliment/UniGetUI)
 
 - 为什么这玩意打开要让我下载 scoop-search 和 cargo-update，后者甚至是从源码编译。假设用户一定有 rust 工具链吗？看到源码编译我就要开始捂鼻了。

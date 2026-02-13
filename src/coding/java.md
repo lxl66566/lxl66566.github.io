@@ -46,6 +46,8 @@ scoop install liberica8-full-jdk
 
 如果你是为了兴趣学习，安装最新版本 jdk；如果是工作，根据不同要求可以选择安装 java 8 或 java 17。
 
+> 顺带骂一下，scoop 这个 java 仓库做的真 tm 烂，想下载哪个玩意只能进 bucket 文件夹看源码。
+
 ### IDE
 
 ::: tabs
@@ -522,6 +524,8 @@ Optional.ofNullable(123).ifPresent(u -> System.out.println(u)); // 操作值
 Optional.ofNullable(123).map(u -> u + 2);                       // 映射
 Optional.ofNullable(123).filter(u -> u < 150);                  // 映射
 ```
+
+java 9 添加了一些 java 8 没有的 `Optional.or()` 等链式处理为空的逻辑，还包括了 `ifPresentOrElse()` 当成 rust 的 match 用。
 
 由于 java 泛型不能为基本类型，这里的 Optional 都会自动装箱。为了避免装箱性能损耗，java 8 还额外提供了 OptionalInt、OptionalLong 和 OptionalDouble 三个类型，建议使用。（没有 OptionalBoolean，因为 Boolean 本身就可以表示可空）
 

@@ -47,8 +47,13 @@ HTTP/2（2015）是 HTTP 1.1（1997）以来的一个重大更新。
 - 简记：三次握手：SYN，SYN-ACK，ACK；四次挥手：FIN，ACK （进入半连接），FIN，ACK。
 - MTU：Maximum Transmission Unit，单数据包的可传输最大数据量，受到现实网络设备限制，一般为 1500。
 - MSS：Maximum Segment Size，TCP segment 的最大长度，一般为 MTU - 40（20 IP header, 20 TCP header）。
+- 固定头部 20B；还有 40B 的 tcp options 可以传一些业务需要用的东西。
 
 ### 内核参数
 
 - `net.ipv4.tcp_syn_retries`：建连阶段 SYN 包的重传最大次数，默认为 6。重传有指数退避，走到 timeout 的耗时为 127s。
 - `net.ipv4.tcp_retries2`：在已建连的 TCP 连接上重传的次数参考，默认为 15。实际重传耗时取决于 RTO，默认为大约 15 分钟。
+- `TCP_RTO_MIN` 超时重传的配置之一，linux 内核默认为 200ms（大致为半个地球的包延时）。
+  - 重传时间通过 `TCP_RTO_MIN` 和 `TCP_RTO_MAX` 计算，是一个动态值，会随 RTT 变更。
+  - Linux 内核 6.11 之前可以通过 iptables 或 ebpf 修改；6.11 之后可以通过 `net.ipv4.tcp_rto_min_us` 修改。
+  - 对于公网服务与应用，没必要调整此值；对于数据中心内网等场景，将 RTO 调低可以大幅降低重传超时时间。（需要同时调低 delay_ack）

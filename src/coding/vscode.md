@@ -32,6 +32,7 @@ tag:
 - `Ctrl + p` / `Ctrl + e`：选择打开文件
 - `Ctrl + Shift + p`：操作面板
 - `Alt + 鼠标`：多光标模式，最重要的快捷键之一，可以和 vim 扩展共用，可以大幅提升效率
+- `Alt + ←` 回到跳转前位置，在没有鼠标侧键的时候可以用。
 
 你可以在[这里](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/KeyboardReferenceSheet.png)看到快捷键 cheetsheet。可以看出有很多从 vim 来的常见操作；并且在 vim 插件下这里的一些快捷键也会改变。
 
