@@ -172,6 +172,7 @@ tag:
 - [在 NVIDIA GPU 下使用有偶发黑屏问题](https://github.com/microsoft/vscode/issues/35527)，issue close 了，但是我还是天天遇到。这个问题已经存在了 8 年。
 - vscode 有一个机制是如果在打开窗口的情况下关机，开机后启动 vscode 会恢复这些窗口。这个机制本身是好的，但是恢复窗口以后这些窗口的相对位置可能发生改变，可能倒序、乱序，这又是什么意思。。而且 win11 是不允许调整窗口顺序的。
   - 经过后续观察，如果资源管理器重启卡死，窗口顺序也会发生改变，即使没有关闭 vscode。这应该是 Win11 的 bug。
+  - 但是 vscode 的关闭不是真正的关闭。。如果关闭某个窗口后立即重启，重启后打开 vscode 还会带上这个窗口。
 - vscode 的 remote 允许把文件直接拖进去。这很方便。但是文件不能拖出来到其他工作区。[src](https://t.me/withabsolutex/2530) [issue](https://github.com/microsoft/vscode/issues/93599)
 - **恶性 bug**：（偶发）终端滚动滚轮，会卡一下，然后自动跳转到终端顶部，也就是最早的消息处。
 - 连接到 WSL 后，如果 wsl shutdown 了，就再也无法连接到 WSL 的工作区，重新连接无效，除非关闭窗口重启。

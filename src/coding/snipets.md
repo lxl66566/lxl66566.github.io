@@ -45,8 +45,13 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash --committer-date-is-author-date
 #   gfixup           # Creates a fixup commit for the current HEAD and rebases
 #   gfixup <hash>    # Creates a fixup commit for <hash> and rebases
 #
-def gfixup [commit_hash?: string = 'HEAD'] {
-    git commit -a --fixup $commit_hash
+def gfixup [commit_hash?: string = 'HEAD', --no-verify] {
+    if $no_verify {
+        git commit -a --fixup $commit_hash --no-verify
+    } else {
+        git commit -a --fixup $commit_hash
+    }
+
     let rebase_target = if $commit_hash == 'HEAD' { 'HEAD~2' } else { ($commit_hash | str trim) + "~1" }
     GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash --committer-date-is-author-date $rebase_target
 }
