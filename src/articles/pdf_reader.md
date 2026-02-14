@@ -52,7 +52,7 @@ tag:
 
 ## Evince
 
-这玩意是开源的阅读器，官网只能找到 linux 系统的安装包。于是去[第三方平台](https://evince.en.uptodown.com/windows/download)下载了 windows 版本（期间还在 Microsoft Store [碰了一次壁](../gossip/fuckxxx.md#批判微软)）。安装不能自定义位置，扣分。
+这玩意是开源的阅读器，官网只能找到 linux 系统的安装包。于是去[第三方平台](https://evince.en.uptodown.com/windows/download)下载了 windows 版本（期间还在 Microsoft Store [碰了一次壁](../gossip/fuckxxx.md#fuck-you-ms)）。安装不能自定义位置，扣分。
 
 轻量倒是轻量，也有反色，但是没有划词翻译。
 
