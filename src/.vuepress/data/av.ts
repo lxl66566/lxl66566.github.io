@@ -503,4 +503,5 @@ export default [
   { id: "nhdta-713", aScore: 5.5, bScore: 7.8, name: "野ション中に襲われオシッコが止まらなくて逃げられず尻肉を掴まれ後ろから即ハメされた女子校生", say: "利用了日本人羞耻心理，太坏了。除了企划好，其他都一般啊。不好看 + 没演技" },
   { id: "SHKD-940", aScore: 4, bScore: 3.8, say: "挺无聊的" },
   { id: "MIDV-226", aScore: 6.6, bScore: 4, say: "挺无聊的" },
+  { id: "MGOLD-052", aScore: 7.6, bScore: 5.1, say: "不会叫不会说话" },
 ] as AvItemType[];

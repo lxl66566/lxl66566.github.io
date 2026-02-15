@@ -1002,5 +1002,15 @@ export default [
   { id: "598152", aScore: 6.8, bScore: 7.3, info: "#师生 #催眠 #实验室", bak: "https://telegra.ph/放学后化学同好会-Chinese-白杨汉化组-09-21-2" },
   { id: "468870", aScore: 7.6, bScore: 6.2, info: "#短篇 #全彩 #虚拟主播", bak: "https://telegra.ph/とみょーかせいしじょう-とみょー-推しをえっちな目で見るな-白上フブキ天音かなた-中国翻訳-DL版-09-19-7" },
   { id: "not found", aScore: 7.5, bScore: 6.8, info: "#いちはや #偶像 妹はアイドル", bak: "https://telegra.ph/C107-squeezecandyheaven-いちはや-妹はアイドル-中国翻訳-01-26-3" },
+  { id: "598219", aScore: 8.2, bScore: 7.8, info: "#兄妹 #纯爱 #巨乳 #睡x", bak: "https://telegra.ph/タイガーロマン-タイガー-挿れるのNGなイトコの寝込みを襲ってみた-中国翻訳-09-21-3" },
+  { id: "629655", aScore: 7.6, bScore: 5.5, info: "#全彩 #loli #蔚蓝档案 #温泉", bak: "https://telegra.ph/C107-啓々堂-啓々-ココナちゃんと温泉旅行-ブルーアーカイブ-中国翻訳-02-13-2" },
+  { id: "629588", aScore: 8.4, bScore: 6.2, info: "#全彩 #蔚蓝档案 #兽耳 #发情", bak: "https://telegra.ph/FF46-山含-兔寶寶公園經營手札--omake-ブルーアーカイブ-中国語-02-13" },
+  { id: "629451", aScore: 8, bScore: 8.8, info: "#蔚蓝档案 #按摩 #连续绝顶", bak: "https://telegra.ph/芽の里-めりーべ-えっちなマッサージはだめっ-ブルーアーカイブ-中国翻訳-DL版-02-12" },
+  { id: "(ex)", aScore: 7.7, bScore: 7.9, info: "#快楽天 #父女", otherlink: "https://exhentai.org/g/3785445/a49c071af2", bak: "https://telegra.ph/おかゆ-映し鏡-COMIC快楽天-2020年1月号-無邪気漢化組MJK-19-Z1996無修正-02-12-3" },
+  { id: "629111", aScore: 7, bScore: 7.2, info: "#loli #无言 #可爱", bak: "https://telegra.ph/すずめねすと-雨美すずめ-ゆうきさんは無口で無表情-中国翻訳-DL版-無修正-02-11" },
+  { id: "628003", aScore: 10, bScore: 9.9, info: "#异世界 #死灵术师 #复活 #勇者 #无意识 #强暴 #堕落 天才屍霊術士スフィアちゃんの呪難", bak: "https://telegra.ph/ココアホリック-ユイザキカズヤ-天才屍霊術士スフィアちゃんの呪難-中国翻訳-DL版-02-11" },
+  { id: "626516", aScore: 7.5, bScore: 8.5, info: "#兄妹 #魅魔 #索取", bak: "https://telegra.ph/TIES-タケイオーキ-妹サキュバス--妹妹魅魔-中国翻訳-DL版-02-09" },
+  { id: "(ex)", aScore: 8.2, bScore: 8.7, info: "#师生 #病娇 #いちはや", otherlink: "https://exhentai.org/g/3780561/6e7a373219", bak: "https://telegra.ph/squeezecandyheaven-いちはや-このドスケベ配信者クラスのド地味JCでは-中国翻訳-DL版-02-09" },
+  { id: "(ex)", aScore: 7.5, bScore: 7, info: "#家庭教师 #loli #いちはや", otherlink: "https://exhentai.org/g/3778922/19330e2349", bak: "https://telegra.ph/C107-squeezecandyheaven-いちはや-学生とのえっちは犯罪-中国翻訳-02-08-3" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
