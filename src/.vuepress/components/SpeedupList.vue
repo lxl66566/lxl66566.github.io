@@ -101,7 +101,11 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["廢村少女~誘惑迷離的籠之鄉~", "戦巫＜センナギ＞ ―穢れた契りと神ころも―"],
+    names: [
+      "廢村少女~誘惑迷離的籠之鄉~",
+      "戦巫＜センナギ＞ ―穢れた契りと神ころも―",
+      "廃村少女［弐］ ～陰り誘う秘姫の匣～",
+    ],
     valid_name: "escude",
     engine: "escude",
     save_format: "bin",

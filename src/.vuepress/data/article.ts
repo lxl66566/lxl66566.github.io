@@ -74,8 +74,8 @@ const links: ArticleCellBoxType[] = [
     ],
   },
   {
-    field: "杂",
-    links: [{ text: "寄生虫认知与预防", url: "worm" }],
+    field: "简单医学",
+    links: [{ text: "寄生虫认知与预防", url: "worm" }, { text: "饮酒", url: "drink" }],
   },
   {
     field: "外部文章分享",

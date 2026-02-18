@@ -24,3 +24,4 @@ tag:
 3. [ChromeGo - Chrome 一键翻墙包](https://github.com/bannedbook/fanqiang)
 4. [揭示并绕过中国防火长城基于 SNI 的 QUIC 封锁机制](https://gfw.report/publications/usenixsecurity25/zh/)
 5. [为什么你不该选择移动运营商](https://blog.csdn.net/liulilittle/article/details/148267930)
+6. [杀死那只鹦鹉 —— 「白话文」讲解一种探测 XTLS VLESS REALITY 的手段](https://blog.skk.moe/post/to-kill-a-parrot-detecting-xtls-vless-reality-server/)
