@@ -6,13 +6,14 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 15 Feb 2026 05:32:57 GMT</pubDate>
-    <lastBuildDate>Sun, 15 Feb 2026 05:32:57 GMT</lastBuildDate>
+    <pubDate>Wed, 18 Feb 2026 07:26:26 GMT</pubDate>
+    <lastBuildDate>Wed, 18 Feb 2026 07:26:26 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
     <category>教程</category>
     <category>评价</category>
+    <category>生命科学</category>
     <category>导航</category>
     <category>经历</category>
     <category>探索</category>
@@ -178,6 +179,35 @@
 <p>需要注意的是，这样的测试方法的波动还是相当大的，毕竟我校的网络就是一坨屎。</p>
 <p>|         方式          | 下载速度（MB/s） |
 | :</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>饮酒</title>
+      <link>https://absx.pages.dev/articles/drink.html</link>
+      <guid>https://absx.pages.dev/articles/drink.html</guid>
+      <source url="https://absx.pages.dev/rss.xml">饮酒</source>
+      <description>饮酒 不存在「少量饮酒有益健康」的说法，日常建议一点酒都别碰。 如果你是 18 岁以上男性，建议常备下列物品，因为不得不饮酒的时刻的概率其实很多。 二氢杨梅素（DHM）：提高肝脏中乙醇脱氢酶（ADH）和乙醛脱氢酶（ALDH）的活性，加速酒精和乙醛的分解。 N-乙酰半胱氨酸（NAC）：可以直接与乙醛结合；并辅助身体合成谷胱甘肽（一种抗氧化剂）。 如果体内...</description>
+      <category>生命科学</category>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[
+<ol>
+<li><a href="https://world-heart-federation.org/news/no-amount-of-alcohol-is-good-for-the-heart-says-world-heart-federation/" target="_blank" rel="noopener noreferrer">不存在「少量饮酒有益健康」的说法</a>，日常建议一点酒都别碰。</li>
+</ol>
+<p>如果你是 18 岁以上男性，建议常备下列物品，因为不得不饮酒的时刻的概率其实很多。</p>
+<ul>
+<li>二氢杨梅素（DHM）：提高肝脏中乙醇脱氢酶（ADH）和乙醛脱氢酶（ALDH）的活性，加速酒精和乙醛的分解。</li>
+<li>N-乙酰半胱氨酸（NAC）：可以直接与乙醛结合；并辅助身体合成谷胱甘肽（一种抗氧化剂）。
+<ul>
+<li>如果体内已经存在高浓度酒精再服用 NAC，可能会产生促氧化作用，反而加重肝脏损伤。因此建议酒前吃。</li>
+</ul>
+</li>
+</ul>
+<p>推荐做法是：</p>
+<ol>
+<li>酒前 45 分钟： 吃一点东西垫底，服用 600mg NAC + 300-600mg DHM</li>
+<li>酒局中：多喝水，尽量不要空腹。对于不得不喝酒的情形，尽量喝红酒/啤酒，不碰白酒。</li>
+<li>酒后： 再补充 300-600mg DHM。（不要再吃 NAC）。</li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
@@ -1267,147 +1297,6 @@
 <!-- prettier-ignore -->
 <p>|    软件名     | 运行时内存 (windows) | 查询区间长 |
 | :</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>运动轨迹记录软件横评</title>
-      <link>https://absx.pages.dev/articles/track_record.html</link>
-      <guid>https://absx.pages.dev/articles/track_record.html</guid>
-      <source url="https://absx.pages.dev/rss.xml">运动轨迹记录软件横评</source>
-      <description>运动轨迹记录软件横评 我希望找到一款能够记录运动轨迹的软件，在满足需求前提下越小越好。需求：在地图上绘制运动轨迹，定位精确，最好显示方向（由指南针得到）。 评测结果挺让我失望的，有一大批软件连定位精确都无法做到，而且都不约而同地定位到我西北方向数百米。我只能猜想这些软件用了错误的地图，或者久远以前的地图。（我甚至考虑了大陆漂移）因此以下将分为两部分横评...</description>
-      <category>推荐</category>
-      <category>评价</category>
-      <pubDate>Sun, 10 Jul 2022 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[
-<p>我希望找到一款能够记录运动轨迹的软件，在满足需求前提下越小越好。需求：在地图上绘制运动轨迹，定位精确，最好显示方向（由指南针得到）。</p>
-<p>评测结果挺让我失望的，有一大批软件连定位精确都无法做到，而且都不约而同地定位到我西北方向数百米。我只能猜想这些软件用了错误的地图，或者久远以前的地图。<span class="heimu" title="你知道的太多了">（我甚至考虑了大陆漂移）</span>因此以下将分为两部分横评。</p>
-<p>（后来的测试印证了我的观点：同一软件中使用<code>Google-&gt;标准，地形和卫星地图</code>出现定位偏移，使用<code>OpenStreetMap-&gt;标准地图</code>则未出现偏移。）</p>
-<p>老规矩，<text style="color:red;">红色劣势</text>，<text style="color:blue;">蓝色优势</text>。</p>
-<h3>定位精确的软件</h3>
-<!-- prettier-ignore -->
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件名</th>
-<th style="text-align:center">大小（安装后,MB）</th>
-<th style="text-align:center">显示方向?</th>
-<th style="text-align:center">无需翻墙?</th>
-<th style="text-align:center">其他缺陷</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">GPX Viewer</td>
-<td style="text-align:center">53.43</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">Gaia GPS</td>
-<td style="text-align:center">205</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">卫星地图&amp;OpenStreetMap需付费</td>
-</tr>
-<tr>
-<td style="text-align:center">小步点</td>
-<td style="text-align:center">211</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">Keep</td>
-<td style="text-align:center"><text style="color:red;">895</text></td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">GPS信号弱</td>
-</tr>
-<tr>
-<td style="text-align:center">Wikiloc</td>
-<td style="text-align:center">55.34</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">Guru Maps</td>
-<td style="text-align:center">119</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">部分地名&amp;街道名为英文</td>
-</tr>
-</tbody>
-</table>
-<p>解释：</p>
-<ul>
-<li><code>无需翻墙</code>一般代表该软件的地图非谷歌地图组件，可直连加载。</li>
-</ul>
-<h3>定位偏移的软件</h3>
-<p>此栏为<strong>避雷</strong>而设置。毕竟做不到精确的话，自然就没有了使用的必要。</p>
-<p>由于定位偏移是地图问题，此处将列出<strong>所有地图均存在偏移现象</strong>的软件。</p>
-<!-- prettier-ignore -->
-<table>
-<thead>
-<tr>
-<th style="text-align:center">软件名</th>
-<th style="text-align:center">大小（安装后,MB）</th>
-<th style="text-align:center">显示方向?</th>
-<th style="text-align:center">无需翻墙?</th>
-<th style="text-align:center">其他缺陷</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">Yudo</td>
-<td style="text-align:center">71.90</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">RouteHistory</td>
-<td style="text-align:center">53.80</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">越野路线</td>
-<td style="text-align:center">22.31</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">指南针延迟高</td>
-</tr>
-<tr>
-<td style="text-align:center">跑步记录</td>
-<td style="text-align:center">42.06</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">指南针延迟高</td>
-</tr>
-<tr>
-<td style="text-align:center">我的路线</td>
-<td style="text-align:center">26.54</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center">指南针延迟高</td>
-</tr>
-<tr>
-<td style="text-align:center">Geo Tracker</td>
-<td style="text-align:center">56.74</td>
-<td style="text-align:center">✔</td>
-<td style="text-align:center">✖</td>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<p>总结：没有特别满意的。姑且用着 Wikiloc</p>
-<h2>external</h2>
-<ol>
-<li><a href="https://medium.com/@anastasia.bizyayeva/every-map-of-china-is-wrong-bc2bce145db2" target="_blank" rel="noopener noreferrer">Every map of China is wrong</a>：解释了为什么很多国外的地图软件具有偏差值。</li>
-</ol>
 ]]></content:encoded>
     </item>
   </channel>
