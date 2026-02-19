@@ -1012,5 +1012,8 @@ export default [
   { id: "626516", aScore: 7.5, bScore: 8.5, info: "#兄妹 #魅魔 #索取", bak: "https://telegra.ph/TIES-タケイオーキ-妹サキュバス--妹妹魅魔-中国翻訳-DL版-02-09" },
   { id: "(ex)", aScore: 8.2, bScore: 8.7, info: "#师生 #病娇 #いちはや", otherlink: "https://exhentai.org/g/3780561/6e7a373219", bak: "https://telegra.ph/squeezecandyheaven-いちはや-このドスケベ配信者クラスのド地味JCでは-中国翻訳-DL版-02-09" },
   { id: "(ex)", aScore: 7.5, bScore: 7, info: "#家庭教师 #loli #いちはや", otherlink: "https://exhentai.org/g/3778922/19330e2349", bak: "https://telegra.ph/C107-squeezecandyheaven-いちはや-学生とのえっちは犯罪-中国翻訳-02-08-3" },
+  { id: "627995", aScore: 7.8, bScore: 8.3, info: "#巨乳 #cos" },
+  { id: "510315", aScore: 7, bScore: 8.2, info: "#反杀 #催眠 #异世界 #冒险" },
+  { id: "571546", aScore: 7.2, bScore: 8, info: "#蔚蓝档案 #窒息", bak: "https://telegra.ph/DIUDADA-迪達迪達達-幻夢-ブルーアーカイブ-中国語-DL版-02-17" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

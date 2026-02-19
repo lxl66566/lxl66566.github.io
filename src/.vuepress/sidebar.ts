@@ -54,13 +54,12 @@ export default sidebar({
   ],
   "/articles/browser/": ["index.md", "assess.md", "settings.md"],
   "/articles/": [
-    {
-      text: "经历",
-      children: ["linux/index.md", "windows_setting.md", "mobile/index.md"],
-    },
+    "linux/index.md",
+    "mobile/index.md",
     {
       text: "教程",
       children: [
+        "windows_setting.md",
         "proxy/index.md",
         "telegram.md",
         "markdown.md",
@@ -86,6 +85,10 @@ export default sidebar({
         "android_player.md",
         "money.md",
       ],
+    },
+    {
+      text: "生命科学",
+      children: ["worm.md", "drink.md"],
     },
     {
       text: "外部文章分享",

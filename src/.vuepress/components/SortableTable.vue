@@ -4,9 +4,10 @@
       <thead>
         <tr>
           <th>番号</th>
-          <th>颜</th>
-          <th>演</th>
-          <th>备注</th>
+          <th>颜值</th>
+          <th>演技</th>
+          <th>番名</th>
+          <th>评价</th>
         </tr>
       </thead>
       <tbody>
@@ -21,6 +22,9 @@
           <td>{{ row.bScore }}</td>
           <td>
             <dtlslong v-if="row.name">{{ row.name }}</dtlslong>
+          </td>
+          <td>
+            <dtlslong v-if="row.say">{{ row.say }}</dtlslong>
           </td>
         </tr>
       </tbody>
