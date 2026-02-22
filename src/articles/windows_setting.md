@@ -47,7 +47,7 @@ tag:
 ### 安装后（关键步骤）
 
 - 对所有 NTFS 硬盘开启透明压缩。LZW 算法，效果只能说聊胜于无，非系统盘 208G 压到 183G，但有总比没有好。这一步需要尽可能早地做，否则等配置完，硬盘变大很多以后再搞就有点蠢了。
-- 进行 windows 更新（可选，如果使用旧版镜像安装请跳过这一步）。
+- 进行 windows 更新（可选，如果故意使用旧版镜像安装请跳过这一步）。
   - 需要看情况，关注一下近期 windows 更新补丁有没有出过什么大问题。
   - 本次更新将会成为我的 Windows 系统的最后一次更新。
 - 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_ ，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
@@ -64,6 +64,15 @@ tag:
   "StartupDelayInMSec"=dword:00000000
   "WaitForIdleState"=dword:00000000
   ```
+- 驱动相关：
+  - 如果你使用 AMD 显卡，需要安装显卡驱动，并且不在乎游戏即时重放等功能，请务必选择 `Driver only`。[why?](../gossip/fuckxxx.md#amd-fuck-you)
+  - 关闭 MPO，[ref1](https://nvidia.custhelp.com/app/answers/detail/a_id/5157) [ref2](https://www.reddit.com/r/Windows11/comments/1kgp7ar)：
+    ```reg
+    Windows Registry Editor Version 5.00
+    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+    "OverlayTestMode"=dword:00000005
+    "OverlayMinFPS"=dword:00000000
+    ```
 - 关闭 Windows 安全中心([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
   1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。使用它关闭安全中心是可恢复的。
   2. [Windows Defender Remover](https://github.com/ionuttbara/windows-defender-remover)。该工具之前还不太好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。
@@ -122,14 +131,6 @@ tag:
 
 ### 安装后（推荐步骤）
 
-- 驱动：
-  - 如果你使用 AMD 显卡，需要安装显卡驱动，并且不在乎游戏即时重放等功能，请务必选择 `Driver only`。[why?](../gossip/fuckxxx.md#amd-fuck-you)
-  - [关闭 MPO](https://nvidia.custhelp.com/app/answers/detail/a_id/5157)：
-    ```reg
-    Windows Registry Editor Version 5.00
-    [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
-    "OverlayTestMode"=dword:00000005
-    ```
 - 磁盘设置：
   - 如果你的硬盘有分多个区，可以移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
   - 如果有移动硬盘，请在 _磁盘管理_ 中右键分区，手动指定驱动器号。固定驱动器号可以保证各个脚本运行正常。

@@ -299,4 +299,6 @@ daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每
 
 如果你已经有 root 设备且想尝试，可以看看：
 
-- [NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)
+- [NetProxy-Magisk](https://github.com/Fanju6/NetProxy-Magisk)，基于 Xray。
+  - 目前不支持 hysteria 协议。
+- 神秘模块（闭源）：基于 sing-box 的，比较麻烦。
