@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 19 Feb 2026 18:09:24 GMT</pubDate>
-    <lastBuildDate>Thu, 19 Feb 2026 18:09:24 GMT</lastBuildDate>
+    <pubDate>Sun, 22 Feb 2026 10:26:44 GMT</pubDate>
+    <lastBuildDate>Sun, 22 Feb 2026 10:26:44 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -146,7 +146,7 @@
 <li>打开网页面板，设置里可以改中文语言，然后要在 Network 里把 UPnP 打开。</li>
 </ul>
 </li>
-<li>moonlight 官方 APP 并不好用，例如无法发送特殊按键。所以这里建议使用<a href="https://github.com/qiin2333/moonlight-android" target="_blank" rel="noopener noreferrer">第三方 fork</a>，对键盘有增强。
+<li>moonlight 官方 APP 并不好用，例如无法发送特殊按键。所以这里建议使用<a href="https://github.com/qiin2333/moonlight-vplus" target="_blank" rel="noopener noreferrer">第三方 fork</a>，对键盘有增强。
 <ul>
 <li>打开 APP，点击右上角加号，将组网里的受控端 IP 填写进去即可。</li>
 <li>实际上也可以将特殊按键的职责交给输入法，使用例如 <a href="https://github.com/Julow/Unexpected-Keyboard" target="_blank" rel="noopener noreferrer">Unexpected Keyboard</a> 可以比较轻松地发送特殊键。</li>
