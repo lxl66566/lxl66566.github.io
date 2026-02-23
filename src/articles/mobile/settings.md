@@ -52,16 +52,19 @@ ColorOS：
 一加：
 
 1. ColorOS 原生支持更换应用名称与图标，可以规避审查。
-   - 需要在 Google Play 安装[ColorOS 13 Icon pack](https://play.google.com/store/apps/details?id=com.akbon.coloros)
+   - 需要在 Google Play 安装 [ColorOS 13 Icon pack](https://play.google.com/store/apps/details?id=com.akbon.coloros) / ColorOS Icons / ... （选择对应 Android 版本）
 2. [LuckyTool](./module_and_app.md#lsposed) 安装后在任务栏小部件有多出一些选项。
    - **极暗模式**是好东西。
-   - LuckeyTool 可以开启 ColorOS 隐藏的不息屏模式，这在双机位笔试时非常有用。（_LuckeyTool - 功能 - 设置 - 启用息屏永不超时_）
+   - LuckyTool 可以开启 ColorOS 隐藏的不息屏模式，这在双机位笔试时非常有用。（_LuckyTool - 功能 - 设置 - 启用息屏永不超时_）
 
 ### 禁用软件
 
 我使用 [App Manager](./module_and_app.md#app) 进行软件的冻结操作。
 
-> _scene5/6_ 也可以，但是其为闭源商业软件，操作麻烦，不用它。<br/>_雹_ 也可以，但是主要用于禁止日常应用后台运行；无法冻结某些系统应用。
+> _scene5/6_ 也可以，但是其为闭源商业软件，操作麻烦，不用它。
+> _雹_ 也可以，但是主要用于禁止日常应用后台运行；无法冻结某些系统应用。
+
+以前我比较激进，会冻结几乎所有用不到的系统软件。现在为了稳定性已经比较佛系了，App Manager 打开把 _运行中_ 的筛出来，随便冻结一些。
 
 #### MIUI
 
@@ -79,7 +82,7 @@ ColorOS：
 
 - 不要冻 _应用包安装程序_！！！！[惨痛教训，并附带了哪些东西能冻](./problem.md#一加无限重启)
 - [这篇文章](https://bbs.oneplus.com/thread/6003405)指出了一些能卸载的包。
-  - 对于新系统，文章包名里的 `heytap` 基本都要换成 `coloros`，`oplus` 换成 `nearme`。
+  - 对于新系统，文章包名里的 `heytap` 基本都要换成 `coloros`，`oplus` 换成 `nearme`
 
 #### 禁用快应用中心
 

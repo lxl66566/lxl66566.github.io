@@ -64,6 +64,12 @@ KernelSU 下又细分两种工作模式，LKM (Loadable Kernel Module) 和 GKI (
 
 - 当然 SukiSU 还是有一些令人诟病的点，具体可以看[四周目(总结): SukiSU Ultra 的种种问题](https://oom.mintlify.app/blog/go4-sukisu-ultra-4)与该作者的其他文章。
 
+### ReSukiSU
+
+由于 SukiSU-Ultra 的上述问题，有人做了 SukiSU 的 fork：[ReSukiSU](https://github.com/ReSukiSU/ReSukiSU)，提高稳定性。
+
+跟 SukiSU 在使用上的区别有：ReSukiSU 模块本身不自带挂载，需要使用 meta 模块。
+
 @tab APatch
 
 APatch 是在内核空间运行 KPM (Kernel Patch Module) 的 root 方案。

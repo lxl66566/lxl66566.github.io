@@ -334,7 +334,7 @@ export default [
   { id: "520454", aScore: 7, bScore: 6.3, info: "#兽交" },
   { id: "515562", aScore: 7.7, bScore: 3.2, info: "#蔚蓝档案", bak: "https://telegra.ph/C103-3260-三郎-先生責任とってくれますよね-ブルーアーカイブ-中国翻訳---Page-1-07-23" },
   { id: "(ex)", aScore: 8.2, bScore: 3, info: "#师生", otherlink: "https://exhentai.org/g/2986798/ea57cfda3f/", bak: "https://telegra.ph/うなぎやさん-花宮なつか-BUKKAKEエモーション-中国翻訳-DL版-07-23" },
-  { id: "519958", aScore: 8, bScore: 8.9, info: "#催眠 #调教 魔砲少女シエスタ", bak: "https://telegra.ph/まゃ吾郎-魔砲少女シエスタ-第1-2話-中国翻訳-DL版-03-23" },
+  { id: "519958", aScore: 8, bScore: 8.9, order: 1, info: "#催眠 #调教 魔砲少女シエスタ", bak: "https://telegra.ph/まゃ吾郎-魔砲少女シエスタ-第1-2話-中国翻訳-DL版-03-23" },
   { id: "469072", aScore: 7.1, bScore: 9, info: "#NTR" },
   { id: "140738", aScore: 4.4, bScore: 7.6, info: "#3P #姐妹 #出轨" },
   { id: "(ex)", aScore: 7.5, bScore: 4.6, info: "#全彩 #兽耳 #3P #百合", otherlink: "https://exhentai.org/g/1929232/edce5c27f5/", bak: "https://telegra.ph/Under-Colony-みぬたち-みけじゃらし-ハイスクールフリート-中国翻訳-DL版-08-03" },
@@ -1029,5 +1029,8 @@ export default [
   { id: "599979", aScore: 9, bScore: 4.4, info: "#蔚蓝档案 #全彩 #合集", bak: "https://telegra.ph/C106-ミルクセーキ工房-ミルクセーキ-先生身体が熱くてどうしたらいいの-ブルーアーカイブ-中国翻訳-09-21-2" },
   { id: "598181", aScore: 8, bScore: 8.3, info: "#蔚蓝档案 #兽耳 #制服 #隔间", bak: "https://telegra.ph/タイ同人誌同好会-Anjaku112-セリカちゃんのアルバイト-ブルーアーカイブ-中国翻訳-DL版-09-21-2" },
   { id: "514500", aScore: 8.2, bScore: 7.4, info: "#兄妹 #女主动 #水手服 #冷珈琲", bak: "https://telegra.ph/冷珈琲-こみちん-ご近所家族計画-私と隣の家のおにいちゃんAI翻譯-02-20-3" },
+  { id: "631584", aScore: 8.8, bScore: 8, order: 3, info: "#催眠 #调教 魔砲少女シエスタ", bak: "https://telegra.ph/まゃ吾郎-魔砲少女シエスタ-第3話-くっ殺ヒロインズ-Vol50-中国翻訳-DL版-02-21" },
+  { id: "631760", aScore: 7.7, bScore: 7.5, order: 2, info: "#束缚 #发情 #兽耳 #蔚蓝档案", bak: "https://telegra.ph/いなば冷凍庫-稲葉れいと-ヘイローが溶けるまで2-ブルーアーカイブ-中国翻訳-DL版-02-21" },
+  { id: "631984", aScore: 6.3, bScore: 7, info: "#幽灵 #loli", bak: "https://telegra.ph/ふつうのタピオカやさん-ふたつのピーナツ-幽愛少女幽霊を愛する不思議な少女とあまあまキスハグ密着えっち-中国翻訳-DL版-02-22" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

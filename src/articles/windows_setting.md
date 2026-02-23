@@ -70,8 +70,8 @@ tag:
     ```reg
     Windows Registry Editor Version 5.00
     [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
-    "OverlayTestMode"=dword:00000005
-    "OverlayMinFPS"=dword:00000000
+    ; "OverlayTestMode"=dword:00000005 ; 这行是直接禁用了 dwm (ref1 的解法)。
+    "OverlayMinFPS"=dword:00000000     ; 这行是 ref2 解法，更加接近问题本质。
     ```
 - 关闭 Windows 安全中心([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
   1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。使用它关闭安全中心是可恢复的。
