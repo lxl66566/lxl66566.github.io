@@ -14,7 +14,19 @@ tag:
 
 我使用 [RAMDisk](../ramdisk.md)，拿到浏览器都会修改缓存位置。
 
-一般的 chromium 内核浏览器都能通过加 `--disk-cache-dir="Z:\123"` 启动参数更改缓存位置([ref](https://www.bilibili.com/read/cv12675669/))。Edge 浏览器也可以改注册表。firefox 修改设置项即可。
+一般的 chromium 内核浏览器都能通过加 `--disk-cache-dir="Z:\123"` 启动参数更改缓存位置([ref](https://www.bilibili.com/read/cv12675669/))。不过改启动参数还要去编辑快捷方式，不如注册表：
+
+```reg
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"DiskCacheDir"="Z:\\Temp\\edge"
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome]
+"DiskCacheDir"="Z:\\Temp\\chrome"
+```
+
+而对于 firefox 可以在地址栏输入 `about:config` 打开高级设置，然后搜索/新建 `browser.cache.disk.parent_directory`，填写即可。
+
+([ref](https://zhuanlan.zhihu.com/p/2008873392351237412))
 
 ## 垂直标签栏
 

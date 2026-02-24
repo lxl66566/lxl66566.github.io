@@ -65,6 +65,7 @@ tag:
 - [Custom Shortcuts for Anki](https://github.com/Liresol/anki-custom-shortcuts)：自定义快捷键。要重启生效。
 - [Remove Duplicate Cards（移除重复卡片）](https://ankiweb.net/shared/info/95590040)
 - [Autosync 2.1](https://ankiweb.net/shared/info/1726633659)：自动同步
+- ~~[note-size-anki-addon](https://github.com/Aleks-Ya/note-size-anki-addon)：查看每张卡片和牌组的大小。~~ 截至 202602，该插件有严重的性能问题，会影响 anki 窗口切换，不建议使用。
 
 ### [使用时间记录](../articles/time_record.md)
 

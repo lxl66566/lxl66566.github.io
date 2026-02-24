@@ -56,3 +56,4 @@ tag:
 ## external
 
 1. [Every map of China is wrong](https://medium.com/@anastasia.bizyayeva/every-map-of-china-is-wrong-bc2bce145db2)：解释了为什么很多国外的地图软件具有偏差值。
+2. [GIS坐标系:WGS84,GCJ02,BD09,火星坐标,大地坐标等解析说与转换](https://www.zhoulujun.cn/html/GIS/GIS-Science/2702.html)

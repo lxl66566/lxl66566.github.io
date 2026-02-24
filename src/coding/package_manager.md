@@ -52,7 +52,7 @@ tag:
      - nix 语言的学习曲线也是公认的陡峭；而且难的不是语言，而是 builtin functions/variables，查也查不到。例如我想看看 `wrapProgram` 的详细用法，结果到处搜不到文档，最后求助群友问哪里能看详细 manual，群友扔给我 Github 源码… 这种学习的 overheads 不可谓不高。
    - 我感觉坏处是比好处大的。
 5. 版本回退时会清空应用数据，例如 microsoft edge，telegram。回退其实比想象中要频繁，例如一发 rebuild 在后期失败了，再次回到 old conf 时就算是回退。于是我莫名其妙丢失了许多应用数据与 cookies。
-6. Nix 包里的 hash 是 input hash 而不是 output hash。这意味着：（1）包的构建很可能出现 input 不同而 output 相同的情况。而用户关心的是终状态而不是初状态。如果使用 output hash 可以减少一部分不必要的构建。（2）不使用 output hash 就没法实现更高级的功能，例如 p2p 包网络。用户必须有能力进行防伪校验，而这是 input hash 做不到的。虽然 Nix 现在是有一些 output hash 方向的努力（[Ca-derivations](https://nixos.wiki/wiki/Ca-derivations)），但是还处于相当早期的阶段，而且不能复用 binary cache，那么谁会用这玩意呢。
+6. Nix deriviation path 里的 hash 是 input hash 而不是 output hash，该 hash 是在构建之前就已经计算好的。这意味着：（1）包的构建很可能出现 input 不同而 output 相同的情况，例如只是添加注释。而用户关心的其实是终状态而不是初状态。如果使用 output hash，可以减少一部分不必要的构建。（2）不使用 output hash 就没法实现更高级的功能，例如 p2p 包网络。用户必须有能力进行防伪校验，而这是 input hash 做不到的。虽然 Nix 现在是有一些 output hash 方向的努力（Dynamic Derivation, [Ca-derivations](https://nixos.wiki/wiki/Ca-derivations)），但是还处于相当早期的阶段，而且不能复用 binary cache，那么谁会用这玩意呢。
 
 除了这些特性，还有一些表现：
 
