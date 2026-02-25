@@ -4,8 +4,10 @@ const original_list: BookItemInputType[] = [
   {
     name: "十日终焉",
     author: "杀虫队队员",
+    h_level: HLevel.NONE,
     duration: {
       start: "2025-12-16",
+      end: "2026-02-23",
     },
   },
   {

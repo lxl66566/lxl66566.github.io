@@ -844,7 +844,7 @@ export default [
   { id: "598266", aScore: 6.3, bScore: 8.1, info: "#自杀未遂 #纯爱 #野战" },
   { id: "599406", aScore: 8.2, bScore: 8.9, info: "#loli #性奴隶 #裸体围裙 #催眠", bak: "https://telegra.ph/caburibbon-caburi-私が飼われた日-中国翻訳-DL版-09-26-2" },
   { id: "(eh)", aScore: 9.3, bScore: 9.6, info: "#全彩 #女仆 #惩罚 #合集 #拘束", order: 2, otherlink: "https://e-hentai.org/g/3556254/0bcc0c2507/" },
-  { id: "599016", aScore: 8.7, bScore: 7.1, info: "#触手 #百合 #精灵 #loli" },
+  { id: "599016", aScore: 8.7, bScore: 8, info: "#触手 #百合 #精灵 #loli #催淫 #史莱姆", bak: "https://telegra.ph/としぞうスライムの毒で発情したので仲間とレズセックスしても問題ないよねChinese-09-24-2" },
   { id: "510619", aScore: 8.3, bScore: 6.5, info: "#地雷系 #夜班车 #出轨", bak: "https://telegra.ph/イトハナナ-イトハナ-シークレットライナーSR2便夜行バスの痴女-中国翻訳-無修正-DL版-07-10" },
   { id: "599979", aScore: 8.9, bScore: 4.7, info: "#蔚蓝档案 #全彩 #合集", bak: "https://telegra.ph/FLZN去码C106-ミルクセーキ工房ミルクセーキ-先生身体が熱くてどうしたらいいの-ブルーアーカイブ-中国翻訳-09-29" },
   { id: "599919", aScore: 9, bScore: 5.6, info: "#玉之けだま #3P #温泉 #全彩 #浴衣", bak: "https://telegra.ph/毛玉牛乳-玉之けだま-りりすぱ-中国翻訳-無修正-DL版-09-28" },
@@ -1032,5 +1032,10 @@ export default [
   { id: "631584", aScore: 8.8, bScore: 8, order: 3, info: "#催眠 #调教 魔砲少女シエスタ", bak: "https://telegra.ph/まゃ吾郎-魔砲少女シエスタ-第3話-くっ殺ヒロインズ-Vol50-中国翻訳-DL版-02-21" },
   { id: "631760", aScore: 7.7, bScore: 7.5, order: 2, info: "#束缚 #发情 #兽耳 #蔚蓝档案", bak: "https://telegra.ph/いなば冷凍庫-稲葉れいと-ヘイローが溶けるまで2-ブルーアーカイブ-中国翻訳-DL版-02-21" },
   { id: "631984", aScore: 6.3, bScore: 7, info: "#幽灵 #loli", bak: "https://telegra.ph/ふつうのタピオカやさん-ふたつのピーナツ-幽愛少女幽霊を愛する不思議な少女とあまあまキスハグ密着えっち-中国翻訳-DL版-02-22" },
+  { id: "599012", aScore: 7.8, bScore: 6.7, order: 4, info: "#さわやか鮫肌 #兽耳 #浴池", bak: "https://telegra.ph/C103-ドットエイト-さわやか鮫肌-けもみみメイドといちゃいちゃする本-4さつ目-中国翻訳-09-24-2" },
+  { id: "593488", aScore: 9.3, bScore: 9.5, info: "#有栖川ノ宮 #星穹铁道 #巨乳", bak: "https://telegra.ph/C106-有栖川ノ宮有栖川琴音-貴方は私に触れられる特別な方ですから-崩壊-スターレイル-中国翻訳-09-26-3" },
+  { id: "599185", aScore: 6.7, bScore: 7.2, info: "#泳装 #海边 #隐蔽 #喫茶ステラと死神の蝶", bak: "https://telegra.ph/C106-カシスかぼすありあ-ナツめも恋人と海でえっち編-喫茶ステラと死神の蝶-中国翻訳-DL版-09-25" },
+  { id: "599180", aScore: 7.4, bScore: 6.9, info: "#蔚蓝档案 #害羞 #自慰", bak: "https://telegra.ph/C106-ころころサイコロ-ちょこだいす-夏の暑さと祭りと君と-ブルーアーカイブ-中国翻訳-09-25-4" },
+  { id: "599160", aScore: 7.1, bScore: 6.2, info: "#星穹铁道 #3P #巨乳", bak: "https://telegra.ph/C106-信虎会二代目-裁縫女は下がってて-崩壊スターレイル-中国翻訳-09-25-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
