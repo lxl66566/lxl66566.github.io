@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 25 Feb 2026 02:40:01 GMT</pubDate>
-    <lastBuildDate>Wed, 25 Feb 2026 02:40:01 GMT</lastBuildDate>
+    <pubDate>Thu, 26 Feb 2026 15:03:45 GMT</pubDate>
+    <lastBuildDate>Thu, 26 Feb 2026 15:03:45 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -22,11 +22,14 @@
       <link>https://absx.pages.dev/articles/android_player.html</link>
       <guid>https://absx.pages.dev/articles/android_player.html</guid>
       <source url="https://absx.pages.dev/rss.xml">Android 音乐播放器横评</source>
-      <description>Android 音乐播放器横评 友情提醒：对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！() 播放器这个赛道虽然已经卷得要死，但各种产品看起来总是大同小异，并且总有些我不满意的地方。 许多 material 风格，许多产品只注重外观，而不注重用户交互体验。 每个播放器都会扫描全局音频，然后在播放器首页把我的音乐和录音和其他奇奇怪怪的音...</description>
+      <description>Android 音乐播放器横评 警告 对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！() 播放器这个赛道虽然已经卷得要死，但各种产品看起来总是大同小异，并且总有些我不满意的地方。 许多 material 风格，许多产品只注重外观，而不注重用户交互体验。 每个播放器都会扫描全局音频，然后在播放器首页把我的音乐和录音和其他奇奇怪怪的音频全...</description>
       <category>推荐</category>
       <pubDate>Fri, 07 Feb 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>友情提醒：对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！(<a href="/articles/mobile/settings.html#before-root" target="_blank">src</a>)</p>
+<div class="hint-container caution">
+<p class="hint-container-title">警告</p>
+<p>对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！(<a href="/articles/mobile/settings.html#before-root" target="_blank">src</a>)</p>
+</div>
 <p>播放器这个赛道虽然已经卷得要死，但各种产品看起来总是大同小异，并且总有些我不满意的地方。</p>
 <ol>
 <li>许多 material 风格，许多产品只注重外观，而不注重用户交互体验。</li>
@@ -79,13 +82,14 @@
       <link>https://absx.pages.dev/articles/control.html</link>
       <guid>https://absx.pages.dev/articles/control.html</guid>
       <source url="https://absx.pages.dev/rss.xml">远控方案</source>
-      <description>远控方案 上学/出差在外，总有远程控制电脑的需求。我折腾过一些，将经验写于此处。 我的刚需：Android 控制电脑；P2P 低延迟。 一体化方案 这里主要是企业级一体化的解决方案，一个方案包揽了全平台的服务端与客户端，并且不需要涉及公网等，一般具有容易上手的 GUI。 向日葵远程控制 老牌远程控制软件了，以前我用了很久。其拥有优秀的客户端界面交互和无...</description>
+      <description>远控方案 上学/出差在外，总有远程控制电脑的需求。我折腾过一些，将经验写于此处。 我的刚需：Android 控制电脑；P2P 低延迟。 目前正在用 sunshine + moonlight。 一体化方案 这里主要是企业级一体化的解决方案，一个方案包揽了全平台的服务端与客户端，并且不需要涉及公网等，一般具有容易上手的 GUI。 向日葵远程控制 老牌远程控...</description>
       <category>推荐</category>
       <category>评价</category>
       <pubDate>Sat, 18 Jan 2025 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>上学/出差在外，总有远程控制电脑的需求。我折腾过一些，将经验写于此处。</p>
 <p>我的刚需：Android 控制电脑；P2P 低延迟。</p>
+<p>目前正在用 <a href="#sunshine--moonlight">sunshine + moonlight</a>。</p>
 <h2>一体化方案</h2>
 <p>这里主要是企业级一体化的解决方案，一个方案包揽了全平台的服务端与客户端，并且不需要涉及公网等，一般具有容易上手的 GUI。</p>
 <h3>向日葵远程控制</h3>
