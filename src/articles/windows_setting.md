@@ -29,7 +29,7 @@ tag:
 
 ### 小工具
 
-- 在 b 站看到一个 [Windows11 轻松设置工具](https://wwkh.lanzout.com/iMb0v2ladkhe) ([src](https://www.bilibili.com/video/av113807439503289/))，和下一部分内容面我的设置是重合的，用这个工具可以进行快速便捷的设置，非常好用。
+- 在 b 站看到一个 [Windows11 轻松设置工具](https://wwkh.lanzout.com/iMb0v2ladkhe) ([src](https://www.bilibili.com/video/av113807439503289/))，和下一部分内容面我的设置是重合的，用这个工具可以进行快速便捷的设置，非常好用。不过是闭源软件，看你能不能接受。
 
 ### 安装前
 

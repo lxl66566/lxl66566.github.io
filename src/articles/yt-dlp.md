@@ -17,7 +17,7 @@ tag:
 
 - 对于某些 B 站视频可能无法选择最高清晰度
 - yt-dlp 不能下载任意网站的视频。要查看是否支持某网站，请直接搜 [Changelog](https://github.com/yt-dlp/yt-dlp/blob/master/Changelog.md)。我主要用 yt-dlp 下载 youtube 与 bilibili 视频。
-- 2024 年后期 Youtube 和 Chrome 同时增强了限制，导致现在下载 Youtube 的视频显得稍有麻烦。
+- 2024 年后期 Youtube 和 Chrome 同时增强了限制，导致现在下载 Youtube 的视频比较麻烦。
 
 ## 安装
 

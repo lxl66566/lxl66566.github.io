@@ -1857,7 +1857,6 @@ xx 之最：
 - 夏空的英仙座
 - VenusBlood VALKYRIE
 - Animal☆Panic?
-- セヴンデイズ あなたとすごす七日間 Refine
 - CRACK≡TRICK!
 - 雪境迷途遇仙踪
 - 献给神明般的你

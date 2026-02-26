@@ -520,6 +520,7 @@ ColorOS 是目前一加的默认系统。
 - 2025 年 10 月微软连续爆出 T0 bugs，每天都在蓝点网刷屏。
 - windows 11 设置界面东西少，下面还有一堆链接把用户推到同样是屎山的 bing。
 - windows 11 的共享文件夹巨 tmd 难用。明明分享的是 Everyone 可读，但是还是需要身份凭据，最后输入了正确的身份凭据之后还不让访问：_你不能访问此共享文件夹，因为你组织的安全策略阻止未经身份验证的来宾访问。_
+- 恶性 bug：最近观察到工作电脑 edge 有部分标签页会突然吃 3-4% 的 CPU 并持续一段时间，在 reddit 上也有[一些报告](https://www.reddit.com/r/MicrosoftEdge/comments/1qqzj2t/cpu_leak_edge_for_mac/)。说是 144 版本的 bug，145 修复，然而在最新 145.0.3800.70 也能观测到此 bug，微软修了个寂寞。目前的唯一解法是用 Process Lasso 把 edge 的效率模式永久关闭。
 
 ### WSL 有多难用
 

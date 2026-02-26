@@ -20,6 +20,7 @@ const links: ArticleCellBoxType[] = [
       { text: "手机设置", url: "./mobile/settings" },
       { text: "刷机与 ROOT", url: "./mobile/root" },
       { text: "模块与软件推荐", url: "./mobile/module_and_app" },
+      { text: "ADB", url: "./mobile/adb" },
       { text: "遇到的问题", url: "./mobile/problem" },
     ],
   },

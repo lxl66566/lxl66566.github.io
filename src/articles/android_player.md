@@ -11,7 +11,11 @@ tag:
 
 # Android 音乐播放器横评
 
-友情提醒：对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！([src](./mobile/settings.md#before-root))
+::: danger
+
+对于 Android 蓝牙音频播放设备，请务必禁用绝对音量功能！([src](./mobile/settings.md#before-root))
+
+:::
 
 播放器这个赛道虽然已经卷得要死，但各种产品看起来总是大同小异，并且总有些我不满意的地方。
 
