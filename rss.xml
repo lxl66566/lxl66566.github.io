@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 26 Feb 2026 15:03:45 GMT</pubDate>
-    <lastBuildDate>Thu, 26 Feb 2026 15:03:45 GMT</lastBuildDate>
+    <pubDate>Sat, 28 Feb 2026 12:34:16 GMT</pubDate>
+    <lastBuildDate>Sat, 28 Feb 2026 12:34:16 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -298,7 +298,7 @@
 <p>Tailscale 与 其开源实现 headscale 都是老牌的虚拟组网工具。Tailscale 免费版可以虚拟组网 100 台设备。安装很简单，对应平台下载安装包，登录就行。</p>
 <p>但是实测下来，串流效果很差，视频完全无法显示。我猜这个组网并不是 P2P 的，免费服务器的带宽不够，无法承载串流流量。</p>
 <p>Tailscale 还有一点不好用的地方，就是打开 Android APP 就要启动 VPN service，而不是手动点 connect 时启动。</p>
-<h2>NetBird</h2>
+<h2><a class="header-anchor" href="#netbird"><span></span></a><a href="https://netbird.io/" target="_blank" rel="noopener noreferrer">NetBird</a></h2>
 <p>官网看着很现代化，让我抱有了一丝不切实际的希望。结果连接稳定性极低，进去以后也是码率不足黑屏。并且和 zerotier 一样也是无法在 APP 内看 IP。</p>
 ]]></content:encoded>
     </item>
