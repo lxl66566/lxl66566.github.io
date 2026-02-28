@@ -76,6 +76,6 @@ Tailscale 与 其开源实现 headscale 都是老牌的虚拟组网工具。Tail
 
 Tailscale 还有一点不好用的地方，就是打开 Android APP 就要启动 VPN service，而不是手动点 connect 时启动。
 
-## NetBird
+## [NetBird](https://netbird.io/)
 
 官网看着很现代化，让我抱有了一丝不切实际的希望。结果连接稳定性极低，进去以后也是码率不足黑屏。并且和 zerotier 一样也是无法在 APP 内看 IP。

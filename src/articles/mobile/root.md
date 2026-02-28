@@ -63,6 +63,7 @@ KernelSU 下又细分两种工作模式，LKM (Loadable Kernel Module) 和 GKI (
 [SukiSU-Ultra](https://github.com/SukiSU-Ultra/SukiSU-Ultra) 是一个 KernelSU 的 fork，原生集成了 SUSFS (Superuser Stealth FileSystem) mount 和 APatch 的 KPM（Kernel Patch Module）机制。
 
 - 当然 SukiSU 还是有一些令人诟病的点，具体可以看[四周目(总结): SukiSU Ultra 的种种问题](https://oom.mintlify.app/blog/go4-sukisu-ultra-4)与该作者的其他文章。
+- SukiSU [自带了一个救砖机制](https://github.com/SukiSU-Ultra/SukiSU-Ultra/blob/35659f6b821253a0bb6a3115f083bce5fc56c367/kernel/ksud.c#L436-L481)：启动时按三下 _音量-_ 即可进入安全模式。不过安全模式只是不加载模块，并不会解冻应用，因此建议不要乱冻结应用([教训 1](./problem.md#乱冻结) [教训 2](./problem.md#一加无限重启))，因为现在乱冻结的风险比乱刷模块还高。
 
 ### ReSukiSU
 

@@ -111,8 +111,8 @@ scoop install liberica8-full-jdk
   "java.cleanup.actions": [],
   "java.format.enabled": false, // 参考 formatter 章节
   "java.import.gradle.wrapper.enabled": false, // 必须在这里设为 false，后面的两个配置才有用！！
-  "java.import.gradle.home": "C:/Users/lxl/scoop/apps/gradle4/current", // 设置 gradle 位置。对于 java8 项目应该使用 gradle4。
-  "java.import.gradle.java.home": "C:/Users/lxl/scoop/apps/liberica8-full-jdk/current" // gradle 本身使用的 jdk，需要和 gradle 版本匹配。这里使用 java8。
+  "java.import.gradle.home": "C:/Users/xxx/scoop/apps/gradle4/current", // 设置 gradle 位置。对于 java8 项目应该使用 gradle4。
+  "java.import.gradle.java.home": "C:/Users/xxx/scoop/apps/liberica8-full-jdk/current" // gradle 本身使用的 jdk，需要和 gradle 版本匹配。这里使用 java8。
 }
 ```
 
@@ -120,7 +120,7 @@ scoop install liberica8-full-jdk
 
 ```json
 {
-  "java.autobuild.enabled": true, // 这个是要开的，不然跳转会卡得要死。开启后可能导致 git 切分支的时候触发 rebuild，会比较卡，不过都是值得的。
+  "java.autobuild.enabled": true,
   "java.codeGeneration.addFinalForNewDeclaration": "all",
   "java.compile.nullAnalysis.mode": "automatic",
   "java.completion.chain.enabled": true,
@@ -145,15 +145,16 @@ scoop install liberica8-full-jdk
     {
       "default": true,
       "name": "JavaSE-25",
-      "path": "C:/Users/lxl/scoop/apps/openjdk/current"
+      "path": "C:/Users/xxx/scoop/apps/openjdk/current"
     },
     {
       "name": "JavaSE-1.8",
-      "path": "C:/Users/lxl/scoop/apps/liberica8-full-jdk/current"
+      "path": "C:/Users/xxx/scoop/apps/liberica8-full-jdk/current"
     }
   ],
   "java.configuration.workspaceCacheLimit": 30,
   "java.debug.settings.hotCodeReplace": "auto",
+  "java.debug.settings.vmArgs": "-Xms2g -Xmx4g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -XX:GCTimeRatio=9 -XX:AdaptiveSizePolicyWeight=90 -XX:+AlwaysPreTouch -XX:+UseCompressedOops -XX:+DisableExplicitGC",
   "java.implementationCodeLens": "methods",
   "java.import.exclusions": [
     "**/node_modules/**",
@@ -166,13 +167,16 @@ scoop install liberica8-full-jdk
   "java.import.gradle.enabled": true,
   "java.inlayHints.parameterNames.enabled": "all",
   "java.inlayHints.variableTypes.enabled": true,
-  "java.jdt.ls.java.home": "C:/Users/lxl/scoop/apps/openjdk/current",
-  "java.jdt.ls.javac.enabled": "off", // 使用 ecj
-  "java.jdt.ls.vmargs": "-Xms2g -Xmx4g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -XX:GCTimeRatio=9 -XX:AdaptiveSizePolicyWeight=90 -Xverify:none -noverify -XX:+AlwaysPreTouch -XX:+UseCompressedOops -XX:+DisableExplicitGC", // jvm 调优（需要根据 PC 特性和项目体量进行调整）
+  "java.jdt.ls.appcds.enabled": "on", // JVM 类数据共享存档
+  "java.jdt.ls.java.home": "C:/Users/xxx/scoop/apps/openjdk/current",
+  "java.jdt.ls.javac.enabled": "off", // 使用 ecj，更快，并且允许错误
+  "java.jdt.ls.vmargs": "-Xms2g -Xmx12g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -XX:GCTimeRatio=9 -XX:AdaptiveSizePolicyWeight=90 -XX:+AlwaysPreTouch -XX:+UseCompressedOops -XX:+DisableExplicitGC", // jvm 调优（需要根据 PC 特性和项目体量进行调整）
   "java.project.importOnFirstTimeStartup": "interactive",
+  "java.project.resourceFilters": ["node_modules", "\\.git", "target", "build", ".vscode", ".idea"],
   "java.quickfix.showAt": "problem",
   "java.referencesCodeLens.enabled": true,
-  "java.sharedIndexes.enabled": "on" // 共享索引
+  "java.server.launchMode": "Standard", // 非常重要！大项目一定要开 Standard，不然默认 Hybrid 跳转定义要慢死
+  "java.sharedIndexes.enabled": "on" // 跨 Workspace 共享符号索引
 }
 ```
 

@@ -2064,7 +2064,7 @@ const original_list: GalItemInputType[] = [
   {
     name: "七音学园-旅行部-·伊香保篇",
     other_names: ["七ヶ音学園 旅行部"],
-    valid_name: "七音学园旅行部伊香保篇",
+    valid_name: "七音学园旅行部",
     tag: {
       all_ages: true,
     },
