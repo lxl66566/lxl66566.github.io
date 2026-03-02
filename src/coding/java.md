@@ -58,12 +58,14 @@ scoop install liberica8-full-jdk
 
 对于大型项目，强行使用 vscode 可能需要付出一些代价，但也绝非不可能，我一直在研究这方面的解决方法，并且有一些小心得。
 
+> 还没学会 JVM 调优，要先学会 _Language Support for Java(TM) by Red Hat_ 调优了。。
+
 #### 扩展
 
 分析器：
 
 - 在 vscode 扩展商店搜 `java`，直接装 _Language Support for Java(TM) by Red Hat_ 即可，这是最老牌、兼容性最好的 java 插件，用来分析大项目也是没啥问题的。
-  - Red Hat 这个插件在跳转的时候会比 idea 慢一些，我猜测它是 lazy 的，打开项目时不会提前建立索引，而是在跳转时才分析。
+  - Red Hat 这个插件在跳转的时候会比 idea 慢一些。nodejs 性能本来就差，然后有时候的跳转没法命中提前分析出的缓存，可能需要当场分析，因此比较慢。注意不要用 Hybrid 模式，用 Standard，这样跳转会更快一些，后续的配置里有。
 - 不要装 Apache NetBeans，这玩意不是生产可用的。
 
 运行/调试器：

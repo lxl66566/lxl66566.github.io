@@ -470,6 +470,7 @@ ColorOS 是目前一加的默认系统。
 - 在 pr 里复制分支的格式是 `name:branch`，但是这个格式在哪都用不了。。git clone 需要 `name branch`，而 git checkout 需要 `name/branch`
 - 官方的 upload-artifact 会自动加一层 zip，而且没有方法禁用这种行为 ([issue](https://github.com/actions/upload-artifact/issues/426))。这玩意充满了 anti pattern，把压缩和上传放到同一个步骤里就是不对的，更别说还在用 zip。既然叫 upload-artifact，那其他功能都只应该为 upload 的核心功能服务。还有 4.7MB js，对 issue 的态度等，感觉太 💩 了。
   - upload-artifact 还花了一堆篇幅来讲自己 wildcard pattern 的反常行为，既然会给用户带来误解，还不如不做。
+  - [新版的 upload-artifact v7 已经支持不压缩](https://github.blog/changelog/2026-02-26-github-actions-now-supports-uploading-and-downloading-non-zipped-artifacts/)，距离 issue 提出已经过了好几年了。
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 

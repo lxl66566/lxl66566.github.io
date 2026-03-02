@@ -27,6 +27,8 @@ tag:
 - TUI 其实可以做滚动条，但是它没做。这么长 context 我也没法直接滚，只能 /export。
 - 没有 chat mode，只能当 agent 用。其实我有一些需求是开一个 chat window，有时候懒得搜索让它帮我搜。这个显然没做到。
 - 不同文件夹下打开 opencode，session 不共用，我还以为 session 丢了。
+- opencode 文档里添加 provider 只能用 TUI 添加，没有直接写 `opencode.json` 的例子。并且 TUI 添加后的配置也不会写到配置文件里，那我怎么同步？
+  - 感觉这两套思维本身也很混乱。要配置文件就 all in 配置文件，要 GUI config 就 all in GUI，同时编辑两边还不同步是什么鬼？
 
 总的来说，opencode 作为一个 agent，基本功能还行。但是在使用体验上仍需改进。
 
