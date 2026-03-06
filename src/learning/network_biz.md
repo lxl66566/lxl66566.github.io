@@ -57,3 +57,8 @@ HTTP/2（2015）是 HTTP 1.1（1997）以来的一个重大更新。
   - 重传时间通过 `TCP_RTO_MIN` 和 `TCP_RTO_MAX` 计算，是一个动态值，会随 RTT 变更。
   - Linux 内核 6.11 之前可以通过 iptables 或 ebpf 修改；6.11 之后可以通过 `net.ipv4.tcp_rto_min_us` 修改。
   - 对于公网服务与应用，没必要调整此值；对于数据中心内网等场景，将 RTO 调低可以大幅降低重传超时时间。（需要同时调低 delay_ack）
+
+## IP
+
+- Happy Eyeballs 是一个目前被广泛使用的双栈机制。RFC 规定，对于同时有 ipv4 和 ipv6 解析的请求，优先发起 ipv6 请求，在一个较短的 timeout（RFC 8305 推荐为 250ms）后如果没有成功建立连接就回退到 ipv4。
+  - curl 的实现是 [200ms timeout](https://everything.curl.dev/usingcurl/connections/happy.html)；如果超时，会并行发起 ipv4 请求尝试建立连接，此时 v4 和 v6 并行，哪个先响应就用哪个。
