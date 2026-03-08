@@ -897,3 +897,4 @@ articles:
 18. [Inside Rust's std and parking_lot mutexes - who wins?](https://blog.cuongle.dev/p/inside-rusts-std-and-parking-lot-mutexes-who-win)
 19. [Making a const version of Rust's array::from_fn - How hard can it be?](https://gendignoux.com/blog/2024/06/17/const-array-from-fn.html)，图码文并茂
 20. [Apache Iggy's migration journey to thread-per-core architecture powered by io_uring](https://iggy.apache.org/blogs/2026/02/27/thread-per-core-io_uring/)
+21. [Interpreting near native speeds with CEL and Rust](https://blog.howardjohn.info/posts/cel-fast/)，了解一下 CEL 及其优化。

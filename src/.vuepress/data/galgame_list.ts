@@ -95,9 +95,19 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "Ever17",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "20h8min",
+    tag: {
+      all_ages: true,
+    },
     duration: {
       start: "2026-01-16",
+      end: "2026-03-08",
+    },
+    score: {
+      story: 9.1,
+      visual: 4.8,
+      program: 0,
+      thrill: 3.7,
     },
   },
   {

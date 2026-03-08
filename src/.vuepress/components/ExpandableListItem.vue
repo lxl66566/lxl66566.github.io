@@ -27,7 +27,7 @@ list 中的插槽名称为 list-content，展开后的内容插槽名称为 expa
     <slot name="list-content"></slot>
   </tr>
   <transition name="expand">
-    <tr v-if="isExpanded" class="expanded-content" :style="{ height: expandedHeight + 'px' }">
+    <tr v-show="isExpanded" class="expanded-content" :style="{ height: expandedHeight + 'px' }">
       <td
         colspan="99"
         :style="{ maxWidth: calculatedMaxWidth, overflow: 'visable', boxSizing: 'border-box' }"
