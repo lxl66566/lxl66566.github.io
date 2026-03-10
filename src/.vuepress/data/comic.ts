@@ -1040,7 +1040,7 @@ export default [
   { id: "599426", aScore: 7.7, bScore: 9, info: "#按摩 #强制性交 #loli #比基尼", bak: "https://telegra.ph/C106和泉都-和水ややど-海香さんのマッサージ体験本-DL版中国翻訳-09-27-2" },
   { id: "445513", aScore: 7.4, bScore: 7.5, order: 1, info: "#JK #家出少女 #社畜 #巨乳 わたしのかみさま", bak: "https://telegra.ph/FRAC-もとみやみつき-わたしのかみさま-中国翻訳-DL版-09-27" },
   { id: "514745", aScore: 7.5, bScore: 7.6, order: 2, info: "#JK #家出少女 #社畜 #巨乳 わたしのかみさま", bak: "https://telegra.ph/FRAC-もとみやみつき-わたしのかみさま2-中国翻訳-DL版-09-27" },
-  { id: "599437", aScore: 7.9, bScore: 7.8, order: 3, info: "#JK #家出少女 #社畜 #巨乳 #自慰 わたしのかみさま", bak: "https://telegra.ph/FRAC-もとみやみつき-わたしのかみさま3-中国翻訳-DL版-09-27" },
+  { id: "599437", aScore: 8.3, bScore: 7.8, order: 3, info: "#JK #家出少女 #社畜 #巨乳 #自慰 わたしのかみさま", bak: "https://telegra.ph/FRAC-もとみやみつき-わたしのかみさま3-中国翻訳-DL版-09-27" },
   { id: "600484", aScore: 8.3, bScore: 8.7, order: 2, info: "#爸爸活 #强制性交 #中出", bak: "https://telegra.ph/ぞんびと愉快な仲間たち-すーぱーぞんび-P活女子まいたその場合-えぴそど1-中国翻訳-DL版-10-01-4" },
   { id: "620241", aScore: 7.8, bScore: 7.3, order: 1, info: "#爸爸活 #处男" },
   { id: "600428", aScore: 8.7, bScore: 5.2, info: "#弟妹 #短篇", bak: "https://telegra.ph/bginga-年下のギャルに暇だから童貞奪われる漫画-110836iz翻譯-10-01-3" },
@@ -1055,5 +1055,12 @@ export default [
   { id: "601894", aScore: 6.7, bScore: 6, info: "#蔚蓝档案 #loli", bak: "https://telegra.ph/apartで待ってる-おだねるapart-午後の灼熱朦朧とさせて-ブルーアーカイブ-中国翻訳-DL版-10-07-3" },
   { id: "602029", aScore: 8, bScore: 8, info: "#纯爱 #旅馆 #初夜 比较有特色的画风", bak: "https://telegra.ph/コミティア128-Nino-izm-2no-自撮りカノジョ-中国翻訳-10-08-2" },
   { id: "602409", aScore: 8.2, bScore: 7.8, info: "#蔚蓝档案 #温泉 #兽耳 #纯爱", bak: "https://telegra.ph/MMU2000-みしまひろじ-シグレとシークレット-ちよっと発情してるかもだけど-ブルーアーカイブ-中国翻訳-DL版-10-10-3" },
+  { id: "634268", aScore: 7.8, bScore: 8.4, info: "#兽耳 #cos #VTuber #项圈", bak: "https://telegra.ph/こむぎばたけ-こむぎ-最推しケモ耳少女のコスプレ調教日記-中国翻訳-DL版-03-03" },
+  { id: "204864", aScore: 5.6, bScore: 9.2, info: "#NTR #陋习 #狂暴", bak: "https://telegra.ph/モヤモヤ-籠-COMIC-高-Vol7-中国翻訳-03-03" },
+  { id: "634186", aScore: 6.7, bScore: 8.3, info: "#蔚蓝档案 #捆绑 #SM #无插入", bak: "https://telegra.ph/CAT-GARDEN-ねこてゐ-苦しいのが好きなマイアちゃん-ブルーアーカイブ-中国翻訳-無修正-DL版-03-03" },
+  { id: "633442", aScore: 7.2, bScore: 7.1, info: "#保健体育 #loli #师生 #天然 #堕落", bak: "https://telegra.ph/おもちフライ屋さん-餅崎パン粉-保体の時間みんなの前で先生とをします-中国翻訳-03-03" },
+  { id: "603002", aScore: 7.7, bScore: 6.3, info: "#同学 #巨乳 #自慰 #图书馆 #厕所", bak: "https://telegra.ph/アンアークXXX-はも-気になるあの子は異常性欲者-中国翻訳-DL版-10-10-2" },
+  { id: "573376", aScore: 7.3, bScore: 7, info: "#巨乳 #合集 #纯爱 #めめゆ", bak: "https://telegra.ph/めめゆ-ひとりじめラブドール-中国翻訳-DL版-10-10-2" },
+  { id: "635691", aScore: 7.3, bScore: 9.9, info: "#4P #雌小鬼 #家庭教师 #挣脱束缚 #反杀 #合集 #催眠 #地雷 #窒息", bak: "https://telegra.ph/うこ-わからセンセーション-中国翻訳-DL版-無修正-03-08-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
