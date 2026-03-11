@@ -5,8 +5,10 @@
   >
     <template #list-content>
       <td>
-        <span v-if="!props.item.url">{{ props.item.name }}</span>
-        <a v-else :href="props.item.url" target="_blank">{{ props.item.name }}</a>
+        <h6 :id="props.item.name" class="fake-span">
+          <span v-if="!props.item.url">{{ props.item.name }}</span>
+          <a v-else :href="props.item.url" target="_blank">{{ props.item.name }}</a>
+        </h6>
 
         <span
           v-if="props.item.order || props.item.nth_time || props.item.namaniku || props.item.tag"
@@ -146,4 +148,31 @@ td {
 :slotted(img) {
   max-width: 100% !important;
 }
+
+/* 重置 VuePress 对 h6 的默认样式 */
+h6.fake-span {
+  /* 1. 恢复为行内元素特性 (span 默认是 inline) */
+  display: inline;
+
+  /* 2. 重置字体相关属性，使其继承父级元素的文本样式 */
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  /* 3. 清除 VuePress 默认的 margin 和 padding */
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  /* 4. [关键] 解决 VuePress 导航栏遮挡问题 */
+  /* VuePress 原本依靠巨大的 padding-top 来防止锚点定位时被顶部导航栏遮挡。
+     因为我们清除了 padding，需要用现代 CSS 属性来替代 */
+  scroll-margin-top: 5rem; /* 数值可根据你的导航栏高度(一般是 3.6rem)适当调整 */
+}
+
+/* 隐藏可能被 Markdown-it 自动注入的锚点符号 '#' (如果有的话)
+h6.fake-span :deep(.header-anchor) {
+  display: none !important;
+} */
 </style>

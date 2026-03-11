@@ -482,7 +482,90 @@ function sidebar() {
 
 自从[更换主题](#更换主题)后，我就一直用主题提供的 slimsearch + nodejs-jieba 分词进行本地索引的搜索。转眼来到了 2026 年，nodejs-jieba 已经很久没有维护，没法用了，并且在某次 node/pnpm 升级后爆炸了。因此我抛弃了 slimsearch 转向 algolia。
 
-algolia 在搜索和用户体验上做的很好，但是在接入和 dashboard 上会差一些：dashboard 加载相当慢，页面上一堆 AI 和自以为是的“优质引导”内容，反倒找不到我需要的功能。由于本站在许多地方都有部署，我希望所有站点都使用同一个索引，但是 algolia 并没有提示这一点。最后我才自己摸索出来，只要用了同一个 meta 的页面，就会被关联到同一个 algolia 应用下，共用索引。
+algolia 在搜索和用户体验上做的还行，但是在接入和 dashboard 上比较差：dashboard 加载相当慢，页面上一堆 AI 和自以为是的“优质引导”内容，反倒找不到我需要的功能。使用 algolia 实际上有非常多的坑：
+
+- 由于本站在许多地方都有部署，我希望所有站点都使用同一个索引，但是 algolia 并没有提示这一点。最后我才自己摸索出来，只要用了同一个 meta 的页面，就会被关联到同一个 algolia 应用下，共用索引。
+- （严格来说不是 algolia 的问题）发现搜索搜不到我的 galgame 评价，然后发现是我的折叠列表组件用了 v-if，内容在 dom 里是找不到的。后续改成了 v-show。
+- 然后改成 v-show 以后发现 galgame 页面报 _Records extracted are too big_。这不是废话吗，我这一个 markdown 源码都 144KB 了。然后尝试在爬虫配置里改成 `aggregateContent: false`，再爬一次，好家伙直接 _Extractors returned too many records_ 了。什么脑残😅。
+  - 反正这个解决起来很恶心的，要么就是大改配置，AI 写一个自动分块的 js：
+    ```js :collapsed-lines
+    recordExtractor: (({ $, helpers }) => {
+      $("nav, footer, aside, .sidebar, .toc, .table-of-contents, svg, img, script, style, noscript, iframe")
+        .remove();
+      const rawRecords = helpers.docsearch({
+        recordProps: {
+          lvl1: ["article h1", "main h1", "h1", "head > title"],
+          content: ["article p, article li", "main p, main li", ".content p", ".content li"],
+          lvl0: { selectors: "", defaultValue: "Documentation" },
+          lvl2: ["article h2", "main h2", "h2"],
+          lvl3: ["article h3", "main h3", "h3"],
+          lvl4: ["article h4", "main h4", "h4"],
+          lvl5: ["article h5", "main h5", "h5"],
+          lvl6: ["article h6", "main h6", "h6"],
+        },
+        aggregateContent: false, // 必须关闭，拿到原始碎片
+        recordVersion: "v3",
+      });
+      const MAX_LENGTH = 3000; // 3000个字符
+      const optimizedRecords = [];
+      let currentRecord = null;
+      const isSameHierarchy = (h1, h2) => JSON.stringify(h1) === JSON.stringify(h2);
+      const splitText = (text, maxLength) => {
+        const chunks = [];
+        for (let i = 0; i < text.length; i += maxLength) {
+          chunks.push(text.substring(i, i + maxLength));
+        }
+        return chunks;
+      };
+      rawRecords.forEach((record) => {
+        if (record.type !== "content" || !record.content) {
+          optimizedRecords.push(record);
+          return;
+        }
+        const textChunks = splitText(record.content, MAX_LENGTH);
+        textChunks.forEach((chunk) => {
+          if (!currentRecord) {
+            currentRecord = { ...record, content: chunk };
+            return;
+          }
+          const combinedLength = (currentRecord.content || "").length + chunk.length + 1;
+          if (
+            isSameHierarchy(currentRecord.hierarchy, record.hierarchy)
+            && combinedLength <= MAX_LENGTH
+          ) {
+            currentRecord.content += "\n" + chunk;
+          } else {
+            optimizedRecords.push(currentRecord);
+            currentRecord = { ...record, content: chunk };
+          }
+        });
+      });
+      if (currentRecord) {
+        optimizedRecords.push(currentRecord);
+      }
+      return optimizedRecords;
+    });
+    ```
+  - 要么就是给自己的大块文本（我这里是每个 galgame 的评价）做拆分，加一些 h6 和 fake 样式：
+    ```css :collapsed-lines
+    h6.fake-span {
+      /* 1. 恢复为行内元素特性 (span 默认是 inline) */
+      display: inline;
+      /* 2. 重置字体相关属性，使其继承父级元素的文本样式 */
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      color: inherit;
+      /* 3. 清除 VuePress 默认的 margin 和 padding */
+      margin: 0;
+      padding: 0;
+      border: none;
+      /* 4. 解决 VuePress 导航栏遮挡问题 */
+      /* VuePress 原本依靠巨大的 padding-top 来防止锚点定位时被顶部导航栏遮挡。
+        因为我们清除了 padding，需要用现代 CSS 属性来替代 */
+      scroll-margin-top: 5rem;
+    }
+    ```
 
 ## 更换主题
 

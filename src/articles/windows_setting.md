@@ -147,6 +147,14 @@ tag:
     fsutil behavior set disablelastaccess 1
     set-mmagent -MaxOperationAPIFiles 8192
     ```
+  - 如果你使用 NVMe SSD，可以开启微软的原生 SSD 驱动（在生产环境请谨慎使用）。
+    ```reg
+    Windows Registry Editor Version 5.00
+    [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides]
+    "1853569164"=dword:00000001
+    "156965516"=dword:00000001
+    "735209102"=dword:00000001
+    ```
 - 网络设置：
   - [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)，也可以使用[轻松设置](#小工具)：bbr 是新一代拥塞控制算法，在弱网环境下表现异常优异。
   - 调高 ipv4 优先级：`netsh interface ipv6 set prefixpolicy ::ffff:0:0/96 60 4` ([src](https://github.com/oven-sh/bun/issues/4938#issuecomment-3043953860))
