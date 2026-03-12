@@ -92,6 +92,8 @@ Windows Registry Editor Version 5.00
    "ConfigureKeyboardShortcuts"="{\"disabled\":[\"paste_and_go\",\"send_feedback\",\"focus_inactive_notification\"]}"
    ```
 3. _系统和性能/系统_ 中，关闭 _启动增强_ 和 _关闭 Microsoft Edge 后继续运行后台扩展和应用_。
+4. edge 打开新标签页后快速在地址栏输入一些内容，这些内容可能会被微软的地址栏刷新给刷掉（傻逼异步加载机制和微软开屏广告）。所以需要去 `edge://settings/startHomeNTP` 打开 _预加载新选项卡页_，以避免这个 bug。
+5. 如果你在地址栏输入发现没有自动联想，请前往 `edge://settings/privacy/services/search/searchFilters` 开启 _使用键入的字符显示搜索和网站建议_。
 
 ## kiwi browser
 

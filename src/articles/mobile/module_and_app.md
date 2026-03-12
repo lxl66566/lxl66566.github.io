@@ -34,6 +34,7 @@ root 手机的最大目的就是装模块、使用需要 root 权限的软件，
 - [LSPosed](https://github.com/LSPosed/LSPosed/releases/latest)：必装，一般安装 Zygisk 版。
   - 由于 LSPosed 已经停止更新，对于较新的手机（>= Android 15），也可以看看以下活跃 fork：
     - [JingMatrix/LSPosed](https://github.com/JingMatrix/LSPosed)
+  - 当前也有很多人在用 [LSPosed IT (Internal Test)](https://bot.lsposed.org/)。但是我看到这个测试人员条款的时候就有点绷不住了，closedPosed 闹麻了。
 
 ## Magisk
 

@@ -787,3 +787,19 @@ vuepress 及其 theme-hope 有着一大堆 peerDenepdencies，完全就是一副
 由于 [remove pwa 组件](https://ecosystem.vuejs.press/plugins/pwa/remove-pwa.html) 的官方样例是将其放到 plugins array 里，但是我在 theme.ts 里的 plugins 是一个 object，怎么找也找不到放进去的方法。于是只好搁置，这一搁置就是大半年。
 
 然后我继续尝试，才发现 vuepress 有好几个引入 plugins 的地方，这个组件应该在 `config.ts` 里引入而不是 `theme.ts`。于是问题解决。
+
+## anchor 跳转
+
+vuepress 等现代博客都会有跳转锚点的功能。但是 vuepress-theme-hope 的锚点跳转比较傻叉，它跳转的位置虽然给 navbar 预留了空间，但是却没有给 vp-toc-header 留空间，导致跳转效果还是很差。
+
+<ZoomedImg alt="跳转后标题会在红框所示区域，还是会被这个无语玩意挡住" src="/images/blog/withvuepress2/badanchor.png" />
+
+这个跳转并不是 markdown-it-anchor 实现而是浏览器实现的，浏览器按照 id 跳转元素。跳转后该元素的垂直位置是通过 scroll-margin-top 决定。因此我看了下效果后，给全局加了一个
+
+```scss
+:is(h1, h2, h3, h4, h5, h6)[id] {
+  scroll-margin-top: 20vh !important;
+}
+```
+
+然后就舒服了。

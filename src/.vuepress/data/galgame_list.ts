@@ -275,7 +275,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 8.8,
-      visual: 9.6,
+      visual: 9.4,
       program: 2.8,
       thrill: 7.8,
     },

@@ -164,11 +164,6 @@ h6.fake-span {
   margin: 0;
   padding: 0;
   border: none;
-
-  /* 4. [关键] 解决 VuePress 导航栏遮挡问题 */
-  /* VuePress 原本依靠巨大的 padding-top 来防止锚点定位时被顶部导航栏遮挡。
-     因为我们清除了 padding，需要用现代 CSS 属性来替代 */
-  scroll-margin-top: 5rem; /* 数值可根据你的导航栏高度(一般是 3.6rem)适当调整 */
 }
 
 /* 隐藏可能被 Markdown-it 自动注入的锚点符号 '#' (如果有的话)
