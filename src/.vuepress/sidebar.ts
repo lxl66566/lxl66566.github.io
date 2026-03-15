@@ -88,7 +88,7 @@ export default sidebar({
     },
     {
       text: "生命科学",
-      children: ["worm.md", "drink.md"],
+      children: ["worm.md", "life.md"],
     },
     {
       text: "外部文章分享",

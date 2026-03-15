@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "泡沫冬景",
+    other_names: ["Christmas Tina"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-03-15",
+    },
+  },
+  {
     name: "ライムライト・レモネードジャム",
     valid_name: "LimeLightLemonadeJam",
     other_names: ["LimeLight Lemonade Jam", "聚光灯下的青柠恋曲"],
