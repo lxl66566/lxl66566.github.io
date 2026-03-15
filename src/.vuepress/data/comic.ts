@@ -1062,5 +1062,15 @@ export default [
   { id: "603002", aScore: 7.7, bScore: 6.3, info: "#同学 #巨乳 #自慰 #图书馆 #厕所", bak: "https://telegra.ph/アンアークXXX-はも-気になるあの子は異常性欲者-中国翻訳-DL版-10-10-2" },
   { id: "573376", aScore: 7.3, bScore: 7, info: "#巨乳 #合集 #纯爱 #めめゆ", bak: "https://telegra.ph/めめゆ-ひとりじめラブドール-中国翻訳-DL版-10-10-2" },
   { id: "635691", aScore: 7.3, bScore: 9.9, info: "#4P #雌小鬼 #家庭教师 #挣脱束缚 #反杀 #合集 #催眠 #地雷 #窒息", bak: "https://telegra.ph/うこ-わからセンセーション-中国翻訳-DL版-無修正-03-08-2" },
+  { id: "636131", aScore: 8.2, bScore: 9, info: "#白毛 #loli #纯爱 #社畜 #社长之女", bak: "https://telegra.ph/Rev3-もんちゃんrev3-俺にだけわがままなお嬢様はお泊り交尾がしたい-中国翻訳-DL版-03-10-2" },
+  { id: "266662", aScore: 7.9, bScore: 7.6, order: 1, info: "#机械 #改造 バーゼ、充電したい!", bak: "https://telegra.ph/Pinacotheca-ピナケス-バーゼ充電したい-フレームアームズガール-中国翻訳-03-14" },
+  { id: "266662", aScore: 7.9, bScore: 7.6, order: 1, info: "#机械 #改造 バーゼ、充電したい!", bak: "https://telegra.ph/Pinacotheca-ピナケス-バーゼ充電したい-フレームアームズガール-中国翻訳-03-14" },
+  { id: "313046", aScore: 7.7, bScore: 8.4, order: 2, info: "#机械 #强制性交 #双重插入 スティ子、充電される!" },
+  { id: "355619", aScore: 7.3, bScore: 7, order: 3, info: "#机械 #改造 #女性主导 轟雷、充電が気になる! " },
+  { id: "526635", aScore: 7, bScore: 7.1, info: "#蔚蓝档案 #女性主导 #反杀", bak: "https://telegra.ph/C104-ぽよぽよスカイ-佐伯ソラ-ヘブンズブルー-ブルーアーカイブ-中国翻訳-03-14-2" },
+  { id: "636995", aScore: 6.2, bScore: 7.8, info: "#异世界 #受孕 #水手服 #学生", bak: "https://telegra.ph/りとるほっぱー-橋広こう-セックスに免許が必要になった世界-DL版中國翻訳-03-14" },
+  { id: "593234", aScore: 9.1, bScore: 7.3, info: "#蔚蓝档案 #梦境 #强制性交 門主の一夢", bak: "https://telegra.ph/C106-ブレイクスルー-やっこ-門主の一夢-ブルーアーカイブ-中国翻訳-03-13" },
+  { id: "313322", aScore: 7.2, bScore: 8.4, info: "#兽耳 #战败 #逃脱", bak: "https://telegra.ph/ぷち町屋-kylin-お前なんかに負けないっっ-中国翻訳-03-13" },
+  { id: "635399", aScore: 8, bScore: 7.6, info: "#偶像大师 #女性主导" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
