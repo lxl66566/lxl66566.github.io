@@ -97,6 +97,8 @@ scoop install liberica8-full-jdk
 
 - Mybatis 跳转：_Mybatis Helper - Greenplumwine_，可以在 Mapper java 和 xml 之间互相跳转。这玩意 fork 了好几版，这个是目前还有人在维护的一版。
 - Test Runner for Java，如果你的项目有用到单测的话可以装一下，还是非常方便的，不用手写 `launch.json`。跑完单测，stdout 输出的结果在 _调试控制台_ 这个 tab 下。
+- SonarQube （原 SonarLint）：_Language Support for Java(TM) by Red Hat_ 的静态分析能力差了 idea 一大截，所以如果希望自己的代码可以有更严格的检查，可以使用 SonarLint。这玩意跑了一个自己的静态分析器，跟 redhat 的 Eclipse 分析器同时进行 double check，对性能有一定影响。推荐真正有需求的使用。
+  - 而且很多本该能推出来的 auto fix，SonarLint 也推不出来。
 
 #### 相关配置
 
@@ -489,6 +491,8 @@ java 7 之后还可以使用 [try-with-resource](https://github.com/Jueee/effect
 ### lambda
 
 java 8 引入的匿名函数。`(parameter1, parameter2) -> expression`，expression 也可以是一个花括号 code block。
+
+- lambda 捕获的局部变量必须是 final 或等效 final（effectively final）的变量。
 
 ### 泛型
 
