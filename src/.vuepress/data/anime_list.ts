@@ -101,6 +101,7 @@ const original_list: AnimeItemInputType[] = [
     watch_times: 2,
     duration: {
       start: "2024-09-15",
+      end: "2024-09-15",
     },
   },
   {

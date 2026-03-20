@@ -36,7 +36,15 @@ tag:
 
 ### galgame
 
-- 想把中式传统玄幻结合到 galgame 一次。至今玩了挺多西式奇幻 gal，但是感觉还是缺了点什么。
+#### 中幻
+
+想把中式传统玄幻结合到 galgame 一次。至今玩了挺多西式奇幻 gal，但是感觉还是缺了点什么。
+
+#### 人类本质改变
+
+为人类插入可插拔式记忆体，即可暂时性修改感情/记忆。
+
+最终男主面临选择：插入记忆体 1 / 插入记忆体 2 / 插入记忆体 3。三个记忆体的功能不直接写出，而是在游戏流程中暗示，给玩家抉择的感觉。
 
 ## 编程灵感
 
@@ -64,7 +72,7 @@ tag:
 - [ ] ~~windows electron lib(runtime)?~~ no，please use webview; or some dedup method on windows.
 - [ ] ~~windows volume locker~~ see <https://github.com/felipecrs/volume-locker>
 - [x] [wd: info words online in cli, written in rust](https://github.com/lxl66566/wordinfo)
-- [ ] ~~ecust-survival, (with vuepress)~~ use [wiki.cic.cab](https://wiki.cic.cab) instead
+- [ ] ~~ecust-survival, (with vuepress)~~ Actually I did this [ecustbook](https://lxl66566.github.io/ecustbook). [wiki.cic.cab](https://wiki.cic.cab) is also available.
 - [ ] **Galgame engine**
   - [ ] 自动生成可视化线路攻略
   - [ ] 内置多语言与翻译支持
@@ -110,11 +118,11 @@ tag:
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
 - [ ] rust TUI easy_download
-- [ ] GalgameManager
-  - [ ] 随机启动 计时
+- [x] GalgameManager
+  - [ ] 随机启动
   - [ ] 插件与启动链
-  - [ ] 计时
-  - [ ] 备份存档
+  - [x] 计时
+  - [x] 备份存档
   - [ ] 优秀的用户交互（自动查找图片）
 - [ ] AI 相册整理。核心：[tag 论](../gossip/va_view.md#tag-论)；不使用树状组织而是使用 tag 型数据库组织，快速查找。
   - [ ] 移动端：做到比现有产品更好

@@ -4,9 +4,18 @@ const original_list: GalItemInputType[] = [
   {
     name: "Christmas Tina ‐泡沫冬景‐",
     valid_name: "泡沫冬景",
-    playing_status: PlayingStatus.PLAYING,
+    tag: {
+      all_ages: true,
+    },
     duration: {
       start: "2026-03-15",
+      end: "2026-03-20",
+    },
+    score: {
+      story: 7.3,
+      visual: 7.6,
+      program: 2,
+      thrill: 8,
     },
   },
   {
@@ -211,7 +220,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 5.6,
-      visual: 7.1,
+      visual: 7,
       program: 6.9,
       thrill: 4.7,
     },

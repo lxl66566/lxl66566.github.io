@@ -26,7 +26,7 @@ tag:
 
 - 我在大二、大三时使用 [legado 阅读 3.0](../farraginous/recommend_packages.md#开源阅读)。
   - 导入书源
-    - 这里是[书源推荐](https://legado.aoaostar.com/)，也可去 Telegram 官方群寻找其他书源。
+    - 这里是[书源推荐 1](https://legado.aoaostar.com/) [书源推荐 2](https://t.me/zhujiwiki_info/10759)，也可去 Telegram 官方群寻找其他书源。我本人一般是不用书源的（不读未完本的小说）。
   - txt, **pdf 与 epub 格式**的书籍
     - pdf 格式有一些小 bug，需要在阅读界面 _右上角 -> 图片样式_ 选择 `DEFAULT`，然后翻页动画设为 `滚动`。
   - 阅读时长统计

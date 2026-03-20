@@ -461,3 +461,7 @@ const height = 500;
 ```
 
 :::
+
+## external
+
+1. [How many branches can your CPU predict?](https://lemire.me/blog/2026/03/18/how-many-branches-can-your-cpu-predict/)，Intel CPU 的分支预测能力也比 AMD 差
