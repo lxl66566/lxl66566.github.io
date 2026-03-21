@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "サルテ",
+    other_names: ["Salute"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-03-21",
+    },
+  },
+  {
     name: "Christmas Tina ‐泡沫冬景‐",
     valid_name: "泡沫冬景",
     tag: {
@@ -22,9 +30,17 @@ const original_list: GalItemInputType[] = [
     name: "ライムライト・レモネードジャム",
     valid_name: "LimeLightLemonadeJam",
     other_names: ["LimeLight Lemonade Jam", "聚光灯下的青柠恋曲"],
-    playing_status: PlayingStatus.PLAYING,
+    url: "https://t.me/absolutexsresource/88",
+    use_time: "20h53min",
     duration: {
       start: "2026-03-01",
+      end: "2026-03-20",
+    },
+    score: {
+      story: 5.4,
+      visual: 9.7,
+      program: 9.7,
+      thrill: 0.2,
     },
   },
   {
@@ -877,7 +893,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 4.5,
-      visual: 9.6,
+      visual: 9,
       program: 8.8,
       thrill: 0,
     },
@@ -2392,7 +2408,7 @@ const original_list: GalItemInputType[] = [
     use_time: "-",
     score: {
       story: 7.9,
-      visual: 9.7,
+      visual: 9.2,
     },
     duration: {
       start: "2021-11-16",
