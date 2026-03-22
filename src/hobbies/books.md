@@ -582,13 +582,14 @@ _（[此处附上证明](https://wwp.lanzout.com/iL6o8076zi2j)）_
 - 和风说话的青苔
 - 橘生淮南（2 册）
 - 野性的呼唤（多遍）
-- 我们爱科学（杂志，45+册，两遍）
+- 我们爱科学（杂志，45+册，多遍）
 - 全世界优等生都在做的 2000 个思维游戏（多遍，有意思）
 - 博弈论的诡计大全集
 - 实用智谋术
 - 四大名著（水浒传 20140604 三国演义 <20140619 ?遍）
 - 查理九世系列
 - 汤姆·索亚历险记 20150430?
+- 佐賀的超級阿嬤
 
 <!-- * <ZoomedImg alt="开始界面" src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/f8376fe99e6c4bfa82dd01551c98bbfd~tplv-obj:1080:1925.image?from=post&x-expires=1682524800&x-signature=CjGGz8/oXM9JQaDlbTF+pRtHXWA=" scale="40%" /> -->
 

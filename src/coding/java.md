@@ -692,6 +692,7 @@ uri 一般是 `/{context-path}/{Class-Mapping}/{Method-Mapping}` 形式。
 - context-path：一个全局前缀，用的比较少。直接搜 `context-path` 即可。
 - Class-Mapping：class 上定义的 `@RequestMapping` 注解。
 - Method-Mapping：类的方法的注解，可以是 `@GetMapping` 等。
+- `@RequestParam`：指定 GET 请求的 http param。默认是必填 param 的，如果想要选填需要加 `required = false`。
 
 ### Swagger
 

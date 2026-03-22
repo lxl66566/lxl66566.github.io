@@ -693,10 +693,10 @@ const original_list: GalItemInputType[] = [
       end: "2025-06-26",
     },
     score: {
-      story: 10.6,
+      story: 10.4,
       visual: 2.5,
       program: 0,
-      thrill: 10,
+      thrill: 10.5,
     },
   },
   {
@@ -2079,7 +2079,7 @@ const original_list: GalItemInputType[] = [
     other_names: ["冥契のルペルカリア"],
     use_time: "29h25min*",
     score: {
-      story: 10.5,
+      story: 10.3,
       visual: 5,
       program: 2,
     },

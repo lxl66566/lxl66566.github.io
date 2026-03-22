@@ -1053,7 +1053,7 @@ SiglusEngine 公认的工具是 [xmoezzz/SiglusExtract](https://github.com/xmoez
 
 GARbro 可解不可封，因此还是得想别的办法。imhex 打开一看，里面 OggS 是直接打进去未变换的，那么最后就剩下了解 header 的含义了。
 
-然后懒得搞了，这游戏本来也是小短篇，没有太多折腾的必要，AudioSpeedHack 一把梭就完了。
+然后懒得搞了，《虹彩都市》这游戏本来也是小短篇，没有太多折腾的必要，AudioSpeedHack 一把梭就完了。
 
 </template>
 <template #箱庭ロジック>
