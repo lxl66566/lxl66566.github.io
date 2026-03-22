@@ -66,14 +66,26 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["心之形心之色心之声", "Deep One", "死に逝く騎士、異世界に響く断末魔", "瑠璃櫻"],
+    names: [
+      "心之形心之色心之声",
+      "Deep One",
+      "死に逝く騎士、異世界に響く断末魔",
+      "瑠璃櫻",
+      "サルテ",
+    ],
     valid_name: "krkr_xp3_enc",
     engine: "krkr",
     save_format: "xp3(encrypted)",
     speedupable: null,
   },
   {
-    names: ["樱之刻", "FLIP * FLOP 系列", "终之空Remake", "流星·世界演绎者 系列"],
+    names: [
+      "樱之刻",
+      "FLIP * FLOP 系列",
+      "终之空Remake",
+      "流星·世界演绎者 系列",
+      "天选庶民的真命之选",
+    ],
     valid_name: "Artemis",
     engine: "Artemis Engine",
     save_format: "pfs",

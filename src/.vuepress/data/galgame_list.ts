@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "天选庶民的真命之选",
+    other_names: ["天選庶民的真命之選", "Select Oblige"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-03-21",
+    },
+  },
+  {
     name: "サルテ",
     other_names: ["Salute"],
     playing_status: PlayingStatus.PLAYING,
