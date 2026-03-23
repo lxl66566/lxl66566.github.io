@@ -87,7 +87,8 @@ tag:
 ## 工具
 
 1. [Github](./github.md)：从基础到进阶
-2. [Git](./Git.md)：现代唯一指定版本控制系统
+2. [Git](./Git.md)：现代~~唯一指定~~版本控制系统
+   - [jujutsu](./jujutsu.md)：兼容 Git 的另一套版本控制系统，带有更多高级特性。
 3. ~~[Vim](./vim.md)：文件编辑器~~
 4. [VSCode](./vscode.md)：IDE
 5. [数据库](./sql.md)

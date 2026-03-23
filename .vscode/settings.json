@@ -47,5 +47,6 @@
     "markdown": false
   },
   "cursor.aipreview.enabled": true,
-  "cursor.cpp.disabledLanguages": ["markdown", "html", "vue"]
+  "cursor.cpp.disabledLanguages": ["markdown", "html", "vue"],
+  "git.enabled": true
 }
