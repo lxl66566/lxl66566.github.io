@@ -114,6 +114,12 @@ jj bookmark forget xxx
 # 类似 https://github.com/tummychow/git-absorb
 # 并且由于 jj 对 conflict 的宽容性，它可以将语义模糊的冲突先保留，等待日后解决。只会改变 mutable 的 commit。
 jj absorb
+
+# 仅将当前的编辑内容（@）rebase 到其他节点上。注意，-r @ 是必须的！
+jj rebase -r @ -o xxx
+
+# 如果不带上 -r @，则是向上追溯到分支起点，把整条 commit 链给 rebase 到目的节点上。
+jj rebase -o xxx
 ```
 
 ## 其他技巧
