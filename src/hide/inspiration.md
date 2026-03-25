@@ -144,6 +144,12 @@ tag:
   - [ ] Raft supported by [hiqlite](https://github.com/sebadob/hiqlite)
   - [ ] ability to bypass GFW
 - [ ] TUI renamer, because fd + mv is too slow. use regex like vscode string replace.
+- [ ] HTTP Client.
+  - [ ] free forever.
+  - [ ] fully customizable, users can write js/py scripts to match conditions and modify the request.
+- [ ] Windows SSD trace. Trace IO event with operation thread.
+  - [ ] ETW trace.
+  - [ ] web-based graph display.
 
 <!-- - 转码，复制，参考我的 fish function
 - 平台无关的 alias

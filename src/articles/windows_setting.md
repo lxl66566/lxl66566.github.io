@@ -177,6 +177,7 @@ tag:
     5. 在 _设置 - 可选功能_ 里，卸载 Windows Powershell ISE，windows 这编辑器太捞了。
   - 禁用一些服务。
     - Windows Font Cache Service
+    - Background Intelligent Transfer Service，这个是后台偷偷下载东西的元凶。我相信没有人希望让 Windows 自动在后台偷偷做一些事情，吃带宽和 CPU，而对用户没有任何报告和提示。
   - 禁用一些设备。
     - 如果是 intel CPU，禁用 [_Intel(R) Management Engine Interface #1_](https://www.reddit.com/r/hardware/comments/1hfp2gs)，P 用没有，还有额外风险。为什么我需要一个如此高权限的玩意来让我的电脑增加不确定性？
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))

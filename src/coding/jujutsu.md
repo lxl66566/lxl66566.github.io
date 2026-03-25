@@ -25,7 +25,7 @@ tag:
 其他生态：
 
 - [jj-starship](https://github.com/dmmulroy/jj-starship)：如果你使用 starship 装饰你的终端，可以使用 jj-starship，获取更多提示信息。
-- [jj-pre-push](https://github.com/acarapetis/jj-pre-push)：jujutsu 不支持 git hooks；这里有一个 push hook 的实现。
+- [jj-pre-push](https://github.com/acarapetis/jj-pre-push)：jujutsu 不支持 git hooks；这里有一个 push hook 的实现。但是在一个 Rust 的工具里插一段 python 脚本不是很怪吗？而且这玩意的示例直接用的 uvx，uvx 有很大开销的知道吗？
 - [jjui](https://github.com/idursun/jjui)：jujutsu 的 TUI，star 比 lazyjj 高一些。我自己体验下来，确实比 lazyjj 要更舒服一些。
 - [lazyjj](https://github.com/Cretezy/lazyjj)：jujutsu 的另一个 TUI。lazyjj 默认展示 details，问题是这个操作是需要一定时间的，导致 UI 体感比较卡。
 - [paulsmith/jjq)](https://github.com/paulsmith/jjq)：jujutsu 的合并队列。我理解的话这是给企业搭工作流用的，普通用户用不到。~~而且看到 contributor 里有个菊花就有点应激了~~
