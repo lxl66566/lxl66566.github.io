@@ -13,6 +13,15 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [jujutsu](https://github.com/jj-vcs/jj)
+
+详情请看 [jujutsu](../coding/jujutsu.md) 文章。
+
+- 作为一个 [git exp user](../coding/Git.md)，并且拥有一批 git scripts，jujutsu 对我的开发效率的提升比较有限。
+- jujutsu 和我公司工作流的相性非常差。
+  - 比如我们提交前都要求用工具扫 commit 但是扫不到 jujutsu 的 `@`；比如我们不用本地创建分支而是在远端创建分支后拉下来开发；比如我们解决 conflicts 也用的另一套工作流。
+- 我有一些私有 git hooks，jujutsu 没法执行。
+
 ## [opencode](https://github.com/anomalyco/opencode)
 
 现在 AI 时代 AI 相关的东西 100k star 真是随便拿啊。

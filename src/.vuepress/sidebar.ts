@@ -121,9 +121,9 @@ export default sidebar({
       children: [
         "github.md",
         "Git.md",
+        "jujutsu.md",
         "vscode.md",
         "vim.md",
-        "sql.md",
         "container.md",
         "package_manager.md",
         "snipets.md",
@@ -135,7 +135,14 @@ export default sidebar({
     },
     {
       text: "其他",
-      children: ["bagu.md", "android.md", "algorithm.md", "bot.md", "audio.md"],
+      children: [
+        "sql.md",
+        "bagu.md",
+        "android.md",
+        "algorithm.md",
+        "bot.md",
+        "audio.md",
+      ],
     },
   ],
   "/blog/": ["index.md", "withvuepress2.md", "log.md", "todo.md"],
