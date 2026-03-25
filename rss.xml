@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 25 Mar 2026 13:13:12 GMT</pubDate>
-    <lastBuildDate>Wed, 25 Mar 2026 13:13:12 GMT</lastBuildDate>
+    <pubDate>Wed, 25 Mar 2026 15:02:57 GMT</pubDate>
+    <lastBuildDate>Wed, 25 Mar 2026 15:02:57 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -48,12 +48,12 @@
       <link>https://absx.pages.dev/articles/cli_compress.html</link>
       <guid>https://absx.pages.dev/articles/cli_compress.html</guid>
       <source url="https://absx.pages.dev/rss.xml">命令行压缩/解压</source>
-      <description>命令行压缩/解压 bz 我在 windows 上使用的压缩软件为，命令行指令为bz，详见官网-命令行参数。 我使用脚本备份我的浏览器历史记录，并使用 bandizip 命令行进行 7z 加密压缩后上传到 Github。代码如下（隐去关键部分）： 若直接对 History 文件压缩会报错（我也不清楚为什么），因此使用 cp 命令复制到缓存文件夹压缩，曲线...</description>
+      <description>命令行压缩/解压 bz 我在 windows 上使用的压缩软件为，命令行指令为bz，详见官网 - 命令行参数。 我使用脚本备份我的浏览器历史记录，并使用 bandizip 命令行进行 7z 加密压缩后上传到 Github。代码如下（隐去关键部分）： 若直接对 History 文件压缩会报错（我也不清楚为什么），因此使用 cp 命令复制到缓存文件夹压缩，...</description>
       <category>教程</category>
       <pubDate>Mon, 10 Oct 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <h2>bz</h2>
-<p>我在 windows 上使用的压缩软件为<a href="/farraginous/recommend_packages.html#bandizip" target="_blank">Bandizip</a>，命令行指令为<code>bz</code>，详见<a href="https://cn.bandisoft.com/bandizip/help/parameter/" target="_blank" rel="noopener noreferrer">官网-命令行参数</a>。</p>
+<p>我在 windows 上使用的压缩软件为<a href="/farraginous/recommend_packages.html#bandizip" target="_blank">Bandizip</a>，命令行指令为<code>bz</code>，详见<a href="https://cn.bandisoft.com/bandizip/help/parameter/" target="_blank" rel="noopener noreferrer">官网 - 命令行参数</a>。</p>
 <p>我使用脚本备份我的浏览器历史记录，并使用 bandizip 命令行进行 7z 加密压缩后上传到 Github。代码如下（隐去关键部分）：</p>
 <div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF">cp</span><span style="--shiki-light:#986801;--shiki-dark:#D19A66"> -f</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> "C:\Users\&lt;NAME&gt;\AppData\Local\Microsoft\Edge\User Data\Default\History"</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379"> D:/browsertemp</span></span>
 <span class="line"><span style="--shiki-light:#A0A1A7;--shiki-light-font-style:italic;--shiki-dark:#7F848E;--shiki-dark-font-style:italic"># backup edge</span></span>
@@ -395,9 +395,9 @@
 </ul>
 <p>推荐做法是：</p>
 <ol>
-<li>酒前 45 分钟： 吃一点东西垫底，服用 600mg NAC + 300-600mg DHM</li>
+<li>酒前 45 分钟：吃一点东西垫底，服用 600mg NAC + 300-600mg DHM</li>
 <li>酒局中：多喝水，尽量不要空腹。对于不得不喝酒的情形，尽量喝红酒/啤酒，不碰白酒。</li>
-<li>酒后： 再补充 300-600mg DHM。（不要再吃 NAC）。</li>
+<li>酒后：再补充 300-600mg DHM。（不要再吃 NAC）。</li>
 </ol>
 <hr class="footnotes-sep">
 <section class="footnotes">
@@ -499,7 +499,7 @@
 </ul>
 </li>
 <li>USDT 是最广泛使用的稳定币，1:1 兑换美元，常常用来做加密货币交易的中间币种与合约本位。USDC 是另一家机构的稳定币，监管更好，安全性更高，但是推出时间靠后，市场流动性较低。</li>
-<li>加密货币价值来源于共识。因此不要投山寨币，因为他们的共识不够稳定，风险太大。包括感兴趣的话可以了解一下 Luna “算法稳定币”的暴雷历史。</li>
+<li>加密货币价值来源于共识。因此不要投山寨币，因为他们的共识不够稳定，风险太大。包括感兴趣的话可以了解一下 Luna“算法稳定币”的暴雷历史。</li>
 <li>加密货币交易是零和博弈，本质与赌博相近。要做理智的投资者，<a href="https://zhuanlan.zhihu.com/p/614267699" target="_blank" rel="noopener noreferrer">不要做赌徒</a>。</li>
 <li>股市和加密货币的相关性：正相关，如果加密货币投资者受到股市惊吓，也会选择抛售。例如 Deepseek 爆火当天，NVIDIA 暴跌带动加密货币小跌。（不过恢复得也很快）</li>
 </ul>
@@ -533,7 +533,7 @@
 <p>交易前有一些基础知识，建议搜索学习。<a href="#external">external</a> 里有一些我的推荐文章。</p>
 <ul>
 <li>区块链与挖矿相关知识</li>
-<li>现货，合约与期权 概念+原理</li>
+<li>现货，合约与期权 概念 + 原理</li>
 <li>买入和卖出，杠杆、做多和做空</li>
 <li>术语：仓位相关</li>
 </ul>
@@ -918,7 +918,7 @@
 <h2>解码器设置</h2>
 <p>请自行搜索 <em>Potplayer + Lav Filters + madVR</em> .其中，<em>Lav Filters</em> 为解码器，<em>madVR</em> 则为渲染器。</p>
 <h2>倍速音画不同步</h2>
-<p>我喜欢高倍速看视频，最高不限于 5x.（解说性质） 但受限于解码器与电脑性能，高倍速下视频渲染速度无法跟上倍速，会出现音画不同步现象。</p>
+<p>我喜欢高倍速看视频，最高不限于 5x.（解说性质）但受限于解码器与电脑性能，高倍速下视频渲染速度无法跟上倍速，会出现音画不同步现象。</p>
 <p>解决方法：F5 打开参数选项，依次点击 <em>滤镜 - 视频解码器 - 内置解码器/DXVA 设置 - 图像滞后时允许漏帧保持同步</em>。</p>
 ]]></content:encoded>
     </item>
@@ -952,7 +952,7 @@
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>此处假设你的 RAM Disk 内默认创建 Temp 文件夹。</li>
 <li>将桌面设为 RAMDisk：每次打开 RAMDisk 还是需要两步（此电脑 - Z 盘），<a href="https://t.me/withabsolutex/1688" target="_blank" rel="noopener noreferrer">我想到了</a>直接将桌面放入 RAMDisk，这样就可以把桌面当垃圾桶用了！
 <ol>
-<li>把桌面上的东西移走，并删除 <em>桌面</em> 文件夹(<code>C:\Users\&lt;Username&gt;\Desktop</code>)。</li>
+<li>把桌面上的东西移走，并删除 <em>桌面</em> 文件夹 (<code>C:\Users\&lt;Username&gt;\Desktop</code>)。</li>
 <li>软链接到 RAMDisk：<code>mklink /D "C:\Users\&lt;Username&gt;\Desktop" "Z:"</code></li>
 <li>由于现在桌面关机会自动清空，我们需要一个方法，将我的文件（主要是快捷方式）开机时自动放到桌面。
 </li>
@@ -961,7 +961,7 @@
 </ol>
 <div class="hint-container tip">
 <p class="hint-container-title">提示</p>
-<p>以下为横评正文，您也可以直接<a href="#%E6%80%BB%E7%BB%93">阅读<code>总结</code></a>。</p>
+<p>以下为横评正文，您也可以直接<a href="#%E6%80%BB%E7%BB%93">阅读 <code>总结</code></a>。</p>
 </div>
 <h2>ERAM</h2>
 <p><a href="https://github.com/topics/ramdisk" target="_blank" rel="noopener noreferrer">Github ramdisk topic</a> 的第一名。但是呢，直接卡在安装上了。。如何使用？文档在何方？README 早已过时，于是开源阵营 RAM Disk 阵亡。<s>（樂</s></p>
@@ -1028,7 +1028,7 @@
 </ul>
 <p>能有多简单呢，例如我需要部署一个静态站点（用于 vps 伪装），只需要在 <code>/etc/caddy/Caddyfile</code> 中写入：</p>
 <div class="language-text line-numbers-mode" data-highlighter="shiki" data-ext="text" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>&lt;域名&gt; {</span></span>
-<span class="line"><span>  root * &lt;(静态)资源路径&gt;</span></span>
+<span class="line"><span>  root * &lt;(静态) 资源路径&gt;</span></span>
 <span class="line"><span>  file_server</span></span>
 <span class="line"><span>}</span></span></code></pre>
 <div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后<a href="/articles/linux/basic.html#%E6%9C%8D%E5%8A%A1" target="_blank">启动 caddy 服务</a>即可。</p>
@@ -1100,7 +1100,7 @@
       <pubDate>Sat, 27 Jul 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
 <p>本文主要包含了我对 galgame 语音加速的探索全过程。各章节大致按照时间顺序排布。主要内容在：<a href="#%E4%BA%8C%E8%AF%95%E5%B0%81%E5%8C%85">二试封包</a> 和 dll wrapper <a href="#dll-wrapper-v0">v0</a> <a href="#dll-wrapper-v1">v1</a>。</p>
-<p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 <em>GINKA</em>（后来还玩了更多不一一列举了）。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，<s>相当于延长了一倍的生命</s>。经历过加速后，再次玩其他语音速度极低的 galgame （真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。</p>
+<p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 <em>GINKA</em>（后来还玩了更多不一一列举了）。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，<s>相当于延长了一倍的生命</s>。经历过加速后，再次玩其他语音速度极低的 galgame（真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。</p>
 <h2>音频处理软件</h2>
 <p>音频处理领域很多软件都是商业非自由软件，要交钱的，毕竟音频处理本身也是天坑。而我找不到能对其他 APP 进行音频加速的软件。</p>
 <p>写在这里的只是我试过的一部分：</p>
@@ -1197,9 +1197,9 @@
 <p>实际测试中，音频输出速度和频率确实升高了，但是表现为 (输出一段加速的音频 -&gt; 静音一段时间) 的循环。这是因为 trunk 的输入速率是恒定的，pyaudio 会 wait trunk 填满。如果我加速把 trunk 的音频打出去，那么就会有一段时间，trunk 里不存在音频，所以没有输出。</p>
 <p>把 CE 和此脚本一起使用也还是一样的效果，因为 CE 本身不能加速音频，也就无法加速程序对 trunk 的填充速度。因此此次尝试失败，感觉尝试的方向就是错的，没法通过音频倒逼游戏速度。</p>
 <h2>TAS</h2>
-<p>20240727 （也就是本文撰写时间），我突然想到，TAS 是把游戏慢放，那么反向 TAS 是否就能够加速游戏呢？并且 TAS 视频中游戏声音是正常的，显然 TAS 有自己的办法处理游戏音频速度，所以理论上一定是行得通的。</p>
+<p>20240727（也就是本文撰写时间），我突然想到，TAS 是把游戏慢放，那么反向 TAS 是否就能够加速游戏呢？并且 TAS 视频中游戏声音是正常的，显然 TAS 有自己的办法处理游戏音频速度，所以理论上一定是行得通的。</p>
 <h3>libTAS</h3>
-<p>首先我尝试了 libTAS，这是一个泛目标开源 tas 库+软件，许多其他 TAS 生态是建立在 libTAS 上的。libTAS 只能运行在 linux。libTAS 在 NixOS 上的打包不算太好，低了一个版本，也缺失了 libtas32.so 库导致没法运行 32 位 exe，需要手动用 <code>LIBTAS_SO_PATH</code> 拉；然后 libTAS 运行时会去找 libalsa，NixOS 的 dynamic link 管理又是混沌与邪恶的，因此我还需要大费周章手动用 <code>LD_LIBRARY_PATH</code> 把运行库拉进来。</p>
+<p>首先我尝试了 libTAS，这是一个泛目标开源 tas 库 + 软件，许多其他 TAS 生态是建立在 libTAS 上的。libTAS 只能运行在 linux。libTAS 在 NixOS 上的打包不算太好，低了一个版本，也缺失了 libtas32.so 库导致没法运行 32 位 exe，需要手动用 <code>LIBTAS_SO_PATH</code> 拉；然后 libTAS 运行时会去找 libalsa，NixOS 的 dynamic link 管理又是混沌与邪恶的，因此我还需要大费周章手动用 <code>LD_LIBRARY_PATH</code> 把运行库拉进来。</p>
 <p>这一切做好以后，游戏还是打不开，显示 <em>HD 不是一个有效的 binary</em>… （HD 是游戏路径上的一个词）我怀疑它 parse 参数出了问题，但是我没有证据，它也不输出它用的启动指令。</p>
 <p>后来我自己打了 1.4.6 的 libTAS 包，然后自己打了一串超级长的启动指令：</p>
 <div class="language-sh line-numbers-mode" data-highlighter="shiki" data-ext="sh" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#E45649;--shiki-dark:#E06C75">LD_LIBRARY_PATH</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/tmp:/nix/store/1ry2s2jgqbl3w7w54b8biylwqdxy52zw-steam-fhs/usr/lib32/:LD_LIBRARY_PATH</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> LIBTAS_SO_PATH</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/tmp/libtas.so</span><span style="--shiki-light:#E45649;--shiki-dark:#E06C75"> WINEPREFIX</span><span style="--shiki-light:#383A42;--shiki-dark:#56B6C2">=</span><span style="--shiki-light:#50A14F;--shiki-dark:#98C379">/home/absx/.local/share/wineprefixes/origin</span><span style="--shiki-light:#4078F2;--shiki-dark:#61AFEF"> libTAS</span></span></code></pre>
@@ -1225,7 +1225,7 @@
 </ul>
 <h3><a class="header-anchor" href="#libspeedhack"><span></span></a><a href="https://github.com/evg-zhabotinsky/libspeedhack" target="_blank" rel="noopener noreferrer">libspeedhack</a></h3>
 <p>20240729：虽然很麻烦，但是我还是为了仅存的一点希望去尝试一下 libspeedhack。作者已经消失两年了。我按照说明直接用，不出意外地出了意外： <code>libspeedhack32.so: undefined symbol: floor</code>. 然后去瞄了下 issue，果然有一个一样的问题，并且别人也修了，开了 pr 在构建时加了个 <code>-lm</code> 参数。然后我很开心，拉下来想构建，结果：</p>
-<p>我们的 NixOS 实在是太棒啦！环境根本搞不起来，它的构建指令需要静态链接 + cross 32 位，什么 libclang，glibc_multi 的包直接加进去根本满足不了需求，再加上我根本不知道在 buildInputs 里能写哪些玩意，比如 glibc 就能写 <code>glibc.static</code>， glibc_multi 能写 <code>glibc_multi.dev</code>，这种有个点后面跟着啥玩意的我除了读 nix 源码也想不到要去哪查。</p>
+<p>我们的 NixOS 实在是太棒啦！环境根本搞不起来，它的构建指令需要静态链接 + cross 32 位，什么 libclang，glibc_multi 的包直接加进去根本满足不了需求，再加上我根本不知道在 buildInputs 里能写哪些玩意，比如 glibc 就能写 <code>glibc.static</code>，glibc_multi 能写 <code>glibc_multi.dev</code>，这种有个点后面跟着啥玩意的我除了读 nix 源码也想不到要去哪查。</p>
 <p>然后去我的 debian 云服务器上尝试构建，东西都装好了，然后没有数学库：<code>ld: cannot find -lm: No such file or directory</code>。我又把 <code>libm.so</code> 拿出来装到 <code>LD_LIBRARY_PATH</code> 里，继续构建，又会得到：</p>
 <div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>/libc.a(malloc.o): relocation R_X86_64_TPOFF32 against 'tcache' can not be used when making a shared object; recompile with -fPIC</span></span>
 <span class="line"><span>ld: failed to set dynamic section sizes: bad value</span></span>
