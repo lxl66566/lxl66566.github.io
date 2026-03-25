@@ -16,7 +16,7 @@ tag:
 - jujutsu 没有暂存区的概念，所有修改都是直接反映到当前的 `@` 里。
   - `@` 是一个虚拟 commit（「虚拟」的意思是不被 Git 系统感知，只存在于 jujutsu 系统里，后同。说 commit 是因为它有自己的 hash，可以跳转）。因此用户在任意时候切换到任意节点开始工作，当前的内容会自动保留。
 - jujutsu 有 Operation Log，任何操作都可以通过 `jj undo` 直接撤销。
-- 不像 git 开发必须要先切分支，jujutsu 一般直接在提交树上进行开发；开发完以后打一个 bookmark（底层是 git 的 branch），然后把 bookmark 推到远端。bookmark 不会随着提交而移动。
+- 不像 git 开发必须要先切分支，jujutsu 一般直接在提交树上进行开发；开发完以后打一个 bookmark（底层是 git 的 branch），然后把 bookmark 推到远端。bookmark 不会随着提交而自动移动，类似 git 的 tag。你必须手动移动它。
 
 ## 安装与其他生态
 
