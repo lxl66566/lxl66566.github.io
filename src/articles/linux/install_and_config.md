@@ -116,7 +116,7 @@ umount /mnt/windows
      --bind ~/.cache/ccache ~/.cache/ccache --chdir /build/$PWD /usr/bin/makepkg'
      ```
    - `pack`: 偷来的[一键打包更新](./package.md#打包)
-   - `gpt`: 简单跑一个本地模型([src](https://github.com/jmorganca/ollama))
+   - `gpt`: 简单跑一个本地模型 ([src](https://github.com/jmorganca/ollama))
      ```sh
      ollama serve >/dev/null &
      ollama run llama2
@@ -272,7 +272,7 @@ make_new_subvolume /var/log
 11. _窗口管理 - 窗口行为_ 设置 _焦点跟随鼠标_
 12. 配置窗口管理器，在窗口装饰中选择主题，调出 `置顶` 按钮。
 13. [配置蓝牙](https://wiki.archlinuxcn.org/wiki/蓝牙)，安装 `bluedevil`
-14. 关闭文件索引（臭名昭著的 baloo）：`balooctl disable`。其不仅可能导致崩溃([ref](https://zhuanlan.zhihu.com/p/493375508))，还可能造成性能损失。
+14. 关闭文件索引（臭名昭著的 baloo）：`balooctl disable`。其不仅可能导致崩溃 ([ref](https://zhuanlan.zhihu.com/p/493375508))，还可能造成性能损失。
 15. 更改动画速度，改得更快一点。
 16. 设置 krunner 让其启动更快。[ref](https://bbs.archlinux.org/viewtopic.php?id=279792)
 

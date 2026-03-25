@@ -59,12 +59,12 @@ sudo chmod -R 777 /mnt/tmp
    ```
    此处假设你的 RAM Disk 内默认创建 Temp 文件夹。
 5. 将桌面设为 RAMDisk：每次打开 RAMDisk 还是需要两步（此电脑 - Z 盘），[我想到了](https://t.me/withabsolutex/1688)直接将桌面放入 RAMDisk，这样就可以把桌面当垃圾桶用了！
-   1. 把桌面上的东西移走，并删除 _桌面_ 文件夹(`C:\Users\<Username>\Desktop`)。
+   1. 把桌面上的东西移走，并删除 _桌面_ 文件夹 (`C:\Users\<Username>\Desktop`)。
    2. 软链接到 RAMDisk：`mklink /D "C:\Users\<Username>\Desktop" "Z:"`
    3. 由于现在桌面关机会自动清空，我们需要一个方法，将我的文件（主要是快捷方式）开机时自动放到桌面。
       ::: tabs
       @tab imdisk
-      imdisk 自带挂载功能，可以将某个文件夹当成 ramdisk 的 “基”。非常方便。
+      imdisk 自带挂载功能，可以将某个文件夹当成 ramdisk 的“基”。非常方便。
       @tab 脚本
       1. 在硬盘里任意位置建一个文件夹，将你要放到桌面上的所有文件放进去
       2. `win + R` 输入 `shell:startup` 打开启动文件夹
@@ -82,7 +82,7 @@ sudo chmod -R 777 /mnt/tmp
 
 ::: tip
 
-以下为横评正文，您也可以直接[阅读`总结`](#总结)。
+以下为横评正文，您也可以直接[阅读 `总结`](#总结)。
 
 :::
 

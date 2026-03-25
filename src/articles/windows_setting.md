@@ -50,7 +50,7 @@ tag:
 - 进行 windows 更新（可选，如果故意使用旧版镜像安装请跳过这一步）。
   - 需要看情况，关注一下近期 windows 更新补丁有没有出过什么大问题。
   - 本次更新将会成为我的 Windows 系统的最后一次更新。
-- 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_ ，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
+- 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../farraginous/recommend_packages.md#ContextMenuManager) 调整。
 - **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。如果没有此开关，需要运行 `powercfg /h on` 后再查看。
   1. 避免关机时自动保存 [RAM Disk](./ramdisk.md) 文件到固态盘；
   2. Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 _更新并重启_。[ref](https://t.me/withabsolutex/1193)
@@ -73,14 +73,14 @@ tag:
     ; "OverlayTestMode"=dword:00000005 ; 这行是直接禁用了 dwm (ref1 的解法)。
     "OverlayMinFPS"=dword:00000000     ; 这行是 ref2 解法，更加接近问题本质。
     ```
-- 关闭 Windows 安全中心([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
+- 关闭 Windows 安全中心 ([为什么我们需要关闭它？](https://zhuanlan.zhihu.com/p/611313419))。下面给出了几种方法，可以任选其一。
   1. （推荐）使用 [Windows11 轻松设置工具](#小工具)。使用它关闭安全中心是可恢复的。
   2. [Windows Defender Remover](https://github.com/ionuttbara/windows-defender-remover)。该工具之前还不太好用，移除后还有设置项残留，并且无法再次进入安全中心调整选项。所以需要移除前去手动关闭安全中心里看得见的所有设置项。
      - 注意，使用此工具有无法再次打开 Windows 安全中心的风险！
-  3. 手动([src](https://zhuanlan.zhihu.com/p/494923217))，但实测并不能完全关闭
-     - _Windows 安全中心-病毒和威胁防护-管理设置_ ，关闭所有开关
+  3. 手动 ([src](https://zhuanlan.zhihu.com/p/494923217))，但实测并不能完全关闭
+     - _Windows 安全中心 - 病毒和威胁防护 - 管理设置_，关闭所有开关
      - 使用组策略编辑器禁用 Windows Defender
-     - `win + r`运行`gpedit.msc`，_计算机配置 - 管理模板-Windows 组件 - 关闭 Microsoft Defender 防病毒_ ，选择已启用
+     - `win + r`运行`gpedit.msc`，_计算机配置 - 管理模板-Windows 组件 - 关闭 Microsoft Defender 防病毒_，选择已启用
      - 由于我的电脑是家庭版升专业版，没有 `gpedit.msc` 文件，因此需先添加组策略编辑器。在记事本输入以下代码并保存为 `.bat` 文件，管理员运行。
        ```batch
        pushd "%~dp0"
@@ -127,14 +127,14 @@ tag:
   - 既然无需经常更新，那就[关闭传递优化](https://blog.51cto.com/u_13464709/2057007)，并且用 _磁盘清理_ 清一下这位占用的空间。
     - 貌似最新 win11 设置里已经无法彻底关闭传递优化，而只能对其设置限额。
 
-[^3]: _Windows11 轻松设置工具_ 里的禁用 UAC 并不是彻底禁用，只是取消了弹窗；但是如果修改注册表(`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System] "EnableLUA"=dword:00000000` 然后重启)彻底禁用，又会让你的 shell 和运行都默认以管理员身份进行，会导致很多问题，我更不能接受。因此还是别想着彻底禁用吧。
+[^3]: _Windows11 轻松设置工具_ 里的禁用 UAC 并不是彻底禁用，只是取消了弹窗；但是如果修改注册表 (`[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System] "EnableLUA"=dword:00000000` 然后重启) 彻底禁用，又会让你的 shell 和运行都默认以管理员身份进行，会导致很多问题，我更不能接受。因此还是别想着彻底禁用吧。
 
 ### 安装后（推荐步骤）
 
 - 磁盘设置：
   - 如果你的硬盘有分多个区，可以移动 _文档、图片、下载_ 等文件夹到 D 盘（新分区），以避免过多占用 C 盘空间。
   - 如果有移动硬盘，请在 _磁盘管理_ 中右键分区，手动指定驱动器号。固定驱动器号可以保证各个脚本运行正常。
-  - NTFS 优化([ref](https://t.me/kenvixmeow/8))：先导入注册表项，再用管理员终端执行命令。
+  - NTFS 优化 ([ref](https://t.me/kenvixmeow/8))：先导入注册表项，再用管理员终端执行命令。
     ```reg
     Windows Registry Editor Version 5.00
     [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
@@ -165,10 +165,10 @@ tag:
   - _控制面板 - 时钟和区域 - 区域_ 中，将短日期调整为 `yyyyMMdd`。([我的习惯](../index.md#使用指南))
   - 更改触摸板功能：三指左右划调节音量。实际上并不是很好用：我音量常年 20%，触摸板调节的话很容易拉得太大。
   - [shell alias](#shell-alias)
-  - 关闭鼠标的 “提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
+  - 关闭鼠标的“提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
   - 使用 [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) 修改右键菜单。
 - 做减法：
-  - 关闭搜索推荐&热门新闻：关闭 _设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点_ 。([ref](https://www.landiannews.com/archives/95045.html)，最新版 win11 可能没有此条设置)
+  - 关闭搜索推荐&热门新闻：关闭 _设置 - 隐私和安全性 - 搜索权限 - 更多设置 - 显示搜索要点_。([ref](https://www.landiannews.com/archives/95045.html)，最新版 win11 可能没有此条设置)
   - 卸载各种傻逼预装玩意。
     1. 卸载小组件：打开管理员终端，执行 `winget uninstall MicrosoftWindows.Client.WebExperience_cw5n1h2txyewy`，也可以使用[轻松设置](#小工具)。然后重启个资源管理器就行了。我是用了一段时间后才想到卸载小组件，鸡肋，不小心点到的话也烦。
     2. [卸载 Minecraft Education Edition](https://aka.ms/meeremove) ([src](https://educommunity.minecraft.net/hc/en-us/community/posts/4410545727764))
@@ -207,7 +207,7 @@ tag:
 
 :::: details 已失效设置项
 
-- ~~开启 Hyper-V 功能 ：_设置 - 应用 - 可选功能 - 更多 Windows 功能_ 打开 _Hyper-V_ 选项。~~ 开启 Hyper-V 原本是启用 WSA 的前置条件，但是 WSA 似了
+- ~~开启 Hyper-V 功能：_设置 - 应用 - 可选功能 - 更多 Windows 功能_ 打开 _Hyper-V_ 选项。~~ 开启 Hyper-V 原本是启用 WSA 的前置条件，但是 WSA 似了
   - 由于我找不到 Hyper-V 选项，因此采用网上教程：将以下代码保存为 `.bat` 并管理员运行即可。
     ```batch
     pushd "%~dp0"
@@ -218,14 +218,14 @@ tag:
     ```
 - WSA 已经似了，微软官宣停止支持了。
   - 即使是之前我也不喜欢 WSA：WSA 兼容性还有待进步；WSA 在开机时自启，会占用一定性能 / 内存；我是双系统用户，而 Android Emulator 在 linux 上的有更好的选择（[Waydroid](./linux/package.md#waydroid)）。
-  - _设置 - 时间和语言 - 国家和地区_ ，选择美国
+  - _设置 - 时间和语言 - 国家和地区_，选择美国
   - 打开 Microsoft Store（记得关代理），下载 Amazon Appstore。系统将自动下载安装 Windows Subsystem for Android™️。
   - 可选项：在 _设置 - 应用和功能_ 内找到 Windows Subsystem for Android™️，移动到 D 盘以节省空间。
   - 别忘了把 _国家和地区_ 改回去。
   - 打开安装好的 Windows Subsystem for Android™️，点击左侧 Developer，打开 Developer mode.（意味着在 `127.0.0.1:58526` 默认端口开启调试）
   - 在这里你可以使用两种方式安装软件：
     1. [WSA PacMan](https://github.com/alesimula/wsa_pacman)提供了便捷的图形化界面。
-    2. 使用[ADB](./mobile/adb.md)，输入 `adb connect 127.0.0.1:58526` 连接,`adb install ...`安装。
+    2. 使用[ADB](./mobile/adb.md)，输入 `adb connect 127.0.0.1:58526` 连接，`adb install ...`安装。
   - 关于网络受限问题：在虚拟机的 _设置 - Network&internet_ 中看到网络连接受限。win11 发出弹窗警告。
     解决方法（参考[来源](https://www.shenshanhongye.com/jc/2134.html)）：在 adb 成功连接后，输入：
     ```sh
@@ -299,7 +299,7 @@ Windows 的最大后门是微软自己。组织管理是一种以不正常方式
 正常来说个人电脑不应该出现组织管理。如果出现，请立刻删除：
 
 1. _设置 - 账户 - 登录工作或学校帐户_ 里自查，是否有登录账户。
-2. 终端管理员执行([ref](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c))：
+2. 终端管理员执行 ([ref](https://answers.microsoft.com/zh-hans/windows/forum/all/如何解决windows11/c8ca1777-f33a-487a-bb36-c8ac920fbd6c))：
    ```bat
    RD /S /Q "%WinDir%\System32\GroupPolicyUsers"
    RD /S /Q "%WinDir%\System32\GroupPolicy"
@@ -315,7 +315,7 @@ Windows 的最大后门是微软自己。组织管理是一种以不正常方式
    reg delete "HKLM\Software\WOW6432Node\Microsoft\Policies" /f
    reg delete "HKLM\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Policies" /f
    ```
-4. 注册表修改，不允许 Azuer AD 组织管理的询问弹窗([ref](https://www.reddit.com/r/Intune/comments/14cgova/how_to_disable_or_turn_off_the_allow_my/))。
+4. 注册表修改，不允许 Azuer AD 组织管理的询问弹窗 ([ref](https://www.reddit.com/r/Intune/comments/14cgova/how_to_disable_or_turn_off_the_allow_my/))。
    ```reg
    Windows Registry Editor Version 5.00
    [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin]

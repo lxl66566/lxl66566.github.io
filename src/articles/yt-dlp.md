@@ -55,7 +55,7 @@ yt-dlp https://www.bilibili.com/video/BV1wK41147Za
 yt-dlp https://www.bilibili.com/video/BV1wK41147Za -F
 ```
 
-然后在弹出的列表中，选择你需要的项目 ID ，并交给 `-f <ID>`：
+然后在弹出的列表中，选择你需要的项目 ID，并交给 `-f <ID>`：
 
 ```sh
 yt-dlp https://www.bilibili.com/video/BV1wK41147Za -f 30216

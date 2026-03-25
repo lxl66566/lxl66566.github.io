@@ -14,7 +14,7 @@ tag:
 
 我使用 [RAMDisk](../ramdisk.md)，拿到浏览器都会修改缓存位置。
 
-一般的 chromium 内核浏览器都能通过加 `--disk-cache-dir="Z:\123"` 启动参数更改缓存位置([ref](https://www.bilibili.com/read/cv12675669/))。不过改启动参数还要去编辑快捷方式，不如注册表：
+一般的 chromium 内核浏览器都能通过加 `--disk-cache-dir="Z:\123"` 启动参数更改缓存位置 ([ref](https://www.bilibili.com/read/cv12675669/))。不过改启动参数还要去编辑快捷方式，不如注册表：
 
 ```reg
 Windows Registry Editor Version 5.00

@@ -172,7 +172,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 
 1. 使用 timeshift 回退到 20+days 前，重启，发现错误：_Failed to mount /boot_。`journalctl -xb` 查看，找到：_unknown filesystem type 'vfat'_。
 2. 搜了一阵，`uname -a` 显示我内核是 6.5.5，而回退到的时间点正在用内核 6.5.3，猜测是内核版本冲突。
-3. 去 archlinuxcn 群里问，果真，然后都在说是 timeshift 的锅。（本群又一个 timeshift 受害者）去 luoxu 找历史记录，出现回答 “_timeshift 不兼容 genfstab，生成出來的子卷掛載帶 subvolid= 參數的情況_” ([ref](https://t.me/archlinuxcn_group/2927677))
+3. 去 archlinuxcn 群里问，果真，然后都在说是 timeshift 的锅。（本群又一个 timeshift 受害者）去 luoxu 找历史记录，出现回答“_timeshift 不兼容 genfstab，生成出來的子卷掛載帶 subvolid= 參數的情況_” ([ref](https://t.me/archlinuxcn_group/2927677))
 4. 照着 13 天前另一个人的一模一样的问题走了一遍老路。具体的，进入 archiso 安装盘：
 
    ```sh
@@ -231,7 +231,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 使用 `yay` 安装 `wine-stable` 时出现了一些问题。
 
 ```text
--> 无法安装以下软件包, 需要手动介入处理:
+-> 无法安装以下软件包，需要手动介入处理：
 lib32-http-parser - exit status 4
 lib32-libheif - exit status 8
 lib32-libgphoto2 - exit status 8
@@ -242,8 +242,8 @@ wine-stable - exit status 8
 lib32-libraqm - exit status 4
 lib32-rav1e - exit status 8
 # 详细报错：
-make: ./test_g: 权限不够make: *** [Makefile:76：test] 错误 127
-==> 错误： 在 check() 中发生一个错误。正在放弃...
+make: ./test_g: 权限不够 make: *** [Makefile:76：test] 错误 127
+==> 错误：在 check() 中发生一个错误。正在放弃...
 ```
 
 其中大多数是权限错误。但是我用 paru 安装就可以成功安装。
@@ -308,7 +308,7 @@ ps. 群友提出了 `yay --aurrpcurl 'https://aur.archlinux.org' --save`
 
 根据[教程](https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#安装-windows-字体)复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：
 
-> cp: 对 './yuminl.ttf' 调用 stat 失败: 没有那个文件或目录
+> cp: 对 './yuminl.ttf' 调用 stat 失败：没有那个文件或目录
 
 后来使用 `yay -S ttf-ms-win11-auto-zh_cn` 安装字体也失败，中间报 warning 一大堆。
 

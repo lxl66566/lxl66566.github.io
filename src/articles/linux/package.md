@@ -101,7 +101,7 @@ AUR 的包都是志愿维护，为开源社区做贡献是一件好事。
 - `makepkg -f` 本地测试（`-f` 是覆盖下载）。
 - `updpkgsums` 可以自动更新校验和。
 - `namcap PKGBUILD` 检查有没有语法错误。一般会报一个 `$CARCH` 的 warning，不用管。
-- 从 Asuka 先輩那里偷来的一键更新+测试：
+- 从 Asuka 先輩那里偷来的一键更新 + 测试：
   ```sh
   alias pack='shfmt -w PKGBUILD && updpkgsums && makepkg --printsrcinfo > .SRCINFO && makepkg -C -sf && namcap *.zst && git clean -df'
   # 注意，由于 git clean -df 的存在，此命令只能用来更新
@@ -157,7 +157,7 @@ sudo systemd-nspawn -D container  # 进入容器
 
 [^6]: `yazi` 甚至能在 console 下查看图片。
 
-[^8]: `ncdu` 在 btrfs 下不准([ref](https://wiki.archlinuxcn.org/wiki/Btrfs#显示已使用的/空闲空间))。可以考虑用 [btdu](https://github.com/CyberShadow/btdu)，这是专门为 btrfs 设计的 du 工具。
+[^8]: `ncdu` 在 btrfs 下不准 ([ref](https://wiki.archlinuxcn.org/wiki/Btrfs#显示已使用的/空闲空间))。可以考虑用 [btdu](https://github.com/CyberShadow/btdu)，这是专门为 btrfs 设计的 du 工具。
 
 [^9]: `tldr` 有很多实现，这里推荐 Rust 的实现 [tealdeer](https://github.com/tealdeer-rs/tealdeer)。
 

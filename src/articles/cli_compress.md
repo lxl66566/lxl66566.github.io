@@ -12,7 +12,7 @@ tag:
 
 ## bz
 
-我在 windows 上使用的压缩软件为[Bandizip](../farraginous/recommend_packages.md#bandizip)，命令行指令为`bz`，详见[官网-命令行参数](https://cn.bandisoft.com/bandizip/help/parameter/)。
+我在 windows 上使用的压缩软件为[Bandizip](../farraginous/recommend_packages.md#bandizip)，命令行指令为`bz`，详见[官网 - 命令行参数](https://cn.bandisoft.com/bandizip/help/parameter/)。
 
 我使用脚本备份我的浏览器历史记录，并使用 bandizip 命令行进行 7z 加密压缩后上传到 Github。代码如下（隐去关键部分）：
 

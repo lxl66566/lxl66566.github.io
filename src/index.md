@@ -55,7 +55,7 @@ category:
 <!-- prettier-ignore -->
   |ref|src|log|
   | :-: | :-: | :-: |
-  |引用(reference)|出处，来源(source)|日志，记录|
+  |引用 (reference)|出处，来源 (source)|日志，记录|
 
 :::
 

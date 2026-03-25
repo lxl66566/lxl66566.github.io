@@ -12,7 +12,7 @@ tag:
 <!-- prettier-ignore -->
 |手段|大小|图片|使用方法|
 | :-: | :-: | :-: | :-: |
-|一个木函（国内应用商店）|7M|![一个木函](/images/articles/Android_ISA/yigemuhan.jpg)|设备应用-查看设备详细信息|
+|一个木函（国内应用商店）|7M|![一个木函](/images/articles/Android_ISA/yigemuhan.jpg)|设备应用 - 查看设备详细信息|
 |CPU X（谷歌商店）|10M|![CPU X](/images/articles/Android_ISA/cpux.jpg)|中央处理器|
 |[ADB](./adb.md)（需要电脑）|-|![ADB](/images/articles/Android_ISA/adb.png)|执行`adb shell getprop ro.product.cpu.abi`|
 
@@ -32,7 +32,7 @@ td img {
   height: auto; /* 保持宽高比 */
   object-fit: contain; /* 保持图片比例 */
 
-  /* 设置图片最小尺寸为原始尺寸的50% */
+  /* 设置图片最小尺寸为原始尺寸的 50% */
   /* 注意：这里需要知道原始尺寸或使用其他方式定义"50%" */
   min-width: 50%; /* 或者使用固定像素值如 min-width: 150px; */
   min-height: auto; /* 保持比例 */

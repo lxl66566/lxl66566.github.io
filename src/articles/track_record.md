@@ -25,9 +25,9 @@ tag:
 |软件名|大小（安装后,MB）|显示方向?|无需翻墙?|其他缺陷|
 | :-: | :-: | :-: | :-: | :-: |
 |GPX Viewer|53.43|✔|✖||
-|Gaia GPS|205|✔|✔|卫星地图&OpenStreetMap需付费|
+|Gaia GPS|205|✔|✔|卫星地图 & OpenStreetMap 需付费|
 |小步点|211|✔|✔||
-|Keep|<text style="color:red;">895</text>|✖|✔|GPS信号弱|
+|Keep|<text style="color:red;">895</text>|✖|✔|GPS 信号弱|
 |Wikiloc|55.34|✔|✖||
 |Guru Maps|119|✔|✔|部分地名&街道名为英文|
 

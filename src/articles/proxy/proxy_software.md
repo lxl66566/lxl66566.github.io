@@ -100,7 +100,7 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 
 V2rayN 是 V2ray 的 windows 前端，支持自定义协议，也可以更换内核。
 
-相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点+规则，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用 clash 配置文件。
+相比于 clash，v2ray 主战场在自建节点的方向。由于 clash 订阅本质上是一组节点 + 规则，单个特定协议的节点无法直接导入 clash，因此使用 v2ray <span class="heimu" title="你知道的太多了">能手搓配置文件的当我没说</span>。但是 v2ray 也能使用 clash 配置文件。
 
 1. 前往 PC 客户端项目地址，下载 `v2rayN-With-Core.zip`。（我以前是自己配内核的，但是后来发现问题太多了，还有跨版本兼容性，真不如 with core）
 2. 复制节点地址，按 `Ctrl+V` 导入，按 `Enter` 激活。
