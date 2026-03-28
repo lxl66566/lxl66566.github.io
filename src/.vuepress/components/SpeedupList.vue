@@ -247,6 +247,13 @@ const data: SpeedupItemType[] = [
     save_format: "v",
     speedupable: true,
   },
+  {
+    names: ["缘之空"],
+    valid_name: "EntisGLS",
+    engine: "EntisGLS",
+    save_format: "noa",
+    speedupable: true,
+  },
 ];
 </script>
 
