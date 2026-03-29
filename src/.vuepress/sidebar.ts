@@ -84,6 +84,7 @@ export default sidebar({
         "frp.md",
         "android_player.md",
         "money.md",
+        "http_client.md",
       ],
     },
     {

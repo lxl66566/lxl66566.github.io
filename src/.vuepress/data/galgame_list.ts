@@ -31,12 +31,13 @@ const original_list: GalItemInputType[] = [
   {
     name: "Christmas Tina ‐泡沫冬景‐",
     valid_name: "泡沫冬景",
+    use_time: "7h31min",
     tag: {
       all_ages: true,
     },
     duration: {
       start: "2026-03-15",
-      end: "2026-03-20",
+      end: "2026-03-29",
     },
     score: {
       story: 7.3,

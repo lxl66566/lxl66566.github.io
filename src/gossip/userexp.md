@@ -15,26 +15,11 @@ tag:
 
 ## http client
 
-在尝试了 postman，apifox，bruno 后，我最终还是用 bruno 做后端调试的 http client 了。但是我一直都很想喷这群 B。
-
-- http client 这么简单的东西，为什么各家都做成这个鸟样[^apifoxcve1]。。。postman 不充钱难用得要死，apifox 卡手而且代码质量很差，bruno bug 一堆。。
-
-[^apifoxcve1]: [Apifox 遭遇投毒](https://ourl.co/112328?t)
-
-### bruno
-
-bruno 的免费版能做的事情比较多，不像其他两个几乎都是不可用状态。但是 bruno bug 还是挺多的。
-
-- bruno 3.1.4，自动粘贴 curl 后 url 框的内容不会重新渲染，需要切一下 tab 才能渲染。
-- bruno 的 headers 列表，会自己排序，勾选或者取消勾选都会（延迟一段时间）触发它的排序。问题是这样非常影响手感，我输入一半给我打断了算啥啊。
-- bruno 粘贴 curl 只能粘 bash 格式的，cmd 格式不支持，识别是错的。。我觉得这是非常基本的能力啊。
-- 常态内存占用 450MB，electron 也没这么离谱啊。
-- 性能太差了，一个 response 才 7MB json，我从 raw 切到 json 渲染能卡死我几秒钟。。。。
-- Windows 下代理优先级有问题，不遵守系统代理排除列表，也不遵守 NO_PROXY。实在是太邪恶了。
+详见 [HTTP Client](../articles/http_client.md)。
 
 ## [jujutsu](https://github.com/jj-vcs/jj)
 
-详情请看 [jujutsu](../coding/jujutsu.md) 文章。
+详见 [jujutsu](../coding/jujutsu.md)。
 
 - 作为一个 [git exp user](../coding/Git.md)，并且拥有一批 git scripts，jujutsu 对我的开发效率的提升比较有限。
 - jujutsu 和我公司工作流的相性非常差。
