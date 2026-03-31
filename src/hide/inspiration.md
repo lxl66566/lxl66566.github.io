@@ -139,7 +139,7 @@ tag:
 - [ ] minix, mini nix lang
 - [ ] bash compitable modern shell
 - [ ] telegram index bot, no ads and reviewed by human
-- [ ] windows fast settings，[Windows11 轻松设置工具](../articles/windows_setting.md#小工具) 的增强版，添加我需要的功能。
+- [ ] windows fast settings，[Windows11 轻松设置工具](../articles/windows/settings.md#小工具) 的增强版，添加我需要的功能。
 - [ ] rewrite of easytier
   - [ ] Raft supported by [hiqlite](https://github.com/sebadob/hiqlite)
   - [ ] ability to bypass GFW

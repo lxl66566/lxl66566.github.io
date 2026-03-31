@@ -22,6 +22,10 @@ category:
 
 ## 2026
 
+### 20260331
+
+拆分原 _Windows 设置指南_ 页面到 [Windows](../articles/windows) 子目录，内含 _设置指南_ 与 _日常使用_ 两篇文章。
+
 ### 20260120
 
 - 搜索接入 algolia
@@ -502,7 +506,7 @@ console.log(proc);
 
 ### 20230510
 
-- 设置电脑 新增 [对 ArchWSL 的设置](../articles/windows_setting.md#对-archwsl-的设置)
+- 设置电脑 新增 _对 ArchWSL 的设置_
 
 ### 20230508
 
@@ -591,7 +595,7 @@ console.log(proc);
 
 ### 20230215
 
-- 新增[闲聊-xxx 有多难用#运营商有多傻逼](../gossip/fuckxxx.md#运营商有多傻逼)，[设置电脑 - edge 转 firefox](../articles/windows_setting.md#edge-转-firefox)，_学习笔记 - 食物制作_
+- 新增[闲聊-xxx 有多难用#运营商有多傻逼](../gossip/fuckxxx.md#运营商有多傻逼)，_设置电脑 - edge 转 firefox_，_学习笔记 - 食物制作_
 - 修复了一些跳转错误
 
 ### 20230210
@@ -762,7 +766,7 @@ console.log(proc);
 
 - 新增 _软件汇总 # Seal_
 - 新增[编程-工具-Github](../coding/github.md)页面
-- 维护隐藏页面：灵感 | 愿景，文章-对 win11 的设置（迁移至[电脑设置](../articles/windows_setting.md)）
+- 维护隐藏页面：灵感 | 愿景，文章-对 win11 的设置
 
 ### 20220903
 
@@ -892,7 +896,7 @@ console.log(proc);
 ### 20220706
 
 - 添加 自动注册 Vue 组件插件
-- 新增 [文章#BIOS 密码重置](../articles/windows_setting.md#bios密码重置)
+- 新增 _BIOS 密码重置_
 
 ### 20220703
 
@@ -946,7 +950,7 @@ console.log(proc);
 
 ### 20220521
 
-- 新增 [我的文章-Win10 设置开机自启动（现：设置开机自启动）](../articles/windows_setting.md#设置开机自启动)、[闲聊#日程区](../gossip/schedule.md)
+- 新增 _我的文章-Win10 设置开机自启动_、[闲聊#日程区](../gossip/schedule.md)
 
 ### 20220517
 

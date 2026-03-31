@@ -586,7 +586,7 @@ bugs:
 
 - AMD 著名的 bug 之一：弹一个黑框框 Updater，但是什么也不做。
 - AMD 著名的 bug 之二：在 msedge、vscode 等开启硬件渲染的软件上，会出现渲染卡半屏的情况，上半屏卡死不再渲染，下半屏正常。可能持续不到一秒，也可能持续数十秒。拖拽窗口改变大小，触发重新渲染后解除。
-  - [关闭 MPO](../articles/windows_setting.md#安装后推荐步骤) 后可以解决。
+  - [关闭 MPO](../articles/windows/settings.md#安装后推荐步骤) 后可以解决。
 - 使用 AMD 显卡游玩 cs2 时，会出现其他程序（如 anki）渲染进程卡死、快速切屏后 cs2 停止响应等问题。本质上是给 cs 开洞开出的问题。
 - AMD Ryzen Master 的问题：
   1. 千万不要用它超内存。详见 [装机](./pc_hardware.md#装机后-1)。

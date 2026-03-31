@@ -56,10 +56,10 @@ export default sidebar({
   "/articles/": [
     "linux/index.md",
     "mobile/index.md",
+    "windows/index.md",
     {
       text: "教程",
       children: [
-        "windows_setting.md",
         "proxy/index.md",
         "telegram.md",
         "markdown.md",

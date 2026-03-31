@@ -14,6 +14,13 @@ const links: ArticleCellBoxType[] = [
     ],
   },
   {
+    field: "Windows 相关",
+    links: [
+      { text: "windows 设置指南", url: "./windows/settings" },
+      { text: "windows 小知识与日常使用", url: "./windows/usage" },
+    ],
+  },
+  {
     field: "移动设备",
     links: [
       { text: "前言与评价", url: "./mobile/index" },
@@ -46,7 +53,6 @@ const links: ArticleCellBoxType[] = [
   {
     field: "教程",
     links: [
-      { text: "设置 windows", url: "windows_setting" },
       { text: "TG（telegram）教程", url: "telegram" },
       { text: "Markdown 教程", url: "markdown" },
       { text: "压缩二进制文件与 dll", url: "minimize_exe" },

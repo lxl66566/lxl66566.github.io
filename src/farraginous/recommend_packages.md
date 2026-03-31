@@ -688,7 +688,7 @@ ps. 已经寄了。
 
 ### [Winaero Tweaker](https://winaero.com/winaero-tweaker/#download)
 
-windows 设置小工具，集成了一些高级功能；但是被 [Windows 11 轻松设置](../articles/windows_setting.md#小工具) 替代了。
+windows 设置小工具，集成了一些高级功能；但是被 [Windows 11 轻松设置](../articles/windows/usage.md#小工具) 替代了。
 
 ### [yt-dlp](../articles/yt-dlp.md)
 

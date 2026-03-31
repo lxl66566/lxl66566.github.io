@@ -92,6 +92,9 @@ jj bookmark set -r @ xxx
 # 丢弃当前的更改，回到上一个 commit 的状态。相当于 `git reset --hard HEAD`。
 jj abandon
 
+# 移除 commit 节点
+jj abandon xxx1 xxx2 xxx3
+
 # 将 @ 的更改合并到上一个 commit，类似我的 snipets 里的 gfixup
 jj squash
 ```
@@ -120,6 +123,9 @@ jj rebase -r @ -o xxx
 
 # 如果不带上 -r @，则是向上追溯到分支起点，把整条 commit 链给 rebase 到目的节点上。
 jj rebase -o xxx
+
+# 基本等价于 git cherry-pick，将一个 commit 拉到 @ 之前
+jj duplicate -r xxx --insert-before @
 ```
 
 ## 其他技巧

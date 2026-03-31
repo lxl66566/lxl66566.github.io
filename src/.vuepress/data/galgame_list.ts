@@ -409,6 +409,7 @@ const original_list: GalItemInputType[] = [
       start: "2025-09-12",
     },
     score: {
+      program: -1,
       thrill: 3,
     },
   },

@@ -361,7 +361,7 @@ export default ({
 
 > listen EACCES: permission denied 0.0.0.0:8080
 
-解法：[解决 windows(hyper-v) 端口随机占用](../articles/windows_setting.md#端口随机占用)
+解法：[解决 windows(hyper-v) 端口随机占用](../articles/windows/settings.md#端口随机占用)
 
 ## 试图迁移至 vitepress
 
