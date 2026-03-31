@@ -61,7 +61,7 @@ category:
 
 [^4]: [Sin 的博客](https://bear-sin.github.io/)
 
-[^5]: [Lry722 的博客](Lry722.github.io)
+[^5]: [Lry722 的博客](https://Lry722.github.io)
 
 ## 工具选择
 

@@ -24,7 +24,8 @@ category:
 
 ### 20260331
 
-拆分原 _Windows 设置指南_ 页面到 [Windows](../articles/windows) 子目录，内含 _设置指南_ 与 _日常使用_ 两篇文章。
+- 拆分原 _Windows 设置指南_ 页面到 [Windows](../articles/windows) 子目录，内含 _设置指南_ 与 _日常使用_ 两篇文章。
+- 部分死链修复
 
 ### 20260120
 
