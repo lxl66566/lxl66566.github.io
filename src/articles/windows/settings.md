@@ -155,6 +155,8 @@ tag:
     "156965516"=dword:00000001
     "735209102"=dword:00000001
     ```
+- RAM 设置：
+  - 开启内存压缩：管理员终端 `Enable-MMAgent -mc`
 - 网络设置：
   - [开启 bbr 拥塞算法](https://stackoverflow.com/questions/60159716/how-to-enable-tcp-bbr-on-windows)，也可以使用[轻松设置](#小工具)：bbr 是新一代拥塞控制算法，在弱网环境下表现异常优异。
   - 调高 ipv4 优先级：`netsh interface ipv6 set prefixpolicy ::ffff:0:0/96 60 4` ([src](https://github.com/oven-sh/bun/issues/4938#issuecomment-3043953860))
@@ -177,6 +179,7 @@ tag:
   - 禁用一些服务。
     - Windows Font Cache Service
     - Background Intelligent Transfer Service，这个是后台偷偷下载东西的元凶。我相信没有人希望让 Windows 自动在后台偷偷做一些事情，吃带宽和 CPU，而对用户没有任何报告和提示。
+    - SysMain：描述很唬人，_维护和提高一段时间內的系统性能_，其实就是预加载而已。在内存不足的时候这个玩意还会让你 PC 卡顿（大量 swap）。
   - 禁用一些设备。
     - 如果是 intel CPU，禁用 [_Intel(R) Management Engine Interface #1_](https://www.reddit.com/r/hardware/comments/1hfp2gs)，P 用没有，还有额外风险。为什么我需要一个如此高权限的玩意来让我的电脑增加不确定性？
   - 禁用搜索框联网搜索功能 ([src](https://www.landiannews.com/archives/107320.html))

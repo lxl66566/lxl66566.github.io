@@ -342,11 +342,14 @@ trait 可谓是 rust 核心，不是 OOP 胜似 OOP(?)，rust 学习的一大难
 
 ### dyn object
 
-一个特殊的对象是 dyn object，表示实现了某个 trait 的任意对象。开销比特定类型对象大一点，但是非常好用。
+一个特殊的对象是 Trait Object，表示实现了某个 trait 的任意对象，代码里使用 `dyn object` 表示。
 
-一般要求 Sized，所以要么 `dyn object + Sized`，要么 `Box<dyn object>`。如果在 struct 内用，经常还需要加生命周期。虽然要求这么多，但是真正用到才发现好用。泛型写一大串不如直接 dyn 秒了。
+很多地方代码要求 Sized，所以一般需要用 Box 包起来：`Box<dyn object>`。如果在 struct 内用，经常还需要加生命周期。看起来要求比较多，不过如果泛型长了，用 dyn object 写起来还是更简单点。
 
-- dyn 在写异步时非常好用。异步经常需要跟 `Pin<Box<T>>` 打交道，而我们不能直接从 `Pin<Box<T>>` 拿到 T，假设变换过程中随便加一个中间结构（例如 `std::iter::Map`），然后就会变成 `Map<Pin<Box<T>>>`，如果又要 awaitable 又会转成 `Pin<Box<Map<Pin<Box<T>>>>>`，套来套去泛型根本没法处理。
+- dyn object 是有成本的，开销比特定类型对象大一点（dynamic dispatch + type erasure + heap allocation）。要不要用它取决于你的程序的性能要求。
+- dyn 在写异步时非常好用。异步经常需要跟 `Pin<Box<T>>` 打交道，而我们不能直接从 `Pin<Box<T>>` 拿到 T，假设变换过程中随便加一个中间结构（举个例子，`std::iter::Map`），然后就会变成 `Map<Pin<Box<T>>>`，如果又要 awaitable 又会转成 `Pin<Box<Map<Pin<Box<T>>>>>`，套来套去泛型就很难处理了。
+
+dyn object 其实也是 Rust DST (dynamically-sized types) 特性的一部分，有兴趣的可以读读 [DSTs Are Just Polymorphically Compiled Generics](https://faultlore.com/blah/dsts-are-polymorphic-generics/)。
 
 ### 宏
 
@@ -847,7 +850,7 @@ _他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
 
 我需要 rust 侧的轻量嵌入式向量数据库解决方案，要求是 10,000,000 个向量内查最近邻。（每个向量还有附带额外信息）
 
-简单看了一下。我不希望将所有数据先加载到内存，最好的方案应该是 [DiskANN](https://www.oschina.net/news/304024)，不过这玩意目前还没有 rust 的实现。
+简单看了一下。我不希望将所有数据先加载到内存，最好的方案应该是 [DiskANN](https://github.com/microsoft/diskann)，~~不过这玩意目前还没有 rust 的实现。~~ 微软给重写到 Rust 了，牛逼。
 
 - [sqlite-vec](https://github.com/asg017/sqlite-vec)：sqlite 跨平台扩展，但是现在并不支持最近邻算法。
 

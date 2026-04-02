@@ -213,6 +213,7 @@ tag:
   - 这个自动更新不需要你启动 VS 才触发，正常使用 Windows 就会被自动下载更新。
   - 更新的时候不会有任何提示，只能开任务管理器才能看到。
   - 默认是**边更新边安装**的，也就是会狂吃你的 CPU。要不是我发现 CPU 突然高占用我都不知道有这个自动更新机制。
+  - 关闭：参考[文章](https://learn.microsoft.com/en-us/answers/questions/1193782/visual-studio-backgrounddownload-exe-using-all-the)
 
 ### JetBrains 系列
 

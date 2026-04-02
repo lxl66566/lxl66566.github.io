@@ -142,6 +142,12 @@ git symbolic-ref HEAD "refs/heads/my_branch"
 
 然后再执行工作流即可。jujutsu 不依赖 Git 的 symbolic HEAD，因此这个做法不会对 jj 产生影响。
 
+### 一键清理已经合入 master 的分支
+
+```sh
+jj bookmark list -r "::master ~ master" | cut -d: -f1 | xargs jj bookmark delete
+```
+
 ## 总结
 
 jujutsu 不适合什么样的用户：

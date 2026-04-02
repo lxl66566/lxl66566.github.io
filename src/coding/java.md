@@ -110,6 +110,8 @@ scoop install liberica8-full-jdk
 
 对于 gradle 版本，我建议使用自己安装的而不是项目里的。否则启动 gradle daemon 时可能遇到很多奇奇怪怪的问题，例如[这个](https://github.com/redhat-developer/vscode-java/issues/1671)。gradle 的不同版本可以在 scoop 里安装，至于配置的话可以放到项目下 `.vscode/settings.json`，方便每个不同项目使用不同版本。
 
+关于项目调优：最重要的配置项就是 `java.jdt.ls.vmargs` 和 `java.server.launchMode` 两项。`java.jdt.ls.vmargs` 决定 java 插件的运行条件，对于个人开发需要经常切分支的场景，需要调高 GC 频率和其他优化，避免顶爆内存。`java.server.launchMode` 决定 java 插件的工作模式，修改后可以保证尽快分析与渲染。
+
 这是我的项目配置：
 
 ```json
@@ -160,7 +162,8 @@ scoop install liberica8-full-jdk
   ],
   "java.configuration.workspaceCacheLimit": 30,
   "java.debug.settings.hotCodeReplace": "auto",
-  "java.debug.settings.vmArgs": "-Xms2g -Xmx4g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -XX:GCTimeRatio=9 -XX:AdaptiveSizePolicyWeight=90 -XX:+AlwaysPreTouch -XX:+UseCompressedOops -XX:+DisableExplicitGC",
+  "java.debug.settings.vmArgs": "-Xms2g -Xmx4g -XX:+UseG1GC -XX:+UseStringDeduplication -XX:MinHeapFreeRatio=15 -XX:MaxHeapFreeRatio=30 -XX:+ExplicitGCInvokesConcurrent -XX:G1PeriodicGCInterval=10000", // JDK 17 的推荐参数（使用 G1 GC）
+  "java.eclipse.downloadSources": false, // 禁止自动下载 Maven/Gradle 依赖的源码
   "java.implementationCodeLens": "methods",
   "java.import.exclusions": [
     "**/node_modules/**",
@@ -176,7 +179,8 @@ scoop install liberica8-full-jdk
   "java.jdt.ls.appcds.enabled": "on", // JVM 类数据共享存档
   "java.jdt.ls.java.home": "C:/Users/xxx/scoop/apps/openjdk/current",
   "java.jdt.ls.javac.enabled": "off", // 使用 ecj，更快，并且允许错误
-  "java.jdt.ls.vmargs": "-Xms2g -Xmx12g -XX:+UseParallelGC -XX:ParallelGCThreads=4 -XX:GCTimeRatio=9 -XX:AdaptiveSizePolicyWeight=90 -XX:+AlwaysPreTouch -XX:+UseCompressedOops -XX:+DisableExplicitGC", // jvm 调优（需要根据 PC 特性和项目体量进行调整）
+  "java.jdt.ls.vmargs": "-Xms2g -Xmx8g -XX:+UseZGC -XX:+ZGenerational -XX:+UseStringDeduplication -XX:ZUncommitDelay=30", // JDK 25 的推荐参数（使用 ZGC）
+  "java.maven.downloadDependencies": false,
   "java.project.importOnFirstTimeStartup": "interactive",
   "java.project.resourceFilters": ["node_modules", "\\.git", "target", "build", ".vscode", ".idea"],
   "java.quickfix.showAt": "problem",
