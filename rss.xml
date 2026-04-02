@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 02 Apr 2026 01:37:34 GMT</pubDate>
-    <lastBuildDate>Thu, 02 Apr 2026 01:37:34 GMT</lastBuildDate>
+    <pubDate>Thu, 02 Apr 2026 15:03:26 GMT</pubDate>
+    <lastBuildDate>Thu, 02 Apr 2026 15:03:26 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -307,7 +307,7 @@
 </ul>
 <h3>yaak</h3>
 <p>bruno 实在是问题太多，我开始尝试其他的 http client。</p>
-<p>yaak 的 star 也挺多的，下载下来试试。Rust + tauri，看着还行。默认的 theme 比较有特色。</p>
+<p>yaak 的 star 也挺多的，下载下来试试。Rust + tauri，看着还行。默认的 theme 比较有特色，资源占用也比较小。</p>
 <ul>
 <li>最大的问题是商业化，只有 personal use 免费，工作用是违反协议的。你也不知道它有没有遥测，有没有上传你的数据。</li>
 <li>默认是开启自动检查和自动更新的，我不喜欢。
