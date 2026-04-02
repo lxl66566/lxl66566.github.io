@@ -12,9 +12,16 @@ const original_list: GalItemInputType[] = [
   {
     name: "天选庶民的真命之选",
     other_names: ["天選庶民的真命之選", "Select Oblige"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "14h42min",
     duration: {
       start: "2026-03-21",
+      end: "2026-04-01",
+    },
+    score: {
+      story: 4.2,
+      visual: 9.6,
+      program: 5.9,
+      thrill: 0,
     },
   },
   {
@@ -40,9 +47,9 @@ const original_list: GalItemInputType[] = [
       end: "2026-03-29",
     },
     score: {
-      story: 7.3,
+      story: 7.9,
       visual: 7.6,
-      program: 2,
+      program: 3,
       thrill: 8,
     },
   },
@@ -104,7 +111,7 @@ const original_list: GalItemInputType[] = [
       story: 0.5,
       visual: 7.6,
       program: 8,
-      thrill: 0,
+      thrill: -1,
     },
   },
   {
@@ -540,7 +547,7 @@ const original_list: GalItemInputType[] = [
       story: 5.5,
       visual: 6.5,
       program: 6.6,
-      thrill: 0,
+      thrill: -1,
     },
   },
   {
@@ -622,7 +629,7 @@ const original_list: GalItemInputType[] = [
       story: 13,
       visual: 7.8,
       program: 2,
-      thrill: 8.2,
+      thrill: 8.6,
     },
   },
   {

@@ -1080,5 +1080,10 @@ export default [
   { id: "603362", aScore: 6.7, bScore: 7.8, info: "#催眠 #同学 #拉珠", order: 2, bak: "https://telegra.ph/太ったおばさん-催眠アプリケーション実験記録2-中国翻訳-10-14-2" },
   { id: "631009", aScore: 9.2, bScore: 6.4, info: "#蔚蓝档案 #自慰 #纯爱", bak: "https://telegra.ph/20NT-ふけまち-プあな--ニートになったプラナと蕩けあう夜---Archive-Sketch-LUN-ブルーアーカイブ-中国翻訳-無修正-DL版-03-15-4" },
   { id: "636384", aScore: 8.2, bScore: 9, info: "#loli #管家 #天然 偏愛執事と人形姫", bak: "https://telegra.ph/ねぎとろどん-葱戸ロン-偏愛執事と人形姫-中国翻訳-DL版-03-11" },
+  { id: "603915", aScore: 7.8, bScore: 8.5, info: "#魔法师 #哥布林 敗北願望", bak: "https://telegra.ph/しまそふと-縦縞キタ-敗北願望-中国翻訳-DL版-10-17-2" },
+  { id: "603516", aScore: 6, bScore: 8.2, info: "#自慰 #教室 #男厕 #同学", bak: "https://telegra.ph/天気雨-ユキヲソラ-クラスの委員長が露出癖のある変態さんだった中国翻訳-10-15-4" },
+  { id: "640232", aScore: 9.3, bScore: 7, info: "#兽耳 #纯爱 #死库水 #比基尼 もふもふる", order: 9, bak: "https://telegra.ph/C107-のどまる日和-柚夏-もふもふる-9-中国翻訳-無修正-03-28" },
+  { id: "547443", aScore: 7.9, bScore: 8, info: "#兽耳 #明日方舟 #loli #发情", bak: "https://telegra.ph/餃子屋さん-ゆなち-ススーロが秘書になった-アークナイツ-中国翻訳-DL版-無修正-03-25" },
+  { id: "639322", aScore: 6.5, bScore: 9.1, info: "#loli #医院 #情趣玩具", order: 2, bak: "https://telegra.ph/こみな屋-但野こみな-病院えっちマッサージ2-中国翻訳-03-24" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

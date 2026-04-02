@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-icon: windows
+icon: brands fa-windows
 category:
   - 导航
 tag:
