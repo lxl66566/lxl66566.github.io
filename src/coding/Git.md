@@ -484,12 +484,6 @@ git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 2. 清理。
    ::: tabs
 
-   @tab bfg-repo-cleaner（推荐）
-
-   [bfg-repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 是我某天刷 nix store 时看到的，尝试了一下，也非常不错。
-
-   主要用法就 `--delete-files`, `--delete-folders` 两个。这两个是 match 名字而不是路径。
-
    @tab filter-repo（推荐）
 
    [git-filter-repo](https://github.com/newren/git-filter-repo)
@@ -498,11 +492,20 @@ git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
 
    windows 下推荐使用 scoop 安装，安装过程详见仓库说明。（疑难解答[^4]：_运行 `git filter-repo` 出现 `name 'git' is not defined` 报错_）
 
-   关于使用方法，~~没人能看懂官方文档~~，建议直接找[教程](https://nyakku.moe/posts/2020/06/12/use-git-filter-repo-clean-git-history.html)。
+   关于使用方法，2022 年那时候的文档挺烂的，看完根本不知道要咋搞。2026 去看了下发现改善许多了，可以直接看文档。
 
    ```sh:no-line-numbers
    git filter-repo --invert-paths -f --path "<path/of/file>"
+   git filter-repo --invert-paths -f --path-glob '*/*.enc'
    ```
+
+   @tab bfg-repo-cleaner
+
+   [bfg-repo-cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 是我某天刷 nix store 时看到的，尝试了一下，也能用。
+
+   主要用法就 `--delete-files`, `--delete-folders` 两个。这两个是 match 名字而不是路径。
+
+   bfg-repo-cleaner 是 Java 写的，也有一些 bug，我使用的时候经常能碰上抛出的 Exception。不太喜欢。
 
    @tab filter-branch
 
