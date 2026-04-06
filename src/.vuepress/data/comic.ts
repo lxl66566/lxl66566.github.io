@@ -1085,5 +1085,9 @@ export default [
   { id: "640232", aScore: 9.3, bScore: 7, info: "#兽耳 #纯爱 #死库水 #比基尼 もふもふる", order: 9, bak: "https://telegra.ph/C107-のどまる日和-柚夏-もふもふる-9-中国翻訳-無修正-03-28" },
   { id: "547443", aScore: 7.9, bScore: 8, info: "#兽耳 #明日方舟 #loli #发情", bak: "https://telegra.ph/餃子屋さん-ゆなち-ススーロが秘書になった-アークナイツ-中国翻訳-DL版-無修正-03-25" },
   { id: "639322", aScore: 6.5, bScore: 9.1, info: "#loli #医院 #情趣玩具", order: 2, bak: "https://telegra.ph/こみな屋-但野こみな-病院えっちマッサージ2-中国翻訳-03-24" },
+  { id: "534066", aScore: 6, bScore: 6.7, info: "#游戏 #催眠 #拉珠 #项圈 #雪月楓花、ねこ大福 コスプレ彼女", bak: "https://telegra.ph/C104-雪月楓花ねこ大福-本知そらねこのしろ-コスプレ彼女催眠済はかわいい-中国翻訳-DL版-04-05" },
+  { id: "641498", aScore: 7.4, bScore: 7.3, info: "#学姐 #体操服 #保健室", bak: "https://telegra.ph/C105-朽木ノ洞-エンマコオロギ-きれいで優しくてチョロくてH過ぎるフェイトさん-魔法少女リリカルなのは-中国翻訳-04-02-2" },
+  { id: "641448", aScore: 7.3, bScore: 7.6, info: "#纯爱 花ちゃんと玲くん", bak: "https://telegra.ph/ワンワンサワー-和野うみ--花ちゃんと玲くん-DL版-中国翻訳-04-02-4" },
+  { id: "641439", aScore: 8, bScore: 7.2, info: "#蔚蓝档案 #兽耳 #夜袭", bak: "https://telegra.ph/LAB-CHICKEN-やこぶ-先生性行為実習しましょう-ブルーアーカイブ-中国翻訳-DL版-04-02" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

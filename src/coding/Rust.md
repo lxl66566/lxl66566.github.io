@@ -280,10 +280,14 @@ where
 
 关于 tokio 可以看[入门秘籍 13 章](https://rust-book.junmajinlong.com/ch100/01_understand_tokio_runtime.html)。
 
-- 立即执行 Future 需要用 `spawn`。否则只会在 await 时执行。
+- 立即开始异步执行 Future 需要用 `spawn`。否则只会在 await 时执行（并且是阻塞当前函数的）。
 - 计算密集型任务请用 `spawn_blocking`，性能提升巨大。spawn_blocking 的默认最大线程数也是很高的（[约 512](https://github.com/tokio-rs/tokio/discussions/3858#discussioncomment-869878)），必要时也可以调小 blocking 池的大小，将任务更合理地分配给 physical thread。
   - 也可以换用 [rayon](#rayon)。
-- `tokio::fs` 比 `std::fs` 要慢很多（10 倍以上），如果你没有高并发 IO 需求请尽可能用 std::fs。
+- `tokio::fs` 比 `std::fs` 要慢很多（10 倍以上），如果你没有高并发 IO 需求请尽可能用 `std::fs`。
+- tokio 不支持为 task 设置优先级，也就是如果你提交 task 到 runtime，你的任务啥时候会被调度/窃取是说不准的。如果你的任务是延迟敏感，必须优先调度，有几种方案：
+  1. rt 隔离，不同 rt 分配固定资源。但是这样就丧失了弹性资源的优势。
+  2. 使用 worker 从两个 task pool （一般用 mpsc 实现）拉数据并处理，人为对 task pool 进行优先级划分，并在 worker 消耗数据时实现高优先级 task pool 的逻辑。
+  3. 让低优先级自己调用 `tokio::task::yield_now`。不太现实，依赖这个行为实在是有点蠢。
 
 #### 简单批处理
 

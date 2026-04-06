@@ -338,6 +338,26 @@ git gc --prune=0
   - 使用 clone 无法直接拉取 submodule，需要添加 `--recursive`。
   - 对于 pull 或者已经拉取的仓库，单独拉取 submodule，需要 `git submodule update --init --recursive` ([ref](https://stackoverflow.com/questions/1030169/))
 
+### git hooks
+
+在执行某些 git 命令前/后触发的脚本，通常用于自动化。遵循 shebang 的脚本均可，一般 bash 会比较多。
+
+你可以直接将脚本写在 local 的 `.git/hooks` 对应文件里，也可以用 `core.hooksPath` 指定一个全局的 hooks 路径，。
+
+注意：如果指定了全局 hook 路径，则 local 的 hook 脚本将不生效！一个解决方法是在全局 hook 里调用 local hook 脚本：
+
+```bash
+#!/bin/sh
+# 执行当前仓库局部的 pre-commit
+LOCAL_HOOK=".git/hooks/pre-commit"
+
+if [ -f "$LOCAL_HOOK" ] && [ -x "$LOCAL_HOOK" ]; then
+    "$LOCAL_HOOK" "$@"
+    exit $?
+fi
+exit 0
+```
+
 ## 深入
 
 > 这里是原创内容，是我个人摸索/结合其他文章得出的、对提交树的理解。可能有误，需要自行辨认。

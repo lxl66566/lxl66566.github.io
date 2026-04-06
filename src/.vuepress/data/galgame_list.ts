@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "諦観のイヴ・ベセル",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-04-06",
+    },
+  },
+  {
     name: "缘之空",
     other_names: ["ヨスガノソラ"],
     playing_status: PlayingStatus.PLAYING,
@@ -148,9 +155,16 @@ const original_list: GalItemInputType[] = [
   {
     name: "箱庭ロジック",
     other_names: ["箱庭的逻辑", "箱庭逻辑", "The logic of the miniature garden"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "16h15min",
     duration: {
       start: "2026-01-24",
+      end: "2026-04-04",
+    },
+    score: {
+      story: 5.6,
+      visual: 6.9,
+      program: 0.1,
+      thrill: 0,
     },
   },
   {
@@ -2274,7 +2288,7 @@ const original_list: GalItemInputType[] = [
     use_time: ">36h27min",
     score: {
       story: 11,
-      visual: 7,
+      visual: 7.3,
       program: 3,
       thrill: 9,
     },
