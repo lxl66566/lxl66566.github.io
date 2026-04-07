@@ -587,6 +587,7 @@ class account implements Serializable {}    // 继承接口
 最常用的 json 序列化库，Spring 默认。
 
 - 自定义序列化函数：使用 `@JsonValue` 自定义序列化过程，使用 `@JsonCreator` 自定义反序列化过程。对于 enum，这个是比较常用的。
+  - `@JsonCreator` 允许使用 mode 限制反序列化的来源，例如 `@JsonCreator(mode = JsonCreator.Mode.PROPERTIES)` 限定只能从 json 对象字符串里反序列化，`@JsonCreator(mode = JsonCreator.Mode.DELEGATING)` 就是非 json 对象字符串（普通字符串）里反序列化。
 - 忽略
   - 忽略单个字段：`@JsonIgnore` 修饰字段。
   - 忽略多个字段：`@JsonIgnoreProperties({"xxx", "yyy"})` 修饰类。
@@ -602,6 +603,7 @@ class account implements Serializable {}    // 继承接口
   })
   public interface ObjectItem {}
   ```
+- (Java 8+) Jackson 可以配合 lombok，把 `@JsonCreator` 注入到 lombok 生成的函数上，例如 `@AllArgsConstructor(onConstructor_ = {@JsonCreator})`
 
 一些坑：
 

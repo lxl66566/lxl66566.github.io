@@ -133,6 +133,8 @@ config nu --default | save ($nu.default-config-dir | path join 'config.nu')
 source ($nu.default-config-dir | path join 'custom.nu')
 ```
 
+在 windows 上使用，还可以用 [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) 给目录添加一个右键菜单，更加方便地打开 nushell。
+
 ### 类型
 
 nushell 的[类型系统](https://github.com/nushell/nushell/issues/11108)可以说是尚未起步的。没有联合类型算什么 type system。

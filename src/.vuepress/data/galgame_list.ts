@@ -423,15 +423,17 @@ const original_list: GalItemInputType[] = [
     },
   },
   {
-    name: "AIR",
-    playing_status: PlayingStatus.PLAYING,
-    use_time: "-2min",
+    name: "Air",
+    use_time: "14h44min",
     duration: {
       start: "2025-09-12",
+      end: "2026-04-07",
     },
     score: {
-      program: -1,
-      thrill: 3,
+      story: 6.4,
+      visual: 0.6,
+      program: -1.5,
+      thrill: 4.3,
     },
   },
   {
@@ -1134,7 +1136,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-06-10",
     },
     score: {
-      story: 6.4,
+      story: 6.7,
       visual: 8,
       program: 7.9,
       thrill: 3.5,

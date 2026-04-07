@@ -100,7 +100,8 @@ jj squash
 ```
 
 - jj 的很多指令都是有单字母 alias 的，敲指令的时候方便点。也可以在 config 里定义 alias。
-- jj [没有类似 `git pull` 的指令](https://docs.jj-vcs.dev/latest/github/#updating-the-repository)，请使用 fetch。
+- jj [没有类似 `git pull` 的指令](https://docs.jj-vcs.dev/latest/github/#updating-the-repository)，请使用 `jj git fetch --all-remotes`。
+  - 这条指令非常强，可以自动将 local bookmark 移动到远程 bookmark 的位置，这是 git 做不到的。
 
 ## 进阶
 
@@ -147,6 +148,14 @@ git symbolic-ref HEAD "refs/heads/my_branch"
 ```sh
 jj bookmark list -r "::master ~ master" | cut -d: -f1 | xargs jj bookmark delete
 ```
+
+### 清理空提交
+
+```sh
+jj abandon -r "mine() & empty() & mutable()"
+```
+
+虽然我们可以用这个命令清理空提交，但其实很多空提交是 immutable 的。
 
 ## 总结
 
