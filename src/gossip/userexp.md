@@ -26,6 +26,8 @@ tag:
   - 比如我们提交前都要求用工具扫 commit 但是扫不到 jujutsu 的 `@`；比如我们不用本地创建分支而是在远端创建分支后拉下来开发；比如我们解决 conflicts 也用的另一套工作流。
 - 我有一些私有 git hooks，jujutsu 没法执行。
 - 要功能没功能，要生态没生态。
+- jujutsu 虽然说兼容 git，但是跟 git 混用也会有一些问题。
+  - 最大的问题是 jj 会一直创建 empty commit，这些 empty commit 会随着你的 git merge 被一起合到 jj 的 worktree 里。虽然在 git 里这些都是不可见的，但是在 jj log 里就是纯纯的精神污染，让人不会再想回到 jj 里了。
 
 <dated date="20260325"/>
 

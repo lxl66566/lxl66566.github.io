@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "Rewrite",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-04-09",
+    },
+  },
+  {
     name: "諦観のイヴ・ベセル",
     playing_status: PlayingStatus.PLAYING,
     duration: {

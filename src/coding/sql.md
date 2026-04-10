@@ -32,6 +32,8 @@ tag:
    - 非关系型，纯内存的选 Redis
    - 分布式 Cassandra
 
+一般来说，开发小玩具都建议 SQLite，这玩意的测试覆盖率达到了 100%，而且性能比 MySQL/PostgreSQL 都要高。
+
 [^1]: MariaDB 是 MySQL 的分支，完全开源，而 MySQL 是商业产品，部分开源。([ref](https://aws.amazon.com/cn/compare/the-difference-between-mariadb-vs-mysql/))
 
 [^2]: ~~MySQL 已死：~~ _开源界一般用 mariadb，IT 公司一般用 percona-server。_ ——[依云](https://blog.lilydjwg.me)
@@ -129,7 +131,9 @@ LIMIT 10 OFFSET 5;
 
 SQLite 没有驱动，没有压缩，没有加密，非常简单的数据库，可以被分发。作为开发者，也可以装一个 CLI 驱动，方便调试。
 
-- Windows: use [scoop](../farraginous/recommend_packages.md#scoop). `scoop install sqlite`
+SQLite 的性能其实比 MySQL 和 PostgreSQL 都要高，但不是开箱即用的，需要一些[调优](https://www.reddit.com/r/SQL/comments/1gaed4d/database_performance_postgresql_vs_mysql_vs/)。
+
+SQLite 只允许单个 writer，所以不适用于多个程序同时写入的场景。
 
 ### 注意事项
 
@@ -162,7 +166,7 @@ conn.close()
 
 ### rust
 
-随便找个 [gpt](../farraginous/recommend_websites.md#ai-工具) 写吧。我目前看到有 rusqlite 和 sqlx 两套库可以选择。
+随便找个 AI 写吧。[我是 rusqlite 黑](./Rust.md#拉黑)，所以建议使用 sqlx。
 
 ## duckdb
 
@@ -381,3 +385,4 @@ sudo systemctl start mysql
 4. [分布式数据库的一致性问题与共识算法](https://thiscute.world/posts/consistency-and-consensus-algorithm/)
 5. [MySQL 已死，PostgreSQL 当立](https://pigsty.cc/zh/blog/db/mysql-is-dead/)
 6. [PRQL (Pipelined Relational Query Language) is a modern language for transforming data](https://prql-lang.org/)
+7. [Modern SQLite: Features You Didn’t Know It Had](https://slicker.me/sqlite/features.htm)
