@@ -1089,5 +1089,9 @@ export default [
   { id: "641498", aScore: 7.4, bScore: 7.3, info: "#学姐 #体操服 #保健室", bak: "https://telegra.ph/C105-朽木ノ洞-エンマコオロギ-きれいで優しくてチョロくてH過ぎるフェイトさん-魔法少女リリカルなのは-中国翻訳-04-02-2" },
   { id: "641448", aScore: 7.3, bScore: 7.6, info: "#纯爱 花ちゃんと玲くん", bak: "https://telegra.ph/ワンワンサワー-和野うみ--花ちゃんと玲くん-DL版-中国翻訳-04-02-4" },
   { id: "641439", aScore: 8, bScore: 7.2, info: "#蔚蓝档案 #兽耳 #夜袭", bak: "https://telegra.ph/LAB-CHICKEN-やこぶ-先生性行為実習しましょう-ブルーアーカイブ-中国翻訳-DL版-04-02" },
+  { id: "604115", aScore: 8, bScore: 9, info: "#异世界 #转生 #淫纹 #调教 #5P #巨乳", bak: "https://telegra.ph/diletta-へたれん-ゴブリンからはじめる世界征服125-中国翻訳-無修正-DL版-10-18-2" },
+  { id: "641790", aScore: 8.9, bScore: 9, info: "#露出 #战败 #群交", bak: "https://telegra.ph/caburibboncaburi-変身ヒロインもののモブが怪人に操られてえっちなことしちゃう話--変身ヒロインもののモブがえっちな目に合う話-中国翻訳-DL版-04-04" },
+  { id: "604290", aScore: 8.3, bScore: 9.2, info: "#明日方舟 #纯爱 #合集 Angel Marriage", bak: "https://telegra.ph/AVALON飴崎ばにら稲沢みんとAngel-Marriageアークナイツ中國翻訳DL版-10-18-2" },
+  { id: "604246", aScore: 6.7, bScore: 7.8, order: 1, info: "#辣妹 #女主动 #宅男", bak: "https://telegra.ph/岸和田BASE-きしわだべーす-一軍女子の赤点回避に協力したら1-中国翻訳-DL版-10-18-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

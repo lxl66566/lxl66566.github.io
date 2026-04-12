@@ -41,12 +41,16 @@ const original_list: GalItemInputType[] = [
   {
     name: "サルテ",
     other_names: ["Salute"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "3h49min",
     duration: {
       start: "2026-03-21",
+      end: "2026-04-11",
     },
     score: {
-      visual: 2.3,
+      story: 7.7,
+      visual: 2.8,
+      program: 8,
+      thrill: 0,
     },
   },
   {
