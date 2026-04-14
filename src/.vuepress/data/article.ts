@@ -82,7 +82,7 @@ const links: ArticleCellBoxType[] = [
   },
   {
     field: "生命科学",
-    links: [{ text: "寄生虫认知与预防", url: "worm" }, { text: "饮酒", url: "life" }],
+    links: [{ text: "寄生虫认知与预防", url: "worm" }, { text: "生活健康指南", url: "life" }],
   },
   {
     field: "外部文章分享",
