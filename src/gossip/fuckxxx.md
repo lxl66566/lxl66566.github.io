@@ -37,6 +37,7 @@ tag:
 - `dbg!` 和 `log.debug!` 的设计[有问题](https://t.me/withabsolutex/1615)：行为不一致。
 - Trait 是一个很好的设计，但是 Rust 的 Trait 太弱了：
   - 缺乏集合运算：只能取交集。不能取反：`impl<T: !Sized> for xxx<T>`；不能取并；不能取补，导致一大堆 conflict，例如同时 impl 同一个 trait for `FnOnce() -> T + Send` 和 `Future<Output = T> + Send` 结果是 conflict，目前无解。
+    - 早期有过 [RFC](https://github.com/rust-lang/rfcs/pull/1148)，但是没采纳。
   - auto trait unstable.
   - Trait alias 还是 unstable; trait aliases cannot be auto，这二者不能共存。
   - `impl Trait` is not allowed in `fn` pointer return types，`impl Trait` is only allowed in arguments and return types of functions and methods.
@@ -236,6 +237,12 @@ tag:
 - 无法安装 python <= 3.7 的版本，不合格。
 - [Configuration files （20251221）](https://docs.astral.sh/uv/concepts/configuration-files/) 里的陈述：_uv will also discover uv.toml configuration files in the user- and system-level configuration directories, e.g., user-level configuration in ~/.config/uv/uv.toml, and system-level configuration at /etc/uv/uv.toml on macOS and Linux._ 这个陈述**完全不合格**，听着像是 _~/.config/uv/uv.toml_ 是全平台通用的，而 _/etc/uv/uv.toml_ 是 macOS and Linux only 的。实际上 uv 在 Windows 上是不会去读 _~/.config/uv/uv.toml_ 的。uv 文档误导了 windows 用户以后，把实际的 path 放到了[另一个没人会点进去的页面里](https://docs.astral.sh/uv/reference/storage/#configuration-directories)，并且这个页面也比较抽象，还需要用户再点到另一个页面才能看到真实的位置。
 - uv lockfile `revision = 3` 会将系统的 user config 也记录进 lockfile；然后如果 CI 里用了 `uv sync --locked` 就会爆炸。
+
+### bun
+
+我在 2023 年就尝试过 bun 了。当时刚宣布支持 windows，结果疯狂 crash，就是一坨。现在倒是稳定了许多，不过还是有 crash 报告。
+
+- 我的构建比你快了 3s，哇 blazing fast！然后 [resolve 卡了 600s](https://github.com/oven-sh/bun/issues/4938)
 
 ## 操作系统系列
 

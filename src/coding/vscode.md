@@ -72,6 +72,7 @@ tag:
 ### 插件管理
 
 - 分析：当插件数量多了以后，每次启动都耗时很久，甚至卡在某个插件的启动上。此时需要 `Ctrl + Shift + p` 打开操作面板，进入 _Developer: Show Running Extensions_，可以看到插件状态与启动用时。
+  - 进入 _Developer: Open Process Explorer_ 可以查看每个插件的内存占用。
 - 禁用内置插件：虽然[无法在 config 里禁用内置插件](https://github.com/microsoft/vscode/issues/40239)，但是我们可以在扩展里搜索 `@Builtin`，然后禁用那些用不到的，可以减小 vscode 内存占用。([ref](https://github.com/microsoft/vscode/issues/58600#issuecomment-420992831))
 
 ### AI 代码补全
