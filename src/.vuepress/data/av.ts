@@ -71,7 +71,7 @@ export default [
   { id: "pppe-019", aScore: 7.7, bScore: 7.6, u: true },
   { id: "stars-334", aScore: 9.2, bScore: 6 },
   { id: "pppd-552", aScore: 8.2, bScore: 7 },
-  { id: "waaa-017", aScore: 9, bScore: 6 },
+  { id: "waaa-017", aScore: 8.7, bScore: 6.3, u: true, name: "鬼畜義父の姉妹喰い 洗脳いいなり調教で中出し性玩具として扱われる日々… つぼみ 久留木玲", say: "跟单人 show 差不多，有个跟群演一样" },
   { id: "SSIS-348", aScore: 8.8, bScore: 6.2, u: true, name: "「ウブでめちゃくちゃ押しに弱い」彼女の妹に欲情し、こっそりハメ続けた最低な僕。 小倉七海" },
   { id: "ipx-213", aScore: 7.6, bScore: 7.4, u: true },
   { id: "SW-132", aScore: 7.8, bScore: 7 },
@@ -541,4 +541,5 @@ export default [
   { id: "IBW-763", aScore: 6, bScore: 5, name: "父親に犯●れ続ける娘のplay相姦映像 あやめ陽菜", say: "她真的一直在笑啊，我也绷不住笑了。浴室有几段不连贯的地方，我估计都是笑得太开心被导播剪掉了（" },
   { id: "SONE-604", aScore: 7.1, bScore: 4, u: true, name: "親戚おじさんの家に預けられた10代の私は気持ち悪いと思いながらカラダを舐められハメられていました。 白上咲花", say: "没有一点剧情" },
   { id: "GNS-137", aScore: 7.7, bScore: 7.5, name: "某名門女子大学 校内トイレ変態隠し撮り魔の性交記録2", say: "参差不齐" },
+  { id: "GNS-098", aScore: 5.7, bScore: 6.3, name: "【悪徳！違法訪問修理業者の実態】主婦たちに身体で払えと恫喝セックスしていた一部始終の映像流出", say: "emmmmm，男优内心：这也太多了点吧" },
 ] as AvItemType[];

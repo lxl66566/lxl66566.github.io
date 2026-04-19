@@ -118,12 +118,12 @@ tag:
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
 - [ ] rust TUI easy_download
-- [x] GalgameManager
+- [x] [GalgameManager](https://github.com/lxl66566/GalgameManager)
   - [ ] 随机启动
-  - [ ] 插件与启动链
+  - [x] 插件与启动链
   - [x] 计时
   - [x] 备份存档
-  - [ ] 优秀的用户交互（自动查找图片）
+  - [x] 优秀的用户交互（自动查找图片）
 - [ ] AI 相册整理。核心：[tag 论](../gossip/va_view.md#tag-论)；不使用树状组织而是使用 tag 型数据库组织，快速查找。
   - [ ] 移动端：做到比现有产品更好
   - [ ] 桌面端：场景：一大堆杂乱的照片放在一大堆杂乱的文件夹里。
@@ -150,6 +150,7 @@ tag:
 - [ ] Windows SSD trace. Trace IO event with operation thread.
   - [ ] ETW trace.
   - [ ] web-based graph display.
+- [ ] flake-follows ([src](https://t.me/absolutexsward/142))
 
 <!-- - 转码，复制，参考我的 fish function
 - 平台无关的 alias

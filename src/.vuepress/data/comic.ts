@@ -1093,5 +1093,11 @@ export default [
   { id: "641790", aScore: 8.9, bScore: 9, info: "#露出 #战败 #群交", bak: "https://telegra.ph/caburibboncaburi-変身ヒロインもののモブが怪人に操られてえっちなことしちゃう話--変身ヒロインもののモブがえっちな目に合う話-中国翻訳-DL版-04-04" },
   { id: "604290", aScore: 8.3, bScore: 9.2, info: "#明日方舟 #纯爱 #合集 Angel Marriage", bak: "https://telegra.ph/AVALON飴崎ばにら稲沢みんとAngel-Marriageアークナイツ中國翻訳DL版-10-18-2" },
   { id: "604246", aScore: 6.7, bScore: 7.8, order: 1, info: "#辣妹 #女主动 #宅男", bak: "https://telegra.ph/岸和田BASE-きしわだべーす-一軍女子の赤点回避に協力したら1-中国翻訳-DL版-10-18-2" },
+  { id: "623379", aScore: 8.2, bScore: 8.9, info: "#coser #露出 #兽耳 #纯爱" },
+  { id: "607580", aScore: 7.9, bScore: 8.1, info: "#兄妹 #loli #纯爱 #校服", bak: "https://telegra.ph/パンダが一匹-コミズミコ-瞬夏-私と兄の夏休み-中国翻訳-DL版-04-12" },
+  { id: "604415", aScore: 8.1, bScore: 6.8, info: "#蔚蓝档案 #兽耳 #媚药 #简笔", bak: "https://telegra.ph/C106-チョコミントポテトチップス-みんぽていと-狐は熱に浮かされる-ブルーアーカイブ-中国翻訳-10-19-3" },
+  { id: "604449", aScore: 7.4, bScore: 6.1, info: "#东方 #女仆 #巨乳 #露出", bak: "https://telegra.ph/sweet-afternoon苺野まろお空ちゃんとはだかのおじさん東方project-中国翻訳-DL版-10-19-3" },
+  { id: "603709", aScore: 9.2, bScore: 7.8, info: "#偶像大师 #多女主 #合集 夜間遊泳", bak: "https://telegra.ph/C106-Inst-Interstellar-夜間遊泳-学園アイドルマスター-中国翻訳-10-20-3" },
+  { id: "643934", aScore: 9.3, bScore: 7.2, info: "#赛马娘 #百合", bak: "https://telegra.ph/泥トラック-ネコ僧-偶像的喜欢不会错过ウマ娘プリティーダービー-中国語-04-14-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
