@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 19 Apr 2026 02:38:38 GMT</pubDate>
-    <lastBuildDate>Sun, 19 Apr 2026 02:38:38 GMT</lastBuildDate>
+    <pubDate>Mon, 20 Apr 2026 02:38:36 GMT</pubDate>
+    <lastBuildDate>Mon, 20 Apr 2026 02:38:36 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -190,7 +190,7 @@
       <link>https://absx.pages.dev/articles/external.html</link>
       <guid>https://absx.pages.dev/articles/external.html</guid>
       <source url="https://absx.pages.dev/rss.xml">文章分享</source>
-      <description>文章分享 这里是外部文章分享。请尽量使用科学上网，若链接失效，请默哀。 强推 能很大程度上改变自身观念的文章。 上海交通大学生存手册 一般 能一定程度上拓宽知识面，获取知识，或者当故事看的文章。 波士顿漫游指南 日本移居指南 | bak 为什么我觉得北京没有大家说的那么繁华？ | bak 优等生的无声危机：为好成绩付出的代价 | bak 【404 文库...</description>
+      <description>文章分享 这里是外部文章分享。请尽量使用科学上网，若链接失效，请默哀。 强推 能很大程度上改变自身观念的文章。 上海交通大学生存手册 自己教 一般 能一定程度上拓宽知识面，获取知识，或者当故事看的文章。 波士顿漫游指南 日本移居指南 | bak 为什么我觉得北京没有大家说的那么繁华？ | bak 优等生的无声危机：为好成绩付出的代价 | bak 【40...</description>
       <category>推荐</category>
       <pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
@@ -199,6 +199,7 @@
 <p>能很大程度上改变自身观念的文章。</p>
 <ol>
 <li><a href="https://survivesjtu.gitbook.io/survivesjtumanual/" target="_blank" rel="noopener noreferrer">上海交通大学生存手册</a></li>
+<li><a href="https://roriri.one/the-self-church" target="_blank" rel="noopener noreferrer">自己教</a></li>
 </ol>
 <h2>一般</h2>
 <p>能一定程度上拓宽知识面，获取知识，或者当故事看的文章。</p>
