@@ -1099,5 +1099,6 @@ export default [
   { id: "604449", aScore: 7.4, bScore: 6.1, info: "#东方 #女仆 #巨乳 #露出", bak: "https://telegra.ph/sweet-afternoon苺野まろお空ちゃんとはだかのおじさん東方project-中国翻訳-DL版-10-19-3" },
   { id: "603709", aScore: 9.2, bScore: 7.8, info: "#偶像大师 #多女主 #合集 夜間遊泳", bak: "https://telegra.ph/C106-Inst-Interstellar-夜間遊泳-学園アイドルマスター-中国翻訳-10-20-3" },
   { id: "643934", aScore: 9.3, bScore: 7.2, info: "#赛马娘 #百合", bak: "https://telegra.ph/泥トラック-ネコ僧-偶像的喜欢不会错过ウマ娘プリティーダービー-中国語-04-14-2" },
+  { id: "644649", aScore: 9, bScore: 8, order: 2, info: "#兄妹 #无言 #连续高潮 お兄ちゃんの半分は欲望でできています", bak: "https://telegra.ph/リリックボックス-れーさー-お兄ちゃんの半分は欲望でできています-第2話-中国翻訳-DL版-04-18-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

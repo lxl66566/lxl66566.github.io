@@ -16,6 +16,7 @@ tag:
 能很大程度上改变自身观念的文章。
 
 1. [上海交通大学生存手册](https://survivesjtu.gitbook.io/survivesjtumanual/)
+2. [自己教](https://roriri.one/the-self-church)
 
 ## 一般
 
