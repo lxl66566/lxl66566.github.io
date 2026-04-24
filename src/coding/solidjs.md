@@ -45,6 +45,10 @@ const Button: Component<ButtonProps> = (props) => {
 
 - 每一次调用 `setState` 都会触发重新渲染。如果需要像 React 那样在值变化时才渲染，需要配合 `createMemo`。
 
+### [createMemo](https://docs.solidjs.com/reference/basic-reactivity/create-memo)
+
+跟其他语言一样，createMemo 是一个 input -> output 的缓存。组件监听 createMemo 的 output，如果 input 变了但是 output 不变，就不会触发重新渲染，节省性能。
+
 ### [createStore](https://docs.solidjs.com/reference/store-utilities/create-store)
 
 创建一个深层响应式对象，实现细粒度响应性（修改深层属性只会影响依赖了这个属性的节点）。一般用来存一些生命周期比较长、贯穿多个页面的东西，例如全局配置。
@@ -82,6 +86,24 @@ SolidJS 也提供了一些内置组件，让写 Vue 的人倍感熟悉。
 - `<Show when={...} fallback={...}></Show>`，v-if + v-else
 - `<For each={...}></For>`，v-for
 - `<ErrorBoundary fallback={(err, reset) => <div></div>}></ErrorBoundary>`，内层如果抛出错误，可以用这个组件显示另一些错误信息。
+
+## functions
+
+SolidJS 还提供一些实用函数。
+
+### splitProps & mergeProps
+
+ts/js 辅助函数。splitProps 从对象里分离出某些字段，mergeProps 用于合并对象字段（从左到右合并，右侧优先）。
+
+splitProps / mergeProps 存在的意义在于保持子对象的响应性，在[开头](#props-与响应性)说过了。
+
+### reconcile
+
+性能拯救者，相当魔法的一个函数。
+
+reconcile 解决了细粒度的响应式更新问题，把整个对象销毁 + 创建变成每个子对象与深层对象的比对与替换。基本上只要你用了 `createStore`，然后有任何后端响应/前端重新构造对象，需要整体替换这个 store 的场景，直接套一个 reconcile 即可。
+
+reconcile 如果用于数组细粒度更新，则最好指定 key，否则可能退化回原先的全量构造。
 
 ## 配套设施
 

@@ -13,6 +13,26 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [quien](https://github.com/retlehs/quien/)
+
+一个 go 写的、TUI 的域名工具。
+
+下载下来试用一下，随便查了一个内网解析的域名，结果：
+
+- `quien xxx.xxx` 卡死在 TUI 首页，无法切换 tab。合着查询线程阻塞了 UI 线程是吧。
+- `quien dns xxx.xxx` 返回空记录，真的是全空的。。还不如我 nsloopup，至少能查到非权威应答。
+  ```
+  {
+    "A": null,
+    "AAAA": null,
+    "CNAME": null,
+    ...
+  ```
+
+立刻卸载。
+
+<dated date="20260424"/>
+
 ## http client
 
 详见 [HTTP Client](../articles/http_client.md)。

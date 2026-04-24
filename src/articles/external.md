@@ -40,3 +40,4 @@ tag:
 16. [两岸猿声啼不住，轻舟已过万重山——我的四分之一人生](https://thiscute.world/posts/a-quarter-of-the-way-through-life/)
 17. [The difference between China and US AQI?](https://www.iqair.com/us/newsroom/what-is-the-difference-between-china-us-aqi) | [空气质量指数美国标准和中国标准差别](https://www.cnblogs.com/tiandi/p/6158576.html)
 18. [一场有关数字世界自决权的战争](https://0x7f.cc/digital-autonomy-war/)
+19. [Friends Don't Let Friends Use Ollama](https://sleepingrobots.com/dreams/stop-using-ollama/)，批判 Ollama

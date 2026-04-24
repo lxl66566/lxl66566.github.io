@@ -112,9 +112,14 @@ nushell 可以说是彻底的反叛者，它自己搓了一套偏函数式的 nu
 
 自己搓语言的基本上都有很高的学习成本，nushell 也不例外。nu 语言有对 rust 的借鉴和[反叛](https://t.me/withabsolutex/1698)。
 
-不过 nushell 最劝退我的还是 [rust 的一个 bug](https://t.me/withabsolutex/1700)，导致其无法在我的 RAMDisk 上工作。
+不过 nushell 最劝退我的还是 [rust 的一个 bug](https://t.me/withabsolutex/1700)，~~导致其无法在我的 RAMDisk 上工作。~~ 后来更新后支持了。
 
-其他缺点详见 [fuckxxx](../gossip/fuckxxx.md#nushell)。总之我已经不再使用它了。
+其他缺点详见 [fuckxxx](../gossip/fuckxxx.md#nushell)。
+
+### 主要特性
+
+- 一切皆管道，管道左边的输出自然作为右边的 stdin 输入。
+- 内置了许多 coreutils 指令，跨平台一致且好看
 
 ### shell 配置
 
@@ -135,7 +140,7 @@ source ($nu.default-config-dir | path join 'custom.nu')
 
 在 windows 上使用，还可以用 [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) 给目录添加一个右键菜单，更加方便地打开 nushell。
 
-### 类型
+### 类型系统
 
 nushell 的[类型系统](https://github.com/nushell/nushell/issues/11108)可以说是尚未起步的。没有联合类型算什么 type system。
 
@@ -144,6 +149,8 @@ nushell 的[类型系统](https://github.com/nushell/nushell/issues/11108)可以
 ## powershell
 
 一般的 windows 都自带 powershell 1.0。但是有的命令在老版本 powershell 上会执行失败，可以用 `scoop install pwsh` 安装最新版本的 powershell。
+
+powershell 非常邪恶，详情请看 [fuckxxx#powershell](../gossip/fuckxxx.md#powershell)
 
 - Windows 上难免会遇上带空格的可执行文件路径，但是直接使用双引号包裹并不能执行该命令。需要在双引号前添加 `&` 才可以将字符串视为可执行文件执行。
 

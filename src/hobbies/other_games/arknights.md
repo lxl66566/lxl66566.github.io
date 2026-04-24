@@ -11,6 +11,9 @@ tag:
 # 明日方舟
 
 - 纪念一下曾经沉迷明日方舟的我。（20201031-20220615）
+- 后来 MAA 火了以后我又开始玩啦！所以下列内容已经过时了。
+
+---
 
 ![我的明日方舟账号](/images/hobbies/other_games/arknights/arknights.png)
 

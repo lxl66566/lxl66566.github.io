@@ -320,6 +320,17 @@ git rm --cached filename.xxx -r  # --cached 指仅删除仓库内文件，不删
 git checkout [commit_hash] -- <path/to/file>  # 从某个 HEAD 指针恢复文件，注意空格
 ```
 
+### diff and patch
+
+除了同步仓库，我们也可以将变更导出到文件（patch），并且在另一个设备上恢复这个变更。git diff 的输出就包含了变更，将其重定向到文件就是一个 patch。
+
+```sh
+git diff --staged > 1.patch      # 仅暂存区的变更
+git diff > 1.patch               # 非暂存区的变更
+git diff HEAD > 1.patch          # 工作区的变更（= 暂存区 + 非暂存区）
+git apply 1.patch                # 应用 patch
+```
+
 ### 彻底删除提交
 
 在[深入](#深入)中有提到，一旦 commit 过后，此次修改就不会消失。那么如果我无论如何就是想要让此次修改消失呢？([src](https://www.cnblogs.com/my_life/articles/16141241.html))

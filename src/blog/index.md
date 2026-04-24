@@ -7,6 +7,10 @@ category:
 
 # 关于博客
 
+20220424 晚，睡前突然萌生了写自己的 blog 的想法。当然，这只是个想法而已。但 20220503 晚 我突然间<span class="heimu" title="你知道的太多了">感受到了命运的召唤</span>获得了上手写文的动力。于是，绝对值\_x 的博客于 20220504 正式上线。/鼓掌！
+
+20230712 重新配置博客并更换主题为 [VuePress Theme Hope](https://theme-hope.vuejs.press/zh/)。
+
 ## 基本信息
 
 - 使用 [VuePress2](https://v2.vuepress.vuejs.org/zh/) 搭建，[VuePress Theme Hope](https://theme-hope.vuejs.press/zh/) 主题，`pure: true`

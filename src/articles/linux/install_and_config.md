@@ -114,11 +114,6 @@ umount /mnt/windows
      --bind ~/.cache/ccache ~/.cache/ccache --chdir /build/$PWD /usr/bin/makepkg'
      ```
    - `pack`: 偷来的[一键打包更新](./package.md#打包)
-   - `gpt`: 简单跑一个本地模型 ([src](https://github.com/jmorganca/ollama))
-     ```sh
-     ollama serve >/dev/null &
-     ollama run llama2
-     ```
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
    - 我使用 `zram-generator` <Badge text="AUR" />。
      - [conf example](https://github.com/systemd/zram-generator/blob/main/zram-generator.conf.example)
@@ -139,6 +134,7 @@ umount /mnt/windows
      ```toml
      [archlinuxcn]
      Server = https://repo.archlinuxcn.org/$arch
+     # 也可以添加其他镜像，例如 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
      ```
    - 基础与添加 keyring：
      ```sh

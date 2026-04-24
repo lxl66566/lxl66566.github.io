@@ -26,9 +26,7 @@ tag:
 
 ## shell alias
 
-[ref](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)。被 linux 驯化了，再回到没有 alias 的 windows 是真不习惯。而且微软的 shell 确实傻逼[^fuckpwsh]。
-
-[^fuckpwsh]: [powershell 笑话一则](https://t.me/withabsolutex/2473)。
+[ref](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)。被 linux 驯化了，再回到没有 alias 的 windows 是真不习惯。而且微软的 [powershell 确实傻逼](../../gossip/fuckxxx.md#powershell)。
 
 ::: tabs
 
@@ -36,7 +34,7 @@ tag:
 
 最简单也是更好的方法是[换其他 shell](../../coding/shell.md)。我在 windows 上比较喜欢用 nushell。如果你不想折腾这种新东西，可以用 git bash。
 
-@tab cmd
+@tab cmd alias
 
 新建一个脚本放在某个地方，然后设成打开 shell 自动执行，对 cmd 来说相当于 `.bashrc`。
 

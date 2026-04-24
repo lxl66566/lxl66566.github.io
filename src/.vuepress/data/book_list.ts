@@ -52,12 +52,10 @@ const original_list: BookItemInputType[] = [
   {
     name: "冲出重围365",
     h_level: HLevel.NONE,
-    reading_status: {
-      kind: "在读",
-    },
     nth_time: 2,
     duration: {
       start: "2025-06-14",
+      end: "2026-04-23",
     },
   },
   {

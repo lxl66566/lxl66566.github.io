@@ -782,6 +782,13 @@ bugs:
 - 类型系统垃圾
 - bug：偶发，可以正常输入内容，但无法退格，无法使用 tab。
 
+### powershell
+
+powershell 简直是邪恶的化身。
+
+- powershell 里用 git 克隆到 `~` 开始的目录会创建 `~` 目录而不是从家目录新建一个文件夹，随后 `rm ~ -r` 会删你全家 ([ref](https://t.me/withabsolutex/2473))
+- powershell 处理 NO_PROXY `::1` 时有问题，导致 vcpkg 安装失败 ([issue](https://github.com/microsoft/vcpkg/issues/48122))
+
 ## Rime 有多难用
 
 - Rime 标榜自由，但绝非想象中的那么自由。随便看几个 issue 就能发现某些开发者固执己见，拒绝讨论。不过还好也有愿意合并修复的开发者。

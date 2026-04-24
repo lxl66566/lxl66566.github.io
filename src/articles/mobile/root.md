@@ -10,11 +10,7 @@ tag:
 
 # 刷机
 
-刷机圈一直是一个排外的圈子。当 Android 的封闭碰上了刷机圈的封闭……
-
-刷机圈一直岌岌可危。君不见 LSPosed Archived...
-
-> Android 的封闭社区内充满了悖论：如果你需要 `dd ... of=/sdcard/boot.img`，你需要 root；因为需要 root 所以需要 `boot.img`。。
+我一直不喜欢刷机圈子，这个圈子看不到任何未来。root 封锁化、模块闭源化、教程排外化、资源无效化（Archived）……今日已经毫不奇怪。
 
 ## 工具
 

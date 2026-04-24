@@ -80,7 +80,12 @@ tag:
 
 **轻量级**跨平台开源视频播放器，高度自定义化。手写配置对新人可能不友好，但我就喜欢这种高度自定义的感觉。
 
-这里是[我的 mpv 配置文件](https://github.com/lxl66566/backup/tree/main/config/mpv)。
+- 安装：
+  - 不建议使用 `scoop install mpv`，这样安装的[来源是 sourceforge.net](https://github.com/ScoopInstaller/Extras/blob/94fec8a35dfc4d32fcaacfe06c60e3f97de09ea1/bucket/mpv.json)，我对这个网站没有好感。
+  - 可以使用我的 [bpm](https://github.com/lxl66566/bpm) 进行安装。装完记得手动执行一下 `mpv-register.bat`。
+- 配置：这里是[我的 mpv 配置文件](https://github.com/lxl66566/backup/tree/main/config/mpv)，可供参考。
+  - 如果用 scoop 安装 mpv，则配置默认放在 `portable_config` 文件夹里。scoop 版的 mpv 会把 cache 和 watch_later 也都放在你的配置文件夹，污染配置，我反正不是很喜欢。
+  - 如果手动安装，则默认配置位置在 `~/.config/mpv`（Windows 用户注意，Windows 上 mpv 的默认位置在 `%APPDATA%/mpv`！我很讨厌这个默认值，因此我设置 `MPV_HOME` 为 ~/.config/mpv）。
 
 - 首先建议装一个 [uosc](https://github.com/tomasklaen/uosc)，除了好看之外还提供了许多其他功能。
 - ~~随机播放：[autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)读取当前文件夹所有文件为 playlist，然后[手动 shuffle](https://www.reddit.com/r/mpv/comments/blrpwa)~~ uosc 内部有自带
