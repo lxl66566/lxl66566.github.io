@@ -2,6 +2,15 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "纸上魔法使",
+    other_names: ["紙の上の魔法使い", "纸魔"],
+    playing_status: PlayingStatus.PLAYING,
+    nth_time: 2,
+    duration: {
+      start: "2026-04-25",
+    },
+  },
+  {
     name: "Rewrite",
     playing_status: PlayingStatus.PLAYING,
     duration: {
@@ -2297,7 +2306,7 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "纸上魔法使",
-    other_names: ["紙の上の魔法使い"],
+    other_names: ["紙の上の魔法使い", "纸魔"],
     use_time: ">36h27min",
     score: {
       story: 11,

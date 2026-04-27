@@ -1103,5 +1103,8 @@ export default [
   { id: "509039", aScore: 9.4, bScore: 8, info: "#纯爱 #合集 #木瀬樹 糖色序曲" },
   { id: "570005", aScore: 8.5, bScore: 7.5, info: "#合集 #自慰 #cos #ぴざぬこ 交尾のために生きている" },
   { id: "604997", aScore: 8.4, bScore: 4.3, info: "#全彩 #海 #隐蔽性交", bak: "https://telegra.ph/Peach-Candy-ゆき恵-年下の幼なじみは僕と海でバイトがしたい中国翻訳-DL版-10-22-4" },
+  { id: "605085", aScore: 6.5, bScore: 7.3, order: 2, info: "#调教 #玩具 #媚药", bak: "https://telegra.ph/めんこまち-めーん-女神さまのおはよう-2-中国翻訳-10-22-2" },
+  { id: "514584", aScore: 6.6, bScore: 8.2, info: "#全彩 #同学 #白毛 #隐蔽 #纯爱", bak: "https://telegra.ph/たぶちさんち-たぶち-夏休みじゃないから無抵抗ないとこにチンコ入れる話-中国翻訳-無修正-04-22-2" },
+  { id: "636875", aScore: 8.4, bScore: 8.1, order: 3, info: "#兄妹 #催眠 #3P #巨乳 #保健室", bak: "https://telegra.ph/KAROMIX-karory-妹と催眠でイチャイチャする本3-中国翻訳-無修正-DL版-04-22" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

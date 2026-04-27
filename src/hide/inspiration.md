@@ -58,7 +58,7 @@ tag:
   - [ ] 连续压缩
   - [ ] parts in a project, like how i use branch
   - [ ] 断点重传
-  - [ ] 软连接，可在目录外创建虚仓库，指向真实仓库
+  - [ ] ~~软链接，可在目录外创建虚仓库，指向真实仓库~~ git workspace
 - [ ] HDL 高阶语言，能将类 Rust 语法的语言编译成 verilog 或 VHDL。
 - [x] [音频加速](../articles/speedup.md)
 - [ ] 流式分布式的视频软件?
@@ -66,7 +66,6 @@ tag:
 - [ ] pdf 无损图片压缩
   - [ ] wasm, static web （see [imagequant](https://juejin.cn/post/7421938677770829878)?）
 - [x] git-crypt-weak，类似于 git-crypt, git-secret 的存储库加密，但是使用自定义密码的弱加密。 done: [git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)
-- [ ] ~~lzma 数据库，简易迁移，不依赖特定程序~~
 - [ ] ~~浏览器书签 & 历史数据库(rust cli / js)~~ History Trends Unlimited?
 - [ ] ~~better sqlite_zstd~~ 要么手操要么透明压缩
 - [ ] ~~windows electron lib(runtime)?~~ no，please use webview; or some dedup method on windows.
@@ -74,6 +73,7 @@ tag:
 - [x] [wd: info words online in cli, written in rust](https://github.com/lxl66566/wordinfo)
 - [ ] ~~ecust-survival, (with vuepress)~~ Actually I did this [ecustbook](https://lxl66566.github.io/ecustbook). [wiki.cic.cab](https://wiki.cic.cab) is also available.
 - [ ] **Galgame engine**
+  - [ ] PixiJS 特效层
   - [ ] 自动生成可视化线路攻略
   - [ ] 内置多语言与翻译支持
   - [ ] 跨平台
@@ -117,7 +117,7 @@ tag:
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
-- [ ] rust TUI easy_download
+- [ ] ~~rust TUI easy_download~~ [trauma](https://github.com/rgreinho/trauma)
 - [x] [GalgameManager](https://github.com/lxl66566/GalgameManager)
   - [ ] 随机启动
   - [x] 插件与启动链
@@ -140,11 +140,11 @@ tag:
 - [ ] bash compitable modern shell
 - [ ] telegram index bot, no ads and reviewed by human
 - [ ] windows fast settings，[Windows11 轻松设置工具](../articles/windows/settings.md#小工具) 的增强版，添加我需要的功能。
-- [ ] rewrite of easytier
+- [ ] ~~rewrite of easytier~~ easytier is actually not bad.
   - [ ] Raft supported by [hiqlite](https://github.com/sebadob/hiqlite)
   - [ ] ability to bypass GFW
 - [ ] TUI renamer, because fd + mv is too slow. use regex like vscode string replace.
-- [ ] HTTP Client.
+- [ ] [HTTP Client](../articles/http_client.md).
   - [ ] free forever.
   - [ ] fully customizable, users can write js/py scripts to match conditions and modify the request.
 - [ ] Windows SSD trace. Trace IO event with operation thread.
@@ -215,6 +215,7 @@ tag:
 - [ ] PT 站，但是更低的门槛
 - [x] open bilibili video in mpv -> [成果](https://github.com/lxl66566/auto-play-in-mpv)
 - [ ] AV 找片互助
+  - [ ] 接入图片搜索
 - [ ] virtual network cluster，分布式理论同步
   - [ ] tag 论分区
 - [ ] Galgame 汉化平台。当前在线翻译协作已经非常成熟，但是 Galgame 界的汉化还是封闭的。

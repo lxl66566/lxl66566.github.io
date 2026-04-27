@@ -59,6 +59,7 @@ const data: SpeedupItemType[] = [
       "NEKOPARA",
       "春音Alice＊Gram",
       "白恋SAKURA＊GRAM",
+      "紙の上の魔法使い",
     ],
     valid_name: "krkr_xp3",
     engine: "krkr",
