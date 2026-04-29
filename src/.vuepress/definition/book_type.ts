@@ -46,6 +46,12 @@ export type BookItemInputType = {
    * 资源或书本链接
    */
   url?: string;
+
+  /**
+   * 是否推荐
+   */
+  recommend?: boolean;
+
   /**
    * 标签
    */

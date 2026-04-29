@@ -13,6 +13,18 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [ast-outline](https://github.com/aeroxy/ast-outline)
+
+一个快速用来 parse 代码文件提取重要内容给 AI 用的工具。
+
+首先提取本身没问题，但是只有一些签名和类型，没有注释。我比较怀疑是否真的可以给 AI 产生价值，很多时候一个函数签名的信息是远小于注释的。（当然注释也会有 example 等垃圾内容，这个价值判断标准不太好界定）
+
+然后 `ast-outline install --all --dry-run` 只支持那些大公司出品的 AI agent，覆盖面还是太窄了。
+
+最后，release binary 里没有其他系统的 releaes 也要扣一点分。
+
+<dated date="20260428"/>
+
 ## [quien](https://github.com/retlehs/quien/)
 
 一个 go 写的、TUI 的域名工具。

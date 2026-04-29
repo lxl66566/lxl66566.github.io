@@ -2,9 +2,21 @@ import { BookItemInputType, HLevel } from "../definition/book_type.js";
 
 const original_list: BookItemInputType[] = [
   {
+    name: "距离救援船抵达，还有93年",
+    author: "싸이킥",
+    reading_status: {
+      kind: "在读",
+    },
+    h_level: HLevel.HIGH,
+    duration: {
+      start: "2026-04-27",
+    },
+  },
+  {
     name: "十日终焉",
     author: "杀虫队队员",
     h_level: HLevel.NONE,
+    recommend: true,
     duration: {
       start: "2025-12-16",
       end: "2026-02-23",
@@ -36,6 +48,10 @@ const original_list: BookItemInputType[] = [
     name: "魅魔学院的反逆者",
     author: "听雨",
     h_level: HLevel.HIGH,
+    reading_status: {
+      kind: "已放弃",
+      extra: "有点无聊",
+    },
     duration: {
       start: "2025-10-11",
     },
@@ -152,6 +168,7 @@ const original_list: BookItemInputType[] = [
     valid_name: "我就是神",
     h_level: HLevel.NONE,
     use_time: "62h51min",
+    recommend: true,
     url: "https://t.me/absolutexsresource/13",
     duration: {
       start: "2024-07-21",
@@ -452,6 +469,7 @@ const original_list: BookItemInputType[] = [
     name: "走进修仙",
     valid_name: "走进修仙二刷",
     nth_time: 2,
+    recommend: true,
     duration: {
       start: "2020-05-09",
       end: "2020-11-20",
@@ -573,6 +591,7 @@ const original_list: BookItemInputType[] = [
   {
     name: "走进修仙",
     nth_time: 1,
+    recommend: true,
     duration: {
       start: "<2019-01-20",
       end: "?",
@@ -879,6 +898,7 @@ const original_list: BookItemInputType[] = [
     valid_name: "别闹了费曼先生",
     author: "Richard Feynman",
     use_time: "4h16min",
+    recommend: true,
     tags: {
       not_network: true,
     },

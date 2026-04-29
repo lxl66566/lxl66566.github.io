@@ -84,6 +84,7 @@ ColorOS：
 一加和 OPPO 的。
 
 - 不要冻 _应用包安装程序_！！！！[惨痛教训，并附带了哪些东西能冻](./problem.md#一加无限重启)
+- 不要冻 _开机注册_、_录屏_。([ref](https://www.bilibili.com/opus/958905222087835656))
 - [这篇文章](https://bbs.oneplus.com/thread/6003405)指出了一些能卸载的包。
   - 对于新系统，文章包名里的 `heytap` 基本都要换成 `coloros`，`oplus` 换成 `nearme`
 
