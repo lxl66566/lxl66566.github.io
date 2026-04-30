@@ -465,6 +465,7 @@ ColorOS 是目前一加的默认系统。
 - 权限管理一坨屎。
   - private 仓库只能通过添加 collaborator 对个人开放，但 collaborator 意味着给出了读写权限。我经常想给别人读权限，但不给写权限。此时只能通过 organization 方式，而且无法自动同步仓库至 org，使用 org fork 个人 private 仓库，也无法进行 sync。
   - ssh 权限稀烂。Github 建议使用 ssh 进行传输，没有添加 ssh 密钥连某些 clone 都做不到，但添加了 ssh 密钥后，本机就对 Github 的所有仓库拥有了所有权限。我认为[^1]ssh 至少需要能够控制对不同仓库的访问权限与写入权限。这样开发者能够在可能不安全的主机上使用 ssh。
+    - 然后 Github 就只把灵活的权限控制放开给它自己那 PAT 令牌，变相强迫用户去用 gh cli。
 - workflow 一坨屎。
   - stay away from yaml!
   - [apt 无法使用](https://t.me/withabsolutex/1588)
@@ -491,6 +492,7 @@ ColorOS 是目前一加的默认系统。
 - 官方的 upload-artifact 会自动加一层 zip，而且没有方法禁用这种行为 ([issue](https://github.com/actions/upload-artifact/issues/426))。这玩意充满了 anti pattern，把压缩和上传放到同一个步骤里就是不对的，更别说还在用 zip。既然叫 upload-artifact，那其他功能都只应该为 upload 的核心功能服务。还有 4.7MB js，对 issue 的态度等，感觉太 💩 了。
   - upload-artifact 还花了一堆篇幅来讲自己 wildcard pattern 的反常行为，既然会给用户带来误解，还不如不做。
   - [新版的 upload-artifact v7 已经支持不压缩](https://github.blog/changelog/2026-02-26-github-actions-now-supports-uploading-and-downloading-non-zipped-artifacts/)，距离 issue 提出已经过了好几年了。
+- Github 的 markdown 渲染本来就会干掉大部分内联样式。2026 年 Github 还[以非常恶劣的形式破坏了 markdown 图片渲染](https://github.com/orgs/community/discussions/193018)。
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 
@@ -558,6 +560,7 @@ ColorOS 是目前一加的默认系统。
 - ([src](https://t.me/withabsolutex/2450)) 20250812，我卸载 WSL 的其中一个发行版（ArchWSL），结果再进 wsl 就报错 0x80041001。无法重装，因为在 `wsl --update` 里会显示某个服务没有运行无法 update，它也不说是哪个服务没运行。我的 windows update 等服务是开的，都没用。最后靠系统还原点还原解了。
 - [神人翻译](https://t.me/withabsolutex/2448)
 - `networkingMode=mirrored` 有**非常严重的 bug**。[issue](https://github.com/microsoft/WSL/issues/10855)
+- 如果你不开 mirrored，又会有另外的问题：WSL2 虚拟网卡的默认 MTU 是 1500，这个值实在是太大了以至于很容易导致包截断。
 
 ## scoop 有多难用
 
