@@ -870,7 +870,7 @@ export default [
   { id: "604258", aScore: 8.5, bScore: 9.6, info: "#纯爱 #合集 #同学" },
   { id: "561361", aScore: 9.2, bScore: 6.4, info: "#巨乳loli" },
   { id: "605503", aScore: 7.8, bScore: 6.5, info: "#loli #纯爱 #甘露アメ", bak: "https://telegra.ph/甘露アメ-愛し愛されおさなづま仮-前編-COMIC-LO-2022年3月号-中国翻訳-DL版-10-24" },
-  { id: "605262", aScore: 7, bScore: 8.1, info: "#角 #媚药 #东方", bak: "https://telegra.ph/筆置製作所-鯖野筆置-鬼の萃香さんが快楽堕ちなんてする訳がない-東方project-中国翻訳-DL版-10-22" },
+  { id: "605262", aScore: 7, bScore: 7.1, info: "#角 #媚药 #东方", bak: "https://telegra.ph/筆置製作所-鯖野筆置-鬼の萃香さんが快楽堕ちなんてする訳がない-東方project-中国翻訳-DL版-10-22" },
   { id: "606561", aScore: 9.2, bScore: 5.4, info: "#蔚蓝档案 #合集 #多女主 #loli", bak: "https://telegra.ph/C106-つくてん-円つくも-生徒とのが気持ち良すぎる話-ブルーアーカイブ-中国翻訳-10-30" },
   { id: "585935", aScore: 6.7, bScore: 6.5, info: "#乳头责 #魔法少女 #前男友 #无插入 #连续绝顶", bak: "https://telegra.ph/もみ子さん-もみ子-敵幹部は元彼マゾ魔法天使-中国翻訳-07-24-2" },
   { id: "586113", aScore: 8, bScore: 9.2, order: 2, info: "#催眠 #爆肛 #堕落", bak: "https://telegra.ph/ショーソン-幼馴染は闇堕ち聖女2-中国翻訳-DL版-07-25-2" },
@@ -1106,5 +1106,10 @@ export default [
   { id: "605085", aScore: 6.5, bScore: 7.3, order: 2, info: "#调教 #玩具 #媚药", bak: "https://telegra.ph/めんこまち-めーん-女神さまのおはよう-2-中国翻訳-10-22-2" },
   { id: "514584", aScore: 6.6, bScore: 8.2, info: "#全彩 #同学 #白毛 #隐蔽 #纯爱", bak: "https://telegra.ph/たぶちさんち-たぶち-夏休みじゃないから無抵抗ないとこにチンコ入れる話-中国翻訳-無修正-04-22-2" },
   { id: "636875", aScore: 8.4, bScore: 8.1, order: 3, info: "#兄妹 #催眠 #3P #巨乳 #保健室", bak: "https://telegra.ph/KAROMIX-karory-妹と催眠でイチャイチャする本3-中国翻訳-無修正-DL版-04-22" },
+  { id: "(ex)", aScore: 7, bScore: 7.3, order: 7, otherlink: "https://exhentai.org/g/3911251/d07fbc4c08", info: "#调教 #cos #暴露 #海通信", bak: "https://telegra.ph/海通信-なまもななせ-ナマイキ姪を観察調教で堕とすまで7-中国翻訳-DL版-04-29" },
+  { id: "546073", aScore: 7.8, bScore: 8.1, info: "#兽耳 #神明 #纯爱 #女主动 #快艶", bak: "https://telegra.ph/あんのみけ-神様-働いてください-COMIC-快艶-VOL20-中国翻訳-DL版-04-28" },
+  { id: "646122", aScore: 8.4, bScore: 9.5, info: "#悲剧 #纯爱 #异界 もういないから。", bak: "https://telegra.ph/red-miso-soup-赤だし-もういないから中国翻訳-DL版-04-25" },
+  { id: "646057", aScore: 7.8, bScore: 6.7, info: "#蔚蓝档案 #兽耳 #泳装", bak: "https://telegra.ph/ノアの方舟-ノア-本当の私-ブルーアーカイブ-中国翻訳-DL版-04-25-5" },
+  { id: "611616", aScore: 6.8, bScore: 7.3, info: "#触手 #全彩 #图集" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

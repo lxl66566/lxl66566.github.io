@@ -466,6 +466,7 @@ ColorOS 是目前一加的默认系统。
   - private 仓库只能通过添加 collaborator 对个人开放，但 collaborator 意味着给出了读写权限。我经常想给别人读权限，但不给写权限。此时只能通过 organization 方式，而且无法自动同步仓库至 org，使用 org fork 个人 private 仓库，也无法进行 sync。
   - ssh 权限稀烂。Github 建议使用 ssh 进行传输，没有添加 ssh 密钥连某些 clone 都做不到，但添加了 ssh 密钥后，本机就对 Github 的所有仓库拥有了所有权限。我认为[^1]ssh 至少需要能够控制对不同仓库的访问权限与写入权限。这样开发者能够在可能不安全的主机上使用 ssh。
     - 然后 Github 就只把灵活的权限控制放开给它自己那 PAT 令牌，变相强迫用户去用 gh cli。
+- 2026 年 gh cli 带上了[遥测](https://cli.github.com/telemetry)。
 - workflow 一坨屎。
   - stay away from yaml!
   - [apt 无法使用](https://t.me/withabsolutex/1588)
