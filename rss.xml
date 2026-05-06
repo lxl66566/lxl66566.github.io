@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 01 May 2026 07:09:34 GMT</pubDate>
-    <lastBuildDate>Fri, 01 May 2026 07:09:34 GMT</lastBuildDate>
+    <pubDate>Wed, 06 May 2026 02:36:58 GMT</pubDate>
+    <lastBuildDate>Wed, 06 May 2026 02:36:58 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -777,6 +777,7 @@
 </ul>
 <p>其他的 XMR 必知：</p>
 <ul>
+<li>XMR 的主要卖点是隐私性，第三者是无法查询到某个地址是否进行了交易的。如果你作为地址所有者，要查询链上的交易详情，需要拿到 tx hash + 自己钱包的 view 私钥，才能在 <a href="https://xmrchain.net/" target="_blank" rel="noopener noreferrer">https://xmrchain.net/</a> 上查询交易。</li>
 <li>XMR 的变现可以使用 htx 交易所，其他的例如 binance, okx 都不支持 XMR 交易。</li>
 <li>XMR 有官方的钱包应用 <a href="https://www.getmonero.org/downloads/" target="_blank" rel="noopener noreferrer">Monero GUI Wallet</a>。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR。
 <ul>
