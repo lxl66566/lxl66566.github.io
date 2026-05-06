@@ -810,11 +810,11 @@ powershell 简直是邪恶的化身。
 
 [src1](https://t.me/withabsolutex/2491)
 
-- 喜欢我 `sccache: caused by: 远程主机强迫关闭了一个现有的连接。 (os error 10054)` 吗？（0.10.0 观测到此现象，更新后未出现）
 - 文档一坨，想找个 env 的 reference 找半天发现藏在 docs/Configuration.md，首页 readme 没有任何链接指向这个页面。
 - WSL 开了 mirrord，windows 上的 sccache 和 WSL sccache 的会抢端口打架。
-- `SCCACHE_SERVER_PORT` 是一个 undocumented env
-- Permission denied 即使我已经把相关文件夹设了 nixos:users 777。最后设了个 SCCACHE_DIRECT=0 编译才正常。
+- `SCCACHE_SERVER_PORT` 是一个 undocumented env。
+  - 现在终于在 README 里提了一句。。
+- Permission denied 即使我已经把相关文件夹设了 nixos:users 777。最后设了个 `SCCACHE_DIRECT=0` 编译才正常。
 - 鲁棒性非常差。因为 rust-analyzer 自己经常需要重启，跟 sccache 的通信很可能中断，然后 sccache server 内部有时就会出问题，强迫关闭所有远程连接，并且拒绝新连接。
 
 ## 蓝牙耳机有多难用

@@ -373,6 +373,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 
 其他的 XMR 必知：
 
+- XMR 的主要卖点是隐私性，第三者是无法查询到某个地址是否进行了交易的。如果你作为地址所有者，要查询链上的交易详情，需要拿到 tx hash + 自己钱包的 view 私钥，才能在 <https://xmrchain.net/> 上查询交易。
 - XMR 的变现可以使用 htx 交易所，其他的例如 binance, okx 都不支持 XMR 交易。
 - XMR 有官方的钱包应用 [Monero GUI Wallet](https://www.getmonero.org/downloads/)。注意 htx 当前的 XMR 充币最小金额是 0.01 XMR。
   - **血的教训**：不要直接用 CEX 充币地址用来挖矿！！！某次 [htx 悄悄改了地址](https://www.htx.com.de/zh-cn/support/84999701653073)（我不知道），结果提现未到账。在此 fuck htx。

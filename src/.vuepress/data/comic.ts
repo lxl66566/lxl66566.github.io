@@ -1111,5 +1111,11 @@ export default [
   { id: "646122", aScore: 8.4, bScore: 9.5, info: "#悲剧 #纯爱 #异界 もういないから。", bak: "https://telegra.ph/red-miso-soup-赤だし-もういないから中国翻訳-DL版-04-25" },
   { id: "646057", aScore: 7.8, bScore: 6.7, info: "#蔚蓝档案 #兽耳 #泳装", bak: "https://telegra.ph/ノアの方舟-ノア-本当の私-ブルーアーカイブ-中国翻訳-DL版-04-25-5" },
   { id: "611616", aScore: 6.8, bScore: 7.3, info: "#触手 #全彩 #图集" },
+  { id: "552228", aScore: 9.2, bScore: 9, info: "#纯爱 #同居 木瀬樹", bak: "https://telegra.ph/林檎のなる木-木瀬樹-メルティングスノー--エピローグ--中国翻訳-無修正-DL版-10-24-2" },
+  { id: "605401", aScore: 8, bScore: 5, info: "#LoveLive #短篇 #隐蔽性交", bak: "https://telegra.ph/トヤスアイナ-十安愛七-彼方テンプテーション-ラブライブ-虹ヶ咲学園スクールアイドル同好会-中国翻訳-DL版-10-24-3" },
+  { id: "605052", aScore: 7.7, bScore: 7.8, info: "#兄妹 #巨乳 #文化祭 #教室", bak: "https://telegra.ph/ソロシメジ-ぶなぴー397円-2年C組学園おっぱぶのキャストに妹がいた-中国翻訳-DL版-10-23-2" },
+  { id: "648069", aScore: 7, bScore: 8.8, order: 2, info: "#神明 #兽角 #尾巴 #发狂 怪獣たち", bak: "https://telegra.ph/VelisNolis-東雲由紀-怪獣たち-其の二-Chinese-05-04" },
+  { id: "647388", aScore: 7.7, bScore: 7, info: "#蔚蓝档案 #泳装", bak: "https://telegra.ph/C104-じどー筆記-こけこっここま-コイスルヒフミ-ブルーアーカイブ-中国翻訳-05-01" },
+  { id: "647289", aScore: 7.6, bScore: 8.4, info: "#全彩 #触手 #纯爱", bak: "https://telegra.ph/木葉のあ-先生の正体は触手の異星人でした-中国翻訳-05-01" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
