@@ -1287,7 +1287,7 @@ const original_list: GalItemInputType[] = [
     other_names: ["景の海のアペイリア"],
     use_time: "26h35min",
     score: {
-      story: 10.1,
+      story: 10.3,
       visual: 4.2,
       program: 4,
       thrill: 6.9,

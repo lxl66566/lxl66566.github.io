@@ -1117,5 +1117,11 @@ export default [
   { id: "648069", aScore: 7, bScore: 8.8, order: 2, info: "#神明 #兽角 #尾巴 #发狂 怪獣たち", bak: "https://telegra.ph/VelisNolis-東雲由紀-怪獣たち-其の二-Chinese-05-04" },
   { id: "647388", aScore: 7.7, bScore: 7, info: "#蔚蓝档案 #泳装", bak: "https://telegra.ph/C104-じどー筆記-こけこっここま-コイスルヒフミ-ブルーアーカイブ-中国翻訳-05-01" },
   { id: "647289", aScore: 7.6, bScore: 8.4, info: "#全彩 #触手 #纯爱", bak: "https://telegra.ph/木葉のあ-先生の正体は触手の異星人でした-中国翻訳-05-01" },
+  { id: "605495", aScore: 6.7, bScore: 8.3, order: 2, info: "#NTR #打工", bak: "https://telegra.ph/白ネギ屋-miya9-ボクの彼女はカフェ店員2寝取られ堕ちて-中国翻訳-DL版-10-24-2" },
+  { id: "605503", aScore: 7.1, bScore: 6.8, order: 2, info: "#loli #甘露アメ", bak: "https://telegra.ph/甘露アメ-愛し愛されおさなづま仮-前編-COMIC-LO-2022年3月号-中国翻訳-DL版-10-24-3" },
+  { id: "605301", aScore: 7.6, bScore: 8.1, info: "#药物 #兄妹 #全彩 #暴露 #失神", bak: "https://telegra.ph/ねむねむ-生意気な妹が素直になる本-中国翻訳-10-24-2" },
+  { id: "648544", aScore: 8.9, bScore: 3, info: "#百合 #短篇", bak: "https://telegra.ph/充气薯-明风与菲洛-中国語-05-07" },
+  { id: "648368", aScore: 7.8, bScore: 7.9, order: 2, info: "#蔚蓝档案 #温泉 #榨干 #CM羊", bak: "https://telegra.ph/C107-オイシイこ-CM羊-マキちゃんと温泉-ブルーアーカイブ-中国翻訳-05-06-8" },
+  { id: "595415", aScore: 7.8, bScore: 8.3, order: 1, info: "#蔚蓝档案 #舔 #CM羊", bak: "https://telegra.ph/C106-オイシイこ-CM羊-マキヘビに噛まれた-ブルーアーカイブ-中国翻訳-05-06" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
