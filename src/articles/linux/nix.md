@@ -327,13 +327,18 @@ niri 有两种安装方法：
 niri 只是一个光秃秃的 Window Manager，想要日常使用还有许多必不可少的东西。
 
 - xwayland-satellite，这个必装，一个易于使用的兼容层，让 niri 可以运行 x11 软件。
-- 截图，虽然 niri 有自带窗口截图和全屏截图，但是并不好用。我目前使用 grim + slurp + satty 三件套。
+- 截图，虽然 niri 有自带窗口截图和全屏截图，但是并不好用。我目前使用 grim + slurp + satty 三件套：`grim -g "$(slurp)" - | satty -f -`。
 - 剪切板也需要自己搞。直接上配置：
-  ```nix
+  ```nix :collapsed-lines
   {
+    self,
     lib,
     pkgs,
+    inputs,
+    config,
+    devicename,
     username,
+    features,
     ...
   }:
   {
@@ -351,15 +356,20 @@ niri 只是一个光秃秃的 Window Manager，想要日常使用还有许多必
       };
       # auto record the clipboard history to cliphist
       programs.niri.settings.spawn-at-startup = lib.mkAfter [
-        { argv = [ "wl-paste --watch cliphist store" ]; }
+        { sh = "wl-paste --watch cliphist store"; }
       ];
       # open a fuzzel menu to select the history
       programs.niri.settings.binds = {
-        "Alt+V".action.spawn = "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy";
+        "Alt+V".action.spawn-sh = "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy";
       };
     };
   }
   ```
+
+一些说明：
+
+- niri spawn 有两种，一种是正常 spawn，接受一个参数列表，另一种是接受一个字符串的 spawn-sh（可以使用管道等），需要注意区分。
+  - niri flake 中，正常 spawn 就是 `argv = [ "xxx", "xxx" ]`，spawn-sh 是 `sh = "xxx xxx"`。
 
 @tab KDE
 

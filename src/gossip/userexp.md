@@ -13,6 +13,69 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [carapace](https://carapace-sh.github.io/carapace-bin/carapace-bin.html)
+
+这玩意大概一年多前就想试了，但是文档说的简直不是人话。
+
+首先，Github 上 README 基本没有，就一句 [Read](https://pixi.carapace.sh), Try and [Build](https://carapace-sh.github.io/carapace/carapace/gen.html). 然后如果你点进去 Read，就能看到这辈子见过的最抽象的文档（截取一部分目录展示😅）：
+
+```
+1. In A Nutshell
+2. Porcelain Shop
+3. Hulk BASH!
+4. Pandoras Box
+5. Overly Attached Argument
+6. Lights, Camera, Action!
+7. Group Therapy
+8. Spec-tacular Citizen
+9. Running Man
+10. Greenwashing
+11. Wiretap
+12. Sandcastle
+```
+
+实际上对于 user 应该看的是 [carapace-bin 的文档](https://carapace-sh.github.io/carapace-bin/carapace-bin.html)。但是即使是这份文档也是一坨大便，你安装并配置后也是不知道如何使用。比如我使用 nushell，我按照文档说的进行一个配置：
+
+```nushell
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
+source $"($nu.cache-dir)/carapace.nu"
+```
+
+然后重启 nushell，也没法进行补全。后来和 AI 摸索着发现还需要手动把 carapace 设为 external completer，并且一定要取消掉原先的 tab keybindings：
+
+```nushell
+# 注释掉原先的 keybindings
+# $env.config.keybindings ++= [
+#     {
+#         name: take_history_hint
+#         modifier: none
+#         keycode: tab
+#         mode: [emacs, vi_normal]
+#         event: {
+#             until: [
+#                 { send: historyhintwordcomplete }
+#             ]
+#         }
+#     }
+# ];
+let carapace_completer = {|spans: list<string>|
+    carapace $spans.0 nushell ...$spans | from json
+}
+$env.config.completions.external = {
+    enable: true
+    max_results: 100
+    completer: $carapace_completer
+}
+```
+
+然后按 tab 才能出现补全候选结果。
+
+但是我其实不喜欢这种下方展示候选，我的补全都希望是 inlay hints，并且希望是最符合的结果上屏，而不是出一堆结果让我自己选。
+
+总之经过了一大堆事以后，我对 carapace 没有任何好感。
+
+<dated date="20260507"/>
+
 ## [ast-outline](https://github.com/aeroxy/ast-outline)
 
 一个快速用来 parse 代码文件提取重要内容给 AI 用的工具。
@@ -73,12 +136,15 @@ tag:
 - 界面根本没有引导，进去就三个键盘按键，不知道做什么用的，没有 help，必须读文档才知道。
 - 免费模型跟没有脑子一样，虽然本来也没啥指望。
 - 你居然把 node_modules 放在 `~/.config/opencode` 里？对于洁癖的人来说，在 `~/.config` 里放这种东西是大忌。
-- <https://opencode.ai/docs/zh-tw/models> 里没有说明如何使用自定义 API，即使它支持自定义 API。支持的模型很多，不够成不用说明如何支持自定义 API 的理由，因为 API 提供方永远列举不完。
+- <https://opencode.ai/docs/zh-tw/models> 里没有说明如何使用自定义 API（provider），即使它支持自定义 API。支持的模型很多，不够成不用说明如何支持自定义 API 的理由，因为 API 提供方永远列举不完。
+  - TUI 添加后的配置也不会写到配置文件里，那我怎么同步，不同步吗？
+  - 感觉这两套思维本身也很混乱。要配置文件就 all in 配置文件，要 GUI config 就 all in GUI，同时编辑两边还不同步是什么鬼？
 - TUI 其实可以做滚动条，但是它没做。这么长 context 我也没法直接滚，只能 /export。
+  - 用键盘 Page Up/Page Down 是可以快速滚的，但是有人可能没考虑现在有的键盘已经不提供这两个按键了……
 - 没有 chat mode，只能当 agent 用。其实我有一些需求是开一个 chat window，有时候懒得搜索让它帮我搜。这个显然没做到。
 - 不同文件夹下打开 opencode，session 不共用，我还以为 session 丢了。
-- opencode 文档里添加 provider 只能用 TUI 添加，没有直接写 `opencode.json` 的例子。并且 TUI 添加后的配置也不会写到配置文件里，那我怎么同步？
-  - 感觉这两套思维本身也很混乱。要配置文件就 all in 配置文件，要 GUI config 就 all in GUI，同时编辑两边还不同步是什么鬼？
+- opencode 内存占用高已经是特性了，一直都有人提，但是也没人想改。90 天后 issue 就自动关闭了。
+- opencode 处理中文输入法总是有点问题，有时候切了输入法但是还是只能写英文。这个 bug 是偶发，我还没有稳定复现的案例。
 
 总的来说，opencode 作为一个 agent，基本功能还行。但是在使用体验上仍需改进。
 

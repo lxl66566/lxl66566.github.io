@@ -494,6 +494,7 @@ ColorOS 是目前一加的默认系统。
   - upload-artifact 还花了一堆篇幅来讲自己 wildcard pattern 的反常行为，既然会给用户带来误解，还不如不做。
   - [新版的 upload-artifact v7 已经支持不压缩](https://github.blog/changelog/2026-02-26-github-actions-now-supports-uploading-and-downloading-non-zipped-artifacts/)，距离 issue 提出已经过了好几年了。
 - Github 的 markdown 渲染本来就会干掉大部分内联样式。2026 年 Github 还[以非常恶劣的形式破坏了 markdown 图片渲染](https://github.com/orgs/community/discussions/193018)。
+- 展示时间喜欢展示 xxx days ago，但是我一般需要精确的绝对时间，而不是相对时间。
 
 [^1]: [source](https://t.me/withabsolutex/1075)
 

@@ -329,6 +329,8 @@ git diff --staged > 1.patch      # 仅暂存区的变更
 git diff > 1.patch               # 非暂存区的变更
 git diff HEAD > 1.patch          # 工作区的变更（= 暂存区 + 非暂存区）
 git apply 1.patch                # 应用 patch
+# 一些其他小众指令
+git diff HEAD --shortstat        # 快速展示当前变更
 ```
 
 ### 彻底删除提交

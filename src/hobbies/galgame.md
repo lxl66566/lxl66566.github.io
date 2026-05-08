@@ -2001,6 +2001,7 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - 丸子与银河龙
 - 世纪末之诗
 - 鬼哭街
+- ディメンション凸ラバース!!
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 
