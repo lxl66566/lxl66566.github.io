@@ -2,6 +2,12 @@ import { AnimeItemInputType } from "../definition/anime_type.js";
 
 const original_list: AnimeItemInputType[] = [
   {
+    name: "新弹丸论破V3 大家的自相残杀新学期",
+    duration: {
+      start: "2026-05-09",
+    },
+  },
+  {
     name: "比宇宙更遥远的地方",
     duration: {
       start: "2025-08-31",

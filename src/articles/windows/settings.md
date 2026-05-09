@@ -187,6 +187,11 @@ tag:
   - 如果你安装了 MS Office，那大概率还会被装上一个 Office PLUS，这是一个傻逼国内代理广告，会污染你的 office 菜单和右键菜单。建议用 everything 搜到 officeplus 的安装文件夹，然后点击 uninst.exe 卸载。
   - 搜索 _任务计划程序_，禁用一些用不到的任务，例如 AMD auto update, OneDrive 等。
   - 删掉 `%LOCALAPPDATA%\Microsoft\WindowsApps` 里的所有 exe，或者在 _应用 -> 高级应用设置 -> 应用执行别名_ 关闭所有应用。这是 windows 给微软商店里的软件开的洞，如果你已经不使用微软商店，就没必要把这些快捷方式留着。
+  - 禁用浏览器的 AI 模型下载 ([ref](https://www.landiannews.com/archives/112876.html))
+    ```sh
+    reg add "HKLM\SOFTWARE\Policies\Google\Chrome" /v "GenAILocalFoundationalModelSettings" /t REG_DWORD /d 1 /f
+    reg add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "GenAILocalFoundationalModelSettings" /t REG_DWORD /d 1 /f
+    ```
   - 修改一些注册表项。
     ```reg
     Windows Registry Editor Version 5.00
