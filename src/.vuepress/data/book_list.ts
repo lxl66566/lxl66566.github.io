@@ -2,6 +2,16 @@ import { BookItemInputType, HLevel } from "../definition/book_type.js";
 
 const original_list: BookItemInputType[] = [
   {
+    name: "修真四万年",
+    author: "卧牛真人",
+    reading_status: {
+      kind: "在读",
+    },
+    duration: {
+      start: "2026-05-10",
+    },
+  },
+  {
     name: "距离救援船抵达，还有93年",
     author: "싸이킥",
     reading_status: {

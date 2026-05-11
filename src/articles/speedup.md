@@ -1171,7 +1171,7 @@ def callback(in_data, frame_count, time_info, status):
   - 然而 deflate 字典太小，压缩率实在是太差，被 zstd 和 lzma 爆杀了。想了想，还是用 include_assets 吧。
   - 再想想？再想想？为啥要编一大堆 dll 出来，直接用环境变量就行了（笑）。我怎么一开始没想到呢。
 - 程序同时支持 cli 和 tui，tui 的话我有思考过要不要用 ratatui 做，后面想想这个可以慢慢来，先用 terminal-menu 糊一个。
-  - 糊出来发现还挺好用的，这玩意有对 Vec<&str> 专门做过优化，用起来还不错。
+  - 糊出来发现还挺好用的，这玩意有对 `Vec<&str>` 专门做过优化，用起来还不错。
 
 最终糊出了初版的 [AudioSpeedHack v0.1.0](https://github.com/lxl66566/AudioSpeedHack/releases/tag/v0.1.0)。不过实际测下来问题还是挺多，详见 issue 与 TODO。
 

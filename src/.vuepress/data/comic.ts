@@ -1123,5 +1123,7 @@ export default [
   { id: "648544", aScore: 8.9, bScore: 3, info: "#百合 #短篇", bak: "https://telegra.ph/充气薯-明风与菲洛-中国語-05-07" },
   { id: "648368", aScore: 7.8, bScore: 7.9, order: 2, info: "#蔚蓝档案 #温泉 #榨干 #CM羊", bak: "https://telegra.ph/C107-オイシイこ-CM羊-マキちゃんと温泉-ブルーアーカイブ-中国翻訳-05-06-8" },
   { id: "595415", aScore: 7.8, bScore: 8.3, order: 1, info: "#蔚蓝档案 #舔 #CM羊", bak: "https://telegra.ph/C106-オイシイこ-CM羊-マキヘビに噛まれた-ブルーアーカイブ-中国翻訳-05-06" },
+  { id: "161648", aScore: 7, bScore: 8.7, order: 1, info: "#兄妹 #妄想 理想の妹", bak: "https://telegra.ph/C88-INS-mode-天凪青磁-理想の妹-中国翻訳-05-09" },
+  { id: "513886", aScore: 7, bScore: 7.8, order: 4, info: "#女仆 #校园 #loli", bak: "https://telegra.ph/Sサイズ-しなちく-またたび荘のシロくん-文化祭のメイドさん-中国翻訳-DL版-10-25-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
