@@ -162,9 +162,12 @@ jj abandon -r "mine() & empty() & mutable()"
 jujutsu 不适合什么样的用户：
 
 1. 需要使用一些特殊的、依赖 Git 的工作流；
-2. 依赖 commit hook 或私有 git hooks；
+2. 不想完全抛弃 git，希望与 git 混合使用的用户[^breaks]：
+   - 依赖 commit hook 或私有 git hooks；
+   - 依赖 git 暂存区的一些操作，例如在 vscode 按照代码行添加暂存区，用于快速提取所需的变更；
 3. 喜欢往工作区扔一些 untracked 的 cache 文件，并且在切分支的时候希望保留这些文件；
-4. 依赖 git 暂存区的一些操作，例如在 vscode 上行级添加暂存区，用于快速提取所需的变更；
+
+[^breaks]: jujutsu 跟 git 混用，有可能导致你的 git 仓库历史损坏，我遇到过疑似 jujutsu 导致的 broken link 和 missing blob。
 
 jujutsu 适合什么样的用户：
 

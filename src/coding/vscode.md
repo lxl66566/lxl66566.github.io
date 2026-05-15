@@ -69,6 +69,12 @@ tag:
 - 协同：_Live Share_
 - 其他：_Chinese (Simplified)..._，_CodeSnap_
 
+### 避雷
+
+我拉黑的插件。
+
+- Python Environments：有非常严重的 bug，在某些 shell 上启动非常慢，并且会擅自往你的终端发 `Ctrl + C` ([ref](https://t.me/withabsolutex/2709))
+
 ### 插件管理
 
 - 分析：当插件数量多了以后，每次启动都耗时很久，甚至卡在某个插件的启动上。此时需要 `Ctrl + Shift + p` 打开操作面板，进入 _Developer: Show Running Extensions_，可以看到插件状态与启动用时。

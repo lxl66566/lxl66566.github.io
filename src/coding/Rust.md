@@ -654,7 +654,9 @@ crossbeam-channel 被我拉黑了，大家可以选择 [crossfire](https://githu
 
 ### rayon
 
-rayon 现在已经几乎统治了 rust CPU 负载型的并发。使用 rayon 可以非常方便地写出多线程程序，榨干你的 CPU，并且无需引用任何异步运行时。
+rayon 现在已经几乎统治了 rust CPU 负载型的并发。使用 rayon 可以非常方便地写出多线程程序，榨干你的 CPU，并且本身是同步的，无需引用任何异步运行时。
+
+rayon 内部有一堆线程池 + 一堆奇形怪状的锁和管道，然后通过工作窃取最大化核心利用率，是很有一套的。我之前做过一点 pipeline，想跟 rayon 碰一碰；测出来对于均衡负载的工作性能，我的 pipeline 不弱于 rayon，但是在非均衡负载下 rayon 把我按在地上摩擦。
 
 rayon 的基础示例可以读 doc 或让 AI 给 example，不再赘述。
 
@@ -675,6 +677,8 @@ files
     .for_each(|entry| {...});
 process_pb.finish_with_message("Processing complete!");
 ```
+
+- 对于数量巨大、每个任务开销较小的任务，我们可能希望在一个 worker 里一次处理多个任务，避免过多的上下文切换，并且内部 for 循环还可以自动 simd 提升性能。rayon 提供了 [par_chunks](https://docs.rs/rayon/latest/rayon/slice/trait.ParallelSlice.html#method.par_chunks) 来做到这一点。
 
 ### sqlx
 

@@ -659,6 +659,19 @@ git sparse-checkout add docs/             # 为筛选列表添加元素
 
 sparse-checkout 只影响工作区，不影响 `.git` 仓库本身，也就是仓库大小和 fetch 时拉取的数据都不会改变。
 
+### git worktree
+
+worktree 是方便并行开发的 git 功能。传统的多 branch 虽然允许开许多需求进行开发与合并，但是实际的代码文件在磁盘上只会有一份，因此不同的需求无法同时对工作区的文件进行更改。
+
+worktree 允许磁盘上的不同位置存在多份代码，每个位置可以拥有自己的工作区、暂存区和 HEAD；而 git 仓库的 blob, tree, commit, config, hooks 在这些位置里共享。
+
+```sh
+git worktree add ../branch_name
+git worktree remove ../branch_name
+```
+
+AI agent 时代，worktree 被发扬光大，多个 agent 可以同时在一个仓库里工作，而互相之间不会干扰。
+
 ## 奇技淫巧
 
 ### 自动化 squash
