@@ -1125,5 +1125,11 @@ export default [
   { id: "595415", aScore: 7.8, bScore: 8.3, order: 1, info: "#蔚蓝档案 #舔 #CM羊", bak: "https://telegra.ph/C106-オイシイこ-CM羊-マキヘビに噛まれた-ブルーアーカイブ-中国翻訳-05-06" },
   { id: "161648", aScore: 7, bScore: 8.7, order: 1, info: "#兄妹 #妄想 理想の妹", bak: "https://telegra.ph/C88-INS-mode-天凪青磁-理想の妹-中国翻訳-05-09" },
   { id: "513886", aScore: 7, bScore: 7.8, order: 4, info: "#女仆 #校园 #loli", bak: "https://telegra.ph/Sサイズ-しなちく-またたび荘のシロくん-文化祭のメイドさん-中国翻訳-DL版-10-25-2" },
+  { id: "649274", aScore: 7, bScore: 4, info: "#明日方舟 #短篇 #兽耳", bak: "https://telegra.ph/りんごくらぶロスモンティスは結ばれたい編アークナイツ-05-11" },
+  { id: "168064", aScore: 7.2, bScore: 8.6, info: "#偶像 #强暴 #药物 #3P", bak: "https://telegra.ph/サンクリ2016-Summer-HAMMER-HEAD-真壁吾郎-HARD-TACHIBANA-アイドルマスター-シンデレラガールズ-中国翻訳-05-10" },
+  { id: "649213", aScore: 8.1, bScore: 8.8, info: "#快楽天 #表妹 #浴室 #纯爱", bak: "https://telegra.ph/ちゃかまる屋さん-気まぐれ子猫今夜だけWEEKLY快楽天-2026-No01-中国翻訳-05-10-3" },
+  { id: "478488", aScore: 8.1, bScore: 5.4, order: 1, info: "#兽耳 #发情 #自慰 #桃稚ちあ", bak: "https://telegra.ph/C101-ももちあ教-桃稚ちあ-発情ネコのお世話の仕方-中国翻訳-10-26-2" },
+  { id: "606339", aScore: 7.9, bScore: 6.6, info: "#兽耳 #百合 #贴贴", bak: "https://telegra.ph/ざんどろ-レズ風俗でニャンとろ初体験-別冊コミックアンリアル-人外レズ風俗-Vol3-中国翻訳-10-29-2" },
+  { id: "606323", aScore: 7.6, bScore: 7.1, info: "#单行本 #长篇 #纯爱 #巨乳", bak: "https://telegra.ph/瑞氏-恋心が芽生える時-中国翻訳-無修正-DL版-10-28" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
