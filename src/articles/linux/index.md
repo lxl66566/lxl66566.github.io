@@ -22,9 +22,9 @@ tag:
 
 ## [基础](./basic.md)
 
-## [安装与配置（Arch 篇）](./install_and_config.md)
+## [安装、配置与使用（Arch 篇）](./install_and_config.md)
 
-## [安装与配置（NixOS 篇）](./nix.md)
+## [安装、配置与使用（NixOS 篇）](./nix.md)
 
 ## [番外：OpenWRT](./openwrt.md)
 

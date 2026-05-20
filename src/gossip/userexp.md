@@ -13,6 +13,22 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [weave](https://github.com/Ataraxy-Labs/weave)
+
+一个基于 tree-sitter 代码理解的 git merge 辅助工具。
+
+emmmm，虽然这个 claude 的大菊花排在 contributor 的靠前位置，比较渗人。但我还是想试试。
+
+首先安装，scoop 没有，我用 bpm-rs 安装还给我测出两个 bug。
+
+修好以后安装，我看 README 里写了可以 `weave setup --local`，但是执行并没有这个指令。然后发现这个 `--local` 是 [15 hours ago 刚添加的](https://github.com/Ataraxy-Labs/weave/pull/90)。。。一般协作场景都不允许把 `.gitattributes` 上传到远端吧。不过还好有 `core.attributesfile`，我直接加到 global gitattributes 里就完事了。
+
+第一次 merge 的时候报错 weave-driver 找不到，然后我才发现安装这东东需要在 release 里下载两个 binary，一个是 weave-cli，一个是 weave-driver。
+
+不过合并的实测效果还是比我想的好一些的，最终 conflict 的文件数量确实更少了几个。不过 weave 解决的也都是些简单问题，难题都留给人类了说是。
+
+<dated date="20260520"/>
+
 ## [carapace](https://carapace-sh.github.io/carapace-bin/carapace-bin.html)
 
 这玩意大概一年多前就想试了，但是文档说的简直不是人话。
