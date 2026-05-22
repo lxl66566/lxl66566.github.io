@@ -472,6 +472,12 @@ diff 增强插件，为 github 使用。
 
 无限制记录浏览历史，可以搜索、备份。
 
+### [linkclump-plus](https://github.com/from-es/linkclump-plus)
+
+在浏览器上随便画一个矩形区域，然后批量打开这个区域里的所有链接。
+
+非常好用，打工人神器。
+
 ## 浏览器脚本
 
 ::: tip 提示

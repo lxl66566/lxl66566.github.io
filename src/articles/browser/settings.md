@@ -98,3 +98,7 @@ Windows Registry Editor Version 5.00
 ## kiwi browser
 
 1. _无障碍 - 强制启用缩放功能_
+
+## external
+
+1. [Configuring Firefox](https://sciops.net/information/technology/firefox/)

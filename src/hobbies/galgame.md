@@ -2003,6 +2003,7 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - 鬼哭街
 - ディメンション凸ラバース!!
 - アルミオシオンの医術師
+- 飛べない蝶は夢を見る
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 

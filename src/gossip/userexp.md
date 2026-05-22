@@ -13,6 +13,24 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [sem](https://github.com/Ataraxy-Labs/sem)
+
+尝试了 weave 后，我发现最有价值的其实是 [Ataraxy-Labs/sem](https://github.com/Ataraxy-Labs/sem)，也就是语义检测。
+
+于是我也尝试了下 sem。
+
+怎么说呢，问题还是比我想的要多。例如最简单的 sem diff，效果是这样的：
+
+```
+│  ⊕ method     NeedsOrderServiceImpl::g… [added]
+│  ∆ method     NeedsOrderServiceImpl::b… [modified]
+│  ∆ method     NeedsOrderServiceImpl::r… [modified]
+```
+
+显然这个长度根本不对劲，最关键的信息被省略了。（我的终端总宽度是这个片段的 3 倍多。）
+
+只能等 sem 再打磨优化了。
+
 ## [weave](https://github.com/Ataraxy-Labs/weave)
 
 一个基于 tree-sitter 代码理解的 git merge 辅助工具。
