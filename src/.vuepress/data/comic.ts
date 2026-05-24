@@ -74,7 +74,7 @@ export default [
   { id: "488568", aScore: 6.9, bScore: 1, info: "#蔚蓝档案", bak: "https://telegra.ph/梅雨入り柿の種-柿丘-Error-XXXX-is-not-defined-ブルーアーカイブ-中国翻訳-DL版-01-04" },
   { id: "(ex)", aScore: 6, bScore: 6.7, info: "#制服", otherlink: "https://exhentai.org/g/2790930/b02a0fb008/", bak: "https://telegra.ph/みくろぺえじ-黒本君-JCわからせ性教育-中国翻訳-DL版-01-06" },
   { id: "(ex)", aScore: 5.5, bScore: 4, info: "#蔚蓝档案", order: 2, otherlink: "https://exhentai.org/g/2790306/8db403ff37/", bak: "https://telegra.ph/C103-餃子ベビー-笑笑餃子-全身マッサージしようキサキ会長2-ブルーアーカイブ-中国翻訳-01-06" },
-  { id: "(ex)", aScore: 3.4, bScore: 6.1, info: "#女仆", order: 3, otherlink: "https://exhentai.org/g/2281625/892988db9a/", bak: "https://nhentai.net/search/?q=ギャルゆいなちゃんとえっち3" },
+  { id: "283943", aScore: 8.5, bScore: 8.2, info: "#辣妹 #同学 #女仆 #合集 纯幻想，不过画风不错", otherlink: "https://nhentai.net/search/?q=ギャルゆいなちゃんとえっち" },
   { id: "392122", aScore: 6, bScore: 7.1, info: "#触手" },
   { id: "490137", aScore: 7.5, bScore: 7, info: "#蔚蓝档案", bak: "https://telegra.ph/とうざいなんぼく-西ヤスアキ-この暖かさを知ってしまった-ブルーアーカイブ-中国翻訳-DL版-01-09" },
   { id: "489246", aScore: 3.3, bScore: 7.5, info: "メイド教育", order: 6, bak: "https://telegra.ph/きょくちょ局-きょくちょ-メイド教育6没落貴族瑠璃川椿-中国翻訳-种植园汉化-01-02" },
@@ -1131,5 +1131,12 @@ export default [
   { id: "478488", aScore: 8.1, bScore: 5.4, order: 1, info: "#兽耳 #发情 #自慰 #桃稚ちあ", bak: "https://telegra.ph/C101-ももちあ教-桃稚ちあ-発情ネコのお世話の仕方-中国翻訳-10-26-2" },
   { id: "606339", aScore: 7.9, bScore: 6.6, info: "#兽耳 #百合 #贴贴", bak: "https://telegra.ph/ざんどろ-レズ風俗でニャンとろ初体験-別冊コミックアンリアル-人外レズ風俗-Vol3-中国翻訳-10-29-2" },
   { id: "606323", aScore: 7.6, bScore: 7.1, info: "#单行本 #长篇 #纯爱 #巨乳", bak: "https://telegra.ph/瑞氏-恋心が芽生える時-中国翻訳-無修正-DL版-10-28" },
+  { id: "650657", aScore: 8.5, bScore: 8, info: "#兽耳 #兽尾 #发情 #纯爱 #高嶋しょあ", bak: "https://telegra.ph/HIGHLAND-高嶋しょあ-アニマルシンドローム-中国翻訳-DL版-05-17-2" },
+  { id: "649596", aScore: 7.2, bScore: 6.5, info: "#loli #援交 #大叔 #厕所 #堕落 #桜水晶", bak: "https://telegra.ph/桜水晶-夜桜ソウキ欲しくなっちゃいました-中国翻訳-05-12-4" },
+  { id: "618163", aScore: 7.4, bScore: 6.2, info: "#NTR #性爱社 #青梅", bak: "https://telegra.ph/電気みかん-好きな子がセックス部に入るらしい-仮入部練習えっち編主人公とは本番なし-中国翻訳-05-12" },
+  { id: "607269", aScore: 7.1, bScore: 6.9, info: "#纯爱 #阴沉 #宅男 #cos", bak: "https://telegra.ph/きのこのみ-konomi-ギャルゆいなちゃんとえっち5--片思いの彼女がボクに赤面--中国翻訳-無修正-DL版-11-01-2" },
+  { id: "607072", aScore: 6.2, bScore: 6.7, info: "#主仆 #loli", bak: "https://telegra.ph/餅屋-かろちー-媚食殿-プリンセスコネクトReDive-中国翻訳-無修正-DL版-11-01-6" },
+  { id: "606966", aScore: 7.3, bScore: 6.8, info: "#蔚蓝档案 #辣妹 #女性主导", bak: "https://telegra.ph/ありくいVライン-おおおおありくい-赤裸々のキララ-ブルーアーカイブ-中国翻訳-DL版-11-01-4" },
+  { id: "606889", aScore: 7.6, bScore: 5, info: "#偶像大师 #百合 #巨乳", bak: "https://telegra.ph/C106-ぐつとま-タチ-あまやかしがえし-学園アイドルマスター-中国翻訳-10-31-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
