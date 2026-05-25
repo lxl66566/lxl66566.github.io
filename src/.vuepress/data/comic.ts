@@ -1138,5 +1138,6 @@ export default [
   { id: "607072", aScore: 6.2, bScore: 6.7, info: "#主仆 #loli", bak: "https://telegra.ph/餅屋-かろちー-媚食殿-プリンセスコネクトReDive-中国翻訳-無修正-DL版-11-01-6" },
   { id: "606966", aScore: 7.3, bScore: 6.8, info: "#蔚蓝档案 #辣妹 #女性主导", bak: "https://telegra.ph/ありくいVライン-おおおおありくい-赤裸々のキララ-ブルーアーカイブ-中国翻訳-DL版-11-01-4" },
   { id: "606889", aScore: 7.6, bScore: 5, info: "#偶像大师 #百合 #巨乳", bak: "https://telegra.ph/C106-ぐつとま-タチ-あまやかしがえし-学園アイドルマスター-中国翻訳-10-31-2" },
+  { id: "652110", aScore: 8, bScore: 6.5, info: "#明日方舟 #简笔 #兽耳", bak: "https://telegra.ph/Eternal-frost-迷迭香和正太的爱爱游戏明日方舟-中国語-05-23-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
