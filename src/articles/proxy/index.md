@@ -14,8 +14,7 @@ tag:
 2. [代理软件](./proxy_software.md)
 3. [VPS](./vps.md)
 4. [hysteria 协议的使用](./hysteria.md)
-5. [trojan-go 协议的使用](./trojan-go.md)
-6. [trojan 协议的使用](trojan.md)
+5. [trojan 协议与服务端](./trojan.md)
 
 ## external
 

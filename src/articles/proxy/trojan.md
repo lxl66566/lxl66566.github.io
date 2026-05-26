@@ -12,9 +12,13 @@ tag:
 
 trojan 协议是一个广泛使用的，伪装成明确特征的 https 流量的协议，直接利用了现有的 tls 加密。
 
-[trojan](https://github.com/trojan-gfw/trojan) repo 的上一次 commit 是 2020 年，大致能认为无人维护了。（并且 issue 区充斥着大量垃圾内容）
+广泛使用的 trojan 服务端主要有三种实现：原版 trojan，trojan-go 和 sing-box。
 
-## 安装
+## [原版 trojan](https://github.com/trojan-gfw/trojan)
+
+trojan repo 的上一次 commit 是 2020 年，已经死透了。
+
+### 安装
 
 :::tabs
 @tab archlinux
@@ -29,12 +33,67 @@ pacman -S trojan
 
 首次启动建议先 `trojan /etc/trojan/config.json` 测试配置文件是否正确。若正确，启动服务 `trojan.service` 即可。
 
+## [trojan-go](https://github.com/p4gefau1t/trojan-go)
+
+trojan-go 是 trojan 的 go 实现，兼容原版。trojan-go repo 的上一次 commit 是 2021 年，也死透了。由于 trojan-go 死得晚一点，被收录在了 nixpkgs 里，所以现在用 NixOS 作服务器的我还偶有使用。
+
+### [服务端配置](https://p4gefau1t.github.io/trojan-go/basic/config/)
+
+trojan-go 的配置又是一个简洁的典范。
+
+1. 安装。
+   ::: code-tabs
+   @tab archlinux
+   ```sh
+   paru -S trojan-go-bin
+   ```
+   其会默认安装两个服务，分别为 `trojan-go.service` 和 `trojan-go@.service`，~~有效防止 archlinux 新手不会启动 template unit 的尴尬~~。
+   :::
+2. 配置。
+   编辑 `/etc/trojan-go/config.json`：
+   ```json
+   {
+     "run_type": "server",
+     "local_addr": "0.0.0.0",
+     "local_port": 12138,
+     "remote_addr": "127.0.0.1",
+     "remote_port": 80,
+     "password": ["**********"],
+     "ssl": {
+       "cert": "...",
+       "key": "...",
+       "fallback_port": 80
+     },
+     "mux": {
+       "enabled": true
+     },
+     "router": {
+       "enabled": true,
+       "bypass": ["geoip:cn", "geoip:private", "geosite:cn", "geosite:private"],
+       "block": ["geosite:category-ads"],
+       "proxy": ["geosite:geolocation-!cn"],
+       "default_policy": "proxy",
+       "geoip": "/usr/share/trojan-go/geoip.dat",
+       "geosite": "/usr/share/trojan-go/geosite.dat"
+     }
+   }
+   ```
+
+然后就可以愉快地使用了。
+
+## [sing-box](https://github.com/SagerNet/sing-box)
+
+sing-box 是一个现代、多协议、高性能的服务端 + 客户端。自然我们也可以使用 sing-box 来部署 trojan 服务。
+
+具体配置我就不说了，2026 年直接让 AI 写吧。
+
+一些提示：
+
+- sing-box 的 trojan 协议支持 `multiplex` 多路复用，建议开启。这是原版 trojan、trojan_go 都做不到的。
+- `tcp_fast_open` 也建议开启。
+
 ## 客户端
 
-不需要我多说。
+trojan 协议广泛使用，基本所有的客户端实现都支持 trojan。
 
-## 遇到的问题
-
-启动服务时报错 `trojan.service: Start request repeated too quickly.`。搜，按照 [issue 所述](https://github.com/trojan-gfw/trojan/issues/387)改了用户组，无效。
-
-然后直接运行 `trojan /etc/trojan/config.json`，看到 error 是端口占用了。猜测 trojan 不会将报错信息输出到 stderr，因此无法直接 `systemctl status trojan` 查看报错信息。
+关于 trojan-go，在 Android 端可以用 [NekoBox](./proxy_software.md#sing-box-系)，不过需要[下载插件](https://matsuridayo.github.io/m-plugin/)。（F-Droid 下载地址已失效，插件不再更新）

@@ -485,6 +485,7 @@ java 7 之后还可以使用 [try-with-resource](https://github.com/Jueee/effect
   - java 8 只能 if (xxx instanceof xxx) 判断然后强转。
   - java 21 可以 switch。
 - 子类可以定义相同的变量“遮掩”父类的变量。两个变量同时存在，访问父类变量需要用 `super.`，或者 cast 到父类再访问。
+- clone：java 没有原生的 deep clone，很多实现都还在用 json 序列化/反序列化来做 deep clone，实在是丑陋啊。
 
 ### 包装类
 
@@ -589,6 +590,7 @@ class account implements Serializable {}    // 继承接口
 - 自定义序列化函数：使用 `@JsonValue` 自定义序列化过程，使用 `@JsonCreator` 自定义反序列化过程。对于 enum，这个是比较常用的。
   - `@JsonCreator` 允许使用 mode 限制反序列化的来源，例如 `@JsonCreator(mode = JsonCreator.Mode.PROPERTIES)` 限定只能从 json 对象字符串里反序列化，`@JsonCreator(mode = JsonCreator.Mode.DELEGATING)` 就是非 json 对象字符串（普通字符串）里反序列化。
 - 忽略
+  - Jackson 默认忽略 static 和 transient 字段。不需要担心 `serialVersionUID` 被序列化。
   - 忽略单个字段：`@JsonIgnore` 修饰字段。
   - 忽略多个字段：`@JsonIgnoreProperties({"xxx", "yyy"})` 修饰类。
   - 忽略多余字段：`@JsonIgnoreProperties(ignoreUnknown = true)` 修饰类。

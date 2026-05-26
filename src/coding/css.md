@@ -205,3 +205,4 @@ flex 容易带来的问题：
 1. [学习 CSS 布局](https://zh.learnlayout.com/)
 2. [纯 CSS blur](https://leanrada.com/notes/css-only-lqip/)
 3. [Tailwind CSS 基础概念、配置、常见问题和使用笔记](https://heibaimeng.com/post/218)
+4. [The State of CSS Centering in 2026](https://css-tricks.com/the-state-of-css-centering-in-2026/)

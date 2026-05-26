@@ -15,11 +15,11 @@ tag:
 
 ## [sem](https://github.com/Ataraxy-Labs/sem)
 
-尝试了 weave 后，我发现最有价值的其实是 [Ataraxy-Labs/sem](https://github.com/Ataraxy-Labs/sem)，也就是语义检测。
+尝试了 weave 后，我发现 Ataraxy-Labs universe 还有个 [Ataraxy-Labs/sem](https://github.com/Ataraxy-Labs/sem)，也就是基于 tree-sitter 的语义检测。
 
 于是我也尝试了下 sem。
 
-怎么说呢，问题还是比我想的要多。例如最简单的 sem diff，效果是这样的：
+怎么说呢，sem 还是处在非常早期的阶段，问题比我想的要多。例如最简单的 sem diff，效果是这样的：
 
 ```
 │  ⊕ method     NeedsOrderServiceImpl::g… [added]
@@ -27,9 +27,12 @@ tag:
 │  ∆ method     NeedsOrderServiceImpl::r… [modified]
 ```
 
-显然这个长度根本不对劲，最关键的信息被省略了。（我的终端总宽度是这个片段的 3 倍多。）
+显然这个长度根本不对劲，最关键的信息被省略了。（我的终端总宽度是这个片段的 3 倍多。）只能等 sem 再打磨优化了。
 
-只能等 sem 再打磨优化了。
+- 对于上面的这个问题我提了一个 [issue](https://github.com/Ataraxy-Labs/sem/issues/114)。
+- 此外，java 文件的 sem diff，class 变更居然用的 type 而不是实际字段名，有点把我无语到。
+
+<dated date="20260522"/>
 
 ## [weave](https://github.com/Ataraxy-Labs/weave)
 
