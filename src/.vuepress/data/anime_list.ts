@@ -6,6 +6,7 @@ const original_list: AnimeItemInputType[] = [
     valid_name: "新弹丸论破V3",
     duration: {
       start: "2026-05-09",
+      end: "2026-05-29",
     },
   },
   {
