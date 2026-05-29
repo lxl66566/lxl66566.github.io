@@ -2,6 +2,15 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "RIDDLE JOKER",
+    valid_name: "RIDDLEJOKER",
+    other_names: ["RJ"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-05-29",
+    },
+  },
+  {
     name: "纸上魔法使",
     other_names: ["紙の上の魔法使い", "纸魔"],
     playing_status: PlayingStatus.PLAYING,

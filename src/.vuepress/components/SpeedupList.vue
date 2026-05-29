@@ -73,6 +73,7 @@ const data: SpeedupItemType[] = [
       "死に逝く騎士、異世界に響く断末魔",
       "瑠璃櫻",
       "サルテ",
+      "RIDDLE JOKER",
     ],
     valid_name: "krkr_xp3_enc",
     engine: "krkr",
