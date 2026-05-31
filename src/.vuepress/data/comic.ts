@@ -1139,5 +1139,8 @@ export default [
   { id: "606966", aScore: 7.3, bScore: 6.8, info: "#蔚蓝档案 #辣妹 #女性主导", bak: "https://telegra.ph/ありくいVライン-おおおおありくい-赤裸々のキララ-ブルーアーカイブ-中国翻訳-DL版-11-01-4" },
   { id: "606889", aScore: 7.6, bScore: 5, info: "#偶像大师 #百合 #巨乳", bak: "https://telegra.ph/C106-ぐつとま-タチ-あまやかしがえし-学園アイドルマスター-中国翻訳-10-31-2" },
   { id: "652110", aScore: 8, bScore: 6.5, info: "#明日方舟 #简笔 #兽耳", bak: "https://telegra.ph/Eternal-frost-迷迭香和正太的爱爱游戏明日方舟-中国語-05-23-2" },
+  { id: "607764", aScore: 6, bScore: 6.5, info: "#自慰 #玩具", bak: "https://telegra.ph/純銀星-たかしな浅妃-彼氏にいえない秘密のあそび-中国翻訳-DL版-11-03-2" },
+  { id: "607579", aScore: 6.6, bScore: 7.8, order: 1, info: "#百合 #教室 #同学", bak: "https://telegra.ph/白玉もち-實藤さんが好き-第一話-コミックメガストア-Vol19-中国翻訳-11-03-2" },
+  { id: "607580", aScore: 6.9, bScore: 8.2, info: "#兄妹 #浴室", bak: "https://telegra.ph/パンダが一匹-コミズミコ-瞬夏-私と兄の夏休み-中国翻訳-DL版-11-03-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

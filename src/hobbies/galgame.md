@@ -122,6 +122,13 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #RIDDLEJOKER>
+
+- _弥生月膜法研究院_ 的汉化，怎么一股东北味儿
+- 难绷，绳降失误在外面快死了，怎么还有空余的手能打电话的
+- 男主和七海的夜间侵入，七海有一句恐慌（panic）的语音，我 day 到 rua，是 trojan-go！（特洛伊木马，上啊！）
+
+</template>
 <template #Rewrite>
 
 - 2011 年的游戏已经有语音加速了，大赢特赢啊。这是我玩到有语音加速的最早的游戏了。
