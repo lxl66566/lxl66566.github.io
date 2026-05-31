@@ -213,6 +213,8 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
     }
   },
   ```
+- `Ctrl + Shift + C` 默认可以打开 external terminal（非集成终端）。在 AI 时代快速打开一个 external 然后进入 opencode 等 cli agent 是一个非常有用的技巧。（因为这种玩意有各种快捷键冲突所以无法运行在集成终端）
+  - 但是在 WSL 里用不了。
 
 ## 编写插件
 

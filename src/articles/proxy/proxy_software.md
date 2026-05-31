@@ -182,6 +182,7 @@ scoop install v2raya
 
 之后的操作都在网页上 (`127.0.0.1:2017`) 进行。
 
+- V2rayA 运行需要系统已经安装 nftables 或 iptables。
 - 如果你不开透明代理，则代理端口最好使用 `http://127.0.0.1:20172`，这个端口带有分流。
 - 如果你开启透明代理，可以将分流规则选成 [RoutingA](https://v2raya.org/docs/manual/routinga/)，然后透明代理分流与端口分流一致。这样方便自定义直连或代理的规则。
   - v2rayA 的 RoutingA 咋一看和 dae 配置挺像，其实还是有挺大不同的，比 dae 更严格，例如不允许在括号中间换行。
@@ -204,9 +205,11 @@ v2ray 的 Android 前端。不太好用。
 
 ## sing-box 系
 
-_sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 _The universal proxy platform_，以支持的协议多闻名。<heimu>缺点就是 bug 也多。</heimu>
+_sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 _The universal proxy platform_，以支持的协议多闻名。<heimu>缺点就是（早期）bug 也多。</heimu>
 
-sing-box 的一个特点是会打开致死量的本地端口，大约 2000 个。这样的优点是抗干扰，在公司内网环境下容易绕过封锁；缺点则是会导致本机端口扫描变慢、与其他占用端口的程序冲突概率变大等。
+sing-box 发展到现在已经进行了大量优化，在内存占用、协议丰富度、CPU 性能方面都没什么短板。
+
+sing-box client 的一个特点是会打开致死量的本地端口，大约 2000 个。这样的优点是抗干扰，容易绕过封锁；缺点则是会导致本机端口扫描变慢、与其他占用端口的程序冲突概率变大等。
 
 - [NekoBox](https://github.com/MatsuriDayo/NekoBoxForAndroid)：Matsuri 的继任，Android 端的好选择。
 - [Matsuri](https://github.com/MatsuriDayo/Matsuri)：项目已 archived。

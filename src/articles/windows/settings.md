@@ -118,7 +118,7 @@ tag:
     ```
 - 还需要下载其他的关键软件。
   - [DirectX 修复工具](https://www.puresys.net/5055.html)，图吧工具箱里也有。
-- [安装 WSL](../linux/install_and_config.md#安装)
+- [安装与配置 WSL](../linux/install_and_config.md#安装)
 - 解决[端口随机占用](./usage#端口随机占用)
 - 关闭自动更新。
   1. [组策略编辑器](https://answers.microsoft.com/zh-hans/windows/forum/all/要彻底关闭win11/3c448d50-2e7f-42df-9fdb-f7f9aa9820ec)内关闭

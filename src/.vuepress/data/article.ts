@@ -6,7 +6,7 @@ const links: ArticleCellBoxType[] = [
     links: [
       { text: "前言", url: "./linux/index" },
       { text: "基础", url: "./linux/basic" },
-      { text: "安装与配置（Nix 篇）", url: "./linux/nix" },
+      { text: "安装与配置（NixOS 篇）", url: "./linux/nix" },
       { text: "安装与配置（Arch 篇）", url: "./linux/install_and_config" },
       { text: "安装与配置（OpenWRT 篇）", url: "./linux/openwrt" },
       { text: "包管理与使用推荐", url: "./linux/package" },
@@ -39,6 +39,7 @@ const links: ArticleCellBoxType[] = [
       { text: "域名", url: "./proxy/domain" },
       { text: "Hysteria2 协议的使用", url: "./proxy/hysteria" },
       { text: "trojan 协议的使用", url: "./proxy/trojan" },
+      { text: "TUIC 协议的使用", url: "./proxy/tuic" },
       { text: "external", url: "./proxy/index" },
     ],
   },

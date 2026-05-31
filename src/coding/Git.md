@@ -320,6 +320,19 @@ git rm --cached filename.xxx -r  # --cached 指仅删除仓库内文件，不删
 git checkout [commit_hash] -- <path/to/file>  # 从某个 HEAD 指针恢复文件，注意空格
 ```
 
+### 暂存变更
+
+`git stash` 可以帮助你保存当前代码，本质上 stash 是一种特殊的 commit。虽然我用了“暂存”这个词，但是与 git add 添加进的“暂存区”完全是两个东西。
+
+```sh
+git stash                  # 临时保存代码（仅限于 tracked）
+git stash pop              # 恢复之前 stash 的代码（如果恢复成功，则这个 stash 的节点会被删除）
+git stash drop             # 强行删除最近 stash 的代码（不恢复到工作区）
+git stash apply --index    # 恢复之前 stash 的代码，并且不删除 stash 节点
+```
+
+当然也可以使用 `git fetch && git merge`。
+
 ### diff and patch
 
 除了同步仓库，我们也可以将变更导出到文件（patch），并且在另一个设备上恢复这个变更。git diff 的输出就包含了变更，将其重定向到文件就是一个 patch。
@@ -486,19 +499,6 @@ git bash 默认会将中文以 `\` 转义的方式显示。要取消，需要：
 
 1. 右键 - Options - Text - Locale，选择 `zh-CN`，字符选择 `UTF-8`。
 2. `git config --global core.quotepath false`
-
-### 协同开发
-
-多人协同开发时，免不了要拉取上游，合并代码，解决冲突。`git stash` 可以帮助你保存当前代码，之后若有需要，还可合并与解决冲突。
-
-```sh
-git stash   # 暂存代码
-git pull origin main    # 拉取上游
-git stash pop   # 释放代码，进行合并
-git stash drop  # 解决冲突后，请释放未被 pop 出的 stash
-```
-
-当然也可以使用 `git fetch && git merge`。
 
 ### 合并 Pull request
 

@@ -28,7 +28,7 @@ tag:
 
 2025 年的一篇 [《揭示并绕过中国防火长城基于 SNI 的 QUIC 封锁机制》](./index.md#external) 大幅提高了 hysteria2 的地位：QUIC 流量拥有豁免机制，在一众代理协议中脱颖而出。
 
-最容易利用的豁免机制是 **源端口 <= 目标端口**。只需要使用 nftables 或其他流量转发机制，将 VPS 的高位端口 inbound 转发到 hysteria2 的真实低位端口，即可实现双向 QUIC 流量均被豁免。由于代理软件通常也使用高位端口，因此 VPS 上的端口号需要设成极端的高（我使用 65533）；而 hysteria2 的低位端口最好也要设得更低。
+最容易利用的豁免机制是 **源端口 <= 目标端口**。只需要使用 nftables 或其他流量转发机制，将 VPS 的高位端口 inbound 转发到 hysteria2 的真实低位端口，即可实现双向 QUIC 流量均被豁免。由于代理软件通常也使用高位端口，因此 VPS 上的端口号需要设成极端的高（我使用 65533）；而 hysteria2 的低位端口最好也要设得更低。当然，由于 hysteria2 天然支持端口跳跃（其本身也是基于 nftables/iptables 实现的），你也可以将一个 range 的端口全部转到 server 端口上，然后在客户端开启端口跳跃即可。
 
 ```nftables
 table inet nat {
@@ -37,6 +37,9 @@ table inet nat {
     # 将外部流入的流量从 65533 端口重定向到 5497 端口
     tcp dport 65533 redirect to :5497
     udp dport 65533 redirect to :5497
+    # 如果开启了端口跳跃的配置
+    # tcp dport 65501-65533 redirect to 5497
+    # udp dport 65501-65533 redirect to 5497
   }
 }
 ```

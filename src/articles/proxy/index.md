@@ -15,6 +15,7 @@ tag:
 3. [VPS](./vps.md)
 4. [hysteria 协议的使用](./hysteria.md)
 5. [trojan 协议与服务端](./trojan.md)
+6. [TUIC 协议的使用](./tuic.md)
 
 ## external
 

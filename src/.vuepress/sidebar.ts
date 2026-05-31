@@ -50,6 +50,7 @@ export default sidebar({
     "proxy_software.md",
     "hysteria.md",
     "trojan.md",
+    "tuic.md",
   ],
   "/articles/browser/": ["index.md", "assess.md", "settings.md"],
   "/articles/": [

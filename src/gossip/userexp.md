@@ -182,6 +182,18 @@ $env.config.completions.external = {
 - 不同文件夹下打开 opencode，session 不共用，我还以为 session 丢了。
 - opencode 内存占用高已经是特性了，一直都有人提，但是也没人想改。90 天后 issue 就自动关闭了。
 - opencode 处理中文输入法总是有点问题，有时候切了输入法但是还是只能写英文。这个 bug 是偶发，我还没有稳定复现的案例。
+- oepncode 的 permission 规则是最后优先，也就是具体规则放后面，感觉还是挺抽象的。例如：
+  ```json
+  {
+    "permission": {
+      "bash": {
+        "git *": "allow",
+        "git push *": "deny"
+      }
+    }
+  }
+  ```
+- oepncode 的 permission 会把 `*` 和 `?` 给重新解释，但是[没有提供转义功能](https://github.com/anomalyco/opencode/blob/28a06e52fcfaea87a749e4e4c9a74d90b3195fb0/packages/opencode/src/util/wildcard.ts#L3-L9)，你永远无法对包含 raw `*` 和 `?` 字符的命令进行权限控制。
 
 总的来说，opencode 作为一个 agent，基本功能还行。但是在使用体验上仍需改进。
 

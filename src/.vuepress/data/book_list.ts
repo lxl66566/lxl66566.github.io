@@ -5,7 +5,8 @@ const original_list: BookItemInputType[] = [
     name: "修真四万年",
     author: "卧牛真人",
     reading_status: {
-      kind: "在读",
+      kind: "已放弃",
+      extra: "欣赏不来",
     },
     duration: {
       start: "2026-05-10",
