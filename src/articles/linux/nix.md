@@ -332,9 +332,11 @@ NixOS 的哲学是可复现，而 KDE 家的东西可复现性实在是太差了
 niri 有两种安装方法：
 
 - 一个是直接用 nixpkgs 里的 niri 包，直接 `programs.niri.enable = true;` 即可，配置自己写 `niri.kdl` 然后用 home-manager 链到合适的地方。
-- 另一个是用第三方的 [niri-flake](https://github.com/sodiboo/niri-flake/)。
+- 另一个是用第三方的 ~~[niri-flake](https://github.com/sodiboo/niri-flake/)~~ [niri-flake-pure](https://github.com/lxl66566/niri-flake-pure)。
 
-这两个方式具体哪个更好，一直有人持不同意见。目前看社区，第一种方式比较占上风，因为 niri-flake 写得确实狗屎[^fuck-niri-flake]。具体要使用哪种，我的观点是：如果你需要 1. 追 niri 的最新版本 2. 在不同的电脑上使用不同的 niri 配置 3. 或者有一些模块化配置具有侵入性，需要修改 niri 的部分配置。那就用 niri-flake，可以借用 nixos 的配置合并等机制。否则就用 kdl 吧。
+这两个方式具体哪个更好，一直有人持不同意见。目前看社区，第一种方式比较占上风，因为原生 niri-flake 写得确实狗屎[^fuck-niri-flake]。所以我自己 fork 了一个 pure 版本，移除了动态的 fetchGit 和所有 xwayland-satellite-stable 等 input。
+
+具体要使用哪种，我的观点是：如果你需要 1. 追 niri 的最新版本 2. 在不同的电脑上使用不同的 niri 配置 3. 或者有一些模块化配置具有侵入性，需要修改 niri 的部分配置。那就用 niri-flake，可以借用 nixos 的配置合并等机制。否则就用 kdl 吧。
 
 [^fuck-niri-flake]: 1. niri-flake 会让你每次 rebuild 都去拉 pipewire-rs 和 smithay ([ref](https://t.me/withabsolutex/2718))。
 

@@ -237,6 +237,7 @@ V3 也是在花里胡哨的道路上越走越远，但是我感觉还是不如 2
 - 来自新世界
 - 钢之炼金术师
 - 暗杀教室
+- よくわかる現代魔法
 
 <script lang="ts" setup>
 import AnimeList from "@AnimeList";
