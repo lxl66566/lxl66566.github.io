@@ -116,7 +116,9 @@ _Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](http
 V2rayN 是各种代理内核的前端，跨平台（windows + linux + macos）。
 
 1. ~~前往 PC 客户端项目地址，下载 `v2rayN-With-Core.zip`。（我以前是自己配内核的，但是后来发现问题太多了，还有跨版本兼容性，真不如 with core）~~ 现在 Release 里的下载都已经默认 with core 了，用户不需要关注这些。
-   - 根据[官方说明](https://github.com/2dust/v2rayN/wiki/Release-files-introduction)，现在 V2rayN windows 有 WPF 实现和 Avalonia UI 实现两种，用户可以任选其一下载。我更推荐 Avalonia UI，毕竟性能差不多，但是看着感觉更现代。WPF 在开启 GPU 加速下的 bug 还是有一些的。
+   - 根据[官方说明](https://github.com/2dust/v2rayN/wiki/Release-files-introduction)，现在 V2rayN windows 有 WPF 实现和 Avalonia UI 实现两种，用户可以任选其一下载。我更推荐 Avalonia UI，毕竟性能差不多，但是看着感觉更现代。
+   - WPF 前端在开启 GPU 加速下的 bug 还是有一些的。
+   - 但是 Avalonia UI 前端居然没法调日志等级，默认只有 warn，感觉很蠢。
 2. 复制节点地址，按 `Ctrl+V` 导入，按 `Enter` 激活。
 3. `Ctrl + R` 测试真连接延迟，确保节点有效。
 4. 下方 _系统代理_ 处选择 _自动配置系统代理_，开启代理。

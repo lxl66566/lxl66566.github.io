@@ -254,6 +254,7 @@ tag:
 - ~~社区不合，drama 不断~~（虽然跟普通用户没啥关系）
 - 图形化安装界面垃圾，minimal 镜像缺功能
 - home manager 很捞，breaking changes 多。
+- 由于怎么写 flake 没有限制，社区里有非常多狗屎 flake，稍有不慎就会被恶心到，然后花远超于其价值的时间来处理问题。
 
 Nix 语言本身：
 

@@ -338,7 +338,7 @@ niri 有两种安装方法：
 
 具体要使用哪种，我的观点是：如果你需要 1. 追 niri 的最新版本 2. 在不同的电脑上使用不同的 niri 配置 3. 或者有一些模块化配置具有侵入性，需要修改 niri 的部分配置。那就用 niri-flake，可以借用 nixos 的配置合并等机制。否则就用 kdl 吧。
 
-[^fuck-niri-flake]: 1. niri-flake 会让你每次 rebuild 都去拉 pipewire-rs 和 smithay ([ref](https://t.me/withabsolutex/2718))。
+[^fuck-niri-flake]: 1. 早期的 niri-flake 甚至无法构造出某些合法的 kdl 配置。 2. 现有问题，niri-flake 会让你每次 rebuild 都去拉 pipewire-rs 和 smithay ([ref](https://t.me/withabsolutex/2718))。
 
 我最开始用的是自己写 kdl。但是现在我的模块很多有侵入性的，并且我不喜欢 kdl 这种配置语言 [ref1](https://t.me/withabsolutex/1995) [ref2](https://t.me/withabsolutex/2462)，所以我使用 niri-flake。
 
@@ -512,7 +512,7 @@ sudo systemctl restart nix-daemon
 
 问题二：WSL2 的 mirrord 网络[问题太多了](../../gossip/fuckxxx.md#wsl-有多难用)，其中最大的问题是 tcp 建连关闭端口本来应该收到 RST，结果现在收不到 RST 而直接 timeout ([issue](https://github.com/microsoft/WSL/issues/10855))。如果你关闭了 mirrord，那么自然就没法通过 127.0.0.1 访问 windows 代理端口。这时候我们可以将代理设为：`https://_gateway:<port>`。NixOS-WSL 的内置 nss-lookup 会自动把 _gateway 解析到网关 ip，也就是你 windows 的 ip。
 
-问题三：虽然将代理设为 `https://_gateway:<port>` 可以在 cli 里解析，curl 也能正常用，但是 nix-daemon 可不这么想，curl 作为 nix-daemon 的子进程运行时，无法通过系统的 nss-lookup 找到 _gateway 的映射，因此 nixos-rebuild 时仍然会 `Could not resolve proxy: _gateway`。最后我只能放弃 _gateway，改成给 nix-daemon 运行时注入 env：
+问题三：虽然将代理设为 `https://_gateway:<port>` 可以在 cli 里解析，curl 也能正常用，但是 nix-daemon 可不这么想，curl 在 nix-daemon 的构建沙盒里运行时，无法通过系统的 nss-lookup 找到 `_gateway` 的映射，因此 nixos-rebuild 时仍然会 `Could not resolve proxy: _gateway`。最后我只能在 nix-daemon 里放弃 `_gateway`，改成运行时注入 env：
 
 ```nix
 systemd.services.nix-daemon = {
@@ -542,9 +542,58 @@ systemd.services.nix-daemon = {
 };
 ```
 
-问题四：如果你使用了 niri-flake，则 nixos rebuild switch 时也需要联网，如果你把网络搞炸了，也不好直接通过 rebuild 修，只能先[回滚到之前的版本](#nix-command)，修好再 rebuild 再重试。
+问题四：现在 nix-daemon 注入了 proxy env，构建时去拉 substituters 已经没问题了。但是如果你的 flake 有更新，nix/lix 去拉 flake input 的时候又会 5 次超时，报错 `_gateway` 无法解析。这时候尝试把终端 proxy env 换成真实 ipv4，则又可以成功 fetch 到 flake input。经过一番调查，发现：无论是 nix/lix，它们都会在 init 时（早于 eval 阶段）[去设置 dns lookup source](https://github.com/NixOS/nix/blob/cbbc07c6b04f5ecfae73f1504aaa7a4bdddbd84c/src/libstore/globals.cc#L567)，这里的 FIXME 提到目前不会去 nss 拉。而 WSL 的 `_gateway` 解析就是在 nss-myhostname 插件里处理的，所以 eval 时自然也没法解析。
 
-总之，在经历了如此一大串尝试、期间几度想要放弃在 NixOS-WSL 内使用 windows 代理后，我最终还是找到了上述那些方法来使用 windows 代理。
+因此我只好放弃 `_gateway`，改为在各种 shell init 的时候，去注入 ipv4 的 proxy env。
+
+```nix
+# /run/nix-daemon-proxy.env 之前已经在 nix-daemon 的 preStart 里写入了
+home-manager.users."${username}" =
+  let
+    sshProxyScript = pkgs.writeShellScript "ssh-gateway-proxy" ''
+      GATEWAY_IP=$(${pkgs.iproute2}/bin/ip route show default | ${pkgs.gawk}/bin/awk '{print $3}' 2>/dev/null)
+      if [ -n "$GATEWAY_IP" ]; then
+        exec ${pkgs.corkscrew}/bin/corkscrew "$GATEWAY_IP" 10450 "$@"
+      else
+        exit 1
+      fi
+    '';
+  in
+  {
+    programs = {
+      bash = {
+        enable = true;
+        initExtra = ''
+          set -a; . /run/nix-daemon-proxy.env 2>/dev/null; set +a
+        '';
+      };
+      fish = {
+        enable = true;
+        shellInit = ''
+          if test -f /run/nix-daemon-proxy.env
+            for line in (cat /run/nix-daemon-proxy.env)
+              # 跳过空行
+              if test -z "$line"
+                continue
+              end
+              # 拆分并存入局部变量 kv
+              set -l kv (string split -m1 = -- $line)
+              # 确保成功拆分成了 Key 和 Value 两个部分
+              if test (count $kv) -eq 2
+                set -gx $kv[1] $kv[2]
+              end
+            end
+          end
+        '';
+      };
+      ssh.matchBlocks."*".proxyCommand = "${sshProxyScript} %h %p";
+    };
+  };
+```
+
+问题五：这玩意和 [niri-flake](#图形桌面) 打出了一套巨痛的连招，因为 niri-flake 会让每次 rebuild 时都需要 fetchGit 联网，如果你把网络搞炸了，就没法直接通过 rebuild 修，只能先[回滚到之前的版本](#nix-command)，修好再 rebuild 再重试。
+
+总之，在经历了如此一大串尝试、期间几度想要放弃在 NixOS-WSL 内使用 windows 代理后，我最终还是折腾出了一套使用 windows 代理的方法。
 
 ### 备份
 
@@ -718,6 +767,15 @@ nix-tree .#nixosConfigurations.<hostname>.config.system.build.toplevel --impure
 实测是需要先使用 `nix why-depends` 进行 build 后，再用 `nix-tree` 进行查询，否则会爆 `nix-tree: user error (Invalid path: ... Make sure that it is built, or pass '--derivation' if you want to work on the derivation.)`。因为我是远程的配置，还没安装呢！当然没 build 过。不过抛开这个特性不谈，nix-tree 还是好用的。
 
 找到了一个占用 3G 多的罪魁祸首 prettybat，直接把它干掉了。后续也找到 yazi 引入 ffmpeg 占用了 1.1G，也干掉了。
+
+---
+
+另外，清理当前环境，还有几个老生常谈，简单带过：
+
+```sh
+nix-collect-garbage -d
+nix-store --optimise
+```
 
 ## 优势与劝退
 
