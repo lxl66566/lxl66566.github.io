@@ -1142,5 +1142,15 @@ export default [
   { id: "607764", aScore: 6, bScore: 6.5, info: "#自慰 #玩具", bak: "https://telegra.ph/純銀星-たかしな浅妃-彼氏にいえない秘密のあそび-中国翻訳-DL版-11-03-2" },
   { id: "607579", aScore: 6.6, bScore: 7.8, order: 1, info: "#百合 #教室 #同学", bak: "https://telegra.ph/白玉もち-實藤さんが好き-第一話-コミックメガストア-Vol19-中国翻訳-11-03-2" },
   { id: "607580", aScore: 6.9, bScore: 8.2, info: "#兄妹 #浴室", bak: "https://telegra.ph/パンダが一匹-コミズミコ-瞬夏-私と兄の夏休み-中国翻訳-DL版-11-03-2" },
+  { id: "607734", aScore: 7.6, bScore: 7.2, info: "#兄妹 #装睡", bak: "https://telegra.ph/朝の曲がり角-とおさきじゅん-兄は妹とヤりたい-中国翻訳-11-03-3" },
+  { id: "607747", aScore: 7.4, bScore: 6.5, info: "#蔚蓝档案 #自慰 #兽耳 #抖M #黑丝 #拘束", bak: "https://telegra.ph/くへんリパブリック-クヘン拾-先生の雌犬になります後日談edition-ブルーアーカイブ-中国翻訳-DL版-11-03-3" },
+  { id: "653719", aScore: 6.8, bScore: 7, info: "#师生 #白毛 #雌小鬼 #厕所", bak: "https://telegra.ph/Regnenshower-しばあめ-なまいきJSとイチャラブSEXしたい中国翻訳-DL版-05-31" },
+  { id: "653210", aScore: 8.7, bScore: 4, info: "#短篇 #3P #OC", bak: "https://telegra.ph/Number2-たくじ-たくじ本2021ふゆ-プリンセスコネクトReDive-DL版中国翻訳-05-30" },
+  { id: "653958", aScore: 8.2, bScore: 7.1, info: "#青梅 #贫乳 #自慰", bak: "https://telegra.ph/くろねろ-止めたい彼と見せたい私-中国翻訳-06-02" },
+  { id: "607962", aScore: 7.3, bScore: 7.8, info: "#教室 #师生 #同学", bak: "https://telegra.ph/背中が尻-つま先は夕景-愛を注いで-中国翻訳-DL版-11-05-2" },
+  { id: "607963", aScore: 5, bScore: 7.8, order: 2, info: "#居家 #周末", bak: "https://telegra.ph/ひやしまくら-続女友達と過ごすまったりイチャラブHな休日-町田さん編-中国翻訳-DL版-11-05-2" },
+  { id: "608001", aScore: 8.3, bScore: 8.9, info: "#触手 #全彩 #浴室 #单女主", bak: "https://telegra.ph/アスヒコウ-旅川結糸-2月1日私は触手と出会った-11-05-2" },
+  { id: "(ex)", aScore: 6.5, bScore: 7.7, info: "#卡拉OK #短发 #快楽天", bak: "https://telegra.ph/ももこ-カラオケ逆ナン物語-COMIC-快楽天-2025年11月号-中文翻譯-11-04-2" },
+  { id: "653252", aScore: 6.7, bScore: 7.7, info: "#异世界 #loli #风俗 #卖淫", bak: "https://telegra.ph/とんこつふうみ-ぽんこっちゃん-みならい魔法使い見抜き屋で働く-DL版-中国翻訳-05-29" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
