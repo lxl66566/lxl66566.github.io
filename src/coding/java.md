@@ -391,6 +391,23 @@ idea 有社区版，这个是免费的，不需要破解，理论上也够用，
 
 也可以用项目里配置的 gradle 锁定版本，好处是和别人运行起来完全一致，不过可能导致多个 gradle 版本共存。如果运行 `./gradlew build`，脚本会帮你下载对应版本的 gradle，而且下载得还贼慢。。。<heimu>不会做下载器就别做。</heimu> 此时需要自己下载，然后把整个 zip 放到 `C:\Users\<用户名>\.gradle\wrapper\dists\gradle-版本-bin\<一串随机乱码>\` 下。
 
+#### 配置
+
+gradle 的配置还是很重要的，好的配置可以大幅加速编译、避免内存占用。推荐将配置放在 `~/.gradle/gradle.properties` 作为全局配置，所有项目生效。
+
+1. 避免多开 gradle 进程：gradle 复用同一个 daemon 的前提是 gradle 版本、JDK 路径、JVM 参数完全一致。需要确保不同项目之间使用的是同一份配置（全局配置），编辑器里不要配一些可能修改 gradle/JVM 参数的东西。
+   ```gradle
+   org.gradle.daemon=true
+   org.gradle.jvmargs=-Xmx4g -XX:+HeapDumpOnOutOfMemoryError -XX:+UseG1GC
+   org.gradle.caching=true
+   org.gradle.parallel=true
+   org.gradle.configuration-cache=true
+   org.gradle.configuration-cache.parallel=true
+   org.gradle.vfs.watch=true
+   org.gradle.configureondemand=true
+   ```
+2. 平常跑的时候就直接用 gradle xxx，不要带其他参数。不要用 `--no-daemon`，那个很慢。
+
 #### 杂
 
 - gradle clean 只会清理项目下的 `build/` 文件夹。如果你使用 vscode 开发可能还会有 `bin/` 文件夹，这是 _Language Support for Java(TM) by Red Hat_ 进行静态分析的产物，跟 gradle 没有关系。
