@@ -21,8 +21,7 @@ tag:
 
 1. [如何正确地叫外卖](https://type.cyhsu.xyz/2018/02/how-to-request-a-takeout-behind-a-wall/)
 2. [中国的防火长城是如何检测和封锁完全加密流量的](https://gfw.report/publications/usenixsecurity23/zh/)
-3. [ChromeGo - Chrome 一键翻墙包](https://github.com/bannedbook/fanqiang)
-4. [揭示并绕过中国防火长城基于 SNI 的 QUIC 封锁机制](https://gfw.report/publications/usenixsecurity25/zh/)
-5. [为什么你不该选择移动运营商](https://blog.csdn.net/liulilittle/article/details/148267930)
-6. [杀死那只鹦鹉 —— 「白话文」讲解一种探测 XTLS VLESS REALITY 的手段](https://blog.skk.moe/post/to-kill-a-parrot-detecting-xtls-vless-reality-server/)
-7. [浅谈在代理环境中的 DNS 解析行为](https://blog.skk.moe/post/what-happend-to-dns-in-proxy/)
+3. [揭示并绕过中国防火长城基于 SNI 的 QUIC 封锁机制](https://gfw.report/publications/usenixsecurity25/zh/)
+4. [为什么你不该选择移动运营商](https://blog.csdn.net/liulilittle/article/details/148267930)
+5. [杀死那只鹦鹉 —— 「白话文」讲解一种探测 XTLS VLESS REALITY 的手段](https://blog.skk.moe/post/to-kill-a-parrot-detecting-xtls-vless-reality-server/)
+6. [浅谈在代理环境中的 DNS 解析行为](https://blog.skk.moe/post/what-happend-to-dns-in-proxy/)
