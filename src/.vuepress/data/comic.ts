@@ -1163,5 +1163,6 @@ export default [
   { id: "653078", aScore: 5.7, bScore: 6, info: "#尾巴 #loli #原创", bak: "https://telegra.ph/ふつうのタピオカやさん-ふたつのピーナツ-リッツとひみつの鍛錬-トリッカルもちもちほっぺ大作戦-DL版-05-28" },
   { id: "652848", aScore: 6.7, bScore: 7.8, info: "#同学 #纯爱 #体操服", bak: "https://telegra.ph/オオカミうおあこがれの季節COMIC-LOE-VOL15-花蕾中国翻訳-DL版-05-27" },
   { id: "652829", aScore: 6.2, bScore: 6.1, info: "#痴汉 #NTR #强奸 #水手服 #书包 #多P", bak: "https://telegra.ph/てっちゃんハト-みなすきぽぷり-痴漢は許さない-中国翻訳-DL版-05-27" },
+  { id: "608089", aScore: 7.3, bScore: 9.1, info: "#战败 #明日方舟 #强暴 #兽耳 #兽尾", bak: "https://telegra.ph/白魚京-心胎へ治める-アークナイツ-中国翻訳-11-06-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
