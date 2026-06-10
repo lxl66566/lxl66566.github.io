@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 07 Jun 2026 15:19:16 GMT</pubDate>
-    <lastBuildDate>Sun, 07 Jun 2026 15:19:16 GMT</lastBuildDate>
+    <pubDate>Wed, 10 Jun 2026 03:32:32 GMT</pubDate>
+    <lastBuildDate>Wed, 10 Jun 2026 03:32:32 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -571,7 +571,7 @@
 <ul>
 <li><a href="https://www.okx.com/zh-hans/help/section/announcements-latest-announcements" target="_blank" rel="noopener noreferrer">OKX 公告</a>
 <ul>
-<li>我自己用 RSSHub 做了 <a href="https://docs.rsshub.app/zh/routes/finance#%E6%AC%A7%E6%98%93-okx" target="_blank" rel="noopener noreferrer">OKX 的公告订阅</a>，欢迎使用。但是话又说回来，OKX 的公告基本都是“事后公告”，也就是先上了币才发公告，所以没什么用，不如去 APP 里看活动。</li>
+<li>我自己用 RSSHub 做了 <a href="https://docs.rsshub.app/zh/routes/okx" target="_blank" rel="noopener noreferrer">OKX 的公告订阅</a>，欢迎使用。但是话又说回来，OKX 的公告基本都是“事后公告”，也就是先上了币才发公告，所以没什么用，不如去 APP 里看活动。</li>
 </ul>
 </li>
 </ul>
