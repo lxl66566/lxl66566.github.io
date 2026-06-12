@@ -194,6 +194,39 @@ $env.config.completions.external = {
   }
   ```
 - oepncode 的 permission 会把 `*` 和 `?` 给重新解释，但是[没有提供转义功能](https://github.com/anomalyco/opencode/blob/28a06e52fcfaea87a749e4e4c9a74d90b3195fb0/packages/opencode/src/util/wildcard.ts#L3-L9)，你永远无法对包含 raw `*` 和 `?` 字符的命令进行权限控制。
+- opencode 要让主 agent 使用特定模型的 subagent，这个需求应该非常常见（处于成本的考量），但是 opencode 的文档显然不够好。我是靠自己摸索才搞出能 work 的配置（我用 GLM 5.1 作为主 agent，用 deepseek v4 flash max thinking 作为子 agent）：
+  ```json
+  {
+    "$schema": "https://opencode.ai/config.json",
+    "model": "zai-coding-plan/glm-5.1",
+    "agent": {
+      "general": {
+        "mode": "subagent",
+        "model": "deepseek/deepseek-v4-flash",
+        "thinking": {
+          "type": "enabled",
+          "budgetTokens": 32768
+        }
+      },
+      "explore": {
+        "mode": "subagent",
+        "model": "deepseek/deepseek-v4-flash",
+        "thinking": {
+          "type": "enabled",
+          "budgetTokens": 32768
+        }
+      },
+      "scout": {
+        "mode": "subagent",
+        "model": "deepseek/deepseek-v4-flash",
+        "thinking": {
+          "type": "enabled",
+          "budgetTokens": 32768
+        }
+      }
+    }
+  }
+  ```
 
 总的来说，opencode 作为一个 agent，基本功能还行。但是在使用体验上仍需改进。
 

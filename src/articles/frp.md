@@ -27,6 +27,11 @@ tag:
 - 默认情况下它会将你的服务器连到大网络里，消耗你的流量；需要注意开启 private-mode 进行网络隔离，或者开启 relay-network-whitelist + relay-all-peer-rpc 只允许帮助 p2p 连接。
 - easytier 默认是**没有过墙能力**的，但是如果把入端口搞得足够小，流量就可以走到 [quic 豁免](./proxy/index.md#external)。（easytier 也可以接 socks5 代理但是我懒得搞）。所以 quic 对我来说是刚需，然而文档里的 quic 是子网代理 quic 而不是 peer 通信 quic，确实把我迷惑了一阵。要让 peer 走 quic，只要把 scheme 改为 `quic`，选一个小端口，然后配置里添加 `flags.default_protocol = "quic";` 即可。
 
+随便再说点其他的：
+
+- 由于这个服务相当重要（如果 easytier 挂了，就没法从公网重新连到内网 server），所以我给这个 systemd 服务加了失败自动拉起。
+- easytier 的 quic 做得相对比较糟糕，比如 [2.6.x 引入了 quic 的破坏性变更导致和 2.4.5 不兼容](https://github.com/EasyTier/EasyTier/issues/2167)并且在 release note 里没有说明；即使是 2.6.4 这个 stable release，还仍然可能发生长时间运行后 server 突然疯狂报超时无法连接到其他节点，因此我还得加一个每天定时重启这个服务的 timer。
+
 ## cloudflare tunnel
 
 折腾完了其他几个服务我才想到 cloudflare，一搜，果然有。

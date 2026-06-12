@@ -22,6 +22,14 @@ tag:
 
 在 _设置_ 页右上角可以 `打开设置（json）`，我经常需要直接编辑配置文件。[这里](https://github.com/lxl66566/backup/blob/main/config/vscode/settings.json)是我的全局配置文件。
 
+### 关闭 copilot
+
+微软的吃相实在是太难看了，之前也因为 copilot 闹出过不少丑闻 [^fuckvscode]，还把好多人逼去了 zed（跳进了另一坨粪坑）。还好 copilot 的功能目前还是可以关闭的。
+
+[^fuckvscode]: [你的提交会被自动加上 co-author-by，即使你根本没有用 vscode 的 copilot](https://github.com/microsoft/vscode/pull/310226)。最荒谬的是这个 PR 还被 merged 了（虽然之后 [set default value to off](https://github.com/microsoft/vscode/pull/313931) 了）。
+
+在使用 vscode 之前，请按下 `Ctrl + ,`，搜索 copilot，然后打开 `Chat: Disable AI Features`。
+
 ### 快捷键
 
 这里是我比较常用的快捷键。

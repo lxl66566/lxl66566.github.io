@@ -103,7 +103,7 @@ tag:
 
 ### 抓包
 
-虽然很多人可能没有抓包的需求，不过如果你是搞技术的，那我还是要推荐一下 [mitmproxy](https://www.mitmproxy.org/) 的。只要安装一个它提供的根证书，抓 https 就跟透明的一样，而且有一个网页界面可以方便地查看结果。
+虽然很多人可能没有抓包的需求，不过如果你是搞技术的，那我还是要推荐一下 [mitmproxy](https://www.mitmproxy.org/) 的。只要安装一个它提供的根证书，抓 https 就跟透明的一样，而且有一个网页界面可以查看结果。当然，如果觉得 mitmproxy 的界面难看，操作难用（这些确实是我想吐槽的），也可以看看 vibe coding 的 [oproxy](https://github.com/sauravrao637/oproxy)。（但是我看到大菊花我也不太想用 oproxy）
 
 当然，如果需要抓非 https 的包，那还是推荐老牌 wireshark。
 
