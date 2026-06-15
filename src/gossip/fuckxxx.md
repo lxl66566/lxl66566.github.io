@@ -75,6 +75,11 @@ tag:
   - 该爆 args type not match 时爆 `Method xxx was not found`
   - 各种输入用 `&[InvocationArg]` 包，结果包的 api 跟屎一样
 
+#### 一些没有那么垃圾但是用起来不太爽的库
+
+- criterion：基本算是 rust benchmark 唯一解了。还是有一些难用的地方的：
+  - sample size 必须 >= 10。我觉得它可以选择打 warning，可以警告用户 sample time 太少 bench 结果可能误差较大，但是不应该直接禁止用户选择只跑一次的权利。
+
 ### python 有多难用
 
 - python module 看着很方便，实际上仍然过于粗暴，解决不了交叉引用的问题。

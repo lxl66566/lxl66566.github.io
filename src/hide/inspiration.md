@@ -79,8 +79,8 @@ tag:
   - [ ] 跨平台
   - [ ] 通过 config file 可修改所有设置项
 - [x] [bin package manager（release installer）](https://github.com/lxl66566/bpm)
-- [ ] better [xdotool gui](https://github.com/sickcodes/xdotool-gui)
-- [ ] osu beatmap downloader, support stable and lazer
+- [ ] ~~better [xdotool gui](https://github.com/sickcodes/xdotool-gui)~~ 不用了
+- [ ] ~~osu beatmap downloader, support stable and lazer~~ 做了一半，难产了。后来我都不怎么玩 osu 了，然后 osu 又在大力推 lazer。
 - [ ] ~~poetry plugin to import requirements.~~ 我不再使用 poetry；而 uv 有 [uv-migrator](https://github.com/stvnksslr/uv-migrator)
 - [ ] ~~pyshell~~ see [xonsh](https://github.com/xonsh/xonsh)?
 - [ ] 好用的麦克风录音机 + [音频处理](../coding/audio.md)
@@ -94,7 +94,7 @@ tag:
 - [x] [urldecoder](https://github.com/lxl66566/urldecoder)
 - [ ] ~~windows 工具包: alias, ls,~~ use shell function instead, and my [snipets](../coding/snipets.md)
 - [ ] yakuake on windows
-- [ ] ~~更好的静态博客/文档框架~~ 学了点前端发现 vuepress 也没有那么难用，暂时搁置
+- [ ] ~~更好的静态博客/文档框架~~ 学了点前端发现 vuepress 也没有那么难用，暂时搁置。不过后来感觉 vue based 表达力还是太差了。
 - [x] fuck, delete it! (windows)
 - [ ] 代理，自行设计协议，对称加密
   - [ ] 通过虚拟组网方式，各节点设置 inbound/outbound，动态选择路径
@@ -111,13 +111,13 @@ tag:
 - [x] [Telegram RSS bot on cloudflare workers](https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers)
   - [ ] filter
 - [x] rust release ci
-- [ ] kde spectacle ocr plugin
+- [ ] ~~kde spectacle ocr plugin~~ no longer use kde
 - [ ] 分布式服务器监控全栈
 - [ ] 半连接时序神经网络
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
-- [ ] ~~rust TUI easy_download~~ [trauma](https://github.com/rgreinho/trauma)
+- [x] ~~rust TUI easy_download~~ [trauma](https://github.com/rgreinho/trauma)，然后我还贡献了一些
 - [x] [GalgameManager](https://github.com/lxl66566/GalgameManager)
   - [ ] 随机启动
   - [x] 插件与启动链
@@ -137,7 +137,7 @@ tag:
 - [x] ~~windows simple zstd~~ 遇到了[亿些麻烦](https://t.me/withabsolutex/2378)。后来基于更好的 dwarfs 写了个 ([windows-dwarfs-tools](https://github.com/lxl66566/windows-dwarfs-tools))
 - [ ] strbase，基于 string 的关系型 db，git 友好。
 - [ ] minix, mini nix lang
-- [ ] bash compitable modern shell
+- [ ] bash compitable modern shell, support windows
 - [ ] telegram index bot, no ads and reviewed by human
 - [ ] windows fast settings，[Windows11 轻松设置工具](../articles/windows/settings.md#小工具) 的增强版，添加我需要的功能。
 - [ ] ~~rewrite of easytier~~ easytier is actually not bad.
@@ -151,7 +151,7 @@ tag:
   - [ ] ETW trace.
   - [ ] web-based graph display.
 - [x] flake-follows ([idea](https://t.me/absolutexsward/142)) [code](https://gist.github.com/lxl66566/697db0cccd04b7247dc9a0cfb96d328c)
-- [ ] dae to sing-box
+- [x] [dae to sing-box](https://github.com/lxl66566/sing-dae)
 
 <!-- - 转码，复制，参考我的 fish function
 - 平台无关的 alias
@@ -160,7 +160,7 @@ tag:
 ### RIIR
 
 - [ ] scoop
-- [ ] bpm
+- [x] [bpm](https://github.com/lxl66566/bpm-rs/)
   - [x] rust crate: select by arch
 - [x] chnroutes
 - [ ] fail2ban
@@ -168,7 +168,7 @@ tag:
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
 - [ ] reader
 - [ ] sync tools
-- [ ] ~~diskann~~ has been rewriten
+- [ ] ~~diskann~~ has been rewriten by MS
 - [ ] bubblewrap
 
 ### Android
@@ -217,8 +217,6 @@ tag:
 - [x] open bilibili video in mpv -> [成果](https://github.com/lxl66566/auto-play-in-mpv)
 - [ ] AV 找片互助
   - [ ] 接入图片搜索
-- [ ] virtual network cluster，分布式理论同步
-  - [ ] tag 论分区
 - [ ] Galgame 汉化平台。当前在线翻译协作已经非常成熟，但是 Galgame 界的汉化还是封闭的。
   - 对他人的翻译进行反馈
   - 路线图
