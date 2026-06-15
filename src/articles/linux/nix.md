@@ -106,6 +106,18 @@ sudo: a password is required
 
 经过了配置 feature 化改造，现在想要筛选出不需要在我的这个设备上的配置非常简单。但是 NixOS-WSL 其实还有非常非常多的坑，往后面读就知道了。
 
+使用 NixOS-WSL 时最好也再安装一个 ArchWSL，因为微软的 WSL2 + 傻逼 fs ext4 在 NixOS 这种大量小文件 distro 上经常挂，可能要经常把 vhdx 挂到 ArchWSL 上用 fsck 修。至于为啥这么不稳定。。。感觉还是得怪 WSL。
+
+```sh
+# 关机，挂载
+wsl --shutdown
+wsl -d arch --mount --vhd --bare "C:/Users/lxl/AppData/Local/wsl/{72daacb7-af24-4055-bf2a-cec2dd4a35e5}/ext4.vhdx"  # 用你的实际路径
+# 启动，修复
+wsl -d arch
+lsblk
+fsck.ext4 -fvy <device>
+```
+
 @tab 远程安装
 
 - nixos-anywhere 需要[魔法咏唱](https://t.me/nixos_zhcn/687180)，挺麻烦的我不太感兴趣

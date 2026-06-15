@@ -14,6 +14,10 @@ tag:
 
 关于软件推荐请前往[杂项 - 软件汇总](../../farraginous/recommend_packages.md)页面。
 
+## 大小写
+
+众所周知 Windows 系统的路径是大小写不敏感的，而且预计无限远的未来也是如此。不过很少人知道 Windows 其实可以把某些文件夹设置为大小写敏感。详见：<https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity>。
+
 ## 自启动
 
 有几种方法可以在 windows 上进行自启动：
