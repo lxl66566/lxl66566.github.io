@@ -115,7 +115,9 @@ wsl -d arch --mount --vhd --bare "C:/Users/lxl/AppData/Local/wsl/{72daacb7-af24-
 # 启动，修复
 wsl -d arch
 lsblk
-fsck.ext4 -fvy <device>
+fsck.ext4 -fvy <device>     # 一般虚拟磁盘是 1T 容量，有两块，选没有挂载的那块
+wsl --unmount "C:/Users/lxl/AppData/Local/wsl/{72daacb7-af24-4055-bf2a-cec2dd4a35e5}/ext4.vhdx"
+wsl --shutdown
 ```
 
 @tab 远程安装

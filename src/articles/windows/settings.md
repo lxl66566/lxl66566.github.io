@@ -210,6 +210,7 @@ tag:
     sc delete inpoutx64            # 一般为 RGB 灯效使用，如果你不用 RGB，建议卸载
     sc delete Asusgio3             # 华硕奥创中心（Armoury Crate）组件，建议卸载
     ```
+- [允许创建软链接](https://github.com/msys2/msys2-runtime/pull/114#issuecomment-2642799407)，赋予当前用户 SeCreateSymbolicLinkPrivilege 权限。
 - 开启 _运行_ 历史记录：_设置 - 隐私和安全性 - 常规 - 允许 Windows 跟踪应用启动以改进“开始"和搜索结果_。此设置项默认开启的，之前不小心被某个脚本关了。
 - 设置 Explorer：
   - 使用 [WinSetView](https://github.com/lesferch/WinSetView/) 将 _音乐_ 文件夹 view 设为小图标。否则当你打开一个装满音乐的文件夹时，Explorer 将会去读取所有文件的元数据，会导致卡顿。([src](https://answers.microsoft.com/en-us/windows/forum/windows_11-files/how-to-prevent-windows-explorer-from-reading/c123eab1-e5a5-4124-bf20-68f67a08e47b?messageId=b010aeba-a852-40e7-8732-8f67cb4fd1ed))

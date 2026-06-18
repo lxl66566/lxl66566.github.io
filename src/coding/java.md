@@ -101,6 +101,7 @@ scoop install liberica8-full-jdk
   - 而且很多本该能推出来的 auto fix，SonarLint 也推不出来。
   - 看看 [sonarqube 的仓库](https://github.com/SonarSource/sonarqube)吧，一个连 issue 都关掉的产品能做得多好？
   - SonarLint 还有瞬间高 CPU 占用的问题，即使 vscode 状态里显示其没有在扫描。
+  - SonarLint 默认不扫第三方库，也就是你写一个 `org.apache.commons.collections4.CollectionUtils.isEmpty` 判空之后，它还会报 Potential null pointer access，纯废物。
 
 #### 相关配置
 
