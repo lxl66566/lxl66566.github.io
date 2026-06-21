@@ -13,10 +13,17 @@ const original_list: GalItemInputType[] = [
   {
     name: "纸上魔法使",
     other_names: ["紙の上の魔法使い", "纸魔"],
-    playing_status: PlayingStatus.PLAYING,
     nth_time: 2,
+    use_time: "18h25min",
     duration: {
       start: "2026-04-25",
+      end: "2026-06-19",
+    },
+    score: {
+      story: 11.2,
+      visual: 7.3,
+      program: 6.2,
+      thrill: 8.1,
     },
   },
   {

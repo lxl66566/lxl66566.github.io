@@ -1164,5 +1164,14 @@ export default [
   { id: "652848", aScore: 6.7, bScore: 7.8, info: "#同学 #纯爱 #体操服", bak: "https://telegra.ph/オオカミうおあこがれの季節COMIC-LOE-VOL15-花蕾中国翻訳-DL版-05-27" },
   { id: "652829", aScore: 6.2, bScore: 6.1, info: "#痴汉 #NTR #强奸 #水手服 #书包 #多P", bak: "https://telegra.ph/てっちゃんハト-みなすきぽぷり-痴漢は許さない-中国翻訳-DL版-05-27" },
   { id: "608089", aScore: 7.3, bScore: 9.1, info: "#战败 #明日方舟 #强暴 #兽耳 #兽尾", bak: "https://telegra.ph/白魚京-心胎へ治める-アークナイツ-中国翻訳-11-06-2" },
+  { id: "608084", aScore: 6.2, bScore: 8.6, info: "#TS #NTR #幻灭 #体操服 #多P", bak: "https://telegra.ph/コダマ百貨店-ONAKA-柔道部部長織原マコトが女になるまで-中国翻訳-DL版-11-06-2" },
+  { id: "655848", aScore: 8.4, bScore: 5.5, info: "#蔚蓝档案 #合集 #排尿 #无插入", bak: "https://telegra.ph/ふらっしゃーず-ふらっしゃー-つるぺた聖水party-ブルーアーカイブ-中国翻訳-DL版-06-10" },
+  { id: "656069", aScore: 7.2, bScore: 7.2, info: "#全彩 #兽耳 #3P", bak: "https://telegra.ph/ネコゴショ-ヤナギユウ-NekoNekoNote14-巨乳ママ貧乳ママ-乳くらべ-中国翻訳-DL版-06-12" },
+  { id: "546724", aScore: 7.9, bScore: 7, info: "#蔚蓝档案 #药物 #纯爱", bak: "https://telegra.ph/ぞるそるサポート-ぞるそる月明かりは雲の隙間に-06-11" },
+  { id: "655685", aScore: 8.2, bScore: 7.7, info: "#长篇 #3P #loli #合集 #黑皮 #死库水", bak: "https://telegra.ph/きのもと杏-もっとぎゅーってくっついて-中国翻訳-DL版-06-10" },
+  { id: "608201", aScore: 8.5, bScore: 9.2, info: "#同学 #纯爱 #剧情 #傲娇", bak: "https://telegra.ph/Rev3-もんちゃんrev3-魔王姫は好意が弱点-中国翻訳-11-06-3" },
+  { id: "657001", aScore: 6.8, bScore: 7.7, info: "#loli #大叔 #堕落 #强制", bak: "https://telegra.ph/ワンワンサワー-和野うみ--めろめろあばんちゅる-DL版-中国翻訳-06-16" },
+  { id: "657210", aScore: 6.3, bScore: 9.3, info: "#loli #父女 #反迷奸 #病态 #孕肚", bak: "https://telegra.ph/倫理がない-ユミキチ-生まれてきてごめんなさい中国翻訳-DL版-06-16" },
+  { id: "657091", aScore: 9.7, bScore: 9.9, info: "#武藤まと #兽耳 #自慰 #发情 #性玩具 #纯爱 発情わんことマッチング", bak: "https://telegra.ph/倫理がない-ユミキチ-生まれてきてごめんなさい中国翻訳-DL版-06-16" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

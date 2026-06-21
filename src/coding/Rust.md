@@ -751,7 +751,10 @@ cargo build --release --target x86_64-unknown-linux-musl
 
 将包发布到 crates.io 上也是极其方便的。直接 `cargo publish` 即可。
 
-不过我不建议使用 CI 进行 publish。[具体原因](https://t.me/withabsolutex/1827)
+- 发布前可以先使用 `cargo package --list` 确认一下都包含了哪些东西。
+- 可以添加 `#![warn(clippy::cargo)]` 到你的 `lib.rs` 或 `main.rs` 头部，让 clippy 帮你 check 一下有哪些 package 元数据是否正确/缺失。
+
+我不建议使用 CI 进行 publish ([具体原因](https://t.me/withabsolutex/1827))。反正 publish 是低频操作。
 
 ## 测试
 
