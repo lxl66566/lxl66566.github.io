@@ -139,7 +139,7 @@ tag:
 - [ ] minix, mini nix lang
 - [ ] bash compitable modern shell, support windows
 - [ ] telegram index bot, no ads and reviewed by human
-- [ ] windows fast settings，[Windows11 轻松设置工具](../articles/windows/settings.md#小工具) 的增强版，添加我需要的功能。
+- [ ] ~~windows fast settings，[Windows11 轻松设置工具](../articles/windows/settings.md#小工具) 的增强版，添加我需要的功能。~~ contribute to [optimizerDuck](https://github.com/itsfatduck/optimizerDuck)?
 - [ ] ~~rewrite of easytier~~ easytier is actually not bad.
   - [ ] Raft supported by [hiqlite](https://github.com/sebadob/hiqlite)
   - [ ] ability to bypass GFW
@@ -148,7 +148,7 @@ tag:
   - [ ] free forever.
   - [ ] fully customizable, users can write js/py scripts to match conditions and modify the request.
 - [ ] Windows SSD trace. Trace IO event with operation thread.
-  - [ ] ETW trace.
+  - [ ] ETW trace. (use ferrisetw)
   - [ ] web-based graph display.
 - [x] flake-follows ([idea](https://t.me/absolutexsward/142)) [code](https://gist.github.com/lxl66566/697db0cccd04b7247dc9a0cfb96d328c)
 - [x] [dae to sing-box](https://github.com/lxl66566/sing-dae)

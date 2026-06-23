@@ -29,7 +29,8 @@ tag:
 
 ### 小工具
 
-- 在 b 站看到一个 [Windows11 轻松设置工具](https://t.me/absolutexsresource/99) (origin [src](https://www.bilibili.com/video/av113807439503289/))，和下一部分内容面我的设置是重合的，用这个工具可以进行部分快速便捷的设置，非常好用。不过是闭源软件，看你能不能接受。[旧版私链](https://wwkh.lanzout.com/iMb0v2ladkhe)
+- [Windows11 轻松设置工具](https://t.me/absolutexsresource/99) ([origin src](https://www.bilibili.com/video/av113807439503289/)，[旧版私链](https://wwkh.lanzout.com/iMb0v2ladkhe))，闭源软件，不过功能还蛮多的
+- [optimizerDuck](https://github.com/itsfatduck/optimizerDuck)，GPLv3 开源工具。虽然设置项少一些，但是手感更好，比较开放，各种设置项还可以跳转看源码。
 
 ### 安装前
 
