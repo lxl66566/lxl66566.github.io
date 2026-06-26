@@ -414,6 +414,7 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 5. [月入 50 万美元，平均年化 78%，我的稳定币收益策略全解析 ​​](https://www.panewslab.com/zh/articles/ee13100b-a06f-4e1b-99b9-a456da475d0d)
 6. [How I've built an unprofitable Crypto MEV Bot in Rust](https://pawelurbanek.com/rust-mev-bot)
 7. 关于做市商的科普：[为什么散户总被「收割」？一文看懂做市商是怎么操作的](https://www.theblockbeats.info/news/59850)
+8. [错位的量化金融](https://www.zhihu.com/question/2012257107374790462/answer/2052859132592629082)
 
 <script setup lang="ts">
 import CryptocurrencyExchangeList from "@CryptocurrencyExchangeList";
