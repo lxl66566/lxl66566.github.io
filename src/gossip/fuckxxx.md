@@ -159,6 +159,7 @@ tag:
 - 只要是个后端项目，从头到尾到处都是判空。知道多少性能花在没必要的分支预测上吗？
 - 喜欢我启动集群就要起 4 分钟吗？喜欢我流量稍微高一点就直接打挂难以恢复吗？
 - 由于闭包捕获 final 问题，写声明变量 + try catch 初始化变量 + 闭包捕获会非常丑。
+- java 如果尝试给不可变容器添加元素 / 包含了 null 会直接抛异常，但是各种 lsp 都没法在编译期判断某个容器是否是不可变的。
 
 ## IDE 系列
 
@@ -264,6 +265,25 @@ tag:
 Nix 语言本身：
 
 - 配置合并不支持 list 减法；不支持撤销某个 config.xxx 设置项。不支持减法是我 nixos 配置高耦合度、高复杂度的罪魁祸首之一。
+
+## AI 工具系列
+
+### opencode 有多难用
+
+- 简陋的首页，下载方式没说 scoop，没有标注出使用文档，不如 GitHub README 和真正的文档。
+- 界面根本没有引导，进去就三个键盘按键，不知道做什么用的，没有 help，必须读文档才知道。
+- 你居然把 node_modules 放在 `~/.config/opencode` 里？对于洁癖的人来说，在 `~/.config` 里放这种东西是大忌。
+- <https://opencode.ai/docs/zh-tw/models> 里没有说明如何使用自定义 API（provider），即使它支持自定义 API。支持的模型很多，不够成不用说明如何支持自定义 API 的理由，因为 API 提供方永远列举不完。
+  - TUI 添加后的配置也不会写到配置文件里，那我怎么同步，不同步吗？
+  - 感觉这两套思维本身也很混乱。要配置文件就 all in 配置文件，要 GUI config 就 all in GUI，同时编辑两边还不同步是什么鬼？
+- 免费模型跟没有脑子一样，虽然本来也没啥指望。
+  - 后来免费模型出了 deepseek v4 flash，总算是可用的水平了。
+- TUI 其实可以做滚动条，但是它没做。这么长 context 我也没法直接滚，只能 /export。
+  - 用键盘 Page Up/Page Down 是可以快速滚的，但是有人可能没考虑现在有的键盘已经不提供这两个按键了……
+- opencode 内存占用高已经是特性了，一直都有人提，但是也没人想改。90 天后 issue 就自动关闭了。
+- opencode 处理 Rime 中文输入法总是有点问题，有时候切了输入法但是还是只能写英文。这个 bug 发生的非常频繁，但是我没法稳定复现。
+- oepncode 的 permission 会把 `*` 和 `?` 给重新解释，但是[没有提供转义功能](https://github.com/anomalyco/opencode/blob/28a06e52fcfaea87a749e4e4c9a74d90b3195fb0/packages/opencode/src/util/wildcard.ts#L3-L9)，你永远无法对包含 raw `*` 和 `?` 字符的命令进行权限控制。
+- 我的长对话整天被 opencode 截断，结果发现是 opencode 硬编码了一个 100 条对话的限制。([issue#30587](https://github.com/anomalyco/opencode/issues/30587) [issue#31513](https://github.com/anomalyco/opencode/issues/31513)) opencode 对用户的消息没有任何尊重。
 
 ## niri 有多难用
 

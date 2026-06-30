@@ -259,7 +259,8 @@ git config alias.p 'pull origin code'  # 向 alias.p 内写入值（添加命令
 ### 远程
 
 ```sh
-git remote show <name>        # 查看远程仓库，name 留空即为列出当前远程仓库列表
+git remote -v                 # 查看 remote url
+git remote show <name>        # 查看远程仓库的当前状态（会发起网络请求）
 git remote rm <remote name>   # 删除远程名字
 git fetch origin <branch>     # 拉取远程
 ```
@@ -509,13 +510,15 @@ git bash 默认会将中文以 `\` 转义的方式显示。要取消，需要：
 
 需要手动干预 PR 的场合，[参考 Github - 合并 Pull Request](./github.md#合并-pull-request)
 
-### 删除大文件
+### 修改所有 commit
 
-删除大文件是必要的。即使你删除了某个文件，其仍会存在于仓库的提交记录内。
+有时候我们需要对整个 repo 的提交树进行更改。一个例子是不小心提交了大文件，即使你后来立刻删除/revert 了，其仍会存在于仓库的提交记录内。因此遍历 commit 进行操作是有必要的。
+
+下面均以删除文件为例。
 
 ::: danger
 
-在删除之前请务必 commit 未提交的修改！！警钟长鸣！警钟长鸣！这里（20230312）是血的惨痛教训。
+在修改之前，请务必 commit 未提交的修改！！警钟长鸣！警钟长鸣！这里（20230312）是血的惨痛教训。
 
 :::
 
@@ -544,6 +547,17 @@ git bash 默认会将中文以 `\` 转义的方式显示。要取消，需要：
    git filter-repo --invert-paths -f --path "<path/of/file>"
    git filter-repo --invert-paths -f --path-glob '*/*.enc'
    ```
+
+   git-filter-repo 还有一些好用的功能。例如，可以批量在整个提交树里查找并正则替换内容：在仓库外某个临时文件写入以下内容：
+
+   ```
+   # 例如
+   # 匹配模式:查找内容==>替换内容
+   regex:xxx\((.*?)\)==>xxx(\1)
+   literal:some_content==>other_content
+   ```
+
+   然后 `git filter-repo --replace-text ../replacements.txt --force` 即可。
 
    @tab bfg-repo-cleaner
 
@@ -728,7 +742,7 @@ git gc --prune=now --aggressive        # gc，删除 blob
 
 兼容 Git 的另一套版本控制系统，带有不同设计理念与更多高级特性。查看 [jujutsu](./jujutsu.md) 文章了解更多。
 
-## Git 插件
+## 第三方 Git 小工具
 
 与 cargo 类似，`git xxx` 实际上会在系统里调用名为 `git-xxx` 的可执行文件。这里有一些插件，未给出链接的请自行搜索：
 
@@ -736,6 +750,8 @@ git gc --prune=now --aggressive        # gc，删除 blob
 - git-absorb：将当前更改合并到某个 commit 内。
   - 我不太喜欢它，我选择用我自己的[脚本](./snipets.md#gfixup)。
 - git-se：[git-simple-encrypt](https://github.com/lxl66566/git-simple-encrypt)，用于仓库加解密
+- [weave](../gossip/userexp.md#weave)：基于 tree-sitter 代码理解的 git merge 辅助工具。确实可以降低 merge 的冲突概率。
+- [sem](../gossip/userexp.md#sem)：基于 AST 语义理解的 diff。
 
 ## 自建 git 托管
 

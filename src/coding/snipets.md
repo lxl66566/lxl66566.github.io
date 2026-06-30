@@ -15,7 +15,7 @@ tag:
 
 ## gfixup
 
-我最常用的脚本，没有之一。约等于一个 git-absorb，即将当前的 git 已追踪修改“吸收”到任意 commit（默认为最近的 commit，即 HEAD）。
+我最常用的脚本，没有之一。将当前的 git 已追踪修改“吸收”到任意 commit（默认为最近的 commit，即 HEAD）。
 
 用法：`gfixup [git_commit]`
 

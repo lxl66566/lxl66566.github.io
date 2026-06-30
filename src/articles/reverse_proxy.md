@@ -45,6 +45,21 @@ caddy 是一个更年轻的工具，提供**非常简单**的语法和**自动 h
 
 caddy 最大的问题是性能较差，因此不适合在高并发环境下使用。这里性能差的一个较大来源是 go 运行时的负担。
 
+### dir server
+
+有时候我们可能会想要把一个目录给 share 出去，可以在网页上探索这个目录并且下载文件。一般的做法是 `python -m http.server`，不过如果需要 https 的话可能就比较麻烦。而 caddy 支持一个配置把 folder share 出去：
+
+```
+handle_path /share/* {
+  root * /var/share
+  file_server browse
+}
+```
+
+这样访问 /share/ 就是展示文件夹下内容，/share/some_file 就是下载文件。caddy 的 browse 界面还挺好看的。
+
+注意最好别 share `/root` 等地方的内容：caddy 运行默认没有 root 权限，访问会 403。
+
 ### 日志
 
 caddy 默认将日志输出 stderr，可以用 `journalctl` 查看。但也可以将其输出至文件，或者按域名分流日志等。
