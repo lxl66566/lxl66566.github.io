@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 26 Jun 2026 12:47:29 GMT</pubDate>
-    <lastBuildDate>Fri, 26 Jun 2026 12:47:29 GMT</lastBuildDate>
+    <pubDate>Tue, 30 Jun 2026 16:02:30 GMT</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2026 16:02:30 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -1107,6 +1107,14 @@
 <li>自动证书存放位置是 <code>/var/lib/caddy/certificates/acme-v02.api.letsencrypt.org-directory/&lt;domain&gt;</code>，可以 ln 到其他地方给其他软件用。</li>
 </ul>
 <p>caddy 最大的问题是性能较差，因此不适合在高并发环境下使用。这里性能差的一个较大来源是 go 运行时的负担。</p>
+<h3>dir server</h3>
+<p>有时候我们可能会想要把一个目录给 share 出去，可以在网页上探索这个目录并且下载文件。一般的做法是 <code>python -m http.server</code>，不过如果需要 https 的话可能就比较麻烦。而 caddy 支持一个配置把 folder share 出去：</p>
+<div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span>handle_path /share/* {</span></span>
+<span class="line"><span>  root * /var/share</span></span>
+<span class="line"><span>  file_server browse</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样访问 /share/ 就是展示文件夹下内容，/share/some_file 就是下载文件。caddy 的 browse 界面还挺好看的。</p>
+<p>注意最好别 share <code>/root</code> 等地方的内容：caddy 运行默认没有 root 权限，访问会 403。</p>
 <h3>日志</h3>
 <p>caddy 默认将日志输出 stderr，可以用 <code>journalctl</code> 查看。但也可以将其输出至文件，或者按域名分流日志等。</p>
 <div class="language-json line-numbers-mode" data-highlighter="shiki" data-ext="json" style="--shiki-light:#383A42;--shiki-dark:#abb2bf;--shiki-light-bg:#FAFAFA;--shiki-dark-bg:#282c34"><pre class="shiki shiki-themes one-light one-dark-pro vp-code"><code><span class="line"><span style="--shiki-light:#383A42;--shiki-dark:#ABB2BF">{</span></span>
