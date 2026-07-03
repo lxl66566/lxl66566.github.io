@@ -13,6 +13,14 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [hyperfine](https://github.com/sharkdp/hyperfine)
+
+命令行的 benchmark 比较工具。用来比较单个简单指令还好，当我想要测试一些耗时极长的操作时，这体验简直没法看。
+
+- 首先被 shell 坑了，hyperfine 在 Windows 上一定用 `cmd.exe /C` 启动子进程，导致我 nushell 语法的指令执行失败；而且由于把我 `;` 和之后的内容都当成 args 传到我的程序里，导致出现的报错非常恶心，排查半天。。
+- 默认每个 case 至少跑 10 轮，实在有点慢。
+- Ctrl + C 没法终止 benchmark？什么设计。
+
 ## [sem](https://github.com/Ataraxy-Labs/sem)
 
 尝试了 weave 后，我发现 Ataraxy-Labs universe 还有个 [Ataraxy-Labs/sem](https://github.com/Ataraxy-Labs/sem)，也就是基于 tree-sitter 的语义检测。

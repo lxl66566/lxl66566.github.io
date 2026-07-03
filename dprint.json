@@ -2,7 +2,11 @@
   "lineWidth": 100,
   "indentWidth": 2,
   "typescript": {
-    "indentWidth": 2
+    "indentWidth": 2,
+    "overrides": {
+      "files": ["src/.vuepress/data/*.ts"],
+      "lineWidth": 10000
+    }
   },
   "json": {
     "indentWidth": 2

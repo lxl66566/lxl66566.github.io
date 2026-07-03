@@ -281,9 +281,11 @@ Nix 语言本身：
 - TUI 其实可以做滚动条，但是它没做。这么长 context 我也没法直接滚，只能 /export。
   - 用键盘 Page Up/Page Down 是可以快速滚的，但是有人可能没考虑现在有的键盘已经不提供这两个按键了……
 - opencode 内存占用高已经是特性了，一直都有人提，但是也没人想改。90 天后 issue 就自动关闭了。
-- opencode 处理 Rime 中文输入法总是有点问题，有时候切了输入法但是还是只能写英文。这个 bug 发生的非常频繁，但是我没法稳定复现。
+- opencode 处理 Rime 中文输入法总是有点问题，有时候切了输入法但是还是只能写英文。这个 bug 发生的非常频繁，也有相关的 issue 报告 ([issue1](https://github.com/anomalyco/opencode/issues/10946) [issue2](https://github.com/anomalyco/opencode/issues/14761))
+  - opencode 强制调用 `win32DisableProcessedInput()` 关闭了 `ENABLE_PROCESSED_INPUT`，相当于绕过 Windows 的 IME 处理流程而留到程序自行处理。但是处理得又不好，bug 一堆。
 - oepncode 的 permission 会把 `*` 和 `?` 给重新解释，但是[没有提供转义功能](https://github.com/anomalyco/opencode/blob/28a06e52fcfaea87a749e4e4c9a74d90b3195fb0/packages/opencode/src/util/wildcard.ts#L3-L9)，你永远无法对包含 raw `*` 和 `?` 字符的命令进行权限控制。
 - 我的长对话整天被 opencode 截断，结果发现是 opencode 硬编码了一个 100 条对话的限制。([issue#30587](https://github.com/anomalyco/opencode/issues/30587) [issue#31513](https://github.com/anomalyco/opencode/issues/31513)) opencode 对用户的消息没有任何尊重。
+- 之前的版本，Windows opencode 内按 `Ctrl + C` 退出会直接崩掉 Windows Terminal 窗口。
 
 ## niri 有多难用
 

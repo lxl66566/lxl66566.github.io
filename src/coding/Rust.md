@@ -813,7 +813,7 @@ GUI 是 rust 日经问题了。
 
 - tauri：electron 的竞品，据说很灵车（许多群友都说过了）。
   - 2022 年我试了一下，连 example 都跑不过。
-  - 2024 尝试，还不错。主要是前端工具链是 GUI 界最顶级的那一批，爆杀各类原生 UI。
+  - 2024 尝试，还不错。主要是前端工具链是 GUI 界最顶级的那一批，爆杀各类原生 UI。2025 年末就用 Tauri 做了一个[非常好用的客户端程序](https://github.com/lxl66566/GalgameManager)。
   - [得物商家客服从 Electron 迁移到 Tauri 的技术实践](https://mp.weixin.qq.com/s/UxmJxU4-fv9GeRxl2fzOGw)
   - [tauri-bug-reproducer](https://github.com/yetone/tauri-bug-reproducer)，T 黑头子（
 - [egui](https://github.com/emilk/egui)：原生 GUI，有[大项目](https://www.reddit.com/r/rust/comments/1c69mrj)。

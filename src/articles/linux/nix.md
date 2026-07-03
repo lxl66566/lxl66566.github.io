@@ -208,6 +208,7 @@ flake 模式下需要自备代理，因为 flake input 经常都是从 Github �
 ```sh
 nix-prefetch-url <url>                  # fetch 并输出 sha256。在打包时经常用到。
 nix-collect-garbage -d                  # 删除所有配置的所有旧版本，并 GC。（彻底清理）
+nix-store --add-fixed sha256 <file>     # 手动添加文件，后续避免联网 fetchurl
 nix flake update <input>                # update 一个特定 input
 nix rebuild switch --max-jobs 0         # --max-jobs 可以禁止本机构建，必须从缓存拉二进制包
 
