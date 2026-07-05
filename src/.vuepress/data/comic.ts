@@ -1173,5 +1173,12 @@ export default [
   { id: "657001", aScore: 6.8, bScore: 7.7, info: "#loli #大叔 #堕落 #强制", bak: "https://telegra.ph/ワンワンサワー-和野うみ--めろめろあばんちゅる-DL版-中国翻訳-06-16" },
   { id: "657210", aScore: 6.3, bScore: 9.3, info: "#loli #父女 #反迷奸 #病态 #孕肚", bak: "https://telegra.ph/倫理がない-ユミキチ-生まれてきてごめんなさい中国翻訳-DL版-06-16" },
   { id: "657091", aScore: 9.7, bScore: 9.9, info: "#武藤まと #兽耳 #自慰 #发情 #性玩具 #纯爱 発情わんことマッチング", bak: "https://telegra.ph/倫理がない-ユミキチ-生まれてきてごめんなさい中国翻訳-DL版-06-16" },
+  { id: "608597", aScore: 7.4, bScore: 6.6, info: "#蔚蓝档案 #兽耳 #cos", bak: "https://telegra.ph/BINZOKO-しのびん-週末夜想曲-ブルーアーカイブ-中国翻訳-DL版-11-08-4" },
+  { id: "657513", aScore: 6.3, bScore: 8.5, info: "#监禁 #榨精", bak: "https://telegra.ph/愛のトロロン-弁天惟仁-男衰退により僕の精子が高額買取-二人のメスガキ編-中国翻訳-06-23" },
+  { id: "625134", aScore: 8.6, bScore: 9, info: "#连续高潮 #乳头 #感度提升" },
+  { id: "580209", aScore: 8.8, bScore: 7.3, info: "#援交 #连续高潮 #沦陷" },
+  { id: "659618", aScore: 8.6, bScore: 6.3, info: "#师生 #纯爱 #自慰 #发情", bak: "https://telegra.ph/COMITIA156-tricktreat-とりえす-儚き瞳のお嬢様は-中国翻訳-06-27-4" },
+  { id: "(EH)", aScore: 8, bScore: 9.4, info: "#纯女性 #无H #僵尸 #剧情 #合集 君を紡ぐ", otherlink: "https://e-hentai.org/g/2926884/2d231edf3c/" },
+  { id: "551893", aScore: 8.6, bScore: 6.5, info: "#蔚蓝档案 #兽耳 #合集 #发情" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
