@@ -13,6 +13,16 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [flyline](https://github.com/HalFrgrd/flyline)
+
+一个 bash 的提示 + 补全库。由于 bash 在这块确实很差（而且我用过 ble.sh，那个慢得一批），所以还是有一点尝试欲望的。
+
+首先看到 Release 里没有 windows build，已经感觉不太对劲了。拉下来 install 一发，这个项目没有 bin target，问了下 AI 才知道这玩意是编译成 `.so` bash 插件。build 一发，报了一堆错，然后发现这个项目本身就没法在 windows 下 compile。
+
+行吧，我尝试去 Release 里拉下 x86_64 linux 的 musl 构建呢？拉下来 `enable -f`，报错 `bash: enable: dynamic loading not available`。所以这 bash 插件的加载本来就没多少人用，这些 bash 的默认 build 都关闭了这个功能，结果这玩意还依赖这个？
+
+直接抛弃。
+
 ## [hyperfine](https://github.com/sharkdp/hyperfine)
 
 命令行的 benchmark 比较工具。用来比较单个简单指令还好，当我想要测试一些耗时极长的操作时，这体验简直没法看。

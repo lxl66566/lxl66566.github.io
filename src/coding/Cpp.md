@@ -148,6 +148,22 @@ xmake 是~~向下兼容 cmake~~ 的构建工具，拥有较为简洁的语法。
 - 指定架构
   - 编译 win32：`xmake f -p windows -a x86`
 
+#### 菱形依赖
+
+C++ 里一个绕不开的依赖坑是 abseil，这玩意为了避免运行时问题，强制不同版本的 abseil 使用不同的 namespace，所以如果一堆依赖不同 abseil 的包放一起，链接的时候就会爆炸。
+
+此时我们一般需要强制全项目用唯一的 abseil 版本。需要两个步骤，缺一不可：
+
+1. 需要添加 add_requireconfs override：
+   ```lua
+   add_requires("abseil 20260107.0")
+   add_requireconfs("abseil", { override = true, version = "20260107.0" })
+   add_requireconfs("**.abseil", { override = true, version = "20260107.0" })
+   ```
+2. 需要为**所有直接和间接依赖** abseil 的包都添加 `{ build = true }` option，重新用 override 的 abseil 从源码编译。
+
+这意味着你还要手动梳理一遍依赖，避免有藏得比较深的间接依赖忘记 build from source 然后命中了缓存，结果链接的时候又报错。在现代包管理器上手动解析依赖树，啊，酸爽啊。
+
 #### 其他技巧
 
 将动态库复制到构建目录：有的第三方库是 GPL license，如果静态链接的话会违规，只能用动态链接；所以最好能把动态库的 dll 给自动 copy 到构建目录，方便打包或执行。
@@ -185,6 +201,7 @@ end)
 
 缺点：
 
+- 请看我喷 xmake：[xmake 有多难用](../gossip/fuckxxx.md#xmake-有多难用)
 - 用的人少，出了 bug 不好找解决方案。不过随着 xmake 包越来越多，生态越来越好，我现在还是愿意在个人项目里用 xmake 的。
 - [lua 本身是一坨屎](./lua.md)，`xmake.lua` 没有 typing 和 lsp，这方面的生态是欠缺的。
 

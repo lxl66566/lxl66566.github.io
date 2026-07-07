@@ -272,6 +272,7 @@ Nix 语言本身：
 
 - 简陋的首页，下载方式没说 scoop，没有标注出使用文档，不如 GitHub README 和真正的文档。
 - 界面根本没有引导，进去就三个键盘按键，不知道做什么用的，没有 help，必须读文档才知道。
+- opencode 没有活动的 issue 60 天自动关闭，还不能 reopen。我痛恨这种自动关闭机制。并且[我提的 issue](https://github.com/anomalyco/opencode/issues/22651) 也没人管。
 - 你居然把 node_modules 放在 `~/.config/opencode` 里？对于洁癖的人来说，在 `~/.config` 里放这种东西是大忌。
 - <https://opencode.ai/docs/zh-tw/models> 里没有说明如何使用自定义 API（provider），即使它支持自定义 API。支持的模型很多，不够成不用说明如何支持自定义 API 的理由，因为 API 提供方永远列举不完。
   - TUI 添加后的配置也不会写到配置文件里，那我怎么同步，不同步吗？
@@ -848,6 +849,16 @@ powershell 简直是邪恶的化身。
   - 现在终于在 README 里提了一句。。
 - Permission denied 即使我已经把相关文件夹设了 nixos:users 777。最后设了个 `SCCACHE_DIRECT=0` 编译才正常。
 - 鲁棒性非常差。因为 rust-analyzer 自己经常需要重启，跟 sccache 的通信很可能中断，然后 sccache server 内部有时就会出问题，强迫关闭所有远程连接，并且拒绝新连接。
+
+## xmake 有多难用
+
+- xmake 只有内置的 ccache，不能用 sccache。（至少文档里没提到）
+- xmake 编译 `{ build = true }` 的依赖库时，无法指定 jobs。
+  - 虽然在[这个 issue](https://github.com/xmake-io/xmake/issues/7550) 里作者说可以 `xmake -j4`，但我实测 `xmake -j4` 编译 grpc 还是会吃满核心。至于其他的 `xmake -f` 指令也会自动下载并编译依赖项，这个就完全没法指定 `--jobs` 了。
+  - xmake 没有任何通过 env 指定 jobs 的方式。
+- 使用 `xmake -f` 时自动下载依赖项并编译，如果编译被打断，第二次执行 `xmake -f` 则会复用下载的依赖缓存。但是直接使用 `xmake` 指令且打断编译，则每次都会重新下载依赖。
+  - 无论如何，之前编译的产物都不会缓存，需要重新编译。
+- `xmake` 命令编译依赖，不显示进度。这跟上面那些特性组合，打出暴击：你不知道这玩意编译到多少了，电脑被吃了 100% CPU 又卡又热没法做其他事情，还不能打断不然又得重新编译。
 
 ## 蓝牙耳机有多难用
 

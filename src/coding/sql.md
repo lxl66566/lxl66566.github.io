@@ -386,3 +386,4 @@ sudo systemctl start mysql
 5. [MySQL 已死，PostgreSQL 当立](https://pigsty.cc/zh/blog/db/mysql-is-dead/)
 6. [PRQL (Pipelined Relational Query Language) is a modern language for transforming data](https://prql-lang.org/)
 7. [Modern SQLite: Features You Didn’t Know It Had](https://slicker.me/sqlite/features.htm)
+8. [The Hidden Costs of ORMs: When Raw SQL Is the Better Choice](https://the-practical-developer.online/posts/orm-hidden-costs-raw-sql/)。别乱用 ORM。

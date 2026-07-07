@@ -594,3 +594,4 @@ JS 的测试框架里，我比较喜欢 [Vitest](https://cn.vitest.dev/guide/)�
 1. [The Concise TypeScript Book](https://github.com/gibbok/typescript-book)
 2. [木易杨 的博客](https://github.com/yygmind/blog)，但是很久没更新了。
 3. [tsover: TypeScript with Operator Overloading](https://software-mansion-labs.github.io/tsover/)
+4. [TypeScript Generics That Pay Rent: Conditional Types, Mapped Types, and Infer for Production Code](https://the-practical-developer.online/posts/typescript-advanced-generics-conditional-mapped-infer/)
