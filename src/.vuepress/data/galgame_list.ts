@@ -5,10 +5,17 @@ const original_list: GalItemInputType[] = [
     name: "RIDDLE JOKER",
     valid_name: "RIDDLEJOKER",
     other_names: ["RJ"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "20h24min",
     duration: {
       start: "2026-05-29",
+      end: "2026-07-05"
     },
+    score: {
+      story: 4,
+      visual: 8.6,
+      program: 9,
+      thrill: 0.4
+    }
   },
   {
     name: "纸上魔法使",
@@ -1704,7 +1711,7 @@ const original_list: GalItemInputType[] = [
     use_time: "67h58min",
     order: 1,
     score: {
-      story: 4,
+      story: 4.2,
       visual: 5.5,
       program: 6,
     },
