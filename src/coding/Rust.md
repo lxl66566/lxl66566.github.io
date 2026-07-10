@@ -551,7 +551,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | ~~die-exit~~ | ~~错误处理并退出~~，不过我现在不用了（just expect it!） |
 | tap | 函数式工具，在链式中途拿取引用操作而不影响返回值 |
 | enum-tools / strum_macros | 提供 enum 的常用方法，最常用的就是字符串互转了 |
-| pollster | 小而美，专注于 _在同步环境运行异步函数_ 一件事，打破同步与异步间隔，**强烈推荐** |
+| pollster | 小而美，专注于 _在同步环境运行异步函数_ 一件事，打破同步与异步间隔 |
 | expect-test | 自动更新 test 中 assert_eq 的期望值 |
 | const-hex | `Vec<u8>` -\> hex str |
 | constime | 计算编译期值，用一个非常简单易用的宏 |
@@ -632,6 +632,7 @@ log 方案的好处就是 log crate 非常统一，而且用起来跟其他语�
 - 对于一般的小玩具，基本就只是支持一下颜色和时间戳输出。我之前一直在用 pretty_env_logger (based on env_logger)，不过由于 env_logger 引入了 regex，这玩意对编译后二进制大小有较大影响，所以我也在寻找更符合需求的替代品。
   - 而且 env_logger 是完全同步的，不适合多线程打日志。
 - 对于更大一点的玩具，需要更多功能的，flexi_logger 用起来是手感较为舒适的。
+  - 但是这玩意问题是代码质量比较一般。
 - 如果需要简单、额外功能较少的日志库，也可以使用 Rust 群群友的 spdlog-rs。比起 flexi_logger，spdlog-rs 少了各种特殊 file flush 策略和轮转后日志压缩等功能，但是这些本来也不是一个日志库的核心功能。spdlog-rs 的 [benchmark](https://github.com/SpriteOvO/spdlog-rs/blob/main/spdlog/benches/README.md) 是很好看的。
 
 trace 方案最常见最泛用的就是 tracing 了，跟 tokio 一样，大企业都在用。但是我不太喜欢（tracing 的一些生态），详见前面的[拉黑](#拉黑)。

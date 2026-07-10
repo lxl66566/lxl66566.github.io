@@ -571,6 +571,17 @@ for arc in arcs.glob("*.arc"):
     # 对于较老的游戏，例如 AUGUST 的 大图书馆的牧羊人 1 及更早的游戏，需要使用 arc-reader pack {unpacked} -v 1 标识
 ```
 
+也可以使用 [fd](https://github.com/sharkdp/fd) 来快速操作：
+
+```sh
+fd -e arc -j 1 -x arc-reader unpack {}              # 解包文件夹下的所有 .arc 文件
+fd -d 1 -t d -j 1 -x arc-reader pack {}             # 封包所有文件夹到 .arc 文件
+```
+
+PS. 由于 const for audio pack 部分还有一些内嵌的数字，又让 AI 分析了下，`44 AC 00 00` 其实是非常明显的采样率标识（AC44 = 44100），因此不妨大胆猜想这四个字节就是采样率，后面那个 `01 00 00 00` 也可以猜想是 channel 数。总之跟这个游戏的音频是能对上的，没什么副作用。
+
+2026.07 我又给 arc-reader-rs 添加了图像封包能力，不过这都是后话了。
+
 </template>
 <template #silky>
 
