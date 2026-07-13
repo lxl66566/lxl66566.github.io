@@ -669,7 +669,8 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 - 死に逝く騎士、異世界に響く断末魔 ❌
 - 瑠璃櫻 ❌
 - サルテ ❌
-- RIDDLE JOKER
+- RIDDLE JOKER ❌
+- 兽娘育成方案 ❌
 
 ---
 

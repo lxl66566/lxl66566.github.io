@@ -122,6 +122,12 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #兽娘育成方案>
+
+- 所以男主（和岳父）开局装纯，但是实际上之前跟青梅做过很多次了。什么雷霆剧情
+- 白狼神，日本经典的「因为拥有强大力量而被排斥放逐」
+
+</template>
 <template #RIDDLEJOKER>
 
 我是先推完了柚子社比 RIDDLE JOKER 更新的所有作品，然后才推本作。本作给我的感觉是事件太密集了，玩家被各种 event 推着走，没有闲下来大家一起增进感情的时间（剧情里的一些游乐时间都太刻意了，我感觉不算）。
@@ -2002,7 +2008,6 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - 七ヶ音学園旅行部 03 & 04
 - 恋爱成双(フタマタ恋愛)
 - けもの道 ☆ ガーリッシュスクエア 1 2
-- 兽娘育成方案
 - D.C. 系列（1 重制
 - ~~ハミダシクリエイティブ凸~~
 - Yuri
@@ -2054,6 +2059,7 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - ディメンション凸ラバース!!
 - 飛べない蝶は夢を見る
 - ユリアリス
+- 愛因斯坦攜愛敬上
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 

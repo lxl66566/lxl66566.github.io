@@ -1180,5 +1180,6 @@ export default [
   { id: "659618", aScore: 8.6, bScore: 6.3, info: "#师生 #纯爱 #自慰 #发情", bak: "https://telegra.ph/COMITIA156-tricktreat-とりえす-儚き瞳のお嬢様は-中国翻訳-06-27-4" },
   { id: "(EH)", aScore: 8, bScore: 9.4, info: "#纯女性 #无H #僵尸 #剧情 #合集 君を紡ぐ", otherlink: "https://e-hentai.org/g/2926884/2d231edf3c/" },
   { id: "551893", aScore: 8.6, bScore: 6.5, info: "#蔚蓝档案 #兽耳 #合集 #发情" },
+  { id: "662639", aScore: 8.1, bScore: 7, info: "#异世界 #性玩具 #无插入 #断章", bak: "https://telegra.ph/Art-Jam-見習い騎士の抵抗禁止マッサージ-中国翻訳-DL版-07-08" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
