@@ -1288,6 +1288,26 @@ V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是�
 
 回家一测试，AudioSpeedHack 在我硬盘上的所有 18 个 galgame 的加速成功率是 **100%**。然后我还发现新版的 MMDevAPI 真的非常牛逼，只 MMDevAPI.dll 一个就实现了 100% 覆盖率，它就是 WASAPI 的化身，我为了它付出的时间都是值得的。dsound 可有可无，不过可以作为叠加加速的工具，还是有用武之地的。
 
+## 后话
+
+### 开发支持语音加速的 GalgameManager
+
+大概 2025.12 月底，由于有多地游玩 galgame 的需求，并且现存的产品我都不是很满意，我开始实现我之前的灵感：做一个 [GalgameManager](https://github.com/lxl66566/GalgameManager)。最初主要用于存档同步，之后又逐步添加了许多我执着的功能。
+
+但是如何把 SPEED UP 优雅地集成到 GalgameManager 里是个难题，既然都做了启动游戏的魔改，那么作为启动链的一环，就不得不跟 Locale Emulator 和 translator 一起考虑。我在脑子里构想许久，感觉还是得搞一个灵活的插件系统。不过虽然方案已经逐渐在脑子里成型，但这个代码量实在是有点大，所以我一直找不到足够的动力去做这个事情。
+
+试用了一下 GLM 5.1 感觉还不错，至少能写出生产级别的代码了。过了一段时间后，GalgameManager 迎来了 1.0.0 大更新，在 AI 的帮助下我搞了个插件系统，集成到了 GalgameManager 里，这其中就包括了我心心念念的语音加速功能。于是 AudioSpeedHack 那个 TUI 就正式退役了。
+
+> GalgameManager 刚开始的时候基本就是古法编程，倾注了我最多的心血；虽然 1.0.0 之后开始用 Agent 写大量代码，不过我仍然会做严格的代码质量把控。
+
+### Wine 上的语音加速
+
+闲的无聊，GalgameManager 1.2.0 优化了在 Linux 原生应用使用 Wine 启动 Galgame 的体验，当然语音加速我肯定也是想带过去的。
+
+Wine 有一个 `WINEDLLOVERRIDES` env 可以控制从哪里加载，native 代表优先用游戏提供的 dll，builtin 是优先加载系统 dll。让游戏加载我的 dsound dll 可以通过 `WINEDLLOVERRIDES` 设置，非常简单，我的 dll proxy 到 System32/SysWOW64 也没啥问题，wine 会自动处理这个路径。但是 MMDevAPI 就没那么简单了，我使尽浑身解数也没法让游戏去加载我的 MMDevAPI wrapper，无论是 wine regedit 修改注册表还是直接替换 System32/SysWOW64 都不行，我只能归结于 wine 有一些我不理解的妙妙加载机制。
+
+所以目前在 Wine 上玩 galgame，只能对支持 dsound 的游戏使用 SPEED UP。
+
 ## 番外篇：galgame 语音不中断
 
 做完 SPEEDUP，虽然我个人比较激动，然而发到 B 站和两个 gal 群没啥太大反响（当然也有非常喜欢的，同道中人说是）。gal 群复读道：_我更需要语音不中断_。于是尝试研究一下。
@@ -1297,9 +1317,9 @@ MMDevAPI 基本是无法完成这个需求的，因为 MMDevAPI 拿到的一般�
 于是就从 dsound 入手。在开发（vibe）过程随便记录一点：
 
 - 基本架构就是把 Voice 暂存到一个 FIFO 缓冲区里，每个时刻只允许一段音频播放。然后再实现一个 feeder 线程负责把音频喂给声卡，其他类型的音频就直通。这个没啥问题。
-- 欺骗游戏速度：这个是我的突发奇想，我完全可以套用之前 SPEEDUP 的成果，欺骗游戏语音播放的进度，让它飞速填满此段语音的缓冲 buffer。这样可以将后一句语音对前一句的影响降低至最小。
-  - **只有在 SPEEDUP 状态下才能使用音频长度这个判据。** 这个通常来说是**最准确的判据**。
+- 欺骗游戏速度：这个是我的突发奇想，我完全可以套用之前 SPEEDUP 的成果，欺骗游戏语音播放的进度，让它飞速填满此段语音的缓冲 buffer。这样可以将后一句语音对前一句的影响降低至最小。[^stream]
 - 区分人声和语音：
+  - **只有在 SPEEDUP 状态下才能使用音频长度这个判据。** 这个通常来说是**最准确的判据**。
   - 无法通过 DSBPLAY_LOOPING 判断人声，有的引擎会偷懒把所有音频都标上 DSBPLAY_LOOPING。
   - 无法通过 buffer size 判断人声。有的引擎不管是啥音频都会申请一段固定长度的 buffer。
     - 不过可以通过长度筛掉一部分 SE，SE 太短了。
@@ -1326,6 +1346,8 @@ MMDevAPI 基本是无法完成这个需求的，因为 MMDevAPI 拿到的一般�
    - 由于 silero-vad 强制要求输入为 16kHz 音频，需要一次重采样。之前 AI 乱搞了一版线性插值，听着就感觉不妙，然后换成了 WMF 的 `CResamplerMediaObject`，`SetHalfFilterLength` 到最高。虽然也不算顶级重采样，但是对语音识别来说够用了。
 
 在 Ever17（MAGES. Engine 引擎）上，之前的零中断实现又无法使用。观察日志，每个语音都会经历 SetVolume(-10000)（静音）、Play()、恢复音量的过程（后来发现还有中间状态），因此我们也需要处理音量变更的拦截逻辑。写了一版 lock volume 到「播放开始时音量」还不行，因为播放开始时的音量就可能不是正常的，而是后面再 SetVolume 成正常音量。于是最终实现成音量只增不减，这样才能有比较好的效果。（题外话，Ever17 这 B 引擎完全搞不懂是什么时候会触发改音量，我鼠标点快一些和慢一些的表现甚至还不一样的）
+
+[^stream]: 这其实跟网关流式转发还是集齐 body 后再转发其实是类似的逻辑。刚开始用加速去拉完整个音频属于是步入歧途，流式转发才是未来。
 
 <script setup lang="ts">
 import SpeedupList from "@SpeedupList";

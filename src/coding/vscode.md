@@ -106,6 +106,7 @@ tag:
 - [Cline]：需要自己提供 API KEY 或本地跑模型。它支持 Gemini 2.5 支持得很快，因此我用它做 Chat/MCP agent。
 - [Tabnine](https://www.tabnine.com/)：补全较弱（_Short code completions (2 to 3 words)_）
 - [supermaven](https://supermaven.com/)：免费补全，联想能力不错，但是 vscode 插件目前闭源。
+  - 最近的可用性下降了挺多的。而且开启后对于中文输入有一些延迟影响，推荐给 markdown 等经常使用中文的文件类型禁用。
 - [tabby](https://github.com/TabbyML/tabby)：本地模型，但是支持的语言有限
 - [Continue](https://www.continue.dev/)：需要自己提供 API KEY 或本地跑模型。支持得太慢，一个月后都没法用 Gemini 2.5，直接抛弃。
 - [Code GPT](https://docs.codegpt.co/)：需要自己提供 API KEY 或本地跑模型，不考虑
