@@ -126,6 +126,7 @@ LunaTranslator 使用心得：
 
 - 所以男主（和岳父）开局装纯，但是实际上之前跟青梅做过很多次了。什么雷霆剧情
 - 白狼神，日本经典的「因为拥有强大力量而被排斥放逐」
+- 一个 H 是和青梅在教室里（~~你要在教室里干我吗~~），然后完事后男主就让被内射的ノーパン青梅去厕所换卷纸（包括男厕），然后自己跑去打工吗？
 
 </template>
 <template #RIDDLEJOKER>
@@ -2060,6 +2061,7 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - 飛べない蝶は夢を見る
 - ユリアリス
 - 愛因斯坦攜愛敬上
+- 咲夜叙-妖刀的约定-
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 
