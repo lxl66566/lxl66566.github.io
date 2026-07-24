@@ -1181,5 +1181,9 @@ export default [
   { id: "(EH)", aScore: 8, bScore: 9.4, info: "#纯女性 #无H #僵尸 #剧情 #合集 君を紡ぐ", otherlink: "https://e-hentai.org/g/2926884/2d231edf3c/" },
   { id: "551893", aScore: 8.6, bScore: 6.5, info: "#蔚蓝档案 #兽耳 #合集 #发情" },
   { id: "662639", aScore: 8.1, bScore: 7, info: "#异世界 #性玩具 #无插入 #断章", bak: "https://telegra.ph/Art-Jam-見習い騎士の抵抗禁止マッサージ-中国翻訳-DL版-07-08" },
+  { id: "664887", aScore: 7.4, bScore: 7.3, info: "#兽耳 #兽尾 #兄妹", bak: "https://telegra.ph/ミミ好きミミ尽ク-れおねこ-仔猫との性活-ミミとの暮らし-中国翻訳-DL版-07-16" },
+  { id: "665790", aScore: 6.2, bScore: 7.7, info: "#兽耳 #史莱姆 #生产 #直播", bak: "https://telegra.ph/最果て空間-緋乃ひの-ろありんぐないと-海月雲ろあ-Chinese-紫藤汉化组-DL版-07-19-2" },
+  { id: "665878", aScore: 7.5, bScore: 7, info: "#家庭教师", bak: "https://telegra.ph/末路-ぬいばら-同じになってよ-中国翻訳-DL版-07-19" },
+  { id: "633116", aScore: 6.7, bScore: 6.4, info: "#同学 #辣妹" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
