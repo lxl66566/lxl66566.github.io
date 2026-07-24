@@ -564,6 +564,10 @@ var temp2 = IntStream.range(1, 3);          // 生成左闭右开区间流 1,2
 var temp3 = temp1.boxed();                  // Intstream 转为 Stream
 ```
 
+#### parallelStream
+
+Java 的 List 只需要调用 `.parallelStream()` 就可以自动转换为并行多线程处理（CPU bound 的线程池），这个思想实在是太领先了。
+
 ### Optional
 
 Optional 的作用是强制调用方处理空值。

@@ -186,7 +186,14 @@ export default sidebar({
     {
       text: "其他游戏",
       link: "/hobbies/other_games/",
-      children: ["arknights.md", "csgo.md", "uno.md", "rec_college.md", "rec_hometown.md"],
+      children: [
+        "arknights.md",
+        "csgo.md",
+        "uno.md",
+        "rec_college.md",
+        "rec_hometown.md",
+        "meow.md",
+      ],
     },
   ],
   "/hobbies/NSFW/": ["index.md", "videos.md", "comic.md", "bangumi.md"],

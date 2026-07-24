@@ -1298,13 +1298,19 @@ V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是�
 
 试用了一下 GLM 5.1 感觉还不错，至少能写出生产级别的代码了。过了一段时间后，GalgameManager 迎来了 1.0.0 大更新，在 AI 的帮助下我搞了个插件系统，集成到了 GalgameManager 里，这其中就包括了我心心念念的语音加速功能。于是 AudioSpeedHack 那个 TUI 就正式退役了。
 
-> GalgameManager 刚开始的时候基本就是古法编程，倾注了我最多的心血；虽然 1.0.0 之后开始用 Agent 写大量代码，不过我仍然会做严格的代码质量把控。
+> GalgameManager 刚开始的时候基本就是古法编程，倾注了我最多的心血；虽然 1.0.0 之后开始用 Agent 写大量代码，不过我仍然会做代码质量把控。
 
 ### Wine 上的语音加速
 
 闲的无聊，GalgameManager 1.2.0 优化了在 Linux 原生应用使用 Wine 启动 Galgame 的体验，当然语音加速我肯定也是想带过去的。
 
-Wine 有一个 `WINEDLLOVERRIDES` env 可以控制从哪里加载，native 代表优先用游戏提供的 dll，builtin 是优先加载系统 dll。让游戏加载我的 dsound dll 可以通过 `WINEDLLOVERRIDES` 设置，非常简单，我的 dll proxy 到 System32/SysWOW64 也没啥问题，wine 会自动处理这个路径。但是 MMDevAPI 就没那么简单了，我使尽浑身解数也没法让游戏去加载我的 MMDevAPI wrapper，无论是 wine regedit 修改注册表还是直接替换 System32/SysWOW64 都不行，我只能归结于 wine 有一些我不理解的妙妙加载机制。
+Wine 有一个 `WINEDLLOVERRIDES` env 可以控制从哪里加载，native 代表优先用游戏提供的 dll，builtin 是优先加载系统 dll。让游戏加载我的 dsound dll 可以通过 `WINEDLLOVERRIDES` 设置，非常简单，我的 dll proxy 到 System32/SysWOW64 也没啥问题，wine 会自动处理这个路径。但是 MMDevAPI 就没那么简单了，我使尽浑身解数也没法让游戏去加载我的 MMDevAPI wrapper：
+
+- 原先在 Windows 上有效的修改注册表（在 wine 上使用 wine regedit）是不生效的。
+  - 为了排除 Wine 对 MMDevAPI.dll 本身的特殊 hack 的影响，我更换 dll 名字为 `MMDevAPI_proxy.dll`，并同步修改注册表的加载位置，也无效。
+- 直接替换 System32/SysWOW64 里的 dll（然后原先的 dll 重命名一下，让我的 proxy 去找新的 dll）也是不行的。
+
+一个置信度比较高的说法是，Wine 在 `C:\windows\system32\MMDevAPI.dll` 放的是一个 fake DLL；load_builtin 检测到 wine_fakedll 标志后，强制覆盖 n,b 设置为 LO_BUILTIN（dlls/ntdll/unix/loader.c:1270）。所以只要加载路径经过 system32 的 fake DLL，就会强制加载 builtin。那这样的话就难解了，除非我做出注入游戏进程的 SPEED UP，否则目前的路子好像都行不通。
 
 所以目前在 Wine 上玩 galgame，只能对支持 dsound 的游戏使用 SPEED UP。
 
