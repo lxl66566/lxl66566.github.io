@@ -2,11 +2,24 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
-    name: "兽娘育成方案",
+    name: "爱因斯坦携爱敬上",
     playing_status: PlayingStatus.PLAYING,
-    namaniku: true,
+    duration: {
+      start: "2026-07-25",
+    },
+  },
+  {
+    name: "兽娘育成方案",
+    use_time: "3h57min",
     duration: {
       start: "2026-07-11",
+      end: "2026-07-24",
+    },
+    score: {
+      story: 3.1,
+      visual: 8.5,
+      program: 8,
+      thrill: 0
     }
   },
   {

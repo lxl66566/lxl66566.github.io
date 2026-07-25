@@ -1071,6 +1071,14 @@ GARbro 可解不可封，因此还是得想别的办法。imhex 打开一看，�
 
 然后懒得搞了，《虹彩都市》这游戏本来也是小短篇，没有太多折腾的必要，AudioSpeedHack 一把梭就完了。
 
+### 后续
+
+SiglusEngine 的游戏实在是有点多，而且好多游戏音量均衡非常垃圾，还是得花点时间研究下。
+
+看到 [SiglusSceneScriptUtility-GUI](https://github.com/yanmuuuu/SiglusSceneScriptUtility-GUI)，2026.07 创建的仓库，一眼 vibe coding，还有几个恶心的 bat 脚本。想着还是尝试一下，至少给点起码的尊重。拉下来 `uv sync && uv run siglus-ssu-gui`（当然不会去跑那个 bat），一解一封，我原本不抱有太大希望，结果没想到还真的能跑，进游戏可以正常播放语音，出乎了我的意料。
+
+实际上这个 GUI 内部包的还是 [SiglusSceneScriptUtility](https://github.com/Jirehlov/SiglusSceneScriptUtility)，这个玩意看着就正常多了。想要实现解封包，直接用 SiglusSceneScriptUtility CLI 也不是不行。
+
 </template>
 <template #箱庭ロジック>
 

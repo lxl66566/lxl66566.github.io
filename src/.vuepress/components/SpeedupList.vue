@@ -236,11 +236,11 @@ const data: SpeedupItemType[] = [
     speedupable: true,
   },
   {
-    names: ["虹彩都市", "Rewrite"],
+    names: ["虹彩都市", "Rewrite", "爱因斯坦携爱敬上"],
     valid_name: "SiglusEngine",
     engine: "SiglusEngine",
     save_format: "ovk",
-    speedupable: false,
+    speedupable: true,
   },
   {
     names: ["箱庭ロジック"],

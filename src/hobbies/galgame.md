@@ -122,12 +122,25 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #爱因斯坦携爱敬上>
+
+- 男主还嫌上同班同学的情商了，自己就是个憨批啊。
+- 每天选一个人，~~感觉回到了鸟白岛~~。
+- 发现个人线完全没有其他人的影子啊，设计得一般。
+
+</template>
 <template #兽娘育成方案>
 
+总之是一部无脑可爱 galgame。
+
+- 顺带一提，sub 剧本是和泉万夜。
+- 可攻略角色只有两个。
 - 所以男主（和岳父）开局装纯，但是实际上之前跟青梅做过很多次了。什么雷霆剧情
 - 白狼神，日本经典的「因为拥有强大力量而被排斥放逐」
 - 一个 H 是和青梅在教室里（~~你要在教室里干我吗~~），然后完事后男主就让被内射的ノーパン青梅去厕所换卷纸（包括男厕），然后自己跑去打工吗？
 - 整天出一些小番的剪影来吓人
+- 然后进了一下里世界，怎么瞬间本作就推完了。哦原来是~~断章~~分割商法啊。
+  - 2018 的作品了啊，到现在已经 8 年了。。分个屁，就是断章
 
 </template>
 <template #RIDDLEJOKER>
@@ -148,6 +161,7 @@ LunaTranslator 使用心得：
 - 二条院线，汪汪 + 关灯，~~立刻在 H 之前猜出初夜体位~~ （我是直接一个快进验证的，结果后来发现是双体位。。）
 - 二条院线在泳池边的那个场景，事件解决为啥妹妹直接回房了。明明男主也挨了几下，这时候不应该爱意（中二）满满的治疗吗（）
 - 茉优线确实有点 baka 了，在 boss 面前诉说自己（对男主）的爱
+- 攻略顺序：在原七海 -> 三司绫濑 -> 壬生千咲 -> 二条院羽月 -> 式部茉优
 
 </template>
 <template #Rewrite>
@@ -2054,7 +2068,6 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - VenusBlood VALKYRIE
 - Animal☆Panic?
 - CRACK≡TRICK!
-- 雪境迷途遇仙踪
 - 献给神明般的你
 - 丸子与银河龙
 - 世纪末之诗
@@ -2062,7 +2075,6 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - ディメンション凸ラバース!!
 - 飛べない蝶は夢を見る
 - ユリアリス
-- 愛因斯坦攜愛敬上
 - 咲夜叙-妖刀的约定-
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
@@ -2124,6 +2136,7 @@ _（此处问题无法通过游戏设置解决；不包含久远 galgame，排�
 <!-- prettier-ignore -->
 |游戏名|问题|
 | :-: | :-: |
+| 爱因斯坦携爱敬上 | ~~怎么越玩声音越小。~~<text style="color:red;">这游戏把语音音量写成他妈的《音效》</text> ![这就是你的语音音量啊](/images/hobbies/galgame/einstein_audio.png =400x) |
 | RIDDLE JOKER | 在部分场景出现程序卡死情况 |
 | Rewrite | 视频音量使用系统音效音量 |
 | 諦観のイヴ・ベセル | 小键盘 enter 无法使用；每个菜单项里其实右上角还有子 tab，这个做得贼不明显。而且双层设置其实是 anti pattern。 |
