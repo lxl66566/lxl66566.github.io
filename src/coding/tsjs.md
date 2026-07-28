@@ -83,7 +83,7 @@ node-ts xxx.ts
 
 业界常用的有 Prettier, ESLint, [Biome](https://github.com/biomejs/biome/blob/main/packages/@biomejs/biome/README.zh-CN.md)（原 Rome）等。
 
-这些 formatter 可以被安装到项目中作为一个 dev dependency，也可以只当成 vscode 插件使用。前者的好处是可以统一整个项目的代码风格，而后者就适合跨项目的个人应用。由于我基本没有与人协作开发经历，我使用 vscode 插件。
+这些 formatter 可以被安装到项目中作为一个 dev dependency，也可以只当成 vscode 插件使用。前者的好处是可以统一整个项目的代码风格，而后者就适合跨项目的个人应用。
 
 ::: tabs
 
@@ -91,9 +91,27 @@ node-ts xxx.ts
 
 老牌 formatter 了，支持非常多的格式；风格也比较统一。
 
-这里建议一些插件：
+这是我的 prettier.config.js：
 
-- [prettier-plugin-sort-imports](https://github.com/trivago/prettier-plugin-sort-imports)
+```js
+/** @type {import("@ianvs/prettier-plugin-sort-imports").PrettierConfig} */
+
+export default {
+  arrowParens: "avoid",
+  endOfLine: "lf",
+  // @ianvs/prettier-plugin-sort-imports plugin's options
+  // https://github.com/IanVS/prettier-plugin-sort-imports#options
+  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+  importOrderTypeScriptVersion: "5.4.5",
+  plugins: ["prettier-plugin-tailwindcss", "@ianvs/prettier-plugin-sort-imports"],
+  printWidth: 90,
+  semi: false,
+  singleQuote: true,
+  tabWidth: 2,
+  trailingComma: "none",
+  useTabs: false,
+};
+```
 
 @tab biome
 
@@ -112,6 +130,8 @@ Biome 是 Rome 重生版，使用 Biome 的一大理由是 written in Rust。但
 oxlint 是一个比较新的 linter，[oxc](https://github.com/oxc-project/oxc) 的一部分。而 oxc 也是 rust 写的，据说比 biome 还快。在 vscode 使用只需要安装 oxc 插件即可。
 
 ~~oxc 虽然说会支持 formatter，但毕竟还在开发早期，目前尚未实装。~~ 有 oxfmt 了。
+
+论规则覆盖与类型检查，oxlint 还是比 eslint 要弱一些。因此很多项目会同时使用 oxlint 和 eslint。可以用 eslint-plugin-oxlint 让 eslint 检查时忽略 oxlint 已经检查过的内容，避免重复检查，并且享受到 oxlint 的加速。具体写法可以问 AI。
 
 @tab biome
 
@@ -139,7 +159,7 @@ biome 本身也是 linter。
 
 @tab ESLint
 
-ESLint 支持复杂的自定义化。不过我没用过。
+ESLint 也是老牌 linter，拥有一堆强大的插件，生态系统丰富。缺点就是慢。
 
 - 你不应该安装 eslint 的 vscode 插件。
   - eslint 的 vscode 扩展会在任何工作区都激活，即使这不是前端相关的工作区。
@@ -158,12 +178,17 @@ ESLint 支持复杂的自定义化。不过我没用过。
     "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致性（避免大小写问题导致的模块导入错误）
     "isolatedDeclarations": false, // 强制所有导出内容必须显式声明类型（有性能要求时建议关闭）
     "isolatedModules": true, // 要求每个文件必须是独立的模块（能单独编译），避免因类型导入或跨文件类型依赖导致编译错误
+    "noEmit": true,
     "noFallthroughCasesInSwitch": true, // 禁止 switch 语句中 case 的穿透（必须使用 break/return）
     "noImplicitAny": true, // 禁止隐式的 any 类型（必须显式声明类型）
     "noImplicitOverride": true, // 禁止隐式覆盖（派生类覆盖基类成员必须使用 override 修饰符）
     "noImplicitReturns": true, // 禁止隐式返回（函数必须显式返回所有路径的值）
     "noImplicitThis": true, // 禁止隐式 any 类型的 this（必须显式声明 this 类型）
-    "noPropertyAccessFromIndexSignature": true, // 禁止通过点符号访问索引签名属性（强制使用 obj['key'] 语法）
+    "noPropertyAccessFromIndexSignature": false, // 禁止通过点符号访问索引签名属性（强制使用 obj['key'] 语法）
+    "noUncheckedIndexedAccess": true, // 索引访问结果包含 undefined（防止未检查的索引访问）
+    "noUncheckedSideEffectImports": true, // 检查 import 是否仅为副作用引入
+    "skipDefaultLibCheck": true, // 确保不检查外部依赖包的类型
+    "skipLibCheck": true, // 跳过所有声明文件（.d.ts）的类型检查
     "strict": true, // 启用所有严格类型检查选项
     "strictBindCallApply": true, // 严格检查 bind/call/apply 方法的参数类型
     "strictFunctionTypes": true, // 严格检查函数类型（禁用函数参数的双变行为）
@@ -174,7 +199,19 @@ ESLint 支持复杂的自定义化。不过我没用过。
 }
 ```
 
-有两个 false 是因为对正常开发影响太大了，麻烦 > 收益。
+有几个 false 是因为对正常开发影响太大了，麻烦 > 收益。
+
+### IDE
+
+一般开发前端都用 VSCode，而且我是 all in vscode 人。
+
+- VS Code 内置的 TypeScript 语言服务默认使用自己的内置版本，而不是项目里安装的 node_modules/typescript。内置版本不会 follow pnpm 的 symlink，因此可能要在 `.vscode/settings.json` 里添加这几行才行：
+  ```json
+  {
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true
+  }
+  ```
 
 ## 语言基础
 
