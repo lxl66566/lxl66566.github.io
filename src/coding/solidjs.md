@@ -10,9 +10,11 @@ tag:
 
 # [SolidJS](https://www.solidjs.com/)
 
-SolidJS 是一个高性能轻量前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以学起来非常快（不论有无 React 基础）。不过本文假设读者已经熟悉了 React 基础。
+SolidJS 是一个高性能轻量前端框架，其以 JSX 为核心，为 React 做了许多减法，少了很多难记的 Hooks，所以上手非常快。不过本文假设读者已经熟悉了 JSX 与 React 基础。
 
-SolidJS 的哲学就是 small and simple。所以 React 高手用起来肯定没有那么方便舒服，很多地方需要自己手操低级逻辑。但是对新手来说是一件好事，SolidJS 的隐含条件少，不容易被框架坑。要说它的唯一缺点可能就是生态了，SolidJS 的包数量和可用性都要比 React 差上许多 ([ref](https://t.me/withabsolutex/2343))。
+SolidJS 的哲学是 small and simple，优势就是打包体积小和性能好，不过很多地方需要自己手操低级逻辑。如果你深入理解了 SolidJS（因为内容不太多所以不难），也不容易被各种隐含逻辑坑到。
+
+SolidJS 的一个缺点是生态比较差，包数量和可用性都要比 React 差上许多 ([ref](https://t.me/withabsolutex/2343))。
 
 ## props 与响应性
 
@@ -83,9 +85,21 @@ createResource 可以跟 Suspence 组件[配合使用](https://docs.solidjs.com/
 
 SolidJS 也提供了一些内置组件，让写 Vue 的人倍感熟悉。
 
+<!-- dprint-ignore-start -->
+
 - `<Show when={...} fallback={...}></Show>`，v-if + v-else
 - `<For each={...}></For>`，v-for
 - `<ErrorBoundary fallback={(err, reset) => <div></div>}></ErrorBoundary>`，内层如果抛出错误，可以用这个组件显示另一些错误信息。
+- Switch：就类似 js 或其他语言的 switch，从上到下顺序执行判断。
+  ```jsx
+  <Switch fallback={<NotFound />}>
+    <Match when={status() === 'loading'}><Loading /></Match>
+    <Match when={status() === 'success'}><Data /></Match>
+    <Match when={status() === 'error'}><Error /></Match>
+  </Switch>
+  ```
+
+<!-- dprint-ignore-end -->
 
 ## functions
 
@@ -104,6 +118,48 @@ splitProps / mergeProps 存在的意义在于保持子对象的响应性，在[�
 reconcile 解决了细粒度的响应式更新问题，把整个对象销毁 + 创建变成每个子对象与深层对象的比对与替换。基本上只要你用了 `createStore`，然后有任何后端响应/前端重新构造对象，需要整体替换这个 store 的场景，直接套一个 reconcile 即可。
 
 reconcile 如果用于数组细粒度更新，则最好指定 key，否则可能退化回原先的全量构造。
+
+## 深入 SolidJS
+
+React 的 FC (JSX 概念，FunctionComponent) 既是 Setup，也是 Render。状态每次改变，整个函数都会重新执行一遍，生成新的 Virtual DOM，然后进行 Diff。
+
+SolidJS 的 FC 仅仅是 Setup 函数，且只执行一次。生成代码的示例如下：
+
+```js
+// 对于这样的基本代码
+function Counter() {
+  const [count, setCount] = createSignal(0);
+  return <div>Count: {count()}</div>;
+}
+
+// SolidJS 编译器会生成这样的代码
+function Counter() {
+  const [count, setCount] = createSignal(0);
+
+  // 1. 创建真实 DOM
+  const _el = document.createElement("div");
+
+  // 2. 建立细粒度响应式联系 (Effect)
+  // 只要 count() 变化，只更新这个 textContent，不重新执行 Counter 函数
+  createEffect(() => {
+    _el.textContent = `Count: ${count()}`;
+  });
+
+  return _el;
+}
+```
+
+因为只执行一次，所以 FC 不允许 early return。如果 FC 进行了 early return，则 return 之后的 DOM 可能根本不会被创建，也就无从渲染与更新。也同时因为只执行一次，UI 的插入、移动和销毁必须通过直接操作真实 DOM 来完成，所以 SolidJS 才会提供一堆内置的 [components](#components)，用来管理响应式依赖的生命周期（变化监听、条件计算、清理等）。
+
+比如下面的代码：
+
+```jsx
+<Show when={isLoggedIn()} fallback={<Login />}>
+  <Dashboard />
+</Show>;
+```
+
+Dashboard 内可能有一些副作用，所以需要用 Show 在挂载/卸载组件的时候也顺便处理这些副作用。
 
 ## 配套设施
 

@@ -122,6 +122,11 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #KANADE>
+
+- 开始游戏，看到女主的第一个表情，我就知道这原画和 ATRI 是同一个。
+
+</template>
 <template #爱因斯坦携爱敬上>
 
 - 男主还嫌上同班同学的情商了，自己就是个憨批啊。

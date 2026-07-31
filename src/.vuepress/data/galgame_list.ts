@@ -2,6 +2,13 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "KANADE",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-07-31",
+    },
+  },
+  {
     name: "爱因斯坦携爱敬上",
     playing_status: PlayingStatus.PLAYING,
     duration: {
@@ -19,8 +26,8 @@ const original_list: GalItemInputType[] = [
       story: 3.1,
       visual: 8.5,
       program: 8,
-      thrill: 0
-    }
+      thrill: 0,
+    },
   },
   {
     name: "RIDDLE JOKER",
@@ -29,14 +36,14 @@ const original_list: GalItemInputType[] = [
     use_time: "20h24min",
     duration: {
       start: "2026-05-29",
-      end: "2026-07-05"
+      end: "2026-07-05",
     },
     score: {
       story: 4,
       visual: 8.6,
       program: 9,
-      thrill: 0.4
-    }
+      thrill: 0.4,
+    },
   },
   {
     name: "纸上魔法使",
