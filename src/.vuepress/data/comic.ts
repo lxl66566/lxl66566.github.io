@@ -1185,5 +1185,6 @@ export default [
   { id: "665790", aScore: 6.2, bScore: 7.7, info: "#兽耳 #史莱姆 #生产 #直播", bak: "https://telegra.ph/最果て空間-緋乃ひの-ろありんぐないと-海月雲ろあ-Chinese-紫藤汉化组-DL版-07-19-2" },
   { id: "665878", aScore: 7.5, bScore: 7, info: "#家庭教师", bak: "https://telegra.ph/末路-ぬいばら-同じになってよ-中国翻訳-DL版-07-19" },
   { id: "633116", aScore: 6.7, bScore: 6.4, info: "#同学 #辣妹" },
+  { id: "578900", aScore: 7.4, bScore: 8.5, info: "#合集 #4P #巨乳 #乡村 #师生 #陸の孤島亭" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

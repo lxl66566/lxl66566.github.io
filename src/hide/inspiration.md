@@ -176,6 +176,7 @@ tag:
 - [ ] sync tools
 - [ ] ~~diskann~~ has been rewriten by MS
 - [ ] bubblewrap
+- [ ] weasel
 
 ### Android
 
