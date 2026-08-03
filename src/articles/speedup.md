@@ -1065,7 +1065,9 @@ SiglusEngine 公认的工具是 [xmoezzz/SiglusExtract](https://github.com/xmoez
 
 然后发现找不到音频文件，用 dust 一看，大的全是视频，其他零零散散的根本找不到啥是语音 pack。那我问你，你的音频文件在哪。。看到 wav 文件夹里全是 SE，有 700 多个。不知道音频有没有混在里面，我想着总不可能是 700 多个音效吧，解出来一看还真是，草。每个文件夹挨个看过去，然后发现音频在 `koe` 里。
 
-这个 SiglusExtract 解出来的 ogg 格式是非标的，至少有 `Symphonia error: decoder needs to be reset`。然后定睛一看，这工具根本没有 pack 音频的选项啊，我真的绷不住了。
+这个 SiglusExtract 解出来的 ogg 格式是非标的，至少有 `Symphonia error: decoder needs to be reset`。然后定睛一看，这工具根本没有 pack 音频的选项啊。
+
+我承认这个作者很强，甚至开发了 siglus_rs 这种 SiglusEngine 模拟器。但是这个 SiglusExtract 并不好用也是真的。
 
 GARbro 可解不可封，因此还是得想别的办法。imhex 打开一看，里面 OggS 是直接打进去未变换的，那么最后就剩下了解 header 的含义了。
 

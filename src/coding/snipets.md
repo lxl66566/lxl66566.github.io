@@ -17,7 +17,9 @@ tag:
 
 我最常用的脚本，没有之一。将当前的 git 已追踪修改“吸收”到任意 commit（默认为最近的 commit，即 HEAD）。
 
-用法：`gfixup [git_commit]`
+- 用法：`gfixup [git_commit]`
+- 注意：会更改所有的 tracked files 而非 staged files。如果需要只修改 staged files，请去掉脚本中的 `-a`。
+- git 2.55.0 新增了一个 `git history fixup [commit]` 的命令，与脚本功能类似。不过由于 git history 不允许 `--committer-date-is-author-date`（即不改变 commit date），因此该脚本还是有用武之地的。
 
 ::: code-tabs
 
