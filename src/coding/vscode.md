@@ -63,7 +63,7 @@ tag:
   - 跨语言依赖更新：_Dependi_
   - Ansi Colors：用来看带有颜色符号的日志的，ctrl+shift+p 然后点 _ANSI Text: Open Preview_ 即可。
 - markdown：_Markdown Preview Enhanced_
-- 前端：_Auto Rename Tag_，_Oxc_
+- 前端：_Oxc_
   - Vue: _Vue - Official_
 - C++：_Clang-Tidy_，_Clang-Format_，详见[开发环境](./Cpp.md#开发环境)
 - python：_Pylance_，_Ruff_，详见[Python](./python.md#vscode-扩展)
@@ -82,6 +82,7 @@ tag:
 我拉黑的插件。
 
 - Python Environments：有非常严重的 bug，在某些 shell 上启动非常慢，并且会擅自往你的终端发 `Ctrl + C` ([ref](https://t.me/withabsolutex/2709))
+- Flowistry：因为 rustc_private 访问内部结构的关系，Flowistry 会静默给你下载特定的一个 rust toolchain 包括它自己的 binary，我不喜欢这个设计。而且下载不做重试。
 
 ### 插件管理
 
@@ -135,7 +136,7 @@ tag:
 
 我踩到的坑
 
-- Even Better Comments：启动卡死
+- Even Better Comments：启动卡死、format on save 卡死（不过这是插件本身的问题）
 
 ## feature
 
@@ -222,6 +223,7 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
   ```
 - `Ctrl + Shift + C` 默认可以打开 external terminal（非集成终端）。在 AI 时代快速打开一个 external 然后进入 opencode 等 cli agent 是一个非常有用的技巧。（因为这种玩意有各种快捷键冲突所以无法运行在集成终端）
   - 但是在 WSL 里用不了。
+- vscode [自带了 auto rename tag](https://code.visualstudio.com/updates/v1_44#_synced-regions)（即对于 html 等，开始标签与闭合标签成对，则修改其中一个会自动修改另一个），因此不需要再下载 _Auto Rename Tag_ 插件。
 
 ## 编写插件
 
@@ -234,6 +236,8 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 我不爱用那些令牌啥的，因此我选择直接 <https://marketplace.visualstudio.com/manage>，然后把打出来的 .vsix 文件拖到这里即可。
 
 ## 关于 cursor
+
+::: details 感觉 cursor 已经死了，直接烧纸，下面内容不需要再看了
 
 [Cursor](https://www.cursor.com/pricing) 是 AI 时代下的，基于 VSCode 的 IDE，其将 AI 深度集成到了编辑器内。Cursor 全兼容 VSCode，所以可以快速抢占市场。
 
@@ -266,6 +270,18 @@ Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。有一些需�
    - cursor-mate（闭源）
 3. ~~邮箱无限续可以用 2925 无限邮。~~
    - 2025.03 之后，2925 无限邮和一些滥用邮箱被彻底禁用，爆 [_User is unauthorized_](https://forum.cursor.com/t/user-is-unauthorized/43042/79)。这里建议买一个域名托管到 Cloudflare，然后用这个域名开一堆子域的邮箱。
+
+:::
+
+## 遇到的问题
+
+### code cli command 执行失败
+
+我运行 `code --list-extensions` 的时候不会列出所有插件，而是会打开一个新的 vscode 窗口。
+
+这是因为 code 指向了 `C:\xxx\Microsoft VS Code\Code.exe`。将 code 当成 cli 执行，必须执行 `C:\xxx\Microsoft VS Code\bin\code.cmd`，因此需要修改环境变量，把 `Microsoft VS Code` 改掉。
+
+参考 <https://github.com/microsoft/vscode/issues/227186>。
 
 ## external
 

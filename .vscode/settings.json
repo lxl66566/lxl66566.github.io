@@ -4,7 +4,11 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "dprint.dprint",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off"
+    }
   },
   "[vue]": {
     "editor.defaultFormatter": "dprint.dprint",
