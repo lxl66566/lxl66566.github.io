@@ -158,6 +158,7 @@ tag:
 - [x] flake-follows ([idea](https://t.me/absolutexsward/142)) [code](https://gist.github.com/lxl66566/697db0cccd04b7247dc9a0cfb96d328c)
 - [x] [dae to sing-box](https://github.com/lxl66566/sing-dae)
 - [x] Rust powerful and easy-to-use pipeline crate [youpipe](https://github.com/lxl66566/youpipe)
+- [ ] shame of auto close issue
 
 <!-- - 转码，复制，参考我的 fish function
 - 平台无关的 alias
