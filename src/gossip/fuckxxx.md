@@ -192,6 +192,18 @@ tag:
 - 使用 `code` 命令启动 vscode 时，命令行窗口有概率不会自动退出。
 - WSL2 的 GUI，WSLg，延迟巨高，根本是不能用的水平。
 - **恶性 bug**：以 `NO_PROXY='*' code xxx` 启动 vscode，插件无法读取到 NO_PROXY env。以 `NO_PROXY='*' code` 启动 vscode，再打开文件夹，则插件可以读取到 env。([src](https://t.me/withabsolutex/2624))
+- 点一下检查更新就会自动下载安装包，谁家检查更新是这样的
+- _已同步的计算机_ 下，看到这些我真是要笑出来了，你不配拥有主机名 ([ref](https://t.me/withabsolutex/2790))
+  ```
+  Windows (Code) #3 当前
+  Windows (Code) #1
+  Linux (Code) #1
+  Linux (Code) #2
+  Windows (Code) #2
+  Windows (Code) #4
+  Windows (Code) #5
+  Windows (Code) #6
+  ```
 
 #### 基于 vscode 的开发
 

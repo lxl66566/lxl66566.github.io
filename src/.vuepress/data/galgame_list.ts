@@ -2,6 +2,23 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "鬼哭街 -涙尽鈴音響-",
+    valid_name: "鬼哭街",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-08-09",
+    },
+  },
+  {
+    name: "けもの道☆ガーリッシュスクエア",
+    valid_name: "けもの道",
+    other_names: ["兽娘道"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-08-09",
+    },
+  },
+  {
     name: "KANADE",
     playing_status: PlayingStatus.PLAYING,
     duration: {
@@ -10,10 +27,18 @@ const original_list: GalItemInputType[] = [
   },
   {
     name: "爱因斯坦携爱敬上",
-    playing_status: PlayingStatus.PLAYING,
+    other_names: ["科学星奏"],
+    use_time: "10h58min",
     duration: {
       start: "2026-07-25",
+      end: "2026-08-08",
     },
+    score: {
+      story: 7.3,
+      visual: 7.2,
+      program: 5,
+      thrill: 3.2
+    }
   },
   {
     name: "兽娘育成方案",

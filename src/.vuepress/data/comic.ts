@@ -1186,5 +1186,10 @@ export default [
   { id: "665878", aScore: 7.5, bScore: 7, info: "#家庭教师", bak: "https://telegra.ph/末路-ぬいばら-同じになってよ-中国翻訳-DL版-07-19" },
   { id: "633116", aScore: 6.7, bScore: 6.4, info: "#同学 #辣妹" },
   { id: "578900", aScore: 7.4, bScore: 8.5, info: "#合集 #4P #巨乳 #乡村 #师生 #陸の孤島亭" },
+  { id: "666924", aScore: 8.1, bScore: 9.5, info: "#魔法少女 #战败 #凌辱 #恶堕 #群交" },
+  { id: "666881", aScore: 9.6, bScore: 6.2, info: "#蔚蓝档案 #录音室 #loli妈妈", bak: "https://telegra.ph/HUNGRRRRY-qNdEbASeR-前世の幼馴染が収録中に誘惑してくる件について-ブルーアーカイブ-中国翻訳-DL版-07-23" },
+  { id: "461559", aScore: 6, bScore: 7.3, info: "#精灵 #媚药 #堕落", order: 1, bak: "https://telegra.ph/いーすとはうす-パン工場-エルフの住む森-中国翻訳-DL版-07-25" },
+  { id: "637227", aScore: 9.4, bScore: 7, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/20NT-ふけまち-プあな--ニートになったプラナと蕩けあう夜---Archive-Sketch-LUN-ブルーアーカイブ-中国翻訳-無修正-DL版-03-15-4" },
+  { id: "(eh)", aScore: 8, bScore: 9.3, info: "#神明 #loli #纯爱 #缘神启动", otherlink: "https://e-hentai.org/s/4dc69130f1/3984002-1" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

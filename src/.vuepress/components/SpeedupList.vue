@@ -108,7 +108,7 @@ const data: SpeedupItemType[] = [
     speedupable: false,
   },
   {
-    names: ["アンレス テルミナリア", "猫忍えくすはーと 全系列"],
+    names: ["アンレス テルミナリア", "猫忍えくすはーと 全系列", "けもの道☆ガーリッシュスクエア 全系列"],
     valid_name: "ypf",
     engine: "Yu-Ris",
     save_format: "ypf",
