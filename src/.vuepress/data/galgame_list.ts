@@ -2,6 +2,17 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "けもの道☆ガーリッシュスクエア LOVE+PLUS",
+    valid_name: "けもの道",
+    other_names: ["兽娘道"],
+    order: 2,
+    playing_status: PlayingStatus.STOPPED,
+    duration: {
+      start: "2026-08-10",
+      end: "2026-08-10",
+    },
+  },
+  {
     name: "鬼哭街 -涙尽鈴音響-",
     valid_name: "鬼哭街",
     playing_status: PlayingStatus.PLAYING,
@@ -13,6 +24,7 @@ const original_list: GalItemInputType[] = [
     name: "けもの道☆ガーリッシュスクエア",
     valid_name: "けもの道",
     other_names: ["兽娘道"],
+    order: 1,
     playing_status: PlayingStatus.PLAYING,
     duration: {
       start: "2026-08-09",

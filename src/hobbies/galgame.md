@@ -129,7 +129,13 @@ LunaTranslator 使用心得：
 </template>
 <template #けもの道>
 
+### 1
+
 - 四个女主只有两个可攻略，续作也一样，可能还是比较怪的。
+
+### LOVE+PLUS
+
+这部 FD 我实在是有点无语，总共就两个 HS 唬谁呢？
 
 </template>
 <template #KANADE>

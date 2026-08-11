@@ -212,7 +212,7 @@ tag:
   - [x] f 全屏
   - [x] 屏蔽无用组件
 - [ ] ~~类 markdown 方言, nmd (negative markdown) 换行问题 样式统一 高亮与黑幕 双列阅读区支持~~ 不要让方言再多一个啦！
-- [ ] ~~better markdown formatter~~ just PR to _prettier_ if you don't like it.
+- [ ] ~~better markdown formatter~~ just use _dprint_ if you don't like prettier.
 - [ ] 答题网模板，选择题实时反馈
 - [ ] gaussian blur lib
 - [ ] ~~koishi plugin:~~ （koishi 有关计划暂时搁置）

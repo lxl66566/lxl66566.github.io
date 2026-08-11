@@ -17,7 +17,7 @@ tag:
 
 使用 MAA 挂机明日方舟时，无法自动更新软件本体，表现为点击「软件更新」，显示新版本下载失败。
 
-查看日志，发现 GET api.maa.plus/MaaAssistantArknights/api/version/summary.json 下载有重试，而 https://github.com/MaaAssistantArknights/MaaRelease/releases/download/v6.16.5/MAAComponent-OTA-v6.16.4_v6.16.5-win-x64.zip 软件更新 zip 包下载没有重试，一次 fail 直接失败。
+查看日志，发现 GET api.maa.plus/MaaAssistantArknights/api/version/summary.json 下载有重试（实际上是 fallback 到 api2.maa.plus），而 https://github.com/MaaAssistantArknights/MaaRelease/releases/download/v6.16.5/MAAComponent-OTA-v6.16.4_v6.16.5-win-x64.zip 软件更新 zip 包下载没有重试，一次 fail 直接失败。
 
 ## rustup
 
@@ -32,3 +32,11 @@ Unable to install toolchain '1.74.0-x86_64-pc-windows-msvc', rustup reported:
 显然 rustup 并没有做失败重试。
 
 看了下 rustup 的重试机制只覆盖组件包下载，不覆盖 manifest / sha256 的下载。并且 rustup 只对 BrokenPartialFile 和 DownloadingFile 两种错误重试，tls handshake eof 根本不被包含在内，没有重试行为。
+
+## topcoat
+
+我其实不用 tokio 出的这玩意，感觉也太玩具了点。只是 rust 群群友分享了下其 builtin tailwind support 源码，就点进去看了下。
+
+它实现 tailwind support 的方式是……去 Github 下载一个 tailwindcss 的 binary😅。对你软的稳定性没点 b 数吗，要是 Github down 了我连程序都跑不起来。
+
+扫了一眼代码，也就 [ureq 一发 download](https://github.com/tokio-rs/topcoat/blob/0c6d43fee8df66306754c67f72dc66b915de8dec/crates/topcoat-tailwind/src/build/executable.rs#L159)，没有任何重试机制。这种玩具还是进垃圾桶吧。
