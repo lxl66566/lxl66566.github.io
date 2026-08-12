@@ -202,6 +202,7 @@ $env.config.completions.external = {
     }
   }
   ```
+- 可以使用 `opencode models` 查看所有模型 code。这是为了编写下述的 `opencode.json`。
 - opencode 要让主 agent 使用特定模型的 subagent，这个需求应该非常常见（处于成本的考量），但是 opencode 的文档显然不够好。我是靠自己摸索才搞出能 work 的配置（我用 GLM 5.1 作为主 agent，用 deepseek v4 flash max thinking 作为子 agent）：
   ```json
   {
@@ -210,7 +211,7 @@ $env.config.completions.external = {
     "agent": {
       "general": {
         "mode": "subagent",
-        "model": "deepseek/deepseek-v4-flash",
+        "model": "opencode/deepseek-v4-flash-free",
         "thinking": {
           "type": "enabled",
           "budgetTokens": 65536
@@ -218,15 +219,7 @@ $env.config.completions.external = {
       },
       "explore": {
         "mode": "subagent",
-        "model": "deepseek/deepseek-v4-flash",
-        "thinking": {
-          "type": "enabled",
-          "budgetTokens": 65536
-        }
-      },
-      "scout": {
-        "mode": "subagent",
-        "model": "deepseek/deepseek-v4-flash",
+        "model": "opencode/deepseek-v4-flash-free",
         "thinking": {
           "type": "enabled",
           "budgetTokens": 65536

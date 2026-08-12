@@ -235,6 +235,7 @@ nix-repl> builtins.toJSON nixosConfigurations.<host>.config.xxx # 默认会折�
   - 这玩意不需要配置 trusted-public-keys，因为如何信任拉来的 binary 是 nix 自己的事，不是代理的事。
 - [envfs](https://github.com/Mic92/envfs)：直接在 `/usr/bin` 等传统路径上挂载 FUSE fs，动态响应程序请求，解决 NixOS 兼容 FHS 生态的问题。
 - [nix-tree](https://github.com/utdemir/nix-tree)：交互式的依赖寻找，非常好用。打开以后按 `/` 查找。关于具体的查找依赖，可以参考[这里](https://nixos-and-flakes.thiscute.world/zh/nixos-with-flakes/other-useful-tips#why-some-packages-are-installed)。
+  - 顺带一提，Mic92 写了一个 [Rust 版本的 nix-tree-rs](https://github.com/Mic92/nix-tree-rs)。
 - [nix-index](https://github.com/nix-community/nix-index)：找包位置。**实际上并不好用**，因为
   1. 需要查找的时候经常是刚安装完软件的时候，还没有 updatedb。而 nixos 的手动 updatedb 耗时极长。
   2. 默认 locate 时也会搜索路径，nix 路径又基于 hash，因此会有很多 hash 污染搜索结果。
