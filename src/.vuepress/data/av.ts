@@ -201,7 +201,7 @@ export default [
   { id: "dasd-321", aScore: 4.3, bScore: 9.5, u: true, name: "#拘束" },
   { id: "id-015-10", aScore: 5.5, bScore: 8.1, u: true, name: "#cosplay" },
   { id: "abp-588", aScore: 5.2, bScore: 9, u: true, name: "#狂暴" },
-  { id: "ambi-131", aScore: 8.5, bScore: 7.7, name: "鬼畜父の性玩具 彼氏との仲を引き裂かれた制服美少女 早美れむ" },
+  { id: "ambi-131", aScore: 8.5, bScore: 7.7, u: true, name: "鬼畜父の性玩具 彼氏との仲を引き裂かれた制服美少女 早美れむ" },
   { id: "ssni-954", aScore: 7.3, bScore: 8.7, name: "手塩にかけた娘が俺の子じゃないと判明したので 羽咲みはる #父女" },
   { id: "fsdss-281", aScore: 8.6, bScore: 8.3, u: true, name: "昏●ドラッグを飲まされ裸で助けを求めてきた社長の娘を追撃レ×プ 桃尻かなめ" },
   { id: "midv-238", aScore: 8.8, bScore: 6.8, u: true, name: "いつも銭湯通いの巨乳隣人に風呂を貸したらGカップに発育した身体を覗き見してしまい濡れ髪のままビチョ濡れでヤリまくった！！ 水卜さくら" },
@@ -570,4 +570,6 @@ export default [
   { id: "NHDTC-1501", aScore: 5.4, bScore: 8.4, name: "固定スローピストンFUCK7 ゆっくり生で挿し込み中出しまでの反応を楽しむ 潮飛びミニ娘" },
   { id: "SNOS-117", aScore: 5.5, bScore: 4, name: "大嫌いな義父に媚薬で犯●れ続けて… 新木希空", say: "无演技" },
   { id: "HRSM-021", aScore: 6.6, bScore: 8, name: "アパレルスタッフ粘着盗撮 強襲生ちん串刺しチカン", say: "虽然摄影技术很一般，各种转场和动作都很僵硬。但是女优的颜值也算中等偏上，可以看。" },
+  { id: "APNS-159", aScore: 6.9, bScore: 5.7, name: "令嬢鬼畜調教 懐妊までの監禁凌●…地獄の30日間 早美れむ", say: "公式化啊，没啥动作和场景。" },
+  { id: "APNS-140", aScore: 8.7, bScore: 7.4, name: "微乳美少女は、彼氏の親戚たちの共同所有物 泉りおん", say: "小而美。前期好看，后期比较烧，最后咧嘴一笑我有点没绷住" },
 ] as AvItemType[];
