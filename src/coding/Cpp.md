@@ -276,7 +276,7 @@ Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 x
 @tab cmake + C/C++ 扩展
 
 1. 先用 Qt creater 创建一个模板项目，或者打开现有项目，或者自己手写模板。
-2. `Ctrl + Shift + P`，键入`C/C++: Edit Configurations (UI)`
+2. `Ctrl + Shift + P`，键入 `C/C++: Edit Configurations (UI)`
    - 在 _包含路径_ 下添加 `D:\software\Qt\6.5.0\mingw_64\include\**`（使用你自己的 include path）
    - 将 _C++ 标准_ 改为你需要的。（截至 Qt6.6.0 不支持 C++23）
 3. 在项目目录下执行：
@@ -546,7 +546,7 @@ Qt 是一个成熟的跨平台，~~跨语言~~的 GUI 框架（不建议再使�
 
 深色模式支持是很重要的。
 
-你可以很简单地[添加深色模式](https://forum.qt.io/topic/101391/windows-10-dark-theme/4)（高对比度）；若你想使用更为柔和一点的颜色，可以使用第三方的[QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)。
+你可以很简单地[添加深色模式](https://forum.qt.io/topic/101391/windows-10-dark-theme/4)（高对比度）；若你想使用更为柔和一点的颜色，可以使用第三方的 [QDarkStyleSheet](https://github.com/ColinDuquesnoy/QDarkStyleSheet)。
 
 ### 唤起最小化的窗口
 
@@ -649,7 +649,7 @@ if(jError.error != QJsonParseError::NoError){
 QJsonObject rootjsonobj = jDoc.object();
 ```
 
-此时`rootjsonobj`即为读入的 QJsonObject 对象（理解为 python 中的字典对象）。
+此时 `rootjsonobj` 即为读入的 QJsonObject 对象（理解为 python 中的字典对象）。
 
 通过 `rootjsonobj[KEY]` 访问得到一个 QJsonValue，可以调用 `toObject()` / `toString()` 等函数将之转换为对应类型。
 

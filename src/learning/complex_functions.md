@@ -97,7 +97,7 @@ s 域微分性质：<span v-pre>$\displaystyle \mathscr{L}(t^nf(t))=(-1)^nF^{(n)
 
 象函数的积分性质：<span v-pre>$\displaystyle \int_s^{\infty}F(s)ds=\mathscr{L}(\frac{f(t)}{t})$</span>
 
-初值定理：f(t)在[0,+∞]可微，则<span v-pre>$\displaystyle f(0)=lim_{s\to\infty}sF(s)$</span> （若存在）
+初值定理：f(t)在 [0,+∞]可微，则<span v-pre>$\displaystyle f(0)=lim_{s\to\infty}sF(s)$</span> （若存在）
 
 终值定理：若 sF(s)在 Re(s)≥0 的区域解析，<span v-pre>$\displaystyle f(\infty)=lim_{s\to 0}sF(s)$</span>
 

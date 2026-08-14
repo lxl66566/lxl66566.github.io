@@ -161,7 +161,7 @@ sudo systemd-nspawn -D container  # 进入容器
 
 [^9]: `tldr` 有很多实现，这里推荐 Rust 的实现 [tealdeer](https://github.com/tealdeer-rs/tealdeer)。
 
-以上是本人体验总结的结果。若需要更多推荐，不如看看[The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps) 和 [external 1.](#external)。
+以上是本人体验总结的结果。若需要更多推荐，不如看看 [The largest Awesome List of CLI/TUI programs](https://github.com/toolleeo/cli-apps) 和 [external 1.](#external)。
 
 ### kde apps
 
@@ -175,7 +175,7 @@ sudo systemd-nspawn -D container  # 进入容器
 
 ### shell
 
-装完系统应该最先装 shell，否则手感一坨狗屎。至于装啥，请移步[shell script](../../coding/shell.md)。
+装完系统应该最先装 shell，否则手感一坨狗屎。至于装啥，请移步 [shell script](../../coding/shell.md)。
 
 - 美化：我使用 starship，跨平台，零配置，已经很好用了。[tide](https://github.com/IlanCosman/tide) 也是一个 fish 美化插件，不过没用过。
 

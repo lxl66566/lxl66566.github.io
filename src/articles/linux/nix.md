@@ -36,7 +36,7 @@ NixOS 绝对不适合 Linux 新手使用，如果你想尝试 NixOS，请务必�
 
 @tab 首次安装
 
-安装我看的是[NixOS 中文](https://nixos-cn.org/tutorials/installation/Subsystem.html)。
+安装我看的是 [NixOS 中文](https://nixos-cn.org/tutorials/installation/Subsystem.html)。
 
 NixOS 的安装比我想象的要折磨得多。原以为装过 Arch 的我已经无惧困难，结果输得非常彻底。。一大原因是因为没有 Archlinux 那样的顶级文档，而另一个则是群友人数确实更少，解答问题的也更少。不过这些都是后话了。
 
@@ -699,7 +699,7 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 
 由于大部分内容都是软链接，nixos 上能玩一个很骚的操作：把 root 挂载成 tmpfs。好处是每次重启所有东西都会被清，可以随便运行一些喜欢到处拉屎的软件。
 
-这里面最重要的东西是 impermanence，它就是一个“mount mount 小工具”，可以将指定文件/文件夹 mount 到指定位置，这样它的修改也会同步到 source，并且比起 softlink 还可以跨子卷/分区。我看的教程是[Lan Tian @ Blog NixOS 系列（四）：“无状态”操作系统](https://lantian.pub/article/modify-computer/nixos-impermanence.lantian/)，结果还是踩了亿点坑。
+这里面最重要的东西是 impermanence，它就是一个“mount mount 小工具”，可以将指定文件/文件夹 mount 到指定位置，这样它的修改也会同步到 source，并且比起 softlink 还可以跨子卷/分区。我看的教程是 [Lan Tian @ Blog NixOS 系列（四）：“无状态”操作系统](https://lantian.pub/article/modify-computer/nixos-impermanence.lantian/)，结果还是踩了亿点坑。
 
 1. 犯了[官方文档中置顶标红](https://nixos.wiki/wiki/Impermanence)的大忌：**没有设 user 密码**。（之前的 defaultPassword 删掉了）于是进不去系统。快照打的是 `/nix`，但是密码在 `/etc/shadow` 并不归 `/nix` 管；也没法直接改挂载选项把原先的 `/` 挂上，因为 `nixos-enter` 进去[无法 rebuild](#nixos-安装)，`--bootloader` 也是 `nixos-rebuild` 的，`nixos-install` 并没有。
    - 最后还是改挂载选项重新 `nixos-install` 了，得益于使用 home-manager 把我的一大堆个人软件分开，本次 install 并没有花费太多时间。install 完至少能先进系统，再修配置，重启就结束了。

@@ -15,7 +15,7 @@ tag:
 
 评测结果挺让我失望的，有一大批软件连定位精确都无法做到，而且都不约而同地定位到我西北方向数百米。我只能猜想这些软件用了错误的地图，或者久远以前的地图。<span class="heimu" title="你知道的太多了">（我甚至考虑了大陆漂移）</span>因此以下将分为两部分横评。
 
-（后来的测试印证了我的观点：同一软件中使用`Google->标准，地形和卫星地图`出现定位偏移，使用`OpenStreetMap->标准地图`则未出现偏移。）
+（后来的测试印证了我的观点：同一软件中使用 `Google->标准，地形和卫星地图`出现定位偏移，使用 `OpenStreetMap->标准地图`则未出现偏移。）
 
 老规矩，<text style="color:red;">红色劣势</text>，<text style="color:blue;">蓝色优势</text>。
 
@@ -56,4 +56,4 @@ tag:
 ## external
 
 1. [Every map of China is wrong](https://medium.com/@anastasia.bizyayeva/every-map-of-china-is-wrong-bc2bce145db2)：解释了为什么很多国外的地图软件具有偏差值。
-2. [GIS坐标系:WGS84,GCJ02,BD09,火星坐标,大地坐标等解析说与转换](https://www.zhoulujun.cn/html/GIS/GIS-Science/2702.html)
+2. [GIS 坐标系:WGS84,GCJ02,BD09,火星坐标,大地坐标等解析说与转换](https://www.zhoulujun.cn/html/GIS/GIS-Science/2702.html)

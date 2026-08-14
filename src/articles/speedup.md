@@ -269,7 +269,7 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 
 试了一下 [detour-rs](https://github.com/darfink/detour-rs)，一个 detour 的 rs 实现，但是拉下来发现编译不过。issue 看到了一个 fork 解决了这个问题，才发觉 detour-rs 已经断更三年了。所以使用此 fork 版本的 [retour-rs](https://github.com/Hpmason/retour-rs)。fork 版的文档也更详细，我用它的 example 配合文档推荐的 [dll-syringe](https://crates.io/crates/dll-syringe) 跑了一下，成功注入了 MessageBoxW，完成了新手教程。
 
-但接下来才是痛苦开始。[rust 音频处理生态](https://rust.audio/)本来就挺烂的。我先尝试的肯定是[rubato](https://crates.io/crates/rubato)，毕竟简介就是速率变换。结果这玩意并不咋样，几乎无文档，examples 里面几百行也没有解释。我把 wav 用 python 转成 f64 raw，跑一遍 example 再转回去，并不是一个可用的音频。
+但接下来才是痛苦开始。[rust 音频处理生态](https://rust.audio/)本来就挺烂的。我先尝试的肯定是 [rubato](https://crates.io/crates/rubato)，毕竟简介就是速率变换。结果这玩意并不咋样，几乎无文档，examples 里面几百行也没有解释。我把 wav 用 python 转成 f64 raw，跑一遍 example 再转回去，并不是一个可用的音频。
 
 ### dll 调库
 
@@ -710,7 +710,7 @@ GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试�
 
 看起来像是一个资源统合站，并且有一个比较详细的 wiki，介绍了 [MakeInt.exe](https://github.com/trigger-segfault/TriggersTools.CatSystem2/wiki/Tool:-MakeInt.exe) 工具和 [KIF Archive（也就是 .int）封包的格式](https://github.com/trigger-segfault/TriggersTools.CatSystem2/wiki/KIF-Archive)。KIF Archive 的介绍等于是个兜底，即使最后没找到现成工具也大致可以照猫画虎搞一个出来。
 
-在给出的[CatSystem2 首页](https://cs2.suki.jp/download)下载了开发包后，进入 cs2_core_v401/マスター作成，执行 `MakeInt.exe output.int xxx/*.ogg`，可以看到所有的 .ogg 确实被打包了。虽然没有密钥，GARbro 可以直接认出来。
+在给出的 [CatSystem2 首页](https://cs2.suki.jp/download)下载了开发包后，进入 cs2_core_v401/マスター作成，执行 `MakeInt.exe output.int xxx/*.ogg`，可以看到所有的 .ogg 确实被打包了。虽然没有密钥，GARbro 可以直接认出来。
 
 总之最重要的是先试一试，搞个脚本把所有音频解包后重新封进去：
 

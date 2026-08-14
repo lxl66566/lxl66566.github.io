@@ -13,7 +13,7 @@ category:
 
 :::
 
-有关博客写作的问题请跳转[VuePress2 与博客心得](../blog/withvuepress2.md)。
+有关博客写作的问题请跳转 [VuePress2 与博客心得](../blog/withvuepress2.md)。
 
 ## 20230816: install electron
 
@@ -194,8 +194,8 @@ bypass:
   ![fuckhyperv](/images/gossip/difficulties/fuckhyperv.png)
 
   尝试：
-  - 使用其他系统 iso ：出现`Start PXE over IPv4`，键盘仍然无法使用。
-  - 使用`vmguest.iso`：同上。
+  - 使用其他系统 iso ：出现 `Start PXE over IPv4`，键盘仍然无法使用。
+  - 使用 `vmguest.iso`：同上。
   - 关闭安全启动、关闭网络、其他设置：无效。
 
 ## 20220813：更新博客

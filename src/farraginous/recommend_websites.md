@@ -152,7 +152,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 
 ## 新闻
 
-**建议去[tg 频道](#新闻)看新闻。**
+**建议去 [tg 频道](#新闻)看新闻。**
 
 - [今日热榜](https://tophub.today/) _（国内热搜榜汇总_
 
@@ -163,7 +163,7 @@ LLM：Large Language Models，大型语言模型。下述均为本人总结，�
 ### 语言
 
 - 英语新闻：[Breaking News English](https://breakingnewsenglish.com/) ~~（旧闻~~
-- 英语听力：[每日英语听力](http://dict.eudic.net/ting) _（建议直接上[YouTube](http://youtube.com/)_
+- 英语听力：[每日英语听力](http://dict.eudic.net/ting) _（建议直接上 [YouTube](http://youtube.com/)_
 - 日语语法：[毎日のんびり日本語教師](https://nihongonosensei.net/)
 - 日语百科：[コトバンク](https://kotobank.jp/) | [ニコニコ大百科](https://dic.nicovideo.jp/)
 - 英英词典：[Oxford Learner's Dictionaries](https://www.oxfordlearnersdictionaries.com/) | [Merriam Webster](https://www.merriam-webster.com/dictionary/) | [Cambridge Dictionary](https://dictionary.cambridge.org/dictionary/)

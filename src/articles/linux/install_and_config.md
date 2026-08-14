@@ -66,7 +66,7 @@ umount /mnt/windows
   4. 抄一个 `.wslconfig`（[ex](https://github.com/lxl66566/backup/blob/main/config/.wslconfig)）。这里可配置的东西还是挺多而且挺重要的。
   5. 参照[官方文档](https://wsldl-pg.github.io/ArchW-docs/How-to-Setup/)使用 pacman。
   6. 激活 WSL 后，WSL 的 bash.exe 优先级可能会高于 git bash。但是很多时候 git bash 比 WSL bash 更好用（比如 wsl2 的 filesystem 非常慢，但是 git bash 不走 wsl 所以很快），于是我会将 WSL bash 换成 git bash：删掉 `C:\Windows\System32\bash.exe`。也是[改拥有者 + 改权限](#权限控制)那一套。
-- 更新 ArchWSL：从[wsldl](https://github.com/yuk7/wsldl/releases)下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
+- 更新 ArchWSL：从 [wsldl](https://github.com/yuk7/wsldl/releases) 下载 `wsldl.exe`，改名为 `arch.exe` 并替换。
 - 更新内核：WSL 的内核版本较低，可以通过 [WSL2-Linux-Kernel-Rolling](https://github.com/Nevuly/WSL2-Linux-Kernel-Rolling) 更换更高版本内核。
   - 这里更推荐 [xanmod-kernel-WSL2](https://github.com/Locietta/xanmod-kernel-WSL2) 这个内核，有 zswap 支持。zswap 的开启方法可以参考 [this comment](https://github.com/microsoft/WSL/discussions/10862#discussioncomment-13504238)。xanmod 还附带了额外的 kernelModules。
 
@@ -142,7 +142,7 @@ umount /mnt/windows
      ```
    - 将某些不常用包和自更新包加入 IgnorePkg，例如 _chromium_ & xmake | [ref](https://www.makeuseof.com/prevent-packages-from-getting-updated-arch-linux/)
    - 更改缓存至 ramdisk (`CacheDir`)
-7. 更改 AUR Helper 缓存（参考[wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
+7. 更改 AUR Helper 缓存（参考 [wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
    - yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
    - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 bind mount 同一个 tmpfs，这样就能够解决问题了。
      - 然而这里还会出现权限问题，无法 (?) 解决，因此我 [mount 到了另一个新的 tmpfs](https://github.com/lxl66566/dotfile/blob/3c97b7cbad449d4a70100e132b775365951cf250/etc/fstab#L15)。（不 bind 了）

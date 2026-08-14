@@ -200,7 +200,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 
 连接网线使用时总是约每 5min 炸一次（以太网无 Internet 响应，回退到使用 wlan0）。去 Realtek 下载网卡驱动，README 让执行一个自动脚本，`sudo bash xxx.sh` 把我原来网卡驱动卸(禁用?)掉以后就报错强退了。。。（写的什么屎山，真不负责啊）于是没有 eth0 用了。
 
-搜索解法无果，想着用 timeshift 回退到爆炸前，但是快照打得不勤，只能回退到 20+days 前，于是就发生了[timeshift 引发的血案](#timeshift-引发的血案)——
+搜索解法无果，想着用 timeshift 回退到爆炸前，但是快照打得不勤，只能回退到 20+days 前，于是就发生了 [timeshift 引发的血案](#timeshift-引发的血案)——
 
 ## 安装 OSU
 
@@ -216,7 +216,7 @@ DefaultDeviceTimeoutSec={{DEFAULT_TIMEOUT_SEC}}s
 
 ## 更新破坏依赖
 
-四个字，**先删再装**。参考[forum](https://bbs.archlinuxcn.org/viewtopic.php?id=10208)，问题可能是有游离的软件包，也可能是上游改了依赖。
+四个字，**先删再装**。参考 [forum](https://bbs.archlinuxcn.org/viewtopic.php?id=10208)，问题可能是有游离的软件包，也可能是上游改了依赖。
 
 相信我，这个问题以后还会经常出现。
 
@@ -260,7 +260,7 @@ make: ./test_g: 权限不够 make: *** [Makefile:76：test] 错误 127
 
 需要安装日文输入法，去 archwiki 日语页面看，选择了 `mozc`。然后我就直接 `yay -S mozc` 了，，装是装了，然而没法使用。。
 
-后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是`fcitx5-mozc-ut`）。然后就没啥问题了。
+后来发现我使用 fcitx5 的话需要装 fcitx5 的 mozc utils（包名是 `fcitx5-mozc-ut`）。然后就没啥问题了。
 
 > ~~吐槽一下，mozc 源码有 600+MB，然而 bin 只有 30MB，编译还风扇起飞转了好久。只能说体会到了编译源码的不便。~~
 

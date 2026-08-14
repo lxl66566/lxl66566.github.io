@@ -23,7 +23,7 @@ tag:
 
 我的第一个音游视频是 2020 年 11 月发布的（已经是高三上了），当时全连了 FULI AUTO SHOOTER。此后又发了一堆视频。
 
-我接触（并且持续玩至今）的第二个音游是 Arcaea。日记中最早出现`arc`的时间是 20201217。开始时很菜，后来才慢慢发现 arcaea 的魅力。
+我接触（并且持续玩至今）的第二个音游是 Arcaea。日记中最早出现 `arc` 的时间是 20201217。开始时很菜，后来才慢慢发现 arcaea 的魅力。
 
 应该是在 2020 年下半年沉迷音游的。音游水平突飞猛进。（要是高考成绩也能突飞猛进就好了）高考完后还入坑了プロセカ，大学刚开学入坑了 osu，（大一下）买了平板后下载了 lanota，等等。
 
@@ -147,14 +147,14 @@ tag:
 
 我是音押人，这里的音押指的是敲键盘或屏幕时的声音跟音乐声重合；同时也因为小米平板 5 的屏幕延迟数据稀烂的影响，我玩音游的延迟设置非常怪。我没法快速适应其他音游人的设备，别人也同理。<span class="heimu" title="你知道的太多了">（我们之间已经隔了一层可悲的厚障壁了）</span>我接触一个新音游要做的第一件事并不是新手教程而是不断尝试调延迟。
 
-音游调整延迟大多是听重音是否重合，对我来说**p 用没有**。因为重音与触屏延迟没有任何关系，我的延迟根本无法调整！下面也会列举各音游调延迟的人性化程度分数<span class="heimu" title="你知道的太多了">包含了我的无尽怨念</span>。
+音游调整延迟大多是听重音是否重合，对我来说 **p 用没有**。因为重音与触屏延迟没有任何关系，我的延迟根本无法调整！下面也会列举各音游调延迟的人性化程度分数<span class="heimu" title="你知道的太多了">包含了我的无尽怨念</span>。
 
 本人所有触屏设备音游均关闭打击音效。
 
 <!-- prettier-ignore -->
 |音游名|游玩时长(%,初期数据)|延迟|谱面速度|延迟人性化程度得分|
 | :-: | :-: | :-: | :-: | :-: |
-|osu|81|<text style="color:red;">RK98+将星X15内置声卡: -86ms<br/>RK98+GS02声卡 -41ms<br/>cloud98+GS02声卡 -22ms</text>|30|0|
+|osu|81|<text style="color:red;">RK98+将星 X15 内置声卡: -86ms<br/>RK98+GS02 声卡 -41ms<br/>cloud98+GS02 声卡 -22ms</text>|30|0|
 |osu!lazer|-|<text style="color:red;">-107ms - -94ms</text>|25|4|
 |phigros(latest)|10|<text style="color:blue;">+100ms</text>|-|1|
 |arcaea|7|<text style="color:blue;">78</text>|5|5|
@@ -229,7 +229,7 @@ _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<
 
 - 上为 reform 段位，下为 malody v3 段位；MR 等特殊 MOD 不显示。
 - 健身按键数
-  - 20220809+：由于[OSU 打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
+  - 20220809+：由于 [OSU 打一半电脑炸了](../hide/memories.md#大学-大一后暑假)，晚锻炼的按键数未记录。（实际 > 记录）
   - 20221022?,20230309?,20230324?：由于 osu-kps（记录键数的软件）崩溃，导致键数只能取估计值。
 
 ::::
@@ -244,7 +244,7 @@ _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<
 
 原本大学时看到音游群的同学在玩 osu，我也入坑了，想着练练 4k 可以提高我其他音游的成绩（多指力）。当时打了好久 osu 默认自带的那几首曲子，后来才知道怎么下载曲子...
 
-我打 osu 主打 mania。主 4k，副 6k。其他 key 数碰过几次后就再也不碰。大学期间几乎没玩 std <heimu>曾经为了练 cs 定位用 [McOsu](https://store.steampowered.com/app/607260/McOsu/)的 3d 模式打 std</heimu>，大四末尾由于买了数位板就顺便入坑了。
+我打 osu 主打 mania。主 4k，副 6k。其他 key 数碰过几次后就再也不碰。大学期间几乎没玩 std <heimu>曾经为了练 cs 定位用 [McOsu](https://store.steampowered.com/app/607260/McOsu/) 的 3d 模式打 std</heimu>，大四末尾由于买了数位板就顺便入坑了。
 
 - 为什么打 osu 最频繁呢？
   1. 打 OSU 不需要忍受移动端的延迟不稳定与断触。虽然延迟还是可感知，但是并不是不能接受。
@@ -256,7 +256,7 @@ _（注：延迟中的颜色含义为延迟调整方法：纯音押打歌后，<
 
 ### 设置
 
-参考[OsuCNwiki](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md)。
+参考 [OsuCNwiki](https://github.com/Evisolpxe/OsuCNwiki/blob/master/jin-jie-zhi-lu/xu-yao-yong-dao-de-ruan-jian-zhi-shi.md)。
 
 #### 调整延迟
 
@@ -270,10 +270,10 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 |轴体|使用时间区间|优点|缺点|
 | :-: | :-: | :-: | :-: |
 |光轴|2020-20220530|便宜<br/>延迟低<br/>耐操|巨吵无比<br/>触发压力大<br/>无法换轴|
-|AJAZZ红轴|20220607-20220609|手感不错<br/>静音|-|
-|RK红轴|20220611-20220614|触发压力小|触发键程大|
+|AJAZZ 红轴|20220607-20220609|手感不错<br/>静音|-|
+|RK 红轴|20220611-20220614|触发压力小|触发键程大|
 |<text style="color:blue;">快银轴</text>|20220614-20250406|快，触发键程小|触发压力稍大|
-|金粉轴v2|20220624-20220625|触发压力小|触发键程大，延迟高|
+|金粉轴 v2|20220624-20220625|触发压力小|触发键程大，延迟高|
 |雨露磁轴|20250406-至今|触发键程可调|
 
 大一用了一整年的地摊货键盘，光轴，咸鱼 40 的网吧淘汰品。延迟很低，可以随便泡水不会坏——但是巨 tm 吵，舍友震怒；而且触发压力大，打得很累。
@@ -298,7 +298,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 然后在 20220613 晚上，放弃自己原本融的那个（absolute x v1），在朋友帮助下重新开始再融一个。基准皮肤选的是 R Skin v3.0 (Jakads' New) LNCut，结果只需稍稍修改，就融出了 absolute x v2。手感还不错，能够足够逼近原来的皮肤了。
 
-现在的皮肤是[absolutex v6](https://osu.ppy.sh/community/forums/topics/1746341)。
+现在的皮肤是 [absolutex v6](https://osu.ppy.sh/community/forums/topics/1746341)。
 
 ### 段位
 
@@ -355,7 +355,7 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 
 1. 移动设备打开 USB 调试并与电脑端连接。
 2. 备份：`adb backup -f NAME.ab -noapk -noshared -nosystem com.PigeonGames.Phigros`
-   - `NAME`最好包括游戏名、版本、备份时间等信息。
+   - `NAME` 最好包括游戏名、版本、备份时间等信息。
 3. 恢复：`adb restore NAME.ab`
 
 [这里（Phigros 2.4.1）](https://github.com/lxl66566/backup/releases/tag/games)是我的用户数据，data 充足，AT 全解锁，有需要可以自取。
@@ -397,10 +397,10 @@ offset 对个人手感，后续进步与习惯养成极为重要。但是调整 
 10: Climax, cyanine, `Good bye, Merry-Go-Round`, GLORY : ROAD, Löschen, Oshama Scramble!, Pentiment, PRAGMATISM, Sheriruth, アリス・リデルに捧ぐ, 妖艶魔女 -trappola bewitching-
 
 <!-- prettier-ignore -->
-10+: #1f1e33, AMAZING MIGHTYYYY!!!!, Cyaegha, Halcyon, ouroboros -twin stroke of the end-, 烈華RESONANCE, Ringed Genesis, Singularity, Stasis, Tempestissimo, Testify, TEmPTaTiON, World Vanquisher
+10+: #1f1e33, AMAZING MIGHTYYYY!!!!, Cyaegha, Halcyon, ouroboros -twin stroke of the end-, 烈華 RESONANCE, Ringed Genesis, Singularity, Stasis, Tempestissimo, Testify, TEmPTaTiON, World Vanquisher
 
 <!-- prettier-ignore -->
-11: Aegleseeker, Grievous Lady, 最強STRONGER
+11: Aegleseeker, Grievous Lady, 最強 STRONGER
 
 ### 最好成绩
 

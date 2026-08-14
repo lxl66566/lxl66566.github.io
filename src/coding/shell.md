@@ -45,7 +45,7 @@ bash 的兼容性有多强呢？你可以在几乎所有 linux，手机，各种
 
 ### 随笔
 
-此处不会涉及 bash 系统教学，只会零碎记一些知识点。系统学习可以看[external 1.](#external)。
+此处不会涉及 bash 系统教学，只会零碎记一些知识点。系统学习可以看 [external 1.](#external)。
 
 - bash 的要义是一切皆字符串。
 - 启动 bash 时会自动执行 `~/.bashrc`，这也是一个 bash 脚本。

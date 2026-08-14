@@ -520,11 +520,11 @@ console.log(proc);
 ### 20230428
 
 - [文章](../articles/)新增[最小化二进制文件与 dll](../articles/minimize_exe.md)
-- [C++](../coding/Cpp.md)新增[vscode 配置 Qt 开发环境](../coding/Cpp.md#vscode-配置-qt-开发环境)
+- [C++](../coding/Cpp.md)新增 [vscode 配置 Qt 开发环境](../coding/Cpp.md#vscode-配置-qt-开发环境)
 
 ### 20230417
 
-- [编程](../coding/)新增[Linux](../articles/linux)
+- [编程](../coding/)新增 [Linux](../articles/linux)
 
 ### 20230412
 
@@ -537,7 +537,7 @@ console.log(proc);
 ### 20230409
 
 - 部分图表新增当年数据统计
-- 编程部分新增[版块主页](../coding/)，并添加[TypeScript & JavaScript](../coding/tsjs.md)，[算法](../coding/algorithm.md)页面
+- 编程部分新增[版块主页](../coding/)，并添加 [TypeScript & JavaScript](../coding/tsjs.md)，[算法](../coding/algorithm.md)页面
 
 ### 20230401
 
@@ -615,7 +615,7 @@ console.log(proc);
 
 ### 20230201
 
-- 新增[xxx 有多难用 # Telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
+- 新增 [xxx 有多难用 # Telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
 
 ### 20230124
 
@@ -642,7 +642,7 @@ console.log(proc);
 ### 20230114
 
 - 全局优化排版与语言逻辑
-- 新增[Potplayer 设置](../articles/potplayer_setting.md)页面
+- 新增 [Potplayer 设置](../articles/potplayer_setting.md)页面
 
 ### 20230112
 
@@ -672,7 +672,7 @@ console.log(proc);
 
 - 更新亿些页面的过时信息；增加页面可读性
 - 添加各图表的夜间模式适配
-- [OSU](../hobbies/rhythm_games.md#osu)新增键数求和统计
+- [OSU](../hobbies/rhythm_games.md#osu) 新增键数求和统计
 
 ### 20221215
 
@@ -683,7 +683,7 @@ console.log(proc);
 
 - 更新 _初级科学上网_ [（现 VPN）](../articles/proxy/vpn.md) 并更改排版
 - 维护_我的回忆录-大二_
-- 小维护：[关于作者](../gossip/author.md)及其子页面、[编程-Git](../coding/Git.md)页面
+- 小维护：[关于作者](../gossip/author.md)及其子页面、[编程-Git](../coding/Git.md) 页面
 
 ### 20221125
 
@@ -697,11 +697,11 @@ console.log(proc);
 
 ### 20221118
 
-- 新增[Rust-输入](../coding/Rust.md#输入)
+- 新增 [Rust-输入](../coding/Rust.md#输入)
 
 ### 20221115
 
-- 归类并新增[python 页面](../coding/python.md)中条目
+- 归类并新增 [python 页面](../coding/python.md)中条目
 
 ### 20221113
 
@@ -730,11 +730,11 @@ console.log(proc);
 
 ### 20221003
 
-- 新增[编程-Python](../coding/python.md)页面，且整合了原_其他工具_ 页面并更改排版。
+- 新增[编程-Python](../coding/python.md) 页面，且整合了原_其他工具_ 页面并更改排版。
 
 ### 20220930
 
-- 新增[VuePress2 与博客心得 # 配置 sidebar 问题](./withvuepress2.md#配置sidebar问题)
+- 新增 [VuePress2 与博客心得 # 配置 sidebar 问题](./withvuepress2.md#配置sidebar问题)
 
 ### 20220929
 
@@ -747,7 +747,7 @@ console.log(proc);
 
 ### 20220921
 
-- 新增[C++#在 vscode 中配置环境](../coding/Cpp.md#配置_vscode_环境)
+- 新增 [C++#在 vscode 中配置环境](../coding/Cpp.md#配置_vscode_环境)
 - 新增 csgo#常用指令
 
 ### 20220915
@@ -766,12 +766,12 @@ console.log(proc);
 ### 20220906
 
 - 新增 _软件汇总 # Seal_
-- 新增[编程-工具-Github](../coding/github.md)页面
+- 新增[编程-工具-Github](../coding/github.md) 页面
 - 维护隐藏页面：灵感 | 愿景，文章-对 win11 的设置
 
 ### 20220903
 
-- 新增[OSU 能力变化表](../hobbies/rhythm_games.md#我的记录)
+- 新增 [OSU 能力变化表](../hobbies/rhythm_games.md#我的记录)
 
 ### 20220901
 
@@ -791,7 +791,7 @@ console.log(proc);
 
 ### 20220827
 
-- 将博客内_长日期格式_ 从`2022/08/27`统一为`20220827`样式
+- 将博客内_长日期格式_ 从 `2022/08/27` 统一为 `20220827` 样式
 
 ### 20220824
 
@@ -811,7 +811,7 @@ console.log(proc);
 
 ### 20220815
 
-- 紧急修复：文件损坏导致的`keysnum`与`GBperprice`图表、初级科学上网缺失问题。（同时导致了其他的一系列问题）
+- 紧急修复：文件损坏导致的 `keysnum` 与 `GBperprice` 图表、初级科学上网缺失问题。（同时导致了其他的一系列问题）
 - 调整运动图表
 
 ### 20220814
@@ -827,7 +827,7 @@ console.log(proc);
 ### 20220808
 
 - 新增[大学（大一后暑假）](../hide/memories.md#大学-大一后暑假)
-- 在[galgame#程序问题](../hobbies/galgame.md#程序问题)反馈 bug
+- 在 [galgame#程序问题](../hobbies/galgame.md#程序问题)反馈 bug
 - 尝试选定其他网页的一个 div 加入博客中的 iframe，失败
 
 ### 20220807
@@ -877,7 +877,7 @@ console.log(proc);
 
 ### 20220717
 
-- 为 [游戏-音游](../hobbies/rhythm_games.md#总体现况)、[闲聊-生存意义](../gossip/author.md#生存意义) 添加[g2plot](https://g2plot.antv.vision/zh)图表
+- 为 [游戏-音游](../hobbies/rhythm_games.md#总体现况)、[闲聊-生存意义](../gossip/author.md#生存意义) 添加 [g2plot](https://g2plot.antv.vision/zh) 图表
 - 添加黑幕样式并实装
 - 尝试添加 vue 组件失败
 
@@ -968,7 +968,7 @@ console.log(proc);
 ### 20220506
 
 - 更改 navbar 逻辑
-- 新增 [编程-Git](../coding/Git.md)&_其他工具（已整合为[python](../coding/python.md)页面）_、[随笔](../essay/index.md)
+- 新增 [编程-Git](../coding/Git.md)&_其他工具（已整合为 [python](../coding/python.md) 页面）_、[随笔](../essay/index.md)
 
 ### 20220505
 

@@ -9,7 +9,7 @@ tag:
 
 # 电路分析基础
 
-此处仅记载部分重要内容。更多内容请前往查看[Github - 电子与电路分析\_复习纲要](https://github.com/lxl66566/my-college-files/blob/main/电路原理及其实验/课件/电路分析_复习纲要.pdf)。
+此处仅记载部分重要内容。更多内容请前往查看 [Github - 电子与电路分析\_复习纲要](https://github.com/lxl66566/my-college-files/blob/main/电路原理及其实验/课件/电路分析_复习纲要.pdf)。
 
 ## 分析法
 

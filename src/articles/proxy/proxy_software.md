@@ -50,7 +50,7 @@ tag:
 
 开源跨平台 Clash 客户端，rust + tauri 技术栈。
 
-相比[Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。
+相比 [Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。
 
 其 _设置热键_ 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，懒得做订阅转换，放弃了 Clash Verge 而去使用了 [v2rayN](#v2ray)。
 
@@ -68,7 +68,7 @@ tag:
 
 #### 简介
 
-_Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](https://github.com/Fndroid/clash_for_windows_pkg/issues/1105)导致我转向了 [Clash Verge](#clash-verge)。）
+_Clash for Windows_ 是闭源的 PC 客户端。（然而因为一个 [bug](https://github.com/Fndroid/clash_for_windows_pkg/issues/1105) 导致我转向了 [Clash Verge](#clash-verge)。）
 
 #### 下载地址
 

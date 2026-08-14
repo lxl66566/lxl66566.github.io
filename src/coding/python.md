@@ -11,7 +11,7 @@ tag:
 
 python 实际上并不简单，只不过生态比较好。[暴论：python 有多难用](../gossip/fuckxxx.md#python-有多难用)
 
-我被 python 坑了太多次，甚至做了个 [python-quiz](https://lxl66566.github.io/python-quiz/zh/)讲述我的经历。
+我被 python 坑了太多次，甚至做了个 [python-quiz](https://lxl66566.github.io/python-quiz/zh/) 讲述我的经历。
 
 ## 学习
 
@@ -74,7 +74,7 @@ python 本身的安装应该不用我多说，windows [scoop](../farraginous/rec
 
 解决方法：
 
-1. `Ctrl + Shift + P`打开命令面板，搜索`Python: Select Interpreter`
+1. `Ctrl + Shift + P` 打开命令面板，搜索 `Python: Select Interpreter`
 2. 选中你的虚拟环境。如果没有自动检测到，就手动打开路径，选择 `.venv/Scripts/python` 或 `.venv/bin/python`。
 
 ### 包管理器
@@ -226,7 +226,7 @@ conda list  # 查看环境内工具包
 
 ##### 高级技巧
 
-- bat 文件中调用 conda 指令：调用前加入`call activate.bat`指令
+- bat 文件中调用 conda 指令：调用前加入 `call activate.bat` 指令
 - 创建纯净环境：我们使用[上述指令](#基本命令)创建环境后，可以看到，conda 帮我们预装了很多实际上没什么用的包，这无疑会让打包出的程序增加不必要的体积。
   <ZoomedImg alt="预装了很多实际上没什么用的包" src="/images/coding/python/anaconda_1.png" scale="65%" />
   这里给出一个解决方法：
@@ -237,9 +237,9 @@ conda list  # 查看环境内工具包
   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/pip-21.2.4-py39haa95532_0.tar.bz2
   https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/setuptools-58.0.4-py39haa95532_0.tar.bz2
   ```
-  2. 该目录下执行`conda create --name <name> --file env.txt`
+  2. 该目录下执行 `conda create --name <name> --file env.txt`
      ![anaconda_pureenv](/images/coding/python/anaconda_2.png)
-     这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller)进行打包前的准备。
+     这样，一个纯净环境就创建好了，你可以[安装 Pyinstaller](#pyinstaller) 进行打包前的准备。
 
 @tab pip
 
@@ -953,7 +953,7 @@ Pyinstaller 会打包当前环境的所有模块，一般需要隔离出虚拟�
 
 #### 命令
 
-在.py 目录下，所需环境内执行`pyinstaller -D xxxx.py`
+在.py 目录下，所需环境内执行 `pyinstaller -D xxxx.py`
 
 参数解释：
 

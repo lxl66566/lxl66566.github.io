@@ -16,7 +16,7 @@ tag:
 - 多端，优秀的同步机制
 - 言论**基本**不受审查与限制
 
-telegram 也有一些我认为的缺点，见[telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
+telegram 也有一些我认为的缺点，见 [telegram 有多难用](../gossip/fuckxxx.md#telegram-有多难用)
 
 > 紧急情况还请使用其他聊天软件。
 
@@ -183,8 +183,8 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
   - [萌图交流](https://t.me/jialeleya2233)（50:1）
 - 本子区：
   - [ExLOLI - 每日萝莉本子](https://t.me/exlolicon)
-- [(ゲーム CG) 一个兴趣使然的[NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG**鉴赏**
-- [超高质量 R18 动画资源分享[NSFW]](https://t.me/acgr18)
+- [(ゲーム CG) 一个兴趣使然的 [NSFW-ios-XNR]](https://t.me/galgamenoHCG)：galgame CG **鉴赏**
+- [超高质量 R18 动画资源分享 [NSFW]](https://t.me/acgr18)
 - [每日精选](https://t.me/watchaveveryday) & [超清|中文字幕](https://t.me/CCTAV)...：三次元的，嗯，不用我介绍吧
 
 ### 资源

@@ -52,7 +52,7 @@ category:
 
 ## 评论插件配置失败问题
 
-我使用的评论插件是[vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比 vuepress2 文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个 theme 出来...我哪有那个能耐啊，直接 Ctrl+CV 了。不过这种东西本应在文档里指明的。
+我使用的评论插件是 [vuepress-plugin-comment2](https://vuepress-theme-hope.github.io/v2/comment/zh/)。该插件的文档写的甚至比 vuepress2 文档还含糊不清，关键部分更是一句没提。配置成功后评论插件一开始并没有载入成功（而且抓瞎不知道什么原因），我非常疑惑，花了好多时间仔细检查好多遍，都不能理解为什么。后来对照官方的例子（还好有给出[演示](https://vuepress-theme-hope.github.io/v2/comment/zh/demo.html)）才发现原来还需要自己写一个 theme 出来...我哪有那个能耐啊，直接 Ctrl+CV 了。不过这种东西本应在文档里指明的。
 
 后来发现。。事实上这个插件是 [VuePress Theme Hope 主题](./index.md#主题选择)的专用组件，因此未说明默认主题下的使用方法。
 
@@ -109,7 +109,7 @@ a:active .heimu {
 }
 ```
 
-在`config.ts`内添加全局 css：
+在 `config.ts` 内添加全局 css：
 
 ```ts
 export default defineUserConfig({
@@ -147,7 +147,7 @@ export default defineUserConfig({
 
 ## 图床国内无法解析问题
 
-我原本博客托管在 github.io，图片加载链接为`https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：
+我原本博客托管在 github.io，图片加载链接为 `https://raw.githubusercontent.com/lxl66566/lxl66566.github.io/images/logo.jpg`，由于我 clash 双端全天候开启，我根本没发现图片无法加载的这个问题，直到 20220803 我关了梯才发现，原来国内无法正常加载图片，报错：
 
 > Failed to load resource: net::ERR_NAME_NOT_RESOLVED
 
@@ -158,7 +158,7 @@ export default defineUserConfig({
 1. 这个图床有 _容量上限：5GB_ 和 _单张图片上限：5MB_
 2. 原有的每张图都需要手动替换，因为 src 是随机生成的
 3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
-4. 在[关于 SM.MS](https://sm.ms/about)界面你将能看到：![fucksmms](/images/blog/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
+4. 在[关于 SM.MS](https://sm.ms/about) 界面你将能看到：![fucksmms](/images/blog/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
 
 因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：
 
@@ -175,7 +175,7 @@ export default defineUserConfig({
 
 为 markdown-it 渲染器安装<span v-pre>$\displaystyle \LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
 
-由于`$...$`会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发[weak map key](#rendering-pages-failed-问题) bug。
+由于`$...$`会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发 [weak map key](#rendering-pages-failed-问题) bug。
 
 不过现在 theme-hope 已经有集成 katex，不用这样折腾，可以直接用。
 
@@ -225,7 +225,7 @@ export default defineUserConfig({
 
 当然它也可以是一个路径字符串，其他功能由 vuepress2 帮你自动生成。
 
-另外，若需要为文件夹做一个向导，应在文件夹内部添加 `README.md` 主页。指向该主页的路径为文件夹名称。使指定页面覆盖配置，自动生成 sidebar 需要在该页面顶部添加[sidebar frontmatter](https://v2.vuepress.vuejs.org/zh/reference/default-theme/frontmatter.html#sidebar)。
+另外，若需要为文件夹做一个向导，应在文件夹内部添加 `README.md` 主页。指向该主页的路径为文件夹名称。使指定页面覆盖配置，自动生成 sidebar 需要在该页面顶部添加 [sidebar frontmatter](https://v2.vuepress.vuejs.org/zh/reference/default-theme/frontmatter.html#sidebar)。
 
 [这里](https://github.com/lxl66566/lxl66566.github.io/blob/code/src/.vuepress/sidebar.ts)是我的 sidebar 配置参考。
 
@@ -233,9 +233,9 @@ export default defineUserConfig({
 
 vuepress1 的配置有一点不一样。
 
-v1.x sidebar 工作机制为：**从上到下寻找该页面匹配的绝对路径前缀，若匹配则使用该 sidebar 对象**。这使我需要把多级 sidebar 放在前而根目录放在最后。还好[v1.x 文档对此有警告](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html#多个侧边栏)。
+v1.x sidebar 工作机制为：**从上到下寻找该页面匹配的绝对路径前缀，若匹配则使用该 sidebar 对象**。这使我需要把多级 sidebar 放在前而根目录放在最后。还好 [v1.x 文档对此有警告](https://v1.vuepress.vuejs.org/zh/theme/default-theme-config.html#多个侧边栏)。
 
-团队使用的[vuepress-theme-hope](https://vuepress-theme-hope.github.io/v1/zh/)主题中，sidebar 对象有以下字段：
+团队使用的 [vuepress-theme-hope](https://vuepress-theme-hope.github.io/v1/zh/) 主题中，sidebar 对象有以下字段：
 
 - `title`：规定显示的文字
 - `link`：表示点击该栏后跳转的位置
@@ -265,7 +265,7 @@ sidebar: {
 
 解决方法（二选一）：
 
-1. 参考[Github 官方解释](https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)，使用 443 端口
+1. 参考 [Github 官方解释](https://docs.github.com/zh/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)，使用 443 端口
 2. 配置 git 全局代理
 
 ## html 传参引入指定 js
@@ -288,7 +288,7 @@ sidebar: {
    }
    const addr = "/charts/" + getParams("src") + ".js";
    ```
-3. 并引入`addr`参数位置的 .js 文件。
+3. 并引入 `addr` 参数位置的 .js 文件。
    <text style="color:red;font-weight:bold">未解决！</text>
    ::: code-tabs
    @tab HTML
@@ -327,7 +327,7 @@ head: [
 ],
 ```
 
-其中`/styles/pangu.min.js`内是[https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js](https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js)的内容。但是这样一来便引入了以下问题：
+其中 `/styles/pangu.min.js` 内是 [https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js](https://cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js) 的内容。但是这样一来便引入了以下问题：
 
 ### 无法加载 pangu 问题
 
@@ -471,7 +471,7 @@ function sidebar() {
 
 ## 尝试更好的搜索
 
-[如上所述](#试图迁移至-vitepress)，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方服务（algolia）需要经过严格审查。因此我看到了能够本地索引的[flexsearch](https://github.com/nextapps-de/flexsearch)，继续找到了[^搜索参考]：
+[如上所述](#试图迁移至-vitepress)，VuePress 拥有极为垃圾的默认搜索机制，而官方推荐的第三方服务（algolia）需要经过严格审查。因此我看到了能够本地索引的 [flexsearch](https://github.com/nextapps-de/flexsearch)，继续找到了[^搜索参考]：
 
 - [vuepress-plugin-flexsearch](https://github.com/z3by/vuepress-plugin-flexsearch)，此插件已经两年未维护，依赖包的安全漏洞数十个，甚至连 [example 都未能执行](https://github.com/z3by/vuepress-plugin-flexsearch/issues/85)。。在 vuepress 2.x 上无法使用。
 - [vuepress-plugin-fulltext-search](https://github.com/leo-buneev/vuepress-plugin-fulltext-search)，我更愿意将其看成 _vuepress-plugin-flexsearch_ 的一个 fork，同样的两年未维护，同样的无法使用，同样的安全漏洞。/流汗
@@ -638,7 +638,7 @@ algolia 在搜索和用户体验上做的还行，但是在接入和 dashboard �
 <img src="image.jpg" onerror="this.src='other link'" />
 ```
 
-而 markdown 内的图片格式可以用[markdown enhancement: attr](https://theme-hope.vuejs.press/zh/guide/markdown/attrs.html#使用)添加 attr。然后踩了坑：
+而 markdown 内的图片格式可以用 [markdown enhancement: attr](https://theme-hope.vuejs.press/zh/guide/markdown/attrs.html#使用) 添加 attr。然后踩了坑：
 
 1. 首先大括号 `{}` 需要紧跟在图片的 `)` 后，不能有空格。。（然而官网示例是给的空格）
 2. 其次，添加的 attr 不允许出现大写字母。。。（这确实是标准，但是一般浏览器遇到大写会自动纠正 ([ref](https://stackoverflow.com/questions/25033268/are-html5-data-attributes-case-insensitive))）

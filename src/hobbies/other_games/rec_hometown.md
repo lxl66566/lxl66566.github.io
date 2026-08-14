@@ -21,7 +21,7 @@ tag:
 <!-- prettier-ignore -->
 |C|A|M|G|Y|
 |:--:|:--:|:--:|:--:|:--:|
-|Minute Maid|AbsoluteX|M姓朋友|G姓朋友|Y姓朋友|
+|Minute Maid|AbsoluteX|M 姓朋友|G 姓朋友|Y 姓朋友|
 
 ## 20230818
 
@@ -43,7 +43,7 @@ UNO 扩展规则 5.2.2
 |4|1|2|3|4|0|
 |5|0|1|2|3|4|
 |当日积分|<text style="color:red;">7</text>|<text style="color:red;">8</text>|<text style="color:red;">9</text>|<text style="color:red;">17</text>|<text style="color:red;">9</text>|
-|CAMGY UNO总积分|7|8|9|17|9|
+|CAMGY UNO 总积分|7|8|9|17|9|
 
 <!-- prettier-ignore -->
 |序号|C|A|G|
@@ -80,7 +80,7 @@ UNO 扩展规则 5.2.2
 |30|2|0|1|
 |31|0|2|1|
 |当日积分|<text style="color:red;">33</text>|<text style="color:red;">30</text>|<text style="color:red;">30</text>|
-|CAG UNO总积分|33|30|30|
+|CAG UNO 总积分|33|30|30|
 
 ## 20230714
 
@@ -114,7 +114,7 @@ UNO 扩展规则 5.2.0
 |15|1|2|0|3|
 |16|0|3|2|1|
 |当日积分|<text style="color:red;">23</text>|<text style="color:red;">32</text>|<text style="color:red;">19</text>|<text style="color:red;">22</text>|
-|CAMG UNO总积分|43|61|39|49|
+|CAMG UNO 总积分|43|61|39|49|
 
 ## 20230211
 
@@ -137,7 +137,7 @@ UNO 扩展规则 5.2.0
 |12|0|2|1|3|
 |13|1|2|0|3|
 |当日积分|<text style="color:red;">15</text>|<text style="color:red;">23</text>|<text style="color:red;">14</text>|<text style="color:red;">26</text>|
-|CAMG UNO总积分|20|29|20|27|
+|CAMG UNO 总积分|20|29|20|27|
 
 ## 20220216
 
@@ -150,4 +150,4 @@ UNO 扩展规则 5.2.0
 |2|2|3|1|0|
 |3|0|2|3|1|
 |当日积分|<text style="color:red;">5</text>|<text style="color:red;">6</text>|<text style="color:red;">6</text>|<text style="color:red;">1</text>|
-|CAMG UNO总积分|5|6|6|1|
+|CAMG UNO 总积分|5|6|6|1|

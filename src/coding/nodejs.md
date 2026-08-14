@@ -227,7 +227,7 @@ for (const line of res.stdout.toString().split("\n")) {
 
 如果开发了一个库，需要将其上传到 npmjs 上，这时候可以使用专门用于构建与上传的包，可以省去很多烦恼。
 
-有许多包可以做到这件事，例如 [unbuild](https://github.com/unjs/unbuild)，[bunchee](https://github.com/huozhi/bunchee)和[pkgroll](https://github.com/privatenumber/pkgroll)。阅读 README 后我更倾向于使用 pkgroll，虽然我都没试过。
+有许多包可以做到这件事，例如 [unbuild](https://github.com/unjs/unbuild)，[bunchee](https://github.com/huozhi/bunchee) 和 [pkgroll](https://github.com/privatenumber/pkgroll)。阅读 README 后我更倾向于使用 pkgroll，虽然我都没试过。
 
 ## 遇到的问题
 

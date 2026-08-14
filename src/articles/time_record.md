@@ -17,7 +17,7 @@ tag:
   - C# 写的，windows 下专用的软件。
   - Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 [有 bug](https://github.com/Planshit/Tai/issues/378)，第三方 fork 的 [Taix](https://github.com/NLick47/Taix) 目前还不成熟（有 bug），因此我建议使用 1.5.0.5 版本。
   - 如果要备份 Tai 的数据，请务必加密你的 data.db 和 `Tai/Data/backup` 文件夹内的内容！后者甚至是直接明文存储密钥等等。
-- 在 20220729 了解到[ActivityWatch](https://github.com/ActivityWatch/activitywatch)。
+- 在 20220729 了解到 [ActivityWatch](https://github.com/ActivityWatch/activitywatch)。
   - 跨平台的时长记录软件，python 写的，基于浏览器 UI。
   - 在 linux wayland 下[表现差](https://github.com/ActivityWatch/activitywatch/issues/92)。~~我为了计时长特意换到 X11~~
 
@@ -51,9 +51,9 @@ ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数�
 
 ## Android 端记录软件使用时长
 
-我有多喜欢统计时长，从[galgame 页面](../hobbies/galgame.md)和[读书页面](../hobbies/books.md)便可略知一二。但是——
+我有多喜欢统计时长，从 [galgame 页面](../hobbies/galgame.md)和[读书页面](../hobbies/books.md)便可略知一二。但是——
 
-由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端[Tai](../farraginous/recommend_packages.md#tai)的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。~~_（将`自己做个这种软件`写入日程！）_~~ <span class="heimu" title="你知道的太多了">_笑死，开摆_ </span>
+由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端 [Tai](../farraginous/recommend_packages.md#tai) 的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。~~_（将`自己做个这种软件`写入日程！）_~~ <span class="heimu" title="你知道的太多了">_笑死，开摆_ </span>
 
 <text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。
 
@@ -72,13 +72,13 @@ ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数�
 
 解释：
 
-- `StayFree`仅有 81% 准确率：QQ、nekogramX、Via 等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到 19%）（后来发现也有偏大数据）
+- `StayFree` 仅有 81% 准确率：QQ、nekogramX、Via 等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到 19%）（后来发现也有偏大数据）
 - 准确率为 0% 的软件：在 20220709 我看了 67min 小说后，这些软件有的未记录阅读器时长；有的将时长错加到 QQ 上。它们的准确率由 0.8%-10% 不等，由于偏差过大，统一算作 0%。
-- 除`My Phone Time` `ActionDash`外其他软件均请求`使用情况访问权限`，此处视为默认放行。
-- `Phone statistic`有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期 9 天前的。
+- 除 `My Phone Time` `ActionDash` 外其他软件均请求`使用情况访问权限`，此处视为默认放行。
+- `Phone statistic` 有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期 9 天前的。
 
 总结：
 
-推荐同时使用`Digitox`与`Phone statistic`。_（这俩加一起都没某些家伙大_
+推荐同时使用 `Digitox` 与 `Phone statistic`。_（这俩加一起都没某些家伙大_
 
 <span class="heimu" title="你知道的太多了">感觉还想自己写啊，但是我不会，这下有生之年了</span>

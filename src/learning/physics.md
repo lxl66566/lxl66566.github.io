@@ -105,7 +105,7 @@ Ampère's circuital law: <span v-pre>$\displaystyle \oint_{L}\vec{B}\cdot d\vec{
 
 法拉第电磁感应定律：感应电动势 <span v-pre>$\displaystyle \varepsilon_i=-\frac{d\Phi_N}{dt}$</span>
 
-磁链：<span v-pre>$\displaystyle \Phi_N=NΦ\text{(匝数x磁通)}=NBS$</span>
+磁链：<span v-pre>$\displaystyle \Phi_N=NΦ\text{(匝数 x 磁通)}=NBS$</span>
 
 动生电动势：<span v-pre>$\displaystyle \varepsilon_i=\begin{cases}-Blv & \text{运动导线} \\ NBS\omega sin\omega t & \text{转动线圈}\end{cases}$</span>
 

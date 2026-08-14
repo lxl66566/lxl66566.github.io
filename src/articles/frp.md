@@ -68,7 +68,7 @@ zerotier 软件 UI 也都比较古老，网页不清晰，几个产品之间关�
 
 rathole 是一个 Github 开源项目，本身并不提供内网穿透的服务器；它需要在一台有公网 IP 的服务器上部署转发程序（server），并在内网服务器上部署 client。其实也就是相当于部署一个代理了。不过好在它的配置非常简单，只要写端口就行；而且是 Rust 写的，有编程语言原神之力加持，所以我还是尝试了一下。
 
-程序很容易就跑起来了，唯一的问题是开机自启。公网服务器上是正常发行版（systemd），这个还好写，我之前做过一个 [user-startup-rs](https://github.com/lxl66566/user-startup-rs)的程序，可以做到一键自启。但是 iStoreOS 用的是 procd，老式的 service 命令写服务，这 service 里还大量调用了 OpenWRT 的接口，学习成本和心智负担都不可忽视。
+程序很容易就跑起来了，唯一的问题是开机自启。公网服务器上是正常发行版（systemd），这个还好写，我之前做过一个 [user-startup-rs](https://github.com/lxl66566/user-startup-rs) 的程序，可以做到一键自启。但是 iStoreOS 用的是 procd，老式的 service 命令写服务，这 service 里还大量调用了 OpenWRT 的接口，学习成本和心智负担都不可忽视。
 
 service 写完，可以跑起来了，结果实际使用时还整天断连，稳定性非常低。我猜测是 service 写出了问题，然而这又不像 systemd 接 journal，没有日志输出，调试非常不便。
 

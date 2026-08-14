@@ -88,7 +88,7 @@ tag:
   - 如果手动安装，则默认配置位置在 `~/.config/mpv`（Windows 用户注意，Windows 上 mpv 的默认位置在 `%APPDATA%/mpv`！我很讨厌这个默认值，因此我设置 `MPV_HOME` 为 ~/.config/mpv）。
 
 - 首先建议装一个 [uosc](https://github.com/tomasklaen/uosc)，除了好看之外还提供了许多其他功能。
-- ~~随机播放：[autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua)读取当前文件夹所有文件为 playlist，然后[手动 shuffle](https://www.reddit.com/r/mpv/comments/blrpwa)~~ uosc 内部有自带
+- ~~随机播放：[autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) 读取当前文件夹所有文件为 playlist，然后[手动 shuffle](https://www.reddit.com/r/mpv/comments/blrpwa)~~ uosc 内部有自带
 - ~~[thumbfast](https://github.com/po5/thumbfast)：显示缩略图~~ 没生效，不推荐
 - [bdanmaku](https://github.com/UlyssesZh/bdanmaku)：调用 biliass 做弹幕转换并播放弹幕
 
@@ -508,7 +508,7 @@ diff 增强插件，为 github 使用。
 - [哔哩哔哩自动连播](https://greasyfork.org/zh-CN/scripts/408516-哔哩哔哩自动连播)：跳过 bilibili 视频末尾的充电鸣谢
 - [Bilibili live enhance](https://greasyfork.org/zh-CN/scripts/474523-bilibili-live-enhance)：夹带私货，本人写的直播增强，主要是移除了礼物栏等。
 - [bilbili 界面美化](https://greasyfork.org/zh-CN/scripts/476704-bilbili界面美化)：自动网页全屏，移除弹幕栏，非常对我的胃口
-- [B站显示点赞率、投币率、收藏率](https://greasyfork.org/zh-CN/scripts/483379-b站显示点赞率-投币率-收藏率)
+- [B 站显示点赞率、投币率、收藏率](https://greasyfork.org/zh-CN/scripts/483379-b站显示点赞率-投币率-收藏率)
 - [一些改善未登录下观看体验的脚本](https://greasyfork.org/zh-CN/users/675901-dd1969)
 
 ## 其他软件插件
@@ -580,8 +580,8 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 
 使用方法（Windows x64）：
 
-1. 下载[ffsend-v0.2.74-windows-x64.exe](https://github.com/timvisee/ffsend/releases/download/v0.2.74/ffsend-v0.2.74-windows-x64.exe)
-2. 在下载目录打开**管理员**终端，执行`move .\ffsend-v0.2.74-windows-x64.exe C:\Windows\System32\ffsend.exe`（或手动复制改名
+1. 下载 [ffsend-v0.2.74-windows-x64.exe](https://github.com/timvisee/ffsend/releases/download/v0.2.74/ffsend-v0.2.74-windows-x64.exe)
+2. 在下载目录打开**管理员**终端，执行 `move .\ffsend-v0.2.74-windows-x64.exe C:\Windows\System32\ffsend.exe`（或手动复制改名
 3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>`下载
 
 ### ~~uTools~~

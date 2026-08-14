@@ -62,7 +62,7 @@ KernelSU 模块界面的左上角有一个模块商店，在这里可以找到�
 
 LSPosed 模块挺多闭源的，这里就懒得标注了。
 
-- ~~微X模块、[WeChat Auxiliary](https://t.me/Hd_WAuxiliary_CI)~~ 微信模块检测比较严格，尽量不用
+- ~~微 X 模块、[WeChat Auxiliary](https://t.me/Hd_WAuxiliary_CI)~~ 微信模块检测比较严格，尽量不用
 - ~~QQ~~ QQ 在 2024-2025 实施了更加严格的模块检测，使用这些模块有被强制登出甚至封号风险。
   - [QAuxiliary](https://github.com/cinit/QAuxiliary)：强大的 QQ 自定义模块，比 QXposed 好用，必装
   - ~~QXposed~~ 新版 QQ 不能用，久不更新，算是死了，

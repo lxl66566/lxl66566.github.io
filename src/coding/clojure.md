@@ -27,7 +27,7 @@ vscode 安装 _Calva Spritz_ 即可。
 
 用法只需要掌握：在当前代码行上，按 `Alt + Enter` 执行单句。如果有调用前面的函数，先按 `Ctrl + Shift + c, Enter` 引入依赖，再执行单句。（什么邪恶快捷键）
 
-更多可以看[The Top 10 Calva Commands](https://calva.io/commands-top10/)。
+更多可以看 [The Top 10 Calva Commands](https://calva.io/commands-top10/)。
 
 ## 语言基础
 

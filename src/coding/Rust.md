@@ -166,8 +166,8 @@ _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角�
 
 在 Rust 语言中，字符串采用 utf-8 编码，字符长度不一，因此 Rust 不提供下标查找字符串的方法。这让字符串的修改需要一点点的技巧。
 
-1. 转换为`Vec<char>`后修改
-   C++程序员认为这种方式非常亲切。之后若有需要，还可将`Vec<char>`重新转换为字符串。注意，Rust 中的 `char` 为 4 字节，转为 Vec 后，可进行 O(1) 查找。
+1. 转换为 `Vec<char>` 后修改
+   C++程序员认为这种方式非常亲切。之后若有需要，还可将 `Vec<char>` 重新转换为字符串。注意，Rust 中的 `char` 为 4 字节，转为 Vec 后，可进行 O(1) 查找。
    ```rust
    let s1:String = String::from("Hello我是绝对值_x");
    let mut a : Vec<char> = s1.chars().collect();
@@ -195,7 +195,7 @@ _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角�
    assert_eq!(s1,"Hello你是绝对值_x");
    ```
    该方法异常繁琐，同样也不适用于变字节数的未知字符串的替换，但是若替换范围不在 utf-8 字符的分割点上并不会触发 panic.
-   例如，将第 6 行代码改为`s1_bytes[i + 6] = s2_bytes[i]`的运行结果：
+   例如，将第 6 行代码改为 `s1_bytes[i + 6] = s2_bytes[i]` 的运行结果：
    ```rust:no-line-numbers
    Hello�你��绝对值_x
    ```
@@ -293,7 +293,7 @@ where
 
 ### mod
 
-rust 的 mod 确实会让初学者摸不着头脑。建议先搜几篇文章看看，例如[Rust 模块和文件 - [译]](https://zhuanlan.zhihu.com/p/73544030)，也可以问 AI。多写几次就完全掌握了。
+rust 的 mod 确实会让初学者摸不着头脑。建议先搜几篇文章看看，例如 [Rust 模块和文件 - [译]](https://zhuanlan.zhihu.com/p/73544030)，也可以问 AI。多写几次就完全掌握了。
 
 1. 每一个 **`.rs` 文件**、**`mod` 块** 和 **带有 `mod.rs` 的文件夹** 都是模块。
 2. `lib.rs`（如果不是 lib target 则为 `main.rs`）是顶层模块(`crate`)，其他模块层级即为**文件目录层级**。

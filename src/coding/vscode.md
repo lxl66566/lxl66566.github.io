@@ -66,12 +66,12 @@ tag:
 - 前端：_Oxc_
   - Vue: _Vue - Official_
 - C++：_Clang-Tidy_，_Clang-Format_，详见[开发环境](./Cpp.md#开发环境)
-- python：_Pylance_，_Ruff_，详见[Python](./python.md#vscode-扩展)
+- python：_Pylance_，_Ruff_，详见 [Python](./python.md#vscode-扩展)
 - rust：_cargo-crate-completer_，_Even Better TOML_，_rust-analyzer_，_Flowistry_
 - java：_Language Support for Java(TM) by Red Hat_，_Test Runner for Java_
 - ~~kotlin：_Kotlin Language_，_vscode-runner_~~ 不要用 vscode 写 kotlin
 - verilog：_verilog-formatter_（有点记不太清了）
-- octave：_Octave_，_Octave Formatter_，详见[octave](./octave.md#ide)
+- octave：_Octave_，_Octave Formatter_，详见 [octave](./octave.md#ide)
 - Typst：_Typst LSP_
 - 数据库：_SQLite Viewer_
 - 协同：_Live Share_

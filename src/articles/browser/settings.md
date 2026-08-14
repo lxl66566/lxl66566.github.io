@@ -35,7 +35,7 @@ Windows Registry Editor Version 5.00
 而 chromium 系下没有这个插件，我需要寻找新的垂直标签栏插件。
 
 - [Side Space](https://chromewebstore.google.com/detail/side-space-vertical-tab-m/ipcmlnjbpgmnpahkkboglidcbkndekjj)，[Vertical Tabs](https://chromewebstore.google.com/detail/vertical-tabs/efobhjmgoddhfdhaflheioeagkcknoji)，[tabVertikal](https://chromewebstore.google.com/detail/tabvertikal-垂直选项卡/aahjeignibghcnabifeoclpebaleldkj)，[Tab Shelf](https://chromewebstore.google.com/detail/tab-shelf-side-panel-vert/gkiobnohamhihbaipacecjfljepjjlmg?hl=zh-CN)，[Thready](https://chromewebstore.google.com/detail/thready-vertical-tabs/aihcofnnndflfjbmlekiegncnahgmaik?hl=zh-CN&utm_source=ext_sidebar)：全部否决，太宽了。这些都是用的 chromium 侧边栏 api，但是这 api 就是**纯纯的脑瘫**，有 min width 限制。[相关讨论](https://groups.google.com/a/chromium.org/g/chromium-extensions/c/xuk4ZuWTsBk)，反正我没看出什么诚意。
-- [Polychrome](https://chromewebstore.google.com/detail/polychrome-vertical-tab-g/pcdogalliibjgamnojnpbmbabghfijak?hl=zh-CN&utm_source=ext_sidebar)则是用的浮动窗口，更捞了。
+- [Polychrome](https://chromewebstore.google.com/detail/polychrome-vertical-tab-g/pcdogalliibjgamnojnpbmbabghfijak?hl=zh-CN&utm_source=ext_sidebar) 则是用的浮动窗口，更捞了。
 
 ## 下载器
 

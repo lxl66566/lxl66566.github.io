@@ -51,7 +51,7 @@ tag:
 - 进行 windows 更新（可选，如果故意使用旧版镜像安装请跳过这一步）。
   - 需要看情况，关注一下近期 windows 更新补丁有没有出过什么大问题。
   - 本次更新将会成为我的 Windows 系统的最后一次更新。
-- 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用[Winaero Tweaker](../../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../../farraginous/recommend_packages.md#ContextMenuManager) 调整。
+- 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用 [Winaero Tweaker](../../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../../farraginous/recommend_packages.md#ContextMenuManager) 调整。
 - **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。如果没有此开关，需要运行 `powercfg /h on` 后再查看。
   1. 避免关机时自动保存 [RAM Disk](../ramdisk.md) 文件到固态盘；
   2. Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 _更新并重启_。[ref](https://t.me/withabsolutex/1193)
@@ -81,7 +81,7 @@ tag:
   3. 手动 ([src](https://zhuanlan.zhihu.com/p/494923217))，但实测并不能完全关闭
      - _Windows 安全中心 - 病毒和威胁防护 - 管理设置_，关闭所有开关
      - 使用组策略编辑器禁用 Windows Defender
-     - `win + r`运行`gpedit.msc`，_计算机配置 - 管理模板-Windows 组件 - 关闭 Microsoft Defender 防病毒_，选择已启用
+     - `win + r` 运行 `gpedit.msc`，_计算机配置 - 管理模板-Windows 组件 - 关闭 Microsoft Defender 防病毒_，选择已启用
      - 由于我的电脑是家庭版升专业版，没有 `gpedit.msc` 文件，因此需先添加组策略编辑器。在记事本输入以下代码并保存为 `.bat` 文件，管理员运行。
        ```batch
        pushd "%~dp0"
@@ -90,7 +90,7 @@ tag:
        for /f %%i in ('findstr /i . gp.txt 2^>nul') do dism /online /norestart /add-package:"%systemroot%\servicing\Packages\%%i"
        pause
        ```
-     - 使用[Defender Control](https://www.sordum.org/9480/defender-control-v2-1/)彻底关闭安全中心。
+     - 使用 [Defender Control](https://www.sordum.org/9480/defender-control-v2-1/) 彻底关闭安全中心。
   4. 如果你因为一些理由不得不打开 Windows 安全中心（例如公司电脑），请：
      - 到安全中心里关闭所有能看得见的开关
      - [关闭不重要的通知](https://learn.microsoft.com/zh-cn/windows/security/operating-system-security/system-security/windows-defender-security-center/wdsc-hide-notifications#use-group-policy-to-hide-noncritical-notifications)
@@ -244,8 +244,8 @@ tag:
   - 别忘了把 _国家和地区_ 改回去。
   - 打开安装好的 Windows Subsystem for Android™️，点击左侧 Developer，打开 Developer mode.（意味着在 `127.0.0.1:58526` 默认端口开启调试）
   - 在这里你可以使用两种方式安装软件：
-    1. [WSA PacMan](https://github.com/alesimula/wsa_pacman)提供了便捷的图形化界面。
-    2. 使用[ADB](../mobile/adb.md)，输入 `adb connect 127.0.0.1:58526` 连接，`adb install ...`安装。
+    1. [WSA PacMan](https://github.com/alesimula/wsa_pacman) 提供了便捷的图形化界面。
+    2. 使用 [ADB](../mobile/adb.md)，输入 `adb connect 127.0.0.1:58526` 连接，`adb install ...`安装。
   - 关于网络受限问题：在虚拟机的 _设置 - Network&internet_ 中看到网络连接受限。win11 发出弹窗警告。
     解决方法（参考[来源](https://www.shenshanhongye.com/jc/2134.html)）：在 adb 成功连接后，输入：
     ```sh
@@ -254,12 +254,12 @@ tag:
     adb shell settings put global captive_portal_http_url http://www.google.cn/generate_204
     ```
     重启 wifi 即可。
-- 更改任务栏样式：下载[RoundedTB](https://apps.microsoft.com/store/detail/roundedtb/9MTFTXSJ9M7F?hl=en-us&gl=us)，根据提示更改。
+- 更改任务栏样式：下载 [RoundedTB](https://apps.microsoft.com/store/detail/roundedtb/9MTFTXSJ9M7F?hl=en-us&gl=us)，根据提示更改。
   - 默认情况美观度还不错，但是在全屏窗口下反而很丑。
 - ~~开启全局 UTF-8：_设置 - 语言和区域 - 管理语言设置 - 更改系统区域设置 - beta:使用 UTF-8..._~~ 实测会导致一些 galgame 乱码。
 - ~~使用 [Win11Debloat](https://github.com/Raphire/Win11Debloat) 移除一些自带软件与组件。~~
   - 这会有一些 sideeffects，例如使某些终端乱码，win + R 失去记忆，等等。必需谨慎使用，或者你知道如何恢复。
-- 使用[O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10)禁用一些非必须功能。但是它的大部分设置项都是没用的，剩下的有用的 [windows 11 轻松设置工具](#小工具) 也能做。
+- 使用 [O&O ShutUp10++: Free antispy tool for Windows 10 and 11](https://www.oo-software.com/en/shutup10) 禁用一些非必须功能。但是它的大部分设置项都是没用的，剩下的有用的 [windows 11 轻松设置工具](#小工具) 也能做。
 - ~~开启长路径：组策略编辑器（运行 `gpedit.msc`），_计算机配置 > 管理模板 > 系统 > 文件系统 > 启用 Win32 长路径_ 选择已启用~~ 已没有此设置
 - ~~在 _高级网络设置 - Internet 选项 - 高级_ 中，打开 TLS 1.3~~ 当前版本已经默认打开
 - 外观设置：

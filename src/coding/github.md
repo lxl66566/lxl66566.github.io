@@ -111,9 +111,9 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 | :-: | :-: | :-: |
 |in:name|指定搜索仓库名称|`in:name words english`|
 |in:description|指定搜索摘要|类比|
-|in:readme|指定搜索readme文档|类比|
+|in:readme|指定搜索 readme 文档|类比|
 |stars:|指定星数范围|`stars:<50`<br/>`stars:>100`<br/>`stars:50..100`|
-|fork:|指定fork数范围|类比|
+|fork:|指定 fork 数范围|类比|
 |language:|指定程序语言|`language:c#`|
 |pushed:|指定最近更新时间范围|`pushed:>2022-01-01`|
 |path:|指定匹配文件名，例如 path:*.toml|

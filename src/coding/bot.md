@@ -29,9 +29,9 @@ comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；�
 - 带饭记账
 - 偷窥我
 
-请加为好友（联系绝对值\_x 同意好友）后发送`help`获取详细指令。你也可以在[这里](https://github.com/lxl66566/primary-atri-bot-plugins)得到她的实现上述功能的 python 源码。关于环境：
+请加为好友（联系绝对值\_x 同意好友）后发送 `help` 获取详细指令。你也可以在[这里](https://github.com/lxl66566/primary-atri-bot-plugins)得到她的实现上述功能的 python 源码。关于环境：
 
-1. [使用 conda](../coding/python.md#创建环境)创建出所需环境（此处环境名为`atri`）：`conda create -n atri python=3.9`
+1. [使用 conda](../coding/python.md#创建环境) 创建出所需环境（此处环境名为 `atri`）：`conda create -n atri python=3.9`
    > nonebot2 需要在 python>=3.8 环境下运行
 2. 使用 pip 安装依赖：
    ```sh

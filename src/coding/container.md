@@ -44,7 +44,7 @@ tag:
 
 ## 基础
 
-看看[tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
+看看 [tutorial](https://github.com/containers/podman/blob/main/docs/tutorials/podman_tutorial_cn.md)。
 
 **容器**和**镜像**是两个概念，可以类比为系统和系统盘。
 
