@@ -649,7 +649,7 @@ crossbeam-channel 被我拉黑了，大家可以选择 [crossfire](https://githu
 
 除了直接 derive 外，serde 一般用得多的技巧还有：
 
-- `#[serde(rename = "xx")]` 和 `#[serde(rename_all = "kebab-case")]`，自定义序列化的名称与格式。更多宏可以看[doc Field attributes](https://serde.rs/field-attrs.html)。
+- `#[serde(rename = "xx")]` 和 `#[serde(rename_all = "kebab-case")]`，自定义序列化的名称与格式。更多宏可以看 [doc Field attributes](https://serde.rs/field-attrs.html)。
 - 对于需要在缺失时使用 empty 的容器对象，`#[serde(default)]` 是个不错的选择。
 - 如果有的结构需要手写 parser，可以顺带实现 serialize trait，代码不会太多。
 - serde 提供了 [remote derive](https://serde.rs/remote-derive.html)，也就是为第三方 crate 里的 struct derive serde。但是我没用过，看起来不太好用的样子。

@@ -211,7 +211,7 @@ Nyquist frequency: 2wm
 
 见 [复变函数 - Laplace transform](./complex_functions.md#laplace-transform)
 
-或[wikipedia](https://zh.wikipedia.org/zh-hans/拉普拉斯变换#性质和定理)
+或 [wikipedia](https://zh.wikipedia.org/zh-hans/拉普拉斯变换#性质和定理)
 
 与傅里叶变换的联系：s=jw，可以直接互相代入
 
