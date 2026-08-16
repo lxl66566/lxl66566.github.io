@@ -1191,5 +1191,11 @@ export default [
   { id: "461559", aScore: 6, bScore: 7.3, info: "#精灵 #媚药 #堕落", order: 1, bak: "https://telegra.ph/いーすとはうす-パン工場-エルフの住む森-中国翻訳-DL版-07-25" },
   { id: "637227", aScore: 9.4, bScore: 7, info: "#蔚蓝档案 #纯爱", bak: "https://telegra.ph/20NT-ふけまち-プあな--ニートになったプラナと蕩けあう夜---Archive-Sketch-LUN-ブルーアーカイブ-中国翻訳-無修正-DL版-03-15-4" },
   { id: "(eh)", aScore: 8, bScore: 9.3, info: "#神明 #loli #纯爱 #缘神启动", otherlink: "https://e-hentai.org/s/4dc69130f1/3984002-1" },
+  { id: "672705", aScore: 9, bScore: 7.7, info: "#蔚蓝档案 #分身 #纯爱", bak: "https://telegra.ph/C108-つくてん-円つくも-発情ウサギ大量発生-ブルーアーカイブ-中国翻訳-08-13-3" },
+  { id: "672517", aScore: 9.2, bScore: 7.2, info: "#3P #百合 #田屋沼屋", bak: "https://telegra.ph/田屋沼屋-たぬま-TwinkleShare-中国翻訳-DL版-08-13" },
+  { id: "671915", aScore: 8.3, bScore: 7.7, info: "#百合", bak: "https://telegra.ph/きんだーがーでん-としぞう-クラスメイトが私のことエロい目で見てたんだけどっ-中国翻訳-08-12-2" },
+  { id: "672691", aScore: 7.9, bScore: 7, info: "#教室 #百合 #自慰復讐", order: 4, bak: "https://telegra.ph/自慰復讐４話-07-30-2" },
+  { id: "661519", aScore: 7.8, bScore: 8.7, info: "#精灵 #纯爱 #寿命论", bak: "https://telegra.ph/かたゆでたまご-ハードボイルドよし子-エルフの終活-中国翻訳-DL版-07-29" },
+  { id: "667746", aScore: 9.5, bScore: 6.3, info: "#蔚蓝档案 #全彩 #短篇 #loli #图集", bak: "https://telegra.ph/C107-ESSENTIA-藤真拓哉-門主様のおもてなし-ブルーアーカイブ-中国翻訳-07-26" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

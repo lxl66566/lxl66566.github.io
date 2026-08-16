@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "次元凸破恋战姬！！",
+    other_names: ["ディメンション凸ラバース！！"],
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-08-15",
+    },
+  },
+  {
     name: "けもの道☆ガーリッシュスクエア LOVE+PLUS",
     valid_name: "けもの道",
     other_names: ["兽娘道"],
