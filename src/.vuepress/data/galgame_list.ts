@@ -3,6 +3,7 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 const original_list: GalItemInputType[] = [
   {
     name: "次元凸破恋战姬！！",
+    valid_name: "次元凸破恋战姬",
     other_names: ["ディメンション凸ラバース！！"],
     playing_status: PlayingStatus.PLAYING,
     duration: {
@@ -57,8 +58,8 @@ const original_list: GalItemInputType[] = [
       story: 7.3,
       visual: 7.2,
       program: 5,
-      thrill: 3.2
-    }
+      thrill: 3.2,
+    },
   },
   {
     name: "兽娘育成方案",
