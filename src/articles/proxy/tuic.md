@@ -45,6 +45,7 @@ TUIC 命途多舛，原本是 [EAimTY 的个人项目](https://www.eaimty.com/20
 ```
 
 - 注意，users 里必须填写 uuid，并且是 RFC 定义的 uuid 标准格式，可以在 [uuidgenerator](https://www.uuidgenerator.net/version4) 里生成一个。客户端连接时必须使用 server 侧有定义的 uuid。
+- 注意，TUIC 配置项里并没有伪装选项，对于 GFW 的主动探测，没法伪装成正常站点。
 
 ## 客户端
 

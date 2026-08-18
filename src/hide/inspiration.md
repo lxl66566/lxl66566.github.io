@@ -121,7 +121,7 @@ tag:
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
-- [x] ~~rust TUI easy_download~~ [trauma](https://github.com/rgreinho/trauma)，然后我还贡献了一些
+- [x] ~~rust TUI easy_download~~ [trauma](https://github.com/rgreinho/trauma)，然后我还 PR 了一些；~~但是这项目仍然很屎，如果用了会带一堆不该带的依赖~~
 - [x] [GalgameManager](https://github.com/lxl66566/GalgameManager)
   - [ ] 随机启动
   - [x] 插件与启动链

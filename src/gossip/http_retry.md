@@ -61,3 +61,15 @@ error sending request for url (https://github.com/huacnlee/autocorrect/raw/main/
 我经常打开一个带有 `$schema` 的 json，看到 schema url 下面有一条黄线说 `无法从“https://json.schemastore.org/component-detection-manifest.json”加载架构: Client network socket disconnected before secure TLS connection was established。` 那我猜测十有八九 vscode 这货就是没有重试机制的了。
 
 简单拉下 vscode 源码做个验证，vscode 拉 schema 用的 [node-request-light](https://github.com/microsoft/node-request-light)，让我康康你的发育正不正常哟！果然没看到重试逻辑。request 调用方也没有做 error 重试，那么也基本确定这个问题真实存在了。
+
+## Dependi
+
+这个机器上摸鱼，经常可以在 Cargo.toml 里看到每个依赖后面有三个大大的红色感叹号。不用看 Dependi 日志我都知道发生了啥事。
+
+果然，日志内容：
+
+```
+Error fetching versions for anyhow: Error: Client network socket disconnected before secure TLS connection was established
+```
+
+并且每一个依赖都是全部失败，非常整齐，不知道怎么做到的。
