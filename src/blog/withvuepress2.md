@@ -157,7 +157,7 @@ export default defineUserConfig({
 
 1. 这个图床有 _容量上限：5GB_ 和 _单张图片上限：5MB_
 2. 原有的每张图都需要手动替换，因为 src 是随机生成的
-3. 会出现一些玄学问题，例如：使用`<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">`进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
+3. 会出现一些玄学问题，例如：使用 `<img src="https://s2.loli.net/2022/08/03/DCPGWEa6dyoLK1t.jpg" width="100%" height="100%">` 进行图片缩放时将不显示图片，即无法获取图片原始大小，需要使用绝对大小缩放（[下文](#图片无法比例缩放问题)有解释，这并不是图床的问题）
 4. 在[关于 SM.MS](https://sm.ms/about) 界面你将能看到：![fucksmms](/images/blog/withvuepress2/fucksmms.png) ~~这样的图床还是早点死吧！~~
 
 因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：
@@ -175,7 +175,7 @@ export default defineUserConfig({
 
 为 markdown-it 渲染器安装<span v-pre>$\displaystyle \LaTeX$</span>插件。[参考来源](https://blog.csdn.net/Flyingheart1991/article/details/126067149)，亲测有效。
 
-由于`$...$`会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹`<span v-pre></span>`标签。否则将触发 [weak map key](#rendering-pages-failed-问题) bug。
+由于 `$...$` 会被 vuepress 识别为未知标签，因此在需要使用公式时需包裹 `<span v-pre></span>` 标签。否则将触发 [weak map key](#rendering-pages-failed-问题) bug。
 
 不过现在 theme-hope 已经有集成 katex，不用这样折腾，可以直接用。
 
@@ -195,7 +195,7 @@ export default defineUserConfig({
 
 @tab 全局 css（已弃用）
 
-在全局 css 中新增类选择器`.ClassName img{width: 60% !important; height:auto !important;}`或`.ClassName img{max-width: 60%;}`，并在 md 中以`<div class="ClassName"><img src="..."/></div>`使用。
+在全局 css 中新增类选择器 `.ClassName img{width: 60% !important; height:auto !important;}` 或 `.ClassName img{max-width: 60%;}`，并在 md 中以 `<div class="ClassName"><img src="..."/></div>` 使用。
 
 :::
 

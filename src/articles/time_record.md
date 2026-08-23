@@ -53,7 +53,7 @@ ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数�
 
 我有多喜欢统计时长，从 [galgame 页面](../hobbies/galgame.md)和[读书页面](../hobbies/books.md)便可略知一二。但是——
 
-由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端 [Tai](../farraginous/recommend_packages.md#tai) 的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。~~_（将`自己做个这种软件`写入日程！）_~~ <span class="heimu" title="你知道的太多了">_笑死，开摆_ </span>
+由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端 [Tai](../farraginous/recommend_packages.md#tai) 的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。~~_（将 `自己做个这种软件` 写入日程！）_~~ <span class="heimu" title="你知道的太多了">_笑死，开摆_ </span>
 
 <text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。
 
@@ -74,7 +74,7 @@ ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数�
 
 - `StayFree` 仅有 81% 准确率：QQ、nekogramX、Via 等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到 19%）（后来发现也有偏大数据）
 - 准确率为 0% 的软件：在 20220709 我看了 67min 小说后，这些软件有的未记录阅读器时长；有的将时长错加到 QQ 上。它们的准确率由 0.8%-10% 不等，由于偏差过大，统一算作 0%。
-- 除 `My Phone Time` `ActionDash` 外其他软件均请求`使用情况访问权限`，此处视为默认放行。
+- 除 `My Phone Time` `ActionDash` 外其他软件均请求 `使用情况访问权限`，此处视为默认放行。
 - `Phone statistic` 有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期 9 天前的。
 
 总结：

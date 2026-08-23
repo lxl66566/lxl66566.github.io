@@ -529,7 +529,7 @@ git bash 默认会将中文以 `\` 转义的方式显示。要取消，需要：
    # another edition
    # git rev-list --all | xargs -rL1 git ls-tree -r --long | sort -uk3 | sort -rnk4 | head -15
    ```
-   其中 `tail [-n]` 为显示的条目数。（疑难解答[^3]：_查找大文件时出现 `Cannot open existing pack file '.git/objects/pack/_.idx'`错误_）
+   其中 `tail [-n]` 为显示的条目数。（疑难解答[^3]：_查找大文件时出现 `Cannot open existing pack file '.git/objects/pack/_.idx'` 错误_）
 2. 清理。
    ::: tabs
 

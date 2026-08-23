@@ -429,7 +429,7 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 
 ### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
 
-强大的`禁止复制`破解插件。比脚本好用。
+强大的 `禁止复制` 破解插件。比脚本好用。
 
 ### [DARK READER](https://darkreader.org/)
 
@@ -582,7 +582,7 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 
 1. 下载 [ffsend-v0.2.74-windows-x64.exe](https://github.com/timvisee/ffsend/releases/download/v0.2.74/ffsend-v0.2.74-windows-x64.exe)
 2. 在下载目录打开**管理员**终端，执行 `move .\ffsend-v0.2.74-windows-x64.exe C:\Windows\System32\ffsend.exe`（或手动复制改名
-3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>`下载
+3. 使用 `ffsend upload <file>` 上传文件 / 文件夹，`ffsend download <url>` 下载
 
 ### ~~uTools~~
 

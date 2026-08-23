@@ -68,7 +68,7 @@ _steam - 好友 - 查看好友列表 - 点击名字右边箭头 - 编辑个人�
 
 ![控制台](/images/hobbies/other_games/csgo/csgo_settings_1.png)
 
-控制台是对 csgo 进行高级操作的基础。现在你可以按`~`键呼出控制台。
+控制台是对 csgo 进行高级操作的基础。现在你可以按 `~` 键呼出控制台。
 
 ### 切换国服
 
@@ -87,7 +87,7 @@ _steam - 好友 - 查看好友列表 - 点击名字右边箭头 - 编辑个人�
 <img alt="开始界面" src="/images/hobbies/other_games/csgo/csgo_settings_2.png"  width="43%" height="43%"/>
 </div>
 
-- 在 steam 库中右击 csgo，点击`属性`，在`通用-启动选项`中加入`-perfectworld`
+- 在 steam 库中右击 csgo，点击 `属性`，在 `通用-启动选项` 中加入 `-perfectworld`
 
 #### 切换后的设置
 
@@ -148,7 +148,7 @@ con_filter_text "damage";
 ```
 
 2. 保存关闭后重命名为”damage.cfg”
-3. 在 steam 库中右击 csgo，点击`属性`，在`通用-启动选项`中加入 +exec damage
+3. 在 steam 库中右击 csgo，点击 `属性`，在 `通用-启动选项` 中加入 +exec damage
 
 ### 一键跳投
 

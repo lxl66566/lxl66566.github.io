@@ -90,7 +90,7 @@ Telegram 会自动压缩发送的图片。若想发送原图：
 
 ### tag
 
-tag 由两端的空格，`#`号与 tag 名构成。Telegram 会自动为 tag 创建链接，点击即可在此聊天搜索所有带有该 tag 的消息。[这是一个示例](https://t.me/withabsolutex/520)
+tag 由两端的空格，`#` 号与 tag 名构成。Telegram 会自动为 tag 创建链接，点击即可在此聊天搜索所有带有该 tag 的消息。[这是一个示例](https://t.me/withabsolutex/520)
 
 ### 置顶
 

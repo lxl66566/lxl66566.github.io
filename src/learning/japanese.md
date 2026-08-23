@@ -156,7 +156,7 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 - [数数](https://learning-japanese.com/number-count/)
 - [ために　 vs 　ように](https://japanese.stackexchange.com/questions/12450/difference-between-ために-and-ように)
 - [ならでは](https://nihongokyoshi-net.com/2019/06/20/jlptn1-grammar-naradewa/)
-- 由..原材料制成，看得出用`で`，看不出用`から` ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=383))
+- 由..原材料制成，看得出用 `で`，看不出用 `から` ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=383))
 - にとって　 vs 　に対して：前者有站在...角度来讲的意思 ([source](https://www.bilibili.com/video/BV1Ni4y1N7mA/?t=2151))
 - 兎　的量词为 羽 ([source](https://japanknowledge.com/articles/kze/column_kaz_02.html))
 - [ごくありふれた](https://ja.hinative.com/questions/8252283)
