@@ -31,6 +31,7 @@ Telegram 多平台软件均为开源，并且开放了许多 api，因此出现�
 - [NekoX](https://github.com/NekoX-Dev/NekoX)（已过时）：内置代理，不过带宽较小，不稳定。疑似已停止开发。
 - Cherrygram：[骗](https://t.me/withabsolutex/1676)，声称 Blocking stickers 实际上不行。也被发现[后门](https://t.me/monogram_android/74)。
 - **不要使用 NekoGram**，[开发者有点神人](https://t.me/fangliye_archive)；20260402 爆出[官方植入的后门](https://thebadinteger.github.io/nekogram-phone-exfiltration/)，收集用户手机号。
+- [NagramX](https://github.com/risin42/NagramX) 和 [NagramXF](https://github.com/Keeperorowner/NagramXF) 是 Nagram 的两个变体，据称有一些更高级的功能，我还没尝试过，之后说不定会试试。
 
 ## 基础教程
 

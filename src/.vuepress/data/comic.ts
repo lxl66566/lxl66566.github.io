@@ -1197,5 +1197,6 @@ export default [
   { id: "672691", aScore: 7.9, bScore: 7, info: "#教室 #百合 #自慰復讐", order: 4, bak: "https://telegra.ph/自慰復讐４話-07-30-2" },
   { id: "661519", aScore: 7.8, bScore: 8.7, info: "#精灵 #纯爱 #寿命论", bak: "https://telegra.ph/かたゆでたまご-ハードボイルドよし子-エルフの終活-中国翻訳-DL版-07-29" },
   { id: "667746", aScore: 9.5, bScore: 6.3, info: "#蔚蓝档案 #全彩 #短篇 #loli #图集", bak: "https://telegra.ph/C107-ESSENTIA-藤真拓哉-門主様のおもてなし-ブルーアーカイブ-中国翻訳-07-26" },
+  { id: "673643", aScore: 9.4, bScore: 7.5, info: "#蔚蓝档案 #loli #3P", bak: "https://telegra.ph/Horizontal-World-またのんき-キサ危機-ブルーアーカイブ-中国翻訳-DL版-08-17-5" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

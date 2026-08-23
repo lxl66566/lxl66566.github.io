@@ -299,6 +299,7 @@ Nix 语言本身：
 - oepncode 的 permission 会把 `*` 和 `?` 给重新解释，但是[没有提供转义功能](https://github.com/anomalyco/opencode/blob/28a06e52fcfaea87a749e4e4c9a74d90b3195fb0/packages/opencode/src/util/wildcard.ts#L3-L9)，你永远无法对包含 raw `*` 和 `?` 字符的命令进行权限控制。
 - 我的长对话整天被 opencode 截断，结果发现是 opencode 硬编码了一个 100 条对话的限制。([issue#30587](https://github.com/anomalyco/opencode/issues/30587) [issue#31513](https://github.com/anomalyco/opencode/issues/31513)) opencode 对用户的消息没有任何尊重。
 - 之前的版本，Windows opencode 内按 `Ctrl + C` 退出会直接崩掉 Windows Terminal 窗口。
+- **恶性 bug**：opencode 对会话时间戳做截断，导致在特定时间点会话一直无限重试，而对外表现为卡死。([ref](https://t.me/withabsolutex/2807)) 只能说是狗屎
 
 ## niri 有多难用
 
