@@ -274,4 +274,4 @@ TypeError: Cannot read properties of undefined (reading 'enabled')
 
 ## 二十七周目
 
-自己一直重置实在是有点累，切到 <https://lolitalibrary.com/maoguo/#> 挂自动领导力。这领导力刷的效率实在是杠杠的快啊。
+自己一直重置实在是有点累，切到 <https://lolitalibrary.com/maoguo/#> 挂自动领导力。这领导力刷的效率实在是杠杠的快啊。当然自动领导力也是有速率上限的（8K/h），易得刷 1M 领导力需要 125h = 5 天多。感觉完全不亚于长挂，并且自动领导力下没有任何可以做的事。

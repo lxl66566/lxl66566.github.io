@@ -64,7 +64,7 @@ tag:
 
 - 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [鲲 Galgame](https://www.kungal.com/galgame) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
-- 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://t.me/Tyranor)
+- 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://t.me/Tyranor)（20260823 update：[Tyranor 已死](https://t.me/Tyranor/16)，有事烧纸）
   - krkr 已经很久没有维护了；Tyranor2 可以运行 krkr 的游戏，因此可以考虑直接抛弃 krkr。
 - 转区：大名鼎鼎 [Locale Emulator](https://github.com/xupefei/Locale-Emulator)，虽然已经 archived 了。
   - 不要去尝试 NTLEA，这玩意更早就 archived 了，而且质量低，会崩溃。
