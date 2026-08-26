@@ -119,7 +119,7 @@ let a = xxx().unwrap_or_else(|| 1);
 
 FP 的基础是 lambda 演算，组合子[^2]等。我自己也没有系统地学习过 FP，这里就不献丑了。
 
-[^2]: 有一篇可以拿来当组合子快速入门的文章在 [rust external 2.](./Rust.md#external)。
+[^2]: 有一篇可以拿来当组合子快速入门的文章在 [rust external 2.](./Rust/index.md#external)。
 
 ## 错误处理
 

@@ -30,7 +30,7 @@ tag:
 
 ### 学习阶段
 
-1. [Rust](./Rust.md)
+1. [Rust](./Rust/index.md)
 2. [C++](./Cpp.md)
 3. [Python](./python.md)
 4. [general shell script](./shell.md)

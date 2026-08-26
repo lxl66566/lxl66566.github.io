@@ -22,6 +22,10 @@ category:
 
 ## 2026
 
+### 20260826
+
+- 拆分原 _Rust_ 页面到 [Rust](../coding/Rust/) 子目录，包含主要内容与 [crates 评价](../coding/Rust/crates.md) 页面。
+
 ### 20260331
 
 - 拆分原 _Windows 设置指南_ 页面到 [Windows](../articles/windows) 子目录，内含 _设置指南_ 与 _日常使用_ 两篇文章。
@@ -637,7 +641,7 @@ console.log(proc);
 
 ### 20230115
 
-- [TG 教程](../articles/telegram.md)、[Rust](../coding/Rust.md) 新增大量内容
+- [TG 教程](../articles/telegram.md)、[Rust](../coding/Rust/index.md) 新增大量内容
 
 ### 20230114
 
@@ -697,7 +701,7 @@ console.log(proc);
 
 ### 20221118
 
-- 新增 [Rust-输入](../coding/Rust.md#输入)
+- 新增 [Rust-输入](../coding/Rust/index.md#输入)
 
 ### 20221115
 
@@ -959,7 +963,7 @@ console.log(proc);
 
 ### 20220516
 
-- 新增 [Rust#字符串修改](../coding/Rust.md#字符串修改)、[关于作者#习惯（现：关于作者#性格）](../gossip/author.md#性格)
+- 新增 [Rust#字符串修改](../coding/Rust/index.md#字符串修改)、[关于作者#习惯（现：关于作者#性格）](../gossip/author.md#性格)
 
 ### 20220510
 
@@ -978,5 +982,5 @@ console.log(proc);
 ### 20220504
 
 - 发布博客
-- 创建 [主页](../index.md)、[闲聊 - 关于作者](../gossip/author.md)、[编程 - Rust](../coding/Rust.md)、[杂项 - 软件汇总](../farraginous/recommend_packages.md)、[杂项 - 网址汇总](../farraginous/recommend_websites.md)、游戏 - 其他游戏 - csgo 游戏配置
+- 创建 [主页](../index.md)、[闲聊 - 关于作者](../gossip/author.md)、[编程 - Rust](../coding/Rust/index.md)、[杂项 - 软件汇总](../farraginous/recommend_packages.md)、[杂项 - 网址汇总](../farraginous/recommend_websites.md)、游戏 - 其他游戏 - csgo 游戏配置
 - 添加搜索插件

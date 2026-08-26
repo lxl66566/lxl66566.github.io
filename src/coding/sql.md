@@ -166,7 +166,7 @@ conn.close()
 
 ### rust
 
-随便找个 AI 写吧。[我是 rusqlite 黑](./Rust.md#拉黑)，所以建议使用 sqlx。
+随便找个 AI 写吧。[我是 rusqlite 黑](./Rust/index.md#拉黑)，所以建议使用 sqlx。
 
 ## duckdb
 

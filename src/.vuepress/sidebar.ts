@@ -104,7 +104,7 @@ export default sidebar({
     {
       text: "语言",
       children: [
-        "Rust.md",
+        "Rust/index.md",
         "Cpp.md",
         "python.md",
         "shell.md",
@@ -146,6 +146,7 @@ export default sidebar({
       ],
     },
   ],
+  "/coding/Rust/": ["index.md", "crates.md"],
   "/blog/": ["index.md", "withvuepress2.md", "log.md", "todo.md"],
   "/essay/": [
     {
