@@ -427,6 +427,10 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 
 由于翻译插件实在是太好用了，经常会养成看到英文就起手 Alt + A 打开翻译的习惯，然后再也不看原文。这样对语言学习没有什么帮助，需要时刻提醒自己不要过度依赖它。
 
+另外，使用沉浸式翻译还有一些注意事项：
+
+- 沉浸式翻译的性能并不好。可以遵照[此 issue](https://github.com/immersive-translate/immersive-translate/issues/3765) 进行性能优化。
+
 ### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
 
 强大的 `禁止复制` 破解插件。比脚本好用。

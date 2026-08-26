@@ -714,6 +714,18 @@ process_pb.finish_with_message("Processing complete!");
   }
   ```
 
+### image
+
+image 库基本就是 Rust 图像生态里知名度最高的库了，image 提供了对大量图像格式的统一操作支持，用来写 server 等业务逻辑属于必备库。
+
+然而读了一点 issue 和代码后，我感觉 image 本身的质量比较一般。可能也是缺人的缘故吧（计算机里的图像天坑），image 的迭代速度一直很慢，[0.22 一年，0.23 两年，0.24 两年](https://github.com/image-rs/image/issues/2245#issuecomment-2133833173)，所以即使 image 处于 0.x，也没法随意进行 breaking change。
+
+image 的性能其实**非常糟糕**：
+
+- 最大的问题就是为了兼容各种图片格式/用户自定义结构而搞出的 GenericImage trait，很多热点路径都在用 GenericImage 的 `get_pixel` 和 `put_pixel`，这俩玩意内部有 2-3 个越界检查分支，LLVM auto vectorize 看到立刻破防了。图像处理最重要的就是 batch processing，简直是为 simd 天生打造的竞技场，然而 image 除了几个依赖用了 simd feature，自己基本没有 simd 代码，之前[有人想搞的 simd 计划](https://github.com/image-rs/image/issues/2383)现在也没声了。
+- 项目里虽然 rayon 是 default feature，但是几乎没人用，尤其是某 Contributor 还[以「用 rayon 有被 DDoS 耗尽内存的风险」为由，关闭 pic-scale-safe 的 rayon feature](https://github.com/image-rs/image/pull/2639#discussion_r2508356543)，我真的被无语到了。本来 image/rayon 关联 deps/rayon 就是最佳实践，处理可控输入就开内部 rayon，批量处理外部输入就在外部用 rayon 然后关内部的 rayon，一切都是如此自然，我决不能接受这种奇葩理由来故意降低性能的行为。
+- 其他的还有 `&dyn GenericImage` 动态派发无法内联、u8 -> f32 -> u8 等。
+
 ## 打包
 
 说到打包就不得不提万恶的 openssl，我已经[喷了无数次](https://t.me/withabsolutex/1609)，[无数次](https://t.me/withabsolutex/1859)，无数次[^6]…。很多库会提供 rustls feature 来绕过 openssl，例如 reqwest；但是也有库根本不提供，例如 rusqlite。所以 openssl 的问题还是得去解决。
