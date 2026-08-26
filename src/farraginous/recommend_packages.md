@@ -266,6 +266,8 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 快速搜索，几乎不花时间。推荐配合 [EverythingToolbar](https://github.com/srwi/EverythingToolbar) 使用。
 
+- 记得在菜单栏的「搜索」里打开「匹配路径」，并且记得匹配的只能是反斜杠 `\` 而不是斜杠 `/`。
+
 ### [geek](https://geekuninstaller.com/download)
 
 轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。<heimu>[私链](https://wwp.lanzout.com/icAdmharg2h)</heimu>

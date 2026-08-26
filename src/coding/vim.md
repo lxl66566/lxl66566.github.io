@@ -12,14 +12,16 @@ tag:
 
 vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 [#总结](#总结)。
 
-## for beginner
+## vim 操作学习
+
+### for beginner
 
 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助：
 
 1. `a` or `i` 开启编辑。
 2. `<ESC>:wq` 保存并退出。
 
-## 常用组合键
+### 常用组合键
 
 - `A` = `$a`, `I` = `0i`
 - `*` 是当前单词的下一个匹配项
@@ -47,15 +49,19 @@ vscode vim 特有：
 
 ## 设置(懒狗型)
 
-由于现在 vscode 是我的主要编辑器，因此无需折腾，配置简单的 vim 系编辑器也是不错的选择。
+vim 有着各种各样的分支（就像 linux core 和各种 distro 一样），自然也有一些无需折腾，配置简单的 vim 系 IDE，有兴趣可以尝试。
 
 - [lunarvim](https://www.lunarvim.org/zh-Hans/)
 - [AstroNvim](https://astronvim.com/)
 - [nvchad](https://nvchad.com/)
 
-## 设置(neovim)
+## 设置(neovim 一期)
+
+> 2023.06 是我第一次尝试入坑 neovim，不过浅尝一阵以后立刻跑路 vscode 了，这是我的一些心得。
 
 在折腾了大段配置后，我决定使用 lazy.vim 代替 packer 进行插件管理。于是懒狗的我直接使用 [lazyvim](https://www.lazyvim.org/)，该仓库使用 lazy.vim 并预设了许多插件和 keybindings，非常方便。因此我就在此基础上再进行自定义。
+
+::: details archived
 
 [这里](https://www.reddit.com/r/neovim/comments/13pzwq6/comment/jlcbfzg/)有一些插件推荐，能够使 neovim 接近 vscode（笑）
 
@@ -63,8 +69,6 @@ vscode vim 特有：
 
 1. 迁移我原先的 keymaps。
 2. 禁用 Telescope 及其衍生插件，改为使用 [Neotree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)。
-
-::: details outdated, archived
 
 首先基础设置我是照着 [external 2.](#external) 来的。这篇文章确实讲的还行。后续冲浪时也看到一篇写得很好的文章，见 [external 3.](#external)，有空的话去试吧。
 
@@ -80,7 +84,6 @@ vscode vim 特有：
 俗话说 neovim 人都在为了逼近 vscode 而努力（来源请求），我需要的侧边栏也不例外。vscode 的“打开文件夹”功能好用，我需要使用。在尝试了多个插件（opener.nvim, Telescope, NerdTree）后，最终我使用的插件是 [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)。这个插件专为 neovim 设计，并且快捷键更加简单易懂<span class="heimu" title="你知道的太多了">NerdTree 是什么妖魔鬼怪</span>。
 
 1. 在 `lua/plugin.lua` 中添加：
-
    ```lua
    use {
      "nvim-neo-tree/neo-tree.nvim",
@@ -92,15 +95,11 @@ vscode vim 特有：
      }
    }
    ```
-
 2. 快捷键（lua/keymaps.lua）：
-
    ```lua
    vim.keymap.set('n', '<C-o>', ':Neotree<CR>', opts)
    ```
-
 3. 其他设置（init.lua）：
-
    ```lua
    require('neo-tree').setup {
      filesystem = {
@@ -118,6 +117,72 @@ vscode vim 特有：
 - Neotree
 
 :::
+
+## 设置(neovim 二期)
+
+2026.08.26，时隔三年，我看着[越来越臃肿、越来越难用的 vscode](../gossip/fuckxxx.md#vscode-有多难用) 陷入沉思。刚好这段时间舍友在折腾 WSL，学习与配置 neovim，我闲得无聊也一起来玩玩。
+
+2026 年折腾东西的一大好处就是有 AI，曾今望而却步的 lua 现在已经不成阻碍，曾今网上到处翻找的疑难杂症现在也能轻易解决。然而从开发到产品经理的转变也丧失了许多乐趣，不禁让我怀念起年轻气盛的……扯远了。总之，基于[第一期的残废 neovim 配置](#设置neovim-一期)，我开始了第二次的折腾。具体的提示词啥的先不说，这里随便记录一些经验之谈吧。
+
+第二次折腾我仍然使用 lazyvim，框架本身还行，不过仍然有一些问题：
+
+- LazyVim 默认给 markdown/text/typst 等文本类型开了拼写检查，满屏幕的红线还是非常傻逼的。需要注册一个 autocmd 把这个去掉。
+  ```lua
+  -- 关闭拼写检查：LazyVim 默认给 markdown 等文本类型开 spell，中文会满屏红线
+  -- （本文件在 LazyVim autocmds 之后加载，此回调后执行可覆盖它）
+  vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("user_no_spell", { clear = true }),
+    pattern = { "text", "plaintex", "typst", "gitcommit", "markdown" },
+    callback = function()
+      vim.opt_local.spell = false
+    end,
+  })
+  ```
+
+snack 的问题也不少。snack 是 lazyvim 作者搞的一个工具包，提供了许多功能，但是有些默认设置比较垃圾，必须要改：
+
+- snacks.scroll.animate.duration 默认是 total=200ms，这个动画实在是太长了，连续滚动的效果跟虫在爬一样，非常差。我把它调整为了 30ms。
+- snack 默认双击 leader（空格）进入文件选择界面，然而这个界面不会展示 `.` 开头的文件和 git ignore 掉的文件。我之前[吃过一次亏](https://t.me/withabsolutex/2692)，所以立刻给 picker.sources.files 加了 hidden=true, ignored=true。
+- 可以通过 snacks.dashboard.preset.header = "" 去掉开屏的大 logo。
+- 侧边栏默认是 snack 的 explorer 而不是 neotree，需要手动设置一下 `vim.g.lazyvim_explorer = "neo-tree"`。explorer 又占位置又不好看，性能也不如 neotree。
+  - neotree 也需要进行一些设置。
+    ```lua
+    opts = {
+      close_if_last_window = true, -- 只剩文件树时自动关闭
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_by_name = { "node_modules" },
+          never_show = { ".DS_Store", "thumbs.db" },
+        },
+      },
+      window = { width = 25 },
+    }
+    ```
+
+有一些 lazyvim 键位也需要熟悉一下：
+
+- `<leader>gg` 打开 lazygit 面板。用得频繁的话也可以设置为 `<leader>g`。
+- `<leader>e` 打开/关闭 NeoTree 面板。NeoTree 在一周目尝试的时候被我盛赞了，所以二周目吸取教训，还是用它。
+- `<leader>/` 打开全文搜索。lazyvim 的默认实现就是用的 rg，不需要手动去改了。
+- `<C-/>` 打开底部终端。我尝试根据 vscode 习惯设为 ``<C-`>``，然而并不能用，问了下 AI 说是 windows terminal 有一些限制，需要去 `Ctrl + Shift + ,` 编辑一下 windows terminal 的配置，在 action 数组内添加 ``{"keys":"ctrl+`","command":{"action":"sendInput","input":"\u001f"}}`` 即可。之后按下 ``<C-`>`` 就会映射到 `<C-/>` 打开终端，亲测有效。
+  - 还有 windows terminal 的字体也需要改下，需要改成 nerd font 的系列才能显示 lazyvim 的图标。在上述 windows terminal 配置文件里，profiles.defaults 里添加 `"font":{"face":"FiraCode Nerd Font Mono"}`。（字体从 [nerd font 官网](https://www.nerdfonts.com/font-downloads)下载即可。我比较习惯 FiraCode，所以下的是 FiraCode Nerd Font）
+  - 调整终端高度，需要添加这些 keymap（默认是 normal 下才可调，显然我在 terminal 下也需要调整高度）。
+    ```lua
+    map({ "n", "t" }, "<S-Up>", "<cmd>resize +2<cr>")
+    map({ "n", "t" }, "<S-Down>", "<cmd>resize -2<cr>")
+    map({ "n", "t" }, "<S-Left>", "<cmd>vertical resize -2<cr>")
+    map({ "n", "t" }, "<S-Right>", "<cmd>vertical resize +2<cr>")
+    ```
+  - 至于每次打开/关闭终端时记住调整的高度，~~这里空白太小写不下~~，反正就是让 AI 写点 lua 脚本。
+
+多光标一般使用 jake-stewart/multicursor.nvim。进入多光标模式后，默认按 a/i 插入是不会像 vscode 那样所有光标同时输入，其只会在当前光标上输入，只有输入结束按 esc 后会把所有操作应用到其他位置上。包括多光标键位有很多也需要手动绑一下的。由于 `<C-d>` 比较重要，我就绑了 `<C-n>`。
+
+关于 resolve conflict：
+
+我其实还是习惯用 vscode 那种左右下三栏的 merge 界面（之前见过 idea 那种左中右的狗屎三栏感觉真难用）。因此还是打算在 neovim 里复刻这个。简单用 git-conflict.nvim 和 diffview.nvim 写了点。
 
 ## 中文用户专栏
 
