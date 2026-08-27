@@ -224,3 +224,11 @@ image 的性能其实**非常糟糕**：
 - 最大的问题就是为了兼容各种图片格式/用户自定义结构而搞出的 GenericImage trait，很多热点路径都在用 GenericImage 的 `get_pixel` 和 `put_pixel`，这俩玩意内部有 2-3 个越界检查分支，LLVM auto vectorize 看到立刻破防了。图像处理最重要的就是 batch processing，简直是为 simd 天生打造的竞技场，然而 image 除了几个依赖用了 simd feature，自己基本没有 simd 代码，之前[有人想搞的 simd 计划](https://github.com/image-rs/image/issues/2383)现在也没声了。
 - 项目里虽然 rayon 是 default feature，但是几乎没人用，尤其是某 Contributor 还[以「用 rayon 有被 DDoS 耗尽内存的风险」为由，关闭 pic-scale-safe 的 rayon feature](https://github.com/image-rs/image/pull/2639#discussion_r2508356543)，我真的被无语到了。本来 image/rayon 关联 deps/rayon 就是最佳实践，处理可控输入就开内部 rayon，批量处理外部输入就在外部用 rayon 然后关内部的 rayon，一切都是如此自然，我决不能接受这种奇葩理由来故意降低性能的行为。
 - 其他的还有 `&dyn GenericImage` 动态派发无法内联、u8 -> f32 -> u8 等。
+
+### RustCrypto/xxx
+
+RustCrypto 的 AEAD 实现大致也是最泛用的 pure Rust 实现，其他的要么用 aws-lc-rs 要么是 openssl。
+
+RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark 资料，RustCrypto 就是比 aws-lc-rs/openssl 慢几倍。由于我主要用的是 ChaCha20Poly1305，这里就以 ChaCha20Poly1305 为例讲讲。
+
+ChaCha20Poly1305 在 openssl 里的实现是有把 ChaCha20 与 Poly1305 融合的，而 RustCrypto 是分为两步执行。这样不仅有额外的数据拷贝，而且编译器也不好进行 SIMD 优化。

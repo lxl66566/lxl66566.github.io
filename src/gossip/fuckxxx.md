@@ -301,6 +301,7 @@ Nix 语言本身：
 - 之前的版本，Windows opencode 内按 `Ctrl + C` 退出会直接崩掉 Windows Terminal 窗口。
 - **恶性 bug**：opencode 对会话时间戳做截断，导致在特定时间点会话一直无限重试，而对外表现为卡死。([ref](https://t.me/withabsolutex/2807)) 只能说是狗屎
 - revert 有延迟，如果点了 revert 然后快速点回车，就会陷入非常坏的状态，消息已经 revert 掉了但是还是在 sending request。
+- 打开 opencode 后，移动进工作区的文件，无法被 @ 选中。如果我想选中文件，必须关闭 opencode 后重新打开。有点扯。
 
 ## niri 有多难用
 
@@ -664,6 +665,15 @@ bugs:
 - 然后说说 AMD Ryzen Master：
   - 对不同的 CPU 分级，最新版无法在 9000 系之前的 CPU 上运行，并且无法在 ES 上使用。这是赤裸裸的歧视，因为不同版本的 Ryzen Master 的功能并无不同，CPU/BIOS 本身也支持调整参数。
   - 新版 AMD Ryzen Master 虽然支持热重载，配置即时生效，但是 UI 还是很卡，各种反馈都很糟糕。
+
+## Intel, FUCK YOU
+
+虽然上面骂了 AMD 那么多，但是至少 AMD 的硬件还是 YES 的。而 Intel 就更加恶劣了，Intel 连硬件都不放过。
+
+- 臭名昭著的缩缸问题：由于多个内部微码算法逻辑 bug，Intel 13-14 代酷睿 CPU 会给核心施加过高的电压，导致 CPU 寿命大幅下降。
+- AVX512 的阻碍，这个作为经常写 SIMD 的开发者必须讲。Intel 对 AVX512 的支持稀烂，Skylake 系列跑 AVX512 会降频导致性能比不跑 AVX512 还垃圾；桌面端 12-14 代酷睿大小核架构，直接不支持 AVX512。因为 Intel 这些问题，现在很多库在写 SIMD 时，会默认禁用 AVX512，需要手动启用 feature，简直倒反天罡。
+- Arc 显卡狗屎这个也不必多说，游戏帧率比其他卡掉一截。我本人曾今就是 Arc A750 的用户，拿这个卡跑 pytorch 训练模型，满宿舍都是叽叽叽的电流声🤣
+  - 哦对了，这卡还有一些 bug，开了内存 XMP 之后显卡侧面那个 A 的徽标就不会亮，这个也是我问过客服并且亲测过的。
 
 ## steam 有多难用
 

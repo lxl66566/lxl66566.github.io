@@ -177,6 +177,18 @@ snack 的问题也不少。snack 是 lazyvim 作者搞的一个工具包，提�
     map({ "n", "t" }, "<S-Right>", "<cmd>vertical resize +2<cr>")
     ```
   - 至于每次打开/关闭终端时记住调整的高度，~~这里空白太小写不下~~，反正就是让 AI 写点 lua 脚本。
+  - terminal mode 下按 ESC 会变成 normal mode。。。还是需要设一下拦截 ESC。
+    ```lua
+    opts = {
+      terminal = {
+        win = {
+          keys = {
+            term_normal = false, -- 禁用 snacks 终端对 <Esc> 的拦截
+          },
+        },
+      },
+    },
+    ```
 
 多光标一般使用 jake-stewart/multicursor.nvim。进入多光标模式后，默认按 a/i 插入是不会像 vscode 那样所有光标同时输入，其只会在当前光标上输入，只有输入结束按 esc 后会把所有操作应用到其他位置上。包括多光标键位有很多也需要手动绑一下的。由于 `<C-d>` 比较重要，我就绑了 `<C-n>`。
 
