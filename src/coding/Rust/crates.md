@@ -54,8 +54,7 @@ tag:
 | samply | profiler (support flamegraph, [tutorial video](https://www.youtube.com/watch?v=M_EniM_IfnQ&t=210s)) |
 | binrw | 二进制内容的序列化 / 反序列化 [src](https://www.zhihu.com/question/604594191/answer/3121708902) |
 | terminal-menu | 一个 TUI 终端选择器，小巧又好用 |
-| arcstr | `Arc<str>` 的高性能替代，节命神器。注意在多线程下引用计数的性能有问题。 |
-| ustr | 全局去重的 `&'static str` 池。如果你的拷贝次数远大于构造，且不同 str 的构造次数有限，可以使用它，无需关心各种生命周期，clone 起来飞快。 |
+| ustr | 全局去重的 `&'static str` 池，详见 [字符串进阶](#字符串进阶) |
 | flexi_logger | 如果你想在 log crate 下使用一些高级收集特性，可以尝试它，用着非常舒适，而且我想要的功能，rolling、compress、batch 等都是开箱即用。这是一个[我如何使用它的样例](https://github.com/lxl66566/GalgameManager/blob/23a0d0318cc29433de9b0292b353b054731b27fa/src-tauri/src/logging.rs)。 |
 
 [这里](https://blessed.rs/crates)还有一个常用库的列表可以参考。
@@ -84,9 +83,11 @@ tag:
 
 一般我都用 `features = ["derive"]`，使用更方便，但是文档更难找，因为文档默认用的是动态添加成员。clap 就是得多用才能熟练，可以多去网上找找例子。
 
-clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到处传参之苦。带来的问题是写测试变得更加困难，因为不同的测试可能有不同的初始参数，而测试是并发的，没法表达不同的 Cli 状态（而且 LazyLock 的话就是只读了）。所以如果 rust 有一个好用的 context 实践的话就好了。
+之前我用 clap derive 喜欢把 Cli 放到 static LazyLock，可以免去到处传参之苦。结果发现写测试变得非常困难，因为测试是并发的，不同测试看到的 Cli 是一致的，这样没法在测试里表达不同的 Cli 状态。~~所以如果 rust 有一个好用的 context 实践的话就好了。~~
 
-我们可能对命令行有更多自定义的验证，这时候最好 impl Cli 添加自定义的 `fn validate(&self)`，并且在 parse 后调用。不要用 clap 自带的 `value_parser`，[那个是一坨大便](https://t.me/withabsolutex/2367)；或者可以使用某个 serde_inline_default 宏，但是代码这里不好给出，可以私聊我。
+扯远了，说回 clap。我们可能对命令行有更多自定义的验证，简单的场景可以用 [serde_valid](https://github.com/ya7010/serde_valid)，这是个比较有意思的日本人写的库，写起校验条件还是比较符合人体工学。如果你的 validate 非常复杂，或者有各种奇奇怪怪的类型，则可以自行 impl Cli 添加自定义的 `fn validate(&self)`，并且在 parse 后调用一次做校验。不要用 clap 自带的 `value_parser`，[那个是一坨大便](https://t.me/withabsolutex/2367)；或者可以使用某个 serde_inline_default 宏，但是代码这里不好给出，可以私聊我。
+
+其他经验：
 
 - clap 默认不允许 `-` 开头的 value，如果需要，用户可以用 `xxx=-xxx`，开发者可以考虑 [allow_hyphen_values](https://docs.rs/clap/latest/clap/struct.Arg.html#method).
 - clap 的 Vec 默认允许 0 个元素。如果要求用户必须给出内容，可以使用 `#[clap(num_args = 1..)]`。
@@ -102,7 +103,16 @@ clap derive 一般都会将 Cli 实例设为 static LazyLock，可以免去到�
 
 ### 字符串进阶
 
-TODO
+Rust 生态里有着各种各样的字符串，标准库里有一堆，三方库还有一堆。
+
+ustr：全局去重的 'static str。每个字符串只是一个引用；相同的字符串只占用一份空间；可以以极低开销拷贝。只是创建字符串的时候有一次去重对比的开销，不算大。
+ustr 是我最喜欢的三方 str 之一，如果你的拷贝次数远大于构造，且不同 str 的构造次数有限（如果字符串是用户输入，容易让内存无限增长），推荐使用它，无需关心各种生命周期，clone 起来也飞快。
+
+arcstr：`Arc<str>` 的高性能替代（去除了 weak ref 以提升性能）。arcstr 也可以到处 clone 而不用关心生命周期。但是要注意，在多线程下 arcstr 的引用计数的性能损耗还是比较大的。
+
+bstr：非 UTF-8 的字符串。没怎么用，不作评价。
+
+compact_str：在栈上存储 \<= 24 bytes 的字符串。
 
 ### 错误处理
 
@@ -134,7 +144,7 @@ log 方案的好处就是 log crate 非常统一，而且用起来跟其他语�
   - 但是这玩意问题是代码质量比较一般。
 - 如果需要简单、额外功能较少的日志库，也可以使用 Rust 群群友的 spdlog-rs。比起 flexi_logger，spdlog-rs 少了各种特殊 file flush 策略和轮转后日志压缩等功能，但是这些本来也不是一个日志库的核心功能。spdlog-rs 的 [benchmark](https://github.com/SpriteOvO/spdlog-rs/blob/main/spdlog/benches/README.md) 是很好看的。
 
-trace 方案最常见最泛用的就是 tracing 了，跟 tokio 一样，大企业都在用。但是我不太喜欢（tracing 的一些生态），详见前面的[拉黑](#拉黑)。
+trace 方案最常见最泛用的就是 tracing 了，跟 tokio 一样，大企业都在用。但是我不太喜欢（tracing 的一些生态），详见前面的[拉黑](#拉黑)。如果你做网关 / http server，并且确实需要 trace 方案的，可以看看 [fastrace](https://github.com/fast/fastrace)，号称是最快的 trace 方案库，性能方面极具竞争力，生态也尚可（有 tracing 兼容层）。
 
 还有比较邪道的日志库使用 log crate 的生态实现 trace 的效果。例如 [context-logger](https://github.com/alekseysidorov/context-logger)，emmm 不过这个 crate 基本跟手动挡一样，感觉自己写个也不难。
 
@@ -159,7 +169,7 @@ crossbeam-channel 被我拉黑了，大家可以选择 [crossfire](https://githu
 
 ### rayon
 
-rayon 现在已经几乎统治了 rust CPU 负载型的并发。使用 rayon 可以非常方便地写出多线程程序，榨干你的 CPU，并且本身是同步的，无需引用任何异步运行时。
+rayon 现在已经几乎统治了 rust CPU 负载型的并发。使用 rayon 可以非常方便地写出多线程程序，榨干你的 CPU，并且本身是同步的，无需引用任何异步运行时。并且 rayon 本体也是相当轻量。
 
 rayon 内部有一堆线程池 + 一堆奇形怪状的锁和管道，然后通过工作窃取最大化核心利用率，是很有一套的。我之前做过一点 pipeline，想跟 rayon 碰一碰；测出来对于均衡负载的工作性能，我的 pipeline 不弱于 rayon，但是在非均衡负载下 rayon 把我按在地上摩擦。
 
@@ -229,6 +239,6 @@ image 的性能其实**非常糟糕**：
 
 RustCrypto 的 AEAD 实现大致也是最泛用的 pure Rust 实现，其他的要么用 aws-lc-rs 要么是 openssl。
 
-RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark 资料，RustCrypto 就是比 aws-lc-rs/openssl 慢几倍。由于我主要用的是 ChaCha20Poly1305，这里就以 ChaCha20Poly1305 为例讲讲。
+RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark 资料，RustCrypto 就是比 aws-lc-rs/openssl 慢几倍。issue 里也[讨论过这个问题](https://github.com/RustCrypto/AEADs/issues/243)，但是显然 6 年后好像也没什么进展。
 
-ChaCha20Poly1305 在 openssl 里的实现是有把 ChaCha20 与 Poly1305 融合的，而 RustCrypto 是分为两步执行。这样不仅有额外的数据拷贝，而且编译器也不好进行 SIMD 优化。
+由于我主要用的是 ChaCha20Poly1305，这里就以 ChaCha20Poly1305 为例讲讲。ChaCha20Poly1305 在 openssl 里的实现是有把 ChaCha20 与 Poly1305 融合的，而 RustCrypto 是[分为两步执行](https://github.com/RustCrypto/AEADs/issues/74)。这样不仅有额外的数据拷贝，而且编译器也不好进行 SIMD 优化。

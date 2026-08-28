@@ -32,6 +32,14 @@ category:
 
 <!-- |  | <dtlslong></dtlslong> | -->
 
+### 我计划玩
+
+- 超阈限空间 Superliminal
+- 笼中窥梦 Moncage
+- Patrick's parabox
+- 取景器 Viewfinder
+- 茧 COCOON
+
 ## 桌游
 
 1. [自制桌游：UNO 扩展](./uno.md)
