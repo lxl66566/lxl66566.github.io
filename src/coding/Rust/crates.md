@@ -75,7 +75,7 @@ tag:
 | xq | 跟 jq cli 不兼容；纯纯傻逼玩具，性能垃圾，打一个 1G json，jq 和 jaq 峰值内存都用不了 6G，xq 吃了 20G 都打不出来 |
 | tauri_specta | [2.0.0-rc.21](https://docs.rs/tauri-specta/2.0.0-rc.21/tauri_specta/) 的指令是错的，cargo add 会版本冲突；有些第三方可以 serde 的类型没有实现 `derive(specta::Type)`，例如 chrono::*；很多第三方 error 类型也没有实现 serde/Type，没法用。建议只用 ts-rs 做 struct 结构生成，事件还是用 tauri 那一套。 |
 | tauri-plugin-http | 这是它的 [issue 区](https://github.com/tauri-apps/plugins-workspace/issues?q=sort:updated-desc%20is:issue%20is:open%20label:"plugin:%20http")，低级问题太多了，不知道一个 client 为什么能做得这么屎。还容易遇到权限问题。 |
-| wasm-pack | vibe coding 重灾区，全是 emoji 但是关键内容缺失的大便一样的文档；还有[大便一样的代码质量](https://github.com/drager/wasm-pack/issues/1457)和放着根本不理的 issue 区，npm postinstall script 还会卡住。请使用 wasm-bindgen-cli。 |
+| wasm-pack | vibe coding 重灾区，全是 emoji 但是关键内容缺失的大便一样的文档；还有[大便一样的代码质量](https://github.com/wasm-bindgen/wasm-pack/issues/1457)和放着根本不理的 issue 区，npm postinstall script 还会卡住。请使用 wasm-bindgen-cli。 |
 
 ## 三方库心得
 
