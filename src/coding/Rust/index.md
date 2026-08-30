@@ -524,19 +524,20 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 
 [^6]: openssl 不仅编译的工具链垃圾，性能也垃圾，打不过 pure rust 的 rustls，打不过[手写的 simd](https://gist.github.com/lxl66566/073843cce77477ef61be8b9260e0ccf1)。这种垃圾还有什么存在的必要吗？
 
-### [最小化二进制](https://github.com/johnthagen/min-sized-rust)
+### profile
 
-一般这样够用了。~~我虽然敏感，但没有 no-std 那么极端。~~
+我习惯设置为这样。
 
 ```toml
 [profile.release]
-strip = true
-opt-level = "z"
 lto = true
+opt-level = "s"
 panic = "abort"
+strip = true
 ```
 
-或者也可以看看 [cargo-wizard](#扩展)。
+`opt-level = "s"` 是综合考虑性能与二进制大小的等级。一般来说性能还是比二进制大小重要的。如果要最大化性能请设为 3；如果要最小化二进制大小请设为 "z"，并且看看
+[min-sized-rust](https://github.com/johnthagen/min-sized-rust) 文章。
 
 ### 交叉编译
 

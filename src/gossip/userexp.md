@@ -13,6 +13,38 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [zcode](https://zcode.z.ai/cn)
+
+用 zcode 倒不是因为它好用，而是因为它给得太多了：
+
+1. 订阅消耗速度变为 0.66x
+2. 每天有三次闲时任务。虽然这个闲时任务是 oneshot 只能对话一轮，但是没有限制 context，我写个长任务至少薅它 500k token
+3. 周末还送用不完的 flash token
+
+简直是实现了 token 自由。
+
+不过既然写在这里它就不可能只是赞美两句这么简单。zcode 仍然处于发展早期，现在给这么多福利也是为了让我们给使用数据和反馈的。那么我也就得开喷了：
+
+1. 给模型用的终端工具一坨。开个会话问问模型就知道，zcode 给 AI 的终端是“default shell”，这在 Windows 上还是 cmd 而不是 powershell。虽然 powershell 坑比较多，但是总比啥都没有的 cmd 好吧。给模型的系统提示词里也没有终端使用教程，只有一点 cli 规范。
+2. 对于 agent 命令操作，zcode 其实是有沙盒的。但是 AI 不知道，有时候要试错多次，。
+3. 周末赠送的是试用装的 glm 5.3 flash，token 非常多。但是这个试用装不是直接加入你的帐号而是作为单独的一个试用帐号提供，我找了半天都没找到在哪里切换回我自己的帐号。实在是居心险恶。
+4. 内存占用仍然非常感人，开了几个会话（都跑完了，正在跑的只有一个），内存占用已经达到了 4.5GB。
+
+<dated date="20260830"/>
+
+## [lazygit](https://github.com/jesseduffield/lazygit)
+
+由于我[重新入坑了 neovim](../coding/vim.md#设置neovim-二期)，为了使用与 vscode 类似的查看 diff 的功能，因此有一个 git 状态 TUI 查看器还是比较有必要的。生态里基本都是用的 lazygit：lazyvim 本身默认就绑定了 lazygit 的键位，因此我尝试使用 lazygit。但是用起来感觉真的非常不顺手。
+
+- README 前面三个大广告，无语了。
+- 配置居然是 yml，emmmm……没被 yml 毒打过。
+- 在浏览 diff 时，没法使用 `<Ctrl+d>` / `<Ctrl+u>` 半屏翻页。这两个键一次只能滚两行。已经违背了 vim user 的使用习惯了。
+- 我在 neovim 里打开 lazygit 后，有时候想进入编辑状态，需要在当前 neovim 里打开变更的文件，并关闭 lazygit 窗口。直接按 e 会[报错一堆乱码](https://t.me/absolutexsward/384)。然后我配置了 `edit: 'nvim --server "$NVIM" --remote-send "<C-\><C-n>:close<CR>" && nvim --server "$NVIM" --remote "{{filename}}"'` 以后，再按 e，就报错了另一堆乱码，实在是没绷住。
+
+但是 gitui 更是一坨原始大便，所以也是捏着鼻子也得用。
+
+<dated date="20260830"/>
+
 ## [flyline](https://github.com/HalFrgrd/flyline)
 
 一个 bash 的提示 + 补全库。由于 bash 在这块确实很差（而且我用过 ble.sh，那个慢得一批），所以还是有一点尝试欲望的。
@@ -23,6 +55,8 @@ tag:
 
 直接抛弃。
 
+<dated date="20260707"/>
+
 ## [hyperfine](https://github.com/sharkdp/hyperfine)
 
 命令行的 benchmark 比较工具。用来比较单个简单指令还好，当我想要测试一些耗时极长的操作时，这体验简直没法看。
@@ -30,6 +64,8 @@ tag:
 - 首先被 shell 坑了，hyperfine 在 Windows 上一定用 `cmd.exe /C` 启动子进程，导致我 nushell 语法的指令执行失败；而且由于把我 `;` 和之后的内容都当成 args 传到我的程序里，导致出现的报错非常恶心，排查半天。。
 - 默认每个 case 至少跑 10 轮，实在有点慢。
 - Ctrl + C 没法终止 benchmark？什么设计。
+
+<dated date="20260703"/>
 
 ## [sem](https://github.com/Ataraxy-Labs/sem)
 

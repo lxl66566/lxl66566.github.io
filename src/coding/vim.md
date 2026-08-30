@@ -145,21 +145,46 @@ snack 的问题也不少。snack 是 lazyvim 作者搞的一个工具包，提�
 - snack 默认双击 leader（空格）进入文件选择界面，然而这个界面不会展示 `.` 开头的文件和 git ignore 掉的文件。我之前[吃过一次亏](https://t.me/withabsolutex/2692)，所以立刻给 picker.sources.files 加了 hidden=true, ignored=true。
 - 可以通过 snacks.dashboard.preset.header = "" 去掉开屏的大 logo。
 - 侧边栏默认是 snack 的 explorer 而不是 neotree，需要手动设置一下 `vim.g.lazyvim_explorer = "neo-tree"`。explorer 又占位置又不好看，性能也不如 neotree。
-  - neotree 也需要进行一些设置。
+  - neotree 也需要进行一些设置。async 是必须开启的！否则 neotree 还是很慢，而且会卡主 UI 进程。
     ```lua
     opts = {
+      enable_git_status = true,
+      git_status_async = true, -- 务必开启异步
+      git_status_async_options = {
+        batch_size = 1000, -- 每次处理的文件批次
+        batch_delay = 10, -- 批次间隔(ms)，避免阻塞主线程
+        max_lines = 10000, -- git status 最大处理行数
+      },
       close_if_last_window = true, -- 只剩文件树时自动关闭
       filesystem = {
         filtered_items = {
           visible = true,
           hide_dotfiles = false,
           hide_gitignored = false,
-          hide_by_name = { "node_modules" },
-          never_show = { ".DS_Store", "thumbs.db" },
+          hide_by_name = {
+            "node_modules",
+            ".git",
+            "target",
+            "build",
+            "dist",
+            ".cache",
+          },
+          -- 永远不扫描这些目录内部
+          never_show = {
+            ".git",
+            ".DS_Store",
+            "thumbs.db",
+          },
+        },
+
+        -- 优化跟踪当前打开文件
+        follow_current_file = {
+          enabled = true,
+          leave_dirs_open = false,
         },
       },
       window = { width = 25 },
-    }
+    },
     ```
 
 有一些 lazyvim 键位也需要熟悉一下：
@@ -169,6 +194,7 @@ snack 的问题也不少。snack 是 lazyvim 作者搞的一个工具包，提�
 - `<leader>/` 打开全文搜索。lazyvim 的默认实现就是用的 rg，不需要手动去改了。
 - `<C-/>` 打开底部终端。我尝试根据 vscode 习惯设为 ``<C-`>``，然而并不能用，问了下 AI 说是 windows terminal 有一些限制，需要去 `Ctrl + Shift + ,` 编辑一下 windows terminal 的配置，在 action 数组内添加 ``{"keys":"ctrl+`","command":{"action":"sendInput","input":"\u001f"}}`` 即可。之后按下 ``<C-`>`` 就会映射到 `<C-/>` 打开终端，亲测有效。
   - 还有 windows terminal 的字体也需要改下，需要改成 nerd font 的系列才能显示 lazyvim 的图标。在上述 windows terminal 配置文件里，profiles.defaults 里添加 `"font":{"face":"FiraCode Nerd Font Mono"}`。（字体从 [nerd font 官网](https://www.nerdfonts.com/font-downloads)下载即可。我比较习惯 FiraCode，所以下的是 FiraCode Nerd Font）
+  - Ctrl + hjkl 可以移动光标到其他面板，移出光标后默认就会退出 terminal 模式。
   - 调整终端高度，需要添加这些 keymap（默认是 normal 下才可调，显然我在 terminal 下也需要调整高度）。
     ```lua
     map({ "n", "t" }, "<S-Up>", "<cmd>resize +2<cr>")

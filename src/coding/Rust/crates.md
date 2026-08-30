@@ -242,3 +242,5 @@ RustCrypto 的 AEAD 实现大致也是最泛用的 pure Rust 实现，其他的�
 RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark 资料，RustCrypto 就是比 aws-lc-rs/openssl 慢几倍。issue 里也[讨论过这个问题](https://github.com/RustCrypto/AEADs/issues/243)，但是显然 6 年后好像也没什么进展。
 
 由于我主要用的是 ChaCha20Poly1305，这里就以 ChaCha20Poly1305 为例讲讲。ChaCha20Poly1305 在 openssl 里的实现是有把 ChaCha20 与 Poly1305 融合的，而 RustCrypto 是[分为两步执行](https://github.com/RustCrypto/AEADs/issues/74)。这样不仅有额外的数据拷贝，而且编译器也不好进行 SIMD 优化。
+
+如果你正在找 ChaCha20Poly1305 的实现，建议看看 [chacha20poly1305-simd](https://crates.io/crates/chacha20poly1305-simd)。性能表现相当亮眼，并且 pure rust 不需要依赖其他工具链。虽然大部分是 vibe coding，不过也经过了大量 fuzz 验证，可以一试。
