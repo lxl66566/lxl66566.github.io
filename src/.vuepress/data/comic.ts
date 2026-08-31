@@ -1197,6 +1197,12 @@ export default [
   { id: "672691", aScore: 7.9, bScore: 7, info: "#教室 #百合 #自慰復讐", order: 4, bak: "https://telegra.ph/自慰復讐４話-07-30-2" },
   { id: "661519", aScore: 7.8, bScore: 8.7, info: "#精灵 #纯爱 #寿命论", bak: "https://telegra.ph/かたゆでたまご-ハードボイルドよし子-エルフの終活-中国翻訳-DL版-07-29" },
   { id: "667746", aScore: 9.5, bScore: 6.3, info: "#蔚蓝档案 #全彩 #短篇 #loli #图集", bak: "https://telegra.ph/C107-ESSENTIA-藤真拓哉-門主様のおもてなし-ブルーアーカイブ-中国翻訳-07-26" },
-  { id: "673643", aScore: 9.4, bScore: 7.5, info: "#蔚蓝档案 #loli #3P", bak: "https://telegra.ph/Horizontal-World-またのんき-キサ危機-ブルーアーカイブ-中国翻訳-DL版-08-17-5" },
+  { id: "674810", aScore: 7.8, bScore: 8.1, info: "#绝区零 #loli #书包 #纯爱", bak: "https://telegra.ph/C108-サークルフィオレ-えかきびと-ドキドキヤだ-ゼンレスゾーンゼロ-中国翻訳-08-19" },
+  { id: "674066", aScore: 8.9, bScore: 8, info: "#蔚蓝档案 #loli #纯爱", bak: "https://telegra.ph/和泉都-和水ややど-イロハといちゃらぶえっちする本-ブルーアーカイブ-中国翻訳-DL版-08-17" },
+  { id: "673895", aScore: 6.7, bScore: 6.2, info: "#蔚蓝档案 #天気海苔", bak: "https://telegra.ph/C108-SeaweeD-天気海苔-可愛いって言うのやめてください-ブルーアーカイブ-中国翻訳-08-17-2" },
+  { id: "673663", aScore: 7.7, bScore: 8.2, info: "#触手 #loli #超现实", order: 1, bak: "https://telegra.ph/あめじすとダークネス-エロッチ-触手の星の歩き方-1-中国翻訳-DL版-08-17" },
+  { id: "673464", aScore: 8.2, bScore: 7.6, info: "#蔚蓝档案 #3P", bak: "https://telegra.ph/C108-SeaweeD-天気海苔-先生私たちのこと好きすぎじゃん-ブルーアーカイブ-中国翻訳-08-16" },
+  { id: "673023", aScore: 8.5, bScore: 6.6, info: "#蔚蓝档案 #兽耳 #兽尾 #cos #loli", bak: "https://telegra.ph/ミミ好きミミ尽ク-れおねこ-キヴォトスの発情期-ココナの場合-ブルーアーカイブ-中国翻訳-DL版-08-15-8" },
+  { id: "672943", aScore: 8.8, bScore: 7.7, info: "#蔚蓝档案 #loli #露出 #野战 3兽耳 #cos", bak: "https://telegra.ph/AmazingSweets-はるいちご-ニヤニヤ教授とおさんぽする本-ブルーアーカイブ-中国翻訳-DL版-08-15-10" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
