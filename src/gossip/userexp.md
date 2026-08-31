@@ -29,6 +29,7 @@ tag:
 2. 对于 agent 命令操作，zcode 其实是有沙盒的。但是 AI 不知道，有时候要试错多次，。
 3. 周末赠送的是试用装的 glm 5.3 flash，token 非常多。但是这个试用装不是直接加入你的帐号而是作为单独的一个试用帐号提供，我找了半天都没找到在哪里切换回我自己的帐号。实在是居心险恶。
 4. 内存占用仍然非常感人，开了几个会话（都跑完了，正在跑的只有一个），内存占用已经达到了 4.5GB。
+5. 性能很差。点一个历史对话，要过几秒钟才能加载出全部内容。就连退出软件也要等一阵。
 
 <dated date="20260830"/>
 
@@ -40,6 +41,7 @@ tag:
 - 配置居然是 yml，emmmm……没被 yml 毒打过。
 - 在浏览 diff 时，没法使用 `<Ctrl+d>` / `<Ctrl+u>` 半屏翻页。这两个键一次只能滚两行。已经违背了 vim user 的使用习惯了。
 - 我在 neovim 里打开 lazygit 后，有时候想进入编辑状态，需要在当前 neovim 里打开变更的文件，并关闭 lazygit 窗口。直接按 e 会[报错一堆乱码](https://t.me/absolutexsward/384)。然后我配置了 `edit: 'nvim --server "$NVIM" --remote-send "<C-\><C-n>:close<CR>" && nvim --server "$NVIM" --remote "{{filename}}"'` 以后，再按 e，就报错了另一堆乱码，实在是没绷住。
+  - 找了一下原因，这是因为 windows 上 lazygit 强制使用 cmd /c 执行代码导致的。它希望执行的代码包含 `|`，此代码是为 nushell 生成的，应该在 nushell 上执行。这个 bug 已经有很长时间的历史了，在 [#4630](https://github.com/jesseduffield/lazygit/issues/4630)、[#5696](https://github.com/jesseduffield/lazygit/issues/5696) 均有记载。（但是没人修）
 
 但是 gitui 更是一坨原始大便，所以也是捏着鼻子也得用。
 

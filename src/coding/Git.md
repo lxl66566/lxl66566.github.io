@@ -213,6 +213,8 @@ git clone <gitrepo> --filter=tree:0       # Treeless clones
 
 git fetch 其实也可以使用 Blobless fetch，不过需要开启 `extensions.partialClone` 配置。该设置项必须为特定仓库开启，无法在全局启用。
 
+另外，指定 `--depth 1` 还有一些副作用：仓库 config 里的 remote.fetch 会被设为单分支 clone，也就是日后不管你怎么 `fetch --unshallow`（--unshallow 用于同步更早的 commit），其他远端分支的内容也不会被 fetch 到，需要手动修改 `git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"` 才能 fetch 其他分支。因此，一般情况下不推荐使用 `--depth 1`。
+
 ### 忽略文件（夹）
 
 在仓库下新建 `.gitignore`，输入你需要忽略的文件或文件夹，以换行隔开。

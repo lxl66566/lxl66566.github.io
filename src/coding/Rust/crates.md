@@ -16,13 +16,13 @@ tag:
 <!-- prettier-ignore -->
 | 库名       | 简介       |
 | ---------- | ---------- |
-| anyhow | 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型。 |
-| thiserror / snafu | 一般用于 lib target 的错误处理，需要让下游使用者区分错误类型并区别处理。thiserror 比较简单，可以想象成一个快速 from other error 的容器。snafu 更复杂也更全能，完成此工作的同时也提供了易用的 context、whatever、ensure 等方便的控制。 |
-| arc_swap | 高性能的读多写少并发容器 |
+| anyhow | 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 |
+| thiserror / snafu | 一般用于 lib target 的错误处理，需要让下游使用者区分错误类型并区别处理。详见 [错误处理](#错误处理) |
+| arc_swap | 高性能的读多写少并发容器，读过程无锁。详见 [arc_swap](#arc_swap) |
 | tokio | 异步运行时 |
 | serde | 序列化与反序列化 |
 | reqwest[^5]  | 高层次的 Http Client |
-| clap / palc | 命令行工具，后者是为了减小二进制体积而使用的 |
+| clap / palc | 命令行工具，后者是为了减小二进制体积而使用的，详见 [clap](#clap) |
 | tempfile | 创建自动销毁的临时文件/文件夹 |
 | rayon | 易于使用的线程级并发库，针对 CPU 负载任务 |
 | indicatif | progress bar |
@@ -30,7 +30,7 @@ tag:
 | rand / smallrand | 随机数，后者更适合用于 no_std |
 | parking_lot | 一个解锁分配更公平的、没有 poison 的互斥锁 |
 | enum_dispatch | 如果一个 tagged enum 的每个 variant 都实现了某个 trait，那么此 enum 本身可以直接实现这个 trait。（trait 不可携带 type） |
-| walkdir | 递归访问文件系统 |
+| walkdir / ignore | 递归访问文件系统。如果你要处理 gitignore 请用后者 |
 
 [^5]: ~~为避免傻逼 openssl 造成的影响，一般建议起手 `reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "http2", "charset", "system-proxy"] }`。~~ reqwest 从 0.13 起已经将 default ssl 后端切到了 rustls，不需要再手动搞了，好事
 
@@ -76,8 +76,9 @@ tag:
 | tauri_specta | [2.0.0-rc.21](https://docs.rs/tauri-specta/2.0.0-rc.21/tauri_specta/) 的指令是错的，cargo add 会版本冲突；有些第三方可以 serde 的类型没有实现 `derive(specta::Type)`，例如 chrono::*；很多第三方 error 类型也没有实现 serde/Type，没法用。建议只用 ts-rs 做 struct 结构生成，事件还是用 tauri 那一套。 |
 | tauri-plugin-http | 这是它的 [issue 区](https://github.com/tauri-apps/plugins-workspace/issues?q=sort:updated-desc%20is:issue%20is:open%20label:"plugin:%20http")，低级问题太多了，不知道一个 client 为什么能做得这么屎。还容易遇到权限问题。 |
 | wasm-pack | vibe coding 重灾区，全是 emoji 但是关键内容缺失的大便一样的文档；还有[大便一样的代码质量](https://github.com/wasm-bindgen/wasm-pack/issues/1457)和放着根本不理的 issue 区，npm postinstall script 还会卡住。请使用 wasm-bindgen-cli。 |
+| faster-hex | 打不过 hex-simd。详见 [#hex](#hex) |
 
-## 三方库心得
+## 细说
 
 ### clap
 
@@ -120,7 +121,7 @@ rust 界流传着 _bin 用 anyhow，lib 用 thiserror_ 的谚语。它们两个�
 
 - anyhow 可以将所有错误归为一类往外抛，并且还有额外信息（context）支持。
   - anyhow 比较“重”，会增大你的二进制大小。如果你不需要用它的一些额外特性（例如 context），也可以 `type Result<T> = std::result::Result<T, Box<dyn std::error::Error + Send + Sync>>;`。
-- thiserror 比较轻量，用来细分自定义的 error 类型，可以自动 derive From another error。
+- thiserror 比较轻量，用来细分自定义的 error 类型，可以理解为 derive From another error 的容器。
   - 不能在两个错误类型中同时 from 同一个 Error。如果确实需要，可能要手动再分 Enum 作为 suberror。
 
 而 snafu 是一个很有野心的挑战者，它可以同时适应类似 anyhow 抛模糊错误和 thiserror 抛精确错误的场景。但是 snafu 也是有缺点的：
@@ -136,6 +137,8 @@ rust 界流传着 _bin 用 anyhow，lib 用 thiserror_ 的谚语。它们两个�
 
 说日志的话总共也就两套方案，一种是传统的 log 方案，另一种是 trace 方案。trace 方案基本上算是给网关和 server 用的，像我这种写垃圾小玩具的肯定是接触不到了。
 
+#### log 方案
+
 log 方案的好处就是 log crate 非常统一，而且用起来跟其他语言很像，比较简单。但是 log 只提供底层 API，而如何展示就有很多种选择了。
 
 - 对于一般的小玩具，基本就只是支持一下颜色和时间戳输出。我之前一直在用 pretty_env_logger (based on env_logger)，不过由于 env_logger 引入了 regex，这玩意对编译后二进制大小有较大影响，所以我也在寻找更符合需求的替代品。
@@ -143,6 +146,9 @@ log 方案的好处就是 log crate 非常统一，而且用起来跟其他语�
 - 对于更大一点的玩具，需要更多功能的，flexi_logger 用起来是手感较为舒适的。
   - 但是这玩意问题是代码质量比较一般。
 - 如果需要简单、额外功能较少的日志库，也可以使用 Rust 群群友的 spdlog-rs。比起 flexi_logger，spdlog-rs 少了各种特殊 file flush 策略和轮转后日志压缩等功能，但是这些本来也不是一个日志库的核心功能。spdlog-rs 的 [benchmark](https://github.com/SpriteOvO/spdlog-rs/blob/main/spdlog/benches/README.md) 是很好看的。
+  - 一定要记得开 `flexible-string` feature！这个 feature 还能进一步优化性能，省掉每次打日志的堆分配开销。而且这个 feature 其实藏得比较隐蔽，它并不在 Cargo.toml 的 features 里，但是可以开。
+
+#### trace 方案
 
 trace 方案最常见最泛用的就是 tracing 了，跟 tokio 一样，大企业都在用。但是我不太喜欢（tracing 的一些生态），详见前面的[拉黑](#拉黑)。如果你做网关 / http server，并且确实需要 trace 方案的，可以看看 [fastrace](https://github.com/fast/fastrace)，号称是最快的 trace 方案库，性能方面极具竞争力，生态也尚可（有 tracing 兼容层）。
 
@@ -199,7 +205,7 @@ process_pb.finish_with_message("Processing complete!");
 
 如果你写 SQL 比较熟练，不需 ORM，那么 sqlx 就非常适合你。尤其是在当前 Rust 还没有任何特别好用的 ORM 的环境下，sqlx 更是一个不差的选择。
 
-说到 sqlx 就不得不提，它是强制类型的，因此在编译时就需要获取数据库表信息，例如 sqlite 情况下用户需要为其提供一个模板 sqlite。但是（假设用户没有装 sqlite cli）创建一个 sqlite 本身就需要 sqlx，就遇到了鸡/蛋问题。而且修改 schema.sql 也有可能忘记重新构建模板 sqlite。这时候就要用一个 build.rs 在 schema 初始化或改变时自动更新模板 sqlite。这个 build.rs 我写在了[这里](https://gist.github.com/lxl66566/85de8095cd6644396a901440af2e10f8)。
+说到 sqlx 就不得不提，它是强制类型的，因此在编译时就需要获取数据库表信息，例如使用 sqlite 时用户需要为其提供一个模板 sqlite db 文件。但是（假设用户没有装 sqlite cli）创建一个 sqlite 本身就需要 sqlx，就遇到了鸡/蛋问题。而且修改 schema.sql 也有可能忘记重新构建模板 sqlite。这时候就要用一个 build.rs 在 schema 初始化或改变时自动更新模板 sqlite。这个 build.rs 我写在了[这里](https://gist.github.com/lxl66566/85de8095cd6644396a901440af2e10f8)。官方也有提供 sqlx-cli 来做这件事，如果你不喜欢滥用 build.rs 也可以用 sqlx-cli。
 
 ### tauri
 
@@ -222,6 +228,21 @@ process_pb.finish_with_message("Processing complete!");
       }
   }
   ```
+- tauri 启动速度比较慢，也没啥能抠的性能优化（webview 已经完蛋了），如果你配置比较大，可以用 `window.__INITIAL_CONFIG__` 抠一次 IPC：
+  ```rs
+  let config_json = "...";
+  let main_window =
+      WebviewWindowBuilder::new(app, "main", WebviewUrl::App("index.html".into()))
+          .title("GalgameManager")
+          .inner_size(800.0, 600.0)
+          .resizable(true)
+          .center();
+          .drag_and_drop(true)
+          .user_agent("github:lxl66566/GalgameManager")
+          .initialization_script(format!("window.__INITIAL_CONFIG__ = {config_json};"))
+          .build()?;
+  // use in ts side: globalThis.__INITIAL_CONFIG__
+  ```
 
 ### image
 
@@ -241,6 +262,20 @@ RustCrypto 的 AEAD 实现大致也是最泛用的 pure Rust 实现，其他的�
 
 RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark 资料，RustCrypto 就是比 aws-lc-rs/openssl 慢几倍。issue 里也[讨论过这个问题](https://github.com/RustCrypto/AEADs/issues/243)，但是显然 6 年后好像也没什么进展。
 
-由于我主要用的是 ChaCha20Poly1305，这里就以 ChaCha20Poly1305 为例讲讲。ChaCha20Poly1305 在 openssl 里的实现是有把 ChaCha20 与 Poly1305 融合的，而 RustCrypto 是[分为两步执行](https://github.com/RustCrypto/AEADs/issues/74)。这样不仅有额外的数据拷贝，而且编译器也不好进行 SIMD 优化。
+由于我主要用的是 ChaCha20Poly1305 / AES-256，这里以 ChaCha20Poly1305 为例讲讲。ChaCha20Poly1305 在 openssl 里的实现是有把 ChaCha20 与 Poly1305 融合的，而 RustCrypto 是[分为两步执行](https://github.com/RustCrypto/AEADs/issues/74)。这样不仅有额外的数据拷贝，而且编译器也不好进行自动向量化。
 
-如果你正在找 ChaCha20Poly1305 的实现，建议看看 [chacha20poly1305-simd](https://crates.io/crates/chacha20poly1305-simd)。性能表现相当亮眼，并且 pure rust 不需要依赖其他工具链。虽然大部分是 vibe coding，不过也经过了大量 fuzz 验证，可以一试。
+如果你正在找 ChaCha20Poly1305 的实现，建议看看 [chacha20poly1305-simd](https://crates.io/crates/chacha20poly1305-simd)。性能表现不差，并且 pure rust 不依赖其他工具链。虽然大部分是 vibe coding，不过也经过了 fuzz 验证，可以一试。
+
+### Hashes
+
+虽然前面批了一顿 RustCrypto，但是在 [hashes](https://github.com/RustCrypto/hashes) 上粗看了一下，RustCrypto 的实现也没什么可挑剔的。常用的 hash 算法，比如 sha2，基本都已经顶到指令集的性能上限。而且 RustCrypto 支持的指令集还多，loongarch 都有，实在是开了眼界。
+
+### hex
+
+hex 编解码是 simd 的竞技场。faster-hex 和 hex-simd 是其中的两个佼佼者；faster-hex 的下载量比较多，许多知名库都依赖 faster-hex，但是我深入看了下，感觉代码质量配不上它的下载量。
+
+首先 faster-hex 完全没有 NEON decode，aarch64 上解码 hex 只能走标量实现；其次是 faster-hex 为了保证「如果 hex invalid 则不会往 target 里写东西」，使用的是两遍扫描：第一遍是 `hex_check_with_case` 扫一遍输入做校验，然后再 `hex_decode_unchecked` 扫一遍做解码。所有架构、所有输入长度都是两次遍历。这不就是狗屎实现吗，脏数据要不要写入 target 当然是调用方来决定，faster-hex 直接全部 check 一刀切然后性能减半（hex simd 已经是内存带宽瓶颈了），我觉得不是用户希望看到的实现。
+
+再说说 hex-simd。首先 hex-simd 只是 Nugine/simd 里的一部分，这个 repo 有一个共用的底层 vsimd 实现，把 unsafe simd 抽象藏到 trait 后（可以简单理解为手搓的一套 portable-simd），代码极为优雅。
+
+总之，faster-hex 的 crate 大小、性能、代码质量等全方位弱于 hex-simd，**不推荐使用 faster-hex**。
