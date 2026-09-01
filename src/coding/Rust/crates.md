@@ -69,7 +69,7 @@ tag:
 | teloxide | Telegram bot 库，但是没有文档，只有一点最简单的 example；遇到各种问题没有解决方法；API 经常 break 并且设计得很丑 |
 | rusqlite | 绑定了 openssl！不要用它，要玩 sqlite 请左转 [sqlx](#sqlx) |
 | listeners | 有严重的性能问题 [ref](https://github.com/GyulyVGC/listeners/issues/25) |
-| crossbeam-channel | 该暴露的方法不暴露，该设计 trait 时不设计 trait，该实现的功能没有实现，性能还不如 crossfire 一根毛([ref](https://github.com/frostyplanet/crossfire-rs/wiki/benchmark-v2.1.0-vs-v2.0.26-2025‐09‐21))；PR 卡着不推；[miri 测试不兼容](https://github.com/crossbeam-rs/crossbeam/issues/1181) |
+| crossbeam-channel | 该暴露的方法不暴露，该设计 trait 时不设计 trait，该实现的功能没有实现，性能还不如 crossfire ([ref](https://github.com/frostyplanet/crossfire-rs/wiki/benchmark-v2.1.0-vs-v2.0.26-2025‐09‐21))；PR 卡着不推；[miri 测试不兼容](https://github.com/crossbeam-rs/crossbeam/issues/1181) |
 | pingora | issue 爱理不理，trait 设计糟糕，大公司开源但不是真正意义上的开源 |
 | tracing 系 | 性能不如 [fasttrace](https://github.com/fast/fastrace) 一根，tracing-appender 代码写得一坨狗屎，众望所归的 feat pr 都喂到嘴边了就是不合；如果你对 tracing 本身架构没有足够了解，很容易被干到死锁 ([issue](https://github.com/tokio-rs/tracing/issues/1565))，并且这是文档里没有指明的 |
 | xq | 跟 jq cli 不兼容；纯纯傻逼玩具，性能垃圾，打一个 1G json，jq 和 jaq 峰值内存都用不了 6G，xq 吃了 20G 都打不出来 |
@@ -160,6 +160,16 @@ crossbeam-channel 被我拉黑了，大家可以选择 [crossfire](https://githu
 
 [^fkkanal]: _kanal 不支持 poll 形式，也不 cancel safe。_ —— [Sherlock Holo](https://luoxu.archlinuxcn.org/#g=2261788729&q=kanal+不支持+poll+形式)
 
+### queue
+
+channel 和 queue 还是有点区别的，一般来说 channel 底层是一个 concurrent queue，只是在外层包装了线程唤醒、select 等逻辑。
+
+crossbeam-queue 和 concurrent-queue 是并发 queue 常用的两个实现，并且它们原本就是一家（最初作者都是 stjepang，后来神秘隐退）。社区也有[让这两个 queue 合并为一](https://github.com/smol-rs/concurrent-queue/issues/50)的声音。
+
+但是论性能，concurrent-queue 还是打不过 crossbeam-queue 的。比如 crossbeam-queue 从很久（2018-2019）以前就引入了 crossbeam-utils::Backoff，并且在 ArrayQueue 和 SegQueue 一开始实现就采用了 Backoff 作为 CAS fail / slot stamp/block 路径，但是 concurrent-queue 并没有使用 Backoff，而是直接 busy_wait/yield_now。我这里[实测](https://github.com/smol-rs/concurrent-queue/issues/81)在中高度争用的情况下有 Backoff 的性能可以比无 Backoff 要高出 100% 以上。也难怪 concurrent-queue 没什么人用了。
+
+而且 crossbeam-queue 还有一些 concurrent-queue 没有的小优化，比如 get_unchecked 去掉无用的越界校验、mem::needs_drop 减少 drop 操作等。因此一般不推荐使用 concurrent-queue。
+
 ### serde
 
 除了直接 derive 外，serde 一般用得多的技巧还有：
@@ -199,7 +209,7 @@ files
 process_pb.finish_with_message("Processing complete!");
 ```
 
-- 对于数量巨大、每个任务开销较小的任务，我们可能希望在一个 worker 里一次处理多个任务，避免过多的上下文切换，并且内部 for 循环还可以自动 simd 提升性能。rayon 提供了 [par_chunks](https://docs.rs/rayon/latest/rayon/slice/trait.ParallelSlice.html#method.par_chunks) 来做到这一点。
+- 对于数量巨大、每个任务开销较小的任务，我们可能希望在一个 worker 里一次处理多个任务，避免过多的上下文切换，并且内部 for 循环还可以自动向量化以提升性能。rayon 提供了 [par_chunks](https://docs.rs/rayon/latest/rayon/slice/trait.ParallelSlice.html#method.par_chunks) 来做到这一点。
 
 ### sqlx
 
@@ -256,7 +266,7 @@ image 的性能其实**非常糟糕**：
 - 项目里虽然 rayon 是 default feature，但是几乎没人用，尤其是某 Contributor 还[以「用 rayon 有被 DDoS 耗尽内存的风险」为由，关闭 pic-scale-safe 的 rayon feature](https://github.com/image-rs/image/pull/2639#discussion_r2508356543)，我真的被无语到了。本来 image/rayon 关联 deps/rayon 就是最佳实践，处理可控输入就开内部 rayon，批量处理外部输入就在外部用 rayon 然后关内部的 rayon，一切都是如此自然，我决不能接受这种奇葩理由来故意降低性能的行为。
 - 其他的还有 `&dyn GenericImage` 动态派发无法内联、u8 -> f32 -> u8 等。
 
-### RustCrypto/xxx
+### RustCrypto/AEAD 与加解密
 
 RustCrypto 的 AEAD 实现大致也是最泛用的 pure Rust 实现，其他的要么用 aws-lc-rs 要么是 openssl。
 

@@ -142,7 +142,7 @@ export default [
   { id: "IPX-385", aScore: 7.8, bScore: 3 },
   { id: "WAAA-087", aScore: 6.8, bScore: 4 },
   { id: "SSIS-306", aScore: 7.5, bScore: 3, u: true },
-  { id: "CAWD-041", aScore: 4.6, bScore: 5.8 },
+  { id: "CAWD-041", aScore: 5.8, bScore: 5.8 },
   { id: "MIDV-484", aScore: 8.3, bScore: 2 },
   { id: "GANA-2652", aScore: 7.8, bScore: 2.3 },
   { id: "IPX-699", aScore: 4, bScore: 6.1, u: true },
@@ -201,7 +201,7 @@ export default [
   { id: "dasd-321", aScore: 4.3, bScore: 9.5, u: true, name: "#拘束" },
   { id: "id-015-10", aScore: 5.5, bScore: 8.1, u: true, name: "#cosplay" },
   { id: "abp-588", aScore: 5.2, bScore: 9, u: true, name: "#狂暴" },
-  { id: "ambi-131", aScore: 8.5, bScore: 7.7, u: true, name: "鬼畜父の性玩具 彼氏との仲を引き裂かれた制服美少女 早美れむ" },
+  { id: "ambi-131", aScore: 8.1, bScore: 7.2, u: true, name: "鬼畜父の性玩具 彼氏との仲を引き裂かれた制服美少女 早美れむ" },
   { id: "ssni-954", aScore: 7.3, bScore: 8.7, name: "手塩にかけた娘が俺の子じゃないと判明したので 羽咲みはる #父女" },
   { id: "fsdss-281", aScore: 8.6, bScore: 8.3, u: true, name: "昏●ドラッグを飲まされ裸で助けを求めてきた社長の娘を追撃レ×プ 桃尻かなめ" },
   { id: "midv-238", aScore: 8.8, bScore: 6.8, u: true, name: "いつも銭湯通いの巨乳隣人に風呂を貸したらGカップに発育した身体を覗き見してしまい濡れ髪のままビチョ濡れでヤリまくった！！ 水卜さくら" },
@@ -579,4 +579,5 @@ export default [
   { id: "HMN-635", aScore: 4.4, bScore: 5.3, name: "家出少女を拾って、ワンルーム合法共同生活 ノーハンド中出しSEXで触らないように抵抗したら、家出少女の痴女化がエスカレート 鈴の家りん", say: "纯爱片" },
   { id: "CRNX-217", aScore: 6.8, bScore: 6.6, name: "【4K】嫌悪しか感じないご主人様に泣きたくなるほどイカされて… 永野鈴", say: "剧本感比较强。不过男优演得还挺好的。女优身材比较不错，契合白丝。" },
   { id: "PRED-375", aScore: 8, bScore: 9.5, name: "出張先で何度も、何度も中出しされて…絶倫上司のチ○ポの虜になってしまったワタシ（新卒女子社員）。 楪カレン", say: "早期作品，一个字：烧。后入戏份很多，剧情也还行。" },
+  { id: "MUDR-213", aScore: 9, bScore: 7, name: "親に捨てられたから、仕方なく身体売ってゲームする。 エッチをするだけで、好きな時にゲームも出来て、課金もできる。ご飯もベッドも付いてくる！ゲーマー女子は最高の環境を手に入れた！ 皆瀬あかり", say: "不说话很神秘。但是有点感觉。" },
 ] as AvItemType[];

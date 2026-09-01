@@ -42,6 +42,7 @@ tag:
 - 在浏览 diff 时，没法使用 `<Ctrl+d>` / `<Ctrl+u>` 半屏翻页。这两个键一次只能滚两行。已经违背了 vim user 的使用习惯了。
 - 我在 neovim 里打开 lazygit 后，有时候想进入编辑状态，需要在当前 neovim 里打开变更的文件，并关闭 lazygit 窗口。直接按 e 会[报错一堆乱码](https://t.me/absolutexsward/384)。然后我配置了 `edit: 'nvim --server "$NVIM" --remote-send "<C-\><C-n>:close<CR>" && nvim --server "$NVIM" --remote "{{filename}}"'` 以后，再按 e，就报错了另一堆乱码，实在是没绷住。
   - 找了一下原因，这是因为 windows 上 lazygit 强制使用 cmd /c 执行代码导致的。它希望执行的代码包含 `|`，此代码是为 nushell 生成的，应该在 nushell 上执行。这个 bug 已经有很长时间的历史了，在 [#4630](https://github.com/jesseduffield/lazygit/issues/4630)、[#5696](https://github.com/jesseduffield/lazygit/issues/5696) 均有记载。（但是没人修）
+  - 可以参考 [#3467](https://github.com/jesseduffield/lazygit/issues/3467) 的绕过方法。
 
 但是 gitui 更是一坨原始大便，所以也是捏着鼻子也得用。
 
