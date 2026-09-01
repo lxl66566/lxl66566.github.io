@@ -25,3 +25,4 @@ tag:
 4. [为什么你不该选择移动运营商](https://blog.csdn.net/liulilittle/article/details/148267930)
 5. [杀死那只鹦鹉 —— 「白话文」讲解一种探测 XTLS VLESS REALITY 的手段](https://blog.skk.moe/post/to-kill-a-parrot-detecting-xtls-vless-reality-server/)
 6. [浅谈在代理环境中的 DNS 解析行为](https://blog.skk.moe/post/what-happend-to-dns-in-proxy/)
+7. [Internet centralization and the original sin of NAT](https://dreamstation.systems/personal/ntppost.html), [bak](https://telegra.ph/jHUT2H75KEUi60sxJorTnw-08-31)

@@ -168,7 +168,9 @@ crossbeam-queue 和 concurrent-queue 是并发 queue 常用的两个实现，并
 
 但是论性能，concurrent-queue 还是打不过 crossbeam-queue 的。比如 crossbeam-queue 从很久（2018-2019）以前就引入了 crossbeam-utils::Backoff，并且在 ArrayQueue 和 SegQueue 一开始实现就采用了 Backoff 作为 CAS fail / slot stamp/block 路径，但是 concurrent-queue 并没有使用 Backoff，而是直接 busy_wait/yield_now。我这里[实测](https://github.com/smol-rs/concurrent-queue/issues/81)在中高度争用的情况下有 Backoff 的性能可以比无 Backoff 要高出 100% 以上。也难怪 concurrent-queue 没什么人用了。
 
-而且 crossbeam-queue 还有一些 concurrent-queue 没有的小优化，比如 get_unchecked 去掉无用的越界校验、mem::needs_drop 减少 drop 操作等。因此一般不推荐使用 concurrent-queue。
+而且 crossbeam-queue 还有一些 concurrent-queue 没有的小优化，比如 get_unchecked 去掉无用的越界校验、mem::needs_drop 减少 drop 操作等。因此**一般不推荐使用 concurrent-queue**。
+
+另外，这类 concurrent queue 已经明确说明，从设计上就是为了跑多核的，在单核嵌入式处理器或 RTOS 上运行时，都有一些[性能问题](https://github.com/crossbeam-rs/crossbeam/issues/821)，严重的还可能死锁 [ref1](https://github.com/esp-rs/esp-idf-svc/issues/630) [ref2](https://www.zyma.me/post/crossbeam-arrayqueue-deadlock/)，使用的时候需要特别注意。
 
 ### serde
 
