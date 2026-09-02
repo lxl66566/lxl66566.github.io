@@ -163,16 +163,6 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 
 [官网下载地址](https://bbs.binmt.cc/forum-2-1.html) | [酷安下载地址](https://www.coolapk.com/apk/bin.mt.plus) | [私链](https://wwp.lanzout.com/i9frh06qke0h) | 可在国内应用商店下载
 
-### Fake Location
-
-虚拟定位软件，免 ROOT，大学模拟跑步神器
-
-::: warning
-请不要从 Google Play 安装。其对中国地区不可用。
-:::
-
-[官方项目地址](https://github.com/Lerist/FakeLocation) | [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
-
 ### Adobe Scan
 
 扫描文档并转为 pdf。免费版就够用了。
@@ -737,6 +727,20 @@ windows 设置小工具，集成了一些高级功能；但是被 [Windows 11 �
 为什么不再推荐：
 
 因为[作者被抓](https://mp.weixin.qq.com/s/bcTbqBQA1T0YoRwq76xcWQ)，软件删库了。
+
+### Fake Location
+
+虚拟定位软件，免 ROOT，大学模拟跑步神器
+
+::: error
+
+[FakeLocation 1.5.2 有严重的远程执行后门恶意代码](https://t.me/absolutexsresource/104)，不建议使用。
+
+请不要从 Google Play 安装。其对中国地区不可用。
+
+:::
+
+[官方项目地址](https://github.com/Lerist/FakeLocation) | [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 
 ## external
 
