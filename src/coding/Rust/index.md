@@ -513,6 +513,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-depgraph](https://github.com/jplatte/cargo-depgraph) | 看依赖关系图。这一个工具的依赖有点多，不能直接出图，感觉不太好用。 |
 | [cargo-semver-checks](https://github.com/obi1kenobi/cargo-semver-checks) | 检查 API 是否遵循 semver 规范 |
 | [cargo-feat](https://github.com/vunholy/cargo-feat) | 在命令行直接看 crate 的 feature。这个库虽然是 vibe coding，不过质量也不算差。 |
+| [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz) | 模糊测试工具，详见 [fuzz](./crates.md#fuzz) |
 
 ## 三方库评价
 
@@ -602,12 +603,6 @@ fn bench_sha256(c: &mut Criterion) {...}
 criterion_group!(benches, bench_md5, bench_sha256);
 criterion_main!(benches);
 ```
-
-### allocator
-
-rust 的默认 allocator 并不好用([ref](https://news.ycombinator.com/item?id=38459571))；只需要 3 行代码更换一个 global allocator 即可获得免费的性能提升。
-
-之前比较广泛使用的 allocator 是 jemalloc，但是现在它已经[似了](https://github.com/jemalloc/jemalloc)。目前最热的是 mimalloc，可以看看它的[性能测试](https://news.ycombinator.com/item?id=38459571)，建议使用。
 
 ## 用户界面
 

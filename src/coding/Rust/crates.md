@@ -293,3 +293,24 @@ hex 编解码是 simd 的竞技场。faster-hex 和 hex-simd 是其中的两个�
 再说说 hex-simd。首先 hex-simd 只是 Nugine/simd 里的一部分，这个 repo 有一个共用的底层 vsimd 实现，把 unsafe simd 抽象藏到 trait 后（可以简单理解为手搓的一套 portable-simd），代码极为优雅。
 
 总之，faster-hex 的 crate 大小、性能、代码质量等全方位弱于 hex-simd，**不推荐使用 faster-hex**。
+
+### allocator
+
+rust 的默认 allocator 并不好用([ref](https://news.ycombinator.com/item?id=38459571))；只需要 3 行代码更换一个 global allocator 即可获得免费的性能提升。
+
+之前比较广泛使用的 allocator 是 [jemalloc](https://github.com/jemalloc/jemalloc)，之前还假死了一段时间，但是现在又活了。jemalloc 是经过了大量实战测试以及生产环境的验证，可以算是知名度最高、使用最广泛的 allocator 了。jemalloc 比较适合长时间运行的 server program。jemalloc 的缺点是不支持 Windows。
+
+mimalloc 是一个有力竞争者，可以看看它的[性能测试](https://news.ycombinator.com/item?id=38459571)。mimalloc 支持 Windows；但是我曾今遇到过一个[严重的问题（所有使用了 mimalloc 的软件在 Windows11 24H2 上稳定崩溃）](https://t.me/withabsolutex/2730)，因此对其并无好感。
+
+### fuzz
+
+fuzz 本质上是生成一堆随机输入，然后测试自己的程序在该输入下是否 panic、coredump，或者跟权威处理过程做对拍，验证输出是否相同。
+
+最流行的 fuzz 工具就是 [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz) 了（内核为 libFuzzer），AI 写得有模有样；虽然它的 README 说不支持 Windows，但是[文档里写了支持](https://rust-fuzz.github.io/book/cargo-fuzz/windows/setup.html)，并且我实测过了确实是支持的。
+
+除此之外，还有个 star 数比较多的 fuzz 工具是 [afl.rs](https://github.com/rust-fuzz/afl.rs)，我也尝试了一下，不过体验相当差劲。
+
+- afl 本身文档比较糊，难以理解，也没法一键看出跟 cargo-fuzz 的优劣。
+- 想要运行 afl 测试需要让你的 target 链接上 afl-compiler-rt.o。NixOS 包管理的 afl 版本不匹配，用不了；而 `cargo afl config --build` 默认会从 AFL++ C 源码里编出 `afl-compiler-rt.o`，但 NixOS 上它根本找不到 glibc 头文件，编不出来，只能手编。
+- 还有一些隐蔽的坑，要不是 AI 的话我早放弃了。
+- afl 在性能方面也没有 libFuzzer 强。
