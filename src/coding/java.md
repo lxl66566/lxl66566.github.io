@@ -50,9 +50,21 @@ scoop install liberica8-full-jdk
 
 ### IDE
 
-::: tabs
+:::: tabs
 
-@tab vscode
+@tab vscode with IDEA
+
+20260903，JetBrains 宣布推出 _Java and Kotlin by IntelliJ IDEA_ LSP，可以在 vscode 上使用。
+
+该插件直接杀死了比赛。从此你不再需要各种调优、群魔乱舞的插件，只需要一个 _Java and Kotlin by IntelliJ IDEA_ 即可畅游 Java 项目，享受极速跳转。
+
+@tab vscode with JDT LS
+
+::: warning
+
+202609 之后，不再推荐使用 _Language Support for Java(TM) by Red Hat_。
+
+:::
 
 如果只是写一些小项目，比如跑跑学校的课程，并且不需要多人协作，vscode 是完全够用的。
 
@@ -382,7 +394,7 @@ idea 有社区版，这个是免费的，不需要破解，理论上也够用，
 
 如果 idea 以管理员运行，则插件也会获得管理员权限，而插件的行为不是我们能控制的，所以最好不要以管理员运行 idea。
 
-:::
+::::
 
 ### gradle
 

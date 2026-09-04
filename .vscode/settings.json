@@ -52,5 +52,9 @@
   },
   "cursor.aipreview.enabled": true,
   "cursor.cpp.disabledLanguages": ["markdown", "html", "vue"],
-  "git.enabled": true
+  "git.enabled": true,
+
+  "markdownImagePaste.enabled": true,
+  "markdownImagePaste.imageDirectory": "src/.vuepress/public/images",
+  "markdownImagePaste.relativePathPrefix": "src"
 }
