@@ -174,6 +174,8 @@ crossbeam-queue 和 concurrent-queue 是并发 queue 常用的两个实现，并
 
 另外，这类 concurrent queue 已经明确说明，从设计上就是为了跑多核的，在单核嵌入式处理器或 RTOS 上运行时，都有一些[性能问题](https://github.com/crossbeam-rs/crossbeam/issues/821)，严重的还可能死锁 [ref1](https://github.com/esp-rs/esp-idf-svc/issues/630) [ref2](https://www.zyma.me/post/crossbeam-arrayqueue-deadlock/)，使用的时候需要特别注意。
 
+PS. concurrent-queue 在线程数少、低竞争情况下性能较好；可以尝试下 [youpipe-concurrent-queue](https://crates.io/crates/youpipe-concurrent-queue)，这是为我的 youpipe 项目 fork 的版本，做了一些性能优化。
+
 ### serde
 
 除了直接 derive 外，serde 一般用得多的技巧还有：
@@ -314,3 +316,35 @@ fuzz 本质上是生成一堆随机输入，然后测试自己的程序在该输
 - 想要运行 afl 测试需要让你的 target 链接上 afl-compiler-rt.o。NixOS 包管理的 afl 版本不匹配，用不了；而 `cargo afl config --build` 默认会从 AFL++ C 源码里编出 `afl-compiler-rt.o`，但 NixOS 上它根本找不到 glibc 头文件，编不出来，只能手编。
 - 还有一些隐蔽的坑，要不是 AI 的话我早放弃了。
 - afl 在性能方面也没有 libFuzzer 强。
+
+### 音频(opus)
+
+之前我看过一个 pure rust 实现的 opus 编解码库 [opus-rs](https://github.com/restsend/opus-rs)。本来音频处理就是天坑，opus 更是音频处理中的一座山巅，因此个位数时点了个 star 支持下。
+
+但是后续的代码 review 就暴露出了一堆问题。项目 README 虽然声称 production ready 但是绝不能在 production 里用。最大问题是 SILK 编码根本不支持立体声，当前实现里立体声输入被分解为 mid=(l+r)/2，直接压成单声道。另外帧长 40ms 的立体声 SILK 编码会直接 panic，因为 FixedVec 容量按最大单帧 20ms@16k 设计，没有考虑 40/60ms 多帧包。
+
+还有一个问题，由于~~太过专业了我看不懂~~，这里直接贴出 AI 结论（已通过另一 AI reviewer 复现验证）：
+
+```text :collapsed-lines
+SILK 立体声编码在所有采样率下都有实质缺陷：
+
+(a) 24/48 kHz（Hybrid 路径）：模式选择下 24k/48k 的 SILK-only 一律转为 Hybrid（带宽静态为 SWB/FB，`lib.rs:519-524`），Hybrid 分支把交织立体声直接喂给单声道重采样器：48k 走 `silk_resampler_down_1_3`（`lib.rs:696-704`），24k 走 `down2_3`（`lib.rs:705-714`），重采样器状态是单声道状态（`resampler.rs:11-14, 522, 568`），且 48k 路径实际只消费交织流的前半段（L 半帧‖R 半帧拼接，L/R 边界处滤波器振铃）。编码出的 "mid" 是被切碎的 L‖R 信号。C 的实现是每声道独立重采样状态，且在重采样后做真正的 L/R→M/S 转换（`stereo_LR_to_MS`）。
+
+(b) ≤16 kHz：mid/side 拆分后 side 被完全丢弃（`lib.rs:679-695` 写入 `silk_enc.stereo.side` 后再无使用），`silk_encode_stereo(rc, 0, 0, 1)` 硬编码 pred 索引 (0,0) 与 only_middle=1（`enc_api.rs:585-587`、`encode_indices.rs:165-180`）。关键在于 mid-only 并不等于 L=R：解码端（与 C 一致）会用 pred 从 mid 预测合成 side（`stereo_ms_to_lr.rs:55-95`），而索引 0 解码出的 pred 是非零固定值——于是从正确的 mid 合成出错误的"幻影 side"，L/R 都被污染。
+
+实测数据（SNR，对齐后；C 列为本机 libopus 基线）：
+
+| 配置 | C→C | Rust→Rust | Rust→C | C→Rust |
+|---|---|---|---|---|
+| Hybrid stereo 48k Voip 32kbps（M3） | 2.0 / 2.2 dB，LRdiff 0.32 | −0.7 / −5.3 dB | −0.7 / −5.3 dB | 2.0 / 2.2 dB |
+| Hybrid stereo 24k Voip 32kbps（M7） | 2.9 / 3.0 dB，LRdiff 0.33 | −1.2 / −7.7 dB，LRdiff 0.77 | 同左 | 3.0 / 3.1 dB |
+| SILK stereo 16k Voip 24kbps（M2） | 3.0 / 2.9 dB，LRdiff 0.33 | 0.1 / −2.1 dB，LRdiff 0.52 | 同左 | 3.0 / 3.0 dB |
+
+两个决定性对照：C→Rust 与 C→C 完全一致（Rust 解码器对真立体声流工作正常，缺陷孤立在编码端）；Rust→C 与 Rust→Rust 一致（C libopus 解 Rust 码流同样差——缺陷在码流本身，不是 Rust 解码器兼容性问题）。另注：Rust→C 的码流是合法可解的，不会破坏 C 解码器，纯粹是音质/声道像损坏。
+```
+
+感觉 opus 最复杂的一些问题都被绕过了。还有 [#5: Panic on valid SILK 40/60 ms frames: SILK workspace hardcoded for 20 ms](https://github.com/restsend/opus-rs/issues/5) 作者说修了，但实际上只（暴力扩容）修了解码端，编码端完全相同的问题根本没修，感觉作者对自己的代码库都不是很了解。最后看了下提交历史，vibe coding 味还是相当重的。看着这位国人开发者有一堆音频领域的成果，~~希望不会都是 vibe 的吧……~~。
+
+opus-rs 永远地失去了我的一颗星星。
+
+<dated date="20260906"/>

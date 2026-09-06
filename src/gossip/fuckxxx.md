@@ -672,6 +672,7 @@ bugs:
 
 - 臭名昭著的缩缸问题：由于多个内部微码算法逻辑 bug，Intel 13-14 代酷睿 CPU 会给核心施加过高的电压，导致 CPU 寿命大幅下降。
 - AVX512 的阻碍，这个作为经常写 SIMD 的开发者必须讲。Intel 对 AVX512 的支持稀烂，Skylake 系列跑 AVX512 会降频导致性能比不跑 AVX512 还垃圾；桌面端 12-14 代酷睿大小核架构，直接不支持 AVX512。因为 Intel 这些问题，现在很多库在写 SIMD 时，会默认禁用 AVX512，需要手动启用 feature，简直倒反天罡。
+  - I've come to learn that whenever something is holding SIMD back, it's usually Intel.——[Sergey "Shnatsel" Davidoff](https://shnatsel.github.io/implementing-fma-finding-bugs-in-std/)
 - Arc 显卡狗屎这个也不必多说，游戏帧率比其他卡掉一截。我本人曾今就是 Arc A750 的用户，拿这个卡跑 pytorch 训练模型，满宿舍都是叽叽叽的电流声🤣
   - 哦对了，这卡还有一些 bug，开了内存 XMP 之后显卡侧面那个 A 的徽标就不会亮，这个也是我问过客服并且亲测过的。
 

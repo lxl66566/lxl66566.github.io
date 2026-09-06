@@ -485,6 +485,7 @@ function sidebar() {
 algolia 在搜索和用户体验上做的还行，但是在接入和 dashboard 上比较差：dashboard 加载相当慢，页面上一堆 AI 和自以为是的“优质引导”内容，反倒找不到我需要的功能。使用 algolia 实际上有非常多的坑：
 
 - 由于本站在许多地方都有部署，我希望所有站点都使用同一个索引，但是 algolia 并没有提示这一点。最后我才自己摸索出来，只要用了同一个 meta 的页面，就会被关联到同一个 algolia 应用下，共用索引。
+- algolia 默认 dashbord 一直在 index 里跳来跳去，找不到一个按钮能进入 crawler 的，我还要问 AI 才知道要用 <https://crawler.algolia.com/> 才能进入页面并管理自己的 crawler。。
 - （严格来说不是 algolia 的问题）发现搜索搜不到我的 galgame 评价，然后发现是我的折叠列表组件用了 v-if，内容在 dom 里是找不到的。后续改成了 v-show。
 - 然后改成 v-show 以后发现 galgame 页面报 _Records extracted are too big_。这不是废话吗，我这一个 markdown 源码都 144KB 了。然后尝试在爬虫配置里改成 `aggregateContent: false`，再爬一次，好家伙直接 _Extractors returned too many records_ 了。什么脑残😅。
   - 反正这个解决起来很恶心的，要么就是大改配置，AI 写一个自动分块的 js：
