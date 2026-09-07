@@ -152,6 +152,15 @@ nushell 的[类型系统](https://github.com/nushell/nushell/issues/11108)可以
 
 - 其他语言的空概念在 nushell 里叫 `nothing`。哈哈，就是要自己造词。
 
+### 其他经验
+
+- alias：nushell 的 alias 内必须是字面量，不能包含 env 等内容。所以 Windows 上没有 shebang，xxx.py 脚本并不能通过 xxx 直接执行，我没法在 nushell 里创建 alias 到 python 脚本，只好用 def：
+  ```nu
+  def xxx [...args: string] {
+      ^python $"($env.XDG_CONFIG_HOME)/nushell/xxx.py" ...$args
+  }
+  ```
+
 ## powershell
 
 一般的 windows 都自带 powershell 1.0。但是有的命令在老版本 powershell 上会执行失败，可以用 `scoop install pwsh` 安装最新版本的 powershell。

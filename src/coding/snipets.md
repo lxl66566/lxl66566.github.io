@@ -193,7 +193,14 @@ def get_audio_duration(file_path):
         file_path,
     ]
     try:
-        result = subprocess.run(command, capture_output=True, text=True, check=True)
+        result = subprocess.run(
+            command,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=True,
+        )
         return float(result.stdout.strip())
     except FileNotFoundError:
         print(
@@ -211,7 +218,7 @@ def get_audio_duration(file_path):
 
 def convert_flac_to_opus(input_file, target_size_mb):
     """
-    将 FLAC 文件转换为指定大小的 Opus 文件。
+    将音频文件转换为指定大小的 Opus 文件。
     """
     if not os.path.exists(input_file):
         print(f"错误：输入文件 '{input_file}' 不存在。", file=sys.stderr)
@@ -231,6 +238,11 @@ def convert_flac_to_opus(input_file, target_size_mb):
     if target_bitrate_k <= 0:
         print("错误：计算出的目标比特率过低，请增加目标文件大小。", file=sys.stderr)
         return
+
+    # Opus 编码器最大支持 510 kbps，超过会报错
+    if target_bitrate_k > 510:
+        print(f"  * 提示：计算出的比特率 ({target_bitrate_k} kbps) 超出 Opus 上限，自动限制为 510 kbps。")
+        target_bitrate_k = 510
 
     # 构建输出文件名
     base_name = os.path.splitext(input_file)[0]
@@ -260,7 +272,15 @@ def convert_flac_to_opus(input_file, target_size_mb):
     print(f"  {' '.join(command)}")
 
     try:
-        subprocess.run(command, check=True, capture_output=True, text=True)
+        # 指定 encoding='utf-8' 和 errors='replace'
+        subprocess.run(
+            command,
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+        )
         print("\n转换成功！")
 
         # 打印实际文件大小以供比较
@@ -279,10 +299,10 @@ def convert_flac_to_opus(input_file, target_size_mb):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="将无损 FLAC 文件转换为指定大小的有损 Opus 文件。",
+        description="将音频文件转换为指定大小的有损 Opus 文件。",
         formatter_class=argparse.RawTextHelpFormatter,
     )
-    parser.add_argument("input_file", help="输入的 FLAC 文件路径。")
+    parser.add_argument("input_file", help="输入的音频文件路径。")
     parser.add_argument(
         "target_size",
         type=float,

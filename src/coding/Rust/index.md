@@ -667,7 +667,9 @@ _他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
 
 音频处理无论在哪个语言都是天坑之一。
 
-Rust 虽然有万能解码器 [Symphonia](https://github.com/pdeljanov/Symphonia)（Symphonia 的 bug 和兼容性也有待提高），但是编码器这块缺的可太多了，除了 wav 这种简单格式有 pure rust 的 hound，~~大部分编码器都还只有 bindings。~~ 不过也可以看到开发者对此的努力，也有一些新推出的 crate 填补了编码器的空白，例如 [opus-rs](https://github.com/restsend/opus-rs) 等，期待生态越来越好。
+Rust 虽然有万能解码器 [Symphonia](https://github.com/pdeljanov/Symphonia)（Symphonia 的 bug 和兼容性也有待提高），但是编码器这块缺的可太多了，除了 wav 这种简单格式有 pure rust 的 hound，~~大部分编码器都还只有 bindings。~~
+
+另外还有一些标榜自己是 pure rust 的音频库，但是实际上质量并不咋地，例如 opus-rs，详见[评价](./crates.md#音频opus)。
 
 ## 嵌入向量数据库
 
