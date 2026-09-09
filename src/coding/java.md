@@ -58,7 +58,7 @@ scoop install liberica8-full-jdk
 
 该插件直接杀死了比赛。从此你不再需要各种调优、群魔乱舞的插件，只需要一个 _Java and Kotlin by IntelliJ IDEA_ 即可畅游 Java 项目，享受极速跳转。
 
-虽然经常听到 IDEA 内存占用大的声音，但是 _Java and Kotlin by IntelliJ IDEA_ 其实只是 IDEA 的一个 core，没有乱七八糟的功能，内存占用其实比 JDT LS 还要低上许多。简直是对 JDT LS 的全方位暴打。
+虽然经常听到 IDEA 内存占用大的声音，但是 _Java and Kotlin by IntelliJ IDEA_ 其实只是 IDEA 的一个 core，没有乱七八糟的功能，内存占用在大项目上其实比 JDT LS 还要低上许多。简直是对 JDT LS 的全方位暴打。
 
 @tab vscode with JDT LS
 
