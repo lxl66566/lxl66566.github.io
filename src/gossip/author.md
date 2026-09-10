@@ -11,15 +11,13 @@ category:
 
 ## 简介
 
-上海~~男大~~社畜，爱摆烂。
+社畜一枚，摸鱼简直是我的生命。
 
 ## 个人标签
 
 - 非纯粹意义党
 - 有限理性
-- 节欲派
 - 激进派与自由主义
-- 解构派
 - 健忘者
 - 旋律党
 - 边缘二次元人
@@ -49,7 +47,7 @@ category:
 
 更早的爱好可能出现在回忆录。
 
-- [moSiyuan](https://lmoliver.github.io/mosiyuan/)（<20191107>）<span class="heimu" title="你知道的太多了">沉迷这个也太羞耻了啊啊啊</span>
+- [moSiyuan](https://lmoliver.github.io/mosiyuan/)（<20191107>）
 - [读书](../hobbies/books.md)
 - [番剧](../hobbies/anime.md)
 - 王者荣耀
@@ -61,6 +59,7 @@ category:
 - 黎明杀机
 - [以 **OSU!mania 4k/6k** 为主的音游](../hobbies/rhythm_games.md)
 - 雀魂
+- [猫国建设者](../hobbies/other_games/meow.md)
 
 ### 现在喜欢
 
@@ -82,11 +81,11 @@ telegram[^2] 账号&频道 <a href="https://t.me/ab5_x" target="_blank"><img src
 
 [^2]: [什么是 telegram？](../articles/telegram.md)
 
-[我的 osu 账号](https://osu.ppy.sh/users/25751103)
+~~[我的 osu 账号](https://osu.ppy.sh/users/25751103)~~
 
 ## 音乐
 
-[我的音乐频道](https://t.me/absolutexsmusic) | ~~[我的网易云音乐歌单（out of date）](https://music.163.com/playlist?id=3098200457&userid=2061039950)~~ <span class="heimu" title="你知道的太多了">但是平常较少听歌。</span>
+[我的音乐频道](https://t.me/absolutexsmusic)
 
 ## 其他
 

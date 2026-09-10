@@ -213,5 +213,5 @@ _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me
 
 - [InstantViewBot](https://t.me/CorsaBot)：保存文章
 - [CloudMusicDownloader](https://t.me/Music163bot)：网易云音乐下载
-- [RSS](https://t.me/rss2tg_bot)：RSS 订阅
-  - 有服务器的还是推荐自己搭 rss，这些公用的用量太大，都不稳定
+- [atri_rss_bot](https://t.me/atri_rss_bot)：RSS 订阅，之前我用的 <https://t.me/rss2tg_bot> 已死，所以自己写了一个
+- [GmailBot](https://t.me/GmailBot)：google 官方的 bot（蓝 V 认证），转发 Gmail 邮件到 tg，对于我这种常年不开邮箱但是不想错过一些重要邮件的人来说有点用。
