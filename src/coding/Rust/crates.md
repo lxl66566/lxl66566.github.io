@@ -357,4 +357,26 @@ opus-rs 永远地失去了我的一颗星星。
 
 202606 之后部分出国线路的网络质量大幅劣化，然后我用 cargo-binstall 安装新软件的耗时都会是 35s 左右。我真的很诧异，为啥装个 binary 耗时能这么久，然后开 DEBUG 看了下这玩意会经过串行的 6 个阶段，每个阶段里可能有一个或多个请求。首先拉 crates.io 的请求就有 3 个，然后在 Github 上花掉 3 个；而每个阶段内（特别是 Github 阶段）又会有多个并行请求，相当于让该阶段的时间变长（最慢的请求决定阶段时长）。
 
-另外 cargo-binstall 的安全性也是狗屎，linux 和 windows 上各一个目录解压逃逸漏洞。虽然作者观点是不构成危险，因为从 Github 安装 binary 本来就很危险（），但是我仍然认为出现这种低级错误是非常不应该的。
+另外 cargo-binstall 的安全性也是狗屎，linux 和 windows 上各一个目录解压逃逸漏洞。虽然作者观点是不构成危险，因为从 Github 安装 binary 本来就很危险（），但是我仍然认为出现这种低级错误是非常不应该的（引入了 rc-zip 的项目真是有福报啦！）。
+
+### tokio-tungstenite
+
+这玩意真的有人在维护吗？然后你可以见到：[panic 是特性而不是 bug](https://github.com/snapview/tokio-tungstenite/issues/336)，[接管原始流丢字节](https://github.com/snapview/tokio-tungstenite/issues/379)没人理。
+
+### opendal
+
+因为 Xuanwo 一直在 Rust CN 群里引流，我大概在 2024 引流早期就出于兴趣看了下 opendal，当时的感受就是：文档呢？看完了 README 和文档，我仍然不知道这玩意是干啥的。因为没有使用场景，也就没管。
+
+两年后，2026 年，由于我的 [GalgameManager](https://github.com/lxl66566/GalgameManager) 有多网盘后端上传的需求，我又尝试把 opendal 集成到我的项目里。然后看了 opendal 文档，我无语道：_opendal 两年前浅看过一次，感觉两年来文档和 example 没有任何长进。_[^refopendal]
+
+[^refopendal]: https://t.me/withabsolutex/2598
+
+2026 早期，agent 还没那么流行，虽然 deepwiki 等已经可以快速读源码问问题了，但我古法手工编程还是被 opendal 坑了很多次。
+
+比如我不想加载文件全部内容到内存，在此前提下上传文件到 webdav。opendal 的 FuturesAsyncWriter 默认会在内部用 256KB buffer 进行 chunked 上传，然后 webdav 是 oneshot writer，所以就会爆炸 _OneShotWriter doesn't support multiple write_。根本原因就是 opendal 没有实现 webdav on chunked，write 的时候必须一把梭算出 content-length。那我为了让 webdav 非流式上传、s3 等流式上传，就又要写一堆丑陋的胶水代码，简直违背了 opendal 的初衷。
+
+还有踩过的一个坑是 [fs 上 content-length 不可用](https://github.com/apache/opendal/discussions/6323)，于是我又要为 fs backend 写一堆胶水代码……
+
+另外还有一个[安全相关的 PR](https://github.com/apache/opendal/pull/7684)，这人修了 `..` 的 path 逃逸问题，提了一嘴 `/` 但是没有后文了，我也不知道这是怎么跟安全讨论的…… [RFC 7799](https://github.com/apache/opendal/blob/0c360d103f93728889009b6e563bbaf3b0072e71/core/core/src/docs/rfcs/7799_path_normalization_and_secure_hardening.md) 也没有任何下文，没有 tracking issue。
+
+反正 opendal 带给我的感觉就是，能用，但用着很难受。

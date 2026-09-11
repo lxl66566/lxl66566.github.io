@@ -282,6 +282,8 @@ Nix 语言本身：
 
 ### opencode 有多难用
 
+在写此章节之后，有人做了一个 <https://frontierharness.org/> 用来估计 agent 工具的得分。opencode 是垫底的狗屎。
+
 - 简陋的首页，下载方式没说 scoop，没有标注出使用文档，不如 GitHub README 和真正的文档。
 - 界面根本没有引导，进去就三个键盘按键，不知道做什么用的，没有 help，必须读文档才知道。
 - opencode 没有活动的 issue 60 天自动关闭，还不能 reopen。我痛恨这种自动关闭机制。并且[我提的 issue](https://github.com/anomalyco/opencode/issues/22651) 也没人管。
@@ -302,6 +304,7 @@ Nix 语言本身：
 - **恶性 bug**：opencode 对会话时间戳做截断，导致在特定时间点会话一直无限重试，而对外表现为卡死。([ref](https://t.me/withabsolutex/2807)) 只能说是狗屎
 - revert 有延迟，如果点了 revert 然后快速点回车，就会陷入非常坏的状态，消息已经 revert 掉了但是还是在 sending request。
 - 打开 opencode 后，移动进工作区的文件，无法被 @ 选中。如果我想选中文件，必须关闭 opencode 后重新打开。有点扯。
+- Revert 某条消息的变更后，ctrl+x r 恢复 revert 前的内容，在 Windows 上会把你仓库的所有文件 LF 都改成 CRLF，望周知。
 
 ## niri 有多难用
 

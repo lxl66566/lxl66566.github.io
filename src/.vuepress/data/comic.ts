@@ -1205,5 +1205,6 @@ export default [
   { id: "673023", aScore: 8.5, bScore: 6.6, info: "#蔚蓝档案 #兽耳 #兽尾 #cos #loli", bak: "https://telegra.ph/ミミ好きミミ尽ク-れおねこ-キヴォトスの発情期-ココナの場合-ブルーアーカイブ-中国翻訳-DL版-08-15-8" },
   { id: "672943", aScore: 8.8, bScore: 7.7, info: "#蔚蓝档案 #loli #露出 #野战 3兽耳 #cos", bak: "https://telegra.ph/AmazingSweets-はるいちご-ニヤニヤ教授とおさんぽする本-ブルーアーカイブ-中国翻訳-DL版-08-15-10" },
   { id: "364186", aScore: 8.3, bScore: 6.5, info: "#师生 #媚药 #教室" },
+  { id: "674534", aScore: 9, bScore: 7.8, info: "#蔚蓝档案 #兽耳 #偶像 #纯爱", bak: "https://telegra.ph/いなしぅわ-しぅわ-先生だけのアイドルになりたい-ブルーアーカイブ-中国語-08-18-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
