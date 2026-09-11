@@ -345,6 +345,16 @@ SILK 立体声编码在所有采样率下都有实质缺陷：
 
 感觉 opus 最复杂的一些问题都被绕过了。还有 [#5: Panic on valid SILK 40/60 ms frames: SILK workspace hardcoded for 20 ms](https://github.com/restsend/opus-rs/issues/5) 作者说修了，但实际上只（暴力扩容）修了解码端，编码端完全相同的问题根本没修，感觉作者对自己的代码库都不是很了解。最后看了下提交历史，vibe coding 味还是相当重的。看着这位国人开发者有一堆音频领域的成果，~~希望不会都是 vibe 的吧……~~。
 
+我对上述内容提了一个 [issue](https://github.com/restsend/opus-rs/issues/27)，然后看作者修复它的提交记录，一眼 AI 直接实锤了，根本不需要想。
+
 opus-rs 永远地失去了我的一颗星星。
 
 <dated date="20260906"/>
+
+### cargo-binstall
+
+虽然它不是一个 lib crate，不过我仍然想放在这里说（反正也都是 crate）。
+
+202606 之后部分出国线路的网络质量大幅劣化，然后我用 cargo-binstall 安装新软件的耗时都会是 35s 左右。我真的很诧异，为啥装个 binary 耗时能这么久，然后开 DEBUG 看了下这玩意会经过串行的 6 个阶段，每个阶段里可能有一个或多个请求。首先拉 crates.io 的请求就有 3 个，然后在 Github 上花掉 3 个；而每个阶段内（特别是 Github 阶段）又会有多个并行请求，相当于让该阶段的时间变长（最慢的请求决定阶段时长）。
+
+另外 cargo-binstall 的安全性也是狗屎，linux 和 windows 上各一个目录解压逃逸漏洞。虽然作者观点是不构成危险，因为从 Github 安装 binary 本来就很危险（），但是我仍然认为出现这种低级错误是非常不应该的。
