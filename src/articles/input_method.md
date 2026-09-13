@@ -24,7 +24,7 @@ Rime 是一个高度自定义化、跨 Windows、Linux、macOS、Android 的输�
 
 ### 配置
 
-[这里](https://github.com/lxl66566/rime)是我的配置。具体使用方法请看 README。
+~~[这里](https://github.com/lxl66566/rime)是我的配置。具体使用方法请看 README。~~ 暂时 private，有需要可以私聊。
 
 我的配置里最大的不同点就是关闭了 userdb，这点在 README 里有提到。
 

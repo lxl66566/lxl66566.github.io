@@ -305,6 +305,7 @@ Nix 语言本身：
 - revert 有延迟，如果点了 revert 然后快速点回车，就会陷入非常坏的状态，消息已经 revert 掉了但是还是在 sending request。
 - 打开 opencode 后，移动进工作区的文件，无法被 @ 选中。如果我想选中文件，必须关闭 opencode 后重新打开。有点扯。
 - Revert 某条消息的变更后，ctrl+x r 恢复 revert 前的内容，在 Windows 上会把你仓库的所有文件 LF 都改成 CRLF，望周知。
+- Kimi 自家的研究人员给 opencode 专门写了个 kimi 模型的系统提示词，但是里面有一句：``DO NOT run `git commit`, `git push`, `git reset`, `git rebase` and/or do any other git mutations unless explicitly asked to do so. Ask for confirmation each time when you need to do git mutations, even if the user has confirmed in earlier conversations.`` 实在是太傻逼了。朋友用 opencode 一直疑惑为啥不会执行 AGENTS.md 里的原子化提交的指令，原来根源在这里。。直接[开喷](https://github.com/anomalyco/opencode/issues/48780)。
 
 ## niri 有多难用
 
@@ -866,7 +867,7 @@ powershell 简直是邪恶的化身。
 
 - Rime 标榜自由，但绝非想象中的那么自由。随便看几个 issue 就能发现某些开发者固执己见，拒绝讨论。不过还好也有愿意合并修复的开发者。
 - rime 有一个默认行为就是在全角中文下，数字后加符号会变成半角（[issue#972](https://github.com/rime/librime/issues/972)）。我觉得非常不正常，理论上我在哪个模式下输入就应该是原汁原味的；就算不支持，也需要做一个开关让用户自由切换，而不是到了 2025 年再来修这个 bug。
-- 各种性能问题就不用多说了吧。。我有时候打字快点就可能卡住。不过也有可能是 im 协议的问题而不是 rime 问题就是了。
+- Rime 在 Windows 上的客户端（Weasel）代码质量**非常狗屎**，打字打快点经常会卡死（事件查看器可以经常看到 WeaselServer.exe 崩溃）。简单 review 一下代码，各种线程竞争、越界访问跟不要钱一样出来。[提了 issue](https://github.com/rime/weasel/issues/1906) 也是没人理的。
 
 ## sccache 有多难用
 

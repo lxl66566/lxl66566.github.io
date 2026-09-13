@@ -147,6 +147,29 @@ net stop winnat
 net start winnat
 ```
 
+## 防卡死与高可用
+
+Linux 系统有个 [Sysrq 功能](https://wiki.archlinux.org/title/Keyboard_shortcuts#Kernel_(SysRq))，可以在系统卡死时使用 REISUB 强杀所有进程、强制同步磁盘和重启，在我折腾 Linux 时救了我几次狗命。这玩意是内核提供的功能，优先级非常高，绝对不用担心它不可用。
+
+但是 Windows 情况不同，微软自己的狗屎任务管理器、资源管理器（任务栏相关交互）、taskkill（需要启动终端）、Crtl + Alt + Delete 大法都非常不稳定，在 Windows 全系统卡死时，这几个工具经常是调不出来的。所以为了在卡死时恢复系统可用性，需要一些其他办法。
+
+1. 强制触发蓝屏重启：按住键盘右侧的 Ctrl 键，同时连续按两次 Scroll Lock 键，可以触发驱动级别蓝屏并重启系统。需要添加注册表：
+   ```reg
+   Windows Registry Editor Version 5.00
+   [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdhid\Parameters]
+   "CrashOnCtrlScroll"=dword:00000001
+   ```
+   用处有限，因为该快捷键只能强制重启，比起强制关机只是多了一个磁盘 sync，只能简单保护磁盘，并不能恢复系统的可用性。（而且这个年代还有人键盘上用 Scroll Lock 吗，就算有也拿去绑其他键位了好吧）
+2. SuperF4：可以通过 Ctrl + Alt + F4 强杀**前台窗口的进程**。它本身是一个低资源占用的进程，最好也给该进程添加一下 realtime 等级：
+   ```reg
+   Windows Registry Editor Version 5.00
+   [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\SuperF4.exe\PerfOptions]
+   "CpuPriorityClass"=dword:00000003
+   ```
+   评价是用处一般，它不是内核/驱动级别的功能，优先级不够高；并且对非前台窗口的进程无能为力，如果你要 kill 一个命令行就不行了。
+
+其实看着这两个方案好像都比较一般；但是真正自己写驱动级高可用的话，又搞不到签名。所以现阶段也没啥非常好的方法。
+
 ## 遇到的问题
 
 ### 初始化登录微软帐号酿成的悲剧
