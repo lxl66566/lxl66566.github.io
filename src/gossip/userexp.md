@@ -43,6 +43,7 @@ tag:
 13. subagent 被中断即丢失所有上下文，且无法恢复：subagent 输出中，停止会话，则之后再开启会话时 subagent 已经输出的内容都不会再进入主 agent 的上下文。等于是 token 白烧了。
 14. 不像 opencode 给 AI 发消息可以“插队”在工具调用里；zcode 在 AI 输出时发送消息，必须排队到 AI 完成全部任务后才能被 AI 看到。
     - 点击「立即」按钮（打断会话，发出消息），快速切到其他 session，再回来以后会看到消息并没有发出去（仍然留在队列里），但是会话的打断是实打实发生的。抽象啊。
+15. **脑残设计**：如果文件没读过直接写就会报错 `File has not been read yet. Read it first before writing to it.` 我实在想不明白，凭什么没读过就不让写？如果这文件很长，用这种傻逼理由打断首次写入，让我消耗了双倍输出 token，实在是有点蠢。
 
 ## [lazygit](https://github.com/jesseduffield/lazygit)
 

@@ -1206,5 +1206,10 @@ export default [
   { id: "672943", aScore: 8.8, bScore: 7.7, info: "#蔚蓝档案 #loli #露出 #野战 3兽耳 #cos", bak: "https://telegra.ph/AmazingSweets-はるいちご-ニヤニヤ教授とおさんぽする本-ブルーアーカイブ-中国翻訳-DL版-08-15-10" },
   { id: "364186", aScore: 8.3, bScore: 6.5, info: "#师生 #媚药 #教室" },
   { id: "674534", aScore: 9, bScore: 7.8, info: "#蔚蓝档案 #兽耳 #偶像 #纯爱", bak: "https://telegra.ph/いなしぅわ-しぅわ-先生だけのアイドルになりたい-ブルーアーカイブ-中国語-08-18-2" },
+  { id: "677645", aScore: 7.4, bScore: 9, info: "#甘露アメ #邻居 #病娇 #后背位", order: 3, bak: "https://telegra.ph/天気輪-甘露アメ-そんな愛ならいらない3アリスなんかじゃないのに隣のお兄さんがアリスってよんできてなんか怖い-中国翻訳-DL版-08-21" },
+  { id: "675537", aScore: 8.5, bScore: 3.6, info: "#蔚蓝档案", bak: "https://telegra.ph/espresso-無糖まめ-内なる秘密-ブルーアーカイブ-中国翻訳-DL版-08-21" },
+  { id: "567687", aScore: 8.6, bScore: 8, order: 2, info: "#猫娘", bak: "https://telegra.ph/ねこのみみ-Thalia-渋々頼みを聞いてくれるうちの猫-2-中国翻訳-DL版-08-21" },
+  { id: "568167", aScore: 8.8, bScore: 7.6, order: 3, info: "#猫娘 #女仆", bak: "https://telegra.ph/ねこのみみ-Thalia-渋々頼みを聞いてくれるうちの猫-3-中国翻訳-DL版-08-20" },
+  { id: "675037", aScore: 9.2, bScore: 8.8, info: "#合集 #纯爱 #泳装 #自慰", bak: "https://telegra.ph/百済児廿日-処女の微熱-中国翻訳-DL版-08-20" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
