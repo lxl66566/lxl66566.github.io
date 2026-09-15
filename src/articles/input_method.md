@@ -22,6 +22,8 @@ Rime 是一个高度自定义化、跨 Windows、Linux、macOS、Android 的输�
 
 我很早就知道了 Rime，不过这玩意上手门槛比较高，而且在 NixOS 上很麻烦，所以没搞。20241117，我终于忍受不了词频不同步，转向了 Rime 输入法。最开始是在 Window 上尝试的，经过了几个小时配置和迁移，我感觉这个输入法还是挺好用的。然后就又在 Linux 和 Android 用上了。
 
+Rime 的核心是 librime，然后在不同平台有不同的客户端。在 Windows 上的实现是小狼毫（weasel），这个实现实在是太狗屎了，大家可以看我[喷几句](../gossip/fuckxxx.md#rime-有多难用)。2026.09 拿 AI review 了一下 Rime 的狗屎代码，接着修了几十个 bug 和几十个性能优化（150+ commit），现在在 Windows 上具有无与伦比的性能与稳定性，无论打字打得多快都是秒出不卡顿，非常舒服。这是我的 [weasel fork](https://github.com/lxl66566/weasel)。
+
 ### 配置
 
 ~~[这里](https://github.com/lxl66566/rime)是我的配置。具体使用方法请看 README。~~ 暂时 private，有需要可以私聊。
@@ -35,8 +37,6 @@ Rime 非常自由，也就是词库也需要自己准备。但是我认为现有
 所以我确实[做了几个词库](https://github.com/lxl66566/rime-dict2)，欢迎使用。
 
 当然，如果你**并不在乎大小**，直接使用 [zhwiki](https://github.com/felixonmars/fcitx5-pinyin-zhwiki) 词库是最为~~简单舒心~~的选择。（ps. zhwiki 里有很多用不到的人名，有可能还会增添麻烦）
-
-### [喷几句](../gossip/fuckxxx.md#rime-有多难用)
 
 ## Windows
 
