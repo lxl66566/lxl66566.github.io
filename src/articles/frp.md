@@ -18,9 +18,15 @@ tag:
 
 ## [easytier](https://easytier.cn/)
 
-新时代的虚拟组网软件，国人用 Rust 编写，有国内公益 server 做转发/rpc；跨多平台，有 GUI。除了文档垃圾一点，没有其他缺点了。
+::: danger
 
-[我的配置](https://github.com/lxl66566/nixos-config/blob/6c540a241c4344d23fc070526debed885e7f91cb/others/network/easytier.nix)
+我用了好久的 easytier，然后才发现它有非常大的[安全性问题](https://t.me/withabsolutex/2839)，quic 模式下是假加密。不建议使用。
+
+:::
+
+新时代的虚拟组网软件，国人用 Rust 编写，~~有国内公益 server 做转发/rpc~~ 没了；跨多平台，有 GUI。
+
+[我的配置](https://github.com/lxl66566/nixos-config/blob/6c540a241c4344d23fc070526debed885e7f91cb/others/network/easytier.nix) （目前暂时不可用，需要的私聊）
 
 - 和 zerotier、tailscale 故意区分了不同端相比，easytier peer 是全对等的。包括官方的公益节点也是普通 peer，所有 peer 都可以传递信令、组织网络、中转流量。——Losarch
 - easytier 的文档非常大便，没有一个 full config example，全是命令行，那个配置生成器很难用而且有 bug。包括我刚需的 _peer 间 quic 通信_ 是 undocumented 的。
@@ -31,6 +37,7 @@ tag:
 
 - 由于这个服务相当重要（如果 easytier 挂了，就没法从公网重新连到内网 server），所以我给这个 systemd 服务加了失败自动拉起。
 - easytier 的 quic 做得相对比较糟糕，比如 [2.6.x 引入了 quic 的破坏性变更导致和 2.4.5 不兼容](https://github.com/EasyTier/EasyTier/issues/2167)并且在 release note 里没有说明；即使是 2.6.4 这个 stable release，还仍然可能发生长时间运行后 server 突然疯狂报超时无法连接到其他节点，因此我还得加一个每天定时重启这个服务的 timer。
+  - easytier 的 quic 是假的加密，中间人能直接拿到明文，我扫出这个问题的时候感觉天塌了。
 
 ## cloudflare tunnel
 

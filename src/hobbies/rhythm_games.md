@@ -85,6 +85,7 @@ tag:
 - 20230507：恶性 bug，osu 打开便闪退，目录出现 `.require_update` 文件，再次打开 `osu!.exe` 或 `repair osu!` 均会下载替换 exe 并继续闪退，不断循环。
 - feature：既然采用了玩家作曲的开放社区，那为什么不学习一下 github 等的代码管理经验，让玩家能够为谱面发 pr？
 - lazer 在调整谱面流速时会给出按键显示时间。这个时间在 stable 上是个谜，各种论坛，第三方 wiki 都没有对照表。
+- 我在 osu stable 有 11w 曲子，占用约 200G 空间，删掉 300 首歌需要 2 分钟；如果一次性删除 5w 首歌，osu stable 直接崩溃了。
 
 官方态度，stable 玩家不被支持，赶人去 lazer。而 lazer 并不好用。
 

@@ -512,7 +512,7 @@ cargo 扩展跟 git 扩展很像，只要是名为 `cargo-xxx` 的可执行文�
 | [cargo-sweep](https://github.com/holmgr/cargo-sweep) | 部分清理编译产物 |
 | [cargo-depgraph](https://github.com/jplatte/cargo-depgraph) | 看依赖关系图。这一个工具的依赖有点多，不能直接出图，感觉不太好用。 |
 | [cargo-semver-checks](https://github.com/obi1kenobi/cargo-semver-checks) | 检查 API 是否遵循 semver 规范 |
-| [cargo-feat](https://github.com/vunholy/cargo-feat) | 在命令行直接看 crate 的 feature。这个库虽然是 vibe coding，不过质量也不算差。 |
+| ~~[cargo-feat](https://github.com/vunholy/cargo-feat)~~ | 在命令行直接看 crate 的 feature。警告：该工具为 vibe coding 产物，质量一般，不建议使用。vscode 装个 tombi 就能有 feature 提示了。 |
 | [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz) | 模糊测试工具，详见 [fuzz](./crates.md#fuzz) |
 
 ## 三方库评价
