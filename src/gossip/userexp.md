@@ -22,15 +22,26 @@ tag:
 3. 周末还送用不完的 flash token（9 月更有夜间爽蹬活动，夜间全免费）
 4. 2026.09，每日非高峰期随机掉落神秘重置卡
 
+简直是实现了 token 自由。
+
+### 经验
+
 有一些技巧，可以卡这个重置的掉落时间。重置每天最多掉落两次，限 2h 内使用，并且只会在 zcode 处于前台窗口的时候掉落。因此我可以不打开 zcode，大概到距离自然刷新还有 30min 的时候，打开 zcode 并获取重置卡。这样自然刷新后距离重置卡到期还会有 1.5h 的 gap，可以够我蹬完一管。
 
-简直是实现了 token 自由。
+还有说说闲时任务的限制：
+
+- 闲时任务限时，大约 4 小时，超时会爆 _off-peak-ticket-expired: off-peak ticket is invalid or expired_。
+- 闲时任务限制不允许 spawn 后台 subagent，只能用前台 subagent。前台 subagent 的一个坏处是每一轮都必须等待**所有** subagent 完成，主 agent 才能继续任务，如果一个 subagent 耗时过长会极大拖慢进度；还有如果被打断或者超时，subagent 的记忆可能就丢失了。（这里用「可能」，是因为 zcode 看 subagent 的思考过程，有时候能打开，但有时候又打不开）
+  - 嘛，有 subagent 用也已经很赚了，每次我开 3 个 subagent 一起干活可以产出远超一轮 500k token 的价值。
+- 闲时任务不支持在 ssh 机器上跑，于是我还特地写了一个 [shell-proxy](https://github.com/lxl66566/shell-proxy) 工具，以 MCP 的方式提供给 agent/subagent，这样就可以在闲时任务跑在远程 Linux 机器上了。
+
+### 开喷
 
 不过既然写在这里它就不可能只是赞美两句这么简单。zcode 仍然处于发展早期，现在给这么多福利也是为了让我们给使用数据和反馈的。那么我也就得开喷了：
 
 1. 给模型用的终端工具一坨。开个会话问问模型就知道，zcode 给 AI 的终端是“default shell”，这在 Windows 上还是 cmd 而不是 powershell。虽然 powershell 坑比较多，但是总比啥都没有的 cmd 好吧。给模型的系统提示词里也没有终端使用教程，只有一点 cli 规范。
    - 有一堆无法关闭的内置 MCP。
-   - zcode 不读 `~/.agents/AGENTS.md`，全局提示要放在 `~/.zcode/AGENTS.md`。
+   - zcode 不读 `~/.agents/AGENTS.md`，全局提示要放在 `~/.zcode/AGENTS.md`。由于我希望对 zcode 附加一些专用的约束，所以我不太想用 hardlink，直接在 `~/.zcode/AGENTS.md` 声明让 agent 去读 `~/.agents/AGENTS.md` 即可。
    - **恶性 bug**：zcode 给 agent 提供的「内置任务」功能（实际上是 Bash + `run_in_background: true` 实现的）非常难用，很多时候终端进程都已经 panic 了，但是任务本身不会结束，就一直挂着浪费时间等 timeout。所以全局提示里需要写一句“禁止使用 run_in_background”。
 2. 对于 agent 命令操作，zcode 其实是有沙盒的。但是 AI 不知道，有时候要试错多次，。
 3. 周末赠送的是试用装的 glm 5.3 flash，token 非常多。但是这个试用装不是直接加入你的帐号而是作为单独的一个试用帐号提供，我找了半天都没找到在哪里切换回我自己的帐号。实在是居心险恶。
