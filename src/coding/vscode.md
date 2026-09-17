@@ -56,7 +56,7 @@ tag:
   - [AI 代码补全](#ai-代码补全)
   - 更好的警告：_Error Lens_
     - 不可否认 _SonarLint_ 很强，但是 java 写的，占用空间和 RAM 都很大。因此在使用了几年 _SonarLint_ 以后我选择分语言使用不同 linter。
-  - 轻量级 Git 可视化：_Git Graph_
+  - 轻量级 Git 可视化：_Git Graph_ + _Git Tree Compare_
   - 代码格式化：_Prettier - Code formatter_（主要用于 markdown
   - 编辑器：_Vim_
     - [添加如下配置](https://github.com/microsoft/vscode/issues/75627#issuecomment-1114048271)可以降低 vim 插件的延迟。
@@ -198,7 +198,8 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 ```json
 {
   "git-graph.date.type": "Commit Date",
-  "git.autofetch": false,
+  "git.addAICoAuthor": "off",
+  "git.autofetch": true,
   "git.blame.editorDecoration.enabled": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
@@ -206,8 +207,9 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 }
 ```
 
-- 官方的 Git 和 gitlens 都不好用，我比较喜欢轻量的 _Git Graph_，看起来也很直观。
-  - 选中一个 commit，然后按住 ctrl 单击另一个 commit，即可查看二者之间的 diff。
+官方的 Git 和 gitlens 都不好用（gitlens 一堆功能加上狗屎 AI 营销我根本不知道怎么用）；我比较喜欢轻量的 _Git Graph_，看起来也很直观。点击查看该提交的变更；选中一个 commit，然后按住 ctrl 单击另一个 commit，即可查看两个 commit 之间的 diff。
+
+但是 _Git Graph_ 在复杂项目、review 代码的时候也有缺陷：（1）没法快速定位到 HEAD commit，如果 commit tree 复杂经常要找很久（2）对比两个 commit 必须首先找到这两个 commit，没法一键定位 merge-base（3）搜索功能不好用，因为默认有分页，初始展示 300 条、load more 一次展示 100 条，如果要找一个久远的 commit 简直是地狱。
 
 ## 小技巧
 

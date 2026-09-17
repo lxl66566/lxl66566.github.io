@@ -13,6 +13,31 @@ tag:
 
 相对而言，我比较喜欢尝试新事物。这里记录一些我的尝试体验。
 
+## [pi](https://github.com/earendil-works/pi)
+
+由于 [opencode 太难用太狗屎](#opencode)了，让我的怨气值积攒到了一定水平，然后根据一个契机[^topi]就换到了 pi。
+
+[^topi]: 直接契机是 <https://t.me/withabsolutex/2841>，opencode 对 kimi 模型提示词下毒；另外还有 X 上流传的评测，kimi 在各个 agent 上的跑分，opencode 是垫底，惨不忍睹。
+
+oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所以遵循 pi 的哲学，想加啥插件自己加。
+
+使用技巧：
+
+- 两次 Ctrl + C 退出
+- `/resume` 恢复之前的 session，而不是 `/session`；`/tree` 浏览对话并 revert 而不是 `/revert`。
+
+优点：
+
+- 我比较偏向极简主义，挺喜欢 pi 的哲学。
+- 默认展开 agnet 思考过程。
+
+坑点：
+
+- Windows 下我是 scoop 安装的 pi 和 git；这样的话 pi 调用 bash 工具的时候有 bug，会报错 `No bash shell found` ([ref](https://github.com/earendil-works/pi/issues/5103))。我已经把 `C:\Users\<username>\scoop\apps\git\current\bin` 加入了 PATH，但是没有任何作用。
+  - 由于我的配置跨平台同步，我不能设置 shellPath（shellPath 必须是绝对路径而不能是 `bash` 这种 command）。
+  - 最终的解法是创建一个 Junction：`New-Item -ItemType Junction -Path "C:\Program Files\Git" -Target "$env:USERPROFILE\scoop\apps\git\current"`。
+- 默认启动下，Page Up 和 Page Down 无法翻页！！必须用 `--tui-mode fullscreen` 启动，或者 config 里配 `"tuiMode": "fullscreen"`。
+
 ## [zcode](https://zcode.z.ai/cn)
 
 用 zcode 倒不是因为它好用，而是因为它给得太多了：
