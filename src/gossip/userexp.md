@@ -37,6 +37,13 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
   - 由于我的配置跨平台同步，我不能设置 shellPath（shellPath 必须是绝对路径而不能是 `bash` 这种 command）。
   - 最终的解法是创建一个 Junction：`New-Item -ItemType Junction -Path "C:\Program Files\Git" -Target "$env:USERPROFILE\scoop\apps\git\current"`。
 - 默认启动下，Page Up 和 Page Down 无法翻页！！必须用 `--tui-mode fullscreen` 启动，或者 config 里配 `"tuiMode": "fullscreen"`。
+- `pi update --extensions` 过程中 Ctrl + C 无法中断。
+
+插件相关：
+
+- 我使用 `npm:@gotgenes/pi-permission-system` 进行权限控制，但是这玩意不开 yolo mode 的话用起来手感稀烂。例如 flock、xargs 等实际执行另一个 command 的动作，都会匹配上 indirection-bash-wrapper rule，进入 ask 状态而不是根据实际执行的 command 判断权限。(有个尝试绕过的 [issue](https://github.com/gotgenes/pi-packages/issues/680)，但是没有进展)。所以还是建议 yolo mode，也就是所有 ask 变成 allow。
+- `npm:pi-web-access` 这个也是狗屎，如果你的 pi 设置了 `"npmCommand": ["pnpm"]` 则这个插件根本启动不了。这个插件[早期还有 path traversal 安全问题](https://github.com/nicobailon/pi-web-access/security/advisories/GHSA-8phw-6qw6-xhq6)。
+  - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起用 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
 
 ## [zcode](https://zcode.z.ai/cn)
 
@@ -59,11 +66,13 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 闲时任务限制不允许 spawn 后台 subagent，只能用前台 subagent。前台 subagent 的一个坏处是每一轮都必须等待**所有** subagent 完成，主 agent 才能继续任务，如果一个 subagent 耗时过长会极大拖慢进度；还有如果被打断或者超时，subagent 的记忆可能就丢失了。（这里用「可能」，是因为 zcode 看 subagent 的思考过程，有时候能打开，但有时候又打不开）
   - 嘛，有 subagent 用也已经很赚了，每次我开 3 个 subagent 一起干活可以产出远超一轮 500k token 的价值。
 - 闲时任务不支持在 ssh 机器上跑，于是我还特地写了一个 [shell-proxy](https://github.com/lxl66566/shell-proxy) 工具，以 MCP 的方式提供给 agent/subagent，这样就可以在闲时任务跑在远程 Linux 机器上了。
+- 20260917 闲时任务改为了每日一次。
 
 ### 开喷
 
 不过既然写在这里它就不可能只是赞美两句这么简单。zcode 仍然处于发展早期，现在给这么多福利也是为了让我们给使用数据和反馈的。那么我也就得开喷了：
 
+0. 代码安全问题：[zcode 跟 grok 一样会把你的仓库加密上传云端](https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/)。
 1. 给模型用的终端工具一坨。开个会话问问模型就知道，zcode 给 AI 的终端是“default shell”，这在 Windows 上还是 cmd 而不是 powershell。虽然 powershell 坑比较多，但是总比啥都没有的 cmd 好吧。给模型的系统提示词里也没有终端使用教程，只有一点 cli 规范。
    - 有一堆无法关闭的内置 MCP。
    - zcode 不读 `~/.agents/AGENTS.md`，全局提示要放在 `~/.zcode/AGENTS.md`。由于我希望对 zcode 附加一些专用的约束，所以我不太想用 hardlink，直接在 `~/.zcode/AGENTS.md` 声明让 agent 去读 `~/.agents/AGENTS.md` 即可。
@@ -88,6 +97,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 14. 不像 opencode 给 AI 发消息可以“插队”在工具调用里；zcode 在 AI 输出时发送消息，必须排队到 AI 完成全部任务后才能被 AI 看到。
     - 点击「立即」按钮（打断会话，发出消息），快速切到其他 session，再回来以后会看到消息并没有发出去（仍然留在队列里），但是会话的打断是实打实发生的。抽象啊。
 15. **脑残设计**：如果文件没读过直接写就会报错 `File has not been read yet. Read it first before writing to it.` 我实在想不明白，凭什么没读过就不让写？如果这文件很长，用这种傻逼理由打断首次写入，让我消耗了双倍输出 token，实在是有点蠢。
+    - claude code 开的坏头。AI 完全可以在终端读到文件内容，然后进行一个 Write；这个规则把该正常行为给否定了。
 16. 会话不能导出导入，且没有同步；多设备开发堪比地狱。另外我设置的「命令」也不会同步，本来就难用的东西，现在我肯定不用了。
 17. 没法看 subagent 到底消耗了多少 token。
 

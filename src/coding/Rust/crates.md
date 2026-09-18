@@ -302,7 +302,7 @@ rust 的默认 allocator 并不好用([ref](https://news.ycombinator.com/item?id
 
 之前比较广泛使用的 allocator 是 [jemalloc](https://github.com/jemalloc/jemalloc)，之前还假死了一段时间，但是现在又活了。jemalloc 是经过了大量实战测试以及生产环境的验证，可以算是知名度最高、使用最广泛的 allocator 了。jemalloc 比较适合长时间运行的 server program。jemalloc 的缺点是不支持 Windows。
 
-mimalloc 是一个有力竞争者，可以看看它的[性能测试](https://news.ycombinator.com/item?id=38459571)。mimalloc 支持 Windows；但是我曾今遇到过一个[严重的问题（所有使用了 mimalloc 的软件在 Windows11 24H2 上稳定崩溃）](https://t.me/withabsolutex/2730)，因此对其并无好感。
+mimalloc 是一个竞争者，可以看看它的[性能测试](https://news.ycombinator.com/item?id=38459571)。mimalloc 最大的优势是支持 Windows；但是我曾今遇到过一个[严重的问题（所有使用了 mimalloc 的软件在 Windows11 24H2 上稳定崩溃）](https://t.me/withabsolutex/2730)，因此对其并无好感。另外我还在一些项目上观察到启用 mimalloc 会造成可观测的性能下降。
 
 ### fuzz
 

@@ -14,5 +14,6 @@
         "parser": "markdown"
       }
     }
-  ]
+  ],
+  "plugins": ["prettier-plugin-zhfmt"]
 }
