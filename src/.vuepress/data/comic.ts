@@ -1210,6 +1210,6 @@ export default [
   { id: "675537", aScore: 8.5, bScore: 3.6, info: "#蔚蓝档案", bak: "https://telegra.ph/espresso-無糖まめ-内なる秘密-ブルーアーカイブ-中国翻訳-DL版-08-21" },
   { id: "567687", aScore: 8.6, bScore: 8, order: 2, info: "#猫娘", bak: "https://telegra.ph/ねこのみみ-Thalia-渋々頼みを聞いてくれるうちの猫-2-中国翻訳-DL版-08-21" },
   { id: "568167", aScore: 8.8, bScore: 7.6, order: 3, info: "#猫娘 #女仆", bak: "https://telegra.ph/ねこのみみ-Thalia-渋々頼みを聞いてくれるうちの猫-3-中国翻訳-DL版-08-20" },
-  { id: "675037", aScore: 9.2, bScore: 8.8, info: "#合集 #纯爱 #泳装 #自慰", bak: "https://telegra.ph/百済児廿日-処女の微熱-中国翻訳-DL版-08-20" },
+  { id: "671654", aScore: 7.2, bScore: 9, info: "#纯爱 #侄女 #女主动 #逆调教" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
