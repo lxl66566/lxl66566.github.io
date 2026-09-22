@@ -31,7 +31,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 我比较偏向极简主义，挺喜欢 pi 的哲学。
 - 默认展开 agnet 思考过程。
 
-坑点：
+坑点/吐槽：
 
 - Windows 下我是 scoop 安装的 pi 和 git；这样的话 pi 调用 bash 工具的时候有 bug，会报错 `No bash shell found` ([ref](https://github.com/earendil-works/pi/issues/5103))。我已经把 `C:\Users\<username>\scoop\apps\git\current\bin` 加入了 PATH，但是没有任何作用。
   - 由于我的配置跨平台同步，我不能设置 shellPath（shellPath 必须是绝对路径而不能是 `bash` 这种 command）。
@@ -43,7 +43,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 - 我使用 `npm:@gotgenes/pi-permission-system` 进行权限控制，但是这玩意不开 yolo mode 的话用起来手感稀烂。例如 flock、xargs 等实际执行另一个 command 的动作，都会匹配上 indirection-bash-wrapper rule，进入 ask 状态而不是根据实际执行的 command 判断权限。(有个尝试绕过的 [issue](https://github.com/gotgenes/pi-packages/issues/680)，但是没有进展)。所以还是建议 yolo mode，也就是所有 ask 变成 allow。
 - `npm:pi-web-access` 这个也是狗屎，如果你的 pi 设置了 `"npmCommand": ["pnpm"]` 则这个插件根本启动不了。这个插件[早期还有 path traversal 安全问题](https://github.com/nicobailon/pi-web-access/security/advisories/GHSA-8phw-6qw6-xhq6)。
-  - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起用 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
+  - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起和致死量 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
 
 ## [zcode](https://zcode.z.ai/cn)
 
@@ -257,7 +257,7 @@ $env.config.completions.external = {
 下载下来试用一下，随便查了一个内网解析的域名，结果：
 
 - `quien xxx.xxx` 卡死在 TUI 首页，无法切换 tab。合着查询线程阻塞了 UI 线程是吧。
-- `quien dns xxx.xxx` 返回空记录，真的是全空的。。还不如我 nsloopup，至少能查到非权威应答。
+- `quien dns xxx.xxx` 返回空记录，真的是全空的。。还不如我 nslookup，至少能查到非权威应答。
   ```
   {
     "A": null,
