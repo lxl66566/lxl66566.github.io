@@ -33,17 +33,21 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 坑点/吐槽：
 
+- 不像 opencode 喜欢用 ctrl + p，pi 主要是靠打出一个 `/` 然后在候选列表里选 command 来进行操作的。但是这个列表的出现有相当大的延迟，只要我打字快一些，pi 就会把我的 `/tree` 这种内容直接当成跟 AI 的对话发出去。。。
+  - 然后也是因为这个 `/command` 的原因，在已经写了对话内容的情况下，就没法再调出 command 了。。没法写完一段 prompt 之后再切模型。
 - Windows 下我是 scoop 安装的 pi 和 git；这样的话 pi 调用 bash 工具的时候有 bug，会报错 `No bash shell found` ([ref](https://github.com/earendil-works/pi/issues/5103))。我已经把 `C:\Users\<username>\scoop\apps\git\current\bin` 加入了 PATH，但是没有任何作用。
   - 由于我的配置跨平台同步，我不能设置 shellPath（shellPath 必须是绝对路径而不能是 `bash` 这种 command）。
   - 最终的解法是创建一个 Junction：`New-Item -ItemType Junction -Path "C:\Program Files\Git" -Target "$env:USERPROFILE\scoop\apps\git\current"`。
 - 默认启动下，Page Up 和 Page Down 无法翻页！！必须用 `--tui-mode fullscreen` 启动，或者 config 里配 `"tuiMode": "fullscreen"`。
 - `pi update --extensions` 过程中 Ctrl + C 无法中断。
+- pi 不会自动记住上次使用的 model。我要是设置了 defaultModel + defaultProvider，就只能一直用设置的默认值；要是不设置，它每次开 session 都会自动用 deepseek-v4-pro，实在是太坏了。
 
 插件相关：
 
 - 我使用 `npm:@gotgenes/pi-permission-system` 进行权限控制，但是这玩意不开 yolo mode 的话用起来手感稀烂。例如 flock、xargs 等实际执行另一个 command 的动作，都会匹配上 indirection-bash-wrapper rule，进入 ask 状态而不是根据实际执行的 command 判断权限。(有个尝试绕过的 [issue](https://github.com/gotgenes/pi-packages/issues/680)，但是没有进展)。所以还是建议 yolo mode，也就是所有 ask 变成 allow。
 - `npm:pi-web-access` 这个也是狗屎，如果你的 pi 设置了 `"npmCommand": ["pnpm"]` 则这个插件根本启动不了。这个插件[早期还有 path traversal 安全问题](https://github.com/nicobailon/pi-web-access/security/advisories/GHSA-8phw-6qw6-xhq6)。
   - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起和致死量 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
+- pi-lens 会自动修改你的代码，自动执行 fmt + fix，但是很多时候我并不希望这种行为（比如 lsp 才不会管你的兼容性和 MSRV、PR 最小化原则；而且 rust clippy 的 auto fix 可不一定是无害的），该行为也会让 AI 困惑、怀疑人生。我用了一阵[被坑了](https://t.me/absxsgroup/11865)，于是就干掉了。
 
 ## [zcode](https://zcode.z.ai/cn)
 
@@ -94,12 +98,13 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 11. 闲时任务没有草稿：创建闲时任务里写了一堆东西，切出去看看其他会话进度，再切回来发现已经写的内容都没了。
 12. 我可以看到一个 agent 启动的“运行中的终端”，但是无法看到它输出的内容。。
 13. subagent 被中断即丢失所有上下文，且无法恢复：subagent 输出中，停止会话，则之后再开启会话时 subagent 已经输出的内容都不会再进入主 agent 的上下文。等于是 token 白烧了。
+    - 也没法看 subagent 到底消耗了多少 token。
 14. 不像 opencode 给 AI 发消息可以“插队”在工具调用里；zcode 在 AI 输出时发送消息，必须排队到 AI 完成全部任务后才能被 AI 看到。
     - 点击「立即」按钮（打断会话，发出消息），快速切到其他 session，再回来以后会看到消息并没有发出去（仍然留在队列里），但是会话的打断是实打实发生的。抽象啊。
 15. **脑残设计**：如果文件没读过直接写就会报错 `File has not been read yet. Read it first before writing to it.` 我实在想不明白，凭什么没读过就不让写？如果这文件很长，用这种傻逼理由打断首次写入，让我消耗了双倍输出 token，实在是有点蠢。
     - claude code 开的坏头。AI 完全可以在终端读到文件内容，然后进行一个 Write；这个规则把该正常行为给否定了。
 16. 会话不能导出导入，且没有同步；多设备开发堪比地狱。另外我设置的「命令」也不会同步，本来就难用的东西，现在我肯定不用了。
-17. 没法看 subagent 到底消耗了多少 token。
+17. MCP 无法按 session 隔离。我多 session 并行时，有个 session 因为在 windows 上没法跑 miri，就用我的 mcp 连到 linux 机器上跑，然后大幅扰乱了另一个 session 的 benchmark。
 
 ## [lazygit](https://github.com/jesseduffield/lazygit)
 

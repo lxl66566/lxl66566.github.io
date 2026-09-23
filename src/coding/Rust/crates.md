@@ -284,7 +284,9 @@ RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark �
 
 ### Hashes
 
-虽然前面批了一顿 RustCrypto，但是在 [hashes](https://github.com/RustCrypto/hashes) 上粗看了一下，RustCrypto 的实现也没什么可挑剔的。常用的 hash 算法，比如 sha2，基本都已经顶到指令集的性能上限。而且 RustCrypto 支持的指令集还多，loongarch 都有，实在是开了眼界。
+虽然前面批了一顿 RustCrypto，但是在 [hashes](https://github.com/RustCrypto/hashes) 上粗看了一下，~~RustCrypto 的实现也没什么可挑剔的~~。比如 sha2，基本都已经顶到指令集的性能上限。而且 RustCrypto 支持的指令集还多，loongarch 都有，实在是开了眼界。
+
+ps. 打脸了，有人搞了个 [simd sha1](https://sam.dev/blog/faster-sha1-collision-detection) 把 RustCrypto 的 sha1-checked 秒杀了。不能只看 sha2 等典型 crate。
 
 ### hex
 
