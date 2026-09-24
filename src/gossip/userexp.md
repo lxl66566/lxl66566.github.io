@@ -41,6 +41,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 默认启动下，Page Up 和 Page Down 无法翻页！！必须用 `--tui-mode fullscreen` 启动，或者 config 里配 `"tuiMode": "fullscreen"`。
 - `pi update --extensions` 过程中 Ctrl + C 无法中断。
 - pi 不会自动记住上次使用的 model。我要是设置了 defaultModel + defaultProvider，就只能一直用设置的默认值；要是不设置，它每次开 session 都会自动用 deepseek-v4-pro，实在是太坏了。
+- `pi update --extensions` 会污染你 current dir 的 pnpm-lock.yaml。不是，这玩意连作用域都不管的？
 
 插件相关：
 
