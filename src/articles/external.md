@@ -42,3 +42,4 @@ tag:
 18. [一场有关数字世界自决权的战争](https://0x7f.cc/digital-autonomy-war/)
 19. [Friends Don't Let Friends Use Ollama](https://sleepingrobots.com/dreams/stop-using-ollama/)，批判 Ollama
 20. [错位的量化金融](https://blog.yuka.living/2026/06/25/quant/)（[知乎已下架](https://www.zhihu.com/question/2012257107374790462/answer/2052859132592629082)）
+21. [Why performance optimization is hard work](https://purplesyringa.moe/blog/why-performance-optimization-is-hard-work/)

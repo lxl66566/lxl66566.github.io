@@ -74,6 +74,7 @@ const data: SpeedupItemType[] = [
       "瑠璃櫻",
       "サルテ",
       "RIDDLE JOKER",
+      "DRACU-RIOT! QHD Edition"
     ],
     valid_name: "krkr_xp3_enc",
     engine: "krkr",

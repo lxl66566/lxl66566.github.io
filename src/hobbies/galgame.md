@@ -122,6 +122,17 @@ LunaTranslator 使用心得：
 :::
 
 <GalList>
+<template #DRACURIOT>
+
+我也忘了资源从哪来的，反正推到中间觉得不对劲，怎么 R18 内容都被挡住了。然后去找补丁，最后[重新打了一个包](https://t.me/absolutexsresource/108)。
+
+- 第一次问路那段，尬死我力
+- 想吃本岛蛋糕的话，不能叫代购吗
+- 这部 galgame 给我的感觉又是，「快看是新来的吸血鬼耶我们来霸凌他吧」，怎么最近我推的 galgame 总是这股味，跟 RIDDLE JOKER 简直完全一致
+- 一边严禁泄漏吸血鬼的情报，一边让人类和吸血鬼一起上课，这是想的哪一出？
+- 女主其实可以直接叫做 μ
+
+</template>
 <template #次元凸破恋战姬>
 
 - 第一次玩水晶社的游戏，感觉人物表情和日常立绘控制得都非常不错。我个人而言，比起 CG 我其实更看中日常立绘的。
@@ -2126,6 +2137,9 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - 咲夜叙-妖刀的约定-
 - とける風花とシロうさぎ
 - CAFE-TRICAL-CAFE
+- アンスリウム-i entrust to you-
+- 王様恋愛
+- サヤガタリ-妖刀の約束-
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 

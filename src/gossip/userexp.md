@@ -71,7 +71,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 闲时任务限制不允许 spawn 后台 subagent，只能用前台 subagent。前台 subagent 的一个坏处是每一轮都必须等待**所有** subagent 完成，主 agent 才能继续任务，如果一个 subagent 耗时过长会极大拖慢进度；还有如果被打断或者超时，subagent 的记忆可能就丢失了。（这里用「可能」，是因为 zcode 看 subagent 的思考过程，有时候能打开，但有时候又打不开）
   - 嘛，有 subagent 用也已经很赚了，每次我开 3 个 subagent 一起干活可以产出远超一轮 500k token 的价值。
 - 闲时任务不支持在 ssh 机器上跑，于是我还特地写了一个 [shell-proxy](https://github.com/lxl66566/shell-proxy) 工具，以 MCP 的方式提供给 agent/subagent，这样就可以在闲时任务跑在远程 Linux 机器上了。
-- 20260917 闲时任务改为了每日一次。
+- 20260917 闲时任务改为了每日一次、一次最长 3 小时。
 
 ### 开喷
 

@@ -666,6 +666,7 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 
 - 心之形心之色心之声 ✅
 - Deep One ✅
+- DRACU-RIOT! QHD Edition ✅
 - 死に逝く騎士、異世界に響く断末魔 ❌
 - 瑠璃櫻 ❌
 - サルテ ❌
@@ -686,6 +687,7 @@ GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试�
 至于上述那些不行的……那当然是因为 GARbro 不更新了，并且其他的大部分 fork/mod 都没有添加这些加密方式，因此没法解。虽然用 KrkrExtract 也可以，但是工作量太大，而且会被剧透，因此不干。
 
 - RIDDLE JOKER 特殊一些，GARbro 有收录但是 voice.xp3 解压并转换音频格式会出错；如果不转换格式可以解成功，但是解出来是无效 ogg。看着 `OggS` 之前多加了一个 header，但是把 header 移除以后也无法播放，不太清楚问题是啥。
+- DRACU-RIOT! QHD Edition 也比较特殊（怎么都是柚子社的奇葩打包），voice.xp3 解出来还带了一堆非音频，还没法一把转成 ogg 然后 audio loudness normalize；看着文件名是乱码但是实际上就是这个名；然后 Garbro 有 bug，同样的 enc 封包还封不回去。不过玩这个的时候已经是 AI 时代，[随手破解了下 voice.xp3 的封包](https://gist.github.com/lxl66566/c837cfac4531d280632389f4c92d0105)，但是这个方案不能用到 adult.xp3 上，我后面也懒得搞了。
 
 </template>
 <template #CatSystem2>

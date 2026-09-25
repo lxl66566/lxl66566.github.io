@@ -2,6 +2,14 @@ import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "DRACU-RIOT!",
+    valid_name: "DRACURIOT",
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-09-24",
+    },
+  },
+  {
     name: "次元凸破恋战姬！！",
     valid_name: "次元凸破恋战姬",
     other_names: ["ディメンション凸ラバース！！"],
