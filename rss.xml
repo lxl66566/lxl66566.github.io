@@ -6,8 +6,8 @@
     <link>https://absx.pages.dev/</link>
     <description>没什么有价值的内容的，真的！</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 25 Sep 2026 20:29:10 GMT</pubDate>
-    <lastBuildDate>Fri, 25 Sep 2026 20:29:10 GMT</lastBuildDate>
+    <pubDate>Mon, 28 Sep 2026 02:30:51 GMT</pubDate>
+    <lastBuildDate>Mon, 28 Sep 2026 02:30:51 GMT</lastBuildDate>
     <generator>@vuepress/plugin-feed</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>推荐</category>
@@ -1172,12 +1172,13 @@
       <link>https://absx.pages.dev/articles/speedup.html</link>
       <guid>https://absx.pages.dev/articles/speedup.html</guid>
       <source url="https://absx.pages.dev/rss.xml">SPEED UP！与 galgame 解封包</source>
-      <description>SPEED UP！与 galgame 解封包 本文主要包含了我对 galgame 语音加速的探索全过程。各章节大致按照时间顺序排布。主要内容在：二试封包 和 dll wrapper v0 v1。 我打 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 GINKA（后来还玩了更多不一一列举了）。游玩这几部作品让我非常兴奋：使用二倍速播放音频...</description>
+      <description>SPEED UP！与 galgame 解封包 本文主要包含了我对 galgame 语音加速探索的全过程。如果您对技术内容不感兴趣，只想使用 galgame 语音加速工具：请前往 GalgameManager 安装，添加游戏并设置语音加速插件，启动游戏即可。 本文各章节大致按照时间顺序排布。主要内容在：二试封包 和 dll wrapper v0 v1。 ...</description>
       <category>教程</category>
       <category>探索</category>
       <pubDate>Sat, 27 Jul 2024 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[
-<p>本文主要包含了我对 galgame 语音加速的探索全过程。各章节大致按照时间顺序排布。主要内容在：<a href="#%E4%BA%8C%E8%AF%95%E5%B0%81%E5%8C%85">二试封包</a> 和 dll wrapper <a href="#dll-wrapper-v0">v0</a> <a href="#dll-wrapper-v1">v1</a>。</p>
+<p>本文主要包含了我对 galgame 语音加速探索的全过程。<strong>如果您对技术内容不感兴趣，只想使用 galgame 语音加速工具</strong>：请前往 <a href="https://github.com/lxl66566/GalgameManager" target="_blank" rel="noopener noreferrer">GalgameManager</a> 安装，添加游戏并设置语音加速插件，启动游戏即可。</p>
+<p>本文各章节大致按照时间顺序排布。主要内容在：<a href="#%E4%BA%8C%E8%AF%95%E5%B0%81%E5%8C%85">二试封包</a> 和 dll wrapper <a href="#dll-wrapper-v0">v0</a> <a href="#dll-wrapper-v1">v1</a>。</p>
 <p>我打 <a href="/hobbies/galgame.html" target="_blank">galgame</a> 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 <em>GINKA</em>（后来还玩了更多不一一列举了）。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，<s>相当于延长了一倍的生命</s>。经历过加速后，再次玩其他语音速度极低的 galgame（真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。</p>
 <h2>音频处理软件</h2>
 <p>音频处理领域很多软件都是商业非自由软件，要交钱的，毕竟音频处理本身也是天坑。而我找不到能对其他 APP 进行音频加速的软件。</p>
