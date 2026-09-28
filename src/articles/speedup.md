@@ -13,7 +13,9 @@ tag:
 
 # SPEED UP！与 galgame 解封包
 
-本文主要包含了我对 galgame 语音加速的探索全过程。各章节大致按照时间顺序排布。主要内容在：[二试封包](#二试封包) 和 dll wrapper [v0](#dll-wrapper-v0) [v1](#dll-wrapper-v1)。
+本文主要包含了我对 galgame 语音加速探索的全过程。**如果您对技术内容不感兴趣，只想使用 galgame 语音加速工具**：请前往 [GalgameManager](https://github.com/lxl66566/GalgameManager) 安装，添加游戏并设置语音加速插件，启动游戏即可。
+
+本文各章节大致按照时间顺序排布。主要内容在：[二试封包](#二试封包) 和 dll wrapper [v0](#dll-wrapper-v0) [v1](#dll-wrapper-v1)。
 
 我打 [galgame](../hobbies/galgame.md) 已经有几年了，不过也只接触了几部能够语音加速的游戏：紫社全套和 _GINKA_（后来还玩了更多不一一列举了）。游玩这几部作品让我非常兴奋：使用二倍速播放音频，我就能节省一半的游戏时间，~~相当于延长了一倍的生命~~。经历过加速后，再次玩其他语音速度极低的 galgame（真红真红真？）让我感觉像是在浪费生命。因此我尝试寻找能够让我节省时间的游戏语音加速方式。
 
@@ -687,7 +689,7 @@ GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试�
 至于上述那些不行的……那当然是因为 GARbro 不更新了，并且其他的大部分 fork/mod 都没有添加这些加密方式，因此没法解。虽然用 KrkrExtract 也可以，但是工作量太大，而且会被剧透，因此不干。
 
 - RIDDLE JOKER 特殊一些，GARbro 有收录但是 voice.xp3 解压并转换音频格式会出错；如果不转换格式可以解成功，但是解出来是无效 ogg。看着 `OggS` 之前多加了一个 header，但是把 header 移除以后也无法播放，不太清楚问题是啥。
-- DRACU-RIOT! QHD Edition 也比较特殊（怎么都是柚子社的奇葩打包），voice.xp3 解出来还带了一堆非音频，还没法一把转成 ogg 然后 audio loudness normalize；看着文件名是乱码但是实际上就是这个名；然后 Garbro 有 bug，同样的 enc 封包还封不回去。不过玩这个的时候已经是 AI 时代，[随手破解了下 voice.xp3 的封包](https://gist.github.com/lxl66566/c837cfac4531d280632389f4c92d0105)，但是这个方案不能用到 adult.xp3 上，我后面也懒得搞了。
+- DRACU-RIOT! QHD Edition 也比较特殊（怎么都是柚子社的奇葩打包），voice.xp3 解出来还带了一堆非音频，还没法一把转成 ogg 然后 audio loudness normalize；看着文件名是乱码但是实际上就是这个名；然后 GARbro 根本没有支持 HxCrypt 的封包。我刚开始的时候让 AI 自己折腾，写了个 [voice.xp3 的封包脚本](https://gist.github.com/lxl66566/c837cfac4531d280632389f4c92d0105)，但是这个脚本是一次性的不能用到 adult.xp3 上（而且强制要求替换内容小于等于原始内容），不太好用。于是就 fork 了 GARbro 开始改，改出了一版[支持 HxCrypt 封包的版本](https://github.com/lxl66566/GARbro/releases)，挺好用的。
 
 </template>
 <template #CatSystem2>
@@ -1212,7 +1214,7 @@ hook dsound.dll 只能在一部分引擎上使用，对于较新引擎的 galgam
 
 这对我来说又是一次鼓舞：因为我之前折腾 [unity 封包](#二试封包)一直受挫，在深刻体会到解封包的局限性和无力感后，能找到一个可行的方向，实在是……意义党逢意义。
 
-### 遇到的问题
+### V0 版本遇到的问题
 
 在开发 dll wrapper 的时候也遇到了许多问题，这里记录一下。
 
@@ -1299,6 +1301,20 @@ V0 已经勉强能用了，比如我用 V0 推完了魔裁，但是问题还是�
 问题解决后，再做一下 dsound 兼容、调参平衡延迟和稳定性，就可以投入使用了。~~立刻开打《ふゆから、くるる。》！不对我怎么还要上班 T_T~~
 
 回家一测试，AudioSpeedHack 在我硬盘上的所有 18 个 galgame 的加速成功率是 **100%**。然后我还发现新版的 MMDevAPI 真的非常牛逼，只 MMDevAPI.dll 一个就实现了 100% 覆盖率，它就是 WASAPI 的化身，我为了它付出的时间都是值得的。dsound 可有可无，不过可以作为叠加加速的工具，还是有用武之地的。
+
+### V1 版本遇到的问题
+
+V1 版本遇到这些问题已经是 2026 中旬了，此时正是 AI agent 爆火时期，因此这些问题基本也都是 agent 排查，简单解决。
+
+#### MMDevAPI 在部分游戏无声
+
+DRACU-RIOT! QHD Edition、KANADE 两个游戏使用 MMDevAPI 加速音频时会变为无声；dsound 加速正常。排查发现是游戏进程限制了 DLL 搜索顺序，而我的实现是注册表里将 InprocServer32 设为裸名 `MMDevAPI.dll`，游戏无法加载根目录下的 MMDevAPI.dll proxy 而判定为没有音频设备。
+
+#### 鬼哭街黑屏
+
+加载 MMDevAPI 后启动鬼哭街，直接黑屏无法进入游戏。
+
+根因：NScripter 系引擎每秒新建/销毁上千个音频 client（什么狗屎玩意），而我在
 
 ## 后话
 

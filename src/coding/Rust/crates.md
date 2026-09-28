@@ -379,6 +379,6 @@ opus-rs 永远地失去了我的一颗星星。
 
 还有踩过的一个坑是 [fs 上 content-length 不可用](https://github.com/apache/opendal/discussions/6323)，于是我又要为 fs backend 写一堆胶水代码……
 
-另外还有一个[安全相关的 PR](https://github.com/apache/opendal/pull/7684)，这人修了 `..` 的 path 逃逸问题，提了一嘴 `/` 但是没有后文了，我也不知道这是怎么跟安全讨论的…… [RFC 7799](https://github.com/apache/opendal/blob/0c360d103f93728889009b6e563bbaf3b0072e71/core/core/src/docs/rfcs/7799_path_normalization_and_secure_hardening.md) 也没有任何下文，没有 tracking issue。
+另外还有一个[安全相关的 PR](https://github.com/apache/opendal/pull/7684)，这人修了 `..` 的 path 逃逸问题，提了一嘴 `/` 但是没有后文了，我也不知道这是怎么跟安全讨论的…… [RFC 7799](https://github.com/apache/opendal/blob/0c360d103f93728889009b6e563bbaf3b0072e71/core/core/src/docs/rfcs/7799_path_normalization_and_secure_hardening.md) 也没有任何下文，没有 tracking issue。(ps. fixed on [#8005](https://github.com/apache/opendal/pull/8005))
 
 反正 opendal 带给我的感觉就是，能用，但用着很难受。
