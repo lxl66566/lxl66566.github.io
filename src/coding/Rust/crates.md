@@ -382,3 +382,9 @@ opus-rs 永远地失去了我的一颗星星。
 另外还有一个[安全相关的 PR](https://github.com/apache/opendal/pull/7684)，这人修了 `..` 的 path 逃逸问题，提了一嘴 `/` 但是没有后文了，我也不知道这是怎么跟安全讨论的…… [RFC 7799](https://github.com/apache/opendal/blob/0c360d103f93728889009b6e563bbaf3b0072e71/core/core/src/docs/rfcs/7799_path_normalization_and_secure_hardening.md) 也没有任何下文，没有 tracking issue。(ps. fixed on [#8005](https://github.com/apache/opendal/pull/8005))
 
 反正 opendal 带给我的感觉就是，能用，但用着很难受。
+
+### SIMD
+
+rust std::arch 里已经有一堆平台相关的 unsafe 函数，用于直接执行 simd 指令。而 simd 库的重点是如何把这堆指令尽可能零成本抽象为平台无关的 safe 函数，供外部更方便地使用，减少用户心智负担。
+
+目前 rust 社区完成度最高的是 fearless_simd，202609 刚发布 1.0 稳定版本。虽然我对其印象不佳，其在 AVX512、wasm 的 simd 实现中还是有一些小缺点。

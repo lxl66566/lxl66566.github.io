@@ -149,6 +149,7 @@ wsl --shutdown
 2025+ 年 AI 已经非常强大，语法问题完全可以开 online search 问 AI。
 
 - 先阅读 [NixOS 中文 - Nix 语言快速入门](https://nixos-cn.org/tutorials/lang/QuickOverview.html)。
+- attrset 就是类似 Object 的概念，例如 `{ a = 1; b = 2; }` 就是一个 attrset
 - 条件判断：一般接触多的是 `if..then..else` 和 `lib.mkIf`。
   - 两个 if 里条件只能是 bool，不能是其它类型。
   - `lib.mkIf` 和 `if..then..else null;` 是不一样的！`lib.mkIf` 求值时会被转换成类似 `{ _type = "if"; condition = ...; content = ...; }` 的形式，方便求值时验证和 lazy。
@@ -180,6 +181,7 @@ wsl --shutdown
         '';
     ```
   - 如果路径里本身就含有变量呢？此时需要利用 `path + str = path` 的特性，使用 `"${./. + "/${var}/file"}"`。
+- `lib.pipe val [ f g h ]` 等价于 `h (g (f val))`，非常 fp
 
 ### OS 基础
 

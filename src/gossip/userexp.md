@@ -21,18 +21,39 @@ tag:
 
 oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所以遵循 pi 的哲学，想加啥插件自己加。
 
-使用技巧：
+### 使用技巧
 
 - 两次 Ctrl + C 退出
 - `/resume` 恢复之前的 session，而不是 `/session`；`/tree` 浏览对话并 revert 而不是 `/revert`。
 
-优点：
+### 优点
 
 - 我比较偏向极简主义，挺喜欢 pi 的哲学。
 - 默认展开 agnet 思考过程。
+- `npm:pi-subagents` 挺好用的，做了主 agent 和 subagent 的交互，主 agent 可以根据 subagent 的反馈作出决策。比较适合 team。
+  - 默认 subagent 有 30min 超时，对我来说有点短了。不过可以[全局调整](https://github.com/nicobailon/pi-subagents/blob/d44b514e/docs/configuration.md?plain=1#L268-L274)。
 
-坑点/吐槽：
+### 坑点/吐槽
 
+- **pi 不读 ~/.agents/AGENTS.md**。并且 symlink 没法跨平台使用，我只能写个脚本注入我的 system prompt（pi 0.86）。
+  ```ts
+  // ~/.pi/agent/extensions/load-global-agents-md.ts
+  import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+  import fs from "fs";
+  import os from "os";
+  import path from "path";
+  export default function(pi: ExtensionAPI) {
+    const agentsPath = path.join(os.homedir(), ".agents", "AGENTS.md");
+    pi.on("before_agent_start", (event) => {
+      if (!fs.existsSync(agentsPath)) return;
+      event.systemPromptOptions.contextFiles.push({
+        path: agentsPath,
+        content: fs.readFileSync(agentsPath, "utf-8"),
+      });
+    });
+  }
+  ```
+- pi 会在 `~/.pi/agent` 里拉一大坨东西，config 和 data 耦合在一起。想备份数据的看到这里一下就死了。。
 - 不像 opencode 喜欢用 ctrl + p，pi 主要是靠打出一个 `/` 然后在候选列表里选 command 来进行操作的。但是这个列表的出现有相当大的延迟，只要我打字快一些，pi 就会把我的 `/tree` 这种内容直接当成跟 AI 的对话发出去。。。
   - 然后也是因为这个 `/command` 的原因，在已经写了对话内容的情况下，就没法再调出 command 了。。没法写完一段 prompt 之后再切模型。
 - Windows 下我是 scoop 安装的 pi 和 git；这样的话 pi 调用 bash 工具的时候有 bug，会报错 `No bash shell found` ([ref](https://github.com/earendil-works/pi/issues/5103))。我已经把 `C:\Users\<username>\scoop\apps\git\current\bin` 加入了 PATH，但是没有任何作用。
@@ -49,6 +70,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - `npm:pi-web-access` 这个也是狗屎，如果你的 pi 设置了 `"npmCommand": ["pnpm"]` 则这个插件根本启动不了。这个插件[早期还有 path traversal 安全问题](https://github.com/nicobailon/pi-web-access/security/advisories/GHSA-8phw-6qw6-xhq6)。
   - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起和致死量 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
 - pi-lens 会自动修改你的代码，自动执行 fmt + fix，但是很多时候我并不希望这种行为（比如 lsp 才不会管你的兼容性和 MSRV、PR 最小化原则；而且 rust clippy 的 auto fix 可不一定是无害的），该行为也会让 AI 困惑、怀疑人生。我用了一阵[被坑了](https://t.me/absxsgroup/11865)，于是就干掉了。
+- `npm:pi-auto-compact` 只会在模型与人类交互的时候才会触发 compact。如果模型自己一直在跑，是不会 compact 的。我的需求是要让模型自己在跑到一定量的时候 compact，所以还是放弃吧，不如直接设置 `~/.pi/agent/models-store.json` 的 contextWindow。
 
 ## [zcode](https://zcode.z.ai/cn)
 
@@ -84,7 +106,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
    - **恶性 bug**：zcode 给 agent 提供的「内置任务」功能（实际上是 Bash + `run_in_background: true` 实现的）非常难用，很多时候终端进程都已经 panic 了，但是任务本身不会结束，就一直挂着浪费时间等 timeout。所以全局提示里需要写一句“禁止使用 run_in_background”。
 2. 对于 agent 命令操作，zcode 其实是有沙盒的。但是 AI 不知道，有时候要试错多次，。
 3. 周末赠送的是试用装的 glm 5.3 flash，token 非常多。但是这个试用装不是直接加入你的帐号而是作为单独的一个试用帐号提供，我找了半天都没找到在哪里切换回我自己的帐号。实在是居心险恶。
-   - 独立试用帐号的缺点就是没法同时跑免费的 glm 5.3 flash 和付费的 glm 5.3。
+   - ~~独立试用帐号的缺点就是没法同时跑免费的 glm 5.3 flash 和付费的 glm 5.3。~~ (2026.09 月末修复了，现在可以主帐号和试用帐号的额度同时跑)
    - 这免费体验帐号开 subagent 的时候经常会有莫名其妙的失败，比如说有的报错信息是 _captcha verify failed_，我直接黑人问号？？
    - 免费帐号并发数非常少（大概 5 个），开不了多少 subagent。
      - 不干活的主 agent 居然也占用一个并发数？
