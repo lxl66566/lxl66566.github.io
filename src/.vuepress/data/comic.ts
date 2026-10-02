@@ -1211,5 +1211,13 @@ export default [
   { id: "567687", aScore: 8.6, bScore: 8, order: 2, info: "#猫娘", bak: "https://telegra.ph/ねこのみみ-Thalia-渋々頼みを聞いてくれるうちの猫-2-中国翻訳-DL版-08-21" },
   { id: "568167", aScore: 8.8, bScore: 7.6, order: 3, info: "#猫娘 #女仆", bak: "https://telegra.ph/ねこのみみ-Thalia-渋々頼みを聞いてくれるうちの猫-3-中国翻訳-DL版-08-20" },
   { id: "671654", aScore: 7.2, bScore: 9, info: "#纯爱 #侄女 #女主动 #逆调教" },
+  { id: "676812", aScore: 9.3, bScore: 8.8, info: "#蔚蓝档案 #调教 #loli", bak: "https://telegra.ph/C108-DOGYEAR-九条だんぼ-Operation-Shion-ブルーアーカイブ-中国翻訳-08-25" },
+  { id: "677538", aScore: 9.1, bScore: 5.2, order: 2, info: "#兽耳 #裸体模特 #女神 #潮吹 #武藤まと", bak: "https://telegra.ph/ANCHOR-武藤まと-続すじ女神さまとうすい本-Chinese-紫藤汉化组-08-28-2" },
+  { id: "677515", aScore: 7.1, bScore: 8.6, info: "#师生 #loli #强制性交 #うさ城まに", bak: "https://telegra.ph/Usacastle-うさ城まに-全部このちゃんのせいだから-中国翻訳-DL版-08-28-4" },
+  { id: "549489", aScore: 8.6, bScore: 6.3, info: "#蔚蓝档案 #纯爱 早上好星野", bak: "https://telegra.ph/MoNyaMoNya-Sera-Shousa-Ohayou-Hoshino--早上好星野-無修正-08-27-2" },
+  { id: "677274", aScore: 6.5, bScore: 7.6, info: "#蔚蓝档案 #女仆 #调教 #项圈", bak: "https://telegra.ph/だいなそハウス-かいぢう-才羽ミドリといちゃラブえっちする本-ブルーアーカイブ-中国翻訳-DL版-08-27" },
+  { id: "638944", aScore: 8, bScore: 9.4, info: "#暴力 #电车 #手铐 #师生 #地雷 だから僕は家庭教師を辞めた", order: 2, bak: "https://telegra.ph/からももたると-きんだつ-だから僕は家庭教師を辞めた2上-中国翻訳-無修正-DL版-08-27" },
+  { id: "684138", aScore: 7.7, bScore: 8.5, info: "#终末地 #兽耳 #发情", bak: "https://telegra.ph/邪惡明太子邪惡明太子-當洛西化身野獸-08-25" },
+  { id: "676839", aScore: 6.7, bScore: 9, info: "#明日方舟 #loli #体检 #兽耳 #天然", bak: "https://telegra.ph/邪惡明太子邪惡明太子-小鈴蘭的特別體檢-08-25-2" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
