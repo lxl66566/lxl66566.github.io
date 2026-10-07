@@ -62,6 +62,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 默认启动下，Page Up 和 Page Down 无法翻页！！必须用 `--tui-mode fullscreen` 启动，或者 config 里配 `"tuiMode": "fullscreen"`。
 - `pi update --extensions` 过程中 Ctrl + C 无法中断。
 - pi 不会自动记住上次使用的 model。我要是设置了 defaultModel + defaultProvider，就只能一直用设置的默认值；要是不设置，它每次开 session 都会自动用 deepseek-v4-pro，实在是太坏了。
+  - 更新以后可以记住 model 了。
 - `pi update --extensions` 会污染你 current dir 的 pnpm-lock.yaml。不是，这玩意连作用域都不管的？
 
 插件相关：
@@ -86,6 +87,8 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 ### 经验
 
 有一些技巧，可以卡这个重置的掉落时间。重置每天最多掉落两次，限 2h 内使用，并且只会在 zcode 处于前台窗口的时候掉落。因此我可以不打开 zcode，大概到距离自然刷新还有 30min 的时候，打开 zcode 并获取重置卡。这样自然刷新后距离重置卡到期还会有 1.5h 的 gap，可以够我蹬完一管。
+
+一定要开启 _自动归档旧任务_。zcode 的 session 存储设计有问题，不开的话 `~/.zcode` 大小会非常恐怖。
 
 还有说说闲时任务的限制：
 
@@ -124,10 +127,15 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
     - 也没法看 subagent 到底消耗了多少 token。
 14. 不像 opencode 给 AI 发消息可以“插队”在工具调用里；zcode 在 AI 输出时发送消息，必须排队到 AI 完成全部任务后才能被 AI 看到。
     - 点击「立即」按钮（打断会话，发出消息），快速切到其他 session，再回来以后会看到消息并没有发出去（仍然留在队列里），但是会话的打断是实打实发生的。抽象啊。
+    - 新版本设置里可以改「交互行为」，改成「引导」就是我需要的功能了。
 15. **脑残设计**：如果文件没读过直接写就会报错 `File has not been read yet. Read it first before writing to it.` 我实在想不明白，凭什么没读过就不让写？如果这文件很长，用这种傻逼理由打断首次写入，让我消耗了双倍输出 token，实在是有点蠢。
     - claude code 开的坏头。AI 完全可以在终端读到文件内容，然后进行一个 Write；这个规则把该正常行为给否定了。
 16. 会话不能导出导入，且没有同步；多设备开发堪比地狱。另外我设置的「命令」也不会同步，本来就难用的东西，现在我肯定不用了。
 17. MCP 无法按 session 隔离。我多 session 并行时，有个 session 因为在 windows 上没法跑 miri，就用我的 mcp 连到 linux 机器上跑，然后大幅扰乱了另一个 session 的 benchmark。
+18. zcode 上传 git 丑闻曝光以后，天天往我的项目里放你妈的 `.zcodeignore` 文件，污染我项目
+19. zcode 的 session 存储设计有问题 ([src](https://t.me/withabsolutex/2844))。session 的 jsonl 每一行都包含完整的 context，一次长任务可以跑到 2GB 的磁盘占用，非常恶心。
+20. zcode 只允许修改上一条提示词并发送，如果要改很久以前的提示词就只能 fork 了。改提示词、fork 点都必须是 LLM 输出结束才行，不能在 LLM 与工具交互中间打断。
+21. 修改上一条提示词时，同时修改模型，则界面上展示使用的新的模型，但是实际调用还是调用老的模型。
 
 ## [lazygit](https://github.com/jesseduffield/lazygit)
 
