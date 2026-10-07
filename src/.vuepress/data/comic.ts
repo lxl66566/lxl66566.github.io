@@ -1219,5 +1219,7 @@ export default [
   { id: "638944", aScore: 8, bScore: 9.4, info: "#暴力 #电车 #手铐 #师生 #地雷 だから僕は家庭教師を辞めた", order: 2, bak: "https://telegra.ph/からももたると-きんだつ-だから僕は家庭教師を辞めた2上-中国翻訳-無修正-DL版-08-27" },
   { id: "684138", aScore: 7.7, bScore: 8.5, info: "#终末地 #兽耳 #发情", bak: "https://telegra.ph/邪惡明太子邪惡明太子-當洛西化身野獸-08-25" },
   { id: "676839", aScore: 6.7, bScore: 9, info: "#明日方舟 #loli #体检 #兽耳 #天然", bak: "https://telegra.ph/邪惡明太子邪惡明太子-小鈴蘭的特別體檢-08-25-2" },
+  { id: "679507", aScore: 8.4, bScore: 7.7, info: "#蔚蓝档案 #露出 #公厕 #兽耳 #项圈 #调教 #loli", bak: "https://telegra.ph/EASY-MODE-HEROS-あなくろ-先生私にもっとセクハラして-ブルーアーカイブ-中国翻訳-DL版-08-29" },
+  { id: "678024", aScore: 10.2, bScore: 8.9, info: "#兽耳 #正太 #堕天计划 堕天計画 ～孤独を秘めた天使長編～", bak: "https://telegra.ph/234ド-イチリ-堕天計画-孤独を秘めた天使長編-中国翻訳-DL版-08-30-4" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
