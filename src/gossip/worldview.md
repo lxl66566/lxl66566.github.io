@@ -1,6 +1,6 @@
 ---
 date: 2023-02-22
-icon: globe
+icon: solid/globe
 category:
   - 主张
   - 生活

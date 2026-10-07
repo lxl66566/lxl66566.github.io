@@ -1,6 +1,6 @@
 ---
 date: 2023-10-28
-icon: cubes
+icon: solid/cubes
 category:
   - 教程
   - 推荐
@@ -185,20 +185,20 @@ sudo systemd-nspawn -D container  # 进入容器
 
 但是只要在中国有原生家庭，就逃不开 QQ 和微信。
 
-- QQ 还好说，有 QQNT（`linuxqq` <Badge text="AUR" />）用。
+- QQ 还好说，有 QQNT（`linuxqq` <span class="abs-badge">AUR</span>）用。
   - 不要安装 [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT)。Archlinux 是滚动更新，而第三方为爱发电的注入基本上跟不上更新节奏。我试了 bin 包和 git 包都会闪退。
 - [微信](https://wiki.archlinuxcn.org/wiki/微信)就是[垃圾的代名词](../../gossip/fuckxxx.md#微信有多难用)。我对微信的要求是不想用 wine，反正我没有朋友圈、小程序需求。
-  - 首推当然还是 `wechat-universal-bwrap` <Badge text="AUR" />，最 popular 的一集，还能防止拉屎。
-  - 也试过 `wechat-uos` <Badge text="AUR" />，在暗色模式下有 bug，并且进不了托盘。
+  - 首推当然还是 `wechat-universal-bwrap` <span class="abs-badge">AUR</span>，最 popular 的一集，还能防止拉屎。
+  - 也试过 `wechat-uos` <span class="abs-badge">AUR</span>，在暗色模式下有 bug，并且进不了托盘。
   - [wechat-need-web](https://github.com/lqzhgood/wechat-need-web) 可以让你能够使用微信网页版。
 
 ### 邮件
 
 我的需求挺简单，只是 IMAP 接收和多账号管理。
 
-Thunderbird (`thunderbird-i18n-zh-cn` <Badge text="extra" />) 是一个重量级的邮件客户端，支持收发，多账号。好用是挺好用，就是太重了（600+M RAM），于是我想寻找更轻量的邮件客户端。
+Thunderbird (`thunderbird-i18n-zh-cn` <span class="abs-badge">extra</span>) 是一个重量级的邮件客户端，支持收发，多账号。好用是挺好用，就是太重了（600+M RAM），于是我想寻找更轻量的邮件客户端。
 
-由于我桌面用的 kde，试了下 kmail，用不了，一直报 Akonadi 有问题，点 _详情_ 也点不开。我装了 `kde-pim` <Badge text="包组" /> 也无济于事。据说 kmail 添加 gmail 也[有问题](https://t.me/archlinuxcn_group/3030332)，因此放弃。
+由于我桌面用的 kde，试了下 kmail，用不了，一直报 Akonadi 有问题，点 _详情_ 也点不开。我装了 `kde-pim` <span class="abs-badge">包组</span> 也无济于事。据说 kmail 添加 gmail 也[有问题](https://t.me/archlinuxcn_group/3030332)，因此放弃。
 
 ### 文本编辑器
 
@@ -284,7 +284,7 @@ ffmpeg -f pulse -i 0 -c:a libmp3lame -b:a 128k -af "volume=0.04" pulse.mp3
 
 it works.
 
-当然，也可以用 `alsa-utils`<Badge text="extra"/> 包：`arecord -f dat test.wav`，但是又不能改音量又不支持压缩格式，显然不如 ffmpeg。
+当然，也可以用 `alsa-utils`<span class="abs-badge">extra</span> 包：`arecord -f dat test.wav`，但是又不能改音量又不支持压缩格式，显然不如 ffmpeg。
 
 ### 关于文档
 
@@ -307,7 +307,7 @@ linux 自带的是 `top`，由此衍生出了一堆 tui `*top`。我同时使用
 
 - `btop`：制作精美的 TUI 资源监视器，跨平台（甚至能在 windows 上用）
 - `htop`：top 加强，比较经典
-- `mission-center`<Badge text="archlinuxcn"/>：GUI，类似 windows 任务管理器，重量级
+- `mission-center`<span class="abs-badge">archlinuxcn</span>：GUI，类似 windows 任务管理器，重量级
 
 #### 文件系统
 
@@ -457,7 +457,7 @@ sudo systemctl enable --now tlp
 waydroid 是 linux 上的首选 android 模拟器。不过想用还是需要折腾一阵的。
 
 1. 切换为 zen 内核，参考[更换内核](./install_and_config.md#更换内核)
-   - 也可以用 linux-lily <Badge text="archlinuxcn" /> 内核
+   - 也可以用 linux-lily <span class="abs-badge">archlinuxcn</span> 内核
 2. 安装 waydroid，具体流程在 wiki 上有。
    - `pacman -S waydroid` 没有 Android 镜像，联网自动下载可能需要代理。
 

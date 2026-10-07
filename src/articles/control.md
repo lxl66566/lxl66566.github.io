@@ -1,6 +1,6 @@
 ---
 date: 2025-01-18
-icon: house-signal
+icon: solid/house-signal
 category:
   - 推荐
   - 评价

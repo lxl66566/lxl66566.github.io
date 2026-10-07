@@ -1,6 +1,6 @@
 ---
 date: 2023-11-29
-icon: pizza-slice
+icon: solid/pizza-slice
 category:
   - 主张
   - 生活

@@ -1,11 +1,9 @@
 ---
 date: 2022-05-04
-home: true
-layout: BlogHome
-hero: false
-category:
-  - 导航
+icon: solid/house
 ---
+
+<HomeProfile />
 
 # 绝对值\_x 的存在证明
 
@@ -17,14 +15,14 @@ category:
 
 ## 使用指南
 
-- <VPIcon icon="computer"/> **PC 端**（推荐）：上方选择对应板块以查看内容。在左侧分支中快速选择你想看的内容。
-- <VPIcon icon="mobile"/> **移动端**[^2]：右上角三线按钮选择板块。进入对应板块后，点击左上角按钮选择分支，快速选择你想看的内容。
-- 加密页面的密码若未特别说明，默认为我出生年份<span class="heimu" title="你知道的太多了">只是加个小门槛，反正真正需要加密的东西也不会放在这里。（当然也可以直接上源码</span>
-- 右上角搜索提供全文搜索功能（分词）。
+- **PC 端**（推荐）：上方选择对应板块以查看内容。在左侧分支中快速选择你想看的内容。
+- **移动端**[^2]：右上角三道杠按钮打开抽屉，按目录选择板块与文章。
+- 加密页面的密码若未特别说明，默认为我出生年份!!只是加个小门槛，反正真正需要加密的东西也不会放在这里。（当然也可以直接上源码!!
+- 右上角搜索提供全文搜索功能。
 - 如果末尾有 `external` 条目，一般是引用的外部文章，可以理解为**推荐阅读**。
 - ~~如果你认为博客很卡，加载很慢，那大概率是 cloudflare 在国内的问题，不是博客本身性能问题（笑）~~
 
-[^2]: _不推荐使用移动端的原因_：大表格观感较差；不支持**加粗字体**；目录不直观；在 [PageSpeed Insights](./farraginous/recommend_websites.md#工具) 上移动端性能得分只有 57，而桌面端为 99。
+[^2]: _不推荐使用移动端的原因_：大表格观感较差；在 [PageSpeed Insights](./farraginous/recommend_websites.md#工具) 上移动端性能得分只有 57，而桌面端为 99。
 
 ::: details 其他解释说明
 
@@ -63,3 +61,8 @@ category:
 
 - [asukaminato.notion.site](https://asukaminato.notion.site)
 - [夜天之书](https://www.tisonkun.org/)
+
+## 我的项目
+
+<HomeProjects />
+

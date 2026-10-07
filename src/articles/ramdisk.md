@@ -1,6 +1,6 @@
 ---
 date: 2023-07-29
-icon: diagram-next
+icon: solid/diagram-next
 category:
   - 推荐
   - 教程
@@ -48,7 +48,7 @@ sudo chmod -R 777 /mnt/tmp
 
 假设我们将 RAMDisk 挂载到 Z 盘：
 
-1. 在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="heimu" title="你知道的太多了">被坑了好几天</span>
+1. 在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）!!被坑了好几天!!
 2. 安装 RAM Disk 软件并挂载。
 3. 将 Windows Temp 环境变量设为此 RAM Disk.（可手动，但是 imdisk 提供一键设置）
 4. 如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。[src](https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&utm_medium=web2x&context=3)，保存为 `.reg` 文件后双击

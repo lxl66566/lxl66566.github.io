@@ -1,6 +1,6 @@
 ---
 date: 2023-11-25
-icon: circle-check
+icon: solid/circle-check
 category:
   - 推荐
   - 教程
@@ -50,7 +50,7 @@ tag:
 
 开源跨平台 Clash 客户端，rust + tauri 技术栈。
 
-相比 [Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。
+相比 [Clash for Windows](#clash-for-windows)，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而!!对于一般使用者无关紧要的!!功能会更少一些。
 
 其 _设置热键_ 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，懒得做订阅转换，放弃了 Clash Verge 而去使用了 [v2rayN](#v2ray)。
 
@@ -206,7 +206,7 @@ v2ray 的 Android 前端。不太好用。
 
 ## sing-box 系
 
-_sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 _The universal proxy platform_，以支持的协议多闻名。<heimu>缺点就是（早期）bug 也多。</heimu>
+_sing-box 系_ 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 _The universal proxy platform_，以支持的协议多闻名。!!缺点就是（早期）bug 也多。!!
 
 sing-box 发展到现在已经进行了大量优化，在内存占用、协议丰富度、CPU 性能方面都没什么短板。
 

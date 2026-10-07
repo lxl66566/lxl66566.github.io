@@ -1,6 +1,6 @@
 ---
 date: 2026-03-24
-icon: brands fa-git-alt
+icon: brands/git-alt
 category:
   - 编程
 tag:

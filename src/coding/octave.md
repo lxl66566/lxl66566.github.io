@@ -1,6 +1,6 @@
 ---
 date: 2023-11-14
-icon: brands fa-octopus-deploy
+icon: brands/octopus-deploy
 category:
   - 教程
 ---

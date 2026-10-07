@@ -1,6 +1,6 @@
 ---
 date: 2023-11-08
-icon: layer-group
+icon: solid/layer-group
 category:
   - 教程
   - 经历

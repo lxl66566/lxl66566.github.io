@@ -1,6 +1,6 @@
 ---
 date: 2026-07-24
-icon: cat
+icon: solid/cat
 category:
   - 爱好
 tag:

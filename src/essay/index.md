@@ -1,6 +1,6 @@
 ---
 date: 2022-05-06
-icon: newspaper
+icon: solid/newspaper
 category:
   - 随笔
   - 作者

@@ -1,6 +1,6 @@
 ---
 date: 2023-10-18
-icon: question
+icon: solid/question
 category:
   - 随笔
 tag:
@@ -30,7 +30,7 @@ anki 词典 + 小说。anki 词典的利用率高（反复看多次），而小�
 It's a `set`.
 
 - 羊癫疯不是癫疯。
-- 软盘不<heimu>一定</heimu>是软的
+- 软盘不!!一定!!是软的
 
 ## 一日轮回
 

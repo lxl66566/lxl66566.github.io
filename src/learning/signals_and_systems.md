@@ -1,6 +1,6 @@
 ---
 date: 2023-03-03
-icon: signal
+icon: solid/signal
 category:
   - 学习
 ---

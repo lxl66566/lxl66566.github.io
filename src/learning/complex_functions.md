@@ -1,5 +1,6 @@
 ---
 date: 2022-11-13
+icon: solid/infinity
 category:
   - 学习
 tag:

@@ -1,6 +1,6 @@
 ---
 date: 2022-08-13
-icon: brands fa-fort-awesome-alt
+icon: brands/fort-awesome-alt
 category:
   - 生活
 ---
@@ -27,7 +27,7 @@ category:
 
 查了一下是权限问题。然而 windows 权限设置[就是他妈一坨屎](../articles/windows/usage.md#权限控制)，我改来改去，都放了 _完全控制_，还是报错。之后也尝试了：使用管理员终端，更换 `TEMP` 位置，更换安装盘符，均无法正常安装。网上查到的要么是 clean cache，要么是改权限，没有一点用。
 
-<span class="heimu" title="你知道的太多了">妈的，不想玩了，跟这个傻卵 windows 爆了！（我仍然认为是 windows 的问题）</span>然后因为 `lstat` 是 linux 指令，突然想到在 git bash 中执行安装命令会怎样。于是问题解决了。。。。
+!!妈的，不想玩了，跟这个傻卵 windows 爆了！（我仍然认为是 windows 的问题）!!然后因为 `lstat` 是 linux 指令，突然想到在 git bash 中执行安装命令会怎样。于是问题解决了。。。。
 
 ```sh
 export ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"

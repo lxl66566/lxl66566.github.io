@@ -1,5 +1,5 @@
 ---
-icon: graduation-cap
+icon: solid/graduation-cap
 date: 2022-09-11
 category:
   - 生活

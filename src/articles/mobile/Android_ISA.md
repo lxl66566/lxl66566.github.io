@@ -1,6 +1,6 @@
 ---
 date: 2022-05-05
-icon: terminal
+icon: solid/terminal
 category:
   - 教程
 tag:

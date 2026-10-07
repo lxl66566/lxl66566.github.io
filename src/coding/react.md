@@ -1,6 +1,6 @@
 ---
 date: 2025-01-04
-icon: brands fa-react
+icon: brands/react
 category:
   - 编程
 tag:

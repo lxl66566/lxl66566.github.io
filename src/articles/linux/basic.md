@@ -1,6 +1,6 @@
 ---
 date: 2023-10-28
-icon: microchip
+icon: solid/microchip
 category:
   - 教程
 tag:
@@ -14,7 +14,7 @@ tag:
 2. [Linux ls -al 得到的结果代表什么意思？](https://zhuanlan.zhihu.com/p/495554731)
 3. `[Y/n]` 可以直接回车表示确认。`Y` 大写表示默认。([ref](https://t.me/archlinuxcn_group/2950979))
 4. awk 是一门（图灵完备的）语言 ([ref](https://luoxu.archlinuxcn.org/#g=1031857103&q=awk+语言))，~~但我从不用 awk~~。
-5. linux 可执行文件没有后缀；可以用 `detect-it-easy-bin` <Badge text="AUR" /> 查看任意文件的类型。
+5. linux 可执行文件没有后缀；可以用 `detect-it-easy-bin` <span class="abs-badge">AUR</span> 查看任意文件的类型。
 
 ## Terminal shortcuts
 
@@ -77,7 +77,7 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 ### btrfs
 
-对于一个用惯 windows ntfs 的人来说，btrfs <span class="heimu" title="你知道的太多了">as well as 现代文件系统</span>一定能让他眼前一亮。（文章参考 [external](#external) 1.）
+对于一个用惯 windows ntfs 的人来说，btrfs !!as well as 现代文件系统!!一定能让他眼前一亮。（文章参考 [external](#external) 1.）
 
 1. CoW (写时复制)
 2. 透明压缩
@@ -105,7 +105,7 @@ ext4 是许多 linux 的默认 fs，有的 archlinux 教程也使用 ext4，我�
 
 #### 互操作
 
-互操作能极大提升多系统使用体验。<span class="heimu" title="你知道的太多了">ext4 从 windows 访问根本没啥好用工具</span>
+互操作能极大提升多系统使用体验。!!ext4 从 windows 访问根本没啥好用工具!!
 
 众所周知 windows 默认使用它那 ntfs 已经很久了，并且默认没有 btrfs 支持。而双系统经常需要进行文件的互访问。linux 默认可读 ntfs，写入则只需安装 `ntfs-3g` 即可。而 windows 访问 btrfs 也非常简单。
 

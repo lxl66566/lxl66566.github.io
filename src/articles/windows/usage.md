@@ -1,6 +1,6 @@
 ---
 date: 2026-03-31
-icon: brands fa-windows
+icon: brands/windows
 category:
   - 教程
 tag:

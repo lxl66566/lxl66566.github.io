@@ -1,6 +1,6 @@
 ---
 date: 2023-11-17
-icon: house-tsunami
+icon: solid/house-tsunami
 category:
   - 教程
 tag:

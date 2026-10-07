@@ -2,7 +2,10 @@ node_modules/
 src/.vuepress/.cache/
 src/.vuepress/.temp/
 src/.vuepress/dist/
+dist/
 # upload.sh
 # .github/
 /.history
 /test*.*
+# e2e screenshot output (regenerable via utils/xlist-e2e.mjs)
+dist-shots/

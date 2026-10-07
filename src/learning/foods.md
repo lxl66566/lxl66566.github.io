@@ -1,6 +1,6 @@
 ---
 date: 2023-02-15
-icon: utensils
+icon: solid/utensils
 category:
   - 学习
   - 教程

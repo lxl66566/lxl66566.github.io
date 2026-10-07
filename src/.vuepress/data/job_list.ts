@@ -1,4 +1,5 @@
-import { DateCompare, JobItemInputType } from "../definition/index.js";
+import { DateCompare } from "../definition/index.js";
+import type { JobItemInputType } from "../definition/index.js";
 
 const job_list_2024_autumn: JobItemInputType[] = [
   {

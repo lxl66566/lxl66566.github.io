@@ -1,6 +1,6 @@
 ---
 date: 2023-11-05
-icon: file-audio
+icon: solid/file-audio
 category:
   - 推荐
   - 评价

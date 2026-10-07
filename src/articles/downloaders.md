@@ -1,6 +1,6 @@
 ---
 date: 2024-06-11
-icon: download
+icon: solid/download
 category:
   - 推荐
   - 评价

@@ -1,6 +1,6 @@
 ---
 date: 2025-01-03
-icon: globe
+icon: solid/globe
 category:
   - 教程
   - 经历

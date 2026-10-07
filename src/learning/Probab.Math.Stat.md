@@ -1,6 +1,6 @@
 ---
 date: 2023-03-14
-icon: chart-pie
+icon: solid/chart-pie
 category:
   - 学习
 tag:

@@ -1,5 +1,5 @@
 ---
-icon: brands fa-bots
+icon: brands/bots
 date: 2023-07-24
 category:
   - 编程

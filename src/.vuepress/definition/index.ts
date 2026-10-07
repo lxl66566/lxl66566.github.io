@@ -7,7 +7,9 @@ import type { DateDurationType, DateType, TwoScoreItemType } from "./types.js";
 export * from "./anime_type.js";
 export * from "./book_type.js";
 export * from "./comic_item.js";
+export * from "./crypto_type.js";
 export * from "./gal_type.js";
+export * from "./speedup_type.js";
 export * from "./job_type.js";
 export * from "./types.js";
 

@@ -1,6 +1,6 @@
 ---
 date: 2023-07-12
-icon: keyboard
+icon: solid/keyboard
 category:
   - 教程
   - 推荐
@@ -73,7 +73,7 @@ windows 自带的输入法，继承了微软一贯以来的毛病：**强迫你�
 - 中文语音识别准确率不高，同时由于众所周知的原因延迟稍大
 - 所谓的“隐私保护”真的傻逼。
   - 用户词库的词会在 14 天后遗忘，下次输特殊名词还得一个一个打。。
-  - 还有剪贴板也会自动过期，时间还只有一小时。。<heimu>我 PC 端剪贴板不是**永久**保存我都不用的（例如 windows 自带）。</heimu>
+  - 还有剪贴板也会自动过期，时间还只有一小时。。!!我 PC 端剪贴板不是**永久**保存我都不用的（例如 windows 自带）。!!
 - 可能有[内存泄漏](https://t.me/withabsolutex/1246)问题。
 
 ### [Unexpected Keyboard](https://github.com/Julow/Unexpected-Keyboard)

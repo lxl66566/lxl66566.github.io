@@ -1,0 +1,25 @@
+minimumReleaseAgeExclude:
+  - "@babel/helpers@7.29.10"
+  - "@babel/traverse@7.29.10"
+  - "@rolldown/binding-android-arm-eabi@1.2.13"
+  - "@rolldown/binding-android-arm64@1.2.13"
+  - "@rolldown/binding-darwin-arm64@1.2.13"
+  - "@rolldown/binding-darwin-x64@1.2.13"
+  - "@rolldown/binding-freebsd-x64@1.2.13"
+  - "@rolldown/binding-linux-arm-gnueabihf@1.2.13"
+  - "@rolldown/binding-linux-arm64-gnu@1.2.13"
+  - "@rolldown/binding-linux-arm64-musl@1.2.13"
+  - "@rolldown/binding-linux-ppc64-gnu@1.2.13"
+  - "@rolldown/binding-linux-s390x-gnu@1.2.13"
+  - "@rolldown/binding-linux-x64-gnu@1.2.13"
+  - "@rolldown/binding-linux-x64-musl@1.2.13"
+  - "@rolldown/binding-openharmony-arm64@1.2.13"
+  - "@rolldown/binding-win32-arm64-msvc@1.2.13"
+  - "@rolldown/binding-win32-x64-msvc@1.2.13"
+  - absolute-press@0.1.0 || 0.1.1
+  - caniuse-lite@1.0.30001815
+  - devframe@1.2.3
+  - electron-to-chromium@1.5.449
+  - h3@2.0.2
+  - resolve@1.22.13
+  - rolldown@1.2.13

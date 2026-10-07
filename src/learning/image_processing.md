@@ -1,6 +1,6 @@
 ---
 date: 2024-06-01
-icon: image
+icon: solid/image
 category:
   - 学习
 ---

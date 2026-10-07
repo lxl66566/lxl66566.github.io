@@ -1,6 +1,6 @@
 ---
 date: 2023-06-03
-icon: database
+icon: solid/database
 category:
   - 编程
 tag:

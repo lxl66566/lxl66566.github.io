@@ -1,6 +1,6 @@
 ---
 date: 2022-08-31
-icon: eye
+icon: solid/eye
 category:
   - 学习
 tag:
@@ -14,8 +14,4 @@ tag:
 
 而现在由于本人已转向 [anki](./recommend_packages.md#anki) 背词，本页面已经废弃了。
 
-<reciter/>
-
-<script setup lang="ts">
-import reciter from "@reciter"
-</script>
+<Reciter/>

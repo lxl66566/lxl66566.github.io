@@ -1,43 +1,42 @@
 {
   "name": "lxlsblog",
-  "version": "2.0.0",
-  "description": "lxlsblog",
+  "version": "3.0.0",
+  "description": "绝对值_x 的博客",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "vuepress-vite build src",
-    "clean-dev": "vuepress-vite dev src --clean-cache",
-    "dev": "vuepress-vite dev src",
-    "update-package": "npx vp-update",
-    "format": "prettier --write \"**/*.{js,ts,tsx,md,json,css,less,scss,gql,graphql}\""
+    "dev": "vite --configLoader runner",
+    "build": "vite build --configLoader runner",
+    "preview": "vite preview --configLoader runner",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "lint": "oxlint .",
+    "check": "tsc --noEmit --skipLibCheck"
+  },
+  "dependencies": {
+    "@solidjs/web": "2.0.0-rc.13",
+    "absolute-press": "^0.1.1",
+    "solid-js": "2.0.0-rc.13"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.20",
-    "@vuepress/plugin-append-date": "2.0.0-rc.92",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.92",
-    "@vuepress/plugin-feed": "2.0.0-rc.92",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.80",
-    "@vuepress/plugin-icon": "2.0.0-rc.92",
-    "@vuepress/plugin-markdown-math": "2.0.0-rc.92",
-    "@vuepress/plugin-photo-swipe": "2.0.0-rc.92",
-    "@vuepress/plugin-remove-pwa": "2.0.0-rc.79",
-    "echarts": "^5.0.0",
-    "katex": "0.16.22",
-    "mermaid": "11.6.0",
-    "sass-embedded": "^1.86.3",
-    "typescript": "5.8.3",
-    "vue": "3.5.13",
-    "vuepress": "2.0.0-rc.20",
-    "vuepress-theme-hope": "2.0.0-rc.79"
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@types/node": "^26.6.4",
+    "@unocss/preset-wind4": "^66.10.5",
+    "gray-matter": "^4.0.3",
+    "oxfmt": "^0.72.0",
+    "oxlint": "^1.87.0",
+    "typescript": "^7.0.2",
+    "unocss": "^66.10.5",
+    "vite": "^8.3.3",
+    "vite-plugin-solid": "3.0.0-next.27"
   },
+  "packageManager": "pnpm@12.10.1+sha512.ba40a37eb1a370d60fea8c4cf1d364c13bcccef518e98ad2bcee954f539d38da37458e58261a3fa55e06523450ea0ffff9f497b135be41f2c15c1642bacace6c",
   "pnpm": {
     "overrides": {
       "hasown": "npm:@nolyfill/hasown@latest",
       "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest"
     }
-  },
-  "dependencies": {
-    "fuse.js": "^7.1.0"
-  },
-  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
+  }
 }

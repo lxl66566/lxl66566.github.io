@@ -1,6 +1,6 @@
 ---
 date: 2026-03-29
-icon: paper-plane
+icon: solid/paper-plane
 category:
   - 推荐
 tag:

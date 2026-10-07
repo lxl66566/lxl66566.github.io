@@ -1,6 +1,6 @@
 ---
 date: 2024-12-13
-icon: brands fa-css
+icon: brands/css
 category:
   - 编程
 tag:

@@ -1,6 +1,6 @@
 ---
 date: 2024-07-27
-icon: gamepad
+icon: solid/gamepad
 category:
   - 教程
   - 探索
@@ -36,7 +36,7 @@ Cheat Engine 想必大家都不陌生，我也会使用 CE 进行 RPG galgame（
 
 20240720 我尝试了一个想法：将 galgame 音频文件解包，加速后再封包回去。由于我不会逆向，因此使用的是 GARbro，这是一个非常泛用的，多目标 galgame 资源提取器。我使用 いろとりどりのセカイ HD 尝试，这个游戏把 `voice.bin` 单文件放在根目录下，非常明显，我很轻易地就提取出了游戏的所有 ogg 格式的语音。
 
-那么我要如何将加速后的 ogg 封装回一个 `voice.bin` 呢？我被卡在了这一步下。GARbro 根据预设的解包规则检测出格式并解了包，但是却**不告诉我这个包用的究竟是什么格式**。Asuka Minato 也提醒：解包容易，但封包可能非常困难。因此我暂时打消了这个想法。<heimu>[二试封包](#二试封包)</heimu>
+那么我要如何将加速后的 ogg 封装回一个 `voice.bin` 呢？我被卡在了这一步下。GARbro 根据预设的解包规则检测出格式并解了包，但是却**不告诉我这个包用的究竟是什么格式**。Asuka Minato 也提醒：解包容易，但封包可能非常困难。因此我暂时打消了这个想法。!![二试封包](#二试封包)!!
 
 ## pyaudio
 
@@ -294,15 +294,44 @@ hourglass 是 C++ 写成，调的都是 windows api，项目管理用 vs sln。�
 因为我的每个 galgame 都会折腾一番音频加速，因此也写了不少工具。这些工具可以在我的 [Github profile](https://github.com/lxl66566) 下方展开 _Galgame tools_ 查看，下面的表格展开中有的代码里用到的指令就是这些工具。
 
 <SpeedupList>
-<template #krkr_xp3>
+
+@@@ krkr_xp3
 
 - ~~最初我先是 [fork 了一个 python 的 repo](https://github.com/lxl66566/krkr-xp3)。这个 repo 解包有些问题，需要使用 GARbro 解包后，再使用脚本进行音频加速与封包。~~
 - 后来我又用 rust 重写了一个 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack)，这个借助了 xp3 crate。
 
 注意，xp3 引擎的游戏需要看一眼 `patch.xp3` 里有没有音频，那里面的音频也需要加速。
 
-</template>
-<template #Artemis>
+@@@ krkr_xp3_enc
+
+总结：
+
+- 心之形心之色心之声 ✅
+- Deep One ✅
+- DRACU-RIOT! QHD Edition ✅
+- 死に逝く騎士、異世界に響く断末魔 ❌
+- 瑠璃櫻 ❌
+- サルテ ❌
+- RIDDLE JOKER ❌
+- 兽娘育成方案 ❌
+
+---
+
+加密的 xp3 就没法直接用 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack) 解封包了。不过 GARbro 可以解封加密的 xp3，只要游戏有被收录到密钥列表里就行，这里列举的游戏都属于此类。
+
+GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试试。还有路径压缩就没必要开了，~~只会影响我试错的速度~~。
+
+<!-- prettier-ignore -->
+| 游戏 | xp3 版本 |
+| ---- | -------- |
+| Deep One | Z |
+
+至于上述那些不行的……那当然是因为 GARbro 不更新了，并且其他的大部分 fork/mod 都没有添加这些加密方式，因此没法解。虽然用 KrkrExtract 也可以，但是工作量太大，而且会被剧透，因此不干。
+
+- RIDDLE JOKER 特殊一些，GARbro 有收录但是 voice.xp3 解压并转换音频格式会出错；如果不转换格式可以解成功，但是解出来是无效 ogg。看着 `OggS` 之前多加了一个 header，但是把 header 移除以后也无法播放，不太清楚问题是啥。
+- DRACU-RIOT! QHD Edition 也比较特殊（怎么都是柚子社的奇葩打包），voice.xp3 解出来还带了一堆非音频，还没法一把转成 ogg 然后 audio loudness normalize；看着文件名是乱码但是实际上就是这个名；然后 GARbro 根本没有支持 HxCrypt 的封包。我刚开始的时候让 AI 自己折腾，写了个 [voice.xp3 的封包脚本](https://gist.github.com/lxl66566/c837cfac4531d280632389f4c92d0105)，但是这个脚本是一次性的不能用到 adult.xp3 上（而且强制要求替换内容小于等于原始内容），不太好用。于是就 fork 了 GARbro 开始改，改出了一版[支持 HxCrypt 封包的版本](https://github.com/lxl66566/GARbro/releases)，挺好用的。
+
+@@@ Artemis
 
 解封包工具：[sakarie9/pfs_rs](https://github.com/sakarie9/pfs_rs)，这也是一个使用 rust 写的的解包封包工具，我对 rust 工具天生具有好感，项目的质量也不错。顺带一提作者还写了篇[文章](https://sakari.top/posts/2025/artemis-pfs/)讲述 pfs 封包的技术细节。
 
@@ -316,8 +345,7 @@ ps. 也可以 GARbro 直解，反正不用封包。
 
 - 如果游戏（流星·世界演绎者系列）不提供关闭系统语音的功能，可以直接把 sysse 解出来换成 `none.ogg`（随便一个空音频）即可。
 
-</template>
-<template #favorite>
+@@@ favorite
 
 FAVORITE 的 .bin 格式比较简单，也有工具 [Leticiel/fvp-tools](https://github.com/Leticiel/fvp-tools) (Pytho) 和 [Nikaidou-Shinku/fvp-unpacker](https://github.com/Nikaidou-Shinku/fvp-unpacker) (Rust) （这个比较全能，可以解不同资源类型。看在它用了 rayon 的份上，就承认它的 blazing fast 吧）。
 
@@ -327,15 +355,13 @@ FAVORITE 的 .bin 格式比较简单，也有工具 [Leticiel/fvp-tools](https:/
 
 总之，SPEED UP 的初衷就是干翻 FAVORITE，我的目的已经达成了。
 
-</template>
-<template #WOH>
+@@@ WOH
 
 魔法使之夜的解包遇到了一点麻烦。首先一大堆 `data00000.hfa` 并不能看出哪里是语音，哪里是其他素材。其次，GARbro 没法解 hfa 存档，我的心已经凉了一半。
 
 然后在网上找了一个 [mahoyo_tools](https://github.com/loicfrance/mahoyo_tools)，但是这玩意只说能解图像和脚本，不包含音频。而且 star 数和 README 讲的都很糊，根本不会用。(不过代码质量倒是挺高的)
 
-</template>
-<template #ypf>
+@@@ ypf
 
 ### 首次尝试：失败
 
@@ -453,8 +479,7 @@ if __name__ == "__main__":
 
 然后我 [fork 了 YPF-Manager 的源码](https://github.com/lxl66566/YPF-Manager)，并且写了一个 github CI 来 build binary。
 
-</template>
-<template #escude>
+@@@ escude
 
 escude 家的游戏是 bin 格式，GARbro 可解不可封。
 
@@ -467,8 +492,7 @@ escude 家的游戏是 bin 格式，GARbro 可解不可封。
 - [cottony-vase-131 的工具](https://cottony-vase-131.notion.site/GameTools-7fea11732ecd4e398896414a31fef431)：专门处理脚本的工具，无法使用
 - [TheVNConnoisseur/Bincude](https://github.com/TheVNConnoisseur/Bincude)：202508 才出的新工具，mark，未尝试
 
-</template>
-<template #unity>
+@@@ unity
 
 尝试解包 _旭光のマリアージュ_。用 bandizip 打开 .dat 文件，显示是一个 zip 压缩包。文件名没有加密，可以看到语音（sound）在 `data_05.dat` 和 `data_06.dat` 里。解压，需要密码。找密码，在[别人的博客](https://blog.chenx221.cyou/2021/09/04/galgame-游戏解包记录/)找到密码为 `IrsysPack_CipherKey`。于是提取成功。
 
@@ -520,8 +544,7 @@ Path("test.txt").unlink()
 
 ps. 后来发现用 7-zip 的仅存储打出来也是可以用的，都怪 bandizip！😡
 
-</template>
-<template #bgi>
+@@@ bgi
 
 首先，用 GARbro 是可以解 arc 的。不过需要勾选将音频转为常见格式。我想找一个命令行自动化解包 arc 的工具：
 
@@ -584,8 +607,7 @@ PS. 由于 const for audio pack 部分还有一些内嵌的数字，又让 AI �
 
 2026.07 我又给 arc-reader-rs 添加了图像封包能力，不过这都是后话了。
 
-</template>
-<template #silky>
+@@@ silky
 
 ### きまぐれテンプテーション
 
@@ -615,15 +637,13 @@ PS. 由于 const for audio pack 部分还有一些内嵌的数字，又让 AI �
 
 封完包，惊讶地发现 voice.arc 的大小从 2.13 GB 减小到 807 MB，但是我并没有改变任何速度。喂！你的 ogg 到底是怎么编码的啊！
 
-</template>
-<template #softpal>
+@@@ softpal
 
 网上有[一篇文章](https://www.bilibili.com/read/cv25442292)讲了 softpal `.pac` 的格式探索，非常不错。
 
 可知 softpal 引擎优先读取文件夹，所以实际上无需封包。softpal 是目前为止 speed up 最简单的格式，只需要用 GARbro 将 `voice.pac` 提到同名文件夹，加速即可。全程只需两步。
 
-</template>
-<template #npa>
+@@@ npa
 
 - [exnpa](http://asmodean.reverse.net/pages/exnpa.html)：需要再下载一个 32 位的 zlib1.dll 才能用。这个工具只能解包，不能封包。
 - [FuckGalEngine](https://github.com/Inori/FuckGalEngine/tree/master/Nitro+) 的工具集：
@@ -634,8 +654,7 @@ PS. 由于 const for audio pack 部分还有一些内嵌的数字，又让 AI �
 
 然后老的 `voice.npa` 要记得改后缀，不然会被读到。
 
-</template>
-<template #AKABEiSOFT3>
+@@@ AKABEiSOFT3
 
 没有汉化只有机翻补丁，GARbro 打不开，网上搜不到任何信息。无解，除非去做整套 crack 流程。
 
@@ -647,8 +666,7 @@ Github 搜关键词，有效的只搜到一个 [akabeisoft3Danshi 汉化.md](htt
 
 既然 AKABEiSOFT3 引擎各种各样，那就不能用它做关键词。使用 yaneurao 搜索，定位到其当前官网，这是一个开源引擎，并且提供了[工具下载](https://bm98.yaneu.com/infoseek/yaneSDK2nd/)。尝试下载了 yanePack101 和 yanePackEx102 用来打包，首先它的输入只能是文件而不是文件夹，其次打出来的包跟游戏里的 voice.dat 也不太像啊，一堆 80 都没有出现。
 
-</template>
-<template #LCSE>
+@@@ LCSE
 
 工具：[cqjjjzr/LCSELocalizationTools](https://github.com/cqjjjzr/LCSELocalizationTools)
 
@@ -661,38 +679,7 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 
 能用，不过吐槽一下，这个 patch 而不是 pack 的形式非常慢，1w5 的音频跑了几十分钟（
 
-</template>
-<template #krkr_xp3_enc>
-
-总结：
-
-- 心之形心之色心之声 ✅
-- Deep One ✅
-- DRACU-RIOT! QHD Edition ✅
-- 死に逝く騎士、異世界に響く断末魔 ❌
-- 瑠璃櫻 ❌
-- サルテ ❌
-- RIDDLE JOKER ❌
-- 兽娘育成方案 ❌
-
----
-
-加密的 xp3 就没法直接用 [xp3-pack-unpack](https://github.com/lxl66566/xp3-pack-unpack) 解封包了。不过 GARbro 可以解封加密的 xp3，只要游戏有被收录到密钥列表里就行，这里列举的游戏都属于此类。
-
-GARbro 打 xp3 有不同版本（1，2，Z），如果没声的话建议多试试。还有路径压缩就没必要开了，~~只会影响我试错的速度~~。
-
-<!-- prettier-ignore -->
-| 游戏 | xp3 版本 |
-| ---- | -------- |
-| Deep One | Z |
-
-至于上述那些不行的……那当然是因为 GARbro 不更新了，并且其他的大部分 fork/mod 都没有添加这些加密方式，因此没法解。虽然用 KrkrExtract 也可以，但是工作量太大，而且会被剧透，因此不干。
-
-- RIDDLE JOKER 特殊一些，GARbro 有收录但是 voice.xp3 解压并转换音频格式会出错；如果不转换格式可以解成功，但是解出来是无效 ogg。看着 `OggS` 之前多加了一个 header，但是把 header 移除以后也无法播放，不太清楚问题是啥。
-- DRACU-RIOT! QHD Edition 也比较特殊（怎么都是柚子社的奇葩打包），voice.xp3 解出来还带了一堆非音频，还没法一把转成 ogg 然后 audio loudness normalize；看着文件名是乱码但是实际上就是这个名；然后 GARbro 根本没有支持 HxCrypt 的封包。我刚开始的时候让 AI 自己折腾，写了个 [voice.xp3 的封包脚本](https://gist.github.com/lxl66566/c837cfac4531d280632389f4c92d0105)，但是这个脚本是一次性的不能用到 adult.xp3 上（而且强制要求替换内容小于等于原始内容），不太好用。于是就 fork 了 GARbro 开始改，改出了一版[支持 HxCrypt 封包的版本](https://github.com/lxl66566/GARbro/releases)，挺好用的。
-
-</template>
-<template #CatSystem2>
+@@@ CatSystem2
 
 `.int` 类型的封包。直接放到 GARbro 里还需要给出压缩文件参数，密码 + 密钥，可以通过 exe 路径提取。
 
@@ -827,8 +814,7 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 **吗？** CatSystem2 启动会检测各种 `pcm_?.int`，并不意味着 `updatexx.int` 就不能用啊。于是我在保留 pcm 的前提下将所有加速后语音打成了 `updatexx.int`，打开游戏，语音成功加速了！这样编程的难度又降低了。
 
-</template>
-<template #QLIE>
+@@@ QLIE
 
 总结：
 
@@ -899,8 +885,7 @@ thread:system
 
 但是编出来的产物里并没有任何 version.dll，我也不知道他 release 里的 dll 是哪来的。
 
-</template>
-<template #LiLiM>
+@@@ LiLiM
 
 LiLiM DARKNESS 社的引擎，资料有点少。
 
@@ -916,8 +901,7 @@ GARbro 可解，procmon 扫一遍不能免封，于是需要找封包工具。
 
 仓库地址：<https://github.com/lxl66566/aos_up>
 
-</template>
-<template #AVG32>
+@@@ AVG32
 
 AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的第一眼我就觉得我要秒杀了。然后就被狠狠打脸，这个 .wav 容器根本不是 PCM 编码，imhex 看二进制更像是 mp3；但是它又不是一个正常的 mp3，至少 ffmpeg 重编码会报错：
 
@@ -949,15 +933,7 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
    ```
    即可。
 
-</template>
-<template #renpy>
-
-开源的引擎，解封包应该不会有什么问题。
-
-浏览一下，发现 voice 根本就没有打包，直接放在文件夹里了。感动。
-
-</template>
-<template #TyranoScript>
+@@@ TyranoScript
 
 没想到真的有用 electron 做的 galgame，让我感动了一秒钟。
 
@@ -967,8 +943,7 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
 
 虽然用的 electron，但是程序写得很烂。
 
-</template>
-<template #unity2>
+@@@ unity2
 
 - 使用 [UABEA](https://github.com/nesrak1/UABEA)，它可以把一个 .bundle 拆成两部分，一部分是元数据，另一部分是 .resource 真实数据文件。但是我没有找到它的进一步功能，即继续解包 .resource。
 - 由于 .bundle 也有很多，我更倾向于使用脚本进行解封包操作。尝试使用 [UnityPy](https://github.com/K0lb3/UnityPy) 编写脚本，成功将 wav 音频导出。但是 README 中并没有音频保存并封包的示例，只能硬着头皮试试了。
@@ -1041,8 +1016,7 @@ for bundle in Path("Z:/test").glob("*.bundle"):
 
 折腾了好久都没搞出来，后面用 dll 注入实现加速了。
 
-</template>
-<template #lucasystem>
+@@@ lucasystem
 
 GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
@@ -1062,8 +1036,13 @@ GARbro 直解，看二进制能看到 `OggS`，感觉解封包不难。
 
 但是不得不吐槽，这种 replace 写得就是很屎啊，我加速后音频大小只有 1/3，但是 replace 后还是一样大小，合着根本不改数据块 offset 啊。而且实际游玩时偶尔也有几句语音没法播放，这玩意写得还是有点问题。我尝试用大序号（voice2.pak）覆盖掉原有语音，想着对这些加速失败的语音能不能走到 fallback，结果也是不行。
 
-</template>
-<template #SiglusEngine>
+@@@ renpy
+
+开源的引擎，解封包应该不会有什么问题。
+
+浏览一下，发现 voice 根本就没有打包，直接放在文件夹里了。感动。
+
+@@@ SiglusEngine
 
 SiglusEngine 公认的工具是 [xmoezzz/SiglusExtract](https://github.com/xmoezzz/SiglusExtract)，虽然官宣停止开发了但是还能用。
 
@@ -1085,15 +1064,13 @@ SiglusEngine 的游戏实在是有点多，而且好多游戏音量均衡非常�
 
 实际上这个 GUI 内部包的还是 [SiglusSceneScriptUtility](https://github.com/Jirehlov/SiglusSceneScriptUtility)，这个玩意看着就正常多了。想要实现解封包，直接用 SiglusSceneScriptUtility CLI 也不是不行。
 
-</template>
-<template #箱庭ロジック>
+@@@ 箱庭ロジック
 
 这游戏还挺小众的，连引擎叫啥都没查到。
 
 随便摸一摸，发现音频大概是在 res/s/v 里。所有文件都是以 `.v` 结尾，先看一下 hex，好家伙全是 `OggS` 开头，99.9% 的概率所有的音频都是 raw ogg，直接批量重命名就可以加速了。加速完再把扩展名改回去即可。
 
-</template>
-<template #EntisGLS>
+@@@ EntisGLS
 
 EntisGLS，比较早的引擎了，这个引擎的优点是源码公开，因此最终一定是有办法解包的，只是时间成本问题。
 
@@ -1113,7 +1090,6 @@ noa 是封包格式，封包内部的音频是 mio 格式（私有编码格式�
 - [qtlark/noa_pac](https://github.com/qtlark/noa_pac)：没有 source，Release 里放的 `noa32c.exe` 就是 EntisGLS 引擎里的文件。不懂这个仓库是拿来做啥的，README 说明书骗 star 吗？
 - [crskycode/EntisGLS_Tools](https://github.com/crskycode/EntisGLS_Tools)：专门处理 csx 脚本文件的，不包含 noa 解封包功能。
 
-</template>
 </SpeedupList>
 
 ### 二试封包总结
@@ -1383,6 +1359,3 @@ MMDevAPI 基本是无法完成这个需求的，因为 MMDevAPI 拿到的一般�
 
 [^stream]: 这其实跟网关流式转发还是集齐 body 后再转发其实是类似的逻辑。刚开始用加速去拉完整个音频属于是步入歧途，流式转发才是未来。
 
-<script setup lang="ts">
-import SpeedupList from "@SpeedupList";
-</script>

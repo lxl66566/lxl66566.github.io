@@ -1,6 +1,6 @@
 ---
 date: 2023-11-08
-icon: mobile
+icon: solid/mobile
 category:
   - 导航
   - 经历

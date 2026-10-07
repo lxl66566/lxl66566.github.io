@@ -1,7 +1,7 @@
 ---
 # headerDepth: 1
 date: 2022-07-21
-icon: list
+icon: solid/list
 category:
   - 博客
 ---

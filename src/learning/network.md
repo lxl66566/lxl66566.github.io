@@ -1,6 +1,6 @@
 ---
 date: 2023-10-20
-icon: network-wired
+icon: solid/network-wired
 category:
   - 学习
 ---

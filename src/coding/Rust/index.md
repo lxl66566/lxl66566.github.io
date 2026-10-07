@@ -1,6 +1,6 @@
 ---
 date: 2022-05-04
-icon: brands fa-rust
+icon: brands/rust
 category:
   - 编程
 tag:
@@ -37,7 +37,7 @@ rust 掀起了一股 RIIR (Rewrite it in Rust) 的热潮。
 - 学习曲线陡峭
 - 开发周期长
 - GUI 库有待进步
-- [我的其他个人暴论](../gossip/fuckxxx.md#rust-有多难用)
+- [我的其他个人暴论](../../gossip/fuckxxx.md#rust-有多难用)
 
 ### 如何学习
 
@@ -63,7 +63,7 @@ rust 的安装与配置并不难。在 windows 上可以使用官方脚本一行
 
 ### 开发
 
-然后我使用 [vscode](./vscode.md) 作为 IDE。安装插件：
+然后我使用 [vscode](../vscode.md) 作为 IDE。安装插件：
 
 - `rust-analyzer`，开发必备
 - (optional) `Rust Feature Toggler`，方便切换 features
@@ -163,7 +163,7 @@ _Rust 的字符串所包含的问题实际上很多，此处只是冰山一角�
 - 字符串转换：`to_owned()` or `to_string()` converts `&str` -> `String`（造了一个所有权）。也可以用 `into()`，更简单，但是更不直观。
 - [字符串连接](https://iq.opengenus.org/rust-string-concat/)
 - `std::path::{Path, PathBuf}` 是路径类，内部实现也是字符串（OS str）。类似 `str` 和 `String` 的区别，`Path` 没有所有权，`PathBuf` 有所有权。
-- `url::Url` <Badge text="url"/> 是 url 字符串。
+- `url::Url` <span class="abs-badge">url</span> 是 url 字符串。
 - 查看[字符串进阶](#字符串进阶)章节获取更多信息。
 
 #### 字符串修改
@@ -691,7 +691,7 @@ Rust 虽然有万能解码器 [Symphonia](https://github.com/pdeljanov/Symphonia
 
 古语云：async 就像海洋，只有打开 nightly 的人才能到达彼岸。——[Sherlock Holo](https://t.me/Sherlock_Holo)
 
-Rust nightly 有许多好用的东西，然而 nightly 工具链只有日期，没有版本，导致想要下载一个特定版本 nightly 工具链还需要去了解 rust release 流程，十分不友好。[fuk](../gossip/fuckxxx.md#rust-有多难用)
+Rust nightly 有许多好用的东西，然而 nightly 工具链只有日期，没有版本，导致想要下载一个特定版本 nightly 工具链还需要去了解 rust release 流程，十分不友好。[fuk](../../gossip/fuckxxx.md#rust-有多难用)
 
 但是有一扇窗为 nightly 打开，那就是 `RUSTC_BOOTSTRAP=1`。只要开了这个环境变量，就可以不需要重装任何工具链，纵享丝滑 unstable feature[ref](https://www.reddit.com/r/learnrust/comments/1hcnnvf/rust_need_nightly_1x0_how_do_i_do_that/)。
 

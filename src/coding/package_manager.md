@@ -1,6 +1,6 @@
 ---
 date: 2024-08-06
-icon: cubes
+icon: solid/cubes
 category:
   - 编程
 tag:

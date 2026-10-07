@@ -1,6 +1,6 @@
 ---
 date: 2023-04-09
-icon: code
+icon: solid/code
 category:
   - 编程
   - 导航
@@ -50,7 +50,7 @@ tag:
 
 我并未系统学习以下新生语言，只是想了解其设计理念，并获取一些语言设计的灵感。
 
-<dtls>
+::: details 点击展开
 
 - [V language](https://github.com/vlang/v)：基于 C 的注重性能的静态类型编译语言。语法比较像 go?
 - [Mun](https://github.com/mun-lang/mun)：基于 Rust 的静态类型语言，注重热重载 (hot reloading)。
@@ -73,18 +73,18 @@ tag:
 - [Lisette](https://lisette.run/)：一个学习 rust 改进 go 语言错误处理的小玩具。它是先编译成 go，再借用 go 的工具链。感觉是有点绕而且不好优化。
 - [cel-rust](https://github.com/cel-rust/cel-rust)：不是一个新图灵完备的语言，而只是一个通用表达式解析器。但是它足够新，而且 rust native call。
 
-</dtls>
+:::
 
 ### 不计划学习
 
-<dtls alt="我不会自发学习这些语言">
+::: details 我不会自发学习这些语言
 
 因为它们的各方面[都很烂](../gossip/fuckxxx.md)。
 
 - go
 - lua（最后学了，非自愿）
 
-</dtls>
+:::
 
 ## 工具
 

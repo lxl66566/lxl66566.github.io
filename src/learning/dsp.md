@@ -1,6 +1,6 @@
 ---
 date: 2023-06-05
-icon: wave-square
+icon: solid/wave-square
 category:
   - 学习
 tag:

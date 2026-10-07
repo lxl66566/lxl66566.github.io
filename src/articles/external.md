@@ -1,6 +1,6 @@
 ---
 date: 2023-07-21
-icon: "blog"
+icon: solid/blog
 category:
   - 推荐
 tag:

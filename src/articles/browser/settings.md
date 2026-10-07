@@ -1,6 +1,6 @@
 ---
 date: 2023-12-03
-icon: gears
+icon: solid/gears
 category:
   - 教程
 tag:

@@ -1,6 +1,6 @@
 ---
 date: 2025-01-31
-icon: brands fa-bitcoin
+icon: brands/bitcoin
 category:
   - 教程
   - 经历
@@ -31,7 +31,7 @@ tag:
 
 ### 余额宝/零钱通
 
-初中的时候让我爸给我开了一个支付宝帐号，然后钱存在余额宝。当时的中国经济正是飞速发展的时代，余额宝给的利率也高。<heimu>现在回想起来，我当时整天感叹，因为身份证、银行卡、手机号都绑定在一起，我那个年龄凭个人是拿不到的，因此大多同龄人都错失了理财的机会。</heimu>
+初中的时候让我爸给我开了一个支付宝帐号，然后钱存在余额宝。当时的中国经济正是飞速发展的时代，余额宝给的利率也高。!!现在回想起来，我当时整天感叹，因为身份证、银行卡、手机号都绑定在一起，我那个年龄凭个人是拿不到的，因此大多同龄人都错失了理财的机会。!!
 
 从初中到现在大学毕业，我的余额宝里都有一笔不算多的钱，用作活期资金。支付宝开通了自动转入余额宝，我根本就不需要去管，非常自在。
 
@@ -61,7 +61,7 @@ tag:
 
 2025 年年初，因为国内环境利率下降得过于厉害，以 v2ex 一个帖子作为契机，我入坑了加密货币。
 
-从过往的投资经历来看，我个人还是非常保守的 <heimu>虽然在证券公司的调查里填写的都是激进型以绕开投资限制</heimu>。因此在加密货币投资初期我也使用了非常保守的策略。
+从过往的投资经历来看，我个人还是非常保守的 !!虽然在证券公司的调查里填写的都是激进型以绕开投资限制!!。因此在加密货币投资初期我也使用了非常保守的策略。
 
 ### 前置知识
 
@@ -80,8 +80,9 @@ tag:
 
 - 关于 DEX 的对比：[顶级加密货币去中心化衍生品交易所](https://www.coinglass.com/zh/dex)，一般就选 Hyperliquid 和新兴的 Aster 两个。
 
-<CryptocurrencyExchangeList>
-<template #欧易>
+<CryptoList>
+
+@@@ 欧易
 
 优势：
 
@@ -97,32 +98,27 @@ tag:
 - 欧易的 C2C 交易认证比较傻逼，会自动将你的系统音量开到最大。所以建议搭配 [VolumeLockr](https://github.com/jonathanklee/VolumeLockr) 锁系统音量，实测可用。
 - 欧易的公告太慢了，经常是上币后才发公告，错过时机。
 
-</template>
-<template #币安>
+@@@ 币安
 
 - 老牌交易所，但我对其印象不佳。
 - 入坑加密货币后注册过，结果不支持日本 IP，更换 IP 后还说 IP 存在风险，无法开通合约账户，需要 KYC 验证。直接跑路。
 
-</template>
-<template #MEXC>
+@@@ MEXC
 
 - 现货费率很低，但是要求 KYC，不支持中国地区。
 
-</template>
-<template #gateio>
+@@@ gateio
 
 - TradingView 不适配黑夜模式
 - 有网页卡死的情况
 - 身份验证中出现无法识别身份证，未知原因认证失败的情况。
 
-</template>
-<template #bybit>
+@@@ bybit
 
 - 全球第二大的交易所，活动多，还有虚拟卡能用。但是不支持香港地区。
 - 2025 年初发生了 ETH 被盗事件。
 
-</template>
-<template #htx>
+@@@ htx
 
 我个人对 htx 没啥好感。但是由于 htx 有一些它自己的优势，我也存了许多钱进去。
 
@@ -145,8 +141,7 @@ tag:
   - 不算体验卡，常态年化会比其他 CEX 偏低一些。
 - TRON 链的手续费巨高，这也敢收得下手啊。
 
-</template>
-<template #hyperliquid>
+@@@ hyperliquid
 
 - 2024 年火爆的**去中心化**交易所。需要把法币换成 USDC，提币到钱包再转到 hyperliquid 内。
 - 合约费率低，杠杆高。
@@ -155,15 +150,13 @@ tag:
 - 去中心化交易所还是有点问题，2025 年初[两次被攻击](https://www.panewslab.com/zh/sqarticledetails/kbpj88hq.html)。
 - hyperliquid 还限制了某些国家/地区的 ip，那你去中心化了个 jb
 
-</template>
-<template #bitget>
+@@@ bitget
 
 - 不支持中国地区。
 - 不支持美国 IP。
 - 印象里是资金费率竞技场，他家的资金费率可以打到 15%，真牛逼。
 
-</template>
-</CryptocurrencyExchangeList>
+</CryptoList>
 
 #### 奖励与活动
 
@@ -295,7 +288,7 @@ tag:
 
 许多人脑子里可能都有一些未经测试的交易策略，写出并实现这些策略算是幻想家的浪漫。这时候可以考虑自定义策略。
 
-OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多 - 使用 TradingView 交易_。[TradingView](https://cn.tradingview.com/) 是另一个公司的平台，提供了 pinescript 脚本的编写、运行和一键回测，我们可以编写并测试自己的策略的利率。<heimu>花一晚上折腾了几个策略，没一个打得过网格的，哭</heimu>
+OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多 - 使用 TradingView 交易_。[TradingView](https://cn.tradingview.com/) 是另一个公司的平台，提供了 pinescript 脚本的编写、运行和一键回测，我们可以编写并测试自己的策略的利率。!!花一晚上折腾了几个策略，没一个打得过网格的，哭!!
 
 我们也可以通过 webhook 将 TradingView 接入交易所以自动触发交易。不过，webhook 自动交易是要购买订阅的，\$12.95/month。所以如果没有好策略 + 足够的本金，还是见仁见智吧。
 
@@ -414,7 +407,3 @@ OKX 里不能自定义策略，我们需要借助第三方平台：_OKX - 更多
 5. [月入 50 万美元，平均年化 78%，我的稳定币收益策略全解析 ​​](https://www.panewslab.com/zh/articles/ee13100b-a06f-4e1b-99b9-a456da475d0d)
 6. [How I've built an unprofitable Crypto MEV Bot in Rust](https://pawelurbanek.com/rust-mev-bot)
 7. 关于做市商的科普：[为什么散户总被「收割」？一文看懂做市商是怎么操作的](https://www.theblockbeats.info/news/59850)
-
-<script setup lang="ts">
-import CryptocurrencyExchangeList from "@CryptocurrencyExchangeList";
-</script>

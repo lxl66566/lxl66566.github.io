@@ -1,6 +1,6 @@
 ---
 date: 2023-12-18
-icon: file-pdf
+icon: solid/file-pdf
 category:
   - 推荐
   - 评价

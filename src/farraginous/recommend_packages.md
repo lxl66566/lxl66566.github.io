@@ -1,5 +1,5 @@
 ---
-icon: cube
+icon: solid/cube
 date: 2022-05-04
 category:
   - 推荐
@@ -201,7 +201,7 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 
 [^7]: 我提的[恶性 bug](https://github.com/ScoopInstaller/Scoop/issues/5808)，笑死根本不理我
 
-说到 windows 包管理器就不得不推荐著名的 scoop。<span class="heimu" title="你知道的太多了">实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已</span> 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
+说到 windows 包管理器就不得不推荐著名的 scoop。!!实际上我最早用的 chocolatey，都还行，scoop 更泛用一点而已!! 你可以很方便地使用一条命令安装许多优秀软件与运行环境，而不必担心环境变量等问题。
 
 :::warning
 
@@ -262,7 +262,7 @@ scoop config cache_path <other_path>    # 将缓存文件夹设为其他位置�
 
 ### [geek](https://geekuninstaller.com/download)
 
-轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。<heimu>[私链](https://wwp.lanzout.com/icAdmharg2h)</heimu>
+轻量级软件卸载工具，仅 4M，**可清理文件与注册表残留**。!![私链](https://wwp.lanzout.com/icAdmharg2h)!!
 
 ### 压缩软件
 
@@ -642,7 +642,7 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 ### Picacg
 
 ::: details
-~~年幼的目光.jpg~~ <span class="heimu" title="你知道的太多了">（绅士们，我发誓我已经很久没有点开这个软件了！）</span>
+~~年幼的目光.jpg~~ !!（绅士们，我发誓我已经很久没有点开这个软件了！）!!
 
 [官方地址?](https://picacg2022.com/) | [私有下载地址](https://wwp.lanzout.com/iqB7803de12j)
 :::
@@ -665,7 +665,7 @@ ps. 已经寄了。
 
 ### [f.lux](https://justgetflux.com/)
 
-护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<dtls>[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</dtls>
+护眼软件，可以让屏幕变黄，减少蓝光（熬夜神器）。<details class="abs-dtls"><summary>点击展开</summary>[私链](https://wwp.lanzout.com/iqmkq06s0wtg)</details>
 
 - 可以在全屏游戏时护眼
 - 可以突破显示器的亮度下限（快捷键：`Alt + Page Up/Down`）

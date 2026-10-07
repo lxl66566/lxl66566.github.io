@@ -1,6 +1,6 @@
 ---
 date: 2025-12-12
-icon: network-wired
+icon: solid/network-wired
 category:
   - 学习
   - 工作

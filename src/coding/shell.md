@@ -1,6 +1,6 @@
 ---
 date: 2024-07-24
-icon: fish
+icon: solid/fish
 category:
   - 编程
 tag:

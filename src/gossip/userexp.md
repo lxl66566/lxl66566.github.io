@@ -1,6 +1,6 @@
 ---
 date: 2026-01-21
-icon: circle-user
+icon: solid/circle-user
 category:
   - 主张
   - 评价
@@ -142,7 +142,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 但是 gitui 更是一坨原始大便，所以也是捏着鼻子也得用。
 
-<dated date="20260830"/>
+<Dated date="20260830"/>
 
 ## [flyline](https://github.com/HalFrgrd/flyline)
 
@@ -154,7 +154,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 直接抛弃。
 
-<dated date="20260707"/>
+<Dated date="20260707"/>
 
 ## [hyperfine](https://github.com/sharkdp/hyperfine)
 
@@ -164,7 +164,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 默认每个 case 至少跑 10 轮，实在有点慢。
 - Ctrl + C 没法终止 benchmark？什么设计。
 
-<dated date="20260703"/>
+<Dated date="20260703"/>
 
 ## [sem](https://github.com/Ataraxy-Labs/sem)
 
@@ -185,7 +185,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 对于上面的这个问题我提了一个 [issue](https://github.com/Ataraxy-Labs/sem/issues/114)。
 - 此外，java 文件的 sem diff，class 变更居然用的 type 而不是实际字段名，有点把我无语到。
 
-<dated date="20260522"/>
+<Dated date="20260522"/>
 
 ## [weave](https://github.com/Ataraxy-Labs/weave)
 
@@ -201,7 +201,7 @@ emmmm，虽然这个 claude 的大菊花排在 contributor 的靠前位置，比
 
 不过合并的实测效果还是比我想的好一些的，最终 conflict 的文件数量确实更少了几个。不过 weave 解决的也都是些简单问题，难题都留给人类了说是。
 
-<dated date="20260520"/>
+<Dated date="20260520"/>
 
 ## [carapace](https://carapace-sh.github.io/carapace-bin/carapace-bin.html)
 
@@ -264,7 +264,7 @@ $env.config.completions.external = {
 
 总之经过了一大堆事以后，我对 carapace 没有任何好感。
 
-<dated date="20260507"/>
+<Dated date="20260507"/>
 
 ## [ast-outline](https://github.com/aeroxy/ast-outline)
 
@@ -276,7 +276,7 @@ $env.config.completions.external = {
 
 最后，release binary 里没有其他系统的 releaes 也要扣一点分。
 
-<dated date="20260428"/>
+<Dated date="20260428"/>
 
 ## [quien](https://github.com/retlehs/quien/)
 
@@ -296,7 +296,7 @@ $env.config.completions.external = {
 
 立刻卸载。
 
-<dated date="20260424"/>
+<Dated date="20260424"/>
 
 ## http client
 
@@ -314,7 +314,7 @@ $env.config.completions.external = {
 - jujutsu 虽然说兼容 git，但是跟 git 混用也会有一些问题。
   - 最大的问题是 jj 会一直创建 empty commit，这些 empty commit 会随着你的 git merge 被一起合到 jj 的 worktree 里。虽然在 git 里这些都是不可见的，但是在 jj log 里就是纯纯的精神污染，让人不会再想回到 jj 里了。
 
-<dated date="20260325"/>
+<Dated date="20260325"/>
 
 ## [opencode](https://github.com/anomalyco/opencode)
 
@@ -373,13 +373,13 @@ $env.config.completions.external = {
 - 为什么这玩意打开要让我下载 scoop-search 和 cargo-update，后者甚至是从源码编译。假设用户一定有 rust 工具链吗？看到源码编译我就要开始捂鼻了。
   - 然后安装完 scoop-search 和 cargo-update 以后，重启软件居然没读到，还要我再安装一次？恶性 bug 直接卸载了。
 
-<dated date="20260202"/>
+<Dated date="20260202"/>
 
 ## [Files](https://github.com/files-community/Files)
 
 不懂只提供微软商店链接，没有离线安装包/压缩包的软件是什么毛病。被微软收购了？
 
-<dated date="20260202"/>
+<Dated date="20260202"/>
 
 ## [InputTip](https://github.com/abgox/InputTip)
 
@@ -389,7 +389,7 @@ $env.config.completions.external = {
 2. 光标方案倒是简单，但是实在是有点丑，我也懒得自己定义光标样式。
 3. 目标人群是那种不喜欢看右下角托盘，怕被打断注意力的。作为程序员而不是书记，我觉得偶尔看下右下角没什么负担。
 
-<dated date="20260121"/>
+<Dated date="20260121"/>
 
 ## [UltraISO](https://www.ultraiso.com/)
 

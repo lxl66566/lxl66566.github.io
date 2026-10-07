@@ -1,6 +1,5 @@
 ---
-externalLinkIcon: false
-icon: video
+icon: solid/video
 date: 2023-12-11
 category:
   - 推荐

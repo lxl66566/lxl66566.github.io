@@ -1,6 +1,6 @@
 ---
 date: 2023-10-18
-icon: face-tired
+icon: solid/face-tired
 category:
   - 作者
   - 评价

@@ -1,6 +1,6 @@
 ---
 date: 2023-09-06
-icon: at
+icon: solid/at
 category:
   - 评价
 tag:
@@ -66,7 +66,7 @@ tag:
 ——[Perry Kum](https://t.me/ChubbyPerryKum)
 :::
 
-- 答案：<span class="heimu" title="你知道的太多了">激励式恒流源和比例式恒流源</span>
+- 答案：!!激励式恒流源和比例式恒流源!!
 
 ## 20230601
 

@@ -1,6 +1,6 @@
 // 存放 galgame 相关的类型与方法
 
-import { DateDurationType } from "./types.js";
+import type { DateDurationType } from "./types.js";
 
 export enum PlayingStatus {
   PLAYING = "游玩中",

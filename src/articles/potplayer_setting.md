@@ -1,6 +1,6 @@
 ---
 date: 2023-01-14
-icon: play
+icon: solid/play
 category:
   - 教程
 tag:

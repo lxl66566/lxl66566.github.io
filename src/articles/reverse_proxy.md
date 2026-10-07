@@ -1,6 +1,6 @@
 ---
 date: 2023-11-16
-icon: handshake-simple
+icon: solid/handshake-simple
 category:
   - 教程
   - 推荐

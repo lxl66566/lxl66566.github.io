@@ -1,4 +1,4 @@
-import { AnimeItemInputType } from "../definition/anime_type.js";
+import type { AnimeItemInputType } from "../definition/anime_type.js";
 
 const original_list: AnimeItemInputType[] = [
   {

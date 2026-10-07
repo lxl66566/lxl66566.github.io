@@ -1,6 +1,6 @@
 ---
 date: 2025-01-04
-icon: arrow-up-right-dots
+icon: solid/arrow-up-right-dots
 category:
   - 编程
 tag:

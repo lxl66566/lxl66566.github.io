@@ -1,6 +1,6 @@
 ---
 date: 2022-07-08
-icon: clock
+icon: solid/clock
 category:
   - 推荐
   - 评价
@@ -53,7 +53,7 @@ ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数�
 
 我有多喜欢统计时长，从 [galgame 页面](../hobbies/galgame.md)和[读书页面](../hobbies/books.md)便可略知一二。但是——
 
-由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端 [Tai](../farraginous/recommend_packages.md#tai) 的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。~~_（将 `自己做个这种软件` 写入日程！）_~~ <span class="heimu" title="你知道的太多了">_笑死，开摆_ </span>
+由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端 [Tai](../farraginous/recommend_packages.md#tai) 的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。~~_（将 `自己做个这种软件` 写入日程！）_~~ !!_笑死，开摆_!!
 
 <text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。
 
@@ -81,4 +81,4 @@ ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数�
 
 推荐同时使用 `Digitox` 与 `Phone statistic`。_（这俩加一起都没某些家伙大_
 
-<span class="heimu" title="你知道的太多了">感觉还想自己写啊，但是我不会，这下有生之年了</span>
+!!感觉还想自己写啊，但是我不会，这下有生之年了!!

@@ -1,6 +1,6 @@
 ---
 date: 2023-06-17
-icon: language
+icon: solid/language
 category:
   - 学习
 tag:
@@ -74,7 +74,7 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 
 [^1]: 考场人少，但试卷固定为 30 张一包，所以交的报名费还不一定有成本高，血赚。[source](https://t.me/withabsolutex/1129)
 
-- 六级备考：zlib 能下载到往年考卷（大学日语四六级考试指南与真题 (全国大学日语考试设计组) (Z-Library)）。听力在[这里](https://app.readoor.cn/app/dt/bi/1523326392/85264-8480865e855413)有免费免登录的。<span class="heimu" title="你知道的太多了">我校为数不多的好事</span>
+- 六级备考：zlib 能下载到往年考卷（大学日语四六级考试指南与真题 (全国大学日语考试设计组) (Z-Library)）。听力在[这里](https://app.readoor.cn/app/dt/bi/1523326392/85264-8480865e855413)有免费免登录的。!!我校为数不多的好事!!
 
 ### jtest
 
@@ -94,20 +94,20 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 <!-- prettier-ignore -->
 |漢字|単語 1|単語 2|単語 3|
 | :-: | :-: | :-: | :-: |
-|体|<furigana f="たい">体</furigana>育|世間<furigana f="てい">体</furigana>|
-|人|<furigana f="じん">人</furigana>生|<furigana f="にん">人</furigana>情|
-|生|<furigana f="せい">生</furigana>活|<furigana f="しょう">生</furigana>姜|
-|堪|<furigana f="かん">堪</furigana>忍|<furigana f="たん">堪</furigana>能|
-|中|心<furigana f="じゅう">中</furigana>|<furigana f="ちゅう">中</furigana>止|
-|正|<furigana f="しょう">正</furigana>体|<furigana f="せい">正</furigana>論|
-|行|通<furigana f="こう">行</furigana>|<furigana f="ぎょう">行</furigana>商|
-|強|<furigana f="きょう">強</furigana>調|<furigana f="ごう">強</furigana>引|
-|平|<furigana f="びょう">平</furigana>等|<furigana f="へい">平</furigana>均|
-|重|<furigana f="じゅう">重</furigana>大|珍<furigana f="ちょう">重</furigana>|
-|地|<furigana f="じ">地</furigana>盤|<furigana f="ち">地</furigana>帯|
-|納|<furigana f="すいとう">出納</furigana>|滞<furigana f="のう">納</furigana>|
-|内|<furigana f="けいだい">境内</furigana>|<furigana f="ない">内</furigana>容|
-|精|<furigana f="しょうじん">精進</furigana>|<furigana f="せい">精</furigana>子|
+|体|<ruby>体<rp>(</rp><rt>たい</rt><rp>)</rp></ruby>育|世間<ruby>体<rp>(</rp><rt>てい</rt><rp>)</rp></ruby>|
+|人|<ruby>人<rp>(</rp><rt>じん</rt><rp>)</rp></ruby>生|<ruby>人<rp>(</rp><rt>にん</rt><rp>)</rp></ruby>情|
+|生|<ruby>生<rp>(</rp><rt>せい</rt><rp>)</rp></ruby>活|<ruby>生<rp>(</rp><rt>しょう</rt><rp>)</rp></ruby>姜|
+|堪|<ruby>堪<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>忍|<ruby>堪<rp>(</rp><rt>たん</rt><rp>)</rp></ruby>能|
+|中|心<ruby>中<rp>(</rp><rt>じゅう</rt><rp>)</rp></ruby>|<ruby>中<rp>(</rp><rt>ちゅう</rt><rp>)</rp></ruby>止|
+|正|<ruby>正<rp>(</rp><rt>しょう</rt><rp>)</rp></ruby>体|<ruby>正<rp>(</rp><rt>せい</rt><rp>)</rp></ruby>論|
+|行|通<ruby>行<rp>(</rp><rt>こう</rt><rp>)</rp></ruby>|<ruby>行<rp>(</rp><rt>ぎょう</rt><rp>)</rp></ruby>商|
+|強|<ruby>強<rp>(</rp><rt>きょう</rt><rp>)</rp></ruby>調|<ruby>強<rp>(</rp><rt>ごう</rt><rp>)</rp></ruby>引|
+|平|<ruby>平<rp>(</rp><rt>びょう</rt><rp>)</rp></ruby>等|<ruby>平<rp>(</rp><rt>へい</rt><rp>)</rp></ruby>均|
+|重|<ruby>重<rp>(</rp><rt>じゅう</rt><rp>)</rp></ruby>大|珍<ruby>重<rp>(</rp><rt>ちょう</rt><rp>)</rp></ruby>|
+|地|<ruby>地<rp>(</rp><rt>じ</rt><rp>)</rp></ruby>盤|<ruby>地<rp>(</rp><rt>ち</rt><rp>)</rp></ruby>帯|
+|納|<ruby>出納<rp>(</rp><rt>すいとう</rt><rp>)</rp></ruby>|滞<ruby>納<rp>(</rp><rt>のう</rt><rp>)</rp></ruby>|
+|内|<ruby>境内<rp>(</rp><rt>けいだい</rt><rp>)</rp></ruby>|<ruby>内<rp>(</rp><rt>ない</rt><rp>)</rp></ruby>容|
+|精|<ruby>精進<rp>(</rp><rt>しょうじん</rt><rp>)</rp></ruby>|<ruby>精<rp>(</rp><rt>せい</rt><rp>)</rp></ruby>子|
 
 :::
 
@@ -121,30 +121,30 @@ jlpt 挺贵的（但比起英语考试又算便宜）。除非有一次过 n1 �
 
 ### 易错
 
-<!-- <furigana f=""></furigana> -->
+<!-- <ruby><rp>(</rp><rt></rt><rp>)</rp></ruby> -->
 
 <!-- prettier-ignore -->
 | 词 | 误解 | 正解 |
 | :-: | :-: | :-: |
 | 手の甲 | 指甲 | 手背 |
-| <furigana f="とくだね">特種</furigana> | 特种 | 独家新闻 |
-| <furigana f="おおや">大家</furigana> | 大家 | 房东 |
-| <furigana f="ゆえん">所以</furigana> | 所以 | 原因 |
+| <ruby>特種<rp>(</rp><rt>とくだね</rt><rp>)</rp></ruby> | 特种 | 独家新闻 |
+| <ruby>大家<rp>(</rp><rt>おおや</rt><rp>)</rp></ruby> | 大家 | 房东 |
+| <ruby>所以<rp>(</rp><rt>ゆえん</rt><rp>)</rp></ruby> | 所以 | 原因 |
 | 人見知り | 认人 | 怕生 |
-| <furigana f="あんざん">暗算</furigana> | 暗算 | 心算 |
-| <furigana f="そよぐ">戦ぐ</furigana> | 战斗 | 微风轻拂 |
+| <ruby>暗算<rp>(</rp><rt>あんざん</rt><rp>)</rp></ruby> | 暗算 | 心算 |
+| <ruby>戦ぐ<rp>(</rp><rt>そよぐ</rt><rp>)</rp></ruby> | 战斗 | 微风轻拂 |
 | アットホーム | at home | athome（自在，无拘束） |
 | バイク | 自行车 | 摩托车 |
-| <furigana f="くみあい">組合</furigana> | 组合 | 工会 |
+| <ruby>組合<rp>(</rp><rt>くみあい</rt><rp>)</rp></ruby> | 组合 | 工会 |
 
-- <furigana f="あらた">新た</furigana>　と　<furigana f="あたらしい">新しい</furigana>
-- <furigana f="こうぎょう">興行</furigana>　读音完全反过来，有点过于傻逼了…
-- <furigana f="ふんいき">雰囲気</furigana>、我之前常读 `ふいんき`
-- <furigana f="じょうじゅ">成就</furigana>
+- <ruby>新た<rp>(</rp><rt>あらた</rt><rp>)</rp></ruby>　と　<ruby>新しい<rp>(</rp><rt>あたらしい</rt><rp>)</rp></ruby>
+- <ruby>興行<rp>(</rp><rt>こうぎょう</rt><rp>)</rp></ruby>　读音完全反过来，有点过于傻逼了…
+- <ruby>雰囲気<rp>(</rp><rt>ふんいき</rt><rp>)</rp></ruby>、我之前常读 `ふいんき`
+- <ruby>成就<rp>(</rp><rt>じょうじゅ</rt><rp>)</rp></ruby>
 
 ### 缩写
 
-日语爱缩写也是广受诟病的一点。当背到 `ワープロ` 的时候还以为是什么 “哇，专家！” 然后点开才知道是 <furigana f="ワードプロセッサ">word processor</furigana>...
+日语爱缩写也是广受诟病的一点。当背到 `ワープロ` 的时候还以为是什么 “哇，专家！” 然后点开才知道是 <ruby>word processor<rp>(</rp><rt>ワードプロセッサ</rt><rp>)</rp></ruby>...
 
 还有符号省略（国字），例如[〆](https://zh.wiktionary.org/wiki/〆)，一般来说挺少见的。
 

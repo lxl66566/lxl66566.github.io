@@ -1,6 +1,6 @@
 ---
 date: 2023-10-13
-icon: check
+icon: solid/check
 category:
   - 博客
 ---

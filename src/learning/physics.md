@@ -1,6 +1,6 @@
 ---
 date: 2022-11-05
-icon: lightbulb
+icon: solid/lightbulb
 category:
   - 学习
 tag:

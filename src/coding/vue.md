@@ -1,6 +1,6 @@
 ---
 date: 2024-10-18
-icon: brands fa-vuejs
+icon: brands/vuejs
 category:
   - 编程
 tag:

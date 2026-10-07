@@ -1,6 +1,6 @@
 ---
 date: 2025-06-24
-icon: volume-high
+icon: solid/volume-high
 category:
   - 原理
   - 学习

@@ -1,6 +1,6 @@
 ---
 date: 2023-01-22
-icon: gear
+icon: solid/gear
 category:
   - 教程
   - 生活
@@ -97,7 +97,7 @@ ColorOS：
 
 1. 查看快应用的包名：（例：MIUI 12.5）设置 - 应用设置 - 应用管理 - 找到 _快应用服务框架_ 进入，点击右上角感叹号，查看应用包名。
    > 或：已知关键字可使用 `adb shell pm list package [<keyword>]` 在手机内以关键字查找包名。
-   - MIUI 12.5：`com.miui.hybrid` <span class="heimu" title="你知道的太多了">杂种</span>，可能还有 `.accessory` 后缀
+   - MIUI 12.5：`com.miui.hybrid` !!杂种!!，可能还有 `.accessory` 后缀
    - HarmonyOS：`com.huawei.fastapp`
    - ColorOS：`com.nearme.instant.platform`
    - vivo：`com.vivo.hybrid`

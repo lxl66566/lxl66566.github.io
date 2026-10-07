@@ -1,6 +1,5 @@
 ---
-externalLinkIcon: false
-icon: book-tanakh
+icon: solid/book-tanakh
 date: 2023-11-11
 category:
   - 推荐
@@ -58,6 +57,3 @@ tag:
 
 1. [E 绅士里站访问教程——从注册账号到进入里站](https://nicebowl.fun/11)
 
-<script setup lang="ts">
-import ComicTable from "@ComicTable";
-</script>

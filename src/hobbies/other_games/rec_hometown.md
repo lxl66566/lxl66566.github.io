@@ -1,6 +1,6 @@
 ---
 date: 2023-04-01
-icon: trophy
+icon: solid/trophy
 category:
   - 爱好
   - 生活

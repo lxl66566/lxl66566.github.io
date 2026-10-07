@@ -1,6 +1,6 @@
 ---
 date: 2024-10-30
-icon: circle-info
+icon: solid/circle-info
 category:
   - 学习
 ---

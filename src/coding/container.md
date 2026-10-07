@@ -1,5 +1,5 @@
 ---
-icon: box
+icon: solid/box
 date: 2023-11-12
 category:
   - 编程

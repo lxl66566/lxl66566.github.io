@@ -1,6 +1,6 @@
 ---
 date: 2022-09-06
-icon: brands fa-github
+icon: brands/github
 category:
   - 编程
   - 教程
@@ -12,7 +12,7 @@ tag:
 
 [跳转官网](https://github.com/)
 
-Github 是全球最大的~~同性交友平台~~ 源代码托管服务平台，拥有良好的开源生态，是开发者的圣地。<span class="heimu" title="你知道的太多了">（我乱写的）</span>
+Github 是全球最大的~~同性交友平台~~ 源代码托管服务平台，拥有良好的开源生态，是开发者的圣地。!!（我乱写的）!!
 
 ## 给新人
 
@@ -87,7 +87,7 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 
 ## 合并 Pull Request
 
-你是一个仓库 owner，有人对仓库发起了 pr。如果你愿意全盘接受改动，可以简单地在网页上点击 merge 即可。如果需要修改细节而对方没开写权限<span class="heimu" title="你知道的太多了">OR 不想亲自动手</span>，那就在网页上提出 review 叫对方改，改到满意为止<span class="heimu" title="你知道的太多了">~~堪比黑心资本家~~</span>。而这里讲的是第三种情形，即需要修改细节而对方提供写权限，owner 亲自进行修改并 merge 的方法。
+你是一个仓库 owner，有人对仓库发起了 pr。如果你愿意全盘接受改动，可以简单地在网页上点击 merge 即可。如果需要修改细节而对方没开写权限!!OR 不想亲自动手!!，那就在网页上提出 review 叫对方改，改到满意为止!!~~堪比黑心资本家~~!!。而这里讲的是第三种情形，即需要修改细节而对方提供写权限，owner 亲自进行修改并 merge 的方法。
 
 > 为什么不使用 codespace 呢？因为它确实难用（
 
@@ -143,7 +143,7 @@ Github 只支持 Git 作为唯一的版本库格式进行托管。相关内容�
 
 ### 批量下载 Release
 
-我需要批量下载某个 Release 中的所有文件。首先，**需要保证这个仓库是 Public 的**。<span class="heimu" title="你知道的太多了">被坑了，我是傻杯</span>
+我需要批量下载某个 Release 中的所有文件。首先，**需要保证这个仓库是 Public 的**。!!被坑了，我是傻杯!!
 
 - 一个方法是手动复制所有链接，然后用 [Ditto](../farraginous/recommend_packages.md#ditto) 批量粘贴到 AriaNgGUI/IDM 等下载器下载。
   - 由于我使用 XDM 而批量下载抽风了，于是只好使用 aria2 下载。

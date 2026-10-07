@@ -1,6 +1,6 @@
 ---
 date: 2023-10-28
-icon: archway
+icon: solid/archway
 category:
   - 教程
 tag:
@@ -28,7 +28,7 @@ tag:
 
 :::
 
-分两块盘的优点：不用担心 windows 更新崩了 grub 引导<span class="heimu" title="你知道的太多了">不过我已经关了自动更新</span>；出现失误不用担心丢另一块盘的数据<span class="heimu" title="你知道的太多了">安装时我确实失手格掉了全盘数据和分区</span>。
+分两块盘的优点：不用担心 windows 更新崩了 grub 引导!!不过我已经关了自动更新!!；出现失误不用担心丢另一块盘的数据!!安装时我确实失手格掉了全盘数据和分区!!。
 
 #### 分区
 
@@ -115,11 +115,11 @@ umount /mnt/windows
      ```
    - `pack`: 偷来的[一键打包更新](./package.md#打包)
 2. 设置 [zram swap](https://wiki.archlinux.org/title/Zram#Using_zram-generator)。
-   - 我使用 `zram-generator` <Badge text="AUR" />。
+   - 我使用 `zram-generator` <span class="abs-badge">AUR</span>。
      - [conf example](https://github.com/systemd/zram-generator/blob/main/zram-generator.conf.example)
      - [我的 zram-generator 配置](https://github.com/lxl66566/dotfile/blob/archlinux/etc/systemd/zram-generator.conf)
 3. 设置 `/etc/fstab`
-   - ~~[挂载 tmpfs](../ramdisk.md)~~ 后来使用 zram <Badge text="2." /> 了。
+   - ~~[挂载 tmpfs](../ramdisk.md)~~ 后来使用 zram <span class="abs-badge">2.</span> 了。
      - Archlinux 实际上有 [tmpfs 挂载的默认值](https://wiki.archlinux.org/title/Tmpfs#Usage)，然而我还是手动搞了，可以调整容量。
      - 添加 `noatime` 标识，即不带访问时间 ([ref](https://t.me/archlinuxcn_group/2900548))
      - 删除 `subvolid`，详见 [timeshift 引发的血案](./problem.md#timeshift-引发的血案)
@@ -144,7 +144,7 @@ umount /mnt/windows
    - 更改缓存至 ramdisk (`CacheDir`)
 7. 更改 AUR Helper 缓存（参考 [wiki](https://wiki.archlinuxcn.org/wiki/Makepkg#使用内存文件系统进行编译) 注意事项）：
    - yay 更改缓存至 tmpfs: `yay --builddir /tmp/yay --save`
-   - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ <span class="heimu" title="你知道的太多了">使用 alias 会带来另外的问题 </span> 但是！我们可以将 paru 的 `clonedir` 也 bind mount 同一个 tmpfs，这样就能够解决问题了。
+   - _很遗憾，我仍未找到 paru 永久设置 clonedir 的方法。_ !!使用 alias 会带来另外的问题!! 但是！我们可以将 paru 的 `clonedir` 也 bind mount 同一个 tmpfs，这样就能够解决问题了。
      - 然而这里还会出现权限问题，无法 (?) 解决，因此我 [mount 到了另一个新的 tmpfs](https://github.com/lxl66566/dotfile/blob/3c97b7cbad449d4a70100e132b775365951cf250/etc/fstab#L15)。（不 bind 了）
    - [更改 makepkg 编译位置至 tmpfs](https://wiki.archlinux.org/title/makepkg#Building_from_files_in_memory)
 8. 设置 grub（内核参数）
@@ -260,7 +260,7 @@ make_new_subvolume /var/log
 5. _快捷键_，添加应用程序 _konsole_，设置唤醒快捷键
 6. 关闭通知声音
 7. 输入法，语言设置，缩放率等基础的就不要我讲了。kde(wayland?) 对分数缩放做的不算太差，只是有的图标有点糊而已。
-8. 自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！<span class="heimu" title="你知道的太多了">CPU 占用其实不需要看，~~因为可以通过风扇声判断~~</span> 还有时间格式，无用图标的自定义。
+8. 自定义状态栏。我真的爱死状态栏显示内存，磁盘 IO，CPU 占用的小组件了！!!CPU 占用其实不需要看，~~因为可以通过风扇声判断~~!! 还有时间格式，无用图标的自定义。
 9. _工作区行为 - 锁屏_，改锁屏时间。
 10. [设置 numlock 行为](https://wiki.archlinuxcn.org/wiki/启动时打开数字锁定键#KDE_Plasma_用户)
 11. _窗口管理 - 窗口行为_ 设置 _焦点跟随鼠标_
@@ -325,7 +325,7 @@ sudo pacman -S lib32-libpipewire libpipewire pipewire-alsa pipewire-pulse pipewi
 
 ## 更换内核
 
-更换内核的目的一般是需要一些特性，例如 linux-lily 的 tty 中文字符支持。我目前使用 `linux-lily`，因为其中文支持、waydroid 支持和较低的更新频率。<heimu>我曾今用过 `linux`, lts, zen 和 lily，只有 lily 的更新频率低。那么为什么要更新频率低的呢，因为天天下载还要编译模块烦死了！</heimu>
+更换内核的目的一般是需要一些特性，例如 linux-lily 的 tty 中文字符支持。我目前使用 `linux-lily`，因为其中文支持、waydroid 支持和较低的更新频率。!!我曾今用过 `linux`, lts, zen 和 lily，只有 lily 的更新频率低。那么为什么要更新频率低的呢，因为天天下载还要编译模块烦死了！!!
 
 linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本，甚至好多内核有已编译版本，下载就可用。
 
@@ -333,7 +333,7 @@ linux 下内核基本无需手动编译，毕竟有 PKGBUILD 脚本，甚至好�
 
 @tab lily
 
-`linux-lily` 需要确保添加了 <Badge text="archlinuxcn"/> 源。否则可能要从 aur 编译。
+`linux-lily` 需要确保添加了 <span class="abs-badge">archlinuxcn</span> 源。否则可能要从 aur 编译。
 
 ```sh
 sudo pacman -S linux-lily linux-lily-headers

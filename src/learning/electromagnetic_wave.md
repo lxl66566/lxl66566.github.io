@@ -1,6 +1,6 @@
 ---
 date: 2024-05-25
-icon: satellite-dish
+icon: solid/satellite-dish
 category:
   - 学习
 tag:

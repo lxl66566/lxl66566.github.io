@@ -1,6 +1,6 @@
 ---
 date: 2024-12-04
-icon: slash
+icon: solid/slash
 category:
   - 推荐
   - 教程

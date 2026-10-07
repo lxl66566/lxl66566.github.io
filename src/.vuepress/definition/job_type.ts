@@ -1,4 +1,4 @@
-import { DateType } from "./types.js";
+import type { DateType } from "./types.js";
 
 export type JobItemInputType = {
   /**

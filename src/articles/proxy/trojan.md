@@ -1,6 +1,6 @@
 ---
 date: 2023-11-26
-icon: passport
+icon: solid/passport
 category:
   - 教程
 tag:

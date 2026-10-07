@@ -1,6 +1,6 @@
 ---
 date: 2023-03-17
-icon: brands fa-java
+icon: brands/java
 category:
   - 编程
 tag:
@@ -404,7 +404,7 @@ idea 有社区版，这个是免费的，不需要破解，理论上也够用，
 
 全局安装 gradle 的话 `scoop install gradle` 一行完事。如果有需要固定版本还可以 `scoop install gradle4`、`scoop install gradle7` 等。
 
-也可以用项目里配置的 gradle 锁定版本，好处是和别人运行起来完全一致，不过可能导致多个 gradle 版本共存。如果运行 `./gradlew build`，脚本会帮你下载对应版本的 gradle，而且下载得还贼慢。。。<heimu>不会做下载器就别做。</heimu> 此时需要自己下载，然后把整个 zip 放到 `C:\Users\<用户名>\.gradle\wrapper\dists\gradle-版本-bin\<一串随机乱码>\` 下。
+也可以用项目里配置的 gradle 锁定版本，好处是和别人运行起来完全一致，不过可能导致多个 gradle 版本共存。如果运行 `./gradlew build`，脚本会帮你下载对应版本的 gradle，而且下载得还贼慢。。。!!不会做下载器就别做。!! 此时需要自己下载，然后把整个 zip 放到 `C:\Users\<用户名>\.gradle\wrapper\dists\gradle-版本-bin\<一串随机乱码>\` 下。
 
 #### 配置
 

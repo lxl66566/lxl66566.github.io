@@ -1,6 +1,6 @@
 ---
 date: 2024-04-08
-icon: tower-cell
+icon: solid/tower-cell
 category:
   - 学习
 ---

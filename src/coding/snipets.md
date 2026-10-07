@@ -1,6 +1,6 @@
 ---
 date: 2025-09-05
-icon: burst
+icon: solid/burst
 category:
   - 推荐
 tag:
@@ -148,7 +148,7 @@ echo "命令成功执行了 ${MAX_ATTEMPTS} 次而未失败。"
 
 ## record
 
-<Badge type="warning" text="unix only" />
+<span class="abs-badge" data-type="warning">unix only</span>
 
 record 本质上只算是 script 的一个 alias，用于保存输出到日志。1. record 指令不会影响终端本身输出，并且可以附加一份到日志；2. 如果有一些程序输出不是通过 stdout 或 stderr 的，record 也可以记录下来。
 

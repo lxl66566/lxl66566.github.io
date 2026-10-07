@@ -1,5 +1,6 @@
 ---
 date: 2022-05-26
+icon: solid/lightbulb
 category:
   - 作者
 tag:
@@ -183,7 +184,7 @@ tag:
 
 <!-- - [ ] 绝对值下载器，贯彻小而美（same as appstore） -->
 
-- [ ] 关于轨迹记录软件与应用时长记录软件<span class="heimu" title="你知道的太多了">时空刻录器</span>
+- [ ] 关于轨迹记录软件与应用时长记录软件!!时空刻录器!!
 - [ ] ~~Android opensource store, package manager（AUR-like）~~ **Obtainium** is good.
 - [ ] 录音机 app，抓住日常的每一个瞬间
   - [ ] 全天录音 to RAM，手动保存重放

@@ -1,6 +1,6 @@
 ---
 date: 2022-12-31
-icon: brands fa-telegram
+icon: brands/telegram
 category:
   - 教程
 tag:
@@ -41,7 +41,7 @@ Telegram 多平台软件均为开源，并且开放了许多 api，因此出现�
 若您使用 +86 号码注册，请点击 _设置 - 隐私与安全 - 手机号码 - 谁可以通过我的手机号找到我_，将其改为 _我的联系人_。<br/>请务必保护好你和他人的隐私。
 :::
 
-- 单击消息（PC：右键消息）可对消息进行处理。你可以**删除**（相当于撤回）& **编辑** 你发出的任意时刻的消息。<span class="heimu" title="你知道的太多了">此二者是聊天软件**最基本**的功能，而国内聊天软件做不到这**基本**。</span>
+- 单击消息（PC：右键消息）可对消息进行处理。你可以**删除**（相当于撤回）& **编辑** 你发出的任意时刻的消息。!!此二者是聊天软件**最基本**的功能，而国内聊天软件做不到这**基本**。!!
 - 消息发送成功后会在消息右下角显示一个 `√`。对方已读会在消息右下角显示两个 `√`。
 - 聊天界面点击 头像 / 聊天标题 即可进入聊天详情界面。可以查看一些详细信息，查找媒体文件等。
 - 你可以对任何人发起聊天，即便你们不是联系人。
@@ -65,7 +65,7 @@ Telegram 文字效果支持 粗体，斜体，下划线，等宽，删除线，�
 
 ### 文本搜索
 
-TG 仅支持 _空格分词搜索_。这是拉丁语系国家习惯的搜索方式，但对 CJK 国家极为不友好。<span class="heimu" title="你知道的太多了">当然，有寄术的可以使用 bot + sql [自建查询系统](https://github.com/lilydjwg/luoxu)。</span> 在文本中使用 [#tag](#tag) 也是一个不错的选择。
+TG 仅支持 _空格分词搜索_。这是拉丁语系国家习惯的搜索方式，但对 CJK 国家极为不友好。!!当然，有寄术的可以使用 bot + sql [自建查询系统](https://github.com/lilydjwg/luoxu)。!! 在文本中使用 [#tag](#tag) 也是一个不错的选择。
 
 ### 用户搜索
 
@@ -140,7 +140,7 @@ tag 由两端的空格，`#` 号与 tag 名构成。Telegram 会自动为 tag �
 
 ## 频道群组推荐
 
-由于本人使用 telegram 的时间不算久，此处频道/群组多为受先行者们所转发传播，在此对他们表示敬意。<span class="heimu" title="你知道的太多了">但是现在的我与当时写下这句话的我已经不一样啦 kora！</span> [这里](https://github.com/alexbei/telegram-groups)有其他人的推荐。
+由于本人使用 telegram 的时间不算久，此处频道/群组多为受先行者们所转发传播，在此对他们表示敬意。!!但是现在的我与当时写下这句话的我已经不一样啦 kora！!! [这里](https://github.com/alexbei/telegram-groups)有其他人的推荐。
 
 _首先当然是要夹带私货啦！我和我的频道：_<a href="https://t.me/ab5_x" target="_blank"><img alt="my profile" src="https://img.shields.io/badge/Telegram-@ab5__x-blue?style=flat-square&logo=telegram" /></a>
 

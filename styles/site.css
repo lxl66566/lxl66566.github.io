@@ -1,0 +1,1052 @@
+/* Site-level compat styles migrated from the vuepress-theme-hope setup
+ * (src/.vuepress/styles/{config,index,palette}.scss). Injected on every page
+ * through the UnoCSS preflight (uno.config.ts). Rules the framework already
+ * ships are not repeated here:
+ *   - heimu (base/hover/selection/link colors): theme.css covers .ap-heimu,
+ *     .heimu and the raw <heimu> element with the old moegirl palette.
+ *   - accent color: the framework's light --c-accent already is #3eaf7c, the
+ *     old $theme-color, so no variable override is needed.
+ */
+
+/* Under-h1 subtitle lines written as raw HTML in old markdown. */
+.subtitle {
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Anchor jump compensation for the sticky navbar (TOC / deep links). */
+:is(h1, h2, h3, h4, h5, h6)[id] {
+  scroll-margin-top: 20vh !important;
+}
+
+/* Monochrome svg images (mermaid exports etc.) read better inverted. */
+html[data-theme='dark'] img[src$='.svg'] {
+  filter: invert(1);
+}
+
+/* Bare markdown images inside table cells: the wind4 preflight makes every
+ * <img> display:block, so a cell's text-align:center cannot reach them (the
+ * framework only centers #ap-content figure img — the mdit figure plugin
+ * never wraps cell content). Give cell images the same centering; each image
+ * in a <br/>-separated stack centers on its own line. */
+#ap-content :where(td, th) img {
+  margin-inline: auto;
+}
+
+/* --------------------------------------------------------------------------
+ * Migrated legacy components (src/.vuepress/components -> islands/ + these
+ * rules). All colors come from the framework --c-* tokens so light/dark and
+ * mobile keep working.
+ * ------------------------------------------------------------------------ */
+
+/* <dated> island, TelegramLink / RSSLink islands, legacy Badge / <dtls>
+ * conversions keep their rules below; the Dated / Reciter / ArticleCell
+ * chrome that their TSX fully controls moved to uno utilities instead. */
+
+/* TelegramLink / RSSLink islands: standalone nav-style icon row.
+ * (Unconverted: the islands are registered-but-unused, and the framework's
+ * #ap-content a rule already owns their link color/hover/transition.) */
+.abs-nav-icon a {
+  display: inline-block;
+  padding: 0.2rem;
+  color: var(--c-text-2);
+  transition: color 140ms ease-out;
+}
+
+.abs-nav-icon a:hover {
+  color: var(--c-accent);
+}
+
+/* Legacy Badge / OrderBadge replacements: inline pills
+ * (<span class="abs-badge" data-type="...">). */
+.abs-badge {
+  display: inline-block;
+  padding: 0 0.45rem;
+  font-size: 0.75rem;
+  line-height: 1.7;
+  vertical-align: middle;
+  color: var(--c-bg);
+  background-color: var(--c-text-2);
+  border-radius: 0.5rem;
+}
+
+.abs-badge[data-type='tip'] {
+  background-color: var(--c-accent);
+}
+
+.abs-badge[data-type='warning'] {
+  background-color: #e0a800;
+}
+
+.abs-badge[data-type='danger'] {
+  background-color: #d5323c;
+}
+
+.abs-badge[data-type='info'] {
+  background-color: #2b8fd2;
+}
+
+html[data-theme='dark'] .abs-badge[data-type='warning'] {
+  background-color: #b28700;
+}
+
+html[data-theme='dark'] .abs-badge[data-type='danger'] {
+  background-color: #a63c44;
+}
+
+html[data-theme='dark'] .abs-badge[data-type='info'] {
+  background-color: #2f6da8;
+}
+
+/* Inline <dtls> conversion: a raw <details> whose summary is a fixed label.
+ * Block usages map to the framework's ::: details container instead. */
+details.abs-dtls > summary {
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-size: 0.85em;
+  color: var(--c-accent);
+  list-style: none;
+  cursor: pointer;
+  background-color: color-mix(in srgb, var(--c-accent) 8%, transparent);
+  border-radius: 0.375rem;
+}
+
+details.abs-dtls > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Inline <dtlslong> conversion: the whole text lives in the summary; closed
+ * state clamps it to two lines, open state shows everything. */
+details.abs-dtlslong > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+details.abs-dtlslong > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.abs-dtlslong:not([open]) > summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Fold island (used inside AvTable/ComicTable): two-line clamp with fade,
+ * click to expand/collapse. */
+.abs-fold {
+  cursor: default;
+}
+
+.abs-fold__content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 99;
+  overflow: hidden;
+}
+
+.abs-fold.is-foldable {
+  cursor: pointer;
+}
+
+.abs-fold:not(.is-expanded) .abs-fold__content {
+  -webkit-line-clamp: 2;
+}
+
+.abs-fold.is-foldable:not(.is-expanded) .abs-fold__content {
+  mask-image: linear-gradient(to right, #000 calc(100% - 2em), transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    #000 calc(100% - 2em),
+    transparent
+  );
+}
+
+.abs-fold.is-expanded .abs-fold__content {
+  display: block;
+}
+
+/* GalExhibitionGrid island: borderless image grid. Legacy fixed 180x250
+ * (18:25, cover) cells; auto-fill columns wrap by width, so wider content
+ * lanes just get more columns (no fixed per-row count). */
+.abs-exhibition {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 180px);
+  justify-content: center;
+  gap: 0.75rem 0.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.abs-exhibition__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.abs-exhibition__item img {
+  width: 180px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* ArticleCell island: flex masonry of fieldset link boxes — fully styled
+ * with uno utilities in the TSX (box restates the fieldset chrome the wind4
+ * preflight zeroes; link color/hover rides the framework's #ap-content a).
+ * Reciter island likewise: utilities only. */
+
+/* AvTable / ComicTable islands. */
+/* av/comic tables ride the xlist component now; keep the denser legacy
+ * padding by out-scoping the ported xlist cell rule (#ap-content + class). */
+#ap-content .abs-avtable :is(th, td),
+#ap-content .abs-comictable :is(th, td) {
+  padding: 0.35rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#ap-content .abs-avtable thead th,
+#ap-content .abs-comictable thead th {
+  background-color: var(--c-bg-soft);
+}
+
+/* --------------------------------------------------------------------------
+ * Page chrome (audit batch 1b): article h1 scale, meta-row icon alignment.
+ * ------------------------------------------------------------------------ */
+
+/* L7: article h1 back to ~34px (framework theme.css ships 1.9rem = 30.4px;
+ * old site rendered 35.2px, ruling lands on ~34px). The html prefix
+ * outranks the framework's #ap-content h1 rule without !important. */
+html #ap-content h1 {
+  font-size: 2.125rem;
+}
+
+/* --------------------------------------------------------------------------
+ * Site xlist islands (islands/xlist/*): table + toolbar + badges + reveal
+ * rows, ported from the framework's ExpandableList.css so the data-backed
+ * islands render identically. Static-fallback rules (ap-xlist__item) still
+ * apply to the build-time skeleton the islands parse and replace.
+ * ------------------------------------------------------------------------ */
+
+.ap-xlist {
+  margin: 0.75rem 0;
+}
+
+.ap-xlist__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 0 0.75rem;
+}
+
+.ap-xlist__search {
+  flex: 1 1 10rem;
+  min-width: 0;
+  padding: 0.4rem 0.6rem;
+  color: var(--c-text);
+  background-color: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 0.375rem;
+  transition: border-color 140ms ease-out;
+}
+
+.ap-xlist__search:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -1px;
+}
+
+.ap-xlist__filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8125rem;
+  color: var(--c-text);
+  background-color: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 0.375rem;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 140ms ease-out;
+}
+
+.ap-xlist__filter:hover,
+.ap-xlist__filter.is-active {
+  border-color: var(--c-accent);
+}
+
+.ap-xlist__filter input {
+  margin: 0;
+  accent-color: var(--c-accent);
+  cursor: pointer;
+}
+
+.ap-xlist__count {
+  margin-left: auto;
+  font-size: 0.8125rem;
+  color: var(--c-text-2);
+  white-space: nowrap;
+}
+
+.ap-xlist__empty {
+  padding: 1rem;
+  color: var(--c-text-2);
+  text-align: center;
+}
+
+.ap-xlist__hint {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--c-accent);
+  background-color: color-mix(in srgb, var(--c-accent) 10%, var(--c-bg));
+  border: 1px solid var(--c-accent);
+  border-radius: 0.5rem;
+}
+
+.ap-xlist__hint::after {
+  content: '';
+  position: absolute;
+  bottom: -6.5px;
+  left: 1.4rem;
+  width: 11px;
+  height: 11px;
+  background-color: color-mix(in srgb, var(--c-accent) 10%, var(--c-bg));
+  border-bottom: 1px solid var(--c-accent);
+  border-right: 1px solid var(--c-accent);
+  transform: rotate(45deg);
+}
+
+.ap-xlist__scroll {
+  overflow-x: auto;
+}
+
+.ap-xlist__table {
+  width: 100%;
+  /* Legacy density: ~40px single-line rows (15px text, 1.5 leading). */
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  border-collapse: collapse;
+}
+
+#ap-content .ap-xlist__table {
+  display: table;
+  table-layout: auto;
+  overflow: visible;
+}
+
+#ap-content .ap-xlist__table :where(th, td) {
+  padding: 0.5rem 0.55rem;
+}
+
+#ap-content .ap-xlist__table tbody tr:nth-child(even) {
+  background-color: transparent;
+}
+
+#ap-content .ap-xlist__table tbody tr:nth-child(4n + 1) {
+  background-color: color-mix(in srgb, var(--c-bg-soft) 55%, var(--c-bg));
+}
+
+.ap-xlist__th {
+  font-weight: 600;
+  color: var(--c-text);
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  white-space: nowrap;
+}
+
+/* Header sorter (legacy SortIndicator port): label + stacked triangles, the
+ * active one accent-lit. Color transitions only — icons never animate. */
+.ap-xlist__sorter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: color 140ms ease-out;
+}
+
+.ap-xlist__sorter:hover {
+  color: var(--c-accent);
+}
+
+.ap-xlist__sorter:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -2px;
+}
+
+.ap-xlist__sorter-icons {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ap-xlist__sorter-tri {
+  width: 0;
+  height: 0;
+  margin: 1px 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  transition: border-color 140ms ease-out;
+}
+
+.ap-xlist__sorter-tri.is-up {
+  border-bottom: 4px solid var(--c-text-2);
+}
+
+.ap-xlist__sorter-tri.is-down {
+  border-top: 4px solid var(--c-text-2);
+}
+
+.ap-xlist__sorter-tri.is-active.is-up {
+  border-bottom-color: var(--c-accent);
+}
+
+.ap-xlist__sorter-tri.is-active.is-down {
+  border-top-color: var(--c-accent);
+}
+
+#ap-content .ap-xlist__table th.ap-xlist__th--title,
+#ap-content .ap-xlist__table td.ap-xlist__title,
+#ap-content .ap-xlist__table td.ap-xlist__item-title {
+  min-width: 9em;
+}
+
+#ap-content
+  .ap-xlist__table:not(.ap-xlist__table--wide)
+  :is(th.ap-xlist__th--title, td.ap-xlist__title, td.ap-xlist__item-title) {
+  width: 100%;
+}
+
+.ap-xlist__cell {
+  color: var(--c-text);
+  text-align: center;
+  vertical-align: middle;
+  overflow-wrap: break-word;
+  border: 1px solid var(--c-border);
+}
+
+.ap-xlist__item-meta.is-date {
+  white-space: nowrap;
+}
+
+.ap-xlist__item-meta.is-empty {
+  color: var(--c-text-2);
+}
+
+.ap-xlist__title-text,
+.ap-xlist__toggle,
+.ap-xlist__item-title {
+  font-weight: 400;
+}
+
+.ap-xlist__toggle {
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.ap-xlist__toggle:focus-visible {
+  outline: 2px solid var(--c-accent);
+  outline-offset: -2px;
+}
+
+.ap-xlist__title-inline {
+  margin-left: 0.4em;
+}
+
+.ap-xlist__row.is-expandable {
+  cursor: pointer;
+}
+
+#ap-content .ap-xlist__row.is-expandable:hover {
+  outline: 1px solid var(--c-accent);
+  outline-offset: -1px;
+  background-color: color-mix(in srgb, var(--c-accent) 6%, var(--c-bg));
+}
+
+#ap-content .ap-xlist__row:not(.is-expandable):hover {
+  background-color: color-mix(in srgb, var(--c-text-2) 6%, var(--c-bg));
+}
+
+.ap-xlist__row.is-offer .ap-xlist__cell {
+  color: var(--c-accent);
+}
+
+.ap-xlist__badge {
+  display: inline-block;
+  padding: 0.05em 0.55em;
+  font-size: 0.8em;
+  line-height: 1.6;
+  margin: 0 0.2em;
+  white-space: nowrap;
+  border-radius: 999px;
+}
+
+.ap-xlist__badge.is-success {
+  color: #10b981;
+  background-color: rgb(16 185 129 / 0.16);
+}
+
+.ap-xlist__badge.is-warning {
+  color: #d97706;
+  background-color: rgb(217 119 6 / 0.16);
+}
+
+.ap-xlist__badge.is-danger {
+  color: #f43f5e;
+  background-color: rgb(244 63 94 / 0.16);
+}
+
+.ap-xlist__badge.is-info {
+  color: #539bf5;
+  background-color: rgb(83 155 245 / 0.16);
+}
+
+.ap-xlist__badge.is-note {
+  color: var(--c-text-2);
+  background-color: color-mix(in srgb, var(--c-text-2) 16%, transparent);
+}
+
+.ap-xlist__item-meta.is-high-score {
+  color: #10b981;
+  font-weight: 700;
+}
+
+.ap-xlist__item-meta.is-low-score {
+  color: #f43f5e;
+}
+
+#ap-content .ap-xlist__table .ap-xlist__row.is-open {
+  background-color: color-mix(in srgb, var(--c-accent) 4%, var(--c-bg));
+}
+
+#ap-content
+  :is(.ap-xlist__reveal-row, .ap-xlist__item-expanded)
+  > .ap-xlist__reveal-cell {
+  padding: 0;
+  background-color: var(--c-bg);
+  border: 0;
+  border-left: 1px solid var(--c-border);
+  border-right: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+#ap-content .ap-xlist__reveal-row.is-open > .ap-xlist__reveal-cell {
+  background-color: color-mix(in srgb, var(--c-accent) 4%, var(--c-bg));
+}
+
+#ap-content .ap-xlist__reveal-row:not(.is-open) .ap-xlist__reveal-cell {
+  font-size: 0;
+  line-height: 0;
+}
+
+.ap-xlist__reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 160ms ease-out;
+}
+
+.ap-xlist__reveal-row.is-open .ap-xlist__reveal {
+  grid-template-rows: 1fr;
+}
+
+.ap-xlist__body {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.ap-xlist__body-inner {
+  padding: 0.55rem 0.9rem 0.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#ap-content .ap-xlist__body-inner > :first-child {
+  margin-top: 0;
+}
+
+#ap-content .ap-xlist__body-inner > :last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .ap-xlist__table--wide {
+    min-width: 46em;
+  }
+}
+
+.ap-xlist__item .ap-xlist__item-meta {
+  font-size: 0.875rem;
+  color: var(--c-text-2);
+}
+
+/* --------------------------------------------------------------------------
+ * Navbar panel overview row (板块总览行): the framework marks the panel's
+ * leading row (generated for top-level folders, synthesized for nested
+ * index-linked folders) with li.ap-nav-index-row (NavItem.index). The
+ * wording below is site-side on purpose — the framework stays
+ * language-neutral. The divider separates the overview entry from the
+ * article tree; the badge pins to the row's right edge like a nested
+ * flyout caret.
+ * ------------------------------------------------------------------------ */
+
+.ap-nav-index-row {
+  border-bottom: 1px solid var(--c-border);
+  padding-bottom: 0.375rem;
+  margin-bottom: 0.25rem;
+}
+
+.ap-nav-index-row > a::after,
+.ap-nav-index-row > button::after {
+  content: '总览';
+  margin-left: auto;
+  padding: 0 0.45rem;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--c-accent);
+  border: 1px solid color-mix(in srgb, var(--c-accent) 45%, transparent);
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--c-accent) 10%, transparent);
+}
+
+/* --------------------------------------------------------------------------
+ * Homepage profile rail (HomeProfile island, src/index.md). Desktop keeps
+ * the TOC lane and swaps the framework TOC for the profile card — the :has
+ * hook matches the island placeholder, so it reverts by itself once
+ * client-side navigation leaves the home page. Below 1280px the same DOM
+ * flows as a card above the article body.
+ * ------------------------------------------------------------------------ */
+
+html:has(#ap-content > div[data-ap-island='HomeProfile']) #ap-toc,
+html:has(#ap-content > div[data-ap-island='HomeProfile']) #ap-related {
+  display: none;
+}
+
+/* Leading trim past the island wrapper (framework theme.css zeroes the top
+ * margin of #ap-chrome itself and of the element right after it, but here
+ * that slot is held by the HomeProfile placeholder, so the h1 kept its
+ * 1.6em leading margin — a dead band under the navbar ever since the home
+ * feed was disabled (home.feed: false) left the chrome slot empty and the
+ * fixed rail left the placeholder a zero-height box). Same structural
+ * adjacency pattern the framework uses, no negative margins: the rail's
+ * own margin-bottom (1.5rem, mobile card) becomes the only gap above the
+ * h1, and desktop falls back to the bare column padding like every other
+ * page. */
+#ap-content > div[data-ap-island='HomeProfile'] + h1 {
+  margin-top: 0;
+}
+
+.abs-home-rail {
+  margin-bottom: 1.5rem;
+}
+
+.abs-home-rail__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem;
+  background-color: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: 0.75rem;
+}
+
+.abs-home-rail__avatar {
+  display: block;
+  line-height: 0;
+}
+
+.abs-home-rail__avatar img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 1px solid var(--c-border);
+}
+
+.abs-home-rail__name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--c-text);
+  transition: color 120ms ease-out;
+}
+
+.abs-home-rail__name:hover {
+  color: var(--c-accent);
+}
+
+.abs-home-rail__stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.abs-home-rail__stats a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.abs-home-rail__stats b {
+  font-size: 1.05rem;
+  color: var(--c-text);
+  transition: color 120ms ease-out;
+}
+
+.abs-home-rail__stats span {
+  font-size: 0.75rem;
+  color: var(--c-text-2);
+  transition: color 120ms ease-out;
+}
+
+.abs-home-rail__stats a:hover b,
+.abs-home-rail__stats a:hover span {
+  color: var(--c-accent);
+}
+
+.abs-home-rail__social {
+  display: flex;
+  gap: 1rem;
+}
+
+.abs-home-rail__social a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--c-text-2);
+  transition: color 120ms ease-out;
+}
+
+.abs-home-rail__social a:hover {
+  color: var(--c-accent);
+}
+
+.abs-home-rail__icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.abs-home-rail__group {
+  width: 100%;
+}
+
+/* Anchor targets of the stats row: flash once for feedback (desktop keeps
+ * the rail fixed, so there is nothing to scroll to). */
+.abs-home-rail__group:target {
+  animation: abs-home-flash 900ms ease-out;
+  border-radius: 0.375rem;
+}
+
+@keyframes abs-home-flash {
+  from {
+    background-color: color-mix(in srgb, var(--c-accent) 15%, transparent);
+  }
+
+  to {
+    background-color: transparent;
+  }
+}
+
+.abs-home-rail__label {
+  display: block;
+  width: 100%;
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.55rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--c-text-2);
+  border-bottom: 1px solid var(--c-border);
+}
+
+/* #ap-content prefixes beat the framework's #ap-content ul/li prose rules. */
+#ap-content .abs-home-rail__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.3rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ap-content .abs-home-rail__chips li {
+  list-style: none;
+}
+
+.abs-home-rail__chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  padding: 0.1rem 0.55rem;
+  font-size: 0.78rem;
+  color: var(--c-text-2);
+  background-color: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 9999px;
+  transition:
+    color 120ms ease-out,
+    border-color 120ms ease-out;
+}
+
+.abs-home-rail__chip[data-tag] {
+  padding: 0.05rem 0.45rem;
+  font-size: 0.72rem;
+  background-color: transparent;
+}
+
+.abs-home-rail__chip:hover {
+  color: var(--c-accent);
+  border-color: var(--c-accent);
+}
+
+.abs-home-rail__count {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+@media (min-width: 1280px) {
+  .abs-home-rail {
+    position: fixed;
+    top: var(--ap-nav-h);
+    right: 0;
+    bottom: 0;
+    /* Below the framework's floating layers (back-to-top z-30, navbar
+     * z-40/50): the rail spans the lane down to the viewport bottom and
+     * must not cover the button sitting in its lower-right corner. */
+    z-index: 20;
+    width: var(--ap-toc-w);
+    padding: 1.5rem 1rem 3rem;
+    margin-bottom: 0;
+    /* TOC-lane tier: scrollable but no visible scrollbar (wheel/touch still
+     * scroll — same treatment the framework gives #ap-toc). */
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .abs-home-rail::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Homepage project shelf (HomeProjects island, src/index.md 分类货架):
+ * featured cards on top, then one foldable row per project group — mini
+ * cards flow in a grid, low-value groups (Garbage) start collapsed.
+ * ------------------------------------------------------------------------ */
+
+.abs-projects__featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.abs-projects__featured {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.85rem 0.9rem;
+  color: var(--c-text);
+  background-color: var(--c-bg-soft);
+  border: 1px solid var(--c-border);
+  border-radius: 0.75rem;
+  transition: border-color 120ms ease-out;
+}
+
+.abs-projects__featured:hover {
+  border-color: color-mix(in srgb, var(--c-accent) 55%, transparent);
+}
+
+.abs-projects__thumb {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 0.4rem;
+  border: 1px solid var(--c-border);
+  border-radius: 0.5rem;
+}
+
+.abs-projects__feat-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: color 120ms ease-out;
+}
+
+.abs-projects__featured:hover .abs-projects__feat-name {
+  color: var(--c-accent);
+}
+
+.abs-projects__feat-stack {
+  font-size: 0.75rem;
+  color: var(--c-text-2);
+}
+
+.abs-projects__feat-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--c-text-2);
+}
+
+.abs-projects__group-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.45rem 0;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--c-text);
+  text-align: left;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--c-border);
+  cursor: pointer;
+}
+
+.abs-projects__group-head:hover .abs-projects__group-name {
+  color: var(--c-accent);
+}
+
+.abs-projects__group-icon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  color: var(--c-text-2);
+}
+
+.abs-projects__group-count {
+  padding: 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--c-text-2);
+  border: 1px solid var(--c-border);
+  border-radius: 9999px;
+}
+
+/* Icon rule: state flips instantly, no motion. */
+.abs-projects__chevron {
+  flex: none;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: auto;
+  color: var(--c-text-2);
+}
+
+.abs-projects__group[data-open] .abs-projects__chevron {
+  transform: rotate(90deg);
+}
+
+/* Same 0fr/1fr reveal pattern as the xlist bodies: the padded grid lives
+ * inside a min-height:0 overflow-hidden body, so a 0fr track collapses to
+ * literally nothing (the grid's own padding is not compressible). No
+ * transition: shelf rows snap open/closed.
+ * ------------------------------------------------------------------------ */
+
+.abs-projects__reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+}
+.abs-projects__group[data-open] .abs-projects__reveal {
+  grid-template-rows: 1fr;
+}
+
+.abs-projects__body {
+  min-height: 0;
+  overflow: hidden;
+}
+
+#ap-content .abs-projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.65rem 0 0.2rem;
+  list-style: none;
+}
+
+#ap-content .abs-projects__grid li {
+  display: flex;
+  list-style: none;
+}
+
+.abs-projects__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  background-color: var(--c-bg);
+  border: 1px solid var(--c-border);
+  border-radius: 0.5rem;
+  transition: border-color 120ms ease-out;
+}
+
+.abs-projects__card:hover {
+  border-color: color-mix(in srgb, var(--c-accent) 55%, transparent);
+}
+
+.abs-projects__name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--c-text);
+  overflow-wrap: anywhere;
+  transition: color 120ms ease-out;
+}
+
+.abs-projects__card:hover .abs-projects__name {
+  color: var(--c-accent);
+}
+
+.abs-projects__desc {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--c-text-2);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* Inline markdown in descriptions (framework inline renderer, see
+ * vite.config.ts project-desc-html). strong lifts to the primary text color
+ * for contrast; code uses a translucent fill that works on both the featured
+ * (bg-soft) and mini-card (bg) backgrounds. em/del keep their UA defaults;
+ * heimu/mark are styled by the framework's global theme css. */
+.abs-projects__feat-desc strong,
+.abs-projects__desc strong {
+  font-weight: 600;
+  color: var(--c-text);
+}
+
+.abs-projects__feat-desc code,
+.abs-projects__desc code {
+  font-size: 0.85em;
+  padding: 0.1em 0.35em;
+  background-color: color-mix(in srgb, var(--c-text) 7%, transparent);
+  border: 1px solid var(--c-border);
+  border-radius: 0.25rem;
+}

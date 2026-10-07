@@ -1,6 +1,5 @@
 ---
-externalLinkIcon: false
-icon: play
+icon: solid/play
 date: 2022-07-04
 category:
   - 推荐
@@ -39,20 +38,20 @@ FC2 系列的颜值平均值较低，方差较小；然而基本没有演技可�
 - HAKC-010
 - [FC2-PPV-3600188](https://njav.tv/en/v/fc2-ppv-3600188)（关闭 adblock）
 - [FC2-PPV-3299392](https://njav.tv/zh/v/fc2-ppv-3299392)（关闭 adblock）
-- <Av bg="fc2-ppv-3470313" />
-- <Av bg="fc2-ppv-3059030" />
-- <Av bg="fc2-ppv-2805736" />，在上表中出现过，这里是画面补充
-- <Av bg="fc2-ppv-3393451" />，其实散发更好看
-- <Av bg="FC2-PPV-3172294" />
-- <Av bg="fc2-ppv-1851398" />
-- <Av bg="fc2-ppv-3518061" />
-- <Av bg="fc2-ppv-3277687" />
-- <Av bg="fc2-ppv-4409072" />
-- <Av bg="FC2-PPV-4067240" />
-- <Av bg="FC2-PPV-3190716" />
-- <Av bg="FC2-PPV-4361267" />
-- <Av bg="FC2-PPV-4069681" />，这也太大根了吧
-- <Av bg="FC2-PPV-4663355" />，颜值是 FC2 顶级
+- [FC2-PPV-3470313](https://missav.ai/fc2-ppv-3470313)
+- [FC2-PPV-3059030](https://missav.ai/fc2-ppv-3059030)
+- [FC2-PPV-2805736](https://missav.ai/fc2-ppv-2805736)，在上表中出现过，这里是画面补充
+- [FC2-PPV-3393451](https://missav.ai/fc2-ppv-3393451)，其实散发更好看
+- [FC2-PPV-3172294](https://missav.ai/FC2-PPV-3172294)
+- [FC2-PPV-1851398](https://missav.ai/fc2-ppv-1851398)
+- [FC2-PPV-3518061](https://missav.ai/fc2-ppv-3518061)
+- [FC2-PPV-3277687](https://missav.ai/fc2-ppv-3277687)
+- [FC2-PPV-4409072](https://missav.ai/fc2-ppv-4409072)
+- [FC2-PPV-4067240](https://missav.ai/FC2-PPV-4067240)
+- [FC2-PPV-3190716](https://missav.ai/FC2-PPV-3190716)
+- [FC2-PPV-4361267](https://missav.ai/FC2-PPV-4361267)
+- [FC2-PPV-4069681](https://missav.ai/FC2-PPV-4069681)，这也太大根了吧
+- [FC2-PPV-4663355](https://missav.ai/FC2-PPV-4663355)，颜值是 FC2 顶级
 - [ハロウィンパーティーで盛り上がって 4 人で夜な夜な中出しやりまくり](https://www.tokyomotion.net/video/3333474/20-ハロウィンパーティーで盛り上がって4人で夜な夜な中出しやりまくり)
 
 ## 评优
@@ -77,7 +76,3 @@ FC2 系列的颜值平均值较低，方差较小；然而基本没有演技可�
 
 1. [日本 AV 番号录](https://blog.wenxuecity.com/myblog/70246/202008/41208.html)
 
-<script setup lang="ts">
-import AvTable from "@AvTable";
-import Av from "@Av";
-</script>

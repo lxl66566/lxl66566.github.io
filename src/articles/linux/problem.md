@@ -1,6 +1,6 @@
 ---
 date: 2023-10-11
-icon: regular fa-circle-xmark
+icon: regular/circle-xmark
 category:
   - 经历
   - 问题
@@ -306,7 +306,7 @@ ps. 群友提出了 `yay --aurrpcurl 'https://aur.archlinux.org' --save`
 
 ## Windows 字体问题
 
-根据[教程](https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#安装-windows-字体)复制 windows 字体，<span class="heimu" title="你知道的太多了">打错大小写就先不说了，纠正以后</span>提示：
+根据[教程](https://arch.icekylin.online/guide/advanced/optional-cfg-1.html#安装-windows-字体)复制 windows 字体，!!打错大小写就先不说了，纠正以后!!提示：
 
 > cp: 对 './yuminl.ttf' 调用 stat 失败：没有那个文件或目录
 

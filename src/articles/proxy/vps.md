@@ -1,6 +1,6 @@
 ---
 date: 2023-05-14
-icon: computer
+icon: solid/computer
 category:
   - 教程
   - 经历
@@ -38,28 +38,28 @@ tag:
 <!-- prettier-ignore -->
 |Host|location|Price|bandwidth|RAM|Storage|Core|saying|
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695) | San Jose | $10.28/yr | 1000GB 1Gbps | 768MB | 10GB | 1 | <dtlslong>装了 Debian 10（后来换成了 12）。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。[^1]</dtlslong> |
-| 20230602 [vpslog](https://distribute.vpslog.net/) |  | free |  | 64MB |  |  | <dtlslong>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</dtlslong> |
-| 20231124 [silicloud](www.silicloud.com) (BF) | Tokyo | HK$128/yr | 300GB 300Mbps | 768MB | 20GB | 1 | <dtlslong>提供 archlinux 镜像。没有 rescue。稳定性开始还行，半年后差不多烂完了。</dtlslong> |
-| 20231212 azure | Korea Central | ~~$9.xx/mo~~ free | unknown | 1GB | 30GB | 1 | <dtlslong>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</dtlslong> |
-| 20231213 aliyun | HK | ~~288CNY/yr~~ free | 1024 GB unknown | 896MB | 40GB | 2 | <dtlslong>香港地区 TG 时常抽风；免费的香港机我想都不敢想（）</dtlslong> |
-| 202403xx wawo | US | ￥3.73/mo | unknown | 512MB | unknown | 1 | <dtlslong>冲便宜买的，质量很捞，本来是用作测试的。结果半个月给我封了，莫名其妙。于是避雷 wawo 了。</dtlslong> |
-| 20240518 Churros|JP|￥8.9/mo + ￥6 初装|200GB 100Mbps|1GB|5GB|1|<dtlslong>silicloud IP 寄了，换台 JP。这家是超级垃圾灵车，非常不稳定</dtlslong> |
-| 20240714 Akile | HK | ￥5/mo | 200GB 1000Mbps | 1GB | 5GB | 1 | <dtlslong>akile 很灵车，不推荐。介于 Churros 和 Lamhosting 之间。</dtlslong> |
-| 20240726 Lamhosting | TW | ￥10.6/mo(coupon -￥2) | 512GB 1000Mbps | 512M | 10GB | 1 | <dtlslong>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</dtlslong> | 
-|  20240820 SurfCloud | HK | $1/mo | 200GB 30Mbps | 1G | 40GB | 1 | <dtlslong>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</dtlslong> |
-|  20240911 YXVM | JP | $3/mo | 1TB 500Mbps | 768MB | 5GB | 1 | <dtlslong>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</dtlslong> |
+| 20230514 [RackNerd](https://my.racknerd.com/cart.php?a=add&pid=695) | San Jose | $10.28/yr | 1000GB 1Gbps | 768MB | 10GB | 1 | <details class="abs-dtlslong"><summary>装了 Debian 10（后来换成了 12）。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。[^1]</summary></details> |
+| 20230602 [vpslog](https://distribute.vpslog.net/) |  | free |  | 64MB |  |  | <details class="abs-dtlslong"><summary>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</summary></details> |
+| 20231124 [silicloud](www.silicloud.com) (BF) | Tokyo | HK$128/yr | 300GB 300Mbps | 768MB | 20GB | 1 | <details class="abs-dtlslong"><summary>提供 archlinux 镜像。没有 rescue。稳定性开始还行，半年后差不多烂完了。</summary></details> |
+| 20231212 azure | Korea Central | ~~$9.xx/mo~~ free | unknown | 1GB | 30GB | 1 | <details class="abs-dtlslong"><summary>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</summary></details> |
+| 20231213 aliyun | HK | ~~288CNY/yr~~ free | 1024 GB unknown | 896MB | 40GB | 2 | <details class="abs-dtlslong"><summary>香港地区 TG 时常抽风；免费的香港机我想都不敢想（）</summary></details> |
+| 202403xx wawo | US | ￥3.73/mo | unknown | 512MB | unknown | 1 | <details class="abs-dtlslong"><summary>冲便宜买的，质量很捞，本来是用作测试的。结果半个月给我封了，莫名其妙。于是避雷 wawo 了。</summary></details> |
+| 20240518 Churros|JP|￥8.9/mo + ￥6 初装|200GB 100Mbps|1GB|5GB|1|<details class="abs-dtlslong"><summary>silicloud IP 寄了，换台 JP。这家是超级垃圾灵车，非常不稳定</summary></details> |
+| 20240714 Akile | HK | ￥5/mo | 200GB 1000Mbps | 1GB | 5GB | 1 | <details class="abs-dtlslong"><summary>akile 很灵车，不推荐。介于 Churros 和 Lamhosting 之间。</summary></details> |
+| 20240726 Lamhosting | TW | ￥10.6/mo(coupon -￥2) | 512GB 1000Mbps | 512M | 10GB | 1 | <details class="abs-dtlslong"><summary>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</summary></details> | 
+|  20240820 SurfCloud | HK | $1/mo | 200GB 30Mbps | 1G | 40GB | 1 | <details class="abs-dtlslong"><summary>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</summary></details> |
+|  20240911 YXVM | JP | $3/mo | 1TB 500Mbps | 768MB | 5GB | 1 | <details class="abs-dtlslong"><summary>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</summary></details> |
 |  20241018 azure | JP | free | ? | 1G | 30G | 1 | 微软，我的超人 |
-|  20241031 [91idc](https://91idc.gg/index.php) | HK | ￥10/mo | 666GB 20MBps | 1G | 10G | 1 | <dtlslong>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</dtlslong> |
-|  20250107 [Sakura Clouds](https://portal.sakuraclouds.com/) | HK |  ~~\$2.50/mo~~ \$2.20 | 2TB 1Gbps | 1G | 8G | 1 | <dtlslong>速度还行，但是延迟和稳定性**超烂**，没有下次了。</dtlslong> |
-| 20250109 ~~[ClawCloud](https://claw.cloud/)~~ | JP  | ~~\$36.00/yr~~ \$7.00/yr | 500GB | 1G | 20G | 1 | <dtlslong>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。爽用了 9 个月，之后开始出现稳定性下降、延迟增大等问题。[2026 年已死](https://claw.cloud/announcements/38?language=chinese-simplified)</dtlslong> |
-| 20250404 [nube.sh](http://nube.sh) | JP | $0.0012/h + $0.0031/GB | 不限 | 1GB | 10GB | 1 | [测评](http://hpaste.spiritlhl.net/#/show/bp0wd.txt)；<dtlslong>前端好评；一次最少充 $10，试错成本挺高；延迟一般，特别是联通很烂。<br/>用了一个月，连通性差了很多，基本是不可用状态，纯纯狗屎</dtlslong> |
-| 20250805 [skystroll](https://skystroll.net/store) | JP | $2.49/mo | 1T 500Mbps | 512M | 5GB | 1 | <dtlslong>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</dtlslong> |
-| 20250820 [RFCHOST](https://my.rfchost.com/) | JP | $29.99/yr + ￥45 | 1T 不限 | 512M | 10GB | 1 | <dtlslong>看评测挺不错的，延迟很低，价格也合适，于是在 nodeseek 上蹲了几天蹲到一个。溢价还是有点高，因为第二天就有更合适的出现了，不过也不用在乎这么多。</dtlslong> |
-| 20250827 [dedirock](https://billing.dedirock.com/index.php) | US (LA) | $7/yr | 2T 1Gbps | 2G | 30G | 1 | <dtlslong>手上只有 JP 机确实让我感受到一些限制，~~例如禁漫就没法登上去~~。刚好看到便宜美西机，所以搞了个，延迟就无所谓了。注意 paypal 付款会被自动订阅一个续费需要去取消掉。这家的官网从 JP 加载贼慢，但是机子还挺不错。延迟不会超过 200ms，已经算好了。但是几个月后网络质量大幅下降，经常断连</dtlslong> |
-| 20251205 [ACCKCloud](https://acck.io/) | JP | ￥14.88/mo | 500GB 500Mbps | 512M | 8G | 1 | <dtlslong>IIJ，到上海电信延迟非常不错（40ms）。最可惜的是 IP 有点脏，在 Google Gemini、nhentai、garnix 都会被拦，我不太能接受。（acck 家的整个 156.231.140.1 gw 的 ip 段都是脏的）<br/>Update 20260731：报道称 acck 明文存储用户密码，并且已经泄漏，那很弱智了。</dtlslong> |
-| 20260304 [vpshostingservice](https://vpshostingservice.co/order/server-host-linux-vps-ssd/ssd-1gb) | US(LA) | ￥11/yr | 无限流量 1Gbps 共享端口 | 1G | 15G | 1 | <dtlslong>[评测](https://www.nodeseek.com/post-637237-1)，能加密货币付款，第三方平台支持很多链，不错。网络质量吃运营商，家里比较烂但是公司里还可以用。优惠码是长期的，11 刀还要什么自行车。</dtlslong> |
-| 20260817 [YT.NET](https://cloud.yt.net/) | JP | ￥22/mo | 1T 500Mbps | 1G | 10G | 1 | <dtlslong>待续</dtlslong> |
+|  20241031 [91idc](https://91idc.gg/index.php) | HK | ￥10/mo | 666GB 20MBps | 1G | 10G | 1 | <details class="abs-dtlslong"><summary>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</summary></details> |
+|  20250107 [Sakura Clouds](https://portal.sakuraclouds.com/) | HK |  ~~\$2.50/mo~~ \$2.20 | 2TB 1Gbps | 1G | 8G | 1 | <details class="abs-dtlslong"><summary>速度还行，但是延迟和稳定性**超烂**，没有下次了。</summary></details> |
+| 20250109 ~~[ClawCloud](https://claw.cloud/)~~ | JP  | ~~\$36.00/yr~~ \$7.00/yr | 500GB | 1G | 20G | 1 | <details class="abs-dtlslong"><summary>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。爽用了 9 个月，之后开始出现稳定性下降、延迟增大等问题。[2026 年已死](https://claw.cloud/announcements/38?language=chinese-simplified)</summary></details> |
+| 20250404 [nube.sh](http://nube.sh) | JP | $0.0012/h + $0.0031/GB | 不限 | 1GB | 10GB | 1 | [测评](http://hpaste.spiritlhl.net/#/show/bp0wd.txt)；<details class="abs-dtlslong"><summary>前端好评；一次最少充 $10，试错成本挺高；延迟一般，特别是联通很烂。<br/>用了一个月，连通性差了很多，基本是不可用状态，纯纯狗屎</summary></details> |
+| 20250805 [skystroll](https://skystroll.net/store) | JP | $2.49/mo | 1T 500Mbps | 512M | 5GB | 1 | <details class="abs-dtlslong"><summary>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</summary></details> |
+| 20250820 [RFCHOST](https://my.rfchost.com/) | JP | $29.99/yr + ￥45 | 1T 不限 | 512M | 10GB | 1 | <details class="abs-dtlslong"><summary>看评测挺不错的，延迟很低，价格也合适，于是在 nodeseek 上蹲了几天蹲到一个。溢价还是有点高，因为第二天就有更合适的出现了，不过也不用在乎这么多。</summary></details> |
+| 20250827 [dedirock](https://billing.dedirock.com/index.php) | US (LA) | $7/yr | 2T 1Gbps | 2G | 30G | 1 | <details class="abs-dtlslong"><summary>手上只有 JP 机确实让我感受到一些限制，~~例如禁漫就没法登上去~~。刚好看到便宜美西机，所以搞了个，延迟就无所谓了。注意 paypal 付款会被自动订阅一个续费需要去取消掉。这家的官网从 JP 加载贼慢，但是机子还挺不错。延迟不会超过 200ms，已经算好了。但是几个月后网络质量大幅下降，经常断连</summary></details> |
+| 20251205 [ACCKCloud](https://acck.io/) | JP | ￥14.88/mo | 500GB 500Mbps | 512M | 8G | 1 | <details class="abs-dtlslong"><summary>IIJ，到上海电信延迟非常不错（40ms）。最可惜的是 IP 有点脏，在 Google Gemini、nhentai、garnix 都会被拦，我不太能接受。（acck 家的整个 156.231.140.1 gw 的 ip 段都是脏的）<br/>Update 20260731：报道称 acck 明文存储用户密码，并且已经泄漏，那很弱智了。</summary></details> |
+| 20260304 [vpshostingservice](https://vpshostingservice.co/order/server-host-linux-vps-ssd/ssd-1gb) | US(LA) | ￥11/yr | 无限流量 1Gbps 共享端口 | 1G | 15G | 1 | <details class="abs-dtlslong"><summary>[评测](https://www.nodeseek.com/post-637237-1)，能加密货币付款，第三方平台支持很多链，不错。网络质量吃运营商，家里比较烂但是公司里还可以用。优惠码是长期的，11 刀还要什么自行车。</summary></details> |
+| 20260817 [YT.NET](https://cloud.yt.net/) | JP | ￥22/mo | 1T 500Mbps | 1G | 10G | 1 | <details class="abs-dtlslong"><summary>待续</summary></details> |
 
 [^1]: 本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。
 
@@ -106,7 +106,7 @@ tag:
 
 ### SSH
 
-<dtls alt="没啥用的">
+::: details 没啥用的
 
 youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。
 
@@ -116,7 +116,7 @@ youtube 上（与其他教程）清一色的 finalshell，但是这种不开源�
 
 用法：`ssh root@ip [-p port]`
 
-</dtls>
+:::
 
 #### 别名
 

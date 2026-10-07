@@ -1,6 +1,6 @@
 ---
 date: 2026-05-31
-icon: truck-fast
+icon: solid/truck-fast
 category:
   - 教程
 tag:

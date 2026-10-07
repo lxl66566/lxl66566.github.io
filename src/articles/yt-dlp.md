@@ -1,6 +1,6 @@
 ---
 date: 2023-12-30
-icon: download
+icon: solid/download
 category:
   - 推荐
   - 教程

@@ -1,6 +1,6 @@
 ---
 date: 2023-06-15
-icon: face-grin-squint-tears
+icon: solid/face-grin-squint-tears
 category:
   - 生活
 tag:

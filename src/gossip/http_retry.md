@@ -1,6 +1,6 @@
 ---
 date: 2026-08-09
-icon: handshake-slash
+icon: solid/handshake-slash
 category:
   - 评价
 tag:

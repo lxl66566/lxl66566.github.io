@@ -1,6 +1,6 @@
 ---
 date: 2024-12-04
-icon: wifi
+icon: solid/wifi
 category:
   - 教程
 tag:

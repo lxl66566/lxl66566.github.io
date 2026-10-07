@@ -1,6 +1,6 @@
 ---
 date: 2023-12-09
-icon: camera-rotate
+icon: solid/camera-rotate
 category:
   - 推荐
   - 评价

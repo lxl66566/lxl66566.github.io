@@ -1,6 +1,6 @@
 ---
 date: 2023-11-15
-icon: compass
+icon: solid/compass
 category:
   - 推荐
 tag:

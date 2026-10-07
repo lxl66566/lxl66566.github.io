@@ -1,4 +1,5 @@
-import { GalItemInputType, PlayingStatus } from "../definition/gal_type.js";
+import { PlayingStatus } from "../definition/gal_type.js";
+import type { GalItemInputType } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {

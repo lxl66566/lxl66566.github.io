@@ -1,4 +1,5 @@
-import { BookItemInputType, HLevel } from "../definition/book_type.js";
+import { HLevel } from "../definition/book_type.js";
+import type { BookItemInputType } from "../definition/book_type.js";
 
 const original_list: BookItemInputType[] = [
   {

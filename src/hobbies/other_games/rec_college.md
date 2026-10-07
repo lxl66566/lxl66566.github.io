@@ -1,6 +1,6 @@
 ---
 date: 2023-04-01
-icon: dice
+icon: solid/dice
 category:
   - 爱好
   - 生活

@@ -1,4 +1,4 @@
-import { AvItemType } from "../definition";
+import type { AvItemType } from "../definition";
 
 export default [
   { id: "shkd-999", aScore: 9.9, bScore: 11.1, u: true, name: "風紀顧問の俺を馬鹿にする生意気ギャルをイカセ調教 森日向子" },

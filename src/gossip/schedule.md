@@ -1,6 +1,6 @@
 ---
 date: 2022-05-21
-icon: check
+icon: solid/check
 category:
   - 博客
 ---
@@ -11,7 +11,7 @@ category:
 
 `(?)` 代表重新考虑日程的存在性与重要性。
 
-## 已提上日程 <span class="heimu" title="你知道的太多了">（笑死，开摆</span>
+## 已提上日程 !!（笑死，开摆!!
 
 - [x] 日语 N2
 - [ ] 英语 IELTS / TOEFL (without a target score)
@@ -41,7 +41,7 @@ CS 相关：
 - [ ] build-my-own-language (?)
 - [ ] [灵感区](../hide/inspiration.md)：对任何东西灵光一闪的想法。希望能用得上。
 - [ ] 理论数学(?)
-- [ ] 调香<heimu>精</heimu>师
+- [ ] 调香!!精!!师
 
 ## 我已尝试
 

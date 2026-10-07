@@ -1,6 +1,6 @@
 ---
 date: 2026-02-17
-icon: beer-mug-empty
+icon: solid/beer-mug-empty
 category:
   - 生命科学
 tag:

@@ -1,19 +1,56 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node",
-    "target": "ES2022",
-    "strict": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "pretty": true,
-    "strictFunctionTypes": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    // solid-js@2.0-rc has no ./jsx-runtime export; JSX types live in
+    // @solidjs/web (mirrors the framework demo tsconfig).
+    "paths": {
+      "solid-js/jsx-runtime": ["./node_modules/@solidjs/web/types/jsx.d.ts"]
+    },
+    "types": ["vite/client", "node"],
+    "noEmit": true,
     "alwaysStrict": true,
-    "noImplicitAny": false,
+    "exactOptionalPropertyTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "noUncheckedSideEffectImports": true,
+    "useUnknownInCatchVariables": true,
+    "verbatimModuleSyntax": true
   },
-  "include": ["src/.vuepress/**/*.ts", "src/.vuepress/**/*.vue"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  // Site code: islands/ are the browser graph; the root *.ts are build-time
+  // tooling (vite/uno config, content scanners, ambient virtual-module
+  // declarations). src/ holds markdown content plus the legacy .vuepress
+  // data/definition modules — not roots, but imported by islands/config, so
+  // they stay typechecked through the import graph.
+  "include": ["islands", "*.ts"],
+  "exclude": ["dist", "node_modules", "src"],
+  // The framework npm package ships TS sources (exports point into src/);
+  // ambient declarations that are not reachable through imports must be
+  // pulled in explicitly: its markdown-it module declaration and the
+  // virtual-module declarations (virtual:absolute-press/islands,
+  // virtual:uno.css) its client sources rely on.
+  "files": [
+    "node_modules/absolute-press/src/node/markdown/markdown-it-container.d.ts",
+    "node_modules/absolute-press/src/client/runtime/env.d.ts",
+    "src/.vuepress/icons.ts",
+    "src/.vuepress/taxonomy.ts",
+    "src/.vuepress/virtual-modules.d.ts"
+  ]
 }

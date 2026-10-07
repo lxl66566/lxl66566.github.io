@@ -1,6 +1,6 @@
 ---
 date: 2023-05-26
-icon: code
+icon: solid/code
 category:
   - 编程
 tag:

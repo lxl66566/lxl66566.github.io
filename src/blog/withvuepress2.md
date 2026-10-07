@@ -1,6 +1,6 @@
 ---
 date: 2022-07-18
-icon: circle-xmark
+icon: solid/circle-xmark
 category:
   - 博客
   - 教程
@@ -119,7 +119,7 @@ export default defineUserConfig({
 });
 ```
 
-然后就可以在 .md 文件中使用黑幕了：`<span class="heimu" title="你知道的太多了">你想说的话</span>` 效果：<span class="heimu" title="你知道的太多了">比如这样</span>
+然后就可以在 .md 文件中使用黑幕了：`<span class="heimu" title="你知道的太多了">你想说的话</span>` 效果：!!比如这样!!
 
 :::
 
@@ -163,7 +163,7 @@ export default defineUserConfig({
 因此寻找其他解决方案。开始采用 CDN 加速 Github 图床的方案。cdn 的好处：
 
 - 不改变图片目录结构
-- 替换方便。仅需全局查找替换，点一下鼠标即可。<span class="heimu" title="你知道的太多了">~~（但是对我来说需要把 SM.MS 图床的链接再换回原链接…）~~</span>
+- 替换方便。仅需全局查找替换，点一下鼠标即可。!!~~（但是对我来说需要把 SM.MS 图床的链接再换回原链接…）~~!!
 
 后来尝试了以下 cdn：
 
@@ -610,7 +610,7 @@ algolia 在搜索和用户体验上做的还行，但是在接入和 dashboard �
 
 ### 添加订阅图标
 
-模仿 [telegram 图标](#navbar-添加组件) 添加。首先替换链接，再去找个 rss 的 svg，替换 `<path d=...>` 内容；替换 `viewBox` 内容（没错，我踩坑了）即可。<span class="heimu" title="你知道的太多了">不熟悉 svg 是这样的</span>
+模仿 [telegram 图标](#navbar-添加组件) 添加。首先替换链接，再去找个 rss 的 svg，替换 `<path d=...>` 内容；替换 `viewBox` 内容（没错，我踩坑了）即可。!!不熟悉 svg 是这样的!!
 
 ## 自动部署
 
@@ -627,7 +627,7 @@ algolia 在搜索和用户体验上做的还行，但是在接入和 dashboard �
 
 解法：在 `package.json` 中将 vue 版本改为 `^3.3.4` 并执行 `pnpm i` 更新依赖。
 
-<span class="heimu" title="你知道的太多了">妈的，这些 bugs Github 都修了，npmjs 一直不更新是几个意思呢？</span>
+!!妈的，这些 bugs Github 都修了，npmjs 一直不更新是几个意思呢？!!
 
 ## 图片防爆
 

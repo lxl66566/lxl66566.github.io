@@ -1,6 +1,6 @@
 ---
 date: 2026-08-26
-icon: box
+icon: solid/box
 category:
   - 编程
 tag:
@@ -351,7 +351,7 @@ SILK 立体声编码在所有采样率下都有实质缺陷：
 
 opus-rs 永远地失去了我的一颗星星。
 
-<dated date="20260906"/>
+<Dated date="20260906"/>
 
 ### cargo-binstall
 

@@ -1,6 +1,6 @@
 ---
 date: 2025-02-07
-icon: play
+icon: solid/play
 category:
   - 推荐
 tag:

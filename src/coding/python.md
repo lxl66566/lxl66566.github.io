@@ -1,6 +1,6 @@
 ---
 date: 2022-05-04
-icon: brands fa-python
+icon: brands/python
 category:
   - 编程
 tag:
@@ -210,7 +210,7 @@ poetry config cache-dir Z:\
 
 提供 python 包管理与虚拟环境。我已弃用 miniconda。
 
-Anaconda 体积过于庞大（6G+），**强烈建议[安装 miniconda](https://docs.conda.io/en/latest/miniconda.html)**。<span class="heimu" title="你知道的太多了">Anaconda 捆绑祸害了多少编程新人！（包括我）</span> windows 可以使用 [scoop](../farraginous/recommend_packages.md#scoop) 一行搞定。
+Anaconda 体积过于庞大（6G+），**强烈建议[安装 miniconda](https://docs.conda.io/en/latest/miniconda.html)**。!!Anaconda 捆绑祸害了多少编程新人！（包括我）!! windows 可以使用 [scoop](../farraginous/recommend_packages.md#scoop) 一行搞定。
 
 ##### 基本命令
 

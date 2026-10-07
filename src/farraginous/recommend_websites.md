@@ -1,5 +1,5 @@
 ---
-icon: earth-asia
+icon: solid/earth-asia
 date: 2022-05-04
 category:
   - 推荐
@@ -15,7 +15,7 @@ tag:
 
 - [DOWNSUB](https://downsub.com/)：youtube 下载字幕。对于陈述性视频，下载字幕观看能节省很多时间。
 - [Microsoft Forms](https://forms.office.com/)：微软官方的问卷、投票、测验收集表。
-- [webtor](https://webtor.io/)：在线解析磁链（并在线播放）。<span class="heimu" title="你知道的太多了">一般作验车用（</span>
+- [webtor](https://webtor.io/)：在线解析磁链（并在线播放）。!!一般作验车用（!!
 - [1paragraph](https://1paragraph.app/) | [EPUB Reader](https://epub-reader.online/)：在线网页 EPUB 阅读器
 - [代码高亮](https://romannurik.github.io/SlidesCodeHighlighter/)
 - [PageSpeed Insights](https://pagespeed.web.dev/)：测试静态网站的性能
@@ -52,7 +52,7 @@ tag:
 |名称|空间|限速|时间|单文件大小|备注|
 | :-: | :-: | :-: | :-: | :-: | :-: |
 |[蓝奏云](https://www.lanzou.com/)|不限|不限|不限|100MB|中国境内的较好选择；有审查，力度小；限制文件后缀；无法通过分包压缩绕过大小限制|
-|[Catbox](https://catbox.moe/)<Badge type="danger" text="不可用" />|未知|未知|不限|200MB|特殊限制|
+|[Catbox](https://catbox.moe/)<span class="abs-badge" data-type="danger">不可用</span>|未知|未知|不限|200MB|特殊限制|
 |[Litterbox](https://litterbox.catbox.moe/)|不限|未知|3days|1GB|特殊限制|
 |[GoFile](https://gofile.io/welcome)|不限|不限|[10days](https://gofile.io/faq)|不限|-|
 |[ufile](https://ufile.io/)|10GB|1MB/s|不限|5GB|-|

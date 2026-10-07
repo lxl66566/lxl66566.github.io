@@ -1,6 +1,6 @@
 ---
 date: 2023-11-25
-icon: diagram-project
+icon: solid/diagram-project
 category:
   - 导航
 tag:

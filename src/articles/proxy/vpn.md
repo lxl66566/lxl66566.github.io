@@ -1,5 +1,5 @@
 ---
-icon: plane-slash
+icon: solid/plane-slash
 date: 2022-06-13
 category:
   - 教程
@@ -62,9 +62,12 @@ tips：加速前需事先选择能通过连接测试的节点
 
 ## 付费机场
 
-此处列出部分机场性价比及其变化情况。数字代表**每 1 元 RMB 买到的 GB 数**<Badge type="tip" text="合理价格" />。免费机场不包括在图表中。
+此处列出部分机场性价比及其变化情况。数字代表**每 1 元 RMB 买到的 GB 数**<span class="abs-badge" data-type="tip">合理价格</span>。免费机场不包括在图表中。
 
-<iframe frameborder="no" src="/charts/GBperprice.html" width="100%" height="280" loading="lazy"></iframe>
+<G2Plot
+  type="line"
+  :data='[{"name":"白嫖机场","时刻":"20220616","GBperRMB":454.5454545454545},{"name":"Simple Cloud","时刻":"20220616","GBperRMB":12.5},{"name":"StarTrip（已跑路）","时刻":"20220616","GBperRMB":60},{"name":"白嫖机场","时刻":"20220703","GBperRMB":479.13669064748206},{"name":"StarTrip（已跑路）","时刻":"20220703","GBperRMB":60},{"name":"白嫖机场","时刻":"20220805","GBperRMB":93.45794392523364},{"name":"Simple Cloud","时刻":"20220805","GBperRMB":6.666666666666667},{"name":"白嫖机场","时刻":"20220829","GBperRMB":62.11180124223602},{"name":"一元机场","时刻":"20220829","GBperRMB":1000},{"name":"Simple Cloud","时刻":"20220829","GBperRMB":10},{"name":"白嫖机场","时刻":"20221020","GBperRMB":377.6},{"name":"一元机场","时刻":"20221020","GBperRMB":1000},{"name":"Simple Cloud","时刻":"20221020","GBperRMB":10},{"name":"白嫖机场","时刻":"20221129","GBperRMB":753.2516493873704},{"name":"一元机场","时刻":"20221129","GBperRMB":1000},{"name":"木瓜云","时刻":"20221129","GBperRMB":128.57142857142858},{"name":"Simple Cloud","时刻":"20221129","GBperRMB":10},{"name":"白嫖机场","时刻":"20230112","GBperRMB":802.8},{"name":"一元机场","时刻":"20230112","GBperRMB":250},{"name":"木瓜云","时刻":"20230112","GBperRMB":128.57142857142858},{"name":"Simple Cloud","时刻":"20230112","GBperRMB":10},{"name":"八方云","时刻":"20230112","GBperRMB":100},{"name":"赔钱机场","时刻":"20230112","GBperRMB":1716.7381974248926}]'
+  :options='{"xField":"时刻","yField":"GBperRMB","seriesField":"name","useDeferredLabel":true,"legend":{"position":"top"},"animation":{"appear":{"animation":"wave-in","duration":5000}},"slider":{"start":0,"end":1},"height":280}'/>
 
 :::warning
 

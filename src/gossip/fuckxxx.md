@@ -1,6 +1,6 @@
 ---
 date: 2022-06-17
-icon: face-angry
+icon: solid/face-angry
 category:
   - 主张
   - 评价
@@ -360,7 +360,7 @@ niri 是一个平铺 Desktop Env。
 - 群文件无法关闭在线预览。在线预览做得也太烂了。
 - 2024 上旬，点开群聊的 bug 火苗会停在中间，不会自己消失。
 
-综上所述，QQ 做得稀烂。但我无法退坑，毕竟我的好友，我的游戏兴趣群体都在 QQ。（20230123 现在基本上已经切割完毕了。<span class="heimu" title="你知道的太多了">只要把我的朋友们都拉到 telegram，我就不需要用 QQ (x</span>）<text style="color:gray;">国产通讯软件里大抵是看不到一点明亮的光的。</text>
+综上所述，QQ 做得稀烂。但我无法退坑，毕竟我的好友，我的游戏兴趣群体都在 QQ。（20230123 现在基本上已经切割完毕了。!!只要把我的朋友们都拉到 telegram，我就不需要用 QQ (x!!）<text style="color:gray;">国产通讯软件里大抵是看不到一点明亮的光的。</text>
 
 ## 微信有多难用
 

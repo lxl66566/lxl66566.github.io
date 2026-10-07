@@ -1,5 +1,6 @@
 ---
 date: 2023-09-22
+icon: solid/wave-square
 category:
   - 学习
 ---

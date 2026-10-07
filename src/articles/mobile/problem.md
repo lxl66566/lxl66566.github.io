@@ -1,6 +1,6 @@
 ---
 date: 2023-11-08
-icon: regular fa-circle-xmark
+icon: regular/circle-xmark
 category:
   - 经历
   - 问题
@@ -21,7 +21,7 @@ root 以后，安装了个 [_神仙自动救砖_](./module_and_app.md#magisk) �
 
 后来我测试了一下，root 的裸机，冻结一堆应用然后重启，确实变砖了。然后开始测试能冻结的应用。
 
-假如测到了变砖的应用，我需要重启 recovery 恢复，再重新开机准备选项，root 一遍，才能进行下一轮测试，时间（与<span class="heimu" title="你知道的太多了">产品</span>寿命）成本还是很高的。
+假如测到了变砖的应用，我需要重启 recovery 恢复，再重新开机准备选项，root 一遍，才能进行下一轮测试，时间（与!!产品!!寿命）成本还是很高的。
 
 第一次测试：手机管家，居然不是？
 
@@ -44,8 +44,8 @@ root 以后，安装了个 [_神仙自动救砖_](./module_and_app.md#magisk) �
 1. 点击 _设置 - 声音与触感 - 电话铃声 - 全部铃声_，bug 闪退
 2. 下载 138M 的音乐（系统应用），“设置铃声需要开通 VIP”
 3. 将铃声 push 到系统 ringtone 文件夹：`adb push xxx.mp3 /system/media/audio/ringtones/`([ref](https://oddity.oddineers.co.uk/2020/08/24/wear-os-custom-ringtones-via-adb/))，报错 `remote couldn't create file: Read-only file system`
-4. `adb remount` <Badge text="root" />，报错 `/system/bin/sh: adb: inaccessible or not found`
-5. `adb shell`，`su`，`mount -o rw,remount /system` <Badge text="root" />，报错 `mount: '/system' not in /proc/mounts`
+4. `adb remount` <span class="abs-badge">root</span>，报错 `/system/bin/sh: adb: inaccessible or not found`
+5. `adb shell`，`su`，`mount -o rw,remount /system` <span class="abs-badge">root</span>，报错 `mount: '/system' not in /proc/mounts`
 
 没招了，非常痛苦。可能还能参考下[这篇](https://forum.xda-developers.com/t/closed-universal-systemrw-superrw-feat-makerw-ro2rw-read-only-2-read-write-super-partition-converter.4247311/)，不过希望不大且比较危险。
 
@@ -81,7 +81,7 @@ root 以后，安装了个 [_神仙自动救砖_](./module_and_app.md#magisk) �
 
 ## 乱冻结
 
-在刷了 EU 版 MIUI 后，使用 App Manager 冻结了 `媒体存储设备`(`com.google.android.providers.media.module`)，导致 App Manager 闪退；无法访问 sdcard。随之发生壁纸变黑，帧率暴降，VPN 自动断连等现象。<span class="heimu" title="你知道的太多了">对于 app 来说，大概就像是末世吧。</span>
+在刷了 EU 版 MIUI 后，使用 App Manager 冻结了 `媒体存储设备`(`com.google.android.providers.media.module`)，导致 App Manager 闪退；无法访问 sdcard。随之发生壁纸变黑，帧率暴降，VPN 自动断连等现象。!!对于 app 来说，大概就像是末世吧。!!
 
 信息：
 
@@ -125,5 +125,5 @@ am start "intent:#Intent;action=android.intent.action.MAIN;category=org.lsposed.
 由于尝试了 `App Manager` 和 `adb backup` 均无法备份应用数据，无奈使用小米的备份（`com.miui.backup`）。结果果然不出所料——出事了，EU 版系统即使装了国内的应用商店也无法下载备份[^3]。解法：
 
 1. 从手机提取安装包，装到平板。（可用 App Manager 或 [Localsend](../../farraginous/recommend_packages.md#多设备互传)）
-2. 安装完后没有快捷方式，也无法打开（App Manager 与 ADB 均无法启动，摸索了挺久）。此时需要去设置中搜索 `备份` 即可进入界面使用。<span class="heimu" title="你知道的太多了">假如刷的非小米系统就惨了，我也不懂能不能用</span>
+2. 安装完后没有快捷方式，也无法打开（App Manager 与 ADB 均无法启动，摸索了挺久）。此时需要去设置中搜索 `备份` 即可进入界面使用。!!假如刷的非小米系统就惨了，我也不懂能不能用!!
    [^3]: [source](https://t.me/withabsolutex/1165)

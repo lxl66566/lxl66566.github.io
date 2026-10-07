@@ -1,6 +1,6 @@
 ---
 date: 2023-01-22
-icon: brands fa-usb
+icon: brands/usb
 category:
   - 教程
   - 经历
@@ -105,7 +105,7 @@ APatch 是在内核空间运行 KPM (Kernel Patch Module) 的 root 方案。
 @tab Redmi Note 10 pro
 
 > 题外话：~~高考结束后买的手机，当时还是一个普通人，自然不知道刷机解 bl root 这些东西，等我想解的时候已经太迟了，数据已经太多了。下一部手机必 root。~~ 然而等到了一个能够使我无视数据的契机。\
-> <span class="heimu" title="你知道的太多了">忘了备份应用时间了，妈的；后来发现这东西没法备份。</span>
+> !!忘了备份应用时间了，妈的；后来发现这东西没法备份。!!
 
 20230614 记一次失败的刷机（redmi note 10 pro, sweet）。
 
@@ -152,7 +152,7 @@ APatch 是在内核空间运行 KPM (Kernel Patch Module) 的 root 方案。
 
 一加的教程基本都是 _daxiaamu_ 的一键工具箱，让人 root 了以后却不知其所以然。这样是不好的。再说了，这个工具箱也无法刷全量包。
 
-找了半天没找到这个机型如何刷 Oxygen OS，也没有提供线刷 ROM <span class="heimu" title="你知道的太多了">daxiaamu 自称官方</span>，怕出问题，还是将就用着并不喜欢的 ColorOS 吧。
+找了半天没找到这个机型如何刷 Oxygen OS，也没有提供线刷 ROM !!daxiaamu 自称官方!!，怕出问题，还是将就用着并不喜欢的 ColorOS 吧。
 
 解 BL 的过程中，无法通过音量键选择 unlock。。甚至也无法长按开机键重启。用 `fastboot reboot` 试了一下，第二次还是一样。具体地：
 
@@ -165,16 +165,16 @@ APatch 是在内核空间运行 KPM (Kernel Patch Module) 的 root 方案。
 
 下载 rom 包，解出一个 `payload.bin`；目的：从中提取出 `boot.img`。然后有：
 
-<dtls alt="一些血泪史">
+::: details 一些血泪史
 
 1. 用不知哪下的 `payload_dumper.exe`（一眼 python 打包），发现不能自定义输入输出路径。勉为其难地把 rom 拷进同目录，运行闪退。
-2. 去找 payload_dumper 的[源码](https://github.com/vm03/payload_dumper)，搞环境<span class="heimu" title="你知道的太多了">由于前几天迁移 python 导致 [pipx 及其安装的软件路径坏了](../../coding/python.md#为什么不该使用-pipx)，</span>又搞了好久。运行，报错 `_lzma.LZMAError: Input format not supported by decoder`...
+2. 去找 payload_dumper 的[源码](https://github.com/vm03/payload_dumper)，搞环境!!由于前几天迁移 python 导致 [pipx 及其安装的软件路径坏了](../../coding/python.md#为什么不该使用-pipx)，!!又搞了好久。运行，报错 `_lzma.LZMAError: Input format not supported by decoder`...
 3. 我甚至还重新解压到 RAMDisk 然后 checksum 了一下，不出所料，并没有什么问题。
 4. 在 [issue](https://github.com/vm03/payload_dumper/issues/47#issuecomment-1311973400) 中找到另一个 go 版本，亲测可用，速度还快。
 5. 最后发现 FastbootEnhance 可以选择某些 img 解包。。
 6. 后来又发现一个 fork 版本可以仅下载某分区。
 
-</dtls>
+:::
 
 得到了 `boot.img`，剩下的就是用 magisk 修补，刷入了。跟[用小米时](#redmi-note-10-pro)一样，不再赘述。
 

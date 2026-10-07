@@ -1,6 +1,6 @@
 ---
 date: 2022-05-17
-icon: tree
+icon: solid/tree
 category:
   - 爱好
 tag:

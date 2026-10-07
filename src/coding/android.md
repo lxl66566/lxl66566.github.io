@@ -1,6 +1,6 @@
 ---
 date: 2024-06-15
-icon: brands fa-android
+icon: brands/android
 category:
   - 编程
   - 应用

@@ -1,6 +1,6 @@
 ---
 date: 2023-03-20
-icon: brands fa-markdown
+icon: brands/markdown
 category:
   - 教程
 ---

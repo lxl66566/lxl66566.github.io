@@ -1,6 +1,6 @@
 ---
 date: 2024-11-08
-icon: book-skull
+icon: solid/book-skull
 category:
   - 编程
 ---

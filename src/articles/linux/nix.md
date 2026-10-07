@@ -1,6 +1,6 @@
 ---
 date: 2024-06-28
-icon: regular fa-snowflake
+icon: regular/snowflake
 category:
   - 教程
 tag:
@@ -232,7 +232,7 @@ nix-repl> builtins.toJSON nixosConfigurations.<host>.config.xxx # 默认会折�
 ## 在 NixOS 上用得到的妙妙小工具
 
 - [selector4nix](https://github.com/StarryReverie/selector4nix)：一个 substituters 代理，让 nix 可以并行查询 binary cache，加速构建。用起来确实有用。
-  - 题外话：<heimu>由于在频道吐槽过这玩意，被作者杀上门来交流了一些 flake 意见。我也给 selector4nix 找过 bug，编程方面的一些交流，等等。</heimu>
+  - 题外话：!!由于在频道吐槽过这玩意，被作者杀上门来交流了一些 flake 意见。我也给 selector4nix 找过 bug，编程方面的一些交流，等等。!!
   - 由于引用它的 flake 需要下载 rust 全套工具链，所以我在[自己 NUR](https://github.com/lxl66566/NUR) 里维护了一个 package 去拉 prebuilt binary。（我最早就是吐槽没有 binary 的事）
   - 这玩意不需要配置 trusted-public-keys，因为如何信任拉来的 binary 是 nix 自己的事，不是代理的事。
 - [envfs](https://github.com/Mic92/envfs)：直接在 `/usr/bin` 等传统路径上挂载 FUSE fs，动态响应程序请求，解决 NixOS 兼容 FHS 生态的问题。

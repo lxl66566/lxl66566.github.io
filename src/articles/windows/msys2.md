@@ -1,6 +1,6 @@
 ---
 date: 2026-06-17
-icon: linux
+icon: brands/linux
 category:
   - 教程
 tag:

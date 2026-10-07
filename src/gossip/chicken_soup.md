@@ -1,6 +1,6 @@
 ---
 date: 2023-10-11
-icon: thumbs-up
+icon: solid/thumbs-up
 category:
   - 主张
 tag:

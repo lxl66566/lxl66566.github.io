@@ -1,4 +1,4 @@
-import { ComicItemType } from "../definition";
+import type { ComicItemType } from "../definition";
 
 export default [
   { id: "429153", aScore: 9.4, bScore: 4, info: "今日から悪い子。続" },

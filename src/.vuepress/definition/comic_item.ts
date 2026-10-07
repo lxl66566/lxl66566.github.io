@@ -1,4 +1,4 @@
-import { TwoScoreItemType } from "./types";
+import type { TwoScoreItemType } from "./types";
 
 export interface ComicItemType extends TwoScoreItemType {
   id: string;
