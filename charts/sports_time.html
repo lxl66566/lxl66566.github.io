@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>sports record in time</title>
+  </head>
+  <body>
+    <div id="container" style="width: 100%; height: 260px"></div>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"
+    ></script>
+    <script>
+      const data = [
+{ name: "乒乓球", 时刻: "20210910", minutes: 160 },
+{ name: "乒乓球", 时刻: "20210918", minutes: 0 },
+{ name: "排球", 时刻: "20210918", minutes: 40 },
+{ name: "篮球", 时刻: "20210920", minutes: 40 },
+{ name: "排球", 时刻: "20210920", minutes: 0 },
+{ name: "篮球", 时刻: "20211009", minutes: 30 },
+{ name: "篮球", 时刻: "20211030", minutes: 60 },
+{ name: "篮球", 时刻: "20211204", minutes: 0 },
+{ name: "网球", 时刻: "20211204", minutes: 60 },
+{ name: "网球", 时刻: "20211230", minutes: 60 },
+{ name: "网球", 时刻: "20220201", minutes: 0 },
+{ name: "单臂悬挂", 时刻: "20220201", minutes: 5 / 60 },
+{ name: "乒乓球", 时刻: "20220201", minutes: 0 },
+{ name: "乒乓球", 时刻: "20220302", minutes: 12 },
+{ name: "乒乓球", 时刻: "20220305", minutes: 0 },
+{ name: "羽毛球", 时刻: "20220305", minutes: 60 },
+{ name: "羽毛球", 时刻: "20220309", minutes: 0 },
+{ name: "平板支撑", 时刻: "20220309", minutes: 270 / 60 },
+{ name: "平板支撑", 时刻: "20220711", minutes: 0 },
+{ name: "足球", 时刻: "20220711", minutes: 30 },
+{ name: "足球", 时刻: "20220725", minutes: 0 },
+{ name: "游泳", 时刻: "20220725", minutes: 120 },
+{ name: "足球", 时刻: "20220802", minutes: 30 },
+{ name: "游泳", 时刻: "20220802", minutes: 0 },
+{ name: "足球", 时刻: "20220904", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20220904", minutes: 10 },
+{ name: "哑铃2.5kg", 时刻: "20220908", minutes: 0 },
+{ name: "健身房", 时刻: "20220908", minutes: 50 },
+{ name: "健身房", 时刻: "20220918", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20220918", minutes: 15 },
+{ name: "哑铃2.5kg", 时刻: "20221002", minutes: 19 },
+{ name: "哑铃2.5kg", 时刻: "20221005", minutes: 22 },
+{ name: "哑铃2.5kg", 时刻: "20221015", minutes: 21 },
+{ name: "哑铃2.5kg", 时刻: "20221022", minutes: 16 },
+{ name: "哑铃2.5kg", 时刻: "20221127", minutes: 21 },
+{ name: "哑铃2.5kg", 时刻: "20230219", minutes: 26 },
+{ name: "哑铃2.5kg", 时刻: "20230219", minutes: 26 },
+{ name: "腿部锻炼", 时刻: "20230219", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230222", minutes: 0 },
+{ name: "腿部锻炼", 时刻: "20230222", minutes: 25 },
+{ name: "腿部锻炼", 时刻: "20230301", minutes: 30 },
+{ name: "篮球", 时刻: "20230301", minutes: 0 },
+{ name: "腿部锻炼", 时刻: "20230308", minutes: 0 },
+{ name: "篮球", 时刻: "20230308", minutes: 50 },
+{ name: "篮球", 时刻: "20230315", minutes: 40 },
+{ name: "篮球", 时刻: "20230322", minutes: 0 },
+{ name: "腿部锻炼", 时刻: "20230322", minutes: 30 },
+{ name: "腿部锻炼", 时刻: "20230329", minutes: 0 },
+{ name: "篮球", 时刻: "20230329", minutes: 50 },
+{ name: "篮球", 时刻: "20230412", minutes: 20 },
+{ name: "篮球", 时刻: "20230419", minutes: 30 },
+{ name: "篮球", 时刻: "20230426", minutes: 15 },
+{ name: "乒乓球", 时刻: "20220426", minutes: 0 },
+{ name: "篮球", 时刻: "20230506", minutes: 0 },
+{ name: "乒乓球", 时刻: "20230506", minutes: 45 },
+{ name: "乒乓球", 时刻: "20230510", minutes: 0 },
+{ name: "篮球", 时刻: "20230510", minutes: 20 },
+{ name: "哑铃2.5kg", 时刻: "20230510", minutes: 0 },
+{ name: "篮球", 时刻: "20230513", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230513", minutes: 28 },
+{ name: "哑铃2.5kg", 时刻: "20230516", minutes: 36 + 43 },
+{ name: "乒乓球", 时刻: "20220516", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230517", minutes: 0 },
+{ name: "乒乓球", 时刻: "20230517", minutes: 20 },
+{ name: "哑铃2.5kg", 时刻: "20230521", minutes: 35 },
+{ name: "乒乓球", 时刻: "20230521", minutes: 0 },
+{ name: "篮球", 时刻: "20230521", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230524", minutes: 0 },
+{ name: "篮球", 时刻: "20230524", minutes: 30 },
+{ name: "哑铃2.5kg", 时刻: "20230525", minutes: 43 },
+{ name: "篮球", 时刻: "20230525", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230530", minutes: 13 },
+{ name: "哑铃2.5kg", 时刻: "20230531", minutes: 36 },
+{ name: "哑铃2.5kg", 时刻: "20230603", minutes: 33 },
+{ name: "哑铃2.5kg", 时刻: "20230604", minutes: 83 },
+{ name: "哑铃2.5kg", 时刻: "20230605", minutes: 81 },
+{ name: "哑铃2.5kg", 时刻: "20230606", minutes: 16 },
+{ name: "哑铃2.5kg", 时刻: "20230608", minutes: 65 },
+{ name: "哑铃2.5kg", 时刻: "20230610", minutes: 60 },
+{ name: "哑铃2.5kg", 时刻: "20230611", minutes: 30 },
+{ name: "哑铃2.5kg", 时刻: "20230612", minutes: 45 },
+{ name: "哑铃2.5kg", 时刻: "20230618", minutes: 30 },
+{ name: "哑铃2.5kg", 时刻: "20230620", minutes: 18 },
+{ name: "哑铃2.5kg", 时刻: "20230622", minutes: 10 },
+{ name: "握力计", 时刻: "20230622", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230623", minutes: 31 },
+{ name: "握力计", 时刻: "20230623", minutes: 46 },
+{ name: "握力计", 时刻: "20230628", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230628", minutes: 34 },
+{ name: "握力计", 时刻: "20230629", minutes: 60 },
+{ name: "哑铃2.5kg", 时刻: "20230629", minutes: 33 },
+{ name: "哑铃2.5kg", 时刻: "20230702", minutes: 33 },
+{ name: "羽毛球", 时刻: "20220702", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230719", minutes: 0 },
+{ name: "羽毛球", 时刻: "20220719", minutes: 15 },
+{ name: "羽毛球", 时刻: "20220804", minutes: 25 },
+{ name: "哑铃4.6kg", 时刻: "20230804", minutes: 0 },
+{ name: "哑铃4.6kg", 时刻: "20230816", minutes: 16 },
+{ name: "哑铃4.6kg", 时刻: "20230817", minutes: 20 },
+{ name: "哑铃4.6kg", 时刻: "20230820", minutes: 15 },
+{ name: "哑铃4.6kg", 时刻: "20230825", minutes: 14 },
+{ name: "哑铃4.6kg", 时刻: "20230827", minutes: 21 },
+{ name: "哑铃4.6kg", 时刻: "20230829", minutes: 13 },
+{ name: "哑铃2.5kg", 时刻: "20230829", minutes: 0 },
+{ name: "哑铃4.6kg", 时刻: "20230901", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20230901", minutes: 29 },
+{ name: "哑铃2.5kg", 时刻: "20230902", minutes: 27 },
+{ name: "哑铃2.5kg", 时刻: "20230903", minutes: 27 },
+{ name: "哑铃2.5kg", 时刻: "20230904", minutes: 41 },
+{ name: "哑铃2.5kg", 时刻: "20230908", minutes: 24 },
+{ name: "哑铃2.5kg", 时刻: "20230910", minutes: 35 },
+{ name: "哑铃2.5kg", 时刻: "20230925", minutes: 13 },
+{ name: "哑铃2.5kg", 时刻: "20231002", minutes: 27 },
+{ name: "哑铃2.5kg", 时刻: "20231009", minutes: 14 },
+{ name: "哑铃2.5kg", 时刻: "20231025", minutes: 50 },
+{ name: "哑铃2.5kg", 时刻: "20231101", minutes: 49 },
+{ name: "哑铃2.5kg", 时刻: "20231108", minutes: 23 },
+{ name: "哑铃2.5kg", 时刻: "20231119", minutes: 19 },
+{ name: "哑铃2.5kg", 时刻: "20231123", minutes: 28 },
+{ name: "哑铃2.5kg", 时刻: "20231206", minutes: 28 },
+{ name: "哑铃2.5kg", 时刻: "20231212", minutes: 28 },
+{ name: "哑铃4.6kg", 时刻: "20231212", minutes: 0 },
+{ name: "哑铃4.6kg", 时刻: "20240122", minutes: 12 },
+{ name: "哑铃2.5kg", 时刻: "20240122", minutes: 0 },
+{ name: "哑铃4.6kg", 时刻: "20240125", minutes: 16 },
+{ name: "哑铃4.6kg", 时刻: "20240205", minutes: 10 },
+{ name: "哑铃4.6kg", 时刻: "20240216", minutes: 13 },
+{ name: "哑铃2.5kg", 时刻: "20240216", minutes: 0 },
+{ name: "哑铃4.6kg", 时刻: "20240227", minutes: 0 },
+{ name: "哑铃2.5kg", 时刻: "20240227", minutes: 28 },
+{ name: "哑铃2.5kg", 时刻: "20240303", minutes: 32 },
+{ name: "哑铃2.5kg", 时刻: "20240418", minutes: 38.5 },
+{ name: "哑铃2.5kg", 时刻: "20240426", minutes: 22 },
+{ name: "哑铃2.5kg", 时刻: "20240512", minutes: 38.5 },
+{ name: "哑铃2.5kg", 时刻: "20240513", minutes: 29 },
+{ name: "哑铃2.5kg", 时刻: "20240514", minutes: 62 },
+{ name: "哑铃2.5kg", 时刻: "20240920", minutes: 33 },
+{ name: "哑铃2.5kg", 时刻: "20241107", minutes: 26 },
+{ name: "哑铃2.5kg", 时刻: "20241202", minutes: 43 },
+      ];
+      const { Line } = G2Plot;
+      const linePlot = new Line("container", {
+        data,
+        xField: "时刻",
+        yField: "minutes",
+        seriesField: "name",
+        useDeferredLabel: true,
+        connectNulls: false,
+        legend: {
+          position: "top",
+        },
+        slider: {
+          start: 0,
+          end: 1,
+        },
+        // area: {
+        //   style: {
+        //     fillOpacity: 0.15,
+        //   },
+        // },
+      });
+
+      linePlot.render();
+    </script>
+  </body>
+</html>
+<style>
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #22272e;
+      color: white;
+    }
+  }
+</style>

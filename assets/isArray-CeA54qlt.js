@@ -1,0 +1,1 @@
+var e=Array.isArray;export{e as t};
