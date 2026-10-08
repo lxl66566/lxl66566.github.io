@@ -1,16 +1,10 @@
-// Ambient declarations for the site's config-time virtual modules, provided
-// by the site-taxonomy / project-desc-html plugins in vite.config.ts. The
-// file stays a script (no top-level import/export) so `declare module` is an
-// ambient declaration.
-type SiteTaxonomy = import('./taxonomy').SiteTaxonomy;
+// Ambient declaration for the framework's site-data virtual module, fed by
+// the onScan hook in src/.vuepress/site-data.ts. The file stays a script
+// (no top-level import/export) so `declare module` is an ambient
+// declaration.
+type SiteData = import('./site-data').SiteData;
 
-declare module 'virtual:site-taxonomy' {
-  const taxonomy: SiteTaxonomy;
-  export default taxonomy;
-}
-
-declare module 'virtual:project-desc-html' {
-  /** Project desc (raw markdown) -> framework-rendered inline HTML. */
-  const descHtml: Record<string, string>;
-  export default descHtml;
+declare module 'virtual:absolute-press/site-data' {
+  const siteData: SiteData;
+  export default siteData;
 }

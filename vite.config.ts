@@ -1,36 +1,16 @@
-import {
-  absolutePress,
-  createInlineMarkdownRenderer,
-  defineSiteConfig,
-} from 'absolute-press';
+import { absolutePress, defineSiteConfig } from 'absolute-press';
 import UnoCSS from 'unocss/vite';
 import { defineConfig } from 'vite';
-import type { Plugin } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 
 import articleSections from './src/.vuepress/data/article';
 import type { ArticleSection } from './src/.vuepress/data/article';
 import gossipSections from './src/.vuepress/data/gossip';
 import learningSections from './src/.vuepress/data/learning';
-import { featuredProjects, projectGroups } from './src/.vuepress/data/projects';
-import { collectIcons } from './src/.vuepress/icons';
-import { scanTaxonomy } from './src/.vuepress/taxonomy';
+import { allIcons } from './src/.vuepress/icons';
+import { siteScan } from './src/.vuepress/site-data';
 
 const CONTENT_DIR = 'src';
-
-const taxonomy = scanTaxonomy(CONTENT_DIR);
-
-/** Exposes the config-time taxonomy to islands as a virtual module. */
-const siteTaxonomyPlugin: Plugin = {
-  name: 'site-taxonomy',
-  resolveId(id) {
-    return id === 'virtual:site-taxonomy' ? '\0virtual:site-taxonomy' : null;
-  },
-  load(id) {
-    if (id !== '\0virtual:site-taxonomy') return null;
-    return `export default ${JSON.stringify(taxonomy)};`;
-  },
-};
 
 /**
  * 分区板块（我的文章/学习笔记/闲聊）的 navbar 面板条目：与对应 index 页
@@ -48,7 +28,7 @@ const toSectionNavItems = (
   overview: string,
   sections: ArticleSection[],
 ) => [
-  { text: overview, link: `/${dir}/index.html`, index: true },
+  { text: overview, link: `/${dir}/`, index: true },
   ...sections.map(section => {
     const links = section.links.map(link => ({
       text: link.text,
@@ -75,16 +55,30 @@ const gossipNavItems = toSectionNavItems('gossip', '闲聊', gossipSections);
 
 const siteConfig = defineSiteConfig({
   contentDir: CONTENT_DIR,
+  // Term-reference articles behind the inline `[[id]]` popover syntax: a
+  // separately maintained nested repo at src/reference (recorded as a
+  // gitlink; CI clones it before building).
+  refs: 'reference',
   title: '绝对值_x 的博客',
   description: '没什么有价值的内容的，真的！',
   hostname: 'https://absx.pages.dev',
   lang: 'zh-CN',
-  // Frontmatter icons are resolved from content by src/.vuepress/icons.ts
-  // (FA free packs).
-  icons: collectIcons(CONTENT_DIR),
+  // Frontmatter icons: the full FA free registry from
+  // src/.vuepress/icons.ts; the framework validates content keys against it
+  // and subsets the per-page payload.
+  icons: allIcons(),
+  // Site-wide data for islands (homepage taxonomy + project desc HTML),
+  // served via virtual:absolute-press/site-data.
+  onScan: siteScan,
   // Large share card (og:image + twitter:card summary_large_image); the
   // same legacy avatar doubles as the site-wide share image.
-  seo: { image: '/logo.jpg' },
+  seo: {
+    image: '/logo.jpg',
+    author: { name: 'lxl66566', url: 'https://github.com/lxl66566' },
+    // /hide/ 是不列出的目录：不进 sitemap，robots 追加 Disallow
+    exclude: ['/hide'],
+  },
+  favicon: '/favicon.ico',
   // Navbar options in the framework's single nav section.
   nav: {
     // Legacy anime avatar (src/.vuepress/public/logo.jpg) as the navbar /
@@ -196,26 +190,26 @@ const siteConfig = defineSiteConfig({
   // entry still pointed at the dead /articles/vpn.html route.
   encrypt: [
     {
-      match: '/articles/proxy/vpn.html',
+      match: '/articles/proxy/vpn',
       passwords: ['2003'],
       hint: '作者生年',
     },
-    { match: '/articles/telegram.html', passwords: ['2003'], hint: '作者生年' },
-    { match: '/gossip/wish.html', passwords: ['2003'], hint: '作者生年' },
-    { match: '/gossip/job.html', passwords: ['2003'], hint: '作者生年' },
-    { match: '/hide/memories.html', passwords: ['2003'], hint: '作者生年' },
+    { match: '/articles/telegram', passwords: ['2003'], hint: '作者生年' },
+    { match: '/gossip/wish', passwords: ['2003'], hint: '作者生年' },
+    { match: '/gossip/job', passwords: ['2003'], hint: '作者生年' },
+    { match: '/hide/memories', passwords: ['2003'], hint: '作者生年' },
     {
-      match: '/hobbies/NSFW/videos.html',
+      match: '/hobbies/NSFW/videos',
       passwords: ['0721'],
       hint: '返回上一页查看提示',
     },
     {
-      match: '/hobbies/NSFW/comic.html',
+      match: '/hobbies/NSFW/comic',
       passwords: ['0721'],
       hint: '返回上一页查看提示',
     },
     {
-      match: '/hobbies/NSFW/bangumi.html',
+      match: '/hobbies/NSFW/bangumi',
       passwords: ['0721'],
       hint: '返回上一页查看提示',
     },
@@ -262,35 +256,6 @@ const siteConfig = defineSiteConfig({
   ],
 });
 
-/**
- * HomeProjects desc cells: the data module's one-line descriptions support
- * the framework's inline markdown (heimu/mark/katex/emphasis/links), so the
- * renderer runs them through the same markdown-it pipeline at config time
- * and the island gets the HTML via `virtual:project-desc-html`, keyed by the
- * raw desc string (both sides read the same data module per build). Dev
- * caveat: desc edits need a dev-server restart, like frontmatter counters.
- */
-const inlineMd = createInlineMarkdownRenderer({ lang: siteConfig.lang });
-const projectDescHtml: Record<string, string> = Object.fromEntries(
-  [...featuredProjects, ...projectGroups.flatMap(group => group.projects)].map(
-    project => [project.desc, inlineMd.render(project.desc)],
-  ),
-);
-
-/** Serves the config-time rendered desc HTML to islands. */
-const projectDescPlugin: Plugin = {
-  name: 'project-desc-html',
-  resolveId(id: string): string | null {
-    return id === 'virtual:project-desc-html'
-      ? '\0virtual:project-desc-html'
-      : null;
-  },
-  load(id: string): string | null {
-    if (id !== '\0virtual:project-desc-html') return null;
-    return `export default ${JSON.stringify(projectDescHtml)};`;
-  },
-};
-
 export default defineConfig({
   build: {
     target: 'esnext',
@@ -298,14 +263,7 @@ export default defineConfig({
   },
   // Legacy vuepress public assets (images/charts/favicon/logo) stay in place.
   publicDir: 'src/.vuepress/public',
-  plugins: [
-    UnoCSS(),
-    solidPlugin(),
-    siteTaxonomyPlugin,
-    projectDescPlugin,
-
-    absolutePress(siteConfig),
-  ],
+  plugins: [UnoCSS(), solidPlugin(), absolutePress(siteConfig)],
   server: {
     port: 8080,
   },

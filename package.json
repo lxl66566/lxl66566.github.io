@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@solidjs/web": "2.0.0-rc.13",
-    "absolute-press": "^0.1.1",
+    "absolute-press": "^0.2.0",
     "solid-js": "2.0.0-rc.13"
   },
   "devDependencies": {
@@ -24,19 +24,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@types/node": "^26.6.4",
     "@unocss/preset-wind4": "^66.10.5",
-    "gray-matter": "^4.0.3",
     "oxfmt": "^0.72.0",
     "oxlint": "^1.87.0",
-    "typescript": "^7.0.2",
+    "typescript": "7.0.2",
     "unocss": "^66.10.5",
     "vite": "^8.3.3",
     "vite-plugin-solid": "3.0.0-next.27"
   },
-  "packageManager": "pnpm@12.10.1+sha512.ba40a37eb1a370d60fea8c4cf1d364c13bcccef518e98ad2bcee954f539d38da37458e58261a3fa55e06523450ea0ffff9f497b135be41f2c15c1642bacace6c",
-  "pnpm": {
-    "overrides": {
-      "hasown": "npm:@nolyfill/hasown@latest",
-      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest"
-    }
-  }
+  "packageManager": "pnpm@12.10.1+sha512.ba40a37eb1a370d60fea8c4cf1d364c13bcccef518e98ad2bcee954f539d38da37458e58261a3fa55e06523450ea0ffff9f497b135be41f2c15c1642bacace6c"
 }

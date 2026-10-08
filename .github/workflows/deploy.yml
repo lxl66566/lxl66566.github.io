@@ -18,6 +18,12 @@ jobs:
         with:
           fetch-depth: 1
 
+      # 术语参考仓库是独立 gitlink，checkout 不会带出内容；拉不到时
+      # [[...]] 语法降级为纯文本（构建仅 warning），故允许此步失败。
+      - name: 拉取术语参考仓库
+        continue-on-error: true
+        run: git clone --depth 1 https://github.com/lxl66566/blog-reference.git src/reference
+
       - name: 安装 pnpm
         uses: pnpm/action-setup@v4
 

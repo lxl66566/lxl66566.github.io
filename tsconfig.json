@@ -11,7 +11,13 @@
     // solid-js@2.0-rc has no ./jsx-runtime export; JSX types live in
     // @solidjs/web (mirrors the framework demo tsconfig).
     "paths": {
-      "solid-js/jsx-runtime": ["./node_modules/@solidjs/web/types/jsx.d.ts"]
+      "solid-js/jsx-runtime": ["./node_modules/@solidjs/web/types/jsx.d.ts"],
+      // absolute-press is consumed as linked TS sources, so its `import from
+      // 'vite'` would resolve to the framework checkout's own node_modules
+      // copy — a second Plugin/UserConfig identity that makes tsc compare
+      // the two structurally and blow the recursion limit at defineConfig.
+      // Pin every 'vite' import in the program to this repo's copy.
+      "vite": ["./node_modules/vite/dist/node/index.d.ts"]
     },
     "types": ["vite/client", "node"],
     "noEmit": true,
@@ -35,10 +41,10 @@
     "verbatimModuleSyntax": true
   },
   // Site code: islands/ are the browser graph; the root *.ts are build-time
-  // tooling (vite/uno config, content scanners, ambient virtual-module
-  // declarations). src/ holds markdown content plus the legacy .vuepress
-  // data/definition modules — not roots, but imported by islands/config, so
-  // they stay typechecked through the import graph.
+  // tooling (vite/uno config, the onScan site-data module, ambient
+  // virtual-module declarations). src/ holds markdown content plus the
+  // legacy .vuepress data/definition modules — not roots, but imported by
+  // islands/config, so they stay typechecked through the import graph.
   "include": ["islands", "*.ts"],
   "exclude": ["dist", "node_modules", "src"],
   // The framework npm package ships TS sources (exports point into src/);
@@ -50,7 +56,7 @@
     "node_modules/absolute-press/src/node/markdown/markdown-it-container.d.ts",
     "node_modules/absolute-press/src/client/runtime/env.d.ts",
     "src/.vuepress/icons.ts",
-    "src/.vuepress/taxonomy.ts",
+    "src/.vuepress/site-data.ts",
     "src/.vuepress/virtual-modules.d.ts"
   ]
 }

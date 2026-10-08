@@ -6,6 +6,8 @@ temperature: 0
 
 # lxl66566.github.io — 基于 absolute-press 的个人博客
 
+框架源码：../absolute-press
+
 absolute-press 框架迁移已完成：构建、主题与渲染全部来自 absolute-press，本仓维护 markdown 内容、islands 与站点级样式。
 
 ## 禁区
@@ -22,12 +24,13 @@ absolute-press 框架迁移已完成：构建、主题与渲染全部来自 abso
 
 - markdown 内容迁移/改写遵循 docs/conversion-spec.md（迁移期一次性脚本与历史记录文档已清理，见该文档头部说明）
 - 列表页（galgame/books/anime/job/money/speedup）用站点 xlist island：TS 数据模块是 meta 列唯一数据源，markdown 只留 `@@@ <slot-key>` 插槽正文；增改条目两侧同步改，改完跑 `node utils/xlist-sync.mjs` 校验（详见 conversion-spec §9）
-- island 注册与 frontmatter `icon` 一律用全称 key（如 `solid/code`、`brands/telegram`、`regular/snowflake`）；src/.vuepress/icons.ts 构建期扫描内容并校验，未注册的 key 直接构建失败
+- island 注册与 frontmatter `icon` 一律用全称 key（如 `solid/code`、`brands/telegram`、`regular/snowflake`）；src/.vuepress/icons.ts 提供全量 FA free 注册表（`<pack>/<name>` key → 内联 svg，无内容扫描），框架据此校验，拼错或不存在的 key 直接构建失败
 - 框架内置 island（ExpandableList/PasswordGate 等）无 `locale` prop，UI 文案按页面 `<html lang>` 前缀解析（`en-US` → 英文，未注册语言回退中文）；站点级 chrome 文案同理由各 locale 的 lang 决定
 - 部署走 .github/workflows/deploy.yml
 - 首页（src/index.md）是设计过的落地页，不照抄旧版 BlogHome：正文居中（迁移自 code 分支旧首页），`<HomeProfile />` 右栏占据 TOC 泳道——styles/site.css 用 `html:has(占位符)` 隐藏框架 TOC 与首页关联图，跨页导航自动恢复；`<HomeProjects />` 项目货架在正文末尾
-- 首页右栏统计与分类/标签列表的数据来自 src/.vuepress/taxonomy.ts 构建期扫描（vite.config.ts 经 virtual:site-taxonomy 虚拟模块注入 island；dev 下改动 frontmatter 计数需重启）
-- 首页项目货架唯一数据源是 src/.vuepress/data/projects.ts（迁移自 GitHub profile README）；分组图标映射在 islands/HomeProjects.tsx 的 GROUP_ICONS，增删项目只改数据模块；desc 支持行内 markdown（框架行内渲染器 heimu/mark/katex/强调/链接），vite.config.ts 构建期渲染经 virtual:project-desc-html 注入 island，dev 下改 desc 需重启
+- 全站派生数据（首页右栏统计与分类/标签列表、项目货架 desc 的行内 markdown HTML）统一由 src/.vuepress/site-data.ts 的 onScan 钩子产出（框架单遍扫描提供 frontmatter/git 时间），经 `virtual:absolute-press/site-data` 注入 island（typing 见 src/.vuepress/virtual-modules.d.ts）；dev 下改 frontmatter 计数即时刷新，改 projects.ts 需重启（挂在 vite config 模块图）
+- absolute-press 以源码符号链接消费，tsconfig paths 把 `vite` pin 到本仓副本：否则框架源码会解析到 ../absolute-press/node_modules 的另一份 vite 类型，tsc 在 defineConfig 处深度比较爆栈（TS7 报 excessive stack depth，TS5 直接崩溃）
+- 首页项目货架唯一数据源是 src/.vuepress/data/projects.ts（迁移自 GitHub profile README）；分组图标映射在 islands/HomeProjects.tsx 的 GROUP_ICONS，增删项目只改数据模块；desc 的行内 markdown（heimu/mark/katex/强调/链接）渲染在 site-data.ts 的 onScan 内完成，dev 下改 projects.ts 需重启
 - 原子化提交。
 
 ## UX 偏好

@@ -14,9 +14,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import type { JSX } from '@solidjs/web';
 import { createSignal, For } from 'solid-js';
-// Config-time rendered desc HTML: vite.config.ts runs the framework's inline
-// markdown pipeline over every desc; keyed by the raw desc string.
-import descHtml from 'virtual:project-desc-html';
+// Scan-time rendered desc HTML (src/.vuepress/site-data.ts onScan): the
+// framework's inline markdown pipeline runs over every desc, keyed by the
+// raw desc string.
+import siteData from 'virtual:absolute-press/site-data';
 
 import {
   featuredProjects,
@@ -27,6 +28,8 @@ import {
 } from '../src/.vuepress/data/projects';
 import { FaIconSvg } from './pieces';
 import type { IslandProps } from './types';
+
+const descHtml = siteData.projectDescHtml;
 
 /**
  * Desc span with framework-rendered inline markdown. Unrendered strings

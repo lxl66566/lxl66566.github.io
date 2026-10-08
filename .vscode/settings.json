@@ -14,12 +14,8 @@
     "editor.defaultFormatter": "dprint.dprint",
     "editor.formatOnSave": true
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "dprint.dprint",
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dprint.dprint",
+  "[javascript][typescript][javascriptreact][typescriptreact][yaml]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "editor.formatOnSave": true
   },
   "codeium.enableConfig": {
