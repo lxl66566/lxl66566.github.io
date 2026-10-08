@@ -7,9 +7,9 @@ category:
   - 经历
 ---
 
-# 问题列表
+# 折腾 Vuepress
 
-折腾此 Vuepress 博客时遇到的问题。Vuepress 本质上还是为 Vue 开发者准备的，如果在写博客之前能系统地学习 Vue 与其他前端技术，能够避开很多问题。
+搭建与维护此 Vuepress 博客时遇到的问题。Vuepress 本质上还是为 Vue 开发者准备的，如果在写博客之前能系统地学习 Vue 与其他前端技术，能够避开很多问题。
 
 后来我是学了，详见 [Vue](../coding/vue.md)。
 
@@ -777,7 +777,7 @@ vuepress 及其 theme-hope 有着一大堆 peerDenepdencies，完全就是一副
 
 升级了依赖，还有一些小问题：
 
-- 原来的 Iconfont 因为版权原因(?) 不再内置，因此我的图标全部挂了。于是我换到了文档推荐的 [Fontawesome](https://fontawesome.com/search?o=r&m=free)。给我的一百多篇博文重新挑选图标实在是一件痛苦的事，尤其是 Fontawesome 也没有好到哪里去，图标库大了一点，但是有些基础的商标反而没有，并且不同图标有不同的前缀，只用新图标规则的一个 `iconPrefix` 难以覆盖所有情况，于是很多图标还得手动处理。。。改图标就改了 1h+，人直接乏了。
+- 原来的 Iconfont 因为版权原因(?) 不再内置，因此我的图标全部挂了。于是我换到了文档推荐的 [Fontawesome](https://fontawesome.com/search?ic=free-collection)。给我的一百多篇博文重新挑选图标实在是一件痛苦的事，尤其是 Fontawesome 也没有好到哪里去，图标库大了一点，但是有些基础的商标反而没有，并且不同图标有不同的前缀，只用新图标规则的一个 `iconPrefix` 难以覆盖所有情况，于是很多图标还得手动处理。。。改图标就改了 1h+，人直接乏了。
 - frontmatter 里的 sidebar 只接受 bool 值了，原来控制不显示文件夹内其他文件的选项移到了 dir 里。我懒得管了，一个全局替换把 sidebar 项目都删了。
 - 现在页面过窄时也会默认显示文章目录，因此删了所有 `[[toc]]`。
 - rss 和 pwa 多了更多的可设置项。~~射！~~设！

@@ -22,6 +22,10 @@ category:
 
 ## 2026
 
+### 20261007
+
+**[将博客框架迁移到 absolute-press](./withabsolutepress.md)**
+
 ### 20260826
 
 - 拆分原 _Rust_ 页面到 [Rust](../coding/Rust/) 子目录，包含主要内容与 [crates 评价](../coding/Rust/crates.md) 页面。

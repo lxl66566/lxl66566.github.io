@@ -27,9 +27,10 @@ category:
 
 ## 文章
 
-1. [**遇到的问题**](./withvuepress2.md)
-2. [**博客日志**](./log.md)
-3. [**博客日程**](./todo.md)
+1. [**VuePress 折腾记录**](./withvuepress2.md)
+2. [**迁移到 absolute-press**](./withabsolutepress.md)
+3. [**博客日志**](./log.md)
+4. [**博客日程**](./todo.md)
 
 ## 前言
 
