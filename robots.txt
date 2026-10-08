@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /articles/proxy/vpn
+Disallow: /articles/telegram
+Disallow: /gossip/wish
+Disallow: /gossip/job
+Disallow: /hide/memories
+Disallow: /hobbies/NSFW/videos
+Disallow: /hobbies/NSFW/comic
+Disallow: /hobbies/NSFW/bangumi
+Disallow: /hide
 
 Sitemap: https://absx.pages.dev/sitemap.xml
