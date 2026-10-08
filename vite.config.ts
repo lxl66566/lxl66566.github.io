@@ -48,7 +48,7 @@ const toSectionNavItems = (
   overview: string,
   sections: ArticleSection[],
 ) => [
-  { text: overview, link: `/${dir}/index.html`, index: true },
+  { text: overview, link: `/${dir}/`, index: true },
   ...sections.map(section => {
     const links = section.links.map(link => ({
       text: link.text,
@@ -84,7 +84,13 @@ const siteConfig = defineSiteConfig({
   icons: collectIcons(CONTENT_DIR),
   // Large share card (og:image + twitter:card summary_large_image); the
   // same legacy avatar doubles as the site-wide share image.
-  seo: { image: '/logo.jpg' },
+  seo: {
+    image: '/logo.jpg',
+    author: { name: 'lxl66566', url: 'https://github.com/lxl66566' },
+    // /hide/ 是不列出的目录：不进 sitemap，robots 追加 Disallow
+    exclude: ['/hide'],
+  },
+  favicon: '/favicon.ico',
   // Navbar options in the framework's single nav section.
   nav: {
     // Legacy anime avatar (src/.vuepress/public/logo.jpg) as the navbar /
@@ -196,26 +202,26 @@ const siteConfig = defineSiteConfig({
   // entry still pointed at the dead /articles/vpn.html route.
   encrypt: [
     {
-      match: '/articles/proxy/vpn.html',
+      match: '/articles/proxy/vpn',
       passwords: ['2003'],
       hint: '作者生年',
     },
-    { match: '/articles/telegram.html', passwords: ['2003'], hint: '作者生年' },
-    { match: '/gossip/wish.html', passwords: ['2003'], hint: '作者生年' },
-    { match: '/gossip/job.html', passwords: ['2003'], hint: '作者生年' },
-    { match: '/hide/memories.html', passwords: ['2003'], hint: '作者生年' },
+    { match: '/articles/telegram', passwords: ['2003'], hint: '作者生年' },
+    { match: '/gossip/wish', passwords: ['2003'], hint: '作者生年' },
+    { match: '/gossip/job', passwords: ['2003'], hint: '作者生年' },
+    { match: '/hide/memories', passwords: ['2003'], hint: '作者生年' },
     {
-      match: '/hobbies/NSFW/videos.html',
+      match: '/hobbies/NSFW/videos',
       passwords: ['0721'],
       hint: '返回上一页查看提示',
     },
     {
-      match: '/hobbies/NSFW/comic.html',
+      match: '/hobbies/NSFW/comic',
       passwords: ['0721'],
       hint: '返回上一页查看提示',
     },
     {
-      match: '/hobbies/NSFW/bangumi.html',
+      match: '/hobbies/NSFW/bangumi',
       passwords: ['0721'],
       hint: '返回上一页查看提示',
     },

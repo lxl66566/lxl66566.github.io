@@ -19,8 +19,8 @@ import type { TaxonomyEntry } from '../src/.vuepress/taxonomy';
 import { FaIconSvg } from './pieces';
 import type { IslandProps } from './types';
 
-const AUTHOR_URL = '/gossip/author.html';
-const ARTICLES_URL = '/articles/index.html';
+const AUTHOR_URL = '/gossip/author';
+const ARTICLES_URL = '/articles';
 
 interface SocialLink {
   title: string;
@@ -40,7 +40,7 @@ const SOCIAL_LINKS: SocialLink[] = [
 
 /** Framework archive route for a category/tag name (base is ''). */
 const archiveHref = (kind: 'category' | 'tag', name: string): string =>
-  `/${kind}/${encodeURIComponent(name)}.html`;
+  `/${kind}/${encodeURIComponent(name)}`;
 
 function Chip(props: {
   entry: TaxonomyEntry;
@@ -86,7 +86,13 @@ export default function HomeProfile(_props: IslandProps): JSX.Element {
           href={AUTHOR_URL}
           aria-label="关于作者"
         >
-          <img src="/logo.jpg" alt="绝对值_x 的头像" />
+          <img
+            src="/logo.jpg"
+            alt="绝对值_x 的头像"
+            width="706"
+            height="706"
+            fetchpriority="high"
+          />
         </a>
         <a class="abs-home-rail__name" href={AUTHOR_URL}>
           绝对值_x
