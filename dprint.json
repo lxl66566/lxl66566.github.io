@@ -20,7 +20,7 @@
     "indentWidth": 2
   },
   "yaml": {},
-  "excludes": ["**/node_modules", "**/*-lock.json", "pnpm-lock.yaml", "src/.vuepress/public", "src/.vuepress/.cache", "src/.vuepress/.temp"],
+  "excludes": ["**/node_modules", "**/*-lock.json", "pnpm-lock.yaml", "src/reference/*.md"],
   "includes": ["src/**/*.{md}"],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.95.13.wasm",

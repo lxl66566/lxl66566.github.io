@@ -17,7 +17,7 @@ category:
 
 泛前端项目的一些约束，比如 ts full typing、禁 any 和 as unknown as、工具链就不多说了。直接基于 [my-solid-template](https://github.com/lxl66566/my-solid-template) 开搞即可。
 
-首先，先让 AI 把我的 blog review 一遍，总结出到底用了哪些 vuepress-theme-hope 的特性和迁移时注意的点，方便我和 AI 测试。
+首先，先让 AI 把我的 blog review 一遍，总结出[[ai-solidjs-migration-plan|到底用了哪些 vuepress-theme-hope 的特性和迁移时注意的点]]，方便我和 AI 测试。
 
 然后我大概定了几个规矩：
 
@@ -28,7 +28,7 @@ category:
 2. 在性能基础上提了一些 SEO 要求，然后 AI 就帮我选了 [[ai-islands-architecture|Astro 那种 island 和 MPA 架构]]。本来我以为会回到 [MDX 的老路](../coding/mdx.md)，现在有了（看起来）更好的解法，那还是先试试吧。
 3. 尽可能降低迁移成本。
    - 我自己的博客里最有价值的是 markdown 文档，这些变更我肯定都要看一遍。如果迁移改了太多东西，不好 review。因此新的博客框架也是走 markdown-it 渲染 + markdown-it 插件 + shiki 代码高亮 + katex 渲染公式那一套，保证兼容老 vuepress-theme-hope 的各种语法，比如 `::: code-tabs` `::: details` 等容器。
-   - algolia 搜索、gisgus 评论区等也都重新实现一份，不能丢。
+   - algolia 搜索、giscus 评论区等也都重新实现一份，不能丢。
 
 ## 编写与测试
 
@@ -44,7 +44,7 @@ absolute-press 框架里融合了我的一些新的构想。
 
 ### 文章关联图
 
-现在你可以在博客的每个文章末尾（gisgus 评论区之前）看到一个叫「相关文章」的板块，里面是一堆布朗运动的点（文章）和线（关联）。这就是我的文章关联图的设计。
+现在你可以在博客的每个文章末尾（giscus 评论区之前）看到一个叫「相关文章」的板块，里面是一堆布朗运动的点（文章）和线（关联）。这就是我的文章关联图的设计。
 
 传统博客站经常会在这个区域放两个「上一篇」「下一篇」的按钮，让人读完一篇文章以后可以接着读下一篇；但我的博客并不是普通的按“文章”维度的产出，不同的文章之间字数和信息量差别非常大；而且我觉得单纯使用「上下篇」在引导方面也做得不太好。因此我搞了个关联图，希望读者可以跳转到与当前文章关联性较大的其他文章继续阅读 !!对原本就谜语的博客更是雪上加霜!!。
 

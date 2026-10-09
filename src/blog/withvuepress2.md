@@ -589,7 +589,7 @@ algolia 在搜索和用户体验上做的还行，但是在接入和 dashboard �
 不过还有一些问题（功能改进）没有解决：
 
 - ~~比如我想在 navbar 上加一个 telegram 的跳转链接。~~（[已解决](#navbar-添加组件)）
-- 主页评论区寄了。明明都是 gisgus 的服务，配置一模一样，也是按照 `pathname` 查找，但是原先的评论就是找不回来。
+- 主页评论区寄了。明明都是 giscus 的服务，配置一模一样，也是按照 `pathname` 查找，但是原先的评论就是找不回来。
   - 官方有提到[如何在主页添加评论](https://theme-hope.vuejs.press/zh/guide/advanced/replace.html#插槽利用)，但是事实上并没有什么软用。。。直接报错 import 路径错误了。
 
 ## navbar 添加组件
