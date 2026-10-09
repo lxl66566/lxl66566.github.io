@@ -9,3 +9,4 @@ dist/
 /test*.*
 # e2e screenshot output (regenerable via utils/xlist-e2e.mjs)
 dist-shots/
+src/reference/
