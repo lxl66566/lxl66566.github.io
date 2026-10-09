@@ -29,7 +29,8 @@ absolute-press 框架迁移已完成：构建、主题与渲染全部来自 abso
 - 部署走 .github/workflows/deploy.yml
 - 首页（src/index.md）是设计过的落地页，不照抄旧版 BlogHome：正文居中（迁移自 code 分支旧首页），`<HomeProfile />` 右栏占据 TOC 泳道——styles/site.css 用 `html:has(占位符)` 隐藏框架 TOC 与首页关联图，跨页导航自动恢复；`<HomeProjects />` 项目货架在正文末尾
 - 全站派生数据（首页右栏统计与分类/标签列表、项目货架 desc 的行内 markdown HTML）统一由 src/.vuepress/site-data.ts 的 onScan 钩子产出（框架单遍扫描提供 frontmatter/git 时间），经 `virtual:absolute-press/site-data` 注入 island（typing 见 src/.vuepress/virtual-modules.d.ts）；dev 下改 frontmatter 计数即时刷新，改 projects.ts 需重启（挂在 vite config 模块图）
-- absolute-press 以源码符号链接消费，tsconfig paths 把 `vite` pin 到本仓副本：否则框架源码会解析到 ../absolute-press/node_modules 的另一份 vite 类型，tsc 在 defineConfig 处深度比较爆栈（TS7 报 excessive stack depth，TS5 直接崩溃）
+- absolute-press 以源码 link 消费（pnpm-workspace overrides 指向 ../absolute-press，无 patch）：entry-list 静态骨架的 `<h6 id>` 标题锚点（algolia 爬虫按标题切片、无 JS 深链）已由框架上游内置，客户端 XList 标题格带同 id，样式重置在 styles/site.css（与整段移植的 xlist 样式保持同源）；tsconfig paths 把 `vite` pin 到本仓副本：否则框架源码会解析到另一份 vite 类型，tsc 在 defineConfig 处深度比较爆栈（TS7 报 excessive stack depth，TS5 直接崩溃）
+- CSS 级联契约（框架侧 `.agents/skills/css-cascade`）：框架样式全在级联层，本仓 styles/site.css 经 uno preflights 注入、以 unlayered 输出（uno.config.ts 的 `cssLayerName`），恒胜框架全部规则——覆盖不需要特异性技巧；覆盖 `--c-*` 时亮暗两套都要写
 - 首页项目货架唯一数据源是 src/.vuepress/data/projects.ts（迁移自 GitHub profile README）；分组图标映射在 islands/HomeProjects.tsx 的 GROUP_ICONS，增删项目只改数据模块；desc 的行内 markdown（heimu/mark/katex/强调/链接）渲染在 site-data.ts 的 onScan 内完成，dev 下改 projects.ts 需重启
 - 原子化提交。
 

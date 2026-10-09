@@ -408,7 +408,12 @@ export function XList(props: XListProps): SolidElement {
                             : undefined
                         }
                       >
-                        <td class="ap-xlist__cell ap-xlist__title">
+                        <td
+                          class="ap-xlist__cell ap-xlist__title"
+                          // Deep-link parity with the static h6 anchor, which
+                          // hydration replaces.
+                          id={entry.item.key}
+                        >
                           <Show
                             when={expandableRow()}
                             fallback={

@@ -1,7 +1,9 @@
 /* Site-level compat styles migrated from the vuepress-theme-hope setup
  * (src/.vuepress/styles/{config,index,palette}.scss). Injected on every page
- * through the UnoCSS preflight (uno.config.ts). Rules the framework already
- * ships are not repeated here:
+ * through the UnoCSS preflight (uno.config.ts), emitted unlayered so every
+ * rule here outranks the framework's cascade layers without specificity
+ * work (see the css-cascade skill in the framework repo). Rules the
+ * framework already ships are not repeated here:
  *   - heimu (base/hover/selection/link colors): theme.css covers .ap-heimu,
  *     .heimu and the raw <heimu> element with the old moegirl palette.
  *   - accent color: the framework's light --c-accent already is #3eaf7c, the
@@ -13,11 +15,6 @@
   text-align: right;
   font-weight: bold;
   font-style: italic;
-}
-
-/* Anchor jump compensation for the sticky navbar (TOC / deep links). */
-:is(h1, h2, h3, h4, h5, h6)[id] {
-  scroll-margin-top: 20vh !important;
 }
 
 /* Monochrome svg images (mermaid exports etc.) read better inverted. */
@@ -201,7 +198,7 @@ details.abs-dtlslong:not([open]) > summary {
 
 /* AvTable / ComicTable islands. */
 /* av/comic tables ride the xlist component now; keep the denser legacy
- * padding by out-scoping the ported xlist cell rule (#ap-content + class). */
+ * padding over the ported xlist cell rule (unlayered site css outranks it). */
 #ap-content .abs-avtable :is(th, td),
 #ap-content .abs-comictable :is(th, td) {
   padding: 0.35rem 0.5rem;
@@ -219,9 +216,9 @@ details.abs-dtlslong:not([open]) > summary {
  * ------------------------------------------------------------------------ */
 
 /* L7: article h1 back to ~34px (framework theme.css ships 1.9rem = 30.4px;
- * old site rendered 35.2px, ruling lands on ~34px). The html prefix
- * outranks the framework's #ap-content h1 rule without !important. */
-html #ap-content h1 {
+ * old site rendered 35.2px, ruling lands on ~34px). Unlayered site css
+ * outranks the framework prose rule by construction. */
+#ap-content h1 {
   font-size: 2.125rem;
 }
 
@@ -454,6 +451,23 @@ html #ap-content h1 {
 .ap-xlist__toggle,
 .ap-xlist__item-title {
   font-weight: 400;
+}
+
+/* Static-fallback titles are h6 anchors (Algolia record splitting + deep
+ * links); render as plain cell text like the hydrated table does. */
+.ap-xlist__item-title .ap-xlist__entry-anchor {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  border: 0;
+}
+
+/* Hydrated title cell carries the same deep-link id (static h6 is replaced).
+ * Anchor jump compensation matches the heading rule at the top of this file. */
+td.ap-xlist__title[id] {
+  scroll-margin-top: 20vh;
 }
 
 .ap-xlist__toggle {
