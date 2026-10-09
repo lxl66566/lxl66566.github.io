@@ -127,6 +127,9 @@ const siteConfig = defineSiteConfig({
       articles: { items: articleNavItems },
       learning: { items: learningNavItems },
       gossip: { items: gossipNavItems },
+      // 时间轴 top-level dir label (the generated panel needs no groups;
+      // unlisted in `order`, so the entry appends after 博客).
+      timeline: { label: '时间轴' },
     },
     // Top-level navbar order mirrors the old navbar.ts entries:
     // 编程 爱好 杂项 文章 学习 闲聊 随笔 博客.
@@ -225,6 +228,9 @@ const siteConfig = defineSiteConfig({
     // Homepage project shelf (featured cards + foldable group rows), see
     // islands/HomeProjects.tsx.
     HomeProjects: 'islands/HomeProjects.tsx',
+    // Site-wide archive on /timeline/ (year-grouped article list), see
+    // islands/Timeline.tsx.
+    Timeline: 'islands/Timeline.tsx',
     Dated: 'islands/Dated.tsx',
     TelegramLink: 'islands/TelegramLink.tsx',
     RSSLink: 'islands/RSSLink.tsx',

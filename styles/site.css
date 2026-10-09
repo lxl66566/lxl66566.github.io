@@ -1064,3 +1064,61 @@ html:has(#ap-content > div[data-ap-island='HomeProfile']) #ap-related {
   border: 1px solid var(--c-border);
   border-radius: 0.25rem;
 }
+
+/* --------------------------------------------------------------------------
+ * Timeline island (/timeline/): year-grouped archive rows. Only the list
+ * reset, the muted date column and the year labels are ours — link colors
+ * and hover come from the framework's #ap-content a rules, like the
+ * ArticleCell boxes. #ap-content prefixes beat the prose ul/li rules
+ * (same as the rail chips).
+ * ------------------------------------------------------------------------ */
+
+.abs-timeline__label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 1.8em 0 0.45em;
+}
+
+.abs-timeline__label b {
+  font-size: 1.05rem;
+  color: var(--c-text);
+}
+
+.abs-timeline__label::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--c-border);
+  transform: translateY(-0.3em);
+}
+
+.abs-timeline__count {
+  font-size: 0.78rem;
+  color: var(--c-text-2);
+}
+
+#ap-content .abs-timeline__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ap-content .abs-timeline__link {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  padding: 0.18rem 0;
+}
+
+.abs-timeline__date {
+  flex: none;
+  min-width: 6em;
+  white-space: nowrap;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-text-2);
+}
+
+.abs-timeline__title {
+  overflow-wrap: anywhere;
+}

@@ -22,7 +22,9 @@ import type { IslandProps } from './types';
 const taxonomy = siteData.taxonomy;
 
 const AUTHOR_URL = '/gossip/author';
-const ARTICLES_URL = '/articles';
+// Directory-index route keeps its trailing slash in slash mode (/articles
+// would 404 in dev); the archive lists the same article set the count shows.
+const ARTICLES_URL = '/timeline/';
 
 interface SocialLink {
   title: string;

@@ -28,7 +28,7 @@ absolute-press 框架迁移已完成：构建、主题与渲染全部来自 abso
 - 框架内置 island（ExpandableList/PasswordGate 等）无 `locale` prop，UI 文案按页面 `<html lang>` 前缀解析（`en-US` → 英文，未注册语言回退中文）；站点级 chrome 文案同理由各 locale 的 lang 决定
 - 部署走 .github/workflows/deploy.yml
 - 首页（src/index.md）是设计过的落地页，不照抄旧版 BlogHome：正文居中（迁移自 code 分支旧首页），`<HomeProfile />` 右栏占据 TOC 泳道——styles/site.css 用 `html:has(占位符)` 隐藏框架 TOC 与首页关联图，跨页导航自动恢复；`<HomeProjects />` 项目货架在正文末尾
-- 全站派生数据（首页右栏统计与分类/标签列表、项目货架 desc 的行内 markdown HTML）统一由 src/.vuepress/site-data.ts 的 onScan 钩子产出（框架单遍扫描提供 frontmatter/git 时间），经 `virtual:absolute-press/site-data` 注入 island（typing 见 src/.vuepress/virtual-modules.d.ts）；dev 下改 frontmatter 计数即时刷新，改 projects.ts 需重启（挂在 vite config 模块图）
+- 全站派生数据（首页右栏统计与分类/标签列表、/timeline/ 时间轴文章列表、项目货架 desc 的行内 markdown HTML）统一由 src/.vuepress/site-data.ts 的 onScan 钩子产出（框架单遍扫描提供 frontmatter/git 时间），经 `virtual:absolute-press/site-data` 注入 island（typing 见 src/.vuepress/virtual-modules.d.ts）；dev 下改 frontmatter 计数即时刷新，改 projects.ts 需重启（挂在 vite config 模块图）；文章集合口径 = 非 locale home 且非 /hide/（目录 index 算文章），右栏「文章」计数与时间轴条目共用同一集合，时间轴页 (src/timeline/index.md + islands/Timeline.tsx) 按年分组倒序；标题 onScan 拿不到（渲染前无 H1），由站点侧读源码取 frontmatter title > 首个 H1 > 相对路径
 - absolute-press 以源码 link 消费（pnpm-workspace overrides 指向 ../absolute-press，无 patch）：entry-list 静态骨架的 `<h6 id>` 标题锚点（algolia 爬虫按标题切片、无 JS 深链）已由框架上游内置，客户端 XList 标题格带同 id，样式重置在 styles/site.css（与整段移植的 xlist 样式保持同源）；tsconfig paths 把 `vite` pin 到本仓副本：否则框架源码会解析到另一份 vite 类型，tsc 在 defineConfig 处深度比较爆栈（TS7 报 excessive stack depth，TS5 直接崩溃）
 - CSS 级联契约（框架侧 `.agents/skills/css-cascade`）：框架样式全在级联层，本仓 styles/site.css 经 uno preflights 注入、以 unlayered 输出（uno.config.ts 的 `cssLayerName`），恒胜框架全部规则——覆盖不需要特异性技巧；覆盖 `--c-*` 时亮暗两套都要写
 - 首页项目货架唯一数据源是 src/.vuepress/data/projects.ts（迁移自 GitHub profile README）；分组图标映射在 islands/HomeProjects.tsx 的 GROUP_ICONS，增删项目只改数据模块；desc 的行内 markdown（heimu/mark/katex/强调/链接）渲染在 site-data.ts 的 onScan 内完成，dev 下改 projects.ts 需重启
@@ -51,6 +51,6 @@ absolute-press 框架迁移已完成：构建、主题与渲染全部来自 abso
 - 关联图节点数超过阈值（related.twoHopNodeLimit）时只展示一度关联，否则展示两度；一度星型本身超过阈值时只保留互引最强的前 limit-1 个（阈值即全站关联图渲染节点数上限）
 - 移动端顶栏仅一个汉堡按钮；抽屉按目录树分层折叠，默认只展示第一层，可无限展开并包含全部文章
 - navbar 爱好下拉不分区域：用单一无标题 group 固定成员顺序，文件夹条目自然排在文章前（框架 slim 逻辑）
-- 桌面端 footer 是内容列宽的紧凑两栏行：左侧 `footer.credit`（已填 2026 © lxl66566），右侧 Powered by 文案、链接只套在框架名上指向框架仓库（框架侧渲染）；不 sticky、不挤占 sidebar/TOC；移动端不出 footer，credit 放左上角三道杠抽屉的 footer 底部；不放社交图标与最后更新；评论区不加标题；不做上/下篇导航（由关联文章组件承担）；不做时间轴归档页
+- 桌面端 footer 是内容列宽的紧凑两栏行：左侧 `footer.credit`（已填 2026 © lxl66566），右侧 Powered by 文案、链接只套在框架名上指向框架仓库（框架侧渲染）；不 sticky、不挤占 sidebar/TOC；移动端不出 footer，credit 放左上角三道杠抽屉的 footer 底部；不放社交图标与最后更新；评论区不加标题；不做上/下篇导航（由关联文章组件承担）
 - navbar 栏目名可点直达板块 index（板块名即总览，框架侧文件夹行链接契约）；下拉首行总览行带「总览」badge 与分隔线（框架打 `ap-nav-index-row` 钩子，样式在 styles/site.css）
 - 分区板块（我的文章/学习笔记/闲聊）的下拉分区与对应 index 页共用 src/.vuepress/data/ 下的同名数据模块（单一数据源）：ArticleCell 用 `<ArticleCell name="<板块>" />` 渲染，vite.config.ts 的 toSectionNavItems 构建期派生 navbar tweak items（框架校验链接、追加未覆盖成员、按链接回填 frontmatter 图标）；增删文章或分区只改数据模块，两侧自动同步
