@@ -55,7 +55,6 @@
   "files": [
     "node_modules/absolute-press/src/node/markdown/markdown-it-container.d.ts",
     "node_modules/absolute-press/src/client/runtime/env.d.ts",
-    "src/.vuepress/icons.ts",
     "src/.vuepress/site-data.ts",
     "src/.vuepress/virtual-modules.d.ts"
   ]

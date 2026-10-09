@@ -7,7 +7,6 @@ import articleSections from './src/.vuepress/data/article';
 import type { ArticleSection } from './src/.vuepress/data/article';
 import gossipSections from './src/.vuepress/data/gossip';
 import learningSections from './src/.vuepress/data/learning';
-import { allIcons } from './src/.vuepress/icons';
 import { siteScan } from './src/.vuepress/site-data';
 
 const CONTENT_DIR = 'src';
@@ -63,10 +62,10 @@ const siteConfig = defineSiteConfig({
   description: '没什么有价值的内容的，真的！',
   hostname: 'https://absx.pages.dev',
   lang: 'zh-CN',
-  // Frontmatter icons: the full FA free registry from
-  // src/.vuepress/icons.ts; the framework validates content keys against it
-  // and subsets the per-page payload.
-  icons: allIcons(),
+  // Frontmatter icons: the framework's fontawesome provider registers every
+  // FA free glyph under its <pack>/<name> key and subsets the per-page
+  // payload.
+  iconProvider: 'fontawesome',
   // Site-wide data for islands (homepage taxonomy + project desc HTML),
   // served via virtual:absolute-press/site-data.
   onScan: siteScan,
