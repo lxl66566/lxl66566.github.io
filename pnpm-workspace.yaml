@@ -16,7 +16,7 @@ minimumReleaseAgeExclude:
   - '@rolldown/binding-openharmony-arm64@1.2.13'
   - '@rolldown/binding-win32-arm64-msvc@1.2.13'
   - '@rolldown/binding-win32-x64-msvc@1.2.13'
-  - absolute-press@0.1.0 || 0.1.1 || 0.2.0
+  - absolute-press@0.1.0 || 0.1.1 || 0.2.0 || 0.3.0
   - caniuse-lite@1.0.30001815
   - devframe@1.2.3
   - electron-to-chromium@1.5.449

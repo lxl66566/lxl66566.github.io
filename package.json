@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@solidjs/web": "2.0.0-rc.13",
-    "absolute-press": "^0.2.0",
+    "absolute-press": "^0.3.0",
     "solid-js": "2.0.0-rc.13"
   },
   "devDependencies": {
