@@ -646,201 +646,15 @@ td.ap-xlist__title[id] {
 }
 
 /* --------------------------------------------------------------------------
- * Homepage profile rail (HomeProfile island, src/index.md). Desktop keeps
- * the TOC lane and swaps the framework TOC for the profile card — the :has
- * hook matches the island placeholder, so it reverts by itself once
- * client-side navigation leaves the home page. Below 1280px the same DOM
- * flows as a card above the article body.
+ * Homepage profile card: the framework's builtin `profile` feature renders
+ * the card (config in vite.config.ts) and omits the TOC container on the
+ * home page natively; its theme.css owns the in-flow look (1024-1280px)
+ * and the leading h1 trim. This skin only pins the card into the TOC lane
+ * at xl, like the old fixed rail.
  * ------------------------------------------------------------------------ */
 
-html:has(#ap-content > div[data-ap-island='HomeProfile']) #ap-toc,
-html:has(#ap-content > div[data-ap-island='HomeProfile']) #ap-related {
-  display: none;
-}
-
-/* Leading trim past the island wrapper (framework theme.css zeroes the top
- * margin of #ap-chrome itself and of the element right after it, but here
- * that slot is held by the HomeProfile placeholder, so the h1 kept its
- * 1.6em leading margin — a dead band under the navbar ever since the home
- * feed was disabled (home.feed: false) left the chrome slot empty and the
- * fixed rail left the placeholder a zero-height box). Same structural
- * adjacency pattern the framework uses, no negative margins: the rail's
- * own margin-bottom (1.5rem, mobile card) becomes the only gap above the
- * h1, and desktop falls back to the bare column padding like every other
- * page. */
-#ap-content > div[data-ap-island='HomeProfile'] + h1 {
-  margin-top: 0;
-}
-
-.abs-home-rail {
-  margin-bottom: 1.5rem;
-}
-
-.abs-home-rail__card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1.25rem 1rem;
-  background-color: var(--c-bg-soft);
-  border: 1px solid var(--c-border);
-  border-radius: 0.75rem;
-}
-
-.abs-home-rail__avatar {
-  display: block;
-  line-height: 0;
-}
-
-.abs-home-rail__avatar img {
-  width: 6rem;
-  height: 6rem;
-  object-fit: cover;
-  border-radius: 0.75rem;
-  border: 1px solid var(--c-border);
-}
-
-.abs-home-rail__name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--c-text);
-  transition: color 120ms ease-out;
-}
-
-.abs-home-rail__name:hover {
-  color: var(--c-accent);
-}
-
-.abs-home-rail__stats {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.abs-home-rail__stats a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.1rem;
-}
-
-.abs-home-rail__stats b {
-  font-size: 1.05rem;
-  color: var(--c-text);
-  transition: color 120ms ease-out;
-}
-
-.abs-home-rail__stats span {
-  font-size: 0.75rem;
-  color: var(--c-text-2);
-  transition: color 120ms ease-out;
-}
-
-.abs-home-rail__stats a:hover b,
-.abs-home-rail__stats a:hover span {
-  color: var(--c-accent);
-}
-
-.abs-home-rail__social {
-  display: flex;
-  gap: 1rem;
-}
-
-.abs-home-rail__social a {
-  display: inline-flex;
-  align-items: center;
-  color: var(--c-text-2);
-  transition: color 120ms ease-out;
-}
-
-.abs-home-rail__social a:hover {
-  color: var(--c-accent);
-}
-
-.abs-home-rail__icon {
-  width: 1.15rem;
-  height: 1.15rem;
-}
-
-.abs-home-rail__group {
-  width: 100%;
-}
-
-/* Anchor targets of the stats row: flash once for feedback (desktop keeps
- * the rail fixed, so there is nothing to scroll to). */
-.abs-home-rail__group:target {
-  animation: abs-home-flash 900ms ease-out;
-  border-radius: 0.375rem;
-}
-
-@keyframes abs-home-flash {
-  from {
-    background-color: color-mix(in srgb, var(--c-accent) 15%, transparent);
-  }
-
-  to {
-    background-color: transparent;
-  }
-}
-
-.abs-home-rail__label {
-  display: block;
-  width: 100%;
-  padding-bottom: 0.3rem;
-  margin-bottom: 0.55rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--c-text-2);
-  border-bottom: 1px solid var(--c-border);
-}
-
-/* #ap-content prefixes beat the framework's #ap-content ul/li prose rules. */
-#ap-content .abs-home-rail__chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.3rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-#ap-content .abs-home-rail__chips li {
-  list-style: none;
-}
-
-.abs-home-rail__chip {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.25rem;
-  padding: 0.1rem 0.55rem;
-  font-size: 0.78rem;
-  color: var(--c-text-2);
-  background-color: var(--c-bg);
-  border: 1px solid var(--c-border);
-  border-radius: 9999px;
-  transition:
-    color 120ms ease-out,
-    border-color 120ms ease-out;
-}
-
-.abs-home-rail__chip[data-tag] {
-  padding: 0.05rem 0.45rem;
-  font-size: 0.72rem;
-  background-color: transparent;
-}
-
-.abs-home-rail__chip:hover {
-  color: var(--c-accent);
-  border-color: var(--c-accent);
-}
-
-.abs-home-rail__count {
-  font-size: 0.68rem;
-  opacity: 0.75;
-}
-
 @media (min-width: 1280px) {
-  .abs-home-rail {
+  .ap-home-profile {
     position: fixed;
     top: var(--ap-nav-h);
     right: 0;
@@ -858,7 +672,7 @@ html:has(#ap-content > div[data-ap-island='HomeProfile']) #ap-related {
     scrollbar-width: none;
   }
 
-  .abs-home-rail::-webkit-scrollbar {
+  .ap-home-profile::-webkit-scrollbar {
     display: none;
   }
 }

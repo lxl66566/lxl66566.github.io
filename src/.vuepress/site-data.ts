@@ -1,30 +1,15 @@
-// Site-wide data derived per scan by the framework's onScan hook: homepage
-// taxonomy (article count + category/tag chips), the /timeline/ archive
-// list, and the HomeProjects desc cells' inline-markdown HTML. The return
-// value is JSON-serialized into `virtual:absolute-press/site-data`, which
-// islands import. Content edits re-run the hook in dev without a server
-// restart; projects.ts desc edits still need one (the data module hangs
-// off the vite config graph).
+// Site-wide data derived per scan by the framework's onScan hook: the
+// /timeline/ archive list and the HomeProjects desc cells' inline-markdown
+// HTML. The return value is JSON-serialized into
+// `virtual:absolute-press/site-data`, which islands import. Content edits
+// re-run the hook in dev without a server restart; projects.ts desc edits
+// still need one (the data module hangs off the vite config graph).
 import fs from 'node:fs';
 
 import { createInlineMarkdownRenderer } from 'absolute-press';
 import type { SiteScanContext, SiteScanPage } from 'absolute-press';
 
 import { featuredProjects, projectGroups } from './data/projects';
-
-/** A single category/tag name with its article count. */
-export interface TaxonomyEntry {
-  name: string;
-  count: number;
-}
-
-/** Aggregated site taxonomy consumed by the HomeProfile island. */
-export interface SiteTaxonomy {
-  /** Article pages: every content page but the locale home and /hide/. */
-  pages: number;
-  categories: TaxonomyEntry[];
-  tags: TaxonomyEntry[];
-}
 
 /** One row of the /timeline/ archive (islands/Timeline.tsx). */
 export interface TimelineEntry {
@@ -38,7 +23,6 @@ export interface TimelineEntry {
 
 /** Shape of `virtual:absolute-press/site-data` on this site. */
 export interface SiteData {
-  taxonomy: SiteTaxonomy;
   /** Site-wide article list for /timeline/, newest first, /hide/ excluded. */
   timeline: TimelineEntry[];
   /** Raw project desc -> framework-rendered inline HTML. */
@@ -46,8 +30,8 @@ export interface SiteData {
 }
 
 // /hide/ stays published but unlisted everywhere (nav/seo excludes in
-// vite.config.ts); the taxonomy count and the timeline share one article
-// set so the rail number matches the archive rows.
+// vite.config.ts); the timeline's article set matches the framework
+// profile card counts (profile.exclude: ['/hide/'] in vite.config.ts).
 const HIDE_PREFIX = '/hide/';
 
 /** Locale home (bare index/README at the content root) is not an article. */
@@ -130,25 +114,6 @@ function headingText(raw: string): string {
     .replace(/\\([\\`*_{}[\]()#+.!-])/g, '$1');
 }
 
-function countBy(
-  pages: SiteScanContext['pages'],
-  field: 'category' | 'tag',
-): TaxonomyEntry[] {
-  const counts = new Map<string, number>();
-  for (const page of pages) {
-    for (const name of page.frontmatter[field] ?? []) {
-      counts.set(name, (counts.get(name) ?? 0) + 1);
-    }
-  }
-  return counts
-    .entries()
-    .map(([name, count]) => ({ name, count }))
-    .toArray()
-    .toSorted(
-      (a, b) => b.count - a.count || a.name.localeCompare(b.name, 'zh-Hans-CN'),
-    );
-}
-
 /** Newest first, undated last, route as tiebreak — the framework's buildArticles order. */
 function byDateDesc(a: TimelineEntry, b: TimelineEntry): number {
   if (a.createdAt && b.createdAt) {
@@ -173,11 +138,6 @@ export function siteScan(ctx: SiteScanContext): SiteData {
     lang: ctx.config.locales[0]!.lang,
   });
   return {
-    taxonomy: {
-      pages: articles.length,
-      categories: countBy(articles, 'category'),
-      tags: countBy(articles, 'tag'),
-    },
     timeline: articles
       .map(page => ({
         title: titleOf(page),

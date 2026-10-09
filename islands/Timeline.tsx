@@ -2,8 +2,9 @@
  * Island: `Timeline` — the /timeline/ archive. Every article as a
  * `date · title` row, grouped by year (newest year first). Data is the
  * siteScan timeline derivation (src/.vuepress/site-data.ts, /hide/
- * excluded) — the same article set feeds the HomeProfile 文章 count, so
- * the rail number is the row count here.
+ * excluded); the framework profile card/drawer counts share the same
+ * article set (profile.exclude in vite.config.ts), so the rail number
+ * matches the row count here.
  */
 import type { JSX } from '@solidjs/web';
 import { For } from 'solid-js';

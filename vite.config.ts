@@ -156,6 +156,16 @@ const siteConfig = defineSiteConfig({
   // The homepage is a designed landing (profile rail + prose + projects);
   // the framework's paginated article feed would render above the body.
   home: { feed: false },
+  // Author profile card: the framework injects it as static HTML above the
+  // home body (TOC lane skin at >=1280 in styles/site.css) and renders the
+  // same data in the mobile drawer. The article count shares the timeline's
+  // set: both exclude /hide/ (directory indexes count as articles).
+  profile: {
+    name: '绝对值_x',
+    link: '/gossip/author',
+    articlesLink: '/timeline/',
+    exclude: ['/hide/'],
+  },
   // Footer credit (left side, desktop footer + mobile drawer); the theme
   // renders the fixed "Powered by absolute-press" attribution on the right.
   footer: { credit: '© 2022-2026 lxl66566' },
@@ -221,9 +231,6 @@ const siteConfig = defineSiteConfig({
   // the project root; see docs/conversion-spec.md for the
   // markdown-side migration rules.
   islands: {
-    // Homepage profile rail (avatar / stats / categories+tags), see
-    // islands/HomeProfile.tsx.
-    HomeProfile: 'islands/HomeProfile.tsx',
     // Homepage project shelf (featured cards + foldable group rows), see
     // islands/HomeProjects.tsx.
     HomeProjects: 'islands/HomeProjects.tsx',

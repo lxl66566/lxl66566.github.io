@@ -3,8 +3,6 @@ date: 2022-05-04
 icon: solid/house
 ---
 
-<HomeProfile />
-
 # 绝对值\_x 的存在证明
 
 <RecentArticles :latest="5" :updated="5" />
