@@ -25,6 +25,30 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 - 两次 Ctrl + C 退出
 - `/resume` 恢复之前的 session，而不是 `/session`；`/tree` 浏览对话并 revert 而不是 `/revert`。
+- 1M 上下文是模型公司的陷阱，只会让你的账单爆炸。所以我需要强制限制模型的 contextWindow，一定用量自动 compact。但是 pi 的 `agent/models-store.json` 是只读的（就算改了也会被 pi 定期更新覆盖掉），所以需要编辑 `agent/models.json` 并且配置 override：
+  ```json :collapsed-lines=5
+  {
+    "providers": {
+      "kimi-coding": {
+        "modelOverrides": {
+          "k3": {
+            "contextWindow": 220000
+          },
+          "k3-256k": {
+            "contextWindow": 220000
+          }
+        }
+      },
+      "zai-coding-cn": {
+        "modelOverrides": {
+          "glm-5.3": {
+            "contextWindow": 220000
+          }
+        }
+      }
+    }
+  }
+  ```
 
 ### 优点
 
@@ -64,6 +88,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - pi 不会自动记住上次使用的 model。我要是设置了 defaultModel + defaultProvider，就只能一直用设置的默认值；要是不设置，它每次开 session 都会自动用 deepseek-v4-pro，实在是太坏了。
   - 更新以后可以记住 model 了。
 - `pi update --extensions` 会污染你 current dir 的 pnpm-lock.yaml。不是，这玩意连作用域都不管的？
+- pi 和 opencode 一样都有一个问题：compact 以后就无法在 session 里看到 compact 之前的内容了，只能 export。感觉这点这些 agent 做得都不如 zcode。
 
 插件相关：
 
@@ -71,7 +96,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - `npm:pi-web-access` 这个也是狗屎，如果你的 pi 设置了 `"npmCommand": ["pnpm"]` 则这个插件根本启动不了。这个插件[早期还有 path traversal 安全问题](https://github.com/nicobailon/pi-web-access/security/advisories/GHSA-8phw-6qw6-xhq6)。
   - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起和致死量 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
 - pi-lens 会自动修改你的代码，自动执行 fmt + fix，但是很多时候我并不希望这种行为（比如 lsp 才不会管你的兼容性和 MSRV、PR 最小化原则；而且 rust clippy 的 auto fix 可不一定是无害的），该行为也会让 AI 困惑、怀疑人生。我用了一阵[被坑了](https://t.me/absxsgroup/11865)，于是就干掉了。
-- `npm:pi-auto-compact` 只会在模型与人类交互的时候才会触发 compact。如果模型自己一直在跑，是不会 compact 的。我的需求是要让模型自己在跑到一定量的时候 compact，所以还是放弃吧，不如直接设置 `~/.pi/agent/models-store.json` 的 contextWindow。
+- `npm:pi-auto-compact` 只会在模型与人类交互的时候才会触发 compact。如果模型自己一直在跑，是不会 compact 的。我的需求是要让模型自己在跑到一定量的时候 compact，所以还是直接设置 `~/.pi/agent/models.json` 去 override contextWindow 吧。
 
 ## [zcode](https://zcode.z.ai/cn)
 

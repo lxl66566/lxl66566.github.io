@@ -207,6 +207,10 @@ tag:
   Windows (Code) #5
   Windows (Code) #6
   ```
+- ssh 连我服务器遇到莫名其妙的报错：
+  ```
+  Error opening exec server for ssh-remote+lse: Error: Extension 'ms-vscode-remote.remote-ssh' CANNOT use API proposal: terminalRemoteResolver. Its package.json#enabledApiProposals-property declares: resolvers, tunnels, terminalDataWriteEvent, contribRemoteHelp, contribViewsRemote, telemetry but NOT terminalRemoteResolver.
+  ```
 
 #### 基于 vscode 的开发
 

@@ -60,6 +60,11 @@ export const projectGroups: ProjectGroup[] = [
         desc: '安全简单易用的单密码 Git 仓库加密方案',
       },
       {
+        name: 'zdu',
+        url: 'https://github.com/lxl66566/zdu',
+        desc: 'blazing fast 的 disk usage tool，UI 抄的 dust',
+      },
+      {
         name: 'youpipe',
         url: 'https://github.com/lxl66566/youpipe',
         desc: '高度性能优化的 CPU + IO workload pipeline',
