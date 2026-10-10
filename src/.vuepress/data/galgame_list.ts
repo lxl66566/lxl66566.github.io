@@ -58,6 +58,12 @@ const original_list: GalItemInputType[] = [
       start: "2026-08-09",
       end: "2026-10-06",
     },
+    score: {
+      story: 1.8,
+      visual: 7.7,
+      program: 8.4,
+      thrill: 0
+    }
   },
   {
     name: "KANADE",

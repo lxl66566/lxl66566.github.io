@@ -29,7 +29,26 @@ tag:
 
 - 全线通，但不追求全 cg
 - 会看攻略，探索并不是享受剧情的一环
-- [我的设置与习惯](#我的设置)
+
+::: details 我的设置
+
+在游玩过程中逐渐形成了这样一套设置 & 习惯...开新 gal 之后的首要任务就是设置。以下列出部分。
+
+- 语音
+  - 点击鼠标时不中断语音
+  - 不漏语音（前提：有意义的语句需要占比高于 40%）
+  - bgm 音量比默认降低，system 效果音 & system 语音皆关闭，语音播放时 bgm 音量设为常态 bgm 的 0.7 倍，其他音量设置均拉满。有时会调整角色音量以平衡。
+- 文本
+  - 文本显示速度 MAX，automode 速度 60%-90% 不等
+- 控制
+  - skip **与 ctrl** 仅跳过既读
+  - 选择支存档，有趣的语音存档（有收藏功能的则收藏），语音存档的 save 加锁
+  - auto，鼠标（单击，滚轮），键盘混用
+  - 取消大部分操作的确认提示
+  - 窗口模式下的最大化，16:9，若没有也会选择全屏等。
+- 坐姿：由于 galgame 一般都是横排，所以最好让身体中轴线与屏幕左侧对齐。我之前常年正坐打 galgame，导致[我的自然面朝向已经偏左了，是一个惨痛教训](https://t.me/withabsolutex/2292)。
+
+:::
 
 ### 分类
 
@@ -62,7 +81,7 @@ tag:
 
 首先给我开发的[语音加速器 _SPEED UP!_](../articles/speedup.md) 和[游戏启动器 _GalgameManager_](https://github.com/lxl66566/GalgameManager) 打个广告。
 
-- 源站（按推荐优先级）：[TG 频道](https://t.me/erogamecloud) | [失落小站](https://shinnku.com/) | [鲲 Galgame](https://www.kungal.com/galgame) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
+- 源站（按推荐优先级）：[我的资源频道](https://t.me/absolutexsresource) | [Visual Novel Channel (¿)](https://t.me/erogamecloud) 重生版 | [失落小站](https://shinnku.com/) | [鲲 Galgame](https://www.kungal.com/galgame) | [我的收藏夹](https://raindrop.io/lxl66566/nsfw-35096723)自己翻（
 - 论坛：建议专注游戏，而不是在分裂的社区寻找存在感
 - 模拟器：[kirikirioid2](https://github.com/zeas2/Kirikiroid2) | [Tyranor2](https://t.me/Tyranor)（20260823 update：[Tyranor 已死](https://t.me/Tyranor/16)，有事烧纸）
   - krkr 已经很久没有维护了；Tyranor2 可以运行 krkr 的游戏，因此可以考虑直接抛弃 krkr。
@@ -145,16 +164,19 @@ LunaTranslator 使用心得：
 
 我也忘了资源从哪来的，反正推到中间觉得不对劲，怎么 R18 内容都被挡住了。然后去找补丁，最后[重新打了一个包](https://t.me/absolutexsresource/108)。
 
+- 这部 galgame 给我的感觉又是，「快看是新来的吸血鬼耶我们来霸凌他吧」，怎么最近我推的 galgame 总是这股味，跟 RIDDLE JOKER 简直完全一致
 - 音量均衡仍然是一坨。我解包以后手动均衡了音量，结果还是一阵大一阵小，所以这货的音量是写死在代码里的。。
+- 女主全是自慰狂魔啊，我推三条线三个自慰狂魔，男主是什么挥发性春药吗？
+
 - 第一次问路那段，尬死我力
 - 想吃本岛蛋糕的话，不能叫代购吗
-- 这部 galgame 给我的感觉又是，「快看是新来的吸血鬼耶我们来霸凌他吧」，怎么最近我推的 galgame 总是这股味，跟 RIDDLE JOKER 简直完全一致
 - 一边严禁泄漏吸血鬼的情报，一边让人类和吸血鬼一起上课，这是想的哪一出？
 - 女主其实可以直接叫做 μ ~~（也可以叫做 五・月・蝿・い）~~
 - chapter 4.x 买货那段，大家明知道吸血鬼有各种奇奇怪怪的牛逼 plus 能力，结果搜身还是只搜武器？有点蠢比
 - 美羽线的剧情也实在不敢恭维。感觉是小孩子过家家剧情
   - 男主直接徒！手！接！导！弹！是不是柚子历代最强男主
 - 布良线最后的大混战真的没太看懂了，整个岛乱成一锅粥了
+- 为了你我变成狼人模样♪♪
 
 @@@ 次元凸破恋战姬
 
@@ -579,6 +601,8 @@ E17 剧终不揭晓、让玩家乱猜的东西实在是太多了，我觉得留�
   - key 的音量均衡可以说是根本没有，实在是太无语了，百花自白那一段语音根本听不见，然后男主又整天大喊大叫，大声小声太极端了。音量不均衡等于是白瞎了声优的表现。本作的声优配得其实还挺好的。
 
 @@@ CHAOSHEADNOAH
+
+CHAOS;HEAD NOAH 是 CHAOS;HEAD 的改良，还有剧情扩展，推荐游玩该改良版。
 
 本作感觉叫「科学」ADV 不太恰当，只能算伪科学，比艾佩理雅差了太多。wikipedia 说这玩意的「99%の科学」是有点想笑的，只能说期待系列续作表现。
 
@@ -2540,7 +2564,7 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 
 vndb 的图片，没有专门处理，随便看看吧。
 
-<GalExhibitionGrid :items='[{"text":"矛盾","alt":"水葬銀貨のイストリア","lnk":"https://vndb.org/v20471","src":"https://t.vndb.org/cv.t/98/116698.jpg"},{"text":"命运","alt":"ISLAND","lnk":"https://vndb.org/v18498","src":"https://t.vndb.org/cv.t/39/75939.jpg"},{"text":"苦痛","alt":"euphoria","lnk":"https://vndb.org/v6540","src":"https://t.vndb.org/cv.t/77/88077.jpg"},{"text":"幻梦","alt":"冥契的牧神节","lnk":"https://vndb.org/v29383","src":"https://t.vndb.org/cv.t/94/90194.jpg"},{"text":"意义","alt":"秽翼的尤斯蒂娅","lnk":"https://vndb.org/v3770","src":"https://t.vndb.org/cv.t/78/79678.jpg"}]'/>
+<GalExhibitionGrid :items='[{"text":"矛盾","alt":"水葬銀貨のイストリア","lnk":"https://vndb.org/v20471","src":"https://t.vndb.org/cv.t/98/116698.jpg"},{"text":"命运","alt":"ISLAND","lnk":"https://vndb.org/v18498","src":"https://t.vndb.org/cv.t/39/75939.jpg"},{"text":"苦痛","alt":"euphoria","lnk":"https://vndb.org/v6540","src":"https://t.vndb.org/cv.t/77/88077.jpg"},{"text":"幻梦","alt":"冥契的牧神节","lnk":"https://vndb.org/v29383","src":"https://t.vndb.org/cv.t/94/90194.jpg"},{"text":"意义","alt":"秽翼的尤斯蒂娅","lnk":"https://vndb.org/v3770","src":"https://t.vndb.org/cv.t/78/79678.jpg"},{"text":"恐惧","alt":"CHAOS;HEAD NOAH","lnk":"https://vndb.org/v22505","src":"https://t.vndb.org/cv.t/05/75805.jpg"}]'/>
 
 xx 之最：
 
@@ -2549,24 +2573,6 @@ xx 之最：
 - 最好的时穿作：_ISLAND_（_流景之海的艾佩理雅_ 的时穿推理虽然精彩，但是（剧透内容：）!!最后还是回归了缸中之脑的解释!! 因此不敌 _ISLAND_）
 - 最好的结尾：_秽翼的尤斯蒂娅_。我本人不太喜欢结尾硬做 happy end，而 _秽翼的尤斯蒂娅_ 结尾相对折中，情绪渲染到位的前提下也没有抛弃废萌群体，设计得还是不错的。
 - 最好的配音：_冥契的牧神节_。作品本身以戏剧为主题，非常考验配音技术，而声优发挥得也非常好，配音绝对是碾压级的水平。
-
-## 我的设置
-
-在游玩过程中逐渐形成了这样一套设置 & 习惯...开新 gal 之后的首要任务就是设置。以下列出部分。
-
-- 语音
-  - 点击鼠标时不中断语音
-  - 不漏语音（前提：有意义的语句需要占比高于 40%）
-  - bgm 音量比默认降低，system 效果音 & system 语音皆关闭，语音播放时 bgm 音量设为常态 bgm 的 0.7 倍，其他音量设置均拉满。有时会调整角色音量以平衡。
-- 文本
-  - 文本显示速度 MAX，automode 速度 60%-90% 不等
-- 控制
-  - skip **与 ctrl** 仅跳过既读
-  - 选择支存档，有趣的语音存档（有收藏功能的则收藏），语音存档的 save 加锁
-  - auto，鼠标（单击，滚轮），键盘混用
-  - 取消大部分操作的确认提示
-  - 窗口模式下的最大化，16:9，若没有也会选择全屏等。
-- 坐姿：由于 galgame 一般都是横排，所以最好让身体中轴线与屏幕左侧对齐。我之前常年正坐打 galgame，导致[我的自然面朝向已经偏左了，是一个惨痛教训](https://t.me/withabsolutex/2292)。
 
 ## 我的存档
 
