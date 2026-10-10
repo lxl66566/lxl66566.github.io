@@ -69,10 +69,11 @@ const siteConfig = defineSiteConfig({
   // Site-wide data for islands (project desc HTML), served via
   // virtual:absolute-press/site-data.
   onScan: siteScan,
-  // Large share card (og:image + twitter:card summary_large_image); the
-  // same legacy avatar doubles as the site-wide share image.
+  // Large share card (og:image + twitter:card summary_large_image). The
+  // dedicated compressed copy (156KB) keeps the 846KB logo.jpg original out
+  // of every share fetch.
   seo: {
-    image: '/logo.jpg',
+    image: '/logo-og.jpg',
     author: { name: 'lxl66566', url: 'https://github.com/lxl66566' },
     // /hide/ 是不列出的目录：不进 sitemap，robots 追加 Disallow
     exclude: ['/hide'],
@@ -80,9 +81,10 @@ const siteConfig = defineSiteConfig({
   favicon: '/favicon.ico',
   // Navbar options in the framework's single nav section.
   nav: {
-    // Legacy anime avatar (src/.vuepress/public/logo.jpg) as the navbar /
-    // drawer brand image (老站 navbar 左侧即此头像).
-    logo: '/logo.jpg',
+    // Legacy anime avatar as the navbar / drawer brand image (老站 navbar
+    // 左侧即此头像), served as a 256px AVIF (~25KB) instead of the 846KB
+    // logo.jpg original.
+    logo: '/avatar.avif',
     // Navbar wording decoupled from directory names + dropdown group layout,
     // mirroring the old navbar.ts (L3 杂项/爱好, M2 分组与顺序). Item paths
     // are extension-less and relative to their top-level directory;
@@ -160,6 +162,7 @@ const siteConfig = defineSiteConfig({
   // (directory indexes count as articles).
   profile: {
     name: '绝对值_x',
+    avatar: '/avatar.avif',
     link: '/gossip/author',
     exclude: ['/hide/'],
   },

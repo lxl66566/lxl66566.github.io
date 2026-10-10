@@ -35,7 +35,7 @@ export const featuredProjects: FeaturedProject[] = [
     url: 'https://github.com/lxl66566/GalgameManager',
     desc: 'Galgame 管理器，支持存档同步、插件系统、游玩时长统计等',
     stack: 'Rust (Tauri) · SolidJS',
-    img: 'https://github.com/lxl66566/GalgameManager/raw/master/assets/main.png',
+    img: '/images/hobbies/galgame/GalgameManager.png',
   },
   {
     name: 'AudioSpeedHack',

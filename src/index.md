@@ -1,6 +1,7 @@
 ---
 date: 2022-05-04
 icon: solid/house
+description: 绝对值_x 的个人博客：版块导向，编程、爱好记录、尝鲜与评价、学习笔记与随笔，各文章持续更新。
 ---
 
 # 绝对值\_x 的存在证明
@@ -65,4 +66,3 @@ icon: solid/house
 ## 我的项目
 
 <HomeProjects />
-

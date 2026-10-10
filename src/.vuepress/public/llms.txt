@@ -1,0 +1,39 @@
+# 绝对值_x 的博客
+
+> 版块导向的中文个人博客：编程、系统折腾、galgame/音游/读书等爱好、学习笔记与随笔、横评与暴论，各版块持续更新。robots.txt 对包括 AI 在内的所有爬虫全量开放，欢迎自由抓取与引用。
+
+## 站点导航
+
+- [首页](https://absx.pages.dev/): 使用指南与项目列表
+- [时间轴](https://absx.pages.dev/timeline/): 全部文章按时间倒序
+- [分类归档](https://absx.pages.dev/category/) 与 [标签归档](https://absx.pages.dev/tag/)
+- [RSS](https://absx.pages.dev/rss.xml)
+- [关于博客](https://absx.pages.dev/blog/): 站点结构、历史与迁移记录
+
+## 版块
+
+- [编程](https://absx.pages.dev/coding/): Python/Rust/C++/Java/Git 等语言与工具笔记
+- [我的文章](https://absx.pages.dev/articles/): Windows/Linux/浏览器等系统与软件折腾
+- [学习笔记](https://absx.pages.dev/learning/): 通信原理等课程笔记
+- [闲聊](https://absx.pages.dev/gossip/): 暴论、尝鲜体验与随笔
+- [随笔](https://absx.pages.dev/essay/): 按年归档的随笔
+- [galgame](https://absx.pages.dev/hobbies/galgame): galgame 游玩记录与感想
+- [软件汇总](https://absx.pages.dev/farraginous/recommend_packages) 与 [网址汇总](https://absx.pages.dev/farraginous/recommend_websites): 杂项推荐
+
+## 重要长文（按篇幅排序）
+
+- [galgame](https://absx.pages.dev/hobbies/galgame): 全站最大页面
+- [音游](https://absx.pages.dev/hobbies/rhythm_games)
+- [SPEED UP！与 galgame 解封包](https://absx.pages.dev/articles/speedup)
+- [暴论：xxx 有多难用](https://absx.pages.dev/gossip/fuckxxx)
+- [安装、配置与使用（NixOS 篇）](https://absx.pages.dev/articles/linux/nix)
+- [Python](https://absx.pages.dev/coding/python)
+- [装机](https://absx.pages.dev/gossip/pc_hardware)
+- [折腾 Vuepress](https://absx.pages.dev/blog/withvuepress2)
+- [Rust](https://absx.pages.dev/coding/Rust/)
+- [软件汇总](https://absx.pages.dev/farraginous/recommend_packages)
+- [Git](https://absx.pages.dev/coding/Git)
+- [Java](https://absx.pages.dev/coding/java)
+- [读书](https://absx.pages.dev/hobbies/books)
+- [crates 评价](https://absx.pages.dev/coding/Rust/crates)
+- [C++](https://absx.pages.dev/coding/Cpp)

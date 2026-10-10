@@ -63,8 +63,21 @@ const GROUP_ICONS: Record<string, (typeof faGamepad)['icon']> = {
   Garbage: faBoxArchive.icon,
 };
 
+/**
+ * Intrinsic sizes of featured screenshots: the width/height attrs let the
+ * browser reserve the aspect-ratio box before the image loads (CLS), and a
+ * size-less new screenshot simply degrades to today's behavior.
+ */
+const IMG_SIZE: Record<string, { width: number; height: number }> = {
+  '/images/hobbies/galgame/GalgameManager.png': {
+    width: 1284,
+    height: 712,
+  },
+};
+
 /** Featured card: whole card links to the repo. */
 function FeaturedCard(props: { project: FeaturedProject }): JSX.Element {
+  const size = props.project.img ? IMG_SIZE[props.project.img] : undefined;
   return (
     <a
       class="abs-projects__featured"
@@ -78,6 +91,8 @@ function FeaturedCard(props: { project: FeaturedProject }): JSX.Element {
           src={props.project.img}
           alt={`${props.project.name} 截图`}
           loading="lazy"
+          width={size?.width}
+          height={size?.height}
         />
       )}
       <span class="abs-projects__feat-name">{props.project.name}</span>
@@ -87,20 +102,33 @@ function FeaturedCard(props: { project: FeaturedProject }): JSX.Element {
   );
 }
 
-/** Shelf mini card: name links the repo, desc clamps to two lines. */
+/** Shelf mini card: name links the repo, desc clamps to two lines. WIP
+ * entries without a url render a non-link card (an href-less <a> fails the
+ * Lighthouse crawlable-links audit). */
 function MiniCard(props: { project: Project }): JSX.Element {
+  const body = (
+    <>
+      <span class="abs-projects__name">{props.project.name}</span>
+      <DescSpan desc={props.project.desc} class="abs-projects__desc" />
+    </>
+  );
   return (
     <li>
-      <a
-        class="abs-projects__card"
-        href={props.project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={descText(props.project.desc)}
-      >
-        <span class="abs-projects__name">{props.project.name}</span>
-        <DescSpan desc={props.project.desc} class="abs-projects__desc" />
-      </a>
+      {props.project.url ? (
+        <a
+          class="abs-projects__card"
+          href={props.project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={descText(props.project.desc)}
+        >
+          {body}
+        </a>
+      ) : (
+        <div class="abs-projects__card" title={descText(props.project.desc)}>
+          {body}
+        </div>
+      )}
     </li>
   );
 }
