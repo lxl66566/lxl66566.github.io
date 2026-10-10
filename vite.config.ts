@@ -66,8 +66,8 @@ const siteConfig = defineSiteConfig({
   // FA free glyph under its <pack>/<name> key and subsets the per-page
   // payload.
   iconProvider: 'fontawesome',
-  // Site-wide data for islands (homepage taxonomy + project desc HTML),
-  // served via virtual:absolute-press/site-data.
+  // Site-wide data for islands (project desc HTML), served via
+  // virtual:absolute-press/site-data.
   onScan: siteScan,
   // Large share card (og:image + twitter:card summary_large_image); the
   // same legacy avatar doubles as the site-wide share image.
@@ -126,9 +126,6 @@ const siteConfig = defineSiteConfig({
       articles: { items: articleNavItems },
       learning: { items: learningNavItems },
       gossip: { items: gossipNavItems },
-      // 时间轴 top-level dir label (the generated panel needs no groups;
-      // unlisted in `order`, so the entry appends after 博客).
-      timeline: { label: '时间轴' },
     },
     // Top-level navbar order mirrors the old navbar.ts entries:
     // 编程 爱好 杂项 文章 学习 闲聊 随笔 博客.
@@ -158,12 +155,12 @@ const siteConfig = defineSiteConfig({
   home: { feed: false },
   // Author profile card: the framework injects it as static HTML above the
   // home body (TOC lane skin at >=1280 in styles/site.css) and renders the
-  // same data in the mobile drawer. The article count shares the timeline's
-  // set: both exclude /hide/ (directory indexes count as articles).
+  // same data in the mobile drawer. The article count links to the built-in
+  // /timeline/ page by default; both share the article set minus /hide/
+  // (directory indexes count as articles).
   profile: {
     name: '绝对值_x',
     link: '/gossip/author',
-    articlesLink: '/timeline/',
     exclude: ['/hide/'],
   },
   // Footer credit (left side, desktop footer + mobile drawer); the theme
@@ -234,9 +231,6 @@ const siteConfig = defineSiteConfig({
     // Homepage project shelf (featured cards + foldable group rows), see
     // islands/HomeProjects.tsx.
     HomeProjects: 'islands/HomeProjects.tsx',
-    // Site-wide archive on /timeline/ (year-grouped article list), see
-    // islands/Timeline.tsx.
-    Timeline: 'islands/Timeline.tsx',
     Dated: 'islands/Dated.tsx',
     TelegramLink: 'islands/TelegramLink.tsx',
     RSSLink: 'islands/RSSLink.tsx',
