@@ -18,7 +18,7 @@
 }
 
 /* Monochrome svg images (mermaid exports etc.) read better inverted. */
-html[data-theme='dark'] img[src$='.svg'] {
+html[data-theme="dark"] img[src$=".svg"] {
   filter: invert(1);
 }
 
@@ -68,31 +68,31 @@ html[data-theme='dark'] img[src$='.svg'] {
   border-radius: 0.5rem;
 }
 
-.abs-badge[data-type='tip'] {
+.abs-badge[data-type="tip"] {
   background-color: var(--c-accent);
 }
 
-.abs-badge[data-type='warning'] {
+.abs-badge[data-type="warning"] {
   background-color: #e0a800;
 }
 
-.abs-badge[data-type='danger'] {
+.abs-badge[data-type="danger"] {
   background-color: #d5323c;
 }
 
-.abs-badge[data-type='info'] {
+.abs-badge[data-type="info"] {
   background-color: #2b8fd2;
 }
 
-html[data-theme='dark'] .abs-badge[data-type='warning'] {
+html[data-theme="dark"] .abs-badge[data-type="warning"] {
   background-color: #b28700;
 }
 
-html[data-theme='dark'] .abs-badge[data-type='danger'] {
+html[data-theme="dark"] .abs-badge[data-type="danger"] {
   background-color: #a63c44;
 }
 
-html[data-theme='dark'] .abs-badge[data-type='info'] {
+html[data-theme="dark"] .abs-badge[data-type="info"] {
   background-color: #2f6da8;
 }
 
@@ -209,7 +209,7 @@ details.abs-dtlslong:not([open]) > summary {
  * + alias) render identically.
  * ------------------------------------------------------------------------ */
 
-[data-ap-island='SubWork'] {
+[data-ap-island="SubWork"] {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -220,12 +220,12 @@ details.abs-dtlslong:not([open]) > summary {
 
 /* Order-only labels are self-closing: no static children until hydration
  * mounts the chip, so hide the otherwise bare accent bar. */
-[data-ap-island='SubWork']:empty {
+[data-ap-island="SubWork"]:empty {
   display: none;
 }
 
-[data-ap-island='SubWork']::before {
-  content: '';
+[data-ap-island="SubWork"]::before {
+  content: "";
   flex: none;
   width: 3px;
   height: 0.9em;
@@ -234,7 +234,7 @@ details.abs-dtlslong:not([open]) > summary {
 }
 
 /* Title children arrive block-rendered (`<p>`); neutralize inside the row. */
-[data-ap-island='SubWork'] > p,
+[data-ap-island="SubWork"] > p,
 .ap-subwork__title > p {
   display: inline;
   margin: 0;
@@ -259,7 +259,7 @@ details.abs-dtlslong:not([open]) > summary {
 }
 
 .ap-subwork__alias::before {
-  content: '·';
+  content: "·";
   margin-right: 0.45rem;
 }
 
@@ -281,7 +281,7 @@ details.abs-dtlslong:not([open]) > summary {
 
 .ap-nav-index-row > a::after,
 .ap-nav-index-row > button::after {
-  content: '总览';
+  content: "总览";
   margin-left: auto;
   padding: 0 0.45rem;
   font-size: 0.6875rem;
@@ -355,9 +355,7 @@ details.abs-dtlslong:not([open]) > summary {
 
 .abs-projects__thumb {
   width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
   margin-bottom: 0.4rem;
   border: 1px solid var(--c-border);
   border-radius: 0.5rem;
