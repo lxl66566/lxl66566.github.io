@@ -159,6 +159,7 @@ LunaTranslator 使用心得：
 - 桶子这个外号也太准确了，~~因为说话就像是闷在桶里一样~~。另外男主是不是该叫 _哇哇院凶真_（）
 - lifter（离子飞行器）的视频确实到处都能找到，但是作用原因也非常清晰，绝非“未知”
 - 萌郁能不能别一直发邮件了。圆桌会议那段我得一直拿手机出来看这货在说啥，然后流程又长，动画又多。。
+- 最后研究所做出来的 time leap 给我看傻了，!!又是黑洞压缩信息又是高速传输又是意识提取!!，这太扯了
 
 @@@ DRACURIOT
 
@@ -2555,6 +2556,7 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - 王様恋愛
 - サヤガタリ-妖刀の約束-
 - 十三機兵防衛圈（等待移植）
+- FORTUNE×WORLD～僕らがゲームを作る理由～
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 
