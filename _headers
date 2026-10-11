@@ -4,5 +4,5 @@
 /assets/katex/*
   Cache-Control: public, max-age=86400
 
-/
-  Link: </assets/entry-B8UchTVv.js>; rel=modulepreload
+/*
+  Link: </assets/entry-BS0_rMDX.js>; rel=modulepreload, </assets/entry-fIIcLchS.css>; rel=preload; as=style, </assets/chrome-7d320055.js>; rel=modulepreload
