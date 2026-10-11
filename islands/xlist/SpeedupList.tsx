@@ -45,5 +45,5 @@ export default function SpeedupList(props: IslandProps): SolidElement {
       'SpeedupList',
     ),
   );
-  return <XList items={items()} columns={COLUMNS} />;
+  return <XList items={items()} columns={COLUMNS} sortable={false} />;
 }

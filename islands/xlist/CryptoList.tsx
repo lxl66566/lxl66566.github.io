@@ -57,5 +57,7 @@ export default function CryptoList(props: IslandProps): SolidElement {
       'CryptoList',
     ),
   );
-  return <XList items={items()} columns={COLUMNS} inlineCount={1} />;
+  return (
+    <XList items={items()} columns={COLUMNS} inlineCount={1} sortable={false} />
+  );
 }

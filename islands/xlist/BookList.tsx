@@ -69,5 +69,7 @@ export default function BookList(props: IslandProps): SolidElement {
       'BookList',
     ),
   );
-  return <XList items={items()} columns={COLUMNS} inlineCount={2} />;
+  return (
+    <XList items={items()} columns={COLUMNS} inlineCount={2} sortable={false} />
+  );
 }

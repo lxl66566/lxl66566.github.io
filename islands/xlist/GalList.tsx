@@ -98,6 +98,10 @@ export default function GalList(props: IslandProps): SolidElement {
       columns={COLUMNS}
       inlineCount={1}
       filters={[STRICT_FILTER]}
+      // Sortable headers: title + the four score columns (sortValue numeric).
+      // 时长/游玩区间/备注 keep no triangle; the initial row order stays
+      // defaultGalOrder until a header is clicked.
+      sortable={['title', 2, 3, 4, 5]}
     />
   );
 }

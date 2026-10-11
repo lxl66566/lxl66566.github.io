@@ -41,5 +41,5 @@ export default function AnimeList(props: IslandProps): SolidElement {
       'AnimeList',
     ),
   );
-  return <XList items={items()} columns={COLUMNS} />;
+  return <XList items={items()} columns={COLUMNS} sortable={false} />;
 }

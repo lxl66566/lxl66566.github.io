@@ -54,5 +54,5 @@ export default function JobList(props: JobListProps): SolidElement {
       'JobList',
     );
   });
-  return <XList items={items()} columns={COLUMNS} />;
+  return <XList items={items()} columns={COLUMNS} sortable={false} />;
 }
