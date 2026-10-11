@@ -363,7 +363,7 @@ FAVORITE 的 .bin 格式比较简单，也有工具 [Leticiel/fvp-tools](https:/
 
 @@@ ypf
 
-### 首次尝试：失败
+<SubWork>首次尝试：失败</SubWork>
 
 尝试解包/封包一个 YU-RIS 引擎的游戏，这玩意也是个老牌引擎了。
 
@@ -464,7 +464,7 @@ if __name__ == "__main__":
 
 所以，要么再等几年等 YU-RIS 发新包，要么就直接 quit 下桌不玩。
 
-### update1
+<SubWork>update1</SubWork>
 
 下载猫忍之心，也是 ypf 引擎，打印出版本也是 500，心已经凉了一半。不死心，再次尝试封 ypf，找到一篇 [flamecho 的文章](https://www.flamecho.top/posts/47.html)介绍了两个 ypf 工具，其中一个是 YPF_Manager_Tool，源码貌似是 [Xorboth/YPF-Manager](https://github.com/Xorboth/YPF-Manager) 的。抱着一丝微弱的希望尝试了一下，没想到啊没想到，它居然真的能封出可用的包！！！千古（6 个月）难题迎刃而解，还是有点激动的。
 
@@ -609,7 +609,7 @@ PS. 由于 const for audio pack 部分还有一些内嵌的数字，又让 AI �
 
 @@@ silky
 
-### きまぐれテンプテーション
+<SubWork>きまぐれテンプテーション</SubWork>
 
 - GARbro：可解不可封
 - [TesterTesterov/SilkyArcTool](https://github.com/TesterTesterov/SilkyArcTool)：首先我用 GUI 选文件（夹）无效，报 _ValueError: path is on mount 'Z:', start on mount 'C:'_。手动输入路径，可解可封，打开游戏不崩溃，但是播放语音时无声。还说 _Tested on Kimagure Temptation 18+ Patch_……我信你个鬼。
@@ -621,7 +621,7 @@ PS. 由于 const for audio pack 部分还有一些内嵌的数字，又让 AI �
 
 不过注意，pack 语音时不能用 compress flag，否则在对应语音会 `return error[ogg_sync_pageout()]`。并且语音 pack 产物无法在 GARbro 里打开。
 
-### Butterfly Seeker
+<SubWork>Butterfly Seeker</SubWork>
 
 解 arc 也是非常顺利，加速均衡一气呵成，结果封包回去进入游戏发现并不能播放语音。
 
@@ -631,7 +631,7 @@ PS. 由于 const for audio pack 部分还有一些内嵌的数字，又让 AI �
 
 所以 Silky’s engine 对 header 还是蛮宽容的，即使值偏差了 4 也可以正常进游戏，导致玩了好久都没发现这个 bug，吐了。
 
-### ふゆから、くるる。
+<SubWork>ふゆから、くるる。</SubWork>
 
 已经研究出 [dll wrapper v1](#dll-wrapper-v1) 了，本来已经没有必要解封包；但是这一作的语音音量非常不均衡，只好再拆开进行一次 loudness normalize。好在我写的工具没有再出问题，一遍过。
 
@@ -683,13 +683,13 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 
 `.int` 类型的封包。直接放到 GARbro 里还需要给出压缩文件参数，密码 + 密钥，可以通过 exe 路径提取。
 
-### 白昼夢の青写真
+<SubWork>白昼夢の青写真</SubWork>
 
 我尝试使用原版 `白昼夢の青写真.exe` 提取参数，失败；使用 `cs2.exe` 或 `cs2_cn.exe` 提取成功，密钥为 `D9A3FB64`。成功解包后，前 105 个文件是 `.ogg`，后面有各种后缀的文件，例如 phh 等，但是二进制都以 `OggS` 开头，所以文件名像是还套了一层凯撒密码。这倒是无所谓，我的音量均衡是靠抓二进制的 header 判断文件类型的，而加速也可以自定义各种后缀，要匹配上都是没问题的。
 
 问题出在 GARbro 没法封包 int 类型存档：_尚不支持创建加密压缩文件。_ 因此最好还是另寻出路。
 
-#### [CatSystem2-Simple-Translating-Tools](https://github.com/Wolverator/CatSystem2-Simple-Translating-Tools)
+<SubWork>[CatSystem2-Simple-Translating-Tools](https://github.com/Wolverator/CatSystem2-Simple-Translating-Tools)</SubWork>
 
 这玩意属于是把饭喂到嘴边，专为翻译人准备的，python 脚本解包也只是把文本提取出来，中间产物全部删掉，或者不解（pcm_xxx.int 都跳过了）。但是我不是为了翻译，因此还是需要读源码。
 
@@ -697,7 +697,7 @@ java -jar LCSEPackageUtility-rv4.jar --patch -l SoundPackSEVo.lst --package Soun
 
 但是这玩意的封包用了一个 `mc.exe`，这玩意称为 Message Compiler for CatSystem2，一眼就不是用来正常打包的，它甚至都没有接受密钥。因此现在还需要另行寻找封包方法。
 
-#### [TriggersTools.CatSystem2](https://github.com/trigger-segfault/TriggersTools.CatSystem2)
+<SubWork>[TriggersTools.CatSystem2](https://github.com/trigger-segfault/TriggersTools.CatSystem2)</SubWork>
 
 看起来像是一个资源统合站，并且有一个比较详细的 wiki，介绍了 [MakeInt.exe](https://github.com/trigger-segfault/TriggersTools.CatSystem2/wiki/Tool:-MakeInt.exe) 工具和 [KIF Archive（也就是 .int）封包的格式](https://github.com/trigger-segfault/TriggersTools.CatSystem2/wiki/KIF-Archive)。KIF Archive 的介绍等于是个兜底，即使最后没找到现成工具也大致可以照猫画虎搞一个出来。
 
@@ -808,7 +808,7 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 > 后面的 [ISLAND](#island) 语音加速实践中陈述了一个更简单的封包方法。
 
-### ISLAND
+<SubWork>ISLAND</SubWork>
 
 同样一套流程，但是 ISLAND 的 `pcm_?.int` 和其中的 ogg 没有对应关系，所以还是改改程序，把每个 pcm 封包的音频都隔离开来比较好。
 
@@ -823,7 +823,7 @@ $makeint output/pcm_tag.int "$extracted/*.tag"
 
 ---
 
-### FilePackVer3.0
+<SubWork>FilePackVer3.0</SubWork>
 
 包含的游戏：
 
@@ -844,7 +844,7 @@ imhex 打开拉到末尾发现格式是 `FilePackVer3.0`。通过这个搜出关
 
 为了排除 LLM 移除 mmx 指令集把代码逻辑搞坏的影响，我又去网上找编译好的二进制。在 [asmodean-tools](https://github.com/hiroshil/asmodean-tools/blob/main/exfp3/exfp3_v3.exe) archive 里找到了预编译的 `exfp3_v3.exe`，测试后可用。于是终于可以愉快加速了。
 
-#### 美少女万华镜 3
+<SubWork>美少女万华镜 3</SubWork>
 
 _美少女万华镜 3_ 也是 FilePackVer3.0，然而 `exfp3_v3.exe` 解它的时候失败了，`Could not open ??剀犰殂鞍氨珑 (Invalid argument)`，更换日文环境也不行（日文环境下报错乱码不同，很可能是编码问题，但是 chcp 无法解决，跟当前终端代码页无关）。从官方 iso 里搞出来的 data2.pack 和 fkey 也是一样的报错。
 
@@ -856,11 +856,11 @@ _美少女万华镜 3_ 也是 FilePackVer3.0，然而 `exfp3_v3.exe` 解它的�
 
 [`exfp3_update_v3.1.4.7z` 备用下载地址](https://t.me/absolutexsresource/82)
 
-### FilePackVer3.1
+<SubWork>FilePackVer3.1</SubWork>
 
 这个就简单了，GARbro 可以直接解出音频来，上述的 hz86/filepack 估计也可以用吧，懒的试了。
 
-#### 美少女万华镜 5
+<SubWork>美少女万华镜 5</SubWork>
 
 不知道为什么，5 不能免封包读取音频，会弹报错。
 
@@ -877,7 +877,7 @@ thread:system
 
 但是 FilePackVer3.1 工具多，直接封回去就好了。
 
-#### 美少女万華鏡異聞 雪おんな
+<SubWork>美少女万華鏡異聞 雪おんな</SubWork>
 
 这一作封包也是 FilePackVer3.1，但是 GARbro 和 hz86/filepack 是解不了的，估计又是哪里做了小改动。挺莫名其妙的，为啥网上某些博客搜出来都说 GARbro 可用。。
 
@@ -922,7 +922,7 @@ AIR 的音频没有封包，是 wav 格式，mpv 可以正常播放，见到的�
 
 感慨一下，在那个音频编码没有统一标准，mp3 要收费的时代，搞点游戏音频确实不太容易。虽然 KOE 这玩意吧看起来就跟 mp3 差不多，有可能就是为了避免专利费而进行的小改造……
 
-### 其他问题
+<SubWork>其他问题</SubWork>
 
 1. 这样进行加速后的某些音频在开始时可能会有一个爆音……因为我使用 ffmpeg 硬转 wav，刚开始还以为有一些 metadata 也被当成音频数据放进去了。多听一下，发现应该是一小段音频被切掉了……那这也没啥办法，就这样吧，又不是不能听。
 2. 因为程序 bug，无法调节各个部分的音量。于是我想着能不能直接用 loudness-normalize 调整其 LUFS，结果发现调整后的音频再进游戏就无法播放了…… rust hound 编码器也是个 jb。我又懒得再多过一遍 ffmpeg 重编码。然后想到，如果我不把人声调大，那我把 BGM 调小不就行了。BGM 里倒还真都是正常的 WAV，直接
@@ -1056,7 +1056,7 @@ GARbro 可解不可封，因此还是得想别的办法。imhex 打开一看，�
 
 然后懒得搞了，《虹彩都市》这游戏本来也是小短篇，没有太多折腾的必要，AudioSpeedHack 一把梭就完了。
 
-### 后续
+<SubWork>后续</SubWork>
 
 SiglusEngine 的游戏实在是有点多，而且好多游戏音量均衡非常垃圾，还是得花点时间研究下。
 

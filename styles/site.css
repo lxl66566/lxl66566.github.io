@@ -617,6 +617,69 @@ td.ap-xlist__title[id] {
 }
 
 /* --------------------------------------------------------------------------
+ * SubWork island (`<SubWork order="6">雪おんな</SubWork>`): sub-work label
+ * for entry-list slot bodies, replacing in-body `###` headings — real
+ * headings are Algolia's record slicers and must stay out of slot bodies.
+ * Styling sits on the [data-ap-island] container itself so the no-JS static
+ * children (a bare <p> title) and the hydrated fragment (order chip + title
+ * + alias) render identically.
+ * ------------------------------------------------------------------------ */
+
+[data-ap-island='SubWork'] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 1rem 0 0.4rem;
+  font-weight: 600;
+}
+
+/* Order-only labels are self-closing: no static children until hydration
+ * mounts the chip, so hide the otherwise bare accent bar. */
+[data-ap-island='SubWork']:empty {
+  display: none;
+}
+
+[data-ap-island='SubWork']::before {
+  content: '';
+  flex: none;
+  width: 3px;
+  height: 0.9em;
+  border-radius: 1.5px;
+  background: var(--c-accent);
+}
+
+/* Title children arrive block-rendered (`<p>`); neutralize inside the row. */
+[data-ap-island='SubWork'] > p,
+.ap-subwork__title > p {
+  display: inline;
+  margin: 0;
+}
+
+.ap-subwork__order {
+  flex: none;
+  padding: 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--c-accent);
+  background: color-mix(in srgb, var(--c-accent) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--c-accent) 40%, transparent);
+  border-radius: 9999px;
+}
+
+.ap-subwork__alias {
+  font-weight: 400;
+  font-size: 0.8em;
+  color: var(--c-text-2);
+}
+
+.ap-subwork__alias::before {
+  content: '·';
+  margin-right: 0.45rem;
+}
+
+/* --------------------------------------------------------------------------
  * Navbar panel overview row (板块总览行): the framework marks the panel's
  * leading row (generated for top-level folders, synthesized for nested
  * index-linked folders) with li.ap-nav-index-row (NavItem.index). The

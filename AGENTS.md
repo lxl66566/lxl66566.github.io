@@ -24,6 +24,7 @@ absolute-press 框架迁移已完成：构建、主题与渲染全部来自 abso
 
 - markdown 内容迁移/改写遵循 docs/conversion-spec.md（迁移期一次性脚本与历史记录文档已清理，见该文档头部说明）
 - 列表页（galgame/books/anime/job/money/speedup）用站点 xlist island：TS 数据模块是 meta 列唯一数据源，markdown 只留 `@@@ <slot-key>` 插槽正文；增改条目两侧同步改，改完跑 `node utils/xlist-sync.mjs` 校验（详见 conversion-spec §9）
+- 插槽正文内禁止 `#` 标题（Algolia 按标题层级切片，插槽内标题会串进后续条目搜索结果的面包屑）；系列分部/小节用 `<SubWork>` island（children=标题，`order`/`alias` props，见 conversion-spec §9.3）
 - island 注册与 frontmatter `icon` 一律用 FA 规范名全称 key（如 `solid/code`、`brands/telegram`、`regular/snowflake`）；站点配置 `iconProvider: 'fontawesome'` 注册全量 FA free 字形（`<pack>/<name>` key → 内联 svg），框架据此校验，拼错或非规范名的 key（如旧别名 `solid/search`，规范名是 `solid/magnifying-glass`）直接构建失败
 - 框架内置 island（ExpandableList/PasswordGate 等）无 `locale` prop，UI 文案按页面 `<html lang>` 前缀解析（`en-US` → 英文，未注册语言回退中文）；站点级 chrome 文案同理由各 locale 的 lang 决定
 - 部署走 .github/workflows/deploy.yml

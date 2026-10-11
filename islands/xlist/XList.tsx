@@ -6,10 +6,10 @@ import { hydrateIslands } from 'absolute-press/client';
  * `ap-xlist__*` DOM contract and the styles ported into styles/site.css.
  *
  * Row bodies come from the build-time entry-list pipeline (`@@@` slot
- * bodies); after any filter/sort rebuild, nested islands inside bodies are
- * re-hydrated — same mechanism as the framework's ExpandableList.
+ * bodies); nested islands inside a body are hydrated by that body's own ref
+ * callback (initial mount and every filter/sort rebuild alike).
  */
-import { createEffect, createMemo, createSignal, For, Show } from 'solid-js';
+import { createMemo, createSignal, For, Show } from 'solid-js';
 import type { Element as SolidElement } from 'solid-js';
 
 import { Fold } from '../pieces';
@@ -266,23 +266,21 @@ export function XList(props: XListProps): SolidElement {
     };
   };
 
-  let rootRef: HTMLDivElement | undefined;
-  // Rows rebuilt by the <For> (filter/sort re-entry) carry fresh island
-  // placeholders; re-hydrate once the DOM settles (framework parity).
-  createEffect(
-    () =>
-      filtered()
-        .map(entry => entry.item.key)
-        .join(','),
-    () => {
-      queueMicrotask(() => {
-        if (rootRef) hydrateIslands(rootRef);
-      });
-    },
-  );
-
   return (
-    <div class="ap-xlist" ref={rootRef}>
+    <div
+      class="ap-xlist"
+      ref={el => {
+        // Slot bodies carry island placeholders (`<SubWork>`, `ZoomedImg`,
+        // ...). Solid applies dynamic innerHTML in a scheduler flush after
+        // the ref fires, and solid 2 effects skip the initial run, so neither
+        // a ref microtask nor a createEffect pass can time this; watch for
+        // the placeholders actually appearing instead. hydrateIslands'
+        // mounted marker keeps re-runs idempotent, so every mutation batch —
+        // initial mount, filter/sort rebuilds, HMR — converges by itself.
+        const mo = new MutationObserver(() => hydrateIslands(el));
+        mo.observe(el, { childList: true, subtree: true });
+      }}
+    >
       <div class="ap-xlist__toolbar">
         <Show when={props.searchable ?? true}>
           <input

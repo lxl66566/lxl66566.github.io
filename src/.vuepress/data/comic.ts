@@ -1221,5 +1221,6 @@ export default [
   { id: "676839", aScore: 6.7, bScore: 9, info: "#明日方舟 #loli #体检 #兽耳 #天然", bak: "https://telegra.ph/邪惡明太子邪惡明太子-小鈴蘭的特別體檢-08-25-2" },
   { id: "679507", aScore: 8.4, bScore: 7.7, info: "#蔚蓝档案 #露出 #公厕 #兽耳 #项圈 #调教 #loli", bak: "https://telegra.ph/EASY-MODE-HEROS-あなくろ-先生私にもっとセクハラして-ブルーアーカイブ-中国翻訳-DL版-08-29" },
   { id: "678024", aScore: 10.2, bScore: 8.9, info: "#兽耳 #正太 #堕天计划 堕天計画 ～孤独を秘めた天使長編～", bak: "https://telegra.ph/234ド-イチリ-堕天計画-孤独を秘めた天使長編-中国翻訳-DL版-08-30-4" },
+  { id: "678462", aScore: 7.5, bScore: 8.7, info: "#泳装 #强制性交 #4P #背叛", bak: "https://telegra.ph/%E3%83%9F%E3%83%8A%E3%82%AB%E3%83%9F%E7%90%86%E4%B9%85-%E5%A4%A7%E5%A5%BD%E3%81%8D%E3%81%A0%E3%81%A3%E3%81%9F%E3%81%8A%E5%BE%93%E5%85%84%E3%81%A1%E3%82%83%E3%82%93-COMIC-LOE-VOL24-noir-4-%E4%B8%AD%E5%9B%BD%E7%BF%BB%E8%A8%B3-08-31" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

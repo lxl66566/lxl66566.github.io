@@ -469,3 +469,18 @@ node utils/xlist-sync.mjs                # 应报 all pages in sync（383 slots�
 pnpm build && node utils/xlist-e2e.mjs   # 水合/搜索/排序/展开 e2e（截图落 dist-shots/，勿提交）
 ```
 
+### 9.3 插槽正文内的分部小节：`<SubWork>`
+
+插槽正文禁止任何 `#` 标题：Algolia 按标题层级切片记录，插槽内的真实标题会成为其后所有条目（含各条目的 h6 锚点记录）的面包屑祖先，搜索结果串台（如搜「缘之空」面包屑混入无关的「LOVE+PLUS」）。系列分部/小节改用 `SubWork` island（`islands/SubWork.tsx`，galgame/anime/speedup 三页已迁移）：
+
+```markdown
+<SubWork order="1" />
+<SubWork order="6">雪おんな</SubWork>
+<SubWork alias="ラブプラス">LOVE+PLUS</SubWork>
+```
+
+- children = 标题（行内 markdown；静态 HTML 保留其文本，Algolia 与 xlist 客户端搜索都按所属条目正文命中）
+- `order`：纯数字渲染为「第 N 部」chip，其他字符串原样渲染（`S2` / `FD` / `剧场版` 等）；`order="2"` 与 `:order="2"` 两种写法都接受
+- `alias`：弱化显示的别名后缀，仅作展示、不进搜索文本；需要可搜的别名直接写进正文
+- 样式在 styles/site.css 的 `[data-ap-island='SubWork']`，无 JS 静态态与水合后共用同一外观
+

@@ -235,6 +235,10 @@ const siteConfig = defineSiteConfig({
     // islands/HomeProjects.tsx.
     HomeProjects: 'islands/HomeProjects.tsx',
     Dated: 'islands/Dated.tsx',
+    // Sub-work labels inside `@@@` slot bodies: entry bodies must not use
+    // real headings (Algolia slices records by headings; one in-body heading
+    // hijacks the breadcrumb of every later entry).
+    SubWork: 'islands/SubWork.tsx',
     TelegramLink: 'islands/TelegramLink.tsx',
     RSSLink: 'islands/RSSLink.tsx',
     Reciter: 'islands/Reciter.tsx',
@@ -269,6 +273,14 @@ export default defineConfig({
   build: {
     target: 'esnext',
     outDir: 'dist',
+  },
+  // absolute-press 以 workspace 源码消费，但 vite 的依赖扫描仍会把它预打包
+  // （'absolute-press/client' 子路径导入被自动发现）。那会让 dev 里出现第二
+  // 份客户端运行时实例：entry 在源码实例上 registerIslands()，站点 island
+  // （xlist 插槽体里重水合 <SubWork> 等）调用的却是预打包副本，其 island
+  // registry 恒为空，所有水合静默跳过。排除预打包、走源码单实例。
+  optimizeDeps: {
+    exclude: ['absolute-press'],
   },
   // Legacy vuepress public assets (images/charts/favicon/logo) stay in place.
   publicDir: 'src/.vuepress/public',
