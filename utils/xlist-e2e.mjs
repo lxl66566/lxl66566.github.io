@@ -19,7 +19,7 @@ import { fileURLToPath } from 'node:url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
 const SHOTS = path.join(ROOT, 'dist-shots');
-const FRAMEWORK_PKG = 'C:/programs/typescript/absolute/package.json';
+const FRAMEWORK_PKG = 'C:/programs/me/absolute-press/package.json';
 
 /* -- static server ---------------------------------------------------------- */
 
@@ -82,15 +82,15 @@ const PAGES = [
   {
     name: 'galgame',
     url: '/hobbies/galgame.html',
-    rows: 183,
+    rows: 184,
     expect: async page => {
-      await xlistChecks(page, 'galgame', 183);
+      await xlistChecks(page, 'galgame', 184);
       // Search narrows the table; count label follows.
       await page.fill('.ap-xlist__search', 'GINKA');
       await page.waitForTimeout(150);
       await rowsAre(page, 1, 'galgame search GINKA');
       const label = await page.textContent('.ap-xlist__count');
-      if (label.trim() !== '1 / 183 条') {
+      if (label.trim() !== '1 / 184 条') {
         issues.push(`galgame: count label after search is "${label.trim()}"`);
       }
       await shot(page, 'galgame-search');
@@ -124,11 +124,11 @@ const PAGES = [
         await page.click('.ap-xlist__filter');
         await page.waitForTimeout(150);
         const strictRows = await page.locator('.ap-xlist__row').count();
-        if (strictRows <= 0 || strictRows >= 183) {
+        if (strictRows <= 0 || strictRows >= 184) {
           issues.push(`galgame: strict filter left ${strictRows} rows`);
         }
         const strictLabel = await page.textContent('.ap-xlist__count');
-        if (strictLabel.trim() !== `${strictRows} / 183 条`) {
+        if (strictLabel.trim() !== `${strictRows} / 184 条`) {
           issues.push(
             `galgame: count label under strict filter is "${strictLabel.trim()}"`,
           );
@@ -146,7 +146,7 @@ const PAGES = [
         await shot(page, 'galgame-strict');
         await page.click('.ap-xlist__filter');
         await page.waitForTimeout(150);
-        await rowsAre(page, 183, 'galgame after unchecking strict filter');
+        await rowsAre(page, 184, 'galgame after unchecking strict filter');
       }
     },
   },
@@ -426,6 +426,9 @@ for (const spec of PAGES) {
     // Resource-load failures are judged by the response listener (with URL);
     // the bare console line adds nothing.
     if (msg.text().startsWith('Failed to load resource')) return;
+    // Giscus's "Discussion not found" is the embed's benign state for pages
+    // whose discussion thread has not been created yet (offline run).
+    if (msg.text().includes('[giscus] Discussion not found')) return;
     consoleIssues.push(`${msg.type()}: ${msg.text()}`);
   });
   page.on('pageerror', err => consoleIssues.push(`pageerror: ${err.message}`));

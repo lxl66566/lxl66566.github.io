@@ -4,8 +4,9 @@
  * heuristics (BADGE_WORDS / legacy score classes), but here every tone comes
  * from a typed field, not from string matching.
  */
+import type { BadgeTone, XListCell, XListPart } from 'absolute-press/client';
+
 import { numberToChinese } from './order';
-import type { BadgeTone, XListCell, XListPart } from './types';
 
 const toneClass = (tone: BadgeTone): string => `is-${tone}`;
 

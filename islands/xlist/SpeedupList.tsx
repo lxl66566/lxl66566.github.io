@@ -1,3 +1,5 @@
+import { slotItems, XList } from 'absolute-press/client';
+import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `SpeedupList` — legacy SpeedupList.vue on the data-backed xlist
  * stack. One row may cover several games (`names`); valid_name keys the
@@ -10,9 +12,6 @@ import speedupData from '../../src/.vuepress/data/speedup_list';
 import type { SpeedupItemType } from '../../src/.vuepress/definition';
 import type { IslandProps } from '../types';
 import { cell, t } from './cells';
-import { slotItems } from './items';
-import type { XListItem } from './types';
-import { XList } from './XList';
 
 const COLUMNS = ['游戏名', '游戏引擎', '存档格式', '成功拆包加速'];
 

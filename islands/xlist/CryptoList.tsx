@@ -1,3 +1,5 @@
+import { slotItems, XList } from 'absolute-press/client';
+import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `CryptoList` — legacy CryptocurrencyExchangeList.vue on the
  * data-backed xlist stack. 官网 renders inline after the name like the
@@ -10,9 +12,6 @@ import cryptoData from '../../src/.vuepress/data/crypto_list';
 import type { CryptocurrencyExchangeListItemType } from '../../src/.vuepress/definition';
 import type { IslandProps } from '../types';
 import { a, cell, t } from './cells';
-import { slotItems } from './items';
-import type { XListItem } from './types';
-import { XList } from './XList';
 
 const COLUMNS = [
   '名称',

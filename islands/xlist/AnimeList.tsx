@@ -1,3 +1,5 @@
+import { slotItems, XList } from 'absolute-press/client';
+import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `AnimeList` — legacy AnimeList.vue on the data-backed xlist
  * stack. 里/番外 stay plain text (the legacy table never badged them).
@@ -9,10 +11,7 @@ import animeData from '../../src/.vuepress/data/anime_list';
 import type { AnimeItemInputType } from '../../src/.vuepress/definition';
 import type { IslandProps } from '../types';
 import { cell, dateCell, orderBadge, rewatchBadge, t } from './cells';
-import { slotItems } from './items';
 import { durationString } from './order';
-import type { XListItem } from './types';
-import { XList } from './XList';
 
 const COLUMNS = ['番名', '观看区间', '备注'];
 

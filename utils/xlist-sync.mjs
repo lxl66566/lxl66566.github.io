@@ -13,11 +13,12 @@
  * up as drift here.
  */
 import fs from 'node:fs';
-import { stripTypeScriptTypes } from 'node:module';
 import os from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { fileURLToPath } from 'node:url';
+
+const { transformWithOxc } = await import('vite');
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const VUEPRESS = path.join(ROOT, 'src', '.vuepress');
@@ -27,38 +28,51 @@ const VUEPRESS = path.join(ROOT, 'src', '.vuepress');
 const stagingDir = fs.mkdtempSync(path.join(os.tmpdir(), 'xlist-sync-'));
 const staged = new Map();
 
-function stageModule(resolved) {
+async function stageModule(resolved) {
   if (staged.has(resolved)) return;
   const source = fs.readFileSync(resolved, 'utf8');
-  const js = stripTypeScriptTypes(source, { mode: 'transform' }).replaceAll(
-    /(from\s+)(['"])(\.[^'"]+)\.js\2/g,
-    "$1'$3.mjs'",
-  );
-  const rel = path.relative(VUEPRESS, resolved);
+  // The data modules use TS enums, which Node 26's strip-only
+  // stripTypeScriptTypes cannot handle; vite's oxc transformer can (the
+  // site already depends on vite).
+  const { code } = await transformWithOxc(source, resolved, { lang: 'ts' });
+  const js = code.replaceAll(/(from\s+)(['"])(\.[^'"]+)\.js\2/g, "$1'$3.mjs'");
+  // Framework modules live outside VUEPRESS: plain '..' segments would let
+  // path.join escape the staging dir, so map them to a flat marker.
+  const rel = path.relative(VUEPRESS, resolved).replaceAll('..', '__parent__');
   const target = path.join(stagingDir, rel.replace(/\.ts$/, '.mjs'));
   fs.mkdirSync(path.dirname(target), { recursive: true });
   fs.writeFileSync(target, js);
   staged.set(resolved, target);
 }
 
-function walkTs(dir) {
+async function walkTs(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
-    if (entry.isDirectory()) walkTs(full);
-    else if (entry.name.endsWith('.ts')) stageModule(full);
+    if (entry.isDirectory()) await walkTs(full);
+    else if (entry.name.endsWith('.ts')) await stageModule(full);
   }
 }
-walkTs(VUEPRESS);
-// The slot-key dedup rule must be the SAME module the component imports.
-const slotKeyModule = path.join(ROOT, 'islands', 'xlist', 'slotKey.ts');
-stageModule(slotKeyModule);
+await walkTs(VUEPRESS);
+// The slot-key dedup rule must be the SAME module the component runs: since
+// the xlist upstream it is the framework's slotKey module (assignSlotKeys),
+// reached through the workspace source link ../absolute-press.
+const slotKeyModule = path.join(
+  ROOT,
+  '..',
+  'absolute-press',
+  'src',
+  'client',
+  'xlist',
+  'slotKey.ts',
+);
+await stageModule(slotKeyModule);
 const { assignSlotKeys } = await import(
   pathToFileURL(staged.get(slotKeyModule)).href
 );
 
 async function loadLegacyModule(file) {
   const resolved = path.resolve(file);
-  stageModule(resolved);
+  await stageModule(resolved);
   return import(pathToFileURL(staged.get(resolved)).href);
 }
 

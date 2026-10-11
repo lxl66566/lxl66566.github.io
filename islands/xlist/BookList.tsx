@@ -1,3 +1,5 @@
+import { slotItems, XList } from 'absolute-press/client';
+import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `BookList` — legacy BookList.vue + BookListItem.vue on the
  * data-backed xlist stack. Title keeps the legacy `书名 - 作者` form; 标签
@@ -20,10 +22,7 @@ import {
   TAG_TONES,
   t,
 } from './cells';
-import { slotItems } from './items';
 import { defaultBookOrder, durationString } from './order';
-import type { XListItem } from './types';
-import { XList } from './XList';
 
 const COLUMNS = ['书名与作者', '阅读区间', '时长', '状态', '标签', '备注'];
 

@@ -1,3 +1,5 @@
+import { slotItems, XList } from 'absolute-press/client';
+import type { XListFilter, XListItem } from 'absolute-press/client';
 /**
  * Island: `GalList` — legacy GalList.vue + GalListItem.vue on the site's
  * data-backed xlist stack: galgame_list.ts is the single data source, entry
@@ -22,10 +24,7 @@ import {
   TAG_TONES,
   t,
 } from './cells';
-import { slotItems } from './items';
 import { defaultGalOrder, durationString } from './order';
-import type { XListFilter, XListItem } from './types';
-import { XList } from './XList';
 
 const COLUMNS = [
   '游戏名',

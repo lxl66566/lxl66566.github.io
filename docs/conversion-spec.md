@@ -445,9 +445,9 @@ md 侧现状（6 页 383 条）：
 | `<CryptoList>` | articles/money.md | 8 |
 | `<SpeedupList>` | articles/speedup.md | 25 |
 
-slot key 规则：`valid_name ?? name`（speedup 用 `valid_name`、job 用 `name`），重名自动加 `#k` 后缀；规则单一来源 `islands/xlist/slotKey.ts`，组件与脚本共用同一模块，禁止在别处复刻。
+slot key 规则：`valid_name ?? name`（speedup 用 `valid_name`、job 用 `name`），重名自动加 `#k` 后缀；规则单一来源是框架仓 `src/client/xlist/slotKey.ts`（`assignSlotKeys` 导出，xlist 上游后组件与脚本共用同一模块），禁止在别处复刻。
 
-交互行为（`islands/xlist/XList.tsx`，六个 island 共用）：搜索框 + 表头点击排序 + 行展开，**没有排序下拉，也没有 全部展开/收起 按钮**。可排序列 = 标题列（升→降→默认循环）+ 数值列（`scoreCell` 写入 `sortValue`，galgame 的 剧情/画风/程序/感染力；降→升→默认循环，复刻老 SortIndicator），未评分（`-`）条目在两个方向上都沉底；数值列的判定是「整列每个单元格要么有 `sortValue` 要么是空占位」，因此新 island 想加数值排序只需用 `scoreCell` 建列。`AvTable`/`ComicTable` 传 `sortable={false}` 时表头退回纯文本。
+交互行为（框架 XList，`absolute-press/client` 导出，六个 island 共用；2026-10 自 `islands/xlist/XList.tsx` 上游）：搜索框 + 表头点击排序 + 行展开，**没有排序下拉，也没有 全部展开/收起 按钮**。可排序列 = 标题列（升→降→默认循环）+ 数值列（`scoreCell` 写入 `sortValue`，galgame 的 剧情/画风/程序/感染力；降→升→默认循环，复刻老 SortIndicator），未评分（`-`）条目在两个方向上都沉底；数值列的判定是「整列每个单元格要么有 `sortValue` 要么是空占位」，因此新 island 想加数值排序只需用 `scoreCell` 建列。`AvTable`/`ComicTable` 传 `sortable={false}` 时表头退回纯文本。
 
 工具栏另有一组排除过滤器（`XListProps.filters` + `XListItem.filterFlags`，纯数据驱动、无谓词函数）：勾选某项即隐藏 `filterFlags` 带对应 id 的行，计数仍显示 可见/全量；目前仅 galgame 使用（复刻旧 GalList 的「仅显示严格定义的 galgame」checkbox，flag `not_strict`，tooltip 保留旧 hint 文案）。
 

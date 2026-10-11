@@ -1,3 +1,5 @@
+import { XList } from 'absolute-press/client';
+import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `AvTable` — legacy AvTable.vue + SortableTable.vue + Av.vue on the
  * site's shared xlist table. Imports the av data file (default-exported
@@ -10,8 +12,6 @@ import avData from '../src/.vuepress/data/av';
 import { TwoScoreCompare, type AvItemType } from '../src/.vuepress/definition';
 import { partitionInPlace } from '../src/.vuepress/utils/PartitionArray';
 import { a, cell, fold, t } from './xlist/cells';
-import type { XListItem } from './xlist/types';
-import { XList } from './xlist/XList';
 
 const COLUMNS = ['番号', '颜值', '演技', '番名', '评价'];
 

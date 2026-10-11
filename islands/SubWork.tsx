@@ -20,8 +20,7 @@ import type { IslandProps } from './types';
 /** Prop value as display text: finite numbers coerce (JSON `:order="1"`),
  * everything else non-string and the empty string drops out. */
 function text(value: unknown): string | undefined {
-  if (typeof value === 'number' && Number.isFinite(value))
-    return String(value);
+  if (typeof value === 'number' && Number.isFinite(value)) return String(value);
   return typeof value === 'string' && value !== '' ? value : undefined;
 }
 

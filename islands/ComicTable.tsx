@@ -1,3 +1,5 @@
+import { XList } from 'absolute-press/client';
+import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `ComicTable` — legacy ComicTable.vue + nhentai.vue + OrderBadge.vue
  * + dtlslong.vue on the site's shared xlist table. Imports the comic data
@@ -12,8 +14,6 @@ import {
   type ComicItemType,
 } from '../src/.vuepress/definition';
 import { a, b, cell, fold, orderTone, t } from './xlist/cells';
-import type { XListItem } from './xlist/types';
-import { XList } from './xlist/XList';
 
 const COLUMNS = ['nh-id', '画风', '剧情', '备注'];
 

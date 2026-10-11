@@ -5,7 +5,6 @@
  * both reusing the framework's --c-* theme variables.
  */
 import type { JSX } from '@solidjs/web';
-import { createSignal } from 'solid-js';
 
 /** Join truthy class names (framework's cx is not exported publicly). */
 export function cx(...parts: (string | false | undefined)[]): string {
@@ -45,34 +44,6 @@ export function FaIconSvg(props: {
 }
 
 /**
- * Legacy `dtlslong` equivalent: content clamped to two lines with a right
- * fade; clicking expands/collapses. Short content is never marked foldable
- * (detected once after mount, like the old ResizeObserver component).
+ * Legacy `dtlslong` equivalent now lives in the framework (`Fold` export from
+ * `absolute-press/client`); the xlist `fold` cell parts render through it.
  */
-export function Fold(props: { children: JSX.Element }): JSX.Element {
-  let contentRef: HTMLSpanElement | undefined;
-  const [foldable, setFoldable] = createSignal(false);
-  const [expanded, setExpanded] = createSignal(false);
-  const check = (): void => {
-    const el = contentRef;
-    if (!el || expanded()) return;
-    setFoldable(el.scrollHeight > el.clientHeight + 1);
-  };
-  queueMicrotask(check);
-  return (
-    <span
-      class={cx(
-        'abs-fold',
-        foldable() && 'is-foldable',
-        expanded() && 'is-expanded',
-      )}
-      onClick={() => {
-        if (foldable()) setExpanded(!expanded());
-      }}
-    >
-      <span class="abs-fold__content" ref={contentRef}>
-        {props.children}
-      </span>
-    </span>
-  );
-}

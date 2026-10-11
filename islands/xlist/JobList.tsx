@@ -1,3 +1,5 @@
+import { slotItems, XList } from 'absolute-press/client';
+import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `JobList` — legacy JobList.vue on the data-backed xlist stack.
  * One island per hiring season: `<JobList list="job_list_2024_autumn">`.
@@ -13,9 +15,6 @@ import {
 import type { JobItemInputType } from '../../src/.vuepress/definition';
 import type { IslandProps } from '../types';
 import { cell, dateCell, t } from './cells';
-import { slotItems } from './items';
-import type { XListItem } from './types';
-import { XList } from './XList';
 
 const COLUMNS = ['公司', '岗位', '渠道', '投递时间', '状态'];
 

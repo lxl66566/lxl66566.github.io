@@ -121,8 +121,3 @@ export function defaultBookOrder<
     }),
   );
 }
-
-/** Natural title order: base-insensitive, digit runs compared numerically. */
-export function compareTitles(a: string, b: string): number {
-  return a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
-}
