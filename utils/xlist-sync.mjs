@@ -4,7 +4,11 @@
  * the live source for the xlist islands' meta cells, while the markdown keeps
  * only `@@@ <slot-key>` bodies. This script verifies both sides still agree —
  * per block, the expected slot-key sequence (page order + assignSlotKeys, the
- * SAME dedup rule the component imports) must match the md slots one-for-one:
+ * SAME dedup rule the component imports) must match the md slots one-for-one.
+ * A slot title with a ` => target` suffix is an alias slot (framework renders
+ * the target slot's body for it): the key is the part before ` => `, the
+ * target must exist in the same island block, and the alias body must stay
+ * empty.
  *
  *   node utils/xlist-sync.mjs [page ...]     # diff report, exit 1 on drift
  *
@@ -150,9 +154,10 @@ const TAG_RE =
 const listProp = openTag => /list="([^"]*)"/.exec(openTag)?.[1] ?? null;
 
 /**
- * Collect the `@@@` slot keys of one island block (lines[startLine-1] is the
- * open tag; scanning stops at its closing tag). Fence-aware; no meta lines
- * exist in the migrated format.
+ * Collect the `@@@` slot entries of one island block (lines[startLine-1] is
+ * the open tag; scanning stops at its closing tag). Fence-aware; no meta lines
+ * exist in the migrated format. An entry's key strips the ` => target` alias
+ * suffix; `bodyLines` counts non-blank body lines (alias slots must have 0).
  */
 function parseIslandBlock(lines, startLine, closer) {
   const entries = [];
@@ -178,8 +183,17 @@ function parseIslandBlock(lines, startLine, closer) {
     if (line.startsWith(`</${closer}>`)) break;
     const delimiter = DELIMITER_RE.exec(line);
     if (delimiter) {
-      entries.push({ key: (delimiter[1] ?? '').trim(), line: index + 1 });
+      const raw = (delimiter[1] ?? '').trim();
+      const arrow = raw.indexOf(' => ');
+      entries.push({
+        key: arrow === -1 ? raw : raw.slice(0, arrow),
+        alias: arrow === -1 ? null : raw.slice(arrow + 4).trim(),
+        line: index + 1,
+        bodyLines: 0,
+      });
+      continue;
     }
+    if (entries.length > 0 && line.trim() !== '') entries[entries.length - 1].bodyLines++;
   }
   return { entries, endLine: index };
 }
@@ -301,6 +315,22 @@ for (const [pageIndex, page] of targets.entries()) {
   let pageEntries = 0;
   for (let b = 0; b < blocks.length; b++) {
     const { entries, openTag } = blocks[b];
+    const slotKeys = new Set(entries.map(entry => entry.key));
+    for (const entry of entries) {
+      if (entry.alias === null) continue;
+      if (!slotKeys.has(entry.alias)) {
+        console.log(
+          `[sync] ${page.name} block#${b + 1} slot "${entry.key}" (${entry.line}): alias target "${entry.alias}" not found in this island`,
+        );
+        drift += 1;
+      }
+      if (entry.bodyLines > 0) {
+        console.log(
+          `[sync] ${page.name} block#${b + 1} slot "${entry.key}" (${entry.line}): alias slot must have an empty body`,
+        );
+        drift += 1;
+      }
+    }
     const list = resolveList(dataset, openTag);
     if (list === undefined) {
       console.log(
