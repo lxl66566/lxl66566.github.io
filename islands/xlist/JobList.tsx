@@ -3,7 +3,7 @@ import type { XListItem } from 'absolute-press/client';
 /**
  * Island: `JobList` — legacy JobList.vue on the data-backed xlist stack.
  * One island per hiring season: `<JobList list="job_list_2024_autumn">`.
- * Rows with an offer keep the legacy green highlight.
+ * Rows with an offer render highlighted.
  */
 import { createMemo } from 'solid-js';
 import type { Element as SolidElement } from 'solid-js';
@@ -33,7 +33,7 @@ function jobItem(item: JobItemInputType, key: string): XListItem {
   return {
     key,
     title: item.name,
-    offer: item.offer === true,
+    highlight: item.offer === true,
     cells: [
       cell([t(item.job)]),
       cell([t(item.by)]),

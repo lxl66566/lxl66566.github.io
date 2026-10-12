@@ -1,8 +1,7 @@
 /**
  * Cell factories for the xlist islands: typed data -> XListCell descriptors.
- * Badge tones and the score thresholds port the framework's content
- * heuristics (BADGE_WORDS / legacy score classes), but here every tone comes
- * from a typed field, not from string matching.
+ * Badge tones and score thresholds are site conventions; every tone comes
+ * from a typed field, not from content sniffing.
  */
 import type { BadgeTone, XListCell, XListPart } from 'absolute-press/client';
 
@@ -34,7 +33,7 @@ export const fold = (text: string): XListPart => ({ kind: 'fold', text });
 /** in-cell line break between parts */
 export const br = (): XListPart => ({ kind: 'break' });
 
-/** `#N` order badge (legacy OrderBadge tone mapping). */
+/** `#N` order badge. */
 export const orderBadge = (order: number): XListPart =>
   b(`#${order}`, orderTone(order));
 
@@ -66,8 +65,8 @@ export function scoreCell(value: number | undefined): XListCell {
   const result = cell([value === undefined ? t('-') : t(String(value))]);
   if (value !== undefined) {
     result.sortValue = value;
-    if (value >= 10) result.score = 'is-high-score';
-    else if (value <= 0) result.score = 'is-low-score';
+    if (value >= 10) result.emphasis = 'positive';
+    else if (value <= 0) result.emphasis = 'negative';
   }
   return result;
 }
@@ -77,7 +76,7 @@ export function dateCell(text: string): XListCell {
   return cell(text === '' ? [] : [t(text)], { date: text !== '' });
 }
 
-/** Legacy OrderBadge tones: 1 tip / 2 warning / 3 danger / 4 info / rest note. */
+/** Order badge tones: 1 success / 2 warning / 3 danger / 4 info / rest note. */
 export function orderTone(n: number): BadgeTone {
   switch (n) {
     case 1:
@@ -93,7 +92,7 @@ export function orderTone(n: number): BadgeTone {
   }
 }
 
-/** Legacy status badge tones (old Badge type mapping). */
+/** Status badge tones. */
 export const STATUS_TONES: Record<string, BadgeTone> = {
   游玩中: 'success',
   在读: 'success',
@@ -104,7 +103,7 @@ export const STATUS_TONES: Record<string, BadgeTone> = {
   已放弃: 'danger',
 };
 
-/** Legacy tag badge tones (galgame/books/anime keyword pills). */
+/** Tag badge tones (galgame/books/anime keyword pills). */
 export const TAG_TONES: Record<string, BadgeTone> = {
   生肉: 'success',
   无H: 'success',

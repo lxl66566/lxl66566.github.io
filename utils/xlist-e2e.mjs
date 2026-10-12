@@ -199,7 +199,7 @@ const PAGES = [
       const rows = await page.locator('.ap-xlist__row').count();
       if (rows !== 17) issues.push(`job: ${rows} rows (expected 17)`);
       // Offer rows keep their green highlight (5 in the current data).
-      const offers = await page.locator('.ap-xlist__row.is-offer').count();
+      const offers = await page.locator('.ap-xlist__row.is-highlight').count();
       if (offers !== 5) issues.push(`job: ${offers} offer rows (expected 5)`);
       await lists.nth(0).scrollIntoViewIfNeeded();
       await page.evaluate(() => window.scrollBy(0, -70));
