@@ -44,11 +44,13 @@ _Git is a free and open source distributed version control system designed to ha
 > ::: right
 > ——[pacman-for-git](https://github.com/mcgitty/pacman-for-git/blob/main/pacman-for-git.txt)
 > :::
-> git for windows 官方的安装包就是纯纯流氓。明明是 git 和 msys2 结合体，却不让安装其他软件。
+> git for windows 官方的安装包就是纯纯流氓。不推荐使用。
 
 git for windows 的安装也算是一门学问，一共十几个英文步骤选项对新手极其折磨；当然你也可以一路确定，没什么大问题，就是占用空间多一点罢了。
 
 :::
+
+另外，git-bash 明明是基于 msys2 的玩意，却不让用 pacman 安装其他软件。
 
 ### 配置
 
@@ -719,6 +721,8 @@ GIT_SEQUENCE_EDITOR=: git rebase -i --autosquash HEAD~2
 > _Asuka Minato：用 ci 的 repo 为啥要在意提交次数，人家 cn 源的 bot 那次数都没人管_\
 > _AbsoluteX：话题结束，鉴定为吃太饱（_
 
+另外我现在使用[改良后的自动化 squash 脚本](./snipets.md#gfixup)。
+
 ### 崭新出厂
 
 像我这种喜欢用 Git 备份一切的人，也会用 Git 备份一些经常变化的大二进制文件，代表性仓库是 [backup](https://github.com/lxl66566/backup)。久而久之，Git 仓库会越来越大，因此一段时间以后让 repo “恢复出厂设置” 以减小文件大小是有必要的。（我的备份场景下，并不在乎历史版本追溯）
@@ -743,6 +747,8 @@ git gc --prune=now --aggressive        # gc，删除 blob
 ## jujutsu
 
 兼容 Git 的另一套版本控制系统，带有不同设计理念与更多高级特性。查看 [jujutsu](./jujutsu.md) 文章了解更多。
+
+用了一阵以后感觉不习惯，跑回 git 了。
 
 ## 第三方 Git 小工具
 

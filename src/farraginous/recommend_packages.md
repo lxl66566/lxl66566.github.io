@@ -18,7 +18,7 @@ tag:
 
 - 若您还不知道如何使用 Github 下载文件，请参考[此教程](../coding/github.md)。
 - 使用 Google Play 下载需要[科学上网](../articles/proxy/index.md)。未注明应用来源的 Android 软件，不妨试试在 Play 商店里找找。
-- 请注意，私有下载地址**不是**最新版安装包。若失效，可以[跟我反馈](../gossip/author.md#社交)。
+- 请注意，私有下载地址**不是**最新版安装包，只是一个简单的备份。若失效，可以[跟我反馈](../gossip/author.md#社交)。
 - 如果某些软件没有说明文字，看看章节标题有没有颜色，如果是链接可以点进去看看。
 
 :::
@@ -32,6 +32,8 @@ tag:
 > 我曾经用过 [xbrowsersync](https://github.com/xbrowsersync/app) 书签同步器，但是很久没维护了，而且由于 manifest v2 不再受支持的原因，每隔一段时间就会[被浏览器杀掉扩展](../articles/browser/assess.md#edge)。因此找到了这个替代品。
 
 电脑端请直接使用[网页版](https://app.raindrop.io/)，手机端可以选择 google play 下载 apk。
+
+注意创建的收藏夹默认是公开的（如果收藏夹右侧有一个地球标识就表示公开），需要去手动关闭。[我被坑过](https://t.me/withabsolutex/2822)。
 
 ### [bitwarden](https://vault.bitwarden.com/#/login)
 
@@ -188,6 +190,12 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 - 提权不要用 `su`，要用 `tsu` ([ref](https://www.reddit.com/r/termux/comments/126gjvr/))
 
 ### [音乐播放器](../articles/android_player.md)
+
+### [spectroid](https://spectroid.en.softonic.com/android)
+
+[bak 1.1.2](https://t.me/absolutexsresource/119)
+
+100KB 的小软件，可以看噪声频谱，帮助你快速找到生活中哪个频率噪声在影响你。
 
 ## Windows
 

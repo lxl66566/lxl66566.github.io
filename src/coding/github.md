@@ -208,7 +208,9 @@ artifacts 算是一种不稳定构建缓存，可以在 action 中上传任意�
 
 ### [typos](https://github.com/crate-ci/typos)
 
-检查你的英文水平（检查代码拼写错误）。rust 写的，速度极快，即使不用 CI 也可以在本地用，方便修复。
+::: details typo 类的东西一般误报率比较高，如果要用需要手动维护 whitelist，比较麻烦，见仁见智
+
+~~检查你的英文水平~~（检查代码拼写错误）。rust 写的，速度极快，即使不用 CI 也可以在本地用，方便修复。
 
 ```yml
 - name: Check Spelling
@@ -223,9 +225,11 @@ typos     # 检查
 typos -w  # 纠正
 ```
 
+:::
+
 ### [cache](https://github.com/actions/cache)
 
-缓存构建中的依赖项，加速 CI。比较适合大型项目，依赖很多，经常跑 CI 的那种。个人的小仓库就有点鸡肋了，不如不开 cahce，多花 10 秒钟构建省 300MB 空间，不为 Github 想想也得为 SSD 想想吧~~（虽然不是我的，但爱是平等的）~~。
+缓存构建中的依赖项，加速 CI。比较适合大型项目，依赖很多，经常跑 CI 的那种。个人的小仓库就有点鸡肋了，不如不开 cache，多花 10 秒钟构建省 300MB 空间，不为 Github 想想也得为 SSD 想想吧。
 
 每个仓库免费 10 GB 的存储空间，应该是 Github 官方提供的(?)，真富啊。
 
@@ -267,9 +271,25 @@ Github 仓库一多，就免不了自动升级依赖。Github 有一些 APP 可�
 
 renovate bot 是一个更加强大的依赖管理 APP。据说是因为 dependabot 非常保守，不肯支持新的语言，它才出现的。renovate bot 自身就支持多语言的依赖升级 + 自动合并。
 
-但是 renovate bot 的文档简直就是一坨大便，我摸索了很久才得以一窥门道。
+想使用 renovate，必须先将 [renovate app](https://github.com/apps/renovate) 安装到你的仓库上。还有需要特别注意的：安装 renovate 以后，它会默认开启 onboard 选项，给你安装的项目发一个 _Configure Renovate_ 的 init pr。如果你为全部 repo 安装了 renovate，那么你就会同时收到几百个 PR。。。而且它的 init pr 配置还不能直接用，因为没有包含我下面要说的引用功能，所以必须批量关闭：
 
-1. renovate bot [支持引用其他配置文件](https://docs.renovatebot.com/config-presets/)。也就是我可以在一个单独的 Github 存储库里放一个通用配置，就可以在各个库里引用这同一份配置，这样比较好统一更改。
+```sh
+# 查找所有标题包含 Configure Renovate 的 open 状态 PR 并直接批量关闭
+TARGET_OWNER="your-org-or-username"
+gh search prs "Configure Renovate" --owner "$TARGET_OWNER" --state open --json url,number,repository --jq '.[] | "\(.repository.nameWithOwner) \(.number)"' | while read -r repo pr_num; do
+  echo "Closing PR #$pr_num on $repo..."
+  gh pr close "$pr_num" -R "$repo" -c "Closed automatically"
+done
+```
+
+配置：renovate bot 的文档简直就是一坨大便，我摸索了很久才得以一窥门道。
+
+1. renovate bot [支持引用其他配置文件](https://docs.renovatebot.com/config-presets/)。也就是我可以在一个单独的 Github 存储库里放一个通用配置，就可以在各个库里引用这同一份配置，这样比较好统一更改。在仓库放一个 `.github/renovate.json`：
+   ```json
+   {
+     "extends": ["github>lxl66566/.github:renovate"]
+   }
+   ```
 2. renovate bot 的配置项 Reference 在[这里](https://docs.renovatebot.com/configuration-options)。当然这么多不可能每个都看一遍，只能去网上抄其他人的。这里是我的一个模板样例：
    ```json
    {
@@ -277,17 +297,24 @@ renovate bot 是一个更加强大的依赖管理 APP。据说是因为 dependab
      "extends": ["config:base"],
      "timezone": "Asia/Shanghai",
      "semanticCommits": "enabled",
-     "schedule": ["on the first day of the week"],
-     "commitMessagePrefix": "chore(deps): ",
+     "commitMessagePrefix": "📦 chore(deps):",
      "automerge": true,
      "automergeStrategy": "rebase",
      "platformAutomerge": true,
      "vulnerabilityAlerts": {
        "enabled": true,
        "automerge": true
-     }
+     },
+     "packageRules": [
+       {
+         "matchUpdateTypes": ["major"],
+         "automerge": false
+       }
+     ]
    }
    ```
+
+另外，开了 renovate 以后你的 Github message box 就会被 renovate 淹没了。。。我用 dependabot 都不敢开月更，都是开的年更，现在 renovate 日更这谁受得了，auto merge 还慢，还会一直发通知吵我。想想还是不打算开了。
 
 @tab dependabot
 

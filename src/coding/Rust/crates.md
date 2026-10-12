@@ -388,3 +388,17 @@ opus-rs 永远地失去了我的一颗星星。
 rust std::arch 里已经有一堆平台相关的 unsafe 函数，用于直接执行 simd 指令。而 simd 库的重点是如何把这堆指令尽可能零成本抽象为平台无关的 safe 函数，供外部更方便地使用，减少用户心智负担。
 
 目前 rust 社区完成度最高的是 fearless_simd，202609 刚发布 1.0 稳定版本。虽然我对其印象不佳，其在 AVX512、wasm 的 simd 实现中还是有一些小缺点。
+
+当然，不能凭借第一印象直接否定它的成果，于是我尝试使用 AI 将我的一个小项目 [base94-simd](https://github.com/lxl66566/base94-simd) port 到 fearless_simd 1.0 上进行对比。
+
+结果是 fearless_simd 有胜有负，不同的 testcase 在 -3% 到 +7% 之间波动。总体来说还是赢的。一些坑点：
+
+1. 缺 exotic op 抽象：`vpcompressb`、`pdep` 没有对应 API，只能靠 `kernel!` 手写
+
+### RustPython
+
+谁会在生产环境使用 RustPython 呢？目前用 AI review 了一下，是有一个 one line panic 的 bug，外加几个越界写/提前释放。Rust 本身就应该防止这种越界问题，但是看起来没有防住。
+
+另外 [benchmark](https://rustpython.github.io/benchmarks) 上看，仍然是远不及 CPython 的。如果重写初期就没考虑性能，那么后期再想优化就比较困难了。
+
+RustPython 的 AI Policy 还是[比较开放](https://github.com/RustPython/.github/blob/207549dc7db5d46a81ee09224a50d99a7e462f50/AI_POLICY.md)的，希望利用 AI 快速追一追，否则真没有任何发展空间了。

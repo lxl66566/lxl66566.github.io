@@ -15,7 +15,8 @@ const original_list: BookItemInputType[] = [
     name: "距离救援船抵达，还有93年",
     author: "싸이킥",
     reading_status: {
-      kind: "在读",
+      kind: "已放弃",
+      extra: "第七章开头"
     },
     h_level: HLevel.HIGH,
     duration: {
@@ -778,7 +779,8 @@ const original_list: BookItemInputType[] = [
     name: "Harry Potter",
     order: 1,
     reading_status: {
-      kind: "在读",
+      kind: "已放弃",
+      extra: "chapter 7."
     },
     tags: {
       namaniku: true,

@@ -166,6 +166,7 @@ jujutsu 不适合什么样的用户：
    - 依赖 commit hook 或私有 git hooks；
    - 依赖 git 暂存区的一些操作，例如在 vscode 按照代码行添加暂存区，用于快速提取所需的变更；
 3. 喜欢往工作区扔一些 untracked 的 cache 文件，并且在切分支的时候希望保留这些文件；
+4. 深度依赖 git 的成熟工具，例如 vscode Git Graph 的。
 
 [^breaks]: jujutsu 跟 git 混用，也许可能导致你的 git 仓库历史损坏：我遇到过疑似 jujutsu 导致的 broken link 和 missing blob，虽然我没有任何证据可以证明这一点。
 
@@ -173,6 +174,8 @@ jujutsu 适合什么样的用户：
 
 1. 喜欢尝试新玩意并且愿意学习；
 2. 喜欢 Rust 并且觉得被 Rusty tools 包围了好幸福\~\~\~的；
+
+我用了一段时间，实在是不契合我的工作习惯，所以跑回 git 了。
 
 ## external
 
