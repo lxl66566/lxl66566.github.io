@@ -260,7 +260,7 @@ const original_list: BookItemInputType[] = [
     name: "加速世界",
     h_level: HLevel.NONE,
     url: "https://www.wenku8.net/book/381.htm",
-    use_time: "21h33min(未包括前 23.5%)",
+    use_time: "21h33min\n(未包括前 23.5%)",
     tags: {
       japanese: true,
     },

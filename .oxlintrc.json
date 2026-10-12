@@ -17,10 +17,5 @@
     "browser": true,
     "es2024": true
   },
-  "ignorePatterns": [
-    "dist/**",
-    "node_modules/**",
-    "docs-migration/**",
-    "src/**"
-  ]
+  "ignorePatterns": ["dist/**", "node_modules/**", "docs-migration/**", "src/**", "utils/**"]
 }

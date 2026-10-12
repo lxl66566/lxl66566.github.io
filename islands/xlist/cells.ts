@@ -8,7 +8,7 @@ import type { BadgeTone, XListCell, XListPart } from 'absolute-press/client';
 
 import { numberToChinese } from './order';
 
-const toneClass = (tone: BadgeTone): string => `is-${tone}`;
+const toneClass = (tone: BadgeTone): `is-${BadgeTone}` => `is-${tone}`;
 
 /** text part */
 export const t = (text: string): XListPart => ({ kind: 'text', text });
@@ -24,8 +24,15 @@ export const a = (href: string, text: string): XListPart => ({
   href,
   text,
 });
+/** inline svg icon part (raw `<svg>` or inner markup), optional tooltip + cls */
+export const icon = (
+  svg: string,
+  opts: { title?: string; cls?: string } = {},
+): XListPart => ({ kind: 'icon', svg, ...opts });
 /** foldable text part (legacy dtlslong) */
 export const fold = (text: string): XListPart => ({ kind: 'fold', text });
+/** in-cell line break between parts */
+export const br = (): XListPart => ({ kind: 'break' });
 
 /** `#N` order badge (legacy OrderBadge tone mapping). */
 export const orderBadge = (order: number): XListPart =>
@@ -41,7 +48,11 @@ export function cell(
   opts: { date?: boolean } = {},
 ): XListCell {
   const present = parts.filter((part): part is XListPart => part != null);
-  const text = present.map(part => part.text).join('');
+  const text = present
+    .map(part =>
+      part.kind === 'icon' || part.kind === 'break' ? '' : part.text,
+    )
+    .join('');
   const isEmpty =
     present.length === 1 &&
     present[0] !== undefined &&
@@ -95,10 +106,9 @@ export const STATUS_TONES: Record<string, BadgeTone> = {
 
 /** Legacy tag badge tones (galgame/books/anime keyword pills). */
 export const TAG_TONES: Record<string, BadgeTone> = {
-  推荐: 'success',
   生肉: 'success',
   无H: 'success',
-  黄文: 'danger',
+  黄文: 'warning',
   学习: 'danger',
   猎奇重口: 'danger',
   惊悚: 'warning',
