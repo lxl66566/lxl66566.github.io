@@ -1,8 +1,8 @@
 import { slotItems, XList } from 'absolute-press/client';
-import type { XListItem } from 'absolute-press/client';
+import type { XListItem, XListPart } from 'absolute-press/client';
 /**
  * Island: `AnimeList` — legacy AnimeList.vue on the data-backed xlist
- * stack. 里/番外 stay plain text (the legacy table never badged them).
+ * stack. Badges hang off the title.
  */
 import { createMemo } from 'solid-js';
 import type { Element as SolidElement } from 'solid-js';
@@ -10,24 +10,25 @@ import type { Element as SolidElement } from 'solid-js';
 import animeData from '../../src/.vuepress/data/anime_list';
 import type { AnimeItemInputType } from '../../src/.vuepress/definition';
 import type { IslandProps } from '../types';
-import { cell, dateCell, orderBadge, rewatchBadge, t } from './cells';
+import { b, cell, dateCell, orderBadge, rewatchBadge, t } from './cells';
 import { durationString } from './order';
 
-const COLUMNS = ['番名', '观看区间', '备注'];
+const COLUMNS = ['番名', '观看区间'];
 
 function animeItem(item: AnimeItemInputType, key: string): XListItem {
+  const badges = [
+    item.watch_times ? rewatchBadge(item.watch_times) : null,
+    item.order ? orderBadge(item.order) : null,
+    item.r18 ? b('里', 'danger') : null,
+    item.extra ? b('番外', 'info') : null,
+  ].filter((part): part is XListPart => part != null);
   return {
     key,
     title: item.name,
-    cells: [
-      dateCell(durationString(item.duration)),
-      cell([
-        item.watch_times ? rewatchBadge(item.watch_times) : null,
-        item.order ? orderBadge(item.order) : null,
-        item.r18 ? t('里') : null,
-        item.extra ? t('番外') : null,
-      ]),
-    ],
+    ...(badges.length > 0 ? { titleParts: [t(item.name), ...badges] } : {}),
+    cells: [dateCell(durationString(item.duration))],
+    // Title parts are not indexed by XList; keep the markers searchable.
+    ...(badges.length > 0 ? { searchExtra: cell(badges).text } : {}),
   };
 }
 
