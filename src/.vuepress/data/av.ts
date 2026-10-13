@@ -594,4 +594,6 @@ export default [
   { id: "OREMO-311", aScore: 7.7, bScore: 7.3, say: "44:31 笑场了，绷不住了" },
   { id: "SDAB-310", aScore: 6.6, bScore: 5.9 },
   { id: "URKK-111", aScore: 8.6, bScore: 6.7, name: "隣の変態大家におっぱいを揉まれ毎日犯●れてます 柏木こなつ", say: "妆有点重了。男优演的残疾人，没看出啥明显漏洞，但是限制了体位是事实，而且这个主题全靠女优主动来推进剧情也非常怪。" },
+  { id: "MEYD-840", aScore: 5.4, bScore: 7, say: "太老了！" },
+  { id: "SAME-058", aScore: 8.4, bScore: 9.1, name: "トラウマレ●プ 5年前にレ●プした女を今度は愛する人の目の前でレ●プしてやった（笑） 二宮ひかり" },
 ] as AvItemType[];
