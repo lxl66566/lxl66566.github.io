@@ -64,7 +64,7 @@ tag:
 - [borgo](https://borgo-lang.github.io/)：点进去就知道了
 - [dada](https://dada-lang.org/)：类 rust 的实验性语言，观点比较模糊（至少我没看出有哪些 feature）
 - [Vale](https://github.com/ValeLang/Vale)：类 rust 的语言（所有权和泛型），但是更简单，限制更多（可变结构只能有一个引用）。开发者对内存回收，内存安全~~和玛雅文化~~有[独特的理解](https://verdagon.dev/home)。
-- [gleam](https://gleam.run/)：基于 rust 的，一股 rua 味的语言，BEAM 系竞争者
+- [gleam](https://gleam.run/)：基于 rust 的，一股 rua 味的 fp 语言，BEAM 系竞争者
 - [cangjie](https://developer.huawei.com/consumer/cn/cangjie/)([download](https://cangjie-lang.cn/download))：华为官方出品的编程语言，看起来挺像 ts 的，据说缝了挺多东西。我挺期待它的性能报告的。
 - [vala](https://docs.vala.dev/about.html)：语法与 java/C# 类似，但是无 runtime 而是用 C 原生实现。据称在 GTK 等 GUI 编程方面强悍。
 - [rune](https://github.com/rune-rs/rune)：模仿 rust 的动态类型嵌入语言。看起来还行，解决了一些 rust 的痛点，不过没有静态类型检查也属实烦人。但是说是嵌入，zip 还有 41MB，不算小。

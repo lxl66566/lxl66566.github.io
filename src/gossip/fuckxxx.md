@@ -15,6 +15,7 @@ tag:
 - [音游暴论](../hobbies/rhythm_games.md#暴论-为什么你不该打音游)
 - [浏览器暴论](../articles/browser/assess.md)
 - [各种尝鲜体验](./userexp.md)
+- [AI Agent 横评](../articles/agent.md)
 
 另外我的[个人频道](https://t.me/withabsolutex)里还有更多暴论，欢迎加入，一起喷这狗屎般的世界——
 
@@ -284,35 +285,6 @@ tag:
 Nix 语言本身：
 
 - 配置合并不支持 list 减法；不支持撤销某个 config.xxx 设置项。不支持减法是我 nixos 配置高耦合度、高复杂度的罪魁祸首之一。
-
-## AI 工具系列
-
-### opencode 有多难用
-
-在写此章节之后，有人做了一个 <https://frontierharness.org/> 用来估计 agent 工具的得分。opencode 是垫底的狗屎。
-
-- 简陋的首页，下载方式没说 scoop，没有标注出使用文档，不如 GitHub README 和真正的文档。
-- 界面根本没有引导，进去就三个键盘按键，不知道做什么用的，没有 help，必须读文档才知道。
-- opencode 没有活动的 issue 60 天自动关闭，还不能 reopen。我痛恨这种自动关闭机制。并且[我提的 issue](https://github.com/anomalyco/opencode/issues/22651) 也没人管。
-- 你居然把 node_modules 放在 `~/.config/opencode` 里？对于洁癖的人来说，在 `~/.config` 里放这种东西是大忌。
-- <https://opencode.ai/docs/zh-tw/models> 里没有说明如何使用自定义 API（provider），即使它支持自定义 API。支持的模型很多，不够成不用说明如何支持自定义 API 的理由，因为 API 提供方永远列举不完。
-  - TUI 添加后的配置也不会写到配置文件里，那我怎么同步，不同步吗？
-  - 感觉这两套思维本身也很混乱。要配置文件就 all in 配置文件，要 GUI config 就 all in GUI，同时编辑两边还不同步是什么鬼？
-- 免费模型跟没有脑子一样，虽然本来也没啥指望。
-  - 后来免费模型出了 deepseek v4 flash，总算是可用的水平了。
-- TUI 其实可以做滚动条，但是它没做。这么长 context 我也没法直接滚，只能 /export。
-  - 用键盘 Page Up/Page Down 是可以快速滚的，但是有人可能没考虑现在有的键盘已经不提供这两个按键了……
-- opencode 内存占用高已经是特性了，一直都有人提，但是也没人想改。90 天后 issue 就自动关闭了。
-- opencode 处理 Rime 中文输入法总是有点问题，有时候切了输入法但是还是只能写英文。这个 bug 发生的非常频繁，也有相关的 issue 报告 ([issue1](https://github.com/anomalyco/opencode/issues/10946) [issue2](https://github.com/anomalyco/opencode/issues/14761))
-  - opencode 强制调用 `win32DisableProcessedInput()` 关闭了 `ENABLE_PROCESSED_INPUT`，相当于绕过 Windows 的 IME 处理流程而留到程序自行处理。但是处理得又不好，bug 一堆。
-- oepncode 的 permission 会把 `*` 和 `?` 给重新解释，但是[没有提供转义功能](https://github.com/anomalyco/opencode/blob/28a06e52fcfaea87a749e4e4c9a74d90b3195fb0/packages/opencode/src/util/wildcard.ts#L3-L9)，你永远无法对包含 raw `*` 和 `?` 字符的命令进行权限控制。
-- 我的长对话整天被 opencode 截断，结果发现是 opencode 硬编码了一个 100 条对话的限制。([issue#30587](https://github.com/anomalyco/opencode/issues/30587) [issue#31513](https://github.com/anomalyco/opencode/issues/31513)) opencode 对用户的消息没有任何尊重。
-- 之前的版本，Windows opencode 内按 `Ctrl + C` 退出会直接崩掉 Windows Terminal 窗口。
-- **恶性 bug**：opencode 对会话时间戳做截断，导致在特定时间点会话一直无限重试，而对外表现为卡死。([ref](https://t.me/withabsolutex/2807)) 只能说是狗屎
-- revert 有延迟，如果点了 revert 然后快速点回车，就会陷入非常坏的状态，消息已经 revert 掉了但是还是在 sending request。
-- 打开 opencode 后，移动进工作区的文件，无法被 @ 选中。如果我想选中文件，必须关闭 opencode 后重新打开。有点扯。
-- Revert 某条消息的变更后，ctrl+x r 恢复 revert 前的内容，在 Windows 上会把你仓库的所有文件 LF 都改成 CRLF，望周知。
-- Kimi 自家的研究人员给 opencode 专门写了个 kimi 模型的系统提示词，但是里面有一句：``DO NOT run `git commit`, `git push`, `git reset`, `git rebase` and/or do any other git mutations unless explicitly asked to do so. Ask for confirmation each time when you need to do git mutations, even if the user has confirmed in earlier conversations.`` 实在是太傻逼了。朋友用 opencode 一直疑惑为啥不会执行 AGENTS.md 里的原子化提交的指令，原来根源在这里。。直接[开喷](https://github.com/anomalyco/opencode/issues/48780)。
 
 ## niri 有多难用
 
