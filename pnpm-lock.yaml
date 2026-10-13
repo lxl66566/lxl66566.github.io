@@ -174,8 +174,8 @@ importers:
         specifier: 2.0.0-rc.13
         version: 2.0.0-rc.13(solid-js@2.0.0-rc.13)
       absolute-press:
-        specifier: ^0.3.3
-        version: 0.3.3(@solidjs/web@2.0.0-rc.13(solid-js@2.0.0-rc.13))(solid-js@2.0.0-rc.13)(unocss@66.10.5(cac@7.0.0)(rolldown@1.2.13)(srvx@1.0.5)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0))
+        specifier: ^0.3.4
+        version: 0.3.4(@solidjs/web@2.0.0-rc.13(solid-js@2.0.0-rc.13))(solid-js@2.0.0-rc.13)(unocss@66.10.5(cac@7.0.0)(rolldown@1.2.13)(srvx@1.0.5)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0))
       solid-js:
         specifier: 2.0.0-rc.13
         version: 2.0.0-rc.13
@@ -1459,8 +1459,8 @@ packages:
   '@upsetjs/venn.js@2.0.0':
     resolution: {integrity: sha512-WbBhLrooyePuQ1VZxrJjtLvTc4NVfpOyKx0sKqioq9bX1C1m7Jgykkn8gLrtwumBioXIqam8DLxp88Adbue6Hw==}
 
-  absolute-press@0.3.3:
-    resolution: {integrity: sha512-QT/AeJQR4zKLkmmFjipxV7xsJ6x1TRGLnd33bVyKIadTznH7spnkfLuqSKMRYw8e95Evq3rY/JREoehYgrjfXg==}
+  absolute-press@0.3.4:
+    resolution: {integrity: sha512-IaG2GHwdw8XGnnSDN9W5By4Hmz7/L25iuax/WAMpEnhzq+YLiU4ScS7tlwoRUZfwNetrbRtC/X5YNSOHOi8h9A==}
     engines: {node: '>=20.19.0'}
     peerDependencies:
       '@solidjs/web': 2.0.0-rc.13
@@ -4225,7 +4225,7 @@ snapshots:
       d3-transition: 3.0.1(d3-selection@3.0.0)
     optional: true
 
-  absolute-press@0.3.3(@solidjs/web@2.0.0-rc.13(solid-js@2.0.0-rc.13))(solid-js@2.0.0-rc.13)(unocss@66.10.5(cac@7.0.0)(rolldown@1.2.13)(srvx@1.0.5)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)):
+  absolute-press@0.3.4(@solidjs/web@2.0.0-rc.13(solid-js@2.0.0-rc.13))(solid-js@2.0.0-rc.13)(unocss@66.10.5(cac@7.0.0)(rolldown@1.2.13)(srvx@1.0.5)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)):
     dependencies:
       '@fortawesome/free-brands-svg-icons': 6.7.2
       '@fortawesome/free-regular-svg-icons': 6.7.2
