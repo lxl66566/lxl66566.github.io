@@ -66,6 +66,10 @@ tag:
 
 <BookList>
 
+@@@ 狩魔手记
+
+刚好发了 [reader-server-rs](https://github.com/lxl66566/reader-server-rs) 的第一个版本，午休刚好开一本书看。
+
 @@@ 海岛求生游戏
 
 不能带脑子看的小黄书。

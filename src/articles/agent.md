@@ -134,10 +134,10 @@ opencode 作为一个 agent，只能算是达到 agent 的基本水平。在使�
    - 有一堆无法关闭的内置 MCP。
    - zcode 不读 `~/.agents/AGENTS.md`，全局提示要放在 `~/.zcode/AGENTS.md`。由于我希望对 zcode 附加一些专用的约束，所以我不太想用 hardlink，直接在 `~/.zcode/AGENTS.md` 声明让 agent 去读 `~/.agents/AGENTS.md` 即可。
    - **恶性 bug**：zcode 给 agent 提供的「内置任务」功能（实际上是 Bash + `run_in_background: true` 实现的）非常难用，很多时候终端进程都已经 panic 了，但是任务本身不会结束，就一直挂着浪费时间等 timeout。所以全局提示里需要写一句“禁止使用 run_in_background”。
-2. 对于 agent 命令操作，zcode 其实是有沙盒的。但是 AI 不知道，有时候要试错多次，。
+2. 对于 agent 命令操作，zcode 其实是有沙盒的，执行 bash 工具对项目外的写入操作好像是有点问题。但是 AI 不知道这个沙盒的机制，有时候要试错多次。
 3. 周末赠送的是试用装的 glm 5.3 flash，token 非常多。但是这个试用装不是直接加入你的帐号而是作为单独的一个试用帐号提供，我找了半天都没找到在哪里切换回我自己的帐号。实在是居心险恶。
    - ~~独立试用帐号的缺点就是没法同时跑免费的 glm 5.3 flash 和付费的 glm 5.3。~~ (2026.09 月末修复了，现在可以主帐号和试用帐号的额度同时跑)
-   - 这免费体验帐号开 subagent 的时候经常会有莫名其妙的失败，比如说有的报错信息是 _captcha verify failed_，我直接黑人问号？？
+   - 这免费体验帐号开 subagent 的时候经常会有莫名其妙的失败，比如说有的报错信息是 _captcha verify failed_，我直接黑人问号？？ (后来也修了)
    - 免费帐号并发数非常少（大概 5 个），开不了多少 subagent。
      - 不干活的主 agent 居然也占用一个并发数？
      - 如果我正好在干其他工作，zcode 选择先杀我的 subagent。不是，subagent 是没法恢复的，普通会话还可以 continue，你告诉我把我跑了半个小时的 subagent 一把杀掉，已经跑的 token 全部作废？
@@ -165,6 +165,7 @@ opencode 作为一个 agent，只能算是达到 agent 的基本水平。在使�
 20. zcode 只允许修改上一条提示词并发送，如果要改很久以前的提示词就只能 fork 了。改提示词、fork 点都必须是 LLM 输出结束才行，不能在 LLM 与工具交互中间打断。
 21. 修改上一条提示词时，同时修改模型，则界面上展示使用的新的模型，但是实际调用还是调用老的模型。
 22. **恶性 bug**：出现一次：subagent 干活干一半然后莫名其妙回到主线程，所有 subagent 全部被中断
+23. **恶性 bug**：几天前的 session 想要重新开始用，模型已选择，然而发 `/Compact` 后报错 _Select a model before continuing_。fork session 后重发 `/Compact`，无效。只能先发一条 message 然后再进行 compact。
 
 ## [pi](https://github.com/earendil-works/pi)
 

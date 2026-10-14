@@ -712,6 +712,10 @@ sudo btrfs subvolume snapshot /nix /nix/.snapshot/nix_20240629
 
 impermanence 在 NixOS 安装过程中是一个硬性的 bootstrap 来源；你必须成功安装 NixOS 后，才能获取原始的文件，进行持久化。然后教程里你需要手动将对应文件复制到 `/nix/impermanence` 下，这一步在 bootstraping 时也太麻烦了点，我思考以后想出一个好办法：在开启 root on tmpfs 时，将老的 `/` (root) 子卷挂到随便一个什么 `/fakeroot` 上；然后就可以用 impermanence 从 `/fakeroot` 里 mount 文件了，这样省去了手动 copy 文件的这一步骤，在我的配置中只需要修改一个 bool 值就可以自动切 root on tmpfs，将工作量降到了最低，非常舒服。
 
+### nix 本身的配置
+
+- 如果你已经用了 btrfs 并开启例如 bees 等动态去重工具，则不需要开启 `nix.settings.auto-optimise-store`。
+
 ### ISO 制作
 
 官方的 ISO（不论 minimal 或图形界面的）都是一坨狗屎，图形界面安装没有 btrfs 而且 rebuild 会 fail，minimal 则是缺少工具（efibootmgr）并且无法匹配我的个人设置（手动挂一大堆 btrfs 子卷实在是有点折磨），所以还是自己做 iso 比较好。我自己做的 iso 有这些需求：
@@ -742,12 +746,11 @@ isoImage.contents = [
 
 ### 开发环境
 
-我一直使用 vscode，但是在 nixos 上，还是有点难用的。
+我一直使用 vscode，但是在 nixos 上，想要获取最佳使用体验，你需要：
 
-- vscode 全自动同步过程中，有部分插件没有同步过来。
-- 手动在 `home.nix` 里添加插件后，所有禁用的插件会被自动启用。
-- 某些插件在非 feh 环境下无法运行；feh 环境下无法在终端使用 sudo。
-- 无法使用 ssh 插件远程开发。
+- 开启 nix-ld。这可以让你的插件正常运行、或者从其他电脑通过 ssh 远程打开工作区。
+  - 不要使用 feh：feh 环境下无法在终端使用 sudo。
+- 不要在 home-manager 里指定 vscode 插件。手动在 `home.nix` 里添加插件后，rebuild 后所有禁用的插件会被自动启用。vscode 本身就有跨平台的插件同步功能，直接使用内置同步功能即可。vscode 插件是一个典型的维护 deterministic 会大幅降低用户体验的东西。
 
 ### WebDAV
 
