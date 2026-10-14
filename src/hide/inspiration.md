@@ -101,7 +101,7 @@ tag:
 - [ ] yakuake on windows
 - [ ] ~~更好的静态博客/文档框架~~ 学了点前端发现 vuepress 也没有那么难用，暂时搁置。不过后来感觉 vue based 表达力还是太差了。
 - [x] fuck, delete it! (windows)
-- [ ] 代理，自行设计协议，对称加密
+- [x] 代理，自行设计协议，对称加密 ([nextppp](ttps://github.com/lxl66566/nextppp)，最后还是抄的协议)
   - [ ] 通过虚拟组网方式，各节点设置 inbound/outbound，动态选择路径
 - [ ] ~~windows shell with everything:~~ everything SDK is hard to use, i can't ever compile a basic example code...
   - ref: <https://micahkepe.com/blog/minishell/>
@@ -117,7 +117,7 @@ tag:
   - [ ] filter
 - [x] rust release ci
 - [ ] ~~kde spectacle ocr plugin~~ no longer use kde
-- [ ] 分布式服务器监控全栈
+- [ ] ~~分布式服务器监控全栈~~ [UpGrid](https://github.com/George-Miao/UpGrid)?
 - [ ] 半连接时序神经网络
 - [ ] matlab executor or translator
 - [ ] use excel-like editor to edit sql database
@@ -136,7 +136,7 @@ tag:
     1. hash 去重。遇到重复照片，判断照片绝对路径的“熵”，保留更有意义的路径。并通过路径内包含的信息建立 tag。
     2. 自动解压路径中遇到的压缩文件，当成目录处理。
 - [ ] rust-checkenizer: rust lsp based on cargo check. NO MORE RA NEEDED.
-- [ ] rust easy context like tokio/compio do.
+- [ ] ~~rust easy context like tokio/compio do.~~ actually I tried, it's so hard
 - [ ] 明日方舟视频自动去暂停
 - [ ] SNP's Not Pydantic，回归原始，拒绝[隐性假设](https://t.me/withabsolutex/2338)
 - [x] [touchfish commit](https://github.com/lxl66566/git-touchfish-commit)
@@ -153,9 +153,9 @@ tag:
 - [ ] [HTTP Client](../articles/http_client.md).
   - [ ] free forever.
   - [ ] fully customizable, users can write js/py scripts to match conditions and modify the request.
-- [ ] Windows SSD trace. Trace IO event with operation thread.
-  - [ ] ETW trace. (use ferrisetw)
-  - [ ] web-based graph display.
+- [x] Windows SSD trace. Trace IO event with operation thread.
+  - [x] ETW trace. (use ferrisetw)
+  - [x] web-based graph display.
 - [x] flake-follows ([idea](https://t.me/absolutexsward/142)) [code](https://gist.github.com/lxl66566/697db0cccd04b7247dc9a0cfb96d328c)
 - [x] [dae to sing-box](https://github.com/lxl66566/sing-dae)
 - [x] Rust powerful and easy-to-use pipeline crate [youpipe](https://github.com/lxl66566/youpipe)
@@ -171,14 +171,14 @@ tag:
 - [x] [bpm](https://github.com/lxl66566/bpm-rs/)
   - [x] rust crate: select by arch
 - [x] chnroutes
-- [ ] fail2ban
+- [ ] ~~fail2ban~~ ([fail2ban-rs](https://github.com/aejimmi/fail2ban-rs)，我发过 PR)
 - [x] Telegram marsbot
 - [x] cross platform startup script -> [成果](https://github.com/lxl66566/user-startup-rs)
-- [ ] reader
+- [x] reader -> [成果：reader-server-rs](https://github.com/lxl66566/reader-server-rs)
 - [ ] sync tools
-- [ ] ~~diskann~~ has been rewriten by MS
-- [ ] bubblewrap
-- [ ] weasel
+- [ ] ~~diskann~~ has been [rewriten by MS](https://github.com/microsoft/diskann)
+- [ ] ~~bubblewrap~~ 没有重写价值
+- [ ] ~~weasel~~ 有 GUI，不太适合直接 RIIR。我先维护了一个 [fork](https://github.com/lxl66566/weasel)。
 
 ### Android
 

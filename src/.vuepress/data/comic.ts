@@ -1224,5 +1224,6 @@ export default [
   { id: "678462", aScore: 7.5, bScore: 8.7, info: "#泳装 #强制性交 #4P #背叛", bak: "https://telegra.ph/ミナカミ理久-大好きだったお従兄ちゃん-COMIC-LOE-VOL24-noir-4-中国翻訳-08-31" },
   { id: "686520", aScore: 6.1, bScore: 8, info: "#4P #偷窥 #同学 #青春" },
   { id: "685291", aScore: 7.4, bScore: 8.1, info: "#女装 #3P #同学 #青春" },
+  { id: "678874", aScore: 8.1, bScore: 9.7, info: "#SM #捆绑 #玩具 #连续高潮 #纯爱 #木瀬樹", bak: "https://telegra.ph/林檎のなる木-木瀬樹-シュガーモーメント-中国翻訳-DL版-09-03" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
