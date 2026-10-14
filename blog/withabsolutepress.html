@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-CqZsSxAw.js">
+<link rel="modulepreload" href="../assets/entry-CsaVGVFX.js">
 <link rel="modulepreload" href="../assets/chrome-379cddde.js">
 <title>迁移 absolute-press | 绝对值_x 的博客</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -17,10 +17,10 @@
 <meta property="og:site_name" content="绝对值_x 的博客">
 <meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"迁移 absolute-press","url":"https://absx.pages.dev/blog/withabsolutepress","mainEntityOfPage":"https://absx.pages.dev/blog/withabsolutepress","description":"迁移 absolute-press 2022 年以来，我 一直在被 vuepress 坑 ，然而由于博客已经达到了相当大的体量，迁移成本非常高，我一度以为本博客要永久埋葬在 vuepress 里了。但是 2026 年 AI/agnet 光速发展，从前被认为是不可能的迁移，现在也看到了新的希望。 2026 国庆假期，我的…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-08T00:00:00.000Z","dateModified":"2026-10-13T23:23:51+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"迁移 absolute-press","url":"https://absx.pages.dev/blog/withabsolutepress","mainEntityOfPage":"https://absx.pages.dev/blog/withabsolutepress","description":"迁移 absolute-press 2022 年以来，我 一直在被 vuepress 坑 ，然而由于博客已经达到了相当大的体量，迁移成本非常高，我一度以为本博客要永久埋葬在 vuepress 里了。但是 2026 年 AI/agnet 光速发展，从前被认为是不可能的迁移，现在也看到了新的希望。 2026 国庆假期，我的…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-08T00:00:00.000Z","dateModified":"2026-10-14T10:21:36+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-Ie4JBGiB.css">
+<link rel="stylesheet" href="../assets/entry-Ddl3Ax2g.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
@@ -77,201 +77,10 @@
 <p>之后我测试时发现不太对劲，指出了许多样式问题，然后 AI 的解决方法是继续在这上面堆屎（reviewer 原话：<em>现状已经是军备竞赛，全库约 40 组 selector 纯为对轰而生，注释里 10 处在解释 specificity 决斗</em>）。</p>
 <p>必须要人类介入了！指挥 AI 重写了整个框架的 CSS，用 <code>@layer</code> 分层，彻底避免了覆盖和竞争问题。并且由于有 e2e 测试，重写后基本不需要花时间验证。</p>
 <p>[WIP]</p>
-<template class="ap-term-def" data-term="ai-solidjs-migration-plan"><p>（AI generated）</p>
-<p>对 lxl66566.github.io（vuepress-theme-hope 2.0.0-rc.79 + VuePress 2.0.0-rc.20 + Vite + pnpm）的全量扫描结论，目标：从 0 用 SolidJS 写博客框架，markdown 内容与 URL 尽量不动。</p>
-<h2 id="ap-term-1-一、现状盘点">一、现状盘点</h2>
-<ul>
-<li>技术栈：VuePress 2.0.0-rc.20 + vuepress-theme-hope 2.0.0-rc.79，bundler 为 Vite，包管理 pnpm；纯中文单语言站点（<code>lang: &quot;zh-CN&quot;</code>），无 i18n。</li>
-<li>部署：GitHub Actions（<code>.github/workflows/deploy-docs.yml</code>）push <code>code</code> 分支后构建，<code>JamesIves/github-pages-deploy-action@v4</code> 把 dist 发布到 <code>main</code> 分支（写 <code>.nojekyll</code>）；站点同时挂在 GitHub Pages / Cloudflare / Netlify / VPS 反代，域名为 <code>https://absx.pages.dev</code>。</li>
-<li>内容规模：170 个 md 文件、3707 个链接（677 个站内 <code>.md</code> 相对链接、318 个带锚点且大量为中文锚点、170 个 <code>.html</code> 链接、3 处 <code>#:~:text=</code> Text Fragment）、33 个手写 .vue 组件约 2900 行、<code>data/</code> 纯数据文件约 6700 行（galgame_list 2815、comic 1223、book_list 945、av 597、anime_list 366、job_list 136、article 93、gossip 52、learning 45）。</li>
-<li>md 目录结构与数量：articles 54（技术文章）、coding 35（编程笔记）、learning 22（课程笔记，公式重镇）、gossip 20（闲聊/作者）、hobbies 18（galgame.md 为 2000+ 行巨型文件）、essay 7（按年随笔）、hide 5（半隐藏页，不在导航）、farraginous 4（杂项）、blog 4（博客元页面）、index.md（站点主页）。</li>
-<li>关键好消息：33 个手写组件完全不依赖 vuepress 内部 API（无 usePageData、无 @theme 别名导入），只 import <code>vue</code> + 自有 <code>data/</code>、<code>definition/</code>、<code>utils/</code> 模块 + fuse.js。Vue 到 Solid 是纯语法翻译，不牵扯框架数据层。</li>
-</ul>
-<h2 id="ap-term-1-二、markdown-渲染管线-最大头-不改-md-的关键">二、Markdown 渲染管线（最大头，&quot;不改 md&quot;的关键）</h2>
-<p>新框架需要一个 markdown-it 管线。主题开了约二十个特性，实际用到的按用量决定实现范围。</p>
-<p>必须实现（有真实用量）：</p>
-<table>
-<thead>
-<tr>
-<th>特性</th>
-<th>实际用量</th>
-<th>实现方式</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>:::</code> 容器</td>
-<td>tabs 76、details 69、right(align) 22、tip 20、code-tabs 16、warning 13、danger 8、caution/error/info 各 1，共约 228 个开启行，嵌套用 <code>::::</code></td>
-<td>markdown-it-container 逐类型注册</td>
-</tr>
-<tr>
-<td><code>@tab</code></td>
-<td>235 处、32 个文件；含 <code>::: tabs#card</code> 带 id 的持久化变体（uno.md 单文件 29 个）</td>
-<td>自写或参考现有 tabs 插件，id 持久化选中状态</td>
-</tr>
-<tr>
-<td>数学公式</td>
-<td>行内 <code>$...$</code> 约 743 处、35 个文件；<code>$$</code> 块级为 0</td>
-<td>markdown-it-katex（或 texmath），KaTeX 沿用</td>
-</tr>
-<tr>
-<td>脚注</td>
-<td>129 个定义 + 146 个引用、52 个文件，存在中文 id（如 <code>[^胆结石]</code>）</td>
-<td>markdown-it-footnote，需验证 Unicode label</td>
-</tr>
-<tr>
-<td>tasklist</td>
-<td>210 项、3 个文件（blog/todo.md、hide/inspiration.md、gossip/schedule.md）</td>
-<td>markdown-it-task-lists</td>
-</tr>
-<tr>
-<td>Shiki 高亮</td>
-<td>全站代码块；<code>:collapsed-lines</code> / <code>:no-collapsed-lines</code> 代码块属性 8 处、<code>{2}</code> 行高亮</td>
-<td>shiki + 代码块 attrs 支持 + collapsedLines transformer</td>
-</tr>
-<tr>
-<td>图片尺寸</td>
-<td><code>=300x</code> 语法 12 处</td>
-<td>markdown-it-imsize 或 attrs</td>
-</tr>
-<tr>
-<td>mark <code>==x==</code></td>
-<td>约 5 处</td>
-<td>markdown-it-mark</td>
-</tr>
-<tr>
-<td>figure</td>
-<td>29 张独立成行图片转 <code>&lt;figure&gt;</code></td>
-<td>自写小规则</td>
-</tr>
-<tr>
-<td>HTML 透传</td>
-<td><code>&lt;span&gt;</code> 321（含 class=&quot;heimu&quot; 92）、<code>&lt;br&gt;</code> 197、<code>&lt;div&gt;</code> 40、<code>&lt;img&gt;</code> 19、<code>&lt;iframe&gt;</code> 17（嵌 public/charts 静态图表页）、<code>&lt;details&gt;</code> 12、<code>&lt;text style=&quot;color:red&quot;&gt;</code> 84 处（galgame.md，非标准标签）</td>
-<td>markdown-it 开 <code>html: true</code> 原样通过，浏览器按未知元素渲染</td>
-</tr>
-</tbody>
-</table>
-<p>可以砍掉（开启但 0 使用）：<code>include</code>(@src)、<code>spoiler</code>、<code>imgMark</code>、<code>stylize</code>(Recommended→Badge)、<code>&lt;!-- more --&gt;</code> 摘要分隔符（全站 0 个，<code>excerptLength: 1</code> 本来等于没摘要）。</p>
-<p>两个隐蔽的硬骨头：</p>
-<ol>
-<li>中文锚点 slug：318 个站内链接带锚点，锚点 id 必须与 VuePress 的 heading id 生成规则完全一致（保留中文、空格转连字符），否则全站深链断裂。这是&quot;不改 md&quot;的硬约束。</li>
-<li><code>.md</code> 相对链接解析：677 个 <code>./xxx.md</code> / <code>../xxx.md</code> 链接与 170 个 <code>.html</code> 链接，意味着新框架应沿用 <code>.html</code> 后缀的 URL 结构，构建期把 md 相对链接重写到目标路由。另有 3 处 <code>#:~:text=</code>，theme.ts 专门为此关掉了 activeHeaderLinks，新框架不要做滚动时改写 URL hash 的功能。</li>
-</ol>
-<h2 id="ap-term-1-三、md-内嵌组件与-template-插槽-最特殊的部分">三、md 内嵌组件与 <code>&lt;template #插槽&gt;</code>（最特殊的部分）</h2>
-<p>组件注册分两层：<code>client.ts</code> 全局注册 9 个小组件（TelegramLink、RSSLink、OrderBadge、dtls、dtlslong、heimu、ZoomedImg、dated、furigana）；<code>config.ts</code> 用 vite alias 注册 12 个列表组件供 md 直接使用（AvTable、ComicTable、GalExhibitionGrid、Av、reciter、ArticleCell、GalList、BookList、AnimeList、JobList、SpeedupList、CryptocurrencyExchangeList）。</p>
-<p>md 中的实际用量：</p>
-<ul>
-<li>全局小组件：<code>&lt;heimu&gt;</code> 黑幕 160 个标签（40+ 文件）、<code>&lt;Badge&gt;</code>（主题）43、<code>&lt;furigana&gt;</code> 注音 44、<code>&lt;dtlslong&gt;</code> 38、<code>&lt;ZoomedImg&gt;</code> 26、<code>&lt;dated&gt;</code> 15、<code>&lt;dtls&gt;</code> 10、<code>&lt;OrderBadge&gt;</code> 5、<code>&lt;Av&gt;</code> 14、<code>&lt;VPIcon&gt;</code> 2。</li>
-<li>大型列表组件 + 具名插槽：<code>&lt;GalList&gt;</code> 配 128 个 <code>&lt;template #作品名&gt;</code>、<code>&lt;BookList&gt;</code> 50、<code>&lt;SpeedupList&gt;</code> 25、<code>&lt;AnimeList&gt;</code> 22、<code>&lt;JobList&gt;</code> 17、另有 <code>&lt;ArticleCell&gt;</code>、<code>&lt;GalExhibitionGrid&gt;</code> 等，全站约 250 个 <code>&lt;template #xxx&gt;</code>。</li>
-</ul>
-<p>这是 SolidJS 迁移最别扭的点：Solid 没有具名插槽语法，而 md 里有 250 个。推荐路线：在 markdown 渲染管线加一个构建期转换规则，把 <code>&lt;GalList&gt;...&lt;/GalList&gt;</code> 内部的 <code>&lt;template #xxx&gt;内容&lt;/template&gt;</code> 解析出来转成 props 传给 Solid 组件（如编译成 island 调用 <code>&lt;GalList items={...} slots={{...}}&gt;</code> 或按 name 分桶的 children），md 一字不改。备选路线（改组件 API + 批量改 md）违背&quot;不改 md&quot;前提，不取。</p>
-<p>架构建议：走&quot;构建期把 md 渲染成静态 HTML + 交互组件做成 Solid islands&quot;的路线（VuePress 本质也是静态内容）。正文、容器、表格全是静态 HTML，只有 GalList 这类列表组件与主题 chrome 是 Solid。这也是把 250 个插槽转换做在构建期的前提。</p>
-<p><strong>作者说：这部分 markdown 需要修改，而不是去兼容。因为目的是抛弃陈旧的 vue 语法，改用强大的 tsx。这些 markdown 部分要搞成 mdx 还是就正常 md + 编译期替换，你自己看。</strong></p>
-<h2 id="ap-term-1-四、vue-到-solid-组件迁移">四、Vue 到 Solid 组件迁移</h2>
-<p>33 个组件（components/ 目录，约 2900 行）迁移为纯语法翻译。映射关系：</p>
-<ul>
-<li><code>ref</code> -&gt; <code>createSignal</code>；<code>computed</code> -&gt; <code>createMemo</code>；<code>watch</code> -&gt; <code>createEffect</code>；<code>onMounted</code>（9 处）-&gt; <code>onMount</code>。</li>
-<li><code>v-model</code>（17 处）-&gt; <code>value</code> prop + <code>onChange</code>/<code>onInput</code> 回调。</li>
-<li><code>defineProps</code>（21 处）-&gt; Solid props 解构或直接访问；<code>defineEmits</code>（2 处）-&gt; 回调 props。</li>
-<li>默认插槽 -&gt; <code>props.children</code>；<code>useSlots()</code> 动态具名插槽（GalList 按条目名取插槽再转发的模式）-&gt; 传 render 函数或键值对。</li>
-<li>组件依赖：仅 <code>vue</code>、自有 <code>data/*.ts</code>（纯数据，原样复用）、<code>definition/*.ts</code>（纯类型，原样复用）、<code>utils/*.ts</code>（debounce/FormatDate/NumberToChinese/PartitionArray，纯函数，原样复用）、fuse.js（沿用）。</li>
-</ul>
-<p>代表组件规模：GalList 263 行 + GalListItem 173 行（搜索/排序/展开，fuse.js + 动态插槽，最复杂）、CryptocurrencyExchangeList 212 行、SpeedupList 268 行、ZoomedImg 164 行（photoSwipe 类缩放交互）、heimu 55 行（最简单，可作迁移模板验证管线）。</p>
-<h2 id="ap-term-1-五、布局系统-navbar-sidebar-toc">五、布局系统：navbar / sidebar / TOC</h2>
-<p>省略</p>
-<h2 id="ap-term-1-六、博客系统">六、博客系统</h2>
-<ul>
-<li>frontmatter 约定（全站实际只用这几个键）：<code>date</code>(170)、<code>category</code>(169，单数键名 + YAML 列表)、<code>tag</code>(140，同样单数)、<code>icon</code>(159，FontAwesome 短名)、<code>feed: false</code>(3，均在 hide/)、<code>externalLinkIcon: false</code>(3，NSFW 三页)、首页的 <code>home</code>/<code>layout: BlogHome</code>/<code>hero: false</code>。没有任何文件用 <code>title</code>，标题全靠正文 <code># 一级标题</code>，新框架要从首个 h1 提取标题。没有 star/order/sticky/cover/excerpt 等。</li>
-<li>首页（src/index.md）：<code>layout: BlogHome</code> + <code>hero: false</code>，渲染博主信息卡（name 绝对值_x、intro /gossip/author.html、medias GitHub+Telegram+Bilibili）+ 文章流（articlePerPage: 3 分页）。首页样式可重写，但文章流 + 每页 3 篇分页的行为要有。</li>
-<li>标签/分类归档页：没有手写 tags.md/categories.md，归档页完全由主题 blog 插件自动生成（<code>/category/xxx</code>、<code>/tag/xxx</code>，从文章信息里的链接进入）。新框架要实现从 frontmatter 聚合 category/tag 生成归档页（带分页），URL 路径建议保持一致。</li>
-<li>文章信息行：<code>Date, Category, PageView, Tag, ReadingTime</code>。PageView 是死的（Giscus 不提供浏览量，站内无任何统计后端），可砍。ReadingTime 需自实现（中文按字数/阅读速度）。</li>
-<li>RSS：<code>feed: { rss: true, count: 20 }</code> 生成 <code>/rss.xml</code>，<code>feed: false</code> 可排除（hide/ 三页在用）。构建期生成即可。</li>
-</ul>
-<h2 id="ap-term-1-七、功能集成">七、功能集成</h2>
-<p>Algolia DocSearch</p>
-<p>Giscus 评论区（GitHub Discussions）</p>
-<p>文章加密</p>
-<p>FontAwesome 图标</p>
-<p>图片体验与其他</p>
-<p>photoSwipe（点图放大）+ imgLazyload 为全自动插件，新框架要自带等价物（photoSwipe 库可直接沿用 + <code>loading=&quot;lazy&quot;</code>）。Google Analytics（G-MKRDBH1ZP1，一个 script 标签）。SEO 插件（hostname https://absx.pages.dev，生成 og meta）；当前反而未装 sitemap 插件，新框架可补上。暗色模式为主题默认开关（<code>html[data-theme=&quot;dark&quot;]</code> + localStorage），giscus 与样式都挂在该属性上。<code>remove-pwa</code> 插件是一次性清理历史 PWA 缓存，迁移后不需要。</p>
-</template><template class="ap-term-def" data-term="ai-islands-architecture"><p>（AI generated）</p>
-<h3 id="ap-term-2-一、-什么是-孤岛架构-islands-architecture">一、 什么是“孤岛架构”（Islands Architecture）？</h3>
-<p>“孤岛架构”的概念最早由 Etsy 的架构师提出，后由 Preact 作者 Jason Miller 在 2020 年系统性阐述，而 <strong>Astro 是将其工程化落地最彻底的框架</strong>。</p>
-<h4 id="ap-term-2-_1-形象的比喻">1. 形象的比喻</h4>
-<ul>
-<li><strong>大海（Sea）</strong>：指的是页面的主体部分——<strong>纯静态的 HTML/CSS</strong>。比如文章内容、导航菜单的样式、页脚、侧边栏文字等。它们不需要任何 JavaScript 就能展示。</li>
-<li><strong>孤岛（Island）</strong>：指的是散落在静态海洋中、<strong>确实需要交互的小组件</strong>。比如一个动态搜索框、点赞按钮、轮播图或购物车预览。</li>
-</ul>
-<h4 id="ap-term-2-_2-工作原理与对比">2. 工作原理与对比</h4>
-<ul>
-<li><strong>传统 SPA/SSR（如传统的 Next.js / Nuxt）</strong>：
-<ul>
-<li><strong>全量水合（Full Page Hydration）</strong>：即使你的页面 90% 都是纯文字，服务器渲染出 HTML 后，客户端仍需要下载整个页面甚至整个应用的巨大 JS Bundle，把整棵虚拟 DOM 树重新跑一遍，把事件监听挂载上去。</li>
-<li><strong>代价</strong>：占用主线程、消耗大量网络流量，导致 TTI（可交互时间）变长，低端设备容易卡顿。</li>
-</ul>
-</li>
-<li><strong>Astro 孤岛架构</strong>：
-<ul>
-<li><strong>默认零 JS（Zero JS by default）</strong>：只要你不显式要求，Astro 渲染的页面只输出 HTML 和 CSS，<strong>不包含任何运行时（Runtime）JS</strong>。</li>
-<li><strong>独立、按需水合（Selective/Partial Hydration）</strong>：只有被标记为“孤岛”的组件才会打包并下载 JS。而且每个孤岛是<strong>完全独立</strong>的，彼此隔离水合。</li>
-</ul>
-</li>
-</ul>
-<h4 id="ap-term-2-_3-astro-的指令控制">3. Astro 的指令控制</h4>
-<p>在 Astro 中，你可以引入 React、Vue 或 Svelte 组件，并通过客户端指令（Client Directives）精细控制它的加载时机：</p>
-<div class="ap-code ap-code--ln" data-lang="astro" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">astro</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
-<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-astro"><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- 默认情况：渲染为纯 HTML，客户端不加载任何 JS --></span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF">Header</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> /></span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- 孤岛 1：页面加载时立即水合交互 --></span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF">SearchInput</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> client:load</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> /></span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- 孤岛 2：浏览器空闲时再加载水合（不阻塞主渲染） --></span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF">ThemeToggle</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> client:idle</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> /></span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">&#x3C;!-- 孤岛 3：滚动到视口内时才加载水合（如底部的评论区） --></span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF">CommentSection</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> client:visible</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> /></span></span></code></pre></div>
-<hr>
-<h3 id="ap-term-2-二、-astro-这种架构的核心优势">二、 Astro 这种架构的核心优势</h3>
-<h4 id="ap-term-2-_1-极致的加载性能与-core-web-vitals-核心性能指标">1. 极致的加载性能与 Core Web Vitals（核心性能指标）</h4>
-<ul>
-<li><strong>体积断崖式下跌</strong>：传统 SSR 页面即使是个简单的文档站，首屏 JS 往往也要 100KB~300KB+；而 Astro 页面通常只有几 KB 甚至 0 KB JS。</li>
-<li><strong>指标优秀</strong>：由于省去了庞大的 JS 解析与执行时间，FCP（首次内容绘制）、LCP（最大内容绘制）极快，且 <strong>INP（交互到下次绘制）/ TBT（总阻塞时间）</strong> 表现极为优秀，基本不会出现“看得见但点不动”的假死状态。</li>
-</ul>
-<h4 id="ap-term-2-_2-渐进式水合与延迟加载-lazy-hydration">2. 渐进式水合与延迟加载（Lazy Hydration）</h4>
-<ul>
-<li>在 SPA 中实现组件级的按需延迟水合非常复杂；但在 Astro 中，只需一个 <code>client:visible</code>，组件的 JS 只有在用户滚动到它附近时才会下载并执行。</li>
-<li>这极大地节省了用户的移动端网络带宽和设备的 CPU/内存开销。</li>
-</ul>
-<h4 id="ap-term-2-_3-框架无关与无缝集成-byof-bring-your-own-framework">3. 框架无关与无缝集成（BYOF: Bring Your Own Framework）</h4>
-<ul>
-<li>因为每个孤岛都是独立的上下文，你可以<strong>在同一个页面里自由混用不同的 UI 框架</strong>：
-<ul>
-<li>导航栏用 React 写；</li>
-<li>数据图表用 Svelte 写；</li>
-<li>表单交互用 Vue 写。</li>
-</ul>
-</li>
-<li>这对于大型团队的旧系统迁移或渐进式重构极其友好。</li>
-</ul>
-<h4 id="ap-term-2-_4-容错性与韧性极高-fault-tolerance">4. 容错性与韧性极高（Fault Tolerance）</h4>
-<ul>
-<li>在传统的 React/Vue SPA 中，如果一个组件在客户端运行时抛出未捕获的异常，可能会导致整棵渲染树崩溃，甚至直接白屏。</li>
-<li>在孤岛架构中，每个孤岛是隔离的沙盒。<strong>即使评论组件的 JS 报错挂掉了，页面的其他部分和文章内容依然完好无损，用户完全不受影响</strong>。</li>
-</ul>
-<h4 id="ap-term-2-_5-优秀的-seo-和原生语义">5. 优秀的 SEO 和原生语义</h4>
-<ul>
-<li>页面是纯正的 MPA 架构，每个路由都有独立完整的 HTML 文档。搜索引擎爬虫在首个 HTTP 响应中就能抓到 100% 的文字和元数据，对 SEO 极为友好。</li>
-</ul>
-<h4 id="ap-term-2-_6-现代-mpa-兼顾-spa-的平滑体验">6. 现代 MPA：兼顾 SPA 的平滑体验</h4>
-<ul>
-<li>传统的 MPA 缺点在于每次跳转都会“白屏刷新”，用户体验略逊于 SPA。</li>
-<li>但 Astro 引入了基于现代浏览器标准的 <strong>View Transitions（视图转换 API）</strong>：它依然保持 MPA 的架构和轻量，但在路由跳转时能实现类似 SPA 的无缝淡入淡出、元素共享动画和状态保持。</li>
-</ul>
-</template><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
+<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
 <div id="ap-toc" class="ap-toc"></div>
 <footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/blog/withabsolutepress","locale":"root","title":"迁移 absolute-press","headings":[{"level":1,"text":"迁移 absolute-press","slug":"迁移-absolute-press"},{"level":2,"text":"设计","slug":"设计"},{"level":2,"text":"编写与测试","slug":"编写与测试"},{"level":2,"text":"一些奇思妙想","slug":"一些奇思妙想"},{"level":3,"text":"文章关联图","slug":"文章关联图"},{"level":2,"text":"开发过程中的踩坑","slug":"开发过程中的踩坑"},{"level":3,"text":"CSS 竞技地狱","slug":"css-竞技地狱"}],"frontmatter":{"date":"2026-10-08","category":["博客","教程","经历"],"icon":"solid/circle-check"},"createdAt":"2026-10-08T00:00:00.000Z","updatedAt":"2026-10-13T23:23:51+08:00","readingTime":6,"excerpt":"迁移 absolute-press 2022 年以来，我 一直在被 vuepress 坑 ，然而由于博客已经达到了相当大的体量，迁移成本非常高，我一度以为本博客要永久埋葬在 vuepress 里了。但是 2026 年 AI/agnet 光速发展，从前被认为是不可能的迁移，现在也看到了新的希望。 2026 国庆假期，我的…"},"related":[{"route":"/blog/","title":"关于博客","refs":1,"links":[{"route":"/blog/withvuepress2","refs":4},{"route":"/coding/mdx","refs":2},{"route":"/blog/log","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/blog/withvuepress2","refs":10},{"route":"/blog/","refs":1}]},{"route":"/blog/withvuepress2","title":"折腾 Vuepress","refs":1,"links":[{"route":"/blog/log","refs":10},{"route":"/blog/","refs":4}]},{"route":"/coding/mdx","title":"MDX","refs":1,"links":[{"route":"/blog/","refs":2}]}]}</script>
-<script type="module" src="../assets/entry-CqZsSxAw.js"></script>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/blog/withabsolutepress","locale":"root","title":"迁移 absolute-press","headings":[{"level":1,"text":"迁移 absolute-press","slug":"迁移-absolute-press"},{"level":2,"text":"设计","slug":"设计"},{"level":2,"text":"编写与测试","slug":"编写与测试"},{"level":2,"text":"一些奇思妙想","slug":"一些奇思妙想"},{"level":3,"text":"文章关联图","slug":"文章关联图"},{"level":2,"text":"开发过程中的踩坑","slug":"开发过程中的踩坑"},{"level":3,"text":"CSS 竞技地狱","slug":"css-竞技地狱"}],"frontmatter":{"date":"2026-10-08","category":["博客","教程","经历"],"icon":"solid/circle-check"},"createdAt":"2026-10-08T00:00:00.000Z","updatedAt":"2026-10-14T10:21:36+08:00","readingTime":6,"excerpt":"迁移 absolute-press 2022 年以来，我 一直在被 vuepress 坑 ，然而由于博客已经达到了相当大的体量，迁移成本非常高，我一度以为本博客要永久埋葬在 vuepress 里了。但是 2026 年 AI/agnet 光速发展，从前被认为是不可能的迁移，现在也看到了新的希望。 2026 国庆假期，我的…"},"related":[{"route":"/blog/","title":"关于博客","refs":1,"links":[{"route":"/blog/withvuepress2","refs":4},{"route":"/coding/mdx","refs":2},{"route":"/blog/log","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/blog/withvuepress2","refs":10},{"route":"/blog/","refs":1}]},{"route":"/blog/withvuepress2","title":"折腾 Vuepress","refs":1,"links":[{"route":"/blog/log","refs":10},{"route":"/blog/","refs":4}]},{"route":"/coding/mdx","title":"MDX","refs":1,"links":[{"route":"/blog/","refs":2}]}],"refs":"../assets/refs-c2038fb7.js"}</script>
+<script type="module" src="../assets/entry-CsaVGVFX.js"></script>
 </body>
 </html>
