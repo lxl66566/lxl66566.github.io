@@ -1223,5 +1223,6 @@ export default [
   { id: "678024", aScore: 10.2, bScore: 8.9, info: "#兽耳 #正太 #堕天计划 堕天計画 ～孤独を秘めた天使長編～", bak: "https://telegra.ph/234ド-イチリ-堕天計画-孤独を秘めた天使長編-中国翻訳-DL版-08-30-4" },
   { id: "678462", aScore: 7.5, bScore: 8.7, info: "#泳装 #强制性交 #4P #背叛", bak: "https://telegra.ph/ミナカミ理久-大好きだったお従兄ちゃん-COMIC-LOE-VOL24-noir-4-中国翻訳-08-31" },
   { id: "686520", aScore: 6.1, bScore: 8, info: "#4P #偷窥 #同学 #青春" },
+  { id: "685291", aScore: 7.4, bScore: 8.1, info: "#女装 #3P #同学 #青春" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];
