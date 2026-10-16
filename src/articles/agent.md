@@ -166,6 +166,7 @@ opencode 作为一个 agent，只能算是达到 agent 的基本水平。在使�
 21. 修改上一条提示词时，同时修改模型，则界面上展示使用的新的模型，但是实际调用还是调用老的模型。
 22. **恶性 bug**：出现一次：subagent 干活干一半然后莫名其妙回到主线程，所有 subagent 全部被中断
 23. **恶性 bug**：几天前的 session 想要重新开始用，模型已选择，然而发 `/Compact` 后报错 _Select a model before continuing_。fork session 后重发 `/Compact`，无效。只能先发一条 message 然后再进行 compact。
+24. agent 在 session 里启动的 server 不会在会话结束后自动退出。每次我都会遇到端口冲突问题，一看就是 agent 用来做调试的 server 不会自动退。
 
 ## [pi](https://github.com/earendil-works/pi)
 

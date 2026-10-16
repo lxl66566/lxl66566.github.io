@@ -50,7 +50,7 @@ description: 绝对值_x 的个人博客：版块导向，编程、爱好记录�
 
 - 本站地址[^4]：[absx.pages.dev](https://absx.pages.dev) | [absx.netlify.app](https://absx.netlify.app) | [lxl66566.github.io](https://lxl66566.github.io)
 - 本博客原创文章遵循我的自定义声明：**可任意修改、转载、再发布；对于非商业用途，转载可以不注明来源；商业用途则需要标注来源。**
-- 本项目 markdown 内容未开启 AI 生成/自动补全，所有主观内容的人类覆盖率为 100%。
+- 本项目 markdown 内容**未开启** AI 生成/自动补全，所有主观内容为 100% human。
 
 [^4]: github.io 较慢，且**可能**无法加载图片，参考[图床国内无法解析](./blog/withvuepress2.md#图床国内无法解析问题)。（虽然 cloudflare 也挺慢的）
 
@@ -58,10 +58,12 @@ description: 绝对值_x 的个人博客：版块导向，编程、爱好记录�
 
 ## 单方外链
 
-> 单方面引用的公开博客。（本站不接受传统意义上的友链）
+单方面引用的公开博客[^单方外链]。
 
-- [asukaminato.notion.site](https://asukaminato.notion.site)
-- [夜天之书](https://www.tisonkun.org/)
+[^单方外链]: 本站不接受传统意义上的友链互换。
+
+- [asukaminato.notion.site](https://asukaminato.notion.site)：学长，接受过一些指点
+- [夜天之书](https://www.tisonkun.org/)：比较赞同理念
 
 ## 我的项目
 
