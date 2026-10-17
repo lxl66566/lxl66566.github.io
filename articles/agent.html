@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-BHdqt6kC.js">
+<link rel="modulepreload" href="../assets/entry-_oSCS7Ut.js">
 <link rel="modulepreload" href="../assets/chrome-379cddde.js">
 <title>Agent 工具横评 | 绝对值_x 的博客</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -17,10 +17,10 @@
 <meta property="og:site_name" content="绝对值_x 的博客">
 <meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Agent 工具横评","url":"https://absx.pages.dev/articles/agent","mainEntityOfPage":"https://absx.pages.dev/articles/agent","description":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。 cursor cursor 是各个 agent 的元老。2025 年我的毕设有 cursor…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-13T00:00:00.000Z","dateModified":"2026-10-16T21:19:39+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Agent 工具横评","url":"https://absx.pages.dev/articles/agent","mainEntityOfPage":"https://absx.pages.dev/articles/agent","description":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。 cursor cursor 是各个 agent 的元老。2025 年我的毕设有 cursor…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-13T00:00:00.000Z","dateModified":"2026-10-18T04:40:06+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-v6Lc9aYm.css">
+<link rel="stylesheet" href="../assets/entry-DWDdNJku.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
@@ -130,6 +130,63 @@
 <h3 id="经验">经验</h3>
 <p>有一些技巧，可以卡这个重置的掉落时间。重置每天最多掉落两次，限 2h 内使用，并且只会在 zcode 处于前台窗口的时候掉落。因此我可以不打开 zcode，大概到距离自然刷新还有 30min 的时候，打开 zcode 并获取重置卡。这样自然刷新后距离重置卡到期还会有 1.5h 的 gap，可以够我蹬完一管。</p>
 <p>一定要开启 <em>自动归档旧任务</em>。zcode 的 session 存储设计有问题，不开的话 <code>~/.zcode</code> 大小会非常恐怖。</p>
+<p>zcode 不读 <code>~/.agents/AGENTS.md</code>，全局提示要放在 <code>~/.zcode/AGENTS.md</code>。由于我希望对 zcode 附加一些专用的约束，所以我不太想用 hardlink，于是直接在 <code>~/.zcode/AGENTS.md</code> 声明让 agent 去读 <code>~/.agents/AGENTS.md</code>：<code>**You MUST read and strictly adhere to all instructions, standards, and constraints defined in ~/.agents/AGENTS.md (%USERPROFILE%/.agents/AGENTS.md if windows) before proceeding with any user tasks. Treat its rules with the same authority as this file.**</code>。然而实战里成功率实在是太低了，glm 5.3/5.3f 基本都不会遵循指令去读。所以只好写个 hook 强制注入进去（args 记得改成 mjs 的绝对路径，因为 <code>~</code> 不会被展开所以没法用 <code>~</code> 跨平台）：</p>
+<div class="ap-tabs ap-tabs--code">
+<input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-code-tabs-1-1" checked>
+<label class="ap-tabs__label" for="ap-tab-1">~/.zcode/cli/configs.json</label>
+<div class="ap-tab" data-title="~/.zcode/cli/configs.json">
+<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="json" style="--ap-ln-w:2ch;counter-reset:ap-lines 20"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-2">
+<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "hooks"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    "enabled"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    "events"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">      "SessionStart"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        {</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">          "matcher"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"startup|clear|compact"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">          "hooks"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">            {</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">              "type"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"process"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">              "command"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"node"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">              "args"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"/root/.zcode/hooks/inject-agents.mjs"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">],</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">              "timeoutMs"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">5000</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">            }</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">          ]</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">        }</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">      ]</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-2"></label>
+</div>
+</div>
+<input class="ap-tabs__radio" type="radio" id="ap-tab-2" name="ap-tabs-code-tabs-1-1">
+<label class="ap-tabs__label" for="ap-tab-2">~/.zcode/hooks/inject-agents.mjs</label>
+<div class="ap-tab" data-title="~/.zcode/hooks/inject-agents.mjs">
+<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="js" style="--ap-ln-w:2ch;counter-reset:ap-lines 20"><div class="ap-code__tools"><span class="ap-code__lang">js</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-3">
+<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-js"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> { readFile } </span><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "node:fs/promises"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> { homedir } </span><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "node:os"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> { join } </span><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "node:path"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">// Cross-platform: resolve home in-script (process hooks get no shell, so ~/$HOME never expand).</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">let</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> content </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> ""</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">try</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  content </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#D73A49;--shiki-dark:#F97583"> await</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> readFile</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">join</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">homedir</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(), </span><span style="color:#032F62;--shiki-dark:#9ECBFF">".agents"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"AGENTS.md"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">), </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"utf8"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">} </span><span style="color:#D73A49;--shiki-dark:#F97583">catch</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {} </span><span style="color:#6A737D;--shiki-dark:#6A737D">// missing file: inject nothing, exit 0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (content) {</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  process.stdout.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">write</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    JSON</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">stringify</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">      hookSpecificOutput: {</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        hookEventName: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"SessionStart"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">        additionalContext: content,</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">      },</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }),</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">  );</span></span>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-3"></label>
+</div>
+</div>
+</div>
 <p>还有说说闲时任务的限制：</p>
 <ul>
 <li>闲时任务限时，大约 4 小时，超时会爆 <em>off-peak-ticket-expired: off-peak ticket is invalid or expired</em>。</li>
@@ -148,7 +205,6 @@
 <li>给模型用的终端工具一坨。开个会话问问模型就知道，zcode 给 AI 的终端是“default shell”，这在 Windows 上还是 cmd 而不是 powershell。虽然 powershell 坑比较多，但是总比啥都没有的 cmd 好吧。给模型的系统提示词里也没有终端使用教程，只有一点 cli 规范。
 <ul>
 <li>有一堆无法关闭的内置 MCP。</li>
-<li>zcode 不读 <code>~/.agents/AGENTS.md</code>，全局提示要放在 <code>~/.zcode/AGENTS.md</code>。由于我希望对 zcode 附加一些专用的约束，所以我不太想用 hardlink，直接在 <code>~/.zcode/AGENTS.md</code> 声明让 agent 去读 <code>~/.agents/AGENTS.md</code> 即可。</li>
 <li><strong>恶性 bug</strong>：zcode 给 agent 提供的「内置任务」功能（实际上是 Bash + <code>run_in_background: true</code> 实现的）非常难用，很多时候终端进程都已经 panic 了，但是任务本身不会结束，就一直挂着浪费时间等 timeout。所以全局提示里需要写一句“禁止使用 run_in_background”。</li>
 </ul>
 </li>
@@ -203,6 +259,7 @@
 <li><strong>恶性 bug</strong>：出现一次：subagent 干活干一半然后莫名其妙回到主线程，所有 subagent 全部被中断</li>
 <li><strong>恶性 bug</strong>：几天前的 session 想要重新开始用，模型已选择，然而发 <code>/Compact</code> 后报错 <em>Select a model before continuing</em>。fork session 后重发 <code>/Compact</code>，无效。只能先发一条 message 然后再进行 compact。</li>
 <li>agent 在 session 里启动的 server 不会在会话结束后自动退出。每次我都会遇到端口冲突问题，一看就是 agent 用来做调试的 server 不会自动退。</li>
+<li>神经的 HighSpeed 模式：深夜我正常使用中，然后在我发出提示词之后 zcode 自动给我提升到 HighSpeed 模式体验 15 分钟。这本来算是个福利，但是这模式下居然不能开 subagent，而我的提示词本来就是要开 subagent 的，整的这一出反而打断了我的工作流程。(<a href="https://t.me/absolutexsward/507" class="ap-external">src</a>)</li>
 </ol>
 <h2 id="pi"><a href="https://github.com/earendil-works/pi" class="ap-external">pi</a></h2>
 <p>由于 <a href="#opencode">opencode 太难用太狗屎</a>了，让我的怨气值积攒到了一定水平，然后根据一个契机<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>就换到了 pi。</p>
@@ -212,7 +269,7 @@
 <li>两次 Ctrl + C 退出</li>
 <li><code>/resume</code> 恢复之前的 session，而不是 <code>/session</code>；<code>/tree</code> 浏览对话并 revert 而不是 <code>/revert</code>。</li>
 <li>1M 上下文是模型公司的陷阱，只会让你的账单爆炸。所以我需要强制限制模型的 contextWindow，一定用量自动 compact。但是 pi 的 <code>agent/models-store.json</code> 是只读的（就算改了也会被 pi 定期更新覆盖掉），所以需要编辑 <code>agent/models.json</code> 并且配置 override：<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="json" style="--ap-ln-w:2ch;counter-reset:ap-lines 21"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
-<input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-2">
+<input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-4">
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "providers"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    "kimi-coding"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
@@ -233,7 +290,7 @@
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">      }</span></span>
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
-<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-2"></label>
+<span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-4"></label>
 </div>
 </li>
 </ul>
@@ -311,7 +368,7 @@
 <div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
 <div id="ap-toc" class="ap-toc"></div>
 <footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/agent","locale":"root","title":"Agent 工具横评","headings":[{"level":1,"text":"Agent 工具横评","slug":"agent-工具横评"},{"level":2,"text":"cursor","slug":"cursor"},{"level":2,"text":"opencode","slug":"opencode"},{"level":3,"text":"心得","slug":"心得"},{"level":3,"text":"opencode 有多难用","slug":"opencode-有多难用"},{"level":3,"text":"总结","slug":"总结"},{"level":2,"text":"zcode","slug":"zcode"},{"level":3,"text":"经验","slug":"经验"},{"level":3,"text":"开喷","slug":"开喷"},{"level":2,"text":"pi","slug":"pi"},{"level":3,"text":"使用技巧","slug":"使用技巧"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"坑点/吐槽","slug":"坑点-吐槽"},{"level":3,"text":"与 oh-my-pi 比较","slug":"与-oh-my-pi-比较"}],"frontmatter":{"date":"2026-10-13","category":["评价"],"tag":["横评","工具","桌面端"],"icon":"brands/signal-messenger"},"createdAt":"2026-10-13T00:00:00.000Z","updatedAt":"2026-10-16T21:19:39+08:00","readingTime":19,"excerpt":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。 cursor cursor 是各个 agent 的元老。2025 年我的毕设有 cursor…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-BHdqt6kC.js"></script>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/agent","locale":"root","title":"Agent 工具横评","headings":[{"level":1,"text":"Agent 工具横评","slug":"agent-工具横评"},{"level":2,"text":"cursor","slug":"cursor"},{"level":2,"text":"opencode","slug":"opencode"},{"level":3,"text":"心得","slug":"心得"},{"level":3,"text":"opencode 有多难用","slug":"opencode-有多难用"},{"level":3,"text":"总结","slug":"总结"},{"level":2,"text":"zcode","slug":"zcode"},{"level":3,"text":"经验","slug":"经验"},{"level":3,"text":"开喷","slug":"开喷"},{"level":2,"text":"pi","slug":"pi"},{"level":3,"text":"使用技巧","slug":"使用技巧"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"坑点/吐槽","slug":"坑点-吐槽"},{"level":3,"text":"与 oh-my-pi 比较","slug":"与-oh-my-pi-比较"}],"frontmatter":{"date":"2026-10-13","category":["评价"],"tag":["横评","工具","桌面端"],"icon":"brands/signal-messenger"},"createdAt":"2026-10-13T00:00:00.000Z","updatedAt":"2026-10-18T04:40:06+08:00","readingTime":19,"excerpt":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。 cursor cursor 是各个 agent 的元老。2025 年我的毕设有 cursor…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-_oSCS7Ut.js"></script>
 </body>
 </html>
