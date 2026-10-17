@@ -206,6 +206,13 @@ const data: SpeedupItemType[] = [
     save_format: "noa",
     speedupable: true,
   },
+  {
+    names: ["STEINS;GATE RE:BOOT"],
+    valid_name: "STEINSGATE",
+    engine: "Kaleido ADV Workshop",
+    save_format: "bin",
+    speedupable: true,
+  },
 ];
 
 export default data;

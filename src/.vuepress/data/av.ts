@@ -115,7 +115,7 @@ export default [
   { id: "APNS-302", aScore: 7.9, bScore: 4.7 },
   { id: "STARS-109", aScore: 5.6, bScore: 7 },
   { id: "SHKD-869", aScore: 5.5, bScore: 7.1 },
-  { id: "CAWD-419", aScore: 5, bScore: 7.6, u: true },
+  { id: "CAWD-419", aScore: 7.3, bScore: 7.7, u: true },
   { id: "IPZZ-046", aScore: 9, bScore: 3.5 },
   { id: "ADN-210", aScore: 5.8, bScore: 6.6, u: true },
   { id: "ATID-522", aScore: 5.7, bScore: 6.6, u: true },
@@ -596,4 +596,7 @@ export default [
   { id: "URKK-111", aScore: 8.6, bScore: 6.7, name: "隣の変態大家におっぱいを揉まれ毎日犯●れてます 柏木こなつ", say: "妆有点重了。男优演的残疾人，没看出啥明显漏洞，但是限制了体位是事实，而且这个主题全靠女优主动来推进剧情也非常怪。" },
   { id: "MEYD-840", aScore: 5.4, bScore: 7, say: "太老了！" },
   { id: "SAME-058", aScore: 8.4, bScore: 9.1, name: "トラウマレ●プ 5年前にレ●プした女を今度は愛する人の目の前でレ●プしてやった（笑） 二宮ひかり" },
+  { id: "MIDA-521", aScore: 6.5, bScore: 5.4, name: "びゅくびゅく崩壊寸前のおしっこ我慢中に種付けプレス中出し！！ 泉ももか" },
+  { id: "MIAB-147", aScore: 8, bScore: 6, name: "睡姦キメセクレ×プ 僕が先に好きだったのに…思いを寄せていた幼馴染が親友と付き合ったことを知った僕は、彼女を眠らせ中出し15発OVER 柏木こなつ" },
+  { id: "MIAB-577", aScore: 8.6, bScore: 7.8, name: "義兄の大好物は私のチクビでした…子供の頃からオッパイの成長を観察し続ける変態性欲アニキに乳首イキするまで悪戯された私… 北岡果林" },
 ] as AvItemType[];

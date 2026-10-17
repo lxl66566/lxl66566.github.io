@@ -117,6 +117,62 @@ opencode 作为一个 agent，只能算是达到 agent 的基本水平。在使�
 
 一定要开启 _自动归档旧任务_。zcode 的 session 存储设计有问题，不开的话 `~/.zcode` 大小会非常恐怖。
 
+zcode 不读 `~/.agents/AGENTS.md`，全局提示要放在 `~/.zcode/AGENTS.md`。由于我希望对 zcode 附加一些专用的约束，所以我不太想用 hardlink，于是直接在 `~/.zcode/AGENTS.md` 声明让 agent 去读 `~/.agents/AGENTS.md`：`**You MUST read and strictly adhere to all instructions, standards, and constraints defined in ~/.agents/AGENTS.md (%USERPROFILE%/.agents/AGENTS.md if windows) before proceeding with any user tasks. Treat its rules with the same authority as this file.**`。然而实战里成功率实在是太低了，glm 5.3/5.3f 基本都不会遵循指令去读。所以只好写个 hook 强制注入进去（args 记得改成 mjs 的绝对路径，因为 `~` 不会被展开所以没法用 `~` 跨平台）：
+
+::: code-tabs
+
+@tab ~/.zcode/cli/configs.json
+
+```json
+{
+  "hooks": {
+    "enabled": true,
+    "events": {
+      "SessionStart": [
+        {
+          "matcher": "startup|clear|compact",
+          "hooks": [
+            {
+              "type": "process",
+              "command": "node",
+              "args": ["/root/.zcode/hooks/inject-agents.mjs"],
+              "timeoutMs": 5000
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+@tab ~/.zcode/hooks/inject-agents.mjs
+
+```js
+import { readFile } from "node:fs/promises";
+import { homedir } from "node:os";
+import { join } from "node:path";
+
+// Cross-platform: resolve home in-script (process hooks get no shell, so ~/$HOME never expand).
+let content = "";
+try {
+  content = await readFile(join(homedir(), ".agents", "AGENTS.md"), "utf8");
+} catch {} // missing file: inject nothing, exit 0
+
+if (content) {
+  process.stdout.write(
+    JSON.stringify({
+      hookSpecificOutput: {
+        hookEventName: "SessionStart",
+        additionalContext: content,
+      },
+    }),
+  );
+}
+```
+
+:::
+
 还有说说闲时任务的限制：
 
 - 闲时任务限时，大约 4 小时，超时会爆 _off-peak-ticket-expired: off-peak ticket is invalid or expired_。
@@ -132,7 +188,6 @@ opencode 作为一个 agent，只能算是达到 agent 的基本水平。在使�
 0. 代码安全问题：[zcode 跟 grok 一样会把你的仓库加密上传云端](https://blog.ferstar.org/en/posts/zcode-silent-workspace-snapshot-upload/)。
 1. 给模型用的终端工具一坨。开个会话问问模型就知道，zcode 给 AI 的终端是“default shell”，这在 Windows 上还是 cmd 而不是 powershell。虽然 powershell 坑比较多，但是总比啥都没有的 cmd 好吧。给模型的系统提示词里也没有终端使用教程，只有一点 cli 规范。
    - 有一堆无法关闭的内置 MCP。
-   - zcode 不读 `~/.agents/AGENTS.md`，全局提示要放在 `~/.zcode/AGENTS.md`。由于我希望对 zcode 附加一些专用的约束，所以我不太想用 hardlink，直接在 `~/.zcode/AGENTS.md` 声明让 agent 去读 `~/.agents/AGENTS.md` 即可。
    - **恶性 bug**：zcode 给 agent 提供的「内置任务」功能（实际上是 Bash + `run_in_background: true` 实现的）非常难用，很多时候终端进程都已经 panic 了，但是任务本身不会结束，就一直挂着浪费时间等 timeout。所以全局提示里需要写一句“禁止使用 run_in_background”。
 2. 对于 agent 命令操作，zcode 其实是有沙盒的，执行 bash 工具对项目外的写入操作好像是有点问题。但是 AI 不知道这个沙盒的机制，有时候要试错多次。
 3. 周末赠送的是试用装的 glm 5.3 flash，token 非常多。但是这个试用装不是直接加入你的帐号而是作为单独的一个试用帐号提供，我找了半天都没找到在哪里切换回我自己的帐号。实在是居心险恶。
@@ -167,6 +222,7 @@ opencode 作为一个 agent，只能算是达到 agent 的基本水平。在使�
 22. **恶性 bug**：出现一次：subagent 干活干一半然后莫名其妙回到主线程，所有 subagent 全部被中断
 23. **恶性 bug**：几天前的 session 想要重新开始用，模型已选择，然而发 `/Compact` 后报错 _Select a model before continuing_。fork session 后重发 `/Compact`，无效。只能先发一条 message 然后再进行 compact。
 24. agent 在 session 里启动的 server 不会在会话结束后自动退出。每次我都会遇到端口冲突问题，一看就是 agent 用来做调试的 server 不会自动退。
+25. 神经的 HighSpeed 模式：深夜我正常使用中，然后在我发出提示词之后 zcode 自动给我提升到 HighSpeed 模式体验 15 分钟。这本来算是个福利，但是这模式下居然不能开 subagent，而我的提示词本来就是要开 subagent 的，整的这一出反而打断了我的工作流程。([src](https://t.me/absolutexsward/507))
 
 ## [pi](https://github.com/earendil-works/pi)
 

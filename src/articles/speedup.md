@@ -1090,6 +1090,14 @@ noa 是封包格式，封包内部的音频是 mio 格式（私有编码格式�
 - [qtlark/noa_pac](https://github.com/qtlark/noa_pac)：没有 source，Release 里放的 `noa32c.exe` 就是 EntisGLS 引擎里的文件。不懂这个仓库是拿来做啥的，README 说明书骗 star 吗？
 - [crskycode/EntisGLS_Tools](https://github.com/crskycode/EntisGLS_Tools)：专门处理 csx 脚本文件的，不包含 noa 解封包功能。
 
+@@@ STEINSGATE
+
+2026 年末法时代了，已经不需要自己研究封包，丢给 agent 完事。
+
+STEINS;GATE RE:BOOT 引擎的解封包有两层工作，一层是封包格式本身，这个使用 FreeMote Toolkit 没啥问题；另一层比较麻烦点，解包出来的音频格式是 .xwma，XBOX 游戏的音频格式，不能直接加速。ffmpeg 可以解码，但是不能编码，并且微软也[不给开放下载 xWMAEncode.exe 编码器](https://t.me/withabsolutex/2865)，非常傻逼。不过好在后来都解决了。我估摸着用 [Yakitori Audio Converter](https://www.nexusmods.com/fallout4/mods/9322?tab=files&file_id=131186) 应该也是能编码的，不过还是不如 agent 搓脚本来得快。
+
+总之最后搓出的[这个脚本](https://gist.github.com/lxl66566/d6bb62a7d8b469534fb24e4e849ee7ba)就可以用于音频加速和解包封包了。[[ai-steinsgate-speedup-pitfalls|一些坑点也都直接写在脚本注释了]]，比如 24bit 到 16bit 的转换等。
+
 </SpeedupList>
 
 ### 二试封包总结
@@ -1358,4 +1366,3 @@ MMDevAPI 基本是无法完成这个需求的，因为 MMDevAPI 拿到的一般�
 在 Ever17（MAGES. Engine 引擎）上，之前的零中断实现又无法使用。观察日志，每个语音都会经历 SetVolume(-10000)（静音）、Play()、恢复音量的过程（后来发现还有中间状态），因此我们也需要处理音量变更的拦截逻辑。写了一版 lock volume 到「播放开始时音量」还不行，因为播放开始时的音量就可能不是正常的，而是后面再 SetVolume 成正常音量。于是最终实现成音量只增不减，这样才能有比较好的效果。（题外话，Ever17 这 B 引擎完全搞不懂是什么时候会触发改音量，我鼠标点快一些和慢一些的表现甚至还不一样的）
 
 [^stream]: 这其实跟网关流式转发还是集齐 body 后再转发其实是类似的逻辑。刚开始用加速去拉完整个音频属于是步入歧途，流式转发才是未来。
-
