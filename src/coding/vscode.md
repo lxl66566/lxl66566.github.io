@@ -237,44 +237,6 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 
 我不爱用那些令牌啥的，因此我选择直接 <https://marketplace.visualstudio.com/manage>，然后把打出来的 .vsix 文件拖到这里即可。
 
-## 关于 cursor
-
-::: details 感觉 cursor 已经死了，直接烧纸，下面内容不需要再看了
-
-[Cursor](https://www.cursor.com/pricing) 是 AI 时代下的，基于 VSCode 的 IDE，其将 AI 深度集成到了编辑器内。Cursor 全兼容 VSCode，所以可以快速抢占市场。
-
-我曾今在早期用过一次 Cursor，用的提问 API 是 Gemini，补全 API 是 deepseek，感觉不太行。这也是因为模型本身不够聪明。第二次入坑是新号注册，这一段时间内 cursor 也把用户体验补起来了一点，并且我也免费（试）用 claude-3.5-sonnet，这下就感觉舒服多了。直接写了一个 [Telegram-RSS-Bot-on-Cloudflare-Workers](https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers)。虽然细微部分还是手改，但是确实好用很多，tab 补全也很智能。
-
-入坑 cursor 前，最好先去 b 站找个视频快速过一遍，自己摸索很容易丧失耐心。
-
-cursor 难用的地方，我写在[这里](../gossip/fuckxxx.md#cursor-有多难用)。
-
-### 设置
-
-cursor 基于 vscode，但是有些地方还是做了些修改，非常卡手。建议 vsc 人入坑 cursor 的时候进行这些设置：
-
-1. 恢复左侧纵向图标栏：`"workbench.activityBar.orientation": "vertical"` ([src](https://www.maemo.cc/2024/10/23/edit-cursor-activitybar-orientation.html))
-2. 终端允许 Ctrl + V 粘贴：`"terminal.integrated.sendKeybindingsToShell": false` （vscode 默认允许终端粘贴）
-3. 打开右侧 minimap：`"editor.minimap.enabled": true`
-4. 由于 cursor update [问题很多](https://github.com/getcursor/cursor/issues/2670)，需要设置 `"update.enableWindowsBackgroundUpdates": false` 关闭后台自动更新。
-   - 即使设置了此项，cursor 还是可能无视此设置仍然自动更新（骂人）。此时需要：清空文件夹 `C:\Users\<username>\AppData\Local\cursor-updater` 并将其权限修改为全部 deny。([ref](https://www.youtube.com/watch?v=oNe36xIsJ6g))
-5. 从 vscode 继承过去的中文插件可能失效，需要重新手动装一下。
-
-### 无限续
-
-Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。有一些需要注意的点：
-
-1. 2025.02 之后，cursor 无法再通过清除 machine id 的方式无限续，猜测它用了一些其他方法进行追踪。因此需要下载历史版本：<https://downloader.cursor.sh/builds/250103fqxdt5u9z/windows/installer/x64>，并关闭自动更新。
-2. cursor 清除 ID 的脚本，网上有很多（讽刺的是基本都是 Cursor 写的）。
-   - [go-cursor-help](https://github.com/yuaotian/go-cursor-help)
-   - [cursor-free-vip](https://github.com/yeongpin/cursor-free-vip)
-   - [cursor-reset](https://github.com/ultrasev/cursor-reset)
-   - cursor-mate（闭源）
-3. ~~邮箱无限续可以用 2925 无限邮。~~
-   - 2025.03 之后，2925 无限邮和一些滥用邮箱被彻底禁用，爆 [_User is unauthorized_](https://forum.cursor.com/t/user-is-unauthorized/43042/79)。这里建议买一个域名托管到 Cloudflare，然后用这个域名开一堆子域的邮箱。
-
-:::
-
 ## 遇到的问题
 
 ### code cli command 执行失败

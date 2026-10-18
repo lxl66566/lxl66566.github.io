@@ -13,7 +13,7 @@ tag:
 
 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。
 
-这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。
+这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。
 
 ## cursor
 
@@ -22,6 +22,42 @@ cursor 是各个 agent 的元老。2025 年我的毕设有 cursor 一大功劳�
 2025 年白嫖 cursor 实在是太爽了，每个新邮箱都可以白嫖 14 天；于是从邮箱号池到自己域名随便开邮箱，从清除 computer id 到锁定 cursor 版本，白嫖 cursor 永不停息。当然后面封禁强度也上来了，就渐渐不用了。
 
 cursor 刚开始确实是有点东西的，有独家的 diff apply 模型、code embedding 模型来尽力提升 agent 任务完成率，当时绝对是顶尖的 agent 工具。然而现在随着 agent 能力发展，这些模型已经退出历史舞台，cursor 也被 SpaceX 收购，成为了只做模型中转的路边一条了。属于 cursor 的辉煌时代已经结束了。
+
+::: 一些过时的 cursor 使用心得
+
+[Cursor](https://www.cursor.com/pricing) 是 AI 时代下的，基于 VSCode 的 IDE，其将 AI 深度集成到了编辑器内。Cursor 全兼容 VSCode，所以可以快速抢占市场。
+
+我曾今在早期用过一次 Cursor，用的提问 API 是 Gemini，补全 API 是 deepseek，感觉不太行。这也是因为模型本身不够聪明。第二次入坑是新号注册，这一段时间内 cursor 也把用户体验补起来了一点，并且我也免费（试）用 claude-3.5-sonnet，这下就感觉舒服多了。直接写了一个 [Telegram-RSS-Bot-on-Cloudflare-Workers](https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers)。虽然细微部分还是手改，但是确实好用很多，tab 补全也很智能。
+
+入坑 cursor 前，最好先去 b 站找个视频快速过一遍，自己摸索很容易丧失耐心。
+
+cursor 难用的地方，我写在[这里](../gossip/fuckxxx.md#cursor-有多难用)。
+
+### 设置
+
+cursor 基于 vscode，但是有些地方还是做了些修改，非常卡手。建议 vsc 人入坑 cursor 的时候进行这些设置：
+
+1. 恢复左侧纵向图标栏：`"workbench.activityBar.orientation": "vertical"` ([src](https://www.maemo.cc/2024/10/23/edit-cursor-activitybar-orientation.html))
+2. 终端允许 Ctrl + V 粘贴：`"terminal.integrated.sendKeybindingsToShell": false` （vscode 默认允许终端粘贴）
+3. 打开右侧 minimap：`"editor.minimap.enabled": true`
+4. 由于 cursor update [问题很多](https://github.com/getcursor/cursor/issues/2670)，需要设置 `"update.enableWindowsBackgroundUpdates": false` 关闭后台自动更新。
+   - 即使设置了此项，cursor 还是可能无视此设置仍然自动更新（骂人）。此时需要：清空文件夹 `C:\Users\<username>\AppData\Local\cursor-updater` 并将其权限修改为全部 deny。([ref](https://www.youtube.com/watch?v=oNe36xIsJ6g))
+5. 从 vscode 继承过去的中文插件可能失效，需要重新手动装一下。
+
+### 无限续
+
+Cursor 无限续主要是靠无限流邮箱注册 + id 清除器。有一些需要注意的点：
+
+1. 2025.02 之后，cursor 无法再通过清除 machine id 的方式无限续，猜测它用了一些其他方法进行追踪。因此需要下载历史版本：<https://downloader.cursor.sh/builds/250103fqxdt5u9z/windows/installer/x64>，并关闭自动更新。
+2. cursor 清除 ID 的脚本，网上有很多（讽刺的是基本都是 Cursor 写的）。
+   - [go-cursor-help](https://github.com/yuaotian/go-cursor-help)
+   - [cursor-free-vip](https://github.com/yeongpin/cursor-free-vip)
+   - [cursor-reset](https://github.com/ultrasev/cursor-reset)
+   - cursor-mate（闭源）
+3. ~~邮箱无限续可以用 2925 无限邮。~~
+   - 2025.03 之后，2925 无限邮和一些滥用邮箱被彻底禁用，爆 [_User is unauthorized_](https://forum.cursor.com/t/user-is-unauthorized/43042/79)。这里建议买一个域名托管到 Cloudflare，然后用这个域名开一堆子域的邮箱。
+
+:::
 
 ## [opencode](https://github.com/anomalyco/opencode)
 
@@ -308,6 +344,8 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
   - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起和致死量 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
 - pi-lens 会自动修改你的代码，自动执行 fmt + fix，但是很多时候我并不希望这种行为（比如 lsp 才不会管你的兼容性和 MSRV、PR 最小化原则；而且 rust clippy 的 auto fix 可不一定是无害的），该行为也会让 AI 困惑、怀疑人生。我用了一阵[被坑了](https://t.me/absxsgroup/11865)，于是就干掉了。
 - `npm:pi-auto-compact` 只会在模型与人类交互的时候才会触发 compact。如果模型自己一直在跑，是不会 compact 的。我的需求是要让模型自己在跑到一定量的时候 compact，所以还是直接设置 `~/.pi/agent/models.json` 去 override contextWindow 吧。
+- 使用过一段时间的 `npm:pi-hashline-edit-pro`。这个插件愿景很好，但是用起来的体验确实不太行。首先替换成功率并没有想象中的高，我理解用了 hashline 替换成功率应该接近 100%，结果还是太乐观了。其次每个 hash 都会占用上下文，并且 write 后强制添加的 hash 还会崩掉你的缓存命中。
+  - 我写过一个 [pi-replace-function](https://github.com/lxl66566/pi-replace-function) 试试水，但是全函数 replace 的调用率还是相当低的，感觉也没什么用。
 
 ### 与 oh-my-pi 比较
 

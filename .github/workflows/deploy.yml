@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       # 术语参考仓库是独立 gitlink，checkout 不会带出内容；拉不到时
       # [[...]] 语法降级为纯文本（构建仅 warning），故允许此步失败。

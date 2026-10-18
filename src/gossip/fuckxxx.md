@@ -217,8 +217,9 @@ tag:
 
 - 当前 vsce 打包[强制使用 yarn/npm](https://github.com/microsoft/vscode-vsce/issues/421)，并且他们非常固执，不愿意修改。打包本来就应该不依赖包管理器，而且还是 yarn 这种大便玩意。
   - 还好有大佬构建了 [yyyanghj/vsce-pnpm](https://github.com/yyyanghj/vsce-pnpm)，实测可用。
+- 如果你 fork 了一个插件并且发布到 vscode market，并且没有修改 icon，则该插件会被 vscode 封禁（发邮件，14 天未整改直接永封；[封禁列表](https://github.com/microsoft/vsmarketplace/blob/main/RemovedPackages.md)）；并且该永封是**不可恢复**的（[整改后申诉无效](https://t.me/withabsolutex/2875)）。难道微软认为在 2026 年每个人都会积极去看邮箱吗？
 
-### [cursor](../coding/vscode.md#关于-cursor) 有多难用
+### cursor 有多难用
 
 - 改完设置要重启才能应用
 - 魔改了 vscode 里本来很舒服的设计
