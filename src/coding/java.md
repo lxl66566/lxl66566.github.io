@@ -60,6 +60,30 @@ scoop install liberica8-full-jdk
 
 虽然经常听到 IDEA 内存占用大的声音，但是 _Java and Kotlin by IntelliJ IDEA_ 其实只是 IDEA 的一个 core，没有乱七八糟的功能，内存占用在大项目上其实比 JDT LS 还要低上许多。简直是对 JDT LS 的全方位暴打。
 
+_Java and Kotlin by IntelliJ IDEA_ 的唯一缺点就是，要钱。。。不像 idea 还可以用 Community Edition，这个 LSP 并没有免费的版本可以使用。我刚开始用的时候刚好是其更新到 1.0，送了一个月的 EAP（Early Access Preview）免费使用，然而一个月后就要想其他办法了。
+
+最简单的方法就是闲鱼买个 JB 学生邮箱帐号，一年 35 元左右，理论上学生邮箱有 All Products Pack 权限，是可以使用该 LSP 的。
+
+另一个方法就是 patch，只要 LSP server 也是跑在客户端的，即使其密码学没有漏洞、具有再强大的 ZKM 混淆机制，在 2026 AI 时代也只是提高一些 patch 的成本而已。可能还需要一点[[ij-patch|「循序渐进」]]。
+
+#### 配置
+
+加几行即可。
+
+```json
+{
+  "intellij.additionalJvmArgs": [
+    "-Xms2g",
+    "-Xmx8g",
+    "-XX:+UseZGC",
+    "-XX:+ZGenerational",
+    "-XX:+UseStringDeduplication",
+    "-XX:ZUncommitDelay=30"
+  ],
+  "intellij.dev.commands": true
+}
+```
+
 @tab vscode with JDT LS
 
 ::: warning
