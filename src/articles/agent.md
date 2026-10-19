@@ -324,6 +324,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
     });
   }
   ```
+  目前社区还没有插件实现这个，最接近的是 [pi-context-include](https://github.com/d3ara1n/pi-extensions/tree/main/packages/pi-context-include) 需要在 `~/.pi/agent/AGENTS.md` 里写一行 `@~/.agents/AGENTS.md` 来自动注入。没人做说明需求少；我这个代码也不多，就不发布了。
 - pi 会在 `~/.pi/agent` 里拉一大坨东西，config 和 data 耦合在一起。想备份数据的看到这里一下就死了。。
 - 不像 opencode 喜欢用 ctrl + p，pi 主要是靠打出一个 `/` 然后在候选列表里选 command 来进行操作的。但是这个列表的出现有相当大的延迟，只要我打字快一些，pi 就会把我的 `/tree` 这种内容直接当成跟 AI 的对话发出去。。。
   - 然后也是因为这个 `/command` 的原因，在已经写了对话内容的情况下，就没法再调出 command 了。。没法写完一段 prompt 之后再切模型。
@@ -332,8 +333,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
   - 最终的解法是创建一个 Junction：`New-Item -ItemType Junction -Path "C:\Program Files\Git" -Target "$env:USERPROFILE\scoop\apps\git\current"`。
 - 默认启动下，Page Up 和 Page Down 无法翻页！！必须用 `--tui-mode fullscreen` 启动，或者 config 里配 `"tuiMode": "fullscreen"`。
 - `pi update --extensions` 过程中 Ctrl + C 无法中断。
-- pi 不会自动记住上次使用的 model。我要是设置了 defaultModel + defaultProvider，就只能一直用设置的默认值；要是不设置，它每次开 session 都会自动用 deepseek-v4-pro，实在是太坏了。
-  - 更新以后可以记住 model 了。
+- pi 不会自动记住上次使用的 model。我要是设置了 defaultModel + defaultProvider，就只能一直用设置的默认值；要是不设置，它每次开 session 都会自动用 deepseek-v4-pro，实在是太坏了。于是我写了一个 [pi-reuse-model](https://github.com/lxl66566/pi-reuse-model) 用来记住我的上一次 model。
 - `pi update --extensions` 会污染你 current dir 的 pnpm-lock.yaml。不是，这玩意连作用域都不管的？
 - pi 和 opencode 一样都有一个问题：compact 以后就无法在 session 里看到 compact 之前的内容了，只能 export。感觉这点这些 agent 做得都不如 zcode。
 

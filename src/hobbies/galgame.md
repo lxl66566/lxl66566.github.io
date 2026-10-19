@@ -2209,6 +2209,7 @@ The key strength of Rance is that it makes our dicks cry while we cry. ([src](ht
 - サヤガタリ-妖刀の約束-
 - 十三機兵防衛圈（等待移植）
 - FORTUNE×WORLD～僕らがゲームを作る理由～
+- ARIA BLUE I.夏音
 
 以及其他作品（可参考 <https://gal-sedai.deno.dev/>）。
 
