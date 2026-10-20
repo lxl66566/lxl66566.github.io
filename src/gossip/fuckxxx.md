@@ -212,6 +212,9 @@ tag:
   ```
   Error opening exec server for ssh-remote+lse: Error: Extension 'ms-vscode-remote.remote-ssh' CANNOT use API proposal: terminalRemoteResolver. Its package.json#enabledApiProposals-property declares: resolvers, tunnels, terminalDataWriteEvent, contribRemoteHelp, contribViewsRemote, telemetry but NOT terminalRemoteResolver.
   ```
+- _Developer: Restart Extension Host_ 在某些情况下[^扩展重载失败]并不能完全重新加载你的扩展。最好还是用 reload window，比较保险。
+
+[^扩展重载失败]: 我安装了一个本地 vsix 后，从扩展商店安装了另一个 id 与名称不同，但是功能相同的扩展（VSCodeVim 的 fork）。此时把本地扩展卸载然后 _Developer: Restart Extension Host_，然而无论重启几次，后台都会同时运行着两个 VSCodeVim 实例；并且老的本地扩展在 _已安装扩展_ 内不展示。
 
 #### 基于 vscode 的开发
 

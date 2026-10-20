@@ -56,7 +56,7 @@ tag:
   - [AI 代码补全](#ai-代码补全)
   - 更好的警告：_Error Lens_
     - 不可否认 _SonarLint_ 很强，但是 java 写的，占用空间和 RAM 都很大。因此在使用了几年 _SonarLint_ 以后我选择分语言使用不同 linter。
-  - 轻量级 Git 可视化：_Git Graph_ + _Git Tree Compare_
+  - 轻量级 Git 可视化：_Git Graph_ + _Git Tree Compare_，详见 [Git](#git)
   - 代码格式化：_Prettier - Code formatter_（主要用于 markdown
   - 编辑器：_Vim_
     - [添加如下配置](https://github.com/microsoft/vscode/issues/75627#issuecomment-1114048271)可以降低 vim 插件的延迟。
@@ -77,12 +77,12 @@ tag:
 - 协同：_Live Share_
 - 其他：_Chinese (Simplified)..._，_CodeSnap_
 
-### 避雷
-
-我拉黑的插件。
+这些是我拉黑的插件，发出来给大家避雷：
 
 - Python Environments：有非常严重的 bug，在某些 shell 上启动非常慢，并且会擅自往你的终端发 `Ctrl + C` ([ref](https://t.me/withabsolutex/2709))
 - Flowistry：因为 rustc_private 访问内部结构的关系，Flowistry 会静默给你下载特定的一个 rust toolchain 包括它自己的 binary，我不喜欢这个设计。而且下载不做重试。
+- Even Better Comments：启动卡死、format on save 卡死
+- Even Better TOML：Rust toml 的一个 LSP，taplo 的包装。taplo 其实并不好用，我已经转向 tombi 了。并且这个扩展也有些逻辑问题，经常会在 format on save 卡死。
 
 ### 插件管理
 
@@ -92,9 +92,11 @@ tag:
 
 ### AI 代码补全
 
-目前我正在使用 supermaven。免费、够用。
+AI 代码补全也只是 2025-2026 年初的昙花一现。2026 末期已经很少手写代码了，所以 AI 代码补全也失去了其用武之地。
 
 ::: details AI 相关信息推荐早就过时了，这里没啥看的价值
+
+目前我正在使用 supermaven。免费、够用。
 
 我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 `%TEMP%` 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。
 
@@ -131,12 +133,6 @@ tag:
 - code 补全 API 的话，deepseek api 比较便宜
 
 :::
-
-### 插件黑名单
-
-我踩到的坑
-
-- Even Better Comments：启动卡死、format on save 卡死（不过这是插件本身的问题）
 
 ## feature
 
@@ -210,6 +206,8 @@ vscode 的正则匹配[使用两个不同的引擎](https://github.com/microsoft
 官方的 Git 和 gitlens 都不好用（gitlens 一堆功能加上狗屎 AI 营销我根本不知道怎么用）；我比较喜欢轻量的 _Git Graph_，看起来也很直观。点击查看该提交的变更；选中一个 commit，然后按住 ctrl 单击另一个 commit，即可查看两个 commit 之间的 diff。
 
 但是 _Git Graph_ 在复杂项目、review 代码的时候也有缺陷：（1）没法快速定位到 HEAD commit，如果 commit tree 复杂经常要找很久（2）对比两个 commit 必须首先找到这两个 commit，没法一键定位 merge-base（3）搜索功能不好用，因为默认有分页，初始展示 300 条、load more 一次展示 100 条，如果要找一个久远的 commit 简直是地狱。
+
+对于 review 代码，非常推荐使用 _Git Tree Compare_，它可以直接把当前工作区跟 merge-base 进行对比，不需要去手动寻找 merge-base；并且其 diff 是基于工作区的，也就是所有的 LSP、点击跳转等功能都可以直接在 diff 界面内完成，很方便。
 
 ## 小技巧
 

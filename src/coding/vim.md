@@ -43,17 +43,115 @@ vscode vim 特有：
 - `<C-q>` 进入 visual block，选中区域后使用 `I` 进行多行输入 / 删除。
 - `gb` 是多光标，添加下一个相同单词到多光标。然后就可以用 `A` 或 `I` 进入 insert 修改。
 
-## 设置(vscode)
+## VSCodeVim
 
-直接看[我的 vscode settings.json](https://github.com/lxl66566/backup/blob/main/config/vscode/settings.json) 吧。
+由于我主要使用 VSCode 作为编辑器，所以基本上都在用 VSCodeVim。也有使用 neovim 完全替换 vscode 的尝试（见下文），不过最终都宣告失败。
 
-## 设置(懒狗型)
+首先我必须说，VSCodeVim 的开发者**根本不懂中文和输入法**，issue 区里积攒了一大堆的 IME issue 都没人去解决，PR 也都晾着。我实在是受不了了，直接进行了一个 fork：[lxl66566/VSCodeVim](https://github.com/lxl66566/VSCodeVim)，修了很多 bug，还实现了 easymotion 的 pinyin。
+
+我的配置：
+
+```json
+{
+  // 根据 mode 自动切换输入法，详见 #中文用户专栏
+  "vim.autoSwitchInputMethod.defaultIM": "1033-513",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.obtainIMCmd": "C:/Users/lxl/bpm/app/im-select-imm/im-select-imm.exe",
+  "vim.autoSwitchInputMethod.switchIMCmd": "C:/Users/lxl/bpm/app/im-select-imm/im-select-imm.exe {im}",
+  "vim.easymotion": true,
+  "vim.easymotionMarkerBackgroundColor": "#2C3E50", // 自定义提示字符背景色
+  "vim.easymotionMarkerForegroundColorOneChar": "#E74C3C", // 提示字符颜色
+  "vim.easymotionPinyin": true, // 启用 easymotion 的 pinyin 定位（fork 版本专属）
+  "vim.handleKeys": {
+    "<C-R>": false,
+    "<C-a>": false,
+    "<C-c>": false,
+    // "<C-d>": false,
+    "<C-e>": false,
+    "<C-g>": false,
+    "<C-h>": false,
+    "<C-l>": false,
+    "<C-p>": false,
+    "<C-r>": false,
+    "<C-s>": false,
+    "<C-t>": false,
+    "<C-w>": false,
+    "<C-x>": false
+  },
+  "vim.history": 100,
+  "vim.insertModeKeyBindings": [],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"],
+      "when": "editorHasImplementationProvider"
+    },
+    {
+      "after": ["<leader>", "<leader>", "s"],
+      "before": ["s"]
+    },
+    {
+      "after": ["<leader>", "<leader>", "w"],
+      "before": ["S"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "after": ["\"", "_", "x"],
+      "before": ["x"]
+    },
+    {
+      "after": ["\"", "_", "X"],
+      "before": ["X"]
+    },
+    {
+      "after": ["\"", "_", "d", "d"],
+      "before": ["d", "x"]
+    },
+    {
+      "after": ["<C-d>"],
+      "before": ["<C-i>"]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "after": ["\"", "_", "x"],
+      "before": ["x"]
+    },
+    {
+      "after": ["\"", "_", "X"],
+      "before": ["X"]
+    },
+    {
+      "after": ["s", "(", ")", "<esc>", "h", "p", "l"],
+      "before": ["("]
+    },
+    {
+      "after": ["s", "[", "]", "<esc>", "h", "p", "l"],
+      "before": ["["]
+    },
+    {
+      "after": ["s", "{", "}", "<esc>", "h", "p", "l"],
+      "before": ["{"]
+    },
+    {
+      "before": ["<C-x>"],
+      "commands": ["editor.action.clipboardCutAction"]
+    }
+  ]
+}
+```
+
+## 懒狗选择
 
 vim 有着各种各样的分支（就像 linux core 和各种 distro 一样），自然也有一些无需折腾，配置简单的 vim 系 IDE，有兴趣可以尝试。
 
 - [lunarvim](https://www.lunarvim.org/zh-Hans/)
 - [AstroNvim](https://astronvim.com/)
 - [nvchad](https://nvchad.com/)
+
+当然我喜欢折腾，所以还是自己玩自定义程度最高的 neovim，见下文。
 
 ## 设置(neovim 一期)
 
@@ -81,7 +179,9 @@ vim 有着各种各样的分支（就像 linux core 和各种 distro 一样）�
 
 ### 侧边栏
 
-俗话说 neovim 人都在为了逼近 vscode 而努力（来源请求），我需要的侧边栏也不例外。vscode 的“打开文件夹”功能好用，我需要使用。在尝试了多个插件（opener.nvim, Telescope, NerdTree）后，最终我使用的插件是 [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)。这个插件专为 neovim 设计，并且快捷键更加简单易懂!!NerdTree 是什么妖魔鬼怪!!。
+俗话说 ~~neovim 人都在为了逼近 vscode 而努力~~，折腾侧边栏这事也不例外。
+
+在尝试了多个插件（opener.nvim, Telescope, NerdTree）后，最终我使用的插件是 [Neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)。Neo-tree 可以算是使用手感最好，最贴近我的需求的侧边栏了。
 
 1. 在 `lua/plugin.lua` 中添加：
    ```lua
@@ -111,6 +211,8 @@ vim 有着各种各样的分支（就像 linux core 和各种 distro 一样）�
      }
    }
    ```
+
+但是 neo-tree 仍然有许多问题，比如它核心都是 lua 写的，众所周知 lua 的字符串处理就是一坨屎，用多了很容易写出 bug，事实上我随便扫一下就能扫出 one command execution；包括 lua 核心用来做这种需要大量 fs 操作的东西，性能又非常差，我打开 nvim 体感要卡好几秒，基本都是 neo-tree 在卡。
 
 ### 我的插件
 
@@ -221,6 +323,8 @@ snack 的问题也不少。snack 是 lazyvim 作者搞的一个工具包，提�
 关于 resolve conflict：
 
 我其实还是习惯用 vscode 那种左右下三栏的 merge 界面（之前见过 idea 那种左中右的狗屎三栏感觉真难用）。因此还是打算在 neovim 里复刻这个。简单用 git-conflict.nvim 和 diffview.nvim 写了点。
+
+最终我的 Neovim 还是没能取代 VSCode。
 
 ## 中文用户专栏
 
