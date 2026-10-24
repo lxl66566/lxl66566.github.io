@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-yGjcuOXN.js">
+<link rel="modulepreload" href="../assets/entry-Bp3HJmxp.js">
 <link rel="modulepreload" href="../assets/chrome-379cddde.js">
 <title>Agent 工具横评 | 绝对值_x 的博客</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -17,10 +17,10 @@
 <meta property="og:site_name" content="绝对值_x 的博客">
 <meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Agent 工具横评","url":"https://absx.pages.dev/articles/agent","mainEntityOfPage":"https://absx.pages.dev/articles/agent","description":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-13T00:00:00.000Z","dateModified":"2026-10-20T03:38:52+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Agent 工具横评","url":"https://absx.pages.dev/articles/agent","mainEntityOfPage":"https://absx.pages.dev/articles/agent","description":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-13T00:00:00.000Z","dateModified":"2026-10-25T03:23:22+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-Dj63Y70j.css">
+<link rel="stylesheet" href="../assets/entry-B_CysnsW.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
@@ -396,6 +396,17 @@
 </ul>
 <h3 id="与-oh-my-pi-比较">与 oh-my-pi 比较</h3>
 <p>一些第三方评测 (<a href="https://composio.dev/content/pi-vs-omp" class="ap-external">ref1</a> <a href="https://www.reddit.com/r/PiCodingAgent/comments/1w593fd/i_benchmarked_pi_against_its_own_fork_omp_more/" class="ap-external">ref2</a>) 显示，oh-my-pi 的任务完成度、平均成本等最重要的指标都不如 bare pi。工具并不是越多越好的。</p>
+<h2 id="deepseek-harness">deepseek harness</h2>
+<p>我其实一直不喜欢 deepseek harness，在开源当天我简单扫了一眼 vibe 日志然后就<a href="https://t.me/withabsolutex/2803" class="ap-external">开喷了</a>。但是后来为了 6 块钱的赠金，还是向梁圣低头了……</p>
+<ul>
+<li>不支持远程连接，并且看起来也没有好用的远程连接插件。
+<ul>
+<li>有个一眼 vibe 出来的 dsh-ssh 感觉还不如我的 <a href="https://github.com/lxl66566/shell-proxy" class="ap-external">shell-proxy</a>。</li>
+</ul>
+</li>
+<li><s>本来我看设置里有 <em>工作步骤展示 - 选择希望看到多少工具调用细节</em> 的时候我还以为他们真的在为开发者着想，结果发现开 subagent 的时候连 subagent 的内容和 context 都看不了，无语了。</s> 是没找到位置。subagent 详情要点顶部标题栏那里看，而不是当前主要区域里。</li>
+<li><em>读工具会截断超过 2000 字符的单行，而这些文档原本就有大量超长行，B、C 第一轮因此丢了部分行尾内容，A 的 status/todo/ffi/workflow 也受影响。</em> 这是主 agent 的报告，我在想为啥这些工具总是喜欢偷偷搞一些限制又不告诉用户。。</li>
+</ul>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -406,7 +417,7 @@
 <div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
 <div id="ap-toc" class="ap-toc"></div>
 <footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/agent","locale":"root","title":"Agent 工具横评","headings":[{"level":1,"text":"Agent 工具横评","slug":"agent-工具横评"},{"level":2,"text":"cursor","slug":"cursor"},{"level":3,"text":"设置","slug":"设置"},{"level":3,"text":"无限续","slug":"无限续"},{"level":2,"text":"opencode","slug":"opencode"},{"level":3,"text":"心得","slug":"心得"},{"level":3,"text":"opencode 有多难用","slug":"opencode-有多难用"},{"level":3,"text":"总结","slug":"总结"},{"level":2,"text":"zcode","slug":"zcode"},{"level":3,"text":"经验","slug":"经验"},{"level":3,"text":"开喷","slug":"开喷"},{"level":2,"text":"pi","slug":"pi"},{"level":3,"text":"使用技巧","slug":"使用技巧"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"坑点/吐槽","slug":"坑点-吐槽"},{"level":3,"text":"与 oh-my-pi 比较","slug":"与-oh-my-pi-比较"}],"frontmatter":{"date":"2026-10-13","category":["评价"],"tag":["横评","工具","桌面端"],"icon":"brands/signal-messenger"},"createdAt":"2026-10-13T00:00:00.000Z","updatedAt":"2026-10-20T03:38:52+08:00","readingTime":23,"excerpt":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":2,"links":[{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-yGjcuOXN.js"></script>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/agent","locale":"root","title":"Agent 工具横评","headings":[{"level":1,"text":"Agent 工具横评","slug":"agent-工具横评"},{"level":2,"text":"cursor","slug":"cursor"},{"level":3,"text":"设置","slug":"设置"},{"level":3,"text":"无限续","slug":"无限续"},{"level":2,"text":"opencode","slug":"opencode"},{"level":3,"text":"心得","slug":"心得"},{"level":3,"text":"opencode 有多难用","slug":"opencode-有多难用"},{"level":3,"text":"总结","slug":"总结"},{"level":2,"text":"zcode","slug":"zcode"},{"level":3,"text":"经验","slug":"经验"},{"level":3,"text":"开喷","slug":"开喷"},{"level":2,"text":"pi","slug":"pi"},{"level":3,"text":"使用技巧","slug":"使用技巧"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"坑点/吐槽","slug":"坑点-吐槽"},{"level":3,"text":"与 oh-my-pi 比较","slug":"与-oh-my-pi-比较"},{"level":2,"text":"deepseek harness","slug":"deepseek-harness"}],"frontmatter":{"date":"2026-10-13","category":["评价"],"tag":["横评","工具","桌面端"],"icon":"brands/signal-messenger"},"createdAt":"2026-10-13T00:00:00.000Z","updatedAt":"2026-10-25T03:23:22+08:00","readingTime":24,"excerpt":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":2,"links":[{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-Bp3HJmxp.js"></script>
 </body>
 </html>
