@@ -60,29 +60,29 @@ export const projectGroups: ProjectGroup[] = [
         desc: '安全简单易用的单密码 Git 仓库加密方案',
       },
       {
+        name: 'reader-server-rs',
+        url: 'https://github.com/lxl66566/reader-server-rs',
+        desc: '服务端 + 网页读书，进度同步与心跳记录阅读时长',
+      },
+      {
+        name: 'youpipe',
+        url: 'https://github.com/lxl66566/youpipe',
+        desc: '高度性能优化的 CPU + IO workload pipeline，支持数据优先和有向无环图模式',
+      },
+      {
         name: 'zdu',
         url: 'https://github.com/lxl66566/zdu',
         desc: 'blazing fast 的 disk usage tool，UI 抄的 dust',
       },
       {
-        name: 'youpipe',
-        url: 'https://github.com/lxl66566/youpipe',
-        desc: '高度性能优化的 CPU + IO workload pipeline',
-      },
-      {
-        name: 'reader-server-rs',
-        // url: 'https://github.com/lxl66566/reader-server-rs',
-        desc: '[WIP，敬请期待] 用来在线读书的服务端 + 网页',
+        name: 'zstdx',
+        url: 'https://github.com/lxl66566/zstdx',
+        desc: 'zstd 的 pure Rust 实现，性能直击 libzstd',
       },
       {
         name: 'absolute-press',
         url: 'https://github.com/lxl66566/absolute-press',
         desc: '本站使用的博客框架',
-      },
-      {
-        name: 'zstdx',
-        url: 'https://github.com/lxl66566/zstdx',
-        desc: 'zstd 的 pure Rust 实现，性能直击 libzstd',
       },
     ],
   },

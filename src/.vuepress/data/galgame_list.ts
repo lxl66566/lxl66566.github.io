@@ -6,11 +6,17 @@ const original_list: GalItemInputType[] = [
     name: "STEINS;GATE RE:BOOT",
     valid_name: "STEINSGATE",
     other_names: ["石头门", "命运石之门"],
-    order: 1,
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "18h22min",
     duration: {
       start: "2026-10-06",
+      end: "2026-10-24",
     },
+    score: {
+      story: 10.6,
+      visual: 8.2,
+      program: 2.2,
+      thrill: 7.1
+    }
   },
   {
     name: "DRACU-RIOT!",
@@ -872,7 +878,7 @@ const original_list: GalItemInputType[] = [
       end: "2025-06-26",
     },
     score: {
-      story: 10.4,
+      story: 10,
       visual: 2.5,
       program: 0,
       thrill: 10.5,
@@ -1296,7 +1302,7 @@ const original_list: GalItemInputType[] = [
     },
     score: {
       story: 9,
-      visual: 8.2,
+      visual: 8,
       program: 9.1,
       thrill: 7.8,
     },

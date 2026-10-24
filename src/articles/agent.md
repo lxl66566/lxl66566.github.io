@@ -350,3 +350,12 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 ### 与 oh-my-pi 比较
 
 一些第三方评测 ([ref1](https://composio.dev/content/pi-vs-omp) [ref2](https://www.reddit.com/r/PiCodingAgent/comments/1w593fd/i_benchmarked_pi_against_its_own_fork_omp_more/)) 显示，oh-my-pi 的任务完成度、平均成本等最重要的指标都不如 bare pi。工具并不是越多越好的。
+
+## deepseek harness
+
+我其实一直不喜欢 deepseek harness，在开源当天我简单扫了一眼 vibe 日志然后就[开喷了](https://t.me/withabsolutex/2803)。但是后来为了 6 块钱的赠金，还是向梁圣低头了……
+
+- 不支持远程连接，并且看起来也没有好用的远程连接插件。
+  - 有个一眼 vibe 出来的 dsh-ssh 感觉还不如我的 [shell-proxy](https://github.com/lxl66566/shell-proxy)。
+- ~~本来我看设置里有 _工作步骤展示 - 选择希望看到多少工具调用细节_ 的时候我还以为他们真的在为开发者着想，结果发现开 subagent 的时候连 subagent 的内容和 context 都看不了，无语了。~~ 是没找到位置。subagent 详情要点顶部标题栏那里看，而不是当前主要区域里。
+- _读工具会截断超过 2000 字符的单行，而这些文档原本就有大量超长行，B、C 第一轮因此丢了部分行尾内容，A 的 status/todo/ffi/workflow 也受影响。_ 这是主 agent 的报告，我在想为啥这些工具总是喜欢偷偷搞一些限制又不告诉用户。。
