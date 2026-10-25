@@ -3,6 +3,16 @@ import type { GalItemInputType } from "../definition/gal_type.js";
 
 const original_list: GalItemInputType[] = [
   {
+    name: "けもの道☆ガーリッシュスクエア2",
+    valid_name: "けもの道",
+    other_names: ["兽娘道"],
+    order: 2,
+    playing_status: PlayingStatus.PLAYING,
+    duration: {
+      start: "2026-10-25",
+    }
+  },
+  {
     name: "STEINS;GATE RE:BOOT",
     valid_name: "STEINSGATE",
     other_names: ["石头门", "命运石之门"],

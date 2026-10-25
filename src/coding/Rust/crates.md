@@ -302,9 +302,11 @@ hex 编解码是 simd 的竞技场。faster-hex 和 hex-simd 是其中的两个�
 
 rust 的默认 allocator 并不好用([ref](https://news.ycombinator.com/item?id=38459571))；只需要 3 行代码更换一个 global allocator 即可获得免费的性能提升。
 
-之前比较广泛使用的 allocator 是 [jemalloc](https://github.com/jemalloc/jemalloc)，之前还假死了一段时间，但是现在又活了。jemalloc 是经过了大量实战测试以及生产环境的验证，可以算是知名度最高、使用最广泛的 allocator 了。jemalloc 比较适合长时间运行的 server program。jemalloc 的缺点是不支持 Windows。
+之前比较广泛使用的 allocator 是 [jemalloc](https://github.com/jemalloc/jemalloc)，之前还假死了一段时间，但是现在又活了；目前的活跃分支是 tikv-jemalloc。jemalloc 经过了大量实战测试以及生产环境的验证，可以算是知名度最高、使用最广泛的 allocator 了，长时间运行的 server program 基本是人手一份 jemalloc。我自己的项目也用上了，实测确实对内存占用有非常厉害的优化。jemalloc 的缺点是不支持 Windows。
 
-mimalloc 是一个竞争者，可以看看它的[性能测试](https://news.ycombinator.com/item?id=38459571)。mimalloc 最大的优势是支持 Windows；但是我曾今遇到过一个[严重的问题（所有使用了 mimalloc 的软件在 Windows11 24H2 上稳定崩溃）](https://t.me/withabsolutex/2730)，因此对其并无好感。另外我还在一些项目上观察到启用 mimalloc 会造成可观测的性能下降。
+mimalloc 是一个竞争者，可以看看它的[性能测试](https://news.ycombinator.com/item?id=38459571)。mimalloc 最大的优势是支持 Windows；但是我曾今遇到过一个[严重的问题（所有使用了 mimalloc 的软件在 Windows11 24H2 上稳定崩溃）](https://t.me/withabsolutex/2730)，因此对其并无好感。我还在一些项目上观察到启用 mimalloc 会造成可观测的性能下降。我也跑过一些 benchmark，体感上说，mimalloc 的性能是不如 jemalloc 的。
+
+在寻找 jemalloc 的 RIIR 替代品的时候发现了 [stoolap-jemalloc](https://github.com/stoolap/stoolap-jemalloc)，这基本就是 jemalloc 的算法 RIIR 的实现。大概看了一下，代码质量不错，性能非常牛逼，爆杀 mimalloc（在 windows 上进行测试），并且还支持 windows 和 linux 跨平台。
 
 ### fuzz
 
