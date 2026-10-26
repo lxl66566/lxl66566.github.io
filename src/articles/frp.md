@@ -37,7 +37,8 @@ tag:
 
 - 由于这个服务相当重要（如果 easytier 挂了，就没法从公网重新连到内网 server），所以我给这个 systemd 服务加了失败自动拉起。
 - easytier 的 quic 做得相对比较糟糕，比如 [2.6.x 引入了 quic 的破坏性变更导致和 2.4.5 不兼容](https://github.com/EasyTier/EasyTier/issues/2167)并且在 release note 里没有说明；即使是 2.6.4 这个 stable release，还仍然可能发生长时间运行后 server 突然疯狂报超时无法连接到其他节点，因此我还得加一个每天定时重启这个服务的 timer。
-  - easytier 的 quic 是假的加密，中间人能直接拿到明文，我扫出这个问题的时候感觉天塌了。
+  - easytier 的 quic 是假的加密，如果是非私有网络，则中间人能直接拿到明文，我扫出这个问题的时候感觉非常想笑。
+- easytier 的 P2P 打洞并不支持 hard NAT to hard NAT。还是比较垃圾的。
 
 ## cloudflare tunnel
 

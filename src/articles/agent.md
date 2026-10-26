@@ -242,8 +242,9 @@ if (content) {
 10. GLM 在 202609 推出了夜间爽蹬活动，zcode 无限用 GLM 5.3 flash；但是前提是你的帐号没用完额度。。。用完以后就没法蹬了。
 11. 闲时任务没有草稿：创建闲时任务里写了一堆东西，切出去看看其他会话进度，再切回来发现已经写的内容都没了。
 12. 我可以看到一个 agent 启动的“运行中的终端”，但是无法看到它输出的内容。。
-13. subagent 被中断即丢失所有上下文，且无法恢复：subagent 输出中，停止会话，则之后再开启会话时 subagent 已经输出的内容都不会再进入主 agent 的上下文。等于是 token 白烧了。
+13. ~~subagent 被中断即丢失所有上下文，且无法恢复~~：subagent 输出中，停止会话，则之后再开启会话时 subagent 已经输出的内容都不会再进入主 agent 的上下文。等于是 token 白烧了。
     - 也没法看 subagent 到底消耗了多少 token。
+    - 2026.10 起 zcode 终于支持 subagent resume 了，可以继续而不是直接丢失已经进行到一半的工作。
 14. 不像 opencode 给 AI 发消息可以“插队”在工具调用里；zcode 在 AI 输出时发送消息，必须排队到 AI 完成全部任务后才能被 AI 看到。
     - 点击「立即」按钮（打断会话，发出消息），快速切到其他 session，再回来以后会看到消息并没有发出去（仍然留在队列里），但是会话的打断是实打实发生的。抽象啊。
     - 新版本设置里可以改「交互行为」，改成「引导」就是我需要的功能了。
@@ -259,6 +260,7 @@ if (content) {
 23. **恶性 bug**：几天前的 session 想要重新开始用，模型已选择，然而发 `/Compact` 后报错 _Select a model before continuing_。fork session 后重发 `/Compact`，无效。只能先发一条 message 然后再进行 compact。
 24. agent 在 session 里启动的 server 不会在会话结束后自动退出。每次我都会遇到端口冲突问题，一看就是 agent 用来做调试的 server 不会自动退。
 25. 神经的 HighSpeed 模式：深夜我正常使用中，然后在我发出提示词之后 zcode 自动给我提升到 HighSpeed 模式体验 15 分钟。这本来算是个福利，但是这模式下居然不能开 subagent，而我的提示词本来就是要开 subagent 的，整的这一出反而打断了我的工作流程。([src](https://t.me/absolutexsward/507))
+26. 1024 送的免费 token 很没有诚意。单线程跑，不开 subagent，都会报错 _model concurrency limit exceeded_。
 
 ## [pi](https://github.com/earendil-works/pi)
 

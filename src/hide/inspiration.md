@@ -81,7 +81,7 @@ tag:
 - [ ] ~~kde spectacle ocr plugin~~ no longer use kde
 - [ ] ~~分布式服务器监控全栈~~ [UpGrid](https://github.com/George-Miao/UpGrid)?
 - [ ] 半连接时序神经网络
-- [ ] matlab executor or translator
+- [ ] ~~matlab executor or translator~~ 现在已经不需要任何机械化 translator 了，just AI
 - [ ] use excel-like editor to edit sql database
 - [x] 射精记录 bot，cloudflare workers + d1
 - [x] ~~rust TUI easy_download~~ [trauma](https://github.com/rgreinho/trauma)，然后我还 PR 了一些；~~但是这项目仍然很屎，如果用了会带一堆不该带的依赖~~
@@ -148,8 +148,8 @@ tag:
 
 - [ ] 关于轨迹记录软件与应用时长记录软件!!时空刻录器!!
 - [ ] ~~Android opensource store, package manager（AUR-like）~~ **Obtainium** is good.
-- [ ] 录音机 app，抓住日常的每一个瞬间
-  - [ ] 全天录音 to RAM，手动保存重放
+- [x] 录音机 app，抓住日常的每一个瞬间 [Echo](https://github.com/lxl66566/echo)
+  - [x] 全天录音 to RAM，手动保存重放
 - [ ] Android task manager, \*top
 
 #### module
