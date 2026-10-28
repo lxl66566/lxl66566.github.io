@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DCj3-S1z.js">
+<link rel="modulepreload" href="../assets/entry-Db8mLVXR.js">
 <link rel="modulepreload" href="../assets/chrome-379cddde.js">
 <title>Agent 工具横评 | 绝对值_x 的博客</title>
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -17,10 +17,10 @@
 <meta property="og:site_name" content="绝对值_x 的博客">
 <meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Agent 工具横评","url":"https://absx.pages.dev/articles/agent","mainEntityOfPage":"https://absx.pages.dev/articles/agent","description":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-13T00:00:00.000Z","dateModified":"2026-10-26T23:07:46+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Agent 工具横评","url":"https://absx.pages.dev/articles/agent","mainEntityOfPage":"https://absx.pages.dev/articles/agent","description":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-10-13T00:00:00.000Z","dateModified":"2026-10-28T23:06:58+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-Cl1ZNJ6f.css">
+<link rel="stylesheet" href="../assets/entry-CJgQxVCt.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
@@ -242,7 +242,11 @@
 <li>给模型用的终端工具一坨。开个会话问问模型就知道，zcode 给 AI 的终端是“default shell”，这在 Windows 上还是 cmd 而不是 powershell。虽然 powershell 坑比较多，但是总比啥都没有的 cmd 好吧。给模型的系统提示词里也没有终端使用教程，只有一点 cli 规范。
 <ul>
 <li>有一堆无法关闭的内置 MCP。</li>
-<li><strong>恶性 bug</strong>：zcode 给 agent 提供的「内置任务」功能（实际上是 Bash + <code>run_in_background: true</code> 实现的）非常难用，很多时候终端进程都已经 panic 了，但是任务本身不会结束，就一直挂着浪费时间等 timeout。所以全局提示里需要写一句“禁止使用 run_in_background”。</li>
+<li><strong>恶性 bug</strong>：zcode 给 agent 提供的「内置任务」功能（实际上是 Bash + <code>run_in_background: true</code> 实现的）非常难用，很多时候终端进程都已经 panic 了，但是任务本身不会结束，就一直挂着浪费时间等 timeout。所以全局提示里需要写一句“禁止使用 run_in_background”。
+<ul>
+<li>提示其实也没用。因为执行 bash 命令超过 10 分钟，命令也会被自动转入后台。没有办法禁用这个行为。</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>对于 agent 命令操作，zcode 其实是有沙盒的，执行 bash 工具对项目外的写入操作好像是有点问题。但是 AI 不知道这个沙盒的机制，有时候要试错多次。</li>
@@ -299,6 +303,7 @@
 <li>agent 在 session 里启动的 server 不会在会话结束后自动退出。每次我都会遇到端口冲突问题，一看就是 agent 用来做调试的 server 不会自动退。</li>
 <li>神经的 HighSpeed 模式：深夜我正常使用中，然后在我发出提示词之后 zcode 自动给我提升到 HighSpeed 模式体验 15 分钟。这本来算是个福利，但是这模式下居然不能开 subagent，而我的提示词本来就是要开 subagent 的，整的这一出反而打断了我的工作流程。(<a href="https://t.me/absolutexsward/507" class="ap-external">src</a>)</li>
 <li>1024 送的免费 token 很没有诚意。单线程跑，不开 subagent，都会报错 <em>model concurrency limit exceeded</em>。</li>
+<li><strong>恶性 bug</strong>：20261027 晚，我拿着一张重置卡并且定了个重置闹钟爽用。在重置卡剩 2 分钟时，我如期点击重置，然后……<em>重置失败，请重试</em>。试了几次都是这样，我尝试重启 zcode，重启后重置按钮消失，剩下 4 张重置卡全部归零，无法进行重置。约 30 分钟后重置按钮恢复，重置卡重新展示，然而我的这张到期的重置卡已经无法找回了。</li>
 </ol>
 <h2 id="pi"><a href="https://github.com/earendil-works/pi" class="ap-external">pi</a></h2>
 <p>由于 <a href="#opencode">opencode 太难用太狗屎</a>了，让我的怨气值积攒到了一定水平，然后根据一个契机<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>就换到了 pi。</p>
@@ -419,7 +424,7 @@
 <div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
 <div id="ap-toc" class="ap-toc"></div>
 <footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/agent","locale":"root","title":"Agent 工具横评","headings":[{"level":1,"text":"Agent 工具横评","slug":"agent-工具横评"},{"level":2,"text":"cursor","slug":"cursor"},{"level":3,"text":"设置","slug":"设置"},{"level":3,"text":"无限续","slug":"无限续"},{"level":2,"text":"opencode","slug":"opencode"},{"level":3,"text":"心得","slug":"心得"},{"level":3,"text":"opencode 有多难用","slug":"opencode-有多难用"},{"level":3,"text":"总结","slug":"总结"},{"level":2,"text":"zcode","slug":"zcode"},{"level":3,"text":"经验","slug":"经验"},{"level":3,"text":"开喷","slug":"开喷"},{"level":2,"text":"pi","slug":"pi"},{"level":3,"text":"使用技巧","slug":"使用技巧"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"坑点/吐槽","slug":"坑点-吐槽"},{"level":3,"text":"与 oh-my-pi 比较","slug":"与-oh-my-pi-比较"},{"level":2,"text":"deepseek harness","slug":"deepseek-harness"}],"frontmatter":{"date":"2026-10-13","category":["评价"],"tag":["横评","工具","桌面端"],"icon":"brands/signal-messenger"},"createdAt":"2026-10-13T00:00:00.000Z","updatedAt":"2026-10-26T23:07:46+08:00","readingTime":24,"excerpt":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":2,"links":[{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DCj3-S1z.js"></script>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/agent","locale":"root","title":"Agent 工具横评","headings":[{"level":1,"text":"Agent 工具横评","slug":"agent-工具横评"},{"level":2,"text":"cursor","slug":"cursor"},{"level":3,"text":"设置","slug":"设置"},{"level":3,"text":"无限续","slug":"无限续"},{"level":2,"text":"opencode","slug":"opencode"},{"level":3,"text":"心得","slug":"心得"},{"level":3,"text":"opencode 有多难用","slug":"opencode-有多难用"},{"level":3,"text":"总结","slug":"总结"},{"level":2,"text":"zcode","slug":"zcode"},{"level":3,"text":"经验","slug":"经验"},{"level":3,"text":"开喷","slug":"开喷"},{"level":2,"text":"pi","slug":"pi"},{"level":3,"text":"使用技巧","slug":"使用技巧"},{"level":3,"text":"优点","slug":"优点"},{"level":3,"text":"坑点/吐槽","slug":"坑点-吐槽"},{"level":3,"text":"与 oh-my-pi 比较","slug":"与-oh-my-pi-比较"},{"level":2,"text":"deepseek harness","slug":"deepseek-harness"}],"frontmatter":{"date":"2026-10-13","category":["评价"],"tag":["横评","工具","桌面端"],"icon":"brands/signal-messenger"},"createdAt":"2026-10-13T00:00:00.000Z","updatedAt":"2026-10-28T23:06:58+08:00","readingTime":24,"excerpt":"Agent 工具横评 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。 cursor cursor 是各个 agent 的元老。20…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":2,"links":[{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-Db8mLVXR.js"></script>
 </body>
 </html>

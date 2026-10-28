@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../../assets/entry-DCj3-S1z.js">
+<link rel="modulepreload" href="../../assets/entry-Db8mLVXR.js">
 <link rel="modulepreload" href="../../assets/chrome-379cddde.js">
 <title>crates 评价 | 绝对值_x 的博客</title>
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
@@ -17,10 +17,10 @@
 <meta property="og:site_name" content="绝对值_x 的博客">
 <meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"crates 评价","url":"https://absx.pages.dev/coding/Rust/crates","mainEntityOfPage":"https://absx.pages.dev/coding/Rust/crates","description":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-08-26T00:00:00.000Z","dateModified":"2026-10-26T04:51:13+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"crates 评价","url":"https://absx.pages.dev/coding/Rust/crates","mainEntityOfPage":"https://absx.pages.dev/coding/Rust/crates","description":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-08-26T00:00:00.000Z","dateModified":"2026-10-28T23:06:58+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../../assets/entry-Cl1ZNJ6f.css">
+<link rel="stylesheet" href="../../assets/entry-CJgQxVCt.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
@@ -467,16 +467,32 @@ ustr 是我最喜欢的三方 str 之一，如果你的拷贝次数远大于构�
 <p>反正 opendal 带给我的感觉就是，能用，但用着很难受。</p>
 <h3 id="simd">SIMD</h3>
 <p>rust std::arch 里已经有一堆平台相关的 unsafe 函数，用于直接执行 simd 指令。而 simd 库的重点是如何把这堆指令尽可能零成本抽象为平台无关的 safe 函数，供外部更方便地使用，减少用户心智负担。</p>
-<p>目前 rust 社区完成度最高的是 fearless_simd，202609 刚发布 1.0 稳定版本。虽然我对其印象不佳，其在 AVX512、wasm 的 simd 实现中还是有一些小缺点。</p>
-<p>当然，不能凭借第一印象直接否定它的成果，于是我尝试使用 AI 将我的一个小项目 <a href="https://github.com/lxl66566/base94-simd" class="ap-external">base94-simd</a> port 到 fearless_simd 1.0 上进行对比。</p>
-<p>结果是 fearless_simd 有胜有负，不同的 testcase 在 -3% 到 +7% 之间波动。总体来说还是赢的。一些坑点：</p>
+<p>目前 rust 社区完成度最高的是 fearless_simd，202609 刚发布 1.0 稳定版本。我对其主观印象不佳，其在 AVX512、wasm 的 simd 实现中还是有一些小坑。</p>
+<p>当然，不能凭借主观第一印象直接评判它的成果，于是我尝试使用 AI 将我的一个小项目 <a href="https://github.com/lxl66566/base94-simd" class="ap-external">base94-simd</a> port 到 fearless_simd 1.0 上进行对比。结果是 fearless_simd 有胜有负，不同的 testcase 在 -3% 到 +7% 之间波动。总体来说还是赢的。</p>
+<p>后来我又在我的其他项目，例如 <a href="https://github.com/lxl66566/simd-json5" class="ap-external">simd-json5</a> 上使用过 fearless_simd。做个客观的总结吧：</p>
+<p>优点：</p>
 <ol>
-<li>缺 exotic op 抽象：<code>vpcompressb</code>、<code>pdep</code> 没有对应 API，只能靠 <code>kernel!</code> 手写</li>
+<li>适合 forbid unsafe 项目或者有审计、想压 unsafe 数量的。可以少很多 unsafe，减小审计面。</li>
+<li>如果 fearless_simd 提供的指令可以完全覆盖需求，用起来就还不错，能少写许多跨 arch 的胶水代码，也不用在一堆平台上跑测试。
+<ul>
+<li>但是只要有一点指令没覆盖到，就得陷入手写 simd 并且跑全 arch 验证的地步，比较麻烦。</li>
+</ul>
+</li>
+<li>可以真正找到性能问题。</li>
+</ol>
+<p>坑点：</p>
+<ol>
+<li>缺 exotic op 抽象：<code>vpcompressb</code>、<code>pdep</code> 没有对应 API，只能靠 <code>kernel!</code> 手写。其实大多 simd wrapper 也都有这种问题，各种稀奇古怪的指令凭人力想要全覆盖是不太现实的。</li>
+<li>会增大产物的二进制体积，如果体积敏感则需要斟酌。编译时间就不说了，相比之下不算太严重。</li>
+<li>如果你追求最后 2% 性能，那 fearless_simd 比起手写还是略逊一筹。有些跨 crate 或者强制的边界检查，不手写的话还是比较难抠出来的。</li>
 </ol>
 <h3 id="rustpython">RustPython</h3>
 <p>谁会在生产环境使用 RustPython 呢？目前用 AI review 了一下，是有一个 one line panic 的 bug，外加几个越界写/提前释放。Rust 本身就应该防止这种越界问题，但是看起来没有防住。</p>
 <p>另外 <a href="https://rustpython.github.io/benchmarks" class="ap-external">benchmark</a> 上看，仍然是远不及 CPython 的。如果重写初期就没考虑性能，那么后期再想优化就比较困难了。</p>
 <p>RustPython 的 AI Policy 还是<a href="https://github.com/RustPython/.github/blob/207549dc7db5d46a81ee09224a50d99a7e462f50/AI_POLICY.md" class="ap-external">比较开放</a>的，希望利用 AI 快速追一追，否则真没有任何发展空间了。</p>
+<h3 id="json">json</h3>
+<p>性能：sonic-rs &gt;&gt; simd-json &gt; serde_json</p>
+<p>sonic-rs 的性能真的非常恐怖，简直是统治级别的，字节还是牛逼啊。然而用的人好像不多。</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -491,7 +507,7 @@ ustr 是我最喜欢的三方 str 之一，如果你的拷贝次数远大于构�
 <div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
 <div id="ap-toc" class="ap-toc"></div>
 <footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/coding/Rust/crates","locale":"root","title":"crates 评价","headings":[{"level":1,"text":"crates 评价","slug":"crates-评价"},{"level":2,"text":"热门","slug":"热门"},{"level":2,"text":"推荐","slug":"推荐"},{"level":2,"text":"拉黑","slug":"拉黑"},{"level":2,"text":"细说","slug":"细说"},{"level":3,"text":"clap","slug":"clap"},{"level":3,"text":"once_cell","slug":"once-cell"},{"level":3,"text":"字符串进阶","slug":"字符串进阶"},{"level":3,"text":"错误处理","slug":"错误处理"},{"level":3,"text":"日志","slug":"日志"},{"level":4,"text":"log 方案","slug":"log-方案"},{"level":4,"text":"trace 方案","slug":"trace-方案"},{"level":3,"text":"channel","slug":"channel"},{"level":3,"text":"queue","slug":"queue"},{"level":3,"text":"serde","slug":"serde"},{"level":3,"text":"rayon","slug":"rayon"},{"level":3,"text":"sqlx","slug":"sqlx"},{"level":3,"text":"tauri","slug":"tauri"},{"level":3,"text":"image","slug":"image"},{"level":3,"text":"RustCrypto/AEAD 与加解密","slug":"rustcrypto-aead-与加解密"},{"level":3,"text":"Hashes","slug":"hashes"},{"level":3,"text":"hex","slug":"hex"},{"level":3,"text":"allocator","slug":"allocator"},{"level":3,"text":"fuzz","slug":"fuzz"},{"level":3,"text":"音频(opus)","slug":"音频-opus"},{"level":3,"text":"cargo-binstall","slug":"cargo-binstall"},{"level":3,"text":"tokio-tungstenite","slug":"tokio-tungstenite"},{"level":3,"text":"opendal","slug":"opendal"},{"level":3,"text":"SIMD","slug":"simd"},{"level":3,"text":"RustPython","slug":"rustpython"}],"frontmatter":{"date":"2026-08-26","category":["编程"],"tag":["编程语言"],"icon":"solid/box"},"createdAt":"2026-08-26T00:00:00.000Z","updatedAt":"2026-10-26T04:51:13+08:00","readingTime":30,"excerpt":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…"},"related":[{"route":"/coding/Rust/","title":"Rust","refs":4,"links":[{"route":"/blog/log","refs":5}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/Rust/","refs":5}]}]}</script>
-<script type="module" src="../../assets/entry-DCj3-S1z.js"></script>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/coding/Rust/crates","locale":"root","title":"crates 评价","headings":[{"level":1,"text":"crates 评价","slug":"crates-评价"},{"level":2,"text":"热门","slug":"热门"},{"level":2,"text":"推荐","slug":"推荐"},{"level":2,"text":"拉黑","slug":"拉黑"},{"level":2,"text":"细说","slug":"细说"},{"level":3,"text":"clap","slug":"clap"},{"level":3,"text":"once_cell","slug":"once-cell"},{"level":3,"text":"字符串进阶","slug":"字符串进阶"},{"level":3,"text":"错误处理","slug":"错误处理"},{"level":3,"text":"日志","slug":"日志"},{"level":4,"text":"log 方案","slug":"log-方案"},{"level":4,"text":"trace 方案","slug":"trace-方案"},{"level":3,"text":"channel","slug":"channel"},{"level":3,"text":"queue","slug":"queue"},{"level":3,"text":"serde","slug":"serde"},{"level":3,"text":"rayon","slug":"rayon"},{"level":3,"text":"sqlx","slug":"sqlx"},{"level":3,"text":"tauri","slug":"tauri"},{"level":3,"text":"image","slug":"image"},{"level":3,"text":"RustCrypto/AEAD 与加解密","slug":"rustcrypto-aead-与加解密"},{"level":3,"text":"Hashes","slug":"hashes"},{"level":3,"text":"hex","slug":"hex"},{"level":3,"text":"allocator","slug":"allocator"},{"level":3,"text":"fuzz","slug":"fuzz"},{"level":3,"text":"音频(opus)","slug":"音频-opus"},{"level":3,"text":"cargo-binstall","slug":"cargo-binstall"},{"level":3,"text":"tokio-tungstenite","slug":"tokio-tungstenite"},{"level":3,"text":"opendal","slug":"opendal"},{"level":3,"text":"SIMD","slug":"simd"},{"level":3,"text":"RustPython","slug":"rustpython"},{"level":3,"text":"json","slug":"json"}],"frontmatter":{"date":"2026-08-26","category":["编程"],"tag":["编程语言"],"icon":"solid/box"},"createdAt":"2026-08-26T00:00:00.000Z","updatedAt":"2026-10-28T23:06:58+08:00","readingTime":31,"excerpt":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…"},"related":[{"route":"/coding/Rust/","title":"Rust","refs":4,"links":[{"route":"/blog/log","refs":5}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/Rust/","refs":5}]}]}</script>
+<script type="module" src="../../assets/entry-Db8mLVXR.js"></script>
 </body>
 </html>
