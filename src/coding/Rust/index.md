@@ -487,7 +487,7 @@ cargo build 在全局获取包与依赖的源码，并编译到 target 里。rus
 
 [^4]: 哪怕同一个编译器同一个包 rust 的编译是有副作用的，比如 env 宏 build script 乃至 proc macro，都是能任意副作用的 ([ref](https://t.me/c/1264662201/550767))
 
-不过可以试试 [sccache](https://github.com/mozilla/sccache/) 全局缓存。
+不过可以试试 [sccache](https://github.com/mozilla/sccache/) 全局缓存，可以减少重复构建。
 
 ### 扩展
 
@@ -699,7 +699,9 @@ Rust nightly 有许多好用的东西，然而 nightly 工具链只有日期，�
 
 如果你希望开多个 git worktree 并行推进任务（AI 时代非常常见），则可以考虑共享编译缓存，因为 Rust 的编译产物实在是太大了。比如一些大型项目本体构建就数十 GB，则多个 worktree 可以分分钟把你的磁盘干爆。
 
-sccache 虽然可以复用缓存内容，节省 CPU，但是并不能帮你节省磁盘空间。因为匹配到构建内容后，sccache 是把缓存的构建产物 copy 到新 target 里的，没有 reflink，该占多少还是占多少。
+首先共享编译缓存是只有 NTFS user 或者 ext4 user 需要考虑的东西，其他的 fs 可以直接用 CoW 复用 target。四舍五入编译产物问题基本上只烦 windows 用户。
+
+sccache 虽然可以复用缓存内容，节省 CPU，但是并不能帮你节省磁盘空间。因为匹配到构建内容后，sccache 是把缓存的构建产物 copy 到新 target 里的，没有 reflink，磁盘占用其实是双倍。
 
 可以使用 `CARGO_TARGET_DIR` env 来让所有 worktree 共享一个 target folder。虽然会牺牲一点并行度（共享 target 后两个 worktree 无法同时构建），但是构建时长本来也只占开发中较小的一部分，因此可以放心使用。
 

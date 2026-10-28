@@ -389,13 +389,24 @@ opus-rs 永远地失去了我的一颗星星。
 
 rust std::arch 里已经有一堆平台相关的 unsafe 函数，用于直接执行 simd 指令。而 simd 库的重点是如何把这堆指令尽可能零成本抽象为平台无关的 safe 函数，供外部更方便地使用，减少用户心智负担。
 
-目前 rust 社区完成度最高的是 fearless_simd，202609 刚发布 1.0 稳定版本。虽然我对其印象不佳，其在 AVX512、wasm 的 simd 实现中还是有一些小缺点。
+目前 rust 社区完成度最高的是 fearless_simd，202609 刚发布 1.0 稳定版本。我对其主观印象不佳，其在 AVX512、wasm 的 simd 实现中还是有一些小坑。
 
-当然，不能凭借第一印象直接否定它的成果，于是我尝试使用 AI 将我的一个小项目 [base94-simd](https://github.com/lxl66566/base94-simd) port 到 fearless_simd 1.0 上进行对比。
+当然，不能凭借主观第一印象直接评判它的成果，于是我尝试使用 AI 将我的一个小项目 [base94-simd](https://github.com/lxl66566/base94-simd) port 到 fearless_simd 1.0 上进行对比。结果是 fearless_simd 有胜有负，不同的 testcase 在 -3% 到 +7% 之间波动。总体来说还是赢的。
 
-结果是 fearless_simd 有胜有负，不同的 testcase 在 -3% 到 +7% 之间波动。总体来说还是赢的。一些坑点：
+后来我又在我的其他项目，例如 [simd-json5](https://github.com/lxl66566/simd-json5) 上使用过 fearless_simd。做个客观的总结吧：
 
-1. 缺 exotic op 抽象：`vpcompressb`、`pdep` 没有对应 API，只能靠 `kernel!` 手写
+优点：
+
+1. 适合 forbid unsafe 项目或者有审计、想压 unsafe 数量的。可以少很多 unsafe，减小审计面。
+2. 如果 fearless_simd 提供的指令可以完全覆盖需求，用起来就还不错，能少写许多跨 arch 的胶水代码，也不用在一堆平台上跑测试。
+   - 但是只要有一点指令没覆盖到，就得陷入手写 simd 并且跑全 arch 验证的地步，比较麻烦。
+3. 可以真正找到性能问题。
+
+坑点：
+
+1. 缺 exotic op 抽象：`vpcompressb`、`pdep` 没有对应 API，只能靠 `kernel!` 手写。其实大多 simd wrapper 也都有这种问题，各种稀奇古怪的指令凭人力想要全覆盖是不太现实的。
+2. 会增大产物的二进制体积，如果体积敏感则需要斟酌。编译时间就不说了，相比之下不算太严重。
+3. 如果你追求最后 2% 性能，那 fearless_simd 比起手写还是略逊一筹。有些跨 crate 或者强制的边界检查，不手写的话还是比较难抠出来的。
 
 ### RustPython
 
@@ -404,3 +415,9 @@ rust std::arch 里已经有一堆平台相关的 unsafe 函数，用于直接执
 另外 [benchmark](https://rustpython.github.io/benchmarks) 上看，仍然是远不及 CPython 的。如果重写初期就没考虑性能，那么后期再想优化就比较困难了。
 
 RustPython 的 AI Policy 还是[比较开放](https://github.com/RustPython/.github/blob/207549dc7db5d46a81ee09224a50d99a7e462f50/AI_POLICY.md)的，希望利用 AI 快速追一追，否则真没有任何发展空间了。
+
+### json
+
+性能：sonic-rs >> simd-json > serde_json
+
+sonic-rs 的性能真的非常恐怖，简直是统治级别的，字节还是牛逼啊。然而用的人好像不多。
