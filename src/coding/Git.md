@@ -414,7 +414,7 @@ _remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成
 
 `git checkout <hash>` 可以让 `HEAD` 指向任意节点。如果没有任何分支指向 `HEAD` 同一节点，则进入 `HEAD detached` 模式。
 
-`git checkout <branch_name>`（新版本 git 建议用 `switch` 代替 `checkout` 的这一功能）会退出 `HEAD detached` 模式，并将 `HEAD` 附着到分支指针上。
+`git checkout <branch_name>`（新版本 git 建议用 `switch` 代替 `checkout` 承载的 branch 功能）会退出 `HEAD detached` 模式，并将 `HEAD` 附着到分支指针上。
 
 而 `git reset --hard <hash>` 则更进一步，若当前并非 `HEAD detached` 模式（即 `HEAD` 依附于一个分支），则在将 `HEAD` 指向节点的同时，也会让分支跟随着指向 `HEAD`。
 
@@ -428,6 +428,8 @@ _remote branch_ (ex. `origin/main`) 和 _local branch_ (ex. `main`) 可以看成
 [^9]: 我的这个例子是没有退出变基造成的。需要 `git rebase --quit`。
 
 这样我们已经可以操作任意指针指向任意节点了。
+
+还有一个小技巧，可以用 `-` 指代上次移动前的分支 / commit，对于临时切出去再回来的时候比较好用。
 
 `git rebase -i`（即 `--interactive`，交互式）可以对提交树进行任意操作，例如：任意编辑注释，更改提交顺序，删除（`drop`）或合并（`squash`）节点等。需要使用编辑器[^6]。
 
