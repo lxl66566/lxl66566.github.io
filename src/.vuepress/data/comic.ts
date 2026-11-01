@@ -1227,5 +1227,7 @@ export default [
   { id: "678874", aScore: 8.1, bScore: 9.7, info: "#SM #捆绑 #玩具 #连续高潮 #纯爱 #木瀬樹", bak: "https://telegra.ph/林檎のなる木-木瀬樹-シュガーモーメント-中国翻訳-DL版-09-03" },
   { id: "679261", aScore: 8.4, bScore: 6.5, info: "#体检 #loli", bak: "https://telegra.ph/まろ屋-へこ太郎-これって本当に健康診断なんですか-Chinese-紫藤汉化组-09-03" },
   { id: "680268", aScore: 8.3, bScore: 8.2, info: "#催眠 #多P #堕落 #loli #露出", bak: "https://telegra.ph/caburibbon-caburi-淫祭-艶-中国翻訳-DL版-09-07" },
+  { id: "680652", aScore: 8.6, bScore: 6.8, info: "#蔚蓝档案 #纯爱 #loli", bak: "https://telegra.ph/Inharmonicity-ホトケノザ-絆蹟-ブルーアーカイブ-中国翻訳-DL版-09-08-3" },
+  { id: "682109", aScore: 8.2, bScore: 7.9, order: 3, info: "#蔚蓝档案 #纯爱 #loli #女主动 #浴巾", bak: "https://telegra.ph/肉骨茶漬け-ばくて-イロハのイロゴト3-ブルーアーカイブ-中国翻訳-DL版-09-12" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

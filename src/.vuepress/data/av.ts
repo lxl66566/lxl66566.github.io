@@ -609,4 +609,8 @@ export default [
   { id: "FNS-081", aScore: 7.2, bScore: 4.4, name: "ご主人様のお仕置きが欲しくて…自ら性処理玩具になったおじラブ地味メガネメイド 浅野心愛" },
   { id: "FNS-126", aScore: 8.3, bScore: 4.1, name: "閉鎖的なポツンと限界集落で村民達の半永久オナホにされる肉欲奉納SEX 浅野心愛" },
   { id: "GVH-642 ", aScore: 8.1, bScore: 3, name: "老執事が巨乳○女としたエスカレート性交記録 柏木こなつ" },
+  { id: "HRSM-042", aScore: 6.2, bScore: 6.6 },
+  { id: "HRSM-114", aScore: 6.7, bScore: 5.1 },
+  { id: "HRSM-053", aScore: 5.6, bScore: 6.5 },
+  { id: "MUKC-022", aScore: 5, bScore: 8, name: "オジサンを虜にする あざと可愛い地下アイドル 秘密のオフパコ枕営業 中出しOKコスプレSEXイキ狂い6本番 市川愛茉", say: "好听啊" },
 ] as AvItemType[];
