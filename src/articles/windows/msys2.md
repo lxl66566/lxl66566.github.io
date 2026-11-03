@@ -57,3 +57,4 @@ msys2 使用 pacman 作为包管理器，[Arch Linux](../linux/install_and_confi
 ## 其他
 
 - 在 Windows 24H2 某些特定版本(?)且 ssh 配置了 ProxyCommand，则进行 git push / git pull 后会遇到终端回车与控制键全部失效、按键后终端会打出原始字符 `[A` `[B` 的情况。这是 msys2 的一个 bug，被带进了 git bash，issue: <https://github.com/msys2/msys2-runtime/issues/379>。在该修复合并到 git for windows 之前，可以通过 `git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"` 缓解。
+- 如果设置了 `MSYS=error_start:Z:/xxx.exe`，则使用 msys 启动任意进程崩溃后可以自动打开 xxx.exe，主要用于附加调试器进行调试。

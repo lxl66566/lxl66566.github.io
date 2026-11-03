@@ -282,11 +282,13 @@ RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark �
 
 如果你正在找 ChaCha20Poly1305 的实现，建议看看 [chacha20poly1305-simd](https://crates.io/crates/chacha20poly1305-simd)。性能表现不差，并且 pure rust 不依赖其他工具链。虽然大部分是 vibe coding，不过也经过了 fuzz 验证，可以一试。
 
-### Hashes
+### RustCrypto/hashes
 
-虽然前面批了一顿 RustCrypto，但是在 [hashes](https://github.com/RustCrypto/hashes) 上粗看了一下，~~RustCrypto 的实现也没什么可挑剔的~~。比如 sha2，基本都已经顶到指令集的性能上限。而且 RustCrypto 支持的指令集还多，loongarch 都有，实在是开了眼界。
+虽然前面批了一顿 RustCrypto，但是在 [hashes](https://github.com/RustCrypto/hashes) 上粗看了一下，~~RustCrypto 的实现也没什么可挑剔的。比如 sha2，基本都已经顶到指令集的性能上限。~~ 而且 RustCrypto 支持的指令集还多，loongarch 都有，实在是开了眼界。
 
 ps. 打脸了，有人搞了个 [simd sha1](https://sam.dev/blog/faster-sha1-collision-detection) 把 RustCrypto 的 sha1-checked 秒杀了。不能只看 sha2 等典型 crate。
+
+pps. 看了眼 issue，好多人在批 sha2 的指令集支持不够丰富，例如 [sha512 不支持 BMI2](https://github.com/RustCrypto/hashes/issues/640)，[sha256 也不支持 AVX2](https://github.com/RustCrypto/hashes/issues/327)。因此即使是 sha2，其性能也仍然有进步空间。
 
 ### hex
 
@@ -371,9 +373,7 @@ opus-rs 永远地失去了我的一颗星星。
 
 因为 Xuanwo 一直在 Rust CN 群里引流，我大概在 2024 引流早期就出于兴趣看了下 opendal，当时的感受就是：文档呢？看完了 README 和文档，我仍然不知道这玩意是干啥的。因为没有使用场景，也就没管。
 
-两年后，2026 年，由于我的 [GalgameManager](https://github.com/lxl66566/GalgameManager) 有多网盘后端上传的需求，我又尝试把 opendal 集成到我的项目里。然后看了 opendal 文档，我无语道：_opendal 两年前浅看过一次，感觉两年来文档和 example 没有任何长进。_[^refopendal]
-
-[^refopendal]: https://t.me/withabsolutex/2598
+两年后，2026 年，由于我的 [GalgameManager](https://github.com/lxl66566/GalgameManager) 有多网盘后端上传的需求，我又尝试把 opendal 集成到我的项目里。然后看了 opendal 文档，我无语道：[_opendal 两年前浅看过一次，感觉两年来文档和 example 没有任何长进。_](https://t.me/withabsolutex/2598)
 
 2026 早期，agent 还没那么流行，虽然 deepwiki 等已经可以快速读源码问问题了，但我古法手工编程还是被 opendal 坑了很多次。
 
@@ -421,3 +421,29 @@ RustPython 的 AI Policy 还是[比较开放](https://github.com/RustPython/.git
 性能：sonic-rs >> simd-json > serde_json
 
 sonic-rs 的性能真的非常恐怖，简直是统治级别的，字节还是牛逼啊。然而用的人好像不多。
+
+### binary serde
+
+将自己定义的结构序列化/反序列化到二进制。
+
+<!-- prettier-ignore -->
+| Crate | Serde 支持 | [[ai-self-describe\|自描述]] | no_std | 性能 | 易用性 |
+| --- | --- | --- | --- | --- | --- |
+| bincode | ✅ | ❌ | ✅ | ★★★ | ★★★★★ |
+| wincode | ❌ | ❌ | ✅ | ★★★★ | ★★★★ |
+| postcard | ✅ | ❌ | ✅ | ★★★ | ★★★★★ |
+| rkyv | ❌ | ❌ | ✅ | ★★★★★ | ★ |
+| deku | ❌ | ❌ | ✅ | ★★ | ★★ |
+| rmp-serde | ✅ | 需要配置 | ❌ | ★★ | ★★★★★ |
+
+bincode：曾今是 binary serde 的 top1，但是已经不再维护了，貌似最初是有人想改名所以重写了整个提交历史，然后立刻炎上、因 drama 而死。
+
+wincode：100% 兼容 bincode，并且性能还高。代价是不支持 serde，只能用 crate 自己提供的 `#[derive(SchemaWrite, SchemaRead)]`。虽然用起来体感跟 serde 比较像，但是不兼容就是不兼容。
+
+postcard：二进制体积有优化，数值小的整数会被压成 1Byte，对于寸 byte 寸金的物联网领域比较常用。但是非对齐的代价就是性能比 bincode/postcard 这种对齐格式要低。
+
+rkyv：零拷贝，性能突破天际！但是用起来也最麻烦。
+
+deku：bit 级别的二进制描述与编解码库。适合不允许修改格式的现有 binary 的反序列化。比如游戏专有的 archive 等。
+
+rmp-serde：MessagePack 协议的实现，MessagePack 就是二进制版本的 json。不过 rmp-serde 把字段名称默认给省略掉了，所以不是自描述的，需要手动开。

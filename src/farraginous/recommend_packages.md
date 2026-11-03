@@ -752,6 +752,8 @@ windows 设置小工具，集成了一些高级功能；但是被 [Windows 11 �
 
 [官方项目地址](https://github.com/Lerist/FakeLocation) | [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 
+如果 root 了说不定可以用 [TwTwilight/ImmoralLocation](https://github.com/TwTwilight/ImmoralLocation) 代替；注意该 github user 是刚加入的，使用前记得 review 代码。
+
 ## external
 
 1. [自由软件与专有软件之战——写在 MatLab 不再授权给实体请单上的中国高校之后](https://billchen.bid/jekyll/update/2020/06/10/free-software-vs-proprietary-software/)

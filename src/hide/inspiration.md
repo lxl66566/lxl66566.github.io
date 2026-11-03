@@ -141,6 +141,7 @@ tag:
 - [ ] ~~diskann~~ has been [rewriten by MS](https://github.com/microsoft/diskann)
 - [ ] ~~bubblewrap~~ 没有重写价值
 - [ ] ~~weasel~~ 有 GUI，不太适合直接 RIIR。我先维护了一个 [fork](https://github.com/lxl66566/weasel)。
+- [ ] msys2，因为 IO 性能垃圾，bug 又多
 
 ### Android
 

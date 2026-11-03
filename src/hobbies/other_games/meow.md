@@ -32,9 +32,9 @@ tag:
 
 由于工作原因，我需要在单位电脑和家里电脑频繁同步游戏进度。我用的是 [GalgameManager](../galgame.md#资源) 的存档同步功能，感觉还行。每次都需要导出游戏存档 + 小猫科学家的设置。
 
-## 小猫科学家相关的小知识
+## kitten-scientists 相关的小知识
 
-注：我用的小猫科学家不是中文版游戏自带的那个，而是 [kitten-scientists](https://github.com/kitten-science/kitten-scientists)。**非常不建议任何人去用这个科学家！！** bug 和卡手点比较多。
+注：我用的小猫科学家不是中文版游戏自带的那个，而是 [kitten-scientists](https://github.com/kitten-science/kitten-scientists)。**非常不建议任何人去用这个 kitten-scientists！！** bug 和卡手点比较多。
 
 中文版自带的那个科学家非常好用非常轮椅，各种阈值可以自动调整，基本就是打开放在那里不需要管。但是又有点好用过头了，纯放置会降低许多数值游戏的乐趣，一些摸索临界点、资源调度等有意思的机制就体验不到了。
 
@@ -56,6 +56,7 @@ tag:
 
 - 环保模式非常难用，基本没法计算啥时候会触发行为；有时候配得不好直接会把你资源卡住，原料已经爆仓了但是它就是不触发制作。
   - 千万不要给手稿开环保模式。
+- 由于 kitten-scientists 的存档导入只能复制 text，不能从文件导入，实在是狗屎！于是自己 fork 了一个版本，做了一些优化。并且发了 [PR](https://github.com/kitten-science/kitten-scientists/pull/1241)。现在应该是支持从文件导入的了。
 
 ## 游玩过程中的随便吐槽
 
