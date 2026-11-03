@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../../assets/entry-Cav70qC5.js">
+<link rel="modulepreload" href="../../assets/entry-CcUIp29a.js">
 <link rel="modulepreload" href="../../assets/chrome-379cddde.js">
 <title>crates 评价 | 绝对值_x 的博客</title>
 <link rel="icon" type="image/x-icon" href="../../favicon.ico">
@@ -17,10 +17,10 @@
 <meta property="og:site_name" content="绝对值_x 的博客">
 <meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"crates 评价","url":"https://absx.pages.dev/coding/Rust/crates","mainEntityOfPage":"https://absx.pages.dev/coding/Rust/crates","description":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-08-26T00:00:00.000Z","dateModified":"2026-10-28T23:06:58+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"crates 评价","url":"https://absx.pages.dev/coding/Rust/crates","mainEntityOfPage":"https://absx.pages.dev/coding/Rust/crates","description":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2026-08-26T00:00:00.000Z","dateModified":"2026-11-04T00:01:47+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../../assets/entry-SHcNAogd.css">
+<link rel="stylesheet" href="../../assets/entry-YS_3qK6_.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
@@ -404,9 +404,10 @@ ustr 是我最喜欢的三方 str 之一，如果你的拷贝次数远大于构�
 <p>RustCrypto 的性能仍然是最大问题，网上可以找到许多 benchmark 资料，RustCrypto 就是比 aws-lc-rs/openssl 慢几倍。issue 里也<a href="https://github.com/RustCrypto/AEADs/issues/243" class="ap-external">讨论过这个问题</a>，但是显然 6 年后好像也没什么进展。</p>
 <p>由于我主要用的是 ChaCha20Poly1305 / AES-256，这里以 ChaCha20Poly1305 为例讲讲。ChaCha20Poly1305 在 openssl 里的实现是有把 ChaCha20 与 Poly1305 融合的，而 RustCrypto 是<a href="https://github.com/RustCrypto/AEADs/issues/74" class="ap-external">分为两步执行</a>。这样不仅有额外的数据拷贝，而且编译器也不好进行自动向量化。</p>
 <p>如果你正在找 ChaCha20Poly1305 的实现，建议看看 <a href="https://crates.io/crates/chacha20poly1305-simd" class="ap-external">chacha20poly1305-simd</a>。性能表现不差，并且 pure rust 不依赖其他工具链。虽然大部分是 vibe coding，不过也经过了 fuzz 验证，可以一试。</p>
-<h3 id="hashes">Hashes</h3>
-<p>虽然前面批了一顿 RustCrypto，但是在 <a href="https://github.com/RustCrypto/hashes" class="ap-external">hashes</a> 上粗看了一下，<s>RustCrypto 的实现也没什么可挑剔的</s>。比如 sha2，基本都已经顶到指令集的性能上限。而且 RustCrypto 支持的指令集还多，loongarch 都有，实在是开了眼界。</p>
+<h3 id="rustcrypto-hashes">RustCrypto/hashes</h3>
+<p>虽然前面批了一顿 RustCrypto，但是在 <a href="https://github.com/RustCrypto/hashes" class="ap-external">hashes</a> 上粗看了一下，<s>RustCrypto 的实现也没什么可挑剔的。比如 sha2，基本都已经顶到指令集的性能上限。</s> 而且 RustCrypto 支持的指令集还多，loongarch 都有，实在是开了眼界。</p>
 <p>ps. 打脸了，有人搞了个 <a href="https://sam.dev/blog/faster-sha1-collision-detection" class="ap-external">simd sha1</a> 把 RustCrypto 的 sha1-checked 秒杀了。不能只看 sha2 等典型 crate。</p>
+<p>pps. 看了眼 issue，好多人在批 sha2 的指令集支持不够丰富，例如 <a href="https://github.com/RustCrypto/hashes/issues/640" class="ap-external">sha512 不支持 BMI2</a>，<a href="https://github.com/RustCrypto/hashes/issues/327" class="ap-external">sha256 也不支持 AVX2</a>。因此即使是 sha2，其性能也仍然有进步空间。</p>
 <h3 id="hex">hex</h3>
 <p>hex 编解码是 simd 的竞技场。faster-hex 和 hex-simd 是其中的两个佼佼者；faster-hex 的下载量比较多，许多知名库都依赖 faster-hex，但是我深入看了下，感觉代码质量配不上它的下载量。</p>
 <p>首先 faster-hex 完全没有 NEON decode，aarch64 上解码 hex 只能走标量实现；其次是 faster-hex 为了保证「如果 hex invalid 则不会往 target 里写东西」，使用的是两遍扫描：第一遍是 <code>hex_check_with_case</code> 扫一遍输入做校验，然后再 <code>hex_decode_unchecked</code> 扫一遍做解码。所有架构、所有输入长度都是两次遍历。这不就是狗屎实现吗，脏数据要不要写入 target 当然是调用方来决定，faster-hex 直接全部 check 一刀切然后性能减半（hex simd 已经是内存带宽瓶颈了），我觉得不是用户希望看到的实现。</p>
@@ -459,7 +460,7 @@ ustr 是我最喜欢的三方 str 之一，如果你的拷贝次数远大于构�
 <p>这玩意真的有人在维护吗？然后你可以见到：<a href="https://github.com/snapview/tokio-tungstenite/issues/336" class="ap-external">panic 是特性而不是 bug</a>，<a href="https://github.com/snapview/tokio-tungstenite/issues/379" class="ap-external">接管原始流丢字节</a>没人理。</p>
 <h3 id="opendal">opendal</h3>
 <p>因为 Xuanwo 一直在 Rust CN 群里引流，我大概在 2024 引流早期就出于兴趣看了下 opendal，当时的感受就是：文档呢？看完了 README 和文档，我仍然不知道这玩意是干啥的。因为没有使用场景，也就没管。</p>
-<p>两年后，2026 年，由于我的 <a href="https://github.com/lxl66566/GalgameManager" class="ap-external">GalgameManager</a> 有多网盘后端上传的需求，我又尝试把 opendal 集成到我的项目里。然后看了 opendal 文档，我无语道：<em>opendal 两年前浅看过一次，感觉两年来文档和 example 没有任何长进。</em><sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup></p>
+<p>两年后，2026 年，由于我的 <a href="https://github.com/lxl66566/GalgameManager" class="ap-external">GalgameManager</a> 有多网盘后端上传的需求，我又尝试把 opendal 集成到我的项目里。然后看了 opendal 文档，我无语道：<a href="https://t.me/withabsolutex/2598" class="ap-external"><em>opendal 两年前浅看过一次，感觉两年来文档和 example 没有任何长进。</em></a></p>
 <p>2026 早期，agent 还没那么流行，虽然 deepwiki 等已经可以快速读源码问问题了，但我古法手工编程还是被 opendal 坑了很多次。</p>
 <p>比如我不想加载文件全部内容到内存，在此前提下上传文件到 webdav。opendal 的 FuturesAsyncWriter 默认会在内部用 256KB buffer 进行 chunked 上传，然后 webdav 是 oneshot writer，所以就会爆炸 <em>OneShotWriter doesn't support multiple write</em>。根本原因就是 opendal 没有实现 webdav on chunked，write 的时候必须一把梭算出 content-length。那我为了让 webdav 非流式上传、s3 等流式上传，就又要写一堆丑陋的胶水代码，简直违背了 opendal 的初衷。</p>
 <p>还有踩过的一个坑是 <a href="https://github.com/apache/opendal/discussions/6323" class="ap-external">fs 上 content-length 不可用</a>，于是我又要为 fs backend 写一堆胶水代码……</p>
@@ -493,6 +494,77 @@ ustr 是我最喜欢的三方 str 之一，如果你的拷贝次数远大于构�
 <h3 id="json">json</h3>
 <p>性能：sonic-rs &gt;&gt; simd-json &gt; serde_json</p>
 <p>sonic-rs 的性能真的非常恐怖，简直是统治级别的，字节还是牛逼啊。然而用的人好像不多。</p>
+<h3 id="binary-serde">binary serde</h3>
+<p>将自己定义的结构序列化/反序列化到二进制。</p>
+<!-- prettier-ignore -->
+<table>
+<thead>
+<tr>
+<th>Crate</th>
+<th>Serde 支持</th>
+<th><span class="ap-term" data-term="ai-self-describe" tabindex="0">自描述</span></th>
+<th>no_std</th>
+<th>性能</th>
+<th>易用性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bincode</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>★★★</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>wincode</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>★★★★</td>
+<td>★★★★</td>
+</tr>
+<tr>
+<td>postcard</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>★★★</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>rkyv</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>★★★★★</td>
+<td>★</td>
+</tr>
+<tr>
+<td>deku</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>★★</td>
+<td>★★</td>
+</tr>
+<tr>
+<td>rmp-serde</td>
+<td>✅</td>
+<td>需要配置</td>
+<td>❌</td>
+<td>★★</td>
+<td>★★★★★</td>
+</tr>
+</tbody>
+</table>
+<p>bincode：曾今是 binary serde 的 top1，但是已经不再维护了，貌似最初是有人想改名所以重写了整个提交历史，然后立刻炎上、因 drama 而死。</p>
+<p>wincode：100% 兼容 bincode，并且性能还高。代价是不支持 serde，只能用 crate 自己提供的 <code>#[derive(SchemaWrite, SchemaRead)]</code>。虽然用起来体感跟 serde 比较像，但是不兼容就是不兼容。</p>
+<p>postcard：二进制体积有优化，数值小的整数会被压成 1Byte，对于寸 byte 寸金的物联网领域比较常用。但是非对齐的代价就是性能比 bincode/postcard 这种对齐格式要低。</p>
+<p>rkyv：零拷贝，性能突破天际！但是用起来也最麻烦。</p>
+<p>deku：bit 级别的二进制描述与编解码库。适合不允许修改格式的现有 binary 的反序列化。比如游戏专有的 archive 等。</p>
+<p>rmp-serde：MessagePack 协议的实现，MessagePack 就是二进制版本的 json。不过 rmp-serde 把字段名称默认给省略掉了，所以不是自描述的，需要手动开。</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
@@ -500,14 +572,12 @@ ustr 是我最喜欢的三方 str 之一，如果你的拷贝次数远大于构�
 </li>
 <li id="footnote2" class="footnote-item"><p><em>kanal 不支持 poll 形式，也不 cancel safe。</em> —— <a href="https://luoxu.archlinuxcn.org/#g=2261788729&amp;q=kanal+%E4%B8%8D%E6%94%AF%E6%8C%81+poll+%E5%BD%A2%E5%BC%8F" class="ap-external">Sherlock Holo</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="footnote3" class="footnote-item"><p>https://t.me/withabsolutex/2598 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
-</li>
 </ol>
 </section>
 <div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
 <div id="ap-toc" class="ap-toc"></div>
 <footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/coding/Rust/crates","locale":"root","title":"crates 评价","headings":[{"level":1,"text":"crates 评价","slug":"crates-评价"},{"level":2,"text":"热门","slug":"热门"},{"level":2,"text":"推荐","slug":"推荐"},{"level":2,"text":"拉黑","slug":"拉黑"},{"level":2,"text":"细说","slug":"细说"},{"level":3,"text":"clap","slug":"clap"},{"level":3,"text":"once_cell","slug":"once-cell"},{"level":3,"text":"字符串进阶","slug":"字符串进阶"},{"level":3,"text":"错误处理","slug":"错误处理"},{"level":3,"text":"日志","slug":"日志"},{"level":4,"text":"log 方案","slug":"log-方案"},{"level":4,"text":"trace 方案","slug":"trace-方案"},{"level":3,"text":"channel","slug":"channel"},{"level":3,"text":"queue","slug":"queue"},{"level":3,"text":"serde","slug":"serde"},{"level":3,"text":"rayon","slug":"rayon"},{"level":3,"text":"sqlx","slug":"sqlx"},{"level":3,"text":"tauri","slug":"tauri"},{"level":3,"text":"image","slug":"image"},{"level":3,"text":"RustCrypto/AEAD 与加解密","slug":"rustcrypto-aead-与加解密"},{"level":3,"text":"Hashes","slug":"hashes"},{"level":3,"text":"hex","slug":"hex"},{"level":3,"text":"allocator","slug":"allocator"},{"level":3,"text":"fuzz","slug":"fuzz"},{"level":3,"text":"音频(opus)","slug":"音频-opus"},{"level":3,"text":"cargo-binstall","slug":"cargo-binstall"},{"level":3,"text":"tokio-tungstenite","slug":"tokio-tungstenite"},{"level":3,"text":"opendal","slug":"opendal"},{"level":3,"text":"SIMD","slug":"simd"},{"level":3,"text":"RustPython","slug":"rustpython"},{"level":3,"text":"json","slug":"json"}],"frontmatter":{"date":"2026-08-26","category":["编程"],"tag":["编程语言"],"icon":"solid/box"},"createdAt":"2026-08-26T00:00:00.000Z","updatedAt":"2026-10-28T23:06:58+08:00","readingTime":31,"excerpt":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…"},"related":[{"route":"/coding/Rust/","title":"Rust","refs":4,"links":[{"route":"/blog/log","refs":5}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/Rust/","refs":5}]}]}</script>
-<script type="module" src="../../assets/entry-Cav70qC5.js"></script>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/coding/Rust/crates","locale":"root","title":"crates 评价","headings":[{"level":1,"text":"crates 评价","slug":"crates-评价"},{"level":2,"text":"热门","slug":"热门"},{"level":2,"text":"推荐","slug":"推荐"},{"level":2,"text":"拉黑","slug":"拉黑"},{"level":2,"text":"细说","slug":"细说"},{"level":3,"text":"clap","slug":"clap"},{"level":3,"text":"once_cell","slug":"once-cell"},{"level":3,"text":"字符串进阶","slug":"字符串进阶"},{"level":3,"text":"错误处理","slug":"错误处理"},{"level":3,"text":"日志","slug":"日志"},{"level":4,"text":"log 方案","slug":"log-方案"},{"level":4,"text":"trace 方案","slug":"trace-方案"},{"level":3,"text":"channel","slug":"channel"},{"level":3,"text":"queue","slug":"queue"},{"level":3,"text":"serde","slug":"serde"},{"level":3,"text":"rayon","slug":"rayon"},{"level":3,"text":"sqlx","slug":"sqlx"},{"level":3,"text":"tauri","slug":"tauri"},{"level":3,"text":"image","slug":"image"},{"level":3,"text":"RustCrypto/AEAD 与加解密","slug":"rustcrypto-aead-与加解密"},{"level":3,"text":"RustCrypto/hashes","slug":"rustcrypto-hashes"},{"level":3,"text":"hex","slug":"hex"},{"level":3,"text":"allocator","slug":"allocator"},{"level":3,"text":"fuzz","slug":"fuzz"},{"level":3,"text":"音频(opus)","slug":"音频-opus"},{"level":3,"text":"cargo-binstall","slug":"cargo-binstall"},{"level":3,"text":"tokio-tungstenite","slug":"tokio-tungstenite"},{"level":3,"text":"opendal","slug":"opendal"},{"level":3,"text":"SIMD","slug":"simd"},{"level":3,"text":"RustPython","slug":"rustpython"},{"level":3,"text":"json","slug":"json"},{"level":3,"text":"binary serde","slug":"binary-serde"}],"frontmatter":{"date":"2026-08-26","category":["编程"],"tag":["编程语言"],"icon":"solid/box"},"createdAt":"2026-08-26T00:00:00.000Z","updatedAt":"2026-11-04T00:01:47+08:00","readingTime":33,"excerpt":"crates 评价 热门 有一些库几乎成为业界标准，必需掌握。 库名 简介 anyhow 一般用于 bin target 的错误处理，把所有 error 统一起来，可以偷懒，有需要也可以 downcast 到具体错误类型 thiserror / snafu 一般用于 lib target 的错误处理，需要让下游使用者区…"},"related":[{"route":"/coding/Rust/","title":"Rust","refs":4,"links":[{"route":"/blog/log","refs":5}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/Rust/","refs":5}]}],"refs":"../../assets/refs-346676f4.js"}</script>
+<script type="module" src="../../assets/entry-CcUIp29a.js"></script>
 </body>
 </html>
