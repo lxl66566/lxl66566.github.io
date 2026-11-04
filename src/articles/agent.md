@@ -311,6 +311,9 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 ### 坑点/吐槽
 
+- pi 的启动巨慢，我总共也没装几个插件，启动到能看到 TUI 就要 6-7s。而且 pi 没有单实例多工作区的概念，如果我每打开一个工作区都要 6-7s 那是真的不能接受，毕竟我切换工作区还是比较频繁的。
+  - 插件加载 1.5s，TUI 初始化 1.5s，这个效率也是够低的。插件加载这个必须保证串行，这个我理解。
+  - 另外主要耗时是在 checkForPackageUpdates 上，所有的 plugin 都是串行查询 update，感觉太蠢了。虽然 checkForPackageUpdates 并不会阻塞干活。反正我已经设置了 `PI_OFFLINE=1` 环境变量，把自动查询 update 给禁掉了。
 - **pi 不读 ~/.agents/AGENTS.md**。并且 symlink 没法跨平台使用，我只能写个脚本注入我的 system prompt（pi 0.86）。
   ```ts
   // ~/.pi/agent/extensions/load-global-agents-md.ts
@@ -330,6 +333,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
   }
   ```
   目前社区还没有插件实现这个，最接近的是 [pi-context-include](https://github.com/d3ara1n/pi-extensions/tree/main/packages/pi-context-include) 需要在 `~/.pi/agent/AGENTS.md` 里写一行 `@~/.agents/AGENTS.md` 来自动注入。没人做说明需求少；我这个代码也不多，就不发布了。
+  - 这个简单的玩意在启动时居然需要花 60ms 来加载，你敢信？！
 - pi 会在 `~/.pi/agent` 里拉一大坨东西，config 和 data 耦合在一起。想备份数据的看到这里一下就死了。。
 - 不像 opencode 喜欢用 ctrl + p，pi 主要是靠打出一个 `/` 然后在候选列表里选 command 来进行操作的。但是这个列表的出现有相当大的延迟，只要我打字快一些，pi 就会把我的 `/tree` 这种内容直接当成跟 AI 的对话发出去。。。
   - 然后也是因为这个 `/command` 的原因，在已经写了对话内容的情况下，就没法再调出 command 了。。没法写完一段 prompt 之后再切模型。
@@ -341,6 +345,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - pi 不会自动记住上次使用的 model。我要是设置了 defaultModel + defaultProvider，就只能一直用设置的默认值；要是不设置，它每次开 session 都会自动用 deepseek-v4-pro，实在是太坏了。于是我写了一个 [pi-reuse-model](https://github.com/lxl66566/pi-reuse-model) 用来记住我的上一次 model。
 - `pi update --extensions` 会污染你 current dir 的 pnpm-lock.yaml。不是，这玩意连作用域都不管的？
 - pi 和 opencode 一样都有一个问题：compact 以后就无法在 session 里看到 compact 之前的内容了，只能 export。感觉这点这些 agent 做得都不如 zcode。
+- 想安装一个本地插件，`pi install C:/xxx.tgz` 以后发现往 config 里写的也是 tgz，然后在其他工作区运行 pi 就会得到 _Failed to load extension: Unexpected_。报错信息也看不出来是啥玩意。后面了解到需要用文件夹路径安装。
 
 插件相关：
 
@@ -351,6 +356,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - `npm:pi-auto-compact` 只会在模型与人类交互的时候才会触发 compact。如果模型自己一直在跑，是不会 compact 的。我的需求是要让模型自己在跑到一定量的时候 compact，所以还是直接设置 `~/.pi/agent/models.json` 去 override contextWindow 吧。
 - 使用过一段时间的 `npm:pi-hashline-edit-pro`。这个插件愿景很好，但是用起来的体验确实不太行。首先替换成功率并没有想象中的高，我理解用了 hashline 替换成功率应该接近 100%，结果还是太乐观了。其次每个 hash 都会占用上下文，并且 write 后强制添加的 hash 还会崩掉你的缓存命中。
   - 我写过一个 [pi-replace-function](https://github.com/lxl66566/pi-replace-function) 试试水，但是全函数 replace 的调用率还是相当低的，感觉也没什么用。
+- pi-token-speed 试用了一下，首先对于 pi-subagnets 创建的 subagent 不能展示，只能看主 agent 的 speed；其次这玩意是**不准的**！！！国内模型，例如 GLM 5.3 可能在一个 delta 里下发几个 token，然而它计算是每个 delta 算作 1 token，导致输出结果严重偏低。让 AI 探索了下，pi 如果没有提供 hook 的话这种精确计算还是挺难搞的。
 
 ### 与 oh-my-pi 比较
 
@@ -360,7 +366,20 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 我其实一直不喜欢 deepseek harness，在开源当天我简单扫了一眼 vibe 日志然后就[开喷了](https://t.me/withabsolutex/2803)。但是后来为了 6 块钱的赠金，还是向梁圣低头了……
 
+使用教程：
+
+- 不要直接在 deepseek harness 官网下载 desktop 版本。。。desktop 非常难用，而且数据跟 cli/web 版本不互通，切换还有成本。请直接使用 `pnpm install -g @deepseek-ai/dsh`，然后跑 `dsh web` 打开 web 端。
+- 需要安装「[插件市场](https://github.com/dsh-market/dsh-market)」，这玩意本身也是个插件：dshmarket
+
+吐槽：
+
+- @deepseek-ai/libreoffice-kit-win32-x64 是个啥玩意啊，70 多 MB，我根本没有文档处理需求能不能不装这个啊。。
 - 不支持远程连接，并且看起来也没有好用的远程连接插件。
   - 有个一眼 vibe 出来的 dsh-ssh 感觉还不如我的 [shell-proxy](https://github.com/lxl66566/shell-proxy)。
 - ~~本来我看设置里有 _工作步骤展示 - 选择希望看到多少工具调用细节_ 的时候我还以为他们真的在为开发者着想，结果发现开 subagent 的时候连 subagent 的内容和 context 都看不了，无语了。~~ 是没找到位置。subagent 详情要点顶部标题栏那里看，而不是当前主要区域里。
 - _读工具会截断超过 2000 字符的单行，而这些文档原本就有大量超长行，B、C 第一轮因此丢了部分行尾内容，A 的 status/todo/ffi/workflow 也受影响。_ 这是主 agent 的报告，我在想为啥这些工具总是喜欢偷偷搞一些限制又不告诉用户。。
+- _设置 - 内置插件_ 里展示已停用，但是也没说怎么启用、停用的原因是什么（只有一部分有说停用条件，例如 bash 工具）。UX 稀烂。
+
+插件相关：
+
+- dsh 的插件市场已经没有正常人类了，群魔乱舞，大部分都是 ds v4.1 flash vibe 出来的没啥能用的高质量插件。。
