@@ -1229,5 +1229,15 @@ export default [
   { id: "680268", aScore: 8.3, bScore: 8.2, info: "#催眠 #多P #堕落 #loli #露出", bak: "https://telegra.ph/caburibbon-caburi-淫祭-艶-中国翻訳-DL版-09-07" },
   { id: "680652", aScore: 8.6, bScore: 6.8, info: "#蔚蓝档案 #纯爱 #loli", bak: "https://telegra.ph/Inharmonicity-ホトケノザ-絆蹟-ブルーアーカイブ-中国翻訳-DL版-09-08-3" },
   { id: "682109", aScore: 8.2, bScore: 7.9, order: 3, info: "#蔚蓝档案 #纯爱 #loli #女主动 #浴巾", bak: "https://telegra.ph/肉骨茶漬け-ばくて-イロハのイロゴト3-ブルーアーカイブ-中国翻訳-DL版-09-12" },
+  { id: "447662", aScore: 6.8, bScore: 8.9, info: "#合集 #纯爱" },
+  { id: "684607", aScore: 8.4, bScore: 9, info: "#表兄妹 #cos #泳装 #浴室 #无防备 #乡下", bak: "https://telegra.ph/かやまり屋-香山リム-夏田舎共犯関係帰省先で無知な従兄妹に沼る日々-中国翻訳-DL版-09-16" },
+  { id: "682331", aScore: 7, bScore: 6.5, info: "#蔚蓝档案 #loli #肉骨茶漬け", order: 2, bak: "https://telegra.ph/肉骨茶漬け-ばくて-イロハのイロゴト2-ブルーアーカイブ-中国翻訳-DL版-09-15-2" },
+  { id: "682320", aScore: 7.5, bScore: 8.2, info: "#蔚蓝档案 #loli #自慰", bak: "https://telegra.ph/baa-baa-sheeps-いぬしだ-Undercoverブルーアーカイブ-中国翻訳-DL版-09-15" },
+  { id: "682106", aScore: 8.2, bScore: 8, info: "#兽耳 #神明 #女上位 #loli", bak: "https://telegra.ph/ねちょすけやきもち-消えかけのちっぱい猫神さま-最後はたっぷり楽しませてもらうからの-中国翻訳-DL版-09-14" },
+  { id: "(not found)", aScore: 7.5, bScore: 8.5, info: "#蔚蓝档案 #傲娇", bak: "https://telegra.ph/さかえてないです-さかえ-先生と交尾なんて絶対にしませんブルーアーカイブ-中国翻訳-DL版-08-01" },
+  { id: "581208", aScore: 6.6, bScore: 6.7, info: "#东方 #正太", bak: "https://telegra.ph/白い餅屋-まめもち-ぽかぽか温泉で諏訪子様に甘えんぼ-東方Project-中国翻訳-2025年4月22日-09-17" },
+  { id: "683326", aScore: 7.3, bScore: 7.5, info: "#蔚蓝档案", bak: "https://telegra.ph/C108-みらくるバーン-比宮じょーず-ケイちゃんにまかせればいいんです-ブルーアーカイブ-中国翻訳-09-20" },
+  { id: "(ex)", aScore: 6.3, bScore: 8.1, info: "#いちはや #破处", otherlink: "https://exhentai.org/g/4200994/d22354ff84", bak: "https://telegra.ph/COMIC127-squeezecandyheaven-いちはや-天才JC小説家と秘密の破瓜-中国翻訳-09-20" },
+  { id: "682623", aScore: 7.4, bScore: 7.7, info: "#合集 #3P #混浴", bak: "https://telegra.ph/しろすず-シンデレラフィット-中国翻訳-DL版-09-20" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

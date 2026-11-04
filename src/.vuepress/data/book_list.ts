@@ -5,11 +5,10 @@ const original_list: BookItemInputType[] = [
   {
     name: "狩魔手记",
     author: "烟雨江南",
-    reading_status: {
-      kind: "在读",
-    },
+    h_level: HLevel.LOW,
     duration: {
-      start: "2026-10-14"
+      start: "2026-10-14",
+      end: "2026-11-03"
     },
   },
   {

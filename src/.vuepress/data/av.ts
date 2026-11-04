@@ -177,7 +177,7 @@ export default [
   { id: "ssis-494", aScore: 9, bScore: 7 },
   { id: "ssis-018", aScore: 7.5, bScore: 5 },
   { id: "midv-131", aScore: 8.4, bScore: 6.3, u: true },
-  { id: "pred-403", aScore: 10, bScore: 0.8, u: true },
+  { id: "pred-403", aScore: 10, bScore: 2.4, u: true },
   { id: "dass-043", aScore: 6, bScore: 7.8, u: true },
   { id: "midv-162", aScore: 7, bScore: 0.1, u: true },
   { id: "mide-872", aScore: 9, bScore: 4, u: true },
@@ -613,4 +613,9 @@ export default [
   { id: "HRSM-114", aScore: 6.7, bScore: 5.1 },
   { id: "HRSM-053", aScore: 5.6, bScore: 6.5 },
   { id: "MUKC-022", aScore: 5, bScore: 8, name: "オジサンを虜にする あざと可愛い地下アイドル 秘密のオフパコ枕営業 中出しOKコスプレSEXイキ狂い6本番 市川愛茉", say: "好听啊" },
+  { id: "STSK-151", aScore: 9, bScore: 6.1, name: "神風J〇", say: "last best" },
+  { id: "HRSM-075", aScore: 5.5, bScore: 7, name: "アパレルスタッフ粘着○撮 ○襲生ちん串刺しチ○ン4" },
+  { id: "YMDS-220", aScore: 9.3, bScore: 7.4, name: "連れ娘狼 鬼畜義父兄は娘目当てに結婚しました。 虐められ親子3P中出しSEX 柏木こなつ" },
+  { id: "SHKD-965", aScore: 8.6, bScore: 7.1, name: "娘に中出しするしかなかったあの夜 松本いちか" },
+  { id: "MXGS-1240", aScore: 8.3, bScore: 5.4, name: "誰も助けてくれない イマドキJ●が狙われた冷酷無比レ●プ 松本いちか", say: "你一香姐都懒得叫，纯气氛到位了叫两下" },
 ] as AvItemType[];
