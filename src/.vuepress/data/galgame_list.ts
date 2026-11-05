@@ -31,9 +31,10 @@ const original_list: GalItemInputType[] = [
   {
     name: "DRACU-RIOT!",
     valid_name: "DRACURIOT",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "25h15min",
     duration: {
       start: "2026-09-24",
+      end: "2026-11-05"
     },
   },
   {
