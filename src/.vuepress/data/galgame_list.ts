@@ -36,6 +36,12 @@ const original_list: GalItemInputType[] = [
       start: "2026-09-24",
       end: "2026-11-05"
     },
+    score: {
+      story: 4.6,
+      visual: 7.9,
+      program: 5.8,
+      thrill: 0
+    }
   },
   {
     name: "次元凸破恋战姬！！",

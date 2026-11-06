@@ -3,8 +3,16 @@ import type { BookItemInputType } from "../definition/book_type.js";
 
 const original_list: BookItemInputType[] = [
   {
+    name: "异常生物见闻录",
+    author: "远瞳",
+    duration: {
+      start: "2026-11-04"
+    },
+  },
+  {
     name: "狩魔手记",
     author: "烟雨江南",
+    use_time: "13h12min",
     h_level: HLevel.LOW,
     duration: {
       start: "2026-10-14",
@@ -115,9 +123,6 @@ const original_list: BookItemInputType[] = [
   },
   {
     name: "雪国的青梅四重奏",
-    tags: {
-      japanese: true,
-    },
     h_level: HLevel.LOW,
     duration: {
       start: "2025-04-09",
@@ -773,7 +778,7 @@ const original_list: BookItemInputType[] = [
     name: "sicp-js",
     url: "https://github.com/lxl66566/sicp-js-zh/",
     reading_status: {
-      kind: "在读",
+      kind: "已放弃",
       extra: "2章,边做习题",
     },
     tags: {
