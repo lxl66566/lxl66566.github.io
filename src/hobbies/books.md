@@ -114,7 +114,7 @@ tag:
 
 学的是台湾法律，那边的司法体系和国内差得还是很多的。
 
-@@@ sicp-js => SICP
+@@@ SICP => sicp-js
 
 @@@ Harry Potter
 

@@ -247,9 +247,10 @@ const original_list: GalItemInputType[] = [
     name: "废村少女［贰］ ～幽秘蛊惑的姬之匣～",
     valid_name: "廢村少女2",
     other_names: ["廃村少女［弐］ ～陰り誘う秘姫の匣～"],
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "12h30min",
     duration: {
       start: "2026-02-16",
+      end: "2026-11-07"
     },
   },
   {
