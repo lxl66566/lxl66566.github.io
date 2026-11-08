@@ -315,6 +315,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - pi 的启动巨慢，我总共也没装几个插件，启动到能看到 TUI 就要 6-7s。而且 pi 没有单实例多工作区的概念，如果我每打开一个工作区都要 6-7s 那是真的不能接受，毕竟我切换工作区还是比较频繁的。
   - 插件加载 1.5s，TUI 初始化 1.5s，这个效率也是够低的。插件加载这个必须保证串行，这个我理解。
   - 另外主要耗时是在 checkForPackageUpdates 上，所有的 plugin 都是串行查询 update，感觉太蠢了。虽然 checkForPackageUpdates 并不会阻塞干活。反正我已经设置了 `PI_OFFLINE=1` 环境变量，把自动查询 update 给禁掉了。
+    - 之后如果要跑 update 需要再手动把这个 env 关掉：`PI_OFFLINE=0 pi update --extensions`。低频操作，我可以接受。
 - **pi 不读 ~/.agents/AGENTS.md**。并且 symlink 没法跨平台使用，我只能写个脚本注入我的 system prompt（pi 0.86）。
   ```ts
   // ~/.pi/agent/extensions/load-global-agents-md.ts
@@ -358,6 +359,47 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 使用过一段时间的 `npm:pi-hashline-edit-pro`。这个插件愿景很好，但是用起来的体验确实不太行。首先替换成功率并没有想象中的高，我理解用了 hashline 替换成功率应该接近 100%，结果还是太乐观了。其次每个 hash 都会占用上下文，并且 write 后强制添加的 hash 还会崩掉你的缓存命中。
   - 我写过一个 [pi-replace-function](https://github.com/lxl66566/pi-replace-function) 试试水，但是全函数 replace 的调用率还是相当低的，感觉也没什么用。
 - pi-token-speed 试用了一下，首先对于 pi-subagnets 创建的 subagent 不能展示，只能看主 agent 的 speed；其次这玩意是**不准的**！！！国内模型，例如 GLM 5.3 可能在一个 delta 里下发几个 token，然而它计算是每个 delta 算作 1 token，导致输出结果严重偏低。让 AI 探索了下，pi 如果没有提供 hook 的话这种精确计算还是挺难搞的。
+- 结束后发通知：我尝试过 `npm:pi-notify`，这玩意基于 OSC 777 发的通知，但是我的 windows 系统并不支持 OSC 777。然后 `npm:@pi-unipi/notify` 这个又非常抽象，还依赖 unipi 的 core 包但是没有声明 peerDependency，装了以后连 pi 都没法启动。所以还是搓一个小脚本。
+  ```ts
+  import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+  import { spawn } from "node:child_process";
+
+  export default function(pi: ExtensionAPI) {
+    pi.on("agent_end", async () => {
+      if (process.platform !== "win32") return;
+
+      const title = "Pi Agent";
+      const message = "任务已执行完毕！";
+
+      // 使用系统内置预注册的 PowerShell AUMID，避免被系统静默丢弃
+      const psScript = `
+  $AppId = '{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\WindowsPowerShell\\v1.0\\powershell.exe'
+  [Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] > $null
+  $template = [Windows.UI.Notifications.ToastNotificationManager]::GetTemplateContent([Windows.UI.Notifications.ToastTemplateType]::ToastText02)
+  $text = $template.GetElementsByTagName("text")
+  $text.Item(0).InnerText = "${title}"
+  $text.Item(1).InnerText = "${message}"
+  $toast = [Windows.UI.Notifications.ToastNotification]::new($template)
+  [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier($AppId).Show($toast)
+  `;
+
+      // 转换为 PowerShell 专属的 UTF-16LE Base64 编码，彻底杜绝引号转义和中文乱码
+      const encoded = Buffer.from(psScript, "utf16le").toString("base64");
+
+      const ps = spawn("powershell.exe", [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-EncodedCommand",
+        encoded,
+      ]);
+
+      ps.stderr.on("data", (data) => {
+        console.error("[notify-error]", data.toString());
+      });
+    });
+  }
+  ```
 
 ### 与 oh-my-pi 比较
 

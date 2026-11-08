@@ -760,6 +760,22 @@ isoImage.contents = [
 
 ## 问题解决
 
+### WSL 里 fs 爆炸
+
+NixOS 的 path 多。在我的笔记本 WSL 上，如果 rebuild 一次性添加的 path 太多，经常会遇到 ext4 爆炸，包括 rebuild 后出现 Read-only fs，或者启动 WSL 时报错 `0x80070570 (ERROR_FILE_CORRUPT)` 等。
+
+于是我还需要常备一个 ArchWSL，出问题的时候就用 e2fsck 修一下 vhdx。
+
+```sh
+wsl --mount "C:\Users\lxl\AppData\Local\wsl\{72daacb7-af24-4055-bf2a-cec2dd4a35e5}\ext4.vhdx" --vhd --bare
+wsl -d Arch
+lsblk
+sudo e2fsck -fy /dev/sdd    # 这里需要指定的 device 是那个容量为 1T、并且没有 mount 到 dir 上的 sdX
+exit
+wsl --unmount "C:\Users\lxl\AppData\Local\wsl\{72daacb7-af24-4055-bf2a-cec2dd4a35e5}\ext4.vhdx"
+wsl --shutdown
+```
+
 ### 内网 server 失联
 
 在我搭好 [easytier 虚拟组网实现内网穿透](../frp.md#easytier)后，我可以异地连到我的内网 server。

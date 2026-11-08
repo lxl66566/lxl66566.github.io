@@ -252,6 +252,12 @@ const original_list: GalItemInputType[] = [
       start: "2026-02-16",
       end: "2026-11-07"
     },
+    score: {
+      story: 4.2,
+      visual: 6.3,
+      program: 6,
+      thrill: -1
+    }
   },
   {
     name: "セヴンデイズ 見知らぬJKと密室生活",
