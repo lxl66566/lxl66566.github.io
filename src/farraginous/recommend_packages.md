@@ -183,7 +183,7 @@ MT 管理器是一款文件管理工具，爆杀手机自带的文件管理（�
 
 ### [termux](https://github.com/termux/termux-app)
 
-跑在 Android 上的命令行。用来远程连服务器，搞点轻度开发，或者干脆跑点 cli/tui 程序。我还会装 [TermuxArch](../articles/linux/install_and_config.md#termuxarch)。
+跑在 Android 上的命令行。用来远程连服务器，搞点轻度开发，或者干脆跑点 cli/tui 程序。我还会装 [TermuxArch](../articles/linux/install_and_config.md#安装)。
 
 - **不要在 Google Play 下载！** 请去 Github 或 F-Droid 下载。
 - 国内用户可以尝试一下 [ZeroTermux](https://github.com/hanxinhao000/ZeroTermux)，一个改版，多了挺多方便的功能。
@@ -707,7 +707,7 @@ ps. 已经寄了。
 
 ### [Winaero Tweaker](https://winaero.com/winaero-tweaker/#download)
 
-windows 设置小工具，集成了一些高级功能；但是被 [Windows 11 轻松设置](../articles/windows/usage.md#小工具) 替代了。
+windows 设置小工具，集成了一些高级功能；但是被 [Windows 11 轻松设置](../articles/windows/settings.md#小工具) 替代了。
 
 ### [yt-dlp](../articles/yt-dlp.md)
 

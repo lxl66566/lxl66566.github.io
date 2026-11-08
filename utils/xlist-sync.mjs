@@ -193,7 +193,8 @@ function parseIslandBlock(lines, startLine, closer) {
       });
       continue;
     }
-    if (entries.length > 0 && line.trim() !== '') entries[entries.length - 1].bodyLines++;
+    if (entries.length > 0 && line.trim() !== '')
+      entries[entries.length - 1].bodyLines++;
   }
   return { entries, endLine: index };
 }

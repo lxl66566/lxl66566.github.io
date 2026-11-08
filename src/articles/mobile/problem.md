@@ -124,6 +124,6 @@ am start "intent:#Intent;action=android.intent.action.MAIN;category=org.lsposed.
 
 由于尝试了 `App Manager` 和 `adb backup` 均无法备份应用数据，无奈使用小米的备份（`com.miui.backup`）。结果果然不出所料——出事了，EU 版系统即使装了国内的应用商店也无法下载备份[^3]。解法：
 
-1. 从手机提取安装包，装到平板。（可用 App Manager 或 [Localsend](../../farraginous/recommend_packages.md#多设备互传)）
+1. 从手机提取安装包，装到平板。（可用 App Manager 或 [Localsend](../../farraginous/recommend_packages.md#跨设备传输)）
 2. 安装完后没有快捷方式，也无法打开（App Manager 与 ADB 均无法启动，摸索了挺久）。此时需要去设置中搜索 `备份` 即可进入界面使用。!!假如刷的非小米系统就惨了，我也不懂能不能用!!
    [^3]: [source](https://t.me/withabsolutex/1165)

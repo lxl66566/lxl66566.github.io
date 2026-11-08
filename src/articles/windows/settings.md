@@ -51,7 +51,7 @@ tag:
 - 进行 windows 更新（可选，如果故意使用旧版镜像安装请跳过这一步）。
   - 需要看情况，关注一下近期 windows 更新补丁有没有出过什么大问题。
   - 本次更新将会成为我的 Windows 系统的最后一次更新。
-- 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用 [Winaero Tweaker](../../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../../farraginous/recommend_packages.md#ContextMenuManager) 调整。
+- 还原右键菜单并设置：右击 _开始键_，打开 _Windows 终端（管理员）_，执行 `reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` （或直接使用 [Winaero Tweaker](../../farraginous/recommend_packages.md#winaero-tweaker) 进行设置），再用 [ContextMenuManager](../../farraginous/recommend_packages.md#contextmenumanager) 调整。
 - **关闭快速启动**。运行 `control`，在 _系统和安全 - 电源选项 - 选择电源按钮的功能_ 里设置。如果没有此开关，需要运行 `powercfg /h on` 后再查看。
   1. 避免关机时自动保存 [RAM Disk](../ramdisk.md) 文件到固态盘；
   2. Windows 更新 "更新并关闭" 选项可能无法正常关闭电脑，变为 _更新并重启_。[ref](https://t.me/withabsolutex/1193)
@@ -100,7 +100,7 @@ tag:
 - 升级专业版：使用 [HEU_KMS_Activator](https://github.com/zbezj/HEU_KMS_Activator) 升级 win11 专业版并激活。
   - 若希望使用开源激活软件，可用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) 激活。
 - 关闭 Windows Defender SmartScreen：Windows Defender SmartScreen 是 edge 下载 exe 提示有风险的元凶。在组策略编辑器（`gpedit.msc`）中，_管理模板 > Windows 组件 > Windows Defender SmartScreen > Microsoft Edge > 配置 Windows Defender SmartScreen_ 里禁用两个选项。
-- [安装 Imdisk](../ramdisk.md#imdisk-toolkit) 并[配置](../ramdisk.md#使用指南)。
+- [安装 Imdisk](../ramdisk.md#imdisk) 并[配置](../ramdisk.md#使用指南)。
 - 安装 scoop 与 winget，并通过其安装一些常用软件。
   ```sh
   # scoop
@@ -166,7 +166,7 @@ tag:
   - 关闭所有系统提示音。_系统 - 声音 - 更多声音设置_
   - 文件夹与文件改为单击。我个人不喜欢双击。
     - windows 的单击逻辑做的还是比 linux kde 好的，_悬浮选中_ 是单击逻辑中的重要组成部分。
-  - _控制面板 - 时钟和区域 - 区域_ 中，将短日期调整为 `yyyyMMdd`。([我的习惯](../index.md#使用指南))
+  - _控制面板 - 时钟和区域 - 区域_ 中，将短日期调整为 `yyyyMMdd`。([我的习惯](../index.md))
   - 更改触摸板功能：三指左右划调节音量。实际上并不是很好用：我音量常年 20%，触摸板调节的话很容易拉得太大。
   - 关闭鼠标的“提高指针精确度”，这个实际上是根据加速度修正移动距离，对于 FPS 极为不友好。
   - 使用 [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) 修改右键菜单。

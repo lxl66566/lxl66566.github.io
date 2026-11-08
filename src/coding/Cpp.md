@@ -253,7 +253,7 @@ Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 x
 
 @tab xmake
 
-用 xmake 作为 Qt 的构建系统是一个不错的选择。之前曾经出现过[一些问题](../gossip/difficulties.md#20230507-qt6-项目构建失败)，但 20230802 再次尝试已经可以正常使用。
+用 xmake 作为 Qt 的构建系统是一个不错的选择。之前曾经出现过[一些问题](../gossip/difficulties.md#_20230507-qt6-项目构建失败)，但 20230802 再次尝试已经可以正常使用。
 
 1. 使用 Qt Creator 创建模版项目。
 2. `xmake.lua` 参考[官方文档](https://xmake.io/#/zh-cn/guide/project_examples?id=widgets-应用程序)，这里是一个示例：
@@ -595,7 +595,7 @@ Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件
 
 解法是将 Qt SDK 目录下的 `plugins` 文件夹复制到打包的 exe 目录下[^1]。。
 
-[^1]: 我找出这个问题[真的不容易](../gossip/difficulties.md#20230507qt6-项目构建失败)，还差点错怪 xmake。。主要是 `Plugins` 并不在我的环境变量中，但却能够跑起来，迷惑了我的判断。这个报错也基本上得不到信息，网上也找不到解法。
+[^1]: 我找出这个问题[真的不容易](../gossip/difficulties.md#_20230507-qt6-项目构建失败)，还差点错怪 xmake。。主要是 `Plugins` 并不在我的环境变量中，但却能够跑起来，迷惑了我的判断。这个报错也基本上得不到信息，网上也找不到解法。
 
 #### 优化
 

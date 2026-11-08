@@ -628,7 +628,7 @@ GUI 是 rust 日经问题了。
 
 [这里](https://www.cnblogs.com/nolca/p/17795473.html)有一些 issue/star 数对比。[Are we GUI Yet?](https://areweguiyet.com/)是更多 GUI 框架简介。
 
-我早期尝试过一下 iced，用不明白，不用了。反正自从我开始[写前端](./index.md#前端)后我就不再写其他非前端 GUI 了，实在是太 naive 太难受了。
+我早期尝试过一下 iced，用不明白，不用了。反正自从我开始[写前端](./index.md#gui)后我就不再写其他非前端 GUI 了，实在是太 naive 太难受了。
 
 _他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
 
@@ -669,7 +669,7 @@ _他们之中有哪个能达到 electron 80% 的可用程度，称为可用。_
 
 Rust 虽然有万能解码器 [Symphonia](https://github.com/pdeljanov/Symphonia)（Symphonia 的 bug 和兼容性也有待提高），但是编码器这块缺的可太多了，除了 wav 这种简单格式有 pure rust 的 hound，~~大部分编码器都还只有 bindings。~~
 
-另外还有一些标榜自己是 pure rust 的音频库，但是实际上质量并不咋地，例如 opus-rs，详见[评价](./crates.md#音频opus)。
+另外还有一些标榜自己是 pure rust 的音频库，但是实际上质量并不咋地，例如 opus-rs，详见[评价](./crates.md#音频-opus)。
 
 ## 嵌入向量数据库
 

@@ -172,7 +172,7 @@ socat -dd -lf <log_file> TCP-LISTEN:<from>,reuseaddr,fork TCP:localhost:<to>  # 
 socat -dd -lf <log_file> -F port_forwarding.conf  # 泛用型
 ```
 
-socat 默认在终端前台进行端口转发，需要后台运行的话可以[写个服务](https://unix.stackexchange.com/a/658320)，或者[终端复用](../linux/package.md#tmux)。
+socat 默认在终端前台进行端口转发，需要后台运行的话可以[写个服务](https://unix.stackexchange.com/a/658320)，或者[终端复用](../linux/package.md#multiplexer)。
 
 @tab firewalld
 

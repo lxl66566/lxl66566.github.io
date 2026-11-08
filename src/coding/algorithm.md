@@ -30,7 +30,7 @@ tag:
 - 力扣无需关注读入，对某些语言比较友好；测试点样例全给。不过可能缺乏一些深度。
 - cf 就垃圾了。
 
-有关我对 OJ 的评价请[跳转此处](../gossip/hope.md#对算法竞赛-oj-contest的希望)。
+有关我对 OJ 的评价请[跳转此处](../gossip/hope.md#对算法竞赛-oj-contest-的希望)。
 
 自从我会用 Github 以来，我刷的题都会存到 Github 上。这里是[仓库链接](https://github.com/lxl66566/OJ)。
 

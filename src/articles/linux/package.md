@@ -49,7 +49,7 @@ pacman 是 archlinux 官方指定包管理器，好用，就是指令比较难�
 
 AUR 是用户仓库，由用户自行维护。AUR 只管理 PKGBUILD，相当于一个**小型安装脚本**而非程序本体。这里有一篇[说明文章](https://blog.asukaminato.eu.org/AUR-vs-vs-cn-dd42c7a8f0f943dcabd23d4cdf03a914)。
 
-由于 PKGBUILD 经常会从 github 等地方拉取软件压缩包，所以请[使用代理](./install_and_config.md#设置代理)。PKGBUILD 经常需要自行编译，因此尽量不要在笔记本未插入电源情况下更新[^1]。
+由于 PKGBUILD 经常会从 github 等地方拉取软件压缩包，所以请[使用代理](./install_and_config.md#代理)。PKGBUILD 经常需要自行编译，因此尽量不要在笔记本未插入电源情况下更新[^1]。
 
 [^1]: [我再也不敢在课上不插电滚 aur 了 😭](https://t.me/withabsolutex/1303)
 

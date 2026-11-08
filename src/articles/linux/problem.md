@@ -248,7 +248,7 @@ make: ./test_g: 权限不够 make: *** [Makefile:76：test] 错误 127
 
 其中大多数是权限错误。但是我用 paru 安装就可以成功安装。
 
-结果发现是下载目录的 tmpfs 开了 `noexec` 导致的。而同时由于 paru 的 clonedir 是 [bind to tmpfs](./index.md#设置) 的，没有加 `noexec`，于是可以正常使用。。。（乐
+结果发现是下载目录的 tmpfs 开了 `noexec` 导致的。而同时由于 paru 的 clonedir 是 [bind to tmpfs](./install_and_config.md#系统设置) 的，没有加 `noexec`，于是可以正常使用。。。（乐
 
 ## 输入法不显示
 

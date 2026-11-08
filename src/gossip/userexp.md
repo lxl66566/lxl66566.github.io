@@ -17,7 +17,7 @@ tag:
 
 ## [lazygit](https://github.com/jesseduffield/lazygit)
 
-由于我[重新入坑了 neovim](../coding/vim.md#设置neovim-二期)，为了使用与 vscode 类似的查看 diff 的功能，因此有一个 git 状态 TUI 查看器还是比较有必要的。生态里基本都是用的 lazygit：lazyvim 本身默认就绑定了 lazygit 的键位，因此我尝试使用 lazygit。但是用起来感觉真的非常不顺手。
+由于我[重新入坑了 neovim](../coding/vim.md#设置-neovim-二期)，为了使用与 vscode 类似的查看 diff 的功能，因此有一个 git 状态 TUI 查看器还是比较有必要的。生态里基本都是用的 lazygit：lazyvim 本身默认就绑定了 lazygit 的键位，因此我尝试使用 lazygit。但是用起来感觉真的非常不顺手。
 
 - README 前面三个大广告，无语了。
 - 配置居然是 yml，emmmm……没被 yml 毒打过。

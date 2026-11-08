@@ -470,7 +470,7 @@ console.log(proc);
 
 ### 20230614
 
-- 新增 [设置手机 - 刷机](../articles/mobile/settings.md#刷机)
+- 新增 [设置手机 - 刷机](../articles/mobile/settings.md)
 
 ### 20230610
 
@@ -523,12 +523,12 @@ console.log(proc);
 
 ### 20230429
 
-- [xxx 的缺陷](../gossip/fuckxxx.md) 新增 [OSU](../gossip/fuckxxx.md#osu-有多难用)
+- [xxx 的缺陷](../gossip/fuckxxx.md) 新增 [OSU](../gossip/fuckxxx.md)
 
 ### 20230428
 
 - [文章](../articles/)新增[最小化二进制文件与 dll](../articles/minimize_exe.md)
-- [C++](../coding/Cpp.md)新增 [vscode 配置 Qt 开发环境](../coding/Cpp.md#vscode-配置-qt-开发环境)
+- [C++](../coding/Cpp.md)新增 [vscode 配置 Qt 开发环境](../coding/Cpp.md#qt-开发环境)
 
 ### 20230417
 
@@ -595,7 +595,7 @@ console.log(proc);
 
 ### 20230221
 
-- 新增 [python # 使用 poetry 进行包管理](../coding/python.md#使用-poetry-进行包管理)
+- 新增 [python # 使用 poetry 进行包管理](../coding/python.md#poetry)
 - 新增 [生活中遇到的困难 # 20230221：网站访问问题](../gossip/difficulties.md#_20230221-网站访问问题)
 
 ### 20230217
@@ -665,7 +665,7 @@ console.log(proc);
 
 ### 20221231
 
-- 新增[闲聊 - xxx 有多难用#B 站有多难用](../gossip/fuckxxx.md#b站有多难用)、[文章 - TG 教程](../articles/telegram.md)
+- 新增[闲聊 - xxx 有多难用#B 站有多难用](../gossip/fuckxxx.md#b-站有多难用)、[文章 - TG 教程](../articles/telegram.md)
 
 ### 20221226
 
@@ -721,11 +721,11 @@ console.log(proc);
 
 ### 20221028
 
-- 合并闲聊-...希望的两个页面，并加入[#对聊天软件的希望](../gossip/hope.md#对聊天软件的希望)
+- 合并闲聊-...希望的两个页面，并加入[#对聊天软件的希望](../gossip/hope.md#对聊天软件-协议的希望)
 
 ### 20221021
 
-- 新增[闲聊-对算法竞赛 & OJ contest 的希望](../gossip/hope.md#对算法竞赛-oj-contest的希望)页面（已合并）
+- 新增[闲聊-对算法竞赛 & OJ contest 的希望](../gossip/hope.md#对算法竞赛-oj-contest-的希望)页面（已合并）
 - 在软件汇总页面中，将 _Via_ 更换为 _m 浏览器_
 
 ### 20221020
@@ -742,7 +742,7 @@ console.log(proc);
 
 ### 20220930
 
-- 新增 [VuePress2 与博客心得 # 配置 sidebar 问题](./withvuepress2.md#配置sidebar问题)
+- 新增 [VuePress2 与博客心得 # 配置 sidebar 问题](./withvuepress2.md#配置-sidebar-问题)
 
 ### 20220929
 
@@ -755,7 +755,7 @@ console.log(proc);
 
 ### 20220921
 
-- 新增 [C++#在 vscode 中配置环境](../coding/Cpp.md#配置_vscode_环境)
+- 新增 [C++#在 vscode 中配置环境](../coding/Cpp.md#开发环境)
 - 新增 csgo#常用指令
 
 ### 20220915
@@ -783,7 +783,7 @@ console.log(proc);
 
 ### 20220901
 
-- [使用 vue 组件创建背词器失败](./withvuepress2.md#html转vue组件失败问题)
+- [使用 vue 组件创建背词器失败](./withvuepress2.md#html-转-vue-组件失败问题)
 
 ### 20220831
 
@@ -829,12 +829,12 @@ console.log(proc);
 ### 20220813
 
 - 添加[杂项-番剧](../hobbies/anime.md)页面
-- 维护[回忆录#大学（大一后暑假）](../hide/memories.md#大学-大一后暑假)，与其他一堆页面
+- 维护[回忆录#大学（大一后暑假）](../hide/memories.md#大一后暑假)，与其他一堆页面
 - 更改页面逻辑（改 `游戏` 版块为 `兴趣`，并移动 `番剧` 与 `读书` 到此）
 
 ### 20220808
 
-- 新增[大学（大一后暑假）](../hide/memories.md#大学-大一后暑假)
+- 新增[大学（大一后暑假）](../hide/memories.md#大一后暑假)
 - 在 [galgame#程序问题](../hobbies/galgame.md#程序问题)反馈 bug
 - 尝试选定其他网页的一个 div 加入博客中的 iframe，失败
 
@@ -862,7 +862,7 @@ console.log(proc);
 ### 20220729
 
 - 改为使用图床存放图片(images 分支)
-- 新增 [游戏-明日方舟](../hobbies/other_games/arknights.md)，文章#Windows 端记录软件使用时长（迁移至[文章 - 记录软件使用时长](../articles/time_record.md#windows端记录软件使用时长)）
+- 新增 [游戏-明日方舟](../hobbies/other_games/arknights.md)，文章#Windows 端记录软件使用时长（迁移至[文章 - 记录软件使用时长](../articles/time_record.md#windows-端记录软件使用时长)）
 - 维护 [VuePress2 与博客心得](./withvuepress2.md)
 
 ### 20220726
@@ -900,7 +900,7 @@ console.log(proc);
 
 ### 20220709
 
-- 新增 [文章-Android 端记录软件使用时长](../articles/time_record.md#android端记录软件使用时长)
+- 新增 [文章-Android 端记录软件使用时长](../articles/time_record.md#android-端记录软件使用时长)
 
 ### 20220706
 
@@ -917,7 +917,7 @@ console.log(proc);
 
 ### 20220628
 
-- 新增 [galgame#我的设置](../hobbies/galgame.md#我的设置)
+- 新增 [galgame#我的设置](../hobbies/galgame.md)
 
 ### 20220625
 
@@ -947,7 +947,7 @@ console.log(proc);
 
 ### 20220613
 
-- 新增 [编程-Git#高级技巧](../coding/Git.md#高级技巧)、闲聊-初级科学上网（现：隐藏）
+- 新增 [编程-Git#高级技巧](../coding/Git.md#进阶)、闲聊-初级科学上网（现：隐藏）
 
 ### 20220611
 
@@ -981,7 +981,7 @@ console.log(proc);
 ### 20220505
 
 - 新增 [杂项-我的文章#查看手机 cpu 指令集（现：文章-关于手机-\~）](../articles/mobile/Android_ISA.md)
-- 更新 [主页](../index.md)、[闲聊-关于作者#QA](../gossip/author.md#qa)
+- 更新 [主页](../index.md)、[闲聊-关于作者#QA](../hide/personal_details.md#标签-qa)
 
 ### 20220504
 

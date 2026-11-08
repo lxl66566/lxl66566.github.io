@@ -50,7 +50,7 @@ tag:
 - [开心书库频道](https://t.me/happylibrary) 及其附属群组
 - ~~[我的资源频道](https://t.me/absolutexsresource)（没啥用的）~~
 
-[^1]: [吐槽一下](../essay/2023.md#20230713)
+[^1]: [吐槽一下](../essay/2023.md#_20230713)
 
 [^2]: [妈的，被骗啦](https://t.me/withabsolutex/1180)
 
