@@ -1,56 +1,21 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>C# | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="C# 我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。 学习 我个人喜欢 MS 官方的 C# 语言参考 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。 不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。 安装与开发环境配置 C# 在 win…">
-<link rel="canonical" href="https://absx.pages.dev/coding/csharp">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="C# | 绝对值_x 的博客">
-<meta property="og:description" content="C# 我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。 学习 我个人喜欢 MS 官方的 C# 语言参考 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。 不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。 安装与开发环境配置 C# 在 win…">
-<meta property="og:url" content="https://absx.pages.dev/coding/csharp">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>C# | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="C# 我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。 学习 我个人喜欢 MS 官方的 C# 语言参考 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。 不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。 安装与开发环境配置 C# 在 win…"><link rel="canonical" href="https://absx.pages.dev/coding/csharp"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="C# | 绝对值_x 的博客"><meta property="og:description" content="C# 我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。 学习 我个人喜欢 MS 官方的 C# 语言参考 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。 不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。 安装与开发环境配置 C# 在 win…"><meta property="og:url" content="https://absx.pages.dev/coding/csharp"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"C#","url":"https://absx.pages.dev/coding/csharp","mainEntityOfPage":"https://absx.pages.dev/coding/csharp","description":"C# 我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。 学习 我个人喜欢 MS 官方的 C# 语言参考 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。 不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。 安装与开发环境配置 C# 在 win…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2022-09-29T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="c">C#</h1>
-<p>我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。</p>
-<h2 id="学习">学习</h2>
-<p>我个人喜欢 MS 官方的 <a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/" class="ap-external">C# 语言参考</a> 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。</p>
-<p>不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。</p>
-<h2 id="安装与开发环境配置">安装与开发环境配置</h2>
-<p>C# 在 windows 的环境配置是我接触过的语言中最简单的<strong>之一</strong>。</p>
-<ol>
-<li>进入<a href="https://dotnet.microsoft.com/en-us/download" class="ap-external">.NET 官网</a>下载 .NET SDK x64 安装包并安装。你可以在 cmd 中运行 <code>dotnet -h</code> 测试环境是否完善。</li>
-<li>vscode 中安装 C# 扩展。后续记得看右下角可能出现的提示。</li>
-<li>打开你的项目文件夹，终端中输入 <code>dotnet new console</code> 创建项目。</li>
-<li>F5 编译运行。</li>
-<li>Formatter: 扩展搜索 <a href="https://csharpier.com/" class="ap-external">CSharpier</a> 并安装。首次使用会在右下角弹出本地安装提示，选择 global install。然后就是 format on save 老规矩安排上。</li>
-</ol>
-<h2 id="语言基础">语言基础</h2>
-<p>由于文档很全，这里就不放长篇语法基础或者容易找到的部分了，主要放一些个人理解。</p>
-<ul>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="c">C#</h1><p>我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。</p><h2 id="学习">学习</h2><p>我个人喜欢 MS 官方的 <a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/" class="ap-external">C# 语言参考</a> 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。</p><p>不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。</p><h2 id="安装与开发环境配置">安装与开发环境配置</h2><p>C# 在 windows 的环境配置是我接触过的语言中最简单的<strong>之一</strong>。</p><ol>
+<li>进入<a href="https://dotnet.microsoft.com/en-us/download" class="ap-external">.NET 官网</a>下载 .NET SDK x64 安装包并安装。你可以在 cmd 中运行 <code>dotnet -h</code> 测试环境是否完善。</li><li>vscode 中安装 C# 扩展。后续记得看右下角可能出现的提示。</li><li>打开你的项目文件夹，终端中输入 <code>dotnet new console</code> 创建项目。</li><li>F5 编译运行。</li><li>Formatter: 扩展搜索 <a href="https://csharpier.com/" class="ap-external">CSharpier</a> 并安装。首次使用会在右下角弹出本地安装提示，选择 global install。然后就是 format on save 老规矩安排上。</li>
+</ol><h2 id="语言基础">语言基础</h2><p>由于文档很全，这里就不放长篇语法基础或者容易找到的部分了，主要放一些个人理解。</p><ul>
 <li>object vs dynamic：object 仍然是编译期类型，而 dynamic 是运行期；object 赋值是显式，dynamic 是隐式。无论哪一种，强制转换时类型不匹配都会抛异常（不过异常的种类不同，InvalidCastException vs RuntimeBinderException）。</li>
-</ul>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/csharp","locale":"root","title":"C#","headings":[{"level":1,"text":"C#","slug":"c"},{"level":2,"text":"学习","slug":"学习"},{"level":2,"text":"安装与开发环境配置","slug":"安装与开发环境配置"},{"level":2,"text":"语言基础","slug":"语言基础"}],"frontmatter":{"date":"2022-09-29","category":["编程"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2022-09-29T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":2,"excerpt":"C# 我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。 学习 我个人喜欢 MS 官方的 C# 语言参考 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。 不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。 安装与开发环境配置 C# 在 win…"},"related":[{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</ul><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/csharp","locale":"root","title":"C#","headings":[{"level":1,"text":"C#","slug":"c"},{"level":2,"text":"学习","slug":"学习"},{"level":2,"text":"安装与开发环境配置","slug":"安装与开发环境配置"},{"level":2,"text":"语言基础","slug":"语言基础"}],"frontmatter":{"date":"2022-09-29","category":["编程"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2022-09-29T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":2,"excerpt":"C# 我没有太多动力去学习 C#，因此本篇文章目前不会有太多内容。 学习 我个人喜欢 MS 官方的 C# 语言参考 挺不错的，抓牢了这门语言的特性，没一句废话，样例也很全。 不过我不推荐给编程初学者，术语太多太杂了，初学的还是去 google “C# tutorial” 选几个吧。 安装与开发环境配置 C# 在 win…"},"related":[{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

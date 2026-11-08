@@ -1,214 +1,87 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>记录软件使用时长 | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…">
-<link rel="canonical" href="https://absx.pages.dev/articles/time_record">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="记录软件使用时长 | 绝对值_x 的博客">
-<meta property="og:description" content="记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…">
-<meta property="og:url" content="https://absx.pages.dev/articles/time_record">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"记录软件使用时长","url":"https://absx.pages.dev/articles/time_record","mainEntityOfPage":"https://absx.pages.dev/articles/time_record","description":"记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2022-07-08T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>记录软件使用时长 | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…"><link rel="canonical" href="https://absx.pages.dev/articles/time_record"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="记录软件使用时长 | 绝对值_x 的博客"><meta property="og:description" content="记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…"><meta property="og:url" content="https://absx.pages.dev/articles/time_record"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"记录软件使用时长","url":"https://absx.pages.dev/articles/time_record","mainEntityOfPage":"https://absx.pages.dev/articles/time_record","description":"记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2022-07-08T00:00:00.000Z","dateModified":"2026-11-09T03:35:41+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="记录软件使用时长">记录软件使用时长</h1>
-<h2 id="windows-端记录软件使用时长">Windows 端记录软件使用时长</h2>
-<ul>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="记录软件使用时长">记录软件使用时长</h1><h2 id="windows-端记录软件使用时长">Windows 端记录软件使用时长</h2><ul>
 <li>从 20220428 开始使用 <a href="https://github.com/Planshit/Tai" class="ap-external">Tai</a> 记录 Windows 下的应用时长。
 <ul>
-<li>C# 写的，windows 下专用的软件。</li>
-<li>Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 <a href="https://github.com/Planshit/Tai/issues/378" class="ap-external">有 bug</a>，第三方 fork 的 <a href="https://github.com/NLick47/Taix" class="ap-external">Taix</a> 目前还不成熟（有 bug），因此我建议使用 1.5.0.5 版本。</li>
-<li>如果要备份 Tai 的数据，请务必加密你的 data.db 和 <code>Tai/Data/backup</code> 文件夹内的内容！后者甚至是直接明文存储密钥等等。</li>
+<li>C# 写的，windows 下专用的软件。</li><li>Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 <a href="https://github.com/Planshit/Tai/issues/378" class="ap-external">有 bug</a>，第三方 fork 的 <a href="https://github.com/NLick47/Taix" class="ap-external">Taix</a> 目前还不成熟（有 bug），因此我建议使用 1.5.0.5 版本。</li><li>如果要备份 Tai 的数据，请务必加密你的 data.db 和 <code>Tai/Data/backup</code> 文件夹内的内容！后者甚至是直接明文存储密钥等等。</li>
 </ul>
-</li>
-<li>在 20220729 了解到 <a href="https://github.com/ActivityWatch/activitywatch" class="ap-external">ActivityWatch</a>。
+</li><li>在 20220729 了解到 <a href="https://github.com/ActivityWatch/activitywatch" class="ap-external">ActivityWatch</a>。
 <ul>
-<li>跨平台的时长记录软件，python 写的，基于浏览器 UI。</li>
-<li>在 linux wayland 下<a href="https://github.com/ActivityWatch/activitywatch/issues/92" class="ap-external">表现差</a>。<s>我为了计时长特意换到 X11</s></li>
+<li>跨平台的时长记录软件，python 写的，基于浏览器 UI。</li><li>在 linux wayland 下<a href="https://github.com/ActivityWatch/activitywatch/issues/92" class="ap-external">表现差</a>。<s>我为了计时长特意换到 X11</s></li>
 </ul>
 </li>
-</ul>
-<p>两者均为开源软件。</p>
+</ul><p>两者均为开源软件。</p>
 <!-- prettier-ignore -->
 <table>
 <thead>
 <tr>
-<th style="text-align:center">软件名</th>
-<th style="text-align:center">运行时内存 (windows)</th>
-<th style="text-align:center">查询区间长</th>
+<th style="text-align:center">软件名</th><th style="text-align:center">运行时内存 (windows)</th><th style="text-align:center">查询区间长</th>
 </tr>
-</thead>
-<tbody>
+</thead><tbody>
 <tr>
-<td style="text-align:center">Tai</td>
-<td style="text-align:center">41.0M</td>
-<td style="text-align:center">年</td>
-</tr>
-<tr>
-<td style="text-align:center">ActivityWatch</td>
-<td style="text-align:center">102.2M</td>
-<td style="text-align:center"><s>月</s> 任意</td>
+<td style="text-align:center">Tai</td><td style="text-align:center">41.0M</td><td style="text-align:center">年</td>
+</tr><tr>
+<td style="text-align:center">ActivityWatch</td><td style="text-align:center">102.2M</td><td style="text-align:center"><s>月</s> 任意</td>
 </tr>
 </tbody>
-</table>
-<p>结果很明显。</p>
-<ol>
+</table><p>结果很明显。</p><ol>
 <li>我对时长记录最大的要求，除了准确性外，就是<strong>查询区间长</strong>了。<s>而 <code>ActivityWatch</code> 的表现（30days）无法达到我的预期。</s>
 <ul>
 <li>实际上 <code>ActivityWatch</code> 能够查任意区间。</li>
 </ul>
-</li>
-<li><code>ActivityWatch</code> 的数据不方便备份。而 Tai 就只有图标和 sqlite 数据库，非常方便。</li>
-</ol>
-<p>我仍然选用 <code>Tai</code> 作为我的时长统计软件。而在 Linux 上使用 <code>ActivityWatch</code> 是无奈之举。</p>
-<h3 id="activitywatch">ActivityWatch</h3>
-<p>ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数据。而在 Query 界面则可以查询任意时间长的数据。</p>
-<p>但是，ActivityWatch 的 query 就是一坨屎：</p>
-<ol>
+</li><li><code>ActivityWatch</code> 的数据不方便备份。而 Tai 就只有图标和 sqlite 数据库，非常方便。</li>
+</ol><p>我仍然选用 <code>Tai</code> 作为我的时长统计软件。而在 Linux 上使用 <code>ActivityWatch</code> 是无奈之举。</p><h3 id="activitywatch">ActivityWatch</h3><p>ActivityWatch 的 Activity, Timeline 界面只能查询最长区间为月的数据。而在 Query 界面则可以查询任意时间长的数据。</p><p>但是，ActivityWatch 的 query 就是一坨屎：</p><ol>
 <li>说了好多遍了，不要 DSL，连个注释符号都没有。。。
 <ul>
 <li>(<a href="https://github.com/ActivityWatch/aw-research/blob/master/queries/aw-development.awq" class="ap-external">from</a>: <em>We should really add support for comments</em> lmao)</li>
 </ul>
-</li>
-<li>查询很慢，python debuff。
+</li><li>查询很慢，python debuff。
 <ul>
 <li>Tai 查询速度快的原因是额外维护了年月日的时长记录表。</li>
 </ul>
-</li>
-<li>文档垃圾。<a href="https://docs.activitywatch.net/en/latest/examples/querying-data.html" class="ap-external">这里</a>是 query 的文档，示例没有解释，没有 <code>flood</code> 的说明，挂着 TODO，API 页面 404。。</li>
-</ol>
-<h2 id="android-端记录软件使用时长">Android 端记录软件使用时长</h2>
-<p>我有多喜欢统计时长，从 <a href="../hobbies/galgame">galgame 页面</a>和<a href="../hobbies/books">读书页面</a>便可略知一二。但是——</p>
-<p>由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端 <a href="../farraginous/recommend_packages#tai">Tai</a> 的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。<s><em>（将 <code>自己做个这种软件</code> 写入日程！）</em></s> <span class="ap-heimu" title="你知道的太多了"><em>笑死，开摆</em></span></p>
-<p><text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。</p>
+</li><li>文档垃圾。<a href="https://docs.activitywatch.net/en/latest/examples/querying-data.html" class="ap-external">这里</a>是 query 的文档，示例没有解释，没有 <code>flood</code> 的说明，挂着 TODO，API 页面 404。。</li>
+</ol><h2 id="android-端记录软件使用时长">Android 端记录软件使用时长</h2><p>我有多喜欢统计时长，从 <a href="../hobbies/galgame">galgame 页面</a>和<a href="../hobbies/books">读书页面</a>便可略知一二。但是——</p><p>由于安卓自带的屏幕使用时长最长只允许查看本周数据，而我需要的是类似 windows 端 <a href="../farraginous/recommend_packages#%E4%BD%BF%E7%94%A8%E6%97%B6%E9%97%B4%E8%AE%B0%E5%BD%95">Tai</a> 的替代产品，可以记录与查看过去的一切数据。因此去谷歌商店下载了三款（后追加为好几款）记录软件时长的 app，在此做个横评。<s><em>（将 <code>自己做个这种软件</code> 写入日程！）</em></s> <span class="ap-heimu" title="你知道的太多了"><em>笑死，开摆</em></span></p><p><text style="color:red;">红色字体：此处为较大劣势；</text><text style="color:blue;">蓝色字体：此处有较大优势，推荐；</text>以下功能默认为免费版。</p>
 <!-- prettier-ignore -->
 <table>
 <thead>
 <tr>
-<th style="text-align:center">软件名</th>
-<th style="text-align:center">大小（使用前/后,MB）</th>
-<th style="text-align:center">准确率</th>
-<th style="text-align:center">数据可查询</th>
-<th style="text-align:center">查询区间长</th>
-<th style="text-align:center"><text style="color:red;">其他缺陷</text></th>
-<th style="text-align:center">其他权限</th>
+<th style="text-align:center">软件名</th><th style="text-align:center">大小（使用前/后,MB）</th><th style="text-align:center">准确率</th><th style="text-align:center">数据可查询</th><th style="text-align:center">查询区间长</th><th style="text-align:center"><text style="color:red;">其他缺陷</text></th><th style="text-align:center">其他权限</th>
 </tr>
-</thead>
-<tbody>
+</thead><tbody>
 <tr>
-<td style="text-align:center">StayFree</td>
-<td style="text-align:center">48.88/63.11</td>
-<td style="text-align:center"><text style="color:red;">81%</text></td>
-<td style="text-align:center">ALL</td>
-<td style="text-align:center"><text style="color:blue;">无限</text></td>
-<td style="text-align:center">-</td>
-<td style="text-align:center"><text style="color:red;">无障碍</text></td>
-</tr>
-<tr>
-<td style="text-align:center">MyPhoneTime</td>
-<td style="text-align:center">15.23/20.65</td>
-<td style="text-align:center"><text style="color:red;">0%</text></td>
-<td style="text-align:center">ALL</td>
-<td style="text-align:center"><text style="color:blue;">无限</text></td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">ActionDash</td>
-<td style="text-align:center">17/43.26</td>
-<td style="text-align:center">100%</td>
-<td style="text-align:center">ALL</td>
-<td style="text-align:center"><text style="color:red;">周</text></td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">YourHour</td>
-<td style="text-align:center">25.74/70.52</td>
-<td style="text-align:center">100%</td>
-<td style="text-align:center">ALL</td>
-<td style="text-align:center"><text style="color:red;">天</text></td>
-<td style="text-align:center"><text style="color:red;">查看具体应用数据需付费</text></td>
-<td style="text-align:center">上层显示</td>
-</tr>
-<tr>
-<td style="text-align:center">AppUsage</td>
-<td style="text-align:center">4.69/28.54</td>
-<td style="text-align:center"><text style="color:red;">0%</text></td>
-<td style="text-align:center">ALL</td>
-<td style="text-align:center">月</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">手机使用时间</td>
-<td style="text-align:center">?/11.73</td>
-<td style="text-align:center">100%?</td>
-<td style="text-align:center"><text style="color:red;">上个月</text></td>
-<td style="text-align:center">月</td>
-<td style="text-align:center"><text style="color:red;">必需挂着后台才可计时；广告</text></td>
-<td style="text-align:center">后台免杀</td>
-</tr>
-<tr>
-<td style="text-align:center"><text style="color:blue;">Digitox</text></td>
-<td style="text-align:center">3.89/20.67</td>
-<td style="text-align:center">100%</td>
-<td style="text-align:center">ALL</td>
-<td style="text-align:center">月</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">AppBlock</td>
-<td style="text-align:center">10.87/44.05</td>
-<td style="text-align:center"><text style="color:red;">0%</text></td>
-<td style="text-align:center">ALL</td>
-<td style="text-align:center"><text style="color:red;">周</text></td>
-<td style="text-align:center"><text style="color:red;">不氪金仅能查看前 3 个程序数据</text></td>
-<td style="text-align:center"><text style="color:red;">无障碍</text></td>
-</tr>
-<tr>
-<td style="text-align:center"><text style="color:blue;">Phonestatistic</text></td>
-<td style="text-align:center">3.07/14.61</td>
-<td style="text-align:center">100%</td>
-<td style="text-align:center">年</td>
-<td style="text-align:center"><text style="color:blue;">年</text></td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
+<td style="text-align:center">StayFree</td><td style="text-align:center">48.88/63.11</td><td style="text-align:center"><text style="color:red;">81%</text></td><td style="text-align:center">ALL</td><td style="text-align:center"><text style="color:blue;">无限</text></td><td style="text-align:center">-</td><td style="text-align:center"><text style="color:red;">无障碍</text></td>
+</tr><tr>
+<td style="text-align:center">MyPhoneTime</td><td style="text-align:center">15.23/20.65</td><td style="text-align:center"><text style="color:red;">0%</text></td><td style="text-align:center">ALL</td><td style="text-align:center"><text style="color:blue;">无限</text></td><td style="text-align:center">-</td><td style="text-align:center">-</td>
+</tr><tr>
+<td style="text-align:center">ActionDash</td><td style="text-align:center">17/43.26</td><td style="text-align:center">100%</td><td style="text-align:center">ALL</td><td style="text-align:center"><text style="color:red;">周</text></td><td style="text-align:center">-</td><td style="text-align:center">-</td>
+</tr><tr>
+<td style="text-align:center">YourHour</td><td style="text-align:center">25.74/70.52</td><td style="text-align:center">100%</td><td style="text-align:center">ALL</td><td style="text-align:center"><text style="color:red;">天</text></td><td style="text-align:center"><text style="color:red;">查看具体应用数据需付费</text></td><td style="text-align:center">上层显示</td>
+</tr><tr>
+<td style="text-align:center">AppUsage</td><td style="text-align:center">4.69/28.54</td><td style="text-align:center"><text style="color:red;">0%</text></td><td style="text-align:center">ALL</td><td style="text-align:center">月</td><td style="text-align:center">-</td><td style="text-align:center">-</td>
+</tr><tr>
+<td style="text-align:center">手机使用时间</td><td style="text-align:center">?/11.73</td><td style="text-align:center">100%?</td><td style="text-align:center"><text style="color:red;">上个月</text></td><td style="text-align:center">月</td><td style="text-align:center"><text style="color:red;">必需挂着后台才可计时；广告</text></td><td style="text-align:center">后台免杀</td>
+</tr><tr>
+<td style="text-align:center"><text style="color:blue;">Digitox</text></td><td style="text-align:center">3.89/20.67</td><td style="text-align:center">100%</td><td style="text-align:center">ALL</td><td style="text-align:center">月</td><td style="text-align:center">-</td><td style="text-align:center">-</td>
+</tr><tr>
+<td style="text-align:center">AppBlock</td><td style="text-align:center">10.87/44.05</td><td style="text-align:center"><text style="color:red;">0%</text></td><td style="text-align:center">ALL</td><td style="text-align:center"><text style="color:red;">周</text></td><td style="text-align:center"><text style="color:red;">不氪金仅能查看前 3 个程序数据</text></td><td style="text-align:center"><text style="color:red;">无障碍</text></td>
+</tr><tr>
+<td style="text-align:center"><text style="color:blue;">Phonestatistic</text></td><td style="text-align:center">3.07/14.61</td><td style="text-align:center">100%</td><td style="text-align:center">年</td><td style="text-align:center"><text style="color:blue;">年</text></td><td style="text-align:center">-</td><td style="text-align:center">-</td>
 </tr>
 </tbody>
-</table>
-<p>解释：</p>
-<ul>
-<li><code>StayFree</code> 仅有 81% 准确率：QQ、nekogramX、Via 等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到 19%）（后来发现也有偏大数据）</li>
-<li>准确率为 0% 的软件：在 20220709 我看了 67min 小说后，这些软件有的未记录阅读器时长；有的将时长错加到 QQ 上。它们的准确率由 0.8%-10% 不等，由于偏差过大，统一算作 0%。</li>
-<li>除 <code>My Phone Time</code> <code>ActionDash</code> 外其他软件均请求 <code>使用情况访问权限</code>，此处视为默认放行。</li>
-<li><code>Phone statistic</code> 有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期 9 天前的。</li>
-</ul>
-<p>总结：</p>
-<p>推荐同时使用 <code>Digitox</code> 与 <code>Phone statistic</code>。<em>（这俩加一起都没某些家伙大</em></p>
-<p><span class="ap-heimu" title="你知道的太多了">感觉还想自己写啊，但是我不会，这下有生之年了</span></p>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/time_record","locale":"root","title":"记录软件使用时长","headings":[{"level":1,"text":"记录软件使用时长","slug":"记录软件使用时长"},{"level":2,"text":"Windows 端记录软件使用时长","slug":"windows-端记录软件使用时长"},{"level":3,"text":"ActivityWatch","slug":"activitywatch"},{"level":2,"text":"Android 端记录软件使用时长","slug":"android-端记录软件使用时长"}],"frontmatter":{"date":"2022-07-08","category":["推荐","评价"],"tag":["移动端","横评"],"icon":"solid/clock"},"createdAt":"2022-07-08T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":5,"excerpt":"记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…"},"related":[{"route":"/blog/log","title":"博客日志","refs":2,"links":[{"route":"/hobbies/galgame","refs":4},{"route":"/farraginous/recommend_packages","refs":3},{"route":"/hobbies/books","refs":3},{"route":"/essay/2022","refs":2}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":2,"links":[{"route":"/hobbies/books","refs":4},{"route":"/blog/log","refs":3},{"route":"/articles/linux/package","refs":1},{"route":"/hobbies/galgame","refs":1}]},{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/essay/2022","title":"2022","refs":1,"links":[{"route":"/blog/log","refs":2}]},{"route":"/hobbies/books","title":"读书","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":4},{"route":"/blog/log","refs":3},{"route":"/hobbies/galgame","refs":1}]},{"route":"/hobbies/galgame","title":"galgame","refs":1,"links":[{"route":"/blog/log","refs":4},{"route":"/farraginous/recommend_packages","refs":1},{"route":"/hobbies/books","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</table><p>解释：</p><ul>
+<li><code>StayFree</code> 仅有 81% 准确率：QQ、nekogramX、Via 等多个软件的计时数据略小于系统计时数据。（最严重偏差值达到 19%）（后来发现也有偏大数据）</li><li>准确率为 0% 的软件：在 20220709 我看了 67min 小说后，这些软件有的未记录阅读器时长；有的将时长错加到 QQ 上。它们的准确率由 0.8%-10% 不等，由于偏差过大，统一算作 0%。</li><li>除 <code>My Phone Time</code> <code>ActionDash</code> 外其他软件均请求 <code>使用情况访问权限</code>，此处视为默认放行。</li><li><code>Phone statistic</code> 有一个最大优点，就是刚下载就能查询到本年的全部数据。其他软件最多只能查到下载日期 9 天前的。</li>
+</ul><p>总结：</p><p>推荐同时使用 <code>Digitox</code> 与 <code>Phone statistic</code>。<em>（这俩加一起都没某些家伙大</em></p><p><span class="ap-heimu" title="你知道的太多了">感觉还想自己写啊，但是我不会，这下有生之年了</span></p><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/time_record","locale":"root","title":"记录软件使用时长","headings":[{"level":1,"text":"记录软件使用时长","slug":"记录软件使用时长"},{"level":2,"text":"Windows 端记录软件使用时长","slug":"windows-端记录软件使用时长"},{"level":3,"text":"ActivityWatch","slug":"activitywatch"},{"level":2,"text":"Android 端记录软件使用时长","slug":"android-端记录软件使用时长"}],"frontmatter":{"date":"2022-07-08","category":["推荐","评价"],"tag":["移动端","横评"],"icon":"solid/clock"},"createdAt":"2022-07-08T00:00:00.000Z","updatedAt":"2026-11-09T03:35:41+08:00","readingTime":5,"excerpt":"记录软件使用时长 Windows 端记录软件使用时长 从 20220428 开始使用 Tai 记录 Windows 下的应用时长。 C# 写的，windows 下专用的软件。 Tai 最后一次更新是 20231228，已经很久没有维护了。然而 Tai 1.5.0.6 有 bug ，第三方 fork 的 Taix 目前还…"},"related":[{"route":"/blog/log","title":"博客日志","refs":2,"links":[{"route":"/hobbies/galgame","refs":4},{"route":"/farraginous/recommend_packages","refs":3},{"route":"/hobbies/books","refs":3},{"route":"/essay/2022","refs":2}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":2,"links":[{"route":"/hobbies/books","refs":4},{"route":"/blog/log","refs":3},{"route":"/articles/linux/package","refs":1},{"route":"/hobbies/galgame","refs":1}]},{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/essay/2022","title":"2022","refs":1,"links":[{"route":"/blog/log","refs":2}]},{"route":"/hobbies/books","title":"读书","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":4},{"route":"/blog/log","refs":3},{"route":"/hobbies/galgame","refs":1}]},{"route":"/hobbies/galgame","title":"galgame","refs":1,"links":[{"route":"/blog/log","refs":4},{"route":"/farraginous/recommend_packages","refs":1},{"route":"/hobbies/books","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

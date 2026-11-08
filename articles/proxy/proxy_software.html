@@ -1,141 +1,48 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../../assets/chrome-379cddde.js">
-<title>代理客户端 | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../../favicon.ico">
-<meta name="description" content="代理客户端 我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。 虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。 我还做了一个 实验性质的 dae &lt;-&gt; sing-box 的配置转换器 ，以尽量避免…">
-<link rel="canonical" href="https://absx.pages.dev/articles/proxy/proxy_software">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="代理客户端 | 绝对值_x 的博客">
-<meta property="og:description" content="代理客户端 我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。 虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。 我还做了一个 实验性质的 dae &lt;-&gt; sing-box 的配置转换器 ，以尽量避免…">
-<meta property="og:url" content="https://absx.pages.dev/articles/proxy/proxy_software">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../../assets/chrome-379cddde.js"><title>代理客户端 | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../../favicon.ico"><meta name="description" content="代理客户端 我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。 虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。 我还做了一个 实验性质的 dae &lt;-&gt; sing-box 的配置转换器 ，以尽量避免…"><link rel="canonical" href="https://absx.pages.dev/articles/proxy/proxy_software"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="代理客户端 | 绝对值_x 的博客"><meta property="og:description" content="代理客户端 我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。 虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。 我还做了一个 实验性质的 dae &lt;-&gt; sing-box 的配置转换器 ，以尽量避免…"><meta property="og:url" content="https://absx.pages.dev/articles/proxy/proxy_software"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"代理客户端","url":"https://absx.pages.dev/articles/proxy/proxy_software","mainEntityOfPage":"https://absx.pages.dev/articles/proxy/proxy_software","description":"代理客户端 我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。 虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。 我还做了一个 实验性质的 dae \u003c-> sing-box 的配置转换器 ，以尽量避免…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-11-25T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="代理客户端">代理客户端</h1>
-<p>我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。</p>
-<p>虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。</p>
-<p>我还做了一个<a href="https://github.com/lxl66566/sing-dae" class="ap-external">实验性质的 dae &lt;-&gt; sing-box 的配置转换器</a>，以尽量避免维护两套配置的繁琐程度。</p>
-<h2 id="基础概念-内核与前端">基础概念：内核与前端</h2>
-<ul>
-<li>内核：拦截/加密/封装流量，与远端节点通信。</li>
-<li>前端：给用户操作，写配置。</li>
-</ul>
-<p>一般代理都是这种架构。</p>
-<p>下面文章是站在用户使用角度进行评价，实际上也只是按照前端划分了一下大致派系。有一些前端例如 v2rayN 支持一大堆内核，但是也被划分到 v2ray 系，希望读者不要过度纠结。</p>
-<h2 id="clash-系">Clash 系</h2>
-<blockquote>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="代理客户端">代理客户端</h1><p>我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。</p><p>虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。</p><p>我还做了一个<a href="https://github.com/lxl66566/sing-dae" class="ap-external">实验性质的 dae &lt;-&gt; sing-box 的配置转换器</a>，以尽量避免维护两套配置的繁琐程度。</p><h2 id="基础概念-内核与前端">基础概念：内核与前端</h2><ul>
+<li>内核：拦截/加密/封装流量，与远端节点通信。</li><li>前端：给用户操作，写配置。</li>
+</ul><p>一般代理都是这种架构。</p><p>下面文章是站在用户使用角度进行评价，实际上也只是按照前端划分了一下大致派系。有一些前端例如 v2rayN 支持一大堆内核，但是也被划分到 v2ray 系，希望读者不要过度纠结。</p><h2 id="clash-系">Clash 系</h2><blockquote>
 <p>20231102-20231103 Clash 系几乎全部删库跑路。虽然也有一些 fork 版本接手就是了。<br>
 在 2025 年，我已经不再推荐任何 clash 系的代理客户端。</p>
-</blockquote>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>如果你想知道为什么，可以展开查看。</summary>
-<h3 id="clash-verge-rev"><a href="https://github.com/clash-verge-rev/clash-verge-rev" class="ap-external">clash-verge-rev</a></h3>
-<p>几经跑路和秽土转生，三代目的 clash-verge-rev 登场了。</p>
-<p>但是这个 clash 代码质量很低，出过很多事：</p>
-<ol>
-<li>在 Windows 上卸载 clash-verge-rev 2.3.2 的时候会删除整个用户开始菜单目录，会导致开始菜单被清空 <a href="https://t.me/azaneko/6255" class="ap-external">ref</a></li>
-<li>写爆日志</li>
-<li>远程执行漏洞 <a href="https://t.me/azaneko/5277" class="ap-external">ref1</a> <a href="https://t.me/azaneko/5288" class="ap-external">ref2</a></li>
-</ol>
-<h3 id="clash-verge"><a href="https://github.com/zzzgydi/clash-verge" class="ap-external">Clash Verge</a></h3>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>已跑路</summary>
-<p>开源跨平台 Clash 客户端，rust + tauri 技术栈。</p>
-<p>相比 <a href="#clash-for-windows">Clash for Windows</a>，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="ap-heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。</p>
-<p>其 <em>设置热键</em> 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，懒得做订阅转换，放弃了 Clash Verge 而去使用了 <a href="#v2ray">v2rayN</a>。</p>
-<h4 id="简易教程">简易教程</h4>
-<p>我们可以先在设置中将其语言调成中文。</p>
-<p>类似地，在 <em>配置</em> 中粘贴订阅链接，下载并选中，然后就可以在 <em>代理</em> 中使用节点了。记得在 <em>配置</em> 中打开 <em>系统代理</em> 选项。</p>
-</details>
-<h3 id="clash-for-windows">Clash for Windows</h3>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>已跑路</summary>
-<h4 id="简介">简介</h4>
-<p><em>Clash for Windows</em> 是闭源的 PC 客户端。（然而因为一个 <a href="https://github.com/Fndroid/clash_for_windows_pkg/issues/1105" class="ap-external">bug</a> 导致我转向了 <a href="#clash-verge">Clash Verge</a>。）</p>
-<h4 id="下载地址">下载地址</h4>
-<p><a href="https://github.com/Fndroid/clash_for_windows_pkg" class="ap-external">项目地址</a> | <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" class="ap-external">PC 端下载地址</a> | <a href="https://wwp.lanzout.com/ixncj0a1k28h" class="ap-external">私链</a></p>
-<h4 id="优势">优势</h4>
-<ul>
-<li>优秀图形界面</li>
-<li>简单易上手</li>
+</blockquote><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>如果你想知道为什么，可以展开查看。</summary><h3 id="clash-verge-rev"><a href="https://github.com/clash-verge-rev/clash-verge-rev" class="ap-external">clash-verge-rev</a></h3><p>几经跑路和秽土转生，三代目的 clash-verge-rev 登场了。</p><p>但是这个 clash 代码质量很低，出过很多事：</p><ol>
+<li>在 Windows 上卸载 clash-verge-rev 2.3.2 的时候会删除整个用户开始菜单目录，会导致开始菜单被清空 <a href="https://t.me/azaneko/6255" class="ap-external">ref</a></li><li>写爆日志</li><li>远程执行漏洞 <a href="https://t.me/azaneko/5277" class="ap-external">ref1</a> <a href="https://t.me/azaneko/5288" class="ap-external">ref2</a></li>
+</ol><h3 id="clash-verge"><a href="https://github.com/zzzgydi/clash-verge" class="ap-external">Clash Verge</a></h3><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>已跑路</summary><p>开源跨平台 Clash 客户端，rust + tauri 技术栈。</p><p>相比 <a href="#clash-for-windows">Clash for Windows</a>，其拥有更小的体积（66MB，vs 240MB）与开放性，图形界面不相上下，而<span class="ap-heimu" title="你知道的太多了">对于一般使用者无关紧要的</span>功能会更少一些。</p><p>其 <em>设置热键</em> 的功能也是我非常喜欢的一点。不过由于 VPS 自建节点的原因，懒得做订阅转换，放弃了 Clash Verge 而去使用了 <a href="#v2ray">v2rayN</a>。</p><h4 id="简易教程">简易教程</h4><p>我们可以先在设置中将其语言调成中文。</p><p>类似地，在 <em>配置</em> 中粘贴订阅链接，下载并选中，然后就可以在 <em>代理</em> 中使用节点了。记得在 <em>配置</em> 中打开 <em>系统代理</em> 选项。</p>
+</details><h3 id="clash-for-windows">Clash for Windows</h3><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>已跑路</summary><h4 id="简介">简介</h4><p><em>Clash for Windows</em> 是闭源的 PC 客户端。（然而因为一个 <a href="https://github.com/Fndroid/clash_for_windows_pkg/issues/1105" class="ap-external">bug</a> 导致我转向了 <a href="#clash-verge">Clash Verge</a>。）</p><h4 id="下载地址">下载地址</h4><p><a href="https://github.com/Fndroid/clash_for_windows_pkg" class="ap-external">项目地址</a> | <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases" class="ap-external">PC 端下载地址</a> | <a href="https://wwp.lanzout.com/ixncj0a1k28h" class="ap-external">私链</a></p><h4 id="优势">优势</h4><ul>
+<li>优秀图形界面</li><li>简单易上手</li>
+</ul><h4 id="简易配置教程-v0-19-16">简易配置教程 <em>v0.19.16</em></h4><ol>
+<li>在 Profiles 中的文本框内粘贴订阅链接并下载。选中下载的配置文件。</li><li>进入 Proxies，选择 rule，点击测速图标并在下方选择一个可用节点。</li><li>进入 General，开启 System Proxy。</li>
+</ol><h4 id="一些提示">一些提示</h4><ul>
+<li><a href="https://github.com/BoyceLig/Clash_Chinese_Patch" class="ap-external">这里</a>提供 clash 的汉化。</li><li>在节点界面点击测速图标测试全部节点的连通性</li><li>建议设置配置文件自动更新（Profiles -&gt; 右击配置文件 -&gt; Settings -&gt; Update Interval 设为 24）</li>
 </ul>
-<h4 id="简易配置教程-v0-19-16">简易配置教程 <em>v0.19.16</em></h4>
-<ol>
-<li>在 Profiles 中的文本框内粘贴订阅链接并下载。选中下载的配置文件。</li>
-<li>进入 Proxies，选择 rule，点击测速图标并在下方选择一个可用节点。</li>
-<li>进入 General，开启 System Proxy。</li>
-</ol>
-<h4 id="一些提示">一些提示</h4>
-<ul>
-<li><a href="https://github.com/BoyceLig/Clash_Chinese_Patch" class="ap-external">这里</a>提供 clash 的汉化。</li>
-<li>在节点界面点击测速图标测试全部节点的连通性</li>
-<li>建议设置配置文件自动更新（Profiles -&gt; 右击配置文件 -&gt; Settings -&gt; Update Interval 设为 24）</li>
-</ul>
-</details>
-<h3 id="clash-for-android">Clash For Android</h3>
-<blockquote>
+</details><h3 id="clash-for-android">Clash For Android</h3><blockquote>
 <p>20231103 继 CFW 删库后，Clash 内核与 Meta 核均删库跑路。</p>
-</blockquote>
-<p>请前往谷歌商店或<a href="https://github.com/Kr328/ClashForAndroid/releases" class="ap-external">前往 github 下载</a>。<a href="https://wwp.lanzout.com/iL6sD03mi0gf" class="ap-external">私链</a></p>
-<h3 id="其他">其他</h3>
-<ul>
-<li><a href="https://github.com/MetaCubeX/Yacd-meta" class="ap-external">Yacd-meta</a></li>
-<li><a href="https://tutor.xireiki.com/" class="ap-external">神秘模块</a>：magisk module</li>
-<li><a href="https://github.com/ModuleList/akashaProxy" class="ap-external">虚空代理</a>：magisk/kernelsu module</li>
+</blockquote><p>请前往谷歌商店或<a href="https://github.com/Kr328/ClashForAndroid/releases" class="ap-external">前往 github 下载</a>。<a href="https://wwp.lanzout.com/iL6sD03mi0gf" class="ap-external">私链</a></p><h3 id="其他">其他</h3><ul>
+<li><a href="https://github.com/MetaCubeX/Yacd-meta" class="ap-external">Yacd-meta</a></li><li><a href="https://tutor.xireiki.com/" class="ap-external">神秘模块</a>：magisk module</li><li><a href="https://github.com/ModuleList/akashaProxy" class="ap-external">虚空代理</a>：magisk/kernelsu module</li>
 </ul>
-</details>
-<h2 id="v2ray-系">V2ray 系</h2>
-<p>相比于 clash，v2ray 系列要灵活得多。V2rayN 等前端不仅支持 clash 格式的 yaml，也支持自定义节点配置，功能更加丰富。</p>
-<h3 id="v2rayn"><a href="https://github.com/2dust/v2rayN" class="ap-external">V2rayN</a></h3>
-<p>V2rayN 是各种代理内核的前端，跨平台（windows + linux + macos）。</p>
-<ol>
+</details><h2 id="v2ray-系">V2ray 系</h2><p>相比于 clash，v2ray 系列要灵活得多。V2rayN 等前端不仅支持 clash 格式的 yaml，也支持自定义节点配置，功能更加丰富。</p><h3 id="v2rayn"><a href="https://github.com/2dust/v2rayN" class="ap-external">V2rayN</a></h3><p>V2rayN 是各种代理内核的前端，跨平台（windows + linux + macos）。</p><ol>
 <li><s>前往 PC 客户端项目地址，下载 <code>v2rayN-With-Core.zip</code>。（我以前是自己配内核的，但是后来发现问题太多了，还有跨版本兼容性，真不如 with core）</s> 现在 Release 里的下载都已经默认 with core 了，用户不需要关注这些。
 <ul>
-<li>根据<a href="https://github.com/2dust/v2rayN/wiki/Release-files-introduction" class="ap-external">官方说明</a>，现在 V2rayN windows 有 WPF 实现和 Avalonia UI 实现两种，用户可以任选其一下载。我更推荐 Avalonia UI，毕竟性能差不多，但是看着感觉更现代。</li>
-<li>WPF 前端在开启 GPU 加速下的 bug 还是有一些的。</li>
+<li>根据<a href="https://github.com/2dust/v2rayN/wiki/Release-files-introduction" class="ap-external">官方说明</a>，现在 V2rayN windows 有 WPF 实现和 Avalonia UI 实现两种，用户可以任选其一下载。我更推荐 Avalonia UI，毕竟性能差不多，但是看着感觉更现代。</li><li>WPF 前端在开启 GPU 加速下的 bug 还是有一些的。</li>
 </ul>
-</li>
-<li>复制节点地址，按 <code>Ctrl+V</code> 导入，按 <code>Enter</code> 激活。</li>
-<li><code>Ctrl + R</code> 测试真连接延迟，确保节点有效。</li>
-<li>下方 <em>系统代理</em> 处选择 <em>自动配置系统代理</em>，开启代理。</li>
-</ol>
-<p>若为订阅链接：</p>
-<ol>
-<li>点击加号，在订阅分组设置中，将订阅链接填入 URL。别名随便写。</li>
-<li>订阅分组 - 更新全部订阅</li>
-<li>一键测延迟/速度，选择节点双击激活。</li>
-<li>同上方 4.</li>
-</ol>
-<h4 id="路由规则编写">路由规则编写</h4>
-<p><em>设置 - 路由设置</em> 里可以编写自己的分流规则。一些注意事项：</p>
-<ul>
-<li>常用的规则前缀有 <code>domain:</code>，<code>geosite:</code>，<code>geoip:</code> 等。</li>
-<li><code>domain:</code> 开头的是 domain_suffix 匹配，可以匹配子域名。</li>
-<li>如果不写 <code>domain:</code> 等前缀，默认是 keyword 匹配。</li>
-</ul>
-<h4 id="注意事项">注意事项</h4>
-<ul>
+</li><li>复制节点地址，按 <code>Ctrl+V</code> 导入，按 <code>Enter</code> 激活。</li><li><code>Ctrl + R</code> 测试真连接延迟，确保节点有效。</li><li>下方 <em>系统代理</em> 处选择 <em>自动配置系统代理</em>，开启代理。</li>
+</ol><p>若为订阅链接：</p><ol>
+<li>点击加号，在订阅分组设置中，将订阅链接填入 URL。别名随便写。</li><li>订阅分组 - 更新全部订阅</li><li>一键测延迟/速度，选择节点双击激活。</li><li>同上方 4.</li>
+</ol><h4 id="路由规则编写">路由规则编写</h4><p><em>设置 - 路由设置</em> 里可以编写自己的分流规则。一些注意事项：</p><ul>
+<li>常用的规则前缀有 <code>domain:</code>，<code>geosite:</code>，<code>geoip:</code> 等。</li><li><code>domain:</code> 开头的是 domain_suffix 匹配，可以匹配子域名。</li><li>如果不写 <code>domain:</code> 等前缀，默认是 keyword 匹配。</li>
+</ul><h4 id="注意事项">注意事项</h4><ul>
 <li>在 v2rayN 7.3 及以上版本，bbr2 可能会导致其不可用。可以尝试关闭 bbr2。</li>
-</ul>
-<h3 id="v2raya">v2rayA</h3>
-<p>v2rayA 是一个跨多平台的、基于网页的代理前端。它有一个易于使用的网页面板，对于初入 linux 的用户比较友好；它也支持透明代理、分流规则、订阅链接等。</p>
-<p>但是 v2rayA 只支持 v2ray 内核而不支持 Xray/sing-box 等现代内核，因此对协议的支持非常有限。</p>
-<p>安装：</p>
-<div class="ap-tabs">
+</ul><h3 id="v2raya">v2rayA</h3><p>v2rayA 是一个跨多平台的、基于网页的代理前端。它有一个易于使用的网页面板，对于初入 linux 的用户比较友好；它也支持透明代理、分流规则、订阅链接等。</p><p>但是 v2rayA 只支持 v2ray 内核而不支持 Xray/sing-box 等现代内核，因此对协议的支持非常有限。</p><p>安装：</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-tabs-1-1" checked>
 <label class="ap-tabs__label" for="ap-tab-1">archlinux</label>
 <div class="ap-tab" data-title="archlinux">
@@ -144,9 +51,7 @@
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> v2raya</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># 也可以不用 sudo：`v2raya --lite`</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># fishshell</span></span>
-<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">set</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -Ux</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> ALL_PROXY</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "http://127.0.0.1:20172"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 必须加 -x, 否则系统代理无效</span></span></code></pre></div>
-<p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" class="ap-external">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code>。</p>
-<p>用 sudo 和不用 sudo 的区别主要是透明代理的支持。显然 <code>--lite</code> （无需 sudo）是不能开透明代理的。</p>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">set</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -Ux</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> ALL_PROXY</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "http://127.0.0.1:20172"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 必须加 -x, 否则系统代理无效</span></span></code></pre></div><p>如果需要后台运行，开机自启，可以参考<a href="https://v2raya.org/docs/advanced-application/noroot/" class="ap-external">文档</a>：<code>systemctl --user enable --now v2raya-lite.service</code>。</p><p>用 sudo 和不用 sudo 的区别主要是透明代理的支持。显然 <code>--lite</code> （无需 sudo）是不能开透明代理的。</p>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-2" name="ap-tabs-tabs-1-1">
 <label class="ap-tabs__label" for="ap-tab-2">OpenWRT</label>
@@ -156,66 +61,29 @@
 <input class="ap-tabs__radio" type="radio" id="ap-tab-3" name="ap-tabs-tabs-1-1">
 <label class="ap-tabs__label" for="ap-tab-3">Windows</label>
 <div class="ap-tab" data-title="Windows">
-<p><a href="https://github.com/v2rayA/v2raya-scoop" class="ap-external">使用 scoop 安装</a></p>
-<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<p><a href="https://github.com/v2rayA/v2raya-scoop" class="ap-external">使用 scoop 安装</a></p><div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">scoop</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> bucket</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> add</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> v2raya</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> https://github.com/v2rayA/v2raya-scoop</span></span>
-<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">scoop</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> v2raya</span></span></code></pre></div>
-<p>不过那个 v2ray-rules-dat 好像没啥用，装完以后还是需要联网去下载 dat 文件。</p>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">scoop</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> v2raya</span></span></code></pre></div><p>不过那个 v2ray-rules-dat 好像没啥用，装完以后还是需要联网去下载 dat 文件。</p>
 </div>
-</div>
-<p>之后的操作都在网页上 (<code>127.0.0.1:2017</code>) 进行。</p>
-<ul>
-<li>V2rayA 运行需要系统已经安装 nftables 或 iptables。</li>
-<li>如果你不开透明代理，则代理端口最好使用 <code>http://127.0.0.1:20172</code>，这个端口带有分流。</li>
-<li>如果你开启透明代理，可以将分流规则选成 <a href="https://v2raya.org/docs/manual/routinga/" class="ap-external">RoutingA</a>，然后透明代理分流与端口分流一致。这样方便自定义直连或代理的规则。
+</div><p>之后的操作都在网页上 (<code>127.0.0.1:2017</code>) 进行。</p><ul>
+<li>V2rayA 运行需要系统已经安装 nftables 或 iptables。</li><li>如果你不开透明代理，则代理端口最好使用 <code>http://127.0.0.1:20172</code>，这个端口带有分流。</li><li>如果你开启透明代理，可以将分流规则选成 <a href="https://v2raya.org/docs/manual/routinga/" class="ap-external">RoutingA</a>，然后透明代理分流与端口分流一致。这样方便自定义直连或代理的规则。
 <ul>
 <li>v2rayA 的 RoutingA 咋一看和 dae 配置挺像，其实还是有挺大不同的，比 dae 更严格，例如不允许在括号中间换行。</li>
 </ul>
 </li>
-</ul>
-<h3 id="v2rayng">V2rayNG</h3>
-<p>v2ray 的 Android 前端。不太好用。</p>
-<p>我大概在 2021 年以前使用过一段时间 V2rayNG，感觉有非常多的 bug，例如启动代理会越来越慢。</p>
-<h3 id="nekoray"><a href="https://github.com/MatsuriDayo/nekoray" class="ap-external">NekoRay</a></h3>
-<p>基于 Qt 的代理前端，支持 V2ray &amp; sing-box 内核。</p>
-<blockquote>
+</ul><h3 id="v2rayng">V2rayNG</h3><p>v2ray 的 Android 前端。不太好用。</p><p>我大概在 2021 年以前使用过一段时间 V2rayNG，感觉有非常多的 bug，例如启动代理会越来越慢。</p><h3 id="nekoray"><a href="https://github.com/MatsuriDayo/nekoray" class="ap-external">NekoRay</a></h3><p>基于 Qt 的代理前端，支持 V2ray &amp; sing-box 内核。</p><blockquote>
 <p>记得好像有停更过一阵子，仓库提交记录是 2022 开始的，找不到。</p>
-</blockquote>
-<h3 id="qv2ray">qv2ray</h3>
-<p>2017 年左右的很多油管教程都会推荐 qv2ray。qv2ray 停止维护过一段时间(?)，但是我在 2024 年看的时候是有人接手维护的。我没用过。</p>
-<h2 id="sing-box-系">sing-box 系</h2>
-<p><em>sing-box 系</em> 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 <em>The universal proxy platform</em>，以支持的协议多闻名。<span class="ap-heimu" title="你知道的太多了">缺点就是（早期）bug 也多。</span></p>
-<p>sing-box 发展到现在已经进行了大量优化，在内存占用、协议丰富度、CPU 性能方面都没什么短板。</p>
-<p>sing-box client 的一个特点是会打开致死量的本地端口，大约 2000 个。这样的优点是抗干扰，容易绕过封锁；缺点则是会导致本机端口扫描变慢、与其他占用端口的程序冲突概率变大等。</p>
-<ul>
-<li><a href="https://github.com/MatsuriDayo/NekoBoxForAndroid" class="ap-external">NekoBox</a>：Matsuri 的继任，Android 端的好选择。</li>
-<li><a href="https://github.com/MatsuriDayo/Matsuri" class="ap-external">Matsuri</a>：项目已 archived。</li>
-<li><a href="https://github.com/SagerNet" class="ap-external">SagerNet</a>：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。
+</blockquote><h3 id="qv2ray">qv2ray</h3><p>2017 年左右的很多油管教程都会推荐 qv2ray。qv2ray 停止维护过一段时间(?)，但是我在 2024 年看的时候是有人接手维护的。我没用过。</p><h2 id="sing-box-系">sing-box 系</h2><p><em>sing-box 系</em> 指基于 sing-box 内核的一堆代理软件。sing-box 号称是 <em>The universal proxy platform</em>，以支持的协议多闻名。<span class="ap-heimu" title="你知道的太多了">缺点就是（早期）bug 也多。</span></p><p>sing-box 发展到现在已经进行了大量优化，在内存占用、协议丰富度、CPU 性能方面都没什么短板。</p><p>sing-box client 的一个特点是会打开致死量的本地端口，大约 2000 个。这样的优点是抗干扰，容易绕过封锁；缺点则是会导致本机端口扫描变慢、与其他占用端口的程序冲突概率变大等。</p><ul>
+<li><a href="https://github.com/MatsuriDayo/NekoBoxForAndroid" class="ap-external">NekoBox</a>：Matsuri 的继任，Android 端的好选择。</li><li><a href="https://github.com/MatsuriDayo/Matsuri" class="ap-external">Matsuri</a>：项目已 archived。</li><li><a href="https://github.com/SagerNet" class="ap-external">SagerNet</a>：前两位的 base。试了一下 hysteria 插件，不可用，遂无兴趣。
 <ul>
 <li>2024 年 archived 后也出了很多 fork。</li>
 </ul>
-</li>
-<li><a href="https://github.com/xchacha20-poly1305/husi" class="ap-external">husi</a>：内置各种小众协议插件的 NekoBox。</li>
-<li><a href="https://github.com/KaringX/karing" class="ap-external">karing</a>：跨平台的国产开源代理，主要面向小白，易用。</li>
-<li><a href="https://github.com/hiddify/hiddify-app" class="ap-external">hiddify</a>：又一个跨平台国产 sing-box 代理。这玩意的 v2.0.5 在我的 windows 上甚至无法打开，比较垃圾。</li>
-</ul>
-<p>并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。或许与其打开的大量端口有一些联系。</p>
-<h2 id="dae-系">dae 系</h2>
-<p>dae 是一个基于 eBPF 的代理内核，性能高。这是我目前用过的相对舒服的代理软件，可以<strong>维护多个节点池</strong>，对于每个池中的节点，都可以自动选择最小延迟的节点进行使用，并能根据不同规则进行节点池分流。缺点是只能用于 linux 系统，并且支持的协议比起其他代理软件偏少。</p>
-<p>dae 是命令行与配置文件的，而 daed 是基于 dae 的 web 前端。如果你刚刚接触 dae 系代理或者不喜欢写配置文件，可以使用 daed。否则我还是比较推荐 dae 的。</p>
-<h3 id="dae"><a href="https://github.com/daeuniverse/dae" class="ap-external">dae</a></h3>
-<p>我已经用了很长一段时间的 daed，写 dae 配置文件可以说是非常简单；而且 dae 的官方教程确实非常不错，把 <a href="https://github.com/daeuniverse/dae/blob/main/example.dae" class="ap-external">example</a> 下载下来对着改就行，内含丰富注释。这里由于隐私问题，我并未把我的配置公开，而是加密后上传到 github。</p>
-<div class="ap-tabs">
+</li><li><a href="https://github.com/xchacha20-poly1305/husi" class="ap-external">husi</a>：内置各种小众协议插件的 NekoBox。</li><li><a href="https://github.com/KaringX/karing" class="ap-external">karing</a>：跨平台的国产开源代理，主要面向小白，易用。</li><li><a href="https://github.com/hiddify/hiddify-app" class="ap-external">hiddify</a>：又一个跨平台国产 sing-box 代理。这玩意的 v2.0.5 在我的 windows 上甚至无法打开，比较垃圾。</li>
+</ul><p>并且观测到一个很有趣的现象：在 Android 上，成功（以打断 V2rayNG 方式?）启动过 sing-box 后，之后的 V2rayNG 启动连接的速度会变慢，变为需要约 1s-2s+。或许与其打开的大量端口有一些联系。</p><h2 id="dae-系">dae 系</h2><p>dae 是一个基于 eBPF 的代理内核，性能高。这是我目前用过的相对舒服的代理软件，可以<strong>维护多个节点池</strong>，对于每个池中的节点，都可以自动选择最小延迟的节点进行使用，并能根据不同规则进行节点池分流。缺点是只能用于 linux 系统，并且支持的协议比起其他代理软件偏少。</p><p>dae 是命令行与配置文件的，而 daed 是基于 dae 的 web 前端。如果你刚刚接触 dae 系代理或者不喜欢写配置文件，可以使用 daed。否则我还是比较推荐 dae 的。</p><h3 id="dae"><a href="https://github.com/daeuniverse/dae" class="ap-external">dae</a></h3><p>我已经用了很长一段时间的 daed，写 dae 配置文件可以说是非常简单；而且 dae 的官方教程确实非常不错，把 <a href="https://github.com/daeuniverse/dae/blob/main/example.dae" class="ap-external">example</a> 下载下来对着改就行，内含丰富注释。这里由于隐私问题，我并未把我的配置公开，而是加密后上传到 github。</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-4" name="ap-tabs-tabs-2-2" checked>
 <label class="ap-tabs__label" for="ap-tab-4">NixOS</label>
 <div class="ap-tab" data-title="NixOS">
-<h4 id="前言">前言</h4>
-<p>2024 年在 NixOS 上 nixpkgs 没有 daed 的包，只有 dae 能够直接使用（不使用 daed 还有一个原因：不符合 NixOS 的确定一切的思想。特定位置存的 sqlite 总归是不如用 git 管理配置文件的）。</p>
-<p>dae 官方提供了一个 <a href="https://github.com/daeuniverse/flake.nix" class="ap-external">flake.nix</a> 配置（包含 dae 和 daed），因为 flake 的版本包含了最新的 bug 修复因此我使用的是 flake；但是我之前<a href="https://github.com/daeuniverse/flake.nix/issues/103" class="ap-external">踩了这玩意一个坑</a>，因此在 bug 解决之前我还是回退到 nixpkgs 的 dae。</p>
-<p>2025 年，dae 已经更新到 1.0 版本，bug 少了很多，并且 nixpkgs 也已经有了 dae 与 daed 可以自由选择。</p>
-<h4 id="安装">安装</h4>
-<p>改完配置以后，直接在 <code>configuration.nix</code> 中写：</p>
-<div class="ap-code ap-code--ln" data-lang="nix" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">nix</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<h4 id="前言">前言</h4><p>2024 年在 NixOS 上 nixpkgs 没有 daed 的包，只有 dae 能够直接使用（不使用 daed 还有一个原因：不符合 NixOS 的确定一切的思想。特定位置存的 sqlite 总归是不如用 git 管理配置文件的）。</p><p>dae 官方提供了一个 <a href="https://github.com/daeuniverse/flake.nix" class="ap-external">flake.nix</a> 配置（包含 dae 和 daed），因为 flake 的版本包含了最新的 bug 修复因此我使用的是 flake；但是我之前<a href="https://github.com/daeuniverse/flake.nix/issues/103" class="ap-external">踩了这玩意一个坑</a>，因此在 bug 解决之前我还是回退到 nixpkgs 的 dae。</p><p>2025 年，dae 已经更新到 1.0 版本，bug 少了很多，并且 nixpkgs 也已经有了 dae 与 daed 可以自由选择。</p><h4 id="安装">安装</h4><p>改完配置以后，直接在 <code>configuration.nix</code> 中写：</p><div class="ap-code ap-code--ln" data-lang="nix" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">nix</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-nix"><span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">services</span><span style="color:#D73A49;--shiki-dark:#F97583">.</span><span style="color:#E36209;--shiki-dark:#FFAB70">dae</span><span style="color:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">  enable</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">  configFile</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "&#x3C;your/config/file/path>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;   </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 必需是绝对路径字符串，看我的踩坑</span></span>
@@ -223,11 +91,7 @@
 <span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">    v2ray-geoip</span></span>
 <span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">    v2ray-domain-list-community</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  ];</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span><span style="color:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">;</span></span></code></pre></div>
-<p>rebuild 后重启即可（不直接生效，是 eBPF 的特性？）。这分流不比 v2rayA 爽多了？</p>
-<h4 id="改进">改进</h4>
-<p>当然，如果你的配置主目录不一定在 <code>/etc/nixos</code> 下，使用绝对路径确实不算明智。这时候可以用一个比较脏的方法，监听 config 的改动，并且每次改动时将最新版本复制到特定绝对路径里。</p>
-<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="nix" style="--ap-ln-w:2ch;counter-reset:ap-lines 23"><div class="ap-code__tools"><span class="ap-code__lang">nix</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span><span style="color:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">;</span></span></code></pre></div><p>rebuild 后重启即可（不直接生效，是 eBPF 的特性？）。这分流不比 v2rayA 爽多了？</p><h4 id="改进">改进</h4><p>当然，如果你的配置主目录不一定在 <code>/etc/nixos</code> 下，使用绝对路径确实不算明智。这时候可以用一个比较脏的方法，监听 config 的改动，并且每次改动时将最新版本复制到特定绝对路径里。</p><div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="nix" style="--ap-ln-w:2ch;counter-reset:ap-lines 23"><div class="ap-code__tools"><span class="ap-code__lang">nix</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-1">
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-nix"><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># configuration.nix</span></span>
 <span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">dae</span><span style="color:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
@@ -252,55 +116,30 @@
 <span class="line ap-collapsible"><span style="color:#032F62;--shiki-dark:#9ECBFF">    ''</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">  };</span></span>
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span><span style="color:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">;</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-1"></label>
+</div><p>但是这样写起来还是挺丑的。最好的办法是<a href="https://github.com/lxl66566/nixos-config/blob/9ac3045d98d956ea9c007a24fae288bca39fcb28/overlays/default.nix#L15" class="ap-external">使用一个函数</a>，可以在 rebuild 时自动将配置拷贝到 nix store 并设置好权限。</p>
 </div>
-<p>但是这样写起来还是挺丑的。最好的办法是<a href="https://github.com/lxl66566/nixos-config/blob/9ac3045d98d956ea9c007a24fae288bca39fcb28/overlays/default.nix#L15" class="ap-external">使用一个函数</a>，可以在 rebuild 时自动将配置拷贝到 nix store 并设置好权限。</p>
-</div>
-</div>
-<h3 id="daed"><a href="https://github.com/daeuniverse/daed" class="ap-external">daed</a></h3>
-<p>daed 是网页面板的开源代理软件，<a href="#dae">dae</a> 的前端，而 dae 基于 eBPF<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>，仅支持 linux。由于比较新，目前使用的人不多。</p>
-<ol>
+</div><h3 id="daed"><a href="https://github.com/daeuniverse/daed" class="ap-external">daed</a></h3><p>daed 是网页面板的开源代理软件，<a href="#dae">dae</a> 的前端，而 dae 基于 eBPF<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>，仅支持 linux。由于比较新，目前使用的人不多。</p><ol>
 <li>安装：<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> pacman</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -S</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> daed</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> --now</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> daed</span><span style="color:#6A737D;--shiki-dark:#6A737D"> # 启动，并设为开机自启</span></span></code></pre></div>
-</li>
-<li>浏览器进入 <code>localhost:2023</code></li>
-<li>一路确定。例如数据库后端使用默认值：<code>http://127.0.0.1:2023/graphql</code>，首次登录会要求设账号密码，设一个即可。</li>
-<li>导入节点信息，拖拽到左侧 proxy 即可。</li>
-</ol>
-<p>踩坑：</p>
-<ol>
-<li>daed 默认使用透明代理，没有 socks/http 端口。如果有设置 <code>ALL_PROXY</code> 等系统代理变量记得取消；firefox 需要在代理设置中设为 <em>自动探测网络环境</em>。</li>
-<li><s>务必将 <em>配置 - global - 连接选项 - 拨号模式</em> 设为 <em>ip</em>（默认值）。否则可能无法使用 chatgpt。</s> 经测试，非此问题。</li>
-</ol>
-<p>需要写规则可以参考<a href="https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522" class="ap-external">这里</a>。</p>
-<p>软件数据存储在 <code>/etc/daed/wing.db</code>（sqlite 数据库），如果需要备份、改账号密码，需要先给 rw 权限，然后用数据库软件更改。</p>
-<p>daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 <code>journalctl -eu daed</code> 查看其日志，获取信息。</p>
-<h2 id="android-modules">Android Modules</h2>
-<p>如果你使用 Android 设备且已 root，也可以尝试一些 Modules。Modules 相比于 APP 的好处是支持透明代理、自动后台运行、可代理热点/USB 网络流量，不过本身有一层 root 的门槛在，应用范围更窄。</p>
-<p>如果你已经有 root 设备且想尝试，可以看看：</p>
-<ul>
+</li><li>浏览器进入 <code>localhost:2023</code></li><li>一路确定。例如数据库后端使用默认值：<code>http://127.0.0.1:2023/graphql</code>，首次登录会要求设账号密码，设一个即可。</li><li>导入节点信息，拖拽到左侧 proxy 即可。</li>
+</ol><p>踩坑：</p><ol>
+<li>daed 默认使用透明代理，没有 socks/http 端口。如果有设置 <code>ALL_PROXY</code> 等系统代理变量记得取消；firefox 需要在代理设置中设为 <em>自动探测网络环境</em>。</li><li><s>务必将 <em>配置 - global - 连接选项 - 拨号模式</em> 设为 <em>ip</em>（默认值）。否则可能无法使用 chatgpt。</s> 经测试，非此问题。</li>
+</ol><p>需要写规则可以参考<a href="https://github.com/daeuniverse/dae/discussions/245#discussioncomment-6575522" class="ap-external">这里</a>。</p><p>软件数据存储在 <code>/etc/daed/wing.db</code>（sqlite 数据库），如果需要备份、改账号密码，需要先给 rw 权限，然后用数据库软件更改。</p><p>daed 的一个缺点是无法主动测试节点连通性。但是 daed 默认每 30s 会测试一次节点延迟，你可以 <code>journalctl -eu daed</code> 查看其日志，获取信息。</p><h2 id="android-modules">Android Modules</h2><p>如果你使用 Android 设备且已 root，也可以尝试一些 Modules。Modules 相比于 APP 的好处是支持透明代理、自动后台运行、可代理热点/USB 网络流量，不过本身有一层 root 的门槛在，应用范围更窄。</p><p>如果你已经有 root 设备且想尝试，可以看看：</p><ul>
 <li><a href="https://github.com/Fanju6/NetProxy-Magisk" class="ap-external">NetProxy-Magisk</a>，基于 Xray。
 <ul>
 <li>目前不支持 hysteria 协议。</li>
 </ul>
-</li>
-<li>神秘模块（闭源）：基于 sing-box 的，比较麻烦。</li>
-</ul>
-<h2 id="external">external</h2>
-<ol>
+</li><li>神秘模块（闭源）：基于 sing-box 的，比较麻烦。</li>
+</ul><h2 id="external">external</h2><ol>
 <li><a href="https://docs.google.com/spreadsheets/d/1UaWU6nNho7edBNjNqC8dfGXLlW0-cm84MM7sH6Gp7UE/edit?pli=1&amp;gid=1965963111#gid=1965963111" class="ap-external">dae 与其他客户端的性能 benchmark</a>。可以看出 dae 的直连性能远超其他实现。</li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
+</ol><hr class="footnotes-sep"><section class="footnotes">
 <ol class="footnotes-list">
 <li id="footnote1" class="footnote-item"><p><a href="https://ebpf.io/what-is-ebpf/" class="ap-external">What is eBPF?</a> <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
-</section>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/articles/proxy/proxy_software","locale":"root","title":"代理客户端","headings":[{"level":1,"text":"代理客户端","slug":"代理客户端"},{"level":2,"text":"基础概念：内核与前端","slug":"基础概念-内核与前端"},{"level":2,"text":"Clash 系","slug":"clash-系"},{"level":3,"text":"clash-verge-rev","slug":"clash-verge-rev"},{"level":3,"text":"Clash Verge","slug":"clash-verge"},{"level":4,"text":"简易教程","slug":"简易教程"},{"level":3,"text":"Clash for Windows","slug":"clash-for-windows"},{"level":4,"text":"简介","slug":"简介"},{"level":4,"text":"下载地址","slug":"下载地址"},{"level":4,"text":"优势","slug":"优势"},{"level":4,"text":"简易配置教程 v0.19.16","slug":"简易配置教程-v0-19-16"},{"level":4,"text":"一些提示","slug":"一些提示"},{"level":3,"text":"Clash For Android","slug":"clash-for-android"},{"level":3,"text":"其他","slug":"其他"},{"level":2,"text":"V2ray 系","slug":"v2ray-系"},{"level":3,"text":"V2rayN","slug":"v2rayn"},{"level":4,"text":"路由规则编写","slug":"路由规则编写"},{"level":4,"text":"注意事项","slug":"注意事项"},{"level":3,"text":"v2rayA","slug":"v2raya"},{"level":3,"text":"V2rayNG","slug":"v2rayng"},{"level":3,"text":"NekoRay","slug":"nekoray"},{"level":3,"text":"qv2ray","slug":"qv2ray"},{"level":2,"text":"sing-box 系","slug":"sing-box-系"},{"level":2,"text":"dae 系","slug":"dae-系"},{"level":3,"text":"dae","slug":"dae"},{"level":4,"text":"前言","slug":"前言"},{"level":4,"text":"安装","slug":"安装"},{"level":4,"text":"改进","slug":"改进"},{"level":3,"text":"daed","slug":"daed"},{"level":2,"text":"Android Modules","slug":"android-modules"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-11-25","category":["推荐","教程"],"tag":["桌面端","移动端","网络"],"icon":"solid/circle-check"},"createdAt":"2023-11-25T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":12,"excerpt":"代理客户端 我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。 虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。 我还做了一个 实验性质的 dae \u003c-> sing-box 的配置转换器 ，以尽量避免…"},"related":[{"route":"/articles/linux/nix","title":"安装、配置与使用（NixOS 篇）","refs":3,"links":[{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/articles/linux/install_and_config","title":"安装、配置与使用（Arch 篇）","refs":2,"links":[{"route":"/articles/linux/nix","refs":1}]},{"route":"/articles/proxy/hysteria","title":"Hysteria","refs":2,"links":[{"route":"/articles/proxy/","refs":2}]},{"route":"/articles/mobile/module_and_app","title":"模块与软件","refs":1},{"route":"/articles/proxy/","title":"代理","refs":1,"links":[{"route":"/articles/proxy/hysteria","refs":2},{"route":"/articles/proxy/trojan","refs":1}]},{"route":"/articles/proxy/trojan","title":"Trojan","refs":1,"links":[{"route":"/articles/proxy/","refs":1}]},{"route":"/gossip/pc_hardware","title":"装机","refs":1}]}</script>
-<script type="module" src="../../assets/entry-DOpyHYQg.js"></script>
+</section><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/articles/proxy/proxy_software","locale":"root","title":"代理客户端","headings":[{"level":1,"text":"代理客户端","slug":"代理客户端"},{"level":2,"text":"基础概念：内核与前端","slug":"基础概念-内核与前端"},{"level":2,"text":"Clash 系","slug":"clash-系"},{"level":3,"text":"clash-verge-rev","slug":"clash-verge-rev"},{"level":3,"text":"Clash Verge","slug":"clash-verge"},{"level":4,"text":"简易教程","slug":"简易教程"},{"level":3,"text":"Clash for Windows","slug":"clash-for-windows"},{"level":4,"text":"简介","slug":"简介"},{"level":4,"text":"下载地址","slug":"下载地址"},{"level":4,"text":"优势","slug":"优势"},{"level":4,"text":"简易配置教程 v0.19.16","slug":"简易配置教程-v0-19-16"},{"level":4,"text":"一些提示","slug":"一些提示"},{"level":3,"text":"Clash For Android","slug":"clash-for-android"},{"level":3,"text":"其他","slug":"其他"},{"level":2,"text":"V2ray 系","slug":"v2ray-系"},{"level":3,"text":"V2rayN","slug":"v2rayn"},{"level":4,"text":"路由规则编写","slug":"路由规则编写"},{"level":4,"text":"注意事项","slug":"注意事项"},{"level":3,"text":"v2rayA","slug":"v2raya"},{"level":3,"text":"V2rayNG","slug":"v2rayng"},{"level":3,"text":"NekoRay","slug":"nekoray"},{"level":3,"text":"qv2ray","slug":"qv2ray"},{"level":2,"text":"sing-box 系","slug":"sing-box-系"},{"level":2,"text":"dae 系","slug":"dae-系"},{"level":3,"text":"dae","slug":"dae"},{"level":4,"text":"前言","slug":"前言"},{"level":4,"text":"安装","slug":"安装"},{"level":4,"text":"改进","slug":"改进"},{"level":3,"text":"daed","slug":"daed"},{"level":2,"text":"Android Modules","slug":"android-modules"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-11-25","category":["推荐","教程"],"tag":["桌面端","移动端","网络"],"icon":"solid/circle-check"},"createdAt":"2023-11-25T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":12,"excerpt":"代理客户端 我的选择：我在 Windows 上使用 V2rayN，在 Linux 上使用 dae，在 Android 上使用 NekoBox。 虽然我也很想统一，很想只维护一套配置，但是在各种各样的权衡之下，也只能形成现在这种局面。 我还做了一个 实验性质的 dae \u003c-> sing-box 的配置转换器 ，以尽量避免…"},"related":[{"route":"/articles/linux/nix","title":"安装、配置与使用（NixOS 篇）","refs":3,"links":[{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/articles/linux/install_and_config","title":"安装、配置与使用（Arch 篇）","refs":2,"links":[{"route":"/articles/linux/nix","refs":1}]},{"route":"/articles/proxy/hysteria","title":"Hysteria","refs":2,"links":[{"route":"/articles/proxy/","refs":2}]},{"route":"/articles/mobile/module_and_app","title":"模块与软件","refs":1},{"route":"/articles/proxy/","title":"代理","refs":1,"links":[{"route":"/articles/proxy/hysteria","refs":2},{"route":"/articles/proxy/trojan","refs":1}]},{"route":"/articles/proxy/trojan","title":"Trojan","refs":1,"links":[{"route":"/articles/proxy/","refs":1}]},{"route":"/gossip/pc_hardware","title":"装机","refs":1}]}</script>
+<script type="module" src="../../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

@@ -1,184 +1,73 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>VSCode | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…">
-<link rel="canonical" href="https://absx.pages.dev/coding/vscode">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="VSCode | 绝对值_x 的博客">
-<meta property="og:description" content="VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…">
-<meta property="og:url" content="https://absx.pages.dev/coding/vscode">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"VSCode","url":"https://absx.pages.dev/coding/vscode","mainEntityOfPage":"https://absx.pages.dev/coding/vscode","description":"VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-08-31T00:00:00.000Z","dateModified":"2026-10-20T23:12:44+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>VSCode | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…"><link rel="canonical" href="https://absx.pages.dev/coding/vscode"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="VSCode | 绝对值_x 的博客"><meta property="og:description" content="VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…"><meta property="og:url" content="https://absx.pages.dev/coding/vscode"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"VSCode","url":"https://absx.pages.dev/coding/vscode","mainEntityOfPage":"https://absx.pages.dev/coding/vscode","description":"VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-08-31T00:00:00.000Z","dateModified":"2026-11-09T03:35:41+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="vscode">VSCode</h1>
-<div class="subtitle">——neovim 死里配，不如 vscode 同步一根毛</div>
-<p>我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。</p>
-<p>在 linux 我曾尝试转向 neovim，但是数日后即放弃。</p>
-<p>不过 vscode 也绝非完美。前往 <a href="../gossip/fuckxxx#vscode-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">xxx 有多难用</a>，看我狂喷 vscode。</p>
-<h2 id="使用">使用</h2>
-<p>在 <em>设置</em> 页右上角可以 <code>打开设置（json）</code>，我经常需要直接编辑配置文件。<a href="https://github.com/lxl66566/backup/blob/main/config/vscode/settings.json" class="ap-external">这里</a>是我的全局配置文件。</p>
-<h3 id="关闭-copilot">关闭 copilot</h3>
-<p>微软的吃相实在是太难看了，之前也因为 copilot 闹出过不少丑闻 <sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>，还把好多人逼去了 zed（跳进了另一坨粪坑）。还好 copilot 的功能目前还是可以关闭的。</p>
-<p>在使用 vscode 之前，请按下 <code>Ctrl + ,</code>，搜索 copilot，然后打开 <code>Chat: Disable AI Features</code>。</p>
-<h3 id="快捷键">快捷键</h3>
-<p>这里是我比较常用的快捷键。</p>
-<ul>
-<li><code>Ctrl + ,</code>：打开设置</li>
-<li><code>Ctrl + `</code>：打开终端</li>
-<li><code>Ctrl + r</code>（资源管理器窗口）：选择打开最近项目</li>
-<li><code>Ctrl + p</code> / <code>Ctrl + e</code>：选择打开文件</li>
-<li><code>Ctrl + Shift + p</code>：操作面板</li>
-<li><code>Alt + 鼠标</code>：多光标模式，最重要的快捷键之一，可以和 vim 扩展共用，可以大幅提升效率</li>
-<li><code>Alt + ←</code> 回到跳转前位置，在没有鼠标侧键的时候可以用。</li>
-</ul>
-<p>你可以在<a href="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/KeyboardReferenceSheet.png" class="ap-external">这里</a>看到快捷键 cheetsheet。可以看出有很多从 vim 来的常见操作；并且在 vim 插件下这里的一些快捷键也会改变。</p>
-<p>还有，许多编辑器用 <code>Ctrl + d</code> 克隆当前行，但是 vscode 默认不用这个键绑定。所以可以去设置里把这个动作改为 <code>Ctrl + d</code>。(<a href="https://stackoverflow.com/questions/70120201" class="ap-external">ref</a>)</p>
-<h2 id="插件">插件</h2>
-<p>编程需要有好用的工具，编程语言的流行离不开好用的 linter, highlighter, formatter。</p>
-<p>插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里放出我使用的插件（可能有过时的选项）：</p>
-<ul>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="vscode">VSCode</h1><div class="subtitle">——neovim 死里配，不如 vscode 同步一根毛</div><p>我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。</p><p>在 linux 我曾尝试转向 neovim，但是数日后即放弃。</p><p>不过 vscode 也绝非完美。前往 <a href="../gossip/fuckxxx#vscode-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">xxx 有多难用</a>，看我狂喷 vscode。</p><h2 id="使用">使用</h2><p>在 <em>设置</em> 页右上角可以 <code>打开设置（json）</code>，我经常需要直接编辑配置文件。<a href="https://github.com/lxl66566/backup/blob/main/config/vscode/settings.json" class="ap-external">这里</a>是我的全局配置文件。</p><h3 id="关闭-copilot">关闭 copilot</h3><p>微软的吃相实在是太难看了，之前也因为 copilot 闹出过不少丑闻 <sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>，还把好多人逼去了 zed（跳进了另一坨粪坑）。还好 copilot 的功能目前还是可以关闭的。</p><p>在使用 vscode 之前，请按下 <code>Ctrl + ,</code>，搜索 copilot，然后打开 <code>Chat: Disable AI Features</code>。</p><h3 id="快捷键">快捷键</h3><p>这里是我比较常用的快捷键。</p><ul>
+<li><code>Ctrl + ,</code>：打开设置</li><li><code>Ctrl + `</code>：打开终端</li><li><code>Ctrl + r</code>（资源管理器窗口）：选择打开最近项目</li><li><code>Ctrl + p</code> / <code>Ctrl + e</code>：选择打开文件</li><li><code>Ctrl + Shift + p</code>：操作面板</li><li><code>Alt + 鼠标</code>：多光标模式，最重要的快捷键之一，可以和 vim 扩展共用，可以大幅提升效率</li><li><code>Alt + ←</code> 回到跳转前位置，在没有鼠标侧键的时候可以用。</li>
+</ul><p>你可以在<a href="https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/KeyboardReferenceSheet.png" class="ap-external">这里</a>看到快捷键 cheetsheet。可以看出有很多从 vim 来的常见操作；并且在 vim 插件下这里的一些快捷键也会改变。</p><p>还有，许多编辑器用 <code>Ctrl + d</code> 克隆当前行，但是 vscode 默认不用这个键绑定。所以可以去设置里把这个动作改为 <code>Ctrl + d</code>。(<a href="https://stackoverflow.com/questions/70120201" class="ap-external">ref</a>)</p><h2 id="插件">插件</h2><p>编程需要有好用的工具，编程语言的流行离不开好用的 linter, highlighter, formatter。</p><p>插件系统是 vscode 的精髓。正由于活跃的插件系统，vscode 才能如此强大。这里放出我使用的插件（可能有过时的选项）：</p><ul>
 <li>通用：
 <ul>
-<li><a href="#ai-%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8">AI 代码补全</a></li>
-<li>更好的警告：<em>Error Lens</em>
+<li><a href="#ai-%E4%BB%A3%E7%A0%81%E8%A1%A5%E5%85%A8">AI 代码补全</a></li><li>更好的警告：<em>Error Lens</em>
 <ul>
 <li>不可否认 <em>SonarLint</em> 很强，但是 java 写的，占用空间和 RAM 都很大。因此在使用了几年 <em>SonarLint</em> 以后我选择分语言使用不同 linter。</li>
 </ul>
-</li>
-<li>轻量级 Git 可视化：<em>Git Graph</em> + <em>Git Tree Compare</em>，详见 <a href="#git">Git</a></li>
-<li>代码格式化：<em>Prettier - Code formatter</em>（主要用于 markdown</li>
-<li>编辑器：<em>Vim</em>
+</li><li>轻量级 Git 可视化：<em>Git Graph</em> + <em>Git Tree Compare</em>，详见 <a href="#git">Git</a></li><li>代码格式化：<em>Prettier - Code formatter</em>（主要用于 markdown</li><li>编辑器：<em>Vim</em>
 <ul>
 <li><a href="https://github.com/microsoft/vscode/issues/75627#issuecomment-1114048271" class="ap-external">添加如下配置</a>可以降低 vim 插件的延迟。</li>
 </ul>
-</li>
-<li>跨语言依赖更新：<em>Dependi</em></li>
-<li>Ansi Colors：用来看带有颜色符号的日志的，ctrl+shift+p 然后点 <em>ANSI Text: Open Preview</em> 即可。</li>
+</li><li>跨语言依赖更新：<em>Dependi</em></li><li>Ansi Colors：用来看带有颜色符号的日志的，ctrl+shift+p 然后点 <em>ANSI Text: Open Preview</em> 即可。</li>
 </ul>
-</li>
-<li>markdown：<em>Markdown Preview Enhanced</em></li>
-<li>前端：<em>Oxc</em>
+</li><li>markdown：<em>Markdown Preview Enhanced</em></li><li>前端：<em>Oxc</em>
 <ul>
 <li>Vue: <em>Vue - Official</em></li>
 </ul>
-</li>
-<li>C++：<em>Clang-Tidy</em>，<em>Clang-Format</em>，详见<a href="Cpp#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">开发环境</a></li>
-<li>python：<em>Pylance</em>，<em>Ruff</em>，详见 <a href="python#vscode-%E6%89%A9%E5%B1%95">Python</a></li>
-<li>rust：<em>cargo-crate-completer</em>，<em>Even Better TOML</em>，<em>rust-analyzer</em>，<em>Flowistry</em></li>
-<li>java：<em>Language Support for Java(TM) by Red Hat</em>，<em>Test Runner for Java</em></li>
-<li><s>kotlin：<em>Kotlin Language</em>，<em>vscode-runner</em></s> 不要用 vscode 写 kotlin</li>
-<li>verilog：<em>verilog-formatter</em>（有点记不太清了）</li>
-<li>octave：<em>Octave</em>，<em>Octave Formatter</em>，详见 <a href="octave#ide">octave</a></li>
-<li>Typst：<em>Typst LSP</em></li>
-<li>数据库：<em>SQLite Viewer</em></li>
-<li>协同：<em>Live Share</em></li>
-<li>其他：<em>Chinese (Simplified)...</em>，<em>CodeSnap</em></li>
-</ul>
-<p>这些是我拉黑的插件，发出来给大家避雷：</p>
-<ul>
-<li>Python Environments：有非常严重的 bug，在某些 shell 上启动非常慢，并且会擅自往你的终端发 <code>Ctrl + C</code> (<a href="https://t.me/withabsolutex/2709" class="ap-external">ref</a>)</li>
-<li>Flowistry：因为 rustc_private 访问内部结构的关系，Flowistry 会静默给你下载特定的一个 rust toolchain 包括它自己的 binary，我不喜欢这个设计。而且下载不做重试。</li>
-<li>Even Better Comments：启动卡死、format on save 卡死</li>
-<li>Even Better TOML：Rust toml 的一个 LSP，taplo 的包装。taplo 其实并不好用，我已经转向 tombi 了。并且这个扩展也有些逻辑问题，经常会在 format on save 卡死。</li>
-</ul>
-<h3 id="插件管理">插件管理</h3>
-<ul>
+</li><li>C++：<em>Clang-Tidy</em>，<em>Clang-Format</em>，详见<a href="Cpp#%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83">开发环境</a></li><li>python：<em>Pylance</em>，<em>Ruff</em>，详见 <a href="python#vscode">Python</a></li><li>rust：<em>cargo-crate-completer</em>，<em>Even Better TOML</em>，<em>rust-analyzer</em>，<em>Flowistry</em></li><li>java：<em>Language Support for Java(TM) by Red Hat</em>，<em>Test Runner for Java</em></li><li><s>kotlin：<em>Kotlin Language</em>，<em>vscode-runner</em></s> 不要用 vscode 写 kotlin</li><li>verilog：<em>verilog-formatter</em>（有点记不太清了）</li><li>octave：<em>Octave</em>，<em>Octave Formatter</em>，详见 <a href="octave#ide">octave</a></li><li>Typst：<em>Typst LSP</em></li><li>数据库：<em>SQLite Viewer</em></li><li>协同：<em>Live Share</em></li><li>其他：<em>Chinese (Simplified)...</em>，<em>CodeSnap</em></li>
+</ul><p>这些是我拉黑的插件，发出来给大家避雷：</p><ul>
+<li>Python Environments：有非常严重的 bug，在某些 shell 上启动非常慢，并且会擅自往你的终端发 <code>Ctrl + C</code> (<a href="https://t.me/withabsolutex/2709" class="ap-external">ref</a>)</li><li>Flowistry：因为 rustc_private 访问内部结构的关系，Flowistry 会静默给你下载特定的一个 rust toolchain 包括它自己的 binary，我不喜欢这个设计。而且下载不做重试。</li><li>Even Better Comments：启动卡死、format on save 卡死</li><li>Even Better TOML：Rust toml 的一个 LSP，taplo 的包装。taplo 其实并不好用，我已经转向 tombi 了。并且这个扩展也有些逻辑问题，经常会在 format on save 卡死。</li>
+</ul><h3 id="插件管理">插件管理</h3><ul>
 <li>分析：当插件数量多了以后，每次启动都耗时很久，甚至卡在某个插件的启动上。此时需要 <code>Ctrl + Shift + p</code> 打开操作面板，进入 <em>Developer: Show Running Extensions</em>，可以看到插件状态与启动用时。
 <ul>
 <li>进入 <em>Developer: Open Process Explorer</em> 可以查看每个插件的内存占用。</li>
 </ul>
-</li>
-<li>禁用内置插件：虽然<a href="https://github.com/microsoft/vscode/issues/40239" class="ap-external">无法在 config 里禁用内置插件</a>，但是我们可以在扩展里搜索 <code>@Builtin</code>，然后禁用那些用不到的，可以减小 vscode 内存占用。(<a href="https://github.com/microsoft/vscode/issues/58600#issuecomment-420992831" class="ap-external">ref</a>)</li>
-</ul>
-<h3 id="ai-代码补全">AI 代码补全</h3>
-<p>AI 代码补全也只是 2025-2026 年初的昙花一现。2026 末期已经很少手写代码了，所以 AI 代码补全也失去了其用武之地。</p>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>AI 相关信息推荐早就过时了，这里没啥看的价值</summary>
-<p>目前我正在使用 supermaven。免费、够用。</p>
-<p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 <code>%TEMP%</code> 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p>
-<p>用久了感觉 CodeGeeX 不够智能，又尝试其他插件。</p>
-<p>非国产：</p>
-<ul>
+</li><li>禁用内置插件：虽然<a href="https://github.com/microsoft/vscode/issues/40239" class="ap-external">无法在 config 里禁用内置插件</a>，但是我们可以在扩展里搜索 <code>@Builtin</code>，然后禁用那些用不到的，可以减小 vscode 内存占用。(<a href="https://github.com/microsoft/vscode/issues/58600#issuecomment-420992831" class="ap-external">ref</a>)</li>
+</ul><h3 id="ai-代码补全">AI 代码补全</h3><p>AI 代码补全也只是 2025-2026 年初的昙花一现。2026 末期已经很少手写代码了，所以 AI 代码补全也失去了其用武之地。</p><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>AI 相关信息推荐早就过时了，这里没啥看的价值</summary><p>目前我正在使用 supermaven。免费、够用。</p><p>我最早使用的是 Tabnine，后面由于一些契机换了 Codeium；然而它在 RAMDisk 上工作得很差：由于其在 windows 上使用 <code>%TEMP%</code> 作为存储目录，每天首次打开 vscode 会加载失败，重新下载数据。于是 20230918 尝试换用 CodeGeeX。这个模型比较小，补全速度快；而且最主要是由于国内服务器，免去了科学上网带来的大量延迟。</p><p>用久了感觉 CodeGeeX 不够智能，又尝试其他插件。</p><p>非国产：</p><ul>
 <li><a href="https://windsurf.com/" class="ap-external">windsurf（原 Codeium）</a>：国外在线服务，我转 cursor 前最常用。
 <ul>
 <li>下载会显示进度和大小，好评</li>
 </ul>
-</li>
-<li>[Cline]：需要自己提供 API KEY 或本地跑模型。它支持 Gemini 2.5 支持得很快，因此我用它做 Chat/MCP agent。</li>
-<li><a href="https://www.tabnine.com/" class="ap-external">Tabnine</a>：补全较弱（<em>Short code completions (2 to 3 words)</em>）</li>
-<li><a href="https://supermaven.com/" class="ap-external">supermaven</a>：免费补全，联想能力不错，但是 vscode 插件目前闭源。
+</li><li>[Cline]：需要自己提供 API KEY 或本地跑模型。它支持 Gemini 2.5 支持得很快，因此我用它做 Chat/MCP agent。</li><li><a href="https://www.tabnine.com/" class="ap-external">Tabnine</a>：补全较弱（<em>Short code completions (2 to 3 words)</em>）</li><li><a href="https://supermaven.com/" class="ap-external">supermaven</a>：免费补全，联想能力不错，但是 vscode 插件目前闭源。
 <ul>
 <li>最近的可用性下降了挺多的。而且开启后对于中文输入有一些延迟影响，推荐给 markdown 等经常使用中文的文件类型禁用。</li>
 </ul>
-</li>
-<li><a href="https://github.com/TabbyML/tabby" class="ap-external">tabby</a>：本地模型，但是支持的语言有限</li>
-<li><a href="https://www.continue.dev/" class="ap-external">Continue</a>：需要自己提供 API KEY 或本地跑模型。支持得太慢，一个月后都没法用 Gemini 2.5，直接抛弃。</li>
-<li><a href="https://docs.codegpt.co/" class="ap-external">Code GPT</a>：需要自己提供 API KEY 或本地跑模型，不考虑</li>
-<li><a href="https://github.com/sourcegraph/cody" class="ap-external">Cody</a>：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。</li>
-</ul>
-<p>国产：</p>
-<ul>
+</li><li><a href="https://github.com/TabbyML/tabby" class="ap-external">tabby</a>：本地模型，但是支持的语言有限</li><li><a href="https://www.continue.dev/" class="ap-external">Continue</a>：需要自己提供 API KEY 或本地跑模型。支持得太慢，一个月后都没法用 Gemini 2.5，直接抛弃。</li><li><a href="https://docs.codegpt.co/" class="ap-external">Code GPT</a>：需要自己提供 API KEY 或本地跑模型，不考虑</li><li><a href="https://github.com/sourcegraph/cody" class="ap-external">Cody</a>：官网进不去，插件装了，下载其他东西时 503。评价是垃圾。</li>
+</ul><p>国产：</p><ul>
 <li><a href="https://code.fittentech.com/" class="ap-external">fitten code</a>：国产，水平跟其他国产模型都差不多，不太聪明。
 <ul>
 <li>一个很大的缺点是不读工作区 <code>.vscode</code> 配置，也就是无法在某些项目（隐私项目如日记等）里禁用。</li>
 </ul>
-</li>
-<li><a href="https://www.marscode.com/" class="ap-external">MarsCode</a>：一直报 Network unstable，根本不可用，捞。</li>
-<li><a href="https://codegeex.cn/" class="ap-external">CodeGeeX</a>：国产开源模型，响应速度快
+</li><li><a href="https://www.marscode.com/" class="ap-external">MarsCode</a>：一直报 Network unstable，根本不可用，捞。</li><li><a href="https://codegeex.cn/" class="ap-external">CodeGeeX</a>：国产开源模型，响应速度快
 <ul>
-<li>20231212 开始需要绑定手机号</li>
-<li>比较扰民，会入侵 <em>快速修复</em></li>
+<li>20231212 开始需要绑定手机号</li><li>比较扰民，会入侵 <em>快速修复</em></li>
 </ul>
-</li>
-<li><a href="https://tongyi.aliyun.com/lingma" class="ap-external">通义灵码</a>：阿里的，用起来还行，略逊于 Codeium 的水平。
+</li><li><a href="https://tongyi.aliyun.com/lingma" class="ap-external">通义灵码</a>：阿里的，用起来还行，略逊于 Codeium 的水平。
 <ul>
-<li>这货也挺扰民的，每个函数间都会被插入一个通义的标志。插的位置还烂，rust 如果多行注释的话就会插在注释中间。。</li>
-<li>20240914 更新，出现双保存现象，即一次 <code>Ctrl + S</code> 后，文件仍然处于未保存状态。对照实验发现是通义灵码的问题。</li>
+<li>这货也挺扰民的，每个函数间都会被插入一个通义的标志。插的位置还烂，rust 如果多行注释的话就会插在注释中间。。</li><li>20240914 更新，出现双保存现象，即一次 <code>Ctrl + S</code> 后，文件仍然处于未保存状态。对照实验发现是通义灵码的问题。</li>
 </ul>
 </li>
+</ul><p>关于 API：</p><ul>
+<li>chat api，gemini 一直都是免费的</li><li>code 补全 API 的话，deepseek api 比较便宜</li>
 </ul>
-<p>关于 API：</p>
-<ul>
-<li>chat api，gemini 一直都是免费的</li>
-<li>code 补全 API 的话，deepseek api 比较便宜</li>
-</ul>
-</details>
-<h2 id="feature">feature</h2>
-<p>vscode 的特色：</p>
-<ul>
-<li>前文的插件系统不再赘述</li>
-<li><strong>设置同步</strong>，可以瞬间在其他平台搭好最适合自己的开发环境。（这也是小标题的由来）</li>
-<li><strong>工作区</strong>，避免污染</li>
-<li>集成全文搜索（ripgrep）；linux 下需要自己 <code>find</code> / <code>grep</code></li>
-<li>集成 git 图形化界面，虽说我不用且功能不多，但是对不会用 git 的新手非常友好</li>
-<li>多光标支持</li>
-</ul>
-<h2 id="工作区">工作区</h2>
-<p>这个功能正常来说用不到，但是只要上班了就知道有多好用。。</p>
-<p>公司可能强制要求安装一些编辑器插件，用于提交签名等。但是我不希望这个插件在我的其他项目中激活，避免扫描到一些不好的东西，这时候就可以用 vscode 的工作区机制隔离工作环境，让该插件只能在工作环境使用。</p>
-<p>左下角点击 <em>设置 - 配置文件</em>，按照提示操作即可。</p>
-<h2 id="主题">主题</h2>
-<p>得益于 electron，vscode 可以很容易地更换主题。<code>Ctrl + Shift + P</code> 输入 theme 选择即可。</p>
-<p>我个人喜欢用的是 <em>Monokai Dimmed</em>。我也曾试过一些其他主题，Nord 感觉对眼睛还是不够友好。</p>
-<p>如果你喜欢花哨一些、对比度更低一些的，可以试试 catppuccin mocha：</p>
-<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</details><h2 id="feature">feature</h2><p>vscode 的特色：</p><ul>
+<li>前文的插件系统不再赘述</li><li><strong>设置同步</strong>，可以瞬间在其他平台搭好最适合自己的开发环境。（这也是小标题的由来）</li><li><strong>工作区</strong>，避免污染</li><li>集成全文搜索（ripgrep）；linux 下需要自己 <code>find</code> / <code>grep</code></li><li>集成 git 图形化界面，虽说我不用且功能不多，但是对不会用 git 的新手非常友好</li><li>多光标支持</li>
+</ul><h2 id="工作区">工作区</h2><p>这个功能正常来说用不到，但是只要上班了就知道有多好用。。</p><p>公司可能强制要求安装一些编辑器插件，用于提交签名等。但是我不希望这个插件在我的其他项目中激活，避免扫描到一些不好的东西，这时候就可以用 vscode 的工作区机制隔离工作环境，让该插件只能在工作环境使用。</p><p>左下角点击 <em>设置 - 配置文件</em>，按照提示操作即可。</p><h2 id="主题">主题</h2><p>得益于 electron，vscode 可以很容易地更换主题。<code>Ctrl + Shift + P</code> 输入 theme 选择即可。</p><p>我个人喜欢用的是 <em>Monokai Dimmed</em>。我也曾试过一些其他主题，Nord 感觉对眼睛还是不够友好。</p><p>如果你喜欢花哨一些、对比度更低一些的，可以试试 catppuccin mocha：</p><div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "workbench.colorTheme"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Catppuccin Mocha"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "catppuccin.accentColor"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"mauve"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
@@ -186,21 +75,9 @@
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "terminal.integrated.minimumContrastRatio"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "window.titleBarStyle"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"custom"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "workbench.iconTheme"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"catppuccin-mocha"</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<h2 id="正则匹配">正则匹配</h2>
-<p>vscode 的正则匹配<a href="https://github.com/microsoft/vscode/issues/39404#issuecomment-348710460" class="ap-external">使用两个不同的引擎</a>，因此可能无法使用某些正则语法。</p>
-<p>要匹配所有中文，请使用 <code>[一-龥]</code>。(<a href="https://superuser.com/questions/983441/visual-studio-search-through-code-for-chinese-text" class="ap-external">ref</a>)</p>
-<h2 id="协同编辑">协同编辑</h2>
-<p>有时候需要帮别人处理代码时，协同编辑是一个非常不错的选择。</p>
-<ol>
-<li>安装 <em>Live Share</em></li>
-<li>发送链接给对方</li>
-<li>同意连接请求</li>
-<li>给对方权限，例如读写，或终端执行代码</li>
-</ol>
-<h2 id="git">Git</h2>
-<p>我的一些设置，可能过时。</p>
-<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><h2 id="正则匹配">正则匹配</h2><p>vscode 的正则匹配<a href="https://github.com/microsoft/vscode/issues/39404#issuecomment-348710460" class="ap-external">使用两个不同的引擎</a>，因此可能无法使用某些正则语法。</p><p>要匹配所有中文，请使用 <code>[一-龥]</code>。(<a href="https://superuser.com/questions/983441/visual-studio-search-through-code-for-chinese-text" class="ap-external">ref</a>)</p><h2 id="协同编辑">协同编辑</h2><p>有时候需要帮别人处理代码时，协同编辑是一个非常不错的选择。</p><ol>
+<li>安装 <em>Live Share</em></li><li>发送链接给对方</li><li>同意连接请求</li><li>给对方权限，例如读写，或终端执行代码</li>
+</ol><h2 id="git">Git</h2><p>我的一些设置，可能过时。</p><div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "git-graph.date.type"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Commit Date"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "git.addAICoAuthor"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"off"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
@@ -209,56 +86,31 @@
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "git.confirmSync"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "git.enableSmartCommit"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "git.openRepositoryInParentFolders"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"never"</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<p>官方的 Git 和 gitlens 都不好用（gitlens 一堆功能加上狗屎 AI 营销我根本不知道怎么用）；我比较喜欢轻量的 <em>Git Graph</em>，看起来也很直观。点击查看该提交的变更；选中一个 commit，然后按住 ctrl 单击另一个 commit，即可查看两个 commit 之间的 diff。</p>
-<p>但是 <em>Git Graph</em> 在复杂项目、review 代码的时候也有缺陷：（1）没法快速定位到 HEAD commit，如果 commit tree 复杂经常要找很久（2）对比两个 commit 必须首先找到这两个 commit，没法一键定位 merge-base（3）搜索功能不好用，因为默认有分页，初始展示 300 条、load more 一次展示 100 条，如果要找一个久远的 commit 简直是地狱。</p>
-<p>对于 review 代码，非常推荐使用 <em>Git Tree Compare</em>，它可以直接把当前工作区跟 merge-base 进行对比，不需要去手动寻找 merge-base；并且其 diff 是基于工作区的，也就是所有的 LSP、点击跳转等功能都可以直接在 diff 界面内完成，很方便。</p>
-<h2 id="小技巧">小技巧</h2>
-<ul>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><p>官方的 Git 和 gitlens 都不好用（gitlens 一堆功能加上狗屎 AI 营销我根本不知道怎么用）；我比较喜欢轻量的 <em>Git Graph</em>，看起来也很直观。点击查看该提交的变更；选中一个 commit，然后按住 ctrl 单击另一个 commit，即可查看两个 commit 之间的 diff。</p><p>但是 <em>Git Graph</em> 在复杂项目、review 代码的时候也有缺陷：（1）没法快速定位到 HEAD commit，如果 commit tree 复杂经常要找很久（2）对比两个 commit 必须首先找到这两个 commit，没法一键定位 merge-base（3）搜索功能不好用，因为默认有分页，初始展示 300 条、load more 一次展示 100 条，如果要找一个久远的 commit 简直是地狱。</p><p>对于 review 代码，非常推荐使用 <em>Git Tree Compare</em>，它可以直接把当前工作区跟 merge-base 进行对比，不需要去手动寻找 merge-base；并且其 diff 是基于工作区的，也就是所有的 LSP、点击跳转等功能都可以直接在 diff 界面内完成，很方便。</p><h2 id="小技巧">小技巧</h2><ul>
 <li>vscode 自带了许多好用的小工具，可以通过 Ctrl + Shift + p 打开菜单，搜索就能用。我推荐下面这些：
 <ul>
 <li><em>Sort Lines Ascending</em>：选中一段文本，然后按升序排列。在写一些 list 代码或文档时比较有用。</li>
 </ul>
-</li>
-<li>可以把某个关键字标成自己选择的颜色 (<a href="https://t.me/c/1264662201/584813" class="ap-external">ref</a>)<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>可以把某个关键字标成自己选择的颜色 (<a href="https://t.me/c/1264662201/584813" class="ap-external">ref</a>)<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"editor.semanticTokenColorCustomizations"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "rules"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: {</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    "*.unsafe:rust"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"#eb5046"</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">},</span></span></code></pre></div>
-</li>
-<li><code>Ctrl + Shift + C</code> 默认可以打开 external terminal（非集成终端）。在 AI 时代快速打开一个 external 然后进入 opencode 等 cli agent 是一个非常有用的技巧。（因为这种玩意有各种快捷键冲突所以无法运行在集成终端）
+</li><li><code>Ctrl + Shift + C</code> 默认可以打开 external terminal（非集成终端）。在 AI 时代快速打开一个 external 然后进入 opencode 等 cli agent 是一个非常有用的技巧。（因为这种玩意有各种快捷键冲突所以无法运行在集成终端）
 <ul>
 <li>但是在 WSL 里用不了。</li>
 </ul>
-</li>
-<li>vscode <a href="https://code.visualstudio.com/updates/v1_44#_synced-regions" class="ap-external">自带了 auto rename tag</a>（即对于 html 等，开始标签与闭合标签成对，则修改其中一个会自动修改另一个），因此不需要再下载 <em>Auto Rename Tag</em> 插件。</li>
-</ul>
-<h2 id="编写插件">编写插件</h2>
-<p>我写过两个 formatter，<a href="https://github.com/lxl66566/anyformatter-vscode" class="ap-external">anyformatter</a> 和 <a href="https://github.com/lxl66566/rime-formatter" class="ap-external">rime formatter</a>，有些照猫画虎的心得。</p>
-<h3 id="上传">上传</h3>
-<p>编写完插件以后需要发布到 market。</p>
-<p>我不爱用那些令牌啥的，因此我选择直接 <a href="https://marketplace.visualstudio.com/manage" class="ap-external">https://marketplace.visualstudio.com/manage</a>，然后把打出来的 .vsix 文件拖到这里即可。</p>
-<h2 id="遇到的问题">遇到的问题</h2>
-<h3 id="code-cli-command-执行失败">code cli command 执行失败</h3>
-<p>我运行 <code>code --list-extensions</code> 的时候不会列出所有插件，而是会打开一个新的 vscode 窗口。</p>
-<p>这是因为 code 指向了 <code>C:\xxx\Microsoft VS Code\Code.exe</code>。将 code 当成 cli 执行，必须执行 <code>C:\xxx\Microsoft VS Code\bin\code.cmd</code>，因此需要修改环境变量，把 <code>Microsoft VS Code</code> 改掉。</p>
-<p>参考 <a href="https://github.com/microsoft/vscode/issues/227186" class="ap-external">https://github.com/microsoft/vscode/issues/227186</a>。</p>
-<h2 id="external">external</h2>
-<ol>
+</li><li>vscode <a href="https://code.visualstudio.com/updates/v1_44#_synced-regions" class="ap-external">自带了 auto rename tag</a>（即对于 html 等，开始标签与闭合标签成对，则修改其中一个会自动修改另一个），因此不需要再下载 <em>Auto Rename Tag</em> 插件。</li>
+</ul><h2 id="编写插件">编写插件</h2><p>我写过两个 formatter，<a href="https://github.com/lxl66566/anyformatter-vscode" class="ap-external">anyformatter</a> 和 <a href="https://github.com/lxl66566/rime-formatter" class="ap-external">rime formatter</a>，有些照猫画虎的心得。</p><h3 id="上传">上传</h3><p>编写完插件以后需要发布到 market。</p><p>我不爱用那些令牌啥的，因此我选择直接 <a href="https://marketplace.visualstudio.com/manage" class="ap-external">https://marketplace.visualstudio.com/manage</a>，然后把打出来的 .vsix 文件拖到这里即可。</p><h2 id="遇到的问题">遇到的问题</h2><h3 id="code-cli-command-执行失败">code cli command 执行失败</h3><p>我运行 <code>code --list-extensions</code> 的时候不会列出所有插件，而是会打开一个新的 vscode 窗口。</p><p>这是因为 code 指向了 <code>C:\xxx\Microsoft VS Code\Code.exe</code>。将 code 当成 cli 执行，必须执行 <code>C:\xxx\Microsoft VS Code\bin\code.cmd</code>，因此需要修改环境变量，把 <code>Microsoft VS Code</code> 改掉。</p><p>参考 <a href="https://github.com/microsoft/vscode/issues/227186" class="ap-external">https://github.com/microsoft/vscode/issues/227186</a>。</p><h2 id="external">external</h2><ol>
 <li><a href="https://www.ruanyifeng.com/blog/2024/07/copilot-vs-marscode.html" class="ap-external">AI 编程助手测评：GitHub Copilot vs 豆包 MarsCode</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
+</ol><hr class="footnotes-sep"><section class="footnotes">
 <ol class="footnotes-list">
 <li id="footnote1" class="footnote-item"><p><a href="https://github.com/microsoft/vscode/pull/310226" class="ap-external">你的提交会被自动加上 co-author-by，即使你根本没有用 vscode 的 copilot</a>。最荒谬的是这个 PR 还被 merged 了（虽然之后 <a href="https://github.com/microsoft/vscode/pull/313931" class="ap-external">set default value to off</a> 了）。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
-</section>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/vscode","locale":"root","title":"VSCode","headings":[{"level":1,"text":"VSCode","slug":"vscode"},{"level":2,"text":"使用","slug":"使用"},{"level":3,"text":"关闭 copilot","slug":"关闭-copilot"},{"level":3,"text":"快捷键","slug":"快捷键"},{"level":2,"text":"插件","slug":"插件"},{"level":3,"text":"插件管理","slug":"插件管理"},{"level":3,"text":"AI 代码补全","slug":"ai-代码补全"},{"level":2,"text":"feature","slug":"feature"},{"level":2,"text":"工作区","slug":"工作区"},{"level":2,"text":"主题","slug":"主题"},{"level":2,"text":"正则匹配","slug":"正则匹配"},{"level":2,"text":"协同编辑","slug":"协同编辑"},{"level":2,"text":"Git","slug":"git"},{"level":2,"text":"小技巧","slug":"小技巧"},{"level":2,"text":"编写插件","slug":"编写插件"},{"level":3,"text":"上传","slug":"上传"},{"level":2,"text":"遇到的问题","slug":"遇到的问题"},{"level":3,"text":"code cli command 执行失败","slug":"code-cli-command-执行失败"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-08-31","category":["编程","教程"],"tag":["工具"],"icon":"solid/file-pen"},"createdAt":"2023-08-31T00:00:00.000Z","updatedAt":"2026-10-20T23:12:44+08:00","readingTime":11,"excerpt":"VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…"},"related":[{"route":"/coding/Cpp","title":"C++","refs":2,"links":[{"route":"/blog/log","refs":6},{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/octave","title":"Matlab/Octave","refs":2,"links":[{"route":"/coding/","refs":1}]},{"route":"/coding/python","title":"Python","refs":2,"links":[{"route":"/blog/log","refs":4},{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1},{"route":"/learning/typst","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":7},{"route":"/coding/Cpp","refs":6},{"route":"/coding/Rust/","refs":5},{"route":"/coding/python","refs":4},{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/Cpp","refs":1},{"route":"/coding/octave","refs":1},{"route":"/coding/python","refs":1},{"route":"/coding/Rust/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/Rust/","title":"Rust","refs":1,"links":[{"route":"/blog/log","refs":5},{"route":"/gossip/fuckxxx","refs":2},{"route":"/coding/","refs":1}]},{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/blog/log","refs":7},{"route":"/coding/Rust/","refs":2},{"route":"/coding/","refs":1},{"route":"/coding/Cpp","refs":1},{"route":"/coding/python","refs":1}]},{"route":"/learning/typst","title":"typst","refs":1,"links":[{"route":"/coding/python","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</section><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/vscode","locale":"root","title":"VSCode","headings":[{"level":1,"text":"VSCode","slug":"vscode"},{"level":2,"text":"使用","slug":"使用"},{"level":3,"text":"关闭 copilot","slug":"关闭-copilot"},{"level":3,"text":"快捷键","slug":"快捷键"},{"level":2,"text":"插件","slug":"插件"},{"level":3,"text":"插件管理","slug":"插件管理"},{"level":3,"text":"AI 代码补全","slug":"ai-代码补全"},{"level":2,"text":"feature","slug":"feature"},{"level":2,"text":"工作区","slug":"工作区"},{"level":2,"text":"主题","slug":"主题"},{"level":2,"text":"正则匹配","slug":"正则匹配"},{"level":2,"text":"协同编辑","slug":"协同编辑"},{"level":2,"text":"Git","slug":"git"},{"level":2,"text":"小技巧","slug":"小技巧"},{"level":2,"text":"编写插件","slug":"编写插件"},{"level":3,"text":"上传","slug":"上传"},{"level":2,"text":"遇到的问题","slug":"遇到的问题"},{"level":3,"text":"code cli command 执行失败","slug":"code-cli-command-执行失败"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-08-31","category":["编程","教程"],"tag":["工具"],"icon":"solid/file-pen"},"createdAt":"2023-08-31T00:00:00.000Z","updatedAt":"2026-11-09T03:35:41+08:00","readingTime":11,"excerpt":"VSCode ——neovim 死里配，不如 vscode 同步一根毛 我是 vscode 的重度使用者，所有的编程行为 all in vscode。虽说是 electron 电子垃圾，但它确实是优化得很好的电子垃圾。 在 linux 我曾尝试转向 neovim，但是数日后即放弃。 不过 vscode 也绝非完美。前往…"},"related":[{"route":"/coding/Cpp","title":"C++","refs":2,"links":[{"route":"/blog/log","refs":6},{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/octave","title":"Matlab/Octave","refs":2,"links":[{"route":"/coding/","refs":1}]},{"route":"/coding/python","title":"Python","refs":2,"links":[{"route":"/blog/log","refs":4},{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1},{"route":"/learning/typst","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":7},{"route":"/coding/Cpp","refs":6},{"route":"/coding/Rust/","refs":5},{"route":"/coding/python","refs":4},{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/Cpp","refs":1},{"route":"/coding/octave","refs":1},{"route":"/coding/python","refs":1},{"route":"/coding/Rust/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/Rust/","title":"Rust","refs":1,"links":[{"route":"/blog/log","refs":5},{"route":"/gossip/fuckxxx","refs":2},{"route":"/coding/","refs":1}]},{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/blog/log","refs":7},{"route":"/coding/Rust/","refs":2},{"route":"/coding/","refs":1},{"route":"/coding/Cpp","refs":1},{"route":"/coding/python","refs":1}]},{"route":"/learning/typst","title":"typst","refs":1,"links":[{"route":"/coding/python","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

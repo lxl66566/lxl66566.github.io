@@ -1,107 +1,41 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>下载器横评 | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。 这里 有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自…">
-<link rel="canonical" href="https://absx.pages.dev/articles/downloaders">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="下载器横评 | 绝对值_x 的博客">
-<meta property="og:description" content="下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。 这里 有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自…">
-<meta property="og:url" content="https://absx.pages.dev/articles/downloaders">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>下载器横评 | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。 这里 有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自…"><link rel="canonical" href="https://absx.pages.dev/articles/downloaders"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="下载器横评 | 绝对值_x 的博客"><meta property="og:description" content="下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。 这里 有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自…"><meta property="og:url" content="https://absx.pages.dev/articles/downloaders"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"下载器横评","url":"https://absx.pages.dev/articles/downloaders","mainEntityOfPage":"https://absx.pages.dev/articles/downloaders","description":"下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。 这里 有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2024-06-11T00:00:00.000Z","dateModified":"2026-10-13T23:23:51+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="下载器横评">下载器横评</h1>
-<p>下载器能够多线程下载网络资源，使带宽最大化。</p>
-<p>写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。<a href="https://ochagavia.nl/blog/download-accelerator-async-rust-edition/" class="ap-external">这里</a>有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。</p>
-<p>这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自带多线程下载功能，可以在 flags 里启用；实测下来，其下载速度与下载器有差距但不算太大，理论上可以抛弃下载器。</p>
-<p>测试：（<a href="https://gh.con.sh/https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v2.21.12/Waifu2x-Extension-GUI-v2.21.12-Portable.7z" class="ap-external">测试链接</a>；关闭代理）</p>
-<p>需要注意的是，这样的测试方法的波动还是相当大的，毕竟我校的网络就是一坨屎。</p>
-<table>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="下载器横评">下载器横评</h1><p>下载器能够多线程下载网络资源，使带宽最大化。</p><p>写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。<a href="https://ochagavia.nl/blog/download-accelerator-async-rust-edition/" class="ap-external">这里</a>有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。</p><p>这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自带多线程下载功能，可以在 flags 里启用；实测下来，其下载速度与下载器有差距但不算太大，理论上可以抛弃下载器。</p><p>测试：（<a href="https://gh.con.sh/https://github.com/AaronFeng753/Waifu2x-Extension-GUI/releases/download/v2.21.12/Waifu2x-Extension-GUI-v2.21.12-Portable.7z" class="ap-external">测试链接</a>；关闭代理）</p><p>需要注意的是，这样的测试方法的波动还是相当大的，毕竟我校的网络就是一坨屎。</p><table>
 <thead>
 <tr>
-<th style="text-align:center">方式</th>
-<th style="text-align:center">下载速度（MB/s）</th>
+<th style="text-align:center">方式</th><th style="text-align:center">下载速度（MB/s）</th>
 </tr>
-</thead>
-<tbody>
+</thead><tbody>
 <tr>
-<td style="text-align:center">浏览器内置</td>
-<td style="text-align:center">5.9</td>
-</tr>
-<tr>
-<td style="text-align:center">Neat Download Manager</td>
-<td style="text-align:center">10.0</td>
+<td style="text-align:center">浏览器内置</td><td style="text-align:center">5.9</td>
+</tr><tr>
+<td style="text-align:center">Neat Download Manager</td><td style="text-align:center">10.0</td>
 </tr>
 </tbody>
-</table>
-<h2 id="开启内置功能">开启内置功能</h2>
-<p>可以去<a href="https://www.91mobiles.com/hub/parallel-downloading-how-to-enable-faster-download-speeds/" class="ap-external">这里</a>查询如何开启多线程下载。</p>
-<ul>
-<li>edge: <code>edge://flags/#enable-parallel-downloading</code></li>
-<li>chrome: <code>chrome://flags/#enable-parallel-downloading</code></li>
-</ul>
-<p>浏览器默认是不开启的。你可以下载一个大文件，如果在下载完毕后需要等待一阵子，并且等待时间与文件大小成正比，那就意味着已开启多线程下载，因为其下载完各块后需要一个合并过程。（注意，要关掉 Windows Defender 等一切杀毒软件。否则等待时间不一定用于合并块。）</p>
-<h2 id="idm">IDM</h2>
-<p>想必大家都听过 IDM 的大名。我在小初时接触的第一款下载器就是 IDM，当然，是破解版。</p>
-<p>IDM 是一个付费软件，但是在中国的环境下大家用的都是盗版。具体的可以在 bilibili 找到，理论上选播放量大的视频给出的下载链接不容易下载到带病毒的版本。如果是其他地方下载的，有病毒的风险相对更高。</p>
-<h2 id="xdm"><a href="https://github.com/subhra74/xdm" class="ap-external">XDM</a></h2>
-<p>我的第二个下载器是 XDM。XDM 是一个 Github 开源的下载器，其界面还算好看。后面弃用的原因是：</p>
-<ul>
-<li>部分汉化缺失。</li>
-<li>20230614: 闪退 bug，重置无效。（直接原因）</li>
-<li>需要特定文件后缀才会激活 XDM，无法使其接管所有文件的下载。</li>
-<li>手感比 IDM 差。</li>
-</ul>
-<h2 id="neat-download-manager"><a href="https://www.neatdownloadmanager.com/index.php/en/" class="ap-external">Neat Download Manager</a></h2>
-<p>功能和逻辑都和 idm 差不多。</p>
-<ul>
-<li>界面比较古老，但是麻雀虽小五脏俱全，我希望的功能都有了：完整的 darkmode，proxy，cache dir 等，我不要求太高。</li>
-<li>会自动嗅探视频资源并弹窗提示要不要下载。问题是这个弹窗的浏览器插件行为是无法关闭的，因为它的插件根本就没有任何界面。</li>
-<li>有崩溃记录，但是比较罕见。</li>
-</ul>
-<h2 id="httpdownloader"><a href="https://github.com/erickutcher/httpdownloader" class="ap-external">httpdownloader</a></h2>
-<p>尝试的另一个开源 downloader。</p>
-<ul>
+</table><h2 id="开启内置功能">开启内置功能</h2><p>可以去<a href="https://www.91mobiles.com/hub/parallel-downloading-how-to-enable-faster-download-speeds/" class="ap-external">这里</a>查询如何开启多线程下载。</p><ul>
+<li>edge: <code>edge://flags/#enable-parallel-downloading</code></li><li>chrome: <code>chrome://flags/#enable-parallel-downloading</code></li>
+</ul><p>浏览器默认是不开启的。你可以下载一个大文件，如果在下载完毕后需要等待一阵子，并且等待时间与文件大小成正比，那就意味着已开启多线程下载，因为其下载完各块后需要一个合并过程。（注意，要关掉 Windows Defender 等一切杀毒软件。否则等待时间不一定用于合并块。）</p><h2 id="idm">IDM</h2><p>想必大家都听过 IDM 的大名。我在小初时接触的第一款下载器就是 IDM，当然，是破解版。</p><p>IDM 是一个付费软件，但是在中国的环境下大家用的都是盗版。具体的可以在 bilibili 找到，理论上选播放量大的视频给出的下载链接不容易下载到带病毒的版本。如果是其他地方下载的，有病毒的风险相对更高。</p><h2 id="xdm"><a href="https://github.com/subhra74/xdm" class="ap-external">XDM</a></h2><p>我的第二个下载器是 XDM。XDM 是一个 Github 开源的下载器，其界面还算好看。后面弃用的原因是：</p><ul>
+<li>部分汉化缺失。</li><li>20230614: 闪退 bug，重置无效。（直接原因）</li><li>需要特定文件后缀才会激活 XDM，无法使其接管所有文件的下载。</li><li>手感比 IDM 差。</li>
+</ul><h2 id="neat-download-manager"><a href="https://www.neatdownloadmanager.com/index.php/en/" class="ap-external">Neat Download Manager</a></h2><p>功能和逻辑都和 idm 差不多。</p><ul>
+<li>界面比较古老，但是麻雀虽小五脏俱全，我希望的功能都有了：完整的 darkmode，proxy，cache dir 等，我不要求太高。</li><li>会自动嗅探视频资源并弹窗提示要不要下载。问题是这个弹窗的浏览器插件行为是无法关闭的，因为它的插件根本就没有任何界面。</li><li>有崩溃记录，但是比较罕见。</li>
+</ul><h2 id="httpdownloader"><a href="https://github.com/erickutcher/httpdownloader" class="ap-external">httpdownloader</a></h2><p>尝试的另一个开源 downloader。</p><ul>
 <li>下载麻烦：
 <ul>
-<li>没有 README</li>
-<li>软件本体分别叫 <code>HTTP_Downloader_64.zip</code>，<code>HTTP_Downloader_DM_64.zip</code>，<code>HTTP_Downloader_LS_64.zip</code>，我都下了以后发现 DM 是 darkmode 的意思，而 LS 就不知道了。</li>
-<li>浏览器插件需要下载仓库源码，然后把 <code>HTTP_Downloader_Chrome_Extension</code> 文件夹单独给浏览器加载。</li>
+<li>没有 README</li><li>软件本体分别叫 <code>HTTP_Downloader_64.zip</code>，<code>HTTP_Downloader_DM_64.zip</code>，<code>HTTP_Downloader_LS_64.zip</code>，我都下了以后发现 DM 是 darkmode 的意思，而 LS 就不知道了。</li><li>浏览器插件需要下载仓库源码，然后把 <code>HTTP_Downloader_Chrome_Extension</code> 文件夹单独给浏览器加载。</li>
 </ul>
-</li>
-<li>当然，最重要的问题是根本不可用。我用的是 darkmode 版的，安装了扩展，配置好了下载器，发现其根本不会接管浏览器的下载请求。</li>
-</ul>
-<h2 id="motrix"><a href="https://github.com/agalwood/Motrix" class="ap-external">Motrix</a></h2>
-<p>Github 高赞的仓库，支持 torrent 下载。界面做得很好看，但是也很重量级。已经<a href="https://github.com/agalwood/Motrix/issues/1379" class="ap-external">很久没有维护</a>了，作者 Github 也没有其他动态，疑似作者跑路或出事。</p>
-<p>用起来比浏览器开多线程下载稍快，可以算作误差。</p>
-<h2 id="hydra"><a href="https://github.com/ja7ad/hydra" class="ap-external">hydra</a></h2>
-<p>一个比较新的开源 Rust downloader。搞下来尝试了下。测试版本：v1.1.0</p>
-<p>功能上比 NDM 要丰富一些，可以完全覆盖我的需求，不过功能多也意味着要找想要的功能会更难找。</p>
-<p>另外 hydra 有个非常奇怪的行为，就是默认开启后台自动下载（无需用户确认），于是我点击链接后出一个弹窗问我是否确认下载，但是我什么都不点，过一会儿也会提示下载完成。要做自动开始就自动开始，别让 UI 和行为不一致啊。</p>
-<p>内存占用，hydra 常态 22MB，NDM 常态 5MB，完全被爆杀。对我而言，我觉得没有切换到 hydra 的理由。</p>
-<div data-ap-island="Dated" data-props="{&quot;date&quot;:&quot;20261013&quot;}"></div>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/downloaders","locale":"root","title":"下载器横评","headings":[{"level":1,"text":"下载器横评","slug":"下载器横评"},{"level":2,"text":"开启内置功能","slug":"开启内置功能"},{"level":2,"text":"IDM","slug":"idm"},{"level":2,"text":"XDM","slug":"xdm"},{"level":2,"text":"Neat Download Manager","slug":"neat-download-manager"},{"level":2,"text":"httpdownloader","slug":"httpdownloader"},{"level":2,"text":"Motrix","slug":"motrix"},{"level":2,"text":"hydra","slug":"hydra"}],"frontmatter":{"date":"2024-06-11","category":["推荐","评价"],"tag":["横评","工具","桌面端","Windows"],"icon":"solid/download"},"createdAt":"2024-06-11T00:00:00.000Z","updatedAt":"2026-10-13T23:23:51+08:00","readingTime":5,"excerpt":"下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。 这里 有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自…"},"related":[{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":2,"links":[{"route":"/articles/browser/settings","refs":1}]},{"route":"/articles/browser/settings","title":"浏览器设置","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</li><li>当然，最重要的问题是根本不可用。我用的是 darkmode 版的，安装了扩展，配置好了下载器，发现其根本不会接管浏览器的下载请求。</li>
+</ul><h2 id="motrix"><a href="https://github.com/agalwood/Motrix" class="ap-external">Motrix</a></h2><p>Github 高赞的仓库，支持 torrent 下载。界面做得很好看，但是也很重量级。已经<a href="https://github.com/agalwood/Motrix/issues/1379" class="ap-external">很久没有维护</a>了，作者 Github 也没有其他动态，疑似作者跑路或出事。</p><p>用起来比浏览器开多线程下载稍快，可以算作误差。</p><h2 id="hydra"><a href="https://github.com/ja7ad/hydra" class="ap-external">hydra</a></h2><p>一个比较新的开源 Rust downloader。搞下来尝试了下。测试版本：v1.1.0</p><p>功能上比 NDM 要丰富一些，可以完全覆盖我的需求，不过功能多也意味着要找想要的功能会更难找。</p><p>另外 hydra 有个非常奇怪的行为，就是默认开启后台自动下载（无需用户确认），于是我点击链接后出一个弹窗问我是否确认下载，但是我什么都不点，过一会儿也会提示下载完成。要做自动开始就自动开始，别让 UI 和行为不一致啊。</p><p>内存占用，hydra 常态 22MB，NDM 常态 5MB，完全被爆杀。对我而言，我觉得没有切换到 hydra 的理由。</p><div data-ap-island="Dated" data-props="{&quot;date&quot;:&quot;20261013&quot;}"></div><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/downloaders","locale":"root","title":"下载器横评","headings":[{"level":1,"text":"下载器横评","slug":"下载器横评"},{"level":2,"text":"开启内置功能","slug":"开启内置功能"},{"level":2,"text":"IDM","slug":"idm"},{"level":2,"text":"XDM","slug":"xdm"},{"level":2,"text":"Neat Download Manager","slug":"neat-download-manager"},{"level":2,"text":"httpdownloader","slug":"httpdownloader"},{"level":2,"text":"Motrix","slug":"motrix"},{"level":2,"text":"hydra","slug":"hydra"}],"frontmatter":{"date":"2024-06-11","category":["推荐","评价"],"tag":["横评","工具","桌面端","Windows"],"icon":"solid/download"},"createdAt":"2024-06-11T00:00:00.000Z","updatedAt":"2026-10-13T23:23:51+08:00","readingTime":5,"excerpt":"下载器横评 下载器能够多线程下载网络资源，使带宽最大化。 写一个下载器实际上也没有什么难度。只需要用一个最基本的异步模型，加上一些 http 的小细节即可。 这里 有一位老哥已经写了一个简易版下载器，我引用 ta 只想说明下载器真没有什么技术含量。 这理应是所有浏览器必需内置的功能。在写此文时查了一下，主流的浏览器都自…"},"related":[{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":2,"links":[{"route":"/articles/browser/settings","refs":1}]},{"route":"/articles/browser/settings","title":"浏览器设置","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

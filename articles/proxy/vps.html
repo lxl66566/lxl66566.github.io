@@ -1,374 +1,122 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../../assets/chrome-379cddde.js">
-<title>VPS | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../../favicon.ico">
-<meta name="description" content="VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…">
-<link rel="canonical" href="https://absx.pages.dev/articles/proxy/vps">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="VPS | 绝对值_x 的博客">
-<meta property="og:description" content="VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…">
-<meta property="og:url" content="https://absx.pages.dev/articles/proxy/vps">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"VPS","url":"https://absx.pages.dev/articles/proxy/vps","mainEntityOfPage":"https://absx.pages.dev/articles/proxy/vps","description":"VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-05-14T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../../assets/chrome-379cddde.js"><title>VPS | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../../favicon.ico"><meta name="description" content="VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…"><link rel="canonical" href="https://absx.pages.dev/articles/proxy/vps"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="VPS | 绝对值_x 的博客"><meta property="og:description" content="VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…"><meta property="og:url" content="https://absx.pages.dev/articles/proxy/vps"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"VPS","url":"https://absx.pages.dev/articles/proxy/vps","mainEntityOfPage":"https://absx.pages.dev/articles/proxy/vps","description":"VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-05-14T00:00:00.000Z","dateModified":"2026-11-09T03:35:41+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="vps">VPS</h1>
-<p>我与我的 VPS 的故事。服务器运维/代理搭建。</p>
-<p>与 VPS 无关的 linux 问题请移步 <a href="../linux/">linux</a></p>
-<h2 id="个人偏好">个人偏好</h2>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="vps">VPS</h1><p>我与我的 VPS 的故事。服务器运维/代理搭建。</p><p>与 VPS 无关的 linux 问题请移步 <a href="../linux/">linux</a></p><h2 id="个人偏好">个人偏好</h2><ul>
+<li>带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。</li><li>地点偏好：我有明确的地点偏好：JP。
 <ul>
-<li>带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。</li>
-<li>地点偏好：我有明确的地点偏好：JP。
-<ul>
-<li>我对延迟有一定要求，所以 US 全部 out。不过由于 US 机便宜，有时也会搞个当备用垫底。</li>
-<li>在东亚里，SG, KR, TW 的延迟也是垫底的，随便 ping 都上 200ms。所以 out。
+<li>我对延迟有一定要求，所以 US 全部 out。不过由于 US 机便宜，有时也会搞个当备用垫底。</li><li>在东亚里，SG, KR, TW 的延迟也是垫底的，随便 ping 都上 200ms。所以 out。
 <ul>
 <li><a href="https://www.v2ex.com/t/1203483" class="ap-external">为什么 KR 节点这么差？</a></li>
 </ul>
-</li>
-<li>最后剩下 JP 和 HK，虽然 HK 延迟最低，但由于非常多的服务是屏蔽 HK 的（chatgpt，许多日本网站，gemini 和其他 google 家大模型），所以 JP 胜出。</li>
+</li><li>最后剩下 JP 和 HK，虽然 HK 延迟最低，但由于非常多的服务是屏蔽 HK 的（chatgpt，许多日本网站，gemini 和其他 google 家大模型），所以 JP 胜出。</li>
 </ul>
 </li>
-</ul>
-<h2 id="购买">购买</h2>
-<h3 id="消息来源">消息来源</h3>
-<ul>
-<li><a href="https://zhujiwiki.com" class="ap-external">主机百科</a></li>
-<li><a href="https://www.nodeseek.com/" class="ap-external">nodeseek</a></li>
-<li><a href="https://lowendbox.com/" class="ap-external">lowendbox</a></li>
-<li><a href="https://runaway.rip/" class="ap-external">Runaway</a> 避坑</li>
-</ul>
-<h3 id="我买到的">我买到的</h3>
+</ul><h2 id="购买">购买</h2><h3 id="消息来源">消息来源</h3><ul>
+<li><a href="https://zhujiwiki.com" class="ap-external">主机百科</a></li><li><a href="https://www.nodeseek.com/" class="ap-external">nodeseek</a></li><li><a href="https://lowendbox.com/" class="ap-external">lowendbox</a></li><li><a href="https://runaway.rip/" class="ap-external">Runaway</a> 避坑</li>
+</ul><h3 id="我买到的">我买到的</h3>
 <!-- prettier-ignore -->
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Host</th>
-<th style="text-align:center">location</th>
-<th style="text-align:center">Price</th>
-<th style="text-align:center">bandwidth</th>
-<th style="text-align:center">RAM</th>
-<th style="text-align:center">Storage</th>
-<th style="text-align:center">Core</th>
-<th style="text-align:center">saying</th>
+<th style="text-align:center">Host</th><th style="text-align:center">location</th><th style="text-align:center">Price</th><th style="text-align:center">bandwidth</th><th style="text-align:center">RAM</th><th style="text-align:center">Storage</th><th style="text-align:center">Core</th><th style="text-align:center">saying</th>
 </tr>
-</thead>
-<tbody>
+</thead><tbody>
 <tr>
-<td style="text-align:center">20230514 <a href="https://my.racknerd.com/cart.php?a=add&amp;pid=695" class="ap-external">RackNerd</a></td>
-<td style="text-align:center">San Jose</td>
-<td style="text-align:center">$10.28/yr</td>
-<td style="text-align:center">1000GB 1Gbps</td>
-<td style="text-align:center">768MB</td>
-<td style="text-align:center">10GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>装了 Debian 10（后来换成了 12）。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20230602 <a href="https://distribute.vpslog.net/" class="ap-external">vpslog</a></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">free</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">64MB</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20231124 <a href="www.silicloud.com">silicloud</a> (BF)</td>
-<td style="text-align:center">Tokyo</td>
-<td style="text-align:center">HK$128/yr</td>
-<td style="text-align:center">300GB 300Mbps</td>
-<td style="text-align:center">768MB</td>
-<td style="text-align:center">20GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>提供 archlinux 镜像。没有 rescue。稳定性开始还行，半年后差不多烂完了。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20231212 azure</td>
-<td style="text-align:center">Korea Central</td>
-<td style="text-align:center"><s>$9.xx/mo</s> free</td>
-<td style="text-align:center">unknown</td>
-<td style="text-align:center">1GB</td>
-<td style="text-align:center">30GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20231213 aliyun</td>
-<td style="text-align:center">HK</td>
-<td style="text-align:center"><s>288CNY/yr</s> free</td>
-<td style="text-align:center">1024 GB unknown</td>
-<td style="text-align:center">896MB</td>
-<td style="text-align:center">40GB</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>香港地区 TG 时常抽风；免费的香港机我想都不敢想（）</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">202403xx wawo</td>
-<td style="text-align:center">US</td>
-<td style="text-align:center">￥3.73/mo</td>
-<td style="text-align:center">unknown</td>
-<td style="text-align:center">512MB</td>
-<td style="text-align:center">unknown</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>冲便宜买的，质量很捞，本来是用作测试的。结果半个月给我封了，莫名其妙。于是避雷 wawo 了。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20240518 Churros</td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">￥8.9/mo + ￥6 初装</td>
-<td style="text-align:center">200GB 100Mbps</td>
-<td style="text-align:center">1GB</td>
-<td style="text-align:center">5GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>silicloud IP 寄了，换台 JP。这家是超级垃圾灵车，非常不稳定</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20240714 Akile</td>
-<td style="text-align:center">HK</td>
-<td style="text-align:center">￥5/mo</td>
-<td style="text-align:center">200GB 1000Mbps</td>
-<td style="text-align:center">1GB</td>
-<td style="text-align:center">5GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>akile 很灵车，不推荐。介于 Churros 和 Lamhosting 之间。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20240726 Lamhosting</td>
-<td style="text-align:center">TW</td>
-<td style="text-align:center">￥10.6/mo(coupon -￥2)</td>
-<td style="text-align:center">512GB 1000Mbps</td>
-<td style="text-align:center">512M</td>
-<td style="text-align:center">10GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20240820 SurfCloud</td>
-<td style="text-align:center">HK</td>
-<td style="text-align:center">$1/mo</td>
-<td style="text-align:center">200GB 30Mbps</td>
-<td style="text-align:center">1G</td>
-<td style="text-align:center">40GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20240911 YXVM</td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">$3/mo</td>
-<td style="text-align:center">1TB 500Mbps</td>
-<td style="text-align:center">768MB</td>
-<td style="text-align:center">5GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20241018 azure</td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">free</td>
-<td style="text-align:center">?</td>
-<td style="text-align:center">1G</td>
-<td style="text-align:center">30G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">微软，我的超人</td>
-</tr>
-<tr>
-<td style="text-align:center">20241031 <a href="https://91idc.gg/index.php" class="ap-external">91idc</a></td>
-<td style="text-align:center">HK</td>
-<td style="text-align:center">￥10/mo</td>
-<td style="text-align:center">666GB 20MBps</td>
-<td style="text-align:center">1G</td>
-<td style="text-align:center">10G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20250107 <a href="https://portal.sakuraclouds.com/" class="ap-external">Sakura Clouds</a></td>
-<td style="text-align:center">HK</td>
-<td style="text-align:center"><s>$2.50/mo</s> $2.20</td>
-<td style="text-align:center">2TB 1Gbps</td>
-<td style="text-align:center">1G</td>
-<td style="text-align:center">8G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>速度还行，但是延迟和稳定性<strong>超烂</strong>，没有下次了。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20250109 <s><a href="https://claw.cloud/" class="ap-external">ClawCloud</a></s></td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center"><s>$36.00/yr</s> $7.00/yr</td>
-<td style="text-align:center">500GB</td>
-<td style="text-align:center">1G</td>
-<td style="text-align:center">20G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。爽用了 9 个月，之后开始出现稳定性下降、延迟增大等问题。<a href="https://claw.cloud/announcements/38?language=chinese-simplified" class="ap-external">2026 年已死</a></summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20250404 <a href="http://nube.sh" class="ap-external">nube.sh</a></td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">$0.0012/h + $0.0031/GB</td>
-<td style="text-align:center">不限</td>
-<td style="text-align:center">1GB</td>
-<td style="text-align:center">10GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><a href="http://hpaste.spiritlhl.net/#/show/bp0wd.txt" class="ap-external">测评</a>；<details class="abs-dtlslong"><summary>前端好评；一次最少充 $10，试错成本挺高；延迟一般，特别是联通很烂。<br/>用了一个月，连通性差了很多，基本是不可用状态，纯纯狗屎</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20250805 <a href="https://skystroll.net/store" class="ap-external">skystroll</a></td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">$2.49/mo</td>
-<td style="text-align:center">1T 500Mbps</td>
-<td style="text-align:center">512M</td>
-<td style="text-align:center">5GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20250820 <a href="https://my.rfchost.com/" class="ap-external">RFCHOST</a></td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">$29.99/yr + ￥45</td>
-<td style="text-align:center">1T 不限</td>
-<td style="text-align:center">512M</td>
-<td style="text-align:center">10GB</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>看评测挺不错的，延迟很低，价格也合适，于是在 nodeseek 上蹲了几天蹲到一个。溢价还是有点高，因为第二天就有更合适的出现了，不过也不用在乎这么多。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20250827 <a href="https://billing.dedirock.com/index.php" class="ap-external">dedirock</a></td>
-<td style="text-align:center">US (LA)</td>
-<td style="text-align:center">$7/yr</td>
-<td style="text-align:center">2T 1Gbps</td>
-<td style="text-align:center">2G</td>
-<td style="text-align:center">30G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>手上只有 JP 机确实让我感受到一些限制，<s>例如禁漫就没法登上去</s>。刚好看到便宜美西机，所以搞了个，延迟就无所谓了。注意 paypal 付款会被自动订阅一个续费需要去取消掉。这家的官网从 JP 加载贼慢，但是机子还挺不错。延迟不会超过 200ms，已经算好了。但是几个月后网络质量大幅下降，经常断连</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20251205 <a href="https://acck.io/" class="ap-external">ACCKCloud</a></td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">￥14.88/mo</td>
-<td style="text-align:center">500GB 500Mbps</td>
-<td style="text-align:center">512M</td>
-<td style="text-align:center">8G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>IIJ，到上海电信延迟非常不错（40ms）。最可惜的是 IP 有点脏，在 Google Gemini、nhentai、garnix 都会被拦，我不太能接受。（acck 家的整个 156.231.140.1 gw 的 ip 段都是脏的）<br/>Update 20260731：报道称 acck 明文存储用户密码，并且已经泄漏，那很弱智了。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20260304 <a href="https://vpshostingservice.co/order/server-host-linux-vps-ssd/ssd-1gb" class="ap-external">vpshostingservice</a></td>
-<td style="text-align:center">US(LA)</td>
-<td style="text-align:center">￥11/yr</td>
-<td style="text-align:center">无限流量 1Gbps 共享端口</td>
-<td style="text-align:center">1G</td>
-<td style="text-align:center">15G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary><a href="https://www.nodeseek.com/post-637237-1" class="ap-external">评测</a>，能加密货币付款，第三方平台支持很多链，不错。网络质量吃运营商，家里比较烂但是公司里还可以用。优惠码是长期的，11 刀还要什么自行车。</summary></details></td>
-</tr>
-<tr>
-<td style="text-align:center">20260817 <a href="https://cloud.yt.net/" class="ap-external">YT.NET</a></td>
-<td style="text-align:center">JP</td>
-<td style="text-align:center">￥22/mo</td>
-<td style="text-align:center">1T 500Mbps</td>
-<td style="text-align:center">1G</td>
-<td style="text-align:center">10G</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center"><details class="abs-dtlslong"><summary>待续</summary></details></td>
+<td style="text-align:center">20230514 <a href="https://my.racknerd.com/cart.php?a=add&amp;pid=695" class="ap-external">RackNerd</a></td><td style="text-align:center">San Jose</td><td style="text-align:center">$10.28/yr</td><td style="text-align:center">1000GB 1Gbps</td><td style="text-align:center">768MB</td><td style="text-align:center">10GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>装了 Debian 10（后来换成了 12）。美西机 + trojan 真连接常年 700+ms，显然不能做游戏服务器。<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup></summary></details></td>
+</tr><tr>
+<td style="text-align:center">20230602 <a href="https://distribute.vpslog.net/" class="ap-external">vpslog</a></td><td style="text-align:center"></td><td style="text-align:center">free</td><td style="text-align:center"></td><td style="text-align:center">64MB</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"><details class="abs-dtlslong"><summary>白嫖的小鸡，纯 v6，太捞只能装 alpine，还要定期续。后来不续了。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20231124 <a href="www.silicloud.com">silicloud</a> (BF)</td><td style="text-align:center">Tokyo</td><td style="text-align:center">HK$128/yr</td><td style="text-align:center">300GB 300Mbps</td><td style="text-align:center">768MB</td><td style="text-align:center">20GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>提供 archlinux 镜像。没有 rescue。稳定性开始还行，半年后差不多烂完了。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20231212 azure</td><td style="text-align:center">Korea Central</td><td style="text-align:center"><s>$9.xx/mo</s> free</td><td style="text-align:center">unknown</td><td style="text-align:center">1GB</td><td style="text-align:center">30GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>学生优惠送 $100 现金券，买这个等级的，每年用 10 个月。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20231213 aliyun</td><td style="text-align:center">HK</td><td style="text-align:center"><s>288CNY/yr</s> free</td><td style="text-align:center">1024 GB unknown</td><td style="text-align:center">896MB</td><td style="text-align:center">40GB</td><td style="text-align:center">2</td><td style="text-align:center"><details class="abs-dtlslong"><summary>香港地区 TG 时常抽风；免费的香港机我想都不敢想（）</summary></details></td>
+</tr><tr>
+<td style="text-align:center">202403xx wawo</td><td style="text-align:center">US</td><td style="text-align:center">￥3.73/mo</td><td style="text-align:center">unknown</td><td style="text-align:center">512MB</td><td style="text-align:center">unknown</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>冲便宜买的，质量很捞，本来是用作测试的。结果半个月给我封了，莫名其妙。于是避雷 wawo 了。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20240518 Churros</td><td style="text-align:center">JP</td><td style="text-align:center">￥8.9/mo + ￥6 初装</td><td style="text-align:center">200GB 100Mbps</td><td style="text-align:center">1GB</td><td style="text-align:center">5GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>silicloud IP 寄了，换台 JP。这家是超级垃圾灵车，非常不稳定</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20240714 Akile</td><td style="text-align:center">HK</td><td style="text-align:center">￥5/mo</td><td style="text-align:center">200GB 1000Mbps</td><td style="text-align:center">1GB</td><td style="text-align:center">5GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>akile 很灵车，不推荐。介于 Churros 和 Lamhosting 之间。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20240726 Lamhosting</td><td style="text-align:center">TW</td><td style="text-align:center">￥10.6/mo(coupon -￥2)</td><td style="text-align:center">512GB 1000Mbps</td><td style="text-align:center">512M</td><td style="text-align:center">10GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>有点灵，TW ping 都有 190ms… 比 akile 稳一点，但不算太多</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20240820 SurfCloud</td><td style="text-align:center">HK</td><td style="text-align:center">$1/mo</td><td style="text-align:center">200GB 30Mbps</td><td style="text-align:center">1G</td><td style="text-align:center">40GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>银联付款，需要编辑防火墙，便宜实惠。缺点是太慢了点…</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20240911 YXVM</td><td style="text-align:center">JP</td><td style="text-align:center">$3/mo</td><td style="text-align:center">1TB 500Mbps</td><td style="text-align:center">768MB</td><td style="text-align:center">5GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>买这家要靠抢。刚开始不错，稳定性高，延迟低。后面炸了几次，每天晚上可用性也大幅降低了。两个月弃坑。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20241018 azure</td><td style="text-align:center">JP</td><td style="text-align:center">free</td><td style="text-align:center">?</td><td style="text-align:center">1G</td><td style="text-align:center">30G</td><td style="text-align:center">1</td><td style="text-align:center">微软，我的超人</td>
+</tr><tr>
+<td style="text-align:center">20241031 <a href="https://91idc.gg/index.php" class="ap-external">91idc</a></td><td style="text-align:center">HK</td><td style="text-align:center">￥10/mo</td><td style="text-align:center">666GB 20MBps</td><td style="text-align:center">1G</td><td style="text-align:center">10G</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>优惠码无法使用；带宽偏低；新商家，稳定倒是挺稳定的</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20250107 <a href="https://portal.sakuraclouds.com/" class="ap-external">Sakura Clouds</a></td><td style="text-align:center">HK</td><td style="text-align:center"><s>$2.50/mo</s> $2.20</td><td style="text-align:center">2TB 1Gbps</td><td style="text-align:center">1G</td><td style="text-align:center">8G</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>速度还行，但是延迟和稳定性<strong>超烂</strong>，没有下次了。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20250109 <s><a href="https://claw.cloud/" class="ap-external">ClawCloud</a></s></td><td style="text-align:center">JP</td><td style="text-align:center"><s>$36.00/yr</s> $7.00/yr</td><td style="text-align:center">500GB</td><td style="text-align:center">1G</td><td style="text-align:center">20G</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>阿里云“上游”，超级好价 + 稳定 + 高速，神中神血赚。爽用了 9 个月，之后开始出现稳定性下降、延迟增大等问题。<a href="https://claw.cloud/announcements/38?language=chinese-simplified" class="ap-external">2026 年已死</a></summary></details></td>
+</tr><tr>
+<td style="text-align:center">20250404 <a href="http://nube.sh" class="ap-external">nube.sh</a></td><td style="text-align:center">JP</td><td style="text-align:center">$0.0012/h + $0.0031/GB</td><td style="text-align:center">不限</td><td style="text-align:center">1GB</td><td style="text-align:center">10GB</td><td style="text-align:center">1</td><td style="text-align:center"><a href="http://hpaste.spiritlhl.net/#/show/bp0wd.txt" class="ap-external">测评</a>；<details class="abs-dtlslong"><summary>前端好评；一次最少充 $10，试错成本挺高；延迟一般，特别是联通很烂。<br/>用了一个月，连通性差了很多，基本是不可用状态，纯纯狗屎</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20250805 <a href="https://skystroll.net/store" class="ap-external">skystroll</a></td><td style="text-align:center">JP</td><td style="text-align:center">$2.49/mo</td><td style="text-align:center">1T 500Mbps</td><td style="text-align:center">512M</td><td style="text-align:center">5GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>刚买的时候 IP 国内就是 ping 不通的。然后开的工单一天后才回复，换了个 IP 还得重装才能用。这家虽然延迟还行，但是 IP 是真的垃圾，稳定性也很灵车，经常用一半突然断了。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20250820 <a href="https://my.rfchost.com/" class="ap-external">RFCHOST</a></td><td style="text-align:center">JP</td><td style="text-align:center">$29.99/yr + ￥45</td><td style="text-align:center">1T 不限</td><td style="text-align:center">512M</td><td style="text-align:center">10GB</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>看评测挺不错的，延迟很低，价格也合适，于是在 nodeseek 上蹲了几天蹲到一个。溢价还是有点高，因为第二天就有更合适的出现了，不过也不用在乎这么多。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20250827 <a href="https://billing.dedirock.com/index.php" class="ap-external">dedirock</a></td><td style="text-align:center">US (LA)</td><td style="text-align:center">$7/yr</td><td style="text-align:center">2T 1Gbps</td><td style="text-align:center">2G</td><td style="text-align:center">30G</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>手上只有 JP 机确实让我感受到一些限制，<s>例如禁漫就没法登上去</s>。刚好看到便宜美西机，所以搞了个，延迟就无所谓了。注意 paypal 付款会被自动订阅一个续费需要去取消掉。这家的官网从 JP 加载贼慢，但是机子还挺不错。延迟不会超过 200ms，已经算好了。但是几个月后网络质量大幅下降，经常断连</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20251205 <a href="https://acck.io/" class="ap-external">ACCKCloud</a></td><td style="text-align:center">JP</td><td style="text-align:center">￥14.88/mo</td><td style="text-align:center">500GB 500Mbps</td><td style="text-align:center">512M</td><td style="text-align:center">8G</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>IIJ，到上海电信延迟非常不错（40ms）。最可惜的是 IP 有点脏，在 Google Gemini、nhentai、garnix 都会被拦，我不太能接受。（acck 家的整个 156.231.140.1 gw 的 ip 段都是脏的）<br/>Update 20260731：报道称 acck 明文存储用户密码，并且已经泄漏，那很弱智了。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20260304 <a href="https://vpshostingservice.co/order/server-host-linux-vps-ssd/ssd-1gb" class="ap-external">vpshostingservice</a></td><td style="text-align:center">US(LA)</td><td style="text-align:center">￥11/yr</td><td style="text-align:center">无限流量 1Gbps 共享端口</td><td style="text-align:center">1G</td><td style="text-align:center">15G</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary><a href="https://www.nodeseek.com/post-637237-1" class="ap-external">评测</a>，能加密货币付款，第三方平台支持很多链，不错。网络质量吃运营商，家里比较烂但是公司里还可以用。优惠码是长期的，11 刀还要什么自行车。</summary></details></td>
+</tr><tr>
+<td style="text-align:center">20260817 <a href="https://cloud.yt.net/" class="ap-external">YT.NET</a></td><td style="text-align:center">JP</td><td style="text-align:center">￥22/mo</td><td style="text-align:center">1T 500Mbps</td><td style="text-align:center">1G</td><td style="text-align:center">10G</td><td style="text-align:center">1</td><td style="text-align:center"><details class="abs-dtlslong"><summary>待续</summary></details></td>
 </tr>
 </tbody>
-</table>
-<h3 id="白嫖">白嫖</h3>
-<p>阿里云和 Azure 理论上都是不能当代理机用的，不过真拿来跑，自用的话它们也不管。</p>
-<ul>
+</table><h3 id="白嫖">白嫖</h3><p>阿里云和 Azure 理论上都是不能当代理机用的，不过真拿来跑，自用的话它们也不管。</p><ul>
 <li>阿里云学生：免费服务器，<strong>每年</strong> 300 元优惠券，可以全额抵扣。
 <ol>
-<li>（需要 chromium 系浏览器）<a href="https://university.aliyun.com" class="ap-external">university.aliyun.com</a> 学生认证领券</li>
-<li><s>首页，<em>产品 - 计算 - 轻量应用服务器</em> 下单即可。新加坡、日本有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。</s></li>
-</ol>
-<ul>
+<li>（需要 chromium 系浏览器）<a href="https://university.aliyun.com" class="ap-external">university.aliyun.com</a> 学生认证领券</li><li><s>首页，<em>产品 - 计算 - 轻量应用服务器</em> 下单即可。新加坡、日本有货，香港需要 12 点抢。注意，下单不锁定，以支付成功为界。</s></li>
+</ol><ul>
 <li><strong>学生优惠现在无法购买轻量</strong>；在领券页面下面只能购买国内 ECS，无法作为翻墙机使用，而且带宽很低。<img src="/images/articles/vps/news.jpg" alt="现在已经寄了" loading="lazy"></li>
 </ul>
-</li>
-<li>Azure：每年 $100 优惠券，学生无限续。财大气粗！
+</li><li>Azure：每年 $100 优惠券，学生无限续。财大气粗！
 <ol>
-<li>先过学生认证</li>
-<li>服务器下单，配置那边按价格排序一下，选便宜的，1C1G 够用了。</li>
-<li>开好机子，默认不能 root 登录。查看 <a href="#%E5%85%81%E8%AE%B8-root">允许 root</a> 章节可解。</li>
-<li>默认是不放行其他端口的。去 <em>网络</em>，自己添加入站和出站规则，放开所有端口。</li>
+<li>先过学生认证</li><li>服务器下单，配置那边按价格排序一下，选便宜的，1C1G 够用了。</li><li>开好机子，默认不能 root 登录。查看 <a href="#%E5%85%81%E8%AE%B8-root">允许 root</a> 章节可解。</li><li>默认是不放行其他端口的。去 <em>网络</em>，自己添加入站和出站规则，放开所有端口。</li>
 </ol>
-</li>
-<li>Google Cloud：$300 体验金。
+</li><li>Google Cloud：$300 体验金。
 <ul>
-<li>Google Cloud 还是有点贵的，最便宜的 1c1g 每个月也要 $22。</li>
-<li>Google Cloud 控制台页面卡得要死。。连接 vps 最好用网页面板。如果想用本机 ssh，要把密钥传到 vps，使用 RESTAPI POST 还不行（没法两步验证），还得下载一个 gcloud cli 是最傻逼的(<a href="https://cloud.google.com/compute/docs/connect/standard-ssh?hl=zh-cn#openssh-client" class="ap-external">ref</a>)。所以我建议去网页面板自己<a href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5">手操</a>。</li>
-<li>Google Cloud 默认也是开启防火墙措施，无法在本机上访问 vps 的其他端口。要在左侧 <em>Cloud NGFW - 防火墙政策</em> 里改一条规则，允许来源改成 <code>0.0.0.0/0</code>，并且将优先级调为 1000。</li>
+<li>Google Cloud 还是有点贵的，最便宜的 1c1g 每个月也要 $22。</li><li>Google Cloud 控制台页面卡得要死。。连接 vps 最好用网页面板。如果想用本机 ssh，要把密钥传到 vps，使用 RESTAPI POST 还不行（没法两步验证），还得下载一个 gcloud cli 是最傻逼的(<a href="https://cloud.google.com/compute/docs/connect/standard-ssh?hl=zh-cn#openssh-client" class="ap-external">ref</a>)。所以我建议去网页面板自己<a href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5">手操</a>。</li><li>Google Cloud 默认也是开启防火墙措施，无法在本机上访问 vps 的其他端口。要在左侧 <em>Cloud NGFW - 防火墙政策</em> 里改一条规则，允许来源改成 <code>0.0.0.0/0</code>，并且将优先级调为 1000。</li>
 </ul>
 </li>
-</ul>
-<h2 id="工具">工具</h2>
-<ul>
+</ul><h2 id="工具">工具</h2><ul>
 <li>记得禁用 ipv6！！！不然机子会出现各种 google 墙，youtube 墙，网页打开慢等各种问题。<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">echo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "net.ipv6.conf.all.disable_ipv6 = 1"</span><span style="color:#D73A49;--shiki-dark:#F97583"> |</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> tee</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> /etc/sysctl.conf</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">echo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "net.ipv6.conf.default.disable_ipv6 = 1"</span><span style="color:#D73A49;--shiki-dark:#F97583"> |</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> tee</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -a</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> /etc/sysctl.conf</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> sysctl</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -p</span></span></code></pre></div>
-</li>
-<li><a href="https://github.com/lxl66566/init-script" class="ap-external">一键代理脚本</a>：不得不提我自己写的一键脚本，一键常用软件 + 代理（hysteria + trojan-go + trojan）</li>
-<li><a href="https://ping.pe/#" class="ap-external">ping.pe</a>：连通性</li>
-<li>全面评测：
+</li><li><a href="https://github.com/lxl66566/init-script" class="ap-external">一键代理脚本</a>：不得不提我自己写的一键脚本，一键常用软件 + 代理（hysteria + trojan-go + trojan）</li><li><a href="https://ping.pe/#" class="ap-external">ping.pe</a>：连通性</li><li>全面评测：
 <ul>
-<li><a href="https://github.com/oneclickvirt/ecs" class="ap-external">VPS 融合怪 - GO 重构版本</a></li>
-<li>一键网络质量：<a href="https://github.com/xykt/NetQuality" class="ap-external">NetQuality</a></li>
+<li><a href="https://github.com/oneclickvirt/ecs" class="ap-external">VPS 融合怪 - GO 重构版本</a></li><li>一键网络质量：<a href="https://github.com/xykt/NetQuality" class="ap-external">NetQuality</a></li>
 </ul>
-</li>
-<li>全球测速
+</li><li>全球测速
 <ul>
 <li><code>curl -Lso- bench.sh | bash</code>：VPS 信息，全球测速</li>
 </ul>
-</li>
-<li>国内三网测速
+</li><li>国内三网测速
 <ul>
 <li><a href="https://github.com/spiritLHLS/ecsspeed" class="ap-external">ecsspeed</a></li>
 </ul>
-</li>
-<li><a href="https://bgp.tools/" class="ap-external">https://bgp.tools/</a>，ASN 信息</li>
-<li><a href="https://ip.skk.moe/" class="ap-external">https://ip.skk.moe/</a>，群友搭的查自己 IP 的面板</li>
-<li><a href="https://net.ljxnet.cn/" class="ap-external">网络面板</a>流量消耗器</li>
-<li><a href="https://proxy.incolumitas.com/proxy_detect.html" class="ap-external">Live Proxy and VPN Detection</a></li>
-<li><a href="https://github.com/bin456789/reinstall" class="ap-external">bin456789/reinstall</a>：一键重装或者 dd 到其他镜像</li>
-</ul>
-<h3 id="ssh">SSH</h3>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>没啥用的</summary>
-<p>youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。</p>
-<p>先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 <code>sudo pacman -S openssl</code> 了（。后来转 linux 后就没 ssh 这烦恼了。</p>
-<p>说回来，其实 windows 好像是有自带(?) ssh 的。</p>
-<p>用法：<code>ssh root@ip [-p port]</code></p>
-</details>
-<h4 id="别名">别名</h4>
-<p>建立一个 <em>别名 -&gt; VPS(用户 + ip + 端口)</em> 的映射关系。</p>
-<div class="ap-code ap-code--ln" style="--ap-ln-w:1ch"><div class="ap-code__tools"><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li><a href="https://bgp.tools/" class="ap-external">https://bgp.tools/</a>，ASN 信息</li><li><a href="https://ip.skk.moe/" class="ap-external">https://ip.skk.moe/</a>，群友搭的查自己 IP 的面板</li><li><a href="https://net.ljxnet.cn/" class="ap-external">网络面板</a>流量消耗器</li><li><a href="https://proxy.incolumitas.com/proxy_detect.html" class="ap-external">Live Proxy and VPN Detection</a></li><li><a href="https://github.com/bin456789/reinstall" class="ap-external">bin456789/reinstall</a>：一键重装或者 dd 到其他镜像</li>
+</ul><h3 id="ssh">SSH</h3><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>没啥用的</summary><p>youtube 上（与其他教程）清一色的 finalshell，但是这种不开源的小作坊国产软件我不用。不过话说回来，对不会用 linux 的小白，finalshell 门槛确实低（图形文件系统和编辑器）。</p><p>先用了 SuperPuTTY，体验挺差，真不如用 cli。差点忘了我有 ArchWSL，于是直接 <code>sudo pacman -S openssl</code> 了（。后来转 linux 后就没 ssh 这烦恼了。</p><p>说回来，其实 windows 好像是有自带(?) ssh 的。</p><p>用法：<code>ssh root@ip [-p port]</code></p>
+</details><h4 id="别名">别名</h4><p>建立一个 <em>别名 -&gt; VPS(用户 + ip + 端口)</em> 的映射关系。</p><div class="ap-code ap-code--ln" style="--ap-ln-w:1ch"><div class="ap-code__tools"><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-text"><span class="line"><span># edit ~/.ssh/config</span></span>
 <span class="line"><span>Host &#x3C;name></span></span>
 <span class="line"><span>  User root</span></span>
 <span class="line"><span>  Hostname &#x3C;ip></span></span>
-<span class="line"><span>  Port 22</span></span></code></pre></div>
-<h4 id="添加公钥">添加公钥</h4>
-<p>由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。</p>
-<div class="ap-tabs">
+<span class="line"><span>  Port 22</span></span></code></pre></div><h4 id="添加公钥">添加公钥</h4><p>由于 vps 暴露在公网，因此需要复杂的密码，但我肯定不想每次登录都需要输那么一长串的密码，因此需要将公钥添加到 vps。</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-tabs-1-1" checked>
 <label class="ap-tabs__label" for="ap-tab-1">自动添加</label>
 <div class="ap-tab" data-title="自动添加">
@@ -379,27 +127,20 @@
 <div class="ap-tab" data-title="手动复制">
 <p><code>cat ~/.ssh/id_*.pub</code> 并复制，再粘贴到 vps 的 <code>~/.ssh/authorized_keys</code> 内。</p>
 </div>
-</div>
-<h4 id="允许-root">允许 root</h4>
-<p>一般的 vps 都是允许 root 登录的，但是像 azure 这些“大厂”则不行。所以需要用户进去改 ssh 配置。</p>
-<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</div><h4 id="允许-root">允许 root</h4><p>一般的 vps 都是允许 root 登录的，但是像 azure 这些“大厂”则不行。所以需要用户进去改 ssh 配置。</p><div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> vim</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> /etc/ssh/sshd_config</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置：</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># PermitRootLogin yes</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># PasswordAuthentication yes</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># PubkeyAuthentication yes</span></span>
-<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> restart</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> sshd</span></span></code></pre></div>
-<h3 id="端口转发">端口转发</h3>
-<p>将来自端口 <code>&lt;from&gt;</code> 的流量转发到 <code>&lt;to&gt;</code></p>
-<div class="ap-tabs">
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> restart</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> sshd</span></span></code></pre></div><h3 id="端口转发">端口转发</h3><p>将来自端口 <code>&lt;from&gt;</code> 的流量转发到 <code>&lt;to&gt;</code></p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-3" name="ap-tabs-tabs-2-2" checked>
 <label class="ap-tabs__label" for="ap-tab-3">socat</label>
 <div class="ap-tab" data-title="socat">
 <div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">socat</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> TCP-LISTEN:</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">fro</span><span style="color:#24292E;--shiki-dark:#E1E4E8">m</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#032F62;--shiki-dark:#9ECBFF">,reuseaddr,fork</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> TCP:localhost:</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">t</span><span style="color:#24292E;--shiki-dark:#E1E4E8">o</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#6A737D;--shiki-dark:#6A737D"> # 最简型</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">socat</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -dd</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -lf</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">log_fil</span><span style="color:#24292E;--shiki-dark:#E1E4E8">e</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#032F62;--shiki-dark:#9ECBFF"> TCP-LISTEN:</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">fro</span><span style="color:#24292E;--shiki-dark:#E1E4E8">m</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#032F62;--shiki-dark:#9ECBFF">,reuseaddr,fork</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> TCP:localhost:</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">t</span><span style="color:#24292E;--shiki-dark:#E1E4E8">o</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 复杂型</span></span>
-<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">socat</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -dd</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -lf</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">log_fil</span><span style="color:#24292E;--shiki-dark:#E1E4E8">e</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -F</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> port_forwarding.conf</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 泛用型</span></span></code></pre></div>
-<p>socat 默认在终端前台进行端口转发，需要后台运行的话可以<a href="https://unix.stackexchange.com/a/658320" class="ap-external">写个服务</a>，或者<a href="../linux/package#tmux">终端复用</a>。</p>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">socat</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -dd</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -lf</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">log_fil</span><span style="color:#24292E;--shiki-dark:#E1E4E8">e</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -F</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> port_forwarding.conf</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 泛用型</span></span></code></pre></div><p>socat 默认在终端前台进行端口转发，需要后台运行的话可以<a href="https://unix.stackexchange.com/a/658320" class="ap-external">写个服务</a>，或者<a href="../linux/package#multiplexer">终端复用</a>。</p>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-4" name="ap-tabs-tabs-2-2">
 <label class="ap-tabs__label" for="ap-tab-4">firewalld</label>
@@ -407,37 +148,21 @@
 <div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">firewall-cmd</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> --add-forward-port=port=</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF">from</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#005CC5;--shiki-dark:#79B8FF">:proto=udp:toport=</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF">to</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#005CC5;--shiki-dark:#79B8FF"> --permanent</span></span></code></pre></div>
 </div>
-</div>
-<h2 id="我的设置">我的设置</h2>
-<ol>
-<li><a href="https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes" class="ap-external">增加 UDP Buffer Sizes</a></li>
-<li>如果 VPS 没开 bbr 记得开。（<a href="../linux/install_and_config#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">参考 11. sysctl 相关</a>）</li>
-</ol>
-<h2 id="安全性">安全性</h2>
-<p>VPS 的公网 ip 会带来安全性问题，不过尝试登录的多，真正攻进去的也几乎没有。</p>
-<h3 id="自检">自检</h3>
-<ul>
+</div><h2 id="我的设置">我的设置</h2><ol>
+<li><a href="https://github.com/quic-go/quic-go/wiki/UDP-Buffer-Sizes" class="ap-external">增加 UDP Buffer Sizes</a></li><li>如果 VPS 没开 bbr 记得开。（<a href="../linux/install_and_config#%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE">参考 11. sysctl 相关</a>）</li>
+</ol><h2 id="安全性">安全性</h2><p>VPS 的公网 ip 会带来安全性问题，不过尝试登录的多，真正攻进去的也几乎没有。</p><h3 id="自检">自检</h3><ul>
 <li>可以在 <code>/var/log/auth.log</code> 中查看登录日志。我的日志里的攻击记录非常多。
 <ul>
 <li><code>less /var/log/auth.log | grep -i 'accepted'</code> 可以查看登录成功的记录，看看是不是自己的 ip。</li>
 </ul>
-</li>
-<li><code>ps aux | grep sshd</code> 查看有没有除自己以外的 <code>sshd: root [.*]</code> 类型的进程。
+</li><li><code>ps aux | grep sshd</code> 查看有没有除自己以外的 <code>sshd: root [.*]</code> 类型的进程。
 <ul>
 <li><code>ps aux | grep 'sshd' | grep -v 'root@pts/0\|grep\|/sbin/sshd' | awk '{print $2}' | xargs kill -9</code> 可以杀掉这些进程。（很粗糙了属于是）</li>
 </ul>
-</li>
-<li><code>lastb -9</code> 可以查看最近 9 条登录失败记录</li>
-</ul>
-<h3 id="解法">解法</h3>
-<ul>
-<li>可以通过修改 <code>/etc/ssh/sshd_config</code> 中的内容进行限制，例如修改 <code>MaxAuthTries</code>。</li>
-<li>密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。</li>
-<li>限制登录 ip。修改 <code>/etc/hosts.allow</code> &amp; <code>/etc/hosts.deny</code> 文件。</li>
-<li>尝试 fail2ban 等软件。（这个我不会用）</li>
-</ul>
-<h4 id="防火墙">防火墙</h4>
-<div class="ap-tabs">
+</li><li><code>lastb -9</code> 可以查看最近 9 条登录失败记录</li>
+</ul><h3 id="解法">解法</h3><ul>
+<li>可以通过修改 <code>/etc/ssh/sshd_config</code> 中的内容进行限制，例如修改 <code>MaxAuthTries</code>。</li><li>密码位数太少也不安全。一个简单的方法是将你的密码重复两遍。</li><li>限制登录 ip。修改 <code>/etc/hosts.allow</code> &amp; <code>/etc/hosts.deny</code> 文件。</li><li>尝试 fail2ban 等软件。（这个我不会用）</li>
+</ul><h4 id="防火墙">防火墙</h4><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-5" name="ap-tabs-tabs-3-3" checked>
 <label class="ap-tabs__label" for="ap-tab-5">firewalld</label>
 <div class="ap-tab" data-title="firewalld">
@@ -455,81 +180,32 @@
 <div class="ap-tab" data-title="nftables">
 <p><a href="https://wiki.archlinuxcn.org/wiki/Nftables" class="ap-external">查看 wiki</a></p>
 </div>
-</div>
-<h2 id="代理">代理</h2>
-<p><strong>不要把证书放在 <code>/root</code> ！！！</strong> 我又不能改 <code>/root</code> 权限，代理服务端又会出一大堆权限问题，日志还不好看。</p>
-<h3 id="协议">协议</h3>
-<p>网上小白教程比较多的是 vmess/vless + ws + tls 的方案，这些协议比较老，基本被打烂了。我选择 trojan，也是一个比较常见的方案，相对来说安全性更高。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在也存在着 trojan 检测技术。</p>
-<p>我最开始直接用 <a href="https://github.com/Jrohy/trojan" class="ap-external">trojan 一键脚本</a><sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup>。如 <a href="#%E5%AF%B9%E6%8A%97-gfw">GFW 会主动对端口进行封禁</a>，我的端口基本只能存活一天。（后来做了端口转发就基本没死了，偶尔会被 Qos(?)）</p>
-<p>随着后来自己也使用 linux，我对于一键脚本不够满意，因此开始<a href="trojan">自己写 trojan/trojan-go 配置文件</a>。也尝试了一下 hysteria 协议，并且写了个<a href="hysteria">教程</a>。</p>
-<p>评价起来就是，hysteria 延迟最低，trojan-go 小幅度落后，差得不多。trojan 延迟比较大，但是胜在兼容性强。而 hysteria 风险较大，没必要为了几十 ms 延迟去冒险，因此还是 trojan-go 适合我。</p>
-<h3 id="脚本">脚本</h3>
-<ul>
-<li><a href="https://github.com/lxl66566/init-script" class="ap-external">我的一键脚本</a>：linux 常用工具，trojan-go, trojan, hysteria</li>
-<li><a href="https://github.com/233boy/v2ray" class="ap-external">V2ray 脚本</a>：融合怪，啥都有</li>
-<li><a href="https://github.com/Jrohy/trojan" class="ap-external">trojan 脚本</a>：仅 trojan</li>
-</ul>
-<h3 id="warp">WARP</h3>
-<p>有的 IP 访问 Google 时会有机器人异常验证。可以用 <a href="https://github.com/P3TERX/warp.sh" class="ap-external">WARP 一键脚本</a>解决。</p>
-<h3 id="对抗-gfw">对抗 GFW</h3>
-<p>GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 ip 被永久封禁的风险。trojan 本身是 TLS over TLS 加密方式，但仍然有办法识别出流量特征。</p>
-<p>我使用如下方式降低封锁几率（<strong>有没有用其实是不太清楚的</strong>）：</p>
-<ul>
-<li>反代一个伪装主页，详见<a href="../reverse_proxy">反向代理</a>。（然而 443 早就被封了，令人感慨）</li>
-<li>设置一个固定端口与一个活动端口，固定端口将流量<a href="#%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91">转发</a>到活动端口。</li>
-</ul>
-<h3 id="清理僵尸进程">清理僵尸进程</h3>
-<p>如果你看到许多 <code>[journalctl] &lt;defunct&gt;</code> 标识，这代表有未结束的僵尸子进程。可以<a href="https://www.linkedin.com/pulse/how-identify-kill-zombiedefunct-processes-linux-without-george-gabra" class="ap-external">参考此处</a>清理他们。</p>
-<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</div><h2 id="代理">代理</h2><p><strong>不要把证书放在 <code>/root</code> ！！！</strong> 我又不能改 <code>/root</code> 权限，代理服务端又会出一大堆权限问题，日志还不好看。</p><h3 id="协议">协议</h3><p>网上小白教程比较多的是 vmess/vless + ws + tls 的方案，这些协议比较老，基本被打烂了。我选择 trojan，也是一个比较常见的方案，相对来说安全性更高。trojan 使用 TLS 加密方案，安全性高，但是数据包比较大，现在也存在着 trojan 检测技术。</p><p>我最开始直接用 <a href="https://github.com/Jrohy/trojan" class="ap-external">trojan 一键脚本</a><sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup>。如 <a href="#%E5%AF%B9%E6%8A%97-gfw">GFW 会主动对端口进行封禁</a>，我的端口基本只能存活一天。（后来做了端口转发就基本没死了，偶尔会被 Qos(?)）</p><p>随着后来自己也使用 linux，我对于一键脚本不够满意，因此开始<a href="trojan">自己写 trojan/trojan-go 配置文件</a>。也尝试了一下 hysteria 协议，并且写了个<a href="hysteria">教程</a>。</p><p>评价起来就是，hysteria 延迟最低，trojan-go 小幅度落后，差得不多。trojan 延迟比较大，但是胜在兼容性强。而 hysteria 风险较大，没必要为了几十 ms 延迟去冒险，因此还是 trojan-go 适合我。</p><h3 id="脚本">脚本</h3><ul>
+<li><a href="https://github.com/lxl66566/init-script" class="ap-external">我的一键脚本</a>：linux 常用工具，trojan-go, trojan, hysteria</li><li><a href="https://github.com/233boy/v2ray" class="ap-external">V2ray 脚本</a>：融合怪，啥都有</li><li><a href="https://github.com/Jrohy/trojan" class="ap-external">trojan 脚本</a>：仅 trojan</li>
+</ul><h3 id="warp">WARP</h3><p>有的 IP 访问 Google 时会有机器人异常验证。可以用 <a href="https://github.com/P3TERX/warp.sh" class="ap-external">WARP 一键脚本</a>解决。</p><h3 id="对抗-gfw">对抗 GFW</h3><p>GFW 检测到异常就会封禁端口，若换端口继续使用则需要考虑 ip 被永久封禁的风险。trojan 本身是 TLS over TLS 加密方式，但仍然有办法识别出流量特征。</p><p>我使用如下方式降低封锁几率（<strong>有没有用其实是不太清楚的</strong>）：</p><ul>
+<li>反代一个伪装主页，详见<a href="../reverse_proxy">反向代理</a>。（然而 443 早就被封了，令人感慨）</li><li>设置一个固定端口与一个活动端口，固定端口将流量<a href="#%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91">转发</a>到活动端口。</li>
+</ul><h3 id="清理僵尸进程">清理僵尸进程</h3><p>如果你看到许多 <code>[journalctl] &lt;defunct&gt;</code> 标识，这代表有未结束的僵尸子进程。可以<a href="https://www.linkedin.com/pulse/how-identify-kill-zombiedefunct-processes-linux-without-george-gabra" class="ap-external">参考此处</a>清理他们。</p><div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">top</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -b1</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -n1</span><span style="color:#D73A49;--shiki-dark:#F97583"> |</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> Z</span><span style="color:#6A737D;--shiki-dark:#6A737D">    # find</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">ps</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -A</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -ostat,ppid</span><span style="color:#D73A49;--shiki-dark:#F97583"> |</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -e</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> '[zZ]'</span><span style="color:#D73A49;--shiki-dark:#F97583">|</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> awk</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> '{ print $2 }'</span><span style="color:#D73A49;--shiki-dark:#F97583"> |</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> uniq</span><span style="color:#D73A49;--shiki-dark:#F97583"> |</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> xargs</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> ps</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -p</span><span style="color:#6A737D;--shiki-dark:#6A737D"> # Find the parent of zombie processes, remenber ppid</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">kill</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> SIGCHLD</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF">ppi</span><span style="color:#24292E;--shiki-dark:#E1E4E8">d</span><span style="color:#D73A49;--shiki-dark:#F97583">></span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">top</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -b1</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -n1</span><span style="color:#D73A49;--shiki-dark:#F97583"> |</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> grep</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> Z</span><span style="color:#6A737D;--shiki-dark:#6A737D">    # Identify if the zombie processes have been killed</span></span>
-<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># if haven't been killed, just kill &#x3C;ppid></span></span></code></pre></div>
-<h2 id="运维">运维</h2>
-<p>虽然我非常菜，但还是姑且记录一些心得。由于有的服务器是公家的，想干点啥总是感觉束手束脚。。</p>
-<ol>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># if haven't been killed, just kill &#x3C;ppid></span></span></code></pre></div><h2 id="运维">运维</h2><p>虽然我非常菜，但还是姑且记录一些心得。由于有的服务器是公家的，想干点啥总是感觉束手束脚。。</p><ol>
 <li>如果是自己的服务器，那肯定先把<a href="../../farraginous/recommend_packages#linux">常用工具</a>下载好。
 <ul>
 <li>公家服务器如果有权限安装软件，也可以装一些典型的/极大增加效率的。例如 fish, zoxide</li>
 </ul>
-</li>
-<li>ssh 保活用的 screen 而不是 tmux。<a href="https://linuxize.com/post/how-to-use-linux-screen/" class="ap-external">一些基础命令</a>，加一个<a href="https://stackoverflow.com/a/1509764/18929691" class="ap-external">删除命令</a>，加一个 <code>&lt;C-a&gt; [</code> 进 copy mode 然后可以往上滚的命令。
+</li><li>ssh 保活用的 screen 而不是 tmux。<a href="https://linuxize.com/post/how-to-use-linux-screen/" class="ap-external">一些基础命令</a>，加一个<a href="https://stackoverflow.com/a/1509764/18929691" class="ap-external">删除命令</a>，加一个 <code>&lt;C-a&gt; [</code> 进 copy mode 然后可以往上滚的命令。
 <ul>
 <li>当然不缺配置的话就用 zellij 了。</li>
 </ul>
 </li>
-</ol>
-<h2 id="挂机">挂机</h2>
-<p>VPS 的流量可以共享，并且可以赚点小钱(<a href="https://post.vpslog.org/archives/gua-ji" class="ap-external">src</a>)。为了防止 IP 被污染，一般放在非主要的 VPS 上跑。</p>
-<p>跑挂机的 VPS 就变成美国最抢手了，毕竟 openai 流媒体啥的都能解。（我的 jp 机就没法解 openai）</p>
-<p>一般挂机都拿 docker 跑，我当然！用 <a href="../../coding/container">podman</a> 啦。</p>
-<ul>
+</ol><h2 id="挂机">挂机</h2><p>VPS 的流量可以共享，并且可以赚点小钱(<a href="https://post.vpslog.org/archives/gua-ji" class="ap-external">src</a>)。为了防止 IP 被污染，一般放在非主要的 VPS 上跑。</p><p>跑挂机的 VPS 就变成美国最抢手了，毕竟 openai 流媒体啥的都能解。（我的 jp 机就没法解 openai）</p><p>一般挂机都拿 docker 跑，我当然！用 <a href="../../coding/container">podman</a> 啦。</p><ul>
 <li><a href="https://packetstream.io/?psr=5wA2" class="ap-external">PacketStream</a>：0.1$/G，满 5$ 可提现。
 <ul>
 <li>流量跑得慢，80M / 36h，不过至少可用</li>
 </ul>
-</li>
-<li><s><a href="https://earn.fm/ref/LXZX43NC" class="ap-external">EarnFM</a></s>，不可用：<code>Connection is halted because: This IP is a known proxy connection, therefore its not allowed.</code></li>
-<li><a href="https://link.repocket.co/cwYQ" class="ap-external">repoket</a>: 满 20$ 可提。不可用：<code>Too many devices on the same IPs.</code></li>
-<li><s><a href="https://traffmonetizer.com/?aff=1578168" class="ap-external">traffmonetizer</a></s>,不可用。</li>
-</ul>
-<p>先挂着，到时候再看看收益。</p>
-<h2 id="遇到的问题">遇到的问题</h2>
-<h3 id="无法使用密钥登录">无法使用密钥登录</h3>
-<p>某天服务器突然无法使用密钥验证登录了。查一下日志，发现一句：<code>Authentication refused: bad ownership or modes for directory /root</code>。</p>
-<p>我确实改过 <code>/root</code> 的权限，因此改回 750 即可。</p>
-<h3 id="卡在-reloading-system-manager-configuration">卡在 Reloading system manager configuration</h3>
-<p>archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration，卡大约 1min。</p>
-<p>尝试了一下 <code>systemctl daemon-reload</code> 也卡住了。</p>
-<p>然后根据<a href="https://bbs.archlinux.org/viewtopic.php?id=281599" class="ap-external">这个回答</a>，罪魁祸首是 <code>netplan</code>（<em>netplan</em> 是 <em>cloud-init</em> 的可选依赖。而 <em>cloud-init</em> 是 VPS 自带的玩意）于是卸载，问题解决——</p>
-<p>才怪。服务器重启就连不上 ssh 了。。。</p>
-<p>这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。</p>
-<p>所以这个问题是无解的，或许得等我哪天琢磨出换个 vps 联网手段才行吧。</p>
-<p>ps. 群里也有相同问题的。</p>
-<h3 id="端口被封问题">端口被封问题</h3>
-<p>20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口<s>并显示在伪装页面上</s>映射到 12138（还作出了<a href="#%E5%AF%B9%E6%8A%97-gfw">其他努力</a>）。脚本还是有 bug 的（我菜），<code>$temp</code> 赋值不成功，但无伤大雅。</p>
-<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="sh" style="--ap-ln-w:2ch;counter-reset:ap-lines 16"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li><s><a href="https://earn.fm/ref/LXZX43NC" class="ap-external">EarnFM</a></s>，不可用：<code>Connection is halted because: This IP is a known proxy connection, therefore its not allowed.</code></li><li><a href="https://link.repocket.co/cwYQ" class="ap-external">repoket</a>: 满 20$ 可提。不可用：<code>Too many devices on the same IPs.</code></li><li><s><a href="https://traffmonetizer.com/?aff=1578168" class="ap-external">traffmonetizer</a></s>,不可用。</li>
+</ul><p>先挂着，到时候再看看收益。</p><h2 id="遇到的问题">遇到的问题</h2><h3 id="无法使用密钥登录">无法使用密钥登录</h3><p>某天服务器突然无法使用密钥验证登录了。查一下日志，发现一句：<code>Authentication refused: bad ownership or modes for directory /root</code>。</p><p>我确实改过 <code>/root</code> 的权限，因此改回 750 即可。</p><h3 id="卡在-reloading-system-manager-configuration">卡在 Reloading system manager configuration</h3><p>archlinux 的服务器，每次安装软件都卡在 Reloading system manager configuration，卡大约 1min。</p><p>尝试了一下 <code>systemctl daemon-reload</code> 也卡住了。</p><p>然后根据<a href="https://bbs.archlinux.org/viewtopic.php?id=281599" class="ap-external">这个回答</a>，罪魁祸首是 <code>netplan</code>（<em>netplan</em> 是 <em>cloud-init</em> 的可选依赖。而 <em>cloud-init</em> 是 VPS 自带的玩意）于是卸载，问题解决——</p><p>才怪。服务器重启就连不上 ssh 了。。。</p><p>这就不得不说，我这次买的 vps，silicloud 家的并没有 rescue 服务。还好我乱搞炸的是网络而不是系统，用 VNC 面板进去修就行了。</p><p>所以这个问题是无解的，或许得等我哪天琢磨出换个 vps 联网手段才行吧。</p><p>ps. 群里也有相同问题的。</p><h3 id="端口被封问题">端口被封问题</h3><p>20230520：端口每天被封一次，于是写了个 fish 脚本每天更换端口<s>并显示在伪装页面上</s>映射到 12138（还作出了<a href="#%E5%AF%B9%E6%8A%97-gfw">其他努力</a>）。脚本还是有 bug 的（我菜），<code>$temp</code> 赋值不成功，但无伤大雅。</p><div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="sh" style="--ap-ln-w:2ch;counter-reset:ap-lines 16"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-1">
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># fish function</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">function</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> new_trojan_port</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> --description </span><span style="color:#032F62;--shiki-dark:#9ECBFF">'change to a new trojan port'</span></span>
@@ -547,49 +223,27 @@
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # sed -i "s/MyGitHub/$trojan_port/g" index.html</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">    nginx</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -s</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> reload</span></span>
 <span class="line ap-collapsible"><span style="color:#D73A49;--shiki-dark:#F97583">end</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-1"></label>
-</div>
-<p>不应同时使用 firewalld 和 iptables，可能会导致混乱。由于 <code>firewalld</code> 是更高一层的抽象(?)，因此我使用之：</p>
-<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</div><p>不应同时使用 firewalld 和 iptables，可能会导致混乱。由于 <code>firewalld</code> 是更高一层的抽象(?)，因此我使用之：</p><div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> stop</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> iptables</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> disable</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> iptables</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> mask</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> iptables</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> unmask</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> firewalld</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> enable</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> firewalld</span></span>
-<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> firewalld</span></span></code></pre></div>
-<p>后来采用<a href="#%E5%AF%B9%E6%8A%97-gfw">端口转发和伪装</a>后就没被封过端口了 www</p>
-<h3 id="配置了错误的-firewalld-把自己防住了">配置了错误的 firewalld 把自己防住了</h3>
-<p>20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 reload，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...</p>
-<blockquote>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">systemctl</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> start</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> firewalld</span></span></code></pre></div><p>后来采用<a href="#%E5%AF%B9%E6%8A%97-gfw">端口转发和伪装</a>后就没被封过端口了 www</p><h3 id="配置了错误的-firewalld-把自己防住了">配置了错误的 firewalld 把自己防住了</h3><p>20230516：如题，乱搞 firewalld，结果忘记放行 22 端口（ssh）直接 reload，直接把我 ssh 干掉了。。。然后进 rescue mode 抢救了...</p><blockquote>
 <p>rescue mode 是 VPS 服务商的一项服务，可以将 VPS 挂载到另一个虚拟机上，通过其对文件进行备份与修改，适用于乱搞把 VPS 搞炸了的情况。</p>
-</blockquote>
-<p>rescue 只有 nano file editor；挂载了分区到 <code>test</code> 以后，直接 <code>nano /test/etc/firewalld/zones/public.xml</code> 加上 <code>&lt;port port=&quot;22&quot; protocol=&quot;tcp&quot;/&gt;</code>。</p>
-<h3 id="x-ui-does-not-work">X-UI does not work</h3>
-<p>我小白一个，只会跟着用简单的一键部署脚本，然后寄了。面板添加节点后，使用 v2rayN 添加服务器无法连上。</p>
-<p>后面换了 <a href="https://github.com/Jrohy/trojan" class="ap-external">trojan 面板</a>，能正常用一阵子，但稳定性一般。</p>
-<p>顺带，x-ui 在 alpine 的表现可谓是《惊艳》到我了，，，</p>
-<blockquote>
+</blockquote><p>rescue 只有 nano file editor；挂载了分区到 <code>test</code> 以后，直接 <code>nano /test/etc/firewalld/zones/public.xml</code> 加上 <code>&lt;port port=&quot;22&quot; protocol=&quot;tcp&quot;/&gt;</code>。</p><h3 id="x-ui-does-not-work">X-UI does not work</h3><p>我小白一个，只会跟着用简单的一键部署脚本，然后寄了。面板添加节点后，使用 v2rayN 添加服务器无法连上。</p><p>后面换了 <a href="https://github.com/Jrohy/trojan" class="ap-external">trojan 面板</a>，能正常用一阵子，但稳定性一般。</p><p>顺带，x-ui 在 alpine 的表现可谓是《惊艳》到我了，，，</p><blockquote>
 <p>~# x-ui install<br/> &gt; [ERR] 面板启动失败，可能是因为启动时间超过了两秒，请稍后查看日志信息<br>
 ~# x-ui log<br/> &gt; [ERR] 请先安装面板</p>
-</blockquote>
-<h2 id="external">external</h2>
-<ol>
-<li><a href="https://bulianglin.com/archives/guide.html" class="ap-external">节点搭建系列教程 - 不良林</a>，在一众垃圾 youtube 教程中算是讲得比较透彻的。</li>
-<li><a href="https://gitlab.com/drizzt/vps2arch" class="ap-external">vps2arch</a>：为你的 vps 安装 arch！</li>
-<li><a href="https://blog.misaka.rest/2023/09/02/hysteria2-script/" class="ap-external">使用一键脚本，部署 Hysteria 2 协议节点</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
+</blockquote><h2 id="external">external</h2><ol>
+<li><a href="https://bulianglin.com/archives/guide.html" class="ap-external">节点搭建系列教程 - 不良林</a>，在一众垃圾 youtube 教程中算是讲得比较透彻的。</li><li><a href="https://gitlab.com/drizzt/vps2arch" class="ap-external">vps2arch</a>：为你的 vps 安装 arch！</li><li><a href="https://blog.misaka.rest/2023/09/02/hysteria2-script/" class="ap-external">使用一键脚本，部署 Hysteria 2 协议节点</a></li>
+</ol><hr class="footnotes-sep"><section class="footnotes">
 <ol class="footnotes-list">
 <li id="footnote1" class="footnote-item"><p>本想买 CloudServer 的（明显同价位的配置更好），然而账号被标记了危险无法付款...因此只能退而求其次买了 RackNerd 家的。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p>本来是想用 X-UI 的，然而<a href="#x-ui-does-not-work">出了问题</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li><li id="footnote2" class="footnote-item"><p>本来是想用 X-UI 的，然而<a href="#x-ui-does-not-work">出了问题</a> <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
-</section>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/articles/proxy/vps","locale":"root","title":"VPS","headings":[{"level":1,"text":"VPS","slug":"vps"},{"level":2,"text":"个人偏好","slug":"个人偏好"},{"level":2,"text":"购买","slug":"购买"},{"level":3,"text":"消息来源","slug":"消息来源"},{"level":3,"text":"我买到的","slug":"我买到的"},{"level":3,"text":"白嫖","slug":"白嫖"},{"level":2,"text":"工具","slug":"工具"},{"level":3,"text":"SSH","slug":"ssh"},{"level":4,"text":"别名","slug":"别名"},{"level":4,"text":"添加公钥","slug":"添加公钥"},{"level":4,"text":"允许 root","slug":"允许-root"},{"level":3,"text":"端口转发","slug":"端口转发"},{"level":2,"text":"我的设置","slug":"我的设置"},{"level":2,"text":"安全性","slug":"安全性"},{"level":3,"text":"自检","slug":"自检"},{"level":3,"text":"解法","slug":"解法"},{"level":4,"text":"防火墙","slug":"防火墙"},{"level":2,"text":"代理","slug":"代理"},{"level":3,"text":"协议","slug":"协议"},{"level":3,"text":"脚本","slug":"脚本"},{"level":3,"text":"WARP","slug":"warp"},{"level":3,"text":"对抗 GFW","slug":"对抗-gfw"},{"level":3,"text":"清理僵尸进程","slug":"清理僵尸进程"},{"level":2,"text":"运维","slug":"运维"},{"level":2,"text":"挂机","slug":"挂机"},{"level":2,"text":"遇到的问题","slug":"遇到的问题"},{"level":3,"text":"无法使用密钥登录","slug":"无法使用密钥登录"},{"level":3,"text":"卡在 Reloading system manager configuration","slug":"卡在-reloading-system-manager-configuration"},{"level":3,"text":"端口被封问题","slug":"端口被封问题"},{"level":3,"text":"配置了错误的 firewalld 把自己防住了","slug":"配置了错误的-firewalld-把自己防住了"},{"level":3,"text":"X-UI does not work","slug":"x-ui-does-not-work"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-05-14","category":["教程","经历"],"tag":["桌面端","Linux"],"icon":"solid/computer"},"createdAt":"2023-05-14T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":17,"excerpt":"VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…"},"related":[{"route":"/articles/linux/","title":"linux","refs":2,"links":[{"route":"/articles/linux/install_and_config","refs":1},{"route":"/articles/linux/package","refs":1}]},{"route":"/articles/linux/install_and_config","title":"安装、配置与使用（Arch 篇）","refs":1,"links":[{"route":"/articles/linux/package","refs":7},{"route":"/articles/linux/","refs":1},{"route":"/coding/container","refs":1},{"route":"/coding/Git","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":1,"links":[{"route":"/articles/linux/install_and_config","refs":7},{"route":"/articles/linux/","refs":1},{"route":"/articles/proxy/hysteria","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/proxy/","title":"代理","refs":1,"links":[{"route":"/articles/proxy/hysteria","refs":2},{"route":"/farraginous/recommend_packages","refs":2},{"route":"/articles/proxy/trojan","refs":1}]},{"route":"/articles/proxy/hysteria","title":"Hysteria","refs":1,"links":[{"route":"/articles/proxy/","refs":2},{"route":"/articles/linux/package","refs":1},{"route":"/articles/reverse_proxy","refs":1}]},{"route":"/articles/proxy/trojan","title":"Trojan","refs":1,"links":[{"route":"/articles/proxy/","refs":1}]},{"route":"/articles/reverse_proxy","title":"反向代理","refs":1,"links":[{"route":"/articles/proxy/hysteria","refs":1}]},{"route":"/coding/container","title":"容器","refs":1,"links":[{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/coding/Git","title":"Git","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":2},{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":1,"links":[{"route":"/articles/proxy/","refs":2},{"route":"/coding/Git","refs":2},{"route":"/articles/linux/install_and_config","refs":1},{"route":"/articles/linux/package","refs":1}]},{"route":"/hide/memories","title":"我的回忆录","refs":1}]}</script>
-<script type="module" src="../../assets/entry-DOpyHYQg.js"></script>
+</section><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/articles/proxy/vps","locale":"root","title":"VPS","headings":[{"level":1,"text":"VPS","slug":"vps"},{"level":2,"text":"个人偏好","slug":"个人偏好"},{"level":2,"text":"购买","slug":"购买"},{"level":3,"text":"消息来源","slug":"消息来源"},{"level":3,"text":"我买到的","slug":"我买到的"},{"level":3,"text":"白嫖","slug":"白嫖"},{"level":2,"text":"工具","slug":"工具"},{"level":3,"text":"SSH","slug":"ssh"},{"level":4,"text":"别名","slug":"别名"},{"level":4,"text":"添加公钥","slug":"添加公钥"},{"level":4,"text":"允许 root","slug":"允许-root"},{"level":3,"text":"端口转发","slug":"端口转发"},{"level":2,"text":"我的设置","slug":"我的设置"},{"level":2,"text":"安全性","slug":"安全性"},{"level":3,"text":"自检","slug":"自检"},{"level":3,"text":"解法","slug":"解法"},{"level":4,"text":"防火墙","slug":"防火墙"},{"level":2,"text":"代理","slug":"代理"},{"level":3,"text":"协议","slug":"协议"},{"level":3,"text":"脚本","slug":"脚本"},{"level":3,"text":"WARP","slug":"warp"},{"level":3,"text":"对抗 GFW","slug":"对抗-gfw"},{"level":3,"text":"清理僵尸进程","slug":"清理僵尸进程"},{"level":2,"text":"运维","slug":"运维"},{"level":2,"text":"挂机","slug":"挂机"},{"level":2,"text":"遇到的问题","slug":"遇到的问题"},{"level":3,"text":"无法使用密钥登录","slug":"无法使用密钥登录"},{"level":3,"text":"卡在 Reloading system manager configuration","slug":"卡在-reloading-system-manager-configuration"},{"level":3,"text":"端口被封问题","slug":"端口被封问题"},{"level":3,"text":"配置了错误的 firewalld 把自己防住了","slug":"配置了错误的-firewalld-把自己防住了"},{"level":3,"text":"X-UI does not work","slug":"x-ui-does-not-work"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-05-14","category":["教程","经历"],"tag":["桌面端","Linux"],"icon":"solid/computer"},"createdAt":"2023-05-14T00:00:00.000Z","updatedAt":"2026-11-09T03:35:41+08:00","readingTime":17,"excerpt":"VPS 我与我的 VPS 的故事。服务器运维/代理搭建。 与 VPS 无关的 linux 问题请移步 linux 个人偏好 带宽偏好：我个人入户只有 100Mbps，所以不低于 100Mbps 我都能接受。国内云厂商那堆小水管还是算了吧。 地点偏好：我有明确的地点偏好：JP。 我对延迟有一定要求，所以 US 全部 ou…"},"related":[{"route":"/articles/linux/","title":"linux","refs":2,"links":[{"route":"/articles/linux/install_and_config","refs":1},{"route":"/articles/linux/package","refs":1}]},{"route":"/articles/linux/install_and_config","title":"安装、配置与使用（Arch 篇）","refs":1,"links":[{"route":"/articles/linux/package","refs":7},{"route":"/articles/linux/","refs":1},{"route":"/coding/container","refs":1},{"route":"/coding/Git","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":1,"links":[{"route":"/articles/linux/install_and_config","refs":7},{"route":"/articles/linux/","refs":1},{"route":"/articles/proxy/hysteria","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/proxy/","title":"代理","refs":1,"links":[{"route":"/articles/proxy/hysteria","refs":2},{"route":"/farraginous/recommend_packages","refs":2},{"route":"/articles/proxy/trojan","refs":1}]},{"route":"/articles/proxy/hysteria","title":"Hysteria","refs":1,"links":[{"route":"/articles/proxy/","refs":2},{"route":"/articles/linux/package","refs":1},{"route":"/articles/reverse_proxy","refs":1}]},{"route":"/articles/proxy/trojan","title":"Trojan","refs":1,"links":[{"route":"/articles/proxy/","refs":1}]},{"route":"/articles/reverse_proxy","title":"反向代理","refs":1,"links":[{"route":"/articles/proxy/hysteria","refs":1}]},{"route":"/coding/container","title":"容器","refs":1,"links":[{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/coding/Git","title":"Git","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":2},{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":1,"links":[{"route":"/articles/proxy/","refs":2},{"route":"/coding/Git","refs":2},{"route":"/articles/linux/install_and_config","refs":1},{"route":"/articles/linux/package","refs":1}]},{"route":"/hide/memories","title":"我的回忆录","refs":1}]}</script>
+<script type="module" src="../../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

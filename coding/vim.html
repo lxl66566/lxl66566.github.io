@@ -1,78 +1,34 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>vim | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="vim vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 #总结 。 vim 操作学习 for beginner 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助： a…">
-<link rel="canonical" href="https://absx.pages.dev/coding/vim">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="vim | 绝对值_x 的博客">
-<meta property="og:description" content="vim vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 #总结 。 vim 操作学习 for beginner 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助： a…">
-<meta property="og:url" content="https://absx.pages.dev/coding/vim">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>vim | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="vim vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 #总结 。 vim 操作学习 for beginner 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助： a…"><link rel="canonical" href="https://absx.pages.dev/coding/vim"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="vim | 绝对值_x 的博客"><meta property="og:description" content="vim vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 #总结 。 vim 操作学习 for beginner 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助： a…"><meta property="og:url" content="https://absx.pages.dev/coding/vim"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"vim","url":"https://absx.pages.dev/coding/vim","mainEntityOfPage":"https://absx.pages.dev/coding/vim","description":"vim vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 #总结 。 vim 操作学习 for beginner 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助： a…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-03-05T00:00:00.000Z","dateModified":"2026-10-20T23:12:44+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="vim">vim</h1>
-<p>vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 <a href="#%E6%80%BB%E7%BB%93">#总结</a>。</p>
-<h2 id="vim-操作学习">vim 操作学习</h2>
-<h3 id="for-beginner">for beginner</h3>
-<p>如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助：</p>
-<ol>
-<li><code>a</code> or <code>i</code> 开启编辑。</li>
-<li><code>&lt;ESC&gt;:wq</code> 保存并退出。</li>
-</ol>
-<h3 id="常用组合键">常用组合键</h3>
-<ul>
-<li><code>A</code> = <code>$a</code>, <code>I</code> = <code>0i</code></li>
-<li><code>*</code> 是当前单词的下一个匹配项</li>
-<li><code>yyp</code> 复制当前行并粘贴到下一行。我的数据记录需要频繁使用此功能。</li>
-<li><code>daw</code> delete a word()</li>
-<li><code>f{char}</code> search next char，使用 <code>;</code> 可以继续搜索</li>
-<li><code>w</code>,<code>e</code>,<code>W</code>,<code>E</code>,<code>b</code> 一些移动光标的操作。前四个都是向后移动，大写的会快一点（空格分隔）。<code>b</code> 是向前移动。
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="vim">vim</h1><p>vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 <a href="#%E6%80%BB%E7%BB%93">#总结</a>。</p><h2 id="vim-操作学习">vim 操作学习</h2><h3 id="for-beginner">for beginner</h3><p>如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助：</p><ol>
+<li><code>a</code> or <code>i</code> 开启编辑。</li><li><code>&lt;ESC&gt;:wq</code> 保存并退出。</li>
+</ol><h3 id="常用组合键">常用组合键</h3><ul>
+<li><code>A</code> = <code>$a</code>, <code>I</code> = <code>0i</code></li><li><code>*</code> 是当前单词的下一个匹配项</li><li><code>yyp</code> 复制当前行并粘贴到下一行。我的数据记录需要频繁使用此功能。</li><li><code>daw</code> delete a word()</li><li><code>f{char}</code> search next char，使用 <code>;</code> 可以继续搜索</li><li><code>w</code>,<code>e</code>,<code>W</code>,<code>E</code>,<code>b</code> 一些移动光标的操作。前四个都是向后移动，大写的会快一点（空格分隔）。<code>b</code> 是向前移动。
 <blockquote>
 <p>我不是很想记它们的具体移动方式。能用就行，但是光标移动确实是 vim 增加效率的很重要的一环。</p>
 </blockquote>
-</li>
-<li>替换：参考<a href="http://yyq123.blogspot.com/2011/10/vim-substitute.html" class="ap-external">此处</a>。。<s>感觉不如 vscode ctrl+f</s></li>
-<li>加括号：选中括号头位置，<code>ysw</code>,<code>yse</code>...（不太好用）</li>
-<li><code>vi(</code> 选中括号内内容，不包括括号本身。<code>va(</code> 选中包括括号本身。括号可以用各种符号（<code>[</code>, <code>`</code>, etc）代替。
+</li><li>替换：参考<a href="http://yyq123.blogspot.com/2011/10/vim-substitute.html" class="ap-external">此处</a>。。<s>感觉不如 vscode ctrl+f</s></li><li>加括号：选中括号头位置，<code>ysw</code>,<code>yse</code>...（不太好用）</li><li><code>vi(</code> 选中括号内内容，不包括括号本身。<code>va(</code> 选中包括括号本身。括号可以用各种符号（<code>[</code>, <code>`</code>, etc）代替。
 <ul>
 <li>同理，<code>c</code>, <code>d</code>, <code>y</code> 也能代替 <code>v</code>。</li>
 </ul>
-</li>
-<li><code>g</code> 开头的：
+</li><li><code>g</code> 开头的：
 <ul>
-<li><code>g</code> + j/k/0/$/m... 跳转视觉行的位置，而不是实际行。</li>
-<li><code>gd</code>：go definition，相当于 ctrl + 左键单击</li>
+<li><code>g</code> + j/k/0/$/m... 跳转视觉行的位置，而不是实际行。</li><li><code>gd</code>：go definition，相当于 ctrl + 左键单击</li>
 </ul>
 </li>
-</ul>
-<p>vscode vim 特有：</p>
-<ul>
-<li><code>&lt;C-q&gt;</code> 进入 visual block，选中区域后使用 <code>I</code> 进行多行输入 / 删除。</li>
-<li><code>gb</code> 是多光标，添加下一个相同单词到多光标。然后就可以用 <code>A</code> 或 <code>I</code> 进入 insert 修改。</li>
-</ul>
-<h2 id="vscodevim">VSCodeVim</h2>
-<p>由于我主要使用 VSCode 作为编辑器，所以基本上都在用 VSCodeVim。也有使用 neovim 完全替换 vscode 的尝试（见下文），不过最终都宣告失败。</p>
-<p>首先我必须说，VSCodeVim 的开发者<strong>根本不懂中文和输入法</strong>，issue 区里积攒了一大堆的 IME issue 都没人去解决，PR 也都晾着。我实在是受不了了，直接进行了一个 fork：<a href="https://github.com/lxl66566/VSCodeVim" class="ap-external">lxl66566/VSCodeVim</a>，修了很多 bug，还实现了 easymotion 的 pinyin。</p>
-<p>我的配置：</p>
-<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="json" style="--ap-ln-w:2ch;counter-reset:ap-lines 89"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</ul><p>vscode vim 特有：</p><ul>
+<li><code>&lt;C-q&gt;</code> 进入 visual block，选中区域后使用 <code>I</code> 进行多行输入 / 删除。</li><li><code>gb</code> 是多光标，添加下一个相同单词到多光标。然后就可以用 <code>A</code> 或 <code>I</code> 进入 insert 修改。</li>
+</ul><h2 id="vscodevim">VSCodeVim</h2><p>由于我主要使用 VSCode 作为编辑器，所以基本上都在用 VSCodeVim。也有使用 neovim 完全替换 vscode 的尝试（见下文），不过最终都宣告失败。</p><p>首先我必须说，VSCodeVim 的开发者<strong>根本不懂中文和输入法</strong>，issue 区里积攒了一大堆的 IME issue 都没人去解决，PR 也都晾着。我实在是受不了了，直接进行了一个 fork：<a href="https://github.com/lxl66566/VSCodeVim" class="ap-external">lxl66566/VSCodeVim</a>，修了很多 bug，还实现了 easymotion 的 pinyin。</p><p>我的配置：</p><div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="json" style="--ap-ln-w:2ch;counter-reset:ap-lines 89"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-1">
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">  // 根据 mode 自动切换输入法，详见 #中文用户专栏</span></span>
@@ -163,38 +119,15 @@
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">  ]</span></span>
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-1"></label>
-</div>
-<h2 id="懒狗选择">懒狗选择</h2>
-<p>vim 有着各种各样的分支（就像 linux core 和各种 distro 一样），自然也有一些无需折腾，配置简单的 vim 系 IDE，有兴趣可以尝试。</p>
-<ul>
-<li><a href="https://www.lunarvim.org/zh-Hans/" class="ap-external">lunarvim</a></li>
-<li><a href="https://astronvim.com/" class="ap-external">AstroNvim</a></li>
-<li><a href="https://nvchad.com/" class="ap-external">nvchad</a></li>
-</ul>
-<p>当然我喜欢折腾，所以还是自己玩自定义程度最高的 neovim，见下文。</p>
-<h2 id="设置-neovim-一期">设置(neovim 一期)</h2>
-<blockquote>
+</div><h2 id="懒狗选择">懒狗选择</h2><p>vim 有着各种各样的分支（就像 linux core 和各种 distro 一样），自然也有一些无需折腾，配置简单的 vim 系 IDE，有兴趣可以尝试。</p><ul>
+<li><a href="https://www.lunarvim.org/zh-Hans/" class="ap-external">lunarvim</a></li><li><a href="https://astronvim.com/" class="ap-external">AstroNvim</a></li><li><a href="https://nvchad.com/" class="ap-external">nvchad</a></li>
+</ul><p>当然我喜欢折腾，所以还是自己玩自定义程度最高的 neovim，见下文。</p><h2 id="设置-neovim-一期">设置(neovim 一期)</h2><blockquote>
 <p>2023.06 是我第一次尝试入坑 neovim，不过浅尝一阵以后立刻跑路 vscode 了，这是我的一些心得。</p>
-</blockquote>
-<p>在折腾了大段配置后，我决定使用 lazy.vim 代替 packer 进行插件管理。于是懒狗的我直接使用 <a href="https://www.lazyvim.org/" class="ap-external">lazyvim</a>，该仓库使用 lazy.vim 并预设了许多插件和 keybindings，非常方便。因此我就在此基础上再进行自定义。</p>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>archived</summary>
-<p><a href="https://www.reddit.com/r/neovim/comments/13pzwq6/comment/jlcbfzg/" class="ap-external">这里</a>有一些插件推荐，能够使 neovim 接近 vscode（笑）</p>
-<p>我的配置存放在 <a href="https://github.com/lxl66566/dotfile/tree/archlinux/home/absolutex/.config/nvim" class="ap-external">github 仓库</a>，直接替换 <code>~/.config/nvim</code> 然后启动 nvim 就能使用。首次启动会黑屏一阵，不要 Ctrl+c 终止，否则需要清理缓存重新配置。</p>
-<ol>
-<li>迁移我原先的 keymaps。</li>
-<li>禁用 Telescope 及其衍生插件，改为使用 <a href="https://github.com/nvim-neo-tree/neo-tree.nvim" class="ap-external">Neotree.nvim</a>。</li>
-</ol>
-<p>首先基础设置我是照着 <a href="#external">external 2.</a> 来的。这篇文章确实讲的还行。后续冲浪时也看到一篇写得很好的文章，见 <a href="#external">external 3.</a>，有空的话去试吧。</p>
-<p>然后进入到了自定义环节：</p>
-<h3 id="基础设置">基础设置</h3>
-<ul>
-<li>nvim 不支持 alt 和 TAB 快捷键绑定。。（骂人） 切窗口的快捷键还得再自定义。</li>
-<li><code>vim.opt.wrap = true</code> 这行是一定要开的，可以让过长的行到行尾自动换行。(<a href="https://neovim.io/doc/user/options.html#'wrap'" class="ap-external">ref</a>)</li>
-</ul>
-<h3 id="侧边栏">侧边栏</h3>
-<p>俗话说 <s>neovim 人都在为了逼近 vscode 而努力</s>，折腾侧边栏这事也不例外。</p>
-<p>在尝试了多个插件（opener.nvim, Telescope, NerdTree）后，最终我使用的插件是 <a href="https://github.com/nvim-neo-tree/neo-tree.nvim" class="ap-external">Neo-tree</a>。Neo-tree 可以算是使用手感最好，最贴近我的需求的侧边栏了。</p>
-<ol>
+</blockquote><p>在折腾了大段配置后，我决定使用 lazy.vim 代替 packer 进行插件管理。于是懒狗的我直接使用 <a href="https://www.lazyvim.org/" class="ap-external">lazyvim</a>，该仓库使用 lazy.vim 并预设了许多插件和 keybindings，非常方便。因此我就在此基础上再进行自定义。</p><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>archived</summary><p><a href="https://www.reddit.com/r/neovim/comments/13pzwq6/comment/jlcbfzg/" class="ap-external">这里</a>有一些插件推荐，能够使 neovim 接近 vscode（笑）</p><p>我的配置存放在 <a href="https://github.com/lxl66566/dotfile/tree/archlinux/home/absolutex/.config/nvim" class="ap-external">github 仓库</a>，直接替换 <code>~/.config/nvim</code> 然后启动 nvim 就能使用。首次启动会黑屏一阵，不要 Ctrl+c 终止，否则需要清理缓存重新配置。</p><ol>
+<li>迁移我原先的 keymaps。</li><li>禁用 Telescope 及其衍生插件，改为使用 <a href="https://github.com/nvim-neo-tree/neo-tree.nvim" class="ap-external">Neotree.nvim</a>。</li>
+</ol><p>首先基础设置我是照着 <a href="#external">external 2.</a> 来的。这篇文章确实讲的还行。后续冲浪时也看到一篇写得很好的文章，见 <a href="#external">external 3.</a>，有空的话去试吧。</p><p>然后进入到了自定义环节：</p><h3 id="基础设置">基础设置</h3><ul>
+<li>nvim 不支持 alt 和 TAB 快捷键绑定。。（骂人） 切窗口的快捷键还得再自定义。</li><li><code>vim.opt.wrap = true</code> 这行是一定要开的，可以让过长的行到行尾自动换行。(<a href="https://neovim.io/doc/user/options.html#'wrap'" class="ap-external">ref</a>)</li>
+</ul><h3 id="侧边栏">侧边栏</h3><p>俗话说 <s>neovim 人都在为了逼近 vscode 而努力</s>，折腾侧边栏这事也不例外。</p><p>在尝试了多个插件（opener.nvim, Telescope, NerdTree）后，最终我使用的插件是 <a href="https://github.com/nvim-neo-tree/neo-tree.nvim" class="ap-external">Neo-tree</a>。Neo-tree 可以算是使用手感最好，最贴近我的需求的侧边栏了。</p><ol>
 <li>在 <code>lua/plugin.lua</code> 中添加：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">use</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">  "nvim-neo-tree/neo-tree.nvim"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
@@ -205,11 +138,9 @@
 <span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    "MunifTanjim/nui.nvim"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-</li>
-<li>快捷键（lua/keymaps.lua）：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>快捷键（lua/keymaps.lua）：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">vim.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">keymap</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.</span><span style="color:#005CC5;--shiki-dark:#79B8FF">set</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">'n'</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">'&#x3C;C-o>'</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">':Neotree&#x3C;CR>'</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, opts)</span></span></code></pre></div>
-</li>
-<li>其他设置（init.lua）：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>其他设置（init.lua）：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">require</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">'neo-tree'</span><span style="color:#24292E;--shiki-dark:#E1E4E8">).</span><span style="color:#005CC5;--shiki-dark:#79B8FF">setup</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  filesystem </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    filtered_items </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
@@ -220,18 +151,10 @@
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
 </li>
-</ol>
-<p>但是 neo-tree 仍然有许多问题，比如它核心都是 lua 写的，众所周知 lua 的字符串处理就是一坨屎，用多了很容易写出 bug，事实上我随便扫一下就能扫出 one command execution；包括 lua 核心用来做这种需要大量 fs 操作的东西，性能又非常差，我打开 nvim 体感要卡好几秒，基本都是 neo-tree 在卡。</p>
-<h3 id="我的插件">我的插件</h3>
-<ul>
+</ol><p>但是 neo-tree 仍然有许多问题，比如它核心都是 lua 写的，众所周知 lua 的字符串处理就是一坨屎，用多了很容易写出 bug，事实上我随便扫一下就能扫出 one command execution；包括 lua 核心用来做这种需要大量 fs 操作的东西，性能又非常差，我打开 nvim 体感要卡好几秒，基本都是 neo-tree 在卡。</p><h3 id="我的插件">我的插件</h3><ul>
 <li>Neotree</li>
 </ul>
-</details>
-<h2 id="设置-neovim-二期">设置(neovim 二期)</h2>
-<p>2026.08.26，时隔三年，我看着<a href="../gossip/fuckxxx#vscode-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">越来越臃肿、越来越难用的 vscode</a> 陷入沉思。刚好这段时间舍友在折腾 WSL，学习与配置 neovim，我闲得无聊也一起来玩玩。</p>
-<p>2026 年折腾东西的一大好处就是有 AI，曾今望而却步的 lua 现在已经不成阻碍，曾今网上到处翻找的疑难杂症现在也能轻易解决。然而从开发到产品经理的转变也丧失了许多乐趣，不禁让我怀念起年轻气盛的……扯远了。总之，基于<a href="#%E8%AE%BE%E7%BD%AEneovim-%E4%B8%80%E6%9C%9F">第一期的残废 neovim 配置</a>，我开始了第二次的折腾。具体的提示词啥的先不说，这里随便记录一些经验之谈吧。</p>
-<p>第二次折腾我仍然使用 lazyvim，框架本身还行，不过仍然有一些问题：</p>
-<ul>
+</details><h2 id="设置-neovim-二期">设置(neovim 二期)</h2><p>2026.08.26，时隔三年，我看着<a href="../gossip/fuckxxx#vscode-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">越来越臃肿、越来越难用的 vscode</a> 陷入沉思。刚好这段时间舍友在折腾 WSL，学习与配置 neovim，我闲得无聊也一起来玩玩。</p><p>2026 年折腾东西的一大好处就是有 AI，曾今望而却步的 lua 现在已经不成阻碍，曾今网上到处翻找的疑难杂症现在也能轻易解决。然而从开发到产品经理的转变也丧失了许多乐趣，不禁让我怀念起年轻气盛的……扯远了。总之，基于<a href="#%E8%AE%BE%E7%BD%AEneovim-%E4%B8%80%E6%9C%9F">第一期的残废 neovim 配置</a>，我开始了第二次的折腾。具体的提示词啥的先不说，这里随便记录一些经验之谈吧。</p><p>第二次折腾我仍然使用 lazyvim，框架本身还行，不过仍然有一些问题：</p><ul>
 <li>LazyVim 默认给 markdown/text/typst 等文本类型开了拼写检查，满屏幕的红线还是非常傻逼的。需要注册一个 autocmd 把这个去掉。<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">-- 关闭拼写检查：LazyVim 默认给 markdown 等文本类型开 spell，中文会满屏红线</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">-- （本文件在 LazyVim autocmds 之后加载，此回调后执行可覆盖它）</span></span>
@@ -243,13 +166,8 @@
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  end</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre></div>
 </li>
-</ul>
-<p>snack 的问题也不少。snack 是 lazyvim 作者搞的一个工具包，提供了许多功能，但是有些默认设置比较垃圾，必须要改：</p>
-<ul>
-<li>snacks.scroll.animate.duration 默认是 total=200ms，这个动画实在是太长了，连续滚动的效果跟虫在爬一样，非常差。我把它调整为了 30ms。</li>
-<li>snack 默认双击 leader（空格）进入文件选择界面，然而这个界面不会展示 <code>.</code> 开头的文件和 git ignore 掉的文件。我之前<a href="https://t.me/withabsolutex/2692" class="ap-external">吃过一次亏</a>，所以立刻给 picker.sources.files 加了 hidden=true, ignored=true。</li>
-<li>可以通过 snacks.dashboard.preset.header = &quot;&quot; 去掉开屏的大 logo。</li>
-<li>侧边栏默认是 snack 的 explorer 而不是 neotree，需要手动设置一下 <code>vim.g.lazyvim_explorer = &quot;neo-tree&quot;</code>。explorer 又占位置又不好看，性能也不如 neotree。
+</ul><p>snack 的问题也不少。snack 是 lazyvim 作者搞的一个工具包，提供了许多功能，但是有些默认设置比较垃圾，必须要改：</p><ul>
+<li>snacks.scroll.animate.duration 默认是 total=200ms，这个动画实在是太长了，连续滚动的效果跟虫在爬一样，非常差。我把它调整为了 30ms。</li><li>snack 默认双击 leader（空格）进入文件选择界面，然而这个界面不会展示 <code>.</code> 开头的文件和 git ignore 掉的文件。我之前<a href="https://t.me/withabsolutex/2692" class="ap-external">吃过一次亏</a>，所以立刻给 picker.sources.files 加了 hidden=true, ignored=true。</li><li>可以通过 snacks.dashboard.preset.header = &quot;&quot; 去掉开屏的大 logo。</li><li>侧边栏默认是 snack 的 explorer 而不是 neotree，需要手动设置一下 <code>vim.g.lazyvim_explorer = &quot;neo-tree&quot;</code>。explorer 又占位置又不好看，性能也不如 neotree。
 <ul>
 <li>neotree 也需要进行一些设置。async 是必须开启的！否则 neotree 还是很慢，而且会卡主 UI 进程。<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="lua" style="--ap-ln-w:2ch;counter-reset:ap-lines 38"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-2">
@@ -295,24 +213,15 @@
 </li>
 </ul>
 </li>
-</ul>
-<p>有一些 lazyvim 键位也需要熟悉一下：</p>
+</ul><p>有一些 lazyvim 键位也需要熟悉一下：</p><ul>
+<li><code>&lt;leader&gt;gg</code> 打开 lazygit 面板。用得频繁的话也可以设置为 <code>&lt;leader&gt;g</code>。</li><li><code>&lt;leader&gt;e</code> 打开/关闭 NeoTree 面板。NeoTree 在一周目尝试的时候被我盛赞了，所以二周目吸取教训，还是用它。</li><li><code>&lt;leader&gt;/</code> 打开全文搜索。lazyvim 的默认实现就是用的 rg，不需要手动去改了。</li><li><code>&lt;C-/&gt;</code> 打开底部终端。我尝试根据 vscode 习惯设为 <code>&lt;C-`&gt;</code>，然而并不能用，问了下 AI 说是 windows terminal 有一些限制，需要去 <code>Ctrl + Shift + ,</code> 编辑一下 windows terminal 的配置，在 action 数组内添加 <code>{&quot;keys&quot;:&quot;ctrl+`&quot;,&quot;command&quot;:{&quot;action&quot;:&quot;sendInput&quot;,&quot;input&quot;:&quot;\u001f&quot;}}</code> 即可。之后按下 <code>&lt;C-`&gt;</code> 就会映射到 <code>&lt;C-/&gt;</code> 打开终端，亲测有效。
 <ul>
-<li><code>&lt;leader&gt;gg</code> 打开 lazygit 面板。用得频繁的话也可以设置为 <code>&lt;leader&gt;g</code>。</li>
-<li><code>&lt;leader&gt;e</code> 打开/关闭 NeoTree 面板。NeoTree 在一周目尝试的时候被我盛赞了，所以二周目吸取教训，还是用它。</li>
-<li><code>&lt;leader&gt;/</code> 打开全文搜索。lazyvim 的默认实现就是用的 rg，不需要手动去改了。</li>
-<li><code>&lt;C-/&gt;</code> 打开底部终端。我尝试根据 vscode 习惯设为 <code>&lt;C-`&gt;</code>，然而并不能用，问了下 AI 说是 windows terminal 有一些限制，需要去 <code>Ctrl + Shift + ,</code> 编辑一下 windows terminal 的配置，在 action 数组内添加 <code>{&quot;keys&quot;:&quot;ctrl+`&quot;,&quot;command&quot;:{&quot;action&quot;:&quot;sendInput&quot;,&quot;input&quot;:&quot;\u001f&quot;}}</code> 即可。之后按下 <code>&lt;C-`&gt;</code> 就会映射到 <code>&lt;C-/&gt;</code> 打开终端，亲测有效。
-<ul>
-<li>还有 windows terminal 的字体也需要改下，需要改成 nerd font 的系列才能显示 lazyvim 的图标。在上述 windows terminal 配置文件里，profiles.defaults 里添加 <code>&quot;font&quot;:{&quot;face&quot;:&quot;FiraCode Nerd Font Mono&quot;}</code>。（字体从 <a href="https://www.nerdfonts.com/font-downloads" class="ap-external">nerd font 官网</a>下载即可。我比较习惯 FiraCode，所以下的是 FiraCode Nerd Font）</li>
-<li>Ctrl + hjkl 可以移动光标到其他面板，移出光标后默认就会退出 terminal 模式。</li>
-<li>调整终端高度，需要添加这些 keymap（默认是 normal 下才可调，显然我在 terminal 下也需要调整高度）。<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<li>还有 windows terminal 的字体也需要改下，需要改成 nerd font 的系列才能显示 lazyvim 的图标。在上述 windows terminal 配置文件里，profiles.defaults 里添加 <code>&quot;font&quot;:{&quot;face&quot;:&quot;FiraCode Nerd Font Mono&quot;}</code>。（字体从 <a href="https://www.nerdfonts.com/font-downloads" class="ap-external">nerd font 官网</a>下载即可。我比较习惯 FiraCode，所以下的是 FiraCode Nerd Font）</li><li>Ctrl + hjkl 可以移动光标到其他面板，移出光标后默认就会退出 terminal 模式。</li><li>调整终端高度，需要添加这些 keymap（默认是 normal 下才可调，显然我在 terminal 下也需要调整高度）。<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">map</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({ </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"n"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"t" </span><span style="color:#24292E;--shiki-dark:#E1E4E8">}, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;S-Up>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;cmd>resize +2&#x3C;cr>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">map</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({ </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"n"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"t" </span><span style="color:#24292E;--shiki-dark:#E1E4E8">}, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;S-Down>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;cmd>resize -2&#x3C;cr>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">map</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({ </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"n"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"t" </span><span style="color:#24292E;--shiki-dark:#E1E4E8">}, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;S-Left>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;cmd>vertical resize -2&#x3C;cr>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">map</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({ </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"n"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"t" </span><span style="color:#24292E;--shiki-dark:#E1E4E8">}, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;S-Right>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;cmd>vertical resize +2&#x3C;cr>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span></code></pre></div>
-</li>
-<li>至于每次打开/关闭终端时记住调整的高度，<s>这里空白太小写不下</s>，反正就是让 AI 写点 lua 脚本。</li>
-<li>terminal mode 下按 ESC 会变成 normal mode。。。还是需要设一下拦截 ESC。<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>至于每次打开/关闭终端时记住调整的高度，<s>这里空白太小写不下</s>，反正就是让 AI 写点 lua 脚本。</li><li>terminal mode 下按 ESC 会变成 normal mode。。。还是需要设一下拦截 ESC。<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">opts </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  terminal </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    win </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
@@ -325,60 +234,26 @@
 </li>
 </ul>
 </li>
-</ul>
-<p>多光标一般使用 jake-stewart/multicursor.nvim。进入多光标模式后，默认按 a/i 插入是不会像 vscode 那样所有光标同时输入，其只会在当前光标上输入，只有输入结束按 esc 后会把所有操作应用到其他位置上。包括多光标键位有很多也需要手动绑一下的。由于 <code>&lt;C-d&gt;</code> 比较重要，我就绑了 <code>&lt;C-n&gt;</code>。</p>
-<p>关于 resolve conflict：</p>
-<p>我其实还是习惯用 vscode 那种左右下三栏的 merge 界面（之前见过 idea 那种左中右的狗屎三栏感觉真难用）。因此还是打算在 neovim 里复刻这个。简单用 git-conflict.nvim 和 diffview.nvim 写了点。</p>
-<p>最终我的 Neovim 还是没能取代 VSCode。</p>
-<h2 id="中文用户专栏">中文用户专栏</h2>
-<p>vim 也有很多缺点。</p>
-<p>最大的缺点是它没有考虑到中文用户 —— 1. 输入法跟 vim 天生就不搭，2. 在中文段落里想要定位也不是一件简单的事情。也难怪 vim 在国人这里流行不起来了，有时候切换输入法去做一些操作可能还真不如把手移到鼠标上操作来得快。包括我是 windows 用户，平常切个窗口、操作些浏览器都是需要动鼠标的，我的手也经常离开键盘，因此对 vim 没有太多的感觉。vim 还是比较适合只用 WM 的 linux user，只有配合 WM 才能尽可能减少鼠标的使用。</p>
-<h3 id="关于切换输入法">关于切换输入法</h3>
-<p>业界其实有一个 im-select 的方案，并且 vscode vim 也<a href="https://github.com/VSCodeVim/Vim#input-method" class="ap-external">提供了一些配置</a>用于切换输入法。</p>
-<p>但是，im-select 已经很久不维护了，并且没有一个公认的优秀 fork；而 vscode vim 目前的切换方案是切换系统输入法，这跟我的理念不合，我希望切换的是 rime 内部的中英文开关，而不是系统的英文键盘。然而我调研许久，目前还没有任何外部切换 rime 中英文模式的方法。</p>
-<ul>
-<li><a href="https://github.com/PEMessage/im-select-imm" class="ap-external">PEMessage/im-select-imm</a>：这个 fork 实现可以切换输入法内部的中英文开关（IME mode），但是实测在 rime 上无法切换 mode，最终一定是中文。</li>
-<li><a href="https://github.com/rime/squirrel/issues/164" class="ap-external">rime 的某个 issue</a>：从这里我们可以看到许多第三方的 lua 脚本实现，但是这些实现都是切换的系统输入法，而不是 rime mode。</li>
-</ul>
-<p>所以目前看来，用户必须接受系统输入法的切换。接受输入法切换的话就简单了，使用上面的 im-select-imm：</p>
-<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</ul><p>多光标一般使用 jake-stewart/multicursor.nvim。进入多光标模式后，默认按 a/i 插入是不会像 vscode 那样所有光标同时输入，其只会在当前光标上输入，只有输入结束按 esc 后会把所有操作应用到其他位置上。包括多光标键位有很多也需要手动绑一下的。由于 <code>&lt;C-d&gt;</code> 比较重要，我就绑了 <code>&lt;C-n&gt;</code>。</p><p>关于 resolve conflict：</p><p>我其实还是习惯用 vscode 那种左右下三栏的 merge 界面（之前见过 idea 那种左中右的狗屎三栏感觉真难用）。因此还是打算在 neovim 里复刻这个。简单用 git-conflict.nvim 和 diffview.nvim 写了点。</p><p>最终我的 Neovim 还是没能取代 VSCode。</p><h2 id="中文用户专栏">中文用户专栏</h2><p>vim 也有很多缺点。</p><p>最大的缺点是它没有考虑到中文用户 —— 1. 输入法跟 vim 天生就不搭，2. 在中文段落里想要定位也不是一件简单的事情。也难怪 vim 在国人这里流行不起来了，有时候切换输入法去做一些操作可能还真不如把手移到鼠标上操作来得快。包括我是 windows 用户，平常切个窗口、操作些浏览器都是需要动鼠标的，我的手也经常离开键盘，因此对 vim 没有太多的感觉。vim 还是比较适合只用 WM 的 linux user，只有配合 WM 才能尽可能减少鼠标的使用。</p><h3 id="关于切换输入法">关于切换输入法</h3><p>业界其实有一个 im-select 的方案，并且 vscode vim 也<a href="https://github.com/VSCodeVim/Vim#input-method" class="ap-external">提供了一些配置</a>用于切换输入法。</p><p>但是，im-select 已经很久不维护了，并且没有一个公认的优秀 fork；而 vscode vim 目前的切换方案是切换系统输入法，这跟我的理念不合，我希望切换的是 rime 内部的中英文开关，而不是系统的英文键盘。然而我调研许久，目前还没有任何外部切换 rime 中英文模式的方法。</p><ul>
+<li><a href="https://github.com/PEMessage/im-select-imm" class="ap-external">PEMessage/im-select-imm</a>：这个 fork 实现可以切换输入法内部的中英文开关（IME mode），但是实测在 rime 上无法切换 mode，最终一定是中文。</li><li><a href="https://github.com/rime/squirrel/issues/164" class="ap-external">rime 的某个 issue</a>：从这里我们可以看到许多第三方的 lua 脚本实现，但是这些实现都是切换的系统输入法，而不是 rime mode。</li>
+</ul><p>所以目前看来，用户必须接受系统输入法的切换。接受输入法切换的话就简单了，使用上面的 im-select-imm：</p><div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"vim.autoSwitchInputMethod.enable"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"vim.autoSwitchInputMethod.defaultIM"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"1033-513"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"vim.autoSwitchInputMethod.obtainIMCmd"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"C:/run/im-select-imm.exe"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"vim.autoSwitchInputMethod.switchIMCmd"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"C:/run/im-select-imm.exe {im}"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span></code></pre></div>
-<p>注意：这里的两个 Cmd 必须使用 <code>.exe</code> 的绝对路径，而不能只是 <code>im-select-imm</code> 这样的 bin name，否则无法完成切换。我估计是 vscode vim 是 split 命令后直接 spawn 这个进程，而不是在终端里执行。</p>
-<h3 id="关于中文跳转">关于中文跳转</h3>
-<p>一般来说，vim 内进行复杂的跳转可以使用 easymotion，这玩意 vscode vim 是自带的，只要一行 <code>&quot;vim.easymotion&quot;: true,</code> 就能开。不过还是建议使用下面的 keybindings 简化 easymotion 的激活。</p>
-<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"vim.autoSwitchInputMethod.switchIMCmd"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"C:/run/im-select-imm.exe {im}"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span></code></pre></div><p>注意：这里的两个 Cmd 必须使用 <code>.exe</code> 的绝对路径，而不能只是 <code>im-select-imm</code> 这样的 bin name，否则无法完成切换。我估计是 vscode vim 是 split 命令后直接 spawn 这个进程，而不是在终端里执行。</p><h3 id="关于中文跳转">关于中文跳转</h3><p>一般来说，vim 内进行复杂的跳转可以使用 easymotion，这玩意 vscode vim 是自带的，只要一行 <code>&quot;vim.easymotion&quot;: true,</code> 就能开。不过还是建议使用下面的 keybindings 简化 easymotion 的激活。</p><div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"vim.normalModeKeyBindings"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  {</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    "before"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"s"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">],</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    "after"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;leader>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"&#x3C;leader>"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"s"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">],</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></div>
-<p>但是 easymotion 并不能解决中文跳转问题，它还是只能支持英文。尝试寻找一些其他方案：</p>
-<ul>
-<li><a href="https://github.com/zzhirong/vim-easymotion-zh" class="ap-external">zzhirong/vim-easymotion-zh</a>：看起来挺有意思的，支持小鹤双拼的 easymotion。但是问题是这是原生 vim plugin，vscode vim 并不能使用。</li>
-<li><a href="https://github.com/zzhirong/hop-zh-by-flypy" class="ap-external">zzhirong/hop-zh-by-flypy</a>：同一个作者的 nvim 插件，基于 hop.nvim（archived）。但是这要求在本地安装 neovim 和 vscode-neovim 插件，等于是两套不同的 vim 实现。我对 neovim 没什么好感，所以不打算使用。</li>
-</ul>
-<p>然后我看了眼 vscodevim 的 easymotion 实现，发现核心部分也没几行，直接 vibe 了一个能搜中文全拼前缀的 <a href="https://github.com/lxl66566/VSCodeVim" class="ap-external">vim-lxl66566 fork</a>。于是问题解决。至于要不好给上游提 PR，我感觉为了一个比较小众的功能去给所有 VSCodeVim user 引入一个 tiny-pinyin 依赖不一定能过，因此还是暂时先不提。</p>
-<h2 id="总结">总结</h2>
-<p>我个人并不遵循 「vim 之禅」（指能用更少键实现的操作就不会用更多的键）。这跟输入法的原理一样，需要平衡效率和记忆量，而我选择了折中。</p>
-<ul>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span></code></pre></div><p>但是 easymotion 并不能解决中文跳转问题，它还是只能支持英文。尝试寻找一些其他方案：</p><ul>
+<li><a href="https://github.com/zzhirong/vim-easymotion-zh" class="ap-external">zzhirong/vim-easymotion-zh</a>：看起来挺有意思的，支持小鹤双拼的 easymotion。但是问题是这是原生 vim plugin，vscode vim 并不能使用。</li><li><a href="https://github.com/zzhirong/hop-zh-by-flypy" class="ap-external">zzhirong/hop-zh-by-flypy</a>：同一个作者的 nvim 插件，基于 hop.nvim（archived）。但是这要求在本地安装 neovim 和 vscode-neovim 插件，等于是两套不同的 vim 实现。我对 neovim 没什么好感，所以不打算使用。</li>
+</ul><p>然后我看了眼 vscodevim 的 easymotion 实现，发现核心部分也没几行，直接 vibe 了一个能搜中文全拼前缀的 <a href="https://github.com/lxl66566/VSCodeVim" class="ap-external">vim-lxl66566 fork</a>。于是问题解决。至于要不好给上游提 PR，我感觉为了一个比较小众的功能去给所有 VSCodeVim user 引入一个 tiny-pinyin 依赖不一定能过，因此还是暂时先不提。</p><h2 id="总结">总结</h2><p>我个人并不遵循 「vim 之禅」（指能用更少键实现的操作就不会用更多的键）。这跟输入法的原理一样，需要平衡效率和记忆量，而我选择了折中。</p><ul>
 <li>其他编辑器</li>
-</ul>
-<p>其他类似的编辑方式还有 emacs, helix 等。但是我不太建议去使用这些编辑方式，emacs 比较扭曲（对小拇指来说），helix 虽然吹自己键位更自然，但是其实没有好多少，都离不开死记硬背，而且功能还没 vim 丰富（至少对我常用的 vim 功能，helix 的支持堪忧）。</p>
-<h2 id="external">external</h2>
-<ol>
-<li><a href="https://awesome-programming-books.github.io/vim/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.pdf" class="ap-external">Vim 实用技巧</a>，进阶阅读</li>
-<li><a href="https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/" class="ap-external">从零开始配置 Neovim(Nvim)</a>（踩坑配置教程）</li>
-<li><a href="https://luyuhuang.tech/2023/03/21/nvim.html" class="ap-external">Neovim 使用体验</a></li>
-<li><a href="https://github.com/emacs-tw/emacs-101-beginner-survival-guide" class="ap-external">Emacs 101 新手求生指南</a>（知己知彼）</li>
-</ol>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/vim","locale":"root","title":"vim","headings":[{"level":1,"text":"vim","slug":"vim"},{"level":2,"text":"vim 操作学习","slug":"vim-操作学习"},{"level":3,"text":"for beginner","slug":"for-beginner"},{"level":3,"text":"常用组合键","slug":"常用组合键"},{"level":2,"text":"VSCodeVim","slug":"vscodevim"},{"level":2,"text":"懒狗选择","slug":"懒狗选择"},{"level":2,"text":"设置(neovim 一期)","slug":"设置-neovim-一期"},{"level":3,"text":"基础设置","slug":"基础设置"},{"level":3,"text":"侧边栏","slug":"侧边栏"},{"level":3,"text":"我的插件","slug":"我的插件"},{"level":2,"text":"设置(neovim 二期)","slug":"设置-neovim-二期"},{"level":2,"text":"中文用户专栏","slug":"中文用户专栏"},{"level":3,"text":"关于切换输入法","slug":"关于切换输入法"},{"level":3,"text":"关于中文跳转","slug":"关于中文跳转"},{"level":2,"text":"总结","slug":"总结"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-03-05","category":["编程","教程"],"tag":["工具"],"icon":"solid/keyboard"},"createdAt":"2023-03-05T00:00:00.000Z","updatedAt":"2026-10-20T23:12:44+08:00","readingTime":13,"excerpt":"vim vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 #总结 。 vim 操作学习 for beginner 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助： a…"},"related":[{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":3,"links":[{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/Git","refs":9},{"route":"/gossip/fuckxxx","refs":7},{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/Git","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/Git","title":"Git","refs":1,"links":[{"route":"/blog/log","refs":9},{"route":"/gossip/userexp","refs":3},{"route":"/coding/","refs":1}]},{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/blog/log","refs":7},{"route":"/articles/linux/package","refs":1},{"route":"/coding/","refs":1},{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/coding/Git","refs":3},{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</ul><p>其他类似的编辑方式还有 emacs, helix 等。但是我不太建议去使用这些编辑方式，emacs 比较扭曲（对小拇指来说），helix 虽然吹自己键位更自然，但是其实没有好多少，都离不开死记硬背，而且功能还没 vim 丰富（至少对我常用的 vim 功能，helix 的支持堪忧）。</p><h2 id="external">external</h2><ol>
+<li><a href="https://awesome-programming-books.github.io/vim/Vim%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7.pdf" class="ap-external">Vim 实用技巧</a>，进阶阅读</li><li><a href="https://martinlwx.github.io/zh-cn/config-neovim-from-scratch/" class="ap-external">从零开始配置 Neovim(Nvim)</a>（踩坑配置教程）</li><li><a href="https://luyuhuang.tech/2023/03/21/nvim.html" class="ap-external">Neovim 使用体验</a></li><li><a href="https://github.com/emacs-tw/emacs-101-beginner-survival-guide" class="ap-external">Emacs 101 新手求生指南</a>（知己知彼）</li>
+</ol><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/vim","locale":"root","title":"vim","headings":[{"level":1,"text":"vim","slug":"vim"},{"level":2,"text":"vim 操作学习","slug":"vim-操作学习"},{"level":3,"text":"for beginner","slug":"for-beginner"},{"level":3,"text":"常用组合键","slug":"常用组合键"},{"level":2,"text":"VSCodeVim","slug":"vscodevim"},{"level":2,"text":"懒狗选择","slug":"懒狗选择"},{"level":2,"text":"设置(neovim 一期)","slug":"设置-neovim-一期"},{"level":3,"text":"基础设置","slug":"基础设置"},{"level":3,"text":"侧边栏","slug":"侧边栏"},{"level":3,"text":"我的插件","slug":"我的插件"},{"level":2,"text":"设置(neovim 二期)","slug":"设置-neovim-二期"},{"level":2,"text":"中文用户专栏","slug":"中文用户专栏"},{"level":3,"text":"关于切换输入法","slug":"关于切换输入法"},{"level":3,"text":"关于中文跳转","slug":"关于中文跳转"},{"level":2,"text":"总结","slug":"总结"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-03-05","category":["编程","教程"],"tag":["工具"],"icon":"solid/keyboard"},"createdAt":"2023-03-05T00:00:00.000Z","updatedAt":"2026-10-20T23:12:44+08:00","readingTime":13,"excerpt":"vim vim 是一种在部分情况下更加强大的输入方式。如果你是 linux user，vim 是基本功；但如果是 windows user，我觉得没必要一定学习 vim，可以先看看 #总结 。 vim 操作学习 for beginner 如果您没有学习 vim 并碰到需要使用 vim 的场景，这两条规则会很有帮助： a…"},"related":[{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":3,"links":[{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/Git","refs":9},{"route":"/gossip/fuckxxx","refs":7},{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/Git","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/Git","title":"Git","refs":1,"links":[{"route":"/blog/log","refs":9},{"route":"/gossip/userexp","refs":3},{"route":"/coding/","refs":1}]},{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/blog/log","refs":7},{"route":"/articles/linux/package","refs":1},{"route":"/coding/","refs":1},{"route":"/gossip/userexp","refs":1}]},{"route":"/gossip/userexp","title":"各种尝鲜体验","refs":1,"links":[{"route":"/coding/Git","refs":3},{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

@@ -1,59 +1,23 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>kotlin | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="kotlin java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。 我的入坑 学了 java 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（ 空安全 ）。 开发环境 配了半天，感觉 kotlin 的开发生态还是比 java 差多了…">
-<link rel="canonical" href="https://absx.pages.dev/coding/kotlin">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="kotlin | 绝对值_x 的博客">
-<meta property="og:description" content="kotlin java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。 我的入坑 学了 java 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（ 空安全 ）。 开发环境 配了半天，感觉 kotlin 的开发生态还是比 java 差多了…">
-<meta property="og:url" content="https://absx.pages.dev/coding/kotlin">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>kotlin | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="kotlin java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。 我的入坑 学了 java 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（ 空安全 ）。 开发环境 配了半天，感觉 kotlin 的开发生态还是比 java 差多了…"><link rel="canonical" href="https://absx.pages.dev/coding/kotlin"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="kotlin | 绝对值_x 的博客"><meta property="og:description" content="kotlin java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。 我的入坑 学了 java 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（ 空安全 ）。 开发环境 配了半天，感觉 kotlin 的开发生态还是比 java 差多了…"><meta property="og:url" content="https://absx.pages.dev/coding/kotlin"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"kotlin","url":"https://absx.pages.dev/coding/kotlin","mainEntityOfPage":"https://absx.pages.dev/coding/kotlin","description":"kotlin java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。 我的入坑 学了 java 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（ 空安全 ）。 开发环境 配了半天，感觉 kotlin 的开发生态还是比 java 差多了…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-05-26T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="kotlin">kotlin</h1>
-<p>java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。</p>
-<h2 id="我的入坑">我的入坑</h2>
-<p>学了 <a href="java">java</a> 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（<a href="#%E5%9F%BA%E7%A1%80">空安全</a>）。</p>
-<h2 id="开发环境">开发环境</h2>
-<p>配了半天，感觉 kotlin 的开发生态还是比 java 差多了。vscode 里搜 kotlin，都出不来几个插件。</p>
-<p>我尝试 all in vscode，</p>
-<ol>
-<li>安装扩展 <em>Kotlin Language</em></li>
-<li>新建 xxx.kt 文件，写点 helloworld</li>
-<li>终端 <code>kotlinc xxx.kt -include-runtime -d xxx.jar &amp;&amp; java -jar xxx.jar</code>（本质上是编译出 jar 包然后用 java 执行）
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="kotlin">kotlin</h1><p>java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。</p><h2 id="我的入坑">我的入坑</h2><p>学了 <a href="java">java</a> 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（<a href="#%E5%9F%BA%E7%A1%80">空安全</a>）。</p><h2 id="开发环境">开发环境</h2><p>配了半天，感觉 kotlin 的开发生态还是比 java 差多了。vscode 里搜 kotlin，都出不来几个插件。</p><p>我尝试 all in vscode，</p><ol>
+<li>安装扩展 <em>Kotlin Language</em></li><li>新建 xxx.kt 文件，写点 helloworld</li><li>终端 <code>kotlinc xxx.kt -include-runtime -d xxx.jar &amp;&amp; java -jar xxx.jar</code>（本质上是编译出 jar 包然后用 java 执行）
 <ul>
-<li>可以安装 code runner (&lt;1M) 简化这一流程。（但是这玩意有点流氓，会替换你的运行图标）</li>
-<li>可以设命令行 alias</li>
+<li>可以安装 code runner (&lt;1M) 简化这一流程。（但是这玩意有点流氓，会替换你的运行图标）</li><li>可以设命令行 alias</li>
 </ul>
 </li>
-</ol>
-<p>Kotlin Language 只能提供代码高亮，而没有 linter。如果想要 linter，可能需要用 <em>Kotlin</em> 扩展，但是其需要运行在 inside a Gradle or Maven project，且文档中并没有写如何配置，我也折腾不清楚。</p>
-<p>如果可能的话，还是用 <a href="android#android-studio">Android Studio</a> / IDEA 吧。</p>
-<h3 id="formatter">formatter</h3>
-<p>试了下 vscode 扩展中的两个 kotlin formatter，都用不了，评价为捞。</p>
-<p>然后试 <a href="https://github.com/facebook/ktfmt" class="ap-external">ktfmt</a>。</p>
-<ol>
-<li>安装 <em>ktfmt</em> vscode 扩展</li>
-<li>下载 <code>ktfmt-version-jar-with-dependencies.jar</code> （必需要 with-dependencies，否则无效）</li>
-<li>更改 settings.json（要改的还挺多，注意路径）<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="json" style="--ap-ln-w:2ch;counter-reset:ap-lines 16"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</ol><p>Kotlin Language 只能提供代码高亮，而没有 linter。如果想要 linter，可能需要用 <em>Kotlin</em> 扩展，但是其需要运行在 inside a Gradle or Maven project，且文档中并没有写如何配置，我也折腾不清楚。</p><p>如果可能的话，还是用 <a href="android#android-studio">Android Studio</a> / IDEA 吧。</p><h3 id="formatter">formatter</h3><p>试了下 vscode 扩展中的两个 kotlin formatter，都用不了，评价为捞。</p><p>然后试 <a href="https://github.com/facebook/ktfmt" class="ap-external">ktfmt</a>。</p><ol>
+<li>安装 <em>ktfmt</em> vscode 扩展</li><li>下载 <code>ktfmt-version-jar-with-dependencies.jar</code> （必需要 with-dependencies，否则无效）</li><li>更改 settings.json（要改的还挺多，注意路径）<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="json" style="--ap-ln-w:2ch;counter-reset:ap-lines 16"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-1">
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "java.configuration.runtimes"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span></span>
@@ -73,59 +37,29 @@
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-1"></label>
 </div>
 </li>
-</ol>
-<p>就可以保存时自动格式化了。</p>
-<p>kotlin 没有官方推出的统一格式化工具，外加用的 jar + 虚拟机非常慢，每次保存时是可以感受到明显延迟的。</p>
-<h2 id="快速入门">快速入门</h2>
-<p>说到 <em>快速</em> 二字，那当然还得是我 <a href="https://learnxinyminutes.com/docs/zh-cn/kotlin-cn/" class="ap-external">learnxinyminutes</a> 了。</p>
-<p>当然只看这点肯定不够，泛型，接口，数据结构深入，这里都不会讲，需要额外学习。</p>
-<p>泛型和面向对象跟 java 基本一样，不过后者倒是添了很多新东西。</p>
-<p>有了上述基础概念，然后再看一些 kotlin 进阶的零碎内容，用于补全知识。</p>
-<h2 id="基础">基础</h2>
-<ul>
-<li>类型转换有一堆 <code>.toXxx</code> 能用。但是不能直接 as。</li>
-<li><a href="https://book.kotlincn.net/text/null-safety.html" class="ap-external">空安全</a>：挺不错的语法糖，引起了我最初对 kotlin 的兴趣。但是实际上挺少，也就 <code>?.</code>, <code>?:</code>, <code>!!</code> 三个而已。</li>
-<li><code>Unit</code> type 就是 void</li>
-</ul>
-<h3 id="语法糖">语法糖</h3>
-<ul>
-<li>如果函数最后一个参数是 lambda 函数，可以吊在末尾。</li>
-<li><a href="https://kotlinlang.org/docs/scope-functions.html" class="ap-external">Scope functions</a>：<code>let</code>, <code>run</code>, <code>with</code>, <code>apply</code>, and <code>also</code>，<s>包好吃的糖</s>
+</ol><p>就可以保存时自动格式化了。</p><p>kotlin 没有官方推出的统一格式化工具，外加用的 jar + 虚拟机非常慢，每次保存时是可以感受到明显延迟的。</p><h2 id="快速入门">快速入门</h2><p>说到 <em>快速</em> 二字，那当然还得是我 <a href="https://learnxinyminutes.com/docs/zh-cn/kotlin-cn/" class="ap-external">learnxinyminutes</a> 了。</p><p>当然只看这点肯定不够，泛型，接口，数据结构深入，这里都不会讲，需要额外学习。</p><p>泛型和面向对象跟 java 基本一样，不过后者倒是添了很多新东西。</p><p>有了上述基础概念，然后再看一些 kotlin 进阶的零碎内容，用于补全知识。</p><h2 id="基础">基础</h2><ul>
+<li>类型转换有一堆 <code>.toXxx</code> 能用。但是不能直接 as。</li><li><a href="https://book.kotlincn.net/text/null-safety.html" class="ap-external">空安全</a>：挺不错的语法糖，引起了我最初对 kotlin 的兴趣。但是实际上挺少，也就 <code>?.</code>, <code>?:</code>, <code>!!</code> 三个而已。</li><li><code>Unit</code> type 就是 void</li>
+</ul><h3 id="语法糖">语法糖</h3><ul>
+<li>如果函数最后一个参数是 lambda 函数，可以吊在末尾。</li><li><a href="https://kotlinlang.org/docs/scope-functions.html" class="ap-external">Scope functions</a>：<code>let</code>, <code>run</code>, <code>with</code>, <code>apply</code>, and <code>also</code>，<s>包好吃的糖</s>
 <ul>
 <li>还有 <code>ifEmpty</code> 也是链式的。</li>
 </ul>
 </li>
-</ul>
-<h2 id="泛型">泛型</h2>
-<p><a href="https://narenkmanoharan.gitbooks.io/effective-kotlin/content/chapter-4-generics.html" class="ap-external">Effective Kotlin</a> 讲的不错。</p>
-<p>kotlin 的泛型太弱了。实际写东西的时候基本都是 <code>Any</code> 乱飘。</p>
-<ul>
-<li>添加多个约束必须用 where，比起 rust 直接 <code>+</code> 少了点糖。</li>
-<li>居然没有一个约束能让 <code>T + T</code> 成立？也就是没有一个 <code>Addable&lt;T&gt;</code>？</li>
-<li>没有 android 长度约束，例如限定 T 只能接受 Dp, Sp, Px 等。</li>
-<li>类型推断必须是立刻，不像 Rust 可以先定义未知泛型对象，后续再推定。直观地说，下面的语句会报错：<div class="ap-code ap-code--ln" data-lang="kotlin" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">kotlin</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</ul><h2 id="泛型">泛型</h2><p><a href="https://narenkmanoharan.gitbooks.io/effective-kotlin/content/chapter-4-generics.html" class="ap-external">Effective Kotlin</a> 讲的不错。</p><p>kotlin 的泛型太弱了。实际写东西的时候基本都是 <code>Any</code> 乱飘。</p><ul>
+<li>添加多个约束必须用 where，比起 rust 直接 <code>+</code> 少了点糖。</li><li>居然没有一个约束能让 <code>T + T</code> 成立？也就是没有一个 <code>Addable&lt;T&gt;</code>？</li><li>没有 android 长度约束，例如限定 T 只能接受 Dp, Sp, Px 等。</li><li>类型推断必须是立刻，不像 Rust 可以先定义未知泛型对象，后续再推定。直观地说，下面的语句会报错：<div class="ap-code ap-code--ln" data-lang="kotlin" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">kotlin</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-kotlin"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">val</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> a </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> mutableListOf</span><span style="color:#24292E;--shiki-dark:#E1E4E8">()</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">a.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">add</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span></code></pre></div>
 </li>
-</ul>
-<h2 id="面向对象">面向对象</h2>
-<ul>
+</ul><h2 id="面向对象">面向对象</h2><ul>
 <li>kotlin 会自动为 public 成员生成 setter/getter。这样的本意是好的，但是如果你的 class 继承自一个 interface，而这个 interface 里的函数是 setter/getter 同名函数，那么实现 <code>override fun getXxx</code> 后编译就会报错 <em>The following declarations have the same JVM signature</em>，还是比较具有迷惑性的。如果你有这样的函数，记得把成员声明为 private。
 <ul>
 <li>最理想的应该是 kotlin 生成的 setter/getter 自动 impl 了这个 interface，可惜 kotlin 不这样干。这样必须 private 后自己重写一遍 setter/getter，还是很丑的。</li>
 </ul>
-</li>
-<li>companion object 里的函数相当于 static fun，但是子类<strong>不会继承</strong> companion object。</li>
-<li>Kotlin 的 class 对象都是 <code>KClass&lt;*&gt;</code>，对于接受 java class 的地方需要加 <code>.java</code></li>
-</ul>
-<h2 id="杂">杂</h2>
-<ul>
+</li><li>companion object 里的函数相当于 static fun，但是子类<strong>不会继承</strong> companion object。</li><li>Kotlin 的 class 对象都是 <code>KClass&lt;*&gt;</code>，对于接受 java class 的地方需要加 <code>.java</code></li>
+</ul><h2 id="杂">杂</h2><ul>
 <li><a href="https://kotlinlang.org/docs/kotlin-doc.html" class="ap-external">如何写 doc comment</a></li>
-</ul>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/kotlin","locale":"root","title":"kotlin","headings":[{"level":1,"text":"kotlin","slug":"kotlin"},{"level":2,"text":"我的入坑","slug":"我的入坑"},{"level":2,"text":"开发环境","slug":"开发环境"},{"level":3,"text":"formatter","slug":"formatter"},{"level":2,"text":"快速入门","slug":"快速入门"},{"level":2,"text":"基础","slug":"基础"},{"level":3,"text":"语法糖","slug":"语法糖"},{"level":2,"text":"泛型","slug":"泛型"},{"level":2,"text":"面向对象","slug":"面向对象"},{"level":2,"text":"杂","slug":"杂"}],"frontmatter":{"date":"2023-05-26","category":["编程"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2023-05-26T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":4,"excerpt":"kotlin java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。 我的入坑 学了 java 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（ 空安全 ）。 开发环境 配了半天，感觉 kotlin 的开发生态还是比 java 差多了…"},"related":[{"route":"/coding/android","title":"Android","refs":2,"links":[{"route":"/coding/java","refs":2},{"route":"/coding/","refs":1}]},{"route":"/coding/java","title":"Java","refs":2,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/android","refs":2},{"route":"/coding/","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/","refs":2},{"route":"/coding/java","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/android","refs":1},{"route":"/coding/java","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</ul><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/kotlin","locale":"root","title":"kotlin","headings":[{"level":1,"text":"kotlin","slug":"kotlin"},{"level":2,"text":"我的入坑","slug":"我的入坑"},{"level":2,"text":"开发环境","slug":"开发环境"},{"level":3,"text":"formatter","slug":"formatter"},{"level":2,"text":"快速入门","slug":"快速入门"},{"level":2,"text":"基础","slug":"基础"},{"level":3,"text":"语法糖","slug":"语法糖"},{"level":2,"text":"泛型","slug":"泛型"},{"level":2,"text":"面向对象","slug":"面向对象"},{"level":2,"text":"杂","slug":"杂"}],"frontmatter":{"date":"2023-05-26","category":["编程"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2023-05-26T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":4,"excerpt":"kotlin java 的替代品，可以无缝集成 java。Android 开发的官方语言。更现代的语法。 我的入坑 学了 java 以后，感觉太捞了。追求新潮流的本性让我想学习之。而且，我也比较喜欢 kotlin 的一些设计理念（ 空安全 ）。 开发环境 配了半天，感觉 kotlin 的开发生态还是比 java 差多了…"},"related":[{"route":"/coding/android","title":"Android","refs":2,"links":[{"route":"/coding/java","refs":2},{"route":"/coding/","refs":1}]},{"route":"/coding/java","title":"Java","refs":2,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/android","refs":2},{"route":"/coding/","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/","refs":2},{"route":"/coding/java","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/android","refs":1},{"route":"/coding/java","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

@@ -1,91 +1,45 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>C++ | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…">
-<link rel="canonical" href="https://absx.pages.dev/coding/Cpp">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="C++ | 绝对值_x 的博客">
-<meta property="og:description" content="C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…">
-<meta property="og:url" content="https://absx.pages.dev/coding/Cpp">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"C++","url":"https://absx.pages.dev/coding/Cpp","mainEntityOfPage":"https://absx.pages.dev/coding/Cpp","description":"C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2022-06-11T00:00:00.000Z","dateModified":"2026-10-19T23:02:17+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>C++ | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…"><link rel="canonical" href="https://absx.pages.dev/coding/Cpp"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="C++ | 绝对值_x 的博客"><meta property="og:description" content="C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…"><meta property="og:url" content="https://absx.pages.dev/coding/Cpp"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"C++","url":"https://absx.pages.dev/coding/Cpp","mainEntityOfPage":"https://absx.pages.dev/coding/Cpp","description":"C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2022-06-11T00:00:00.000Z","dateModified":"2026-11-09T03:35:41+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="c">C++</h1>
-<div class="subtitle">——我从未懂过 C++</div>
-<h2 id="一些工具">一些工具</h2>
-<ul>
-<li><a href="https://cppinsights.io/" class="ap-external">cppinsights</a>：显式指明代码中的隐式转换与中间变量。</li>
-<li><a href="https://godbolt.org/" class="ap-external">godbolt</a>：汇编分析；pastebin；不同编译器的行为分析</li>
-<li><a href="https://quick-bench.com/" class="ap-external">Quick C++ Benchmark</a></li>
-</ul>
-<h2 id="常见名词">常见名词</h2>
-<ul>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="c">C++</h1><div class="subtitle">——我从未懂过 C++</div><h2 id="一些工具">一些工具</h2><ul>
+<li><a href="https://cppinsights.io/" class="ap-external">cppinsights</a>：显式指明代码中的隐式转换与中间变量。</li><li><a href="https://godbolt.org/" class="ap-external">godbolt</a>：汇编分析；pastebin；不同编译器的行为分析</li><li><a href="https://quick-bench.com/" class="ap-external">Quick C++ Benchmark</a></li>
+</ul><h2 id="常见名词">常见名词</h2><ul>
 <li>UB：Undefined behavior，未定义行为，典型的有 <code>i = i++ + ++i</code>，一个容易被忽视的 UB 是 <code>a[i] = i++;</code>。(<a href="https://en.cppreference.com/w/c/language/eval_order" class="ap-external">ref</a>)</li>
-</ul>
-<h2 id="安装">安装</h2>
-<p>想玩 C++，“开发前的准备”这一坨就是不得不品的美味。</p>
-<p>linux 下用包管理器，配置环境应该是基础技能。这里写的主要是 windows 下的开发步骤。</p>
-<p>我目前正在使用 <em>xmake + clang 全套</em> 进行开发。</p>
-<h3 id="编译器">编译器</h3>
-<div class="ap-tabs">
+</ul><h2 id="安装">安装</h2><p>想玩 C++，“开发前的准备”这一坨就是不得不品的美味。</p><p>linux 下用包管理器，配置环境应该是基础技能。这里写的主要是 windows 下的开发步骤。</p><p>我目前正在使用 <em>xmake + clang 全套</em> 进行开发。</p><h3 id="编译器">编译器</h3><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-tabs-1-1" checked>
 <label class="ap-tabs__label" for="ap-tab-1">clang</label>
 <div class="ap-tab" data-title="clang">
 <blockquote>
 <p>Clang 是 LLVM 的前端，具有速度快、内存占用小、诊断信息可读性强、兼容性好等优势。<a href="https://www.51cto.com/article/630677.html" class="ap-external">ref</a></p>
-</blockquote>
-<p><a href="../farraginous/recommend_packages#scoop">scoop</a> 一行：<code>scoop install llvm</code>。</p>
-<p>安装 llvm 还会附带 clang 前端工具如 <em>clangd</em>, <em>clang-tidy</em>, <em>clang-format</em>。</p>
-<p>注：llvm 本体貌似不带运行库，可以考虑 <code>scoop install mingw-winlibs-llvm</code>。</p>
+</blockquote><p><a href="../farraginous/recommend_packages#scoop">scoop</a> 一行：<code>scoop install llvm</code>。</p><p>安装 llvm 还会附带 clang 前端工具如 <em>clangd</em>, <em>clang-tidy</em>, <em>clang-format</em>。</p><p>注：llvm 本体貌似不带运行库，可以考虑 <code>scoop install mingw-winlibs-llvm</code>。</p>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-2" name="ap-tabs-tabs-1-1">
 <label class="ap-tabs__label" for="ap-tab-2">mingw</label>
 <div class="ap-tab" data-title="mingw">
-<p>windows 上不想装 msvc 的话可以考虑使用 mingw。</p>
-<p><a href="../farraginous/recommend_packages#scoop">scoop</a> 一行：<code>scoop install mingw</code>。</p>
+<p>windows 上不想装 msvc 的话可以考虑使用 mingw。</p><p><a href="../farraginous/recommend_packages#scoop">scoop</a> 一行：<code>scoop install mingw</code>。</p>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-3" name="ap-tabs-tabs-1-1">
 <label class="ap-tabs__label" for="ap-tab-3">msvc</label>
 <div class="ap-tab" data-title="msvc">
 <p><a href="https://learn.microsoft.com/zh-cn/visualstudio/install/install-visual-studio" class="ap-external">安装 visual studio</a>（体积较大）。</p>
 </div>
-</div>
-<h3 id="开发环境">开发环境</h3>
-<p>我使用 <a href="vscode">VSCode</a> 作为 C++ 代码编辑器。以下扩展都可以直接在 vscode 商店搜到；只需选择一个即可。</p>
-<div class="ap-tabs">
+</div><h3 id="开发环境">开发环境</h3><p>我使用 <a href="vscode">VSCode</a> 作为 C++ 代码编辑器。以下扩展都可以直接在 vscode 商店搜到；只需选择一个即可。</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-4" name="ap-tabs-tabs-2-2" checked>
 <label class="ap-tabs__label" for="ap-tab-4">clangd</label>
 <div class="ap-tab" data-title="clangd">
-<p>调用外部的 linter + formatter，非常快速。</p>
-<p>前置条件：安装 <a href="#%E7%BC%96%E8%AF%91%E5%99%A8">clang 全套</a>工具。主要是 linter <code>clangd</code> 和 formatter <code>clang-format</code>。</p>
-<div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>提示</p>
-<p>相比 <em>C/C++</em> 扩展的 LSP，clangd 具有其他优点：</p>
-<ol>
-<li>响应速度快。用过 <em>Microsoft C/C++</em> 扩展的人都知道其慢的一批。</li>
-<li><em>clang-format</em> 格式化功能强大，高度自定义化。</li>
-<li>支持 inlay hints</li>
+<p>调用外部的 linter + formatter，非常快速。</p><p>前置条件：安装 <a href="#%E7%BC%96%E8%AF%91%E5%99%A8">clang 全套</a>工具。主要是 linter <code>clangd</code> 和 formatter <code>clang-format</code>。</p><div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>提示</p><p>相比 <em>C/C++</em> 扩展的 LSP，clangd 具有其他优点：</p><ol>
+<li>响应速度快。用过 <em>Microsoft C/C++</em> 扩展的人都知道其慢的一批。</li><li><em>clang-format</em> 格式化功能强大，高度自定义化。</li><li>支持 inlay hints</li>
 </ol>
-</div>
-<p>可能需要自己填一个 <code>clang-format.exe</code> 的位置，去 llvm 安装位置找，或者用 <a href="../farraginous/recommend_packages#everything">everything</a> 搜一下。</p>
-<ul>
+</div><p>可能需要自己填一个 <code>clang-format.exe</code> 的位置，去 llvm 安装位置找，或者用 <a href="../farraginous/recommend_packages#everything">everything</a> 搜一下。</p><ul>
 <li><code>clang-format.exe -style=llvm -dump-config &gt; .clang-format</code> 可以导出设置，一般不需要。</li>
 </ul>
 </div>
@@ -94,49 +48,32 @@
 <div class="ap-tab" data-title="Clang-Tidy + Clang-Format">
 <blockquote>
 <p>Clang-Tidy 比 clangd 要<strong>慢很多</strong>（功能也更多）。并且 <a href="https://discourse.llvm.org/t/list-of-clang-tidy-checks-supported-in-clangd/61013" class="ap-external">clangd 尊重 clang-tidy 的设置</a>，因此非解耦需求下还是用 clangd 比较好。</p>
-</blockquote>
-<p>为什么选这个组合呢，因为解耦：我不喜欢让一个扩展完成所有任务，我希望 linter 和 formatter 分离<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>，这样是自由度最高的方案。</p>
-<p>Clang-Tidy 在 vscode 扩展里的名字叫 <em>CS 128 Clang-Tidy</em>。</p>
+</blockquote><p>为什么选这个组合呢，因为解耦：我不喜欢让一个扩展完成所有任务，我希望 linter 和 formatter 分离<sup class="footnote-ref"><a href="#footnote1">[1]</a><a class="footnote-anchor" id="footnote-ref1"></a></sup>，这样是自由度最高的方案。</p><p>Clang-Tidy 在 vscode 扩展里的名字叫 <em>CS 128 Clang-Tidy</em>。</p>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-6" name="ap-tabs-tabs-2-2">
 <label class="ap-tabs__label" for="ap-tab-6">Microsoft C/C++</label>
 <div class="ap-tab" data-title="Microsoft C/C++">
-<p>all in one 类型的插件，我<strong>不是很喜欢，不够自由</strong>。</p>
-<div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>不过还是说几句好话</p>
-<ul>
-<li>快速上手，对新人友好。</li>
-<li>无需了解<a href="#%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F">构建系统</a>，可以直接点右上角 <em>运行</em> 按钮快速运行<strong>单文件</strong>。</li>
-<li>可视化 debug。</li>
+<p>all in one 类型的插件，我<strong>不是很喜欢，不够自由</strong>。</p><div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>不过还是说几句好话</p><ul>
+<li>快速上手，对新人友好。</li><li>无需了解<a href="#%E6%9E%84%E5%BB%BA%E7%B3%BB%E7%BB%9F">构建系统</a>，可以直接点右上角 <em>运行</em> 按钮快速运行<strong>单文件</strong>。</li><li>可视化 debug。</li>
 </ul>
-</div>
+</div><ol>
+<li>在工作区<strong>打开一个文件夹</strong>，新建一个简单的 helloworld.cpp 文件（内容请自己写完）。</li><li><code>Ctrl + Shift + P</code> 打开命令面板。
 <ol>
-<li>在工作区<strong>打开一个文件夹</strong>，新建一个简单的 helloworld.cpp 文件（内容请自己写完）。</li>
-<li><code>Ctrl + Shift + P</code> 打开命令面板。
-<ol>
-<li>搜索并点击 <code>C/C++: Edit Configurations (UI)</code> ，将编译器路径改为编译器的 <code>g++.exe</code>；在 <em>IntelliSense 模式</em> 下选择相应的工具链，例如 mingw 选择 <code>gcc-x64</code>。此时 vscode 会自动在工作区创建 <code>.vscode</code> 存放配置。</li>
-<li>搜索并点击 <code>Tasks: Configure Default Build Task</code>，再选择 <code>C/C++: g++.exe build active file</code>。</li>
+<li>搜索并点击 <code>C/C++: Edit Configurations (UI)</code> ，将编译器路径改为编译器的 <code>g++.exe</code>；在 <em>IntelliSense 模式</em> 下选择相应的工具链，例如 mingw 选择 <code>gcc-x64</code>。此时 vscode 会自动在工作区创建 <code>.vscode</code> 存放配置。</li><li>搜索并点击 <code>Tasks: Configure Default Build Task</code>，再选择 <code>C/C++: g++.exe build active file</code>。</li>
 </ol>
 </li>
 </ol>
 </div>
-</div>
-<h3 id="构建系统">构建系统</h3>
-<p>最广泛使用的是用 <em>Cmake</em>，然而我并不喜欢它。网上也有一些类似的想法：<a href="https://twdev.blog/2021/08/cmake/" class="ap-external">Why CMake sucks?</a>。</p>
-<div class="ap-tabs">
+</div><h3 id="构建系统">构建系统</h3><p>最广泛使用的是用 <em>Cmake</em>，然而我并不喜欢它。网上也有一些类似的想法：<a href="https://twdev.blog/2021/08/cmake/" class="ap-external">Why CMake sucks?</a>。</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-7" name="ap-tabs-tabs-3-3" checked>
 <label class="ap-tabs__label" for="ap-tab-7">xmake</label>
 <div class="ap-tab" data-title="xmake">
-<p>xmake 是<s>向下兼容 cmake</s> 的构建工具，拥有较为简洁的语法。xmake 使用 lua 脚本作为构建系统语言。</p>
+<p>xmake 是<s>向下兼容 cmake</s> 的构建工具，拥有较为简洁的语法。xmake 使用 lua 脚本作为构建系统语言。</p><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/640701847" class="ap-external">新手教程</a>，由于我自己摸索而不是看教程，多走了许多弯路。因此推荐看看。</li><li>开始使用：
 <ul>
-<li><a href="https://zhuanlan.zhihu.com/p/640701847" class="ap-external">新手教程</a>，由于我自己摸索而不是看教程，多走了许多弯路。因此推荐看看。</li>
-<li>开始使用：
-<ul>
-<li>use <a href="../farraginous/recommend_packages#scoop">scoop</a>, <code>scoop install xmake</code> 一行安装。输入 <code>xmake -h</code> 了解更多。</li>
-<li>示例：<code>xmake create -l c++ -P ./cpp &amp;&amp; cd cpp &amp;&amp; xmake &amp;&amp; xmake r</code></li>
-<li>一些 LSP （clangd）需要 <code>compile_commands.json</code> 来进行正确的 lint，此时需要执行一次 <code>xmake project -k compile_commands</code>，然后重启 LSP。</li>
+<li>use <a href="../farraginous/recommend_packages#scoop">scoop</a>, <code>scoop install xmake</code> 一行安装。输入 <code>xmake -h</code> 了解更多。</li><li>示例：<code>xmake create -l c++ -P ./cpp &amp;&amp; cd cpp &amp;&amp; xmake &amp;&amp; xmake r</code></li><li>一些 LSP （clangd）需要 <code>compile_commands.json</code> 来进行正确的 lint，此时需要执行一次 <code>xmake project -k compile_commands</code>，然后重启 LSP。</li>
 </ul>
-</li>
-<li>一些预设<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>一些预设<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">-- 全局设置</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">set_encodings</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"utf-8"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)            </span><span style="color:#6A737D;--shiki-dark:#6A737D">-- 建议添加：https://github.com/xmake-io/xmake/issues/2471。没加会导致 Qt 中文乱码。</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">set_policy</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"build.warning"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#6A737D;--shiki-dark:#6A737D">-- 开启编译警告</span></span>
@@ -147,40 +84,26 @@
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">target</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"test"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">  -- ...</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  add_packages</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"fmt"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)             </span><span style="color:#6A737D;--shiki-dark:#6A737D">-- 添加 fmt 包</span></span></code></pre></div>
-</li>
-<li>查找包（任选）：
+</li><li>查找包（任选）：
 <ul>
-<li>手动去 <a href="https://github.com/xmake-io/xmake-repo/" class="ap-external">xmake-repo</a> 找</li>
-<li>命令行：<code>xrepo search &lt;package_name&gt;...</code>，可用 <code>*</code> 作为通配符</li>
-<li><a href="https://xmake.microblock.cc/" class="ap-external">microblock 群友做的第三方网页</a></li>
+<li>手动去 <a href="https://github.com/xmake-io/xmake-repo/" class="ap-external">xmake-repo</a> 找</li><li>命令行：<code>xrepo search &lt;package_name&gt;...</code>，可用 <code>*</code> 作为通配符</li><li><a href="https://xmake.microblock.cc/" class="ap-external">microblock 群友做的第三方网页</a></li>
 </ul>
-</li>
-<li>指定工具链
+</li><li>指定工具链
 <ul>
 <li>在 target 中添加 <code>set_toolchains(&quot;clang&quot;)</code></li>
 </ul>
-</li>
-<li>指定架构
+</li><li>指定架构
 <ul>
 <li>编译 win32：<code>xmake f -p windows -a x86</code></li>
 </ul>
 </li>
-</ul>
-<h4 id="菱形依赖">菱形依赖</h4>
-<p>C++ 里一个绕不开的依赖坑是 abseil，这玩意为了避免运行时问题，强制不同版本的 abseil 使用不同的 namespace，所以如果一堆依赖不同 abseil 的包放一起，链接的时候就会爆炸。</p>
-<p>此时我们一般需要强制全项目用唯一的 abseil 版本。需要两个步骤，缺一不可：</p>
-<ol>
+</ul><h4 id="菱形依赖">菱形依赖</h4><p>C++ 里一个绕不开的依赖坑是 abseil，这玩意为了避免运行时问题，强制不同版本的 abseil 使用不同的 namespace，所以如果一堆依赖不同 abseil 的包放一起，链接的时候就会爆炸。</p><p>此时我们一般需要强制全项目用唯一的 abseil 版本。需要两个步骤，缺一不可：</p><ol>
 <li>需要添加 add_requireconfs override：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">add_requires</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"abseil 20260107.0"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">add_requireconfs</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"abseil"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, { override </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, version </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "20260107.0" </span><span style="color:#24292E;--shiki-dark:#E1E4E8">})</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">add_requireconfs</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"**.abseil"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, { override </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, version </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "20260107.0" </span><span style="color:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre></div>
-</li>
-<li>需要为<strong>所有直接和间接依赖</strong> abseil 的包都添加 <code>{ build = true }</code> option，重新用 override 的 abseil 从源码编译。</li>
-</ol>
-<p>这意味着你还要手动梳理一遍依赖，避免有藏得比较深的间接依赖忘记 build from source 然后命中了缓存，结果链接的时候又报错。在现代包管理器上手动解析依赖树，啊，酸爽啊。</p>
-<h4 id="其他技巧">其他技巧</h4>
-<p>将动态库复制到构建目录：有的第三方库是 GPL license，如果静态链接的话会违规，只能用动态链接；所以最好能把动态库的 dll 给自动 copy 到构建目录，方便打包或执行。</p>
-<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="lua" style="--ap-ln-w:2ch;counter-reset:ap-lines 21"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>需要为<strong>所有直接和间接依赖</strong> abseil 的包都添加 <code>{ build = true }</code> option，重新用 override 的 abseil 从源码编译。</li>
+</ol><p>这意味着你还要手动梳理一遍依赖，避免有藏得比较深的间接依赖忘记 build from source 然后命中了缓存，结果链接的时候又报错。在现代包管理器上手动解析依赖树，啊，酸爽啊。</p><h4 id="其他技巧">其他技巧</h4><p>将动态库复制到构建目录：有的第三方库是 GPL license，如果静态链接的话会违规，只能用动态链接；所以最好能把动态库的 dll 给自动 copy 到构建目录，方便打包或执行。</p><div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="lua" style="--ap-ln-w:2ch;counter-reset:ap-lines 21"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-1">
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">add_packages</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"soundtouch"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">after_build</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">function</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(target)</span></span>
@@ -203,28 +126,17 @@
 <span class="line ap-collapsible"><span style="color:#D73A49;--shiki-dark:#F97583">		end</span></span>
 <span class="line ap-collapsible"><span style="color:#D73A49;--shiki-dark:#F97583">	end</span></span>
 <span class="line ap-collapsible"><span style="color:#D73A49;--shiki-dark:#F97583">end</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-1"></label>
-</div>
-<h4 id="评价">评价</h4>
-<p>优点：</p>
-<ul>
-<li>xmake 算是 C++ 构建系统里的一股清流，我真的不想再面对一团乱麻的 cmake 了！</li>
-<li>xmake 引入三方包是真的方便！<code>add_requires</code> <code>add_packages</code> 两行终结了写 C++ 的造轮子焦虑。</li>
-</ul>
-<p>缺点：</p>
-<ul>
-<li>请看我喷 xmake：<a href="../gossip/fuckxxx#xmake-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">xmake 有多难用</a></li>
-<li>用的人少，出了 bug 不好找解决方案。不过随着 xmake 包越来越多，生态越来越好，我现在还是愿意在个人项目里用 xmake 的。</li>
-<li><a href="lua">lua 本身是一坨屎</a>，<code>xmake.lua</code> 没有 typing 和 lsp，这方面的生态是欠缺的。</li>
+</div><h4 id="评价">评价</h4><p>优点：</p><ul>
+<li>xmake 算是 C++ 构建系统里的一股清流，我真的不想再面对一团乱麻的 cmake 了！</li><li>xmake 引入三方包是真的方便！<code>add_requires</code> <code>add_packages</code> 两行终结了写 C++ 的造轮子焦虑。</li>
+</ul><p>缺点：</p><ul>
+<li>请看我喷 xmake：<a href="../gossip/fuckxxx#xmake-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">xmake 有多难用</a></li><li>用的人少，出了 bug 不好找解决方案。不过随着 xmake 包越来越多，生态越来越好，我现在还是愿意在个人项目里用 xmake 的。</li><li><a href="lua">lua 本身是一坨屎</a>，<code>xmake.lua</code> 没有 typing 和 lsp，这方面的生态是欠缺的。</li>
 </ul>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-8" name="ap-tabs-tabs-3-3">
 <label class="ap-tabs__label" for="ap-tab-8">cmake</label>
 <div class="ap-tab" data-title="cmake">
-<p>cmake 内部原理是生成 makefile 然后再 make。</p>
-<p>实际上我也就写 Qt 接触了一下 cmake，后面很快转到 xmake 了，关于 cmake 的了解不算多。</p>
-<ul>
-<li>安装：<code>scoop install cmake</code>，或者 VS 安装里也有，不过要自己加 PATH。</li>
-<li>构建：常用的几板斧就是 <code>mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; cmake build .</code>，没什么好说的。</li>
+<p>cmake 内部原理是生成 makefile 然后再 make。</p><p>实际上我也就写 Qt 接触了一下 cmake，后面很快转到 xmake 了，关于 cmake 的了解不算多。</p><ul>
+<li>安装：<code>scoop install cmake</code>，或者 VS 安装里也有，不过要自己加 PATH。</li><li>构建：常用的几板斧就是 <code>mkdir build &amp;&amp; cd build &amp;&amp; cmake .. &amp;&amp; cmake build .</code>，没什么好说的。</li>
 </ul>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-9" name="ap-tabs-tabs-3-3">
@@ -232,75 +144,42 @@
 <div class="ap-tab" data-title="cmkr">
 <p><a href="https://github.com/build-cpp/cmkr" class="ap-external">cmkr</a>，基于 toml 生成 cmake 文件，三阶构建（cmkr -&gt; cmakelists -&gt; makefile）</p>
 </div>
-</div>
-<h3 id="包管理">包管理</h3>
-<p>虽然有的构建系统（例如 xmake 有 xrepo）帮你解决了包管理问题 <span class="ap-heimu" title="你知道的太多了">插一句，xrepo 实在是太方便了，热泪盈眶</span>，但是大部分项目仍然需要使用专门的包管理器管理依赖，有时甚至需要手动摸索依赖。</p>
-<h4 id="windows-vcpkg">windows（vcpkg）</h4>
-<p>vcpkg 是 windows msvc 体系里最常用的包管理器。你甚至可以在各种 rust 库里看到要求使用 vcpkg 安装的依赖，例如 libarchive。</p>
-<ul>
-<li>vcpkg <a href="https://learn.microsoft.com/zh-cn/vcpkg/concepts/classic-mode" class="ap-external">有两个工作模式</a>，<em>经典模式</em> 和 <em>清单模式</em>，其实就是 global 和 per-project 的区别。如果你使用的是 Visual Studio 自带的 vcpkg，其默认运行（并且只能运行）在 <em>清单模式</em>；但是很多时候（比如上述的 rust 编译需要调用 vcpkg 时），直接用 <code>vcpkg install xxx</code> 会<a href="https://learn.microsoft.com/zh-cn/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli#cannot-install-packages-using-classic-mode" class="ap-external">报错 <em>Could not locate a manifest</em></a>，我们更需要 <em>经典模式</em> 的全局包，因此用 scoop 再 install 一个独立的 vcpkg 是很有必要的。自己安装的 vcpkg 就可以工作在经典模式下了。</li>
-<li>在 <em>清单模式</em> 下，使用 <code>vcpkg new --application</code> 生成默认的 vcpkg.json 和 vcpkg-configuration.json，使用 <code>vcpkg add port xxx</code> 添加包，最后要调用 <code>vcpkg install</code> 安装所有添加的包。</li>
-<li>scoop 安装的 vcpkg 可以同时工作在两个模式下，但是它们共用一个 vcpkg 仓库。所以如果你的系统 vcpkg 仓库太老，没有 manifest 里指定的 commit 就会报错，需要找到仓库（<code>~/scoop/persist/vcpkg</code> 下的某个文件夹）手动 <code>git fetch</code>。</li>
-<li>只有指定 <code>VCPKG_DEFAULT_TRIPLET=x64-windows-static</code> env 或者使用 <code>--triplet=x64-windows-static</code> 才能安装静态库版本。</li>
-</ul>
-<p>晕了吗？</p>
-<h4 id="linux">linux</h4>
-<p>linux 上各种包一般依赖于系统包管理器与 pkgconfig 的 .pc 文件。系统包安装后自带了一个 .pc 文件用于指示包的位置、版本、依赖等信息。构建系统会通过 pkg-config 命令读取这些 .pc 文件来获取编译所需的信息。</p>
-<h3 id="qt-开发环境">Qt 开发环境</h3>
-<p>Qt 是一个 C++ 框架，主要是做 GUI 用的。<a href="#qt">查看介绍</a>。不用的话可以不装。</p>
-<p>由于 Qt creater 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。</p>
-<p>Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 xmake 配置。</p>
-<h4 id="windows">windows</h4>
-<div class="ap-tabs">
+</div><h3 id="包管理">包管理</h3><p>虽然有的构建系统（例如 xmake 有 xrepo）帮你解决了包管理问题 <span class="ap-heimu" title="你知道的太多了">插一句，xrepo 实在是太方便了，热泪盈眶</span>，但是大部分项目仍然需要使用专门的包管理器管理依赖，有时甚至需要手动摸索依赖。</p><h4 id="windows-vcpkg">windows（vcpkg）</h4><p>vcpkg 是 windows msvc 体系里最常用的包管理器。你甚至可以在各种 rust 库里看到要求使用 vcpkg 安装的依赖，例如 libarchive。</p><ul>
+<li>vcpkg <a href="https://learn.microsoft.com/zh-cn/vcpkg/concepts/classic-mode" class="ap-external">有两个工作模式</a>，<em>经典模式</em> 和 <em>清单模式</em>，其实就是 global 和 per-project 的区别。如果你使用的是 Visual Studio 自带的 vcpkg，其默认运行（并且只能运行）在 <em>清单模式</em>；但是很多时候（比如上述的 rust 编译需要调用 vcpkg 时），直接用 <code>vcpkg install xxx</code> 会<a href="https://learn.microsoft.com/zh-cn/vcpkg/troubleshoot/build-failures?WT.mc_id=vcpkg_inproduct_cli#cannot-install-packages-using-classic-mode" class="ap-external">报错 <em>Could not locate a manifest</em></a>，我们更需要 <em>经典模式</em> 的全局包，因此用 scoop 再 install 一个独立的 vcpkg 是很有必要的。自己安装的 vcpkg 就可以工作在经典模式下了。</li><li>在 <em>清单模式</em> 下，使用 <code>vcpkg new --application</code> 生成默认的 vcpkg.json 和 vcpkg-configuration.json，使用 <code>vcpkg add port xxx</code> 添加包，最后要调用 <code>vcpkg install</code> 安装所有添加的包。</li><li>scoop 安装的 vcpkg 可以同时工作在两个模式下，但是它们共用一个 vcpkg 仓库。所以如果你的系统 vcpkg 仓库太老，没有 manifest 里指定的 commit 就会报错，需要找到仓库（<code>~/scoop/persist/vcpkg</code> 下的某个文件夹）手动 <code>git fetch</code>。</li><li>只有指定 <code>VCPKG_DEFAULT_TRIPLET=x64-windows-static</code> env 或者使用 <code>--triplet=x64-windows-static</code> 才能安装静态库版本。</li>
+</ul><p>晕了吗？</p><h4 id="linux">linux</h4><p>linux 上各种包一般依赖于系统包管理器与 pkgconfig 的 .pc 文件。系统包安装后自带了一个 .pc 文件用于指示包的位置、版本、依赖等信息。构建系统会通过 pkg-config 命令读取这些 .pc 文件来获取编译所需的信息。</p><h3 id="qt-开发环境">Qt 开发环境</h3><p>Qt 是一个 C++ 框架，主要是做 GUI 用的。<a href="#qt">查看介绍</a>。不用的话可以不装。</p><p>由于 Qt creater 没有 vscode 中的强大插件，因此我希望在 vscode 中开发 Qt 代码。</p><p>Qt 的构建（从 Qt6 开始）默认生成 cmake 配置，但也可以手写 xmake 配置。</p><h4 id="windows">windows</h4><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-10" name="ap-tabs-tabs-4-4" checked>
 <label class="ap-tabs__label" for="ap-tab-10">xmake</label>
 <div class="ap-tab" data-title="xmake">
-<p>用 xmake 作为 Qt 的构建系统是一个不错的选择。之前曾经出现过<a href="../gossip/difficulties#20230507-qt6-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%A4%B1%E8%B4%A5">一些问题</a>，但 20230802 再次尝试已经可以正常使用。</p>
-<ol>
-<li>使用 Qt Creator 创建模版项目。</li>
-<li><code>xmake.lua</code> 参考<a href="https://xmake.io/#/zh-cn/guide/project_examples?id=widgets-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F" class="ap-external">官方文档</a>，这里是一个示例：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<p>用 xmake 作为 Qt 的构建系统是一个不错的选择。之前曾经出现过<a href="../gossip/difficulties#_20230507-qt6-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%A4%B1%E8%B4%A5">一些问题</a>，但 20230802 再次尝试已经可以正常使用。</p><ol>
+<li>使用 Qt Creator 创建模版项目。</li><li><code>xmake.lua</code> 参考<a href="https://xmake.io/#/zh-cn/guide/project_examples?id=widgets-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F" class="ap-external">官方文档</a>，这里是一个示例：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">add_rules</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"mode.debug"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"mode.release"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">target</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"qt_widgetapp"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    add_rules</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"qt.widgetapp"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    add_files</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"src/*.cpp"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    add_files</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"src/mainwindow.ui"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    add_files</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"src/mainwindow.h"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span></code></pre></div>
-</li>
-<li>可能需要指定 sdk：<code>xmake f --qt=D:\software\QtSDK\6.6.0</code>（你的 Qt 安装路径）</li>
-<li><a href="https://xmake.io/#/zh-cn/plugin/builtin_plugins?id=%E7%94%9F%E6%88%90compiler_commands" class="ap-external">生成 compiler_commands.json</a>，使 clangd 能够读取 includePath 等。一行：<code>xmake project -k compile_commands</code></li>
-<li><code>xmake &amp;&amp; xmake r</code> 就能跑了。</li>
-</ol>
-<p>刚做完 2. 的时候会出现经典问题，clangd 报 <em>找不到 <code>ui_mainwindow.h</code> 文件</em>… 因为它是编译期生成的。。用 cmake CLI 的时候可能需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，应该是 xmake 内置的 qt 规则起作用了。</p>
-<p>需要注意，使用 xmake 构建的 Qt 程序无法在 stdout 输出字符，无论 release 还是 debug mode。（不知道是不是缺少了什么设置选项）</p>
+</li><li>可能需要指定 sdk：<code>xmake f --qt=D:\software\QtSDK\6.6.0</code>（你的 Qt 安装路径）</li><li><a href="https://xmake.io/#/zh-cn/plugin/builtin_plugins?id=%E7%94%9F%E6%88%90compiler_commands" class="ap-external">生成 compiler_commands.json</a>，使 clangd 能够读取 includePath 等。一行：<code>xmake project -k compile_commands</code></li><li><code>xmake &amp;&amp; xmake r</code> 就能跑了。</li>
+</ol><p>刚做完 2. 的时候会出现经典问题，clangd 报 <em>找不到 <code>ui_mainwindow.h</code> 文件</em>… 因为它是编译期生成的。。用 cmake CLI 的时候可能需要麻烦手动生成，xmake 挺智能的，build 一次后就不会报错了，应该是 xmake 内置的 qt 规则起作用了。</p><p>需要注意，使用 xmake 构建的 Qt 程序无法在 stdout 输出字符，无论 release 还是 debug mode。（不知道是不是缺少了什么设置选项）</p>
 </div>
 <input class="ap-tabs__radio" type="radio" id="ap-tab-11" name="ap-tabs-tabs-4-4">
 <label class="ap-tabs__label" for="ap-tab-11">cmake + C/C++ 扩展</label>
 <div class="ap-tab" data-title="cmake + C/C++ 扩展">
 <ol>
-<li>先用 Qt creater 创建一个模板项目，或者打开现有项目，或者自己手写模板。</li>
-<li><code>Ctrl + Shift + P</code>，键入 <code>C/C++: Edit Configurations (UI)</code>
+<li>先用 Qt creater 创建一个模板项目，或者打开现有项目，或者自己手写模板。</li><li><code>Ctrl + Shift + P</code>，键入 <code>C/C++: Edit Configurations (UI)</code>
 <ul>
-<li>在 <em>包含路径</em> 下添加 <code>D:\software\Qt\6.5.0\mingw_64\include\**</code>（使用你自己的 include path）</li>
-<li>将 <em>C++ 标准</em> 改为你需要的。（截至 Qt6.6.0 不支持 C++23）</li>
+<li>在 <em>包含路径</em> 下添加 <code>D:\software\Qt\6.5.0\mingw_64\include\**</code>（使用你自己的 include path）</li><li>将 <em>C++ 标准</em> 改为你需要的。（截至 Qt6.6.0 不支持 C++23）</li>
 </ul>
-</li>
-<li>在项目目录下执行：<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>在项目目录下执行：<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">uic</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> mainwindow.ui</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> ui_mainwindow.h</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">rcc</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> static.qrc</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> static.cpp</span><span style="color:#032F62;--shiki-dark:#9ECBFF">    //</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> 如果有</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> qrc</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> 文件则执行。</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">//</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> rcc</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> 不会读取</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> qresource</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> prefix，可能需要将</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> .qrc</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> 文件拷贝到静态资源文件夹下并执行</span></span></code></pre></div>
-</li>
-<li>将 <em>3.</em> 生成的文件（static.cpp） 添加至 <code>CMakelists.txt</code> 中的 <code>PROJECT_SOURCES</code></li>
-<li>在 <code>CMakelists.txt</code> 中的 <code>find_package</code> 语句前添加：<div class="ap-code ap-code--ln" data-lang="cmake:no-line-numbers" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cmake:no-line-numbers</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>将 <em>3.</em> 生成的文件（static.cpp） 添加至 <code>CMakelists.txt</code> 中的 <code>PROJECT_SOURCES</code></li><li>在 <code>CMakelists.txt</code> 中的 <code>find_package</code> 语句前添加：<div class="ap-code ap-code--ln" data-lang="cmake:no-line-numbers" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cmake:no-line-numbers</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-text"><span class="line"><span>set(CMAKE_PREFIX_PATH "D:/software/Qt/6.5.0/mingw_64")` # （使用你自己的 path）</span></span></code></pre></div>
 </li>
 </ol>
 </div>
-</div>
-<h4 id="linux-1">linux</h4>
-<p>在 (arch)linux 上开发 qt 应用。</p>
-<ol>
-<li>通过 <a href="#%E5%AE%89%E8%A3%85">aqtinstall</a> 安装 sdk；通过 pacman 安装 <code>qt6-base</code>.</li>
-<li>在 <code>xmake.lua</code> 中，新建 toolchains:<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</div><h4 id="linux-1">linux</h4><p>在 (arch)linux 上开发 qt 应用。</p><ol>
+<li>通过 <a href="#%E5%AE%89%E8%A3%85">aqtinstall</a> 安装 sdk；通过 pacman 安装 <code>qt6-base</code>.</li><li>在 <code>xmake.lua</code> 中，新建 toolchains:<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">toolchain</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"myqt"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    set_kind</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"standalone"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> is_os</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"linux"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">then</span></span>
@@ -309,20 +188,10 @@
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        add_linkdirs</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"/usr/lib/qt6/"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    end</span></span></code></pre></div>
 然后在 target 中 <code>set_toolchains(&quot;myqt&quot;)</code> 即可。</li>
-</ol>
-<h2 id="语言相关">语言相关</h2>
-<p><s>在大片的构建系统篇幅后我们终于走到了语言基础，太悲哀了。</s></p>
-<h3 id="range-based-for-loop">range-based for loop</h3>
-<blockquote>
+</ol><h2 id="语言相关">语言相关</h2><p><s>在大片的构建系统篇幅后我们终于走到了语言基础，太悲哀了。</s></p><h3 id="range-based-for-loop">range-based for loop</h3><blockquote>
 <p>&gt;= C++11</p>
-</blockquote>
-<p>不用再写下标了。</p>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
-<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">auto</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">i : vec){}</span></span></code></pre></div>
-<p>如果需要同时使用下标，可以用 <a href="#ranges">ranges enumerate</a>（不过要 C++20）。</p>
-<p>而且，range-based for loop 还有<a href="https://www.reddit.com/r/cpp/comments/pye3iv/c_committee_dont_want_to_fix_rangebased_for_loop/" class="ap-external">生命周期问题</a>，10 年未修复。使用时应特别注意。</p>
-<h3 id="数据结构">数据结构</h3>
-<ul>
+</blockquote><p>不用再写下标了。</p><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">auto</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x26;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">i : vec){}</span></span></code></pre></div><p>如果需要同时使用下标，可以用 <a href="#ranges">ranges enumerate</a>（不过要 C++20）。</p><p>而且，range-based for loop 还有<a href="https://www.reddit.com/r/cpp/comments/pye3iv/c_committee_dont_want_to_fix_rangebased_for_loop/" class="ap-external">生命周期问题</a>，10 年未修复。使用时应特别注意。</p><h3 id="数据结构">数据结构</h3><ul>
 <li><code>&lt;queue&gt;</code>：
 <ul>
 <li>优先队列：<code>priority_queue&lt;T, vector&lt;T&gt;, std::greater&lt;T&gt;&gt;</code>
@@ -332,45 +201,25 @@
 </li>
 </ul>
 </li>
-</ul>
-<h3 id="值类型">值类型</h3>
-<blockquote>
+</ul><h3 id="值类型">值类型</h3><blockquote>
 <p>&gt;= C++11</p>
-</blockquote>
-<p>C++11 引入了更多的值类型，这其实也是所有权的体现。在左值和右值中间添加了 xvalue（将亡值），也就是带有所有权的右值（右值引用）<span class="ap-heimu" title="你知道的太多了">（名词真的好多！）</span>至于其他的 glvalue, prvalue 都是集合的相加相减，没啥意思。总之只要知道 xvalue 是啥就行。</p>
-<p>std::move() 可以将值转换为 xvalue，实际上相当于 <code>static_cast&lt;T &amp;&amp;&gt;()</code>。</p>
-<h3 id="类型转换">类型转换</h3>
-<blockquote>
+</blockquote><p>C++11 引入了更多的值类型，这其实也是所有权的体现。在左值和右值中间添加了 xvalue（将亡值），也就是带有所有权的右值（右值引用）<span class="ap-heimu" title="你知道的太多了">（名词真的好多！）</span>至于其他的 glvalue, prvalue 都是集合的相加相减，没啥意思。总之只要知道 xvalue 是啥就行。</p><p>std::move() 可以将值转换为 xvalue，实际上相当于 <code>static_cast&lt;T &amp;&amp;&gt;()</code>。</p><h3 id="类型转换">类型转换</h3><blockquote>
 <p>&gt;= C++11</p>
-</blockquote>
-<ul>
-<li><code>static_cast</code>：不进行安全检查</li>
-<li><code>const_cast</code>：设置或移除指针/引用所指对象的 const</li>
-<li><code>dynamic_cast</code>：进行安全检查，用于指针/引用转换，可以用于运行时父类转子类
+</blockquote><ul>
+<li><code>static_cast</code>：不进行安全检查</li><li><code>const_cast</code>：设置或移除指针/引用所指对象的 const</li><li><code>dynamic_cast</code>：进行安全检查，用于指针/引用转换，可以用于运行时父类转子类
 <ul>
 <li>有些情况下 <code>dynamic_cast</code> 的性能可以接近 <code>static_cast</code>。但大多数时候有额外开销。</li>
 </ul>
-</li>
-<li><code>reinterpret_cast</code>：无视类型，进行最底层的比特位复制</li>
-</ul>
-<h3 id="智能指针">智能指针</h3>
-<blockquote>
+</li><li><code>reinterpret_cast</code>：无视类型，进行最底层的比特位复制</li>
+</ul><h3 id="智能指针">智能指针</h3><blockquote>
 <p>&gt;= C++11, &lt;memory&gt;</p>
-</blockquote>
-<ul>
+</blockquote><ul>
 <li><code>shared_ptr</code> 允许多个指针指向同一个对象，引用计数
 <ul>
-<li>(C++14) 使用 <code>std::make_shared&lt;Type&gt;()</code> 构建</li>
-<li><code>reset()</code> 不带参数则释放（== release()）</li>
+<li>(C++14) 使用 <code>std::make_shared&lt;Type&gt;()</code> 构建</li><li><code>reset()</code> 不带参数则释放（== release()）</li>
 </ul>
-</li>
-<li><code>unique_ptr</code> 独占所指向的对象</li>
-<li><code>weak_ptr</code> <em>shared_ptr</em> 的弱引用，不影响其计数器</li>
-</ul>
-<h3 id="多行字符串">多行字符串</h3>
-<p>Raw string: <code>R&quot;&quot;(some\text)&quot;&quot;</code></p>
-<h3 id="面向对象">面向对象</h3>
-<ul>
+</li><li><code>unique_ptr</code> 独占所指向的对象</li><li><code>weak_ptr</code> <em>shared_ptr</em> 的弱引用，不影响其计数器</li>
+</ul><h3 id="多行字符串">多行字符串</h3><p>Raw string: <code>R&quot;&quot;(some\text)&quot;&quot;</code></p><h3 id="面向对象">面向对象</h3><ul>
 <li>构造函数：<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">class</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> MyClass</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">public:</span></span>
@@ -386,36 +235,14 @@
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        other.data </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> nullptr</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span><span style="color:#6A737D;--shiki-dark:#6A737D"> // 将资源置为空，避免释放时出错</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">};</span></span></code></pre></div>
-</li>
-<li>protected：指能被子类访问，不能被外部访问的成员。</li>
-<li>virtual：每个拥有虚对象的<strong>类本身</strong>都会有一个虚表，用来查询任何子类的某一特定重载。所以虚表对类是 static 的。
+</li><li>protected：指能被子类访问，不能被外部访问的成员。</li><li>virtual：每个拥有虚对象的<strong>类本身</strong>都会有一个虚表，用来查询任何子类的某一特定重载。所以虚表对类是 static 的。
 <ul>
-<li>虚函数查找表发生在运行时。</li>
-<li>调用虚函数所需的代价基本上和非虚函数效率一样，开销很小。</li>
-<li>其他的可以看<a href="https://jacktang816.github.io/post/virtualfunction/" class="ap-external">这篇文章</a>。</li>
+<li>虚函数查找表发生在运行时。</li><li>调用虚函数所需的代价基本上和非虚函数效率一样，开销很小。</li><li>其他的可以看<a href="https://jacktang816.github.io/post/virtualfunction/" class="ap-external">这篇文章</a>。</li>
 </ul>
-</li>
-<li>C++ 允许多继承，菱形继承需要将中间类声明为虚类。（正常情况下不要使用菱形继承！）</li>
-<li>非虚函数定义在类内自动内联。类外则需要显式 inline。</li>
-<li>C++ 实现 interface：纯虚类，所有函数都是纯虚函数。</li>
-<li>C++ 提倡继承代替组合。因为空类还会有 1byte 的空间，组合的话很亏。</li>
-<li>私有继承不允许多态转换。</li>
-</ul>
-<h3 id="option">option</h3>
-<p>(C++17) C++ 中有 <code>std::optional&lt;T&gt;</code> 起到类似 rust 中 Option 的作用。</p>
-<ul>
+</li><li>C++ 允许多继承，菱形继承需要将中间类声明为虚类。（正常情况下不要使用菱形继承！）</li><li>非虚函数定义在类内自动内联。类外则需要显式 inline。</li><li>C++ 实现 interface：纯虚类，所有函数都是纯虚函数。</li><li>C++ 提倡继承代替组合。因为空类还会有 1byte 的空间，组合的话很亏。</li><li>私有继承不允许多态转换。</li>
+</ul><h3 id="option">option</h3><p>(C++17) C++ 中有 <code>std::optional&lt;T&gt;</code> 起到类似 rust 中 Option 的作用。</p><ul>
 <li>一些函数：<code>has_value() -&gt; bool</code>, <code>value() -&gt; T</code>, <code>value_or(T) -&gt; T</code></li>
-</ul>
-<h3 id="template">template</h3>
-<p>前往 <a href="#external">external 1.</a>，讲得非常不错。</p>
-<h3 id="内置模版比较函数">内置模版比较函数</h3>
-<p>算法竞赛常用的，例如优先队列会用到。签名是 class Compare。主要有：<code>std::greater</code>, <code>std::greater_equal</code>, <code>std::equal_to</code>, <code>std::not_equal_to</code>，再加上两个 greater 改成 less 的。</p>
-<h3 id="variant">variant</h3>
-<p>（C++17）</p>
-<p><a href="#external">external 14.</a> 是对 variant 的深度评测，推荐阅读。</p>
-<p>variant 本意是封装的 <code>union</code>，可以当成错误处理的一种实现，类似 rust <code>Result</code>. C++23 请使用 <code>std::expected</code>.</p>
-<p>获取值可以用 <code>std::get</code> + try catch，可以用 <code>std::get_if</code>，也可用 <a href="https://en.cppreference.com/w/cpp/utility/variant/visit" class="ap-external"><code>std::visit</code></a>:</p>
-<div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="cpp" style="--ap-ln-w:2ch;counter-reset:ap-lines 20"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</ul><h3 id="template">template</h3><p>前往 <a href="#external">external 1.</a>，讲得非常不错。</p><h3 id="内置模版比较函数">内置模版比较函数</h3><p>算法竞赛常用的，例如优先队列会用到。签名是 class Compare。主要有：<code>std::greater</code>, <code>std::greater_equal</code>, <code>std::equal_to</code>, <code>std::not_equal_to</code>，再加上两个 greater 改成 less 的。</p><h3 id="variant">variant</h3><p>（C++17）</p><p><a href="#external">external 14.</a> 是对 variant 的深度评测，推荐阅读。</p><p>variant 本意是封装的 <code>union</code>，可以当成错误处理的一种实现，类似 rust <code>Result</code>. C++23 请使用 <code>std::expected</code>.</p><p>获取值可以用 <code>std::get</code> + try catch，可以用 <code>std::get_if</code>，也可用 <a href="https://en.cppreference.com/w/cpp/utility/variant/visit" class="ap-external"><code>std::visit</code></a>:</p><div class="ap-code ap-code--ln ap-code--fold is-collapsed" data-lang="cpp" style="--ap-ln-w:2ch;counter-reset:ap-lines 20"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <input type="checkbox" class="ap-code__fold-input" id="ap-code-fold-2">
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">// 1</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::variant</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#24292E;--shiki-dark:#E1E4E8">string</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#24292E;--shiki-dark:#E1E4E8"> v;</span></span>
@@ -437,18 +264,10 @@
 <span class="line ap-collapsible"><span style="color:#D73A49;--shiki-dark:#F97583">  else</span><span style="color:#D73A49;--shiki-dark:#F97583"> if</span><span style="color:#D73A49;--shiki-dark:#F97583"> constexpr</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#6F42C1;--shiki-dark:#B392F0">std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::is_same_v</span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#24292E;--shiki-dark:#E1E4E8">T, </span><span style="color:#24292E;--shiki-dark:#E1E4E8">string</span><span style="color:#D73A49;--shiki-dark:#F97583">></span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line ap-collapsible"><span style="color:#6F42C1;--shiki-dark:#B392F0">    std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::cout </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "errlog: "</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x3C;&#x3C;</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> arg </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> '</span><span style="color:#005CC5;--shiki-dark:#79B8FF">\n</span><span style="color:#032F62;--shiki-dark:#9ECBFF">'</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
 <span class="line ap-collapsible"><span style="color:#24292E;--shiki-dark:#E1E4E8">});</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-2"></label>
-</div>
-<h3 id="assert">assert</h3>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</div><h3 id="assert">assert</h3><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">static_assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(a </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x26;&#x26;</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "error message"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span><span style="color:#6A737D;--shiki-dark:#6A737D"> // compile time</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">#include</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> &#x3C;cassert></span></span>
-<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(a </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x26;&#x26;</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "error message"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span><span style="color:#6A737D;--shiki-dark:#6A737D">  // runtime</span></span></code></pre></div>
-<p>至于 assert_eq 这种 std 就没有了，需要自己写宏或者引入 crpcut.hpp、GoogleTest 等框架。</p>
-<h3 id="explicit">explicit</h3>
-<p>explicit 可以防止隐式转换；修饰构造函数时，还可以防止复制初始化。rust 人非常喜欢这个东西。</p>
-<h3 id="if-constexpr">if constexpr</h3>
-<p>编译期剪枝。可以用于类型判断。</p>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(a </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#D73A49;--shiki-dark:#F97583"> &#x26;&#x26;</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "error message"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span><span style="color:#6A737D;--shiki-dark:#6A737D">  // runtime</span></span></code></pre></div><p>至于 assert_eq 这种 std 就没有了，需要自己写宏或者引入 crpcut.hpp、GoogleTest 等框架。</p><h3 id="explicit">explicit</h3><p>explicit 可以防止隐式转换；修饰构造函数时，还可以防止复制初始化。rust 人非常喜欢这个东西。</p><h3 id="if-constexpr">if constexpr</h3><p>编译期剪枝。可以用于类型判断。</p><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">#include</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> &#x3C;type_traits></span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">template</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> &#x3C;</span><span style="color:#D73A49;--shiki-dark:#F97583">typename</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> T</span><span style="color:#24292E;--shiki-dark:#E1E4E8">></span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">void</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> f</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">T</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
@@ -457,124 +276,48 @@
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  {</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    static_assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  }</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<h3 id="ranges">ranges</h3>
-<blockquote>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><h3 id="ranges">ranges</h3><blockquote>
 <p>&gt;= C++20</p>
-</blockquote>
-<p>ranges 是 C++ 在函数式方面的努力，C++20 的四大特性之一。简单的说就是把各类操作变换 chain 在一起，简化写法，不再需要 <code>(c.begin(), c.end(), ...)</code>。</p>
-<p>example 可以看 <a href="https://en.cppreference.com/w/cpp/ranges" class="ap-external">cpp reference</a>。</p>
-<ul>
-<li><code>std::views</code> 和 <code>std::ranges::views</code> 是等价的。</li>
-<li><code>std::ranges::for_each(Range, func)</code> 不能用 <code>|</code> chain，我不明白为什么要这么设计，有点脑残。</li>
-<li><code>std::views::transform</code> 就是 map。</li>
-<li>直到 C++23 都没有一个可 chain 的 reduce (<a href="https://en.cppreference.com/w/cpp/algorithm/ranges/fold_left" class="ap-external">std::ranges::fold_left</a>)</li>
-<li><code>std::views::zip</code> 和 <code>std::views::enumerate</code> 返回结果都是 tuple，要用 <code>std::get&lt;0&gt;(tuple)</code> 取值。</li>
-<li>遍历 zip 时必须用 <code>auto</code>，不能用 <code>auto &amp;</code>：<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</blockquote><p>ranges 是 C++ 在函数式方面的努力，C++20 的四大特性之一。简单的说就是把各类操作变换 chain 在一起，简化写法，不再需要 <code>(c.begin(), c.end(), ...)</code>。</p><p>example 可以看 <a href="https://en.cppreference.com/w/cpp/ranges" class="ap-external">cpp reference</a>。</p><ul>
+<li><code>std::views</code> 和 <code>std::ranges::views</code> 是等价的。</li><li><code>std::ranges::for_each(Range, func)</code> 不能用 <code>|</code> chain，我不明白为什么要这么设计，有点脑残。</li><li><code>std::views::transform</code> 就是 map。</li><li>直到 C++23 都没有一个可 chain 的 reduce (<a href="https://en.cppreference.com/w/cpp/algorithm/ranges/fold_left" class="ap-external">std::ranges::fold_left</a>)</li><li><code>std::views::zip</code> 和 <code>std::views::enumerate</code> 返回结果都是 tuple，要用 <code>std::get&lt;0&gt;(tuple)</code> 取值。</li><li>遍历 zip 时必须用 <code>auto</code>，不能用 <code>auto &amp;</code>：<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">auto</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> [a, b] : </span><span style="color:#6F42C1;--shiki-dark:#B392F0">std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::</span><span style="color:#6F42C1;--shiki-dark:#B392F0">ranges</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::</span><span style="color:#6F42C1;--shiki-dark:#B392F0">views</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::</span><span style="color:#6F42C1;--shiki-dark:#B392F0">zip</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(range_a, range_b)) {}</span></span></code></pre></div>
 </li>
-</ul>
-<h3 id="volatile"><a href="https://www.runoob.com/w3cnote/c-volatile-keyword.html" class="ap-external">volatile</a></h3>
-<p>表示某个变量可能随时变化，不要优化此变量的操作。</p>
-<h2 id="其他注意点">其他注意点</h2>
-<ul>
-<li>C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.</li>
-<li>被 C++20 的 <code>std::ranges::remove_if()</code> 坑过（可能当时编译器实现有 bug(?)）</li>
-<li>或许很难注意到的一些 <a href="#%E5%B8%B8%E8%A7%81%E5%90%8D%E8%AF%8D">UB</a>：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，<s>还有一些操作裸指针的</s> <a href="https://zhuanlan.zhihu.com/p/391088391" class="ap-external">source</a></li>
-</ul>
-<h2 id="三方库">三方库</h2>
-<p>收集了一些三方库。</p>
-<ul>
+</ul><h3 id="volatile"><a href="https://www.runoob.com/w3cnote/c-volatile-keyword.html" class="ap-external">volatile</a></h3><p>表示某个变量可能随时变化，不要优化此变量的操作。</p><h2 id="其他注意点">其他注意点</h2><ul>
+<li>C++ 的错误处理并没有一个除 0 的标准错误，因此自己处理时需要 if 判断并 throw.</li><li>被 C++20 的 <code>std::ranges::remove_if()</code> 坑过（可能当时编译器实现有 bug(?)）</li><li>或许很难注意到的一些 <a href="#%E5%B8%B8%E8%A7%81%E5%90%8D%E8%AF%8D">UB</a>：有符号整数的溢出是 UB，控制流到达返回值不为 void 的函数的末尾，<s>还有一些操作裸指针的</s> <a href="https://zhuanlan.zhihu.com/p/391088391" class="ap-external">source</a></li>
+</ul><h2 id="三方库">三方库</h2><p>收集了一些三方库。</p><ul>
 <li><a href="https://github.com/hypengw/rstd" class="ap-external">hypengw/rstd</a>：一个 Rusty 的 C++ std</li>
-</ul>
-<h2 id="qt">Qt</h2>
-<div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>提示</p>
-<p>此处 Qt 部分版本代码为 Qt4-5，不保证能正常迁移至 Qt6;</p>
-<p>以下内容并不是 Qt 基础的教程，缺乏目的性和针对性</p>
-</div>
-<h3 id="基本介绍-官网">基本介绍 --&gt; <a href="https://www.qt.io/" class="ap-external">官网</a></h3>
-<p>Qt 是一个成熟的跨平台，<s>跨语言</s>的 GUI 框架（不建议再使用 MFC 等等了）。我用 C++ 做的最早的 GUI 应用就是用 Qt 写的。对于 C++ + GUI 需求，Qt 是比较简单快速的选择。</p>
-<ul>
-<li>它封装了很多窗口与控件类，可以轻松使用而并不需要深入了解其内部实现与原理 <em><s>（实际上它几乎封装了一切）</s></em></li>
-<li>它支持可视化构建窗口界面 (Qt Designer)，极大幅度减小代码量</li>
-<li><s>它提供的软件打包方式比较人性化</s>（有坑）</li>
-</ul>
-<h3 id="安装-1">安装</h3>
-<blockquote>
+</ul><h2 id="qt">Qt</h2><div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>提示</p><p>此处 Qt 部分版本代码为 Qt4-5，不保证能正常迁移至 Qt6;</p><p>以下内容并不是 Qt 基础的教程，缺乏目的性和针对性</p>
+</div><h3 id="基本介绍-官网">基本介绍 --&gt; <a href="https://www.qt.io/" class="ap-external">官网</a></h3><p>Qt 是一个成熟的跨平台，<s>跨语言</s>的 GUI 框架（不建议再使用 MFC 等等了）。我用 C++ 做的最早的 GUI 应用就是用 Qt 写的。对于 C++ + GUI 需求，Qt 是比较简单快速的选择。</p><ul>
+<li>它封装了很多窗口与控件类，可以轻松使用而并不需要深入了解其内部实现与原理 <em><s>（实际上它几乎封装了一切）</s></em></li><li>它支持可视化构建窗口界面 (Qt Designer)，极大幅度减小代码量</li><li><s>它提供的软件打包方式比较人性化</s>（有坑）</li>
+</ul><h3 id="安装-1">安装</h3><blockquote>
 <p>推荐使用 CLI，快、用时短、空间占用小、无需登录</p>
-</blockquote>
-<ul>
+</blockquote><ul>
 <li>CLI: <a href="https://aqtinstall.readthedocs.io/en/latest/getting_started.html" class="ap-external">aqtinstall</a>
 <ol>
-<li><code>scoop install aqtinstall</code></li>
-<li><code>aqt install-qt --outputdir D:\software\QtSDK windows desktop 6.6.0 win64_msvc2019_64</code>（我的示例，别抄，去读文档；安装大小是 1.46G，已经很不错了）</li>
+<li><code>scoop install aqtinstall</code></li><li><code>aqt install-qt --outputdir D:\software\QtSDK windows desktop 6.6.0 win64_msvc2019_64</code>（我的示例，别抄，去读文档；安装大小是 1.46G，已经很不错了）</li>
 </ol>
-</li>
-<li>官方 GUI: <a href="https://www.qt.io/zh-cn/download" class="ap-external">qt.io</a>。
+</li><li>官方 GUI: <a href="https://www.qt.io/zh-cn/download" class="ap-external">qt.io</a>。
 <ul>
 <li>需要在 msvc/mingw 中选择其一(?)。如果不想装重量级的 Visual Studio (提供 msvc)，你可以尝试安装 mingw 的 sdk，占用空间小点，不过配置会稍微麻烦一点。</li>
 </ul>
 </li>
-</ul>
-<h3 id="其他组件">其他组件</h3>
-<p>一些可能会用到的第三方组件 / 框架。</p>
-<ul>
-<li><a href="https://github.com/ColinDuquesnoy/QDarkStyleSheet" class="ap-external">QDarkStyleSheet</a>：窗口深色模式，参考<a href="#dark-mode">深色模式</a>。</li>
-<li><a href="https://github.com/zhuzichu520/FluentUI" class="ap-external">FluentUI</a>：提供一套 UI 框架。</li>
-</ul>
-<h3 id="dark-mode">dark mode</h3>
-<p>深色模式支持是很重要的。</p>
-<p>你可以很简单地<a href="https://forum.qt.io/topic/101391/windows-10-dark-theme/4" class="ap-external">添加深色模式</a>（高对比度）；若你想使用更为柔和一点的颜色，可以使用第三方的 <a href="https://github.com/ColinDuquesnoy/QDarkStyleSheet" class="ap-external">QDarkStyleSheet</a>。</p>
-<h3 id="唤起最小化的窗口">唤起最小化的窗口</h3>
-<div class="ap-code ap-code--ln" data-lang="cpp:no-line-numbers" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp:no-line-numbers</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
-<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-text"><span class="line"><span>show();showNormal();raise();activateWindow();</span></span></code></pre></div>
-<h3 id="关于控件组">关于控件组</h3>
-<p>Qt 官方提供了 QButtonGroup 类。该类提供了对 QAbstractButton（即记忆化选择按钮）的分组。将按钮添加到 QButtonGroup 对象中，点击某一按钮时，组中其他按钮会被自动取消 toggle（已点击状态）。你也可以为组中每个按钮赋予数字 id，通过 id 对控件进行调用。</p>
-<p>当然，QButtonGroup 类的使用范围是具有很大局限性的。若想对其他不同类型的控件新建分组该怎么做呢？</p>
-<p>答：使用 <code>QVector&lt;QWidget*&gt;</code>。由于部分常用控件(QPushButton,QLable 等)继承自 QWidget，因此通过 QWidget 类型容器对组内控件进行统一操作，例如需要隐藏主窗口内的所有控件，只需
+</ul><h3 id="其他组件">其他组件</h3><p>一些可能会用到的第三方组件 / 框架。</p><ul>
+<li><a href="https://github.com/ColinDuquesnoy/QDarkStyleSheet" class="ap-external">QDarkStyleSheet</a>：窗口深色模式，参考<a href="#dark-mode">深色模式</a>。</li><li><a href="https://github.com/zhuzichu520/FluentUI" class="ap-external">FluentUI</a>：提供一套 UI 框架。</li>
+</ul><h3 id="dark-mode">dark mode</h3><p>深色模式支持是很重要的。</p><p>你可以很简单地<a href="https://forum.qt.io/topic/101391/windows-10-dark-theme/4" class="ap-external">添加深色模式</a>（高对比度）；若你想使用更为柔和一点的颜色，可以使用第三方的 <a href="https://github.com/ColinDuquesnoy/QDarkStyleSheet" class="ap-external">QDarkStyleSheet</a>。</p><h3 id="唤起最小化的窗口">唤起最小化的窗口</h3><div class="ap-code ap-code--ln" data-lang="cpp:no-line-numbers" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp:no-line-numbers</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-text"><span class="line"><span>show();showNormal();raise();activateWindow();</span></span></code></pre></div><h3 id="关于控件组">关于控件组</h3><p>Qt 官方提供了 QButtonGroup 类。该类提供了对 QAbstractButton（即记忆化选择按钮）的分组。将按钮添加到 QButtonGroup 对象中，点击某一按钮时，组中其他按钮会被自动取消 toggle（已点击状态）。你也可以为组中每个按钮赋予数字 id，通过 id 对控件进行调用。</p><p>当然，QButtonGroup 类的使用范围是具有很大局限性的。若想对其他不同类型的控件新建分组该怎么做呢？</p><p>答：使用 <code>QVector&lt;QWidget*&gt;</code>。由于部分常用控件(QPushButton,QLable 等)继承自 QWidget，因此通过 QWidget 类型容器对组内控件进行统一操作，例如需要隐藏主窗口内的所有控件，只需
 <code>for (auto &amp;i : elements) i-&gt;hide();</code>
-即可。</p>
-<p><em>对于 hide() 与 show() 操作来说，更简便的方法是将所有控件加入新的 widget，然后将该 widget 的父对象设为主窗口。之后的隐藏与显示只需对该 widget 操作即可。</em></p>
-<h3 id="关于资源文件">关于资源文件</h3>
-<p>Qt 提供方便的资源文件引用。在项目中通过 <code>Add New...</code> 新建 Qt Resource File<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup> 并添加文件到 <code>.qrc</code> 内。Qt 在构建时会将添加的文件以二进制形式存放在生成的 exe 文件中。无需将资源文件放入打包目录，程序将会从 exe 中引用资源。</p>
-<p>但是请注意，<strong>加入 .qrc 中的资源文件是只读的。有修改需求的文件请勿使用此方法。*</strong>（使用相对路径）*</p>
-<h3 id="添加图标与版本信息">添加图标与版本信息</h3>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>使用 qmake，已过时</summary>
-<p>图标：在项目目录下放入 .ico 图标（<a href="https://www.aconvert.com/cn/icon/" class="ap-external">在线转 ico</a>），在项目 .pro 文件中加入 <code>RC_ICONS = xxx.ico</code> 即可。所有该项目下的子窗口都会自动使用该图标。注意仅允许 ico 格式图像。</p>
-<p>版本信息：在项目 .pro 文件中加入 <code>VERSION = x.x.x</code> 即可。</p>
-</details>
-<ol>
-<li>新建 <code>xxx.rc</code>，内容为 <code>IDI_ICON1 ICON DISCARDABLE &quot;logo.ico&quot;</code> （定位到你的 ico 图标）</li>
-<li>（使用 <a href="#xmake">xmake</a>）将 <code>xxx.rc</code> 加入 xmake.lua：<code>add_files(static/xxx.rc)</code></li>
-</ol>
-<h3 id="打包">打包</h3>
-<p>Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件到任意目标目录，在目录下使用 <code>windeployqt xxx.exe</code> 命令即可完成打包（windeployqt 需要在环境变量内，否则使用绝对位置）。</p>
-<p>但是到了 Qt6，情况就完全不一样了。。Qt6 的打包不管使用 <code>windeployqt</code> 或 <code>windeployqt6</code> 打包后，程序都无法运行。重装 SDK 后也是如此。首先，使用 <code>windeployqt</code> 会缺失 <code>Qt6Core.dll</code>, <code>Qt6Gui.dll</code>, <code>Qt6Widgets.dll</code> 这老三样。其次，手动复制这三样后，测试还会出现 bug：</p>
-<div data-ap-island="ZoomedImg" data-props="{&quot;alt&quot;:&quot;bug&quot;,&quot;src&quot;:&quot;/images/coding/cpp/windeployqt_bug.png&quot;,&quot;scale&quot;:&quot;50%&quot;}"></div>
-<p>解法是将 Qt SDK 目录下的 <code>plugins</code> 文件夹复制到打包的 exe 目录下<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup>。。</p>
-<h4 id="优化">优化</h4>
-<p>这样打包出来的程序体积还能<strong>进一步缩小</strong>。运行 exe 后，全选目录下文件并删除，跳过已被打开的所有文件，并递归地对每个文件夹进行同样的操作。这样能够移除不必要的运行库从而<mark>大幅</mark>降低发布包的大小。</p>
-<h4 id="测试">测试</h4>
-<p>打包之后需要测试有没有丢运行库。换用另一个环境测试也太麻烦了点，而傻逼 windows GUI 也把环境变量藏得实在是太好，徒增了许多麻烦。其实只要在命令行中临时删除环境变量，再运行即可：</p>
-<div class="ap-tabs ap-tabs--code">
-<p>@windows</p>
-<div class="ap-code ap-code--ln" data-lang="bat" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">bat</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+即可。</p><p><em>对于 hide() 与 show() 操作来说，更简便的方法是将所有控件加入新的 widget，然后将该 widget 的父对象设为主窗口。之后的隐藏与显示只需对该 widget 操作即可。</em></p><h3 id="关于资源文件">关于资源文件</h3><p>Qt 提供方便的资源文件引用。在项目中通过 <code>Add New...</code> 新建 Qt Resource File<sup class="footnote-ref"><a href="#footnote2">[2]</a><a class="footnote-anchor" id="footnote-ref2"></a></sup> 并添加文件到 <code>.qrc</code> 内。Qt 在构建时会将添加的文件以二进制形式存放在生成的 exe 文件中。无需将资源文件放入打包目录，程序将会从 exe 中引用资源。</p><p>但是请注意，<strong>加入 .qrc 中的资源文件是只读的。有修改需求的文件请勿使用此方法。*</strong>（使用相对路径）*</p><h3 id="添加图标与版本信息">添加图标与版本信息</h3><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>使用 qmake，已过时</summary><p>图标：在项目目录下放入 .ico 图标（<a href="https://www.aconvert.com/cn/icon/" class="ap-external">在线转 ico</a>），在项目 .pro 文件中加入 <code>RC_ICONS = xxx.ico</code> 即可。所有该项目下的子窗口都会自动使用该图标。注意仅允许 ico 格式图像。</p><p>版本信息：在项目 .pro 文件中加入 <code>VERSION = x.x.x</code> 即可。</p>
+</details><ol>
+<li>新建 <code>xxx.rc</code>，内容为 <code>IDI_ICON1 ICON DISCARDABLE &quot;logo.ico&quot;</code> （定位到你的 ico 图标）</li><li>（使用 <a href="#xmake">xmake</a>）将 <code>xxx.rc</code> 加入 xmake.lua：<code>add_files(static/xxx.rc)</code></li>
+</ol><h3 id="打包">打包</h3><p>Qt 拥有人性化的打包服务。复制 release 输出目录中的 exe 文件到任意目标目录，在目录下使用 <code>windeployqt xxx.exe</code> 命令即可完成打包（windeployqt 需要在环境变量内，否则使用绝对位置）。</p><p>但是到了 Qt6，情况就完全不一样了。。Qt6 的打包不管使用 <code>windeployqt</code> 或 <code>windeployqt6</code> 打包后，程序都无法运行。重装 SDK 后也是如此。首先，使用 <code>windeployqt</code> 会缺失 <code>Qt6Core.dll</code>, <code>Qt6Gui.dll</code>, <code>Qt6Widgets.dll</code> 这老三样。其次，手动复制这三样后，测试还会出现 bug：</p><div data-ap-island="ZoomedImg" data-props="{&quot;alt&quot;:&quot;bug&quot;,&quot;src&quot;:&quot;/images/coding/cpp/windeployqt_bug.png&quot;,&quot;scale&quot;:&quot;50%&quot;}"></div><p>解法是将 Qt SDK 目录下的 <code>plugins</code> 文件夹复制到打包的 exe 目录下<sup class="footnote-ref"><a href="#footnote3">[3]</a><a class="footnote-anchor" id="footnote-ref3"></a></sup>。。</p><h4 id="优化">优化</h4><p>这样打包出来的程序体积还能<strong>进一步缩小</strong>。运行 exe 后，全选目录下文件并删除，跳过已被打开的所有文件，并递归地对每个文件夹进行同样的操作。这样能够移除不必要的运行库从而<mark>大幅</mark>降低发布包的大小。</p><h4 id="测试">测试</h4><p>打包之后需要测试有没有丢运行库。换用另一个环境测试也太麻烦了点，而傻逼 windows GUI 也把环境变量藏得实在是太好，徒增了许多麻烦。其实只要在命令行中临时删除环境变量，再运行即可：</p><div class="ap-tabs ap-tabs--code">
+<p>@windows</p><div class="ap-code ap-code--ln" data-lang="bat" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">bat</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-bat"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">set</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> path</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">''</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">main.exe</span></span></code></pre></div>
-</div>
-<h3 id="全局快捷键">全局快捷键</h3>
-<p><a href="https://blog.csdn.net/scueee/article/details/108541574" class="ap-external">参考此文章</a>。<em>如果要在 Qt6 中使用，需要把 <code>virtual bool nativeEventFilter</code> 的最后一个参数由 <code>long*</code> 改为 <code>qintptr*</code>.</em></p>
-<blockquote>
+</div><h3 id="全局快捷键">全局快捷键</h3><p><a href="https://blog.csdn.net/scueee/article/details/108541574" class="ap-external">参考此文章</a>。<em>如果要在 Qt6 中使用，需要把 <code>virtual bool nativeEventFilter</code> 的最后一个参数由 <code>long*</code> 改为 <code>qintptr*</code>.</em></p><blockquote>
 <p>怎么说，这几乎是我在几乎全网搜到的唯一可用的全局快捷键代码<sup class="footnote-ref"><a href="#footnote4">[4]</a><a class="footnote-anchor" id="footnote-ref4"></a></sup>。。而且由于调用了 windows api，因此只能在目标为 windows 上的 Qt 使用。linux 还需要看看 Github <a href="https://github.com/Skycoder42/QHotkey" class="ap-external">QHotKey</a>。</p>
-</blockquote>
-<h3 id="按键事件">按键事件</h3>
-<p>Qt6 提供了 <em>QShortCut</em>，大大简化了<mark>非全局</mark>按键事件的处理。只需要创建一个 <em>QShortCut</em> 对象，connect 即可。</p>
-<h3 id="json-处理">JSON 处理</h3>
-<blockquote>
+</blockquote><h3 id="按键事件">按键事件</h3><p>Qt6 提供了 <em>QShortCut</em>，大大简化了<mark>非全局</mark>按键事件的处理。只需要创建一个 <em>QShortCut</em> 对象，connect 即可。</p><h3 id="json-处理">JSON 处理</h3><blockquote>
 <p>根据 <a href="#%E6%BD%9C%E4%BC%8F%E7%9F%A5%E8%AF%86">benchmark</a>，QJson 是 JSON 库中占用内存最小的。（某个测试项目）</p>
-</blockquote>
-<h4 id="读取">读取</h4>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</blockquote><h4 id="读取">读取</h4><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">QFile</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> file</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"a.json"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">if</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">!</span><span style="color:#24292E;--shiki-dark:#E1E4E8">file.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">open</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">QIODevice</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::ReadOnly)){</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">    qDebug</span><span style="color:#24292E;--shiki-dark:#E1E4E8">() </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "open file failed."</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
@@ -588,11 +331,7 @@
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">    qDebug</span><span style="color:#24292E;--shiki-dark:#E1E4E8">() </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;&#x3C;</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "read json error."</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    return</span><span style="color:#24292E;--shiki-dark:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">QJsonObject rootjsonobj </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> jDoc.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">object</span><span style="color:#24292E;--shiki-dark:#E1E4E8">();</span></span></code></pre></div>
-<p>此时 <code>rootjsonobj</code> 即为读入的 QJsonObject 对象（理解为 python 中的字典对象）。</p>
-<p>通过 <code>rootjsonobj[KEY]</code> 访问得到一个 QJsonValue，可以调用 <code>toObject()</code> / <code>toString()</code> 等函数将之转换为对应类型。</p>
-<h4 id="写入">写入</h4>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">QJsonObject rootjsonobj </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> jDoc.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">object</span><span style="color:#24292E;--shiki-dark:#E1E4E8">();</span></span></code></pre></div><p>此时 <code>rootjsonobj</code> 即为读入的 QJsonObject 对象（理解为 python 中的字典对象）。</p><p>通过 <code>rootjsonobj[KEY]</code> 访问得到一个 QJsonValue，可以调用 <code>toObject()</code> / <code>toString()</code> 等函数将之转换为对应类型。</p><h4 id="写入">写入</h4><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">QJsonDocument</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> jDoc</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">rootjsonobj</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">QFile</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> file</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"b.json"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">if</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">!</span><span style="color:#24292E;--shiki-dark:#E1E4E8">file.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">open</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">QIODevice</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::Truncate </span><span style="color:#D73A49;--shiki-dark:#F97583">|</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> QIODevice</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::WriteOnly)){</span></span>
@@ -601,52 +340,22 @@
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">QByteArray</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> data</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">jDoc</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">toJson</span><span style="color:#24292E;--shiki-dark:#E1E4E8">());</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">file.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">write</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(data);</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">file.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">close</span><span style="color:#24292E;--shiki-dark:#E1E4E8">();</span></span></code></pre></div>
-<h2 id="潜伏知识">潜伏知识</h2>
-<ol>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">file.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">close</span><span style="color:#24292E;--shiki-dark:#E1E4E8">();</span></span></code></pre></div><h2 id="潜伏知识">潜伏知识</h2><ol>
 <li>C++ 开源 json 库性能好的有 simdjson 和 sonic；<a href="https://github.com/miloyip/nativejson-benchmark" class="ap-external">benchmark</a>, but out of date</li>
-</ol>
-<h2 id="external">external</h2>
-<ol>
-<li><a href="https://github.com/wuye9036/CppTemplateTutorial" class="ap-external">C++ Template 进阶指南</a></li>
-<li><a href="https://www.bilibili.com/video/BV1et4y1D796/" class="ap-external">2020 年 C++语言律师 等级考试 参考答案</a></li>
-<li><a href="https://www.zhihu.com/question/22853451/answer/1847571322" class="ap-external">为什么看到这么多人不推荐 C++？</a></li>
-<li><a href="https://kristoff.it/blog/zig-new-relationship-llvm/" class="ap-external">Zig's New Relationship with LLVM</a></li>
-<li><a href="https://xr1s.me/2023/08/13/cxx-user-defined-range-adaptor/" class="ap-external">C++ 用户定义 Ranges 算子</a></li>
-<li>C++23 特性总结 <a href="https://zhuanlan.zhihu.com/p/562383157" class="ap-external">上</a> | <a href="https://zhuanlan.zhihu.com/p/562383556" class="ap-external">下</a>，可以学到很多</li>
-<li><a href="https://zhuanlan.zhihu.com/p/642214693" class="ap-external">C++ 移动语义</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/25148592" class="ap-external">[Brief Talk] <code>auto</code>, <code>auto&amp;</code>, <code>const auto&amp;</code> 以及其它形式的 auto 变种在 for-range loop 的选择</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/391088391" class="ap-external">浅谈 C++ Undefined Behavior</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/380982475" class="ap-external">ELF 格式的 Symbol 及 C++ 的 inline 关键字</a></li>
-<li><a href="https://simontoth.substack.com/archive" class="ap-external">Daily bit(e) of C++</a></li>
-<li><a href="https://tulach.cc/writing-gui-apps-for-windows-is-painful/" class="ap-external">Writing GUI apps for Windows is painful</a></li>
-<li><a href="https://hackingcpp.com/" class="ap-external">hackingcpp</a>：提供语法的简洁 cheatsheet。</li>
-<li><a href="https://ykiko.me/zh-cn/articles/645810896/" class="ap-external">std::variant 很难用！</a></li>
-<li><a href="https://github.com/Qihoo360/safe-rules/blob/main/cpp-ub-list.md" class="ap-external">附录：C++ 未定义行为成因列表</a></li>
-<li><a href="https://travisdowns.github.io/blog/2019/08/26/vector-inc.html" class="ap-external">Incrementing Vectors</a> 探讨了 <code>vector&lt;uint8_t&gt;</code> 存在的问题。</li>
-</ol>
-<p>books:</p>
-<ol>
-<li><a href="https://github.com/weaiken/ebook/blob/master/01_programming/C++/C++%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97.pdf" class="ap-external">C++ 性能优化指南</a></li>
-<li><a href="https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html" class="ap-external">Compiler Options Hardening Guide for C and C++</a></li>
-</ol>
-<hr class="footnotes-sep">
-<section class="footnotes">
+</ol><h2 id="external">external</h2><ol>
+<li><a href="https://github.com/wuye9036/CppTemplateTutorial" class="ap-external">C++ Template 进阶指南</a></li><li><a href="https://www.bilibili.com/video/BV1et4y1D796/" class="ap-external">2020 年 C++语言律师 等级考试 参考答案</a></li><li><a href="https://www.zhihu.com/question/22853451/answer/1847571322" class="ap-external">为什么看到这么多人不推荐 C++？</a></li><li><a href="https://kristoff.it/blog/zig-new-relationship-llvm/" class="ap-external">Zig's New Relationship with LLVM</a></li><li><a href="https://xr1s.me/2023/08/13/cxx-user-defined-range-adaptor/" class="ap-external">C++ 用户定义 Ranges 算子</a></li><li>C++23 特性总结 <a href="https://zhuanlan.zhihu.com/p/562383157" class="ap-external">上</a> | <a href="https://zhuanlan.zhihu.com/p/562383556" class="ap-external">下</a>，可以学到很多</li><li><a href="https://zhuanlan.zhihu.com/p/642214693" class="ap-external">C++ 移动语义</a></li><li><a href="https://zhuanlan.zhihu.com/p/25148592" class="ap-external">[Brief Talk] <code>auto</code>, <code>auto&amp;</code>, <code>const auto&amp;</code> 以及其它形式的 auto 变种在 for-range loop 的选择</a></li><li><a href="https://zhuanlan.zhihu.com/p/391088391" class="ap-external">浅谈 C++ Undefined Behavior</a></li><li><a href="https://zhuanlan.zhihu.com/p/380982475" class="ap-external">ELF 格式的 Symbol 及 C++ 的 inline 关键字</a></li><li><a href="https://simontoth.substack.com/archive" class="ap-external">Daily bit(e) of C++</a></li><li><a href="https://tulach.cc/writing-gui-apps-for-windows-is-painful/" class="ap-external">Writing GUI apps for Windows is painful</a></li><li><a href="https://hackingcpp.com/" class="ap-external">hackingcpp</a>：提供语法的简洁 cheatsheet。</li><li><a href="https://ykiko.me/zh-cn/articles/645810896/" class="ap-external">std::variant 很难用！</a></li><li><a href="https://github.com/Qihoo360/safe-rules/blob/main/cpp-ub-list.md" class="ap-external">附录：C++ 未定义行为成因列表</a></li><li><a href="https://travisdowns.github.io/blog/2019/08/26/vector-inc.html" class="ap-external">Incrementing Vectors</a> 探讨了 <code>vector&lt;uint8_t&gt;</code> 存在的问题。</li>
+</ol><p>books:</p><ol>
+<li><a href="https://github.com/weaiken/ebook/blob/master/01_programming/C++/C++%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97.pdf" class="ap-external">C++ 性能优化指南</a></li><li><a href="https://best.openssf.org/Compiler-Hardening-Guides/Compiler-Options-Hardening-Guide-for-C-and-C++.html" class="ap-external">Compiler Options Hardening Guide for C and C++</a></li>
+</ol><hr class="footnotes-sep"><section class="footnotes">
 <ol class="footnotes-list">
 <li id="footnote1" class="footnote-item"><p>例如我在嵌入式课用 vscode 写码，我需要一个 formatter 减少我的精神负担，但是由于嵌入式开发 Keil 使用自己的构建系统，因此我希望关闭 linter，否则 linter 读不出项目的结构，会满屏红色报错。 <a href="#footnote-ref1" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote2" class="footnote-item"><p><code>.qrc</code> 文件内部是 xml 格式，理论可手搓，因此可以放心抛弃 QtCreator。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote3" class="footnote-item"><p>我找出这个问题<a href="../gossip/difficulties#20230507qt6-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%A4%B1%E8%B4%A5">真的不容易</a>，还差点错怪 xmake。。主要是 <code>Plugins</code> 并不在我的环境变量中，但却能够跑起来，迷惑了我的判断。这个报错也基本上得不到信息，网上也找不到解法。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
-</li>
-<li id="footnote4" class="footnote-item"><p>升级 Qt6 后我尝试寻找其他全局快捷键方法，全部失败。甚至生出了直接调 windows.h api 的心。 <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
+</li><li id="footnote2" class="footnote-item"><p><code>.qrc</code> 文件内部是 xml 格式，理论可手搓，因此可以放心抛弃 QtCreator。 <a href="#footnote-ref2" class="footnote-backref">↩︎</a></p>
+</li><li id="footnote3" class="footnote-item"><p>我找出这个问题<a href="../gossip/difficulties#_20230507-qt6-%E9%A1%B9%E7%9B%AE%E6%9E%84%E5%BB%BA%E5%A4%B1%E8%B4%A5">真的不容易</a>，还差点错怪 xmake。。主要是 <code>Plugins</code> 并不在我的环境变量中，但却能够跑起来，迷惑了我的判断。这个报错也基本上得不到信息，网上也找不到解法。 <a href="#footnote-ref3" class="footnote-backref">↩︎</a></p>
+</li><li id="footnote4" class="footnote-item"><p>升级 Qt6 后我尝试寻找其他全局快捷键方法，全部失败。甚至生出了直接调 windows.h api 的心。 <a href="#footnote-ref4" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
-</section>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/Cpp","locale":"root","title":"C++","headings":[{"level":1,"text":"C++","slug":"c"},{"level":2,"text":"一些工具","slug":"一些工具"},{"level":2,"text":"常见名词","slug":"常见名词"},{"level":2,"text":"安装","slug":"安装"},{"level":3,"text":"编译器","slug":"编译器"},{"level":3,"text":"开发环境","slug":"开发环境"},{"level":3,"text":"构建系统","slug":"构建系统"},{"level":4,"text":"菱形依赖","slug":"菱形依赖"},{"level":4,"text":"其他技巧","slug":"其他技巧"},{"level":4,"text":"评价","slug":"评价"},{"level":3,"text":"包管理","slug":"包管理"},{"level":4,"text":"windows（vcpkg）","slug":"windows-vcpkg"},{"level":4,"text":"linux","slug":"linux"},{"level":3,"text":"Qt 开发环境","slug":"qt-开发环境"},{"level":4,"text":"windows","slug":"windows"},{"level":4,"text":"linux","slug":"linux-1"},{"level":2,"text":"语言相关","slug":"语言相关"},{"level":3,"text":"range-based for loop","slug":"range-based-for-loop"},{"level":3,"text":"数据结构","slug":"数据结构"},{"level":3,"text":"值类型","slug":"值类型"},{"level":3,"text":"类型转换","slug":"类型转换"},{"level":3,"text":"智能指针","slug":"智能指针"},{"level":3,"text":"多行字符串","slug":"多行字符串"},{"level":3,"text":"面向对象","slug":"面向对象"},{"level":3,"text":"option","slug":"option"},{"level":3,"text":"template","slug":"template"},{"level":3,"text":"内置模版比较函数","slug":"内置模版比较函数"},{"level":3,"text":"variant","slug":"variant"},{"level":3,"text":"assert","slug":"assert"},{"level":3,"text":"explicit","slug":"explicit"},{"level":3,"text":"if constexpr","slug":"if-constexpr"},{"level":3,"text":"ranges","slug":"ranges"},{"level":3,"text":"volatile","slug":"volatile"},{"level":2,"text":"其他注意点","slug":"其他注意点"},{"level":2,"text":"三方库","slug":"三方库"},{"level":2,"text":"Qt","slug":"qt"},{"level":3,"text":"基本介绍 --> 官网","slug":"基本介绍-官网"},{"level":3,"text":"安装","slug":"安装-1"},{"level":3,"text":"其他组件","slug":"其他组件"},{"level":3,"text":"dark mode","slug":"dark-mode"},{"level":3,"text":"唤起最小化的窗口","slug":"唤起最小化的窗口"},{"level":3,"text":"关于控件组","slug":"关于控件组"},{"level":3,"text":"关于资源文件","slug":"关于资源文件"},{"level":3,"text":"添加图标与版本信息","slug":"添加图标与版本信息"},{"level":3,"text":"打包","slug":"打包"},{"level":4,"text":"优化","slug":"优化"},{"level":4,"text":"测试","slug":"测试"},{"level":3,"text":"全局快捷键","slug":"全局快捷键"},{"level":3,"text":"按键事件","slug":"按键事件"},{"level":3,"text":"JSON 处理","slug":"json-处理"},{"level":4,"text":"读取","slug":"读取"},{"level":4,"text":"写入","slug":"写入"},{"level":2,"text":"潜伏知识","slug":"潜伏知识"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2022-06-11","category":["编程","经历"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2022-06-11T00:00:00.000Z","updatedAt":"2026-10-19T23:02:17+08:00","readingTime":21,"excerpt":"C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…"},"related":[{"route":"/blog/log","title":"博客日志","refs":6,"links":[{"route":"/gossip/fuckxxx","refs":7},{"route":"/farraginous/recommend_packages","refs":3},{"route":"/gossip/difficulties","refs":3},{"route":"/coding/","refs":2},{"route":"/coding/vscode","refs":1}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":4,"links":[{"route":"/blog/log","refs":3},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/gossip/difficulties","title":"生活中遇到的困难","refs":3,"links":[{"route":"/blog/log","refs":3}]},{"route":"/coding/vscode","title":"VSCode","refs":2,"links":[{"route":"/blog/log","refs":1},{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/lua","refs":1},{"route":"/coding/vscode","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/lua","title":"lua","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":2},{"route":"/coding/","refs":1}]},{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/blog/log","refs":7},{"route":"/coding/lua","refs":2},{"route":"/coding/","refs":1},{"route":"/coding/vscode","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</section><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/Cpp","locale":"root","title":"C++","headings":[{"level":1,"text":"C++","slug":"c"},{"level":2,"text":"一些工具","slug":"一些工具"},{"level":2,"text":"常见名词","slug":"常见名词"},{"level":2,"text":"安装","slug":"安装"},{"level":3,"text":"编译器","slug":"编译器"},{"level":3,"text":"开发环境","slug":"开发环境"},{"level":3,"text":"构建系统","slug":"构建系统"},{"level":4,"text":"菱形依赖","slug":"菱形依赖"},{"level":4,"text":"其他技巧","slug":"其他技巧"},{"level":4,"text":"评价","slug":"评价"},{"level":3,"text":"包管理","slug":"包管理"},{"level":4,"text":"windows（vcpkg）","slug":"windows-vcpkg"},{"level":4,"text":"linux","slug":"linux"},{"level":3,"text":"Qt 开发环境","slug":"qt-开发环境"},{"level":4,"text":"windows","slug":"windows"},{"level":4,"text":"linux","slug":"linux-1"},{"level":2,"text":"语言相关","slug":"语言相关"},{"level":3,"text":"range-based for loop","slug":"range-based-for-loop"},{"level":3,"text":"数据结构","slug":"数据结构"},{"level":3,"text":"值类型","slug":"值类型"},{"level":3,"text":"类型转换","slug":"类型转换"},{"level":3,"text":"智能指针","slug":"智能指针"},{"level":3,"text":"多行字符串","slug":"多行字符串"},{"level":3,"text":"面向对象","slug":"面向对象"},{"level":3,"text":"option","slug":"option"},{"level":3,"text":"template","slug":"template"},{"level":3,"text":"内置模版比较函数","slug":"内置模版比较函数"},{"level":3,"text":"variant","slug":"variant"},{"level":3,"text":"assert","slug":"assert"},{"level":3,"text":"explicit","slug":"explicit"},{"level":3,"text":"if constexpr","slug":"if-constexpr"},{"level":3,"text":"ranges","slug":"ranges"},{"level":3,"text":"volatile","slug":"volatile"},{"level":2,"text":"其他注意点","slug":"其他注意点"},{"level":2,"text":"三方库","slug":"三方库"},{"level":2,"text":"Qt","slug":"qt"},{"level":3,"text":"基本介绍 --> 官网","slug":"基本介绍-官网"},{"level":3,"text":"安装","slug":"安装-1"},{"level":3,"text":"其他组件","slug":"其他组件"},{"level":3,"text":"dark mode","slug":"dark-mode"},{"level":3,"text":"唤起最小化的窗口","slug":"唤起最小化的窗口"},{"level":3,"text":"关于控件组","slug":"关于控件组"},{"level":3,"text":"关于资源文件","slug":"关于资源文件"},{"level":3,"text":"添加图标与版本信息","slug":"添加图标与版本信息"},{"level":3,"text":"打包","slug":"打包"},{"level":4,"text":"优化","slug":"优化"},{"level":4,"text":"测试","slug":"测试"},{"level":3,"text":"全局快捷键","slug":"全局快捷键"},{"level":3,"text":"按键事件","slug":"按键事件"},{"level":3,"text":"JSON 处理","slug":"json-处理"},{"level":4,"text":"读取","slug":"读取"},{"level":4,"text":"写入","slug":"写入"},{"level":2,"text":"潜伏知识","slug":"潜伏知识"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2022-06-11","category":["编程","经历"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2022-06-11T00:00:00.000Z","updatedAt":"2026-11-09T03:35:41+08:00","readingTime":21,"excerpt":"C++ ——我从未懂过 C++ 一些工具 cppinsights ：显式指明代码中的隐式转换与中间变量。 godbolt ：汇编分析；pastebin；不同编译器的行为分析 Quick C++ Benchmark 常见名词 UB：Undefined behavior，未定义行为，典型的有 i = i++ + ++i ，…"},"related":[{"route":"/blog/log","title":"博客日志","refs":6,"links":[{"route":"/gossip/fuckxxx","refs":7},{"route":"/farraginous/recommend_packages","refs":3},{"route":"/gossip/difficulties","refs":3},{"route":"/coding/","refs":2},{"route":"/coding/vscode","refs":1}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":4,"links":[{"route":"/blog/log","refs":3},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/gossip/difficulties","title":"生活中遇到的困难","refs":3,"links":[{"route":"/blog/log","refs":3}]},{"route":"/coding/vscode","title":"VSCode","refs":2,"links":[{"route":"/blog/log","refs":1},{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/lua","refs":1},{"route":"/coding/vscode","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/lua","title":"lua","refs":1,"links":[{"route":"/gossip/fuckxxx","refs":2},{"route":"/coding/","refs":1}]},{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":1,"links":[{"route":"/blog/log","refs":7},{"route":"/coding/lua","refs":2},{"route":"/coding/","refs":1},{"route":"/coding/vscode","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

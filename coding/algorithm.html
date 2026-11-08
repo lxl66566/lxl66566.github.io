@@ -1,121 +1,52 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>算法 | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…">
-<link rel="canonical" href="https://absx.pages.dev/coding/algorithm">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="算法 | 绝对值_x 的博客">
-<meta property="og:description" content="算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…">
-<meta property="og:url" content="https://absx.pages.dev/coding/algorithm">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"算法","url":"https://absx.pages.dev/coding/algorithm","mainEntityOfPage":"https://absx.pages.dev/coding/algorithm","description":"算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-04-09T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>算法 | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…"><link rel="canonical" href="https://absx.pages.dev/coding/algorithm"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="算法 | 绝对值_x 的博客"><meta property="og:description" content="算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…"><meta property="og:url" content="https://absx.pages.dev/coding/algorithm"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"算法","url":"https://absx.pages.dev/coding/algorithm","mainEntityOfPage":"https://absx.pages.dev/coding/algorithm","description":"算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-04-09T00:00:00.000Z","dateModified":"2026-11-09T03:35:41+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="算法">算法</h1>
-<p>虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。</p>
-<p>论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论<span class="ap-heimu" title="你知道的太多了">这不是什么都不会了嘛！</span>。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。</p>
-<h2 id="学习方法">学习方法</h2>
-<p>我是看书入门，对入门级网络教程没什么评价。但是在有一定基础的条件下，建议看 <a href="https://oi.wiki/" class="ap-external">OI wiki</a>，大家一起贡献的指南，深度肯定是足够的，不过讲得比较抽象，需要一定理解力。</p>
-<p>刷题也很重要 <s>（我好像没有资格说出这句话）</s>，看下面 <a href="#oj">OJ</a>。</p>
-<h2 id="oj">OJ</h2>
-<p>用过一些 Online Judge。一般竞赛<a href="https://www.luogu.com.cn/" class="ap-external">洛谷</a>，面试<a href="https://leetcode.cn/problemset/" class="ap-external">力扣</a>。其他牛客，cf 都不用碰，没有太大意义。</p>
-<p>简评一下：</p>
-<ul>
-<li>洛谷基本全是 C++。测试点样例几乎不提供，错了也不知道错哪儿，不容易调试。</li>
-<li>力扣无需关注读入，对某些语言比较友好；测试点样例全给。不过可能缺乏一些深度。</li>
-<li>cf 就垃圾了。</li>
-</ul>
-<p>有关我对 OJ 的评价请<a href="../gossip/hope#%E5%AF%B9%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B-oj-contest%E7%9A%84%E5%B8%8C%E6%9C%9B">跳转此处</a>。</p>
-<p>自从我会用 Github 以来，我刷的题都会存到 Github 上。这里是<a href="https://github.com/lxl66566/OJ" class="ap-external">仓库链接</a>。</p>
-<h2 id="竞赛技巧">竞赛技巧</h2>
-<p>打了几次蓝桥，几次 NOIP/CSP，算是有点小经验。</p>
-<ul>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="算法">算法</h1><p>虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。</p><p>论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论<span class="ap-heimu" title="你知道的太多了">这不是什么都不会了嘛！</span>。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。</p><h2 id="学习方法">学习方法</h2><p>我是看书入门，对入门级网络教程没什么评价。但是在有一定基础的条件下，建议看 <a href="https://oi.wiki/" class="ap-external">OI wiki</a>，大家一起贡献的指南，深度肯定是足够的，不过讲得比较抽象，需要一定理解力。</p><p>刷题也很重要 <s>（我好像没有资格说出这句话）</s>，看下面 <a href="#oj">OJ</a>。</p><h2 id="oj">OJ</h2><p>用过一些 Online Judge。一般竞赛<a href="https://www.luogu.com.cn/" class="ap-external">洛谷</a>，面试<a href="https://leetcode.cn/problemset/" class="ap-external">力扣</a>。其他牛客，cf 都不用碰，没有太大意义。</p><p>简评一下：</p><ul>
+<li>洛谷基本全是 C++。测试点样例几乎不提供，错了也不知道错哪儿，不容易调试。</li><li>力扣无需关注读入，对某些语言比较友好；测试点样例全给。不过可能缺乏一些深度。</li><li>cf 就垃圾了。</li>
+</ul><p>有关我对 OJ 的评价请<a href="../gossip/hope#%E5%AF%B9%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B-oj-contest-%E7%9A%84%E5%B8%8C%E6%9C%9B">跳转此处</a>。</p><p>自从我会用 Github 以来，我刷的题都会存到 Github 上。这里是<a href="https://github.com/lxl66566/OJ" class="ap-external">仓库链接</a>。</p><h2 id="竞赛技巧">竞赛技巧</h2><p>打了几次蓝桥，几次 NOIP/CSP，算是有点小经验。</p><ul>
 <li>long long<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">typedef</span><span style="color:#D73A49;--shiki-dark:#F97583"> long</span><span style="color:#D73A49;--shiki-dark:#F97583"> long</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> ll;</span></span></code></pre></div>
-</li>
-<li>输入：快读好写，但我觉得没必要。。一般加点以下的就够用了。<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>输入：快读好写，但我觉得没必要。。一般加点以下的就够用了。<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::</span><span style="color:#6F42C1;--shiki-dark:#B392F0">ios</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::</span><span style="color:#6F42C1;--shiki-dark:#B392F0">sync_with_stdio</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::cin.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">tie</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">nullptr</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span></code></pre></div>
-不过需要注意，（程序最后的）输出时需要 <code>std::cout &lt;&lt; endl;</code> 以刷新缓冲区。（std::cerr 会自动刷新）</li>
-<li>使用 <code>std::cerr</code> 输出调试信息。提交代码时不删调试语句不会影响结果。</li>
-<li>写码
+不过需要注意，（程序最后的）输出时需要 <code>std::cout &lt;&lt; endl;</code> 以刷新缓冲区。（std::cerr 会自动刷新）</li><li>使用 <code>std::cerr</code> 输出调试信息。提交代码时不删调试语句不会影响结果。</li><li>写码
 <ul>
-<li>IDE：尽量使用 vscode（如果有的话），没有的话至少把底色调成黑的。盯 4h 白色屏幕眼睛真的受不住，会影响比赛状态的。</li>
-<li>重写代码或者换想法，先备份。</li>
+<li>IDE：尽量使用 vscode（如果有的话），没有的话至少把底色调成黑的。盯 4h 白色屏幕眼睛真的受不住，会影响比赛状态的。</li><li>重写代码或者换想法，先备份。</li>
 </ul>
-</li>
-<li>编译器
+</li><li>编译器
 <ul>
-<li>暴力跑蓝桥填空题的时候记得开 <code>-O3</code>.（我一般比赛时常开的）</li>
-<li>别开 <code>-Wall</code>，<s>警告能算错吗？</s></li>
+<li>暴力跑蓝桥填空题的时候记得开 <code>-O3</code>.（我一般比赛时常开的）</li><li>别开 <code>-Wall</code>，<s>警告能算错吗？</s></li>
 </ul>
-</li>
-<li>卡常：不能指望编译器帮你优化。<s>反正比赛评测机 <code>-Og</code> 也不优化</s>
+</li><li>卡常：不能指望编译器帮你优化。<s>反正比赛评测机 <code>-Og</code> 也不优化</s>
 <ul>
 <li>该传引用传引用，该用 move 用 move。</li>
 </ul>
 </li>
-</ul>
-<h2 id="基础">基础</h2>
-<ul>
+</ul><h2 id="基础">基础</h2><ul>
 <li><a href="https://github.com/sisterAn/JavaScript-Algorithms/issues/70" class="ap-external">快排原理</a></li>
-</ul>
-<h2 id="数据结构">数据结构</h2>
-<ul>
+</ul><h2 id="数据结构">数据结构</h2><ul>
 <li>STL 大法好，需要熟练运用 vector, deeue, priority_queue, unurdered_map, unordered_set 等。
 <ul>
-<li>vector 建议使用 <code>emplace_back()</code> 原地构造和使用 <code>resize()</code> 控制大小（注意 <code>resize()</code> != <code>reserve()</code>），初始化 <code>vector(int size,const t&amp; value)</code> 和 initializer_list 构造。</li>
-<li>优先队列有三个 template type，容易忘，但是很重要，很多算法都会用到。</li>
+<li>vector 建议使用 <code>emplace_back()</code> 原地构造和使用 <code>resize()</code> 控制大小（注意 <code>resize()</code> != <code>reserve()</code>），初始化 <code>vector(int size,const t&amp; value)</code> 和 initializer_list 构造。</li><li>优先队列有三个 template type，容易忘，但是很重要，很多算法都会用到。</li>
 </ul>
-</li>
-<li>插入和查询有一个是区间：树状数组</li>
-<li>区间插入、区间查询：线段树（with lazy tag）</li>
-<li>树和图：我一般使用 struct + vector 建树/建图。一般不会有太大问题，性能卡得实在死的话可以考虑前向星存图 <s>这个我脑子总是转不过来所以不想用</s></li>
-</ul>
-<h2 id="图论">图论</h2>
-<ul>
+</li><li>插入和查询有一个是区间：树状数组</li><li>区间插入、区间查询：线段树（with lazy tag）</li><li>树和图：我一般使用 struct + vector 建树/建图。一般不会有太大问题，性能卡得实在死的话可以考虑前向星存图 <s>这个我脑子总是转不过来所以不想用</s></li>
+</ul><h2 id="图论">图论</h2><ul>
 <li>最短路：dijkstra &gt; SPFA + priority_queue（dijkstra 不能用于负边权，但是一般场景下不会有），我以前只用 SPFA 吃了亏。
 <ul>
-<li><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E5%BF%AB%E9%80%9F%E7%AE%97%E6%B3%95#%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5%E4%B8%8B%E7%9A%84%E6%80%A7%E8%83%BD" class="ap-external">为什么用 SPFA 会吃亏？</a> 真有点没绷住</li>
-<li>但是 dijkstra 老忘（一说蓝白点就想到<span class="ap-heimu" title="你知道的太多了">蓝白碗</span>）。注意，每次找离<strong>源节点</strong>距离最近的点更新。</li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E7%9F%AD%E8%B7%AF%E5%BE%84%E5%BF%AB%E9%80%9F%E7%AE%97%E6%B3%95#%E6%9C%80%E5%9D%8F%E6%83%85%E5%86%B5%E4%B8%8B%E7%9A%84%E6%80%A7%E8%83%BD" class="ap-external">为什么用 SPFA 会吃亏？</a> 真有点没绷住</li><li>但是 dijkstra 老忘（一说蓝白点就想到<span class="ap-heimu" title="你知道的太多了">蓝白碗</span>）。注意，每次找离<strong>源节点</strong>距离最近的点更新。</li>
 </ul>
-</li>
-<li>最小生成树：考得不多。优先队列存边 + 并查集。</li>
-<li>lca：求树上距离的时候经常用。我学的是倍增法，有兴趣也可以看看 tarjan。</li>
-</ul>
-<h2 id="动归">动归</h2>
-<p>我一直是动归苦手。</p>
-<p>基础经典动归：背包，最长公共子序列，看模版即可。</p>
-<h2 id="数论">数论</h2>
-<h3 id="素数">素数</h3>
-<p>素数实在是太重要了。每次比赛几乎必定涉及的考点。</p>
-<p>区间求素数一般埃氏筛够用了，也很好写。素数判断可以使用 <a href="https://zhuanlan.zhihu.com/p/349360074" class="ap-external">Miller Rabin</a>。</p>
-<h2 id="模板">模板</h2>
-<p>一些常用模板，如果背下来的话可以省时间。</p>
-<h3 id="gcd">gcd</h3>
-<p>C++17 后有 <code>std::gcd</code> 和 <code>std::lcm</code>，不过显然在做题时是没有 C++17 用的。</p>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
-<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> gcd</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#E36209;--shiki-dark:#FFAB70"> a</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#E36209;--shiki-dark:#FFAB70"> b</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) { </span><span style="color:#D73A49;--shiki-dark:#F97583">return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> b </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#D73A49;--shiki-dark:#F97583"> ?</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> a </span><span style="color:#D73A49;--shiki-dark:#F97583">:</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> gcd</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(b, a </span><span style="color:#D73A49;--shiki-dark:#F97583">%</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> b); }</span></span></code></pre></div>
-<h3 id="优先队列">优先队列</h3>
-<p>优先队列平常的使用还挺广泛的，具有较高的重要性。特别是对于自定义 struct 的优先队列需要特别注意。</p>
-<div class="ap-tabs">
+</li><li>最小生成树：考得不多。优先队列存边 + 并查集。</li><li>lca：求树上距离的时候经常用。我学的是倍增法，有兴趣也可以看看 tarjan。</li>
+</ul><h2 id="动归">动归</h2><p>我一直是动归苦手。</p><p>基础经典动归：背包，最长公共子序列，看模版即可。</p><h2 id="数论">数论</h2><h3 id="素数">素数</h3><p>素数实在是太重要了。每次比赛几乎必定涉及的考点。</p><p>区间求素数一般埃氏筛够用了，也很好写。素数判断可以使用 <a href="https://zhuanlan.zhihu.com/p/349360074" class="ap-external">Miller Rabin</a>。</p><h2 id="模板">模板</h2><p>一些常用模板，如果背下来的话可以省时间。</p><h3 id="gcd">gcd</h3><p>C++17 后有 <code>std::gcd</code> 和 <code>std::lcm</code>，不过显然在做题时是没有 C++17 用的。</p><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> gcd</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#E36209;--shiki-dark:#FFAB70"> a</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#E36209;--shiki-dark:#FFAB70"> b</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) { </span><span style="color:#D73A49;--shiki-dark:#F97583">return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> b </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#D73A49;--shiki-dark:#F97583"> ?</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> a </span><span style="color:#D73A49;--shiki-dark:#F97583">:</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> gcd</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(b, a </span><span style="color:#D73A49;--shiki-dark:#F97583">%</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> b); }</span></span></code></pre></div><h3 id="优先队列">优先队列</h3><p>优先队列平常的使用还挺广泛的，具有较高的重要性。特别是对于自定义 struct 的优先队列需要特别注意。</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-tabs-1-1" checked>
 <label class="ap-tabs__label" for="ap-tab-1">C++</label>
 <div class="ap-tab" data-title="C++">
@@ -155,10 +86,7 @@
 <span class="line ap-collapsible"><span style="color:#005CC5;--shiki-dark:#79B8FF">print</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(heapq.heappop(priority_queue))</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-1"></label>
 </div>
 </div>
-</div>
-<h3 id="permutation">permutation</h3>
-<p>如果使用 &gt;=C++11 / Python，可以很简单地使用标准库：</p>
-<div class="ap-tabs">
+</div><h3 id="permutation">permutation</h3><p>如果使用 &gt;=C++11 / Python，可以很简单地使用标准库：</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-3" name="ap-tabs-tabs-2-2" checked>
 <label class="ap-tabs__label" for="ap-tab-3">C++</label>
 <div class="ap-tab" data-title="C++">
@@ -176,9 +104,7 @@
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> p </span><span style="color:#D73A49;--shiki-dark:#F97583">in</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> permutations([</span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">2</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">3</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]):</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    print</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(p)</span></span></code></pre></div>
 </div>
-</div>
-<p>但是在其他语言就得手写 permutation 了。</p>
-<div class="ap-tabs">
+</div><p>但是在其他语言就得手写 permutation 了。</p><div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-5" name="ap-tabs-tabs-3-3" checked>
 <label class="ap-tabs__label" for="ap-tab-5">Rust</label>
 <div class="ap-tab" data-title="Rust">
@@ -222,27 +148,17 @@
 <span class="line ap-collapsible"><span style="color:#6F42C1;--shiki-dark:#B392F0">permute</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(arr, console.log);</span></span></code></pre><label class="ap-code__fold-toggle" for="ap-code-fold-2"></label>
 </div>
 </div>
-</div>
-<p>总之，如果不是竞赛，只是一个在线 OJ 笔试，那肯定是用越方便的语言越好。如果你很熟练，快速糊一个 permutation 也无妨。</p>
-<h3 id="背包问题">背包问题</h3>
-<p>基础背包：</p>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</div><p>总之，如果不是竞赛，只是一个在线 OJ 笔试，那肯定是用越方便的语言越好。如果你很熟练，快速糊一个 permutation 也无妨。</p><h3 id="背包问题">背包问题</h3><p>基础背包：</p><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#24292E;--shiki-dark:#E1E4E8">; i </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> n; </span><span style="color:#D73A49;--shiki-dark:#F97583">++</span><span style="color:#24292E;--shiki-dark:#E1E4E8">i) {</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> j </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> capacity; j </span><span style="color:#D73A49;--shiki-dark:#F97583">>=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> weights[i]; </span><span style="color:#D73A49;--shiki-dark:#F97583">--</span><span style="color:#24292E;--shiki-dark:#E1E4E8">j) {</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        dp[j] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::</span><span style="color:#6F42C1;--shiki-dark:#B392F0">max</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(dp[j], dp[j </span><span style="color:#D73A49;--shiki-dark:#F97583">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> weights[i]] </span><span style="color:#D73A49;--shiki-dark:#F97583">+</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> values[i]);</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<p>完全背包（仅需要修改遍历顺序）：</p>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><p>完全背包（仅需要修改遍历顺序）：</p><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span><span style="color:#24292E;--shiki-dark:#E1E4E8">; i </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> n; </span><span style="color:#D73A49;--shiki-dark:#F97583">++</span><span style="color:#24292E;--shiki-dark:#E1E4E8">i) {</span></span>
 <span class="line highlighted"><span style="color:#D73A49;--shiki-dark:#F97583">    for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> j </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> weights[i]; j </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> capacity; </span><span style="color:#D73A49;--shiki-dark:#F97583">++</span><span style="color:#24292E;--shiki-dark:#E1E4E8">j) {</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        dp[j] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> std</span><span style="color:#24292E;--shiki-dark:#E1E4E8">::</span><span style="color:#6F42C1;--shiki-dark:#B392F0">max</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(dp[j], dp[j </span><span style="color:#D73A49;--shiki-dark:#F97583">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> weights[i]] </span><span style="color:#D73A49;--shiki-dark:#F97583">+</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> values[i]);</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    }</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<p>而其他背包问题基本都是可拆的。</p>
-<h3 id="树状数组">树状数组</h3>
-<p>单点加，区间和</p>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><p>而其他背包问题基本都是可拆的。</p><h3 id="树状数组">树状数组</h3><p>单点加，区间和</p><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">inline</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> ll</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> lowbit</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#E36209;--shiki-dark:#FFAB70"> x</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) { </span><span style="color:#D73A49;--shiki-dark:#F97583">return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> x </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x26;</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8">x); }</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">void</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> add</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#E36209;--shiki-dark:#FFAB70"> x</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#6F42C1;--shiki-dark:#B392F0">ll</span><span style="color:#E36209;--shiki-dark:#FFAB70"> k</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> x; i </span><span style="color:#D73A49;--shiki-dark:#F97583">&#x3C;=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> n; i </span><span style="color:#D73A49;--shiki-dark:#F97583">+=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> lowbit</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(i))</span></span>
@@ -254,28 +170,16 @@
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> i </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> x; i; i </span><span style="color:#D73A49;--shiki-dark:#F97583">-=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> lowbit</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(i))</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    tmp </span><span style="color:#D73A49;--shiki-dark:#F97583">+=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> s[i];</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> tmp;</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<h3 id="并查集">并查集</h3>
-<div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><h3 id="并查集">并查集</h3><div class="ap-code ap-code--ln" data-lang="cpp" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">cpp</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-cpp"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> fa</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">int</span><span style="color:#E36209;--shiki-dark:#FFAB70"> i</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) {</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (i </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> father[i])</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> i;</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  else</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> father[i] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> fa</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(father[i]);</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<h2 id="我出的题">我出的题</h2>
-<p>大一的时候来了兴致，随便出的一点。当乐子看吧（</p>
-<p><a href="https://github.com/lxl66566/lxl66566.github.io/releases/download/storate/AbsoluteX.s_confusion.pdf" class="ap-external">download</a></p>
-<h2 id="external">external</h2>
-<ol>
-<li><a href="https://www.bilibili.com/video/BV1di421f7L5" class="ap-external">信息学竞赛 (OI) 究竟发生了什么？</a></li>
-<li><a href="https://adventofcode.com/" class="ap-external">Advent of Code</a></li>
-<li><a href="https://crates.io/crates/sort_algorithms" class="ap-external">sort_algorithms</a>：具有教学意义的一个排序实现库，实现了很多有趣的排序算法</li>
-</ol>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/algorithm","locale":"root","title":"算法","headings":[{"level":1,"text":"算法","slug":"算法"},{"level":2,"text":"学习方法","slug":"学习方法"},{"level":2,"text":"OJ","slug":"oj"},{"level":2,"text":"竞赛技巧","slug":"竞赛技巧"},{"level":2,"text":"基础","slug":"基础"},{"level":2,"text":"数据结构","slug":"数据结构"},{"level":2,"text":"图论","slug":"图论"},{"level":2,"text":"动归","slug":"动归"},{"level":2,"text":"数论","slug":"数论"},{"level":3,"text":"素数","slug":"素数"},{"level":2,"text":"模板","slug":"模板"},{"level":3,"text":"gcd","slug":"gcd"},{"level":3,"text":"优先队列","slug":"优先队列"},{"level":3,"text":"permutation","slug":"permutation"},{"level":3,"text":"背包问题","slug":"背包问题"},{"level":3,"text":"树状数组","slug":"树状数组"},{"level":3,"text":"并查集","slug":"并查集"},{"level":2,"text":"我出的题","slug":"我出的题"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-04-09","category":["编程","教程"],"tag":["工具"],"icon":"solid/wand-sparkles"},"createdAt":"2023-04-09T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":5,"excerpt":"算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…"},"related":[{"route":"/blog/log","title":"博客日志","refs":2,"links":[{"route":"/gossip/hope","refs":5},{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2}]},{"route":"/coding/bagu","title":"八股","refs":1},{"route":"/gossip/hope","title":"对 xxx 的希望","refs":1,"links":[{"route":"/blog/log","refs":5}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><h2 id="我出的题">我出的题</h2><p>大一的时候来了兴致，随便出的一点。当乐子看吧（</p><p><a href="https://github.com/lxl66566/lxl66566.github.io/releases/download/storate/AbsoluteX.s_confusion.pdf" class="ap-external">download</a></p><h2 id="external">external</h2><ol>
+<li><a href="https://www.bilibili.com/video/BV1di421f7L5" class="ap-external">信息学竞赛 (OI) 究竟发生了什么？</a></li><li><a href="https://adventofcode.com/" class="ap-external">Advent of Code</a></li><li><a href="https://crates.io/crates/sort_algorithms" class="ap-external">sort_algorithms</a>：具有教学意义的一个排序实现库，实现了很多有趣的排序算法</li>
+</ol><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/algorithm","locale":"root","title":"算法","headings":[{"level":1,"text":"算法","slug":"算法"},{"level":2,"text":"学习方法","slug":"学习方法"},{"level":2,"text":"OJ","slug":"oj"},{"level":2,"text":"竞赛技巧","slug":"竞赛技巧"},{"level":2,"text":"基础","slug":"基础"},{"level":2,"text":"数据结构","slug":"数据结构"},{"level":2,"text":"图论","slug":"图论"},{"level":2,"text":"动归","slug":"动归"},{"level":2,"text":"数论","slug":"数论"},{"level":3,"text":"素数","slug":"素数"},{"level":2,"text":"模板","slug":"模板"},{"level":3,"text":"gcd","slug":"gcd"},{"level":3,"text":"优先队列","slug":"优先队列"},{"level":3,"text":"permutation","slug":"permutation"},{"level":3,"text":"背包问题","slug":"背包问题"},{"level":3,"text":"树状数组","slug":"树状数组"},{"level":3,"text":"并查集","slug":"并查集"},{"level":2,"text":"我出的题","slug":"我出的题"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-04-09","category":["编程","教程"],"tag":["工具"],"icon":"solid/wand-sparkles"},"createdAt":"2023-04-09T00:00:00.000Z","updatedAt":"2026-11-09T03:35:41+08:00","readingTime":5,"excerpt":"算法 虽然是 OIer，经验比较足，但是花时间太少，水平只能说一般。不想卷算法了，没什么兴趣，学到能应对面试的水平就差不多了。 论个人能力，比较擅长数据结构，暴力和骗分，不擅长动归图论数论 这不是什么都不会了嘛！ 。纯暴力神教，因此只会打 OI/IOI 赛制，不会打 ACM。 学习方法 我是看书入门，对入门级网络教程没…"},"related":[{"route":"/blog/log","title":"博客日志","refs":2,"links":[{"route":"/gossip/hope","refs":5},{"route":"/coding/","refs":2}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2}]},{"route":"/coding/bagu","title":"八股","refs":1},{"route":"/gossip/hope","title":"对 xxx 的希望","refs":1,"links":[{"route":"/blog/log","refs":5}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

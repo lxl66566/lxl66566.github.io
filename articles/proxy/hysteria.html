@@ -1,54 +1,24 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../../assets/chrome-379cddde.js">
-<title>Hysteria | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../../favicon.ico">
-<meta name="description" content="Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的 很好 ，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能， 即使不用代理也能当成 反代 来用 。 QUIC 豁免机制方便利用。 劣势： 其 Brutal 拥塞控制算法 …">
-<link rel="canonical" href="https://absx.pages.dev/articles/proxy/hysteria">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hysteria | 绝对值_x 的博客">
-<meta property="og:description" content="Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的 很好 ，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能， 即使不用代理也能当成 反代 来用 。 QUIC 豁免机制方便利用。 劣势： 其 Brutal 拥塞控制算法 …">
-<meta property="og:url" content="https://absx.pages.dev/articles/proxy/hysteria">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../../assets/chrome-379cddde.js"><title>Hysteria | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../../favicon.ico"><meta name="description" content="Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的 很好 ，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能， 即使不用代理也能当成 反代 来用 。 QUIC 豁免机制方便利用。 劣势： 其 Brutal 拥塞控制算法 …"><link rel="canonical" href="https://absx.pages.dev/articles/proxy/hysteria"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="Hysteria | 绝对值_x 的博客"><meta property="og:description" content="Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的 很好 ，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能， 即使不用代理也能当成 反代 来用 。 QUIC 豁免机制方便利用。 劣势： 其 Brutal 拥塞控制算法 …"><meta property="og:url" content="https://absx.pages.dev/articles/proxy/hysteria"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hysteria","url":"https://absx.pages.dev/articles/proxy/hysteria","mainEntityOfPage":"https://absx.pages.dev/articles/proxy/hysteria","description":"Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的 很好 ，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能， 即使不用代理也能当成 反代 来用 。 QUIC 豁免机制方便利用。 劣势： 其 Brutal 拥塞控制算法 …","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-11-17T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="hysteria">Hysteria</h1>
-<p><a href="https://v2.hysteria.network/zh/" class="ap-external">Hysteria</a> 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。</p>
-<p>优势：</p>
-<ul>
-<li>这玩意文档写的<strong>很好</strong>，自己写配置也非常简单。</li>
-<li>自带了网页伪装、自动 <code>acme.sh</code> 签证书等功能，<s>即使不用代理也能当成<a href="../reverse_proxy">反代</a>来用</s>。</li>
-<li>QUIC 豁免机制方便利用。</li>
-</ul>
-<p>劣势：</p>
-<ul>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="hysteria">Hysteria</h1><p><a href="https://v2.hysteria.network/zh/" class="ap-external">Hysteria</a> 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。</p><p>优势：</p><ul>
+<li>这玩意文档写的<strong>很好</strong>，自己写配置也非常简单。</li><li>自带了网页伪装、自动 <code>acme.sh</code> 签证书等功能，<s>即使不用代理也能当成<a href="../reverse_proxy">反代</a>来用</s>。</li><li>QUIC 豁免机制方便利用。</li>
+</ul><p>劣势：</p><ul>
 <li>其 Brutal 拥塞控制算法<a href="https://v2.hysteria.network/zh/docs/misc/Hysteria-Brutal/#q-hysteria_1" class="ap-external">非常凶猛霸道</a>，容易被 IDC 警告，被本地网络 QOS，因为确实太像被攻击了。<a href="https://www.youtube.com/watch?v=kTYfclAzy38" class="ap-external">src</a>
 <ul>
 <li>因此我使用 bbr 而不是 Brutal。</li>
 </ul>
-</li>
-<li>不只是拥塞控制算法，UDP 本身也容易被丢包。</li>
-</ul>
-<h2 id="quic-豁免">QUIC 豁免</h2>
-<p>2025 年的一篇 <a href="./#external">《揭示并绕过中国防火长城基于 SNI 的 QUIC 封锁机制》</a> 大幅提高了 hysteria2 的地位：QUIC 流量拥有豁免机制，在一众代理协议中脱颖而出。</p>
-<p>最容易利用的豁免机制是 <strong>源端口 &lt;= 目标端口</strong>。只需要使用 nftables 或其他流量转发机制，将 VPS 的高位端口 inbound 转发到 hysteria2 的真实低位端口，即可实现双向 QUIC 流量均被豁免。由于代理软件通常也使用高位端口，因此 VPS 上的端口号需要设成极端的高（我使用 65533）；而 hysteria2 的低位端口最好也要设得更低。当然，由于 hysteria2 天然支持端口跳跃（其本身也是基于 nftables/iptables 实现的），你也可以将一个 range 的端口全部转到 server 端口上，然后在客户端开启端口跳跃即可。</p>
-<div class="ap-code ap-code--ln" data-lang="nftables" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">nftables</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>不只是拥塞控制算法，UDP 本身也容易被丢包。</li>
+</ul><h2 id="quic-豁免">QUIC 豁免</h2><p>2025 年的一篇 <a href="./#external">《揭示并绕过中国防火长城基于 SNI 的 QUIC 封锁机制》</a> 大幅提高了 hysteria2 的地位：QUIC 流量拥有豁免机制，在一众代理协议中脱颖而出。</p><p>最容易利用的豁免机制是 <strong>源端口 &lt;= 目标端口</strong>。只需要使用 nftables 或其他流量转发机制，将 VPS 的高位端口 inbound 转发到 hysteria2 的真实低位端口，即可实现双向 QUIC 流量均被豁免。由于代理软件通常也使用高位端口，因此 VPS 上的端口号需要设成极端的高（我使用 65533）；而 hysteria2 的低位端口最好也要设得更低。当然，由于 hysteria2 天然支持端口跳跃（其本身也是基于 nftables/iptables 实现的），你也可以将一个 range 的端口全部转到 server 端口上，然后在客户端开启端口跳跃即可。</p><div class="ap-code ap-code--ln" data-lang="nftables" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">nftables</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-text"><span class="line"><span>table inet nat {</span></span>
 <span class="line"><span>  chain prerouting {</span></span>
 <span class="line"><span>    type nat hook prerouting priority -100; policy accept;</span></span>
@@ -59,11 +29,7 @@
 <span class="line"><span>    # tcp dport 65501-65533 redirect to 5497</span></span>
 <span class="line"><span>    # udp dport 65501-65533 redirect to 5497</span></span>
 <span class="line"><span>  }</span></span>
-<span class="line"><span>}</span></span></code></pre></div>
-<h2 id="服务器配置">服务器配置</h2>
-<p>安装 hysteria2 后，随便创一个 json 或 yaml，写入配置。具体怎么写配置建议看文档，讲的挺详细的。</p>
-<p>这里给出我的配置，仅供参考；使用之前签过的证书，我的博客做伪装（）。</p>
-<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<span class="line"><span>}</span></span></code></pre></div><h2 id="服务器配置">服务器配置</h2><p>安装 hysteria2 后，随便创一个 json 或 yaml，写入配置。具体怎么写配置建议看文档，讲的挺详细的。</p><p>这里给出我的配置，仅供参考；使用之前签过的证书，我的博客做伪装（）。</p><div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "auth"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: { </span><span style="color:#005CC5;--shiki-dark:#79B8FF">"password"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"xxx"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">"type"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"password"</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> },</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "ignoreClientBandwidth"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
@@ -74,34 +40,19 @@
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  },</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "quic"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: { </span><span style="color:#005CC5;--shiki-dark:#79B8FF">"maxIncomingStreams"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">50000</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> },</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">  "tls"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: { </span><span style="color:#005CC5;--shiki-dark:#79B8FF">"cert"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"/var/cert/xxx.crt"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">"key"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"/var/cert/xxx.key"</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> }</span></span>
-<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-<p>然后用 <code>hysteria server --config your-config.json</code> 就能跑了。当然，你还需要保活。如果你的包管理有帮忙装 <code>hysteria-server</code> 服务就用包管理的来跑，没有的话，自己写 systemd service 或者用 <a href="../linux/package#multiplexer">multiplexer</a> 保活都行。</p>
-<p>我在启动服务时遇到了一些问题。</p>
-<ol>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div><p>然后用 <code>hysteria server --config your-config.json</code> 就能跑了。当然，你还需要保活。如果你的包管理有帮忙装 <code>hysteria-server</code> 服务就用包管理的来跑，没有的话，自己写 systemd service 或者用 <a href="../linux/package#multiplexer">multiplexer</a> 保活都行。</p><p>我在启动服务时遇到了一些问题。</p><ol>
 <li>即使在 root 下运行，仍然提示权限不足无法读取证书文件。
 <ul>
-<li>尝试编辑 <code>.service</code> 文件，删除 <code>group</code>，将 <code>User</code> 改为 <code>root</code>，无效。</li>
-<li>尝试把证书移到 <code>/etc/hysteria</code> 下。</li>
-<li>后续又折腾一阵，发现需要 <code>chmod +rwx 证书文件</code> 才行。（只 <code>+x</code> 是不行的）</li>
+<li>尝试编辑 <code>.service</code> 文件，删除 <code>group</code>，将 <code>User</code> 改为 <code>root</code>，无效。</li><li>尝试把证书移到 <code>/etc/hysteria</code> 下。</li><li>后续又折腾一阵，发现需要 <code>chmod +rwx 证书文件</code> 才行。（只 <code>+x</code> 是不行的）</li>
 </ul>
-</li>
-<li>在 debian 上这样启动服务没啥问题，然而在 archlinux 上就不行了。
+</li><li>在 debian 上这样启动服务没啥问题，然而在 archlinux 上就不行了。
 <ul>
 <li>AUR 的 <code>hysteria-bin</code> 包安装的证书在 <code>/usr/lib/systemd/system</code>，名字是 <code>xxx@.service</code>，根据 <a href="https://wiki.archlinux.org/title/systemd#Using_units" class="ap-external">wiki</a> 所述是模板文件，需要传参。直接 <code>systemctl start hysteria-server</code> 是不行的，只会提示 <em>unit not found</em>。因此需要自己读 service，理解那个传参的意思。</li>
 </ul>
 </li>
-</ol>
-<p>然后就是客户端了。</p>
-<h2 id="客户端使用">客户端使用</h2>
-<p>虽说可以按照官方教程启动一个客户端服务，但是一个黑窗口一直最小化运行比较丑。</p>
-<h3 id="windows">Windows</h3>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>V2rayN 早期以内核插件形式支持 hysteria</summary>
-<ol>
-<li>从 Release 下载 <code>.exe</code> 内核，放入 V2rayN 文件夹的 <code>bin/hysteria</code> 下。注意可能需要重命名为 <code>hysteria.exe</code>。</li>
-<li>打开 V2rayN，<em>添加自定义配置服务器</em>，<em>地址</em> 选择客户端的配置文件，<em>Core 类型</em> 选择 <code>hysteria</code>。</li>
-</ol>
-<p>然后就可以愉快地使用了。我的客户端配置文件参考：</p>
-<div class="ap-code ap-code--ln" data-lang="yml" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">yml</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</ol><p>然后就是客户端了。</p><h2 id="客户端使用">客户端使用</h2><p>虽说可以按照官方教程启动一个客户端服务，但是一个黑窗口一直最小化运行比较丑。</p><h3 id="windows">Windows</h3><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>V2rayN 早期以内核插件形式支持 hysteria</summary><ol>
+<li>从 Release 下载 <code>.exe</code> 内核，放入 V2rayN 文件夹的 <code>bin/hysteria</code> 下。注意可能需要重命名为 <code>hysteria.exe</code>。</li><li>打开 V2rayN，<em>添加自定义配置服务器</em>，<em>地址</em> 选择客户端的配置文件，<em>Core 类型</em> 选择 <code>hysteria</code>。</li>
+</ol><p>然后就可以愉快地使用了。我的客户端配置文件参考：</p><div class="ap-code ap-code--ln" data-lang="yml" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">yml</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-yml"><span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">server</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">&#x3C;url>:&#x3C;port></span></span>
 <span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">auth</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#D73A49;--shiki-dark:#F97583">*</span><span style="color:#24292E;--shiki-dark:#E1E4E8">**********</span></span>
 <span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">socks5</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
@@ -111,17 +62,10 @@
 <span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">obfs</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
 <span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">  type</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">salamander</span></span>
 <span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">  salamander</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
-<span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">    password</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#D73A49;--shiki-dark:#F97583">*</span><span style="color:#24292E;--shiki-dark:#E1E4E8">***********</span></span></code></pre></div>
-<blockquote>
+<span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">    password</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#D73A49;--shiki-dark:#F97583">*</span><span style="color:#24292E;--shiki-dark:#E1E4E8">***********</span></span></code></pre></div><blockquote>
 <p>ps. V2rayN v6.23 亲测可用；而 v6.30 虽然加入了官方 hysteria2 支持，但在 sing-box 内核相同配置下测试不可用。</p>
 </blockquote>
-</details>
-<p>V2rayN v6.30 后原生支持 hysteria2 协议。虽然在初期有些问题，但是到了 v7.x 以后就没啥问题了。</p>
-<h3 id="linux">Linux</h3>
-<p>我在 linux 上使用 <a href="proxy_software#daed">daed</a>，<s>然而其<a href="https://github.com/daeuniverse/dae/issues/48" class="ap-external">尚未支持且不打算支持 hysteria 协议</a>。</s></p>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>后来还是支持了。</summary>
-<p>不过我们可以本地开一个 hysteria client，通过 http 或 socks5 再接入 daed。</p>
-<ol>
+</details><p>V2rayN v6.30 后原生支持 hysteria2 协议。虽然在初期有些问题，但是到了 v7.x 以后就没啥问题了。</p><h3 id="linux">Linux</h3><p>我在 linux 上使用 <a href="proxy_software#daed">daed</a>，<s>然而其<a href="https://github.com/daeuniverse/dae/issues/48" class="ap-external">尚未支持且不打算支持 hysteria 协议</a>。</s></p><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>后来还是支持了。</summary><p>不过我们可以本地开一个 hysteria client，通过 http 或 socks5 再接入 daed。</p><ol>
 <li>下载<div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-tabs-1-1" checked>
 <label class="ap-tabs__label" for="ap-tab-1">AUR
@@ -134,9 +78,7 @@ archlinux 可以从 AUR 下载：`paru -S hysteria-bin`
 [见文档](https://v2.hysteria.network/zh/docs/getting-started/Installation/#linux)">
 </div>
 </div>
-</li>
-<li>写好配置文件。</li>
-<li>启动 client 服务。<div class="ap-tabs">
+</li><li>写好配置文件。</li><li>启动 client 服务。<div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-2" name="ap-tabs-tabs-2-2" checked>
 <label class="ap-tabs__label" for="ap-tab-2">AUR
 从 AUR 安装 hysteria 是服务端和客户端一体的，因此会安装两个<strong>服务模板</strong>，使用时需要传入字符串指定配置文件。例如，我需要使用 <code>/etc/hysteria/server.yaml</code> 则需要 <code>systemctl enable --now hysteria-server@server</code>。要用 client 同理。
@@ -148,34 +90,13 @@ archlinux 可以从 AUR 下载：`paru -S hysteria-bin`
 `systemctl enable --now hysteria-server`">
 </div>
 </div>
-</li>
-<li>在 daed 中手动添加 socks5 节点，使用配置文件端口。</li>
+</li><li>在 daed 中手动添加 socks5 节点，使用配置文件端口。</li>
 </ol>
-</details>
-<p>但是 dae <a href="https://github.com/daeuniverse/dae/issues/683" class="ap-external">不支持 hysteria2 的端口跳跃</a>，也没有什么要做的迹象了。</p>
-<h3 id="android">Android</h3>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>archived</summary>
-<p>NekoBox (v1.2.9) 号称支持，<s>实测不可用</s>。windows 上测了能用的配置，放在 NekoBox 上用不了。</p>
-<p>后来我换了个 japan 的 vps，试了下，居然又能用了？？服务端版本相同，配置也没变，就改个服务器地址，我不好说。</p>
-<p>测了一下其他软件，SagerNet 安装了<a href="https://github.com/SagerNet/SagerNet/releases/tag/hysteria-plugin-1.3.5" class="ap-external">插件</a>，然而 <em>专有设备供应商篡改了你的安卓系统，使该插件无法使用</em>，我又不好说了。</p>
-</details>
-<p>2025 年了，<a href="proxy_software#sing-box-%E7%B3%BB">sing-box 系</a>的全都原生支持 hysteria2 了。</p>
-<h2 id="总结">总结</h2>
-<ul>
-<li>这是我第一次直接写配置文件部署一个协议，以前都是一键脚本。</li>
-<li>任何协议都吃代理软件支持，hysteria 的适配在一众代理内算比较出众的。2024-2025 年 hysteria2 的可用性比起两年前上升了很多。</li>
-</ul>
-<h2 id="遇到的问题">遇到的问题</h2>
-<h3 id="too-many-open-streams">too many open streams</h3>
-<p>此事在 <a href="https://github.com/apernet/hysteria/issues/1073" class="ap-external">issue</a> 中均有记载。由于 sing-box 会开大量端口进行通信，很容易超过 hysteria2 默认的 <code>maxIncomingStreams: 1024</code> 限制，因此需要在服务端将此值调大。</p>
-<h3 id="no-route-to-host">no route to host</h3>
-<p>前一秒还正常使用的 hysteria 连接，立刻变得无法使用了。</p>
-<p>NekoBox 报错：<code>...cloudflare.com INTERNAL_ERROR(local):read udp ...: read: no route to host.</code>，客户端报 <code>FATAL failed to initialize client {&quot;error&quot;: &quot;connect error: timeout: no recent networkactivity&quot;}</code>。</p>
-<p>重启服务器就行了。当时没有开端口跳跃，现在看来可能是运营商 QoS 吧。</p>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/articles/proxy/hysteria","locale":"root","title":"Hysteria","headings":[{"level":1,"text":"Hysteria","slug":"hysteria"},{"level":2,"text":"QUIC 豁免","slug":"quic-豁免"},{"level":2,"text":"服务器配置","slug":"服务器配置"},{"level":2,"text":"客户端使用","slug":"客户端使用"},{"level":3,"text":"Windows","slug":"windows"},{"level":3,"text":"Linux","slug":"linux"},{"level":3,"text":"Android","slug":"android"},{"level":2,"text":"总结","slug":"总结"},{"level":2,"text":"遇到的问题","slug":"遇到的问题"},{"level":3,"text":"too many open streams","slug":"too-many-open-streams"},{"level":3,"text":"no route to host","slug":"no-route-to-host"}],"frontmatter":{"date":"2023-11-17","category":["教程"],"tag":["网络","协议"],"icon":"solid/house-tsunami"},"createdAt":"2023-11-17T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":6,"excerpt":"Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的 很好 ，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能， 即使不用代理也能当成 反代 来用 。 QUIC 豁免机制方便利用。 劣势： 其 Brutal 拥塞控制算法 …"},"related":[{"route":"/articles/proxy/","title":"代理","refs":2,"links":[{"route":"/articles/proxy/proxy_software","refs":1},{"route":"/articles/proxy/vps","refs":1}]},{"route":"/articles/proxy/proxy_software","title":"代理客户端","refs":2,"links":[{"route":"/articles/proxy/","refs":1}]},{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":1,"links":[{"route":"/articles/proxy/vps","refs":1}]},{"route":"/articles/proxy/vps","title":"VPS","refs":1,"links":[{"route":"/articles/linux/package","refs":1},{"route":"/articles/proxy/","refs":1},{"route":"/articles/reverse_proxy","refs":1}]},{"route":"/articles/reverse_proxy","title":"反向代理","refs":1,"links":[{"route":"/articles/proxy/vps","refs":1}]}]}</script>
-<script type="module" src="../../assets/entry-DOpyHYQg.js"></script>
+</details><p>但是 dae <a href="https://github.com/daeuniverse/dae/issues/683" class="ap-external">不支持 hysteria2 的端口跳跃</a>，也没有什么要做的迹象了。</p><h3 id="android">Android</h3><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>archived</summary><p>NekoBox (v1.2.9) 号称支持，<s>实测不可用</s>。windows 上测了能用的配置，放在 NekoBox 上用不了。</p><p>后来我换了个 japan 的 vps，试了下，居然又能用了？？服务端版本相同，配置也没变，就改个服务器地址，我不好说。</p><p>测了一下其他软件，SagerNet 安装了<a href="https://github.com/SagerNet/SagerNet/releases/tag/hysteria-plugin-1.3.5" class="ap-external">插件</a>，然而 <em>专有设备供应商篡改了你的安卓系统，使该插件无法使用</em>，我又不好说了。</p>
+</details><p>2025 年了，<a href="proxy_software#sing-box-%E7%B3%BB">sing-box 系</a>的全都原生支持 hysteria2 了。</p><h2 id="总结">总结</h2><ul>
+<li>这是我第一次直接写配置文件部署一个协议，以前都是一键脚本。</li><li>任何协议都吃代理软件支持，hysteria 的适配在一众代理内算比较出众的。2024-2025 年 hysteria2 的可用性比起两年前上升了很多。</li>
+</ul><h2 id="遇到的问题">遇到的问题</h2><h3 id="too-many-open-streams">too many open streams</h3><p>此事在 <a href="https://github.com/apernet/hysteria/issues/1073" class="ap-external">issue</a> 中均有记载。由于 sing-box 会开大量端口进行通信，很容易超过 hysteria2 默认的 <code>maxIncomingStreams: 1024</code> 限制，因此需要在服务端将此值调大。</p><h3 id="no-route-to-host">no route to host</h3><p>前一秒还正常使用的 hysteria 连接，立刻变得无法使用了。</p><p>NekoBox 报错：<code>...cloudflare.com INTERNAL_ERROR(local):read udp ...: read: no route to host.</code>，客户端报 <code>FATAL failed to initialize client {&quot;error&quot;: &quot;connect error: timeout: no recent networkactivity&quot;}</code>。</p><p>重启服务器就行了。当时没有开端口跳跃，现在看来可能是运营商 QoS 吧。</p><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../../assets/chrome-379cddde.js","page":{"route":"/articles/proxy/hysteria","locale":"root","title":"Hysteria","headings":[{"level":1,"text":"Hysteria","slug":"hysteria"},{"level":2,"text":"QUIC 豁免","slug":"quic-豁免"},{"level":2,"text":"服务器配置","slug":"服务器配置"},{"level":2,"text":"客户端使用","slug":"客户端使用"},{"level":3,"text":"Windows","slug":"windows"},{"level":3,"text":"Linux","slug":"linux"},{"level":3,"text":"Android","slug":"android"},{"level":2,"text":"总结","slug":"总结"},{"level":2,"text":"遇到的问题","slug":"遇到的问题"},{"level":3,"text":"too many open streams","slug":"too-many-open-streams"},{"level":3,"text":"no route to host","slug":"no-route-to-host"}],"frontmatter":{"date":"2023-11-17","category":["教程"],"tag":["网络","协议"],"icon":"solid/house-tsunami"},"createdAt":"2023-11-17T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":6,"excerpt":"Hysteria Hysteria 是一个 Go 写的代理协议/工具，基于 QUIC/HTTP 3。 优势： 这玩意文档写的 很好 ，自己写配置也非常简单。 自带了网页伪装、自动 acme.sh 签证书等功能， 即使不用代理也能当成 反代 来用 。 QUIC 豁免机制方便利用。 劣势： 其 Brutal 拥塞控制算法 …"},"related":[{"route":"/articles/proxy/","title":"代理","refs":2,"links":[{"route":"/articles/proxy/proxy_software","refs":1},{"route":"/articles/proxy/vps","refs":1}]},{"route":"/articles/proxy/proxy_software","title":"代理客户端","refs":2,"links":[{"route":"/articles/proxy/","refs":1}]},{"route":"/articles/linux/package","title":"包管理与使用推荐","refs":1,"links":[{"route":"/articles/proxy/vps","refs":1}]},{"route":"/articles/proxy/vps","title":"VPS","refs":1,"links":[{"route":"/articles/linux/package","refs":1},{"route":"/articles/proxy/","refs":1},{"route":"/articles/reverse_proxy","refs":1}]},{"route":"/articles/reverse_proxy","title":"反向代理","refs":1,"links":[{"route":"/articles/proxy/vps","refs":1}]}]}</script>
+<script type="module" src="../../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

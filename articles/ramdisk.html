@@ -1,39 +1,16 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>RAM Disk 横评与教程 | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="RAM Disk 横评与教程 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！ 使用指南 archlinux 下的 ramdisk 非常简单，只需 自动 sh 临时 sh …">
-<link rel="canonical" href="https://absx.pages.dev/articles/ramdisk">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="RAM Disk 横评与教程 | 绝对值_x 的博客">
-<meta property="og:description" content="RAM Disk 横评与教程 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！ 使用指南 archlinux 下的 ramdisk 非常简单，只需 自动 sh 临时 sh …">
-<meta property="og:url" content="https://absx.pages.dev/articles/ramdisk">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>RAM Disk 横评与教程 | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="RAM Disk 横评与教程 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！ 使用指南 archlinux 下的 ramdisk 非常简单，只需 自动 sh 临时 sh …"><link rel="canonical" href="https://absx.pages.dev/articles/ramdisk"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="RAM Disk 横评与教程 | 绝对值_x 的博客"><meta property="og:description" content="RAM Disk 横评与教程 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！ 使用指南 archlinux 下的 ramdisk 非常简单，只需 自动 sh 临时 sh …"><meta property="og:url" content="https://absx.pages.dev/articles/ramdisk"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"RAM Disk 横评与教程","url":"https://absx.pages.dev/articles/ramdisk","mainEntityOfPage":"https://absx.pages.dev/articles/ramdisk","description":"RAM Disk 横评与教程 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！ 使用指南 archlinux 下的 ramdisk 非常简单，只需 自动 sh 临时 sh …","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-07-29T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="ram-disk-横评与教程">RAM Disk 横评与教程</h1>
-<p>RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。</p>
-<p>并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！</p>
-<h2 id="使用指南">使用指南</h2>
-<p>archlinux 下的 ramdisk 非常简单，只需</p>
-<div class="ap-tabs ap-tabs--code">
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="ram-disk-横评与教程">RAM Disk 横评与教程</h1><p>RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。</p><p>并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！</p><h2 id="使用指南">使用指南</h2><p>archlinux 下的 ramdisk 非常简单，只需</p><div class="ap-tabs ap-tabs--code">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-code-tabs-1-1" checked>
 <label class="ap-tabs__label" for="ap-tab-1">自动</label>
 <div class="ap-tab" data-title="自动">
@@ -50,24 +27,14 @@
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> mount</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -t</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> tmpfs</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -o</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> size=10g</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> tmpfs</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> /mnt/tmp</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">sudo</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> chmod</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -R</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 777</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> /mnt/tmp</span></span></code></pre></div>
 </div>
-</div>
-<p>即可。</p>
-<p>因此后文介绍的皆为 Windows 系统上的 ramdisk。</p>
-<p>假设我们将 RAMDisk 挂载到 Z 盘：</p>
-<ol>
-<li>在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="ap-heimu" title="你知道的太多了">被坑了好几天</span></li>
-<li>安装 RAM Disk 软件并挂载。</li>
-<li>将 Windows Temp 环境变量设为此 RAM Disk.（可手动，但是 imdisk 提供一键设置）</li>
-<li>如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。<a href="https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&amp;utm_medium=web2x&amp;context=3" class="ap-external">src</a>，保存为 <code>.reg</code> 文件后双击<div class="ap-code ap-code--ln" data-lang="toml" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">toml</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</div><p>即可。</p><p>因此后文介绍的皆为 Windows 系统上的 ramdisk。</p><p>假设我们将 RAMDisk 挂载到 Z 盘：</p><ol>
+<li>在 Windows 电源计划中，关闭快速启动。（否则关机默认暂存 RAM Disk 内容到硬盘，违背了使用的初衷。）<span class="ap-heimu" title="你知道的太多了">被坑了好几天</span></li><li>安装 RAM Disk 软件并挂载。</li><li>将 Windows Temp 环境变量设为此 RAM Disk.（可手动，但是 imdisk 提供一键设置）</li><li>如果使用 Edge 浏览器，将 CacheDir 设为 RAM DISK。<a href="https://www.reddit.com/r/edge/comments/e8z1y3/comment/jfg8d3u/?utm_source=share&amp;utm_medium=web2x&amp;context=3" class="ap-external">src</a>，保存为 <code>.reg</code> 文件后双击<div class="ap-code ap-code--ln" data-lang="toml" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">toml</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-toml"><span class="line"><span style="color:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic">Windows Registry Editor Version 5.00</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">[</span><span style="color:#6F42C1;--shiki-dark:#B392F0">HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">"DiskCacheDir"=</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Z:</span><span style="color:#005CC5;--shiki-dark:#79B8FF">\\</span><span style="color:#032F62;--shiki-dark:#9ECBFF">Temp</span><span style="color:#005CC5;--shiki-dark:#79B8FF">\\</span><span style="color:#032F62;--shiki-dark:#9ECBFF">EdgeCache"</span></span></code></pre></div>
-此处假设你的 RAM Disk 内默认创建 Temp 文件夹。</li>
-<li>将桌面设为 RAMDisk：每次打开 RAMDisk 还是需要两步（此电脑 - Z 盘），<a href="https://t.me/withabsolutex/1688" class="ap-external">我想到了</a>直接将桌面放入 RAMDisk，这样就可以把桌面当垃圾桶用了！
+此处假设你的 RAM Disk 内默认创建 Temp 文件夹。</li><li>将桌面设为 RAMDisk：每次打开 RAMDisk 还是需要两步（此电脑 - Z 盘），<a href="https://t.me/withabsolutex/1688" class="ap-external">我想到了</a>直接将桌面放入 RAMDisk，这样就可以把桌面当垃圾桶用了！
 <ol>
-<li>把桌面上的东西移走，并删除 <em>桌面</em> 文件夹 (<code>C:\Users\&lt;Username&gt;\Desktop</code>)。</li>
-<li>软链接到 RAMDisk：<code>mklink /D &quot;C:\Users\&lt;Username&gt;\Desktop&quot; &quot;Z:&quot;</code></li>
-<li>由于现在桌面关机会自动清空，我们需要一个方法，将我的文件（主要是快捷方式）开机时自动放到桌面。<div class="ap-tabs">
+<li>把桌面上的东西移走，并删除 <em>桌面</em> 文件夹 (<code>C:\Users\&lt;Username&gt;\Desktop</code>)。</li><li>软链接到 RAMDisk：<code>mklink /D &quot;C:\Users\&lt;Username&gt;\Desktop&quot; &quot;Z:&quot;</code></li><li>由于现在桌面关机会自动清空，我们需要一个方法，将我的文件（主要是快捷方式）开机时自动放到桌面。<div class="ap-tabs">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-3" name="ap-tabs-tabs-2-2" checked>
 <label class="ap-tabs__label" for="ap-tab-3">imdisk
 imdisk 自带挂载功能，可以将某个文件夹当成 ramdisk 的“基”。非常方便。
@@ -76,17 +43,14 @@ imdisk 自带挂载功能，可以将某个文件夹当成 ramdisk 的“基”�
 imdisk 自带挂载功能，可以将某个文件夹当成 ramdisk 的“基”。非常方便。
 @tab 脚本">
 <ol>
-<li>在硬盘里任意位置建一个文件夹，将你要放到桌面上的所有文件放进去</li>
-<li><code>win + R</code> 输入 <code>shell:startup</code> 打开启动文件夹</li>
-<li>新建一个 <code>copy.ps1</code> 文件，右键编辑，输入（修改 <code>$sourceFolderPath</code> 的值为硬盘上的文件夹）：<div class="ap-code ap-code--ln" data-lang="ps1" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">ps1</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<li>在硬盘里任意位置建一个文件夹，将你要放到桌面上的所有文件放进去</li><li><code>win + R</code> 输入 <code>shell:startup</code> 打开启动文件夹</li><li>新建一个 <code>copy.ps1</code> 文件，右键编辑，输入（修改 <code>$sourceFolderPath</code> 的值为硬盘上的文件夹）：<div class="ap-code ap-code--ln" data-lang="ps1" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">ps1</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-ps1"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">$sourceFolderPath </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "your_source_folder_path"</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">$destinationPath </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "</span><span style="color:#005CC5;--shiki-dark:#79B8FF">$Home</span><span style="color:#032F62;--shiki-dark:#9ECBFF">\Desktop"</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">Get-ChildItem</span><span style="color:#D73A49;--shiki-dark:#F97583"> -</span><span style="color:#24292E;--shiki-dark:#E1E4E8">Path $sourceFolderPath </span><span style="color:#D73A49;--shiki-dark:#F97583">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8">Recurse </span><span style="color:#D73A49;--shiki-dark:#F97583">|</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">ForEach-Object</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    Copy-Item</span><span style="color:#D73A49;--shiki-dark:#F97583"> -</span><span style="color:#24292E;--shiki-dark:#E1E4E8">Path </span><span style="color:#005CC5;--shiki-dark:#79B8FF">$_</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.FullName </span><span style="color:#D73A49;--shiki-dark:#F97583">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8">Destination $destinationPath</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre></div>
-</li>
-<li>右键脚本，进入 <em>打开方式</em>，在里面找到 powershell 并设为默认。
+</li><li>右键脚本，进入 <em>打开方式</em>，在里面找到 powershell 并设为默认。
 <ul>
 <li>如果找不到，浏览电脑上的文件，找 <code>pwsh.exe</code>/<code>powershell.exe</code> 的位置（可以用 everything 找）。</li>
 </ul>
@@ -97,58 +61,25 @@ imdisk 自带挂载功能，可以将某个文件夹当成 ramdisk 的“基”�
 </li>
 </ol>
 </li>
-</ol>
-<div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>提示</p>
-<p>以下为横评正文，您也可以直接<a href="#%E6%80%BB%E7%BB%93">阅读 <code>总结</code></a>。</p>
-</div>
-<h2 id="eram">ERAM</h2>
-<p><a href="https://github.com/topics/ramdisk" class="ap-external">Github ramdisk topic</a> 的第一名。但是呢，直接卡在安装上了。。如何使用？文档在何方？README 早已过时，于是开源阵营 RAM Disk 阵亡。<s>（樂</s></p>
-<h2 id="amd-radeon-ramdisk">AMD Radeon RAMDISK</h2>
-<p>免费版只能开 4G，太商业了，<s>只有 4G 我能存下 yuzusoft 的压缩包吗？下一个。</s></p>
-<h2 id="softperfect-ram-disk"><a href="https://www.majorgeeks.com/files/details/softperfect_ram_disk.html" class="ap-external">Softperfect RAM Disk</a></h2>
-<ul>
-<li>不得不说，<strong>Softperfect 的 UI 是本横评中最好的一个</strong>。</li>
-<li>还有添加开机启动的小玩具。</li>
-<li>可一键设置 <code>$Temp</code> 环境变量。</li>
-<li>缺点：
+</ol><div class="ap-container ap-container--tip"><p class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>提示</p><p>以下为横评正文，您也可以直接<a href="#%E6%80%BB%E7%BB%93">阅读 <code>总结</code></a>。</p>
+</div><h2 id="eram">ERAM</h2><p><a href="https://github.com/topics/ramdisk" class="ap-external">Github ramdisk topic</a> 的第一名。但是呢，直接卡在安装上了。。如何使用？文档在何方？README 早已过时，于是开源阵营 RAM Disk 阵亡。<s>（樂</s></p><h2 id="amd-radeon-ramdisk">AMD Radeon RAMDISK</h2><p>免费版只能开 4G，太商业了，<s>只有 4G 我能存下 yuzusoft 的压缩包吗？下一个。</s></p><h2 id="softperfect-ram-disk"><a href="https://www.majorgeeks.com/files/details/softperfect_ram_disk.html" class="ap-external">Softperfect RAM Disk</a></h2><ul>
+<li>不得不说，<strong>Softperfect 的 UI 是本横评中最好的一个</strong>。</li><li>还有添加开机启动的小玩具。</li><li>可一键设置 <code>$Temp</code> 环境变量。</li><li>缺点：
 <ol>
-<li>（也许不算缺点）会一直占用一个托盘图标。</li>
-<li>有时关机会出现蓝屏。</li>
+<li>（也许不算缺点）会一直占用一个托盘图标。</li><li>有时关机会出现蓝屏。</li>
 </ol>
 </li>
-</ul>
-<h2 id="starwind-ram-disk">StarWind RAM Disk</h2>
-<ul>
-<li>官网下载需要注册，需要非中国号码。。</li>
-<li>不能更换盘符与文件格式（默认 FAT32，最大支持 file size = 4GB，显然不够）。</li>
-<li>UI 很老，win11 下有 bug（标题栏被挤没）</li>
-<li>无中文翻译。</li>
-</ul>
-<h2 id="imdisk"><a href="https://github.com/DavidXanatos/ImDisk" class="ap-external">ImDisk</a></h2>
-<p>上面的链接是一个 fork 版本，添加了 windows 24H2 的修复，推荐用这个。但是链接里只有一个驱动，为了添加一块 RAMDisk 我们还需要去下载 <a href="https://sourceforge.net/projects/imdisk-toolkit/" class="ap-external">ImDisk Toolkit</a>。</p>
-<ul>
-<li><strong>本横评中唯一一个带有动态内存分配功能的软件！</strong> 动态内存分配指的是往 RAM Disk 里放多少东西就吃多少内存，而不是一般的，开多少空间就吃多少内存。会慢一点，但胜在内存自由。</li>
-<li>非常好，有关闭电源计划的提示。</li>
-<li>可一键设置 <code>$Temp</code> 环境变量。</li>
-<li>RAM Disk 的文件会占用双倍的空间？？我不太清楚原理。文件 6.68 GB，占用空间差不多，但是设备和驱动器里显示磁盘占用了 13.38 GB 空间。
+</ul><h2 id="starwind-ram-disk">StarWind RAM Disk</h2><ul>
+<li>官网下载需要注册，需要非中国号码。。</li><li>不能更换盘符与文件格式（默认 FAT32，最大支持 file size = 4GB，显然不够）。</li><li>UI 很老，win11 下有 bug（标题栏被挤没）</li><li>无中文翻译。</li>
+</ul><h2 id="imdisk"><a href="https://github.com/DavidXanatos/ImDisk" class="ap-external">ImDisk</a></h2><p>上面的链接是一个 fork 版本，添加了 windows 24H2 的修复，推荐用这个。但是链接里只有一个驱动，为了添加一块 RAMDisk 我们还需要去下载 <a href="https://sourceforge.net/projects/imdisk-toolkit/" class="ap-external">ImDisk Toolkit</a>。</p><ul>
+<li><strong>本横评中唯一一个带有动态内存分配功能的软件！</strong> 动态内存分配指的是往 RAM Disk 里放多少东西就吃多少内存，而不是一般的，开多少空间就吃多少内存。会慢一点，但胜在内存自由。</li><li>非常好，有关闭电源计划的提示。</li><li>可一键设置 <code>$Temp</code> 环境变量。</li><li>RAM Disk 的文件会占用双倍的空间？？我不太清楚原理。文件 6.68 GB，占用空间差不多，但是设备和驱动器里显示磁盘占用了 13.38 GB 空间。
 <ul>
 <li>但是 <em>ImDisk</em> 能够<strong>保留文件扩容</strong>，非常舒服。</li>
 </ul>
-</li>
-<li>开机自启，默认隐藏托盘</li>
-</ul>
-<h2 id="魔方内存盘">魔方内存盘</h2>
-<p>创建 RAM Disk <strong>必需要创建同样大小的镜像文件</strong>，即使无需保存。逗我玩呢？</p>
-<h2 id="总结">总结</h2>
-<p>使用 <a href="#imdisk-toolkit">ImDisk Toolkit</a>。</p>
-<h2 id="external">external</h2>
-<ol>
+</li><li>开机自启，默认隐藏托盘</li>
+</ul><h2 id="魔方内存盘">魔方内存盘</h2><p>创建 RAM Disk <strong>必需要创建同样大小的镜像文件</strong>，即使无需保存。逗我玩呢？</p><h2 id="总结">总结</h2><p>使用 <a href="#imdisk-toolkit">ImDisk Toolkit</a>。</p><h2 id="external">external</h2><ol>
 <li><a href="https://www.ghacks.net/2017/04/03/the-best-free-ramdisk-programs-for-windows/" class="ap-external">RAM Disk comparison</a></li>
-</ol>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/ramdisk","locale":"root","title":"RAM Disk 横评与教程","headings":[{"level":1,"text":"RAM Disk 横评与教程","slug":"ram-disk-横评与教程"},{"level":2,"text":"使用指南","slug":"使用指南"},{"level":2,"text":"ERAM","slug":"eram"},{"level":2,"text":"AMD Radeon RAMDISK","slug":"amd-radeon-ramdisk"},{"level":2,"text":"Softperfect RAM Disk","slug":"softperfect-ram-disk"},{"level":2,"text":"StarWind RAM Disk","slug":"starwind-ram-disk"},{"level":2,"text":"ImDisk","slug":"imdisk"},{"level":2,"text":"魔方内存盘","slug":"魔方内存盘"},{"level":2,"text":"总结","slug":"总结"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-07-29","category":["推荐","教程","评价","经历"],"tag":["横评","工具","桌面端","Windows"],"icon":"solid/diagram-next"},"createdAt":"2023-07-29T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":4,"excerpt":"RAM Disk 横评与教程 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！ 使用指南 archlinux 下的 ramdisk 非常简单，只需 自动 sh 临时 sh …"},"related":[{"route":"/articles/windows/settings","title":"Windows 设置指南","refs":3,"links":[{"route":"/articles/windows/usage","refs":2},{"route":"/farraginous/recommend_packages","refs":2},{"route":"/articles/browser/settings","refs":1},{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":2,"links":[{"route":"/blog/log","refs":3},{"route":"/articles/windows/settings","refs":2},{"route":"/articles/windows/usage","refs":2},{"route":"/articles/browser/settings","refs":1},{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/articles/browser/settings","title":"浏览器设置","refs":1,"links":[{"route":"/articles/windows/settings","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/linux/install_and_config","title":"安装、配置与使用（Arch 篇）","refs":1,"links":[{"route":"/articles/windows/settings","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/windows/usage","title":"Windows 小知识与日常使用","refs":1,"links":[{"route":"/articles/windows/settings","refs":2},{"route":"/farraginous/recommend_packages","refs":2}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":3}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</ol><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/articles/ramdisk","locale":"root","title":"RAM Disk 横评与教程","headings":[{"level":1,"text":"RAM Disk 横评与教程","slug":"ram-disk-横评与教程"},{"level":2,"text":"使用指南","slug":"使用指南"},{"level":2,"text":"ERAM","slug":"eram"},{"level":2,"text":"AMD Radeon RAMDISK","slug":"amd-radeon-ramdisk"},{"level":2,"text":"Softperfect RAM Disk","slug":"softperfect-ram-disk"},{"level":2,"text":"StarWind RAM Disk","slug":"starwind-ram-disk"},{"level":2,"text":"ImDisk","slug":"imdisk"},{"level":2,"text":"魔方内存盘","slug":"魔方内存盘"},{"level":2,"text":"总结","slug":"总结"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2023-07-29","category":["推荐","教程","评价","经历"],"tag":["横评","工具","桌面端","Windows"],"icon":"solid/diagram-next"},"createdAt":"2023-07-29T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":4,"excerpt":"RAM Disk 横评与教程 RAM Disk 系列软件可以将内存映射为硬盘，养成将临时文件存放在 RAM 中的好习惯，保护固态盘的寿命。 并且 RAM Disk 会在断电后丢数据，就像是会自己倒垃圾的垃圾桶，这实在是太酷了！ 使用指南 archlinux 下的 ramdisk 非常简单，只需 自动 sh 临时 sh …"},"related":[{"route":"/articles/windows/settings","title":"Windows 设置指南","refs":3,"links":[{"route":"/farraginous/recommend_packages","refs":3},{"route":"/articles/windows/usage","refs":2},{"route":"/articles/browser/settings","refs":1},{"route":"/articles/linux/install_and_config","refs":1}]},{"route":"/farraginous/recommend_packages","title":"软件汇总","refs":2,"links":[{"route":"/articles/windows/settings","refs":3},{"route":"/blog/log","refs":3},{"route":"/articles/browser/settings","refs":1},{"route":"/articles/linux/install_and_config","refs":1},{"route":"/articles/windows/usage","refs":1}]},{"route":"/articles/browser/settings","title":"浏览器设置","refs":1,"links":[{"route":"/articles/windows/settings","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/linux/install_and_config","title":"安装、配置与使用（Arch 篇）","refs":1,"links":[{"route":"/articles/windows/settings","refs":1},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/articles/windows/usage","title":"Windows 小知识与日常使用","refs":1,"links":[{"route":"/articles/windows/settings","refs":2},{"route":"/farraginous/recommend_packages","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/farraginous/recommend_packages","refs":3}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

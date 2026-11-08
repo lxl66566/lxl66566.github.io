@@ -1,50 +1,23 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>lua | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 lua 有多难用 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 。lua 没有好用的 formatt…">
-<link rel="canonical" href="https://absx.pages.dev/coding/lua">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="lua | 绝对值_x 的博客">
-<meta property="og:description" content="lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 lua 有多难用 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 。lua 没有好用的 formatt…">
-<meta property="og:url" content="https://absx.pages.dev/coding/lua">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>lua | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 lua 有多难用 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 。lua 没有好用的 formatt…"><link rel="canonical" href="https://absx.pages.dev/coding/lua"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="lua | 绝对值_x 的博客"><meta property="og:description" content="lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 lua 有多难用 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 。lua 没有好用的 formatt…"><meta property="og:url" content="https://absx.pages.dev/coding/lua"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"lua","url":"https://absx.pages.dev/coding/lua","mainEntityOfPage":"https://absx.pages.dev/coding/lua","description":"lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 lua 有多难用 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 。lua 没有好用的 formatt…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2025-07-07T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="lua">lua</h1>
-<p>其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 <a href="../gossip/fuckxxx#lua-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">lua 有多难用</a>。但是现在是工作，不得不学了。</p>
-<h2 id="安装">安装</h2>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="lua">lua</h1><p>其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 <a href="../gossip/fuckxxx#lua-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">lua 有多难用</a>。但是现在是工作，不得不学了。</p><h2 id="安装">安装</h2><ul>
+<li>解释器：lua 或 luajit</li><li>Vscode 插件：
 <ul>
-<li>解释器：lua 或 luajit</li>
-<li>Vscode 插件：
-<ul>
-<li>lsp: <em>Lua - sumneko</em></li>
-<li>Formatter: <em>Lua - sumneko</em> 或 <em>Stylua</em>。lua 没有好用的 formatter，详见 <a href="../gossip/fuckxxx#lua-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">fuckxxx</a>。</li>
+<li>lsp: <em>Lua - sumneko</em></li><li>Formatter: <em>Lua - sumneko</em> 或 <em>Stylua</em>。lua 没有好用的 formatter，详见 <a href="../gossip/fuckxxx#lua-%E6%9C%89%E5%A4%9A%E9%9A%BE%E7%94%A8">fuckxxx</a>。</li>
 </ul>
-</li>
-<li>包管理器：luarocks，用法和 scoop 相似，不过也挺难用。</li>
-</ul>
-<p>配置：</p>
-<ul>
-<li>luarocks 默认将包安装到全局。想要使用其安装的 lua 包，你还需要额外设置一些环境变量：执行 <code>luarocks path --bin</code>，并将 <code>LUA_PATH</code>, <code>LUA_CPATH</code>, <code>PATH</code> 三个环境变量设为输出的值。</li>
-<li><em>Lua - sumneko</em>：sumneko 是神。
+</li><li>包管理器：luarocks，用法和 scoop 相似，不过也挺难用。</li>
+</ul><p>配置：</p><ul>
+<li>luarocks 默认将包安装到全局。想要使用其安装的 lua 包，你还需要额外设置一些环境变量：执行 <code>luarocks path --bin</code>，并将 <code>LUA_PATH</code>, <code>LUA_CPATH</code>, <code>PATH</code> 三个环境变量设为输出的值。</li><li><em>Lua - sumneko</em>：sumneko 是神。
 <ul>
 <li>开启所有能开的 type/hint：<div class="ap-code ap-code--ln" data-lang="json" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">json</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-json"><span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"Lua.hint.enable"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
@@ -58,31 +31,17 @@
 <span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"Lua.type.inferParamType"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">true</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"Lua.type.weakNilCheck"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span>
 <span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"Lua.type.weakUnionCheck"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">false</span><span style="color:#24292E;--shiki-dark:#E1E4E8">,</span></span></code></pre></div>
-可惜的是这里面不支持 if 语句的表达式进行 inlay hint，我觉得这还是比较重要的，因为 lua 比较算符会执行隐式转换。</li>
-<li>如果你在用其他提供 lua 库的框架（例如 OpenResty），可以<a href="https://github.com/LuaLS/lua-language-server/wiki/Addons" class="ap-external">安装插件</a>，以提供更好的 type hint。最简单的插件安装是 <code>Ctrl + P</code> 打开 <code>Lua: Open Addon Manager</code>，然后点点点即可。</li>
+可惜的是这里面不支持 if 语句的表达式进行 inlay hint，我觉得这还是比较重要的，因为 lua 比较算符会执行隐式转换。</li><li>如果你在用其他提供 lua 库的框架（例如 OpenResty），可以<a href="https://github.com/LuaLS/lua-language-server/wiki/Addons" class="ap-external">安装插件</a>，以提供更好的 type hint。最简单的插件安装是 <code>Ctrl + P</code> 打开 <code>Lua: Open Addon Manager</code>，然后点点点即可。</li>
 </ul>
-</li>
-<li><em>Stylua</em> 默认使用 tab 作为缩进。要把它改成空格，<a href="https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection" class="ap-external">需要</a>在项目下创建 <code>.stylua.toml</code>，并写入 <code>indent_type = &quot;Spaces&quot;</code>。</li>
-</ul>
-<p>其他：</p>
-<ul>
+</li><li><em>Stylua</em> 默认使用 tab 作为缩进。要把它改成空格，<a href="https://github.com/JohnnyMorganz/StyLua#configuring-runtime-syntax-selection" class="ap-external">需要</a>在项目下创建 <code>.stylua.toml</code>，并写入 <code>indent_type = &quot;Spaces&quot;</code>。</li>
+</ul><p>其他：</p><ul>
 <li><a href="https://github.com/EmmyLuaLs/emmylua-analyzer-rust/" class="ap-external">emmylua</a> 是一个 rust 写的 lua lsp，如果你不使用 openresty 等三方 addons，可以尝试。</li>
-</ul>
-<h2 id="基础">基础</h2>
-<ul>
-<li>array table 下标从 1 开始！！！</li>
-<li>不等：<code>~=</code></li>
-<li>数据定义：不加 local 默认是全局变量。</li>
-<li>数据优先级：后面覆盖前面，局部覆盖全局</li>
-<li>条件 if-then-elseif-else-end</li>
-<li>循环：<code>for i = 1,5 do ... end</code>，<code>for i, v in xxx do ... end</code>，<code>repeat ... until xxx</code>，<code>while do ... end</code></li>
-<li>goto：通过 <code>::somelabel::</code> 打标签，然后 <code>goto somelabel</code>。</li>
-<li>作用域：local 是局部变量关键字。创建的变量的生命周期和作用域仅限于它所在的那个代码块。
+</ul><h2 id="基础">基础</h2><ul>
+<li>array table 下标从 1 开始！！！</li><li>不等：<code>~=</code></li><li>数据定义：不加 local 默认是全局变量。</li><li>数据优先级：后面覆盖前面，局部覆盖全局</li><li>条件 if-then-elseif-else-end</li><li>循环：<code>for i = 1,5 do ... end</code>，<code>for i, v in xxx do ... end</code>，<code>repeat ... until xxx</code>，<code>while do ... end</code></li><li>goto：通过 <code>::somelabel::</code> 打标签，然后 <code>goto somelabel</code>。</li><li>作用域：local 是局部变量关键字。创建的变量的生命周期和作用域仅限于它所在的那个代码块。
 <ul>
 <li>在交互式 lua 环境中，每一行语句（&gt; 开头）都是一个代码块。也就是说在这些交互式环境中使用 local 定义的变量在后续是访问不了的，因为其生命周期已经结束。</li>
 </ul>
-</li>
-<li>模块化：在某个 lua 文件里最后使用 <code>return xxx</code> 即可暴露变量（可以暴露 local）。然后在其他文件里 <code>local mod = require(&quot;folder.filename&quot;)</code> 即可，不要包含 <code>.lua</code> 后缀。
+</li><li>模块化：在某个 lua 文件里最后使用 <code>return xxx</code> 即可暴露变量（可以暴露 local）。然后在其他文件里 <code>local mod = require(&quot;folder.filename&quot;)</code> 即可，不要包含 <code>.lua</code> 后缀。
 <ul>
 <li>一般常用的模块写法习惯如下（主要取决于团队）：<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">local</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> _M </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {version </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0.1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span>
@@ -92,19 +51,11 @@
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> _M</span></span></code></pre></div>
 </li>
 </ul>
-</li>
-<li>赋值：lua 默认使用引用赋值。所以就不得不提浅拷贝和深拷贝的概念，在 lua 中要怎么做呢？答：没有这些函数，要自己写。</li>
-<li>lua 里没有三元运算符，并且<a href="https://www.runoob.com/w3cnote/trinocular-operators-in-lua.html" class="ap-external">不能使用 <code>and .. or</code> 当成三元运算符</a>！！！</li>
-</ul>
-<h3 id="数据类型">数据类型</h3>
-<p>string, function, boolean, number, nil, table</p>
-<ul>
+</li><li>赋值：lua 默认使用引用赋值。所以就不得不提浅拷贝和深拷贝的概念，在 lua 中要怎么做呢？答：没有这些函数，要自己写。</li><li>lua 里没有三元运算符，并且<a href="https://www.runoob.com/w3cnote/trinocular-operators-in-lua.html" class="ap-external">不能使用 <code>and .. or</code> 当成三元运算符</a>！！！</li>
+</ul><h3 id="数据类型">数据类型</h3><p>string, function, boolean, number, nil, table</p><ul>
 <li>string：
 <ul>
-<li>lua string 包含了长度信息，获取长度是 O1 的。</li>
-<li>字符串不可变。</li>
-<li><code>[[ xxx ]]</code> 为 raw string，更高级的还有 <code>[=[ [[ xxx ]] ]=]</code></li>
-<li>split:<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<li>lua string 包含了长度信息，获取长度是 O1 的。</li><li>字符串不可变。</li><li><code>[[ xxx ]]</code> 为 raw string，更高级的还有 <code>[=[ [[ xxx ]] ]=]</code></li><li>split:<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">function</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> split</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(str, sep)</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> sep </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> nil</span><span style="color:#D73A49;--shiki-dark:#F97583"> then</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    sep </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "%s" </span><span style="color:#6A737D;--shiki-dark:#6A737D">-- 默认以空白字符分割</span></span>
@@ -116,55 +67,34 @@
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  end</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> result</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">end</span></span></code></pre></div>
-当然，如果需要更进一步控制 split 的次数，那就需要手动 find 了。</li>
-<li>slice: <code>string.sub</code></li>
+当然，如果需要更进一步控制 split 的次数，那就需要手动 find 了。</li><li>slice: <code>string.sub</code></li>
 </ul>
-</li>
-<li>table 就是 key-value pairs，里面的值可以没有 key，没 key 的默认从 number 1 开始，类似 Object + Array 结合体。后续将 kv 的 table 称为 map table，数组称为 array table。
+</li><li>table 就是 key-value pairs，里面的值可以没有 key，没 key 的默认从 number 1 开始，类似 Object + Array 结合体。后续将 kv 的 table 称为 map table，数组称为 array table。
 <ul>
-<li>正因为底层是 table，所以下标越界不会报错而是给出 nil。</li>
-<li>table 初始化可以使用 <code>local a = { b = 5, }</code>，但是如果 key 不是一个合法的变量字符串就需要用 <code>[&quot;asd,123&quot;]</code> 这种形式，中括号 + 引号。</li>
-<li><code>ipairs(x)</code> 和 <code>pairs(x)</code> 用于取 table 的迭代器。<code>ipairs</code> 专用于迭代数组 table，会忽略所有非 number 的 key。而 <code>pairs</code> 是迭代所有 kv，顺序不定，而且比较慢。</li>
-<li><code>table.unpack(some_table, start, end)</code> 用于解包一个 array table，可以给函数参数或变量赋值。start, end 是 optional，如果不指定就到碰到的第一个 nil 为止。而 <code>table.pack</code> 是反向，还会多加一个 <code>n=length</code> 的 kv。</li>
-<li><code>table.insert(x, [pos ,] value)</code> 用于插入，<code>table.remove(x [, pos])</code> 用于删除， <code>table.concat(x, &quot; &quot;)</code> 用于字符串连接（只拼值，跳过 kv 对）。
+<li>正因为底层是 table，所以下标越界不会报错而是给出 nil。</li><li>table 初始化可以使用 <code>local a = { b = 5, }</code>，但是如果 key 不是一个合法的变量字符串就需要用 <code>[&quot;asd,123&quot;]</code> 这种形式，中括号 + 引号。</li><li><code>ipairs(x)</code> 和 <code>pairs(x)</code> 用于取 table 的迭代器。<code>ipairs</code> 专用于迭代数组 table，会忽略所有非 number 的 key。而 <code>pairs</code> 是迭代所有 kv，顺序不定，而且比较慢。</li><li><code>table.unpack(some_table, start, end)</code> 用于解包一个 array table，可以给函数参数或变量赋值。start, end 是 optional，如果不指定就到碰到的第一个 nil 为止。而 <code>table.pack</code> 是反向，还会多加一个 <code>n=length</code> 的 kv。</li><li><code>table.insert(x, [pos ,] value)</code> 用于插入，<code>table.remove(x [, pos])</code> 用于删除， <code>table.concat(x, &quot; &quot;)</code> 用于字符串连接（只拼值，跳过 kv 对）。
 <ul>
 <li>lua 的 string 是 immutable 的，通过这样可以动态构造 string。</li>
 </ul>
-</li>
-<li>slice：lua 没有 table 取 slice 的方法，需要自己循环 insert。</li>
-<li>通过 <code>#</code> 获取 table/string 长度。对于含有 nil 的 table，获取的长度是<a href="https://www.runoob.com/w3cnote/lua-table-length.html" class="ap-external">未定义的</a>！
+</li><li>slice：lua 没有 table 取 slice 的方法，需要自己循环 insert。</li><li>通过 <code>#</code> 获取 table/string 长度。对于含有 nil 的 table，获取的长度是<a href="https://www.runoob.com/w3cnote/lua-table-length.html" class="ap-external">未定义的</a>！
 <ul>
 <li>所以不要在 lua 的 array table 中使用 nil 值！因为 map table 需要用 <code>tab.key = nil</code> 来删除一个 kv 对，所以经常在 array table 也这样做了，这是不行的！</li>
 </ul>
-</li>
-<li>判断是否为空：<code>t == nil or next(t) == nil</code>。注意一般来说都要先检查 nil。</li>
+</li><li>判断是否为空：<code>t == nil or next(t) == nil</code>。注意一般来说都要先检查 nil。</li>
 </ul>
-</li>
-<li>function：
+</li><li>function：
 <ul>
-<li>默认除了 table 以外都是值传递</li>
-<li>传入参数过多忽略，过少用 nil 填</li>
-<li>可以用 ... 传不定长参数，用 <code>local x = {...}</code> 拿到一个 array table。</li>
-<li>函数必须放在调用的代码之前</li>
+<li>默认除了 table 以外都是值传递</li><li>传入参数过多忽略，过少用 nil 填</li><li>可以用 ... 传不定长参数，用 <code>local x = {...}</code> 拿到一个 array table。</li><li>函数必须放在调用的代码之前</li>
 </ul>
-</li>
-<li>显式类型转换只有 <code>tostring(x)</code> 和 <code>tonumber(x)</code>。如果要转为 bool 需要用 <code>not not x</code>。
+</li><li>显式类型转换只有 <code>tostring(x)</code> 和 <code>tonumber(x)</code>。如果要转为 bool 需要用 <code>not not x</code>。
 <ul>
-<li>除了 nil（和 false 本身）转为 bool 会被转为 false，其他值都会转为 true。</li>
-<li>table 调用 <code>tostring(x)</code> 的结果是它的地址</li>
+<li>除了 nil（和 false 本身）转为 bool 会被转为 false，其他值都会转为 true。</li><li>table 调用 <code>tostring(x)</code> 的结果是它的地址</li>
 </ul>
-</li>
-<li>隐式转换：
+</li><li>隐式转换：
 <ol>
-<li>算数运算中，字符串，bool 和 nil 会转为数字</li>
-<li>字符串连接符 <code>..</code>，数字和 nil 会转为字符串</li>
+<li>算数运算中，字符串，bool 和 nil 会转为数字</li><li>字符串连接符 <code>..</code>，数字和 nil 会转为字符串</li>
 </ol>
-</li>
-<li>迭代器：请使用 <a href="https://github.com/luafun/luafun" class="ap-external">luafun</a> 三方库。luafun 提供了函数式和对象式的迭代器类型，方便使用。</li>
-</ul>
-<h3 id="fs-与文件操作">fs 与文件操作</h3>
-<p>文件 io：</p>
-<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>迭代器：请使用 <a href="https://github.com/luafun/luafun" class="ap-external">luafun</a> 三方库。luafun 提供了函数式和对象式的迭代器类型，方便使用。</li>
+</ul><h3 id="fs-与文件操作">fs 与文件操作</h3><p>文件 io：</p><div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">infile </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> io.open</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"input.txt"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"r"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> line </span><span style="color:#D73A49;--shiki-dark:#F97583">in</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> infile</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span><span style="color:#005CC5;--shiki-dark:#79B8FF">lines</span><span style="color:#24292E;--shiki-dark:#E1E4E8">() </span><span style="color:#D73A49;--shiki-dark:#F97583">do</span></span>
 <span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">   print</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(line)</span></span>
@@ -174,17 +104,12 @@
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">if</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> outfile </span><span style="color:#D73A49;--shiki-dark:#F97583">then</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">  outfile</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span><span style="color:#005CC5;--shiki-dark:#79B8FF">write</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span><span style="color:#005CC5;--shiki-dark:#79B8FF">\n</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">end</span></span>
-<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">outfile</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span><span style="color:#005CC5;--shiki-dark:#79B8FF">close</span><span style="color:#24292E;--shiki-dark:#E1E4E8">()</span></span></code></pre></div>
-<p>fs：使用 luafilesystem 库。</p>
-<h2 id="高级">高级</h2>
-<ul>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">outfile</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span><span style="color:#005CC5;--shiki-dark:#79B8FF">close</span><span style="color:#24292E;--shiki-dark:#E1E4E8">()</span></span></code></pre></div><p>fs：使用 luafilesystem 库。</p><h2 id="高级">高级</h2><ul>
 <li><code>setmetatable(var1, {__add = myfunc})</code> 可以重写内置的方法
 <ul>
-<li>在所有方法里，<code>__index</code> 又是最常用的一个，这就相当于用 <code>var1.xxx</code> 时就会拿到 key 为 xxx 的 value。</li>
-<li>让 table 变为 readonly 可以加一个 <code>__newindex = function() error(&quot;no modification allowed&quot;) end</code>。</li>
+<li>在所有方法里，<code>__index</code> 又是最常用的一个，这就相当于用 <code>var1.xxx</code> 时就会拿到 key 为 xxx 的 value。</li><li>让 table 变为 readonly 可以加一个 <code>__newindex = function() error(&quot;no modification allowed&quot;) end</code>。</li>
 </ul>
-</li>
-<li>面向对象：高级的 table<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>面向对象：高级的 table<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:2ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">local</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> MyClass </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> {}</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">local</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> mt </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> { __index </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> MyClass }</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">function</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> MyClass</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">deposit</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(self, v)</span></span>
@@ -196,57 +121,28 @@
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">function</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> MyClass</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">new</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(self, balance)</span></span>
 <span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  balance </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> balance </span><span style="color:#D73A49;--shiki-dark:#F97583">or</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0</span></span>
 <span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">  return</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> setmetatable</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({ balance </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> balance }, mt)</span></span>
-<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">end</span></span></code></pre></div>
-<ul>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">end</span></span></code></pre></div><ul>
 <li>对于实例，使用 <code>.</code> 则只是获取 static 的函数本身，而可以用 <code>:</code> 代表调用其成员函数，这是一个语法糖。
 <ul>
 <li>但是内置类型的函数，例如 <code>table.remove</code> 不能直接用 <code>t:remove</code> 这样调用！究其原因，table 不是类，而是一个内置库。如果需要用 <code>:</code>，要设置元表：<code>setmetatable(t, { __index = table })</code>。</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>反射：用 debug 库，不过会影响性能。</li>
-<li>协程：lua 的协程依赖于 <code>coroutine.create</code>, <code>coroutine.resume</code>, <code>coroutine.yield</code>，yield 就相当于是 await 点交出控制权一样。
+</li><li>反射：用 debug 库，不过会影响性能。</li><li>协程：lua 的协程依赖于 <code>coroutine.create</code>, <code>coroutine.resume</code>, <code>coroutine.yield</code>，yield 就相当于是 await 点交出控制权一样。
 <ul>
-<li>协程是单线程的，任何时候不会有两个协程同时执行。</li>
-<li>lua 5.2 支持 yield C 函数，5.4 引入协程取消机制。</li>
-<li>没有自带的一个 async 运行时，需要自己手写调度器。如果在用 openresty 等，也可以使用这些框架里的成熟调度器，<code>ngx.thread.spawn</code> 和 <code>ngx.thread.wait</code> 好用多了。</li>
+<li>协程是单线程的，任何时候不会有两个协程同时执行。</li><li>lua 5.2 支持 yield C 函数，5.4 引入协程取消机制。</li><li>没有自带的一个 async 运行时，需要自己手写调度器。如果在用 openresty 等，也可以使用这些框架里的成熟调度器，<code>ngx.thread.spawn</code> 和 <code>ngx.thread.wait</code> 好用多了。</li>
 </ul>
-</li>
-<li>没有 RAII，所以各种 cosocket 都要手动关，否则就泄漏。</li>
-<li>错误处理：正常来说使用 <code>pcall(func, ...args)</code> 进行包装，相当于一个 try-catch。或者直接使用 safe 库，不要抛出错误而是正常返回错误，例如 <code>cjson.safe</code>。</li>
-<li>很多实践中会在 lua 文件最上方声明很多 local 函数，这个做法的目的是将 _G 表中的函数变为局部变量，以达到更快的调用，也可以防止不小心修改了全局变量。</li>
-<li>lua 支持尾递归，只要是 <code>return func(...);</code> 的形式。</li>
-</ul>
-<h3 id="gc">gc</h3>
-<p>lua 5.4 之前使用的是增量 gc，使用较为细化的标记-清除过程。5.4 添加了分代特性，减少了老年代的扫描频次。</p>
-<p>释放数据的标准做法是将其设为 nil，以便在下一次 gc 将其清理。</p>
-<p>lua 可以通过下面的方式设置弱引用表，弱引用的部分不持有所有权：</p>
-<div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>没有 RAII，所以各种 cosocket 都要手动关，否则就泄漏。</li><li>错误处理：正常来说使用 <code>pcall(func, ...args)</code> 进行包装，相当于一个 try-catch。或者直接使用 safe 库，不要抛出错误而是正常返回错误，例如 <code>cjson.safe</code>。</li><li>很多实践中会在 lua 文件最上方声明很多 local 函数，这个做法的目的是将 _G 表中的函数变为局部变量，以达到更快的调用，也可以防止不小心修改了全局变量。</li><li>lua 支持尾递归，只要是 <code>return func(...);</code> 的形式。</li>
+</ul><h3 id="gc">gc</h3><p>lua 5.4 之前使用的是增量 gc，使用较为细化的标记-清除过程。5.4 添加了分代特性，减少了老年代的扫描频次。</p><p>释放数据的标准做法是将其设为 nil，以便在下一次 gc 将其清理。</p><p>lua 可以通过下面的方式设置弱引用表，弱引用的部分不持有所有权：</p><div class="ap-code ap-code--ln" data-lang="lua" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">lua</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-lua"><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">-- __mode = "k", "v" 或 "kv"，代表哪部份是弱引用</span></span>
-<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">local</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> weakTable </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> setmetatable</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({}, {__mode </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "k"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre></div>
-<p>根据这些 gc 机制，可以针对性注意，提升性能：</p>
-<ul>
-<li>避免在循环或频繁调用的函数中创建闭包或表</li>
-<li>及时释放</li>
-</ul>
-<h3 id="ffi">ffi</h3>
-<p>lua 的 ffi 开销比想象的要小。lua 不同类型的开销如下：</p>
-<ul>
-<li>number：几乎为 0</li>
-<li>string：传入几乎为 0，接收需要一次拷贝</li>
-<li>table：不能直接传，需要手动构建成 C struct。该构建阶段有开销。</li>
-</ul>
-<h2 id="typing">typing</h2>
-<p>lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 <a href="https://github.com/andremm/typedlua" class="ap-external">typedlua</a> 和一些 fork 到新的 <a href="https://github.com/teal-language/tl" class="ap-external">teal</a>，再到重新实现的 <a href="https://luau.org/" class="ap-external">luau</a> 都有。这些 typed 版本都受 ts 启发，语法比较相似。</p>
-<h2 id="external">external</h2>
-<ol>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">local</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> weakTable </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> setmetatable</span><span style="color:#24292E;--shiki-dark:#E1E4E8">({}, {__mode </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "k"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">})</span></span></code></pre></div><p>根据这些 gc 机制，可以针对性注意，提升性能：</p><ul>
+<li>避免在循环或频繁调用的函数中创建闭包或表</li><li>及时释放</li>
+</ul><h3 id="ffi">ffi</h3><p>lua 的 ffi 开销比想象的要小。lua 不同类型的开销如下：</p><ul>
+<li>number：几乎为 0</li><li>string：传入几乎为 0，接收需要一次拷贝</li><li>table：不能直接传，需要手动构建成 C struct。该构建阶段有开销。</li>
+</ul><h2 id="typing">typing</h2><p>lua 的一大缺点是没有 type system。类似 js 的 typed 加强版 ts，lua 也有 typed 加强版，不过比较杂，从早期已经久不维护的 <a href="https://github.com/andremm/typedlua" class="ap-external">typedlua</a> 和一些 fork 到新的 <a href="https://github.com/teal-language/tl" class="ap-external">teal</a>，再到重新实现的 <a href="https://luau.org/" class="ap-external">luau</a> 都有。这些 typed 版本都受 ts 启发，语法比较相似。</p><h2 id="external">external</h2><ol>
 <li><a href="https://zhuanlan.zhihu.com/p/494191824" class="ap-external">理解 Lua 的闭包机制</a></li>
-</ol>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/lua","locale":"root","title":"lua","headings":[{"level":1,"text":"lua","slug":"lua"},{"level":2,"text":"安装","slug":"安装"},{"level":2,"text":"基础","slug":"基础"},{"level":3,"text":"数据类型","slug":"数据类型"},{"level":3,"text":"fs 与文件操作","slug":"fs-与文件操作"},{"level":2,"text":"高级","slug":"高级"},{"level":3,"text":"gc","slug":"gc"},{"level":3,"text":"ffi","slug":"ffi"},{"level":2,"text":"typing","slug":"typing"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2025-07-07","category":["编程"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2025-07-07T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":8,"excerpt":"lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 lua 有多难用 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 。lua 没有好用的 formatt…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":2,"links":[{"route":"/coding/","refs":1},{"route":"/coding/Cpp","refs":1}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/coding/Cpp","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/Cpp","title":"C++","refs":1,"links":[{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</ol><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/lua","locale":"root","title":"lua","headings":[{"level":1,"text":"lua","slug":"lua"},{"level":2,"text":"安装","slug":"安装"},{"level":2,"text":"基础","slug":"基础"},{"level":3,"text":"数据类型","slug":"数据类型"},{"level":3,"text":"fs 与文件操作","slug":"fs-与文件操作"},{"level":2,"text":"高级","slug":"高级"},{"level":3,"text":"gc","slug":"gc"},{"level":3,"text":"ffi","slug":"ffi"},{"level":2,"text":"typing","slug":"typing"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2025-07-07","category":["编程"],"tag":["编程语言"],"icon":"solid/code"},"createdAt":"2025-07-07T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":8,"excerpt":"lua 其实我一直都不喜欢 lua，感觉很多设计都是一坨屎，参见 lua 有多难用 。但是现在是工作，不得不学了。 安装 解释器：lua 或 luajit Vscode 插件： lsp: Lua - sumneko Formatter: Lua - sumneko 或 Stylua 。lua 没有好用的 formatt…"},"related":[{"route":"/gossip/fuckxxx","title":"暴论：xxx 有多难用","refs":2,"links":[{"route":"/coding/","refs":1},{"route":"/coding/Cpp","refs":1}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/coding/Cpp","refs":1},{"route":"/gossip/fuckxxx","refs":1}]},{"route":"/coding/Cpp","title":"C++","refs":1,"links":[{"route":"/coding/","refs":1},{"route":"/gossip/fuckxxx","refs":1}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

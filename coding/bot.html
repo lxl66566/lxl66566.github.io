@@ -1,65 +1,28 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>bot | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…">
-<link rel="canonical" href="https://absx.pages.dev/coding/bot">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="bot | 绝对值_x 的博客">
-<meta property="og:description" content="bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…">
-<meta property="og:url" content="https://absx.pages.dev/coding/bot">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"bot","url":"https://absx.pages.dev/coding/bot","mainEntityOfPage":"https://absx.pages.dev/coding/bot","description":"bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-07-24T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>bot | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…"><link rel="canonical" href="https://absx.pages.dev/coding/bot"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="bot | 绝对值_x 的博客"><meta property="og:description" content="bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…"><meta property="og:url" content="https://absx.pages.dev/coding/bot"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"bot","url":"https://absx.pages.dev/coding/bot","mainEntityOfPage":"https://absx.pages.dev/coding/bot","description":"bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2023-07-24T00:00:00.000Z","dateModified":"2026-11-09T03:35:41+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="bot">bot</h1>
-<p>我曾使用 <a href="https://nonebot.dev/" class="ap-external">nonebot2</a> + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 <a href="https://github.com/yaowan233" class="ap-external">yaowan233</a> 学长的指导。</p>
-<p>而现在我选择 <a href="https://koishi.chat/zh-CN/" class="ap-external">koishi</a> 框架。该框架基于 <a href="nodejs">node.js</a>，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比曾经的 nonebot2 强数倍。同时也有<a href="https://forum.koishi.xyz/" class="ap-external">论坛</a>以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）</p>
-<p>comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；都有数据库的抽象层，比较易用；2023 开源之夏 nonebot2 也新增了图形界面。我感觉还是看写 python 还是写 ts 舒服来选平台比较合适。</p>
-<p><s>我建的 bot 有两个实例：一个是之前一直在用的 QQ bot <code>atri</code>（2433269451），另一个是后来使用 koishi 的 Telegram bot <a href="https://t.me/atri_absx_bot" class="ap-external"><code>atri bot</code></a>。</s> 这两个 bot 现在都不再运行了；不过<a href="#telegram-bot-on-cloudflare-workers">后文</a>的 serverless bot 还可以使用。</p>
-<details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>查看 atri(QQ) 的信息</summary>
-<div data-ap-island="ZoomedImg" data-props="{&quot;alt&quot;:&quot;atri&quot;,&quot;src&quot;:&quot;/images/farraginous/atri/atri.jpg&quot;,&quot;scale&quot;:&quot;40%&quot;}"></div>
-<p>她的功能：</p>
-<ul>
-<li>背单词（英日双语）</li>
-<li>随机数</li>
-<li>带饭记账</li>
-<li>偷窥我</li>
-</ul>
-<p>请加为好友（联系绝对值_x 同意好友）后发送 <code>help</code> 获取详细指令。你也可以在<a href="https://github.com/lxl66566/primary-atri-bot-plugins" class="ap-external">这里</a>得到她的实现上述功能的 python 源码。关于环境：</p>
-<ol>
-<li><a href="python#%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83">使用 conda</a> 创建出所需环境（此处环境名为 <code>atri</code>）：<code>conda create -n atri python=3.9</code>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="bot">bot</h1><p>我曾使用 <a href="https://nonebot.dev/" class="ap-external">nonebot2</a> + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 <a href="https://github.com/yaowan233" class="ap-external">yaowan233</a> 学长的指导。</p><p>而现在我选择 <a href="https://koishi.chat/zh-CN/" class="ap-external">koishi</a> 框架。该框架基于 <a href="nodejs">node.js</a>，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管理。文档虽说不算优秀，但至少比曾经的 nonebot2 强数倍。同时也有<a href="https://forum.koishi.xyz/" class="ap-external">论坛</a>以供交流。但是代价就是 node.js 的高运行时内存占用了。（常态 600M）</p><p>comp: 这两个平台都通过 Adapter 适配不同的平台，比较泛用；都有数据库的抽象层，比较易用；2023 开源之夏 nonebot2 也新增了图形界面。我感觉还是看写 python 还是写 ts 舒服来选平台比较合适。</p><p><s>我建的 bot 有两个实例：一个是之前一直在用的 QQ bot <code>atri</code>（2433269451），另一个是后来使用 koishi 的 Telegram bot <a href="https://t.me/atri_absx_bot" class="ap-external"><code>atri bot</code></a>。</s> 这两个 bot 现在都不再运行了；不过<a href="#telegram-bot-on-cloudflare-workers">后文</a>的 serverless bot 还可以使用。</p><details class="ap-container ap-container--details"><summary class="ap-container__title"><svg class="ap-container__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>查看 atri(QQ) 的信息</summary><div data-ap-island="ZoomedImg" data-props="{&quot;alt&quot;:&quot;atri&quot;,&quot;src&quot;:&quot;/images/farraginous/atri/atri.jpg&quot;,&quot;scale&quot;:&quot;40%&quot;}"></div><p>她的功能：</p><ul>
+<li>背单词（英日双语）</li><li>随机数</li><li>带饭记账</li><li>偷窥我</li>
+</ul><p>请加为好友（联系绝对值_x 同意好友）后发送 <code>help</code> 获取详细指令。你也可以在<a href="https://github.com/lxl66566/primary-atri-bot-plugins" class="ap-external">这里</a>得到她的实现上述功能的 python 源码。关于环境：</p><ol>
+<li><a href="python#miniconda">使用 conda</a> 创建出所需环境（此处环境名为 <code>atri</code>）：<code>conda create -n atri python=3.9</code>
 <blockquote>
 <p>nonebot2 需要在 python&gt;=3.8 环境下运行</p>
 </blockquote>
-</li>
-<li>使用 pip 安装依赖：<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+</li><li>使用 pip 安装依赖：<div class="ap-code ap-code--ln" data-lang="sh" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">sh</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">pip</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> nb-cli</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">pip</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> install</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> nonebot-adapter-onebot</span></span></code></pre></div>
-</li>
-<li>参考<a href="../essay/2022#_20220506">随笔中的启动脚本</a></li>
+</li><li>参考<a href="../essay/2022#_20220506">随笔中的启动脚本</a></li>
 </ol>
-</details>
-<h2 id="koishi">koishi</h2>
-<h3 id="install">install</h3>
-<p>这里推荐<a href="https://koishi.chat/zh-CN/manual/starter/boilerplate.html" class="ap-external">使用 pnpm/npm 安装</a>，而不是官方推荐的下载安装包。使用 pnpm/npm 安装对 bot 功能没有影响，而且方便开发。</p>
-<div class="ap-tabs ap-tabs--code">
+</details><h2 id="koishi">koishi</h2><h3 id="install">install</h3><p>这里推荐<a href="https://koishi.chat/zh-CN/manual/starter/boilerplate.html" class="ap-external">使用 pnpm/npm 安装</a>，而不是官方推荐的下载安装包。使用 pnpm/npm 安装对 bot 功能没有影响，而且方便开发。</p><div class="ap-tabs ap-tabs--code">
 <input class="ap-tabs__radio" type="radio" id="ap-tab-1" name="ap-tabs-code-tabs-1-1" checked>
 <label class="ap-tabs__label" for="ap-tab-1">pnpm</label>
 <div class="ap-tab" data-title="pnpm">
@@ -76,42 +39,23 @@
 <pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-sh"><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> i</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> -g</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> create-koishi@latest</span></span>
 <span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">npm</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> init</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> koishi</span></span></code></pre></div>
 </div>
-</div>
-<blockquote>
+</div><blockquote>
 <p><em>关于 pnpm 安装后缀，详见 <a href="nodejs#%E7%A5%9E%E7%A7%98%E6%8A%A5%E9%94%99">nodejs</a></em></p>
-</blockquote>
-<h3 id="使用">使用</h3>
-<ul>
+</blockquote><h3 id="使用">使用</h3><ul>
 <li>
 <p>telegram：本机没有公网 ip，因此选择 <em>polling</em> 工作模式。代理用 http 好像不能用（这也是我第一次退坑 koishi 的理由），之后尝试用 socks 端口就可以了。</p>
-</li>
-<li>
-<p>QQ：<s>参考<a href="https://forum.koishi.xyz/t/topic/2502" class="ap-external">论坛</a>。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:</s></p>
-<blockquote>
+</li><li>
+<p>QQ：<s>参考<a href="https://forum.koishi.xyz/t/topic/2502" class="ap-external">论坛</a>。回复挺破碎的，需要多翻一翻。我能够成功使用，不过会报 warning:</s></p><blockquote>
 <p>由用户 '*' 发送的 session '*' 缺失 username。插件处理可能出现问题。若要针对此问题进行反馈，请前往 <a href="https://k.ilharp.cc/2510" class="ap-external">https://k.ilharp.cc/2510</a> 。错误码：2130</p>
-</blockquote>
-<p><s>不影响使用，开发者也<a href="https://forum.koishi.xyz/t/topic/2510/154" class="ap-external">说不用在意</a>，那就不管了。</s>
+</blockquote><p><s>不影响使用，开发者也<a href="https://forum.koishi.xyz/t/topic/2510/154" class="ap-external">说不用在意</a>，那就不管了。</s>
 chronocat 开发的 QQNT 适配器现已被下架。</p>
 </li>
-</ul>
-<h3 id="开发">开发</h3>
-<p>我写了一个小玩具（<a href="https://github.com/lxl66566/koishi-plugin-peek" class="ap-external">koishi-plugin-peek</a>），大致涵盖了基本的开发指令。推荐在 github 上搜索其他源码广泛学习。</p>
-<ul>
+</ul><h3 id="开发">开发</h3><p>我写了一个小玩具（<a href="https://github.com/lxl66566/koishi-plugin-peek" class="ap-external">koishi-plugin-peek</a>），大致涵盖了基本的开发指令。推荐在 github 上搜索其他源码广泛学习。</p><ul>
 <li>关于发布插件：<strong><code>pub</code> 之前请一定记得 <code>build</code>！！切记！！</strong></li>
-</ul>
-<h2 id="telegram-bot-on-cloudflare-workers">Telegram Bot on Cloudflare Workers</h2>
-<p>之后我的重心转到了 Telegram 上，而 Telegram 对 bot 的大力支持程度是国内平台根本比不了的。</p>
-<p>2024 年底 Asuka Minato 写了一个 serverless 的 <a href="https://github.com/asukaminato0721/telegram-summary-bot" class="ap-external">telegram-summary-bot</a>，这个 bot 使用 Cloudflare Workers 运行，Cloudflare d1 数据库做持久化存储。我看到了 Telegram bot 的新曙光，这样我就不需要使用专门的服务器来跑 bot 了，因为我的 VPS 稳定性和数据安全性都挺差的。</p>
-<p>于是抄他的源码，结合我第一次使用 Cursor，糊了一个 <a href="https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers" class="ap-external">Telegram-RSS-Bot-on-Cloudflare-Workers</a>，满足了我一直以来的愿望，也就是在聊天软件里接收 RSS 通知。（此前我一直使用 <a href="https://github.com/iovxw/rssbot" class="ap-external">iovxw/rssbot</a>，但它并不好用。我也经历了几次数据丢失，非常难受）</p>
-<p>后来就一发不可收拾，又写了：</p>
-<ul>
-<li><a href="https://github.com/lxl66566/telegram-subscribe-bot" class="ap-external">telegram-subscribe-bot</a>：订阅群组消息的 bot。实际上<a href="https://t.me/withabsolutex/2217" class="ap-external">并不好用</a>。</li>
-<li><a href="https://github.com/lxl66566/telegram-shasei-bot" class="ap-external">telegram-shasei-bot</a>：射精记录 bot。从此我再也不需要将数据手动记录到博客里了（）。</li>
-</ul>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/bot","locale":"root","title":"bot","headings":[{"level":1,"text":"bot","slug":"bot"},{"level":2,"text":"koishi","slug":"koishi"},{"level":3,"text":"install","slug":"install"},{"level":3,"text":"使用","slug":"使用"},{"level":3,"text":"开发","slug":"开发"},{"level":2,"text":"Telegram Bot on Cloudflare Workers","slug":"telegram-bot-on-cloudflare-workers"}],"frontmatter":{"date":"2023-07-24","category":["编程","教程"],"tag":["成果"],"icon":"brands/bots"},"createdAt":"2023-07-24T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":4,"excerpt":"bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…"},"related":[{"route":"/coding/nodejs","title":"JS 生态","refs":3,"links":[{"route":"/blog/log","refs":1},{"route":"/coding/","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/python","refs":4},{"route":"/coding/","refs":2},{"route":"/essay/2022","refs":2},{"route":"/coding/nodejs","refs":1}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/nodejs","refs":1},{"route":"/coding/python","refs":1}]},{"route":"/coding/python","title":"Python","refs":1,"links":[{"route":"/blog/log","refs":4},{"route":"/coding/","refs":1}]},{"route":"/essay/2022","title":"2022","refs":1,"links":[{"route":"/blog/log","refs":2}]}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</ul><h2 id="telegram-bot-on-cloudflare-workers">Telegram Bot on Cloudflare Workers</h2><p>之后我的重心转到了 Telegram 上，而 Telegram 对 bot 的大力支持程度是国内平台根本比不了的。</p><p>2024 年底 Asuka Minato 写了一个 serverless 的 <a href="https://github.com/asukaminato0721/telegram-summary-bot" class="ap-external">telegram-summary-bot</a>，这个 bot 使用 Cloudflare Workers 运行，Cloudflare d1 数据库做持久化存储。我看到了 Telegram bot 的新曙光，这样我就不需要使用专门的服务器来跑 bot 了，因为我的 VPS 稳定性和数据安全性都挺差的。</p><p>于是抄他的源码，结合我第一次使用 Cursor，糊了一个 <a href="https://github.com/lxl66566/Telegram-RSS-Bot-on-Cloudflare-Workers" class="ap-external">Telegram-RSS-Bot-on-Cloudflare-Workers</a>，满足了我一直以来的愿望，也就是在聊天软件里接收 RSS 通知。（此前我一直使用 <a href="https://github.com/iovxw/rssbot" class="ap-external">iovxw/rssbot</a>，但它并不好用。我也经历了几次数据丢失，非常难受）</p><p>后来就一发不可收拾，又写了：</p><ul>
+<li><a href="https://github.com/lxl66566/telegram-subscribe-bot" class="ap-external">telegram-subscribe-bot</a>：订阅群组消息的 bot。实际上<a href="https://t.me/withabsolutex/2217" class="ap-external">并不好用</a>。</li><li><a href="https://github.com/lxl66566/telegram-shasei-bot" class="ap-external">telegram-shasei-bot</a>：射精记录 bot。从此我再也不需要将数据手动记录到博客里了（）。</li>
+</ul><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/bot","locale":"root","title":"bot","headings":[{"level":1,"text":"bot","slug":"bot"},{"level":2,"text":"koishi","slug":"koishi"},{"level":3,"text":"install","slug":"install"},{"level":3,"text":"使用","slug":"使用"},{"level":3,"text":"开发","slug":"开发"},{"level":2,"text":"Telegram Bot on Cloudflare Workers","slug":"telegram-bot-on-cloudflare-workers"}],"frontmatter":{"date":"2023-07-24","category":["编程","教程"],"tag":["成果"],"icon":"brands/bots"},"createdAt":"2023-07-24T00:00:00.000Z","updatedAt":"2026-11-09T03:35:41+08:00","readingTime":4,"excerpt":"bot 我曾使用 nonebot2 + cqhttp 的方式搭建 bot。这种方案使用 python 语言，并且需要自己写比较底层的代码。在此感谢 yaowan233 学长的指导。 而现在我选择 koishi 框架。该框架基于 node.js ，具有图形化的操作界面和高度预设，可以接入多个平台，也有成熟的 npm 包管…"},"related":[{"route":"/coding/nodejs","title":"JS 生态","refs":3,"links":[{"route":"/blog/log","refs":1},{"route":"/coding/","refs":1}]},{"route":"/blog/log","title":"博客日志","refs":1,"links":[{"route":"/coding/python","refs":4},{"route":"/coding/","refs":2},{"route":"/essay/2022","refs":2},{"route":"/coding/nodejs","refs":1}]},{"route":"/coding/","title":"编程","refs":1,"links":[{"route":"/blog/log","refs":2},{"route":"/coding/nodejs","refs":1},{"route":"/coding/python","refs":1}]},{"route":"/coding/python","title":"Python","refs":1,"links":[{"route":"/blog/log","refs":4},{"route":"/coding/","refs":1}]},{"route":"/essay/2022","title":"2022","refs":1,"links":[{"route":"/blog/log","refs":2}]}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>

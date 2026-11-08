@@ -1,89 +1,30 @@
 <!doctype html>
 <html lang="zh-CN" data-theme="light">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="modulepreload" href="../assets/entry-DOpyHYQg.js">
-<link rel="modulepreload" href="../assets/chrome-379cddde.js">
-<title>React | 绝对值_x 的博客</title>
-<link rel="icon" type="image/x-icon" href="../favicon.ico">
-<meta name="description" content="React 初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。 JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 &lt;&gt;&lt;/&gt; 空标签包围。…">
-<link rel="canonical" href="https://absx.pages.dev/coding/react">
-<link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="React | 绝对值_x 的博客">
-<meta property="og:description" content="React 初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。 JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 &lt;&gt;&lt;/&gt; 空标签包围。…">
-<meta property="og:url" content="https://absx.pages.dev/coding/react">
-<meta property="og:site_name" content="绝对值_x 的博客">
-<meta property="og:image" content="https://absx.pages.dev/logo-og.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="modulepreload" href="../assets/entry-CZNcTToC.js"><link rel="modulepreload" href="../assets/chrome-379cddde.js"><title>React | 绝对值_x 的博客</title><link rel="icon" type="image/x-icon" href="../favicon.ico"><meta name="description" content="React 初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。 JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 &lt;&gt;&lt;/&gt; 空标签包围。…"><link rel="canonical" href="https://absx.pages.dev/coding/react"><link rel="alternate" type="application/rss+xml" title="绝对值_x 的博客" href="https://absx.pages.dev/rss.xml"><meta property="og:type" content="article"><meta property="og:title" content="React | 绝对值_x 的博客"><meta property="og:description" content="React 初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。 JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 &lt;&gt;&lt;/&gt; 空标签包围。…"><meta property="og:url" content="https://absx.pages.dev/coding/react"><meta property="og:site_name" content="绝对值_x 的博客"><meta property="og:image" content="https://absx.pages.dev/logo-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"React","url":"https://absx.pages.dev/coding/react","mainEntityOfPage":"https://absx.pages.dev/coding/react","description":"React 初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。 JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 \u003c>\u003c/> 空标签包围。…","image":"https://absx.pages.dev/logo-og.jpg","datePublished":"2025-01-04T00:00:00.000Z","dateModified":"2026-10-08T03:58:31+08:00","inLanguage":"zh-CN","publisher":{"@type":"Organization","name":"绝对值_x 的博客","url":"https://absx.pages.dev"},"author":{"@type":"Person","name":"lxl66566","url":"https://github.com/lxl66566"}}</script>
 <script>!function(){try{var t=localStorage.getItem("ap-theme");if(t!=="dark"&&t!=="light"){t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}document.documentElement.dataset.theme=t;var w=parseInt(localStorage.getItem("ap-sidebar-w"),10);if(w){w=Math.min(Math.max(w,208),Math.min(576,innerWidth*.5));document.documentElement.style.setProperty("--ap-sidebar-w",w+"px")}}catch(e){}}()</script>
 <style>@layer properties, theme, base, preflights, shortcuts, ap-base, ap-prose, default, ap-chrome;</style>
-<link rel="stylesheet" href="../assets/entry-C-Ab0fv7.css">
+<link rel="stylesheet" href="../assets/entry-DHGnrpWB.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKRDBH1ZP1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config',"G-MKRDBH1ZP1")</script>
 <script type="speculationrules">{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*\\?*"}},{"not":{"selector_matches":"a[href^=\"#\"]"}}]},"eagerness":"moderate"}]}</script>
-</head>
-<body>
-<div id="ap-nav" class="ap-nav"></div>
-<aside id="ap-sidebar" class="ap-sidebar"></aside>
-<main id="ap-content" class="ap-main"><h1 id="react">React</h1>
-<p>初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。</p>
-<h2 id="jsx-基础">JSX 基础</h2>
-<p>JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。</p>
+</head><body>
+<div id="ap-nav" class="ap-nav"></div><aside id="ap-sidebar" class="ap-sidebar"></aside><main id="ap-content" class="ap-main"><h1 id="react">React</h1><p>初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。</p><h2 id="jsx-基础">JSX 基础</h2><p>JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。</p><ul>
+<li>多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 <code>&lt;&gt;&lt;/&gt;</code> 空标签包围。</li><li>JSX 内插值（插表达式）使用单大括号。</li><li>JSX 里的 class 要改为 className。</li><li>JSX 里可以写内联 style，接受一个类似 CSS 的对象。</li><li>JSX 里可以直接用 <code>&lt;div {...object} /&gt;</code> 进行 props 传入的解构，非常方便。</li>
+</ul><p>JSX 能够非常灵活地组织组件，比 Vue 灵活太多了。</p><h2 id="组件">组件</h2><p>一般来说只需要使用基于函数的 API。现在所有现代前端都在使用基于函数的 API，例如 Kotlin Compose UI，因为组合优于继承，灵活性非常强。</p><ul>
+<li>React 每一个返回 JSX 对象的函数都是一个组件。</li><li>函数的第一个入参是 props。</li><li>如果要传递 JSX 给组件，默认传到 <code>props.children</code>。</li><li>组件间传值：
 <ul>
-<li>多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 <code>&lt;&gt;&lt;/&gt;</code> 空标签包围。</li>
-<li>JSX 内插值（插表达式）使用单大括号。</li>
-<li>JSX 里的 class 要改为 className。</li>
-<li>JSX 里可以写内联 style，接受一个类似 CSS 的对象。</li>
-<li>JSX 里可以直接用 <code>&lt;div {...object} /&gt;</code> 进行 props 传入的解构，非常方便。</li>
-</ul>
-<p>JSX 能够非常灵活地组织组件，比 Vue 灵活太多了。</p>
-<h2 id="组件">组件</h2>
-<p>一般来说只需要使用基于函数的 API。现在所有现代前端都在使用基于函数的 API，例如 Kotlin Compose UI，因为组合优于继承，灵活性非常强。</p>
-<ul>
-<li>React 每一个返回 JSX 对象的函数都是一个组件。</li>
-<li>函数的第一个入参是 props。</li>
-<li>如果要传递 JSX 给组件，默认传到 <code>props.children</code>。</li>
-<li>组件间传值：
-<ul>
-<li>父向子，props，没问题。</li>
-<li>子向父，回调函数。</li>
+<li>父向子，props，没问题。</li><li>子向父，回调函数。</li>
 </ul>
 </li>
-</ul>
-<h2 id="react-hooks"><a href="https://zh-hans.react.dev/reference/react/hooks" class="ap-external">React Hooks</a></h2>
-<p>Hooks 是响应式的基础。React 内置了许多 Hooks，但是平常最常用的也就 useState，useRef，useEffect。</p>
-<h3 id="usestate">useState</h3>
-<p>React 里最常用的响应式就是 useState 了。其返回两个值，<code>content</code> 是内容的引用 (getter)，<code>setContent</code> 是一个函数，用于改变内容 (setter)。这样可以比较明确地控制如何渲染 DOM 树。</p>
-<div class="ap-code ap-code--ln" data-lang="js" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">js</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
-<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-js"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">const</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="color:#005CC5;--shiki-dark:#79B8FF">content</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">setContent</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> useState</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"default content"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span></code></pre></div>
-<p>和 SolidJS 不同，setContent 只有在实际值发生改变（<code>Object.is</code> 比较）时才会重新渲染。这或许在性能方面有优势，但对框架来说算是增加了（需要关注的）隐藏复杂度。</p>
-<h3 id="usecontext">useContext</h3>
-<p>用于跨任意层组件向子组件方向传数据。随便看一个 <a href="https://zh-hans.react.dev/reference/react/useContext#usage" class="ap-external">usage</a> 就会了。</p>
-<p>React 19 后，可以用简化写法 <code>&lt;Context&gt;</code> 替代 <code>&lt;Context.Provider&gt;</code>。</p>
-<h3 id="useref">useRef</h3>
-<p>跟 Vue 的 ref 有很大区别，useRef 这里的 ref 是不会触发渲染的。</p>
-<p>有一点跟 Vue 一样的就是 Vue 的 ref 需要 <code>.value</code> 获取内部值，而 useRef 需要 <code>.current</code> 获取。</p>
-<h3 id="usecallback">useCallback</h3>
-<p>包装函数，让组件重新渲染时，该函数不会重新创建，也就是保持同一个对象。可以用于 <code>memo</code>。</p>
-<h3 id="usereducer">useReducer</h3>
-<p>useReducer 和 useState 很像，只不过可以把状态更新逻辑从事件处理函数中移动到组件外部。<a href="https://zh-hans.react.dev/reference/react/useReducer#adding-a-reducer-to-a-component" class="ap-external">src</a></p>
-<h2 id="router">Router</h2>
-<ul>
-<li>React 最常用的 router 是 <a href="https://github.com/remix-run/react-router" class="ap-external">React Router</a>。</li>
-<li>如果你不使用高级功能，只是进行简单切换，也可以使用 <a href="https://github.com/molefrog/wouter" class="ap-external">wouter</a>，更精简。</li>
-</ul>
-<h2 id="external">external</h2>
-<ol>
-<li><a href="https://juejin.cn/post/7195513281228898363" class="ap-external">2023 再看 React 状态管理库</a></li>
-<li><a href="https://roriri.one/2026/04/12/what-a-react" class="ap-external">React 带来的生死疲劳</a></li>
-</ol>
-<div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main>
-<div id="ap-toc" class="ap-toc"></div>
-<footer id="ap-footer" class="ap-footer"></footer>
-<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"algolia":{"appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif"},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/react","locale":"root","title":"React","headings":[{"level":1,"text":"React","slug":"react"},{"level":2,"text":"JSX 基础","slug":"jsx-基础"},{"level":2,"text":"组件","slug":"组件"},{"level":2,"text":"React Hooks","slug":"react-hooks"},{"level":3,"text":"useState","slug":"usestate"},{"level":3,"text":"useContext","slug":"usecontext"},{"level":3,"text":"useRef","slug":"useref"},{"level":3,"text":"useCallback","slug":"usecallback"},{"level":3,"text":"useReducer","slug":"usereducer"},{"level":2,"text":"Router","slug":"router"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2025-01-04","category":["编程"],"tag":["框架","前端"],"icon":"brands/react"},"createdAt":"2025-01-04T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":3,"excerpt":"React 初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。 JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 \u003c>\u003c/> 空标签包围。…"},"related":[{"route":"/coding/","title":"编程","refs":1}]}</script>
-<script type="module" src="../assets/entry-DOpyHYQg.js"></script>
+</ul><h2 id="react-hooks"><a href="https://zh-hans.react.dev/reference/react/hooks" class="ap-external">React Hooks</a></h2><p>Hooks 是响应式的基础。React 内置了许多 Hooks，但是平常最常用的也就 useState，useRef，useEffect。</p><h3 id="usestate">useState</h3><p>React 里最常用的响应式就是 useState 了。其返回两个值，<code>content</code> 是内容的引用 (getter)，<code>setContent</code> 是一个函数，用于改变内容 (setter)。这样可以比较明确地控制如何渲染 DOM 树。</p><div class="ap-code ap-code--ln" data-lang="js" style="--ap-ln-w:1ch"><div class="ap-code__tools"><span class="ap-code__lang">js</span><button type="button" class="ap-code__copy" aria-label="复制代码" title="复制代码"><svg class="ap-code__copy-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="ap-code__copied-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></div>
+<pre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"><code class="language-js"><span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">const</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> [</span><span style="color:#005CC5;--shiki-dark:#79B8FF">content</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">setContent</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> useState</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"default content"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span></code></pre></div><p>和 SolidJS 不同，setContent 只有在实际值发生改变（<code>Object.is</code> 比较）时才会重新渲染。这或许在性能方面有优势，但对框架来说算是增加了（需要关注的）隐藏复杂度。</p><h3 id="usecontext">useContext</h3><p>用于跨任意层组件向子组件方向传数据。随便看一个 <a href="https://zh-hans.react.dev/reference/react/useContext#usage" class="ap-external">usage</a> 就会了。</p><p>React 19 后，可以用简化写法 <code>&lt;Context&gt;</code> 替代 <code>&lt;Context.Provider&gt;</code>。</p><h3 id="useref">useRef</h3><p>跟 Vue 的 ref 有很大区别，useRef 这里的 ref 是不会触发渲染的。</p><p>有一点跟 Vue 一样的就是 Vue 的 ref 需要 <code>.value</code> 获取内部值，而 useRef 需要 <code>.current</code> 获取。</p><h3 id="usecallback">useCallback</h3><p>包装函数，让组件重新渲染时，该函数不会重新创建，也就是保持同一个对象。可以用于 <code>memo</code>。</p><h3 id="usereducer">useReducer</h3><p>useReducer 和 useState 很像，只不过可以把状态更新逻辑从事件处理函数中移动到组件外部。<a href="https://zh-hans.react.dev/reference/react/useReducer#adding-a-reducer-to-a-component" class="ap-external">src</a></p><h2 id="router">Router</h2><ul>
+<li>React 最常用的 router 是 <a href="https://github.com/remix-run/react-router" class="ap-external">React Router</a>。</li><li>如果你不使用高级功能，只是进行简单切换，也可以使用 <a href="https://github.com/molefrog/wouter" class="ap-external">wouter</a>，更精简。</li>
+</ul><h2 id="external">external</h2><ol>
+<li><a href="https://juejin.cn/post/7195513281228898363" class="ap-external">2023 再看 React 状态管理库</a></li><li><a href="https://roriri.one/2026/04/12/what-a-react" class="ap-external">React 带来的生死疲劳</a></li>
+</ol><div data-ap-island="Giscus" data-props="{&quot;repo&quot;:&quot;lxl66566/lxl66566.github.io&quot;,&quot;repoId&quot;:&quot;R_kgDOHRyDvA&quot;,&quot;category&quot;:&quot;General&quot;,&quot;categoryId&quot;:&quot;DIC_kwDOHRyDvM4CQSP1&quot;,&quot;lang&quot;:&quot;zh-CN&quot;}"></div></main><div id="ap-toc" class="ap-toc"></div><footer id="ap-footer" class="ap-footer"></footer>
+<script type="application/json" id="__AP_DATA__">{"site":{"title":"绝对值_x 的博客","description":"没什么有价值的内容的，真的！","base":"../","locales":[{"key":"root","lang":"zh-CN","label":"简体中文","prefix":""}],"locale":"root","navAlign":"center","pages":{"timeline":"/timeline/","categories":"/categories/","tags":"/tags/"},"footerCredit":"© 2022-2026 lxl66566","profile":{"articles":166,"categories":19,"tags":53},"social":[{"icon":"github","url":"https://github.com/lxl66566","title":"GitHub"},{"icon":"telegram","url":"https://t.me/ab5_x","title":"Telegram"}],"logo":"/avatar.avif","search":{"kind":"algolia","appId":"UMGMTUUIFU","apiKey":"6e1820d0f954590466468855790a2440","indexName":"algolia"}},"chrome":"../assets/chrome-379cddde.js","page":{"route":"/coding/react","locale":"root","title":"React","headings":[{"level":1,"text":"React","slug":"react"},{"level":2,"text":"JSX 基础","slug":"jsx-基础"},{"level":2,"text":"组件","slug":"组件"},{"level":2,"text":"React Hooks","slug":"react-hooks"},{"level":3,"text":"useState","slug":"usestate"},{"level":3,"text":"useContext","slug":"usecontext"},{"level":3,"text":"useRef","slug":"useref"},{"level":3,"text":"useCallback","slug":"usecallback"},{"level":3,"text":"useReducer","slug":"usereducer"},{"level":2,"text":"Router","slug":"router"},{"level":2,"text":"external","slug":"external"}],"frontmatter":{"date":"2025-01-04","category":["编程"],"tag":["框架","前端"],"icon":"brands/react"},"createdAt":"2025-01-04T00:00:00.000Z","updatedAt":"2026-10-08T03:58:31+08:00","readingTime":3,"excerpt":"React 初学，包含的东西较少。等到我真正用 React 开发一个项目的时候，这一页的东西才会变多起来。 JSX 基础 JSX 是 React 的核心，JSX 将一个 html 标签也视为一个 js object。 多行 JSX 需要用括号包围；每个 JSX 只能是单标签，如果多标签则需要用 \u003c>\u003c/> 空标签包围。…"},"related":[{"route":"/coding/","title":"编程","refs":1}]}</script>
+<script type="module" src="../assets/entry-CZNcTToC.js"></script>
 </body>
 </html>
