@@ -5,6 +5,8 @@ import type { XListItem } from 'absolute-press/client';
  * + dtlslong.vue on the site's shared xlist table. Imports the comic data
  * file (default-exported ComicItemType[]) directly and renders the score
  * table. Plain mode: no expandable bodies (the data has no slot prose).
+ * Site css drops the title column's width: 100% claim so the surplus goes
+ * to the 备注 column; nowrap keeps the id line on one line.
  */
 import type { Element as SolidElement } from 'solid-js';
 

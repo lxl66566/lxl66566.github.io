@@ -4,7 +4,10 @@ import type { XListItem } from 'absolute-press/client';
  * Island: `AvTable` — legacy AvTable.vue + SortableTable.vue + Av.vue on the
  * site's shared xlist table. Imports the av data file (default-exported
  * AvItemType[]) directly, sorts by TwoScoreCompare and splits into 最高/普通
- * tables. Plain mode: no expandable bodies (the data has no slot prose).
+ * tables. 番名 renders as its own fold column; 评价 lives in the expandable
+ * fold body, so rows without 评价 are not expandable. Site css drops the
+ * title column's width: 100% claim so the surplus goes to the 番名 column;
+ * nowrap keeps the 番号 token on one line.
  */
 import { Show, type Element as SolidElement } from 'solid-js';
 
@@ -13,7 +16,20 @@ import { TwoScoreCompare, type AvItemType } from '../src/.vuepress/definition';
 import { partitionInPlace } from '../src/.vuepress/utils/PartitionArray';
 import { a, cell, fold, t } from './xlist/cells';
 
-const COLUMNS = ['番号', '颜值', '演技', '番名', '评价'];
+const COLUMNS = ['番号', '颜值', '演技', '番名'];
+
+/** Text-node HTML escape (`&`, `<`, `>`), same semantics as the framework's
+ * build-time escapeHtml — bodyHtml lands in innerHTML, so data must not inject
+ * markup. */
+const escapeHtml = (s: string): string =>
+  s.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+
+/** Fold body: labeled paragraph for 评价. */
+function avBody(item: AvItemType): string {
+  return item.say === undefined
+    ? ''
+    : `<p><strong>评价</strong> ${escapeHtml(item.say)}</p>`;
+}
 
 /** missav link for a 番号 (`u` appends the uncensored-leak suffix). */
 function avHref(item: AvItemType): string {
@@ -34,8 +50,8 @@ function avItem(item: AvItemType): XListItem {
       cell([t(String(item.aScore))]),
       cell([t(String(item.bScore))]),
       cell(item.name === undefined ? [] : [fold(item.name)]),
-      cell(item.say === undefined ? [] : [fold(item.say)]),
     ],
+    bodyHtml: avBody(item),
   };
 }
 
@@ -52,13 +68,7 @@ const [top, normal] = partitionInPlace(
 
 function AvRows(props: { rows: AvItemType[] }): SolidElement {
   return (
-    <XList
-      items={props.rows.map(avItem)}
-      columns={COLUMNS}
-      searchable={false}
-      sortable={false}
-      collapsible={false}
-    />
+    <XList items={props.rows.map(avItem)} columns={COLUMNS} sortable={false} />
   );
 }
 

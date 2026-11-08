@@ -21,6 +21,9 @@
     },
     "types": ["vite/client", "node"],
     "noEmit": true,
+    // Third-party .d.ts (mermaid, unconfig, ...) is not site code: skip
+    // checking it instead of chasing declaration-internal type errors.
+    "skipLibCheck": true,
     "alwaysStrict": true,
     "exactOptionalPropertyTypes": false,
     "forceConsistentCasingInFileNames": true,
@@ -49,11 +52,10 @@
   "exclude": ["dist", "node_modules", "src"],
   // The framework npm package ships TS sources (exports point into src/);
   // ambient declarations that are not reachable through imports must be
-  // pulled in explicitly: its markdown-it module declaration and the
-  // virtual-module declarations (virtual:absolute-press/islands,
-  // virtual:uno.css) its client sources rely on.
+  // pulled in explicitly: the virtual-module declarations
+  // (virtual:absolute-press/islands, virtual:uno.css) its client sources
+  // rely on.
   "files": [
-    "node_modules/absolute-press/src/node/markdown/markdown-it-container.d.ts",
     "node_modules/absolute-press/src/client/runtime/env.d.ts",
     "src/.vuepress/site-data.ts",
     "src/.vuepress/virtual-modules.d.ts"

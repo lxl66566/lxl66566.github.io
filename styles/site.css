@@ -168,9 +168,11 @@ details.abs-dtlslong:not([open]) > summary {
 
 /* AvTable / ComicTable islands. */
 /* av/comic tables ride the xlist component now; keep the denser legacy
- * padding over the ported xlist cell rule (unlayered site css outranks it). */
-#ap-content .abs-avtable :is(th, td),
-#ap-content .abs-comictable :is(th, td) {
+ * padding over the ported xlist cell rule (unlayered site css outranks it).
+ * The reveal cell is excluded: the framework keeps collapsed reveal rows at
+ * zero height via padding: 0, and this rule would pad ~11px under every row. */
+#ap-content .abs-avtable :is(th, td):not(.ap-xlist__reveal-cell),
+#ap-content .abs-comictable :is(th, td):not(.ap-xlist__reveal-cell) {
   padding: 0.35rem 0.5rem;
   text-align: center;
   vertical-align: middle;
@@ -179,6 +181,25 @@ details.abs-dtlslong:not([open]) > summary {
 #ap-content .abs-avtable thead th,
 #ap-content .abs-comictable thead th {
   background-color: var(--c-bg-soft);
+}
+
+/* Prose columns (番名/备注) get the surplus width: dropping the framework's
+ * width: 100% claim on the title column returns these tables to content-based
+ * sizing. The nowrap 番号 token caps at its own width (min = max, unbreakable),
+ * so auto layout hands every bit of surplus to the widest-max-content column
+ * (the prose one), and on narrow viewports that same column absorbs the whole
+ * deficit while 番号 keeps its single line. No floors, no horizontal scroll. */
+#ap-content
+  :is(.abs-avtable, .abs-comictable)
+  :is(th.ap-xlist__th--title, td.ap-xlist__title) {
+  width: auto;
+}
+
+#ap-content
+  :is(.abs-avtable, .abs-comictable)
+  td.ap-xlist__title
+  :is(.ap-xlist__toggle, .ap-xlist__title-text) {
+  white-space: nowrap;
 }
 
 /* --------------------------------------------------------------------------
