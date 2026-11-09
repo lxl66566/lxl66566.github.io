@@ -50,6 +50,7 @@ galgame 对于培养语感来说挺有帮助，但是对 N1 听力，难度完�
   - [FuriganaMaker](https://github.com/aiktb/FuriganaMaker)：浏览器扩展，自动给汉字加假名注音。
 - 题：
   - [毎日一問日本語 N1](https://t.me/daily_jlptn1)，每日小测验，tg 投票
+  - [OK JLPT](https://okjlpt.com/zh-Hans)，N5–N1 按年份整理的整卷练习，带听力，交卷自动估分；N5、N4 免费
 
 ## 关于考试
 
