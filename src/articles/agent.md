@@ -312,6 +312,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 
 ### 坑点/吐槽
 
+- Windows 下，千万不要使用 scoop 安装 pi-coding-agent，也不要去下载 prebuilt binary。因为 pi 在 windows 上打包使用的是 bun（也会作为 pi 的 runtime），这个狗屎玩意我建议不要碰，否则会变得不幸([ref: 稳定内存泄漏 OOM](https://t.me/withabsolutex/2909))。最好直接 `pnpm i -g @earendil-works/pi-coding-agent`。
 - pi 的启动巨慢，我总共也没装几个插件，启动到能看到 TUI 就要 6-7s。而且 pi 没有单实例多工作区的概念，如果我每打开一个工作区都要 6-7s 那是真的不能接受，毕竟我切换工作区还是比较频繁的。
   - 插件加载 1.5s，TUI 初始化 1.5s，这个效率也是够低的。插件加载这个必须保证串行，这个我理解。
   - 另外主要耗时是在 checkForPackageUpdates 上，所有的 plugin 都是串行查询 update，感觉太蠢了。虽然 checkForPackageUpdates 并不会阻塞干活。反正我已经设置了 `PI_OFFLINE=1` 环境变量，把自动查询 update 给禁掉了。
