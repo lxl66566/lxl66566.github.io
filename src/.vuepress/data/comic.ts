@@ -1240,5 +1240,6 @@ export default [
   { id: "(ex)", aScore: 6.3, bScore: 8.1, info: "#いちはや #破处", otherlink: "https://exhentai.org/g/4200994/d22354ff84", bak: "https://telegra.ph/COMIC127-squeezecandyheaven-いちはや-天才JC小説家と秘密の破瓜-中国翻訳-09-20" },
   { id: "682623", aScore: 7.4, bScore: 7.7, info: "#合集 #3P #混浴", bak: "https://telegra.ph/しろすず-シンデレラフィット-中国翻訳-DL版-09-20" },
   { id: "678842", aScore: 9.3, bScore: 8, info: "#蔚蓝档案 #百合 #loli", bak: "https://telegra.ph/C108-がるるぅのおうち-がるるぅ-イブキがイロハを攻めまくりエッチをして絶頂イかせちゃうおはなし-ブルーアーカイブ-09-01" },
+  { id: "688615", aScore: 8.6, bScore: 8.3, info: "#百合 #3P" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

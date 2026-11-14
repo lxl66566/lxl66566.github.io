@@ -243,28 +243,45 @@ if (content) {
 10. GLM 在 202609 推出了夜间爽蹬活动，zcode 无限用 GLM 5.3 flash；但是前提是你的帐号没用完额度。。。用完以后就没法蹬了。
 11. 闲时任务没有草稿：创建闲时任务里写了一堆东西，切出去看看其他会话进度，再切回来发现已经写的内容都没了。
 12. 我可以看到一个 agent 启动的“运行中的终端”，但是无法看到它输出的内容。。
-13. ~~subagent 被中断即丢失所有上下文，且无法恢复~~：subagent 输出中，停止会话，则之后再开启会话时 subagent 已经输出的内容都不会再进入主 agent 的上下文。等于是 token 白烧了。
-    - 也没法看 subagent 到底消耗了多少 token。
-    - 2026.10 起 zcode 终于支持 subagent resume 了，可以继续而不是直接丢失已经进行到一半的工作。但是这个功能的 bug 还是相当多的，有时候会 resume 失败：`Agent was cancelled before the subagent returned findings or background launch completed`，有时候我刚派的 subagent 会自动被掐掉，再次 resume 则报错 `No active local_agent task found for target agent_dedaef2c-df3c-4528-8358-f9bbd1826f45.` 总之我觉得他们的代码质量真的很难恭维。
-    - zcode 的 subagent 也分前台和后台，后台的话需要模型调用带 `run_in_background: true`。由于我之前在 AGENTS.md 里“禁用了 run_in_background”（因为 bash 的 run_in_background 很难用，见 1.），但是没有指定是哪个工具，所以 subagent 也永远不会使用后台模式，导致我一直都不知道 zcode 有这个功能。。。。
-14. 不像 opencode 给 AI 发消息可以“插队”在工具调用里；zcode 在 AI 输出时发送消息，必须排队到 AI 完成全部任务后才能被 AI 看到。
+13. 不像 opencode 给 AI 发消息可以“插队”在工具调用里；zcode 在 AI 输出时发送消息，必须排队到 AI 完成全部任务后才能被 AI 看到。
     - 点击「立即」按钮（打断会话，发出消息），快速切到其他 session，再回来以后会看到消息并没有发出去（仍然留在队列里），但是会话的打断是实打实发生的。抽象啊。
     - 新版本设置里可以改「交互行为」，改成「引导」就是我需要的功能了。
-15. **脑残设计**：如果文件没读过直接写就会报错 `File has not been read yet. Read it first before writing to it.` 我实在想不明白，凭什么没读过就不让写？如果这文件很长，用这种傻逼理由打断首次写入，让我消耗了双倍输出 token，实在是有点蠢。
+14. **脑残设计**：如果文件没读过直接写就会报错 `File has not been read yet. Read it first before writing to it.` 我实在想不明白，凭什么没读过就不让写？如果这文件很长，用这种傻逼理由打断首次写入，让我消耗了双倍输出 token，实在是有点蠢。
     - claude code 开的坏头。AI 完全可以在终端读到文件内容，然后进行一个 Write；这个规则把该正常行为给否定了。
-16. 会话不能导出导入，且没有同步；多设备开发堪比地狱。另外我设置的「命令」也不会同步，本来就难用的东西，现在我肯定不用了。
-17. MCP 无法按 session 隔离。我多 session 并行时，有个 session 因为在 windows 上没法跑 miri，就用我的 mcp 连到 linux 机器上跑，然后大幅扰乱了另一个 session 的 benchmark。
-18. zcode 上传 git 丑闻曝光以后，天天往我的项目里放你妈的 `.zcodeignore` 文件，污染我项目
-19. zcode 的 session 存储设计有问题 ([src](https://t.me/withabsolutex/2844))。session 的 jsonl 每一行都包含完整的 context，一次长任务可以跑到 2GB 的磁盘占用，非常恶心。
-20. zcode 只允许修改上一条提示词并发送，如果要改很久以前的提示词就只能 fork 了。改提示词、fork 点都必须是 LLM 输出结束才行，不能在 LLM 与工具交互中间打断。
-21. 修改上一条提示词时，同时修改模型，则界面上展示使用的新的模型，但是实际调用还是调用老的模型。
-22. **恶性 bug**：出现一次：subagent 干活干一半然后莫名其妙回到主线程，所有 subagent 全部被中断
-23. **恶性 bug**：几天前的 session 想要重新开始用，模型已选择，然而发 `/Compact` 后报错 _Select a model before continuing_。fork session 后重发 `/Compact`，无效。只能先发一条 message 然后再进行 compact。
-24. agent 在 session 里启动的 server 不会在会话结束后自动退出。每次我都会遇到端口冲突问题，一看就是 agent 用来做调试的 server 不会自动退。
-25. 神经的 HighSpeed 模式：深夜我正常使用中，然后在我发出提示词之后 zcode 自动给我提升到 HighSpeed 模式体验 15 分钟。这本来算是个福利，但是这模式下居然不能开 subagent，而我的提示词本来就是要开 subagent 的，整的这一出反而打断了我的工作流程。([src](https://t.me/absolutexsward/507))
-26. 1024 送的免费 token 很没有诚意。单线程跑，不开 subagent，都会报错 _model concurrency limit exceeded_。
-27. **恶性 bug**：20261027 晚，我拿着一张重置卡并且定了个重置闹钟爽用。在重置卡剩 2 分钟时，我如期点击重置，然后……_重置失败，请重试_。试了几次都是这样，我尝试重启 zcode，重启后重置按钮消失，剩下 4 张重置卡全部归零，无法进行重置。约 30 分钟后重置按钮恢复，重置卡重新展示，然而我的这张到期的重置卡已经无法找回了。
-28. zcode-cli 内存占用高：zcode 在 2026.10 进行了一次更新，服务器上现在会运行守护进程，即使本机 zcode 退出，服务器上的也能继续跑。但是之后 zcode-cli 进程就变得非常多，每个进程都吃 170\~430MB RAM，总共吃我几个 G 的 RAM，看着真的难受。而且由于守护进程，这些玩意的资源都不会自动回收的。
+15. 会话不能导出导入，且没有同步；多设备开发堪比地狱。另外我设置的「命令」也不会同步，本来就难用的东西，现在我肯定不用了。
+16. MCP 无法按 session 隔离。我多 session 并行时，有个 session 因为在 windows 上没法跑 miri，就用我的 mcp 连到 linux 机器上跑，然后大幅扰乱了另一个 session 的 benchmark。
+17. zcode 上传 git 丑闻曝光以后，天天往我的项目里放你妈的 `.zcodeignore` 文件，污染我项目
+18. zcode 的 session 存储设计有问题 ([src](https://t.me/withabsolutex/2844))。session 的 jsonl 每一行都包含完整的 context，一次长任务可以跑到 2GB 的磁盘占用，非常恶心。
+19. zcode 只允许修改上一条提示词并发送，如果要改很久以前的提示词就只能 fork 了。改提示词、fork 点都必须是 LLM 输出结束才行，不能在 LLM 与工具交互中间打断。
+20. 修改上一条提示词时，同时修改模型，则界面上展示使用的新的模型，但是实际调用还是调用老的模型。
+21. **恶性 bug**：几天前的 session 想要重新开始用，模型已选择，然而发 `/Compact` 后报错 _Select a model before continuing_。fork session 后重发 `/Compact`，无效。只能先发一条 message 然后再进行 compact。
+22. agent 在 session 里启动的 server 不会在会话结束后自动退出。每次我都会遇到端口冲突问题，一看就是 agent 用来做调试的 server 不会自动退。
+23. 神经的 HighSpeed 模式：深夜我正常使用中，然后在我发出提示词之后 zcode 自动给我提升到 HighSpeed 模式体验 15 分钟。这本来算是个福利，但是这模式下居然不能开 subagent，而我的提示词本来就是要开 subagent 的，整的这一出反而打断了我的工作流程。([src](https://t.me/absolutexsward/507))
+24. 1024 送的免费 token 很没有诚意。单线程跑，不开 subagent，都会报错 _model concurrency limit exceeded_。
+25. **恶性 bug**：20261027 晚，我拿着一张重置卡并且定了个重置闹钟爽用。在重置卡剩 2 分钟时，我如期点击重置，然后……_重置失败，请重试_。试了几次都是这样，我尝试重启 zcode，重启后重置按钮消失，剩下 4 张重置卡全部归零，无法进行重置。约 30 分钟后重置按钮恢复，重置卡重新展示，然而我的这张到期的重置卡已经无法找回了。
+26. zcode-cli 内存占用高：zcode 在 2026.10 进行了一次更新，服务器上现在会运行守护进程，即使本机 zcode 退出，服务器上的也能继续跑。但是之后 zcode-cli 进程就变得非常多，每个进程都吃 170\~430MB RAM，总共吃我几个 G 的 RAM，看着真的难受。而且由于守护进程，这些玩意的资源都不会自动回收的。
+27. 2026.11.14：定时任务「创建失败，请重试」，没有原因，重试几次都是失败
+
+#### 傻逼 subagent
+
+我是一个 subagent 重度用户，但是 zcode 的 subagent 实在是太傻逼太难用了，逼得我不得不专门开一个章节来喷它。
+
+Bugs:
+
+- 早期的时候只能一次 spawn 一批 subagent 然后等它们结束，并且 subagent 死了就是死了，没有办法拿到 subagent 已经输出的内容，等于是 token 全部白烧了。
+  - 有时候 subagent 中断还能抢救一下（复制出内容让 deepseek 总结一遍），但是更多时候 subagent 运行失败了连运行记录都看不到，点不出侧边栏。据我的观察，失败后 zcode 运行越久越容易丢失运行记录。不过这个问题在出现 async subagent 后解决了，有个专门的 tab 可以看 subagents list（包括 failed 的）
+  - 超并发数以后，zcode 不是先杀最近任务，而是可能会先杀到 subagent，直接白干。
+- 2026.10 起 zcode 终于支持 subagent resume 了，可以继续而不是直接丢失已经进行到一半的工作。但是这个功能的 bug 还是相当多的，有时候会 resume 失败：`Agent was cancelled before the subagent returned findings or background launch completed`，有时候我刚派的 subagent 会自动被掐掉，再次 resume 则报错 `No active local_agent task found for target agent_dedaef2c-df3c-4528-8358-f9bbd1826f45.` 总之我觉得他们的代码质量真的很难恭维。(一个相关 issue：[#1305](https://github.com/zai-org/feedback/issues/1305))
+- zcode 的 subagent 也分前台和后台，后台的话需要模型调用带 `run_in_background: true`。由于我之前在 AGENTS.md 里“禁用了 run_in_background”（因为 bash 的 run_in_background 很难用，见 1.），但是没有指定是哪个工具，所以 subagent 也永远不会使用后台模式，导致我一直都不知道 zcode 有这个功能。。。。
+- 2026.10.13 出现一次：subagent 干活干一半没结束，然后焦点莫名其妙回到主线程，所有 subagent 没有任何后续输出
+- 2026.11.09 出现一次：主 agent 发消息给 subagent 要求停止任务，结果停止失败，subagent 还继续跑，只能强杀 zcode 中断任务。报错十分牛逼：_Task agent_e0d17452-5cbb-4d0b-9b23-616d1d88c09eis not running (status: running)_，我直接笑出来了。([ref](https://t.me/withabsolutex/2908))
+- 2026.11.14 出现两次，在远端 linux 主机上跑 async subagent，正常跑一段时间后就会发生 `Bash was cancelled and the child process was asked to stop`，且这样终止的 subagent 是**无法恢复**的
+  - 初步怀疑是在 linux 上跑压测导致的，时间吻合。
+
+功能缺失：
+
+- 没法看 subagent 到底消耗了多少 token 和 context window。
+- 不支持 steer，也就是单独给 subagent 插消息。
 
 ## [pi](https://github.com/earendil-works/pi)
 
