@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url><loc>https://absx.pages.dev/articles/agent</loc><lastmod>2026-11-14T07:25:12.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/articles/android_player</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
-<url><loc>https://absx.pages.dev/articles/browser/assess</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
+<url><loc>https://absx.pages.dev/articles/browser/assess</loc><lastmod>2026-11-18T15:11:57.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/articles/browser/settings</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/articles/cli_compress</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/articles/control</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
@@ -59,7 +59,7 @@
 <url><loc>https://absx.pages.dev/blog/withabsolutepress</loc><lastmod>2026-10-09T18:16:46.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/blog/withvuepress2</loc><lastmod>2026-11-08T19:35:41.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/Cpp</loc><lastmod>2026-11-08T19:35:41.000Z</lastmod></url>
-<url><loc>https://absx.pages.dev/coding/Git</loc><lastmod>2026-10-30T13:21:12.000Z</lastmod></url>
+<url><loc>https://absx.pages.dev/coding/Git</loc><lastmod>2026-11-18T15:11:57.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/Rust/crates</loc><lastmod>2026-11-03T16:01:47.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/Rust/</loc><lastmod>2026-11-08T19:35:41.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/algorithm</loc><lastmod>2026-11-08T19:35:41.000Z</lastmod></url>
@@ -79,7 +79,7 @@
 <url><loc>https://absx.pages.dev/coding/kotlin</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/lua</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/mdx</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
-<url><loc>https://absx.pages.dev/coding/nodejs</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
+<url><loc>https://absx.pages.dev/coding/nodejs</loc><lastmod>2026-11-18T15:11:57.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/octave</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/package_manager</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/coding/philosophy_of_PL</loc><lastmod>2026-10-13T15:23:51.000Z</lastmod></url>
@@ -102,7 +102,7 @@
 <url><loc>https://absx.pages.dev/essay/</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/farraginous/college</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/farraginous/reciter</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
-<url><loc>https://absx.pages.dev/farraginous/recommend_packages</loc><lastmod>2026-11-08T19:35:41.000Z</lastmod></url>
+<url><loc>https://absx.pages.dev/farraginous/recommend_packages</loc><lastmod>2026-11-18T15:11:57.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/farraginous/recommend_websites</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/gossip/</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/gossip/author</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
@@ -125,7 +125,7 @@
 <url><loc>https://absx.pages.dev/hobbies/NSFW/</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/hobbies/anime</loc><lastmod>2026-10-12T19:55:50.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/hobbies/art</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
-<url><loc>https://absx.pages.dev/hobbies/books</loc><lastmod>2026-11-08T19:35:41.000Z</lastmod></url>
+<url><loc>https://absx.pages.dev/hobbies/books</loc><lastmod>2026-11-18T15:11:57.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/hobbies/galgame</loc><lastmod>2026-11-14T07:25:12.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/hobbies/other_games/Minecraft</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
 <url><loc>https://absx.pages.dev/hobbies/other_games/</loc><lastmod>2026-10-07T19:58:31.000Z</lastmod></url>
