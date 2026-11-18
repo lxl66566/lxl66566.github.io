@@ -697,6 +697,12 @@ git worktree remove ../branch_name
 
 AI agent 时代，worktree 被发扬光大，多个 agent 可以同时在一个仓库里工作，而互相之间不会干扰。
 
+### 自动更新工作区
+
+我们可以使用 ssh 的本地路径作为 git remote，例如 `git remote set-url origin myhost:/root/programs/123`。这样 push 的时候可以 push 到远端 ssh 机器上的 git 仓库。我在一些环境下不好访问 Github，因此使用我的 server 作为中转，同时我的 server 也是一个开发机，跑 bench 的时候可以转移到 server 上开发。
+
+但是 push 到 remote 之后默认只会修改 .git 仓库的指针，不会修改工作区的文件，因此每次 push 之后还要记得登到 ssh 机器上重置一下工作区。有一个方法可以在 push 时直接更新工作区到 HEAD：`git config receive.denyCurrentBranch updateInstead`
+
 ## 奇技淫巧
 
 ### 自动化 squash

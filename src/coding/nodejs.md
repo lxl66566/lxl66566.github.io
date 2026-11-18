@@ -74,6 +74,7 @@ yarn 在早期比 npm 强，卖点是可复现性。然而现在优势[貌似不
 
 [用前必读](https://pnpm.io/zh/pnpm-cli#命令行)
 
+- nodejs 26 不内置 corepack 了，因此想用 pnpm 需要：1. `npm install -g corepack` 2. `corepack use pnpm@12`
 - 如果直接使用 `pnpm i` 安装依赖后运行报错（而在 npm/yarn 上表现良好），请使用 `pnpm i --shamefully-hoist` 安装依赖！[^1]
 - `npm init ...` == `pnpm create ...`
 - 现在 pnpm 会往 `package.json` 里加一个 `packageManager` 字段，包含 pnpm 版本和 hash。如果要更新这个版本，请使用 `corepack use pnpm@latest`。

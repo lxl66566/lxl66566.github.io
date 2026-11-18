@@ -401,12 +401,6 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 
 [官方项目地址](https://github.com/polywock/globalSpeed) | [edge 商店](https://microsoftedge.microsoft.com/addons/detail/global-speed-视频速度控制/mjhlabbcmjflkpjknnicihkfnmbdfced) | [私链](https://wwp.lanzout.com/i9LKF05ht3ni)
 
-### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
-
-极为强大的广告拦截。支持选中元素，自定义规则。
-
-- 推荐搭配[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Adblock-Rule)食用：复制订阅规则 URL（根据情况选择是否反代），粘贴到 _Adguard - 设置 - 过滤器 - 自定义 - 添加自定义过滤器_ 中。
-
 ### [B 站空降助手](https://github.com/hanydd/BilibiliSponsorBlock)
 
 跳过 B 站视频的广告片段！这个插件的构思非常好，让用户自行标记广告片段，一旦标记以后，其他人看视频都可以跳过广告。和手机骚扰来电标记有异曲同工之妙。
@@ -433,13 +427,13 @@ Flow Launcher 也是一个 Alt + Space 的快捷窗口，可以运行程序、�
 
 - 沉浸式翻译的性能并不好。可以遵照[此 issue](https://github.com/immersive-translate/immersive-translate/issues/3765) 进行性能优化。
 
-### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
-
-强大的 `禁止复制` 破解插件。比脚本好用。
-
 ### [DARK READER](https://darkreader.org/)
 
 最著名的浏览器强制深色插件，效果不错，对大部分的网站都能生效。
+
+### [SingleFile](https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle)
+
+最负盛名的导出网页到单个 html 的工具。用于离线备份内容。
 
 ### Bionic Reading
 
@@ -460,12 +454,6 @@ Bionic Reading 的插件很多，官方的根本不可用，所以只能使用�
 [前往 Github](https://github.com/vinta/pangu.js)
 
 > 也可以使用脚本，以便在 firefox 等非 chromium 系浏览器上使用。
-
-### [CoCoCut](https://microsoftedge.microsoft.com/addons/detail/视频下载扩展cococutvideo-down/npdhgjfiikhgncaacnnodpfchmelnchm)
-
-在遇到 [yt-dlp](#yt-dlp) 不支持的网站时，另一个可用的视频下载工具就显得尤为重要。CoCoCut 在支持抓取媒体的基础上，还能够下载 m3u8 流视频，甚至能通过录制方式下载。
-
-当然，如果你[使用 downloader](../articles/downloaders.md) 拦截下载事件，那么这些 downloader 可能已经可以嗅探到视频资源并弹出下载按钮了。
 
 ### [MergeEase](https://mergease.com/)
 
@@ -633,12 +621,6 @@ Telegram 第三方开源客户端，自带很不稳定的低速公共代理，�
 
 > 为了方便，可以考虑使用 [bitwarden](#bitwarden) 的服务，其支持多端同步密码。但是若你对云端存储感到不安全，还是使用无需联网的 Keepass 吧。
 
-### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
-
-快速启用禁用扩展。
-
-比较鸡肋，还吃我资源，因此弃用。
-
 ### [Scene5](https://www.coolapk.com/apk/com.omarea.vtools)
 
 强大的数据监视/性能修改应用。建议配合 ADB & root 食用。但是呢，该应用是商业化的收费闭源软件，不充值是无法使用 root 后的功能的。目前其**全功能**均可使用其他软件替代[^4]。因此弃用。
@@ -753,6 +735,36 @@ windows 设置小工具，集成了一些高级功能；但是被 [Windows 11 �
 [官方项目地址](https://github.com/Lerist/FakeLocation) | [私有下载地址](https://wwp.lanzout.com/i4x8E03de5ab)
 
 如果 root 了说不定可以用 [TwTwilight/ImmoralLocation](https://github.com/TwTwilight/ImmoralLocation) 代替；注意该 github user 是刚加入的，使用前记得 review 代码。
+
+### 浏览器插件部分
+
+#### [扩展管理器](https://microsoftedge.microsoft.com/addons/detail/bhahgfgngfghgjhnpplmemebhenieijb)
+
+快速启用禁用扩展。
+
+比较鸡肋，还吃我资源，因此弃用。
+
+#### [AdGuard](https://chrome.google.com/webstore/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg)
+
+极为强大的广告拦截。支持选中元素，自定义规则。
+
+- 推荐搭配[秋风广告规则](https://github.com/TG-Twilight/AWAvenue-Adblock-Rule)食用：复制订阅规则 URL（根据情况选择是否反代），粘贴到 _Adguard - 设置 - 过滤器 - 自定义 - 添加自定义过滤器_ 中。
+
+不过我现在不用了。
+
+#### [SuperCopy](https://chrome.google.com/webstore/detail/supercopy-enable-copy/onepmapfbjohnegdmfhndpefjkppbjkm)
+
+强大的 `禁止复制` 破解插件。比脚本好用。
+
+chrome 商店已经下架了。据传有毒。
+
+#### [CoCoCut](https://microsoftedge.microsoft.com/addons/detail/视频下载扩展cococutvideo-down/npdhgjfiikhgncaacnnodpfchmelnchm)
+
+在遇到 [yt-dlp](#yt-dlp) 不支持的网站时，另一个可用的视频下载工具就显得尤为重要。CoCoCut 在支持抓取媒体的基础上，还能够下载 m3u8 流视频，甚至能通过录制方式下载。
+
+当然，如果你[使用 downloader](../articles/downloaders.md) 拦截下载事件，那么这些 downloader 可能已经可以嗅探到视频资源并弹出下载按钮了。
+
+微软商店已经下架。
 
 ## external
 

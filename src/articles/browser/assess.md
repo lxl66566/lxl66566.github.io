@@ -51,6 +51,7 @@ tag:
 - edge 的同步问题很大。随便 google 一下，ms answer 网站上一大堆同步丢数据的，本人也**有幸**[丢过一次重要数据](https://t.me/withabsolutex/2421)。
 - 安装扩展出现 _包无效。详细信息：Couldn't load icon assets/images/128.png specified in browser_action_。但是同样的 crx 扩展在 Chromium 上安装，没有问题。
 - 我一直开着 edge 的标签页自动恢复功能，配合侧边栏分组非常好用。但是 2026 年中旬的一次更新，标签页恢复功能不再恢复本地的 html 页面，我觉得太扯了。果然你软大部分的更新都是负优化。
+- 有时候会发生访问 Google 旗下所有页面全部无法访问，但是其他网页不受影响。除了重启 edge，没有任何其他方式可恢复。大概率是[这个问题](https://learn.microsoft.com/en-us/answers/questions/5887558/almost-every-google-owned-website-stops-working-on)，需要干掉 Device Bound Session Credentials 这玩意。
 
 
 ### chrome / chromium
