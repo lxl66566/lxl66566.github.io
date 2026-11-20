@@ -32,7 +32,9 @@ kache 是 sccache 的竞争者，kache 专注于减小磁盘占用，最大程�
 rust 默认对 dev/test 开启 incremental 编译，但是这玩意的问题实在是太多了。incremental 的原理是把 codegen-units 设为 256，把每一个 unit 拆细，然后再在 `target/debug/incremental/` 里维护一个依赖图，基于依赖图进行重新编译。那么这里有几个问题：
 
 - codegen-units 高了就没法做复杂优化，默认的 16 我都嫌高，这玩意 256？所以导致 debug / test 的性能会下降。还有一堆 .o 小文件会崩你的 IO。
-- 额外生成的这份 `target/debug/incremental/` 依赖图会一直滚动，谁来清？答案是——[不清](https://github.com/kevinthelago/base-studio-code/issues/3821)。所以用 zdu 等 du 工具扫 target，经常能扫到 incremental 是大头，因为它根本就不会清啊，项目迭代几轮就爆炸了。
+- 额外生成的这份 `target/debug/incremental/` 依赖图会一直滚动，谁来清？答案是——[基本不清](https://github.com/kevinthelago/base-studio-code/issues/3821)。实际使用时几乎总是会残留孤儿节点，feature matrix 已经是二维，还要乘以 clippy、check、test (build)，并且任何一次包名/版本/target/profile/工具链更新就全部变孤儿 !!（死妈）!!。
+
+所以用 !![z](https://github.com/lxl66566/zdu)!!du 工具扫 target，经常能扫到 incremental 是大头，因为它残留得实在是太多了啊，项目迭代几轮就爆炸了。
 
 incremental 在历史上还有非常非常多问题，例如 [#162240: rustc 在每次增量重编时都会额外多保留一份冗余快照，target/ 体积膨胀 20%](https://github.com/rust-lang/rust/pull/162240)，等等，不想多说了。
 
@@ -48,13 +50,13 @@ incremental 在历史上还有非常非常多问题，例如 [#162240: rustc 在
 
 首先我尝试使用 CARGO_TARGET_DIR 指向同一个 dir，复用 target。
 
-CARGO_TARGET_DIR 的一个已知问题是编译会加锁，不同的 worktree 之间只能串行编译，不过我不太在乎这个，因为对于 32 核 20500H/s 的 7950x CPU 来说，编译时长只占 multi agent 开发的一小部分，完全可以接受。
+CARGO_TARGET_DIR 的一个已知问题是编译会加锁，不同的 worktree 之间只能串行编译，不过我不太在乎这个，因为对于 32 线程 20500H/s 的 7950x CPU 来说，编译时长只占 multi agent 开发的一小部分，完全可以接受。
 
 但是没过多久就踩了第一个大坑：链接到了错误的 rlib。
 
 cargo 每个 unit 的编译产物（rlib）文件名带有一个 hash，这个 hash 是从（包名 + 版本 + target 名 + profile + feature + 每个依赖自己的哈希……）构造的；问题是，这个 hash 不包含源码的 path。因此我创建的不同 worktree 的编译产物就会撞 rlib hash，然后 cargo 就直接寻思这（个 worktree 创建的）rlib 也没人要呢，俺拾咧，就链接到 binary 里了，然后就会产生一些不符合预期又非常难排查的结果。
 
-- 例如 `env!(CARGO_MANIFEST_DIR)` 是直接展开进 rlib 的，链接错误的 rlib 之后运行时去拉 CARGO_MANIFEST_DIR 就会拉错位置。
+- 例如 `env!("CARGO_MANIFEST_DIR")` 是直接展开进 rlib 的，链接错误的 rlib 之后运行时去拉 CARGO_MANIFEST_DIR 就会拉错位置。
 
 除非改 cargo 的构建流程，否则没有任何方法可以规避这个问题，只能放弃复用 CARGO_TARGET_DIR。
 
@@ -101,7 +103,12 @@ cargo 每个 unit 的编译产物（rlib）文件名带有一个 hash，这个 h
    kache daemon restart  # 需要启动两次，首次可能超时
    kache doctor
    ```
-5. 将项目设为使用 V 盘存放 target 即可。写入每个 worktree 的 `.cargo/config.toml`: `[build] target-dir = "V:/targets/<repo>/<branch>`。注意 `.cargo/config.toml` 需要 ignore 掉，因为每个 worktree 的都不同。
+5. 将项目设为使用 V 盘存放 target 即可。写入每个 worktree 的 `.cargo/config.toml`:
+   ```toml
+   [build]
+   target-dir = "V:/targets/<repo>/<branch>"
+   ```
+   注意 `.cargo/config.toml` 需要 ignore 掉，因为每个 worktree 的都不同。
 6. 编译完成后，使用 `kache report` 验证缓存命中率。
 
 然后就可以愉快地使用 ReFS 了。
@@ -118,12 +125,16 @@ cargo 每个 unit 的编译产物（rlib）文件名带有一个 hash，这个 h
 
 这个 m.2 是我从服役多年的笔记本里拆出的 500G 系统盘，经历过 60 多次 P/E 周期，寿命比起本机的 SSD 更是风中残烛，但是放编译产物，偶尔炸两声也问题不大。于是我 zcode 一发闲时任务跑满 5 subagents 并发就去睡觉了。
 
-醒来发现 commits 远比我想象中的少，一看设备，大惊，老子的 V 盘怎么消失了？然后磁盘管理器和 DiskGenius 都看不到设备，插拔以后发现 _跟这台计算机连接的前一个 USB 设备工作不正常，Windows 无法识别它。_，我才慢慢接受，这个残烛已经死透了，估计是被烫死的。5 并发还是太权威了。
+醒来发现 commits 远比我想象中的少，一看设备，大惊，老子的 V 盘怎么消失了？然后磁盘管理器和 DiskGenius 都看不到设备，插拔以后发现 _跟这台计算机连接的前一个 USB 设备工作不正常，Windows 无法识别它。_，我才慢慢接受，这个残烛大概率已经死透了，估计是被烫死的。5 并发还是太权威了。
+
+> 后续冷却以后又救回来了，ReFS 有自修复
 
 ### 之后要怎么办？
 
-如果还要再把我本机的 SSD 分一块给 ReFS，那是万万不可的。
+kache 可以在 NTFS 上使用 hardlink 复用缓存，代价是产物全部变 read only。这是很难接受的，特别是 fuzz 或者 build.rs 写 target 的场景，因此肯定不能采用。
+
+如果还要再把我本机的 SSD 分一个区给 ReFS，那也是万万不可的，我的盘已经常年红温、在崩溃边缘摇摆了。
 
 还是尽量多在我的 Linux server 上搞开发吧，必须在 Windows 上跑 zcode 闲时任务的话，还是用我的 [shell-proxy](https://github.com/lxl66566/shell-proxy) 代理过去。
 
-然后得安排好跨项目的 flock，为了在 server 上同时跑多个 AI 开发多个项目，而不用担心 benchmark 被影响。
+然后还得安排好跨项目的 flock，为了在 server 上同时跑多个 AI 开发多个项目，而 benchmark 不被 test/fuzz 影响。
