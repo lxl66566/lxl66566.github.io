@@ -9,11 +9,16 @@ tag:
   - 桌面端
 ---
 
-# Agent 工具横评
+# Agent 工具经验与横评
 
 2026 年是 agent 元年，LLM + agent 继续高速发展，几乎彻底改变了代码的编写方式。
 
 这里是我使用过的 agent 的一些评价。本文仅包含 agent 工具，不包含 LLM 模型的评价。按照本人的首次使用时间顺序排序。
+
+## 总体经验
+
+- 不推荐任何 Windows 用户在 git-bash/msys2 里跑 agent 的 command。msys2 的 pathconv 会坑死每一个自以为聪明的 LLM。比如跑 `cmd /c "xxx"` 的时候 `/c` 就被自动转为了其他的目录，然后会直接进入 interactive 卡死 agent 命令。另外 [[ai-why-msys2-io-is-slow|msys2 的 IO 也**非常非常慢**，`find` 和 `du` 简直比 WSL2 还慢几个数量级]]，也是大坑一个。
+  - 目前虽然没遇到严重的问题，但是这种 pathconv 就是一个不稳定炸弹，没准哪天就把你的文件炸掉了。因此能不用还是尽量不用。
 
 ## cursor
 
@@ -325,11 +330,27 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - 我比较偏向极简主义，挺喜欢 pi 的哲学。
 - 默认展开 agnet 思考过程。
 - `npm:pi-subagents` 挺好用的，做了主 agent 和 subagent 的交互，主 agent 可以根据 subagent 的反馈作出决策。比较适合 team。
-  - 默认 subagent 有 30min 超时，对我来说有点短了。不过可以[全局调整](https://github.com/nicobailon/pi-subagents/blob/d44b514e/docs/configuration.md?plain=1#L268-L274)。
 
 ### 坑点/吐槽
 
-- Windows 下，千万不要使用 scoop 安装 pi-coding-agent，也不要去下载 prebuilt binary。因为 pi 在 windows 上打包使用的是 bun（也会作为 pi 的 runtime），这个狗屎玩意我建议不要碰，否则会变得不幸([ref: 稳定内存泄漏 OOM](https://t.me/withabsolutex/2909))。最好直接 `pnpm i -g @earendil-works/pi-coding-agent`。
+- Windows 下，千万不要使用 scoop 安装 pi-coding-agent，也不要去下载 prebuilt binary。因为 pi 在 windows 上打包使用的是 bun（也会作为 pi 的 runtime），这个狗屎玩意我建议不要碰，否则会变得不幸([ref: 稳定内存泄漏 OOM](https://t.me/withabsolutex/2909)；另外 bun 的常态内存占用也比 nodejs 要高很多)。最好直接 `pnpm i -g @earendil-works/pi-coding-agent`，然后默认跑在 nodejs 上。
+- pi 的 bash 工具默认使用 git-bash，但是这玩意[问题很大](#总体经验)，因此最好用一个小插件让 pi 在 windows 上用 powershell，在 linux 上用 bash。
+  ```ts
+  import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+  const shellTools = ["bash", "powershell"];
+  const shellTool = process.platform === "win32" ? "powershell" : "bash";
+  export default function(pi: ExtensionAPI) {
+    // settings.json keeps the default bash selection; swap in the tool this platform supports.
+    pi.on("session_start", () => {
+      const active = pi.getActiveTools().filter((name) => !shellTools.includes(name));
+      pi.setActiveTools([...active, shellTool]);
+    });
+  }
+  ```
+  - 如果用 `"defaultTools": ["+powershell"]` 把 powershell 暴露给 LLM 的话，LLM 还是调 bash，不会主动去用 powershell。所以需要强制干掉 bash。
+  - 坑：`pi-permission-system` 规则默认不会对 powershell 生效！！需要在 `.pi/agent/extensions/pi-permission-system/config.json` 里添加一句：`"shellTools": { "powershell": { "commandArgument": "command" } }`。
+  - 坑：`pi-subagents` 开的 worker subagents 默认不会继承 powershell 工具！内置 worker 的 tools 白名单写死了 bash。一定要在 `~/.pi/agent/settings.json` 里加 `subagents.agentOverrides.worker.tools: "inherit"`。
+- 同一个 settings.json 不能在 Windows 上使用这个工具，而在 Linux 上使用那个工具。所有的同配置跨平台需要不同的表现，只能通过 plugins 实现。
 - pi 的启动巨慢，我总共也没装几个插件，启动到能看到 TUI 就要 6-7s。而且 pi 没有单实例多工作区的概念，如果我每打开一个工作区都要 6-7s 那是真的不能接受，毕竟我切换工作区还是比较频繁的。
   - 插件加载 1.5s，TUI 初始化 1.5s，这个效率也是够低的。插件加载这个必须保证串行，这个我理解。
   - 另外主要耗时是在 checkForPackageUpdates 上，所有的 plugin 都是串行查询 update，感觉太蠢了。虽然 checkForPackageUpdates 并不会阻塞干活。反正我已经设置了 `PI_OFFLINE=1` 环境变量，把自动查询 update 给禁掉了。
@@ -370,6 +391,10 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 插件相关：
 
 - 我使用 `npm:@gotgenes/pi-permission-system` 进行权限控制，但是这玩意不开 yolo mode 的话用起来手感稀烂。例如 flock、xargs 等实际执行另一个 command 的动作，都会匹配上 indirection-bash-wrapper rule，进入 ask 状态而不是根据实际执行的 command 判断权限。(有个尝试绕过的 [issue](https://github.com/gotgenes/pi-packages/issues/680)，但是没有进展)。所以还是建议 yolo mode，也就是所有 ask 变成 allow。
+- `npm:pi-subagents` 虽然好用，但是也并非完美无缺。
+  - 默认 subagent 有 30min 超时，对我来说有点短了。不过可以[全局调整](https://github.com/nicobailon/pi-subagents/blob/d44b514e/docs/configuration.md?plain=1#L268-L274)。
+  - 当我对某个 subagent 点击 enter 的时候会报错 `No inspector plugin is available. Start a supported inspector host, or use inspector.command for a standalone command.` 那么文档呢，如果我就是要 inspect，你告诉我到底要安装什么 plugin 啊。
+  - subagents 种类太多太杂，我日常其实只用 async worker，其他的都不用。
 - `npm:pi-web-access` 这个也是狗屎，如果你的 pi 设置了 `"npmCommand": ["pnpm"]` 则这个插件根本启动不了。这个插件[早期还有 path traversal 安全问题](https://github.com/nicobailon/pi-web-access/security/advisories/GHSA-8phw-6qw6-xhq6)。
   - 目前我还没有找到一个比较好用的 web search 工具——很多工具需要其他 AI 的 API，并且 vibe 到飞起和致死量 emoji 让我感觉到生理不适；还有基于 [searxng](https://github.com/searxng/searxng/) 的 [websearch 工具](https://github.com/Youpen-y/web-search)，但是 searxng 本身也非常一般，庞大臃肿，要 uWSGI，甚至没有提供 Windows installation。
 - pi-lens 会自动修改你的代码，自动执行 fmt + fix，但是很多时候我并不希望这种行为（比如 lsp 才不会管你的兼容性和 MSRV、PR 最小化原则；而且 rust clippy 的 auto fix 可不一定是无害的），该行为也会让 AI 困惑、怀疑人生。我用了一阵[被坑了](https://t.me/absxsgroup/11865)，于是就干掉了。

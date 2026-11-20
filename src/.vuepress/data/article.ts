@@ -95,6 +95,7 @@ const sections: ArticleSection[] = [
       { text: '理财，加密货币与区块链', url: './money' },
       { text: '下载器横评', url: './downloaders' },
       { text: 'HTTP Client', url: './http_client' },
+      { text: 'Agent 工具经验与横评', url: './agent' },
     ],
   },
   {

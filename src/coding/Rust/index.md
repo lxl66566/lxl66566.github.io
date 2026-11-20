@@ -12,6 +12,7 @@ tag:
 Rust 区域下的其他文章：
 
 - [crates 评价](./crates.md)
+- [节省磁盘空间](./save_your_disk.md)
 
 ## 介绍
 
@@ -694,16 +695,6 @@ Rust 虽然有万能解码器 [Symphonia](https://github.com/pdeljanov/Symphonia
 Rust nightly 有许多好用的东西，然而 nightly 工具链只有日期，没有版本，导致想要下载一个特定版本 nightly 工具链还需要去了解 rust release 流程，十分不友好。[fuk](../../gossip/fuckxxx.md#rust-有多难用)
 
 但是有一扇窗为 nightly 打开，那就是 `RUSTC_BOOTSTRAP=1`。只要开了这个环境变量，就可以不需要重装任何工具链，纵享丝滑 unstable feature[ref](https://www.reddit.com/r/learnrust/comments/1hcnnvf/rust_need_nightly_1x0_how_do_i_do_that/)。
-
-### worktree 协作
-
-如果你希望开多个 git worktree 并行推进任务（AI 时代非常常见），则可以考虑共享编译缓存，因为 Rust 的编译产物实在是太大了。比如一些大型项目本体构建就数十 GB，则多个 worktree 可以分分钟把你的磁盘干爆。
-
-首先共享编译缓存是只有 NTFS user 或者 ext4 user 需要考虑的东西，其他的 fs 可以直接用 CoW 复用 target。四舍五入编译产物问题基本上只烦 windows 用户。
-
-sccache 虽然可以复用缓存内容，节省 CPU，但是并不能帮你节省磁盘空间。因为匹配到构建内容后，sccache 是把缓存的构建产物 copy 到新 target 里的，没有 reflink，磁盘占用其实是双倍。
-
-可以使用 `CARGO_TARGET_DIR` env 来让所有 worktree 共享一个 target folder。虽然会牺牲一点并行度（共享 target 后两个 worktree 无法同时构建），但是构建时长本来也只占开发中较小的一部分，因此可以放心使用。
 
 ## external
 
