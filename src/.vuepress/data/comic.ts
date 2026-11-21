@@ -1241,5 +1241,11 @@ export default [
   { id: "682623", aScore: 7.4, bScore: 7.7, info: "#合集 #3P #混浴", bak: "https://telegra.ph/しろすず-シンデレラフィット-中国翻訳-DL版-09-20" },
   { id: "678842", aScore: 9.3, bScore: 8, info: "#蔚蓝档案 #百合 #loli", bak: "https://telegra.ph/C108-がるるぅのおうち-がるるぅ-イブキがイロハを攻めまくりエッチをして絶頂イかせちゃうおはなし-ブルーアーカイブ-09-01" },
   { id: "688615", aScore: 8.6, bScore: 8.3, info: "#百合 #3P" },
+  { id: "698443", aScore: 9, bScore: 7.5, info: "#3P #调教 #直播 #崩坏3" },
+  { id: "697780", aScore: 8.2, bScore: 8.5, info: "#3P #光之美少女 #调教 #双头龙" },
+  { id: "683818", aScore: 8.7, bScore: 10, info: "#合集 #简笔 #剧情 名無しのチンポップ", bak: "https://telegra.ph/名無しのチンポップ-合集chinese-09-22" },
+  { id: "683794", aScore: 8.5, bScore: 6.2, info: "#光之美少女 #4P #堕落", bak: "https://telegra.ph/C108-ビーメロクリシェ-サインこす-はなまる大搾精-名探偵プリキュア中国翻訳-09-22" },
+  { id: "683780", aScore: 7.1, bScore: 9.4, info: "#青梅 #NTR #大叔 #视频", bak: "https://telegra.ph/飯食って寝る-あたげ-幼馴染のエロ動画生ハメ中出しはくっそシコれる中国翻訳-DL版-09-22" },
+  { id: "683767", aScore: 7.6, bScore: 8, order: 2, info: "#蔚蓝档案 #海滩 #泳装 #loli #女上位", bak: "https://telegra.ph/C108-つくてん-円つくも-妃咲キ乱レ-弐-ブルーアーカイブ-中国翻訳-09-22" },
   // next: 4.22 - 11.1
 ] as ComicItemType[];

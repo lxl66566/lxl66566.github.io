@@ -222,6 +222,8 @@ if (content) {
 - 闲时任务不支持在 ssh 机器上跑，于是我还特地写了一个 [shell-proxy](https://github.com/lxl66566/shell-proxy) 工具，以 MCP 的方式提供给 agent/subagent，这样就可以在闲时任务跑在远程 Linux 机器上了。
 - 20260917 闲时任务改为了每日一次、一次最长 3 小时。
 
+20261121：记得点击设置 - 插件，**把所有的内置插件全部关闭**。如果不关闭，每个插件会在 remote 上运行一个后台的 MCP 而不释放，而每个 MCP 还吃 100 多 MB 内存，随随便便把远端 server 干到 OOM。([#1593](https://github.com/zai-org/feedback/issues/))
+
 ### 开喷
 
 不过既然写在这里它就不可能只是赞美两句这么简单。zcode 仍然处于发展早期，现在给这么多福利也是为了让我们给使用数据和反馈的。那么我也就得开喷了：

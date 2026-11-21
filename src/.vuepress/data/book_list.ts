@@ -23,11 +23,9 @@ const original_list: BookItemInputType[] = [
     name: "海岛求生游戏",
     author: "念哥",
     h_level: HLevel.HIGH,
-    reading_status: {
-      kind: "在读",
-    },
     duration: {
-      start: "2026-10-01"
+      start: "2026-10-01",
+      end: "2026-11-21"
     },
   },
   {
