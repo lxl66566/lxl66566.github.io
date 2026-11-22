@@ -447,3 +447,25 @@ rkyv：零拷贝，性能突破天际！但是用起来也最麻烦。
 deku：bit 级别的二进制描述与编解码库。适合不允许修改格式的现有 binary 的反序列化。比如游戏专有的 archive 等。
 
 rmp-serde：MessagePack 协议的实现，MessagePack 就是二进制版本的 json。不过 rmp-serde 把字段名称默认给省略掉了，所以不是自描述的，需要手动开。
+
+### 嵌入资源文件
+
+嵌入资源文件其实也有比较多的注意点。一个是最好使用 zstd，这样在保证压缩率的同时也有着极其优秀的解压性能；另一个是 debug 下不要开高 level（否则每次 clippy/check/test 都巨慢），但是 release 必须开到 max level 以获取最高压缩率和最小二进制体积。
+
+我推荐使用 include_assets，release 下可以选择 zstd 22。example:
+
+```rs
+use include_assets::{NamedArchive, include_dir};
+#[cfg(not(debug_assertions))]
+let archive = NamedArchive::load(include_dir!(
+    "assets/SoundTouch",
+    compression = "zstd",
+    level = 22
+));
+#[cfg(debug_assertions)]
+let archive = NamedArchive::load(include_dir!("assets/SoundTouch"));
+```
+
+其他玩意：
+
+- include-flate：比较老牌，这个最初是只嵌入 Deflate，后面也支持了 zstd；但是 level 只有默认，zstd 默认 level 是 3，对嵌入二进制肯定不够用。

@@ -735,3 +735,4 @@ articles:
 22. [Bugs Rust Won't Catch](https://corrode.dev/blog/bugs-rust-wont-catch/#string-equality-on-paths-is-not-the-same-as-filesystem-identity)
 23. [A definitive guide to sealed traits in Rust](https://predr.ag/blog/definitive-guide-to-sealed-traits-in-rust/)
 24. [A 2026 Survey of Rust GUI Libraries](https://blog.wybxc.cc/blog/rust-gui-survey-2026/)，作为互联网喷子，我非常认同这篇文章，作者做了大量的工作来支撑自己的观点，并且文风语气都比较幽默。
+25. [A Critique of GPUI](https://blog.zortax.de/posts/a-critique-of-gpui)

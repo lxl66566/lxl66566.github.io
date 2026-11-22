@@ -378,6 +378,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
   }
   ```
   目前社区还没有插件实现这个，最接近的是 [pi-context-include](https://github.com/d3ara1n/pi-extensions/tree/main/packages/pi-context-include) 需要在 `~/.pi/agent/AGENTS.md` 里写一行 `@~/.agents/AGENTS.md` 来自动注入。没人做说明需求少；我这个代码也不多，就不发布了。
+  - 通过这种方式注入的 AGENTS.md 只会在 async subagents 里注入，同步 subagent 不会注入。不过我本来就只用 async，没啥毛病。
   - 这个简单的玩意在启动时居然需要花 60ms 来加载，你敢信？！
 - pi 会在 `~/.pi/agent` 里拉一大坨东西，config 和 data 耦合在一起。想备份数据的看到这里一下就死了。。
 - 不像 opencode 喜欢用 ctrl + p，pi 主要是靠打出一个 `/` 然后在候选列表里选 command 来进行操作的。但是这个列表的出现有相当大的延迟，只要我打字快一些，pi 就会把我的 `/tree` 这种内容直接当成跟 AI 的对话发出去。。。

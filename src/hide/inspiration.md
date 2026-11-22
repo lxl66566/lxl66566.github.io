@@ -122,6 +122,10 @@ tag:
 - [x] [dae to sing-box](https://github.com/lxl66566/sing-dae)
 - [x] Rust powerful and easy-to-use pipeline crate [youpipe](https://github.com/lxl66566/youpipe)
 - [ ] shame of auto close issue
+- [ ] ~~写个自己的 agent~~ 维护成本太高，暂缓
+  - [ ] 一切均可取消
+  - [ ] 完全流式，必须能实时看到进度
+  - [ ] 单窗口内切工作区
 
 <!-- - 转码，复制，参考我的 fish function
 - 平台无关的 alias
