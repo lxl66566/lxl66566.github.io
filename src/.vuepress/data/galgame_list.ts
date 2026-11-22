@@ -66,9 +66,10 @@ const original_list: GalItemInputType[] = [
   {
     name: "鬼哭街 -涙尽鈴音響-",
     valid_name: "鬼哭街",
-    playing_status: PlayingStatus.PLAYING,
+    use_time: "4h50min",
     duration: {
       start: "2026-08-09",
+      end: "2026-11-22",
     },
   },
   {
