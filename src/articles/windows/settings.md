@@ -294,6 +294,37 @@ tag:
 - scoop bucket 不能正常使用，extras 不被认为是一个 git 仓库。。。
 - 还有一些我个人原因，比如用惯了 win11 已经不会用 win10 了，非常硌手。
 
+## Windows Terminal
+
+使用 Windows 就免不了和 Windows Terminal (WT) 打交道，即使只在 Windows 用 WSL / ssh 到远端也都需要经过 WT 和 WT 的协议。但是 [[ai-windows-terminal-bad.md|WT 又非常难用，自成一套体系，需要开发者去主动用一些非常 hacking 的方法适配]]，不适配的话在 Windows 上就会卡手。
+
+对于不更新 windows 的人来说（比如我一直在用 Windows 11 24H2），有必要做点什么来拯救我的 WT 体验。下面这些 json 都是右键 WT 标题栏打开 settings，然后
+
+1. Shift + Enter 适配：在 zellij 上用 pi 的时候如果按 Shift + Enter 会直接把消息发出去，等效于 Enter 而不是换行。因为 WT 原生是不能区分 Shift + Enter 和 Enter 的，然后 pi 为了适配 Windows 做了一个 hacking：读到 enter 的瞬间如果 Shift 还按着，就视为 Shift + Enter。这在 Windows 上直接使用是 ok 的，但对于 zellij 这样的多线程 + IPC + ConPTY 管线就引入了延迟，hacking 就无法生效了。加入下面这些可以让 WT 会真正发送 Shift + Enter。
+   ```json
+   "actions": [
+     {
+       "command": { "action": "sendInput", "input": "\u001b[13;2u" },
+       "id": "User.sendInput.shiftEnter"
+     }
+   ],
+   "keybindings": [
+     {
+       "keys": "shift+enter",
+       "id": "User.sendInput.shiftEnter"
+     }
+   ]
+   ```
+2. 加个字体。
+   ```json
+   "profiles": {
+     "defaults": {
+       "font": {
+         "face": "FiraCode Nerd Font Mono"
+       }
+     }
+   ```
+
 ## external
 
 - [Install Windows the Arch Linux Way](https://christitus.com/install-windows-the-arch-linux-way/)

@@ -392,6 +392,7 @@ oh-my-pi 东西太多，而且有些功能例如 memory 我确实不需要。所
 - `pi update --extensions` 会污染你 current dir 的 pnpm-lock.yaml。不是，这玩意连作用域都不管的？
 - pi 和 opencode 一样都有一个问题：compact 以后就无法在 session 里看到 compact 之前的内容了，只能 export。感觉这点这些 agent 做得都不如 zcode。
 - 想安装一个本地插件，`pi install C:/xxx.tgz` 以后发现往 config 里写的也是 tgz，然后在其他工作区运行 pi 就会得到 _Failed to load extension: Unexpected_。报错信息也看不出来是啥玩意。后面了解到需要用文件夹路径安装。
+- 2026-11-25：GLM 5.4 昨天发布，我在 pi 网站上已经能获取模型信息，但是 `pi update --models` 一直拉不到 GLM 5.4 模型。结果发现是 pi 官方网站会用 UA 拦截，低版本的 pi 就是拉不到新模型，要 pi 本体升级。。
 
 插件相关：
 
